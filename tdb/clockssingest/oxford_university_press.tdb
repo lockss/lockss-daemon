@@ -2574,8 +2574,8 @@ comment[mplant] = no manifest page
     au < manifest ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
     au < testing ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
     au < testing ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
-    au < manifest ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
-    au < manifest ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; >
+    au < testing ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2588,7 +2588,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rsq.oxfordjournals.org/
 
     au < manifest ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
-    au < manifest ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; >
+    au < testing ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2601,7 +2601,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rpc.oxfordjournals.org/
 
     au < manifest ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
-    au < manifest ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; >
+    au < testing ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2614,7 +2614,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://reep.oxfordjournals.org/
 
     au < manifest ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
-    au < manifest ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
+    au < testing ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2627,7 +2627,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rof.oxfordjournals.org/
 
     au < manifest ; 2008 ; Review of Finance Volume 12 ; 12 ; >
-    au < manifest ; 2009 ; Review of Finance Volume 13 ; 13 ; >
+    au < testing ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2640,7 +2640,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rfs.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
-    au < manifest ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; >
+    au < testing ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2653,7 +2653,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rheumatology.oxfordjournals.org/
 
     au < manifest ; 2008 ; Rheumatology Volume 47 ; 47 ; >
-    au < manifest ; 2009 ; Rheumatology Volume 48 ; 48 ; >
+    au < testing ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2666,7 +2666,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
 
     au < manifest ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
-    au < manifest ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; >
+    au < testing ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2679,7 +2679,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://screen.oxfordjournals.org/
 
     au < manifest ; 2008 ; Screen Volume 49 ; 49 ; >
-    au < manifest ; 2009 ; Screen Volume 50 ; 50 ; >
+    au < testing ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2692,7 +2692,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://scan.oxfordjournals.org/
 
     au < manifest ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
-    au < manifest ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; >
+    au < testing ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2705,7 +2705,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://shm.oxfordjournals.org/
 
     au < manifest ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
-    au < manifest ; 2009 ; Social History of Medicine Volume 22 ; 22 ; >
+    au < testing ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2718,7 +2718,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://sp.oxfordjournals.org/
 
     au < manifest ; 2008 ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 ; >
-    au < manifest ; 2009 ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 ; >
+    au < testing ; 2009 ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2731,7 +2731,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://ssjj.oxfordjournals.org/
 
     au < manifest ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
-    au < manifest ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; >
+    au < testing ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2744,7 +2744,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://ser.oxfordjournals.org/
 
     au < manifest ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
-    au < manifest ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
+    au < testing ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -2756,7 +2756,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://socrel.oxfordjournals.org/
 
-    au < manifest ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
+    au < testing ; 2009 ; Sociology of Religion Volume 70 ; 70 ; reingest4.clockss.org:8082 >
 
   }
 
