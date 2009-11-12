@@ -26,6 +26,19 @@
   {
   
     title <
+      name = AAP News
+    >
+    
+    param[base_url] = http://aapnews.aappublications.org/
+    
+    au < ready ; 2008 ; AAP News Volume 19 ; 19 >
+    au < ready ; 2009 ; AAP News Volume 20 ; 20 >
+  
+  }
+
+  {
+  
+    title <
       name = Pediatrics
     >
     
