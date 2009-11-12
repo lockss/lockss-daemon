@@ -781,7 +781,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrd
 
     au < manifest ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
-    au < testing ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
+    au < ready ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
 
   }
 
@@ -794,7 +794,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrendo
 
     au < manifest ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
+    au < testing ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -807,7 +807,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrgastro
 
     au < manifest ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
+    au < testing ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -996,7 +996,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = pcan
 
     au < manifest ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
-    au < testing ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
+    au < ready ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
 
   }
 
@@ -1019,7 +1019,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = sc
 
     au < manifest ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
-    au < testing ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
+    au < ready ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
 
   }
 

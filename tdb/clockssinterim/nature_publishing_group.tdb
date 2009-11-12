@@ -445,4 +445,63 @@
 
   }
 
+  {
+
+    title <
+      name = Nature Reviews Cancer
+    >
+
+    param[journal_id] = nrc
+
+    au < ready ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Cardiology
+    >
+
+    param[journal_id] = nrcardio
+
+    au < ready ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Drug Discovery
+    >
+
+    param[journal_id] = nrd
+
+    au < ready ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Prostate Cancer and Prostatic Diseases
+    >
+
+    param[journal_id] = pcan
+
+    au < ready ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Spinal Cord
+    >
+
+    param[journal_id] = sc
+
+    au < ready ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
+
+  }
 }
