@@ -12,1139 +12,631 @@ import unittest
 import urllib2
 
 sys.path.append( os.path.normpath( os.path.join( os.path.dirname( sys.argv[ 0 ] ), '../lib' ) ) )
-from lockss_util import *
-from lockss_daemon import *
+import lockss_daemon
+import lockss_util
+from lockss_util import log
 
 
-##
-## Load configuration.
-##
-config.load( 'testsuite.props' )
-if os.path.isfile( 'testsuite.opt' ):
-    config.load( 'testsuite.opt' )
+class LockssTestCases( unittest.TestCase ):
+    """Astract superclass for all STF test cases"""
 
-##
-## module globals
-##
-frameworkList = []
-deleteAfterSuccess = config.getBoolean('deleteAfterSuccess', True)
+    def __init__( self, methodName = 'runTest' ):
+        unittest.TestCase.__init__( self, methodName )
+        self.delayShutdown = lockss_util.config.get( 'delayShutdown', False )
+        self.timeout = int( lockss_util.config.get( 'timeout', 8*60*60 ) )
+        # Assert that the workDir exists and is writable
+        self.workDir = lockss_util.config.get( 'workDir', './' )
+        self.assert_( os.path.isdir( self.workDir ) and os.access( self.workDir, os.W_OK ), 'Work dir %s does not exist or is not writable' % self.workDir )
+        self.config_URLs = None
+        self.start_UI_port = None
 
-##
-## Super class for all LOCKSS daemon test cases.
-##
+    def _start_framework( self ):
+        log.info( 'Starting framework in %s' % self.framework.frameworkDir )
+        self.framework.start()
+        self.assert_( self.framework.isRunning, 'Framework failed to start' )
 
-class LockssTestCase(unittest.TestCase):
-    """Superclass for all STF test cases."""
-    def __init__(self, methodName='runTest'):
-        unittest.TestCase.__init__(self, methodName)
-
-        self.delayShutdown = config.get('delayShutdown', False)
-        self.timeout = int(config.get('timeout', 60 * 60 * 8))
-
-        ##
-        ## assert that the workDir exists and is writable.
-        ##
-        self.workDir = config.get('workDir', './')
-        if not (os.path.isdir(self.workDir) and \
-                os.access(self.workDir, os.W_OK)):
-            raise LockssError("Work dir %s does not exist or is not writable." % self.workDir)
-
-    def getConfigUrls(self):
-        return None
-
-    def getDaemonCount(self):
-        return None
-
-    def getStartUiPort(self):
-        return None
-
-    def setUp(self):
-        unittest.TestCase.setUp(self)
-
-        ## Log start of test.
-        log.info("==========================================================")
-        log.info(self.__doc__)
-        log.info("----------------------------------------------------------")
-
-        ##
-        ## Create a framework for the test.
-        ##
-        self.framework = Framework(self.getDaemonCount(),
-                                   self.getConfigUrls(),
-                                   self.getStartUiPort())
-
-        ## global ('static') reference to the current framework, so we
-        ## can clean up after a user interruption
-        global frameworkList
-        frameworkList.append(self.framework)
-
-        ##
-        ## List of clients, one for each daemon
-        ##
+    def setUp( self ):
+        unittest.TestCase.setUp( self )
+        # Log start of test
+        log.info( len( self.__doc__ )*'=' )
+        log.info( self.__doc__ )
+        log.info( len( self.__doc__ )*'-' )
+        # Create a framework for the test
+        self.framework = lockss_daemon.Framework( self.daemon_count, self.config_URLs, self.start_UI_port )
+        # List of daemon clients
         self.clients = self.framework.clientList
+        # Enable clean-up after user interruption
+        frameworkList.append( self.framework )
 
-    def tearDown(self):
-        # dump threads and look for deadlocks.  This will happen
-        # whether or not there was a failure.
+    def tearDown( self ):
+        # Dump threads and look for deadlocks (independent of success)
         deadlockLogs = self.framework.checkForDeadlock()
         if deadlockLogs:
-            log.error("Deadlocks detected!")
-            self.fail("Failing due to deadlock detection.  Check the "
-                      "following log file(s): %s" % ", ".join(deadlockLogs))
+            log.error( 'Deadlocks detected!' )
+            self.fail( 'Failing due to deadlock detection.  Check the following log file(s): ' + ', '.join( deadlockLogs ) )
         else:
-            log.info("No deadlocks detected.")
+            log.info( 'No deadlocks detected' )
 
         if self.delayShutdown:
-            raw_input(">>> Delaying shutdown.  Press any key to continue...")
+            raw_input( '>>> Delaying shutdown.  Press Enter to continue...' )
 
+        log.info( 'Stopping framework' )
         self.framework.stop()
-        self.failIf(self.framework.isRunning,
-                    'Framework did not stop.')
+        self.failIf( self.framework.isRunning, 'Framework did not stop' )
 
-        unittest.TestCase.tearDown(self)
+        unittest.TestCase.tearDown( self )
 
-class LockssAutoStartTestCase(LockssTestCase):
-    """Extension of LockssTestCase that automatically starts the
-    framework in the setUp method.  Typically, you should extend this
-    class to create a new method unless you want to have more control
-    over when the framework starts up."""
 
-    def setUp(self):
-        LockssTestCase.setUp(self)
+class TinyUiTests( LockssTestCases ):
+    """Abstract class"""
 
-        ##
-        ## Start the framework.
-        ##
-        log.info("Starting framework in %s" % self.framework.frameworkDir)
-        self.framework.start()
-        assert self.framework.isRunning, 'Framework failed to start.'
+    def __init__( self, methodName = 'runTest' ):
+        LockssTestCases.__init__( self, methodName )
+        self.daemon_count = 1
+        self.start_UI_port = 8081
+
+    def setUp( self ):
+        LockssTestCases.setUp( self )
+        self._start_framework()
 
         # Block return until all clients are ready to go.
-        log.info("Waiting for framework to become ready.")
-        self.framework.waitForFrameworkReady()
+        log.info( 'Waiting for framework to become ready' )
+        self.tinyUiClient = self.clients[ 0 ]
+        time.sleep( 2 )
+        self.tinyUiClient.waitForCanConnectToHost( sleep = 2 )
+
+    def runTest( self ):
+        HTML = self.tinyUiClient.getAdminUi().read()
+        pattern = 'This LOCKSS box \(.*\) has not started because it is unable to load configuration data'
+        self.assert_( re.search( pattern, HTML, re.DOTALL | re.MULTILINE ), 'No match for "%s" in\n%s' % ( pattern, HTML ) )
+        pattern = "Shouldn't happen"
+        self.assertFalse( re.search( pattern, HTML, re.DOTALL | re.IGNORECASE | re.MULTILINE ), 'Unexpected match for "%s"' % pattern )
+        self.assert_( re.search( self.expected_pattern, HTML, re.DOTALL | re.MULTILINE ), 'No match for "%s" in\n%s' % ( self.expected_pattern, HTML ) )
+        log.info( 'Found "%s"' % self.expected_pattern )
 
 
-##
-## Sanity check self-test cases.  Please ignore these.
-##
-
-class SucceedingTestTestCase(LockssAutoStartTestCase):
-    "Test case that succeeds immediately after daemons start."
-    def runTest(self):
-        log.info("Succeeding immediately.")
-        return
-
-class FailingTestTestCase(LockssAutoStartTestCase):
-    "Test case that fails immediately after daemons start."
-    def runTest(self):
-        log.info("Failing immediately.")
-        self.fail("Failed on purpose.")
-
-class ImmediateSucceedingTestTestCase(unittest.TestCase):
-    "Test case that succeeds immediately, without starting the daemons."
-    def runTest(self):
-        return
-
-class ImmediateFailingTestTestCase(unittest.TestCase):
-    "Test case that fails immediately, without starting the daemons."
-    def runTest(self):
-        log.info("Failing immediately.")
-        self.fail("Failed on purpose.")
-
-###########################################################################
-## Test cases.  Add test cases here, as well as to the appropriate
-## TestSuite-creating method below.
-###########################################################################
-
-
-class TinyUiTests(LockssTestCase):
-    def setUp(self):
-        LockssTestCase.setUp(self)
-
-        ##
-        ## Start the framework.
-        ##
-        log.info("Starting framework in %s" % self.framework.frameworkDir)
-        self.framework.start()
-        assert self.framework.isRunning, 'Framework failed to start.'
-
-        # Block return until all clients are ready to go.
-        log.info("Waiting for framework to become ready.")
-        self.tinyUiClient = self.clients[0]
-        time.sleep(2)
-        self.tinyUiClient.waitForCanConnectToHost(sleep=2)
-
-    def getDaemonCount(self):
-        return 1
-
-    def getConfigUrls(self):
-        return (self.getTestUrl(),)
-
-    def getStartUiPort(self):
-        return 8081
-
-    def runTest(self):
-        tinyui = self.tinyUiClient.getAdminUi()
-        html = tinyui.read()
-        p = re.compile('This LOCKSS box \(.*\) has not started because it is unable '
-                       'to load configuration data', re.MULTILINE | re.DOTALL);
-        self.assertMatch(p, html)
-        p = re.compile("Shouldn't happen", re.MULTILINE | re.DOTALL | re.I);
-        self.assertNoMatch(p, html)
-        exp = self.expectedPattern()
-        p = re.compile(exp, re.MULTILINE | re.DOTALL);
-        self.assertMatch(p, html)
-        log.info('Found "%s"' % p.pattern)
-
-    def assertMatch(self, pat, string):
-        self.assert_( pat.search( string ), 'No match for "%s" in\n%s' % ( pat.pattern, string ) )
-
-    def assertNoMatch(self, pat, string):
-        self.assertFalse( pat.search( string ), 'Unexpected match for "%s"' % pat.pattern )
-
-
-class TinyUiUnknownHostTestCase(TinyUiTests):
+class TinyUiUnknownHostTestCase( TinyUiTests ):
     """Test that config URL with unknown host name gets Tiny UI"""
-    def getTestUrl(self):
-        return "http://unknownhost.lockss.org/"
 
-    def expectedPattern(self):
-        return 'UnknownHostException.*unknownhost\.lockss\.org'
+    def __init__( self, methodName = 'runTest' ):
+        TinyUiTests.__init__( self, methodName )
+        self.config_URLs = 'http://unknownhost.lockss.org/',
+        self.expected_pattern = 'UnknownHostException.*unknownhost\.lockss\.org'
 
-class TinyUiMalformedUrlTestCase(TinyUiTests):
+
+class TinyUiMalformedUrlTestCase( TinyUiTests ):
     """Test that malformed config URL gets Tiny UI"""
-    def getTestUrl(self):
-        return "http://x.y:12:13/"
 
-    def expectedPattern(self):
-        return 'MalformedURLException'
+    def __init__( self, methodName = 'runTest' ):
+        TinyUiTests.__init__( self, methodName )
+        self.config_URLs = 'http://x.y:12:13/',
+        self.expected_pattern = 'MalformedURLException'
 
-# The forbidden test relies on the URL returning a 403, with a specially
-# crafted body containing hint text.  See HTTPConfigFile.java and
-# http://props.lockss.org:8001/daemon/README
 
-class TinyUiForbiddenTestCase(TinyUiTests):
+class TinyUiForbiddenTestCase( TinyUiTests ):
     """Test that a forbidden config fetch gets Tiny UI with the proper hint"""
-    def getTestUrl(self):
-        return "http://props.lockss.org:8001/daemon/forbidden.xml"
 
-    def expectedPattern(self):
-        return '403: Forbidden.*LOCKSS team.*access list'
+    def __init__( self, methodName = 'runTest' ):
+        TinyUiTests.__init__( self, methodName )
+        # Relies on the URL returning a 403 with a specially crafted body containing hint text.
+        # See HTTPConfigFile.java and http://props.lockss.org:8001/daemon/README
+        self.config_URLs = 'http://props.lockss.org:8001/daemon/forbidden.xml',
+        self.expected_pattern = '403: Forbidden.*LOCKSS team.*access list'
 
-# XXX should find a guaranteed non-listening port (by binding?)
-class TinyUiRefusedTestCase(TinyUiTests):
+
+class TinyUiRefusedTestCase( TinyUiTests ):
     """Test that a refused config connect gets Tiny UI"""
-    def getTestUrl(self):
-        return "http://127.0.0.1:65027/"
 
-    def expectedPattern(self):
-        return 'ConnectException:.*Connection refused'
+    def __init__( self, methodName = 'runTest' ):
+        TinyUiTests.__init__( self, methodName )
+        # XXX should find a guaranteed non-listening port (by binding?)
+        self.config_URLs = 'http://127.0.0.1:%i/' % lockss_util.unused_port(),
+        self.expected_pattern = 'ConnectException:.*Connection refused'
 
-class TinyUiFileNotFoundTestCase(TinyUiTests):
+
+class TinyUiFileNotFoundTestCase( TinyUiTests ):
     """Test a config file not found gets Tiny UI"""
-    def getTestUrl(self):
-        return "/no/such/file/or/directory"
 
-    def expectedPattern(self):
-        return 'FileNotFoundException'
+    def __init__( self, methodName = 'runTest' ):
+        TinyUiTests.__init__( self, methodName )
+        self.config_URLs = '/no/such/file/or/directory',
+        self.expected_pattern = 'FileNotFoundException'
 
 
-class V3TestCase(LockssTestCase):
-    def setUp(self):
-        LockssTestCase.setUp(self)
-        # V3 has a much shorter default timeout, 8 minutes.
-        self.timeout = int(config.get('timeout', 60 * 8))
-        self.victim = self.clients[0]
-        if len(self.clients) > 1:
-            self.nonVictim = self.clients[1]
+class V3TestCases( LockssTestCases ):
 
-        for i in range(0, len(self.clients)):
-            c = self.clients[i]
-            isVictim = i == 0
-            extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
-                         "org.lockss.localV3Identity": c.getPeerId(),
-                         "org.lockss.id.initialV3PeerList": self.getInitialPeerList(),
-                         "org.lockss.poll.v3.enableV3Poller": isVictim,
-                         "org.lockss.poll.v3.enableV3Voter": "true"
-                         }
-            extraConf.update(self.getTestLocalConf())
-            self.framework.appendLocalConfig(extraConf, self.clients[i])
+    def __init__( self, methodName = 'runTest' ):
+        LockssTestCases.__init__( self, methodName )
+        # V3 has a much shorter default timeout of 8 minutes
+        self.timeout = int( lockss_util.config.get( 'timeout', 8*60 ) )
+        self.daemon_count = 5
+        self.offline_peers = []
+        self.local_configuration = {}
+        self.simulated_AU_parameters = {}
 
-        ##
-        ## Start the framework.
-        ##
-        log.info("Starting framework in %s" % self.framework.frameworkDir)
-        self.framework.start()
-        assert self.framework.isRunning, 'Framework failed to start.'
+    def _await_V3_poll_agreement( self ):
+        # Expect to see a top level content poll called by all peers
+        log.info( 'Waiting for a V3 poll by all simulated caches' )
+        for client in self.clients:
+            self.assert_( client.waitForV3Poller( self.AU ), 'Never called V3 poll' )
+            log.info( 'Client on port %s called V3 poll...' % client.port )
+        # Expect each client to have won a top-level v3 poll
+        log.info( 'Waiting for all peers to win their polls' )
+        for client in self.clients:
+            self.assert_( client.waitForWonV3Poll( self.AU, self.timeout ), 'Client on port %s did not win V3 poll' % client.port )
+            log.info( 'Client on port %s won V3 poll...' % client.port )
+
+    def _setup_AU( self ):
+        self.AU = lockss_daemon.Simulated_AU( **self.simulated_AU_parameters )
+        log.info( "Creating simulated AU's" )
+        for client in self.clients:
+            client.createAu( self.AU )
+        for client in self.clients:
+            client.waitAu( self.AU )
+        log.info( "Waiting for simulated AU's to crawl" )
+        for client in self.clients:
+            self.assert_( client.waitForSuccessfulCrawl( self.AU ), "AU's did not complete initial crawl" )
+        log.info( "AU's completed initial crawl" )
+
+    def _content_matches( self, node ):
+        return filecmp.cmp( *( client.getAuNode( self.AU, node.url ).filename() for client in ( self.victim, self.nonVictim ) ) )
+
+    def _ensure_victim_node_deleted( self, node ):
+        self.assertFalse( os.path.isfile( node.filename() ), 'File was not deleted: %s' % node.url )
+
+    def _verify_damage( self, nodes ):
+        for node in nodes:
+            self.assertFalse( self._content_matches( node ), 'Failed to damage AU file: %s' % node.url )
+        log.info( 'Damaged the following node(s) on client %s:\n\t\t\t%s' % ( self.victim, '\n\t\t\t'.join( str( node ) for node in nodes ) ) )
+
+    def _await_repair( self, nodes ):
+        # Just pause until we have better tests; assumes that repair poll has not yet been completed
+        self.assert_( self.victim.waitForV3Repair( self.AU, nodes, self.timeout ), 'Timed out while waiting for V3 repair' )
+
+    def _verify_repair( self, nodes ):
+        for node in nodes:
+            self.assert_( self._content_matches( node ), 'File not repaired: %s' % node.url )
+
+    def setUp( self ):
+        LockssTestCases.setUp( self )
+        self.victim = self.clients[ 0 ]
+        self.nonVictim = self.clients[ 1 ]
+
+        for client in self.clients:
+            extraConf = { 'org.lockss.auconfig.allowEditDefaultOnlyParams': True,
+                          'org.lockss.id.initialV3PeerList': ';'.join( [ peer.getV3Identity() for peer in self.clients ] + self.offline_peers ),
+                          'org.lockss.platform.v3.identity': client.getV3Identity(),
+                          'org.lockss.poll.v3.enableV3Poller': client is self.victim,
+                          'org.lockss.poll.v3.enableV3Voter': True }
+            extraConf.update( self.local_configuration )
+            self.framework.appendLocalConfig( extraConf, client )
+        self._start_framework()
 
         # Block return until all clients are ready to go.
-        log.info("Waiting for framework to become ready.")
+        log.info( 'Waiting for framework to become ready' )
         self.framework.waitForFrameworkReady()
 
-    def getDaemonCount(self):
-        return 5
+    def runTest( self ):
+        self._setup_AU()
+        # disable polling?
+        nodes = self._damage_AU()
+        self._verify_damage( nodes )
+        # enable polling?
 
-    def getInitialPeerList(self):
-        peerIds = []
-        for c in self.clients:
-            peerIds.append(c.getPeerId())
-        return ";".join(peerIds)
+        log.info( 'Waiting for a V3 poll to be called...' )
+        self.assert_( self.victim.waitForV3Poller( self.AU ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+
+        log.info( 'Waiting for V3 repair...' )
+        self._await_repair( nodes )
+        self._verify_repair( nodes )
+        log.info( 'AU successfully repaired' )
+
+
+class SimpleDamageV3TestCase( V3TestCases ):
+    """Test a basic V3 poll"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'numFiles': 15 }
+            
+    def _damage_AU( self ):
+        return [ self.victim.randomDamageSingleNode( self.AU ) ]
+                
+
+class RandomDamageV3TestCase( V3TestCases ):
+    """Test a V3 Poll with a random number of damaged AUs"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 30 }
+            
+    def _damage_AU( self ):
+        return self.victim.randomDamageRandomNodes( self.AU, 30, 50 )
+                
+
+class DeleteV3Tests( V3TestCases ):
+    """Abstract class"""
+
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'numFiles': 15 }
+
+    def _verify_damage( self, nodes ):
+        for node in nodes:
+            self._ensure_victim_node_deleted( node )
+        log.info( 'Deleted the following node(s) on client %s:\n\t\t\t%s' % ( self.victim, '\n\t\t\t'.join( str( node ) for node in nodes ) ) )
+
+
+class SimpleDeleteV3TestCase( DeleteV3Tests ):
+    """Test repair of a missing file"""
+
+    def _damage_AU( self ):
+        return [ self.victim.randomDelete( self.AU ) ]
         
-    def getTestLocalConf(self):
-        "Override this method to append local per-test configuration"
-        return {}
-    
-    def createAus(self, au):
-        log.info("Creating simulated AUs.")
-        for c in self.clients:
-            c.createAu(au)
-        for c in self.clients:
-            c.waitAu(au)
 
-    def crawlAus(self, au):
-        log.info("Waiting for simulated AUs to crawl.")
-        for c in self.clients:
-            self.assert_( c.waitForSuccessfulNewCrawl( au ), 'AUs never completed initial crawl' )
-        log.info("AUs completed initial crawl.")
+class LastFileDeleteV3TestCase( DeleteV3Tests ):
+    """Ensure that the deletion of the alphabetically last file in the AU can be repaired"""
 
-    def compareNode(self, node, au, victim, nonVictim):
-        url = node.url
-        n1 = victim.getAuNode(au, url)
-        n2 = nonVictim.getAuNode(au, url)
-        f1 = victim.nodeContentFile(n1)
-        f2 = nonVictim.nodeContentFile(n2)
-        isSame = filecmp.cmp(f1, f2, False)
-        return isSame
-
-    def nodeHasContent(self, node, victim):
-        file = victim.nodeContentFile(node)
-        return path.isfile(file)
-
-class SimpleDamageV3TestCase(V3TestCase):
-    """Test a basic V3 Poll."""
-    def runTest(self):
-        # Reasonably complex AU for testing.
-        simAu = SimulatedAU('simContent', depth=0, branch=0, numFiles=15,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, protocolVersion=3)
-
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
-
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        victim = self.victim
-
-        ##
-        ## Damage the AU.
-        ##
-        node = victim.randomDamageSingleNode(simAu)
-
-        self.assertFalse( self.compareNode( node, simAu, victim, self.nonVictim ), "Failed to damage AU" )
-        log.info("Damaged node %s on client %s" % (node.url, victim))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3Repair( simAu, [ node ], timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired.")
-
-
-class RandomDamageV3TestCase(V3TestCase):
-    """Test a V3 Poll with a random size and number of damaged AUs"""
-    def runTest(self):
-        # Reasonably complex AU for testing.
-        simAu = SimulatedAU('simContent', depth=1, branch=1, numFiles=30,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=2024, protocolVersion=3)
-
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
-
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        victim = self.victim
-
-        ##
-        ## Damage the AU.
-        ##
-        nodeList = victim.randomDamageRandomNodes(simAu, 30, 50)
-        log.info("Damaged the following nodes on client %s:\n        %s" %
-            (victim, '\n        '.join([str(n) for n in nodeList])))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        for node in nodeList:
-            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired.")
-
-
-class RepairFromPublisherV3TestCase(V3TestCase):
-    """Ensure that repair from pubilsher works correctly in V3."""
-    def getTestLocalConf(self):
-        # NEVER repair from a cache
-        return {"org.lockss.poll.v3.repairFromCachePercent": "0"}
+    def _damage_AU( self ):
+        node = self.victim.getAuNode( self.AU, 'http://www.example.com/index.html' )
+        self.victim.deleteNode( node )
+        return [ node ]
         
-    def runTest(self):
-        # Reasonably complex AU for testing.
-        simAu = SimulatedAU('simContent', depth=1, branch=1, numFiles=10,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, protocolVersion=3)
 
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
+class RandomDeleteV3TestCase( DeleteV3Tests ):
+    """Test recovery by V3 from randomly deleted nodes in our cache"""
 
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
+    def __init__( self, methodName = 'runTest' ):
+        DeleteV3Tests.__init__( self, methodName )
+        self.simulated_AU_parameters.update( { 'depth': 1, 'branch': 1 } )
 
-        victim = self.victim
-
-        ##
-        ## Damage the AU.
-        ##
-        nodeList = victim.randomDamageRandomNodes(simAu, 15, 20)
-        log.info("Damaged the following nodes on client %s:\n        %s" %
-            (victim, '\n        '.join([str(n) for n in nodeList])))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        ## Verify that all repairs came from peers.
-        for node in nodeList:
-            self.assert_( victim.isNodeRepairedFromPublisherByV3( simAu, node ), 'Node %s was not repaired from the publisher!' % node )
-            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired.")
+    def _damage_AU( self ):
+        return self.victim.randomDeleteRandomNodes( self.AU, 5, 15 )
 
 
-class RepairFromPeerV3TestCase(V3TestCase):
-    """Ensure that repairing from a V3 peer works correctly."""
+class ExtraFilesV3Tests( V3TestCases ):
+    """Abstract class"""
 
-    def setUp(self):
-        V3TestCase.setUp(self)
-        self.timeout = 60 * 60 * 2
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'numFiles': 20 }
 
-    def getTestLocalConf(self):
-        # ALWAYS repair from a cache
-        ## Enable polling on all peers.
-        return {"org.lockss.poll.v3.repairFromCachePercent":"100",
-                "org.lockss.poll.v3.enableV3Poller":"false",
-                "org.lockss.poll.v3.toplevelPollInterval":"1d",
-                "org.lockss.poll.minPollAttemptInterval":"10"
-                }
+    def _create_AU_nodes( self, minimum, maximum ):
+        # Damage the AU by creating extra nodes
+        nodes = self.victim.randomCreateRandomNodes( self.AU, minimum, maximum )
+        log.info( 'Created the following nodes on client %s:\n\t\t\t%s' % ( self.victim, '\n\t\t\t'.join( str( node ) for node in nodes ) ) )
+        return nodes
 
-    def getDaemonCount(self):
-        return V3TestCase.getDaemonCount(self) + 1
+    def _verify_damage( self, nodes ):
+        pass
 
-    def getSimAu(self):
-        # Reasonably complex AU for testing.
-        return SimulatedAU('simContent', depth=1, branch=1, numFiles=10,
-                           fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                           binFileSize=1024, protocolVersion=3)
+    def _await_repair( self, nodes ):
+        self.assert_( self.victim.waitForV3Repair( self.AU, [], self.timeout ), 'Timed out while waiting for V3 repair' )
 
-    def doDamage(self, simAu):
-        nodeList = self.victim.randomDamageRandomNodes(simAu, 15, 20)
-        log.info("Damaged the following nodes on client %s:\n        %s" %
-            (self.victim, '\n        '.join([str(n) for n in nodeList])))
-        return nodeList
-
-    def maybeDeactivateReactivateAu(self, victim, simAu):
-        ## This version does nothing
-        return True
-
-    def runTest(self):
-        simAu = self.getSimAu()
-        victim = self.victim
-        noAuClient = self.clients[len(self.clients) - 1]
-        self.clients.remove(noAuClient)
-        log.debug("noAuClient: %s" % noAuClient)
-        
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
-
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        self.framework.appendExtraConfig({"org.lockss.poll.v3.enableV3Poller":"true"})
-        self.framework.reloadAllConfiguration()
-
-        #
-        # We need agreement from all the peers before we can continue.
-        #
-
-        # expect to see a top level content poll called by all peers.
-        log.info("Waiting for a V3 poll by all simulated caches")
-        for c in self.clients:
-            self.assert_( c.waitForV3Poller( simAu ), 'Never called V3 poll' )
-            log.info("Client on port %s called V3 poll..." % c.port)
-
-        # expect that each client will have won a top-level v3 poll
-        log.info("Waiting for all peers to win their polls")
-        for c in self.clients:
-            self.assert_( c.waitForWonV3Poll( simAu, timeout = self.timeout ), 'Client on port %s never won V3 poll' % c.port )
-            log.info("Client on port %s won V3 poll..." % c.port)
-
-        firstVictimPoll = victim.getV3PollKey(simAu)
-        log.debug("firstVictimPoll: %s" % firstVictimPoll)
-        invitees = victim.getV3PollInvitedPeers(firstVictimPoll, simAu)
-        log.debug("invitedPeers: %s" % invitees)
-        self.assertFalse( victim.getPeerId() in invitees, "Victim invited itself" )
-        self.assert_( noAuClient.getPeerId() in invitees, "NoAUPeer not invited in 1st poll" )
-
-        log.debug("victim.getNoAuPeers(simAu): %s" % victim.getNoAuPeers(simAu))
-        self.assertEqual( victim.getNoAuPeers( simAu ), [ noAuClient.getPeerId() ], 'NoAUPeer not recorded' )
-
-        ##
-        ## Damage the AU.
-        ##
-        nodeList = self.doDamage(simAu)
-
-        self.framework.appendLocalConfig( { "org.lockss.poll.v3.toplevelPollInterval" : "10" }, victim )
-        victim.reloadConfiguration()
-
-        self.maybeDeactivateReactivateAu(victim, simAu)
-
-        log.debug("victim.getNoAuPeers(simAu): %s" % victim.getNoAuPeers(simAu))
-        self.assertEqual( victim.getNoAuPeers( simAu ), [ noAuClient.getPeerId() ], 'NoAUPeer disappeared!' )
-
-        ## XXX - this sees first poll, doesn't wait for second
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu, [ firstVictimPoll ] ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        pollKey2 = victim.getV3PollKey(simAu, firstVictimPoll)
-        log.debug("pollKey2: %s" % pollKey2)
-        invitees = victim.getV3PollInvitedPeers(pollKey2, simAu)
-        log.debug("invitedPeers: %s" % invitees)
-        self.assertFalse( noAuClient.getPeerId() in invitees, "NoAUPeer invited in 2nd poll." )
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        ## Verify that all repairs came from peers.
-        for node in nodeList:
-            if not (victim.isNodeRepairedFromPeerByV3(simAu, node)):
-                self.fail("Node %s was not repaired from a peer!" % node)
-            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired.")
+    def _verify_repair( self, nodes ):
+        for node in nodes:
+            self._ensure_victim_node_deleted( node )
 
 
-class RepairFromPeerWithDeactivateV3TestCase(RepairFromPeerV3TestCase):
-    """Ensure that repairing from a V3 peer after AU deactivate/reactivate
-    works correctly."""
-    def maybeDeactivateReactivateAu(self, victim, simAu):
-        log.info("Deactivating AU")
-        victim.deactivateAu(simAu)
-        log.info("Reactivating AU")
-        victim.reactivateAu(simAu)
+class SimpleExtraFileV3TestCase( ExtraFilesV3Tests ):
+    """Test recovery by V3 from an extra node in our cache"""
 
-
-class RepairHugeFromPeerV3TestCase(RepairFromPeerV3TestCase):
-    """Ensure that repairing a huge file from a V3 peer works correctly."""
-
-    ## This test requires approx. 35GB of disk space and a fast machine.
-    ## It is not part of any suite.
-
-    def getTestLocalConf(self):
-            extraConf = {"org.lockss.metrics.default.hash.speed": "8000",
-                         "org.lockss.scomm.maxMessageSize": "10000000000",
-                         "org.lockss.poll.v3.voteDurationMultiplier": "6",
-                         "org.lockss.poll.v3.tallyDurationMultiplier": "5"}
-            extraConf.update(RepairFromPeerV3TestCase.getTestLocalConf(self))
-            return extraConf
-
-    def getSimAu(self):
-        # Reasonably complex AU for testing.
-        return SimulatedAU('simContent', depth=0, branch=0, numFiles=1,
-                           fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                           binFileSize=3*1024*1024*1024-1, protocolVersion=3)
-
-    def doDamage(self, simAu):
-        node = self.victim.getAuNode(simAu, "http://www.example.com/001file.bin")
-        self.victim.damageNode(node)
-        log.info("Damaged node %s on client %s" % (node.url, self.victim))
+    def _damage_AU( self ):
+        # Damage the AU by creating an extra node
+        node = self.victim.createNode( self.AU, '000extrafile.txt' )
+        log.info( 'Created file %s on client %s' % ( node.url, self.victim ) )
         return [ node ]
 
 
-class SimpleDeleteV3TestCase(V3TestCase):
-    """Test repair of a missing file."""
-    def runTest(self):
-        # Reasonably complex AU for testing.
-        simAu = SimulatedAU('simContent', depth=0, branch=0, numFiles=15,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, protocolVersion=3)
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
+class LastFileExtraV3TestCase( ExtraFilesV3Tests ):
+    """Test recovery by V3 from an extra last-file node in our cache"""
 
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        victim = self.victim
-
-        ##
-        ## Damage the AU.
-        ##
-        node = victim.randomDelete(simAu)
-        log.info("Deleted node %s on client %s" % (node.url, victim))
-        
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3Repair( simAu, [ node ], timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired.")
+    def _damage_AU( self ):
+        # Damage the AU by creating an extra node that should sort LAST in the list of CachedUrls
+        node = self.victim.createNode( self.AU, 'zzzzzzzzzzzzz.txt' )
+        log.info( 'Created file %s on client %s' % ( node.url, self.victim ) )
+        return [ node ]
 
 
-class LastFileDeleteV3TestCase(V3TestCase):
-    " Ensure that the deletion of the last (alphabetically) file in the AU can be repaired. "
-    def runTest(self):
-        # Reasonably complex AU for testing.
-        simAu = SimulatedAU('simContent', depth=0, branch=0, numFiles=15,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, protocolVersion=3)
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
+class RandomExtraFileV3TestCase( ExtraFilesV3Tests ):
+    """Test recovery by V3 from a random number of extra nodes in our cache"""
 
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
+    def __init__( self, methodName = 'runTest' ):
+        ExtraFilesV3Tests.__init__( self, methodName )
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 20 }
 
-        victim = self.victim
-
-        ##
-        ## Damage the AU.
-        ##
-        node = victim.getAuNode(simAu, "http://www.example.com/index.html")
-        victim.deleteNode(node)
-        log.info("Deleted node %s on client %s" % (node.url, victim))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3Repair( simAu, [ node ], timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired.")
+    def _damage_AU( self ):
+        return self._create_AU_nodes( 5, 15 )
 
 
-class RandomDeleteV3TestCase(V3TestCase):
-    "Test recovery by V3 from randomly deleted nodes in our cache."
-    def runTest(self):
-        # Reasonably complex AU for testing.
-        simAu = SimulatedAU('simContent', depth=1, branch=1, numFiles=15,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, protocolVersion=3)
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
+class OfflinePeersV3Tests( ExtraFilesV3Tests ):
+    """Abstract class"""
 
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        victim = self.victim
-
-        ##
-        ## Damage the AU.
-        ##
-        nodeList = victim.randomDeleteRandomNodes(simAu, 5, 15)
-        for node in nodeList:
-            self.assertFalse( self.nodeHasContent( node, victim ), 'Failed to delete: %s' % node.url )
-        log.info("Damaged the following nodes on client %s:\n        %s" %
-            (victim, '\n        '.join([str(n) for n in nodeList])))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3Repair( simAu, nodeList, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        for node in nodeList:
-            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired.")
+    def __init__( self, methodName = 'runTest' ):
+        ExtraFilesV3Tests.__init__( self, methodName )
+        self.offline_peers = [ 'TCP:[127.0.0.1]:65520', 'TCP:[127.0.0.1]:65521', 'TCP:[127.0.0.1]:65522' ]
+        self.local_configuration = { 'org.lockss.poll.v3.maxPollSize': 8,
+                                     'org.lockss.poll.v3.minPollSize': 8 }
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 20 }
 
 
-class SimpleExtraFileV3TestCase(V3TestCase):
-    "Test recovery by V3 from an extra node in our cache"
-    def runTest(self):
-        # Reasonably complex AU for testing
-        simAu = SimulatedAU('simContent', depth=0, branch=0,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, numFiles=20, protocolVersion=3)
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
+class VotersDontParticipateV3TestCase( OfflinePeersV3Tests ):
+    """Test a V3 poll where some peers do not participate"""
 
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        victim = self.victim
-
-        ##
-        ## Damage the AU by creating an extra node.
-        ##
-        node = victim.createNode(simAu, '004extrafile.txt')
-        log.info("Created file %s on client %s" % (node.url, victim))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
-        log.info("AU successfully repaired.")
-
-
-class LastFileExtraV3TestCase(V3TestCase):
-    "Test recovery by V3 from an extra last-file node in our cache"
-    def runTest(self):
-        # Reasonably complex AU for testing
-        simAu = SimulatedAU('simContent', depth=0, branch=0,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, numFiles=20, protocolVersion=3)
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
-
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        victim = self.victim
-
-        ##
-        ## Damage the AU by creating an extra node that should sort LAST
-        ## in the list of CachedUrls..
-        ##
-        node = victim.createNode(simAu, 'zzzzzzzzzzzzz.txt')
-        log.info("Created file %s on client %s" % (node.url, victim))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
-        log.info("AU successfully repaired.")
-
-
-class RandomExtraFileV3TestCase(V3TestCase):
-    "Test recovery by V3 from a random number of extra nodes in our cache"
-    def runTest(self):
-        # Reasonably complex AU for testing
-        simAu = SimulatedAU('simContent', depth=1, branch=1,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, numFiles=20, protocolVersion=3)
-
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
-
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        ## To use a specific client, uncomment this line.
-        victim = self.victim
-
-        ##
-        ## Damage the AU by creating an extra node.
-        ##
-        nodeList = victim.randomCreateRandomNodes(simAu, 5, 15)
-        log.info("Created the following nodes on client %s:\n        %s" %
-                 (victim, '\n        '.join([str(n) for n in nodeList])))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        for node in nodeList:
-            self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
-        log.info("AU successfully repaired.")
-
-
-class VotersDontParticipateV3TestCase(V3TestCase):
-    """Test a V3 poll where some peers do not participate."""
-    def getInitialPeerList(self):
-        """Return the real participant list, plus some that do not really
-        exist"""
-        return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
+    def __init__( self, methodName = 'runTest' ):
+        OfflinePeersV3Tests.__init__( self, methodName )
+        self.local_configuration[ 'org.lockss.poll.v3.quorum' ] = 3
     
-    def getTestLocalConf(self):
-        return {"org.lockss.poll.v3.quorum": "3",
-                "org.lockss.poll.v3.minPollSize": "8",
-                "org.lockss.poll.v3.maxPollSize": "8"}
+    def _damage_AU( self ):
+        return self._create_AU_nodes( 5, 15 )
 
-    def runTest(self):
-        # Reasonably complex AU for testing
-        simAu = SimulatedAU('simContent', depth=1, branch=1,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, numFiles=20, protocolVersion=3)
 
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
-
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
-
-        ## To use a specific client, uncomment this line.
-        victim = self.victim
-
-        ##
-        ## Damage the AU by creating an extra node.
-        ##
-        nodeList = victim.randomCreateRandomNodes(simAu, 5, 15)
-        log.info("Created the following nodes on client %s:\n        %s" %
-                 (victim, '\n        '.join([str(n) for n in nodeList])))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 repair...")
-        # waitForV3Repair takes a list of nodes
-        self.assert_( victim.waitForV3RepairExtraFiles( simAu, timeout = self.timeout ), 'Timed out while waiting for V3 repair' )
-        for node in nodeList:
-            self.assertFalse( self.nodeHasContent( node, victim ), 'File was not deleted: %s' % node.url )
-        log.info("AU successfully repaired.")
-    
-
-class NoQuorumV3TestCase(V3TestCase):
+class NoQuorumV3TestCase( OfflinePeersV3Tests ):
     """Be sure a V3 poll with too few participants ends in No Quorum"""
-    def getInitialPeerList(self):
-        """Return the real participant list, plus some that do not really
-        exist"""
-        return "%s;TCP:[127.0.0.1]:65520;TCP:[127.0.0.1]:65521;TCP:[127.0.0.1]:65522" % V3TestCase.getInitialPeerList(self)
-    
-    def getTestLocalConf(self):
-        return {"org.lockss.poll.v3.quorum": "6",
-                "org.lockss.poll.v3.minPollSize": "8",
-                "org.lockss.poll.v3.maxPollSize": "8"}
 
-    def runTest(self):
-        # Reasonably complex AU for testing
-        simAu = SimulatedAU('simContent', depth=1, branch=1,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, numFiles=20, protocolVersion=3)
+    def __init__( self, methodName = 'runTest' ):
+        OfflinePeersV3Tests.__init__( self, methodName )
+        self.local_configuration[ 'org.lockss.poll.v3.quorum' ] = 6
 
-        ##
-        ## Create simulated AUs
-        ##
-        self.createAus(simAu)
+    def _damage_AU( self ):
+        return self._create_AU_nodes( 3, 7 )
 
-        ##
-        ## Assert that the AUs have been crawled.
-        ##
-        self.crawlAus(simAu)
+    def _await_repair( self, nodes ):
+        log.info( 'Waiting for V3 poll to report no quorum...' )
+        self.assert_( self.victim.waitForV3NoQuorum( self.AU ), 'Timed out while waiting for no quorum' )
+        log.info( 'AU successfully reported No Quorum' )
 
-        ## To use a specific client, uncomment this line.
-        victim = self.victim
-
-        ##
-        ## Damage the AU by creating an extra node.
-        ##
-        nodeList = victim.randomCreateRandomNodes(simAu, 3, 7)
-        log.info("Created the following nodes on client %s:\n        %s" %
-                 (victim, '\n        '.join([str(n) for n in nodeList])))
-
-        log.info("Waiting for a V3 poll to be called...")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Timed out while waiting for V3 poll' )
-        log.info("Successfully called a V3 poll")
-
-        ## Just pause until we have better tests.
-        log.info("Waiting for V3 poll to report no quorum...")
-        self.assert_( victim.waitForV3NoQuorum( simAu ), 'Timed out while waiting for no quorum' )
-        log.info("AU successfully reported No Quorum.")
-
-        peerDict = victim.getAuRepairerInfo(simAu)
-        log.debug2("peerDict: " + str(peerDict))
-        for c in self.clients:
-            if c != victim:
-                agree = peerDict[c.getPeerId()]
-                self.assert_( agree[ 'highestAgree' ] > 60, 'No agreement recorded for %s' % c )
+    def _verify_repair( self, nodes ):
+        peer_agreements = self.victim.getAuRepairerInfo( self.AU, 'HighestPercentAgreement' )
+        log.debug2( 'Peer agreements: ' + str( peer_agreements ) )
+        for client in self.clients:
+            if client != self.victim:
+                self.assert_( peer_agreements[ client.getV3Identity() ] > 60, 'No agreement recorded for %s' % client )
     
 
-class TotalLossRecoveryV3TestCase(V3TestCase):
+class TotalLossRecoveryV3TestCase( V3TestCases ):
     """Test repairing a cache under V3 that has lost all its contents"""
-    def getTestLocalConf(self):
-        ## Enable polling on all peers.
-        return {"org.lockss.poll.v3.enableV3Poller":"true"}
 
-    def runTest(self):
-        
-        ## Define a simulated AU
-        simAu = SimulatedAU('simContent', depth=1, branch=1,
-                            fileTypes=[FILE_TYPE_TEXT, FILE_TYPE_BIN],
-                            binFileSize=1024, numFiles=30, protocolVersion=3)
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.local_configuration = { 'org.lockss.poll.v3.enableV3Poller': True }    # Enable polling on all peers
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1, 'numFiles': 30 }
 
-        victim = self.victim
-        
-        ## Create simulated AUs
-        self.createAus(simAu)
+    def _setup_AU( self ):
+        V3TestCases._setup_AU( self )
+        # Allow daemons to record their agreeing peers
+        self._await_V3_poll_agreement()
 
-        ## Assert that the AUs have been crawled.
-        self.crawlAus(simAu)
+    def _damage_AU( self ):
+        nodes = self.victim.getAuNodesWithContent( self.AU )
+        log.info( 'Backing up cache configuration on victim cache...' )
+        self.victim.backupConfiguration()
+        log.info( 'Backed up successfully' )
 
-        nodeList = victim.getAuNodesWithContent(simAu)
+        self.victim.daemon.stop()
+        log.info( 'Stopped daemon running on UI port %s' % self.victim.port )
+        self.victim.simulateDiskFailure()
+        log.info( 'Deleted entire contents of cache on stopped daemon' )
 
-        # expect to see a top level content poll called by all peers.
-        log.info("Waiting for a V3 poll by all simulated caches")
-        for c in self.clients:
-            self.assert_( c.waitForV3Poller( simAu ), 'Never called V3 poll' )
-            log.info("Client on port %s called V3 poll..." % c.port)
+        # Write a TitleDB entry for the simulated AU so it will be marked 'publisher down' when restored.
+        self.framework.appendLocalConfig( { 'org.lockss.auconfig.allowEditDefaultOnlyParams': True,
+                                            'org.lockss.title.sim1.journalTitle': 'Simulated Content',
+                                            'org.lockss.title.sim1.param.1.key': 'root',
+                                            'org.lockss.title.sim1.param.1.value': 'simContent',
+                                            'org.lockss.title.sim1.param.2.key': 'depth',
+                                            'org.lockss.title.sim1.param.2.value': 0,
+                                            'org.lockss.title.sim1.param.3.key': 'branch',
+                                            'org.lockss.title.sim1.param.3.value': 0,
+                                            'org.lockss.title.sim1.param.4.key': 'numFiles',
+                                            'org.lockss.title.sim1.param.4.value': 30,
+                                            'org.lockss.title.sim1.param.pub_down.key': 'pub_down',
+                                            'org.lockss.title.sim1.param.pub_down.value': True,
+                                            'org.lockss.title.sim1.plugin': 'org.lockss.plugin.simulated.SimulatedPlugin',
+                                            'org.lockss.title.sim1.title': 'Simulated Content: simContent' }, self.victim )
+        time.sleep( 5 ) # Settling time
 
-        # expect that each client will have wone a top-level v3 poll
-        log.info("Waiting for all peers to win their polls")
-        for c in self.clients:
-            self.assert_( c.waitForWonV3Poll( simAu, timeout = self.timeout ), 'Client on port %s never won V3 poll' % c.port )
-            log.info("Client on port %s won V3 poll..." % c.port)
-
-        log.info("Backing up cache configuration on victim cache...")
-        victim.backupConfiguration()
-        log.info("Backed up successfully.")
-
-        # All daemons should have recorded their agreeing peers at this
-        # point, so stop the client that we are going to damage.
-        victim.daemon.stop()
-        log.info("Stopped daemon running on UI port %s" % victim.port)
-
-        victim.simulateDiskFailure()
-        log.info("Deleted entire contents of cache on stopped daemon.")
-
-        #
-        # Write out a TitleDB entry for the simulated AU so it will be marked
-        # 'publisher down' when it is restored.
-        #
-        extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
-#                     "org.lockss.plugin.registry": "org.lockss.plugin.simulated.SimulatedPlugin",
-                     "org.lockss.title.sim1.title": "Simulated Content: simContent",
-                     "org.lockss.title.sim1.journalTitle": "Simulated Content",
-                     "org.lockss.title.sim1.plugin": "org.lockss.plugin.simulated.SimulatedPlugin",
-                     "org.lockss.title.sim1.param.1.key": "root",
-                     "org.lockss.title.sim1.param.1.value": "simContent",
-                     "org.lockss.title.sim1.param.2.key": "depth",
-                     "org.lockss.title.sim1.param.2.value": "0",
-                     "org.lockss.title.sim1.param.3.key": "branch",
-                     "org.lockss.title.sim1.param.3.value": "0",
-                     "org.lockss.title.sim1.param.4.key": "numFiles",
-                     "org.lockss.title.sim1.param.4.value": "30",
-                     "org.lockss.title.sim1.param.pub_down.key": "pub_down",
-                     "org.lockss.title.sim1.param.pub_down.value": "true"}
-#                     "org.lockss.title.sim1.param.protocol.key": "protocol_version",
-#                     "org.lockss.title.sim1.param.protocol.value": "3"}
-
-        self.framework.appendLocalConfig(extraConf, victim)
-
-        time.sleep(5) # Give time for things to settle before starting again
-
-        victim.daemon.start()
-
+        self.victim.daemon.start()
         # Wait for the client to come up
-        self.assert_( victim.waitForDaemonReady(), "Daemon never became ready" )
-        log.info("Started daemon running on UI port %s" % victim.port)
+        self.assert_( self.victim.waitForDaemonReady(), 'Daemon is not ready' )
+        log.info( 'Started daemon running on UI port %s' % self.victim.port)
 
-        self.assertFalse( victim.hasAu( simAu ), 'AU still intact' )
+        return nodes
 
-        # Now restore the backup file
-        log.info("Restoring cache configuration...")
-        victim.restoreConfiguration(simAu)
-        log.info("Restored successfully.")
+    def _verify_damage( self, nodes ):
+        self.assertFalse( self.victim.hasAu( self.AU ), 'AU still intact' )
+
+        # Restore the backup file
+        log.info( 'Restoring cache configuration...' )
+        self.victim.restoreConfiguration( self.AU )
+        log.info( 'Restored successfully' )
 
         # These should be equal AU IDs, so both should return true
-        self.assert_( victim.hasAu( simAu ) )
-        self.assert_( victim.isPublisherDown( simAu ) )
+        self.assert_( self.victim.hasAu( self.AU ) )
+        self.assert_( self.victim.isPublisherDown( self.AU ) )
         
-        # expect to see a V3 poll called
-        log.info("Waiting for a V3 poll")
-        self.assert_( victim.waitForV3Poller( simAu ), 'Never called V3 poll' )
-        log.info("Called V3 poll")
-
-        # expect to see the AU successfully repaired
-        log.info("Waiting for successful V3 repair of AU.")
-        self.assert_( victim.waitForCompleteV3Repair( simAu, timeout = self.timeout ), 'AU never repaired by V3' )
-        for node in nodeList:
-            self.assert_( self.compareNode( node, simAu, victim, self.nonVictim ), 'File was not repaired: %s' % node.url )
-        log.info("AU successfully repaired by V3.")
-
-        # End of test.
+    def _await_repair( self, nodes ):
+        # Expect to see the AU successfully repaired
+        log.info( 'Waiting for successful V3 repair of entire AU' )
+        self.assert_( self.victim.waitForV3Repair( self.AU, timeout = self.timeout ), 'AU was not repaired by V3' )
 
 
-###########################################################################
-### Functions that build and return test suites.  These can be
-### called by name when running this test script.
-###########################################################################
+class RepairFromPublisherV3TestCase( V3TestCases ):
+    """Ensure that repair from publisher works correctly in V3"""
 
-def tinyUiTests():
-    suite = unittest.TestSuite()
-    suite.addTest(TinyUiUnknownHostTestCase())
-    suite.addTest(TinyUiMalformedUrlTestCase())
-    suite.addTest(TinyUiForbiddenTestCase())
-    suite.addTest(TinyUiRefusedTestCase())
-    suite.addTest(TinyUiFileNotFoundTestCase())
-    return suite
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.local_configuration = { "org.lockss.poll.v3.repairFromCachePercent": 0 }    # NEVER repair from a cache
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1 }
 
-def simpleV3Tests():
-    suite = unittest.TestSuite()
-    suite.addTest(SimpleDamageV3TestCase())
-    suite.addTest(SimpleDeleteV3TestCase())
-    suite.addTest(SimpleExtraFileV3TestCase())
-    suite.addTest(LastFileDeleteV3TestCase())
-    suite.addTest(LastFileExtraV3TestCase())
-    suite.addTest(VotersDontParticipateV3TestCase())
-    suite.addTest(NoQuorumV3TestCase())
-    suite.addTest(TotalLossRecoveryV3TestCase())
-    # suite.addTest(RepairFromPublisherV3TestCase())
-    suite.addTest(RepairFromPeerV3TestCase())
-    return suite
+    def _damage_AU( self ):
+        return self.victim.randomDamageRandomNodes( self.AU, 15, 20 )
 
-def randomV3Tests():
-    suite = unittest.TestSuite()
-    suite.addTest(RandomDamageV3TestCase())
-    suite.addTest(RandomDeleteV3TestCase())
-    suite.addTest(RandomExtraFileV3TestCase())
-    return suite
-
-def v3Tests():
-    suite = unittest.TestSuite()
-    suite.addTest(simpleV3Tests())
-    suite.addTest(randomV3Tests())
-    return suite
-
-##
-## Ignore these... mainly used for testing this framework.
-##
-
-def succeedingTests():
-    suite = unittest.TestSuite()
-    suite.addTest(SucceedingTestTestCase())
-    return suite
-
-def failingTests():
-    suite = unittest.TestSuite()
-    suite.addTest(FailingTestTestCase())
-    return suite
-
-def immediateSucceedingTests():
-    suite = unittest.TestSuite()
-    suite.addTest(ImmediateSucceedingTestTestCase())
-    return suite
-
-def immediateFailingTests():
-    suite = unittest.TestSuite()
-    suite.addTest(ImmediateFailingTestTestCase())
-    return suite
-
-##
-## Tests to be run after tagging.
-##
-def postTagTests():
-    suite = unittest.TestSuite()
-    suite.addTest(tinyUiTests())
-    suite.addTest(v3Tests())
-    return suite
+    def _verify_repair( self, nodes ):
+        for node in nodes:
+            self.assert_( self.victim.isNodeRepairedFromServerByV3( self.AU, node, True ), 'Node %s was not repaired from the publisher!' % node )
+        V3TestCases._verify_repair( self, nodes )
 
 
-###########################################################################
-### Main entry point for this test suite.
-###########################################################################
+class RepairFromPeerV3Tests( V3TestCases ):
+    """Abstract class"""
 
-if __name__ == "__main__":
-    try:
-        unittest.main( argv = sys.argv[ 0 : 1 ] + [ '-q' ] + sys.argv[ 1 : ] )
-    except SystemExit, e:
-        # unittest.main() is very unfortunate here.  It does a
-        # sys.exit (which raises SystemExit), instead of letting you
-        # clean up after it in the try: block. The SystemExit
-        # exception has one attribute, 'code', which is either True if
-        # an error occured while running the tests, or False if the
-        # tests ran successfully.
-        for fw in frameworkList:
-            if fw.isRunning:
-                fw.stop()
+    def __init__( self, methodName = 'runTest' ):
+        V3TestCases.__init__( self, methodName )
+        self.timeout = 2*60*60
+        self.daemon_count += 1
+        # ALWAYS repair from a cache; enable polling on all peers.
+        self.local_configuration = { 'org.lockss.poll.minPollAttemptInterval': 10,
+                                     'org.lockss.poll.v3.enableV3Poller': False,
+                                     'org.lockss.poll.v3.repairFromCachePercent': 100,
+                                     'org.lockss.poll.v3.toplevelPollInterval': '1d' }
+        self.simulated_AU_parameters = { 'depth': 1, 'branch': 1 }    # Reasonably complex AU for testing
+        self.toggle_AU_activation = False
 
-        if not e.code and deleteAfterSuccess:
-            for fw in frameworkList:
-                fw.clean()
+    def _setup_AU( self ):
+        self.client_without_AU = self.clients[ -1 ]
+        self.clients.remove( self.client_without_AU )
+        log.debug( 'Peer without AU: %s' % self.client_without_AU )
+        
+        V3TestCases._setup_AU( self )
+        self.framework.appendExtraConfig( { 'org.lockss.poll.v3.enableV3Poller': True } )
+        self.framework.reloadAllConfiguration()
 
-    except KeyboardInterrupt:
-        for fw in frameworkList:
-            if fw.isRunning:
-                fw.stop()
-        raise
-    except Exception, e:
-        # Unhandled exception occured.
-        log.error("%s" % e)
-        raise
+        # Agreement is required from all peers before continuing
+        self._await_V3_poll_agreement()
+
+        self.victim_first_poll_key = self.victim.getV3PollKey( self.AU )
+        log.debug( "Victim's first poll key: " + self.victim_first_poll_key )
+        invitees = self.victim.getV3PollInvitedPeers( self.victim_first_poll_key )
+        log.debug( 'invitedPeers: %s' % invitees )
+        self.assertFalse( self.victim.getV3Identity() in invitees, 'Victim invited itself' )
+        self.assert_( self.client_without_AU.getV3Identity() in invitees, 'Peer without AU not invited in first poll' )
+
+        log.debug( 'victim.getNoAuPeers( self.AU ): %s' % self.victim.getNoAuPeers( self.AU ) )
+        self.assertEqual( self.victim.getNoAuPeers( self.AU ), [ self.client_without_AU.getV3Identity() ], 'Peer without AU not recorded' )
+
+    def _update_configuration( self ):
+        self.framework.appendLocalConfig( { 'org.lockss.poll.v3.toplevelPollInterval': 10 }, self.victim )
+        self.victim.reloadConfiguration()
+        if self.toggle_AU_activation:
+            log.info( 'Deactivating AU' )
+            self.victim.deactivateAu( self.AU )
+            log.info( 'Reactivating AU' )
+            self.victim.reactivateAu( self.AU )
+
+    def _damage_AU( self ):
+        nodes = self.victim.randomDamageRandomNodes( self.AU, 15, 20 )
+        self._update_configuration()
+        return nodes
+
+    def _verify_damage( self, nodes ):
+        V3TestCases._verify_damage( self, nodes )
+        
+        log.debug( 'victim.getNoAuPeers( self.AU ): %s' % self.victim.getNoAuPeers( self.AU ) )
+        self.assertEqual( self.victim.getNoAuPeers( self.AU ), [ self.client_without_AU.getV3Identity() ], 'Peer without AU disappeared!' )
+
+        log.info( 'Waiting for a V3 poll to be called...' )
+        # Ignores first victim poll
+        self.assert_( self.victim.waitForV3Poller( self.AU, [ self.victim_first_poll_key ] ), 'Timed out while waiting for V3 poll' )
+        log.info( 'Successfully called a V3 poll' )
+
+        victim_second_poll_key = self.victim.getV3PollKey( self.AU, self.victim_first_poll_key )
+        log.debug( "Victim's second poll key: " + victim_second_poll_key )
+        invitees = self.victim.getV3PollInvitedPeers( victim_second_poll_key )
+        log.debug( 'invitedPeers: %s' % invitees )
+        self.assertFalse( self.client_without_AU.getV3Identity() in invitees, 'Peer without AU invited in 2nd poll' )
+
+    def _verify_repair( self, nodes ):
+        # Verify that all repairs came from peers
+        for node in nodes:
+            self.assert_( self.victim.isNodeRepairedFromServerByV3( self.AU, node, False ), 'Node %s was not repaired from a peer!' % node )
+        V3TestCases._verify_repair( self, nodes )        
+
+
+class RepairFromPeerV3TestCase( RepairFromPeerV3Tests ):
+    """Ensure that repairing from a V3 peer works correctly"""
+
+    def __init__( self, methodName = 'runTest' ):
+        RepairFromPeerV3Tests.__init__( self, methodName )
+        self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
+
+
+class RepairFromPeerWithDeactivateV3TestCase( RepairFromPeerV3Tests ):
+    """Ensure that repairing from a V3 peer after AU deactivate/reactivate works correctly"""
+
+    def __init__( self, methodName = 'runTest' ):
+        RepairFromPeerV3Tests.__init__( self, methodName )
+        self.local_configuration[ 'org.lockss.poll.pollStarterAdditionalDelayBetweenPolls' ] = '20s'    # XXX
+        self.toggle_AU_activation = True
+
+
+class RepairHugeFromPeerV3TestCase( RepairFromPeerV3Tests ):
+    """Ensure that repairing a huge file from a V3 peer works correctly."""
+    # This test requires about 35 GB of disk space; a fast machine is recommended.  It is not part of any suite.
+
+    def __init__( self, methodName = 'runTest' ):
+        RepairFromPeerV3Tests.__init__( self, methodName )
+        self.local_configuration.update( { 'org.lockss.metrics.default.hash.speed': 8000,
+                                           'org.lockss.poll.v3.tallyDurationMultiplier': 5,
+                                           'org.lockss.poll.v3.voteDurationMultiplier': 6,
+                                           'org.lockss.scomm.maxMessageSize': 10000000000 } )
+        self.simulated_AU_parameters = { 'numFiles': 1, 'binFileSize': 3*1024*1024*1024 - 1 }
+
+    def _damage_AU( self ):
+        node = self.victim.getAuNode( self.AU, 'http://www.example.com/001file.bin' )
+        self.victim.damageNode( node )
+        self._update_configuration()
+        return [ node ]
+
+
+tinyUiTests = unittest.TestSuite( ( TinyUiUnknownHostTestCase(),
+                                    TinyUiMalformedUrlTestCase(),
+                                    TinyUiForbiddenTestCase(),
+                                    TinyUiRefusedTestCase(),
+                                    TinyUiFileNotFoundTestCase() ) )
+
+simpleV3Tests = unittest.TestSuite( ( SimpleDamageV3TestCase(),
+                                      SimpleDeleteV3TestCase(),
+                                      SimpleExtraFileV3TestCase(),
+                                      LastFileDeleteV3TestCase(),
+                                      LastFileExtraV3TestCase(),
+                                      VotersDontParticipateV3TestCase(),
+                                      NoQuorumV3TestCase(),
+                                      TotalLossRecoveryV3TestCase(),
+                                      RepairFromPublisherV3TestCase(),
+                                      RepairFromPeerV3TestCase(),
+                                      RepairFromPeerWithDeactivateV3TestCase() ) )
+
+randomV3Tests = unittest.TestSuite( ( RandomDamageV3TestCase(),
+                                      RandomDeleteV3TestCase(),
+                                      RandomExtraFileV3TestCase() ) )
+
+v3Tests = unittest.TestSuite( ( simpleV3Tests, randomV3Tests ) )
+
+# Release-candidate tests
+postTagTests = unittest.TestSuite( ( tinyUiTests, v3Tests ) )
+
+
+# Load configuration
+lockss_util.config.load( 'testsuite.props' )
+if os.path.isfile( 'testsuite.opt' ):
+    lockss_util.config.load( 'testsuite.opt' )
+
+# Module globals
+frameworkList = []
+deleteAfterSuccess = lockss_util.config.getBoolean( 'deleteAfterSuccess', True )
+
+try:
+    unittest.main( argv = sys.argv[ 0 : 1 ] + [ '-q' ] + sys.argv[ 1 : ] )
+except ( KeyboardInterrupt, SystemExit ), exception:
+    for framework in frameworkList:
+        if framework.isRunning:
+            log.info( 'Stopping framework' )
+            framework.stop()
+    if type( exception ) is SystemExit and not exception.code and deleteAfterSuccess:
+        for framework in frameworkList:
+            framework.clean()
+except Exception, exception:
+    log.error( exception )
+
+raise

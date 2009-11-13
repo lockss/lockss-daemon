@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-'''Pylorus content-testing and ingestion gateway by Michael R Bax
-$Id: pylorus.py,v 2.7 2009-08-25 22:23:16 thib_gc Exp $'''
+'''Pylorus content validation and ingestion gateway
+Michael R Bax, 2008-2009
+$Id: pylorus.py,v 2.8 2009-11-13 05:59:32 mrbax Exp $'''
 
 
 import ConfigParser
@@ -21,17 +22,15 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.7 $'.split()[ 1 ]
+REVISION = '$Revision: 2.8 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
-DEFAULT_V3_PORT = 8801
 SERVER_READY_TIMEOUT = 60
 MINIMUM_SLEEP_DURATION = 15
 MAXIMUM_SLEEP_DURATION = 120
 REMOTE_CRAWL_RETRY_TOTAL = 3
 POLL_FAILURE_RETRY_TOTAL = 3
 POLL_MISMATCH_RETRY_TOTAL = 3
-DIRECTED_POLL_MIN_AGREEMENT_DIFFERENCE = 10
 CONFIGURATION_DEFAULTS = { 
     'configuration':    '',
     'local_servers':    'validate://localhost:8081\nvalidate://localhost:8082\ningest://localhost:8081\ningest://localhost:8082',
@@ -39,13 +38,14 @@ CONFIGURATION_DEFAULTS = {
     'username':         'lockss-u',
     'password':         'lockss-p',
     'agreement':        95,
+    'fix':              10,
     'expiration':       168,
     'verbosity':        1,
     'delete':           'no',
     'batch':            'no',
     'test':             'no',
     'snapshot':         '',
-    'content_list':     '',
+    'content_list':     ''
 }
 
 
@@ -85,6 +85,7 @@ class Content:
         COMPARE = 'compare'
         POLL = 'poll'
         ADJUDICATE = 'adjudicate'
+        REPAIR = 'repair'
         CREATION_FAILURE = 'CREATION FAILURE'
         ADD_FAILURE = 'ADD FAILURE'
         CRAWL_FAILURE = 'CRAWL FAILURE'
@@ -113,38 +114,9 @@ class Content:
         self.thread = None
         self.update_time = time.time()
         self.state = Content.State.CREATE
-        self.directed_poll_clients = None
-        self.previous_polls = None
     
     def status_message( self, template ):
-        return template % ( 'AU "%s"' % self.AU, 'server ' + self.client.ID() )
-
-    def diff( self, hash_1, hash_2 ):
-        '''Returns the differences and agreement between two hashes'''
-        hash_1_entries, hash_2_entries = ( [ entry.split( None, 1 ) for entry in hash.splitlines() if entry and not entry.startswith( '#' ) ] for hash in ( hash_1, hash_2 ) )
-        differences = []
-        offset_1 = 0
-        offset_2 = 0
-        while True:
-            try:
-                hash_1, filename_1 = hash_1_entries[ offset_1 ]
-                hash_2, filename_2 = hash_2_entries[ offset_2 ]
-            except IndexError:
-                break
-            if filename_1 == filename_2:
-                if hash_1 != hash_2:
-                    differences.append( '! ' + filename_1 )
-                offset_1 += 1
-                offset_2 += 1
-            elif filename_1 < filename_2:
-                differences.append( '< ' + filename_1 )
-                offset_1 += 1
-            else:
-                differences.append( '> ' + filename_2 )
-                offset_2 += 1
-        differences.extend( '< ' + filename for hash, filename in hash_1_entries[ offset_1 : ] )
-        differences.extend( '> ' + filename for hash, filename in hash_2_entries[ offset_2 : ] )
-        return differences, 100 - 200*len( differences )/( len( hash_1_entries ) + len( hash_2_entries ) ) # 1 - percentage of difference lines
+        return template % ( 'AU "%s"' % self.AU, 'server %s' % self.client )
 
     def create( self ):
         '''Parses the content description and creates an AU'''
@@ -160,13 +132,13 @@ class Content:
             self.state = Content.State.CREATION_FAILURE
             raise Leaving_Pipeline
         logging.debug( 'Created AU from "%s"' % self.description )
-        self.clients = self.local_clients[:]
+        self.clients = self.local_clients[ : ]
         self.state = Content.State.CHECK
 
     def check( self ):
         '''Does the server already have this AU?'''
         if len( self.crawl_successes ) == 2:
-            self.clients = self.remote_clients[:]
+            self.clients = self.remote_clients[ : ]
         self.client = self.clients.pop( random.randrange( len( self.clients ) ) )
         logging.info( self.status_message( 'Checking for %s on %s' ) )
         self.pre_existent = self.client.hasAu( self.AU )
@@ -194,10 +166,10 @@ class Content:
         '''Crawl this AU on the server'''
         logging.info( self.status_message( 'Waiting for crawl of %s on %s' ) )
         try:
-            if isinstance( self.AU, lockss_daemon.SimulatedAU ):
-                crawl_succeeded = self.client.waitForSuccessfulNewCrawl( self.AU, 0 )
+            if isinstance( self.AU, lockss_daemon.Simulated_AU ):
+                crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, True, 0 )
             else:
-                crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, 0 )
+                crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, False, 0 )
         except lockss_daemon.LockssError, exception:
             logging.error( exception )
             logging.warn( self.status_message( 'Failed to crawl %s on %s' ) )
@@ -215,9 +187,10 @@ class Content:
             self.crawl_successes.append( self.client )
             if self.action == self.Action.VALIDATE:
                 self.state = Content.State.HASH
-            elif len( self.crawl_successes ) < len( self.local_clients ) + len( self.remote_clients ):
+            elif len( self.crawl_successes ) < 2 + min( 2, len( self.local_clients ) ):
                 self.state = Content.State.CHECK
             else:
+                self.poll_clients = self.crawl_successes[ : 2 ]
                 self.state = Content.State.POLL
     
     def remove( self ):
@@ -235,14 +208,14 @@ class Content:
                 content.hash_file = content.client.getAuHashFile( content.AU )
             except lockss_daemon.LockssError, exception:
                 logging.error( exception )
-                content.hash_file = None
+                content.hash_file = ''
 
         logging.info( self.status_message( 'Waiting for hash of %s on %s' ) )
         if self.thread:
             if self.thread.isAlive():
                 return
             self.thread = None
-            if not self.hash_file:
+            if not self.hash_file.startswith( '# Block hashes from ' ):
                 logging.warn( self.status_message( 'Hash failure for %s on %s' ) )
                 self.state = Content.State.HASH_FAILURE
                 raise Leaving_Pipeline # Only if no remote clients left?
@@ -260,10 +233,48 @@ class Content:
 
     def compare( self ):
         '''Compare server hashes of this AU'''
+
+        def diff( hash_1, hash_2 ):
+            '''Returns the differences and agreement between two hashes'''
+            hash_1_entries, hash_2_entries = ( [ entry.rsplit( None, 1 ) for entry in hash.splitlines() if entry and not entry.startswith( '#' ) ] for hash in ( hash_1, hash_2 ) )
+            differences = []
+            difference_count = 0
+            offset_1 = 0
+            offset_2 = 0
+            while True:
+                try:
+                    hash_1, filename_1 = hash_1_entries[ offset_1 ]
+                    hash_2, filename_2 = hash_2_entries[ offset_2 ]
+                except IndexError:
+                    differences.extend( '< ' + filename for hash, filename in hash_1_entries[ offset_1 : ] )
+                    differences.extend( '> ' + filename for hash, filename in hash_2_entries[ offset_2 : ] )
+                    entry_total = len( hash_1_entries ) + len( hash_2_entries )
+                    difference_count += entry_total - offset_1 - offset_2
+                    return differences, 100*( entry_total - difference_count )//entry_total
+                if filename_1 == filename_2:
+                    if hash_1 == 'Hash error (see log)':
+                        differences.append( 'X ' + filename_1 )
+                        difference_count += 2
+                    elif hash_1 != hash_2:
+                        differences.append( '! ' + filename_1 )
+                        difference_count += 2
+                    offset_1 += 1
+                    offset_2 += 1
+                elif filename_1 < filename_2:
+                    differences.append( '< ' + filename_1 )
+                    difference_count += 1
+                    offset_1 += 1
+                else:
+                    differences.append( '> ' + filename_2 )
+                    difference_count += 1
+                    offset_2 += 1
+
         local_comparison = len( self.hash_records ) == 2
         location = 'Local' if local_comparison else 'Remote'
-        clients, hashes = zip( *self.hash_records )
-        difference, agreement = self.diff( hashes[ 0 ], hashes[ -1 ] )
+        logging.debug( self.status_message( 'Comparing hashes of %s on ' + str( self.hash_records[ 0 ][ 0 ] ) + ' to %s' ) )
+        logging.debug2( 'First hash file:\n' + self.hash_records[ 0 ][ 1 ] )
+        logging.debug2( 'Second hash file:\n' + self.hash_records[ -1 ][ 1 ] )
+        difference, agreement = diff( self.hash_records[ 0 ][ 1 ], self.hash_records[ -1 ][ 1 ] )
         self.hash_records[ -1 ] += difference, agreement
         if agreement >= configuration.getint( PROGRAM, 'agreement' ):
             logging.info( location + ' hash file match for AU "%s"' % self.AU )
@@ -279,14 +290,10 @@ class Content:
     
     def poll( self ):
         '''Run a poll for this AU on the server'''
-        if self.directed_poll_clients:
-            self.client = random.choice( self.directed_poll_clients )
-            self.directed_poll_clients = None
-        else:
-            self.client = random.choice( self.crawl_successes[ : 2 ] )
+        self.client = random.choice( self.poll_clients )
         logging.info( self.status_message( 'Starting poll of %s on %s' ) )
         try:
-            self.previous_polls = self.client.getV3PollKeys( self.AU )
+            self.past_poll_keys = self.client.getV3PollKeys( self.AU )
             self.client.startV3Poll( self.AU )
         except lockss_daemon.LockssError, exception:
             logging.error( exception )
@@ -298,50 +305,45 @@ class Content:
     def adjudicate( self ):
         '''Judge poll results for this AU on the server'''
         logging.info( self.status_message( 'Waiting for result of poll of %s on %s' ) )
-        if not self.client.waitForFinishedV3Poll( self.AU, excludePolls=self.previous_polls, timeout=0 ):
+        if not self.client.waitForCompletedV3Poll( self.AU, self.past_poll_keys, 0 ):
             return
-        logging.debug( self.status_message( 'Finished poll of %s on %s' ) )
+        logging.debug( self.status_message( 'Completed poll of %s on %s' ) )
         result, status = self.client.getPollResults( self.AU )
         if result == 'Complete':
             self.poll_agreement = int( status.split( '.', 1 )[ 0 ] )
             if self.poll_agreement >= configuration.getint( PROGRAM, 'agreement' ):
                 logging.info( self.status_message( 'Poll match for %s on %s' ) )
                 self.state = Content.State.POLL_MATCH
-                raise Leaving_Pipeline
             else:
                 logging.warn( self.status_message( 'Poll mismatch for %s on %s' ) )
                 self.poll_mismatch_retries -= 1
-                if not self.poll_mismatch_retries:
-                    self.state = Content.State.POLL_MISMATCH
-                    raise Leaving_Pipeline
-                # Analyze the poll results
-                repairerInfo = self.client.getAuRepairerInfo(self.AU)
-                minagr = 100
-                maxagr = 0
-                agrmap = {}
-                for repairer in repairerInfo:
-                    repairer_client = v3_identities.get(repairer)
-                    if repairer_client:
-                        agrval = repairerInfo[repairer]['lastAgree']
-                        if agrval < minagr: minagr = agrval
-                        if agrval > maxagr: maxagr = agrval
-                        lst = agrmap.get(agrval, [])
-                        lst.append(repairer_client)
-                        agrmap[agrval] = lst
-                    else:
-                        logging.warn('No client corresponding to %s' % repairer)
-                logging.debug('minagr: %d, maxagr: %d' % (minagr, maxagr))
-                if maxagr - minagr > DIRECTED_POLL_MIN_AGREEMENT_DIFFERENCE:
-                    self.directed_poll_clients = agrmap[minagr]
-                else:
-                    self.directed_poll_clients = None
+                if self.poll_mismatch_retries:
+                    self.state = Content.State.REPAIR
+                    return
+                self.state = Content.State.POLL_MISMATCH
         else:
             logging.warn( self.status_message( 'Poll failed (' + result + ') for %s on %s' ) )
-            time.sleep( 20 )
             self.poll_failure_retries -= 1
-            if not self.poll_failure_retries:
-                self.state = Content.State.POLL_FAILURE
-                raise Leaving_Pipeline
+            if self.poll_failure_retries:
+                self.state = Content.State.POLL
+                return
+            self.state = Content.State.POLL_FAILURE
+        raise Leaving_Pipeline
+
+    def repair( self ):
+        '''Restrict the next poll to the most divergent candidates if poll disagreement varies too much'''
+        repairer_info = self.client.getAuRepairerInfo( self.AU, 'LastPercentAgreement' )
+        for repairer in repairer_info.keys():
+            if repairer not in V3_clients_lookup:
+                logging.warn( 'No known client corresponding to V3 identity %s' % repairer )
+                del repairer_info[ repairer ]
+        agreement_minimum = min( agreement for agreement in repairer_info.itervalues() )
+        agreement_maximum = max( agreement for agreement in repairer_info.itervalues() )
+        logging.debug( 'Poll agreement range: %i%% to %i%%' % ( agreement_minimum, agreement_maximum ) )
+        if agreement_maximum - agreement_minimum >= configuration.getint( PROGRAM, 'fix' ):
+            self.poll_clients = [ V3_clients_lookup[ repairer ] for repairer, agreement in repairer_info.iteritems() if agreement == agreement_minimum ]
+        else:
+            self.poll_clients = self.crawl_successes[ : 2 ]
         self.state = Content.State.POLL
 
     def process( self ):
@@ -372,28 +374,21 @@ class Content:
                 return singular + 'ES'
             elif singular.endswith( 'Y' ):
                 return singular[ : -1 ] + 'IES'
-            else:
-                return singular + 'S'
+            return singular + 'S'
 
         if heading:
-            if singular:
-                print '\n' + self.state + ':'
-            else:
-                print '\n\n' + plural( self.state ) + ':'
+            print '\n' + ( self.state if singular else '\n' + plural( self.state ) ) + ':'
         print
-        if self.state == Content.State.CREATION_FAILURE:
-            print self.description
-        else:
-            print self.AU.auId
+        print self.description if self.state == Content.State.CREATION_FAILURE else self.AU.auId
         if self.state in ( Content.State.ADD_FAILURE, Content.State.HASH_FAILURE ):
-            print '\t', self.client.ID()
+            print '\t', self.client
         elif self.state == Content.State.CRAWL_FAILURE:
             for client in self.crawl_failures:
-                print '\t', client.ID()
+                print '\t', client
         elif self.state in ( Content.State.HASH_MISMATCH, Content.State.HASH_MATCH ):
             reference_client = self.hash_records[ 0 ][ 0 ]
-            for client, hash, difference, agreement in self.hash_records[ 1 : ]:
-                print '\t%i%% agreement between %s and %s' % ( agreement, reference_client.ID(), client.ID() )
+            for client, dummy, difference, agreement in self.hash_records[ 1 : ]:
+                print '\t%i%% agreement between %s and %s' % ( agreement, reference_client, client )
                 for entry in difference:
                     print '\t\t' + entry
         elif self.state in ( Content.State.POLL_MISMATCH, Content.State.POLL_MATCH ):
@@ -402,19 +397,27 @@ class Content:
             print
 
 
+def read_configuration( filename ):
+    '''Process configuration file and handles nesting if necessary'''
+    while filename not in read_configurations:
+        configuration.read( filename )
+        read_configurations.add( filename )
+        filename = configuration.get( PROGRAM, 'configuration' )        
+    
+
 def self_test_startup():
     '''Sets up a framework for simulated AU testing'''
 
     global framework
     framework = lockss_daemon.Framework( 4 )
 
-    peer_list = ';'.join( [ client.getPeerId() for client in framework.clientList ] )
+    peer_list = ';'.join( client.getV3Identity() for client in framework.clientList )
     for client in framework.clientList:
         framework.appendLocalConfig( { 'org.lockss.id.initialV3PeerList': peer_list, # Redundant?
-                                       'org.lockss.localV3Identity': client.getPeerId(),
+                                       'org.lockss.platform.v3.identity': client.getV3Identity(),
                                        'org.lockss.poll.v3.enableV3Poller': False,
-                                       'org.lockss.poll.v3.quorum': 2,
-                                       'org.lockss.baseau.defaultFetchRateLimiterSource': 'au' },
+                                       'org.lockss.ui.access.ip.include':'171.66.236.62;171.65.29.194;128.12.137.0/24;192.168.10.0/24',
+                                       'org.lockss.poll.v3.quorum': 2 },
                                      client )
 
     logging.info( 'Starting framework in %s', framework.frameworkDir )
@@ -425,15 +428,7 @@ def self_test_startup():
     framework.waitForFrameworkReady()
 
     simulated_AU_roots = [ 'Uncrawlable', 'Major_hash_differences', 'Minor_hash_differences', 'Identical_hashes', 'Poll_identical' ]
-    simulated_AU_parameters = {
-        'depth': 0,
-        'branch': 0,
-        'numFiles': 10,
-        'binFileSize': 1024,
-        'fileTypes': [ lockss_daemon.FILE_TYPE_TEXT, lockss_daemon.FILE_TYPE_BIN ],
-        'protocolVersion': 3
-    }
-    simulated_AUs = [ lockss_daemon.SimulatedAU( simulated_AU_root, **simulated_AU_parameters ) for simulated_AU_root in simulated_AU_roots ]
+    simulated_AUs = [ lockss_daemon.Simulated_AU( simulated_AU_root ) for simulated_AU_root in simulated_AU_roots ]
 
     global simulated_AU_cache
     simulated_AU_cache = dict( ( AU.auId, AU ) for AU in simulated_AUs )
@@ -441,25 +436,23 @@ def self_test_startup():
     client = framework.clientList[ 0 ]
     crawl_failure_AU, badly_damaged_AU, slightly_damaged_AU = simulated_AUs[ : 3 ]
 
-    logging.info( "Pre-loading AU with a missing URL on server " + client.ID() )
+    logging.info( 'Pre-loading AU with a missing URL on server %s' % client )
     client.createAu( crawl_failure_AU )
     client.waitAu( crawl_failure_AU )
     crawl_failure_AU.numFiles += 1
 
-    logging.info( 'Pre-loading AU with major differences on server ' + client.ID() )
+    logging.info( 'Pre-loading AU with major differences on server %s' % client )
     client.createAu( badly_damaged_AU )
     client.waitAu( badly_damaged_AU )
-    client.waitForSuccessfulCrawl( badly_damaged_AU )
+    client.waitForSuccessfulCrawl( badly_damaged_AU, False )
     client.randomDamageRandomNodes( badly_damaged_AU, 2, 2 )
 
-    logging.info( 'Pre-loading AU with minor differences on server ' + client.ID() )
+    logging.info( 'Pre-loading AU with minor differences on server %s' % client )
     client.createAu( slightly_damaged_AU )
     client.waitAu( slightly_damaged_AU )
-    client.waitForSuccessfulCrawl( slightly_damaged_AU )
+    client.waitForSuccessfulCrawl( slightly_damaged_AU, False )
     client.randomDamageSingleNode( slightly_damaged_AU )
 
-    broken_AU_IDs = [ 'Invalid_AU_ID', 'a|particularly|InvalidPlugin&base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F' ]
-    
     return [ 'invalid_description', 'validate:Invalid_AU_ID', 'unknown_action:org|lockss|plugin|simulated|SimulatedPlugin&root~Test', 'validate:a|particularly|InvalidPlugin&base_url~http%3A%2F%2Fwww%2Eexample%2Ecom%2F' ] + [ 'validate:' + AU.auId for AU in simulated_AUs[ : -1 ] ] + [ 'ingest:' + simulated_AUs[ -1 ].auId ], { Content.Action.VALIDATE: framework.clientList[ : 2 ], Content.Action.INGEST: framework.clientList[ : 2 ] }, { Content.Action.VALIDATE: framework.clientList[ 2 : ], Content.Action.INGEST: framework.clientList[ 2 : ] }
 
 
@@ -473,24 +466,36 @@ def self_test_shutdown():
         framework.clean()
 
 
+def wait_for_clients( clients ):
+    """Wait until the clients are up and running"""
+    for action_clients in clients.itervalues():
+        for client in action_clients:
+            try:
+                assert client.waitForDaemonReady( 60 )
+            except ( AssertionError, lockss_daemon.LockssError ):
+                raise Exception( 'Unavailable server %s' % client )
+
+
 base_name = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ]
 configuration = ConfigParser.RawConfigParser( CONFIGURATION_DEFAULTS )
 configuration.add_section( PROGRAM )
-configuration.read( ( os.path.join( '/etc', base_name + '.conf' ),
-                      os.path.expanduser( '~/.' + base_name + 'rc' ) ) )
+read_configurations = set( [ '' ] )
+read_configuration( '/etc/' + base_name + '.conf' )
+read_configuration( os.path.expanduser( '~/.' + base_name + 'rc' ) )
 
 action_options = '(' + '|'.join( Content.Action.values ) + ')'
-option_parser = optparse.OptionParser( usage = 'usage: %prog [options] [' + action_options + ':(@AU_ID_list|AU_ID)...]', version = '%prog ' + REVISION, description = 'Pylorus content-testing and ingestion gateway' )
+option_parser = optparse.OptionParser( usage = 'usage: %prog [options] [' + action_options + ':(AU_ID|@AU_ID_list)...]', version = '%prog ' + REVISION, description = '%s %s content-testing and ingestion gateway' % ( PROGRAM.title(), REVISION ) )
 configuration_dictionary = dict( configuration.items( PROGRAM ) )
 for key in 'local_servers', 'remote_servers':
     configuration_dictionary[ key ] = configuration_dictionary[ key ].strip().replace( '\n', ',' )
 option_parser.set_defaults( **configuration_dictionary )
-option_parser.add_option( '-c', '--configuration', action = 'callback', type = 'string', callback = lambda *parameters: configuration.read( parameters[ 2 ] ), help = 'read configuration from CONFIGURATION [%default]' )
+option_parser.add_option( '-c', '--configuration', action = 'callback', type = 'string', callback = lambda *parameters: read_configuration( parameters[ 2 ] ), help = 'read configuration from CONFIGURATION [%default]' )
 option_parser.add_option( '-l', '--local', dest = 'local_servers', help = 'local servers [%default]', metavar = action_options + '://HOST[:PORT][,...]' )
 option_parser.add_option( '-r', '--remote', dest = 'remote_servers', help = 'remote servers [%default]', metavar = action_options + '://HOST[:PORT][,...]' )
 option_parser.add_option( '-u', '--username', help = 'LOCKSS server username [%default]' )
 option_parser.add_option( '-p', '--password', help = 'LOCKSS server password [%default]' )
 option_parser.add_option( '-a', '--agreement', help = 'threshold agreement percentage [%default]' )
+option_parser.add_option( '-f', '--fix', help = 'poll disagreement threshold to trigger a repair poll [%default]' )
 option_parser.add_option( '-e', '--expiration', help = 'time-out expiration in hours [%default]' )
 option_parser.add_option( '-v', '--verbosity', help = 'verbosity level, 1-7 [%default]' )
 option_parser.add_option( '-d', '--delete', action = 'store_const', const = 'true', help = "delete added AU's from servers after validation [%default]" )
@@ -511,7 +516,8 @@ log_level = 10*( 6 - configuration.getint( PROGRAM, 'verbosity' ) )
 if log_level < logging.DEBUG:
     log_level = logging.DEBUG + log_level//10 - 1
 assert logging.DEBUG - 2 <= log_level <= logging.CRITICAL, 'Invalid log level'
-logging.basicConfig( datefmt='%T', format='%(asctime)s.%(msecs)03d: %(levelname)s: %(message)s', level = log_level )
+logging = logging.getLogger( 'LOCKSS' )
+logging.setLevel( log_level )
 
 urlparse.uses_netloc += Content.Action.values
 sleeper = Sleeper()
@@ -528,16 +534,15 @@ try:
         for server in configuration.get( PROGRAM, 'local_servers' ):
             url_components = urlparse.urlparse( server )
             assert url_components.scheme in Content.Action.values, 'Unknown local server scheme: "%s"' % url_components.scheme
-            local_clients[ url_components.scheme ].append( lockss_daemon.Client( url_components.hostname, url_components.port if url_components.port else DEFAULT_UI_PORT, DEFAULT_V3_PORT, configuration.get( PROGRAM, 'username' ), configuration.get( PROGRAM, 'password' ) ) )
+            local_clients[ url_components.scheme ].append( lockss_daemon.Client( url_components.hostname, url_components.port if url_components.port else DEFAULT_UI_PORT, configuration.get( PROGRAM, 'username' ), configuration.get( PROGRAM, 'password' ) ) )
 
         remote_clients = dict( zip( Content.Action.values, ( [] for value in Content.Action.values ) ) )
         for server in configuration.get( PROGRAM, 'remote_servers' ):
             url_components = urlparse.urlparse( server )
             assert url_components.scheme in Content.Action.values, 'Unknown remote server scheme: "%s"' % url_components.scheme
-            remote_clients[ url_components.scheme ].append( lockss_daemon.Client( url_components.hostname, url_components.port if url_components.port else DEFAULT_UI_PORT, DEFAULT_V3_PORT, configuration.get( PROGRAM, 'username' ), configuration.get( PROGRAM, 'password' ) ) )
+            remote_clients[ url_components.scheme ].append( lockss_daemon.Client( url_components.hostname, url_components.port if url_components.port else DEFAULT_UI_PORT, configuration.get( PROGRAM, 'username' ), configuration.get( PROGRAM, 'password' ) ) )
 
         simulated_AU_cache = {}
-        v3_identities = {}
 
     pipeline = []
     processed_content = []
@@ -566,29 +571,21 @@ try:
                 pipeline.append( Content( description ) )
 
     logging.info( 'Waiting for local servers' )
-    for action, clients in local_clients.iteritems():
-        for client in clients:
-            if client.waitForDaemonReady( 60 ):
-                v3_identities[client.getV3Identity()] = client
-            else:
-                logging.warn('NOT READY: %s' % client.ID())
+    wait_for_clients( local_clients )
 
     if any( remote_clients.values() ):
         logging.info( 'Waiting for remote servers' )
-        for action, clients in remote_clients.iteritems():
-            for client in clients:
-                if client.waitForDaemonReady( 60 ):
-                    v3_identities[client.getV3Identity()] = client
-                else:
-                    logging.warn('NOT READY: %s' % client.ID())
+        wait_for_clients( remote_clients )
 
+    
+    V3_clients_lookup = dict( ( client.getV3Identity(), client ) for client in set( sum( local_clients.values() + remote_clients.values(), [] ) ) )
     initial_length = len( pipeline )
     cycle = 0
 
     # The main loop
     while pipeline:
 
-        logging.info( 'Cycle %i: pipeline is %i%% of its original size' % ( cycle, 100*len( pipeline )/initial_length ) )
+        logging.info( 'Cycle %i: pipeline is %i%% of its original size' % ( cycle, 100*len( pipeline )//initial_length ) )
         progress = False
         next_pipeline = []
         for content in pipeline:

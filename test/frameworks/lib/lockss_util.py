@@ -1,14 +1,12 @@
 """Utility functions and classes used by testsuite and lockss_daemon"""
 
-from __future__ import with_statement
-
 import cgi # urlparse for Python 2.6+
 import logging
 import mimetools
 import mimetypes
 import os
-import sys
-import time
+import socket
+import threading
 import urllib
 import urllib2
 
@@ -16,22 +14,23 @@ DEBUG2 = logging.DEBUG - 1
 DEBUG3 = logging.DEBUG - 2
 
 
-class LockssError(Exception):
+class LockssError( Exception ):
     """Daemon exceptions"""
-    def __init__(self, msg):
-        Exception.__init__(self, msg)
+
+    def __init__( self, msg ):
+        Exception.__init__( self, msg )
 
 
 class LOCKSS_Logger( logging.getLoggerClass() ):
     """Extension of the built-in class"""
 
-    def debug2( self, msg, *args, **kwargs ):
+    def debug2( self, message, *arguments, **keyword_arguments ):
         if self.manager.disable < DEBUG2 and DEBUG2 >= self.getEffectiveLevel():
-            apply( self._log, ( DEBUG2, msg, args ), kwargs )
+            self._log( DEBUG2, message, *arguments, **keyword_arguments )
 
-    def debug3( self, msg, *args, **kwargs ):
+    def debug3( self, message, *arguments, **keyword_arguments ):
         if self.manager.disable < DEBUG3 and DEBUG3 >= self.getEffectiveLevel():
-            apply( self._log, ( DEBUG3, msg, args ), kwargs )
+            self._log( DEBUG3, message, *arguments, **keyword_arguments )
 
 
 class Configuration( dict ):
@@ -44,7 +43,7 @@ class Configuration( dict ):
     def getBoolean( self, key, default = False ):
         value = self.get( key, default )
         if type( value ) is str:
-            return value.lower() in ( 't', 'true', 'y', 'yes', '1' )
+            return value.lower() in ( '1', 'on', 't', 'true', 'y', 'yes' )
         return bool( value )
         
     def load( self, filename ):
@@ -63,88 +62,110 @@ class Configuration( dict ):
                 error( line_number )
             if value.endswith( '\\' ):
                 error( line_number )    # Unsupported
-            config[ key ] = value
-        logging.basicConfig( format = '%(asctime)s.%(msecs)03d: %(levelname)s: %(message)s', datefmt = '%T' )
-        logging.getLogger().setLevel( logging._levelNames.get( config.get( 'scriptLogLevel', '' ).upper(), logging.INFO ) )
+            self[ key ] = value
+            if key == 'scriptLogLevel':
+                log.setLevel( logging._levelNames[ value.upper() ] )
 
 
 class Multipart_Form_Request( urllib2.Request ):
     """Request with file-uploading support"""
 
-    def __init__( self, url, data = None, file = None, headers = {}, origin_req_host = None, unverifiable = False ):
-        urllib2.Request.__init__( self, url, data, headers, origin_req_host, unverifiable )
-        self.file = file
+    def __init__( self, url, data = None, files = None, headers = None, origin_request_host = None, unverifiable = False ):
+        urllib2.Request.__init__( self, url, data, {} if headers is None else headers, origin_request_host, unverifiable )
+        self.files = files
 
-    def add_file( self, file ):
-        """Parameter file is ( key, path ) or None"""
-        self.file = file
+    def add_files( self, files ):
+        """File dictionary must be of the form { key: path } or None"""
+        self.files = files
 
-    def has_file( self ):
-        return self.file is not None
+    def has_files( self ):
+        return bool( self.files )
 
-    def get_file( self ):
-        return self.file
+    def get_files( self ):
+        return self.files
 
 
 class Multipart_Form_HTTP_Handler( urllib2.HTTPHandler ):
     """File-uploading HTTP request handler
-    Based on:
-        Recipe 146306: Http client to POST using multipart/form-data (http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/146306)
-        Will Holcomb's MultipartPostHandler (http://odin.himinbi.org/MultipartPostHandler.py)"""
-
-    def multipart_encode( self, data, file, boundary ):
-        buffer = []
-        for ( key, value ) in data:
-            buffer.append( '--' + boundary )
-            buffer.append( 'Content-Disposition: form-data; name="%s"' % key )
-            buffer.append( '' )
-            buffer.append( value )
-        buffer.append( '--' + boundary )
-        buffer.append( 'Content-Disposition: form-data; name="%s"; filename="%s"' % ( file[ 0 ], os.path.basename( file[ 1 ] ) ) )
-        buffer.append( 'Content-Type: ' + ( mimetypes.guess_type( file[ 1 ] )[ 0 ] or 'application/octet-stream' ) )
-        buffer.append( '' )
-        buffer.append( open( file[ 1 ], 'rb' ).read() )
-        buffer.append( '--' + boundary + '--' )
-        buffer.append( '' )
-        return '\r\n'.join( buffer )
+   http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/146306
+   http://odin.himinbi.org/MultipartPostHandler.py"""
 
     def http_request( self, request ):
-        if request.has_file():
+
+        def multipart_encode( data, files, boundary ):
+            form = []
+            if data:
+                for key, value in cgi.parse_qsl( data ):
+                    form.append( '--' + boundary )
+                    form.append( 'Content-Disposition: form-data; name="%s"' % key )
+                    form.append( '' )
+                    form.append( value )
+            for key, filename in files.iteritems():
+                form.append( '--' + boundary )
+                form.append( 'Content-Disposition: form-data; name="%s"; filename="%s"' % ( key, os.path.basename( filename ) ) )
+                form.append( 'Content-Type: ' + ( mimetypes.guess_type( filename )[ 0 ] or 'application/octet-stream' ) )
+                form.append( '' )
+                form.append( open( filename, 'rb' ).read() )
+            form.append( '--' + boundary + '--' )
+            form.append( '' )
+            return '\r\n'.join( form )
+
+        if isinstance( request, Multipart_Form_Request ) and request.has_files():
             boundary = mimetools.choose_boundary()
             request.add_unredirected_header( 'Content-Type', 'multipart/form-data; boundary=' + boundary )
-            request.add_data( self.multipart_encode( cgi.parse_qsl( request.get_data() ) if request.has_data() else [], request.get_file(), boundary ) )
-            request.add_file( None )
+            request.add_data( multipart_encode( request.get_data(), request.get_files(), boundary ) )
+            request.add_files( None )
         return urllib2.HTTPHandler.http_request( self, request )
 
 
-class HTTP_Request:
-    """Wrapper for HTTP request management"""
+def write_to_file( data, filename, overwrite = True ):
+    data_file = open( filename, 'w' if overwrite else 'a' )
+    data_file.write( data )
+    data_file.close()
 
-    def __init__( self, URL_opener, url, data = None, file = None ):
-        self.opener = URL_opener
-        self.url = url
-        self.data = data or {}
-        self.file = file
 
-    def add_data( self, key, value ):
-        self.data[ key ] = value
+def unused_port():
+    test_socket = socket.socket( socket.AF_INET, socket.SOCK_STREAM )
+    try:
+        test_socket.bind( ( 'localhost', 0 ) )
+        return test_socket.getsockname()[ 1 ]
+    finally:
+        test_socket.close()
 
-    def add_file( self, key, filename ):
-        self.file = ( key, filename )
 
-    def execute( self ):
-        """Send a GET or a POST with pre-initialized form data and an optional file and return the contents of the resource"""
-        encoded_data = urllib.urlencode( self.data ) if self.data else None
-        request = Multipart_Form_Request( self.url, encoded_data, self.file, {} if 'output' in self.data else { 'X-Lockss-Result': 'Please' } )
-        log.debug2( "Sending HTTP request for %s: %s, %s" % ( request.get_full_url(), encoded_data, repr( self.file ) ) )
-        resource = self.opener.open( request )
-        if resource.info().getheader( 'X-Lockss-Result' ) == 'Fail':
-            raise LockssError( 'HTML UI transaction failure' )
-        return resource
+def server_is_listening( hostname, port ):
+    try:
+        test_socket = socket.socket()
+        test_socket.connect( ( hostname, port ) )
+        return True
+    except socket.error, exception:
+        log.debug2( "Connect error: %s" % exception )
+        return False
+    finally:
+        test_socket.close()
+
+
+def HTTP_request( opener, url, data = None, files = None ):
+    """Send a GET or a POST with pre-initialized form data and optional files and return the contents of the resource"""
+    encoded_data = urllib.urlencode( data ) if data else None
+    request = Multipart_Form_Request( url, encoded_data, files, None if data and 'output' in data else { 'X-Lockss-Result': 'Please' } )
+    session_lock = session_locks.setdefault( request.get_host(), threading.Lock() )
+    session_lock.acquire()  # Server will dispense multiple initial session cookies if addressed concurrently
+    try:
+        log.debug2( "Sending HTTP request for %s: %s, %s" % ( request.get_full_url(), encoded_data, files ) )
+        resource = opener.open( request )
+        log.debug2( "Received HTTP reply  for %s: %s, %s" % ( request.get_full_url(), encoded_data, files ) )
+    finally:
+        session_lock.release()
+    if resource.info().getheader( 'X-Lockss-Result' ) == 'Fail':
+        raise LockssError( 'HTML UI transaction failure' )
+    return resource
 
 
 logging.addLevelName( DEBUG2, 'DEBUG2' )
 logging.addLevelName( DEBUG3, 'DEBUG3' )
 logging.setLoggerClass( LOCKSS_Logger )
+logging.basicConfig( format = '%(asctime)s.%(msecs)03d: %(levelname)s: %(message)s', datefmt = '%T', level = logging.INFO )
 log = logging.getLogger( 'LOCKSS' )
 config = Configuration()
+session_locks = {}
