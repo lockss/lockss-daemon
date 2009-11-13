@@ -70,11 +70,11 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>3250</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.highwire.ClockssHighWirePressCrawlWindow</string>
+    <string>org.lockss.plugin.highwire.HighWireCrawlWindow</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
