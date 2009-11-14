@@ -3759,6 +3759,7 @@
       { 
       
         param[base_url] = http://jhrp.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; ready ; Journal of Human Rights Practice Volume 1 ; 1 >
 
@@ -3837,39 +3838,40 @@
 
     }
 
-  {
-
-    title <
-      name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine
-    >
-
     {
+
+      title <
+        name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine
+      >
+
+      {
  
-      param[base_url] = http://jmp.oxfordjournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        param[base_url] = http://jmp.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
-      au < HighWirePressPlugin ; ready ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
+        au < HighWirePressPlugin ; ready ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
+  
+      }
 
     }
-
-  }
     
-  {
-
-    title <
-      name = Journal of Molecular Cell Biology
-    >
-
     {
 
-      param[base_url] = http://jmcb.oxfordjournals.org/
+      title <
+        name = Journal of Molecular Cell Biology
+       >
 
-      au < HighWirePressPlugin ; ready ; Journal of Molecular Cell Biology Volume 1 ; 1 >
+      {
+
+        param[base_url] = http://jmcb.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; ready ; Journal of Molecular Cell Biology Volume 1 ; 1 >
+
+      }
 
     }
-
-  }
        
     {
 
