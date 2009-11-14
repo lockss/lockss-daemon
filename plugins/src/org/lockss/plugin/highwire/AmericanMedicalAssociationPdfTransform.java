@@ -1,10 +1,10 @@
 /*
- * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.7 2008-02-27 21:48:25 thib_gc Exp $
+ * $Id: AmericanMedicalAssociationPdfTransform.java,v 1.8 2009-11-14 00:28:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,11 +38,42 @@ import org.lockss.filter.pdf.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.highwire.HighWirePdfFilterFactory.*;
 import org.lockss.util.*;
+import org.pdfbox.util.operator.OperatorProcessor;
 
 public class AmericanMedicalAssociationPdfTransform
     implements OutputDocumentTransform,
                ArchivalUnitDependent {
 
+  public static class NormalizeCurrentAsOf extends PageStreamTransform {
+    
+    public static class ReplaceCurrentAsOf extends ReplaceString {
+
+      @Override
+      public String getReplacement(String match) {
+        return "current as of ";
+      }
+
+      @Override
+      public boolean identify(String candidate) {
+        return candidate.startsWith("current as of ");
+      }
+      
+    }
+    
+    
+    public NormalizeCurrentAsOf(final ArchivalUnit au) throws IOException {
+      super(new OperatorProcessorFactory() {
+              public OperatorProcessor newInstanceForName(String className) throws LinkageError, ExceptionInInitializerError, ClassNotFoundException, IllegalAccessException, InstantiationException, SecurityException {
+                return (OperatorProcessor)au.getPlugin().newAuxClass(className,
+                                                                     OperatorProcessor.class);
+              }
+            },
+            // "Tj" operator: replace string conditionally using ReplaceCurrentAsOf
+            PdfUtil.SHOW_TEXT, ReplaceCurrentAsOf.class);
+    }
+    
+  }
+  
   public static class Simplified
       extends ResilientTextScrapingDocumentTransform
       implements ArchivalUnitDependent {
@@ -59,8 +90,11 @@ public class AmericanMedicalAssociationPdfTransform
                                               new TransformFirstPage(// ...collapsing "Downloaded from" succeeds,
                                                                      new CollapseDownloadedFrom(au)),
                                               // Then on all other pages...
-                                              new TransformEachPageExceptFirst(// ...collapse "Downloaded from"
-                                                                               new CollapseDownloadedFrom(au)));
+                                              new TransformEachPageExceptFirst(// ...collapse "Downloaded from",
+                                                                               new CollapseDownloadedFrom(au)),
+                                              // And on the first page...
+                                              new TransformFirstPage(// normalize "current as of"
+                                                                     new NormalizeCurrentAsOf(au)));
     }
 
   }
@@ -86,6 +120,9 @@ public class AmericanMedicalAssociationPdfTransform
                                                                            // Then on all other pages...
                                                                            new TransformEachPageExceptFirst(// ...collapse "Downloaded from" and normalize the hyperlink,
                                                                                                             new CollapseDownloadedFromAndNormalizeHyperlinks(au)),
+                                                                           // And on the first page...
+                                                                           new TransformFirstPage(// ...normalize "current as of",
+                                                                                                  new NormalizeCurrentAsOf(au)),
                                                                            // ...and normalize the metadata
                                                                            new NormalizeMetadata());
     return documentTransform.transform(pdfDocument);
