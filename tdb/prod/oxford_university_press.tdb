@@ -31,8 +31,8 @@
 
         au < HighWirePressPlugin ; doNotProcess ; African Affairs Volume 105 ; 105 >
         au < HighWireStrVolPlugin ; released ; African Affairs Volume 106 ; 106 >
-        au < HighWireStrVolPlugin ; ready ; African Affairs Volume 107 ; 107 >
-        au < HighWireStrVolPlugin ; ready ; African Affairs Volume 108 ; 108 >
+        au < HighWirePressPlugin ; manifest ; African Affairs Volume 107 ; 107 >
+        au < HighWirePressPlugin ; manifest ; African Affairs Volume 108 ; 108 >
 
       }
 
@@ -738,8 +738,8 @@
         au < HighWireStrVolPlugin ; released ; British Journal of Social Work Volume 35 ; 35 >
         au < HighWirePressPlugin ; doNotProcess ; British Journal of Social Work Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; released ; British Journal of Social Work Volume 37 ; 37 >
-        au < HighWireStrVolPlugin ; ready ; British Journal of Social Work Volume 38 ; 38 >
-        au < HighWireStrVolPlugin ; ready ; British Journal of Social Work Volume 39 ; 39 >
+        au < HighWirePressPlugin ; manifest ; British Journal of Social Work Volume 38 ; 38 >
+        au < HighWirePressPlugin ; manifest ; British Journal of Social Work Volume 39 ; 39 >
 
       }
 
@@ -756,15 +756,15 @@
         param[base_url] = http://bmb.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 72 ; 72 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 72 ; 72 >
         au < HighWireStrVolPlugin ; released ; British Medical Bulletin Volume 73-74 ; 83 >
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 84 ; 84 >
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 85 ; 85 >
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 86 ; 86 >
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 87 ; 87 >
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 88 ; 88 >
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 89 ; 89 >
-        au < HighWireStrVolPlugin ; ready ; British Medical Bulletin Volume 90 ; 90 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 84 ; 84 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 85 ; 85 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 86 ; 86 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 87 ; 87 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 88 ; 88 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 89 ; 89 >
+        au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 90 ; 90 >
 
 
       }
@@ -783,8 +783,8 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; Bulletin of the London Mathematical Society Volume 39 ; 39 >
-        au < HighWireStrVolPlugin ; ready ; Bulletin of the London Mathematical Society Volume 40 ; 40 >
-        au < HighWireStrVolPlugin ; ready ; Bulletin of the London Mathematical Society Volume 41 ; 41 >
+        au < HighWirePressPlugin ; manifest ; Bulletin of the London Mathematical Society Volume 40 ; 40 >
+        au < HighWirePressPlugin ; manifest ; Bulletin of the London Mathematical Society Volume 41 ; 41 >
 
       }
 
@@ -858,7 +858,7 @@
         param[base_url] = http://cmlj.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Capital Markets Law Journal Volume 1 ; 1 >
+        au < HighWirePressPlugin ; manifest ; Capital Markets Law Journal Volume 1 ; 1 >
 
       }
 
@@ -1577,8 +1577,8 @@
         param[base_url] = http://erae.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; European Review of Agricultural Economics Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; ready ; European Review of Agricultural Economics Volume 33 ; 33 >
+        au < HighWirePressPlugin ; manifest ; European Review of Agricultural Economics Volume 32 ; 32 >
+        au < HighWirePressPlugin ; manifest ; European Review of Agricultural Economics Volume 33 ; 33 >
 
       }
 
@@ -2883,7 +2883,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; The Journal of Biochemistry Volume 139 ; 139 >
-        au < HighWireStrVolPlugin ; ready ; The Journal of Biochemistry Volume 140 ; 140 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 140 ; 140 >
         au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 141 ; 141 >
         au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 142 ; 142 >
         au < HighWirePressPlugin ; manifest ; The Journal of Biochemistry Volume 143 ; 143 >
@@ -2999,7 +2999,7 @@
         au < HighWireStrVolPlugin ; released ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
         au < HighWireStrVolPlugin ; released ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; manifest ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
+        au < HighWirePressPlugin ; manifest ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
 
       }
 
@@ -3409,7 +3409,7 @@
         param[base_url] = http://mollus.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Journal of Molluscan Studies Volume 71 ; 71 >
+        au < HighWirePressPlugin ; manifest ; Journal of Molluscan Studies Volume 71 ; 71 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Molluscan Studies Volume 72 ; 72 >
         au < HighWirePressPlugin ; manifest ; Journal of Molluscan Studies Volume 73 ; 73 >
         au < HighWirePressPlugin ; manifest ; Journal of Molluscan Studies Volume 74 ; 74 >
@@ -3680,7 +3680,7 @@
 
         au < HighWireStrVolPlugin ; released ; Journal of the American Academy of Religion Volume 73 ; 73 >
         au < HighWireStrVolPlugin ; released ; Journal of the American Academy of Religion Volume 74 ; 74 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the American Academy of Religion Volume 75 ; 75 >
+        au < HighWirePressPlugin ; manifest ; Journal of the American Academy of Religion Volume 75 ; 75 >
         au < HighWirePressPlugin ; manifest ; Journal of the American Academy of Religion Volume 76 ; 76 >
         au < HighWirePressPlugin ; ready ; Journal of the American Academy of Religion Volume 77 ; 77 >
 
@@ -3789,8 +3789,8 @@
 
         au < HighWireStrVolPlugin ; released ; Journal of the ICRU Volume 5 ; 5 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of the ICRU Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the ICRU Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the ICRU Volume 8 ; 8 >
+        au < HighWirePressPlugin ; manifest ; Journal of the ICRU Volume 7 ; 7 >
+        au < HighWirePressPlugin ; manifest ; Journal of the ICRU Volume 8 ; 8 >
         au < HighWirePressPlugin ; ready ; Journal of the ICRU Volume 9 ; 9 >
 
       }
@@ -3827,10 +3827,10 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; Journal of the London Mathematical Society Volume 75 ; 75 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 76 ; 76 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 77 ; 77 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 78 ; 78 >
-        au < HighWireStrVolPlugin ; ready ; Journal of the London Mathematical Society Volume 79 ; 79 >
+        au < HighWirePressPlugin ; manifest ; Journal of the London Mathematical Society Volume 76 ; 76 >
+        au < HighWirePressPlugin ; manifest ; Journal of the London Mathematical Society Volume 77 ; 77 >
+        au < HighWirePressPlugin ; manifest ; Journal of the London Mathematical Society Volume 78 ; 78 >
+        au < HighWirePressPlugin ; manifest ; Journal of the London Mathematical Society Volume 79 ; 79 >
         au < HighWirePressPlugin ; ready ; Journal of the London Mathematical Society Volume 80 ; 80 >
 
       }
@@ -3924,8 +3924,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The Journal of Theological Studies Volume 56 ; 56 >
         au < HighWirePressPlugin ; doNotProcess ; The Journal of Theological Studies Volume 57 ; 57 >
-        au < HighWireStrVolPlugin ; ready ; The Journal of Theological Studies Volume 58 ; 58 >
-        au < HighWireStrVolPlugin ; ready ; The Journal of Theological Studies Volume 59 ; 59 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Theological Studies Volume 58 ; 58 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Theological Studies Volume 59 ; 59 >
         au < HighWirePressPlugin ; ready ; The Journal of Theological Studies Volume 60 ; 60 >
 
       }
@@ -3943,7 +3943,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://jtopol.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Journal of Topology Volume 1 ; 1 >
+        au < HighWirePressPlugin ; manifest ; Journal of Topology Volume 1 ; 1 >
         au < HighWirePressPlugin ; ready ; Journal of Topology Volume 2 ; 2 >
 
       }
@@ -3971,9 +3971,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://tropej.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Journal of Tropical Pediatrics Volume 51 ; 51 >
+        au < HighWirePressPlugin ; manifest ; Journal of Tropical Pediatrics Volume 51 ; 51 >
         au < HighWirePressPlugin ; doNotProcess ; Journal of Tropical Pediatrics Volume 52 ; 52 >
-        au < HighWireStrVolPlugin ; ready ; Journal of Tropical Pediatrics Volume 53 ; 53 >
+        au < HighWirePressPlugin ; manifest ; Journal of Tropical Pediatrics Volume 53 ; 53 >
         au < HighWirePressPlugin ; manifest ; Journal of Tropical Pediatrics Volume 54 ; 54 >
         au < HighWirePressPlugin ; ready ; Journal of Tropical Pediatrics Volume 55 ; 55 >
 
@@ -4085,7 +4085,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://litimag.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Literary Imagination Volume 8 ; 8 >
+        au < HighWirePressPlugin ; manifest ; Literary Imagination Volume 8 ; 8 >
         au < HighWirePressPlugin ; manifest ; Literary Imagination Volume 9 ; 9 >
         au < HighWirePressPlugin ; ready ; Literary Imagination Volume 10 ; 10 >
         au < HighWirePressPlugin ; ready ; Literary Imagination Volume 11 ; 11 >
@@ -4239,9 +4239,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://mind.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Mind Volume 114 ; 114 >
+        au < HighWirePressPlugin ; manifest ; Mind Volume 114 ; 114 >
         au < HighWirePressPlugin ; doNotProcess ; Mind Volume 115 ; 115 >
-        au < HighWireStrVolPlugin ; ready ; Mind Volume 116 ; 116 >
+        au < HighWirePressPlugin ; manifest ; Mind Volume 116 ; 116 >
 
       }
 
@@ -4268,9 +4268,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://mj.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Modern Judaism Volume 25 ; 25 >
+        au < HighWirePressPlugin ; manifest ; Modern Judaism Volume 25 ; 25 >
         au < HighWirePressPlugin ; doNotProcess ; Modern Judaism Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; ready ; Modern Judaism Volume 27 ; 27 >
+        au < HighWirePressPlugin ; manifest ; Modern Judaism Volume 27 ; 27 >
         au < HighWirePressPlugin ; ready ; Modern Judaism Volume 28 ; 28 >
         au < HighWirePressPlugin ; ready ; Modern Judaism Volume 29 ; 29 >
 
@@ -4540,8 +4540,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Nucleic Acids Research Volume 33 ; 33 >
-        au < HighWireStrVolPlugin ; ready ; Nucleic Acids Research Volume 34 ; 34 >
-        au < HighWireStrVolPlugin ; ready ; Nucleic Acids Research Volume 35 ; 35 >
+        au < HighWirePressPlugin ; manifest ; Nucleic Acids Research Volume 34 ; 34 >
+        au < HighWirePressPlugin ; manifest ; Nucleic Acids Research Volume 35 ; 35 >
         au < HighWirePressPlugin ; ready ; Nucleic Acids Research Volume 36 ; 36 >
         au < HighWirePressPlugin ; ready ; Nucleic Acids Research Volume 37 ; 37 >
 
@@ -4651,7 +4651,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; ready ; The Opera Quarterly Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 22 ; 22 >
 
       }
 
@@ -4732,8 +4732,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Oxford Economic Papers Volume 57 ; 57 >
         au < HighWirePressPlugin ; doNotProcess ; Oxford Economic Papers Volume 58 ; 58 >
         au < HighWireStrVolPlugin ; released ; Oxford Economic Papers Volume 59 ; 59 >
-        au < HighWireStrVolPlugin ; ready ; Oxford Economic Papers Volume 60 ; 60 >
-        au < HighWireStrVolPlugin ; ready ; Oxford Economic Papers Volume 61 ; 61 >
+        au < HighWirePressPlugin ; manifest ; Oxford Economic Papers Volume 60 ; 60 >
+        au < HighWirePressPlugin ; manifest ; Oxford Economic Papers Volume 61 ; 61 >
 
       }
 
@@ -4855,12 +4855,12 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Past & Present Volume 186 ; 186 >
         au < HighWireStrVolPlugin ; released ; Past & Present Volume 187 ; 187 >
-        au < HighWireStrVolPlugin ; ready ; Past & Present Volume 188 ; 188 >
-        au < HighWireStrVolPlugin ; ready ; Past & Present Volume 189 ; 189 >
+        au < HighWirePressPlugin ; manifest ; Past & Present Volume 188 ; 188 >
+        au < HighWirePressPlugin ; manifest ; Past & Present Volume 189 ; 189 >
         au < HighWirePressPlugin ; doNotProcess ; Past & Present Volume 190 ; 190 >
-        au < HighWireStrVolPlugin ; ready ; Past & Present Volume 191 ; 191 >
-        au < HighWireStrVolPlugin ; ready ; Past & Present Volume 192 ; 192 >
-        au < HighWireStrVolPlugin ; ready ; Past & Present Volume 193 ; 193 >
+        au < HighWirePressPlugin ; manifest ; Past & Present Volume 191 ; 191 >
+        au < HighWirePressPlugin ; manifest ; Past & Present Volume 192 ; 192 >
+        au < HighWirePressPlugin ; manifest ; Past & Present Volume 193 ; 193 >
         au < HighWirePressPlugin ; ready ; Past & Present Volume 194 ; 194 >
         au < HighWirePressPlugin ; ready ; Past & Present Volume 195 ; 195 >
         au < HighWirePressPlugin ; ready ; Past & Present Volume 196 ; 196 >
@@ -4900,7 +4900,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Philosophia Mathematica Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Philosophia Mathematica Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Philosophia Mathematica Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; ready ; Philosophia Mathematica Volume 16 ; 16 >
+        au < HighWirePressPlugin ; manifest ; Philosophia Mathematica Volume 16 ; 16 >
         au < HighWirePressPlugin ; ready ; Philosophia Mathematica Volume 17 ; 17 >
 
       }
@@ -4930,7 +4930,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Plant and Cell Physiology Volume 47 ; 47 >
         au < HighWireStrVolPlugin ; released ; Plant and Cell Physiology Volume 48 ; 48 >
-        au < HighWireStrVolPlugin ; ready ; Plant and Cell Physiology Volume 49 ; 49 >
+        au < HighWirePressPlugin ; manifest ; Plant and Cell Physiology Volume 49 ; 49 >
         au < HighWirePressPlugin ; ready ; Plant and Cell Physiology Volume 50 ; 50 >
 
       }
@@ -4979,7 +4979,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Political Analysis Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Political Analysis Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Political Analysis Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; ready ; Political Analysis Volume 16 ; 16 >
+        au < HighWirePressPlugin ; manifest ; Political Analysis Volume 16 ; 16 >
         au < HighWirePressPlugin ; ready ; Political Analysis Volume 17 ; 17 >
 
       }
@@ -4998,9 +4998,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; Proceedings of the London Mathematical Society Volume 94 ; 94 >
-        au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 95 ; 95 >
-        au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
-        au < HighWireStrVolPlugin ; ready ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
+        au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 95 ; 95 >
+        au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
+        au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
         au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
         au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
 
@@ -5033,11 +5033,29 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Protein Engineering Design and Selection Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; released ; Protein Engineering Design and Selection Volume 20 ; 20 >
         au < HighWirePressPlugin ; manifest ; Protein Engineering Design and Selection Volume 21 ; 21 >
-        au < HighWirePressPlugin ; manifest ; Protein Engineering Design and Selection Volume 22 ; 22 >
+        au < HighWirePressPlugin ; ready ; Protein Engineering Design and Selection Volume 22 ; 22 >
 
       }
 
     }
+
+    {
+
+      title <
+        name = Public Health Ethics
+      >
+
+      {
+
+        param[base_url] = http://phe.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+  
+        au < HighWirePressPlugin ; manifest ; Public Health Ethics Volume 1 ; 1 ; >
+        au < HighWirePressPlugin ; ready ; Public Health Ethics Volume 2 ; 2 ; >
+ 
+      }
+ 
+  }
 
     {
 
@@ -5064,6 +5082,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Public Opinion Quarterly Volume 70 ; 70 >
         au < HighWirePressPlugin ; manifest ; Public Opinion Quarterly Volume 71 ; 71 >
         au < HighWirePressPlugin ; manifest ; Public Opinion Quarterly Volume 72 ; 72 >
+        au < HighWirePressPlugin ; ready ; Public Opinion Quarterly Volume 73 ; 73 >
 
       }
 
@@ -5093,7 +5112,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Publius: The Journal of Federalism Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; released ; Publius: The Journal of Federalism Volume 37 ; 37 >
         au < HighWirePressPlugin ; manifest ; Publius: The Journal of Federalism Volume 38 ; 38 >
-        au < HighWirePressPlugin ; manifest ; Publius: The Journal of Federalism Volume 39 ; 39 >
+        au < HighWirePressPlugin ; ready ; Publius: The Journal of Federalism Volume 39 ; 39 >
 
       }
 
@@ -5122,9 +5141,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
         au < HighWirePressPlugin ; doNotProcess ; QJM: An International Journal of Medicine Volume 99 ; 99 >
-        au < HighWireStrVolPlugin ; ready ; QJM: An International Journal of Medicine Volume 100 ; 100 >
+        au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 100 ; 100 >
         au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 101 ; 101 >
-        au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 102 ; 102 >
+        au < HighWirePressPlugin ; ready ; QJM: An International Journal of Medicine Volume 102 ; 102 >
 
       }
 
@@ -5174,7 +5193,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 58 ; 58 >
         au < HighWireStrVolPlugin ; released ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 59 ; 59 >
-        au < HighWireStrVolPlugin ; ready ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
+        au < HighWirePressPlugin ; manifest ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
         au < HighWirePressPlugin ; ready ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
         au < HighWirePressPlugin ; ready ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
 
@@ -5205,28 +5224,28 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Radiation Protection Dosimetry Volume 113 ; 113 >
         au < HighWireStrVolPlugin ; released ; Radiation Protection Dosimetry Volume 114 ; 114 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 115 ; 115 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 116 ; 116 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 115 ; 115 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 116 ; 116 >
         au < HighWireStrVolPlugin ; released ; Radiation Protection Dosimetry Volume 117 ; 117 >
         au < HighWirePressPlugin ; doNotProcess ; Radiation Protection Dosimetry Volume 118 ; 118 >
         au < HighWireStrVolPlugin ; released ; Radiation Protection Dosimetry Volume 119 ; 119 >
         au < HighWireStrVolPlugin ; released ; Radiation Protection Dosimetry Volume 120 ; 120 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 121 ; 121 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 122 ; 122 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 123 ; 123 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 124 ; 124 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 125 ; 125 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 126 ; 126 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 127 ; 127 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 128 ; 128 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 129 ; 129 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 130 ; 130 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 131 ; 131 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 132 ; 132 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 133 ; 133 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 134 ; 134 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 135 ; 135 >
-        au < HighWireStrVolPlugin ; ready ; Radiation Protection Dosimetry Volume 136 ; 136 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 121 ; 121 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 122 ; 122 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 123 ; 123 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 124 ; 124 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 125 ; 125 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 126 ; 126 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 127 ; 127 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 128 ; 128 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 129 ; 129 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 130 ; 130 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 131 ; 131 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 132 ; 132 >
+        au < HighWirePressPlugin ; ready ; Radiation Protection Dosimetry Volume 133 ; 133 >
+        au < HighWirePressPlugin ; ready ; Radiation Protection Dosimetry Volume 134 ; 134 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 135 ; 135 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 136 ; 136 >
 
       }
 
@@ -5255,9 +5274,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Refugee Survey Quarterly Volume 24 ; 24 >
         au < HighWirePressPlugin ; doNotProcess ; Refugee Survey Quarterly Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; ready ; Refugee Survey Quarterly Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; ready ; Refugee Survey Quarterly Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; ready ; Refugee Survey Quarterly Volume 28 ; 28 >
+        au < HighWirePressPlugin ; manifest ; Refugee Survey Quarterly Volume 26 ; 26 >
+        au < HighWirePressPlugin ; manifest ; Refugee Survey Quarterly Volume 27 ; 27 >
+        au < HighWirePressPlugin ; manifest ; Refugee Survey Quarterly Volume 28 ; 28 >
 
       }
 
@@ -5286,9 +5305,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The Review of English Studies Volume 56 ; 56 >
         au < HighWirePressPlugin ; doNotProcess ; The Review of English Studies Volume 57 ; 57 >
-        au < HighWireStrVolPlugin ; ready ; The Review of English Studies Volume 58 ; 58 >
-        au < HighWireStrVolPlugin ; ready ; The Review of English Studies Volume 59 ; 59 >
-        au < HighWireStrVolPlugin ; ready ; The Review of English Studies Volume 60 ; 60 >
+        au < HighWirePressPlugin ; manifest ; The Review of English Studies Volume 58 ; 58 >
+        au < HighWirePressPlugin ; manifest ; The Review of English Studies Volume 59 ; 59 >
+        au < HighWirePressPlugin ; manifest ; The Review of English Studies Volume 60 ; 60 >
 
       }
 
@@ -5305,9 +5324,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://reep.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Review of Environmental Economics and Policy Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; ready ; Review of Environmental Economics and Policy Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; ready ; Review of Environmental Economics and Policy Volume 3 ; 3 >
+        au < HighWirePressPlugin ; manifest ; Review of Environmental Economics and Policy Volume 1 ; 1 >
+        au < HighWirePressPlugin ; manifest ; Review of Environmental Economics and Policy Volume 2 ; 2 >
+        au < HighWirePressPlugin ; manifest ; Review of Environmental Economics and Policy Volume 3 ; 3 >
 
       }
 
@@ -5324,10 +5343,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://rof.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Review of Finance Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; ready ; Review of Finance Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; ready ; Review of Finance Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; ready ; Review of Finance Volume 13 ; 13 >
+        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 10 ; 10 >
+        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 11 ; 11 >
+        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 12 ; 12 >
+        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 13 ; 13 >
 
       }
 
@@ -5357,8 +5376,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Review of Financial Studies Volume 18 ; 18 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; released ; Review of Financial Studies Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; ready ; Review of Financial Studies Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; ready ; Review of Financial Studies Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; Review of Financial Studies Volume 21 ; 21 >
+        au < HighWirePressPlugin ; manifest ; Review of Financial Studies Volume 22 ; 22 >
 
       }
 
@@ -5376,10 +5395,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; Rheumatology Volume 44 ; 44 >
-        au < HighWireStrVolPlugin ; ready ; Rheumatology Volume 45 ; 45 >
-        au < HighWireStrVolPlugin ; ready ; Rheumatology Volume 46 ; 46 >
-        au < HighWireStrVolPlugin ; ready ; Rheumatology Volume 47 ; 47 >
-        au < HighWireStrVolPlugin ; ready ; Rheumatology Volume 48 ; 48 >
+        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 45 ; 45 >
+        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 46 ; 46 >
+        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 47 ; 47 >
+        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 48 ; 48 >
 
       }
 
@@ -5408,9 +5427,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; exists ; Schizophrenia Bulletin Volume 31 ; 31 >
         au < HighWirePressPlugin ; doNotProcess ; Schizophrenia Bulletin Volume 32 ; 32 >
-        au < HighWireStrVolPlugin ; ready ; Schizophrenia Bulletin Volume 33 ; 33 >
-        au < HighWireStrVolPlugin ; ready ; Schizophrenia Bulletin Volume 34 ; 34 >
-        au < HighWireStrVolPlugin ; ready ; Schizophrenia Bulletin Volume 35 ; 35 >
+        au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 33 ; 33 >
+        au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 34 ; 34 >
+        au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 35 ; 35 >
 
       }
 
@@ -5439,9 +5458,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Screen Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; released ; Screen Volume 47 ; 47 >
-        au < HighWireStrVolPlugin ; ready ; Screen Volume 48 ; 48 >
-        au < HighWireStrVolPlugin ; ready ; Screen Volume 49 ; 49 >
-        au < HighWireStrVolPlugin ; ready ; Screen Volume 50 ; 50 >
+        au < HighWirePressPlugin ; manifest ; Screen Volume 48 ; 48 >
+        au < HighWirePressPlugin ; manifest ; Screen Volume 49 ; 49 >
+        au < HighWirePressPlugin ; manifest ; Screen Volume 50 ; 50 >
 
       }
 
@@ -5458,10 +5477,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://scan.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
+        au < HighWirePressPlugin ; manifest ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
+        au < HighWirePressPlugin ; manifest ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
+        au < HighWirePressPlugin ; manifest ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
+        au < HighWirePressPlugin ; manifest ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
 
       }
 
@@ -5490,9 +5509,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Social History of Medicine Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; released ; Social History of Medicine Volume 19 ; 19 >
-        au < HighWireStrVolPlugin ; ready ; Social History of Medicine Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; ready ; Social History of Medicine Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; ready ; Social History of Medicine Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; Social History of Medicine Volume 20 ; 20 >
+        au < HighWirePressPlugin ; manifest ; Social History of Medicine Volume 21 ; 21 >
+        au < HighWirePressPlugin ; manifest ; Social History of Medicine Volume 22 ; 22 >
 
       }
 
@@ -5521,9 +5540,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; released ; Social Politics: International Studies in Gender, State & Society Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; ready ; Social Politics: International Studies in Gender, State & Society Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; ready ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; ready ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 >
+        au < HighWirePressPlugin ; manifest ; Social Politics: International Studies in Gender, State & Society Volume 14 ; 14 >
+        au < HighWirePressPlugin ; manifest ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 >
+        au < HighWirePressPlugin ; manifest ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 >
 
       }
 
@@ -5551,10 +5570,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Social Science Japan Journal Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; ready ; Social Science Japan Journal Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; ready ; Social Science Japan Journal Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; ready ; Social Science Japan Journal Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; ready ; Social Science Japan Journal Volume 12 ; 12 >
+        au < HighWirePressPlugin ; manifest ; Social Science Japan Journal Volume 9 ; 9 >
+        au < HighWirePressPlugin ; manifest ; Social Science Japan Journal Volume 10 ; 10 >
+        au < HighWirePressPlugin ; manifest ; Social Science Japan Journal Volume 11 ; 11 >
+        au < HighWirePressPlugin ; manifest ; Social Science Japan Journal Volume 12 ; 12 >
 
       }
 
@@ -5581,11 +5600,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://ser.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Socio-Economic Review Volume 3 ; 3 >
+        au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; ready ; Socio-Economic Review Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; ready ; Socio-Economic Review Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; ready ; Socio-Economic Review Volume 7 ; 7 >
+        au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 5 ; 5 >
+        au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 6 ; 6 >
+        au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 7 ; 7 >
 
       }
 
@@ -5615,8 +5634,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Statute Law Review Volume 26 ; 26 >
         au < HighWirePressPlugin ; doNotProcess ; Statute Law Review Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; released ; Statute Law Review Volume 28 ; 28 >
-        au < HighWireStrVolPlugin ; ready ; Statute Law Review Volume 29 ; 29 >
-        au < HighWireStrVolPlugin ; ready ; Statute Law Review Volume 30 ; 30 >
+        au < HighWirePressPlugin ; manifest ; Statute Law Review Volume 29 ; 29 >
+        au < HighWirePressPlugin ; manifest ; Statute Law Review Volume 30 ; 30 >
 
       }
 
@@ -5645,9 +5664,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Teaching Mathematics and its Applications Volume 24 ; 24 >
         au < HighWirePressPlugin ; doNotProcess ; Teaching Mathematics and its Applications Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; ready ; Teaching Mathematics and its Applications Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; ready ; Teaching Mathematics and its Applications Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; ready ; Teaching Mathematics and its Applications Volume 28 ; 28 >
+        au < HighWirePressPlugin ; manifest ; Teaching Mathematics and its Applications Volume 26 ; 26 >
+        au < HighWirePressPlugin ; manifest ; Teaching Mathematics and its Applications Volume 27 ; 27 >
+        au < HighWirePressPlugin ; manifest ; Teaching Mathematics and its Applications Volume 28 ; 28 >
 
       }
 
@@ -5683,26 +5702,26 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; exists ; Toxicological Sciences Volume 89 ; 89 >
         au < HighWirePressPlugin ; exists ; Toxicological Sciences Volume 90 ; 90 >
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 91 ; 91 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 92 ; 92 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 93 ; 93 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 94 ; 94 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 95 ; 95 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 96 ; 96 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 97 ; 97 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 98 ; 98 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 99 ; 99 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 100 ; 100 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 101 ; 101 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 102 ; 102 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 103 ; 103 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 104 ; 104 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 105 ; 105 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 106 ; 106 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 107 ; 107 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 108 ; 108 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 109 ; 109 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 110 ; 110 >
-        au < HighWireStrVolPlugin ; ready ; Toxicological Sciences Volume 111 ; 111 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 92 ; 92 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 93 ; 93 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 94 ; 94 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 95 ; 95 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 96 ; 96 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 97 ; 97 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 98 ; 98 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 99 ; 99 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 100 ; 100 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 101 ; 101 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 102 ; 102 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 103 ; 103 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 104 ; 104 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 105 ; 105 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 106 ; 106 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 107 ; 107 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 108 ; 108 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 109 ; 109 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 110 ; 110 >
+        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 111 ; 111 >
 
       }
 
@@ -5719,10 +5738,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://tandt.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; ready ; Trusts & Trustees Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; ready ; Trusts & Trustees Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; ready ; Trusts & Trustees Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; ready ; Trusts & Trustees Volume 15 ; 15 >
+        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 12 ; 12 >
+        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 13 ; 13 >
+        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 14 ; 14 >
+        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 15 ; 15 >
 
       }
 
@@ -5751,9 +5770,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Twentieth Century British History Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; Twentieth Century British History Volume 17 ; 17 >
-        au < HighWireStrVolPlugin ; ready ; Twentieth Century British History Volume 18 ; 18 >
-        au < HighWireStrVolPlugin ; ready ; Twentieth Century British History Volume 19 ; 19 >
-        au < HighWireStrVolPlugin ; ready ; Twentieth Century British History Volume 20 ; 20 >
+        au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 18 ; 18 >
+        au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 19 ; 19 >
+        au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 20 ; 20 >
 
       }
 
@@ -5783,9 +5802,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The World Bank Economic Review Volume 19 ; 19 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Economic Review Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; ready ; The World Bank Economic Review Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; ready ; The World Bank Economic Review Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; ready ; The World Bank Economic Review Volume 23 ; 23 >
+        au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 21 ; 21 >
+        au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 23 ; 23 >
 
       }
 
@@ -5814,9 +5833,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The World Bank Research Observer Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Research Observer Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; ready ; The World Bank Research Observer Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; ready ; The World Bank Research Observer Volume 23 ; 23 >
-        au < HighWireStrVolPlugin ; ready ; The World Bank Research Observer Volume 24 ; 24 >
+        au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 23 ; 23 >
+        au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 24 ; 24 >
 
       }
 
@@ -5845,8 +5864,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
-        au < HighWireStrVolPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
+        au < HighWirePressPlugin ; manifest ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
+        au < HighWirePressPlugin ; manifest ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
 
       }
 
@@ -5875,8 +5894,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in English Studies Volume 84 ; 84 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in English Studies Volume 85 ; 85 >
-        au < HighWireStrVolPlugin ; ready ; The Year's Work in English Studies Volume 86 ; 86 >
-        au < HighWireStrVolPlugin ; ready ; The Year's Work in English Studies Volume 87 ; 87 >
+        au < HighWirePressPlugin ; manifest ; The Year's Work in English Studies Volume 86 ; 86 >
+        au < HighWirePressPlugin ; manifest ; The Year's Work in English Studies Volume 87 ; 87 >
 
       }
 

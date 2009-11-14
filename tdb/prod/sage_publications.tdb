@@ -3538,11 +3538,29 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; doNotProcess ; First Language Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; released ; First Language Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; ready ; First Language Volume 28 ; 28 >
-        au < HighWireStrVolPlugin ; ready ; First Language Volume 29 ; 29 >
+        au < HighWirePressPlugin ; ready ; First Language Volume 29 ; 29 >
 
       }
 
     }
+
+    {
+
+      title <
+        name = Focus on Autism and Other Developmental Disabilities
+      >
+
+      {
+
+        param[base_url] = http://foa.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 ; >
+        au < HighWirePressPlugin ; ready ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 ; >
+
+      }
+
+  }
 
     {
 
@@ -3559,11 +3577,29 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; released ; Food Science and Technology International Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; released ; Food Science and Technology International Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; ready ; Food Science and Technology International Volume 14 ; 14 >
-        au < HighWireStrVolPlugin ; ready ; Food Science and Technology International Volume 15 ; 15 >
+        au < HighWirePressPlugin ; ready ; Food Science and Technology International Volume 15 ; 15 >
 
       }
 
     }
+
+    {
+
+      title <
+        name = Foot & Ankle Specialist
+      >
+
+      {
+
+        param[base_url] = http://fas.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Foot & Ankle Specialist Volume 1 ; 1 ; >
+        au < HighWirePressPlugin ; ready ; Foot & Ankle Specialist Volume 2 ; 2 ; >
+  
+      }
+  
+  }
 
     {
 
@@ -3590,7 +3626,7 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; doNotProcess ; French Cultural Studies Volume 17 ; 17 >
         au < HighWireStrVolPlugin ; released ; French Cultural Studies Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; ready ; French Cultural Studies Volume 19 ; 19 >
-        au < HighWireStrVolPlugin ; ready ; French Cultural Studies Volume 20 ; 20 >
+        au < HighWirePressPlugin ; ready ; French Cultural Studies Volume 20 ; 20 >
 
       }
 
@@ -3620,7 +3656,7 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; doNotProcess ; Games and Culture Volume 1 ; 1 >
         au < HighWireStrVolPlugin ; released ; Games and Culture Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; ready ; Games and Culture Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; ready ; Games and Culture Volume 4 ; 4 >
+        au < HighWirePressPlugin ; ready ; Games and Culture Volume 4 ; 4 >
 
       }
 
@@ -3641,7 +3677,7 @@ comment[exm] = now published by Springer
         au < HighWireStrVolPlugin ; released ; Gender & Society Volume 20 ; 20 >
         au < HighWireStrVolPlugin ; released ; Gender & Society Volume 21 ; 21 >
         au < HighWireStrVolPlugin ; ready ; Gender & Society Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; ready ; Gender & Society Volume 23 ; 23 >
+        au < HighWirePressPlugin ; ready ; Gender & Society Volume 23 ; 23 >
 
       }
 
@@ -3704,7 +3740,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < HighWireStrVolPlugin ; released ; Gifted Child Quarterly Volume 50 ; 50 >
         au < HighWireStrVolPlugin ; released ; Gifted Child Quarterly Volume 51 ; 51 >
         au < HighWireStrVolPlugin ; ready ; Gifted Child Quarterly Volume 52 ; 52 >
-        au < HighWireStrVolPlugin ; ready ; Gifted Child Quarterly Volume 53 ; 53 >
+        au < HighWirePressPlugin ; ready ; Gifted Child Quarterly Volume 53 ; 53 >
 
       }
 
@@ -3725,7 +3761,42 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < HighWireStrVolPlugin ; released ; Global Business Review Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; released ; Global Business Review Volume 8 ; 8 >
         au < HighWireStrVolPlugin ; ready ; Global Business Review Volume 9 ; 9 >
-        au < HighWireStrVolPlugin ; ready ; Global Business Review Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Global Business Review Volume 10 ; 10 >
+
+      }
+
+    }
+
+    {
+
+      title <
+      name = Global Health Promotion
+      >
+
+      {
+
+        param[base_url] = http://ped.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Global Health Promotion Volume 15 ; 15 ; >
+        au < HighWirePressPlugin ; ready ; Global Health Promotion Volume 16 ; 16 ; >
+
+      }
+      
+    }
+
+    {
+
+      title <
+        name = Global Journal of Emerging Market Economies
+      >
+
+      {
+
+        param[base_url] = http://eme.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; ready ; Global Journal of Emerging Market Economies Volume 1 ; 1 ; reingest3.clockss.org:8083 >
 
       }
 
@@ -3746,7 +3817,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < HighWireStrVolPlugin ; released ; Global Media and Communication Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; released ; Global Media and Communication Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; ready ; Global Media and Communication Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; ready ; Global Media and Communication Volume 5 ; 5 >
+        au < HighWirePressPlugin ; ready ; Global Media and Communication Volume 5 ; 5 >
 
       }
 
@@ -3767,7 +3838,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         au < HighWireStrVolPlugin ; released ; Global Social Policy Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; released ; Global Social Policy Volume 7 ; 7 >
         au < HighWireStrVolPlugin ; ready ; Global Social Policy Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; ready ; Global Social Policy Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Global Social Policy Volume 9 ; 9 >
 
       }
 
