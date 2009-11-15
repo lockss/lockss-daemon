@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.43 2009-08-29 04:39:11 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.44 2009-11-15 04:42:57 mrbax Exp $
  */
 
 /*
@@ -567,6 +567,7 @@ public class HashCUS extends LockssServlet {
 
   private void doV3() throws IOException {
     StringBuilder sb = new StringBuilder();
+    // Pylorus' hash() depends upon the first 20 characters of this string
     sb.append("# Block hashes from " + getMachineName() + ", " +
 		      ServletUtil.headerDf.format(new Date()) + "\n");
     sb.append("# AU: " + au.getName() + "\n");

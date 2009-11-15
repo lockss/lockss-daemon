@@ -26,11 +26,11 @@ class LOCKSS_Logger( logging.getLoggerClass() ):
 
     def debug2( self, message, *arguments, **keyword_arguments ):
         if self.manager.disable < DEBUG2 and DEBUG2 >= self.getEffectiveLevel():
-            self._log( DEBUG2, message, *arguments, **keyword_arguments )
+            self._log( DEBUG2, message, arguments, keyword_arguments )
 
     def debug3( self, message, *arguments, **keyword_arguments ):
         if self.manager.disable < DEBUG3 and DEBUG3 >= self.getEffectiveLevel():
-            self._log( DEBUG3, message, *arguments, **keyword_arguments )
+            self._log( DEBUG3, message, arguments, keyword_arguments )
 
 
 class Configuration( dict ):
