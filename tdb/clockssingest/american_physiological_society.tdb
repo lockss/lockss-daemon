@@ -16,20 +16,20 @@
     
     param[base_url] = http://advan.physiology.org/
     
-    au < testing ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 ; reingest2.clockss.org:8082 >
-    au < testing ; 1989 ; Advances in Physiology Education Volume 257 (1989) ; 257 ; reingest2.clockss.org:8082 >
-    au < testing ; 1990 ; Advances in Physiology Education Volume 258 (1990) ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; Advances in Physiology Education Volume 259 (1990) ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; Advances in Physiology Education Volume 260 (1991) ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; Advances in Physiology Education Volume 261 (1991) ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; Advances in Physiology Education Volume 262 (1992) ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; Advances in Physiology Education Volume 263 (1992) ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; Advances in Physiology Education Volume 264 (1993) ; 264 ; reingest2.clockss.org:8082 >
-    au < testing ; 1993 ; Advances in Physiology Education Volume 265 (1993) ; 265 ; reingest2.clockss.org:8082 >
-    au < testing ; 1994 ; Advances in Physiology Education Volume 266 (1994) ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; Advances in Physiology Education Volume 267 (1994) ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; Advances in Physiology Education Volume 268 (1995) ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; Advances in Physiology Education Volume 269 (1995) ; 269 ; reingest4.clockss.org:8082 >
+    au < ready ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 ; reingest2.clockss.org:8082 >
+    au < ready ; 1989 ; Advances in Physiology Education Volume 257 (1989) ; 257 ; reingest2.clockss.org:8082 >
+    au < ready ; 1990 ; Advances in Physiology Education Volume 258 (1990) ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; Advances in Physiology Education Volume 259 (1990) ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; Advances in Physiology Education Volume 260 (1991) ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; Advances in Physiology Education Volume 261 (1991) ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; Advances in Physiology Education Volume 262 (1992) ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; Advances in Physiology Education Volume 263 (1992) ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; Advances in Physiology Education Volume 264 (1993) ; 264 ; reingest2.clockss.org:8082 >
+    au < ready ; 1993 ; Advances in Physiology Education Volume 265 (1993) ; 265 ; reingest2.clockss.org:8082 >
+    au < ready ; 1994 ; Advances in Physiology Education Volume 266 (1994) ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; Advances in Physiology Education Volume 267 (1994) ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; Advances in Physiology Education Volume 268 (1995) ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; Advances in Physiology Education Volume 269 (1995) ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; Advances in Physiology Education Volume 270 (1996) ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; Advances in Physiology Education Volume 271 (1996) ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; Advances in Physiology Education Volume 272 (1997) ; 272 ; reingest2.clockss.org:8082 >
@@ -59,7 +59,17 @@
     >
     
     param[base_url] = http://ajplegacy.physiology.org/
-    comment[legacy] = 1898-1976
+    
+    au < manifest ; 1972 ; American Journal of Physiology Volume 222 ; 222 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1972 ; American Journal of Physiology Volume 223 ; 223 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1973 ; American Journal of Physiology Volume 224 ; 224 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1973 ; American Journal of Physiology Volume 225 ; 225 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1974 ; American Journal of Physiology Volume 226 ; 226 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1974 ; American Journal of Physiology Volume 227 ; 227 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1975 ; American Journal of Physiology Volume 228 ; 228 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1975 ; American Journal of Physiology Volume 229 ; 229 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1976 ; American Journal of Physiology Volume 230 ; 230 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1976 ; American Journal of Physiology Volume 231 ; 231 ; reingest1.clockss.org:8082 >
     
   }
     
@@ -71,30 +81,44 @@
     
     param[base_url] = http://ajpcell.physiology.org/
     
-    au < testing ; 1984 ; American Journal of Physiology - Cell Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; American Journal of Physiology - Cell Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; American Journal of Physiology - Cell Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; American Journal of Physiology - Cell Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; American Journal of Physiology - Cell Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; American Journal of Physiology - Cell Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; American Journal of Physiology - Cell Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; American Journal of Physiology - Cell Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Cell Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Cell Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; American Journal of Physiology - Cell Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; American Journal of Physiology - Cell Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; American Journal of Physiology - Cell Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; American Journal of Physiology - Cell Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; American Journal of Physiology - Cell Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; American Journal of Physiology - Cell Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Cell Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Cell Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; American Journal of Physiology - Cell Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; American Journal of Physiology - Cell Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; American Journal of Physiology - Cell Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; American Journal of Physiology - Cell Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; American Journal of Physiology - Cell Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; American Journal of Physiology - Cell Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; American Journal of Physiology - Cell Physiology Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1978 ; American Journal of Physiology - Cell Physiology Volume 235 ; 235 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; American Journal of Physiology - Cell Physiology Volume 236 ; 236 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1979 ; American Journal of Physiology - Cell Physiology Volume 237 ; 237 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Cell Physiology Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Cell Physiology Volume 239 ; 239 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; American Journal of Physiology - Cell Physiology Volume 240 ; 240 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; American Journal of Physiology - Cell Physiology Volume 241 ; 241 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; American Journal of Physiology - Cell Physiology Volume 242 ; 242 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; American Journal of Physiology - Cell Physiology Volume 243 ; 243 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; American Journal of Physiology - Cell Physiology Volume 244 ; 244 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; American Journal of Physiology - Cell Physiology Volume 245 ; 245 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Cell Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Cell Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; American Journal of Physiology - Cell Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; American Journal of Physiology - Cell Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; American Journal of Physiology - Cell Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; American Journal of Physiology - Cell Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; American Journal of Physiology - Cell Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; American Journal of Physiology - Cell Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Cell Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Cell Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; American Journal of Physiology - Cell Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; American Journal of Physiology - Cell Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; American Journal of Physiology - Cell Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; American Journal of Physiology - Cell Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; American Journal of Physiology - Cell Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; American Journal of Physiology - Cell Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Cell Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Cell Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; American Journal of Physiology - Cell Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; American Journal of Physiology - Cell Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; American Journal of Physiology - Cell Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; American Journal of Physiology - Cell Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; American Journal of Physiology - Cell Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; American Journal of Physiology - Cell Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Cell Physiology Volume 270 ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Cell Physiology Volume 271 ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; American Journal of Physiology - Cell Physiology Volume 272 ; 272 ; reingest2.clockss.org:8085 >
@@ -134,30 +158,44 @@
     
     param[base_url] = http://ajpendo.physiology.org/
     
-    au < testing ; 1984 ; American Journal of Physiology - Endocrinology and Metabolism Volume 246 ; 246 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; American Journal of Physiology - Endocrinology and Metabolism Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; American Journal of Physiology - Endocrinology and Metabolism Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; American Journal of Physiology - Endocrinology and Metabolism Volume 249 ; 249 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; American Journal of Physiology - Endocrinology and Metabolism Volume 250 ; 250 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; American Journal of Physiology - Endocrinology and Metabolism Volume 251 ; 251 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; American Journal of Physiology - Endocrinology and Metabolism Volume 252 ; 252 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; American Journal of Physiology - Endocrinology and Metabolism Volume 253 ; 253 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Endocrinology and Metabolism Volume 254 ; 254 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Endocrinology and Metabolism Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; American Journal of Physiology - Endocrinology and Metabolism Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; American Journal of Physiology - Endocrinology and Metabolism Volume 257 ; 257 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; American Journal of Physiology - Endocrinology and Metabolism Volume 258 ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; American Journal of Physiology - Endocrinology and Metabolism Volume 259 ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; American Journal of Physiology - Endocrinology and Metabolism Volume 260 ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; American Journal of Physiology - Endocrinology and Metabolism Volume 261 ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Endocrinology and Metabolism Volume 262 ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Endocrinology and Metabolism Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; American Journal of Physiology - Endocrinology and Metabolism Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; American Journal of Physiology - Endocrinology and Metabolism Volume 265 ; 265 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; American Journal of Physiology - Endocrinology and Metabolism Volume 266 ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; American Journal of Physiology - Endocrinology and Metabolism Volume 267 ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; American Journal of Physiology - Endocrinology and Metabolism Volume 268 ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; American Journal of Physiology - Endocrinology and Metabolism Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1978 ; American Journal of Physiology - Endocrinology and Metabolism Volume 235 ; 235 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; American Journal of Physiology - Endocrinology and Metabolism Volume 236 ; 236 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1979 ; American Journal of Physiology - Endocrinology and Metabolism Volume 237 ; 237 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Endocrinology and Metabolism Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Endocrinology and Metabolism Volume 239 ; 239 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; American Journal of Physiology - Endocrinology and Metabolism Volume 240 ; 240 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; American Journal of Physiology - Endocrinology and Metabolism Volume 241 ; 241 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; American Journal of Physiology - Endocrinology and Metabolism Volume 242 ; 242 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; American Journal of Physiology - Endocrinology and Metabolism Volume 243 ; 243 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; American Journal of Physiology - Endocrinology and Metabolism Volume 244 ; 244 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; American Journal of Physiology - Endocrinology and Metabolism Volume 245 ; 245 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Endocrinology and Metabolism Volume 246 ; 246 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Endocrinology and Metabolism Volume 247 ; 247 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; American Journal of Physiology - Endocrinology and Metabolism Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; American Journal of Physiology - Endocrinology and Metabolism Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; American Journal of Physiology - Endocrinology and Metabolism Volume 250 ; 250 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; American Journal of Physiology - Endocrinology and Metabolism Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; American Journal of Physiology - Endocrinology and Metabolism Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; American Journal of Physiology - Endocrinology and Metabolism Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Endocrinology and Metabolism Volume 254 ; 254 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Endocrinology and Metabolism Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; American Journal of Physiology - Endocrinology and Metabolism Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; American Journal of Physiology - Endocrinology and Metabolism Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; American Journal of Physiology - Endocrinology and Metabolism Volume 258 ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; American Journal of Physiology - Endocrinology and Metabolism Volume 259 ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; American Journal of Physiology - Endocrinology and Metabolism Volume 260 ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; American Journal of Physiology - Endocrinology and Metabolism Volume 261 ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Endocrinology and Metabolism Volume 262 ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Endocrinology and Metabolism Volume 263 ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; American Journal of Physiology - Endocrinology and Metabolism Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; American Journal of Physiology - Endocrinology and Metabolism Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; American Journal of Physiology - Endocrinology and Metabolism Volume 266 ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; American Journal of Physiology - Endocrinology and Metabolism Volume 267 ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; American Journal of Physiology - Endocrinology and Metabolism Volume 268 ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; American Journal of Physiology - Endocrinology and Metabolism Volume 269 ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Endocrinology and Metabolism Volume 270 ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Endocrinology and Metabolism Volume 271 ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; American Journal of Physiology - Endocrinology and Metabolism Volume 272 ; 272 ; reingest2.clockss.org:8085 >
@@ -197,30 +235,44 @@
     
     param[base_url] = http://ajpgi.physiology.org/
     
-    au < testing ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1978 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 235 ; 235 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 236 ; 236 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1979 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 237 ; 237 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 239 ; 239 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 240 ; 240 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 241 ; 241 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 242 ; 242 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 243 ; 243 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 244 ; 244 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 245 ; 245 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 270 ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 271 ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 272 ; 272 ; reingest2.clockss.org:8085 >
@@ -260,30 +312,44 @@
     
     param[base_url] = http://ajpheart.physiology.org/
     
-    au < testing ; 1984 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1978 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 235 ; 235 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 236 ; 236 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1979 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 237 ; 237 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 239 ; 239 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 240 ; 240 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 241 ; 241 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 242 ; 242 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 243 ; 243 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 244 ; 244 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 245 ; 245 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 270 ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 271 ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 272 ; 272 ; reingest2.clockss.org:8085 >
@@ -323,30 +389,30 @@
     
     param[base_url] = http://ajplung.physiology.org/
     
-    au < testing ; 1984 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+    au < notReady ; 1984 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
+    au < notReady ; 1984 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
+    au < notReady ; 1985 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < notReady ; 1985 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < notReady ; 1986 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
+    au < notReady ; 1986 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+    au < notReady ; 1987 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+    au < notReady ; 1987 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+    au < notReady ; 1988 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
+    au < notReady ; 1988 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+    au < notReady ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 270 ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 271 ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 272 ; 272 ; reingest2.clockss.org:8085 >
@@ -386,30 +452,44 @@
     
     param[base_url] = http://ajpregu.physiology.org/
     
-    au < testing ; 1984 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1978 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 235 ; 235 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 236 ; 236 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1979 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 237 ; 237 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 239 ; 239 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 240 ; 240 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 241 ; 241 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 242 ; 242 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 243 ; 243 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 244 ; 244 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 245 ; 245 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 270 ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 271 ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 272 ; 272 ; reingest2.clockss.org:8085 >
@@ -449,30 +529,44 @@
     
     param[base_url] = http://ajprenal.physiology.org/
     
-    au < testing ; 1984 ; American Journal of Physiology - Renal Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; American Journal of Physiology - Renal Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; American Journal of Physiology - Renal Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; American Journal of Physiology - Renal Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; American Journal of Physiology - Renal Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; American Journal of Physiology - Renal Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; American Journal of Physiology - Renal Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; American Journal of Physiology - Renal Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Renal Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; American Journal of Physiology - Renal Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; American Journal of Physiology - Renal Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; American Journal of Physiology - Renal Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; American Journal of Physiology - Renal Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; American Journal of Physiology - Renal Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; American Journal of Physiology - Renal Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; American Journal of Physiology - Renal Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Renal Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; American Journal of Physiology - Renal Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; American Journal of Physiology - Renal Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; American Journal of Physiology - Renal Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; American Journal of Physiology - Renal Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; American Journal of Physiology - Renal Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; American Journal of Physiology - Renal Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; American Journal of Physiology - Renal Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1977 ; American Journal of Physiology - Renal Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1977 ; American Journal of Physiology - Renal Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; American Journal of Physiology - Renal Physiology Volume 234 ; 234 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1978 ; American Journal of Physiology - Renal Physiology Volume 235 ; 235 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; American Journal of Physiology - Renal Physiology Volume 236 ; 236 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1979 ; American Journal of Physiology - Renal Physiology Volume 237 ; 237 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Renal Physiology Volume 238 ; 238 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; American Journal of Physiology - Renal Physiology Volume 239 ; 239 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; American Journal of Physiology - Renal Physiology Volume 240 ; 240 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; American Journal of Physiology - Renal Physiology Volume 241 ; 241 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; American Journal of Physiology - Renal Physiology Volume 242 ; 242 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; American Journal of Physiology - Renal Physiology Volume 243 ; 243 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; American Journal of Physiology - Renal Physiology Volume 244 ; 244 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; American Journal of Physiology - Renal Physiology Volume 245 ; 245 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Renal Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; American Journal of Physiology - Renal Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; American Journal of Physiology - Renal Physiology Volume 248 ; 248 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; American Journal of Physiology - Renal Physiology Volume 249 ; 249 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; American Journal of Physiology - Renal Physiology Volume 250 ; 250 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; American Journal of Physiology - Renal Physiology Volume 251 ; 251 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; American Journal of Physiology - Renal Physiology Volume 252 ; 252 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; American Journal of Physiology - Renal Physiology Volume 253 ; 253 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Renal Physiology Volume 254 ; 254 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; American Journal of Physiology - Renal Physiology Volume 255 ; 255 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; American Journal of Physiology - Renal Physiology Volume 256 ; 256 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; American Journal of Physiology - Renal Physiology Volume 257 ; 257 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; American Journal of Physiology - Renal Physiology Volume 258 ; 258 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; American Journal of Physiology - Renal Physiology Volume 259 ; 259 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; American Journal of Physiology - Renal Physiology Volume 260 ; 260 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; American Journal of Physiology - Renal Physiology Volume 261 ; 261 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Renal Physiology Volume 262 ; 262 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; American Journal of Physiology - Renal Physiology Volume 263 ; 263 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; American Journal of Physiology - Renal Physiology Volume 264 ; 264 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; American Journal of Physiology - Renal Physiology Volume 265 ; 265 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; American Journal of Physiology - Renal Physiology Volume 266 ; 266 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; American Journal of Physiology - Renal Physiology Volume 267 ; 267 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; American Journal of Physiology - Renal Physiology Volume 268 ; 268 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; American Journal of Physiology - Renal Physiology Volume 269 ; 269 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Renal Physiology Volume 270 ; 270 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; American Journal of Physiology - Renal Physiology Volume 271 ; 271 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; American Journal of Physiology - Renal Physiology Volume 272 ; 272 ; reingest2.clockss.org:8085 >
@@ -512,30 +606,54 @@
     
     param[base_url] = http://jap.physiology.org/
     
-    au < testing ; 1984 ; Journal of Applied Physiology Volume 56 ; 56 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; Journal of Applied Physiology Volume 57 ; 57 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; Journal of Applied Physiology Volume 58 ; 58 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; Journal of Applied Physiology Volume 59 ; 59 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; Journal of Applied Physiology Volume 60 ; 60 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; Journal of Applied Physiology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; Journal of Applied Physiology Volume 62 ; 62 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; Journal of Applied Physiology Volume 63 ; 63 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; Journal of Applied Physiology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; Journal of Applied Physiology Volume 65 ; 65 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; Journal of Applied Physiology Volume 66 ; 66 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; Journal of Applied Physiology Volume 67 ; 67 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; Journal of Applied Physiology Volume 68 ; 68 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; Journal of Applied Physiology Volume 69 ; 69 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; Journal of Applied Physiology Volume 70 ; 70 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; Journal of Applied Physiology Volume 71 ; 71 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; Journal of Applied Physiology Volume 72 ; 72 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; Journal of Applied Physiology Volume 73 ; 73 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; Journal of Applied Physiology Volume 74 ; 74 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; Journal of Applied Physiology Volume 75 ; 75 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; Journal of Applied Physiology Volume 76 ; 76 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; Journal of Applied Physiology Volume 77 ; 77 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; Journal of Applied Physiology Volume 78 ; 78 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; Journal of Applied Physiology Volume 79 ; 79 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1972 ; Journal of Applied Physiology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1972 ; Journal of Applied Physiology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1973 ; Journal of Applied Physiology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1973 ; Journal of Applied Physiology Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1974 ; Journal of Applied Physiology Volume 36 ; 36 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1974 ; Journal of Applied Physiology Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1975 ; Journal of Applied Physiology Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1975 ; Journal of Applied Physiology Volume 39 ; 39 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1976 ; Journal of Applied Physiology Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1976 ; Journal of Applied Physiology Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1977 ; Journal of Applied Physiology Volume 42 ; 42 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1977 ; Journal of Applied Physiology Volume 43 ; 43 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; Journal of Applied Physiology Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1978 ; Journal of Applied Physiology Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; Journal of Applied Physiology Volume 46 ; 46 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1979 ; Journal of Applied Physiology Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; Journal of Applied Physiology Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; Journal of Applied Physiology Volume 49 ; 49 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; Journal of Applied Physiology Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; Journal of Applied Physiology Volume 51 ; 51 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; Journal of Applied Physiology Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; Journal of Applied Physiology Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; Journal of Applied Physiology Volume 54 ; 54 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; Journal of Applied Physiology Volume 55 ; 55 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; Journal of Applied Physiology Volume 56 ; 56 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; Journal of Applied Physiology Volume 57 ; 57 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; Journal of Applied Physiology Volume 58 ; 58 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; Journal of Applied Physiology Volume 59 ; 59 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; Journal of Applied Physiology Volume 60 ; 60 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; Journal of Applied Physiology Volume 61 ; 61 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; Journal of Applied Physiology Volume 62 ; 62 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; Journal of Applied Physiology Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; Journal of Applied Physiology Volume 64 ; 64 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; Journal of Applied Physiology Volume 65 ; 65 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; Journal of Applied Physiology Volume 66 ; 66 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; Journal of Applied Physiology Volume 67 ; 67 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; Journal of Applied Physiology Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; Journal of Applied Physiology Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; Journal of Applied Physiology Volume 70 ; 70 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; Journal of Applied Physiology Volume 71 ; 71 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; Journal of Applied Physiology Volume 72 ; 72 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; Journal of Applied Physiology Volume 73 ; 73 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; Journal of Applied Physiology Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; Journal of Applied Physiology Volume 75 ; 75 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; Journal of Applied Physiology Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; Journal of Applied Physiology Volume 77 ; 77 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; Journal of Applied Physiology Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; Journal of Applied Physiology Volume 79 ; 79 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; Journal of Applied Physiology Volume 80 ; 80 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; Journal of Applied Physiology Volume 81 ; 81 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; Journal of Applied Physiology Volume 82 ; 82 ; reingest2.clockss.org:8082 >
@@ -575,30 +693,46 @@
     
     param[base_url] = http://jn.physiology.org/
     
-    au < testing ; 1984 ; Journal of Neurophysiology Volume 51 ; 51 ; reingest1.clockss.org:8082 >
-    au < testing ; 1984 ; Journal of Neurophysiology Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; Journal of Neurophysiology Volume 53 ; 53 ; reingest2.clockss.org:8085 >
-    au < testing ; 1985 ; Journal of Neurophysiology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
-    au < testing ; 1986 ; Journal of Neurophysiology Volume 55 ; 55 ; reingest3.clockss.org:8083 >
-    au < testing ; 1986 ; Journal of Neurophysiology Volume 56 ; 56 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; Journal of Neurophysiology Volume 57 ; 57 ; reingest4.clockss.org:8082 >
-    au < testing ; 1987 ; Journal of Neurophysiology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; Journal of Neurophysiology Volume 59 ; 59 ; reingest1.clockss.org:8082 >
-    au < testing ; 1988 ; Journal of Neurophysiology Volume 60 ; 60 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; Journal of Neurophysiology Volume 61 ; 61 ; reingest2.clockss.org:8085 >
-    au < testing ; 1989 ; Journal of Neurophysiology Volume 62 ; 62 ; reingest2.clockss.org:8085 >
-    au < testing ; 1990 ; Journal of Neurophysiology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
-    au < testing ; 1990 ; Journal of Neurophysiology Volume 64 ; 64 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; Journal of Neurophysiology Volume 65 ; 65 ; reingest4.clockss.org:8082 >
-    au < testing ; 1991 ; Journal of Neurophysiology Volume 66 ; 66 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; Journal of Neurophysiology Volume 67 ; 67 ; reingest1.clockss.org:8082 >
-    au < testing ; 1992 ; Journal of Neurophysiology Volume 68 ; 68 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; Journal of Neurophysiology Volume 69 ; 69 ; reingest2.clockss.org:8085 >
-    au < testing ; 1993 ; Journal of Neurophysiology Volume 70 ; 70 ; reingest2.clockss.org:8085 >
-    au < testing ; 1994 ; Journal of Neurophysiology Volume 71 ; 71 ; reingest3.clockss.org:8083 >
-    au < testing ; 1994 ; Journal of Neurophysiology Volume 72 ; 72 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; Journal of Neurophysiology Volume 73 ; 73 ; reingest4.clockss.org:8082 >
-    au < testing ; 1995 ; Journal of Neurophysiology Volume 74 ; 74 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1972 ; Journal of Neurophysiology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1973 ; Journal of Neurophysiology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1974 ; Journal of Neurophysiology Volume 37 ; 37 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1975 ; Journal of Neurophysiology Volume 38 ; 38 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1976 ; Journal of Neurophysiology Volume 39 ; 39 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1977 ; Journal of Neurophysiology Volume 40 ; 40 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; Journal of Neurophysiology Volume 41 ; 41 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; Journal of Neurophysiology Volume 42 ; 42 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; Journal of Neurophysiology Volume 43 ; 43 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1980 ; Journal of Neurophysiology Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; Journal of Neurophysiology Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1981 ; Journal of Neurophysiology Volume 46 ; 46 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; Journal of Neurophysiology Volume 47 ; 47 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1982 ; Journal of Neurophysiology Volume 48 ; 48 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; Journal of Neurophysiology Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1983 ; Journal of Neurophysiology Volume 50 ; 50 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; Journal of Neurophysiology Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    au < ready ; 1984 ; Journal of Neurophysiology Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; Journal of Neurophysiology Volume 53 ; 53 ; reingest2.clockss.org:8085 >
+    au < ready ; 1985 ; Journal of Neurophysiology Volume 54 ; 54 ; reingest2.clockss.org:8085 >
+    au < ready ; 1986 ; Journal of Neurophysiology Volume 55 ; 55 ; reingest3.clockss.org:8083 >
+    au < ready ; 1986 ; Journal of Neurophysiology Volume 56 ; 56 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; Journal of Neurophysiology Volume 57 ; 57 ; reingest4.clockss.org:8082 >
+    au < ready ; 1987 ; Journal of Neurophysiology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; Journal of Neurophysiology Volume 59 ; 59 ; reingest1.clockss.org:8082 >
+    au < ready ; 1988 ; Journal of Neurophysiology Volume 60 ; 60 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; Journal of Neurophysiology Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+    au < ready ; 1989 ; Journal of Neurophysiology Volume 62 ; 62 ; reingest2.clockss.org:8085 >
+    au < ready ; 1990 ; Journal of Neurophysiology Volume 63 ; 63 ; reingest3.clockss.org:8083 >
+    au < ready ; 1990 ; Journal of Neurophysiology Volume 64 ; 64 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; Journal of Neurophysiology Volume 65 ; 65 ; reingest4.clockss.org:8082 >
+    au < ready ; 1991 ; Journal of Neurophysiology Volume 66 ; 66 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; Journal of Neurophysiology Volume 67 ; 67 ; reingest1.clockss.org:8082 >
+    au < ready ; 1992 ; Journal of Neurophysiology Volume 68 ; 68 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; Journal of Neurophysiology Volume 69 ; 69 ; reingest2.clockss.org:8085 >
+    au < ready ; 1993 ; Journal of Neurophysiology Volume 70 ; 70 ; reingest2.clockss.org:8085 >
+    au < ready ; 1994 ; Journal of Neurophysiology Volume 71 ; 71 ; reingest3.clockss.org:8083 >
+    au < ready ; 1994 ; Journal of Neurophysiology Volume 72 ; 72 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; Journal of Neurophysiology Volume 73 ; 73 ; reingest4.clockss.org:8082 >
+    au < ready ; 1995 ; Journal of Neurophysiology Volume 74 ; 74 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; Journal of Neurophysiology Volume 75 ; 75 ; reingest1.clockss.org:8082 >
     au < released ; 1996 ; Journal of Neurophysiology Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; Journal of Neurophysiology Volume 77 ; 77 ; reingest2.clockss.org:8082 >
@@ -689,18 +823,30 @@
     
     param[base_url] = http://physrev.physiology.org/
     
-    au < testing ; 1984 ; Physiological Reviews Volume 64 ; 64 ; reingest1.clockss.org:8082 >
-    au < testing ; 1985 ; Physiological Reviews Volume 65 ; 65 ; reingest2.clockss.org:8082 >
-    au < testing ; 1986 ; Physiological Reviews Volume 66 ; 66 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; Physiological Reviews Volume 67 ; 67 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; Physiological Reviews Volume 68 ; 68 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; Physiological Reviews Volume 69 ; 69 ; reingest2.clockss.org:8082 >
-    au < testing ; 1990 ; Physiological Reviews Volume 70 ; 70 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; Physiological Reviews Volume 71 ; 71 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; Physiological Reviews Volume 72 ; 72 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; Physiological Reviews Volume 73 ; 73 ; reingest2.clockss.org:8082 >
-    au < testing ; 1994 ; Physiological Reviews Volume 74 ; 74 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; Physiological Reviews Volume 75 ; 75 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1972 ; Physiological Reviews Volume 52 ; 52 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1973 ; Physiological Reviews Volume 53 ; 53 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1974 ; Physiological Reviews Volume 54 ; 54 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1975 ; Physiological Reviews Volume 55 ; 55 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1976 ; Physiological Reviews Volume 56 ; 56 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1977 ; Physiological Reviews Volume 57 ; 57 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1978 ; Physiological Reviews Volume 58 ; 58 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1979 ; Physiological Reviews Volume 59 ; 59 ; reingest4.clockss.org:8082 >
+    au < manifest ; 1980 ; Physiological Reviews Volume 60 ; 60 ; reingest1.clockss.org:8082 >
+    au < manifest ; 1981 ; Physiological Reviews Volume 61 ; 61 ; reingest2.clockss.org:8085 >
+    au < manifest ; 1982 ; Physiological Reviews Volume 62 ; 62 ; reingest3.clockss.org:8083 >
+    au < manifest ; 1983 ; Physiological Reviews Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    au < ready ; 1984 ; Physiological Reviews Volume 64 ; 64 ; reingest1.clockss.org:8082 >
+    au < ready ; 1985 ; Physiological Reviews Volume 65 ; 65 ; reingest2.clockss.org:8082 >
+    au < ready ; 1986 ; Physiological Reviews Volume 66 ; 66 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; Physiological Reviews Volume 67 ; 67 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; Physiological Reviews Volume 68 ; 68 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; Physiological Reviews Volume 69 ; 69 ; reingest2.clockss.org:8082 >
+    au < ready ; 1990 ; Physiological Reviews Volume 70 ; 70 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; Physiological Reviews Volume 71 ; 71 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; Physiological Reviews Volume 72 ; 72 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; Physiological Reviews Volume 73 ; 73 ; reingest2.clockss.org:8082 >
+    au < ready ; 1994 ; Physiological Reviews Volume 74 ; 74 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; Physiological Reviews Volume 75 ; 75 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; Physiological Reviews Volume 76 ; 76 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; Physiological Reviews Volume 77 ; 77 ; reingest2.clockss.org:8082 >
     au < released ; 1998 ; Physiological Reviews Volume 78 ; 78 ; reingest3.clockss.org:8083 >
@@ -726,16 +872,16 @@
     
     param[base_url] = http://physiologyonline.physiology.org/
     
-    au < testing ; 1986 ; Physiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
-    au < testing ; 1987 ; Physiology Volume 2 ; 2 ; reingest4.clockss.org:8082 >
-    au < testing ; 1988 ; Physiology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
-    au < testing ; 1989 ; Physiology Volume 4 ; 4 ; reingest2.clockss.org:8082 >
-    au < testing ; 1990 ; Physiology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
-    au < testing ; 1991 ; Physiology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
-    au < testing ; 1992 ; Physiology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
-    au < testing ; 1993 ; Physiology Volume 8 ; 8 ; reingest2.clockss.org:8082 >
-    au < testing ; 1994 ; Physiology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < testing ; 1995 ; Physiology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < ready ; 1986 ; Physiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+    au < ready ; 1987 ; Physiology Volume 2 ; 2 ; reingest4.clockss.org:8082 >
+    au < ready ; 1988 ; Physiology Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    au < ready ; 1989 ; Physiology Volume 4 ; 4 ; reingest2.clockss.org:8082 >
+    au < ready ; 1990 ; Physiology Volume 5 ; 5 ; reingest3.clockss.org:8083 >
+    au < ready ; 1991 ; Physiology Volume 6 ; 6 ; reingest4.clockss.org:8082 >
+    au < ready ; 1992 ; Physiology Volume 7 ; 7 ; reingest1.clockss.org:8082 >
+    au < ready ; 1993 ; Physiology Volume 8 ; 8 ; reingest2.clockss.org:8082 >
+    au < ready ; 1994 ; Physiology Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    au < ready ; 1995 ; Physiology Volume 10 ; 10 ; reingest4.clockss.org:8082 >
     au < released ; 1996 ; Physiology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
     au < released ; 1997 ; Physiology Volume 12 ; 12 ; reingest2.clockss.org:8082 >
     au < released ; 1998 ; Physiology Volume 13 ; 13 ; reingest3.clockss.org:8083 >
