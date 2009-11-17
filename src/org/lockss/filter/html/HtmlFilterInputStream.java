@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.7 2008-11-25 04:03:02 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.8 2009-11-17 19:44:32 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,11 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter.html;
 
 import java.io.*;
-import java.util.List;
 
 import org.htmlparser.*;
 import org.htmlparser.lexer.*;
-import org.htmlparser.filters.*;
 import org.htmlparser.util.*;
 
 import org.lockss.config.*;
@@ -163,6 +161,7 @@ public class HtmlFilterInputStream extends InputStream {
     PrototypicalNodeFactory factory = new PrototypicalNodeFactory();
     factory.registerTag(new HtmlTags.Iframe());
     factory.registerTag(new HtmlTags.Noscript());
+    factory.registerTag(new HtmlTags.Font());
     parser.setNodeFactory(factory);
     return parser;
   }

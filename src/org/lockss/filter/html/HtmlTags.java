@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlTags.java,v 1.4 2008-10-30 08:29:30 tlipkis Exp $
+ * $Id: HtmlTags.java,v 1.5 2009-11-17 19:44:32 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,6 +74,28 @@ public class HtmlTags {
      * The set of names handled by this tag.
      */
     private static final String[] mIds = new String[] {"NOSCRIPT"};
+
+    /**
+     * Return the set of names handled by this tag.
+     * @return The names to be matched that create tags of this type.
+     */
+    public String[] getIds() {
+      return mIds;
+    }
+
+  }
+
+  /**
+   * A FONT tag.  Registered with PrototypicalNodeFactory to cause iframe
+   * to be a CompositeTag.  See code samples in org.htmlparser.tags.
+   * @see HtmlFilterInputStream#makeParser()
+   */
+  public static class Font extends CompositeTag {
+
+    /**
+     * The set of names handled by this tag.
+     */
+    private static final String[] mIds = new String[] {"FONT"};
 
     /**
      * Return the set of names handled by this tag.
