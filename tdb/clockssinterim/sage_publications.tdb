@@ -652,6 +652,7 @@
 
     param[base_url] = http://adh.sagepub.com/
 
+    au < tested ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 ; >
     au < tested ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
 
   }
@@ -664,6 +665,7 @@
 
     param[base_url] = http://aff.sagepub.com/
 
+    au < tested ; 2008 ; Affilia Volume 23 ; 23 ; >
     au < tested ; 2009 ; Affilia Volume 24 ; 24 ; >
 
   }
@@ -676,6 +678,7 @@
 
     param[base_url] = http://abs.sagepub.com/
 
+    au < tested ; 2008 ; American Behavioral Scientist Volume 52 ; 52 ; >
     au < tested ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
 
   }
@@ -688,7 +691,7 @@
 
     param[base_url] = http://aer.sagepub.com/
 
-    au < testing ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
+    au < tested ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
 
   }
 
@@ -700,7 +703,7 @@
 
     param[base_url] = http://aja.sagepub.com/
 
-    au < testing ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
+    au < tested ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
 
   }
 
@@ -712,6 +715,7 @@
 
     param[base_url] = http://aje.sagepub.com/
 
+    au < tested ; 2008 ; American Journal of Evaluation Volume 29 ; 29 ; >
     au < tested ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
 
   }
@@ -724,6 +728,7 @@
 
     param[base_url] = http://ajh.sagepub.com/
 
+    au < tested ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 ; >
     au < tested ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
 
   }
