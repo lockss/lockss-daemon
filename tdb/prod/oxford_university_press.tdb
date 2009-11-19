@@ -1241,6 +1241,9 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Early Music Volume 33 ; 33 >
         au < HighWireStrVolPlugin ; released ; Early Music Volume 34 ; 34 >
+        au < HighWirePressPlugin ; ready ; Early Music Volume 35 ; 35 >
+		au < HighWirePressPlugin ; ready ; Early Music Volume 36 ; 36 >
+		au < HighWirePressPlugin ; ready ; Early Music Volume 37 ; 37 >
 
       }
 
@@ -1297,7 +1300,8 @@
         au < HighWireStrVolPlugin ; released ; ELT Journal Volume 59 ; 59 >
         au < HighWirePressPlugin ; doNotProcess ; ELT Journal Volume 60 ; 60 >
         au < HighWireStrVolPlugin ; released ; ELT Journal Volume 61 ; 61 >
-
+		au < HighWirePressPlugin ; ready ; ELT Journal Volume 62 ; 62 >
+		au < HighWirePressPlugin ; ready ; ELT Journal Volume 63 ; 63 >
       }
 
     }
@@ -1342,7 +1346,9 @@
 
         au < HighWireStrVolPlugin ; released ; Enterprise & Society Volume 6 ; 6 >
         au < HighWirePressPlugin ; doNotProcess ; Enterprise & Society Volume 7 ; 7 >
-
+		au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 8 ; 8 >
+		au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 9 ; 9 >
+		au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 10 ; 10 >
       }
 
     }
