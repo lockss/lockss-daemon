@@ -814,6 +814,8 @@
         au < HighWireStrVolPlugin ; released ; Cambridge Journal of Economics Volume 29 ; 29 >
         au < HighWirePressPlugin ; doNotProcess ; Cambridge Journal of Economics Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; released ; Cambridge Journal of Economics Volume 31 ; 31 >
+        au < HighWirePressPlugin ; manifest ; Cambridge Journal of Economics Volume 32 ; 32 >
+        au < HighWirePressPlugin ; manifest ; Cambridge Journal of Economics Volume 33 ; 33 >
 
       }
 
@@ -842,6 +844,9 @@
 
         au < HighWirePressPlugin ; exists ; The Cambridge Quarterly Volume 34 ; 34 >
         au < HighWirePressPlugin ; doNotProcess ; The Cambridge Quarterly Volume 35 ; 35 >
+        au < HighWirePressPlugin ; manifest ; The Cambridge Quarterly Volume 36 ; 36 >
+        au < HighWirePressPlugin ; manifest ; The Cambridge Quarterly Volume 37 ; 37 >
+        au < HighWirePressPlugin ; manifest ; The Cambridge Quarterly Volume 38 ; 38 >
 
       }
 
@@ -859,6 +864,9 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; manifest ; Capital Markets Law Journal Volume 1 ; 1 >
+        au < HighWirePressPlugin ; manifest ; Capital Markets Law Journal Volume 2 ; 2 >
+        au < HighWirePressPlugin ; manifest ; Capital Markets Law Journal Volume 3 ; 3 >
+        au < HighWirePressPlugin ; manifest ; Capital Markets Law Journal Volume 4 ; 4 >
 
       }
 
@@ -888,6 +896,8 @@
         au < HighWirePressPlugin ; doNotProcess ; Carcinogenesis Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; released ; Carcinogenesis Volume 27 ; 27 >
         au < HighWireStrVolPlugin ; released ; Carcinogenesis Volume 28 ; 28 >
+        au < HighWirePressPlugin ; manifest ; Carcinogenesis Volume 29 ; 29 >
+        au < HighWirePressPlugin ; manifest ; Carcinogenesis Volume 30 ; 30 >
 
       }
 
@@ -917,6 +927,8 @@
         au < HighWirePressPlugin ; doNotProcess ; Cerebral Cortex Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; released ; Cerebral Cortex Volume 16 ; 16 >
         au < HighWireStrVolPlugin ; released ; Cerebral Cortex Volume 17 ; 17 >
+        au < HighWirePressPlugin ; manifest ; Cerebral Cortex Volume 18 ; 18 >
+        au < HighWirePressPlugin ; manifest ; Cerebral Cortex Volume 19 ; 19 >
 
       }
 
@@ -945,6 +957,9 @@
 
         au < HighWireStrVolPlugin ; released ; CESifo Economic Studies Volume 51 ; 51 >
         au < HighWirePressPlugin ; doNotProcess ; CESifo Economic Studies Volume 52 ; 52 >
+        au < HighWirePressPlugin ; manifest ; CESifo Economic Studies Volume 53 ; 53 >
+        au < HighWirePressPlugin ; manifest ; CESifo Economic Studies Volume 54 ; 54 >
+        au < HighWirePressPlugin ; manifest ; CESifo Economic Studies Volume 55 ; 55 >
 
       }
 
@@ -974,6 +989,8 @@
         au < HighWireStrVolPlugin ; released ; Chemical Senses Volume 30 ; 30 >
         au < HighWirePressPlugin ; doNotProcess ; Chemical Senses Volume 31 ; 31 >
         au < HighWireStrVolPlugin ; released ; Chemical Senses Volume 32 ; 32 >
+        au < HighWirePressPlugin ; manifest ; Chemical Senses Volume 33 ; 33 >
+        au < HighWirePressPlugin ; manifest ; Chemical Senses Volume 34 ; 34 >
 
       }
 
@@ -1002,6 +1019,9 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Chinese Journal of International Law Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; released ; Chinese Journal of International Law Volume 5 ; 5 >
+        au < HighWirePressPlugin ; manifest ; Chinese Journal of International Law Volume 6 ; 6 >
+        au < HighWirePressPlugin ; manifest ; Chinese Journal of International Law Volume 7 ; 7 >
+        au < HighWirePressPlugin ; manifest ; Chinese Journal of International Law Volume 8 ; 8 >
 
       }
 
@@ -1019,7 +1039,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; Chinese Journal of International Politics Volume 1 ; 1 >
-
+        au < HighWirePressPlugin ; manifest ; Chinese Journal of International Politics Volume 2 ; 2 >
       }
 
     }
@@ -1075,6 +1095,8 @@
         au < HighWireStrVolPlugin ; released ; Community Development Journal Volume 40 ; 40 >
         au < HighWirePressPlugin ; doNotProcess ; Community Development Journal Volume 41 ; 41 >
         au < HighWireStrVolPlugin ; released ; Community Development Journal Volume 42 ; 42 >
+        au < HighWirePressPlugin ; manifest ; Community Development Journal Volume 43 ; 43 >
+        au < HighWirePressPlugin ; manifest ; Community Development Journal Volume 44 ; 44 >
 
       }
 
@@ -1103,6 +1125,8 @@
 
         au < HighWirePressPlugin ; doNotProcess ; Computer Journal Volume 49 ; 49 >
         au < HighWireStrVolPlugin ; released ; Computer Journal Volume 50 ; 50 >
+        au < HighWirePressPlugin ; manifest ; Computer Journal Volume 51 ; 51 >
+        au < HighWirePressPlugin ; manifest ; Computer Journal Volume 52 ; 52 >
 
       }
 
@@ -1156,8 +1180,12 @@
         param[base_url] = http://cpe.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
+        au < HighWirePressPlugin ; manifest ; Contributions to Political Economy Volume 23 ; 23 >
         au < HighWirePressPlugin ; doNotProcess ; Contributions to Political Economy Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; released ; Contributions to Political Economy Volume 25 ; 25 >
+        au < HighWirePressPlugin ; manifest ; Contributions to Political Economy Volume 26 ; 26 >
+        au < HighWirePressPlugin ; manifest ; Contributions to Political Economy Volume 27 ; 27 >
+        au < HighWirePressPlugin ; manifest ; Contributions to Political Economy Volume 28 ; 28 >
 
       }
 
