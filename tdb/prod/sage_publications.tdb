@@ -651,12 +651,12 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; The Annals of the American Academy of Political and Social Science Volume 612 ; 612 >
         au < HighWireStrVolPlugin ; released ; The Annals of the American Academy of Political and Social Science Volume 613 ; 613 >
         au < HighWireStrVolPlugin ; released ; The Annals of the American Academy of Political and Social Science Volume 614 ; 614 >
-        au < HighWireStrVolPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
-        au < HighWireStrVolPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
-        au < HighWireStrVolPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
-        au < HighWireStrVolPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
-        au < HighWireStrVolPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
-        au < HighWireStrVolPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
+        au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 615 ; 615 >
+        au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 616 ; 616 >
+        au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 617 ; 617 >
+        au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 618 ; 618 >
+        au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 619 ; 619 >
+        au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 620 ; 620 >
         au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 621 ; 621 >
         au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 622 ; 622 >
         au < HighWirePressPlugin ; ready ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 >
@@ -681,7 +681,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Anthropological Theory Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; released ; Anthropological Theory Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; released ; Anthropological Theory Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; ready ; Anthropological Theory Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Anthropological Theory Volume 8 ; 8 >
         au < HighWirePressPlugin ; ready ; Anthropological Theory Volume 9 ; 9 >
 
       }
@@ -712,7 +712,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Applied Psychological Measurement Volume 29 ; 29 >
         au < HighWireStrVolPlugin ; doNotProcess ; Applied Psychological Measurement Volume 30 ; 30 >
         au < HighWireStrVolPlugin ; released ; Applied Psychological Measurement Volume 31 ; 31 >
-        au < HighWireStrVolPlugin ; ready ; Applied Psychological Measurement Volume 32 ; 32 >
+        au < HighWirePressPlugin ; ready ; Applied Psychological Measurement Volume 32 ; 32 >
         au < HighWirePressPlugin ; ready ; Applied Psychological Measurement Volume 33 ; 33 >
 
       }
@@ -756,7 +756,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Arts and Humanities in Higher Education Volume 4 ; 4 >
         au < HighWireStrVolPlugin ; released ; Arts and Humanities in Higher Education Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; released ; Arts and Humanities in Higher Education Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; ready ; Arts and Humanities in Higher Education Volume 7 ; 7 >
+        au < HighWirePressPlugin ; ready ; Arts and Humanities in Higher Education Volume 7 ; 7 >
         au < HighWirePressPlugin ; ready ; Arts and Humanities in Higher Education Volume 8 ; 8 >
 
       }
@@ -777,7 +777,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Asia Pacific Journal of Human Resources Volume 43 ; 43 >
         au < HighWireStrVolPlugin ; released ; Asia Pacific Journal of Human Resources Volume 44 ; 44 >
         au < HighWireStrVolPlugin ; released ; Asia Pacific Journal of Human Resources Volume 45 ; 45 >
-        au < HighWireStrVolPlugin ; ready ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
+        au < HighWirePressPlugin ; ready ; Asia Pacific Journal of Human Resources Volume 46 ; 46 >
         au < HighWirePressPlugin ; ready ; Asia Pacific Journal of Human Resources Volume 47 ; 47 >
 
       }
@@ -796,7 +796,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; Asia-Pacific Journal of Public Health Volume 19 ; 19 >
-        au < HighWireStrVolPlugin ; ready ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
+        au < HighWirePressPlugin ; ready ; Asia-Pacific Journal of Public Health Volume 20 ; 20 >
         au < HighWirePressPlugin ; ready ; Asia-Pacific Journal of Public Health Volume 21 ; 21 >
 
       }
@@ -817,7 +817,7 @@ comment[ajs] = this journal has been moved to H20 platform
         au < HighWireStrVolPlugin ; released ; Asian Journal of Management Cases Volume 2 ; 2 >
         au < HighWireStrVolPlugin ; released ; Asian Journal of Management Cases Volume 3 ; 3 >
         au < HighWireStrVolPlugin ; released ; Asian Journal of Management Cases Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; ready ; Asian Journal of Management Cases Volume 5 ; 5 >
+        au < HighWirePressPlugin ; ready ; Asian Journal of Management Cases Volume 5 ; 5 >
         au < HighWirePressPlugin ; ready ; Asian Journal of Management Cases Volume 6 ; 6 >
 
       }
