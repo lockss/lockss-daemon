@@ -13,9 +13,11 @@
       name = Acta Biochimica et Biophysica Sinica
     >
 
+comment[abbs40] = manifest page 404
+
     param[base_url] = http://abbs.oxfordjournals.org/
 
-    au < testing ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
+    au < notReady ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
     au < testing ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
 
   }
