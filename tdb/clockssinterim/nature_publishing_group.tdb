@@ -367,7 +367,7 @@
     param[journal_id] = nmat
 
     au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
-    au < manifest ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
+    au < ready ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
 
   }
   
@@ -466,6 +466,18 @@
     param[journal_id] = nrcardio
 
     au < ready ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Clinical Oncology
+    >
+
+    param[journal_id] = nrclinonc
+
+    au < ready ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
 
   }
 

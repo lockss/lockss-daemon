@@ -768,7 +768,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrclinonc
 
     au < manifest ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
-    au < testing ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
+    au < ready ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -820,7 +820,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrg
 
     au < manifest ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
-    au < manifest ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
+    au < testing ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -833,7 +833,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nri
 
     au < manifest ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
-    au < manifest ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
+    au < testing ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
 
   }
 
@@ -846,7 +846,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrmicro
 
     au < manifest ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
-    au < manifest ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
+    au < testing ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
 
   }
 
