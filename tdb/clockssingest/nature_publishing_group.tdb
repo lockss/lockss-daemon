@@ -872,7 +872,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrneph
 
     au < manifest ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
+    au < testing ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -885,7 +885,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrneurol
 
     au < manifest ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
+    au < testing ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -898,7 +898,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrn
 
     au < manifest ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
-    au < manifest ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
+    au < testing ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -911,7 +911,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrrheum
 
     au < manifest ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
-    au < manifest ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
+    au < testing ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -924,7 +924,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrurol
 
     au < manifest ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
-    au < manifest ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
+    au < testing ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -937,7 +937,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nsmb
 
     au < manifest ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
-    au < manifest ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
+    au < testing ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
 
   }
 
