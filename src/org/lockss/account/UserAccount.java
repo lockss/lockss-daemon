@@ -1,5 +1,5 @@
 /*
- * $Id: UserAccount.java,v 1.9 2009-11-05 23:38:39 dshr Exp $
+ * $Id: UserAccount.java,v 1.10 2009-11-24 04:33:44 dshr Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     hashAlg = getDefaultHashAlgorithm();
     lastPasswordChange = -1;
     lastUserPasswordChange = -1;
-    auditableEvent("initialized");
+    auditableEvent("account initialized");
   }
 
   /** Setup configuration before first use.  Called by factory. */
@@ -275,7 +275,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     enable();
     setChanged(true);
     clearCaches();
-    auditableEvent("password changed");
+    auditableEvent("changed password");
   }
 
   /** Account has logged in */
@@ -546,7 +546,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   public void disable(String reason) {
     setChanged(!isDisabled || !StringUtil.equalStrings(disableReason, reason));
     log.debug("Disabled account " + getName() + ": " + reason);
-    auditableEvent("user disabled because: " + reason);
+    auditableEvent("account disabled because: " + reason);
     isDisabled = true;
     disableReason = reason;
   }
