@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.16 2008-11-08 08:16:32 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.16.16.1 2009-11-24 05:07:41 dshr Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ import org.lockss.config.*;
 import org.lockss.remote.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
+import org.lockss.account.*;
 import org.lockss.daemon.status.*;
 
 /** UI to invoke various daemon actions
@@ -118,6 +119,11 @@ public class DebugPanel extends LockssServlet {
 
     if (!StringUtil.isNullString(action)) {
       auid = getParameter(KEY_AUID);
+      UserAccount acct = getUserAccount();
+      if (acct != null) {
+	acct.auditableEvent("used debug panel action: " + action +
+			    " AU ID: " + auid);
+      }
     }
     if (ACTION_MAIL_BACKUP.equals(action)) {
       doMailBackup();

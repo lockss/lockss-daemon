@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.40 2009-11-04 03:13:19 dshr Exp $
+ * $Id: IpAccessControl.java,v 1.40.2.1 2009-11-24 05:07:41 dshr Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public abstract class IpAccessControl extends LockssServlet {
 				   getConfigFileComment());
     UserAccount acct = getUserAccount();
     if (acct != null) {
-      acct.auditableEvent("IP access list changed");
+      acct.auditableEvent("changed " + getConfigFileName() + " to: " + props);
     }
   }
 
