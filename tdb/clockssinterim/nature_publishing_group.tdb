@@ -496,6 +496,42 @@
   {
 
     title <
+      name = Nature Reviews Genetics
+    >
+
+    param[journal_id] = nrg
+
+    au < ready ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Immunology
+    >
+
+    param[journal_id] = nri
+
+    au < ready ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Microbiology
+    >
+
+    param[journal_id] = nrmicro
+
+    au < ready ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
+
+  }
+
+  {
+
+    title <
       name = Prostate Cancer and Prostatic Diseases
     >
 
