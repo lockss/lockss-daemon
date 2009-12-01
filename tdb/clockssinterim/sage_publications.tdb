@@ -33,6 +33,173 @@
     au < tested ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
 
   }
+  
+  {
+
+    title <
+      name = Action Research
+    >
+
+    param[base_url] = http://arj.sagepub.com/
+
+    au < tested ; 2008 ; Action Research Volume 6 ; 6 ; >
+    au < tested ; 2009 ; Action Research Volume 7 ; 7 ; >
+
+  }
+
+    {
+
+    title <
+      name = Active Learning in Higher Education
+    >
+
+    param[base_url] = http://alh.sagepub.com/
+
+    au < tested ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
+    au < tested ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = Adaptive Behavior
+    >
+
+    param[base_url] = http://adb.sagepub.com/
+
+    au < tested ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
+    au < tested ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+    title <
+      name = Administration & Society
+    >
+
+    param[base_url] = http://aas.sagepub.com/
+
+    au < tested ; 2008 ; Administration & Society Volume 40 ; 40 ; >
+    au < tested ; 2009 ; Administration & Society Volume 41 ; 41 ; >
+
+  }
+
+  {
+
+    title <
+      name = Adult Education Quarterly
+    >
+
+    param[base_url] = http://aeq.sagepub.com/
+
+    au < tested ; 2007-2008 ; Adult Education Quarterly Volume 58 ; 58 ; >
+    au < tested ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
+
+  }
+
+  {
+
+    title <
+      name = Advances in Dental Research
+    >
+
+    param[base_url] = http://adr.sagepub.com/
+
+    au < tested ; 2008 ; Advances in Dental Research Volume 20 ; 20 ; >
+    au < tested ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
+
+  }
+
+  {
+
+    title <
+      name = Advances in Developing Human Resources
+    >
+
+    param[base_url] = http://adh.sagepub.com/
+
+    au < tested ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 ; >
+    au < tested ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = Affilia
+    >
+
+    param[base_url] = http://aff.sagepub.com/
+
+    au < tested ; 2008 ; Affilia Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Affilia Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Behavioral Scientist
+    >
+
+    param[base_url] = http://abs.sagepub.com/
+
+    au < tested ; 2008 ; American Behavioral Scientist Volume 52 ; 52 ; >
+    au < tested ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Educational Research Journal
+    >
+
+    param[base_url] = http://aer.sagepub.com/
+
+    au < tested ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Alzheimer's Disease and Other Dementias
+    >
+
+    param[base_url] = http://aja.sagepub.com/
+
+    au < tested ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Evaluation
+    >
+
+    param[base_url] = http://aje.sagepub.com/
+
+    au < tested ; 2008 ; American Journal of Evaluation Volume 29 ; 29 ; >
+    au < tested ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Hospice and Palliative Medicine
+    >
+
+    param[base_url] = http://ajh.sagepub.com/
+
+    au < tested ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 ; >
+    au < tested ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
+
+  }
 
   {
 
@@ -605,173 +772,6 @@
   {
 
     title <
-      name = Action Research
-    >
-
-    param[base_url] = http://arj.sagepub.com/
-
-    au < tested ; 2008 ; Action Research Volume 6 ; 6 ; >
-    au < tested ; 2009 ; Action Research Volume 7 ; 7 ; >
-
-  }
-
-  {
-
-    title <
-      name = Active Learning in Higher Education
-    >
-
-    param[base_url] = http://alh.sagepub.com/
-
-    au < tested ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
-    au < tested ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
-
-  }
-
-  {
-
-    title <
-      name = Adaptive Behavior
-    >
-
-    param[base_url] = http://adb.sagepub.com/
-
-    au < tested ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
-    au < tested ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
-
-  }
-
-  {
-
-    title <
-      name = Administration & Society
-    >
-
-    param[base_url] = http://aas.sagepub.com/
-
-    au < tested ; 2008 ; Administration & Society Volume 40 ; 40 ; >
-    au < tested ; 2009 ; Administration & Society Volume 41 ; 41 ; >
-
-  }
-
-  {
-
-    title <
-      name = Adult Education Quarterly
-    >
-
-    param[base_url] = http://aeq.sagepub.com/
-
-    au < tested ; 2007-2008 ; Adult Education Quarterly Volume 58 ; 58 ; >
-    au < tested ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
-
-  }
-
-  {
-
-    title <
-      name = Advances in Dental Research
-    >
-
-    param[base_url] = http://adr.sagepub.com/
-
-    au < tested ; 2008 ; Advances in Dental Research Volume 20 ; 20 ; >
-    au < tested ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
-
-  }
-
-  {
-
-    title <
-      name = Advances in Developing Human Resources
-    >
-
-    param[base_url] = http://adh.sagepub.com/
-
-    au < tested ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 ; >
-    au < tested ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
-
-  }
-
-  {
-
-    title <
-      name = Affilia
-    >
-
-    param[base_url] = http://aff.sagepub.com/
-
-    au < tested ; 2008 ; Affilia Volume 23 ; 23 ; >
-    au < tested ; 2009 ; Affilia Volume 24 ; 24 ; >
-
-  }
-
-  {
-
-    title <
-      name = American Behavioral Scientist
-    >
-
-    param[base_url] = http://abs.sagepub.com/
-
-    au < tested ; 2008 ; American Behavioral Scientist Volume 52 ; 52 ; >
-    au < tested ; 2009 ; American Behavioral Scientist Volume 53 ; 53 ; >
-
-  }
-
-  {
-
-    title <
-      name = American Educational Research Journal
-    >
-
-    param[base_url] = http://aer.sagepub.com/
-
-    au < tested ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
-
-  }
-
-  {
-
-    title <
-      name = American Journal of Alzheimer's Disease and Other Dementias
-    >
-
-    param[base_url] = http://aja.sagepub.com/
-
-    au < tested ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
-
-  }
-
-  {
-
-    title <
-      name = American Journal of Evaluation
-    >
-
-    param[base_url] = http://aje.sagepub.com/
-
-    au < tested ; 2008 ; American Journal of Evaluation Volume 29 ; 29 ; >
-    au < tested ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
-
-  }
-
-  {
-
-    title <
-      name = American Journal of Hospice and Palliative Medicine
-    >
-
-    param[base_url] = http://ajh.sagepub.com/
-
-    au < tested ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 ; >
-    au < tested ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
-
-  }
-  
-  {
-
-    title <
       name = Clinical Rehabilitation
     >
 
@@ -791,6 +791,17 @@
 
     au < ready ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; >
 
+  }
+
+  {
+
+    title <
+      name = Communication Disorders Quarterly
+    >
+
+    param[base_url] = http://cdq.sagepub.com/
+
+    au < ready ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
   }
 
   {
@@ -829,16 +840,53 @@
     au < ready ; 2009 ; Economic Development Quarterly Volume 23 ; 23 ; >
 
   }
+  
+    {
+
+    title <
+      name = European Journal of Social Theory
+    >
+
+    param[base_url] = http://est.sagepub.com/
+
+    au < ready ; 2009 ; European Journal of Social Theory Volume 12 ; 12 ; >
+
+  }
+  
+  {
+
+    title <
+      name = European Journal of Women's Studies
+    >
+
+    param[base_url] = http://ejw.sagepub.com/
+
+    au < manifest ; 2008 ; European Journal of Women's Studies Volume 15 ; 15 ; >
+    au < ready ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 ; >
+
+  }
 
   {
 
     title <
-      name = Journal of Child Health Care
+      name = European Physical Education Review
     >
 
-    param[base_url] = http://chc.sagepub.com/
+    param[base_url] = http://epe.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
+    au < ready ; 2009 ; European Physical Education Review Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = European Union Politics
+    >
+
+    param[base_url] = http://eup.sagepub.com/
+
+    au < ready ; 2009 ; European Union Politics Volume 10 ; 10 ; >
 
   }
 
@@ -1198,6 +1246,18 @@
 
     au < tested ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 ; >
     au < tested ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Child Health Care
+    >
+
+    param[base_url] = http://chc.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
 
   }
 
@@ -2690,7 +2750,7 @@
 
     param[base_url] = http://sjp.sagepub.com/
 
-    au < released ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; >
 
   }
 
@@ -2702,7 +2762,7 @@
 
     param[base_url] = http://spi.sagepub.com/
 
-    au < released ; 2009 ; School Psychology International Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; School Psychology International Volume 30 ; 30 ; >
 
   }
 
@@ -2714,7 +2774,7 @@
 
     param[base_url] = http://sts.sagepub.com/
 
-    au < released ; 2009 ; Science Technology & Society Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
 
   }
 
@@ -2726,7 +2786,7 @@
 
     param[base_url] = http://sth.sagepub.com/
 
-    au < released ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; >
 
   }
 
@@ -3306,6 +3366,54 @@
     param[base_url] = http://tia.sagepub.com/
 
     au < released ; 2009 ; Trends in Amplification Volume 13 ; 13 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Urban Affairs Review
+    >
+
+    param[base_url] = http://uar.sagepub.com/
+
+    au < ready ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
+
+  }
+  
+    {
+
+    title <
+      name = Urban Education
+    >
+
+    param[base_url] = http://uex.sagepub.com/
+
+    au < ready ; 2009 ; Urban Education Volume 44 ; 44 ; >
+
+  }
+
+  {
+
+    title <
+      name = Urban Studies
+    >
+
+    param[base_url] = http://usj.sagepub.com/
+
+    au < ready ; 2009 ; Urban Studies Volume 46 ; 46 ; >
+
+  }
+
+  {
+
+    title <
+      name = Vascular and Endovascular Surgery
+    >
+
+    param[base_url] = http://ves.sagepub.com/
+
+    au < ready ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
 
   }
 
