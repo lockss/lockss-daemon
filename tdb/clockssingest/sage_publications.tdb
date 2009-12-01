@@ -844,7 +844,7 @@
     param[base_url] = http://cre.sagepub.com/
 
     au < testing ; 2008 ; Clinical Rehabilitation Volume 22 ; 22 ; >
-    au < testing ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < testing ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 ; >
 
   }
 
@@ -857,7 +857,7 @@
     param[base_url] = http://ctj.sagepub.com/
 
     au < testing ; 2008 ; Clinical Trials Volume 5 ; 5 ; >
-    au < testing ; 2009 ; Clinical Trials Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < testing ; 2009 ; Clinical Trials Volume 6 ; 6 ; >
 
   }
 
@@ -870,7 +870,7 @@
     param[base_url] = http://ctr.sagepub.com/
 
     au < testing ; 2008 ; Clothing and Textiles Research Journal Volume 26 ; 26 ; >
-    au < testing ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < testing ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; >
 
   }
 
@@ -883,7 +883,7 @@
     param[base_url] = http://cdq.sagepub.com/
 
     au < manifest ; 2007-2008 ; Communication Disorders Quarterly Volume 29 ; 29 ; >
-    au < testing ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < testing ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
     au < manifest ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ; >
 
   }
@@ -1691,7 +1691,7 @@
     param[base_url] = http://est.sagepub.com/
 
     au < manifest ; 2008 ; European Journal of Social Theory Volume 11 ; 11 ; >
-    au < testing ; 2009 ; European Journal of Social Theory Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; European Journal of Social Theory Volume 12 ; 12 ; >
 
   }
 
@@ -1704,7 +1704,7 @@
     param[base_url] = http://ejw.sagepub.com/
 
     au < manifest ; 2008 ; European Journal of Women's Studies Volume 15 ; 15 ; >
-    au < testing ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 ; >
 
   }
 
@@ -1717,7 +1717,7 @@
     param[base_url] = http://epe.sagepub.com/
 
     au < notReady ; 2008 ; European Physical Education Review Volume 14 ; 14 ; >
-    au < testing ; 2009 ; European Physical Education Review Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; European Physical Education Review Volume 15 ; 15 ; >
 
   }
 
@@ -1730,7 +1730,7 @@
     param[base_url] = http://eup.sagepub.com/
 
     au < manifest ; 2008 ; European Union Politics Volume 9 ; 9 ; >
-    au < testing ; 2009 ; European Union Politics Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; European Union Politics Volume 10 ; 10 ; >
 
   }
 
@@ -5810,7 +5810,7 @@
     param[base_url] = http://sjp.sagepub.com/
 
     au < manifest ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 ; >
-    au < released ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; >
 
   }
 
@@ -5823,7 +5823,7 @@
     param[base_url] = http://spi.sagepub.com/
 
     au < manifest ; 2008 ; School Psychology International Volume 29 ; 29 ; >
-    au < released ; 2009 ; School Psychology International Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; School Psychology International Volume 30 ; 30 ; >
 
   }
 
@@ -5848,7 +5848,7 @@
     param[base_url] = http://sts.sagepub.com/
 
     au < manifest ; 2008 ; Science Technology & Society Volume 13 ; 13 ; >
-    au < released ; 2009 ; Science Technology & Society Volume 14 ; 14 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
 
   }
 
@@ -5861,7 +5861,7 @@
     param[base_url] = http://sth.sagepub.com/
 
     au < manifest ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 ; >
-    au < released ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; reingest2.clockss.org:8085 >
+    au < testing ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; >
 
   }
 
@@ -6583,7 +6583,7 @@
     param[base_url] = http://uar.sagepub.com/
 
     au < manifest ; 2008 ; Urban Affairs Review Volume 44 ; 44 ; >
-    au < testing ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; reingest3.clockss.org:8083 >
+    au < testing ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
 
   }
 
@@ -6596,7 +6596,7 @@
     param[base_url] = http://uex.sagepub.com/
 
     au < manifest ; 2008 ; Urban Education Volume 43 ; 43 ; >
-    au < testing ; 2009 ; Urban Education Volume 44 ; 44 ; reingest3.clockss.org:8083 >
+    au < testing ; 2009 ; Urban Education Volume 44 ; 44 ; >
 
   }
 
@@ -6609,7 +6609,7 @@
     param[base_url] = http://usj.sagepub.com/
 
     au < manifest ; 2008 ; Urban Studies Volume 45 ; 45 ; >
-    au < testing ; 2009 ; Urban Studies Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < testing ; 2009 ; Urban Studies Volume 46 ; 46 ; >
 
   }
 
@@ -6622,7 +6622,7 @@
     param[base_url] = http://ves.sagepub.com/
 
     au < manifest ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
-    au < testing ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; reingest3.clockss.org:8083 >
+    au < testing ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
 
   }
 
