@@ -465,6 +465,16 @@ class Client:
         """Return the detailed crawl status table for the specified AU and key."""
         return self._getStatusTable( 'single_crawl_status_table', key )
 
+    def getListOfArticles(self, au):
+        post = self.__makePost('ListObjects', {'type': 'articles'})
+        post.add_data('auid', au.auId)
+        return post.execute().read()
+        
+    def getListOfUrls(self, au):
+        post = self.__makePost('ListObjects', {'type': 'urls'})
+        post.add_data('auid', au.auId)
+        return post.execute().read()
+
     def getAuHashFile( self, AU ):
         """Return the hash file contents for the whole AU."""
         hash_lock = hash_locks.setdefault( urlparse.urlparse( self.base_URL ).netloc, threading.Lock() )
