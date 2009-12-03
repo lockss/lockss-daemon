@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.248 2009-10-11 19:07:09 tlipkis Exp $
+ $Id: build.xml,v 1.249 2009-12-03 05:09:02 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1260,7 +1260,8 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 
   <!-- ==================================================================== -->
   <target name="prepare-javadoc"
-	  description="Prepare the javadoc directory.">
+	  description="Prepare the javadoc directory and
+		       set the javadoc.header property.">
     <mkdir dir="${javadoc}"/>
     <!-- Old files can result in misleading stuff in the docs.  Since
          javadoc regenerates everything from scratch each time anyway,
@@ -1268,6 +1269,17 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <delete>
       <fileset dir="${javadoc}" defaultexcludes="no" />
     </delete>
+    <if>
+      <isset property="releasename" />
+     <then>
+      <property name="javadoc.header"
+                value="Release&amp;nbsp;${releasename} Built&amp;nbsp;${build.timestamp} on&amp;nbsp;${build.host}" />
+     </then>
+     <else>
+      <property name="javadoc.header"
+                value="Built ${build.timestamp} on ${build.host}" />
+     </else>
+    </if>
   </target>
 
   <!-- ==================================================================== -->
@@ -1276,8 +1288,6 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   </target>
 
   <target name="-do-javadoc" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs">
-    <property name="javadoc.header"
-              value="Built ${build.timestamp} on ${build.host}" />
     <!-- Write the text param doc into the doc tree -->
     <java classname="ParamDoc" fork="true">
        <classpath refid="test.run.classpath" />
@@ -1382,8 +1392,6 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
       <fileset dir="${test.javadoc}" defaultexcludes="no" />
     </delete>
 <!--  packagenames="org.lockss.test.*" -->
-    <property name="javadoc.test.header"
-              value="Built ${build.timestamp} on ${build.host}" />
     <javadoc
              packagenames="org.lockss.*"
 	     failonerror="true"
@@ -1395,7 +1403,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 	     access="protected"
              windowtitle="LOCKSS test classes API"
              doctitle="LOCKSS test"
-             header="${javadoc.test.header}"
+             header="${javadoc.header}"
              bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
 <!--         <fileset dir="${test.src}" includes="**/*.java"/> -->
 <!--        <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/> -->
