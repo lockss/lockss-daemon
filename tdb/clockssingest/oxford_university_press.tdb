@@ -30,7 +30,7 @@ comment[abbs40] = manifest page 404
 
     param[base_url] = http://adaptation.oxfordjournals.org/
 
-    au < testing ; 2008 ; Adaptation Volume 1 ; 1 ; >
+    au < tested ; 2008 ; Adaptation Volume 1 ; 1 ; >
     au < testing ; 2009 ; Adaptation Volume 2 ; 2 ; >
 
   }
@@ -43,7 +43,7 @@ comment[abbs40] = manifest page 404
 
     param[base_url] = http://ageing.oxfordjournals.org/
 
-    au < testing ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
+    au < tested ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
     au < testing ; 2009 ; Age and Ageing Volume 38 ; 38 ; >
 
   }
@@ -58,7 +58,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://alcalc.oxfordjournals.org/
 
-    au < testing ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
+    au < tested ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
     au < notReady ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; reingest3.clockss.org:8083 >
 
   }
@@ -71,8 +71,8 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://aje.oxfordjournals.org/
 
-    au < testing ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
-    au < testing ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
+    au < tested ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
+    au < tested ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
     au < testing ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; >
     au < testing ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; >
 
@@ -86,7 +86,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://aler.oxfordjournals.org/
 
-    au < testing ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
+    au < tested ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
     au < testing ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
 
   }
@@ -191,7 +191,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://beheco.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
+    au < testing ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
     au < testing ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
   }
@@ -204,7 +204,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://bioinformatics.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
+    au < testing ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
     au < testing ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
 
   }
@@ -217,7 +217,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://biomet.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Biometrika Volume 95 ; 95 ; >
+    au < testing ; 2008 ; Biometrika Volume 95 ; 95 ; >
     au < testing ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
 
   }
@@ -230,7 +230,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://biohorizons.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
+    au < testing ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
     au < testing ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
   }
@@ -243,7 +243,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://biostatistics.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Biostatistics Volume 9 ; 9 ; >
+    au < testing ; 2008 ; Biostatistics Volume 9 ; 9 ; >
     au < testing ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
@@ -256,8 +256,8 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://bja.oxfordjournals.org/
 
-    au < manifest ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
-    au < manifest ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; >
+    au < testing ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
+    au < testing ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; >
     au < testing ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; reingest2.clockss.org:8085 >
     au < testing ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; reingest2.clockss.org:8085 >
 
@@ -271,7 +271,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://brain.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Brain Volume 131 ; 131 ; >
+    au < testing ; 2008 ; Brain Volume 131 ; 131 ; >
     au < testing ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
 
   }
@@ -284,7 +284,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://bib.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
+    au < testing ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
     au < testing ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
@@ -297,7 +297,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://bfgp.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
+    au < testing ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
     au < testing ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
 
   }
@@ -310,7 +310,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
+    au < testing ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
     au < testing ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
   }
@@ -323,7 +323,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://bjc.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
+    au < testing ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
     au < testing ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
   }
@@ -336,7 +336,7 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://bjps.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
+    au < testing ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
     au < testing ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
 
   }
