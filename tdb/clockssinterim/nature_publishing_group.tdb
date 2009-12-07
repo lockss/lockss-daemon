@@ -7,7 +7,6 @@
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
   param[base_url] = http://www.nature.com/
   implicit < status ; attr[year] ; name ; param[year] ; param[volume_name] >
-
   
   {
 
@@ -21,7 +20,27 @@
     au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
 
   }
-  
+
+  {
+
+    title <
+      name = American Journal of Gastroenterology
+    >
+
+    param[journal_id] = ajg
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Hypertension
+    >
+
+    param[journal_id] = ajh
+
+  }
+
   {
 
     title <
@@ -42,10 +61,35 @@
     >
 
     param[journal_id] = bmt
+    
+comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
     au < released ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
+
+  }
+
+  {
+
+    title <
+      name = British Dental Journal
+    >
+
+    param[journal_id] = bdj
+
+  }
+
+  {
+
+    title <
+      name = British Journal of Cancer
+    >
+
+    param[journal_id] = bjc
+
+    comment[clockss] = True
+    comment[verify] = different website design?
 
   }
 
@@ -74,7 +118,7 @@
     au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
 
   }
-  
+
   {
 
     title <
@@ -83,8 +127,17 @@
 
     param[journal_id] = cr
 
-    au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
     au < released ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Pharmacology & Therapeutics
+    >
+
+    param[journal_id] = clpt
 
   }
 
@@ -99,7 +152,17 @@
     au < released ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
 
   }
-  
+
+  {
+
+    title <
+      name = EMBO Reports
+    >
+
+    param[journal_id] = embor
+
+  }
+
   {
 
     title <
@@ -110,7 +173,27 @@
 
     au < released ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
 
-  }  
+  }
+
+  {
+
+    title <
+      name = European Journal of Human Genetics
+    >
+
+    param[journal_id] = ejhg
+
+  }
+
+  {
+
+    title <
+      name = Evidence-Based Dentistry
+    >
+
+    param[journal_id] = ebd
+
+  }
 
   {
 
@@ -135,7 +218,7 @@
     au < released ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
 
   }
-  
+
   {
 
     title <
@@ -172,7 +255,7 @@
     au < released ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
 
   }
- 
+
   {
 
     title <
@@ -185,7 +268,7 @@
     au < released ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
 
   }
-  
+
   {
 
     title <
@@ -215,12 +298,55 @@
   {
 
     title <
+      name = The ISME Journal
+    >
+
+    param[journal_id] = ismej
+
+  }
+
+  {
+
+    title <
+      name = JID Symposium Proceedings
+    >
+
+    param[journal_id] = jidsp
+
+  }
+
+  {
+
+    title <
       name = The Journal of Antibiotics
     >
 
     param[journal_id] = ja
 
     au < released ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cerebral Blood Flow and Metabolism
+    >
+
+    param[journal_id] = jcbfm
+
+  }
+
+  {
+
+    title <
+      name = Journal of Exposure Science and Environmental Epidemiology
+    >
+
+    param[journal_id] = jes
+
+comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
+
 
   }
 
@@ -271,7 +397,89 @@
     au < ready ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
 
   }
-  
+
+  {
+
+    title <
+      name = Kidney International 
+    >
+
+    param[journal_id] = ki
+
+  }
+
+  {
+
+    title <
+      name = Laboratory Investigation
+    >
+
+    param[journal_id] = labinvest
+
+  }
+
+  {
+
+    title <
+      name = Leukemia
+    >
+
+    param[journal_id] = leu
+
+
+  }
+
+  {
+
+    title <
+      name = Modern Pathology
+    >
+
+    param[journal_id] = modpathol
+
+  }
+
+  {
+
+    title <
+      name = Molecular Psychiatry
+    >
+
+    param[journal_id] = mp
+
+
+  }
+
+  {
+
+    title <
+      name = Molecular Systems Biology
+    >
+
+    param[journal_id] = msb
+
+  }
+
+  {
+
+    title <
+      name = Molecular Therapy
+    >
+
+    param[journal_id] = mt
+
+  }
+
+  {
+
+    title <
+      name = Mucosal Immunology
+    >
+
+    param[journal_id] = mi
+
+  }
+
   {
 
     title <
@@ -344,7 +552,7 @@
     au < released ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
 
   }
-  
+
   {
 
     title <
@@ -357,7 +565,40 @@
     au < released ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
 
   }
-  
+
+  {
+
+    title <
+      name = Nature Genetics
+    >
+
+    param[journal_id] = ng
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Geoscience
+    >
+
+    param[journal_id] = ngeo
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Immunology
+    >
+
+    param[journal_id] = ni
+
+
+  }
+
   {
 
     title <
@@ -367,10 +608,9 @@
     param[journal_id] = nmat
 
     au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
-    au < ready ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
 
   }
-  
+
   {
 
     title <
@@ -448,6 +688,19 @@
   {
 
     title <
+      name = Nature Protocols
+    >
+
+    param[journal_id] = nprot
+
+comment[nprot4] = poll mismatch
+
+
+  }
+
+  {
+
+    title <
       name = Nature Reviews Cancer
     >
 
@@ -490,6 +743,28 @@
     param[journal_id] = nrd
 
     au < ready ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Endocrinology
+    >
+
+    param[journal_id] = nrendo
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Gastroenterology and Hepatology
+    >
+
+    param[journal_id] = nrgastro
+
 
   }
 
@@ -544,12 +819,130 @@
   {
 
     title <
+      name = Nature Reviews Nephrology
+    >
+
+    param[journal_id] = nrneph
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Neurology
+    >
+
+    param[journal_id] = nrneurol
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Neuroscience
+    >
+
+    param[journal_id] = nrn
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Rheumatology
+    >
+
+    param[journal_id] = nrrheum
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Urology
+    >
+
+    param[journal_id] = nrurol
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Structural and Molecular Biology
+    >
+
+    param[journal_id] = nsmb
+
+
+  }
+
+  {
+
+    title <
+      name = Neuropsychopharmacology
+    >
+
+    param[journal_id] = npp
+
+  }
+
+  {
+
+    title <
+      name = Obesity
+    >
+
+    param[journal_id] = oby
+
+  }
+
+  {
+
+    title <
+      name = Oncogene
+    >
+
+    param[journal_id] = onc
+
+
+  }
+
+  {
+
+    title <
+      name = Pharmacogenomics Journal
+    >
+
+    param[journal_id] = tpj
+
+
+  }
+
+  {
+
+    title <
       name = Prostate Cancer and Prostatic Diseases
     >
 
     param[journal_id] = pcan
 
     au < ready ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = SciBX: Science-Business eXchange
+    >
+
+    param[journal_id] = scibx
 
   }
 
@@ -564,4 +957,15 @@
     au < ready ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
 
   }
+
+  {
+
+    title <
+      name = Vital
+    >
+
+    param[journal_id] = vital
+
+  }
+
 }

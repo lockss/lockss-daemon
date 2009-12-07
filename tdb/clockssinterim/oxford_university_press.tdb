@@ -5,7 +5,500 @@
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
-  implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
+  implicit < status ; attr[year] ; name ; param[volume_name] ; comment[proxy] >
+
+  {
+
+    title <
+      name = Acta Biochimica et Biophysica Sinica
+    >
+
+comment[abbs40] = manifest page 404
+
+    param[base_url] = http://abbs.oxfordjournals.org/
+
+    au < ready ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Adaptation
+    >
+
+    param[base_url] = http://adaptation.oxfordjournals.org/
+
+    au < ready ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Age and Ageing
+    >
+
+    param[base_url] = http://ageing.oxfordjournals.org/
+
+    au < ready ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Alcohol and Alcoholism
+    >
+
+comment[alcalc44] = fetch error
+
+    param[base_url] = http://alcalc.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Epidemiology
+    >
+
+    param[base_url] = http://aje.oxfordjournals.org/
+
+    au < ready ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = American Law and Economics Review
+    >
+
+    param[base_url] = http://aler.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = American Literary History
+    >
+
+    param[base_url] = http://alh.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Analysis
+    >
+
+comment[analysis68] = no manifest page
+
+    param[base_url] = http://analysis.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Annals of Botany
+    >
+
+comment[aob102] = 500 errors, content3
+comment[aob103_104] = fetch error
+
+    param[base_url] = http://aob.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Annals of Occupational Hygiene
+    >
+
+    param[base_url] = http://annhyg.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Annals of Oncology
+    >
+
+    param[base_url] = http://annonc.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Applied Linguistics
+    >
+
+    param[base_url] = http://applij.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Archives of Clinical Neuropsychology
+    >
+
+    param[base_url] = http://acn.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Behavioral Ecology
+    >
+
+    param[base_url] = http://beheco.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Bioinformatics
+    >
+
+    param[base_url] = http://bioinformatics.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Biometrika
+    >
+
+    param[base_url] = http://biomet.oxfordjournals.org/
+
+    au < ready ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Bioscience Horizons: The National Undergraduate Research Journal
+    >
+
+    param[base_url] = http://biohorizons.oxfordjournals.org/
+
+    au < ready ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Biostatistics
+    >
+
+    param[base_url] = http://biostatistics.oxfordjournals.org/
+
+    au < ready ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = BJA: British Journal of Anaesthesia
+    >
+
+    param[base_url] = http://bja.oxfordjournals.org/
+
+    au < ready ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Brain
+    >
+
+    param[base_url] = http://brain.oxfordjournals.org/
+
+    au < ready ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Briefings in Bioinformatics
+    >
+
+    param[base_url] = http://bib.oxfordjournals.org/
+
+    au < ready ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Briefings in Functional Genomics and Proteomics
+    >
+
+    param[base_url] = http://bfgp.oxfordjournals.org/
+
+    au < ready ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = The British Journal of Aesthetics
+    >
+
+    param[base_url] = http://bjaesthetics.oxfordjournals.org/
+
+    au < ready ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = The British Journal of Criminology
+    >
+
+    param[base_url] = http://bjc.oxfordjournals.org/
+
+    au < ready ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = The British Journal for the Philosophy of Science
+    >
+
+    param[base_url] = http://bjps.oxfordjournals.org/
+
+    au < ready ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = The British Journal of Social Work
+    >
+
+    param[base_url] = http://bjsw.oxfordjournals.org/
+
+    au < ready ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = British Medical Bulletin
+    >
+
+    param[base_url] = http://bmb.oxfordjournals.org/
+
+    au < ready ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Bulletin of the London Mathematical Society
+    >
+
+    param[base_url] = http://blms.oxfordjournals.org/
+
+    au < ready ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Cambridge Journal of Economics
+    >
+
+    param[base_url] = http://cje.oxfordjournals.org/
+
+    au < ready ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Cambridge Journal of Regions, Economy and Society
+    >
+
+    param[base_url] = http://cjres.oxfordjournals.org/
+
+    au < ready ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = The Cambridge Quarterly
+    >
+
+    param[base_url] = http://camqtly.oxfordjournals.org/
+
+    au < ready ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Capital Markets Law Journal
+    >
+
+    param[base_url] = http://cmlj.oxfordjournals.org/
+
+    au < ready ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Carcinogenesis
+    >
+
+    param[base_url] = http://carcin.oxfordjournals.org/
+
+    au < ready ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Cardiovascular Research
+    >
+
+    param[base_url] = http://cardiovascres.oxfordjournals.org/
+
+    au < ready ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Cerebral Cortex
+    >
+
+    param[base_url] = http://cercor.oxfordjournals.org/
+
+    au < ready ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = CESifo Economic Studies
+    >
+
+    param[base_url] = http://cesifo.oxfordjournals.org/
+
+    au < ready ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Chemical Senses
+    >
+
+    param[base_url] = http://chemse.oxfordjournals.org/
+
+    au < ready ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Chinese Journal of International Law
+    >
+
+    param[base_url] = http://chinesejil.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Chinese Journal of International Politics
+    >
+
+    param[base_url] = http://cjip.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Christian bioethics: Non-Ecumenical Studies in Medical Morality
+    >
+
+    param[base_url] = http://cb.oxfordjournals.org/
+
+    au < ready ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Community Development Journal
+    >
+
+    param[base_url] = http://cdj.oxfordjournals.org/
+
+    au < ready ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+
+  }
 
   {
 
@@ -15,7 +508,7 @@
 
     param[base_url] = http://comjnl.oxfordjournals.org/
 
-    au < released ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest4.clockss.org:8082 >
+    au < ready ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -118,6 +611,28 @@
   {
 
     title <
+      name = Epidemiologic Reviews
+    >
+
+    param[base_url] = http://epirev.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = ESHRE Monographs
+    >
+
+    param[base_url] = http://eshremonographs.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
       name = Essays in Criticism
     >
 
@@ -135,7 +650,8 @@
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
 
-    au < released ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+comment[eurh30] = crawl failed because of a fetch error
+
 
   }
 
@@ -147,7 +663,7 @@
 
     param[base_url] = http://ejechocard.oxfordjournals.org/
 
-    au < released ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -159,7 +675,7 @@
 
     param[base_url] = http://ejil.oxfordjournals.org/
 
-    au < released ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -171,7 +687,7 @@
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
 
-    au < released ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -193,9 +709,10 @@
       name = The European Journal of Public Health
     >
 
+comment[eurpub19] = fetch error
+
     param[base_url] = http://eurpub.oxfordjournals.org/
 
-    au < released ; 2009 ; The European Journal of Public Health Volume 19 ; 19 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -241,9 +758,10 @@
       name = Family Practice
     >
 
+comment[fampra26] = fetch error
+
     param[base_url] = http://fampra.oxfordjournals.org/
 
-    au < released ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -449,6 +967,50 @@
     param[base_url] = http://icesjms.oxfordjournals.org/
 
     au < released ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = IEICE - Transactions on Communications
+    >
+
+    param[base_url] = http://ietcom.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = IEICE - Transactions on Electronics
+    >
+
+    param[base_url] = http://ietele.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = IEICE - Transactions on Fundamentals of Electronics, Communications and Computer Sciences
+    >
+
+    param[base_url] = http://ietfec.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = IEICE - Transactions on Information and Systems
+    >
+
+    param[base_url] = http://ietisy.oxfordjournals.org/
+
 
   }
 
@@ -736,10 +1298,64 @@
 
     param[base_url] = http://jjco.oxfordjournals.org/
 
-    au < tested ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 ; >
 
   }
-  
+
+  {
+
+    title <
+      name = Journal of African Economies
+    >
+
+    param[base_url] = http://jae.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of the American Academy of Religion
+    >
+
+    param[base_url] = http://jaar.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Antimicrobial Chemotherapy
+    >
+
+    param[base_url] = http://jac.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Biochemistry
+    >
+
+    param[base_url] = http://jb.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Church and State
+    >
+
+    param[base_url] = http://jcs.oxfordjournals.org/
+
+
+  }
+
   {
 
     title <
@@ -815,12 +1431,88 @@
   {
 
     title <
+      name = Journal of Environmental Law
+    >
+
+    param[base_url] = http://jel.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Experimental Botany
+    >
+
+    param[base_url] = http://jxb.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Financial Econometrics
+    >
+
+    param[base_url] = http://jfec.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Journals of Gerontology: Series A
+    >
+
+    param[base_url] = http://biomedgerontology.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Journals of Gerontology: Series B
+    >
+
+    param[base_url] = http://psychsocgerontology.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Heredity
+    >
+
+    param[base_url] = http://jhered.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Hindu Studies
+    >
+
+    param[base_url] = http://jhs.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
       name = Journal of the History of Collections
     >
 
     param[base_url] = http://jhc.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
 
   }
 
@@ -832,7 +1524,6 @@
 
     param[base_url] = http://jhmas.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
 
   }
 
@@ -844,7 +1535,6 @@
 
     param[base_url] = http://jhrp.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
 
   }
 
@@ -856,7 +1546,6 @@
 
     param[base_url] = http://jiplp.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
 
   }
 
@@ -868,7 +1557,6 @@
 
     param[base_url] = http://jicj.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
 
   }
 
@@ -880,7 +1568,6 @@
 
     param[base_url] = http://jiel.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
 
   }
 
@@ -892,7 +1579,6 @@
 
     param[base_url] = http://jis.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
 
   }
 
@@ -904,7 +1590,6 @@
 
     param[base_url] = http://jleo.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
 
   }
 
@@ -916,7 +1601,6 @@
 
     param[base_url] = http://logcom.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
 
   }
 
@@ -928,8 +1612,6 @@
 
     param[base_url] = http://jlms.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
-    au < tested ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
 
   }
 
@@ -941,7 +1623,6 @@
 
     param[base_url] = http://jmp.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
 
   }
 
@@ -953,7 +1634,6 @@
 
     param[base_url] = http://jmcb.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
 
   }
 
@@ -965,7 +1645,6 @@
 
     param[base_url] = http://mollus.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
 
   }
 
@@ -977,7 +1656,6 @@
 
     param[base_url] = http://jnci.oxfordjournals.org/
 
-    au < tested ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 ; >
 
   }
 
@@ -989,7 +1667,6 @@
 
     param[base_url] = http://jicru.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
 
   }
 
@@ -1001,7 +1678,6 @@
 
     param[base_url] = http://jwelb.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
 
   }
 
@@ -1013,7 +1689,6 @@
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
 
   }
 
@@ -1025,7 +1700,6 @@
 
     param[base_url] = http://petrology.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
 
   }
 
@@ -1037,7 +1711,17 @@
 
     param[base_url] = http://plankt.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Plant Ecology
+    >
+
+    param[base_url] = http://jpe.oxfordjournals.org/
+
 
   }
 
@@ -1049,7 +1733,6 @@
 
     param[base_url] = http://jpart.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
 
   }
 
@@ -1061,7 +1744,6 @@
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
 
   }
 
@@ -1073,7 +1755,6 @@
 
     param[base_url] = http://jrs.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
 
   }
 
@@ -1085,7 +1766,6 @@
 
     param[base_url] = http://jos.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
 
   }
 
@@ -1097,7 +1777,6 @@
 
     param[base_url] = http://jss.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
 
   }
 
@@ -1109,7 +1788,6 @@
 
     param[base_url] = http://jts.oxfordjournals.org/
 
-    au < tested ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
 
   }
 
@@ -1121,7 +1799,6 @@
 
     param[base_url] = http://jtopol.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
 
   }
 
@@ -1133,7 +1810,6 @@
 
     param[base_url] = http://tropej.oxfordjournals.org/
 
-    au < tested ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
 
   }
 
@@ -1145,7 +1821,17 @@
 
     param[base_url] = http://lpr.oxfordjournals.org/
 
-    au < tested ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Leo Baeck Institute Yearbook
+    >
+
+    param[base_url] = http://leobaeck.oxfordjournals.org/
+
 
   }
 
@@ -1157,8 +1843,6 @@
 
     param[base_url] = http://library.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Library Volume 9 ; 9 ; >
-    au < tested ; 2009 ; The Library Volume 10 ; 10 ; >
 
   }
 
@@ -1170,8 +1854,6 @@
 
     param[base_url] = http://litimag.oxfordjournals.org/
 
-    au < tested ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
-    au < tested ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
 
   }
 
@@ -1183,11 +1865,9 @@
 
     param[base_url] = http://llc.oxfordjournals.org/
 
-    au < tested ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
-    au < tested ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
 
   }
-  
+
   {
 
     title <
@@ -1196,8 +1876,6 @@
 
     param[base_url] = http://litthe.oxfordjournals.org/
 
-    au < tested ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
-    au < tested ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
 
   }
 
@@ -1211,7 +1889,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://jigpal.oxfordjournals.org/
 
-    au < testing ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
 
   }
 
@@ -1223,8 +1900,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://imammb.oxfordjournals.org/
 
-    au < tested ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
-    au < tested ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 ; >
 
   }
 
@@ -1236,8 +1911,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://medlaw.oxfordjournals.org/
 
-    au < tested ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
-    au < tested ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
 
   }
 
@@ -1249,11 +1922,9 @@ comment[j17] = no subscription
 
     param[base_url] = http://molehr.oxfordjournals.org/
 
-    au < tested ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
-    au < tested ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
 
   }
-  
+
   {
 
     title <
@@ -1262,8 +1933,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://mj.oxfordjournals.org/
 
-    au < tested ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 ; >
-    au < tested ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 ; >
 
   }
 
@@ -1275,8 +1944,19 @@ comment[j17] = no subscription
 
     param[base_url] = http://mbe.oxfordjournals.org/
 
-    au < tested ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
-    au < tested ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 ; >
+
+  }
+
+  {
+
+    title <
+      name = Molecular Plant
+    >
+
+    param[base_url] = http://mplant.oxfordjournals.org/
+
+comment[mplant] = no manifest page
+
 
   }
 
@@ -1288,11 +1968,9 @@ comment[j17] = no subscription
 
     param[base_url] = http://ml.oxfordjournals.org/
 
-    au < tested ; 2008 ; Music and Letters Volume 89 ; 89 ; >
-    au < testing ; 2009 ; Music and Letters Volume 90 ; 90 ; >
 
   }
-  
+
   {
 
     title <
@@ -1301,8 +1979,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://mutage.oxfordjournals.org/
 
-    au < tested ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
-    au < tested ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
 
   }
 
@@ -1314,8 +1990,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
 
-    au < tested ; 2008 ; NDT Plus Volume 1 ; 1 ; >
-    au < tested ; 2009 ; NDT Plus Volume 2 ; 2 ; >
 
   }
 
@@ -1327,8 +2001,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://ndt.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
-    au < tested ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
 
   }
 
@@ -1340,8 +2012,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://ntr.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 ; >
-    au < tested ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 ; >
 
   }
 
@@ -1353,8 +2023,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://nq.oxfordjournals.org/
 
-    au < tested ; 2008 ; Notes and Queries Volume 55 ; 55 ; >
-    au < tested ; 2009 ; Notes and Queries Volume 56 ; 56 ; >
 
   }
 
@@ -1366,11 +2034,9 @@ comment[j17] = no subscription
 
     param[base_url] = http://nar.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
-    au < tested ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
 
   }
-  
+
   {
 
     title <
@@ -1379,8 +2045,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://nass.oxfordjournals.org/
 
-    au < tested ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 ; >
-    au < tested ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 ; >
 
   }
 
@@ -1392,11 +2056,9 @@ comment[j17] = no subscription
 
     param[base_url] = http://occmed.oxfordjournals.org/
 
-    au < tested ; 2008 ; Occupational Medicine Volume 58 ; 58 ; >
-    au < tested ; 2009 ; Occupational Medicine Volume 59 ; 59 ; >
 
   }
-  
+
   {
 
     title <
@@ -1405,8 +2067,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://ohr.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
-    au < tested ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
 
   }
 
@@ -1418,8 +2078,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://oaj.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
-    au < tested ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
 
   }
 
@@ -1431,8 +2089,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://oep.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
-    au < tested ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
 
   }
 
@@ -1444,8 +2100,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://ojls.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
-    au < tested ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
 
   }
 
@@ -1457,8 +2111,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://oxrep.oxfordjournals.org/
 
-    au < tested ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
-    au < tested ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
 
   }
 
@@ -1470,8 +2122,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://pa.oxfordjournals.org/
 
-    au < tested ; 2008 ; Parliamentary Affairs Volume 61 ; 61 ; >
-    au < tested ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
 
   }
 
@@ -1483,12 +2133,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://past.oxfordjournals.org/
 
-    au < tested ; 2008 ; Past & Present Volume 198 ; 198 ; >
-    au < tested ; 2008 ; Past & Present Volume 199 ; 199 ; >
-    au < tested ; 2008 ; Past & Present Volume 200 ; 200 ; >
-    au < tested ; 2008 ; Past & Present Volume 201 ; 201 ; >
-    au < tested ; 2009 ; Past & Present Volume 202 ; 202 ; >
-    au < tested ; 2009 ; Past & Present Volume 203 ; 203 ; >
 
   }
 
@@ -1500,7 +2144,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://philmat.oxfordjournals.org/
 
-    au < tested ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
 
   }
 
@@ -1512,7 +2155,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://pcp.oxfordjournals.org/
 
-    au < tested ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
 
   }
 
@@ -1524,7 +2166,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://policing.oxfordjournals.org/
 
-    au < tested ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
 
   }
 
@@ -1536,7 +2177,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://pan.oxfordjournals.org/
 
-    au < tested ; 2009 ; Political Analysis Volume 17 ; 17 ; >
 
   }
 
@@ -1548,8 +2188,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://plms.oxfordjournals.org/
 
-    au < tested ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
-    au < tested ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
 
   }
 
@@ -1561,7 +2199,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://peds.oxfordjournals.org/
 
-    au < tested ; 2009 ; Protein Engineering, Design and Selection Volume 22 ; 22 ; >
 
   }
 
@@ -1573,7 +2210,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://phe.oxfordjournals.org/
 
-    au < tested ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
 
   }
 
@@ -1585,7 +2221,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://poq.oxfordjournals.org/
 
-    au < tested ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
 
   }
 
@@ -1597,7 +2232,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://publius.oxfordjournals.org/
 
-    au < tested ; 2009 ; Publius: The Journal of Federalism Volume 39 ; 39 ; >
 
   }
 
@@ -1609,10 +2243,9 @@ comment[j17] = no subscription
 
     param[base_url] = http://qjmed.oxfordjournals.org/
 
-    au < testing ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
 
   }
-  
+
   {
 
     title <
@@ -1621,8 +2254,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://qjmath.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
-    au < tested ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
 
   }
 
@@ -1634,8 +2265,6 @@ comment[j17] = no subscription
 
     param[base_url] = http://qjmam.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
-    au < tested ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
 
   }
 
@@ -1647,8 +2276,293 @@ comment[j17] = no subscription
 
     param[base_url] = http://rpd.oxfordjournals.org/
 
-    au < tested ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < tested ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
+    au < ready ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Refugee Survey Quarterly
+    >
+
+    param[base_url] = http://rsq.oxfordjournals.org/
+
+    au < ready ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Reports of Patent, Design and Trade Mark Cases
+    >
+
+    param[base_url] = http://rpc.oxfordjournals.org/
+
+    au < ready ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Environmental Economics and Policy
+    >
+
+    param[base_url] = http://reep.oxfordjournals.org/
+
+    au < ready ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Finance
+    >
+
+    param[base_url] = http://rof.oxfordjournals.org/
+
+    au < ready ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = The Review of Financial Studies
+    >
+
+    param[base_url] = http://rfs.oxfordjournals.org/
+
+    au < ready ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Rheumatology
+    >
+
+    param[base_url] = http://rheumatology.oxfordjournals.org/
+
+    au < ready ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Schizophrenia Bulletin
+    >
+
+    param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
+
+    au < ready ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Screen
+    >
+
+    param[base_url] = http://screen.oxfordjournals.org/
+
+    au < ready ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Social Cognitive and Affective Neuroscience
+    >
+
+    param[base_url] = http://scan.oxfordjournals.org/
+
+    au < ready ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Social History of Medicine
+    >
+
+    param[base_url] = http://shm.oxfordjournals.org/
+
+    au < ready ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Social Politics: International Studies in Gender, State & Society
+    >
+
+    param[base_url] = http://sp.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Social Science Japan Journal
+    >
+
+    param[base_url] = http://ssjj.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Socio-Economic Review
+    >
+
+    param[base_url] = http://ser.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Sociology of Religion
+    >
+
+    param[base_url] = http://socrel.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Statute Law Review
+    >
+
+    param[base_url] = http://slr.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Systematic Biology
+    >
+
+    param[base_url] = http://sysbio.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Teaching Mathematics and its Applications: An International Journal of the IMA
+    >
+
+    param[base_url] = http://teamat.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Toxicological Sciences
+    >
+
+    param[base_url] = http://toxsci.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Tree Physiology
+    >
+
+    param[base_url] = http://treephys.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Trusts & Trustees
+    >
+
+    param[base_url] = http://tandt.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Twentieth Century British History
+    >
+
+    param[base_url] = http://tcbh.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The World Bank Economic Review
+    >
+
+    param[base_url] = http://wber.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The World Bank Research Observer
+    >
+
+    param[base_url] = http://wbro.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Year's Work in Critical and Cultural Theory
+    >
+
+    param[base_url] = http://ywcct.oxfordjournals.org/
+
+
+  }
+
+  {
+
+    title <
+      name = The Year's Work in English Studies
+    >
+
+    param[base_url] = http://ywes.oxfordjournals.org/
+
 
   }
 

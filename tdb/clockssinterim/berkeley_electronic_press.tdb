@@ -420,7 +420,7 @@
     au < released ; 2009 ; The Law and Development Review Volume 2 ; 2 >
 
   }
-  
+
   {
 
     title <
@@ -582,8 +582,10 @@
 
     param[journal_abbr] = wpsr
 
+    comment[4] = malformed manifest page, ticket #1352
+
     au < released ; 2009 ; World Political Science Review Volume 5 ; 5 >
 
   }
-  
+
 }

@@ -1,4 +1,4 @@
-{
+﻿{
 
   publisher <
     name = SAGE Publications
@@ -6,9 +6,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified
-  implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
-
-
+  implicit < status ; attr[year] ; name ; param[volume_name] ; comment[proxy] >
 
   {
 
@@ -33,7 +31,7 @@
     au < tested ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
 
   }
-  
+
   {
 
     title <
@@ -47,7 +45,7 @@
 
   }
 
-    {
+  {
 
     title <
       name = Active Learning in Higher Education
@@ -209,6 +207,7 @@
 
     param[base_url] = http://ajl.sagepub.com/
 
+    au < tested ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 ; >
     au < tested ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
 
   }
@@ -221,6 +220,7 @@
 
     param[base_url] = http://ajm.sagepub.com/
 
+    au < tested ; 2008 ; American Journal of Medical Quality Volume 23 ; 23 ; >
     au < tested ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 ; >
 
   }
@@ -233,7 +233,20 @@
 
     param[base_url] = http://jmh.sagepub.com/
 
+    au < tested ; 2008 ; American Journal of Men's Health Volume 2 ; 2 ; >
     au < tested ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = The American Journal of Sports Medicine
+    >
+
+    param[base_url] = http://ajs.sagepub.com/
+
+    comment[h20] = This is an H20 title
 
   }
 
@@ -245,6 +258,7 @@
 
     param[base_url] = http://apr.sagepub.com/
 
+    au < tested ; 2008 ; American Politics Research Volume 36 ; 36 ; >
     au < tested ; 2009 ; American Politics Research Volume 37 ; 37 ; >
 
   }
@@ -257,6 +271,7 @@
 
     param[base_url] = http://arp.sagepub.com/
 
+    au < tested ; 2008 ; The American Review of Public Administration Volume 38 ; 38 ; >
     au < tested ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
 
   }
@@ -269,6 +284,7 @@
 
     param[base_url] = http://ang.sagepub.com/
 
+    au < tested ; 2008 ; Angiology Volume 59 ; 59 ; >
     au < tested ; 2009 ; Angiology Volume 60 ; 60 ; >
 
   }
@@ -281,6 +297,7 @@
 
     param[base_url] = http://anm.sagepub.com/
 
+    au < tested ; 2008 ; Animation Volume 3 ; 3 ; >
     au < tested ; 2009 ; Animation Volume 4 ; 4 ; >
 
   }
@@ -344,7 +361,7 @@
     au < tested ; 2008 ; Armed Forces & Society Volume 35 ; 35 ; >
 
   }
-  
+
   {
 
     title <
@@ -405,6 +422,7 @@
 
     param[base_url] = http://asm.sagepub.com/
 
+    au < tested ; 2008 ; Assessment Volume 15 ; 15 ; >
     au < tested ; 2009 ; Assessment Volume 16 ; 16 ; >
 
   }
@@ -445,6 +463,18 @@
 
     au < tested ; 2008 ; Behavior Modification Volume 32 ; 32 ; >
     au < tested ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
+
+  }
+
+  {
+
+    title <
+      name = Behavioral and Cognitive Neuroscience Reviews
+    >
+
+    param[base_url] = http://bcn.sagepub.com/
+
+    comment[legacy] = Last issue in 2006
 
   }
 
@@ -573,6 +603,7 @@
 
     param[base_url] = http://bcq.sagepub.com/
 
+    au < tested ; 2008 ; Business Communication Quarterly Volume 71 ; 71 ; >
     au < tested ; 2009 ; Business Communication Quarterly Volume 72 ; 72 ; >
 
   }
@@ -585,6 +616,7 @@
 
     param[base_url] = http://bir.sagepub.com/
 
+    au < tested ; 2008 ; Business Information Review Volume 25 ; 25 ; >
     au < tested ; 2009 ; Business Information Review Volume 26 ; 26 ; >
 
   }
@@ -597,6 +629,7 @@
 
     param[base_url] = http://cjs.sagepub.com/
 
+    au < tested ; 2008 ; Canadian Journal of School Psychology Volume 23 ; 23 ; >
     au < tested ; 2009 ; Canadian Journal of School Psychology Volume 24 ; 24 ; >
 
   }
@@ -609,6 +642,7 @@
 
     param[base_url] = http://cde.sagepub.com/
 
+    au < tested ; 2008 ; Career Development for Exceptional Individuals Volume 31 ; 31 ; >
     au < tested ; 2009 ; Career Development for Exceptional Individuals Volume 32 ; 32 ; >
 
   }
@@ -633,6 +667,7 @@
 
     param[base_url] = http://clt.sagepub.com/
 
+    au < tested ; 2008 ; Child Language Teaching and Therapy Volume 24 ; 24 ; >
     au < tested ; 2009 ; Child Language Teaching and Therapy Volume 25 ; 25 ; >
 
   }
@@ -645,6 +680,7 @@
 
     param[base_url] = http://cmx.sagepub.com/
 
+    au < tested ; 2008 ; Child Maltreatment Volume 13 ; 13 ; >
     au < tested ; 2009 ; Child Maltreatment Volume 14 ; 14 ; >
 
   }
@@ -670,6 +706,19 @@
     param[base_url] = http://cin.sagepub.com/
 
     au < tested ; 2009 ; China Information Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+    title <
+      name = China Report
+    >
+
+    param[base_url] = http://chr.sagepub.com/
+
+    comment[legacy] = Last issue in 2008
+
 
   }
 
@@ -777,7 +826,19 @@
 
     param[base_url] = http://cre.sagepub.com/
 
-    au < tested ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Clinical Rehabilitation Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Trials
+    >
+
+    param[base_url] = http://ctj.sagepub.com/
+
+    au < tested ; 2009 ; Clinical Trials Volume 6 ; 6 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -789,7 +850,7 @@
 
     param[base_url] = http://ctr.sagepub.com/
 
-    au < tested ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; >
+    au < tested ; 2009 ; Clothing and Textiles Research Journal Volume 27 ; 27 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -801,7 +862,30 @@
 
     param[base_url] = http://cdq.sagepub.com/
 
-    au < ready ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
+    au < tested ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+    title <
+      name = Communication Research
+    >
+
+    param[base_url] = http://crx.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Community College Review
+    >
+
+    param[base_url] = http://crw.sagepub.com/
+
+
   }
 
   {
@@ -980,7 +1064,7 @@
 
     param[base_url] = http://cjr.sagepub.com/
 
-    au < manifest ; 2008 ; Criminal Justice Review Volume 33 ; 33 ; >
+    au < tested ; 2008 ; Criminal Justice Review Volume 33 ; 33 ; >
 
   }
 
@@ -999,13 +1083,235 @@
   {
 
     title <
+      name = Critical Reviews in Oral Biology & Medicine
+    >
+
+    param[base_url] = http://cro.sagepub.com/
+
+    comment[legacy] = Merged into the Journal of Dental Research (jdr) in 2004
+
+  }
+
+  {
+
+    title <
+      name = Critical Social Policy
+    >
+
+    param[base_url] = http://csp.sagepub.com/
+
+    au < tested ; 2008 ; Critical Social Policy Volume 28 ; 28 ; >
+
+  }
+
+  {
+
+    title <
+      name = Critical Sociology
+    >
+
+    param[base_url] = http://crs.sagepub.com/
+
+    au < tested ; 2008 ; Critical Sociology Volume 34 ; 34 ; >
+
+  }
+
+  {
+
+    title <
+      name = Critique of Anthropology
+    >
+
+    param[base_url] = http://coa.sagepub.com/
+
+    au < tested ; 2008 ; Critique of Anthropology Volume 28 ; 28 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cross-Cultural Research
+    >
+
+    param[base_url] = http://ccr.sagepub.com/
+
+    au < tested ; 2008 ; Cross-Cultural Research Volume 42 ; 42 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cultural Dynamics
+    >
+
+    param[base_url] = http://cdy.sagepub.com/
+
+    au < tested ; 2008 ; Cultural Dynamics Volume 20 ; 20 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cultural Geographies
+    >
+
+    param[base_url] = http://cgj.sagepub.com/
+
+    au < tested ; 2008 ; Cultural Geographies Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = Cultural Sociology
+    >
+
+    param[base_url] = http://cus.sagepub.com/
+
+    au < tested ; 2008 ; Cultural Sociology Volume 2 ; 2 ; >
+
+  }
+
+  {
+
+    title <
+      name = "Cultural Studies <=> Critical Methodologies"
+    >
+
+    param[base_url] = http://csc.sagepub.com/
+
+    au < tested ; 2008 ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Culture & Psychology
+    >
+
+    param[base_url] = http://cap.sagepub.com/
+
+    au < tested ; 2008 ; Culture & Psychology Volume 14 ; 14 ; >
+
+  }
+
+  {
+
+    title <
+      name = Current Sociology
+    >
+
+    param[base_url] = http://csi.sagepub.com/
+
+    au < tested ; 2008 ; Current Sociology Volume 56 ; 56 ; >
+
+  }
+
+  {
+
+    title <
+      name = Currents in Biblical Research
+    >
+
+    param[base_url] = http://cbi.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Dementia
+    >
+
+    param[base_url] = http://dem.sagepub.com/
+
+    au < tested ; 2008 ; Dementia Volume 7 ; 7 ; >
+
+  }
+
+  {
+
+    title <
+      name = Diabetes and Vascular Disease Research
+    >
+
+    param[base_url] = http://dvr.sagepub.com/
+
+    au < tested ; 2008 ; Diabetes and Vascular Disease Research Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Diabetes Educator
+    >
+
+    param[base_url] = http://tde.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Diogenes
+    >
+
+    param[base_url] = http://dio.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Discourse & Communication
+    >
+
+    param[base_url] = http://dcm.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Discourse & Society
+    >
+
+    param[base_url] = http://das.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Discourse Studies
+    >
+
+    param[base_url] = http://dis.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = East European Politics & Societies
     >
 
     param[base_url] = http://eep.sagepub.com/
 
-    au < manifest ; 2008 ; East European Politics & Societies Volume 22 ; 22 ; >
-    au < ready ; 2009 ; East European Politics & Societies Volume 23 ; 23 ; >
+    au < tested ; 2008 ; East European Politics & Societies Volume 22 ; 22 ; >
+    au < tested ; 2009 ; East European Politics & Societies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1017,7 +1323,8 @@
 
     param[base_url] = http://eid.sagepub.com/
 
-    au < ready ; 2009 ; Economic and Industrial Democracy Volume 30 ; 30 ; >
+    au < tested ; 2008 ; Economic and Industrial Democracy Volume 29 ; 29 ; >
+    au < tested ; 2009 ; Economic and Industrial Democracy Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -1029,11 +1336,256 @@
 
     param[base_url] = http://edq.sagepub.com/
 
-    au < ready ; 2009 ; Economic Development Quarterly Volume 23 ; 23 ; >
+    au < tested ; 2008 ; Economic Development Quarterly Volume 22 ; 22 ; >
+    au < tested ; 2009 ; Economic Development Quarterly Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
   }
-  
-    {
+
+  {
+
+    title <
+      name = Education and Urban Society
+    >
+
+    param[base_url] = http://eus.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Education, Citizenship and Social Justice
+    >
+
+    param[base_url] = http://esj.sagepub.com/
+
+    au < tested ; 2008 ; Education, Citizenship and Social Justice Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = Educational Administration Quarterly
+    >
+
+    param[base_url] = http://eaq.sagepub.com/
+
+    au < tested ; 2008 ; Educational Administration Quarterly Volume 44 ; 44 ; >
+
+  }
+
+  {
+
+    title <
+      name = Educational and Psychological Measurement
+    >
+
+    param[base_url] = http://epm.sagepub.com/
+
+    au < tested ; 2008 ; Educational and Psychological Measurement Volume 68 ; 68 ; >
+
+  }
+
+  {
+
+    title <
+      name = Educational Evaluation and Policy Analysis
+    >
+
+    param[base_url] = http://epa.sagepub.com/
+
+    au < tested ; 2008 ; Educational Evaluation and Policy Analysis Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+    title <
+      name = Educational Management Administration & Leadership
+    >
+
+    param[base_url] = http://ema.sagepub.com/
+
+    au < tested ; 2008 ; Educational Management Administration & Leadership Volume 36 ; 36 ; >
+
+  }
+
+  {
+
+    title <
+      name = Educational Policy
+    >
+
+    param[base_url] = http://epx.sagepub.com/
+
+    au < tested ; 2008 ; Educational Policy Volume 22 ; 22 ; >
+
+  }
+
+  {
+
+    title <
+      name = Educational Researcher
+    >
+
+    param[base_url] = http://edr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Emotion Review
+    >
+
+    param[base_url] = http://emr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Environment and Behavior
+    >
+
+    param[base_url] = http://eab.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Environment and Urbanization
+    >
+
+    param[base_url] = http://eau.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Ethnicities
+    >
+
+    param[base_url] = http://etn.sagepub.com/
+
+    au < tested ; 2008 ; Ethnicities Volume 8 ; 8 ; >
+
+  }
+
+  {
+
+    title <
+      name = Ethnography
+    >
+
+    param[base_url] = http://eth.sagepub.com/
+
+    au < tested ; 2008 ; Ethnography Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = European History Quarterly
+    >
+
+    param[base_url] = http://ehq.sagepub.com/
+
+    comment[progress] = This is the last fully reviewed title database entry
+
+    au < tested ; 2008 ; European History Quarterly Volume 38 ; 38 ; >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Archaeology
+    >
+
+    param[base_url] = http://eja.sagepub.com/
+
+    au < tested ; 2008 ; European Journal of Archaeology Volume 11 ; 11 ; >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Communication
+    >
+
+    param[base_url] = http://ejc.sagepub.com/
+
+    au < tested ; 2008 ; European Journal of Communication Volume 23 ; 23 ; >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Criminology
+    >
+
+    param[base_url] = http://euc.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Cultural Studies
+    >
+
+    param[base_url] = http://ecs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Industrial Relations
+    >
+
+    param[base_url] = http://ejd.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = European Journal of International Relations
+    >
+
+    param[base_url] = http://ejt.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Political Theory
+    >
+
+    param[base_url] = http://ept.sagepub.com/
+
+
+  }
+
+  {
 
     title <
       name = European Journal of Social Theory
@@ -1041,10 +1593,10 @@
 
     param[base_url] = http://est.sagepub.com/
 
-    au < ready ; 2009 ; European Journal of Social Theory Volume 12 ; 12 ; >
+    au < tested ; 2009 ; European Journal of Social Theory Volume 12 ; 12 ; >
 
   }
-  
+
   {
 
     title <
@@ -1053,8 +1605,7 @@
 
     param[base_url] = http://ejw.sagepub.com/
 
-    au < manifest ; 2008 ; European Journal of Women's Studies Volume 15 ; 15 ; >
-    au < ready ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 ; >
+    au < tested ; 2009 ; European Journal of Women's Studies Volume 16 ; 16 ; >
 
   }
 
@@ -1066,7 +1617,7 @@
 
     param[base_url] = http://epe.sagepub.com/
 
-    au < ready ; 2009 ; European Physical Education Review Volume 15 ; 15 ; >
+    au < tested ; 2009 ; European Physical Education Review Volume 15 ; 15 ; >
 
   }
 
@@ -1078,7 +1629,150 @@
 
     param[base_url] = http://eup.sagepub.com/
 
-    au < ready ; 2009 ; European Union Politics Volume 10 ; 10 ; >
+    au < tested ; 2009 ; European Union Politics Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = European Urban and Regional Studies
+    >
+
+    param[base_url] = http://eur.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Evaluation
+    >
+
+    param[base_url] = http://evi.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Evaluation & the Health Professions
+    >
+
+    param[base_url] = http://ehp.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Evaluation Review
+    >
+
+    param[base_url] = http://erx.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The Expository Times
+    >
+
+    param[base_url] = http://ext.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Family and Consumer Sciences Research Journal
+    >
+
+    param[base_url] = http://fcs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Family Business Review
+    >
+
+    param[base_url] = http://fbr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The Family Journal
+    >
+
+    param[base_url] = http://tfj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Feminism & Psychology
+    >
+
+    param[base_url] = http://fap.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Feminist Criminology
+    >
+
+    param[base_url] = http://fcx.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Feminist Theology
+    >
+
+    param[base_url] = http://fth.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Feminist Theory
+    >
+
+    param[base_url] = http://fty.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Field Methods
+    >
+
+    param[base_url] = http://fmx.sagepub.com/
+
 
   }
 
@@ -1169,6 +1863,28 @@
   {
 
     title <
+      name = Gender, Technology and Development
+    >
+
+    param[base_url] = http://gtd.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = General Music Today
+    >
+
+    param[base_url] = http://gmt.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Gifted Child Quarterly
     >
 
@@ -1241,41 +1957,769 @@
   {
 
     title <
-      name = Journal of Child Neurology
+      name = Group & Organization Management
     >
 
-    param[base_url] = http://jcn.sagepub.com/
+    param[base_url] = http://gom.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Child Neurology Volume 23 ; 23 ; >
-    au < tested ; 2009 ; Journal of Child Neurology Volume 24 ; 24 ; >
+    au < tested ; 2009 ; Group & Organization Management Volume 34 ; 34 ; >
 
   }
 
   {
 
     title <
-      name = Journal of Classical Sociology
+      name = Group Analysis
     >
 
-    param[base_url] = http://jcs.sagepub.com/
+    param[base_url] = http://gaq.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 ; >
-    au < tested ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
+    au < tested ; 2009 ; Group Analysis Volume 42 ; 42 ; >
 
   }
 
   {
 
     title <
-      name = The Journal of Clinical Pharmacology
+      name = Group Processes & Intergroup Relations
     >
 
-    param[base_url] = http://jcp.sagepub.com/
+    param[base_url] = http://gpi.sagepub.com/
 
-    au < tested ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
+    au < tested ; 2009 ; Group Processes & Intergroup Relations Volume 12 ; 12 ; >
 
   }
-  
+
+  {
+
+    title <
+      name = Health Education & Behavior
+    >
+
+    param[base_url] = http://heb.sagepub.com/
+
+    au < tested ; 2009 ; Health Education & Behavior Volume 36 ; 36 ; >
+
+  }
+
+  {
+
+    title <
+      name = Health Education Journal
+    >
+
+    param[base_url] = http://hej.sagepub.com/
+
+    au < tested ; 2009 ; Health Education Journal Volume 68 ; 68 ; >
+
+  }
+
+  {
+
+    title <
+      name = Health Informatics Journal
+    >
+
+    param[base_url] = http://jhi.sagepub.com/
+
+    au < tested ; 2009 ; Health Informatics Journal Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = Health Promotion Practice
+    >
+
+    param[base_url] = http://hpp.sagepub.com/
+
+    au < tested ; 2009 ; Health Promotion Practice Volume 10 ; 10 ; >
+
+  }
+
+  {
+
+    title <
+      name = Health:
+    >
+
+    param[base_url] = http://hea.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = High Performance Polymers
+    >
+
+    param[base_url] = http://hip.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Hispanic Journal of Behavioral Sciences
+    >
+
+    param[base_url] = http://hjb.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = History of Psychiatry
+    >
+
+    param[base_url] = http://hpy.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = History of the Human Sciences
+    >
+
+    param[base_url] = http://hhs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The Holocene
+    >
+
+    param[base_url] = http://hol.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Home Health Care Management & Practice
+    >
+
+    param[base_url] = http://hhc.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Homicide Studies
+    >
+
+    param[base_url] = http://hsx.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Human & Experimental Toxicology
+    >
+
+    param[base_url] = http://het.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Human Factors: The Journal of the Human Factors and Ergonomics Society
+    >
+
+    param[base_url] = http://hfs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Human Relations
+    >
+
+    param[base_url] = http://hum.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Human Resource Development Review
+    >
+
+    param[base_url] = http://hrd.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = ICAN: Infant, Child, & Adolescent Nutrition
+    >
+
+    param[base_url] = http://can.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = IFLA Journal
+    >
+
+    param[base_url] = http://ifl.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Improving Schools
+    >
+
+    param[base_url] = http://imp.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = India Quarterly: A Journal of International Affairs
+    >
+
+    param[base_url] = http://iqq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Indian Economic & Social History Review
+    >
+
+    param[base_url] = http://ier.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Indian Journal of Gender Studies
+    >
+
+    param[base_url] = http://ijg.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Indoor and Built Environment
+    >
+
+    param[base_url] = http://ibe.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Information Development
+    >
+
+    param[base_url] = http://idv.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Innate Immunity
+    >
+
+    param[base_url] = http://ini.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Integrative Cancer Therapies
+    >
+
+    param[base_url] = http://ict.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Communication Gazette
+    >
+
+    param[base_url] = http://gaz.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Criminal Justice Review
+    >
+
+    param[base_url] = http://icj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Behavioral Development
+    >
+
+    param[base_url] = http://jbd.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Bilingualism
+    >
+
+    param[base_url] = http://ijb.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Comparative Sociology
+    >
+
+    param[base_url] = http://cos.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Cross Cultural Management
+    >
+
+    param[base_url] = http://ccm.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Cultural Studies
+    >
+
+    param[base_url] = http://ics.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Damage Mechanics
+    >
+
+    param[base_url] = http://ijd.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of High Performance Computing Applications
+    >
+
+    param[base_url] = http://hpc.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Lower Extremity Wounds
+    >
+
+    param[base_url] = http://ijl.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Music Education
+    >
+
+    param[base_url] = http://ijm.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Offender Therapy and Comparative Criminology
+    >
+
+    param[base_url] = http://ijo.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Press/Politics
+    >
+
+    param[base_url] = http://hij.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Robotics Research
+    >
+
+    param[base_url] = http://ijr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Rural Management
+    >
+
+    param[base_url] = http://irm.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Social Psychiatry
+    >
+
+    param[base_url] = http://isp.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Surgical Pathology
+    >
+
+    param[base_url] = http://ijs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Toxicology
+    >
+
+    param[base_url] = http://ijt.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Political Science Abstracts
+    >
+
+    param[base_url] = http://iab.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Political Science Review
+    >
+
+    param[base_url] = http://ips.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Regional Science Review
+    >
+
+    param[base_url] = http://irx.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Relations
+    >
+
+    param[base_url] = http://ire.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Review for the Sociology of Sport
+    >
+
+    param[base_url] = http://irs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Review of Administrative Sciences
+    >
+
+    param[base_url] = http://ras.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Small Business Journal
+    >
+
+    param[base_url] = http://isb.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Social Work
+    >
+
+    param[base_url] = http://isw.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Sociology
+    >
+
+    param[base_url] = http://iss.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = International Studies
+    >
+
+    param[base_url] = http://isq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Intervention in School and Clinic
+    >
+
+    param[base_url] = http://isc.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Irish Theological Quarterly
+    >
+
+    param[base_url] = http://itq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal for the Study of the New Testament
+    >
+
+    param[base_url] = http://jnt.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal for the Study of the Old Testament
+    >
+
+    param[base_url] = http://jot.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal for the Study of the Pseudepigrapha
+    >
+
+    param[base_url] = http://jsp.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Adolescent Research
+    >
+
+    param[base_url] = http://jar.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Aging and Health
+    >
+
+    param[base_url] = http://jah.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Applied Behavioral Science
+    >
+
+    param[base_url] = http://jab.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Applied Gerontology
+    >
+
+    param[base_url] = http://jag.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Asian and African Studies
+    >
+
+    param[base_url] = http://jas.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Attention Disorders
+    >
+
+    param[base_url] = http://jad.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Bioactive and Compatible Polymers
+    >
+
+    param[base_url] = http://jbc.sagepub.com/
+
+
+  }
+
   {
 
     title <
@@ -1364,7 +2808,6 @@
 
   }
 
-
   {
 
     title <
@@ -1403,7 +2846,7 @@
     au < tested ; 2009 ; Journal of Career Assessment Volume 17 ; 17 ; >
 
   }
-  
+
   {
 
     title <
@@ -1450,6 +2893,67 @@
     param[base_url] = http://chc.sagepub.com/
 
     au < tested ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
+    au < tested ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Child Neurology
+    >
+
+    param[base_url] = http://jcn.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Child Neurology Volume 23 ; 23 ; >
+    au < tested ; 2009 ; Journal of Child Neurology Volume 24 ; 24 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Classical Sociology
+    >
+
+    param[base_url] = http://jcs.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 ; >
+    au < tested ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Clinical Pharmacology
+    >
+
+    param[base_url] = http://jcp.sagepub.com/
+
+    au < tested ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Commonwealth Literature
+    >
+
+    param[base_url] = http://jcl.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Communication Inquiry
+    >
+
+    param[base_url] = http://jci.sagepub.com/
+
 
   }
 
@@ -1534,6 +3038,69 @@
   {
 
     title <
+      name = Journal of Correctional Health Care
+    >
+
+    param[base_url] = http://jcx.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 ; >
+    au < tested ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Creative Communications
+    >
+
+    param[base_url] = http://crc.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cross-Cultural Psychology
+    >
+
+    param[base_url] = http://jcc.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 ; >
+    au < tested ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 ; >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology
+    >
+
+    param[base_url] = http://dms.sagepub.com/
+
+    au < tested ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Dental Research
+    >
+
+    param[base_url] = http://jdr.sagepub.com/
+
+    au < tested ; 2008 ; Journal of Dental Research Volume 87 ; 87 ; >
+    au < tested ; 2009 ; Journal of Dental Research Volume 88 ; 88 ; >
+
+  }
+
+  {
+
+    title <
       name = Journal of Developing Societies
     >
 
@@ -1605,7 +3172,7 @@
 
     au < tested ; 2008 ; Journal of Early Childhood Research Volume 6 ; 6 ; >
     au < tested ; 2009 ; Journal of Early Childhood Research Volume 7 ; 7 ; >
- 
+
   }
 
   {
@@ -1619,7 +3186,7 @@
     au < tested ; 2008 ; Journal of Early Intervention Volume 31 ; 31 ; >
 
   }
-  
+
   {
 
     title <
@@ -1723,7 +3290,7 @@
     au < tested ; 2009 ; The Journal of Environment & Development Volume 18 ; 18 ; >
 
   }
-  
+
   {
 
     title <
@@ -1910,6 +3477,17 @@
     param[base_url] = http://jhl.sagepub.com/
 
     au < tested ; 2009 ; Journal of Human Lactation Volume 25 ; 25 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Human Values
+    >
+
+    param[base_url] = http://jhv.sagepub.com/
+
 
   }
 
@@ -2156,6 +3734,17 @@
   {
 
     title <
+      name = Journal of Music Teacher Education
+    >
+
+    param[base_url] = http://jmt.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Journal of Oncology Pharmacy Practice
     >
 
@@ -2216,6 +3805,17 @@
   {
 
     title <
+      name = Journal of Planning Education and Research
+    >
+
+    param[base_url] = http://jpe.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Journal of Planning History
     >
 
@@ -2224,7 +3824,29 @@
     au < released ; 2009 ; Journal of Planning History Volume 8 ; 8 ; >
 
   }
-  
+
+  {
+
+    title <
+      name = Journal of Planning Literature
+    >
+
+    param[base_url] = http://jpl.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Plastic Film and Sheeting
+    >
+
+    param[base_url] = http://jpf.sagepub.com/
+
+
+  }
+
   {
 
     title <
@@ -2296,7 +3918,7 @@
     au < tested ; 2009 ; Journal of Research in Crime and Delinquency Volume 46 ; 46 ; >
 
   }
- 
+
   {
 
     title <
@@ -2547,67 +4169,714 @@
     au < tested ; 2009 ; Journal of Theoretical Politics Volume 21 ; 21 ; >
 
   }
- 
+
   {
 
     title <
-      name = Journal of Correctional Health Care
+      name = Journal of Thermoplastic Composite Materials
     >
 
-    param[base_url] = http://jcx.sagepub.com/
+    param[base_url] = http://jtc.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 ; >
-    au < tested ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; >
-
-  }
-  
-  {
-
-    title <
-      name = Journal of Creative Communications
-    >
-
-    param[base_url] = http://crc.sagepub.com/
-
-    au < tested ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
+    au < tested ; 2009 ; Journal of Thermoplastic Composite Materials Volume 22 ; 22 ; >
 
   }
 
   {
 
     title <
-      name = Journal of Cross-Cultural Psychology
+      name = Journal of Transcultural Nursing
     >
 
-    param[base_url] = http://jcc.sagepub.com/
+    param[base_url] = http://tcn.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 ; >
-    au < tested ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 ; >
+    au < tested ; 2009 ; Journal of Transcultural Nursing Volume 20 ; 20 ; >
 
   }
 
   {
 
     title <
-      name = The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology
+      name = Journal of Transformative Education
     >
 
-    param[base_url] = http://dms.sagepub.com/
+    param[base_url] = http://jtd.sagepub.com/
 
-    au < tested ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 ; >
+    au < tested ; 2009 ; Journal of Transformative Education Volume 7 ; 7 ; >
 
   }
 
   {
 
     title <
-      name = Journal of Dental Research
+      name = Journal of Travel Research
     >
 
-    param[base_url] = http://jdr.sagepub.com/
+    param[base_url] = http://jtr.sagepub.com/
 
-    au < tested ; 2008 ; Journal of Dental Research Volume 87 ; 87 ; >
-    au < tested ; 2009 ; Journal of Dental Research Volume 88 ; 88 ; >
+    au < tested ; 2009 ; Journal of Travel Research Volume 48 ; 48 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Urban History
+    >
+
+    param[base_url] = http://juh.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Vacation Marketing
+    >
+
+    param[base_url] = http://jvm.sagepub.com/
+
+    au < tested ; 2009 ; Journal of Vacation Marketing Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Vibration and Control
+    >
+
+    param[base_url] = http://jvc.sagepub.com/
+
+    au < tested ; 2009 ; Journal of Vibration and Control Volume 15 ; 15 ; >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Visual Culture
+    >
+
+    param[base_url] = http://vcu.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Wide Bandgap Materials
+    >
+
+    param[base_url] = http://jwb.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Journalism
+    >
+
+    param[base_url] = http://jou.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Labor Studies Journal
+    >
+
+    param[base_url] = http://lsj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Language and Literature
+    >
+
+    param[base_url] = http://lal.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Language and Speech
+    >
+
+    param[base_url] = http://las.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Language Teaching Research
+    >
+
+    param[base_url] = http://ltr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Language Testing
+    >
+
+    param[base_url] = http://ltj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Latin American Perspectives
+    >
+
+    param[base_url] = http://lap.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Law, Culture and the Humanities
+    >
+
+    param[base_url] = http://lch.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Leadership
+    >
+
+    param[base_url] = http://lea.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Lighting Research and Technology
+    >
+
+    param[base_url] = http://lrt.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Lupus
+    >
+
+    param[base_url] = http://lup.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Management & Organizational History
+    >
+
+    param[base_url] = http://moh.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Management Communication Quarterly
+    >
+
+    param[base_url] = http://mcq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Management in Education
+    >
+
+    param[base_url] = http://mie.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Management Learning
+    >
+
+    param[base_url] = http://mlq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Margin: The Journal of Applied Economic Research
+    >
+
+    param[base_url] = http://mar.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Marketing Theory
+    >
+
+    param[base_url] = http://mtq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Mathematics and Mechanics of Solids
+    >
+
+    param[base_url] = http://mms.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Measurement and Evaluation in Counseling and Development
+    >
+
+    param[base_url] = http://mec.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Media, Culture & Society
+    >
+
+    param[base_url] = http://mcs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Media, War & Conflict
+    >
+
+    param[base_url] = http://mwc.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Medical Care Research and Review
+    >
+
+    param[base_url] = http://mcr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Medical Decision Making
+    >
+
+    param[base_url] = http://mdm.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The Medieval History Journal
+    >
+
+    param[base_url] = http://mhj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Memory Studies
+    >
+
+    param[base_url] = http://mss.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Men and Masculinities
+    >
+
+    param[base_url] = http://jmm.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Millennium - Journal of International Studies
+    >
+
+    param[base_url] = http://mil.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Modern China
+    >
+
+    param[base_url] = http://mcx.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Multiple Sclerosis
+    >
+
+    param[base_url] = http://msj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Music and Medicine
+    >
+
+    param[base_url] = http://mmd.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Music Educators Journal
+    >
+
+    param[base_url] = http://mej.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = NASN School Nurse
+    >
+
+    param[base_url] = http://nas.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = NASSP Bulletin
+    >
+
+    param[base_url] = http://bul.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = National Institute Economic Review
+    >
+
+    param[base_url] = http://ner.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Neurorehabilitation and Neural Repair
+    >
+
+    param[base_url] = http://nnr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = The Neuroscientist
+    >
+
+    param[base_url] = http://nro.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = New Media & Society
+    >
+
+    param[base_url] = http://nms.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Nonprofit and Voluntary Sector Quarterly
+    >
+
+    param[base_url] = http://nvs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Nursing Ethics
+    >
+
+    param[base_url] = http://nej.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Nursing Science Quarterly
+    >
+
+    param[base_url] = http://nsq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Nutrition in Clinical Practice
+    >
+
+    param[base_url] = http://ncp.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Organization
+    >
+
+    param[base_url] = http://org.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Organization & Environment
+    >
+
+    param[base_url] = http://oae.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Organization Studies
+    >
+
+    param[base_url] = http://oss.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Organizational Research Methods
+    >
+
+    param[base_url] = http://orm.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Palliative Medicine
+    >
+
+    param[base_url] = http://pmj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Party Politics
+    >
+
+    param[base_url] = http://ppq.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Perfusion
+    >
+
+    param[base_url] = http://prf.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Personality and Social Psychology Bulletin
+    >
+
+    param[base_url] = http://psp.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Personality and Social Psychology Review
+    >
+
+    param[base_url] = http://psr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Perspectives in Public Health
+    >
+
+    param[base_url] = http://rsh.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Perspectives in Vascular Surgery and Endovascular Therapy
+    >
+
+    param[base_url] = http://pvs.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Philosophy & Social Criticism
+    >
+
+    param[base_url] = http://psc.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Philosophy of the Social Sciences
+    >
+
+    param[base_url] = http://pos.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Planning Theory
+    >
+
+    param[base_url] = http://plt.sagepub.com/
+
 
   }
 
@@ -2698,6 +4967,83 @@
   {
 
     title <
+      name = Probation Journal
+    >
+
+    param[base_url] = http://prb.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Progress in Development Studies
+    >
+
+    param[base_url] = http://pdj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Progress in Human Geography
+    >
+
+    param[base_url] = http://phg.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Progress in Physical Geography
+    >
+
+    param[base_url] = http://ppg.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Psychology & Developing Societies
+    >
+
+    param[base_url] = http://pds.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Psychology of Music
+    >
+
+    param[base_url] = http://pom.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Public Finance Review
+    >
+
+    param[base_url] = http://pfr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Public Policy and Administration
     >
 
@@ -2766,7 +5112,18 @@
     au < tested ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
 
   }
-  
+
+  {
+
+    title <
+      name = Qualitative Research
+    >
+
+    param[base_url] = http://qrj.sagepub.com/
+
+
+  }
+
   {
 
     title <
@@ -2775,7 +5132,7 @@
 
     param[base_url] = http://qsw.sagepub.com/
 
-    au < released ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2787,7 +5144,7 @@
 
     param[base_url] = http://rac.sagepub.com/
 
-    au < released ; 2009 ; Race & Class Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Race & Class Volume 51 ; 51 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -2799,7 +5156,18 @@
 
     param[base_url] = http://rss.sagepub.com/
 
-    au < released ; 2009 ; Rationality and Society Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; Rationality and Society Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+
+  }
+
+  {
+
+    title <
+      name = Rehabilitation Counseling Bulletin
+    >
+
+    param[base_url] = http://rcb.sagepub.com/
+
 
   }
 
@@ -2906,7 +5274,7 @@
 
     param[base_url] = http://rop.sagepub.com/
 
-    au < released ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2918,7 +5286,7 @@
 
     param[base_url] = http://rrp.sagepub.com/
 
-    au < released ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2930,7 +5298,7 @@
 
     param[base_url] = http://rre.sagepub.com/
 
-    au < released ; 2009 ; Review of Research in Education Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Review of Research in Education Volume 33 ; 33 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2942,7 +5310,7 @@
 
     param[base_url] = http://sjp.sagepub.com/
 
-    au < ready ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; >
+    au < tested ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; >
 
   }
 
@@ -2954,7 +5322,18 @@
 
     param[base_url] = http://spi.sagepub.com/
 
-    au < ready ; 2009 ; School Psychology International Volume 30 ; 30 ; >
+    au < tested ; 2009 ; School Psychology International Volume 30 ; 30 ; >
+
+  }
+
+  {
+
+    title <
+      name = Science Communication
+    >
+
+    param[base_url] = http://scx.sagepub.com/
+
 
   }
 
@@ -2966,7 +5345,7 @@
 
     param[base_url] = http://sts.sagepub.com/
 
-    au < ready ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
+    au < tested ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
 
   }
 
@@ -2978,7 +5357,7 @@
 
     param[base_url] = http://sth.sagepub.com/
 
-    au < ready ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; >
+    au < tested ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; >
 
   }
 
@@ -3017,7 +5396,7 @@
     au < released ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
   }
-  
+
   {
 
     title <
@@ -3026,7 +5405,7 @@
 
     param[base_url] = http://sax.sagepub.com/
 
-    au < released ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -3038,7 +5417,7 @@
 
     param[base_url] = http://sexualities.sagepub.com/
 
-    au < released ; 2009 ; Sexualities Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; Sexualities Volume 12 ; 12 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -3050,7 +5429,7 @@
 
     param[base_url] = http://sim.sagepub.com/
 
-    au < released ; 2009 ; SIMULATION Volume 85 ; 85 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; SIMULATION Volume 85 ; 85 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -3141,12 +5520,34 @@
   {
 
     title <
+      name = Sociological Methods & Research
+    >
+
+    param[base_url] = http://smr.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Sociology
     >
 
     param[base_url] = http://soc.sagepub.com/
 
-    au < released ; 2009 ; Sociology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+    au < ready ; 2009 ; Sociology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = South Asia Economic Journal
+    >
+
+    param[base_url] = http://sae.sagepub.com/
+
 
   }
 
@@ -3158,7 +5559,7 @@
 
     param[base_url] = http://sar.sagepub.com/
 
-    au < released ; 2009 ; South Asia Research Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < ready ; 2009 ; South Asia Research Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -3170,7 +5571,7 @@
 
     param[base_url] = http://sas.sagepub.com/
 
-    au < released ; 2009 ; South Asian Survey Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < ready ; 2009 ; South Asian Survey Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -3183,6 +5584,17 @@
     param[base_url] = http://sac.sagepub.com/
 
     au < released ; 2009 ; Space and Culture Volume 12 ; 12 ; reingest4.clockss.org:8082 >
+
+  }
+
+  {
+
+    title <
+      name = Sports Health: A Multidisciplinary Approach
+    >
+
+    param[base_url] = http://sph.sagepub.com/
+
 
   }
 
@@ -3218,7 +5630,6 @@
 
     param[base_url] = http://soq.sagepub.com/
 
-
     au < released ; 2009 ; Strategic Organization Volume 7 ; 7 ; reingest4.clockss.org:8082 >
 
   }
@@ -3250,6 +5661,17 @@
   {
 
     title <
+      name = Studies in History
+    >
+
+    param[base_url] = http://sih.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Surgical Innovation
     >
 
@@ -3267,7 +5689,7 @@
 
     param[base_url] = http://tes.sagepub.com/
 
-    au < released ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3279,7 +5701,7 @@
 
     param[base_url] = http://tvn.sagepub.com/
 
-    au < released ; 2009 ; Television & New Media Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Television & New Media Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -3291,7 +5713,18 @@
 
     param[base_url] = http://trj.sagepub.com/
 
-    au < released ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+
+  }
+
+  {
+
+    title <
+      name = Theology and Sexuality
+    >
+
+    param[base_url] = http://tse.sagepub.com/
+
 
   }
 
@@ -3456,6 +5889,17 @@
   {
 
     title <
+      name = Tourist Studies
+    >
+
+    param[base_url] = http://tou.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Toxicologic Pathology
     >
 
@@ -3564,16 +6008,27 @@
   {
 
     title <
+      name = Update: Applications of Research in Music Education
+    >
+
+    param[base_url] = http://upd.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
       name = Urban Affairs Review
     >
 
     param[base_url] = http://uar.sagepub.com/
 
-    au < ready ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
+    au < tested ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
 
   }
-  
-    {
+
+  {
 
     title <
       name = Urban Education
@@ -3581,7 +6036,7 @@
 
     param[base_url] = http://uex.sagepub.com/
 
-    au < ready ; 2009 ; Urban Education Volume 44 ; 44 ; >
+    au < tested ; 2009 ; Urban Education Volume 44 ; 44 ; >
 
   }
 
@@ -3593,7 +6048,7 @@
 
     param[base_url] = http://usj.sagepub.com/
 
-    au < ready ; 2009 ; Urban Studies Volume 46 ; 46 ; >
+    au < tested ; 2009 ; Urban Studies Volume 46 ; 46 ; >
 
   }
 
@@ -3605,7 +6060,29 @@
 
     param[base_url] = http://ves.sagepub.com/
 
-    au < ready ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
+    au < tested ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
+
+  }
+
+  {
+
+    title <
+      name = Vascular Medicine
+    >
+
+    param[base_url] = http://vmj.sagepub.com/
+
+
+  }
+
+  {
+
+    title <
+      name = Violence Against Women
+    >
+
+    param[base_url] = http://vaw.sagepub.com/
+
 
   }
 
@@ -3714,6 +6191,17 @@
     param[base_url] = http://you.sagepub.com/
 
     au < tested ; 2009 ; Young Volume 17 ; 17 ; >
+
+  }
+
+  {
+
+    title <
+      name = Young Exceptional Children
+    >
+
+    param[base_url] = http://yec.sagepub.com/
+
 
   }
 
