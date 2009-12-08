@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.3 2009-11-02 19:43:17 dshr Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.4 2009-12-08 23:43:59 dshr Exp $
  */
 
 /*
@@ -159,6 +159,105 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     }
     log.debug("Article count is " + count);
     assertEquals(urlCount, count);
+  }
+
+  String goodDOI = "10.2202/bogus.13.4.123";
+  String goodVolume = "13";
+  String goodIssue = "4";
+  String goodStartPage = "123";
+  String goodISSN = "1234-5678";
+  String goodDate = "4/1/2000";
+  String goodAuthor = "Fred Bloggs";
+  String goodTitle = "Spurious Results";
+  String goodAbsUrl = "http://www.example.com/bogus/vol13/iss4/art123/abs";
+  String goodPdfUrl = "http://www.example.com/bogus/vol13/iss4/art123/pdf";
+  String goodHtmUrl = "http://www.example.com/bogus/vol13/iss4/art123/full";
+  String[] dublinCoreField = {
+    "dc.Identifier",
+    "dc.Date",
+    "dc.Contributor",
+    "dc.Title",
+  };
+  String[] dublinCoreValue = {
+    goodDOI,
+    goodDate,
+    goodAuthor,
+    goodTitle,
+  };
+  String goodContent =
+    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"bepress_citation_journal_title\"" + 
+      " content=\"Bogus\">\n" +	
+    "<meta name=\"bepress_citation_authors\"" + 
+      " content=\"" + goodAuthor + "\">\n" + 
+    "<meta name=\"bepress_citation_title\" content=\"" + goodTitle + "\">\n" +
+    "<meta name=\"bepress_citation_date\" content=\"" + goodDate + "\">\n" +
+    "<meta name=\"bepress_citation_volume\"" +
+      " content=\"" + goodVolume + "\">\n" +
+    "<meta name=\"bepress_citation_issue\" content=\"" + goodIssue + "\">\n" +
+    "<meta name=\"bepress_citation_firstpage\"" +
+      " content=\"" + goodStartPage + "\">\n" +
+    "<meta name=\"bepress_citation_pdf_url\"" +
+      " content=\"" + goodPdfUrl + "\">\n" +
+    "<meta name=\"bepress_citation_abstract_html_url\"" +
+      " content=\"" + goodAbsUrl + "\">\n" +
+    "<meta name=\"bepress_citation_doi\"" +
+      " content=\"" + goodDOI + "\">\n" +
+    "  <div id=\"issn\">" +
+    "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->ISSN: " +
+    goodISSN + " </div>\n";
+
+  public void testExtractFromGoodContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, sau);
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    MetadataExtractorFactory mef = new BePressMetadataExtractorFactory();
+    MetadataExtractor me = mef.createMetadataExtractor("text/html");
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    assertTrue(me instanceof BePressMetadataExtractorFactory.BePressMetadataExtractor);
+    Metadata md = me.extract(cu);
+    assertNotNull(md);
+    assertEquals(goodDOI, md.getDOI());
+    assertEquals(goodVolume, md.getVolume());
+    assertEquals(goodIssue, md.getIssue());
+    assertEquals(goodStartPage, md.getStartPage());
+    assertEquals(goodISSN, md.getISSN());
+    for (int i = 1; i < dublinCoreField.length; i++) {
+      assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
+    }
+  }
+
+  String badContent =
+    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"foo\"" +  " content=\"bar\">\n" +
+    "  <div id=\"issn\">" +
+    "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
+    goodISSN + " </div>\n";
+
+  public void testExtractFromBadContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, sau);
+    cu.setContent(badContent);
+    cu.setContentSize(badContent.length());
+    MetadataExtractorFactory mef = new BePressMetadataExtractorFactory();
+    MetadataExtractor me = mef.createMetadataExtractor("text/html");
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    assertTrue(me instanceof BePressMetadataExtractorFactory.BePressMetadataExtractor);
+    Metadata md = me.extract(cu);
+    assertNotNull(md);
+    assertNull(md.getDOI());
+    assertNull(md.getVolume());
+    assertNull(md.getIssue());
+    assertNull(md.getStartPage());
+    assertNull(md.getISSN());
+    for (int i = 1; i < dublinCoreField.length; i++) {
+      assertNull(md.getProperty(dublinCoreField[i]));
+    }
+    assertEquals(1, md.size());
+    assertEquals("bar", md.getProperty("foo"));
   }
 
   private void createContent() {
