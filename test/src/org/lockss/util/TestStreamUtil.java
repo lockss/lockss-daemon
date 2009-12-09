@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.14 2007-02-06 00:52:27 tlipkis Exp $
+ * $Id: TestStreamUtil.java,v 1.15 2009-12-09 00:58:45 tlipkis Exp $
  */
 
 /*
@@ -137,7 +137,6 @@ public class TestStreamUtil extends LockssTestCase {
 	  }
 	}};
     th.start();
-    poke.give();
     assertTrue(wait.take(TIMEOUT_SHOULDNT));
     assertEquals(0, wdog.times.size());
     TimeBase.step(1000);
@@ -398,7 +397,7 @@ public class TestStreamUtil extends LockssTestCase {
       firstPoke.give();
       thenWait.take();
       log.debug("done()");
-      next = in.getCount() + everyNBytes;
+      next += everyNBytes;
     }
 
     public int read(byte[] b) throws IOException {
