@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.18 2009-09-03 00:53:40 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.19 2009-12-09 00:06:51 tlipkis Exp $
  */
 
 /*
@@ -301,8 +301,7 @@ public abstract class LockssApp {
    * @throws Exception if load fails
    */
   protected LockssManager initManager(ManagerDesc desc) throws Exception {
-    String managerName = CurrentConfig.getParam(MANAGER_PREFIX + desc.key,
-						desc.defaultClass);
+    String managerName = getManagerClassName(desc);
     LockssManager mgr = instantiateManager(desc);
     try {
       // call init on the service
@@ -314,12 +313,17 @@ public abstract class LockssApp {
     }
   }
 
+  protected String getManagerClassName(ManagerDesc desc) {
+    String key = MANAGER_PREFIX + desc.key;
+    return System.getProperty(key,
+			      CurrentConfig.getParam(key, desc.defaultClass));
+  }
+
   /** Create an instance of a LockssManager, from the configured or default
    * manager class name */
   protected LockssManager instantiateManager(ManagerDesc desc)
       throws Exception {
-    String managerName = CurrentConfig.getParam(MANAGER_PREFIX + desc.key,
-						desc.defaultClass);
+    String managerName = getManagerClassName(desc);
     LockssManager mgr;
     try {
       mgr = (LockssManager)makeInstance(managerName);

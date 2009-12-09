@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.65 2009-09-03 00:53:39 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.66 2009-12-09 00:06:51 tlipkis Exp $
  */
 
 /*
@@ -167,9 +167,7 @@ public class MockLockssDaemon extends LockssDaemon {
       throw new LockssAppException("No ManagerDesc for: " + key);
     }
     if (log.isDebug2()) {
-      String mgr_name = CurrentConfig.getParam(MANAGER_PREFIX + desc.getKey(),
-                                               desc.getDefaultClass());
-      log.debug2("Manager class: " + mgr_name);
+      log.debug2("Manager class: " + getManagerClassName(desc));
     }
     try {
       return initManager(desc);
