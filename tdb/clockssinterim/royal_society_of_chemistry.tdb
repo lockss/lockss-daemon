@@ -52,7 +52,9 @@
     >
     
     param[journal_code] = ic
-
+    
+    au < ready ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
+  
   
   }
 
@@ -63,7 +65,9 @@
     >
     
     param[journal_code] = oc
-
+    
+    au < ready ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 >    
+  
   
   }
 
@@ -74,7 +78,6 @@
     >
     
     param[journal_code] = pc
-
   
   }
 
@@ -174,7 +177,11 @@
     >
     
     param[journal_code] = fd
-
+  
+    au < ready ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
+    au < ready ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
+    au < ready ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
+    au < ready ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 >  
   
   }
 
