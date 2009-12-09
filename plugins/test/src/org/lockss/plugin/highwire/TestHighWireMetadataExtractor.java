@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.2 2009-10-27 22:22:31 dshr Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.3 2009-12-09 05:13:03 dshr Exp $
  */
 
 /*
@@ -178,6 +178,109 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     }
     log.debug("Article count is " + count);
     assertEquals(urlCount, count);
+  }
+
+  String goodDOI = "10.1152/ajprenal.13.4.123";
+  String goodVolume = "13";
+  String goodIssue = "4";
+  String goodStartPage = "123";
+  String goodISSN = "1234-5678";
+  String goodDate = "4/1/2000";
+  String goodAuthor = "Fred Bloggs";
+  String goodTitle = "Spurious Results";
+  String goodAbsUrl = "http://www.example.com/cgi/content/abstract/13/4/123";
+  String goodPdfUrl = "http://www.example.com/cgi/content/reprint/13/4/123";
+  String goodHtmUrl = "http://www.example.com/cgi/content/full/13/4/123";
+  String[] dublinCoreField = {
+    "dc.Identifier",
+    "dc.Date",
+    "dc.Contributor",
+    "dc.Title",
+  };
+  String[] dublinCoreValue = {
+    goodDOI,
+    goodDate,
+    goodAuthor,
+    goodTitle,
+  };
+  String goodContent =
+    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"citation_journal_title\"" + 
+      " content=\"Bogus\">\n" +	
+    "<meta name=\"citation_authors\"" + 
+      " content=\"" + goodAuthor + "\">\n" + 
+    "<meta name=\"citation_title\" content=\"" + goodTitle + "\">\n" +
+    "<meta name=\"citation_date\" content=\"" + goodDate + "\">\n" +
+    "<meta name=\"citation_volume\"" +
+      " content=\"" + goodVolume + "\">\n" +
+    "<meta name=\"citation_issue\" content=\"" + goodIssue + "\">\n" +
+    "<meta name=\"citation_issn\" content=\"" + goodISSN + "\">\n" +
+    "<meta name=\"citation_firstpage\"" +
+      " content=\"" + goodStartPage + "\">\n" +
+    "<meta name=\"citation_pdf_url\"" +
+      " content=\"" + goodPdfUrl + "\">\n" +
+    "<meta name=\"citation_abstract_html_url\"" +
+      " content=\"" + goodAbsUrl + "\">\n" +
+    "<meta name=\"citation_doi\"" + " content=\"" + goodDOI + "\">\n" +
+    "<meta name=\"citation_id\"" + " content=\"13/4/123\">\n" +
+    "<meta name=\"citation_mjid\"" + " content=\"MJID;13/4/123\">\n" +
+    "<meta name=\"citation_pmid\"" + " content=\"13.4.123\">\n" +
+    "<meta name=\"dc.Contributor\"" + " content=\"" + goodAuthor + "\">\n" +
+    "<meta name=\"dc.Title\"" + " content=\"" + goodTitle + "\">\n" +
+    "<meta name=\"dc.Identifier\"" + " content=\"" + goodDOI + "\">\n" +
+      "<meta name=\"dc.Date\"" + " content=\"" + goodDate + "\">\n";
+
+  public void testExtractFromGoodContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, sau);
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    MetadataExtractorFactory mef = new HighWireMetadataExtractorFactory();
+    MetadataExtractor me = mef.createMetadataExtractor("text/html");
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    assertTrue(me instanceof HighWireMetadataExtractorFactory.HighWireMetadataExtractor);
+    Metadata md = me.extract(cu);
+    assertNotNull(md);
+    assertEquals(goodDOI, md.getDOI());
+    assertEquals(goodVolume, md.getVolume());
+    assertEquals(goodIssue, md.getIssue());
+    assertEquals(goodStartPage, md.getStartPage());
+    assertEquals(goodISSN, md.getISSN());
+    for (int i = 1; i < dublinCoreField.length; i++) {
+      assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
+    }
+  }
+
+  String badContent =
+    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"foo\"" +  " content=\"bar\">\n" +
+    "  <div id=\"issn\">" +
+    "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
+    goodISSN + " </div>\n";
+
+  public void testExtractFromBadContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, sau);
+    cu.setContent(badContent);
+    cu.setContentSize(badContent.length());
+    MetadataExtractorFactory mef = new HighWireMetadataExtractorFactory();
+    MetadataExtractor me = mef.createMetadataExtractor("text/html");
+    assertNotNull(me);
+    log.debug3("Extractor: " + me.toString());
+    assertTrue(me instanceof HighWireMetadataExtractorFactory.HighWireMetadataExtractor);
+    Metadata md = me.extract(cu);
+    assertNotNull(md);
+    assertNull(md.getDOI());
+    assertNull(md.getVolume());
+    assertNull(md.getIssue());
+    assertNull(md.getStartPage());
+    assertNull(md.getISSN());
+    for (int i = 1; i < dublinCoreField.length; i++) {
+      assertNull(md.getProperty(dublinCoreField[i]));
+    }
+    assertEquals(1, md.size());
+    assertEquals("bar", md.getProperty("foo"));
   }
 
   private void createContent() {
