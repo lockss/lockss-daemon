@@ -857,7 +857,7 @@
     param[base_url] = http://ctj.sagepub.com/
 
     au < tested ; 2008 ; Clinical Trials Volume 5 ; 5 ; >
-    au < tested ; 2009 ; Clinical Trials Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < ready ; 2009 ; Clinical Trials Volume 6 ; 6 ; >
 
   }
 
@@ -1652,7 +1652,7 @@
     param[base_url] = http://ejd.sagepub.com/
 
     au < tested ; 2008 ; European Journal of Industrial Relations Volume 14 ; 14 ; >
-    au < testing ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < ready ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; >
 
   }
 
@@ -1665,7 +1665,7 @@
     param[base_url] = http://ejt.sagepub.com/
 
     au < tested ; 2008 ; European Journal of International Relations Volume 14 ; 14 ; >
-    au < testing ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; reingest4.clockss.org:8082 >
+    au < ready ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; >
 
   }
 
@@ -1678,7 +1678,7 @@
     param[base_url] = http://ept.sagepub.com/
 
     au < tested ; 2008 ; European Journal of Political Theory Volume 7 ; 7 ; >
-    au < testing ; 2009 ; European Journal of Political Theory Volume 8 ; 8 ; reingest4.clockss.org:8082 >
+    au < testing ; 2009 ; European Journal of Political Theory Volume 8 ; 8 ; >
 
   }
 
@@ -5771,7 +5771,7 @@
     param[base_url] = http://rop.sagepub.com/
 
     au < manifest ; 2008 ; Review of Public Personnel Administration Volume 28 ; 28 ; >
-    au < ready ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; >
 
   }
 
@@ -5784,7 +5784,7 @@
     param[base_url] = http://rrp.sagepub.com/
 
     au < manifest ; 2008 ; Review of Radical Political Economics Volume 40 ; 40 ; >
-    au < ready ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; >
 
   }
 
@@ -5797,7 +5797,7 @@
     param[base_url] = http://rre.sagepub.com/
 
     au < manifest ; 2008 ; Review of Research in Education Volume 32 ; 32 ; >
-    au < ready ; 2009 ; Review of Research in Education Volume 33 ; 33 ; reingest2.clockss.org:8085 >
+    au < ready ; 2009 ; Review of Research in Education Volume 33 ; 33 ; >
 
   }
 
