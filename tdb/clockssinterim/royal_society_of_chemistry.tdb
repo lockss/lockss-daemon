@@ -52,7 +52,7 @@
     >
     
     param[journal_code] = ic
-    comment[none] = no manifest pages
+
   
   }
 
@@ -63,7 +63,7 @@
     >
     
     param[journal_code] = oc
-    comment[none] = no manifest pages
+
   
   }
 
@@ -74,7 +74,7 @@
     >
     
     param[journal_code] = pc
-    comment[none] = no manifest pages
+
   
   }
 
@@ -174,7 +174,7 @@
     >
     
     param[journal_code] = fd
-    comment[none] = no manifest pages
+
   
   }
 
@@ -235,6 +235,17 @@
     
     param[journal_code] = jc
     comment[legacy] = 1997-1999 only
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of the Chemical Society, Faraday Transactions
+    >
+    
+    param[journal_code] = ft
+    comment[legacy] = 1997-1998 only
   
   }
 

@@ -67,6 +67,7 @@ comment[alcalc44] = fetch error
     param[base_url] = http://aje.oxfordjournals.org/
 
     au < ready ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
+    au < ready ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -652,6 +653,7 @@ comment[aob103_104] = fetch error
 
 comment[eurh30] = crawl failed because of a fetch error
 
+    au < down ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -713,6 +715,7 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://eurpub.oxfordjournals.org/
 
+    au < down ; 2009 ; The European Journal of Public Health Volume 19 ; 19 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -762,6 +765,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fampra.oxfordjournals.org/
 
+    au < down ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2567,3 +2571,4 @@ comment[mplant] = no manifest page
   }
 
 }
+
