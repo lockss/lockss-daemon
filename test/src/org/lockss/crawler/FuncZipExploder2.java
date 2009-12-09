@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.10 2009-09-05 18:03:28 dshr Exp $
+ * $Id: FuncZipExploder2.java,v 1.11 2009-12-09 00:08:19 tlipkis Exp $
  */
 
 /*
@@ -171,7 +171,10 @@ public class FuncZipExploder2 extends LockssTestCase {
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    pluginMgr = theDaemon.getPluginManager();
+    pluginMgr = new NonVersionCheckingPluginManager();
+    pluginMgr.initService(theDaemon);
+    theDaemon.setPluginManager(pluginMgr);
+
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginMgr.startService();

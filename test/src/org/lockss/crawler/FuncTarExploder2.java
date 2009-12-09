@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.11 2009-09-05 18:03:27 dshr Exp $
+ * $Id: FuncTarExploder2.java,v 1.12 2009-12-09 00:08:19 tlipkis Exp $
  */
 
 /*
@@ -182,7 +182,9 @@ public class FuncTarExploder2 extends LockssTestCase {
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    pluginMgr = theDaemon.getPluginManager();
+    pluginMgr = new NonVersionCheckingPluginManager();
+    pluginMgr.initService(theDaemon);
+    theDaemon.setPluginManager(pluginMgr);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
