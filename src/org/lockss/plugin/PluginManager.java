@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.198 2009-11-08 01:29:30 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.199 2009-12-09 00:07:21 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1194,7 +1194,7 @@ public class PluginManager
     }
   }
 
-  boolean isCompatible(Plugin plug) {
+  protected boolean isCompatible(Plugin plug) {
     boolean res;
     DaemonVersion dver = getDaemonVersion();
     if (dver == null) {
