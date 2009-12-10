@@ -1926,8 +1926,8 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://jpe.oxfordjournals.org/
 
-    au < exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
-    au < exists ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
+    au < manifest ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
+    au < manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
 
   }
 
@@ -2056,7 +2056,8 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://leobaeck.oxfordjournals.org/
 
-    au < exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < manifest ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < manifest ; 2009 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
 
   }
 
