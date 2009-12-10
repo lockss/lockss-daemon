@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.86 2009-11-08 01:30:37 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.87 2009-12-10 23:13:07 tlipkis Exp $
  */
 
 /*
@@ -224,10 +224,6 @@ public class ArchivalUnitStatus
       return false;
     }
 
-    class Stats {
-      int aus = 0;
-    }
-
     private List getRows(StatusTable table, Stats stats) {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
@@ -248,6 +244,7 @@ public class ArchivalUnitStatus
 	  logger.warning("Unexpected expection building row", e);
 	}
       }
+      stats.restarting = pluginMgr.getNumAusRestarting();
       return rowL;
     }
 
@@ -382,6 +379,11 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
 					  numaus));
+      if (stats.restarting != 0) {
+	res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    stats.restarting + " restarting"));
+      }
       int n = repoMgr.sizeCalcQueueLen();
       if (n != 0) {
 	res.add(new StatusTable.SummaryInfo(null,
@@ -428,10 +430,6 @@ public class ArchivalUnitStatus
       return false;
     }
 
-    class Stats {
-      int aus = 0;
-    }
-
     private List getRows(StatusTable table, Stats stats) {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
@@ -451,6 +449,7 @@ public class ArchivalUnitStatus
 	  logger.warning("Unexpected expection building row", e);
 	}
       }
+      stats.restarting = pluginMgr.getNumAusRestarting();
       return rowL;
     }
 
@@ -462,12 +461,18 @@ public class ArchivalUnitStatus
     }
 
     private List getSummaryInfo(Stats stats) {
+      List res = new ArrayList();
       String numaus = StringUtil.numberOfUnits(stats.aus, "Archival Unit",
 					       "Archival Units");
-      return
-	ListUtil.list(new StatusTable.SummaryInfo(null,
-						  ColumnDescriptor.TYPE_STRING,
-						  numaus));
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  numaus));
+      if (stats.restarting != 0) {
+	res.add(new StatusTable.SummaryInfo(null,
+					    ColumnDescriptor.TYPE_STRING,
+					    stats.restarting + " restarting"));
+      }
+      return res;
     }
   }
 
@@ -1432,16 +1437,15 @@ public class ArchivalUnitStatus
       StringBuilder sb = new StringBuilder();
       sb.append(StringUtil.numberOfUnits(total, "Archival Unit",
 					 "Archival Units"));
-      if (internal != 0 && isDebug) {
-	sb.append(" (");
-	sb.append(internal);
-	sb.append(" internal)");
+      if (isDebug) {
+	appendIfNonZero(sb, internal, " (", " internal)");
       }
-      if (neverCrawled != 0) {
-	sb.append(", ");
-	sb.append(neverCrawled);
-	sb.append(" not collected");
+      appendIfNonZero(sb, pluginMgr.getNumAusRestarting(), " restarting");
+      if (isDebug) {
+	appendIfNonZero(sb, pluginMgr.getNumFailedAuRestarts(),
+			" failed to restart");
       }
+      appendIfNonZero(sb, neverCrawled, " not collected");
       if (includeNeedsRecrawl && needsRecrawl != 0) {
 	sb.append(", ");
 	sb.append(StringUtil.numberOfUnits(needsRecrawl,
@@ -1449,6 +1453,19 @@ public class ArchivalUnitStatus
       }
       return new StatusTable.Reference(sb.toString(),
 				       SERVICE_STATUS_TABLE_NAME);
+    }
+
+    void appendIfNonZero(StringBuilder sb, int counter, String postfix) {
+      appendIfNonZero(sb, counter, ", ", postfix);
+    }
+
+    void appendIfNonZero(StringBuilder sb, int counter,
+			 String prefix, String postfix) {
+      if (counter != 0) {
+	sb.append(prefix);
+	sb.append(counter);
+	sb.append(postfix);
+      }
     }
   }
 
@@ -1493,6 +1510,11 @@ public class ArchivalUnitStatus
     Properties props = table.getProperties();
     if (props == null) return null;
     return props.getProperty(name);
+  }
+
+  static class Stats {
+    int aus = 0;
+    int restarting = 0;
   }
 
 
