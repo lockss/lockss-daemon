@@ -17,7 +17,7 @@ BUILD_ONLY = 0
 BUILD_AND_SIGN = 1
 
 validArgs = ["help", "nosign", "titledb=", "jar=", "plugin=",
-             "alias=", "keystore=", "password="]
+             "alias=", "keystore=", "password=", "plugin-root="]
 args = {}
 
 
@@ -80,7 +80,7 @@ def usage(help):
     """ Print usage information """
     print "Usage: genplugin [--help] [--nosign] [--jar <jarname>] [--titledb <file>]\\\n \
 		 [--plugin <plugin>] [--alias <alias>] [--keystore <keystore>] \\\n \
-		 [--password <password>]"
+		 [--password <password>] [--plugin-root <directory>]"
     if (help):
 	print """
  nosign       Build a plugin jar without signing it.
@@ -95,6 +95,8 @@ Used in all cases:
               of the project directory.
  titledb      (Optional) Full or relative path to the title
               DB XML file to bundle.
+ plugin-root  (Optional) Root dir of plugin hierarchy (.xml, .class files),
+              defaults to ${project-dir}/plugins/classes
 
 Only used if --nosign is not set:
  alias        The alias to use when signing the jar.
@@ -103,7 +105,10 @@ Only used if --nosign is not set:
 """
 
 def get_classes_dir():
-    return path.join(projectDir, 'plugins/classes') + sep
+    if args.has_key("plugin-root"):
+        return args["plugin-root"] + sep
+    else:
+        return path.join(projectDir, 'plugins/classes') + sep
 
 def common_path(a, b):
     # path.commonprefix is very broken in python.  It works on
@@ -213,13 +218,18 @@ def parse_options(options):
         elif opt == "--plugin":
             args["plugin"] = realpath(expanduser(val))
         elif opt == "--titledb":
-            args["titledb"] = realpath(expanduser(val))
+            if len(val) == 0:
+                args["titledb"] = ""
+            else:
+                args["titledb"] = realpath(expanduser(val))
         elif opt == "--alias":
             args["alias"] = val
         elif opt == "--password":
             args["password"] = val
         elif opt == "--keystore":
             args["keystore"] = realpath(expanduser(val))
+        elif opt == "--plugin-root":
+            args["plugin-root"] = realpath(expanduser(val))
 
 #
 # Search up the tree until the 'build.xml' file is found, and call
@@ -227,6 +237,7 @@ def parse_options(options):
 #
 def run_ant(command):
     """ Run ANT, print the output if there is error. """
+#    print "ant " + command
     child = popen(antBin + " -f " + buildXml + " " + command)
     output = child.read()
     err = child.close()
@@ -253,10 +264,11 @@ def gen_plugin():
 
     command = "build-plugin" + \
               " -Dplugin-jarfile=" + args["jar"] + \
+              " -Dplugin-root=" + get_classes_dir() + \
               " -Dplugin-path=" + plugin_path + \
               " -Dplugin-file=" + plugin
 
-    if args.has_key("titledb"):
+    if args.has_key("titledb") and len(args["titledb"]) != 0:
         command = command + " -Dtitledb=" + args["titledb"]
         
     if mode == BUILD_AND_SIGN:

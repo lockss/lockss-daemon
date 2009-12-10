@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.250 2009-12-09 00:06:31 tlipkis Exp $
+ $Id: build.xml,v 1.251 2009-12-10 23:14:00 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -77,6 +77,8 @@ Args:
   -Dscript=name            Script run by jdftp.  Default is lockss-jdftp.
 
  Plugin targets (build-plugin, sign-plugin)
+  -Dplugin-root=path       Path to root of plugin source or classes hierarchy.
+                           Defaults to ${basedir}/plugins/classes
   -Dsign-keystore=path     Path to keystore to use when signing plugin JARs.
   -Dsign-alias=alias       Alias to use when signing loadable plugin JARs.
   -Dsign-keypass=pass      Keystore password to use when signing plugin JARs.
@@ -921,6 +923,8 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
 	 and plugin-file.  The property titledb is optional. -->
 
     <mkdir dir="${plugins.dir}" />
+    <property name="plugin-root" value="${plugins.classes}" />
+
     <condition property="sign.jar.file" value="true" >
       <and>
 	<isset property="sign-alias" />
@@ -945,7 +949,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
     </if>
 
     <jar destfile="${plugins.dir}/${plugin-jarfile}">
-      <fileset dir="${plugins.classes}">
+      <fileset dir="${plugin-root}">
 	<include name="titledb.xml" if="titledb"/>
 	<include name="${plugin-path}/*.class" />
 	<include name="${plugin-path}/*.xml" />
