@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.100 2009-09-03 00:53:40 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.101 2009-12-10 23:14:21 tlipkis Exp $
  */
 
 /*
@@ -637,15 +637,17 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public void stopAuManagers(ArchivalUnit au) {
     LinkedMap auMgrMap =
       (LinkedMap)auManagerMaps.get(au);
-    List rkeys = ListUtil.reverseCopy(auMgrMap.asList());
-    for (Iterator iter = rkeys.iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
-      try {
-	mgr.stopService();
-      } catch (Exception e) {
-	log.warning("Couldn't stop au manager " + mgr, e);
-	// continue to try to stop other managers
+    if (auMgrMap != null) {
+      List rkeys = ListUtil.reverseCopy(auMgrMap.asList());
+      for (Iterator iter = rkeys.iterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
+	try {
+	  mgr.stopService();
+	} catch (Exception e) {
+	  log.warning("Couldn't stop au manager " + mgr, e);
+	  // continue to try to stop other managers
+	}
       }
     }
     auManagerMaps.remove(au);
