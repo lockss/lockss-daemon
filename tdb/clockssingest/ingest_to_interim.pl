@@ -54,10 +54,10 @@ print "single file mode\n";
   
   }
 
-  my $source_location = $ARGV[0];
+  my $source_location = abs_path($ARGV[0]);
   my $dest_location = $source_location;
   $dest_location =~ s/clockssingest/clockssinterim/i;
-
+  
   iterate_lines ($source_location, $dest_location, "tostdout");  
   
 }
