@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_defining_props</string>
@@ -16,7 +16,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s, %02d&quot;, base_url, year</string>
+    <string>&quot;V2: %s, %02d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
