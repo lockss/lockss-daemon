@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.199 2009-12-09 00:07:21 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.200 2009-12-10 23:12:54 tlipkis Exp $
  */
 
 /*
@@ -148,6 +148,24 @@ public class PluginManager
   public static final long DEFAULT_PLUGIN_LOAD_TIMEOUT =
     Constants.MINUTE;
 
+  /** If true, when a new version of an existing plugin is loaded, all its
+   * AUs will be restarted. */
+  public static final String PARAM_RESTART_AUS_WITH_NEW_PLUGIN =
+    PREFIX + "restartAusWithNewPlugin";
+  public static final boolean DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN = false;
+
+  /** The max amount of time to wait after stopping a set of AUs whose
+   * plugin has been replaced by a new version, before restarting them. */
+  public static final String PARAM_AU_RESTART_MAX_SLEEP =
+    PREFIX + "auRestartMaxSleep";
+  public static final long DEFAULT_AU_RESTART_MAX_SLEEP = 5 * Constants.SECOND;
+
+  /** The amount of time, per AU, to wait after stopping a set of AUs whose
+   * plugin has been replaced by a new version, before restarting them. */
+  public static final String PARAM_PER_AU_RESTART_SLEEP =
+    PREFIX + "perAuRestartSleep";
+  public static final long DEFAULT_PER_AU_RESTART_SLEEP = 500;
+
   /** The type of plugin we prefer to load, if both are present.
       Can be either "class" or "xml" (case insensitive) */
   public static final String PARAM_PREFERRED_PLUGIN_TYPE =
@@ -200,7 +218,8 @@ public class PluginManager
   List retract = null;
 
   // maps plugin key(not id) to plugin
-  private Map pluginMap = Collections.synchronizedMap(new HashMap());
+  private Map<String,Plugin> pluginMap =
+    Collections.synchronizedMap(new HashMap());
   // maps auid to AU
   private Map auMap = Collections.synchronizedMap(new HashMap());
   // A set of all aus sorted by title.  The UI relies on this behavior.
@@ -225,6 +244,10 @@ public class PluginManager
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
   private List auEventHandlers = new ArrayList();
+  // AUs running under plugins that have been replaced by new versions.
+  private List<ArchivalUnit> needRestartAus = new ArrayList();
+  private int numAusRestarting = 0;
+  private int numFailedAuRestarts = 0;
 
   // Plugin registry processing
   private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
@@ -238,6 +261,9 @@ public class PluginManager
   private boolean loadablePluginsReady = false;
   private boolean preferLoadablePlugin = DEFAULT_PREFER_LOADABLE_PLUGIN;
   private long registryTimeout = DEFAULT_PLUGIN_LOAD_TIMEOUT;
+  private boolean paramRestartAus = DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN;
+  private long paramAuRestartMaxSleep = DEFAULT_AU_RESTART_MAX_SLEEP;
+  private long paramPerAuRestartSleep = DEFAULT_PER_AU_RESTART_SLEEP;
   private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
 
   private Map titleMap = null;
@@ -276,8 +302,7 @@ public class PluginManager
    */
   public void stopService() {
     // tk - checkpoint if nec.
-    for (Iterator iter = pluginMap.values().iterator(); iter.hasNext(); ) {
-      Plugin plugin = (Plugin)iter.next();
+    for (Plugin plugin : pluginMap.values()) {
       plugin.stopPlugin();
     }
     auEventHandlers = new ArrayList();
@@ -329,6 +354,16 @@ public class PluginManager
     if (changedKeys.contains(PREFIX)) {
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
 					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
+
+      paramRestartAus =
+	config.getBoolean(PARAM_RESTART_AUS_WITH_NEW_PLUGIN,
+			  DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN);
+      paramPerAuRestartSleep =
+	config.getTimeInterval(PARAM_PER_AU_RESTART_SLEEP,
+			       DEFAULT_PER_AU_RESTART_SLEEP);
+      paramAuRestartMaxSleep =
+	config.getTimeInterval(PARAM_AU_RESTART_MAX_SLEEP,
+			       DEFAULT_AU_RESTART_MAX_SLEEP);
 
       preferLoadablePlugin = config.getBoolean(PARAM_PREFER_LOADABLE_PLUGIN,
 					       DEFAULT_PREFER_LOADABLE_PLUGIN);
@@ -561,7 +596,7 @@ public class PluginManager
    * @return the plugin or null
    */
   public Plugin getPlugin(String pluginKey) {
-    return (Plugin)pluginMap.get(pluginKey);
+    return pluginMap.get(pluginKey);
   }
 
   private void configurePlugin(String pluginKey, Configuration pluginConf,
@@ -737,7 +772,7 @@ public class PluginManager
       plugin.stopAu(au);
       getDaemon().stopAuManagers(au);
     } catch (Exception e) {
-      log.warning("Unexpected stopping AU", e);
+      log.error("Unexpected error stopping AU", e);
       // Shouldn't happen, as stopAuManagers() catches errors in
       // stopService().  Not clear what to do anyway, if some of the
       // managers don't stop cleanly.
@@ -1008,6 +1043,55 @@ public class PluginManager
 					 DEFAULT_REMOVE_STOPPED_AUS);
   }
 
+  // Stops and restarts a set of AUs so that they start using the current
+  // version of their plugin.  Waits a little while between stopping and
+  // starting to allow existing processes to exit.  It's expected that this
+  // will cause lots of errors to be logger
+  void restartAus(Collection<ArchivalUnit> aus) {
+    if (paramRestartAus) {
+      log.info("Restarting " + aus.size() + " AUs to use updated plugins.  Exiting processes may log errors; they should be harmless");
+      Map<String, Configuration> configMap = new HashMap();
+      for (ArchivalUnit au : aus) {
+	String auid = au.getAuId();
+	Configuration auConf = au.getConfiguration();
+	configMap.put(auid, auConf);
+	numAusRestarting++;
+	stopAu(au);
+      }
+      try {
+	Deadline.in(auRestartSleep(aus.size())).sleep();
+      } catch (InterruptedException ex) {
+      }
+    
+      for (Map.Entry<String,Configuration> ent : configMap.entrySet()) {
+	String auid = ent.getKey();
+	Configuration auConf = ent.getValue();
+	String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
+	Plugin plug = getPlugin(pkey);
+	try {
+	  ArchivalUnit newAu = createAu(plug, auConf);
+	  numAusRestarting--;
+	} catch (ArchivalUnit.ConfigurationException e) {
+	  log.error("Failed to restart: " + auid);
+	}
+      }
+      numFailedAuRestarts += numAusRestarting;
+      numAusRestarting = 0;
+    }
+  }
+
+  long auRestartSleep(int n) {
+    return Math.min(n * paramPerAuRestartSleep, paramAuRestartMaxSleep);
+  }
+
+  public int getNumAusRestarting() {
+    return numAusRestarting;
+  }
+
+  public int getNumFailedAuRestarts() {
+    return numFailedAuRestarts;
+  }
+
   /**
    * Return true if the specified Archival Unit is used internally
    * by the LOCKSS daemon.  Currently this is only registry AUs
@@ -1103,7 +1187,7 @@ public class PluginManager
       return (PluginInfo)pluginfoMap.get(pluginKey);
     }
     if (pluginMap.containsKey(pluginKey)) {
-      return new PluginInfo((Plugin)pluginMap.get(pluginKey), loader, null);
+      return new PluginInfo(pluginMap.get(pluginKey), loader, null);
     }
     String pluginName = pluginNameFromKey(pluginKey);
     if (retract != null && !retract.isEmpty()) {
@@ -1278,16 +1362,24 @@ public class PluginManager
   protected Plugin loadBuiltinPlugin(String pluginClassName) {
     String pluginKey = pluginKeyFromName(pluginClassName);
     if (ensurePluginLoaded(pluginKey)) {
-      return (Plugin)pluginMap.get(pluginKey);
+      return pluginMap.get(pluginKey);
     }
     return null;
   }
 
-  // separate method so can be called by test code
   protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
 		 plugin.getPluginName() + ")");
+    }
+    Plugin oldPlug = pluginMap.get(pluginKey);
+    if (oldPlug != null) {
+      Collection aus = oldPlug.getAllAus();
+      if (aus != null && paramRestartAus) {
+	synchronized (this) {
+	  needRestartAus.addAll(aus);
+	}
+      }
     }
     pluginMap.put(pluginKey, plugin);
     resetTitles();
@@ -2047,9 +2139,15 @@ public class PluginManager
     // Cleanup as a hint to GC.
     tmpMap.clear();
     tmpMap = null;
+
+    if (!needRestartAus.isEmpty()) {
+      restartAus(needRestartAus);
+      needRestartAus = new ArrayList();
+    }
   }
 
   protected void processOneRegistryAu(ArchivalUnit au, Map tmpMap) {
+    log.debug2("processOneRegistryAu: " + au.getName());
     CachedUrlSet cus = au.getAuCachedUrlSet();
 
     for (Iterator cusIter = cus.contentHashIterator(); cusIter.hasNext(); ) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.82 2009-09-04 03:52:20 dshr Exp $
+ * $Id: TestPluginManager.java,v 1.83 2009-12-10 23:12:54 tlipkis Exp $
  */
 
 /*
@@ -288,7 +288,7 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.ensurePluginLoaded(key));
     Plugin p = mgr.getPlugin(key);
     assertTrue(p.toString(), p instanceof DefinablePlugin);
-    MyMockConfigurablePlugin mcpi = (MyMockConfigurablePlugin)mgr.getPlugin(key);
+    MyDefinablePlugin mcpi = (MyDefinablePlugin)mgr.getPlugin(key);
     assertNotNull(mcpi);
     List initArgs = mcpi.getInitArgs();
     assertEquals(1, initArgs.size());
@@ -705,7 +705,7 @@ public class TestPluginManager extends LockssTestCase {
     private DaemonVersion mockDaemonVersion = null;
 
     protected String getConfigurablePluginName(String pluginName) {
-      return MyMockConfigurablePlugin.class.getName();
+      return MyDefinablePlugin.class.getName();
     }
     protected void processOneRegistryAu(ArchivalUnit au, Map tmpMap) {
       if (au == processOneRegistryAuThrowIf) {
@@ -742,7 +742,7 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
-  static class MyMockConfigurablePlugin extends DefinablePlugin {
+  static class MyDefinablePlugin extends DefinablePlugin {
     private List initArgs = new ArrayList();
 
     public void initPlugin(LockssDaemon daemon, String extMapName, ClassLoader loader)
@@ -1269,6 +1269,61 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(mmau2.getNthUrl(2), info.getCuUrl());
     assertTrue(info.isOnLoadablePath());
     assertSame(mockPlugin, info.getPlugin());
+  }
+
+  // This test loads two versions of the same plugin.  Because it doesn't
+  // matter what jar a plugin is loaded from, an easy way to do this is to
+  // load the second version from a different jar (good-plugin2.jar).  See
+  // test/scripts/gentestplugins to regenerate these jars.
+
+  public void testUpdatePlugin() throws Exception {
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_PREFER_LOADABLE_PLUGIN, "true");
+    p.setProperty(PluginManager.PARAM_RESTART_AUS_WITH_NEW_PLUGIN, "true");
+    p.setProperty(PluginManager.PARAM_AU_RESTART_MAX_SLEEP, "10");
+    prepareLoadablePluginTests(p);
+    String pluginKey = "org|lockss|test|MockConfigurablePlugin";
+    // Set up a MyMockRegistryArchivalUnit with the right data.
+    MyMockRegistryArchivalUnit mmau1 =
+      new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
+    assertNull(mgr.getPlugin(pluginKey));
+    mgr.processRegistryAus(ListUtil.list(mmau1));
+    Plugin plugin1 = mgr.getPlugin(pluginKey);
+    assertNotNull(plugin1);
+    assertTrue(mgr.isLoadablePlugin(plugin1));
+    assertFalse(mgr.isInternalPlugin(plugin1));
+    assertEquals("1", plugin1.getVersion());
+    PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plugin1);
+    assertEquals(mmau1.getNthUrl(1), info.getCuUrl());
+    assertSame(plugin1, info.getPlugin());
+
+    Configuration config = ConfigurationUtil.fromArgs("base_url",
+						      "http://example.com/a/"
+						      ,"year", "1942");
+    ArchivalUnit au1 = mgr.createAu(plugin1, config);
+    String auid = au1.getAuId();
+    assertNotNull(au1);
+    assertSame(plugin1, au1.getPlugin());
+    assertEquals("http://example.com/a/, 1942", au1.getName());
+
+    // Create a second registry AU (because it also doesn't matter which AU
+    // a plugin jar comes from).
+    MyMockRegistryArchivalUnit mmau2 =
+      new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar,
+						   "org/lockss/test/good-plugin2.jar"));
+    assertSame(au1, mgr.getAuFromId(auid));
+    mgr.processRegistryAus(ListUtil.list(mmau2));
+
+    // Ensure the new plugin was installed, the AU is now running as part
+    // of that plugin, and the AU's definition has changed appropriately
+    Plugin plugin2 = mgr.getPlugin(pluginKey);
+    assertNotSame(plugin1, plugin2);
+    assertEquals("2", plugin2.getVersion());
+    ArchivalUnit au2 = mgr.getAuFromId(auid);
+    assertNotSame(au1, au2);
+    assertSame(plugin2, au2.getPlugin());
+    assertEquals("V2: http://example.com/a/, 1942", au2.getName());
+    assertEquals(0, mgr.getNumFailedAuRestarts());
   }
 
   public static Test suite() {
