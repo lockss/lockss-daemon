@@ -54,7 +54,7 @@
     param[journal_code] = ic
 
     au < manifest ; 2008 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 104 ; 104 ; 2008 >
-    au < ready ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
   
   }
 
@@ -67,7 +67,7 @@
     param[journal_code] = oc
 
     au < manifest ; 2008 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 104 ; 104 ; 2008 >
-    au < ready ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 >
   
   }
 
@@ -184,10 +184,10 @@
     au < manifest ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 >
     au < manifest ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 >
     au < manifest ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 >
-    au < ready ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
-    au < ready ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
-    au < ready ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
-    au < ready ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 >
     au < manifest ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
   
   }

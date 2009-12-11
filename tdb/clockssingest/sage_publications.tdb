@@ -1,4 +1,4 @@
-﻿{
+{
 
   publisher <
     name = SAGE Publications
@@ -857,7 +857,7 @@
     param[base_url] = http://ctj.sagepub.com/
 
     au < tested ; 2008 ; Clinical Trials Volume 5 ; 5 ; >
-    au < ready ; 2009 ; Clinical Trials Volume 6 ; 6 ; >
+    au < released ; 2009 ; Clinical Trials Volume 6 ; 6 ; >
 
   }
 
@@ -1652,7 +1652,7 @@
     param[base_url] = http://ejd.sagepub.com/
 
     au < tested ; 2008 ; European Journal of Industrial Relations Volume 14 ; 14 ; >
-    au < ready ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; >
+    au < released ; 2009 ; European Journal of Industrial Relations Volume 15 ; 15 ; >
 
   }
 
@@ -1665,7 +1665,7 @@
     param[base_url] = http://ejt.sagepub.com/
 
     au < tested ; 2008 ; European Journal of International Relations Volume 14 ; 14 ; >
-    au < ready ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; >
+    au < released ; 2009 ; European Journal of International Relations Volume 15 ; 15 ; >
 
   }
 
@@ -5618,7 +5618,7 @@
     param[base_url] = http://qsw.sagepub.com/
 
     au < manifest ; 2008 ; Qualitative Social Work Volume 7 ; 7 ; >
-    au < ready ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -5631,7 +5631,7 @@
     param[base_url] = http://rac.sagepub.com/
 
     au < manifest ; 2008 ; Race & Class Volume 50 ; 50 ; >
-    au < ready ; 2009 ; Race & Class Volume 51 ; 51 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; Race & Class Volume 51 ; 51 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -5644,7 +5644,7 @@
     param[base_url] = http://rss.sagepub.com/
 
     au < manifest ; 2008 ; Rationality and Society Volume 20 ; 20 ; >
-    au < ready ; 2009 ; Rationality and Society Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; Rationality and Society Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -5771,7 +5771,7 @@
     param[base_url] = http://rop.sagepub.com/
 
     au < manifest ; 2008 ; Review of Public Personnel Administration Volume 28 ; 28 ; >
-    au < ready ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; >
+    au < released ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; >
 
   }
 
@@ -5784,7 +5784,7 @@
     param[base_url] = http://rrp.sagepub.com/
 
     au < manifest ; 2008 ; Review of Radical Political Economics Volume 40 ; 40 ; >
-    au < ready ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; >
+    au < released ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; >
 
   }
 
@@ -5797,7 +5797,7 @@
     param[base_url] = http://rre.sagepub.com/
 
     au < manifest ; 2008 ; Review of Research in Education Volume 32 ; 32 ; >
-    au < ready ; 2009 ; Review of Research in Education Volume 33 ; 33 ; >
+    au < released ; 2009 ; Review of Research in Education Volume 33 ; 33 ; >
 
   }
 
@@ -5913,7 +5913,7 @@
     param[base_url] = http://sax.sagepub.com/
 
     au < manifest ; 2008 ; Sexual Abuse: A Journal of Research and Treatment Volume 20 ; 20 ; >
-    au < ready ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -5926,7 +5926,7 @@
     param[base_url] = http://sexualities.sagepub.com/
 
     au < manifest ; 2008 ; Sexualities Volume 11 ; 11 ; >
-    au < ready ; 2009 ; Sexualities Volume 12 ; 12 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Sexualities Volume 12 ; 12 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -5939,7 +5939,7 @@
     param[base_url] = http://sim.sagepub.com/
 
     au < manifest ; 2008 ; SIMULATION Volume 84 ; 84 ; >
-    au < ready ; 2009 ; SIMULATION Volume 85 ; 85 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; SIMULATION Volume 85 ; 85 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -6055,7 +6055,7 @@
     param[base_url] = http://soc.sagepub.com/
 
     au < manifest ; 2008 ; Sociology Volume 42 ; 42 ; >
-    au < ready ; 2009 ; Sociology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+    au < released ; 2009 ; Sociology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -6080,7 +6080,7 @@
     param[base_url] = http://sar.sagepub.com/
 
     au < manifest ; 2008 ; South Asia Research Volume 28 ; 28 ; >
-    au < ready ; 2009 ; South Asia Research Volume 29 ; 29 ; reingest4.clockss.org:8082 >
+    au < released ; 2009 ; South Asia Research Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -6093,7 +6093,7 @@
     param[base_url] = http://sas.sagepub.com/
 
     au < manifest ; 2008 ; South Asian Survey Volume 15 ; 15 ; >
-    au < ready ; 2009 ; South Asian Survey Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < released ; 2009 ; South Asian Survey Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
   }
 
@@ -6220,7 +6220,7 @@
     param[base_url] = http://tes.sagepub.com/
 
     au < manifest ; 2008 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 31 ; 31 ; >
-    au < ready ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -6233,7 +6233,7 @@
     param[base_url] = http://tvn.sagepub.com/
 
     au < manifest ; 2008 ; Television & New Media Volume 9 ; 9 ; >
-    au < ready ; 2009 ; Television & New Media Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Television & New Media Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -6246,7 +6246,7 @@
     param[base_url] = http://trj.sagepub.com/
 
     au < manifest ; 2008 ; Textile Research Journal Volume 78 ; 78 ; >
-    au < ready ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
 
   }
 

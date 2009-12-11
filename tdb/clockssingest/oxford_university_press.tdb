@@ -18,7 +18,7 @@ comment[abbs40] = manifest page 404
     param[base_url] = http://abbs.oxfordjournals.org/
 
     au < notReady ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
-    au < ready ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
+    au < released ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
 
   }
 
@@ -31,7 +31,7 @@ comment[abbs40] = manifest page 404
     param[base_url] = http://adaptation.oxfordjournals.org/
 
     au < tested ; 2008 ; Adaptation Volume 1 ; 1 ; >
-    au < ready ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -44,7 +44,7 @@ comment[abbs40] = manifest page 404
     param[base_url] = http://ageing.oxfordjournals.org/
 
     au < tested ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
-    au < ready ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -73,8 +73,8 @@ comment[alcalc44] = fetch error
 
     au < tested ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
     au < tested ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
-    au < ready ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
-    au < ready ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -223,7 +223,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://biomet.oxfordjournals.org/
 
     au < testing ; 2008 ; Biometrika Volume 95 ; 95 ; >
-    au < ready ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -236,7 +236,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://biohorizons.oxfordjournals.org/
 
     au < testing ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
-    au < ready ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -249,7 +249,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://biostatistics.oxfordjournals.org/
 
     au < testing ; 2008 ; Biostatistics Volume 9 ; 9 ; >
-    au < ready ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -263,8 +263,8 @@ comment[aob103_104] = fetch error
 
     au < testing ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
     au < testing ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; >
-    au < ready ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; reingest2.clockss.org:8085 >
-    au < ready ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -277,7 +277,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://brain.oxfordjournals.org/
 
     au < testing ; 2008 ; Brain Volume 131 ; 131 ; >
-    au < ready ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -290,7 +290,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bib.oxfordjournals.org/
 
     au < testing ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
-    au < ready ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -303,7 +303,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bfgp.oxfordjournals.org/
 
     au < testing ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
-    au < ready ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -316,7 +316,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
 
     au < testing ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
-    au < ready ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -329,7 +329,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bjc.oxfordjournals.org/
 
     au < testing ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
-    au < ready ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -342,7 +342,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bjps.oxfordjournals.org/
 
     au < testing ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
-    au < ready ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -355,7 +355,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bjsw.oxfordjournals.org/
 
     au < tested ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
-    au < ready ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -371,9 +371,9 @@ comment[aob103_104] = fetch error
     au < testing ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
     au < tested ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
     au < tested ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
-    au < ready ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
-    au < ready ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
-    au < ready ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -386,7 +386,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://blms.oxfordjournals.org/
 
     au < tested ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
-    au < ready ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -399,7 +399,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://cje.oxfordjournals.org/
 
     au < tested ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
-    au < ready ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -412,7 +412,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://cjres.oxfordjournals.org/
 
     au < tested ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
-    au < ready ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -425,7 +425,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://camqtly.oxfordjournals.org/
 
     au < tested ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
-    au < ready ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -438,7 +438,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://cmlj.oxfordjournals.org/
 
     au < tested ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
-    au < ready ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -451,7 +451,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://carcin.oxfordjournals.org/
 
     au < tested ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
-    au < ready ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -467,9 +467,9 @@ comment[aob103_104] = fetch error
     au < tested ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
     au < testing ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
     au < tested ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
-    au < ready ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
-    au < ready ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
-    au < ready ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
     au < manifest ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
 
   }
@@ -483,7 +483,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://cercor.oxfordjournals.org/
 
     au < testing ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
-    au < ready ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -496,7 +496,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://cesifo.oxfordjournals.org/
 
     au < tested ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
-    au < ready ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -509,7 +509,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://chemse.oxfordjournals.org/
 
     au < testing ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
-    au < ready ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -549,7 +549,7 @@ comment[cjip] = no subscription
     param[base_url] = http://cb.oxfordjournals.org/
 
     au < tested ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
-    au < ready ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -562,7 +562,7 @@ comment[cjip] = no subscription
     param[base_url] = http://cdj.oxfordjournals.org/
 
     au < tested ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
-    au < ready ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < released ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
 
   }
 
@@ -575,7 +575,7 @@ comment[cjip] = no subscription
     param[base_url] = http://comjnl.oxfordjournals.org/
 
     au < testing ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
-    au < ready ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    au < released ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
 
   }
 
@@ -744,7 +744,7 @@ comment[eurh30] = crawl failed because of a fetch error
     param[base_url] = http://ejechocard.oxfordjournals.org/
 
     au < manifest ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
-    au < ready ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -757,7 +757,7 @@ comment[eurh30] = crawl failed because of a fetch error
     param[base_url] = http://ejil.oxfordjournals.org/
 
     au < manifest ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
-    au < ready ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -770,7 +770,7 @@ comment[eurh30] = crawl failed because of a fetch error
     param[base_url] = http://eurjhf.oxfordjournals.org/
 
     au < manifest ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
-    au < ready ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2592,8 +2592,8 @@ comment[mplant] = no manifest page
     au < manifest ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
     au < tested ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
     au < tested ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
-    au < ready ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
-    au < ready ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2606,7 +2606,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rsq.oxfordjournals.org/
 
     au < manifest ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
-    au < ready ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2619,7 +2619,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rpc.oxfordjournals.org/
 
     au < manifest ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
-    au < ready ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2632,7 +2632,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://reep.oxfordjournals.org/
 
     au < manifest ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
-    au < ready ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2645,7 +2645,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rof.oxfordjournals.org/
 
     au < manifest ; 2008 ; Review of Finance Volume 12 ; 12 ; >
-    au < ready ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2658,7 +2658,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rfs.oxfordjournals.org/
 
     au < manifest ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
-    au < ready ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2671,7 +2671,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://rheumatology.oxfordjournals.org/
 
     au < manifest ; 2008 ; Rheumatology Volume 47 ; 47 ; >
-    au < ready ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2684,7 +2684,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
 
     au < manifest ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
-    au < ready ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2697,7 +2697,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://screen.oxfordjournals.org/
 
     au < manifest ; 2008 ; Screen Volume 49 ; 49 ; >
-    au < ready ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2710,7 +2710,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://scan.oxfordjournals.org/
 
     au < manifest ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
-    au < ready ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
 
   }
 
@@ -2723,7 +2723,7 @@ comment[mplant] = no manifest page
     param[base_url] = http://shm.oxfordjournals.org/
 
     au < manifest ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
-    au < ready ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    au < released ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
 

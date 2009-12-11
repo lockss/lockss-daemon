@@ -411,7 +411,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = jp
 
     au < manifest ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
-    au < ready ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
+    au < released ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
 
   }
 
@@ -742,7 +742,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrc
 
     au < manifest ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
-    au < ready ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
+    au < released ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
 
   }
 
@@ -755,7 +755,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrcardio
 
     au < manifest ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
-    au < ready ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
+    au < released ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -768,7 +768,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrclinonc
 
     au < manifest ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
-    au < ready ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
+    au < released ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
 
   }
 
@@ -781,7 +781,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrd
 
     au < manifest ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
-    au < ready ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
+    au < released ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
 
   }
 
@@ -820,7 +820,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrg
 
     au < manifest ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
-    au < ready ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
+    au < released ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -833,7 +833,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nri
 
     au < manifest ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
-    au < ready ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
+    au < released ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
 
   }
 
@@ -846,7 +846,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrmicro
 
     au < manifest ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
-    au < ready ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
+    au < released ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
 
   }
 
@@ -859,7 +859,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrm
 
     au < manifest ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 2008 ; 9 >
-    au < ready ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
+    au < released ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -898,7 +898,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrn
 
     au < manifest ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
-    au < ready ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
+    au < released ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
 
   }
 
@@ -911,7 +911,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrrheum
 
     au < manifest ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
-    au < ready ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
+    au < released ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
 
   }
 
@@ -996,7 +996,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = pcan
 
     au < manifest ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
-    au < ready ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
+    au < released ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
 
   }
 
@@ -1019,7 +1019,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = sc
 
     au < manifest ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
-    au < ready ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
+    au < released ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
 
   }
 
