@@ -5747,17 +5747,35 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 98 ; 98 >
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 99 ; 99 >
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 100 ; 100 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 101 ; 101 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 102 ; 102 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 103 ; 103 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 104 ; 104 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 105 ; 105 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 106 ; 106 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 101 ; 101 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 102 ; 102 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 103 ; 103 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 104 ; 104 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 105 ; 105 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 106 ; 106 >
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 107 ; 107 >
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 108 ; 108 >
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 109 ; 109 >
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 110 ; 110 >
         au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 111 ; 111 >
+
+      }
+
+    }
+
+    {
+
+      title <
+        name = Tree Physiology
+      >
+
+      {
+
+        param[base_url] = http://treephys.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; testing ; Tree Physiology Volume 28 ; 28 >
+        au < HighWirePressPlugin ; manifest ; Tree Physiology Volume 29 ; 29 >
 
       }
 
@@ -5776,7 +5794,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 12 ; 12 >
         au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 13 ; 13 >
-        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 14 ; 14 >
+        au < HighWirePressPlugin ; testing ; Trusts & Trustees Volume 14 ; 14 >
         au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 15 ; 15 >
 
       }
@@ -5807,7 +5825,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Twentieth Century British History Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; Twentieth Century British History Volume 17 ; 17 >
         au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 18 ; 18 >
-        au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 19 ; 19 >
+        au < HighWirePressPlugin ; testing ; Twentieth Century British History Volume 19 ; 19 >
         au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 20 ; 20 >
 
       }
@@ -5839,7 +5857,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; The World Bank Economic Review Volume 19 ; 19 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Economic Review Volume 20 ; 20 >
         au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 21 ; 21 >
-        au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 22 ; 22 >
+        au < HighWirePressPlugin ; testing ; The World Bank Economic Review Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 23 ; 23 >
 
       }
@@ -5870,7 +5888,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; The World Bank Research Observer Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Research Observer Volume 21 ; 21 >
         au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 22 ; 22 >
-        au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 23 ; 23 >
+        au < HighWirePressPlugin ; testing ; The World Bank Research Observer Volume 23 ; 23 >
         au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 24 ; 24 >
 
       }
@@ -5901,7 +5919,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
         au < HighWirePressPlugin ; manifest ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
+        au < HighWirePressPlugin ; testing ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
 
       }
 
@@ -5931,7 +5949,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in English Studies Volume 84 ; 84 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in English Studies Volume 85 ; 85 >
         au < HighWirePressPlugin ; manifest ; The Year's Work in English Studies Volume 86 ; 86 >
-        au < HighWirePressPlugin ; manifest ; The Year's Work in English Studies Volume 87 ; 87 >
+        au < HighWirePressPlugin ; testing ; The Year's Work in English Studies Volume 87 ; 87 >
 
       }
 
