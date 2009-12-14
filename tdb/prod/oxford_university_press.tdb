@@ -5273,16 +5273,16 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 125 ; 125 >
         au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 126 ; 126 >
         au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 127 ; 127 >
-        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 128 ; 128 >
-        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 129 ; 129 >
-        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 130 ; 130 >
-        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 131 ; 131 >
-        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 132 ; 132 >
+        au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 128 ; 128 >
+        au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 129 ; 129 >
+        au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 130 ; 130 >
+        au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 131 ; 131 >
+        au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 132 ; 132 >
         au < HighWirePressPlugin ; ready ; Radiation Protection Dosimetry Volume 133 ; 133 >
         au < HighWirePressPlugin ; ready ; Radiation Protection Dosimetry Volume 134 ; 134 >
         au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 135 ; 135 >
         au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 136 ; 136 >
-
+		au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 137 ; 137 >
       }
 
     }
@@ -5311,7 +5311,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Refugee Survey Quarterly Volume 24 ; 24 >
         au < HighWirePressPlugin ; doNotProcess ; Refugee Survey Quarterly Volume 25 ; 25 >
         au < HighWirePressPlugin ; manifest ; Refugee Survey Quarterly Volume 26 ; 26 >
-        au < HighWirePressPlugin ; manifest ; Refugee Survey Quarterly Volume 27 ; 27 >
+        au < HighWirePressPlugin ; testing ; Refugee Survey Quarterly Volume 27 ; 27 >
         au < HighWirePressPlugin ; manifest ; Refugee Survey Quarterly Volume 28 ; 28 >
 
       }
@@ -5342,7 +5342,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; The Review of English Studies Volume 56 ; 56 >
         au < HighWirePressPlugin ; doNotProcess ; The Review of English Studies Volume 57 ; 57 >
         au < HighWirePressPlugin ; manifest ; The Review of English Studies Volume 58 ; 58 >
-        au < HighWirePressPlugin ; manifest ; The Review of English Studies Volume 59 ; 59 >
+        au < HighWirePressPlugin ; testing ; The Review of English Studies Volume 59 ; 59 >
         au < HighWirePressPlugin ; manifest ; The Review of English Studies Volume 60 ; 60 >
 
       }
@@ -5361,7 +5361,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; manifest ; Review of Environmental Economics and Policy Volume 1 ; 1 >
-        au < HighWirePressPlugin ; manifest ; Review of Environmental Economics and Policy Volume 2 ; 2 >
+        au < HighWirePressPlugin ; testing ; Review of Environmental Economics and Policy Volume 2 ; 2 >
         au < HighWirePressPlugin ; manifest ; Review of Environmental Economics and Policy Volume 3 ; 3 >
 
       }
@@ -5381,7 +5381,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; manifest ; Review of Finance Volume 10 ; 10 >
         au < HighWirePressPlugin ; manifest ; Review of Finance Volume 11 ; 11 >
-        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 12 ; 12 >
+        au < HighWirePressPlugin ; testing ; Review of Finance Volume 12 ; 12 >
         au < HighWirePressPlugin ; manifest ; Review of Finance Volume 13 ; 13 >
 
       }
@@ -5412,7 +5412,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Review of Financial Studies Volume 18 ; 18 >
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; released ; Review of Financial Studies Volume 20 ; 20 >
-        au < HighWirePressPlugin ; manifest ; Review of Financial Studies Volume 21 ; 21 >
+        au < HighWirePressPlugin ; testing ; Review of Financial Studies Volume 21 ; 21 >
         au < HighWirePressPlugin ; manifest ; Review of Financial Studies Volume 22 ; 22 >
 
       }
