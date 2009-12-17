@@ -465,7 +465,7 @@ comment[aob103_104] = fetch error
 
     au < tested ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
     au < tested ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
-    au < testing ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
+    au < tested ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
     au < tested ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
     au < released ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
     au < released ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
@@ -482,7 +482,7 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://cercor.oxfordjournals.org/
 
-    au < testing ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
+    au < tested ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
     au < released ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
 
   }
@@ -574,7 +574,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://comjnl.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
+    au < tested ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
     au < released ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
 
   }
@@ -587,7 +587,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://cww.oxfordjournals.org/
 
-    au < testing ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
+    au < tested ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
     au < released ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; reingest4.clockss.org:8082 >
 
   }
@@ -613,7 +613,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://cpe.oxfordjournals.org/
 
-    au < testing ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
+    au < tested ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
     au < released ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; reingest4.clockss.org:8082 >
 
   }
@@ -626,7 +626,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://dnaresearch.oxfordjournals.org/
 
-    au < testing ; 2008 ; DNA Research Volume 15 ; 15 ; >
+    au < tested ; 2008 ; DNA Research Volume 15 ; 15 ; >
     au < released ; 2009 ; DNA Research Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
   }
@@ -639,7 +639,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://em.oxfordjournals.org/
 
-    au < testing ; 2008 ; Early Music Volume 36 ; 36 ; >
+    au < tested ; 2008 ; Early Music Volume 36 ; 36 ; >
     au < released ; 2009 ; Early Music Volume 37 ; 37 ; reingest4.clockss.org:8082 >
 
   }
@@ -665,7 +665,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://es.oxfordjournals.org/
 
-    au < testing ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
+    au < tested ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
     au < released ; 2009 ; Enterprise & Society: The International Journal of Business History Volume 10 ; 10 ; reingest4.clockss.org:8082 >
 
   }
@@ -691,7 +691,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://epirev.oxfordjournals.org/
 
-    au < testing ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
+    au < tested ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
 
   }
 
@@ -890,7 +890,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fh.oxfordjournals.org/
 
-    au < manifest ; 2008 ; French History Volume 22 ; 22 ; >
+    au < testing ; 2008 ; French History Volume 22 ; 22 ; >
     au < released ; 2009 ; French History Volume 23 ; 23 ; reingest4.clockss.org:8082 >
 
   }
@@ -903,7 +903,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fs.oxfordjournals.org/
 
-    au < manifest ; 2008 ; French Studies Volume 62 ; 62 ; >
+    au < testing ; 2008 ; French Studies Volume 62 ; 62 ; >
     au < released ; 2009 ; French Studies Volume 63 ; 63 ; reingest4.clockss.org:8082 >
 
   }
@@ -916,7 +916,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://gh.oxfordjournals.org/
 
-    au < manifest ; 2008 ; German History Volume 26 ; 26 ; >
+    au < testing ; 2008 ; German History Volume 26 ; 26 ; >
     au < released ; 2009 ; German History Volume 27 ; 27 ; reingest4.clockss.org:8082 >
 
   }
@@ -941,7 +941,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://glycob.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Glycobiology Volume 18 ; 18 ; >
+    au < testing ; 2008 ; Glycobiology Volume 18 ; 18 ; >
     au < released ; 2009 ; Glycobiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
 
   }
@@ -953,7 +953,7 @@ comment[fampra26] = fetch error
     >
 
     param[base_url] = http://her.oxfordjournals.org/
-
+testing
     au < manifest ; 2008 ; Health Education Research Volume 23 ; 23 ; >
     au < released ; 2009 ; Health Education Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
@@ -967,7 +967,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://heapol.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
+    au < testing ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
     au < released ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
   }
@@ -980,7 +980,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://heapro.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
+    au < testing ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
     au < released ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
   }
@@ -993,8 +993,8 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hwj.oxfordjournals.org/
 
-    au < manifest ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
-    au < manifest ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
+    au < testing ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
+    au < testing ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
     au < released ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
     au < released ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
 
@@ -1008,7 +1008,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hgs.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
+    au < testing ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
     au < released ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
   }
@@ -1021,7 +1021,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hmg.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
+    au < testing ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
     au < released ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
 
   }
@@ -1034,7 +1034,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://humrep.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
+    au < testing ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < released ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
@@ -1047,7 +1047,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://humupd.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
+    au < testing ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
     au < released ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
   }
@@ -1060,7 +1060,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hrlr.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
+    au < testing ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
     au < released ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; reingest3.clockss.org:8083 >
 
   }
@@ -1073,7 +1073,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://icesjms.oxfordjournals.org/
 
-    au < manifest ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
+    au < testing ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
     au < released ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
 
   }
@@ -1086,7 +1086,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietcom.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IEICE - Transactions on Communications Volume E91-B ; E91-B ; >
+    au < testing ; 2008 ; IEICE - Transactions on Communications Volume E91-B ; E91-B ; >
 
   }
 
@@ -1098,7 +1098,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietele.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IEICE - Transactions on Electronics Volume E91-C ; E91-C ; >
+    au < testing ; 2008 ; IEICE - Transactions on Electronics Volume E91-C ; E91-C ; >
 
   }
 
@@ -1110,7 +1110,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietfec.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IEICE - Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A ; E91-A ; >
+    au < testing ; 2008 ; IEICE - Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A ; E91-A ; >
 
   }
 
@@ -1122,7 +1122,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietisy.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IEICE - Transactions on Information and Systems Volume E91-D ; E91-D ; >
+    au < testing ; 2008 ; IEICE - Transactions on Information and Systems Volume E91-D ; E91-D ; >
 
   }
 
@@ -1134,7 +1134,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imamat.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
+    au < testing ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
     au < released ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
 
   }
@@ -1147,7 +1147,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imaman.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
+    au < testing ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
     au < released ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
   }
@@ -1160,7 +1160,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imamci.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
+    au < testing ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
     au < released ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; reingest3.clockss.org:8083 >
 
   }
@@ -1173,7 +1173,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imajna.oxfordjournals.org/
 
-    au < manifest ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
+    au < testing ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
     au < released ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; reingest2.clockss.org:8085 >
 
   }
@@ -1186,7 +1186,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://icc.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
+    au < testing ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
     au < released ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; reingest2.clockss.org:8085 >
 
   }
@@ -1199,7 +1199,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ilj.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
+    au < testing ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
     au < released ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; reingest2.clockss.org:8085 >
 
   }
@@ -1212,7 +1212,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
 
-    au < manifest ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+    au < testing ; 2008 ; InnovAiT Volume 1 ; 1 ; >
     au < released ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
   }
@@ -1225,7 +1225,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://icb.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
+    au < testing ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
     au < released ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
 
   }
@@ -1238,7 +1238,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://isle.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
+    au < testing ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
     au < released ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; reingest2.clockss.org:8085 >
 
   }
@@ -1251,7 +1251,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://intimm.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Immunology Volume 20 ; 20 ; >
+    au < testing ; 2008 ; International Immunology Volume 20 ; 20 ; >
     au < released ; 2009 ; International Immunology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
 
   }
@@ -1264,7 +1264,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://icon.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
+    au < testing ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
     au < released ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; reingest2.clockss.org:8085 >
 
   }
@@ -1277,7 +1277,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ije.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
+    au < testing ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
     au < released ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
 
   }
@@ -1290,7 +1290,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ijlit.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
+    au < testing ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
     au < released ; 2009 ; International Journal of Law and Information Technology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
 
   }
