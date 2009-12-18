@@ -58,6 +58,7 @@ org.lockss.comm.router.beacon.interval=1m
 org.lockss.poll.v3.toplevelPollInterval=5m
 
 # V3
+org.lockss.poll.v3.enableV3Poller=false
 org.lockss.poll.defaultPollProtocol=3
 org.lockss.scomm.enabled=true
 org.lockss.scomm.maxMessageSize=33554430

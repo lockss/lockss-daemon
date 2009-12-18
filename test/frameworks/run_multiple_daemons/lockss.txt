@@ -11,6 +11,7 @@ org.lockss.proxy.start=no
 org.lockss.comm.enabled=false
 
 # V3
+org.lockss.poll.v3.enableV3Poller=false
 org.lockss.poll.defaultPollProtocol=3
 org.lockss.scomm.enabled=true
 org.lockss.scomm.maxMessageSize=33554430
