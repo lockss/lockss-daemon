@@ -57,7 +57,7 @@ print "single file mode\n";
   my $source_location = abs_path($ARGV[0]);
   my $dest_location = $source_location;
   $dest_location =~ s/clockssingest/clockssinterim/i;
-  
+
   iterate_lines ($source_location, $dest_location, "tostdout");  
   
 }
@@ -83,6 +83,13 @@ sub iterate_lines {
     
     } 
     elsif ($lines[$k] =~ m/au\s*</) {
+    
+    }
+    elsif ($lines[$k] =~ m/implicit <.*? comment\[proxy\] .*?>/) {
+
+      $lines[$k] =~ s/comment\[proxy\]/proxy/i;
+    
+      if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }    
     
     }
     else {
