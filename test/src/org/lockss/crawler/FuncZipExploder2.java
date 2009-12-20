@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.11 2009-12-09 00:08:19 tlipkis Exp $
+ * $Id: FuncZipExploder2.java,v 1.12 2009-12-20 03:56:58 dshr Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class FuncZipExploder2 extends LockssTestCase {
   PluginManager pluginMgr;
 
   private static String URL_PREFIX =
-    "http://springer.clockss.org/PUB=Springer-Verlag-Berlin-Heidelberg/JOU=00109/VOL=83/ISU=12";
+    "http://springer.clockss.org/JOU=00109/VOL=83/ISU=12";
   static String[] url = {
     URL_PREFIX + "/ART=2005_719/109_2005_Article_719.xml.meta",
     URL_PREFIX + "/ART=2005_719/BodyRef/PDF/109_2005_Article_719.pdf",

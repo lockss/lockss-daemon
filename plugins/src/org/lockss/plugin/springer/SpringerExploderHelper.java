@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerExploderHelper.java,v 1.6 2009-09-05 18:03:27 dshr Exp $
+ * $Id: SpringerExploderHelper.java,v 1.7 2009-12-20 03:56:58 dshr Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.crawler.Exploder;
  * archive containing additions to a directory tree whose
  * layers are:
  *
- * 1. <code>PUB=${PUBLISHER}</code>
+ * 1. <code>PUB=${PUBLISHER}</code> As of 11/24/09 this layer removed
  *
  * 2. <code>JOU=${JOURNAL_ID}</code>
  *
@@ -66,7 +66,7 @@ import org.lockss.crawler.Exploder;
  *
  * This class maps this into base URLs that look like:
  *
- * <code>http://springer.clockss.org/PUB=${PUBLISHER}/JOU=${JOURNAL_ID}/
+ * <code>http://springer.clockss.org/JOU=${JOURNAL_ID}/
  *
  * and the rest of the url inside the AU is the rest of the name of the entry.
  * It synthesizes suitable header fields for the files based on their
@@ -78,14 +78,15 @@ import org.lockss.crawler.Exploder;
  */
 public class SpringerExploderHelper implements ExploderHelper {
   private static final String BASE_URL_STEM = "http://springer.clockss.org/";
-  static final String[] tags = { "PUB=", "JOU=", "VOL=", "ISU=", "ART=" };
-  private static final int PUB_INDEX = 0;
-  private static final int JOU_INDEX = 1;
-  private static final int VOL_INDEX = 2;
-  private static final int ISU_INDEX = 3;
-  private static final int ART_INDEX = 4;
-  static final int endOfBase = 1;
-  static final int minimumPathLength = 5;
+  static final String[] tags = { "JOU=", "VOL=", "ISU=", "ART=" };
+  private static final String PUB_FLAG = "PUB=";
+  private static final String PUB_NAME = "Springer";
+  private static final int JOU_INDEX = 0;
+  private static final int VOL_INDEX = 1;
+  private static final int ISU_INDEX = 2;
+  private static final int ART_INDEX = 3;
+  static final int endOfBase = 0;
+  static final int minimumPathLength = 4;
   static Logger logger = Logger.getLogger("SpringerExploderHelper");
 
   public SpringerExploderHelper() {
@@ -94,9 +95,20 @@ public class SpringerExploderHelper implements ExploderHelper {
   public void process(ArchiveEntry ae) {
     String baseUrl = BASE_URL_STEM;
     // Parse the name
-    String[] pathElements = ae.getName().split("/");
+    String entryName = ae.getName();
+    // Remove PUB= prefix
+    if (entryName.startsWith(PUB_FLAG)) {
+      int firstSlash = entryName.indexOf("/");
+      if (firstSlash > 0) {
+	entryName = entryName.substring(firstSlash+1);
+      } else {
+	logger.warning("Path " + entryName + " malformaeed");
+	return;
+      }
+    }
+    String[] pathElements = entryName.split("/");
     if (pathElements.length < minimumPathLength) {
-      logger.warning("Path " + ae.getName() + " too short");
+      logger.warning("Path " + entryName + " too short");
       return;
     }
     for (int i = 0; i < pathElements.length; i++) {
@@ -106,13 +118,20 @@ public class SpringerExploderHelper implements ExploderHelper {
       if (pathElements[i].startsWith(tags[i])) {
 	baseUrl += pathElements[i] + "/";
       } else {
-	logger.warning("Element " + i + " of " + ae.getName() +
+	logger.warning("Element " + i + " of " + entryName +
 		       " should be " + tags[i]);
 	return;
       }
     }
     String restOfUrl = "";
     for (int i = (endOfBase + 1); i < pathElements.length ; i++) {
+      if (i <= ART_INDEX) {
+	if (!pathElements[i].startsWith(tags[i])) {
+	  logger.warning("Element " + i + " of " + entryName +
+			 " should be " + tags[i]);
+	  return;
+	}
+      }
       restOfUrl += pathElements[i];
       if ((i + 1) < pathElements.length) {
 	restOfUrl += "/";
@@ -120,7 +139,7 @@ public class SpringerExploderHelper implements ExploderHelper {
     }
     CIProperties headerFields = Exploder.syntheticHeaders(baseUrl + restOfUrl,
 							  ae.getSize());
-    logger.debug(ae.getName() + " mapped to " +
+    logger.debug(entryName + " mapped to " +
 		 baseUrl + " plus " + restOfUrl);
     logger.debug3(baseUrl + restOfUrl + " props " + headerFields);
     ae.setBaseUrl(baseUrl);
@@ -150,7 +169,7 @@ public class SpringerExploderHelper implements ExploderHelper {
     CIProperties props = new CIProperties();
     props.put(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.put(ConfigParamDescr.PUBLISHER_NAME.getKey(),
-	      pathElements[PUB_INDEX].substring(4));
+	      PUB_NAME);
     props.put(ConfigParamDescr.JOURNAL_ISSN.getKey(),
 	      pathElements[JOU_INDEX].substring(4));
     props.put(ConfigParamDescr.YEAR.getKey(),
