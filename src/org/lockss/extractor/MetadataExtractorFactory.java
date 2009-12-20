@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataExtractorFactory.java,v 1.1 2009-05-22 19:14:54 dshr Exp $
+ * $Id: MetadataExtractorFactory.java,v 1.2 2009-12-20 00:05:00 dshr Exp $
  */
 
 /*
@@ -38,8 +38,8 @@ import org.lockss.daemon.*;
 public interface MetadataExtractorFactory {
   /**
    * Create a MetadataExtractor
-   * @param mimeType the MIME type from which to extract URLs
+   * @param contentType the MIME type from which to extract URLs
    */
-  public MetadataExtractor createMetadataExtractor(String mimeType)
+  public MetadataExtractor createMetadataExtractor(String contentType)
       throws PluginException;
 }
