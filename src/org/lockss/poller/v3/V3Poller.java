@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.99 2009-10-08 02:10:15 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.100 2009-12-22 02:19:43 tlipkis Exp $
  */
 
 /*
@@ -101,12 +101,13 @@ public class V3Poller extends BasePoll {
   // The poll expired while it was hibernated
   public static final int POLLER_STATUS_EXPIRED = 9;
   public static final int POLLER_STATUS_WAITING_REPAIRS = 10;
+  public static final int POLLER_STATUS_ABORTED = 11;
 
   public static final String[] POLLER_STATUS_STRINGS =
   {
    "Starting", "No Time Available", "Resuming", "Inviting Peers", "Hashing",
    "Tallying", "Complete", "No Quorum", "Error", "Expired", 
-   "Waiting for Repairs",
+   "Waiting for Repairs", "Aborted",
   };
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
@@ -871,6 +872,10 @@ public class V3Poller extends BasePoll {
    */
   public void stopPoll() {
     stopPoll(POLLER_STATUS_COMPLETE);
+  }
+
+  public void abortPoll() {
+    stopPoll(POLLER_STATUS_ABORTED);
   }
 
   /**

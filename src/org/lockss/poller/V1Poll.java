@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.32 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: V1Poll.java,v 1.33 2009-12-22 02:19:43 tlipkis Exp $
  */
 
 /*
@@ -442,6 +442,11 @@ public abstract class V1Poll extends BasePoll {
     }
     m_pollmanager.closeThePoll(m_key);
     log.debug3("closed the poll:" + m_key);
+  }
+
+  public void abortPoll() {
+    m_pollstate = ERR_ABORTED;
+    stopPoll();
   }
 
   /**

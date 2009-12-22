@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.92 2005-11-16 07:44:10 smorabito Exp $
+* $Id: Poll.java,v 1.93 2009-12-22 02:19:43 tlipkis Exp $
  */
 
 /*
@@ -83,6 +83,10 @@ public interface Poll {
    */
   public static final int ERR_IO = -3;
   /**
+   * Poll aborted (e.g., due to AU inactivated)
+   */
+  public static final int ERR_ABORTED = -4;
+  /**
    * Returns true if the poll belongs to this Identity
    * @return true if  we called the poll
    */
@@ -139,6 +143,11 @@ public interface Poll {
    * Stop a poll.
    */
   public void stopPoll();
+
+  /**
+   * Abort a poll.
+   */
+  public void abortPoll();
 
   /**
    * Return the type of the poll.

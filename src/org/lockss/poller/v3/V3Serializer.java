@@ -1,5 +1,5 @@
 /*
- * $Id: V3Serializer.java,v 1.15 2008-02-21 01:08:20 tlipkis Exp $
+ * $Id: V3Serializer.java,v 1.16 2009-12-22 02:19:43 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public abstract class V3Serializer {
     this.daemon = daemon;
     this.pollDir = dir;
     if (!pollDir.exists()) {
-      throw new IllegalArgumentException("Poll directories passed as"
+      throw new IllegalArgumentException("Poll directories passed as "
                                          + "arguments must already exist");
     }
   }

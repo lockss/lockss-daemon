@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.68 2009-07-22 06:39:22 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.69 2009-12-22 02:19:43 tlipkis Exp $
  */
 
 /*
@@ -74,12 +74,13 @@ public class V3Voter extends BasePoll {
   public static final int STATUS_ERROR = 7;
   public static final int STATUS_DECLINED_POLL = 8;
   public static final int STATUS_VOTE_ACCEPTED = 9;
+  public static final int STATUS_ABORTED = 10;
   
   public static final String[] STATUS_STRINGS = 
   {
    "Initialized", "Accepted Poll", "Hashing", "Voted",
    "No Time Available", "Complete", "Expired w/o Voting", "Error",
-   "Declined Poll", "Vote Accepted"
+   "Declined Poll", "Vote Accepted", "Aborted",
   };
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
@@ -478,7 +479,7 @@ public class V3Voter extends BasePoll {
     return new PsmInterp.ErrorHandler() {
 	public void handleError(PsmException e) {
 	  log.warning(msg, e);
-	  abortPoll();
+	  abortPollWithError();
 	}
       };
   }
@@ -580,7 +581,7 @@ public class V3Voter extends BasePoll {
 				     ehAbortPoll(msg));
 	} catch (PsmException e) {
 	  log.warning(msg, e);
-	  abortPoll();
+	  abortPollWithError();
 	}
       } else {
 	String msg = "Error starting poll";
@@ -588,7 +589,7 @@ public class V3Voter extends BasePoll {
 	  stateMachine.enqueueStart(ehAbortPoll(msg));
 	} catch (PsmException e) {
 	  log.warning(msg, e);
-	  abortPoll();
+	  abortPollWithError();
 	}
       }
     } else {
@@ -597,14 +598,14 @@ public class V3Voter extends BasePoll {
 	  stateMachine.resume(voterUserData.getPsmState());
 	} catch (PsmException e) {
 	  log.warning("Error resuming poll", e);
-	  abortPoll();
+	  abortPollWithError();
 	}
       } else {
 	try {
 	  stateMachine.start();
 	} catch (PsmException e) {
 	  log.warning("Error starting poll", e);
-	  abortPoll();
+	  abortPollWithError();
 	}
       }
     }
@@ -644,7 +645,14 @@ public class V3Voter extends BasePoll {
   /**
    * Stop the poll with STATUS_ERROR.
    */
-  private void abortPoll() {
+  public void abortPoll() {
+    stopPoll(STATUS_ERROR);
+  }
+
+  /**
+   * Stop the poll with STATUS_ERROR.
+   */
+  private void abortPollWithError() {
     stopPoll(STATUS_ERROR);
   }
 
@@ -688,7 +696,7 @@ public class V3Voter extends BasePoll {
 	stateMachine.handleEvent(evt);
       } catch (PsmException e) {
 	log.warning(errmsg, e);
-	abortPoll();
+	abortPollWithError();
       }
     }
     // Finally, clean up after the V3LcapMessage
@@ -906,7 +914,7 @@ public class V3Voter extends BasePoll {
 	stateMachine.handleEvent(V3Events.evtHashingDone);
       } catch (PsmException e) {
 	log.warning(errmsg, e);
-	abortPoll();
+	abortPollWithError();
       }
     }
   }
@@ -945,7 +953,7 @@ public class V3Voter extends BasePoll {
       if (++blockErrorCount > maxBlockErrorCount) {
         log.critical("Too many errors while trying to create my vote blocks, " +
                      "aborting participation in poll " + getKey());
-        abortPoll();
+        abortPollWithError();
       }
     }
   }
@@ -1055,7 +1063,7 @@ public class V3Voter extends BasePoll {
           log.warning("Hash failed : " + e.getMessage(), e);
           voterUserData.setErrorDetail(e.getMessage());
 	  sendNak(V3LcapMessage.PollNak.NAK_HASH_ERROR);
-          abortPoll();
+          abortPollWithError();
         }
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.207 2009-03-05 05:42:01 tlipkis Exp $
+ * $Id: PollManager.java,v 1.208 2009-12-22 02:19:43 tlipkis Exp $
  */
 
 /*
@@ -519,7 +519,7 @@ public class PollManager
     for (PollManagerEntry pme : toCancel) {
       ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
       theHashService.cancelAuHashes(pau);
-      pme.poll.stopPoll();
+      pme.poll.abortPoll();
     }
   }
 
@@ -1582,6 +1582,7 @@ public class PollManager
           theLog.error("Unable to restore poller from dir: " + dir, e);
         }
       }
+      serializedPollers.remove(au.getAuId());
     }
     
     // Restore any voters for this AU.
@@ -1598,6 +1599,7 @@ public class PollManager
           theLog.error("Unable to restore poller from dir: " + dir, e);
         }
       }
+      serializedVoters.remove(au.getAuId());
     }
   }
 
