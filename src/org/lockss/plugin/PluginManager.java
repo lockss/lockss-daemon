@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.200 2009-12-10 23:12:54 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.201 2009-12-22 02:19:01 tlipkis Exp $
  */
 
 /*
@@ -113,14 +113,14 @@ public class PluginManager
   static final String KEYSTORE_PREFIX = PREFIX + "keystore.";
 
   /** The location of a Java JKS keystore to use for verifying
-      loadable plugins (optional). */
+      loadable plugins.  Defaults to the keystore packaged with the daemon. */
   static final String PARAM_KEYSTORE_LOCATION = KEYSTORE_PREFIX + "location";
   static final String DEFAULT_KEYSTORE_LOCATION =
     "org/lockss/plugin/lockss.keystore";
-  /** The password to use when opening the loadable plugin
-      verification keystore (optional). */
+  /** The password for the loadable plugin verification keystore.
+      (Not needed, generally should not be set.) */
   static final String PARAM_KEYSTORE_PASSWORD = KEYSTORE_PREFIX + "password";
-  static final String DEFAULT_KEYSTORE_PASSWORD = "password";
+  static final String DEFAULT_KEYSTORE_PASSWORD = null;
 
   /** Common prefix of user-specified plugin keystore params */
   static final String USER_KEYSTORE_PREFIX = PREFIX + "userKeystore.";
@@ -1983,27 +1983,39 @@ public class PluginManager
 
   /**
    * Initialize and return the keystore.
+   * @param keystoreLoc Location of keystore to use to verify plugin
+   * signatures.  Can be
+   *  - Absolute path to file (starts with File.separator), or
+   *  - URL of keystore (http: or file:), or
+   *  - Resource name of keystore on classpath.
+   * @param keystorePass Keystore password isn't required to verify
+   * signatures so should usually be null.  If non-null, it must be
+   * correct.
    */
   KeyStore initKeystore(String keystoreLoc, String keystorePass) {
     KeyStore ks = null;
     try {
-      if (keystoreLoc == null || keystorePass == null) {
-	log.error("Unable to load keystore!  Loadable plugins will " +
+      if (keystoreLoc == null) {
+	log.error("Plugin keystore not specified, loadable plugins will" +
 		  "not be available.");
       } else {
+	char[] passchar = null;
+	if (keystorePass != null) {
+	  passchar = keystorePass.toCharArray();
+	}
 	log.debug("Loading keystore: " + keystoreLoc);
         ks = KeyStore.getInstance("JKS", "SUN");
 	if (keystoreLoc.startsWith(File.separator)) {
 	  InputStream kin = new FileInputStream(new File(keystoreLoc));
 	  try {
-	    ks.load(kin, keystorePass.toCharArray());
+ 	    ks.load(kin, passchar);
 	  } finally {
 	    IOUtil.safeClose(kin);
 	  }
 	} else if (UrlUtil.isHttpUrl(keystoreLoc) ||
                    UrlUtil.isFileUrl(keystoreLoc)) {
 	  URL keystoreUrl = new URL(keystoreLoc);
-          ks.load(keystoreUrl.openStream(), keystorePass.toCharArray());
+          ks.load(keystoreUrl.openStream(), passchar);
         } else {
 	  InputStream kin =
 	    getClass().getClassLoader().getResourceAsStream(keystoreLoc);
@@ -2011,7 +2023,7 @@ public class PluginManager
 	    throw new IOException("Keystore reousrce not found: " +
 				  keystoreLoc);
 	  }
-	  ks.load(kin, keystorePass.toCharArray());
+	  ks.load(kin, passchar);
 	}
       }
 
