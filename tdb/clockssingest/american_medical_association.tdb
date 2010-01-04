@@ -290,6 +290,28 @@
     >
     
     param[base_url] = http://archinte.ama-assn.org/
+    au < manifest ; 1908 ; Archives of Internal Medicine Volume I ; I ; reingest1.clockss.org:8082 >
+    au < manifest ; 1908 ; Archives of Internal Medicine Volume II ; II ; reingest1.clockss.org:8082 >
+    au < manifest ; 1909 ; Archives of Internal Medicine Volume III ; III ; reingest2.clockss.org:8085 >
+    au < manifest ; 1909 ; Archives of Internal Medicine Volume IV ; IV ; reingest2.clockss.org:8085 >
+    au < manifest ; 1910 ; Archives of Internal Medicine Volume V ; V ; reingest3.clockss.org:8083 >
+    au < manifest ; 1910 ; Archives of Internal Medicine Volume VI ; VI ; reingest3.clockss.org:8083 >
+    au < manifest ; 1911 ; Archives of Internal Medicine Volume VII ; VII ; reingest4.clockss.org:8082 >
+    au < manifest ; 1911 ; Archives of Internal Medicine Volume VIII ; VIII ; reingest4.clockss.org:8082 >
+    au < manifest ; 1912 ; Archives of Internal Medicine Volume IX ; IX ; reingest1.clockss.org:8082 >
+    au < manifest ; 1912 ; Archives of Internal Medicine Volume X ; X ; reingest1.clockss.org:8082 >
+    au < manifest ; 1913 ; Archives of Internal Medicine Volume XI ; XI ; reingest2.clockss.org:8085 >
+    au < manifest ; 1913 ; Archives of Internal Medicine Volume XII ; XII ; reingest2.clockss.org:8085 >
+    au < manifest ; 1914 ; Archives of Internal Medicine Volume XIII ; XIII ; reingest3.clockss.org:8083 >
+    au < manifest ; 1914 ; Archives of Internal Medicine Volume XIV ; XIV ; reingest3.clockss.org:8083 >
+    au < manifest ; 1915 ; Archives of Internal Medicine Volume XV ; XV ; reingest4.clockss.org:8082 >
+    au < manifest ; 1915 ; Archives of Internal Medicine Volume XVI ; XVI ; reingest4.clockss.org:8082 >
+    au < manifest ; 1916 ; Archives of Internal Medicine Volume XVII ; XVII ; reingest1.clockss.org:8082 >
+    au < manifest ; 1916 ; Archives of Internal Medicine Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >
+    au < manifest ; 1917 ; Archives of Internal Medicine Volume XIX ; XIX ; reingest2.clockss.org:8085 >
+    au < manifest ; 1917 ; Archives of Internal Medicine Volume XX ; XX ; reingest2.clockss.org:8085 >
+    au < manifest ; 1918 ; Archives of Internal Medicine Volume XXI ; XXI ; reingest3.clockss.org:8083 >
+    au < manifest ; 1918 ; Archives of Internal Medicine Volume XXII ; XXII ; reingest3.clockss.org:8083 >
     au < manifest ; 1919 ; Archives of Internal Medicine Volume 23 ; 23 ; reingest4.clockss.org:8082 >                                                                    
     au < manifest ; 1919 ; Archives of Internal Medicine Volume 24 ; 24 ; reingest4.clockss.org:8082 >                                                                    
     au < manifest ; 1920 ; Archives of Internal Medicine Volume 25 ; 25 ; reingest1.clockss.org:8082 >                                                                    
@@ -806,6 +828,18 @@
     >
     
     param[base_url] = http://archpedi.ama-assn.org/
+    au < manifest ; 1911 ; American Journal of Diseases of Children Volume I ; I ; reingest4.clockss.org:8082 >
+    au < manifest ; 1911 ; American Journal of Diseases of Children Volume II ; II ; reingest4.clockss.org:8082 >
+    au < manifest ; 1912 ; American Journal of Diseases of Children Volume III ; III ; reingest1.clockss.org:8082 >
+    au < manifest ; 1912 ; American Journal of Diseases of Children Volume IV ; IV ; reingest1.clockss.org:8082 >
+    au < manifest ; 1913 ; American Journal of Diseases of Children Volume V ; V ; reingest2.clockss.org:8085 >
+    au < manifest ; 1913 ; American Journal of Diseases of Children Volume VI ; VI ; reingest2.clockss.org:8085 >
+    au < manifest ; 1914 ; American Journal of Diseases of Children Volume VII ; VII ; reingest3.clockss.org:8083 >
+    au < manifest ; 1914 ; American Journal of Diseases of Children Volume VIII ; VIII ; reingest3.clockss.org:8083 >
+    au < manifest ; 1915 ; American Journal of Diseases of Children Volume IX ; IX ; reingest4.clockss.org:8082 >
+    au < manifest ; 1915 ; American Journal of Diseases of Children Volume X ; X ; reingest4.clockss.org:8082 >
+    au < manifest ; 1916 ; American Journal of Diseases of Children Volume XI ; XI ; reingest1.clockss.org:8082 >
+    au < manifest ; 1916 ; American Journal of Diseases of Children Volume XII ; XII ; reingest1.clockss.org:8082 >    
     au < manifest ; 1917 ; American Journal of Diseases of Children Volume 13 ; 13 ; reingest2.clockss.org:8085 >                                                         
     au < manifest ; 1917 ; American Journal of Diseases of Children Volume 14 ; 14 ; reingest2.clockss.org:8085 >                                                         
     au < manifest ; 1918 ; American Journal of Diseases of Children Volume 15 ; 15 ; reingest3.clockss.org:8083 >                                                         
@@ -1125,6 +1159,75 @@
 
     param[base_url] = http://jama.ama-assn.org/
 
+    au < manifest ; 1883 ; Journal of the American Medical Association Volume I ; I ; reingest4.clockss.org:8082 >                                              
+    au < manifest ; 1884 ; Journal of the American Medical Association Volume II ; II ; reingest1.clockss.org:8082 >                                            
+    au < manifest ; 1884 ; Journal of the American Medical Association Volume III ; III ; reingest1.clockss.org:8082 >                                          
+    au < manifest ; 1885 ; Journal of the American Medical Association Volume IV ; IV ; reingest2.clockss.org:8085 >                                            
+    au < manifest ; 1885 ; Journal of the American Medical Association Volume V ; V ; reingest2.clockss.org:8085 >                                              
+    au < manifest ; 1886 ; Journal of the American Medical Association Volume VI ; VI ; reingest3.clockss.org:8083 >                                            
+    au < manifest ; 1886 ; Journal of the American Medical Association Volume VII ; VII ; reingest3.clockss.org:8083 >                                          
+    au < manifest ; 1887 ; Journal of the American Medical Association Volume VIII ; VIII ; reingest4.clockss.org:8082 >                                        
+    au < manifest ; 1887 ; Journal of the American Medical Association Volume IX ; IX ; reingest4.clockss.org:8082 >                                            
+    au < manifest ; 1888 ; Journal of the American Medical Association Volume X ; X ; reingest1.clockss.org:8082 >                                              
+    au < manifest ; 1888 ; Journal of the American Medical Association Volume XI ; XI ; reingest1.clockss.org:8082 >                                            
+    au < manifest ; 1889 ; Journal of the American Medical Association Volume XII ; XII ; reingest2.clockss.org:8085 >                                          
+    au < manifest ; 1889 ; Journal of the American Medical Association Volume XIII ; XIII ; reingest2.clockss.org:8085 >                                        
+    au < manifest ; 1890 ; Journal of the American Medical Association Volume XIV ; XIV ; reingest3.clockss.org:8083 >                                          
+    au < manifest ; 1890 ; Journal of the American Medical Association Volume XV ; XV ; reingest3.clockss.org:8083 >                                            
+    au < manifest ; 1891 ; Journal of the American Medical Association Volume XVI ; XVI ; reingest4.clockss.org:8082 >                                          
+    au < manifest ; 1891 ; Journal of the American Medical Association Volume XVII ; XVII ; reingest4.clockss.org:8082 >                                        
+    au < manifest ; 1892 ; Journal of the American Medical Association Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >                                      
+    au < manifest ; 1892 ; Journal of the American Medical Association Volume XIX ; XIX ; reingest1.clockss.org:8082 >                                          
+    au < manifest ; 1893 ; Journal of the American Medical Association Volume XX ; XX ; reingest2.clockss.org:8085 >                                            
+    au < manifest ; 1893 ; Journal of the American Medical Association Volume XXI ; XXI ; reingest2.clockss.org:8085 >                                          
+    au < manifest ; 1894 ; Journal of the American Medical Association Volume XXII ; XXII ; reingest3.clockss.org:8083 >                                        
+    au < manifest ; 1894 ; Journal of the American Medical Association Volume XXIII ; XXIII ; reingest3.clockss.org:8083 >                                      
+    au < manifest ; 1895 ; Journal of the American Medical Association Volume XXIV ; XXIV ; reingest4.clockss.org:8082 >                                        
+    au < manifest ; 1895 ; Journal of the American Medical Association Volume XXV ; XXV ; reingest4.clockss.org:8082 >                                          
+    au < manifest ; 1896 ; Journal of the American Medical Association Volume XXVI ; XXVI ; reingest1.clockss.org:8082 >                                        
+    au < manifest ; 1896 ; Journal of the American Medical Association Volume XXVII ; XXVII ; reingest1.clockss.org:8082 >                                      
+    au < manifest ; 1897 ; Journal of the American Medical Association Volume XXVIII ; XXVIII ; reingest2.clockss.org:8085 >                                    
+    au < manifest ; 1897 ; Journal of the American Medical Association Volume XXIX ; XXIX ; reingest2.clockss.org:8085 >                                        
+    au < manifest ; 1898 ; Journal of the American Medical Association Volume XXX ; XXX ; reingest3.clockss.org:8083 >                                          
+    au < manifest ; 1898 ; Journal of the American Medical Association Volume XXXI ; XXXI ; reingest3.clockss.org:8083 >                                        
+    au < manifest ; 1899 ; Journal of the American Medical Association Volume XXXII ; XXXII ; reingest4.clockss.org:8082 >                                      
+    au < manifest ; 1899 ; Journal of the American Medical Association Volume XXXIII ; XXXIII ; reingest4.clockss.org:8082 >                                    
+    au < manifest ; 1900 ; Journal of the American Medical Association Volume XXXIV ; XXXIV ; reingest1.clockss.org:8082 >                                      
+    au < manifest ; 1900 ; Journal of the American Medical Association Volume XXXV ; XXXV ; reingest1.clockss.org:8082 >                                        
+    au < manifest ; 1901 ; Journal of the American Medical Association Volume XXXVI ; XXXVI ; reingest2.clockss.org:8085 >                                      
+    au < manifest ; 1901 ; Journal of the American Medical Association Volume XXXVII ; XXXVII ; reingest2.clockss.org:8085 >                                    
+    au < manifest ; 1902 ; Journal of the American Medical Association Volume XXXVIII ; XXXVIII ; reingest3.clockss.org:8083 >                                  
+    au < manifest ; 1902 ; Journal of the American Medical Association Volume XXXIX ; XXXIX ; reingest3.clockss.org:8083 >                                      
+    au < manifest ; 1903 ; Journal of the American Medical Association Volume XL ; XL ; reingest4.clockss.org:8082 >                                            
+    au < manifest ; 1903 ; Journal of the American Medical Association Volume XLI ; XLI ; reingest4.clockss.org:8082 >                                          
+    au < manifest ; 1904 ; Journal of the American Medical Association Volume XLII ; XLII ; reingest1.clockss.org:8082 >
+    au < manifest ; 1904 ; Journal of the American Medical Association Volume XLIII ; XLIII ; reingest1.clockss.org:8082 >
+    au < manifest ; 1905 ; Journal of the American Medical Association Volume XLIV ; XLIV ; reingest2.clockss.org:8085 >
+    au < manifest ; 1905 ; Journal of the American Medical Association Volume XLV ; XLV ; reingest2.clockss.org:8085 >
+    au < manifest ; 1906 ; Journal of the American Medical Association Volume XLVI ; XLVI ; reingest3.clockss.org:8083 >
+    au < manifest ; 1906 ; Journal of the American Medical Association Volume XLVII ; XLVII ; reingest3.clockss.org:8083 >
+    au < manifest ; 1907 ; Journal of the American Medical Association Volume XLVIII ; XLVIII ; reingest4.clockss.org:8082 >
+    au < manifest ; 1907 ; Journal of the American Medical Association Volume XLIX ; XLIX ; reingest4.clockss.org:8082 >
+    au < manifest ; 1908 ; Journal of the American Medical Association Volume L ; L ; reingest1.clockss.org:8082 >
+    au < manifest ; 1908 ; Journal of the American Medical Association Volume LI ; LI ; reingest1.clockss.org:8082 >
+    au < manifest ; 1909 ; Journal of the American Medical Association Volume LII ; LII ; reingest2.clockss.org:8085 >
+    au < manifest ; 1909 ; Journal of the American Medical Association Volume LIII ; LIII ; reingest2.clockss.org:8085 >
+    au < manifest ; 1910 ; Journal of the American Medical Association Volume LIV ; LIV ; reingest3.clockss.org:8083 >
+    au < manifest ; 1910 ; Journal of the American Medical Association Volume LV ; LV ; reingest3.clockss.org:8083 >
+    au < manifest ; 1911 ; Journal of the American Medical Association Volume LVI ; LVI ; reingest4.clockss.org:8082 >
+    au < manifest ; 1911 ; Journal of the American Medical Association Volume LVII ; LVII ; reingest4.clockss.org:8082 >
+    au < manifest ; 1912 ; Journal of the American Medical Association Volume LVIII ; LVIII ; reingest1.clockss.org:8082 >
+    au < manifest ; 1912 ; Journal of the American Medical Association Volume LIX ; LIX ; reingest1.clockss.org:8082 >
+    au < manifest ; 1913 ; Journal of the American Medical Association Volume LX ; LX ; reingest2.clockss.org:8085 >
+    au < manifest ; 1913 ; Journal of the American Medical Association Volume LXI ; LXI ; reingest2.clockss.org:8085 >
+    au < manifest ; 1914 ; Journal of the American Medical Association Volume LXII ; LXII ; reingest3.clockss.org:8083 >
+    au < manifest ; 1914 ; Journal of the American Medical Association Volume LXIII ; LXIII ; reingest3.clockss.org:8083 >
+    au < manifest ; 1915 ; Journal of the American Medical Association Volume LXIV ; LXIV ; reingest4.clockss.org:8082 >
+    au < manifest ; 1915 ; Journal of the American Medical Association Volume LXV ; LXV ; reingest4.clockss.org:8082 >
+    au < manifest ; 1916 ; Journal of the American Medical Association Volume LXVI ; LXVI ; reingest1.clockss.org:8082 >
+    au < manifest ; 1916 ; Journal of the American Medical Association Volume LXVII ; LXVII ; reingest1.clockss.org:8082 >
+    au < manifest ; 1917 ; Journal of the American Medical Association Volume LXVIII ; LXVIII ; reingest2.clockss.org:8085 >
+    au < manifest ; 1917 ; Journal of the American Medical Association Volume LXIX ; LXIX ; reingest2.clockss.org:8085 >
     au < manifest ; 1918 ; Journal of the American Medical Association Volume 70 ; 70 ; reingest3.clockss.org:8083 >                                                      
     au < manifest ; 1918 ; Journal of the American Medical Association Volume 71 ; 71 ; reingest3.clockss.org:8083 >                                                      
     au < manifest ; 1919 ; Journal of the American Medical Association Volume 72 ; 72 ; reingest4.clockss.org:8082 >                                                      
@@ -1357,8 +1460,7 @@
     au < released ; 2008 ; JAMA: The Journal of the American Medical Association Volume 299 ; 299 ; >
     au < released ; 2008 ; JAMA: The Journal of the American Medical Association Volume 300 ; 300 ; >
     au < notReady ; 2009 ; JAMA: The Journal of the American Medical Association Volume 301 ; 301 ; >
-    au < notReady ; 2009 ; JAMA: The Journal of the American Medical Association Volume 302 ; 302 ; >
-    
+    au < notReady ; 2009 ; JAMA: The Journal of the American Medical Association Volume 302 ; 302 ; > 
   }
 
 }
