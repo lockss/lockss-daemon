@@ -4966,7 +4966,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Plant and Cell Physiology Volume 47 ; 47 >
         au < HighWireStrVolPlugin ; released ; Plant and Cell Physiology Volume 48 ; 48 >
-        au < HighWirePressPlugin ; manifest ; Plant and Cell Physiology Volume 49 ; 49 >
+        au < HighWirePressPlugin ; testing ; Plant and Cell Physiology Volume 49 ; 49 >
         au < HighWirePressPlugin ; ready ; Plant and Cell Physiology Volume 50 ; 50 >
 
       }
@@ -4984,8 +4984,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://policing.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
-        au < HighWirePressPlugin ; ready ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
+        au < HighWirePressPlugin ; manifest ; Policing: A Journal of Policy and Practice Volume 1 ; 1 >
+        au < HighWirePressPlugin ; testing ; Policing: A Journal of Policy and Practice Volume 2 ; 2 >
+        au < HighWirePressPlugin ; ready ; Policing: A Journal of Policy and Practice Volume 3 ; 3 >
 
       }
 
@@ -5015,7 +5016,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Political Analysis Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Political Analysis Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Political Analysis Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; Political Analysis Volume 16 ; 16 >
+        au < HighWirePressPlugin ; testing ; Political Analysis Volume 16 ; 16 >
         au < HighWirePressPlugin ; ready ; Political Analysis Volume 17 ; 17 >
 
       }
@@ -5035,10 +5036,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Proceedings of the London Mathematical Society Volume 94 ; 94 >
         au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 95 ; 95 >
-        au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
-        au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
+        au < HighWirePressPlugin ; testing ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
+        au < HighWirePressPlugin ; testing ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
         au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
         au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
+        au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 100 ; 100 >
 
       }
 
@@ -5068,8 +5070,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Protein Engineering Design and Selection Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; released ; Protein Engineering Design and Selection Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; released ; Protein Engineering Design and Selection Volume 20 ; 20 >
-        au < HighWirePressPlugin ; manifest ; Protein Engineering Design and Selection Volume 21 ; 21 >
+        au < HighWirePressPlugin ; testing ; Protein Engineering Design and Selection Volume 21 ; 21 >
         au < HighWirePressPlugin ; ready ; Protein Engineering Design and Selection Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; Protein Engineering Design and Selection Volume 23 ; 23 >
 
       }
 
@@ -5086,7 +5089,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://phe.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
   
-        au < HighWirePressPlugin ; manifest ; Public Health Ethics Volume 1 ; 1 ; >
+        au < HighWirePressPlugin ; testing ; Public Health Ethics Volume 1 ; 1 ; >
         au < HighWirePressPlugin ; ready ; Public Health Ethics Volume 2 ; 2 ; >
  
       }
@@ -5117,7 +5120,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Public Opinion Quarterly Volume 69 ; 69 >
         au < HighWirePressPlugin ; doNotProcess ; Public Opinion Quarterly Volume 70 ; 70 >
         au < HighWirePressPlugin ; manifest ; Public Opinion Quarterly Volume 71 ; 71 >
-        au < HighWirePressPlugin ; manifest ; Public Opinion Quarterly Volume 72 ; 72 >
+        au < HighWirePressPlugin ; testing ; Public Opinion Quarterly Volume 72 ; 72 >
         au < HighWirePressPlugin ; ready ; Public Opinion Quarterly Volume 73 ; 73 >
 
       }
@@ -5147,8 +5150,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Publius: The Journal of Federalism Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; released ; Publius: The Journal of Federalism Volume 37 ; 37 >
-        au < HighWirePressPlugin ; manifest ; Publius: The Journal of Federalism Volume 38 ; 38 >
+        au < HighWirePressPlugin ; testing ; Publius: The Journal of Federalism Volume 38 ; 38 >
         au < HighWirePressPlugin ; ready ; Publius: The Journal of Federalism Volume 39 ; 39 >
+        au < HighWirePressPlugin ; manifest ; Publius: The Journal of Federalism Volume 40 ; 40 >
 
       }
 
@@ -5178,8 +5182,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
         au < HighWirePressPlugin ; doNotProcess ; QJM: An International Journal of Medicine Volume 99 ; 99 >
         au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 100 ; 100 >
-        au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 101 ; 101 >
+        au < HighWirePressPlugin ; testing ; QJM: An International Journal of Medicine Volume 101 ; 101 >
         au < HighWirePressPlugin ; ready ; QJM: An International Journal of Medicine Volume 102 ; 102 >
+        au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 103 ; 103 >
 
       }
 
