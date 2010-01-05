@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
-  implicit < status ; attr[year] ; name ; param[volume_name] ; comment[proxy] >
+  implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
 
   {
 
