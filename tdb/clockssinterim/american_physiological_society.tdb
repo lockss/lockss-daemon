@@ -6,7 +6,7 @@
   
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
-  implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
+  implicit < status ; attr[year] ; name ; param[volume_name] ; comment[proxy] >
   
   {
   
@@ -60,6 +60,30 @@
     
     param[base_url] = http://ajplegacy.physiology.org/
 
+    au < released ; 1960 ; American Journal of Physiology Volume 198 ; 198 ; reingest1.clockss.org:8082 >                                                                 
+    au < released ; 1960 ; American Journal of Physiology Volume 199 ; 199 ; reingest1.clockss.org:8082 >                                                                 
+    au < released ; 1961 ; American Journal of Physiology Volume 200 ; 200 ; reingest2.clockss.org:8085 >                                                                 
+    au < released ; 1961 ; American Journal of Physiology Volume 201 ; 201 ; reingest2.clockss.org:8085 >                                                                 
+    au < released ; 1962 ; American Journal of Physiology Volume 202 ; 202 ; reingest3.clockss.org:8083 >                                                                 
+    au < released ; 1962 ; American Journal of Physiology Volume 203 ; 203 ; reingest3.clockss.org:8083 >                                                                 
+    au < released ; 1963 ; American Journal of Physiology Volume 204 ; 204 ; reingest4.clockss.org:8082 >                                                                 
+    au < released ; 1963 ; American Journal of Physiology Volume 205 ; 205 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; American Journal of Physiology Volume 206 ; 206 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; American Journal of Physiology Volume 207 ; 207 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; American Journal of Physiology Volume 208 ; 208 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; American Journal of Physiology Volume 209 ; 209 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; American Journal of Physiology Volume 210 ; 210 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; American Journal of Physiology Volume 211 ; 211 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; American Journal of Physiology Volume 212 ; 212 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; American Journal of Physiology Volume 213 ; 213 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; American Journal of Physiology Volume 214 ; 214 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; American Journal of Physiology Volume 215 ; 215 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; American Journal of Physiology Volume 216 ; 216 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; American Journal of Physiology Volume 217 ; 217 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; American Journal of Physiology Volume 218 ; 218 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; American Journal of Physiology Volume 219 ; 219 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; American Journal of Physiology Volume 220 ; 220 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; American Journal of Physiology Volume 221 ; 221 ; reingest4.clockss.org:8082 >    
     au < released ; 1972 ; American Journal of Physiology Volume 222 ; 222 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; American Journal of Physiology Volume 223 ; 223 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; American Journal of Physiology Volume 224 ; 224 ; reingest2.clockss.org:8085 >
@@ -594,6 +618,23 @@
     >
     
     param[base_url] = http://jap.physiology.org/
+    au < released ; 1960 ; Journal of Applied Physiology Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    au < released ; 1961 ; Journal of Applied Physiology Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    au < released ; 1962 ; Journal of Applied Physiology Volume 17 ; 17 ; reingest3.clockss.org:8083 >
+    au < released ; 1963 ; Journal of Applied Physiology Volume 18 ; 18 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Journal of Applied Physiology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Journal of Applied Physiology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Journal of Applied Physiology Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Journal of Applied Physiology Volume 22 ; 22 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; Journal of Applied Physiology Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Journal of Applied Physiology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; Journal of Applied Physiology Volume 25 ; 25 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Journal of Applied Physiology Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; Journal of Applied Physiology Volume 27 ; 27 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Journal of Applied Physiology Volume 28 ; 28 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; Journal of Applied Physiology Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Journal of Applied Physiology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; Journal of Applied Physiology Volume 31 ; 31 ; reingest4.clockss.org:8082 >    
     au < released ; 1972 ; Journal of Applied Physiology Volume 32 ; 32 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; Journal of Applied Physiology Volume 33 ; 33 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Journal of Applied Physiology Volume 34 ; 34 ; reingest2.clockss.org:8085 >
@@ -681,6 +722,18 @@
     
     param[base_url] = http://jn.physiology.org/
     
+    au < released ; 1960 ; Journal of Neurophysiology Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    au < released ; 1961 ; Journal of Neurophysiology Volume 24 ; 24 ; reingest2.clockss.org:8085 >
+    au < released ; 1962 ; Journal of Neurophysiology Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < released ; 1963 ; Journal of Neurophysiology Volume 26 ; 26 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Journal of Neurophysiology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Journal of Neurophysiology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Journal of Neurophysiology Volume 29 ; 29 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Journal of Neurophysiology Volume 30 ; 30 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Journal of Neurophysiology Volume 31 ; 31 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Journal of Neurophysiology Volume 32 ; 32 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Journal of Neurophysiology Volume 33 ; 33 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Journal of Neurophysiology Volume 34 ; 34 ; reingest4.clockss.org:8082 >
     au < released ; 1972 ; Journal of Neurophysiology Volume 35 ; 35 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Journal of Neurophysiology Volume 36 ; 36 ; reingest2.clockss.org:8085 >
     au < released ; 1974 ; Journal of Neurophysiology Volume 37 ; 37 ; reingest3.clockss.org:8083 >
@@ -810,6 +863,18 @@
     
     param[base_url] = http://physrev.physiology.org/
 
+    au < released ; 1960 ; Physiological Reviews Volume 40 ; 40 ; reingest1.clockss.org:8082 >
+    au < released ; 1961 ; Physiological Reviews Volume 41 ; 41 ; reingest2.clockss.org:8085 >
+    au < released ; 1962 ; Physiological Reviews Volume 42 ; 42 ; reingest3.clockss.org:8083 >
+    au < released ; 1963 ; Physiological Reviews Volume 43 ; 43 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Physiological Reviews Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Physiological Reviews Volume 45 ; 45 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Physiological Reviews Volume 46 ; 46 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Physiological Reviews Volume 47 ; 47 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Physiological Reviews Volume 48 ; 48 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Physiological Reviews Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Physiological Reviews Volume 50 ; 50 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Physiological Reviews Volume 51 ; 51 ; reingest4.clockss.org:8082 >    
     au < released ; 1972 ; Physiological Reviews Volume 52 ; 52 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Physiological Reviews Volume 53 ; 53 ; reingest2.clockss.org:8085 >
     au < released ; 1974 ; Physiological Reviews Volume 54 ; 54 ; reingest3.clockss.org:8083 >

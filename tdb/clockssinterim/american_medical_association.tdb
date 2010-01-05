@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
-  implicit < status ; attr[year] ; name ; param[volume_name] ; proxy >
+  implicit < status ; attr[year] ; name ; param[volume_name] ; comment[proxy] >
   
   {
   
@@ -16,6 +16,30 @@
     
     param[base_url] = http://archderm.ama-assn.org/
 
+    au < released ; 1960 ; AMA Archives of Dermatology Volume 81 ; 81 ; reingest1.clockss.org:8082 >
+    au < released ; 1960 ; AMA Archives of Dermatology Volume 82 ; 82 ; reingest1.clockss.org:8082 >
+    au < released ; 1961 ; Archives of Dermatology Volume 83 ; 83 ; reingest2.clockss.org:8085 >
+    au < released ; 1961 ; Archives of Dermatology Volume 84 ; 84 ; reingest2.clockss.org:8085 >
+    au < released ; 1962 ; Archives of Dermatology Volume 85 ; 85 ; reingest3.clockss.org:8083 >
+    au < released ; 1962 ; Archives of Dermatology Volume 86 ; 86 ; reingest3.clockss.org:8083 >
+    au < released ; 1963 ; Archives of Dermatology Volume 87 ; 87 ; reingest4.clockss.org:8082 >
+    au < released ; 1963 ; Archives of Dermatology Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Dermatology Volume 89 ; 89 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Dermatology Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Archives of Dermatology Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; Archives of Dermatology Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Archives of Dermatology Volume 93 ; 93 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; Archives of Dermatology Volume 94 ; 94 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Archives of Dermatology Volume 95 ; 95 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; Archives of Dermatology Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Dermatology Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Dermatology Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Archives of Dermatology Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; Archives of Dermatology Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Archives of Dermatology Volume 101 ; 101 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; Archives of Dermatology Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Archives of Dermatology Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; Archives of Dermatology Volume 104 ; 104 ; reingest4.clockss.org:8082 >
     au < released ; 1972 ; Archives of Dermatology Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; Archives of Dermatology Volume 106 ; 106 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Archives of Dermatology Volume 107 ; 107 ; reingest2.clockss.org:8085 >
@@ -110,6 +134,30 @@
     
     param[base_url] = http://archpsyc.ama-assn.org/
 
+    au < released ; 1960 ; AMA Archives of General Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                     
+    au < released ; 1960 ; AMA Archives of General Psychiatry Volume 3 ; 3 ; reingest1.clockss.org:8082 >                                                                     
+    au < released ; 1961 ; Archives of General Psychiatry Volume 4 ; 4 ; reingest2.clockss.org:8085 >                                                                         
+    au < released ; 1961 ; Archives of General Psychiatry Volume 5 ; 5 ; reingest2.clockss.org:8085 >                                                                         
+    au < released ; 1962 ; Archives of General Psychiatry Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                                         
+    au < released ; 1962 ; Archives of General Psychiatry Volume 7 ; 7 ; reingest3.clockss.org:8083 >                                                                         
+    au < released ; 1963 ; Archives of General Psychiatry Volume 8 ; 8 ; reingest4.clockss.org:8082 >                                                                         
+    au < released ; 1963 ; Archives of General Psychiatry Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Archives of General Psychiatry Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; Archives of General Psychiatry Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Archives of General Psychiatry Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; Archives of General Psychiatry Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Archives of General Psychiatry Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; Archives of General Psychiatry Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Archives of General Psychiatry Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; Archives of General Psychiatry Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Archives of General Psychiatry Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; Archives of General Psychiatry Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Archives of General Psychiatry Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; Archives of General Psychiatry Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Archives of General Psychiatry Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; Archives of General Psychiatry Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Archives of General Psychiatry Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; Archives of General Psychiatry Volume 25 ; 25 ; reingest4.clockss.org:8082 >    
     au < released ; 1972 ; Archives of General Psychiatry Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; Archives of General Psychiatry Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Archives of General Psychiatry Volume 28 ; 28 ; reingest2.clockss.org:8085 >
@@ -161,6 +209,30 @@
     >
     
     param[base_url] = http://archinte.ama-assn.org/
+    au < released ; 1960 ; AMA Archives of Internal Medicine Volume 105 ; 105 ; reingest1.clockss.org:8082 >                                                              
+    au < released ; 1960 ; AMA Archives of Internal Medicine Volume 106 ; 106 ; reingest1.clockss.org:8082 >                                                              
+    au < released ; 1961 ; Archives of Internal Medicine Volume 107 ; 107 ; reingest2.clockss.org:8085 >                                                                  
+    au < released ; 1961 ; Archives of Internal Medicine Volume 108 ; 108 ; reingest2.clockss.org:8085 >                                                                  
+    au < released ; 1962 ; Archives of Internal Medicine Volume 109 ; 109 ; reingest3.clockss.org:8083 >                                                                  
+    au < released ; 1962 ; Archives of Internal Medicine Volume 110 ; 110 ; reingest3.clockss.org:8083 >                                                                  
+    au < released ; 1963 ; Archives of Internal Medicine Volume 111 ; 111 ; reingest4.clockss.org:8082 >                                                                  
+    au < released ; 1963 ; Archives of Internal Medicine Volume 112 ; 112 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Internal Medicine Volume 113 ; 113 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Internal Medicine Volume 114 ; 114 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Archives of Internal Medicine Volume 115 ; 115 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; Archives of Internal Medicine Volume 116 ; 116 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Archives of Internal Medicine Volume 117 ; 117 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; Archives of Internal Medicine Volume 118 ; 118 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Archives of Internal Medicine Volume 119 ; 119 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; Archives of Internal Medicine Volume 120 ; 120 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Internal Medicine Volume 121 ; 121 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Internal Medicine Volume 122 ; 122 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Archives of Internal Medicine Volume 123 ; 123 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; Archives of Internal Medicine Volume 124 ; 124 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Archives of Internal Medicine Volume 125 ; 125 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; Archives of Internal Medicine Volume 126 ; 126 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Archives of Internal Medicine Volume 127 ; 127 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; Archives of Internal Medicine Volume 128 ; 128 ; reingest4.clockss.org:8082 >    
     au < released ; 1972 ; Archives of Internal Medicine Volume 129 ; 129 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; Archives of Internal Medicine Volume 130 ; 130 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Archives of Internal Medicine Volume 131 ; 131 ; reingest2.clockss.org:8085 >
@@ -212,6 +284,30 @@
     >
     
     param[base_url] = http://archneur.ama-assn.org/
+    au < released ; 1960 ; AMA Archives of Neurology Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                          
+    au < released ; 1960 ; AMA Archives of Neurology Volume 3 ; 3 ; reingest1.clockss.org:8082 >                                                                          
+    au < released ; 1961 ; Archives of Neurology Volume 4 ; 4 ; reingest2.clockss.org:8085 >                                                                              
+    au < released ; 1961 ; Archives of Neurology Volume 5 ; 5 ; reingest2.clockss.org:8085 >                                                                              
+    au < released ; 1962 ; Archives of Neurology Volume 6 ; 6 ; reingest3.clockss.org:8083 >                                                                              
+    au < released ; 1962 ; Archives of Neurology Volume 7 ; 7 ; reingest3.clockss.org:8083 >                                                                              
+    au < released ; 1963 ; Archives of Neurology Volume 8 ; 8 ; reingest4.clockss.org:8082 >                                                                              
+    au < released ; 1963 ; Archives of Neurology Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Neurology Volume 10 ; 10 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Neurology Volume 11 ; 11 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Archives of Neurology Volume 12 ; 12 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; Archives of Neurology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Archives of Neurology Volume 14 ; 14 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; Archives of Neurology Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Archives of Neurology Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; Archives of Neurology Volume 17 ; 17 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Neurology Volume 18 ; 18 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Neurology Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Archives of Neurology Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; Archives of Neurology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Archives of Neurology Volume 22 ; 22 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; Archives of Neurology Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Archives of Neurology Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; Archives of Neurology Volume 25 ; 25 ; reingest4.clockss.org:8082 >
     au < released ; 1972 ; Archives of Neurology Volume 26 ; 26 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; Archives of Neurology Volume 27 ; 27 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Archives of Neurology Volume 28 ; 28 ; reingest2.clockss.org:8085 >
@@ -263,6 +359,30 @@
     >
     
     param[base_url] = http://archopht.ama-assn.org/
+    au < released ; 1960 ; AMA Archives of Ophthalmology Volume 63 ; 63 ; reingest1.clockss.org:8082 >                                                                     
+    au < released ; 1960 ; AMA Archives of Ophthalmology Volume 64 ; 64 ; reingest1.clockss.org:8082 >                                                                     
+    au < released ; 1961 ; Archives of Ophthalmology Volume 65 ; 65 ; reingest2.clockss.org:8085 >                                                                         
+    au < released ; 1961 ; Archives of Ophthalmology Volume 66 ; 66 ; reingest2.clockss.org:8085 >                                                                         
+    au < released ; 1962 ; Archives of Ophthalmology Volume 67 ; 67 ; reingest3.clockss.org:8083 >                                                                         
+    au < released ; 1962 ; Archives of Ophthalmology Volume 68 ; 68 ; reingest3.clockss.org:8083 >                                                                         
+    au < released ; 1963 ; Archives of Ophthalmology Volume 69 ; 69 ; reingest4.clockss.org:8082 >                                                                         
+    au < released ; 1963 ; Archives of Ophthalmology Volume 70 ; 70 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Ophthalmology Volume 71 ; 71 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Ophthalmology Volume 72 ; 72 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Archives of Ophthalmology Volume 73 ; 73 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; Archives of Ophthalmology Volume 74 ; 74 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Archives of Ophthalmology Volume 75 ; 75 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; Archives of Ophthalmology Volume 76 ; 76 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Archives of Ophthalmology Volume 77 ; 77 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; Archives of Ophthalmology Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Ophthalmology Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Ophthalmology Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Archives of Ophthalmology Volume 81 ; 81 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; Archives of Ophthalmology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Archives of Ophthalmology Volume 83 ; 83 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; Archives of Ophthalmology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Archives of Ophthalmology Volume 85 ; 85 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; Archives of Ophthalmology Volume 86 ; 86 ; reingest4.clockss.org:8082 >
     au < released ; 1972 ; Archives of Ophthalmology Volume 87 ; 87 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; Archives of Ophthalmology Volume 88 ; 88 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Archives of Ophthalmology Volume 89 ; 89 ; reingest2.clockss.org:8085 >
@@ -315,6 +435,30 @@
     
     param[base_url] = http://archotol.ama-assn.org/
 
+    au < released ; 1960 ; AMA Archives of Otolaryngology Volume 71 ; 71 ; reingest1.clockss.org:8082 >                                                                   
+    au < released ; 1960 ; AMA Archives of Otolaryngology Volume 72 ; 72 ; reingest1.clockss.org:8082 >                                                                   
+    au < released ; 1961 ; Archives of Otolaryngology Volume 73 ; 73 ; reingest2.clockss.org:8085 >                                                                       
+    au < released ; 1961 ; Archives of Otolaryngology Volume 74 ; 74 ; reingest2.clockss.org:8085 >                                                                       
+    au < released ; 1962 ; Archives of Otolaryngology Volume 75 ; 75 ; reingest3.clockss.org:8083 >                                                                       
+    au < released ; 1962 ; Archives of Otolaryngology Volume 76 ; 76 ; reingest3.clockss.org:8083 >                                                                       
+    au < released ; 1963 ; Archives of Otolaryngology Volume 77 ; 77 ; reingest4.clockss.org:8082 >                                                                       
+    au < released ; 1963 ; Archives of Otolaryngology Volume 78 ; 78 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Otolaryngology Volume 79 ; 79 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; Archives of Otolaryngology Volume 80 ; 80 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; Archives of Otolaryngology Volume 81 ; 81 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; Archives of Otolaryngology Volume 82 ; 82 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; Archives of Otolaryngology Volume 83 ; 83 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; Archives of Otolaryngology Volume 84 ; 84 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; Archives of Otolaryngology Volume 85 ; 85 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; Archives of Otolaryngology Volume 86 ; 86 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Otolaryngology Volume 87 ; 87 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; Archives of Otolaryngology Volume 88 ; 88 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; Archives of Otolaryngology Volume 89 ; 89 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; Archives of Otolaryngology Volume 90 ; 90 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; Archives of Otolaryngology Volume 91 ; 91 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; Archives of Otolaryngology Volume 92 ; 92 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; Archives of Otolaryngology Volume 93 ; 93 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; Archives of Otolaryngology Volume 94 ; 94 ; reingest4.clockss.org:8082 >
     au < released ; 1972 ; Archives of Otolaryngology Volume 95 ; 95 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; Archives of Otolaryngology Volume 96 ; 99 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; Archives of Otolaryngology Volume 97 ; 97 ; reingest2.clockss.org:8085 >
@@ -366,6 +510,30 @@
     >
     
     param[base_url] = http://archpedi.ama-assn.org/
+    au < released ; 1960 ; AMA Journal of Diseases of Children Volume 99 ; 99 ; reingest1.clockss.org:8082 >                                                              
+    au < released ; 1960 ; AMA Journal of Diseases of Children Volume 100 ; 100 ; reingest1.clockss.org:8082 >                                                            
+    au < released ; 1961 ; American Journal of Diseases of Children Volume 101 ; 101 ; reingest2.clockss.org:8085 >                                                       
+    au < released ; 1961 ; American Journal of Diseases of Children Volume 102 ; 102 ; reingest2.clockss.org:8085 >                                                       
+    au < released ; 1962 ; American Journal of Diseases of Children Volume 103 ; 103 ; reingest3.clockss.org:8083 >                                                       
+    au < released ; 1962 ; American Journal of Diseases of Children Volume 104 ; 104 ; reingest3.clockss.org:8083 >                                                       
+    au < released ; 1963 ; American Journal of Diseases of Children Volume 105 ; 105 ; reingest4.clockss.org:8082 >                                                       
+    au < released ; 1963 ; American Journal of Diseases of Children Volume 106 ; 106 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; American Journal of Diseases of Children Volume 107 ; 107 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; American Journal of Diseases of Children Volume 108 ; 108 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; American Journal of Diseases of Children Volume 109 ; 109 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; American Journal of Diseases of Children Volume 110 ; 110 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; American Journal of Diseases of Children Volume 111 ; 111 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; American Journal of Diseases of Children Volume 112 ; 112 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; American Journal of Diseases of Children Volume 113 ; 113 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; American Journal of Diseases of Children Volume 114 ; 114 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; American Journal of Diseases of Children Volume 115 ; 115 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; American Journal of Diseases of Children Volume 116 ; 116 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; American Journal of Diseases of Children Volume 117 ; 117 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; American Journal of Diseases of Children Volume 118 ; 118 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; American Journal of Diseases of Children Volume 119 ; 119 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; American Journal of Diseases of Children Volume 120 ; 120 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; American Journal of Diseases of Children Volume 121 ; 121 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; American Journal of Diseases of Children Volume 122 ; 122 ; reingest4.clockss.org:8082 >
     au < released ; 1972 ; American Journal of Diseases of Children Volume 123 ; 123 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; American Journal of Diseases of Children Volume 124 ; 124 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; American Journal of Diseases of Children Volume 125 ; 125 ; reingest2.clockss.org:8085 >
@@ -417,6 +585,30 @@
     >
     
     param[base_url] = http://archsurg.ama-assn.org/
+    au < released ; 1960 ; AMA Archives of Surgery Volume 81 ; 81 ; reingest1.clockss.org:8082 >                                                                          
+    au < released ; 1960 ; AMA Archives of Surgery Volume 82 ; 82 ; reingest1.clockss.org:8082 >                                                                          
+    au < released ; 1961 ; AMA Archives of Surgery Volume 83 ; 83 ; reingest2.clockss.org:8085 >                                                                          
+    au < released ; 1961 ; AMA Archives of Surgery Volume 84 ; 84 ; reingest2.clockss.org:8085 >                                                                          
+    au < released ; 1962 ; AMA Archives of Surgery Volume 85 ; 85 ; reingest3.clockss.org:8083 >                                                                          
+    au < released ; 1962 ; AMA Archives of Surgery Volume 86 ; 86 ; reingest3.clockss.org:8083 >                                                                          
+    au < released ; 1963 ; AMA Archives of Surgery Volume 87 ; 87 ; reingest4.clockss.org:8082 >                                                                          
+    au < released ; 1963 ; AMA Archives of Surgery Volume 88 ; 88 ; reingest4.clockss.org:8082 >
+    au < released ; 1964 ; AMA Archives of Surgery Volume 89 ; 89 ; reingest1.clockss.org:8082 >
+    au < released ; 1964 ; AMA Archives of Surgery Volume 90 ; 90 ; reingest1.clockss.org:8082 >
+    au < released ; 1965 ; AMA Archives of Surgery Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    au < released ; 1965 ; AMA Archives of Surgery Volume 92 ; 92 ; reingest2.clockss.org:8085 >
+    au < released ; 1966 ; AMA Archives of Surgery Volume 93 ; 93 ; reingest3.clockss.org:8083 >
+    au < released ; 1966 ; AMA Archives of Surgery Volume 94 ; 94 ; reingest3.clockss.org:8083 >
+    au < released ; 1967 ; AMA Archives of Surgery Volume 95 ; 95 ; reingest4.clockss.org:8082 >
+    au < released ; 1967 ; AMA Archives of Surgery Volume 96 ; 96 ; reingest4.clockss.org:8082 >
+    au < released ; 1968 ; AMA Archives of Surgery Volume 97 ; 97 ; reingest1.clockss.org:8082 >
+    au < released ; 1968 ; AMA Archives of Surgery Volume 98 ; 98 ; reingest1.clockss.org:8082 >
+    au < released ; 1969 ; AMA Archives of Surgery Volume 99 ; 99 ; reingest2.clockss.org:8085 >
+    au < released ; 1969 ; AMA Archives of Surgery Volume 100 ; 100 ; reingest2.clockss.org:8085 >
+    au < released ; 1970 ; AMA Archives of Surgery Volume 101 ; 101 ; reingest3.clockss.org:8083 >
+    au < released ; 1970 ; AMA Archives of Surgery Volume 102 ; 102 ; reingest3.clockss.org:8083 >
+    au < released ; 1971 ; AMA Archives of Surgery Volume 103 ; 103 ; reingest4.clockss.org:8082 >
+    au < released ; 1971 ; AMA Archives of Surgery Volume 104 ; 104 ; reingest4.clockss.org:8082 >    
     au < released ; 1972 ; AMA Archives of Surgery Volume 104 ; 104 ; reingest1.clockss.org:8082 >
     au < released ; 1972 ; AMA Archives of Surgery Volume 105 ; 105 ; reingest1.clockss.org:8082 >
     au < released ; 1973 ; AMA Archives of Surgery Volume 106 ; 106 ; reingest2.clockss.org:8085 >
@@ -491,11 +683,28 @@
     au < released ; 1967 ; JAMA: The Journal of the American Medical Association Volume 200 ; 200 ; >
     au < released ; 1967 ; JAMA: The Journal of the American Medical Association Volume 201 ; 201 ; >
     au < released ; 1967 ; JAMA: The Journal of the American Medical Association Volume 202 ; 202 ; >
+    au < released ; 1998 ; JAMA: The Journal of the American Medical Association Volume 279 ; 279 ;  >
+    au < released ; 1998 ; JAMA: The Journal of the American Medical Association Volume 280 ; 280 ;  >
+    au < released ; 1999 ; JAMA: The Journal of the American Medical Association Volume 281 ; 281 ;  >
+    au < released ; 1999 ; JAMA: The Journal of the American Medical Association Volume 282 ; 282 ;  >
+    au < released ; 2000 ; JAMA: The Journal of the American Medical Association Volume 283 ; 283 ;  >
+    au < released ; 2000 ; JAMA: The Journal of the American Medical Association Volume 284 ; 284 ;  >
+    au < released ; 2001 ; JAMA: The Journal of the American Medical Association Volume 285 ; 285 ;  >
+    au < released ; 2001 ; JAMA: The Journal of the American Medical Association Volume 286 ; 286 ;  >
+    au < released ; 2002 ; JAMA: The Journal of the American Medical Association Volume 287 ; 287 ;  >
+    au < released ; 2002 ; JAMA: The Journal of the American Medical Association Volume 288 ; 288 ;  >
+    au < released ; 2003 ; JAMA: The Journal of the American Medical Association Volume 289 ; 289 ;  >
+    au < released ; 2003 ; JAMA: The Journal of the American Medical Association Volume 290 ; 290 ;  >
+    au < released ; 2004 ; JAMA: The Journal of the American Medical Association Volume 291 ; 291 ;  >
+    au < released ; 2004 ; JAMA: The Journal of the American Medical Association Volume 292 ; 292 ;  >
+    au < released ; 2005 ; JAMA: The Journal of the American Medical Association Volume 293 ; 293 ;  >
+    au < released ; 2005 ; JAMA: The Journal of the American Medical Association Volume 294 ; 294 ;  >
+    au < released ; 2006 ; JAMA: The Journal of the American Medical Association Volume 295 ; 295 ; >
+    au < released ; 2006 ; JAMA: The Journal of the American Medical Association Volume 296 ; 296 ; >
     au < released ; 2007 ; JAMA: The Journal of the American Medical Association Volume 297 ; 297 ; >
     au < released ; 2007 ; JAMA: The Journal of the American Medical Association Volume 298 ; 298 ; >
     au < released ; 2008 ; JAMA: The Journal of the American Medical Association Volume 299 ; 299 ; >
     au < released ; 2008 ; JAMA: The Journal of the American Medical Association Volume 300 ; 300 ; >
-    
   }
 
 }
