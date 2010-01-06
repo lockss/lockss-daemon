@@ -984,6 +984,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietcom.oxfordjournals.org/
 
+    au < down ; 2008 ; IEICE - Transactions on Communications Volume E91-B ; E91-B ; >
 
   }
 
@@ -995,6 +996,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietele.oxfordjournals.org/
 
+    au < down ; 2008 ; IEICE - Transactions on Electronics Volume E91-C ; E91-C ; >
 
   }
 
@@ -1006,6 +1008,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietfec.oxfordjournals.org/
 
+    au < down ; 2008 ; IEICE - Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A ; E91-A ; >
 
   }
 
@@ -1017,6 +1020,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ietisy.oxfordjournals.org/
 
+    au < down ; 2008 ; IEICE - Transactions on Information and Systems Volume E91-D ; E91-D ; >
 
   }
 
@@ -1099,6 +1103,8 @@ comment[fampra26] = fetch error
     >
 
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
+
+comment[in1] = 500 errors
 
     au < released ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
