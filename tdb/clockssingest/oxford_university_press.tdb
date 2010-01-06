@@ -368,7 +368,7 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bmb.oxfordjournals.org/
 
     au < tested ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
-    au < testing ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
+    au < tested ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
     au < tested ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
     au < tested ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
     au < released ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
@@ -703,7 +703,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://eshremonographs.oxfordjournals.org/
 
-    au < manifest ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 ; >
+    au < tested ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 ; >
 
   }
 
@@ -715,7 +715,7 @@ comment[cjip] = no subscription
 
     param[base_url] = http://eic.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
+    au < tested ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
     au < released ; 2009 ; Essays in Criticism Volume 59 ; 59 ; reingest4.clockss.org:8082 >
 
   }
@@ -730,7 +730,7 @@ comment[cjip] = no subscription
 
 comment[eurh30] = crawl failed because of a fetch error
 
-    au < manifest ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
+    au < tested ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < down ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
 
   }
@@ -743,7 +743,7 @@ comment[eurh30] = crawl failed because of a fetch error
 
     param[base_url] = http://ejechocard.oxfordjournals.org/
 
-    au < manifest ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
+    au < tested ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < released ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
@@ -756,7 +756,7 @@ comment[eurh30] = crawl failed because of a fetch error
 
     param[base_url] = http://ejil.oxfordjournals.org/
 
-    au < manifest ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
+    au < tested ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
     au < released ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
 
   }
@@ -769,7 +769,9 @@ comment[eurh30] = crawl failed because of a fetch error
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
 
-    au < manifest ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
+comment[eurjhf10] = manifest page not found (404)
+
+    au < notReady ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < released ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
   }
@@ -782,7 +784,7 @@ comment[eurh30] = crawl failed because of a fetch error
 
     param[base_url] = http://ejo.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The European Journal of Orthodontics Volume 30 ; 30 ; >
+    au < tested ; 2008 ; The European Journal of Orthodontics Volume 30 ; 30 ; >
     au < released ; 2009 ; The European Journal of Orthodontics Volume 31 ; 31 ; reingest2.clockss.org:8085 >
 
   }
@@ -797,7 +799,7 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://eurpub.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The European Journal of Public Health Volume 18 ; 18 ; >
+    au < tested ; 2008 ; The European Journal of Public Health Volume 18 ; 18 ; >
     au < down ; 2009 ; The European Journal of Public Health Volume 19 ; 19 ; reingest2.clockss.org:8085 >
 
   }
@@ -810,7 +812,7 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://erae.oxfordjournals.org/
 
-    au < manifest ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
+    au < tested ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
     au < released ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; reingest2.clockss.org:8085 >
 
   }
@@ -823,7 +825,7 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://esr.oxfordjournals.org/
 
-    au < manifest ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
+    au < tested ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
     au < released ; 2009 ; European Sociological Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
 
   }
@@ -836,7 +838,7 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://ecam.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
+    au < tested ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
     au < released ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
 
   }
@@ -851,7 +853,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fampra.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Family Practice Volume 25 ; 25 ; >
+    au < tested ; 2008 ; Family Practice Volume 25 ; 25 ; >
     au < down ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
   }
@@ -864,7 +866,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://forestry.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
+    au < tested ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
     au < released ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
 
   }
@@ -877,7 +879,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fmls.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
+    au < tested ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
     au < released ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; reingest4.clockss.org:8082 >
 
   }
@@ -1798,7 +1800,7 @@ comment[in1] = 500 errors
     param[base_url] = http://jlms.oxfordjournals.org/
 
     au < testing ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
-    au < manifest ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
+    au < testing ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < tested ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < tested ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
 
@@ -1812,7 +1814,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jmp.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
+    au < testing ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
     au < tested ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
 
   }
@@ -1837,7 +1839,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://mollus.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
+    au < testing ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
     au < tested ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
 
   }
@@ -1850,7 +1852,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jnci.oxfordjournals.org/
 
-    au < manifest ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 ; >
+    au < testing ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 ; >
     au < tested ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 ; >
 
   }
@@ -1863,7 +1865,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jicru.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
+    au < testing ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
     au < tested ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
 
   }
@@ -1876,7 +1878,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jwelb.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
+    au < testing ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
     au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
 
   }
@@ -1889,7 +1891,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
+    au < testing ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
     au < tested ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
 
   }
@@ -1902,7 +1904,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://petrology.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
+    au < testing ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
     au < tested ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
 
   }
@@ -1915,7 +1917,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://plankt.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
+    au < testing ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
     au < tested ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
 
   }
@@ -1928,7 +1930,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jpe.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
+    au < testing ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
     au < manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
 
   }
@@ -1941,7 +1943,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jpart.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
+    au < testing ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
     au < tested ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
 
   }
@@ -1954,7 +1956,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
+    au < testing ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
     au < tested ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
 
   }
@@ -1967,7 +1969,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jrs.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
+    au < testing ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
     au < tested ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
 
   }
@@ -1980,7 +1982,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jos.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
+    au < testing ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
     au < tested ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
 
   }
@@ -1993,7 +1995,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jss.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
+    au < testing ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
     au < tested ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
 
   }
@@ -2006,7 +2008,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jts.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
+    au < testing ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
     au < tested ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
 
   }
@@ -2019,7 +2021,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jtopol.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
+    au < testing ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
     au < tested ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
 
   }
@@ -2032,7 +2034,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://tropej.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
+    au < testing ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
     au < tested ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
 
   }
@@ -2045,7 +2047,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://lpr.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
+    au < testing ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
     au < tested ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
 
   }
