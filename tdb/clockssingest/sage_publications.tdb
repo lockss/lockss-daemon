@@ -5052,10 +5052,10 @@
 
     param[base_url] = http://ner.sagepub.com/
 
-    au < manifest ; 2008 ; National Institute Economic Review Volume 203 ; 203 ; >
-    au < manifest ; 2008 ; National Institute Economic Review Volume 204 ; 204 ; >
-    au < manifest ; 2008 ; National Institute Economic Review Volume 205 ; 205 ; >
-    au < manifest ; 2008 ; National Institute Economic Review Volume 206 ; 206 ; >
+    au < testing ; 2008 ; National Institute Economic Review Volume 203 ; 203 ; >
+    au < testing ; 2008 ; National Institute Economic Review Volume 204 ; 204 ; >
+    au < testing ; 2008 ; National Institute Economic Review Volume 205 ; 205 ; >
+    au < testing ; 2008 ; National Institute Economic Review Volume 206 ; 206 ; >
     au < ready ; 2009 ; National Institute Economic Review Volume 207 ; 207 ; reingest3.clockss.org:8083 >
     au < ready ; 2009 ; National Institute Economic Review Volume 208 ; 208 ; reingest3.clockss.org:8083 >
     au < ready ; 2009 ; National Institute Economic Review Volume 209 ; 209 ; reingest3.clockss.org:8083 >
@@ -5070,7 +5070,7 @@
 
     param[base_url] = http://nnr.sagepub.com/
 
-    au < manifest ; 2008 ; Neurorehabilitation and Neural Repair Volume 22 ; 22 ; >
+    au < testing ; 2008 ; Neurorehabilitation and Neural Repair Volume 22 ; 22 ; >
     au < ready ; 2009 ; Neurorehabilitation and Neural Repair Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
   }
@@ -5083,7 +5083,7 @@
 
     param[base_url] = http://nro.sagepub.com/
 
-    au < manifest ; 2008 ; The Neuroscientist Volume 14 ; 14 ; >
+    au < testing ; 2008 ; The Neuroscientist Volume 14 ; 14 ; >
     au < ready ; 2009 ; The Neuroscientist Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
   }
@@ -5096,7 +5096,7 @@
 
     param[base_url] = http://nms.sagepub.com/
 
-    au < manifest ; 2008 ; New Media & Society Volume 10 ; 10 ; >
+    au < testing ; 2008 ; New Media & Society Volume 10 ; 10 ; >
     au < ready ; 2009 ; New Media & Society Volume 11 ; 11 ; reingest3.clockss.org:8083 >
 
   }
@@ -5109,7 +5109,7 @@
 
     param[base_url] = http://nvs.sagepub.com/
 
-    au < manifest ; 2008 ; Nonprofit and Voluntary Sector Quarterly Volume 37 ; 37 ; >
+    au < testing ; 2008 ; Nonprofit and Voluntary Sector Quarterly Volume 37 ; 37 ; >
     au < ready ; 2009 ; Nonprofit and Voluntary Sector Quarterly Volume 38 ; 38 ; reingest3.clockss.org:8083 >
 
   }
@@ -5122,7 +5122,7 @@
 
     param[base_url] = http://nej.sagepub.com/
 
-    au < manifest ; 2008 ; Nursing Ethics Volume 15 ; 15 ; >
+    au < testing ; 2008 ; Nursing Ethics Volume 15 ; 15 ; >
     au < ready ; 2009 ; Nursing Ethics Volume 16 ; 16 ; reingest3.clockss.org:8083 >
 
   }
@@ -5135,7 +5135,7 @@
 
     param[base_url] = http://nsq.sagepub.com/
 
-    au < manifest ; 2008 ; Nursing Science Quarterly Volume 21 ; 21 ; >
+    au < testing ; 2008 ; Nursing Science Quarterly Volume 21 ; 21 ; >
     au < ready ; 2009 ; Nursing Science Quarterly Volume 22 ; 22 ; reingest3.clockss.org:8083 >
 
   }
@@ -5148,7 +5148,7 @@
 
     param[base_url] = http://ncp.sagepub.com/
 
-    au < manifest ; 2008 ; Nutrition in Clinical Practice Volume 23 ; 23 ; >
+    au < testing ; 2008 ; Nutrition in Clinical Practice Volume 23 ; 23 ; >
     au < ready ; 2009 ; Nutrition in Clinical Practice Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
@@ -5161,7 +5161,7 @@
 
     param[base_url] = http://org.sagepub.com/
 
-    au < manifest ; 2008 ; Organization Volume 15 ; 15 ; >
+    au < testing ; 2008 ; Organization Volume 15 ; 15 ; >
     au < ready ; 2009 ; Organization Volume 16 ; 16 ; reingest3.clockss.org:8083 >
 
   }
@@ -5174,7 +5174,7 @@
 
     param[base_url] = http://oae.sagepub.com/
 
-    au < manifest ; 2008 ; Organization & Environment Volume 21 ; 21 ; >
+    au < testing ; 2008 ; Organization & Environment Volume 21 ; 21 ; >
     au < ready ; 2009 ; Organization & Environment Volume 22 ; 22 ; reingest3.clockss.org:8083 >
 
   }
@@ -5187,7 +5187,7 @@
 
     param[base_url] = http://oss.sagepub.com/
 
-    au < manifest ; 2008 ; Organization Studies Volume 29 ; 29 ; >
+    au < testing ; 2008 ; Organization Studies Volume 29 ; 29 ; >
     au < ready ; 2009 ; Organization Studies Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
   }
@@ -5200,7 +5200,7 @@
 
     param[base_url] = http://orm.sagepub.com/
 
-    au < manifest ; 2008 ; Organizational Research Methods Volume 11 ; 11 ; >
+    au < testing ; 2008 ; Organizational Research Methods Volume 11 ; 11 ; >
     au < ready ; 2009 ; Organizational Research Methods Volume 12 ; 12 ; reingest3.clockss.org:8083 >
 
   }
@@ -5213,7 +5213,7 @@
 
     param[base_url] = http://pmj.sagepub.com/
 
-    au < manifest ; 2008 ; Palliative Medicine Volume 22 ; 22 ; >
+    au < testing ; 2008 ; Palliative Medicine Volume 22 ; 22 ; >
     au < ready ; 2009 ; Palliative Medicine Volume 23 ; 23 ; reingest3.clockss.org:8083 >
 
   }
@@ -5317,7 +5317,7 @@
 
     param[base_url] = http://pos.sagepub.com/
 
-    au < testing ; 2008 ; Philosophy of the Social Sciences Volume 38 ; 38 ; >
+    au < tested ; 2008 ; Philosophy of the Social Sciences Volume 38 ; 38 ; >
     au < ready ; 2009 ; Philosophy of the Social Sciences Volume 39 ; 39 ; reingest3.clockss.org:8083 >
 
   }
@@ -5330,7 +5330,7 @@
 
     param[base_url] = http://plt.sagepub.com/
 
-    au < testing ; 2008 ; Planning Theory Volume 7 ; 7 ; >
+    au < tested ; 2008 ; Planning Theory Volume 7 ; 7 ; >
     au < ready ; 2009 ; Planning Theory Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
   }
@@ -5343,7 +5343,7 @@
 
     param[base_url] = http://pqx.sagepub.com/
 
-    au < testing ; 2008 ; Police Quarterly Volume 11 ; 11 ; >
+    au < tested ; 2008 ; Police Quarterly Volume 11 ; 11 ; >
     au < tested ; 2009 ; Police Quarterly Volume 12 ; 12 ; >
 
   }
@@ -5356,7 +5356,7 @@
 
     param[base_url] = http://ppn.sagepub.com/
 
-    au < testing ; 2008 ; Policy, Politics, & Nursing Practice Volume 9 ; 9 ; >
+    au < tested ; 2008 ; Policy, Politics, & Nursing Practice Volume 9 ; 9 ; >
     au < tested ; 2009 ; Policy, Politics, & Nursing Practice Volume 10 ; 10 ; >
 
   }
@@ -5369,7 +5369,7 @@
 
     param[base_url] = http://prq.sagepub.com/
 
-    au < testing ; 2008 ; Political Research Quarterly Volume 61 ; 61 ; >
+    au < tested ; 2008 ; Political Research Quarterly Volume 61 ; 61 ; >
     au < tested ; 2009 ; Political Research Quarterly Volume 62 ; 62 ; >
 
   }
@@ -5382,7 +5382,7 @@
 
     param[base_url] = http://ptx.sagepub.com/
 
-    au < testing ; 2008 ; Political Theory Volume 36 ; 36 ; >
+    au < tested ; 2008 ; Political Theory Volume 36 ; 36 ; >
     au < tested ; 2009 ; Political Theory Volume 37 ; 37 ; >
 
   }
@@ -5395,7 +5395,7 @@
 
     param[base_url] = http://pas.sagepub.com/
 
-    au < testing ; 2008 ; Politics & Society Volume 36 ; 36 ; >
+    au < tested ; 2008 ; Politics & Society Volume 36 ; 36 ; >
     au < tested ; 2009 ; Politics & Society Volume 37 ; 37 ; >
 
   }
@@ -5408,7 +5408,7 @@
 
     param[base_url] = http://ppe.sagepub.com/
 
-    au < testing ; 2008 ; Politics, Philosophy & Economics Volume 7 ; 7 ; >
+    au < tested ; 2008 ; Politics, Philosophy & Economics Volume 7 ; 7 ; >
     au < tested ; 2009 ; Politics, Philosophy & Economics Volume 8 ; 8 ; >
 
   }
@@ -5421,7 +5421,7 @@
 
     param[base_url] = http://tpj.sagepub.com/
 
-    au < testing ; 2008 ; The Prison Journal Volume 88 ; 88 ; >
+    au < tested ; 2008 ; The Prison Journal Volume 88 ; 88 ; >
     au < tested ; 2009 ; The Prison Journal Volume 89 ; 89 ; >
 
   }
@@ -5434,7 +5434,7 @@
 
     param[base_url] = http://prb.sagepub.com/
 
-    au < testing ; 2008 ; Probation Journal Volume 55 ; 55 ; >
+    au < tested ; 2008 ; Probation Journal Volume 55 ; 55 ; >
     au < ready ; 2009 ; Probation Journal Volume 56 ; 56 ; reingest3.clockss.org:8083 >
 
   }
@@ -5447,7 +5447,7 @@
 
     param[base_url] = http://pdj.sagepub.com/
 
-    au < testing ; 2008 ; Progress in Development Studies Volume 8 ; 8 ; >
+    au < tested ; 2008 ; Progress in Development Studies Volume 8 ; 8 ; >
     au < ready ; 2009 ; Progress in Development Studies Volume 9 ; 9 ; reingest3.clockss.org:8083 >
 
   }
@@ -5460,7 +5460,7 @@
 
     param[base_url] = http://phg.sagepub.com/
 
-    au < testing ; 2008 ; Progress in Human Geography Volume 32 ; 32 ; >
+    au < tested ; 2008 ; Progress in Human Geography Volume 32 ; 32 ; >
     au < ready ; 2009 ; Progress in Human Geography Volume 33 ; 33 ; reingest3.clockss.org:8083 >
 
   }
@@ -5473,7 +5473,7 @@
 
     param[base_url] = http://ppg.sagepub.com/
 
-    au < testing ; 2008 ; Progress in Physical Geography Volume 32 ; 32 ; >
+    au < tested ; 2008 ; Progress in Physical Geography Volume 32 ; 32 ; >
     au < ready ; 2009 ; Progress in Physical Geography Volume 33 ; 33 ; reingest3.clockss.org:8083 >
 
   }
@@ -5486,7 +5486,7 @@
 
     param[base_url] = http://pds.sagepub.com/
 
-    au < testing ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 ; >
+    au < tested ; 2008 ; Psychology & Developing Societies Volume 20 ; 20 ; >
     au < ready ; 2009 ; Psychology & Developing Societies Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
   }
@@ -5499,7 +5499,7 @@
 
     param[base_url] = http://pom.sagepub.com/
 
-    au < testing ; 2008 ; Psychology of Music Volume 36 ; 36 ; >
+    au < tested ; 2008 ; Psychology of Music Volume 36 ; 36 ; >
     au < ready ; 2009 ; Psychology of Music Volume 37 ; 37 ; reingest3.clockss.org:8083 >
 
   }
@@ -5512,7 +5512,7 @@
 
     param[base_url] = http://pfr.sagepub.com/
 
-    au < testing ; 2008 ; Public Finance Review Volume 36 ; 36 ; >
+    au < tested ; 2008 ; Public Finance Review Volume 36 ; 36 ; >
     au < ready ; 2009 ; Public Finance Review Volume 37 ; 37 ; reingest3.clockss.org:8083 >
 
   }
@@ -5525,7 +5525,7 @@
 
     param[base_url] = http://ppa.sagepub.com/
 
-    au < testing ; 2008 ; Public Policy and Administration Volume 23 ; 23 ; >
+    au < tested ; 2008 ; Public Policy and Administration Volume 23 ; 23 ; >
     au < tested ; 2009 ; Public Policy and Administration Volume 24 ; 24 ; >
 
   }
@@ -5538,7 +5538,7 @@
 
     param[base_url] = http://pus.sagepub.com/
 
-    au < testing ; 2008 ; Public Understanding of Science Volume 17 ; 17 ; >
+    au < tested ; 2008 ; Public Understanding of Science Volume 17 ; 17 ; >
     au < tested ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; >
 
   }
@@ -5551,7 +5551,7 @@
 
     param[base_url] = http://pwm.sagepub.com/
 
-    au < testing ; 2008 ; Public Works Management & Policy Volume 13 ; 13 ; >
+    au < tested ; 2008 ; Public Works Management & Policy Volume 13 ; 13 ; >
     au < tested ; 2009 ; Public Works Management & Policy Volume 14 ; 14 ; >
 
   }
@@ -5564,7 +5564,7 @@
 
     param[base_url] = http://pun.sagepub.com/
 
-    au < testing ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
+    au < tested ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
     au < tested ; 2009 ; Punishment & Society Volume 11 ; 11 ; >
 
   }
@@ -5577,7 +5577,7 @@
 
     param[base_url] = http://qhr.sagepub.com/
 
-    au < testing ; 2008 ; Qualitative Health Research Volume 18 ; 18 ; >
+    au < tested ; 2008 ; Qualitative Health Research Volume 18 ; 18 ; >
     au < tested ; 2009 ; Qualitative Health Research Volume 19 ; 19 ; >
 
   }
@@ -5590,7 +5590,7 @@
 
     param[base_url] = http://qix.sagepub.com/
 
-    au < testing ; 2008 ; Qualitative Inquiry Volume 14 ; 14 ; >
+    au < tested ; 2008 ; Qualitative Inquiry Volume 14 ; 14 ; >
     au < tested ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
 
   }
@@ -5603,7 +5603,7 @@
 
     param[base_url] = http://qrj.sagepub.com/
 
-    au < testing ; 2008 ; Qualitative Research Volume 8 ; 8 ; >
+    au < tested ; 2008 ; Qualitative Research Volume 8 ; 8 ; >
     au < testing ; 2009 ; Qualitative Research Volume 9 ; 9 ; >
 
   }
@@ -5616,7 +5616,7 @@
 
     param[base_url] = http://qsw.sagepub.com/
 
-    au < testing ; 2008 ; Qualitative Social Work Volume 7 ; 7 ; >
+    au < tested ; 2008 ; Qualitative Social Work Volume 7 ; 7 ; >
     au < released ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
 
   }
@@ -5629,7 +5629,7 @@
 
     param[base_url] = http://rac.sagepub.com/
 
-    au < testing ; 2008 ; Race & Class Volume 50 ; 50 ; >
+    au < tested ; 2008 ; Race & Class Volume 50 ; 50 ; >
     au < released ; 2009 ; Race & Class Volume 51 ; 51 ; reingest3.clockss.org:8083 >
 
   }
@@ -5642,7 +5642,7 @@
 
     param[base_url] = http://rss.sagepub.com/
 
-    au < testing ; 2008 ; Rationality and Society Volume 20 ; 20 ; >
+    au < tested ; 2008 ; Rationality and Society Volume 20 ; 20 ; >
     au < released ; 2009 ; Rationality and Society Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
   }
@@ -5655,7 +5655,7 @@
 
     param[base_url] = http://rcb.sagepub.com/
 
-    au < testing ; 2008 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 ; >
+    au < tested ; 2008 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 ; >
 
   }
 
@@ -5667,7 +5667,7 @@
 
     param[base_url] = http://rel.sagepub.com/
 
-    au < testing ; 2008 ; RELC Journal Volume 39 ; 39 ; >
+    au < tested ; 2008 ; RELC Journal Volume 39 ; 39 ; >
     au < released ; 2009 ; RELC Journal Volume 40 ; 40 ; reingest3.clockss.org:8083 >
 
   }
@@ -5680,7 +5680,7 @@
 
     param[base_url] = http://rse.sagepub.com/
 
-    au < testing ; 2008 ; Remedial and Special Education Volume 29 ; 29 ; >
+    au < tested ; 2008 ; Remedial and Special Education Volume 29 ; 29 ; >
     au < released ; 2009 ; Remedial and Special Education Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
   }
@@ -5693,7 +5693,7 @@
 
     param[base_url] = http://rsx.sagepub.com/
 
-    au < testing ; 2008 ; Reproductive Sciences Volume 15 ; 15 ; >
+    au < tested ; 2008 ; Reproductive Sciences Volume 15 ; 15 ; >
     au < released ; 2009 ; Reproductive Sciences Volume 16 ; 16 ; reingest3.clockss.org:8083 >
 
   }
@@ -5706,7 +5706,7 @@
 
     param[base_url] = http://roa.sagepub.com/
 
-    au < testing ; 2008 ; Research on Aging Volume 30 ; 30 ; >
+    au < tested ; 2008 ; Research on Aging Volume 30 ; 30 ; >
     au < released ; 2009 ; Research on Aging Volume 31 ; 31 ; reingest3.clockss.org:8083 >
 
   }
@@ -5719,7 +5719,7 @@
 
     param[base_url] = http://rsw.sagepub.com/
 
-    au < testing ; 2008 ; Research on Social Work Practice Volume 18 ; 18 ; >
+    au < tested ; 2008 ; Research on Social Work Practice Volume 18 ; 18 ; >
     au < released ; 2009 ; Research on Social Work Practice Volume 19 ; 19 ; reingest3.clockss.org:8083 >
 
   }
@@ -5756,7 +5756,7 @@
 
     param[base_url] = http://rer.sagepub.com/
 
-    au < testing ; 2008 ; Review of Educational Research Volume 78 ; 78 ; >
+    au < tested ; 2008 ; Review of Educational Research Volume 78 ; 78 ; >
     au < released ; 2009 ; Review of Educational Research Volume 79 ; 79 ; reingest3.clockss.org:8083 >
 
   }
@@ -5769,7 +5769,7 @@
 
     param[base_url] = http://rop.sagepub.com/
 
-    au < testing ; 2008 ; Review of Public Personnel Administration Volume 28 ; 28 ; >
+    au < tested ; 2008 ; Review of Public Personnel Administration Volume 28 ; 28 ; >
     au < released ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; >
 
   }
@@ -5782,7 +5782,7 @@
 
     param[base_url] = http://rrp.sagepub.com/
 
-    au < testing ; 2008 ; Review of Radical Political Economics Volume 40 ; 40 ; >
+    au < tested ; 2008 ; Review of Radical Political Economics Volume 40 ; 40 ; >
     au < released ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; >
 
   }
@@ -5795,7 +5795,7 @@
 
     param[base_url] = http://rre.sagepub.com/
 
-    au < testing ; 2008 ; Review of Research in Education Volume 32 ; 32 ; >
+    au < tested ; 2008 ; Review of Research in Education Volume 32 ; 32 ; >
     au < released ; 2009 ; Review of Research in Education Volume 33 ; 33 ; >
 
   }
@@ -5808,7 +5808,7 @@
 
     param[base_url] = http://sjp.sagepub.com/
 
-    au < testing ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 ; >
+    au < tested ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 ; >
     au < tested ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; >
 
   }
@@ -5821,7 +5821,7 @@
 
     param[base_url] = http://spi.sagepub.com/
 
-    au < testing ; 2008 ; School Psychology International Volume 29 ; 29 ; >
+    au < tested ; 2008 ; School Psychology International Volume 29 ; 29 ; >
     au < tested ; 2009 ; School Psychology International Volume 30 ; 30 ; >
 
   }
@@ -5834,7 +5834,7 @@
 
     param[base_url] = http://scx.sagepub.com/
 
-    au < testing ; 2008 ; Science Communication Volume 30 ; 30 ; >
+    au < tested ; 2008 ; Science Communication Volume 30 ; 30 ; >
 
   }
 
@@ -5846,7 +5846,7 @@
 
     param[base_url] = http://sts.sagepub.com/
 
-    au < testing ; 2008 ; Science Technology & Society Volume 13 ; 13 ; >
+    au < tested ; 2008 ; Science Technology & Society Volume 13 ; 13 ; >
     au < tested ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
 
   }
@@ -5859,7 +5859,7 @@
 
     param[base_url] = http://sth.sagepub.com/
 
-    au < testing ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 ; >
+    au < tested ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 ; >
     au < tested ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; >
 
   }
@@ -5872,7 +5872,7 @@
 
     param[base_url] = http://slr.sagepub.com/
 
-    au < testing ; 2008 ; Second Language Research Volume 24 ; 24 ; >
+    au < tested ; 2008 ; Second Language Research Volume 24 ; 24 ; >
     au < released ; 2009 ; Second Language Research Volume 25 ; 25 ; reingest2.clockss.org:8085 >
 
   }
@@ -5885,7 +5885,7 @@
 
     param[base_url] = http://sdi.sagepub.com/
 
-    au < testing ; 2008 ; Security Dialogue Volume 39 ; 39 ; >
+    au < tested ; 2008 ; Security Dialogue Volume 39 ; 39 ; >
     au < released ; 2009 ; Security Dialogue Volume 40 ; 40 ; reingest2.clockss.org:8085 >
 
   }
