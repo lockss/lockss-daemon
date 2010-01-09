@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20CrawlUrlComparatorFactory.java,v 1.2 2010-01-08 01:49:33 thib_gc Exp $
+ * $Id: TestHighWirePressH20CrawlUrlComparatorFactory.java,v 1.3 2010-01-09 01:32:15 thib_gc Exp $
  */
 
 /*
@@ -43,7 +43,10 @@ public class TestHighWirePressH20CrawlUrlComparatorFactory extends LockssTestCas
 
   public void testAssumptions() throws Exception {
     assertNegative(".".compareTo("/"));
-    assertNegative("456".compareTo("789"));
+    assertNegative("123".compareTo("124"));
+    assertNegative("456".compareTo("457"));
+    assertNegative("998".compareTo("999"));
+    assertNegative("f1".compareTo("f2"));
   }
   
   /**
@@ -132,52 +135,40 @@ public class TestHighWirePressH20CrawlUrlComparatorFactory extends LockssTestCas
       public MyComparator(Comparator<CrawlUrl> comparator) { this.comparator = comparator; }
       public int compare(CrawlUrl o1, CrawlUrl o2) { return comparator.compare(o1, o2); }
       public int compare(String url1, String url2) { return compare(new MyCrawlUrl(url1), new MyCrawlUrl(url2)); }
-      public void doTestPair(String url1, String url2) {
-        assertNegative(compare(url1, url2));
-        assertPositive(compare(url2, url1));
-      }
     }
     
-    MyComparator cmp = new MyComparator(new HighWirePressH20CrawlUrlComparatorFactory().createCrawlUrlComparator("http://www.example.com/"));
+    String[] urls = new String[] {
+        "http://www.lockss.org/favicon.ico",
+        "http://www.lockss.org/robots.txt",
+        "http://www.example.com/content/123/456/998.abstract",
+        "http://www.example.com/content/123/456/999/F1.expansion.html",
+        "http://www.example.com/content/123/456/999/F1.large.jpg",
+        "http://www.example.com/content/123/456/999/F2.expansion.html",
+        "http://www.example.com/content/123/456/999.abstract",
+        "http://www.example.com/content/123/456/999.full",
+        "http://www.example.com/content/123/456.toc",
+        "http://www.example.com/content/123/456.toc.pdf",
+        "http://www.example.com/content/123/457.toc",
+        "http://www.example.com/content/123.fake",
+        "http://www.example.com/content/124.fake",
+    };
     
-    cmp.doTestPair("http://www.lockss.org/favicon.ico",
-                   "http://www.lockss.org/robots.txt");
-    cmp.doTestPair("http://www.lockss.org/favicon.ico",
-                   "http://www.example.com/content/123.fake");
-    cmp.doTestPair("http://www.lockss.org/favicon.ico",
-                   "http://www.example.com/content/123/456.toc");
-    cmp.doTestPair("http://www.lockss.org/favicon.ico",
-                   "http://www.example.com/content/123/456/999.abstract");
-    cmp.doTestPair("http://www.lockss.org/favicon.ico",
-                   "http://www.example.com/content/123/456/999/F1.expansion.html");
-    cmp.doTestPair("http://www.example.com/content/123.xxx",
-                   "http://www.example.com/content/123.yyy");
-    cmp.doTestPair("http://www.example.com/content/123.fake",
-                   "http://www.example.com/content/124.fake");
-    cmp.doTestPair("http://www.example.com/content/123/456.toc",
-                   "http://www.example.com/content/124.fake");
-    cmp.doTestPair("http://www.example.com/content/123/456/999.abstract",
-                   "http://www.example.com/content/124.fake");
-    cmp.doTestPair("http://www.example.com/content/123/456/999/F1.expansion.html",
-                   "http://www.example.com/content/124.fake");
-    cmp.doTestPair("http://www.example.com/content/123/456.toc",
-                   "http://www.example.com/content/123/456.toc.pdf");
-    cmp.doTestPair("http://www.example.com/content/123/456.toc",
-                   "http://www.example.com/content/123/457.toc");
-    cmp.doTestPair("http://www.example.com/content/123/456/999.abstract",
-                   "http://www.example.com/content/123/457.toc");
-    cmp.doTestPair("http://www.example.com/content/123/456/999/F1.expansion.html",
-                   "http://www.example.com/content/123/457.toc");
-    cmp.doTestPair("http://www.example.com/content/123/456/999.abstract",
-                   "http://www.example.com/content/123/456/999.full");
-    cmp.doTestPair("http://www.example.com/content/123/456/998.abstract",
-                   "http://www.example.com/content/123/456/999.abstract");
-    cmp.doTestPair("http://www.example.com/content/123/456/998/F1.expansion.html",
-                   "http://www.example.com/content/123/456/999.abstract");
-    cmp.doTestPair("http://www.example.com/content/123/456/999/F1.expansion.html",
-                   "http://www.example.com/content/123/456/999/F1.large.jpg");
-    cmp.doTestPair("http://www.example.com/content/123/456/999/F1.expansion.html",
-                   "http://www.example.com/content/123/456/999/F2.expansion.html");
+    MyComparator cmp = new MyComparator(new HighWirePressH20CrawlUrlComparatorFactory().createCrawlUrlComparator("http://www.example.com/"));
+    for (int i = 0 ; i < urls.length ; ++i) {
+      for (int j = 0 ; j < urls.length ; ++j) {
+        int x = cmp.compare(urls[i], urls[j]);
+        String msg = "i = " + i + ", j = " + j + ", x = " + x;
+        if (i < j) {
+          assertNegative(msg, x);
+        }
+        else if (i > j) {
+          assertPositive(msg, x);
+        }
+        else {
+          assertEquals(msg, 0, x);
+        }
+      }
+    }
   }
   
 }
