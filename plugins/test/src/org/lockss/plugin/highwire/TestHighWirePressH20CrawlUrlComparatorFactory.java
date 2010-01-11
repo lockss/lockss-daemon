@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePressH20CrawlUrlComparatorFactory.java,v 1.3 2010-01-09 01:32:15 thib_gc Exp $
+ * $Id: TestHighWirePressH20CrawlUrlComparatorFactory.java,v 1.4 2010-01-11 22:41:55 thib_gc Exp $
  */
 
 /*
@@ -77,12 +77,24 @@ public class TestHighWirePressH20CrawlUrlComparatorFactory extends LockssTestCas
     }
     
     MyFactory factory = new MyFactory("http://www.example.com/");
+    factory.testUrl("http://www.example.com/content/123",
+                    HighWirePressH20UrlPriority.VOLUME,
+                    "123", null, null, null);
+    factory.testUrl("http://www.example.com/content/123/",
+                    HighWirePressH20UrlPriority.VOLUME,
+                    "123", null, null, null);
     factory.testUrl("http://www.example.com/content/123.fake",
                     HighWirePressH20UrlPriority.VOLUME,
                     "123", null, null, null);
     factory.testUrl("http://www.example.com/content/123.0.fake",
                     HighWirePressH20UrlPriority.VOLUME,
                     "123.0", null, null, null);
+    factory.testUrl("http://www.example.com/content/123/456",
+                    HighWirePressH20UrlPriority.ISSUE,
+                    "123", "456", null, null);
+    factory.testUrl("http://www.example.com/content/123/456/",
+                    HighWirePressH20UrlPriority.ISSUE,
+                    "123", "456", null, null);
     factory.testUrl("http://www.example.com/content/123/456.toc",
                     HighWirePressH20UrlPriority.ISSUE,
                     "123", "456", null, null);
@@ -92,6 +104,12 @@ public class TestHighWirePressH20CrawlUrlComparatorFactory extends LockssTestCas
     factory.testUrl("http://www.example.com/content/123/456/local/masthead.pdf",
                     HighWirePressH20UrlPriority.ISSUE,
                     "123", "456", null, null);
+    factory.testUrl("http://www.example.com/content/123/456/999",
+                    HighWirePressH20UrlPriority.PAGE,
+                    "123", "456", "999", null);
+    factory.testUrl("http://www.example.com/content/123/456/999/",
+                    HighWirePressH20UrlPriority.PAGE,
+                    "123", "456", "999", null);
     factory.testUrl("http://www.example.com/content/123/456/999.abstract",
                     HighWirePressH20UrlPriority.PAGE,
                     "123", "456", "999", null);
@@ -104,15 +122,18 @@ public class TestHighWirePressH20CrawlUrlComparatorFactory extends LockssTestCas
     factory.testUrl("http://www.example.com/content/123/456/999/suppl/DC0",
                     HighWirePressH20UrlPriority.PAGE,
                     "123", "456", "999", null);
+    factory.testUrl("http://www.example.com/powerpoint/123/456/999/F1",
+                    HighWirePressH20UrlPriority.FIGURE,
+                    "123", "456", "999", "f1");
+    factory.testUrl("http://www.example.com/powerpoint/123/456/999/F1/",
+                    HighWirePressH20UrlPriority.FIGURE,
+                    "123", "456", "999", "f1");
     factory.testUrl("http://www.example.com/content/123/456/999/F1.expansion.html",
                     HighWirePressH20UrlPriority.FIGURE,
                     "123", "456", "999", "f1");
     factory.testUrl("http://www.example.com/content/123/456/999/F1.0.expansion.html",
                     HighWirePressH20UrlPriority.FIGURE,
                     "123", "456", "999", "f1.0");
-    factory.testUrl("http://www.example.com/powerpoint/123/456/999/F1",
-                    HighWirePressH20UrlPriority.FIGURE,
-                    "123", "456", "999", "f1");
     factory.testUrl("http://www.example.com/lockss-manifest/vol_123_manifest.dtl",
                     HighWirePressH20UrlPriority.HIGHEST,
                     null, null, null, null);
