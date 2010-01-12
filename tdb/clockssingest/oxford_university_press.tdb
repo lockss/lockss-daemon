@@ -1255,7 +1255,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://intimm.oxfordjournals.org/
 
-    au < testing ; 2008 ; International Immunology Volume 20 ; 20 ; >
+    au < tested ; 2008 ; International Immunology Volume 20 ; 20 ; >
     au < released ; 2009 ; International Immunology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
 
   }
@@ -1582,7 +1582,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jmicro.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
+    au < tested ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
     au < released ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
 
   }
@@ -1595,7 +1595,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jel.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
+    au < tested ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
     au < tested ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
 
   }
