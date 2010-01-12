@@ -1307,7 +1307,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://lawfam.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
+    au < tested ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
     au < released ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 ; reingest1.clockss.org:8082 >
 
   }
@@ -1320,7 +1320,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijl.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
+    au < tested ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
     au < released ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; reingest1.clockss.org:8082 >
 
   }
@@ -1333,7 +1333,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijlct.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
+    au < tested ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
     au < released ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
 
   }
@@ -1346,7 +1346,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijpor.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
+    au < tested ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
     au < released ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
@@ -1359,7 +1359,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://intqhc.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
+    au < tested ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
     au < released ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
@@ -1372,7 +1372,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijrl.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
+    au < tested ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
     au < released ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; reingest1.clockss.org:8082 >
 
   }
@@ -1385,7 +1385,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijtj.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
+    au < tested ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
     au < released ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
 
   }
@@ -1410,7 +1410,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://irap.oxfordjournals.org/
 
-    au < manifest ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
+    au < tested ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
     au < released ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; reingest1.clockss.org:8082 >
 
   }
@@ -1423,7 +1423,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://itnow.oxfordjournals.org/
 
-    au < manifest ; 2008 ; ITNOW Volume 50 ; 50 ; >
+    au < tested ; 2008 ; ITNOW Volume 50 ; 50 ; >
     au < released ; 2009 ; ITNOW Volume 51 ; 51 ; reingest1.clockss.org:8082 >
 
   }
@@ -1436,7 +1436,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jjco.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
+    au < tested ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
     au < tested ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 ; >
 
   }
@@ -1449,7 +1449,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jae.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
+    au < testing ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
     au < tested ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
 
   }
@@ -1462,7 +1462,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jaar.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
+    au < tested ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
     au < tested ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
 
   }
@@ -1475,8 +1475,8 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jac.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
-    au < manifest ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
+    au < tested ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
+    au < testing ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
     au < tested ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
     au < tested ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
 
@@ -1505,7 +1505,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jcs.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
+    au < tested ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
 
   }
 
@@ -1517,7 +1517,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jcle.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
+    au < tested ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
     au < released ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
 
   }
@@ -1530,7 +1530,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jcsl.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
+    au < tested ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
     au < released ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
 
   }
@@ -1543,7 +1543,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jdsde.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
+    au < tested ; 2008 ; The Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
     au < released ; 2009 ; The Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
 
   }
@@ -1556,7 +1556,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jdh.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
+    au < tested ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
     au < released ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
 
   }
@@ -1569,7 +1569,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://joeg.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
+    au < tested ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
     au < released ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
 
   }
@@ -1621,7 +1621,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jfec.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
+    au < tested ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
     au < tested ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 ; >
 
   }
@@ -1658,7 +1658,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jhered.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
+    au < tested ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
     au < tested ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
 
   }
@@ -1683,7 +1683,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jhc.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
+    au < tested ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
     au < tested ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
 
   }
@@ -1696,7 +1696,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jhmas.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
+    au < tested ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
     au < tested ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
 
   }
@@ -1721,7 +1721,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jiplp.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
+    au < tested ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
     au < tested ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
 
   }
@@ -1734,7 +1734,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jicj.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
+    au < tested ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
     au < tested ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
 
   }
@@ -1747,7 +1747,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jiel.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
+    au < tested ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
     au < tested ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
 
   }
@@ -1760,7 +1760,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jis.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
+    au < tested ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
     au < tested ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
 
   }
@@ -1773,7 +1773,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jleo.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
+    au < tested ; 2008 ; The Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
     au < tested ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
 
   }
@@ -1786,7 +1786,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://logcom.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
+    au < tested ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
     au < tested ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
 
   }
@@ -1799,7 +1799,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jlms.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
+    au < tested ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
     au < testing ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < tested ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < tested ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
