@@ -70,6 +70,7 @@
 	<value>org.lockss.plugin.histcoop.HistoryCooperativePlugin</value>
 	<value>org.lockss.plugin.highwire.HighWirePlugin</value>
 	<value>org.lockss.plugin.highwire.HighWireStrVolPlugin</value>
+	<value>org.lockss.plugin.highwire.HighWirePressH20Plugin</value>
 	<value>org.lockss.plugin.projmuse.ProjectMusePlugin</value>
 	<value>org.lockss.plugin.blackbird.BlackbirdPlugin</value>
 	<value>org.lockss.plugin.blackwell.BlackwellPlugin</value>
@@ -200,6 +201,7 @@
 	<value>org.lockss.plugin.topaz.TopazPlugin</value>
         <value>org.lockss.plugin.portlandpress.PortlandPressPlugin</value>
         <value>org.lockss.plugin.ingenta.IngentaJournalPlugin</value>
+	<value>org.lockss.plugin.medknow.MedknowPlugin</value>
 	      </list>
     </property>
 
