@@ -1490,8 +1490,8 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jb.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
-    au < manifest ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
+    au < tested ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
+    au < tested ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
     au < tested ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
     au < tested ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 ; >
 
@@ -1608,7 +1608,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jxb.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
+    au < notReady ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
     au < tested ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
 
   }
@@ -2648,7 +2648,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rof.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Review of Finance Volume 12 ; 12 ; >
+    au < testing ; 2008 ; Review of Finance Volume 12 ; 12 ; >
     au < released ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
   }
@@ -2661,7 +2661,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rfs.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
+    au < testing ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
     au < released ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
@@ -2674,7 +2674,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rheumatology.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Rheumatology Volume 47 ; 47 ; >
+    au < testing ; 2008 ; Rheumatology Volume 47 ; 47 ; >
     au < released ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
 
   }
@@ -2687,7 +2687,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
+    au < testing ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
     au < released ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
 
   }
@@ -2700,7 +2700,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://screen.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Screen Volume 49 ; 49 ; >
+    au < testing ; 2008 ; Screen Volume 49 ; 49 ; >
     au < released ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
 
   }
@@ -2713,7 +2713,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://scan.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
+    au < testing ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
     au < released ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
 
   }
@@ -2726,7 +2726,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://shm.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
+    au < testing ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
     au < released ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
@@ -2739,7 +2739,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://sp.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 ; >
+    au < testing ; 2008 ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 ; >
     au < testing ; 2009 ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
   }
@@ -2752,7 +2752,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ssjj.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
+    au < testing ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
     au < testing ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; reingest4.clockss.org:8082 >
 
   }
@@ -2765,7 +2765,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ser.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
+    au < testing ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
     au < testing ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; reingest4.clockss.org:8082 >
 
   }
@@ -2790,7 +2790,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://slr.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
+    au < testing ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
     au < testing ; 2009 ; Statute Law Review Volume 30 ; 30 ; reingest4.clockss.org:8082 >
 
   }
@@ -2803,7 +2803,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://sysbio.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
+    au < testing ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
     au < testing ; 2009 ; Systematic Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
 
   }
@@ -2816,7 +2816,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://teamat.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
+    au < testing ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
     au < testing ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 ; 28 ; reingest4.clockss.org:8082 >
 
   }
@@ -2829,12 +2829,12 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://toxsci.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
-    au < manifest ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
-    au < manifest ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
-    au < manifest ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
-    au < manifest ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
-    au < manifest ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
+    au < testing ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
+    au < testing ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
+    au < testing ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
+    au < testing ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
+    au < testing ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
+    au < testing ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
     au < testing ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
     au < testing ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
     au < testing ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; reingest4.clockss.org:8082 >
