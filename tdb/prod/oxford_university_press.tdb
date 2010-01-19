@@ -4278,8 +4278,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Mind Volume 114 ; 114 >
         au < HighWirePressPlugin ; doNotProcess ; Mind Volume 115 ; 115 >
         au < HighWirePressPlugin ; manifest ; Mind Volume 116 ; 116 >
-		au < HighWirePressPlugin ; testing ; Mind Volume 117 ; 117 >
-		au < HighWirePressPlugin ; manifest ; Mind Volume 118 ; 118 >
+	au < HighWirePressPlugin ; testing ; Mind Volume 117 ; 117 >
+	au < HighWirePressPlugin ; manifest ; Mind Volume 118 ; 118 >
       }
 
     }
@@ -4476,7 +4476,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Mutagenesis Volume 22 ; 22 >
         au < HighWirePressPlugin ; ready ; Mutagenesis Volume 23 ; 23 >
         au < HighWirePressPlugin ; ready ; Mutagenesis Volume 24 ; 24 >
-		au < HighWirePressPlugin ; manifest ; Mutagenesis Volume 25 ; 25 >
+        au < HighWirePressPlugin ; manifest ; Mutagenesis Volume 25 ; 25 >
       }
 
     }
@@ -4639,7 +4639,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
   
         au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 10 ; 10 >
         au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 11 ; 11 >
-		au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 12 ; 12 >
+        au < HighWirePressPlugin ; testing ; Nicotine and Tobacco Research Volume 12 ; 12 >
       }
 
     }
@@ -4670,7 +4670,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Occupational Medicine Volume 57 ; 57 >
         au < HighWirePressPlugin ; ready ; Occupational Medicine Volume 58 ; 58 >
         au < HighWirePressPlugin ; ready ; Occupational Medicine Volume 59 ; 59 >
-		au < HighWirePressPlugin ; manifest ; Occupational Medicine Volume 60 ; 60 >
+        au < HighWirePressPlugin ; manifest ; Occupational Medicine Volume 60 ; 60 >
       }
 
     }
@@ -4698,8 +4698,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 21 ; 21 >
         au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 22 ; 22 >
-		au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 23 ; 23 >
-		au < HighWirePressPlugin ; testing ; The Opera Quarterly Volume 24 ; 24 >
+        au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 23 ; 23 >
+        au < HighWirePressPlugin ; testing ; The Opera Quarterly Volume 24 ; 24 >
       }
 
     }
@@ -4716,7 +4716,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://ohr.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 		
-		au < HighWirePressPlugin ; manifest ; The Oral History Review Volume 34 ; 34 >
+	au < HighWirePressPlugin ; manifest ; The Oral History Review Volume 34 ; 34 >
         au < HighWirePressPlugin ; ready ; The Oral History Review Volume 35 ; 35 >
         au < HighWirePressPlugin ; ready ; The Oral History Review Volume 36 ; 36 >
 
@@ -4999,7 +4999,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; manifest ; Policing: A Journal of Policy and Practice Volume 1 ; 1 >
-        au < HighWirePressPlugin ; testing ; Policing: A Journal of Policy and Practice Volume 2 ; 2 >
+        au < HighWirePressPlugin ; ready ; Policing: A Journal of Policy and Practice Volume 2 ; 2 >
         au < HighWirePressPlugin ; ready ; Policing: A Journal of Policy and Practice Volume 3 ; 3 >
 
       }
@@ -5084,7 +5084,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Protein Engineering Design and Selection Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; released ; Protein Engineering Design and Selection Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; released ; Protein Engineering Design and Selection Volume 20 ; 20 >
-        au < HighWirePressPlugin ; testing ; Protein Engineering Design and Selection Volume 21 ; 21 >
+        au < HighWirePressPlugin ; ready ; Protein Engineering Design and Selection Volume 21 ; 21 >
         au < HighWirePressPlugin ; ready ; Protein Engineering Design and Selection Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; Protein Engineering Design and Selection Volume 23 ; 23 >
 
@@ -5134,7 +5134,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Public Opinion Quarterly Volume 69 ; 69 >
         au < HighWirePressPlugin ; doNotProcess ; Public Opinion Quarterly Volume 70 ; 70 >
         au < HighWirePressPlugin ; manifest ; Public Opinion Quarterly Volume 71 ; 71 >
-        au < HighWirePressPlugin ; testing ; Public Opinion Quarterly Volume 72 ; 72 >
+        au < HighWirePressPlugin ; ready ; Public Opinion Quarterly Volume 72 ; 72 >
         au < HighWirePressPlugin ; ready ; Public Opinion Quarterly Volume 73 ; 73 >
 
       }
@@ -5164,7 +5164,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Publius: The Journal of Federalism Volume 36 ; 36 >
         au < HighWireStrVolPlugin ; released ; Publius: The Journal of Federalism Volume 37 ; 37 >
-        au < HighWirePressPlugin ; testing ; Publius: The Journal of Federalism Volume 38 ; 38 >
+        au < HighWirePressPlugin ; ready ; Publius: The Journal of Federalism Volume 38 ; 38 >
         au < HighWirePressPlugin ; ready ; Publius: The Journal of Federalism Volume 39 ; 39 >
         au < HighWirePressPlugin ; manifest ; Publius: The Journal of Federalism Volume 40 ; 40 >
 
@@ -5196,7 +5196,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; QJM: An International Journal of Medicine Volume 98 ; 98 >
         au < HighWirePressPlugin ; doNotProcess ; QJM: An International Journal of Medicine Volume 99 ; 99 >
         au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 100 ; 100 >
-        au < HighWirePressPlugin ; testing ; QJM: An International Journal of Medicine Volume 101 ; 101 >
+        au < HighWirePressPlugin ; ready ; QJM: An International Journal of Medicine Volume 101 ; 101 >
         au < HighWirePressPlugin ; ready ; QJM: An International Journal of Medicine Volume 102 ; 102 >
         au < HighWirePressPlugin ; manifest ; QJM: An International Journal of Medicine Volume 103 ; 103 >
 
@@ -5452,7 +5452,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Rheumatology Volume 44 ; 44 >
         au < HighWirePressPlugin ; manifest ; Rheumatology Volume 45 ; 45 >
         au < HighWirePressPlugin ; manifest ; Rheumatology Volume 46 ; 46 >
-        au < HighWirePressPlugin ; testing ; Rheumatology Volume 47 ; 47 >
+        au < HighWirePressPlugin ; ready ; Rheumatology Volume 47 ; 47 >
         au < HighWirePressPlugin ; manifest ; Rheumatology Volume 48 ; 48 >
 
       }
@@ -5810,8 +5810,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://tandt.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 13 ; 13 >
+        au < HighWirePressPlugin ; testing ; Trusts & Trustees Volume 12 ; 12 >
+        au < HighWirePressPlugin ; testing ; Trusts & Trustees Volume 13 ; 13 >
         au < HighWirePressPlugin ; ready ; Trusts & Trustees Volume 14 ; 14 >
         au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 15 ; 15 >
 
@@ -5842,7 +5842,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Twentieth Century British History Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; Twentieth Century British History Volume 17 ; 17 >
-        au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 18 ; 18 >
+        au < HighWirePressPlugin ; testing ; Twentieth Century British History Volume 18 ; 18 >
         au < HighWirePressPlugin ; ready ; Twentieth Century British History Volume 19 ; 19 >
         au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 20 ; 20 >
 
@@ -5874,7 +5874,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The World Bank Economic Review Volume 19 ; 19 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Economic Review Volume 20 ; 20 >
-        au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 21 ; 21 >
+        au < HighWirePressPlugin ; testing ; The World Bank Economic Review Volume 21 ; 21 >
         au < HighWirePressPlugin ; ready ; The World Bank Economic Review Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 23 ; 23 >
 
@@ -5905,7 +5905,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The World Bank Research Observer Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Research Observer Volume 21 ; 21 >
-        au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 22 ; 22 >
+        au < HighWirePressPlugin ; testing ; The World Bank Research Observer Volume 22 ; 22 >
         au < HighWirePressPlugin ; ready ; The World Bank Research Observer Volume 23 ; 23 >
         au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 24 ; 24 >
 
@@ -5936,7 +5936,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
-        au < HighWirePressPlugin ; manifest ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
+        au < HighWirePressPlugin ; testing ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
         au < HighWirePressPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
 
       }
@@ -5966,7 +5966,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in English Studies Volume 84 ; 84 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in English Studies Volume 85 ; 85 >
-        au < HighWirePressPlugin ; manifest ; The Year's Work in English Studies Volume 86 ; 86 >
+        au < HighWirePressPlugin ; testing ; The Year's Work in English Studies Volume 86 ; 86 >
         au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 87 ; 87 >
 
       }
