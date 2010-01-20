@@ -4980,7 +4980,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Plant and Cell Physiology Volume 47 ; 47 >
         au < HighWireStrVolPlugin ; released ; Plant and Cell Physiology Volume 48 ; 48 >
-        au < HighWirePressPlugin ; testing ; Plant and Cell Physiology Volume 49 ; 49 >
+        au < HighWirePressPlugin ; ready ; Plant and Cell Physiology Volume 49 ; 49 >
         au < HighWirePressPlugin ; ready ; Plant and Cell Physiology Volume 50 ; 50 >
 
       }
@@ -5030,7 +5030,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Political Analysis Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Political Analysis Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Political Analysis Volume 15 ; 15 >
-        au < HighWirePressPlugin ; testing ; Political Analysis Volume 16 ; 16 >
+        au < HighWirePressPlugin ; ready ; Political Analysis Volume 16 ; 16 >
         au < HighWirePressPlugin ; ready ; Political Analysis Volume 17 ; 17 >
 
       }
@@ -5050,8 +5050,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Proceedings of the London Mathematical Society Volume 94 ; 94 >
         au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 95 ; 95 >
-        au < HighWirePressPlugin ; testing ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
-        au < HighWirePressPlugin ; testing ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
+        au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 96 ; 96 >
+        au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 97 ; 97 >
         au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 98 ; 98 >
         au < HighWirePressPlugin ; ready ; Proceedings of the London Mathematical Society Volume 99 ; 99 >
         au < HighWirePressPlugin ; manifest ; Proceedings of the London Mathematical Society Volume 100 ; 100 >
@@ -5103,7 +5103,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://phe.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
   
-        au < HighWirePressPlugin ; testing ; Public Health Ethics Volume 1 ; 1 ; >
+        au < HighWirePressPlugin ; ready ; Public Health Ethics Volume 1 ; 1 ; >
         au < HighWirePressPlugin ; ready ; Public Health Ethics Volume 2 ; 2 ; >
  
       }
@@ -5810,8 +5810,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://tandt.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; testing ; Trusts & Trustees Volume 12 ; 12 >
-        au < HighWirePressPlugin ; testing ; Trusts & Trustees Volume 13 ; 13 >
+        au < HighWirePressPlugin ; ready ; Trusts & Trustees Volume 12 ; 12 >
+        au < HighWirePressPlugin ; ready ; Trusts & Trustees Volume 13 ; 13 >
         au < HighWirePressPlugin ; ready ; Trusts & Trustees Volume 14 ; 14 >
         au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 15 ; 15 >
 
@@ -5842,7 +5842,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Twentieth Century British History Volume 16 ; 16 >
         au < HighWirePressPlugin ; doNotProcess ; Twentieth Century British History Volume 17 ; 17 >
-        au < HighWirePressPlugin ; testing ; Twentieth Century British History Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; Twentieth Century British History Volume 18 ; 18 >
         au < HighWirePressPlugin ; ready ; Twentieth Century British History Volume 19 ; 19 >
         au < HighWirePressPlugin ; manifest ; Twentieth Century British History Volume 20 ; 20 >
 
@@ -5874,7 +5874,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The World Bank Economic Review Volume 19 ; 19 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Economic Review Volume 20 ; 20 >
-        au < HighWirePressPlugin ; testing ; The World Bank Economic Review Volume 21 ; 21 >
+        au < HighWirePressPlugin ; ready ; The World Bank Economic Review Volume 21 ; 21 >
         au < HighWirePressPlugin ; ready ; The World Bank Economic Review Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 23 ; 23 >
 
@@ -5905,7 +5905,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; The World Bank Research Observer Volume 20 ; 20 >
         au < HighWirePressPlugin ; doNotProcess ; The World Bank Research Observer Volume 21 ; 21 >
-        au < HighWirePressPlugin ; testing ; The World Bank Research Observer Volume 22 ; 22 >
+        au < HighWirePressPlugin ; ready ; The World Bank Research Observer Volume 22 ; 22 >
         au < HighWirePressPlugin ; ready ; The World Bank Research Observer Volume 23 ; 23 >
         au < HighWirePressPlugin ; manifest ; The World Bank Research Observer Volume 24 ; 24 >
 
@@ -5936,7 +5936,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in Critical and Cultural Theory Volume 13 ; 13 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
-        au < HighWirePressPlugin ; testing ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
+        au < HighWirePressPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
         au < HighWirePressPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
 
       }
@@ -5966,7 +5966,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; The Year's Work in English Studies Volume 84 ; 84 >
         au < HighWireStrVolPlugin ; released ; The Year's Work in English Studies Volume 85 ; 85 >
-        au < HighWirePressPlugin ; testing ; The Year's Work in English Studies Volume 86 ; 86 >
+        au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 86 ; 86 >
         au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 87 ; 87 >
 
       }
