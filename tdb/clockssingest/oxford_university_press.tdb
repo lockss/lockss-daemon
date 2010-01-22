@@ -1023,7 +1023,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hmg.oxfordjournals.org/
 
-    au < testing ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
+    au < tested ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
     au < released ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
 
   }
@@ -1036,7 +1036,7 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://humrep.oxfordjournals.org/
 
-    au < testing ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
+    au < tested ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < released ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
@@ -1476,7 +1476,7 @@ comment[in1] = 500 errors
     param[base_url] = http://jac.oxfordjournals.org/
 
     au < tested ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
-    au < testing ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
+    au < tested ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
     au < tested ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
     au < tested ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
 
@@ -1931,7 +1931,7 @@ comment[in1] = 500 errors
     param[base_url] = http://jpe.oxfordjournals.org/
 
     au < testing ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
-    au < manifest ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
+    au < testing ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
 
   }
 
@@ -2060,8 +2060,8 @@ comment[in1] = 500 errors
 
     param[base_url] = http://leobaeck.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
-    au < manifest ; 2009 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < testing ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < testing ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
 
   }
 
@@ -2432,7 +2432,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://philmat.oxfordjournals.org/
 
-    au < testing ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
+    au < tested ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
     au < tested ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
 
   }
@@ -2445,7 +2445,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://pcp.oxfordjournals.org/
 
-    au < testing ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
+    au < tested ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
     au < tested ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
 
   }
@@ -2458,7 +2458,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://policing.oxfordjournals.org/
 
-    au < testing ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
+    au < tested ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
     au < tested ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
 
   }
@@ -2471,7 +2471,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://pan.oxfordjournals.org/
 
-    au < testing ; 2008 ; Political Analysis Volume 16 ; 16 ; >
+    au < tested ; 2008 ; Political Analysis Volume 16 ; 16 ; >
     au < tested ; 2009 ; Political Analysis Volume 17 ; 17 ; >
 
   }
@@ -2484,8 +2484,8 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://plms.oxfordjournals.org/
 
-    au < testing ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
-    au < testing ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
+    au < tested ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
+    au < tested ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
     au < tested ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
     au < tested ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
 
@@ -2499,7 +2499,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://peds.oxfordjournals.org/
 
-    au < testing ; 2008 ; Protein Engineering, Design and Selection Volume 21 ; 21 ; >
+    au < tested ; 2008 ; Protein Engineering, Design and Selection Volume 21 ; 21 ; >
     au < tested ; 2009 ; Protein Engineering, Design and Selection Volume 22 ; 22 ; >
 
   }
@@ -2512,7 +2512,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://phe.oxfordjournals.org/
 
-    au < testing ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
+    au < tested ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
     au < tested ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
 
   }
@@ -2525,7 +2525,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://poq.oxfordjournals.org/
 
-    au < testing ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
+    au < tested ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
     au < tested ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
 
   }
@@ -2538,7 +2538,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://publius.oxfordjournals.org/
 
-    au < testing ; 2008 ; Publius: The Journal of Federalism Volume 38 ; 38 ; >
+    au < tested ; 2008 ; Publius: The Journal of Federalism Volume 38 ; 38 ; >
     au < tested ; 2009 ; Publius: The Journal of Federalism Volume 39 ; 39 ; >
 
   }
@@ -2551,7 +2551,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://qjmed.oxfordjournals.org/
 
-    au < testing ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
+    au < tested ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
     au < testing ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
 
   }
@@ -2590,9 +2590,9 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rpd.oxfordjournals.org/
 
-    au < testing ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
-    au < testing ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
-    au < testing ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
+    au < tested ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
+    au < tested ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
+    au < tested ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
     au < testing ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
     au < tested ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
     au < tested ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
@@ -2609,7 +2609,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rsq.oxfordjournals.org/
 
-    au < testing ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
+    au < tested ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
     au < released ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; reingest2.clockss.org:8085 >
 
   }
@@ -2622,7 +2622,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rpc.oxfordjournals.org/
 
-    au < testing ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
+    au < tested ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
     au < released ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
 
   }
@@ -2635,7 +2635,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://reep.oxfordjournals.org/
 
-    au < testing ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
+    au < tested ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
     au < released ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
   }
@@ -2648,7 +2648,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rof.oxfordjournals.org/
 
-    au < testing ; 2008 ; Review of Finance Volume 12 ; 12 ; >
+    au < tested ; 2008 ; Review of Finance Volume 12 ; 12 ; >
     au < released ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
   }
@@ -2661,7 +2661,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rfs.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
+    au < tested ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
     au < released ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
@@ -2674,7 +2674,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rheumatology.oxfordjournals.org/
 
-    au < testing ; 2008 ; Rheumatology Volume 47 ; 47 ; >
+    au < tested ; 2008 ; Rheumatology Volume 47 ; 47 ; >
     au < released ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
 
   }
@@ -2687,7 +2687,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
 
-    au < testing ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
+    au < tested ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
     au < released ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
 
   }
@@ -2700,7 +2700,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://screen.oxfordjournals.org/
 
-    au < testing ; 2008 ; Screen Volume 49 ; 49 ; >
+    au < tested ; 2008 ; Screen Volume 49 ; 49 ; >
     au < released ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
 
   }
@@ -2713,7 +2713,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://scan.oxfordjournals.org/
 
-    au < testing ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
+    au < tested ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
     au < released ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
 
   }
@@ -2726,7 +2726,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://shm.oxfordjournals.org/
 
-    au < testing ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
+    au < tested ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
     au < released ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
 
   }
@@ -2739,7 +2739,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://sp.oxfordjournals.org/
 
-    au < testing ; 2008 ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 ; >
+    au < tested ; 2008 ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 ; >
     au < testing ; 2009 ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 ; reingest4.clockss.org:8082 >
 
   }
@@ -2752,7 +2752,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ssjj.oxfordjournals.org/
 
-    au < testing ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
+    au < tested ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
     au < testing ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; reingest4.clockss.org:8082 >
 
   }
@@ -2765,7 +2765,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ser.oxfordjournals.org/
 
-    au < testing ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
+    au < tested ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
     au < testing ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; reingest4.clockss.org:8082 >
 
   }
@@ -2790,7 +2790,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://slr.oxfordjournals.org/
 
-    au < testing ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
+    au < tested ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
     au < testing ; 2009 ; Statute Law Review Volume 30 ; 30 ; reingest4.clockss.org:8082 >
 
   }
@@ -2803,7 +2803,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://sysbio.oxfordjournals.org/
 
-    au < testing ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
+    au < tested ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
     au < testing ; 2009 ; Systematic Biology Volume 58 ; 58 ; reingest4.clockss.org:8082 >
 
   }
@@ -2816,7 +2816,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://teamat.oxfordjournals.org/
 
-    au < testing ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
+    au < tested ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
     au < testing ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 ; 28 ; reingest4.clockss.org:8082 >
 
   }
@@ -2829,17 +2829,17 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://toxsci.oxfordjournals.org/
 
-    au < testing ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
-    au < testing ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
-    au < testing ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
-    au < testing ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
-    au < testing ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
-    au < testing ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
+    au < tested ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
+    au < tested ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
+    au < tested ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
+    au < tested ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
+    au < tested ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
+    au < tested ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
     au < testing ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; reingest4.clockss.org:8082 >
     au < testing ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
     au < testing ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; reingest4.clockss.org:8082 >
     au < testing ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; reingest4.clockss.org:8082 >
-    au < manifest ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
+    au < testing ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
 
   }
 
@@ -2851,7 +2851,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://treephys.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
+    au < testing ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
     au < testing ; 2009 ; Tree Physiology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
   }
@@ -2864,7 +2864,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://tandt.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
+    au < testing ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
     au < testing ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
   }
@@ -2877,7 +2877,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://tcbh.oxfordjournals.org/
 
-    au < manifest ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
+    au < testing ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
     au < testing ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; reingest4.clockss.org:8082 >
 
   }
@@ -2890,7 +2890,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://wber.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
+    au < testing ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
     au < testing ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
 
   }
@@ -2903,7 +2903,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://wbro.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
+    au < testing ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
     au < testing ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
   }
@@ -2916,7 +2916,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ywcct.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
+    au < testing ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
     au < testing ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; reingest4.clockss.org:8082 >
 
   }
@@ -2929,7 +2929,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ywes.oxfordjournals.org/
 
-    au < manifest ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
+    au < testing ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
 
   }
 

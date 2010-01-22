@@ -1271,9 +1271,9 @@
 
     param[base_url] = http://cbi.sagepub.com/
 
-    au < manifest ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 ; >
-    au < manifest ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
-    au < manifest ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
+    au < testing ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 ; >
+    au < testing ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
+    au < testing ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
 
   }
 
@@ -1415,7 +1415,7 @@
 
     param[base_url] = http://eus.sagepub.com/
 
-    au < manifest ; 2007-2008 ; Education and Urban Society Volume 40 ; 40 ; >
+    au < testing ; 2007-2008 ; Education and Urban Society Volume 40 ; 40 ; >
     au < ready ; 2008-2009 ; Education and Urban Society Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < manifest ; 2009-2010 ; Education and Urban Society Volume 42 ; 42 ; >
 
@@ -1793,7 +1793,7 @@
 
     param[base_url] = http://ext.sagepub.com/
 
-    au < manifest ; 2007-2008 ; The Expository Times Volume 119 ; 119 ; >
+    au < testing ; 2007-2008 ; The Expository Times Volume 119 ; 119 ; >
     au < testing ; 2008-2009 ; The Expository Times Volume 120 ; 120 ; >
     au < manifest ; 2009-2010 ; The Expository Times Volume 121 ; 121 ; >
 
@@ -2195,7 +2195,7 @@
     param[base_url] = http://hea.sagepub.com/
 
     au < tested ; 2008 ; Health: Volume 12 ; 12 ; >
-    au < manifest ; 2009 ; Health: Volume 13 ; 13 ; reingest1.clockss.org:8082 >
+    au < testing ; 2009 ; Health: Volume 13 ; 13 ; >
 
   }
 
@@ -6233,7 +6233,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tvn.sagepub.com/
 
-    au < testing ; 2008 ; Television & New Media Volume 9 ; 9 ; >
+    au < tested ; 2008 ; Television & New Media Volume 9 ; 9 ; >
     au < released ; 2009 ; Television & New Media Volume 10 ; 10 ; reingest2.clockss.org:8085 >
 
   }
@@ -6270,7 +6270,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tcr.sagepub.com/
 
-    au < testing ; 2008 ; Theoretical Criminology Volume 12 ; 12 ; >
+    au < tested ; 2008 ; Theoretical Criminology Volume 12 ; 12 ; >
     au < released ; 2009 ; Theoretical Criminology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
   }
@@ -6283,7 +6283,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tap.sagepub.com/
 
-    au < testing ; 2008 ; Theory & Psychology Volume 18 ; 18 ; >
+    au < tested ; 2008 ; Theory & Psychology Volume 18 ; 18 ; >
     au < released ; 2009 ; Theory & Psychology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
 
   }
@@ -6296,7 +6296,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tre.sagepub.com/
 
-    au < testing ; 2008 ; Theory and Research in Education Volume 6 ; 6 ; >
+    au < tested ; 2008 ; Theory and Research in Education Volume 6 ; 6 ; >
     au < released ; 2009 ; Theory and Research in Education Volume 7 ; 7 ; reingest2.clockss.org:8085 >
 
   }
@@ -6309,7 +6309,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tcs.sagepub.com/
 
-    au < testing ; 2008 ; Theory, Culture & Society Volume 25 ; 25 ; >
+    au < tested ; 2008 ; Theory, Culture & Society Volume 25 ; 25 ; >
     au < released ; 2009 ; Theory, Culture & Society Volume 26 ; 26 ; reingest2.clockss.org:8085 >
 
   }
@@ -6335,7 +6335,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tag.sagepub.com/
 
-    au < testing ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 ; >
+    au < tested ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 ; >
     au < released ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
   }
@@ -6360,7 +6360,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tan.sagepub.com/
 
-    au < testing ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 ; >
+    au < tested ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 ; >
     au < released ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 ; reingest2.clockss.org:8085 >
 
   }
@@ -6373,7 +6373,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tar.sagepub.com/
 
-    au < testing ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 ; >
+    au < tested ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 ; >
     au < released ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
   }
@@ -6398,14 +6398,14 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://the.sagepub.com/
 
-    au < testing ; 2008 ; Thesis Eleven Volume 92 ; 92 ; >
-    au < testing ; 2008 ; Thesis Eleven Volume 93 ; 93 ; >
-    au < testing ; 2008 ; Thesis Eleven Volume 94 ; 94 ; >
-    au < testing ; 2008 ; Thesis Eleven Volume 95 ; 95 ; >
+    au < tested ; 2008 ; Thesis Eleven Volume 92 ; 92 ; >
+    au < tested ; 2008 ; Thesis Eleven Volume 93 ; 93 ; >
+    au < tested ; 2008 ; Thesis Eleven Volume 94 ; 94 ; >
+    au < tested ; 2008 ; Thesis Eleven Volume 95 ; 95 ; >
     au < released ; 2009 ; Thesis Eleven Volume 96 ; 96 ; reingest2.clockss.org:8085 >
     au < released ; 2009 ; Thesis Eleven Volume 97 ; 97 ; reingest2.clockss.org:8085 >
     au < released ; 2009 ; Thesis Eleven Volume 98 ; 98 ; reingest2.clockss.org:8085 >
-    au < manifest ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
+    au < testing ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
 
   }
 
@@ -6417,7 +6417,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tas.sagepub.com/
 
-    au < testing ; 2008 ; Time & Society Volume 17 ; 17 ; >
+    au < tested ; 2008 ; Time & Society Volume 17 ; 17 ; >
     au < released ; 2009 ; Time & Society Volume 18 ; 18 ; reingest4.clockss.org:8082 >
 
   }
@@ -6430,7 +6430,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tec.sagepub.com/
 
-    au < testing ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 ; >
+    au < tested ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 ; >
     au < released ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
   }
@@ -6443,7 +6443,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tou.sagepub.com/
 
-    au < testing ; 2008 ; Tourist Studies Volume 8 ; 8 ; >
+    au < tested ; 2008 ; Tourist Studies Volume 8 ; 8 ; >
 
   }
 
@@ -6468,7 +6468,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tih.sagepub.com/
 
-    au < testing ; 2008 ; Toxicology and Industrial Health Volume 24 ; 24 ; >
+    au < tested ; 2008 ; Toxicology and Industrial Health Volume 24 ; 24 ; >
     au < released ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 ; reingest4.clockss.org:8082 >
 
   }
@@ -6481,7 +6481,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tim.sagepub.com/
 
-    au < testing ; 2008 ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 ; >
+    au < tested ; 2008 ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 ; >
     au < released ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 ; reingest4.clockss.org:8082 >
 
   }
@@ -6494,7 +6494,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tps.sagepub.com/
 
-    au < testing ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; >
+    au < tested ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; >
     au < released ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; reingest4.clockss.org:8082 >
 
   }
@@ -6519,7 +6519,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tra.sagepub.com/
 
-    au < manifest ; 2008 ; Trauma Volume 10 ; 10 ; >
+    au < testing ; 2008 ; Trauma Volume 10 ; 10 ; >
     au < released ; 2009 ; Trauma Volume 11 ; 11 ; reingest4.clockss.org:8082 >
 
   }
@@ -6532,7 +6532,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tva.sagepub.com/
 
-    au < manifest ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 ; >
+    au < testing ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 ; >
     au < released ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 ; reingest4.clockss.org:8082 >
 
   }
@@ -6545,7 +6545,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tmt.sagepub.com/
 
-    au < manifest ; 2008 ; Traumatology Volume 14 ; 14 ; >
+    au < testing ; 2008 ; Traumatology Volume 14 ; 14 ; >
     au < released ; 2009 ; Traumatology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
   }
@@ -6558,7 +6558,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tia.sagepub.com/
 
-    au < manifest ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
+    au < testing ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
     au < released ; 2009 ; Trends in Amplification Volume 13 ; 13 ; reingest4.clockss.org:8082 >
 
   }
@@ -6571,7 +6571,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://upd.sagepub.com/
 
-    au < manifest ; 2008 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
+    au < testing ; 2008 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
 
   }
 
@@ -6583,7 +6583,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://uar.sagepub.com/
 
-    au < manifest ; 2008 ; Urban Affairs Review Volume 44 ; 44 ; >
+    au < testing ; 2008 ; Urban Affairs Review Volume 44 ; 44 ; >
     au < tested ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
 
   }
@@ -6596,7 +6596,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://uex.sagepub.com/
 
-    au < manifest ; 2008 ; Urban Education Volume 43 ; 43 ; >
+    au < testing ; 2008 ; Urban Education Volume 43 ; 43 ; >
     au < tested ; 2009 ; Urban Education Volume 44 ; 44 ; >
 
   }
@@ -6609,7 +6609,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://usj.sagepub.com/
 
-    au < manifest ; 2008 ; Urban Studies Volume 45 ; 45 ; >
+    au < testing ; 2008 ; Urban Studies Volume 45 ; 45 ; >
     au < tested ; 2009 ; Urban Studies Volume 46 ; 46 ; >
 
   }
@@ -6622,7 +6622,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://ves.sagepub.com/
 
-    au < manifest ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
+    au < testing ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
     au < tested ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
 
   }
@@ -6635,7 +6635,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://vmj.sagepub.com/
 
-    au < manifest ; 2008 ; Vascular Medicine Volume 13 ; 13 ; >
+    au < testing ; 2008 ; Vascular Medicine Volume 13 ; 13 ; >
     au < ready ; 2009 ; Vascular Medicine Volume 14 ; 14 ; reingest3.clockss.org:8083 >
 
   }
@@ -6648,7 +6648,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://vaw.sagepub.com/
 
-    au < manifest ; 2008 ; Violence Against Women Volume 14 ; 14 ; >
+    au < testing ; 2008 ; Violence Against Women Volume 14 ; 14 ; >
     au < ready ; 2009 ; Violence Against Women Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
   }
@@ -6661,7 +6661,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://vcj.sagepub.com/
 
-    au < manifest ; 2008 ; Visual Communication Volume 7 ; 7 ; >
+    au < testing ; 2008 ; Visual Communication Volume 7 ; 7 ; >
     au < tested ; 2009 ; Visual Communication Volume 8 ; 8 ; >
 
   }

@@ -13,6 +13,8 @@
       name = The International Review of Research in Open and Distance Learning
     >
     
+    comment[irrodl00] = the journal is behind a 1-year pay wall, so last year is always marked notReady, and should be tested a year later
+    
     param[base_url] = http://www.irrodl.org/
     param[journal_id] = irrodl
 
@@ -52,6 +54,15 @@
 
   }
   
+  {
+  
+    title <
+      name = JRP
+    >
+    
+    comment[jrp] = needs html filter (talk to Thib)
+
+  }  
   
   {
   
