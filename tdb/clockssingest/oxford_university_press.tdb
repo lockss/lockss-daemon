@@ -1449,7 +1449,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jae.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
+    au < tested ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
     au < tested ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
 
   }
@@ -1800,7 +1800,7 @@ comment[in1] = 500 errors
     param[base_url] = http://jlms.oxfordjournals.org/
 
     au < tested ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
-    au < testing ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
+    au < tested ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
     au < tested ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
     au < tested ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
 
@@ -1814,7 +1814,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jmp.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
+    au < tested ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
     au < tested ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
 
   }
@@ -1839,7 +1839,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://mollus.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
+    au < tested ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
     au < tested ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
 
   }
@@ -1852,7 +1852,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jnci.oxfordjournals.org/
 
-    au < testing ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 ; >
+    au < tested ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 ; >
     au < tested ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 ; >
 
   }
@@ -1865,7 +1865,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jicru.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
+    au < tested ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
     au < tested ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
 
   }
@@ -1878,7 +1878,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jwelb.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
+    au < tested ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
     au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
 
   }
@@ -1891,7 +1891,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
+    au < tested ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
     au < tested ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
 
   }
@@ -1904,7 +1904,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://petrology.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
+    au < tested ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
     au < tested ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
 
   }
@@ -1917,7 +1917,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://plankt.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
+    au < tested ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
     au < tested ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
 
   }
@@ -1928,10 +1928,12 @@ comment[in1] = 500 errors
       name = Journal of Plant Ecology
     >
 
+comment[jpe12] = no manifest
+
     param[base_url] = http://jpe.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
-    au < testing ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
+    au < exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
+    au < exists ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
 
   }
 
@@ -1943,7 +1945,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jpart.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
+    au < tested ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
     au < tested ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
 
   }
@@ -1969,7 +1971,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jrs.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
+    au < tested ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
     au < tested ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
 
   }
@@ -1982,7 +1984,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jos.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
+    au < tested ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
     au < tested ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
 
   }
@@ -1995,7 +1997,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jss.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
+    au < tested ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
     au < tested ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
 
   }
@@ -2008,7 +2010,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jts.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
+    au < tested ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
     au < tested ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
 
   }
@@ -2021,7 +2023,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jtopol.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
+    au < tested ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
     au < tested ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
 
   }
@@ -2034,7 +2036,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://tropej.oxfordjournals.org/
 
-    au < testing ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
+    au < tested ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
     au < tested ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
 
   }
@@ -2047,7 +2049,7 @@ comment[in1] = 500 errors
 
     param[base_url] = http://lpr.oxfordjournals.org/
 
-    au < testing ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
+    au < tested ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
     au < tested ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
 
   }
@@ -2058,10 +2060,12 @@ comment[in1] = 500 errors
       name = The Leo Baeck Institute Yearbook
     >
 
+comment[leobaeck2] = no manifest
+
     param[base_url] = http://leobaeck.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
-    au < testing ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
+    au < notReady ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+    au < tested ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
 
   }
 
@@ -2593,7 +2597,7 @@ comment[mplant] = no manifest page
     au < tested ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
     au < tested ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
     au < tested ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
-    au < testing ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
+    au < tested ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
     au < tested ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
     au < tested ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
     au < released ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
@@ -2839,7 +2843,7 @@ comment[mplant] = no manifest page
     au < testing ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; reingest4.clockss.org:8082 >
     au < testing ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; reingest4.clockss.org:8082 >
     au < testing ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; reingest4.clockss.org:8082 >
-    au < testing ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
+    au < tested ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
 
   }
 
@@ -2849,9 +2853,11 @@ comment[mplant] = no manifest page
       name = Tree Physiology
     >
 
+comment[tre28] = no manifest
+
     param[base_url] = http://treephys.oxfordjournals.org/
 
-    au < testing ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
+    au < exists ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
     au < testing ; 2009 ; Tree Physiology Volume 29 ; 29 ; reingest4.clockss.org:8082 >
 
   }
@@ -2864,7 +2870,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://tandt.oxfordjournals.org/
 
-    au < testing ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
+    au < tested ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
     au < testing ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
   }
@@ -2877,7 +2883,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://tcbh.oxfordjournals.org/
 
-    au < testing ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
+    au < tested ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
     au < testing ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; reingest4.clockss.org:8082 >
 
   }
@@ -2890,7 +2896,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://wber.oxfordjournals.org/
 
-    au < testing ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
+    au < tested ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
     au < testing ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; reingest4.clockss.org:8082 >
 
   }
@@ -2903,7 +2909,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://wbro.oxfordjournals.org/
 
-    au < testing ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
+    au < tested ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
     au < testing ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; reingest4.clockss.org:8082 >
 
   }
@@ -2916,7 +2922,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ywcct.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
+    au < tested ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
     au < testing ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; reingest4.clockss.org:8082 >
 
   }
@@ -2929,7 +2935,7 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ywes.oxfordjournals.org/
 
-    au < testing ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
+    au < tested ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
 
   }
 

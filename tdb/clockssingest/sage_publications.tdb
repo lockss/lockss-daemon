@@ -1271,9 +1271,9 @@
 
     param[base_url] = http://cbi.sagepub.com/
 
-    au < testing ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 ; >
-    au < testing ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
-    au < testing ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
+    au < tested ; 2007-2008 ; Currents in Biblical Research Volume 6 ; 6 ; >
+    au < tested ; 2008-2009 ; Currents in Biblical Research Volume 7 ; 7 ; >
+    au < tested ; 2009-2010 ; Currents in Biblical Research Volume 8 ; 8 ; >
 
   }
 
@@ -1415,7 +1415,7 @@
 
     param[base_url] = http://eus.sagepub.com/
 
-    au < testing ; 2007-2008 ; Education and Urban Society Volume 40 ; 40 ; >
+    au < tested ; 2007-2008 ; Education and Urban Society Volume 40 ; 40 ; >
     au < ready ; 2008-2009 ; Education and Urban Society Volume 41 ; 41 ; reingest3.clockss.org:8083 >
     au < manifest ; 2009-2010 ; Education and Urban Society Volume 42 ; 42 ; >
 
@@ -1790,6 +1790,8 @@
     title <
       name = The Expository Times
     >
+
+comment[ext121] = no xml entry
 
     param[base_url] = http://ext.sagepub.com/
 
@@ -2195,7 +2197,7 @@
     param[base_url] = http://hea.sagepub.com/
 
     au < tested ; 2008 ; Health: Volume 12 ; 12 ; >
-    au < testing ; 2009 ; Health: Volume 13 ; 13 ; >
+    au < tested ; 2009 ; Health: Volume 13 ; 13 ; >
 
   }
 
@@ -5900,7 +5902,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://scv.sagepub.com/
 
-    au < testing ; 2008 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 ; >
+    au < tested ; 2008 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 ; >
     au < released ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 ; reingest2.clockss.org:8085 >
 
   }
@@ -6246,7 +6248,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://trj.sagepub.com/
 
-    au < testing ; 2008 ; Textile Research Journal Volume 78 ; 78 ; >
+    au < tested ; 2008 ; Textile Research Journal Volume 78 ; 78 ; >
     au < released ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
 
   }
@@ -6396,6 +6398,8 @@ comment[rsm30] = mismatching pdfs, send email to Thib
       name = Thesis Eleven
     >
 
+comment[the99] = no xml entry
+
     param[base_url] = http://the.sagepub.com/
 
     au < tested ; 2008 ; Thesis Eleven Volume 92 ; 92 ; >
@@ -6405,7 +6409,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
     au < released ; 2009 ; Thesis Eleven Volume 96 ; 96 ; reingest2.clockss.org:8085 >
     au < released ; 2009 ; Thesis Eleven Volume 97 ; 97 ; reingest2.clockss.org:8085 >
     au < released ; 2009 ; Thesis Eleven Volume 98 ; 98 ; reingest2.clockss.org:8085 >
-    au < testing ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
+    au < manifest ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
 
   }
 
@@ -6519,7 +6523,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tra.sagepub.com/
 
-    au < testing ; 2008 ; Trauma Volume 10 ; 10 ; >
+    au < tested ; 2008 ; Trauma Volume 10 ; 10 ; >
     au < released ; 2009 ; Trauma Volume 11 ; 11 ; reingest4.clockss.org:8082 >
 
   }
@@ -6532,7 +6536,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tva.sagepub.com/
 
-    au < testing ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 ; >
+    au < tested ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 ; >
     au < released ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 ; reingest4.clockss.org:8082 >
 
   }
@@ -6545,7 +6549,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tmt.sagepub.com/
 
-    au < testing ; 2008 ; Traumatology Volume 14 ; 14 ; >
+    au < tested ; 2008 ; Traumatology Volume 14 ; 14 ; >
     au < released ; 2009 ; Traumatology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
 
   }
@@ -6558,7 +6562,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tia.sagepub.com/
 
-    au < testing ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
+    au < tested ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
     au < released ; 2009 ; Trends in Amplification Volume 13 ; 13 ; reingest4.clockss.org:8082 >
 
   }
@@ -6571,7 +6575,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://upd.sagepub.com/
 
-    au < testing ; 2008 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
+    au < tested ; 2008 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
 
   }
 
@@ -6583,7 +6587,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://uar.sagepub.com/
 
-    au < testing ; 2008 ; Urban Affairs Review Volume 44 ; 44 ; >
+    au < tested ; 2008 ; Urban Affairs Review Volume 44 ; 44 ; >
     au < tested ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
 
   }
@@ -6596,7 +6600,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://uex.sagepub.com/
 
-    au < testing ; 2008 ; Urban Education Volume 43 ; 43 ; >
+    au < tested ; 2008 ; Urban Education Volume 43 ; 43 ; >
     au < tested ; 2009 ; Urban Education Volume 44 ; 44 ; >
 
   }
@@ -6609,7 +6613,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://usj.sagepub.com/
 
-    au < testing ; 2008 ; Urban Studies Volume 45 ; 45 ; >
+    au < tested ; 2008 ; Urban Studies Volume 45 ; 45 ; >
     au < tested ; 2009 ; Urban Studies Volume 46 ; 46 ; >
 
   }
@@ -6622,7 +6626,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://ves.sagepub.com/
 
-    au < testing ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
+    au < tested ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
     au < tested ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
 
   }
@@ -6635,7 +6639,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://vmj.sagepub.com/
 
-    au < testing ; 2008 ; Vascular Medicine Volume 13 ; 13 ; >
+    au < tested ; 2008 ; Vascular Medicine Volume 13 ; 13 ; >
     au < ready ; 2009 ; Vascular Medicine Volume 14 ; 14 ; reingest3.clockss.org:8083 >
 
   }
@@ -6648,7 +6652,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://vaw.sagepub.com/
 
-    au < testing ; 2008 ; Violence Against Women Volume 14 ; 14 ; >
+    au < tested ; 2008 ; Violence Against Women Volume 14 ; 14 ; >
     au < ready ; 2009 ; Violence Against Women Volume 15 ; 15 ; reingest3.clockss.org:8083 >
 
   }
@@ -6661,7 +6665,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://vcj.sagepub.com/
 
-    au < testing ; 2008 ; Visual Communication Volume 7 ; 7 ; >
+    au < tested ; 2008 ; Visual Communication Volume 7 ; 7 ; >
     au < tested ; 2009 ; Visual Communication Volume 8 ; 8 ; >
 
   }
@@ -6674,7 +6678,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://wih.sagepub.com/
 
-    au < manifest ; 2008 ; War in History Volume 15 ; 15 ; >
+    au < testing ; 2008 ; War in History Volume 15 ; 15 ; >
     au < tested ; 2009 ; War in History Volume 16 ; 16 ; >
 
   }
@@ -6687,7 +6691,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://wmr.sagepub.com/
 
-    au < manifest ; 2008 ; Waste Management & Research Volume 26 ; 26 ; >
+    au < testing ; 2008 ; Waste Management & Research Volume 26 ; 26 ; >
     au < tested ; 2009 ; Waste Management & Research Volume 27 ; 27 ; >
 
   }
@@ -6700,7 +6704,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://wjn.sagepub.com/
 
-    au < manifest ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
+    au < testing ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
     au < tested ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
 
   }
@@ -6713,7 +6717,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://wom.sagepub.com/
 
-    au < manifest ; 2008 ; Word of Mouth Volume 20 ; 20 ; >
+    au < testing ; 2008 ; Word of Mouth Volume 20 ; 20 ; >
     au < tested ; 2009 ; Word of Mouth Volume 21 ; 21 ; >
 
   }
@@ -6726,7 +6730,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://wox.sagepub.com/
 
-    au < manifest ; 2008 ; Work and Occupations Volume 35 ; 35 ; >
+    au < testing ; 2008 ; Work and Occupations Volume 35 ; 35 ; >
     au < tested ; 2009 ; Work and Occupations Volume 36 ; 36 ; >
 
   }
@@ -6739,7 +6743,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://wes.sagepub.com/
 
-    au < manifest ; 2008 ; Work, Employment & Society Volume 22 ; 22 ; >
+    au < testing ; 2008 ; Work, Employment & Society Volume 22 ; 22 ; >
     au < tested ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
 
   }
@@ -6752,7 +6756,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://wcx.sagepub.com/
 
-    au < manifest ; 2008 ; Written Communication Volume 25 ; 25 ; >
+    au < testing ; 2008 ; Written Communication Volume 25 ; 25 ; >
     au < tested ; 2009 ; Written Communication Volume 26 ; 26 ; >
 
   }
@@ -6765,7 +6769,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://you.sagepub.com/
 
-    au < manifest ; 2008 ; Young Volume 16 ; 16 ; >
+    au < testing ; 2008 ; Young Volume 16 ; 16 ; >
     au < tested ; 2009 ; Young Volume 17 ; 17 ; >
 
   }
@@ -6778,7 +6782,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://yec.sagepub.com/
 
-    au < manifest ; 2008 ; Young Exceptional Children Volume 12 ; 12 ; >
+    au < testing ; 2008 ; Young Exceptional Children Volume 12 ; 12 ; >
 
   }
 
@@ -6790,7 +6794,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://yas.sagepub.com/
 
-    au < manifest ; 2008 ; Youth & Society Volume 40 ; 40 ; >
+    au < testing ; 2008 ; Youth & Society Volume 40 ; 40 ; >
     au < tested ; 2009 ; Youth & Society Volume 41 ; 41 ; >
 
   }
@@ -6803,7 +6807,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://yjj.sagepub.com/
 
-    au < manifest ; 2008 ; Youth Justice Volume 8 ; 8 ; >
+    au < testing ; 2008 ; Youth Justice Volume 8 ; 8 ; >
     au < tested ; 2009 ; Youth Justice Volume 9 ; 9 ; >
 
   }
@@ -6816,7 +6820,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://yvj.sagepub.com/
 
-    au < manifest ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
+    au < testing ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
     au < tested ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 ; >
 
   }
