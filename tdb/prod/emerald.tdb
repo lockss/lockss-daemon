@@ -1,0 +1,4851 @@
+{
+
+  publisher <
+    name = Emerald
+  >
+
+  implicit < status ; name ; param[volume_name] >
+
+  plugin = org.lockss.plugin.emerald.EmeraldPlugin
+  param[base_url] = http://www.emeraldinsight.com/
+
+  {
+    title <
+      name = Accounting Research Journal;
+      issn = 1030-9616
+    >
+
+    param[journal_issn] = 1030-9616
+
+    
+
+  }
+
+  {
+    title <
+      name = Accounting, Auditing & Accountability Journal;
+      issn = 0951-3574
+    >
+
+    param[journal_issn] = 0951-3574
+
+    
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 8 ; 8 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 10 ; 10 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 11 ; 11 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 12 ; 12 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 13 ; 13 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 14 ; 14 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 15 ; 15 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 16 ; 16 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 17 ; 17 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 18 ; 18 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 19 ; 19 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 20 ; 20 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 21 ; 21 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 >
+    au < manifest ; Accounting, Auditing & Accountability Journal Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = African Journal of Economic and Management Studies;
+      issn = 2040-0705
+    >
+
+    param[journal_issn] = 2040-0705
+
+    
+
+  }
+
+  {
+    title <
+      name = Agricultural Finance Review;
+      issn = 0002-1466
+    >
+
+    param[journal_issn] = 0002-1466
+
+    
+
+  }
+
+  {
+    title <
+      name = Aircraft Engineering and Aerospace Technology;
+      issn = 0002-2667
+    >
+
+    param[journal_issn] = 0002-2667
+
+    
+
+  }
+
+  {
+    title <
+      name = American Journal of Police;
+      issn = 0735-8547
+    >
+
+    param[journal_issn] = 0735-8547
+
+    
+    au < manifest ; American Journal of Police Volume 14 ; 14 >
+    au < manifest ; American Journal of Police Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Anti-Corrosion Methods and Materials;
+      issn = 0003-5599
+    >
+
+    param[journal_issn] = 0003-5599
+
+    
+
+  }
+
+  {
+    title <
+      name = Asia Pacific Journal of Marketing and Logistics;
+      issn = 1355-5855
+    >
+
+    param[journal_issn] = 1355-5855
+
+    
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 10 ; 10 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 11 ; 11 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 12 ; 12 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 13 ; 13 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 14 ; 14 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 15 ; 15 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 16 ; 16 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 17 ; 17 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 18 ; 18 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 19 ; 19 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 20 ; 20 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 21 ; 21 >
+    au < manifest ; Asia Pacific Journal of Marketing and Logistics Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = Asian Journal on Quality;
+      issn = 1598-2688
+    >
+
+    param[journal_issn] = 1598-2688
+
+    
+
+  }
+
+  {
+    title <
+      name = Asian Libraries;
+      issn = 1017-6748
+    >
+
+    param[journal_issn] = 1017-6748
+
+    
+    au < manifest ; Asian Libraries Volume 6 ; 6 >
+    au < manifest ; Asian Libraries Volume 7 ; 7 >
+    au < manifest ; Asian Libraries Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Asian Review of Accounting;
+      issn = 1321-7348
+    >
+
+    param[journal_issn] = 1321-7348
+
+    
+
+  }
+
+  {
+    title <
+      name = Asia-Pacific Journal of Business Administration;
+      issn = 1757-4323
+    >
+
+    param[journal_issn] = 1757-4323
+
+    
+
+  }
+
+  {
+    title <
+      name = Aslib Proceedings: New Information Perspectives;
+      issn = 0001-253X
+    >
+
+    param[journal_issn] = 0001-253X
+
+    
+
+  }
+
+  {
+    title <
+      name = Assembly Automation;
+      issn = 0144-5154
+    >
+
+    param[journal_issn] = 0144-5154
+
+    
+
+  }
+
+  {
+    title <
+      name = Balance Sheet;
+      issn = 0965-7967
+    >
+
+    param[journal_issn] = 0965-7967
+
+    
+
+  }
+
+  {
+    title <
+      name = Baltic Journal of Management;
+      issn = 1746-5265
+    >
+
+    param[journal_issn] = 1746-5265
+
+    
+
+  }
+
+  {
+    title <
+      name = Benchmarking: An International Journal;
+      issn = 1463-5771
+    >
+
+    param[journal_issn] = 1463-5771
+
+    
+    au < manifest ; Benchmarking: An International Journal Volume 1 ; 1 >
+    au < manifest ; Benchmarking: An International Journal Volume 2 ; 2 >
+    au < manifest ; Benchmarking: An International Journal Volume 3 ; 3 >
+    au < manifest ; Benchmarking: An International Journal Volume 4 ; 4 >
+    au < manifest ; Benchmarking: An International Journal Volume 5 ; 5 >
+    au < manifest ; Benchmarking: An International Journal Volume 6 ; 6 >
+    au < manifest ; Benchmarking: An International Journal Volume 7 ; 7 >
+    au < manifest ; Benchmarking: An International Journal Volume 8 ; 8 >
+    au < manifest ; Benchmarking: An International Journal Volume 9 ; 9 >
+    au < manifest ; Benchmarking: An International Journal Volume 10 ; 10 >
+    au < manifest ; Benchmarking: An International Journal Volume 11 ; 11 >
+    au < manifest ; Benchmarking: An International Journal Volume 12 ; 12 >
+    au < manifest ; Benchmarking: An International Journal Volume 13 ; 13 >
+    au < manifest ; Benchmarking: An International Journal Volume 14 ; 14 >
+    au < manifest ; Benchmarking: An International Journal Volume 15 ; 15 >
+    au < manifest ; Benchmarking: An International Journal Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = British Food Journal;
+      issn = 0007-070X
+    >
+
+    param[journal_issn] = 0007-070X
+
+    
+    au < manifest ; British Food Journal Volume 96 ; 96 >
+    au < manifest ; British Food Journal Volume 97 ; 97 >
+    au < manifest ; British Food Journal Volume 98 ; 98 >
+    au < manifest ; British Food Journal Volume 99 ; 99 >
+    au < manifest ; British Food Journal Volume 100 ; 100 >
+    au < manifest ; British Food Journal Volume 101 ; 101 >
+    au < manifest ; British Food Journal Volume 102 ; 102 >
+    au < manifest ; British Food Journal Volume 103 ; 103 >
+    au < manifest ; British Food Journal Volume 104 ; 104 >
+    au < manifest ; British Food Journal Volume 105 ; 105 >
+    au < manifest ; British Food Journal Volume 106 ; 106 >
+    au < manifest ; British Food Journal Volume 107 ; 107 >
+    au < manifest ; British Food Journal Volume 108 ; 108 >
+    au < manifest ; British Food Journal Volume 109 ; 109 >
+    au < manifest ; British Food Journal Volume 110 ; 110 >
+    au < manifest ; British Food Journal Volume 111 ; 111 >
+    au < manifest ; British Food Journal Volume 112 ; 112 >
+
+  }
+
+  {
+    title <
+      name = British Journal of Clinical Governance;
+      issn = 1466-4100
+    >
+
+    param[journal_issn] = 1466-4100
+
+    
+    au < manifest ; British Journal of Clinical Governance Volume 4 ; 4 >
+    au < manifest ; British Journal of Clinical Governance Volume 5 ; 5 >
+    au < manifest ; British Journal of Clinical Governance Volume 6 ; 6 >
+    au < manifest ; British Journal of Clinical Governance Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Business Process Management Journal;
+      issn = 1463-7154
+    >
+
+    param[journal_issn] = 1463-7154
+
+    
+    au < manifest ; Business Process Management Journal Volume 1 ; 1 >
+    au < manifest ; Business Process Management Journal Volume 2 ; 2 >
+    au < manifest ; Business Process Management Journal Volume 3 ; 3 >
+    au < manifest ; Business Process Management Journal Volume 4 ; 4 >
+    au < manifest ; Business Process Management Journal Volume 5 ; 5 >
+    au < manifest ; Business Process Management Journal Volume 6 ; 6 >
+    au < manifest ; Business Process Management Journal Volume 7 ; 7 >
+    au < manifest ; Business Process Management Journal Volume 8 ; 8 >
+    au < manifest ; Business Process Management Journal Volume 9 ; 9 >
+    au < manifest ; Business Process Management Journal Volume 10 ; 10 >
+    au < manifest ; Business Process Management Journal Volume 11 ; 11 >
+    au < manifest ; Business Process Management Journal Volume 12 ; 12 >
+    au < manifest ; Business Process Management Journal Volume 13 ; 13 >
+    au < manifest ; Business Process Management Journal Volume 14 ; 14 >
+    au < manifest ; Business Process Management Journal Volume 15 ; 15 >
+    au < manifest ; Business Process Management Journal Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Business Strategy Series;
+      issn = 1751-5637
+    >
+
+    param[journal_issn] = 1751-5637
+
+    
+
+  }
+
+  {
+    title <
+      name = Campus-Wide Information Systems;
+      issn = 1065-0741
+    >
+
+    param[journal_issn] = 1065-0741
+
+    
+    au < manifest ; Campus-Wide Information Systems Volume 12 ; 12 >
+    au < manifest ; Campus-Wide Information Systems Volume 13 ; 13 >
+    au < manifest ; Campus-Wide Information Systems Volume 14 ; 14 >
+    au < manifest ; Campus-Wide Information Systems Volume 15 ; 15 >
+    au < manifest ; Campus-Wide Information Systems Volume 16 ; 16 >
+    au < manifest ; Campus-Wide Information Systems Volume 17 ; 17 >
+    au < manifest ; Campus-Wide Information Systems Volume 18 ; 18 >
+    au < manifest ; Campus-Wide Information Systems Volume 19 ; 19 >
+    au < manifest ; Campus-Wide Information Systems Volume 20 ; 20 >
+    au < manifest ; Campus-Wide Information Systems Volume 21 ; 21 >
+    au < manifest ; Campus-Wide Information Systems Volume 22 ; 22 >
+    au < manifest ; Campus-Wide Information Systems Volume 23 ; 23 >
+    au < manifest ; Campus-Wide Information Systems Volume 24 ; 24 >
+    au < manifest ; Campus-Wide Information Systems Volume 25 ; 25 >
+    au < manifest ; Campus-Wide Information Systems Volume 26 ; 26 >
+    au < manifest ; Campus-Wide Information Systems Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Career Development International;
+      issn = 1362-0436
+    >
+
+    param[journal_issn] = 1362-0436
+
+    
+    au < manifest ; Career Development International Volume 1 ; 1 >
+    au < manifest ; Career Development International Volume 2 ; 2 >
+    au < manifest ; Career Development International Volume 3 ; 3 >
+    au < manifest ; Career Development International Volume 4 ; 4 >
+    au < manifest ; Career Development International Volume 5 ; 5 >
+    au < manifest ; Career Development International Volume 6 ; 6 >
+    au < manifest ; Career Development International Volume 7 ; 7 >
+    au < manifest ; Career Development International Volume 8 ; 8 >
+    au < manifest ; Career Development International Volume 9 ; 9 >
+    au < manifest ; Career Development International Volume 10 ; 10 >
+    au < manifest ; Career Development International Volume 11 ; 11 >
+    au < manifest ; Career Development International Volume 12 ; 12 >
+    au < manifest ; Career Development International Volume 13 ; 13 >
+    au < manifest ; Career Development International Volume 14 ; 14 >
+
+  }
+
+  {
+    title <
+      name = China Agricultural Economic Review;
+      issn = 1756-137X
+    >
+
+    param[journal_issn] = 1756-137X
+
+    
+
+  }
+
+  {
+    title <
+      name = Chinese Management Studies;
+      issn = 1750-614X
+    >
+
+    param[journal_issn] = 1750-614X
+
+    
+
+  }
+
+  {
+    title <
+      name = Circuit World;
+      issn = 0305-6120
+    >
+
+    param[journal_issn] = 0305-6120
+
+    
+
+  }
+
+  {
+    title <
+      name = Clinical Governance: An International Journal;
+      issn = 1477-7274
+    >
+
+    param[journal_issn] = 1477-7274
+
+    
+    au < manifest ; Clinical Governance: An International Journal Volume 8 ; 8 >
+    au < manifest ; Clinical Governance: An International Journal Volume 9 ; 9 >
+    au < manifest ; Clinical Governance: An International Journal Volume 10 ; 10 >
+    au < manifest ; Clinical Governance: An International Journal Volume 11 ; 11 >
+    au < manifest ; Clinical Governance: An International Journal Volume 12 ; 12 >
+    au < manifest ; Clinical Governance: An International Journal Volume 13 ; 13 >
+    au < manifest ; Clinical Governance: An International Journal Volume 14 ; 14 >
+    au < manifest ; Clinical Governance: An International Journal Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Clinical Performance and Quality Healthcare;
+      issn = 1063-0279
+    >
+
+    param[journal_issn] = 1063-0279
+
+    
+    au < manifest ; Clinical Performance and Quality Healthcare Volume 7 ; 7 >
+    au < manifest ; Clinical Performance and Quality Healthcare Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Collection Building;
+      issn = 0160-4953
+    >
+
+    param[journal_issn] = 0160-4953
+
+    
+    au < manifest ; Collection Building Volume 15 ; 15 >
+    au < manifest ; Collection Building Volume 16 ; 16 >
+    au < manifest ; Collection Building Volume 17 ; 17 >
+    au < manifest ; Collection Building Volume 18 ; 18 >
+    au < manifest ; Collection Building Volume 19 ; 19 >
+    au < manifest ; Collection Building Volume 20 ; 20 >
+    au < manifest ; Collection Building Volume 21 ; 21 >
+    au < manifest ; Collection Building Volume 22 ; 22 >
+    au < manifest ; Collection Building Volume 23 ; 23 >
+    au < manifest ; Collection Building Volume 24 ; 24 >
+    au < manifest ; Collection Building Volume 25 ; 25 >
+    au < manifest ; Collection Building Volume 26 ; 26 >
+    au < manifest ; Collection Building Volume 27 ; 27 >
+    au < manifest ; Collection Building Volume 28 ; 28 >
+    au < manifest ; Collection Building Volume 29 ; 29 >
+
+  }
+
+  {
+    title <
+      name = COMPEL: The International Journal for Computation and Mathematics in Electrical and Electronic Engineering;
+      issn = 0332-1649
+    >
+
+    param[journal_issn] = 0332-1649
+
+    
+
+  }
+
+  {
+    title <
+      name = Competitiveness Review: An International Business Journal;
+      issn = 1059-5422
+    >
+
+    param[journal_issn] = 1059-5422
+
+    
+
+  }
+
+  {
+    title <
+      name = Construction Innovation: Information, Process, Management;
+      issn = 1471-4175
+    >
+
+    param[journal_issn] = 1471-4175
+
+    
+
+  }
+
+  {
+    title <
+      name = Corporate Communications: An International Journal;
+      issn = 1356-3289
+    >
+
+    param[journal_issn] = 1356-3289
+
+    
+    au < manifest ; Corporate Communications: An International Journal Volume 4 ; 4 >
+    au < manifest ; Corporate Communications: An International Journal Volume 5 ; 5 >
+    au < manifest ; Corporate Communications: An International Journal Volume 6 ; 6 >
+    au < manifest ; Corporate Communications: An International Journal Volume 7 ; 7 >
+    au < manifest ; Corporate Communications: An International Journal Volume 8 ; 8 >
+    au < manifest ; Corporate Communications: An International Journal Volume 9 ; 9 >
+    au < manifest ; Corporate Communications: An International Journal Volume 10 ; 10 >
+    au < manifest ; Corporate Communications: An International Journal Volume 11 ; 11 >
+    au < manifest ; Corporate Communications: An International Journal Volume 12 ; 12 >
+    au < manifest ; Corporate Communications: An International Journal Volume 13 ; 13 >
+    au < manifest ; Corporate Communications: An International Journal Volume 14 ; 14 >
+    au < manifest ; Corporate Communications: An International Journal Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Corporate Governance;
+      issn = 1472-0701
+    >
+
+    param[journal_issn] = 1472-0701
+
+    
+
+  }
+
+  {
+    title <
+      name = Critical Perspectives on International Business;
+      issn = 1742-2043
+    >
+
+    param[journal_issn] = 1742-2043
+
+    
+
+  }
+
+  {
+    title <
+      name = Cross Cultural Management: An International Journal;
+      issn = 1352-7606
+    >
+
+    param[journal_issn] = 1352-7606
+
+    
+    au < manifest ; Cross Cultural Management: An International Journal Volume 5 ; 5 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 6 ; 6 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 7 ; 7 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 8 ; 8 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 9 ; 9 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 10 ; 10 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 11 ; 11 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 12 ; 12 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 13 ; 13 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 14 ; 14 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 15 ; 15 >
+    au < manifest ; Cross Cultural Management: An International Journal Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Development and Learning in Organizations;
+      issn = 1477-7282
+    >
+
+    param[journal_issn] = 1477-7282
+
+    
+    au < manifest ; Development and Learning in Organizations Volume 17 ; 17 >
+    au < manifest ; Development and Learning in Organizations Volume 18 ; 18 >
+    au < manifest ; Development and Learning in Organizations Volume 19 ; 19 >
+    au < manifest ; Development and Learning in Organizations Volume 20 ; 20 >
+    au < manifest ; Development and Learning in Organizations Volume 21 ; 21 >
+    au < manifest ; Development and Learning in Organizations Volume 22 ; 22 >
+    au < manifest ; Development and Learning in Organizations Volume 23 ; 23 >
+    au < manifest ; Development and Learning in Organizations Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = Direct Marketing: An International Journal;
+      issn = 1750-5933
+    >
+
+    param[journal_issn] = 1750-5933
+
+    
+
+  }
+
+  {
+    title <
+      name = Disaster Prevention and Management;
+      issn = 0965-3562
+    >
+
+    param[journal_issn] = 0965-3562
+
+    
+    au < manifest ; Disaster Prevention and Management Volume 3 ; 3 >
+    au < manifest ; Disaster Prevention and Management Volume 4 ; 4 >
+    au < manifest ; Disaster Prevention and Management Volume 5 ; 5 >
+    au < manifest ; Disaster Prevention and Management Volume 6 ; 6 >
+    au < manifest ; Disaster Prevention and Management Volume 7 ; 7 >
+    au < manifest ; Disaster Prevention and Management Volume 8 ; 8 >
+    au < manifest ; Disaster Prevention and Management Volume 9 ; 9 >
+    au < manifest ; Disaster Prevention and Management Volume 10 ; 10 >
+    au < manifest ; Disaster Prevention and Management Volume 11 ; 11 >
+    au < manifest ; Disaster Prevention and Management Volume 12 ; 12 >
+    au < manifest ; Disaster Prevention and Management Volume 13 ; 13 >
+    au < manifest ; Disaster Prevention and Management Volume 14 ; 14 >
+    au < manifest ; Disaster Prevention and Management Volume 15 ; 15 >
+    au < manifest ; Disaster Prevention and Management Volume 16 ; 16 >
+    au < manifest ; Disaster Prevention and Management Volume 17 ; 17 >
+    au < manifest ; Disaster Prevention and Management Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Education + Training;
+      issn = 0040-0912
+    >
+
+    param[journal_issn] = 0040-0912
+
+    
+    au < manifest ; Education + Training Volume 36 ; 36 >
+    au < manifest ; Education + Training Volume 37 ; 37 >
+    au < manifest ; Education + Training Volume 38 ; 38 >
+    au < manifest ; Education + Training Volume 39 ; 39 >
+    au < manifest ; Education + Training Volume 40 ; 40 >
+    au < manifest ; Education + Training Volume 41 ; 41 >
+    au < manifest ; Education + Training Volume 42 ; 42 >
+    au < manifest ; Education + Training Volume 43 ; 43 >
+    au < manifest ; Education + Training Volume 44 ; 44 >
+    au < manifest ; Education + Training Volume 45 ; 45 >
+    au < manifest ; Education + Training Volume 46 ; 46 >
+    au < manifest ; Education + Training Volume 47 ; 47 >
+    au < manifest ; Education + Training Volume 48 ; 48 >
+    au < manifest ; Education + Training Volume 49 ; 49 >
+    au < manifest ; Education + Training Volume 50 ; 50 >
+    au < manifest ; Education + Training Volume 51 ; 51 >
+
+  }
+
+  {
+    title <
+      name = Education, Business and Society: Contemporary Middle Eastern Issues;
+      issn = 1753-7983
+    >
+
+    param[journal_issn] = 1753-7983
+
+    
+
+  }
+
+  {
+    title <
+      name = Electronic Resources Review;
+      issn = 1364-5137
+    >
+
+    param[journal_issn] = 1364-5137
+
+    
+    au < manifest ; Electronic Resources Review Volume 1 ; 1 >
+    au < manifest ; Electronic Resources Review Volume 2 ; 2 >
+    au < manifest ; Electronic Resources Review Volume 3 ; 3 >
+    au < manifest ; Electronic Resources Review Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Employee Relations: An International Journal;
+      issn = 0142-5455
+    >
+
+    param[journal_issn] = 0142-5455
+
+    
+    au < manifest ; Employee Relations: An International Journal Volume 16 ; 16 >
+    au < manifest ; Employee Relations: An International Journal Volume 17 ; 17 >
+    au < manifest ; Employee Relations: An International Journal Volume 18 ; 18 >
+    au < manifest ; Employee Relations: An International Journal Volume 19 ; 19 >
+    au < manifest ; Employee Relations: An International Journal Volume 20 ; 20 >
+    au < manifest ; Employee Relations: An International Journal Volume 21 ; 21 >
+    au < manifest ; Employee Relations: An International Journal Volume 22 ; 22 >
+    au < manifest ; Employee Relations: An International Journal Volume 23 ; 23 >
+    au < manifest ; Employee Relations: An International Journal Volume 24 ; 24 >
+    au < manifest ; Employee Relations: An International Journal Volume 25 ; 25 >
+    au < manifest ; Employee Relations: An International Journal Volume 26 ; 26 >
+    au < manifest ; Employee Relations: An International Journal Volume 27 ; 27 >
+    au < manifest ; Employee Relations: An International Journal Volume 28 ; 28 >
+    au < manifest ; Employee Relations: An International Journal Volume 29 ; 29 >
+    au < manifest ; Employee Relations: An International Journal Volume 30 ; 30 >
+    au < manifest ; Employee Relations: An International Journal Volume 31 ; 31 >
+    au < manifest ; Employee Relations: An International Journal Volume 32 ; 32 >
+
+  }
+
+  {
+    title <
+      name = Empowerment in Organizations;
+      issn = 0968-4891
+    >
+
+    param[journal_issn] = 0968-4891
+
+    
+    au < manifest ; Empowerment in Organizations Volume 2 ; 2 >
+    au < manifest ; Empowerment in Organizations Volume 3 ; 3 >
+    au < manifest ; Empowerment in Organizations Volume 4 ; 4 >
+    au < manifest ; Empowerment in Organizations Volume 5 ; 5 >
+    au < manifest ; Empowerment in Organizations Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = Engineering Computations;
+      issn = 0264-4401
+    >
+
+    param[journal_issn] = 0264-4401
+
+    
+    au < manifest ; Engineering Computations Volume 11 ; 11 >
+    au < manifest ; Engineering Computations Volume 12 ; 12 >
+
+  }
+
+  {
+    title <
+      name = Engineering, Construction and Architectural Management;
+      issn = 0969-9988
+    >
+
+    param[journal_issn] = 0969-9988
+
+    
+
+  }
+
+  {
+    title <
+      name = Environmental Management and Health;
+      issn = 0956-6163
+    >
+
+    param[journal_issn] = 0956-6163
+
+    
+    au < manifest ; Environmental Management and Health Volume 5 ; 5 >
+    au < manifest ; Environmental Management and Health Volume 6 ; 6 >
+    au < manifest ; Environmental Management and Health Volume 7 ; 7 >
+    au < manifest ; Environmental Management and Health Volume 8 ; 8 >
+    au < manifest ; Environmental Management and Health Volume 9 ; 9 >
+    au < manifest ; Environmental Management and Health Volume 10 ; 10 >
+    au < manifest ; Environmental Management and Health Volume 11 ; 11 >
+    au < manifest ; Environmental Management and Health Volume 12 ; 12 >
+    au < manifest ; Environmental Management and Health Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Equal Opportunities International;
+      issn = 0261-0159
+    >
+
+    param[journal_issn] = 0261-0159
+
+    
+    au < manifest ; Equal Opportunities International Volume 17 ; 17 >
+    au < manifest ; Equal Opportunities International Volume 18 ; 18 >
+    au < manifest ; Equal Opportunities International Volume 19 ; 19 >
+    au < manifest ; Equal Opportunities International Volume 20 ; 20 >
+    au < manifest ; Equal Opportunities International Volume 21 ; 21 >
+    au < manifest ; Equal Opportunities International Volume 22 ; 22 >
+    au < manifest ; Equal Opportunities International Volume 23 ; 23 >
+    au < manifest ; Equal Opportunities International Volume 24 ; 24 >
+    au < manifest ; Equal Opportunities International Volume 25 ; 25 >
+    au < manifest ; Equal Opportunities International Volume 26 ; 26 >
+    au < manifest ; Equal Opportunities International Volume 27 ; 27 >
+    au < manifest ; Equal Opportunities International Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = Equality, Diversity and Inclusion: An International Journal;
+      issn = 2040-7149
+    >
+
+    param[journal_issn] = 2040-7149
+
+    
+
+  }
+
+  {
+    title <
+      name = EuroMed Journal of Business;
+      issn = 1450-2194
+    >
+
+    param[journal_issn] = 1450-2194
+
+    
+
+  }
+
+  {
+    title <
+      name = European Business Review;
+      issn = 0955-534X
+    >
+
+    param[journal_issn] = 0955-534X
+
+    
+    au < manifest ; European Business Review Volume 94 ; 94 >
+    au < manifest ; European Business Review Volume 95 ; 95 >
+    au < manifest ; European Business Review Volume 96 ; 96 >
+    au < manifest ; European Business Review Volume 97 ; 97 >
+    au < manifest ; European Business Review Volume 98 ; 98 >
+    au < manifest ; European Business Review Volume 99 ; 99 >
+
+  }
+
+  {
+    title <
+      name = European Journal of Innovation Management;
+      issn = 1460-1060
+    >
+
+    param[journal_issn] = 1460-1060
+
+    
+    au < manifest ; European Journal of Innovation Management Volume 1 ; 1 >
+    au < manifest ; European Journal of Innovation Management Volume 2 ; 2 >
+    au < manifest ; European Journal of Innovation Management Volume 3 ; 3 >
+    au < manifest ; European Journal of Innovation Management Volume 4 ; 4 >
+    au < manifest ; European Journal of Innovation Management Volume 5 ; 5 >
+    au < manifest ; European Journal of Innovation Management Volume 6 ; 6 >
+    au < manifest ; European Journal of Innovation Management Volume 7 ; 7 >
+    au < manifest ; European Journal of Innovation Management Volume 8 ; 8 >
+    au < manifest ; European Journal of Innovation Management Volume 9 ; 9 >
+    au < manifest ; European Journal of Innovation Management Volume 10 ; 10 >
+    au < manifest ; European Journal of Innovation Management Volume 11 ; 11 >
+    au < manifest ; European Journal of Innovation Management Volume 12 ; 12 >
+    au < manifest ; European Journal of Innovation Management Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = European Journal of Marketing;
+      issn = 0309-0566
+    >
+
+    param[journal_issn] = 0309-0566
+
+    
+    au < manifest ; European Journal of Marketing Volume 23 ; 23 >
+    au < manifest ; European Journal of Marketing Volume 24 ; 24 >
+    au < manifest ; European Journal of Marketing Volume 25 ; 25 >
+    au < manifest ; European Journal of Marketing Volume 26 ; 26 >
+    au < manifest ; European Journal of Marketing Volume 27 ; 27 >
+    au < manifest ; European Journal of Marketing Volume 28 ; 28 >
+    au < manifest ; European Journal of Marketing Volume 29 ; 29 >
+    au < manifest ; European Journal of Marketing Volume 30 ; 30 >
+    au < manifest ; European Journal of Marketing Volume 31 ; 31 >
+    au < manifest ; European Journal of Marketing Volume 32 ; 32 >
+    au < manifest ; European Journal of Marketing Volume 33 ; 33 >
+    au < manifest ; European Journal of Marketing Volume 34 ; 34 >
+    au < manifest ; European Journal of Marketing Volume 35 ; 35 >
+    au < manifest ; European Journal of Marketing Volume 36 ; 36 >
+    au < manifest ; European Journal of Marketing Volume 37 ; 37 >
+    au < manifest ; European Journal of Marketing Volume 38 ; 38 >
+    au < manifest ; European Journal of Marketing Volume 39 ; 39 >
+    au < manifest ; European Journal of Marketing Volume 40 ; 40 >
+    au < manifest ; European Journal of Marketing Volume 41 ; 41 >
+    au < manifest ; European Journal of Marketing Volume 42 ; 42 >
+    au < manifest ; European Journal of Marketing Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Executive Development;
+      issn = 0953-3230
+    >
+
+    param[journal_issn] = 0953-3230
+
+    
+    au < manifest ; Executive Development Volume 7 ; 7 >
+    au < manifest ; Executive Development Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Facilities;
+      issn = 0263-2772
+    >
+
+    param[journal_issn] = 0263-2772
+
+    
+    au < manifest ; Facilities Volume 12 ; 12 >
+    au < manifest ; Facilities Volume 13 ; 13 >
+    au < manifest ; Facilities Volume 14 ; 14 >
+    au < manifest ; Facilities Volume 15 ; 15 >
+    au < manifest ; Facilities Volume 16 ; 16 >
+    au < manifest ; Facilities Volume 17 ; 17 >
+    au < manifest ; Facilities Volume 18 ; 18 >
+    au < manifest ; Facilities Volume 19 ; 19 >
+    au < manifest ; Facilities Volume 20 ; 20 >
+    au < manifest ; Facilities Volume 21 ; 21 >
+    au < manifest ; Facilities Volume 22 ; 22 >
+    au < manifest ; Facilities Volume 23 ; 23 >
+    au < manifest ; Facilities Volume 24 ; 24 >
+    au < manifest ; Facilities Volume 25 ; 25 >
+    au < manifest ; Facilities Volume 26 ; 26 >
+    au < manifest ; Facilities Volume 27 ; 27 >
+    au < manifest ; Facilities Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = foresight;
+      issn = 1463-6689
+    >
+
+    param[journal_issn] = 1463-6689
+
+    
+
+  }
+
+  {
+    title <
+      name = Gender in Management: An International Journal;
+      issn = 1754-2413
+    >
+
+    param[journal_issn] = 1754-2413
+
+    
+    au < manifest ; Gender in Management: An International Journal Volume 23 ; 23 >
+    au < manifest ; Gender in Management: An International Journal Volume 24 ; 24 >
+    au < manifest ; Gender in Management: An International Journal Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = Handbook of Business Strategy;
+      issn = 1077-5730
+    >
+
+    param[journal_issn] = 1077-5730
+
+    
+
+  }
+
+  {
+    title <
+      name = Health Education;
+      issn = 0965-4283
+    >
+
+    param[journal_issn] = 0965-4283
+
+    
+    au < manifest ; Health Education Volume 94 ; 94 >
+    au < manifest ; Health Education Volume 95 ; 95 >
+    au < manifest ; Health Education Volume 96 ; 96 >
+    au < manifest ; Health Education Volume 97 ; 97 >
+    au < manifest ; Health Education Volume 98 ; 98 >
+    au < manifest ; Health Education Volume 99 ; 99 >
+    au < manifest ; Health Education Volume 100 ; 100 >
+    au < manifest ; Health Education Volume 101 ; 101 >
+    au < manifest ; Health Education Volume 102 ; 102 >
+    au < manifest ; Health Education Volume 103 ; 103 >
+    au < manifest ; Health Education Volume 104 ; 104 >
+    au < manifest ; Health Education Volume 105 ; 105 >
+    au < manifest ; Health Education Volume 106 ; 106 >
+    au < manifest ; Health Education Volume 107 ; 107 >
+    au < manifest ; Health Education Volume 108 ; 108 >
+    au < manifest ; Health Education Volume 109 ; 109 >
+    au < manifest ; Health Education Volume 110 ; 110 >
+
+  }
+
+  {
+    title <
+      name = Health Manpower Management;
+      issn = 0955-2065
+    >
+
+    param[journal_issn] = 0955-2065
+
+    
+    au < manifest ; Health Manpower Management Volume 20 ; 20 >
+    au < manifest ; Health Manpower Management Volume 21 ; 21 >
+    au < manifest ; Health Manpower Management Volume 22 ; 22 >
+    au < manifest ; Health Manpower Management Volume 23 ; 23 >
+    au < manifest ; Health Manpower Management Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = Human Resource Management International Digest;
+      issn = 0967-0734
+    >
+
+    param[journal_issn] = 0967-0734
+
+    
+    au < manifest ; Human Resource Management International Digest Volume 10 ; 10 >
+    au < manifest ; Human Resource Management International Digest Volume 11 ; 11 >
+    au < manifest ; Human Resource Management International Digest Volume 12 ; 12 >
+    au < manifest ; Human Resource Management International Digest Volume 13 ; 13 >
+    au < manifest ; Human Resource Management International Digest Volume 14 ; 14 >
+    au < manifest ; Human Resource Management International Digest Volume 15 ; 15 >
+    au < manifest ; Human Resource Management International Digest Volume 16 ; 16 >
+    au < manifest ; Human Resource Management International Digest Volume 17 ; 17 >
+    au < manifest ; Human Resource Management International Digest Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Humanomics;
+      issn = 0828-8666
+    >
+
+    param[journal_issn] = 0828-8666
+
+    
+
+  }
+
+  {
+    title <
+      name = Indian Growth and Development Review;
+      issn = 1753-8254
+    >
+
+    param[journal_issn] = 1753-8254
+
+    
+
+  }
+
+  {
+    title <
+      name = Industrial and Commercial Training;
+      issn = 0019-7858
+    >
+
+    param[journal_issn] = 0019-7858
+
+    
+    au < manifest ; Industrial and Commercial Training Volume 26 ; 26 >
+    au < manifest ; Industrial and Commercial Training Volume 27 ; 27 >
+    au < manifest ; Industrial and Commercial Training Volume 28 ; 28 >
+    au < manifest ; Industrial and Commercial Training Volume 29 ; 29 >
+    au < manifest ; Industrial and Commercial Training Volume 30 ; 30 >
+    au < manifest ; Industrial and Commercial Training Volume 31 ; 31 >
+    au < manifest ; Industrial and Commercial Training Volume 32 ; 32 >
+    au < manifest ; Industrial and Commercial Training Volume 33 ; 33 >
+    au < manifest ; Industrial and Commercial Training Volume 34 ; 34 >
+    au < manifest ; Industrial and Commercial Training Volume 35 ; 35 >
+    au < manifest ; Industrial and Commercial Training Volume 36 ; 36 >
+    au < manifest ; Industrial and Commercial Training Volume 37 ; 37 >
+    au < manifest ; Industrial and Commercial Training Volume 38 ; 38 >
+    au < manifest ; Industrial and Commercial Training Volume 39 ; 39 >
+    au < manifest ; Industrial and Commercial Training Volume 40 ; 40 >
+    au < manifest ; Industrial and Commercial Training Volume 41 ; 41 >
+    au < manifest ; Industrial and Commercial Training Volume 42 ; 42 >
+
+  }
+
+  {
+    title <
+      name = Industrial Lubrication and Tribology;
+      issn = 0036-8792
+    >
+
+    param[journal_issn] = 0036-8792
+
+    
+
+  }
+
+  {
+    title <
+      name = Industrial Management & Data Systems;
+      issn = 0263-5577
+    >
+
+    param[journal_issn] = 0263-5577
+
+    
+    au < manifest ; Industrial Management & Data Systems Volume 94 ; 94 >
+    au < manifest ; Industrial Management & Data Systems Volume 95 ; 95 >
+    au < manifest ; Industrial Management & Data Systems Volume 96 ; 96 >
+    au < manifest ; Industrial Management & Data Systems Volume 97 ; 97 >
+    au < manifest ; Industrial Management & Data Systems Volume 98 ; 98 >
+    au < manifest ; Industrial Management & Data Systems Volume 99 ; 99 >
+    au < manifest ; Industrial Management & Data Systems Volume 100 ; 100 >
+    au < manifest ; Industrial Management & Data Systems Volume 101 ; 101 >
+    au < manifest ; Industrial Management & Data Systems Volume 102 ; 102 >
+    au < manifest ; Industrial Management & Data Systems Volume 103 ; 103 >
+    au < manifest ; Industrial Management & Data Systems Volume 104 ; 104 >
+    au < manifest ; Industrial Management & Data Systems Volume 105 ; 105 >
+    au < manifest ; Industrial Management & Data Systems Volume 106 ; 106 >
+    au < manifest ; Industrial Management & Data Systems Volume 107 ; 107 >
+    au < manifest ; Industrial Management & Data Systems Volume 108 ; 108 >
+    au < manifest ; Industrial Management & Data Systems Volume 109 ; 109 >
+    au < manifest ; Industrial Management & Data Systems Volume 110 ; 110 >
+
+  }
+
+  {
+    title <
+      name = Industrial Robot: The international journal of industrial and service robotics;
+      issn = 0143-991X
+    >
+
+    param[journal_issn] = 0143-991X
+
+    
+
+  }
+
+  {
+    title <
+      name = info;
+      issn = 1463-6697
+    >
+
+    param[journal_issn] = 1463-6697
+
+    
+
+  }
+
+  {
+    title <
+      name = Information Management & Computer Security;
+      issn = 0968-5227
+    >
+
+    param[journal_issn] = 0968-5227
+
+    
+    au < manifest ; Information Management & Computer Security Volume 2 ; 2 >
+    au < manifest ; Information Management & Computer Security Volume 3 ; 3 >
+    au < manifest ; Information Management & Computer Security Volume 4 ; 4 >
+    au < manifest ; Information Management & Computer Security Volume 5 ; 5 >
+    au < manifest ; Information Management & Computer Security Volume 6 ; 6 >
+    au < manifest ; Information Management & Computer Security Volume 7 ; 7 >
+    au < manifest ; Information Management & Computer Security Volume 8 ; 8 >
+    au < manifest ; Information Management & Computer Security Volume 9 ; 9 >
+    au < manifest ; Information Management & Computer Security Volume 10 ; 10 >
+    au < manifest ; Information Management & Computer Security Volume 11 ; 11 >
+    au < manifest ; Information Management & Computer Security Volume 12 ; 12 >
+    au < manifest ; Information Management & Computer Security Volume 13 ; 13 >
+    au < manifest ; Information Management & Computer Security Volume 14 ; 14 >
+    au < manifest ; Information Management & Computer Security Volume 15 ; 15 >
+    au < manifest ; Information Management & Computer Security Volume 16 ; 16 >
+    au < manifest ; Information Management & Computer Security Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Information Technology & People;
+      issn = 0959-3845
+    >
+
+    param[journal_issn] = 0959-3845
+
+    
+    au < manifest ; Information Technology & People Volume 7 ; 7 >
+    au < manifest ; Information Technology & People Volume 8 ; 8 >
+    au < manifest ; Information Technology & People Volume 9 ; 9 >
+    au < manifest ; Information Technology & People Volume 10 ; 10 >
+    au < manifest ; Information Technology & People Volume 11 ; 11 >
+    au < manifest ; Information Technology & People Volume 12 ; 12 >
+    au < manifest ; Information Technology & People Volume 13 ; 13 >
+    au < manifest ; Information Technology & People Volume 14 ; 14 >
+    au < manifest ; Information Technology & People Volume 15 ; 15 >
+    au < manifest ; Information Technology & People Volume 16 ; 16 >
+    au < manifest ; Information Technology & People Volume 17 ; 17 >
+    au < manifest ; Information Technology & People Volume 18 ; 18 >
+    au < manifest ; Information Technology & People Volume 19 ; 19 >
+    au < manifest ; Information Technology & People Volume 20 ; 20 >
+    au < manifest ; Information Technology & People Volume 21 ; 21 >
+    au < manifest ; Information Technology & People Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = Integrated Manufacturing Systems;
+      issn = 0957-6061
+    >
+
+    param[journal_issn] = 0957-6061
+
+    
+    au < manifest ; Integrated Manufacturing Systems Volume 5 ; 5 >
+    au < manifest ; Integrated Manufacturing Systems Volume 6 ; 6 >
+    au < manifest ; Integrated Manufacturing Systems Volume 7 ; 7 >
+    au < manifest ; Integrated Manufacturing Systems Volume 8 ; 8 >
+    au < manifest ; Integrated Manufacturing Systems Volume 9 ; 9 >
+    au < manifest ; Integrated Manufacturing Systems Volume 10 ; 10 >
+    au < manifest ; Integrated Manufacturing Systems Volume 11 ; 11 >
+    au < manifest ; Integrated Manufacturing Systems Volume 12 ; 12 >
+    au < manifest ; Integrated Manufacturing Systems Volume 13 ; 13 >
+    au < manifest ; Integrated Manufacturing Systems Volume 14 ; 14 >
+
+  }
+
+  {
+    title <
+      name = Interactive Technology and Smart Education;
+      issn = 1741-5659
+    >
+
+    param[journal_issn] = 1741-5659
+
+    
+
+  }
+
+  {
+    title <
+      name = Interlending & Document Supply;
+      issn = 0264-1615
+    >
+
+    param[journal_issn] = 0264-1615
+
+    
+    au < manifest ; Interlending & Document Supply Volume 22 ; 22 >
+    au < manifest ; Interlending & Document Supply Volume 23 ; 23 >
+    au < manifest ; Interlending & Document Supply Volume 24 ; 24 >
+    au < manifest ; Interlending & Document Supply Volume 25 ; 25 >
+    au < manifest ; Interlending & Document Supply Volume 26 ; 26 >
+    au < manifest ; Interlending & Document Supply Volume 27 ; 27 >
+    au < manifest ; Interlending & Document Supply Volume 28 ; 28 >
+    au < manifest ; Interlending & Document Supply Volume 29 ; 29 >
+    au < manifest ; Interlending & Document Supply Volume 30 ; 30 >
+    au < manifest ; Interlending & Document Supply Volume 31 ; 31 >
+    au < manifest ; Interlending & Document Supply Volume 32 ; 32 >
+    au < manifest ; Interlending & Document Supply Volume 33 ; 33 >
+    au < manifest ; Interlending & Document Supply Volume 34 ; 34 >
+    au < manifest ; Interlending & Document Supply Volume 35 ; 35 >
+    au < manifest ; Interlending & Document Supply Volume 36 ; 36 >
+    au < manifest ; Interlending & Document Supply Volume 37 ; 37 >
+    au < manifest ; Interlending & Document Supply Volume 38 ; 38 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Accounting and Information Management;
+      issn = 1834-7649
+    >
+
+    param[journal_issn] = 1834-7649
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Agile Management Systems;
+      issn = 1465-4652
+    >
+
+    param[journal_issn] = 1465-4652
+
+    
+    au < manifest ; International Journal of Agile Management Systems Volume 1 ; 1 >
+    au < manifest ; International Journal of Agile Management Systems Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Bank Marketing;
+      issn = 0265-2323
+    >
+
+    param[journal_issn] = 0265-2323
+
+    
+    au < manifest ; International Journal of Bank Marketing Volume 12 ; 12 >
+    au < manifest ; International Journal of Bank Marketing Volume 13 ; 13 >
+    au < manifest ; International Journal of Bank Marketing Volume 14 ; 14 >
+    au < manifest ; International Journal of Bank Marketing Volume 15 ; 15 >
+    au < manifest ; International Journal of Bank Marketing Volume 16 ; 16 >
+    au < manifest ; International Journal of Bank Marketing Volume 17 ; 17 >
+    au < manifest ; International Journal of Bank Marketing Volume 18 ; 18 >
+    au < manifest ; International Journal of Bank Marketing Volume 19 ; 19 >
+    au < manifest ; International Journal of Bank Marketing Volume 20 ; 20 >
+    au < manifest ; International Journal of Bank Marketing Volume 21 ; 21 >
+    au < manifest ; International Journal of Bank Marketing Volume 22 ; 22 >
+    au < manifest ; International Journal of Bank Marketing Volume 23 ; 23 >
+    au < manifest ; International Journal of Bank Marketing Volume 24 ; 24 >
+    au < manifest ; International Journal of Bank Marketing Volume 25 ; 25 >
+    au < manifest ; International Journal of Bank Marketing Volume 26 ; 26 >
+    au < manifest ; International Journal of Bank Marketing Volume 27 ; 27 >
+    au < manifest ; International Journal of Bank Marketing Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Career Management;
+      issn = 0955-6214
+    >
+
+    param[journal_issn] = 0955-6214
+
+    
+    au < manifest ; International Journal of Career Management Volume 6 ; 6 >
+    au < manifest ; International Journal of Career Management Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Climate Change Strategies and Management;
+      issn = 1756-8692 
+    >
+
+    param[journal_issn] = 1756-8692 
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Clothing Science and Technology;
+      issn = 0955-6222
+    >
+
+    param[journal_issn] = 0955-6222
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Commerce and Management;
+      issn = 1056-9219
+    >
+
+    param[journal_issn] = 1056-9219
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Conflict Management;
+      issn = 1044-4068
+    >
+
+    param[journal_issn] = 1044-4068
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Contemporary Hospitality Management;
+      issn = 0959-6119
+    >
+
+    param[journal_issn] = 0959-6119
+
+    
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 6 ; 6 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 7 ; 7 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 8 ; 8 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 9 ; 9 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 10 ; 10 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 11 ; 11 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 12 ; 12 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 13 ; 13 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 14 ; 14 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 15 ; 15 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 16 ; 16 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 17 ; 17 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 18 ; 18 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
+    au < manifest ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Culture, Tourism and Hospitality Research;
+      issn = 1750-6182
+    >
+
+    param[journal_issn] = 1750-6182
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Development Issues;
+      issn = 1446-8956
+    >
+
+    param[journal_issn] = 1446-8956
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Disaster Resilience in the Built Environment ;
+      issn = 1759-5908
+    >
+
+    param[journal_issn] = 1759-5908
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Educational Management;
+      issn = 0951-354X
+    >
+
+    param[journal_issn] = 0951-354X
+
+    
+    au < manifest ; International Journal of Educational Management Volume 8 ; 8 >
+    au < manifest ; International Journal of Educational Management Volume 9 ; 9 >
+    au < manifest ; International Journal of Educational Management Volume 10 ; 10 >
+    au < manifest ; International Journal of Educational Management Volume 11 ; 11 >
+    au < manifest ; International Journal of Educational Management Volume 12 ; 12 >
+    au < manifest ; International Journal of Educational Management Volume 13 ; 13 >
+    au < manifest ; International Journal of Educational Management Volume 14 ; 14 >
+    au < manifest ; International Journal of Educational Management Volume 15 ; 15 >
+    au < manifest ; International Journal of Educational Management Volume 16 ; 16 >
+    au < manifest ; International Journal of Educational Management Volume 17 ; 17 >
+    au < manifest ; International Journal of Educational Management Volume 18 ; 18 >
+    au < manifest ; International Journal of Educational Management Volume 19 ; 19 >
+    au < manifest ; International Journal of Educational Management Volume 20 ; 20 >
+    au < manifest ; International Journal of Educational Management Volume 21 ; 21 >
+    au < manifest ; International Journal of Educational Management Volume 22 ; 22 >
+    au < manifest ; International Journal of Educational Management Volume 23 ; 23 >
+    au < manifest ; International Journal of Educational Management Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Emerging Markets;
+      issn = 1746-8809
+    >
+
+    param[journal_issn] = 1746-8809
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Energy Sector Management;
+      issn = 1750-6220
+    >
+
+    param[journal_issn] = 1750-6220
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Entrepreneurial Behaviour & Research;
+      issn = 1355-2554
+    >
+
+    param[journal_issn] = 1355-2554
+
+    
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 11 ; 11 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 12 ; 12 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 13 ; 13 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 14 ; 14 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 15 ; 15 >
+    au < manifest ; International Journal of Entrepreneurial Behaviour & Research Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Event and Festival Management;
+      issn = 1785-2954
+    >
+
+    param[journal_issn] = 1785-2954
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Gender and Entrepreneurship;
+      issn = 1756-6266
+    >
+
+    param[journal_issn] = 1756-6266
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Health Care Quality Assurance;
+      issn = 0952-6862
+    >
+
+    param[journal_issn] = 0952-6862
+
+    
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 7 ; 7 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 8 ; 8 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 9 ; 9 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 10 ; 10 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 11 ; 11 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 12 ; 12 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 13 ; 13 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 14 ; 14 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 15 ; 15 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 16 ; 16 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 17 ; 17 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 18 ; 18 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 19 ; 19 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 20 ; 20 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 21 ; 21 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 22 ; 22 >
+    au < manifest ; International Journal of Health Care Quality Assurance Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Housing Markets and Analysis;
+      issn = 1753-8270
+    >
+
+    param[journal_issn] = 1753-8270
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Islamic and Middle Eastern Finance and Management;
+      issn = 1753-8394
+    >
+
+    param[journal_issn] = 1753-8394
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Law and Management;
+      issn = 1754-243X
+    >
+
+    param[journal_issn] = 1754-243X
+
+    
+    au < manifest ; International Journal of Law and Management Volume 50 ; 50 >
+    au < manifest ; International Journal of Law and Management Volume 51 ; 51 >
+    au < manifest ; International Journal of Law and Management Volume 52 ; 52 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Law in the Built Environment;
+      issn = 1756-1450
+    >
+
+    param[journal_issn] = 1756-1450
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Lean Six Sigma ;
+      issn = 2040-1466
+    >
+
+    param[journal_issn] = 2040-1466
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Managerial Finance;
+      issn = 1743-9132
+    >
+
+    param[journal_issn] = 1743-9132
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Managing Projects in Business;
+      issn = 1753-8378
+    >
+
+    param[journal_issn] = 1753-8378
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Manpower;
+      issn = 0143-7720
+    >
+
+    param[journal_issn] = 0143-7720
+
+    
+    au < manifest ; International Journal of Manpower Volume 15 ; 15 >
+    au < manifest ; International Journal of Manpower Volume 16 ; 16 >
+    au < manifest ; International Journal of Manpower Volume 17 ; 17 >
+    au < manifest ; International Journal of Manpower Volume 18 ; 18 >
+    au < manifest ; International Journal of Manpower Volume 19 ; 19 >
+    au < manifest ; International Journal of Manpower Volume 20 ; 20 >
+    au < manifest ; International Journal of Manpower Volume 21 ; 21 >
+    au < manifest ; International Journal of Manpower Volume 22 ; 22 >
+    au < manifest ; International Journal of Manpower Volume 23 ; 23 >
+    au < manifest ; International Journal of Manpower Volume 24 ; 24 >
+    au < manifest ; International Journal of Manpower Volume 25 ; 25 >
+    au < manifest ; International Journal of Manpower Volume 26 ; 26 >
+    au < manifest ; International Journal of Manpower Volume 27 ; 27 >
+    au < manifest ; International Journal of Manpower Volume 28 ; 28 >
+    au < manifest ; International Journal of Manpower Volume 29 ; 29 >
+    au < manifest ; International Journal of Manpower Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Numerical Methods for Heat & Fluid Flow;
+      issn = 0961-5539
+    >
+
+    param[journal_issn] = 0961-5539
+
+    
+    au < manifest ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 >
+    au < manifest ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 >
+    au < manifest ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Operations & Production Management;
+      issn = 0144-3577
+    >
+
+    param[journal_issn] = 0144-3577
+
+    
+    au < manifest ; International Journal of Operations & Production Management Volume 14 ; 14 >
+    au < manifest ; International Journal of Operations & Production Management Volume 15 ; 15 >
+    au < manifest ; International Journal of Operations & Production Management Volume 16 ; 16 >
+    au < manifest ; International Journal of Operations & Production Management Volume 17 ; 17 >
+    au < manifest ; International Journal of Operations & Production Management Volume 18 ; 18 >
+    au < manifest ; International Journal of Operations & Production Management Volume 19 ; 19 >
+    au < manifest ; International Journal of Operations & Production Management Volume 20 ; 20 >
+    au < manifest ; International Journal of Operations & Production Management Volume 21 ; 21 >
+    au < manifest ; International Journal of Operations & Production Management Volume 22 ; 22 >
+    au < manifest ; International Journal of Operations & Production Management Volume 23 ; 23 >
+    au < manifest ; International Journal of Operations & Production Management Volume 24 ; 24 >
+    au < manifest ; International Journal of Operations & Production Management Volume 25 ; 25 >
+    au < manifest ; International Journal of Operations & Production Management Volume 26 ; 26 >
+    au < manifest ; International Journal of Operations & Production Management Volume 27 ; 27 >
+    au < manifest ; International Journal of Operations & Production Management Volume 28 ; 28 >
+    au < manifest ; International Journal of Operations & Production Management Volume 29 ; 29 >
+    au < manifest ; International Journal of Operations & Production Management Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Organizational Analysis;
+      issn = 1934-8835
+    >
+
+    param[journal_issn] = 1934-8835
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Pervasive Computing and Communications;
+      issn = 1742-7371
+    >
+
+    param[journal_issn] = 1742-7371
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Pharmaceutical and Healthcare Marketing;
+      issn = 1750-6123
+    >
+
+    param[journal_issn] = 1750-6123
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Physical Distribution & Logistics Management;
+      issn = 0960-0035
+    >
+
+    param[journal_issn] = 0960-0035
+
+    
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 25 ; 25 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 26 ; 26 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 27 ; 27 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 28 ; 28 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 29 ; 29 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 30 ; 30 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 31 ; 31 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 32 ; 32 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 33 ; 33 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 34 ; 34 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 35 ; 35 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 36 ; 36 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 37 ; 37 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 38 ; 38 >
+    au < manifest ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Productivity and Performance Management;
+      issn = 1741-0401
+    >
+
+    param[journal_issn] = 1741-0401
+
+    
+    au < manifest ; International Journal of Productivity and Performance Management Volume 53 ; 53 >
+    au < manifest ; International Journal of Productivity and Performance Management Volume 54 ; 54 >
+    au < manifest ; International Journal of Productivity and Performance Management Volume 55 ; 55 >
+    au < manifest ; International Journal of Productivity and Performance Management Volume 56 ; 56 >
+    au < manifest ; International Journal of Productivity and Performance Management Volume 57 ; 57 >
+    au < manifest ; International Journal of Productivity and Performance Management Volume 58 ; 58 >
+    au < manifest ; International Journal of Productivity and Performance Management Volume 59 ; 59 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Public Sector Management;
+      issn = 0951-3558
+    >
+
+    param[journal_issn] = 0951-3558
+
+    
+    au < manifest ; International Journal of Public Sector Management Volume 7 ; 7 >
+    au < manifest ; International Journal of Public Sector Management Volume 8 ; 8 >
+    au < manifest ; International Journal of Public Sector Management Volume 9 ; 9 >
+    au < manifest ; International Journal of Public Sector Management Volume 10 ; 10 >
+    au < manifest ; International Journal of Public Sector Management Volume 11 ; 11 >
+    au < manifest ; International Journal of Public Sector Management Volume 12 ; 12 >
+    au < manifest ; International Journal of Public Sector Management Volume 13 ; 13 >
+    au < manifest ; International Journal of Public Sector Management Volume 14 ; 14 >
+    au < manifest ; International Journal of Public Sector Management Volume 15 ; 15 >
+    au < manifest ; International Journal of Public Sector Management Volume 16 ; 16 >
+    au < manifest ; International Journal of Public Sector Management Volume 17 ; 17 >
+    au < manifest ; International Journal of Public Sector Management Volume 18 ; 18 >
+    au < manifest ; International Journal of Public Sector Management Volume 19 ; 19 >
+    au < manifest ; International Journal of Public Sector Management Volume 20 ; 20 >
+    au < manifest ; International Journal of Public Sector Management Volume 21 ; 21 >
+    au < manifest ; International Journal of Public Sector Management Volume 22 ; 22 >
+    au < manifest ; International Journal of Public Sector Management Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Quality & Reliability Management;
+      issn = 0265-671X
+    >
+
+    param[journal_issn] = 0265-671X
+
+    
+    au < manifest ; International Journal of Quality & Reliability Management Volume 11 ; 11 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 12 ; 12 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 13 ; 13 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 14 ; 14 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 15 ; 15 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 16 ; 16 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 17 ; 17 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 18 ; 18 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 19 ; 19 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 20 ; 20 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 21 ; 21 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 22 ; 22 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 23 ; 23 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 24 ; 24 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 25 ; 25 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 26 ; 26 >
+    au < manifest ; International Journal of Quality & Reliability Management Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Quality Science;
+      issn = 1359-8538
+    >
+
+    param[journal_issn] = 1359-8538
+
+    
+    au < manifest ; International Journal of Quality Science Volume 1 ; 1 >
+    au < manifest ; International Journal of Quality Science Volume 2 ; 2 >
+    au < manifest ; International Journal of Quality Science Volume 3 ; 3 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Quality Service Sciences;
+      issn = 1756-669X
+    >
+
+    param[journal_issn] = 1756-669X
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Retail & Distribution Management;
+      issn = 0959-0552
+    >
+
+    param[journal_issn] = 0959-0552
+
+    
+    au < manifest ; International Journal of Retail & Distribution Management Volume 22 ; 22 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 23 ; 23 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 24 ; 24 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 25 ; 25 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 26 ; 26 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 27 ; 27 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 28 ; 28 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 29 ; 29 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 30 ; 30 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 31 ; 31 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 32 ; 32 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 33 ; 33 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 34 ; 34 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 35 ; 35 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 36 ; 36 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 37 ; 37 >
+    au < manifest ; International Journal of Retail & Distribution Management Volume 38 ; 38 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Service Industry Management;
+      issn = 0956-4233
+    >
+
+    param[journal_issn] = 0956-4233
+
+    
+    au < manifest ; International Journal of Service Industry Management Volume 1 ; 1 >
+    au < manifest ; International Journal of Service Industry Management Volume 2 ; 2 >
+    au < manifest ; International Journal of Service Industry Management Volume 3 ; 3 >
+    au < manifest ; International Journal of Service Industry Management Volume 4 ; 4 >
+    au < manifest ; International Journal of Service Industry Management Volume 5 ; 5 >
+    au < manifest ; International Journal of Service Industry Management Volume 6 ; 6 >
+    au < manifest ; International Journal of Service Industry Management Volume 7 ; 7 >
+    au < manifest ; International Journal of Service Industry Management Volume 8 ; 8 >
+    au < manifest ; International Journal of Service Industry Management Volume 9 ; 9 >
+    au < manifest ; International Journal of Service Industry Management Volume 10 ; 10 >
+    au < manifest ; International Journal of Service Industry Management Volume 11 ; 11 >
+    au < manifest ; International Journal of Service Industry Management Volume 12 ; 12 >
+    au < manifest ; International Journal of Service Industry Management Volume 13 ; 13 >
+    au < manifest ; International Journal of Service Industry Management Volume 14 ; 14 >
+    au < manifest ; International Journal of Service Industry Management Volume 15 ; 15 >
+    au < manifest ; International Journal of Service Industry Management Volume 16 ; 16 >
+    au < manifest ; International Journal of Service Industry Management Volume 17 ; 17 >
+    au < manifest ; International Journal of Service Industry Management Volume 18 ; 18 >
+    au < manifest ; International Journal of Service Industry Management Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Social Economics;
+      issn = 0306-8293
+    >
+
+    param[journal_issn] = 0306-8293
+
+    
+    au < manifest ; International Journal of Social Economics Volume 21 ; 21 >
+    au < manifest ; International Journal of Social Economics Volume 22 ; 22 >
+    au < manifest ; International Journal of Social Economics Volume 23 ; 23 >
+    au < manifest ; International Journal of Social Economics Volume 24 ; 24 >
+    au < manifest ; International Journal of Social Economics Volume 25 ; 25 >
+    au < manifest ; International Journal of Social Economics Volume 26 ; 26 >
+    au < manifest ; International Journal of Social Economics Volume 27 ; 27 >
+    au < manifest ; International Journal of Social Economics Volume 28 ; 28 >
+    au < manifest ; International Journal of Social Economics Volume 29 ; 29 >
+    au < manifest ; International Journal of Social Economics Volume 30 ; 30 >
+    au < manifest ; International Journal of Social Economics Volume 31 ; 31 >
+    au < manifest ; International Journal of Social Economics Volume 32 ; 32 >
+    au < manifest ; International Journal of Social Economics Volume 33 ; 33 >
+    au < manifest ; International Journal of Social Economics Volume 34 ; 34 >
+    au < manifest ; International Journal of Social Economics Volume 35 ; 35 >
+    au < manifest ; International Journal of Social Economics Volume 36 ; 36 >
+    au < manifest ; International Journal of Social Economics Volume 37 ; 37 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Sociology and Social Policy;
+      issn = 0144-333X
+    >
+
+    param[journal_issn] = 0144-333X
+
+    
+    au < manifest ; International Journal of Sociology and Social Policy Volume 18 ; 18 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 19 ; 19 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 20 ; 20 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 21 ; 21 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 22 ; 22 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 23 ; 23 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 24 ; 24 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 25 ; 25 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 26 ; 26 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 27 ; 27 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 28 ; 28 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 29 ; 29 >
+    au < manifest ; International Journal of Sociology and Social Policy Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Structural Integrity ;
+      issn = 1757-9864
+    >
+
+    param[journal_issn] = 1757-9864
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Sustainability in Higher Education;
+      issn = 1467-6370
+    >
+
+    param[journal_issn] = 1467-6370
+
+    
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 1 ; 1 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 2 ; 2 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 3 ; 3 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 4 ; 4 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 5 ; 5 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 6 ; 6 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 7 ; 7 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 8 ; 8 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 9 ; 9 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 10 ; 10 >
+    au < manifest ; International Journal of Sustainability in Higher Education Volume 11 ; 11 >
+
+  }
+
+  {
+    title <
+      name = International Journal of Web Information Systems;
+      issn = 1744-0084
+    >
+
+    param[journal_issn] = 1744-0084
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Wine Business Research;
+      issn = 1751-1062
+    >
+
+    param[journal_issn] = 1751-1062
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Wine Marketing;
+      issn = 0954-7541
+    >
+
+    param[journal_issn] = 0954-7541
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal of Workplace Health Management;
+      issn = 1753-8351
+    >
+
+    param[journal_issn] = 1753-8351
+
+    
+
+  }
+
+  {
+    title <
+      name = International Journal on Grey Literature;
+      issn = 1466-6189
+    >
+
+    param[journal_issn] = 1466-6189
+
+    
+    au < manifest ; International Journal on Grey Literature Volume 1 ; 1 >
+
+  }
+
+  {
+    title <
+      name = International Marketing Review;
+      issn = 0265-1335
+    >
+
+    param[journal_issn] = 0265-1335
+
+    
+    au < manifest ; International Marketing Review Volume 11 ; 11 >
+    au < manifest ; International Marketing Review Volume 12 ; 12 >
+    au < manifest ; International Marketing Review Volume 13 ; 13 >
+    au < manifest ; International Marketing Review Volume 14 ; 14 >
+    au < manifest ; International Marketing Review Volume 15 ; 15 >
+    au < manifest ; International Marketing Review Volume 16 ; 16 >
+    au < manifest ; International Marketing Review Volume 17 ; 17 >
+    au < manifest ; International Marketing Review Volume 18 ; 18 >
+    au < manifest ; International Marketing Review Volume 19 ; 19 >
+    au < manifest ; International Marketing Review Volume 20 ; 20 >
+    au < manifest ; International Marketing Review Volume 21 ; 21 >
+    au < manifest ; International Marketing Review Volume 22 ; 22 >
+    au < manifest ; International Marketing Review Volume 23 ; 23 >
+    au < manifest ; International Marketing Review Volume 24 ; 24 >
+    au < manifest ; International Marketing Review Volume 25 ; 25 >
+    au < manifest ; International Marketing Review Volume 26 ; 26 >
+    au < manifest ; International Marketing Review Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Internet Research;
+      issn = 1066-2243
+    >
+
+    param[journal_issn] = 1066-2243
+
+    
+    au < manifest ; Internet Research Volume 4 ; 4 >
+    au < manifest ; Internet Research Volume 5 ; 5 >
+    au < manifest ; Internet Research Volume 6 ; 6 >
+    au < manifest ; Internet Research Volume 7 ; 7 >
+    au < manifest ; Internet Research Volume 8 ; 8 >
+    au < manifest ; Internet Research Volume 9 ; 9 >
+    au < manifest ; Internet Research Volume 10 ; 10 >
+    au < manifest ; Internet Research Volume 11 ; 11 >
+    au < manifest ; Internet Research Volume 12 ; 12 >
+    au < manifest ; Internet Research Volume 13 ; 13 >
+    au < manifest ; Internet Research Volume 14 ; 14 >
+    au < manifest ; Internet Research Volume 15 ; 15 >
+    au < manifest ; Internet Research Volume 16 ; 16 >
+    au < manifest ; Internet Research Volume 17 ; 17 >
+    au < manifest ; Internet Research Volume 18 ; 18 >
+    au < manifest ; Internet Research Volume 19 ; 19 >
+    au < manifest ; Internet Research Volume 20 ; 20 >
+
+  }
+
+  {
+    title <
+      name = Journal of Accounting & Organizational Change;
+      issn = 1832-5912
+    >
+
+    param[journal_issn] = 1832-5912
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Advances in Management Research;
+      issn = 0972-7981
+    >
+
+    param[journal_issn] = 0972-7981
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Applied Accounting Research;
+      issn = 0967-5426
+    >
+
+    param[journal_issn] = 0967-5426
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Business & Industrial Marketing;
+      issn = 0885-8624
+    >
+
+    param[journal_issn] = 0885-8624
+
+    
+    au < manifest ; Journal of Business & Industrial Marketing Volume 9 ; 9 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 10 ; 10 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 11 ; 11 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 12 ; 12 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 13 ; 13 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 14 ; 14 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 15 ; 15 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 16 ; 16 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 17 ; 17 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 18 ; 18 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 19 ; 19 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 20 ; 20 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 21 ; 21 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 22 ; 22 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 23 ; 23 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 24 ; 24 >
+    au < manifest ; Journal of Business & Industrial Marketing Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = Journal of Business Strategy;
+      issn = 0275-6668
+    >
+
+    param[journal_issn] = 0275-6668
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Chinese Economics and Foreign Trade Studies;
+      issn = 1754-4408
+    >
+
+    param[journal_issn] = 1754-4408
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Chinese Entrepreneurship;
+      issn = 1756-1396
+    >
+
+    param[journal_issn] = 1756-1396
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Chinese Human Resource Management;
+      issn = 2040-8005
+    >
+
+    param[journal_issn] = 2040-8005
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Communication Management;
+      issn = 1363-254X
+    >
+
+    param[journal_issn] = 1363-254X
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Consumer Marketing;
+      issn = 0736-3761
+    >
+
+    param[journal_issn] = 0736-3761
+
+    
+    au < manifest ; Journal of Consumer Marketing Volume 11 ; 11 >
+    au < manifest ; Journal of Consumer Marketing Volume 12 ; 12 >
+    au < manifest ; Journal of Consumer Marketing Volume 13 ; 13 >
+    au < manifest ; Journal of Consumer Marketing Volume 14 ; 14 >
+    au < manifest ; Journal of Consumer Marketing Volume 15 ; 15 >
+    au < manifest ; Journal of Consumer Marketing Volume 16 ; 16 >
+    au < manifest ; Journal of Consumer Marketing Volume 17 ; 17 >
+    au < manifest ; Journal of Consumer Marketing Volume 18 ; 18 >
+    au < manifest ; Journal of Consumer Marketing Volume 19 ; 19 >
+    au < manifest ; Journal of Consumer Marketing Volume 20 ; 20 >
+    au < manifest ; Journal of Consumer Marketing Volume 21 ; 21 >
+    au < manifest ; Journal of Consumer Marketing Volume 22 ; 22 >
+    au < manifest ; Journal of Consumer Marketing Volume 23 ; 23 >
+    au < manifest ; Journal of Consumer Marketing Volume 24 ; 24 >
+    au < manifest ; Journal of Consumer Marketing Volume 25 ; 25 >
+    au < manifest ; Journal of Consumer Marketing Volume 26 ; 26 >
+    au < manifest ; Journal of Consumer Marketing Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Journal of Corporate Real Estate;
+      issn = 1463-001X
+    >
+
+    param[journal_issn] = 1463-001X
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Documentation;
+      issn = 0022-0418
+    >
+
+    param[journal_issn] = 0022-0418
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Economic Studies;
+      issn = 0144-3585
+    >
+
+    param[journal_issn] = 0144-3585
+
+    
+    au < manifest ; Journal of Economic Studies Volume 21 ; 21 >
+    au < manifest ; Journal of Economic Studies Volume 22 ; 22 >
+    au < manifest ; Journal of Economic Studies Volume 23 ; 23 >
+    au < manifest ; Journal of Economic Studies Volume 24 ; 24 >
+    au < manifest ; Journal of Economic Studies Volume 25 ; 25 >
+    au < manifest ; Journal of Economic Studies Volume 26 ; 26 >
+    au < manifest ; Journal of Economic Studies Volume 27 ; 27 >
+    au < manifest ; Journal of Economic Studies Volume 28 ; 28 >
+    au < manifest ; Journal of Economic Studies Volume 29 ; 29 >
+    au < manifest ; Journal of Economic Studies Volume 30 ; 30 >
+    au < manifest ; Journal of Economic Studies Volume 31 ; 31 >
+    au < manifest ; Journal of Economic Studies Volume 32 ; 32 >
+    au < manifest ; Journal of Economic Studies Volume 33 ; 33 >
+    au < manifest ; Journal of Economic Studies Volume 34 ; 34 >
+    au < manifest ; Journal of Economic Studies Volume 35 ; 35 >
+    au < manifest ; Journal of Economic Studies Volume 36 ; 36 >
+    au < manifest ; Journal of Economic Studies Volume 37 ; 37 >
+
+  }
+
+  {
+    title <
+      name = Journal of Educational Administration;
+      issn = 0957-8234
+    >
+
+    param[journal_issn] = 0957-8234
+
+    
+    au < manifest ; Journal of Educational Administration Volume 32 ; 32 >
+    au < manifest ; Journal of Educational Administration Volume 33 ; 33 >
+    au < manifest ; Journal of Educational Administration Volume 34 ; 34 >
+    au < manifest ; Journal of Educational Administration Volume 35 ; 35 >
+    au < manifest ; Journal of Educational Administration Volume 36 ; 36 >
+    au < manifest ; Journal of Educational Administration Volume 37 ; 37 >
+    au < manifest ; Journal of Educational Administration Volume 38 ; 38 >
+    au < manifest ; Journal of Educational Administration Volume 39 ; 39 >
+    au < manifest ; Journal of Educational Administration Volume 40 ; 40 >
+    au < manifest ; Journal of Educational Administration Volume 41 ; 41 >
+    au < manifest ; Journal of Educational Administration Volume 42 ; 42 >
+    au < manifest ; Journal of Educational Administration Volume 43 ; 43 >
+    au < manifest ; Journal of Educational Administration Volume 44 ; 44 >
+    au < manifest ; Journal of Educational Administration Volume 45 ; 45 >
+    au < manifest ; Journal of Educational Administration Volume 46 ; 46 >
+    au < manifest ; Journal of Educational Administration Volume 47 ; 47 >
+    au < manifest ; Journal of Educational Administration Volume 48 ; 48 >
+
+  }
+
+  {
+    title <
+      name = Journal of Engineering, Design and Technology;
+      issn = 1726-0531
+    >
+
+    param[journal_issn] = 1726-0531
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Enterprise Information Management;
+      issn = 1741-0398
+    >
+
+    param[journal_issn] = 1741-0398
+
+    
+    au < manifest ; Journal of Enterprise Information Management Volume 17 ; 17 >
+    au < manifest ; Journal of Enterprise Information Management Volume 18 ; 18 >
+    au < manifest ; Journal of Enterprise Information Management Volume 19 ; 19 >
+    au < manifest ; Journal of Enterprise Information Management Volume 20 ; 20 >
+    au < manifest ; Journal of Enterprise Information Management Volume 21 ; 21 >
+    au < manifest ; Journal of Enterprise Information Management Volume 22 ; 22 >
+    au < manifest ; Journal of Enterprise Information Management Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Journal of Enterprising Communities: People and Places in the Global Economy;
+      issn = 1750-6204
+    >
+
+    param[journal_issn] = 1750-6204
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of European Industrial Training;
+      issn = 0309-0590
+    >
+
+    param[journal_issn] = 0309-0590
+
+    
+    au < manifest ; Journal of European Industrial Training Volume 18 ; 18 >
+    au < manifest ; Journal of European Industrial Training Volume 19 ; 19 >
+    au < manifest ; Journal of European Industrial Training Volume 20 ; 20 >
+    au < manifest ; Journal of European Industrial Training Volume 21 ; 21 >
+    au < manifest ; Journal of European Industrial Training Volume 22 ; 22 >
+    au < manifest ; Journal of European Industrial Training Volume 23 ; 23 >
+    au < manifest ; Journal of European Industrial Training Volume 24 ; 24 >
+    au < manifest ; Journal of European Industrial Training Volume 25 ; 25 >
+    au < manifest ; Journal of European Industrial Training Volume 26 ; 26 >
+    au < manifest ; Journal of European Industrial Training Volume 27 ; 27 >
+    au < manifest ; Journal of European Industrial Training Volume 28 ; 28 >
+    au < manifest ; Journal of European Industrial Training Volume 29 ; 29 >
+    au < manifest ; Journal of European Industrial Training Volume 30 ; 30 >
+    au < manifest ; Journal of European Industrial Training Volume 31 ; 31 >
+    au < manifest ; Journal of European Industrial Training Volume 32 ; 32 >
+    au < manifest ; Journal of European Industrial Training Volume 33 ; 33 >
+    au < manifest ; Journal of European Industrial Training Volume 34 ; 34 >
+
+  }
+
+  {
+    title <
+      name = Journal of European Real Estate Research;
+      issn = 1753-9269
+    >
+
+    param[journal_issn] = 1753-9269
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Facilities Management;
+      issn = 1472-5967
+    >
+
+    param[journal_issn] = 1472-5967
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Fashion Marketing and Management;
+      issn = 1361-2026
+    >
+
+    param[journal_issn] = 1361-2026
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Financial Crime;
+      issn = 1359-0790
+    >
+
+    param[journal_issn] = 1359-0790
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Financial Economic Policy;
+      issn = 1757-6385
+    >
+
+    param[journal_issn] = 1757-6385
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Financial Management of Property and Construction;
+      issn = 1366-4387
+    >
+
+    param[journal_issn] = 1366-4387
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Financial Regulation and Compliance;
+      issn = 1358-1988
+    >
+
+    param[journal_issn] = 1358-1988
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Financial Reporting and Accounting;
+      issn = 1985-2517
+    >
+
+    param[journal_issn] = 1985-2517
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Global Responsibility ;
+      issn = 2041-2568
+    >
+
+    param[journal_issn] = 2041-2568
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Health Organisation and Management;
+      issn = 1477-7266
+    >
+
+    param[journal_issn] = 1477-7266
+
+    
+    au < manifest ; Journal of Health Organisation and Management Volume 17 ; 17 >
+    au < manifest ; Journal of Health Organisation and Management Volume 18 ; 18 >
+    au < manifest ; Journal of Health Organisation and Management Volume 19 ; 19 >
+    au < manifest ; Journal of Health Organisation and Management Volume 20 ; 20 >
+    au < manifest ; Journal of Health Organisation and Management Volume 21 ; 21 >
+    au < manifest ; Journal of Health Organisation and Management Volume 22 ; 22 >
+    au < manifest ; Journal of Health Organisation and Management Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Journal of Historical Research in Marketing;
+      issn = 1755-750X
+    >
+
+    param[journal_issn] = 1755-750X
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Hospitality and Tourism Technology;
+      issn = 1757-9880
+    >
+
+    param[journal_issn] = 1757-9880
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Human Resource Costing & Accounting;
+      issn = 1401-338X
+    >
+
+    param[journal_issn] = 1401-338X
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Indian Business Research;
+      issn = 1755-4195
+    >
+
+    param[journal_issn] = 1755-4195
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Information, Communication and Ethics in Society;
+      issn = 1477-996X
+    >
+
+    param[journal_issn] = 1477-996X
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Intellectual Capital;
+      issn = 1469-1930
+    >
+
+    param[journal_issn] = 1469-1930
+
+    
+    au < manifest ; Journal of Intellectual Capital Volume 1 ; 1 >
+    au < manifest ; Journal of Intellectual Capital Volume 2 ; 2 >
+    au < manifest ; Journal of Intellectual Capital Volume 3 ; 3 >
+    au < manifest ; Journal of Intellectual Capital Volume 4 ; 4 >
+    au < manifest ; Journal of Intellectual Capital Volume 5 ; 5 >
+    au < manifest ; Journal of Intellectual Capital Volume 6 ; 6 >
+    au < manifest ; Journal of Intellectual Capital Volume 7 ; 7 >
+    au < manifest ; Journal of Intellectual Capital Volume 8 ; 8 >
+    au < manifest ; Journal of Intellectual Capital Volume 9 ; 9 >
+    au < manifest ; Journal of Intellectual Capital Volume 10 ; 10 >
+    au < manifest ; Journal of Intellectual Capital Volume 11 ; 11 >
+
+  }
+
+  {
+    title <
+      name = Journal of International Trade Law and Policy;
+      issn = 1477-0024
+    >
+
+    param[journal_issn] = 1477-0024
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Investment Compliance;
+      issn = 1528-5812
+    >
+
+    param[journal_issn] = 1528-5812
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Islamic Accounting and Business Research;
+      issn = 1759-0817
+    >
+
+    param[journal_issn] = 1759-0817
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Islamic Marketing;
+      issn = 1759-0833
+    >
+
+    param[journal_issn] = 1759-0833
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Knowledge Management;
+      issn = 1367-3270
+    >
+
+    param[journal_issn] = 1367-3270
+
+    
+    au < manifest ; Journal of Knowledge Management Volume 1 ; 1 >
+    au < manifest ; Journal of Knowledge Management Volume 2 ; 2 >
+    au < manifest ; Journal of Knowledge Management Volume 3 ; 3 >
+    au < manifest ; Journal of Knowledge Management Volume 4 ; 4 >
+    au < manifest ; Journal of Knowledge Management Volume 5 ; 5 >
+    au < manifest ; Journal of Knowledge Management Volume 6 ; 6 >
+    au < manifest ; Journal of Knowledge Management Volume 7 ; 7 >
+    au < manifest ; Journal of Knowledge Management Volume 8 ; 8 >
+    au < manifest ; Journal of Knowledge Management Volume 9 ; 9 >
+    au < manifest ; Journal of Knowledge Management Volume 10 ; 10 >
+    au < manifest ; Journal of Knowledge Management Volume 11 ; 11 >
+    au < manifest ; Journal of Knowledge Management Volume 12 ; 12 >
+    au < manifest ; Journal of Knowledge Management Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Journal of Knowledge-based Innovation in China;
+      issn = 1756-1418
+    >
+
+    param[journal_issn] = 1756-1418
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Management Development;
+      issn = 0262-1711
+    >
+
+    param[journal_issn] = 0262-1711
+
+    
+    au < manifest ; Journal of Management Development Volume 13 ; 13 >
+    au < manifest ; Journal of Management Development Volume 14 ; 14 >
+    au < manifest ; Journal of Management Development Volume 15 ; 15 >
+    au < manifest ; Journal of Management Development Volume 16 ; 16 >
+    au < manifest ; Journal of Management Development Volume 17 ; 17 >
+    au < manifest ; Journal of Management Development Volume 18 ; 18 >
+    au < manifest ; Journal of Management Development Volume 19 ; 19 >
+    au < manifest ; Journal of Management Development Volume 20 ; 20 >
+    au < manifest ; Journal of Management Development Volume 21 ; 21 >
+    au < manifest ; Journal of Management Development Volume 22 ; 22 >
+    au < manifest ; Journal of Management Development Volume 23 ; 23 >
+    au < manifest ; Journal of Management Development Volume 24 ; 24 >
+    au < manifest ; Journal of Management Development Volume 25 ; 25 >
+    au < manifest ; Journal of Management Development Volume 26 ; 26 >
+    au < manifest ; Journal of Management Development Volume 27 ; 27 >
+    au < manifest ; Journal of Management Development Volume 28 ; 28 >
+    au < manifest ; Journal of Management Development Volume 29 ; 29 >
+
+  }
+
+  {
+    title <
+      name = Journal of Management History;
+      issn = 1751-1348
+    >
+
+    param[journal_issn] = 1751-1348
+
+    
+    au < manifest ; Journal of Management History Volume 13 ; 13 >
+    au < manifest ; Journal of Management History Volume 14 ; 14 >
+    au < manifest ; Journal of Management History Volume 15 ; 15 >
+    au < manifest ; Journal of Management History Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Journal of Management History (Archive);
+      issn = 1355-252X
+    >
+
+    param[journal_issn] = 1355-252X
+
+    
+    au < manifest ; Journal of Management History (Archive) Volume 1 ; 1 >
+    au < manifest ; Journal of Management History (Archive) Volume 2 ; 2 >
+    au < manifest ; Journal of Management History (Archive) Volume 3 ; 3 >
+    au < manifest ; Journal of Management History (Archive) Volume 4 ; 4 >
+    au < manifest ; Journal of Management History (Archive) Volume 5 ; 5 >
+    au < manifest ; Journal of Management History (Archive) Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = Journal of Management in Medicine;
+      issn = 0268-9235
+    >
+
+    param[journal_issn] = 0268-9235
+
+    
+    au < manifest ; Journal of Management in Medicine Volume 8 ; 8 >
+    au < manifest ; Journal of Management in Medicine Volume 9 ; 9 >
+    au < manifest ; Journal of Management in Medicine Volume 10 ; 10 >
+    au < manifest ; Journal of Management in Medicine Volume 11 ; 11 >
+    au < manifest ; Journal of Management in Medicine Volume 12 ; 12 >
+    au < manifest ; Journal of Management in Medicine Volume 13 ; 13 >
+    au < manifest ; Journal of Management in Medicine Volume 14 ; 14 >
+    au < manifest ; Journal of Management in Medicine Volume 15 ; 15 >
+    au < manifest ; Journal of Management in Medicine Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Journal of Managerial Psychology;
+      issn = 0268-3946
+    >
+
+    param[journal_issn] = 0268-3946
+
+    
+    au < manifest ; Journal of Managerial Psychology Volume 9 ; 9 >
+    au < manifest ; Journal of Managerial Psychology Volume 10 ; 10 >
+    au < manifest ; Journal of Managerial Psychology Volume 11 ; 11 >
+    au < manifest ; Journal of Managerial Psychology Volume 12 ; 12 >
+    au < manifest ; Journal of Managerial Psychology Volume 13 ; 13 >
+    au < manifest ; Journal of Managerial Psychology Volume 14 ; 14 >
+    au < manifest ; Journal of Managerial Psychology Volume 15 ; 15 >
+    au < manifest ; Journal of Managerial Psychology Volume 16 ; 16 >
+    au < manifest ; Journal of Managerial Psychology Volume 17 ; 17 >
+    au < manifest ; Journal of Managerial Psychology Volume 18 ; 18 >
+    au < manifest ; Journal of Managerial Psychology Volume 19 ; 19 >
+    au < manifest ; Journal of Managerial Psychology Volume 20 ; 20 >
+    au < manifest ; Journal of Managerial Psychology Volume 21 ; 21 >
+    au < manifest ; Journal of Managerial Psychology Volume 22 ; 22 >
+    au < manifest ; Journal of Managerial Psychology Volume 23 ; 23 >
+    au < manifest ; Journal of Managerial Psychology Volume 24 ; 24 >
+    au < manifest ; Journal of Managerial Psychology Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = Journal of Manufacturing Technology Management;
+      issn = 1741-038X
+    >
+
+    param[journal_issn] = 1741-038X
+
+    
+    au < manifest ; Journal of Manufacturing Technology Management Volume 15 ; 15 >
+    au < manifest ; Journal of Manufacturing Technology Management Volume 16 ; 16 >
+    au < manifest ; Journal of Manufacturing Technology Management Volume 17 ; 17 >
+    au < manifest ; Journal of Manufacturing Technology Management Volume 18 ; 18 >
+    au < manifest ; Journal of Manufacturing Technology Management Volume 19 ; 19 >
+    au < manifest ; Journal of Manufacturing Technology Management Volume 20 ; 20 >
+    au < manifest ; Journal of Manufacturing Technology Management Volume 21 ; 21 >
+
+  }
+
+  {
+    title <
+      name = Journal of Marketing Practice: Applied Marketing Science;
+      issn = 1355-2538
+    >
+
+    param[journal_issn] = 1355-2538
+
+    
+    au < manifest ; Journal of Marketing Practice: Applied Marketing Science Volume 1 ; 1 >
+    au < manifest ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 >
+    au < manifest ; Journal of Marketing Practice: Applied Marketing Science Volume 3 ; 3 >
+    au < manifest ; Journal of Marketing Practice: Applied Marketing Science Volume 4 ; 4 >
+    au < manifest ; Journal of Marketing Practice: Applied Marketing Science Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Journal of Modelling in Management;
+      issn = 1746-5664
+    >
+
+    param[journal_issn] = 1746-5664
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Money Laundering Control;
+      issn = 1368-5201
+    >
+
+    param[journal_issn] = 1368-5201
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Organizational Change Management;
+      issn = 0953-4814
+    >
+
+    param[journal_issn] = 0953-4814
+
+    
+    au < manifest ; Journal of Organizational Change Management Volume 7 ; 7 >
+    au < manifest ; Journal of Organizational Change Management Volume 8 ; 8 >
+    au < manifest ; Journal of Organizational Change Management Volume 9 ; 9 >
+    au < manifest ; Journal of Organizational Change Management Volume 10 ; 10 >
+    au < manifest ; Journal of Organizational Change Management Volume 11 ; 11 >
+    au < manifest ; Journal of Organizational Change Management Volume 12 ; 12 >
+    au < manifest ; Journal of Organizational Change Management Volume 13 ; 13 >
+    au < manifest ; Journal of Organizational Change Management Volume 14 ; 14 >
+    au < manifest ; Journal of Organizational Change Management Volume 15 ; 15 >
+    au < manifest ; Journal of Organizational Change Management Volume 16 ; 16 >
+    au < manifest ; Journal of Organizational Change Management Volume 17 ; 17 >
+    au < manifest ; Journal of Organizational Change Management Volume 18 ; 18 >
+    au < manifest ; Journal of Organizational Change Management Volume 19 ; 19 >
+    au < manifest ; Journal of Organizational Change Management Volume 20 ; 20 >
+    au < manifest ; Journal of Organizational Change Management Volume 21 ; 21 >
+    au < manifest ; Journal of Organizational Change Management Volume 22 ; 22 >
+    au < manifest ; Journal of Organizational Change Management Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Journal of Place Management and Development;
+      issn = 1753-8335
+    >
+
+    param[journal_issn] = 1753-8335
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Product & Brand Management;
+      issn = 1061-0421
+    >
+
+    param[journal_issn] = 1061-0421
+
+    
+    au < manifest ; Journal of Product & Brand Management Volume 3 ; 3 >
+    au < manifest ; Journal of Product & Brand Management Volume 4 ; 4 >
+    au < manifest ; Journal of Product & Brand Management Volume 5 ; 5 >
+    au < manifest ; Journal of Product & Brand Management Volume 6 ; 6 >
+    au < manifest ; Journal of Product & Brand Management Volume 7 ; 7 >
+    au < manifest ; Journal of Product & Brand Management Volume 8 ; 8 >
+    au < manifest ; Journal of Product & Brand Management Volume 9 ; 9 >
+    au < manifest ; Journal of Product & Brand Management Volume 10 ; 10 >
+    au < manifest ; Journal of Product & Brand Management Volume 11 ; 11 >
+    au < manifest ; Journal of Product & Brand Management Volume 12 ; 12 >
+    au < manifest ; Journal of Product & Brand Management Volume 13 ; 13 >
+    au < manifest ; Journal of Product & Brand Management Volume 14 ; 14 >
+    au < manifest ; Journal of Product & Brand Management Volume 15 ; 15 >
+    au < manifest ; Journal of Product & Brand Management Volume 16 ; 16 >
+    au < manifest ; Journal of Product & Brand Management Volume 17 ; 17 >
+    au < manifest ; Journal of Product & Brand Management Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Journal of Property Finance;
+      issn = 0958-868X
+    >
+
+    param[journal_issn] = 0958-868X
+
+    
+    au < manifest ; Journal of Property Finance Volume 5 ; 5 >
+    au < manifest ; Journal of Property Finance Volume 6 ; 6 >
+    au < manifest ; Journal of Property Finance Volume 7 ; 7 >
+    au < manifest ; Journal of Property Finance Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Journal of Property Investment & Finance;
+      issn = 1463-578X
+    >
+
+    param[journal_issn] = 1463-578X
+
+    
+    au < manifest ; Journal of Property Investment & Finance Volume 17 ; 17 >
+    au < manifest ; Journal of Property Investment & Finance Volume 18 ; 18 >
+    au < manifest ; Journal of Property Investment & Finance Volume 19 ; 19 >
+    au < manifest ; Journal of Property Investment & Finance Volume 20 ; 20 >
+    au < manifest ; Journal of Property Investment & Finance Volume 21 ; 21 >
+    au < manifest ; Journal of Property Investment & Finance Volume 22 ; 22 >
+    au < manifest ; Journal of Property Investment & Finance Volume 23 ; 23 >
+    au < manifest ; Journal of Property Investment & Finance Volume 24 ; 24 >
+    au < manifest ; Journal of Property Investment & Finance Volume 25 ; 25 >
+    au < manifest ; Journal of Property Investment & Finance Volume 26 ; 26 >
+    au < manifest ; Journal of Property Investment & Finance Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Journal of Property Valuation and Investment;
+      issn = 0960-2712
+    >
+
+    param[journal_issn] = 0960-2712
+
+    
+    au < manifest ; Journal of Property Valuation and Investment Volume 12 ; 12 >
+    au < manifest ; Journal of Property Valuation and Investment Volume 13 ; 13 >
+    au < manifest ; Journal of Property Valuation and Investment Volume 14 ; 14 >
+    au < manifest ; Journal of Property Valuation and Investment Volume 15 ; 15 >
+    au < manifest ; Journal of Property Valuation and Investment Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Journal of Quality in Maintenance Engineering;
+      issn = 1355-2511
+    >
+
+    param[journal_issn] = 1355-2511
+
+    
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 1 ; 1 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 2 ; 2 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 3 ; 3 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 4 ; 4 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 5 ; 5 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 6 ; 6 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 7 ; 7 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 8 ; 8 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 9 ; 9 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 10 ; 10 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 11 ; 11 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 12 ; 12 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 13 ; 13 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 14 ; 14 >
+    au < manifest ; Journal of Quality in Maintenance Engineering Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Journal of Research in Interactive Marketing ;
+      issn = 2040-7122
+    >
+
+    param[journal_issn] = 2040-7122
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Research in Marketing and Entrepreneurship;
+      issn = 1471-5201
+    >
+
+    param[journal_issn] = 1471-5201
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Science and Technology Policy in China ;
+      issn = 1758-552X
+    >
+
+    param[journal_issn] = 1758-552X
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Service Management;
+      issn = 1757-5818
+    >
+
+    param[journal_issn] = 1757-5818
+
+    
+    au < manifest ; Journal of Service Management Volume 20 ; 20 >
+
+  }
+
+  {
+    title <
+      name = Journal of Services Marketing;
+      issn = 0887-6045
+    >
+
+    param[journal_issn] = 0887-6045
+
+    
+    au < manifest ; Journal of Services Marketing Volume 8 ; 8 >
+    au < manifest ; Journal of Services Marketing Volume 9 ; 9 >
+    au < manifest ; Journal of Services Marketing Volume 10 ; 10 >
+    au < manifest ; Journal of Services Marketing Volume 11 ; 11 >
+    au < manifest ; Journal of Services Marketing Volume 12 ; 12 >
+    au < manifest ; Journal of Services Marketing Volume 13 ; 13 >
+    au < manifest ; Journal of Services Marketing Volume 14 ; 14 >
+    au < manifest ; Journal of Services Marketing Volume 15 ; 15 >
+    au < manifest ; Journal of Services Marketing Volume 16 ; 16 >
+    au < manifest ; Journal of Services Marketing Volume 17 ; 17 >
+    au < manifest ; Journal of Services Marketing Volume 18 ; 18 >
+    au < manifest ; Journal of Services Marketing Volume 19 ; 19 >
+    au < manifest ; Journal of Services Marketing Volume 20 ; 20 >
+    au < manifest ; Journal of Services Marketing Volume 21 ; 21 >
+    au < manifest ; Journal of Services Marketing Volume 22 ; 22 >
+    au < manifest ; Journal of Services Marketing Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Journal of Small Business and Enterprise Development;
+      issn = 1462-6004
+    >
+
+    param[journal_issn] = 1462-6004
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Strategy and Management;
+      issn = 1755-425X
+    >
+
+    param[journal_issn] = 1755-425X
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Systems and Information Technology;
+      issn = 1328-7265
+    >
+
+    param[journal_issn] = 1328-7265
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Technology Management and Strategy in China;
+      issn = 1756 4425
+    >
+
+    param[journal_issn] = 1756 4425
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Technology Management in China;
+      issn = 1746-8779
+    >
+
+    param[journal_issn] = 1746-8779
+
+    
+
+  }
+
+  {
+    title <
+      name = Journal of Workplace Learning;
+      issn = 1366-5626
+    >
+
+    param[journal_issn] = 1366-5626
+
+    
+    au < manifest ; Journal of Workplace Learning Volume 6 ; 6 >
+    au < manifest ; Journal of Workplace Learning Volume 7 ; 7 >
+    au < manifest ; Journal of Workplace Learning Volume 8 ; 8 >
+    au < manifest ; Journal of Workplace Learning Volume 9 ; 9 >
+    au < manifest ; Journal of Workplace Learning Volume 10 ; 10 >
+    au < manifest ; Journal of Workplace Learning Volume 11 ; 11 >
+    au < manifest ; Journal of Workplace Learning Volume 12 ; 12 >
+    au < manifest ; Journal of Workplace Learning Volume 13 ; 13 >
+    au < manifest ; Journal of Workplace Learning Volume 14 ; 14 >
+    au < manifest ; Journal of Workplace Learning Volume 15 ; 15 >
+    au < manifest ; Journal of Workplace Learning Volume 16 ; 16 >
+    au < manifest ; Journal of Workplace Learning Volume 17 ; 17 >
+    au < manifest ; Journal of Workplace Learning Volume 18 ; 18 >
+    au < manifest ; Journal of Workplace Learning Volume 19 ; 19 >
+    au < manifest ; Journal of Workplace Learning Volume 20 ; 20 >
+    au < manifest ; Journal of Workplace Learning Volume 21 ; 21 >
+    au < manifest ; Journal of Workplace Learning Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = Kybernetes;
+      issn = 0368-492X
+    >
+
+    param[journal_issn] = 0368-492X
+
+    
+
+  }
+
+  {
+    title <
+      name = Leadership & Organization Development Journal;
+      issn = 0143-7739
+    >
+
+    param[journal_issn] = 0143-7739
+
+    
+    au < manifest ; Leadership & Organization Development Journal Volume 15 ; 15 >
+    au < manifest ; Leadership & Organization Development Journal Volume 16 ; 16 >
+    au < manifest ; Leadership & Organization Development Journal Volume 17 ; 17 >
+    au < manifest ; Leadership & Organization Development Journal Volume 18 ; 18 >
+    au < manifest ; Leadership & Organization Development Journal Volume 19 ; 19 >
+    au < manifest ; Leadership & Organization Development Journal Volume 20 ; 20 >
+    au < manifest ; Leadership & Organization Development Journal Volume 21 ; 21 >
+    au < manifest ; Leadership & Organization Development Journal Volume 22 ; 22 >
+    au < manifest ; Leadership & Organization Development Journal Volume 23 ; 23 >
+    au < manifest ; Leadership & Organization Development Journal Volume 24 ; 24 >
+    au < manifest ; Leadership & Organization Development Journal Volume 25 ; 25 >
+    au < manifest ; Leadership & Organization Development Journal Volume 26 ; 26 >
+    au < manifest ; Leadership & Organization Development Journal Volume 27 ; 27 >
+    au < manifest ; Leadership & Organization Development Journal Volume 28 ; 28 >
+    au < manifest ; Leadership & Organization Development Journal Volume 29 ; 29 >
+    au < manifest ; Leadership & Organization Development Journal Volume 30 ; 30 >
+    au < manifest ; Leadership & Organization Development Journal Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Leadership in Health Services;
+      issn = 1751-1879
+    >
+
+    param[journal_issn] = 1751-1879
+
+    
+    au < manifest ; Leadership in Health Services Volume 10 ; 10 >
+    au < manifest ; Leadership in Health Services Volume 11 ; 11 >
+    au < manifest ; Leadership in Health Services Volume 12 ; 12 >
+    au < manifest ; Leadership in Health Services Volume 13 ; 13 >
+    au < manifest ; Leadership in Health Services Volume 14 ; 14 >
+    au < manifest ; Leadership in Health Services Volume 15 ; 15 >
+    au < manifest ; Leadership in Health Services Volume 16 ; 16 >
+    au < manifest ; Leadership in Health Services Volume 17 ; 17 >
+    au < manifest ; Leadership in Health Services Volume 18 ; 18 >
+    au < manifest ; Leadership in Health Services Volume 19 ; 19 >
+    au < manifest ; Leadership in Health Services Volume 20 ; 20 >
+    au < manifest ; Leadership in Health Services Volume 21 ; 21 >
+    au < manifest ; Leadership in Health Services Volume 22 ; 22 >
+    au < manifest ; Leadership in Health Services Volume 23 ; 23 >
+
+  }
+
+  {
+    title <
+      name = Librarian Career Development;
+      issn = 0968-0810
+    >
+
+    param[journal_issn] = 0968-0810
+
+    
+    au < manifest ; Librarian Career Development Volume 2 ; 2 >
+    au < manifest ; Librarian Career Development Volume 3 ; 3 >
+    au < manifest ; Librarian Career Development Volume 4 ; 4 >
+    au < manifest ; Librarian Career Development Volume 5 ; 5 >
+    au < manifest ; Librarian Career Development Volume 6 ; 6 >
+    au < manifest ; Librarian Career Development Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Library Consortium Management: An International Journal;
+      issn = 1466-2760
+    >
+
+    param[journal_issn] = 1466-2760
+
+    
+    au < manifest ; Library Consortium Management: An International Journal Volume 1 ; 1 >
+    au < manifest ; Library Consortium Management: An International Journal Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
+      name = Library Hi Tech;
+      issn = 0737-8831
+    >
+
+    param[journal_issn] = 0737-8831
+
+    
+    au < manifest ; Library Hi Tech Volume 15 ; 15 >
+    au < manifest ; Library Hi Tech Volume 16 ; 16 >
+    au < manifest ; Library Hi Tech Volume 17 ; 17 >
+    au < manifest ; Library Hi Tech Volume 18 ; 18 >
+    au < manifest ; Library Hi Tech Volume 19 ; 19 >
+    au < manifest ; Library Hi Tech Volume 20 ; 20 >
+    au < manifest ; Library Hi Tech Volume 21 ; 21 >
+    au < manifest ; Library Hi Tech Volume 22 ; 22 >
+    au < manifest ; Library Hi Tech Volume 23 ; 23 >
+    au < manifest ; Library Hi Tech Volume 24 ; 24 >
+    au < manifest ; Library Hi Tech Volume 25 ; 25 >
+    au < manifest ; Library Hi Tech Volume 26 ; 26 >
+    au < manifest ; Library Hi Tech Volume 27 ; 27 >
+    au < manifest ; Library Hi Tech Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = Library Hi Tech News;
+      issn = 0741-9058
+    >
+
+    param[journal_issn] = 0741-9058
+
+    
+    au < manifest ; Library Hi Tech News Volume 16 ; 16 >
+    au < manifest ; Library Hi Tech News Volume 17 ; 17 >
+    au < manifest ; Library Hi Tech News Volume 18 ; 18 >
+    au < manifest ; Library Hi Tech News Volume 19 ; 19 >
+    au < manifest ; Library Hi Tech News Volume 20 ; 20 >
+    au < manifest ; Library Hi Tech News Volume 21 ; 21 >
+    au < manifest ; Library Hi Tech News Volume 22 ; 22 >
+    au < manifest ; Library Hi Tech News Volume 23 ; 23 >
+    au < manifest ; Library Hi Tech News Volume 24 ; 24 >
+    au < manifest ; Library Hi Tech News Volume 25 ; 25 >
+    au < manifest ; Library Hi Tech News Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = Library Management;
+      issn = 0143-5124
+    >
+
+    param[journal_issn] = 0143-5124
+
+    
+    au < manifest ; Library Management Volume 15 ; 15 >
+    au < manifest ; Library Management Volume 16 ; 16 >
+    au < manifest ; Library Management Volume 17 ; 17 >
+    au < manifest ; Library Management Volume 18 ; 18 >
+    au < manifest ; Library Management Volume 19 ; 19 >
+    au < manifest ; Library Management Volume 20 ; 20 >
+    au < manifest ; Library Management Volume 21 ; 21 >
+    au < manifest ; Library Management Volume 22 ; 22 >
+    au < manifest ; Library Management Volume 23 ; 23 >
+    au < manifest ; Library Management Volume 24 ; 24 >
+    au < manifest ; Library Management Volume 25 ; 25 >
+    au < manifest ; Library Management Volume 26 ; 26 >
+    au < manifest ; Library Management Volume 27 ; 27 >
+    au < manifest ; Library Management Volume 28 ; 28 >
+    au < manifest ; Library Management Volume 29 ; 29 >
+    au < manifest ; Library Management Volume 30 ; 30 >
+    au < manifest ; Library Management Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Library Review;
+      issn = 0024-2535
+    >
+
+    param[journal_issn] = 0024-2535
+
+    
+    au < manifest ; Library Review Volume 43 ; 43 >
+    au < manifest ; Library Review Volume 44 ; 44 >
+    au < manifest ; Library Review Volume 45 ; 45 >
+    au < manifest ; Library Review Volume 46 ; 46 >
+    au < manifest ; Library Review Volume 47 ; 47 >
+    au < manifest ; Library Review Volume 48 ; 48 >
+    au < manifest ; Library Review Volume 49 ; 49 >
+    au < manifest ; Library Review Volume 50 ; 50 >
+    au < manifest ; Library Review Volume 51 ; 51 >
+    au < manifest ; Library Review Volume 52 ; 52 >
+    au < manifest ; Library Review Volume 53 ; 53 >
+    au < manifest ; Library Review Volume 54 ; 54 >
+    au < manifest ; Library Review Volume 55 ; 55 >
+    au < manifest ; Library Review Volume 56 ; 56 >
+    au < manifest ; Library Review Volume 57 ; 57 >
+    au < manifest ; Library Review Volume 58 ; 58 >
+
+  }
+
+  {
+    title <
+      name = Logistics Information Management;
+      issn = 0957-6053
+    >
+
+    param[journal_issn] = 0957-6053
+
+    
+    au < manifest ; Logistics Information Management Volume 7 ; 7 >
+    au < manifest ; Logistics Information Management Volume 8 ; 8 >
+    au < manifest ; Logistics Information Management Volume 9 ; 9 >
+    au < manifest ; Logistics Information Management Volume 10 ; 10 >
+    au < manifest ; Logistics Information Management Volume 11 ; 11 >
+    au < manifest ; Logistics Information Management Volume 12 ; 12 >
+    au < manifest ; Logistics Information Management Volume 13 ; 13 >
+    au < manifest ; Logistics Information Management Volume 14 ; 14 >
+    au < manifest ; Logistics Information Management Volume 15 ; 15 >
+    au < manifest ; Logistics Information Management Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Management Decision;
+      issn = 0025-1747
+    >
+
+    param[journal_issn] = 0025-1747
+
+    
+    au < manifest ; Management Decision Volume 32 ; 32 >
+    au < manifest ; Management Decision Volume 33 ; 33 >
+    au < manifest ; Management Decision Volume 34 ; 34 >
+    au < manifest ; Management Decision Volume 35 ; 35 >
+    au < manifest ; Management Decision Volume 36 ; 36 >
+    au < manifest ; Management Decision Volume 37 ; 37 >
+    au < manifest ; Management Decision Volume 38 ; 38 >
+    au < manifest ; Management Decision Volume 39 ; 39 >
+    au < manifest ; Management Decision Volume 40 ; 40 >
+    au < manifest ; Management Decision Volume 41 ; 41 >
+    au < manifest ; Management Decision Volume 42 ; 42 >
+    au < manifest ; Management Decision Volume 43 ; 43 >
+    au < manifest ; Management Decision Volume 44 ; 44 >
+    au < manifest ; Management Decision Volume 45 ; 45 >
+    au < manifest ; Management Decision Volume 46 ; 46 >
+    au < manifest ; Management Decision Volume 47 ; 47 >
+    au < manifest ; Management Decision Volume 48 ; 48 >
+
+  }
+
+  {
+    title <
+      name = Management Development Review;
+      issn = 0962-2519
+    >
+
+    param[journal_issn] = 0962-2519
+
+    
+    au < manifest ; Management Development Review Volume 7 ; 7 >
+    au < manifest ; Management Development Review Volume 8 ; 8 >
+    au < manifest ; Management Development Review Volume 9 ; 9 >
+    au < manifest ; Management Development Review Volume 10 ; 10 >
+
+  }
+
+  {
+    title <
+      name = Management of Environmental Quality: An International Journal;
+      issn = 1477-7835
+    >
+
+    param[journal_issn] = 1477-7835
+
+    
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 14 ; 14 >
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 15 ; 15 >
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 16 ; 16 >
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 17 ; 17 >
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 18 ; 18 >
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 19 ; 19 >
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 20 ; 20 >
+    au < manifest ; Management of Environmental Quality: An International Journal Volume 21 ; 21 >
+
+  }
+
+  {
+    title <
+      name = Management Research News;
+      issn = 0140-9174
+    >
+
+    param[journal_issn] = 0140-9174
+
+    
+    au < manifest ; Management Research News Volume 21 ; 21 >
+    au < manifest ; Management Research News Volume 22 ; 22 >
+    au < manifest ; Management Research News Volume 23 ; 23 >
+    au < manifest ; Management Research News Volume 24 ; 24 >
+    au < manifest ; Management Research News Volume 25 ; 25 >
+    au < manifest ; Management Research News Volume 26 ; 26 >
+    au < manifest ; Management Research News Volume 27 ; 27 >
+    au < manifest ; Management Research News Volume 28 ; 28 >
+    au < manifest ; Management Research News Volume 29 ; 29 >
+    au < manifest ; Management Research News Volume 30 ; 30 >
+    au < manifest ; Management Research News Volume 31 ; 31 >
+    au < manifest ; Management Research News Volume 32 ; 32 >
+
+  }
+
+  {
+    title <
+      name = Management Research Review;
+      issn = 2040-8269
+    >
+
+    param[journal_issn] = 2040-8269
+
+    
+
+  }
+
+  {
+    title <
+      name = Management Research: The Journal of the Iberoamerican Academy of Management;
+      issn = 1536-5433
+    >
+
+    param[journal_issn] = 1536-5433
+
+    
+
+  }
+
+  {
+    title <
+      name = Managerial Auditing Journal;
+      issn = 0268-6902
+    >
+
+    param[journal_issn] = 0268-6902
+
+    
+    au < manifest ; Managerial Auditing Journal Volume 9 ; 9 >
+    au < manifest ; Managerial Auditing Journal Volume 10 ; 10 >
+    au < manifest ; Managerial Auditing Journal Volume 11 ; 11 >
+    au < manifest ; Managerial Auditing Journal Volume 12 ; 12 >
+    au < manifest ; Managerial Auditing Journal Volume 13 ; 13 >
+    au < manifest ; Managerial Auditing Journal Volume 14 ; 14 >
+    au < manifest ; Managerial Auditing Journal Volume 15 ; 15 >
+    au < manifest ; Managerial Auditing Journal Volume 16 ; 16 >
+    au < manifest ; Managerial Auditing Journal Volume 17 ; 17 >
+    au < manifest ; Managerial Auditing Journal Volume 18 ; 18 >
+    au < manifest ; Managerial Auditing Journal Volume 19 ; 19 >
+    au < manifest ; Managerial Auditing Journal Volume 20 ; 20 >
+    au < manifest ; Managerial Auditing Journal Volume 21 ; 21 >
+    au < manifest ; Managerial Auditing Journal Volume 22 ; 22 >
+    au < manifest ; Managerial Auditing Journal Volume 23 ; 23 >
+    au < manifest ; Managerial Auditing Journal Volume 24 ; 24 >
+    au < manifest ; Managerial Auditing Journal Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = Managerial Finance;
+      issn = 0307-4358
+    >
+
+    param[journal_issn] = 0307-4358
+
+    
+    au < manifest ; Managerial Finance Volume 24 ; 24 >
+    au < manifest ; Managerial Finance Volume 25 ; 25 >
+    au < manifest ; Managerial Finance Volume 26 ; 26 >
+    au < manifest ; Managerial Finance Volume 27 ; 27 >
+    au < manifest ; Managerial Finance Volume 28 ; 28 >
+    au < manifest ; Managerial Finance Volume 29 ; 29 >
+    au < manifest ; Managerial Finance Volume 30 ; 30 >
+    au < manifest ; Managerial Finance Volume 31 ; 31 >
+    au < manifest ; Managerial Finance Volume 32 ; 32 >
+    au < manifest ; Managerial Finance Volume 33 ; 33 >
+    au < manifest ; Managerial Finance Volume 34 ; 34 >
+    au < manifest ; Managerial Finance Volume 35 ; 35 >
+    au < manifest ; Managerial Finance Volume 36 ; 36 >
+
+  }
+
+  {
+    title <
+      name = Managerial Law;
+      issn = 0309-0558
+    >
+
+    param[journal_issn] = 0309-0558
+
+    
+    au < manifest ; Managerial Law Volume 40 ; 40 >
+    au < manifest ; Managerial Law Volume 41 ; 41 >
+    au < manifest ; Managerial Law Volume 42 ; 42 >
+    au < manifest ; Managerial Law Volume 43 ; 43 >
+    au < manifest ; Managerial Law Volume 44 ; 44 >
+    au < manifest ; Managerial Law Volume 45 ; 45 >
+    au < manifest ; Managerial Law Volume 46 ; 46 >
+    au < manifest ; Managerial Law Volume 47 ; 47 >
+    au < manifest ; Managerial Law Volume 48 ; 48 >
+    au < manifest ; Managerial Law Volume 49 ; 49 >
+
+  }
+
+  {
+    title <
+      name = Managing Service Quality;
+      issn = 0960-4529
+    >
+
+    param[journal_issn] = 0960-4529
+
+    
+    au < manifest ; Managing Service Quality Volume 4 ; 4 >
+    au < manifest ; Managing Service Quality Volume 5 ; 5 >
+    au < manifest ; Managing Service Quality Volume 6 ; 6 >
+    au < manifest ; Managing Service Quality Volume 7 ; 7 >
+    au < manifest ; Managing Service Quality Volume 8 ; 8 >
+    au < manifest ; Managing Service Quality Volume 9 ; 9 >
+    au < manifest ; Managing Service Quality Volume 10 ; 10 >
+    au < manifest ; Managing Service Quality Volume 11 ; 11 >
+    au < manifest ; Managing Service Quality Volume 12 ; 12 >
+    au < manifest ; Managing Service Quality Volume 13 ; 13 >
+    au < manifest ; Managing Service Quality Volume 14 ; 14 >
+    au < manifest ; Managing Service Quality Volume 15 ; 15 >
+    au < manifest ; Managing Service Quality Volume 16 ; 16 >
+    au < manifest ; Managing Service Quality Volume 17 ; 17 >
+    au < manifest ; Managing Service Quality Volume 18 ; 18 >
+    au < manifest ; Managing Service Quality Volume 19 ; 19 >
+    au < manifest ; Managing Service Quality Volume 20 ; 20 >
+
+  }
+
+  {
+    title <
+      name = Marketing Intelligence & Planning;
+      issn = 0263-4503
+    >
+
+    param[journal_issn] = 0263-4503
+
+    
+    au < manifest ; Marketing Intelligence & Planning Volume 12 ; 12 >
+    au < manifest ; Marketing Intelligence & Planning Volume 13 ; 13 >
+    au < manifest ; Marketing Intelligence & Planning Volume 14 ; 14 >
+    au < manifest ; Marketing Intelligence & Planning Volume 15 ; 15 >
+    au < manifest ; Marketing Intelligence & Planning Volume 16 ; 16 >
+    au < manifest ; Marketing Intelligence & Planning Volume 17 ; 17 >
+    au < manifest ; Marketing Intelligence & Planning Volume 18 ; 18 >
+    au < manifest ; Marketing Intelligence & Planning Volume 19 ; 19 >
+    au < manifest ; Marketing Intelligence & Planning Volume 20 ; 20 >
+    au < manifest ; Marketing Intelligence & Planning Volume 21 ; 21 >
+    au < manifest ; Marketing Intelligence & Planning Volume 22 ; 22 >
+    au < manifest ; Marketing Intelligence & Planning Volume 23 ; 23 >
+    au < manifest ; Marketing Intelligence & Planning Volume 24 ; 24 >
+    au < manifest ; Marketing Intelligence & Planning Volume 25 ; 25 >
+    au < manifest ; Marketing Intelligence & Planning Volume 26 ; 26 >
+    au < manifest ; Marketing Intelligence & Planning Volume 27 ; 27 >
+    au < manifest ; Marketing Intelligence & Planning Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = Measuring Business Excellence;
+      issn = 1368-3047
+    >
+
+    param[journal_issn] = 1368-3047
+
+    
+
+  }
+
+  {
+    title <
+      name = Microelectronics International;
+      issn = 1356-5362
+    >
+
+    param[journal_issn] = 1356-5362
+
+    
+
+  }
+
+  {
+    title <
+      name = Multicultural Education & Technology Journal;
+      issn = 1750-497X
+    >
+
+    param[journal_issn] = 1750-497X
+
+    
+
+  }
+
+  {
+    title <
+      name = Nankai Business Review International;
+      issn = 2040-8749
+    >
+
+    param[journal_issn] = 2040-8749
+
+    
+
+  }
+
+  {
+    title <
+      name = New Library World;
+      issn = 0307-4803
+    >
+
+    param[journal_issn] = 0307-4803
+
+    
+    au < manifest ; New Library World Volume 95 ; 95 >
+    au < manifest ; New Library World Volume 96 ; 96 >
+    au < manifest ; New Library World Volume 97 ; 97 >
+    au < manifest ; New Library World Volume 98 ; 98 >
+    au < manifest ; New Library World Volume 99 ; 99 >
+    au < manifest ; New Library World Volume 100 ; 100 >
+    au < manifest ; New Library World Volume 101 ; 101 >
+    au < manifest ; New Library World Volume 102 ; 102 >
+    au < manifest ; New Library World Volume 103 ; 103 >
+    au < manifest ; New Library World Volume 104 ; 104 >
+    au < manifest ; New Library World Volume 105 ; 105 >
+    au < manifest ; New Library World Volume 106 ; 106 >
+    au < manifest ; New Library World Volume 107 ; 107 >
+    au < manifest ; New Library World Volume 108 ; 108 >
+    au < manifest ; New Library World Volume 109 ; 109 >
+    au < manifest ; New Library World Volume 110 ; 110 >
+    au < manifest ; New Library World Volume 111 ; 111 >
+
+  }
+
+  {
+    title <
+      name = Nutrition & Food Science;
+      issn = 0034-6659
+    >
+
+    param[journal_issn] = 0034-6659
+
+    
+    au < manifest ; Nutrition & Food Science Volume 94 ; 94 >
+    au < manifest ; Nutrition & Food Science Volume 95 ; 95 >
+    au < manifest ; Nutrition & Food Science Volume 96 ; 96 >
+    au < manifest ; Nutrition & Food Science Volume 97 ; 97 >
+    au < manifest ; Nutrition & Food Science Volume 98 ; 98 >
+    au < manifest ; Nutrition & Food Science Volume 99 ; 99 >
+
+  }
+
+  {
+    title <
+      name = OCLC Systems & Services;
+      issn = 1065-075X
+    >
+
+    param[journal_issn] = 1065-075X
+
+    
+    au < manifest ; OCLC Systems & Services Volume 10 ; 10 >
+    au < manifest ; OCLC Systems & Services Volume 11 ; 11 >
+    au < manifest ; OCLC Systems & Services Volume 12 ; 12 >
+    au < manifest ; OCLC Systems & Services Volume 13 ; 13 >
+    au < manifest ; OCLC Systems & Services Volume 14 ; 14 >
+    au < manifest ; OCLC Systems & Services Volume 15 ; 15 >
+    au < manifest ; OCLC Systems & Services Volume 16 ; 16 >
+    au < manifest ; OCLC Systems & Services Volume 17 ; 17 >
+    au < manifest ; OCLC Systems & Services Volume 18 ; 18 >
+    au < manifest ; OCLC Systems & Services Volume 19 ; 19 >
+    au < manifest ; OCLC Systems & Services Volume 20 ; 20 >
+    au < manifest ; OCLC Systems & Services Volume 21 ; 21 >
+    au < manifest ; OCLC Systems & Services Volume 22 ; 22 >
+    au < manifest ; OCLC Systems & Services Volume 23 ; 23 >
+    au < manifest ; OCLC Systems & Services Volume 24 ; 24 >
+    au < manifest ; OCLC Systems & Services Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = On The Horizon ;
+      issn = 1074-8121
+    >
+
+    param[journal_issn] = 1074-8121
+
+    
+
+  }
+
+  {
+    title <
+      name = Online Information Review;
+      issn = 1468-4527
+    >
+
+    param[journal_issn] = 1468-4527
+
+    
+    au < manifest ; Online Information Review Volume 23 ; 23 >
+    au < manifest ; Online Information Review Volume 24 ; 24 >
+    au < manifest ; Online Information Review Volume 25 ; 25 >
+    au < manifest ; Online Information Review Volume 26 ; 26 >
+    au < manifest ; Online Information Review Volume 27 ; 27 >
+    au < manifest ; Online Information Review Volume 28 ; 28 >
+    au < manifest ; Online Information Review Volume 29 ; 29 >
+    au < manifest ; Online Information Review Volume 30 ; 30 >
+    au < manifest ; Online Information Review Volume 31 ; 31 >
+    au < manifest ; Online Information Review Volume 32 ; 32 >
+    au < manifest ; Online Information Review Volume 33 ; 33 >
+
+  }
+
+  {
+    title <
+      name = Pacific Accounting Review;
+      issn = 0114-0582
+    >
+
+    param[journal_issn] = 0114-0582
+
+    
+
+  }
+
+  {
+    title <
+      name = Participation and Empowerment: An International Journal;
+      issn = 1463-4449
+    >
+
+    param[journal_issn] = 1463-4449
+
+    
+    au < manifest ; Participation and Empowerment: An International Journal Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Performance Measurement and Metrics;
+      issn = 1467-8047
+    >
+
+    param[journal_issn] = 1467-8047
+
+    
+
+  }
+
+  {
+    title <
+      name = Personnel Review;
+      issn = 0048-3486
+    >
+
+    param[journal_issn] = 0048-3486
+
+    
+    au < manifest ; Personnel Review Volume 23 ; 23 >
+    au < manifest ; Personnel Review Volume 24 ; 24 >
+    au < manifest ; Personnel Review Volume 25 ; 25 >
+    au < manifest ; Personnel Review Volume 26 ; 26 >
+    au < manifest ; Personnel Review Volume 27 ; 27 >
+    au < manifest ; Personnel Review Volume 28 ; 28 >
+    au < manifest ; Personnel Review Volume 29 ; 29 >
+    au < manifest ; Personnel Review Volume 30 ; 30 >
+    au < manifest ; Personnel Review Volume 31 ; 31 >
+    au < manifest ; Personnel Review Volume 32 ; 32 >
+    au < manifest ; Personnel Review Volume 33 ; 33 >
+    au < manifest ; Personnel Review Volume 34 ; 34 >
+    au < manifest ; Personnel Review Volume 35 ; 35 >
+    au < manifest ; Personnel Review Volume 36 ; 36 >
+    au < manifest ; Personnel Review Volume 37 ; 37 >
+    au < manifest ; Personnel Review Volume 38 ; 38 >
+    au < manifest ; Personnel Review Volume 39 ; 39 >
+
+  }
+
+  {
+    title <
+      name = Pigment & Resin Technology;
+      issn = 0369-9420
+    >
+
+    param[journal_issn] = 0369-9420
+
+    
+
+  }
+
+  {
+    title <
+      name = Police Studies: Intnl Review of Police Development;
+      issn = 0141-2949
+    >
+
+    param[journal_issn] = 0141-2949
+
+    
+    au < manifest ; Police Studies: Intnl Review of Police Development Volume 18 ; 18 >
+    au < manifest ; Police Studies: Intnl Review of Police Development Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Policing: An International Journal of Police Strategies & Management;
+      issn = 1363-951X
+    >
+
+    param[journal_issn] = 1363-951X
+
+    
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 20 ; 20 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 21 ; 21 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 22 ; 22 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 23 ; 23 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 24 ; 24 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 25 ; 25 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 26 ; 26 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 27 ; 27 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 28 ; 28 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 29 ; 29 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 30 ; 30 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 31 ; 31 >
+    au < manifest ; Policing: An International Journal of Police Strategies & Management Volume 32 ; 32 >
+
+  }
+
+  {
+    title <
+      name = Pricing Strategy and Practice;
+      issn = 0968-4905
+    >
+
+    param[journal_issn] = 0968-4905
+
+    
+    au < manifest ; Pricing Strategy and Practice Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Program: Electronic Library and Information Systems;
+      issn = 0033-0337
+    >
+
+    param[journal_issn] = 0033-0337
+
+    
+    au < manifest ; Program: Electronic Library and Information Systems Volume 31 ; 31 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 32 ; 32 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 33 ; 33 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 34 ; 34 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 35 ; 35 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 36 ; 36 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 37 ; 37 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 38 ; 38 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 39 ; 39 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 40 ; 40 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 41 ; 41 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 42 ; 42 >
+    au < manifest ; Program: Electronic Library and Information Systems Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Property Management;
+      issn = 0263-7472
+    >
+
+    param[journal_issn] = 0263-7472
+
+    
+    au < manifest ; Property Management Volume 12 ; 12 >
+    au < manifest ; Property Management Volume 13 ; 13 >
+    au < manifest ; Property Management Volume 14 ; 14 >
+    au < manifest ; Property Management Volume 15 ; 15 >
+    au < manifest ; Property Management Volume 16 ; 16 >
+    au < manifest ; Property Management Volume 17 ; 17 >
+    au < manifest ; Property Management Volume 18 ; 18 >
+    au < manifest ; Property Management Volume 19 ; 19 >
+    au < manifest ; Property Management Volume 20 ; 20 >
+    au < manifest ; Property Management Volume 21 ; 21 >
+    au < manifest ; Property Management Volume 22 ; 22 >
+    au < manifest ; Property Management Volume 23 ; 23 >
+    au < manifest ; Property Management Volume 24 ; 24 >
+    au < manifest ; Property Management Volume 25 ; 25 >
+    au < manifest ; Property Management Volume 26 ; 26 >
+    au < manifest ; Property Management Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Qualitative Market Research: An International Journal;
+      issn = 1352-2752
+    >
+
+    param[journal_issn] = 1352-2752
+
+    
+    au < manifest ; Qualitative Market Research: An International Journal Volume 1 ; 1 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 2 ; 2 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 3 ; 3 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 4 ; 4 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 5 ; 5 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 6 ; 6 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 7 ; 7 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 8 ; 8 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 9 ; 9 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 10 ; 10 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 11 ; 11 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 12 ; 12 >
+    au < manifest ; Qualitative Market Research: An International Journal Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Qualitative Research in Accounting & Management;
+      issn = 1176-6093
+    >
+
+    param[journal_issn] = 1176-6093
+
+    
+
+  }
+
+  {
+    title <
+      name = Qualitative Research in Financial Marketing;
+      issn = 1775-4179
+    >
+
+    param[journal_issn] = 1775-4179
+
+    
+
+  }
+
+  {
+    title <
+      name = Qualitative Research in Organizations and Management: An International Journal;
+      issn = 1746-5648
+    >
+
+    param[journal_issn] = 1746-5648
+
+    
+
+  }
+
+  {
+    title <
+      name = Quality Assurance in Education;
+      issn = 0968-4883
+    >
+
+    param[journal_issn] = 0968-4883
+
+    
+    au < manifest ; Quality Assurance in Education Volume 2 ; 2 >
+    au < manifest ; Quality Assurance in Education Volume 3 ; 3 >
+    au < manifest ; Quality Assurance in Education Volume 4 ; 4 >
+    au < manifest ; Quality Assurance in Education Volume 5 ; 5 >
+    au < manifest ; Quality Assurance in Education Volume 6 ; 6 >
+    au < manifest ; Quality Assurance in Education Volume 7 ; 7 >
+    au < manifest ; Quality Assurance in Education Volume 8 ; 8 >
+    au < manifest ; Quality Assurance in Education Volume 9 ; 9 >
+    au < manifest ; Quality Assurance in Education Volume 10 ; 10 >
+    au < manifest ; Quality Assurance in Education Volume 11 ; 11 >
+    au < manifest ; Quality Assurance in Education Volume 12 ; 12 >
+    au < manifest ; Quality Assurance in Education Volume 13 ; 13 >
+    au < manifest ; Quality Assurance in Education Volume 14 ; 14 >
+    au < manifest ; Quality Assurance in Education Volume 15 ; 15 >
+    au < manifest ; Quality Assurance in Education Volume 16 ; 16 >
+    au < manifest ; Quality Assurance in Education Volume 17 ; 17 >
+    au < manifest ; Quality Assurance in Education Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Rapid Prototyping Journal;
+      issn = 1355-2546
+    >
+
+    param[journal_issn] = 1355-2546
+
+    
+
+  }
+
+  {
+    title <
+      name = Records Management Journal;
+      issn = 0956-5698
+    >
+
+    param[journal_issn] = 0956-5698
+
+    
+
+  }
+
+  {
+    title <
+      name = Reference Reviews ;
+      issn = 0950-4125
+    >
+
+    param[journal_issn] = 0950-4125
+
+    
+    au < manifest ; Reference Reviews  Volume 11 ; 11 >
+    au < manifest ; Reference Reviews  Volume 12 ; 12 >
+    au < manifest ; Reference Reviews  Volume 13 ; 13 >
+    au < manifest ; Reference Reviews  Volume 14 ; 14 >
+    au < manifest ; Reference Reviews  Volume 15 ; 15 >
+    au < manifest ; Reference Reviews  Volume 16 ; 16 >
+    au < manifest ; Reference Reviews  Volume 17 ; 17 >
+    au < manifest ; Reference Reviews  Volume 18 ; 18 >
+    au < manifest ; Reference Reviews  Volume 19 ; 19 >
+    au < manifest ; Reference Reviews  Volume 20 ; 20 >
+    au < manifest ; Reference Reviews  Volume 21 ; 21 >
+    au < manifest ; Reference Reviews  Volume 22 ; 22 >
+    au < manifest ; Reference Reviews  Volume 23 ; 23 >
+    au < manifest ; Reference Reviews  Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = Reference Services Review;
+      issn = 0090-7324
+    >
+
+    param[journal_issn] = 0090-7324
+
+    
+    au < manifest ; Reference Services Review Volume 25 ; 25 >
+    au < manifest ; Reference Services Review Volume 26 ; 26 >
+    au < manifest ; Reference Services Review Volume 27 ; 27 >
+    au < manifest ; Reference Services Review Volume 28 ; 28 >
+    au < manifest ; Reference Services Review Volume 29 ; 29 >
+    au < manifest ; Reference Services Review Volume 30 ; 30 >
+    au < manifest ; Reference Services Review Volume 31 ; 31 >
+    au < manifest ; Reference Services Review Volume 32 ; 32 >
+    au < manifest ; Reference Services Review Volume 33 ; 33 >
+    au < manifest ; Reference Services Review Volume 34 ; 34 >
+    au < manifest ; Reference Services Review Volume 35 ; 35 >
+    au < manifest ; Reference Services Review Volume 36 ; 36 >
+    au < manifest ; Reference Services Review Volume 37 ; 37 >
+    au < manifest ; Reference Services Review Volume 38 ; 38 >
+
+  }
+
+  {
+    title <
+      name = Review of Accounting and Finance;
+      issn = 1475-7702
+    >
+
+    param[journal_issn] = 1475-7702
+
+    
+
+  }
+
+  {
+    title <
+      name = Sensor Review;
+      issn = 0260-2288
+    >
+
+    param[journal_issn] = 0260-2288
+
+    
+
+  }
+
+  {
+    title <
+      name = Social Enterprise Journal;
+      issn = 1750-8614
+    >
+
+    param[journal_issn] = 1750-8614
+
+    
+
+  }
+
+  {
+    title <
+      name = Social Responsibility Journal;
+      issn = 1747-1117
+    >
+
+    param[journal_issn] = 1747-1117
+
+    
+
+  }
+
+  {
+    title <
+      name = Society and Business Review;
+      issn = 1746-5680
+    >
+
+    param[journal_issn] = 1746-5680
+
+    
+
+  }
+
+  {
+    title <
+      name = Soldering & Surface Mount Technology;
+      issn = 0954-0911
+    >
+
+    param[journal_issn] = 0954-0911
+
+    
+
+  }
+
+  {
+    title <
+      name = Strategic Direction;
+      issn = 0258-0543
+    >
+
+    param[journal_issn] = 0258-0543
+
+    
+    au < manifest ; Strategic Direction Volume 18 ; 18 >
+    au < manifest ; Strategic Direction Volume 19 ; 19 >
+    au < manifest ; Strategic Direction Volume 20 ; 20 >
+    au < manifest ; Strategic Direction Volume 21 ; 21 >
+    au < manifest ; Strategic Direction Volume 22 ; 22 >
+    au < manifest ; Strategic Direction Volume 23 ; 23 >
+    au < manifest ; Strategic Direction Volume 24 ; 24 >
+    au < manifest ; Strategic Direction Volume 25 ; 25 >
+    au < manifest ; Strategic Direction Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = Strategic HR Review;
+      issn = 1475-4398
+    >
+
+    param[journal_issn] = 1475-4398
+
+    
+
+  }
+
+  {
+    title <
+      name = Strategic Outsourcing: An international Journal;
+      issn = 1753-8297
+    >
+
+    param[journal_issn] = 1753-8297
+
+    
+
+  }
+
+  {
+    title <
+      name = Strategy & Leadership;
+      issn = 1087-8572
+    >
+
+    param[journal_issn] = 1087-8572
+
+    
+
+  }
+
+  {
+    title <
+      name = Structural Survey;
+      issn = 0263-080X
+    >
+
+    param[journal_issn] = 0263-080X
+
+    
+    au < manifest ; Structural Survey Volume 12 ; 12 >
+    au < manifest ; Structural Survey Volume 13 ; 13 >
+    au < manifest ; Structural Survey Volume 14 ; 14 >
+    au < manifest ; Structural Survey Volume 15 ; 15 >
+    au < manifest ; Structural Survey Volume 16 ; 16 >
+    au < manifest ; Structural Survey Volume 17 ; 17 >
+    au < manifest ; Structural Survey Volume 18 ; 18 >
+    au < manifest ; Structural Survey Volume 19 ; 19 >
+    au < manifest ; Structural Survey Volume 20 ; 20 >
+    au < manifest ; Structural Survey Volume 21 ; 21 >
+    au < manifest ; Structural Survey Volume 22 ; 22 >
+    au < manifest ; Structural Survey Volume 23 ; 23 >
+    au < manifest ; Structural Survey Volume 24 ; 24 >
+    au < manifest ; Structural Survey Volume 25 ; 25 >
+    au < manifest ; Structural Survey Volume 26 ; 26 >
+    au < manifest ; Structural Survey Volume 27 ; 27 >
+
+  }
+
+  {
+    title <
+      name = Studies in Economics and Finance;
+      issn = 1086-7376
+    >
+
+    param[journal_issn] = 1086-7376
+
+    
+
+  }
+
+  {
+    title <
+      name = Supply Chain Management: An International Journal;
+      issn = 1359-8546
+    >
+
+    param[journal_issn] = 1359-8546
+
+    
+    au < manifest ; Supply Chain Management: An International Journal Volume 1 ; 1 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 2 ; 2 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 3 ; 3 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 4 ; 4 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 5 ; 5 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 6 ; 6 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 7 ; 7 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 8 ; 8 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 9 ; 9 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 10 ; 10 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 11 ; 11 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 12 ; 12 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 13 ; 13 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 14 ; 14 >
+    au < manifest ; Supply Chain Management: An International Journal Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = Sustainability Accounting, Management and Policy Journal;
+      issn = 2040-8021
+    >
+
+    param[journal_issn] = 2040-8021
+
+    
+
+  }
+
+  {
+    title <
+      name = Team Performance Management;
+      issn = 1352-7592
+    >
+
+    param[journal_issn] = 1352-7592
+
+    
+    au < manifest ; Team Performance Management Volume 1 ; 1 >
+    au < manifest ; Team Performance Management Volume 2 ; 2 >
+    au < manifest ; Team Performance Management Volume 3 ; 3 >
+    au < manifest ; Team Performance Management Volume 4 ; 4 >
+    au < manifest ; Team Performance Management Volume 5 ; 5 >
+    au < manifest ; Team Performance Management Volume 6 ; 6 >
+    au < manifest ; Team Performance Management Volume 7 ; 7 >
+    au < manifest ; Team Performance Management Volume 8 ; 8 >
+    au < manifest ; Team Performance Management Volume 9 ; 9 >
+    au < manifest ; Team Performance Management Volume 10 ; 10 >
+    au < manifest ; Team Performance Management Volume 11 ; 11 >
+    au < manifest ; Team Performance Management Volume 12 ; 12 >
+    au < manifest ; Team Performance Management Volume 13 ; 13 >
+    au < manifest ; Team Performance Management Volume 14 ; 14 >
+    au < manifest ; Team Performance Management Volume 15 ; 15 >
+
+  }
+
+  {
+    title <
+      name = The Antidote;
+      issn = 1363-8483
+    >
+
+    param[journal_issn] = 1363-8483
+
+    
+
+  }
+
+  {
+    title <
+      name = The Bottom Line: Managing Library Finances;
+      issn = 0888-045X
+    >
+
+    param[journal_issn] = 0888-045X
+
+    
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 9 ; 9 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 10 ; 10 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 11 ; 11 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 12 ; 12 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 13 ; 13 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 14 ; 14 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 15 ; 15 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 16 ; 16 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 17 ; 17 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 18 ; 18 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 19 ; 19 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 20 ; 20 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 21 ; 21 >
+    au < manifest ; The Bottom Line: Managing Library Finances Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = The Electronic Library;
+      issn = 0264-0473
+    >
+
+    param[journal_issn] = 0264-0473
+
+    
+
+  }
+
+  {
+    title <
+      name = The International Journal of Logistics Management;
+      issn = 0957-4093
+    >
+
+    param[journal_issn] = 0957-4093
+
+    
+
+  }
+
+  {
+    title <
+      name = The Journal of Risk Finance;
+      issn = 1526-5943
+    >
+
+    param[journal_issn] = 1526-5943
+
+    
+
+  }
+
+  {
+    title <
+      name = The Learning Organization;
+      issn = 0969-6474
+    >
+
+    param[journal_issn] = 0969-6474
+
+    
+    au < manifest ; The Learning Organization Volume 1 ; 1 >
+    au < manifest ; The Learning Organization Volume 2 ; 2 >
+    au < manifest ; The Learning Organization Volume 3 ; 3 >
+    au < manifest ; The Learning Organization Volume 4 ; 4 >
+    au < manifest ; The Learning Organization Volume 5 ; 5 >
+    au < manifest ; The Learning Organization Volume 6 ; 6 >
+    au < manifest ; The Learning Organization Volume 7 ; 7 >
+    au < manifest ; The Learning Organization Volume 8 ; 8 >
+    au < manifest ; The Learning Organization Volume 9 ; 9 >
+    au < manifest ; The Learning Organization Volume 10 ; 10 >
+    au < manifest ; The Learning Organization Volume 11 ; 11 >
+    au < manifest ; The Learning Organization Volume 12 ; 12 >
+    au < manifest ; The Learning Organization Volume 13 ; 13 >
+    au < manifest ; The Learning Organization Volume 14 ; 14 >
+    au < manifest ; The Learning Organization Volume 15 ; 15 >
+    au < manifest ; The Learning Organization Volume 16 ; 16 >
+    au < manifest ; The Learning Organization Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = The TQM Journal;
+      issn = 1754-2731
+    >
+
+    param[journal_issn] = 1754-2731
+
+    
+    au < manifest ; The TQM Journal Volume 20 ; 20 >
+    au < manifest ; The TQM Journal Volume 21 ; 21 >
+    au < manifest ; The TQM Journal Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = The TQM Magazine;
+      issn = 0954-478X
+    >
+
+    param[journal_issn] = 0954-478X
+
+    
+    au < manifest ; The TQM Magazine Volume 6 ; 6 >
+    au < manifest ; The TQM Magazine Volume 7 ; 7 >
+    au < manifest ; The TQM Magazine Volume 8 ; 8 >
+    au < manifest ; The TQM Magazine Volume 9 ; 9 >
+    au < manifest ; The TQM Magazine Volume 10 ; 10 >
+    au < manifest ; The TQM Magazine Volume 11 ; 11 >
+    au < manifest ; The TQM Magazine Volume 12 ; 12 >
+    au < manifest ; The TQM Magazine Volume 13 ; 13 >
+    au < manifest ; The TQM Magazine Volume 14 ; 14 >
+    au < manifest ; The TQM Magazine Volume 15 ; 15 >
+    au < manifest ; The TQM Magazine Volume 16 ; 16 >
+    au < manifest ; The TQM Magazine Volume 17 ; 17 >
+    au < manifest ; The TQM Magazine Volume 18 ; 18 >
+    au < manifest ; The TQM Magazine Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Tourism Review;
+      issn = 1660-5373
+    >
+
+    param[journal_issn] = 1660-5373
+
+    
+
+  }
+
+  {
+    title <
+      name = Training for Quality;
+      issn = 0968-4875
+    >
+
+    param[journal_issn] = 0968-4875
+
+    
+    au < manifest ; Training for Quality Volume 2 ; 2 >
+    au < manifest ; Training for Quality Volume 3 ; 3 >
+    au < manifest ; Training for Quality Volume 4 ; 4 >
+    au < manifest ; Training for Quality Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Training Strategies for Tomorrow;
+      issn = 1369-7234
+    >
+
+    param[journal_issn] = 1369-7234
+
+    
+    au < manifest ; Training Strategies for Tomorrow Volume 16 ; 16 >
+
+  }
+
+  {
+    title <
+      name = Transforming Government: People, Process and Policy;
+      issn = 1750-6166
+    >
+
+    param[journal_issn] = 1750-6166
+
+    
+
+  }
+
+  {
+    title <
+      name = VINE;
+      issn = 0305-5728
+    >
+
+    param[journal_issn] = 0305-5728
+
+    
+
+  }
+
+  {
+    title <
+      name = Women in Management Review;
+      issn = 0964-9425
+    >
+
+    param[journal_issn] = 0964-9425
+
+    
+    au < manifest ; Women in Management Review Volume 9 ; 9 >
+    au < manifest ; Women in Management Review Volume 10 ; 10 >
+    au < manifest ; Women in Management Review Volume 11 ; 11 >
+    au < manifest ; Women in Management Review Volume 12 ; 12 >
+    au < manifest ; Women in Management Review Volume 13 ; 13 >
+    au < manifest ; Women in Management Review Volume 14 ; 14 >
+    au < manifest ; Women in Management Review Volume 15 ; 15 >
+    au < manifest ; Women in Management Review Volume 16 ; 16 >
+    au < manifest ; Women in Management Review Volume 17 ; 17 >
+    au < manifest ; Women in Management Review Volume 18 ; 18 >
+    au < manifest ; Women in Management Review Volume 19 ; 19 >
+    au < manifest ; Women in Management Review Volume 20 ; 20 >
+    au < manifest ; Women in Management Review Volume 21 ; 21 >
+    au < manifest ; Women in Management Review Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = Work Study;
+      issn = 0043-8022
+    >
+
+    param[journal_issn] = 0043-8022
+
+    
+    au < manifest ; Work Study Volume 43 ; 43 >
+    au < manifest ; Work Study Volume 44 ; 44 >
+    au < manifest ; Work Study Volume 45 ; 45 >
+    au < manifest ; Work Study Volume 46 ; 46 >
+    au < manifest ; Work Study Volume 47 ; 47 >
+    au < manifest ; Work Study Volume 48 ; 48 >
+    au < manifest ; Work Study Volume 49 ; 49 >
+    au < manifest ; Work Study Volume 50 ; 50 >
+    au < manifest ; Work Study Volume 51 ; 51 >
+    au < manifest ; Work Study Volume 52 ; 52 >
+
+  }
+
+  {
+    title <
+      name = World Class Design to Manufacture;
+      issn = 1352-3074
+    >
+
+    param[journal_issn] = 1352-3074
+
+    
+    au < manifest ; World Class Design to Manufacture Volume 1 ; 1 >
+    au < manifest ; World Class Design to Manufacture Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
+      name = Worldwide Hospitality and Tourism Themes;
+      issn = 1755-4217
+    >
+
+    param[journal_issn] = 1755-4217
+
+    
+
+  }
+
+  {
+    title <
+      name = Young Consumers: Insight and Ideas for Responsible Marketers;
+      issn = 1747-3616
+    >
+
+    param[journal_issn] = 1747-3616
+
+    
+    au < manifest ; Young Consumers: Insight and Ideas for Responsible Marketers Volume 3 ; 3 >
+  }
+}
