@@ -14,7 +14,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://cebp.aacrjournals.org/
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1991-1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 ; 1 >
       au < manifest ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 >
@@ -157,7 +157,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://clincancerres.aacrjournals.org/
-      implicit < status ; year; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < manifest ; 1995 ; Clinical Cancer Research Volume 1 ; 1 >
       au < manifest ; 1996 ; Clinical Cancer Research Volume 2 ; 2 >
