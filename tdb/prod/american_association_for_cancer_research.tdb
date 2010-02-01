@@ -72,76 +72,76 @@
       param[base_url] = http://cancerres.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1941 ; Cancer Research 1 ; 1 >
-      au < manifest ; 1942 ; Cancer Research 2 ; 2 >
-      au < manifest ; 1943 ; Cancer Research 3 ; 3 >
-      au < manifest ; 1944 ; Cancer Research 4 ; 4 >
-      au < manifest ; 1945 ; Cancer Research 5 ; 5 >
-      au < manifest ; 1946 ; Cancer Research 6 ; 6 >
-      au < manifest ; 1947 ; Cancer Research 7 ; 7 >
-      au < manifest ; 1948 ; Cancer Research 8 ; 8 >
-      au < manifest ; 1949 ; Cancer Research 9 ; 9 >
-      au < manifest ; 1950 ; Cancer Research 10 ; 10 >
-      au < manifest ; 1951 ; Cancer Research 11 ; 11 >
-      au < manifest ; 1952 ; Cancer Research 12 ; 12 >
-      au < manifest ; 1953 ; Cancer Research 13 ; 13 >
-      au < manifest ; 1954 ; Cancer Research 14 ; 14 >
-      au < manifest ; 1955 ; Cancer Research 15 ; 15 >
-      au < manifest ; 1956 ; Cancer Research 16 ; 16 >
-      au < manifest ; 1957 ; Cancer Research 17 ; 17 >
-      au < manifest ; 1958 ; Cancer Research 18 ; 18 >
-      au < manifest ; 1959 ; Cancer Research 19 ; 19 >
-      au < manifest ; 1960 ; Cancer Research 20 ; 20 >
-      au < manifest ; 1961 ; Cancer Research 21 ; 21 >
-      au < manifest ; 1962 ; Cancer Research 22 ; 22 >
-      au < manifest ; 1963 ; Cancer Research 23 ; 23 >
-      au < manifest ; 1964 ; Cancer Research 24 ; 24 >
-      au < manifest ; 1965 ; Cancer Research 25 ; 25 >
-      au < manifest ; 1966 ; Cancer Research 26 ; 26 >
-      au < manifest ; 1967 ; Cancer Research 27 ; 27 >
-      au < manifest ; 1968 ; Cancer Research 28 ; 28 >
-      au < manifest ; 1969 ; Cancer Research 29 ; 29 >
-      au < manifest ; 1970 ; Cancer Research 30 ; 30 >
-      au < manifest ; 1971 ; Cancer Research 31 ; 31 >
-      au < manifest ; 1972 ; Cancer Research 32 ; 32 >
-      au < manifest ; 1973 ; Cancer Research 33 ; 33 >
-      au < manifest ; 1974 ; Cancer Research 34 ; 34 >
-      au < manifest ; 1975 ; Cancer Research 35 ; 35 >
-      au < manifest ; 1976 ; Cancer Research 36 ; 36 >
-      au < manifest ; 1977 ; Cancer Research 37 ; 37 >
-      au < manifest ; 1978 ; Cancer Research 38 ; 38 >
-      au < manifest ; 1979 ; Cancer Research 39 ; 39 >
-      au < manifest ; 1980 ; Cancer Research 40 ; 40 >
-      au < manifest ; 1981 ; Cancer Research 41 ; 41 >
-      au < manifest ; 1982 ; Cancer Research 42 ; 42 >
-      au < manifest ; 1983 ; Cancer Research 43 ; 43 >
-      au < manifest ; 1984 ; Cancer Research 44 ; 44 >
-      au < manifest ; 1985 ; Cancer Research 45 ; 45 >
-      au < manifest ; 1986 ; Cancer Research 46 ; 46 >
-      au < manifest ; 1987 ; Cancer Research 47 ; 47 >
-      au < manifest ; 1988 ; Cancer Research 48 ; 48 >
-      au < manifest ; 1989 ; Cancer Research 49 ; 49 >
-      au < manifest ; 1990 ; Cancer Research 50 ; 50 >
-      au < manifest ; 1991 ; Cancer Research 51 ; 51 >
-      au < manifest ; 1992 ; Cancer Research 52 ; 52 >
-      au < manifest ; 1993 ; Cancer Research 53 ; 53 >
-      au < manifest ; 1994 ; Cancer Research 54 ; 54 >
-      au < manifest ; 1995 ; Cancer Research 55 ; 55 >
-      au < manifest ; 1996 ; Cancer Research 56 ; 56 >
-      au < manifest ; 1997 ; Cancer Research 57 ; 57 >
-      au < manifest ; 1998 ; Cancer Research 58 ; 58 >
-      au < manifest ; 1999 ; Cancer Research 59 ; 59 >
-      au < manifest ; 2000 ; Cancer Research 60 ; 60 >
-      au < manifest ; 2001 ; Cancer Research 61 ; 61 >
-      au < manifest ; 2002 ; Cancer Research 62 ; 62 >
-      au < manifest ; 2003 ; Cancer Research 63 ; 63 >
-      au < manifest ; 2004 ; Cancer Research 64 ; 64 >
-      au < manifest ; 2005 ; Cancer Research 65 ; 65 >
-      au < manifest ; 2006 ; Cancer Research 66 ; 66 >
-      au < manifest ; 2007 ; Cancer Research 67 ; 67 >
-      au < manifest ; 2008 ; Cancer Research 68 ; 68 >
-      au < manifest ; 2009 ; Cancer Research 69 ; 69 >
-      au < manifest ; 2010 ; Cancer Research 70 ; 70 >
+      au < manifest ; 1941 ; Cancer Research Volume 1 ; 1 >
+      au < manifest ; 1942 ; Cancer Research Volume 2 ; 2 >
+      au < manifest ; 1943 ; Cancer Research Volume 3 ; 3 >
+      au < manifest ; 1944 ; Cancer Research Volume 4 ; 4 >
+      au < manifest ; 1945 ; Cancer Research Volume 5 ; 5 >
+      au < manifest ; 1946 ; Cancer Research Volume 6 ; 6 >
+      au < manifest ; 1947 ; Cancer Research Volume 7 ; 7 >
+      au < manifest ; 1948 ; Cancer Research Volume 8 ; 8 >
+      au < manifest ; 1949 ; Cancer Research Volume 9 ; 9 >
+      au < manifest ; 1950 ; Cancer Research Volume 10 ; 10 >
+      au < manifest ; 1951 ; Cancer Research Volume 11 ; 11 >
+      au < manifest ; 1952 ; Cancer Research Volume 12 ; 12 >
+      au < manifest ; 1953 ; Cancer Research Volume 13 ; 13 >
+      au < manifest ; 1954 ; Cancer Research Volume 14 ; 14 >
+      au < manifest ; 1955 ; Cancer Research Volume 15 ; 15 >
+      au < manifest ; 1956 ; Cancer Research Volume 16 ; 16 >
+      au < manifest ; 1957 ; Cancer Research Volume 17 ; 17 >
+      au < manifest ; 1958 ; Cancer Research Volume 18 ; 18 >
+      au < manifest ; 1959 ; Cancer Research Volume 19 ; 19 >
+      au < manifest ; 1960 ; Cancer Research Volume 20 ; 20 >
+      au < manifest ; 1961 ; Cancer Research Volume 21 ; 21 >
+      au < manifest ; 1962 ; Cancer Research Volume 22 ; 22 >
+      au < manifest ; 1963 ; Cancer Research Volume 23 ; 23 >
+      au < manifest ; 1964 ; Cancer Research Volume 24 ; 24 >
+      au < manifest ; 1965 ; Cancer Research Volume 25 ; 25 >
+      au < manifest ; 1966 ; Cancer Research Volume 26 ; 26 >
+      au < manifest ; 1967 ; Cancer Research Volume 27 ; 27 >
+      au < manifest ; 1968 ; Cancer Research Volume 28 ; 28 >
+      au < manifest ; 1969 ; Cancer Research Volume 29 ; 29 >
+      au < manifest ; 1970 ; Cancer Research Volume 30 ; 30 >
+      au < manifest ; 1971 ; Cancer Research Volume 31 ; 31 >
+      au < manifest ; 1972 ; Cancer Research Volume 32 ; 32 >
+      au < manifest ; 1973 ; Cancer Research Volume 33 ; 33 >
+      au < manifest ; 1974 ; Cancer Research Volume 34 ; 34 >
+      au < manifest ; 1975 ; Cancer Research Volume 35 ; 35 >
+      au < manifest ; 1976 ; Cancer Research Volume 36 ; 36 >
+      au < manifest ; 1977 ; Cancer Research Volume 37 ; 37 >
+      au < manifest ; 1978 ; Cancer Research Volume 38 ; 38 >
+      au < manifest ; 1979 ; Cancer Research Volume 39 ; 39 >
+      au < manifest ; 1980 ; Cancer Research Volume 40 ; 40 >
+      au < manifest ; 1981 ; Cancer Research Volume 41 ; 41 >
+      au < manifest ; 1982 ; Cancer Research Volume 42 ; 42 >
+      au < manifest ; 1983 ; Cancer Research Volume 43 ; 43 >
+      au < manifest ; 1984 ; Cancer Research Volume 44 ; 44 >
+      au < manifest ; 1985 ; Cancer Research Volume 45 ; 45 >
+      au < manifest ; 1986 ; Cancer Research Volume 46 ; 46 >
+      au < manifest ; 1987 ; Cancer Research Volume 47 ; 47 >
+      au < manifest ; 1988 ; Cancer Research Volume 48 ; 48 >
+      au < manifest ; 1989 ; Cancer Research Volume 49 ; 49 >
+      au < manifest ; 1990 ; Cancer Research Volume 50 ; 50 >
+      au < manifest ; 1991 ; Cancer Research Volume 51 ; 51 >
+      au < manifest ; 1992 ; Cancer Research Volume 52 ; 52 >
+      au < manifest ; 1993 ; Cancer Research Volume 53 ; 53 >
+      au < manifest ; 1994 ; Cancer Research Volume 54 ; 54 >
+      au < manifest ; 1995 ; Cancer Research Volume 55 ; 55 >
+      au < manifest ; 1996 ; Cancer Research Volume 56 ; 56 >
+      au < manifest ; 1997 ; Cancer Research Volume 57 ; 57 >
+      au < manifest ; 1998 ; Cancer Research Volume 58 ; 58 >
+      au < manifest ; 1999 ; Cancer Research Volume 59 ; 59 >
+      au < manifest ; 2000 ; Cancer Research Volume 60 ; 60 >
+      au < manifest ; 2001 ; Cancer Research Volume 61 ; 61 >
+      au < manifest ; 2002 ; Cancer Research Volume 62 ; 62 >
+      au < manifest ; 2003 ; Cancer Research Volume 63 ; 63 >
+      au < manifest ; 2004 ; Cancer Research Volume 64 ; 64 >
+      au < manifest ; 2005 ; Cancer Research Volume 65 ; 65 >
+      au < manifest ; 2006 ; Cancer Research Volume 66 ; 66 >
+      au < manifest ; 2007 ; Cancer Research Volume 67 ; 67 >
+      au < manifest ; 2008 ; Cancer Research Volume 68 ; 68 >
+      au < manifest ; 2009 ; Cancer Research Volume 69 ; 69 >
+      au < manifest ; 2010 ; Cancer Research Volume 70 ; 70 >
 
     }
 
