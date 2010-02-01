@@ -290,22 +290,22 @@
     >
     
     param[base_url] = http://archinte.ama-assn.org/
-    au < testing ; 1908 ; Archives of Internal Medicine Volume I ; I ; reingest1.clockss.org:8082 >
-    au < testing ; 1908 ; Archives of Internal Medicine Volume II ; II ; reingest1.clockss.org:8082 >
-    au < testing ; 1909 ; Archives of Internal Medicine Volume III ; III ; reingest2.clockss.org:8085 >
-    au < testing ; 1909 ; Archives of Internal Medicine Volume IV ; IV ; reingest2.clockss.org:8085 >
-    au < testing ; 1910 ; Archives of Internal Medicine Volume V ; V ; reingest3.clockss.org:8083 >
-    au < testing ; 1910 ; Archives of Internal Medicine Volume VI ; VI ; reingest3.clockss.org:8083 >
-    au < testing ; 1911 ; Archives of Internal Medicine Volume VII ; VII ; reingest4.clockss.org:8082 >
-    au < testing ; 1911 ; Archives of Internal Medicine Volume VIII ; VIII ; reingest4.clockss.org:8082 >
-    au < testing ; 1912 ; Archives of Internal Medicine Volume IX ; IX ; reingest1.clockss.org:8082 >
-    au < testing ; 1912 ; Archives of Internal Medicine Volume X ; X ; reingest1.clockss.org:8082 >
-    au < testing ; 1913 ; Archives of Internal Medicine Volume XI ; XI ; reingest2.clockss.org:8085 >
-    au < testing ; 1913 ; Archives of Internal Medicine Volume XII ; XII ; reingest2.clockss.org:8085 >
-    au < testing ; 1914 ; Archives of Internal Medicine Volume XIII ; XIII ; reingest3.clockss.org:8083 >
-    au < testing ; 1914 ; Archives of Internal Medicine Volume XIV ; XIV ; reingest3.clockss.org:8083 >
-    au < testing ; 1915 ; Archives of Internal Medicine Volume XV ; XV ; reingest4.clockss.org:8082 >
-    au < testing ; 1915 ; Archives of Internal Medicine Volume XVI ; XVI ; reingest4.clockss.org:8082 >
+    au < ready ; 1908 ; Archives of Internal Medicine Volume I ; I ; reingest1.clockss.org:8082 >
+    au < ready ; 1908 ; Archives of Internal Medicine Volume II ; II ; reingest1.clockss.org:8082 >
+    au < ready ; 1909 ; Archives of Internal Medicine Volume III ; III ; reingest2.clockss.org:8085 >
+    au < ready ; 1909 ; Archives of Internal Medicine Volume IV ; IV ; reingest2.clockss.org:8085 >
+    au < ready ; 1910 ; Archives of Internal Medicine Volume V ; V ; reingest3.clockss.org:8083 >
+    au < ready ; 1910 ; Archives of Internal Medicine Volume VI ; VI ; reingest3.clockss.org:8083 >
+    au < ready ; 1911 ; Archives of Internal Medicine Volume VII ; VII ; reingest4.clockss.org:8082 >
+    au < ready ; 1911 ; Archives of Internal Medicine Volume VIII ; VIII ; reingest4.clockss.org:8082 >
+    au < ready ; 1912 ; Archives of Internal Medicine Volume IX ; IX ; reingest1.clockss.org:8082 >
+    au < ready ; 1912 ; Archives of Internal Medicine Volume X ; X ; reingest1.clockss.org:8082 >
+    au < ready ; 1913 ; Archives of Internal Medicine Volume XI ; XI ; reingest2.clockss.org:8085 >
+    au < ready ; 1913 ; Archives of Internal Medicine Volume XII ; XII ; reingest2.clockss.org:8085 >
+    au < ready ; 1914 ; Archives of Internal Medicine Volume XIII ; XIII ; reingest3.clockss.org:8083 >
+    au < ready ; 1914 ; Archives of Internal Medicine Volume XIV ; XIV ; reingest3.clockss.org:8083 >
+    au < ready ; 1915 ; Archives of Internal Medicine Volume XV ; XV ; reingest4.clockss.org:8082 >
+    au < ready ; 1915 ; Archives of Internal Medicine Volume XVI ; XVI ; reingest4.clockss.org:8082 >
     au < ready ; 1916 ; Archives of Internal Medicine Volume XVII ; XVII ; reingest1.clockss.org:8082 >
     au < ready ; 1916 ; Archives of Internal Medicine Volume XVIII ; XVIII ; reingest1.clockss.org:8082 >
     au < ready ; 1917 ; Archives of Internal Medicine Volume XIX ; XIX ; reingest2.clockss.org:8085 >
@@ -828,16 +828,16 @@
     >
     
     param[base_url] = http://archpedi.ama-assn.org/
-    au < testing ; 1911 ; American Journal of Diseases of Children Volume I ; I ; reingest4.clockss.org:8082 >
-    au < testing ; 1911 ; American Journal of Diseases of Children Volume II ; II ; reingest4.clockss.org:8082 >
-    au < testing ; 1912 ; American Journal of Diseases of Children Volume III ; III ; reingest1.clockss.org:8082 >
-    au < testing ; 1912 ; American Journal of Diseases of Children Volume IV ; IV ; reingest1.clockss.org:8082 >
-    au < testing ; 1913 ; American Journal of Diseases of Children Volume V ; V ; reingest2.clockss.org:8085 >
-    au < testing ; 1913 ; American Journal of Diseases of Children Volume VI ; VI ; reingest2.clockss.org:8085 >
-    au < testing ; 1914 ; American Journal of Diseases of Children Volume VII ; VII ; reingest3.clockss.org:8083 >
-    au < testing ; 1914 ; American Journal of Diseases of Children Volume VIII ; VIII ; reingest3.clockss.org:8083 >
-    au < testing ; 1915 ; American Journal of Diseases of Children Volume IX ; IX ; reingest4.clockss.org:8082 >
-    au < testing ; 1915 ; American Journal of Diseases of Children Volume X ; X ; reingest4.clockss.org:8082 >
+    au < ready ; 1911 ; American Journal of Diseases of Children Volume I ; I ; reingest4.clockss.org:8082 >
+    au < ready ; 1911 ; American Journal of Diseases of Children Volume II ; II ; reingest4.clockss.org:8082 >
+    au < ready ; 1912 ; American Journal of Diseases of Children Volume III ; III ; reingest1.clockss.org:8082 >
+    au < ready ; 1912 ; American Journal of Diseases of Children Volume IV ; IV ; reingest1.clockss.org:8082 >
+    au < ready ; 1913 ; American Journal of Diseases of Children Volume V ; V ; reingest2.clockss.org:8085 >
+    au < ready ; 1913 ; American Journal of Diseases of Children Volume VI ; VI ; reingest2.clockss.org:8085 >
+    au < ready ; 1914 ; American Journal of Diseases of Children Volume VII ; VII ; reingest3.clockss.org:8083 >
+    au < ready ; 1914 ; American Journal of Diseases of Children Volume VIII ; VIII ; reingest3.clockss.org:8083 >
+    au < ready ; 1915 ; American Journal of Diseases of Children Volume IX ; IX ; reingest4.clockss.org:8082 >
+    au < ready ; 1915 ; American Journal of Diseases of Children Volume X ; X ; reingest4.clockss.org:8082 >
     au < ready ; 1916 ; American Journal of Diseases of Children Volume XI ; XI ; reingest1.clockss.org:8082 >
     au < ready ; 1916 ; American Journal of Diseases of Children Volume XII ; XII ; reingest1.clockss.org:8082 >    
     au < ready ; 1917 ; American Journal of Diseases of Children Volume 13 ; 13 ; reingest2.clockss.org:8085 >                                                         
@@ -1252,48 +1252,48 @@
     au < manifest ; 1928 ; Journal of the American Medical Association Volume 91 ; 91 ; reingest1.clockss.org:8082 >                                                      
     au < manifest ; 1929 ; Journal of the American Medical Association Volume 92 ; 92 ; reingest2.clockss.org:8085 >                                                      
     au < manifest ; 1929 ; Journal of the American Medical Association Volume 93 ; 93 ; reingest2.clockss.org:8085 >                                                      
-    au < manifest ; 1930 ; Journal of the American Medical Association Volume 94 ; 94 ; reingest3.clockss.org:8083 >                                                      
-    au < manifest ; 1930 ; Journal of the American Medical Association Volume 95 ; 95 ; reingest3.clockss.org:8083 >                                                      
-    au < manifest ; 1931 ; Journal of the American Medical Association Volume 96 ; 96 ; reingest4.clockss.org:8082 >                                                      
-    au < manifest ; 1931 ; Journal of the American Medical Association Volume 97 ; 97 ; reingest4.clockss.org:8082 >                                                      
-    au < manifest ; 1932 ; Journal of the American Medical Association Volume 98 ; 98 ; reingest1.clockss.org:8082 >                                                      
-    au < manifest ; 1932 ; Journal of the American Medical Association Volume 99 ; 99 ; reingest1.clockss.org:8082 >                                                      
-    au < manifest ; 1933 ; Journal of the American Medical Association Volume 100 ; 100 ; reingest2.clockss.org:8085 >                                                    
-    au < manifest ; 1933 ; Journal of the American Medical Association Volume 101 ; 101 ; reingest2.clockss.org:8085 >                                                    
-    au < manifest ; 1934 ; Journal of the American Medical Association Volume 102 ; 102 ; reingest3.clockss.org:8083 >                                                    
-    au < manifest ; 1934 ; Journal of the American Medical Association Volume 103 ; 103 ; reingest3.clockss.org:8083 >                                                    
-    au < manifest ; 1935 ; Journal of the American Medical Association Volume 104 ; 104 ; reingest4.clockss.org:8082 >                                                    
-    au < manifest ; 1935 ; Journal of the American Medical Association Volume 105 ; 105 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1936 ; Journal of the American Medical Association Volume 106 ; 106 ; reingest1.clockss.org:8082 >                                                    
-    au < testing ; 1936 ; Journal of the American Medical Association Volume 107 ; 107 ; reingest1.clockss.org:8082 >                                                    
-    au < testing ; 1937 ; Journal of the American Medical Association Volume 108 ; 108 ; reingest2.clockss.org:8085 >                                                    
-    au < testing ; 1937 ; Journal of the American Medical Association Volume 109 ; 109 ; reingest2.clockss.org:8085 >                                                    
-    au < testing ; 1938 ; Journal of the American Medical Association Volume 110 ; 110 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1938 ; Journal of the American Medical Association Volume 111 ; 111 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1939 ; Journal of the American Medical Association Volume 112 ; 112 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1939 ; Journal of the American Medical Association Volume 113 ; 113 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1940 ; Journal of the American Medical Association Volume 114 ; 114 ; reingest1.clockss.org:8082 >                                                    
-    au < testing ; 1940 ; Journal of the American Medical Association Volume 115 ; 115 ; reingest1.clockss.org:8082 >                                                    
-    au < testing ; 1941 ; Journal of the American Medical Association Volume 116 ; 116 ; reingest2.clockss.org:8085 >                                                    
-    au < testing ; 1941 ; Journal of the American Medical Association Volume 117 ; 117 ; reingest2.clockss.org:8085 >                                                    
-    au < testing ; 1942 ; Journal of the American Medical Association Volume 118 ; 118 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1942 ; Journal of the American Medical Association Volume 119 ; 119 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1942 ; Journal of the American Medical Association Volume 120 ; 120 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1943 ; Journal of the American Medical Association Volume 121 ; 121 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1943 ; Journal of the American Medical Association Volume 122 ; 122 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1943 ; Journal of the American Medical Association Volume 123 ; 123 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1944 ; Journal of the American Medical Association Volume 124 ; 124 ; reingest1.clockss.org:8082 >                                                    
-    au < testing ; 1944 ; Journal of the American Medical Association Volume 125 ; 125 ; reingest1.clockss.org:8082 >                                                    
-    au < testing ; 1944 ; Journal of the American Medical Association Volume 126 ; 126 ; reingest1.clockss.org:8082 >                                                    
-    au < testing ; 1945 ; Journal of the American Medical Association Volume 127 ; 127 ; reingest2.clockss.org:8085 >                                                    
-    au < testing ; 1945 ; Journal of the American Medical Association Volume 128 ; 128 ; reingest2.clockss.org:8085 >                                                    
-    au < testing ; 1945 ; Journal of the American Medical Association Volume 129 ; 129 ; reingest2.clockss.org:8085 >                                                    
-    au < testing ; 1946 ; Journal of the American Medical Association Volume 130 ; 130 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1946 ; Journal of the American Medical Association Volume 131 ; 131 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1946 ; Journal of the American Medical Association Volume 132 ; 132 ; reingest3.clockss.org:8083 >                                                    
-    au < testing ; 1947 ; Journal of the American Medical Association Volume 133 ; 133 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1947 ; Journal of the American Medical Association Volume 134 ; 134 ; reingest4.clockss.org:8082 >                                                    
-    au < testing ; 1947 ; Journal of the American Medical Association Volume 135 ; 135 ; reingest4.clockss.org:8082 >                                                    
+    au < testing ; 1930 ; Journal of the American Medical Association Volume 94 ; 94 ; reingest3.clockss.org:8083 >                                                      
+    au < testing ; 1930 ; Journal of the American Medical Association Volume 95 ; 95 ; reingest3.clockss.org:8083 >                                                      
+    au < testing ; 1931 ; Journal of the American Medical Association Volume 96 ; 96 ; reingest4.clockss.org:8082 >                                                      
+    au < testing ; 1931 ; Journal of the American Medical Association Volume 97 ; 97 ; reingest4.clockss.org:8082 >                                                      
+    au < testing ; 1932 ; Journal of the American Medical Association Volume 98 ; 98 ; reingest1.clockss.org:8082 >                                                      
+    au < testing ; 1932 ; Journal of the American Medical Association Volume 99 ; 99 ; reingest1.clockss.org:8082 >                                                      
+    au < testing ; 1933 ; Journal of the American Medical Association Volume 100 ; 100 ; reingest2.clockss.org:8085 >                                                    
+    au < testing ; 1933 ; Journal of the American Medical Association Volume 101 ; 101 ; reingest2.clockss.org:8085 >                                                    
+    au < testing ; 1934 ; Journal of the American Medical Association Volume 102 ; 102 ; reingest3.clockss.org:8083 >                                                    
+    au < testing ; 1934 ; Journal of the American Medical Association Volume 103 ; 103 ; reingest3.clockss.org:8083 >                                                    
+    au < testing ; 1935 ; Journal of the American Medical Association Volume 104 ; 104 ; reingest4.clockss.org:8082 >                                                    
+    au < testing ; 1935 ; Journal of the American Medical Association Volume 105 ; 105 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1936 ; Journal of the American Medical Association Volume 106 ; 106 ; reingest1.clockss.org:8082 >                                                    
+    au < ready ; 1936 ; Journal of the American Medical Association Volume 107 ; 107 ; reingest1.clockss.org:8082 >                                                    
+    au < ready ; 1937 ; Journal of the American Medical Association Volume 108 ; 108 ; reingest2.clockss.org:8085 >                                                    
+    au < ready ; 1937 ; Journal of the American Medical Association Volume 109 ; 109 ; reingest2.clockss.org:8085 >                                                    
+    au < ready ; 1938 ; Journal of the American Medical Association Volume 110 ; 110 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1938 ; Journal of the American Medical Association Volume 111 ; 111 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1939 ; Journal of the American Medical Association Volume 112 ; 112 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1939 ; Journal of the American Medical Association Volume 113 ; 113 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1940 ; Journal of the American Medical Association Volume 114 ; 114 ; reingest1.clockss.org:8082 >                                                    
+    au < ready ; 1940 ; Journal of the American Medical Association Volume 115 ; 115 ; reingest1.clockss.org:8082 >                                                    
+    au < ready ; 1941 ; Journal of the American Medical Association Volume 116 ; 116 ; reingest2.clockss.org:8085 >                                                    
+    au < ready ; 1941 ; Journal of the American Medical Association Volume 117 ; 117 ; reingest2.clockss.org:8085 >                                                    
+    au < ready ; 1942 ; Journal of the American Medical Association Volume 118 ; 118 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1942 ; Journal of the American Medical Association Volume 119 ; 119 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1942 ; Journal of the American Medical Association Volume 120 ; 120 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1943 ; Journal of the American Medical Association Volume 121 ; 121 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1943 ; Journal of the American Medical Association Volume 122 ; 122 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1943 ; Journal of the American Medical Association Volume 123 ; 123 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1944 ; Journal of the American Medical Association Volume 124 ; 124 ; reingest1.clockss.org:8082 >                                                    
+    au < ready ; 1944 ; Journal of the American Medical Association Volume 125 ; 125 ; reingest1.clockss.org:8082 >                                                    
+    au < ready ; 1944 ; Journal of the American Medical Association Volume 126 ; 126 ; reingest1.clockss.org:8082 >                                                    
+    au < ready ; 1945 ; Journal of the American Medical Association Volume 127 ; 127 ; reingest2.clockss.org:8085 >                                                    
+    au < ready ; 1945 ; Journal of the American Medical Association Volume 128 ; 128 ; reingest2.clockss.org:8085 >                                                    
+    au < ready ; 1945 ; Journal of the American Medical Association Volume 129 ; 129 ; reingest2.clockss.org:8085 >                                                    
+    au < ready ; 1946 ; Journal of the American Medical Association Volume 130 ; 130 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1946 ; Journal of the American Medical Association Volume 131 ; 131 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1946 ; Journal of the American Medical Association Volume 132 ; 132 ; reingest3.clockss.org:8083 >                                                    
+    au < ready ; 1947 ; Journal of the American Medical Association Volume 133 ; 133 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1947 ; Journal of the American Medical Association Volume 134 ; 134 ; reingest4.clockss.org:8082 >                                                    
+    au < ready ; 1947 ; Journal of the American Medical Association Volume 135 ; 135 ; reingest4.clockss.org:8082 >                                                    
     au < ready ; 1948 ; Journal of the American Medical Association Volume 136 ; 136 ; reingest1.clockss.org:8082 >                                                    
     au < ready ; 1948 ; Journal of the American Medical Association Volume 137 ; 137 ; reingest1.clockss.org:8082 >                                                    
     au < ready ; 1948 ; Journal of the American Medical Association Volume 138 ; 138 ; reingest1.clockss.org:8082 >                                                    
@@ -1361,30 +1361,30 @@
     au < released ; 1967 ; JAMA: The Journal of the American Medical Association Volume 200 ; 200 ; >
     au < released ; 1967 ; JAMA: The Journal of the American Medical Association Volume 201 ; 201 ; >
     au < released ; 1967 ; JAMA: The Journal of the American Medical Association Volume 202 ; 202 ; >
-    au < manifest ; 1968 ; JAMA: The Journal of the American Medical Association Volume 203 ; 203 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1968 ; JAMA: The Journal of the American Medical Association Volume 204 ; 204 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1968 ; JAMA: The Journal of the American Medical Association Volume 205 ; 205 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1968 ; JAMA: The Journal of the American Medical Association Volume 206 ; 206 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1969 ; JAMA: The Journal of the American Medical Association Volume 207 ; 207 ; reingest2.clockss.org:8085 >                                          
-    au < manifest ; 1969 ; JAMA: The Journal of the American Medical Association Volume 208 ; 208 ; reingest2.clockss.org:8085 >                                          
-    au < manifest ; 1969 ; JAMA: The Journal of the American Medical Association Volume 209 ; 209 ; reingest2.clockss.org:8085 >                                          
-    au < manifest ; 1969 ; JAMA: The Journal of the American Medical Association Volume 210 ; 210 ; reingest2.clockss.org:8085 >                                          
-    au < manifest ; 1970 ; JAMA: The Journal of the American Medical Association Volume 211 ; 211 ; reingest3.clockss.org:8083 >                                          
-    au < manifest ; 1970 ; JAMA: The Journal of the American Medical Association Volume 212 ; 212 ; reingest3.clockss.org:8083 >                                          
-    au < manifest ; 1970 ; JAMA: The Journal of the American Medical Association Volume 213 ; 213 ; reingest3.clockss.org:8083 >                                          
-    au < manifest ; 1970 ; JAMA: The Journal of the American Medical Association Volume 214 ; 214 ; reingest3.clockss.org:8083 >                                          
-    au < manifest ; 1971 ; JAMA: The Journal of the American Medical Association Volume 215 ; 215 ; reingest4.clockss.org:8082 >                                          
-    au < manifest ; 1971 ; JAMA: The Journal of the American Medical Association Volume 216 ; 216 ; reingest4.clockss.org:8082 >                                          
-    au < manifest ; 1971 ; JAMA: The Journal of the American Medical Association Volume 217 ; 217 ; reingest4.clockss.org:8082 >                                          
-    au < manifest ; 1971 ; JAMA: The Journal of the American Medical Association Volume 218 ; 218 ; reingest4.clockss.org:8082 >                                          
-    au < manifest ; 1972 ; JAMA: The Journal of the American Medical Association Volume 219 ; 219 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1972 ; JAMA: The Journal of the American Medical Association Volume 220 ; 220 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1972 ; JAMA: The Journal of the American Medical Association Volume 221 ; 221 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1972 ; JAMA: The Journal of the American Medical Association Volume 222 ; 222 ; reingest1.clockss.org:8082 >                                          
-    au < manifest ; 1973 ; JAMA: The Journal of the American Medical Association Volume 223 ; 223 ; reingest2.clockss.org:8085 >                                          
-    au < manifest ; 1973 ; JAMA: The Journal of the American Medical Association Volume 224 ; 224 ; reingest2.clockss.org:8085 >                                          
-    au < manifest ; 1973 ; JAMA: The Journal of the American Medical Association Volume 225 ; 225 ; reingest2.clockss.org:8085 >                                          
-    au < manifest ; 1973 ; JAMA: The Journal of the American Medical Association Volume 226 ; 226 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1968 ; JAMA: The Journal of the American Medical Association Volume 203 ; 203 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1968 ; JAMA: The Journal of the American Medical Association Volume 204 ; 204 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1968 ; JAMA: The Journal of the American Medical Association Volume 205 ; 205 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1968 ; JAMA: The Journal of the American Medical Association Volume 206 ; 206 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1969 ; JAMA: The Journal of the American Medical Association Volume 207 ; 207 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1969 ; JAMA: The Journal of the American Medical Association Volume 208 ; 208 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1969 ; JAMA: The Journal of the American Medical Association Volume 209 ; 209 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1969 ; JAMA: The Journal of the American Medical Association Volume 210 ; 210 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1970 ; JAMA: The Journal of the American Medical Association Volume 211 ; 211 ; reingest3.clockss.org:8083 >                                          
+    au < testing ; 1970 ; JAMA: The Journal of the American Medical Association Volume 212 ; 212 ; reingest3.clockss.org:8083 >                                          
+    au < testing ; 1970 ; JAMA: The Journal of the American Medical Association Volume 213 ; 213 ; reingest3.clockss.org:8083 >                                          
+    au < testing ; 1970 ; JAMA: The Journal of the American Medical Association Volume 214 ; 214 ; reingest3.clockss.org:8083 >                                          
+    au < testing ; 1971 ; JAMA: The Journal of the American Medical Association Volume 215 ; 215 ; reingest4.clockss.org:8082 >                                          
+    au < testing ; 1971 ; JAMA: The Journal of the American Medical Association Volume 216 ; 216 ; reingest4.clockss.org:8082 >                                          
+    au < testing ; 1971 ; JAMA: The Journal of the American Medical Association Volume 217 ; 217 ; reingest4.clockss.org:8082 >                                          
+    au < testing ; 1971 ; JAMA: The Journal of the American Medical Association Volume 218 ; 218 ; reingest4.clockss.org:8082 >                                          
+    au < testing ; 1972 ; JAMA: The Journal of the American Medical Association Volume 219 ; 219 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1972 ; JAMA: The Journal of the American Medical Association Volume 220 ; 220 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1972 ; JAMA: The Journal of the American Medical Association Volume 221 ; 221 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1972 ; JAMA: The Journal of the American Medical Association Volume 222 ; 222 ; reingest1.clockss.org:8082 >                                          
+    au < testing ; 1973 ; JAMA: The Journal of the American Medical Association Volume 223 ; 223 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1973 ; JAMA: The Journal of the American Medical Association Volume 224 ; 224 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1973 ; JAMA: The Journal of the American Medical Association Volume 225 ; 225 ; reingest2.clockss.org:8085 >                                          
+    au < testing ; 1973 ; JAMA: The Journal of the American Medical Association Volume 226 ; 226 ; reingest2.clockss.org:8085 >                                          
     au < ready ; 1974 ; JAMA: The Journal of the American Medical Association Volume 227 ; 227 ; reingest3.clockss.org:8083 >                                          
     au < ready ; 1974 ; JAMA: The Journal of the American Medical Association Volume 228 ; 228 ; reingest3.clockss.org:8083 >                                          
     au < ready ; 1974 ; JAMA: The Journal of the American Medical Association Volume 229 ; 229 ; reingest3.clockss.org:8083 >                                          
