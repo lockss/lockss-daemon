@@ -48,7 +48,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://cancerpreventionresearch.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
@@ -68,7 +68,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://cancerres.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
