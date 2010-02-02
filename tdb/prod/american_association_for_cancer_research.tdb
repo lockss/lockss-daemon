@@ -16,12 +16,12 @@
       param[base_url] = http://cebp.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 1991-1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 ; 1 >
-      au < manifest ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 >
-      au < manifest ; 1994 ; Cancer Epidemiology Biomarkers & Prevention Volume 3 ; 3 >
-      au < manifest ; 1995 ; Cancer Epidemiology Biomarkers & Prevention Volume 4 ; 4 >
-      au < manifest ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 >
-      au < manifest ; 1997 ; Cancer Epidemiology Biomarkers & Prevention Volume 6 ; 6 >
+      au < testing ; 1991-1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 ; 1 >
+      au < testing ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 >
+      au < testing ; 1994 ; Cancer Epidemiology Biomarkers & Prevention Volume 3 ; 3 >
+      au < testing ; 1995 ; Cancer Epidemiology Biomarkers & Prevention Volume 4 ; 4 >
+      au < testing ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 >
+      au < testing ; 1997 ; Cancer Epidemiology Biomarkers & Prevention Volume 6 ; 6 >
       au < manifest ; 1998 ; Cancer Epidemiology Biomarkers & Prevention Volume 7 ; 7 >
       au < manifest ; 1999 ; Cancer Epidemiology Biomarkers & Prevention Volume 8 ; 8 >
       au < manifest ; 2000 ; Cancer Epidemiology Biomarkers & Prevention Volume 9 ; 9 >
@@ -192,12 +192,12 @@
       param[base_url] = http://mcr.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2002-2003 ; Molecular Cancer Research Volume 1 ; 1 >
-      au < manifest ; 2004 ; Molecular Cancer Research Volume 2 ; 2 >
-      au < manifest ; 2005 ; Molecular Cancer Research Volume 3 ; 3 >
-      au < manifest ; 2006 ; Molecular Cancer Research Volume 4 ; 4 >
-      au < manifest ; 2007 ; Molecular Cancer Research Volume 5 ; 5 >
-      au < manifest ; 2008 ; Molecular Cancer Research Volume 6 ; 6 >
+      au < testing ; 2002-2003 ; Molecular Cancer Research Volume 1 ; 1 >
+      au < testing ; 2004 ; Molecular Cancer Research Volume 2 ; 2 >
+      au < testing ; 2005 ; Molecular Cancer Research Volume 3 ; 3 >
+      au < testing ; 2006 ; Molecular Cancer Research Volume 4 ; 4 >
+      au < testing ; 2007 ; Molecular Cancer Research Volume 5 ; 5 >
+      au < testing ; 2008 ; Molecular Cancer Research Volume 6 ; 6 >
       au < testing ; 2009 ; Molecular Cancer Research Volume 7 ; 7 >
 
     }
@@ -216,12 +216,12 @@
       param[base_url] = http://mct.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < manifest ; 2001-2002 ; Molecular Cancer Therapeutics Volume 1 ; 1 >
-      au < manifest ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 >
-      au < manifest ; 2004 ; Molecular Cancer Therapeutics Volume 3 ; 3 >
-      au < manifest ; 2005 ; Molecular Cancer Therapeutics Volume 4 ; 4 >
-      au < manifest ; 2006 ; Molecular Cancer Therapeutics Volume 5 ; 5 >
-      au < manifest ; 2007 ; Molecular Cancer Therapeutics Volume 6 ; 6 >
+      au < testing ; 2001-2002 ; Molecular Cancer Therapeutics Volume 1 ; 1 >
+      au < testing ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 >
+      au < testing ; 2004 ; Molecular Cancer Therapeutics Volume 3 ; 3 >
+      au < testing ; 2005 ; Molecular Cancer Therapeutics Volume 4 ; 4 >
+      au < testing ; 2006 ; Molecular Cancer Therapeutics Volume 5 ; 5 >
+      au < testing ; 2007 ; Molecular Cancer Therapeutics Volume 6 ; 6 >
       au < manifest ; 2008 ; Molecular Cancer Therapeutics Volume 7 ; 7 >
       au < testing ; 2009 ; Molecular Cancer Therapeutics Volume 8 ; 8 >
       au < manifest ; 2010 ; Molecular Cancer Therapeutics Volume 9 ; 9 >
