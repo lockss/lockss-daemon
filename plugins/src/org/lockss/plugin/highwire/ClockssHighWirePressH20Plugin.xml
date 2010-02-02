@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -80,5 +80,15 @@
   <entry>
     <string>plugin_crawl_url_comparator_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePressH20CrawlUrlComparatorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:HighWire</string>
   </entry>
 </map>

@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>37</string>
+    <string>41</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.28.0</string>
+    <string>1.41.0</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -114,5 +114,9 @@
         <string>org.lockss.plugin.highwire.HighWireMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:HighWire</string>
   </entry>
 </map>
