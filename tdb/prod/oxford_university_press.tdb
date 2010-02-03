@@ -3835,24 +3835,6 @@
     {
 
       title <
-        name = The Journal of World Energy Law & Business
-      >
-
-      {
-
-        param[base_url] = http://jwelb.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-        au < manifest ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 >
-        au < tested ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 >
-
-      }
-  
-    }
-  
-    {
-
-      title <
         name = Journal of the London Mathematical Society 
       >
 
@@ -4738,9 +4720,6 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < released ; Oxford Art Journal Volume 28 ; 28 >
         au < released ; Oxford Art Journal Volume 29 ; 29 >
-        au < manifest ; Oxford Art Journal Volume 30 ; 30 >
-        au < ready ; Oxford Art Journal Volume 31 ; 31 >
-        au < ready ; Oxford Art Journal Volume 32 ; 32 >
 
       }
 
@@ -4751,7 +4730,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Oxford Art Journal Volume 28 ; 28 >
         au < HighWirePressPlugin ; doNotProcess ; Oxford Art Journal Volume 29 ; 29 >
-
+        au < HighWirePressPlugin ; manifest ; Oxford Art Journal Volume 30 ; 30 >
+        au < HighWirePressPlugin ; ready ; Oxford Art Journal Volume 31 ; 31 >
+        au < HighWirePressPlugin ; ready ; Oxford Art Journal Volume 32 ; 32 >
+        
       }
 
     }
@@ -4893,7 +4875,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://past.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < ready ; Past & Present Volume 190 ; 190 >
+        au < released ; Past & Present Volume 190 ; 190 >
 
       }
 
@@ -5748,7 +5730,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://toxsci.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < ready ; Toxicological Sciences Volume 91 ; 91 >
+        au < released ; Toxicological Sciences Volume 91 ; 91 >
 
       }
 
