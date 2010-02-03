@@ -1242,8 +1242,8 @@
         au < HighWirePressPlugin ; doNotProcess ; Early Music Volume 33 ; 33 >
         au < HighWireStrVolPlugin ; released ; Early Music Volume 34 ; 34 >
         au < HighWirePressPlugin ; ready ; Early Music Volume 35 ; 35 >
-		au < HighWirePressPlugin ; ready ; Early Music Volume 36 ; 36 >
-		au < HighWirePressPlugin ; ready ; Early Music Volume 37 ; 37 >
+        au < HighWirePressPlugin ; ready ; Early Music Volume 36 ; 36 >
+        au < HighWirePressPlugin ; ready ; Early Music Volume 37 ; 37 >
 
       }
 
@@ -1300,8 +1300,8 @@
         au < HighWireStrVolPlugin ; released ; ELT Journal Volume 59 ; 59 >
         au < HighWirePressPlugin ; doNotProcess ; ELT Journal Volume 60 ; 60 >
         au < HighWireStrVolPlugin ; released ; ELT Journal Volume 61 ; 61 >
-		au < HighWirePressPlugin ; ready ; ELT Journal Volume 62 ; 62 >
-		au < HighWirePressPlugin ; ready ; ELT Journal Volume 63 ; 63 >
+        au < HighWirePressPlugin ; ready ; ELT Journal Volume 62 ; 62 >
+        au < HighWirePressPlugin ; ready ; ELT Journal Volume 63 ; 63 >
       }
 
     }
@@ -1346,9 +1346,9 @@
 
         au < HighWireStrVolPlugin ; released ; Enterprise & Society Volume 6 ; 6 >
         au < HighWirePressPlugin ; doNotProcess ; Enterprise & Society Volume 7 ; 7 >
-		au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 8 ; 8 >
-		au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 9 ; 9 >
-		au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Enterprise & Society Volume 10 ; 10 >
       }
 
     }
@@ -4260,8 +4260,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Mind Volume 114 ; 114 >
         au < HighWirePressPlugin ; doNotProcess ; Mind Volume 115 ; 115 >
         au < HighWirePressPlugin ; manifest ; Mind Volume 116 ; 116 >
-		au < HighWirePressPlugin ; ready ; Mind Volume 117 ; 117 >
-		au < HighWirePressPlugin ; manifest ; Mind Volume 118 ; 118 >
+        au < HighWirePressPlugin ; ready ; Mind Volume 117 ; 117 >
+        au < HighWirePressPlugin ; manifest ; Mind Volume 118 ; 118 >
       }
 
     }
@@ -4697,8 +4697,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         pluginSuffix = HighWirePlugin
         param[base_url] = http://ohr.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
-		
-	au < HighWirePressPlugin ; manifest ; The Oral History Review Volume 34 ; 34 >
+
+        au < HighWirePressPlugin ; manifest ; The Oral History Review Volume 34 ; 34 >
         au < HighWirePressPlugin ; ready ; The Oral History Review Volume 35 ; 35 >
         au < HighWirePressPlugin ; ready ; The Oral History Review Volume 36 ; 36 >
 
@@ -4764,7 +4764,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Oxford Economic Papers Volume 59 ; 59 >
         au < HighWirePressPlugin ; ready ; Oxford Economic Papers Volume 60 ; 60 >
         au < HighWirePressPlugin ; ready ; Oxford Economic Papers Volume 61 ; 61 >
-		au < HighWirePressPlugin ; manifest ; Oxford Economic Papers Volume 62 ; 62 >
+        au < HighWirePressPlugin ; manifest ; Oxford Economic Papers Volume 62 ; 62 >
       }
 
     }
@@ -4902,8 +4902,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; ready ; Past & Present Volume 201 ; 201 >
         au < HighWirePressPlugin ; ready ; Past & Present Volume 202 ; 202 >
         au < HighWirePressPlugin ; ready ; Past & Present Volume 203 ; 203 >
-		au < HighWirePressPlugin ; manifest ; Past & Present Volume 204 ; 204 >
-		au < HighWirePressPlugin ; manifest ; Past & Present Volume 205 ; 205 >
+        au < HighWirePressPlugin ; manifest ; Past & Present Volume 204 ; 204 >
+        au < HighWirePressPlugin ; manifest ; Past & Present Volume 205 ; 205 >
       }
 
     }
@@ -5285,8 +5285,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; ready ; Radiation Protection Dosimetry Volume 134 ; 134 >
         au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 135 ; 135 >
         au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 136 ; 136 >
-		au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 137 ; 137 >
-		au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 138 ; 138 >
+        au < HighWirePressPlugin ; manifest ; Radiation Protection Dosimetry Volume 137 ; 137 >
+        au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 138 ; 138 >
       }
 
     }
@@ -5388,8 +5388,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Review of Finance Volume 11 ; 11 >
         au < HighWirePressPlugin ; ready ; Review of Finance Volume 12 ; 12 >
         au < HighWirePressPlugin ; manifest ; Review of Finance Volume 13 ; 13 >
-		au < HighWirePressPlugin ; testing ; Review of Finance Volume 14 ; 14 >
-		
+        au < HighWirePressPlugin ; testing ; Review of Finance Volume 14 ; 14 >
+
       }
 
     }
@@ -5420,8 +5420,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Review of Financial Studies Volume 20 ; 20 >
         au < HighWirePressPlugin ; ready ; Review of Financial Studies Volume 21 ; 21 >
         au < HighWirePressPlugin ; manifest ; Review of Financial Studies Volume 22 ; 22 >
-		au < HighWirePressPlugin ; testing ; Review of Financial Studies Volume 23 ; 23 >
-		
+        au < HighWirePressPlugin ; testing ; Review of Financial Studies Volume 23 ; 23 >
+
       }
 
     }
@@ -5650,8 +5650,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 5 ; 5 >
         au < HighWirePressPlugin ; ready ; Socio-Economic Review Volume 6 ; 6 >
         au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 7 ; 7 >
-		au < HighWirePressPlugin ; testing ; Socio-Economic Review Volume 8 ; 8 >
-		
+        au < HighWirePressPlugin ; testing ; Socio-Economic Review Volume 8 ; 8 >
+
       }
 
     }
@@ -5964,7 +5964,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; The Year's Work in English Studies Volume 85 ; 85 >
         au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 86 ; 86 >
         au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 87 ; 87 >
-		au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 88 ; 88 >
+        au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 88 ; 88 >
+        
       }
 
     }
