@@ -4694,9 +4694,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
       {
 
-        pluginSuffix = HighWirePlugin
         param[base_url] = http://ohr.oxfordjournals.org/
-        implicit < status ; name ; param[volume] >
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; manifest ; The Oral History Review Volume 34 ; 34 >
         au < HighWirePressPlugin ; releasing ; The Oral History Review Volume 35 ; 35 >
