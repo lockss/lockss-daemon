@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -38,7 +38,7 @@
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%sjournals/%s/volume-%s/&quot;, base_url, journal_id, volume_name</string>
+    <string>&quot;%sjournals/%s/%s/&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>au_manifest</string>
