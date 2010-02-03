@@ -5454,7 +5454,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Rheumatology Volume 46 ; 46 >
         au < HighWirePressPlugin ; ready ; Rheumatology Volume 47 ; 47 >
         au < HighWirePressPlugin ; manifest ; Rheumatology Volume 48 ; 48 >
-        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 49 ; 49 >
+        au < HighWirePressPlugin ; ready ; Rheumatology Volume 49 ; 49 >
 
       }
 
@@ -5486,7 +5486,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 33 ; 33 >
         au < HighWirePressPlugin ; ready ; Schizophrenia Bulletin Volume 34 ; 34 >
         au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 35 ; 35 >
-        au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 36 ; 36 >
+        au < HighWirePressPlugin ; ready ; Schizophrenia Bulletin Volume 36 ; 36 >
 
       }
 
@@ -5799,7 +5799,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; manifest ; Tree Physiology Volume 29 ; 29 >
-        au < HighWirePressPlugin ; manifest ; Tree Physiology Volume 30 ; 30 >
+        au < HighWirePressPlugin ; ready ; Tree Physiology Volume 30 ; 30 >
         
       }
 
@@ -5820,7 +5820,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; ready ; Trusts & Trustees Volume 13 ; 13 >
         au < HighWirePressPlugin ; ready ; Trusts & Trustees Volume 14 ; 14 >
         au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; Trusts & Trustees Volume 16 ; 16 >
+        au < HighWirePressPlugin ; ready ; Trusts & Trustees Volume 16 ; 16 >
         
       }
 
@@ -5945,7 +5945,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; The Year's Work in Critical and Cultural Theory Volume 14 ; 14 >
         au < HighWirePressPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 15 ; 15 >
         au < HighWirePressPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 >
-        au < HighWirePressPlugin ; manifest ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 >
+        au < HighWirePressPlugin ; ready ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 >
 
       }
 
@@ -5976,7 +5976,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; The Year's Work in English Studies Volume 85 ; 85 >
         au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 86 ; 86 >
         au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 87 ; 87 >
-		au < HighWirePressPlugin ; manifest ; The Year's Work in English Studies Volume 88 ; 88 >
+		au < HighWirePressPlugin ; ready ; The Year's Work in English Studies Volume 88 ; 88 >
       }
 
     }
