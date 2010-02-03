@@ -70,7 +70,10 @@
 	<value>org.lockss.plugin.histcoop.HistoryCooperativePlugin</value>
 	<value>org.lockss.plugin.highwire.HighWirePlugin</value>
 	<value>org.lockss.plugin.highwire.HighWireStrVolPlugin</value>
+	<value>org.lockss.plugin.highwire.HighWirePressPlugin</value>
+	<value>org.lockss.plugin.highwire.ClockssHighWirePlugin</value>
 	<value>org.lockss.plugin.highwire.HighWirePressH20Plugin</value>
+	<value>org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin</value>
 	<value>org.lockss.plugin.projmuse.ProjectMusePlugin</value>
 	<value>org.lockss.plugin.blackbird.BlackbirdPlugin</value>
 	<value>org.lockss.plugin.blackwell.BlackwellPlugin</value>
@@ -169,7 +172,6 @@
 	<value>org.lockss.plugin.sage.ClockssSageIngentaPlugin</value>
 	<value>org.lockss.plugin.nature.ClockssNaturePlugin</value>
 	<value>org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin</value>
-	<value>org.lockss.plugin.highwire.ClockssHighWirePlugin</value>
 	<value>nz.ac.otago.plugin.scholia.ScholiaPlugin</value>
 	<value>za.ac.nlsa.lockss.plugin.WaterSAPlugin</value>
 	<value>edu.nyu.plugin.heplwebzine.HEPLwebzine</value>
