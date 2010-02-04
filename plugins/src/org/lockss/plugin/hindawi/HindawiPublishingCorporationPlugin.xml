@@ -28,11 +28,8 @@
     <list>
       <string>1,&quot;^https?://(%s|%s)/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host, download_url_host</string>
       <string>4,&quot;^(%s|%s)&quot;, base_url, download_url</string>
-      <string>1,&quot;^%sjournals/%s/volume-%s/$&quot;, base_url, journal_id, volume_name</string>
       <string>1,&quot;^(%s|%s)lockss.html$&quot;, base_url, download_url</string>
-      <string>1,&quot;^%sjournals/%s/volume-%s/(regular(\.[0-9]+)?|si\.[0-9]+)\.html$&quot;, base_url, journal_id, volume_name</string>
-      <string>2,&quot;^%s(GetArticle|GetPDF)\.aspx\?doi=.*&amp;e=cit$&quot;, base_url</string>
-      <string>1,&quot;^(%s|%s)(GetArticle|GetPDF)\.aspx\?doi=&quot;, base_url, download_url</string>
+      <string>1,&quot;^(%s|%s)journals/%s/%s/&quot;, base_url, download_url, journal_id, volume_name</string>
       <string>1,&quot;^%sfloats/[^/]+/figures/&quot;, base_url</string>
     </list>
   </entry>
