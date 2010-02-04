@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.32 2008-05-06 21:35:36 dshr Exp $
+ * $Id: HashSpeedTest.java,v 1.33 2010-02-04 06:53:56 tlipkis Exp $
  */
 
 /*
@@ -108,10 +108,12 @@ public class HashSpeedTest extends LockssTestCase {
     theDaemon.getPluginManager().startService();
     theDaemon.getSystemMetrics().startService();
     theDaemon.getHashService().startService();
+    theDaemon.getPluginManager().startLoadablePlugins();
 
     sau =
         (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau);
+    theDaemon.getLockssRepository(sau).startService();
+    theDaemon.setNodeManager(new MockNodeManager(), sau);
   }
 
   public void tearDown() throws Exception {
