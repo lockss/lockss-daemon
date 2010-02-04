@@ -5644,9 +5644,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://ser.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 3 ; 3 >
+        au < HighWirePressPlugin ; testing ; Socio-Economic Review Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 4 ; 4 >
-        au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 5 ; 5 >
+        au < HighWirePressPlugin ; testing ; Socio-Economic Review Volume 5 ; 5 >
         au < HighWirePressPlugin ; releasing ; Socio-Economic Review Volume 6 ; 6 >
         au < HighWirePressPlugin ; manifest ; Socio-Economic Review Volume 7 ; 7 >
         au < HighWirePressPlugin ; testing ; Socio-Economic Review Volume 8 ; 8 >
@@ -5709,7 +5709,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; released ; Teaching Mathematics and its Applications Volume 24 ; 24 >
         au < HighWirePressPlugin ; doNotProcess ; Teaching Mathematics and its Applications Volume 25 ; 25 >
-        au < HighWirePressPlugin ; manifest ; Teaching Mathematics and its Applications Volume 26 ; 26 >
+        au < HighWirePressPlugin ; testing ; Teaching Mathematics and its Applications Volume 26 ; 26 >
         au < HighWirePressPlugin ; releasing ; Teaching Mathematics and its Applications Volume 27 ; 27 >
         au < HighWirePressPlugin ; manifest ; Teaching Mathematics and its Applications Volume 28 ; 28 >
 
@@ -5747,26 +5747,26 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; exists ; Toxicological Sciences Volume 89 ; 89 >
         au < HighWirePressPlugin ; exists ; Toxicological Sciences Volume 90 ; 90 >
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 91 ; 91 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 92 ; 92 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 93 ; 93 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 94 ; 94 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 95 ; 95 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 96 ; 96 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 97 ; 97 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 98 ; 98 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 99 ; 99 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 100 ; 100 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 92 ; 92 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 93 ; 93 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 94 ; 94 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 95 ; 95 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 96 ; 96 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 97 ; 97 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 98 ; 98 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 99 ; 99 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 100 ; 100 >
         au < HighWirePressPlugin ; releasing ; Toxicological Sciences Volume 101 ; 101 >
         au < HighWirePressPlugin ; releasing ; Toxicological Sciences Volume 102 ; 102 >
         au < HighWirePressPlugin ; releasing ; Toxicological Sciences Volume 103 ; 103 >
         au < HighWirePressPlugin ; releasing ; Toxicological Sciences Volume 104 ; 104 >
         au < HighWirePressPlugin ; releasing ; Toxicological Sciences Volume 105 ; 105 >
         au < HighWirePressPlugin ; releasing ; Toxicological Sciences Volume 106 ; 106 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 107 ; 107 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 108 ; 108 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 109 ; 109 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 110 ; 110 >
-        au < HighWirePressPlugin ; manifest ; Toxicological Sciences Volume 111 ; 111 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 107 ; 107 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 108 ; 108 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 109 ; 109 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 110 ; 110 >
+        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 111 ; 111 >
         au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 112 ; 112 >
         au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 113 ; 113 >
         
