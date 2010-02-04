@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.8 2009-11-17 19:44:32 thib_gc Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.9 2010-02-04 06:53:00 tlipkis Exp $
  */
 
 /*
@@ -162,6 +162,7 @@ public class HtmlFilterInputStream extends InputStream {
     factory.registerTag(new HtmlTags.Iframe());
     factory.registerTag(new HtmlTags.Noscript());
     factory.registerTag(new HtmlTags.Font());
+    factory.registerTag(new HtmlTags.MyTableRow());
     parser.setNodeFactory(factory);
     return parser;
   }

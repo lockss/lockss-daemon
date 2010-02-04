@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTags.java,v 1.5 2009-11-17 19:44:32 thib_gc Exp $
+ * $Id: HtmlTags.java,v 1.6 2010-02-04 06:53:00 tlipkis Exp $
  */
 
 /*
@@ -106,5 +106,42 @@ public class HtmlTags {
     }
 
   }
+
+  /** Overridden to add TR as an additional ender.  */
+  public static class MyTableRow extends TableRow {
+    /**
+     * The set of tag names that indicate the end of this tag.
+     */
+    private static final String[] mEnders =
+      new String[] {"TBODY", "TFOOT", "THEAD", "TR"};
+    
+    /**
+     * The set of end tag names that indicate the end of this tag.
+     */
+    private static final String[] mEndTagEnders =
+      new String[] {"TBODY", "TFOOT", "THEAD", "TABLE"};
+
+    public MyTableRow () {
+      super();
+    }
+
+    /**
+     * Return the set of tag names that cause this tag to finish.
+     * @return The names of following tags that stop further scanning.
+     */
+    public String[] getEnders () {
+      return (mEnders);
+    }
+
+    /**
+     * Return the set of end tag names that cause this tag to finish.
+     * @return The names of following end tags that stop further scanning.
+     */
+    public String[] getEndTagEnders () {
+      return (mEndTagEnders);
+    }
+
+  }
+
 
 }
