@@ -13,15 +13,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
     <string>Project Muse</string>
-  </entry>
-  <entry>
-    <string>au_crawl_depth</string>
-    <int>2</int>
   </entry>
   <entry>
     <string>au_name</string>
@@ -39,8 +35,8 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sjournals/%s/v%03d/&quot;, base_url, journal_dir, volume</string>
-      <string>1,&quot;%sjournals/%s/toc/[a-zA-Z]*%d\.&quot;, base_url, journal_dir, volume</string>
+      <string>1,&quot;%sjournals/%s/(summary/)?v%03d/&quot;, base_url, journal_dir, volume</string>
+      <string>1,&quot;%sjournals/%s/toc/[a-zA-Z]*\.?%d\.&quot;, base_url, journal_dir, volume</string>
       <string>1,&quot;%s.*\.([cC][sS][sS]|[gG][iI][fF]|[iI][cC][oO]|[jJ][pP][eE]?[gG]|[jJ][sS]|[pP][nN][gG]|[tT][iI][fF]?[fF])$&quot;, base_url</string>
     </list>
   </entry>
