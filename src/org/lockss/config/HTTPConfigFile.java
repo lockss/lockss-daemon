@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.11 2007-07-18 07:12:56 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.12 2010-02-04 06:52:00 tlipkis Exp $
  */
 
 /*
@@ -102,9 +102,25 @@ public class HTTPConfigFile extends BaseConfigFile {
   private InputStream getUrlInputStream(String url)
       throws IOException, MalformedURLException {
     InputStream in = null;
-
     LockssUrlConnection conn = openUrlConnection(url);
 
+    Configuration conf = ConfigManager.getCurrentConfig();
+    String proxySpec = conf.get(ConfigManager.PARAM_PROPS_PROXY);
+    String proxyHost = null;
+    int proxyPort = 0;
+
+    try {
+      HostPortParser hpp = new HostPortParser(proxySpec);
+      proxyHost = hpp.getHost();
+      proxyPort = hpp.getPort();
+    } catch (HostPortParser.InvalidSpec e) {
+      log.warning("Illegal props proxy: " + proxySpec, e);
+    }
+
+    if (proxyHost != null) {
+      log.debug2("Setting request proxy to: " + proxyHost + ":" + proxyPort);
+      conn.setProxy(proxyHost, proxyPort);
+    }
     if (m_config != null && m_lastModified != null) {
       log.debug2("Setting request if-modified-since to: " + m_lastModified);
       conn.setIfModifiedSince(m_lastModified);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.8 2009-07-22 06:36:28 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.9 2010-02-04 06:52:00 tlipkis Exp $
  */
 
 /*
@@ -454,6 +454,7 @@ public abstract class TestConfigFile extends LockssTestCase {
       hcf.getConfiguration();
       assertTrue(hcf.isLoaded());
       assertEquals(null, hcf.connReqHdrs.get("X-Lockss-Info"));
+      assertEquals(null, hcf.proxyHost);
     }
 
     public void testGzip() throws IOException {
@@ -497,6 +498,19 @@ public abstract class TestConfigFile extends LockssTestCase {
       assertSame(pool, hcf.getConnectionPool());
     }
 
+    public void testProxy() throws IOException {
+      String phost = "phost.foo";
+      int pport = 1234;
+      ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PROPS_PROXY,
+				    phost + ":" + pport);
+      InputStream in = new StringInputStream(xml1);
+      MyHttpConfigFile hcf =
+	new MyHttpConfigFile("http://foo.bar/lockss.xml", in);
+      Configuration config = hcf.getConfiguration();
+      assertEquals(phost, hcf.proxyHost);
+      assertEquals(pport, hcf.proxyPort);
+    }
+
   }
 
   /** HTTPConfigFile that uses a programmable MockLockssUrlConnection */
@@ -508,6 +522,8 @@ public abstract class TestConfigFile extends LockssTestCase {
     String respMsg = null;
     IOException executeExecption;
     Properties connReqHdrs = new Properties();
+    String proxyHost = null;
+    int proxyPort = -1;
 
     public MyHttpConfigFile(String url) {
       this(url, "");
@@ -603,6 +619,16 @@ public abstract class TestConfigFile extends LockssTestCase {
 	  return ((String)o).length();
 	}
 	return 0;
+      }
+
+      public boolean canProxy() {
+	return true;
+      }
+
+      @Override
+      public void setProxy(String host, int port) {
+	MyHttpConfigFile.this.proxyHost = host;
+	MyHttpConfigFile.this.proxyPort = port;
       }
     }
   }

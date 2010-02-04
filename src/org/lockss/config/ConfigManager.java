@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.69 2009-10-11 19:07:09 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.70 2010-02-04 06:52:00 tlipkis Exp $
  */
 
 /*
@@ -62,9 +62,17 @@ public class ConfigManager implements LockssManager {
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = Configuration.PREFIX;
 
+  /** Common prefix of platform config params */
+  public static final String PLATFORM = Configuration.PLATFORM;
+  public static final String DAEMON = Configuration.DAEMON;
+
   static final String MYPREFIX = PREFIX + "config.";
   static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
   static final long DEFAULT_RELOAD_INTERVAL = 30 * Constants.MINUTE;
+
+  /** host:port of proxy to use to fetch props (config); not set for direct
+   * connection.  */
+  public static final String PARAM_PROPS_PROXY = PLATFORM + "propsProxy";
 
   static final String PARAM_SEND_VERSION_EVERY = MYPREFIX + "sendVersionEvery";
   static final long DEFAULT_SEND_VERSION_EVERY = 1 * Constants.DAY;
@@ -103,10 +111,6 @@ public class ConfigManager implements LockssManager {
   /** List of URLs of auxilliary config files */
   public static final String PARAM_AUX_PROP_URLS =
     Configuration.PREFIX + "auxPropUrls";
-
-  /** Common prefix of platform config params */
-  public static final String PLATFORM = Configuration.PLATFORM;
-  public static final String DAEMON = Configuration.DAEMON;
 
   /** Tmp dir appropriate for platform.  If set, replaces java.io.tmpdir
    * System property */

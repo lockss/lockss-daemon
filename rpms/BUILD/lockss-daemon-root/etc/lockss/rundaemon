@@ -125,6 +125,7 @@ org.lockss.platform.ui.username=${LOCKSS_ADMIN_USER}
 org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
 org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
+org.lockss.platform.propsProxy=${LOCKSS_PROPS_PROXY}
 EOF
 
 # If optional SSL setup script exists and is executable, run it.
