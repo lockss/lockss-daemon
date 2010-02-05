@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.2 2010-01-08 01:49:55 thib_gc Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.3 2010-02-05 19:05:51 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,8 @@ package org.lockss.plugin.highwire;
 
 import java.io.InputStream;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -44,59 +46,27 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        
-        // Filter out <div class="header-ac-elements">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "header-ac-elements")),
-                                                                         
-        // Filter out <div class="banner-ads">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "banner-ads")),                                                                         
-
-        // Filter out <div id="sidebar-current-issue">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "sidebar-current-issue")), 
-
-        // Filter out <ul class="tower-ads">...</ul>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("ul",
-                                                                         "class",
-                                                                         "tower-ads")),
-                                                                         
-        // Filter out <div class="leaderboard-ads">
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "leaderboard-ads")),
-                                                                         
-        // Filter out <p class="copyright">
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("p",
-                                                                         "class",
-                                                                         "copyright")),
-                                                                         
-        // Filter out <div id="cited-by">         
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "cited-by")),
-        // Filter out <div class="science-jobs"> (e.g. PNAS)
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "science-jobs")),
-        // Filter out <div class="most-links-box ..."> (e.g. PNAS)
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
-                                                                              "class",
-                                                                              "most-links-box")),
-        // Filter out <div id="cb-art-recm"> (e.g. PNAS)
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "cb-art-recm")),
+    NodeFilter[] filters = new NodeFilter[] {
+        new TagNameFilter("script"),
+        new TagNameFilter("noscript"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "header-ac-elements"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "banner-ads"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-current-issue"),
+        HtmlNodeFilters.tagWithAttribute("ul", "class", "tower-ads"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads"),
+        HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cited-by"),
+        // e.g. PNAS
+        HtmlNodeFilters.tagWithAttribute("div", "class", "science-jobs"),
+        // e.g. PNAS
+        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "most-links-box"),
+        // e.g. PNAS
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-recm"),
     };
     
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     new HtmlCompoundTransform(transforms));
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
