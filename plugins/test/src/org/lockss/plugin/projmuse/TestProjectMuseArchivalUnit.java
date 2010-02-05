@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.10 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.11 2010-02-05 06:36:29 thib_gc Exp $
  */
 
 /*
@@ -240,12 +240,6 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
     assertTrue(WrapperUtil.unwrap(au.getHashFilterFactory("text/html"))
 	       instanceof ProjectMuseHtmlFilterFactory);
-  }
-
-  public void testRefetchDepth() throws Exception {
-    DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
-    SpiderCrawlSpec cs = (SpiderCrawlSpec) au.getCrawlSpec();
-    assertEquals(2, cs.getRefetchDepth());
   }
 
   public static void main(String[] argv) {
