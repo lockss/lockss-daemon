@@ -16,8 +16,12 @@
 
     param[journal_id] = aps
 
+    au < manifest ; 2005 ; Acta Pharmacologica Sinica Volume 26 ; 2005 ; 26 >
+    au < manifest ; 2006 ; Acta Pharmacologica Sinica Volume 26 ; 2006 ; 27 >
+    au < manifest ; 2007 ; Acta Pharmacologica Sinica Volume 26 ; 2007 ; 28 >
     au < released ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
+    au < manifest ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
 
   }
 
@@ -49,8 +53,12 @@
 
     param[journal_id] = aja
 
+    au < manifest ; 2005 ; Asian Journal of Andrology Volume 7 ; 2005 ; 7 >
+    au < manifest ; 2006 ; Asian Journal of Andrology Volume 8 ; 2006 ; 8 >
+    au < manifest ; 2007 ; Asian Journal of Andrology Volume 9 ; 2007 ; 9 >
     au < released ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
+    au < manifest ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
 
   }
 
@@ -64,10 +72,33 @@
     
 comment[bmt44] = attempt full recrawls
 
+    au < manifest ; 1997 ; Bone Marrow Transplantation Volume 19 ; 1997 ; 19 >
+    au < manifest ; 1997 ; Bone Marrow Transplantation Volume 20 ; 1997 ; 20 >
+    au < manifest ; 1998 ; Bone Marrow Transplantation Volume 21 ; 1998 ; 21 >
+    au < manifest ; 1998 ; Bone Marrow Transplantation Volume 22 ; 1998 ; 22 >
+    au < manifest ; 1999 ; Bone Marrow Transplantation Volume 23 ; 1999 ; 23 >
+    au < manifest ; 1999 ; Bone Marrow Transplantation Volume 24 ; 1999 ; 24 >
+    au < manifest ; 2000 ; Bone Marrow Transplantation Volume 25 ; 2000 ; 25 >
+    au < manifest ; 2000 ; Bone Marrow Transplantation Volume 26 ; 2000 ; 26 >
+    au < manifest ; 2001 ; Bone Marrow Transplantation Volume 27 ; 2001 ; 27 >
+    au < manifest ; 2001 ; Bone Marrow Transplantation Volume 28 ; 2001 ; 28 >
+    au < manifest ; 2002 ; Bone Marrow Transplantation Volume 29 ; 2002 ; 29 >
+    au < manifest ; 2002 ; Bone Marrow Transplantation Volume 30 ; 2002 ; 30 >
+    au < manifest ; 2003 ; Bone Marrow Transplantation Volume 31 ; 2003 ; 31 >
+    au < manifest ; 2003 ; Bone Marrow Transplantation Volume 32 ; 2003 ; 32 >
+    au < manifest ; 2004 ; Bone Marrow Transplantation Volume 33 ; 2004 ; 33 >
+    au < manifest ; 2004 ; Bone Marrow Transplantation Volume 34 ; 2004 ; 34 >
+    au < manifest ; 2005 ; Bone Marrow Transplantation Volume 35 ; 2005 ; 35 >
+    au < manifest ; 2005 ; Bone Marrow Transplantation Volume 36 ; 2005 ; 36 >
+    au < manifest ; 2006 ; Bone Marrow Transplantation Volume 37 ; 2006 ; 37 >
+    au < manifest ; 2006 ; Bone Marrow Transplantation Volume 38 ; 2006 ; 38 >
+    au < manifest ; 2007 ; Bone Marrow Transplantation Volume 39 ; 2007 ; 39 >
+    au < manifest ; 2007 ; Bone Marrow Transplantation Volume 40 ; 2007 ; 40 >
     au < released ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
     au < released ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < notReady ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
+    au < manifest ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
 
   }
 
@@ -92,6 +123,31 @@ comment[bmt44] = attempt full recrawls
     comment[clockss] = True
     comment[verify] = different website design?
 
+    au < manifest ; 1999 ; British Journal of Cancer Volume 79 ; 1999 ; 79 >
+    au < manifest ; 1999 ; British Journal of Cancer Volume 80 ; 1999 ; 80 >
+    au < manifest ; 1999 ; British Journal of Cancer Volume 81 ; 1999 ; 81 >
+    au < manifest ; 2000 ; British Journal of Cancer Volume 82 ; 2000 ; 82 >
+    au < manifest ; 2000 ; British Journal of Cancer Volume 83 ; 2000 ; 83 >
+    au < manifest ; 2001 ; British Journal of Cancer Volume 84 ; 2001 ; 84 >
+    au < manifest ; 2001 ; British Journal of Cancer Volume 85 ; 2001 ; 85 >
+    au < manifest ; 2002 ; British Journal of Cancer Volume 86 ; 2002 ; 86 >
+    au < manifest ; 2002 ; British Journal of Cancer Volume 87 ; 2002 ; 87 >
+    au < manifest ; 2003 ; British Journal of Cancer Volume 88 ; 2003 ; 88 >
+    au < manifest ; 2003 ; British Journal of Cancer Volume 89 ; 2003 ; 89 >
+    au < manifest ; 2004 ; British Journal of Cancer Volume 90 ; 2004 ; 90 >
+    au < manifest ; 2004 ; British Journal of Cancer Volume 91 ; 2004 ; 91 >
+    au < manifest ; 2005 ; British Journal of Cancer Volume 92 ; 2005 ; 92 >
+    au < manifest ; 2005 ; British Journal of Cancer Volume 93 ; 2005 ; 93 >
+    au < manifest ; 2006 ; British Journal of Cancer Volume 94 ; 2006 ; 94 >
+    au < manifest ; 2006 ; British Journal of Cancer Volume 95 ; 2006 ; 95 >
+    au < manifest ; 2007 ; British Journal of Cancer Volume 96 ; 2007 ; 96 >
+    au < manifest ; 2007 ; British Journal of Cancer Volume 97 ; 2007 ; 97 >
+    au < manifest ; 2008 ; British Journal of Cancer Volume 98 ; 2008 ; 98 >
+    au < manifest ; 2008 ; British Journal of Cancer Volume 99 ; 2008 ; 99 >
+    au < manifest ; 2009 ; British Journal of Cancer Volume 100 ; 2009 ; 100 >
+    au < manifest ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
+    au < manifest ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
+
   }
 
   {
@@ -102,8 +158,19 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = cgt
 
+    au < manifest ; 1999 ; Cancer Gene Therapy Volume 6 ; 1999 ; 6 >
+    au < manifest ; 2000 ; Cancer Gene Therapy Volume 7 ; 2000 ; 7 >
+    au < manifest ; 2001 ; Cancer Gene Therapy Volume 8 ; 2001 ; 8 >
+    au < manifest ; 2002 ; Cancer Gene Therapy Volume 9 ; 2002 ; 9 >
+    au < manifest ; 2003 ; Cancer Gene Therapy Volume 10 ; 2003 ; 10 >
+    au < manifest ; 2004 ; Cancer Gene Therapy Volume 11 ; 2004 ; 11 >
+    au < manifest ; 2005 ; Cancer Gene Therapy Volume 12 ; 2005 ; 12 >
+    au < manifest ; 2006 ; Cancer Gene Therapy Volume 13 ; 2006 ; 13 >
+    au < manifest ; 2007 ; Cancer Gene Therapy Volume 14 ; 2007 ; 14 >
+    au < manifest ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < manifest ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -115,8 +182,20 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = cdd
 
+    au < manifest ; 1997 ; Cell Death and Differentiation Volume 4 ; 1997 ; 4 >
+    au < manifest ; 1998 ; Cell Death and Differentiation Volume 5 ; 1998 ; 5 >
+    au < manifest ; 1999 ; Cell Death and Differentiation Volume 6 ; 1999 ; 6 >
+    au < manifest ; 2000 ; Cell Death and Differentiation Volume 7 ; 2000 ; 7 >
+    au < manifest ; 2001 ; Cell Death and Differentiation Volume 8 ; 2001 ; 8 >
+    au < manifest ; 2002 ; Cell Death and Differentiation Volume 9 ; 2002 ; 9 >
+    au < manifest ; 2003 ; Cell Death and Differentiation Volume 10 ; 2003 ; 10 >
+    au < manifest ; 2004 ; Cell Death and Differentiation Volume 11 ; 2004 ; 11 >
+    au < manifest ; 2005 ; Cell Death and Differentiation Volume 12 ; 2005 ; 12 >
+    au < manifest ; 2006 ; Cell Death and Differentiation Volume 13 ; 2006 ; 13 >
+    au < manifest ; 2007 ; Cell Death and Differentiation Volume 14 ; 2007 ; 14 >
     au < released ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
+    au < manifest ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -130,6 +209,7 @@ comment[bmt44] = attempt full recrawls
 
     au < manifest ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
     au < released ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+    au < manifest ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
 
   }
 
@@ -141,6 +221,7 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = clpt
 
+    au < manifest ; 2010 ; Clinical Pharmacology & Therapeutics ; 2010 ; 87 >
   }
 
   {
@@ -151,8 +232,20 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = emboj
 
+    au < manifest ; 1997 ; The EMBO Journal Volume 16 ; 1997 ; 16 >
+    au < manifest ; 1998 ; The EMBO Journal Volume 17 ; 1998 ; 17 >
+    au < manifest ; 1999 ; The EMBO Journal Volume 18 ; 1999 ; 18 >
+    au < manifest ; 2000 ; The EMBO Journal Volume 19 ; 2000 ; 19 >
+    au < manifest ; 2001 ; The EMBO Journal Volume 20 ; 2001 ; 20 >
+    au < manifest ; 2002 ; The EMBO Journal Volume 21 ; 2002 ; 21 >
+    au < manifest ; 2003 ; The EMBO Journal Volume 22 ; 2003 ; 22 >
+    au < manifest ; 2004 ; The EMBO Journal Volume 23 ; 2004 ; 23 >
+    au < manifest ; 2005 ; The EMBO Journal Volume 24 ; 2005 ; 24 >
+    au < manifest ; 2006 ; The EMBO Journal Volume 25 ; 2006 ; 25 >
+    au < manifest ; 2007 ; The EMBO Journal Volume 26 ; 2007 ; 26 >
     au < manifest ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
     au < released ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
+    au < manifest ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
 
   }
 
@@ -164,6 +257,9 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = embor
 
+    au < manifest ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
+    au < manifest ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
+
   }
 
   {
@@ -174,8 +270,20 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = ejcn
 
+    au < manifest ; 1997 ; European Journal of Clinical Nutrition Volume 51 ; 1997 ; 51 >
+    au < manifest ; 1998 ; European Journal of Clinical Nutrition Volume 52 ; 1998 ; 52 >
+    au < manifest ; 1999 ; European Journal of Clinical Nutrition Volume 53 ; 1999 ; 53 >
+    au < manifest ; 2000 ; European Journal of Clinical Nutrition Volume 54 ; 2000 ; 54 >
+    au < manifest ; 2001 ; European Journal of Clinical Nutrition Volume 55 ; 2001 ; 55 >
+    au < manifest ; 2002 ; European Journal of Clinical Nutrition Volume 56 ; 2002 ; 56 >
+    au < manifest ; 2003 ; European Journal of Clinical Nutrition Volume 57 ; 2003 ; 57 >
+    au < manifest ; 2004 ; European Journal of Clinical Nutrition Volume 58 ; 2004 ; 58 >
+    au < manifest ; 2005 ; European Journal of Clinical Nutrition Volume 59 ; 2005 ; 59 >
+    au < manifest ; 2006 ; European Journal of Clinical Nutrition Volume 60 ; 2006 ; 60 >
+    au < manifest ; 2007 ; European Journal of Clinical Nutrition Volume 61 ; 2007 ; 61 >
     au < manifest ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 2008 ; 62 >
     au < released ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
+    au < manifest ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
 
   }
 
@@ -207,8 +315,15 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = eye
 
+    au < manifest ; 2002 ; Eye Volume 16 ; 2002 ; 16 >
+    au < manifest ; 2003 ; Eye Volume 17 ; 2003 ; 17 >
+    au < manifest ; 2004 ; Eye Volume 18 ; 2004 ; 18 >
+    au < manifest ; 2005 ; Eye Volume 19 ; 2005 ; 19 >
+    au < manifest ; 2006 ; Eye Volume 20 ; 2006 ; 20 >
+    au < manifest ; 2007 ; Eye Volume 21 ; 2007 ; 21 >
     au < manifest ; 2008 ; Eye Volume 22 ; 2008 ; 22 >
     au < released ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
+    au < manifest ; 2010 ; Eye Volume 24 ; 2010 ; 24 >
 
   }
 
@@ -220,8 +335,20 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = gt
 
+    au < manifest ; 1997 ; Gene Therapy Volume 4 ; 1997 ; 4 >
+    au < manifest ; 1998 ; Gene Therapy Volume 5 ; 1998 ; 5 >
+    au < manifest ; 1999 ; Gene Therapy Volume 6 ; 1999 ; 6 >
+    au < manifest ; 2000 ; Gene Therapy Volume 7 ; 2000 ; 7 >
+    au < manifest ; 2001 ; Gene Therapy Volume 8 ; 2001 ; 8 >
+    au < manifest ; 2002 ; Gene Therapy Volume 9 ; 2002 ; 9 >
+    au < manifest ; 2003 ; Gene Therapy Volume 10 ; 2003 ; 10 >
+    au < manifest ; 2004 ; Gene Therapy Volume 11 ; 2004 ; 11 >
+    au < manifest ; 2005 ; Gene Therapy Volume 12 ; 2005 ; 12 >
+    au < manifest ; 2006 ; Gene Therapy Volume 13 ; 2006 ; 13 >
+    au < manifest ; 2007 ; Gene Therapy Volume 14 ; 2007 ; 14 >
     au < manifest ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
+    au < manifest ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -233,8 +360,17 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = gene
 
+    au < manifest ; 2000 ; Genes and Immunity Volume 1 ; 2000 ; 1 >
+    au < manifest ; 2001 ; Genes and Immunity Volume 2 ; 2001 ; 2 >
+    au < manifest ; 2002 ; Genes and Immunity Volume 3 ; 2002 ; 3 >
+    au < manifest ; 2003 ; Genes and Immunity Volume 4 ; 2003 ; 4 >
+    au < manifest ; 2004 ; Genes and Immunity Volume 5 ; 2004 ; 5 >
+    au < manifest ; 2005 ; Genes and Immunity Volume 6 ; 2005 ; 6 >
+    au < manifest ; 2006 ; Genes and Immunity Volume 7 ; 2006 ; 7 >
+    au < manifest ; 2007 ; Genes and Immunity Volume 8 ; 2007 ; 8 >
     au < manifest ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
+    au < manifest ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -246,10 +382,33 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = hdy
 
+    au < manifest ; 1997 ; Heredity Volume 78 ; 1997 ; 78 >
+    au < manifest ; 1997 ; Heredity Volume 79 ; 1997 ; 79 >
+    au < manifest ; 1998 ; Heredity Volume 80 ; 1998 ; 80 >
+    au < manifest ; 1998 ; Heredity Volume 81 ; 1998 ; 81 >
+    au < manifest ; 1999 ; Heredity Volume 82 ; 1999 ; 82 >
+    au < manifest ; 1999 ; Heredity Volume 83 ; 1999 ; 83 >
+    au < manifest ; 2000 ; Heredity Volume 84 ; 2000 ; 84 >
+    au < manifest ; 2000 ; Heredity Volume 85 ; 2000 ; 85 >
+    au < manifest ; 2001 ; Heredity Volume 86 ; 2001 ; 86 >
+    au < manifest ; 2001 ; Heredity Volume 87 ; 2001 ; 87 >
+    au < manifest ; 2002 ; Heredity Volume 88 ; 2002 ; 88 >
+    au < manifest ; 2002 ; Heredity Volume 89 ; 2002 ; 89 >
+    au < manifest ; 2003 ; Heredity Volume 90 ; 2003 ; 90 >
+    au < manifest ; 2003 ; Heredity Volume 91 ; 2003 ; 91 >
+    au < manifest ; 2004 ; Heredity Volume 92 ; 2004 ; 92 >
+    au < manifest ; 2004 ; Heredity Volume 93 ; 2004 ; 93 >
+    au < manifest ; 2005 ; Heredity Volume 94 ; 2005 ; 94 >
+    au < manifest ; 2005 ; Heredity Volume 95 ; 2005 ; 95 >
+    au < manifest ; 2006 ; Heredity Volume 96 ; 2006 ; 96 >
+    au < manifest ; 2006 ; Heredity Volume 97 ; 2006 ; 97 >
+    au < manifest ; 2007 ; Heredity Volume 98 ; 2007 ; 98 >
+    au < manifest ; 2007 ; Heredity Volume 99 ; 2007 ; 99 >
     au < manifest ; 2008 ; Heredity Volume 100 ; 2008 ; 100 >
     au < manifest ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
     au < released ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
     au < released ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
+    au < manifest ; 2010 ; Heredity Volume 104 ; 2010 ; 104 >
 
   }
 
@@ -261,9 +420,13 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = hr
 
+    au < manifest ; 2005 ; Hypertension Research Volume 28 ; 2005 ; 28 >
+    au < manifest ; 2006 ; Hypertension Research Volume 29 ; 2006 ; 29 >
+    au < manifest ; 2007 ; Hypertension Research Volume 30 ; 2007 ; 30 >
     au < manifest ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
     au < released ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
-
+    au < manifest ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
+    
   }
 
   {
@@ -276,6 +439,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
     au < released ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
+    au < manifest ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 >
 
   }
 
@@ -287,8 +451,20 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = ijir
 
+    au < manifest ; 1997 ; International Journal of Impotence Research Volume 9 ; 1997 ; 9 >
+    au < manifest ; 1998 ; International Journal of Impotence Research Volume 10 ; 1998 ; 10 >
+    au < manifest ; 1999 ; International Journal of Impotence Research Volume 11 ; 1999 ; 11 >
+    au < manifest ; 2000 ; International Journal of Impotence Research Volume 12 ; 2000 ; 12 >
+    au < manifest ; 2001 ; International Journal of Impotence Research Volume 13 ; 2001 ; 13 >
+    au < manifest ; 2002 ; International Journal of Impotence Research Volume 14 ; 2002 ; 14 >
+    au < manifest ; 2003 ; International Journal of Impotence Research Volume 15 ; 2003 ; 15 >
+    au < manifest ; 2004 ; International Journal of Impotence Research Volume 16 ; 2004 ; 16 >
+    au < manifest ; 2005 ; International Journal of Impotence Research Volume 17 ; 2005 ; 17 >
+    au < manifest ; 2006 ; International Journal of Impotence Research Volume 18 ; 2006 ; 18 >
+    au < manifest ; 2007 ; International Journal of Impotence Research Volume 19 ; 2007 ; 19 >
     au < released ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
     au < released ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
+    au < manifest ; 2010 ; International Journal of Impotence Research Volume 22 ; 2010 ; 22 >
 
   }
 
@@ -300,8 +476,20 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = ijo
 
+    au < manifest ; 1997 ; International Journal of Obesity Volume 21 ; 1997 ; 21 >
+    au < manifest ; 1998 ; International Journal of Obesity Volume 22 ; 1998 ; 22 >
+    au < manifest ; 1999 ; International Journal of Obesity Volume 23 ; 1999 ; 23 >
+    au < manifest ; 2000 ; International Journal of Obesity Volume 24 ; 2000 ; 24 >
+    au < manifest ; 2001 ; International Journal of Obesity Volume 25 ; 2001 ; 25 >
+    au < manifest ; 2002 ; International Journal of Obesity Volume 26 ; 2002 ; 26 >
+    au < manifest ; 2003 ; International Journal of Obesity Volume 27 ; 2003 ; 27 >
+    au < manifest ; 2004 ; International Journal of Obesity Volume 28 ; 2004 ; 28 >
+    au < manifest ; 2005 ; International Journal of Obesity Volume 29 ; 2005 ; 29 >
+    au < manifest ; 2006 ; International Journal of Obesity Volume 30 ; 2006 ; 30 >
+    au < manifest ; 2007 ; International Journal of Obesity Volume 31 ; 2007 ; 31 >
     au < released ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
     au < released ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
+    au < manifest ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
 
   }
 
@@ -333,8 +521,12 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = ja
 
+    au < manifest ; 2005 ; The Journal of Antibiotics Volume 58 ; 2005 ; 58 >
+    au < manifest ; 2006 ; The Journal of Antibiotics Volume 59 ; 2006 ; 59 >
+    au < manifest ; 2007 ; The Journal of Antibiotics Volume 60 ; 2007 ; 60 >
     au < manifest ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
     au < released ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
+    au < manifest ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
 
   }
 
@@ -356,10 +548,13 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = jes
 
-comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
+    comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
 
+    au < manifest ; 2006 ; Journal of Exposure Science and Environmental Epidemiology Volume 16 ; 2006 ; 16 >
+    au < manifest ; 2007 ; Journal of Exposure Science and Environmental Epidemiology Volume 17 ; 2007 ; 17 >
     au < manifest ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 2008 ; 18 >
     au < notReady ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
+    au < manifest ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
 
   }
 
@@ -371,8 +566,19 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     param[journal_id] = jhg
 
+    au < manifest ; 1998 ; Journal of Human Genetics Volume 43 ; 1998 ; 43 >
+    au < manifest ; 1999 ; Journal of Human Genetics Volume 44 ; 1999 ; 44 >
+    au < manifest ; 2000 ; Journal of Human Genetics Volume 45 ; 2000 ; 45 >
+    au < manifest ; 2001 ; Journal of Human Genetics Volume 46 ; 2001 ; 46 >
+    au < manifest ; 2002 ; Journal of Human Genetics Volume 47 ; 2002 ; 47 >
+    au < manifest ; 2003 ; Journal of Human Genetics Volume 48 ; 2003 ; 48 >
+    au < manifest ; 2004 ; Journal of Human Genetics Volume 49 ; 2004 ; 49 >
+    au < manifest ; 2005 ; Journal of Human Genetics Volume 50 ; 2005 ; 50 >
+    au < manifest ; 2006 ; Journal of Human Genetics Volume 51 ; 2006 ; 51 >
+    au < manifest ; 2007 ; Journal of Human Genetics Volume 52 ; 2007 ; 52 >
     au < manifest ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
     au < released ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
+    au < manifest ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
 
   }
 
@@ -384,8 +590,20 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     param[journal_id] = jhh
 
+    au < manifest ; 1997 ; Journal of Human Hypertension Volume 11 ; 1997 ; 11 >
+    au < manifest ; 1998 ; Journal of Human Hypertension Volume 12 ; 1998 ; 12 >
+    au < manifest ; 1999 ; Journal of Human Hypertension Volume 13 ; 1999 ; 13 >
+    au < manifest ; 2000 ; Journal of Human Hypertension Volume 14 ; 2000 ; 14 >
+    au < manifest ; 2001 ; Journal of Human Hypertension Volume 15 ; 2001 ; 15 >
+    au < manifest ; 2002 ; Journal of Human Hypertension Volume 16 ; 2002 ; 16 >
+    au < manifest ; 2003 ; Journal of Human Hypertension Volume 17 ; 2003 ; 17 >
+    au < manifest ; 2004 ; Journal of Human Hypertension Volume 18 ; 2004 ; 18 >
+    au < manifest ; 2005 ; Journal of Human Hypertension Volume 19 ; 2005 ; 19 >
+    au < manifest ; 2006 ; Journal of Human Hypertension Volume 20 ; 2006 ; 20 >
+    au < manifest ; 2007 ; Journal of Human Hypertension Volume 21 ; 2007 ; 21 >
     au < manifest ; 2008 ; Journal of Human Hypertension Volume 22 ; 2008 ; 22 >
     au < released ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
+    au < manifest ; 2010 ; Journal of Human Hypertension Volume 24 ; 2010 ; 24 >
 
   }
 
@@ -396,9 +614,123 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     >
 
     param[journal_id] = jid
+    comment[1967] = The manifest page for 1967 is missing, and 1966 is odd.
 
+    au < manifest ; 1950 ; The Journal of Investigative Dermatology Volume 14 ; 1950 ; 14 >                                                                             
+    au < manifest ; 1950 ; The Journal of Investigative Dermatology Volume 15 ; 1950 ; 15 >                                                                             
+    au < manifest ; 1951 ; The Journal of Investigative Dermatology Volume 16 ; 1951 ; 16 >                                                                             
+    au < manifest ; 1951 ; The Journal of Investigative Dermatology Volume 17 ; 1951 ; 17 >                                                                             
+    au < manifest ; 1952 ; The Journal of Investigative Dermatology Volume 18 ; 1952 ; 18 >                                                                             
+    au < manifest ; 1952 ; The Journal of Investigative Dermatology Volume 19 ; 1952 ; 19 >                                                                             
+    au < manifest ; 1953 ; The Journal of Investigative Dermatology Volume 20 ; 1953 ; 20 >                                                                             
+    au < manifest ; 1953 ; The Journal of Investigative Dermatology Volume 21 ; 1953 ; 21 >                                                                             
+    au < manifest ; 1954 ; The Journal of Investigative Dermatology Volume 22 ; 1954 ; 22 >                                                                             
+    au < manifest ; 1954 ; The Journal of Investigative Dermatology Volume 23 ; 1954 ; 23 >                                                                             
+    au < manifest ; 1955 ; The Journal of Investigative Dermatology Volume 24 ; 1955 ; 24 >                                                                             
+    au < manifest ; 1955 ; The Journal of Investigative Dermatology Volume 25 ; 1955 ; 25 >                                                                             
+    au < manifest ; 1956 ; The Journal of Investigative Dermatology Volume 26 ; 1956 ; 26 >                                                                             
+    au < manifest ; 1956 ; The Journal of Investigative Dermatology Volume 27 ; 1956 ; 27 >                                                                             
+    au < manifest ; 1957 ; The Journal of Investigative Dermatology Volume 28 ; 1957 ; 28 >                                                                             
+    au < manifest ; 1957 ; The Journal of Investigative Dermatology Volume 29 ; 1957 ; 29 >                                                                             
+    au < manifest ; 1958 ; The Journal of Investigative Dermatology Volume 30 ; 1958 ; 30 >                                                                             
+    au < manifest ; 1958 ; The Journal of Investigative Dermatology Volume 31 ; 1958 ; 31 >                                                                             
+    au < manifest ; 1959 ; The Journal of Investigative Dermatology Volume 32 ; 1959 ; 32 >                                                                             
+    au < manifest ; 1959 ; The Journal of Investigative Dermatology Volume 33 ; 1959 ; 33 >                                                                             
+    au < manifest ; 1960 ; The Journal of Investigative Dermatology Volume 34 ; 1960 ; 34 >                                                                             
+    au < manifest ; 1960 ; The Journal of Investigative Dermatology Volume 35 ; 1960 ; 35 >                                                                             
+    au < manifest ; 1961 ; The Journal of Investigative Dermatology Volume 36 ; 1961 ; 36 >                                                                             
+    au < manifest ; 1961 ; The Journal of Investigative Dermatology Volume 37 ; 1961 ; 37 >                                                                             
+    au < manifest ; 1962 ; The Journal of Investigative Dermatology Volume 38 ; 1962 ; 38 >                                                                             
+    au < manifest ; 1962 ; The Journal of Investigative Dermatology Volume 39 ; 1962 ; 39 >                                                                             
+    au < manifest ; 1963 ; The Journal of Investigative Dermatology Volume 40 ; 1963 ; 40 >                                                                             
+    au < manifest ; 1963 ; The Journal of Investigative Dermatology Volume 41 ; 1963 ; 41 >                                                                             
+    au < manifest ; 1964 ; The Journal of Investigative Dermatology Volume 42 ; 1964 ; 42 >                                                                             
+    au < manifest ; 1964 ; The Journal of Investigative Dermatology Volume 43 ; 1964 ; 43 >                                                                             
+    au < manifest ; 1965 ; The Journal of Investigative Dermatology Volume 44 ; 1965 ; 44 >                                                                             
+    au < manifest ; 1965 ; The Journal of Investigative Dermatology Volume 45 ; 1965 ; 45 >                                                                             
+    au < manifest ; 1966 ; The Journal of Investigative Dermatology Volume 46 ; 1966 ; 46 >                                                                             
+    au < manifest ; 1966 ; The Journal of Investigative Dermatology Volume 47 ; 1966 ; 47 >                                                                             
+    au < manifest ; 1968 ; The Journal of Investigative Dermatology Volume 50 ; 1968 ; 50 >                                                                             
+    au < manifest ; 1968 ; The Journal of Investigative Dermatology Volume 51 ; 1968 ; 51 >                                                                             
+    au < manifest ; 1969 ; The Journal of Investigative Dermatology Volume 52 ; 1969 ; 52 >                                                                             
+    au < manifest ; 1969 ; The Journal of Investigative Dermatology Volume 53 ; 1969 ; 53 >                                                                             
+    au < manifest ; 1970 ; The Journal of Investigative Dermatology Volume 54 ; 1970 ; 54 >                                                                             
+    au < manifest ; 1970 ; The Journal of Investigative Dermatology Volume 55 ; 1970 ; 55 >                                                                             
+    au < manifest ; 1971 ; The Journal of Investigative Dermatology Volume 56 ; 1971 ; 56 >                                                                             
+    au < manifest ; 1971 ; The Journal of Investigative Dermatology Volume 57 ; 1971 ; 57 >                                                                             
+    au < manifest ; 1972 ; The Journal of Investigative Dermatology Volume 58 ; 1972 ; 58 >                                                                             
+    au < manifest ; 1972 ; The Journal of Investigative Dermatology Volume 59 ; 1972 ; 59 >                                                                             
+    au < manifest ; 1973 ; The Journal of Investigative Dermatology Volume 60 ; 1973 ; 60 >                                                                             
+    au < manifest ; 1973 ; The Journal of Investigative Dermatology Volume 61 ; 1973 ; 61 >                                                                             
+    au < manifest ; 1974 ; The Journal of Investigative Dermatology Volume 62 ; 1974 ; 62 >                                                                             
+    au < manifest ; 1974 ; The Journal of Investigative Dermatology Volume 63 ; 1974 ; 63 >                                                                             
+    au < manifest ; 1975 ; The Journal of Investigative Dermatology Volume 64 ; 1975 ; 64 >                                                                             
+    au < manifest ; 1975 ; The Journal of Investigative Dermatology Volume 65 ; 1975 ; 65 >                                                                             
+    au < manifest ; 1976 ; The Journal of Investigative Dermatology Volume 66 ; 1976 ; 66 >                                                                             
+    au < manifest ; 1976 ; The Journal of Investigative Dermatology Volume 67 ; 1976 ; 67 >                                                                             
+    au < manifest ; 1977 ; The Journal of Investigative Dermatology Volume 68 ; 1977 ; 68 >                                                                             
+    au < manifest ; 1977 ; The Journal of Investigative Dermatology Volume 69 ; 1977 ; 69 >                                                                             
+    au < manifest ; 1978 ; The Journal of Investigative Dermatology Volume 70 ; 1978 ; 70 >                                                                             
+    au < manifest ; 1978 ; The Journal of Investigative Dermatology Volume 71 ; 1978 ; 71 >                                                                             
+    au < manifest ; 1979 ; The Journal of Investigative Dermatology Volume 72 ; 1979 ; 72 >                                                                             
+    au < manifest ; 1979 ; The Journal of Investigative Dermatology Volume 73 ; 1979 ; 73 >                                                                             
+    au < manifest ; 1980 ; The Journal of Investigative Dermatology Volume 74 ; 1980 ; 74 >                                                                             
+    au < manifest ; 1980 ; The Journal of Investigative Dermatology Volume 75 ; 1980 ; 75 >                                                                             
+    au < manifest ; 1981 ; The Journal of Investigative Dermatology Volume 76 ; 1981 ; 76 >                                                                             
+    au < manifest ; 1981 ; The Journal of Investigative Dermatology Volume 77 ; 1981 ; 77 >                                                                             
+    au < manifest ; 1982 ; The Journal of Investigative Dermatology Volume 78 ; 1982 ; 78 >                                                                             
+    au < manifest ; 1982 ; The Journal of Investigative Dermatology Volume 79 ; 1982 ; 79 >                                                                             
+    au < manifest ; 1983 ; The Journal of Investigative Dermatology Volume 80 ; 1983 ; 80 >                                                                             
+    au < manifest ; 1983 ; The Journal of Investigative Dermatology Volume 81 ; 1983 ; 81 >                                                                             
+    au < manifest ; 1984 ; The Journal of Investigative Dermatology Volume 82 ; 1984 ; 82 >                                                                             
+    au < manifest ; 1984 ; The Journal of Investigative Dermatology Volume 83 ; 1984 ; 83 >                                                                             
+    au < manifest ; 1985 ; The Journal of Investigative Dermatology Volume 84 ; 1985 ; 84 >                                                                             
+    au < manifest ; 1985 ; The Journal of Investigative Dermatology Volume 85 ; 1985 ; 85 >                                                                             
+    au < manifest ; 1986 ; The Journal of Investigative Dermatology Volume 86 ; 1986 ; 86 >                                                                             
+    au < manifest ; 1986 ; The Journal of Investigative Dermatology Volume 87 ; 1986 ; 87 >                                                                             
+    au < manifest ; 1987 ; The Journal of Investigative Dermatology Volume 88 ; 1987 ; 88 >                                                                             
+    au < manifest ; 1987 ; The Journal of Investigative Dermatology Volume 89 ; 1987 ; 89 >                                                                             
+    au < manifest ; 1988 ; The Journal of Investigative Dermatology Volume 90 ; 1988 ; 90 >                                                                             
+    au < manifest ; 1988 ; The Journal of Investigative Dermatology Volume 91 ; 1988 ; 91 >                                                                             
+    au < manifest ; 1989 ; The Journal of Investigative Dermatology Volume 92 ; 1989 ; 92 >                                                                             
+    au < manifest ; 1989 ; The Journal of Investigative Dermatology Volume 93 ; 1989 ; 93 >                                                                             
+    au < manifest ; 1990 ; The Journal of Investigative Dermatology Volume 94 ; 1990 ; 94 >                                                                             
+    au < manifest ; 1990 ; The Journal of Investigative Dermatology Volume 95 ; 1990 ; 95 >                                                                             
+    au < manifest ; 1991 ; The Journal of Investigative Dermatology Volume 96 ; 1991 ; 96 >                                                                             
+    au < manifest ; 1991 ; The Journal of Investigative Dermatology Volume 97 ; 1991 ; 97 >                                                                             
+    au < manifest ; 1992 ; The Journal of Investigative Dermatology Volume 98 ; 1992 ; 98 >                                                                             
+    au < manifest ; 1992 ; The Journal of Investigative Dermatology Volume 99 ; 1992 ; 99 >                                                                             
+    au < manifest ; 1993 ; The Journal of Investigative Dermatology Volume 100 ; 1993 ; 100 >                                                                           
+    au < manifest ; 1993 ; The Journal of Investigative Dermatology Volume 101 ; 1993 ; 101 >                                                                           
+    au < manifest ; 1994 ; The Journal of Investigative Dermatology Volume 102 ; 1994 ; 102 >                                                                           
+    au < manifest ; 1994 ; The Journal of Investigative Dermatology Volume 103 ; 1994 ; 103 >                                                                           
+    au < manifest ; 1995 ; The Journal of Investigative Dermatology Volume 104 ; 1995 ; 104 >                                                                           
+    au < manifest ; 1995 ; The Journal of Investigative Dermatology Volume 105 ; 1995 ; 105 >                                                                           
+    au < manifest ; 1996 ; The Journal of Investigative Dermatology Volume 106 ; 1996 ; 106 >                                                                           
+    au < manifest ; 1996 ; The Journal of Investigative Dermatology Volume 107 ; 1996 ; 107 >                                                                           
+    au < manifest ; 1997 ; The Journal of Investigative Dermatology Volume 108 ; 1997 ; 108 >                                                                           
+    au < manifest ; 1997 ; The Journal of Investigative Dermatology Volume 109 ; 1997 ; 109 >                                                                           
+    au < manifest ; 1998 ; The Journal of Investigative Dermatology Volume 110 ; 1998 ; 110 >                                                                           
+    au < manifest ; 1998 ; The Journal of Investigative Dermatology Volume 111 ; 1998 ; 111 >                                                                           
+    au < manifest ; 1999 ; The Journal of Investigative Dermatology Volume 112 ; 1999 ; 112 >                                                                           
+    au < manifest ; 1999 ; The Journal of Investigative Dermatology Volume 113 ; 1999 ; 113 >                                                                           
+    au < manifest ; 2000 ; The Journal of Investigative Dermatology Volume 114 ; 2000 ; 114 >                                                                           
+    au < manifest ; 2000 ; The Journal of Investigative Dermatology Volume 115 ; 2000 ; 115 >                                                                           
+    au < manifest ; 2001 ; The Journal of Investigative Dermatology Volume 116 ; 2001 ; 116 >                                                                           
+    au < manifest ; 2001 ; The Journal of Investigative Dermatology Volume 117 ; 2001 ; 117 >
+    au < manifest ; 2002 ; The Journal of Investigative Dermatology Volume 118 ; 2002 ; 118 >
+    au < manifest ; 2002 ; The Journal of Investigative Dermatology Volume 119 ; 2002 ; 119 >
+    au < manifest ; 2003 ; The Journal of Investigative Dermatology Volume 120 ; 2003 ; 120 >
+    au < manifest ; 2003 ; The Journal of Investigative Dermatology Volume 121 ; 2003 ; 121 >
+    au < manifest ; 2004 ; The Journal of Investigative Dermatology Volume 122 ; 2004 ; 122 >
+    au < manifest ; 2004 ; The Journal of Investigative Dermatology Volume 123 ; 2004 ; 123 >
+    au < manifest ; 2005 ; The Journal of Investigative Dermatology Volume 124 ; 2005 ; 124 >
+    au < manifest ; 2005 ; The Journal of Investigative Dermatology Volume 125 ; 2005 ; 125 >
+    au < manifest ; 2006 ; The Journal of Investigative Dermatology Volume 126 ; 2006 ; 126 >
+    au < manifest ; 2007 ; The Journal of Investigative Dermatology Volume 127 ; 2007 ; 127 >    
     au < manifest ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
     au < released ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
+    au < manifest ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
 
   }
 
@@ -410,9 +742,19 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     param[journal_id] = jp
 
+    au < manifest ; 1999 ; Journal of Perinatology Volume 19 ; 1999 ; 19 >
+    au < manifest ; 2000 ; Journal of Perinatology Volume 20 ; 2000 ; 20 >
+    au < manifest ; 2001 ; Journal of Perinatology Volume 21 ; 2001 ; 21 >
+    au < manifest ; 2002 ; Journal of Perinatology Volume 22 ; 2002 ; 22 >
+    au < manifest ; 2003 ; Journal of Perinatology Volume 23 ; 2003 ; 23 >
+    au < manifest ; 2004 ; Journal of Perinatology Volume 24 ; 2004 ; 24 >
+    au < manifest ; 2005 ; Journal of Perinatology Volume 25 ; 2005 ; 25 >
+    au < manifest ; 2006 ; Journal of Perinatology Volume 26 ; 2006 ; 26 >
+    au < manifest ; 2007 ; Journal of Perinatology Volume 27 ; 2007 ; 27 >
     au < manifest ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
     au < released ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
-
+    au < manifest ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 >
+    
   }
 
   {
@@ -443,9 +785,21 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     param[journal_id] = leu
 
+    au < manifest ; 1997 ; Leukemia Volume 11 ; 1997 ; 11 >
+    au < manifest ; 1998 ; Leukemia Volume 12 ; 1998 ; 12 >
+    au < manifest ; 1999 ; Leukemia Volume 13 ; 1999 ; 13 >
+    au < manifest ; 2000 ; Leukemia Volume 14 ; 2000 ; 14 >
+    au < manifest ; 2001 ; Leukemia Volume 15 ; 2001 ; 15 >
+    au < manifest ; 2002 ; Leukemia Volume 16 ; 2002 ; 16 >
+    au < manifest ; 2003 ; Leukemia Volume 17 ; 2003 ; 17 >
+    au < manifest ; 2004 ; Leukemia Volume 18 ; 2004 ; 18 >
+    au < manifest ; 2005 ; Leukemia Volume 19 ; 2005 ; 19 >
+    au < manifest ; 2006 ; Leukemia Volume 20 ; 2006 ; 20 >
+    au < manifest ; 2007 ; Leukemia Volume 21 ; 2007 ; 21 >
     au < manifest ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 >
     au < notReady ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
-
+    au < manifest ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
+    
   }
 
   {
@@ -466,8 +820,20 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     param[journal_id] = mp
 
+    au < manifest ; 1997 ; Molecular Psychiatry Volume 2 ; 1997 ; 2 >
+    au < manifest ; 1998 ; Molecular Psychiatry Volume 3 ; 1998 ; 3 >
+    au < manifest ; 1999 ; Molecular Psychiatry Volume 4 ; 1999 ; 4 >
+    au < manifest ; 2000 ; Molecular Psychiatry Volume 5 ; 2000 ; 5 >
+    au < manifest ; 2001 ; Molecular Psychiatry Volume 6 ; 2001 ; 6 >
+    au < manifest ; 2002 ; Molecular Psychiatry Volume 7 ; 2002 ; 7 >
+    au < manifest ; 2003 ; Molecular Psychiatry Volume 8 ; 2003 ; 8 >
+    au < manifest ; 2004 ; Molecular Psychiatry Volume 9 ; 2004 ; 9 >
+    au < manifest ; 2005 ; Molecular Psychiatry Volume 10 ; 2005 ; 10 >
+    au < manifest ; 2006 ; Molecular Psychiatry Volume 11 ; 2006 ; 11 >
+    au < manifest ; 2007 ; Molecular Psychiatry Volume 12 ; 2007 ; 12 >
     au < manifest ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
     au < testing ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
+    au < manifest ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
 
   }
 
@@ -521,6 +887,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     au < released ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
     au < released ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
     au < doesNotExist ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
+    au < manifest ; 2010 ; Nature Volume 463 ; 2010 ; 463 >
 
   }
 
@@ -534,6 +901,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < released ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
     au < released ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
+    au < manifest ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 >
 
   }
 
@@ -547,6 +915,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < released ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
     au < released ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
+    au < manifest ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
 
   }
 
@@ -560,6 +929,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < released ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
     au < released ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
+    au < manifest ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -572,6 +942,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = nchem
 
     au < released ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
+    au < manifest ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
 
   }
 
@@ -585,6 +956,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < released ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -598,6 +970,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < testing ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
     au < testing ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
+    au < manifest ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
 
   }
 
@@ -611,6 +984,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < testing ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
     au < testing ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
+    au < manifest ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 >
 
   }
 
@@ -624,6 +998,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < testing ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
     au < testing ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
+    au < manifest ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -637,6 +1012,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
     au < testing ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
+    au < manifest ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
 
   }
 
@@ -650,6 +1026,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < released ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
     au < released ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
+    au < manifest ; 2009 ; Nature Medicine Volume 16 ; 2010 ; 16 >
 
   }
 
@@ -663,6 +1040,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < released ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -676,6 +1054,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < manifest ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
     au < released ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
+    au < manifest ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
 
   }
 
@@ -689,6 +1068,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < manifest ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
     au < released ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
+    au < manifest ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
 
   }
 
@@ -702,6 +1082,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < manifest ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
     au < released ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
+    au < manifest ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
 
   }
 
@@ -715,6 +1096,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     au < manifest ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
     au < released ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
+    au < manifest ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -730,6 +1112,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
     au < notReady ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
+    au < manifest ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
 
   }
 
@@ -743,6 +1126,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
     au < released ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
+    au < manifest ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
 
   }
 
@@ -756,6 +1140,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -769,6 +1154,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -782,6 +1168,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
     au < released ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
+    au < manifest ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
 
   }
 
@@ -795,6 +1182,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < testing ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
+    au < manifest ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -808,6 +1196,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 >
     au < testing ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -821,6 +1210,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
+    au < manifest ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -834,6 +1224,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
     au < released ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
+    au < manifest ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
 
   }
 
@@ -847,6 +1238,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
     au < released ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
+    au < manifest ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 >
 
   }
 
@@ -860,6 +1252,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
+    au < manifest ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -873,6 +1266,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
     au < testing ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
+    au < manifest ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -886,6 +1280,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
     au < testing ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
+    au < manifest ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -899,6 +1294,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
+    au < manifest ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -912,6 +1308,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
+    au < manifest ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -925,6 +1322,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
     au < testing ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -938,6 +1336,7 @@ comment[nprot4] = poll mismatch
 
     au < manifest ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
     au < testing ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
+    au < manifest ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -969,8 +1368,22 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = onc
 
+    au < manifest ; 1997 ; Oncogene Volume 14 ; 1997 ; 14 >
+    au < manifest ; 1997 ; Oncogene Volume 15 ; 1997 ; 15 >
+    au < manifest ; 1998 ; Oncogene Volume 16 ; 1998 ; 16 >
+    au < manifest ; 1998 ; Oncogene Volume 17 ; 1998 ; 17 >
+    au < manifest ; 1999 ; Oncogene Volume 18 ; 1999 ; 18 >
+    au < manifest ; 2000 ; Oncogene Volume 19 ; 2000 ; 19 >
+    au < manifest ; 2001 ; Oncogene Volume 20 ; 2001 ; 20 >
+    au < manifest ; 2002 ; Oncogene Volume 21 ; 2002 ; 21 >
+    au < manifest ; 2003 ; Oncogene Volume 22 ; 2003 ; 22 >
+    au < manifest ; 2004 ; Oncogene Volume 23 ; 2004 ; 23 >
+    au < manifest ; 2005 ; Oncogene Volume 24 ; 2005 ; 24 >
+    au < manifest ; 2006 ; Oncogene Volume 25 ; 2006 ; 25 >
+    au < manifest ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < manifest ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < notReady ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
+    au < manifest ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
 
   }
 
@@ -982,9 +1395,17 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = tpj
 
+    au < manifest ; 2001 ; The Pharmacogenomics Journal Volume 1 ; 2001 ; 1 >
+    au < manifest ; 2002 ; The Pharmacogenomics Journal Volume 2 ; 2002 ; 2 >
+    au < manifest ; 2003 ; The Pharmacogenomics Journal Volume 3 ; 2003 ; 3 >
+    au < manifest ; 2004 ; The Pharmacogenomics Journal Volume 4 ; 2004 ; 4 >
+    au < manifest ; 2005 ; The Pharmacogenomics Journal Volume 5 ; 2005 ; 5 >
+    au < manifest ; 2006 ; The Pharmacogenomics Journal Volume 6 ; 2006 ; 6 >
+    au < manifest ; 2007 ; The Pharmacogenomics Journal Volume 7 ; 2007 ; 7 >
     au < manifest ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
     au < notReady ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
-
+    au < manifest ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
+    
   }
 
   {
@@ -995,8 +1416,19 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = pcan
 
+    au < manifest ; 1998 ; Prostate Cancer and Prostatic Diseases Volume 1 ; 1998 ; 1 >
+    au < manifest ; 1999 ; Prostate Cancer and Prostatic Diseases Volume 2 ; 1999 ; 2 >
+    au < manifest ; 2000 ; Prostate Cancer and Prostatic Diseases Volume 3 ; 2000 ; 3 >
+    au < manifest ; 2001 ; Prostate Cancer and Prostatic Diseases Volume 4 ; 2001 ; 4 >
+    au < manifest ; 2002 ; Prostate Cancer and Prostatic Diseases Volume 5 ; 2002 ; 5 >
+    au < manifest ; 2003 ; Prostate Cancer and Prostatic Diseases Volume 6 ; 2003 ; 6 >
+    au < manifest ; 2004 ; Prostate Cancer and Prostatic Diseases Volume 7 ; 2004 ; 7 >
+    au < manifest ; 2005 ; Prostate Cancer and Prostatic Diseases Volume 8 ; 2005 ; 8 >
+    au < manifest ; 2006 ; Prostate Cancer and Prostatic Diseases Volume 9 ; 2006 ; 9 >
+    au < manifest ; 2007 ; Prostate Cancer and Prostatic Diseases Volume 10 ; 2007 ; 10 >
     au < manifest ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
+    au < manifest ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
 
   }
 
@@ -1018,8 +1450,21 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = sc
 
+    au < manifest ; 1997 ; Spinal Cord Volume 35 ; 1997 ; 35 >
+    au < manifest ; 1998 ; Spinal Cord Volume 36 ; 1998 ; 36 >
+    au < manifest ; 1999 ; Spinal Cord Volume 37 ; 1999 ; 37 >
+    au < manifest ; 2000 ; Spinal Cord Volume 38 ; 2000 ; 38 >
+    au < manifest ; 2001 ; Spinal Cord Volume 39 ; 2001 ; 39 >
+    au < manifest ; 2002 ; Spinal Cord Volume 40 ; 2002 ; 40 >
+    au < manifest ; 2003 ; Spinal Cord Volume 41 ; 2003 ; 41 >
+    au < manifest ; 2004 ; Spinal Cord Volume 42 ; 2004 ; 42 >
+    au < manifest ; 2005 ; Spinal Cord Volume 43 ; 2005 ; 43 >
+    au < manifest ; 2006 ; Spinal Cord Volume 44 ; 2006 ; 44 >
+    au < manifest ; 2007 ; Spinal Cord Volume 45 ; 2007 ; 45 >
     au < manifest ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
     au < released ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
+    au < manifest ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
+    
 
   }
 
@@ -1030,6 +1475,10 @@ comment[nprot4] = poll mismatch
     >
 
     param[journal_id] = vital
+    param[comment] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
+    
+    au < manifest ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2009 ; Vital Volume 7 ; 2009 ; 7 >
 
   }
 
