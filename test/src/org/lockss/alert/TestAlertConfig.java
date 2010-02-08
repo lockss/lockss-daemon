@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertConfig.java,v 1.3 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: TestAlertConfig.java,v 1.4 2010-02-08 23:00:52 tlipkis Exp $
  */
 
 /*
@@ -114,8 +114,8 @@ public class TestAlertConfig extends LockssTestCase {
     AlertConfig conf =
       new AlertConfig(ListUtil.list(passwdFilt, crawlExclFilt, devFilt));
 
-    File file = new File("/tmp/alertconf.xml");
-    File file2 = new File("/tmp/alertconf.asc");
+    File file = FileTestUtil.tempFile("alertconf", ".xml");
+    File file2 = FileTestUtil.tempFile("alertconf", ".asc");
     mgr.storeAlertConfig(file, conf);
 
     Reader rdr =
