@@ -9,7 +9,31 @@
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
     param[base_url] = http://muse.jhu.edu/
     implicit < status ; name ; param[volume] >
+    
+    {
+      title <
+        name = American Literary Realism
+      >
 
+      param[journal_dir] = american_literary_realism
+   
+      au < wanted ; American Literary Realism Volume 40 ; 40 >
+      au < wanted ; American Literary Realism Volume 41 ; 41 >
+      au < wanted ; American Literary Realism Volume 42 ; 42 >
+
+    }
+
+    {
+      title <
+        name = American Music
+      >
+
+      param[journal_dir] = american_music
+   
+      au < wanted ; American Music Volume 27 ; 27 >
+      
+    }
+      
     {
       title <
         name = The Journal of Aesthetic Education 

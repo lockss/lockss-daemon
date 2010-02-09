@@ -17,20 +17,18 @@
 
     param[journal_id] = aaa
 
-comment[0] = dynamic pdfs    
-
-    au < manifest ; Abstract and Applied Analysis Volume 1 ; 1 >
-    au < manifest ; Abstract and Applied Analysis Volume 2 ; 2 >
-    au < manifest ; Abstract and Applied Analysis Volume 3 ; 3 >
-    au < manifest ; Abstract and Applied Analysis Volume 4 ; 4 >
-    au < manifest ; Abstract and Applied Analysis Volume 5 ; 5 >
-    au < manifest ; Abstract and Applied Analysis Volume 6 ; 6 >
-    au < manifest ; Abstract and Applied Analysis Volume 7 (2002) ; 2002 >
-    au < manifest ; Abstract and Applied Analysis Volume 2003 ; 2003 >
-    au < manifest ; Abstract and Applied Analysis Volume 2004 ; 2004 >
-    au < manifest ; Abstract and Applied Analysis Volume 2005 ; 2005 >
-    au < manifest ; Abstract and Applied Analysis Volume 2006 ; 2006 >
-    au < manifest ; Abstract and Applied Analysis Volume 2007 ; 2007 >
+    au < wanted ; Abstract and Applied Analysis Volume 1 ; 1 >
+    au < wanted ; Abstract and Applied Analysis Volume 2 ; 2 >
+    au < wanted ; Abstract and Applied Analysis Volume 3 ; 3 >
+    au < wanted ; Abstract and Applied Analysis Volume 4 ; 4 >
+    au < wanted ; Abstract and Applied Analysis Volume 5 ; 5 >
+    au < wanted ; Abstract and Applied Analysis Volume 6 ; 6 >
+    au < wanted ; Abstract and Applied Analysis Volume 7 (2002) ; 2002 >
+    au < wanted ; Abstract and Applied Analysis Volume 2003 ; 2003 >
+    au < wanted ; Abstract and Applied Analysis Volume 2004 ; 2004 >
+    au < wanted ; Abstract and Applied Analysis Volume 2005 ; 2005 >
+    au < wanted ; Abstract and Applied Analysis Volume 2006 ; 2006 >
+    au < wanted ; Abstract and Applied Analysis Volume 2007 ; 2007 >
     au < testing ; Abstract and Applied Analysis Volume 2008 ; 2008 >
 
   }
@@ -43,34 +41,34 @@ comment[0] = dynamic pdfs
     param[journal_id] = apec
 
     au < testing ; Active and Passive Electronic Components Volume 1 ; 1 >
-    au < manifest ; Active and Passive Electronic Components Volume 2 ; 2 >
-    au < manifest ; Active and Passive Electronic Components Volume 3 ; 3 >
-    au < manifest ; Active and Passive Electronic Components Volume 4 ; 4 >
-    au < manifest ; Active and Passive Electronic Components Volume 5 ; 5 >
-    au < manifest ; Active and Passive Electronic Components Volume 6 ; 6 >
-    au < manifest ; Active and Passive Electronic Components Volume 7 ; 7 >
-    au < manifest ; Active and Passive Electronic Components Volume 8 ; 8 >
-    au < manifest ; Active and Passive Electronic Components Volume 9 ; 9 >
-    au < manifest ; Active and Passive Electronic Components Volume 10 ; 10 >
-    au < manifest ; Active and Passive Electronic Components Volume 11 ; 11 >
-    au < manifest ; Active and Passive Electronic Components Volume 12 ; 12 >
-    au < manifest ; Active and Passive Electronic Components Volume 13 ; 13 >
-    au < manifest ; Active and Passive Electronic Components Volume 14 ; 14 >
-    au < manifest ; Active and Passive Electronic Components Volume 15 ; 15 >
-    au < manifest ; Active and Passive Electronic Components Volume 16 ; 16 >
-    au < manifest ; Active and Passive Electronic Components Volume 17 ; 17 >
-    au < manifest ; Active and Passive Electronic Components Volume 18 ; 18 >
-    au < manifest ; Active and Passive Electronic Components Volume 19 ; 19 >
-    au < manifest ; Active and Passive Electronic Components Volume 20 ; 20 >
-    au < manifest ; Active and Passive Electronic Components Volume 21 ; 21 >
-    au < manifest ; Active and Passive Electronic Components Volume 22 ; 22 >
-    au < manifest ; Active and Passive Electronic Components Volume 23 ; 23 >
-    au < manifest ; Active and Passive Electronic Components Volume 24 ; 24 >
-    au < manifest ; Active and Passive Electronic Components Volume 25 ; 25 >
-    au < manifest ; Active and Passive Electronic Components Volume 26 ; 26 >
-    au < manifest ; Active and Passive Electronic Components Volume 27 ; 27 >
-    au < manifest ; Active and Passive Electronic Components Volume 2007 ; 2007 >
-    au < manifest ; Active and Passive Electronic Components Volume 2008 ; 2008 >
+    au < wanted ; Active and Passive Electronic Components Volume 2 ; 2 >
+    au < wanted ; Active and Passive Electronic Components Volume 3 ; 3 >
+    au < wanted ; Active and Passive Electronic Components Volume 4 ; 4 >
+    au < wanted ; Active and Passive Electronic Components Volume 5 ; 5 >
+    au < wanted ; Active and Passive Electronic Components Volume 6 ; 6 >
+    au < wanted ; Active and Passive Electronic Components Volume 7 ; 7 >
+    au < wanted ; Active and Passive Electronic Components Volume 8 ; 8 >
+    au < wanted ; Active and Passive Electronic Components Volume 9 ; 9 >
+    au < wanted ; Active and Passive Electronic Components Volume 10 ; 10 >
+    au < wanted ; Active and Passive Electronic Components Volume 11 ; 11 >
+    au < wanted ; Active and Passive Electronic Components Volume 12 ; 12 >
+    au < wanted ; Active and Passive Electronic Components Volume 13 ; 13 >
+    au < wanted ; Active and Passive Electronic Components Volume 14 ; 14 >
+    au < wanted ; Active and Passive Electronic Components Volume 15 ; 15 >
+    au < wanted ; Active and Passive Electronic Components Volume 16 ; 16 >
+    au < wanted ; Active and Passive Electronic Components Volume 17 ; 17 >
+    au < wanted ; Active and Passive Electronic Components Volume 18 ; 18 >
+    au < wanted ; Active and Passive Electronic Components Volume 19 ; 19 >
+    au < wanted ; Active and Passive Electronic Components Volume 20 ; 20 >
+    au < wanted ; Active and Passive Electronic Components Volume 21 ; 21 >
+    au < wanted ; Active and Passive Electronic Components Volume 22 ; 22 >
+    au < wanted ; Active and Passive Electronic Components Volume 23 ; 23 >
+    au < wanted ; Active and Passive Electronic Components Volume 24 ; 24 >
+    au < wanted ; Active and Passive Electronic Components Volume 25 ; 25 >
+    au < wanted ; Active and Passive Electronic Components Volume 26 ; 26 >
+    au < wanted ; Active and Passive Electronic Components Volume 27 ; 27 >
+    au < wanted ; Active and Passive Electronic Components Volume 2007 ; 2007 >
+    au < wanted ; Active and Passive Electronic Components Volume 2008 ; 2008 >
 
   }
 
@@ -81,7 +79,7 @@ comment[0] = dynamic pdfs
 
     param[journal_id] = aav
 
-    au < manifest ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
+    au < wanted ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
 
   }
 
@@ -92,7 +90,7 @@ comment[0] = dynamic pdfs
 
     param[journal_id] = aai
 
-    au < manifest ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
+    au < wanted ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
 
   }
 
