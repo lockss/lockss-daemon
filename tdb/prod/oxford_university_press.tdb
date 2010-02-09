@@ -3867,7 +3867,8 @@
 
         au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
         au < HighWirePressPlugin ; released ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
-  
+        au < HighWirePressPlugin ; testing ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 35 ; 35 >
+
       }
 
     }
@@ -3884,6 +3885,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; released ; Journal of Molecular Cell Biology Volume 1 ; 1 >
+        au < HighWirePressPlugin ; testing ; Journal of Molecular Cell Biology Volume 2 ; 2 >
 
       }
 
@@ -3994,6 +3996,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Journal of Tropical Pediatrics Volume 53 ; 53 >
         au < HighWirePressPlugin ; released ; Journal of Tropical Pediatrics Volume 54 ; 54 >
         au < HighWirePressPlugin ; released ; Journal of Tropical Pediatrics Volume 55 ; 55 >
+        au < HighWirePressPlugin ; testing ; Journal of Tropical Pediatrics Volume 56 ; 56 >
 
       }
 
@@ -4364,6 +4367,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; testing ; Molecular Plant Volume 1 ; 1 >
         au < HighWirePressPlugin ; exists ; Molecular Plant Volume 2 ; 2 >
+        au < HighWirePressPlugin ; testing ; Molecular Plant Volume 3 ; 3 >
 
       }
 
@@ -4395,6 +4399,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Music and Letters Volume 88 ; 88 >
         au < HighWirePressPlugin ; released ; Music and Letters Volume 89 ; 89 >
         au < HighWirePressPlugin ; released ; Music and Letters Volume 90 ; 90 >
+        au < HighWirePressPlugin ; testing ; Music and Letters Volume 91 ; 91 >
 
       }
 
@@ -4476,6 +4481,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
   
         au < HighWirePressPlugin ; released ; NDT Plus Volume 1 ; 1 >
         au < HighWirePressPlugin ; released ; NDT Plus Volume 2 ; 2 >
+        au < HighWirePressPlugin ; testing ; NDT Plus Volume 3 ; 3 >
 
       }
 
@@ -4682,6 +4688,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 23 ; 23 >
         au < HighWirePressPlugin ; released ; The Opera Quarterly Volume 24 ; 24 >
+        au < HighWirePressPlugin ; testing ; The Opera Quarterly Volume 25 ; 25 >
       }
 
     }
@@ -4933,7 +4940,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Philosophia Mathematica Volume 15 ; 15 >
         au < HighWirePressPlugin ; released ; Philosophia Mathematica Volume 16 ; 16 >
         au < HighWirePressPlugin ; released ; Philosophia Mathematica Volume 17 ; 17 >
-
+        au < HighWirePressPlugin ; testing ; Philosophia Mathematica Volume 18 ; 18 >
+        
       }
 
     }
@@ -4963,6 +4971,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Plant and Cell Physiology Volume 48 ; 48 >
         au < HighWirePressPlugin ; released ; Plant and Cell Physiology Volume 49 ; 49 >
         au < HighWirePressPlugin ; released ; Plant and Cell Physiology Volume 50 ; 50 >
+        au < HighWirePressPlugin ; testing ; Plant and Cell Physiology Volume 51 ; 51 >
 
       }
 
