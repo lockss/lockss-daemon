@@ -466,12 +466,12 @@ class Client:
         return self._getStatusTable( 'single_crawl_status_table', key )
 
     def getListOfArticles(self, au):
-        post = self.__makePost('ListObjects', {'type': 'articles'})
+        post = self.__execute_post('ListObjects', {'type': 'articles'})
         post.add_data('auid', au.auId)
         return post.execute().read()
         
     def getListOfUrls(self, au):
-        post = self.__makePost('ListObjects', {'type': 'urls'})
+        post = self.__execute_post('ListObjects', {'type': 'urls'})
         post.add_data('auid', au.auId)
         return post.execute().read()
 
