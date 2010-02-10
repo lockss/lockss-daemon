@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.33 2009-09-26 17:23:53 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.33.8.1 2010-02-10 00:52:33 tlipkis Exp $
  */
 
 /*
@@ -851,15 +851,8 @@ public class TestUrlUtil extends LockssTestCase {
     assertFalse(UrlUtil.isJarUrl("file:/foo.bar"));
   }
 
-  public void testMakeJarFileUrl() {
-    assertEquals("jar:file:///dir/2!/file.txt",
-		 UrlUtil.makeJarFileUrl("/dir/2", "file.txt"));
+  public void testMakeJarFileUrl() throws MalformedURLException {
+    assertMatchesRE("jar:file://?dir/2!/file.txt",
+		    UrlUtil.makeJarFileUrl("/dir/2", "file.txt"));
   }
-
-  public static String makeJarFileUrl(String jarPath, String entryName) {
-    return "jar:file://" + jarPath + "!" + entryName;
-  }
-
-
-
 }
