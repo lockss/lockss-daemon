@@ -467,11 +467,11 @@ class Client:
 
     def getListOfArticles(self, au):
         post = self.__execute_post('ListObjects', {'type': 'articles', 'auid': au.auId})
-        return post.execute().read()
+        return post.read()
         
     def getListOfUrls(self, au):
         post = self.__execute_post('ListObjects', {'type': 'urls', 'auid': au.auId})
-        return post.execute().read()
+        return post.read()
 
     def getAuHashFile( self, AU ):
         """Return the hash file contents for the whole AU."""
