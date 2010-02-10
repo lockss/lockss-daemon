@@ -466,13 +466,11 @@ class Client:
         return self._getStatusTable( 'single_crawl_status_table', key )
 
     def getListOfArticles(self, au):
-        post = self.__execute_post('ListObjects', {'type': 'articles'})
-        post.add_data('auid', au.auId)
+        post = self.__execute_post('ListObjects', {'type': 'articles', 'auid': au.auId})
         return post.execute().read()
         
     def getListOfUrls(self, au):
-        post = self.__execute_post('ListObjects', {'type': 'urls'})
-        post.add_data('auid', au.auId)
+        post = self.__execute_post('ListObjects', {'type': 'urls', 'auid': au.auId})
         return post.execute().read()
 
     def getAuHashFile( self, AU ):
