@@ -33,15 +33,6 @@ BURP_VERSION = '0.2.1'
 OPTION_LONG  = '--'
 OPTION_SHORT = '-'
 
-OPTION_ARTICLE_REPORT           = 'article'
-OPTION_ARTICLE_REPORT_SHORT     = 'a'
-#OPTION_REPLICATION_REPORT       = 'replication'
-#OPTION_REPLICATION_REPORT_SHORT = 'r'
-
-OPTION_TYPE                     = 'type'
-OPTION_TYPE_SHORT               = 't'
-DEFAULT_TYPE                    = OPTION_ARTICLE_REPORT
-
 OPTION_HOST                     = 'host'
 OPTION_HOST_SHORT               = 'H'
 OPTION_PASSWORD                 = 'password'
@@ -61,12 +52,6 @@ def _make_command_line_parser():
     from optparse import OptionGroup, OptionParser
     parser = OptionParser(version=BURP_VERSION)
 
-    parser.add_option(OPTION_SHORT + OPTION_ARTICLE_REPORT_SHORT,
-                      OPTION_LONG + OPTION_ARTICLE_REPORT,
-                      dest=OPTION_TYPE,
-                      action='store_const',
-                      const=OPTION_ARTICLE_REPORT,
-                      help='produce an article report')
     parser.add_option(OPTION_SHORT + OPTION_HOST_SHORT,
                       OPTION_LONG + OPTION_HOST,
                       dest=OPTION_HOST,
@@ -76,11 +61,6 @@ def _make_command_line_parser():
                       dest=OPTION_PASSWORD,
                       default=DEFAULT_PASSWORD,
                       help='daemon UI password (default: %default)')
-    parser.add_option(OPTION_SHORT + OPTION_TYPE_SHORT,
-                      OPTION_LONG + OPTION_TYPE,
-                      dest=OPTION_TYPE,
-                      default=DEFAULT_TYPE,
-                      help='type of report to produce (default: %default)')
     parser.add_option(OPTION_SHORT + OPTION_USERNAME_SHORT,
                       OPTION_LONG + OPTION_USERNAME,
                       dest=OPTION_USERNAME,
@@ -195,8 +175,7 @@ def _main_procedure():
     db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
     
 # Send the reports
-    if (options.type == OPTION_ARTICLE_REPORT): _article_report(client, db, options)
-    else: parser.error('unknown report type: %s' % (options.type,))
+    _article_report(client, db, options)
 
     db.commit()
     db.close()

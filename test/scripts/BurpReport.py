@@ -186,8 +186,8 @@ def _main_procedure():
     oup0 = float(pubyear['oup']["0"])
 
     if oup0 > 0 and pubyear['oup']['2009'] > 0 and pubyear['oup']['2008'] > 0:
-        pubyear['oup']["2009"] += oup0 * (74.0 / 104.0)
-        pubyear['oup']["2008"] += oup0 * (30.0 / 104.0)
+        pubyear['oup']["2009"] += int(oup0 * (74.0 / 104.0) + 0.5)
+        pubyear['oup']["2008"] += int(oup0 * (30.0 / 104.0) + 0.5)
 
     # Output the main report.
     filename = open(options.filename, 'w')
