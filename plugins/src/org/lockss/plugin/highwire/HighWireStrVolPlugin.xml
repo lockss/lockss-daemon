@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>41</string>
+    <string>42</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -61,7 +61,7 @@
       <string>1,&quot;^%slockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|powerpoint|reprint|reprintframed|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintframed|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(lookup)&quot;, base_url</string>
       <string>1,&quot;^%s(this_week)/([^/]+;)?%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scgi/(content/full|data)/[^/]+/DC[0-9]*&quot;, base_url</string>

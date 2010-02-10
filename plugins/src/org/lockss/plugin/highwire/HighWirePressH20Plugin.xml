@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -61,7 +61,7 @@
       <string>1,&quot;^%slockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
       <string>2,&quot;^%s(content|powerpoint|lookup/volpage)/%s/.*(cited-by|related-urls)=yes&quot;, base_url, volume_name</string>
       <string>2,&quot;^%slookup/volpage/%s(/[^/]+)?$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s(content|powerpoint|lookup/volpage)/%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s(content|lookup/volpage)/%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s.*DC(Supplemental|[0-9])&quot;, base_url</string>
     </list>
   </entry>
