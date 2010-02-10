@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.51 2009-10-03 02:55:16 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.52 2010-02-10 01:03:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -441,8 +441,9 @@ public class UrlUtil {
   }
 
   /** Return a jar file URL pointing to the entry in the jar */
-  public static String makeJarFileUrl(String jarPath, String entryName) {
-    return "jar:file://" + jarPath + "!/" + entryName;
+  public static String makeJarFileUrl(String jarPath, String entryName)
+      throws MalformedURLException {
+    return "jar:" + new File(jarPath).toURI().toURL() + "!/" + entryName;
   }
 
   /**
