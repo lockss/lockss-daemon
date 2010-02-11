@@ -1,10 +1,10 @@
 /*
- * $Id: LockssTestCase.java,v 1.96 2009-08-04 00:43:15 thib_gc Exp $
+ * $Id: LockssTestCase.java,v 1.96.8.1 2010-02-11 09:47:44 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1081,6 +1081,24 @@ public class LockssTestCase extends TestCase {
       }
       sb.append("Collection contains unexpected element: ");
       sb.append(element);
+      fail(sb.toString());
+    }
+  }
+
+  public static void assertClass(Class expClass, Object obj) {
+    assertClass(null, expClass, obj);
+  }
+
+  public static void assertClass(String msg, Class expClass, Object obj) {
+    if (! expClass.isInstance(obj)) {
+      StringBuffer sb = new StringBuffer();
+      if (msg != null) {
+	sb.append(msg);
+	sb.append(" ");
+      }
+      sb.append(obj);
+      sb.append(" is not of class ");
+      sb.append(expClass);
       fail(sb.toString());
     }
   }
