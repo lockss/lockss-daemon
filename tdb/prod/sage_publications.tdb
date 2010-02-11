@@ -207,8 +207,8 @@
         param[base_url] = http://adr.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Advances in Dental Research Volume 20 ; 20 ; >
-        au < HighWirePressPlugin ; releasing ; Advances in Dental Research Volume 21 ; 21 ; >
+        au < HighWirePressPlugin ; manifest ; Advances in Dental Research Volume 20 ; 20 >
+        au < HighWirePressPlugin ; releasing ; Advances in Dental Research Volume 21 ; 21 >
 
       }
 
@@ -855,9 +855,9 @@ comment[ajs] = this journal has been moved to H20 platform
       
         param[base_url] = http://aei.sagepub.com/
 
-        au < HighWirePressPlugin ; releasing ; Assessment for Effective Intervention Volume 33 ; 33 ; >
-        au < HighWirePressPlugin ; releasing ; Assessment for Effective Intervention Volume 34 ; 34 ; >
-        au < HighWirePressPlugin ; releasing ; Assessment for Effective Intervention Volume 35 ; 35 ; >
+        au < HighWirePressPlugin ; releasing ; Assessment for Effective Intervention Volume 33 ; 33 >
+        au < HighWirePressPlugin ; releasing ; Assessment for Effective Intervention Volume 34 ; 34 >
+        au < HighWirePressPlugin ; releasing ; Assessment for Effective Intervention Volume 35 ; 35 >
      
       }
      
@@ -944,8 +944,8 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://btb.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; releasing ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 ; >
-        au < HighWirePressPlugin ; releasing ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 ; >
+        au < HighWirePressPlugin ; releasing ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 >
+        au < HighWirePressPlugin ; releasing ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 >
 
       }
 
@@ -1025,8 +1025,8 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://dvd.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; releasing ; The British Journal of Diabetes & Vascular Disease Volume 8 ; 8 ; >
-        au < HighWirePressPlugin ; releasing ; The British Journal of Diabetes & Vascular Disease Volume 9 ; 9 ; >
+        au < HighWirePressPlugin ; releasing ; The British Journal of Diabetes & Vascular Disease Volume 8 ; 8 >
+        au < HighWirePressPlugin ; releasing ; The British Journal of Diabetes & Vascular Disease Volume 9 ; 9 >
 
       }
 
@@ -1250,8 +1250,8 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://cde.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Career Development for Exceptional Individuals Volume 31 ; 31 ; >
-        au < HighWirePressPlugin ; releasing ; Career Development for Exceptional Individuals Volume 32 ; 32 ; >
+        au < HighWirePressPlugin ; manifest ; Career Development for Exceptional Individuals Volume 31 ; 31 >
+        au < HighWirePressPlugin ; releasing ; Career Development for Exceptional Individuals Volume 32 ; 32 >
 
       }
 
@@ -1268,7 +1268,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://car.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; releasing ; Cartilage Volume 1 ; 1 ; >
+        au < HighWirePressPlugin ; releasing ; Cartilage Volume 1 ; 1 >
 
       }
 
@@ -3556,8 +3556,8 @@ comment[exm] = now published by Springer
         param[base_url] = http://foa.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 ; >
-        au < HighWirePressPlugin ; releasing ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 ; >
+        au < HighWirePressPlugin ; manifest ; Focus on Autism and Other Developmental Disabilities Volume 23 ; 23 >
+        au < HighWirePressPlugin ; releasing ; Focus on Autism and Other Developmental Disabilities Volume 24 ; 24 >
 
       }
 
@@ -3595,8 +3595,8 @@ comment[exm] = now published by Springer
         param[base_url] = http://fas.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Foot & Ankle Specialist Volume 1 ; 1 ; >
-        au < HighWirePressPlugin ; releasing ; Foot & Ankle Specialist Volume 2 ; 2 ; >
+        au < HighWirePressPlugin ; manifest ; Foot & Ankle Specialist Volume 1 ; 1 >
+        au < HighWirePressPlugin ; releasing ; Foot & Ankle Specialist Volume 2 ; 2 >
   
       }
   
@@ -3779,8 +3779,8 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://ped.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Global Health Promotion Volume 15 ; 15 ; >
-        au < HighWirePressPlugin ; releasing ; Global Health Promotion Volume 16 ; 16 ; >
+        au < HighWirePressPlugin ; manifest ; Global Health Promotion Volume 15 ; 15 >
+        au < HighWirePressPlugin ; releasing ; Global Health Promotion Volume 16 ; 16 >
 
       }
       
