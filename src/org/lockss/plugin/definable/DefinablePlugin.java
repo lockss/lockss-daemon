@@ -1,10 +1,10 @@
 /*
- * $Id: DefinablePlugin.java,v 1.46 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.46.6.1 2010-02-11 09:50:05 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -466,9 +466,11 @@ public class DefinablePlugin extends BasePlugin {
       if (mappings != null) {
         // add each entry
         for (String entry : mappings) {
+	  if (log.isDebug2()) {
+	    log.debug2("initMap(" + entry + ")");
+	  }
 	  String first;
 	  String ceName;
-	  Class ceClass;
           try {
             List<String> pair = StringUtil.breakAt(entry, '=', 2, true, true);
             first = pair.get(0);
@@ -477,29 +479,35 @@ public class DefinablePlugin extends BasePlugin {
             throw new PluginException.InvalidDefinition("Invalid syntax: " +
 						    entry + "in " + mapName);
 	  }
-          try {
-	    ceClass = Class.forName(ceName);
-          } catch (Exception ex) {
+	  Object val;
+
+	  // Value should be either a CacheException or CacheResultHandler
+	  // class name.
+	  PluginFetchEventResponse resp =
+	    (PluginFetchEventResponse)newAuxClass(ceName,
+						  PluginFetchEventResponse.class,
+						  CacheResultHandler.class);
+	  if (resp instanceof CacheException) {
+	    val = resp.getClass();
+	  } else if (resp instanceof CacheResultHandler) {
+	    val = resp;
+	  } else {
             throw new
 	      PluginException.InvalidDefinition("Second arg not a " +
-						"CacheException class: " +
+						"CacheException or " +
+						"CacheResultHandler class: " +
 						entry + ", in " + mapName);
-	  } catch (LinkageError le) {
-	    throw new PluginException.InvalidDefinition("Can't load " + ceName,
-							le);
 	  }
 	  try {
 	    int code = Integer.parseInt(first);
 	    // If parseable as an integer, it's a result code.
-	    // Might need to make this load from plugin classpath
-	    hResultMap.storeMapEntry(code, ceClass);
+	    hResultMap.storeMapEntry(code, val);
 	  } catch (NumberFormatException e) {
 	    try {
 	      Class eClass = Class.forName(first);
 	      // If a class name, it should be an exception class
-	      // Might need to make this load ceName from plugin classpath
 	      if (Exception.class.isAssignableFrom(eClass)) {
-		hResultMap.storeMapEntry(eClass, ceClass);
+		hResultMap.storeMapEntry(eClass, val);
 	      } else {
 		throw new
 		  PluginException.InvalidDefinition("First arg not an " +

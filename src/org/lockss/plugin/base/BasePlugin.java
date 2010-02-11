@@ -1,9 +1,9 @@
 /*
- * $Id: BasePlugin.java,v 1.61 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.61.6.1 2010-02-11 09:50:05 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -620,6 +620,16 @@ public abstract class BasePlugin
    * @param expectedType Type (class or interface) of expected rexult
    */
   public Object newAuxClass(String className, Class expectedType) {
+    return newAuxClass(className, expectedType, expectedType);
+  }
+
+  /** Create and return a new instance of a plugin auxilliary class.
+   * @param className the name of the auxilliary class
+   * @param expectedType Type (class or interface) of expected rexult
+   * @param wrapperType class to lookup wrapper
+   */
+  public Object newAuxClass(String className, Class expectedType,
+			    Class wrapperType) {
     Object obj = null;
     try {
       if (classLoader != null) {
@@ -655,7 +665,7 @@ public abstract class BasePlugin
     if (!expectedType.isInstance(obj)) {
       throw auxErr(className + " is not a " + expectedType.getName(), null);
     }
-    return WrapperUtil.wrap(obj, expectedType);      
+    return WrapperUtil.wrap(obj, wrapperType);
   }
 
 

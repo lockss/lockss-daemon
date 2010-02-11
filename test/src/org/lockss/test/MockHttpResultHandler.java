@@ -1,10 +1,10 @@
 /*
- * $Id: MockHttpResultHandler.java,v 1.3 2008-03-26 04:52:12 tlipkis Exp $
+ * $Id: MockHttpResultHandler.java,v 1.3.32.1 2010-02-11 09:50:04 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,13 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.test;
-// import org.lockss.test.*;
-// import org.lockss.plugin.*;
-// import org.lockss.daemon.*;
-// import java.util.*;
-// import org.lockss.util.*;
-// import org.lockss.app.*;
-// import org.lockss.plugin.base.*;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.urlconn.*;
 
 public class MockHttpResultHandler implements CacheResultHandler {
@@ -48,13 +42,15 @@ public class MockHttpResultHandler implements CacheResultHandler {
     ((HttpResultMap)crmap).storeMapEntry(200, this.getClass());
   }
 
-  public CacheException handleResult(int code,
-				     LockssUrlConnection connection) {
+  public CacheException handleResult(ArchivalUnit au,
+				     String url,
+				     int code) {
     return null;
   }
 
-  public CacheException handleResult(Exception ex,
-				     LockssUrlConnection connection) {
+  public CacheException handleResult(ArchivalUnit au,
+				     String url,
+				     Exception ex) {
     return null;
   }
 }

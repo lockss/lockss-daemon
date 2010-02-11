@@ -1,8 +1,10 @@
 /*
- * $Id: CacheException.java,v 1.14 2008-09-09 07:52:07 tlipkis Exp $
- *
+ * $Id: CacheException.java,v 1.14.22.1 2010-02-11 09:50:05 tlipkis Exp $
+ */
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,6 +38,7 @@ import java.util.*;
 import org.lockss.util.Constants;
 import org.lockss.config.*;
 import org.lockss.crawler.BaseCrawler;
+import org.lockss.plugin.PluginFetchEventResponse;
 
 /** Hierarchy of exceptions that may be returned from a plugin's {@link
  * org.lockss.plugin.UrlCacher#cache()} method, or its componenet methods
@@ -43,7 +46,10 @@ import org.lockss.crawler.BaseCrawler;
  * It is the plugin's responsibility to map all possible fetch or store
  * errors into one of these categories, so that the generic crawler can
  * handle the error in a standardized way. */
-public class CacheException extends IOException {
+public class CacheException
+  extends IOException
+  implements PluginFetchEventResponse {
+
   //Exceptions with this attribute will cause the crawl to be marked
   //as a failure
   public static final int ATTRIBUTE_FAIL = 1;

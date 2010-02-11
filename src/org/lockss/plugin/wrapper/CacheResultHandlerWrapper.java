@@ -1,10 +1,10 @@
 /*
- * $Id: CacheResultHandlerWrapper.java,v 1.3 2008-03-26 04:52:12 tlipkis Exp $
+ * $Id: CacheResultHandlerWrapper.java,v 1.3.32.1 2010-02-11 09:50:05 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,20 +58,23 @@ public class CacheResultHandlerWrapper
     }
   }
 
-  public CacheException handleResult(int code, LockssUrlConnection connection)
+  public CacheException handleResult(ArchivalUnit au,
+				     String url,
+				     int code)
       throws PluginException {
     try {
-      return inst.handleResult(code, connection);
+      return inst.handleResult(au, url, code);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
   }
 
-  public CacheException handleResult(Exception ex,
-				     LockssUrlConnection connection)
+  public CacheException handleResult(ArchivalUnit au,
+				     String url,
+				     Exception ex)
       throws PluginException {
     try {
-      return inst.handleResult(ex, connection);
+      return inst.handleResult(au, url, ex);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }

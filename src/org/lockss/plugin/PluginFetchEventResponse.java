@@ -1,6 +1,8 @@
 /*
- * $Id: CacheSuccess.java,v 1.2.88.1 2010-02-11 09:50:05 tlipkis Exp $
- *
+ * $Id: PluginFetchEventResponse.java,v 1.1.2.1 2010-02-11 09:50:05 tlipkis Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
@@ -28,10 +30,10 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.util.urlconn;
+package org.lockss.plugin;
 
-/** Marker class for success, as a value in a CacheResultMap, or the result
- * returned by {@link CacheResultHandler#handleResult(ArchivalUnit,
- * LockssUrlConnection, int)}.  */
-public class CacheSuccess extends CacheException {
+/** Common supertype of plugin-specified responses to HTTP response codes
+ * or fetch exceptions.
+ * @see DefinablePlugin#initResultMap()*/
+public interface PluginFetchEventResponse {
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.81 2009-04-07 04:52:29 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.81.14.1 2010-02-11 09:50:05 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -547,7 +547,7 @@ public class BaseUrlCacher implements UrlCacher {
 	logger.debug3("Response: " + conn.getResponseCode() + ": " +
 		      conn.getResponseMessage());
       }
-      CacheException c_ex = resultMap.checkResult(conn);
+      CacheException c_ex = resultMap.checkResult(au, conn);
       if(c_ex != null) {
 	// The stack below here is misleading.  Makes more sense for it
 	// to reflect the point at which it's thrown
@@ -639,7 +639,7 @@ public class BaseUrlCacher implements UrlCacher {
       throw resultMap.getMalformedURLException(ex);
     } catch (IOException ex) {
       logger.debug2("openConnection", ex);
-      throw resultMap.mapException(conn, ex, null);
+      throw resultMap.mapException(au, conn, ex, null);
     } catch (RuntimeException e) {
       logger.warning("openConnection: unexpected exception", e);
       throw e;
