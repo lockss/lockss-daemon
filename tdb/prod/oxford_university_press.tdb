@@ -1054,9 +1054,10 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://ct.oxfordjournals.org/
+        comment[down] = Published by Blackwell Publishing from Volume 16, 2006
         implicit < status ; name ; param[volume] >
 
-        au < released ; Communication Theory Volume 15 ; 15 >
+        au < down ; Communication Theory Volume 15 ; 15 >
 
       }
 
@@ -1142,9 +1143,10 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://cep.oxfordjournals.org/
+        comment[down] = Published by Blackwell Publishing from Volume 25, 2007.
         implicit < status ; name ; param[volume] >
 
-        au < released ; Contemporary Economic Policy Volume 24 ; 24 >
+        au < down ; Contemporary Economic Policy Volume 24 ; 24 >
 
       }
 
@@ -1259,9 +1261,10 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://ei.oxfordjournals.org/
+        comment[down] = Published by Blackwell Publishing from Volume 45, 2007.
         implicit < status ; name ; param[volume] >
 
-        au < released ; Economic Inquiry Volume 44 ; 44 >
+        au < down ; Economic Inquiry Volume 44 ; 44 >
 
       }
 
@@ -2006,9 +2009,10 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://hcr.oxfordjournals.org/
+        comment[down] = Published by Blackwell Publishing from Volume 32, 2006.
         implicit < status ; name ; param[volume] >
 
-        au < released ; Human Communication Research Volume 31 ; 31 >
+        au < down ; Human Communication Research Volume 31 ; 31 >
 
       }
 
@@ -2164,6 +2168,7 @@
       {
 
         param[base_url] = http://ietcom.oxfordjournals.org/
+        comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
 
@@ -2180,6 +2185,7 @@
       {
 
         param[base_url] = http://ietele.oxfordjournals.org/
+        comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
 
@@ -2196,6 +2202,7 @@
       {
 
         param[base_url] = http://ietfec.oxfordjournals.org/
+        comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
 
@@ -2212,6 +2219,7 @@
       {
 
         param[base_url] = http://ietisy.oxfordjournals.org/
+        comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
 
@@ -2428,20 +2436,22 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://iclq.oxfordjournals.org/
+        comment[down] = Published by Cambridge University Press from Volume 57, 2008.
         implicit < status ; name ; param[volume] >
 
-        au < released ; International and Comparative Law Quarterly Volume 55 ; 55 >
+        au < down ; International and Comparative Law Quarterly Volume 55 ; 55 >
 
       }
 
       {
 
         param[base_url] = http://iclq.oxfordjournals.org/
+        comment[down] = Published by Cambridge University Press from Volume 57, 2008.
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; International and Comparative Law Quarterly Volume 54 ; 54 >
+        au < HighWireStrVolPlugin ; down ; International and Comparative Law Quarterly Volume 54 ; 54 >
         au < HighWirePressPlugin ; doNotProcess ; International and Comparative Law Quarterly Volume 55 ; 55 >
-        au < HighWireStrVolPlugin ; released ; International and Comparative Law Quarterly Volume 56 ; 56 >
+        au < HighWireStrVolPlugin ; down ; International and Comparative Law Quarterly Volume 56 ; 56 >
 
       }
 
@@ -2939,9 +2949,10 @@
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://joc.oxfordjournals.org/
+        comment[down] = Published by Blackwell Publishing from Volume 56, 2006.
         implicit < status ; name ; param[volume] >
 
-        au < released ; Journal of Communication Volume 55 ; 55 >
+        au < down ; Journal of Communication Volume 55 ; 55 >
 
       }
 
@@ -3857,7 +3868,7 @@
     {
 
       title <
-        name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine
+        name = Journal of Medicine and Philosophy
       >
 
       {
@@ -3865,9 +3876,9 @@
         param[base_url] = http://jmp.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
-        au < HighWirePressPlugin ; released ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
-        au < HighWirePressPlugin ; testing ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 35 ; 35 >
+        au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 33 ; 33 >
+        au < HighWirePressPlugin ; released ; Journal of Medicine and Philosophy Volume 34 ; 34 >
+        au < HighWirePressPlugin ; testing ; Journal of Medicine and Philosophy Volume 35 ; 35 >
 
       }
 
