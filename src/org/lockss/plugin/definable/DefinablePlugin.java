@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.47 2010-02-11 10:05:41 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.48 2010-02-11 19:37:31 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.extractor.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.definable.DefinableArchivalUnit.ConfigurableCrawlWindow;
+import org.lockss.plugin.wrapper.*;
 
 /**
  * <p>DefinablePlugin: a plugin which uses the data stored in an
@@ -485,11 +486,12 @@ public class DefinablePlugin extends BasePlugin {
 	  // class name.
 	  PluginFetchEventResponse resp =
 	    (PluginFetchEventResponse)newAuxClass(ceName,
-						  PluginFetchEventResponse.class);
+						  PluginFetchEventResponse.class,
+						  null);
 	  if (resp instanceof CacheException) {
 	    val = resp.getClass();
 	  } else if (resp instanceof CacheResultHandler) {
-	    val = resp;
+	    val = WrapperUtil.wrap(resp, CacheResultHandler.class);
 	  } else {
             throw new
 	      PluginException.InvalidDefinition("Second arg not a " +
