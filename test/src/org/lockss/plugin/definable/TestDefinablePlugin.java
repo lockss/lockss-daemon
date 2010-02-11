@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.30 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.31 2010-02-11 10:05:40 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -375,31 +375,80 @@ public class TestDefinablePlugin extends LockssTestCase {
 
     plugin.initResultMap();
 
-    // nothing installed should give the default
-    assertEquals(CacheException.NoRetryDeadLinkException.class,
-		 getHttpResultMap(plugin).getExceptionClass(404));
-    assertEquals(CacheException.RetryableNetworkException_3_30S.class,
-		 getHttpResultMap(plugin).mapException(null, ioe1, null).getClass());
-    assertEquals(CacheException.RetryableNetworkException_3_30S.class,
-		 getHttpResultMap(plugin).mapException(null, ioe2, null).getClass());
+    // nothing installed, should give the default
+    assertClass(CacheException.NoRetryDeadLinkException.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      404, null));
+    assertClass(CacheException.RetryableNetworkException_3_30S.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      ioe1, null));
+    assertClass(CacheException.RetryableNetworkException_3_30S.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      ioe2, null));
 
     String spec1 =
       "404=org.lockss.util.urlconn.CacheException$RetryDeadLinkException";
     String spec2 =
       "java.net.SocketException" +
       "=org.lockss.util.urlconn.CacheException$RetryableNetworkException_2_5M";
+    String spec3 =
+      "407=" + MyHttpResultHandler.class.getName();
+    String spec4 =
+      "java.io.FileNotFoundException=" + MyHttpResultHandler.class.getName();
 
     map.putCollection(DefinablePlugin.KEY_EXCEPTION_LIST,
-		      ListUtil.list(spec1, spec2));
+		      ListUtil.list(spec1, spec2, spec3, spec4));
     plugin.initResultMap();
-    assertEquals(CacheException.RetryDeadLinkException.class,
-		 getHttpResultMap(plugin).getExceptionClass(404));
+
+    assertClass(CacheException.RetryDeadLinkException.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      404, null));
     // changing just SocketException should change result for
     // ConnectException as well
-    assertEquals(CacheException.RetryableNetworkException_2_5M.class,
-		 getHttpResultMap(plugin).mapException(null, ioe1, null).getClass());
-    assertEquals(CacheException.RetryableNetworkException_2_5M.class,
-		 getHttpResultMap(plugin).mapException(null, ioe2, null).getClass());
+    assertClass(CacheException.RetryableNetworkException_2_5M.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      ioe1, null));
+    assertClass(CacheException.RetryableNetworkException_2_5M.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      ioe2, null));
+
+    assertClass(RecordingCacheException.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      407, null));
+    assertClass(RecordingCacheException.class,
+		getHttpResultMap(plugin).mapException(null, null,
+						      new FileNotFoundException("foo"), null));
+  }
+
+  public void testInstallUnkClassCacheExceptionEntries() throws Exception {
+    DefinablePlugin plugin = new DefinablePlugin();
+    ExternalizableMap map = plugin.getDefinitionMap();
+
+    String spec1 =
+      "404=org.lockss.absent.package.NoClass";
+
+    map.putCollection(DefinablePlugin.KEY_EXCEPTION_LIST,
+		      ListUtil.list(spec1));
+    try {
+      plugin.initResultMap();
+      fail("Ill http response should throw");
+    } catch (PluginException.InvalidDefinition e) {
+    }
+  }
+
+  public void testInstallIllClassCacheExceptionEntries() throws Exception {
+    DefinablePlugin plugin = new DefinablePlugin();
+    ExternalizableMap map = plugin.getDefinitionMap();
+
+    String spec1 = "404=" + this.getClass().getName();
+
+    map.putCollection(DefinablePlugin.KEY_EXCEPTION_LIST,
+		      ListUtil.list(spec1));
+    try {
+      plugin.initResultMap();
+      fail("Ill http response should throw");
+    } catch (PluginException.InvalidDefinition e) {
+    }
   }
 
   public void testSiteNormalizeUrlNull() {
@@ -515,4 +564,39 @@ public class TestDefinablePlugin extends LockssTestCase {
       return au;
     }
   }
+
+  static public class MyHttpResultHandler implements CacheResultHandler {
+    public void init(CacheResultMap crmap) {
+      throw new UnsupportedOperationException();
+    }
+    public CacheException handleResult(ArchivalUnit au,
+				       String url,
+				       int responseCode) {
+      return new RecordingCacheException(au, url, responseCode, null);
+    }
+
+    public CacheException handleResult(ArchivalUnit au,
+				       String url,
+				       Exception ex) {
+      return new RecordingCacheException(au, url, -1, ex);
+    }
+  }
+
+  static class RecordingCacheException extends CacheException {
+    ArchivalUnit au;
+    String url;
+    int responseCode;
+    Exception triggerException;
+
+    RecordingCacheException(ArchivalUnit au,
+			    String url,
+			    int responseCode,
+			    Exception triggerException) {
+      this.au = au;
+      this.url = url;
+      this.responseCode = responseCode;
+      this.triggerException = triggerException;
+    }
+  }
+
 }

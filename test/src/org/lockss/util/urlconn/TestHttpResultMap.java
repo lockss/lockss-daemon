@@ -1,10 +1,10 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.8 2009-02-26 05:15:56 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.9 2010-02-11 10:05:40 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,13 +37,16 @@ import java.util.*;
 
 import org.lockss.test.*;
 import org.lockss.plugin.*;
+import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
 public class TestHttpResultMap extends LockssTestCase {
   private HttpResultMap resultMap = null;
+  private MockArchivalUnit mau;
 
   protected void setUp() throws Exception {
     super.setUp();
+    mau = new MockArchivalUnit();
     resultMap = new HttpResultMap();
   }
 
@@ -53,7 +56,7 @@ public class TestHttpResultMap extends LockssTestCase {
   }
 
   void assertX(int code, Class cls) {
-    CacheException exception = resultMap.mapException(null, code, "foo");
+    CacheException exception = resultMap.mapException(null, null, code, "foo");
     assertTrue("code:" + code, cls.isInstance(exception));
   }
 
@@ -63,16 +66,16 @@ public class TestHttpResultMap extends LockssTestCase {
     int ic;
 
     //check unknown result code
-    exception = resultMap.mapException(null,result_code, "foo");
+    exception = resultMap.mapException(null, null, result_code, "foo");
     assertTrue("code " + result_code + ": " + exception,
 	       exception instanceof CacheException.UnknownCodeException);
 
     // check Success result codes
-    exception = resultMap.mapException(null, 200, "foo");
+    exception = resultMap.mapException(null, null, 200, "foo");
     assertNull("code " + result_code + ": " + exception, exception);
-    exception = resultMap.mapException(null, 203, "foo");
+    exception = resultMap.mapException(null, null, 203, "foo");
     assertNull("code " + result_code + ": " + exception, exception);
-    exception = resultMap.mapException(null, 304, "foo");
+    exception = resultMap.mapException(null, null, 304, "foo");
     assertNull("code " + result_code + ": " + exception, exception);
 
     // check RetrySameUrlExceptions
@@ -122,33 +125,38 @@ public class TestHttpResultMap extends LockssTestCase {
     CacheException exception;
 
     //check unknown exception
-    exception = resultMap.mapException(null, new Exception(), "foo");
+    exception = resultMap.mapException(null, null, new Exception(), "foo");
     assertTrue(exception instanceof CacheException.UnknownExceptionException);
 
-    exception = resultMap.mapException(null, new RuntimeException(), "foo");
+    exception = resultMap.mapException(null, null,
+				       new RuntimeException(), "foo");
     assertTrue(exception instanceof CacheException.UnknownExceptionException);
 
-    exception = resultMap.mapException(null, new SocketException(), "foo");
+    exception = resultMap.mapException(null, null,
+				       new SocketException(), "foo");
     assertTrue(exception.toString(),
 	       exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
 
-    exception = resultMap.mapException(null, new ConnectException(), "foo");
+    exception = resultMap.mapException(null, null,
+				       new ConnectException(), "foo");
     assertTrue(exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
 
-    exception = resultMap.mapException(null, new NoRouteToHostException(),
+    exception = resultMap.mapException(null, null,
+				       new NoRouteToHostException(),
 				       "foo");
     assertTrue(exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
 
-    exception = resultMap.mapException(null, new UnknownHostException("h.tld"),
+    exception = resultMap.mapException(null, null,
+				       new UnknownHostException("h.tld"),
 				       "foo");
     assertTrue(exception instanceof
 	       CacheException.RetryableNetworkException_2_30S);
     assertEquals("Unknown host: h.tld", exception.getMessage());
 
-    exception = resultMap.mapException(null,
+    exception = resultMap.mapException(null, null,
 				       new LockssUrlConnection.ConnectionTimeoutException("msg"),
 				       "foo");
     assertTrue(exception instanceof
@@ -281,28 +289,74 @@ public class TestHttpResultMap extends LockssTestCase {
                exception instanceof CacheException.UnretryableException);
   }
 
-  public void testHttpResultHandler() {
+  public void testHttpResultHandlerInit() {
     int[] handledCodes = {200, 405, 302};
     CacheException exception;
     int result_code = 0;
 
-    MyMockHttpResultHandler handler = new MyMockHttpResultHandler();
+    MyHttpResultHandler handler = new MyHttpResultHandler();
     handler.setHandledCodes(handledCodes);
     handler.init(resultMap);
     // now lets find out if we actually handle the codes.
     // test the UnexpectedNoRetryException
     for(int ic =0; ic < handledCodes.length; ic++) {
       result_code = handledCodes[ic];
-      exception = resultMap.mapException(null, result_code, "foo");
+      exception = resultMap.mapException(null, null, result_code, "foo");
       assertTrue("code:" + result_code, exception instanceof CacheException);
     }
+  }
+
+  public void testHttpResultHandlerHandleCode() {
+    int[] handledCodes = {200, 405, 302};
+    CacheException exception;
+    int result_code = 0;
+
+    MyHttpResultHandler handler = new MyHttpResultHandler();
+    handler.setHandledCodes(handledCodes);
+    resultMap.storeMapEntry(405, new MyHttpResultHandler());
+    MockLockssUrlConnection conn = new MockLockssUrlConnection();
+    conn.setURL("uuu17");
+    Exception ee = resultMap.mapException(mau, conn, 405, null);
+    assertEquals(RecordingCacheException.class, ee.getClass());
+    RecordingCacheException re = (RecordingCacheException)ee;
+    assertEquals("uuu17", re.url);
+    assertSame(mau, re.au);
+    assertEquals(405, re.responseCode);
+    assertEquals(null, re.triggerException);
+    assertEquals(CacheException.NoRetryTempUrlException.class,
+		 resultMap.mapException(null, null, 302, null).getClass());
+    assertEquals(null, resultMap.mapException(null, null, 200, null));
+  }
+
+  public void testHttpResultHandlerHandleException() {
+    Exception e1 = new RuntimeException("foo");
+    Exception e2 = new SocketException("foo");
+    MyHttpResultHandler handler = new MyHttpResultHandler();
+    handler.setHandledExceptions(SetUtil.set(e1));
+    resultMap.storeMapEntry(e1.getClass(), new MyHttpResultHandler());
+
+    MockLockssUrlConnection conn = new MockLockssUrlConnection();
+    conn.setURL("uuu17");
+
+    Exception ee = resultMap.mapException(mau, conn, e1, null);
+    assertEquals(RecordingCacheException.class, ee.getClass());
+    RecordingCacheException re = (RecordingCacheException)ee;
+    assertEquals("uuu17", re.url);
+    assertSame(mau, re.au);
+    assertSame(e1, re.triggerException);
+    assertEquals(-1, re.responseCode);
+
+    assertEquals(CacheException.RetryableNetworkException_3_30S.class,
+		 resultMap.mapException(null, null, e2, null).getClass());
   }
 
   private void checkExceptionClass(int[] checkArray,
                                   Class checkClass) {
     for (int ic = 0; ic < checkArray.length; ic++) {
-      Class cls = resultMap.getExceptionClass(checkArray[ic]);
-      assertEquals("Wrong class for "+checkArray[ic], checkClass, cls);
+      CacheException ex = resultMap.mapException(null, null,
+						 checkArray[ic], null);
+      assertTrue("Wrong class for " + checkArray[ic] + ": " + ex.getClass(),
+		 checkClass.isInstance(ex));
     }
   }
 
@@ -317,17 +371,33 @@ public class TestHttpResultMap extends LockssTestCase {
     }
   }
 
-  static public class MyMockHttpResultHandler
-      implements CacheResultHandler {
-    private static int[] m_returnCodes;
-    private static Map<Exception,Object> m_exceptions;
+  static class RecordingCacheException extends CacheException {
+    ArchivalUnit au;
+    String url;
+    int responseCode;
+    Exception triggerException;
 
-    public MyMockHttpResultHandler() {
+    RecordingCacheException(ArchivalUnit au,
+			    String url,
+			    int responseCode,
+			    Exception triggerException) {
+      this.au = au;
+      this.url = url;
+      this.responseCode = responseCode;
+      this.triggerException = triggerException;
+    }
+  }
+
+  static public class MyHttpResultHandler implements CacheResultHandler {
+    private static int[] m_returnCodes;
+    private static Set<Exception> m_exceptions;
+
+    public MyHttpResultHandler() {
     }
 
     public void init(CacheResultMap crmap) {
       HttpResultMap map = (HttpResultMap)crmap;
-      if(m_returnCodes != null) {
+      if (m_returnCodes != null) {
         map.storeArrayEntries(m_returnCodes, this.getClass());
       }
     }
@@ -335,7 +405,7 @@ public class TestHttpResultMap extends LockssTestCase {
       m_returnCodes = returnCodes;
     }
 
-    void setHandledExceptions(Map<Exception,Object> exceptions) {
+    void setHandledExceptions(Set<Exception> exceptions) {
       m_exceptions = exceptions;
     }
 
@@ -346,25 +416,25 @@ public class TestHttpResultMap extends LockssTestCase {
      * @param connection HttpURLConnection
      * @return CacheException
      */
-    public CacheException handleResult(int code,
-				       LockssUrlConnection connection) {
-      for(int i=0; i< m_returnCodes.length; i++) {
-        if(m_returnCodes[i] == code) {
-          return new CacheException("Handled Exception");
+    public CacheException handleResult(ArchivalUnit au,
+				       String url,
+				       int responseCode) {
+      for (int code : m_returnCodes) {
+        if (code == responseCode) {
+          return new RecordingCacheException(au, url,
+					     responseCode, null);
         }
       }
       return null;
     }
 
-    public CacheException handleResult(Exception ex,
-				       LockssUrlConnection connection) {
-      Object ret = m_exceptions.get(ex);
-      if (ret != null) {
-	return new CacheException("Handled Exception");
+    public CacheException handleResult(ArchivalUnit au,
+				       String url,
+				       Exception ex) {
+      if (m_exceptions.contains(ex)) {
+	return new RecordingCacheException(au, url, -1, ex);
       }
       return null;
     }
-
   }
-
 }

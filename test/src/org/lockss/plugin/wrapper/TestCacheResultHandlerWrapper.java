@@ -1,10 +1,10 @@
 /*
- * $Id: TestCacheResultHandlerWrapper.java,v 1.3 2008-03-26 04:52:12 tlipkis Exp $
+ * $Id: TestCacheResultHandlerWrapper.java,v 1.4 2010-02-11 10:05:40 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -61,10 +61,10 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
     assertTrue(wrapper instanceof CacheResultHandlerWrapper);
     assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockCacheResultHandler);
 
-    MockLockssUrlConnection muc = new MockLockssUrlConnection();
-    wrapper.handleResult(5, muc);
+    String url = "foourl";
+    wrapper.handleResult(null, url, 5);
     MockCacheResultHandler mn = (MockCacheResultHandler)obj;
-    assertEquals(ListUtil.list(new Integer(5), muc), mn.args);
+    assertEquals(ListUtil.list(new Integer(5), url), mn.args);
   }
 
   public void testLinkageErrorInit() throws IOException {
@@ -94,7 +94,7 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
     MockCacheResultHandler a = (MockCacheResultHandler)obj;
     a.setError(err);
     try {
-      wrapper.handleResult(3, null);
+      wrapper.handleResult(null, null, 3);
       fail("Should have thrown PluginException");
     } catch (PluginException e) {
       assertTrue(e instanceof PluginException.LinkageError);
@@ -116,18 +116,20 @@ public class TestCacheResultHandlerWrapper extends LockssTestCase {
       }
     }
 
-    public CacheException handleResult(int code,
-				       LockssUrlConnection connection) {
-      args = ListUtil.list(new Integer(code), connection);
+    public CacheException handleResult(ArchivalUnit au,
+				       String url,
+				       int code) {
+      args = ListUtil.list(new Integer(code), url);
       if (error != null) {
 	throw error;
       }
       return new CacheException("bar");
     }
 
-    public CacheException handleResult(Exception ex,
-				       LockssUrlConnection connection) {
-      args = ListUtil.list(ex, connection);
+    public CacheException handleResult(ArchivalUnit au,
+				       String url,
+				       Exception ex) {
+      args = ListUtil.list(ex, url);
       if (error != null) {
 	throw error;
       }
