@@ -5403,10 +5403,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://rof.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 10 ; 10 >
-        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 11 ; 11 >
+        au < HighWirePressPlugin ; testing ; Review of Finance Volume 10 ; 10 >
+        au < HighWirePressPlugin ; testing ; Review of Finance Volume 11 ; 11 >
         au < HighWirePressPlugin ; released ; Review of Finance Volume 12 ; 12 >
-        au < HighWirePressPlugin ; manifest ; Review of Finance Volume 13 ; 13 >
+        au < HighWirePressPlugin ; testing ; Review of Finance Volume 13 ; 13 >
         au < HighWirePressPlugin ; ready ; Review of Finance Volume 14 ; 14 >
 
       }
@@ -5438,7 +5438,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; released ; Review of Financial Studies Volume 20 ; 20 >
         au < HighWirePressPlugin ; released ; Review of Financial Studies Volume 21 ; 21 >
-        au < HighWirePressPlugin ; manifest ; Review of Financial Studies Volume 22 ; 22 >
+        au < HighWirePressPlugin ; testing ; Review of Financial Studies Volume 22 ; 22 >
         au < HighWirePressPlugin ; testing ; Review of Financial Studies Volume 23 ; 23 >
         
       }
@@ -5457,10 +5457,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; Rheumatology Volume 44 ; 44 >
-        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 45 ; 45 >
-        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 46 ; 46 >
+        au < HighWirePressPlugin ; testing ; Rheumatology Volume 45 ; 45 >
+        au < HighWirePressPlugin ; testing ; Rheumatology Volume 46 ; 46 >
         au < HighWirePressPlugin ; released ; Rheumatology Volume 47 ; 47 >
-        au < HighWirePressPlugin ; manifest ; Rheumatology Volume 48 ; 48 >
+        au < HighWirePressPlugin ; testing ; Rheumatology Volume 48 ; 48 >
         au < HighWirePressPlugin ; released ; Rheumatology Volume 49 ; 49 >
 
       }
@@ -5490,9 +5490,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; exists ; Schizophrenia Bulletin Volume 31 ; 31 >
         au < HighWirePressPlugin ; doNotProcess ; Schizophrenia Bulletin Volume 32 ; 32 >
-        au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 33 ; 33 >
+        au < HighWirePressPlugin ; testing ; Schizophrenia Bulletin Volume 33 ; 33 >
         au < HighWirePressPlugin ; released ; Schizophrenia Bulletin Volume 34 ; 34 >
-        au < HighWirePressPlugin ; manifest ; Schizophrenia Bulletin Volume 35 ; 35 >
+        au < HighWirePressPlugin ; testing ; Schizophrenia Bulletin Volume 35 ; 35 >
         au < HighWirePressPlugin ; released ; Schizophrenia Bulletin Volume 36 ; 36 >
 
       }
@@ -5522,7 +5522,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Screen Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; released ; Screen Volume 47 ; 47 >
-        au < HighWirePressPlugin ; testing ; Screen Volume 48 ; 48 >
+        au < HighWirePressPlugin ; ready ; Screen Volume 48 ; 48 >
         au < HighWirePressPlugin ; released ; Screen Volume 49 ; 49 >
         au < HighWirePressPlugin ; manifest ; Screen Volume 50 ; 50 >
 
@@ -5541,8 +5541,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://scan.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; testing ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
-        au < HighWirePressPlugin ; testing ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
+        au < HighWirePressPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
+        au < HighWirePressPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
         au < HighWirePressPlugin ; released ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
         au < HighWirePressPlugin ; manifest ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
 
@@ -5573,7 +5573,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Social History of Medicine Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; released ; Social History of Medicine Volume 19 ; 19 >
-        au < HighWirePressPlugin ; testing ; Social History of Medicine Volume 20 ; 20 >
+        au < HighWirePressPlugin ; ready ; Social History of Medicine Volume 20 ; 20 >
         au < HighWirePressPlugin ; released ; Social History of Medicine Volume 21 ; 21 >
         au < HighWirePressPlugin ; manifest ; Social History of Medicine Volume 22 ; 22 >
 
@@ -5634,8 +5634,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Social Science Japan Journal Volume 8 ; 8 >
-        au < HighWirePressPlugin ; testing ; Social Science Japan Journal Volume 9 ; 9 >
-        au < HighWirePressPlugin ; testing ; Social Science Japan Journal Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Social Science Japan Journal Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Social Science Japan Journal Volume 10 ; 10 >
         au < HighWirePressPlugin ; released ; Social Science Japan Journal Volume 11 ; 11 >
         au < HighWirePressPlugin ; manifest ; Social Science Japan Journal Volume 12 ; 12 >
 
@@ -5664,7 +5664,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://ser.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; testing ; Socio-Economic Review Volume 3 ; 3 >
+        au < HighWirePressPlugin ; ready ; Socio-Economic Review Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 4 ; 4 >
         au < HighWirePressPlugin ; ready ; Socio-Economic Review Volume 5 ; 5 >
         au < HighWirePressPlugin ; released ; Socio-Economic Review Volume 6 ; 6 >
@@ -5770,10 +5770,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 92 ; 92 >
         au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 93 ; 93 >
         au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 94 ; 94 >
-        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 95 ; 95 >
-        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 96 ; 96 >
-        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 97 ; 97 >
-        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 98 ; 98 >
+        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 95 ; 95 >
+        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 96 ; 96 >
+        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 97 ; 97 >
+        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 98 ; 98 >
         au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 99 ; 99 >
         au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 100 ; 100 >
         au < HighWirePressPlugin ; released ; Toxicological Sciences Volume 101 ; 101 >
@@ -5782,7 +5782,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; released ; Toxicological Sciences Volume 104 ; 104 >
         au < HighWirePressPlugin ; released ; Toxicological Sciences Volume 105 ; 105 >
         au < HighWirePressPlugin ; released ; Toxicological Sciences Volume 106 ; 106 >
-        au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 107 ; 107 >
+        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 107 ; 107 >
         au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 108 ; 108 >
         au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 109 ; 109 >
         au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 110 ; 110 >
@@ -5805,7 +5805,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://treephys.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Tree Physiology Volume 29 ; 29 >
+        au < HighWirePressPlugin ; ready ; Tree Physiology Volume 29 ; 29 >
         au < HighWirePressPlugin ; released ; Tree Physiology Volume 30 ; 30 >
         
       }
