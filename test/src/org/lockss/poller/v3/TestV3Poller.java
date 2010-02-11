@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.31 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.32 2010-02-11 21:02:16 tlipkis Exp $
  */
 
 /*
@@ -910,7 +910,7 @@ public class TestV3Poller extends LockssTestCase {
                   StringUtil.separatedString(initialPeers, ";"));
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);
+    p.setProperty(V3Poller.PARAM_STATE_PATH, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idMgr = new MyIdentityManager();
     theDaemon.setIdentityManager(idMgr);

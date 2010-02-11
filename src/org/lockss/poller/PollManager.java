@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.208 2009-12-22 02:19:43 tlipkis Exp $
+ * $Id: PollManager.java,v 1.209 2010-02-11 21:02:17 tlipkis Exp $
  */
 
 /*
@@ -1453,11 +1453,8 @@ public class PollManager
   private void preloadStoredPolls() {
     this.serializedPollers = new HashMap();
     this.serializedVoters = new HashMap();
-    String relStateDir =
-      CurrentConfig.getParam(V3Serializer.PARAM_V3_STATE_LOCATION,
-                             V3Serializer.DEFAULT_V3_STATE_LOCATION);
-    File stateDir =
-      ConfigManager.getConfigManager().getPlatformDir(relStateDir);
+    File stateDir = PollUtil.ensurePollStateRoot();
+
     File[] dirs = stateDir.listFiles();
     if (dirs == null || dirs.length == 0) {
       theLog.debug2("No saved polls found.");

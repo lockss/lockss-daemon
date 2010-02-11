@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.14 2009-07-22 07:46:02 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.15 2010-02-11 21:02:16 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class TestV3Voter extends LockssTestCase {
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);
+    p.setProperty(V3Poller.PARAM_STATE_PATH, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
     
     lockssDaemon = getMockLockssDaemon();

@@ -58,7 +58,7 @@ public class TestV3PollFactory extends LockssTestCase {
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
-    p.setProperty(V3Serializer.PARAM_V3_STATE_LOCATION, tempDirPath);
+    p.setProperty(V3Poller.PARAM_STATE_PATH, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY, "TCP:[127.0.0.1]:9729");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
