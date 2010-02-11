@@ -381,7 +381,7 @@
         param[base_url] = http://aje.sagepub.com/
         implicit < status ; name ; param[volume] >
 
-        au < ready ; American Journal of Evaluation Volume 26 ; 26 >
+        au < released ; American Journal of Evaluation Volume 26 ; 26 >
 
       }
 
@@ -4511,7 +4511,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://ibe.sagepub.com/
         implicit < status ; name ; param[volume] >
 
-        au < ready ; Indoor and Built Environment Volume 15 ; 15 >
+        au < released ; Indoor and Built Environment Volume 15 ; 15 >
 
       }
 
@@ -5786,23 +5786,23 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
 
     }
 
-  {
-
-    title <
-      name = Journal of Dental Research
-    >
-    
     {
-    
-      param[base_url] = http://jdr.sagepub.com/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 87 ; 87 >
-      au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 88 ; 88 >
+      title <
+        name = Journal of Dental Research
+      >
     
+      {
+    
+        param[base_url] = http://jdr.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 87 ; 87 >
+        au < HighWirePressPlugin ; testing ; Journal of Dental Research Volume 88 ; 88 >
+    
+      }
+     
     }
-    
-  }
   
     {
 
@@ -5984,7 +5984,7 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; doNotProcess ; Journal of Child Health Care Volume 10 ; 10 >
         au < HighWireStrVolPlugin ; ready ; Journal of Child Health Care Volume 11 ; 11 >
         au < HighWirePressPlugin ; ready ; Journal of Child Health Care Volume 12 ; 12 >
-        au < HighWirePressPlugin ; tested ; Journal of Child Health Care Volume 13 ; 13 >
+        au < HighWirePressPlugin ; ready ; Journal of Child Health Care Volume 13 ; 13 >
 
       }
 
@@ -6024,8 +6024,8 @@ comment[ast] = no longer available with Sage.  Moved to Cambridge University Pre
         au < HighWireStrVolPlugin ; ready ; Journal of Classical Sociology Volume 5 ; 5 >
         au < HighWireStrVolPlugin ; ready ; Journal of Classical Sociology Volume 6 ; 6 >
         au < HighWireStrVolPlugin ; ready ; Journal of Classical Sociology Volume 7 ; 7 >
-        au < HighWirePressPlugin ; tested ; Journal of Classical Sociology Volume 8 ; 8 >
-        au < HighWirePressPlugin ; tested ; Journal of Classical Sociology Volume 9 ; 9 >
+        au < HighWirePressPlugin ; ready ; Journal of Classical Sociology Volume 8 ; 8 >
+        au < HighWirePressPlugin ; ready ; Journal of Classical Sociology Volume 9 ; 9 >
 
       }
 
@@ -6321,22 +6321,22 @@ comment[jcp] = some sort of custom layout
 
     }
 
-  {
-
-    title <
-      name = The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology
-    >
-
     {
 
-      param[base_url] = http://dms.sagepub.com/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+      title <
+        name = The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology
+      >
 
-      au < manifest ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
+      {
+
+        param[base_url] = http://dms.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; ready ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 >
+
+      }
 
     }
-
-  }
   
     {
 
@@ -6501,22 +6501,22 @@ comment[jcp] = some sort of custom layout
 
     }
 
-  {
-
-    title <
-      name = Journal of Early Intervention
-    >
-
     {
 
-      param[base_url] = http://jei.sagepub.com/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+      title <
+        name = Journal of Early Intervention
+      >
 
-      au < HighWirePressPlugin ; testing ; Journal of Early Intervention Volume 31 ; 31 >
+      {
+
+        param[base_url] = http://jei.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; testing ; Journal of Early Intervention Volume 31 ; 31 >
+    
+      }
     
     }
-    
-  }
   
     {
 
@@ -6616,24 +6616,24 @@ comment[jcp] = some sort of custom layout
       }
 
     }
-
-  {
-
-    title <
-      name = Journal of Emotional and Behavioral Disorders
-    >
-
+  
     {
-    
-      param[base_url] = http://ebx.sagepub.com/
+  
+      title <
+        name = Journal of Emotional and Behavioral Disorders
+    >
+  
+      {
+      
+        param[base_url] = http://ebx.sagepub.com/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-      au < HighWirePressPlugin ; ready ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
-      au < HighWirePressPlugin ; ready ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
-    
+  
+        au < HighWirePressPlugin ; ready ; Journal of Emotional and Behavioral Disorders Volume 16 ; 16 >
+        au < HighWirePressPlugin ; ready ; Journal of Emotional and Behavioral Disorders Volume 17 ; 17 >
+      
+      }
+      
     }
-    
-  }
   
     {
 
@@ -7712,23 +7712,23 @@ comment[mpj] = now published by Brill
 
     }
 
-  {
-
-    title <
-      name = Journal of Positive Behavior Interventions
-    >
-    
     {
 
-      param[base_url] = http://pbi.sagepub.com/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+      title <
+        name = Journal of Positive Behavior Interventions
+      >
+    
+      {
+  
+        param[base_url] = http://pbi.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < manifest ; 2008 ; Journal of Positive Behavior Interventions Volume 10 ; 10 >
-      au < tested ; 2009 ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
-
+        au < HighWirePressPlugin ; ready ; Journal of Positive Behavior Interventions Volume 10 ; 10 >
+        au < HighWirePressPlugin ; ready ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
+  
+      }
+  
     }
-
-  }
   
     {
 
