@@ -1,10 +1,10 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.139 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.140 2010-02-11 10:03:39 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -339,7 +339,20 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       auTitle = titleConfig.getDisplayName();
     }
     auName = makeName();
-    paramMap.putString(KEY_AU_TITLE, auTitle != null ? auTitle : auName);
+    if (logger.isDebug3()) {
+      logger.debug3("auTitle: " + auTitle + ", auConfig: "
+		    + (auConfig != null
+		       ? auConfig.get(PluginManager.AU_PARAM_DISPLAY_NAME)
+		       : "(null)")
+		    + ", auName: " + auName);
+    }
+    paramMap.putString(KEY_AU_TITLE,
+		       (auTitle != null
+			? auTitle
+			: (auConfig != null
+			   ? auConfig.get(PluginManager.AU_PARAM_DISPLAY_NAME,
+					  auName)
+			   : auName)));
   }
 
   public TitleConfig getTitleConfig() {
