@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.46.6.1 2010-02-11 09:50:05 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.46.6.2 2010-02-11 10:01:35 tlipkis Exp $
  */
 
 /*
@@ -485,8 +485,7 @@ public class DefinablePlugin extends BasePlugin {
 	  // class name.
 	  PluginFetchEventResponse resp =
 	    (PluginFetchEventResponse)newAuxClass(ceName,
-						  PluginFetchEventResponse.class,
-						  CacheResultHandler.class);
+						  PluginFetchEventResponse.class);
 	  if (resp instanceof CacheException) {
 	    val = resp.getClass();
 	  } else if (resp instanceof CacheResultHandler) {
