@@ -7896,11 +7896,11 @@ comment[mpj] = now published by Brill
       
       {
       
-      param[base_url] = http://jrn.sagepub.com/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >
+        param[base_url] = http://jrn.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < HighWirePressPlugin ; releasing ; Journal of Research in Nursing Volume 13 ; 13 >
-      au < HighWirePressPlugin ; releasing ; Journal of Research in Nursing Volume 14 ; 14 >
+        au < HighWirePressPlugin ; releasing ; Journal of Research in Nursing Volume 13 ; 13 >
+        au < HighWirePressPlugin ; releasing ; Journal of Research in Nursing Volume 14 ; 14 >
     
       }
       
