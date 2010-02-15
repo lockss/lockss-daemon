@@ -8,6 +8,20 @@
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
 
+
+  {
+    title <
+      name = Appalachian Heritage
+    >
+
+    param[journal_dir] = appalachian_heritage
+
+    au < testing ; Appalachian Heritage Volume 36 ; 36 >
+    au < testing ; Appalachian Heritage Volume 37 ; 37 >
+    au < testing ; Appalachian Heritage Volume 38 ; 38 >
+    
+  }
+
   {
     title <
       name = Early American Literature 

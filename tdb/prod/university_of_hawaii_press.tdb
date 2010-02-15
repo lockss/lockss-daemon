@@ -48,6 +48,24 @@ comment[0] = Atypon AUs
   
   {
     title <
+      name = Archives of Asian Art ;
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = archives_of_asian_art
+
+      au < testing ; Archives of Asian Art Volume 58 ; 58 >
+      au < testing ; Archives of Asian Art Volume 59 ; 59 >
+
+    }
+
+  }  
+  
+  {
+    title <
       name = Asian Perspectives ;
     >
 
