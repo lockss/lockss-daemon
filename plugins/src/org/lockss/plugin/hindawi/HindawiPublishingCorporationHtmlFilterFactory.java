@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.2 2010-02-16 22:54:35 greya Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.3 2010-02-16 23:49:38 greya Exp $
  */
 
 /*
@@ -50,12 +50,11 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
                                                                          "id",
                                                                          "left_column")),
                                                                          
-    HtmlTransform[] transforms = new HtmlTransform[] {
         // Filter out <input type="hidden" name="__VIEWSTATE" id="VIEWSTATE" 
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("input",
                                                                          "id",
                                                                          "VIEWSTATE")),
-    HtmlTransform[] transforms = new HtmlTransform[] {
+
         // Filter out <input type="hidden" name="__EVENTVALIDATION" id="EVENTVALIDATION"
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("input",
                                                                          "id",
