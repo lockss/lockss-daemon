@@ -691,6 +691,8 @@ comment[eurh30] = crawl failed because of a fetch error
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
 
+comment[eurjhf10] = manifest page not found (404)
+
     au < released ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
 
   }
@@ -1732,6 +1734,8 @@ comment[in1] = 500 errors
       name = Journal of Plant Ecology
     >
 
+comment[jpe12] = no manifest
+
     param[base_url] = http://jpe.oxfordjournals.org/
 
 
@@ -1841,6 +1845,8 @@ comment[in1] = 500 errors
     title <
       name = The Leo Baeck Institute Yearbook
     >
+
+comment[leobaeck2] = no manifest
 
     param[base_url] = http://leobaeck.oxfordjournals.org/
 
@@ -2506,6 +2512,8 @@ comment[mplant] = no manifest page
     title <
       name = Tree Physiology
     >
+
+comment[tre28] = no manifest
 
     param[base_url] = http://treephys.oxfordjournals.org/
 

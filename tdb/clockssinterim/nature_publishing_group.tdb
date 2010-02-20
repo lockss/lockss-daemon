@@ -91,6 +91,7 @@ comment[bmt44] = attempt full recrawls
     comment[clockss] = True
     comment[verify] = different website design?
 
+
   }
 
   {
@@ -160,6 +161,7 @@ comment[bmt44] = attempt full recrawls
     >
 
     param[journal_id] = embor
+
 
   }
 
@@ -253,7 +255,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = hr
 
     au < released ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
-
+    
   }
 
   {
@@ -345,7 +347,7 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = jes
 
-comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
+    comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
 
 
   }
@@ -381,6 +383,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     >
 
     param[journal_id] = jid
+    comment[1967] = The manifest page for 1967 is missing, and 1966 is odd.
 
     au < released ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
 
@@ -395,7 +398,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
     param[journal_id] = jp
 
     au < released ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
-
+    
   }
 
   {
@@ -426,7 +429,7 @@ comment[19] = Stubburn lack of consensus in issue 6, almost at agreement thresho
 
     param[journal_id] = leu
 
-
+    
   }
 
   {
@@ -923,7 +926,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = tpj
 
-
+    
   }
 
   {
@@ -957,6 +960,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = sc
 
     au < released ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
+    
 
   }
 
@@ -967,6 +971,8 @@ comment[nprot4] = poll mismatch
     >
 
     param[journal_id] = vital
+    param[comment] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
+    
 
   }
 
