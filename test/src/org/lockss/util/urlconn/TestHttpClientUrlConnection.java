@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.18 2008-08-26 06:50:50 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.18.22.1 2010-02-22 06:45:55 tlipkis Exp $
  */
 
 /*
@@ -196,7 +196,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals(200, conn.getResponseCode());
     InputStream is = conn.getResponseInputStream();
     assertTrue(is instanceof
-	       HttpClientUrlConnection.EofMonitoringInputStream);
+	       EofBugInputStream);
     String res = StringUtil.fromInputStream(is);
     assertEquals(test, res);
     assertEquals(0, is.available());
@@ -213,6 +213,18 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertNull(conn.getResponseInputStream());
   }
 
+  public void testResponseStreamWrapper() throws Exception {
+    client.setRes(200);
+    String test = "foo123";
+    StringInputStream sis = new StringInputStream(test);
+    method.setResponseStream(sis);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(200, conn.getResponseCode());
+    InputStream is = conn.getResponseInputStream();
+    assertTrue(is instanceof EofBugInputStream);
+  }
+
   public void testResponseStreamNoWrapper() throws Exception {
     ConfigurationUtil.setFromArgs(HttpClientUrlConnection.
 				  PARAM_USE_WRAPPER_STREAM, "false");
@@ -224,8 +236,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertTrue(conn.isExecuted());
     assertEquals(200, conn.getResponseCode());
     InputStream is = conn.getResponseInputStream();
-    assertFalse(is instanceof
-		HttpClientUrlConnection.EofMonitoringInputStream);
+    assertFalse(is instanceof EofBugInputStream);
   }
 
   public void testExecuteProxy() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.30 2009-02-26 05:15:23 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.30.16.1 2010-02-22 06:45:55 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -52,7 +52,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private static Logger log = Logger.getLogger("HttpClientUrlConnection");
 
   /* If true, the InputStream returned from getResponseInputStream() will
-   * be wrapped in an EofMonitoringInputStream */
+   * be wrapped in an EofBugInputStream */
   static final String PARAM_USE_WRAPPER_STREAM = PREFIX + "useWrapperStream";
   static final boolean DEFAULT_USE_WRAPPER_STREAM = true;
 
@@ -334,7 +334,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
     if (CurrentConfig.getBooleanParam(PARAM_USE_WRAPPER_STREAM,
                                       DEFAULT_USE_WRAPPER_STREAM)) {
-      return new EofMonitoringInputStream(in);
+      return new EofBugInputStream(in);
     }
     return in;
   }
@@ -451,63 +451,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
     public ConnectionTimeoutException(Throwable t) {
       super(t.getMessage(), t);
-    }
-  }
-
-  /** Stream wrapper that doesn't call the underlying stream after it has
-   * signalled EOF.  HttpClient sometimes automatically closes the input
-   * stream when it reaches EOF, and if a BufferedInputStream is used to
-   * read from it, it might call available(), etc. after the stream has
-   * been (automatically) closed. */
-  static class EofMonitoringInputStream extends InputStream {
-    private InputStream in;
-    private boolean EOF = false;
-
-    EofMonitoringInputStream(InputStream in) {
-      this.in = in;
-    }
-    public int read() throws IOException {
-      if (EOF) return -1;
-      return check(in.read());
-    }
-    public int read(byte b[]) throws IOException {
-      if (EOF) return -1;
-      return check(read(b, 0, b.length));
-    }
-    public int read(byte b[], int off, int len) throws IOException {
-      if (EOF) return -1;
-      return check(in.read(b, off, len));
-    }
-    public long skip(long n) throws IOException {
-      if (EOF) return 0;
-      return checkSkip(in.skip(n));
-    }
-    public int available() throws IOException {
-      if (EOF) return 0;
-      return in.available();
-    }
-    public void close() throws IOException {
-      in.close();
-    }
-    public synchronized void mark(int readlimit) {
-    }
-    public synchronized void reset() throws IOException {
-      throw new IOException("mark/reset not supported");
-    }
-    public boolean markSupported() {
-      return false;
-    }
-    int check(int n) {
-      if (n < 0) {
- 	EOF = true;
-      }
-      return n;
-    }
-    long checkSkip(long n) {
-      if (n <= 0) {
- 	EOF = true;
-      }
-      return n;
     }
   }
 }
