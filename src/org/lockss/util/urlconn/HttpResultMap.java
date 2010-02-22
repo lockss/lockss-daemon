@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.10.16.1 2010-02-11 09:50:05 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.10.16.2 2010-02-22 06:47:10 tlipkis Exp $
  */
 
 /*
@@ -260,6 +260,10 @@ public class HttpResultMap implements CacheResultMap {
     storeMapEntry(SocketException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
     storeMapEntry(LockssUrlConnection.ConnectionTimeoutException.class,
+ 		  CacheException.RetryableNetworkException_3_30S.class);
+    // SocketTimeoutException is an InterruptedIOException, not a
+    // SocketException
+    storeMapEntry(SocketTimeoutException.class,
  		  CacheException.RetryableNetworkException_3_30S.class);
     // I don't think these can happen
     storeMapEntry(ProtocolException.class,
