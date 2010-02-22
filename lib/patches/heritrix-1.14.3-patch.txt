@@ -1,0 +1,24 @@
+Index: src/java/org/archive/io/ArchiveRecord.java
+===================================================================
+--- src/java/org/archive/io/ArchiveRecord.java	(revision 6620)
++++ src/java/org/archive/io/ArchiveRecord.java	(working copy)
+@@ -189,8 +189,8 @@
+ 			if (this.digest != null) {
+ 				this.digest.update((byte) c);
+ 			}
++        		incrementPosition();
+ 		}
+-		incrementPosition();
+ 		return c;
+ 	}
+ 
+@@ -212,8 +212,8 @@
+ 			if (this.digest != null && read >= 0) {
+ 				this.digest.update(b, offset, read);
+ 			}
++        		incrementPosition(read);
+ 		}
+-		incrementPosition(read);
+ 		return read;
+ 	}
+ 
