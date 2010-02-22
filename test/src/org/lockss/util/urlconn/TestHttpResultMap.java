@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.9 2010-02-11 10:05:40 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.10 2010-02-22 07:05:37 tlipkis Exp $
  */
 
 /*
@@ -134,6 +134,12 @@ public class TestHttpResultMap extends LockssTestCase {
 
     exception = resultMap.mapException(null, null,
 				       new SocketException(), "foo");
+    assertTrue(exception.toString(),
+	       exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
+
+    exception = resultMap.mapException(null, null,
+				       new SocketTimeoutException(), "foo");
     assertTrue(exception.toString(),
 	       exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);
