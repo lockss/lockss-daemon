@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.252 2010-02-04 06:50:48 tlipkis Exp $
+ $Id: build.xml,v 1.253 2010-02-22 06:59:20 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -236,8 +236,8 @@ Args:
   <property name="flute.jar" value="${lib}/flute-1.3.jar" />
   <!-- Needed by Flute: -->
   <property name="sac.jar" value="${lib}/sac-1.3.jar" />
-  <!-- Needed by ArcExploder: -->
-  <property name="heritrix.jar" value="${lib}/heritrix-1.14.3.jar" />
+  <!-- Needed by ArcExploder, exporters, jcr repo: -->
+  <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p1.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
 
   <property name="ext.javadoc"
