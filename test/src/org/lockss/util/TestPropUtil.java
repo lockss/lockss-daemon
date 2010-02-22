@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.18 2009-07-22 06:41:55 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.18.10.1 2010-02-22 06:46:36 tlipkis Exp $
  */
 
 /*
@@ -321,6 +321,14 @@ public class TestPropUtil extends LockssTestCase {
     props.setProperty("key.3", "val:3");
     props.setProperty("key4", "val.4");
     assertEncodedPropsInverse(props);
+  }
+
+  public void testToHeaderString() {
+    Properties props = new Properties();
+    props.setProperty("key1", "val1");
+    props.setProperty("key2", "val 2");
+    assertEquals("key1: val1\r\nkey2: val 2\r\n",
+		 PropUtil.toHeaderString(props));
   }
 
 }
