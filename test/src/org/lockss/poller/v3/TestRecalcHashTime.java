@@ -1,5 +1,5 @@
 /*
- * $Id: TestRecalcHashTime.java,v 1.2 2008-05-27 00:51:08 tlipkis Exp $
+ * $Id: TestRecalcHashTime.java,v 1.2.28.1 2010-02-22 06:44:10 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class TestRecalcHashTime extends LockssTestCase {
     pollMgr = daemon.getPollManager();
     hashSvc.startService();
     schedSvc.startService();
-    mau = new MockArchivalUnit();
+    mau = new MockArchivalUnit(new MockPlugin());
     mcus = new MyMockCUS();
     // hash iterator not used but must be non-null
     mcus.setHashIterator(ListUtil.list("1").iterator());

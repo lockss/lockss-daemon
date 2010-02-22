@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.19 2008-05-19 07:42:12 tlipkis Exp $
+ * $Id: TestHashQueue.java,v 1.19.28.1 2010-02-22 06:44:10 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class TestHashQueue extends LockssTestCase {
 
   static Logger log = Logger.getLogger("HashQueue");
 //    static HashServiceTestPlugin.CUS cus = HashServiceTestPlugin.getCUS();
+  MockArchivalUnit mau = null;
   MockCachedUrlSet cus;
   static final String hashAlgorithm = "SHA-1";
   static MessageDigest dig;
@@ -67,7 +68,8 @@ public class TestHashQueue extends LockssTestCase {
     if (dig == null) {
       dig = MessageDigest.getInstance(hashAlgorithm);
     }
-    cus = new MockCachedUrlSet(null, null);
+    mau = new MockArchivalUnit(new MockPlugin());
+    cus = new MockCachedUrlSet(mau, null);
     cus.setHashItSource(Collections.EMPTY_LIST);
     TimeBase.setSimulated();
   }
