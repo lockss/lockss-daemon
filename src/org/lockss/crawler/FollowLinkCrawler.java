@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.77 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.78 2010-02-22 07:00:29 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.net.*;
 import java.io.*;
 import org.apache.commons.collections.map.LRUMap;
+
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.config.*;
@@ -45,6 +46,7 @@ import org.lockss.state.*;
 import org.lockss.hasher.*;
 import org.lockss.filter.*;
 import org.lockss.extractor.*;
+import org.lockss.alert.Alert;
 
 /**
  * A abstract class that implemented by NewContentCrawler and OaiCrawler
@@ -682,10 +684,15 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
   }
 
-  protected boolean isGloballyExcludedUrl(String url) {
+  protected boolean checkGloballyExcludedUrl(ArchivalUnit au, String url) {
     if (crawlMgr != null) {
       if (crawlMgr.isGloballyExcludedUrl(au, url)) {
 	crawlStatus.signalErrorForUrl(url, "Excluded (probable recursion)");
+	String msg = "URL excluded (probable recursion): " + url;
+	logger.siteWarning(msg);
+	if (alertMgr != null) {
+	  alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_EXCLUDED_URL, au), msg);
+	}
 	return true;
       }
     }
@@ -765,7 +772,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  return;
 	} else {
 	  if (au.shouldBeCached(normUrl)) {
- 	    if (isGloballyExcludedUrl(normUrl)) {
+ 	    if (checkGloballyExcludedUrl(au, normUrl)) {
 	      if (logger.isDebug2()) {
 		logger.debug2("Globally excluded url: "+normUrl);
 	      }

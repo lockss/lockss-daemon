@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.126 2009-07-22 06:38:04 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.127 2010-02-22 07:00:29 tlipkis Exp $
  */
 
 /*
@@ -489,16 +489,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (globallyExcludedUrlPattern == null) {
       return false;
     }
-    boolean isExcluded =
-      RegexpUtil.getMatcher().contains(url, globallyExcludedUrlPattern);
-    if (isExcluded) {
-      String msg = "URL excluded (probably malformed): " + url;
-      logger.siteWarning(msg);
-      if (alertMgr != null) {
-	alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_EXCLUDED_URL, au), msg);
-      }
-    }
-    return isExcluded;
+    return RegexpUtil.getMatcher().contains(url, globallyExcludedUrlPattern);
   }
 
   void setExcludedUrlPattern(String pat, String defaultPat) {
