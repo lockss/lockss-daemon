@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.4 2009-07-22 06:37:20 tlipkis Exp $
+ * $Id: TestAdminServletManager.java,v 1.5 2010-02-22 07:03:26 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,8 @@ public class TestAdminServletManager extends LockssTestCase {
   ServletDescr contentAdminDescrs[] = {
     SERVLET_PROXY_ACCESS_CONTROL,
     SERVLET_PROXY_AND_CONTENT,
+    SERVLET_EXPORT_CONTENT,
+    LINK_EXPORTS,
   };
 
   ServletDescr debugDescrs[] = {

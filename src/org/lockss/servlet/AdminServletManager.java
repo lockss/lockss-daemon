@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.13 2009-11-04 03:13:19 dshr Exp $
+ * $Id: AdminServletManager.java,v 1.14 2010-02-22 07:03:27 tlipkis Exp $
  */
 
 /*
@@ -313,6 +313,17 @@ public class AdminServletManager extends BaseServletManager {
     new ServletDescr("ServeContent",
 		     ServeContent.class,
                      "Serve Content");
+  public static final ServletDescr SERVLET_EXPORT_CONTENT =
+    new ServletDescr("ExportContent",
+		     ExportContent.class,
+                     "Export Content",
+		     (ServletDescr.IN_NAV
+		      | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
+		     "Export preserved content as Zip, WARC, etc.") {
+      public boolean isEnabled(LockssDaemon daemon) {
+	return CurrentConfig.getBooleanParam(ExportContent.PARAM_ENABLE_EXPORT,
+					     ExportContent.DEFAULT_ENABLE_EXPORT);
+      }};
   public static final ServletDescr SERVLET_LIST_OBJECTS =
     new ServletDescr("ListObjects",
 		     ListObjects.class,
@@ -328,6 +339,12 @@ public class AdminServletManager extends BaseServletManager {
                      "Logs",
                      "log",
                      ServletDescr.IN_NAV | ServletDescr.NEED_ROLE_DEBUG);
+  protected static final ServletDescr LINK_EXPORTS =
+    new ServletDescr(null,
+		     null,
+                     "Exports",
+                     "export",
+		     ServletDescr.NEED_ROLE_CONTENT_ADMIN);
   // Link to ISOs only appears if there are actually any ISOs
   protected static final ServletDescr LINK_ISOS =
     new ServletDescr(null,
@@ -417,11 +434,13 @@ public class AdminServletManager extends BaseServletManager {
      SERVLET_DAEMON_STATUS,
      SERVLET_DISPLAY_CONTENT,
      SERVLET_SERVE_CONTENT,
+     SERVLET_EXPORT_CONTENT,
      SERVLET_LIST_OBJECTS,
      SERVLET_DEBUG_PANEL,
      SERVLET_EXPERT_CONFIG,
      LINK_LOGS,
      LINK_ISOS,
+     LINK_EXPORTS,
      SERVLET_THREAD_DUMP,
      SERVLET_RAISE_ALERT,
      SERVLET_HASH_CUS,
@@ -439,12 +458,14 @@ public class AdminServletManager extends BaseServletManager {
 
 
   private String logdir;
+  private File exportdir;
   private String redirectRootTo = DEFAULT_REDIRECT_ROOT;
   protected String isodir;
   private LockssResourceHandler rootResourceHandler;
   private List inFrameContentTypes;
   private boolean hasIsoFiles = false;
   private boolean compressorEnabled = DEFAULT_COMPRESSOR_ENABLED;
+  private boolean exportEnabled = ExportContent.DEFAULT_ENABLE_EXPORT;
 
   public AdminServletManager() {
     super(SERVER_NAME);
@@ -455,6 +476,20 @@ public class AdminServletManager extends BaseServletManager {
     super.setConfig(config, prevConfig, changedKeys);
     isodir = config.get(PARAM_ISODIR);
     logdir = config.get(PARAM_LOGDIR);
+    if (changedKeys.contains(ExportContent.PREFIX)) {
+      String path = config.get(ExportContent.PARAM_EXPORT_PATH);
+      if (StringUtil.isNullString(path)) {
+	String tmpdir = config.get(ConfigManager.PARAM_TMPDIR);
+	exportdir = new File(tmpdir, ExportContent.DEFAULT_EXPORT_DIR);
+      } else {
+	exportdir = new File(path);
+      }
+      if (!exportdir.exists()) {
+	if (!FileUtil.ensureDirExists(exportdir)) {
+	  log.error("Could not create export directory " + exportdir);
+	}
+      }
+    }
     if (changedKeys.contains(PREFIX)) {
       if (changedKeys.contains(PARAM_REDIRECT_ROOT)) {
 	redirectRootTo = config.get(PARAM_REDIRECT_ROOT,
@@ -470,6 +505,8 @@ public class AdminServletManager extends BaseServletManager {
       setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
       compressorEnabled = config.getBoolean(PARAM_COMPRESSOR_ENABLED,
 					    DEFAULT_COMPRESSOR_ENABLED);
+      exportEnabled = config.getBoolean(ExportContent.PARAM_ENABLE_EXPORT,
+					ExportContent.DEFAULT_ENABLE_EXPORT);
       if (changedKeys.contains(PARAM_INFRAME_CONTENT_TYPES)) {
 	inFrameContentTypes = config.getList(PARAM_INFRAME_CONTENT_TYPES);
 	if (inFrameContentTypes == null || inFrameContentTypes.isEmpty()) {
@@ -495,6 +532,11 @@ public class AdminServletManager extends BaseServletManager {
     return hasIsoFiles;
   }
 
+  /** Return the directory in which to put generated export files */
+  public File getExportDir() {
+    return exportdir;
+  }
+
   protected void installUsers() {
     installDebugUser();
     installPlatformUser();
@@ -507,6 +549,10 @@ public class AdminServletManager extends BaseServletManager {
       if (true || logdir != null) {
 	// Create context for serving log files and directory
 	setupLogContext(server, realm, "/log/", logdir);
+      }
+      if (exportEnabled) {
+	// Create context for serving exported files and directory
+	setupDirContext(server, realm, "/export/", exportdir.toString(), null);
       }
       if (isodir != null) {
 	// Create context for serving ISO files and directory
