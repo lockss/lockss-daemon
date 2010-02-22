@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.12 2009-06-19 08:29:02 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.13 2010-02-22 07:02:59 tlipkis Exp $
  */
 
 /*
@@ -343,7 +343,11 @@ class AllAuids extends PluginStatus implements StatusAccessor.DebugOnly {
     List rows = new ArrayList();
     for (TitleConfig tc : tcs) {
       Map row = new HashMap();
-      row.put("auid", tc.getAuId(pmgr));
+      try {
+	row.put("auid", tc.getAuId(pmgr));
+      } catch (RuntimeException e) {
+	row.put("auid", "(Can't compute AUID)");
+      }
       row.put("name", tc.getDisplayName());
       rows.add(row);
     }
