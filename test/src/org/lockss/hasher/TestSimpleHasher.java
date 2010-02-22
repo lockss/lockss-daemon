@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.5 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestSimpleHasher.java,v 1.6 2010-02-22 07:02:39 tlipkis Exp $
  */
 
 /*
@@ -64,14 +64,14 @@ public class TestSimpleHasher extends LockssTestCase {
   byte[] challenge = null;
   byte[] verifier = null;
 
-  MockArchivalUnit setupContentTree() {
-    return setupContentTree(null);
+  MockArchivalUnit mau = null;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    mau = new MockArchivalUnit(new MockPlugin());
   }
 
-  MockArchivalUnit setupContentTree(MockArchivalUnit mau) {
-    if (mau == null) {
-      mau = new MockArchivalUnit();
-    }
+  MockArchivalUnit setupContentTree() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     List files = new ArrayList();
     for (int ix = 0; ix < urls.length; ix++) {

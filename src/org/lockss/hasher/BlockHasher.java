@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.15 2009-04-07 04:51:24 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.16 2010-02-22 07:02:39 tlipkis Exp $
  */
 
 /*
@@ -50,10 +50,19 @@ public class BlockHasher extends GenericHasher {
     Configuration.PREFIX + "blockHasher.maxVersions";
   public static final int DEFAULT_HASH_MAX_VERSIONS = 5;
   
+  /** If true, files not within the crawl spec are ignored by polls.  (Can
+   * happen if spec has changed since files were collected.)  */
+  public static final String PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC = 
+    Configuration.PREFIX + "blockHasher.ignoreFilesOutsideCrawlSpec";
+  public static final boolean DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC = false;
+
   protected static Logger log = Logger.getLogger("BlockHasher");
 
   private int maxVersions = DEFAULT_HASH_MAX_VERSIONS;
   private boolean includeUrl = false;
+  private boolean ignoreFilesOutsideCrawlSpec =
+    DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC;
+  private int filesIgnored = 0;
 
   protected MessageDigest[] initialDigests;
   protected byte[][] initByteArrays;
@@ -116,8 +125,12 @@ public class BlockHasher extends GenericHasher {
   }
 
   private void setConfig() {
-    maxVersions = CurrentConfig.getIntParam(PARAM_HASH_MAX_VERSIONS,
-                                            DEFAULT_HASH_MAX_VERSIONS);
+    Configuration config = ConfigManager.getCurrentConfig();
+    maxVersions = config.getInt(PARAM_HASH_MAX_VERSIONS,
+				DEFAULT_HASH_MAX_VERSIONS);
+    ignoreFilesOutsideCrawlSpec =
+      config.getBoolean(PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC,
+			DEFAULT_IGNORE_FILES_OUTSIDE_CRAWL_SPEC);
   }
 
   /** Tell the hasher whether to include the URL in the hash */
@@ -134,6 +147,10 @@ public class BlockHasher extends GenericHasher {
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
+    if (filesIgnored != 0) {
+      log.info(filesIgnored +
+	       " files ignored because they're no longer in the crawl spec");
+    }
     // XXX need to account for number of parallel hashes
     cus.storeActualHashDuration(elapsed, err);
   }
@@ -144,9 +161,21 @@ public class BlockHasher extends GenericHasher {
 
   /** V3 hashes only content nodes */
   protected boolean isIncluded(CachedUrlSetNode node) {
-    if (isTrace)
-      log.debug3("isIncluded(" + node.getUrl() + "): " + node.hasContent());
-    return node.hasContent();
+    String url = node.getUrl();
+    boolean res = node.hasContent();
+    if (res) {
+      if (crawlMgr != null && crawlMgr.isGloballyExcludedUrl(au, url)) {
+	if (isTrace) log.debug3("globally excluded: " + url);
+	return false;
+      }
+      if (ignoreFilesOutsideCrawlSpec && !au.shouldBeCached(url)) {
+	filesIgnored++;
+	if (isTrace) log.debug3("isIncluded(" + url + "): not in spec");
+	return false;
+      }
+    }
+    if (isTrace) log.debug3("isIncluded(" + url + "): " + res);
+    return res;
   }
 
   public MessageDigest[] getDigests() {

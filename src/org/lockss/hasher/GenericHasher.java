@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.21 2009-04-07 04:51:24 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.22 2010-02-22 07:02:39 tlipkis Exp $
  */
 
 /*
@@ -34,8 +34,11 @@ package org.lockss.hasher;
 import java.io.*;
 import java.util.*;
 import java.security.*;
-import org.lockss.daemon.*;
+
+import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
+import org.lockss.crawler.CrawlManager;
 import org.lockss.plugin.*;
 
 /**
@@ -49,6 +52,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected MessageDigest digest = null;
   protected CachedUrlSetNode curNode = null;
   protected CachedUrl curCu = null;
+  protected CrawlManager crawlMgr = null;
 
   protected Iterator iterator = null;
   protected boolean isFinished = false;
@@ -65,6 +69,10 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
     iterator = getIterator(cus);
     if (iterator == null) {
       throw new IllegalArgumentException(cus + " returned null iterator");
+    }
+    LockssDaemon daemon = AuUtil.getDaemon(au);
+    if (daemon != null) {
+      crawlMgr = daemon.getCrawlManager();
     }
   }
 

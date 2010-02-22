@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.13 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.14 2010-02-22 07:02:39 tlipkis Exp $
  */
 
 /*
@@ -62,28 +62,27 @@ public class TestBlockHasher extends LockssTestCase {
     BASE_URL + "foo/3",
     BASE_URL + "foo/3/a.html",
     BASE_URL + "foo/3/b.html",
+    BASE_URL + "foo/outside_crawl_spec/b.html",
   };
 
+  MockArchivalUnit mau = null;
   MockMessageDigest dig = null;
 
   public void setUp() throws Exception {
     super.setUp();
     dig = new MockMessageDigest(); 
+    mau = new MockArchivalUnit(new MockPlugin());
   }
 
   MockArchivalUnit setupContentTree() {
-    return setupContentTree(null);
-  }
-
-  MockArchivalUnit setupContentTree(MockArchivalUnit mau) {
-    if (mau == null) {
-      mau = new MockArchivalUnit();
-    }
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     List files = new ArrayList();
-    for (int ix = 0; ix < urls.length; ix++) {
-      CachedUrl cu = mau.addUrl(urls[ix], false, true);
+    for (String url : urls) {
+      CachedUrl cu = mau.addUrl(url, false, true);
       files.add(cu);
+      if (url.matches(".*outside_crawl_spec.*")) {
+	mau.removeUrlToBeCached(url);
+      }
     }
     cus.setHashItSource(files);
     return mau;
@@ -197,7 +196,7 @@ public class TestBlockHasher extends LockssTestCase {
     };
 
   public void testNullArgs() throws IOException {
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
     cus.setHashItSource(ListUtil.list(BASE_URL));
     MessageDigest[] digs = { dig };
     MessageDigest[] digs2 = { dig, dig };
@@ -233,7 +232,7 @@ public class TestBlockHasher extends LockssTestCase {
 
   public void testEmptyIterator() throws Exception {
     RecordingEventHandler handRec = new RecordingEventHandler();
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     cus.setHashItSource(Collections.EMPTY_LIST);
@@ -244,7 +243,7 @@ public class TestBlockHasher extends LockssTestCase {
   }
 
   public void testSetConfig() throws Exception {
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
     cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
     cus.setFlatIterator(null);
     cus.setEstimatedHashDuration(54321);
@@ -274,7 +273,7 @@ public class TestBlockHasher extends LockssTestCase {
   }
 
   public void testAccessors() throws IOException {
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
     cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
     cus.setFlatIterator(null);
     cus.setEstimatedHashDuration(54321);
@@ -426,7 +425,6 @@ public class TestBlockHasher extends LockssTestCase {
     if (!isFiltered) {
       hasher.setFiltered(false);
     }
-    log.info("testUnfiltered");
     assertEquals(exp.length(), hashToEnd(hasher, 100));
     assertTrue(hasher.finished());
     List<Event> events = handRec.getEvents();
@@ -491,7 +489,8 @@ public class TestBlockHasher extends LockssTestCase {
     return sb.toString();
   }
 
-  public void testSeveralContent(int stepSize, boolean includeUrl)
+  public void testSeveralContent(int stepSize, boolean includeUrl,
+				 boolean ignoreFilesOutsideCrawlSpec)
       throws Exception {
     RecordingEventHandler handRec = new RecordingEventHandler();
     MockArchivalUnit mau = setupContentTree();
@@ -501,25 +500,36 @@ public class TestBlockHasher extends LockssTestCase {
     addContent(mau, urls[7], s3);
     addContent(mau, urls[8], s4);
     addContent(mau, urls[9], s5);
+    addContent(mau, urls[13], s5);
     MessageDigest[] digs = { dig };
     byte[][] inits = {null};
     BlockHasher hasher = new BlockHasher(cus, digs, inits, handRec);
     hasher.setIncludeUrl(includeUrl);
     int len =
       s1.length() + s2.length() + s3.length() + s4.length() + s5.length();
+    if (!ignoreFilesOutsideCrawlSpec) {
+      len += s5.length();
+    }
     if (includeUrl) {
       len += urls[4].length() + urls[6].length() + urls[7].length() +
 	urls[8].length() + urls[9].length();
+      if (!ignoreFilesOutsideCrawlSpec) {
+	len += urls[13].length();
+      }
     }
     assertEquals(len, hashToEnd(hasher, stepSize));
     assertTrue(hasher.finished());
     List events = handRec.getEvents();
-    assertEquals(5, events.size());
+    assertEquals(ignoreFilesOutsideCrawlSpec ? 5 : 6,
+		 events.size());
     assertEvent(urls[4], s1, events.get(0), includeUrl);
     assertEvent(urls[6], s2, events.get(1), includeUrl);
     assertEvent(urls[7], s3, events.get(2), includeUrl);
     assertEvent(urls[8], s4, events.get(3), includeUrl);
     assertEvent(urls[9], s5, events.get(4), includeUrl);
+    if (!ignoreFilesOutsideCrawlSpec) {
+      assertEvent(urls[13], s5, events.get(5), includeUrl);
+    }
   }
   
   public void testSeveralContentWithThrowing(int stepSize) throws Exception {
@@ -548,16 +558,23 @@ public class TestBlockHasher extends LockssTestCase {
     assertEvent(urls[9], s5, events.get(4));
   }
   
-  public void testSeveralContent() throws Exception {
-    testSeveralContent(1, false);
-    testSeveralContent(3, false);
-    testSeveralContent(10000, false);
+  public void testSeveralContentNoIgnore() throws Exception {
+    testSeveralContent(1, false, false);
+    testSeveralContent(3, false, false);
+    testSeveralContent(10000, false, false);
+  }
+  
+  public void testSeveralContentIgnore() throws Exception {
+    ConfigurationUtil.addFromArgs(BlockHasher.PARAM_IGNORE_FILES_OUTSIDE_CRAWL_SPEC, "true");
+    testSeveralContent(1, false, true);
+    testSeveralContent(3, false, true);
+    testSeveralContent(10000, false, true);
   }
   
   public void testSeveralContentIncludeUrl() throws Exception {
-    testSeveralContent(1, true);
-    testSeveralContent(3, true);
-    testSeveralContent(10000, true);
+    testSeveralContent(1, true, false);
+    testSeveralContent(3, true, false);
+    testSeveralContent(10000, true, false);
   }
   
   public void testSeveralContentWithThrowing() throws Exception {
@@ -925,7 +942,6 @@ public class TestBlockHasher extends LockssTestCase {
 	throw new ExpectedRuntimeException("Opening hash input stream");
       }
       Integer rver = (Integer)throwOnRead.get(cu.getUrl());
-      log.info("MyMockBlockHasher.getInputStream()");
       return new ThrowingInputStream(super.getInputStream(cu),
 				     (rver != null &&
 				      (rver == -1 || rver == cu.getVersion())),
@@ -977,7 +993,6 @@ public class TestBlockHasher extends LockssTestCase {
     public InputStream createFilteredInputStream(ArchivalUnit au,
 						 InputStream in,
 						 String encoding) {
-      log.info("createFilteredInputStream");
       Reader rdr = FilterUtil.getReader(in, encoding);
       StringFilter filt = new StringFilter(rdr, "w");
       filt.setIgnoreCase(true);

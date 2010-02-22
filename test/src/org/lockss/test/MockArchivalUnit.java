@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.85 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.86 2010-02-22 07:02:39 tlipkis Exp $
  */
 
 /*
@@ -322,6 +322,10 @@ public class MockArchivalUnit implements ArchivalUnit {
  
   public void addUrlToBeCached(String url) {
     urlsToCache.add(url);
+  }
+
+  public void removeUrlToBeCached(String url) {
+    urlsToCache.remove(url);
   }
 
   public boolean shouldBeCached(String url) {

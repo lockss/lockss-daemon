@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.12 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: TestGenericNameHasher.java,v 1.13 2010-02-22 07:02:39 tlipkis Exp $
  */
 
 /*
@@ -44,12 +44,19 @@ public class TestGenericNameHasher extends LockssTestCase {
   private static final byte CUSN_NO_CONTENT=0;
   private static final byte CUSN_CONTENT=1;
 
+  MockArchivalUnit mau = null;
+
   public TestGenericNameHasher(String msg) {
     super(msg);
   }
 
+  public void setUp() throws Exception {
+    super.setUp();
+    mau = new MockArchivalUnit(new MockPlugin());
+  }
+
   public void testNullMessageDigest() throws IOException {
-    CachedUrlSet cus = new MockCachedUrlSet();
+    CachedUrlSet cus = new MockCachedUrlSet(mau);
     try {
       CachedUrlSetHasher hasher = new GenericNameHasher(cus, null);
       fail("Creating a GenericNameHasher with a null digest should throw "+
@@ -69,7 +76,7 @@ public class TestGenericNameHasher extends LockssTestCase {
   }
 
   public void testNullIterator() {
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
     cus.setFlatIterator(null);
     MessageDigest dig = new MockMessageDigest();
     try {
@@ -81,7 +88,7 @@ public class TestGenericNameHasher extends LockssTestCase {
   }
 
   public void testAccessors() throws IOException {
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(mau);
     cus.setHashIterator(null);
     cus.setFlatIterator(CollectionUtil.EMPTY_ITERATOR);
     cus.setEstimatedHashDuration(54321);
@@ -105,7 +112,7 @@ public class TestGenericNameHasher extends LockssTestCase {
     MockCachedUrlSet cus = new MockCachedUrlSet(name);
     cus.setHasContent(true);
     cus.setIsLeaf(false);
-    MockCachedUrlSet root = new MockCachedUrlSet();
+    MockCachedUrlSet root = new MockCachedUrlSet(mau);
     root.setFlatItSource(ListUtil.list(cus));
 
     CachedUrlSetHasher hasher = new GenericNameHasher(root, dig);
@@ -120,7 +127,7 @@ public class TestGenericNameHasher extends LockssTestCase {
     MockCachedUrlSet cus = new MockCachedUrlSet(name);
     cus.setHasContent(true);
     cus.setIsLeaf(false);
-    MockCachedUrlSet root = new MockCachedUrlSet();
+    MockCachedUrlSet root = new MockCachedUrlSet(mau);
     root.setFlatItSource(ListUtil.list(cus));
 
     CachedUrlSetHasher hasher = new GenericNameHasher(root, dig);
@@ -203,7 +210,7 @@ public class TestGenericNameHasher extends LockssTestCase {
     cus.setIsLeaf(false);
     list.add(cus);
 
-    MockCachedUrlSet root = new MockCachedUrlSet();
+    MockCachedUrlSet root = new MockCachedUrlSet(mau);
     root.setFlatItSource(list);
     return root;
   }
