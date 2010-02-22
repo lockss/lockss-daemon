@@ -1,5 +1,5 @@
 /*
- * $Id: TestHostPortParser.java,v 1.1 2010-02-04 06:52:26 tlipkis Exp $
+ * $Id: TestHostPortParser.java,v 1.1.2.1 2010-02-22 06:46:18 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,11 @@ public class TestHostPortParser extends LockssTestCase {
     assertEquals("2001:0db8:85a3:0000:0000:8a2e:0370:7334", p1.getHost());
     assertEquals(80, p1.getPort());
   }
+
+  public void testIsDirect() {
+    assertTrue(HostPortParser.isDirect("direct"));
+  }
+
 
   public void testIll() {
     try {
