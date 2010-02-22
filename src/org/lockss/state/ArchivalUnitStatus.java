@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.87 2009-12-10 23:13:07 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.87.4.1 2010-02-22 06:45:12 tlipkis Exp $
  */
 
 /*
@@ -834,6 +834,19 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Created",
 					  ColumnDescriptor.TYPE_DATE,
 					  new Long(state.getAuCreationTime())));
+
+      String auProxySpec =
+	AuUtil.getStringValue(AuUtil.getAuParamOrTitleDefault(au,
+							      ConfigParamDescr.CRAWL_PROXY),
+			      null);
+      if (!StringUtil.isNullString(auProxySpec)) {
+	String disp = (HostPortParser.isDirect(auProxySpec)
+		       ? "Direct connection" : auProxySpec);
+	res.add(new StatusTable.SummaryInfo("Crawl proxy",
+					    ColumnDescriptor.TYPE_STRING,
+					    disp));
+      }
+
       CrawlWindow window = au.getCrawlSpec().getCrawlWindow();
       if (window != null) {
 	String wmsg = window.toString();
