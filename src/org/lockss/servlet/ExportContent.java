@@ -1,0 +1,400 @@
+/*
+ * $Id: ExportContent.java,v 1.1.2.1 2010-02-22 06:44:56 tlipkis Exp $
+ */
+
+/*
+
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.servlet;
+
+import javax.servlet.http.*;
+import javax.servlet.*;
+import java.io.*;
+import java.util.*;
+import java.util.List;
+import java.text.*;
+import org.mortbay.html.*;
+
+import org.lockss.app.*;
+import org.lockss.util.*;
+import org.lockss.config.*;
+import org.lockss.plugin.*;
+import org.lockss.daemon.*;
+import org.lockss.exporter.*;
+import org.lockss.exporter.Exporter.Type;
+
+/** 
+ */
+public class ExportContent extends LockssServlet {
+
+  static final String PREFIX = Configuration.PREFIX + "export.";
+
+  /** Enable AU export from UI.  Daemon restart required when set to true,
+   * not when set false */
+  public static final String PARAM_ENABLE_EXPORT = PREFIX + "enabled";
+  public static final boolean DEFAULT_ENABLE_EXPORT = false;
+
+  /** Output directory for export files.  Defaults to
+   * <code><i>daemon_tmpdir</i>/export</code> .  Changes require daemon
+   * restart */
+  static final String PARAM_EXPORT_PATH = PREFIX + "directory";
+
+  // paramdoc only
+  static final String DEFAULT_EXPORT_PATH = "<tmpdir>/export";
+
+  static final String DEFAULT_EXPORT_DIR = "export";
+
+  /** Default export file type */
+  static final String PARAM_EXPORT_TYPE = PREFIX + "defaultType";
+  static final Type DEFAULT_EXPORT_TYPE = Type.WARC_RESOURCE;
+
+  /** Default export file max size */
+  static final String PARAM_MAX_SIZE = PREFIX + "defaultMaxSize";
+  static final String DEFAULT_MAX_SIZE = "100";
+
+  /** Default max number of versions of each content file to export */
+  static final String PARAM_MAX_VERSIONS = PREFIX + "defaultMaxVersions";
+  static final String DEFAULT_MAX_VERSIONS = "1";
+
+  /** Default compression of export files */
+  static final String PARAM_COMPRESS = PREFIX + "defaultCompress";
+  static final boolean DEFAULT_COMPRESS = true;
+
+
+  static final String KEY_ACTION = "action";
+  static final String KEY_MSG = "msg";
+  static final String KEY_AUID = "auid";
+  static final String KEY_COMPRESS = "compress";
+  static final String KEY_FILE_TYPE = "filetype";
+  static final String KEY_FILE_PREFIX = "filePrefix";
+  static final String KEY_MAX_SIZE = "maxSize";
+  static final String KEY_MAX_VERSIONS = "maxVersions";
+
+  static final String ACTION_EXPORT = "Create Export file(s)";
+  static final String ACTION_DELETE = "Delete export files";
+
+  static final String COL2 = "colspan=2";
+  static final String COL2CENTER = COL2 + " align=center";
+
+  static Logger log = Logger.getLogger("ExportContent");
+
+  private LockssDaemon daemon;
+  private PluginManager pluginMgr;
+  private ConfigManager cfgMgr;
+
+  File exportDir;
+
+  String auid;
+  String name;
+  String text;
+  Type eType;
+  boolean isCompress;
+  String filePrefix;
+  String maxSize;
+  String maxVersions;
+
+  protected void resetLocals() {
+    resetVars();
+    super.resetLocals();
+  }
+
+  void resetVars() {
+    errMsg = null;
+    statusMsg = null;
+    auid = null;
+
+  }
+
+  void getConfig() {
+    Configuration config = cfgMgr.getCurrentConfig();
+    ServletManager mgr = getServletManager();
+    if ((mgr instanceof AdminServletManager)) {
+      exportDir = ((AdminServletManager)mgr).getExportDir();
+    }
+    if (exportDir != null && !exportDir.exists()) {
+      if (!FileUtil.ensureDirExists(exportDir)) {
+	errMsg = "Could not create export directory " + exportDir;
+	return;
+      }
+    }
+
+    // Defaults, will be overwritten by form values if present
+    eType = (Type)config.getEnum(Type.class,
+				 PARAM_EXPORT_TYPE, DEFAULT_EXPORT_TYPE);
+    isCompress = config.getBoolean(PARAM_COMPRESS, DEFAULT_COMPRESS);
+    maxSize = config.get(PARAM_MAX_SIZE, DEFAULT_MAX_SIZE);
+    maxVersions = config.get(PARAM_MAX_VERSIONS, DEFAULT_MAX_VERSIONS);
+  }
+
+  public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+    daemon = getLockssDaemon();
+    pluginMgr = daemon.getPluginManager();
+    cfgMgr = daemon.getConfigManager();
+  }
+
+  public void lockssHandleRequest() throws IOException {
+
+    resetVars();
+    getConfig();
+    if (errMsg == null) {
+      String action = getParameter(KEY_ACTION);
+
+      if (!StringUtil.isNullString(action)) {
+	auid = getParameter(KEY_AUID);
+	String typename = getParameter(KEY_FILE_TYPE);
+	try {
+	  eType = Type.valueOf(typename);
+	} catch (RuntimeException e) {
+	  log.error("illtype", e);
+	  errMsg = "Illegal export file type: " + typename;
+	  displayPage();
+	  return;
+	}	
+	isCompress = (getParameter(KEY_COMPRESS) != null);
+	filePrefix = getParameter(KEY_FILE_PREFIX);
+	maxSize = getParameter(KEY_MAX_SIZE);
+	maxVersions = getParameter(KEY_MAX_VERSIONS);
+
+      }
+      if (ACTION_EXPORT.equals(action)) {
+	doExport();
+      } else if (ACTION_DELETE.equals(action)) {
+	doDelete();
+      }
+    }
+    displayPage();
+  }
+
+  private void doExport() {
+    ArchivalUnit au = getAu();
+    if (au == null) {return;}
+    if (errMsg != null) {
+      return;
+    }
+//     try {
+    long size;
+    int versions;
+    if (StringUtil.isNullString(maxSize)) {
+      size = -1;
+    } else {
+      try {
+	Double fsize = Double.parseDouble(maxSize);
+	size = (long)(fsize * 1024 * 1024);
+	if (size == 0) {
+	  size = -1;
+	}
+      } catch (NumberFormatException e) {
+	errMsg = "Max size must be an integer";
+	return;
+      }
+    }
+    if (StringUtil.isNullString(maxVersions)) {
+      versions = -1;
+    } else {
+      try {
+	versions = Integer.parseInt(maxVersions);
+      } catch (NumberFormatException e) {
+	errMsg = "Max versions must be an integer";
+	return;
+      }
+    }
+
+    try {
+      Exporter exp = eType.makeExporter(daemon, au);
+      exp.setCompress(isCompress);
+      exp.setDir(exportDir);
+      exp.setPrefix(filePrefix);
+      exp.setMaxSize(size);
+      exp.setMaxVersions(versions);
+      exp.export();
+      List errs = exp.getErrors();
+      log.debug("errs: " + errs);
+      if (!errs.isEmpty()) {
+	errMsg = StringUtil.separatedString(errs, "<br>");
+      } else {
+	statusMsg = "File(s) written";
+      }
+    } catch (Exception e) {
+      errMsg = e.getMessage();
+      return;
+    }
+  }
+
+  private void doDelete() {
+    if (FileUtil.emptyDir(exportDir)) {
+      statusMsg = "Export files deleted";
+    }
+  }
+
+  ArchivalUnit getAu() {
+    if (StringUtil.isNullString(auid)) {
+      errMsg = "Select an AU";
+      return null;
+    }
+    ArchivalUnit au = pluginMgr.getAuFromId(auid);
+    if (au == null) {
+      errMsg = "No such AU.  Select an AU";
+      return null;
+    }
+    return au;
+  }
+
+  private void displayPage() throws IOException {
+    Page page = newPage();
+    layoutErrorBlock(page);
+    ServletUtil.layoutExplanationBlock(page, "");
+    page.add(makeForm());
+    page.add("<br>");
+    layoutFooter(page);
+    ServletUtil.writePage(resp, page);
+  }
+
+  static String CENTERED_CELL = "align=\"center\" colspan=3";
+
+  private Element makeForm() {
+    Composite comp = new Composite();
+    Form frm = new Form(srvURL(myServletDescr()));
+    frm.method("POST");
+
+    Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    tbl.add("Select AU<br>");
+    Composite ausel = ServletUtil.layoutSelectAu(this, KEY_AUID, auid);
+    tbl.add(ausel);
+    setTabOrder(ausel);
+
+    tbl.newRow();
+    tbl.newCell();
+    Select typeSel = new Select(KEY_FILE_TYPE, false);
+    for (Type t : Type.values()) {
+      typeSel.add(t.getLabel(), t == eType, t.name());
+    }
+    addElementToTable(tbl, "Export File Type", typeSel);
+
+    addElementToTable(tbl, "Compress", checkBox(null, "true", KEY_COMPRESS,
+						isCompress));
+
+    addInputToTable(tbl, "Export file prefix", KEY_FILE_PREFIX, filePrefix, 20);
+    addInputToTable(tbl, "Max export file size (MB)", KEY_MAX_SIZE, maxSize, 6);
+//     tbl.newRow();
+//     tbl.newCell();
+//     tbl.add("&nbsp;");
+    addInputToTable(tbl, "Max content file versions",
+		    KEY_MAX_VERSIONS, maxVersions, 6);
+
+    tbl.newRow();
+    tbl.newCell(CENTERED_CELL);
+    Input export = new Input(Input.Submit, KEY_ACTION, ACTION_EXPORT);
+    tbl.add(export);
+
+    frm.add(tbl);
+    Table filetab = getFileList();
+    if (filetab != null) {
+      frm.add(filetab);
+    }
+
+    comp.add(frm);
+    return comp;
+  }
+
+  private Table getFileList() {
+    Table tbl = new Table(0, "align=center cellspacing=2 cellpadding=0");
+    try {
+      if (exportDir.isDirectory() && exportDir.exists()) {
+	File files[] = exportDir.listFiles();
+	if (files != null && files.length > 0) {
+	  Arrays.sort(files);
+	  tbl.newRow();
+	  tbl.newCell();
+	  tbl.add("&nbsp;&nbsp;");
+// 	  tbl.newRow();
+// 	  tbl.newCell(CENTERED_CELL);
+// 	  tbl.add(srvLink(AdminServletManager.LINK_EXPORTS,
+// 			  "Export files"));
+	  tbl.newRow();
+	  tbl.newCell(CENTERED_CELL);
+	  tbl.add("<b>Export Files</b>");
+
+	  ServletDescr descr = AdminServletManager.LINK_EXPORTS;
+	  String base = srvURL(descr);
+	  DateFormat df = new SimpleDateFormat("EEE dd, yy HH:mm:ss Z");
+
+	  for (File file : files) {
+	    String fname = file.getName();
+	    tbl.newRow();
+	    tbl.newCell();
+	    Link lnk = new Link(base + "/" + fname, fname);
+	    tbl.add(lnk);
+	    tbl.add("&nbsp;&nbsp;");
+	    tbl.newCell("align=right");
+	    tbl.add(StringUtil.sizeToString(file.length()));
+	    tbl.add("&nbsp;&nbsp;");
+	    tbl.newCell();
+	    tbl.add(df.format(file.lastModified()));
+
+	  }
+	  tbl.newRow();
+	  tbl.newCell(CENTERED_CELL);
+	  Input delete = new Input(Input.Submit, KEY_ACTION, ACTION_DELETE);
+	  tbl.add(delete);
+	}
+      }
+    } catch (RuntimeException e) {
+    }
+    return tbl;
+  }
+
+
+  void addInputToTable(Table tbl, String label, String key, String init, int size) {
+    Input in = new Input(Input.Text, key, init);
+    in.setSize(size);
+    addElementToTable(tbl, label, in);
+  }
+
+  void addElementToTable(Table tbl, String label, Element elem) {
+    tbl.newRow();
+    tbl.newCell("align=right");
+    tbl.add(label);
+    tbl.add(":");
+    tbl.newCell();
+    tbl.add("&nbsp;");
+    tbl.newCell();
+    tbl.add(elem);
+  }
+
+//   Iterator iter = pluginMgr.getAllAus().iterator(); iter.hasNext(); ) {
+//     ArchivalUnit au0 = (ArchivalUnit)iter.next();
+//     String id = au0.getAuId();
+//     sel.add(au0.getName(), id.equals(auid), id);
+//   }
+
+
+
+}
