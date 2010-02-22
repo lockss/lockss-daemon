@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.19 2008-01-30 01:10:59 tlipkis Exp $
+ * $Id: Constants.java,v 1.19.32.1 2010-02-22 06:45:22 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,9 @@ public interface Constants {
 
   /** The line separator string on this system */
   public static String EOL = System.getProperty("line.separator");
+
+  /** Carriage-return linefeed */
+  public static final String CRLF = "\r\n";
 
   /** Separator for polling groups */
   public static String GROUP_SEPARATOR = ";";
