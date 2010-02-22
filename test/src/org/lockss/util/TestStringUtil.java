@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.72 2009-07-22 06:41:55 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.72.10.1 2010-02-22 06:46:55 tlipkis Exp $
  */
 
 /*
@@ -666,9 +666,13 @@ public class TestStringUtil extends LockssTestCase {
   }
 
   public void testTitleCase() {
+    assertEquals("", StringUtil.titleCase(""));
     String txt1 = "this is 8 words.  can it be handled?";
     String txt2 = "This Is 8 Words.  Can It Be Handled?";
-    assertEquals(StringUtil.titleCase(txt1),txt2);
+    assertEquals(txt2, StringUtil.titleCase(txt1));
+    assertEquals(txt2, StringUtil.titleCase(txt1, ' '));
+
+    assertEquals("Content-Type", StringUtil.titleCase("content-type", '-'));
   }
 
   public void testFromFile() {

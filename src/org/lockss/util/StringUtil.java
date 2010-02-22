@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.85 2009-07-22 06:41:55 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.85.10.1 2010-02-22 06:46:55 tlipkis Exp $
  */
 
 /*
@@ -1111,11 +1111,21 @@ public class StringUtil {
    *   to uppercase.
    */
   public static String titleCase(String txt) {
+    return titleCase(txt, ' ');
+  }
+
+  /** Convert the first character and every character that follows the
+   * separator char to uppercase.
+   */
+  public static String titleCase(String txt, char separator) {
+    int len = txt.length();
+    if (len == 0) {
+      return "";
+    }
     StringBuilder buf = new StringBuilder(txt);
-    int len = buf.length();
     buf.setCharAt(0,Character.toUpperCase(buf.charAt(0)));
     for (int i=1; i<len; i++) {
-      if (buf.charAt(i-1)==' ') {
+      if (buf.charAt(i-1)==separator) {
         buf.setCharAt(i,Character.toUpperCase(buf.charAt(i)));
       }
     }
