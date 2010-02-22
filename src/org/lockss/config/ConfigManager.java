@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.70 2010-02-04 06:52:00 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.71 2010-02-22 07:00:14 tlipkis Exp $
  */
 
 /*
@@ -198,6 +198,7 @@ public class ConfigManager implements LockssManager {
 		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_IDENTITY),
 		  Perl5Compiler.quotemeta(IdentityManager.PARAM_LOCAL_V3_PORT),
 		  Perl5Compiler.quotemeta(IpAccessControl.PARAM_ERROR_BELOW_BITS),
+		  Perl5Compiler.quotemeta(ExportContent.PARAM_ENABLE_EXPORT),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_ALLOW),
 		  Perl5Compiler.quotemeta(PARAM_EXPERT_DENY)
 		  );
