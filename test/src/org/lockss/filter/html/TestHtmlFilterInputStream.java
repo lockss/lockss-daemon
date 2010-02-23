@@ -168,8 +168,8 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
       expin = UrlUtil.openInputStream(url.toString());
       Reader rdr = new InputStreamReader(expin, "iso-8859-1");
       String exp = StringUtil.fromReader(rdr);
-      InputStream filt = new HtmlFilterInputStream(in, new IdentityXform());
-      assertInputStreamMatchesString(exp, filt);
+      Reader filt = StringUtil.getLineReader(new HtmlFilterInputStream(in, new IdentityXform()));
+      assertReaderMatchesString(exp, filt);
     } finally {
       IOUtil.safeClose(in);
       IOUtil.safeClose(expin);
