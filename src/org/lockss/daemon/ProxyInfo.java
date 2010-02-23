@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.30 2008-11-08 08:13:58 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.31 2010-02-23 04:13:29 pgust Exp $
  */
 
 /*
@@ -695,9 +695,7 @@ public class ProxyInfo {
           " (generated from " + url + ")", url, isDirectFirst);
     }
     finally {
-      if (bis != null) {
-	bis.close();
-      }
+      IOUtil.safeClose(bis);
     }
   }
 
