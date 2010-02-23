@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.9 2010-02-04 06:52:00 tlipkis Exp $
+ * $Id: TestConfigFile.java,v 1.10 2010-02-23 04:45:26 pgust Exp $
  */
 
 /*
@@ -370,7 +370,7 @@ public abstract class TestConfigFile extends LockssTestCase {
       JarConfigFile jcf;
 
       jcf = new JarConfigFile("jar:file:///file/not/found!/who.cares");
-      testCantRead(jcf, "ZipException");
+      testCantRead(jcf, "(ZipException|FileNotFoundException)");
 
       String jarName = getTempDir().getAbsolutePath() +
 	File.separator + "test.jar";
