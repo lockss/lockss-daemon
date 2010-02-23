@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.4 2010-02-23 19:41:47 thib_gc Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.5 2010-02-23 20:36:46 greya Exp $
  */
 
 /*
@@ -44,27 +44,21 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
-                                               String encoding)
+                                               String encoding)                                     
+                                               
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
+        NodeFilter[] filters = new NodeFilter[] {
         // Filter out <div id="left_column">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "left_column")),
-                                                                         
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div", "id", "left_column")),
         // Filter out <input type="hidden" name="__VIEWSTATE" id="VIEWSTATE" 
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("input",
-                                                                         "id",
-                                                                         "VIEWSTATE")),
-
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("input", "id", "VIEWSTATE")),
         // Filter out <input type="hidden" name="__EVENTVALIDATION" id="EVENTVALIDATION"
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("input",
-                                                                         "id",
-                                                                         "EVENTVALIDATION")),
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION")),
     };
-    InputStream htmlFilter = new HtmlFilterInputStream(in,
-                                                       encoding,
-                                                       new HtmlCompoundTransform(transforms));
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters))); 
+
     return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(htmlFilter, encoding)));
   }
 
