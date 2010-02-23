@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.201 2009-12-22 02:19:01 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.202 2010-02-23 04:16:06 pgust Exp $
  */
 
 /*
@@ -2005,7 +2005,7 @@ public class PluginManager
 	}
 	log.debug("Loading keystore: " + keystoreLoc);
         ks = KeyStore.getInstance("JKS", "SUN");
-	if (keystoreLoc.startsWith(File.separator)) {
+    if (new File(keystoreLoc).exists()) {
 	  InputStream kin = new FileInputStream(new File(keystoreLoc));
 	  try {
  	    ks.load(kin, passchar);
