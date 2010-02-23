@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.80 2008-07-23 08:15:23 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.81 2010-02-23 04:19:20 pgust Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import org.apache.commons.lang.SystemUtils;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
@@ -81,7 +82,9 @@ public class LockssRepositoryImpl
   static final char ENCODED_SEPARATOR_CHAR = 's';
   static final String INITIAL_PLUGIN_DIR = String.valueOf((char)('a'-1));
   static String lastPluginDir = INITIAL_PLUGIN_DIR;
-
+  // PJG: Windows prohibits use of ':' in file name -- replace with '~' for development 
+  static final String PORT_SEPARATOR = SystemUtils.IS_OS_WINDOWS ? "%" : ":";
+  
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
   private static final String TEST_PREFIX = "/#tmp";
@@ -448,7 +451,7 @@ public class LockssRepositoryImpl
     buffer.append(url.getHost().toLowerCase());
     int port = url.getPort();
     if (port != -1) {
-      buffer.append(":");
+      buffer.append(PORT_SEPARATOR);
       buffer.append(port);
     }
     buffer.append(File.separator);
@@ -642,7 +645,7 @@ public class LockssRepositoryImpl
       return query;
     }
   }
-
+  
   /**
    * Extracts '#x' encoding and converts back to 'x'.
    * @param orig the original
