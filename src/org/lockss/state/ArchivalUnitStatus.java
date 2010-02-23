@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.88 2010-02-22 07:03:49 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.89 2010-02-23 06:26:06 tlipkis Exp $
  */
 
 /*
@@ -835,13 +835,11 @@ public class ArchivalUnitStatus
 					  ColumnDescriptor.TYPE_DATE,
 					  new Long(state.getAuCreationTime())));
 
-      String auProxySpec =
-	AuUtil.getStringValue(AuUtil.getAuParamOrTitleDefault(au,
-							      ConfigParamDescr.CRAWL_PROXY),
-			      null);
-      if (!StringUtil.isNullString(auProxySpec)) {
-	String disp = (HostPortParser.isDirect(auProxySpec)
-		       ? "Direct connection" : auProxySpec);
+      AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au);
+      if (aupinfo.isAuOverride()) {
+	String disp = (aupinfo.getHost() == null
+		       ? "Direct connection"
+		       : aupinfo.getHost() + ":" + aupinfo.getPort());
 	res.add(new StatusTable.SummaryInfo("Crawl proxy",
 					    ColumnDescriptor.TYPE_STRING,
 					    disp));
