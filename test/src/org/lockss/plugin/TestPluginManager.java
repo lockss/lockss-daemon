@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.83 2009-12-10 23:12:54 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.84 2010-02-23 04:53:36 pgust Exp $
  */
 
 /*
@@ -1134,7 +1134,7 @@ public class TestPluginManager extends LockssTestCase {
     minimalConfig();
     File keystoreFile =
       copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
-    String keystoreUrl = "file://" + keystoreFile.getAbsolutePath();
+    String keystoreUrl = keystoreFile.toURI().toURL().toExternalForm();
     KeyStore ks = mgr.initKeystore(keystoreUrl, "f00bar");
     assertNotNull(ks);
     assertTrue(ks.containsAlias("goodguy"));
@@ -1144,7 +1144,7 @@ public class TestPluginManager extends LockssTestCase {
     minimalConfig();
     File keystoreFile =
       copyKeystoreFileToKnownLocation("org/lockss/test/public.keystore");
-    String keystoreUrl = "file://" + keystoreFile.getAbsolutePath();
+    String keystoreUrl = keystoreFile.toURI().toURL().toExternalForm();
     KeyStore ks = mgr.initKeystore(keystoreUrl, "f00barrrrr");
     assertNull(ks);
   }
