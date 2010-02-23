@@ -77,6 +77,10 @@ cp "${PROJECT_DIR}/lib/lockss.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
 CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
+# Transform paths when running under cygwin
+if [ "$TERM" = "cygwin" ]; then
+  CLASSPATH=`cygpath -w -p $CLASSPATH`
+fi
 export CLASSPATH
 
 echo running at `date`
