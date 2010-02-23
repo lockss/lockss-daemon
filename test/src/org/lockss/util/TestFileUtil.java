@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.11 2009-06-01 07:35:00 tlipkis Exp $
+ * $Id: TestFileUtil.java,v 1.12 2010-02-23 05:04:40 pgust Exp $
  */
 
 /*
@@ -176,23 +176,23 @@ public class TestFileUtil extends LockssTestCase {
     FileTestUtil.writeFile(file, relPath);
   }
 
-  String apath = "d1/d2/1";
+  String apath = new File("d1/d2/1").toString();
 
   String[] relPaths = {
     "one",
     "two",
-    "d1/1",
-    "d1/2",
+    new File("d1/1").toString(),
+    new File("d1/2").toString(),
     apath,
-    "d1/d2/2",
-    "d1/d2/d3/d4/1",
+    new File("d1/d2/2").toString(),
+    new File("d1/d2/d3/d4/1").toString(),
   };
 
   String[] dirNames = {
     "d1",
-    "d1/d2",
-    "d1/d2/d3",
-    "d1/d2/d3/d4",
+    new File("d1/d2").toString(),
+    new File("d1/d2/d3").toString(),
+    new File("d1/d2/d3/d4").toString(),
   };
 
   public void buildTree(File dir) throws IOException {
