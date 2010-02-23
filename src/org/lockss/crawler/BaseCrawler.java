@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.34 2010-02-04 06:52:26 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.34.2.1 2010-02-23 06:18:39 tlipkis Exp $
  */
 
 /*
@@ -207,39 +207,23 @@ public abstract class BaseCrawler
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
 
-    boolean proxyEnabled = config.getBoolean(PARAM_PROXY_ENABLED,
-					     DEFAULT_PROXY_ENABLED);
-    if (proxyEnabled) {
-      proxyHost = config.get(PARAM_PROXY_HOST);
-      proxyPort = config.getInt(PARAM_PROXY_PORT, DEFAULT_PROXY_PORT);
-      if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
-	proxyHost = null;
-      }
-    }
-    String auProxySpec =
-      AuUtil.getStringValue(AuUtil.getAuParamOrTitleDefault(au, ConfigParamDescr.CRAWL_PROXY), null);
-    if (!StringUtil.isNullString(auProxySpec)) {
-      try {
-	HostPortParser hpp = new HostPortParser(auProxySpec);
-	if (hpp.getHost() == null) {
-	  if (proxyHost != null) {
-	    logger.info("AU overrides crawl proxy with DIRECT");
-	  }
-	  proxyHost = null;
-	} else {
-	  proxyHost = hpp.getHost();
-	  proxyPort = hpp.getPort();
-	  proxyEnabled = true;
-	  logger.debug2("Using AU crawl_proxy: " + proxyHost + ":" + proxyPort);
+    AuUtil.AuProxyInfo aupinfo = AuUtil.getAuProxyInfo(au, config);
+    proxyHost = aupinfo.getHost();
+    proxyPort = aupinfo.getPort();
+    if (aupinfo.isAuOverride()) {
+      if (aupinfo.getHost() == null) {
+	logger.info("AU overrides crawl proxy with DIRECT");
+      } else {
+	if (logger.isDebug()) {
+	  logger.debug("Using AU crawl_proxy: " + aupinfo.getHost()
+		       + ":" + aupinfo.getPort());
 	}
-      } catch (HostPortParser.InvalidSpec e) {
-	logger.warning("Illegal AU crawl_proxy: " + auProxySpec, e);
       }
-      if (proxyHost != null) {
-	if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
-					   + ":" + proxyPort);
-      }
+    } else if (proxyHost != null) {
+      if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
+					 + ":" + proxyPort);
     }
+
     mimeTypePauseAfter304 =
       config.getBoolean(PARAM_MIME_TYPE_PAUSE_AFTER_304,
 			DEFAULT_MIME_TYPE_PAUSE_AFTER_304);

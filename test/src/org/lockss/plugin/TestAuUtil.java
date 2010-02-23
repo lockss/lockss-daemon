@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.9 2009-09-04 03:52:20 dshr Exp $
+ * $Id: TestAuUtil.java,v 1.9.8.1 2010-02-23 06:18:38 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
+import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.base.*;
@@ -180,6 +181,86 @@ public class TestAuUtil extends LockssTestCase {
     attrs.put("foo", "bar");
     assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo"));
     assertEquals("bar", AuUtil.getTitleAttribute(mau, "foo", "7"));
+  }
+
+  public void testGetTitleDefault() {
+    TitleConfig tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "foo:47");
+    assertEquals(null, AuUtil.getTitleDefault(tc, ConfigParamDescr.BASE_URL));
+    assertEquals("foo:47",
+		 AuUtil.getTitleDefault(tc, ConfigParamDescr.CRAWL_PROXY));
+  }
+
+  public void testGetAuParamOrTitleDefault() throws Exception {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
+    TitleConfig tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "foo:47");
+    assertNull(AuUtil.getAuParamOrTitleDefault(mau,
+ 					       ConfigParamDescr.CRAWL_PROXY));
+    mau.setTitleConfig(tc);
+    assertEquals("foo:47",
+		 AuUtil.getAuParamOrTitleDefault(mau,
+						 ConfigParamDescr.CRAWL_PROXY));
+    Configuration config =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.CRAWL_PROXY.getKey(),
+				 "abc:8080");
+    mau.setConfiguration(config);
+    assertEquals("abc:8080",
+		 AuUtil.getAuParamOrTitleDefault(mau,
+						 ConfigParamDescr.CRAWL_PROXY));
+  }
+
+  void setGlobalProxy(String host, int port) {
+    Properties p = new Properties();
+    if (host != null) {
+      p.put(BaseCrawler.PARAM_PROXY_ENABLED, "true");
+      p.put(BaseCrawler.PARAM_PROXY_HOST, host);
+      p.put(BaseCrawler.PARAM_PROXY_PORT, ""+port);
+    } else {
+      p.put(BaseCrawler.PARAM_PROXY_ENABLED, "false");
+    }
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+  }
+				    
+  public void testGetAuProxyInfo() throws Exception {
+    AuUtil.AuProxyInfo aupi;
+    TitleConfig tc;
+
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
+    aupi = AuUtil.getAuProxyInfo(mau);
+    assertEquals(null, aupi.getHost());
+    assertFalse(aupi.isAuOverride());
+
+    setGlobalProxy("host", 1111);
+    aupi = AuUtil.getAuProxyInfo(mau);
+    assertFalse(aupi.isAuOverride());
+    assertEquals("host", aupi.getHost());
+    assertEquals(1111, aupi.getPort());
+
+    tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "foo:47");
+    mau.setTitleConfig(tc);
+    aupi = AuUtil.getAuProxyInfo(mau);
+    assertTrue(aupi.isAuOverride());
+    assertEquals("foo", aupi.getHost());
+    assertEquals(47, aupi.getPort());
+
+    tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "HOST:1111");
+    mau.setTitleConfig(tc);
+    aupi = AuUtil.getAuProxyInfo(mau);
+    assertFalse(aupi.isAuOverride());
+    assertEquals("HOST", aupi.getHost());
+    assertEquals(1111, aupi.getPort());
+
+    setGlobalProxy(null, 0);
+    aupi = AuUtil.getAuProxyInfo(mau);
+    assertTrue(aupi.isAuOverride());
+    assertEquals("HOST", aupi.getHost());
+    assertEquals(1111, aupi.getPort());
+
+    tc = makeTitleConfig(ConfigParamDescr.CRAWL_PROXY, "HOST:1112");
+    mau.setTitleConfig(tc);
+    aupi = AuUtil.getAuProxyInfo(mau);
+    assertTrue(aupi.isAuOverride());
+    assertEquals("HOST", aupi.getHost());
+    assertEquals(1112, aupi.getPort());
   }
 
   public void testIsConfigCompatibleWithPlugin() {
