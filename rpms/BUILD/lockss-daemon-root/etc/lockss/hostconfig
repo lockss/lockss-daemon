@@ -412,7 +412,26 @@ until is_yes ${CONFIG_OK}; do
     if [ "X${LOCKSS_JAVA_CMD}" = X ]; then
 	LOCKSS_JAVA_CMD=`which java 2>/dev/null`
     fi
-    ask_for_input "Path to java" ${LOCKSS_JAVA_CMD}
+    JAVA_OK=N
+    while [ "X${JAVA_OK}" != XY ]
+    do
+      ask_for_input "Path to java" ${LOCKSS_JAVA_CMD}
+      if [ -x ${ANS} ]
+      then
+        JAVA_VERSION=`${ANS} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/
+'`
+        case "X${JAVA_VERSION}" in
+        X1.[6789]*)
+          JAVA_OK=Y
+          ;;
+        *)
+          echo "Java version is ${JAVA_VERSION}: 1.6 or higher required"
+          ;;
+        esac
+      else
+        echo "${ANS} not executable"
+      fi
+    done
     LOCKSS_JAVA_CMD="${ANS}"
 
     ask_for_input "Java switches" ${LOCKSS_JAVA_SWITCHES}
