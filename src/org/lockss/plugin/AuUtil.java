@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.23 2009-08-29 04:38:55 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.24 2010-02-23 06:25:21 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.crawler.*;
 import org.lockss.state.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
@@ -224,6 +225,72 @@ public class AuUtil {
                                                  DEFAULT_POLL_PROTOCOL_VERSION));
   }
 
+  public static class AuProxyInfo {
+    String host = null;
+    int port;
+    boolean isAuOverride = false;
+
+    public String getHost() {
+      return host;
+    }
+
+    public int getPort() {
+      return port;
+    }
+
+    public boolean isAuOverride() {
+      return isAuOverride;
+    }
+
+    public boolean equals(Object o) {
+      if (o instanceof AuProxyInfo) {
+	AuProxyInfo other = (AuProxyInfo)o;
+	return StringUtil.equalStringsIgnoreCase(host, other.host)
+	  && port == other.port;
+      }
+      return false;
+    }
+  }
+
+  public static AuProxyInfo getAuProxyInfo(ArchivalUnit au) {
+    return getAuProxyInfo(au, ConfigManager.getCurrentConfig());
+  }
+
+  public static AuProxyInfo getAuProxyInfo(ArchivalUnit au,
+					   Configuration config) {
+    AuProxyInfo global = new AuProxyInfo();
+    if (config.getBoolean(BaseCrawler.PARAM_PROXY_ENABLED,
+			  BaseCrawler.DEFAULT_PROXY_ENABLED)) {
+      global.host = config.get(BaseCrawler.PARAM_PROXY_HOST);
+      global.port = config.getInt(BaseCrawler.PARAM_PROXY_PORT,
+				  BaseCrawler.DEFAULT_PROXY_PORT);
+      if (StringUtil.isNullString(global.host) || global.port <= 0) {
+	global.host = null;
+	global.port = 0;
+      }
+    }
+
+    String auProxySpec =
+      getStringValue(getAuParamOrTitleDefault(au, ConfigParamDescr.CRAWL_PROXY),
+		     null);
+    if (!StringUtil.isNullString(auProxySpec)) {
+      AuProxyInfo res = new AuProxyInfo();
+      try {
+	HostPortParser hpp = new HostPortParser(auProxySpec);
+	res.host = hpp.getHost();
+	if (res.host != null) {
+	  res.port = hpp.getPort();
+	}
+      } catch (HostPortParser.InvalidSpec e) {
+	log.warning("Illegal AU crawl_proxy: " + auProxySpec, e);
+	return global;
+      }
+      res.isAuOverride = !res.equals(global);
+      return res;
+    }
+    return global;
+  }
+
   /** Return an attribute value from the AU's title DB entry, if any */
   public static String getTitleAttribute(ArchivalUnit au, String key) {
     TitleConfig tc = au.getTitleConfig();
@@ -269,12 +336,11 @@ public class AuUtil {
     String key = cpd.getKey();
     String val = null;
     Configuration auConfig = au.getConfiguration();
-    if (auConfig == null) {
-      return null;
-    }
-    val = auConfig.get(key);
-    if (!StringUtil.isNullString(val)) {
-      return getValueOfType(val, cpd);
+    if (auConfig != null) {
+      val = auConfig.get(key);
+      if (!StringUtil.isNullString(val)) {
+	return getValueOfType(val, cpd);
+      }
     }
     TitleConfig tc = au.getTitleConfig();
     if (tc != null) {

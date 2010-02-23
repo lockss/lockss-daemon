@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.86 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.87 2010-02-23 06:25:20 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public TitleConfig getTitleConfig() {
-    throw new UnsupportedOperationException("Not implemented");
+    return null;
   }
 
   public void setNewContentCrawlUrls(List urls) {
