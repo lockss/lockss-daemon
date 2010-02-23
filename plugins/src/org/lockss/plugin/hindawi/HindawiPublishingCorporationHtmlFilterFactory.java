@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.6 2010-02-23 20:38:34 greya Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.7 2010-02-23 20:52:27 greya Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.hindawi;
 
 import java.io.InputStream;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.*;
 import org.lockss.filter.html.*;
@@ -55,11 +57,14 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
         // Filter out <input type="hidden" name="__EVENTVALIDATION" id="EVENTVALIDATION"
         HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters))); 
+
+
+    InputStream htmlFilter = new HtmlFilterInputStream(in,
+                                                       encoding,
+                                                       HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
 
     return new ReaderInputStream(new WhiteSpaceFilter(FilterUtil.getReader(htmlFilter, encoding)));
   }
 
 }
+
