@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.34 2010-02-10 01:03:28 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.35 2010-02-23 05:08:26 pgust Exp $
  */
 
 /*
@@ -852,7 +852,7 @@ public class TestUrlUtil extends LockssTestCase {
   }
 
   public void testMakeJarFileUrl() throws MalformedURLException {
-    assertMatchesRE("jar:file://?dir/2!/file.txt",
+    assertMatchesRE("jar:file:/.*/dir/2!/file.txt",    // ".*" skips over DOS drive spec
  		    UrlUtil.makeJarFileUrl("/dir/2", "file.txt"));
   }
 }
