@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServletTestCase.java,v 1.6 2008-06-30 08:43:59 tlipkis Exp $
+ * $Id: LockssServletTestCase.java,v 1.7 2010-02-23 05:01:55 pgust Exp $
  */
 
 /*
@@ -110,10 +110,16 @@ public class LockssServletTestCase extends LockssTestCase {
    * returned is equal to the number of newline characters, unless the last
    * line doesn't end with a newline, in which case it is one greater. */
   protected List getLines(String text) {
-    List lines = StringUtil.breakAt(text, '\n');
-    if ("".equals(lines.get(lines.size()-1))) {
-      lines.remove(lines.size()-1);
-    }
+	BufferedReader rdr = new BufferedReader(new StringReader(text));
+	List lines = new ArrayList();
+	try {
+		String s;
+		while ((s = rdr.readLine()) != null) {
+			lines.add(s);
+		}
+	} catch (IOException ex) {
+		// won't happen here
+	}
     return lines;
   }
 }
