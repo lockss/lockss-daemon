@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.87 2010-02-23 04:33:35 pgust Exp $
+ * $Id: StringUtil.java,v 1.88 2010-02-23 22:12:04 thib_gc Exp $
  */
 
 /*
@@ -670,36 +670,36 @@ public class StringUtil {
    * newline characters. 
    */
   public static Reader getLineReader(final Reader r) {
-	  return new Reader() {
-		  boolean saw_CR = false;
-		  final char[] cb = new char[1];
-		  public int read(char cbuf[], int off, int len) throws IOException {
-			  int i;
-			  int n = 0;
-			  for (i = 0; i < len; i++) {
-				  if ((n = r.read(cb, 0, 1)) <= 0) {
-					  break;
-				  }
-				  if (saw_CR) {
-					  saw_CR = false;
-					  if (cb[0] == '\n') {
-						  if (r.read(cb, 0, 1) <= 0) {
-							  break;
-						  }
-					  }
-				  }
-				  if (cb[0] == '\r') {
-					  saw_CR = true;
-					  cb[0] = '\n';
-				  }
-				  cbuf[off+i] = cb[0];
-			  }
-			  return (i == 0) ? n : i;
-		  }
-		  public void close() throws IOException {
-			  r.close();
-		  }
-	  };
+    return new Reader() {
+      boolean saw_CR = false;
+      final char[] cb = new char[1];
+      public int read(char cbuf[], int off, int len) throws IOException {
+        int i;
+        int n = 0;
+        for (i = 0; i < len; i++) {
+          if ((n = r.read(cb, 0, 1)) <= 0) {
+            break;
+          }
+          if (saw_CR) {
+            saw_CR = false;
+            if (cb[0] == '\n') {
+              if (r.read(cb, 0, 1) <= 0) {
+                break;
+              }
+            }
+          }
+          if (cb[0] == '\r') {
+            saw_CR = true;
+            cb[0] = '\n';
+          }
+          cbuf[off+i] = cb[0];
+        }
+        return (i == 0) ? n : i;
+      }
+      public void close() throws IOException {
+        r.close();
+      }
+    };
   }
   
   /** Return a reader that transforms platform newline sequences to standard
@@ -709,7 +709,7 @@ public class StringUtil {
    * newline characters. 
    */
   public static Reader getLineReader(InputStream in) {
-	  return getLineReader(new InputStreamReader(in));
+    return getLineReader(new InputStreamReader(in));
   }
 
   /** Return a string with lines from a reader, separated by a newline character,
@@ -717,17 +717,17 @@ public class StringUtil {
    * returned by {@link #getLineReader(Reader) before processing. 
    * */
   public static String fromReader(Reader r, int maxSize) throws IOException {
-	    r = getLineReader(r);
-	    char[] buf = new char[1000];
-	    StringBuilder sb = new StringBuilder(1000);
-	    int len;
-	    while ((len = r.read(buf)) >= 0) {
-	      sb.append(buf, 0, len);
-	      if (maxSize > 0 && sb.length() > maxSize) {
-		throw new FileTooLargeException();
-	      }
-	    }
-	    return sb.toString();
+    r = getLineReader(r);
+    char[] buf = new char[1000];
+    StringBuilder sb = new StringBuilder(1000);
+    int len;
+    while ((len = r.read(buf)) >= 0) {
+      sb.append(buf, 0, len);
+      if (maxSize > 0 && sb.length() > maxSize) {
+        throw new FileTooLargeException();
+      }
+    }
+    return sb.toString();
   }
 
   /** Return a string with lines from a reader, separated by a newline character.
