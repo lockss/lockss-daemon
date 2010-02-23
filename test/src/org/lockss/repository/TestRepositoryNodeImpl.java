@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.60 2009-02-05 05:09:46 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.61 2010-02-23 04:58:15 pgust Exp $
  */
 
 /*
@@ -393,6 +393,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testNormalizeUrlEncodingCase() throws Exception {
+	if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
+	    log.debug("Skipping testNormalizeUrlEncodingCase: file system is not case sensitive.");
+	    return;
+	}
     RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
     // nothing to normalize
     File file = new File("foo/bar/baz");
@@ -425,10 +429,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertSame(file, node.normalize(file));
     // should be normalized
     assertEquals("baz", normalizeName(node, "baz?"));
-    assertEquals("/ba", normalizeName(node, "/ba?"));
-    assertEquals("foo/bar/bar", normalizeName(node, "foo/bar/bar?"));
-    assertEquals("foo/ba?r/bar", normalizeName(node, "foo/ba?r/bar?"));
-    assertEquals("foo/bar?/bar", normalizeName(node, "foo/bar?/bar?"));
+    assertEquals(new File("/ba").getPath(), normalizeName(node, "/ba?"));
+    assertEquals(new File("foo/bar/bar").getPath(), normalizeName(node, "foo/bar/bar?"));
+    assertEquals(new File("foo/ba?r/bar").getPath(), normalizeName(node, "foo/ba?r/bar?"));
+    assertEquals(new File("foo/bar?/bar").getPath(), normalizeName(node, "foo/bar?/bar?"));
 
     // disable trailing ? normalization
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_EMPTY_QUERY,
@@ -448,6 +452,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testFixUnnormalized_Rename() throws Exception {
+	if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
+	    log.debug("Skipping testFixUnnormalized_Rename: file system is not case sensitive.");
+	    return;
+	}
     repo.setDontNormalize(true);
     ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
 				  "false");
@@ -504,6 +512,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testFixUnnormalizedMultiple_Delete() throws Exception {
+	if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
+	    log.debug("Skipping testFixUnnormalizedMultiple_Delete: file system is not case sensitive.");
+	    return;
+	}
     repo.setDontNormalize(true);
     ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
 				  "false");
@@ -538,6 +550,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testFixUnnormalizedMultiple_DeleteMultiple() throws Exception {
+	if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
+	    log.debug("Skipping testFixUnnormalizedMultiple_DeleteMultiple: file system is not case sensitive.");
+	    return;
+	}
     repo.setDontNormalize(true);
     ConfigurationUtil.addFromArgs(RepositoryNodeImpl.PARAM_FIX_UNNORMALIZED,
 				  "false");
@@ -578,6 +594,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testFixUnnormalized_DontFixParent() throws Exception {
+	if (!PlatformUtil.getInstance().isCaseSensitiveFileSystem()) {
+	    log.debug("Skipping testFixUnnormalized_DontFixParent: file system is not case sensitive.");
+	    return;
+	}
     repo.setDontNormalize(true);
     createLeaf("http://www.example.com/testDir/branch%3c1/leaf%2C1",
                "test stream", null);
