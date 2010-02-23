@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.86 2010-02-22 07:05:21 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.87 2010-02-23 04:33:35 pgust Exp $
  */
 
 /*
@@ -663,35 +663,89 @@ public class StringUtil {
     return count;
   }
 
-  /* Return a string with all the characters from a reader */
+  /** Return a reader that transforms platform newline sequences to standard
+   * newline characters. 
+   * @param r a Reader
+   * @return a filtered reader that transforms platform newline sequences to standard
+   * newline characters. 
+   */
+  public static Reader getLineReader(final Reader r) {
+	  return new Reader() {
+		  boolean saw_CR = false;
+		  final char[] cb = new char[1];
+		  public int read(char cbuf[], int off, int len) throws IOException {
+			  int i;
+			  int n = 0;
+			  for (i = 0; i < len; i++) {
+				  if ((n = r.read(cb, 0, 1)) <= 0) {
+					  break;
+				  }
+				  if (saw_CR) {
+					  saw_CR = false;
+					  if (cb[0] == '\n') {
+						  if (r.read(cb, 0, 1) <= 0) {
+							  break;
+						  }
+					  }
+				  }
+				  if (cb[0] == '\r') {
+					  saw_CR = true;
+					  cb[0] = '\n';
+				  }
+				  cbuf[off+i] = cb[0];
+			  }
+			  return (i == 0) ? n : i;
+		  }
+		  public void close() throws IOException {
+			  r.close();
+		  }
+	  };
+  }
+  
+  /** Return a reader that transforms platform newline sequences to standard
+   * newline characters. 
+   * @param in an input stream
+   * @return a filtered reader that transforms platform newline sequences to standard
+   * newline characters. 
+   */
+  public static Reader getLineReader(InputStream in) {
+	  return getLineReader(new InputStreamReader(in));
+  }
+
+  /** Return a string with lines from a reader, separated by a newline character,
+   * throwing if more than maxSize chars. Reader is wrapped with a reader
+   * returned by {@link #getLineReader(Reader) before processing. 
+   * */
+  public static String fromReader(Reader r, int maxSize) throws IOException {
+	    r = getLineReader(r);
+	    char[] buf = new char[1000];
+	    StringBuilder sb = new StringBuilder(1000);
+	    int len;
+	    while ((len = r.read(buf)) >= 0) {
+	      sb.append(buf, 0, len);
+	      if (maxSize > 0 && sb.length() > maxSize) {
+		throw new FileTooLargeException();
+	      }
+	    }
+	    return sb.toString();
+  }
+
+  /** Return a string with lines from a reader, separated by a newline character.
+   * Reader is wrapped with a reader returned by {@link #getLineReader(Reader) 
+   * before processing. */
   public static String fromReader(Reader r) throws IOException {
     return fromReader(r, -1);
   }
 
-  /* Return a string with characters from a reader, throwing if more than
-   * maxSize chars */
-  public static String fromReader(Reader r, int maxSize) throws IOException {
-    char[] buf = new char[1000];
-    StringBuilder sb = new StringBuilder(1000);
-    int len;
-    while ((len = r.read(buf)) >= 0) {
-      sb.append(buf, 0, len);
-      if (maxSize > 0 && sb.length() > maxSize) {
-	throw new FileTooLargeException();
-      }
-    }
-    return sb.toString();
-  }
-
-  /* Return a string with all the characters from an InputStream */
+  /** Return a string with lines from an InputStream separated by a newline
+   * character using the default encoding*/
   public static String fromInputStream(InputStream in) throws IOException {
     // use our default encoding rather than system default
     return fromReader(new InputStreamReader(in, Constants.DEFAULT_ENCODING));
   }
 
-  /* Return a string with characters from an InputStream, throwing if more
-   * than maxSize chars */
-  /* Return a string with all the characters from an InputStream */
+  /** Return a string with lines from an InputStream separated by a newline
+   * character using the default encoding, throwing if more than maxSize chars  */
   public static String fromInputStream(InputStream in, int maxSize)
       throws IOException {
     // use our default encoding rather than system default
@@ -699,30 +753,35 @@ public class StringUtil {
 		      maxSize);
   }
 
-  /** Reads in the entire contents of a file into a string */
+  /** Return a string with lines from the file path separated by a newline character */
   public static String fromFile(String path) throws IOException {
     return fromReader(new FileReader(path));
   }
 
-  /** Reads in the entire contents of a file into a string */
+  /** Return a string with lines from the file separated by a newline character */
   public static String fromFile(File file) throws IOException {
     return fromReader(new FileReader(file));
   }
 
-  /** Write a string to a file */
+  /** Write a string to a File */
   public static void toFile(File file, String s) throws IOException {
-    OutputStream os = new BufferedOutputStream(new FileOutputStream(file));
+    Writer w = new BufferedWriter(new FileWriter(file));
     try {
-      StringUtil.toOutputStream(os, s);
+      StringUtil.toWriter(w, s);
     } finally {
-      IOUtil.safeClose(os);
+      IOUtil.safeClose(w);
     }
   }
 
   /* Write the string to the OutputStream */
   public static void toOutputStream(OutputStream out, String s)
       throws IOException {
-    Writer w = new OutputStreamWriter(out);
+    toWriter(new BufferedWriter(new OutputStreamWriter(out)),s);
+  }
+
+  /* Write the string to the Writer */
+  public static void toWriter(Writer w, String s)
+      throws IOException {
     w.write(s);
     w.flush();
   }
