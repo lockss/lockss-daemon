@@ -97,6 +97,6 @@
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
-    <string>&quot;This volume is currently only available to LOCKSS participants in the UK. The LOCKSS Team is working with Annual Reviews to register the IP addresses of UK LOCKSS boxes as crawlers.&quot;</string>
+    <string>&quot;Warning: Two actions are required before configuring these AUs for preservation: 1. Please contact the LOCKSS team to register your LOCKSS box IP address with Atypon, the Annual Reviews publishing platform; 2. Ensure your LOCKSS box is configured for direct external access and NOT through  a common campus proxy. Failure to complete these steps will interrupt your campus access to this content.  Only U.K. libraries may preserve this content. If you are not in the U.K. contact lockss-support@lockss.org.&quot;</string>
   </entry>
 </map>
