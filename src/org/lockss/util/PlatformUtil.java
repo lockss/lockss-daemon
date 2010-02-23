@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.12 2008-07-11 08:22:00 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.13 2010-02-23 04:26:01 pgust Exp $
  */
 
 /*
@@ -166,6 +166,15 @@ public class PlatformUtil {
     }
   }
 
+  /**
+   * Determines whether file system is case-sensitive for operations that
+   * depend on case sensitivity
+   * @return <code>true</code> if the file system is case-sensitive
+   */
+  public boolean isCaseSensitiveFileSystem() {
+	  return true;
+  }
+  
   static Runtime rt() {
     return Runtime.getRuntime();
   }
@@ -226,8 +235,7 @@ public class PlatformUtil {
 	int exit = p.waitFor();
 	rdr.close();
 	if (exit != 0) {
-          if (log.isDebug()) log.debug("cmd: " + cmd + " exit code " + exit);
-	  return null;
+	  if (log.isDebug()) log.debug("cmd: " + cmd + " exit code " + exit);
 	}
       } catch (IOException e) {
 	log.error("Couldn't read from '" + cmd + "'", e);
@@ -531,6 +539,14 @@ public class PlatformUtil {
   public static class MacOS extends PlatformUtil {
     public String dfArgs = "-k";
 
+	/**
+	 * Determines whether file system is case-sensitive for operations that
+	 * depend on case sensitivity
+	 * @return <code>true</code> if the file system is case-sensitive
+	 */
+	public boolean isCaseSensitiveFileSystem() {
+		return false; // MacOS FS is not case sensitive
+	}
     public DF getDF(String path) throws UnsupportedException {
       return (super.getDF(path, dfArgs));
     }
@@ -552,6 +568,52 @@ public class PlatformUtil {
 
 
   public static class Windows extends PlatformUtil {
+    
+    public DF getDF(String path, String dfArgs) throws UnsupportedException {
+      String cmd = "df " + dfArgs + " " + path;
+      if (log.isDebug2()) log.debug2("cmd: " + cmd);
+      	try {
+          Process p = rt().exec(cmd);
+          Reader rdr =
+            new InputStreamReader(new BufferedInputStream(p.getInputStream()),
+                  Constants.DEFAULT_ENCODING);
+          String s;
+          try {
+            s = StringUtil.fromReader(rdr);
+            // ignore exit status because GnuWin32 'df' reports
+            // "df: `NTFS': No such file or directory" even though
+            // it seems to operate correctly
+            int exit = p.waitFor();
+            rdr.close();
+          } catch (IOException e) {
+            log.error("Couldn't read from '" + cmd + "'", e);
+            return null;
+          }
+
+          List lines = StringUtil.breakAt(s, '\n');
+          if (log.isDebug2()) {
+            for (Iterator iter = lines.iterator(); iter.hasNext(); ) {
+        	  log.debug2("DF: " + (String)iter.next());
+            }
+          }
+          if (lines == null || lines.size() < 2) {
+            return null;
+	  }
+	  return makeDFFromLine(path, (String)lines.get(1));
+      	} catch (Exception e) {
+      	  log.warning("DF(" + path + ")", e);
+          return null;
+	}
+    }
+    
+    /**
+     * Determines whether file system is case-sensitive for operations that
+     * depend on case sensitivity
+     * @return <code>true</code> if the file system is case-sensitive
+     */
+    public boolean isCaseSensitiveFileSystem() {
+      return false; // Windows FS is not case sensitive
+    }
     
     public synchronized boolean updateFileAtomically(File updated, File target) {
       try {
