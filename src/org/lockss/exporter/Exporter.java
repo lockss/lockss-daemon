@@ -1,5 +1,5 @@
 /*
- * $Id: Exporter.java,v 1.1.2.1 2010-02-22 06:42:03 tlipkis Exp $
+ * $Id: Exporter.java,v 1.1.2.2 2010-02-23 06:19:14 tlipkis Exp $
  */
 
 /*
@@ -263,17 +263,17 @@ public abstract class Exporter {
 	return new ArcExporter(daemon, au, false);
       }
     },
-    ARC_RESPONSE("ARC (response)") {
+    ARC_RESPONSE("ARC (response and content)") {
       public Exporter makeExporter(LockssDaemon daemon, ArchivalUnit au) {
 	return new ArcExporter(daemon, au, true);
       }
     },
-    WARC_RESOURCE("WARC (resource)") {
+    WARC_RESOURCE("WARC (content only)") {
       public Exporter makeExporter(LockssDaemon daemon, ArchivalUnit au) {
 	return new WarcExporter(daemon, au, false);
       }
     },
-    WARC_RESPONSE("WARC (response)") {
+    WARC_RESPONSE("WARC (response and content)") {
       public Exporter makeExporter(LockssDaemon daemon, ArchivalUnit au) {
 	return new WarcExporter(daemon, au, true);
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExporter.java,v 1.1.2.1 2010-02-22 06:42:03 tlipkis Exp $
+ * $Id: ZipExporter.java,v 1.1.2.2 2010-02-23 06:19:14 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,8 @@ public class ZipExporter extends Exporter {
   String timestamp = null;
 
   // Formatter to pad filename numbers to four digits.
-  private static NumberFormat serialNumberFormatter = new DecimalFormat("0000");
+  private static NumberFormat serialNumberFormatter =
+    new DecimalFormat("00000");
 
   public ZipExporter(LockssDaemon daemon, ArchivalUnit au) {
     super(daemon, au);
@@ -134,6 +135,9 @@ public class ZipExporter extends Exporter {
     cos = new CountingOutputStream(new FileOutputStream(file));
     OutputStream os = new BufferedOutputStream(cos);
     zip = new ZipOutputStream(os);
+    if (!compress) {
+      zip.setLevel(ZipOutputStream.STORED);
+    }
     setZipComment(zip);
   }
 
