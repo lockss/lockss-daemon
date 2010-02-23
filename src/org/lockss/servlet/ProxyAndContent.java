@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAndContent.java,v 1.27 2008-07-01 07:47:23 tlipkis Exp $
+ * $Id: ProxyAndContent.java,v 1.28 2010-02-23 06:25:53 tlipkis Exp $
  */
 
 /*
@@ -552,19 +552,25 @@ public class ProxyAndContent extends LockssServlet {
   }
 
   private Iterator getDescriptors_Main() {
-    return new ObjectArrayIterator(new LinkWithExplanation[] {
-        makeDescriptor("Content Server Options",
-                       ACTION_CONTENT_SERVER,
-		       "Configure content servers and proxies and ICP."),
+    List descrs = new ArrayList(4);
+    descrs.add(makeDescriptor("Content Server Options",
+			      ACTION_CONTENT_SERVER,
+			      "Configure content servers and proxies and ICP."));
 
-        makeDescriptor("Proxy Client Options",
-                       ACTION_PROXY_CLIENT,
-                       "Configure the crawler to access sites through a proxy."),
+    descrs.add(makeDescriptor("Proxy Client Options",
+			      ACTION_PROXY_CLIENT,
+			      "Configure the crawler to access sites through a proxy."));
+    ServletDescr exportDesc = AdminServletManager.SERVLET_EXPORT_CONTENT;
+    if (exportDesc.isEnabled(getLockssDaemon())) {
+      descrs.add(makeDescriptor("Export Content",
+				exportDesc,
+				exportDesc.getExplanation()));
+    }
 // FIXME: disabled until after the 1.15 branch
 //        makeDescriptor("Content Access Control",
 //                       ACTION_CONTENT,
 //                       "Manage access groups and access control rules."),
-    });
+    return descrs.iterator();
   }
 
   private LinkWithExplanation makeDescriptor(String linkText,
@@ -572,6 +578,14 @@ public class ProxyAndContent extends LockssServlet {
                                              String linkExpl) {
     return new LinkWithExplanation(
         srvLink(myServletDescr(), linkText, ACTION_TAG + "=" + linkAction),
+        linkExpl);
+  }
+
+  private LinkWithExplanation makeDescriptor(String linkText,
+                                             ServletDescr descr,
+                                             String linkExpl) {
+    return new LinkWithExplanation(
+        srvLink(descr, linkText),
         linkExpl);
   }
 

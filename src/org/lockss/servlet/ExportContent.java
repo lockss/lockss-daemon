@@ -1,5 +1,5 @@
 /*
- * $Id: ExportContent.java,v 1.2 2010-02-22 07:03:27 tlipkis Exp $
+ * $Id: ExportContent.java,v 1.3 2010-02-23 06:25:53 tlipkis Exp $
  */
 
 /*
@@ -95,8 +95,8 @@ public class ExportContent extends LockssServlet {
   static final String KEY_MAX_SIZE = "maxSize";
   static final String KEY_MAX_VERSIONS = "maxVersions";
 
-  static final String ACTION_EXPORT = "Create Export file(s)";
-  static final String ACTION_DELETE = "Delete export files";
+  static final String ACTION_EXPORT = "Create Export File(s)";
+  static final String ACTION_DELETE = "Delete Export Files";
 
   static final String COL2 = "colspan=2";
   static final String COL2CENTER = COL2 + " align=center";
@@ -277,6 +277,18 @@ public class ExportContent extends LockssServlet {
 
   static String CENTERED_CELL = "align=\"center\" colspan=3";
 
+  private static final String FILE_TYPE_FOOT =
+    "Each record in an ARC or WARC file may contain either a content file, or a complete HTTP response: headers and content.  For WARC, these are written into <i>resource</i> or <i>response</i> records, respectively.  ZIP records contain content only; the HTTP headers are stored as the comment in each record.";
+
+  private static final String FILE_PREFIX_FOOT =
+    "One or more files will be written, with generated names using this string as a prefix.";
+
+  private static final String MAX_SIZE_FOOT =
+    "The approximate maximum size for each ARC/WARC/ZIP file.  If the total output is larger, multiple files will be written.";
+
+  private static final String MAX_VER_FOOT =
+    "The maximum number of versions included, for content files that have older versions.  (ARC and WARC only).";
+
   private Element makeForm() {
     Composite comp = new Composite();
     Form frm = new Form(srvURL(myServletDescr()));
@@ -296,17 +308,24 @@ public class ExportContent extends LockssServlet {
     for (Type t : Type.values()) {
       typeSel.add(t.getLabel(), t == eType, t.name());
     }
-    addElementToTable(tbl, "Export File Type", typeSel);
+    addElementToTable(tbl,
+		      "Export file type" + addFootnote(FILE_TYPE_FOOT),
+		      typeSel);
 
     addElementToTable(tbl, "Compress", checkBox(null, "true", KEY_COMPRESS,
 						isCompress));
 
-    addInputToTable(tbl, "Export file prefix", KEY_FILE_PREFIX, filePrefix, 20);
-    addInputToTable(tbl, "Max export file size (MB)", KEY_MAX_SIZE, maxSize, 6);
+    addInputToTable(tbl,
+		    "Export file prefix" + addFootnote(FILE_PREFIX_FOOT),
+		    KEY_FILE_PREFIX, filePrefix, 20);
+    addInputToTable(tbl,
+		    "Max export file size (MB)" + addFootnote(MAX_SIZE_FOOT),
+		    KEY_MAX_SIZE, maxSize, 6);
 //     tbl.newRow();
 //     tbl.newCell();
 //     tbl.add("&nbsp;");
-    addInputToTable(tbl, "Max content file versions",
+    addInputToTable(tbl,
+		    "Max content file versions" + addFootnote(MAX_VER_FOOT),
 		    KEY_MAX_VERSIONS, maxVersions, 6);
 
     tbl.newRow();

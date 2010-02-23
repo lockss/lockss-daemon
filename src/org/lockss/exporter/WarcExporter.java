@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExporter.java,v 1.2 2010-02-22 07:01:07 tlipkis Exp $
+ * $Id: WarcExporter.java,v 1.3 2010-02-23 06:25:53 tlipkis Exp $
  */
 
 /*
@@ -135,7 +135,6 @@ public class WarcExporter extends Exporter {
       }
     } else {
       try {
-	String hdrString = getHttpResponseString(cu);
 	String mimeType =
 	  HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
 	try {
