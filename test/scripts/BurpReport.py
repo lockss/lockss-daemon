@@ -146,7 +146,7 @@ def _main_procedure():
         strYear = articles[1]
         if "-" in strYear:
             strYear = strYear[5:9]
-            
+        
         if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("aappublications") != -1):
             pubyear['aap'][strYear] += articles[0]
             total['aap'] += articles[0]
@@ -183,11 +183,18 @@ def _main_procedure():
 
     # OUP has some AUIDs that are listed as year 0.  This code assumes that the
     # titles are split between 2008 and 2009 in the same proportion.
-    oup0 = float(pubyear['oup']["0"])
+#    oup0 = float(pubyear['oup']["0"])
 
-    if oup0 > 0 and pubyear['oup']['2009'] > 0 and pubyear['oup']['2008'] > 0:
-        pubyear['oup']["2009"] += int(oup0 * (74.0 / 104.0) + 0.5)
-        pubyear['oup']["2008"] += int(oup0 * (30.0 / 104.0) + 0.5)
+#    if oup0 > 0 and pubyear['oup']['2009'] > 0 and pubyear['oup']['2008'] > 0:
+#        pubyear['oup']["2009"] += int(oup0 * (74.0 / 104.0) + 0.5)
+#        pubyear['oup']["2008"] += int(oup0 * (30.0 / 104.0) + 0.5)
+#        pubyear['oup']["0"] = 0
+
+#    aps0 = float(pubyear['aps']["0"])
+
+#    if aps0 > 0:
+#        pubyear['aps']['2010'] += aps0
+#        pubyear['aps']['0'] = 0
 
     # Output the main report.
     filename = open(options.filename, 'w')
@@ -200,11 +207,13 @@ def _main_procedure():
     # If that's a problem, we can fix it.
     filename.write("\n"); 
 
-    for year in range(options.currentyear, options.minimumyear, -1):
+    for year in range(options.currentyear, options.minimumyear, -1) + ["0"]:
         strYear = str(year)
         printYear = strYear
         if (year == options.currentyear):
             printYear = "Current Ingest " + strYear
+        if (year == "0"):
+            printYear = "Data entry in progress -- Year TBD"
         filename.write( printYear + "," )
 
         for publisher in publishers:

@@ -19,10 +19,12 @@ aucontentsize VARCHAR(255), audisksize REAL, aurepository VARCHAR(255), numartic
 publisher VARCHAR(16));
 '''
 
+import httplib
 import MySQLdb
 import optparse
 import os
 import sys
+import urllib2
 
 sys.path.append(os.path.realpath(os.path.join(os.path.dirname(sys.argv[0]), '../frameworks/lib')))
 import lockss_daemon
@@ -172,13 +174,18 @@ def _main_procedure():
     _check_required_options(parser, options)
     client = _make_client(options)
 
-    db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
+    try:
+        db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
     
 # Send the reports
-    _article_report(client, db, options)
+        _article_report(client, db, options)
 
-    db.commit()
-    db.close()
+    except httplib.BadStatusLine(line) as badline:
+        print "****** " + options.host + ": Bad status line."
+        raise
+    finally:
+        db.commit()
+        db.close()
 
 if __name__ == '__main__':    
     _main_procedure()
