@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.12 2010-02-04 06:52:00 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.12.2.1 2010-02-24 06:17:00 tlipkis Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public class HTTPConfigFile extends BaseConfigFile {
     InputStream in = null;
     LockssUrlConnection conn = openUrlConnection(url);
 
-    Configuration conf = ConfigManager.getCurrentConfig();
+    Configuration conf = ConfigManager.getPlatformConfig();
     String proxySpec = conf.get(ConfigManager.PARAM_PROPS_PROXY);
     String proxyHost = null;
     int proxyPort = 0;
