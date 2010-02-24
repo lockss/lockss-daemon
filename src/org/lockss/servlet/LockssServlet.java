@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.115 2010-02-23 04:20:55 pgust Exp $
+ * $Id: LockssServlet.java,v 1.116 2010-02-24 03:29:33 tlipkis Exp $
  */
 
 /*
@@ -889,7 +889,6 @@ public abstract class LockssServlet extends HttpServlet
     }
     setTabOrder(in);
     c.add(in);
-    c.add(" ");
     c.add(label);
     return c;
   }
