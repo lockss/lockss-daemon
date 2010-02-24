@@ -83,3 +83,7 @@ org.lockss.baseau.defaultFetchRateLimiterSource=plugin
 org.lockss.platform.project=CLOCKSS
 
 org.lockss.crawlStatus.keepUrls=all
+
+# So that we don't hash on no-longer-relevant URLs
+org.lockss.blockHasher.ignoreFilesOutsideCrawlSpec=true
+

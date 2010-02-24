@@ -60,3 +60,7 @@ org.lockss.crawlStatus.keepUrls=all
 # UI username-passwd = lockss-u/lockss-p
 org.lockss.platform.ui.username=lockss-u
 org.lockss.platform.ui.password=SHA1:ac4fc8fa9930a24c8d002d541c37ca993e1bc40f
+
+# So that we don't hash on no-longer-relevant URLs
+org.lockss.blockHasher.ignoreFilesOutsideCrawlSpec=true
+

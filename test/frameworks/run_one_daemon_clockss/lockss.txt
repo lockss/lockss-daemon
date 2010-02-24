@@ -66,3 +66,6 @@ org.lockss.crawler.threadPool.max=5
 org.lockss.crawlStatus.keepUrls=all
 
 org.lockss.platform.project=CLOCKSS
+
+# So that we don't hash on no-longer-relevant URLs
+org.lockss.blockHasher.ignoreFilesOutsideCrawlSpec=true
