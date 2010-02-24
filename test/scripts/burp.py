@@ -180,7 +180,7 @@ def _main_procedure():
 # Send the reports
         _article_report(client, db, options)
 
-    except httplib.BadStatusLine(line) as badline:
+    except httplib.BadStatusLine:
         print "****** " + options.host + ": Bad status line."
         raise
     finally:
