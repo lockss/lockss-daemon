@@ -2025,51 +2025,6 @@
         <property name="attributes.publisher" value="American Psychiatric Publishing" />
       </property>
 
-       <property name="HighWireJournalofBiologicalChemistry280"> 
-        <property name="title" value="Journal of Biological Chemistry Volume 280" />
-        <property name="journalTitle" value="Journal of Biological Chemistry" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.jbc.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="280" />
-        </property>
-        <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
-      </property>
-
-       <property name="HighWireJournalofBiologicalChemistry281"> 
-        <property name="title" value="Journal of Biological Chemistry Volume 281" />
-        <property name="journalTitle" value="Journal of Biological Chemistry" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.jbc.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="281" />
-        </property>
-        <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
-      </property>
-
-       <property name="HighWireJournalofBiologicalChemistry282"> 
-        <property name="title" value="Journal of Biological Chemistry Volume 282" />
-        <property name="journalTitle" value="Journal of Biological Chemistry" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.jbc.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="282" />
-        </property>
-        <property name="attributes.publisher" value="American Society for Biochemistry and Molecular Biology" />
-      </property>
-
        <property name="HighWireTheJournalofLipidResearch46"> 
         <property name="title" value="The Journal of Lipid Research Volume 46" />
         <property name="journalTitle" value="The Journal of Lipid Research" />
@@ -8976,81 +8931,6 @@
           <property name="value" value="81" />
         </property>
         <property name="attributes.publisher" value="Society for Leukocyte Biology" />
-      </property>
-
-       <property name="HighWireBiologyofReproduction72"> 
-        <property name="title" value="Biology of Reproduction Volume 72" />
-        <property name="journalTitle" value="Biology of Reproduction" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.biolreprod.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="72" />
-        </property>
-        <property name="attributes.publisher" value="Society for the Study of Reproduction" />
-      </property>
-
-       <property name="HighWireBiologyofReproduction73"> 
-        <property name="title" value="Biology of Reproduction Volume 73" />
-        <property name="journalTitle" value="Biology of Reproduction" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.biolreprod.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="73" />
-        </property>
-        <property name="attributes.publisher" value="Society for the Study of Reproduction" />
-      </property>
-
-       <property name="HighWireBiologyofReproduction74"> 
-        <property name="title" value="Biology of Reproduction Volume 74" />
-        <property name="journalTitle" value="Biology of Reproduction" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.biolreprod.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="74" />
-        </property>
-        <property name="attributes.publisher" value="Society for the Study of Reproduction" />
-      </property>
-
-       <property name="HighWireBiologyofReproduction75"> 
-        <property name="title" value="Biology of Reproduction Volume 75" />
-        <property name="journalTitle" value="Biology of Reproduction" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.biolreprod.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="75" />
-        </property>
-        <property name="attributes.publisher" value="Society for the Study of Reproduction" />
-      </property>
-
-       <property name="HighWireBiologyofReproduction76"> 
-        <property name="title" value="Biology of Reproduction Volume 76" />
-        <property name="journalTitle" value="Biology of Reproduction" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.biolreprod.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="76" />
-        </property>
-        <property name="attributes.publisher" value="Society for the Study of Reproduction" />
       </property>
 
    </property>
