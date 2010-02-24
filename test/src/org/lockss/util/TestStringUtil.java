@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.75 2010-02-24 03:29:48 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.76 2010-02-24 03:55:31 tlipkis Exp $
  */
 
 /*
@@ -243,22 +243,6 @@ public class TestStringUtil extends LockssTestCase {
     String testStr = "xxx1xxx2xxx3xxx";
     assertSame(testStr, StringUtil.replaceString(testStr, "1", "1"));
     assertSame(testStr, StringUtil.replaceString(testStr, "xx", "xx"));
-  }
-
-  public void testReplaceChars(){
-    String test1 = "abc123";
-    assertSame(test1, StringUtil.replaceChars("abc123",
-					      new char[0],
-					      new char[0]));
-    assertEquals("abx123", StringUtil.replaceChars("abc123",
-						   new char[] {'c'},
-						   new char[] {'x'}));
-    assertEquals("abc120", StringUtil.replaceChars("abc123",
-						   new char[] {'3'},
-						   new char[] {'0'}));
-    assertEquals("ABc123", StringUtil.replaceChars("abc123",
-						   new char[] {'z','a','x','b'},
-						   new char[] {'Z','A','X','B'}));
   }
 
   public void testBreakAt() {
