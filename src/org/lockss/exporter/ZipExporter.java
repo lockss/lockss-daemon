@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExporter.java,v 1.3 2010-02-23 06:25:53 tlipkis Exp $
+ * $Id: ZipExporter.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class ZipExporter extends Exporter {
     ensureOpenZip();
     InputStream ins = cu.getUnfilteredInputStream();
     CIProperties props = cu.getProperties();
-    ZipEntry ent = new ZipEntry(cu.getUrl());
+    ZipEntry ent = new ZipEntry(xlateFilename(cu.getUrl()));
     // Store HTTP response headers into entry comment
     ent.setComment(getHttpResponseString(cu));
     try {

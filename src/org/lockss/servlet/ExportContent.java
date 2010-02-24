@@ -1,5 +1,5 @@
 /*
- * $Id: ExportContent.java,v 1.3 2010-02-23 06:25:53 tlipkis Exp $
+ * $Id: ExportContent.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
  */
 
 /*
@@ -47,10 +47,12 @@ import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.exporter.*;
 import org.lockss.exporter.Exporter.Type;
+import org.lockss.exporter.Exporter.FilenameTranslation;
 
 /** 
  */
 public class ExportContent extends LockssServlet {
+  static Logger log = Logger.getLogger("ExportContent");
 
   static final String PREFIX = Configuration.PREFIX + "export.";
 
@@ -90,6 +92,7 @@ public class ExportContent extends LockssServlet {
   static final String KEY_MSG = "msg";
   static final String KEY_AUID = "auid";
   static final String KEY_COMPRESS = "compress";
+  static final String KEY_XLATE = "xlate";
   static final String KEY_FILE_TYPE = "filetype";
   static final String KEY_FILE_PREFIX = "filePrefix";
   static final String KEY_MAX_SIZE = "maxSize";
@@ -101,7 +104,21 @@ public class ExportContent extends LockssServlet {
   static final String COL2 = "colspan=2";
   static final String COL2CENTER = COL2 + " align=center";
 
-  static Logger log = Logger.getLogger("ExportContent");
+
+  private static final String FILE_TYPE_FOOT =
+    "Each record in an ARC or WARC file may contain either a content file, or a complete HTTP response: headers and content.  For WARC, these are written into <i>resource</i> or <i>response</i> records, respectively.  ZIP records contain content only; the HTTP headers are stored as the comment in each record.";
+
+  private static final String FILE_PREFIX_FOOT =
+    "One or more files will be written, with generated names using this string as a prefix.";
+
+  private static final String MAX_SIZE_FOOT =
+    "The approximate maximum size for each ARC/WARC/ZIP file.  If the total output is larger, multiple files will be written.";
+
+  private static final String MAX_VER_FOOT =
+    "The maximum number of versions included, for content files that have older versions.  (ARC and WARC only).";
+
+  private static final String XLATE_FOOT =
+    "If the exported file will be unpacked on Windows or MacOS, this option must be used to ensure that filenames don't contain illegal characters.  All characters that are legal in URLs but not in filenames will be replaced with underscore.";
 
   private LockssDaemon daemon;
   private PluginManager pluginMgr;
@@ -114,6 +131,7 @@ public class ExportContent extends LockssServlet {
   String text;
   Type eType;
   boolean isCompress;
+  FilenameTranslation xlateFilenames;
   String filePrefix;
   String maxSize;
   String maxVersions;
@@ -147,6 +165,7 @@ public class ExportContent extends LockssServlet {
     eType = (Type)config.getEnum(Type.class,
 				 PARAM_EXPORT_TYPE, DEFAULT_EXPORT_TYPE);
     isCompress = config.getBoolean(PARAM_COMPRESS, DEFAULT_COMPRESS);
+    xlateFilenames = FilenameTranslation.XLATE_NONE;
     maxSize = config.get(PARAM_MAX_SIZE, DEFAULT_MAX_SIZE);
     maxVersions = config.get(PARAM_MAX_VERSIONS, DEFAULT_MAX_VERSIONS);
   }
@@ -177,6 +196,15 @@ public class ExportContent extends LockssServlet {
 	  return;
 	}	
 	isCompress = (getParameter(KEY_COMPRESS) != null);
+	String xlate = getParameter(KEY_XLATE);
+	try {
+	  xlateFilenames = FilenameTranslation.valueOf(xlate);
+	} catch (RuntimeException e) {
+	  log.error("illxlate", e);
+	  errMsg = "Illegal translation type: " + xlate;
+	  displayPage();
+	  return;
+	}	
 	filePrefix = getParameter(KEY_FILE_PREFIX);
 	maxSize = getParameter(KEY_MAX_SIZE);
 	maxVersions = getParameter(KEY_MAX_VERSIONS);
@@ -228,6 +256,7 @@ public class ExportContent extends LockssServlet {
     try {
       Exporter exp = eType.makeExporter(daemon, au);
       exp.setCompress(isCompress);
+      exp.setFilenameTranslation(xlateFilenames);
       exp.setDir(exportDir);
       exp.setPrefix(filePrefix);
       exp.setMaxSize(size);
@@ -277,18 +306,6 @@ public class ExportContent extends LockssServlet {
 
   static String CENTERED_CELL = "align=\"center\" colspan=3";
 
-  private static final String FILE_TYPE_FOOT =
-    "Each record in an ARC or WARC file may contain either a content file, or a complete HTTP response: headers and content.  For WARC, these are written into <i>resource</i> or <i>response</i> records, respectively.  ZIP records contain content only; the HTTP headers are stored as the comment in each record.";
-
-  private static final String FILE_PREFIX_FOOT =
-    "One or more files will be written, with generated names using this string as a prefix.";
-
-  private static final String MAX_SIZE_FOOT =
-    "The approximate maximum size for each ARC/WARC/ZIP file.  If the total output is larger, multiple files will be written.";
-
-  private static final String MAX_VER_FOOT =
-    "The maximum number of versions included, for content files that have older versions.  (ARC and WARC only).";
-
   private Element makeForm() {
     Composite comp = new Composite();
     Form frm = new Form(srvURL(myServletDescr()));
@@ -314,6 +331,15 @@ public class ExportContent extends LockssServlet {
 
     addElementToTable(tbl, "Compress", checkBox(null, "true", KEY_COMPRESS,
 						isCompress));
+
+    Composite xlate = new Composite();
+    for (FilenameTranslation fx : FilenameTranslation.values()) {
+      xlate.add(radioButton(fx.getLabel() + "&nbsp;", fx.name(), KEY_XLATE,
+			    xlateFilenames == fx));
+    }
+    addElementToTable(tbl,
+		      "Translate filenames" + addFootnote(XLATE_FOOT),
+		      xlate);
 
     addInputToTable(tbl,
 		    "Export file prefix" + addFootnote(FILE_PREFIX_FOOT),

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExporter.java,v 1.3 2010-02-22 08:07:45 tlipkis Exp $
+ * $Id: FuncZipExporter.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
  */
 
 /*
@@ -40,23 +40,39 @@ import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.exporter.Exporter.FilenameTranslation;
 
 public class FuncZipExporter extends BaseFuncExporter {
+
+  public void testXlate() throws Exception {
+    String t1 = "http://foo?bar<a>b\\c*d|e";
+    ZipExporter exp = new ZipExporter(daemon, sau);
+    assertSame(t1, exp.xlateFilename(t1));
+    exp.setFilenameTranslation(FilenameTranslation.XLATE_MAC);
+    assertEquals("http_//foo?bar<a>b\\c*d|e", exp.xlateFilename(t1));
+    exp.setFilenameTranslation(FilenameTranslation.XLATE_WINDOWS);
+    assertEquals("http_//foo_bar_a_b_c_d_e", exp.xlateFilename(t1));
+  }
 
   // Combining in one testcase is a little faster because the sim content
   // tree doesn't have to be recreated and recrawled for each different
   // export test.
   public void testSeveralVariants() throws Exception {
-    testExport(-1);
-    testExport(2000);
+    testExport(true, -1, FilenameTranslation.XLATE_NONE);
+    testExport(false, 2000, FilenameTranslation.XLATE_NONE);
+    testExport(true, -1, FilenameTranslation.XLATE_WINDOWS);
   }
 
-  public void testExport(long maxSize) throws Exception {
+  public void testExport(boolean isCompress, long maxSize,
+			 FilenameTranslation xlate)
+      throws Exception {
     exportDir = getTempDir();
     exportFiles = null;
     ZipExporter exp = new ZipExporter(daemon, sau);
     exp.setDir(exportDir);
     exp.setPrefix("zippre");
+    exp.setCompress(isCompress);
+    exp.setFilenameTranslation(xlate);
     if (maxSize > 0) {
       exp.setMaxSize(maxSize);
     }
@@ -74,6 +90,23 @@ public class FuncZipExporter extends BaseFuncExporter {
 	try {
 	  rec = (ZipEntry)iter.nextElement();
 	  String url = rec.getName();
+	  switch (xlate) {
+	  case XLATE_NONE:
+	    assertMatchesRE("^http://", url);
+	    break;
+	  case XLATE_WINDOWS:
+	  case XLATE_MAC:
+	    // The filenames were translated.  Current windows translation
+	    // isn't reversible in general, but we know that the only
+	    // windows-illegal character in simulated content is the colon,
+	    // so we can reverse it.  If that changes, this test will
+	    // break.
+
+	    assertMatchesRE("^http_//", url);
+	    url = StringUtil.replaceString(url, "_", ":");
+	    break;
+
+	  }
 	  String comment = rec.getComment();
 	  cu = sau.makeCachedUrl(url);
 // 	  log.debug("Comp " + hdr.getMimetype() + ": " + url);
