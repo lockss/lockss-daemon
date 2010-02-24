@@ -1,5 +1,5 @@
 /*
- * $Id: JarConfigFile.java,v 1.7 2010-02-24 02:23:59 tlipkis Exp $
+ * $Id: JarConfigFile.java,v 1.8 2010-02-24 23:57:49 pgust Exp $
  */
 
 /*
@@ -44,7 +44,6 @@ import java.util.jar.*;
  */
 public class JarConfigFile extends BaseConfigFile {
   private File m_jarFile;
-//   private String m_entryTime;
 
   public JarConfigFile(String url) {
     super(url);
@@ -61,25 +60,17 @@ public class JarConfigFile extends BaseConfigFile {
     log.debug2("Loading JAR config file: " + m_fileUrl);
     URL jarUrl = new URL(m_fileUrl);
     final JarURLConnection con = (JarURLConnection)jarUrl.openConnection();
-    // Disable JarURLConnection's caching of JarFiles, as it runs afoul of
-    // the auto-close wrapper below.
+    // important: must disable caching to release file resource on close,
+    // and force changed content to be reloaded from the file each time
     con.setUseCaches(false);
-    JarEntry entry = con.getJarEntry();
+
     if (m_jarFile == null) {
       JarFile jf = con.getJarFile();
       String name = jf.getName();
       log.debug3("jf.name: " + name);
       m_jarFile = new File(name);
     }
-//     m_entryTime = Long.toString(entry.getTime());
-    return new FilterInputStream(con.getInputStream()) {
-    	public void close() throws IOException
-    	{
-    		super.close();
-    		// close connection JAR file to unlock file on Windows
-    		con.getJarFile().close();
-    	}
-    };
+    return con.getInputStream();
   }
 
   protected String calcNewLastModified() {
