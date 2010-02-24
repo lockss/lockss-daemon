@@ -10,6 +10,19 @@
 
   {
     title <
+      name = Buildings & Landscapes: Journal of the Vernacular Architecture Forum 
+    >
+
+    param[journal_dir] = buildings_and_landscapes
+
+    au < testing ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 14 ; 14 >
+    au < testing ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 15 ; 15 >
+    au < testing ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 16 ; 16 >
+
+  }
+  
+  {
+    title <
       name = Cultural Critique 
     >
 

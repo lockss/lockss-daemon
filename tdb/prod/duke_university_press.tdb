@@ -62,6 +62,22 @@
 
   {
     title <
+      name = boundary 2 
+    >
+
+    param[journal_dir] = boundary
+
+    au < ready ; boundary 2 Volume 26 ; 26 >
+    au < ready ; boundary 2 Volume 27 ; 27 >
+    au < ready ; boundary 2 Volume 28 ; 28 >
+    au < ready ; boundary 2 Volume 29 ; 29 >
+    au < ready ; boundary 2 Volume 30 ; 30 >
+    au < ready ; boundary 2 Volume 31 ; 31 >
+
+  }
+  
+  {
+    title <
       name = Common Knowledge 
     >
 

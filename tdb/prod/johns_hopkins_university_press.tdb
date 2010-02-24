@@ -146,9 +146,9 @@
     au < released ; Arethusa Volume 38 ; 38 >
     au < released ; Arethusa Volume 39 ; 39 >
     au < released ; Arethusa Volume 40 ; 40 >
-    au < testing ; Arethusa Volume 41 ; 41 >
-    au < testing ; Arethusa Volume 42 ; 42 >
-    au < testing ; Arethusa Volume 43 ; 43 >
+    au < ready ; Arethusa Volume 41 ; 41 >
+    au < ready ; Arethusa Volume 42 ; 42 >
+    au < ready ; Arethusa Volume 43 ; 43 >
 
   }
 
@@ -189,6 +189,56 @@
 
   }
 
+  {
+    title <
+      name = Book History 
+    >
+
+    param[journal_dir] = book_history
+
+    au < ready ; Book History Volume 1 ; 1 >
+    au < ready ; Book History Volume 2 ; 2 >
+    au < ready ; Book History Volume 3 ; 3 >
+    au < ready ; Book History Volume 4 ; 4 >
+    au < ready ; Book History Volume 5 ; 5 >
+    au < ready ; Book History Volume 6 ; 6 >
+    au < ready ; Book History Volume 7 ; 7 >
+    au < ready ; Book History Volume 8 ; 8 >
+    au < ready ; Book History Volume 9 ; 9 >
+    au < ready ; Book History Volume 10 ; 10 >
+    au < ready ; Book History Volume 11 ; 11 >
+    au < ready ; Book History Volume 12 ; 12 >
+    
+  }
+ 
+  {
+    title <
+      name = Bookbird 
+    >
+
+    param[journal_dir] = bookbird
+
+    au < ready ; Bookbird Volume 46 ; 46 >
+    au < ready ; Bookbird Volume 47 ; 47 >
+    au < ready ; Bookbird Volume 48 ; 48 >
+    
+  }
+ 
+  {
+    title <
+      name = Bulletin of the Center for Children's Books 
+    >
+
+    param[journal_dir] = bulletin_of_the_center_for_childrens_books
+
+    au < testing ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
+    au < testing ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
+    au < testing ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
+    au < testing ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
+    au < testing ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
+    
+  }
+  
   {
     title <
       name = Callaloo 

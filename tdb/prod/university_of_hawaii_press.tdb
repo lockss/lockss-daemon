@@ -57,8 +57,8 @@ comment[0] = Atypon AUs
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = archives_of_asian_art
 
-      au < testing ; Archives of Asian Art Volume 58 ; 58 >
-      au < testing ; Archives of Asian Art Volume 59 ; 59 >
+      au < ready ; Archives of Asian Art Volume 58 ; 58 >
+      au < ready ; Archives of Asian Art Volume 59 ; 59 >
 
     }
 
@@ -83,6 +83,8 @@ comment[0] = Atypon AUs
       au < released ; Asian Perspectives Volume 44 ; 44 >
       au < released ; Asian Perspectives Volume 45 ; 45 >
       au < released ; Asian Perspectives Volume 46 ; 46 >
+      au < ready ; Asian Perspectives Volume 47 ; 47 >
+      au < ready ; Asian Perspectives Volume 48 ; 48 >
 
     }
 
@@ -108,11 +110,31 @@ comment[0] = Atypon AUs
       au < released ; Asian Theatre Journal Volume 22 ; 22 >
       au < released ; Asian Theatre Journal Volume 23 ; 23 >
       au < released ; Asian Theatre Journal Volume 24 ; 24 >
+      au < ready ; Asian Theatre Journal Volume 25 ; 25 >
+      au < ready ; Asian Theatre Journal Volume 26 ; 26 >
 
     }
 
   } 
 
+  {
+    title <
+      name = Azalea: Journal of Korean Literature & Culture ;
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = azalea
+
+      au < ready ; Azalea: Journal of Korean Literature & Culture Volume 1 ; 1 >
+      au < ready ; Azalea: Journal of Korean Literature & Culture Volume 2 ; 2 >
+
+    }
+
+  } 
+  
   {
     title <
       name = Biography ;
@@ -132,6 +154,8 @@ comment[0] = Atypon AUs
       au < released ; Biography Volume 28 ; 28 >
       au < released ; Biography Volume 29 ; 29 >
       au < released ; Biography Volume 30 ; 30 >
+      au < ready ; Biography Volume 31 ; 31 >
+      au < ready ; Biography Volume 32 ; 32 >
 
     }
   }
@@ -155,6 +179,9 @@ comment[0] = Atypon AUs
       au < released ; Buddhist-Christian Studies Volume 24 ; 24 >
       au < released ; Buddhist-Christian Studies Volume 25 ; 25 >
       au < released ; Buddhist-Christian Studies Volume 26 ; 26 >
+      au < testing ; Buddhist-Christian Studies Volume 27 ; 27 >
+      au < testing ; Buddhist-Christian Studies Volume 28 ; 28 >
+      au < testing ; Buddhist-Christian Studies Volume 29 ; 29 >
 
     }      
   }

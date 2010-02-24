@@ -17,19 +17,20 @@
 
     param[journal_id] = aaa
 
-    au < wanted ; Abstract and Applied Analysis Volume 1 (1996) ; 1996 >
-    au < wanted ; Abstract and Applied Analysis Volume 2 (1997) ; 1997 >
-    au < wanted ; Abstract and Applied Analysis Volume 3 (1998) ; 1998 >
-    au < wanted ; Abstract and Applied Analysis Volume 4 (1999) ; 1999 >
-    au < wanted ; Abstract and Applied Analysis Volume 5 (2000) ; 2000 >
-    au < wanted ; Abstract and Applied Analysis Volume 6 (2001) ; 2001 >
-    au < wanted ; Abstract and Applied Analysis Volume 7 (2002) ; 2002 >
-    au < wanted ; Abstract and Applied Analysis Volume 2003 ; 2003 >
-    au < wanted ; Abstract and Applied Analysis Volume 2004 ; 2004 >
-    au < wanted ; Abstract and Applied Analysis Volume 2005 ; 2005 >
-    au < wanted ; Abstract and Applied Analysis Volume 2006 ; 2006 >
-    au < wanted ; Abstract and Applied Analysis Volume 2007 ; 2007 >
-    au < testing ; Abstract and Applied Analysis Volume 2008 ; 2008 >
+    au < ready ; Abstract and Applied Analysis Volume 1 (1996) ; 1996 >
+    au < ready ; Abstract and Applied Analysis Volume 2 (1997) ; 1997 >
+    au < ready ; Abstract and Applied Analysis Volume 3 (1998) ; 1998 >
+    au < ready ; Abstract and Applied Analysis Volume 4 (1999) ; 1999 >
+    au < ready ; Abstract and Applied Analysis Volume 5 (2000) ; 2000 >
+    au < ready ; Abstract and Applied Analysis Volume 6 (2001) ; 2001 >
+    au < ready ; Abstract and Applied Analysis Volume 7 (2002) ; 2002 >
+    au < ready ; Abstract and Applied Analysis Volume 2003 ; 2003 >
+    au < ready ; Abstract and Applied Analysis Volume 2004 ; 2004 >
+    au < ready ; Abstract and Applied Analysis Volume 2005 ; 2005 >
+    au < ready ; Abstract and Applied Analysis Volume 2006 ; 2006 >
+    au < ready ; Abstract and Applied Analysis Volume 2007 ; 2007 >
+    au < ready ; Abstract and Applied Analysis Volume 2008 ; 2008 >
+    au < testing ; Abstract and Applied Analysis Volume 2009 ; 2009 >
 
   }
 
@@ -40,35 +41,36 @@
 
     param[journal_id] = apec
 
-    au < testin ; Active and Passive Electronic Components Volume 1 (1980) ; 1980 >
-    au < wanted ; Active and Passive Electronic Components Volume 2 (1981) ; 1981 >
-    au < wanted ; Active and Passive Electronic Components Volume 3 (1982) ; 1982 >
-    au < wanted ; Active and Passive Electronic Components Volume 4 (1983) ; 1983 >
-    au < wanted ; Active and Passive Electronic Components Volume 5 (1984) ; 1984 >
-    au < wanted ; Active and Passive Electronic Components Volume 6 (1985) ; 1985 >
-    au < wanted ; Active and Passive Electronic Components Volume 7 (1986) ; 1986 >
-    au < wanted ; Active and Passive Electronic Components Volume 8 (1987) ; 1987 >
-    au < wanted ; Active and Passive Electronic Components Volume 9 (1988) ; 1988 >
-    au < wanted ; Active and Passive Electronic Components Volume 10 (1989) ; 1989 >
-    au < wanted ; Active and Passive Electronic Components Volume 11 (1990) ; 1990 >
-    au < wanted ; Active and Passive Electronic Components Volume 12 (1991) ; 1991 >
-    au < wanted ; Active and Passive Electronic Components Volume 13 (1992) ; 1992 >
-    au < wanted ; Active and Passive Electronic Components Volume 14 (1993) ; 1993 >
-    au < wanted ; Active and Passive Electronic Components Volume 15 (1994) ; 1994 >
-    au < wanted ; Active and Passive Electronic Components Volume 16 (1995) ; 1995 >
-    au < wanted ; Active and Passive Electronic Components Volume 17 (1996) ; 1996 >
-    au < wanted ; Active and Passive Electronic Components Volume 18 (1997) ; 1997 >
-    au < wanted ; Active and Passive Electronic Components Volume 19 (1998) ; 1998 >
-    au < wanted ; Active and Passive Electronic Components Volume 20 (1999) ; 1999 >
-    au < wanted ; Active and Passive Electronic Components Volume 21 (2000) ; 2000 >
-    au < wanted ; Active and Passive Electronic Components Volume 22 (2001) ; 2001 >
-    au < wanted ; Active and Passive Electronic Components Volume 23 (2002) ; 2002 >
-    au < wanted ; Active and Passive Electronic Components Volume 24 2003 ; 2003 >
-    au < wanted ; Active and Passive Electronic Components Volume 25 2004 ; 2004 >
-    au < wanted ; Active and Passive Electronic Components Volume 26 2005 ; 2005 >
-    au < wanted ; Active and Passive Electronic Components Volume 27 2006 ; 2006 >
-    au < wanted ; Active and Passive Electronic Components Volume 2007 ; 2007 >
-    au < wanted ; Active and Passive Electronic Components Volume 2008 ; 2008 >
+    au < ready ; Active and Passive Electronic Components Volume 1 (1980) ; 1980 >
+    au < ready ; Active and Passive Electronic Components Volume 2 (1981) ; 1981 >
+    au < ready ; Active and Passive Electronic Components Volume 3 (1982) ; 1982 >
+    au < ready ; Active and Passive Electronic Components Volume 4 (1983) ; 1983 >
+    au < ready ; Active and Passive Electronic Components Volume 5 (1984) ; 1984 >
+    au < ready ; Active and Passive Electronic Components Volume 6 (1985) ; 1985 >
+    au < ready ; Active and Passive Electronic Components Volume 7 (1986) ; 1986 >
+    au < ready ; Active and Passive Electronic Components Volume 8 (1987) ; 1987 >
+    au < ready ; Active and Passive Electronic Components Volume 9 (1988) ; 1988 >
+    au < ready ; Active and Passive Electronic Components Volume 10 (1989) ; 1989 >
+    au < ready ; Active and Passive Electronic Components Volume 11 (1990) ; 1990 >
+    au < ready ; Active and Passive Electronic Components Volume 12 (1991) ; 1991 >
+    au < ready ; Active and Passive Electronic Components Volume 13 (1992) ; 1992 >
+    au < ready ; Active and Passive Electronic Components Volume 14 (1993) ; 1993 >
+    au < ready ; Active and Passive Electronic Components Volume 15 (1994) ; 1994 >
+    au < ready ; Active and Passive Electronic Components Volume 16 (1995) ; 1995 >
+    au < ready ; Active and Passive Electronic Components Volume 17 (1996) ; 1996 >
+    au < ready ; Active and Passive Electronic Components Volume 18 (1997) ; 1997 >
+    au < ready ; Active and Passive Electronic Components Volume 19 (1998) ; 1998 >
+    au < ready ; Active and Passive Electronic Components Volume 20 (1999) ; 1999 >
+    au < testing ; Active and Passive Electronic Components Volume 21 (2000) ; 2000 >
+    au < testing ; Active and Passive Electronic Components Volume 22 (2001) ; 2001 >
+    au < testing ; Active and Passive Electronic Components Volume 23 (2002) ; 2002 >
+    au < testing ; Active and Passive Electronic Components Volume 24 (2003) ; 2003 >
+    au < testing ; Active and Passive Electronic Components Volume 25 (2004) ; 2004 >
+    au < testing ; Active and Passive Electronic Components Volume 26 (2005) ; 2005 >
+    au < testing ; Active and Passive Electronic Components Volume 27 (2006) ; 2006 >
+    au < testing ; Active and Passive Electronic Components Volume 2007 ; 2007 >
+    au < testing ; Active and Passive Electronic Components Volume 2008 ; 2008 >
+    au < testing ; Active and Passive Electronic Components Volume 2009 ; 2009 >
 
   }
 
@@ -79,7 +81,8 @@
 
     param[journal_id] = aav
 
-    au < wanted ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
+    au < testing ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
+    au < testing ; Advances in Acoustics and Vibration Volume 2009 ; 2009 >
 
   }
 
@@ -90,7 +93,8 @@
 
     param[journal_id] = aai
 
-    au < wanted ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
+    au < testing ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
+    au < testing ; Advances in Artificial Intelligence Volume 2009 ; 2009 >
 
   }
 
@@ -101,7 +105,7 @@
 
     param[journal_id] = aans
 
-    au < manifest ; Advances in Artificial Neural Systems Volume 2009 ; 2009 >
+    au < testing ; Advances in Artificial Neural Systems Volume 2009 ; 2009 >
 
   }
 
@@ -112,7 +116,8 @@
 
     param[journal_id] = aa
 
-    au < manifest ; Advances in Astronomy Volume 2008 ; 2008 >
+    au < testing ; Advances in Astronomy Volume 2008 ; 2008 >
+    au < testing ; Advances in Astronomy Volume 2009 ; 2009 >
 
   }
 
@@ -123,7 +128,8 @@
 
     param[journal_id] = abi
 
-    au < manifest ; Advances in Bioinformatics Volume 2008 ; 2008 >
+    au < testing ; Advances in Bioinformatics Volume 2008 ; 2008 >
+    au < testing ; Advances in Bioinformatics Volume 2009 ; 2009 >
 
   }
 
@@ -134,7 +140,8 @@
 
     param[journal_id] = ace
 
-    au < manifest ; Advances in Civil Engineering Volume 2008 ; 2008 >
+    au < testing ; Advances in Civil Engineering Volume 2008 ; 2008 >
+    au < testing ; Advances in Civil Engineering Volume 2009 ; 2009 >
 
   }
 
@@ -145,7 +152,8 @@
 
     param[journal_id] = acmp
 
-    au < manifest ; Advances in Condensed Matter Physics Volume 2008 ; 2008 >
+    au < testing ; Advances in Condensed Matter Physics Volume 2008 ; 2008 >
+    au < testing ; Advances in Condensed Matter Physics Volume 2009 ; 2009 >
 
   }
 
@@ -156,11 +164,12 @@
 
     param[journal_id] = ade
 
-    au < manifest ; Advances in Difference Equations Volume 2004 ; 2004 >
-    au < manifest ; Advances in Difference Equations Volume 2005 ; 2005 >
-    au < manifest ; Advances in Difference Equations Volume 2006 ; 2006 >
-    au < manifest ; Advances in Difference Equations Volume 2007 ; 2007 >
-    au < manifest ; Advances in Difference Equations Volume 2008 ; 2008 >
+    au < testing ; Advances in Difference Equations Volume 2004 ; 2004 >
+    au < testing ; Advances in Difference Equations Volume 2005 ; 2005 >
+    au < testing ; Advances in Difference Equations Volume 2006 ; 2006 >
+    au < testing ; Advances in Difference Equations Volume 2007 ; 2007 >
+    au < testing ; Advances in Difference Equations Volume 2008 ; 2008 >
+    au < testing ; Advances in Difference Equations Volume 2009 ; 2009 >
 
   }
 
@@ -171,7 +180,8 @@
 
     param[journal_id] = afs
 
-    au < manifest ; Advances in Fuzzy Systems Volume 2008 ; 2008 >
+    au < testing ; Advances in Fuzzy Systems Volume 2008 ; 2008 >
+    au < testing ; Advances in Fuzzy Systems Volume 2009 ; 2009 >
 
   }
 
@@ -192,8 +202,8 @@
 
     param[journal_id] = ahep
 
-    au < manifest ; Advances in High Energy Physics Volume 2007 ; 2007 >
-    au < manifest ; Advances in High Energy Physics Volume 2008 ; 2008 >
+    au < testing ; Advances in High Energy Physics Volume 2007 ; 2007 >
+    au < testing ; Advances in High Energy Physics Volume 2008 ; 2008 >
     au < testing ; Advances in High Energy Physics Volume 2009 ; 2009 >
 
   }
@@ -205,7 +215,8 @@
 
     param[journal_id] = ahci
 
-    au < manifest ; Advances in Human-Computer Interaction Volume 2008 ; 2008 >
+    au < testing ; Advances in Human-Computer Interaction Volume 2008 ; 2008 >
+    au < testing ; Advances in Human-Computer Interaction Volume 2009 ; 2009 >
 
   }
 
@@ -216,7 +227,8 @@
 
     param[journal_id] = amse
 
-    au < manifest ; Advances in Materials Science and Engineering Volume 2008 ; 2008 >
+    au < testing ; Advances in Materials Science and Engineering Volume 2008 ; 2008 >
+    au < testing ; Advances in Materials Science and Engineering Volume 2009 ; 2009 >
 
   }
 

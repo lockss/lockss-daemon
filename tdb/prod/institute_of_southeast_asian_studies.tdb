@@ -15,9 +15,10 @@
 
     param[journal_dir] = asean_economic_bulletin
 
-    au < manifest ; ASEAN Economic Bulletin Volume 23 ; 23 >
-    au < manifest ; ASEAN Economic Bulletin Volume 24 ; 24 >
-    au < manifest ; ASEAN Economic Bulletin Volume 25 ; 25 >
+    au < ready ; ASEAN Economic Bulletin Volume 23 ; 23 >
+    au < ready ; ASEAN Economic Bulletin Volume 24 ; 24 >
+    au < ready ; ASEAN Economic Bulletin Volume 25 ; 25 >
+    au < ready ; ASEAN Economic Bulletin Volume 26 ; 26 >
 
   }
 
