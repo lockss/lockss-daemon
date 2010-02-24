@@ -48,6 +48,1236 @@
  
  <property name="org.lockss.title">
 
+  <property name="BiologyofReproduction1">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction2">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction3">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction4">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction5">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction6">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction7">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction8">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction9">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction10">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction11">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction12">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction13">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction14">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction15">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction16">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction17">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction18">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction19">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction20">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction21">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction22">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction23">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction24">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction25">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction26">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction27">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction28">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction29">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction30">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction31">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction32">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction33">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction34">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction35">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction36">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction37">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction38">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction39">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction40">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction41">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="41" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction42">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="42" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction43">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction44">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="44" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction45">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="45" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction46">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="46" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction47">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction48">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction49">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction50">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction51">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction52">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="52" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction53">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="53" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction54">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="54" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction55">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction56">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction57">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction58">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 58" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="58" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction59">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="59" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction60">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="60" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction61">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction62">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="62" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction63">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="63" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction64">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="64" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction65">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 65" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="65" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction66">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 66" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="66" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction67">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 67" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="67" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction68">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 68" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="68" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction69">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 69" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="69" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction70">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 70" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="70" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction71">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 71" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="71" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction72">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 72" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="72" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction73">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="73" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction74">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction75">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction76">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction77">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction78">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="78" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction79">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="79" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction80">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 80" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="80" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction81">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="81" />
+   </property>
+  </property>
+
+  <property name="BiologyofReproduction82">
+   <property name="attributes.publisher" value="Society for the Study of Reproduction" />
+   <property name="journalTitle" value="Biology of Reproduction" />
+   <property name="title" value="Biology of Reproduction Volume 82" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biolreprod.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="82" />
+   </property>
+  </property>
+
  </property>
 
 </lockss-config>
