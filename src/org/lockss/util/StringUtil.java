@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.88 2010-02-23 22:12:04 thib_gc Exp $
+ * $Id: StringUtil.java,v 1.89 2010-02-24 03:29:48 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,36 @@ public class StringUtil {
       }
       return sb.toString();
     }
+  }
+
+  /**
+   * Replace each occurrence of a character in <code>from</code> with the
+   * corresponding character in <core>to</code>
+   * @param str string to be modified
+   * @param from array of characters to replace
+   * @param to array of characters to substitute for chars in <code>from</code>
+   * @return new string with from chars replaced by to chars.
+   */
+  public static String replaceChars(String str, char[] from, char[] to) {
+    if (from.length != to.length) {
+      throw
+	new IllegalArgumentException("from and to arrays must be same length");
+    }
+    StringBuilder sb = null;
+    int len = str.length();
+    for (int ix = 0; ix < len; ix++) {
+      char chr = str.charAt(ix);
+      for (int jx = from.length - 1; jx >= 0 ; jx--) {
+	if (from[jx] == chr) {
+	  if (sb == null) {
+	    sb = new StringBuilder(str);
+	  }
+	  sb.setCharAt(ix, to[jx]);
+	  break;
+	}
+      }
+    }
+    return sb != null ? sb.toString() : str;
   }
 
   /**
