@@ -1,5 +1,5 @@
 /*
- * $Id: JarConfigFile.java,v 1.6 2010-02-23 00:28:25 pgust Exp $
+ * $Id: JarConfigFile.java,v 1.7 2010-02-24 02:23:59 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,9 @@ public class JarConfigFile extends BaseConfigFile {
     log.debug2("Loading JAR config file: " + m_fileUrl);
     URL jarUrl = new URL(m_fileUrl);
     final JarURLConnection con = (JarURLConnection)jarUrl.openConnection();
+    // Disable JarURLConnection's caching of JarFiles, as it runs afoul of
+    // the auto-close wrapper below.
+    con.setUseCaches(false);
     JarEntry entry = con.getJarEntry();
     if (m_jarFile == null) {
       JarFile jf = con.getJarFile();
