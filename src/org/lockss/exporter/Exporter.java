@@ -1,5 +1,5 @@
 /*
- * $Id: Exporter.java,v 1.1.2.2 2010-02-23 06:19:14 tlipkis Exp $
+ * $Id: Exporter.java,v 1.1.2.3 2010-02-24 03:26:26 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public abstract class Exporter {
   protected long maxSize = -1;
   protected int maxVersions = 1;
   protected boolean compress = false;
+  protected FilenameTranslation xlate = FilenameTranslation.XLATE_NONE;
   List errors = new ArrayList();
 
   protected abstract void start() throws IOException;
@@ -76,6 +77,14 @@ public abstract class Exporter {
 
   public boolean getCompress() {
     return compress;
+  }
+
+  public void setFilenameTranslation(FilenameTranslation val) {
+    xlate = val;
+  }
+
+  public FilenameTranslation getFilenameTranslation() {
+    return xlate;
   }
 
   public void setDir(File val) {
@@ -141,6 +150,10 @@ public abstract class Exporter {
     } catch (IOException e) {
       recordError("Error closing file", e);
     }      
+  }
+
+  protected String xlateFilename(String url) {
+    return xlate.xlate(url);
   }
 
   protected void recordError(String msg, Throwable t) {
@@ -255,6 +268,43 @@ public abstract class Exporter {
   public interface Factory {
     public Exporter makeExporter(LockssDaemon daemon, ArchivalUnit au);
   }      
+
+  static final char[] WINDOWS_FROM = {'?', '<', '>', '\\', ':', '*', '|'};
+  static final char[] WINDOWS_TO = {'_', '_', '_', '_', '_', '_', '_'};
+  static final char[] MAC_FROM = {':'};
+  static final char[] MAC_TO = {'_'};
+
+  /** Enum of filename translation types */
+  public static enum FilenameTranslation {
+    XLATE_NONE("None") {
+      public String xlate(String s) {
+	return s;
+      }
+    },
+    XLATE_WINDOWS("Windows") {
+      public String xlate(String s) {
+	return StringUtil.replaceChars(s, WINDOWS_FROM, WINDOWS_TO);
+      }
+    },
+    XLATE_MAC("MacOS") {
+      public String xlate(String s) {
+	return StringUtil.replaceChars(s, MAC_FROM, MAC_TO);
+      }
+    };
+
+    private final String label;
+
+    FilenameTranslation(String label) {
+      this.label = label;
+    }
+
+    public String getLabel() {
+      return label;
+    }
+
+    public abstract String xlate(String s);
+  };
+
 
   /** Enum of Exporter types, and factories */
   public static enum Type implements Factory {

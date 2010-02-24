@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExporter.java,v 1.1.2.2 2010-02-23 06:19:14 tlipkis Exp $
+ * $Id: WarcExporter.java,v 1.1.2.3 2010-02-24 03:26:26 tlipkis Exp $
  */
 
 /*
@@ -121,7 +121,7 @@ public class WarcExporter extends Exporter {
 	  new ReaderInputStream(new StringReader(hdrString));
 	InputStream concat = new SequenceInputStream(headerIn, contentIn);
 	try {
-	  ww.writeResponseRecord(url,
+	  ww.writeResponseRecord(xlateFilename(url),
 				 timestamp,
 				 HTTP_RESPONSE_MIMETYPE,
 				 WARCWriter.getRecordID(),
@@ -138,7 +138,7 @@ public class WarcExporter extends Exporter {
 	String mimeType =
 	  HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
 	try {
-	  ww.writeResourceRecord(url,
+	  ww.writeResourceRecord(xlateFilename(url),
 				 timestamp,
 				 mimeType,
 				 headers, contentIn, contentSize);

@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExporter.java,v 1.1.2.1 2010-02-22 06:42:03 tlipkis Exp $
+ * $Id: ArcExporter.java,v 1.1.2.2 2010-02-24 03:26:26 tlipkis Exp $
  */
 
 /*
@@ -93,10 +93,10 @@ public class ArcExporter extends Exporter {
 	InputStream headerIn =
 	  new ReaderInputStream(new StringReader(hdrString));
 	InputStream concat = new SequenceInputStream(headerIn, contentIn);
-	aw.write(url, cu.getContentType(),
+	aw.write(xlateFilename(url), cu.getContentType(),
 		 getHostIp(), fetchTime, size, concat);
       } else {
-	aw.write(url, cu.getContentType(),
+	aw.write(xlateFilename(url), cu.getContentType(),
 		 getHostIp(), fetchTime, cu.getContentSize(), contentIn);
       }
     } catch (IOException e) {
