@@ -14,7 +14,7 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://www.xiolreprod.org/
+      param[base_url] = http://www.biolreprod.org/
       implicit < status ; name ; param[volume_name] >
 
       au < exists ; Biology of Reproduction Volume 1 ; 1 >
