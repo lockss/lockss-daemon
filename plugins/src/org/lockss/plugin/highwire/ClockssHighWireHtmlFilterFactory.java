@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.8 2009-09-22 01:27:36 thib_gc Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.9 2010-02-25 18:14:39 greya Exp $
  */
 
 /*
@@ -99,7 +99,9 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
         // Contains ad-dependent URLs (e.g. American Academy of Pediatrics)
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://ads.adhostingsolutions.com/"),
-    };
+        // alt for less/greater than confuses WhiteSpace filter
+        HtmlNodeFilters.tagWithAttributeRegex("img", "alt", "[<>]"),
+        };
 
     OrFilter orFilter = new OrFilter(filters);
     InputStream filtered = new HtmlFilterInputStream(in,

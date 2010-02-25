@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlFilterFactory.java,v 1.5 2009-09-22 01:27:36 thib_gc Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.6 2010-02-25 18:14:39 greya Exp $
  */
 
 /*
@@ -88,6 +88,8 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
         // Contains ad-dependent URLs (e.g. American Academy of Pediatrics)
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://ads.adhostingsolutions.com/"),
+        // alt for less/greater than confuses WhiteSpace filter
+        HtmlNodeFilters.tagWithAttributeRegex("img", "alt", "[<>]"),
     };
 
 
