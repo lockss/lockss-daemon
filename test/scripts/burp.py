@@ -192,7 +192,7 @@ VALUES ("%s", %d, CURRENT_DATE(), "%s", "%s", "%s", %d, "rsc")""" % \
                             (host, port, auname[auid], auid, auyear[auid], len(auarticles[auid])))
     
     cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, CURRENT_DATE())" %
-                   (host, port))
+                   (host, int(port)))
     
     print "****** " + options.host + " finished ******"
 
