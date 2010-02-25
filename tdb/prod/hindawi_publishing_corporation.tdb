@@ -61,16 +61,16 @@
     au < ready ; Active and Passive Electronic Components Volume 18 (1997) ; 1997 >
     au < ready ; Active and Passive Electronic Components Volume 19 (1998) ; 1998 >
     au < ready ; Active and Passive Electronic Components Volume 20 (1999) ; 1999 >
-    au < testing ; Active and Passive Electronic Components Volume 21 (2000) ; 2000 >
-    au < testing ; Active and Passive Electronic Components Volume 22 (2001) ; 2001 >
-    au < testing ; Active and Passive Electronic Components Volume 23 (2002) ; 2002 >
-    au < testing ; Active and Passive Electronic Components Volume 24 (2003) ; 2003 >
-    au < testing ; Active and Passive Electronic Components Volume 25 (2004) ; 2004 >
-    au < testing ; Active and Passive Electronic Components Volume 26 (2005) ; 2005 >
-    au < testing ; Active and Passive Electronic Components Volume 27 (2006) ; 2006 >
-    au < testing ; Active and Passive Electronic Components Volume 2007 ; 2007 >
-    au < testing ; Active and Passive Electronic Components Volume 2008 ; 2008 >
-    au < testing ; Active and Passive Electronic Components Volume 2009 ; 2009 >
+    au < ready ; Active and Passive Electronic Components Volume 21 (2000) ; 2000 >
+    au < ready ; Active and Passive Electronic Components Volume 22 (2001) ; 2001 >
+    au < ready ; Active and Passive Electronic Components Volume 23 (2002) ; 2002 >
+    au < ready ; Active and Passive Electronic Components Volume 24 (2003) ; 2003 >
+    au < ready ; Active and Passive Electronic Components Volume 25 (2004) ; 2004 >
+    au < ready ; Active and Passive Electronic Components Volume 26 (2005) ; 2005 >
+    au < ready ; Active and Passive Electronic Components Volume 27 (2006) ; 2006 >
+    au < ready ; Active and Passive Electronic Components Volume 2007 ; 2007 >
+    au < ready ; Active and Passive Electronic Components Volume 2008 ; 2008 >
+    au < ready ; Active and Passive Electronic Components Volume 2009 ; 2009 >
 
   }
 
@@ -81,7 +81,7 @@
 
     param[journal_id] = aav
 
-    au < testing ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
+    au < ready ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
     au < testing ; Advances in Acoustics and Vibration Volume 2009 ; 2009 >
 
   }
@@ -93,8 +93,8 @@
 
     param[journal_id] = aai
 
-    au < testing ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
-    au < testing ; Advances in Artificial Intelligence Volume 2009 ; 2009 >
+    au < ready ; Advances in Artificial Intelligence Volume 2008 ; 2008 >
+    au < ready ; Advances in Artificial Intelligence Volume 2009 ; 2009 >
 
   }
 
@@ -105,7 +105,7 @@
 
     param[journal_id] = aans
 
-    au < testing ; Advances in Artificial Neural Systems Volume 2009 ; 2009 >
+    au < ready ; Advances in Artificial Neural Systems Volume 2009 ; 2009 >
 
   }
 
@@ -116,8 +116,8 @@
 
     param[journal_id] = aa
 
-    au < testing ; Advances in Astronomy Volume 2008 ; 2008 >
-    au < testing ; Advances in Astronomy Volume 2009 ; 2009 >
+    au < ready ; Advances in Astronomy Volume 2008 ; 2008 >
+    au < ready ; Advances in Astronomy Volume 2009 ; 2009 >
 
   }
 
@@ -128,8 +128,8 @@
 
     param[journal_id] = abi
 
-    au < testing ; Advances in Bioinformatics Volume 2008 ; 2008 >
-    au < testing ; Advances in Bioinformatics Volume 2009 ; 2009 >
+    au < ready ; Advances in Bioinformatics Volume 2008 ; 2008 >
+    au < ready ; Advances in Bioinformatics Volume 2009 ; 2009 >
 
   }
 
@@ -239,7 +239,7 @@
 
     param[journal_id] = amp
 
-    au < manifest ; Advances in Mathematical Physics Volume 2009 ; 2009 >
+    au < testing ; Advances in Mathematical Physics Volume 2009 ; 2009 >
 
   }
 
@@ -250,7 +250,7 @@
 
     param[journal_id] = ame
 
-    au < manifest ; Advances in Mechanical Engineering Volume 2009 ; 2009 >
+    au < testing ; Advances in Mechanical Engineering Volume 2009 ; 2009 >
 
   }
 
@@ -271,8 +271,9 @@
 
     param[journal_id] = am
 
-    au < manifest ; Advances in Multimedia Volume 2007 ; 2007 >
-    au < manifest ; Advances in Multimedia Volume 2008 ; 2008 >
+    au < testing ; Advances in Multimedia Volume 2007 ; 2007 >
+    au < testing ; Advances in Multimedia Volume 2008 ; 2008 >
+    au < testing ; Advances in Multimedia Volume 2009 ; 2009 >
 
   }
 
@@ -283,7 +284,8 @@
 
     param[journal_id] = ano
 
-    au < manifest ; Advances in Nonlinear Optics Volume 2008 ; 2008 >
+    au < testing ; Advances in Nonlinear Optics Volume 2008 ; 2008 >
+    au < testing ; Advances in Nonlinear Optics Volume 2009 ; 2009 >
 
   }
 
@@ -314,7 +316,7 @@
 
     param[journal_id] = aot
 
-    au < manifest ; Advances in Optical Technologies Volume 2008 ; 2008 >
+    au < testing ; Advances in Optical Technologies Volume 2008 ; 2008 >
 
   }
 
@@ -325,8 +327,9 @@
 
     param[journal_id] = aoe
 
-    au < manifest ; Advances in OptoElectronics Volume 2007 ; 2007 >
-    au < manifest ; Advances in OptoElectronics Volume 2008 ; 2008 >
+    au < testing ; Advances in OptoElectronics Volume 2007 ; 2007 >
+    au < testing ; Advances in OptoElectronics Volume 2008 ; 2008 >
+    au < testing ; Advances in OptoElectronics Volume 2009 ; 2009 >
 
   }
 
@@ -337,7 +340,8 @@
 
     param[journal_id] = aps
 
-    au < manifest ; Advances in Pharmacological Sciences Volume 2008 ; 2008 >
+    au < testing ; Advances in Pharmacological Sciences Volume 2008 ; 2008 >
+    au < testing ; Advances in Pharmacological Sciences Volume 2009 ; 2009 >
 
   }
 

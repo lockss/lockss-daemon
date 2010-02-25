@@ -17,8 +17,9 @@
 
     au < released ; Canadian Journal of Criminology and Criminal Justice Volume 48 ; 48 >
     au < released ; Canadian Journal of Criminology and Criminal Justice Volume 49 ; 49 >
-    au < manifest ; Canadian Journal of Criminology and Criminal Justice Volume 50 ; 50 >
-    au < manifest ; Canadian Journal of Criminology and Criminal Justice Volume 51 ; 51 >
+    au < ready ; Canadian Journal of Criminology and Criminal Justice Volume 50 ; 50 >
+    au < ready ; Canadian Journal of Criminology and Criminal Justice Volume 51 ; 51 >
+    au < ready ; Canadian Journal of Criminology and Criminal Justice Volume 52 ; 52 >
 
   }
 
@@ -31,8 +32,9 @@
 
     au < released ; Canadian Journal of Law and Society Volume 20 ; 20 >
     au < released ; Canadian Journal of Law and Society Volume 21 ; 21 >
-    au < manifest ; Canadian Journal of Law and Society Volume 22 ; 22 >
-    au < manifest ; Canadian Journal of Law and Society Volume 23 ; 23 >
+    au < ready ; Canadian Journal of Law and Society Volume 22 ; 22 >
+    au < ready ; Canadian Journal of Law and Society Volume 23 ; 23 >
+    au < ready ; Canadian Journal of Law and Society Volume 24 ; 24 >
 
   }
 
@@ -44,9 +46,10 @@
     param[journal_dir] = canadian_journal_of_women_and_the_law
 
     au < released ; Canadian Journal of Women and the Law Volume 17 ; 17 >
-    au < manifest ; Canadian Journal of Women and the Law Volume 18 ; 18 >
-    au < manifest ; Canadian Journal of Women and the Law Volume 19 ; 19 >
-    au < manifest ; Canadian Journal of Women and the Law Volume 20 ; 20 >
+    au < ready ; Canadian Journal of Women and the Law Volume 18 ; 18 >
+    au < ready ; Canadian Journal of Women and the Law Volume 19 ; 19 >
+    au < ready ; Canadian Journal of Women and the Law Volume 20 ; 20 >
+    au < ready ; Canadian Journal of Women and the Law Volume 21 ; 21 >
 
   }
 
@@ -61,7 +64,19 @@
     au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 24 ; 24 >
     au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 25 ; 25 >
     au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 26 ; 26 >
-    au < manifest ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 27 ; 27 >
+    au < ready ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 27 ; 27 >
+    au < ready ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = Canadian Public Policy
+    >
+
+    param[journal_dir] = canadian_public_policy
+
+    au < ready ; Canadian Public Policy Volume 35 ; 35 >
 
   }
 
@@ -76,7 +91,8 @@
     au < released ; Canadian Review of American Studies Volume 35 ; 35 >
     au < released ; Canadian Review of American Studies Volume 36 ; 36 >
     au < released ; Canadian Review of American Studies Volume 37 ; 37 >
-    au < manifest ; Canadian Review of American Studies Volume 38 ; 38 >
+    au < testing ; Canadian Review of American Studies Volume 38 ; 38 >
+    au < testing ; Canadian Review of American Studies Volume 39 ; 39 >
 
   }
 
@@ -187,7 +203,8 @@
     au < released ; The Canadian Historical Review Volume 86 ; 86 >
     au < released ; The Canadian Historical Review Volume 87 ; 87 >
     au < released ; The Canadian Historical Review Volume 88 ; 88 >
-    au < manifest ; The Canadian Historical Review Volume 89 ; 89 >
+    au < ready ; The Canadian Historical Review Volume 89 ; 89 >
+    au < ready ; The Canadian Historical Review Volume 90 ; 90 >
 
   }
 
@@ -202,8 +219,9 @@
     au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 49 ; 49 >
     au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 50 ; 50 >
     au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 51 ; 51 >
-    au < manifest ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 52 ; 52 >
-    au < manifest ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 53 ; 53 >
+    au < ready ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 52 ; 52 >
+    au < ready ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 53 ; 53 >
+    au < ready ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 54 ; 54 >
 
   }
 
@@ -231,8 +249,9 @@
     au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 61 ; 61 >
     au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 62 ; 62 >
     au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 63 ; 63 >
-    au < manifest ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 64 ; 64 >
-    au < manifest ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 65 ; 65 >
+    au < ready ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 64 ; 64 >
+    au < ready ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 65 ; 65 >
+    au < ready ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 66 ; 66 >
 
   }
 

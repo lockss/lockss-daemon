@@ -154,43 +154,6 @@
 
   {
     title <
-      name = Bulletin of the Center for Children's Books 
-    >
-
-    param[journal_dir] = bulletin_of_the_center_for_childrens_books
-
-    au < released ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
-    au < released ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
-    au < manifest ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
-    au < manifest ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
-
-  }
-
-  {
-    title <
-      name = Bulletin of the History of Medicine 
-    >
-
-    param[journal_dir] = bulletin_of_the_history_of_medicine
-
-    au < released ; Bulletin of the History of Medicine Volume 70 ; 70 >
-    au < released ; Bulletin of the History of Medicine Volume 71 ; 71 >
-    au < released ; Bulletin of the History of Medicine Volume 72 ; 72 >
-    au < released ; Bulletin of the History of Medicine Volume 73 ; 73 >
-    au < released ; Bulletin of the History of Medicine Volume 74 ; 74 >
-    au < released ; Bulletin of the History of Medicine Volume 75 ; 75 >
-    au < released ; Bulletin of the History of Medicine Volume 76 ; 76 >
-    au < released ; Bulletin of the History of Medicine Volume 77 ; 77 >
-    au < released ; Bulletin of the History of Medicine Volume 78 ; 78 >
-    au < released ; Bulletin of the History of Medicine Volume 79 ; 79 >
-    au < released ; Bulletin of the History of Medicine Volume 80 ; 80 >
-    au < released ; Bulletin of the History of Medicine Volume 81 ; 81 >
-    au < manifest ; Bulletin of the History of Medicine Volume 82 ; 82 >
-
-  }
-
-  {
-    title <
       name = Book History 
     >
 
@@ -231,12 +194,50 @@
 
     param[journal_dir] = bulletin_of_the_center_for_childrens_books
 
-    au < testing ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
-    au < testing ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
-    au < testing ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
-    au < testing ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
-    au < testing ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
+    au < ready ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
+    au < ready ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
+    au < ready ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
+    au < ready ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
+    au < ready ; Bulletin of the Center for Children's Books Volume 63 ; 63 >
     
+  }
+
+  {
+    title <
+      name = Bulletin of the Center for Children's Books 
+    >
+
+    param[journal_dir] = bulletin_of_the_center_for_childrens_books
+
+    au < released ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
+    au < released ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
+    au < manifest ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
+    au < manifest ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
+
+  }
+
+  {
+    title <
+      name = Bulletin of the History of Medicine 
+    >
+
+    param[journal_dir] = bulletin_of_the_history_of_medicine
+
+    au < released ; Bulletin of the History of Medicine Volume 70 ; 70 >
+    au < released ; Bulletin of the History of Medicine Volume 71 ; 71 >
+    au < released ; Bulletin of the History of Medicine Volume 72 ; 72 >
+    au < released ; Bulletin of the History of Medicine Volume 73 ; 73 >
+    au < released ; Bulletin of the History of Medicine Volume 74 ; 74 >
+    au < released ; Bulletin of the History of Medicine Volume 75 ; 75 >
+    au < released ; Bulletin of the History of Medicine Volume 76 ; 76 >
+    au < released ; Bulletin of the History of Medicine Volume 77 ; 77 >
+    au < released ; Bulletin of the History of Medicine Volume 78 ; 78 >
+    au < released ; Bulletin of the History of Medicine Volume 79 ; 79 >
+    au < released ; Bulletin of the History of Medicine Volume 80 ; 80 >
+    au < released ; Bulletin of the History of Medicine Volume 81 ; 81 >
+    au < ready ; Bulletin of the History of Medicine Volume 82 ; 82 >
+    au < ready ; Bulletin of the History of Medicine Volume 83 ; 83 >
+
   }
   
   {
@@ -258,9 +259,9 @@
     au < released ; Callaloo Volume 27 ; 27 >
     au < released ; Callaloo Volume 28 ; 28 >
     au < released ; Callaloo Volume 29 ; 29 >
-    au < manifest ; Callaloo Volume 30 ; 30 >
-    au < manifest ; Callaloo Volume 31 ; 31 >
-    au < manifest ; Callaloo Volume 32 ; 32 >
+    au < ready ; Callaloo Volume 30 ; 30 >
+    au < ready ; Callaloo Volume 31 ; 31 >
+    au < ready ; Callaloo Volume 32 ; 32 >
 
   }
 
@@ -271,12 +272,43 @@
 
     param[journal_dir] = childrens_literature
 
+    au < testing ; Children's Literature Volume 1 ; 1 >
+    au < testing ; Children's Literature Volume 2 ; 2 >
+    au < testing ; Children's Literature Volume 3 ; 3 >
+    au < testing ; Children's Literature Volume 4 ; 4 >
+    au < testing ; Children's Literature Volume 5 ; 5 >
+    au < testing ; Children's Literature Volume 6 ; 6 >
+    au < testing ; Children's Literature Volume 7 ; 7 >
+    au < testing ; Children's Literature Volume 8 ; 8 >
+    au < testing ; Children's Literature Volume 9 ; 9 >
+    au < testing ; Children's Literature Volume 10 ; 10 >
+    au < testing ; Children's Literature Volume 11 ; 11 >
+    au < testing ; Children's Literature Volume 12 ; 12 >
+    au < testing ; Children's Literature Volume 13 ; 13 >
+    au < testing ; Children's Literature Volume 14 ; 14 >
+    au < testing ; Children's Literature Volume 15 ; 15 >
+    au < testing ; Children's Literature Volume 16 ; 16 >
+    au < testing ; Children's Literature Volume 17 ; 17 >
+    au < testing ; Children's Literature Volume 18 ; 18 >
+    au < testing ; Children's Literature Volume 19 ; 19 >
+    au < testing ; Children's Literature Volume 20 ; 20 >
+    au < testing ; Children's Literature Volume 21 ; 21 >
+    au < testing ; Children's Literature Volume 22 ; 22 >
+    au < testing ; Children's Literature Volume 23 ; 23 >
+    au < testing ; Children's Literature Volume 24 ; 24 >
+    au < testing ; Children's Literature Volume 25 ; 25 >
+    au < testing ; Children's Literature Volume 26 ; 26 >
+    au < testing ; Children's Literature Volume 27 ; 27 >
+    au < testing ; Children's Literature Volume 28 ; 28 >
+    au < testing ; Children's Literature Volume 29 ; 29 >
+    au < testing ; Children's Literature Volume 30 ; 30 >
     au < released ; Children's Literature Volume 31 ; 31 >
     au < released ; Children's Literature Volume 32 ; 32 >
     au < released ; Children's Literature Volume 33 ; 33 >
     au < released ; Children's Literature Volume 34 ; 34 >
     au < released ; Children's Literature Volume 35 ; 35 >
-    au < manifest ; Children's Literature Volume 36 ; 36 >
+    au < testing ; Children's Literature Volume 36 ; 36 >
+    au < testing ; Children's Literature Volume 37 ; 37 >
 
   }
 
