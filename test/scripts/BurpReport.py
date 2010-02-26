@@ -129,7 +129,7 @@ def _main_procedure():
         pubyear[publisher] = {}
         total[publisher] = 0
 
-        for year in range(options.currentyear, options.minimumyear, -1) + ["0"]:
+        for year in range(options.currentyear, options.minimumyear - 1, -1) + ["0"]:
             strYear = str(year)
             pubyear[publisher][strYear] = 0
 
