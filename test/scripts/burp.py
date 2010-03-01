@@ -188,7 +188,7 @@ VALUES ("%s", "%s", CURRENT_DATE(), "%s", "%s", "%s", "%s", "%s", "%s", "%s",
             _get_list_urls(client, auid, auarticles)
             cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
 auname, auid, auyear, numarticles, publisher)
-VALUES ("%s", %d, CURRENT_DATE(), "%s", "%s", "%s", %d, "rsc")""" % \
+VALUES ("%s", "%s", CURRENT_DATE(), "%s", "%s", "%s", %d, "rsc")""" % \
                             (host, port, auname[auid], auid, auyear[auid], len(auarticles[auid])))
     
     cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, CURRENT_DATE())" %

@@ -13,7 +13,7 @@ YEAR      # articles ingested # articles ingested # articles ingested
 YEAR     # articles ingested # articles ingested # articles ingested 
 '''
 
-from datetime import date
+from datetime import date, timedelta
 import MySQLdb
 import optparse
 import os
@@ -38,7 +38,7 @@ DEFAULT_YEAR_MINIMUM            = 1883
 
 OPTION_DATE_REPORT              = 'reportdatestart'
 OPTION_DATE_REPORT_SHORT        = 'r'
-DEFAULT_DATE_REPORT             = date.today()
+DEFAULT_DATE_REPORT             = date.today() - timedelta(days=2)
 
 OPTION_DATE_REPORT_END          = 'reportdateend'
 OPTION_DATE_REPORT_END_SHORT    = 'e'
@@ -181,20 +181,16 @@ def _main_procedure():
         
         auid = cursorAuid.fetchone()  
 
-    # OUP has some AUIDs that are listed as year 0.  This code assumes that the
-    # titles are split between 2008 and 2009 in the same proportion.
-#    oup0 = float(pubyear['oup']["0"])
+    # Verify our numbers!
+    for publisher in publishers:
+        testTotal = 0
+        
+        for year in range(options.currentyear, options.minimumyear - 1, -1) + ["0"]:
+            strYear = str(year)
+            testTotal += pubyear[publisher][strYear]
 
-#    if oup0 > 0 and pubyear['oup']['2009'] > 0 and pubyear['oup']['2008'] > 0:
-#        pubyear['oup']["2009"] += int(oup0 * (74.0 / 104.0) + 0.5)
-#        pubyear['oup']["2008"] += int(oup0 * (30.0 / 104.0) + 0.5)
-#        pubyear['oup']["0"] = 0
-
-#    aps0 = float(pubyear['aps']["0"])
-
-#    if aps0 > 0:
-#        pubyear['aps']['2010'] += aps0
-#        pubyear['aps']['0'] = 0
+        if total[publisher] != testTotal:
+            print "ERROR: Publisher " + publisher + " doesn't have the right total."
 
     # Output the main report.
     filename = open(options.filename, 'w')
@@ -207,7 +203,7 @@ def _main_procedure():
     # If that's a problem, we can fix it.
     filename.write("\n"); 
 
-    for year in range(options.currentyear, options.minimumyear, -1) + ["0"]:
+    for year in range(options.currentyear, options.minimumyear - 1, -1) + ["0"]:
         strYear = str(year)
         printYear = strYear
         if (year == options.currentyear):
