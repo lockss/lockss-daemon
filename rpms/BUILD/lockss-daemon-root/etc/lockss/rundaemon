@@ -16,17 +16,6 @@ else
         exit 1
 fi
 
-JAVA_VERSION=`${LOCKSS_JAVA_CMD} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
-case "X${JAVA_VERSION}" in
-X1.[6789]*)
-	;;
-*)
-	echo "Java version is ${JAVA_VERSION}: 1.6 or higher required"
-	exit 1
-	;;
-esac
-
-
 if [ "X$1" = Xwait ]; then
     WAIT=Y
 fi
@@ -78,6 +67,16 @@ else
   echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
   exit 1
 fi
+
+JAVA_VERSION=`${LOCKSS_JAVA_CMD} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
+case "X${JAVA_VERSION}" in
+X1.[6789]*)
+	;;
+*)
+	echo "Java version is ${JAVA_VERSION}: 1.6 or higher required"
+	exit 1
+	;;
+esac
 
 CLASSPATH=@CLASSPATH@
 DAEMON_CLASS=org.lockss.app.LockssDaemon
