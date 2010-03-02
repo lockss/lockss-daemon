@@ -51,6 +51,7 @@ OPTION_DATABASE_PASSWORD_SHORT  = 'D'
 
 PARAM_READY_TIMEOUT             = 30
 PARAM_REPEAT_LIST_ARTICLES      = 5  
+PARAM_REPEAT_GET_STATUS_TABLE   = 5
 
 def _make_command_line_parser():
     from optparse import OptionGroup, OptionParser
@@ -160,7 +161,19 @@ def _article_report(client, db, options):
     auarticles = {}
     cursor = db.cursor()
     for auid in auids:
-        summary, table = client._getStatusTable('ArchivalUnitTable', auid)
+        rerun = True
+        numRuns = 0
+        while rerun:
+            try:
+                summary, table = client._getStatusTable('ArchivalUnitTable', auid)
+                rerun = False
+            except urllib2.URLError:
+                numRuns += 1
+                print "%s : _article_report has a URL Error.  This is try %d." % (options.host, numRuns)
+                if numRuns > PARAM_REPEAT_GET_STATUS_TABLE:
+                    print "Giving up."
+                    raise
+                
         auyear[auid] = summary.get('Year', 0)
         austatus[auid] = summary.get('Status')
         aulastcrawlresult[auid] = summary.get('Last Crawl Result', 'n/a')
