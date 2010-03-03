@@ -20,11 +20,13 @@ OPTION_DATABASE_PASSWORD_SHORT         = 'D'
 
 OPTION_DATE_REPORT              = 'reportdatestart'
 OPTION_DATE_REPORT_SHORT        = 'r'
-DEFAULT_DATE_REPORT             = date.today() - timedelta(days=2)
+# A date report of 'None' means the most recent execution 
+DEFAULT_DATE_REPORT             = None
 
 OPTION_DATE_REPORT_END          = 'reportdateend'
 OPTION_DATE_REPORT_END_SHORT    = 'e'
-DEFAULT_DATE_REPORT_END         = date.today() + timedelta(days=1)
+# A date report of 'None' means the most recent execution 
+DEFAULT_DATE_REPORT_END         = None
 
 OPTION_FILENAME_DISAPPEARING           = 'disappearing'
 OPTION_FILENAME_DISAPPEARING_SHORT     = 'd'
@@ -72,13 +74,13 @@ def _make_command_line_parser():
                       OPTION_LONG + OPTION_DATE_REPORT,
                       dest=OPTION_DATE_REPORT,
                       default=DEFAULT_DATE_REPORT,
-                      help="The start date the information was gathered (default: %default)")
+                      help="The start date the information was gathered (default: the previous execution)")
 
     parser.add_option(OPTION_SHORT + OPTION_DATE_REPORT_END_SHORT,
                       OPTION_LONG + OPTION_DATE_REPORT_END,
                       dest=OPTION_DATE_REPORT_END,
                       default=DEFAULT_DATE_REPORT_END,
-                      help="The end date the information was gathered (default: %default)")
+                      help="The end date the information was gathered (default: the previous execution)")
 
     return parser
 
@@ -87,6 +89,23 @@ def _check_required_options(parser, options):
     if options.dbpassword is None:
         parser.error('%s%s/%s%s is required' % (OPTION_LONG, OPTION_DATABASE_PASSWORD, OPTION_SHORT, OPTION_DATABASE_PASSWORD_SHORT))
 
+
+def _update_required_options(db, options):
+    cursor = db.cursor()
+    cursor.execute("SELECT start, end FROM executions ORDER BY start DESC;")
+    
+    dates = cursor.fetchone()
+    # The following statement fails if all executions.end are None.
+    while dates[1] is None:
+        dates = cursor.fetchone()
+        
+    if options.reportdatestart is None:
+        options.reportdatestart = dates[0].strftime("%Y-%m-%d %H-%M-%S")
+        
+    if options.reportdateend is None:
+        options.reportdateend = dates[1].strftime("%Y-%m-%d %H-%M-%S")
+        
+    cursor.close()    
 
 # Get the list of AUIDs.
 # IMPORTANT: When the database of AUIDs exists, use that database!
@@ -100,7 +119,9 @@ def _get_auids(db):
     while arAUID is not None:
         auids.append(arAUID[0])
         arAUID = cursor.fetchone()
-            
+        
+    cursor.close()
+        
     return auids
 
 
@@ -199,6 +220,8 @@ def _main_procedure():
     _check_required_options(parser, options)
 
     db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
+
+    _update_required_options(db, options)
 
     _find_year_zeros(db, options)
     _find_multiple_years(db, options)

@@ -38,11 +38,11 @@ DEFAULT_YEAR_MINIMUM            = 1883
 
 OPTION_DATE_REPORT              = 'reportdatestart'
 OPTION_DATE_REPORT_SHORT        = 'r'
-DEFAULT_DATE_REPORT             = date.today() - timedelta(days=2)
+DEFAULT_DATE_REPORT             = None
 
 OPTION_DATE_REPORT_END          = 'reportdateend'
 OPTION_DATE_REPORT_END_SHORT    = 'e'
-DEFAULT_DATE_REPORT_END         = date.today() + timedelta(days=1)
+DEFAULT_DATE_REPORT_END         = None
 
 OPTION_FILENAME_SHORT           = 'f'
 OPTION_FILENAME                 = 'filename'
@@ -106,16 +106,39 @@ def _make_command_line_parser():
 def _check_required_options(parser, options):
     if options.dbpassword is None:
         parser.error('%s%s/%s%s is required' % (OPTION_LONG, OPTION_DATABASE_PASSWORD, OPTION_SHORT, OPTION_DATABASE_PASSWORD_SHORT))
+        
+        
+def _update_required_options(db, options):
+    cursor = db.cursor()
+    cursor.execute("SELECT start, end FROM executions ORDER BY start DESC;")
+    
+    dates = cursor.fetchone()
+    # The following statement fails if all executions.end are None.
+    while dates[1] is None:
+        dates = cursor.fetchone()
+        
+    if options.reportdatestart is None:
+        options.reportdatestart = dates[0].strftime("%Y-%m-%d %H-%M-%S")
+        
+    if options.reportdateend is None:
+        options.reportdateend = dates[1].strftime("%Y-%m-%d %H-%M-%S")
+        
+    cursor.close()    
+
 
 def _print_summary_line(summary, publishername, publisherid, currentyear, pubyear, total):
     summary.write(publishername + "," + publisherid.upper() + ",")
     summary.write(str(pubyear[publisherid][currentyear]) + ",")
     summary.write(str(total[publisherid]) + "\n")
 
+
 def _main_procedure():
     parser = _make_command_line_parser()
     (options, args) = parser.parse_args(values=parser.get_default_values())
     _check_required_options(parser, options)
+
+    db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
+    _update_required_options(db, options)
 
     # Initialize the hashes.
     # WARNING: If you update this list, you need to update the
@@ -132,9 +155,7 @@ def _main_procedure():
         for year in range(options.currentyear, options.minimumyear - 1, -1) + ["0"]:
             strYear = str(year)
             pubyear[publisher][strYear] = 0
-
-    db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
-
+    
     cursorAuid = db.cursor()
     cursorAuid.execute("SELECT DISTINCT(auid) from burp WHERE rundate >= '" + str(options.reportdatestart) + "') AND rundate <= '" + str(options.reportdateend) + "' order by auid;")
     
