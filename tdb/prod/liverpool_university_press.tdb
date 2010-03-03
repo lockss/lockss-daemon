@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = Liverpool University Press
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Bulletin of Hispanic Studies
+    >
+
+    param[journal_dir] = bulletin_of_hispanic_studies
+
+    au < ready ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
+
+  }
+
+  {
+    title <
+      name = The Byron Journal
+    >
+
+    param[journal_dir] = byron_journal
+
+    au < ready ; The Byron Journal Volume 37 ; 37 >
+
+  }
+   
+}

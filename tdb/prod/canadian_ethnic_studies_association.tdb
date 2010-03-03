@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Canadian Ethnic Studies Association
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Canadian Ethnic Studies
+    >
+
+    param[journal_dir] = canadian_ethnic_studies
+
+    au < ready ; Canadian Ethnic Studies Volume 39 ; 39 >
+    au < ready ; Canadian Ethnic Studies Volume 40 ; 40 >
+
+  }
+
+}
