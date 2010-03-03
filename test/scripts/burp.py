@@ -193,7 +193,7 @@ def _article_report(client, db, options):
         cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
 auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
 aurepository, numarticles, publisher)
-VALUES ("%s", "%s", CURRENT_DATE(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
+VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
 "%s", "%s", "default")"""  % \
                        (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], int(len(auarticles[auid]))))
         # Note: There is no article iterator for RSC.  This is a work-around.
@@ -201,10 +201,10 @@ VALUES ("%s", "%s", CURRENT_DATE(), "%s", "%s", "%s", "%s", "%s", "%s", "%s",
             _get_list_urls(client, auid, auarticles)
             cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
 auname, auid, auyear, numarticles, publisher)
-VALUES ("%s", "%s", CURRENT_DATE(), "%s", "%s", "%s", %d, "rsc")""" % \
+VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", %d, "rsc")""" % \
                             (host, port, auname[auid], auid, auyear[auid], len(auarticles[auid])))
     
-    cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, CURRENT_DATE())" %
+    cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, NOW())" %
                    (host, int(port)))
     
     print "****** " + options.host + " finished ******"

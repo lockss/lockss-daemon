@@ -42,7 +42,7 @@ DEFAULT_DATE_REPORT             = date.today() - timedelta(days=2)
 
 OPTION_DATE_REPORT_END          = 'reportdateend'
 OPTION_DATE_REPORT_END_SHORT    = 'e'
-DEFAULT_DATE_REPORT_END         = date.today()
+DEFAULT_DATE_REPORT_END         = date.today() + timedelta(days=1)
 
 OPTION_FILENAME_SHORT           = 'f'
 OPTION_FILENAME                 = 'filename'
@@ -136,16 +136,19 @@ def _main_procedure():
     db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
 
     cursorAuid = db.cursor()
-    cursorAuid.execute("SELECT DISTINCT(auid) from burp WHERE rundate >= DATE('" + str(options.reportdatestart) + "') AND rundate <= DATE('" + str(options.reportdateend) + "') order by auid;")
+    cursorAuid.execute("SELECT DISTINCT(auid) from burp WHERE rundate >= '" + str(options.reportdatestart) + "') AND rundate <= '" + str(options.reportdateend) + "' order by auid;")
     
     auid = cursorAuid.fetchone()
     while auid is not None:
         cursorArticles = db.cursor()
-        cursorArticles.execute("SELECT MAX(numarticles), auyear FROM burp WHERE auid = \"" + auid[0] + "\" and rundate >= DATE('" + str(options.reportdatestart) + "') AND rundate <= DATE('" + str(options.reportdateend) +"');")
+        cursorArticles.execute("SELECT MAX(numarticles), auyear FROM burp WHERE auid = \"" + auid[0] + "\" and rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) +"';")
         articles = cursorArticles.fetchone()
         strYear = articles[1]
         if "-" in strYear:
             strYear = strYear[5:9]
+        
+        # If you change this list, be sure to change the equivalent
+        # list in BurpCheck.py.
         
         if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("aappublications") != -1):
             pubyear['aap'][strYear] += articles[0]
