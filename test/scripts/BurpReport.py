@@ -157,7 +157,7 @@ def _main_procedure():
             pubyear[publisher][strYear] = 0
     
     cursorAuid = db.cursor()
-    cursorAuid.execute("SELECT DISTINCT(auid) from burp WHERE rundate >= '" + str(options.reportdatestart) + "') AND rundate <= '" + str(options.reportdateend) + "' order by auid;")
+    cursorAuid.execute("SELECT DISTINCT(auid) from burp WHERE rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' order by auid;")
     
     auid = cursorAuid.fetchone()
     while auid is not None:
@@ -216,9 +216,17 @@ def _main_procedure():
         if total[publisher] != testTotal:
             print "ERROR: Publisher " + publisher + " doesn't have the right total."
 
+
+    # Post the report to the database
+    for publisher in publishers:
+        for year in range(options.currentyear, options.minimumyear - 1, -1) + [0]:
+            strYear = str(year)
+            cursorAuid.execute("INSERT INTO burpreport(rundate, publisher, auyear, numarticles) VALUES (NOW(), \"%s\", %d, %d" %
+                               (publisher, year, pubyear[publisher][strYear]))
+
     # Output the main report.
     filename = open(options.filename, 'w')
-    filename.write("Date of ingest," + str(options.reportdatestart) + "\n")
+    filename.write("Dates of ingest," + str(options.reportdatestart) + " - " + str(options.reportdateend) + "\n")
     filename.write("Date of report," + str(date.today()) + "\n")
     filename.write("year,")
     for publisher in publishers:
