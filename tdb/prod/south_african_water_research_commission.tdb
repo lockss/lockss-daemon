@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = South African Water Research Commission
+  >
+  
+  {
+  
+    title <
+      name = Water SA
+    >
+    
+    plugin = za.ac.nlsa.lockss.plugin.WaterSAPlugin
+    param[base_url] = za.ac.nlsa.lockss.plugin.WaterSAPlugin
+    rights = openaccess
+    implicit < status ; name ; param[year] >
+    
+    au < down ; Water SA 1998 ; 1998 >
+    au < down ; Water SA 1999 ; 1999 >
+    au < down ; Water SA 2000 ; 2000 >
+    au < down ; Water SA 2001 ; 2001 >
+    au < down ; Water SA 2002 ; 2002 >
+    au < down ; Water SA 2003 ; 2003 >
+    au < down ; Water SA 2004 ; 2004 >
+    au < down ; Water SA 2005 ; 2005 >
+    au < down ; Water SA 2006 ; 2006 >
+    au < exists ; Water SA 2007 ; 2007 >
+    au < exists ; Water SA 2008 ; 2008 >
+  
+  }
+
+}
