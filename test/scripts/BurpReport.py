@@ -221,7 +221,7 @@ def _main_procedure():
     for publisher in publishers:
         for year in range(options.currentyear, options.minimumyear - 1, -1) + [0]:
             strYear = str(year)
-            cursorAuid.execute("INSERT INTO burpreport(rundate, publisher, auyear, numarticles) VALUES (NOW(), \"%s\", %d, %d" %
+            cursorAuid.execute("INSERT INTO burpreport(rundate, publisher, auyear, numarticles) VALUES (NOW(), \"%s\", %d, %d);" %
                                (publisher, year, pubyear[publisher][strYear]))
 
     # Output the main report.
