@@ -26,14 +26,19 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%ssmpp/lockss\?journalcode=%s&amp;volume=%s&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%sopenurl\?genre=issue&amp;issn=%s&amp;volume=%s&amp;issue=&quot;, base_url, journal_issn, volume_name</string>
+      <string>1,&quot;^%sopenurl\?genre=(issue|article)&quot;, base_url</string>
       <string>1,&quot;^%ssmpp/urlmapping\?request=&quot;, base_url</string>
-      <string>1,&quot;^%scontent~db=all~content=&quot;, base_url</string>
-      <string>1,&quot;^%sftinterface~db=all~content=.*?tab=references&quot;, base_url</string>
-      <string>1,&quot;^%sftinterface~db=all~content=.*~fulltext=&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/title~content=g[0-9]+/~db=all$&quot;, base_url</string>
+      <string>2,&quot;^%ssmpp/content~db=all\?content=[0-9]{2}\.[0-9]{4}/[0-9]+&amp;(logout=true|tab=citations)&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/content~db=all\?content=[0-9]{2}\.[0-9]{4}&quot;, base_url</string>
+      <string>2,&quot;^%ssmpp/content~db=all.*tab=(send|citation|related)$&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/content~db=all.*tab=(references|content)&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/ftinterface~db=all~content=.*~fulltext=&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/ftinterface~content=a[0-9]+~fulltext=&quot;, base_url</string>
+
     </list>
   </entry>
   <entry>
