@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Web del Sol
+  >
+  
+  {
+  
+    title <
+      name = La Petite Zine
+    >
+    
+    plugin = org.lockss.plugin.lapetitezine.LaPetiteZinePlugin
+    param[base_url] = http://www.lapetitezine.org/
+    rights = openaccess
+    implicit < status ; attr[year] ; name ; param[year] ; param[num_issue_range] >
+    
+    au < released ; 2000 ; La Petite Zine 2000 ; 2000 ; 1-5 >
+    au < released ; 2001 ; La Petite Zine 2001 ; 2001 ; 6-8 >
+    au < released ; 2002 ; La Petite Zine 2002 ; 2002 ; 9-11 >
+    au < released ; 2003 ; La Petite Zine 2003 ; 2003 ; 12-14 >
+  
+  }
+
+}

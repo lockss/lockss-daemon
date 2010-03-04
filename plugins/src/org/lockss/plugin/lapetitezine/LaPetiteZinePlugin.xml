@@ -4,12 +4,16 @@
     <string>org.lockss.plugin.lapetitezine.LaPetiteZinePlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;La Petite Zine %d&quot;, year</string>
+    <string>&quot;La Petite Zine Plugin, Base URL %s, Year %d, Issue Range %s&quot;, base_url, year, num_issue_range</string>
   </entry>
   <entry>
     <string>plugin_name</string>
