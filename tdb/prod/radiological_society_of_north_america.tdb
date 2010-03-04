@@ -17,7 +17,7 @@
 
       {
 
-        param[base_url] = http://radiographics.rsnajnls.org/
+        param[base_url] = http://radiographics.rsna.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressH20Plugin ; exists ; RadioGraphics Volume 1 ; 1 >
@@ -61,7 +61,7 @@
 
       {
 
-        param[base_url] = http://radiology.rsnajnls.org/
+        param[base_url] = http://radiology.rsna.org/
         implicit < status ; name ; param[volume_name] >
 
         au < HighWirePressH20Plugin ; exists ; Radiology Volume 133 ; 133 >
