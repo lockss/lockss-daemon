@@ -1,0 +1,663 @@
+{
+
+  publisher <
+    name = Royal Society of Chemistry
+  >
+
+  plugin = org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin
+  param[base_url] = http://www.rsc.org/
+  param[resolver_url] = http://xlink.rsc.org/
+  implicit < status ; attr[year] ; name ; param[volume_name] ; param[year] >
+
+  {
+
+    title <
+      name = The Analyst
+    >
+
+    param[journal_code] = an
+
+    au < released ; 1997 ; The Analyst Volume 122 ; 122 ; 1997 >
+    au < manifest ; 1998 ; The Analyst Volume 123 ; 123 ; 1998 >
+    au < released ; 1999 ; The Analyst Volume 124 ; 124 ; 1999 >
+    au < released ; 2000 ; The Analyst Volume 125 ; 125 ; 2000 >
+    au < released ; 2001 ; The Analyst Volume 126 ; 126 ; 2001 >
+    au < released ; 2002 ; The Analyst Volume 127 ; 127 ; 2002 >
+    au < released ; 2003 ; The Analyst Volume 128 ; 128 ; 2003 >
+    au < released ; 2004 ; The Analyst Volume 129 ; 129 ; 2004 >
+    au < released ; 2005 ; The Analyst Volume 130 ; 130 ; 2005 >
+    au < released ; 2006 ; The Analyst Volume 131 ; 131 ; 2006 >
+    au < released ; 2007 ; The Analyst Volume 132 ; 132 ; 2007 >
+    au < released ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
+    au < released ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Analytical Communications
+    >
+
+    param[journal_code] = ac
+
+    au < manifest ; 1997 ; Analytical Communications Volume 34 ; 34 ; 1997 >
+    au < manifest ; 1998 ; Analytical Communications Volume 35 ; 35 ; 1998 >
+    au < released ; 1999 ; Analytical Communications Volume 36 ; 36 ; 1999 >
+
+  }
+
+  {
+  
+    title <
+      name = Analytical Methods
+    >
+    
+    param[journal_code] = ay
+    
+    au < released ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry
+    >
+    
+    param[journal_code] = ic
+
+    au < released ; 2008 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 104 ; 104 ; 2008 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry
+    >
+    
+    param[journal_code] = oc
+
+    au < released ; 2008 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 104 ; 104 ; 2008 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry
+    >
+    
+    param[journal_code] = pc
+
+    au < released ; 2008 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 104 ; 104 ; 2008 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 105 ; 105 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Chemical Communications
+    >
+
+    param[journal_code] = cc
+
+    au < manifest ; 1997 ; Chemical Communications 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Chemical Communications 1998 ; 0 ; 1998 >
+    au < manifest ; 1999 ; Chemical Communications 1999 ; 0 ; 1999 >
+    au < manifest ; 2000 ; Chemical Communications 2000 ; 0 ; 2000 >
+    au < manifest ; 2001 ; Chemical Communications 2001 ; 0 ; 2001 >
+    au < released ; 2002 ; Chemical Communications 2002 ; 0 ; 2002 >
+    au < manifest ; 2003 ; Chemical Communications 2003 ; 0 ; 2003 >
+    au < manifest ; 2004 ; Chemical Communications 2004 ; 0 ; 2004 >
+    au < manifest ; 2005 ; Chemical Communications 2005 ; 0 ; 2005 >
+    au < manifest ; 2006 ; Chemical Communications 2006 ; 0 ; 2006 >
+    au < manifest ; 2007 ; Chemical Communications 2007 ; 0 ; 2007 >
+    au < released ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
+    au < released ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Chemical Society Reviews
+    >
+
+    param[journal_code] = cs
+
+    au < released ; 1997 ; Chemical Society Reviews Volume 26 ; 26 ; 1997 >
+    au < manifest ; 1998 ; Chemical Society Reviews Volume 27 ; 27 ; 1998 >
+    au < manifest ; 1999 ; Chemical Society Reviews Volume 28 ; 28 ; 1999 >
+    au < manifest ; 2000 ; Chemical Society Reviews Volume 29 ; 29 ; 2000 >
+    au < manifest ; 2001 ; Chemical Society Reviews Volume 30 ; 30 ; 2001 >
+    au < manifest ; 2002 ; Chemical Society Reviews Volume 31 ; 31 ; 2002 >
+    au < manifest ; 2003 ; Chemical Society Reviews Volume 32 ; 32 ; 2003 >
+    au < manifest ; 2004 ; Chemical Society Reviews Volume 33 ; 33 ; 2004 >
+    au < manifest ; 2005 ; Chemical Society Reviews Volume 34 ; 34 ; 2005 >
+    au < manifest ; 2006 ; Chemical Society Reviews Volume 35 ; 35 ; 2006 >
+    au < released ; 2007 ; Chemical Society Reviews Volume 36 ; 36 ; 2007 >
+    au < released ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
+    au < released ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
+  }
+
+  {
+
+    title <
+      name = Chemistry Education Research and Practice
+    >
+
+    param[journal_code] = rp
+
+    au < released ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
+    au < released ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Contemporary Organic Synthesis
+    >
+
+    param[journal_code] = co
+
+    au < manifest ; 1997 ; Contemporary Organic Synthesis Volume 4 ; 4 ; 1997 >
+
+  }
+
+  {
+
+    title <
+      name = CrystEngComm
+    >
+
+    param[journal_code] = ce
+
+    au < released ; 1999 ; CrystEngComm Volume 1 ; 1 ; 1999 >
+    au < released ; 2000 ; CrystEngComm Volume 2 ; 2 ; 2000 >
+    au < released ; 2001 ; CrystEngComm Volume 3 ; 3 ; 2001 >
+    au < released ; 2002 ; CrystEngComm Volume 4 ; 4 ; 2002 >
+    au < released ; 2003 ; CrystEngComm Volume 5 ; 5 ; 2003 >
+    au < released ; 2004 ; CrystEngComm Volume 6 ; 6 ; 2004 >
+    au < released ; 2005 ; CrystEngComm Volume 7 ; 7 ; 2005 >
+    au < released ; 2006 ; CrystEngComm Volume 8 ; 8 ; 2006 >
+    au < released ; 2007 ; CrystEngComm Volume 9 ; 9 ; 2007 >
+    au < released ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Dalton Transactions
+    >
+
+    param[journal_code] = dt
+
+    au < manifest ; 1997 ; Dalton Transactions 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Dalton Transactions 1998 ; 0 ; 1998 >
+    au < manifest ; 1999 ; Dalton Transactions 1999 ; 0 ; 1999 >
+    au < manifest ; 2000 ; Dalton Transactions 2000 ; 0 ; 2000 >
+    au < manifest ; 2001 ; Dalton Transactions 2001 ; 0 ; 2001 >
+    au < released ; 2002 ; Dalton Transactions 2002 ; 0 ; 2002 >
+    au < manifest ; 2003 ; Dalton Transactions 2003 ; 0 ; 2003 >
+    au < manifest ; 2004 ; Dalton Transactions 2004 ; 0 ; 2004 >
+    au < manifest ; 2005 ; Dalton Transactions 2005 ; 0 ; 2005 >
+    au < manifest ; 2006 ; Dalton Transactions 2006 ; 0 ; 2006 >
+    au < manifest ; 2007 ; Dalton Transactions 2007 ; 0 ; 2007 >
+    au < manifest ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
+    au < released ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
+
+  }
+
+  {
+  
+    title <
+      name = Energy & Environmental Science
+    >
+    
+    param[journal_code] = ee
+    
+    au < released ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
+    au < released ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Faraday Discussions
+    >
+    
+    param[journal_code] = fd
+
+    au < manifest ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 >
+    au < manifest ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 >
+    au < manifest ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 >
+    au < released ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 >
+    au < manifest ; 2010 ; Faraday Discussions Volume 144 ; 144 ; 2010 >
+  
+  }
+
+  {
+
+    title <
+      name = Geochemical Transactions
+    >
+
+    param[journal_code] = gt
+
+    au < released ; 2000 ; Geochemical Transactions Volume 1 ; 1 ; 2000 >
+    au < released ; 2001 ; Geochemical Transactions Volume 2 (2001) ; 2 ; 2001 >
+    au < released ; 2002 ; Geochemical Transactions Volume 2 (2002) ; 2 ; 2002 >
+    au < released ; 2002 ; Geochemical Transactions Volume 3 ; 3 ; 2002 >
+    au < released ; 2003 ; Geochemical Transactions Volume 4 ; 4 ; 2003 >
+
+  }
+
+  {
+
+    title <
+      name = Green Chemistry
+    >
+
+    param[journal_code] = gc
+
+    au < released ; 1999 ; Green Chemistry Volume 1 ; 1 ; 1999 >
+    au < released ; 2000 ; Green Chemistry Volume 2 ; 2 ; 2000 >
+    au < released ; 2001 ; Green Chemistry Volume 3 ; 3 ; 2001 >
+    au < released ; 2002 ; Green Chemistry Volume 4 ; 4 ; 2002 >
+    au < released ; 2003 ; Green Chemistry Volume 5 ; 5 ; 2003 >
+    au < released ; 2004 ; Green Chemistry Volume 6 ; 6 ; 2004 >
+    au < released ; 2005 ; Green Chemistry Volume 7 ; 7 ; 2005 >
+    au < released ; 2006 ; Green Chemistry Volume 8 ; 8 ; 2006 >
+    au < released ; 2007 ; Green Chemistry Volume 9 ; 9 ; 2007 >
+    au < released ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
+
+  }
+
+  {
+  
+    title <
+      name = Integrative Biology
+    >
+    
+    param[journal_code] = ib
+    
+    au < released ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Journal of Analytical Atomic Spectrometry
+    >
+
+    param[journal_code] = ja
+
+    au < released ; 1997 ; Journal of Analytical Atomic Spectrometry Volume 12 ; 12 ; 1997 >
+    au < released ; 1998 ; Journal of Analytical Atomic Spectrometry Volume 13 ; 13 ; 1998 >
+    au < released ; 1999 ; Journal of Analytical Atomic Spectrometry Volume 14 ; 14 ; 1999 >
+    au < released ; 2000 ; Journal of Analytical Atomic Spectrometry Volume 15 ; 15 ; 2000 >
+    au < released ; 2001 ; Journal of Analytical Atomic Spectrometry Volume 16 ; 16 ; 2001 >
+    au < released ; 2002 ; Journal of Analytical Atomic Spectrometry Volume 17 ; 17 ; 2002 >
+    au < released ; 2003 ; Journal of Analytical Atomic Spectrometry Volume 18 ; 18 ; 2003 >
+    au < released ; 2004 ; Journal of Analytical Atomic Spectrometry Volume 19 ; 19 ; 2004 >
+    au < released ; 2005 ; Journal of Analytical Atomic Spectrometry Volume 20 ; 20 ; 2005 >
+    au < released ; 2006 ; Journal of Analytical Atomic Spectrometry Volume 21 ; 21 ; 2006 >
+    au < released ; 2007 ; Journal of Analytical Atomic Spectrometry Volume 22 ; 22 ; 2007 >
+    au < released ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
+    au < released ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Chemical Research, Synopses
+    >
+
+    param[journal_code] = jc
+
+    au < manifest ; 1997 ; Journal of Chemical Research, Synopses 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Journal of Chemical Research, Synopses 1998 ; 0 ; 1998 >
+    au < released ; 1999 ; Journal of Chemical Research, Synopses 1999 ; 0 ; 1999 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Chemical Society, Faraday Transactions
+    >
+
+    param[journal_code] = ft
+
+    au < released ; 1997 ; Journal of the Chemical Society, Faraday Transactions Volume 93 ; 93 ; 1997 >
+    au < manifest ; 1998 ; Journal of the Chemical Society, Faraday Transactions Volume 94 ; 94 ; 1998 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Chemical Society, Perkin Transactions 1
+    >
+
+    param[journal_code] = p1
+
+    au < manifest ; 1997 ; Journal of the Chemical Society, Perkin Transactions 1 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Journal of the Chemical Society, Perkin Transactions 1 1998 ; 0 ; 1998 >
+    au < manifest ; 1999 ; Journal of the Chemical Society, Perkin Transactions 1 1999 ; 0 ; 1999 >
+    au < manifest ; 2000 ; Journal of the Chemical Society, Perkin Transactions 1 2000 ; 0 ; 2000 >
+    au < manifest ; 2001 ; Journal of the Chemical Society, Perkin Transactions 1 2001 ; 0 ; 2001 >
+    au < released ; 2002 ; Journal of the Chemical Society, Perkin Transactions 1 2002 ; 0 ; 2002 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Chemical Society, Perkin Transactions 2
+    >
+
+    param[journal_code] = p2
+
+    au < manifest ; 1997 ; Journal of the Chemical Society, Perkin Transactions 2 1997 ; 0 ; 1997 >
+    au < manifest ; 1998 ; Journal of the Chemical Society, Perkin Transactions 2 1998 ; 0 ; 1998 >
+    au < manifest ; 1999 ; Journal of the Chemical Society, Perkin Transactions 2 1999 ; 0 ; 1999 >
+    au < released ; 2000 ; Journal of the Chemical Society, Perkin Transactions 2 2000 ; 0 ; 2000 >
+    au < released ; 2001 ; Journal of the Chemical Society, Perkin Transactions 2 2001 ; 0 ; 2001 >
+    au < released ; 2002 ; Journal of the Chemical Society, Perkin Transactions 2 2002 ; 0 ; 2002 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Environmental Monitoring
+    >
+
+    param[journal_code] = em
+
+    au < manifest ; 1999 ; Journal of Environmental Monitoring Volume 1 ; 1 ; 1999 >
+    au < manifest ; 2000 ; Journal of Environmental Monitoring Volume 2 ; 2 ; 2000 >
+    au < manifest ; 2001 ; Journal of Environmental Monitoring Volume 3 ; 3 ; 2001 >
+    au < manifest ; 2002 ; Journal of Environmental Monitoring Volume 4 ; 4 ; 2002 >
+    au < manifest ; 2003 ; Journal of Environmental Monitoring Volume 5 ; 5 ; 2003 >
+    au < manifest ; 2004 ; Journal of Environmental Monitoring Volume 6 ; 6 ; 2004 >
+    au < manifest ; 2005 ; Journal of Environmental Monitoring Volume 7 ; 7 ; 2005 >
+    au < manifest ; 2006 ; Journal of Environmental Monitoring Volume 8 ; 8 ; 2006 >
+    au < released ; 2007 ; Journal of Environmental Monitoring Volume 9 ; 9 ; 2007 >
+    au < released ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Materials Chemistry
+    >
+
+    param[journal_code] = jm
+
+    au < manifest ; 1997 ; Journal of Materials Chemistry Volume 7 ; 7 ; 1997 >
+    au < manifest ; 1998 ; Journal of Materials Chemistry Volume 8 ; 8 ; 1998 >
+    au < manifest ; 1999 ; Journal of Materials Chemistry Volume 9 ; 9 ; 1999 >
+    au < released ; 2000 ; Journal of Materials Chemistry Volume 10 ; 10 ; 2000 >
+    au < released ; 2001 ; Journal of Materials Chemistry Volume 11 ; 11 ; 2001 >
+    au < manifest ; 2002 ; Journal of Materials Chemistry Volume 12 ; 12 ; 2002 >
+    au < released ; 2003 ; Journal of Materials Chemistry Volume 13 ; 13 ; 2003 >
+    au < manifest ; 2004 ; Journal of Materials Chemistry Volume 14 ; 14 ; 2004 >
+    au < released ; 2005 ; Journal of Materials Chemistry Volume 15 ; 15 ; 2005 >
+    au < released ; 2006 ; Journal of Materials Chemistry Volume 16 ; 16 ; 2006 >
+    au < manifest ; 2007 ; Journal of Materials Chemistry Volume 17 ; 17 ; 2007 >
+    au < released ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
+    au < released ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Lab on a Chip
+    >
+
+    param[journal_code] = lc
+
+    au < released ; 2001 ; Lab on a Chip Volume 1 ; 1 ; 2001 >
+    au < manifest ; 2002 ; Lab on a Chip Volume 2 ; 2 ; 2002 >
+    au < manifest ; 2003 ; Lab on a Chip Volume 3 ; 3 ; 2003 >
+    au < manifest ; 2004 ; Lab on a Chip Volume 4 ; 4 ; 2004 >
+    au < manifest ; 2005 ; Lab on a Chip Volume 5 ; 5 ; 2005 >
+    au < manifest ; 2006 ; Lab on a Chip Volume 6 ; 6 ; 2006 >
+    au < released ; 2007 ; Lab on a Chip Volume 7 ; 7 ; 2007 >
+    au < released ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
+    au < released ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
+
+  }
+
+  {
+  
+    title <
+      name = Metallomics
+    >
+    
+    param[journal_code] = mt
+    
+    au < released ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Molecular BioSystems
+    >
+
+    param[journal_code] = mb
+
+    au < manifest ; 2005 ; Molecular BioSystems Volume 1 ; 1 ; 2005 >
+    au < manifest ; 2006 ; Molecular BioSystems Volume 2 ; 2 ; 2006 >
+    au < released ; 2007 ; Molecular BioSystems Volume 3 ; 3 ; 2007 >
+    au < released ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
+    au < released ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
+
+  }
+
+  {
+  
+    title <
+      name = Nanoscale
+    >
+    
+    param[journal_code] = nr
+    
+    au < released ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Natural Product Reports
+    >
+
+    param[journal_code] = np
+
+    au < manifest ; 1997 ; Natural Product Reports Volume 14 ; 14 ; 1997 >
+    au < manifest ; 1998 ; Natural Product Reports Volume 15 ; 15 ; 1998 >
+    au < manifest ; 1999 ; Natural Product Reports Volume 16 ; 16 ; 1999 >
+    au < manifest ; 2000 ; Natural Product Reports Volume 17 ; 17 ; 2000 >
+    au < manifest ; 2001 ; Natural Product Reports Volume 18 ; 18 ; 2001 >
+    au < manifest ; 2002 ; Natural Product Reports Volume 19 ; 19 ; 2002 >
+    au < manifest ; 2003 ; Natural Product Reports Volume 20 ; 20 ; 2003 >
+    au < manifest ; 2004 ; Natural Product Reports Volume 21 ; 21 ; 2004 >
+    au < manifest ; 2005 ; Natural Product Reports Volume 22 ; 22 ; 2005 >
+    au < manifest ; 2006 ; Natural Product Reports Volume 23 ; 23 ; 2006 >
+    au < manifest ; 2007 ; Natural Product Reports Volume 24 ; 24 ; 2007 >
+    au < released ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
+    au < released ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = New Journal of Chemistry
+    >
+
+    param[journal_code] = nj
+
+    au < manifest ; 1998 ; New Journal of Chemistry Volume 22 ; 22 ; 1998 >
+    au < manifest ; 1999 ; New Journal of Chemistry Volume 23 ; 23 ; 1999 >
+    au < manifest ; 2000 ; New Journal of Chemistry Volume 24 ; 24 ; 2000 >
+    au < released ; 2001 ; New Journal of Chemistry Volume 25 ; 25 ; 2001 >
+    au < manifest ; 2002 ; New Journal of Chemistry Volume 26 ; 26 ; 2002 >
+    au < released ; 2003 ; New Journal of Chemistry Volume 27 ; 27 ; 2003 >
+    au < released ; 2004 ; New Journal of Chemistry Volume 28 ; 28 ; 2004 >
+    au < released ; 2005 ; New Journal of Chemistry Volume 29 ; 29 ; 2005 >
+    au < released ; 2006 ; New Journal of Chemistry Volume 30 ; 30 ; 2006 >
+    au < released ; 2007 ; New Journal of Chemistry Volume 31 ; 31 ; 2007 >
+    au < released ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
+    au < released ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Organic & Biomolecular Chemistry
+    >
+
+    param[journal_code] = ob
+
+    au < released ; 2003 ; Organic & Biomolecular Chemistry Volume 1 ; 1 ; 2003 >
+    au < released ; 2004 ; Organic & Biomolecular Chemistry Volume 2 ; 2 ; 2004 >
+    au < released ; 2005 ; Organic & Biomolecular Chemistry Volume 3 ; 3 ; 2005 >
+    au < released ; 2006 ; Organic & Biomolecular Chemistry Volume 4 ; 4 ; 2006 >
+    au < released ; 2007 ; Organic & Biomolecular Chemistry Volume 5 ; 5 ; 2007 >
+    au < released ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
+    au < released ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Pesticide Outlook
+    >
+
+    param[journal_code] = po
+
+    au < manifest ; 2000 ; Pesticide Outlook Volume 11 ; 11 ; 2000 >
+    au < manifest ; 2001 ; Pesticide Outlook Volume 12 ; 12 ; 2001 >
+    au < manifest ; 2002 ; Pesticide Outlook Volume 13 ; 13 ; 2002 >
+    au < manifest ; 2003 ; Pesticide Outlook Volume 14 ; 14 ; 2003 >
+
+  }
+
+  {
+
+    title <
+      name = Photochemical & Photobiological Sciences
+    >
+
+    param[journal_code] = pp
+
+    au < released ; 2002 ; Photochemical & Photobiological Sciences Volume 1 ; 1 ; 2002 >
+    au < released ; 2003 ; Photochemical & Photobiological Sciences Volume 2 ; 2 ; 2003 >
+    au < released ; 2004 ; Photochemical & Photobiological Sciences Volume 3 ; 3 ; 2004 >
+    au < released ; 2005 ; Photochemical & Photobiological Sciences Volume 4 ; 4 ; 2005 >
+    au < released ; 2006 ; Photochemical & Photobiological Sciences Volume 5 ; 5 ; 2006 >
+    au < released ; 2007 ; Photochemical & Photobiological Sciences Volume 6 ; 6 ; 2007 >
+    au < released ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
+
+  }
+
+  {
+
+    title <
+      name = PhysChemComm
+    >
+
+    param[journal_code] = qu
+
+    au < released ; 1998 ; PhysChemComm Volume 1 ; 1 ; 1998 >
+    au < released ; 1999 ; PhysChemComm Volume 2 ; 2 ; 1999 >
+    au < released ; 2000 ; PhysChemComm Volume 3 ; 3 ; 2000 >
+    au < released ; 2001 ; PhysChemComm Volume 4 ; 4 ; 2001 >
+    au < released ; 2002 ; PhysChemComm Volume 5 ; 5 ; 2002 >
+    au < released ; 2003 ; PhysChemComm Volume 6 ; 6 ; 2003 >
+
+  }
+
+  {
+
+    title <
+      name = Physical Chemistry Chemical Physics
+    >
+
+    param[journal_code] = cp
+
+    au < manifest ; 1999 ; Physical Chemistry Chemical Physics Volume 1 ; 1 ; 1999 >
+    au < released ; 2000 ; Physical Chemistry Chemical Physics Volume 2 ; 2 ; 2000 >
+    au < released ; 2001 ; Physical Chemistry Chemical Physics Volume 3 ; 3 ; 2001 >
+    au < released ; 2002 ; Physical Chemistry Chemical Physics Volume 4 ; 4 ; 2002 >
+    au < released ; 2003 ; Physical Chemistry Chemical Physics Volume 5 ; 5 ; 2003 >
+    au < released ; 2004 ; Physical Chemistry Chemical Physics Volume 6 ; 6 ; 2004 >
+    au < released ; 2005 ; Physical Chemistry Chemical Physics Volume 7 ; 7 ; 2005 >
+    au < released ; 2006 ; Physical Chemistry Chemical Physics Volume 8 ; 8 ; 2006 >
+    au < manifest ; 2007 ; Physical Chemistry Chemical Physics Volume 9 ; 9 ; 2007 >
+    au < released ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
+
+  }
+
+  {
+
+    title <
+      name = Russian Chemical Reviews
+    >
+
+    param[journal_code] = rc
+
+    au < manifest ; 1998 ; Russian Chemical Reviews Volume 67 ; 67 ; 1998 >
+    au < released ; 1999 ; Russian Chemical Reviews Volume 68 ; 68 ; 1999 >
+    au < released ; 2000 ; Russian Chemical Reviews Volume 69 ; 69 ; 2000 >
+    au < released ; 2001 ; Russian Chemical Reviews Volume 70 ; 70 ; 2001 >
+    au < released ; 2002 ; Russian Chemical Reviews Volume 71 ; 71 ; 2002 >
+    au < released ; 2003 ; Russian Chemical Reviews Volume 72 ; 72 ; 2003 >
+    au < released ; 2004 ; Russian Chemical Reviews Volume 73 ; 73 ; 2004 >
+
+  }
+
+  {
+
+    title <
+      name = Soft Matter
+    >
+
+    param[journal_code] = sm
+
+    au < manifest ; 2005 ; Soft Matter Volume 1 ; 1 ; 2005 >
+    au < manifest ; 2006 ; Soft Matter Volume 2 ; 2 ; 2006 >
+    au < manifest ; 2007 ; Soft Matter Volume 3 ; 3 ; 2007 >
+    au < released ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
+    au < released ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
+
+  }
+
+}

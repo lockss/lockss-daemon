@@ -14,38 +14,38 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jswconline.org/
-      implicit < status ; year ; name ; param[volume_name] >
+      implicit < status ; attr[year] ; name ; param[volume_name] >
 
-      au < ready ; 1981 ; Journal of Soil and Water Conservation Volume 36 ; 36 >
-      au < ready ; 1982 ; Journal of Soil and Water Conservation Volume 37 ; 37 >
-      au < ready ; 1983 ; Journal of Soil and Water Conservation Volume 38 ; 38 >
-      au < ready ; 1984 ; Journal of Soil and Water Conservation Volume 39 ; 39 >
-      au < ready ; 1985 ; Journal of Soil and Water Conservation Volume 40 ; 40 >
-      au < ready ; 1986 ; Journal of Soil and Water Conservation Volume 41 ; 41 >
-      au < ready ; 1987 ; Journal of Soil and Water Conservation Volume 42 ; 42 >
-      au < testing ; 1988 ; Journal of Soil and Water Conservation Volume 43 ; 43 >
-      au < ready ; 1989 ; Journal of Soil and Water Conservation Volume 44 ; 44 >
-      au < ready ; 1990 ; Journal of Soil and Water Conservation Volume 45 ; 45 >
-      au < ready ; 1991 ; Journal of Soil and Water Conservation Volume 46 ; 46 >
-      au < ready ; 1992 ; Journal of Soil and Water Conservation Volume 47 ; 47 >
-      au < ready ; 1993 ; Journal of Soil and Water Conservation Volume 48 ; 48 >
-      au < testing ; 1994 ; Journal of Soil and Water Conservation Volume 49 ; 49 >
-      au < ready ; 1995 ; Journal of Soil and Water Conservation Volume 50 ; 50 >
-      au < testing ; 1996 ; Journal of Soil and Water Conservation Volume 51 ; 51 >
-      au < testing ; 1997 ; Journal of Soil and Water Conservation Volume 52 ; 52 >
-      au < ready ; 1998 ; Journal of Soil and Water Conservation Volume 53 ; 53 >
-      au < ready ; 1999 ; Journal of Soil and Water Conservation Volume 54 ; 54 >
-      au < ready ; 2000 ; Journal of Soil and Water Conservation Volume 55 ; 55 >
-      au < testing ; 2001 ; Journal of Soil and Water Conservation Volume 56 ; 56 >
-      au < testing ; 2002 ; Journal of Soil and Water Conservation Volume 57 ; 57 >
-      au < ready ; 2003 ; Journal of Soil and Water Conservation Volume 58 ; 58 >
-      au < ready ; 2004 ; Journal of Soil and Water Conservation Volume 59 ; 59 >
-      au < testing ; 2005 ; Journal of Soil and Water Conservation Volume 60 ; 60 >
-      au < testing ; 2006 ; Journal of Soil and Water Conservation Volume 61 ; 61 >
-      au < testing ; 2007 ; Journal of Soil and Water Conservation Volume 62 ; 62 >
-      au < testing ; 2008 ; Journal of Soil and Water Conservation Volume 63 ; 63 >
-      au < testing ; 2009 ; Journal of Soil and Water Conservation Volume 64 ; 64 >
-      au < ready ; 2010 ; Journal of Soil and Water Conservation Volume 65 ; 65 >
+      au < released ; 1981 ; Journal of Soil and Water Conservation Volume 36 ; 36 >
+      au < released ; 1982 ; Journal of Soil and Water Conservation Volume 37 ; 37 >
+      au < released ; 1983 ; Journal of Soil and Water Conservation Volume 38 ; 38 >
+      au < released ; 1984 ; Journal of Soil and Water Conservation Volume 39 ; 39 >
+      au < released ; 1985 ; Journal of Soil and Water Conservation Volume 40 ; 40 >
+      au < released ; 1986 ; Journal of Soil and Water Conservation Volume 41 ; 41 >
+      au < released ; 1987 ; Journal of Soil and Water Conservation Volume 42 ; 42 >
+      au < released ; 1988 ; Journal of Soil and Water Conservation Volume 43 ; 43 >
+      au < released ; 1989 ; Journal of Soil and Water Conservation Volume 44 ; 44 >
+      au < released ; 1990 ; Journal of Soil and Water Conservation Volume 45 ; 45 >
+      au < released ; 1991 ; Journal of Soil and Water Conservation Volume 46 ; 46 >
+      au < released ; 1992 ; Journal of Soil and Water Conservation Volume 47 ; 47 >
+      au < released ; 1993 ; Journal of Soil and Water Conservation Volume 48 ; 48 >
+      au < released ; 1994 ; Journal of Soil and Water Conservation Volume 49 ; 49 >
+      au < released ; 1995 ; Journal of Soil and Water Conservation Volume 50 ; 50 >
+      au < released ; 1996 ; Journal of Soil and Water Conservation Volume 51 ; 51 >
+      au < released ; 1997 ; Journal of Soil and Water Conservation Volume 52 ; 52 >
+      au < released ; 1998 ; Journal of Soil and Water Conservation Volume 53 ; 53 >
+      au < released ; 1999 ; Journal of Soil and Water Conservation Volume 54 ; 54 >
+      au < released ; 2000 ; Journal of Soil and Water Conservation Volume 55 ; 55 >
+      au < released ; 2001 ; Journal of Soil and Water Conservation Volume 56 ; 56 >
+      au < released ; 2002 ; Journal of Soil and Water Conservation Volume 57 ; 57 >
+      au < released ; 2003 ; Journal of Soil and Water Conservation Volume 58 ; 58 >
+      au < released ; 2004 ; Journal of Soil and Water Conservation Volume 59 ; 59 >
+      au < released ; 2005 ; Journal of Soil and Water Conservation Volume 60 ; 60 >
+      au < released ; 2006 ; Journal of Soil and Water Conservation Volume 61 ; 61 >
+      au < released ; 2007 ; Journal of Soil and Water Conservation Volume 62 ; 62 >
+      au < released ; 2008 ; Journal of Soil and Water Conservation Volume 63 ; 63 >
+      au < released ; 2009 ; Journal of Soil and Water Conservation Volume 64 ; 64 >
+      au < released ; 2010 ; Journal of Soil and Water Conservation Volume 65 ; 65 >
 
     }
 
