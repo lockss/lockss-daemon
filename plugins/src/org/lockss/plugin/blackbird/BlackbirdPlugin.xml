@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s, vol. %d&quot;, base_url_host, volume</string>
+    <string>&quot;Blackbird Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Blackbird</string>
+    <string>Blackbird Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

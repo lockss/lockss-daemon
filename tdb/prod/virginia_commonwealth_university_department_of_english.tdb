@@ -1,0 +1,29 @@
+{
+
+  publisher <
+    name = Virginia Commonwealth University Department of English
+  >
+  
+  {
+  
+    title <
+      name = Blackbird
+    >
+    
+    plugin = org.lockss.plugin.blackbird.BlackbirdPlugin
+    param[base_url] = http://www.blackbird.vcu.edu/
+    rights = openaccess
+    implicit < status ; attr[year] ; name ; param[volume] >
+    
+    au < released ; 2002 ; Blackbird Volume 1 ; 1 >
+    au < released ; 2003 ; Blackbird Volume 2 ; 2 >
+    au < released ; 2004 ; Blackbird Volume 3 ; 3 >
+    au < released ; 2005 ; Blackbird Volume 4 ; 4 >
+    au < exists ; 2006 ; Blackbird Volume 5 ; 5 >
+    au < exists ; 2007 ; Blackbird Volume 6 ; 6 >
+    au < exists ; 2008 ; Blackbird Volume 7 ; 7 >
+    au < exists ; 2009 ; Blackbird Volume 8 ; 8 >
+  
+  }
+
+}
