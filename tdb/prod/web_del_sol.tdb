@@ -7,7 +7,8 @@
   {
   
     title <
-      name = La Petite Zine
+      name = La Petite Zine ;
+      eissn = 1939-036X
     >
     
     plugin = org.lockss.plugin.lapetitezine.LaPetiteZinePlugin
