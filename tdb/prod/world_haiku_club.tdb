@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = World Haiku Club
+  >
+  
+  {
+  
+    title <
+      name = World Haiku Review
+    >
+    
+    plugin = edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin
+    param[base_url] = http://www.worldhaikureview.org/
+    rights = openaccess
+    implicit < status ; name ; param[volume] >
+    
+    au < down ; World Haiku Review Volume 1 ; 1 >
+    au < down ; World Haiku Review Volume 2 ; 2 >
+    au < down ; World Haiku Review Volume 3 ; 3 >
+  
+  }
+
+}
