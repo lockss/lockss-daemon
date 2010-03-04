@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = American Historical Association
+  >
+
+  implicit < status ; name ; param[year] >
+
+  plugin = org.lockss.plugin.histcoop.HistoryCooperativePlugin
+
+  {
+    title <
+      name = American Historical Review
+    >
+    
+    param[base_url] = http://www.historycooperative.org/
+
+    au < manifest ; American Historical Review Volume 108 ; 104 >
+    au < manifest ; American Historical Review Volume 108 ; 105 >
+    au < manifest ; American Historical Review Volume 108 ; 106 >
+    au < manifest ; American Historical Review Volume 108 ; 107 >
+    au < released ; American Historical Review Volume 108 ; 108 >
+    au < manifest ; American Historical Review Volume 108 ; 109 >
+    au < manifest ; American Historical Review Volume 108 ; 110 >
+    au < manifest ; American Historical Review Volume 108 ; 111 >
+    au < manifest ; American Historical Review Volume 108 ; 112 >
+
+  }
+
+}

@@ -1,0 +1,20 @@
+{
+  publisher <
+    name = The Bonefolder
+  >
+  
+  plugin = edu.nyu.plugin.bonefolder.BonefolderPlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://www.philobiblon.com/bonefolder/
+  
+  {
+  
+    title <
+      name = The Bonefolder
+    >  
+    
+    au < released ; The Bonefolder Volume 1 ; 1 >
+ 
+  }
+  
+}
