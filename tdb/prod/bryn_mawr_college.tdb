@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = Bryn Mawr College
+  >
+  
+  implicit < status ; name ; param[year] >
+  plugin = edu.princeton.plugin.bmcr.BMCRPlugin
+  
+  {
+  
+    title <
+      name = Bryn Mawr Classical Review 
+    >  
+    
+    {
+    
+      param[base_url] = http://ccat.sas.upenn.edu/bmcr
+
+comment[bmcr1] = the journal has moved to http://bmcr.brynmawr.edu/ 
+comment[bmcr2] = however, the links within AUs still use the upenn base URL
+    
+      au < down ; Bryn Mawr Classical Review 1990 ; 1990 >
+      au < down ; Bryn Mawr Classical Review 1991 ; 1991 >
+      au < down ; Bryn Mawr Classical Review 1992 ; 1992 >
+      au < down ; Bryn Mawr Classical Review 1993 ; 1993 >
+      au < down ; Bryn Mawr Classical Review 1994 ; 1994 >
+      au < down ; Bryn Mawr Classical Review 1995 ; 1995 >
+      au < down ; Bryn Mawr Classical Review 1996 ; 1996 >
+      au < down ; Bryn Mawr Classical Review 1997 ; 1997 >
+      au < down ; Bryn Mawr Classical Review 1998 ; 1998 >
+      au < down ; Bryn Mawr Classical Review 1999 ; 1999 >
+      au < down ; Bryn Mawr Classical Review 2000 ; 2000 >
+      au < down ; Bryn Mawr Classical Review 2001 ; 2001 >
+      au < down ; Bryn Mawr Classical Review 2002 ; 2002 >
+      au < down ; Bryn Mawr Classical Review 2003 ; 2003 >
+      au < down ; Bryn Mawr Classical Review 2004 ; 2004 >
+      
+    }
+  
+  }
+  
+}
