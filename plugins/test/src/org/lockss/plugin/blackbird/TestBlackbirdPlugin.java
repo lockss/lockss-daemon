@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdPlugin.java,v 1.5 2007-02-07 19:32:21 thib_gc Exp $
+ * $Id: TestBlackbirdPlugin.java,v 1.6 2010-03-05 07:07:47 thib_gc Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class TestBlackbirdPlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "322");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("www.example.com, vol. 322", au.getName());
+    assertEquals("Blackbird Plugin, Base URL http://www.example.com/, Volume 322", au.getName());
   }
 
   public void testGetPluginId() {
