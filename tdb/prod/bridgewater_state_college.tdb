@@ -1,0 +1,32 @@
+{
+  publisher <
+    name = Bridgewater State College
+  >
+  
+  implicit < status ; name ; param[year] >
+  plugin = edu.columbia.plugin.JiwsPlugin
+  param[base_url] = http://www.bridgew.edu/SoAS/jiws/ 
+  
+  {
+  
+    title <
+      name = Journal of International Women's Studies 
+    >  
+
+comment[jiws1] = there are 2 sets om fanifest pages for some reason
+comment[jiws2] = the plugin should be checked
+    
+    au < released ; Journal of International Women's Studies 2000 ; 2000 >
+    au < released ; Journal of International Women's Studies 2001 ; 2001 >
+    au < released ; Journal of International Women's Studies 2002 ; 2002 >
+    au < released ; Journal of International Women's Studies 2003 ; 2003 >
+    au < released ; Journal of International Women's Studies 2004 ; 2004 >
+    au < released ; Journal of International Women's Studies 2005 ; 2005 >
+    au < released ; Journal of International Women's Studies 2006 ; 2006 >
+    au < manifest ; Journal of International Women's Studies 2007 ; 2007 >
+    au < manifest ; Journal of International Women's Studies 2008 ; 2008 >
+    au < manifest ; Journal of International Women's Studies 2009 ; 2009 >
+  
+  }
+  
+}
