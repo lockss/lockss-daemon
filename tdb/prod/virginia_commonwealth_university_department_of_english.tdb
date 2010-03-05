@@ -7,7 +7,8 @@
   {
   
     title <
-      name = Blackbird
+      name = Blackbird ;
+      issn = 1540-3068
     >
     
     plugin = org.lockss.plugin.blackbird.BlackbirdPlugin
