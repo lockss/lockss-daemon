@@ -3523,51 +3523,6 @@
 	</property>
       </property>
 
-      <property name="ameriquests2006">
-	<property name="title" value="AmeriQuests 2006" />
-	<property name="estSize" value="11MB" />
-	<property name="journalTitle" value="AmeriQuests" />
-	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://ejournals.library.vanderbilt.edu/ameriquests/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="year" />
-	  <property name="value" value="2006" />
-	</property>
-      </property>
-
-      <property name="ameriquests2005">
-	<property name="title" value="AmeriQuests 2005" />
-	<property name="estSize" value="11MB" />
-	<property name="journalTitle" value="AmeriQuests" />
-	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://ejournals.library.vanderbilt.edu/ameriquests/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="year" />
-	  <property name="value" value="2005" />
-	</property>
-      </property>
-
-      <property name="ameriquests2004">
-	<property name="title" value="AmeriQuests 2004" />
-	<property name="estSize" value="11MB" />
-	<property name="journalTitle" value="AmeriQuests" />
-	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://ejournals.library.vanderbilt.edu/ameriquests/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="year" />
-	  <property name="value" value="2004" />
-	</property>
-      </property>
-
       <property name="bmcr2004">
 	<property name="title" value="Bryn Mawr Classical Review 2004" />
 	<property name="estSize" value="7MB" />

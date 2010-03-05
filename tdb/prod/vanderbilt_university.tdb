@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Vanderbilt University
+  >
+  
+  {
+  
+    title <
+      name = AmeriQuests ;
+      issn = 1553-4316
+    >
+    
+    plugin = org.lockss.plugin.ojs.OJSPlugin
+    param[base_url] = http://ejournals.library.vanderbilt.edu/ameriquests/
+    rights = openaccess
+    implicit < status ; attr[year] ; name ; param[year] >
+    
+    au < released ; 2004 ; AmeriQuests 2004 ; 2004 >
+  
+  }
+
+}
