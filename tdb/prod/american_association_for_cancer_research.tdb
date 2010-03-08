@@ -23,7 +23,7 @@
       au < ready ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 >
       au < ready ; 1997 ; Cancer Epidemiology Biomarkers & Prevention Volume 6 ; 6 >
       au < ready ; 1998 ; Cancer Epidemiology Biomarkers & Prevention Volume 7 ; 7 >
-      au < testing ; 1999 ; Cancer Epidemiology Biomarkers & Prevention Volume 8 ; 8 >
+      au < ready ; 1999 ; Cancer Epidemiology Biomarkers & Prevention Volume 8 ; 8 >
       au < ready ; 2000 ; Cancer Epidemiology Biomarkers & Prevention Volume 9 ; 9 >
       au < ready ; 2001 ; Cancer Epidemiology Biomarkers & Prevention Volume 10 ; 10 >
       au < testing ; 2002 ; Cancer Epidemiology Biomarkers & Prevention Volume 11 ; 11 >
@@ -192,13 +192,13 @@
       param[base_url] = http://mcr.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2002-2003 ; Molecular Cancer Research Volume 1 ; 1 >
-      au < testing ; 2004 ; Molecular Cancer Research Volume 2 ; 2 >
+      au < ready ; 2002-2003 ; Molecular Cancer Research Volume 1 ; 1 >
+      au < ready ; 2004 ; Molecular Cancer Research Volume 2 ; 2 >
       au < ready ; 2005 ; Molecular Cancer Research Volume 3 ; 3 >
       au < ready ; 2006 ; Molecular Cancer Research Volume 4 ; 4 >
       au < ready ; 2007 ; Molecular Cancer Research Volume 5 ; 5 >
       au < ready ; 2008 ; Molecular Cancer Research Volume 6 ; 6 >
-      au < testing ; 2009 ; Molecular Cancer Research Volume 7 ; 7 >
+      au < ready ; 2009 ; Molecular Cancer Research Volume 7 ; 7 >
 
     }
 
@@ -216,8 +216,8 @@
       param[base_url] = http://mct.aacrjournals.org/
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < testing ; 2001-2002 ; Molecular Cancer Therapeutics Volume 1 ; 1 >
-      au < testing ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 >
+      au < ready ; 2001-2002 ; Molecular Cancer Therapeutics Volume 1 ; 1 >
+      au < ready ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 >
       au < ready ; 2004 ; Molecular Cancer Therapeutics Volume 3 ; 3 >
       au < ready ; 2005 ; Molecular Cancer Therapeutics Volume 4 ; 4 >
       au < ready ; 2006 ; Molecular Cancer Therapeutics Volume 5 ; 5 >
