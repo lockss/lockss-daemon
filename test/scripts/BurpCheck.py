@@ -276,6 +276,7 @@ def _find_inconsistent_information(db, options):
             
                 if currentNumArticles[0] < bestNumArticles[0]:
                     fileInconsistent.write("`%s' (on %s:%d) has seen its number of articles decrease from %d (current run) to %d (on %s).\n" %(arAuid[0], arMachineName[0], arMachineName[1], currentNumArticles[0], bestNumArticles[0], bestNumArticles[1]))
+                arMachineName = cursorMachine.fetchone()
              
         arAuid = cursor.fetchone()
         
