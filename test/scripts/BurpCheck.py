@@ -28,13 +28,25 @@ OPTION_DATE_REPORT_END_SHORT    = 'e'
 # A date report of 'None' means the most recent execution 
 DEFAULT_DATE_REPORT_END         = None
 
+OPTION_DATE_PREVIOUS_REPORT              = 'previousreportdatestart'
+OPTION_DATE_PREVIOUS_REPORT_SHORT        = 'R'
+# A date report of 'None' means the second most recent execution 
+DEFAULT_DATE_PREVIOUS_REPORT             = None
+
+OPTION_DATE_PREVIOUS_REPORT_END          = 'previousreportdateend'
+OPTION_DATE_PREVIOUS_REPORT_END_SHORT    = 'E'
+# A date report of 'None' means the second most recent execution 
+DEFAULT_DATE_PREVIOUS_REPORT_END         = None
+
+
+
 OPTION_FILENAME_DISAPPEARING           = 'disappearing'
 OPTION_FILENAME_DISAPPEARING_SHORT     = 'd'
 OPTION_FILENAME_DISAPPEARING_DEFAULT   = 'Disappearing.txt'
 
-OPTION_FILENAME_MULTIPLE_YEARS         = 'multiple'
-OPTION_FILENAME_MULTIPLE_YEARS_SHORT   = 'm'
-OPTION_FILENAME_MULTIPLE_YEARS_DEFAULT = 'Multiple.txt'
+OPTION_FILENAME_INCONSISTENT           = 'inconsistent'
+OPTION_FILENAME_INCONSISTENT_SHORT     = 'i'
+OPTION_FILENAME_INCONSISTENT_DEFAULT   = 'Inconsistent.txt'
 
 OPTION_FILENAME_YEAR_ZERO               = 'yearzero'
 OPTION_FILENAME_YEAR_ZERO_SHORT         = 'z'
@@ -51,11 +63,11 @@ def _make_command_line_parser():
                       dest=OPTION_DATABASE_PASSWORD,
                       help="The password for the database (required)")
 
-    parser.add_option(OPTION_SHORT + OPTION_FILENAME_MULTIPLE_YEARS_SHORT,
-                      OPTION_LONG + OPTION_FILENAME_MULTIPLE_YEARS,
-                      dest = OPTION_FILENAME_MULTIPLE_YEARS,
-                      default = OPTION_FILENAME_MULTIPLE_YEARS_DEFAULT,
-                      help = "The filename for the report of AUs with multiple years.  (Default: %default)")
+    parser.add_option(OPTION_SHORT + OPTION_FILENAME_INCONSISTENT_SHORT,
+                      OPTION_LONG + OPTION_FILENAME_INCONSISTENT,
+                      dest = OPTION_FILENAME_INCONSISTENT,
+                      default = OPTION_FILENAME_INCONSISTENT_DEFAULT,
+                      help = "The filename for the report of AUs with inconsistent data.  (Default: %default)")
     
     parser.add_option(OPTION_SHORT + OPTION_FILENAME_YEAR_ZERO_SHORT,
                       OPTION_LONG + OPTION_FILENAME_YEAR_ZERO,
@@ -66,7 +78,7 @@ def _make_command_line_parser():
     parser.add_option(OPTION_SHORT + OPTION_FILENAME_DISAPPEARING_SHORT,
                       OPTION_LONG + OPTION_FILENAME_DISAPPEARING,
                       dest = OPTION_FILENAME_DISAPPEARING,
-                      default = OPTION_FILENAME_MULTIPLE_YEARS_DEFAULT,
+                      default = OPTION_FILENAME_DISAPPEARING_DEFAULT,
                       help = "The filename for the report of disappearing AUs.  (Default: %default)")
     
     # The date for the report: the date that the 'burp.py' program was run.
@@ -74,13 +86,25 @@ def _make_command_line_parser():
                       OPTION_LONG + OPTION_DATE_REPORT,
                       dest=OPTION_DATE_REPORT,
                       default=DEFAULT_DATE_REPORT,
-                      help="The start date the information was gathered (default: the previous execution)")
+                      help="The start date when the information was gathered (default: the previous execution)")
 
     parser.add_option(OPTION_SHORT + OPTION_DATE_REPORT_END_SHORT,
                       OPTION_LONG + OPTION_DATE_REPORT_END,
                       dest=OPTION_DATE_REPORT_END,
                       default=DEFAULT_DATE_REPORT_END,
-                      help="The end date the information was gathered (default: the previous execution)")
+                      help="The end date when the information was gathered (default: the previous execution)")
+
+    parser.add_option(OPTION_SHORT + OPTION_DATE_PREVIOUS_REPORT_SHORT,
+                      OPTION_LONG + OPTION_DATE_PREVIOUS_REPORT,
+                      dest=OPTION_DATE_PREVIOUS_REPORT,
+                      default=DEFAULT_DATE_PREVIOUS_REPORT,
+                      help="The start date when the previous information was gathered (default: the second previous execution)")
+
+    parser.add_option(OPTION_SHORT + OPTION_DATE_PREVIOUS_REPORT_END_SHORT,
+                      OPTION_LONG + OPTION_DATE_PREVIOUS_REPORT_END,
+                      dest=OPTION_DATE_PREVIOUS_REPORT_END,
+                      default=DEFAULT_DATE_PREVIOUS_REPORT_END,
+                      help="The end date when the previous information was gathered (default: the second previous execution)")
 
     return parser
 
@@ -104,6 +128,15 @@ def _update_required_options(db, options):
         
     if options.reportdateend is None:
         options.reportdateend = dates[1].strftime("%Y-%m-%d %H-%M-%S")
+        
+    dates = cursor.fetchone()
+    
+    if dates is not None:
+        if options.previousreportdatestart is None:
+            options.previousreportdatestart = dates[0].strftime("%Y-%m-%d %H-%M-%S")
+            
+        if options.previousreportdateend is None:
+            options.previousreportdateend = dates[1].strftime("%Y-%m-%d %H-%M-%S")
         
     cursor.close()    
 
@@ -150,7 +183,7 @@ def _find_year_zeros(db, options):
     
     cursor = db.cursor()    
     cursor2 = db.cursor()
-    cursor.execute("SELECT distinct(auname), auid FROM burp WHERE auyear = '0' AND rundate >= DATE( '" + str(options.reportdatestart) + "') AND rundate <= DATE('" + str(options.reportdateend) + "');")
+    cursor.execute("SELECT distinct(auname), auid FROM burp WHERE auyear = '0' AND rundate >=  '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
     
     arYearZero = cursor.fetchone()
     while arYearZero is not None:
@@ -174,41 +207,82 @@ def _find_year_zeros(db, options):
     cursor.close()
 
 
-# List all AUs with multiple years    
-def _find_multiple_years(db, options):
-    fileMultiple = open(options.multiple, 'w')
+# List all AUs with inconsistent values for data...
+def _find_inconsistent_information(db, options):
+    fileInconsistent = open(options.inconsistent, 'w')
     
     isEmpty = True
     
-    cursor = db.cursor()    
-    cursor2 = db.cursor()
-    cursor3 = db.cursor()
+    cursor        = db.cursor()    
+    cursorMachine = db.cursor()
+    cursor2       = db.cursor()
+    cursor3       = db.cursor()
     
-    cursor.execute("SELECT DISTINCT(auname), auid FROM burp WHERE rundate >= DATE( '" + str(options.reportdatestart) + "') AND rundate <= DATE('" + str(options.reportdateend) + "');")
+    cursor.execute("SELECT auname, auid, machinename, port FROM burp WHERE rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' GROUP BY auid;")
     
     arAuid = cursor.fetchone()
     while arAuid is not None:        
-        if _is_reported(arAuid[1]):                        
-            cursor2.execute("SELECT COUNT(DISTINCT(auyear)) FROM burp WHERE auid = '" + arAuid[1] + "' AND rundate >= DATE( '" + str(options.reportdatestart) + "') AND rundate <= DATE('" + str(options.reportdateend) + "');")
-            countYear = cursor2.fetchone()            
-            if countYear[0] > 1:                
-                fileMultiple.write("'" + arAuid[0] + "' has multiple years: ")
+        if _is_reported(arAuid[1]):
+            
+            # Verify that the years and names remain consistent across AUs.                        
+            cursor2.execute("SELECT COUNT(DISTINCT(auyear)), COUNT(DISTINCT(auname)) FROM burp WHERE auid = '" + arAuid[1] + "' AND rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
+            countInformation = cursor2.fetchone()            
+            if countInformation[0] > 1:                
+                fileInconsistent.write("`" + arAuid[0] + "' has inconsistent years: \n")
                 
-                cursor3.execute("SELECT DISTINCT(auyear) FROM burp WHERE auid = '" + arAuid[1]  + "' AND rundate >= DATE( '" + str(options.reportdatestart) + "') AND rundate <= DATE('" + str(options.reportdateend) + "');")
+                cursor3.execute("SELECT DISTINCT(auyear), machinename, port FROM burp WHERE auid = '" + arAuid[1]  + "' AND rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
                 year = cursor3.fetchone()
                 while year is not None:
-                    fileMultiple.write(year[0] + " ")
+                    fileInconsistent.write("%s (on %s:%d) " % (year[0], year[1], year[2]))
                     year = cursor3.fetchone()
                 
-                fileMultiple.write("\n")                
+                fileInconsistent.write("\n\n")                
                 isEmpty = False
+                
+            if countInformation[1] > 1:
+                fileInconsistent.write("`" + arAuid[0] + "' has inconsistent AU Names: \n")
+
+                cursor3.execute("SELECT DISTINCT(auname), machinename, port FROM burp WHERE auid = '" + arAuid[1]  + "' AND rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
+                name = cursor3.fetchone()
+                while name is not None:
+                    fileInconsistent.write("`%s' (on %s:%d) " % (name[0], name[1], name[2]))
+                    name = cursor3.fetchone()
+                
+                fileInconsistent.write("\n\n")                
+                isEmpty = False
+                
+            # Verify that no articles have had a successful crawl, but still have zero DOIs reported.
+            cursor2.execute("SELECT aulastcrawlresult, numarticles FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s';" % (arAuid[1], str(options.reportdatestart), str(options.reportdateend)))
+            crawledbutzero = cursor2.fetchone()
+            while crawledbutzero is not None:
+                if crawledbutzero[0] == "Successful" and crawledbutzero[1] == 0:                    
+                    fileInconsistent.write("`%s' had a successful crawl, but still has zero DOIs reported.  Machines it occurred on: " % (arAuid[0], crawledbutzero[2], crawledbutzero[3]))
+                    isEmpty = False
+                    
+                    cursorMachine.execute("SELECT machinename, port FROM BURP where auid = '%s' aulastcrawlresult = 'Successful' AND numarticles = 0 AND rundate >= '%s' AND rundate <= '%s'" % (arauid[1], str(options.reportdatestart), str(options.reportdateend)))
+                    arMachineName = cursorMachine.fetchone()
+                    while arMachineName is not None:
+                        fileInconsistent.write("%s:%d " %(arMachineName[0], arMachineName[1])) 
+                crawledbutzero = cursor2.fetchone()
+                
+            # Verify that the current article on one machine does not have fewer articles than any previous run.
+            cursorMachine.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s';" % (arAuid[1], str(options.reportdatestart), str(options.reportdateend)))
+            arMachineName = cursorMachine.fetchone()
+            while arMachineName is not None:
+                cursor2.execute("SELECT numarticles FROM burp WHERE auid = '%s' AND machinename = '%s' AND port = %d AND rundate >= '%s' AND rundate <= '%s';" % (arAuid[1], arMachineName[0], arMachineName[1], str(options.reportdatestart), str(options.reportdateend)))
+                currentNumArticles = cursor2.fetchone()
+                cursor3.execute("SELECT MAX(numarticles), rundate FROM burp WHERE auid = '%s' AND machinename = '%s' AND port = %d;" % (arAuid[1], arMachineName[0], arMachineName[1]))
+                bestNumArticles = cursor3.fetchone()
             
+                if currentNumArticles[0] < bestNumArticles[0]:
+                    fileInconsistent.write("`%s' (on %s:%d) has seen its number of articles decrease from %d (current run) to %d (on %s).\n" %(arAuid[0], arMachineName[0], arMachineName[1], currentNumArticles[0], bestNumArticles[0], bestNumArticles[1]))
+             
         arAuid = cursor.fetchone()
         
     if isEmpty:
-        fileMultiple.write("Congratulations: no AUs have multiple years!")
+        fileInconsistent.write("Congratulations: no AU has inconsistent data!")
         
-    fileMultiple.close()
+    fileInconsistent.close()
     cursor3.close()
     cursor2.close()
     cursor.close()
@@ -224,7 +298,7 @@ def _main_procedure():
     _update_required_options(db, options)
 
     _find_year_zeros(db, options)
-    _find_multiple_years(db, options)
+    _find_inconsistent_information(db, options)
 
 
 if __name__ == '__main__':    
