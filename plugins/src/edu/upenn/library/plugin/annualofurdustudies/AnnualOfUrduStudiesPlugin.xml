@@ -1,2 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>plugin_identifier</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.upenn.library.plugin.JUS.JUSPlugin</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s volume %d", base_url, volume</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Urdu</ElementValue></MapElement><MapElement><ElementKey>au_def_new_content_crawl</ElementKey><ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">7862400000</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"%sIssue%.02d/index.html", base_url, volume</string><string xsi:type="java:java.lang.String">1,"^%sIssue%.02d/.*\.html$", base_url, volume</string><string xsi:type="java:java.lang.String">1,"^%spdf/.*\.pdf$", base_url</string><string xsi:type="java:java.lang.String">1,"^%sauinfo/.*\.html$", base_url</string><string xsi:type="java:java.lang.String">1,"^%sbanner\.html", base_url</string><string xsi:type="java:java.lang.String">1,"^%s.*(jpg|jpeg|gif|png)$", base_url</string></ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sIssue%.02d/index.html", base_url, volume</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>volume</Key><DisplayName>Volume No.</DisplayName><Type>6</Type><Size>8</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement></Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Annual of Urdu Studies Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Annual of Urdu Studies Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s.*\.(bmp|css|gif|ico|js|jpe?g|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sIssue%.02d/index.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%sIssue%.02d/.*\.html$&quot;, base_url, volume</string>
+      <string>1,&quot;^%spdf/.*\.pdf$&quot;, base_url</string>
+      <string>1,&quot;^%sauinfo/.*\.html$&quot;, base_url</string>
+      <string>1,&quot;^%sbanner\.html&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sIssue%.02d/index.html&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

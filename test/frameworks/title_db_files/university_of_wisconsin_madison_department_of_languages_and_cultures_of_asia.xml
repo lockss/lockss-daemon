@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="University of Wisconsin, Madison Department of Languages and Cultures of Asia">
+   <property name="name" value="All University of Wisconsin, Madison Department of Languages and Cultures of Asia Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='University of Wisconsin, Madison Department of Languages and Cultures of Asia']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="AnnualofUrduStudies17">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 1-7" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="00" />
+   </property>
+   <property name="attributes.year" value="1981-1990" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies8">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 8" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="08" />
+   </property>
+   <property name="attributes.year" value="1993" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies9">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 9" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="09" />
+   </property>
+   <property name="attributes.year" value="1994" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies10">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 10" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.year" value="1995" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies11">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 11" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.year" value="1996" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies12">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 12" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.year" value="1997" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies13">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 13" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.year" value="1998" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies14">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 14" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.year" value="1999" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies15">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 15" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.year" value="2000" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies16">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 16" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.year" value="2001" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies17">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 17" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.year" value="2002" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies18">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 18" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.year" value="2003" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies19">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 19" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.year" value="2004" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies20">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 20" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies21">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 21" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies22">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 22" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies23">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 23" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AnnualofUrduStudies24">
+   <property name="attributes.publisher" value="University of Wisconsin, Madison Department of Languages and Cultures of Asia" />
+   <property name="journalTitle" value="Annual of Urdu Studies" />
+   <property name="title" value="Annual of Urdu Studies Volume 24" />
+   <property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.urdustudies.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.year" value="2009" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+ </property>
+
+</lockss-config>

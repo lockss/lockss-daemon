@@ -1,0 +1,40 @@
+{
+
+  publisher <
+    name = University of Wisconsin, Madison Department of Languages and Cultures of Asia
+  >
+  
+  {
+  
+    title <
+      name = Annual of Urdu Studies ;
+      issn = 0734-5348
+    >
+    
+    plugin = edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin
+    param[base_url] = http://www.urdustudies.com/
+    rights = openaccess
+    implicit < status ; attr[year] ; name ; param[volume] >
+    
+    au < exists ; 1981-1990 ; Annual of Urdu Studies Volume 1-7 ; 00 >
+    au < released ; 1993 ; Annual of Urdu Studies Volume 8 ; 08 >
+    au < released ; 1994 ; Annual of Urdu Studies Volume 9 ; 09 >
+    au < released ; 1995 ; Annual of Urdu Studies Volume 10 ; 10 >
+    au < released ; 1996 ; Annual of Urdu Studies Volume 11 ; 11 >
+    au < released ; 1997 ; Annual of Urdu Studies Volume 12 ; 12 >
+    au < released ; 1998 ; Annual of Urdu Studies Volume 13 ; 13 >
+    au < released ; 1999 ; Annual of Urdu Studies Volume 14 ; 14 >
+    au < released ; 2000 ; Annual of Urdu Studies Volume 15 ; 15 >
+    au < released ; 2001 ; Annual of Urdu Studies Volume 16 ; 16 >
+    au < released ; 2002 ; Annual of Urdu Studies Volume 17 ; 17 >
+    au < released ; 2003 ; Annual of Urdu Studies Volume 18 ; 18 >
+    au < released ; 2004 ; Annual of Urdu Studies Volume 19 ; 19 >
+    au < released ; 2005 ; Annual of Urdu Studies Volume 20 ; 20 >
+    au < manifest ; 2006 ; Annual of Urdu Studies Volume 21 ; 21 >
+    au < manifest ; 2007 ; Annual of Urdu Studies Volume 22 ; 22 >
+    au < manifest ; 2008 ; Annual of Urdu Studies Volume 23 ; 23 >
+    au < exists ; 2009 ; Annual of Urdu Studies Volume 24 ; 24 >
+  
+  }
+
+}
