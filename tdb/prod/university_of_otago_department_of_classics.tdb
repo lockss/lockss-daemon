@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = University of Otago Department of Classics  
+  >
+  
+  {
+  
+    title <
+      name = Scholia ;
+      issn = 1018-9017
+    >
+    
+    plugin = nz.ac.otago.plugin.scholia.ScholiaPlugin
+    param[base_url] = http://www.otago.ac.nz/
+    rights = openaccess
+    implicit < status ; name ; param[volume] >
+    
+    au < down ; Scholia Volume 1 ; 1 >
+    au < down ; Scholia Volume 2 ; 2 >
+    au < down ; Scholia Volume 3 ; 3 >
+    au < down ; Scholia Volume 4 ; 4 >
+    au < down ; Scholia Volume 5 ; 5 >
+    au < down ; Scholia Volume 6 ; 6 >
+    au < down ; Scholia Volume 7 ; 7 >
+    au < down ; Scholia Volume 8 ; 8 >
+    au < down ; Scholia Volume 9 ; 9 >
+    au < down ; Scholia Volume 10 ; 10 >
+    au < down ; Scholia Volume 11 ; 11 >
+    au < down ; Scholia Volume 12 ; 12 >
+    au < down ; Scholia Volume 13 ; 13 >
+    au < doNotProcess ; Scholia Volume 14 ; 14 >
+    au < doNotProcess ; Scholia Volume 15 ; 15 >
+    au < doNotProcess ; Scholia Volume 16 ; 16 >
+    au < doNotProcess ; Scholia Volume 17 ; 17 >
+
+  }
+  
+}

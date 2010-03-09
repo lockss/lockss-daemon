@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>1000</long>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>
@@ -13,11 +13,15 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Scholia</string>
+    <string>Scholia Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>7862400000</long>
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>au_crawlrules</string>
