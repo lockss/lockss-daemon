@@ -5,11 +5,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;%s Issue %s&quot;, base_url, issue_no.</string>
+    <string>&quot;Applied Semiotics Plugin, Base URL %s, Issue %s&quot;, base_url, issue_no.</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -42,8 +42,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>issue_no.</key>
         <displayName>Issue No. (e.g. 1, 6-7)</displayName>
-        <description>
-</description>
+        <description></description>
         <type>1</type>
         <size>10</size>
         <definitional>true</definitional>
@@ -61,8 +60,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>issue_dir</key>
         <displayName>Issue Directory (e.g. No1 or 6-7)</displayName>
-        <description>
-</description>
+        <description></description>
         <type>1</type>
         <size>10</size>
         <definitional>true</definitional>

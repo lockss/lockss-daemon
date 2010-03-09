@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = University of Toronto Department of French  
+  >
+  
+  {
+  
+    title <
+      name = Applied Semiotics / Sémiotique Appliquée ;
+      issn = 1204-6140
+    >
+    
+    plugin = edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin
+    param[base_url] = http://www.chass.utoronto.ca/french/as-sa/
+    rights = openaccess
+    implicit < status ; name ; param[issue_dir] ; param[issue_no.] >
+    
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 1 ; No1 ; 1 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 2 ; No2 ; 2 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 3 ; No1 ; 3 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 4 ; No1 ; 4 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 5 ; No1 ; 5 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 6-7 ; 6-7 ; 6-7 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 8 ; No8 ; 8 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 9 ; No9 ; 9 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 10 ; No10 ; 10 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 11-12 ; 11-12 ; 11-12 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 13 ; No13 ; 13 >
+    au < released ; Applied Semiotics / Sémiotique Appliquée Volume 14 ; No14 ; 14 >
+    
+  }
+  
+}
