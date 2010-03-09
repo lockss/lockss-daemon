@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="University of Colorado at Boulder">
+   <property name="name" value="All University of Colorado at Boulder Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='University of Colorado at Boulder']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="Genders1998">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 1998" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="27-28" />
+   </property>
+   <property name="attributes.year" value="1998" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders1999">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 1999" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="29-30" />
+   </property>
+   <property name="attributes.year" value="1999" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2000">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2000" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="31-32" />
+   </property>
+   <property name="attributes.year" value="2000" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2001">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2001" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="33-34" />
+   </property>
+   <property name="attributes.year" value="2001" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2002">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2002" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="35-36" />
+   </property>
+   <property name="attributes.year" value="2002" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2003">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2003" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="37-38" />
+   </property>
+   <property name="attributes.year" value="2003" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2004">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2004" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="39-40" />
+   </property>
+   <property name="attributes.year" value="2004" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2005">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2005" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="41-42" />
+   </property>
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2006">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2006" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="43-44" />
+   </property>
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2007">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2007" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="45-46" />
+   </property>
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2008">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2008" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="47-48" />
+   </property>
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Genders2009">
+   <property name="attributes.publisher" value="University of Colorado at Boulder" />
+   <property name="journalTitle" value="Genders" />
+   <property name="title" value="Genders 2009" />
+   <property name="plugin" value="org.lockss.plugin.GendersPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.genders.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="49-50" />
+   </property>
+   <property name="attributes.year" value="2009" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+ </property>
+
+</lockss-config>
