@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Minerva - An Internet Journal of Philosophy Volume %s&quot;, volume_name</string>
+    <string>&quot;Minerva Plugin, Base URL %s, Volume %s&quot;, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
