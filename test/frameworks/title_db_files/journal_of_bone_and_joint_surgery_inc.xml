@@ -52,7 +52,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 1" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -67,7 +67,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 2" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -82,7 +82,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 3" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -97,7 +97,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 4" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -112,7 +112,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 5" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -127,7 +127,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 6" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -142,7 +142,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 7" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -157,7 +157,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 8" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -172,7 +172,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 9" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -187,7 +187,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 10" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -202,7 +202,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 11" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -217,7 +217,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 12" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -232,7 +232,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 13" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -247,7 +247,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 14" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -262,7 +262,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 15" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -277,7 +277,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 16" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -292,7 +292,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 17" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -307,7 +307,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 18" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -322,7 +322,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 19" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -337,7 +337,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 20" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -352,7 +352,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 21" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -367,7 +367,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 22" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -382,7 +382,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 23" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -397,7 +397,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 24" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -412,7 +412,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 25" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -427,7 +427,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 26" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -442,7 +442,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 27" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -457,7 +457,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 28" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -472,7 +472,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 29" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -487,7 +487,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 30" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -502,7 +502,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 31" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -517,7 +517,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 32" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -532,7 +532,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 33" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -547,7 +547,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 34" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -562,7 +562,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 35" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -577,7 +577,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 36" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -592,7 +592,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 37" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -607,7 +607,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 38" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -622,7 +622,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 39" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -637,7 +637,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 40" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -652,7 +652,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 41" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -667,7 +667,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 42" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -682,7 +682,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 43" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -697,7 +697,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 44" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -712,7 +712,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 45" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -727,7 +727,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 46" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -742,7 +742,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 47" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -757,7 +757,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 48" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -772,7 +772,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 49" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -787,7 +787,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 50" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -802,7 +802,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 51" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -817,7 +817,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 52" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -832,7 +832,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 53" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -847,7 +847,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 54" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -862,7 +862,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 55" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -877,7 +877,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 56" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -892,7 +892,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 57" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -907,7 +907,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 58" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -922,7 +922,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 59" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -937,7 +937,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 60" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -952,7 +952,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 61" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -967,7 +967,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 62" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -982,7 +982,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 63" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -997,7 +997,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 64" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1012,7 +1012,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 65" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1027,7 +1027,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 66" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1042,7 +1042,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 67" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1057,7 +1057,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 68" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1072,7 +1072,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 69" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1087,7 +1087,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 70" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1102,7 +1102,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 71" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1117,7 +1117,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 72" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1132,7 +1132,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 73" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1147,7 +1147,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 74" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1162,7 +1162,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 75" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1177,7 +1177,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 76" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1192,7 +1192,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 77" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1207,7 +1207,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 78" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1222,7 +1222,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 79" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1237,7 +1237,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 80" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1252,7 +1252,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 81" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1267,7 +1267,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 82" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1282,7 +1282,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 83" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1297,7 +1297,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 84" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1312,7 +1312,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 85" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1327,7 +1327,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 86" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1342,7 +1342,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 87" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1357,7 +1357,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 88" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1372,7 +1372,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 89" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1387,7 +1387,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 90" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
@@ -1402,7 +1402,7 @@
    <property name="attributes.publisher" value="Journal of Bone and Joint Surgery Inc." />
    <property name="journalTitle" value="The Journal of Bone and Joint Surgery" />
    <property name="title" value="The Journal of Bone and Joint Surgery Volume 91" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.ejbjs.org/" />
