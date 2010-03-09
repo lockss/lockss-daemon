@@ -9,9 +9,9 @@
       name = International Journal of Psychiatric Nursing Research
     >
 
+    rights = openaccess
     plugin = uk.org.lockss.plugin.drogoresearch.DrogoResearchPlugin
     param[base_url] = http://www.drogoresearch.com/
-    rights = openaccess
     implicit < status ; name >
 
     au < releasing ; International Journal of Psychiatric Nursing Research >

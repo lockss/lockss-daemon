@@ -3,12 +3,11 @@
     name = Hindawi Publishing Corporation
   >
 
-  implicit < status ; name ; param[volume_name] >
-
-  plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
   rights = openaccess
+  plugin = org.lockss.plugin.hindawi.HindawiPublishingCorporationPlugin
   param[base_url] = http://www.hindawi.com/
   param[download_url] = http://downloads.hindawi.com/
+  implicit < status ; name ; param[volume_name] >
 
   {
     title <

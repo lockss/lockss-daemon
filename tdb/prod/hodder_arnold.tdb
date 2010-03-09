@@ -4,14 +4,6 @@
     name = Hodder Arnold
   >
   
-  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-  param[base_url] = http://www.ingentaconnect.com/
-  param[api_url] = http://api.ingentaconnect.com/
-  param[graphics_url] = http://graphics.ingentaconnect.com/
-  param[publisher_id] = arn
-  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.HodderArnoldPdfTransform
-  implicit < status ; year ; name ; param[volume_name] >
-  
   {
 
     title <
@@ -20,10 +12,17 @@
       eissn = 1477-0318
     >
     
+    rights = openaccess
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/
+    param[graphics_url] = http://graphics.ingentaconnect.com/
+    param[publisher_id] = arn
     param[journal_id] = pr
     param[journal_issn] = 0968-1302
-    rights = openaccess
-    
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.HodderArnoldPdfTransform
+    implicit < status ; year ; name ; param[volume_name] >
+
     au < released ; 1998 ; Pain Reviews Volume 5 ; 5 >
     au < released ; 1999 ; Pain Reviews Volume 6 ; 6 >
     au < released ; 2000 ; Pain Reviews Volume 7 ; 7 >

@@ -11,9 +11,9 @@
       issn = 1097-3710
     >
     
+    rights = openaccess
     plugin = org.lockss.plugin.invisibleculture.InvisibleCulturePlugin
     param[base_url] = http://www.rochester.edu/
-    rights = openaccess
     implicit < status ; attr[year] ; name ; param[year] ; param[num_issue_range] >
 
     au < released ; 1998 ; Invisible Culture 1998 ; 1998 ; 1-1 >    

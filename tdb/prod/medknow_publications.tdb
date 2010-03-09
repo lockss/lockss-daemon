@@ -1,29 +1,30 @@
 {
-    publisher <
-        name = Medknow Publications  
+
+  publisher <
+    name = Medknow Publications  
+  >
+    
+  rights = openaccess
+  plugin = org.lockss.plugin.medknow.MedknowPlugin
+  implicit < status ; attr[year] ; name ; param[year] ; param[volume_name] >
+    
+  {
+    title <
+      name = African Journal of Paediatric Surgery ;
+      issn = 0189-6725 ;
+      eissn = 0974-5998 
     >
-    
-    plugin = org.lockss.plugin.medknow.MedknowPlugin
-    rights = openaccess
-    
-    implicit < status ; attr[year] ; name ; param[year] ; param[volume_name] >
-    
-    {
-        title <
-            name = African Journal of Paediatric Surgery ;
-            issn = 0189-6725 ;
-            eissn = 0974-5998 
-        >
         
-        param[base_url] = http://www.afrjpaedsurg.org/ 
-        param[journal_issn] = 0189-6725
+    param[base_url] = http://www.afrjpaedsurg.org/ 
+    param[journal_issn] = 0189-6725
         
-        au < manifest ; 2004 ; African Journal of Paediatric Surgery Volume 1 ; 2004 ; 1 >
-        au < manifest ; 2005 ; African Journal of Paediatric Surgery Volume 2 ; 2005 ; 2 >     
-        au < manifest ; 2006 ; African Journal of Paediatric Surgery Volume 3 ; 2006 ; 3 >     
-        au < manifest ; 2007 ; African Journal of Paediatric Surgery Volume 4 ; 2007 ; 4 >     
-        au < manifest ; 2008 ; African Journal of Paediatric Surgery Volume 5 ; 2008 ; 5 >     
-        au < manifest ; 2009 ; African Journal of Paediatric Surgery Volume 6 ; 2009 ; 6 >
+    au < manifest ; 2004 ; African Journal of Paediatric Surgery Volume 1 ; 2004 ; 1 >
+    au < manifest ; 2005 ; African Journal of Paediatric Surgery Volume 2 ; 2005 ; 2 >     
+    au < manifest ; 2006 ; African Journal of Paediatric Surgery Volume 3 ; 2006 ; 3 >     
+    au < manifest ; 2007 ; African Journal of Paediatric Surgery Volume 4 ; 2007 ; 4 >     
+    au < manifest ; 2008 ; African Journal of Paediatric Surgery Volume 5 ; 2008 ; 5 >     
+    au < manifest ; 2009 ; African Journal of Paediatric Surgery Volume 6 ; 2009 ; 6 >
              
-    }  
+  }
+  
 }

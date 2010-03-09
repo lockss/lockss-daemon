@@ -3,11 +3,11 @@
     name = BioMed Central
   >
   
+  rights = openaccess
   implicit < status ; name ; param[volume_name] >
 
-  rights = openaccess
-
   {
+
     plugin = org.lockss.plugin.bmc.BMCPlugin
     param[base_url] = http://www.biomedcentral.com/    
 

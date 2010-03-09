@@ -3,10 +3,9 @@
     name = Public Library of Science
   >
   
-  implicit < status ; name ; param[year] >
-
   rights = openaccess
   plugin = org.lockss.plugin.topaz.TopazPlugin
+  implicit < status ; name ; param[year] >
 
   {
     title <

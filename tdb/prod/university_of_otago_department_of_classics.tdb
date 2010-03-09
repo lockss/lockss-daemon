@@ -11,9 +11,9 @@
       issn = 1018-9017
     >
     
+    rights = openaccess
     plugin = nz.ac.otago.plugin.scholia.ScholiaPlugin
     param[base_url] = http://www.otago.ac.nz/
-    rights = openaccess
     implicit < status ; name ; param[volume] >
     
     au < down ; Scholia Volume 1 ; 1 >

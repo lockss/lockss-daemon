@@ -11,9 +11,9 @@
       issn = 1092-1311
     >
     
+    rights = openaccess
     plugin = edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin
     param[base_url] = http://www.unomaha.edu/jrf/
-    rights = openaccess
     implicit < status ; name ; param[volume] >
     
     au < exists ; The Journal of Religion and Film Volume 1 ; 1 >

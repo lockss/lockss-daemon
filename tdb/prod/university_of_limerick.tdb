@@ -11,10 +11,10 @@
       issn = 1393-614X
     >
     
+    rights = openaccess
     plugin = org.lockss.plugin.minerva.MinervaPlugin
     param[base_url] = http://www.ul.ie/
     param[base_url2] = http://www.mic.ul.ie/
-    rights = openaccess
     implicit < status ; attr[year] ; name ; param[volume_name] >
 
     au < released ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >

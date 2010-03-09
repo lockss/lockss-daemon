@@ -11,9 +11,9 @@
       issn = 1540-3068
     >
     
+    rights = openaccess
     plugin = org.lockss.plugin.blackbird.BlackbirdPlugin
     param[base_url] = http://www.blackbird.vcu.edu/
-    rights = openaccess
     implicit < status ; attr[year] ; name ; param[volume] >
     
     au < released ; 2002 ; Blackbird Volume 1 ; 1 >

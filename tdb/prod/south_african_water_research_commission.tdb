@@ -10,9 +10,9 @@
       name = Water SA
     >
     
+    rights = openaccess
     plugin = za.ac.nlsa.lockss.plugin.WaterSAPlugin
     param[base_url] = za.ac.nlsa.lockss.plugin.WaterSAPlugin
-    rights = openaccess
     implicit < status ; name ; param[year] >
     
     au < down ; Water SA 1998 ; 1998 >

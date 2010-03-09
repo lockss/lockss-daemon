@@ -11,9 +11,9 @@
       eissn = 1939-036X
     >
     
+    rights = openaccess
     plugin = org.lockss.plugin.lapetitezine.LaPetiteZinePlugin
     param[base_url] = http://www.lapetitezine.org/
-    rights = openaccess
     implicit < status ; attr[year] ; name ; param[year] ; param[num_issue_range] >
     
     au < released ; 2000 ; La Petite Zine 2000 ; 2000 ; 1-5 >

@@ -11,9 +11,9 @@
       issn = 1204-6140
     >
     
+    rights = openaccess
     plugin = edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin
     param[base_url] = http://www.chass.utoronto.ca/french/as-sa/
-    rights = openaccess
     implicit < status ; name ; param[issue_dir] ; param[issue_no.] >
     
     au < released ; Applied Semiotics / Sémiotique Appliquée Volume 1 ; No1 ; 1 >

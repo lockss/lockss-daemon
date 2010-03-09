@@ -11,9 +11,9 @@
       issn = 0734-5348
     >
     
+    rights = openaccess
     plugin = edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin
     param[base_url] = http://www.urdustudies.com/
-    rights = openaccess
     implicit < status ; attr[year] ; name ; param[volume] >
     
     au < exists ; 1981-1990 ; Annual of Urdu Studies Volume 1-7 ; 00 >
