@@ -1,6 +1,7 @@
 #!/usr/bin/python
+# coding: utf-8
 
-# $Id: tdbxml.py,v 1.14 2009-10-12 23:02:55 thib_gc Exp $
+# $Id: tdbxml.py,v 1.15 2010-03-09 02:45:41 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -42,12 +43,14 @@ _IMPLICIT_PARAM_ORDER = [
 
 def _escape(str):
     from xml.sax import saxutils
-    return saxutils.escape(str)
+    return saxutils.escape(str).decode('utf-8').encode('ascii', 'xmlcharrefreplace')
 
 def _short_au_name(au):
     str = au.name()
     str = re.sub(r'Volume\s+(\S+)$', r'\1', str)
     str = re.sub(r'\s+', '', str)
+    str = re.sub(r'é|è|ê|ë', 'e', str)
+    str = re.sub(r'í|ì|î|ï', 'i', str)
     str = re.sub(r'\W+', '', str)
     return _escape(str)
 
