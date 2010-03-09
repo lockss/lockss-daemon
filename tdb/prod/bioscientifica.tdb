@@ -10,7 +10,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.eje-online.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -102,16 +102,16 @@
       au < exists ; European Journal of Endocrinology Volume 127 ; 127 >
       au < exists ; European Journal of Endocrinology Volume 128 ; 128 >
       au < exists ; European Journal of Endocrinology Volume 129 ; 129 >
-      au < manifest ; European Journal of Endocrinology Volume 130 ; 130 >
-      au < manifest ; European Journal of Endocrinology Volume 131 ; 131 >
-      au < manifest ; European Journal of Endocrinology Volume 132 ; 132 >
-      au < manifest ; European Journal of Endocrinology Volume 133 ; 133 >
-      au < manifest ; European Journal of Endocrinology Volume 134 ; 134 >
-      au < manifest ; European Journal of Endocrinology Volume 135 ; 135 >
-      au < manifest ; European Journal of Endocrinology Volume 136 ; 136 >
-      au < manifest ; European Journal of Endocrinology Volume 137 ; 137 >
-      au < manifest ; European Journal of Endocrinology Volume 138 ; 138 >
-      au < manifest ; European Journal of Endocrinology Volume 139 ; 139 >
+      au < testing ; European Journal of Endocrinology Volume 130 ; 130 >
+      au < testing ; European Journal of Endocrinology Volume 131 ; 131 >
+      au < testing ; European Journal of Endocrinology Volume 132 ; 132 >
+      au < testing ; European Journal of Endocrinology Volume 133 ; 133 >
+      au < testing ; European Journal of Endocrinology Volume 134 ; 134 >
+      au < testing ; European Journal of Endocrinology Volume 135 ; 135 >
+      au < testing ; European Journal of Endocrinology Volume 136 ; 136 >
+      au < testing ; European Journal of Endocrinology Volume 137 ; 137 >
+      au < testing ; European Journal of Endocrinology Volume 138 ; 138 >
+      au < testing ; European Journal of Endocrinology Volume 139 ; 139 >
       au < manifest ; European Journal of Endocrinology Volume 140 ; 140 >
       au < manifest ; European Journal of Endocrinology Volume 141 ; 141 >
       au < manifest ; European Journal of Endocrinology Volume 142 ; 142 >
@@ -146,31 +146,31 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.reproduction-online.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; Reproduction Volume 19 ; 19 >
-      au < manifest ; Reproduction Volume 20 ; 20 >
-      au < manifest ; Reproduction Volume 21 ; 21 >
-      au < manifest ; Reproduction Volume 22 ; 22 >
-      au < manifest ; Reproduction Volume 23 ; 23 >
-      au < manifest ; Reproduction Volume 24 ; 24 >
-      au < manifest ; Reproduction Volume 25 ; 25 >
-      au < manifest ; Reproduction Volume 26 ; 26 >
-      au < manifest ; Reproduction Volume 27 ; 27 >
-      au < manifest ; Reproduction Volume 28 ; 28 >
-      au < manifest ; Reproduction Volume 29 ; 29 >
-      au < manifest ; Reproduction Volume 30 ; 30 >
-      au < manifest ; Reproduction Volume 31 ; 31 >
-      au < manifest ; Reproduction Volume 32 ; 32 >
-      au < manifest ; Reproduction Volume 33 ; 33 >
-      au < manifest ; Reproduction Volume 34 ; 34 >
-      au < manifest ; Reproduction Volume 35 ; 35 >
-      au < manifest ; Reproduction Volume 36 ; 36 >
-      au < manifest ; Reproduction Volume 37 ; 37 >
-      au < manifest ; Reproduction Volume 38 ; 38 >
-      au < manifest ; Reproduction Volume 39 ; 39 >
+      au < testing ; Reproduction Volume 19 ; 19 >
+      au < testing ; Reproduction Volume 20 ; 20 >
+      au < testing ; Reproduction Volume 21 ; 21 >
+      au < testing ; Reproduction Volume 22 ; 22 >
+      au < testing ; Reproduction Volume 23 ; 23 >
+      au < testing ; Reproduction Volume 24 ; 24 >
+      au < testing ; Reproduction Volume 25 ; 25 >
+      au < testing ; Reproduction Volume 26 ; 26 >
+      au < testing ; Reproduction Volume 27 ; 27 >
+      au < testing ; Reproduction Volume 28 ; 28 >
+      au < testing ; Reproduction Volume 29 ; 29 >
+      au < testing ; Reproduction Volume 30 ; 30 >
+      au < testing ; Reproduction Volume 31 ; 31 >
+      au < testing ; Reproduction Volume 32 ; 32 >
+      au < testing ; Reproduction Volume 33 ; 33 >
+      au < testing ; Reproduction Volume 34 ; 34 >
+      au < testing ; Reproduction Volume 35 ; 35 >
+      au < testing ; Reproduction Volume 36 ; 36 >
+      au < testing ; Reproduction Volume 37 ; 37 >
+      au < testing ; Reproduction Volume 38 ; 38 >
+      au < testing ; Reproduction Volume 39 ; 39 >
       au < manifest ; Reproduction Volume 40 ; 40 >
       au < manifest ; Reproduction Volume 41 ; 41 >
       au < manifest ; Reproduction Volume 42 ; 42 >

@@ -1,0 +1,3653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="BioScientifica">
+   <property name="name" value="All BioScientifica Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='BioScientifica']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="EuropeanJournalofEndocrinology42">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="42" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology43">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology44">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="44" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology45">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="45" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology46">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="46" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology47">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology48">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology49">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology50">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology51">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology52">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="52" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology53">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="53" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology54">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="54" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology55">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology56">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology57">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology58">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 58" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="58" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology59">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="59" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology60">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="60" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology61">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology62">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="62" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology63">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="63" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology64">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="64" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology65">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 65" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="65" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology66">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 66" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="66" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology67">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 67" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="67" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology68">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 68" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="68" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology69">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 69" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="69" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology70">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 70" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="70" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology71">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 71" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="71" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology72">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 72" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="72" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology73">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="73" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology74">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology75">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology76">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology77">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology78">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="78" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology79">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="79" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology80">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 80" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="80" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology81">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="81" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology82">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 82" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="82" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology83">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 83" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="83" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology84">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 84" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="84" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology85">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="85" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology86">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="86" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology87">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="87" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology88">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="88" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology89">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 89" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="89" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology90">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 90" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="90" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology91">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 91" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="91" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology92">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 92" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="92" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology93">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 93" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="93" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology94">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 94" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="94" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology95">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 95" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="95" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology96">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 96" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="96" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology97">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 97" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="97" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology98">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 98" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="98" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology99">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 99" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="99" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology100">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 100" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="100" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology101">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 101" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="101" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology102">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 102" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="102" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology103">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 103" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="103" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology104">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 104" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="104" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology105">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 105" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="105" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology106">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 106" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="106" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology107">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 107" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="107" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology108">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 108" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="108" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology109">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 109" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="109" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology110">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 110" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="110" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology111">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 111" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="111" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology112">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 112" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="112" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology113">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 113" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="113" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology114">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 114" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="114" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology115">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 115" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="115" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology116">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 116" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="116" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology117">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 117" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="117" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology118">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 118" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="118" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology119">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 119" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="119" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology120">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 120" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="120" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology121">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 121" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="121" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology122">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 122" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="122" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology123">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 123" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="123" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology124">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 124" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="124" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology125">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 125" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="125" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology126">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 126" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="126" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology127">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 127" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="127" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology128">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 128" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="128" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology129">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 129" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="129" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology130">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 130" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="130" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology131">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 131" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="131" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology132">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 132" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="132" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology133">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 133" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="133" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology134">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 134" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="134" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology135">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 135" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="135" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology136">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 136" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="136" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology137">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 137" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="137" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology138">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 138" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="138" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology139">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 139" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="139" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology140">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 140" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="140" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology141">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 141" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="141" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology142">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 142" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="142" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology143">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 143" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="143" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology144">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 144" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="144" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology145">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 145" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="145" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology146">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 146" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="146" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology147">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 147" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="147" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology148">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 148" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="148" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology149">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 149" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="149" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology150">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 150" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="150" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology151">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 151" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="151" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology152">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 152" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="152" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology153">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 153" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="153" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology154">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 154" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="154" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology155">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 155" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="155" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology156">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 156" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="156" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology157">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 157" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="157" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology158">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 158" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="158" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology159">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 159" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="159" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology160">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 160" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="160" />
+   </property>
+  </property>
+
+  <property name="EuropeanJournalofEndocrinology161">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="European Journal of Endocrinology" />
+   <property name="title" value="European Journal of Endocrinology Volume 161" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.eje-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="161" />
+   </property>
+  </property>
+
+  <property name="Reproduction19">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="Reproduction20">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="Reproduction21">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="Reproduction22">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="Reproduction23">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="Reproduction24">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="Reproduction25">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="Reproduction26">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="Reproduction27">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="Reproduction28">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="Reproduction29">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="Reproduction30">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="Reproduction31">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="Reproduction32">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="Reproduction33">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+  <property name="Reproduction34">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="Reproduction35">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="Reproduction36">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="Reproduction37">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+  </property>
+
+  <property name="Reproduction38">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="Reproduction39">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="Reproduction40">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="Reproduction41">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="41" />
+   </property>
+  </property>
+
+  <property name="Reproduction42">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="42" />
+   </property>
+  </property>
+
+  <property name="Reproduction43">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="43" />
+   </property>
+  </property>
+
+  <property name="Reproduction44">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="44" />
+   </property>
+  </property>
+
+  <property name="Reproduction45">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="45" />
+   </property>
+  </property>
+
+  <property name="Reproduction46">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="46" />
+   </property>
+  </property>
+
+  <property name="Reproduction47">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
+  <property name="Reproduction48">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="48" />
+   </property>
+  </property>
+
+  <property name="Reproduction49">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="49" />
+   </property>
+  </property>
+
+  <property name="Reproduction50">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="50" />
+   </property>
+  </property>
+
+  <property name="Reproduction51">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="51" />
+   </property>
+  </property>
+
+  <property name="Reproduction52">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="52" />
+   </property>
+  </property>
+
+  <property name="Reproduction53">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="53" />
+   </property>
+  </property>
+
+  <property name="Reproduction54">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="54" />
+   </property>
+  </property>
+
+  <property name="Reproduction55">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="55" />
+   </property>
+  </property>
+
+  <property name="Reproduction56">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="56" />
+   </property>
+  </property>
+
+  <property name="Reproduction57">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="57" />
+   </property>
+  </property>
+
+  <property name="Reproduction58">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 58" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="58" />
+   </property>
+  </property>
+
+  <property name="Reproduction59">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="59" />
+   </property>
+  </property>
+
+  <property name="Reproduction60">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="60" />
+   </property>
+  </property>
+
+  <property name="Reproduction61">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="61" />
+   </property>
+  </property>
+
+  <property name="Reproduction62">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="62" />
+   </property>
+  </property>
+
+  <property name="Reproduction63">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="63" />
+   </property>
+  </property>
+
+  <property name="Reproduction64">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="64" />
+   </property>
+  </property>
+
+  <property name="Reproduction65">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 65" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="65" />
+   </property>
+  </property>
+
+  <property name="Reproduction66">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 66" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="66" />
+   </property>
+  </property>
+
+  <property name="Reproduction67">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 67" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="67" />
+   </property>
+  </property>
+
+  <property name="Reproduction68">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 68" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="68" />
+   </property>
+  </property>
+
+  <property name="Reproduction69">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 69" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="69" />
+   </property>
+  </property>
+
+  <property name="Reproduction70">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 70" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="70" />
+   </property>
+  </property>
+
+  <property name="Reproduction71">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 71" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="71" />
+   </property>
+  </property>
+
+  <property name="Reproduction72">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 72" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="72" />
+   </property>
+  </property>
+
+  <property name="Reproduction73">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="73" />
+   </property>
+  </property>
+
+  <property name="Reproduction74">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
+  <property name="Reproduction75">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="75" />
+   </property>
+  </property>
+
+  <property name="Reproduction76">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="76" />
+   </property>
+  </property>
+
+  <property name="Reproduction77">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="Reproduction78">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="78" />
+   </property>
+  </property>
+
+  <property name="Reproduction79">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="79" />
+   </property>
+  </property>
+
+  <property name="Reproduction80">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 80" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="80" />
+   </property>
+  </property>
+
+  <property name="Reproduction81">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="81" />
+   </property>
+  </property>
+
+  <property name="Reproduction82">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 82" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="82" />
+   </property>
+  </property>
+
+  <property name="Reproduction83">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 83" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="83" />
+   </property>
+  </property>
+
+  <property name="Reproduction84">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 84" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="84" />
+   </property>
+  </property>
+
+  <property name="Reproduction85">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="85" />
+   </property>
+  </property>
+
+  <property name="Reproduction86">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="86" />
+   </property>
+  </property>
+
+  <property name="Reproduction87">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="87" />
+   </property>
+  </property>
+
+  <property name="Reproduction88">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="88" />
+   </property>
+  </property>
+
+  <property name="Reproduction89">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 89" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="89" />
+   </property>
+  </property>
+
+  <property name="Reproduction90">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 90" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="90" />
+   </property>
+  </property>
+
+  <property name="Reproduction91">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 91" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="91" />
+   </property>
+  </property>
+
+  <property name="Reproduction92">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 92" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="92" />
+   </property>
+  </property>
+
+  <property name="Reproduction93">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 93" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="93" />
+   </property>
+  </property>
+
+  <property name="Reproduction94">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 94" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="94" />
+   </property>
+  </property>
+
+  <property name="Reproduction95">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 95" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="95" />
+   </property>
+  </property>
+
+  <property name="Reproduction96">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 96" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="96" />
+   </property>
+  </property>
+
+  <property name="Reproduction97">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 97" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="97" />
+   </property>
+  </property>
+
+  <property name="Reproduction98">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 98" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="98" />
+   </property>
+  </property>
+
+  <property name="Reproduction99">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 99" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="99" />
+   </property>
+  </property>
+
+  <property name="Reproduction100">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 100" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="100" />
+   </property>
+  </property>
+
+  <property name="Reproduction101">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 101" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="101" />
+   </property>
+  </property>
+
+  <property name="Reproduction102">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 102" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="102" />
+   </property>
+  </property>
+
+  <property name="Reproduction103">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 103" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="103" />
+   </property>
+  </property>
+
+  <property name="Reproduction104">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 104" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="104" />
+   </property>
+  </property>
+
+  <property name="Reproduction105">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 105" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="105" />
+   </property>
+  </property>
+
+  <property name="Reproduction106">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 106" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="106" />
+   </property>
+  </property>
+
+  <property name="Reproduction107">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 107" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="107" />
+   </property>
+  </property>
+
+  <property name="Reproduction108">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 108" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="108" />
+   </property>
+  </property>
+
+  <property name="Reproduction109">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 109" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="109" />
+   </property>
+  </property>
+
+  <property name="Reproduction110">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 110" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="110" />
+   </property>
+  </property>
+
+  <property name="Reproduction111">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 111" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="111" />
+   </property>
+  </property>
+
+  <property name="Reproduction112">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 112" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="112" />
+   </property>
+  </property>
+
+  <property name="Reproduction113">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 113" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="113" />
+   </property>
+  </property>
+
+  <property name="Reproduction114">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 114" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="114" />
+   </property>
+  </property>
+
+  <property name="Reproduction115">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 115" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="115" />
+   </property>
+  </property>
+
+  <property name="Reproduction116">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 116" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="116" />
+   </property>
+  </property>
+
+  <property name="Reproduction117">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 117" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="117" />
+   </property>
+  </property>
+
+  <property name="Reproduction118">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 118" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="118" />
+   </property>
+  </property>
+
+  <property name="Reproduction119">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 119" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="119" />
+   </property>
+  </property>
+
+  <property name="Reproduction120">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 120" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="120" />
+   </property>
+  </property>
+
+  <property name="Reproduction121">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 121" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="121" />
+   </property>
+  </property>
+
+  <property name="Reproduction122">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 122" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="122" />
+   </property>
+  </property>
+
+  <property name="Reproduction123">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 123" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="123" />
+   </property>
+  </property>
+
+  <property name="Reproduction124">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 124" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="124" />
+   </property>
+  </property>
+
+  <property name="Reproduction125">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 125" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="125" />
+   </property>
+  </property>
+
+  <property name="Reproduction126">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 126" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="126" />
+   </property>
+  </property>
+
+  <property name="Reproduction127">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 127" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="127" />
+   </property>
+  </property>
+
+  <property name="Reproduction128">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 128" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="128" />
+   </property>
+  </property>
+
+  <property name="Reproduction129">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 129" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="129" />
+   </property>
+  </property>
+
+  <property name="Reproduction130">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 130" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="130" />
+   </property>
+  </property>
+
+  <property name="Reproduction131">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 131" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="131" />
+   </property>
+  </property>
+
+  <property name="Reproduction132">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 132" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="132" />
+   </property>
+  </property>
+
+  <property name="Reproduction133">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 133" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="133" />
+   </property>
+  </property>
+
+  <property name="Reproduction134">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 134" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="134" />
+   </property>
+  </property>
+
+  <property name="Reproduction135">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 135" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="135" />
+   </property>
+  </property>
+
+  <property name="Reproduction136">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 136" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="136" />
+   </property>
+  </property>
+
+  <property name="Reproduction137">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 137" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="137" />
+   </property>
+  </property>
+
+  <property name="Reproduction138">
+   <property name="attributes.publisher" value="BioScientifica" />
+   <property name="journalTitle" value="Reproduction" />
+   <property name="title" value="Reproduction Volume 138" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.reproduction-online.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="138" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
