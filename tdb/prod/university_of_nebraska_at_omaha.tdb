@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = University of Nebraska at Omaha
+  >
+  
+  {
+  
+    title <
+      name = The Journal of Religion and Film ;
+      issn = 1092-1311
+    >
+    
+    plugin = edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin
+    param[base_url] = http://www.unomaha.edu/jrf/
+    rights = openaccess
+    implicit < status ; name ; param[volume] >
+    
+    au < exists ; The Journal of Religion and Film Volume 1 ; 1 >
+    au < exists ; The Journal of Religion and Film Volume 2 ; 2 >
+    au < exists ; The Journal of Religion and Film Volume 3 ; 3 >
+    au < exists ; The Journal of Religion and Film Volume 4 ; 4 >
+    au < exists ; The Journal of Religion and Film Volume 5 ; 5 >
+    au < exists ; The Journal of Religion and Film Volume 6 ; 6 >
+    au < released ; The Journal of Religion and Film Volume 7 ; 7 >
+    au < released ; The Journal of Religion and Film Volume 8 ; 8 >
+    au < released ; The Journal of Religion and Film Volume 9 ; 9 >
+    au < exists ; The Journal of Religion and Film Volume 10 ; 10 >
+    au < exists ; The Journal of Religion and Film Volume 11 ; 11 >
+    au < exists ; The Journal of Religion and Film Volume 12 ; 12 >
+    au < exists ; The Journal of Religion and Film Volume 13 ; 13 >
+
+  }
+  
+}

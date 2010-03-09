@@ -6674,51 +6674,6 @@
       <property name="attributes.rights" value="openaccess" />
     </property>
 
-    <property name="jrf7">
-      <property name="title" value="Journal of Religion and Film Volume 7" />
-      <property name="journalTitle" value="Journal of Religion and Film" />
-      <property name="plugin" value="edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin" />
-      <property name="param.1">
-	   <property name="key" value="base_url" />
-	   <property name="value" value="http://www.unomaha.edu/jrf/" />
-      </property>
-      <property name="param.2">
-       <property name="key" value="volume" />
-       <property name="value" value="7" />
-      </property>
-      <property name="attributes.rights" value="openaccess" />
-    </property>
-
-    <property name="jrf8">
-      <property name="title" value="Journal of Religion and Film Volume 8" />
-      <property name="journalTitle" value="Journal of Religion and Film" />
-      <property name="plugin" value="edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin" />
-      <property name="param.1">
-	   <property name="key" value="base_url" />
-	   <property name="value" value="http://www.unomaha.edu/jrf/" />
-      </property>
-      <property name="param.2">
-       <property name="key" value="volume" />
-       <property name="value" value="8" />
-      </property>
-      <property name="attributes.rights" value="openaccess" />
-    </property>
-
-    <property name="jrf9">
-      <property name="title" value="Journal of Religion and Film Volume 9" />
-      <property name="journalTitle" value="Journal of Religion and Film" />
-      <property name="plugin" value="edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin" />
-      <property name="param.1">
-	   <property name="key" value="base_url" />
-	   <property name="value" value="http://www.unomaha.edu/jrf/" />
-      </property>
-      <property name="param.2">
-       <property name="key" value="volume" />
-       <property name="value" value="9" />
-      </property>
-      <property name="attributes.rights" value="openaccess" />
-    </property>
-
     <property name="Mars2005">
       <property name="title" value="Mars Volume 2005" />
       <property name="journalTitle" value="Mars" />

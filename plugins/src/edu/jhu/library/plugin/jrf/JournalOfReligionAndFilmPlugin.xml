@@ -5,15 +5,19 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Journal of Religion and Film Volume %d&quot;, volume</string>
+    <string>&quot;Journal of Religion and Film Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
     <string>Journal of Religion and Film Plugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_new_content_crawl</string>
-    <long>7862400000</long>
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>au_crawlrules</string>
