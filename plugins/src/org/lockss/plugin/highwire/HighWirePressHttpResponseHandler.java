@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HttpResponseHandler.java,v 1.2 2010-03-09 22:41:29 thib_gc Exp $
+ * $Id: HighWirePressHttpResponseHandler.java,v 1.1 2010-03-09 22:41:29 thib_gc Exp $
  */
 
 /*
@@ -32,14 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import org.lockss.plugin.*;
-import org.lockss.util.*;
+import org.lockss.daemon.PluginException;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Logger;
 import org.lockss.util.urlconn.*;
 
+public class HighWirePressHttpResponseHandler implements CacheResultHandler {
 
-public class HighWirePressH20HttpResponseHandler implements CacheResultHandler {
-  
-  protected static Logger logger = Logger.getLogger("HighWirePressH20HttpResponseHandler");
+  protected static Logger logger = Logger.getLogger("HighWirePressHttpResponseHandler");
 
   public void init(CacheResultMap crmap) {
     logger.warning("Unexpected call to init()");
@@ -48,16 +48,20 @@ public class HighWirePressH20HttpResponseHandler implements CacheResultHandler {
 
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
-                                     int responseCode) {
+                                     int responseCode)
+      throws PluginException {
     logger.debug2(url);
     switch (responseCode) {
+      case 404:
+        logger.debug3("404");
+        return new CacheException.RetryDeadLinkException();
       case 500:
         logger.debug2("500");
-        if (url.endsWith("_manifest.dtl") || url.endsWith(".toc")) {
-          return new CacheException.RetrySameUrlException();
+        if (url.contains("cgi/eletters/")) {
+          return new CacheException.NoRetryDeadLinkException();
         }
         else {
-          return new CacheException.NoRetryDeadLinkException();
+          return new CacheException.RetrySameUrlException();
         }
       default:
         logger.debug2("default");
@@ -67,9 +71,10 @@ public class HighWirePressH20HttpResponseHandler implements CacheResultHandler {
 
   public CacheException handleResult(ArchivalUnit au,
                                      String url,
-                                     Exception ex) {
+                                     Exception ex)
+      throws PluginException {
     logger.warning("Unexpected call to handleResult(): AU " + au.getName() + "; URL " + url, ex);
     throw new UnsupportedOperationException();
   }
-  
+
 }

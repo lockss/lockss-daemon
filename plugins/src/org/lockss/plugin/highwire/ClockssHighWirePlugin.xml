@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>43</string>
+    <string>44</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.41.0</string>
+    <string>1.43.0</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -79,7 +79,8 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>404=org.lockss.util.urlconn.CacheException$RetryDeadLinkException</string>
+      <string>404=org.lockss.plugin.highwire.HighWirePressHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.highwire.HighWirePressHttpResponseHandler</string>
     </list>
   </entry>
   <entry>
