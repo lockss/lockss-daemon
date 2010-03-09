@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Sheffield Hallam University Humanities Research Centre
+  >
+  
+  {
+  
+    title <
+      name = Early Modern Literary Studies ;
+      issn = 1201-2459
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.emls.EmlsPlugin
+    implicit < status ; attr[year] ; name ; param[base_url] ; param[volume] ; nondefparam[issues] >
+    
+    comment[nondef] = Only the manifest page for volume 9 has the correct link to its special issue, need to ask the publisher to fix the manifests or switch to some other mechanism
+    
+    au < manifest   ; 1995      ; Early Modern Literary Studies Volume 1              ; http://extra.shu.ac.uk/emls/ ; 1  ; >
+    au < manifest   ; 1996      ; Early Modern Literary Studies Volume 2              ; http://extra.shu.ac.uk/emls/ ; 2  ; >
+    au < manifest   ; 1997-1998 ; Early Modern Literary Studies Volume 3              ; http://extra.shu.ac.uk/emls/ ; 3  ; >
+    au < manifest   ; 1998-1999 ; Early Modern Literary Studies Volume 4              ; http://extra.shu.ac.uk/emls/ ; 4  ; >
+    au < manifest   ; 1999-2000 ; Early Modern Literary Studies Volume 5              ; http://extra.shu.ac.uk/emls/ ; 5  ; >
+    au < manifest   ; 2000-2001 ; Early Modern Literary Studies Volume 6              ; http://extra.shu.ac.uk/emls/ ; 6  ; >
+    au < manifest   ; 2001-2002 ; Early Modern Literary Studies Volume 7              ; http://extra.shu.ac.uk/emls/ ; 7  ; >
+    au < manifest   ; 2002-2003 ; Early Modern Literary Studies Volume 8              ; http://extra.shu.ac.uk/emls/ ; 8  ; >
+    au < superseded ; 2003-2004 ; Early Modern Literary Studies Volume 9 [superseded] ; http://www.shu.ac.uk/emls/   ; 9  ; >
+    au < manifest   ; 2003-2004 ; Early Modern Literary Studies Volume 9              ; http://extra.shu.ac.uk/emls/ ; 9  ; si-13 >
+    au < manifest   ; 2004-2005 ; Early Modern Literary Studies Volume 10             ; http://extra.shu.ac.uk/emls/ ; 10 ; >
+    au < manifest   ; 2005-2006 ; Early Modern Literary Studies Volume 11             ; http://extra.shu.ac.uk/emls/ ; 11 ; >
+    au < manifest   ; 2006-2007 ; Early Modern Literary Studies Volume 12             ; http://extra.shu.ac.uk/emls/ ; 12 ; >
+    au < manifest   ; 2007-2008 ; Early Modern Literary Studies Volume 13             ; http://extra.shu.ac.uk/emls/ ; 13 ; >
+    au < manifest   ; 2008-2009 ; Early Modern Literary Studies Volume 14             ; http://extra.shu.ac.uk/emls/ ; 14 ; >
+  
+  }
+
+}

@@ -1,11 +1,15 @@
 <map>
   <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.emls.EmlsPlugin</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -22,11 +26,11 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%slockss-volume%d.html&quot;, base_url, volume</string>
-      <string>1,&quot;^%s%s&quot;, base_url, issues</string>
-      <string>1,&quot;^%s%02d-[0-9]+/.*&quot;, base_url, volume</string>
-      <string>1,&quot;^%s.*\.(css|mov|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url</string>
+      <string>1,&quot;^%slockss-volume%d\.html$&quot;, base_url, volume</string>
+      <string>1,&quot;^%s%02d-[0-9]+/&quot;, base_url, volume</string>
+      <string>1,&quot;^%s%s/&quot;, base_url, issues</string>
     </list>
   </entry>
   <entry>
