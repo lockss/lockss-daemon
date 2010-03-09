@@ -7,6 +7,7 @@
  
   plugin = uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin
   param[base_url] = http://arjournals.annualreviews.org/
+  param[crawl_proxy] = direct
 
   {
     title <
