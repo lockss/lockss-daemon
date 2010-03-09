@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Exquisite Corpse
+  >
+  
+  plugin = edu.stanford.plugin.exquisitecorpse.ExquisiteCorpsePlugin
+  implicit < status ; name ; param[issue_set] >
+  param[base_url] = http://www.corpse.org/ 
+  
+  {
+  
+    title <
+      name = Exquisite Corpse
+    >  
+
+comment[ec1] = archive page was moved, action on fixing manifest page expected
+comment[ec2] = for content published in new format, manifest pages expected
+    
+    au < down ; Exquisite Corpse ; issue_1, issue_2, issue_3, issue_4, issue_5, issue_7, issue_8, issue_9, issue_10, issue_11, mississippi_corpse, issue_12, issue_14 >
+
+  }
+  
+}

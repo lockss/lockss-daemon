@@ -3,14 +3,14 @@
     name = Apple Valley Review
   >
   
-  implicit < status ; name ; param[year] >
   plugin = org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin
-  param[base_url] = http://www.leahbrowning.net/  
+  implicit < status ; name ; param[year] >
+  param[base_url] = http://www.leahbrowning.net/
   
   {
   
     title <
-      name = Apple Valley Review 
+      name = Apple Valley Review
     >  
     
     au < released ; Apple Valley Review Volume 1 ; 2006 >

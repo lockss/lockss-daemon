@@ -1,0 +1,38 @@
+{
+  publisher <
+    name = Cyberjournal for Pentecostal-Charismatic Research
+  >
+  
+  implicit < status ; name ; param[volume] >
+  plugin = gov.loc.plugin.CJPentecostalCharismaticResearchPlugin
+  param[base_url] = http://www.pctii.org/cyberj/
+  
+  {
+  
+    title <
+      name = Cyberjournal for Pentecostal-Charismatic Research
+    >  
+    
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 1 ; 1 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 2 ; 2 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 3 ; 3 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 4 ; 4 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 5 ; 5 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 6 ; 6 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 7 ; 7 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 8 ; 8 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 9 ; 9 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 10 ; 10 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 11 ; 11 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 12 ; 12 >
+    au < released ; Cyberjournal for Pentecostal-Charismatic Research Issue 13 ; 13 >
+    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 14 ; 14 >
+    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 15 ; 15 >
+    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 16 ; 16 >
+    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 17 ; 17 >
+    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 18 ; 18 >
+    au < exists ; Cyberjournal for Pentecostal-Charismatic Research Issue 19 ; 19 >
+  
+  }
+  
+}

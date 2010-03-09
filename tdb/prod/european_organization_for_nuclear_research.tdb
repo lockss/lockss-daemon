@@ -1,0 +1,45 @@
+{
+  publisher <
+    name = High Energy Physics Libraries Webzine
+  >
+  
+  plugin =  edu.nyu.plugin.heplwebzine.HEPLwebzine
+  implicit < status ; name ; param[issue_no] >
+  
+  {
+  
+    title <
+      name = High Energy Physics Libraries Webzine
+    >  
+
+    {  
+      
+      param[base_url] = http://library.cern.ch/ 
+    
+      au < down ; High Energy Physics Libraries Webzine Issue 1 ; 1 >
+      au < down ; High Energy Physics Libraries Webzine Issue 2 ; 2 >
+      au < down ; High Energy Physics Libraries Webzine Issue 3 ; 3 >
+      au < down ; High Energy Physics Libraries Webzine Issue 4 ; 4 >
+      au < down ; High Energy Physics Libraries Webzine Issue 5 ; 5 >
+      au < down ; High Energy Physics Libraries Webzine Issue 6 ; 6 >
+      au < down ; High Energy Physics Libraries Webzine Issue 7 ; 7 >
+      au < down ; High Energy Physics Libraries Webzine Issue 8 ; 8 >
+      au < down ; High Energy Physics Libraries Webzine Issue 9 ; 9 >
+  
+  }
+
+    {  
+      
+      param[base_url] = http://library.web.cern.ch/ 
+    
+      au < manifest ; High Energy Physics Libraries Webzine Issue 10 ; 10 >
+      au < manifest ; High Energy Physics Libraries Webzine Issue 11 ; 11 >
+      au < exists ; High Energy Physics Libraries Webzine Issue 12 ; 12 >
+      au < exists ; High Energy Physics Libraries Webzine Issue 13 ; 13 >
+      
+    
+    }
+    
+  }
+  
+}

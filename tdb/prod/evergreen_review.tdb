@@ -1,0 +1,42 @@
+{
+  publisher <
+    name = Evergreen Review
+  >
+  
+  plugin = org.lockss.plugin.evergreenreview.EvergreenReviewPlugin
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://evergreenreview.com/ 
+  
+  {
+  
+    title <
+      name = Evergreen Review
+    >  
+
+comment[er1] = manifest statement is gone, probably different URL structure
+ 
+    au < down ; Evergreen Review 100 ; 100 >
+    au < down ; Evergreen Review 101 ; 101 >
+    au < down ; Evergreen Review 102 ; 102 >
+    au < down ; Evergreen Review 103 ; 103 >
+    au < down ; Evergreen Review 104 ; 104 >
+    au < down ; Evergreen Review 105 ; 105 >
+    au < down ; Evergreen Review 106 ; 106 >
+    au < down ; Evergreen Review 107 ; 107 >
+    au < down ; Evergreen Review 108 ; 108 >
+    au < down ; Evergreen Review 109 ; 109 >
+    au < down ; Evergreen Review 110 ; 110 >
+    au < exists ; Evergreen Review 111 ; 111 >
+    au < exists ; Evergreen Review 112 ; 112 >
+    au < exists ; Evergreen Review 113 ; 113 >
+    au < exists ; Evergreen Review 114 ; 114 >
+    au < exists ; Evergreen Review 115 ; 115 >
+    au < exists ; Evergreen Review 116 ; 116 >
+    au < exists ; Evergreen Review 117 ; 117 >
+    au < exists ; Evergreen Review 118 ; 118 >
+    au < exists ; Evergreen Review 119 ; 119 >
+    au < exists ; Evergreen Review 120 ; 120 >
+  
+  }
+  
+}

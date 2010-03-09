@@ -1,0 +1,49 @@
+{
+  publisher <
+    name = Centro de Filosofia da Universidade de Lisboa
+  >
+  
+  implicit < status ; name ; param[year] ; param[issues] >
+  plugin = org.lockss.plugin.disputatio.DisputatioPlugin
+  
+  {
+  
+    title <
+      name = Disputatio
+    >  
+    
+    {
+
+      param[base_url] = http://disputatio.com/
+      
+      au < superseded ; Disputatio 2003 ; 2003 >
+      au < superseded ; Disputatio 2003 ; 2003 >
+      
+    }
+  
+    {
+  
+      param[base_url] = http://www.disputatio.com/
+
+comment[di1] = the AUs now on beta machines have bad starting URL
+  
+      au < down ; Disputatio 1996 ; 1996 ; 001 >
+      au < down ; Disputatio 1997 ; 1997 ; 002, 003 >
+      au < down ; Disputatio 1998 ; 1998 ; 004, S01, 005 >
+      au < down ; Disputatio 1999 ; 1999 ; 006, 007 >
+      au < down ; Disputatio 2000 ; 2000 ; 008, 009 >
+      au < down ; Disputatio 2001 ; 2001 ; 010, 011 >
+      au < down ; Disputatio 2002 ; 2002 ; 012, 013 >
+      au < down ; Disputatio 2003 ; 2003 ; 014, 015 >
+      au < down ; Disputatio 2004 ; 2004 ; 016, 017 >
+      au < down ; Disputatio 2005 ; 2005 ; 018, 019 >
+      au < down ; Disputatio 2006 ; 2006 ; 020, 021 >
+      au < down ; Disputatio 2007 ; 2007 ; 022, 023 >
+      au < down ; Disputatio 2008 ; 2008 ; 024, 025 >
+      au < down ; Disputatio 2009 ; 2009 ; 026 >
+      
+    }
+  
+  }
+  
+}

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Evergreen Review">
+   <property name="name" value="All Evergreen Review Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Evergreen Review']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="EvergreenReview100">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 100" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="100" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview101">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 101" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="101" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview102">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 102" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="102" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview103">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 103" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="103" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview104">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 104" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="104" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview105">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 105" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="105" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview106">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 106" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="106" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview107">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 107" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="107" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview108">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 108" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="108" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview109">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 109" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="109" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview110">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 110" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="110" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview111">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 111" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="111" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview112">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 112" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="112" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview113">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 113" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="113" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview114">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 114" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="114" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview115">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 115" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="115" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview116">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 116" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="116" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview117">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 117" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="117" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview118">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 118" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="118" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview119">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 119" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="119" />
+   </property>
+  </property>
+
+  <property name="EvergreenReview120">
+   <property name="attributes.publisher" value="Evergreen Review" />
+   <property name="journalTitle" value="Evergreen Review" />
+   <property name="title" value="Evergreen Review 120" />
+   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://evergreenreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="120" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>

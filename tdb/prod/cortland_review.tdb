@@ -1,0 +1,64 @@
+{
+  publisher <
+    name = Cortland Review
+  >
+
+  param[base_url] = http://cortlandreview.com/ 
+  
+  {
+  
+    title <
+      name = Cortland Review
+    >  
+ 
+comment[cr0] = when converting to xml, error: "TypeError: zip argument #1 must support iteration"
+ 
+comment[cr1] = The Cortland Review: An Online Literary Magazine in RealAudio
+comment[cr2] = there are 4 CR plugins - CortlandReviewPlugin98, CortlandReviewPlugin99, CortlandReviewPlugin00, and CortlandReviewPlugin
+comment[cr3] = all lockss manifests have disappeared
+
+    {
+    
+      plugin = edu.wisc.library.plugin.CortlandReviewPlugin98
+      
+      au < exists ; Cortland Review 1998 >     
+    
+    }
+    
+    {
+    
+      plugin = edu.wisc.library.plugin.CortlandReviewPlugin99
+      
+      au < exists ; Cortland Review 1999 >     
+    
+    }
+    
+    {
+    
+      plugin = edu.wisc.library.plugin.CortlandReviewPlugin00
+      
+      au < exists ; Cortland Review 2000 >     
+    
+    }
+    
+    {  
+            
+      implicit < status ; name ; param[year] ; param[num_issue_range] >
+      plugin = edu.wisc.library.plugin.CortlandReviewPlugin
+      
+      au < exists ; Cortland Review 2001 ; 2001 ; 15-18 >
+      au < exists ; Cortland Review 2002 ; 2002 ; 19-21 >      
+      au < down ; Cortland Review 2003 ; 2003 ; 22-24 >
+      au < exists ; Cortland Review 2004 ; 2004 ; 25-26 >      
+      au < exists ; Cortland Review 2005 ; 2005 ; 27-30 >      
+      au < exists ; Cortland Review 2006 ; 2006 ; 31-33 >      
+      au < exists ; Cortland Review 2007 ; 2007 ; 34-37 >      
+      au < exists ; Cortland Review 2008 ; 2008 ; 38-41 >      
+      au < exists ; Cortland Review 2009 ; 2009 ; 42-45 >      
+      au < exists ; Cortland Review 2010 ; 2010 ; 46 >      
+      
+    }
+  
+  }
+  
+}

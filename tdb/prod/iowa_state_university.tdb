@@ -1,0 +1,55 @@
+{
+  publisher <
+    name = Iowa State University
+  >
+  
+  {
+  
+    title <
+      name = Cultural Logic
+    >  
+  
+    plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
+    implicit < status ; name ; param[year] >
+  
+    {
+    
+      param[base_url] = http://eserver.org/clogic/
+      
+      au < superseded ; Cultural Logic 2003 ; 2003 >
+      
+    }
+    
+    {
+    
+      param[base_url] = http://clogic.eserver.org/
+
+      au < released ; Cultural Logic 2002 ; 2002 >
+      au < released ; Cultural Logic 2003 ; 2003 >
+      au < released ; Cultural Logic 2004 ; 2004 >
+      au < released ; Cultural Logic 2005 ; 2005 >
+      au < released ; Cultural Logic 2006 ; 2006 >
+      au < exists ; Cultural Logic 2007 ; 2007 >
+    
+    }
+  
+  }
+  
+  {
+  
+    title <
+      name = Early Modern Culture
+    > 
+  
+    plugin = org.lockss.plugin.emc.EarlyModernCulturePlugin
+    implicit < status ; name ; param[volume] >
+    param[base_url] = http://emc.eserver.org/
+    
+    au < released ; Early Modern Culture Volume 1 ; 1 >
+    au < released ; Early Modern Culture Volume 2 ; 2 >
+    au < released ; Early Modern Culture Volume 3 ; 3 >
+    au < released ; Early Modern Culture Volume 4 ; 4 >
+  
+  }
+  
+}

@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Jack Magazine
+  >
+  
+  plugin = 	org.lockss.plugin.jackmagazine.JackMagazinePlugin
+  implicit < status ; name ; param[volume_name] ; param[num_issue_range] >
+  param[base_url] = http://www.jackmagazine.com/
+  
+  {
+  
+    title <
+      name = Jack Magazine
+    >  
+    
+    au < released ; Jack Magazine Volume 1 ; 1 ; 1-4 >
+    au < released ; Jack Magazine Volume 2 ; 2 ; 5-8 >
+    au < exists ; Jack Magazine Volume 3 ; 3 ; 9-10 >
+  
+  }
+  
+}

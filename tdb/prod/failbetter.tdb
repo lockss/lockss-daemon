@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Failbetter
+  >
+  
+  plugin = org.nypl.plugin.failbetter.FailbetterPlugin
+  implicit < status ; name ; param[year] >
+  param[base_url] = http://www.failbetter.com/
+  
+  {
+  
+    title <
+      name = Failbetter
+    >  
+
+comment[fb1] = the website changed, manifest pages are gone
+comment[fb2] = it needs either new manifest pages or a statement on the "archive" page + new plugin with AUs grouped by issue
+    
+    au < down ; Failbetter 2000 ; 2000 >
+    au < down ; Failbetter 2001 ; 2001 >
+    au < down ; Failbetter 2002 ; 2002 >
+    au < down ; Failbetter 2003 ; 2003 >
+    au < down ; Failbetter 2004 ; 2004 >
+  
+  }
+  
+}

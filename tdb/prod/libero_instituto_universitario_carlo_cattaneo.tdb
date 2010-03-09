@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Libero instituto universitario Carlo Cattaneo
+  >
+  
+  plugin = edu.nyu.plugin.ejce.EJCEPlugin
+  implicit < status ; name ; param[year] >
+  param[base_url] = http://eaces.liuc.it/
+  
+  {
+  
+    title <
+      name = European Journal of Comparative Economics 
+    >  
+    
+    au < released ; European Journal of Comparative Economics 2004 ; 2004 >
+    au < released ; European Journal of Comparative Economics 2005 ; 2005 >
+    au < manifest ; European Journal of Comparative Economics 2006 ; 2006 >
+    au < manifest ; European Journal of Comparative Economics 2007 ; 2007 >
+    au < manifest ; European Journal of Comparative Economics 2008 ; 2008 >
+    au < exists ; European Journal of Comparative Economics 2009 ; 2009 >
+  
+  }
+  
+}

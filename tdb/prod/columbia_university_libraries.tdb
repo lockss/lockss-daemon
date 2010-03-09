@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Columbia University Libraries
+  >
+  
+  implicit < status ; name ; param[year] >
+  plugin = org.lockss.plugin.ojs.OJSPlugin
+  param[base_url] = http://cusj.columbia.edu/cusj/ 
+  
+  {
+  
+    title <
+      name = Columbia Undergraduate Science Journal
+    >  
+    
+    au < released ; Columbia Undergraduate Science Journal 2006 ; 2006 >
+    au < manifest ; Columbia Undergraduate Science Journal 2007 ; 2007 >
+    au < manifest ; Columbia Undergraduate Science Journal 2008 ; 2008 >
+    au < manifest ; Columbia Undergraduate Science Journal 2009 ; 2009 >
+  
+  }
+  
+}
