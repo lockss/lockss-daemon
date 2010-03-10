@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Molecular Vision
+  >
+  
+  {
+  
+    title <
+      name = Molecular Vision ;
+      issn = 1090-0535
+    >
+    
+    rights = openaccess
+    plugin = org.molvis.plugin.MolVisPlugin
+    param[base_url] = http://www.molvis.org/molvis/
+    implicit < status ; attr[year] ; name ; param[volume] >
+
+    au < released ; 1995 ; Molecular Vision Volume 1 ; 1 >
+    au < released ; 1996 ; Molecular Vision Volume 2 ; 2 >
+    au < released ; 1997 ; Molecular Vision Volume 3 ; 3 >
+    au < released ; 1998 ; Molecular Vision Volume 4 ; 4 >
+    au < released ; 1999 ; Molecular Vision Volume 5 ; 5 >
+    au < released ; 2000 ; Molecular Vision Volume 6 ; 6 >
+    au < released ; 2001 ; Molecular Vision Volume 7 ; 7 >
+    au < released ; 2002 ; Molecular Vision Volume 8 ; 8 >
+    au < released ; 2003 ; Molecular Vision Volume 9 ; 9 >
+    au < released ; 2004 ; Molecular Vision Volume 10 ; 10 >
+    au < released ; 2005 ; Molecular Vision Volume 11 ; 11 >
+    au < released ; 2006 ; Molecular Vision Volume 12 ; 12 >
+    au < exists ; 2007 ; Molecular Vision Volume 13 ; 13 >
+    au < exists ; 2008 ; Molecular Vision Volume 14 ; 14 >
+    au < exists ; 2009 ; Molecular Vision Volume 15 ; 15 >
+    au < exists ; 2010 ; Molecular Vision Volume 16 ; 16 >
+
+  }
+
+}
