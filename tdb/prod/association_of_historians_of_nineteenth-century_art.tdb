@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Association of Historians of Nineteenth-Century Art
+  >
+  
+  {
+  
+    title <
+      name = Nineteenth-Centry Art Worldwide ;
+      issn = 1543-1002
+    >
+    
+    rights = openaccess
+    plugin = edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin
+    param[base_url] = http://www.19thc-artworldwide.org/
+    implicit < status ; attr[year] ; name ; param[year] ; param[volume] >
+    
+    au < down ; 2002 ; Nineteenth-Centry Art Worldwide Volume 1 ; 2002 ; 1 >
+    au < down ; 2003 ; Nineteenth-Centry Art Worldwide Volume 2 ; 2003 ; 2 >
+    au < down ; 2004 ; Nineteenth-Centry Art Worldwide Volume 3 ; 2004 ; 3 >
+    au < down ; 2005 ; Nineteenth-Centry Art Worldwide Volume 4 ; 2005 ; 4 >
+    au < exists ; 2006 ; Nineteenth-Centry Art Worldwide Volume 5 ; 2006 ; 5 >
+    au < exists ; 2007 ; Nineteenth-Centry Art Worldwide Volume 6 ; 2007 ; 6 >
+    au < exists ; 2008 ; Nineteenth-Centry Art Worldwide Volume 7 ; 2008 ; 7 >
+    au < exists ; 2009 ; Nineteenth-Centry Art Worldwide Volume 8 ; 2009 ; 8 >
+  
+  }
+
+}
