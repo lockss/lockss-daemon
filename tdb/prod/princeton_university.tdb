@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Princeton University
+  >
+  
+  {
+  
+    title <
+      name = Princeton Report on Knowledge ;
+      issn = 1939-2079
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.prok.ProkPlugin
+    implicit < status ; name ; param[base_url] ; param[volume_name] >
+
+    au < down   ; Princeton Report on Knowledge Volume 1 [superseded] ; http://prok.princeton.edu/     ; 1 >
+    au < exists ; Princeton Report on Knowledge Volume 1              ; http://www.princeton.edu/prok/ ; 1 >
+    au < down   ; Princeton Report on Knowledge Volume 2 [superseded] ; http://prok.princeton.edu/     ; 2 >
+    au < exists ; Princeton Report on Knowledge Volume 2              ; http://www.princeton.edu/prok/ ; 2 >
+    au < exists ; Princeton Report on Knowledge Volume 3              ; http://www.princeton.edu/prok/ ; 3 >
+
+  }
+
+}

@@ -399,36 +399,6 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <property name="prok2">
-	<property name="title" value="Princeton Review of Knowledge Volume 2" />
-	<property name="journalTitle" value="Princeton Review of Knowledge" />
-	<property name="plugin" value="org.lockss.plugin.prok.ProkPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://prok.princeton.edu/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume_name" />
-	  <property name="value" value="2" />
-	</property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-      <property name="prok1">
-	<property name="title" value="Princeton Review of Knowledge Volume 1" />
-	<property name="journalTitle" value="Princeton Review of Knowledge" />
-	<property name="plugin" value="org.lockss.plugin.prok.ProkPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://prok.princeton.edu/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="volume_name" />
-	  <property name="value" value="1" />
-	</property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
       <property name="epr2003">
 	<property name="title" value="Electronic Poetry Review 2003" />
 	<property name="journalTitle" value="Electronic Poetry Review" />

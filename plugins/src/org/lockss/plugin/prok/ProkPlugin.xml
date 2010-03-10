@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Princeton Report on Knowledge Volume %s&quot;, volume_name</string>
+    <string>&quot;Princeton Report on Knowledge Plugin, Base URL %s, Volume %s&quot;, base_url, volume_name</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
