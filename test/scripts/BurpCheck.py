@@ -183,17 +183,19 @@ def _find_year_zeros(db, options):
     
     cursor = db.cursor()    
     cursor2 = db.cursor()
-    cursor.execute("SELECT auname, auid FROM burp WHERE auyear = '0' AND rundate >=  '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' GROUP BY auid;")
+    cursor.execute("SELECT auname, auid, machinename, port FROM burp WHERE auyear = '0' AND rundate >=  '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' GROUP BY auid;")
     
     arYearZero = cursor.fetchone()
     while arYearZero is not None:
         if _is_reported(arYearZero[1]):
-            cursor2.execute("SELECT auyear FROM burp WHERE auid = '" + arYearZero[1] + "' AND auyear > 0;")
+            cursor2.execute("SELECT auyear, machinename, port, rundate FROM burp WHERE auid = '%s' AND auyear > 0 AND rundate < '%s';" %
+                            (arYearZero[1], str(options.reportdatestart)))
             year = cursor2.fetchone()            
             if year is not None:
-                fileZero.write("********* '" + arYearZero[0] + "' is now year 0, but was previously " + year[0] + "\n")
+                fileZero.write("********* '%s' is now year 0 on %s:%d, but it had been reported as year %s on %s:%d in the run of %s.\n" %
+                               (arYearZero[0], arYearZero[2], arYearZero[3], year[0], year[1], year[2], year[3].strftime("%d-%b-%Y")))
             else:
-                fileZero.write(arYearZero[0] + "\n")
+                fileZero.write("'%s' is year zero on %s:%d.\n" % (arYearZero[0], arYearZero[2], arYearZero[3]))
                 
             isEmpty = False
             
@@ -218,11 +220,12 @@ def _find_inconsistent_information(db, options):
     cursor2       = db.cursor()
     cursor3       = db.cursor()
     
-    cursor.execute("SELECT auid, auname FROM burp WHERE rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' GROUP BY auid, auname;")
+    cursor.execute("SELECT auid, auname FROM burp WHERE rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' GROUP BY auid, auname ORDER BY auname;")
     
     arAuid = cursor.fetchone()
     while arAuid is not None:        
         if _is_reported(arAuid[0]):
+            print("Testing '%s'" % (arAuid[1]))
             
             # Verify that the years and names remain consistent across AUs.                        
             cursor2.execute("SELECT COUNT(DISTINCT(auyear)), COUNT(DISTINCT(auname)) FROM burp WHERE auid = '" + arAuid[0] + "' AND rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
@@ -259,7 +262,7 @@ def _find_inconsistent_information(db, options):
                     fileInconsistent.write("`%s' had a successful crawl, but still has zero DOIs reported.  Machines it occurred on: " % (arAuid[1],))
                     isEmpty = False
                     
-                    cursorMachine.execute("SELECT machinename, port FROM burp where auid = '%s' AND aulastcrawlresult = 'Successful' AND numarticles = 0 AND rundate >= '%s' AND rundate <= '%s'" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
+                    cursorMachine.execute("SELECT machinename, port FROM burp where auid = '%s' AND aulastcrawlresult = 'Successful' AND numarticles = 0 AND rundate >= '%s' AND rundate <= '%s' GROUP BY machinename, port" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
                     arMachineName = cursorMachine.fetchone()
                     while arMachineName is not None:
                         fileInconsistent.write("%s:%d " %(arMachineName[0], arMachineName[1]))
@@ -267,7 +270,7 @@ def _find_inconsistent_information(db, options):
                     fileInconsistent.write("\n") 
                 
             # Verify that the current article on one machine does not have fewer articles than any previous run.
-            cursorMachine.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' GROUP BY machinename;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
+            cursorMachine.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             arMachineName = cursorMachine.fetchone()
             while arMachineName is not None:
                 cursor2.execute("SELECT numarticles FROM burp WHERE auid = '%s' AND machinename = '%s' AND port = %d AND rundate >= '%s' AND rundate <= '%s';" % (arAuid[0], arMachineName[0], arMachineName[1], str(options.reportdatestart), str(options.reportdateend)))
@@ -278,9 +281,27 @@ def _find_inconsistent_information(db, options):
                 # This message should only output if we haven't already reported that it's zero.
                 if currentNumArticles[0] < bestNumArticles[0] and currentNumArticles[0] > 0:
                     fileInconsistent.write("`%s' (on %s:%d) has seen its number of articles decrease to %d (current run) from %d (on %s).\n" %(arAuid[1], arMachineName[0], arMachineName[1], currentNumArticles[0], bestNumArticles[0], bestNumArticles[1]))
+                    isEmpty = False
                 arMachineName = cursorMachine.fetchone()
              
         arAuid = cursor.fetchone()
+        
+    # Report problems...
+    print("Testing problems within report.\n")
+    cursor.execute("SELECT publisher, auyear FROM burpreport group by publisher, auyear;")
+    arPublisherYear = cursor.fetchone()
+    while arPublisherYear is not None:
+        cursor2.execute("SELECT MAX(numarticles), rundate FROM burpreport WHERE publisher = '%s' AND year = %d" % (auPublisherYear[0], auPublisherYear[1]))
+        highestInYear = cursor2.fetchone()
+        cursor3.execute("SELECT numarticles FROM burpreport WHERE publisher = '%s' AND year = %d ORDER BY rundate DESC" % (auPublisherYear[0], auPublisherYear[1]))
+        mostRecent = cursor3.fetchone()
+        
+        if mostRecent[0] < highestInYear[0]:
+            fileInconsistent.write("Publisher %s in year %d has seen its total number of articles decrease from %d (in report generated on %s) to %d.\n" % 
+                                   (arPublisherYear[0], arPublisherYear[1], highestInYear[0], highestInYear[1].strftime("%d-%b-%Y"), mostRecent))
+            isEmpty = False
+        
+        arPublisherYear = cursor.fetchone()
         
     if isEmpty:
         fileInconsistent.write("Congratulations: no AU has inconsistent data!")
