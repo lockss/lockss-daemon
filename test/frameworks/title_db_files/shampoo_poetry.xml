@@ -54,10 +54,14 @@
    <property name="title" value="Shampoo 2000" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2000" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="One, Two, Three" />
    </property>
@@ -71,10 +75,14 @@
    <property name="title" value="Shampoo 2001" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2001" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Four, Five, Six, Seven, Eight, Nine" />
    </property>
@@ -88,10 +96,14 @@
    <property name="title" value="Shampoo 2002" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2002" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Ten, Eleven, Twelve, Thirteen, Fourteen, Fifteen" />
    </property>
@@ -105,10 +117,14 @@
    <property name="title" value="Shampoo 2003" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2003" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Sixteen, Seventeen, Eighteen, Nineteen" />
    </property>
@@ -122,10 +138,14 @@
    <property name="title" value="Shampoo 2004" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2004" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Twentytwo, Twentyone, Twenty" />
    </property>
@@ -139,10 +159,14 @@
    <property name="title" value="Shampoo 2005" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Twentyfive, Twentyfour, Twentythree" />
    </property>
@@ -156,10 +180,14 @@
    <property name="title" value="Shampoo 2006" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Twentyeight, Twentyseven, Twentysix" />
    </property>
@@ -173,10 +201,14 @@
    <property name="title" value="Shampoo 2007" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Twentynine,Thirty,Thirtyone" />
    </property>
@@ -190,10 +222,14 @@
    <property name="title" value="Shampoo 2008" />
    <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="param.2">
+   <property name="param.3">
     <property name="key" value="issue_set" />
     <property name="value" value="Thirtytwo,Thirtythree,Thirtyfour" />
    </property>
