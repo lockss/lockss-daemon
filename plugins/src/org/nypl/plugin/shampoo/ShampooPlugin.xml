@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Shampoo %d&quot;, year</string>
+    <string>&quot;Shampoo Plugin, Base URL %s, Year %d&quot;, year</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -27,9 +27,8 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%slockss/lockss-%d.html&quot;, base_url, year</string>
-      <string>1,&quot;%sShampoo%s/.*&quot;, base_url, issue_set</string>
-      <string>1,&quot;%sShampoo%s/.*/.*&quot;, base_url, issue_set</string>
+      <string>1,&quot;^%slockss/lockss-%d\.html$&quot;, base_url, year</string>
+      <string>1,&quot;^%sShampoo%s/&quot;, base_url, issue_set</string>
     </list>
   </entry>
   <entry>

@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Shampoo Poetry
+  >
+  
+  {
+  
+    title <
+      name = Shampoo ;
+      issn = 1937-4119
+    >
+    
+    rights = openaccess
+    plugin = org.nypl.plugin.shampoo.ShampooPlugin
+    implicit < status ; attr[year] ; name ; param[year] ; param[issue_set] >
+
+    au < released ; 2000 ; Shampoo 2000 ; 2000 ; One, Two, Three >
+    au < released ; 2001 ; Shampoo 2001 ; 2001 ; Four, Five, Six, Seven, Eight, Nine >
+    au < released ; 2002 ; Shampoo 2002 ; 2002 ; Ten, Eleven, Twelve, Thirteen, Fourteen, Fifteen >
+    au < released ; 2003 ; Shampoo 2003 ; 2003 ; Sixteen, Seventeen, Eighteen, Nineteen >
+    au < released ; 2004 ; Shampoo 2004 ; 2004 ; Twentytwo, Twentyone, Twenty >
+    au < superseded ; 2005 ; Shampoo 2005 [superseded] ; 2005 ; Twentyfive, Twentyonefour, Twentythree >
+    au < released ; 2005 ; Shampoo 2005 ; 2005 ; Twentyfive, Twentyfour, Twentythree >
+    au < released ; 2006 ; Shampoo 2006 ; 2006 ; Twentyeight, Twentyseven, Twentysix >
+    au < manifest ; 2007 ; Shampoo 2007 ; 2007 ; Twentynine,Thirty,Thirtyone >
+    au < manifest ; 2008 ; Shampoo 2008 ; 2008 ; Thirtytwo,Thirtythree,Thirtyfour >
+    
+  }
+
+}
