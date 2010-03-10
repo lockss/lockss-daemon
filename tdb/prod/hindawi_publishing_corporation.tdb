@@ -29,7 +29,7 @@
     au < ready ; Abstract and Applied Analysis Volume 2006 ; 2006 >
     au < ready ; Abstract and Applied Analysis Volume 2007 ; 2007 >
     au < ready ; Abstract and Applied Analysis Volume 2008 ; 2008 >
-    au < testing ; Abstract and Applied Analysis Volume 2009 ; 2009 >
+    au < ready ; Abstract and Applied Analysis Volume 2009 ; 2009 >
 
   }
 
@@ -81,7 +81,7 @@
     param[journal_id] = aav
 
     au < ready ; Advances in Acoustics and Vibration Volume 2008 ; 2008 >
-    au < testing ; Advances in Acoustics and Vibration Volume 2009 ; 2009 >
+    au < ready ; Advances in Acoustics and Vibration Volume 2009 ; 2009 >
 
   }
 
@@ -139,8 +139,8 @@
 
     param[journal_id] = ace
 
-    au < testing ; Advances in Civil Engineering Volume 2008 ; 2008 >
-    au < testing ; Advances in Civil Engineering Volume 2009 ; 2009 >
+    au < ready ; Advances in Civil Engineering Volume 2008 ; 2008 >
+    au < ready ; Advances in Civil Engineering Volume 2009 ; 2009 >
 
   }
 
@@ -151,8 +151,8 @@
 
     param[journal_id] = acmp
 
-    au < testing ; Advances in Condensed Matter Physics Volume 2008 ; 2008 >
-    au < testing ; Advances in Condensed Matter Physics Volume 2009 ; 2009 >
+    au < ready ; Advances in Condensed Matter Physics Volume 2008 ; 2008 >
+    au < ready ; Advances in Condensed Matter Physics Volume 2009 ; 2009 >
 
   }
 
@@ -163,11 +163,11 @@
 
     param[journal_id] = ade
 
-    au < testing ; Advances in Difference Equations Volume 2004 ; 2004 >
-    au < testing ; Advances in Difference Equations Volume 2005 ; 2005 >
-    au < testing ; Advances in Difference Equations Volume 2006 ; 2006 >
-    au < testing ; Advances in Difference Equations Volume 2007 ; 2007 >
-    au < testing ; Advances in Difference Equations Volume 2008 ; 2008 >
+    au < ready ; Advances in Difference Equations Volume 2004 ; 2004 >
+    au < ready ; Advances in Difference Equations Volume 2005 ; 2005 >
+    au < ready ; Advances in Difference Equations Volume 2006 ; 2006 >
+    au < ready ; Advances in Difference Equations Volume 2007 ; 2007 >
+    au < ready ; Advances in Difference Equations Volume 2008 ; 2008 >
     au < testing ; Advances in Difference Equations Volume 2009 ; 2009 >
 
   }
@@ -179,8 +179,8 @@
 
     param[journal_id] = afs
 
-    au < testing ; Advances in Fuzzy Systems Volume 2008 ; 2008 >
-    au < testing ; Advances in Fuzzy Systems Volume 2009 ; 2009 >
+    au < ready ; Advances in Fuzzy Systems Volume 2008 ; 2008 >
+    au < ready ; Advances in Fuzzy Systems Volume 2009 ; 2009 >
 
   }
 
@@ -201,9 +201,9 @@
 
     param[journal_id] = ahep
 
-    au < testing ; Advances in High Energy Physics Volume 2007 ; 2007 >
-    au < testing ; Advances in High Energy Physics Volume 2008 ; 2008 >
-    au < testing ; Advances in High Energy Physics Volume 2009 ; 2009 >
+    au < ready ; Advances in High Energy Physics Volume 2007 ; 2007 >
+    au < ready ; Advances in High Energy Physics Volume 2008 ; 2008 >
+    au < ready ; Advances in High Energy Physics Volume 2009 ; 2009 >
 
   }
 
@@ -214,7 +214,7 @@
 
     param[journal_id] = ahci
 
-    au < testing ; Advances in Human-Computer Interaction Volume 2008 ; 2008 >
+    au < ready ; Advances in Human-Computer Interaction Volume 2008 ; 2008 >
     au < testing ; Advances in Human-Computer Interaction Volume 2009 ; 2009 >
 
   }
@@ -226,8 +226,8 @@
 
     param[journal_id] = amse
 
-    au < testing ; Advances in Materials Science and Engineering Volume 2008 ; 2008 >
-    au < testing ; Advances in Materials Science and Engineering Volume 2009 ; 2009 >
+    au < ready ; Advances in Materials Science and Engineering Volume 2008 ; 2008 >
+    au < ready ; Advances in Materials Science and Engineering Volume 2009 ; 2009 >
 
   }
 
@@ -238,7 +238,7 @@
 
     param[journal_id] = amp
 
-    au < testing ; Advances in Mathematical Physics Volume 2009 ; 2009 >
+    au < ready ; Advances in Mathematical Physics Volume 2009 ; 2009 >
 
   }
 
@@ -249,7 +249,7 @@
 
     param[journal_id] = ame
 
-    au < testing ; Advances in Mechanical Engineering Volume 2009 ; 2009 >
+    au < ready ; Advances in Mechanical Engineering Volume 2009 ; 2009 >
 
   }
 
@@ -270,9 +270,9 @@
 
     param[journal_id] = am
 
-    au < testing ; Advances in Multimedia Volume 2007 ; 2007 >
-    au < testing ; Advances in Multimedia Volume 2008 ; 2008 >
-    au < testing ; Advances in Multimedia Volume 2009 ; 2009 >
+    au < ready ; Advances in Multimedia Volume 2007 ; 2007 >
+    au < ready ; Advances in Multimedia Volume 2008 ; 2008 >
+    au < ready ; Advances in Multimedia Volume 2009 ; 2009 >
 
   }
 
@@ -283,8 +283,8 @@
 
     param[journal_id] = ano
 
-    au < testing ; Advances in Nonlinear Optics Volume 2008 ; 2008 >
-    au < testing ; Advances in Nonlinear Optics Volume 2009 ; 2009 >
+    au < ready ; Advances in Nonlinear Optics Volume 2008 ; 2008 >
+    au < ready ; Advances in Nonlinear Optics Volume 2009 ; 2009 >
 
   }
 
@@ -315,7 +315,7 @@
 
     param[journal_id] = aot
 
-    au < testing ; Advances in Optical Technologies Volume 2008 ; 2008 >
+    au < ready ; Advances in Optical Technologies Volume 2008 ; 2008 >
 
   }
 
@@ -326,9 +326,9 @@
 
     param[journal_id] = aoe
 
-    au < testing ; Advances in OptoElectronics Volume 2007 ; 2007 >
-    au < testing ; Advances in OptoElectronics Volume 2008 ; 2008 >
-    au < testing ; Advances in OptoElectronics Volume 2009 ; 2009 >
+    au < ready ; Advances in OptoElectronics Volume 2007 ; 2007 >
+    au < ready ; Advances in OptoElectronics Volume 2008 ; 2008 >
+    au < ready ; Advances in OptoElectronics Volume 2009 ; 2009 >
 
   }
 
@@ -339,8 +339,8 @@
 
     param[journal_id] = aps
 
-    au < testing ; Advances in Pharmacological Sciences Volume 2008 ; 2008 >
-    au < testing ; Advances in Pharmacological Sciences Volume 2009 ; 2009 >
+    au < ready ; Advances in Pharmacological Sciences Volume 2008 ; 2008 >
+    au < ready ; Advances in Pharmacological Sciences Volume 2009 ; 2009 >
 
   }
 
@@ -351,7 +351,7 @@
 
     param[journal_id] = apc
 
-    au < manifest ; Advances in Physical Chemistry Volume 2009 ; 2009 >
+    au < testing ; Advances in Physical Chemistry Volume 2009 ; 2009 >
 
   }
 
@@ -372,7 +372,8 @@
 
     param[journal_id] = at
 
-    au < manifest ; Advances in Tribology Volume 2008 ; 2008 >
+    au < testing ; Advances in Tribology Volume 2008 ; 2008 >
+    au < testing ; Advances in Tribology Volume 2009 ; 2009 >
 
   }
 
@@ -383,8 +384,8 @@
 
     param[journal_id] = au
 
-    au < manifest ; Advances in Urology Volume 2008 ; 2008 >
-    au < manifest ; Advances in Urology Volume 2009 ; 2009 >
+    au < testing ; Advances in Urology Volume 2008 ; 2008 >
+    au < testing ; Advances in Urology Volume 2009 ; 2009 >
 
   }
 
@@ -395,7 +396,7 @@
 
     param[journal_id] = av
 
-    au < manifest ; Advances in Virology Volume 2009 ; 2009 >
+    au < testing ; Advances in Virology Volume 2009 ; 2009 >
 
   }
 
@@ -406,7 +407,8 @@
 
     param[journal_id] = arp
 
-    au < manifest ; Anesthesiology Research and Practice Volume 2008 ; 2008 >
+    au < testing ; Anesthesiology Research and Practice Volume 2008 ; 2008 >
+    au < testing ; Anesthesiology Research and Practice Volume 2009 ; 2009 >
 
   }
 
@@ -417,7 +419,7 @@
 
     param[journal_id] = aess
 
-    au < manifest ; Applied and Environmental Soil Science Volume 2009 ; 2009 >
+    au < testing ; Applied and Environmental Soil Science Volume 2009 ; 2009 >
 
   }
 
@@ -438,12 +440,12 @@
 
     param[journal_id] = bca
 
-    au < manifest ; Bioinorganic Chemistry and Applications Volume 1 (2003) ; 2003 >
-    au < manifest ; Bioinorganic Chemistry and Applications Volume 2 (2004) ; 2004 >
-    au < manifest ; Bioinorganic Chemistry and Applications Volume 3 (2005) ; 2005 >
-    au < manifest ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 >
-    au < manifest ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 >
-    au < manifest ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 >
+    au < testing ; Bioinorganic Chemistry and Applications Volume 1 (2003) ; 2003 >
+    au < testing ; Bioinorganic Chemistry and Applications Volume 2 (2004) ; 2004 >
+    au < testing ; Bioinorganic Chemistry and Applications Volume 3 (2005) ; 2005 >
+    au < testing ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 >
+    au < testing ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 >
+    au < testing ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 >
 
   }
 
@@ -454,10 +456,10 @@
 
     param[journal_id] = bvp
 
-    au < manifest ; Boundary Value Problems Volume 2005 ; 2005 >
-    au < manifest ; Boundary Value Problems Volume 2006 ; 2006 >
-    au < manifest ; Boundary Value Problems Volume 2007 ; 2007 >
-    au < manifest ; Boundary Value Problems Volume 2008 ; 2008 >
+    au < testing ; Boundary Value Problems Volume 2005 ; 2005 >
+    au < testing ; Boundary Value Problems Volume 2006 ; 2006 >
+    au < testing ; Boundary Value Problems Volume 2007 ; 2007 >
+    au < testing ; Boundary Value Problems Volume 2008 ; 2008 >
 
   }
 
@@ -478,21 +480,22 @@
 
     param[journal_id] = cdi
 
-    au < manifest ; Clinical and Developmental Immunology Volume 1 (1994) ; 1994 >
-    au < manifest ; Clinical and Developmental Immunology Volume 2 (1995) ; 1995 >
-    au < manifest ; Clinical and Developmental Immunology Volume 3 (1996) ; 1996 >
-    au < manifest ; Clinical and Developmental Immunology Volume 4 (1997) ; 1997 >
-    au < manifest ; Clinical and Developmental Immunology Volume 5 (1998) ; 1998 >
-    au < manifest ; Clinical and Developmental Immunology Volume 6 (1999) ; 1999 >
-    au < manifest ; Clinical and Developmental Immunology Volume 7 (2000) ; 2000 >
-    au < manifest ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 >
-    au < manifest ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 >
-    au < manifest ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 >
-    au < manifest ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 >
-    au < manifest ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 >
-    au < manifest ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 >
-    au < manifest ; Clinical and Developmental Immunology Volume 2007 ; 2007 >
-    au < manifest ; Clinical and Developmental Immunology Volume 2008 ; 2008 >
+    au < testing ; Clinical and Developmental Immunology Volume 1 (1994) ; 1994 >
+    au < testing ; Clinical and Developmental Immunology Volume 2 (1995) ; 1995 >
+    au < testing ; Clinical and Developmental Immunology Volume 3 (1996) ; 1996 >
+    au < testing ; Clinical and Developmental Immunology Volume 4 (1997) ; 1997 >
+    au < testing ; Clinical and Developmental Immunology Volume 5 (1998) ; 1998 >
+    au < testing ; Clinical and Developmental Immunology Volume 6 (1999) ; 1999 >
+    au < testing ; Clinical and Developmental Immunology Volume 7 (2000) ; 2000 >
+    au < testing ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 >
+    au < testing ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 >
+    au < testing ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 >
+    au < testing ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 >
+    au < testing ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 >
+    au < testing ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 >
+    au < testing ; Clinical and Developmental Immunology Volume 2007 ; 2007 >
+    au < testing ; Clinical and Developmental Immunology Volume 2008 ; 2008 >
+    au < testing ; Clinical and Developmental Immunology Volume 2009 ; 2009 >
 
   }
 
