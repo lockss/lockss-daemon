@@ -291,9 +291,9 @@ def _find_inconsistent_information(db, options):
     cursor.execute("SELECT publisher, auyear FROM burpreport group by publisher, auyear;")
     arPublisherYear = cursor.fetchone()
     while arPublisherYear is not None:
-        cursor2.execute("SELECT MAX(numarticles), rundate FROM burpreport WHERE publisher = '%s' AND year = %d" % (auPublisherYear[0], auPublisherYear[1]))
+        cursor2.execute("SELECT MAX(numarticles), rundate FROM burpreport WHERE publisher = '%s' AND year = %d" % (arPublisherYear[0], arPublisherYear[1]))
         highestInYear = cursor2.fetchone()
-        cursor3.execute("SELECT numarticles FROM burpreport WHERE publisher = '%s' AND year = %d ORDER BY rundate DESC" % (auPublisherYear[0], auPublisherYear[1]))
+        cursor3.execute("SELECT numarticles FROM burpreport WHERE publisher = '%s' AND year = %d ORDER BY rundate DESC" % (arPublisherYear[0], arPublisherYear[1]))
         mostRecent = cursor3.fetchone()
         
         if mostRecent[0] < highestInYear[0]:
