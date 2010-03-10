@@ -4,12 +4,16 @@
     <string>edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
-    <string>&quot;%s %d %d&quot;, base_url, volume, year</string>
+    <string>&quot;Journal of Global Buddhism Plugin, Base URL %s, Volume %d, Year %d&quot;, base_url, volume, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of Global Buddhism</string>
+    <string>Journal of Global Buddhism Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

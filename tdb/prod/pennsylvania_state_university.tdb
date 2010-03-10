@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Pennsylvania State University
+  >
+  
+  {
+  
+    title <
+      name = Journal of Global Buddhism ;
+      issn = 1527-6457
+    >
+    
+    rights = openaccess
+    plugin = edu.nyu.plugin.journalofglobalbuddhism.JournalOfGlobalBuddhismPlugin
+    param[base_url] = http://www.globalbuddhism.org/
+    implicit < status ; attr[year] ; name ; param[volume] ; param[year] >
+
+    au < released ; 2000 ; Journal of Global Buddhism Volume 1 ; 1 ; 2000 >
+    au < released ; 2001 ; Journal of Global Buddhism Volume 2 ; 2 ; 2001 >
+    au < released ; 2002 ; Journal of Global Buddhism Volume 3 ; 3 ; 2002 >
+    au < released ; 2003 ; Journal of Global Buddhism Volume 4 ; 4 ; 2003 >
+    au < released ; 2004 ; Journal of Global Buddhism Volume 5 ; 5 ; 2004 >
+    au < released ; 2005 ; Journal of Global Buddhism Volume 6 ; 6 ; 2005 >
+    au < exists ; 2006 ; Journal of Global Buddhism Volume 7 ; 7 ; 2006 >
+    au < exists ; 2007 ; Journal of Global Buddhism Volume 8 ; 8 ; 2007 >
+    au < exists ; 2008 ; Journal of Global Buddhism Volume 9 ; 9 ; 2008 >
+    
+  }
+
+}
