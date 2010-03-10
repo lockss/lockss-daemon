@@ -55,12 +55,17 @@
    <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://absintheliteraryreview.com/" />
+    <property name="value" value="http://absinthe-literary-review.com/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2003" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="AbsintheLiteraryReview2004">
@@ -70,12 +75,17 @@
    <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://absintheliteraryreview.com/" />
+    <property name="value" value="http://absinthe-literary-review.com/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2004" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="AbsintheLiteraryReview2005">
@@ -85,12 +95,17 @@
    <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://absintheliteraryreview.com/" />
+    <property name="value" value="http://absinthe-literary-review.com/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

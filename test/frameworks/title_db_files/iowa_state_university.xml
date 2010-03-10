@@ -48,6 +48,26 @@
  
  <property name="org.lockss.title">
 
+  <property name="CulturalLogic2003">
+   <property name="attributes.publisher" value="Iowa State University" />
+   <property name="journalTitle" value="Cultural Logic" />
+   <property name="title" value="Cultural Logic 2003" />
+   <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://eserver.org/clogic/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="CulturalLogic2002">
    <property name="attributes.publisher" value="Iowa State University" />
    <property name="journalTitle" value="Cultural Logic" />
@@ -61,6 +81,7 @@
     <property name="key" value="year" />
     <property name="value" value="2002" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="CulturalLogic2003">
@@ -76,6 +97,7 @@
     <property name="key" value="year" />
     <property name="value" value="2003" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="CulturalLogic2004">
@@ -91,6 +113,7 @@
     <property name="key" value="year" />
     <property name="value" value="2004" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="CulturalLogic2005">
@@ -106,6 +129,7 @@
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="CulturalLogic2006">
@@ -121,21 +145,7 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-  </property>
-
-  <property name="CulturalLogic2007">
-   <property name="attributes.publisher" value="Iowa State University" />
-   <property name="journalTitle" value="Cultural Logic" />
-   <property name="title" value="Cultural Logic 2007" />
-   <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://clogic.eserver.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2007" />
-   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EarlyModernCulture1">
@@ -151,6 +161,7 @@
     <property name="key" value="volume" />
     <property name="value" value="1" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EarlyModernCulture2">
@@ -166,6 +177,7 @@
     <property name="key" value="volume" />
     <property name="value" value="2" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EarlyModernCulture3">
@@ -181,6 +193,7 @@
     <property name="key" value="volume" />
     <property name="value" value="3" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EarlyModernCulture4">
@@ -196,6 +209,7 @@
     <property name="key" value="volume" />
     <property name="value" value="4" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

@@ -65,6 +65,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview101">
@@ -84,6 +85,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview102">
@@ -103,6 +105,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview103">
@@ -122,6 +125,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview104">
@@ -141,6 +145,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview105">
@@ -160,6 +165,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview106">
@@ -179,6 +185,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview107">
@@ -198,6 +205,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview108">
@@ -217,6 +225,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview109">
@@ -236,6 +245,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="EvergreenReview110">
@@ -255,156 +265,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
-  </property>
-
-  <property name="EvergreenReview111">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 111" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="111" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview112">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 112" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="112" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview113">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 113" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="113" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview114">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 114" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="114" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview115">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 115" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="115" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview116">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 116" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="116" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview117">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 117" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="117" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview118">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 118" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="118" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview119">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 119" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="119" />
-   </property>
-  </property>
-
-  <property name="EvergreenReview120">
-   <property name="attributes.publisher" value="Evergreen Review" />
-   <property name="journalTitle" value="Evergreen Review" />
-   <property name="title" value="Evergreen Review 120" />
-   <property name="plugin" value="org.lockss.plugin.evergreenreview.EvergreenReviewPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://evergreenreview.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="120" />
-   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

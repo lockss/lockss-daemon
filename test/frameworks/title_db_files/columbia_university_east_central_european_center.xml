@@ -48,134 +48,14 @@
  
  <property name="org.lockss.title">
 
-  <property name="InterMarium1">
+  <property name="InterMariumVolume7superseded">
    <property name="attributes.publisher" value="Columbia University East Central European Center" />
    <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 1" />
+   <property name="title" value="InterMarium Volume 7 [superseded]" />
    <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="1997" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="1" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium2">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 2" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="1998" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="2" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium3">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 3" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="1999" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="3" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium4">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 4" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2000" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="4" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium5">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 5" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2002" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="5" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium6">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 6" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2003" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="6" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium7">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 7" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
+    <property name="value" value="http://www.columbia.edu/cu/sipa/REGIONAL/ECE/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
@@ -185,85 +65,9 @@
     <property name="key" value="volume" />
     <property name="value" value="7" />
    </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium8">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 8" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2005" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="8" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium9">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 9" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2006" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="9" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium10">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 10" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2007" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="10" />
-   </property>
-   <property name="attributes.rights" value="openaccess" />
-  </property>
-
-  <property name="InterMarium12">
-   <property name="attributes.publisher" value="Columbia University East Central European Center" />
-   <property name="journalTitle" value="InterMarium" />
-   <property name="title" value="InterMarium Volume 12" />
-   <property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.sipa.columbia.edu/ece/research/intermarium/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2008" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume" />
-    <property name="value" value="12" />
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>

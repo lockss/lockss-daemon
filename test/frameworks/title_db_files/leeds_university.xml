@@ -65,6 +65,7 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2002" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="LeedsInternationalClassicalStudies2003">
@@ -84,6 +85,7 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2003" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="LeedsInternationalClassicalStudies2004">
@@ -103,101 +105,7 @@
     <property name="key" value="volume_str" />
     <property name="value" value="200304" />
    </property>
-  </property>
-
-  <property name="LeedsInternationalClassicalStudies2005">
-   <property name="attributes.publisher" value="Leeds University" />
-   <property name="journalTitle" value="Leeds International Classical Studies" />
-   <property name="title" value="Leeds International Classical Studies 2005" />
-   <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.leeds.ac.uk/classics/lics/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2005" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_str" />
-    <property name="value" value="2005" />
-   </property>
-  </property>
-
-  <property name="LeedsInternationalClassicalStudies2006">
-   <property name="attributes.publisher" value="Leeds University" />
-   <property name="journalTitle" value="Leeds International Classical Studies" />
-   <property name="title" value="Leeds International Classical Studies 2006" />
-   <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.leeds.ac.uk/classics/lics/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2006" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_str" />
-    <property name="value" value="2006" />
-   </property>
-  </property>
-
-  <property name="LeedsInternationalClassicalStudies2007">
-   <property name="attributes.publisher" value="Leeds University" />
-   <property name="journalTitle" value="Leeds International Classical Studies" />
-   <property name="title" value="Leeds International Classical Studies 2007" />
-   <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.leeds.ac.uk/classics/lics/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2007" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_str" />
-    <property name="value" value="2007" />
-   </property>
-  </property>
-
-  <property name="LeedsInternationalClassicalStudies2008">
-   <property name="attributes.publisher" value="Leeds University" />
-   <property name="journalTitle" value="Leeds International Classical Studies" />
-   <property name="title" value="Leeds International Classical Studies 2008" />
-   <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.leeds.ac.uk/classics/lics/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2008" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_str" />
-    <property name="value" value="2008" />
-   </property>
-  </property>
-
-  <property name="LeedsInternationalClassicalStudies2009">
-   <property name="attributes.publisher" value="Leeds University" />
-   <property name="journalTitle" value="Leeds International Classical Studies" />
-   <property name="title" value="Leeds International Classical Studies 2009" />
-   <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.leeds.ac.uk/classics/lics/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2009" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="volume_str" />
-    <property name="value" value="2009" />
-   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

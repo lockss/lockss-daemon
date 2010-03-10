@@ -65,6 +65,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="WordsWithoutBorders2004">
@@ -84,6 +85,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="WordsWithoutBorders2005">
@@ -103,6 +105,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="WordsWithoutBorders2006">
@@ -122,51 +125,7 @@
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
    </property>
-  </property>
-
-  <property name="WordsWithoutBorders2007">
-   <property name="attributes.publisher" value="Words Without Borders" />
-   <property name="journalTitle" value="Words Without Borders" />
-   <property name="title" value="Words Without Borders 2007" />
-   <property name="plugin" value="org.nypl.plugin.WordsWithoutBordersPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.wordswithoutborders.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2007" />
-   </property>
-  </property>
-
-  <property name="WordsWithoutBorders2008">
-   <property name="attributes.publisher" value="Words Without Borders" />
-   <property name="journalTitle" value="Words Without Borders" />
-   <property name="title" value="Words Without Borders 2008" />
-   <property name="plugin" value="org.nypl.plugin.WordsWithoutBordersPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.wordswithoutborders.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2008" />
-   </property>
-  </property>
-
-  <property name="WordsWithoutBorders2009">
-   <property name="attributes.publisher" value="Words Without Borders" />
-   <property name="journalTitle" value="Words Without Borders" />
-   <property name="title" value="Words Without Borders 2009" />
-   <property name="plugin" value="org.nypl.plugin.WordsWithoutBordersPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.wordswithoutborders.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2009" />
-   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

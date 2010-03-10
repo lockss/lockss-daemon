@@ -61,6 +61,7 @@
     <property name="key" value="year" />
     <property name="value" value="2000" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="JournalofInternationalWomensStudies2001">
@@ -76,6 +77,7 @@
     <property name="key" value="year" />
     <property name="value" value="2001" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="JournalofInternationalWomensStudies2002">
@@ -91,6 +93,7 @@
     <property name="key" value="year" />
     <property name="value" value="2002" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="JournalofInternationalWomensStudies2003">
@@ -106,6 +109,7 @@
     <property name="key" value="year" />
     <property name="value" value="2003" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="JournalofInternationalWomensStudies2004">
@@ -121,6 +125,7 @@
     <property name="key" value="year" />
     <property name="value" value="2004" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="JournalofInternationalWomensStudies2005">
@@ -136,6 +141,7 @@
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="JournalofInternationalWomensStudies2006">
@@ -151,51 +157,7 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-  </property>
-
-  <property name="JournalofInternationalWomensStudies2007">
-   <property name="attributes.publisher" value="Bridgewater State College" />
-   <property name="journalTitle" value="Journal of International Women's Studies" />
-   <property name="title" value="Journal of International Women's Studies 2007" />
-   <property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2007" />
-   </property>
-  </property>
-
-  <property name="JournalofInternationalWomensStudies2008">
-   <property name="attributes.publisher" value="Bridgewater State College" />
-   <property name="journalTitle" value="Journal of International Women's Studies" />
-   <property name="title" value="Journal of International Women's Studies 2008" />
-   <property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2008" />
-   </property>
-  </property>
-
-  <property name="JournalofInternationalWomensStudies2009">
-   <property name="attributes.publisher" value="Bridgewater State College" />
-   <property name="journalTitle" value="Journal of International Women's Studies" />
-   <property name="title" value="Journal of International Women's Studies 2009" />
-   <property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.bridgew.edu/SoAS/jiws/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2009" />
-   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

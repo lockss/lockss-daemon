@@ -61,51 +61,7 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-  </property>
-
-  <property name="ColumbiaUndergraduateScienceJournal2007">
-   <property name="attributes.publisher" value="Columbia University Libraries" />
-   <property name="journalTitle" value="Columbia Undergraduate Science Journal" />
-   <property name="title" value="Columbia Undergraduate Science Journal 2007" />
-   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://cusj.columbia.edu/cusj/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2007" />
-   </property>
-  </property>
-
-  <property name="ColumbiaUndergraduateScienceJournal2008">
-   <property name="attributes.publisher" value="Columbia University Libraries" />
-   <property name="journalTitle" value="Columbia Undergraduate Science Journal" />
-   <property name="title" value="Columbia Undergraduate Science Journal 2008" />
-   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://cusj.columbia.edu/cusj/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2008" />
-   </property>
-  </property>
-
-  <property name="ColumbiaUndergraduateScienceJournal2009">
-   <property name="attributes.publisher" value="Columbia University Libraries" />
-   <property name="journalTitle" value="Columbia Undergraduate Science Journal" />
-   <property name="title" value="Columbia Undergraduate Science Journal 2009" />
-   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://cusj.columbia.edu/cusj/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="year" />
-    <property name="value" value="2009" />
-   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>
