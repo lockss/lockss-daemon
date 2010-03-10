@@ -1,2 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>plugin_version</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"MIT E-journal of Middle East Studies - %d", year</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">MITejmes</ElementValue></MapElement><MapElement><ElementKey>au_def_new_content_crawl</ElementKey><ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">7862400000</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"^%slockss/MITEJMES_%d\.html", base_url, year</string><string xsi:type="java:java.lang.String">1,"^%sissues/%d.*\.htm$", base_url, year</string><string xsi:type="java:java.lang.String">1,"^%sissues/%d.*\.doc$", base_url, year</string><string xsi:type="java:java.lang.String">1,"^%sissues/%d.*\.gif$", base_url, year</string><string xsi:type="java:java.lang.String">1,"^%sissues/%d.*\.pdf$", base_url, year</string><string xsi:type="java:java.lang.String">1,"^%sissues/%d.*\.xml$", base_url, year</string><string xsi:type="java:java.lang.String">1,"^%simages/.*", base_url</string></ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%slockss/MITEJMES_%d.html", base_url, year</ElementValue></MapElement><MapElement><ElementKey>plugin_identifier</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.yale.library.lockss.plugin.MITejmesPlugin</ElementValue></MapElement><MapElement><ElementKey>au_def_pause_time</ElementKey><ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">10000</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement></Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;MIT Electronic Journal of Middle East Studies Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>MIT Electronic Journal of Middle East Studies Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%slockss/MITEJMES_%d\.html&quot;, base_url, year</string>
+      <string>1,&quot;^%sissues/%d.*\.htm$&quot;, base_url, year</string>
+      <string>1,&quot;^%sissues/%d.*\.doc$&quot;, base_url, year</string>
+      <string>1,&quot;^%sissues/%d.*\.gif$&quot;, base_url, year</string>
+      <string>1,&quot;^%sissues/%d.*\.pdf$&quot;, base_url, year</string>
+      <string>1,&quot;^%sissues/%d.*\.xml$&quot;, base_url, year</string>
+      <string>1,&quot;^%simages/.*&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/MITEJMES_%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

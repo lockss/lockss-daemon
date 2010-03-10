@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Massachusetts Institute of Technology Center for International Studies
+  >
+  
+  {
+  
+    title <
+      name = MIT Electronic Journal of Middle East Studies ;
+      issn = 1939-0386
+    >
+    
+    rights = openaccess
+    plugin = edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin
+    param[base_url] = http://web.mit.edu/cis/www/mitejmes/
+    implicit < status ; attr[year] ; name ; param[year] >
+
+    au < down ; 2001 ; MIT Electronic Journal of Middle East Studies 2001 ; 2001 >
+    au < down ; 2002 ; MIT Electronic Journal of Middle East Studies 2002 ; 2002 >
+    au < down ; 2003 ; MIT Electronic Journal of Middle East Studies 2003 ; 2003 >
+    au < down ; 2004 ; MIT Electronic Journal of Middle East Studies 2004 ; 2004 >
+    au < down ; 2005 ; MIT Electronic Journal of Middle East Studies 2005 ; 2005 >
+
+  }
+
+}
