@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.253 2010-02-22 06:59:20 tlipkis Exp $
+ $Id: build.xml,v 1.254 2010-03-10 03:21:15 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1921,6 +1921,7 @@ Test results in ${test.results}
      depends="check.contrib,get.cvs.tag"
      description="Checkout current cvs into temp dir, build and test all." >
    <property name="cvstag" value="" />
+   <property name="target" value="test-all" />
    <mkdir dir="${temp.build}" />
    <tempfile property="temp.build.dir" destdir="${temp.build}" prefix="build"/>
    <mkdir dir="${temp.build.dir}" />
@@ -1990,12 +1991,13 @@ Test results in ${test.results}
 	    <include name="ant/src/"/>
 	    <include name="doclet/"/>
 	    <include name="tools/"/>
+	    <include name="scripts/"/>
 	    <exclude name="**/classes/**"/>
 	  </fileset>
 	</copy>
       </else>
      </if>
-     <echo>Building and testing in ${temp.build.dir}</echo>
+     <echo>Building and testing (${target}) in ${temp.build.dir}</echo>
 <!--
 	Would prefer to run build in separate jvm, but ant task doesn't
 	support the fork= attribute.  Don't want to pass most properties
@@ -2006,7 +2008,7 @@ Test results in ${test.results}
         right.
 -->
      <ant dir="${temp.proj.dir}"
-	   target="test-all"
+	   target="${target}"
 	   inheritAll="false">
        <property name="ant-contrib.loaded" value="${ant-contrib.loaded}" />
        <property name="halt" value="${halt}" />
