@@ -3,15 +3,15 @@
     name = American Historical Association
   >
 
-  implicit < status ; name ; param[year] >
-
   plugin = org.lockss.plugin.histcoop.HistoryCooperativePlugin
+  implicit < status ; name ; param[year] >
 
   {
     title <
       name = American Historical Review
     >
-    
+
+    rights = openaccess    
     param[base_url] = http://www.historycooperative.org/
 
     au < manifest ; American Historical Review Volume 108 ; 104 >

@@ -10,9 +10,11 @@
     title <
       name = Big Bridge
     >  
+
+    rights = openaccess
     
     { 
-    
+
       plugin = edu.wisc.library.plugin.BigBridgeVol1Plugin
       implicit < status ; name >
     

@@ -3,9 +3,9 @@
     name = Absinthe Literary Review
   >
 
-  implicit < status ; name ; param[year] >
-
+  rights = openaccess
   plugin = org.lockss.plugin.absinthe.AbsinthePlugin
+  implicit < status ; name ; param[year] >
 
   {
     title <

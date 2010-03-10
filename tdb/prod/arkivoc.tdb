@@ -8,9 +8,11 @@
     title <
       name = ARKIVOC 
     >  
+
+    rights = openaccess  
     
     {
-  
+
       plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
       implicit < status ; name ; param[year] >      
       param[base_url] = http://jbe.gold.ac.uk/  

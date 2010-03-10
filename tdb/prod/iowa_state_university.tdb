@@ -9,6 +9,8 @@
       name = Cultural Logic
     >  
   
+    rights = openaccess
+
     plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
     implicit < status ; name ; param[year] >
   
@@ -40,6 +42,8 @@
     title <
       name = Early Modern Culture
     > 
+
+    rights = openaccess
   
     plugin = org.lockss.plugin.emc.EarlyModernCulturePlugin
     implicit < status ; name ; param[volume] >
