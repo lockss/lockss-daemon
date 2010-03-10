@@ -1,14 +1,15 @@
 {
+
   publisher <
     name = Pennsylvania State University Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+  
     title <
       name = Book History 
     >
@@ -30,6 +31,7 @@
   }
 
   {
+  
     title <
       name = Comparative Literature Studies 
     >
@@ -51,6 +53,7 @@
   }
 
   {
+  
     title <
       name = Journal of Policy History 
     >
@@ -71,6 +74,7 @@
   }
 
   {
+  
     title <
       name = Philosophy and Rhetoric 
     >
@@ -92,6 +96,7 @@
   }
 
   {
+  
     title <
       name = Resources for American Literary Study 
     >
@@ -105,6 +110,7 @@
   }
 
   {
+  
     title <
       name = SHAW The Annual of Bernard Shaw Studies 
     >
@@ -124,6 +130,7 @@
   }
 
   {
+  
     title <
       name = The Chaucer Review 
     >
@@ -145,6 +152,7 @@
   }
 
   {
+  
     title <
       name = The Good Society 
     >
@@ -162,6 +170,7 @@
   }
 
   {
+  
     title <
       name = The Journal of General Education 
     >
@@ -182,6 +191,7 @@
   }
 
   {
+  
     title <
       name = The Journal of Nietzsche Studies 
     >
@@ -205,6 +215,7 @@
   }
 
   {
+  
     title <
       name = The Journal of Speculative Philosophy 
     >
