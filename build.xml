@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.254 2010-03-10 03:21:15 tlipkis Exp $
+ $Id: build.xml,v 1.255 2010-03-10 03:27:44 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -62,6 +62,7 @@ Args:
   -Dnowarn=true            Turn off compiler warnings.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dsuite=suite-name       Specify stf suite name.
+  -Dtarget=target          target that post-commit-test will build
   -Dtimeout=msecs          Override the default test failure timeout.
   -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
 
