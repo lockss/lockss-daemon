@@ -144,7 +144,7 @@ def _need_report(db, options):
     
     # lastComplete[0] seems to be a datetime.
     difference = datetime.timedelta(days=2)
-    twodaysago = datetime.date.today() - difference
+    twodaysago = datetime.datetime.now() - difference
         
     return lastComplete[0] < twodaysago
 
