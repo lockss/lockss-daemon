@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.17 2010-03-11 01:36:39 thib_gc Exp $
+# $Id: tdbxml.py,v 1.18 2010-03-11 02:14:03 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -35,10 +35,10 @@ _IMPLICIT_PARAM_ORDER = [
     'base_url', 'base_url2', 'base_url3', 'base_url4', 'base_url5',
     'oai_request_url',
     'publisher_id', 'publisher_code', 'publisher_name',
-    'journal_id', 'journal_code', 'journal_issn', 'journal_abbr', 'journal_dir',
+    'journal_issn', 'journal_id', 'journal_code', 'journal_abbr', 'journal_dir',
     'year',
     'issues', 'issue_set', 'issue_range', 'num_issue_range',
-    'volume_name', 'volume'
+    'volume_name', 'volume_str', 'volume'
 ]
 
 def _escape(str):
@@ -124,7 +124,7 @@ def _process_au(au, options):
         _short_au_name(au),
         _escape(au.title().publisher().name()),
         _escape(au.title().name()) )
-    if au.issn() is not None:
+    if au.issn() is not None: # There's a bug here: au.title().issn() is intended
         print '''\
    <property name="issn" value="%s" />''' % ( au.issn(), )
     print '''\
@@ -141,6 +141,11 @@ def _process_au(au, options):
     for param in au_params:
         if param not in _IMPLICIT_PARAM_ORDER:
             _do_param(au, i, param)
+            i = i + 1
+    for nondefparam in au.nondefparams():
+        nondefval = au.nondefparam(nondefparam)
+        if nondefval is not None:
+            _do_param(au, i, nondefparam, value=nondefval)
             i = i + 1
     au_proxy = au.proxy()
     if au_proxy is not None:

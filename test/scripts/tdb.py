@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.16 2010-03-11 01:36:39 thib_gc Exp $
+# $Id: tdb.py,v 1.17 2010-03-11 02:14:03 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -109,6 +109,7 @@ class AU(ChainedMap):
     ATTR = 'attr'
     ISSN = 'issn'
     NAME = 'name'
+    NONDEFPARAM = 'nondefparam'
     PARAM = 'param'
     PLUGIN = 'plugin'
     PLUGIN_PREFIX = 'pluginPrefix'
@@ -162,6 +163,11 @@ class AU(ChainedMap):
     def attrs(self): return self.get(AU.ATTR) or dict()
     def issn(self): return self.get(AU.ISSN)
     def name(self): return self.get(AU.NAME)
+    def nondefparam(self, nondefparam):
+        val = self.get( (AU.NONDEFPARAM, nondefparam) )
+        if val is None or len(val) == 0: return None
+        else: return val
+    def nondefparams(self): return self.get(AU.NONDEFPARAM) or dict()
     def param(self, param): return self.get( (AU.PARAM, param) )
     def params(self): return self.get(AU.PARAM) or dict()
     def plugin(self): return self.get(AU.PLUGIN) or self.get(AU.PLUGIN_PREFIX) + self.get(AU.PLUGIN_SUFFIX)
