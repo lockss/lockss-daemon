@@ -1,11 +1,8 @@
 {
+
   publisher <
     name = Columbia University Libraries
   >
-  
-  implicit < status ; name ; param[year] >
-  plugin = org.lockss.plugin.ojs.OJSPlugin
-  param[base_url] = http://cusj.columbia.edu/cusj/ 
   
   {
   
@@ -14,11 +11,14 @@
     >  
 
     rights = openaccess
+    plugin = org.lockss.plugin.ojs.OJSPlugin
+    param[base_url] = http://cusj.columbia.edu/cusj/ 
+    implicit < status ; attr[year] ; name ; param[year] >
     
-    au < released ; Columbia Undergraduate Science Journal 2006 ; 2006 >
-    au < manifest ; Columbia Undergraduate Science Journal 2007 ; 2007 >
-    au < manifest ; Columbia Undergraduate Science Journal 2008 ; 2008 >
-    au < manifest ; Columbia Undergraduate Science Journal 2009 ; 2009 >
+    au < released ; 2006 ; Columbia Undergraduate Science Journal 2006 ; 2006 >
+    au < manifest ; 2007 ; Columbia Undergraduate Science Journal 2007 ; 2007 >
+    au < manifest ; 2008 ; Columbia Undergraduate Science Journal 2008 ; 2008 >
+    au < manifest ; 2009 ; Columbia Undergraduate Science Journal 2009 ; 2009 >
   
   }
   
