@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.15 2010-03-09 02:45:41 thib_gc Exp $
+# $Id: tdbxml.py,v 1.16 2010-03-11 01:30:17 thib_gc Exp $
 #
 # Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -177,13 +177,14 @@ def _process(tdb, options):
   <property name="%(publisher)s">
    <property name="name" value="All %(publisher)s Titles" />
    <property name="class" value="xpath" />
-   <property name="xpath" value="[attributes/publisher='%(publisher)s']" />
+   <property name="xpath" value="[attributes/publisher='%(publisher2)s']" />
   </property>
   
  </property>
  
  <property name="org.lockss.title">
-''' % { 'publisher': _escape(current_pub.name()) }
+''' % { 'publisher': _escape(current_pub.name()),
+        'publisher2': re.sub(r'\'', '&apos;', _escape(current_pub.name())) }
         _process_au(au, options)
     else:
         if options.style == TDB_STYLE_XML: print '''\
