@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.16 2010-03-11 01:36:39 thib_gc Exp $
+# $Id: tdbparse.py,v 1.17 2010-03-11 19:03:32 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -529,7 +529,12 @@ class TdbParser(object):
         self.__expect(TOKEN_ANGLE_CLOSE)
         au = AU(self.__current_au[-1])
         au.set_title(self.__current_title)
-        for key, val in zip(self.__current_au[-1].get('$implicit'), self.__stack.pop()):
+        impl = self.__current_au[-1].get('$implicit')
+        vals = self.__stack.pop()
+        if len(impl) != len(vals):
+            raise RuntimeError, 'expected %d implicit assignments but got %d' % (len(impl),
+                                                                                 len(vals))
+        for key, val in zip(impl, vals):
             au.set(key, val)
         self.__tdb.add_au(au)
 
