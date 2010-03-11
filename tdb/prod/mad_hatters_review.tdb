@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Mad Hatters' Review
+  >
+  
+  {
+  
+    title <
+      name = Mad Hatters' Review ;
+      issn = 1556-147X
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.madhattersreview.MadHattersReviewPlugin
+    param[base_url] = http://www.madhattersreview.com/
+    implicit < status ; attr[year] ; name ; param[year] ; param[num_issue_range] >
+    
+    au < down ; 2005 ; Mad Hatters' Review 2005 ; 2005 ; 1-3 >
+    au < down ; 2006 ; Mad Hatters' Review 2006 ; 2006 ; 4-5 >
+
+  }
+
+}

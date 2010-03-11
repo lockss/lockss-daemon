@@ -4,12 +4,16 @@
     <string>org.lockss.plugin.madhattersreview.MadHattersReviewPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
-    <string>&quot;Mad Hatters Review %d&quot;, year</string>
+    <string>&quot;Mad Hatters' Review Plugin, Base URL %s, Year %d, Issues %s&quot;, base_url, year, num_issue_range</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>MadHattersReview</string>
+    <string>Mad Hatters' Review Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
