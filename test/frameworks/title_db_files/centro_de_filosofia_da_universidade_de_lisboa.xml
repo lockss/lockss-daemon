@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Centro de Filosofia da Universidade de Lisboa">
+   <property name="name" value="All Centro de Filosofia da Universidade de Lisboa Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Centro de Filosofia da Universidade de Lisboa']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="Disputatio1996">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 1996" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="001" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="1996" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio1997">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 1997" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="002,003" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="1997" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio1998">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 1998" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="004,S01,005" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="1998" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio1999">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 1999" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="006,007" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="1999" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2000">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2000" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="008,009" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2000" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2001">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2001" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="010,011" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2001" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2002">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2002" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="012,013" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2002" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2003">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2003" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="014,015" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2003" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2003superseded">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2003 [superseded]" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2003" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2004">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2004" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="016,017" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2004" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2004superseded">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2004 [superseded]" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2004" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2005">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2005" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="018,019" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2006">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2006" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="020,021" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2007">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2007" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="022,023" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2008">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2008" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="024,025" />
+   </property>
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="Disputatio2009">
+   <property name="attributes.publisher" value="Centro de Filosofia da Universidade de Lisboa" />
+   <property name="journalTitle" value="Disputatio" />
+   <property name="title" value="Disputatio 2009" />
+   <property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.disputatio.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="026" />
+   </property>
+   <property name="attributes.year" value="2009" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+ </property>
+
+</lockss-config>
