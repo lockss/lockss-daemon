@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Materials Research Society
+  >
+  
+  {
+  
+    title <
+      name = MRS Internet Journal of Nitride Semiconductor Research ;
+      issn = 1092-5783
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.msr.MSRPlugin
+    param[base_url] = http://nsr.mij.mrs.org/
+    implicit < status ; name ; param[volume_str] >
+    
+    comment[plugin] = The plugin identifier is unfortunately misspelled, but it is what it is for AUs already in existence
+
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 1 ; 1 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 2 ; 2 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 3 ; 3 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 4 ; 4 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 4 Supplement 1 ; 4S1 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 5 ; 5 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 5 Supplement 1 ; 5S1 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 6 ; 6 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 7 ; 7 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 8 ; 8 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 9 ; 9 >
+    au < down ; MRS Internet Journal of Nitride Semiconductor Research Volume 10 ; 10 >
+
+  }
+
+}
