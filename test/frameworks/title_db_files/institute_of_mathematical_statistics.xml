@@ -48,6 +48,40 @@
  
  <property name="org.lockss.title">
 
+  <property name="ElectronicCommunicationsInProbability1996">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Communications In Probability" />
+   <property name="title" value="Electronic Communications In Probability 1996" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+   <property name="attributes.year" value="1996" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicCommunicationsInProbability1997">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Communications In Probability" />
+   <property name="title" value="Electronic Communications In Probability 1997" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="attributes.year" value="1997" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="ElectronicCommunicationsInProbability1998">
    <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
    <property name="journalTitle" value="Electronic Communications In Probability" />
@@ -61,6 +95,7 @@
     <property name="key" value="year" />
     <property name="value" value="1998" />
    </property>
+   <property name="attributes.year" value="1998" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -77,6 +112,7 @@
     <property name="key" value="year" />
     <property name="value" value="1999" />
    </property>
+   <property name="attributes.year" value="1999" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -93,6 +129,7 @@
     <property name="key" value="year" />
     <property name="value" value="2000" />
    </property>
+   <property name="attributes.year" value="2000" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -109,6 +146,7 @@
     <property name="key" value="year" />
     <property name="value" value="2001" />
    </property>
+   <property name="attributes.year" value="2001" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -125,6 +163,7 @@
     <property name="key" value="year" />
     <property name="value" value="2002" />
    </property>
+   <property name="attributes.year" value="2002" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -141,6 +180,7 @@
     <property name="key" value="year" />
     <property name="value" value="2003" />
    </property>
+   <property name="attributes.year" value="2003" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -157,6 +197,7 @@
     <property name="key" value="year" />
     <property name="value" value="2004" />
    </property>
+   <property name="attributes.year" value="2004" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -173,6 +214,126 @@
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicCommunicationsInProbability2006">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Communications In Probability" />
+   <property name="title" value="Electronic Communications In Probability 2006" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicCommunicationsInProbability2007">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Communications In Probability" />
+   <property name="title" value="Electronic Communications In Probability 2007" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicCommunicationsInProbability2008">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Communications In Probability" />
+   <property name="title" value="Electronic Communications In Probability 2008" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicCommunicationsInProbability2009">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Communications In Probability" />
+   <property name="title" value="Electronic Communications In Probability 2009" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="attributes.year" value="2009" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicCommunicationsInProbability2010">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Communications In Probability" />
+   <property name="title" value="Electronic Communications In Probability 2010" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/ECP/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2010" />
+   </property>
+   <property name="attributes.year" value="2010" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicJournalofProbability1996">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Journal Of Probability" />
+   <property name="title" value="Electronic Journal of Probability 1996" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+   <property name="attributes.year" value="1996" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicJournalofProbability1997">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Journal Of Probability" />
+   <property name="title" value="Electronic Journal of Probability 1997" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="attributes.year" value="1997" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
@@ -182,9 +343,15 @@
    <property name="title" value="Electronic Journal of Probability 1998" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="1998" />
    </property>
+   <property name="attributes.year" value="1998" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="ElectronicJournalofProbability1999">
@@ -193,9 +360,15 @@
    <property name="title" value="Electronic Journal of Probability 1999" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="1999" />
    </property>
+   <property name="attributes.year" value="1999" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="ElectronicJournalofProbability2000">
@@ -204,9 +377,15 @@
    <property name="title" value="Electronic Journal of Probability 2000" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2000" />
    </property>
+   <property name="attributes.year" value="2000" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="ElectronicJournalofProbability2001">
@@ -215,9 +394,15 @@
    <property name="title" value="Electronic Journal of Probability 2001" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2001" />
    </property>
+   <property name="attributes.year" value="2001" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="ElectronicJournalofProbability2002">
@@ -226,9 +411,15 @@
    <property name="title" value="Electronic Journal of Probability 2002" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2002" />
    </property>
+   <property name="attributes.year" value="2002" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="ElectronicJournalofProbability2003">
@@ -237,9 +428,15 @@
    <property name="title" value="Electronic Journal of Probability 2003" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2003" />
    </property>
+   <property name="attributes.year" value="2003" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="ElectronicJournalofProbability2004">
@@ -248,9 +445,15 @@
    <property name="title" value="Electronic Journal of Probability 2004" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2004" />
    </property>
+   <property name="attributes.year" value="2004" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="ElectronicJournalofProbability2005">
@@ -259,9 +462,100 @@
    <property name="title" value="Electronic Journal of Probability 2005" />
    <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
    <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicJournalofProbability2006">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Journal Of Probability" />
+   <property name="title" value="Electronic Journal of Probability 2006" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicJournalofProbability2007">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Journal Of Probability" />
+   <property name="title" value="Electronic Journal of Probability 2007" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicJournalofProbability2008">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Journal Of Probability" />
+   <property name="title" value="Electronic Journal of Probability 2008" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicJournalofProbability2009">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Journal Of Probability" />
+   <property name="title" value="Electronic Journal of Probability 2009" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="attributes.year" value="2009" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicJournalofProbability2010">
+   <property name="attributes.publisher" value="Institute of Mathematical Statistics" />
+   <property name="journalTitle" value="Electronic Journal Of Probability" />
+   <property name="title" value="Electronic Journal of Probability 2010" />
+   <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.math.washington.edu/~ejpecp/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2010" />
+   </property>
+   <property name="attributes.year" value="2010" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>
