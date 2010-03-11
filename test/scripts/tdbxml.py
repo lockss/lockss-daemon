@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.16 2010-03-11 01:30:17 thib_gc Exp $
+# $Id: tdbxml.py,v 1.17 2010-03-11 01:36:39 thib_gc Exp $
 #
-# Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy

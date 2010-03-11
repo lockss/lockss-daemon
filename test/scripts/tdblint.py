@@ -1,8 +1,8 @@
 #!/usr/bin/python
 
-# $Id: tdblint.py,v 1.4 2009-01-25 01:34:35 thib_gc Exp $
+# $Id: tdblint.py,v 1.5 2010-03-11 01:36:39 thib_gc Exp $
 #
-# Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
