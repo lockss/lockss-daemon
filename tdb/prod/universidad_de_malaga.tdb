@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Universidad de Málaga
+  >
+  
+  {
+  
+    title <
+      name = Entelequia: Revista Interdisciplinar ;
+      issn = 1885-6985
+    >
+    
+    rights = openaccess
+    plugin = edu.nyu.plugin.entelequia.EntelequiaPlugin
+    param[base_url] = http://www.eumed.net/entelequia/
+    implicit < status ; name ; param[volume] >
+
+    comment[entelequia] = This plugin needs work
+
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 1 ; 1 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 2 ; 2 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 3 ; 3 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 4 ; 4 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 5 ; 5 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 6 ; 6 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 7 ; 7 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 8 ; 8 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 9 ; 9 >
+    au < exists ; Entelequia: Revista Interdisciplinar Issue 10 ; 10 >
+
+  }
+
+}

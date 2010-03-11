@@ -4,12 +4,16 @@
     <string>edu.nyu.plugin.entelequia.EntelequiaPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Entelequia. Revista Interdisciplinar Number %d&quot;, volume</string>
+    <string>&quot;Entelequia Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>

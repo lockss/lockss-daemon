@@ -73,36 +73,6 @@
       <property name="attributes.rights" value="openaccess" />
     </property>
 
-    <property name="EntelequiaRevistaInterdisciplinarIssue2">
-      <property name="title" value="Entelequia. Revista Interdisciplinar Issue 2" />
-      <property name="journalTitle" value="Entelequia. Revista Interdisciplinar" />
-      <property name="plugin" value="edu.nyu.plugin.entelequia.EntelequiaPlugin" />
-      <property name="param.1">
-        <property name="key" value="base_url" />
-        <property name="value" value="http://www.eumed.net/entelequia/" />
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume" />
-        <property name="value" value="2" />
-      </property>
-      <property name="attributes.rights" value="openaccess" />
-    </property>
-
-    <property name="EntelequiaRevistaInterdisciplinarIssue1">
-      <property name="title" value="Entelequia. Revista Interdisciplinar Issue 1" />
-      <property name="journalTitle" value="Entelequia. Revista Interdisciplinar" />
-      <property name="plugin" value="edu.nyu.plugin.entelequia.EntelequiaPlugin" />
-      <property name="param.1">
-        <property name="key" value="base_url" />
-        <property name="value" value="http://www.eumed.net/entelequia/" />
-      </property>
-      <property name="param.2">
-        <property name="key" value="volume" />
-        <property name="value" value="1" />
-      </property>
-      <property name="attributes.rights" value="openaccess" />
-    </property>
-
       <property name="JanusHead3">
 	<property name="title" value="Janus Head Volume 3" />
 	<property name="journalTitle" value="Janus Head" />
