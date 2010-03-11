@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = Université Charles-de-Gaulle Lille 3
+  >
+  
+  {
+  
+    title <
+      name = Dictynna ;
+      issn = 1765-3142
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.dictynna.DictynnaPlugin
+    param[base_url] = http://dictynna.revue.univ-lille3.fr/
+    implicit < status ; name ; param[volume_name] >
+
+    au < released ; Dictynna Numéro 1 ; 1 >
+    au < released ; Dictynna Numéro 2 ; 2 >
+    au < released ; Dictynna Numéro 3 ; 3 >
+    au < released ; Dictynna Numéro 4 ; 4 >
+    au < manifest ; Dictynna Numéro 5 ; 5 >
+    au < manifest ; Dictynna Numéro 6 ; 6 >
+    
+  }
+
+}
