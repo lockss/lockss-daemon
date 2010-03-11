@@ -1,0 +1,48 @@
+{
+
+  publisher <
+    name = Trivium Publications
+  >
+  
+  {
+  
+    title <
+      name = Janus Head ;
+      issn = 1524-2269 ;
+      eissn = 1521-9194
+    >
+    
+    rights = openaccess
+    
+    comment[janushead] = These plugins need work
+
+    {
+    
+      plugin = org.lockss.plugin.janushead.JanusHeadPluginLegacy
+      param[base_url] = http://www.janushead.org/
+      implicit < status ; name >
+    
+      au < manifest ; Janus Head Volume 1-2 >
+    
+    }
+    
+    {
+
+      plugin = org.lockss.plugin.janushead.JanusHeadPlugin
+      param[base_url] = http://www.janushead.org/
+      implicit < status ; name ; param[volume] >
+    
+      au < manifest ; Janus Head Volume 3 ; 3 >
+      au < manifest ; Janus Head Volume 4 ; 4 >
+      au < manifest ; Janus Head Volume 5 ; 5 >
+      au < manifest ; Janus Head Volume 6 ; 6 >
+      au < manifest ; Janus Head Volume 7 ; 7 >
+      au < manifest ; Janus Head Volume 8 ; 8 >
+      au < manifest ; Janus Head Volume 9 ; 9 >
+      au < manifest ; Janus Head Volume 10 ; 10 >
+    
+    }
+
+  }
+
+}
