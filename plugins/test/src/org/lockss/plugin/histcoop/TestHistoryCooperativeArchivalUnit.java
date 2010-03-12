@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.5 2008-08-17 08:43:20 tlipkis Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.6 2010-03-12 00:50:10 thib_gc Exp $
  */
 
 /*
@@ -202,10 +202,10 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
 
   public void testGetName() throws Exception {
     DefinableArchivalUnit au = makeAu(new URL(ROOT_URL), 108, DIR);
-    assertEquals("www.historycooperative.org, ahr, vol. 108", au.getName());
+    assertEquals("History Cooperative Plugin, Base URL http://www.historycooperative.org/, Journal Directory ahr, Volume 108", au.getName());
     DefinableArchivalUnit au1 =
         makeAu(new URL("http://www.bmj.com/"), 109, "bmj");
-    assertEquals("www.bmj.com, bmj, vol. 109", au1.getName());
+    assertEquals("History Cooperative Plugin, Base URL http://www.bmj.com/, Journal Directory bmj, Volume 109", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {

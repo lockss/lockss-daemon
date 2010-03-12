@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativePlugin.java,v 1.3 2007-01-14 08:06:10 tlipkis Exp $
+ * $Id: TestHistoryCooperativePlugin.java,v 1.4 2010-03-12 00:50:10 thib_gc Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestHistoryCooperativePlugin extends LockssTestCase {
     props.setProperty(VOL_KEY, "322");
 
     DefinableArchivalUnit au = makeAuFromProps(props);
-    assertEquals("www.example.com, journal_dir, vol. 322", au.getName());
+    assertEquals("History Cooperative Plugin, Base URL http://www.example.com/, Journal Directory journal_dir, Volume 322", au.getName());
   }
 
   public void testGetPluginId() {
