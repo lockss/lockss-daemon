@@ -1,2 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4,"^%s", base_url</string><string xsi:type="java:java.lang.String">1,"%sLOCKSS/cortlandreview_1999.html", base_url</string><string xsi:type="java:java.lang.String">1,"^%sissue/six/.*$", base_url</string><string xsi:type="java:java.lang.String">1,"^%sissue/7/.*$", base_url</string><string xsi:type="java:java.lang.String">1,"^%sissue/8/.*$", base_url</string><string xsi:type="java:java.lang.String">1,"^%sissue/9/.*$", base_url</string><string xsi:type="java:java.lang.String">1,"^%simages/.*$", base_url</string><string xsi:type="java:java.lang.String">1,"^%sfeatures/99/.*$", base_url</string></ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sLOCKSS/cortlandreview_1999.html", base_url</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Cortland Review 1999</ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Cortland Review 1999"</ElementValue></MapElement><MapElement><ElementKey>plugin_identifier</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.wisc.library.plugin.CortlandReview99Plugin</ElementValue></MapElement></Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.wisc.library.plugin.CortlandReview99Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Cortland Review 1999&quot;</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Cortland Review 1999</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sLOCKSS/cortlandreview_1999.html&quot;, base_url</string>
+      <string>1,&quot;^%sissue/six/.*$&quot;, base_url</string>
+      <string>1,&quot;^%sissue/7/.*$&quot;, base_url</string>
+      <string>1,&quot;^%sissue/8/.*$&quot;, base_url</string>
+      <string>1,&quot;^%sissue/9/.*$&quot;, base_url</string>
+      <string>1,&quot;^%simages/.*$&quot;, base_url</string>
+      <string>1,&quot;^%sfeatures/99/.*$&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sLOCKSS/cortlandreview_1999.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

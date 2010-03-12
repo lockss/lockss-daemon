@@ -18,15 +18,15 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%ssearch/&quot;, base_url, issue_set</string>
-      <string>1,&quot;%s%s/.*&quot;, base_url, issue_set</string>
-      <string>1,&quot;%s.*&quot;, base_url</string>
+      <string>4,&quot;^%sarchives&quot;, base_url</string>
+      <string>1,&quot;%sarchives/search/&quot;, base_url, issue_set</string>
+      <string>1,&quot;%sarchives/%s/.*&quot;, base_url, issue_set</string>
+      <string>1,&quot;%sarchives/.*&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%ssearch/lockssmanifest1-14.html
+    <string>&quot;%sarchives/search/lockssmanifest1-14.html
 &quot;, base_url</string>
   </entry>
   <entry>
