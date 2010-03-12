@@ -1,24 +1,26 @@
 {
+
   publisher <
     name = Absinthe Literary Review
   >
 
-  rights = openaccess
-  plugin = org.lockss.plugin.absinthe.AbsinthePlugin
-  implicit < status ; name ; param[year] >
-
   {
+  
     title <
       name = Absinthe Literary Review 
     >
+
+    rights = openaccess
+    plugin = org.lockss.plugin.absinthe.AbsinthePlugin
+    implicit < status ; name ; param[year] >
 
     {
     
       param[base_url] = http://absinthe-literary-review.com/
 
-      au < superseded ; Absinthe Literary Review 2003 ; 2003 >
-      au < superseded ; Absinthe Literary Review 2004 ; 2004 >
-      au < superseded ; Absinthe Literary Review 2005 ; 2005 >
+      au < superseded ; Absinthe Literary Review 2003 [superseded] ; 2003 >
+      au < superseded ; Absinthe Literary Review 2004 [superseded] ; 2004 >
+      au < superseded ; Absinthe Literary Review 2005 [superseded] ; 2005 >
       
     }
      
@@ -26,7 +28,7 @@
     
       param[base_url] = http://absintheliteraryreview.com/
 
-comment[ar] = there are more materials, but they aren't grouped by volume (maybe URL Extractor?), and don't have a manifest
+      comment[ar] = there are more materials, but they aren't grouped by volume (maybe URL Extractor?), and don't have a manifest
 
       au < manifest ; Absinthe Literary Review 2003 ; 2003 >
       au < manifest ; Absinthe Literary Review 2004 ; 2004 >

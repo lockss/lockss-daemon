@@ -48,10 +48,10 @@
  
  <property name="org.lockss.title">
 
-  <property name="AbsintheLiteraryReview2003">
+  <property name="AbsintheLiteraryReview2003superseded">
    <property name="attributes.publisher" value="Absinthe Literary Review" />
    <property name="journalTitle" value="Absinthe Literary Review" />
-   <property name="title" value="Absinthe Literary Review 2003" />
+   <property name="title" value="Absinthe Literary Review 2003 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -68,10 +68,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="AbsintheLiteraryReview2004">
+  <property name="AbsintheLiteraryReview2004superseded">
    <property name="attributes.publisher" value="Absinthe Literary Review" />
    <property name="journalTitle" value="Absinthe Literary Review" />
-   <property name="title" value="Absinthe Literary Review 2004" />
+   <property name="title" value="Absinthe Literary Review 2004 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -88,10 +88,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="AbsintheLiteraryReview2005">
+  <property name="AbsintheLiteraryReview2005superseded">
    <property name="attributes.publisher" value="Absinthe Literary Review" />
    <property name="journalTitle" value="Absinthe Literary Review" />
-   <property name="title" value="Absinthe Literary Review 2005" />
+   <property name="title" value="Absinthe Literary Review 2005 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -104,6 +104,54 @@
    <property name="param.99">
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AbsintheLiteraryReview2003">
+   <property name="attributes.publisher" value="Absinthe Literary Review" />
+   <property name="journalTitle" value="Absinthe Literary Review" />
+   <property name="title" value="Absinthe Literary Review 2003" />
+   <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://absintheliteraryreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AbsintheLiteraryReview2004">
+   <property name="attributes.publisher" value="Absinthe Literary Review" />
+   <property name="journalTitle" value="Absinthe Literary Review" />
+   <property name="title" value="Absinthe Literary Review 2004" />
+   <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://absintheliteraryreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="AbsintheLiteraryReview2005">
+   <property name="attributes.publisher" value="Absinthe Literary Review" />
+   <property name="journalTitle" value="Absinthe Literary Review" />
+   <property name="title" value="Absinthe Literary Review 2005" />
+   <property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://absintheliteraryreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
