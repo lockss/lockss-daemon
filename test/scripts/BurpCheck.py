@@ -288,23 +288,23 @@ def _find_inconsistent_information(db, options):
         
     # Report problems...
     print("Testing problems within report.\n")
-    cursor.execute("SELECT publisher, auyear FROM burpreport group by publisher, auyear;")
+    cursor.execute("SELECT publisher, auyear FROM burpreport WHERE auyear != '0' GROUP BY publisher, auyear;")
     arPublisherYear = cursor.fetchone()
     while arPublisherYear is not None:
-        cursor2.execute("SELECT MAX(numarticles), rundate FROM burpreport WHERE publisher = '%s' AND year = %d" % (arPublisherYear[0], arPublisherYear[1]))
+        cursor2.execute("SELECT MAX(numarticles), rundate FROM burpreport WHERE publisher = '%s' AND auyear = '%s'" % (arPublisherYear[0], arPublisherYear[1]))
         highestInYear = cursor2.fetchone()
-        cursor3.execute("SELECT numarticles FROM burpreport WHERE publisher = '%s' AND year = %d ORDER BY rundate DESC" % (arPublisherYear[0], arPublisherYear[1]))
+        cursor3.execute("SELECT numarticles FROM burpreport WHERE publisher = '%s' AND auyear = '%s' ORDER BY rundate DESC" % (arPublisherYear[0], arPublisherYear[1]))
         mostRecent = cursor3.fetchone()
         
         if mostRecent[0] < highestInYear[0]:
-            fileInconsistent.write("Publisher %s in year %d has seen its total number of articles decrease from %d (in report generated on %s) to %d.\n" % 
-                                   (arPublisherYear[0], arPublisherYear[1], highestInYear[0], highestInYear[1].strftime("%d-%b-%Y"), mostRecent))
+            fileInconsistent.write("Publisher %s in year %s has seen its total number of articles decrease from %d (in report generated on %s) to %d.\n" % 
+                                   (arPublisherYear[0], arPublisherYear[1], highestInYear[0], highestInYear[1].strftime("%d-%b-%Y"), mostRecent[0]))
             isEmpty = False
         
         arPublisherYear = cursor.fetchone()
         
     if isEmpty:
-        fileInconsistent.write("Congratulations: no AU has inconsistent data!")
+        fileInconsistent.write("Congratulations: no AU has inconsistent data!\n")
         
     fileInconsistent.close()
     cursor3.close()
