@@ -1,18 +1,20 @@
 {
+
   publisher <
     name = Words Without Borders
   >
   
-  implicit < status ; name ; param[year] >
-  plugin = org.nypl.plugin.WordsWithoutBordersPlugin
   
   {
+
     title <
       name = Words Without Borders
     >
 
     rights = openaccess
+    plugin = org.nypl.plugin.WordsWithoutBordersPlugin
     param[base_url] = http://www.wordswithoutborders.org/
+    implicit < status ; name ; param[year] >
 
     au < down ; Words Without Borders 2003 ; 2003 >
     au < down ; Words Without Borders 2004 ; 2004 >
@@ -25,4 +27,3 @@
   }
   
 }
-
