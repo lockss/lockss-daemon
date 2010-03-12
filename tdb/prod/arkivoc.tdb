@@ -10,7 +10,7 @@
     >  
 
     rights = openaccess  
-    plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin2
+    plugin = edu.fcla.plugin.arkivoc.ArkivocPlugin
     param[base_url] = http://www.arkat-usa.org/
     implicit < status ; name ; param[year] >        
       
