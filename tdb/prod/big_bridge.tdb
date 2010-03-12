@@ -3,8 +3,6 @@
     name = Big Bridge
   >
   
-  param[base_url] = http://www.bigbridge.org/  
-  
   {
   
     title <
@@ -16,15 +14,17 @@
     { 
 
       plugin = edu.wisc.library.plugin.BigBridgeVol1Plugin
+      param[base_url] = http://www.bigbridge.org/  
       implicit < status ; name >
     
-      au < released ; Big Bridge Volume 1 >
+      au < exists ; Big Bridge Volume 1 >
       
     }
     
     {
     
       plugin = edu.wisc.library.plugin.BigBridgePlugin
+      param[base_url] = http://www.bigbridge.org/  
       implicit < status ; name ; param[volume] ; param[num_issue_range] >
 
       au < released ; Big Bridge Volume 2 ; 2 ; 5-8 >    
