@@ -10,6 +10,7 @@
       name = Apple Valley Review
     >  
     
+    rights = openaccess
     plugin = org.lockss.plugin.applevalleyreview.AppleValleyReviewPlugin
     implicit < status ; name ; param[year] >
     param[base_url] = http://www.leahbrowning.net/
