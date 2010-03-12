@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = State University of New York at Albany School of Criminal Justice
+  >
+  
+  {
+  
+    title <
+      name = Journal of Criminal Justice and Popular Culture ;
+      issn = 1070-8286
+    >
+    
+    rights = openaccess
+    plugin = edu.indiana.lib.plugin.jcjpc.JcjpcPlugin
+    param[base_url] = http://www.albany.edu/scj/jcjpc/
+    implicit < status ; attr[year] ; name ; param[volume] >
+
+    au < manifest ; 1993 ; Journal of Criminal Justice and Popular Culture Volume 1 ; 1 >
+    au < manifest ; 1994 ; Journal of Criminal Justice and Popular Culture Volume 2 ; 2 >
+    au < manifest ; 1995 ; Journal of Criminal Justice and Popular Culture Volume 3 ; 3 >
+    au < manifest ; 1996 ; Journal of Criminal Justice and Popular Culture Volume 4 ; 4 >
+    au < manifest ; 1997 ; Journal of Criminal Justice and Popular Culture Volume 5 ; 5 >
+    au < manifest ; 1998 ; Journal of Criminal Justice and Popular Culture Volume 6 ; 6 >
+    au < manifest ; 1999-2000 ; Journal of Criminal Justice and Popular Culture Volume 7 ; 7 >
+    au < manifest ; 2000-2001 ; Journal of Criminal Justice and Popular Culture Volume 8 ; 8 >
+    au < manifest ; 2001-2002 ; Journal of Criminal Justice and Popular Culture Volume 9 ; 9 >
+    au < released ; 2003 ; Journal of Criminal Justice and Popular Culture Volume 10 ; 10 >
+    au < manifest ; 2004 ; Journal of Criminal Justice and Popular Culture Volume 11 ; 11 >
+    au < manifest ; 2005 ; Journal of Criminal Justice and Popular Culture Volume 12 ; 12 >
+    au < manifest ; 2006 ; Journal of Criminal Justice and Popular Culture Volume 13 ; 13 >
+    au < exists ; 2007 ; Journal of Criminal Justice and Popular Culture Volume 14 ; 14 >
+    au < exists ; 2008 ; Journal of Criminal Justice and Popular Culture Volume 15 ; 15 >
+    au < exists ; 2009 ; Journal of Criminal Justice and Popular Culture Volume 16 ; 16 >
+    
+  }
+
+}
