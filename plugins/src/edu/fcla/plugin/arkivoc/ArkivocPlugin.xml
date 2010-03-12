@@ -9,19 +9,19 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Arkivoc %d&quot;, year</string>
+    <string>&quot;ARKIVOC Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>ARKIVOC </string>
+    <string>ARKIVOC Plugin</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>31449600000</long>
+    <long>1209600000</long>
   </entry>
   <entry>
     <string>au_crawlrules</string>
