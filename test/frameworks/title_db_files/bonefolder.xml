@@ -64,6 +64,54 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="TheBonefolder2">
+   <property name="attributes.publisher" value="The Bonefolder" />
+   <property name="journalTitle" value="The Bonefolder" />
+   <property name="title" value="The Bonefolder Volume 2" />
+   <property name="plugin" value="edu.nyu.plugin.bonefolder.BonefolderPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.philobiblon.com/bonefolder/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TheBonefolder3">
+   <property name="attributes.publisher" value="The Bonefolder" />
+   <property name="journalTitle" value="The Bonefolder" />
+   <property name="title" value="The Bonefolder Volume 3" />
+   <property name="plugin" value="edu.nyu.plugin.bonefolder.BonefolderPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.philobiblon.com/bonefolder/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TheBonefolder4">
+   <property name="attributes.publisher" value="The Bonefolder" />
+   <property name="journalTitle" value="The Bonefolder" />
+   <property name="title" value="The Bonefolder Volume 4" />
+   <property name="plugin" value="edu.nyu.plugin.bonefolder.BonefolderPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.philobiblon.com/bonefolder/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
  </property>
 
 </lockss-config>

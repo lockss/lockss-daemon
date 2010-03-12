@@ -1,11 +1,8 @@
 {
+
   publisher <
     name = The Bonefolder
   >
-  
-  plugin = edu.nyu.plugin.bonefolder.BonefolderPlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://www.philobiblon.com/bonefolder/
   
   {
   
@@ -14,8 +11,14 @@
     >  
     
     rights = openaccess
-
+    plugin = edu.nyu.plugin.bonefolder.BonefolderPlugin
+    implicit < status ; name ; param[volume] >
+    param[base_url] = http://www.philobiblon.com/bonefolder/
+  
     au < released ; The Bonefolder Volume 1 ; 1 >
+    au < manifest ; The Bonefolder Volume 2 ; 2 >
+    au < manifest ; The Bonefolder Volume 3 ; 3 >
+    au < manifest ; The Bonefolder Volume 4 ; 4 >
  
   }
   
