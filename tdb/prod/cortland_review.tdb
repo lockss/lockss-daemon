@@ -22,6 +22,7 @@ comment[cr3] = all lockss manifests have disappeared
     {
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin98
+      implicit < status ; name >
       
       au < exists ; Cortland Review 1998 >     
     
@@ -30,6 +31,7 @@ comment[cr3] = all lockss manifests have disappeared
     {
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin99
+      implicit < status ; name >
       
       au < exists ; Cortland Review 1999 >     
     
@@ -38,6 +40,7 @@ comment[cr3] = all lockss manifests have disappeared
     {
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin00
+      implicit < status ; name >
       
       au < exists ; Cortland Review 2000 >     
     
@@ -45,8 +48,8 @@ comment[cr3] = all lockss manifests have disappeared
     
     {  
             
-      implicit < status ; name ; param[year] ; param[num_issue_range] >
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin
+      implicit < status ; name ; param[year] ; param[num_issue_range] >
       
       au < exists ; Cortland Review 2001 ; 2001 ; 15-18 >
       au < exists ; Cortland Review 2002 ; 2002 ; 19-21 >      
