@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.203 2010-03-14 08:08:40 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.204 2010-03-14 18:33:49 tlipkis Exp $
  */
 
 /*
@@ -1381,6 +1381,7 @@ public class PluginManager
 	  needRestartAus.addAll(aus);
 	}
       }
+      oldPlug.stopPlugin();
     }
     pluginMap.put(pluginKey, plugin);
     resetTitles();

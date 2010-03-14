@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.19 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.20 2010-03-14 18:33:45 tlipkis Exp $
  */
 
 /*
@@ -55,11 +55,11 @@ public class TestBasePlugin extends LockssTestCase {
   static final String AUPARAM_VOL = PD_VOL.getKey();
   static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
-  MyMockBasePlugin mbp;
+  MyBasePlugin mbp;
 
   public void setUp() throws Exception {
     super.setUp();
-    mbp = new MyMockBasePlugin();
+    mbp = new MyBasePlugin();
     mbp.initPlugin(getMockLockssDaemon());
   }
 
@@ -67,13 +67,61 @@ public class TestBasePlugin extends LockssTestCase {
     super.tearDown();
   }
 
-  /** test for method configureAu(..) */
-  public void testConfigureAu() {
+  public void testConfigureAuNull() {
     // check for null config throws exception
     try {
       mbp.configureAu(null, null);
       fail("Didn't throw ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
+  }
+
+  public void testConfigureAu() throws Exception {
+    mbp.setConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
+				      ConfigParamDescr.VOLUME_NUMBER));
+    Configuration auconf =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+				 "http://example.com/foo/",
+				 ConfigParamDescr.VOLUME_NUMBER.getKey(),
+				 "123");
+    ArchivalUnit au = mbp.configureAu(auconf, null);
+    assertNotNull(au);
+    Configuration resconf = au.getConfiguration();
+    assertEquals(auconf, resconf);
+  }
+
+  public void testStopPlugin() {
+    assertEquals(0, mbp.configCbCnt);
+    ConfigurationUtil.setFromArgs("foo", "bar");
+    assertEquals(1, mbp.configCbCnt);
+    ConfigurationUtil.setFromArgs("foo", "baz");
+    assertEquals(2, mbp.configCbCnt);
+    mbp.stopPlugin();
+    ConfigurationUtil.setFromArgs("foo", "bat");
+    assertEquals(2, mbp.configCbCnt);
+  }
+    
+  public void testStopPluginWithAus() throws Exception {
+    assertEquals(0, mbp.configCbCnt);
+    ConfigurationUtil.setFromArgs("foo", "bar");
+    assertEquals(1, mbp.configCbCnt);
+
+    mbp.setConfigDescrs(ListUtil.list(ConfigParamDescr.BASE_URL,
+				      ConfigParamDescr.VOLUME_NUMBER));
+    Configuration auconf =
+      ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
+				 "http://example.com/foo/",
+				 ConfigParamDescr.VOLUME_NUMBER.getKey(),
+				 "123");
+    ArchivalUnit au = mbp.configureAu(auconf, null);
+
+    ConfigurationUtil.setFromArgs("foo", "baz");
+    assertEquals(2, mbp.configCbCnt);
+    mbp.stopPlugin();
+    ConfigurationUtil.setFromArgs("foo", "bat");
+    assertEquals(3, mbp.configCbCnt);
+    mbp.stopAu(au);
+    ConfigurationUtil.setFromArgs("foo", "bbb");
+    assertEquals(3, mbp.configCbCnt);
   }
 
   public void testGetAuConfigDescrs() {
@@ -99,7 +147,7 @@ public class TestBasePlugin extends LockssTestCase {
   }
 
   public void testInitTitleDB() {
-    String plugName = "org.lockss.plugin.base.TestBasePlugin$MyMockBasePlugin";
+    String plugName = "org.lockss.plugin.base.TestBasePlugin$MyBasePlugin";
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
     Properties p = new Properties();
     p.put("org.lockss.title.0.title", "Not me");
@@ -213,7 +261,7 @@ public class TestBasePlugin extends LockssTestCase {
         factory2.createFilteredInputStream(null, null, null)));
   }
 
-  private static class MyMockBasePlugin extends BasePlugin {
+  private static class MyBasePlugin extends BasePlugin {
     String name;
     String version;
     List configDescrs;
@@ -221,8 +269,9 @@ public class TestBasePlugin extends LockssTestCase {
     int factoryCacheMiss = 0;
     FilterRule rule = null;
     FilterFactory factory = null;
+    int configCbCnt = 0;
 
-    public MyMockBasePlugin() {
+    public MyBasePlugin() {
       super();
     }
 
@@ -238,6 +287,13 @@ public class TestBasePlugin extends LockssTestCase {
       this.configDescrs = configDescrs;
     }
 
+    @Override
+    public void setConfig(Configuration newConfig,
+			  Configuration prevConfig,
+			  Configuration.Differences changedKeys) {
+      configCbCnt++;
+      super.setConfig(newConfig, prevConfig, changedKeys);
+    }
 
     protected ArchivalUnit createAu0(Configuration auConfig) throws
         ConfigurationException {
