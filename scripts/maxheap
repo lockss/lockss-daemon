@@ -5,7 +5,7 @@
 sysctl -n hw.physmem | awk '{ \
 physmem = $1 ; \
 physmb = physmem / (1024 * 1024) ; \
-max = 768 ; \
+max = 1536 ; \
 if (physmb < 128) spare = 0; \
  else if (physmb < 256) spare = 32; \
  else if (physmb < 384) spare = 64; \
