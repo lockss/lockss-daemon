@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.50 2010-02-04 06:53:21 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.51 2010-03-14 08:09:03 tlipkis Exp $
  */
 
 /*
@@ -71,10 +71,22 @@ public class BlockingStreamComm
     PREFIX + "sslClientAuth";
   public static final boolean DEFAULT_USE_SSL_CLIENT_AUTH = true;
 
-  /** Name of managed keystore to use (see
-   * org.lockss.keyMgr.keystore.<i>id</i>.name) */
+  /** Name of managed keystore to use for both my private key and peers'
+   * public keys (see org.lockss.keyMgr.keystore.<i>id</i>.name).  Set
+   * either this, or both sslPrivateKeystoreName and
+   * sslPublicKeystoreName. */
   public static final String PARAM_SSL_KEYSTORE_NAME =
     PREFIX + "sslKeystoreName";
+
+  /** Name of managed keystore to use for my private key (see
+   * org.lockss.keyMgr.keystore.<i>id</i>.name). */
+  public static final String PARAM_SSL_PRIVATE_KEYSTORE_NAME =
+    PREFIX + "sslPrivateKeystoreName";
+
+  /** Name of managed keystore in which to look for peers' public keys (see
+   * org.lockss.keyMgr.keystore.<i>id</i>.name). */
+  public static final String PARAM_SSL_PUBLIC_KEYSTORE_NAME =
+    PREFIX + "sslPublicKeystoreName";
 
   /** SSL protocol to use **/
   public static final String PARAM_SSL_PROTOCOL = PREFIX + "sslProtocol";
@@ -237,8 +249,8 @@ public class BlockingStreamComm
 
   private boolean paramUseV3OverSsl = DEFAULT_USE_V3_OVER_SSL;
   private boolean paramSslClientAuth = DEFAULT_USE_SSL_CLIENT_AUTH;
-  private String paramSslKeyStoreName;
-  private String paramSslKeyStorePassword = null;
+  private String paramSslPrivateKeyStoreName;
+  private String paramSslPublicKeyStoreName;
   private String paramSslProtocol = DEFAULT_SSL_PROTOCOL;
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
   private long paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
@@ -949,11 +961,40 @@ public class BlockingStreamComm
       // already initialized
       return;
     }
-    if (changedKeys.contains(PARAM_SSL_KEYSTORE_NAME)) {
-      paramSslKeyStoreName = config.get(PARAM_SSL_KEYSTORE_NAME);
-      // The password for the keystore is the machine's FQDN.
-      paramSslKeyStorePassword = config.get("org.lockss.platform.fqdn", "");
-      log.debug("Using keystore " + paramSslKeyStoreName);
+
+    if (changedKeys.contains(PARAM_SSL_KEYSTORE_NAME)
+	|| changedKeys.contains(PARAM_SSL_PRIVATE_KEYSTORE_NAME)
+	|| changedKeys.contains(PARAM_SSL_PUBLIC_KEYSTORE_NAME)) {
+      String name = getOrNull(config, PARAM_SSL_KEYSTORE_NAME);
+      String priv = getOrNull(config, PARAM_SSL_PRIVATE_KEYSTORE_NAME);
+      String pub = getOrNull(config, PARAM_SSL_PUBLIC_KEYSTORE_NAME);
+      if (!StringUtil.isNullString(name)) {
+	paramSslPrivateKeyStoreName = name;
+	paramSslPublicKeyStoreName = name;
+      }
+      if (priv != null) {
+	if (name != null && !priv.equals(name)) {
+	  log.warning("Overriding " + PARAM_SSL_KEYSTORE_NAME + ": " + name +
+		      " with " + PARAM_SSL_PRIVATE_KEYSTORE_NAME + ": " + priv);
+	}
+	paramSslPrivateKeyStoreName = priv;
+      }
+      if (pub != null) {
+	if (name != null && !pub.equals(name)) {
+	  log.warning("Overriding " + PARAM_SSL_KEYSTORE_NAME + ": " + name +
+		      " with " + PARAM_SSL_PUBLIC_KEYSTORE_NAME + ": " + pub);
+	}
+	paramSslPublicKeyStoreName = pub;
+      }
+      if (StringUtil.equalStrings(paramSslPublicKeyStoreName,
+				  paramSslPrivateKeyStoreName)) {
+	// so can use == later
+	paramSslPrivateKeyStoreName = paramSslPublicKeyStoreName;
+	log.debug("Using keystore " + paramSslPrivateKeyStoreName);
+      } else {
+	log.debug("Using private keystore " + paramSslPrivateKeyStoreName
+		  + ", public keystore " + paramSslPublicKeyStoreName);
+      }
       sockFact = null;
     }
     if (changedKeys.contains(PARAM_SSL_PROTOCOL)) {
@@ -961,15 +1002,19 @@ public class BlockingStreamComm
       sockFact = null;
     }
     KeyManagerFactory kmf =
-      keystoreMgr.getKeyManagerFactory(paramSslKeyStoreName);
+      keystoreMgr.getKeyManagerFactory(paramSslPrivateKeyStoreName);
     if (kmf == null) {
       throw new IllegalArgumentException("Keystore not found: "
-					 + paramSslKeyStoreName);
+					 + paramSslPrivateKeyStoreName);
     }
     KeyManager[] kma = kmf.getKeyManagers();
 
     TrustManagerFactory tmf =
-      keystoreMgr.getTrustManagerFactory(paramSslKeyStoreName);
+      keystoreMgr.getTrustManagerFactory(paramSslPublicKeyStoreName);
+    if (tmf == null) {
+      throw new IllegalArgumentException("Keystore not found: "
+					 + paramSslPublicKeyStoreName);
+    }
     TrustManager[] tma = tmf.getTrustManagers();
 
     // Now create an SSLContext from the KeyManager
@@ -994,6 +1039,11 @@ public class BlockingStreamComm
       log.error("Creating SSL context threw " + ex);
       sslContext = null;
     }
+  }
+
+  String getOrNull(Configuration config, String param) {
+    String val = config.get(param);
+    return "".equals(val) ? null : val;
   }
 
   // private debug output of keystore

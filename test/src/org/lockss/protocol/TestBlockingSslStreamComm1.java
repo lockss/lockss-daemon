@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.12 2009-11-03 05:56:05 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.13 2010-03-14 08:09:03 tlipkis Exp $
  */
 
 /*
@@ -131,15 +131,6 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     return KeyStoreUtil.createKeyStore(p);
   }
 
-  // Harness to test that clientAuth works as intended.  I.e., if either or
-  // both sides require client auth, connections in either direction are
-  // successful only if the certificate is verified.
-
-  void createKeystores(File dir, List hostnames) throws Exception {
-    KeyStoreUtil.createPLNKeyStores(null, dir, hostnames,
-				    MiscTestUtil.getSecureRandom());
-  }
-
   // Ensure SO_TIMEOUT is set before SSL handshake
   public void testReadTimeoutDuringHandshake() throws IOException {
     TimeBase.setSimulated(1000);
@@ -169,6 +160,20 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     assertEquals(0, getRcvChannels(comm1).size());
   }
 
+  // Harness to test that clientAuth works as intended.  I.e., if either or
+  // both sides require client auth, connections in either direction are
+  // successful only if the certificate is verified.
+
+  void createKeystores(File dir, List hostnames) throws Exception {
+    KeyStoreUtil.createPLNKeyStores(null, dir, hostnames,
+				    MiscTestUtil.getSecureRandom());
+  }
+
+  void createKeystoresSharedPublic(File dir, List hostnames, File pubFile)
+      throws Exception {
+    KeyStoreUtil.createSharedPLNKeyStores(dir, hostnames, pubFile, "pubpass",
+					  MiscTestUtil.getSecureRandom());
+  }
 
   public void testClientAuth(Properties comm1Props,
 			     Properties comm2Props,
@@ -187,7 +192,43 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 		     null, new File(keyStoreDir, "bad1.pass").toString());
     cprops.setProperty(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
     ConfigurationUtil.addFromProps(cprops);
+    testClientAuth0(comm1Props, comm2Props, expectedSuccess);
+  }
     
+  public void testClientAuthShared(Properties comm1Props,
+				   Properties comm2Props,
+				   boolean expectedSuccess)
+      throws Exception {
+    File pubFile = new File(keyStoreDir, "pubkeys.ks");
+    File badPub = new File(keyStoreDir, "badpubkeys.ks");
+    createKeystoresSharedPublic(keyStoreDir,
+				ListUtil.list("host1", "host2"),
+				pubFile);
+    createKeystoresSharedPublic(keyStoreDir,
+				ListUtil.list("bad1"),
+				badPub);
+    setKeyStoreProps(cprops, "ii11", "cks1",
+		     new File(keyStoreDir, "host1.jceks").toString(), "host1",
+		     null, new File(keyStoreDir, "host1.pass").toString());
+    setKeyStoreProps(cprops, "ii22", "cks2",
+		     new File(keyStoreDir, "host2.jceks").toString(), "host2",
+		     null, new File(keyStoreDir, "host2.pass").toString());
+    setKeyStoreProps(cprops, "ii33", "cks3",
+		     new File(keyStoreDir, "bad1.jceks").toString(), "bad1",
+		     null, new File(keyStoreDir, "bad1.pass").toString());
+    setKeyStoreProps(cprops, "ii44", "pubks1", pubFile.toString(), "pubpass",
+		     "pubpass", null);
+    setKeyStoreProps(cprops, "ii55", "pubks2", badPub.toString(), "pubpass",
+		     "pubpass", null);
+    cprops.setProperty(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "5000");
+    ConfigurationUtil.addFromProps(cprops);
+    testClientAuth0(comm1Props, comm2Props, expectedSuccess);
+  }
+    
+  public void testClientAuth0(Properties comm1Props,
+			      Properties comm2Props,
+			      boolean expectedSuccess)
+      throws Exception {
     comm1 = new MyBlockingStreamComm(setupPid(1));
     comm2 = new MyBlockingStreamComm(setupPid(2));
     SimpleQueue hsq1 = new SimpleQueue.Fifo();
@@ -258,6 +299,10 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     BlockingStreamComm.PARAM_USE_SSL_CLIENT_AUTH;
   static final String PARAM_SSL_KEYSTORE_NAME = 
     BlockingStreamComm.PARAM_SSL_KEYSTORE_NAME;
+  static final String PARAM_SSL_PRIVATE_KEYSTORE_NAME = 
+    BlockingStreamComm.PARAM_SSL_PRIVATE_KEYSTORE_NAME;
+  static final String PARAM_SSL_PUBLIC_KEYSTORE_NAME = 
+    BlockingStreamComm.PARAM_SSL_PUBLIC_KEYSTORE_NAME;
 
 
   // Valid certs, both require client auth, should connect
@@ -271,6 +316,22 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     testClientAuth(p1, p2, true);
   }
 
+  // Valid certs in shared keystore, both require client auth, should connect
+  public void testClientAuthOkShared() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_PRIVATE_KEYSTORE_NAME, "cks1",
+				      PARAM_SSL_PUBLIC_KEYSTORE_NAME, "pubks1");
+    // exercise the logic where PARAM_SSL_KEYSTORE_NAME isn't set
+    p1.put(PARAM_SSL_KEYSTORE_NAME, "");
+
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_PRIVATE_KEYSTORE_NAME, "cks2",
+				      PARAM_SSL_PUBLIC_KEYSTORE_NAME, "pubks1");
+    testClientAuthShared(p1, p2, true);
+  }
+
   // Invalid certs, both require client auth, should not connect
   public void testClientAuthFailCert() throws Exception {
     Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
@@ -280,6 +341,34 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 				      PARAM_USE_SSL_CLIENT_AUTH, "true",
 				      PARAM_SSL_KEYSTORE_NAME, "cks3");
     testClientAuth(p1, p2, false);
+  }
+
+  // Invalid certs in shared keystore, both require client auth, should not
+  // connect
+  public void testClientAuthFailSharedBadPub() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_PRIVATE_KEYSTORE_NAME, "cks1",
+				      PARAM_SSL_PUBLIC_KEYSTORE_NAME, "pubks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_PRIVATE_KEYSTORE_NAME, "cks2",
+				      PARAM_SSL_PUBLIC_KEYSTORE_NAME, "pubks2");
+    testClientAuthShared(p1, p2, false);
+  }
+
+  // Invalid certs in shared keystore, both require client auth, should not
+  // connect
+  public void testClientAuthFailSharedBadClient() throws Exception {
+    Properties p1 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_PRIVATE_KEYSTORE_NAME, "cks1",
+				      PARAM_SSL_PUBLIC_KEYSTORE_NAME, "pubks1");
+    Properties p2 = PropUtil.fromArgs(PARAM_USE_V3_OVER_SSL, "true",
+				      PARAM_USE_SSL_CLIENT_AUTH, "true",
+				      PARAM_SSL_PRIVATE_KEYSTORE_NAME, "cks3",
+				      PARAM_SSL_PUBLIC_KEYSTORE_NAME, "pubks1");
+    testClientAuthShared(p1, p2, false);
   }
 
   // Valid certs, Only sender requires client auth, should connect
