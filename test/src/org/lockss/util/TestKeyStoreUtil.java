@@ -1,5 +1,5 @@
 /*
- * $Id: TestKeyStoreUtil.java,v 1.4 2009-10-19 05:28:42 tlipkis Exp $
+ * $Id: TestKeyStoreUtil.java,v 1.5 2010-03-14 08:09:45 tlipkis Exp $
  */
 
 /*
@@ -36,8 +36,10 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import java.security.*;
-import java.security.cert.*;
+import java.security.cert.Certificate;
 import javax.net.ssl.*;
+
+import org.apache.commons.collections.ListUtils;
 
 import org.lockss.test.*;
 import org.lockss.config.*;
@@ -136,5 +138,82 @@ public class TestKeyStoreUtil extends LockssTestCase {
     ks.load(fis, passwd.toCharArray());
     return ks;
   }
+
+  public void testCreateSharedPLNKeyStores() throws Exception {
+    List<String> hosts = ListUtil.list("host1", "host2.foo.bar", "host3");
+    List<String> hosts2 = ListUtil.list("host3", "host4");
+    File dir = getTempDir();
+    File pub = new File(dir, "pub.ks");
+    KeyStoreUtil.createSharedPLNKeyStores(dir, hosts, pub, "pubpass",
+					  MiscTestUtil.getSecureRandom());
+    assertPubKs(pub, "pubpass", hosts);
+    for (String host : hosts) {
+      assertPrivateKs(new File(dir, host + ".jceks"),
+		      StringUtil.fromFile(new File(dir, host + ".pass")),
+		      host);
+    }
+    KeyStore pubks1 = loadKeyStore("jceks", new File(dir, "pub.ks"),
+				   "pubpass");
+
+    Certificate host1cert1 = pubks1.getCertificate("host1.crt");
+    Certificate host3cert1 = pubks1.getCertificate("host3.crt");
+
+    String host1priv1 = StringUtil.fromFile(new File(dir, "host1.jceks"));
+    String host3priv1 = StringUtil.fromFile(new File(dir, "host3.jceks"));
+
+    // Now add host4 and generate a new key for host3
+    KeyStoreUtil.createSharedPLNKeyStores(dir, hosts2, pub, "pubpass",
+					  MiscTestUtil.getSecureRandom());
+    List<String> both = ListUtils.sum(hosts, hosts2);
+    assertPubKs(pub, "pubpass", both);
+    for (String host : both) {
+      assertPrivateKs(new File(dir, host + ".jceks"),
+		      StringUtil.fromFile(new File(dir, host + ".pass")),
+		      host);
+    }
+    KeyStore pubks2 = loadKeyStore("jceks", new File(dir, "pub.ks"),
+				   "pubpass");
+    // host1 should have the same cert, host3 not
+    Certificate host1cert2 = pubks2.getCertificate("host1.crt");
+    Certificate host3cert2 = pubks2.getCertificate("host3.crt");
+    assertEquals(host1cert1, host1cert2);
+    assertNotEquals(host3cert1, host3cert2);
+
+    // host1's private key file should be the same, host3's not
+    String host1priv2 = StringUtil.fromFile(new File(dir, "host1.jceks"));
+    String host3priv2 = StringUtil.fromFile(new File(dir, "host3.jceks"));
+    assertEquals(host1priv1, host1priv2);
+    assertNotEquals(host3priv1, host3priv2);
+  }
+
+  void assertPubKs(File file, String pass, List<String> hosts)
+      throws Exception {
+    KeyStore ks = loadKeyStore("jceks", file, pass);
+    List aliases =
+      ListUtil.fromIterator(new EnumerationIterator(ks.aliases()));
+    assertEquals(hosts.size(), aliases.size());
+    for (String host : hosts) {
+      String alias = host + ".crt";
+      Certificate cert = ks.getCertificate(alias);
+      assertNotNull(cert);
+      assertEquals("X.509", cert.getType());
+    }
+  }
+
+  void assertPrivateKs(File file, String pass, String alias) throws Exception {
+    KeyStore ks = loadKeyStore("jceks", file, alias);
+    List aliases =
+      ListUtil.fromIterator(new EnumerationIterator(ks.aliases()));
+    assertEquals(2, aliases.size());
+    Certificate cert = ks.getCertificate(alias + ".crt");
+    assertNotNull(cert);
+    assertEquals("X.509", cert.getType());
+    assertTrue(ks.isKeyEntry(alias + ".key"));
+    assertTrue(ks.isCertificateEntry(alias + ".crt"));
+    Key key = ks.getKey(alias + ".key", pass.toCharArray());
+    assertNotNull(key);
+    assertEquals("RSA", key.getAlgorithm());
+  }
+
 }
 

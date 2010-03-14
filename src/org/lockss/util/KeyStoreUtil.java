@@ -1,5 +1,5 @@
 /*
- * $Id: KeyStoreUtil.java,v 1.7 2009-10-19 05:28:42 tlipkis Exp $
+ * $Id: KeyStoreUtil.java,v 1.8 2010-03-14 08:09:45 tlipkis Exp $
  */
 
 /*
@@ -142,7 +142,16 @@ public class KeyStoreUtil {
 	     NoSuchAlgorithmException,
 	     CertificateException,
 	     IOException {
-    File keyStoreFile = new File(filename);
+    storeKeyStore(keyStore, new File(filename), keyStorePassword);
+  }
+
+  static void storeKeyStore(KeyStore keyStore,
+			    File keyStoreFile, String keyStorePassword)
+      throws FileNotFoundException,
+	     KeyStoreException,
+	     NoSuchAlgorithmException,
+	     CertificateException,
+	     IOException {
     OutputStream outs = null;
     try {
       log.debug3("Storing KeyStore in " + keyStoreFile);
@@ -293,10 +302,113 @@ public class KeyStoreUtil {
     }
   }
 
+  public static void createSharedPLNKeyStores(File dir,
+					      List hostlist,
+					      File pubKeyStoreFile,
+					      String pubKeyStorePassword,
+					      SecureRandom rng)
+      throws Exception {
+
+    String[] hosts = (String[])hostlist.toArray(new String[0]);
+    KeyStore[] ks = new KeyStore[hosts.length];
+    String[] pwd = new String[hosts.length];
+
+    for (int i = 0; i < hosts.length; i++) {
+      ks[i] = null;
+      pwd[i] = null;
+    }
+    /*
+     * Create or read the public keystore
+     */
+    KeyStore pubStore = createKeystore0();
+    if (pubKeyStoreFile.exists()) {
+      FileInputStream fis = new FileInputStream(pubKeyStoreFile);
+      try {
+	log.debug("Trying to read PubStore from " + pubKeyStoreFile);
+	pubStore.load(fis, pubKeyStorePassword.toCharArray());
+      } catch (Exception e) {
+	log.debug("ks.load(" + pubKeyStoreFile + ")", e);
+	throw e;
+      } finally {
+	IOUtil.safeClose(fis);
+      }
+    } else {
+      pubStore.load(null, pubKeyStorePassword.toCharArray());
+    }      
+    /*
+     * Create a password for each machine's keystore
+     */
+    for (int i = 0; i < hosts.length; i++) {
+      if (pwd[i] == null) {
+	pwd[i] = randomString(20, rng);
+      }
+    }
+    /*
+     * Create a keystore for each machine with a certificate
+     * and a private key.
+     */
+    for (int i = 0; i <hosts.length; i++) {
+      String host = hosts[i];
+      String certAlias = host + crtSuffix;
+      Properties p = new Properties();
+      p.put(PROP_KEY_ALIAS, host + keySuffix);
+      p.put(PROP_CERT_ALIAS, certAlias);
+      p.put(PROP_KEY_PASSWORD, pwd[i]);
+      p.put(PROP_KEYSTORE_PASSWORD, host);
+      ks[i] = createKeyStore(p);
+
+      /*
+       * Add its certificate to the public keystore.
+       */
+      java.security.cert.Certificate cert = ks[i].getCertificate(certAlias);
+      log.debug("About to store " + certAlias + " in keyStore for " +
+		hosts[i]);
+      try {
+	pubStore.setCertificateEntry(certAlias, cert);
+      } catch (KeyStoreException e) {
+	log.debug("pubStore.setCertificateEntry(" + certAlias + "," +
+		  host + ") threw " + e);
+	throw e;
+      }
+    }
+    /*
+     * Write out each keyStore and its password
+     */
+    for (int i = 0; i < hosts.length; i++) {
+      storeKeyStore(ks[i], new File(dir, hosts[i] + ".jceks"), hosts[i]);
+      writePasswordFile(new File(dir, hosts[i] + ".pass"), pwd[i]);
+    }
+    storeKeyStore(pubStore, pubKeyStoreFile, pubKeyStorePassword);
+
+    if (log.isDebug()) {
+      for (int i = 0; i < hosts.length; i++) {
+	listKeyStore(hosts, ks, pwd, i);
+      }
+    }
+  }
+
   private static String keyStoreType[] = { "JCEKS", "JKS" };
   private static String keyStoreSPI[]  = { "SunJCE", null };
 
   private static KeyStore createKeystore(String domainName, String password)
+      throws CertificateException,
+	     IOException,
+	     InvalidKeyException,
+	     KeyStoreException,
+	     NoSuchAlgorithmException,
+	     NoSuchProviderException,
+	     SignatureException,
+	     UnrecoverableKeyException {
+    KeyStore ks = createKeystore0();
+    if (ks == null) {
+      log.error("No key store available");
+      return null;  // will fail subsequently
+    }
+    initializeKeyStore(ks, domainName, password);
+    return ks;
+  }
+
+  private static KeyStore createKeystore0()
       throws CertificateException,
 	     IOException,
 	     InvalidKeyException,
@@ -327,13 +439,6 @@ public class KeyStoreUtil {
 	break;
       }
     }
-    if (ks == null) {
-      log.error("No key store available");
-      return null;  // will fail subsequently
-    }
-    String keyStoreFile = domainName + ".jceks";
-    String keyStorePassword = domainName;
-    initializeKeyStore(ks, domainName, password);
     return ks;
   }
 
@@ -462,6 +567,19 @@ public class KeyStoreUtil {
     }
   }
 
+  private static void writePasswordFile(File passwordFile,
+					String password) {
+    try {
+      log.debug("Writing Password to " + passwordFile);
+      PrintWriter pw = new PrintWriter(new FileOutputStream(passwordFile));
+      pw.print(password);
+      pw.close();
+      log.debug("Done storing Password in " + passwordFile);
+    } catch (Exception e) {
+      log.debug("ks.store(" + passwordFile + ")", e);
+    }
+  }
+
   private static void writeKeyStore(String domainNames[],
 				    KeyStore kss[],
 				    String passwords[],
@@ -490,15 +608,7 @@ public class KeyStoreUtil {
     } catch (Exception e) {
       log.debug("ks.store(" + keyStoreFile + ") threw " + e);
     }
-    try {
-      log.debug("Writing Password to " + passwordFile);
-      PrintWriter pw = new PrintWriter(new FileOutputStream(passwordFile));
-      pw.print(password);
-      pw.close();
-      log.debug("Done storing Password in " + passwordFile);
-    } catch (Exception e) {
-      log.debug("ks.store(" + passwordFile + ") threw " + e);
-    }
+    writePasswordFile(passwordFile, password);
   }
 
   private static void readKeyStore(String domainNames[],
@@ -626,7 +736,7 @@ public class KeyStoreUtil {
         String alias = (String) en.nextElement();
 	log.debug("Next alias " + alias);
         if (kss[i].isCertificateEntry(alias)) {
-	  log.debug("About to Certificate");
+	  log.debug("About to getCertificate");
           java.security.cert.Certificate cert = kss[i].getCertificate(alias);
           if (cert == null) {
             log.debug(alias + " null cert chain");

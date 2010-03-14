@@ -1,5 +1,5 @@
 /*
- * $Id: EditKeyStores.java,v 1.4 2009-10-08 02:12:03 tlipkis Exp $
+ * $Id: EditKeyStores.java,v 1.5 2010-03-14 08:09:45 tlipkis Exp $
  */
 
 /*
@@ -73,13 +73,25 @@ public class EditKeyStores {
   }
 
   private static void usage() {
-    System.out.println("Usage: [-i inputDir] [-o outputDir] host1 host2 ...");
+    System.out.println("Usage:");
+    System.out.println("   EditKeyStores [-i inDir] [-o outDir] host1 host2 ...");
+    System.out.println("      or");
+    System.out.println("   EditKeyStores -s pub-keystore [-p pub-password] [-o outDir] host1 host2 ...");
+    System.out.println("");
+    System.out.println("Creates, in outDir, a private key for each host.  In the first variant");
+    System.out.println("each keystore contains the host's private key and public certificates");
+    System.out.println("for all the other hosts.  In the second variant the public certificates");
+    System.out.println("are written into a shared, public keystore and each hosts keystore contains");
+    System.out.println("only its own private key and public cert.");
+
     System.exit(0);
   }
 
   public static void main(String[] args) {
     String inDir = "/tmp/input";
     String outDir = "/tmp/output";
+    File pubFile = null;
+    String pubPass = null;
     List hostlist = new ArrayList();
     boolean tflag = false;
 
@@ -109,6 +121,15 @@ public class EditKeyStores {
 	    log.debug("Output directory " + outDir);
 	    continue;
 	  }
+	  if ("-s".equals(args[ix])) {
+	    pubFile = new File(args[++ix]);
+	    log.debug("Public keystore " + pubFile);
+	    continue;
+	  }
+	  if ("-p".equals(args[ix])) {
+	    pubPass = args[++ix];
+	    continue;
+	  }
 	  usage();
 	} else {
 	  hostlist.add(args[ix]);
@@ -126,9 +147,20 @@ public class EditKeyStores {
     }
     try {
       SecureRandom rng = tflag ? testOnlySecureRandom : getSecureRandom();
-      KeyStoreUtil.createPLNKeyStores(new File(inDir), outDirFile,
-				      hostlist, rng);
-      log.info("Keystores generated in " + outDirFile);
+      if (pubFile != null) {
+	if (StringUtil.isNullString(pubPass)) {
+	  log.info("No public keystore supplied, using \"password\"");
+	  pubPass = "password";
+	}
+	KeyStoreUtil.createSharedPLNKeyStores(outDirFile, hostlist,
+					      pubFile, pubPass, rng);
+	log.info("Keystores generated in " + outDirFile
+		 + ", public keystore in " + pubFile);
+      } else {
+	KeyStoreUtil.createPLNKeyStores(new File(inDir), outDirFile,
+					hostlist, rng);
+	log.info("Keystores generated in " + outDirFile);
+      }
     } catch (Exception e) {
       log.error("Failed, keystores not generated: " + e.toString());
       if (!tflag) {

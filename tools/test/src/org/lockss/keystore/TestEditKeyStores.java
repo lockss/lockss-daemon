@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditKeyStores.java,v 1.1 2009-10-08 02:12:03 tlipkis Exp $
+ * $Id: TestEditKeyStores.java,v 1.2 2010-03-14 08:09:45 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,24 @@ public class TestEditKeyStores extends LockssTestCase {
     EditKeyStores.main(args);
     // Check that files were created.  Should try to load them.
     assertTrue("Output dir " + outdir + " wasn't created", outdir.exists());
+    assertFiles(outdir, HOST1);
+    assertFiles(outdir, HOST2);
+  }
+
+  public void testEditKeyStoresShared() throws Exception {
+    File tempDir = getTempDir();
+    File outdir = new File(tempDir, "oot");
+    File pub = new File(tempDir, "pubkeys.jceks");
+    EditKeyStores.setTestOnlySecureRandom(MiscTestUtil.getSecureRandom());
+    String[] args = {"-s", pub.toString(),
+		     "-p", "pubpasstartout",
+		     "-o", outdir.toString(),
+		     "-t",
+		     HOST1, HOST2};
+    EditKeyStores.main(args);
+    // Check that files were created.  Should try to load them.
+    assertTrue("Output dir " + outdir + " wasn't created", outdir.exists());
+    assertTrue("Pub keystore " + pub + " wasn't created", pub.exists());
     assertFiles(outdir, HOST1);
     assertFiles(outdir, HOST2);
   }
