@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.5 2009-08-09 07:39:03 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.6 2010-03-14 08:08:20 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import java.security.*;
 import java.security.cert.*;
@@ -46,10 +47,13 @@ import org.lockss.config.*;
 public class LockssKeyStore {
   protected static Logger log = Logger.getLogger("LockssKeyStore");
 
+  public static  enum LocationType {File, Resource, Url};
+
   String name;
   String type;
   String provider;
-  String filename;
+  String location;
+  LocationType ltype;
   String password;
   String keyPassword;
   String keyPasswordFile;
@@ -99,15 +103,29 @@ public class LockssKeyStore {
     provider = val;
   }
 
-  String getFilename() {
-    return filename;
+  String getLocation() {
+    return location;
   }
 
-  void setFilename(String val) {
-    filename = val;
+  void setLocation(String val, LocationType ltype) {
+    location = val;
+    this.ltype = ltype;
   }
+
+  LocationType getLocationType() {
+    return ltype;
+  }
+
+  public boolean isSameLocation(LockssKeyStore o) {
+    return o != null
+      && getLocationType().equals(o.getLocationType())
+      && getLocation().equals(o.getLocation());
+  }      
 
   void setMayCreate(boolean val) {
+    if (val && ltype != LocationType.File) {
+      throw new IllegalStateException("Only KeyStore's of type File can be created");
+    }
     mayCreate = val;
   }
 
@@ -124,6 +142,9 @@ public class LockssKeyStore {
   }
 
   KeyManagerFactory getKeyManagerFactory() {
+    if (keyPassword == null) {
+      throw new IllegalStateException("No key password supplied; can't get KeyManagerFactory");
+    }
     return kmf;
   }
 
@@ -142,15 +163,20 @@ public class LockssKeyStore {
     }
     check();
     try {
-      if (keyPassword == null) {
+      if (keyPassword == null && keyPasswordFile != null) {
 	keyPassword = readPasswdFile();
       }
-      File file = new File(filename);
-      if (mayCreate && !file.exists()) {
-	createKeyStore();
+      if (mayCreate) {
+	File file = new File(location);
+	if (!file.exists()) {
+	  createKeyStore();
+	}
       }
       loadKeyStore();
-      createKeyManagerFactory();
+      // Create KeyManagerFactory iff a key password was supplied.
+      if (keyPassword != null) {
+	createKeyManagerFactory();
+      }
       createTrustManagerFactory();
       loaded = true;
       log.info("Loaded keystore: " + name);
@@ -162,14 +188,15 @@ public class LockssKeyStore {
 
   // check for required params
   void check() {
-    if (StringUtil.isNullString(filename))
-      throw new NullPointerException("filename must be a non-null string");
+    if (StringUtil.isNullString(location))
+      throw new NullPointerException("location must be a non-null string");
     if (StringUtil.isNullString(password))
       throw new NullPointerException("password must be a non-null string");
-    if (StringUtil.isNullString(keyPassword)
-	&& StringUtil.isNullString(keyPasswordFile))
-      throw new NullPointerException("keyPassword or keyPasswordFile must be"
-				     + " a non-null string");
+    // This is ok for keystores with just public certs
+//     if (StringUtil.isNullString(keyPassword)
+// 	&& StringUtil.isNullString(keyPasswordFile))
+//       throw new NullPointerException("keyPassword or keyPasswordFile must be"
+// 				     + " a non-null string");
   }
 
   /** Read password from file, then overwrite and delete file */
@@ -192,14 +219,13 @@ public class LockssKeyStore {
 	IOUtil.safeClose(fis);
       }
     } finally {
-      overwriteAndDelete(keyPasswordFile, len);
+      overwriteAndDelete(file, len);
     }
     return new String(pwdChars);
   }
 
   /** Overwrite and delete file, trap and log any exceptions */
-  void overwriteAndDelete(String filename, int len) {
-    File file = new File(filename);
+  void overwriteAndDelete(File file, int len) {
     OutputStream fos = null;
     try {
       fos = new FileOutputStream(file);
@@ -224,13 +250,13 @@ public class LockssKeyStore {
 	     NoSuchProviderException,
 	     SignatureException,
 	     UnrecoverableKeyException {
-    log.info("Creating keystore: " + filename);
+    log.info("Creating keystore: " + location);
     String fqdn = ConfigManager.getPlatformHostname();
     if (StringUtil.isNullString(fqdn)) {
       fqdn = "unknown";
     }
     Properties p = new Properties();
-    p.put(KeyStoreUtil.PROP_KEYSTORE_FILE, getFilename());
+    p.put(KeyStoreUtil.PROP_KEYSTORE_FILE, getLocation());
     p.put(KeyStoreUtil.PROP_KEYSTORE_TYPE, getType());
     p.put(KeyStoreUtil.PROP_KEYSTORE_PROVIDER, getProvider());
     p.put(KeyStoreUtil.PROP_KEY_ALIAS, fqdn + ".key");
@@ -262,12 +288,36 @@ public class LockssKeyStore {
       } else {
 	ks = KeyStore.getInstance(getType(), getProvider());
       }
-      ins = new BufferedInputStream(new FileInputStream(new File(filename)));
+      ins = getInputStream();
       ks.load(ins, password.toCharArray());
       keystore = ks;
     } finally {
       IOUtil.safeClose(ins);
     }
+  }
+
+  InputStream getInputStream() throws IOException {
+    InputStream ins;
+    switch (ltype) {
+    case File:
+      ins = new FileInputStream(new File(location));
+      break;
+    case Resource:
+      ins = getClass().getClassLoader().getResourceAsStream(location);
+      break;
+    case Url:
+      if (UrlUtil.isHttpUrl(location)) {
+	ins = UrlUtil.openInputStream(location);
+      } else {
+	URL keystoreUrl = new URL(location);
+	ins = keystoreUrl.openStream();
+      }
+      break;
+    default:
+      throw new IllegalStateException("Impossible keystore location type: "
+				      + ltype);
+    }
+    return new BufferedInputStream(ins);
   }
 
   /** Create a KeyManagerFactory from the keystore and key password */

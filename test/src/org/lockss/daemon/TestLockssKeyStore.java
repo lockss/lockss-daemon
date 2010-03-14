@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.3 2009-06-15 07:52:07 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.4 2010-03-14 08:08:20 tlipkis Exp $
  */
 
 /*
@@ -32,8 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.util.*;
 import java.io.*;
+import java.net.*;
+import java.util.*;
 import java.security.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -44,6 +45,8 @@ import org.lockss.test.*;
 import sun.security.x509.*;
 import sun.security.provider.IdentityDatabase;
 import sun.security.provider.SystemSigner;
+
+import static org.lockss.daemon.LockssKeyStore.LocationType;
 
 public class TestLockssKeyStore extends LockssTestCase {
 
@@ -60,7 +63,7 @@ public class TestLockssKeyStore extends LockssTestCase {
   LockssKeyStore createFromProp(String name, String file,
 				String pass, String keyPass) {
     LockssKeyStore lk = new LockssKeyStore(name);
-    lk.setFilename(file);
+    lk.setLocation(file, LocationType.File);
 //     lk.setType(config.get(KEYSTORE_PARAM_TYPE, defaultKeyStoreType));
     lk.setPassword(pass);
     lk.setKeyPassword(keyPass);
@@ -70,8 +73,27 @@ public class TestLockssKeyStore extends LockssTestCase {
 
   LockssKeyStore createFromFile(String name, String file,
 				String pass, String keyPassFile) {
+    return createFromLocation(name, file, LocationType.File,
+			      pass, keyPassFile);
+  }
+
+  LockssKeyStore createFromResource(String name, String res,
+				    String pass, String keyPassFile) {
+    return createFromLocation(name, res, LocationType.Resource,
+			      pass, keyPassFile);
+  }
+
+  LockssKeyStore createFromUrl(String name, String url,
+				    String pass, String keyPassFile) {
+    return createFromLocation(name, url, LocationType.Url,
+			      pass, keyPassFile);
+  }
+
+  LockssKeyStore createFromLocation(String name,
+				    String location, LocationType ltype,
+				    String pass, String keyPassFile) {
     LockssKeyStore lk = new LockssKeyStore(name);
-    lk.setFilename(file);
+    lk.setLocation(location, ltype);
 //     lk.setType(config.get(KEYSTORE_PARAM_TYPE, defaultKeyStoreType));
     lk.setPassword(pass);
     lk.setKeyPasswordFile(keyPassFile);
@@ -201,5 +223,41 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertEquals(SetUtil.set("fq.dn.key", "fq.dn.cert"),
 		 SetUtil.theSet(aliases));
   }
+
+  public void testFromResource() throws Exception {
+    String res = "org/lockss/test/public.keystore";
+    LockssKeyStore lk = createFromResource("lkone", res, "f00bar", null);
+    lk.load();
+    try {
+      lk.getKeyManagerFactory();
+      fail("Attempt to get KeyManagerFactory when no key password should fail");
+    } catch (IllegalStateException e) {
+    }
+    assertNotNull(lk.getTrustManagerFactory());
+    Collection aliases =
+      ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
+    assertEquals(SetUtil.set("expired", "goodguy", "future", "good"),
+		 SetUtil.theSet(aliases));
+  }
+
+  public void testFromUrl() throws Exception {
+    String res = "org/lockss/test/public.keystore";
+    URL url = getClass().getClassLoader().getResource(res);
+    LockssKeyStore lk = createFromUrl("lkone", url.toExternalForm(),
+				      "f00bar", null);
+    lk.load();
+    try {
+      lk.getKeyManagerFactory();
+      fail("Attempt to get KeyManagerFactory when no key password should fail");
+    } catch (IllegalStateException e) {
+    }
+    assertNotNull(lk.getTrustManagerFactory());
+    Collection aliases =
+      ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
+    assertEquals(SetUtil.set("expired", "goodguy", "future", "good"),
+		 SetUtil.theSet(aliases));
+  }
+
+
 
 }

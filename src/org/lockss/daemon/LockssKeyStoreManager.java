@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStoreManager.java,v 1.4 2009-07-13 06:52:06 tlipkis Exp $
+ * $Id: LockssKeyStoreManager.java,v 1.5 2010-03-14 08:08:20 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import javax.net.ssl.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
+import static org.lockss.daemon.LockssKeyStore.LocationType;
 
 /** Central repository of loaded keystores
  */
@@ -66,8 +67,12 @@ public class LockssKeyStoreManager
 
   /** keystore name, used by clients to refer to it */
   public static final String KEYSTORE_PARAM_NAME = "name";
-  /** keystore file */
+  /** keystore file.  Only one of file, resource or url should be set */
   public static final String KEYSTORE_PARAM_FILE = "file";
+  /** keystore resource.  Only one of file, resource or url should be set */
+  public static final String KEYSTORE_PARAM_RESOURCE = "resource";
+  /** keystore url.  Only one of file, resource or url should be set */
+  public static final String KEYSTORE_PARAM_URL = "url";
   /** keystore type */
   public static final String KEYSTORE_PARAM_TYPE = "type";
   /** keystore provider */
@@ -92,9 +97,15 @@ public class LockssKeyStoreManager
   /** Name by which daemon component(s) refer to this keystore */
   public static final String PARAM_KEYSTORE_NAME =
     DOC_PREFIX + KEYSTORE_PARAM_NAME;
-  /** Keystore filename */
+  /** Keystore filename.  Only one of file, resource or url should be set */
   public static final String PARAM_KEYSTORE_FILE =
     DOC_PREFIX + KEYSTORE_PARAM_FILE;
+  /** Keystore resource.  Only one of file, resource or url should be set */
+  public static final String PARAM_KEYSTORE_RESOURCE =
+    DOC_PREFIX + KEYSTORE_PARAM_RESOURCE;
+  /** Keystore url.  Only one of file, resource or url should be set */
+  public static final String PARAM_KEYSTORE_URL =
+    DOC_PREFIX + KEYSTORE_PARAM_URL;
   /** Keystore type (JKS, JCEKS, etc.) */
   public static final String PARAM_KEYSTORE_TYPE =
     DOC_PREFIX + KEYSTORE_PARAM_TYPE;
@@ -185,7 +196,7 @@ public class LockssKeyStoreManager
 	  continue;
 	}
 	LockssKeyStore old = keystoreMap.get(name);
-	if (old != null && !old.getFilename().equals(lk.getFilename())) {
+	if (lk.isSameLocation(old)) {
 	  log.error("Duplicate keystore definition: " + oneKs);
 	  log.error("Using original definition: "
 		    + keystoreMap.get(name));
@@ -206,7 +217,19 @@ public class LockssKeyStoreManager
     log.debug2("Creating LockssKeyStore from config: " + config);
     String name = config.get(KEYSTORE_PARAM_NAME);
     LockssKeyStore lk = new LockssKeyStore(name);
-    lk.setFilename(config.get(KEYSTORE_PARAM_FILE));
+
+    String file = config.get(KEYSTORE_PARAM_FILE);
+    String resource = config.get(KEYSTORE_PARAM_RESOURCE);
+    String url = config.get(KEYSTORE_PARAM_URL);
+
+    if (!StringUtil.isNullString(file)) {
+      lk.setLocation(file, LocationType.File);
+    } else if (!StringUtil.isNullString(resource)) {
+      lk.setLocation(file, LocationType.Resource);
+    } else if (!StringUtil.isNullString(url)) {
+      lk.setLocation(file, LocationType.Url);
+    }
+
     lk.setType(config.get(KEYSTORE_PARAM_TYPE, defaultKeyStoreType));
     lk.setProvider(config.get(KEYSTORE_PARAM_PROVIDER,
 			      defaultKeyStoreProvider));

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStoreManager.java,v 1.2 2009-06-09 06:13:00 tlipkis Exp $
+ * $Id: TestLockssKeyStoreManager.java,v 1.3 2010-03-14 08:08:20 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,8 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import static org.lockss.daemon.LockssKeyStoreManager.*;
+import static org.lockss.daemon.LockssKeyStore.LocationType;
 
 public class TestLockssKeyStoreManager extends LockssTestCase {
 
@@ -56,27 +58,28 @@ public class TestLockssKeyStoreManager extends LockssTestCase {
     return KeyStoreUtil.createKeyStore(p);
   }
 
+  String ksprefix(String name) {
+    return PARAM_KEYSTORE + "." + name + ".";
+  }
+
   void addKsProp(Properties p,
-		 String name, String file,
-		 String pass, String keyPass) {
-    String prefix = LockssKeyStoreManager.PARAM_KEYSTORE + "." + name + ".";
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_NAME, name);
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_FILE, file);
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_TYPE, "JCEKS");
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_PASSWORD, pass);
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_KEY_PASSWORD, keyPass);
+		  String name,
+		  String pass, String keyPass) {
+    String prefix = ksprefix(name);
+    p.put(prefix + KEYSTORE_PARAM_NAME, name);
+    p.put(prefix + KEYSTORE_PARAM_TYPE, "JCEKS");
+    p.put(prefix + KEYSTORE_PARAM_PASSWORD, pass);
+    p.put(prefix + KEYSTORE_PARAM_KEY_PASSWORD, keyPass);
   }
 
   void addKsFile(Properties p,
-		 String name, String file,
+		 String name,
 		 String pass, String keyPassFile) {
-    String prefix = LockssKeyStoreManager.PARAM_KEYSTORE + "." + name + ".";
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_NAME, name);
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_FILE, file);
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_TYPE, "JCEKS");
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_PASSWORD, pass);
-    p.put(prefix + LockssKeyStoreManager.KEYSTORE_PARAM_KEY_PASSWORD_FILE,
-	  keyPassFile);
+    String prefix = ksprefix(name);
+    p.put(prefix + KEYSTORE_PARAM_NAME, name);
+    p.put(prefix + KEYSTORE_PARAM_TYPE, "JCEKS");
+    p.put(prefix + KEYSTORE_PARAM_PASSWORD, pass);
+    p.put(prefix + KEYSTORE_PARAM_KEY_PASSWORD_FILE, keyPassFile);
   }
 
 
@@ -91,10 +94,13 @@ public class TestLockssKeyStoreManager extends LockssTestCase {
     createKeyStore(file2, PASSWD2, KEY_PASSWD2);
 
     Properties p = new Properties();
-    addKsProp(p, "KS1", file1.toString(), PASSWD1, KEY_PASSWD1);
-    addKsFile(p, "KS2", file2.toString(), PASSWD2,
+    addKsProp(p, "KS1", PASSWD1, KEY_PASSWD1);
+    p.put(ksprefix("KS1") + KEYSTORE_PARAM_FILE, file1.toString());
+    addKsFile(p, "KS2", PASSWD2,
 	      new File(dir, "NO_FILE").toString());
-    addKsFile(p, "KS3", file2.toString(), PASSWD2, passfile.toString());
+    p.put(ksprefix("KS2") + KEYSTORE_PARAM_FILE, file2.toString());
+    addKsFile(p, "KS3", PASSWD2, passfile.toString());
+    p.put(ksprefix("KS3") + KEYSTORE_PARAM_FILE, file2.toString());
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     assertTrue(passfile.exists());
@@ -104,6 +110,7 @@ public class TestLockssKeyStoreManager extends LockssTestCase {
     assertFalse(passfile.exists());
 
     LockssKeyStore lks1 = keystoreMgr.getLockssKeyStore("KS1");
+    assertEquals(LocationType.File, lks1.getLocationType());
     assertNotNull(lks1.getKeyManagerFactory());
     assertNotNull(lks1.getTrustManagerFactory());
 
