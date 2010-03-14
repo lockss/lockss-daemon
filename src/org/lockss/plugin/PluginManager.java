@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.202 2010-02-23 04:16:06 pgust Exp $
+ * $Id: PluginManager.java,v 1.203 2010-03-14 08:08:40 tlipkis Exp $
  */
 
 /*
@@ -1238,7 +1238,7 @@ public class PluginManager
       if (isCompatible(xmlPlugin)) {
 	// found a compatible plugin, return it
 	List<String> urls = xmlPlugin.getLoadedFromUrls();
-	PluginInfo info = new PluginInfo(xmlPlugin, loader, urls.get(0));
+	PluginInfo info = new PluginInfo(xmlPlugin, loader, urls);
 	return info;
       } else {
 	xmlPlugin.stopPlugin();
@@ -1260,7 +1260,8 @@ public class PluginManager
       if (isCompatible(classPlugin)) {
 	String path = pluginName.replace('.', '/').concat(".class");
 	URL url = loader.getResource(path);
-	PluginInfo info = new PluginInfo(classPlugin, loader, url.toString());
+	PluginInfo info = new PluginInfo(classPlugin, loader,
+					 ListUtil.list(url.toString()));
 	return info;
       } else {
 	classPlugin.stopPlugin();
@@ -2273,14 +2274,17 @@ public class PluginManager
 	  info = retrievePlugin(pluginName, pluginLoader);
 	  info.setCuUrl(url);
 	  info.setRegistryAu(au);
-	  String jar = info.getJarUrl();
-	  if (jar != null) {
-	    // If the blessed jar path is a substring of the jar:
-	    // url from which the actual plugin resource or class
-	    // was loaded, then it is a loadable plugin.
-	    boolean isLoadable =
-	      jar.indexOf(blessedUrl.getFile()) > 0;
-	    info.setIsOnLoadablePath(isLoadable);
+	  List urls = info.getResourceUrls();
+	  if (urls != null & !urls.isEmpty()) {
+	    String jar = urls.get(0).toString();
+	    if (jar != null) {
+	      // If the blessed jar path is a substring of the jar:
+	      // url from which the actual plugin resource or class
+	      // was loaded, then it is a loadable plugin.
+	      boolean isLoadable =
+		jar.indexOf(blessedUrl.getFile()) > 0;
+	      info.setIsOnLoadablePath(isLoadable);
+	    }
 	  }
 	  plugin = info.getPlugin();
 	} catch (Exception ex) {
@@ -2434,13 +2438,31 @@ public class PluginManager
     private PluginVersion version;
     private ClassLoader classLoader;
     private String cuUrl;
-    private String jarUrl;
+    private URL jarUrl;
+    private List<String> resourceUrls;
     private boolean isOnLoadablePath = false;
 
-    public PluginInfo(Plugin plugin, ClassLoader classLoader, String jarUrl) {
+    public PluginInfo(Plugin plugin, ClassLoader classLoader,
+		      List<String> resourceUrls) {
       this.plugin = plugin;
       this.classLoader = classLoader;
-      this.jarUrl = jarUrl;
+      this.resourceUrls = resourceUrls;
+    }
+
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      sb.append("[PI: ");
+      sb.append(plugin.getPluginName());
+      sb.append(", ");
+      sb.append(cuUrl);
+      sb.append(", ");
+      sb.append(jarUrl);
+      sb.append(", ");
+      sb.append(resourceUrls);
+      sb.append(", ");
+      sb.append(isOnLoadablePath);
+      sb.append("]");
+      return sb.toString();
     }
 
     public Plugin getPlugin() {
@@ -2467,16 +2489,24 @@ public class PluginManager
       this.cuUrl = cuUrl;
     }
 
+    public URL getJarUrl() {
+      return jarUrl;
+    }
+
+    public void setJarUrl(URL jarUrl) {
+      this.jarUrl = jarUrl;
+    }
+
+    public List<String> getResourceUrls() {
+      return resourceUrls;
+    }
+
     public ArchivalUnit getRegistryAu() {
       return registryAu;
     }
 
     public void setRegistryAu(ArchivalUnit registryAu) {
       this.registryAu = registryAu;
-    }
-
-    public String getJarUrl() {
-      return jarUrl;
     }
 
     public boolean isOnLoadablePath() {
