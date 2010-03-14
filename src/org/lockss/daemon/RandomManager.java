@@ -1,5 +1,5 @@
 /*
- * $Id: RandomManager.java,v 1.1 2009-09-03 00:53:40 tlipkis Exp $
+ * $Id: RandomManager.java,v 1.2 2010-03-14 08:08:31 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -70,7 +70,6 @@ public class RandomManager extends BaseLockssManager
       prov = config.get(PARAM_SECURE_RANDOM_PROVIDER,
 			DEFAULT_SECURE_RANDOM_PROVIDER);
       log.info("alg: " + alg + ", prov: " + prov);
-      log.info("isNullString(" + prov + "): " + StringUtil.isNullString(prov));
     }
   }
 
