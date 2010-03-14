@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.6 2008-04-09 01:03:56 edwardsb1 Exp $
+ * $Id: LockssTiming.java,v 1.7 2010-03-14 08:09:57 tlipkis Exp $
  */
 
 /*
@@ -116,8 +116,14 @@ public class LockssTiming extends LockssTestCase {
       StringBuffer sb = new StringBuffer();
       sb.append(msg);
       sb.append(":  ");
-      sb.append(Long.toString(m_sumTime/m_count));
-      sb.append(" ms");
+      long ms = m_sumTime/m_count;
+      if (ms >= 10) {
+	sb.append(Long.toString(ms));
+	sb.append(" ms");
+      } else {
+	sb.append(Long.toString(m_sumTime * 1000000 /m_count));
+	sb.append(" ns");
+      }
       sb.append(" ( std. dev. ");
       sb.append(nf.format(stddevTime()));
       sb.append(" )");
