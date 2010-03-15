@@ -3,14 +3,13 @@
     name = Classical Association of the Atlantic States
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Classical World 
+      name = Classical World
     >
 
     param[journal_dir] = classical_world
@@ -19,6 +18,7 @@
     au < released ; Classical World Volume 100 ; 100 >
     au < manifest ; Classical World Volume 101 ; 101 >
     au < manifest ; Classical World Volume 102 ; 102 >
+    au < manifest ; Classical World Volume 103 ; 103 >
 
   }
 

@@ -3,14 +3,13 @@
     name = Catholic University of America Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = The Catholic Historical Review 
+      name = The Catholic Historical Review
     >
 
     param[journal_dir] = catholic_historical_review
@@ -26,6 +25,17 @@
     au < ready ; The Catholic Historical Review Volume 94 ; 94 >
     au < ready ; The Catholic Historical Review Volume 95 ; 95 >
     au < ready ; The Catholic Historical Review Volume 96 ; 96 >
+
+  }
+
+  {
+    title <
+      name = U.S. Catholic Historian
+    >
+
+    param[journal_dir] = us_catholic_historian
+
+    au < manifest ; U.S. Catholic Historian Volume 27 ; 27 >
 
   }
 

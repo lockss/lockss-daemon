@@ -3,14 +3,13 @@
     name = Institute of Southeast Asian Studies
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = ASEAN Economic Bulletin 
+      name = ASEAN Economic Bulletin
     >
 
     param[journal_dir] = asean_economic_bulletin
@@ -24,7 +23,7 @@
 
   {
     title <
-      name = Contemporary Southeast Asia: A Journal of International and Strategic Affairs 
+      name = Contemporary Southeast Asia: A Journal of International and Strategic Affairs
     >
 
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
@@ -32,12 +31,13 @@
     au < manifest ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
     au < manifest ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
     au < manifest ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
+    au < manifest ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
 
   }
 
   {
     title <
-      name = Sojourn: Journal of Social Issues in Southeast Asia 
+      name = Sojourn: Journal of Social Issues in Southeast Asia
     >
 
     param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
@@ -45,6 +45,19 @@
     au < manifest ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
     au < manifest ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
     au < manifest ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
+    au < manifest ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
+
+  }
+
+  {
+    title <
+      name = Southeast Asian Affairs
+    >
+
+    param[journal_dir] = southeast_asian_affairs
+
+    au < manifest ; Southeast Asian Affairs Volume 2008 ; 2008 >
+    au < manifest ; Southeast Asian Affairs Volume 2009 ; 2009 >
 
   }
 

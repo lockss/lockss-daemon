@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = Hume Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Hume Studies
+    >
+
+    param[journal_dir] = hume_studies
+
+    au < manifest ; Hume Studies Volume 34 ; 34 >
+
+  }
+
+}

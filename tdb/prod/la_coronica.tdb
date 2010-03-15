@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures
+    >
+
+    param[journal_dir] = la_coronica
+
+    au < manifest ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 37 ; 37 >
+    au < manifest ; La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures Volume 38 ; 38 >
+
+  }
+
+}

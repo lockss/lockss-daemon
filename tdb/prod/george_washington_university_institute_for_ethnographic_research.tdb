@@ -1,0 +1,31 @@
+{
+  publisher <
+    name = George Washington University Institute for Ethnographic Research
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Anthropological Quarterly
+    >
+
+    param[journal_dir] = anthropological_quarterly
+
+    au < manifest ; Anthropological Quarterly Volume 73 ; 73 >
+    au < manifest ; Anthropological Quarterly Volume 74 ; 74 >
+    au < manifest ; Anthropological Quarterly Volume 75 ; 75 >
+    au < manifest ; Anthropological Quarterly Volume 76 ; 76 >
+    au < manifest ; Anthropological Quarterly Volume 77 ; 77 >
+    au < manifest ; Anthropological Quarterly Volume 78 ; 78 >
+    au < manifest ; Anthropological Quarterly Volume 79 ; 79 >
+    au < manifest ; Anthropological Quarterly Volume 80 ; 80 >
+    au < manifest ; Anthropological Quarterly Volume 81 ; 81 >
+    au < manifest ; Anthropological Quarterly Volume 82 ; 82 >
+    au < manifest ; Anthropological Quarterly Volume 83 ; 83 >
+
+  }
+
+}

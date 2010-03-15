@@ -3,21 +3,20 @@
     name = Institute of Caribbean Studies
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Caribbean Studies 
+      name = Caribbean Studies
     >
 
     param[journal_dir] = caribbean_studies
 
     au < ready ; Caribbean Studies Volume 36 ; 36 >
     au < ready ; Caribbean Studies Volume 37 ; 37 >
-    
+
   }
-  
+
 }

@@ -3,14 +3,13 @@
     name = Linguistic Society of America
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Language 
+      name = Language
     >
 
     param[journal_dir] = language
@@ -23,6 +22,7 @@
     au < released ; Language Volume 82 ; 82 >
     au < released ; Language Volume 83 ; 83 >
     au < manifest ; Language Volume 84 ; 84 >
+    au < manifest ; Language Volume 85 ; 85 >
 
   }
 

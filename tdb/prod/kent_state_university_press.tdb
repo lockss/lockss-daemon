@@ -3,14 +3,13 @@
     name = Kent State University Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Civil War History 
+      name = Civil War History
     >
 
     param[journal_dir] = civil_war_history
@@ -24,6 +23,21 @@
     au < released ; Civil War History Volume 52 ; 52 >
     au < manifest ; Civil War History Volume 53 ; 53 >
     au < manifest ; Civil War History Volume 54 ; 54 >
+    au < manifest ; Civil War History Volume 55 ; 55 >
+    au < manifest ; Civil War History Volume 56 ; 56 >
+
+  }
+
+  {
+    title <
+      name = Ohio History
+    >
+
+    param[journal_dir] = ohio_history
+
+    au < manifest ; Ohio History Volume 114 ; 114 >
+    au < manifest ; Ohio History Volume 115 ; 115 >
+    au < manifest ; Ohio History Volume 116 ; 116 >
 
   }
 

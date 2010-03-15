@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Bibliographical Society of the University of Virginia
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Studies in Bibliography
+    >
+
+    param[journal_dir] = studies_in_bibliography
+
+    au < manifest ; Studies in Bibliography Volume 55 ; 55 >
+    au < manifest ; Studies in Bibliography Volume 56 ; 56 >
+    au < manifest ; Studies in Bibliography Volume 57 ; 57 >
+
+  }
+
+}

@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Feminist Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = WSQ: Women's Studies Quarterly
+    >
+
+    param[journal_dir] = wsq
+
+    au < manifest ; WSQ: Women's Studies Quarterly Volume 36 ; 36 >
+    au < manifest ; WSQ: Women's Studies Quarterly Volume 37 ; 37 >
+
+  }
+
+}

@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = Harvard-Yenching Institute
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Harvard Journal of Asiatic Studies
+    >
+
+    param[journal_dir] = harvard_journal_of_asiatic_studies
+
+    au < manifest ; Harvard Journal of Asiatic Studies Volume 69 ; 69 >
+
+  }
+
+}

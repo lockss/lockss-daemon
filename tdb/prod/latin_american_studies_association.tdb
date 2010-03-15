@@ -1,0 +1,28 @@
+{
+  publisher <
+    name = Latin American Studies Association
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Latin American Research Review
+    >
+
+    param[journal_dir] = latin_american_research_review
+
+    au < manifest ; Latin American Research Review Volume 38 ; 38 >
+    au < manifest ; Latin American Research Review Volume 39 ; 39 >
+    au < manifest ; Latin American Research Review Volume 40 ; 40 >
+    au < manifest ; Latin American Research Review Volume 41 ; 41 >
+    au < manifest ; Latin American Research Review Volume 42 ; 42 >
+    au < manifest ; Latin American Research Review Volume 43 ; 43 >
+    au < manifest ; Latin American Research Review Volume 44 ; 44 >
+    au < manifest ; Latin American Research Review Volume 45 ; 45 >
+
+  }
+
+}

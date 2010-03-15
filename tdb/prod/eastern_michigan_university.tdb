@@ -3,14 +3,13 @@
     name = Eastern Michigan University
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Journal of Narrative Theory 
+      name = Journal of Narrative Theory
     >
 
     param[journal_dir] = journal_of_narrative_theory
@@ -20,6 +19,7 @@
     au < released ; Journal of Narrative Theory Volume 36 ; 36 >
     au < manifest ; Journal of Narrative Theory Volume 37 ; 37 >
     au < manifest ; Journal of Narrative Theory Volume 38 ; 38 >
+    au < manifest ; Journal of Narrative Theory Volume 39 ; 39 >
 
   }
 

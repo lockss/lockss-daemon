@@ -173,20 +173,7 @@
     au < ready ; Book History Volume 12 ; 12 >
     
   }
- 
-  {
-    title <
-      name = Bookbird 
-    >
 
-    param[journal_dir] = bookbird
-
-    au < ready ; Bookbird Volume 46 ; 46 >
-    au < ready ; Bookbird Volume 47 ; 47 >
-    au < ready ; Bookbird Volume 48 ; 48 >
-    
-  }
- 
   {
     title <
       name = Bulletin of the Center for Children's Books 
@@ -1395,30 +1382,6 @@
     au < manifest ; Wide Angle Volume 19 ; 19 >
     au < manifest ; Wide Angle Volume 20 ; 20 >
     au < manifest ; Wide Angle Volume 21 ; 21 >
-
-  }
-
-  {
-    title <
-      name = World Politics 
-    >
-
-    param[journal_dir] = world_politics
-
-    au < released ; World Politics Volume 48 ; 48 >
-    au < released ; World Politics Volume 49 ; 49 >
-    au < released ; World Politics Volume 50 ; 50 >
-    au < released ; World Politics Volume 51 ; 51 >
-    au < released ; World Politics Volume 52 ; 52 >
-    au < released ; World Politics Volume 53 ; 53 >
-    au < released ; World Politics Volume 54 ; 54 >
-    au < released ; World Politics Volume 55 ; 55 >
-    au < released ; World Politics Volume 56 ; 56 >
-    au < released ; World Politics Volume 57 ; 57 >
-    au < released ; World Politics Volume 58 ; 58 >
-    au < manifest ; World Politics Volume 59 ; 59 >
-    au < manifest ; World Politics Volume 60 ; 60 >
-    au < manifest ; World Politics Volume 61 ; 61 >
 
   }
 

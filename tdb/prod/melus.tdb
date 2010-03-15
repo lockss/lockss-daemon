@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = MELUS: The Society for the Study of the Multi-Ethnic Literature of the United States
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = MELUS: Multi-Ethnic Literature of the U.S.
+    >
+
+    param[journal_dir] = melus
+
+    au < manifest ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 >
+
+  }
+
+}

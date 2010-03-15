@@ -3,14 +3,13 @@
     name = Hastings Center
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Hastings Center Report 
+      name = Hastings Center Report
     >
 
     param[journal_dir] = hastings_center_report
@@ -20,6 +19,7 @@
     au < released ; Hastings Center Report Volume 37 ; 37 >
     au < manifest ; Hastings Center Report Volume 38 ; 38 >
     au < manifest ; Hastings Center Report Volume 39 ; 39 >
+    au < manifest ; Hastings Center Report Volume 40 ; 40 >
 
   }
 

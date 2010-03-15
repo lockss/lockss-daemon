@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Ashland University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = River Teeth: A Journal of Nonfiction Narrative
+    >
+
+    param[journal_dir] = river_teeth
+
+    au < manifest ; River Teeth: A Journal of Nonfiction Narrative Volume 5 ; 5 >
+    au < manifest ; River Teeth: A Journal of Nonfiction Narrative Volume 6 ; 6 >
+    au < manifest ; River Teeth: A Journal of Nonfiction Narrative Volume 7 ; 7 >
+    au < manifest ; River Teeth: A Journal of Nonfiction Narrative Volume 8 ; 8 >
+    au < manifest ; River Teeth: A Journal of Nonfiction Narrative Volume 9 ; 9 >
+    au < manifest ; River Teeth: A Journal of Nonfiction Narrative Volume 10 ; 10 >
+    au < manifest ; River Teeth: A Journal of Nonfiction Narrative Volume 11 ; 11 >
+
+  }
+
+}

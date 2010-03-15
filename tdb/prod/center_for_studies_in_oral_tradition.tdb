@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Center for Studies in Oral Tradition
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Oral Tradition
+    >
+
+    param[journal_dir] = oral_tradition
+
+    au < manifest ; Oral Tradition Volume 18 ; 18 >
+    au < manifest ; Oral Tradition Volume 19 ; 19 >
+    au < manifest ; Oral Tradition Volume 20 ; 20 >
+    au < manifest ; Oral Tradition Volume 21 ; 21 >
+    au < manifest ; Oral Tradition Volume 22 ; 22 >
+    au < manifest ; Oral Tradition Volume 23 ; 23 >
+
+  }
+
+}

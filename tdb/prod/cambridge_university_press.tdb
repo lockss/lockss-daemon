@@ -1,0 +1,73 @@
+{
+  publisher <
+    name = Cambridge University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Canadian Journal on Aging / La Revue canadienne du vieillissement
+    >
+
+    param[journal_dir] = canadian_journal_on_aging
+
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 23 ; 23 >
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 24 ; 24 >
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 25 ; 25 >
+    au < released ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 26 ; 26 >
+    au < ready ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 27 ; 27 >
+    au < ready ; Canadian Journal on Aging / La Revue canadienne du vieillissement Volume 28 ; 28 >
+
+  }
+
+  {
+    title <
+      name = Journal of Policy History
+    >
+
+    param[journal_dir] = journal_of_policy_history
+
+    au < manifest ; Journal of Policy History Volume 11 ; 11 >
+    au < manifest ; Journal of Policy History Volume 12 ; 12 >
+    au < manifest ; Journal of Policy History Volume 13 ; 13 >
+    au < manifest ; Journal of Policy History Volume 14 ; 14 >
+    au < manifest ; Journal of Policy History Volume 15 ; 15 >
+    au < manifest ; Journal of Policy History Volume 16 ; 16 >
+    au < manifest ; Journal of Policy History Volume 17 ; 17 >
+    au < manifest ; Journal of Policy History Volume 18 ; 18 >
+    au < manifest ; Journal of Policy History Volume 19 ; 19 >
+    au < manifest ; Journal of Policy History Volume 20 ; 20 >
+    au < manifest ; Journal of Policy History Volume 21 ; 21 >
+    au < manifest ; Journal of Policy History Volume 22 ; 22 >
+
+  }
+
+  {
+    title <
+      name = World Politics 
+    >
+
+    param[journal_dir] = world_politics
+
+    au < released ; World Politics Volume 48 ; 48 >
+    au < released ; World Politics Volume 49 ; 49 >
+    au < released ; World Politics Volume 50 ; 50 >
+    au < released ; World Politics Volume 51 ; 51 >
+    au < released ; World Politics Volume 52 ; 52 >
+    au < released ; World Politics Volume 53 ; 53 >
+    au < released ; World Politics Volume 54 ; 54 >
+    au < released ; World Politics Volume 55 ; 55 >
+    au < released ; World Politics Volume 56 ; 56 >
+    au < released ; World Politics Volume 57 ; 57 >
+    au < released ; World Politics Volume 58 ; 58 >
+    au < manifest ; World Politics Volume 59 ; 59 >
+    au < manifest ; World Politics Volume 60 ; 60 >
+    au < manifest ; World Politics Volume 61 ; 61 >
+    au < manifest ; World Politics Volume 62 ; 62 >
+
+  }
+
+}

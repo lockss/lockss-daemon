@@ -3,14 +3,13 @@
     name = Duke University Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = American Literary Scholarship 
+      name = American Literary Scholarship
     >
 
     param[journal_dir] = american_literary_scholarship
@@ -30,7 +29,7 @@
 
   {
     title <
-      name = American Literature 
+      name = American Literature
     >
 
     param[journal_dir] = american_literature
@@ -46,7 +45,7 @@
 
   {
     title <
-      name = American Speech 
+      name = American Speech
     >
 
     param[journal_dir] = american_speech
@@ -62,7 +61,7 @@
 
   {
     title <
-      name = boundary 2 
+      name = boundary 2
     >
 
     param[journal_dir] = boundary
@@ -75,10 +74,25 @@
     au < ready ; boundary 2 Volume 31 ; 31 >
 
   }
-  
+
   {
     title <
-      name = Common Knowledge 
+      name = Camera Obscura 
+    >
+
+    param[journal_dir] = camera_obscura
+
+    au < released ; Camera Obscura Volume 15 ; 15 >
+    au < released ; Camera Obscura Volume 16 ; 16 >
+    au < released ; Camera Obscura Volume 17 ; 17 >
+    au < released ; Camera Obscura Volume 18 ; 18 >
+    au < released ; Camera Obscura Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Common Knowledge
     >
 
     param[journal_dir] = common_knowledge
@@ -91,12 +105,13 @@
     au < released ; Common Knowledge Volume 13 ; 13 >
     au < manifest ; Common Knowledge Volume 14 ; 14 >
     au < manifest ; Common Knowledge Volume 15 ; 15 >
+    au < manifest ; Common Knowledge Volume 16 ; 16 >
 
   }
 
   {
     title <
-      name = Comparative Studies of South Asia, Africa and the Middle East 
+      name = Comparative Studies of South Asia, Africa and the Middle East
     >
 
     param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
@@ -110,12 +125,13 @@
     au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
     au < manifest ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
     au < manifest ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+    au < manifest ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
 
   }
 
   {
     title <
-      name = differences: A Journal of Feminist Cultural Studies 
+      name = differences: A Journal of Feminist Cultural Studies
     >
 
     param[journal_dir] = differences
@@ -131,7 +147,7 @@
 
   {
     title <
-      name = Eighteenth-Century Life 
+      name = Eighteenth-Century Life
     >
 
     param[journal_dir] = eighteenth-century_life
@@ -150,12 +166,13 @@
     au < released ; Eighteenth-Century Life Volume 31 ; 31 >
     au < manifest ; Eighteenth-Century Life Volume 32 ; 32 >
     au < manifest ; Eighteenth-Century Life Volume 33 ; 33 >
+    au < manifest ; Eighteenth-Century Life Volume 34 ; 34 >
 
   }
 
   {
     title <
-      name = Ethnohistory 
+      name = Ethnohistory
     >
 
     param[journal_dir] = ethnohistory
@@ -171,7 +188,7 @@
 
   {
     title <
-      name = French Historical Studies 
+      name = French Historical Studies
     >
 
     param[journal_dir] = french_historical_studies
@@ -187,7 +204,7 @@
 
   {
     title <
-      name = GLQ: A Journal of Lesbian and Gay Studies 
+      name = GLQ: A Journal of Lesbian and Gay Studies
     >
 
     param[journal_dir] = journal_of_lesbian_and_gay_studies
@@ -203,12 +220,13 @@
     au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
     au < manifest ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
     au < manifest ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+    au < manifest ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
 
   }
 
   {
     title <
-      name = Hispanic American Historical Review 
+      name = Hispanic American Historical Review
     >
 
     param[journal_dir] = hispanic_american_historical_review
@@ -224,7 +242,7 @@
 
   {
     title <
-      name = History of Political Economy 
+      name = History of Political Economy
     >
 
     param[journal_dir] = history_of_political_economy
@@ -240,21 +258,19 @@
 
   {
     title <
-      name = Hopscotch: A Cultural Review 
+      name = Hopscotch: A Cultural Review
     >
 
     param[journal_dir] = hopscotch
 
     au < released ; Hopscotch: A Cultural Review Volume 1 ; 1 >
     au < released ; Hopscotch: A Cultural Review Volume 2 ; 2 >
-    au < manifest ; Hopscotch: A Cultural Review Volume 3 ; 3 >
-    au < manifest ; Hopscotch: A Cultural Review Volume 4 ; 4 >
 
   }
 
   {
     title <
-      name = Journal of Health Politics, Policy and Law 
+      name = Journal of Health Politics, Policy and Law
     >
 
     param[journal_dir] = journal_of_health_politics_policy_and_law
@@ -270,11 +286,12 @@
 
   {
     title <
-      name = Journal of Medieval and Early Modern Studies 
+      name = Journal of Medieval and Early Modern Studies
     >
 
     param[journal_dir] = journal_of_medieval_and_early_modern_studies
 
+    au < manifest ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
     au < released ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
     au < released ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
     au < released ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
@@ -285,7 +302,7 @@
 
   {
     title <
-      name = Mediterranean Quarterly 
+      name = Mediterranean Quarterly
     >
 
     param[journal_dir] = mediterranean_quarterly
@@ -300,12 +317,13 @@
     au < released ; Mediterranean Quarterly Volume 17 ; 17 >
     au < released ; Mediterranean Quarterly Volume 18 ; 18 >
     au < manifest ; Mediterranean Quarterly Volume 19 ; 19 >
+    au < manifest ; Mediterranean Quarterly Volume 20 ; 20 >
 
   }
 
   {
     title <
-      name = MLQ: Modern Language Quarterly 
+      name = MLQ: Modern Language Quarterly
     >
 
     param[journal_dir] = modern_language_quarterly
@@ -321,7 +339,7 @@
 
   {
     title <
-      name = Nepantla: Views from South 
+      name = Nepantla: Views from South
     >
 
     param[journal_dir] = nepantla
@@ -335,7 +353,7 @@
 
   {
     title <
-      name = Pedagogy 
+      name = Pedagogy
     >
 
     param[journal_dir] = pedagogy
@@ -349,12 +367,13 @@
     au < released ; Pedagogy Volume 7 ; 7 >
     au < manifest ; Pedagogy Volume 8 ; 8 >
     au < manifest ; Pedagogy Volume 9 ; 9 >
+    au < manifest ; Pedagogy Volume 10 ; 10 >
 
   }
 
   {
     title <
-      name = Poetics Today 
+      name = Poetics Today
     >
 
     param[journal_dir] = poetics_today
@@ -370,7 +389,7 @@
 
   {
     title <
-      name = positions: east asia cultures critique 
+      name = positions: east asia cultures critique
     >
 
     param[journal_dir] = positions
@@ -385,12 +404,13 @@
     au < released ; positions: east asia cultures critique Volume 14 ; 14 >
     au < released ; positions: east asia cultures critique Volume 15 ; 15 >
     au < manifest ; positions: east asia cultures critique Volume 16 ; 16 >
+    au < manifest ; positions: east asia cultures critique Volume 17 ; 17 >
 
   }
 
   {
     title <
-      name = Public Culture 
+      name = Public Culture
     >
 
     param[journal_dir] = public_culture
@@ -406,7 +426,7 @@
 
   {
     title <
-      name = Radical History Review 
+      name = Radical History Review
     >
 
     param[journal_dir] = radical_history_review
@@ -428,7 +448,26 @@
 
   {
     title <
-      name = Social Science History 
+      name = Small Axe 
+    >
+
+    param[journal_dir] = small_axe
+
+    au < released ; Small Axe Volume 5 ; 5 >
+    au < released ; Small Axe Volume 6 ; 6 >
+    au < released ; Small Axe Volume 7 ; 7 >
+    au < released ; Small Axe Volume 8 ; 8 >
+    au < released ; Small Axe Volume 9 ; 9 >
+    au < released ; Small Axe Volume 10 ; 10 >
+    au < released ; Small Axe Volume 11 ; 11 >
+    au < manifest ; Small Axe Volume 12 ; 12 >
+    au < manifest ; Small Axe Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Social Science History
     >
 
     param[journal_dir] = social_science_history
@@ -444,6 +483,7 @@
     au < released ; Social Science History Volume 31 ; 31 >
     au < manifest ; Social Science History Volume 32 ; 32 >
     au < manifest ; Social Science History Volume 33 ; 33 >
+    au < manifest ; Social Science History Volume 34 ; 34 >
 
   }
 
@@ -465,7 +505,7 @@
 
   {
     title <
-      name = The South Atlantic Quarterly 
+      name = The South Atlantic Quarterly
     >
 
     param[journal_dir] = south_atlantic_quarterly
@@ -481,7 +521,7 @@
 
   {
     title <
-      name = Theater 
+      name = Theater
     >
 
     param[journal_dir] = theater
@@ -492,36 +532,6 @@
     au < released ; Theater Volume 32 ; 32 >
     au < released ; Theater Volume 33 ; 33 >
     au < released ; Theater Volume 34 ; 34 >
-
-  }
-
-  {
-    title <
-      name = Transition 
-    >
-
-    param[journal_dir] = transition
-
-    au < released ; Transition Volume 9 ; 9 >
-    au < released ; Transition Volume 10 ; 10 >
-    au < released ; Transition Volume 11 ; 11 >
-    au < released ; Transition Volume 12 ; 12 >
-    au < released ; Transition Volume 13 ; 13 >
-
-  }
-
-  {
-    title <
-      name = Camera Obscura 
-    >
-
-    param[journal_dir] = camera_obscura
-
-    au < released ; Camera Obscura Volume 15 ; 15 >
-    au < released ; Camera Obscura Volume 16 ; 16 >
-    au < released ; Camera Obscura Volume 17 ; 17 >
-    au < released ; Camera Obscura Volume 18 ; 18 >
-    au < released ; Camera Obscura Volume 19 ; 19 >
 
   }
 

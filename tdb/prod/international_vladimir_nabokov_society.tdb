@@ -3,9 +3,8 @@
     name = International Vladimir Nabokov Society
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -18,6 +17,7 @@
     au < manifest ; Nabokov Studies Volume 8 ; 8 >
     au < released ; Nabokov Studies Volume 9 ; 9 >
     au < manifest ; Nabokov Studies Volume 10 ; 10 >
+    au < manifest ; Nabokov Studies Volume 11 ; 11 >
 
   }
 

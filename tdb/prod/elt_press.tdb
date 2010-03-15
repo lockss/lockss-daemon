@@ -1,0 +1,24 @@
+{
+  publisher <
+    name = ELT Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = English Literature in Transition, 1880-1920
+    >
+
+    param[journal_dir] = english_literature_in_transition
+
+    au < manifest ; English Literature in Transition, 1880-1920 Volume 50 ; 50 >
+    au < manifest ; English Literature in Transition, 1880-1920 Volume 51 ; 51 >
+    au < manifest ; English Literature in Transition, 1880-1920 Volume 52 ; 52 >
+    au < manifest ; English Literature in Transition, 1880-1920 Volume 53 ; 53 >
+
+  }
+
+}

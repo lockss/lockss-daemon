@@ -3,14 +3,13 @@
     name = Gallaudet University Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = American Annals of the Deaf 
+      name = American Annals of the Deaf
     >
 
     param[journal_dir] = american_annals_of_the_deaf
@@ -27,7 +26,7 @@
 
   {
     title <
-      name = Sign Language Studies 
+      name = Sign Language Studies
     >
 
     param[journal_dir] = sign_language_studies
@@ -41,6 +40,7 @@
     au < released ; Sign Language Studies Volume 7 ; 7 >
     au < manifest ; Sign Language Studies Volume 8 ; 8 >
     au < manifest ; Sign Language Studies Volume 9 ; 9 >
+    au < manifest ; Sign Language Studies Volume 10 ; 10 >
 
   }
 

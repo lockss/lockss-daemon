@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Friends Historical Association
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Quaker History
+    >
+
+    param[journal_dir] = quaker_history
+
+    au < manifest ; Quaker History Volume 97 ; 97 >
+    au < manifest ; Quaker History Volume 98 ; 98 >
+
+  }
+
+}

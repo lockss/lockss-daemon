@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Fordham University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Joyce Studies Annual
+    >
+
+    param[journal_dir] = joyce_studies_annual
+
+    au < manifest ; Joyce Studies Annual Volume 12 ; 12 >
+    au < manifest ; Joyce Studies Annual Volume 13 ; 13 >
+    au < manifest ; Joyce Studies Annual Volume 14 ; 14 >
+    au < manifest ; Joyce Studies Annual Volume 2007 ; 2007 >
+    au < manifest ; Joyce Studies Annual Volume 2008 ; 2008 >
+    au < manifest ; Joyce Studies Annual Volume 2009 ; 2009 >
+
+  }
+
+}

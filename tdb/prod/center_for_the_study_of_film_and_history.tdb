@@ -1,0 +1,26 @@
+{
+  publisher <
+    name = Center for the Study of Film and History
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Film & History: An Interdisciplinary Journal of Film and Television Studies
+    >
+
+    param[journal_dir] = film_and_history
+
+    au < manifest ; Film & History: An Interdisciplinary Journal of Film and Television Studies Volume 34 ; 34 >
+    au < manifest ; Film & History: An Interdisciplinary Journal of Film and Television Studies Volume 35 ; 35 >
+    au < manifest ; Film & History: An Interdisciplinary Journal of Film and Television Studies Volume 36 ; 36 >
+    au < manifest ; Film & History: An Interdisciplinary Journal of Film and Television Studies Volume 37 ; 37 >
+    au < manifest ; Film & History: An Interdisciplinary Journal of Film and Television Studies Volume 38 ; 38 >
+    au < manifest ; Film & History: An Interdisciplinary Journal of Film and Television Studies Volume 39 ; 39 >
+
+  }
+
+}

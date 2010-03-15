@@ -3,14 +3,13 @@
     name = George Herbert Journal
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = George Herbert Journal 
+      name = George Herbert Journal
     >
 
     param[journal_dir] = george_herbert_journal
@@ -19,6 +18,7 @@
     au < manifest ; George Herbert Journal Volume 28 ; 28 >
     au < manifest ; George Herbert Journal Volume 29 ; 29 >
     au < manifest ; George Herbert Journal Volume 30 ; 30 >
+    au < manifest ; George Herbert Journal Volume 31 ; 31 >
 
   }
 

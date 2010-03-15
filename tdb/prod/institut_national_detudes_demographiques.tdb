@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Institut national d'études démographiques
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Population, English edition
+    >
+
+    param[journal_dir] = population
+
+    au < manifest ; Population, English edition Volume 63 ; 63 >
+    au < manifest ; Population, English edition Volume 64 ; 64 >
+
+  }
+
+}
