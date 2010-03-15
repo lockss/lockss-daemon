@@ -3,10 +3,237 @@
     name = MIT Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Computer Music Journal
+    >
+
+    param[journal_dir] = computer_music_journal
+
+    au < manifest ; Computer Music Journal Volume 25 ; 25 >
+    au < manifest ; Computer Music Journal Volume 26 ; 26 >
+    au < manifest ; Computer Music Journal Volume 27 ; 27 >
+    au < manifest ; Computer Music Journal Volume 28 ; 28 >
+    au < manifest ; Computer Music Journal Volume 29 ; 29 >
+    au < manifest ; Computer Music Journal Volume 30 ; 30 >
+    au < manifest ; Computer Music Journal Volume 31 ; 31 >
+    au < manifest ; Computer Music Journal Volume 32 ; 32 >
+    au < manifest ; Computer Music Journal Volume 33 ; 33 >
+    au < manifest ; Computer Music Journal Volume 34 ; 34 >
+
+  }
+
+  {
+    title <
+      name = Global Environmental Politics
+    >
+
+    param[journal_dir] = global_environmental_politics
+
+    au < manifest ; Global Environmental Politics Volume 3 ; 3 >
+    au < manifest ; Global Environmental Politics Volume 4 ; 4 >
+    au < manifest ; Global Environmental Politics Volume 5 ; 5 >
+    au < manifest ; Global Environmental Politics Volume 6 ; 6 >
+    au < manifest ; Global Environmental Politics Volume 7 ; 7 >
+    au < manifest ; Global Environmental Politics Volume 8 ; 8 >
+    au < manifest ; Global Environmental Politics Volume 9 ; 9 >
+    au < manifest ; Global Environmental Politics Volume 10 ; 10 >
+
+  }
+
+  {
+    title <
+      name = International Organization
+    >
+
+    param[journal_dir] = international_organization
+
+    au < manifest ; International Organization Volume 56 ; 56 >
+
+  }
+
+  {
+    title <
+      name = International Security
+    >
+
+    param[journal_dir] = international_security
+
+    au < manifest ; International Security Volume 25 ; 25 >
+    au < manifest ; International Security Volume 26 ; 26 >
+    au < manifest ; International Security Volume 27 ; 27 >
+    au < manifest ; International Security Volume 28 ; 28 >
+    au < manifest ; International Security Volume 29 ; 29 >
+    au < manifest ; International Security Volume 30 ; 30 >
+    au < manifest ; International Security Volume 31 ; 31 >
+    au < manifest ; International Security Volume 32 ; 32 >
+    au < manifest ; International Security Volume 33 ; 33 >
+    au < manifest ; International Security Volume 34 ; 34 >
+
+  }
+
+  {
+    title <
+      name = Journal of Cold War Studies
+    >
+
+    param[journal_dir] = journal_of_cold_war_studies
+
+    au < manifest ; Journal of Cold War Studies Volume 1 ; 1 >
+    au < manifest ; Journal of Cold War Studies Volume 2 ; 2 >
+    au < manifest ; Journal of Cold War Studies Volume 3 ; 3 >
+    au < manifest ; Journal of Cold War Studies Volume 4 ; 4 >
+    au < manifest ; Journal of Cold War Studies Volume 5 ; 5 >
+    au < manifest ; Journal of Cold War Studies Volume 6 ; 6 >
+    au < manifest ; Journal of Cold War Studies Volume 7 ; 7 >
+    au < manifest ; Journal of Cold War Studies Volume 8 ; 8 >
+    au < manifest ; Journal of Cold War Studies Volume 9 ; 9 >
+    au < manifest ; Journal of Cold War Studies Volume 10 ; 10 >
+    au < manifest ; Journal of Cold War Studies Volume 11 ; 11 >
+
+  }
+
+  {
+    title <
+      name = Journal of Interdisciplinary History
+    >
+
+    param[journal_dir] = journal_of_interdisciplinary_history
+
+    au < manifest ; Journal of Interdisciplinary History Volume 30 ; 30 >
+    au < manifest ; Journal of Interdisciplinary History Volume 31 ; 31 >
+    au < manifest ; Journal of Interdisciplinary History Volume 32 ; 32 >
+    au < manifest ; Journal of Interdisciplinary History Volume 33 ; 33 >
+    au < manifest ; Journal of Interdisciplinary History Volume 34 ; 34 >
+    au < manifest ; Journal of Interdisciplinary History Volume 35 ; 35 >
+    au < manifest ; Journal of Interdisciplinary History Volume 36 ; 36 >
+    au < manifest ; Journal of Interdisciplinary History Volume 37 ; 37 >
+    au < manifest ; Journal of Interdisciplinary History Volume 38 ; 38 >
+    au < manifest ; Journal of Interdisciplinary History Volume 39 ; 39 >
+    au < manifest ; Journal of Interdisciplinary History Volume 40 ; 40 >
+
+  }
+
+  {
+    title <
+      name = Leonardo
+    >
+
+    param[journal_dir] = leonardo
+
+    au < manifest ; Leonardo Volume 34 ; 34 >
+    au < manifest ; Leonardo Volume 35 ; 35 >
+    au < manifest ; Leonardo Volume 36 ; 36 >
+    au < manifest ; Leonardo Volume 37 ; 37 >
+    au < manifest ; Leonardo Volume 38 ; 38 >
+    au < manifest ; Leonardo Volume 39 ; 39 >
+    au < manifest ; Leonardo Volume 40 ; 40 >
+    au < manifest ; Leonardo Volume 41 ; 41 >
+    au < manifest ; Leonardo Volume 42 ; 42 >
+    au < manifest ; Leonardo Volume 43 ; 43 >
+
+  }
+
+  {
+    title <
+      name = Leonardo Music Journal
+    >
+
+    param[journal_dir] = leonardo_music_journal
+
+    au < manifest ; Leonardo Music Journal Volume 10 ; 10 >
+    au < manifest ; Leonardo Music Journal Volume 11 ; 11 >
+    au < manifest ; Leonardo Music Journal Volume 12 ; 12 >
+    au < manifest ; Leonardo Music Journal Volume 13 ; 13 >
+    au < manifest ; Leonardo Music Journal Volume 14 ; 14 >
+    au < manifest ; Leonardo Music Journal Volume 15 ; 15 >
+    au < manifest ; Leonardo Music Journal Volume 16 ; 16 >
+    au < manifest ; Leonardo Music Journal Volume 17 ; 17 >
+    au < manifest ; Leonardo Music Journal Volume 18 ; 18 >
+    au < manifest ; Leonardo Music Journal Volume 19 ; 19 >
+
+  }
+
+  {
+    title <
+      name = Linguistic Inquiry
+    >
+
+    param[journal_dir] = linguistic_inquiry
+
+    au < manifest ; Linguistic Inquiry Volume 31 ; 31 >
+    au < manifest ; Linguistic Inquiry Volume 32 ; 32 >
+    au < manifest ; Linguistic Inquiry Volume 33 ; 33 >
+    au < manifest ; Linguistic Inquiry Volume 34 ; 34 >
+    au < manifest ; Linguistic Inquiry Volume 35 ; 35 >
+    au < manifest ; Linguistic Inquiry Volume 36 ; 36 >
+    au < manifest ; Linguistic Inquiry Volume 37 ; 37 >
+    au < manifest ; Linguistic Inquiry Volume 38 ; 38 >
+    au < manifest ; Linguistic Inquiry Volume 39 ; 39 >
+    au < manifest ; Linguistic Inquiry Volume 40 ; 40 >
+    au < manifest ; Linguistic Inquiry Volume 41 ; 41 >
+
+  }
+
+  {
+    title <
+      name = PAJ: A Journal of Performance and Art
+    >
+
+    param[journal_dir] = performing_arts_journal
+
+    au < manifest ; PAJ: A Journal of Performance and Art Volume 31 ; 31 >
+
+  }
+
+  {
+    title <
+      name = Perspectives on Science
+    >
+
+    param[journal_dir] = perspectives_on_science
+
+    au < manifest ; Perspectives on Science Volume 6 ; 6 >
+    au < manifest ; Perspectives on Science Volume 7 ; 7 >
+    au < manifest ; Perspectives on Science Volume 8 ; 8 >
+    au < manifest ; Perspectives on Science Volume 9 ; 9 >
+    au < manifest ; Perspectives on Science Volume 10 ; 10 >
+    au < manifest ; Perspectives on Science Volume 11 ; 11 >
+    au < manifest ; Perspectives on Science Volume 12 ; 12 >
+    au < manifest ; Perspectives on Science Volume 13 ; 13 >
+    au < manifest ; Perspectives on Science Volume 14 ; 14 >
+    au < manifest ; Perspectives on Science Volume 15 ; 15 >
+    au < manifest ; Perspectives on Science Volume 16 ; 16 >
+    au < manifest ; Perspectives on Science Volume 17 ; 17 >
+    au < manifest ; Perspectives on Science Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = TDR: The Drama Review
+    >
+
+    param[journal_dir] = the_drama_review
+
+    au < manifest ; TDR: The Drama Review Volume 43 ; 43 >
+    au < manifest ; TDR: The Drama Review Volume 44 ; 44 >
+    au < manifest ; TDR: The Drama Review Volume 45 ; 45 >
+    au < manifest ; TDR: The Drama Review Volume 46 ; 46 >
+    au < manifest ; TDR: The Drama Review Volume 47 ; 47 >
+    au < manifest ; TDR: The Drama Review Volume 48 ; 48 >
+    au < manifest ; TDR: The Drama Review Volume 49 ; 49 >
+    au < manifest ; TDR: The Drama Review Volume 50 ; 50 >
+    au < manifest ; TDR: The Drama Review Volume 51 ; 51 >
+    au < manifest ; TDR: The Drama Review Volume 52 ; 52 >
+    au < manifest ; TDR: The Drama Review Volume 53 ; 53 >
+    au < manifest ; TDR: The Drama Review Volume 54 ; 54 >
+
+  }
 
   {
     title <
@@ -19,6 +246,37 @@
     au < ready ; The American Journal of Bioethics Volume 2 ; 2 >
     au < ready ; The American Journal of Bioethics Volume 3 ; 3 >
     au < released ; The American Journal of Bioethics Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = The Harvard International Journal of Press/Politics
+    >
+
+    param[journal_dir] = harvard_international_journal_of_press_politics
+
+    au < manifest ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
+    au < manifest ; The Harvard International Journal of Press/Politics Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = The Washington Quarterly
+    >
+
+    param[journal_dir] = washington_quarterly
+
+    au < manifest ; The Washington Quarterly Volume 23 ; 23 >
+    au < manifest ; The Washington Quarterly Volume 24 ; 24 >
+    au < manifest ; The Washington Quarterly Volume 25 ; 25 >
+    au < manifest ; The Washington Quarterly Volume 26 ; 26 >
+    au < manifest ; The Washington Quarterly Volume 27 ; 27 >
+    au < manifest ; The Washington Quarterly Volume 28 ; 28 >
+    au < manifest ; The Washington Quarterly Volume 29 ; 29 >
+    au < manifest ; The Washington Quarterly Volume 30 ; 30 >
+    au < manifest ; The Washington Quarterly Volume 31 ; 31 >
 
   }
 

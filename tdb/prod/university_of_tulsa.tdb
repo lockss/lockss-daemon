@@ -1,0 +1,36 @@
+{
+  publisher <
+    name = University of Tulsa
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = James Joyce Quarterly
+    >
+
+    param[journal_dir] = james_joyce_quarterly
+
+    au < manifest ; James Joyce Quarterly Volume 44 ; 44 >
+    au < manifest ; James Joyce Quarterly Volume 45 ; 45 >
+    au < manifest ; James Joyce Quarterly Volume 46 ; 46 >
+
+  }
+
+  {
+    title <
+      name = Tulsa Studies in Women's Literature
+    >
+
+    param[journal_dir] = tulsa_studies_in_womens_literature
+
+    au < manifest ; Tulsa Studies in Women's Literature Volume 26 ; 26 >
+    au < manifest ; Tulsa Studies in Women's Literature Volume 27 ; 27 >
+    au < manifest ; Tulsa Studies in Women's Literature Volume 28 ; 28 >
+
+  }
+
+}

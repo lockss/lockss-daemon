@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Youngstown State University Center for Judaic and Holocaust Studies
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Journal of Jewish Identities
+    >
+
+    param[journal_dir] = journal_of_jewish_identities
+
+    au < manifest ; Journal of Jewish Identities Issue 1 ; 1 >
+    au < manifest ; Journal of Jewish Identities Issue 2 ; 2 >
+    au < manifest ; Journal of Jewish Identities Issue 3 ; 3 >
+
+  }
+
+}

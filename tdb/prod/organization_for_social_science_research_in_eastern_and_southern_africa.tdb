@@ -1,0 +1,29 @@
+{
+  publisher <
+    name = Organization for Social Science Research in Eastern and Southern Africa
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Eastern Africa Social Science Research Review
+    >
+
+    param[journal_dir] = eastern_africa_social_science_research_review
+
+    au < released ; Eastern Africa Social Science Research Review Volume 18 ; 18 >
+    au < released ; Eastern Africa Social Science Research Review Volume 19 ; 19 >
+    au < released ; Eastern Africa Social Science Research Review Volume 20 ; 20 >
+    au < released ; Eastern Africa Social Science Research Review Volume 21 ; 21 >
+    au < released ; Eastern Africa Social Science Research Review Volume 22 ; 22 >
+    au < released ; Eastern Africa Social Science Research Review Volume 23 ; 23 >
+    au < manifest ; Eastern Africa Social Science Research Review Volume 24 ; 24 >
+    au < manifest ; Eastern Africa Social Science Research Review Volume 25 ; 25 >
+    au < manifest ; Eastern Africa Social Science Research Review Volume 26 ; 26 >
+
+  }
+
+}

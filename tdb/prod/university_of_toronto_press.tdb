@@ -3,14 +3,13 @@
     name = University of Toronto Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Canadian Journal of Criminology and Criminal Justice 
+      name = Canadian Journal of Criminology and Criminal Justice
     >
 
     param[journal_dir] = canadian_journal_of_criminology_and_criminal_justice
@@ -25,7 +24,7 @@
 
   {
     title <
-      name = Canadian Journal of Law and Society 
+      name = Canadian Journal of Law and Society
     >
 
     param[journal_dir] = canadian_journal_of_law_and_society
@@ -40,7 +39,7 @@
 
   {
     title <
-      name = Canadian Journal of Women and the Law 
+      name = Canadian Journal of Women and the Law
     >
 
     param[journal_dir] = canadian_journal_of_women_and_the_law
@@ -66,7 +65,7 @@
 
   {
     title <
-      name = Canadian Review of American Studies 
+      name = Canadian Review of American Studies
     >
 
     param[journal_dir] = canadian_review_of_american_studies
@@ -82,7 +81,18 @@
 
   {
     title <
-      name = Diaspora: A Journal of Transnational Studies 
+      name = Canadian Theatre Review
+    >
+
+    param[journal_dir] = canadian_theatre_review
+
+    au < manifest ; Canadian Theatre Review Issue 141 ; 141 >
+
+  }
+
+  {
+    title <
+      name = Diaspora: A Journal of Transnational Studies
     >
 
     param[journal_dir] = diaspora_a_journal_of_transnational_studies
@@ -94,7 +104,7 @@
 
   {
     title <
-      name = Eighteenth Century Fiction 
+      name = Eighteenth Century Fiction
     >
 
     param[journal_dir] = eighteenth_century_fiction
@@ -103,24 +113,36 @@
     au < released ; Eighteenth Century Fiction Volume 19 ; 19 >
     au < manifest ; Eighteenth Century Fiction Volume 20 ; 20 >
     au < manifest ; Eighteenth Century Fiction Volume 21 ; 21 >
+    au < manifest ; Eighteenth Century Fiction Volume 22 ; 22 >
 
   }
 
   {
     title <
-      name = Francophonies d'Amérique 
+      name = Genocide Studies and Prevention
     >
 
-    param[journal_dir] = francophonies_damerique
+    param[journal_dir] = genocide_studies_and_prevention
 
-    au < released ; Francophonies d'Amérique Volume 17 ; 17 >
-    au < released ; Francophonies d'Amérique Volume 18 ; 18 >
+    au < manifest ; Genocide Studies and Prevention Volume 4 ; 4 >
 
   }
 
   {
     title <
-      name = Journal of Canadian Studies 
+      name = Histoire sociale/Social history
+    >
+
+    param[journal_dir] = histoire_sociale_social_history
+
+    au < manifest ; Histoire sociale/Social history Volume 41 ; 41 >
+    au < manifest ; Histoire sociale/Social history Volume 42 ; 42 >
+
+  }
+
+  {
+    title <
+      name = Journal of Canadian Studies
     >
 
     param[journal_dir] = journal_of_canadian_studies
@@ -129,12 +151,13 @@
     au < released ; Journal of Canadian Studies Volume 40 ; 40 >
     au < manifest ; Journal of Canadian Studies Volume 41 ; 41 >
     au < manifest ; Journal of Canadian Studies Volume 42 ; 42 >
+    au < manifest ; Journal of Canadian Studies Volume 43 ; 43 >
 
   }
 
   {
     title <
-      name = Journal of Scholarly Publishing 
+      name = Journal of Scholarly Publishing
     >
 
     param[journal_dir] = journal_of_scholarly_publishing
@@ -145,12 +168,13 @@
     au < released ; Journal of Scholarly Publishing Volume 38 ; 38 >
     au < manifest ; Journal of Scholarly Publishing Volume 39 ; 39 >
     au < manifest ; Journal of Scholarly Publishing Volume 40 ; 40 >
+    au < manifest ; Journal of Scholarly Publishing Volume 41 ; 41 >
 
   }
 
   {
     title <
-      name = Modern Drama 
+      name = Modern Drama
     >
 
     param[journal_dir] = modern_drama
@@ -159,12 +183,13 @@
     au < released ; Modern Drama Volume 49 ; 49 >
     au < released ; Modern Drama Volume 50 ; 50 >
     au < manifest ; Modern Drama Volume 51 ; 51 >
+    au < manifest ; Modern Drama Volume 52 ; 52 >
 
   }
 
   {
     title <
-      name = Seminar: A Journal of Germanic Studies 
+      name = Seminar: A Journal of Germanic Studies
     >
 
     param[journal_dir] = seminar_a_journal_of_germanic_studies
@@ -173,12 +198,13 @@
     au < released ; Seminar: A Journal of Germanic Studies Volume 43 ; 43 >
     au < manifest ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
     au < manifest ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
+    au < manifest ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
 
   }
 
   {
     title <
-      name = The Canadian Historical Review 
+      name = The Canadian Historical Review
     >
 
     param[journal_dir] = canadian_historical_review
@@ -189,12 +215,13 @@
     au < released ; The Canadian Historical Review Volume 88 ; 88 >
     au < ready ; The Canadian Historical Review Volume 89 ; 89 >
     au < ready ; The Canadian Historical Review Volume 90 ; 90 >
+    au < manifest ; The Canadian Historical Review Volume 91 ; 91 >
 
   }
 
   {
     title <
-      name = The Canadian Journal of Linguistics / La revue canadienne de linguistique 
+      name = The Canadian Journal of Linguistics / La revue canadienne de linguistique
     >
 
     param[journal_dir] = canadian_journal_of_linguistics
@@ -211,7 +238,7 @@
 
   {
     title <
-      name = The Canadian Journal of Sociology 
+      name = The Canadian Journal of Sociology
     >
 
     param[journal_dir] = canadian_journal_of_sociology
@@ -225,7 +252,7 @@
 
   {
     title <
-      name = The Canadian Modern Language Review / La revue canadienne des langues vivantes 
+      name = The Canadian Modern Language Review / La revue canadienne des langues vivantes
     >
 
     param[journal_dir] = canadian_modern_language_review
@@ -241,7 +268,18 @@
 
   {
     title <
-      name = University of Toronto Law Journal 
+      name = The Tocqueville Review/La revue Tocqueville
+    >
+
+    param[journal_dir] = tocqueville_reviewla_revue_tocqueville
+
+    au < manifest ; The Tocqueville Review/La revue Tocqueville Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = University of Toronto Law Journal
     >
 
     param[journal_dir] = university_of_toronto_law_journal
@@ -252,12 +290,13 @@
     au < manifest ; University of Toronto Law Journal Volume 57 ; 57 >
     au < manifest ; University of Toronto Law Journal Volume 58 ; 58 >
     au < manifest ; University of Toronto Law Journal Volume 59 ; 59 >
+    au < manifest ; University of Toronto Law Journal Volume 60 ; 60 >
 
   }
 
   {
     title <
-      name = University of Toronto Quarterly 
+      name = University of Toronto Quarterly
     >
 
     param[journal_dir] = university_of_toronto_quarterly
@@ -266,20 +305,7 @@
     au < released ; University of Toronto Quarterly Volume 75 ; 75 >
     au < released ; University of Toronto Quarterly Volume 76 ; 76 >
     au < manifest ; University of Toronto Quarterly Volume 77 ; 77 >
-
-  }
-
-  {
-    title <
-      name = Victorian Periodicals Review 
-    >
-
-    param[journal_dir] = victorian_periodicals_review
-
-    au < released ; Victorian Periodicals Review Volume 38 ; 38 >
-    au < released ; Victorian Periodicals Review Volume 39 ; 39 >
-    au < released ; Victorian Periodicals Review Volume 40 ; 40 >
-    au < manifest ; Victorian Periodicals Review Volume 41 ; 41 >
+    au < manifest ; University of Toronto Quarterly Volume 78 ; 78 >
 
   }
 

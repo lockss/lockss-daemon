@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = New Chaucer Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Studies in the Age of Chaucer
+    >
+
+    param[journal_dir] = studies_in_the_age_of_chaucer
+
+    au < manifest ; Studies in the Age of Chaucer Volume 30 ; 30 >
+
+  }
+
+}

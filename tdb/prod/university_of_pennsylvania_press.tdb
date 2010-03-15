@@ -3,27 +3,43 @@
     name = University of Pennsylvania Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Early American Studies: An Interdisciplinary Journal 
+      name = Dissent
     >
 
-    param[journal_dir] = early_american_studies_an_interdisciplinary_journal
+    param[journal_dir] = dissent
 
-    au < released ; Early American Studies: An Interdisciplinary Journal Volume 4 ; 4 >
-    au < released ; Early American Studies: An Interdisciplinary Journal Volume 5 ; 5 >
-    au < manifest ; Early American Studies: An Interdisciplinary Journal Volume 6 ; 6 >
+    au < manifest ; Dissent Volume 56 ; 56 >
+    au < manifest ; Dissent Volume 57 ; 57 >
 
   }
 
   {
     title <
-      name = Hispanic Review 
+      name = Early American Studies: An Interdisciplinary Journal
+    >
+
+    param[journal_dir] = early_american_studies_an_interdisciplinary_journal
+
+    au < manifest ; Early American Studies: An Interdisciplinary Journal Volume 1 ; 1 >
+    au < manifest ; Early American Studies: An Interdisciplinary Journal Volume 2 ; 2 >
+    au < manifest ; Early American Studies: An Interdisciplinary Journal Volume 3 ; 3 >
+    au < released ; Early American Studies: An Interdisciplinary Journal Volume 4 ; 4 >
+    au < released ; Early American Studies: An Interdisciplinary Journal Volume 5 ; 5 >
+    au < manifest ; Early American Studies: An Interdisciplinary Journal Volume 6 ; 6 >
+    au < manifest ; Early American Studies: An Interdisciplinary Journal Volume 7 ; 7 >
+    au < manifest ; Early American Studies: An Interdisciplinary Journal Volume 8 ; 8 >
+
+  }
+
+  {
+    title <
+      name = Hispanic Review
     >
 
     param[journal_dir] = hispanic_review
@@ -33,12 +49,13 @@
     au < released ; Hispanic Review Volume 75 ; 75 >
     au < manifest ; Hispanic Review Volume 76 ; 76 >
     au < manifest ; Hispanic Review Volume 77 ; 77 >
+    au < manifest ; Hispanic Review Volume 78 ; 78 >
 
   }
 
   {
     title <
-      name = Jewish Quarterly Review 
+      name = Jewish Quarterly Review
     >
 
     param[journal_dir] = jewish_quarterly_review
@@ -48,12 +65,13 @@
     au < released ; Jewish Quarterly Review Volume 97 ; 97 >
     au < manifest ; Jewish Quarterly Review Volume 98 ; 98 >
     au < manifest ; Jewish Quarterly Review Volume 99 ; 99 >
+    au < manifest ; Jewish Quarterly Review Volume 100 ; 100 >
 
   }
 
   {
     title <
-      name = Journal of the Early Republic 
+      name = Journal of the Early Republic
     >
 
     param[journal_dir] = journal_of_the_early_republic
@@ -63,12 +81,13 @@
     au < released ; Journal of the Early Republic Volume 27 ; 27 >
     au < manifest ; Journal of the Early Republic Volume 28 ; 28 >
     au < manifest ; Journal of the Early Republic Volume 29 ; 29 >
+    au < manifest ; Journal of the Early Republic Volume 30 ; 30 >
 
   }
 
   {
     title <
-      name = Journal of the History of Ideas 
+      name = Journal of the History of Ideas
     >
 
     param[journal_dir] = journal_of_the_history_of_ideas
@@ -87,6 +106,46 @@
     au < released ; Journal of the History of Ideas Volume 68 ; 68 >
     au < manifest ; Journal of the History of Ideas Volume 69 ; 69 >
     au < manifest ; Journal of the History of Ideas Volume 70 ; 70 >
+    au < manifest ; Journal of the History of Ideas Volume 71 ; 71 >
+
+  }
+
+  {
+    title <
+      name = Magic, Ritual, and Witchcraft
+    >
+
+    param[journal_dir] = magic_ritual_and_witchcraft
+
+    au < manifest ; Magic, Ritual, and Witchcraft Volume 1 ; 1 >
+    au < manifest ; Magic, Ritual, and Witchcraft Volume 2 ; 2 >
+    au < manifest ; Magic, Ritual, and Witchcraft Volume 3 ; 3 >
+    au < manifest ; Magic, Ritual, and Witchcraft Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = Revista Hispánica Moderna
+    >
+
+    param[journal_dir] = revista_hispanica_moderna
+
+    au < manifest ; Revista Hispánica Moderna Volume 62 ; 62 >
+
+  }
+
+  {
+    title <
+      name = The Eighteenth Century
+    >
+
+    param[journal_dir] = the_eighteenth_century
+
+    au < manifest ; The Eighteenth Century Volume 47 ; 47 >
+    au < manifest ; The Eighteenth Century Volume 48 ; 48 >
+    au < manifest ; The Eighteenth Century Volume 49 ; 49 >
+    au < manifest ; The Eighteenth Century Volume 50 ; 50 >
 
   }
 

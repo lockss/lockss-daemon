@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = North American Goethe Society
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Goethe Yearbook
+    >
+
+    param[journal_dir] = goethe_yearbook
+
+    au < manifest ; Goethe Yearbook Volume 15 ; 15 >
+    au < manifest ; Goethe Yearbook Volume 16 ; 16 >
+    au < manifest ; Goethe Yearbook Volume 17 ; 17 >
+
+  }
+
+}

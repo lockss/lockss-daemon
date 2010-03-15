@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = Sophia University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Monumenta Nipponica
+    >
+
+    param[journal_dir] = monumenta_nipponica
+
+    au < manifest ; Monumenta Nipponica Volume 60 ; 60 >
+    au < manifest ; Monumenta Nipponica Volume 61 ; 61 >
+    au < manifest ; Monumenta Nipponica Volume 62 ; 62 >
+    au < manifest ; Monumenta Nipponica Volume 63 ; 63 >
+    au < manifest ; Monumenta Nipponica Volume 64 ; 64 >
+
+  }
+
+}

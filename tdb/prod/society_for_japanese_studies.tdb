@@ -3,14 +3,13 @@
     name = Society for Japanese Studies
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = The Journal of Japanese Studies 
+      name = The Journal of Japanese Studies
     >
 
     param[journal_dir] = journal_of_japanese_studies
@@ -21,6 +20,7 @@
     au < manifest ; The Journal of Japanese Studies Volume 33 ; 33 >
     au < manifest ; The Journal of Japanese Studies Volume 34 ; 34 >
     au < manifest ; The Journal of Japanese Studies Volume 35 ; 35 >
+    au < manifest ; The Journal of Japanese Studies Volume 36 ; 36 >
 
   }
 

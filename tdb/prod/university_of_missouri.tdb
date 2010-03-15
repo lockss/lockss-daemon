@@ -3,14 +3,13 @@
     name = University of Missouri
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = The Missouri Review 
+      name = The Missouri Review
     >
 
     param[journal_dir] = missouri_review
@@ -20,6 +19,7 @@
     au < released ; The Missouri Review Volume 29 ; 29 >
     au < released ; The Missouri Review Volume 30 ; 30 >
     au < manifest ; The Missouri Review Volume 31 ; 31 >
+    au < manifest ; The Missouri Review Volume 32 ; 32 >
 
   }
 

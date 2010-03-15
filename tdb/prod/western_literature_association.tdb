@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = Western Literature Association
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Western American Literature
+    >
+
+    param[journal_dir] = western_american_literature
+
+    au < manifest ; Western American Literature Volume 44 ; 44 >
+
+  }
+
+}

@@ -3,14 +3,13 @@
     name = University of Pittsburgh Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Cuban Studies 
+      name = Cuban Studies
     >
 
     param[journal_dir] = cuban_studies
@@ -20,6 +19,7 @@
     au < released ; Cuban Studies Volume 36 ; 36 >
     au < released ; Cuban Studies Volume 37 ; 37 >
     au < manifest ; Cuban Studies Volume 38 ; 38 >
+    au < manifest ; Cuban Studies Volume 39 ; 39 >
 
   }
 

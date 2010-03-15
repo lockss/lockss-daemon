@@ -29,6 +29,10 @@ comment[0] = Atypon AUs
     }
     
     {
+      title <
+        name = Pacific Science
+      >
+
       implicit < status ; name ; param[volume] >
       plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
       param[base_url] = http://muse.jhu.edu/
@@ -205,7 +209,9 @@ comment[0] = Atypon AUs
       au < released ; China Review International Volume 11 ; 11 >
       au < released ; China Review International Volume 12 ; 12 >
       au < released ; China Review International Volume 13 ; 13 >
-
+      au < manifest ; China Review International Volume 14 ; 14 >
+      au < manifest ; China Review International Volume 15 ; 15 >
+      
     }
   }
   
@@ -232,7 +238,9 @@ comment[0] = Atypon AUs
       au < released ; Journal of World History Volume 16 ; 16 >
       au < released ; Journal of World History Volume 17 ; 17 >
       au < released ; Journal of World History Volume 18 ; 18 >
-
+      au < manifest ; Journal of World History Volume 19 ; 19 >
+      au < manifest ; Journal of World History Volume 20 ; 20 >
+    
     }
   }
   
@@ -274,7 +282,10 @@ comment[0] = Atypon AUs
       au < manifest ; Korean Studies Volume 28 ; 28 >
       au < manifest ; Korean Studies Volume 29 ; 29 >
       au < manifest ; Korean Studies Volume 30 ; 30 >
-
+      au < manifest ; Korean Studies Volume 31 ; 31 >
+      au < manifest ; Korean Studies Volume 32 ; 32 >
+      au < manifest ; Korean Studies Volume 33 ; 33 >
+    
     }
   }
   
@@ -297,7 +308,10 @@ comment[0] = Atypon AUs
       au < released ; Manoa Volume 16 ; 16 >
       au < released ; Manoa Volume 17 ; 17 >
       au < released ; Manoa Volume 18 ; 18 >
-
+      au < manifest ; Manoa Volume 19 ; 19 >
+      au < manifest ; Manoa Volume 20 ; 20 >
+      au < manifest ; Manoa Volume 21 ; 21 >
+    
     }
   }
   
@@ -320,7 +334,10 @@ comment[0] = Atypon AUs
       au < released ; Oceanic Linguistics Volume 43 ; 43 >
       au < released ; Oceanic Linguistics Volume 44 ; 44 >
       au < released ; Oceanic Linguistics Volume 45 ; 45 >
-
+      au < manifest ; Oceanic Linguistics Volume 46 ; 46 >
+      au < manifest ; Oceanic Linguistics Volume 47 ; 47 >
+      au < manifest ; Oceanic Linguistics Volume 48 ; 48 >
+    
     }
   }
   
@@ -343,7 +360,10 @@ comment[0] = Atypon AUs
       au < released ; Philosophy East and West Volume 55 ; 55 >
       au < released ; Philosophy East and West Volume 56 ; 56 >
       au < released ; Philosophy East and West Volume 57 ; 57 >
-
+      au < manifest ; Philosophy East and West Volume 58 ; 58 >
+      au < manifest ; Philosophy East and West Volume 59 ; 59 >
+      au < manifest ; Philosophy East and West Volume 60 ; 60 >
+    
     }
   }
   
@@ -366,7 +386,10 @@ comment[0] = Atypon AUs
       au < released ; The Contemporary Pacific Volume 17 ; 17 >
       au < released ; The Contemporary Pacific Volume 18 ; 18 >
       au < released ; The Contemporary Pacific Volume 19 ; 19 >
-
+      au < manifest ; The Contemporary Pacific Volume 20 ; 20 >
+      au < manifest ; The Contemporary Pacific Volume 21 ; 21 >
+      au < manifest ; The Contemporary Pacific Volume 22 ; 22 >
+    
     }
   }
   
@@ -384,7 +407,10 @@ comment[0] = Atypon AUs
       au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 66 ; 66 >
       au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 67 ; 67 >
       au < released ; Yearbook of the Association of Pacific Coast Geographers Volume 68 ; 68 >
-
+      au < manifest ; Yearbook of the Association of Pacific Coast Geographers Volume 69 ; 69 >
+      au < manifest ; Yearbook of the Association of Pacific Coast Geographers Volume 70 ; 70 >
+      au < manifest ; Yearbook of the Association of Pacific Coast Geographers Volume 71 ; 71 >
+    
     }
 
   }

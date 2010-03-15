@@ -3,14 +3,13 @@
     name = Population Review Publications
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Population Review 
+      name = Population Review
     >
 
     param[journal_dir] = population_review
@@ -21,6 +20,8 @@
     au < manifest ; Population Review Volume 45 ; 45 >
     au < manifest ; Population Review Volume 46 ; 46 >
     au < manifest ; Population Review Volume 47 ; 47 >
+    au < manifest ; Population Review Volume 48 ; 48 >
+    au < manifest ; Population Review Volume 49 ; 49 >
 
   }
 

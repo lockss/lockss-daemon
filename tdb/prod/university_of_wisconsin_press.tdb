@@ -47,6 +47,18 @@
 
     }
 
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = arctic_anthropology
+      implicit < status ; name ; param[volume] >
+
+      au < manifest ; Arctic Anthropology Volume 45 ; 45 >
+      au < manifest ; Arctic Anthropology Volume 46 ; 46 >
+
+    }
+    
   }
 
   {
@@ -81,7 +93,7 @@
       au < released ; Contemporary Literature Volume 47 ; 47 >
       au < released ; Contemporary Literature Volume 48 ; 48 >
       au < manifest ; Contemporary Literature Volume 49 ; 49 >
-
+      au < manifest ; Contemporary Literature Volume 50 ; 50 >
     }
 
   }
@@ -226,7 +238,7 @@
       au < released ; Luso-Brazilian Review Volume 43 ; 43 >
       au < manifest ; Luso-Brazilian Review Volume 44 ; 44 >
       au < manifest ; Luso-Brazilian Review Volume 45 ; 45 >
-
+      au < manifest ; Luso-Brazilian Review Volume 46 ; 46 >
     }
 
   }
@@ -257,6 +269,7 @@
       au < released ; Monatshefte Volume 99 ; 99 >
       au < manifest ; Monatshefte Volume 100 ; 100 >
       au < manifest ; Monatshefte Volume 101 ; 101 >
+      au < manifest ; Monatshefte Volume 102 ; 102 >
 
     }
 
@@ -300,6 +313,7 @@
       au < released ; SubStance Volume 35 ; 35 >
       au < released ; SubStance Volume 36 ; 36 >
       au < manifest ; SubStance Volume 37 ; 37 >
+      au < manifest ; SubStance Volume 38 ; 38 >
 
     }
 

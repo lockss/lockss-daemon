@@ -3,14 +3,13 @@
     name = University of Arizona
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Arizona Journal of Hispanic Cultural Studies 
+      name = Arizona Journal of Hispanic Cultural Studies
     >
 
     param[journal_dir] = arizona_journal_of_hispanic_cultural_studies
@@ -18,12 +17,13 @@
     au < released ; Arizona Journal of Hispanic Cultural Studies Volume 10 ; 10 >
     au < ready ; Arizona Journal of Hispanic Cultural Studies Volume 11 ; 11 >
     au < ready ; Arizona Journal of Hispanic Cultural Studies Volume 12 ; 12 >
+    au < manifest ; Arizona Journal of Hispanic Cultural Studies Volume 13 ; 13 >
 
   }
 
   {
     title <
-      name = Arizona Quarterly: A Journal of American Literature, Culture, and Theory 
+      name = Arizona Quarterly: A Journal of American Literature, Culture, and Theory
     >
 
     param[journal_dir] = arizona_quarterly_a_journal_of_american_literature_culture_and_theory

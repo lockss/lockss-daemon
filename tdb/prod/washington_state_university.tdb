@@ -1,0 +1,23 @@
+{
+  publisher <
+    name = Washington State University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = ESQ: A Journal of the American Renaissance
+    >
+
+    param[journal_dir] = esq
+
+    au < manifest ; ESQ: A Journal of the American Renaissance Volume 53 ; 53 >
+    au < manifest ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
+    au < manifest ; ESQ: A Journal of the American Renaissance Volume 55 ; 55 >
+
+  }
+
+}

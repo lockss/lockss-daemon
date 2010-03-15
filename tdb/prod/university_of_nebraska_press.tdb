@@ -3,25 +3,47 @@
     name = University of Nebraska Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = An Sionnach: A Journal of Literature, Culture, and the Arts 
+      name = An Sionnach: A Journal of Literature, Culture, and the Arts
     >
 
     param[journal_dir] = an_sionnach
 
     au < ready ; An Sionnach: A Journal of Literature, Culture, and the Arts Volume 5 ; 5 >
-    
+
   }
-    
+
   {
     title <
-      name = French Forum 
+      name = Anthropological Linguistics
+    >
+
+    param[journal_dir] = anthropological_linguistics
+
+    au < manifest ; Anthropological Linguistics Volume 51 ; 51 >
+
+  }
+
+  {
+    title <
+      name = Collaborative Anthropologies
+    >
+
+    param[journal_dir] = collaborative_anthropologies
+
+    au < manifest ; Collaborative Anthropologies Volume 1 ; 1 >
+    au < manifest ; Collaborative Anthropologies Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
+      name = French Forum
     >
 
     param[journal_dir] = french_forum
@@ -34,12 +56,189 @@
     au < released ; French Forum Volume 31 ; 31 >
     au < manifest ; French Forum Volume 32 ; 32 >
     au < manifest ; French Forum Volume 33 ; 33 >
+    au < manifest ; French Forum Volume 34 ; 34 >
 
   }
 
   {
     title <
-      name = The American Indian Quarterly 
+      name = Frontiers: A Journal of Women Studies
+    >
+
+    param[journal_dir] = frontiers
+
+    au < released ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
+    au < released ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
+    au < manifest ; Frontiers: A Journal of Women Studies Volume 28 ; 28 >
+    au < manifest ; Frontiers: A Journal of Women Studies Volume 29 ; 29 >
+    au < manifest ; Frontiers: A Journal of Women Studies Volume 30 ; 30 >
+
+  }
+
+  {
+    title <
+      name = Histories of Anthropology Annual
+    >
+
+    param[journal_dir] = histories_of_anthropology_annual
+
+    au < manifest ; Histories of Anthropology Annual Volume 1 ; 1 >
+    au < manifest ; Histories of Anthropology Annual Volume 2 ; 2 >
+    au < manifest ; Histories of Anthropology Annual Volume 3 ; 3 >
+    au < manifest ; Histories of Anthropology Annual Volume 4 ; 4 >
+    au < manifest ; Histories of Anthropology Annual Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Journal of Sports Media
+    >
+
+    param[journal_dir] = journal_of_sports_media
+
+    au < manifest ; Journal of Sports Media Volume 1 ; 1 >
+    au < manifest ; Journal of Sports Media Volume 2 ; 2 >
+    au < manifest ; Journal of Sports Media Volume 3 ; 3 >
+    au < manifest ; Journal of Sports Media Volume 4 ; 4 >
+    au < manifest ; Journal of Sports Media Volume 5 ; 5 >
+
+  }
+
+  {
+    title <
+      name = Legacy: A Journal of American Women Writers
+    >
+
+    param[journal_dir] = legacy
+
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 17 ; 17 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 18 ; 18 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 19 ; 19 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 20 ; 20 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 21 ; 21 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 22 ; 22 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 23 ; 23 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 24 ; 24 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 25 ; 25 >
+    au < manifest ; Legacy: A Journal of American Women Writers Volume 26 ; 26 >
+
+  }
+
+  {
+    title <
+      name = NINE: A Journal of Baseball History and Culture
+    >
+
+    param[journal_dir] = nine
+
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 9 ; 9 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 10 ; 10 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 11 ; 11 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 12 ; 12 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 13 ; 13 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 14 ; 14 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 15 ; 15 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 16 ; 16 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 17 ; 17 >
+    au < manifest ; NINE: A Journal of Baseball History and Culture Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Native South
+    >
+
+    param[journal_dir] = native_south
+
+    au < manifest ; Native South Volume 1 ; 1 >
+    au < manifest ; Native South Volume 2 ; 2 >
+
+  }
+
+  {
+    title <
+      name = Nineteenth-Century French Studies
+    >
+
+    param[journal_dir] = nineteenth_century_french_studies
+
+    au < manifest ; Nineteenth-Century French Studies Volume 29 ; 29 >
+    au < manifest ; Nineteenth-Century French Studies Volume 30 ; 30 >
+    au < manifest ; Nineteenth-Century French Studies Volume 31 ; 31 >
+    au < manifest ; Nineteenth-Century French Studies Volume 32 ; 32 >
+    au < manifest ; Nineteenth-Century French Studies Volume 33 ; 33 >
+    au < manifest ; Nineteenth-Century French Studies Volume 34 ; 34 >
+    au < manifest ; Nineteenth-Century French Studies Volume 35 ; 35 >
+    au < manifest ; Nineteenth-Century French Studies Volume 36 ; 36 >
+    au < manifest ; Nineteenth-Century French Studies Volume 37 ; 37 >
+    au < manifest ; Nineteenth-Century French Studies Volume 38 ; 38 >
+
+  }
+
+  {
+    title <
+      name = Prairie Schooner
+    >
+
+    param[journal_dir] = prairie_schooner
+
+    au < manifest ; Prairie Schooner Volume 77 ; 77 >
+    au < manifest ; Prairie Schooner Volume 78 ; 78 >
+    au < manifest ; Prairie Schooner Volume 79 ; 79 >
+    au < manifest ; Prairie Schooner Volume 80 ; 80 >
+    au < manifest ; Prairie Schooner Volume 81 ; 81 >
+    au < manifest ; Prairie Schooner Volume 82 ; 82 >
+    au < manifest ; Prairie Schooner Volume 83 ; 83 >
+
+  }
+
+  {
+    title <
+      name = Qui Parle: Critical Humanities and Social Sciences
+    >
+
+    param[journal_dir] = qui_parle
+
+    au < manifest ; Qui Parle: Critical Humanities and Social Sciences Volume 18 ; 18 >
+
+  }
+
+  {
+    title <
+      name = Studies in American Indian Literatures
+    >
+
+    param[journal_dir] = studies_in_american_indian_literatures
+
+    au < manifest ; Studies in American Indian Literatures Volume 16 ; 16 >
+    au < manifest ; Studies in American Indian Literatures Volume 17 ; 17 >
+    au < manifest ; Studies in American Indian Literatures Volume 18 ; 18 >
+    au < manifest ; Studies in American Indian Literatures Volume 19 ; 19 >
+    au < manifest ; Studies in American Indian Literatures Volume 20 ; 20 >
+    au < manifest ; Studies in American Indian Literatures Volume 21 ; 21 >
+
+  }
+
+  {
+    title <
+      name = Studies in American Naturalism
+    >
+
+    param[journal_dir] = studies_in_american_naturalism
+
+    au < manifest ; Studies in American Naturalism Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = The American Indian Quarterly
     >
 
     param[journal_dir] = american_indian_quarterly
@@ -60,19 +259,52 @@
 
   {
     title <
-      name = Frontiers: A Journal of Women Studies 
+      name = Women and Music: A Journal of Gender and Culture
     >
 
-    param[journal_dir] = frontiers
+    param[journal_dir] = women_and_music
 
-    au < released ; Frontiers: A Journal of Women Studies Volume 22 ; 22 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 23 ; 23 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 24 ; 24 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 25 ; 25 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 26 ; 26 >
-    au < released ; Frontiers: A Journal of Women Studies Volume 27 ; 27 >
-    au < manifest ; Frontiers: A Journal of Women Studies Volume 28 ; 28 >
-    au < manifest ; Frontiers: A Journal of Women Studies Volume 29 ; 29 >
+    au < manifest ; Women and Music: A Journal of Gender and Culture Volume 8 ; 8 >
+    au < manifest ; Women and Music: A Journal of Gender and Culture Volume 9 ; 9 >
+    au < manifest ; Women and Music: A Journal of Gender and Culture Volume 10 ; 10 >
+    au < manifest ; Women and Music: A Journal of Gender and Culture Volume 11 ; 11 >
+    au < manifest ; Women and Music: A Journal of Gender and Culture Volume 12 ; 12 >
+    au < manifest ; Women and Music: A Journal of Gender and Culture Volume 13 ; 13 >
+
+  }
+
+  {
+    title <
+      name = Women in German Yearbook: Feminist Studies in German Literature & Culture
+    >
+
+    param[journal_dir] = women_in_german_yearbook
+
+    au < manifest ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 23 ; 23 >
+    au < manifest ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 24 ; 24 >
+    au < manifest ; Women in German Yearbook: Feminist Studies in German Literature & Culture Volume 25 ; 25 >
+
+  }
+
+  {
+    title <
+      name = symploke
+    >
+
+    param[journal_dir] = symploke
+
+    au < manifest ; symploke Volume 5 ; 5 >
+    au < manifest ; symploke Volume 6 ; 6 >
+    au < manifest ; symploke Volume 7 ; 7 >
+    au < manifest ; symploke Volume 8 ; 8 >
+    au < manifest ; symploke Volume 9 ; 9 >
+    au < manifest ; symploke Volume 10 ; 10 >
+    au < manifest ; symploke Volume 11 ; 11 >
+    au < manifest ; symploke Volume 12 ; 12 >
+    au < manifest ; symploke Volume 13 ; 13 >
+    au < manifest ; symploke Volume 14 ; 14 >
+    au < manifest ; symploke Volume 15 ; 15 >
+    au < manifest ; symploke Volume 16 ; 16 >
 
   }
 

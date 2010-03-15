@@ -1,0 +1,41 @@
+{
+  publisher <
+    name = NUS Press Pte Ltd
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = China: An International Journal
+    >
+
+    param[journal_dir] = china
+
+    au < manifest ; China: An International Journal Volume 1 ; 1 >
+    au < manifest ; China: An International Journal Volume 2 ; 2 >
+    au < manifest ; China: An International Journal Volume 3 ; 3 >
+    au < manifest ; China: An International Journal Volume 4 ; 4 >
+    au < manifest ; China: An International Journal Volume 5 ; 5 >
+    au < manifest ; China: An International Journal Volume 6 ; 6 >
+    au < manifest ; China: An International Journal Volume 7 ; 7 >
+
+  }
+
+  {
+    title <
+      name = Journal of Chinese Overseas
+    >
+
+    param[journal_dir] = journal_of_chinese_overseas
+
+    au < manifest ; Journal of Chinese Overseas Volume 1 ; 1 >
+    au < manifest ; Journal of Chinese Overseas Volume 2 ; 2 >
+    au < manifest ; Journal of Chinese Overseas Volume 3 ; 3 >
+    au < manifest ; Journal of Chinese Overseas Volume 4 ; 4 >
+
+  }
+
+}

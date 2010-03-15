@@ -3,14 +3,13 @@
     name = University of Texas Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Asian Music 
+      name = Asian Music
     >
 
     param[journal_dir] = asian_music
@@ -26,7 +25,7 @@
 
   {
     title <
-      name = Cinema Journal 
+      name = Cinema Journal
     >
 
     param[journal_dir] = cinema_journal
@@ -41,12 +40,13 @@
     au < released ; Cinema Journal Volume 46 ; 46 >
     au < manifest ; Cinema Journal Volume 47 ; 47 >
     au < manifest ; Cinema Journal Volume 48 ; 48 >
+    au < manifest ; Cinema Journal  49 ; 49 >
 
   }
 
   {
     title <
-      name = Journal of the History of Sexuality 
+      name = Journal of the History of Sexuality
     >
 
     param[journal_dir] = journal_of_the_history_of_sexuality
@@ -60,25 +60,13 @@
     au < manifest ; Journal of the History of Sexuality Volume 16 ; 16 >
     au < manifest ; Journal of the History of Sexuality Volume 17 ; 17 >
     au < manifest ; Journal of the History of Sexuality Volume 18 ; 18 >
+    au < manifest ; Journal of the History of Sexuality Volume 19 ; 19 >
 
   }
 
   {
     title <
-      name = Joyce Studies Annual 
-    >
-
-    param[journal_dir] = joyce_studies_annual
-
-    au < released ; Joyce Studies Annual Volume 12 ; 12 >
-    au < released ; Joyce Studies Annual Volume 13 ; 13 >
-    au < released ; Joyce Studies Annual Volume 14 ; 14 >
-
-  }
-
-  {
-    title <
-      name = Latin American Music Review 
+      name = Latin American Music Review
     >
 
     param[journal_dir] = latin_american_music_review
@@ -91,28 +79,13 @@
     au < released ; Latin American Music Review Volume 27 ; 27 >
     au < manifest ; Latin American Music Review Volume 28 ; 28 >
     au < manifest ; Latin American Music Review Volume 29 ; 29 >
+    au < manifest ; Latin American Music Review Volume 30 ; 30 >
 
   }
 
   {
     title <
-      name = Latin American Research Review 
-    >
-
-    param[journal_dir] = latin_american_research_review
-
-    au < released ; Latin American Research Review Volume 38 ; 38 >
-    au < released ; Latin American Research Review Volume 39 ; 39 >
-    au < released ; Latin American Research Review Volume 40 ; 40 >
-    au < released ; Latin American Research Review Volume 41 ; 41 >
-    au < released ; Latin American Research Review Volume 42 ; 42 >
-    au < manifest ; Latin American Research Review Volume 43 ; 43 >
-
-  }
-
-  {
-    title <
-      name = Libraries & the Cultural Record 
+      name = Libraries & the Cultural Record
     >
 
     param[journal_dir] = libraries_and_culture
@@ -126,12 +99,13 @@
     au < released ; Libraries & the Cultural Record Volume 42 ; 42 >
     au < manifest ; Libraries & the Cultural Record Volume 43 ; 43 >
     au < manifest ; Libraries & the Cultural Record Volume 44 ; 44 >
+    au < manifest ; Libraries & the Cultural Record Volume 45 ; 45 >
 
   }
 
   {
     title <
-      name = Southwestern Historical Quarterly 
+      name = Southwestern Historical Quarterly
     >
 
     param[journal_dir] = southwestern_historical_quarterly
@@ -142,7 +116,7 @@
 
   {
     title <
-      name = Texas Studies in Literature and Language 
+      name = Texas Studies in Literature and Language
     >
 
     param[journal_dir] = texas_studies_in_literature_and_language
@@ -154,14 +128,15 @@
     au < released ; Texas Studies in Literature and Language Volume 47 ; 47 >
     au < released ; Texas Studies in Literature and Language Volume 48 ; 48 >
     au < released ; Texas Studies in Literature and Language Volume 49 ; 49 >
-    au < manifest ; Texas Studies in Literature and Language Volume 51 ; 51 >
     au < manifest ; Texas Studies in Literature and Language Volume 50 ; 50 >
+    au < manifest ; Texas Studies in Literature and Language Volume 51 ; 51 >
+    au < manifest ; Texas Studies in Literature and Language Volume 52 ; 52 >
 
   }
 
   {
     title <
-      name = The Velvet Light Trap 
+      name = The Velvet Light Trap
     >
 
     param[journal_dir] = the_velvet_light_trap
@@ -179,6 +154,8 @@
     au < manifest ; The Velvet Light Trap Volume 61 ; 61 >
     au < manifest ; The Velvet Light Trap Volume 62 ; 62 >
     au < manifest ; The Velvet Light Trap Volume 63 ; 63 >
+    au < manifest ; The Velvet Light Trap Number 64 ; 64 >
+    au < manifest ; The Velvet Light Trap Number 65 ; 65 >
 
   }
 

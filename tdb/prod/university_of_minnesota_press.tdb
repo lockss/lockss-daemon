@@ -3,14 +3,13 @@
     name = University of Minnesota Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Buildings & Landscapes: Journal of the Vernacular Architecture Forum 
+      name = Buildings & Landscapes: Journal of the Vernacular Architecture Forum
     >
 
     param[journal_dir] = buildings_and_landscapes
@@ -20,10 +19,10 @@
     au < ready ; Buildings & Landscapes: Journal of the Vernacular Architecture Forum Volume 16 ; 16 >
 
   }
-  
+
   {
     title <
-      name = Cultural Critique 
+      name = Cultural Critique
     >
 
     param[journal_dir] = cultural_critique
@@ -53,12 +52,40 @@
     au < manifest ; Cultural Critique Volume 69 ; 69 >
     au < manifest ; Cultural Critique Volume 70 ; 70 >
     au < manifest ; Cultural Critique Volume 71 ; 71 >
+    au < manifest ; Cultural Critique  72 ; 72 >
+    au < manifest ; Cultural Critique Number 73 ; 73 >
 
   }
 
   {
     title <
-      name = The Moving Image 
+      name = Future Anterior
+    >
+
+    param[journal_dir] = future_anterior
+
+    au < manifest ; Future Anterior Volume 5 ; 5 >
+    au < manifest ; Future Anterior Volume 6 ; 6 >
+
+  }
+
+  {
+    title <
+      name = Mechademia
+    >
+
+    param[journal_dir] = mechademia
+
+    au < manifest ; Mechademia Volume 1 ; 1 >
+    au < manifest ; Mechademia Volume 2 ; 2 >
+    au < manifest ; Mechademia Volume 3 ; 3 >
+    au < manifest ; Mechademia Volume 4 ; 4 >
+
+  }
+
+  {
+    title <
+      name = The Moving Image
     >
 
     param[journal_dir] = the_moving_image
@@ -69,12 +96,13 @@
     au < released ; The Moving Image Volume 6 ; 6 >
     au < manifest ; The Moving Image Volume 7 ; 7 >
     au < manifest ; The Moving Image Volume 8 ; 8 >
+    au < manifest ; The Moving Image Volume 9 ; 9 >
 
   }
 
   {
     title <
-      name = Wicazo Sa Review 
+      name = Wicazo Sa Review
     >
 
     param[journal_dir] = wicazo_sa_review
@@ -88,6 +116,7 @@
     au < released ; Wicazo Sa Review Volume 21 ; 21 >
     au < released ; Wicazo Sa Review Volume 22 ; 22 >
     au < manifest ; Wicazo Sa Review Volume 23 ; 23 >
+    au < manifest ; Wicazo Sa Review Volume 24 ; 24 >
 
   }
 

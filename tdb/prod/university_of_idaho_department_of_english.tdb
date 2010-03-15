@@ -3,14 +3,13 @@
     name = University of Idaho Department of English
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = The Hemingway Review 
+      name = The Hemingway Review
     >
 
     param[journal_dir] = hemingway_review
@@ -21,6 +20,7 @@
     au < released ; The Hemingway Review Volume 26 ; 26 >
     au < manifest ; The Hemingway Review Volume 27 ; 27 >
     au < manifest ; The Hemingway Review Volume 28 ; 28 >
+    au < manifest ; The Hemingway Review Volume 29 ; 29 >
 
   }
 

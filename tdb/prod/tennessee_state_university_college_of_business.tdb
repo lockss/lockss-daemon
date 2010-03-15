@@ -3,14 +3,13 @@
     name = Tennessee State University College of Business
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = The Journal of Developing Areas 
+      name = The Journal of Developing Areas
     >
 
     param[journal_dir] = journal_of_developing_areas
@@ -21,6 +20,7 @@
     au < released ; The Journal of Developing Areas Volume 40 ; 40 >
     au < manifest ; The Journal of Developing Areas Volume 41 ; 41 >
     au < manifest ; The Journal of Developing Areas Volume 42 ; 42 >
+    au < manifest ; The Journal of Developing Areas Volume 43 ; 43 >
 
   }
 

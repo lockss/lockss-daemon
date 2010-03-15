@@ -1,0 +1,47 @@
+{
+  publisher <
+    name = Texas Tech University Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Conradiana
+    >
+
+    param[journal_dir] = conradiana
+
+    au < manifest ; Conradiana Volume 39 ; 39 >
+    au < manifest ; Conradiana Volume 40 ; 40 >
+
+  }
+
+  {
+    title <
+      name = Helios
+    >
+
+    param[journal_dir] = helios
+
+    au < manifest ; Helios Volume 34 ; 34 >
+    au < manifest ; Helios Volume 35 ; 35 >
+    au < manifest ; Helios Volume 36 ; 36 >
+
+  }
+
+  {
+    title <
+      name = William Carlos Williams Review
+    >
+
+    param[journal_dir] = william_carlos_williams_review
+
+    au < manifest ; William Carlos Williams Review Volume 26 ; 26 >
+    au < manifest ; William Carlos Williams Review Volume 27 ; 27 >
+
+  }
+
+}

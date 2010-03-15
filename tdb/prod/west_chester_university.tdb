@@ -3,14 +3,13 @@
     name = West Chester University
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = College Literature 
+      name = College Literature
     >
 
     param[journal_dir] = college_literature
@@ -22,6 +21,7 @@
     au < released ; College Literature Volume 34 ; 34 >
     au < manifest ; College Literature Volume 35 ; 35 >
     au < manifest ; College Literature Volume 36 ; 36 >
+    au < manifest ; College Literature  37 ; 37 >
 
   }
 

@@ -3,14 +3,13 @@
     name = Wayne State University Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Criticism 
+      name = Criticism
     >
 
     param[journal_dir] = criticism
@@ -23,12 +22,13 @@
     au < manifest ; Criticism Volume 48 ; 48 >
     au < manifest ; Criticism Volume 49 ; 49 >
     au < manifest ; Criticism Volume 50 ; 50 >
+    au < manifest ; Criticism Volume 51 ; 51 >
 
   }
 
   {
     title <
-      name = Discourse 
+      name = Discourse
     >
 
     param[journal_dir] = discourse
@@ -41,12 +41,13 @@
     au < released ; Discourse Volume 27 ; 27 >
     au < manifest ; Discourse Volume 28 ; 28 >
     au < manifest ; Discourse Volume 29 ; 29 >
+    au < manifest ; Discourse Volume 30 ; 30 >
 
   }
 
   {
     title <
-      name = Framework: The Journal of Cinema and Media 
+      name = Framework: The Journal of Cinema and Media
     >
 
     param[journal_dir] = framework_the_journal_of_cinema_and_media
@@ -54,12 +55,13 @@
     au < released ; Framework: The Journal of Cinema and Media Volume 47 ; 47 >
     au < released ; Framework: The Journal of Cinema and Media Volume 48 ; 48 >
     au < manifest ; Framework: The Journal of Cinema and Media Volume 49 ; 49 >
+    au < manifest ; Framework: The Journal of Cinema and Media Volume 50 ; 50 >
 
   }
 
   {
     title <
-      name = Human Biology 
+      name = Human Biology
     >
 
     param[journal_dir] = human_biology
@@ -72,12 +74,13 @@
     au < released ; Human Biology Volume 78 ; 78 >
     au < manifest ; Human Biology Volume 79 ; 79 >
     au < manifest ; Human Biology Volume 80 ; 80 >
+    au < manifest ; Human Biology Volume 81 ; 81 >
 
   }
 
   {
     title <
-      name = Marvels & Tales 
+      name = Marvels & Tales
     >
 
     param[journal_dir] = marvels_and_tales
@@ -90,12 +93,13 @@
     au < released ; Marvels & Tales Volume 20 ; 20 >
     au < manifest ; Marvels & Tales Volume 21 ; 21 >
     au < manifest ; Marvels & Tales Volume 22 ; 22 >
+    au < manifest ; Marvels & Tales Volume 23 ; 23 >
 
   }
 
   {
     title <
-      name = Merrill-Palmer Quarterly 
+      name = Merrill-Palmer Quarterly
     >
 
     param[journal_dir] = merrill-palmer_quarterly
@@ -109,6 +113,7 @@
     au < released ; Merrill-Palmer Quarterly Volume 53 ; 53 >
     au < manifest ; Merrill-Palmer Quarterly Volume 54 ; 54 >
     au < manifest ; Merrill-Palmer Quarterly Volume 55 ; 55 >
+    au < manifest ; Merrill-Palmer Quarterly Volume 56 ; 56 >
 
   }
 

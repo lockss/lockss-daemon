@@ -1,0 +1,41 @@
+{
+  publisher <
+    name = Transformation
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Transformation: Critical Perspectives on Southern Africa
+    >
+
+    param[journal_dir] = transformation
+
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 49 ; 49 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 50 ; 50 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 51 ; 51 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 52 ; 52 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 53 ; 53 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 54 ; 54 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 55 ; 55 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 56 ; 56 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 57 ; 57 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 58 ; 58 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 59 ; 59 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 60 ; 60 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 61 ; 61 >
+    au < released ; Transformation: Critical Perspectives on Southern Africa Volume 62 ; 62 >
+    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 63 ; 63 >
+    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 64 ; 64 >
+    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 65 ; 65 >
+    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 66 ; 66 >
+    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 68 ; 68 >
+    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 69 ; 69 >
+    au < manifest ; Transformation: Critical Perspectives on Southern Africa Number 70 ; 70 >
+
+  }
+
+}

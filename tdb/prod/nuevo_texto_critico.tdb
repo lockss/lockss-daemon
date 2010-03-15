@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Nuevo Texto Crítico
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Nuevo Texto Crítico
+    >
+
+    param[journal_dir] = nuevo_texto_critico
+
+    au < manifest ; Nuevo Texto Crítico Volume 21 ; 21 >
+    au < manifest ; Nuevo Texto Crítico Volume 22 ; 22 >
+
+  }
+
+}

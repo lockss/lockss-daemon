@@ -3,14 +3,13 @@
     name = West Virginia University Press
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Education and Treatment of Children 
+      name = Education and Treatment of Children
     >
 
     param[journal_dir] = education_and_treatment_of_children
@@ -18,12 +17,13 @@
     au < released ; Education and Treatment of Children Volume 30 ; 30 >
     au < manifest ; Education and Treatment of Children Volume 31 ; 31 >
     au < manifest ; Education and Treatment of Children Volume 32 ; 32 >
+    au < manifest ; Education and Treatment of Children Volume 33 ; 33 >
 
   }
 
   {
     title <
-      name = Essays in Medieval Studies 
+      name = Essays in Medieval Studies
     >
 
     param[journal_dir] = essays_in_medieval_studies
@@ -35,12 +35,13 @@
     au < released ; Essays in Medieval Studies Volume 22 ; 22 >
     au < released ; Essays in Medieval Studies Volume 23 ; 23 >
     au < manifest ; Essays in Medieval Studies Volume 24 ; 24 >
+    au < manifest ; Essays in Medieval Studies Volume 25 ; 25 >
 
   }
 
   {
     title <
-      name = Labor Studies Journal 
+      name = Labor Studies Journal
     >
 
     param[journal_dir] = labor_studies_journal
@@ -55,7 +56,7 @@
 
   {
     title <
-      name = Tolkien Studies 
+      name = Tolkien Studies
     >
 
     param[journal_dir] = tolkien_studies
@@ -65,12 +66,13 @@
     au < released ; Tolkien Studies Volume 3 ; 3 >
     au < released ; Tolkien Studies Volume 4 ; 4 >
     au < manifest ; Tolkien Studies Volume 5 ; 5 >
+    au < manifest ; Tolkien Studies Volume 6 ; 6 >
 
   }
 
   {
     title <
-      name = Victorian Poetry 
+      name = Victorian Poetry
     >
 
     param[journal_dir] = victorian_poetry
@@ -84,6 +86,20 @@
     au < released ; Victorian Poetry Volume 44 ; 44 >
     au < released ; Victorian Poetry Volume 45 ; 45 >
     au < manifest ; Victorian Poetry Volume 46 ; 46 >
+    au < manifest ; Victorian Poetry Volume 47 ; 47 >
+
+  }
+
+  {
+    title <
+      name = West Virginia History:  A Journal of Regional Studies
+    >
+
+    param[journal_dir] = west_virginia_history
+
+    au < manifest ; West Virginia History:  A Journal of Regional Studies New Series, Volume 1 ; 1 >
+    au < manifest ; West Virginia History:  A Journal of Regional Studies New Series, Volume 2 ; 2 >
+    au < manifest ; West Virginia History:  A Journal of Regional Studies New Series, Volume 3 ; 3 >
 
   }
 

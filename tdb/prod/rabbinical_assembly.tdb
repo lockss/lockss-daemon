@@ -1,0 +1,21 @@
+{
+  publisher <
+    name = Rabbinical Assembly
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Conservative Judaism
+    >
+
+    param[journal_dir] = conservative_judaism
+
+    au < manifest ; Conservative Judaism Volume 61 ; 61 >
+
+  }
+
+}

@@ -3,14 +3,13 @@
     name = Music Library Association
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Notes 
+      name = Notes
     >
 
     param[journal_dir] = notes
@@ -24,6 +23,7 @@
     au < manifest ; Notes Volume 63 ; 63 >
     au < manifest ; Notes Volume 64 ; 64 >
     au < manifest ; Notes Volume 65 ; 65 >
+    au < manifest ; Notes Volume 66 ; 66 >
 
   }
 

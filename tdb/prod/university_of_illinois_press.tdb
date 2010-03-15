@@ -7,16 +7,16 @@
   {
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
     implicit < status ; name ; param[volume] >
-    
+    param[base_url] = http://muse.jhu.edu/
+
     {
       title <
-        name = American Literary Realism
+      name = American Literary Realism
       >
 
       param[journal_dir] = american_literary_realism
-   
+
       au < ready ; American Literary Realism Volume 40 ; 40 >
       au < ready ; American Literary Realism Volume 41 ; 41 >
       au < ready ; American Literary Realism Volume 42 ; 42 >
@@ -25,22 +25,109 @@
 
     {
       title <
-        name = American Music
+      name = American Music
       >
 
       param[journal_dir] = american_music
-   
+
       au < wanted ; American Music Volume 27 ; 27 >
-      
+
     }
-      
+
     {
       title <
-        name = The Journal of Aesthetic Education 
+      name = Black Women, Gender & Families
+      >
+
+      param[journal_dir] = black_women_gender_and_families
+
+      au < ready ; Black Women, Gender & Families Volume 3 ; 3 >
+
+    }
+
+    {
+      title <
+      name = Dance Research Journal
+      >
+
+      param[journal_dir] = dance_research_journal
+
+      au < manifest ; Dance Research Journal Volume 40 ; 40 >
+      au < manifest ; Dance Research Journal Volume 41 ; 41 >
+
+    }
+
+    {
+      title <
+      name = Feminist Teacher
+      >
+
+      param[journal_dir] = feminist_teacher
+
+      au < manifest ; Feminist Teacher Volume 18 ; 18 >
+      au < manifest ; Feminist Teacher Volume 19 ; 19 >
+
+    }
+
+    {
+      title <
+      name = JEGP, Journal of English and Germanic Philology
+      >
+
+      param[journal_dir] = journal_of_english_and_germanic_philology
+
+      au < manifest ; JEGP, Journal of English and Germanic Philology Volume 108 ; 108 >
+      au < manifest ; JEGP, Journal of English and Germanic Philology Volume 109 ; 109 >
+
+    }
+
+    {
+      title <
+      name = Journal of Education Finance
+      >
+
+      param[journal_dir] = journal_of_education_finance
+
+      au < manifest ; Journal of Education Finance Volume 35 ; 35 >
+
+    }
+
+    {
+      title <
+      name = Journal of Film and Video
+      >
+
+      param[journal_dir] = journal_of_film_and_video
+
+      au < manifest ; Journal of Film and Video Volume 60 ; 60 >
+      au < manifest ; Journal of Film and Video Volume 61 ; 61 >
+      au < manifest ; Journal of Film and Video Volume 62 ; 62 >
+
+    }
+
+    {
+      title <
+      name = Radical Teacher
+      >
+
+      param[journal_dir] = radical_teacher
+
+      au < manifest ; Radical Teacher Number 81 ; 81 >
+      au < manifest ; Radical Teacher Number 82 ; 82 >
+      au < manifest ; Radical Teacher Number 83 ; 83 >
+      au < manifest ; Radical Teacher Number 84 ; 84 >
+      au < manifest ; Radical Teacher Number 85 ; 85 >
+      au < manifest ; Radical Teacher Number 86 ; 86 >
+
+    }
+
+    {
+      title <
+      name = The Journal of Aesthetic Education
       >
 
       param[journal_dir] = the_journal_of_aesthetic_education
-   
+
       au < released ; The Journal of Aesthetic Education Volume 37 ; 37 >
       au < released ; The Journal of Aesthetic Education Volume 38 ; 38 >
       au < released ; The Journal of Aesthetic Education Volume 39 ; 39 >
@@ -48,17 +135,18 @@
       au < released ; The Journal of Aesthetic Education Volume 41 ; 41 >
       au < manifest ; The Journal of Aesthetic Education Volume 42 ; 42 >
       au < manifest ; The Journal of Aesthetic Education Volume 43 ; 43 >
+      au < manifest ; The Journal of Aesthetic Education Volume 44 ; 44 >
 
     }
-    
+
     {
       title <
-        name = Black Women, Gender & Families
+      name = The Pluralist
       >
 
-      param[journal_dir] = black_women_gender_and_families
-   
-      au < ready ; Black Women, Gender & Families Volume 3 ; 3 >
+      param[journal_dir] = the_pluralist
+
+      au < manifest ; The Pluralist Volume 4 ; 4 >
 
     }
     

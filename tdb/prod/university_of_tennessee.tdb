@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = University of Tennessee
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Restoration: Studies in English Literary Culture, 1660-1700
+    >
+
+    param[journal_dir] = restoration
+
+    au < manifest ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 32 ; 32 >
+    au < manifest ; Restoration: Studies in English Literary Culture, 1660-1700 Volume 33 ; 33 >
+
+  }
+
+}

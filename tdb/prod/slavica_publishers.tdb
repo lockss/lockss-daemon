@@ -3,18 +3,31 @@
     name = Slavica Publishers
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
     title <
-      name = Kritika: Explorations in Russian and Eurasian History 
+      name = Journal of Slavic Linguistics
+    >
+
+    param[journal_dir] = journal_of_slavic_linguistics
+
+    au < manifest ; Journal of Slavic Linguistics Volume 16 ; 16 >
+    au < manifest ; Journal of Slavic Linguistics Volume 17 ; 17 >
+
+  }
+
+  {
+    title <
+      name = Kritika: Explorations in Russian and Eurasian History
     >
 
     param[journal_dir] = kritika
 
+    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 1 ; 1 >
+    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 2 ; 2 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 3 ; 3 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 4 ; 4 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 5 ; 5 >
@@ -23,22 +36,19 @@
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 8 ; 8 >
     au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 9 ; 9 >
     au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 10 ; 10 >
+    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 11 ; 11 >
 
   }
 
   {
     title <
-      name = Oral Tradition 
+      name = Serbian Studies: Journal of the North American Society for Serbian Studies
     >
 
-    param[journal_dir] = oral_tradition
+    param[journal_dir] = serbian_studies
 
-    au < released ; Oral Tradition Volume 18 ; 18 >
-    au < released ; Oral Tradition Volume 19 ; 19 >
-    au < released ; Oral Tradition Volume 20 ; 20 >
-    au < released ; Oral Tradition Volume 21 ; 21 >
-    au < manifest ; Oral Tradition Volume 22 ; 22 >
-    au < manifest ; Oral Tradition Volume 23 ; 23 >
+    au < manifest ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
+    au < manifest ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
 
   }
 
