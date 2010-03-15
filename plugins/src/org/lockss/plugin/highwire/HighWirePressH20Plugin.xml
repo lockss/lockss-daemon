@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -91,6 +91,10 @@
     <list>
       <string>500=org.lockss.plugin.highwire.HighWirePressH20HttpResponseHandler</string>
     </list>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20LoginPageChecker</string>
   </entry>
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
