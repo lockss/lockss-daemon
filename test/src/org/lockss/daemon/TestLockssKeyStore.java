@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.4 2010-03-14 08:08:20 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.5 2010-03-16 00:42:52 tlipkis Exp $
  */
 
 /*
@@ -220,8 +220,7 @@ public class TestLockssKeyStore extends LockssTestCase {
     lk2.load();
     Collection aliases =
       ListUtil.fromIterator(new EnumerationIterator(lk2.getKeyStore().aliases()));
-    assertEquals(SetUtil.set("fq.dn.key", "fq.dn.cert"),
-		 SetUtil.theSet(aliases));
+    assertSameElements(SetUtil.set("fq.dn.key", "fq.dn.cert"), aliases);
   }
 
   public void testFromResource() throws Exception {
@@ -236,8 +235,8 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertNotNull(lk.getTrustManagerFactory());
     Collection aliases =
       ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
-    assertEquals(SetUtil.set("expired", "goodguy", "future", "good"),
-		 SetUtil.theSet(aliases));
+    assertSameElements(SetUtil.set("expired", "goodguy", "future", "good"),
+		       aliases);
   }
 
   public void testFromUrl() throws Exception {
@@ -254,10 +253,8 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertNotNull(lk.getTrustManagerFactory());
     Collection aliases =
       ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
-    assertEquals(SetUtil.set("expired", "goodguy", "future", "good"),
-		 SetUtil.theSet(aliases));
+    assertSameElements(SetUtil.set("expired", "goodguy", "future", "good"),
+		       aliases);
   }
-
-
 
 }
