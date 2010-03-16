@@ -3,9 +3,8 @@
     name = University of St. Thomas Center for Catholic Studies
   >
 
-  implicit < status ; name ; param[volume] >
-
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
 
   {
@@ -23,7 +22,10 @@
     au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 8 ; 8 >
     au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 9 ; 9 >
     au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 10 ; 10 >
-
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 11 ; 11 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 12 ; 12 >
+    au < manifest ; Logos: A Journal of Catholic Thought and Culture Volume 13 ; 13 >
+    
   }
 
 }
