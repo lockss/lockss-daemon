@@ -1,6 +1,7 @@
 {
+
   publisher <
-    name = La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures
+    name = Modern Language Association Division on Medieval Hispanic Languages, Literatures, and Cultures
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -8,6 +9,7 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
+
     title <
       name = La corónica: A Journal of Medieval Hispanic Languages, Literatures, and Cultures
     >

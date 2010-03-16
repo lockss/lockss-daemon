@@ -1,6 +1,7 @@
 {
+
   publisher <
-    name = Franciscan Institute
+    name = St. Bonaventure University Franciscan Institute
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -8,6 +9,7 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
+  
     title <
       name = Franciscan Studies
     >

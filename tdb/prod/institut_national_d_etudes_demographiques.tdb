@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Institut national d'études démographiques
   >
@@ -8,14 +9,15 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
+  
     title <
-      name = Population, English edition
+      name = Population, English Edition
     >
 
     param[journal_dir] = population
 
-    au < manifest ; Population, English edition Volume 63 ; 63 >
-    au < manifest ; Population, English edition Volume 64 ; 64 >
+    au < manifest ; Population, English Edition Volume 63 ; 63 >
+    au < manifest ; Population, English Edition Volume 64 ; 64 >
 
   }
 
