@@ -61,7 +61,7 @@
       <string>1,&quot;^%slockss-manifest/vol_%d_manifest\.dtl$&quot;, base_url, volume</string>
       <string>1,&quot;^%scontent/vol%d/&quot;, base_url, volume</string>
       <string>1,&quot;^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%d/&quot;, base_url, volume</string>
-      <string>1,&quot;^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/&quot;, base_url, volume</string>
+      <string>1,&quot;^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%d/&quot;, base_url, volume</string>
       <string>1,&quot;^%scgi/(lookup)&quot;, base_url</string>
       <string>1,&quot;^%s(this_week)/([^/]+;)?%d/&quot;, base_url, volume</string>
       <string>1,&quot;^%scgi/(content/full|data)/[^/]+/DC[0-9]*&quot;, base_url</string>
