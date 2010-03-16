@@ -159,15 +159,15 @@
 
     param[journal_dir] = book_history
 
-    au < ready ; Book History Volume 1 ; 1 >
-    au < ready ; Book History Volume 2 ; 2 >
-    au < ready ; Book History Volume 3 ; 3 >
-    au < ready ; Book History Volume 4 ; 4 >
-    au < ready ; Book History Volume 5 ; 5 >
-    au < ready ; Book History Volume 6 ; 6 >
-    au < ready ; Book History Volume 7 ; 7 >
-    au < ready ; Book History Volume 8 ; 8 >
-    au < ready ; Book History Volume 9 ; 9 >
+    au < released ; Book History Volume 1 ; 1 >
+    au < released ; Book History Volume 2 ; 2 >
+    au < released ; Book History Volume 3 ; 3 >
+    au < released ; Book History Volume 4 ; 4 >
+    au < released ; Book History Volume 5 ; 5 >
+    au < released ; Book History Volume 6 ; 6 >
+    au < released ; Book History Volume 7 ; 7 >
+    au < released ; Book History Volume 8 ; 8 >
+    au < released ; Book History Volume 9 ; 9 >
     au < ready ; Book History Volume 10 ; 10 >
     au < ready ; Book History Volume 11 ; 11 >
     au < ready ; Book History Volume 12 ; 12 >
