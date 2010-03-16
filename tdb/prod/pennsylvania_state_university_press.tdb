@@ -5,30 +5,8 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  param[base_url] = http://muse.jhu.edu/
   implicit < status ; name ; param[volume] >
-
-  {
-  
-    title <
-      name = Book History 
-    >
-
-    param[journal_dir] = book_history
-
-    au < released ; Book History Volume 1 ; 1 >
-    au < released ; Book History Volume 2 ; 2 >
-    au < released ; Book History Volume 3 ; 3 >
-    au < released ; Book History Volume 4 ; 4 >
-    au < released ; Book History Volume 5 ; 5 >
-    au < released ; Book History Volume 6 ; 6 >
-    au < released ; Book History Volume 7 ; 7 >
-    au < released ; Book History Volume 8 ; 8 >
-    au < released ; Book History Volume 9 ; 9 >
-    au < manifest ; Book History Volume 10 ; 10 >
-    au < manifest ; Book History Volume 11 ; 11 >
-
-  }
+  param[base_url] = http://muse.jhu.edu/
 
   {
   
@@ -53,23 +31,13 @@
   }
 
   {
-  
     title <
-      name = Journal of Policy History 
+      name = Pennsylvania History: A Journal of Mid-Atlantic Studies
     >
 
-    param[journal_dir] = journal_of_policy_history
+    param[journal_dir] = pennsylvania_history
 
-    au < released ; Journal of Policy History Volume 11 ; 11 >
-    au < released ; Journal of Policy History Volume 12 ; 12 >
-    au < released ; Journal of Policy History Volume 13 ; 13 >
-    au < released ; Journal of Policy History Volume 14 ; 14 >
-    au < released ; Journal of Policy History Volume 15 ; 15 >
-    au < released ; Journal of Policy History Volume 16 ; 16 >
-    au < released ; Journal of Policy History Volume 17 ; 17 >
-    au < released ; Journal of Policy History Volume 18 ; 18 >
-    au < released ; Journal of Policy History Volume 19 ; 19 >
-    au < manifest ; Journal of Policy History Volume 20 ; 20 >
+    au < manifest ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
 
   }
 
@@ -126,6 +94,7 @@
     au < released ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
     au < manifest ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
     au < manifest ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
+    au < manifest ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
 
   }
 
@@ -166,6 +135,7 @@
     au < released ; The Good Society Volume 15 ; 15 >
     au < manifest ; The Good Society Volume 16 ; 16 >
     au < manifest ; The Good Society Volume 17 ; 17 >
+    au < manifest ; The Good Society Volume 18 ; 18 >
 
   }
 
@@ -187,6 +157,7 @@
     au < released ; The Journal of General Education Volume 55 ; 55 >
     au < manifest ; The Journal of General Education Volume 56 ; 56 >
     au < manifest ; The Journal of General Education Volume 57 ; 57 >
+    au < manifest ; The Journal of General Education Volume 58 ; 58 >
 
   }
 
@@ -211,7 +182,9 @@
     au < manifest ; The Journal of Nietzsche Studies Volume 33 ; 33 >
     au < manifest ; The Journal of Nietzsche Studies Volume 34 ; 34 >
     au < manifest ; The Journal of Nietzsche Studies Volume 35/36 ; 35 >
-
+    au < manifest ; The Journal of Nietzsche Studies Issue 37 ; 37 >
+    au < manifest ; The Journal of Nietzsche Studies Issue 38 ; 38 >
+    
   }
 
   {
@@ -232,6 +205,7 @@
     au < released ; The Journal of Speculative Philosophy Volume 20 ; 20 >
     au < manifest ; The Journal of Speculative Philosophy Volume 21 ; 21 >
     au < manifest ; The Journal of Speculative Philosophy Volume 22 ; 22 >
+    au < manifest ; The Journal of Speculative Philosophy Volume 23 ; 23 >
 
   }
 
