@@ -1,6 +1,7 @@
 {
+
   publisher <
-    name = Nuevo Texto Crítico
+    name = Stanford University Department of Iberian and Latin American Cultures
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -8,6 +9,7 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
+  
     title <
       name = Nuevo Texto Crítico
     >

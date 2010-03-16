@@ -6,6 +6,43 @@
   
   {
   
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
+
+    {
+
+      title <
+        name = The Future of Children
+      >
+
+      param[journal_dir] = future_of_children
+
+      au < released ; The Future of Children Volume 15 ; 15 >
+      au < released ; The Future of Children Volume 16 ; 16 >
+      au < manifest ; The Future of Children Volume 17 ; 17 >
+      au < manifest ; The Future of Children Volume 18 ; 18 >
+      au < manifest ; The Future of Children Volume 19 ; 19 >
+
+    }
+  
+    {
+
+      title <
+        name = Philosophy & Public Affairs
+      >
+
+      param[journal_dir] = philosophy_and_public_affairs
+
+      au < manifest ; Philosophy & Public Affairs Volume 30 ; 30 >
+      au < manifest ; Philosophy & Public Affairs Volume 31 ; 31 >
+
+    }
+
+  }  
+  
+  {
+  
     title <
       name = Princeton Report on Knowledge ;
       issn = 1939-2079
@@ -13,13 +50,27 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.prok.ProkPlugin
-    implicit < status ; name ; param[base_url] ; param[volume_name] >
+    implicit < status ; name ; param[volume_name] >
 
-    au < down   ; Princeton Report on Knowledge Volume 1 [superseded] ; http://prok.princeton.edu/     ; 1 >
-    au < exists ; Princeton Report on Knowledge Volume 1              ; http://www.princeton.edu/prok/ ; 1 >
-    au < down   ; Princeton Report on Knowledge Volume 2 [superseded] ; http://prok.princeton.edu/     ; 2 >
-    au < exists ; Princeton Report on Knowledge Volume 2              ; http://www.princeton.edu/prok/ ; 2 >
-    au < exists ; Princeton Report on Knowledge Volume 3              ; http://www.princeton.edu/prok/ ; 3 >
+    {
+    
+      param[base_url] = http://prok.princeton.edu/
+      
+      au < superseded ; Princeton Report on Knowledge Volume 1 [superseded] ; 1 >
+      au < superseded ; Princeton Report on Knowledge Volume 2 [superseded] ; 2 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://www.princeton.edu/prok/
+      
+      au < exists ; Princeton Report on Knowledge Volume 1 ; 1 >
+      au < exists ; Princeton Report on Knowledge Volume 2 ; 2 >
+      au < exists ; Princeton Report on Knowledge Volume 3 ; 3 >
+      
+    }
+
 
   }
 

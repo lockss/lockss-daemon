@@ -1,6 +1,7 @@
 {
+
   publisher <
-    name = NUS Press Pte Ltd
+    name = NUS Press
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
@@ -8,6 +9,7 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
+  
     title <
       name = China: An International Journal
     >
@@ -25,6 +27,7 @@
   }
 
   {
+  
     title <
       name = Journal of Chinese Overseas
     >
