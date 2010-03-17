@@ -13,6 +13,17 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://aac.asm.org/
       implicit < status ; name ; param[volume_name] >
+      
+      au < released ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
+
+
+    }      
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://aac.asm.org/
+      implicit < status ; name ; param[volume_name] >    
 
       au < exists ; Antimicrobial Agents and Chemotherapy Volume 1 ; 1 >
       au < exists ; Antimicrobial Agents and Chemotherapy Volume 2 ; 2 >
@@ -62,7 +73,7 @@
       au < exists ; Antimicrobial Agents and Chemotherapy Volume 47 ; 47 >
       au < exists ; Antimicrobial Agents and Chemotherapy Volume 48 ; 48 >
       au < manifest ; Antimicrobial Agents and Chemotherapy Volume 49 ; 49 >
-      au < released ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
+      au < doNotProcess ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
       au < manifest ; Antimicrobial Agents and Chemotherapy Volume 51 ; 51 >
       au < manifest ; Antimicrobial Agents and Chemotherapy Volume 52 ; 52 >
       au < manifest ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
@@ -81,6 +92,18 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://aem.asm.org/
       implicit < status ; name ; param[volume_name] >
+      
+      au < released ; Applied and Environmental Microbiology Volume 71 ; 71 >
+      au < released ; Applied and Environmental Microbiology Volume 72 ; 72 >
+      au < released ; Applied and Environmental Microbiology Volume 73 ; 73 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://aem.asm.org/
+      implicit < status ; name ; param[volume_name] >    
 
       au < exists ; Applied and Environmental Microbiology Volume 1 ; 1 >
       au < exists ; Applied and Environmental Microbiology Volume 2 ; 2 >
@@ -152,9 +175,9 @@
       au < exists ; Applied and Environmental Microbiology Volume 68 ; 68 >
       au < exists ; Applied and Environmental Microbiology Volume 69 ; 69 >
       au < exists ; Applied and Environmental Microbiology Volume 70 ; 70 >
-      au < released ; Applied and Environmental Microbiology Volume 71 ; 71 >
-      au < released ; Applied and Environmental Microbiology Volume 72 ; 72 >
-      au < released ; Applied and Environmental Microbiology Volume 73 ; 73 >
+      au < doNotProcess ; Applied and Environmental Microbiology Volume 71 ; 71 >
+      au < doNotProcess ; Applied and Environmental Microbiology Volume 72 ; 72 >
+      au < doNotProcess ; Applied and Environmental Microbiology Volume 73 ; 73 >
       au < manifest ; Applied and Environmental Microbiology Volume 74 ; 74 >
       au < manifest ; Applied and Environmental Microbiology Volume 75 ; 75 >
 
@@ -173,6 +196,16 @@
       param[base_url] = http://cvi.asm.org/
       implicit < status ; name ; param[volume_name] >
 
+      au < released ; Clinical and Vaccine Immunology Volume 13 ; 13 >
+
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://cvi.asm.org/
+      implicit < status ; name ; param[volume_name] >    
+
       au < exists ; Clinical and Vaccine Immunology Volume 1 ; 1 >
       au < exists ; Clinical and Vaccine Immunology Volume 2 ; 2 >
       au < exists ; Clinical and Vaccine Immunology Volume 3 ; 3 >
@@ -185,7 +218,7 @@
       au < exists ; Clinical and Vaccine Immunology Volume 10 ; 10 >
       au < exists ; Clinical and Vaccine Immunology Volume 11 ; 11 >
       au < manifest ; Clinical and Vaccine Immunology Volume 12 ; 12 >
-      au < released ; Clinical and Vaccine Immunology Volume 13 ; 13 >
+      au < doNotProcess ; Clinical and Vaccine Immunology Volume 13 ; 13 >
       au < manifest ; Clinical and Vaccine Immunology Volume 14 ; 14 >
       au < manifest ; Clinical and Vaccine Immunology Volume 15 ; 15 >
       au < manifest ; Clinical and Vaccine Immunology Volume 16 ; 16 >
@@ -204,6 +237,16 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://cmr.asm.org/
       implicit < status ; name ; param[volume_name] >
+      
+      au < released ; Clinical Microbiology Reviews Volume 19 ; 19 >
+
+    }
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://cmr.asm.org/
+      implicit < status ; name ; param[volume_name] >    
 
       au < exists ; Clinical Microbiology Reviews Volume 1 ; 1 >
       au < exists ; Clinical Microbiology Reviews Volume 2 ; 2 >
@@ -223,7 +266,7 @@
       au < exists ; Clinical Microbiology Reviews Volume 16 ; 16 >
       au < exists ; Clinical Microbiology Reviews Volume 17 ; 17 >
       au < manifest ; Clinical Microbiology Reviews Volume 18 ; 18 >
-      au < released ; Clinical Microbiology Reviews Volume 19 ; 19 >
+      au < doNotProcess ; Clinical Microbiology Reviews Volume 19 ; 19 >
       au < manifest ; Clinical Microbiology Reviews Volume 20 ; 20 >
       au < manifest ; Clinical Microbiology Reviews Volume 21 ; 21 >
       au < manifest ; Clinical Microbiology Reviews Volume 22 ; 22 >
@@ -242,12 +285,22 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://ec.asm.org/
       implicit < status ; name ; param[volume_name] >
+      
+      au < released ; Eukaryotic Cell Volume 5 ; 5 >
+      
+    }
 
+    {  
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://ec.asm.org/
+      implicit < status ; name ; param[volume_name] >
+      
       au < exists ; Eukaryotic Cell Volume 1 ; 1 >
       au < exists ; Eukaryotic Cell Volume 2 ; 2 >
       au < exists ; Eukaryotic Cell Volume 3 ; 3 >
       au < manifest ; Eukaryotic Cell Volume 4 ; 4 >
-      au < released ; Eukaryotic Cell Volume 5 ; 5 >
+      au < doNotProcess ; Eukaryotic Cell Volume 5 ; 5 >
       au < manifest ; Eukaryotic Cell Volume 6 ; 6 >
       au < manifest ; Eukaryotic Cell Volume 7 ; 7 >
       au < manifest ; Eukaryotic Cell Volume 8 ; 8 >
@@ -264,6 +317,16 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://iai.asm.org/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; Infection and Immunity Volume 74 ; 74 >
+      
+    }
+    
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://iai.asm.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -340,7 +403,7 @@
       au < exists ; Infection and Immunity Volume 71 ; 71 >
       au < exists ; Infection and Immunity Volume 72 ; 72 >
       au < manifest ; Infection and Immunity Volume 73 ; 73 >
-      au < released ; Infection and Immunity Volume 74 ; 74 >
+      au < doNotProcess ; Infection and Immunity Volume 74 ; 74 >
       au < manifest ; Infection and Immunity Volume 75 ; 75 >
       au < manifest ; Infection and Immunity Volume 76 ; 76 >
       au < manifest ; Infection and Immunity Volume 77 ; 77 >
@@ -357,6 +420,16 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jb.asm.org/
+      implicit < status ; name ; param[volume_name] >
+      
+      au < released ; Journal of Bacteriology Volume 188 ; 188 >      
+      
+      }
+      
+      {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jb.asm.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -475,7 +548,7 @@
       au < exists ; Journal of Bacteriology Volume 185 ; 185 >
       au < exists ; Journal of Bacteriology Volume 186 ; 186 >
       au < manifest ; Journal of Bacteriology Volume 187 ; 187 >
-      au < released ; Journal of Bacteriology Volume 188 ; 188 >
+      au < doNotProcess ; Journal of Bacteriology Volume 188 ; 188 >
       au < manifest ; Journal of Bacteriology Volume 189 ; 189 >
       au < manifest ; Journal of Bacteriology Volume 190 ; 190 >
       au < manifest ; Journal of Bacteriology Volume 191 ; 191 >
@@ -494,6 +567,16 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://jcm.asm.org/
       implicit < status ; name ; param[volume_name] >
+
+      au < released ; Journal of Clinical Microbiology Volume 44 ; 44 >
+
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://jcm.asm.org/
+      implicit < status ; name ; param[volume_name] >    
 
       au < exists ; Journal of Clinical Microbiology Volume 1 ; 1 >
       au < exists ; Journal of Clinical Microbiology Volume 2 ; 2 >
@@ -538,7 +621,7 @@
       au < exists ; Journal of Clinical Microbiology Volume 41 ; 41 >
       au < exists ; Journal of Clinical Microbiology Volume 42 ; 42 >
       au < manifest ; Journal of Clinical Microbiology Volume 43 ; 43 >
-      au < released ; Journal of Clinical Microbiology Volume 44 ; 44 >
+      au < doNotProcess ; Journal of Clinical Microbiology Volume 44 ; 44 >
       au < manifest ; Journal of Clinical Microbiology Volume 45 ; 45 >
       au < manifest ; Journal of Clinical Microbiology Volume 46 ; 46 >
       au < manifest ; Journal of Clinical Microbiology Volume 47 ; 47 >
@@ -557,6 +640,16 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://jvi.asm.org/
       implicit < status ; name ; param[volume_name] >
+
+      au < released ; Journal of Virology Volume 80 ; 80 >
+
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://jvi.asm.org/
+      implicit < status ; name ; param[volume_name] >    
 
       au < exists ; Journal of Virology Volume 1 ; 1 >
       au < exists ; Journal of Virology Volume 2 ; 2 >
@@ -637,7 +730,7 @@
       au < exists ; Journal of Virology Volume 77 ; 77 >
       au < exists ; Journal of Virology Volume 78 ; 78 >
       au < manifest ; Journal of Virology Volume 79 ; 79 >
-      au < released ; Journal of Virology Volume 80 ; 80 >
+      au < doNotProcess ; Journal of Virology Volume 80 ; 80 >
       au < manifest ; Journal of Virology Volume 81 ; 81 >
       au < manifest ; Journal of Virology Volume 82 ; 82 >
       au < manifest ; Journal of Virology Volume 83 ; 83 >
@@ -656,6 +749,16 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://mmbr.asm.org/
       implicit < status ; name ; param[volume_name] >
+
+      au < released ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
+
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://mmbr.asm.org/
+      implicit < status ; name ; param[volume_name] >    
 
       au < exists ; Microbiology and Molecular Biology Reviews Volume 1 ; 1 >
       au < exists ; Microbiology and Molecular Biology Reviews Volume 2 ; 2 >
@@ -725,7 +828,7 @@
       au < exists ; Microbiology and Molecular Biology Reviews Volume 67 ; 67 >
       au < exists ; Microbiology and Molecular Biology Reviews Volume 68 ; 68 >
       au < manifest ; Microbiology and Molecular Biology Reviews Volume 69 ; 69 >
-      au < released ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
+      au < doNotProcess ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
       au < manifest ; Microbiology and Molecular Biology Reviews Volume 71 ; 71 >
       au < manifest ; Microbiology and Molecular Biology Reviews Volume 72 ; 72 >
       au < manifest ; Microbiology and Molecular Biology Reviews Volume 73 ; 73 >
@@ -744,6 +847,16 @@
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://mcb.asm.org/
       implicit < status ; name ; param[volume_name] >
+
+      au < released ; Molecular and Cellular Biology Volume 26 ; 26 >
+
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://mcb.asm.org/
+      implicit < status ; name ; param[volume_name] >    
 
       au < exists ; Molecular and Cellular Biology Volume 1 ; 1 >
       au < exists ; Molecular and Cellular Biology Volume 2 ; 2 >
@@ -770,7 +883,7 @@
       au < exists ; Molecular and Cellular Biology Volume 23 ; 23 >
       au < exists ; Molecular and Cellular Biology Volume 24 ; 24 >
       au < manifest ; Molecular and Cellular Biology Volume 25 ; 25 >
-      au < released ; Molecular and Cellular Biology Volume 26 ; 26 >
+      au < doNotProcess ; Molecular and Cellular Biology Volume 26 ; 26 >
       au < manifest ; Molecular and Cellular Biology Volume 27 ; 27 >
       au < manifest ; Molecular and Cellular Biology Volume 28 ; 28 >
       au < manifest ; Molecular and Cellular Biology Volume 29 ; 29 >
