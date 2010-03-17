@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.33 2009-08-11 19:43:17 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.34 2010-03-17 01:50:41 tlipkis Exp $
  */
 
 /*
@@ -145,17 +145,20 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testCallback() throws IOException {
-    setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
-					      FileTestUtil.urlOfString(c1a)));
-    log.debug(ConfigManager.getCurrentConfig().toString());
-    mgr.registerConfigurationCallback(new Configuration.Callback() {
+    Configuration.Callback cb = new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Configuration.Differences diffs) {
 	  log.debug("Notify: " + diffs);
 	  cbDiffs = diffs;
 	}
-      });
+      };
+
+    setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
+					      FileTestUtil.urlOfString(c1a)));
+    log.debug(ConfigManager.getCurrentConfig().toString());
+
+    mgr.registerConfigurationCallback(cb);
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1a),
 						FileTestUtil.urlOfString(c1))));
@@ -170,11 +173,19 @@ public class TestConfigManager extends LockssTestCase {
     assertFalse(cbDiffs.contains("prop2"));
     assertEquals(SetUtil.set("prop4"), cbDiffs.getDifferenceSet());
     log.debug(ConfigManager.getCurrentConfig().toString());
+    cbDiffs = null;
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));
     assertEquals(SetUtil.set("prop4", "prop2"), cbDiffs.getDifferenceSet());
     log.debug(ConfigManager.getCurrentConfig().toString());
+
+    mgr.unregisterConfigurationCallback(cb);
+    cbDiffs = null;
+    assertTrue(setCurrentConfigFromUrlList(ListUtil.
+					   list(FileTestUtil.urlOfString(c1),
+						FileTestUtil.urlOfString(c1))));
+    assertNull(cbDiffs);
 
   }
 
