@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.204 2010-03-14 18:33:49 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.205 2010-03-17 01:50:27 tlipkis Exp $
  */
 
 /*
@@ -294,6 +294,15 @@ public class PluginManager
     // Initialize the plugin directory.
     initPluginDir();
     PluginStatus.register(getDaemon(), this);
+    
+    // Hack to turn off JarFile cache, to experiment with ways to get file
+    // dexscriptors to be closed after plugin Classloader is freed
+//     try {
+//       URLConnection foo = new URL("http://example.com/").openConnection();
+//       foo.setDefaultUseCaches(false);
+//     } catch (IOException e) {
+//       log.warning("Couldn't turn off URLConnection caching", e);
+//     }
   }
 
   /**
@@ -1381,6 +1390,7 @@ public class PluginManager
 	  needRestartAus.addAll(aus);
 	}
       }
+      log.debug("Stopping old plugin " + oldPlug.getPluginName());
       oldPlug.stopPlugin();
     }
     pluginMap.put(pluginKey, plugin);
@@ -2302,6 +2312,8 @@ public class PluginManager
 	} catch (IllegalArgumentException ex) {
 	  // Don't let this runtime exception stop the daemon.  Skip the plugin.
 	  log.error("Skipping plugin " + pluginName + ": " + ex.getMessage());
+	  // must stop plugin to enable it to be collected
+	  plugin.stopPlugin();
 	  return;
 	}
 
@@ -2323,6 +2335,8 @@ public class PluginManager
 	      log.debug2("Existing plugin " + plugin.getPluginId() +
 			 ": No newer version found.");
 	    }
+	    // must stop plugin to enable it to be collected
+	    plugin.stopPlugin();
 	  }
 	} else if (!tmpMap.containsKey(key)) {
 	  // Plugin doesn't yet exist in the temporary map, add it.
@@ -2345,6 +2359,9 @@ public class PluginManager
 	    }
 	    // Overwrite old key in temp map
 	    tmpMap.put(key, info);
+	  } else {
+	    // must stop plugin to enable it to be collected
+	    plugin.stopPlugin();
 	  }
 	}
       }
