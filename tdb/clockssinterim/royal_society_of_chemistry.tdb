@@ -23,14 +23,14 @@
   }
 
   {
-  
+
     title <
       name = Analytical Communications
     >
-    
+
     param[journal_code] = ac
-    comment[legacy] = 1997-1999 only
-  
+
+
   }
 
   {
@@ -120,14 +120,14 @@
   }
 
   {
-  
+
     title <
       name = Contemporary Organic Synthesis
     >
-    
+
     param[journal_code] = co
-    comment[legacy] = 1997 only
-  
+
+
   }
 
   {
@@ -185,14 +185,14 @@
   }
 
   {
-  
+
     title <
       name = Geochemical Transactions
     >
-    
+
     param[journal_code] = gt
-    comment[legacy] = 2000-2003 only
-  
+
+
   }
 
   {
@@ -234,47 +234,47 @@
   }
 
   {
-  
+
     title <
       name = Journal of Chemical Research, Synopses
     >
-    
+
     param[journal_code] = jc
-    comment[legacy] = 1997-1999 only
-  
+
+
   }
 
   {
-  
+
     title <
       name = Journal of the Chemical Society, Faraday Transactions
     >
-    
+
     param[journal_code] = ft
-    comment[legacy] = 1997-1998 only
-  
+
+
   }
 
   {
-  
+
     title <
       name = Journal of the Chemical Society, Perkin Transactions 1
     >
-    
+
     param[journal_code] = p1
-    comment[legacy] = 1997-2002 only
-  
+
+
   }
 
   {
-  
+
     title <
       name = Journal of the Chemical Society, Perkin Transactions 2
     >
-    
+
     param[journal_code] = p2
-    comment[legacy] = 1997-2002 only
-  
+
+
   }
 
   {
@@ -393,14 +393,14 @@
   }
 
   {
-  
+
     title <
       name = Pesticide Outlook
     >
-    
+
     param[journal_code] = po
-    comment[legacy] = 2000-2003 only
-  
+
+
   }
 
   {
@@ -417,14 +417,14 @@
   }
 
   {
-  
+
     title <
       name = PhysChemComm
     >
-    
+
     param[journal_code] = qu
-    comment[legacy] = 1998-2003 only
-  
+
+
   }
 
   {
@@ -441,6 +441,17 @@
   }
 
   {
+
+    title <
+      name = Russian Chemical Reviews
+    >
+
+    param[journal_code] = rc
+
+
+  }
+
+  {
   
     title <
       name = Soft Matter
@@ -454,3 +465,4 @@
   }
 
 }
+
