@@ -41,7 +41,7 @@
   <property name="Mad Hatters' Review">
    <property name="name" value="All Mad Hatters' Review Titles" />
    <property name="class" value="xpath" />
-   <property name="xpath" value="[attributes/publisher='Mad Hatters&apos; Review']" />
+   <property name="xpath" value='[attributes/publisher="Mad Hatters&apos; Review"]' />
   </property>
   
  </property>

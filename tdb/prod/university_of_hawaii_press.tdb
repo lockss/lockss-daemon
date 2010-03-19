@@ -5,6 +5,7 @@
   >
 
   {
+
     title <
       name = Pacific Science ;
       issn = 1534-6188 
@@ -27,32 +28,32 @@
 comment[0] = Atypon AUs
 
     }
-    
-    {
-      title <
-        name = Pacific Science
-      >
-
-      implicit < status ; name ; param[volume] >
-      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-      param[base_url] = http://muse.jhu.edu/
-      param[journal_dir] = pacific_science
-
-      au < manifest ; Pacific Science Volume 55 ; 55 >
-      au < manifest ; Pacific Science Volume 56 ; 56 >
-      au < manifest ; Pacific Science Volume 57 ; 57 >
-      au < manifest ; Pacific Science Volume 58 ; 58 >
-      au < manifest ; Pacific Science Volume 59 ; 59 >
-      au < manifest ; Pacific Science Volume 60 ; 60 >
-      au < manifest ; Pacific Science Volume 61 ; 61 >
-
-    }
 
   }
-  
+    
   {
     title <
-      name = Archives of Asian Art ;
+      name = Pacific Science
+    >
+
+    implicit < status ; name ; param[volume] >
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
+    param[journal_dir] = pacific_science
+
+    au < manifest ; Pacific Science Volume 55 ; 55 >
+    au < manifest ; Pacific Science Volume 56 ; 56 >
+    au < manifest ; Pacific Science Volume 57 ; 57 >
+    au < manifest ; Pacific Science Volume 58 ; 58 >
+    au < manifest ; Pacific Science Volume 59 ; 59 >
+    au < manifest ; Pacific Science Volume 60 ; 60 >
+    au < manifest ; Pacific Science Volume 61 ; 61 >
+
+  }
+
+  {
+    title <
+      name = Archives of Asian Art
     >
 
     {
@@ -70,7 +71,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Asian Perspectives ;
+      name = Asian Perspectives
     >
 
     {
@@ -96,7 +97,7 @@ comment[0] = Atypon AUs
 
   {
     title <
-      name = Asian Theatre Journal ;
+      name = Asian Theatre Journal
     >
 
     {
@@ -123,7 +124,7 @@ comment[0] = Atypon AUs
 
   {
     title <
-      name = Azalea: Journal of Korean Literature & Culture ;
+      name = Azalea: Journal of Korean Literature & Culture
     >
 
     {
@@ -141,7 +142,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Biography ;
+      name = Biography
     >
 
     {
@@ -166,7 +167,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Buddhist-Christian Studies ;
+      name = Buddhist-Christian Studies
     >
 
     {
@@ -192,7 +193,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = China Review International ;
+      name = China Review International
     >
 
     {
@@ -217,7 +218,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Journal of World History ;
+      name = Journal of World History
     >
 
     {
@@ -246,7 +247,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Ka Ho'oilina/The Legacy ;
+      name = Ka Ho'oilina/The Legacy
     >
 
     {
@@ -266,7 +267,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Korean Studies ;
+      name = Korean Studies
     >
 
     {
@@ -291,7 +292,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Manoa ;
+      name = Manoa
     >
 
     {
@@ -317,7 +318,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Oceanic Linguistics ;
+      name = Oceanic Linguistics
     >
 
     {
@@ -343,7 +344,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Philosophy East and West  ;
+      name = Philosophy East and West
     >
 
     {
@@ -369,7 +370,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = The Contemporary Pacific ;
+      name = The Contemporary Pacific
     >
 
     {
@@ -395,7 +396,7 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Yearbook of the Association of Pacific Coast Geographers ;
+      name = Yearbook of the Association of Pacific Coast Geographers
     >
 
     {
@@ -416,4 +417,3 @@ comment[0] = Atypon AUs
   }
 
 }
-
