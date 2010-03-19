@@ -831,7 +831,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2005 ; Molecular Psychiatry Volume 10 ; 2005 ; 10 >
     au < manifest ; 2006 ; Molecular Psychiatry Volume 11 ; 2006 ; 11 >
     au < manifest ; 2007 ; Molecular Psychiatry Volume 12 ; 2007 ; 12 >
-    au < testing  ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
+    au < ready  ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
     au < testing  ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
     au < manifest ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
 
@@ -1011,7 +1011,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = nmat
 
     au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
-    au < testing ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
+    au < ready ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
     au < manifest ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
 
   }
@@ -1265,7 +1265,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrneph
 
     au < testing ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
-    au < testing ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
+    au < ready ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
     au < manifest ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
 
   }
@@ -1279,7 +1279,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrneurol
 
     au < manifest ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
-    au < testing ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
+    au < ready ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
     au < testing ; 2010 ; Nature Reviews Neurology Volume 6 ; 2010 ; 6 >
 
   }
@@ -1461,7 +1461,7 @@ comment[nprot4] = poll mismatch
     au < manifest ; 2005 ; Spinal Cord Volume 43 ; 2005 ; 43 >
     au < manifest ; 2006 ; Spinal Cord Volume 44 ; 2006 ; 44 >
     au < manifest ; 2007 ; Spinal Cord Volume 45 ; 2007 ; 45 >
-    au < testing ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
+    au < ready ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
     au < released ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
     au < manifest ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
     

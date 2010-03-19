@@ -1158,7 +1158,8 @@
     comment[jama_183_202] = volumes 183-202 are assigned differently to reingest[1234].clockss.org than other AUs
 
     param[base_url] = http://jama.ama-assn.org/
-
+    param[comment] = 17-Mar-2010 Volumes LV LX and LXI have mismatch between (Roman number) journal name and URLs
+    
     au < released ; 1883 ; Journal of the American Medical Association Volume I ; I ; reingest4.clockss.org:8082 >                                              
     au < released ; 1884 ; Journal of the American Medical Association Volume II ; II ; reingest1.clockss.org:8082 >                                            
     au < released ; 1884 ; Journal of the American Medical Association Volume III ; III ; reingest1.clockss.org:8082 >                                          
