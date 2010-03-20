@@ -113,7 +113,7 @@ comment[analysis68] = no manifest page
 
     param[base_url] = http://analysis.oxfordjournals.org/
 
-    au < notReady ; 2008 ; Analysis Volume 68 ; 68 ; >
+    au < retesting ; 2008 ; Analysis Volume 68 ; 68 ; >
     au < testing ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
 
   }
@@ -129,8 +129,8 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://aob.oxfordjournals.org/
 
-    au < tested ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
-    au < notReady ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
+    au < retesting ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
+    au < retesting ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
     au < notReady ; 2009 ; Annals of Botany Volume 103 ; 103 ; reingest3.clockss.org:8083 >
     au < notReady ; 2009 ; Annals of Botany Volume 104 ; 104 ; reingest3.clockss.org:8083 >
 
@@ -144,7 +144,7 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://annhyg.oxfordjournals.org/
 
-    au < tested ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
+    au < retesting ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
     au < testing ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
 
   }
@@ -157,7 +157,7 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://annonc.oxfordjournals.org/
 
-    au < tested ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
+    au < retesting ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
     au < testing ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
 
   }
@@ -170,7 +170,7 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://applij.oxfordjournals.org/
 
-    au < tested ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
+    au < retesting ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
     au < testing ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
 
   }
@@ -183,7 +183,7 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://acn.oxfordjournals.org/
 
-    au < tested ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
+    au < retesting ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
     au < testing ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
 
   }
@@ -354,7 +354,7 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bjsw.oxfordjournals.org/
 
-    au < tested ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
+    au < retesting ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
     au < released ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
 
   }
@@ -367,10 +367,10 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bmb.oxfordjournals.org/
 
-    au < tested ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
-    au < tested ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
-    au < tested ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
-    au < tested ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
+    au < retesting ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
+    au < retesting ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
+    au < retesting ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
+    au < retesting ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
     au < released ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
     au < released ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
     au < released ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
@@ -385,7 +385,7 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://blms.oxfordjournals.org/
 
-    au < tested ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
+    au < retesting ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
     au < released ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
 
   }
