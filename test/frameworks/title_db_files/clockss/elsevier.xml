@@ -38,54 +38,52 @@
 
  <property name="org.lockss.titleSet">
 
-  <property name="Springer">
-   <property name="name" value="All Springer Titles" />
+  <property name="Elsevier">
+   <property name="name" value="All Elsevier Titles" />
    <property name="class" value="xpath" />
-   <property name="xpath" value="[attributes/publisher='Springer']" />
+   <property name="xpath" value="[attributes/publisher='Elsevier']" />
   </property>
   
  </property>
  
  <property name="org.lockss.title">
 
-  <property name="SpringerSource2009">
-   <property name="attributes.publisher" value="Springer" />
-   <property name="journalTitle" value="Springer Source Content" />
-   <property name="title" value="Springer Source 2009" />
-   <property name="plugin" value="org.lockss.plugin.clockss.ClockssSpringerSourcePlugin" />
+  <property name="ElsevierSourceContent2009">
+   <property name="attributes.publisher" value="Elsevier" />
+   <property name="journalTitle" value="Elsevier Source Content" />
+   <property name="title" value="Elsevier Source Content 2009" />
+   <property name="plugin" value="org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://clockss-ingest.lockss.org/sourcefiles/springer-released/" />
+    <property name="value" value="http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2009" />
    </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="2009" />
+   <property name="param.98">
+    <property name="key" value="crawl_proxy" />
+    <property name="value" value="DIRECT" />
    </property>
-   <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="SpringerSource2010">
-   <property name="attributes.publisher" value="Springer" />
-   <property name="journalTitle" value="Springer Source Content" />
-   <property name="title" value="Springer Source 2010" />
-   <property name="plugin" value="org.lockss.plugin.clockss.ClockssSpringerSourcePlugin" />
+  <property name="ElsevierSourceContent2010">
+   <property name="attributes.publisher" value="Elsevier" />
+   <property name="journalTitle" value="Elsevier Source Content" />
+   <property name="title" value="Elsevier Source Content 2010" />
+   <property name="plugin" value="org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://clockss-ingest.lockss.org/sourcefiles/springer-released/" />
+    <property name="value" value="http://clockss-ingest.lockss.org/sourcefiles/elsevier-released/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2010" />
    </property>
-   <property name="param.3">
-    <property name="key" value="volume_name" />
-    <property name="value" value="2010" />
+   <property name="param.98">
+    <property name="key" value="crawl_proxy" />
+    <property name="value" value="DIRECT" />
    </property>
-   <property name="attributes.year" value="2010" />
   </property>
 
  </property>

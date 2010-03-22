@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = Springer
+  >
+  
+  {
+  
+    title <
+      name = Springer Source Content
+    >
+    
+    plugin = org.lockss.plugin.springer.ClockssSpringerSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/springer-released/
+    proxy = DIRECT
+    implicit < status ; year ; name ; param[year] >
+    
+    au < manifest ; 2009 ; Springer Source Content 2009 ; 2009 >
+    au < manifest ; 2010 ; Springer Source Content 2010 ; 2010 >
+    
+  }
+
+}

@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.clockss.ClockssElsevierSourcePlugin</string>
+    <string>org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -17,23 +17,11 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>1</string>
-  </entry>
-  <entry>
-    <string>au_crawlrules</string>
-    <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%s%d/elsevier-manifest.html&quot;, base_url, year</string>
-      <string>1,&quot;^%s%d/.*&quot;, base_url, year</string>
-    </list>
-  </entry>
-  <entry>
-    <string>au_start_url</string>
-    <string>&quot;%s%d/&quot;, base_url, year</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
