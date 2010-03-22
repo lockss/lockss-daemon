@@ -168,7 +168,7 @@
     au < ready ; Advances in Difference Equations Volume 2006 ; 2006 >
     au < ready ; Advances in Difference Equations Volume 2007 ; 2007 >
     au < ready ; Advances in Difference Equations Volume 2008 ; 2008 >
-    au < testing ; Advances in Difference Equations Volume 2009 ; 2009 >
+    au < ready ; Advances in Difference Equations Volume 2009 ; 2009 >
 
   }
 
@@ -215,7 +215,7 @@
     param[journal_id] = ahci
 
     au < ready ; Advances in Human-Computer Interaction Volume 2008 ; 2008 >
-    au < testing ; Advances in Human-Computer Interaction Volume 2009 ; 2009 >
+    au < ready ; Advances in Human-Computer Interaction Volume 2009 ; 2009 >
 
   }
 
@@ -351,7 +351,7 @@
 
     param[journal_id] = apc
 
-    au < testing ; Advances in Physical Chemistry Volume 2009 ; 2009 >
+    au < ready ; Advances in Physical Chemistry Volume 2009 ; 2009 >
 
   }
 
@@ -372,8 +372,8 @@
 
     param[journal_id] = at
 
-    au < testing ; Advances in Tribology Volume 2008 ; 2008 >
-    au < testing ; Advances in Tribology Volume 2009 ; 2009 >
+    au < ready ; Advances in Tribology Volume 2008 ; 2008 >
+    au < ready ; Advances in Tribology Volume 2009 ; 2009 >
 
   }
 
@@ -384,8 +384,8 @@
 
     param[journal_id] = au
 
-    au < testing ; Advances in Urology Volume 2008 ; 2008 >
-    au < testing ; Advances in Urology Volume 2009 ; 2009 >
+    au < ready ; Advances in Urology Volume 2008 ; 2008 >
+    au < ready ; Advances in Urology Volume 2009 ; 2009 >
 
   }
 
@@ -396,7 +396,7 @@
 
     param[journal_id] = av
 
-    au < testing ; Advances in Virology Volume 2009 ; 2009 >
+    au < ready ; Advances in Virology Volume 2009 ; 2009 >
 
   }
 
@@ -407,8 +407,8 @@
 
     param[journal_id] = arp
 
-    au < testing ; Anesthesiology Research and Practice Volume 2008 ; 2008 >
-    au < testing ; Anesthesiology Research and Practice Volume 2009 ; 2009 >
+    au < ready ; Anesthesiology Research and Practice Volume 2008 ; 2008 >
+    au < ready ; Anesthesiology Research and Practice Volume 2009 ; 2009 >
 
   }
 
@@ -419,7 +419,7 @@
 
     param[journal_id] = aess
 
-    au < testing ; Applied and Environmental Soil Science Volume 2009 ; 2009 >
+    au < ready ; Applied and Environmental Soil Science Volume 2009 ; 2009 >
 
   }
 
@@ -440,12 +440,12 @@
 
     param[journal_id] = bca
 
-    au < testing ; Bioinorganic Chemistry and Applications Volume 1 (2003) ; 2003 >
-    au < testing ; Bioinorganic Chemistry and Applications Volume 2 (2004) ; 2004 >
-    au < testing ; Bioinorganic Chemistry and Applications Volume 3 (2005) ; 2005 >
-    au < testing ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 >
-    au < testing ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 >
-    au < testing ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 >
+    au < ready ; Bioinorganic Chemistry and Applications Volume 1 (2003) ; 2003 >
+    au < ready ; Bioinorganic Chemistry and Applications Volume 2 (2004) ; 2004 >
+    au < ready ; Bioinorganic Chemistry and Applications Volume 3 (2005) ; 2005 >
+    au < ready ; Bioinorganic Chemistry and Applications Volume 2006 ; 2006 >
+    au < ready ; Bioinorganic Chemistry and Applications Volume 2007 ; 2007 >
+    au < ready ; Bioinorganic Chemistry and Applications Volume 2008 ; 2008 >
 
   }
 
@@ -456,10 +456,10 @@
 
     param[journal_id] = bvp
 
-    au < testing ; Boundary Value Problems Volume 2005 ; 2005 >
-    au < testing ; Boundary Value Problems Volume 2006 ; 2006 >
-    au < testing ; Boundary Value Problems Volume 2007 ; 2007 >
-    au < testing ; Boundary Value Problems Volume 2008 ; 2008 >
+    au < ready ; Boundary Value Problems Volume 2005 ; 2005 >
+    au < ready ; Boundary Value Problems Volume 2006 ; 2006 >
+    au < ready ; Boundary Value Problems Volume 2007 ; 2007 >
+    au < ready ; Boundary Value Problems Volume 2008 ; 2008 >
 
   }
 
@@ -480,22 +480,22 @@
 
     param[journal_id] = cdi
 
-    au < testing ; Clinical and Developmental Immunology Volume 1 (1994) ; 1994 >
-    au < testing ; Clinical and Developmental Immunology Volume 2 (1995) ; 1995 >
-    au < testing ; Clinical and Developmental Immunology Volume 3 (1996) ; 1996 >
-    au < testing ; Clinical and Developmental Immunology Volume 4 (1997) ; 1997 >
-    au < testing ; Clinical and Developmental Immunology Volume 5 (1998) ; 1998 >
-    au < testing ; Clinical and Developmental Immunology Volume 6 (1999) ; 1999 >
-    au < testing ; Clinical and Developmental Immunology Volume 7 (2000) ; 2000 >
-    au < testing ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 >
-    au < testing ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 >
-    au < testing ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 >
-    au < testing ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 >
-    au < testing ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 >
-    au < testing ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 >
-    au < testing ; Clinical and Developmental Immunology Volume 2007 ; 2007 >
-    au < testing ; Clinical and Developmental Immunology Volume 2008 ; 2008 >
-    au < testing ; Clinical and Developmental Immunology Volume 2009 ; 2009 >
+    au < ready ; Clinical and Developmental Immunology Volume 1 (1994) ; 1994 >
+    au < ready ; Clinical and Developmental Immunology Volume 2 (1995) ; 1995 >
+    au < ready ; Clinical and Developmental Immunology Volume 3 (1996) ; 1996 >
+    au < ready ; Clinical and Developmental Immunology Volume 4 (1997) ; 1997 >
+    au < ready ; Clinical and Developmental Immunology Volume 5 (1998) ; 1998 >
+    au < ready ; Clinical and Developmental Immunology Volume 6 (1999) ; 1999 >
+    au < ready ; Clinical and Developmental Immunology Volume 7 (2000) ; 2000 >
+    au < ready ; Clinical and Developmental Immunology Volume 8 (2001) ; 2001 >
+    au < ready ; Clinical and Developmental Immunology Volume 9 (2002) ; 2002 >
+    au < ready ; Clinical and Developmental Immunology Volume 10 (2003) ; 2003 >
+    au < ready ; Clinical and Developmental Immunology Volume 11 (2004) ; 2004 >
+    au < ready ; Clinical and Developmental Immunology Volume 12 (2005) ; 2005 >
+    au < ready ; Clinical and Developmental Immunology Volume 13 (2006) ; 2006 >
+    au < ready ; Clinical and Developmental Immunology Volume 2007 ; 2007 >
+    au < ready ; Clinical and Developmental Immunology Volume 2008 ; 2008 >
+    au < ready ; Clinical and Developmental Immunology Volume 2009 ; 2009 >
 
   }
 
@@ -506,14 +506,14 @@
 
     param[journal_id] = cfg
 
-    au < manifest ; Comparative and Functional Genomics Volume 1 (2001) ; 2001 >
-    au < manifest ; Comparative and Functional Genomics Volume 2 (2002) ; 2002 >
-    au < manifest ; Comparative and Functional Genomics Volume 3 (2003) ; 2003 >
-    au < manifest ; Comparative and Functional Genomics Volume 4 (2004) ; 2004 >
-    au < manifest ; Comparative and Functional Genomics Volume 5 (2005) ; 2005 >
-    au < manifest ; Comparative and Functional Genomics Volume 6 (2006) ; 2006 >
-    au < manifest ; Comparative and Functional Genomics Volume 2007 ; 2007 >
-    au < manifest ; Comparative and Functional Genomics Volume 2008 ; 2008 >
+    au < ready ; Comparative and Functional Genomics Volume 1 (2001) ; 2001 >
+    au < ready ; Comparative and Functional Genomics Volume 2 (2002) ; 2002 >
+    au < ready ; Comparative and Functional Genomics Volume 3 (2003) ; 2003 >
+    au < ready ; Comparative and Functional Genomics Volume 4 (2004) ; 2004 >
+    au < ready ; Comparative and Functional Genomics Volume 5 (2005) ; 2005 >
+    au < ready ; Comparative and Functional Genomics Volume 6 (2006) ; 2006 >
+    au < ready ; Comparative and Functional Genomics Volume 2007 ; 2007 >
+    au < ready ; Comparative and Functional Genomics Volume 2008 ; 2008 >
 
   }
 
@@ -524,8 +524,8 @@
 
     param[journal_id] = cin
 
-    au < manifest ; Computational Intelligence and Neuroscience Volume 2007 ; 2007 >
-    au < manifest ; Computational Intelligence and Neuroscience Volume 2008 ; 2008 >
+    au < ready ; Computational Intelligence and Neuroscience Volume 2007 ; 2007 >
+    au < ready ; Computational Intelligence and Neuroscience Volume 2008 ; 2008 >
 
   }
 
@@ -536,7 +536,7 @@
 
     param[journal_id] = cggr
 
-    au < manifest ; Current Gerontology and Geriatrics Research Volume 2008 ; 2008 >
+    au < ready ; Current Gerontology and Geriatrics Research Volume 2008 ; 2008 >
 
   }
 
@@ -547,14 +547,14 @@
 
     param[journal_id] = dte
 
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 1 (2001) ; 2001 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 2 (2002) ; 2002 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 3 (2003) ; 2003 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 4 (2004) ; 2004 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 5 (2005) ; 2005 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 6 (2006) ; 2006 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 7 (2007) ; 2007 >
-    au < manifest ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 1 (2001) ; 2001 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 2 (2002) ; 2002 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 3 (2003) ; 2003 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 4 (2004) ; 2004 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 5 (2005) ; 2005 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 6 (2006) ; 2006 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 7 (2007) ; 2007 >
+    au < ready ; Diagnostic and Therapeutic Endoscopy Volume 2008 ; 2008 >
 
   }
 
@@ -565,9 +565,9 @@
 
     param[journal_id] = denm
 
-    au < manifest ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 >
-    au < manifest ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 >
-    au < manifest ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 >
+    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 >
+    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 >
+    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 >
 
   }
 
@@ -578,18 +578,18 @@
 
     param[journal_id] = ddns
 
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 1 (1997) ; 1997 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 2 (1998) ; 1998 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 3 (1999) ; 1999 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 4 (2000) ; 2000 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 5 (2001) ; 2001 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 6 (2002) ; 2002 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 7 (2003) ; 2003 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 2004 ; 2004 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 2005 ; 2005 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 >
-    au < manifest ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 1 (1997) ; 1997 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 2 (1998) ; 1998 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 3 (1999) ; 1999 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 4 (2000) ; 2000 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 5 (2001) ; 2001 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 6 (2002) ; 2002 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 7 (2003) ; 2003 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 2004 ; 2004 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 2005 ; 2005 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 >
+    au < testing ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 >
 
   }
 
@@ -600,15 +600,15 @@
 
     param[journal_id] = asp
 
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2003 ; 2003 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2004 ; 2004 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2005 ; 2005 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2006 ; 2006 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2007 ; 2007 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2008 ; 2008 >
-    au < manifest ; EURASIP Journal on Advances in Signal Processing Volume 2009 ; 2009 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2003 ; 2003 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2004 ; 2004 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2005 ; 2005 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2006 ; 2006 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2007 ; 2007 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2008 ; 2008 >
+    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2009 ; 2009 >
 
   }
 
@@ -619,8 +619,8 @@
 
     param[journal_id] = asmp
 
-    au < manifest ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 >
-    au < manifest ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 >
+    au < testing ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 >
+    au < testing ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 >
 
   }
 
@@ -631,10 +631,10 @@
 
     param[journal_id] = bsb
 
-    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 >
-    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 >
-    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 >
-    au < manifest ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 >
+    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 >
+    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 >
+    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 >
+    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 >
 
   }
 
@@ -645,9 +645,9 @@
 
     param[journal_id] = es
 
-    au < manifest ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 >
-    au < manifest ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 >
-    au < manifest ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 >
+    au < testing ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 >
+    au < testing ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 >
+    au < testing ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 >
 
   }
 
@@ -658,8 +658,8 @@
 
     param[journal_id] = ivp
 
-    au < manifest ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
-    au < manifest ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
+    au < testing ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
+    au < testing ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
 
   }
 
@@ -670,8 +670,8 @@
 
     param[journal_id] = is
 
-    au < manifest ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
-    au < manifest ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
+    au < testing ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
+    au < testing ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
 
   }
 
@@ -682,11 +682,11 @@
 
     param[journal_id] = wcn
 
-    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 >
-    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 >
-    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 >
-    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 >
-    au < manifest ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 >
+    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 >
+    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 >
+    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 >
+    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 >
+    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 >
 
   }
 
