@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressHttpResponseHandler.java,v 1.1 2010-03-09 22:41:29 thib_gc Exp $
+ * $Id: HighWirePressHttpResponseHandler.java,v 1.2 2010-03-23 22:28:04 thib_gc Exp $
  */
 
 /*
@@ -54,14 +54,14 @@ public class HighWirePressHttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 404:
         logger.debug3("404");
-        return new CacheException.RetryDeadLinkException();
+        return new CacheException.RetryDeadLinkException("404 Not Found");
       case 500:
         logger.debug2("500");
         if (url.contains("cgi/eletters/")) {
-          return new CacheException.NoRetryDeadLinkException();
+          return new CacheException.NoRetryDeadLinkException("500 Internal Server Error (non-fatal)");
         }
         else {
-          return new CacheException.RetrySameUrlException();
+          return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
       default:
         logger.debug2("default");
