@@ -26,6 +26,7 @@ import MySQLdb
 import optparse
 import os
 import sys
+import time
 import urllib2
 
 sys.path.append(os.path.realpath(os.path.join(os.path.dirname(sys.argv[0]), '../frameworks/lib')))
@@ -154,6 +155,7 @@ def _article_report(client, db, options):
     host, port = options.host.split(':',1)
     auyear = {}
     austatus = {}
+    aucreated = {}
     aulastcrawlresult = {}
     aucontentsize = {}
     audisksize = {}
@@ -184,25 +186,34 @@ def _article_report(client, db, options):
             aucontentsize[auid] = ""
         audisksize[auid] = summary.get('Disk Usage (MB)', 'n/a')
         aurepository[auid] = summary.get('Repository')
+        
+        created = summary.get('Created')
+        if created is not None:
+            aucreated[auid] = time.strptime(created, "%H:%M:%S %m/%d/%y")
+        else:
+            print "FAIL: created time was not set.\n"
+            
         _get_list_articles(client, auid, auarticles)
       
         # Because it's hard to know if the Burp is running without SOME feedback...
         print options.host + ":" + auname[auid]
         
-        # Standard article...
-        cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
-auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
-aurepository, numarticles, publisher)
-VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
-"%s", "%s", "default")"""  % \
-                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], int(len(auarticles[auid]))))
         # Note: There is no article iterator for RSC.  This is a work-around.
         if auid.find('ClockssRoyalSocietyOfChemistryPlugin') >= 0 and (options.host.find("ingest") >= 0):
             _get_list_urls(client, auid, auarticles)
             cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
-auname, auid, auyear, numarticles, publisher)
-VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", %d, "rsc")""" % \
-                            (host, port, auname[auid], auid, auyear[auid], len(auarticles[auid])))
+auname, auid, auyear, numarticles, publisher, created)
+VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", %d, "rsc", '%s')""" % \
+                            (host, port, auname[auid], auid, auyear[auid], len(auarticles[auid]), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
+        else:
+            # Standard article...
+            cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
+auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
+aurepository, numarticles, publisher, created)
+VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
+"%s", "%s", "default", '%s')"""  % \
+                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], int(len(auarticles[auid])), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
+
     
     cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, NOW())" %
                    (host, int(port)))
