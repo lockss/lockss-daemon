@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Comediantes
+  >
+
+  implicit < status ; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Bulletin of the Comediantes 
+    >
+
+    param[journal_dir] = bulletin_of_the_comediantes
+
+    au < ready ; Bulletin of the Comediantes Volume 61 ; 61 >
+
+  }
+  
+}
