@@ -34,8 +34,8 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;%sjournals/%s/v%03d/&quot;, base_url, journal_dir, volume</string>
       <string>1,&quot;%sjournals/%s/summary/v%03d/&quot;, base_url, journal_dir, volume</string>
       <string>1,&quot;%sjournals/%s/toc/[^/]+\.?%d\.&quot;, base_url, journal_dir, volume</string>
