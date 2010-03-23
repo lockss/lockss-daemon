@@ -13,15 +13,15 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>4</string>
+    <string>5</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;IOP %s %d&quot;, journal_id, volume</string>
+    <string>&quot;IOP Publishing Plugin (Legacy), Base URL %s, Second Base URL %s, Journal ID %s, Volume %d&quot;, base_url, base_url2, journal_id, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>IOP</string>
+    <string>IOP Publishing Plugin (Legacy)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
