@@ -1,10 +1,10 @@
 /*
- * $Id: BePressArticleIteratorFactory.java,v 1.3 2009-09-04 22:59:51 thib_gc Exp $
+ * $Id: BePressArticleIteratorFactory.java,v 1.4 2010-03-23 01:38:54 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,7 +37,6 @@ import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.config.*;
 import org.lockss.daemon.PluginException;
 
 public class BePressArticleIteratorFactory implements ArticleIteratorFactory {
@@ -65,12 +64,34 @@ public class BePressArticleIteratorFactory implements ArticleIteratorFactory {
    */
   public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
       throws PluginException {
-    String abbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
-    subTreeRoot = abbr;
+    String journal_abbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+    subTreeRoot = journal_abbr;
     log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
               ") " + subTreeRoot);
-    Pattern pat = Pattern.compile("/vol[0-9]+/iss[0-9]+/[^/]+",
-				  Pattern.CASE_INSENSITIVE);
+    Pattern pat = makePatternForAu(au);
     return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
   }
+  
+  /**
+   * <p>Extracted to be testable.</p>
+   * @param au The BePress AU that will be iterated on
+   * @return A Java regex pattern that matches article URLs for the AU
+   * @throws PluginException
+   */
+  static Pattern makePatternForAu(ArchivalUnit au) throws PluginException {
+    String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+    String journal_abbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+    String volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    Pattern pat = Pattern.compile("^"
+                                  + base_url.replaceAll(".", "\\.")
+                                  + journal_abbr
+                                  + "/((vol)?"
+                                  + volume
+                                  + "/(iss)?[0-9]+/(art)?[0-9]+|vol"
+                                  + volume
+                                  + "/[A-Z][0-9]+)$",
+                                  Pattern.CASE_INSENSITIVE);
+    return pat;
+  }
+  
 }
