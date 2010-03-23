@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = IOP Publishing
+  >
+
+  plugin = org.lockss.plugin.iop.IOPPlugin
+  param[base_url] = http://www.iop.org/
+  param[base_url2] = http://ej.iop.org/
+
+  {
+  
+    title <
+      name = New Journal of Physics ;
+      issn = 1367-2630
+    >
+    
+    param[journal_id] = 1367-2630
+    implicit < status ; year ; name ; param[volume] >
+    
+    au < down ; 2005 ; New Journal of Physics Volume 7 ; 7 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Journal of Physics: Conference Series ;
+      issn = 1742-6596
+    >
+    
+    param[journal_id] = 1742-6596
+    implicit < status ; year ; name ; param[volume] >
+    
+    au < down ; 2005 ; Journal of Physics: Conference Series Volume 8 ; 8 >
+  
+  }
+  
+}

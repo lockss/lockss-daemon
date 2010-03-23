@@ -684,52 +684,6 @@
       </property>
 
 
-      <property name="newjournalofphysics7">
-	<property name="title" value="New Journal of Physics Volume 7" />
-	<property name="journalTitle" value="New Journal of Physics" />
-	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.iop.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="base_url2" />
-	  <property name="value" value="http://ej.iop.org/" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="journal_id" />
-	  <property name="value" value="1367-2630" />
-	</property>
-	<property name="param.4">
-	  <property name="key" value="volume" />
-	  <property name="value" value="7" />
-	</property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
-      <property name="jopConf8">
-	<property name="title" value="Journal of Physics: Conference Series Volume 8" />
-	<property name="journalTitle" value="Journal of Physics: Conference Series" />
-	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.iop.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="base_url2" />
-	  <property name="value" value="http://ej.iop.org/" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="journal_id" />
-	  <property name="value" value="1742-6596" />
-	</property>
-	<property name="param.4">
-	  <property name="key" value="volume" />
-	  <property name="value" value="8" />
-	</property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
       <!-- Title: Other Voices (Other Voices) -->
       <property name="othervoices2">
 	<property name="title" value="Other Voices Volume 2" />
