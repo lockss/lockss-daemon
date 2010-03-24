@@ -1,11 +1,8 @@
 {
+
   publisher <
     name = Leeds University
   >
-  
-  plugin = edu.nyu.plugin.LeedsICSPlugin
-  implicit < status ; name ; param[year] ; param[volume_str] >
-  param[base_url] = http://www.leeds.ac.uk/classics/lics/
   
   {
   
@@ -14,10 +11,13 @@
     >  
 
     rights = openaccess
-    
+    plugin = edu.nyu.plugin.LeedsICSPlugin
+    param[base_url] = http://www.leeds.ac.uk/classics/lics/
+    implicit < status ; name ; param[year] ; param[volume_str] >
+  
     au < released ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
     au < released ; Leeds International Classical Studies 2003 ; 2003 ; 2003 >
-    au < released ; Leeds International Classical Studies 2004 ; 2004 ; 200304>
+    au < released ; Leeds International Classical Studies 2004 ; 2004 ; 200304 >
     au < manifest ; Leeds International Classical Studies 2005 ; 2005 ; 2005 >
     au < manifest ; Leeds International Classical Studies 2006 ; 2006 ; 2006 >
     au < manifest ; Leeds International Classical Studies 2007 ; 2007 ; 2007 >
