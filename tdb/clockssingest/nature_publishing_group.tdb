@@ -17,11 +17,11 @@
     param[journal_id] = aps
 
     au < manifest ; 2005 ; Acta Pharmacologica Sinica Volume 26 ; 2005 ; 26 >
-    au < manifest ; 2006 ; Acta Pharmacologica Sinica Volume 26 ; 2006 ; 27 >
-    au < manifest ; 2007 ; Acta Pharmacologica Sinica Volume 26 ; 2007 ; 28 >
+    au < manifest ; 2006 ; Acta Pharmacologica Sinica Volume 27 ; 2006 ; 27 >
+    au < manifest ; 2007 ; Acta Pharmacologica Sinica Volume 28 ; 2007 ; 28 >
     au < released ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
-    au < manifest ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
+    au < testing ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
 
   }
 
@@ -58,7 +58,7 @@
     au < manifest ; 2007 ; Asian Journal of Andrology Volume 9 ; 2007 ; 9 >
     au < released ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
-    au < manifest ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
+    au < testing ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
 
   }
 
@@ -98,7 +98,7 @@ comment[bmt44] = attempt full recrawls
     au < released ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < notReady ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
-    au < manifest ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
+    au < testing ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
 
   }
 
@@ -146,7 +146,7 @@ comment[bmt44] = attempt full recrawls
     au < testing ; 2008 ; British Journal of Cancer Volume 99 ; 2008 ; 99 >
     au < testing ; 2009 ; British Journal of Cancer Volume 100 ; 2009 ; 100 >
     au < testing ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
-    au < manifest ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
+    au < testing ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
 
   }
 
@@ -170,7 +170,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
-    au < manifest ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
+    au < testing ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -195,7 +195,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Cell Death and Differentiation Volume 14 ; 2007 ; 14 >
     au < released ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
-    au < manifest ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
+    au < testing ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -209,7 +209,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
     au < released ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
-    au < manifest ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
+    au < testing ; 2010 ; Cell Research Volume 20 ; 2010 ; 20 >
 
   }
 
@@ -221,7 +221,7 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = clpt
 
-    au < manifest ; 2010 ; Clinical Pharmacology & Therapeutics ; 2010 ; 87 >
+    au < testing ; 2010 ; Clinical Pharmacology & Therapeutics ; 2010 ; 87 >
   }
 
   {
@@ -245,7 +245,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; The EMBO Journal Volume 26 ; 2007 ; 26 >
     au < testing  ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
     au < released ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
-    au < manifest ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
+    au < testing ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
 
   }
 
@@ -258,7 +258,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = embor
 
     au < testing  ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
-    au < manifest ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
+    au < testing ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -283,7 +283,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; European Journal of Clinical Nutrition Volume 61 ; 2007 ; 61 >
     au < testing  ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 2008 ; 62 >
     au < released ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
-    au < manifest ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
+    au < testing ; 2010 ; European Journal of Clinical Nutrition Volume 64 ; 2010 ; 64 >
 
   }
 
@@ -323,7 +323,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Eye Volume 21 ; 2007 ; 21 >
     au < testing  ; 2008 ; Eye Volume 22 ; 2008 ; 22 >
     au < released ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
-    au < manifest ; 2010 ; Eye Volume 24 ; 2010 ; 24 >
+    au < testing ; 2010 ; Eye Volume 24 ; 2010 ; 24 >
 
   }
 
@@ -348,7 +348,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Gene Therapy Volume 14 ; 2007 ; 14 >
     au < testing  ; 2008 ; Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
-    au < manifest ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
+    au < testing ; 2010 ; Gene Therapy Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -370,7 +370,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Genes and Immunity Volume 8 ; 2007 ; 8 >
     au < testing  ; 2008 ; Genes and Immunity Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
-    au < manifest ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
+    au < testing ; 2010 ; Genes and Immunity Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -408,7 +408,7 @@ comment[bmt44] = attempt full recrawls
     au < testing ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
     au < released ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
     au < released ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
-    au < manifest ; 2010 ; Heredity Volume 104 ; 2010 ; 104 >
+    au < testing ; 2010 ; Heredity Volume 104 ; 2010 ; 104 >
 
   }
 
@@ -425,7 +425,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Hypertension Research Volume 30 ; 2007 ; 30 >
     au < testing ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
     au < released ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
-    au < manifest ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
+    au < testing ; 2010 ; Hypertension Research Volume 33 ; 2010 ; 33 >
     
   }
 
@@ -439,7 +439,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
     au < released ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
-    au < manifest ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 >
+    au < testing ; 2010 ; Immunology & Cell Biology Volume 88 ; 2010 ; 88 >
 
   }
 
@@ -464,7 +464,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; International Journal of Impotence Research Volume 19 ; 2007 ; 19 >
     au < released ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
     au < released ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
-    au < manifest ; 2010 ; International Journal of Impotence Research Volume 22 ; 2010 ; 22 >
+    au < testing ; 2010 ; International Journal of Impotence Research Volume 22 ; 2010 ; 22 >
 
   }
 
@@ -489,7 +489,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; International Journal of Obesity Volume 31 ; 2007 ; 31 >
     au < released ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
     au < released ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
-    au < manifest ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
+    au < testing ; 2010 ; International Journal of Obesity Volume 34 ; 2010 ; 34 >
 
   }
 
@@ -526,7 +526,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; The Journal of Antibiotics Volume 60 ; 2007 ; 60 >
     au < testing  ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
     au < released ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
-    au < manifest ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
+    au < testing ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
 
   }
 
@@ -554,7 +554,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Journal of Exposure Science and Environmental Epidemiology Volume 17 ; 2007 ; 17 >
     au < ready ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 2008 ; 18 >
     au < notReady ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
-    au < manifest ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
+    au < testing ; 2010 ; Journal of Exposure Science and Environmental Epidemiology Volume 20 ; 2010 ; 20 >
 
   }
 
@@ -578,7 +578,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Journal of Human Genetics Volume 52 ; 2007 ; 52 >
     au < ready ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
     au < released ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
-    au < manifest ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
+    au < testing ; 2010 ; Journal of Human Genetics Volume 55 ; 2010 ; 55 >
 
   }
 
@@ -603,7 +603,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Journal of Human Hypertension Volume 21 ; 2007 ; 21 >
     au < testing  ; 2008 ; Journal of Human Hypertension Volume 22 ; 2008 ; 22 >
     au < released ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
-    au < manifest ; 2010 ; Journal of Human Hypertension Volume 24 ; 2010 ; 24 >
+    au < testing ; 2010 ; Journal of Human Hypertension Volume 24 ; 2010 ; 24 >
 
   }
 
@@ -730,7 +730,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; The Journal of Investigative Dermatology Volume 127 ; 2007 ; 127 >    
     au < testing  ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
     au < released ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
-    au < manifest ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
+    au < testing ; 2010 ; The Journal of Investigative Dermatology Volume 130 ; 2010 ; 130 >
 
   }
 
@@ -753,7 +753,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Journal of Perinatology Volume 27 ; 2007 ; 27 >
     au < testing ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
     au < released ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
-    au < manifest ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 >
+    au < testing ; 2010 ; Journal of Perinatology Volume 30 ; 2010 ; 30 >
     
   }
 
@@ -798,7 +798,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Leukemia Volume 21 ; 2007 ; 21 >
     au < testing ; 2008 ; Leukemia Volume 22 ; 2008 ; 22 >
     au < notReady ; 2009 ; Leukemia Volume 23 ; 2009 ; 23 >
-    au < manifest ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
+    au < testing ; 2010 ; Leukemia Volume 24 ; 2010 ; 24 >
     
   }
 
@@ -833,7 +833,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2007 ; Molecular Psychiatry Volume 12 ; 2007 ; 12 >
     au < ready  ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
     au < testing  ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
-    au < manifest ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
+    au < testing ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
 
   }
 
@@ -887,7 +887,7 @@ comment[bmt44] = attempt full recrawls
     au < released ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
     au < released ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
     au < doesNotExist ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
-    au < manifest ; 2010 ; Nature Volume 463 ; 2010 ; 463 >
+    au < testing ; 2010 ; Nature Volume 463 ; 2010 ; 463 >
 
   }
 
@@ -901,7 +901,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
     au < released ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
-    au < manifest ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 >
+    au < testing ; 2010 ; Nature Biotechnology Volume 28 ; 2010 ; 28 >
 
   }
 
@@ -915,7 +915,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
     au < released ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
-    au < manifest ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
+    au < testing ; 2010 ; Nature Cell Biology Volume 12 ; 2010 ; 12 >
 
   }
 
@@ -929,7 +929,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
     au < released ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
-    au < manifest ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
+    au < testing ; 2010 ; Nature Chemical Biology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -942,7 +942,7 @@ comment[bmt44] = attempt full recrawls
     param[journal_id] = nchem
 
     au < released ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
-    au < manifest ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
+    au < testing ; 2010 ; Nature Chemistry Volume 2 ; 2010 ; 2 >
 
   }
 
@@ -956,7 +956,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
+    au < testing ; 2010 ; Nature Digest Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -970,7 +970,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Nature Genetics Volume 40 ; 2008 ; 40 >
     au < testing ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
-    au < manifest ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
+    au < testing ; 2010 ; Nature Genetics Volume 42 ; 2010 ; 42 >
 
   }
 
@@ -984,7 +984,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
     au < testing ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
-    au < manifest ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 >
+    au < testing ; 2010 ; Nature Geoscience Volume 3 ; 2010 ; 3 >
 
   }
 
@@ -998,7 +998,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Nature Immunology Volume 9 ; 2008 ; 9 >
     au < testing ; 2009 ; Nature Immunology Volume 10 ; 2009 ; 10 >
-    au < manifest ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
+    au < testing ; 2010 ; Nature Immunology Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -1012,7 +1012,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
     au < ready ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
-    au < manifest ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
+    au < testing ; 2010 ; Nature Materials Volume 9 ; 2010 ; 9 >
 
   }
 
@@ -1026,7 +1026,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
     au < released ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
-    au < manifest ; 2009 ; Nature Medicine Volume 16 ; 2010 ; 16 >
+    au < testing ; 2010 ; Nature Medicine Volume 16 ; 2010 ; 16 >
 
   }
 
@@ -1040,7 +1040,7 @@ comment[bmt44] = attempt full recrawls
 
     au < released ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
+    au < testing ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1054,7 +1054,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
     au < released ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
-    au < manifest ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
+    au < testing ; 2010 ; Nature Nanotechnology Volume 5 ; 2010 ; 5 >
 
   }
 
@@ -1068,7 +1068,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
     au < released ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
-    au < manifest ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
+    au < testing ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
 
   }
 
@@ -1082,7 +1082,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
     au < released ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
-    au < manifest ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
+    au < testing ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
 
   }
 
@@ -1096,7 +1096,7 @@ comment[bmt44] = attempt full recrawls
 
     au < testing ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
     au < released ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
-    au < manifest ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
+    au < testing ; 2010 ; Nature Physics Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -1112,7 +1112,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
     au < notReady ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
-    au < manifest ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
+    au < testing ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
 
   }
 
@@ -1126,7 +1126,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
     au < released ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
-    au < manifest ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
+    au < testing ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
 
   }
 
@@ -1140,7 +1140,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
+    au < testing ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1154,7 +1154,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
+    au < testing ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1168,7 +1168,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
     au < released ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
-    au < manifest ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
+    au < testing ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
 
   }
 
@@ -1182,7 +1182,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
     au < testing ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
-    au < manifest ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
+    au < testing ; 2010 ; Nature Reviews Endocrinology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -1196,7 +1196,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 >
     au < testing ; 2009 ; Nature Reviews Gastroenterology and Hepatology Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
+    au < testing ; 2010 ; Nature Reviews Gastroenterology and Hepatology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1210,7 +1210,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
-    au < manifest ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
+    au < testing ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -1224,7 +1224,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
     au < released ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
-    au < manifest ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
+    au < testing ; 2010 ; Nature Reviews Immunology Volume 10 ; 2010 ; 10 >
 
   }
 
@@ -1238,7 +1238,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
     au < released ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
-    au < manifest ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 >
+    au < testing ; 2010 ; Nature Reviews Microbiology Volume 8 ; 2010 ; 8 >
 
   }
 
@@ -1252,7 +1252,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
-    au < manifest ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
+    au < testing ; 2010 ; Nature Reviews Molecular Cell Biology Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -1266,7 +1266,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
     au < ready ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
-    au < manifest ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
+    au < testing ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -1294,7 +1294,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
-    au < manifest ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
+    au < testing ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
 
   }
 
@@ -1308,7 +1308,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
-    au < manifest ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
+    au < testing ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
 
   }
 
@@ -1322,7 +1322,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
     au < testing ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
+    au < testing ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
 
   }
 
@@ -1336,7 +1336,7 @@ comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Structural and Molecular Biology Volume 15 ; 2008 ; 15 >
     au < testing ; 2009 ; Nature Structural and Molecular Biology Volume 16 ; 2009 ; 16 >
-    au < manifest ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
+    au < testing ; 2010 ; Nature Structural and Molecular Biology Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -1383,7 +1383,7 @@ comment[nprot4] = poll mismatch
     au < manifest ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
     au < testing ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < notReady ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
-    au < manifest ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
+    au < testing ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
 
   }
 
@@ -1404,7 +1404,7 @@ comment[nprot4] = poll mismatch
     au < manifest ; 2007 ; The Pharmacogenomics Journal Volume 7 ; 2007 ; 7 >
     au < testing ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
     au < notReady ; 2009 ; The Pharmacogenomics Journal Volume 9 ; 2009 ; 9 >
-    au < manifest ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
+    au < testing ; 2010 ; The Pharmacogenomics Journal Volume 10 ; 2010 ; 10 >
     
   }
 
@@ -1428,7 +1428,7 @@ comment[nprot4] = poll mismatch
     au < manifest ; 2007 ; Prostate Cancer and Prostatic Diseases Volume 10 ; 2007 ; 10 >
     au < testing ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
-    au < manifest ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
+    au < testing ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
 
   }
 
@@ -1463,9 +1463,8 @@ comment[nprot4] = poll mismatch
     au < manifest ; 2007 ; Spinal Cord Volume 45 ; 2007 ; 45 >
     au < ready ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
     au < released ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
-    au < manifest ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
+    au < testing ; 2010 ; Spinal Cord Volume 48 ; 2010 ; 48 >
     
-
   }
 
   {
@@ -1478,8 +1477,8 @@ comment[nprot4] = poll mismatch
     param[comment] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
     
     au < manifest ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2009 ; Vital Volume 7 ; 2009 ; 7 >
-
+    au < manifest ; 2009 ; Vital Volume 7 (year 2009) ; 2009 ; 7 >
+    au < manifest ; 2010 ; Vital Volume 7 (year 2010) ; 2010 ; 7 >
   }
 
 }
