@@ -4,12 +4,16 @@
     <string>org.lockss.plugin.jscm.JSCMPlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
-    <string>&quot;Journal of Seventeenth-Century Music Volume %d&quot;, volume</string>
+    <string>&quot;Journal of Seventeenth-Century Music Plugin, Base URL %s, Volume %d&quot;, base_url, volume</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Journal of Seventeenth-Century Music</string>
+    <string>Journal of Seventeenth-Century Music Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>

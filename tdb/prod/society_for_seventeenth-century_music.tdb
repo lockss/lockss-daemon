@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Society for Seventeenth-Century Music
+  >
+  
+  {
+  
+    title <
+      name = Journal of Seventeenth-Century Music ;
+      issn = 1089-747X
+    >
+  
+    rights = openaccess
+    plugin = edu.harvard.plugin.jrs.JRSPlugin
+    param[base_url] = org.lockss.plugin.jscm.JSCMPlugin
+    implicit < status ; year ; name ; param[volume] >
+
+    au < manifest ; 1995 ; Journal of Seventeenth-Century Music Volume 1 ; 1 >
+    au < manifest ; 1996 ; Journal of Seventeenth-Century Music Volume 2 ; 2 >
+    au < manifest ; 1997 ; Journal of Seventeenth-Century Music Volume 3 ; 3 >
+    au < manifest ; 1998 ; Journal of Seventeenth-Century Music Volume 4 ; 4 >
+    au < manifest ; 1999 ; Journal of Seventeenth-Century Music Volume 5 ; 5 >
+    au < manifest ; 2000 ; Journal of Seventeenth-Century Music Volume 6 ; 6 >
+    au < manifest ; 2001 ; Journal of Seventeenth-Century Music Volume 7 ; 7 >
+    au < manifest ; 2002 ; Journal of Seventeenth-Century Music Volume 8 ; 8 >
+    au < manifest ; 2003 ; Journal of Seventeenth-Century Music Volume 9 ; 9 >
+    au < released ; 2004 ; Journal of Seventeenth-Century Music Volume 10 ; 10 >
+    au < manifest ; 2005 ; Journal of Seventeenth-Century Music Volume 11 ; 11 >
+    au < manifest ; 2006 ; Journal of Seventeenth-Century Music Volume 12 ; 12 >
+    au < manifest ; 2007 ; Journal of Seventeenth-Century Music Volume 13 ; 13 >
+    au < manifest ; 2008 ; Journal of Seventeenth-Century Music Volume 14 ; 14 >
+  
+  }
+
+}
