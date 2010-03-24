@@ -52,23 +52,23 @@ comment[joe154] = found a login page (content2a) vol 154 and down
       param[base_url] = http://joe.endocrinology-journals.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < NotReady ; Journal of Endocrinology Volume 83 ; 83 >
-      au < NotReady ; Journal of Endocrinology Volume 84 ; 84 >
-      au < NotReady ; Journal of Endocrinology Volume 85 ; 85 >
-      au < NotReady ; Journal of Endocrinology Volume 86 ; 86 >
-      au < NotReady ; Journal of Endocrinology Volume 87 ; 87 >
-      au < NotReady ; Journal of Endocrinology Volume 88 ; 88 >
-      au < NotReady ; Journal of Endocrinology Volume 89 ; 89 >
-      au < NotReady ; Journal of Endocrinology Volume 90 ; 90 >
-      au < NotReady ; Journal of Endocrinology Volume 91 ; 91 >
-      au < NotReady ; Journal of Endocrinology Volume 92 ; 92 >
-      au < NotReady ; Journal of Endocrinology Volume 93 ; 93 >
-      au < NotReady ; Journal of Endocrinology Volume 94 ; 94 >
-      au < NotReady ; Journal of Endocrinology Volume 95 ; 95 >
-      au < NotReady ; Journal of Endocrinology Volume 96 ; 96 >
-      au < NotReady ; Journal of Endocrinology Volume 97 ; 97 >
-      au < NotReady ; Journal of Endocrinology Volume 98 ; 98 >
-      au < NotReady ; Journal of Endocrinology Volume 99 ; 99 >
+      au < notReady ; Journal of Endocrinology Volume 83 ; 83 >
+      au < notReady ; Journal of Endocrinology Volume 84 ; 84 >
+      au < notReady ; Journal of Endocrinology Volume 85 ; 85 >
+      au < notReady ; Journal of Endocrinology Volume 86 ; 86 >
+      au < notReady ; Journal of Endocrinology Volume 87 ; 87 >
+      au < notReady ; Journal of Endocrinology Volume 88 ; 88 >
+      au < notReady ; Journal of Endocrinology Volume 89 ; 89 >
+      au < notReady ; Journal of Endocrinology Volume 90 ; 90 >
+      au < notReady ; Journal of Endocrinology Volume 91 ; 91 >
+      au < notReady ; Journal of Endocrinology Volume 92 ; 92 >
+      au < notReady ; Journal of Endocrinology Volume 93 ; 93 >
+      au < notReady ; Journal of Endocrinology Volume 94 ; 94 >
+      au < notReady ; Journal of Endocrinology Volume 95 ; 95 >
+      au < notReady ; Journal of Endocrinology Volume 96 ; 96 >
+      au < notReady ; Journal of Endocrinology Volume 97 ; 97 >
+      au < notReady ; Journal of Endocrinology Volume 98 ; 98 >
+      au < notReady ; Journal of Endocrinology Volume 99 ; 99 >
       au < manifest ; Journal of Endocrinology Volume 100 ; 100 >
       au < manifest ; Journal of Endocrinology Volume 101 ; 101 >
       au < manifest ; Journal of Endocrinology Volume 102 ; 102 >
@@ -184,30 +184,30 @@ comment[joe154] = found a login page (content2a) vol 154 and down
 
     {
 
-comment[jme43] = "Found a login page".  Thib will need to look at this later.
+comment[jme43] = Found a login page.  Thib will need to look at this later.
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://jme.endocrinology-journals.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < NotReady ; Journal of Molecular Endocrinology Volume 1 ; 1 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 2 ; 2 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 3 ; 3 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 4 ; 4 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 5 ; 5 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 6 ; 6 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 7 ; 7 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 8 ; 8 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 9 ; 9 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 10 ; 10 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 11 ; 11 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 12 ; 12 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 13 ; 13 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 14 ; 14 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 15 ; 15 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 16 ; 16 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 17 ; 17 >
-      au < NotReady ; Journal of Molecular Endocrinology Volume 18 ; 18 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 1 ; 1 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 2 ; 2 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 3 ; 3 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 4 ; 4 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 5 ; 5 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 6 ; 6 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 7 ; 7 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 8 ; 8 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 9 ; 9 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 10 ; 10 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 11 ; 11 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 12 ; 12 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 13 ; 13 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 14 ; 14 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 15 ; 15 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 16 ; 16 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 17 ; 17 >
+      au < notReady ; Journal of Molecular Endocrinology Volume 18 ; 18 >
       au < manifest ; Journal of Molecular Endocrinology Volume 19 ; 19 >
       au < manifest ; Journal of Molecular Endocrinology Volume 20 ; 20 >
       au < manifest ; Journal of Molecular Endocrinology Volume 21 ; 21 >

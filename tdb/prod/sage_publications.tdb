@@ -3798,7 +3798,7 @@ comment[ghj] = now published by Oxford Univeristy Press
         param[base_url] = http://eme.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; released ; Global Journal of Emerging Market Economies Volume 1 ; 1 ; reingest3.clockss.org:8083 >
+        au < HighWirePressPlugin ; released ; Global Journal of Emerging Market Economies Volume 1 ; 1 >
 
       }
 

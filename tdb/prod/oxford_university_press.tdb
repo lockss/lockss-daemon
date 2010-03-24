@@ -5105,8 +5105,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://phe.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
   
-        au < HighWirePressPlugin ; released ; Public Health Ethics Volume 1 ; 1 ; >
-        au < HighWirePressPlugin ; released ; Public Health Ethics Volume 2 ; 2 ; >
+        au < HighWirePressPlugin ; released ; Public Health Ethics Volume 1 ; 1 >
+        au < HighWirePressPlugin ; released ; Public Health Ethics Volume 2 ; 2 >
  
       }
  

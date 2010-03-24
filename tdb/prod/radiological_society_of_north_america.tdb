@@ -62,7 +62,7 @@
       {
 
         param[base_url] = http://radiology.rsna.org/
-        implicit < status ; name ; param[volume_name] >
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressH20Plugin ; exists ; Radiology Volume 133 ; 133 >
         au < HighWirePressH20Plugin ; exists ; Radiology Volume 134 ; 134 >
