@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.11 2010-02-05 06:36:29 thib_gc Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.12 2010-03-24 01:35:21 thib_gc Exp $
  */
 
 /*
@@ -169,8 +169,8 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
 
     // substring matches
     shouldCacheTest(baseUrl+"v0601/", false, pmAu, cus);
-    shouldCacheTest(baseUrl+"toc/aim601.1.html", false, pmAu, cus);
-    shouldCacheTest(baseUrl+"toc/aim360.1.html", false, pmAu, cus);
+    shouldCacheTest(baseUrl+"toc/similartoaim60.1.html", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"toc/similartoaim.60.1.html", true, pmAu, cus);
 
     // other site
     shouldCacheTest("http://muse2.jhu.edu/", false, pmAu, cus);
