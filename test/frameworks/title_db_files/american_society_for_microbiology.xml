@@ -2643,6 +2643,21 @@
    </property>
   </property>
 
+  <property name="EukaryoticCell9">
+   <property name="attributes.publisher" value="American Society for Microbiology" />
+   <property name="journalTitle" value="Eukaryotic Cell" />
+   <property name="title" value="Eukaryotic Cell Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://ec.asm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
   <property name="InfectionandImmunity1">
    <property name="attributes.publisher" value="American Society for Microbiology" />
    <property name="journalTitle" value="Infection and Immunity" />
@@ -3795,6 +3810,21 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="77" />
+   </property>
+  </property>
+
+  <property name="InfectionandImmunity78">
+   <property name="attributes.publisher" value="American Society for Microbiology" />
+   <property name="journalTitle" value="Infection and Immunity" />
+   <property name="title" value="Infection and Immunity Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://iai.asm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="78" />
    </property>
   </property>
 
@@ -5580,6 +5610,21 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="191" />
+   </property>
+  </property>
+
+  <property name="JournalofBacteriology192">
+   <property name="attributes.publisher" value="American Society for Microbiology" />
+   <property name="journalTitle" value="Journal of Bacteriology" />
+   <property name="title" value="Journal of Bacteriology Volume 192" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jb.asm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="192" />
    </property>
   </property>
 
