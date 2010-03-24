@@ -1,50 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-<MapElement>
-<ElementKey>plugin_config_props</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<ConfigParamDescr>
-<Key>base_url</Key>
-<DisplayName>Base URL</DisplayName>
-<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-<Type>3</Type>
-<Size>40</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>volume</Key>
-<DisplayName>Volume No.</DisplayName>
-<Type>6</Type>
-<Size>8</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_crawlrules</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%sMedievalForum-volume%d.html", base_url, volume</string>
-<string xsi:type="java:java.lang.String">1,"^%svolume%d\.html", base_url, volume</string>
-<string xsi:type="java:java.lang.String">1,"^%s(Comments|Contact|Contactus|Guidelines|index)\.html", base_url</string>
-<string xsi:type="java:java.lang.String">1,"^%sImages/.*", base_url</string>
-<string xsi:type="java:java.lang.String">1,"^%s[Vv]olume(%%20)?%d/.*", base_url, volume</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sMedievalForum-volume%d.html", base_url, volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Medieval Forum</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Medieval Forum Volume %d", volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_identifier</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.jhu.library.plugin.MedievalForumPlugin</ElementValue>
-</MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.jhu.library.plugin.MedievalForumPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Medieval Forum Plugin, base URL %s, Volume %d&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Medieval Forum Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%sMedievalForum-volume%d.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%svolume%d\.html&quot;, base_url, volume</string>
+      <string>1,&quot;^%s(Comments|Contact|Contactus|Guidelines|index)\.html&quot;, base_url</string>
+      <string>1,&quot;^%sImages/.*&quot;, base_url</string>
+      <string>1,&quot;^%s[Vv]olume(%%20)?%d/.*&quot;, base_url, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%sMedievalForum-volume%d.html&quot;, base_url, volume</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
