@@ -88,6 +88,26 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="JackMagazine3">
+   <property name="attributes.publisher" value="Jack Magazine" />
+   <property name="journalTitle" value="Jack Magazine" />
+   <property name="title" value="Jack Magazine Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.jackmagazine.JackMagazinePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.jackmagazine.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="9-10" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
  </property>
 
 </lockss-config>

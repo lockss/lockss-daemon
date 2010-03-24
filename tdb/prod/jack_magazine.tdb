@@ -1,19 +1,20 @@
 {
+
   publisher <
     name = Jack Magazine
   >
   
-  plugin = 	org.lockss.plugin.jackmagazine.JackMagazinePlugin
-  implicit < status ; name ; param[volume_name] ; param[num_issue_range] >
-  param[base_url] = http://www.jackmagazine.com/
-  
   {
   
     title <
-      name = Jack Magazine
+      name = Jack Magazine ;
+      eissn = 1939-0351
     >  
 
     rights = openaccess
+    plugin = org.lockss.plugin.jackmagazine.JackMagazinePlugin
+    param[base_url] = http://www.jackmagazine.com/
+    implicit < status ; name ; param[volume_name] ; param[num_issue_range] >
     
     au < released ; Jack Magazine Volume 1 ; 1 ; 1-4 >
     au < released ; Jack Magazine Volume 2 ; 2 ; 5-8 >
