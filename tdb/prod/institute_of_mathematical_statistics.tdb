@@ -4,8 +4,9 @@
     name = Institute of Mathematical Statistics
   >
   
+  rights = openaccess
   plugin = org.lockss.plugin.ojs.OJSPlugin
-  implicit < status ; name ; param[year] >
+  implicit < status ; attr[year] ; name ; param[year] >
   
   {
   
@@ -13,10 +14,7 @@
       name = Electronic Communications In Probability
     >  
 
-    rights = openaccess
-    plugin = org.lockss.plugin.ojs.OJSPlugin
     param[base_url] = http://www.math.washington.edu/~ejpecp/ECP/
-    implicit < status ; attr[year] ; name ; param[year] >
     
     au < manifest ; 1996 ; Electronic Communications In Probability 1996 ; 1996 >
     au < manifest ; 1997 ; Electronic Communications In Probability 1997 ; 1997 >
@@ -39,13 +37,10 @@
   {
   
     title <
-      name = Electronic Journal Of Probability
+      name = Electronic Journal of Probability
     > 
     
-    rights = openaccess
-    plugin = org.lockss.plugin.ojs.OJSPlugin
     param[base_url] = http://www.math.washington.edu/~ejpecp/
-    implicit < status ; attr[year] ; name ; param[year] >
 
     au < manifest ; 1996 ; Electronic Journal of Probability 1996 ; 1996 >
     au < manifest ; 1997 ; Electronic Journal of Probability 1997 ; 1997 >
