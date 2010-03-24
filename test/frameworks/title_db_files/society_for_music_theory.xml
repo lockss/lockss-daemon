@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Society for Music Theory">
+   <property name="name" value="All Society for Music Theory Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Society for Music Theory']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="MusicTheoryOnline1">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 1" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1995" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline2">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 2" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline3">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 3" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline4">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 4" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline5">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 5" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline6">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 6" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline7">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 7" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline8">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 8" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline9">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 9" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline10">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 10" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MusicTheoryOnline11">
+   <property name="attributes.publisher" value="Society for Music Theory" />
+   <property name="journalTitle" value="Music Theory Online" />
+   <property name="title" value="Music Theory Online Volume 11" />
+   <property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.societymusictheory.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+ </property>
+
+</lockss-config>

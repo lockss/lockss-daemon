@@ -1,63 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Elements>
-<MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Music Theory Online Volume %d", volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_identifier</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">edu.indiana.lib.mto.MTOPlugin</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Music Theory Online</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_crawlrules</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%smto/lockss/index%d.html", base_url, year</string>
-<string xsi:type="java:java.lang.String">1,"%smto/issues/mto\.%02d\.%d\.[0-9]+/.*", base_url, au_short_year, volume</string>
-<string xsi:type="java:java.lang.String">2,"%smto/issues/mto\.[0-9]+\.[0-9]+\.[0-9]+/.*", base_url</string>
-<string xsi:type="java:java.lang.String">2,"%smto/issues/issues\.html", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%smto/issues/.*", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%smto/gifs/.*", base_url</string>
-<string xsi:type="java:java.lang.String">2,"%smto/index\.html", base_url</string>
-<string xsi:type="java:java.lang.String">2,"%smto/docs/.*", base_url</string>
-<string xsi:type="java:java.lang.String">2,"%ssmt-list/.*", base_url</string>
-<string xsi:type="java:java.lang.String">2,"%scgi-bin/.*", base_url</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%smto/lockss/index%d.html", base_url, year</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_config_props</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<ConfigParamDescr>
-<Key>base_url</Key>
-<DisplayName>Base URL</DisplayName>
-<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-<Type>3</Type>
-<Size>40</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>year</Key>
-<DisplayName>Year</DisplayName>
-<Description>Four digit year (e.g., 2004)</Description>
-<Type>4</Type>
-<Size>4</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-<ConfigParamDescr>
-<Key>volume</Key>
-<DisplayName>Volume No.</DisplayName>
-<Type>6</Type>
-<Size>8</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
-</ElementValue>
-</MapElement>
-</Elements>
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>edu.indiana.lib.plugin.mto.MTOPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Music Theory Online Plugin, Base URL %s, Year %d, Volume %d&quot;, base_url, year, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Music Theory Online Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;%smto/lockss/index%d.html&quot;, base_url, year</string>
+      <string>1,&quot;%smto/issues/mto\.%02d\.%d\.[0-9]+/.*&quot;, base_url, au_short_year, volume</string>
+      <string>2,&quot;%smto/issues/mto\.[0-9]+\.[0-9]+\.[0-9]+/.*&quot;, base_url</string>
+      <string>2,&quot;%smto/issues/issues\.html&quot;, base_url</string>
+      <string>1,&quot;%smto/issues/.*&quot;, base_url</string>
+      <string>1,&quot;%smto/gifs/.*&quot;, base_url</string>
+      <string>2,&quot;%smto/index\.html&quot;, base_url</string>
+      <string>2,&quot;%smto/docs/.*&quot;, base_url</string>
+      <string>2,&quot;%ssmt-list/.*&quot;, base_url</string>
+      <string>2,&quot;%scgi-bin/.*&quot;, base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%smto/lockss/index%d.html&quot;, base_url, year</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>
