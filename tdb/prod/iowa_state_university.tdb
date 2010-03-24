@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Iowa State University
   >
@@ -10,7 +11,6 @@
     >  
   
     rights = openaccess
-
     plugin = org.lockss.plugin.clogic.CulturalLogicPlugin
     implicit < status ; name ; param[year] >
   
@@ -18,7 +18,7 @@
     
       param[base_url] = http://eserver.org/clogic/
       
-      au < superseded ; Cultural Logic 2003 ; 2003 >
+      au < superseded ; Cultural Logic 2003 [superseded] ; 2003 >
       
     }
     
@@ -26,6 +26,10 @@
     
       param[base_url] = http://clogic.eserver.org/
 
+      au < released ; Cultural Logic Volume 1 ; 0001 >
+      au < released ; Cultural Logic Volume 2 ; 0002 >
+      au < released ; Cultural Logic Volume 3 ; 0003 >
+      au < released ; Cultural Logic Volume 4 ; 0004 >
       au < released ; Cultural Logic 2002 ; 2002 >
       au < released ; Cultural Logic 2003 ; 2003 >
       au < released ; Cultural Logic 2004 ; 2004 >
@@ -44,7 +48,6 @@
     > 
 
     rights = openaccess
-  
     plugin = org.lockss.plugin.emc.EarlyModernCulturePlugin
     implicit < status ; name ; param[volume] >
     param[base_url] = http://emc.eserver.org/

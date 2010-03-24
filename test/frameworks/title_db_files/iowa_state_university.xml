@@ -48,10 +48,10 @@
  
  <property name="org.lockss.title">
 
-  <property name="CulturalLogic2003">
+  <property name="CulturalLogic2003superseded">
    <property name="attributes.publisher" value="Iowa State University" />
    <property name="journalTitle" value="Cultural Logic" />
-   <property name="title" value="Cultural Logic 2003" />
+   <property name="title" value="Cultural Logic 2003 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -64,6 +64,70 @@
    <property name="param.99">
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CulturalLogic1">
+   <property name="attributes.publisher" value="Iowa State University" />
+   <property name="journalTitle" value="Cultural Logic" />
+   <property name="title" value="Cultural Logic Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clogic.eserver.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="0001" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CulturalLogic2">
+   <property name="attributes.publisher" value="Iowa State University" />
+   <property name="journalTitle" value="Cultural Logic" />
+   <property name="title" value="Cultural Logic Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clogic.eserver.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="0002" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CulturalLogic3">
+   <property name="attributes.publisher" value="Iowa State University" />
+   <property name="journalTitle" value="Cultural Logic" />
+   <property name="title" value="Cultural Logic Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clogic.eserver.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="0003" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CulturalLogic4">
+   <property name="attributes.publisher" value="Iowa State University" />
+   <property name="journalTitle" value="Cultural Logic" />
+   <property name="title" value="Cultural Logic Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clogic.eserver.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="0004" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -144,6 +208,22 @@
    <property name="param.2">
     <property name="key" value="year" />
     <property name="value" value="2006" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CulturalLogic2007">
+   <property name="attributes.publisher" value="Iowa State University" />
+   <property name="journalTitle" value="Cultural Logic" />
+   <property name="title" value="Cultural Logic 2007" />
+   <property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clogic.eserver.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
