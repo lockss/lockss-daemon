@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.85 2010-02-04 06:53:35 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86 2010-03-25 07:34:58 tlipkis Exp $
  */
 
 /*
@@ -943,7 +943,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return curOutputStream;
     } catch (FileNotFoundException fnfe) {
       try {
-        logger.error("No new version file for "+tempCacheFile.getPath()+".");
+        logger.error("No new version file for "+tempCacheFile.getPath()+".",
+		     fnfe);
         throw new LockssRepository.RepositoryStateException("Couldn't load new outputstream.");
       } finally {
         abandonNewVersion();
