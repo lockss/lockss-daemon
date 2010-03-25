@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStoreManager.java,v 1.5 2010-03-14 08:08:20 tlipkis Exp $
+ * $Id: LockssKeyStoreManager.java,v 1.5.2.1 2010-03-25 07:31:30 tlipkis Exp $
  */
 
 /*
@@ -233,8 +233,7 @@ public class LockssKeyStoreManager
     lk.setType(config.get(KEYSTORE_PARAM_TYPE, defaultKeyStoreType));
     lk.setProvider(config.get(KEYSTORE_PARAM_PROVIDER,
 			      defaultKeyStoreProvider));
-    lk.setPassword(config.get(KEYSTORE_PARAM_PASSWORD,
-			      ConfigManager.getPlatformHostname()));
+    lk.setPassword(config.get(KEYSTORE_PARAM_PASSWORD));
     lk.setKeyPassword(config.get(KEYSTORE_PARAM_KEY_PASSWORD));
     lk.setKeyPasswordFile(config.get(KEYSTORE_PARAM_KEY_PASSWORD_FILE));
     lk.setMayCreate(config.getBoolean(KEYSTORE_PARAM_CREATE, DEFAULT_CREATE));

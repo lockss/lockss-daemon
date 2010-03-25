@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.6 2010-03-14 08:08:20 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.6.2.1 2010-03-25 07:31:30 tlipkis Exp $
  */
 
 /*
@@ -161,7 +161,8 @@ public class LockssKeyStore {
     if (loaded) {
       return;
     }
-    check();
+    if (StringUtil.isNullString(location))
+      throw new NullPointerException("location must be a non-null string");
     try {
       if (keyPassword == null && keyPasswordFile != null) {
 	keyPassword = readPasswdFile();
@@ -184,19 +185,6 @@ public class LockssKeyStore {
       log.error("Error loading keystore: " + name, e);
       throw new UnavailableKeyStoreException(e);
     }
-  }
-
-  // check for required params
-  void check() {
-    if (StringUtil.isNullString(location))
-      throw new NullPointerException("location must be a non-null string");
-    if (StringUtil.isNullString(password))
-      throw new NullPointerException("password must be a non-null string");
-    // This is ok for keystores with just public certs
-//     if (StringUtil.isNullString(keyPassword)
-// 	&& StringUtil.isNullString(keyPasswordFile))
-//       throw new NullPointerException("keyPassword or keyPasswordFile must be"
-// 				     + " a non-null string");
   }
 
   /** Read password from file, then overwrite and delete file */
@@ -280,6 +268,10 @@ public class LockssKeyStore {
 	     NoSuchAlgorithmException,
 	     NoSuchProviderException,
 	     CertificateException {
+    char[] passchar = null;
+    if (!StringUtil.isNullString(password)) {
+      passchar = password.toCharArray();
+    }
     InputStream ins = null;
     try {
       KeyStore ks;
@@ -289,7 +281,7 @@ public class LockssKeyStore {
 	ks = KeyStore.getInstance(getType(), getProvider());
       }
       ins = getInputStream();
-      ks.load(ins, password.toCharArray());
+      ks.load(ins, passchar);
       keystore = ks;
     } finally {
       IOUtil.safeClose(ins);

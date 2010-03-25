@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.5 2010-03-16 00:42:52 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.5.2.1 2010-03-25 07:31:30 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,12 @@ public class TestLockssKeyStore extends LockssTestCase {
     lk.load();
     assertNotNull(lk.getKeyManagerFactory());
     assertNotNull(lk.getTrustManagerFactory());
+
+    LockssKeyStore lk2 = createFromProp("lkone", file.toString(),
+					null, "pass42");
+    lk2.load();
+    assertNotNull(lk2.getKeyManagerFactory());
+    assertNotNull(lk2.getTrustManagerFactory());
   }
 
   public void testFromFile() throws Exception {
@@ -199,6 +205,14 @@ public class TestLockssKeyStore extends LockssTestCase {
     assertFalse(passfile.exists());
     assertNotNull(lk.getKeyManagerFactory());
     assertNotNull(lk.getTrustManagerFactory());
+
+    FileTestUtil.writeFile(passfile, pwd);
+    LockssKeyStore lk2 = createFromFile("lkone", file.toString(),
+					null, passfile.toString());
+    lk2.load();
+    assertFalse(passfile.exists());
+    assertNotNull(lk2.getKeyManagerFactory());
+    assertNotNull(lk2.getTrustManagerFactory());
   }
 
   public void testCreate() throws Exception {
@@ -226,6 +240,22 @@ public class TestLockssKeyStore extends LockssTestCase {
   public void testFromResource() throws Exception {
     String res = "org/lockss/test/public.keystore";
     LockssKeyStore lk = createFromResource("lkone", res, "f00bar", null);
+    lk.load();
+    try {
+      lk.getKeyManagerFactory();
+      fail("Attempt to get KeyManagerFactory when no key password should fail");
+    } catch (IllegalStateException e) {
+    }
+    assertNotNull(lk.getTrustManagerFactory());
+    Collection aliases =
+      ListUtil.fromIterator(new EnumerationIterator(lk.getKeyStore().aliases()));
+    assertSameElements(SetUtil.set("expired", "goodguy", "future", "good"),
+		       aliases);
+  }
+
+  public void testFromResourceNoPassword() throws Exception {
+    String res = "org/lockss/test/public.keystore";
+    LockssKeyStore lk = createFromResource("lkone", res, "", null);
     lk.load();
     try {
       lk.getKeyManagerFactory();
