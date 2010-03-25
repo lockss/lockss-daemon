@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.90 2010-03-09 00:49:11 thib_gc Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.90.2.1 2010-03-25 07:32:36 tlipkis Exp $
  */
 
 /*
@@ -818,6 +818,12 @@ public class ArchivalUnitStatus
 	res.add(new StatusTable.SummaryInfo("Publishing Platform",
 					    ColumnDescriptor.TYPE_STRING,
 					    plat));
+      }
+      String pub = AuUtil.getTitleAttribute(au, "publisher");
+      if (pub != null) {
+	res.add(new StatusTable.SummaryInfo("Publisher",
+					    ColumnDescriptor.TYPE_STRING,
+					    pub));
       }
       res.add(new StatusTable.SummaryInfo("Available From Publisher",
 					  ColumnDescriptor.TYPE_STRING,
