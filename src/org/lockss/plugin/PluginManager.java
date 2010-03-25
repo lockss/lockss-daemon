@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.205 2010-03-17 01:50:27 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.205.2.1 2010-03-25 07:31:50 tlipkis Exp $
  */
 
 /*
@@ -148,6 +148,13 @@ public class PluginManager
   public static final long DEFAULT_PLUGIN_LOAD_TIMEOUT =
     Constants.MINUTE;
 
+  /** Disable the automatic caching in URLConnection.  Setting this true
+   * will prevent open file descriptors from piling up each time a new
+   * version of a plugin is loaded, but may impact performance. */
+  public static final String PARAM_DISABLE_URL_CONNECTION_CACHE =
+    PREFIX + "disableURLConnectionCache";
+  public static final boolean DEFAULT_DISABLE_URL_CONNECTION_CACHE = false;
+
   /** If true, when a new version of an existing plugin is loaded, all its
    * AUs will be restarted. */
   public static final String PARAM_RESTART_AUS_WITH_NEW_PLUGIN =
@@ -264,6 +271,8 @@ public class PluginManager
   private boolean paramRestartAus = DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN;
   private long paramAuRestartMaxSleep = DEFAULT_AU_RESTART_MAX_SLEEP;
   private long paramPerAuRestartSleep = DEFAULT_PER_AU_RESTART_SLEEP;
+  private boolean paramDisableURLConnectionCache =
+    DEFAULT_DISABLE_URL_CONNECTION_CACHE;
   private boolean acceptExpiredCertificates = DEFAULT_ACCEPT_EXPIRED_CERTS;
 
   private Map titleMap = null;
@@ -295,14 +304,23 @@ public class PluginManager
     initPluginDir();
     PluginStatus.register(getDaemon(), this);
     
-    // Hack to turn off JarFile cache, to experiment with ways to get file
-    // dexscriptors to be closed after plugin Classloader is freed
-//     try {
-//       URLConnection foo = new URL("http://example.com/").openConnection();
-//       foo.setDefaultUseCaches(false);
-//     } catch (IOException e) {
-//       log.warning("Couldn't turn off URLConnection caching", e);
-//     }
+    if (paramDisableURLConnectionCache) {
+      // Up through Java 1.6, even after a ClassLoader is freed, and even
+      // if its JarFile is explicitly closed first, the JarFile remains
+      // open, using a file descriptor.  This causes open files to
+      // accumulate as new versions of plugins are loaded, possibly
+      // eventually leading to Too many open files.  Disabling the JarFile
+      // cache prevents this from happening.
+      try {
+	// setDefaultUseCaches() is improperly an instance method, so need to
+	// create an instance
+	URLConnection foo = new URL("http://example.com/").openConnection();
+	log.debug("Disabling URLConnection cache");
+	foo.setDefaultUseCaches(false);
+      } catch (IOException e) {
+	log.warning("Couldn't disable URLConnection cache", e);
+      }
+    }
   }
 
   /**
@@ -376,6 +394,10 @@ public class PluginManager
 
       preferLoadablePlugin = config.getBoolean(PARAM_PREFER_LOADABLE_PLUGIN,
 					       DEFAULT_PREFER_LOADABLE_PLUGIN);
+
+      paramDisableURLConnectionCache =
+	config.getBoolean(PARAM_DISABLE_URL_CONNECTION_CACHE,
+			  DEFAULT_DISABLE_URL_CONNECTION_CACHE);
 
       acceptExpiredCertificates =
 	config.getBoolean(PARAM_ACCEPT_EXPIRED_CERTS,
