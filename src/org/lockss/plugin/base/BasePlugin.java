@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.64 2010-03-14 18:33:47 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.64.2.1 2010-03-25 07:32:10 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,13 @@ public abstract class BasePlugin
       return;
     }
     theDaemon.getConfigManager().unregisterConfigurationCallback(configCb);
+    if (classLoader instanceof LoadablePluginClassLoader) {
+      LoadablePluginClassLoader lploader =
+	(LoadablePluginClassLoader)classLoader;
+      if (lploader != null) {
+	lploader.close();
+      }
+    }
     classLoader = null;
   }
 
