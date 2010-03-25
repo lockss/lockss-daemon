@@ -1066,7 +1066,7 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = neuro
 
-    au < testing ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
+    au < ready ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
     au < released ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
     au < testing ; 2010 ; Nature Neuroscience Volume 13 ; 2010 ; 13 >
 
@@ -1208,7 +1208,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrg
 
-    au < testing ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
+    au < ready ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
     au < testing ; 2010 ; Nature Reviews Genetics Volume 11 ; 2010 ; 11 >
 
@@ -1264,7 +1264,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrneph
 
-    au < testing ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
+    au < ready ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
     au < ready ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
     au < testing ; 2010 ; Nature Reviews Nephrology Volume 6 ; 2010 ; 6 >
 
