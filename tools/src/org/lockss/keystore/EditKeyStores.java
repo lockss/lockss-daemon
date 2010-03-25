@@ -1,5 +1,5 @@
 /*
- * $Id: EditKeyStores.java,v 1.5 2010-03-14 08:09:45 tlipkis Exp $
+ * $Id: EditKeyStores.java,v 1.5.2.1 2010-03-25 07:33:05 tlipkis Exp $
  */
 
 /*
@@ -149,7 +149,7 @@ public class EditKeyStores {
       SecureRandom rng = tflag ? testOnlySecureRandom : getSecureRandom();
       if (pubFile != null) {
 	if (StringUtil.isNullString(pubPass)) {
-	  log.info("No public keystore supplied, using \"password\"");
+	  log.info("No public keystore password supplied, using \"password\"");
 	  pubPass = "password";
 	}
 	KeyStoreUtil.createSharedPLNKeyStores(outDirFile, hostlist,
