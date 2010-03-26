@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = Natural Areas Association
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Natural Areas Journal ;
+    >
+    
+    param[journal_code] = naar
+  
+    au < exists ; Natural Areas Journal Volume 26 ; 26 >
+    au < exists ; Natural Areas Journal Volume 27 ; 27 >
+    au < exists ; Natural Areas Journal Volume 28 ; 28 >
+    au < exists ; Natural Areas Journal Volume 29 ; 29 >
+    au < exists ; Natural Areas Journal Volume 30 ; 30 >
+
+  }
+  
+}

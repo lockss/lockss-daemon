@@ -14,10 +14,10 @@
 
     param[journal_dir] = le_mouvement_social
 
-    au < manifest ; Le Mouvement Social Numéro 226 ; 226 >
-    au < manifest ; Le Mouvement Social Numéro 227 ; 227 >
-    au < manifest ; Le Mouvement Social Numéro 228 ; 228 >
-    au < manifest ; Le Mouvement Social Numéro 229 ; 229 >
+    au < ready ; Le Mouvement Social Numéro 226 ; 226 >
+    au < ready ; Le Mouvement Social Numéro 227 ; 227 >
+    au < ready ; Le Mouvement Social Numéro 228 ; 228 >
+    au < ready ; Le Mouvement Social Numéro 229 ; 229 >
 
   }
 

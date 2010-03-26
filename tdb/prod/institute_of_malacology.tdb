@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Institute of Malacology
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Malacologia ;
+    >
+    
+    param[journal_code] = mala
+  
+    au < exists ; Malacologia Volume 49 ; 49 >
+    au < exists ; Malacologia Volume 51 ; 51 >
+    au < exists ; Malacologia Volume 50 ; 50 >
+
+  }
+  
+}

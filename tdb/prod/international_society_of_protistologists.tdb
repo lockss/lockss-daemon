@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = International Society of Protistologists
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = The Journal of Eukaryotic Microbiology ;
+    >
+    
+    param[journal_code] = eumi
+  
+    au < exists ; The Journal of Eukaryotic Microbiology Volume 47 ; 47 >
+    au < exists ; The Journal of Eukaryotic Microbiology Volume 48 ; 48 >
+    au < exists ; The Journal of Eukaryotic Microbiology Volume 49 ; 49 >
+    au < exists ; The Journal of Eukaryotic Microbiology Volume 50 ; 50 >
+    au < exists ; The Journal of Eukaryotic Microbiology Volume 51 ; 51 >
+
+  }
+  
+}

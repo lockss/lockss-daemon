@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = American Fisheries Society
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science ;
+    >
+    
+    param[journal_code] = fidm
+  
+    au < exists ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 1 ; 1 >
+    au < exists ; Marine and Coastal Fisheries: Dynamics, Management, and Ecosystem Science Volume 2 ; 2 >
+
+  }
+  
+}

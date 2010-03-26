@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Southern African Wildlife Management Association
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = South African Journal of Wildlife Research ;
+    >
+    
+    param[journal_code] = sawr
+  
+    au < exists ; South African Journal of Wildlife Research Volume 37 ; 37 >
+    au < exists ; South African Journal of Wildlife Research Volume 38 ; 38 >
+    au < exists ; South African Journal of Wildlife Research Volume 39 ; 39 >
+
+  }
+  
+}

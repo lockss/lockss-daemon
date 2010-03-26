@@ -175,6 +175,20 @@
   }
 
   {
+
+    title <
+      name = Bookbird: A Journal of International Children's Literature
+    >
+
+    param[journal_dir] = bookbird
+
+    au < manifest ; Bookbird: A Journal of International Children's Literature Volume 46 ; 46 >
+    au < manifest ; Bookbird: A Journal of International Children's Literature Volume 47 ; 47 >
+    au < manifest ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
+
+  }
+
+  {
     title <
       name = Bulletin of the Center for Children's Books 
     >
@@ -278,7 +292,7 @@
     au < ready ; Children's Literature Volume 17 ; 17 >
     au < ready ; Children's Literature Volume 18 ; 18 >
     au < ready ; Children's Literature Volume 19 ; 19 >
-    au < testing ; Children's Literature Volume 20 ; 20 >
+    au < ready ; Children's Literature Volume 20 ; 20 >
     au < ready ; Children's Literature Volume 21 ; 21 >
     au < ready ; Children's Literature Volume 22 ; 22 >
     au < ready ; Children's Literature Volume 23 ; 23 >
@@ -309,8 +323,8 @@
     au < released ; Children's Literature Association Quarterly Volume 30 ; 30 >
     au < released ; Children's Literature Association Quarterly Volume 31 ; 31 >
     au < released ; Children's Literature Association Quarterly Volume 32 ; 32 >
-    au < testing ; Children's Literature Association Quarterly Volume 33 ; 33 >
-    au < testing ; Children's Literature Association Quarterly Volume 34 ; 34 >
+    au < ready ; Children's Literature Association Quarterly Volume 33 ; 33 >
+    au < ready ; Children's Literature Association Quarterly Volume 34 ; 34 >
 
   }
 
@@ -428,6 +442,45 @@
 
   }
 
+  {
+
+    title <
+      name = Hispania
+    >
+
+    param[journal_dir] = hispania
+    
+    au < manifest ; Hispania Volume 93 ; 93 >
+
+  }
+
+  {
+
+    title <
+      name = Historically Speaking
+    >
+
+    param[journal_dir] = historically_speaking
+    
+    au < manifest ; Historically Speaking Volume 10 ; 10 >
+    au < manifest ; Historically Speaking Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = The Hopkins Review
+    >
+
+    param[journal_dir] = the_hopkins_review
+    
+    au < manifest ; The Hopkins Review Volume 1 ; 1 >
+    au < manifest ; The Hopkins Review Volume 2 ; 2 >
+    au < manifest ; The Hopkins Review Volume 3 ; 3 >
+
+  }
+  
   {
     title <
       name = Human Rights Quarterly 
@@ -576,6 +629,19 @@
   }
 
   {
+
+    title <
+      name = Journal of Late Antiquity
+    >
+
+    param[journal_dir] = journal_of_late_antiquity
+    
+    au < manifest ; Journal of Late Antiquity Volume 1 ; 1 >
+    au < manifest ; Journal of Late Antiquity Volume 2 ; 2 >
+
+  }
+
+  {
     title <
       name = Journal of Modern Greek Studies 
     >
@@ -595,6 +661,20 @@
     au < released ; Journal of Modern Greek Studies Volume 24 ; 24 >
     au < manifest ; Journal of Modern Greek Studies Volume 25 ; 25 >
     au < manifest ; Journal of Modern Greek Studies Volume 26 ; 26 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of the History of Childhood and Youth
+    >
+
+    param[journal_dir] = journal_of_the_history_of_youth_and_childhood
+    
+    au < manifest ; The Journal of the History of Childhood and Youth Volume 1 ; 1 >
+    au < manifest ; The Journal of the History of Childhood and Youth Volume 2 ; 2 >
+    au < manifest ; The Journal of the History of Childhood and Youth Volume 3 ; 3 >
 
   }
 
@@ -848,6 +928,27 @@
 
   }
 
+  {
+    title <
+      name = NWSA Journal
+    >
+
+    param[journal_dir] = nwsa_journal
+
+    au < manifest ; NWSA Journal Volume 11 ; 11 >
+    au < manifest ; NWSA Journal Volume 12 ; 12 >
+    au < manifest ; NWSA Journal Volume 13 ; 13 >
+    au < manifest ; NWSA Journal Volume 14 ; 14 >
+    au < manifest ; NWSA Journal Volume 15 ; 15 >
+    au < manifest ; NWSA Journal Volume 16 ; 16 >
+    au < manifest ; NWSA Journal Volume 17 ; 17 >
+    au < manifest ; NWSA Journal Volume 18 ; 18 >
+    au < manifest ; NWSA Journal Volume 19 ; 19 >
+    au < manifest ; NWSA Journal Volume 20 ; 20 >
+    au < manifest ; NWSA Journal Volume 21 ; 21 >
+
+  }
+  
   {
     title <
       name = Partial Answers: Journal of Literature and the History of Ideas 
@@ -1150,6 +1251,20 @@
 
   {
     title <
+      name = Studies in Eighteenth Century Culture
+    >
+
+    param[journal_dir] = studies_in_eighteenth_century_culture
+
+    au < manifest ; Studies in Eighteenth Century Culture Volume 36 ; 36 >
+    au < manifest ; Studies in Eighteenth Century Culture Volume 37 ; 37 >
+    au < manifest ; Studies in Eighteenth Century Culture Volume 38 ; 38 >
+    au < manifest ; Studies in Eighteenth Century Culture Volume 39 ; 39 >
+
+  }
+  
+  {
+    title <
       name = Technology and Culture 
     >
 
@@ -1370,7 +1485,22 @@
     au < manifest ; Transactions of the American Philological Association Volume 138 ; 138 >
 
   }
+  
+  {
+    title <
+      name = Victorian Periodicals Review
+    >
 
+    param[journal_dir] = victorian_periodicals_review
+
+    au < manifest ; Victorian Periodicals Review Volume 38 ; 38 >
+    au < manifest ; Victorian Periodicals Review Volume 39 ; 39 >
+    au < manifest ; Victorian Periodicals Review Volume 40 ; 40 >
+    au < manifest ; Victorian Periodicals Review Volume 41 ; 41 >
+    au < manifest ; Victorian Periodicals Review Volume 42 ; 42 >
+
+  }
+  
   {
     title <
       name = Wide Angle 

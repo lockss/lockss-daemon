@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Society for Vector Ecology
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Journal of Vector Ecology ;
+    >
+    
+    param[journal_code] = jvec
+  
+    au < exists ; Journal of Vector Ecology Volume 31 ; 31 >
+    au < exists ; Journal of Vector Ecology Volume 32 ; 32 >
+    au < exists ; Journal of Vector Ecology Volume 33 ; 33 >
+    au < exists ; Journal of Vector Ecology Volume 34 ; 34 >
+
+  }
+  
+}

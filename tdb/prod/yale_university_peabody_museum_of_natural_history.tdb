@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Yale University Peabody Museum of Natural History
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Bulletin of the Peabody Museum of Natural History ;
+    >
+    
+    param[journal_code] = pbmb
+  
+    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 47 ; 47 >
+    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 48 ; 48 >
+    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 49 ; 49 >
+    au < exists ; Bulletin of the Peabody Museum of Natural History Volume 50 ; 50 >
+
+  }
+  
+}

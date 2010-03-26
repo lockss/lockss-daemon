@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Entomological Society of Southern Africa
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = African Entomology ;
+    >
+    
+    param[journal_code] = afen
+  
+    au < exists ; African Entomology Volume 15 ; 15 >
+    au < exists ; African Entomology Volume 16 ; 16 >
+    au < exists ; African Entomology Volume 17 ; 17 >
+
+  }
+  
+}

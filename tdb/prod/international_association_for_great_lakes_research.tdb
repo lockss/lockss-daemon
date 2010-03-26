@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = International Association for Great Lakes Research
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Journal of Great Lakes Research ;
+    >
+    
+    param[journal_code] = jglr
+  
+    au < exists ; Journal of Great Lakes Research Volume 32 ; 32 >
+    au < exists ; Journal of Great Lakes Research Volume 33 ; 33 >
+    au < exists ; Journal of Great Lakes Research Volume 34 ; 34 >
+    au < exists ; Journal of Great Lakes Research Volume 35 ; 35 >
+    au < exists ; Journal of Great Lakes Research Volume 36 ; 36 >
+
+  }
+  
+}

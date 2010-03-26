@@ -1,0 +1,22 @@
+{
+  publisher <
+    name = Middle East Institute
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = The Middle East Journal
+    >
+
+    param[journal_dir] = the_middle_east_journal
+
+    au < manifest ; The Middle East Journal Volume 63 ; 63 >
+    au < manifest ; The Middle East Journal Volume 64 ; 64 >
+
+  }
+  
+}

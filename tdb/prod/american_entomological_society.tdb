@@ -1,0 +1,39 @@
+{
+
+  publisher <
+    name = The American Entomological Society
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Entomological News ;
+    >
+    
+    param[journal_code] = entn
+  
+    au < exists ; Entomological News Volume 117 ; 117 >
+    au < exists ; Entomological News Volume 118 ; 118 >
+    au < exists ; Entomological News Volume 119 ; 119 >
+    au < exists ; Entomological News Volume 120 ; 120 >
+
+  }
+
+  {
+    title <
+      name = Transactions of the American Entomological Society ;
+    >
+    
+    param[journal_code] = taes
+  
+    au < exists ; Transactions of the American Entomological Society Volume 132 ; 132 >
+    au < exists ; Transactions of the American Entomological Society Volume 133 ; 133 >
+    au < exists ; Transactions of the American Entomological Society Volume 134 ; 134 >
+    au < exists ; Transactions of the American Entomological Society Volume 135 ; 135 >
+
+  }
+  
+}

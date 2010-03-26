@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = South Carolina Entomological Society
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Journal of Agricultural and Urban Entomology ;
+    >
+    
+    param[journal_code] = jaue
+  
+    au < exists ; Journal of Agricultural and Urban Entomology Volume 24 ; 24 >
+    au < exists ; Journal of Agricultural and Urban Entomology Volume 25 ; 25 >
+
+  }
+  
+}

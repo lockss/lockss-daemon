@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Entomological Society of Canada
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = The Canadian Entomologist full access ;
+    >
+    
+    param[journal_code] = cent
+  
+    au < exists ; The Canadian Entomologist Volume 139 ; 139 >
+    au < exists ; The Canadian Entomologist Volume 140 ; 140 >
+    au < exists ; The Canadian Entomologist Volume 141 ; 141 >
+    au < exists ; The Canadian Entomologist Volume 142 ; 142 >
+
+  }
+  
+}

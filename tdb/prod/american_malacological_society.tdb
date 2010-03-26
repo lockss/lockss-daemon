@@ -1,0 +1,28 @@
+{
+
+  publisher <
+    name = American Malacological Society
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = American Malacological Bulletin ;
+    >
+    
+    param[journal_code] = malb
+  
+    au < exists ; American Malacological Bulletin Volume 22 ; 22 >
+    au < exists ; American Malacological Bulletin Volume 23 ; 23 >
+    au < exists ; American Malacological Bulletin Volume 24 ; 24 >
+    au < exists ; American Malacological Bulletin Volume 25 ; 25 >
+    au < exists ; American Malacological Bulletin Volume 26 ; 26 >
+    au < exists ; American Malacological Bulletin Volume 27 ; 27 >
+    au < exists ; American Malacological Bulletin Volume 28 ; 28 >
+
+  }
+  
+}

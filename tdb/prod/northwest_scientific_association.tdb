@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Northwest Scientific Association
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Northwest Science ;
+    >
+    
+    param[journal_code] = nwsc
+  
+    au < exists ; Northwest Science Volume 81 ; 81 >
+    au < exists ; Northwest Science Volume 82 ; 82 >
+    au < exists ; Northwest Science Volume 83 ; 83 >
+    au < exists ; Northwest Science Volume 84 ; 84 >
+
+  }
+  
+}

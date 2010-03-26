@@ -1,0 +1,24 @@
+{
+
+  publisher <
+    name = Pacific Coast Entomological Society
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Pan-Pacific Entomologist ;
+    >
+    
+    param[journal_code] = panp
+  
+    au < exists ; Pan-Pacific Entomologist Volume 83 ; 83 >
+    au < exists ; Pan-Pacific Entomologist Volume 84 ; 84 >
+    au < exists ; Pan-Pacific Entomologist Volume 85 ; 85 >
+
+  }
+  
+}

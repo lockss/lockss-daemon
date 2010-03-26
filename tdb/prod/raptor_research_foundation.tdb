@@ -1,0 +1,26 @@
+{
+
+  publisher <
+    name = The Raptor Research Foundation
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Journal of Raptor Research ;
+    >
+    
+    param[journal_code] = rapt
+  
+    au < exists ; Journal of Raptor Research Volume 40 ; 40 >
+    au < exists ; Journal of Raptor Research Volume 41 ; 41 >
+    au < exists ; Journal of Raptor Research Volume 42 ; 42 >
+    au < exists ; Journal of Raptor Research Volume 43 ; 43 >
+    au < exists ; Journal of Raptor Research Volume 44 ; 44 >
+
+  }
+  
+}

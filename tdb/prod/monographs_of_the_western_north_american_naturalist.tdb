@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Brigham Young University Monte L. Bean Life Science Museum
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Monographs of the Western North American Naturalist ;
+    >
+    
+    param[journal_code] = mwna
+  
+    au < exists ; Monographs of the Western North American Naturalist Volume 1 ; 1 >
+    au < exists ; Monographs of the Western North American Naturalist Volume 2 ; 2 >
+    au < exists ; Monographs of the Western North American Naturalist Volume 3 ; 3 >
+    au < exists ; Monographs of the Western North American Naturalist Volume 4 ; 4 >
+
+  }
+  
+}

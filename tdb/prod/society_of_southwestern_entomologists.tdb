@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Society of Southwestern Entomologists
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Southwestern Entomologist ;
+    >
+    
+    param[journal_code] = swen
+  
+    au < exists ; Southwestern Entomologist Volume 32 ; 32 >
+    au < exists ; Southwestern Entomologist Volume 33 ; 33 >
+    au < exists ; Southwestern Entomologist Volume 34 ; 34 >
+    au < exists ; Southwestern Entomologist Volume 35 ; 35 >
+
+  }
+  
+}

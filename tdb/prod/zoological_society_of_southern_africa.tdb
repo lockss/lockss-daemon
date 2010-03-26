@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Zoological Society of Southern Africa
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = African Zoology ;
+    >
+    
+    param[journal_code] = afzo
+  
+    au < exists ; African Zoology Volume 41 ; 41 >
+    au < exists ; African Zoology Volume 42 ; 42 >
+    au < exists ; African Zoology Volume 43 ; 43 >
+    au < exists ; African Zoology Volume 44 ; 44 >
+
+  }
+  
+}

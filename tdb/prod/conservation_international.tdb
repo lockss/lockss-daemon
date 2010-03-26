@@ -1,0 +1,65 @@
+{
+
+  publisher <
+    name = Conservation International
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Advances in Applied Biodiversity Science ;
+    >
+    
+    param[journal_code] = aabs
+  
+    au < exists ; Advances in Applied Biodiversity Science 2003 ; 2003 >
+    au < exists ; Advances in Applied Biodiversity Science 2004 ; 2004 >
+    au < exists ; Advances in Applied Biodiversity Science 2007 ; 2007 >
+
+  }
+
+  {
+    title <
+      name = Edentata ;
+    >
+    
+    param[journal_code] = eden
+  
+    au < exists ; Edentata 2004 ; 2004 >
+    au < exists ; Edentata 2006 ; 2006 >
+    au < exists ; Edentata 2007 ; 2007 >
+
+  }
+  
+  {
+    title <
+      name = Neotropical Primates ;
+    >
+    
+    param[journal_code] = nepr
+  
+    au < exists ; Neotropical Primates 2004 ; 2004 >
+    au < exists ; Neotropical Primates 2005 ; 2005 >
+    au < exists ; Neotropical Primates 2007 ; 2007 >
+    au < exists ; Neotropical Primates 2008 ; 2008 >
+    au < exists ; Neotropical Primates 2009 ; 2009 >
+
+  }
+  
+  {
+    title <
+      name = Primate Conservation ;
+    >
+    
+    param[journal_code] = prco
+  
+    au < exists ; Primate Conservation 2006 ; 2006 >
+    au < exists ; Primate Conservation 2007 ; 2007 >
+    au < exists ; Primate Conservation 2008 ; 2008 >
+
+  }
+  
+}
