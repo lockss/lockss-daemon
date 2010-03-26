@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.6.2.1 2010-03-25 07:31:30 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.6.2.2 2010-03-26 01:01:48 tlipkis Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class LockssKeyStore {
 
   void setMayCreate(boolean val) {
     if (val && ltype != LocationType.File) {
-      throw new IllegalStateException("Only KeyStore's of type File can be created");
+      throw new IllegalStateException("Only KeyStores of type File can be created");
     }
     mayCreate = val;
   }
@@ -239,7 +239,20 @@ public class LockssKeyStore {
 	     SignatureException,
 	     UnrecoverableKeyException {
     log.info("Creating keystore: " + location);
+    if (StringUtil.isNullString(keyPassword)) {
+      throw new NullPointerException("keyPassword must be non-null string");
+    }					       
     String fqdn = ConfigManager.getPlatformHostname();
+    if (StringUtil.isNullString(password)) {
+      // keystore password is required when creating keys.  If none
+      // supplied, use machine's fqdn, or "unknown" if unknown.
+      if (StringUtil.isNullString(fqdn)) {
+	password = "password";
+      } else {
+	password = fqdn;
+      }
+    }
+    // fqdn is X500 common name, and base for keystore entry aliases.
     if (StringUtil.isNullString(fqdn)) {
       fqdn = "unknown";
     }

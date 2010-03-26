@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.5.2.1 2010-03-25 07:31:30 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.5.2.2 2010-03-26 01:01:47 tlipkis Exp $
  */
 
 /*
@@ -235,6 +235,66 @@ public class TestLockssKeyStore extends LockssTestCase {
     Collection aliases =
       ListUtil.fromIterator(new EnumerationIterator(lk2.getKeyStore().aliases()));
     assertSameElements(SetUtil.set("fq.dn.key", "fq.dn.cert"), aliases);
+  }
+
+  public void testCreateWithNullPasswd() throws Exception {
+    File tmpDir = getTempDir("kstmp");
+    File file = new File(tmpDir, "ks1");
+    assertFalse(file.exists());
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_FQDN, "fq.dn");
+    LockssKeyStore lk = createFromProp("lkone", file.toString(),
+				       null, "pass42");
+    lk.setMayCreate(true);
+    assertFalse(file.exists());
+    lk.load();
+    assertTrue(file.exists());
+    assertNotNull(lk.getKeyManagerFactory());
+    assertNotNull(lk.getTrustManagerFactory());
+
+    LockssKeyStore lk2 = createFromProp("lktwo", file.toString(),
+					"fq.dn", "pass42");
+    lk2.load();
+    Collection aliases =
+      ListUtil.fromIterator(new EnumerationIterator(lk2.getKeyStore().aliases()));
+    assertSameElements(SetUtil.set("fq.dn.key", "fq.dn.cert"), aliases);
+  }
+
+  public void testCreateWithNullPasswdNoFqdn() throws Exception {
+    File tmpDir = getTempDir("kstmp");
+    File file = new File(tmpDir, "ks1");
+    assertFalse(file.exists());
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_FQDN, "");
+    LockssKeyStore lk = createFromProp("lkone", file.toString(),
+				       null, "pass42");
+    lk.setMayCreate(true);
+    assertFalse(file.exists());
+    lk.load();
+    assertTrue(file.exists());
+    assertNotNull(lk.getKeyManagerFactory());
+    assertNotNull(lk.getTrustManagerFactory());
+
+    LockssKeyStore lk2 = createFromProp("lktwo", file.toString(),
+					"password", "pass42");
+    lk2.load();
+    Collection aliases =
+      ListUtil.fromIterator(new EnumerationIterator(lk2.getKeyStore().aliases()));
+    assertSameElements(SetUtil.set("unknown.key", "unknown.cert"), aliases);
+  }
+
+  public void testCreateWithNullKeyPasswd() throws Exception {
+    File tmpDir = getTempDir("kstmp");
+    File file = new File(tmpDir, "ks1");
+    assertFalse(file.exists());
+    ConfigurationUtil.addFromArgs(ConfigManager.PARAM_PLATFORM_FQDN, "fq.dn");
+    LockssKeyStore lk = createFromProp("lkone", file.toString(),
+				       PASSWD, null);
+    lk.setMayCreate(true);
+    assertFalse(file.exists());
+    try {
+      lk.load();
+      fail("Null key password should have thrown UnavailableKeyStoreException");
+    } catch (LockssKeyStore.UnavailableKeyStoreException e) {
+    }
   }
 
   public void testFromResource() throws Exception {
