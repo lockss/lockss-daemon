@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;BioMed Central Plugin, Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
+    <string>&quot;BioMed Central Plugin (BMC Journals, Chemistry Central), Base URL %s, ISSN %s, Volume %s&quot;, base_url, journal_issn, volume_name</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>BioMed Central Plugin</string>
+    <string>BioMed Central Plugin (BMC Journals, Chemistry Central)</string>
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
