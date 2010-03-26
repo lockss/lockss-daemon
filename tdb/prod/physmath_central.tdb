@@ -1,0 +1,58 @@
+{
+
+  publisher <
+    name = PhysMath Central
+  >
+
+  rights = openaccess
+  plugin = org.lockss.plugin.bmc.BMCPlugin
+  param[base_url] = http://www.physmathcentral.com/
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title <
+      name = PMC Biophysics ;
+      issn = 1757-5036
+    >
+
+    param[journal_issn] = 1757-5036
+    
+    au < manifest ; 2008 ; PMC Biophysics Volume 1 ; 1 >
+    au < manifest ; 2009 ; PMC Biophysics Volume 2 ; 2 >
+    au < manifest ; 2010 ; PMC Biophysics Volume 3 ; 3 >
+  
+  }
+  
+  {
+  
+    title <
+      name = PMC Physics A ;
+      issn = 1754-0410
+    >
+
+    param[journal_issn] = 1754-0410
+
+    au < manifest ; 2007 ; PMC Physics A Volume 1 ; 1 >
+    au < manifest ; 2008 ; PMC Physics A Volume 2 ; 2 >
+    au < manifest ; 2009 ; PMC Physics A Volume 3 ; 3 >
+    au < manifest ; 2010 ; PMC Physics A Volume 4 ; 4 >
+  
+  }
+  
+  {
+  
+    title <
+      name = PMC Physics B ;
+      issn = 1754-0429
+    >
+  
+    param[journal_issn] = 1754-0429
+
+    au < manifest ; 2008 ; PMC Physics B Volume 1 ; 1 >
+    au < manifest ; 2009 ; PMC Physics B Volume 2 ; 2 >
+    au < manifest ; 2010 ; PMC Physics B Volume 3 ; 3 >
+
+  }
+
+}
