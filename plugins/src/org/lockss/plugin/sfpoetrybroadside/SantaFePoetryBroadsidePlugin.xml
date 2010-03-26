@@ -4,12 +4,16 @@
     <string>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</string>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin</string>
+  </entry>
+  <entry>
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Santa Fe Poetry Broadside %d&quot;, year</string>
+    <string>&quot;Santa Fe Poetry Broadside Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>

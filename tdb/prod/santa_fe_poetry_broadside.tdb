@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = Santa Fe Poetry Broadside
+  >
+  
+  {
+  
+    title <
+      name = Santa Fe Poetry Broadside ;
+      issn = 1544-1156
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.sfpoetrybroadside.SantaFePoetryBroadsidePlugin
+    param[base_url] = http://sfpoetry.org/
+    implicit < status ; year ; name ; param[year] >
+    
+    au < released ; 1998 ; Santa Fe Poetry Broadside 1998 ; 1998 >
+    au < released ; 1999 ; Santa Fe Poetry Broadside 1999 ; 1999 >
+    au < released ; 2000 ; Santa Fe Poetry Broadside 2000 ; 2000 >
+    au < released ; 2001 ; Santa Fe Poetry Broadside 2001 ; 2001 >
+    au < released ; 2002 ; Santa Fe Poetry Broadside 2002 ; 2002 >
+    au < released ; 2003 ; Santa Fe Poetry Broadside 2003 ; 2003 >
+    au < released ; 2004 ; Santa Fe Poetry Broadside 2004 ; 2004 >
+    au < released ; 2005 ; Santa Fe Poetry Broadside 2005 ; 2005 >
+    au < released ; 2006 ; Santa Fe Poetry Broadside 2006 ; 2006 >
+    au < manifest ; 2007 ; Santa Fe Poetry Broadside 2007 ; 2007 >
+    au < manifest ; 2008 ; Santa Fe Poetry Broadside 2008 ; 2008 >
+    au < manifest ; 2009 ; Santa Fe Poetry Broadside 2009 ; 2009 >
+  
+  }
+
+}
