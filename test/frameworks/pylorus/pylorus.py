@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.8 2009-11-13 05:59:32 mrbax Exp $'''
+$Id: pylorus.py,v 2.9 2010-03-26 17:37:37 edwardsb1 Exp $'''
 
 
 import ConfigParser
@@ -22,7 +22,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.8 $'.split()[ 1 ]
+REVISION = '$Revision: 2.9 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 60
@@ -31,6 +31,7 @@ MAXIMUM_SLEEP_DURATION = 120
 REMOTE_CRAWL_RETRY_TOTAL = 3
 POLL_FAILURE_RETRY_TOTAL = 3
 POLL_MISMATCH_RETRY_TOTAL = 3
+MAXIMUM_URLError = 3
 CONFIGURATION_DEFAULTS = { 
     'configuration':    '',
     'local_servers':    'validate://localhost:8081\nvalidate://localhost:8082\ningest://localhost:8081\ningest://localhost:8082',
@@ -165,23 +166,32 @@ class Content:
     def crawl( self ):
         '''Crawl this AU on the server'''
         logging.info( self.status_message( 'Waiting for crawl of %s on %s' ) )
-        try:
-            if isinstance( self.AU, lockss_daemon.Simulated_AU ):
-                crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, True, 0 )
-            else:
-                crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, False, 0 )
-        except lockss_daemon.LockssError, exception:
-            logging.error( exception )
-            logging.warn( self.status_message( 'Failed to crawl %s on %s' ) )
-            self.crawl_failures.append( self.client )
-            if self.clients == self.remote_clients:
-                self.remote_crawl_retries -= 1
-                if self.remote_clients and self.remote_crawl_retries:
-                    self.state = Content.State.CHECK
-                    return
-            # Local or repeated remote crawl failures are fatal
-            self.state = Content.State.CRAWL_FAILURE
-            raise Leaving_Pipeline
+        num_URLError = 0
+        while True:
+            try:
+                if isinstance( self.AU, lockss_daemon.Simulated_AU ):
+                    crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, True, 0 )
+                else:
+                    crawl_succeeded = self.client.waitForSuccessfulCrawl( self.AU, False, 0 )
+            except lockss_daemon.LockssError, exception:
+                logging.error( exception )
+                logging.warn( self.status_message( 'Failed to crawl %s on %s' ) )
+                self.crawl_failures.append( self.client )
+                if self.clients == self.remote_clients:
+                    self.remote_crawl_retries -= 1
+                    if self.remote_clients and self.remote_crawl_retries:
+                        self.state = Content.State.CHECK
+                        return
+                # Local or repeated remote crawl failures are fatal
+                self.state = Content.State.CRAWL_FAILURE
+                raise Leaving_Pipeline
+            except urllib2.URLError:
+                num_URLError += 1
+                if num_URLError < MAXIMUM_URLError:
+                    continue
+                else:
+                    raise
+            break
         if crawl_succeeded:
             logging.debug( self.status_message( 'Completed crawl of %s on %s' ) )
             self.crawl_successes.append( self.client )
