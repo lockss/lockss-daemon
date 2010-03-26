@@ -1,0 +1,121 @@
+{
+
+  publisher <
+    name = Open Humanities Press
+  >
+  
+  rights = openaccess
+  
+  {
+  
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; name ; param[year] >
+  
+    {
+  
+      title <
+        name = Cosmos and History ;
+        issn = 1832-9101
+      >
+    
+      param[base_url] = http://www.cosmosandhistory.org/
+      param[journal_id] = journal
+      
+      au < manifest ; 2005 ; Cosmos and History Volume 1 ; 2005 >
+      au < manifest ; 2006 ; Cosmos and History Volume 2 ; 2006 >
+      au < manifest ; 2007 ; Cosmos and History Volume 3 ; 2007 >
+      au < manifest ; 2008 ; Cosmos and History Volume 4 ; 2008 >
+      au < manifest ; 2009 ; Cosmos and History Volume 5 ; 2009 >
+    
+    }
+  
+    {
+  
+      title <
+        name = Culture Machine ;
+        issn = 1465-4121
+      >
+    
+      param[base_url] = http://www.culturemachine.net/
+      param[journal_id] = cm
+      
+      au < manifest ; 0 ; Culture Machine Interzone ; 0 >
+      au < manifest ; 1999 ; Culture Machine Volume 1 ; 1999 >
+      au < manifest ; 2000 ; Culture Machine Volume 2 ; 2000 >
+      au < manifest ; 2001 ; Culture Machine Volume 3 ; 2001 >
+      au < manifest ; 2002 ; Culture Machine Volume 4 ; 2002 >
+      au < manifest ; 2003 ; Culture Machine Volume 5 ; 2003 >
+      au < manifest ; 2004 ; Culture Machine Volume 6 ; 2004 >
+      au < manifest ; 2005 ; Culture Machine Volume 7 ; 2005 >
+      au < manifest ; 2006 ; Culture Machine Volume 8 ; 2006 >
+      au < manifest ; 2007 ; Culture Machine Volume 9 ; 2007 >
+      au < manifest ; 2009 ; Culture Machine Volume 10 ; 2009 >
+      au < manifest ; 2010 ; Culture Machine Volume 11 ; 2010 >
+    
+    }
+  
+    {
+  
+      title <
+        name = Film-Philosophy ;
+        issn = 1466-4615
+      >
+    
+      param[base_url] = http://www.film-philosophy.com/
+      param[journal_id] = f-p
+
+      au < manifest ; 1997 ; Film-Philosophy Volume 1 ; 1997 >
+      au < doesNotExist ; 1998 ; Film-Philosophy Volume 2 ; 1998 >
+      au < doesNotExist ; 1999 ; Film-Philosophy Volume 3 ; 1999 >
+      au < doesNotExist ; 2000 ; Film-Philosophy Volume 4 ; 2000 >
+      au < doesNotExist ; 2001 ; Film-Philosophy Volume 5 ; 2001 >
+      au < doesNotExist ; 2002 ; Film-Philosophy Volume 6 ; 2002 >
+      au < doesNotExist ; 2003 ; Film-Philosophy Volume 7 ; 2003 >
+      au < doesNotExist ; 2004 ; Film-Philosophy Volume 8 ; 2004 >
+      au < doesNotExist ; 2005 ; Film-Philosophy Volume 9 ; 2005 >
+      au < manifest ; 2006 ; Film-Philosophy Volume 10 ; 2006 >
+      au < manifest ; 2007 ; Film-Philosophy Volume 11 ; 2007 >
+      au < manifest ; 2008 ; Film-Philosophy Volume 12 ; 2008 >
+      au < manifest ; 2009 ; Film-Philosophy Volume 13 ; 2009 >
+    
+    }
+
+    {
+  
+      title <
+        name = Filozofski vestnik ;
+        issn = 0353-4510
+      >
+    
+      param[base_url] = http://www.filozofskivestnikonline.com/
+      param[journal_id] = journal
+      
+      au < manifest ; 2004 ; Filozofski vestnik Volume 2004 ; 2004 >
+      au < manifest ; 2005 ; Filozofski vestnik Volume 2005 ; 2005 >
+      au < manifest ; 2006 ; Filozofski vestnik Volume 2006 ; 2006 >
+      au < manifest ; 2007 ; Filozofski vestnik Volume 2007 ; 2007 >
+      au < manifest ; 2008 ; Filozofski vestnik Volume 2008 ; 2008 >
+    
+    }
+  
+    {
+  
+      title <
+        name = Postcolonial Text ;
+        issn = 1705-9100
+      >
+    
+      param[base_url] = http://journals.sfu.ca/pocol/
+      param[journal_id] = pct
+      
+      au < manifest ; 2005 ; Postcolonial Text Volume 1 ; 2005 >
+      au < manifest ; 2006 ; Postcolonial Text Volume 2 ; 2006 >
+      au < manifest ; 2007 ; Postcolonial Text Volume 3 ; 2007 >
+      au < manifest ; 2008 ; Postcolonial Text Volume 4 ; 2008 >
+      au < manifest ; 2009 ; Postcolonial Text Volume 5 ; 2009 >
+    
+    }
+  
+  }
+  
+}
