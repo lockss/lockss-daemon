@@ -223,12 +223,12 @@
       au < HighWirePressH20Plugin ; exists ; Eukaryotic Cell Volume 1 ; 1 >
       au < HighWirePressH20Plugin ; exists ; Eukaryotic Cell Volume 2 ; 2 >
       au < HighWirePressH20Plugin ; exists ; Eukaryotic Cell Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; ready ; Eukaryotic Cell Volume 4 ; 4 >
       au < HighWireStrVolPlugin ; released ; Eukaryotic Cell Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; ready ; Eukaryotic Cell Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; ready ; Eukaryotic Cell Volume 9 ; 9 >
       
   
     }
@@ -312,12 +312,12 @@
       au < HighWirePressH20Plugin ; exists ; Infection and Immunity Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; exists ; Infection and Immunity Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; exists ; Infection and Immunity Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; testing ; Infection and Immunity Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; ready ; Infection and Immunity Volume 73 ; 73 >
       au < HighWireStrVolPlugin ; released ; Infection and Immunity Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; testing ; Infection and Immunity Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; testing ; Infection and Immunity Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; testing ; Infection and Immunity Volume 77 ; 77 >
-      au < HighWirePressH20Plugin ; testing ; Infection and Immunity Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; ready ; Infection and Immunity Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; ready ; Infection and Immunity Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; ready ; Infection and Immunity Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; ready ; Infection and Immunity Volume 78 ; 78 >
   
     }
   
