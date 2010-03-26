@@ -1,0 +1,53 @@
+{
+
+  publisher <
+    name = Chemistry Central
+  >
+  
+  rights = openaccess
+  plugin = org.lockss.plugin.bmc.BioMedCentralPlugin
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title <
+      name = Chemistry Central Journal ;
+      issn = 1752-153X
+    >
+
+    param[base_url] = http://www.journal.chemistrycentral.com/
+    param[journal_issn] = 1752-153X
+    
+    au < manifest ; 2007 ; Chemistry Central Journal Volume 1 ; 1 >
+    au < manifest ; 2008 ; Chemistry Central Journal Volume 2 ; 2 >
+    au < manifest ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
+    au < manifest ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
+  
+  }
+  
+  {
+  
+    title <
+      name = Journal of Cheminformatics ;
+      issn = 1758-2946
+    >
+
+    param[base_url] = http://www.jcheminf.com/
+    param[journal_issn] = 1758-2946
+    
+    au < manifest ; 2009 ; Journal of Cheminformatics Volume 1 ; 1 >
+    au < manifest ; 2010 ; Journal of Cheminformatics Volume 2 ; 2 >
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Systems Chemistry
+    >
+    
+    param[base_url] = http://www.jsystchem.com/
+  
+  }
+  
+}
