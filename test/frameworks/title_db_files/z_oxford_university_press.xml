@@ -288,22 +288,6 @@
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="Analysis68">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="Analysis" />
-   <property name="title" value="Analysis Volume 68" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://analysis.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="68" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
   <property name="Analysis69">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Analysis" />
@@ -318,38 +302,6 @@
     <property name="value" value="69" />
    </property>
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="AnnalsofBotany101">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="Annals of Botany" />
-   <property name="title" value="Annals of Botany Volume 101" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://aob.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="101" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
-  <property name="AnnalsofBotany102">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="Annals of Botany" />
-   <property name="title" value="Annals of Botany Volume 102" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://aob.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="102" />
-   </property>
-   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="AnnalsofBotany103">
@@ -384,22 +336,6 @@
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="TheAnnalsofOccupationalHygiene52">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="The Annals of Occupational Hygiene" />
-   <property name="title" value="The Annals of Occupational Hygiene Volume 52" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://annhyg.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="52" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
   <property name="TheAnnalsofOccupationalHygiene53">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Annals of Occupational Hygiene" />
@@ -414,22 +350,6 @@
     <property name="value" value="53" />
    </property>
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="AnnalsofOncology19">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="Annals of Oncology" />
-   <property name="title" value="Annals of Oncology Volume 19" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://annonc.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="19" />
-   </property>
-   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="AnnalsofOncology20">
@@ -448,22 +368,6 @@
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="AppliedLinguistics29">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="Applied Linguistics" />
-   <property name="title" value="Applied Linguistics Volume 29" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://applij.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="29" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
   <property name="AppliedLinguistics30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Applied Linguistics" />
@@ -478,22 +382,6 @@
     <property name="value" value="30" />
    </property>
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="ArchivesofClinicalNeuropsychology23">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="Archives of Clinical Neuropsychology" />
-   <property name="title" value="Archives of Clinical Neuropsychology Volume 23" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://acn.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="23" />
-   </property>
-   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="ArchivesofClinicalNeuropsychology24">
@@ -928,22 +816,6 @@
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="TheBritishJournalofSocialWork38">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="The British Journal of Social Work" />
-   <property name="title" value="The British Journal of Social Work Volume 38" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://bjsw.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="38" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
   <property name="TheBritishJournalofSocialWork39">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The British Journal of Social Work" />
@@ -958,70 +830,6 @@
     <property name="value" value="39" />
    </property>
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="BritishMedicalBulletin85">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="British Medical Bulletin" />
-   <property name="title" value="British Medical Bulletin Volume 85" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://bmb.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="85" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
-  <property name="BritishMedicalBulletin86">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="British Medical Bulletin" />
-   <property name="title" value="British Medical Bulletin Volume 86" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://bmb.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="86" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
-  <property name="BritishMedicalBulletin87">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="British Medical Bulletin" />
-   <property name="title" value="British Medical Bulletin Volume 87" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://bmb.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="87" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
-  <property name="BritishMedicalBulletin88">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="British Medical Bulletin" />
-   <property name="title" value="British Medical Bulletin Volume 88" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://bmb.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="88" />
-   </property>
-   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="BritishMedicalBulletin89">
@@ -1070,22 +878,6 @@
     <property name="value" value="91" />
    </property>
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="BulletinoftheLondonMathematicalSociety40">
-   <property name="attributes.publisher" value="Oxford University Press" />
-   <property name="journalTitle" value="Bulletin of the London Mathematical Society" />
-   <property name="title" value="Bulletin of the London Mathematical Society Volume 40" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://blms.oxfordjournals.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="40" />
-   </property>
-   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="BulletinoftheLondonMathematicalSociety41">

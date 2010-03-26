@@ -1221,23 +1221,6 @@
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="Assessment15">
-   <property name="attributes.publisher" value="SAGE Publications" />
-   <property name="journalTitle" value="Assessment" />
-   <property name="title" value="Assessment Volume 15" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://asm.sagepub.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="15" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
-   <property name="attributes.year" value="2008" />
-  </property>
-
   <property name="Assessment16">
    <property name="attributes.publisher" value="SAGE Publications" />
    <property name="journalTitle" value="Assessment" />
@@ -1253,23 +1236,6 @@
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="AssessmentforEffectiveIntervention33">
-   <property name="attributes.publisher" value="SAGE Publications" />
-   <property name="journalTitle" value="Assessment for Effective Intervention" />
-   <property name="title" value="Assessment for Effective Intervention Volume 33" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://aei.sagepub.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="33" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
-   <property name="attributes.year" value="2007-2008" />
   </property>
 
   <property name="AssessmentforEffectiveIntervention34">
@@ -1340,23 +1306,6 @@
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="BehaviorModification32">
-   <property name="attributes.publisher" value="SAGE Publications" />
-   <property name="journalTitle" value="Behavior Modification" />
-   <property name="title" value="Behavior Modification Volume 32" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://bmo.sagepub.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="32" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
-   <property name="attributes.year" value="2008" />
-  </property>
-
   <property name="BehaviorModification33">
    <property name="attributes.publisher" value="SAGE Publications" />
    <property name="journalTitle" value="Behavior Modification" />
@@ -1372,23 +1321,6 @@
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="BiblicalTheologyBulletinAJournalofBibleandTheology38">
-   <property name="attributes.publisher" value="SAGE Publications" />
-   <property name="journalTitle" value="Biblical Theology Bulletin: A Journal of Bible and Theology" />
-   <property name="title" value="Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://btb.sagepub.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="38" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
-   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="BiblicalTheologyBulletinAJournalofBibleandTheology39">
@@ -1408,23 +1340,6 @@
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="BiologicalResearchForNursing10">
-   <property name="attributes.publisher" value="SAGE Publications" />
-   <property name="journalTitle" value="Biological Research For Nursing" />
-   <property name="title" value="Biological Research For Nursing Volume 10" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://brn.sagepub.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="10" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
-   <property name="attributes.year" value="2008" />
-  </property>
-
   <property name="BiologicalResearchForNursing11">
    <property name="attributes.publisher" value="SAGE Publications" />
    <property name="journalTitle" value="Biological Research For Nursing" />
@@ -1440,23 +1355,6 @@
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
    <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="BodySociety14">
-   <property name="attributes.publisher" value="SAGE Publications" />
-   <property name="journalTitle" value="Body &amp; Society" />
-   <property name="title" value="Body &amp; Society Volume 14" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://bod.sagepub.com/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="14" />
-   </property>
-   <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.SagePublicationsPdfTransform$Simplified" />
-   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="BodySociety15">
