@@ -225,9 +225,9 @@
       au < HighWirePressH20Plugin ; exists ; Eukaryotic Cell Volume 3 ; 3 >
       au < HighWirePressH20Plugin ; ready ; Eukaryotic Cell Volume 4 ; 4 >
       au < HighWireStrVolPlugin ; released ; Eukaryotic Cell Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; testing ; Eukaryotic Cell Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; ready ; Eukaryotic Cell Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; manifest ; Eukaryotic Cell Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; testing ; Eukaryotic Cell Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; ready ; Eukaryotic Cell Volume 9 ; 9 >
       
   
@@ -442,12 +442,12 @@
       au < HighWirePressH20Plugin ; exists ; Journal of Bacteriology Volume 184 ; 184 >
       au < HighWirePressH20Plugin ; exists ; Journal of Bacteriology Volume 185 ; 185 >
       au < HighWirePressH20Plugin ; exists ; Journal of Bacteriology Volume 186 ; 186 >
-      au < HighWirePressH20Plugin ; testing ; Journal of Bacteriology Volume 187 ; 187 >
+      au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 187 ; 187 >
       au < HighWireStrVolPlugin ; released ; Journal of Bacteriology Volume 188 ; 188 >
-      au < HighWirePressH20Plugin ; testing ; Journal of Bacteriology Volume 189 ; 189 >
-      au < HighWirePressH20Plugin ; testing ; Journal of Bacteriology Volume 190 ; 190 >
-      au < HighWirePressH20Plugin ; testing ; Journal of Bacteriology Volume 191 ; 191 >
-      au < HighWirePressH20Plugin ; testing ; Journal of Bacteriology Volume 192 ; 192 >
+      au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 189 ; 189 >
+      au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 190 ; 190 >
+      au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 191 ; 191 >
+      au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 192 ; 192 >
   
     }
   
