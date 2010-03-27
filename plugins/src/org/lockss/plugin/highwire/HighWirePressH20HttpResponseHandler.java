@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HttpResponseHandler.java,v 1.3 2010-03-23 22:28:04 thib_gc Exp $
+ * $Id: HighWirePressH20HttpResponseHandler.java,v 1.4 2010-03-27 02:40:37 thib_gc Exp $
  */
 
 /*
@@ -53,7 +53,11 @@ public class HighWirePressH20HttpResponseHandler implements CacheResultHandler {
     switch (responseCode) {
       case 500:
         logger.debug2("500");
-        if (url.endsWith("_manifest.dtl") || url.endsWith(".toc")) {
+        if (   url.endsWith("_manifest.dtl")
+            || url.endsWith(".toc")
+            || (   url.contains("/content/vol")
+                && url.contains("/issue")
+                && (url.endsWith("/index.dtl") || url.endsWith("/")))) {
           return new CacheException.RetrySameUrlException("500 Internal Server Error");
         }
         else {
