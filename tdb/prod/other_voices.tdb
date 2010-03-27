@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Other Voices
+  >
+  
+  {
+  
+    title <
+      name = Other Voices: The eJournal of Cultural Criticism ;
+      issn = 1094-2254
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.othervoices.OtherVoicesPlugin
+    param[base_url] = http://www.othervoices.org/
+    implicit < status ; name ; param[volume] >
+    
+    au < exists ; Other Voices: The eJournal of Cultural Criticism Volume 1 ; 1 >
+    au < down ; Other Voices: The eJournal of Cultural Criticism Volume 2 ; 2 >
+    au < exists ; Other Voices: The eJournal of Cultural Criticism Volume 3 ; 3 >
+    
+  }
+  
+}

@@ -59,22 +59,6 @@
         <property name="attributes.rights" value="openaccess" />
       </property>
 
-      <!-- Title: Other Voices (Other Voices) -->
-      <property name="othervoices2">
-	<property name="title" value="Other Voices Volume 2" />
-	<property name="journalTitle" value="Other Voices" />
-	<property name="plugin" value="org.lockss.plugin.othervoices.OtherVoicesPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-          <property name="value" value="http://www.othervoices.org/" />
-        </property>
-	<property name="param.2">
-	  <property name="key" value="volume" />
-          <property name="value" value="2" />
-	</property>
-        <property name="attributes.rights" value="openaccess" />
-      </property>
-
       <property name="jimr2005">
 	<property name="title" value="Journal of Medical Internet Research 2005" />
 	<property name="journalTitle" value="Journal of Medical Internet Research" />
