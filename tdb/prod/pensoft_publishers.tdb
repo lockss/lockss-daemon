@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Pensoft Publishers
+  >
+  
+  {
+
+    title <
+      name = ZooKeys ;
+      issn = 1313-2989 ;
+      eissn = 1313-2970
+    >
+    
+    rights = openaccess
+    plugin = plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://pensoftonline.net/zookeys/
+    param[journal_id] = journal
+    implicit < status ; year ; name ; param[year] >
+    
+    au < manifest ; 2008 ; ZooKeys 2008 ; 2008 >
+    au < manifest ; 2009 ; ZooKeys 2009 ; 2009 >
+    au < manifest ; 2010 ; ZooKeys 2010 ; 2010 >
+  
+  }
+  
+}
