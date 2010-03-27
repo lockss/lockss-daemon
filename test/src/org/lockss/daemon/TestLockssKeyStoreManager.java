@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStoreManager.java,v 1.3 2010-03-14 08:08:20 tlipkis Exp $
+ * $Id: TestLockssKeyStoreManager.java,v 1.3.2.1 2010-03-27 03:06:40 tlipkis Exp $
  */
 
 /*
@@ -119,5 +119,64 @@ public class TestLockssKeyStoreManager extends LockssTestCase {
     LockssKeyStore lks3 = keystoreMgr.getLockssKeyStore("KS3");
     assertNotNull(lks3.getKeyManagerFactory());
     assertNotNull(lks3.getTrustManagerFactory());
+  }
+
+  static final String PREF1 = LockssKeyStoreManager.PARAM_KEYSTORE + ".1.";
+  static final String PREF2 = LockssKeyStoreManager.PARAM_KEYSTORE + ".2.";
+  static final String PREF3 = LockssKeyStoreManager.PARAM_KEYSTORE + ".3.";
+  static final String PREF4 = LockssKeyStoreManager.PARAM_KEYSTORE + ".4.";
+
+  public void testLocationsAndAttrs() throws Exception {
+    String URL = "http://u.r.l/pa/th";
+    Properties p = new Properties();
+    p.put(PREF1 + KEYSTORE_PARAM_NAME, "ksname1");
+    p.put(PREF1 + KEYSTORE_PARAM_FILE, "filename");
+    p.put(PREF2 + KEYSTORE_PARAM_NAME, "ksname22");
+    p.put(PREF2 + KEYSTORE_PARAM_RESOURCE, "res/ource");
+    p.put(PREF3 + KEYSTORE_PARAM_NAME, "ksname333");
+    p.put(PREF3 + KEYSTORE_PARAM_URL, URL);
+    p.put(PREF3 + KEYSTORE_PARAM_TYPE, "kstype");
+    p.put(PREF3 + KEYSTORE_PARAM_PROVIDER, "ksprovider");
+    p.put(PREF3 + KEYSTORE_PARAM_PASSWORD, "kspassword");
+    p.put(PREF3 + KEYSTORE_PARAM_KEY_PASSWORD, "keyPassword");
+    p.put(PREF3 + KEYSTORE_PARAM_KEY_PASSWORD_FILE, "pwf");
+    p.put(PREF4 + KEYSTORE_PARAM_NAME, "ksname4");
+    p.put(PREF4 + KEYSTORE_PARAM_FILE, "filename4");
+    p.put(PREF4 + KEYSTORE_PARAM_CREATE, "true");
+
+    ConfigurationUtil.addFromProps(p);
+    LockssKeyStoreManager keystoreMgr = new MyLockssKeyStoreManager();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.setKeystoreManager(keystoreMgr);
+    keystoreMgr.initService(daemon);
+    keystoreMgr.startService();
+
+    LockssKeyStore lk1 = keystoreMgr.getLockssKeyStore("ksname1");
+    assertEquals(LocationType.File, lk1.getLocationType());
+    assertEquals("filename", lk1.getLocation());
+    assertFalse(lk1.getMayCreate());
+
+    LockssKeyStore lk2 = keystoreMgr.getLockssKeyStore("ksname22");
+    assertEquals(LocationType.Resource, lk2.getLocationType());
+    assertEquals("res/ource", lk2.getLocation());
+
+    LockssKeyStore lk3 = keystoreMgr.getLockssKeyStore("ksname333");
+    assertEquals(LocationType.Url, lk3.getLocationType());
+    assertEquals(URL, lk3.getLocation());
+    assertEquals("kstype", lk3.getType());
+    assertEquals("ksprovider", lk3.getProvider());
+    assertFalse(lk3.getMayCreate());
+
+    LockssKeyStore lk4 = keystoreMgr.getLockssKeyStore("ksname4");
+    assertEquals(LocationType.File, lk4.getLocationType());
+    assertEquals("filename4", lk4.getLocation());
+    assertTrue(lk4.getMayCreate());
+
+  }
+
+  static class MyLockssKeyStoreManager extends LockssKeyStoreManager {
+    @Override
+    void loadKeyStores() {
+    }
   }
 }
