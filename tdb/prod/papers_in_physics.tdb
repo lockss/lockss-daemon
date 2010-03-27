@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Papers in Physics
+  >
+  
+  {
+
+    title <
+      name = Papers in Physics ;
+      issn = 1852-4249
+    >
+    
+    rights = openaccess
+    plugin = plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://www.papersinphysics.org/
+    param[journal_id] = papersinphysics
+    implicit < status ; year ; name ; param[year] >
+    
+    au < manifest ; 2009 ; Papers in Physics 2009 ; 2009 >
+    au < manifest ; 2010 ; Papers in Physics 2010 ; 2010 >
+  
+  }
+  
+}
