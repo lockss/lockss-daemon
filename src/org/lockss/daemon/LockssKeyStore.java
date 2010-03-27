@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.8 2010-03-26 01:02:14 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.9 2010-03-27 03:15:12 tlipkis Exp $
  */
 
 /*
@@ -127,6 +127,10 @@ public class LockssKeyStore {
       throw new IllegalStateException("Only KeyStores of type File can be created");
     }
     mayCreate = val;
+  }
+
+  boolean getMayCreate() {
+    return mayCreate;
   }
 
   void setPassword(String val) {
