@@ -48,37 +48,18 @@
  
  <property name="org.lockss.title">
 
-  <property name="JournalofOralMicrobiology1">
+  <property name="EthicsGlobalPolitics1">
    <property name="attributes.publisher" value="Co-Action Publishing" />
-   <property name="journalTitle" value="Journal of Oral Microbiology" />
-   <property name="title" value="Journal of Oral Microbiology Volume 1" />
+   <property name="journalTitle" value="Ethics &amp; Global Politics" />
+   <property name="title" value="Ethics &amp; Global Politics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.journaloforalmicrobiology.net/" />
+    <property name="value" value="http://www.ethicsandglobalpolitics.net/" />
    </property>
    <property name="param.2">
     <property name="key" value="journal_id" />
-    <property name="value" value="jom" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="year" />
-    <property name="value" value="2009" />
-   </property>
-  </property>
-
-  <property name="GlobalHealthAction1">
-   <property name="attributes.publisher" value="Co-Action Publishing" />
-   <property name="journalTitle" value="Global Health Action" />
-   <property name="title" value="Global Health Action Volume 1" />
-   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://www.globalhealthaction.net/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="gha" />
+    <property name="value" value="egp" />
    </property>
    <property name="param.3">
     <property name="key" value="year" />
@@ -86,18 +67,18 @@
    </property>
   </property>
 
-  <property name="GlobalHealthAction2">
+  <property name="EthicsGlobalPolitics2">
    <property name="attributes.publisher" value="Co-Action Publishing" />
-   <property name="journalTitle" value="Global Health Action" />
-   <property name="title" value="Global Health Action Volume 2" />
+   <property name="journalTitle" value="Ethics &amp; Global Politics" />
+   <property name="title" value="Ethics &amp; Global Politics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.globalhealthaction.net/" />
+    <property name="value" value="http://www.ethicsandglobalpolitics.net/" />
    </property>
    <property name="param.2">
     <property name="key" value="journal_id" />
-    <property name="value" value="gha" />
+    <property name="value" value="egp" />
    </property>
    <property name="param.3">
     <property name="key" value="year" />
@@ -257,18 +238,18 @@
    </property>
   </property>
 
-  <property name="EthicsGlobalPolitics1">
+  <property name="GlobalHealthAction1">
    <property name="attributes.publisher" value="Co-Action Publishing" />
-   <property name="journalTitle" value="Ethics &amp; Global Politics" />
-   <property name="title" value="Ethics &amp; Global Politics Volume 1" />
+   <property name="journalTitle" value="Global Health Action" />
+   <property name="title" value="Global Health Action Volume 1" />
    <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.ethicsandglobalpolitics.net/" />
+    <property name="value" value="http://www.globalhealthaction.net/" />
    </property>
    <property name="param.2">
     <property name="key" value="journal_id" />
-    <property name="value" value="egp" />
+    <property name="value" value="gha" />
    </property>
    <property name="param.3">
     <property name="key" value="year" />
@@ -276,22 +257,326 @@
    </property>
   </property>
 
-  <property name="EthicsGlobalPolitics2">
+  <property name="GlobalHealthAction2">
    <property name="attributes.publisher" value="Co-Action Publishing" />
-   <property name="journalTitle" value="Ethics &amp; Global Politics" />
-   <property name="title" value="Ethics &amp; Global Politics Volume 2" />
+   <property name="journalTitle" value="Global Health Action" />
+   <property name="title" value="Global Health Action Volume 2" />
    <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.ethicsandglobalpolitics.net/" />
+    <property name="value" value="http://www.globalhealthaction.net/" />
    </property>
    <property name="param.2">
     <property name="key" value="journal_id" />
-    <property name="value" value="egp" />
+    <property name="value" value="gha" />
    </property>
    <property name="param.3">
     <property name="key" value="year" />
     <property name="value" value="2009" />
+   </property>
+  </property>
+
+  <property name="JournalofOralMicrobiology1">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Journal of Oral Microbiology" />
+   <property name="title" value="Journal of Oral Microbiology Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.journaloforalmicrobiology.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jom" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline1">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1996" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline2">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1997" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline3">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1998" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline4">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline5">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline6">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline7">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline8">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline9">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline10">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline11">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline12">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline13">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline14">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+  </property>
+
+  <property name="MedicalEducationOnline15">
+   <property name="attributes.publisher" value="Co-Action Publishing" />
+   <property name="journalTitle" value="Medical Education Online" />
+   <property name="title" value="Medical Education Online Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.med-ed-online.net/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="meo" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2010" />
    </property>
   </property>
 
