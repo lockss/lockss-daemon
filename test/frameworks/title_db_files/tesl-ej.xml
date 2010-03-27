@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="TESL-EJ">
+   <property name="name" value="All TESL-EJ Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='TESL-EJ']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume1superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 1 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="01-04" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume2superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 2 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="05-08" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume3superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 3 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="09-12" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume4superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 4 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="13-16" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume5superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 5 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="17-20" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume6superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 6 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="21-24" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume7superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 7 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="25-28" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume8superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 8 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="29-32" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguageVolume9superseded">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 9 [superseded]" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://writing.berkeley.edu/TESL-EJ/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="33-36" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage1">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 1" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="01-04" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage2">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 2" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="05-08" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage3">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 3" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="09-12" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage4">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 4" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="13-16" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage5">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 5" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="17-20" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage6">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 6" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="21-24" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage7">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 7" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="25-28" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage8">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 8" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="29-32" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage9">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 9" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="33-36" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage10">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 10" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="37-40" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage11">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 11" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="41-44" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="TESLEJTheElectronicJournalforEnglishasaSecondLanguage12">
+   <property name="attributes.publisher" value="TESL-EJ" />
+   <property name="journalTitle" value="TESL-EJ: The Electronic Journal for English as a Second Language" />
+   <property name="title" value="TESL-EJ: The Electronic Journal for English as a Second Language Volume 12" />
+   <property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.tesl-ej.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="45-48" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+ </property>
+
+</lockss-config>
