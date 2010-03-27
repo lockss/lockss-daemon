@@ -86,6 +86,44 @@
    </property>
   </property>
 
+  <property name="EducationandCulture24">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="Education and Culture" />
+   <property name="title" value="Education and Culture Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="education_and_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="EducationandCulture25">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="Education and Culture" />
+   <property name="title" value="Education and Culture Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="education_and_culture" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
   <property name="ShofarAnInterdisciplinaryJournalofJewishStudies19">
    <property name="attributes.publisher" value="Purdue University Press" />
    <property name="journalTitle" value="Shofar: An Interdisciplinary Journal of Jewish Studies" />
@@ -217,6 +255,274 @@
     <property name="key" value="volume" />
     <property name="value" value="25" />
    </property>
+  </property>
+
+  <property name="ShofarAnInterdisciplinaryJournalofJewishStudies26">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="Shofar: An Interdisciplinary Journal of Jewish Studies" />
+   <property name="title" value="Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="shofar" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="ShofarAnInterdisciplinaryJournalofJewishStudies27">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="Shofar: An Interdisciplinary Journal of Jewish Studies" />
+   <property name="title" value="Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="shofar" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="StudiesinAmericanJewishLiterature27">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="Studies in American Jewish Literature" />
+   <property name="title" value="Studies in American Jewish Literature Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="studies_in_american_jewish_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="StudiesinAmericanJewishLiterature28">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="Studies in American Jewish Literature" />
+   <property name="title" value="Studies in American Jewish Literature Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://muse.jhu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_dir" />
+    <property name="value" value="studies_in_american_jewish_literature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture1">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 1" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture2">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 2" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture3">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 3" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture4">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 4" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture5">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 5" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture6">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 6" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture7">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 7" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CLCWebComparativeLiteratureandCulture8">
+   <property name="attributes.publisher" value="Purdue University Press" />
+   <property name="journalTitle" value="CLCWeb: Comparative Literature and Culture" />
+   <property name="title" value="CLCWeb: Comparative Literature and Culture Volume 8" />
+   <property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://clcwebjournal.lib.purdue.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

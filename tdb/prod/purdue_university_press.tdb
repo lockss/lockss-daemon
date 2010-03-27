@@ -1,55 +1,88 @@
 {
+
   publisher <
     name = Purdue University Press
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
-
   {
-    title <
-      name = Education and Culture
-    >
 
-    param[journal_dir] = education_and_culture
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
 
-    au < released ; Education and Culture Volume 22 ; 22 >
-    au < released ; Education and Culture Volume 23 ; 23 >
-    au < manifest ; Education and Culture Volume 24 ; 24 >
-    au < manifest ; Education and Culture Volume 25 ; 25 >
+    {
+
+      title <
+        name = Education and Culture
+      >
+
+      param[journal_dir] = education_and_culture
+
+      au < released ; Education and Culture Volume 22 ; 22 >
+      au < released ; Education and Culture Volume 23 ; 23 >
+      au < manifest ; Education and Culture Volume 24 ; 24 >
+      au < manifest ; Education and Culture Volume 25 ; 25 >
+
+    }
+
+    {
+
+      title <
+        name = Shofar: An Interdisciplinary Journal of Jewish Studies
+      >
+
+      param[journal_dir] = shofar
+
+      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
+      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
+      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
+      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
+      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
+      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
+      au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
+      au < manifest ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
+      au < manifest ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
+
+    }
+
+    {
+
+      title <
+        name = Studies in American Jewish Literature
+      >
+
+      param[journal_dir] = studies_in_american_jewish_literature
+
+      au < manifest ; Studies in American Jewish Literature Volume 27 ; 27 >
+      au < manifest ; Studies in American Jewish Literature Volume 28 ; 28 >
+
+    }
 
   }
-
+  
   {
+  
     title <
-      name = Shofar: An Interdisciplinary Journal of Jewish Studies
+      name = CLCWeb: Comparative Literature and Culture ;
+      issn = 1481-4374
     >
-
-    param[journal_dir] = shofar
-
-    au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 19 ; 19 >
-    au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 20 ; 20 >
-    au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 21 ; 21 >
-    au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 22 ; 22 >
-    au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 23 ; 23 >
-    au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 24 ; 24 >
-    au < released ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 25 ; 25 >
-    au < manifest ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 26 ; 26 >
-    au < manifest ; Shofar: An Interdisciplinary Journal of Jewish Studies Volume 27 ; 27 >
-
-  }
-
-  {
-    title <
-      name = Studies in American Jewish Literature
-    >
-
-    param[journal_dir] = studies_in_american_jewish_literature
-
-    au < manifest ; Studies in American Jewish Literature Volume 27 ; 27 >
-    au < manifest ; Studies in American Jewish Literature Volume 28 ; 28 >
-
+    
+    rights = openaccess
+    plugin = edu.upenn.library.plugin.clcweb.CLCWebPlugin
+    param[base_url] = http://clcwebjournal.lib.purdue.edu/
+    implicit < status ; year ; name ; param[year] ; param[volume] >
+    
+    comment[down] = moved to the Digital Commons platform
+    
+    au < down ; 1999 ; CLCWeb: Comparative Literature and Culture Volume 1 ; 1999 ; 1 >
+    au < down ; 2000 ; CLCWeb: Comparative Literature and Culture Volume 2 ; 2000 ; 2 >
+    au < down ; 2001 ; CLCWeb: Comparative Literature and Culture Volume 3 ; 2001 ; 3 >
+    au < down ; 2002 ; CLCWeb: Comparative Literature and Culture Volume 4 ; 2002 ; 4 >
+    au < down ; 2003 ; CLCWeb: Comparative Literature and Culture Volume 5 ; 2003 ; 5 >
+    au < down ; 2004 ; CLCWeb: Comparative Literature and Culture Volume 6 ; 2004 ; 6 >
+    au < down ; 2005 ; CLCWeb: Comparative Literature and Culture Volume 7 ; 2005 ; 7 >
+    au < down ; 2006 ; CLCWeb: Comparative Literature and Culture Volume 8 ; 2006 ; 8 >
+  
   }
 
 }
