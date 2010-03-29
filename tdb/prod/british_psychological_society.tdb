@@ -13,7 +13,8 @@
 
   {
     title <
-      name = British Journal of Clinical Psychology
+      name = British Journal of Clinical Psychology ;
+      issn = 0144-6657 
     >
     
     param[journal_id] = bjcp
@@ -35,7 +36,8 @@
 
   {
     title <
-      name = British Journal of Developmental Psychology
+      name = British Journal of Developmental Psychology ;
+      issn = 0261-510X  
     >
     
     param[journal_id] = bjdp
@@ -58,7 +60,8 @@
 
   {
     title <
-      name = British Journal of Educational Psychology
+      name = British Journal of Educational Psychology ;
+      issn = 0007-0998  
     >
     
     param[journal_id] = bjep
@@ -80,7 +83,8 @@
 
   {
     title <
-      name = British Journal of Health Psychology
+      name = British Journal of Health Psychology ;
+      issn = 1359-107X  
     >
     
     param[journal_id] = bjhp
@@ -102,7 +106,8 @@
   
   {
     title <
-      name = British Journal of Mathematical and Statistical Psychology
+      name = British Journal of Mathematical and Statistical Psychology ;
+      issn = 0007-1102  
     >
     
     param[journal_id] = bjmsp
@@ -124,7 +129,8 @@
 
   {
     title <
-      name = British Journal of Medical Psychology
+      name = British Journal of Medical Psychology ;
+      issn = 0007-1129  
     >
     
     param[journal_id] = bjmp
@@ -138,7 +144,8 @@
   
   {
     title <
-      name = British Journal of Psychology
+      name = British Journal of Psychology ;
+      issn = 0007-1269   
     >
     
     param[journal_id] = bjp
@@ -160,7 +167,8 @@
   
   {
     title <
-      name = British Journal of Social Psychology
+      name = British Journal of Social Psychology ;
+      issn = 0144-6665  
     >
     
     param[journal_id] = bjsp
@@ -182,7 +190,8 @@
   
   {
     title <
-      name = Journal of Occupational and Organizational Psychology
+      name = Journal of Occupational and Organizational Psychology ;
+      issn = 0963-1798  
     >
     
     param[journal_id] = joop
@@ -194,7 +203,8 @@
   
   {
     title <
-      name = Legal and Criminological Psychology
+      name = Legal and Criminological Psychology ;
+      issn = 1355-3259  
     >
     
     param[journal_id] = lcp
@@ -206,7 +216,8 @@
   
   {
     title <
-      name = Psychology and Psychotherapy: Theory, Research and Practice
+      name = Psychology and Psychotherapy: Theory, Research and Practice ;
+      issn = 1476-0835  
     >
     
     param[journal_id] = paptrap
