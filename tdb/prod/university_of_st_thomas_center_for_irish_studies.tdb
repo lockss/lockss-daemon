@@ -10,7 +10,9 @@
 
   {
     title <
-      name = New Hibernia Review 
+      name = New Hibernia Review ;
+      issn = 1092-3977 ;
+      eissn = 1534-5815
     >
 
     param[journal_dir] = new_hibernia_review

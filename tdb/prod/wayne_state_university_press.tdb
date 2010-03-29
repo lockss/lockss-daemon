@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Criticism
+      name = Criticism ;
+      issn = 0011-1589 ;
+      eissn = 1536-0342
     >
 
     param[journal_dir] = criticism
@@ -28,7 +30,9 @@
 
   {
     title <
-      name = Discourse
+      name = Discourse ;
+      issn = 1522-5321 ;
+      eissn = 1536-1810
     >
 
     param[journal_dir] = discourse
@@ -47,7 +51,9 @@
 
   {
     title <
-      name = Framework: The Journal of Cinema and Media
+      name = Framework: The Journal of Cinema and Media ;
+      issn = 0306-7661 ;
+      eissn = 1559-7989
     >
 
     param[journal_dir] = framework_the_journal_of_cinema_and_media
@@ -61,7 +67,9 @@
 
   {
     title <
-      name = Human Biology
+      name = Human Biology ;
+      issn = 0018-7143 ;
+      eissn = 1534-6617
     >
 
     param[journal_dir] = human_biology
@@ -80,7 +88,9 @@
 
   {
     title <
-      name = Marvels & Tales
+      name = Marvels & Tales ;
+      issn = 1521-4281 ;
+      eissn = 1536-1802
     >
 
     param[journal_dir] = marvels_and_tales
@@ -99,7 +109,9 @@
 
   {
     title <
-      name = Merrill-Palmer Quarterly
+      name = Merrill-Palmer Quarterly ;
+      issn = 0272-930X ;
+      eissn = 1535-0266
     >
 
     param[journal_dir] = merrill-palmer_quarterly

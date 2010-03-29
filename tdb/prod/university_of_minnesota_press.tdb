@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Buildings & Landscapes: Journal of the Vernacular Architecture Forum
+      name = Buildings & Landscapes: Journal of the Vernacular Architecture Forum ;
+      issn = 1936-0886 ;
+      eissn = 1934-6832
     >
 
     param[journal_dir] = buildings_and_landscapes
@@ -22,7 +24,9 @@
 
   {
     title <
-      name = Cultural Critique
+      name = Cultural Critique ;
+      issn = 0882-4371 ;
+      eissn = 1534-5203
     >
 
     param[journal_dir] = cultural_critique
@@ -59,7 +63,9 @@
 
   {
     title <
-      name = Future Anterior
+      name = Future Anterior ;
+      issn = 1549-9715 ;
+      eissn = 1934-6026
     >
 
     param[journal_dir] = future_anterior
@@ -85,7 +91,9 @@
 
   {
     title <
-      name = The Moving Image
+      name = The Moving Image ;
+      issn = 1532-3978 ;
+      eissn = 1542-4235
     >
 
     param[journal_dir] = the_moving_image
@@ -102,7 +110,9 @@
 
   {
     title <
-      name = Wicazo Sa Review
+      name = Wicazo Sa Review ;
+      issn = 0749-6427 ;
+      eissn = 1533-7901
     >
 
     param[journal_dir] = wicazo_sa_review

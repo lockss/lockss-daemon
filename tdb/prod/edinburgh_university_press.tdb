@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Africa: The Journal of the International African Institute 
+      name = Africa: The Journal of the International African Institute ;
+      issn = 0954-8890 ;
+      eissn = 1755-1609
     >
 
     param[journal_dir] = africa_the_journal_of_the_international_african_institute
@@ -24,7 +26,9 @@
 
   {
     title <
-      name = Comparative Critical Studies 
+      name = Comparative Critical Studies ;
+      issn = 1744-1854 ;
+      eissn = 1750-0109
     >
 
     param[journal_dir] = comparative_critical_studies
@@ -37,7 +41,9 @@
 
   {
     title <
-      name = Dance Research 
+      name = Dance Research ;
+      issn = 0264-2875 ;
+      eissn = 1755-1676
     >
 
     param[journal_dir] = dance_research
@@ -50,7 +56,9 @@
 
   {
     title <
-      name = Episteme: A Journal of Social Epistemology 
+      name = Episteme: A Journal of Social Epistemology ;
+      issn = 1742-3600 ;
+      eissn = 1750-0117
     >
 
     param[journal_dir] = episteme
@@ -63,7 +71,9 @@
 
   {
     title <
-      name = Holy Land Studies: A Multidisciplinary Journal 
+      name = Holy Land Studies: A Multidisciplinary Journal ;
+      issn = 1474-9475 ;
+      eissn = 1750-0125
     >
 
     param[journal_dir] = holy_land_studies
@@ -76,7 +86,9 @@
 
   {
     title <
-      name = The Innes Review
+      name = The Innes Review ;
+      issn = 0020-157X ;
+      eissn = 1745-5219
     >
 
     param[journal_dir] = the_innes_review
@@ -88,7 +100,9 @@
   
   {
     title <
-      name = Journal of Victorian Culture 
+      name = Journal of Victorian Culture ;
+      issn = 1355-5502 ;
+      eissn = 1750-0133
     >
 
     param[journal_dir] = journal_of_victorian_culture
@@ -101,7 +115,9 @@
 
   {
     title <
-      name = Paragraph 
+      name = Paragraph ;
+      issn = 0264-8334 ;
+      eissn = 1750-0176
     >
 
     param[journal_dir] = paragraph
@@ -114,7 +130,9 @@
 
   {
     title <
-      name = Parliamentary History 
+      name = Parliamentary History ;
+      issn = 0264-2824 ;
+      eissn = 1750-0206
     >
 
     param[journal_dir] = parliamentary_history
@@ -126,7 +144,9 @@
 
   {
     title <
-      name = Romanticism 
+      name = Romanticism ;
+      issn = 1354-991X ;
+      eissn = 1750-0192
     >
 
     param[journal_dir] = romanticism
@@ -139,7 +159,9 @@
 
   {
     title <
-      name = Studies in World Christianity 
+      name = Studies in World Christianity ;
+      issn = 1354-9901 ;
+      eissn = 1750-0230
     >
 
     param[journal_dir] = studies_in_world_christianity
@@ -152,7 +174,9 @@
 
   {
     title <
-      name = The Scottish Historical Review 
+      name = The Scottish Historical Review ;
+      issn = 0036-9241 ;
+      eissn = 1750-0222
     >
 
     param[journal_dir] = scottish_historical_review
@@ -165,7 +189,9 @@
 
   {
     title <
-      name = Translation and Literature 
+      name = Translation and Literature ;
+      issn = 0968-1361 ;
+      eissn = 1750-0214
     >
 
     param[journal_dir] = translation_and_literature

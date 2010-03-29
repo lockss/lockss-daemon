@@ -11,7 +11,9 @@
 
   {
     title <
-      name = Abstract and Applied Analysis
+      name = Abstract and Applied Analysis ;
+      issn = 1085-3375 ;
+      eissn = 1687-0409
     >
 
     param[journal_id] = aaa
@@ -35,7 +37,9 @@
 
   {
     title <
-      name = Active and Passive Electronic Components
+      name = Active and Passive Electronic Components ;
+      issn = 0882-7516 ;
+      eissn = 1563-5031
     >
 
     param[journal_id] = apec
@@ -75,7 +79,9 @@
 
   {
     title <
-      name = Advances in Acoustics and Vibration
+      name = Advances in Acoustics and Vibration ;
+      issn = 1687-1839 ;
+      eissn = 1687-1847
     >
 
     param[journal_id] = aav
@@ -87,7 +93,9 @@
 
   {
     title <
-      name = Advances in Artificial Intelligence
+      name = Advances in Artificial Intelligence ;
+      issn = 1687-7470 ;
+      eissn = 1687-7489
     >
 
     param[journal_id] = aai
@@ -99,7 +107,9 @@
 
   {
     title <
-      name = Advances in Artificial Neural Systems
+      name = Advances in Artificial Neural Systems ;
+      issn = 1687-7594 ;
+      eissn = 1687-7608
     >
 
     param[journal_id] = aans
@@ -110,7 +120,9 @@
 
   {
     title <
-      name = Advances in Astronomy
+      name = Advances in Astronomy ;
+      issn = 1687-7969 ;
+      eissn = 1687-7977
     >
 
     param[journal_id] = aa
@@ -122,7 +134,9 @@
 
   {
     title <
-      name = Advances in Bioinformatics
+      name = Advances in Bioinformatics ;
+      issn = 1687-8027 ;
+      eissn = 1687-8035
     >
 
     param[journal_id] = abi
@@ -134,7 +148,9 @@
 
   {
     title <
-      name = Advances in Civil Engineering
+      name = Advances in Civil Engineering ;
+      issn = 1687-8086 ;
+      eissn = 1687-8094
     >
 
     param[journal_id] = ace
@@ -146,7 +162,9 @@
 
   {
     title <
-      name = Advances in Condensed Matter Physics
+      name = Advances in Condensed Matter Physics ;
+      issn = 1687-8108 ;
+      eissn = 1687-8124
     >
 
     param[journal_id] = acmp
@@ -158,7 +176,9 @@
 
   {
     title <
-      name = Advances in Difference Equations
+      name = Advances in Difference Equations ;
+      issn = 1687-1839 ;
+      eissn = 1687-1847
     >
 
     param[journal_id] = ade
@@ -174,7 +194,9 @@
 
   {
     title <
-      name = Advances in Fuzzy Systems
+      name = Advances in Fuzzy Systems ;
+      issn = 1687-7101 ;
+      eissn = 1687-711X
     >
 
     param[journal_id] = afs
@@ -186,7 +208,9 @@
 
   {
     title <
-      name = Advances in Hematology
+      name = Advances in Hematology ;
+      issn = 1687-9104 ;
+      eissn = 1687-9112
     >
 
     param[journal_id] = ah
@@ -196,7 +220,9 @@
 
   {
     title <
-      name = Advances in High Energy Physics
+      name = Advances in High Energy Physics ;
+      issn = 1687-7357 ;
+      eissn = 1687-7365
     >
 
     param[journal_id] = ahep
@@ -209,7 +235,9 @@
 
   {
     title <
-      name = Advances in Human-Computer Interaction
+      name = Advances in Human-Computer Interaction ;
+      issn = 1687-5893 ;
+      eissn = 1687-5907
     >
 
     param[journal_id] = ahci
@@ -221,7 +249,9 @@
 
   {
     title <
-      name = Advances in Materials Science and Engineering
+      name = Advances in Materials Science and Engineering ;
+      issn = 1687-9120 ;
+      eissn = 1687-9139
     >
 
     param[journal_id] = amse
@@ -233,7 +263,9 @@
 
   {
     title <
-      name = Advances in Mathematical Physics
+      name = Advances in Mathematical Physics ;
+      issn = 1687-9120 ;
+      eissn = 1687-9139
     >
 
     param[journal_id] = amp
@@ -244,7 +276,9 @@
 
   {
     title <
-      name = Advances in Mechanical Engineering
+      name = Advances in Mechanical Engineering ;
+      issn = 1687-8132 ;
+      eissn = 1687-8140
     >
 
     param[journal_id] = ame
@@ -255,7 +289,9 @@
 
   {
     title <
-      name = Advances in Meteorology
+      name = Advances in Meteorology ;
+      issn = 1687-9309 ;
+      eissn = 1687-9317
     >
 
     param[journal_id] = amet
@@ -265,7 +301,9 @@
 
   {
     title <
-      name = Advances in Multimedia
+      name = Advances in Multimedia ;
+      issn = 1687-5680 ;
+      eissn = 1687-5699
     >
 
     param[journal_id] = am
@@ -278,7 +316,9 @@
 
   {
     title <
-      name = Advances in Nonlinear Optics
+      name = Advances in Nonlinear Optics ;
+      issn = 1687-7276 ;
+      eissn = 1687-7284
     >
 
     param[journal_id] = ano
@@ -300,7 +340,9 @@
 
   {
     title <
-      name = Advances in Operations Research
+      name = Advances in Operations Research ;
+      issn = 1687-9147 ;
+      eissn = 1687-9155
     >
 
     param[journal_id] = aor
@@ -310,7 +352,9 @@
 
   {
     title <
-      name = Advances in Optical Technologies
+      name = Advances in Optical Technologies ;
+      issn = 1687-6393 ;
+      eissn = 1687-6407
     >
 
     param[journal_id] = aot
@@ -321,7 +365,9 @@
 
   {
     title <
-      name = Advances in OptoElectronics
+      name = Advances in OptoElectronics ;
+      issn = 1687-563X ;
+      eissn = 1687-5648
     >
 
     param[journal_id] = aoe
@@ -334,7 +380,9 @@
 
   {
     title <
-      name = Advances in Pharmacological Sciences
+      name = Advances in Pharmacological Sciences ;
+      issn = 1687-6334 ;
+      eissn = 1687-6342
     >
 
     param[journal_id] = aps
@@ -346,7 +394,9 @@
 
   {
     title <
-      name = Advances in Physical Chemistry
+      name = Advances in Physical Chemistry ;
+      issn = 1687-7985 ;
+      eissn = 1687-7993
     >
 
     param[journal_id] = apc
@@ -357,7 +407,9 @@
 
   {
     title <
-      name = Advances in Software Engineering
+      name = Advances in Software Engineering ;
+      issn = 1687-8655 ;
+      eissn = 1687-8663
     >
 
     param[journal_id] = ase
@@ -367,7 +419,9 @@
 
   {
     title <
-      name = Advances in Tribology
+      name = Advances in Tribology ;
+      issn = 1687-5915 ;
+      eissn = 1687-5923
     >
 
     param[journal_id] = at
@@ -379,7 +433,9 @@
 
   {
     title <
-      name = Advances in Urology
+      name = Advances in Urology ;
+      issn = 1687-6369 ;
+      eissn = 1687-6377
     >
 
     param[journal_id] = au
@@ -391,7 +447,9 @@
 
   {
     title <
-      name = Advances in Virology
+      name = Advances in Virology ;
+      issn = 1687-8639 ;
+      eissn = 1687-8647
     >
 
     param[journal_id] = av
@@ -402,7 +460,9 @@
 
   {
     title <
-      name = Anesthesiology Research and Practice
+      name = Anesthesiology Research and Practice ;
+      issn = 1687-6962 ;
+      eissn = 1687-6970
     >
 
     param[journal_id] = arp
@@ -414,7 +474,9 @@
 
   {
     title <
-      name = Applied and Environmental Soil Science
+      name = Applied and Environmental Soil Science ;
+      issn = 1687-7667 ;
+      eissn = 1687-7675
     >
 
     param[journal_id] = aess
@@ -435,7 +497,9 @@
 
   {
     title <
-      name = Bioinorganic Chemistry and Applications
+      name = Bioinorganic Chemistry and Applications ;
+      issn = 1565-3633 ;
+      eissn = 1687-479X
     >
 
     param[journal_id] = bca
@@ -451,7 +515,9 @@
 
   {
     title <
-      name = Boundary Value Problems
+      name = Boundary Value Problems ;
+      issn = 1687-2762 ;
+      eissn = 1687-2770
     >
 
     param[journal_id] = bvp
@@ -475,7 +541,9 @@
 
   {
     title <
-      name = Clinical and Developmental Immunology
+      name = Clinical and Developmental Immunology ;
+      issn = 1740-2522 ;
+      eissn = 1740-2530
     >
 
     param[journal_id] = cdi
@@ -501,7 +569,9 @@
 
   {
     title <
-      name = Comparative and Functional Genomics
+      name = Comparative and Functional Genomics ;
+      issn = 1531-6912 ;
+      eissn = 1532-6268
     >
 
     param[journal_id] = cfg
@@ -519,7 +589,9 @@
 
   {
     title <
-      name = Computational Intelligence and Neuroscience
+      name = Computational Intelligence and Neuroscience ;
+      issn = 1687-5265 ;
+      eissn = 1687-5273
     >
 
     param[journal_id] = cin
@@ -531,7 +603,9 @@
 
   {
     title <
-      name = Current Gerontology and Geriatrics Research
+      name = Current Gerontology and Geriatrics Research ;
+      issn = 1687-7063 ;
+      eissn = 1687-7071
     >
 
     param[journal_id] = cggr
@@ -542,7 +616,9 @@
 
   {
     title <
-      name = Diagnostic and Therapeutic Endoscopy
+      name = Diagnostic and Therapeutic Endoscopy ;
+      issn = 1070-3608 ;
+      eissn = 1029-0516
     >
 
     param[journal_id] = dte
@@ -560,7 +636,9 @@
 
   {
     title <
-      name = Differential Equations and Nonlinear Mechanics
+      name = Differential Equations and Nonlinear Mechanics ;
+      issn = 1687-4099 ;
+      eissn = 1687-4102
     >
 
     param[journal_id] = denm
@@ -573,7 +651,9 @@
 
   {
     title <
-      name = Discrete Dynamics in Nature and Society
+      name = Discrete Dynamics in Nature and Society ;
+      issn = 1026-0226 ;
+      eissn = 1607-887X
     >
 
     param[journal_id] = ddns
@@ -595,7 +675,9 @@
 
   {
     title <
-      name = EURASIP Journal on Advances in Signal Processing
+      name = EURASIP Journal on Advances in Signal Processing ;
+      issn = 1110-8657 ;
+      eissn = 1687-0433
     >
 
     param[journal_id] = asp
@@ -614,7 +696,9 @@
 
   {
     title <
-      name = EURASIP Journal on Audio, Speech, and Music Processing
+      name = EURASIP Journal on Audio, Speech, and Music Processing ;
+      issn = 1687-4714 ;
+      eissn = 1687-4722
     >
 
     param[journal_id] = asmp
@@ -626,7 +710,9 @@
 
   {
     title <
-      name = EURASIP Journal on Bioinformatics and Systems Biology
+      name = EURASIP Journal on Bioinformatics and Systems Biology ;
+      issn = 1687-4145 ;
+      eissn = 1687-4153
     >
 
     param[journal_id] = bsb
@@ -640,7 +726,9 @@
 
   {
     title <
-      name = EURASIP Journal on Embedded Systems
+      name = EURASIP Journal on Embedded Systems ;
+      issn = 1687-3955 ;
+      eissn = 1687-3963
     >
 
     param[journal_id] = es
@@ -653,7 +741,9 @@
 
   {
     title <
-      name = EURASIP Journal on Image and Video Processing
+      name = EURASIP Journal on Image and Video Processing ;
+      issn = 1687-5176 ;
+      eissn = 1687-5281
     >
 
     param[journal_id] = ivp
@@ -665,7 +755,9 @@
 
   {
     title <
-      name = EURASIP Journal on Information Security
+      name = EURASIP Journal on Information Security ;
+      issn = 1687-4161 ;
+      eissn = 1687-417X
     >
 
     param[journal_id] = is
@@ -677,7 +769,9 @@
 
   {
     title <
-      name = EURASIP Journal on Wireless Communications and Networking
+      name = EURASIP Journal on Wireless Communications and Networking ;
+      issn = 1687-1472 ;
+      eissn = 1687-1499
     >
 
     param[journal_id] = wcn
@@ -692,7 +786,9 @@
 
   {
     title <
-      name = Experimental Diabetes Research
+      name = Experimental Diabetes Research ;
+      issn = 1687-5214 ;
+      eissn = 1687-5303
     >
 
     param[journal_id] = edr
@@ -709,7 +805,9 @@
 
   {
     title <
-      name = Fixed Point Theory and Applications
+      name = Fixed Point Theory and Applications ;
+      issn = 1687-1820 ;
+      eissn = 1687-1812
     >
 
     param[journal_id] = fpta
@@ -724,7 +822,9 @@
 
   {
     title <
-      name = Gastroenterology Research and Practice
+      name = Gastroenterology Research and Practice ;
+      issn = 1687-6121 ;
+      eissn = 1687-630X
     >
 
     param[journal_id] = grp
@@ -735,7 +835,9 @@
 
   {
     title <
-      name = HPB Surgery
+      name = HPB Surgery ;
+      issn = 0894-8569 ;
+      eissn = 1607-8462
     >
 
     param[journal_id] = hpb
@@ -757,7 +859,9 @@
 
   {
     title <
-      name = Infectious Diseases in Obstetrics and Gynecology
+      name = Infectious Diseases in Obstetrics and Gynecology ;
+      issn = 1064-7449 ;
+      eissn = 1098-0997
     >
 
     param[journal_id] = idog
@@ -783,7 +887,9 @@
 
   {
     title <
-      name = Interdisciplinary Perspectives on Infectious Diseases
+      name = Interdisciplinary Perspectives on Infectious Diseases ;
+      issn = 1687-708X ;
+      eissn = 1687-7098
     >
 
     param[journal_id] = ipid
@@ -794,7 +900,9 @@
 
   {
     title <
-      name = International Journal of Aerospace Engineering
+      name = International Journal of Aerospace Engineering ;
+      issn = 1687-5966 ;
+      eissn = 1687-5974
     >
 
     param[journal_id] = ijae
@@ -805,7 +913,9 @@
 
   {
     title <
-      name = International Journal of Agronomy
+      name = International Journal of Agronomy ;
+      issn = 1687-8159 ;
+      eissn = 1687-8167
     >
 
     param[journal_id] = ija
@@ -816,7 +926,9 @@
 
   {
     title <
-      name = International Journal of Analytical Chemistry
+      name = International Journal of Analytical Chemistry ;
+      issn = 1687-8760 ;
+      eissn = 1687-8779
     >
 
     param[journal_id] = ijac
@@ -826,7 +938,9 @@
 
   {
     title <
-      name = International Journal of Antennas and Propagation
+      name = International Journal of Antennas and Propagation ;
+      issn = 1687-5869 ;
+      eissn = 1687-5877
     >
 
     param[journal_id] = ijap
@@ -838,7 +952,9 @@
 
   {
     title <
-      name = International Journal of Biomaterials
+      name = International Journal of Biomaterials ;
+      issn = 1687-8787 ;
+      eissn = 1687-8795
     >
 
     param[journal_id] = ijbm
@@ -848,7 +964,9 @@
 
   {
     title <
-      name = International Journal of Biomedical Imaging
+      name = International Journal of Biomedical Imaging ;
+      issn = 1687-4188 ;
+      eissn = 1687-4196
     >
 
     param[journal_id] = ijbi
@@ -871,7 +989,9 @@
 
   {
     title <
-      name = International Journal of Cell Biology
+      name = International Journal of Cell Biology ;
+      issn = 1687-8876 ;
+      eissn = 1687-8884
     >
 
     param[journal_id] = ijcb
@@ -881,7 +1001,9 @@
 
   {
     title <
-      name = International Journal of Chemical Engineering
+      name = International Journal of Chemical Engineering ;
+      issn = 1687-806X ;
+      eissn = 1687-8078
     >
 
     param[journal_id] = ijce
@@ -892,7 +1014,9 @@
 
   {
     title <
-      name = International Journal of Combinatorics
+      name = International Journal of Combinatorics ;
+      issn = 1687-9163 ;
+      eissn = 1687-9171
     >
 
     param[journal_id] = ijct
@@ -902,7 +1026,9 @@
 
   {
     title <
-      name = International Journal of Computer Games Technology
+      name = International Journal of Computer Games Technology ;
+      issn = 1687-7047 ;
+      eissn = 1687-7055
     >
 
     param[journal_id] = ijcgt
@@ -914,7 +1040,9 @@
 
   {
     title <
-      name = International Journal of Corrosion
+      name = International Journal of Corrosion ;
+      issn = 1687-9325 ;
+      eissn = 1687-9333
     >
 
     param[journal_id] = ijc
@@ -924,7 +1052,9 @@
 
   {
     title <
-      name = International Journal of Dentistry
+      name = International Journal of Dentistry ;
+      issn = 1687-8728 ;
+      eissn = 1687-8736
     >
 
     param[journal_id] = ijd
@@ -944,7 +1074,9 @@
 
   {
     title <
-      name = International Journal of Digital Multimedia Broadcasting
+      name = International Journal of Digital Multimedia Broadcasting ;
+      issn = 1687-7578 ;
+      eissn = 1687-7586
     >
 
     param[journal_id] = ijdmb
@@ -965,7 +1097,9 @@
 
   {
     title <
-      name = International Journal of Endocrinology
+      name = International Journal of Endocrinology ;
+      issn = 1687-8337 ;
+      eissn = 1687-8345
     >
 
     param[journal_id] = ije
@@ -976,7 +1110,9 @@
 
   {
     title <
-      name = International Journal of Forestry Research
+      name = International Journal of Forestry Research ;
+      issn = 1687-9368 ;
+      eissn = 1687-9376
     >
 
     param[journal_id] = ijfr
@@ -986,7 +1122,9 @@
 
   {
     title <
-      name = International Journal of Geophysics
+      name = International Journal of Geophysics ;
+      issn = 1687-885X ;
+      eissn = 1687-8868
     >
 
     param[journal_id] = ijgp
@@ -996,7 +1134,9 @@
 
   {
     title <
-      name = International Journal of Mathematics and Mathematical Sciences
+      name = International Journal of Mathematics and Mathematical Sciences ;
+      issn = 0161-1712 ;
+      eissn = 1687-0425
     >
 
     param[journal_id] = ijmms
@@ -1044,7 +1184,9 @@
 
   {
     title <
-      name = International Journal of Microbiology
+      name = International Journal of Microbiology ;
+      issn = 1687-918X ;
+      eissn = 1687-9198
     >
 
     param[journal_id] = ijmb
@@ -1055,7 +1197,9 @@
 
   {
     title <
-      name = International Journal of Microwave Science and Technology
+      name = International Journal of Microwave Science and Technology ;
+      issn = 1687-5826 ;
+      eissn = 1687-5834
     >
 
     param[journal_id] = ijmst
@@ -1067,7 +1211,9 @@
 
   {
     title <
-      name = International Journal of Navigation and Observation
+      name = International Journal of Navigation and Observation ;
+      issn = 1687-5990 ;
+      eissn = 1687-6008
     >
 
     param[journal_id] = ijno
@@ -1078,7 +1224,9 @@
 
   {
     title <
-      name = International Journal of Oceanography
+      name = International Journal of Oceanography ;
+      issn = 1687-9406 ;
+      eissn = 1687-9414
     >
 
     param[journal_id] = ijog
@@ -1088,7 +1236,9 @@
 
   {
     title <
-      name = International Journal of Optics
+      name = International Journal of Optics ;
+      issn = 1687-9384 ;
+      eissn = 1687-9392
     >
 
     param[journal_id] = ijo
@@ -1098,7 +1248,9 @@
 
   {
     title <
-      name = International Journal of Otolaryngology
+      name = International Journal of Otolaryngology ;
+      issn = 1687-9201 ;
+      eissn = 1687-921X
     >
 
     param[journal_id] = ijol
@@ -1138,7 +1290,9 @@
 
   {
     title <
-      name = International Journal of Photoenergy
+      name = International Journal of Photoenergy ;
+      issn = 1110-662X ;
+      eissn = 1687-529X
     >
 
     param[journal_id] = ijp
@@ -1158,7 +1312,9 @@
 
   {
     title <
-      name = International Journal of Plant Genomics
+      name = International Journal of Plant Genomics ;
+      issn = 1687-5370 ;
+      eissn = 1687-5389
     >
 
     param[journal_id] = ijpg
@@ -1170,7 +1326,9 @@
 
   {
     title <
-      name = International Journal of Plasma Science and Engineering
+      name = International Journal of Plasma Science and Engineering ;
+      issn = 1687-6245 ;
+      eissn = 1687-6253
     >
 
     param[journal_id] = ijpse
@@ -1181,7 +1339,9 @@
 
   {
     title <
-      name = International Journal of Polymer Science
+      name = International Journal of Polymer Science ;
+      issn = 1687-9422 ;
+      eissn = 1687-9430
     >
 
     param[journal_id] = ijps
@@ -1191,7 +1351,9 @@
 
   {
     title <
-      name = International Journal of Power Management Electronics
+      name = International Journal of Power Management Electronics ;
+      issn = 1687-6679 ;
+      eissn = 1687-6687
     >
 
     param[journal_id] = ijpme
@@ -1202,7 +1364,9 @@
 
   {
     title <
-      name = International Journal of Quality, Statistics, and Reliability
+      name = International Journal of Quality, Statistics, and Reliability ;
+      issn = 1687-7144 ;
+      eissn = 1687-7152
     >
 
     param[journal_id] = ijqsr
@@ -1213,7 +1377,9 @@
 
   {
     title <
-      name = International Journal of Reacting Systems
+      name = International Journal of Reacting Systems ;
+      issn = 1687-6016 ;
+      eissn = 1687-6024
     >
 
     param[journal_id] = ijrs
@@ -1224,7 +1390,9 @@
 
   {
     title <
-      name = International Journal of Reconfigurable Computing
+      name = International Journal of Reconfigurable Computing ;
+      issn = 1687-7195 ;
+      eissn = 1687-7209
     >
 
     param[journal_id] = ijrc
@@ -1235,7 +1403,9 @@
 
   {
     title <
-      name = International Journal of Rheumatology
+      name = International Journal of Rheumatology ;
+      issn = 1687-9260 ;
+      eissn = 1687-9279
     >
 
     param[journal_id] = ijr
@@ -1245,7 +1415,9 @@
 
   {
     title <
-      name = International Journal of Rotating Machinery
+      name = International Journal of Rotating Machinery ;
+      issn = 1023-621X ;
+      eissn = 1542-3034
     >
 
     param[journal_id] = ijrm
@@ -1269,7 +1441,9 @@
 
   {
     title <
-      name = International Journal of Spectroscopy
+      name = International Journal of Spectroscopy ;
+      issn = 1687-9449 ;
+      eissn = 1687-9457
     >
 
     param[journal_id] = ijs
@@ -1279,7 +1453,9 @@
 
   {
     title <
-      name = International Journal of Telemedicine and Applications
+      name = International Journal of Telemedicine and Applications ;
+      issn = 1687-6415 ;
+      eissn = 1687-6423
     >
 
     param[journal_id] = ijta
@@ -1290,7 +1466,9 @@
 
   {
     title <
-      name = International Journal of Vehicular Technology
+      name = International Journal of Vehicular Technology ;
+      issn = 1687-5702 ;
+      eissn = 1687-5710
     >
 
     param[journal_id] = ijvt
@@ -1301,7 +1479,9 @@
 
   {
     title <
-      name = International Journal of Zoology
+      name = International Journal of Zoology ;
+      issn = 1687-8477 ;
+      eissn = 1687-8485
     >
 
     param[journal_id] = ijz
@@ -1322,7 +1502,9 @@
 
   {
     title <
-      name = Journal of Applied Mathematics
+      name = Journal of Applied Mathematics ;
+      issn = 1110-757X ;
+      eissn = 1687-0042
     >
 
     param[journal_id] = jam
@@ -1340,7 +1522,9 @@
 
   {
     title <
-      name = Journal of Applied Mathematics and Decision Sciences
+      name = Journal of Applied Mathematics and Decision Sciences ;
+      issn = 1173-9126 ;
+      eissn = 1532-7612
     >
 
     param[journal_id] = jamds
@@ -1362,7 +1546,9 @@
 
   {
     title <
-      name = Journal of Applied Mathematics and Stochastic Analysis
+      name = Journal of Applied Mathematics and Stochastic Analysis ;
+      issn = 1048-9533 ;
+      eissn = 1687-2177
     >
 
     param[journal_id] = jamsa
@@ -1393,7 +1579,9 @@
 
   {
     title <
-      name = Journal of Artificial Evolution and Applications
+      name = Journal of Artificial Evolution and Applications ;
+      issn = 1687-6229 ;
+      eissn = 1687-6237
     >
 
     param[journal_id] = jaea
@@ -1404,7 +1592,9 @@
 
   {
     title <
-      name = Journal of Atomic, Molecular, and Optical Physics
+      name = Journal of Atomic, Molecular, and Optical Physics ;
+      issn = 1687-9228 ;
+      eissn = 1687-9236
     >
 
     param[journal_id] = jamop
@@ -1414,7 +1604,9 @@
 
   {
     title <
-      name = Journal of Automated Methods and Management in Chemistry
+      name = Journal of Automated Methods and Management in Chemistry ;
+      issn = 1463-9246 ;
+      eissn = 1464-5068
     >
 
     param[journal_id] = jammc
@@ -1453,7 +1645,9 @@
 
   {
     title <
-      name = Journal of Biomedicine and Biotechnology
+      name = Journal of Biomedicine and Biotechnology ;
+      issn = 1110-7243 ;
+      eissn = 1110-7251
     >
 
     param[journal_id] = jbb
@@ -1472,7 +1666,9 @@
 
   {
     title <
-      name = Journal of Biophysics
+      name = Journal of Biophysics ;
+      issn = 1687-8000 ;
+      eissn = 1687-8019
     >
 
     param[journal_id] = jbp
@@ -1483,7 +1679,9 @@
 
   {
     title <
-      name = Journal of Cancer Epidemiology
+      name = Journal of Cancer Epidemiology ;
+      issn = 1687-8558 ;
+      eissn = 1687-8566
     >
 
     param[journal_id] = jce
@@ -1494,7 +1692,9 @@
 
   {
     title <
-      name = Journal of Computer Systems, Networks, and Communications
+      name = Journal of Computer Systems, Networks, and Communications ;
+      issn = 1687-7381 ;
+      eissn = 1687-739X
     >
 
     param[journal_id] = jcsnc
@@ -1505,7 +1705,9 @@
 
   {
     title <
-      name = Journal of Control Science and Engineering
+      name = Journal of Control Science and Engineering ;
+      issn = 1687-5249 ;
+      eissn = 1687-5257
     >
 
     param[journal_id] = jcse
@@ -1527,7 +1729,9 @@
 
   {
     title <
-      name = Journal of Geological Research
+      name = Journal of Geological Research ;
+      issn = 1687-8833 ;
+      eissn = 1687-8841
     >
 
     param[journal_id] = jgr
@@ -1537,7 +1741,9 @@
 
   {
     title <
-      name = Journal of Inequalities and Applications
+      name = Journal of Inequalities and Applications ;
+      issn = 1025-5834 ;
+      eissn = 1029-242X
     >
 
     param[journal_id] = jia
@@ -1568,7 +1774,9 @@
 
   {
     title <
-      name = Journal of Marine Biology
+      name = Journal of Marine Biology ;
+      issn = 1687-9481 ;
+      eissn = 1687-949X
     >
 
     param[journal_id] = jmb
@@ -1578,7 +1786,9 @@
 
   {
     title <
-      name = Journal of Metallurgy
+      name = Journal of Metallurgy ;
+      issn = 1687-9465 ;
+      eissn = 1687-9473
     >
 
     param[journal_id] = jm
@@ -1588,7 +1798,9 @@
 
   {
     title <
-      name = Journal of Nanomaterials
+      name = Journal of Nanomaterials ;
+      issn = 1687-4110 ;
+      eissn = 1687-4129
     >
 
     param[journal_id] = jnm
@@ -1601,7 +1813,9 @@
 
   {
     title <
-      name = Journal of Nanotechnology
+      name = Journal of Nanotechnology ;
+      issn = 1687-9503 ;
+      eissn = 1687-9511
     >
 
     param[journal_id] = jnt
@@ -1611,7 +1825,9 @@
 
   {
     title <
-      name = Journal of Oncology
+      name = Journal of Oncology ;
+      issn = 1687-8450 ;
+      eissn = 1687-8469
     >
 
     param[journal_id] = jo
@@ -1632,7 +1848,9 @@
 
   {
     title <
-      name = Journal of Probability and Statistics
+      name = Journal of Probability and Statistics ;
+      issn = 1687-952X ;
+      eissn = 1687-9538
     >
 
     param[journal_id] = jps
@@ -1642,7 +1860,8 @@
 
   {
     title <
-      name = Journal of Robotics
+      name = Journal of Robotics ;
+      issn = XXXX-XXXX
     >
 
     param[journal_id] = jr
@@ -1652,7 +1871,9 @@
 
   {
     title <
-      name = Journal of Sensors
+      name = Journal of Sensors ;
+      issn = 1687-725X ;
+      eissn = 1687-7268
     >
 
     param[journal_id] = js
@@ -1663,7 +1884,9 @@
 
   {
     title <
-      name = Journal of Thermodynamics
+      name = Journal of Thermodynamics ;
+      issn = 1687-9244 ;
+      eissn = 1687-9252
     >
 
     param[journal_id] = jtd
@@ -1673,7 +1896,9 @@
 
   {
     title <
-      name = Journal of Toxicology
+      name = Journal of Toxicology ;
+      issn = 1687-8191 ;
+      eissn = 1687-8205
     >
 
     param[journal_id] = jt
@@ -1704,7 +1929,9 @@
 
   {
     title <
-      name = Laser Chemistry
+      name = Laser Chemistry ;
+      issn = 0278-6273 ;
+      eissn = 1476-3516
     >
 
     param[journal_id] = lc
@@ -1737,7 +1964,9 @@
 
   {
     title <
-      name = Mathematical Problems in Engineering
+      name = Mathematical Problems in Engineering ;
+      issn = 1024-123X ;
+      eissn = 1563-5147
     >
 
     param[journal_id] = mpe
@@ -1761,7 +1990,9 @@
 
   {
     title <
-      name = Mediators of Inflammation
+      name = Mediators of Inflammation ;
+      issn = 0962-9351 ;
+      eissn = 1466-1861
     >
 
     param[journal_id] = mi
@@ -1788,7 +2019,9 @@
 
   {
     title <
-      name = Metal-Based Drugs
+      name = Metal-Based Drugs ;
+      issn = 0793-0291 ;
+      eissn = 1687-5486
     >
 
     param[journal_id] = mbd
@@ -1809,7 +2042,9 @@
 
   {
     title <
-      name = Modelling and Simulation in Engineering
+      name = Modelling and Simulation in Engineering ;
+      issn = 1687-5591 ;
+      eissn = 1687-5605
     >
 
     param[journal_id] = mse
@@ -1821,7 +2056,9 @@
 
   {
     title <
-      name = Neural Plasticity
+      name = Neural Plasticity ;
+      issn = 0792-8483 ;
+      eissn = 1687-5443
     >
 
     param[journal_id] = np
@@ -1845,7 +2082,8 @@
 
   {
     title <
-      name = Obstetrics and Gynecology International
+      name = Obstetrics and Gynecology International ;
+      issn = XXXX-XXXX
     >
 
     param[journal_id] = ogi
@@ -1855,7 +2093,9 @@
 
   {
     title <
-      name = Physical Separation in Science and Engineering
+      name = Physical Separation in Science and Engineering ;
+      issn = 1478-6478 ;
+      eissn = 1478-6486
     >
 
     param[journal_id] = psse
@@ -1880,7 +2120,9 @@
 
   {
     title <
-      name = PPAR Research
+      name = PPAR Research ;
+      issn = 1687-4757 ;
+      eissn = 1687-4765
     >
 
     param[journal_id] = ppar
@@ -1893,7 +2135,9 @@
 
   {
     title <
-      name = Psyche
+      name = Psyche ;
+      issn = 0033-2615 ;
+      eissn = 1687-7438
     >
 
     param[journal_id] = psyche
@@ -2014,7 +2258,9 @@
 
   {
     title <
-      name = Research Letters in Biochemistry
+      name = Research Letters in Biochemistry ;
+      issn = 1687-6709 ;
+      eissn = 1687-6717
     >
 
     param[journal_id] = rlbc
@@ -2025,7 +2271,9 @@
 
   {
     title <
-      name = Research Letters in Communications
+      name = Research Letters in Communications ;
+      issn = 1687-6741 ;
+      eissn = 1687-675X
     >
 
     param[journal_id] = rlc
@@ -2037,7 +2285,9 @@
 
   {
     title <
-      name = Research Letters in Ecology
+      name = Research Letters in Ecology ;
+      issn = 1687-6768 ;
+      eissn = 1687-6776
     >
 
     param[journal_id] = rleco
@@ -2049,7 +2299,9 @@
 
   {
     title <
-      name = Research Letters in Electronics
+      name = Research Letters in Electronics ;
+      issn = 1687-6784 ;
+      eissn = 1687-6792
     >
 
     param[journal_id] = rle
@@ -2060,7 +2312,9 @@
 
   {
     title <
-      name = Research Letters in Inorganic Chemistry
+      name = Research Letters in Inorganic Chemistry ;
+      issn = 1687-6806 ;
+      eissn = 1687-6814
     >
 
     param[journal_id] = rlic
@@ -2071,7 +2325,9 @@
 
   {
     title <
-      name = Research Letters in Materials Science
+      name = Research Letters in Materials Science ;
+      issn = 1687-6822 ;
+      eissn = 1687-6830
     >
 
     param[journal_id] = rlms
@@ -2083,7 +2339,9 @@
 
   {
     title <
-      name = Research Letters in Nanotechnology
+      name = Research Letters in Nanotechnology ;
+      issn = 1687-6849 ;
+      eissn = 1687-6857
     >
 
     param[journal_id] = rlnt
@@ -2094,7 +2352,9 @@
 
   {
     title <
-      name = Research Letters in Optics
+      name = Research Letters in Optics ;
+      issn = 1687-8175 ;
+      eissn = 1687-8183
     >
 
     param[journal_id] = rlo
@@ -2105,7 +2365,9 @@
 
   {
     title <
-      name = Research Letters in Organic Chemistry
+      name = Research Letters in Organic Chemistry ;
+      issn = 1687-6865 ;
+      eissn = 1687-6938
     >
 
     param[journal_id] = rloc
@@ -2116,7 +2378,9 @@
 
   {
     title <
-      name = Research Letters in Physical Chemistry
+      name = Research Letters in Physical Chemistry ;
+      issn = 1687-6873 ;
+      eissn = 1687-6881
     >
 
     param[journal_id] = rlpc
@@ -2128,7 +2392,9 @@
 
   {
     title <
-      name = Research Letters in Physics
+      name = Research Letters in Physics ;
+      issn = 1687-689X ;
+      eissn = 1687-6903
     >
 
     param[journal_id] = rlp
@@ -2139,7 +2405,9 @@
 
   {
     title <
-      name = Research Letters in Signal Processing
+      name = Research Letters in Signal Processing ;
+      issn = 1687-6911 ;
+      eissn = 1687-692X
     >
 
     param[journal_id] = rlsp
@@ -2151,7 +2419,9 @@
 
   {
     title <
-      name = Sarcoma
+      name = Sarcoma ;
+      issn = 1357-714X ;
+      eissn = 1369-1643
     >
 
     param[journal_id] = srcm
@@ -2173,7 +2443,9 @@
 
   {
     title <
-      name = Science and Technology of Nuclear Installations
+      name = Science and Technology of Nuclear Installations ;
+      issn = 1687-6075 ;
+      eissn = 1687-6083
     >
 
     param[journal_id] = stni
@@ -2186,7 +2458,9 @@
 
   {
     title <
-      name = Texture, Stress, and Microstructure
+      name = Texture, Stress, and Microstructure ;
+      issn = 1687-5397 ;
+      eissn = 1687-5400
     >
 
     param[journal_id] = tsm
@@ -2227,7 +2501,9 @@
 
   {
     title <
-      name = VLSI Design
+      name = VLSI Design ;
+      issn = 1065-514X ;
+      eissn = 1563-5171
     >
 
     param[journal_id] = vlsi
@@ -2254,7 +2530,9 @@
 
   {
     title <
-      name = X-Ray Optics and Instrumentation
+      name = X-Ray Optics and Instrumentation ;
+      issn = 1687-7632 ;
+      eissn = 1687-7640
     >
 
     param[journal_id] = xroi

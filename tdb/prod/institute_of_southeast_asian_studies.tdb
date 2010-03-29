@@ -9,7 +9,9 @@
 
   {
     title <
-      name = ASEAN Economic Bulletin
+      name = ASEAN Economic Bulletin ;
+      issn = 0217-4472 ;
+      eissn = 1793-2831
     >
 
     param[journal_dir] = asean_economic_bulletin
@@ -23,7 +25,9 @@
 
   {
     title <
-      name = Contemporary Southeast Asia: A Journal of International and Strategic Affairs
+      name = Contemporary Southeast Asia: A Journal of International and Strategic Affairs ;
+      issn = 0129-797X ;
+      eissn = 1793-284X
     >
 
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
@@ -37,7 +41,9 @@
 
   {
     title <
-      name = Sojourn: Journal of Social Issues in Southeast Asia
+      name = Sojourn: Journal of Social Issues in Southeast Asia ;
+      issn = 0217-9520 ;
+      eissn = 1793-2858
     >
 
     param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
@@ -51,7 +57,9 @@
 
   {
     title <
-      name = Southeast Asian Affairs
+      name = Southeast Asian Affairs ;
+      issn = 0377-5437 ;
+      eissn = 1793-9135
     >
 
     param[journal_dir] = southeast_asian_affairs

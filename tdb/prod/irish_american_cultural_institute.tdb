@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Éire-Ireland 
+      name = Éire-Ireland ;
+      issn = 0013-2683 ;
+      eissn = 1550-5162
     >
 
     param[journal_dir] = eire-ireland

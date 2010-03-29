@@ -10,7 +10,9 @@
 
   {
     title <
-      name = American Imago 
+      name = American Imago ;
+      issn = 0065-860X ;
+      eissn = 1085-7931
     >
 
     param[journal_dir] = american_imago
@@ -35,7 +37,9 @@
 
   {
     title <
-      name = American Jewish History 
+      name = American Jewish History ;
+      issn = 0164-0178 ;
+      eissn = 1086-3141
     >
 
     param[journal_dir] = american_jewish_history
@@ -56,7 +60,9 @@
 
   {
     title <
-      name = American Journal of Mathematics 
+      name = American Journal of Mathematics ;
+      issn = 0002-9327 ;
+      eissn = 1080-6377
     >
 
     param[journal_dir] = american_journal_of_mathematics
@@ -81,7 +87,9 @@
 
   {
     title <
-      name = American Journal of Philology 
+      name = American Journal of Philology ;
+      issn = 0002-9475 ;
+      eissn = 1086-3168
     >
 
     param[journal_dir] = american_journal_of_philology
@@ -105,7 +113,9 @@
 
   {
     title <
-      name = American Quarterly 
+      name = American Quarterly ;
+      issn = 0003-0678 ;
+      eissn = 1080-6490
     >
 
     param[journal_dir] = american_quarterly
@@ -129,7 +139,9 @@
 
   {
     title <
-      name = Arethusa 
+      name = Arethusa ;
+      issn = 0004-0975 ;
+      eissn = 1080-6504
     >
 
     param[journal_dir] = arethusa
@@ -154,7 +166,7 @@
 
   {
     title <
-      name = Book History 
+      name = Book History
     >
 
     param[journal_dir] = book_history
@@ -177,7 +189,9 @@
   {
 
     title <
-      name = Bookbird: A Journal of International Children's Literature
+      name = Bookbird: A Journal of International Children's Literature ;
+      issn = 0006-7377 ;
+      eissn = 1918-6983
     >
 
     param[journal_dir] = bookbird
@@ -190,7 +204,9 @@
 
   {
     title <
-      name = Bulletin of the Center for Children's Books 
+      name = Bulletin of the Center for Children's Books ;
+      issn = 0008-9036 ;
+      eissn = 1558-6766
     >
 
     param[journal_dir] = bulletin_of_the_center_for_childrens_books
@@ -205,7 +221,9 @@
 
   {
     title <
-      name = Bulletin of the Center for Children's Books 
+      name = Bulletin of the Center for Children's Books ;
+      issn = 0008-9036 ;
+      eissn = 1558-6766
     >
 
     param[journal_dir] = bulletin_of_the_center_for_childrens_books
@@ -219,7 +237,9 @@
 
   {
     title <
-      name = Bulletin of the History of Medicine 
+      name = Bulletin of the History of Medicine ;
+      issn = 0007-5140 ;
+      eissn = 1086-3176
     >
 
     param[journal_dir] = bulletin_of_the_history_of_medicine
@@ -243,7 +263,9 @@
   
   {
     title <
-      name = Callaloo 
+      name = Callaloo ;
+      issn = 0161-2492 ;
+      eissn = 1080-6512
     >
 
     param[journal_dir] = callaloo
@@ -268,7 +290,9 @@
 
   {
     title <
-      name = Children's Literature 
+      name = Children's Literature ;
+      issn = 0092-8208 ;
+      eissn = 1543-3374
     >
 
     param[journal_dir] = childrens_literature
@@ -315,7 +339,9 @@
 
   {
     title <
-      name = Children's Literature Association Quarterly 
+      name = Children's Literature Association Quarterly ;
+      issn = 0885-0429 ;
+      eissn = 1553-1201
     >
 
     param[journal_dir] = childrens_literature_association_quarterly
@@ -330,7 +356,9 @@
 
   {
     title <
-      name = Comparative Technology Transfer and Society 
+      name = Comparative Technology Transfer and Society ;
+      issn = 1542-0132 ;
+      eissn = 1543-3404
     >
 
     param[journal_dir] = comparative_technology_transfer_and_society
@@ -346,7 +374,9 @@
 
   {
     title <
-      name = Configurations 
+      name = Configurations ;
+      issn = 1063-1801 ;
+      eissn = 1080-6520
     >
 
     param[journal_dir] = configurations
@@ -371,7 +401,9 @@
 
   {
     title <
-      name = diacritics 
+      name = diacritics ;
+      issn = 0300-7162 ;
+      eissn = 1080-6539
     >
 
     param[journal_dir] = diacritics
@@ -393,7 +425,9 @@
 
   {
     title <
-      name = Eighteenth-Century Studies 
+      name = Eighteenth-Century Studies ;
+      issn = 0013-2586 ;
+      eissn = 1086-315X
     >
 
     param[journal_dir] = eighteenth-century_studies
@@ -417,7 +451,9 @@
 
   {
     title <
-      name = ELH 
+      name = ELH ;
+      issn = 0013-8304 ;
+      eissn = 1080-6547
     >
 
     param[journal_dir] = elh
@@ -457,7 +493,9 @@
   {
 
     title <
-      name = Historically Speaking
+      name = Historically Speaking ;
+      issn = 1941-4188 ;
+      eissn = 1944-6438
     >
 
     param[journal_dir] = historically_speaking
@@ -470,7 +508,9 @@
   {
 
     title <
-      name = The Hopkins Review
+      name = The Hopkins Review ;
+      issn = 1939-6589 ;
+      eissn = 1939-9774
     >
 
     param[journal_dir] = the_hopkins_review
@@ -483,7 +523,9 @@
   
   {
     title <
-      name = Human Rights Quarterly 
+      name = Human Rights Quarterly ;
+      issn = 0275-0392 ;
+      eissn = 1085-794X
     >
 
     param[journal_dir] = human_rights_quarterly
@@ -508,7 +550,9 @@
 
   {
     title <
-      name = Journal of Asian American Studies 
+      name = Journal of Asian American Studies ;
+      issn = 1097-2129 ;
+      eissn = 1096-8598
     >
 
     param[journal_dir] = journal_of_asian_american_studies
@@ -529,7 +573,9 @@
 
   {
     title <
-      name = Journal of College Student Development 
+      name = Journal of College Student Development ;
+      issn = 0897-5264 ;
+      eissn = 1543-3382
     >
 
     param[journal_dir] = journal_of_college_student_development
@@ -546,7 +592,8 @@
 
   {
     title <
-      name = Journal of Colonialism and Colonial History 
+      name = Journal of Colonialism and Colonial History ;
+      issn = 1532-5768
     >
 
     param[journal_dir] = journal_of_colonialism_and_colonial_history
@@ -565,7 +612,9 @@
 
   {
     title <
-      name = Journal of Democracy 
+      name = Journal of Democracy ;
+      issn = 1045-5736 ;
+      eissn = 1086-3214
     >
 
     param[journal_dir] = journal_of_democracy
@@ -590,7 +639,9 @@
 
   {
     title <
-      name = Journal of Early Christian Studies 
+      name = Journal of Early Christian Studies ;
+      issn = 1067-6341 ;
+      eissn = 1086-3184
     >
 
     param[journal_dir] = journal_of_early_christian_studies
@@ -614,7 +665,9 @@
 
   {
     title <
-      name = Journal of Health Care for the Poor and Underserved 
+      name = Journal of Health Care for the Poor and Underserved ;
+      issn = 1049-2089 ;
+      eissn = 1548-6869
     >
 
     param[journal_dir] = journal_of_health_care_for_the_poor_and_underserved
@@ -631,7 +684,9 @@
   {
 
     title <
-      name = Journal of Late Antiquity
+      name = Journal of Late Antiquity ;
+      issn = 1939-6716 ;
+      eissn = 1942-1273
     >
 
     param[journal_dir] = journal_of_late_antiquity
@@ -643,7 +698,9 @@
 
   {
     title <
-      name = Journal of Modern Greek Studies 
+      name = Journal of Modern Greek Studies ;
+      issn = 0738-1727 ;
+      eissn = 1086-3265
     >
 
     param[journal_dir] = journal_of_modern_greek_studies
@@ -680,7 +737,9 @@
 
   {
     title <
-      name = Journal of the History of Philosophy 
+      name = Journal of the History of Philosophy ;
+      issn = 0022-5053 ;
+      eissn = 1538-4586
     >
 
     param[journal_dir] = journal_of_the_history_of_philosophy
@@ -700,7 +759,9 @@
 
   {
     title <
-      name = Journal of Women's History 
+      name = Journal of Women's History ;
+      issn = 1042-7961 ;
+      eissn = 1527-2036
     >
 
     param[journal_dir] = journal_of_womens_history
@@ -721,7 +782,9 @@
 
   {
     title <
-      name = Kennedy Institute of Ethics Journal 
+      name = Kennedy Institute of Ethics Journal ;
+      issn = 1054-6863 ;
+      eissn = 1086-3249
     >
 
     param[journal_dir] = kennedy_institute_of_ethics_journal
@@ -744,7 +807,9 @@
 
   {
     title <
-      name = L'Esprit Créateur 
+      name = L'Esprit Créateur ;
+      issn = 0014-0767 ;
+      eissn = 1931-0234
     >
 
     param[journal_dir] = lesprit_createur
@@ -757,7 +822,9 @@
 
   {
     title <
-      name = Late Imperial China 
+      name = Late Imperial China ;
+      issn = 0884-3236 ;
+      eissn = 1086-3257
     >
 
     param[journal_dir] = late_imperial_china
@@ -780,7 +847,9 @@
 
   {
     title <
-      name = Library Trends 
+      name = Library Trends ;
+      issn = 0024-2594 ;
+      eissn = 1559-0682
     >
 
     param[journal_dir] = library_trends
@@ -794,7 +863,8 @@
 
   {
     title <
-      name = Literature and Medicine 
+      name = Literature and Medicine ;
+      issn = 0278-9671
     >
 
     param[journal_dir] = literature_and_medicine
@@ -817,7 +887,9 @@
 
   {
     title <
-      name = MFS Modern Fiction Studies 
+      name = MFS Modern Fiction Studies ;
+      issn = 0026-7724 ;
+      eissn = 1080-658X
     >
 
     param[journal_dir] = modern_fiction_studies
@@ -842,7 +914,9 @@
 
   {
     title <
-      name = Milton Quarterly 
+      name = Milton Quarterly ;
+      issn = 0026-4326 ;
+      eissn = 1094-348X
     >
 
     param[journal_dir] = milton_quarterly
@@ -856,7 +930,9 @@
 
   {
     title <
-      name = MLN 
+      name = MLN ;
+      issn = 0026-7910 ;
+      eissn = 1080-6598
     >
 
     param[journal_dir] = mln
@@ -880,7 +956,9 @@
 
   {
     title <
-      name = Modernism/modernity 
+      name = Modernism/modernity ;
+      issn = 1071-6068 ;
+      eissn = 1080-6601
     >
 
     param[journal_dir] = modernism-modernity
@@ -906,7 +984,9 @@
 
   {
     title <
-      name = New Literary History 
+      name = New Literary History ;
+      issn = 0028-6087 ;
+      eissn = 1080-661X
     >
 
     param[journal_dir] = new_literary_history
@@ -951,7 +1031,8 @@
   
   {
     title <
-      name = Partial Answers: Journal of Literature and the History of Ideas 
+      name = Partial Answers: Journal of Literature and the History of Ideas ;
+      issn = 1565-3668
     >
 
     param[journal_dir] = partial_answers
@@ -964,7 +1045,9 @@
 
   {
     title <
-      name = Perspectives in Biology and Medicine 
+      name = Perspectives in Biology and Medicine ;
+      issn = 0031-5982 ;
+      eissn = 1529-8795
     >
 
     param[journal_dir] = perspectives_in_biology_and_medicine
@@ -984,7 +1067,9 @@
 
   {
     title <
-      name = Philosophy and Literature 
+      name = Philosophy and Literature ;
+      issn = 0190-0013 ;
+      eissn = 1086-329X
     >
 
     param[journal_dir] = philosophy_and_literature
@@ -1008,7 +1093,7 @@
 
   {
     title <
-      name = Philosophy, Psychiatry & Psychology 
+      name = Philosophy, Psychiatry & Psychology
     >
 
     param[journal_dir] = philosophy_psychiatry_and_psychology
@@ -1031,7 +1116,9 @@
 
   {
     title <
-      name = portal: Libraries and the Academy 
+      name = portal: Libraries and the Academy ;
+      issn = 1531-2542 ;
+      eissn = 1530-7131
     >
 
     param[journal_dir] = portal_libraries_and_the_academy
@@ -1050,7 +1137,8 @@
 
   {
     title <
-      name = Postmodern Culture 
+      name = Postmodern Culture ;
+      issn = 1053-1920
     >
 
     param[journal_dir] = postmodern_culture
@@ -1078,7 +1166,8 @@
 
   {
     title <
-      name = Progress in Community Health Partnerships: Research, Education, and Action 
+      name = Progress in Community Health Partnerships: Research, Education, and Action ;
+      issn = 1557-0541
     >
 
     param[journal_dir] = progress_in_community_health_partnerships_research_education_and_action
@@ -1090,7 +1179,9 @@
 
   {
     title <
-      name = Reviews in American History 
+      name = Reviews in American History ;
+      issn = 0048-7511 ;
+      eissn = 1080-6628
     >
 
     param[journal_dir] = reviews_in_american_history
@@ -1115,7 +1206,9 @@
 
   {
     title <
-      name = SAIS Review 
+      name = SAIS Review ;
+      issn = 0036-0775 ;
+      eissn = 1088-3142
     >
 
     param[journal_dir] = sais_review
@@ -1139,7 +1232,9 @@
 
   {
     title <
-      name = SEL Studies in English Literature 1500-1900 
+      name = SEL Studies in English Literature 1500-1900 ;
+      issn = 0039-3657 ;
+      eissn = 1522-9270
     >
 
     param[journal_dir] = studies_in_english_literature
@@ -1160,7 +1255,8 @@
 
   {
     title <
-      name = Sewanee Review 
+      name = Sewanee Review ;
+      issn = 0037-3052
     >
 
     param[journal_dir] = sewanee_review
@@ -1173,7 +1269,9 @@
 
   {
     title <
-      name = Shakespeare Bulletin 
+      name = Shakespeare Bulletin ;
+      issn = 0748-2558 ;
+      eissn = 1931-1427
     >
 
     param[journal_dir] = shakespeare_bulletin
@@ -1186,7 +1284,9 @@
 
   {
     title <
-      name = Shakespeare Quarterly 
+      name = Shakespeare Quarterly ;
+      issn = 0037-3222 ;
+      eissn = 1538-3555
     >
 
     param[journal_dir] = shakespeare_quarterly
@@ -1204,7 +1304,9 @@
 
   {
     title <
-      name = Sirena: poesia, arte y critica 
+      name = Sirena: poesia, arte y critica ;
+      issn = 1548-6400 ;
+      eissn = 1554-7655
     >
 
     param[journal_dir] = sirena_poesia_arte_y_critica
@@ -1218,7 +1320,9 @@
 
   {
     title <
-      name = South Central Review 
+      name = South Central Review ;
+      issn = 0743-6831 ;
+      eissn = 1549-3377
     >
 
     param[journal_dir] = south_central_review
@@ -1233,7 +1337,9 @@
 
   {
     title <
-      name = Spiritus: A Journal of Christian Spirituality 
+      name = Spiritus: A Journal of Christian Spirituality ;
+      issn = 1533-1709 ;
+      eissn = 1535-3117
     >
 
     param[journal_dir] = spiritus
@@ -1251,7 +1357,9 @@
 
   {
     title <
-      name = Studies in Eighteenth Century Culture
+      name = Studies in Eighteenth Century Culture ;
+      issn = 0360-2370 ;
+      eissn = 1938-6133
     >
 
     param[journal_dir] = studies_in_eighteenth_century_culture
@@ -1265,7 +1373,9 @@
   
   {
     title <
-      name = Technology and Culture 
+      name = Technology and Culture ;
+      issn = 0040-165X ;
+      eissn = 1097-3729
     >
 
     param[journal_dir] = technology_and_culture
@@ -1287,7 +1397,9 @@
 
   {
     title <
-      name = The Emily Dickinson Journal 
+      name = The Emily Dickinson Journal ;
+      issn = 1059-6879 ;
+      eissn = 1096-858X
     >
 
     param[journal_dir] = emily_dickinson_journal
@@ -1308,7 +1420,9 @@
 
   {
     title <
-      name = The Henry James Review 
+      name = The Henry James Review ;
+      issn = 0273-0340 ;
+      eissn = 1080-6555
     >
 
     param[journal_dir] = henry_james_review
@@ -1333,7 +1447,9 @@
 
   {
     title <
-      name = The Lion and the Unicorn 
+      name = The Lion and the Unicorn ;
+      issn = 0147-2593 ;
+      eissn = 1080-6563
     >
 
     param[journal_dir] = lion_and_the_unicorn
@@ -1358,7 +1474,9 @@
 
   {
     title <
-      name = The Review of Higher Education 
+      name = The Review of Higher Education ;
+      issn = 0162-5748 ;
+      eissn = 1090-7009
     >
 
     param[journal_dir] = review_of_higher_education
@@ -1381,7 +1499,9 @@
 
   {
     title <
-      name = The Yale Journal of Criticism 
+      name = The Yale Journal of Criticism ;
+      issn = 0893-5378 ;
+      eissn = 1080-6636
     >
 
     param[journal_dir] = yale_journal_of_criticism
@@ -1401,7 +1521,9 @@
 
   {
     title <
-      name = Theatre Journal 
+      name = Theatre Journal ;
+      issn = 0192-2882 ;
+      eissn = 1086-332X
     >
 
     param[journal_dir] = theatre_journal
@@ -1424,7 +1546,9 @@
 
   {
     title <
-      name = Theatre Topics 
+      name = Theatre Topics ;
+      issn = 1054-8378 ;
+      eissn = 1086-3346
     >
 
     param[journal_dir] = theatre_topics
@@ -1448,7 +1572,7 @@
 
   {
     title <
-      name = Theory and Event 
+      name = Theory and Event
     >
 
     param[journal_dir] = theory_and_event
@@ -1469,7 +1593,9 @@
 
   {
     title <
-      name = Transactions of the American Philological Association 
+      name = Transactions of the American Philological Association ;
+      issn = 0360-5949 ;
+      eissn = 1533-0699
     >
 
     param[journal_dir] = transactions_of_the_american_philological_association
@@ -1488,7 +1614,9 @@
   
   {
     title <
-      name = Victorian Periodicals Review
+      name = Victorian Periodicals Review ;
+      issn = 0709-4698 ;
+      eissn = 1712-526X
     >
 
     param[journal_dir] = victorian_periodicals_review
@@ -1503,7 +1631,9 @@
   
   {
     title <
-      name = Wide Angle 
+      name = Wide Angle ;
+      issn = 0160-6840 ;
+      eissn = 1086-3354
     >
 
     param[journal_dir] = wide_angle

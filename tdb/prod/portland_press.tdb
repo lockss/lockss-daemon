@@ -8,7 +8,7 @@
   
   {
     title <
-      name = Biochemical Journal 
+      name = Biochemical Journal
     >
 
     param[base_url] = http://www.biochemj.org/
@@ -441,7 +441,9 @@ comment[bj1] = no permission from publisher
   
  {
     title <
-      name = Biology of the Cell
+      name = Biology of the Cell ;
+      issn = 0248-4900 ;
+      eissn = 1768-322X
     >
 
     param[base_url] = http://www.biolcell.org/
@@ -508,7 +510,9 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
   
   {
     title <
-      name = Biochemical Society Transactions
+      name = Biochemical Society Transactions ;
+      issn = 0300-5127 ;
+      eissn = 1470-8752
     >
 
     param[base_url] = http://www.biochemsoctrans.org/
@@ -534,7 +538,9 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
   
   {
     title <
-      name = Bioscience Reports
+      name = Bioscience Reports ;
+      issn = 0144-8463 ;
+      eissn = 1573-4935
     >
 
     param[base_url] = http://www.bioscirep.org/
@@ -574,7 +580,9 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
 
   {
     title <
-      name = Biotechnology and Applied Biochemistry
+      name = Biotechnology and Applied Biochemistry ;
+      issn = 0885-4513 ;
+      eissn = 1470-8744
     >
 
 comment[bab] = not_ready because of 500 errors
@@ -632,7 +640,9 @@ comment[bab] = not_ready because of 500 errors
 
   {
     title <
-      name = Clinical Science
+      name = Clinical Science ;
+      issn = 0143-5221 ;
+      eissn = 1470-8736
     >
 
 comment[cs103_107] = 500 errors
@@ -705,7 +715,9 @@ comment[cs103_107] = 500 errors
   
   {
     title <
-      name = Essays in Biochemistry
+      name = Essays in Biochemistry ;
+      issn = 0071-1365 ;
+      eissn = 1744-1358
     >
 
     param[base_url] = http://essays.biochemistry.org/

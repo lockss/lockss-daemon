@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Cuban Studies
+      name = Cuban Studies ;
+      issn = 0361-4441 ;
+      eissn = 1548-2464
     >
 
     param[journal_dir] = cuban_studies

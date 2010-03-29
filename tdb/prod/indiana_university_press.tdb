@@ -9,7 +9,8 @@
 
   {
     title <
-      name = Africa Today
+      name = Africa Today ;
+      issn = 1154-7311
     >
 
     param[journal_dir] = africa_today
@@ -30,7 +31,9 @@
 
   {
     title <
-      name = Aleph: Historical Studies in Science and Judaism
+      name = Aleph: Historical Studies in Science and Judaism ;
+      issn = 1565-1525 ;
+      eissn = 1553-3956
     >
 
     param[journal_dir] = aleph_historical_studies_in_science_and_judaism
@@ -57,7 +60,9 @@
 
   {
     title <
-      name = Bridges: A Jewish Feminist Journal
+      name = Bridges: A Jewish Feminist Journal ;
+      issn = 1046-8358 ;
+      eissn = 1558-9552
     >
 
     param[journal_dir] = bridges_a_jewish_feminists_journal
@@ -71,7 +76,9 @@
 
   {
     title <
-      name = e-Service Journal
+      name = e-Service Journal ;
+      issn = 1528-8226 ;
+      eissn = 1528-8234
     >
 
     param[journal_dir] = eservice_journal
@@ -87,7 +94,9 @@
   
   {
     title <
-      name = Ethics & the Environment
+      name = Ethics & the Environment ;
+      issn = 1085-6633 ;
+      eissn = 1535-5306
     >
 
     param[journal_dir] = ethics_and_the_environment
@@ -106,7 +115,9 @@
 
   {
     title <
-      name = Film History: An International Journal
+      name = Film History: An International Journal ;
+      issn = 0892-2160 ;
+      eissn = 1553-3905
     >
 
     param[journal_dir] = film_history
@@ -142,7 +153,9 @@
 
   {
     title <
-      name = Hypatia
+      name = Hypatia ;
+      issn = 0887-5367 ;
+      eissn = 1527-2001
     >
 
     param[journal_dir] = hypatia
@@ -162,7 +175,9 @@
 
   {
     title <
-      name = Indiana Journal of Global Legal Studies
+      name = Indiana Journal of Global Legal Studies ;
+      issn = 1080-0727 ;
+      eissn = 1543-0367
     >
 
     param[journal_dir] = indiana_journal_of_global_legal_studies
@@ -191,7 +206,9 @@
 
   {
     title <
-      name = Israel Studies
+      name = Israel Studies ;
+      issn = 0161-4622 ;
+      eissn = 1559-0909
     >
 
     param[journal_dir] = israel_studies
@@ -216,7 +233,9 @@
 
   {
     title <
-      name = Jewish Social Studies
+      name = Jewish Social Studies ;
+      issn = 0021-6704 ;
+      eissn = 1527-2028
     >
 
     param[journal_dir] = jewish_social_studies
@@ -237,7 +256,9 @@
 
   {
     title <
-      name = Journal for Early Modern Cultural Studies
+      name = Journal for Early Modern Cultural Studies ;
+      issn = 1531-0485 ;
+      eissn = 1553-3786
     >
 
     param[journal_dir] = journal_for_early_modern_cultural_studies
@@ -252,7 +273,9 @@
 
   {
     title <
-      name = Journal of Feminist Studies in Religion
+      name = Journal of Feminist Studies in Religion ;
+      issn = 8755-4178 ;
+      eissn = 1553-3913
     >
 
     param[journal_dir] = journal_of_feminist_studies_in_religion
@@ -267,7 +290,9 @@
 
   {
     title <
-      name = Journal of Folklore Research
+      name = Journal of Folklore Research ;
+      issn = 0737-7037 ;
+      eissn = 1543-0413
     >
 
     param[journal_dir] = journal_of_folklore_research
@@ -284,7 +309,9 @@
 
   {
     title <
-      name = Journal of Middle East Women's Studies
+      name = Journal of Middle East Women's Studies ;
+      issn = 1552-5864 ;
+      eissn = 1558-9579
     >
 
     param[journal_dir] = journal_of_middle_east_womens_studies
@@ -321,7 +348,9 @@
 
   {
     title <
-      name = Meridians: feminism, race, transnationalism
+      name = Meridians: feminism, race, transnationalism ;
+      issn = 1047-4552 ;
+      eissn = 1527-1935
     >
 
     param[journal_dir] = meridians
@@ -337,7 +366,9 @@
 
   {
     title <
-      name = Nashim: A Journal of Jewish Women's Studies & Gender Issues
+      name = Nashim: A Journal of Jewish Women's Studies & Gender Issues ;
+      issn = 0793-8934 ;
+      eissn = 1565-5288
     >
 
     param[journal_dir] = nashim
@@ -360,7 +391,9 @@
 
   {
     title <
-      name = Native Plants Journal
+      name = Native Plants Journal ;
+      issn = 0028-6087 ;
+      eissn = 1080-661X
     >
 
     param[journal_dir] = native_plants_journal
@@ -376,7 +409,9 @@
 
   {
     title <
-      name = Philosophy of Music Education Review
+      name = Philosophy of Music Education Review ;
+      issn = 1063-5734 ;
+      eissn = 1543-3412
     >
 
     param[journal_dir] = philosophy_of_music_education_review
@@ -461,7 +496,9 @@
 
   {
     title <
-      name = The Global South
+      name = The Global South ;
+      issn = 1932-8648 ;
+      eissn = 1932-8656
     >
 
     param[journal_dir] = the_global_south
@@ -473,7 +510,9 @@
 
   {
     title <
-      name = Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy
+      name = Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy ;
+      issn = 0009-1774 ;
+      eissn = 1558-9587
     >
 
     param[journal_dir] = transactions_of_the_charles_s_peirce_society
@@ -487,7 +526,7 @@
 
   {
     title <
-      name = Transition 
+      name = Transition
     >
 
     param[journal_dir] = transition

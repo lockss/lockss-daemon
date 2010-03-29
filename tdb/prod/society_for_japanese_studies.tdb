@@ -9,7 +9,9 @@
 
   {
     title <
-      name = The Journal of Japanese Studies
+      name = The Journal of Japanese Studies ;
+      issn = 0095-6848 ;
+      eissn = 1549-4721
     >
 
     param[journal_dir] = journal_of_japanese_studies

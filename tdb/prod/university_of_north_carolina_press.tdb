@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Appalachian Heritage
+      name = Appalachian Heritage ;
+      issn = 0363-2318 ;
+      eissn = 1940-5081
     >
 
     param[journal_dir] = appalachian_heritage
@@ -22,7 +24,9 @@
 
   {
     title <
-      name = Early American Literature
+      name = Early American Literature ;
+      issn = 0012-8163 ;
+      eissn = 1534-147X
     >
 
     param[journal_dir] = early_american_literature
@@ -62,7 +66,9 @@
 
   {
     title <
-      name = Southeastern Geographer
+      name = Southeastern Geographer ;
+      issn = 0038-366X ;
+      eissn = 1549-6929
     >
 
     param[journal_dir] = southeastern_geographer
@@ -78,7 +84,9 @@
 
   {
     title <
-      name = Southern Cultures
+      name = Southern Cultures ;
+      issn = 1068-8218 ;
+      eissn = 1534-1488
     >
 
     param[journal_dir] = southern_cultures
@@ -99,7 +107,9 @@
 
   {
     title <
-      name = Studies in Philology
+      name = Studies in Philology ;
+      issn = 0039-3738 ;
+      eissn = 1543-0383
     >
 
     param[journal_dir] = studies_in_philology
@@ -117,7 +127,9 @@
 
   {
     title <
-      name = The Comparatist
+      name = The Comparatist ;
+      issn = 1559-0887 ;
+      eissn = 0195-7678
     >
 
     param[journal_dir] = the_comparatist
@@ -132,7 +144,9 @@
 
   {
     title <
-      name = The High School Journal
+      name = The High School Journal ;
+      issn = 0018-1498 ;
+      eissn = 1534-5157
     >
 
     param[journal_dir] = high_school_journal
@@ -152,7 +166,9 @@
 
   {
     title <
-      name = The Southern Literary Journal
+      name = The Southern Literary Journal ;
+      issn = 0038-4291 ;
+      eissn = 1534-1461
     >
 
     param[journal_dir] = southern_literary_journal

@@ -12,7 +12,9 @@ comment[0] = needs a parent plugin to cut out banner on contents page
   {
 
     title <
-      name = Ethics & Global Politics
+      name = Ethics & Global Politics ;
+      issn = 1654-4951 ;
+      eissn = 1654-6369
     >
 
     param[base_url] = http://www.ethicsandglobalpolitics.net/
@@ -26,7 +28,9 @@ comment[0] = needs a parent plugin to cut out banner on contents page
   {
 
     title <
-      name = Food & Nutrition Research
+      name = Food & Nutrition Research ;
+      issn = 1654-6628 ;
+      eissn = 1654-661
     >
 
     param[base_url] = http://www.foodandnutritionresearch.net/
@@ -48,7 +52,8 @@ comment[fnr2008] = 502 Proxy Error
   {
 
     title <
-      name = Global Health Action
+      name = Global Health Action ;
+      issn = 1654-9880
     >
 
     param[base_url] = http://www.globalhealthaction.net/
@@ -62,7 +67,8 @@ comment[fnr2008] = 502 Proxy Error
   {
 
     title <
-      name = Journal of Oral Microbiology
+      name = Journal of Oral Microbiology ;
+      issn = 2000-2297
     >
 
     param[base_url] = http://www.journaloforalmicrobiology.net/
@@ -75,7 +81,8 @@ comment[fnr2008] = 502 Proxy Error
   {
 
     title <
-      name = Medical Education Online
+      name = Medical Education Online ;
+      issn = 1087-2981
     >
 
     param[base_url] = http://www.med-ed-online.net/

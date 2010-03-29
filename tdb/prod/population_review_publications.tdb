@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Population Review
+      name = Population Review ;
+      issn = 0032-471X ;
+      eissn = 1549-0955
     >
 
     param[journal_dir] = population_review

@@ -5,7 +5,8 @@
 
   {
     title <
-      name = Journal of Bone & Joint Surgery, British Volume
+      name = Journal of Bone & Joint Surgery, British Volume ;
+      issn = 0301-620X
     >
 
     comment[volume_strings] = Volumes have always been like "45-B", but manifest page URLs only include the -B starting with volume 90-B.

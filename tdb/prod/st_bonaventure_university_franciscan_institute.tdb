@@ -11,7 +11,9 @@
   {
   
     title <
-      name = Franciscan Studies
+      name = Franciscan Studies ;
+      issn = 0080-5459 ;
+      eissn = 1945-9718
     >
 
     param[journal_dir] = franciscan_studies

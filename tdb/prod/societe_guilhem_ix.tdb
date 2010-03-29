@@ -11,7 +11,9 @@
   {
   
     title <
-      name = Tenso
+      name = Tenso ;
+      issn = 0890-3352 ;
+      eissn = 1944-0146
     >
 
     param[journal_dir] = tenso

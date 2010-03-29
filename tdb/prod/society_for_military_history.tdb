@@ -10,7 +10,9 @@
 
   {
     title <
-      name = The Journal of Military History 
+      name = The Journal of Military History ;
+      issn = 0899-3718 ;
+      eissn = 1543-7795
     >
 
     param[journal_dir] = journal_of_military_history

@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Nabokov Studies 
+      name = Nabokov Studies ;
+      issn = 1080-1219 ;
+      eissn = 1548-9965
     >
 
     param[journal_dir] = nabokov_studies

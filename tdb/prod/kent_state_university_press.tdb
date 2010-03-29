@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Civil War History
+      name = Civil War History ;
+      issn = 0009-8078 ;
+      eissn = 1533-6271
     >
 
     param[journal_dir] = civil_war_history
@@ -30,7 +32,9 @@
 
   {
     title <
-      name = Ohio History
+      name = Ohio History ;
+      issn = 0030-0934 ;
+      eissn = 1934-6042
     >
 
     param[journal_dir] = ohio_history

@@ -8,7 +8,8 @@
 
     title <
       name = Pacific Science ;
-      issn = 1534-6188 
+      issn = 1534-6188 ;
+      eissn = 1534-6188
     >
 
     {
@@ -33,7 +34,9 @@ comment[0] = Atypon AUs
     
   {
     title <
-      name = Pacific Science
+      name = Pacific Science ;
+      issn = 0030-8870 ;
+      eissn = 1534-6188
     >
 
     implicit < status ; name ; param[volume] >
@@ -71,7 +74,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Asian Perspectives
+      name = Asian Perspectives ;
+      issn = 0066-8435 ;
+      eissn = 1535-8283
     >
 
     {
@@ -97,7 +102,9 @@ comment[0] = Atypon AUs
 
   {
     title <
-      name = Asian Theatre Journal
+      name = Asian Theatre Journal ;
+      issn = 0742-5457 ;
+      eissn = 1527-2109
     >
 
     {
@@ -142,7 +149,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Biography
+      name = Biography ;
+      issn = 0162-4962 ;
+      eissn = 1529-1456
     >
 
     {
@@ -167,7 +176,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Buddhist-Christian Studies
+      name = Buddhist-Christian Studies ;
+      issn = 0882-0945 ;
+      eissn = 1527-9472
     >
 
     {
@@ -193,7 +204,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = China Review International
+      name = China Review International ;
+      issn = 1069-5834 ;
+      eissn = 1527-9367
     >
 
     {
@@ -218,7 +231,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Journal of World History
+      name = Journal of World History ;
+      issn = 1045-6007 ;
+      eissn = 1527-8050
     >
 
     {
@@ -247,7 +262,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Ka Ho'oilina/The Legacy
+      name = Ka Ho'oilina/The Legacy ;
+      issn = 1535-3133 ;
+      eissn = 1542-4243
     >
 
     {
@@ -267,7 +284,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Korean Studies
+      name = Korean Studies ;
+      issn = 0145-840X ;
+      eissn = 1529-1529
     >
 
     {
@@ -292,7 +311,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Manoa
+      name = Manoa ;
+      issn = 1045-7909 ;
+      eissn = 1527-943x
     >
 
     {
@@ -318,7 +339,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Oceanic Linguistics
+      name = Oceanic Linguistics ;
+      issn = 1527-9421 ;
+      eissn = 0029-8115
     >
 
     {
@@ -344,7 +367,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Philosophy East and West
+      name = Philosophy East and West ;
+      issn = 0031-8221 ;
+      eissn = 1529-1898
     >
 
     {
@@ -370,7 +395,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = The Contemporary Pacific
+      name = The Contemporary Pacific ;
+      issn = 1043-898X ;
+      eissn = 1527-9464
     >
 
     {
@@ -396,7 +423,9 @@ comment[0] = Atypon AUs
   
   {
     title <
-      name = Yearbook of the Association of Pacific Coast Geographers
+      name = Yearbook of the Association of Pacific Coast Geographers ;
+      issn = 0066-9628 ;
+      eissn = 1551-3211
     >
 
     {

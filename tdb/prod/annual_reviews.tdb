@@ -11,7 +11,9 @@
 
   {
     title <
-      name = Annual Review of Anthropology 
+      name = Annual Review of Anthropology ;
+      issn = 0084-6570 ;
+      eissn = 1545-4290
     >
 
     param[journal_id] = anthro
@@ -61,7 +63,9 @@
 
   {
     title <
-      name = Annual Review of Astronomy and Astrophysics 
+      name = Annual Review of Astronomy and Astrophysics ;
+      issn = 0066-4146 ;
+      eissn = 1545-4282
     >
 
     param[journal_id] = astro
@@ -121,7 +125,9 @@
 
   {
     title <
-      name = Annual Review of Biochemistry 
+      name = Annual Review of Biochemistry ;
+      issn = 0066-4154 ;
+      eissn = 1545-4509
     >
 
     param[journal_id] = biochem
@@ -211,7 +217,9 @@
 
   {
     title <
-      name = Annual Review of Biomedical Engineering 
+      name = Annual Review of Biomedical Engineering ;
+      issn = 1523-9829 ;
+      eissn = 1545-4274
     >
 
     param[journal_id] = bioeng
@@ -235,7 +243,7 @@
 
   {
     title <
-      name = Annual Review of Biophysics and Bioengineering 
+      name = Annual Review of Biophysics and Bioengineering
     >
 
 comment[bb1a] = next 3 title entries are continuation of the same journal
@@ -263,7 +271,7 @@ comment[bb1b] = pdf filter issues
 
   {
     title <
-      name = Annual Review of Biophysics and Biophysical Chemistry 
+      name = Annual Review of Biophysics and Biophysical Chemistry
     >
 
 comment[bb2] = continued from previous title entry
@@ -284,7 +292,7 @@ comment[bb19_17] = pdf filter issues
 
   {
     title <
-      name = Annual Review of Biophysics and Biomolecular Structure 
+      name = Annual Review of Biophysics and Biomolecular Structure
     >
 
 comment[bb3] = continued from previous title entry
@@ -316,7 +324,7 @@ comment[bb3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Cell Biology 
+      name = Annual Review of Cell Biology
     >
 
 comment[cb1] = next title entry is a continuation of this journal
@@ -339,7 +347,9 @@ comment[cb1] = next title entry is a continuation of this journal
   
   {
     title <
-      name = Annual Review of Cell and Developmental Biology 
+      name = Annual Review of Cell and Developmental Biology ;
+      issn = 1081-0706 ;
+      eissn = 1530-8995
     >
 
 comment[cb2] = continued from previous title entry
@@ -368,7 +378,9 @@ comment[cb24] = times out due to 500 errors (see relevant email)
 
   {
     title <
-      name = Annual Review of Clinical Psychology 
+      name = Annual Review of Clinical Psychology ;
+      issn = 1548-5943 ;
+      eissn = 1548-5951
     >
     
     {  
@@ -398,7 +410,9 @@ comment[cb24] = times out due to 500 errors (see relevant email)
 
   {
     title <
-      name = Annual Review of Earth and Planetary Sciences 
+      name = Annual Review of Earth and Planetary Sciences ;
+      issn = 0084-6597 ;
+      eissn = 1545-4495
     >
 
     param[journal_id] = earth
@@ -448,7 +462,7 @@ comment[cb24] = times out due to 500 errors (see relevant email)
 
   {
     title <
-      name = Annual Review of Ecology and Systematics 
+      name = Annual Review of Ecology and Systematics
     >
 
     param[journal_id] = ecolsys
@@ -493,7 +507,9 @@ comment[cb24] = times out due to 500 errors (see relevant email)
 
   {
     title <
-      name = Annual Review of Ecology, Evolution, and Systematics 
+      name = Annual Review of Ecology, Evolution, and Systematics ;
+      issn = 1543-592X ;
+      eissn = 1545-2069
     >
 
     param[journal_id] = ecolsys
@@ -512,7 +528,7 @@ comment[cb24] = times out due to 500 errors (see relevant email)
 
   {
     title <
-      name = Annual Review of Energy 
+      name = Annual Review of Energy
     >
 
 comment[eg1] = next 3 title entries are continuation of the same journal
@@ -541,7 +557,7 @@ comment[eg1] = next 3 title entries are continuation of the same journal
 
   {
     title <
-      name = Annual Review of Energy and the Environment 
+      name = Annual Review of Energy and the Environment
     >
 
 comment[eg2] = continued from previous title entry
@@ -567,7 +583,9 @@ comment[eg2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Environment and Resources 
+      name = Annual Review of Environment and Resources ;
+      issn = 1543-5938 ;
+      eissn = 1545-2050
     >
     
 comment[eg3] = continued from previous title entry
@@ -588,7 +606,9 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Entomology 
+      name = Annual Review of Entomology ;
+      issn = 0066-4170 ;
+      eissn = 1545-4487
     >
 
     param[journal_id] = ento
@@ -655,7 +675,9 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Fluid Mechanics 
+      name = Annual Review of Fluid Mechanics ;
+      issn = 0066-4189 ;
+      eissn = 1545-4479
     >
 
     param[journal_id] = fluid
@@ -709,7 +731,9 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Genetics 
+      name = Annual Review of Genetics ;
+      issn = 0066-4197 ;
+      eissn = 1545-2948
     >
 
     param[journal_id] = genet
@@ -764,7 +788,9 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Genomics and Human Genetics 
+      name = Annual Review of Genomics and Human Genetics ;
+      issn = 1527-8204 ;
+      eissn = 1545-293X
     >
 
     param[journal_id] = genom
@@ -786,7 +812,9 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Immunology 
+      name = Annual Review of Immunology ;
+      issn = 0732-0582 ;
+      eissn = 1545-3278
     >
 
     param[journal_id] = immunol
@@ -826,7 +854,9 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Law and Social Science 
+      name = Annual Review of Law and Social Science ;
+      issn = 1550-3585 ;
+      eissn = 1550-3631
     >
 
     param[journal_id] = lawsocsci
@@ -842,7 +872,7 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Materials Science 
+      name = Annual Review of Materials Science
     >
 
 comment[ms1] = next title entry is a continuation of this journal
@@ -885,7 +915,9 @@ comment[ms1] = next title entry is a continuation of this journal
 
   {
     title <
-      name = Annual Review of Materials Research 
+      name = Annual Review of Materials Research ;
+      issn = 1531-7331 ;
+      eissn = 1545-4118
     >
 
 comment[ms2] = continued from previous title entry
@@ -910,7 +942,9 @@ comment[ms2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Medicine 
+      name = Annual Review of Medicine ;
+      issn = 0066-4219 ;
+      eissn = 1545-326X
     >
 
     param[journal_id] = med
@@ -983,7 +1017,9 @@ comment[ms2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Microbiology 
+      name = Annual Review of Microbiology ;
+      issn = 0066-4227 ;
+      eissn = 1545-3251
     >
 
     param[journal_id] = micro
@@ -1058,7 +1094,9 @@ comment[ms2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Neuroscience 
+      name = Annual Review of Neuroscience ;
+      issn = 0147-006X ;
+      eissn = 1545-4126
     >
 
     param[journal_id] = neuro
@@ -1102,7 +1140,7 @@ comment[ms2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Nuclear Science 
+      name = Annual Review of Nuclear Science
     >
 
 comment[ns1] = next title entry is a continuation of this journal
@@ -1142,7 +1180,9 @@ comment[ns1] = next title entry is a continuation of this journal
 
   {
     title <
-      name = Annual Review of Nuclear and Particle Science 
+      name = Annual Review of Nuclear and Particle Science ;
+      issn = 0163-8998 ;
+      eissn = 1545-4134
     >
 
 comment[ns2] = continued from previous title entry
@@ -1190,7 +1230,9 @@ comment[ns2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Nutrition 
+      name = Annual Review of Nutrition ;
+      issn = 0199-9885 ;
+      eissn = 1545-4312
     >
 
     param[journal_id] = nutr
@@ -1232,7 +1274,9 @@ comment[ns2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Pathology: Mechanisms of Disease 
+      name = Annual Review of Pathology: Mechanisms of Disease ;
+      issn = 1553-4006 ;
+      eissn = 1553-4014
     >
 
     param[journal_id] = pathmechdis
@@ -1249,7 +1293,7 @@ comment[ns2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Pharmacology 
+      name = Annual Review of Pharmacology
     >
 
 comment[pa1] = next title entry is a continuation of this journal
@@ -1278,7 +1322,9 @@ comment[pa1] = next title entry is a continuation of this journal
 
   {
     title <
-      name = Annual Review of Pharmacology and Toxicology 
+      name = Annual Review of Pharmacology and Toxicology ;
+      issn = 0362-1642 ;
+      eissn = 1545-4304
     >
 
 comment[pa2] = continued from previous title entry
@@ -1327,7 +1373,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Physical Chemistry 
+      name = Annual Review of Physical Chemistry ;
+      issn = 0066-426X ;
+      eissn = 1545-1593
     >
 
     param[journal_id] = physchem
@@ -1400,7 +1448,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Physiology 
+      name = Annual Review of Physiology ;
+      issn = 0066-4278 ;
+      eissn = 1545-1585
     >
 
     param[journal_id] = physiol
@@ -1484,7 +1534,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Phytopathology 
+      name = Annual Review of Phytopathology ;
+      issn = 0066-4286 ;
+      eissn = 1545-2107
     >
 
     param[journal_id] = phyto
@@ -1543,7 +1595,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Plant Biology 
+      name = Annual Review of Plant Biology ;
+      issn = 1543-5008 ;
+      eissn = 1545-2123
     >
 
     param[journal_id] = arplant
@@ -1615,7 +1669,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Political Science 
+      name = Annual Review of Political Science ;
+      issn = 1094-2939 ;
+      eissn = 1545-1577
     >
 
     param[journal_id] = polisci
@@ -1640,7 +1696,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Psychology 
+      name = Annual Review of Psychology ;
+      issn = 0066-4308 ;
+      eissn = 1545-2085
     >
 
     param[journal_id] = psych
@@ -1713,7 +1771,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Public Health 
+      name = Annual Review of Public Health ;
+      issn = 0163-7525 ;
+      eissn = 1545-2093
     >
 
     param[journal_id] = publhealth
@@ -1756,7 +1816,9 @@ comment[pa2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Sociology 
+      name = Annual Review of Sociology ;
+      issn = 0360-0572 ;
+      eissn = 1545-2115
     >
 
     param[journal_id] = soc

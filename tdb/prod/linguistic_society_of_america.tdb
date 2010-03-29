@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Language
+      name = Language ;
+      issn = 0097-8507 ;
+      eissn = 1535-0665
     >
 
     param[journal_dir] = language

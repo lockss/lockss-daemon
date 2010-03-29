@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Asian Music
+      name = Asian Music ;
+      issn = 0044-9202 ;
+      eissn = 1553-5630
     >
 
     param[journal_dir] = asian_music
@@ -25,7 +27,9 @@
 
   {
     title <
-      name = Cinema Journal
+      name = Cinema Journal ;
+      issn = 0009-7101 ;
+      eissn = 1527-2087
     >
 
     param[journal_dir] = cinema_journal
@@ -46,7 +50,9 @@
 
   {
     title <
-      name = Journal of the History of Sexuality
+      name = Journal of the History of Sexuality ;
+      issn = 1043-4070 ;
+      eissn = 1535-3605
     >
 
     param[journal_dir] = journal_of_the_history_of_sexuality
@@ -66,7 +72,9 @@
 
   {
     title <
-      name = Latin American Music Review
+      name = Latin American Music Review ;
+      issn = 0163-0350 ;
+      eissn = 1536-0199
     >
 
     param[journal_dir] = latin_american_music_review
@@ -85,7 +93,9 @@
 
   {
     title <
-      name = Libraries & the Cultural Record
+      name = Libraries & the Cultural Record ;
+      issn = 1932-4855 ;
+      eissn = 1932-9555
     >
 
     param[journal_dir] = libraries_and_culture
@@ -105,7 +115,9 @@
 
   {
     title <
-      name = Southwestern Historical Quarterly
+      name = Southwestern Historical Quarterly ;
+      issn = 0038-478X ;
+      eissn = 1558-9560
     >
 
     param[journal_dir] = southwestern_historical_quarterly
@@ -116,7 +128,9 @@
 
   {
     title <
-      name = Texas Studies in Literature and Language
+      name = Texas Studies in Literature and Language ;
+      issn = 0040-4691 ;
+      eissn = 1534-7303
     >
 
     param[journal_dir] = texas_studies_in_literature_and_language
@@ -136,7 +150,9 @@
 
   {
     title <
-      name = The Velvet Light Trap
+      name = The Velvet Light Trap ;
+      issn = 0149-1830 ;
+      eissn = 1542-4251
     >
 
     param[journal_dir] = the_velvet_light_trap

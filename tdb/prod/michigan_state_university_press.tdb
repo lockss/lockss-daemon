@@ -28,7 +28,9 @@
 
   {
     title <
-      name = Contagion: Journal of Violence, Mimesis, and Culture
+      name = Contagion: Journal of Violence, Mimesis, and Culture ;
+      issn = 1075-7201 ;
+      eissn = 1930-1200
     >
 
     param[journal_dir] = contagion
@@ -41,7 +43,9 @@
 
   {
     title <
-      name = Fourth Genre: Explorations in Nonfiction
+      name = Fourth Genre: Explorations in Nonfiction ;
+      issn = 1522-3868 ;
+      eissn = 1544-1733
     >
 
     param[journal_dir] = fourth_genre_explorations_in_nonfiction
@@ -59,7 +63,9 @@
 
   {
     title <
-      name = French Colonial History
+      name = French Colonial History ;
+      issn = 1539-3402 ;
+      eissn = 1543-7787
     >
 
     param[journal_dir] = french_colonial_history
@@ -90,7 +96,9 @@
 
   {
     title <
-      name = Journal for the Study of Radicalism
+      name = Journal for the Study of Radicalism ;
+      issn = 1930-1189 ;
+      eissn = 1930-1197
     >
 
     param[journal_dir] = journal_for_the_study_of_radicalism
@@ -103,7 +111,9 @@
 
   {
     title <
-      name = Northeast African Studies
+      name = Northeast African Studies ;
+      issn = 0740-9133 ;
+      eissn = 1535-6574
     >
 
     param[journal_dir] = northeast_african_studies
@@ -118,7 +128,9 @@
 
   {
     title <
-      name = Red Cedar Review
+      name = Red Cedar Review ;
+      issn = 0034-1967 ;
+      eissn = 1554-6721
     >
 
     param[journal_dir] = red_cedar_review
@@ -133,7 +145,9 @@
 
   {
     title <
-      name = Rhetoric & Public Affairs
+      name = Rhetoric & Public Affairs ;
+      issn = 1094-8392 ;
+      eissn = 1534-5238
     >
 
     param[journal_dir] = rhetoric_and_public_affairs

@@ -10,7 +10,9 @@
   
   {
     title <
-      name = Asian Survey 
+      name = Asian Survey ;
+      issn = 0004-4687 ;
+      eissn = 1533-838X
     >
 
     param[journal_id] = as
@@ -68,7 +70,9 @@
 
   {
     title <
-      name = Journal of Palestine Studies 
+      name = Journal of Palestine Studies ;
+      issn = 0377-919X ;
+      eissn = 1533-8614
     >
 
     param[journal_id] = jps
@@ -115,7 +119,9 @@
 
   {
     title <
-      name = Journal of Vietnamese Studies 
+      name = Journal of Vietnamese Studies ;
+      issn = 1559-372X ;
+      eissn = 1559-3738
     >
 
     param[journal_id] = vs
@@ -128,7 +134,9 @@
 
   {
     title <
-      name = Mexican Studies/Estudios Mexicanos 
+      name = Mexican Studies/Estudios Mexicanos ;
+      issn = 0742-9797 ;
+      eissn = 1533-8320
     >
 
     param[journal_id] = msem
@@ -162,7 +170,9 @@
 
   {
     title <
-      name = Classical Antiquity 
+      name = Classical Antiquity ;
+      issn = 0278-6656 ;
+      eissn = 1067-8344
     >
 
     param[journal_id] = ca
@@ -180,7 +190,8 @@
 
   {
     title <
-      name = Journal of Empirical Research on Human Research Ethics 
+      name = Journal of Empirical Research on Human Research Ethics ;
+      issn = 1556-2646
     >
 
     param[journal_id] = jer
@@ -193,7 +204,9 @@
 
   {
     title <
-      name = Film Quarterly 
+      name = Film Quarterly ;
+      issn = 0015-1386 ;
+      eissn = 1533-8630
     >
 
     param[journal_id] = fq
@@ -264,7 +277,9 @@
 
   {
     title <
-      name = Gastronomica 
+      name = Gastronomica ;
+      issn = 1529-3262 ;
+      eissn = 1533-8622
     >
 
     param[journal_id] = gfc
@@ -282,7 +297,9 @@
 
   {
     title <
-      name = Historical Studies in the Natural Sciences 
+      name = Historical Studies in the Natural Sciences ;
+      issn = 1939-1811 ;
+      eissn = 1939-182X
     >
 
     param[journal_id] = hsns
@@ -300,7 +317,9 @@
 
   {
     title <
-      name = Huntington Library Quarterly 
+      name = Huntington Library Quarterly ;
+      issn = 0018-7895 ;
+      eissn = 1544-399X
     >
 
     param[journal_id] = hlq
@@ -314,7 +333,9 @@
 
   {
     title <
-      name = Oral History Review 
+      name = Oral History Review ;
+      issn = 0094-0798 ;
+      eissn = 1533-8592
     >
 
     param[journal_id] = ohr
@@ -332,7 +353,9 @@
 
   {
     title <
-      name = Pacific Historical Review 
+      name = Pacific Historical Review ;
+      issn = 0030-8684 ;
+      eissn = 1533-8584
     >
 
     param[journal_id] = phr
@@ -350,7 +373,9 @@
 
   {
     title <
-      name = The Public Historian 
+      name = The Public Historian ;
+      issn = 0272-3433 ;
+      eissn = 1533-8576
     >
 
     param[journal_id] = tph
@@ -368,7 +393,7 @@
 
   {
     title <
-      name = Jung Journal: Culture and Psyche 
+      name = Jung Journal: Culture and Psyche
     >
 
     param[journal_id] = jung
@@ -380,7 +405,9 @@
 
   {
     title <
-      name = Law and Literature 
+      name = Law and Literature ;
+      issn = 1535-685X ;
+      eissn = 1541-2601
     >
 
     param[journal_id] = lal
@@ -410,7 +437,9 @@
 
   {
     title <
-      name = Music Perception 
+      name = Music Perception ;
+      issn = 0730-7829 ;
+      eissn = 1533-8312
     >
 
     param[journal_id] = mp
@@ -428,7 +457,9 @@
 
   {
     title <
-      name = Federal Sentencing Reporter 
+      name = Federal Sentencing Reporter ;
+      issn = 1053-9867 ;
+      eissn = 1533-8363
     >
 
     param[journal_id] = fsr
@@ -446,7 +477,9 @@
 
   {
     title <
-      name = New Criminal Law Review 
+      name = New Criminal Law Review ;
+      issn = 1933-4192 ;
+      eissn = 1933-4206
     >
 
     param[journal_id] = nclr
@@ -467,7 +500,9 @@
 
   {
     title <
-      name = Nineteenth-Century Literature 
+      name = Nineteenth-Century Literature ;
+      issn = 0891-9356 ;
+      eissn = 1067-8352
     >
 
     param[journal_id] = ncl
@@ -539,7 +574,9 @@
 
   {
     title <
-      name = Representations 
+      name = Representations ;
+      issn = 0734-6018 ;
+      eissn = 1533-855X
     >
 
     param[journal_id] = rep
@@ -651,7 +688,9 @@
 
   {
     title <
-      name = Rhetorica 
+      name = Rhetorica ;
+      issn = 0734-8584 ;
+      eissn = 1533-8541
     >
 
     param[journal_id] = rh
@@ -687,7 +726,9 @@
 
   {
     title <
-      name = 19th-Century Music 
+      name = 19th-Century Music ;
+      issn = 0148-2076 ;
+      eissn = 1533-8606
     >
 
     param[journal_id] = ncm
@@ -728,7 +769,9 @@
 
   {
     title <
-      name = Journal of Musicology 
+      name = Journal of Musicology ;
+      issn = 0277-9269 ;
+      eissn = 1533-8347
     >
 
     param[journal_id] = jm
@@ -763,7 +806,9 @@
 
   {
     title <
-      name = Journal of the American Musicological Society 
+      name = Journal of the American Musicological Society ;
+      issn = 0003-0139 ;
+      eissn = 1547-3848
     >
 
     param[journal_id] = jams
@@ -834,7 +879,9 @@
 
   {
     title <
-      name = Music Perception 
+      name = Music Perception ;
+      issn = 0730-7829 ;
+      eissn = 1533-8312
     >
 
     param[journal_id] = mp
@@ -852,7 +899,9 @@
 
   {
     title <
-      name = Music Theory Spectrum 
+      name = Music Theory Spectrum ;
+      issn = 0195-6167 ;
+      eissn = 1533-8339
     >
 
     param[journal_id] = mts
@@ -892,7 +941,7 @@
 
   {
     title <
-      name = The Auk: A Quarterly Journal of Ornithology 
+      name = The Auk: A Quarterly Journal of Ornithology
     >
 
     param[journal_id] = auk
@@ -903,7 +952,7 @@
 
   {
     title <
-      name = The Condor: An International Journal of Avian Biology 
+      name = The Condor: An International Journal of Avian Biology
     >
 
     param[journal_id] = cond
@@ -914,7 +963,9 @@
 
   {
     title <
-      name = Ornithological Monographs 
+      name = Ornithological Monographs ;
+      issn = 0078-6594 ;
+      eissn = 1941-2282
     >
 
     param[journal_id] = om
@@ -925,7 +976,7 @@
 
   {
     title <
-      name = Jung Journal: Culture and Psyche 
+      name = Jung Journal: Culture and Psyche
     >
 
     param[journal_id] = jung
@@ -937,7 +988,7 @@
 
   {
     title <
-      name = Nova Religioi 
+      name = Nova Religioi
     >
 
     param[journal_id] = nr
@@ -959,7 +1010,9 @@
 
   {
     title <
-      name = Religion and American Culture 
+      name = Religion and American Culture ;
+      issn = 1052-1151 ;
+      eissn = 1533-8568
     >
 
     param[journal_id] = rac
@@ -987,7 +1040,7 @@
 
   {
     title <
-      name = Sexuality Research & Social Policy 
+      name = Sexuality Research & Social Policy
     >
 
     param[journal_id] = srsp
@@ -1002,7 +1055,9 @@
 
   {
     title <
-      name = Contexts 
+      name = Contexts ;
+      issn = 1536-5042 ;
+      eissn = 1537-6052
     >
 
     param[journal_id] = ctx
@@ -1019,7 +1074,9 @@
 
   {
     title <
-      name = Social Problems 
+      name = Social Problems ;
+      issn = 0037-7791 ;
+      eissn = 1533-8533
     >
 
     param[journal_id] = sp
@@ -1084,7 +1141,9 @@
 
   {
     title <
-      name = Sociological Perspectives 
+      name = Sociological Perspectives ;
+      issn = 0731-1214 ;
+      eissn = 1533-8673
     >
 
     param[journal_id] = sop
@@ -1102,7 +1161,9 @@
 
   {
     title <
-      name = Symbolic Interaction 
+      name = Symbolic Interaction ;
+      issn = 0195-6086 ;
+      eissn = 1533-8665
     >
 
     param[journal_id] = si

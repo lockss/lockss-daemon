@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Conservative Judaism
+      name = Conservative Judaism ;
+      issn = 0010-6542 ;
+      eissn = 1947-4717
     >
 
     param[journal_dir] = conservative_judaism

@@ -9,7 +9,9 @@
 
   {
     title <
-      name = IEEE Annals of the History of Computing
+      name = IEEE Annals of the History of Computing ;
+      issn = 1058-6180 ;
+      eissn = 1934-1547
     >
 
     param[journal_dir] = ieee_annals_of_the_history_of_computing

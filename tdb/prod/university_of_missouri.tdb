@@ -9,7 +9,9 @@
 
   {
     title <
-      name = The Missouri Review
+      name = The Missouri Review ;
+      issn = 0191-1961 ;
+      eissn = 1548-9930
     >
 
     param[journal_dir] = missouri_review

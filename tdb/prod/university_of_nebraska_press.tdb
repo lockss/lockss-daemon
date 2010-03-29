@@ -43,7 +43,9 @@
 
   {
     title <
-      name = French Forum
+      name = French Forum ;
+      issn = 0098-9355 ;
+      eissn = 1534-1836
     >
 
     param[journal_dir] = french_forum
@@ -62,7 +64,9 @@
 
   {
     title <
-      name = Frontiers: A Journal of Women Studies
+      name = Frontiers: A Journal of Women Studies ;
+      issn = 0160-9009 ;
+      eissn = 1536-0334
     >
 
     param[journal_dir] = frontiers
@@ -96,7 +100,9 @@
 
   {
     title <
-      name = Journal of Sports Media
+      name = Journal of Sports Media ;
+      issn = 1558-4313 ;
+      eissn = 1940-5073
     >
 
     param[journal_dir] = journal_of_sports_media
@@ -131,7 +137,9 @@
 
   {
     title <
-      name = NINE: A Journal of Baseball History and Culture
+      name = NINE: A Journal of Baseball History and Culture ;
+      issn = 1188-9330 ;
+      eissn = 1534-1844
     >
 
     param[journal_dir] = nine
@@ -183,7 +191,9 @@
 
   {
     title <
-      name = Prairie Schooner
+      name = Prairie Schooner ;
+      issn = 0032-6682 ;
+      eissn = 1542-426X
     >
 
     param[journal_dir] = prairie_schooner
@@ -211,7 +221,9 @@
 
   {
     title <
-      name = Studies in American Indian Literatures
+      name = Studies in American Indian Literatures ;
+      issn = 0730-3238 ;
+      eissn = 1548-9590
     >
 
     param[journal_dir] = studies_in_american_indian_literatures
@@ -238,7 +250,9 @@
 
   {
     title <
-      name = The American Indian Quarterly
+      name = The American Indian Quarterly ;
+      issn = 0095-182X ;
+      eissn = 1534-1828
     >
 
     param[journal_dir] = american_indian_quarterly
@@ -259,7 +273,9 @@
 
   {
     title <
-      name = Women and Music: A Journal of Gender and Culture
+      name = Women and Music: A Journal of Gender and Culture ;
+      issn = 1553-0612 ;
+      eissn = 1090-7505
     >
 
     param[journal_dir] = women_and_music
@@ -275,7 +291,9 @@
 
   {
     title <
-      name = Women in German Yearbook: Feminist Studies in German Literature & Culture
+      name = Women in German Yearbook: Feminist Studies in German Literature & Culture ;
+      issn = 1058-7446 ;
+      eissn = 1940-512X
     >
 
     param[journal_dir] = women_in_german_yearbook
@@ -288,7 +306,9 @@
 
   {
     title <
-      name = symploke
+      name = symploke ;
+      issn = 1069-0697 ;
+      eissn = 1534-0627
     >
 
     param[journal_dir] = symploke

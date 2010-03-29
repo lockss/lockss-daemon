@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Canadian Journal of Philosophy 
+      name = Canadian Journal of Philosophy ;
+      issn = 0045-5091 ;
+      eissn = 1911-0820
     >
 
     param[journal_dir] = canadian_journal_of_philosophy

@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Parergon 
+      name = Parergon ;
+      issn = 0313-6221 ;
+      eissn = 1832-8334
     >
 
     param[journal_dir] = parergon

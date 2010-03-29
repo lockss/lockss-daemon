@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Classical World
+      name = Classical World ;
+      issn = 0009-8418 ;
+      eissn = 1558-9234
     >
 
     param[journal_dir] = classical_world

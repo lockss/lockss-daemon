@@ -9,7 +9,9 @@
 
   {
     title <
-      name = The Hemingway Review
+      name = The Hemingway Review ;
+      issn = 0276-3362 ;
+      eissn = 1548-4815
     >
 
     param[journal_dir] = hemingway_review

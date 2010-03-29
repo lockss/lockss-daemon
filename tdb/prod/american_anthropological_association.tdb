@@ -11,7 +11,9 @@
   {
 
     title <
-      name = American Anthropologist
+      name = American Anthropologist ;
+      issn = 0002-7294 ;
+      eissn = 1548-1433
     >
     
     param[journal_id] = aa
@@ -33,7 +35,9 @@
   {
 
     title <
-      name = American Ethnologist
+      name = American Ethnologist ;
+      issn = 0094-0496 ;
+      eissn = 1548-1425
     >
     
     param[journal_id] = ae
@@ -55,7 +59,9 @@
   {
 
     title <
-      name = Anthropology & Education Quarterly
+      name = Anthropology & Education Quarterly ;
+      issn = 0161-7761 ;
+      eissn = 1548-1492
     >
     
     param[journal_id] = aeq
@@ -77,7 +83,9 @@
   {
 
     title <
-      name = Anthropology & Humanism
+      name = Anthropology & Humanism ;
+      issn = 1559-9167 ;
+      eissn = 1548-1409
     >
     
     param[journal_id] = ahu
@@ -120,7 +128,9 @@
   {
 
     title <
-      name = Anthropology News
+      name = Anthropology News ;
+      issn = 1541-6151 ;
+      eissn = 1556-3502
     >
     
     param[journal_id] = an
@@ -154,7 +164,9 @@
   {
 
     title <
-      name = Anthropology of Consciousness
+      name = Anthropology of Consciousness ;
+      issn = 1053-4202 ;
+      eissn = 1556-3537
     >
     
     param[journal_id] = ac
@@ -183,7 +195,8 @@
   {
 
     title <
-      name = Anthropology of Work Review
+      name = Anthropology of Work Review ;
+      issn = 0883-024X
     >
     
     param[journal_id] = awr
@@ -218,7 +231,9 @@
   {
 
     title <
-      name = Archeological Papers of the American Anthropological Association
+      name = Archeological Papers of the American Anthropological Association ;
+      issn = 1551-823X ;
+      eissn = 1551-8248
     >
     
     param[journal_id] = ap3a
@@ -246,7 +261,9 @@
   {
 
     title <
-      name = Bulletin of the National Association of Student Anthropologists
+      name = Bulletin of the National Association of Student Anthropologists ;
+      issn = 1556-3618 ;
+      eissn = 1556-3626
     >
     
     param[journal_id] = nasa
@@ -264,7 +281,8 @@
   {
 
     title <
-      name = Central Issues in Anthropology
+      name = Central Issues in Anthropology ;
+      issn = 0739-7917
     >
     
     param[journal_id] = cia
@@ -285,7 +303,9 @@
   {
 
     title <
-      name = City & Society
+      name = City & Society ;
+      issn = 0893-0465 ;
+      eissn = 1548-744X
     >
     
     param[journal_id] = city
@@ -315,7 +335,9 @@
   {
 
     title <
-      name = CSAS Bulletin Central States Anthropological Society
+      name = CSAS Bulletin Central States Anthropological Society ;
+      issn = 0577-0963 ;
+      eissn = 1548-7431
     >
     
     param[journal_id] = csas
@@ -368,7 +390,8 @@
   {
 
     title <
-      name = Cultural Anthropology
+      name = Cultural Anthropology ;
+      issn = 0886-7356
     >
     
     param[journal_id] = can
@@ -390,7 +413,9 @@
   {
 
     title <
-      name = Culture & Agriculture
+      name = Culture & Agriculture ;
+      issn = 1048-4876 ;
+      eissn = 1556-486X
     >
     
     param[journal_id] = cag
@@ -414,7 +439,8 @@
   {
 
     title <
-      name = El Mensajero
+      name = El Mensajero ;
+      issn = 1040-5712
     >
     
     param[journal_id] = em
@@ -441,7 +467,8 @@
   {
 
     title <
-      name = Ethos
+      name = Ethos ;
+      issn = 0091-2131
     >
     
     param[journal_id] = eth
@@ -463,7 +490,8 @@
   {
 
     title <
-      name = General Anthropology Bulletin of the General Anthropology Division
+      name = General Anthropology Bulletin of the General Anthropology Division ;
+      issn = 1537-1727
     >
     
     param[journal_id] = ga
@@ -488,7 +516,9 @@
   {
 
     title <
-      name = Journal of Latin American and Caribbean Anthropology
+      name = Journal of Latin American and Caribbean Anthropology ;
+      issn = 1085-7052 ;
+      eissn = 1548-7180
     >
     
     param[journal_id] = jlat
@@ -511,7 +541,9 @@
   {
 
     title <
-      name = Journal of Linguistic Anthropology
+      name = Journal of Linguistic Anthropology ;
+      issn = 1055-1360 ;
+      eissn = 1548-1395
     >
     
     param[journal_id] = jlin
@@ -539,7 +571,9 @@
   {
 
     title <
-      name = Journal of the Society for the Anthropology of Europe
+      name = Journal of the Society for the Anthropology of Europe ;
+      issn = 1535-5632 ;
+      eissn = 1556-5823
     >
     
     param[journal_id] = jsae
@@ -556,7 +590,8 @@
   {
 
     title <
-      name = Medical Anthropology Quarterly
+      name = Medical Anthropology Quarterly ;
+      issn = 0745-5194
     >
     
     param[journal_id] = maq
@@ -578,7 +613,9 @@
   {
 
     title <
-      name = Museum Anthropology
+      name = Museum Anthropology ;
+      issn = 0892-8339 ;
+      eissn = 1548-1379
     >
     
     param[journal_id] = mua
@@ -619,7 +656,9 @@
   {
 
     title <
-      name = National Association for the Practice of Anthropology Bulletin
+      name = National Association for the Practice of Anthropology Bulletin ;
+      issn = 1556-4789 ;
+      eissn = 1556-4797
     >
     
     param[journal_id] = napa
@@ -658,7 +697,9 @@
   {
 
     title <
-      name = North American Dialogue
+      name = North American Dialogue ;
+      issn = 1539-2546 ;
+      eissn = 1556-4819
     >
     
     param[journal_id] = nad
@@ -679,7 +720,9 @@
   {
 
     title <
-      name = Nutritional Anthropology
+      name = Nutritional Anthropology ;
+      issn = 1537-1735 ;
+      eissn = 1548-7172
     >
     
     param[journal_id] = nua
@@ -705,7 +748,9 @@
   {
 
     title <
-      name = PoLAR: Political and Legal Anthropology Review
+      name = PoLAR: Political and Legal Anthropology Review ;
+      issn = 1081-6976 ;
+      eissn = 1555-2934
     >
     
     param[journal_id] = pol
@@ -746,7 +791,8 @@
   {
 
     title <
-      name = SOLGAN
+      name = SOLGAN ;
+      issn = 1547-5298
     >
     
     param[journal_id] = sol
@@ -779,7 +825,8 @@
   {
 
     title <
-      name = Teaching Anthropology: Society for Anthropology in Community Colleges Notes
+      name = Teaching Anthropology: Society for Anthropology in Community Colleges Notes ;
+      issn = 1077-5714
     >
     
     param[journal_id] = tea
@@ -800,7 +847,8 @@
   {
 
     title <
-      name = Transforming Anthropology
+      name = Transforming Anthropology ;
+      issn = 1051-0559
     >
     
     param[journal_id] = tran
@@ -826,7 +874,9 @@
   {
 
     title <
-      name = Visual Anthropology Review
+      name = Visual Anthropology Review ;
+      issn = 1058-7187 ;
+      eissn = 1548-7458
     >
     
     param[journal_id] = var
@@ -860,7 +910,9 @@
   {
 
     title <
-      name = Voice
+      name = Voice ;
+      issn = 1538-2680 ;
+      eissn = 1548-7423
     >
     
     param[journal_id] = vo

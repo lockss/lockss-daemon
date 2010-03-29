@@ -9,7 +9,9 @@
 
   {
     title <
-      name = College Literature
+      name = College Literature ;
+      issn = 0093-3139 ;
+      eissn = 1542-4286
     >
 
     param[journal_dir] = college_literature

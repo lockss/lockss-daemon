@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Education and Treatment of Children
+      name = Education and Treatment of Children ;
+      issn = 0748-8491 ;
+      eissn = 1934-8924
     >
 
     param[journal_dir] = education_and_treatment_of_children
@@ -41,7 +43,9 @@
 
   {
     title <
-      name = Labor Studies Journal
+      name = Labor Studies Journal ;
+      issn = 0160-449X ;
+      eissn = 1538-9758
     >
 
     param[journal_dir] = labor_studies_journal
@@ -56,7 +60,9 @@
 
   {
     title <
-      name = Tolkien Studies
+      name = Tolkien Studies ;
+      issn = 1547-3155 ;
+      eissn = 1547-3163
     >
 
     param[journal_dir] = tolkien_studies
@@ -72,7 +78,9 @@
 
   {
     title <
-      name = Victorian Poetry
+      name = Victorian Poetry ;
+      issn = 0042-5206 ;
+      eissn = 1530-7190
     >
 
     param[journal_dir] = victorian_poetry

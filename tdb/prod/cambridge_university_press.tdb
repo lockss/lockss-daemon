@@ -25,7 +25,9 @@
 
   {
     title <
-      name = Journal of Policy History
+      name = Journal of Policy History ;
+      issn = 0898-0306 ;
+      eissn = 1528-4190
     >
 
     param[journal_dir] = journal_of_policy_history
@@ -47,7 +49,9 @@
 
   {
     title <
-      name = World Politics 
+      name = World Politics ;
+      issn = 0043-8871 ;
+      eissn = 1086-3338
     >
 
     param[journal_dir] = world_politics

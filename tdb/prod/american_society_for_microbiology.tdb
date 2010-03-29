@@ -10,7 +10,9 @@
   
     {
       title <
-        name = Antimicrobial Agents and Chemotherapy
+        name = Antimicrobial Agents and Chemotherapy ;
+        issn = 0066-4804 ;
+        eissn = 1098-6596
       >
   
       param[base_url] = http://aac.asm.org/
@@ -72,7 +74,9 @@
   
     {
       title <
-        name = Applied and Environmental Microbiology
+        name = Applied and Environmental Microbiology ;
+        issn = 0099-2240 ;
+        eissn = 1098-5336
       >
   
       param[base_url] = http://aem.asm.org/
@@ -157,7 +161,9 @@
   
     {
       title <
-        name = Clinical and Vaccine Immunology
+        name = Clinical and Vaccine Immunology ;
+        issn = 1556-6811 ;
+        eissn = 1556-679X
       >
   
       param[base_url] = http://cvi.asm.org/
@@ -183,7 +189,9 @@
   
     {
       title <
-        name = Clinical Microbiology Reviews
+        name = Clinical Microbiology Reviews ;
+        issn = 0893-8512 ;
+        eissn = 1098-6618
       >
   
       param[base_url] = http://cmr.asm.org/
@@ -215,7 +223,9 @@
   
     {
       title <
-        name = Eukaryotic Cell
+        name = Eukaryotic Cell ;
+        issn = 1535-9778 ;
+        eissn = 1535-9786
       >
   
       param[base_url] = http://ec.asm.org/
@@ -235,7 +245,9 @@
   
     {
       title <
-        name = Infection and Immunity
+        name = Infection and Immunity ;
+        issn = 0019-9567 ;
+        eissn = 1098-5522
       >
   
       param[base_url] = http://iai.asm.org/
@@ -323,7 +335,9 @@
   
     {
       title <
-        name = Journal of Bacteriology
+        name = Journal of Bacteriology ;
+        issn = 0021-9193 ;
+        eissn = 1098-5530
       >
   
       param[base_url] = http://jb.asm.org/
@@ -453,7 +467,9 @@
   
     {
       title <
-        name = Journal of Clinical Microbiology
+        name = Journal of Clinical Microbiology ;
+        issn = 0095-1137 ;
+        eissn = 1098-660X
       >
   
       param[base_url] = http://jcm.asm.org/
@@ -510,7 +526,9 @@
   
     {
       title <
-        name = Journal of Virology
+        name = Journal of Virology ;
+        issn = 0022-538X ;
+        eissn = 1098-5514
       >
   
       param[base_url] = http://jvi.asm.org/
@@ -603,7 +621,9 @@
   
     {
       title <
-        name = Microbiology and Molecular Biology Reviews
+        name = Microbiology and Molecular Biology Reviews ;
+        issn = 1092-2172 ;
+        eissn = 1098-5557
       >
   
       param[base_url] = http://mmbr.asm.org/
@@ -685,7 +705,9 @@
   
     {
       title <
-        name = Molecular and Cellular Biology
+        name = Molecular and Cellular Biology ;
+        issn = 0270-7306 ;
+        eissn = 1098-5549
       >
   
       param[base_url] = http://mcb.asm.org/

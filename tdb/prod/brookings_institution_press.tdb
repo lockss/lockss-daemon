@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Brookings Papers on Economic Activity 
+      name = Brookings Papers on Economic Activity ;
+      issn = 0007-2303 ;
+      eissn = 1533-4465
     >
 
     param[journal_dir] = brookings_papers_on_economic_activity
@@ -31,7 +33,9 @@
 
   {
     title <
-      name = Brookings Papers on Education Policy 
+      name = Brookings Papers on Education Policy ;
+      issn = 1096-2719 ;
+      eissn = 1533-4457
     >
 
     param[journal_dir] = brookings_papers_on_education_policy
@@ -48,7 +52,9 @@
 
   {
     title <
-      name = Brookings Trade Forum 
+      name = Brookings Trade Forum ;
+      issn = 1520-5479 ;
+      eissn = 1534-0635
     >
 
     param[journal_dir] = brookings_trade_forum
@@ -67,7 +73,9 @@
 
   {
     title <
-      name = Brookings-Wharton Papers on Financial Services 
+      name = Brookings-Wharton Papers on Financial Services ;
+      issn = 1098-3651 ;
+      eissn = 1533-4430
     >
 
     param[journal_dir] = brookings-wharton_papers_on_financial_services
@@ -82,7 +90,9 @@
 
   {
     title <
-      name = Brookings-Wharton Papers on Urban Affairs 
+      name = Brookings-Wharton Papers on Urban Affairs ;
+      issn = 1528-7084 ;
+      eissn = 1533-4449
     >
 
     param[journal_dir] = brookings-wharton_papers_on_urban_affairs
@@ -102,7 +112,9 @@
 
   {
     title <
-      name = Economía 
+      name = Economía ;
+      issn = 1533-6239 ;
+      eissn = 1529-7470
     >
 
     param[journal_dir] = economia
@@ -121,7 +133,8 @@
 
   {
     title <
-      name = The Future of Children 
+      name = The Future of Children ;
+      issn = 1550-1558
     >
 
     param[journal_dir] = future_of_children

@@ -10,7 +10,7 @@
 
   {
     title <
-      name = Advances in Applied Biodiversity Science ;
+      name = Advances in Applied Biodiversity Science
     >
     
     param[journal_code] = aabs
@@ -24,6 +24,7 @@
   {
     title <
       name = Edentata ;
+      issn = 1413-4411
     >
     
     param[journal_code] = eden
@@ -37,6 +38,7 @@
   {
     title <
       name = Neotropical Primates ;
+      issn = 1413-4705
     >
     
     param[journal_code] = nepr
@@ -52,6 +54,7 @@
   {
     title <
       name = Primate Conservation ;
+      issn = 0898-6207
     >
     
     param[journal_code] = prco

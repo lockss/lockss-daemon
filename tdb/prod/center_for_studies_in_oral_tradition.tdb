@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Oral Tradition
+      name = Oral Tradition ;
+      issn = 0883-5365 ;
+      eissn = 1542-4308
     >
 
     param[journal_dir] = oral_tradition

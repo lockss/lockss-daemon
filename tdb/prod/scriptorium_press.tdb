@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Arthuriana
+      name = Arthuriana ;
+      issn = 1078-6279 ;
+      eissn = 1934-1539
     >
 
     param[journal_dir] = arthuriana

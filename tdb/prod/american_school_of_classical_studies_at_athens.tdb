@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Hesperia 
+      name = Hesperia ;
+      issn = 0018-098X ;
+      eissn = 1553-5622
     >
 
     param[journal_dir] = hesperia

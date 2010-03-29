@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Quaker History
+      name = Quaker History ;
+      issn = 0033-5053 ;
+      eissn = 1934-1504
     >
 
     param[journal_dir] = quaker_history

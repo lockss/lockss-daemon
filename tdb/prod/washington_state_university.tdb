@@ -9,7 +9,9 @@
 
   {
     title <
-      name = ESQ: A Journal of the American Renaissance
+      name = ESQ: A Journal of the American Renaissance ;
+      issn = 0317-0802 ;
+      eissn = 1913-4835
     >
 
     param[journal_dir] = esq

@@ -10,7 +10,9 @@
 
   {
     title <
-      name = American Art 
+      name = American Art ;
+      issn = 1073-9300 ;
+      eissn = 1549-6503
     >
 
     param[journal_id] = amart
@@ -41,7 +43,8 @@
 
   {
     title <
-      name = The American Historical Review 
+      name = The American Historical Review ;
+      issn = 0002-8762
     >
 
     param[journal_id] = ahr
@@ -54,7 +57,9 @@
 
   {
     title <
-      name = American Journal of Education 
+      name = American Journal of Education ;
+      issn = 0195-6744 ;
+      eissn = 1549-6511
     >
 
     param[journal_id] = aje
@@ -178,7 +183,9 @@
 
   {
     title <
-      name = American Journal of Sociology 
+      name = American Journal of Sociology ;
+      issn = 0002-9602 ;
+      eissn = 1537-5390
     >
 
     param[journal_id] = ajs
@@ -301,7 +308,9 @@
 
   {
     title <
-      name = The American Naturalist 
+      name = The American Naturalist ;
+      issn = 0003-0147 ;
+      eissn = 1537-5323
     >
 
     param[journal_id] = an
@@ -482,7 +491,7 @@
 
   {
     title <
-      name = The Astronomical Journal 
+      name = The Astronomical Journal
     >
 
     param[journal_id] = aj
@@ -512,7 +521,9 @@
 
   {
     title <
-      name = The Astrophysical Journal 
+      name = The Astrophysical Journal ;
+      issn = 0004-637X ;
+      eissn = 1538-4357
     >
 
     param[journal_id] = apj
@@ -725,7 +736,9 @@
 
   {
     title <
-      name = The Astrophysical Journal Letters 
+      name = The Astrophysical Journal Letters ;
+      issn = 0004-637X ;
+      eissn = 1538-4357
     >
 
     param[journal_id] = apjl
@@ -963,7 +976,9 @@
 
   {
     title <
-      name = The Astrophysical Journal Supplement Series 
+      name = The Astrophysical Journal Supplement Series ;
+      issn = 0004-637X. ;
+      eissn = 1538-4357
     >
 
     param[journal_id] = apjs
@@ -1041,7 +1056,9 @@
 
   {
     title <
-      name = Classical Philology 
+      name = Classical Philology ;
+      issn = 0009-837X ;
+      eissn = 1546-072X
     >
 
     param[journal_id] = cp
@@ -1170,7 +1187,9 @@
 
   {
     title <
-      name = Clinical Infectious Diseases 
+      name = Clinical Infectious Diseases ;
+      issn = 1058-4838 ;
+      eissn = 1537-6591
     >
 
     param[journal_id] = cid
@@ -1203,7 +1222,9 @@
 
   {
     title <
-      name = Comparative Education Review 
+      name = Comparative Education Review ;
+      issn = 0010-4086 ;
+      eissn = 1545-701X
     >
 
     param[journal_id] = cer
@@ -1265,7 +1286,9 @@
 
   {
     title <
-      name = Critical Inquiry 
+      name = Critical Inquiry ;
+      issn = 0093-1896 ;
+      eissn = 1539-7858
     >
 
     param[journal_id] = ci
@@ -1309,7 +1332,9 @@
 
   {
     title <
-      name = Current Anthropology 
+      name = Current Anthropology ;
+      issn = 0011-3204 ;
+      eissn = 1537-5382
     >
 
     param[journal_id] = ca
@@ -1367,7 +1392,9 @@
 
   {
     title <
-      name = Economic Development and Cultural Change 
+      name = Economic Development and Cultural Change ;
+      issn = 0013-0079 ;
+      eissn = 1539-2988
     >
 
     param[journal_id] = edcc
@@ -1433,7 +1460,9 @@
 
   {
     title <
-      name = The Elementary School Journal 
+      name = The Elementary School Journal ;
+      issn = 0022-1374 ;
+      eissn = 1537-1374
     >
 
     param[journal_id] = esj
@@ -1537,7 +1566,9 @@
 
   {
     title <
-      name = Ethics 
+      name = Ethics ;
+      issn = 0014-1704 ;
+      eissn = 1539-297X
     >
 
     param[journal_id] = et
@@ -1665,7 +1696,9 @@
 
   {
     title <
-      name = History of Religions 
+      name = History of Religions ;
+      issn = 0018-2710 ;
+      eissn = 1545-6935
     >
 
     param[journal_id] = hr
@@ -1722,7 +1755,9 @@
 
   {
     title <
-      name = Infection Control and Hospital Epidemiology 
+      name = Infection Control and Hospital Epidemiology ;
+      issn = 0899-823X ;
+      eissn = 1559-6834
     >
 
 comment[iche27] = 500 internal server errors
@@ -1744,7 +1779,9 @@ comment[iche27] = 500 internal server errors
 
   {
     title <
-      name = International Journal of American Linguistics 
+      name = International Journal of American Linguistics ;
+      issn = 0020-7071 ;
+      eissn = 1545-7001
     >
 
     param[journal_id] = ijal
@@ -1828,7 +1865,9 @@ comment[iche27] = 500 internal server errors
 
   {
     title <
-      name = International Journal of Plant Sciences 
+      name = International Journal of Plant Sciences ;
+      issn = 1058-5893 ;
+      eissn = 1537-5315
     >
 
     param[journal_id] = ijps
@@ -1857,7 +1896,9 @@ comment[ijps167] = 500 internal server errors
 
   {
     title <
-      name = Isis 
+      name = Isis ;
+      issn = 0021-1753 ;
+      eissn = 1545-6994
     >
 
     param[journal_id] = isis
@@ -1967,7 +2008,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Journal of British Studies 
+      name = Journal of British Studies ;
+      issn = 0021-9371 ;
+      eissn = 1545-6986
     >
 
     param[journal_id] = jbs
@@ -2024,7 +2067,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Business 
+      name = The Journal of Business ;
+      issn = 0022-1375 ;
+      eissn = 1537-1375
     >
 
     param[journal_id] = jb
@@ -2087,7 +2132,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Journal of Consumer Research 
+      name = Journal of Consumer Research ;
+      issn = 0093-5301 ;
+      eissn = 1537-5277
     >
 
     param[journal_id] = jcr
@@ -2131,7 +2178,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Geology 
+      name = The Journal of Geology ;
+      issn = 0022-1376 ;
+      eissn = 1537-1376
     >
 
     param[journal_id] = jg
@@ -2153,7 +2202,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Journal of Human Capital 
+      name = Journal of Human Capital ;
+      issn = 1932-8575 ;
+      eissn = 1932-8664
     >
 
     param[journal_id] = jhc
@@ -2164,7 +2215,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Infectious Diseases 
+      name = The Journal of Infectious Diseases ;
+      issn = 0022-1899 ;
+      eissn = 1537-6613
     >
 
     param[journal_id] = jid
@@ -2197,7 +2250,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Journal of Labor Economics 
+      name = Journal of Labor Economics ;
+      issn = 0734-306X ;
+      eissn = 1537-5307
     >
 
     param[journal_id] = jole
@@ -2233,7 +2288,7 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Law and Economics 
+      name = The Journal of Law and Economics
     >
 
     param[journal_id] = jle
@@ -2293,7 +2348,7 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Legal Studies 
+      name = The Journal of Legal Studies
     >
 
     param[journal_id] = jls
@@ -2339,7 +2394,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Modern History 
+      name = The Journal of Modern History ;
+      issn = 0022-2801 ;
+      eissn = 1537-5358
     >
 
     param[journal_id] = jmh
@@ -2428,7 +2485,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Journal of Near Eastern Studies 
+      name = Journal of Near Eastern Studies ;
+      issn = 0022-2968 ;
+      eissn = 1545-6978
     >
 
     param[journal_id] = jnes
@@ -2504,7 +2563,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Journal of Political Economy 
+      name = Journal of Political Economy ;
+      issn = 0022-3808 ;
+      eissn = 1537-534X
     >
 
     param[journal_id] = jpe
@@ -2629,7 +2690,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Religion 
+      name = The Journal of Religion ;
+      issn = 0022-4189 ;
+      eissn = 1549-6538
     >
 
     param[journal_id] = jr
@@ -2727,7 +2790,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Library Quarterly 
+      name = The Library Quarterly ;
+      issn = 0024-2519 ;
+      eissn = 1549-652X
     >
 
     param[journal_id] = lq
@@ -2742,7 +2807,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Modern Philology 
+      name = Modern Philology ;
+      issn = 0026-8232 ;
+      eissn = 1545-6951
     >
 
     param[journal_id] = mp
@@ -2856,7 +2923,8 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Osiris 
+      name = Osiris ;
+      issn = 0369-7827
     >
 
     param[journal_id] = osiris
@@ -2883,7 +2951,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Philosophy of Science 
+      name = Philosophy of Science ;
+      issn = 0031-8248 ;
+      eissn = 1539-767X
     >
 
     param[journal_id] = phos
@@ -2967,7 +3037,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Physiological and Biochemical Zoology 
+      name = Physiological and Biochemical Zoology ;
+      issn = 1522-2152 ;
+      eissn = 1537-5293
     >
 
     param[journal_id] = pbz
@@ -2989,7 +3061,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Publications of the Astronomical Society of the Pacific 
+      name = Publications of the Astronomical Society of the Pacific ;
+      issn = 0004-6280 ;
+      eissn = 1538-3873
     >
 
     param[journal_id] = pasp
@@ -3009,7 +3083,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Quarterly Review of Biology 
+      name = The Quarterly Review of Biology ;
+      issn = 0033-5770 ;
+      eissn = 1539-7718
     >
 
     param[journal_id] = qrb
@@ -3101,7 +3177,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Signs: Journal of Women in Culture and Society 
+      name = Signs: Journal of Women in Culture and Society ;
+      issn = 0097-9740 ;
+      eissn = 1545-6943
     >
 
     param[journal_id] = signs
@@ -3144,7 +3222,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Social Service Review 
+      name = Social Service Review ;
+      issn = 0037-7961 ;
+      eissn = 1537-5404
     >
 
     param[journal_id] = ssr
@@ -3164,7 +3244,7 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Winterthur Portfolio 
+      name = Winterthur Portfolio
     >
 
     param[journal_id] = wp

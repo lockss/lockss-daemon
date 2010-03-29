@@ -12,7 +12,9 @@
 
     {
       title <
-      name = American Literary Realism
+        name = American Literary Realism ;
+        issn = 0002-9823 ;
+        eissn = 1940-5103
       >
 
       param[journal_dir] = american_literary_realism
@@ -25,7 +27,9 @@
 
     {
       title <
-      name = American Music
+        name = American Music ;
+        issn = 1945-2349 ;
+        eissn = 0734-4392
       >
 
       param[journal_dir] = american_music
@@ -36,7 +40,9 @@
 
     {
       title <
-      name = Black Women, Gender & Families
+        name = Black Women, Gender & Families ;
+        issn = 1944-6462 ;
+        eissn = 1935-2743
       >
 
       param[journal_dir] = black_women_gender_and_families
@@ -47,7 +53,9 @@
 
     {
       title <
-      name = Dance Research Journal
+        name = Dance Research Journal ;
+        issn = 0149-7677 ;
+        eissn = 1940-509X
       >
 
       param[journal_dir] = dance_research_journal
@@ -59,7 +67,9 @@
 
     {
       title <
-      name = Feminist Teacher
+        name = Feminist Teacher ;
+        issn = 0882-4843 ;
+        eissn = 1934-6034
       >
 
       param[journal_dir] = feminist_teacher
@@ -71,7 +81,7 @@
 
     {
       title <
-      name = JEGP, Journal of English and Germanic Philology
+        name = JEGP, Journal of English and Germanic Philology
       >
 
       param[journal_dir] = journal_of_english_and_germanic_philology
@@ -83,7 +93,9 @@
 
     {
       title <
-      name = Journal of Education Finance
+        name = Journal of Education Finance ;
+        issn = 0098-9495 ;
+        eissn = 1944-6470
       >
 
       param[journal_dir] = journal_of_education_finance
@@ -94,7 +106,9 @@
 
     {
       title <
-      name = Journal of Film and Video
+        name = Journal of Film and Video ;
+        issn = 0742-4671 ;
+        eissn = 1934-6018
       >
 
       param[journal_dir] = journal_of_film_and_video
@@ -107,7 +121,9 @@
 
     {
       title <
-      name = Radical Teacher
+        name = Radical Teacher ;
+        issn = 0191-4847 ;
+        eissn = 1941-0832
       >
 
       param[journal_dir] = radical_teacher
@@ -123,7 +139,9 @@
 
     {
       title <
-      name = The Journal of Aesthetic Education
+        name = The Journal of Aesthetic Education ;
+        issn = 0021-8510 ;
+        eissn = 1543-7809
       >
 
       param[journal_dir] = the_journal_of_aesthetic_education
@@ -141,7 +159,9 @@
 
     {
       title <
-      name = The Pluralist
+        name = The Pluralist ;
+        issn = 1930-7365 ;
+        eissn = 1944-6489
       >
 
       param[journal_dir] = the_pluralist
@@ -155,7 +175,7 @@
   {
     
     title <
-      name = Journal of Seventeenth-Century Music 
+      name = Journal of Seventeenth-Century Music
     >
 
     plugin = org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic

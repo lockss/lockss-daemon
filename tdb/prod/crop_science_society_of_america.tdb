@@ -5,7 +5,8 @@
 
   {
     title <
-      name = Crop Science
+      name = Crop Science ;
+      issn = 0011-183X
     >
 
     {
@@ -70,7 +71,9 @@
 
   {
     title <
-      name = Journal of Environmental Quality
+      name = Journal of Environmental Quality ;
+      issn = 0047-2425 ;
+      eissn = 1537-2537
     >
 
     {
@@ -124,7 +127,9 @@
 
   {
     title <
-      name = Journal of Plant Registrations
+      name = Journal of Plant Registrations ;
+      issn = 1936-5209 ;
+      eissn = 1940-3496
     >
 
     {
@@ -143,7 +148,8 @@
 
   {
     title <
-      name = The Plant Genome
+      name = The Plant Genome ;
+      issn = 1940-3372
     >
 
     comment[h20] = H20 title

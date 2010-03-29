@@ -9,7 +9,9 @@
 
   {
     title <
-      name = ESC: English Studies in Canada
+      name = ESC: English Studies in Canada ;
+      issn = 0317-0802 ;
+      eissn = 1913-4835
     >
 
     param[journal_dir] = esc_english_studies_in_canada

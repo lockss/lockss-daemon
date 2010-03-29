@@ -9,7 +9,9 @@
 
   {
     title <
-      name = The Middle East Journal
+      name = The Middle East Journal ;
+      issn = 0026-3141 ;
+      eissn = 1940-3461
     >
 
     param[journal_dir] = the_middle_east_journal

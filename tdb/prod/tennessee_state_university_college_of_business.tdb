@@ -9,7 +9,9 @@
 
   {
     title <
-      name = The Journal of Developing Areas
+      name = The Journal of Developing Areas ;
+      issn = 0022-037X ;
+      eissn = 1548-2278
     >
 
     param[journal_dir] = journal_of_developing_areas

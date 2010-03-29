@@ -9,7 +9,9 @@
 
   {
     title <
-      name = The Catholic Historical Review
+      name = The Catholic Historical Review ;
+      issn = 0008-8080 ;
+      eissn = 1534-0708
     >
 
     param[journal_dir] = catholic_historical_review
@@ -30,7 +32,9 @@
 
   {
     title <
-      name = U.S. Catholic Historian
+      name = U.S. Catholic Historian ;
+      issn = 0735-8318 ;
+      eissn = 1947-8224
     >
 
     param[journal_dir] = us_catholic_historian

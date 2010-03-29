@@ -11,7 +11,9 @@
   {
 
     title <
-      name = Goethe Yearbook
+      name = Goethe Yearbook ;
+      issn = 0734-3329 ;
+      eissn = 1940-9087
     >
 
     param[journal_dir] = goethe_yearbook

@@ -11,7 +11,9 @@
   {
   
     title <
-      name = Comparative Literature Studies 
+      name = Comparative Literature Studies ;
+      issn = 0010-4132 ;
+      eissn = 1528-4212
     >
 
     param[journal_dir] = comparative_literature_studies
@@ -44,7 +46,7 @@
   {
   
     title <
-      name = Philosophy and Rhetoric 
+      name = Philosophy and Rhetoric
     >
 
     param[journal_dir] = philosophy_and_rhetoric
@@ -66,7 +68,7 @@
   {
   
     title <
-      name = Resources for American Literary Study 
+      name = Resources for American Literary Study
     >
 
     param[journal_dir] = resources_for_american_literary_study
@@ -80,7 +82,7 @@
   {
   
     title <
-      name = SHAW The Annual of Bernard Shaw Studies 
+      name = SHAW The Annual of Bernard Shaw Studies
     >
 
     param[journal_dir] = annual_of_bernard_shaw_studies
@@ -101,7 +103,7 @@
   {
   
     title <
-      name = The Chaucer Review 
+      name = The Chaucer Review
     >
 
     param[journal_dir] = chaucer_review
@@ -123,7 +125,9 @@
   {
   
     title <
-      name = The Good Society 
+      name = The Good Society ;
+      issn = 1089-0017 ;
+      eissn = 1538-9731
     >
 
     param[journal_dir] = good_society
@@ -142,7 +146,9 @@
   {
   
     title <
-      name = The Journal of General Education 
+      name = The Journal of General Education ;
+      issn = 0021-3667 ;
+      eissn = 1527-2060
     >
 
     param[journal_dir] = journal_of_general_education
@@ -164,7 +170,7 @@
   {
   
     title <
-      name = The Journal of Nietzsche Studies 
+      name = The Journal of Nietzsche Studies
     >
 
     param[journal_dir] = journal_of_nietzsche_studies
@@ -190,7 +196,9 @@
   {
   
     title <
-      name = The Journal of Speculative Philosophy 
+      name = The Journal of Speculative Philosophy ;
+      issn = 0891-625X ;
+      eissn = 1527-9383
     >
 
     param[journal_dir] = journal_of_speculative_philosophy

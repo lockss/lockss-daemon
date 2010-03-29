@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Computer Music Journal
+      name = Computer Music Journal ;
+      issn = 0148-9267 ;
+      eissn = 1531-5169
     >
 
     param[journal_dir] = computer_music_journal
@@ -29,7 +31,9 @@
 
   {
     title <
-      name = Global Environmental Politics
+      name = Global Environmental Politics ;
+      issn = 1526-3800 ;
+      eissn = 1536-0091
     >
 
     param[journal_dir] = global_environmental_politics
@@ -47,7 +51,9 @@
 
   {
     title <
-      name = International Organization
+      name = International Organization ;
+      issn = 0020-8183 ;
+      eissn = 1531-5088
     >
 
     param[journal_dir] = international_organization
@@ -58,7 +64,9 @@
 
   {
     title <
-      name = International Security
+      name = International Security ;
+      issn = 0162-2889 ;
+      eissn = 1531-4804
     >
 
     param[journal_dir] = international_security
@@ -78,7 +86,9 @@
 
   {
     title <
-      name = Journal of Cold War Studies
+      name = Journal of Cold War Studies ;
+      issn = 1520-3972 ;
+      eissn = 1531-3298
     >
 
     param[journal_dir] = journal_of_cold_war_studies
@@ -99,7 +109,9 @@
 
   {
     title <
-      name = Journal of Interdisciplinary History
+      name = Journal of Interdisciplinary History ;
+      issn = 0022-1953 ;
+      eissn = 1530-9169
     >
 
     param[journal_dir] = journal_of_interdisciplinary_history
@@ -120,7 +132,9 @@
 
   {
     title <
-      name = Leonardo
+      name = Leonardo ;
+      issn = 0024-094X ;
+      eissn = 1530-9282
     >
 
     param[journal_dir] = leonardo
@@ -140,7 +154,9 @@
 
   {
     title <
-      name = Leonardo Music Journal
+      name = Leonardo Music Journal ;
+      issn = 0961-1215 ;
+      eissn = 1531-4812
     >
 
     param[journal_dir] = leonardo_music_journal
@@ -160,7 +176,9 @@
 
   {
     title <
-      name = Linguistic Inquiry
+      name = Linguistic Inquiry ;
+      issn = 0024-3892 ;
+      eissn = 1530-9150
     >
 
     param[journal_dir] = linguistic_inquiry
@@ -181,7 +199,9 @@
 
   {
     title <
-      name = PAJ: A Journal of Performance and Art
+      name = PAJ: A Journal of Performance and Art ;
+      issn = 1520-281X ;
+      eissn = 1537-9477
     >
 
     param[journal_dir] = performing_arts_journal
@@ -192,7 +212,9 @@
 
   {
     title <
-      name = Perspectives on Science
+      name = Perspectives on Science ;
+      issn = 1063-6145 ;
+      eissn = 1530-9274
     >
 
     param[journal_dir] = perspectives_on_science
@@ -215,7 +237,9 @@
 
   {
     title <
-      name = TDR: The Drama Review
+      name = TDR: The Drama Review ;
+      issn = 1054-2043 ;
+      eissn = 1531-4715
     >
 
     param[journal_dir] = the_drama_review
@@ -237,7 +261,9 @@
 
   {
     title <
-      name = The American Journal of Bioethics
+      name = The American Journal of Bioethics ;
+      issn = 1526-5161 ;
+      eissn = 1536-0075
     >
 
     param[journal_dir] = american_journal_of_bioethics
@@ -263,7 +289,9 @@
 
   {
     title <
-      name = The Washington Quarterly
+      name = The Washington Quarterly ;
+      issn = 0163-660X ;
+      eissn = 1530-9177
     >
 
     param[journal_dir] = washington_quarterly

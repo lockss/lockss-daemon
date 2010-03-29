@@ -10,7 +10,9 @@
 
   {
     title <
-      name = The Americas 
+      name = The Americas ;
+      issn = 0003-1615 ;
+      eissn = 1533-6247
     >
 
     param[journal_dir] = the_americas

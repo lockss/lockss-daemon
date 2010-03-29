@@ -9,7 +9,9 @@
 
   {
     title <
-      name = American Annals of the Deaf
+      name = American Annals of the Deaf ;
+      issn = 0002-726X ;
+      eissn = 1543-0375
     >
 
     param[journal_dir] = american_annals_of_the_deaf
@@ -26,7 +28,9 @@
 
   {
     title <
-      name = Sign Language Studies
+      name = Sign Language Studies ;
+      issn = 0302-1475 ;
+      eissn = 1533-6263
     >
 
     param[journal_dir] = sign_language_studies

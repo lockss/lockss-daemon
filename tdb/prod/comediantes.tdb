@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Bulletin of the Comediantes 
+      name = Bulletin of the Comediantes ;
+      issn = 0007-5108 ;
+      eissn = 1944-0928
     >
 
     param[journal_dir] = bulletin_of_the_comediantes

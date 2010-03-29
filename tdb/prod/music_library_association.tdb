@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Notes
+      name = Notes ;
+      issn = 0027-4380 ;
+      eissn = 1534-150X
     >
 
     param[journal_dir] = notes

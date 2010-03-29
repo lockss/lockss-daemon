@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Demography
+      name = Demography ;
+      issn = 0070-3370 ;
+      eissn = 1533-7790
     >
 
     param[journal_dir] = demography

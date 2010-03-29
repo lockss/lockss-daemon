@@ -11,7 +11,9 @@
   {
   
     title <
-      name = MELUS: Multi-Ethnic Literature of the U.S.
+      name = MELUS: Multi-Ethnic Literature of the U.S. ;
+      issn = 0163-755X ;
+      eissn = 1946-3170
     >
 
     param[journal_dir] = melus

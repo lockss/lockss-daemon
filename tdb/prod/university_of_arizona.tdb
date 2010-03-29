@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Arizona Journal of Hispanic Cultural Studies
+      name = Arizona Journal of Hispanic Cultural Studies ;
+      issn = 1096-2492 ;
+      eissn = 1934-9009
     >
 
     param[journal_dir] = arizona_journal_of_hispanic_cultural_studies
@@ -23,7 +25,9 @@
 
   {
     title <
-      name = Arizona Quarterly: A Journal of American Literature, Culture, and Theory
+      name = Arizona Quarterly: A Journal of American Literature, Culture, and Theory ;
+      issn = 0004-1610 ;
+      eissn = 1558-9595
     >
 
     param[journal_dir] = arizona_quarterly_a_journal_of_american_literature_culture_and_theory

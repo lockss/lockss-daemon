@@ -33,7 +33,9 @@
 
   {
     title <
-      name = Romani Studies
+      name = Romani Studies ;
+      issn = 1757-2274 ;
+      eissn = 1528-0748
     >
 
     param[journal_dir] = romani_studies
@@ -68,7 +70,9 @@
 
   {
     title <
-      name = The Byron Journal
+      name = The Byron Journal ;
+      issn = 0301-7257 ;
+      eissn = 1757-0263
     >
 
     param[journal_dir] = byron_journal
