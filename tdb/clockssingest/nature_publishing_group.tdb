@@ -257,7 +257,7 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = embor
 
-    au < testing  ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
+    au < ready  ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
     au < testing ; 2010 ; EMBO Reports Volume 11 ; 2010 ; 11 >
 
   }
@@ -524,7 +524,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2005 ; The Journal of Antibiotics Volume 58 ; 2005 ; 58 >
     au < manifest ; 2006 ; The Journal of Antibiotics Volume 59 ; 2006 ; 59 >
     au < manifest ; 2007 ; The Journal of Antibiotics Volume 60 ; 2007 ; 60 >
-    au < testing  ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
+    au < ready  ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
     au < released ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
     au < testing ; 2010 ; The Journal of Antibiotics Volume 63 ; 2010 ; 63 >
 
