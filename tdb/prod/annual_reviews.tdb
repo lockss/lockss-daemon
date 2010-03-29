@@ -243,7 +243,8 @@
 
   {
     title <
-      name = Annual Review of Biophysics and Bioengineering
+      name = Annual Review of Biophysics and Bioengineering ;
+      issn = 0084-6589
     >
 
 comment[bb1a] = next 3 title entries are continuation of the same journal
@@ -271,7 +272,8 @@ comment[bb1b] = pdf filter issues
 
   {
     title <
-      name = Annual Review of Biophysics and Biophysical Chemistry
+      name = Annual Review of Biophysics and Biophysical Chemistry ;
+      issn = 0084-6589
     >
 
 comment[bb2] = continued from previous title entry
@@ -292,7 +294,8 @@ comment[bb19_17] = pdf filter issues
 
   {
     title <
-      name = Annual Review of Biophysics and Biomolecular Structure
+      name = Annual Review of Biophysics and Biomolecular Structure ;
+      issn = 1056-8700
     >
 
 comment[bb3] = continued from previous title entry
@@ -316,15 +319,31 @@ comment[bb3] = continued from previous title entry
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 34 ; 34 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 35 ; 35 >
     au < released ; Annual Review of Biophysics and Biomolecular Structure Volume 36 ; 36 >
+
+  }
+
+  {
+  
+    title <
+      name = Annual Review of Biophysics ;
+      issn = 0084-6589
+    >
+    
+comment[bb3] = continued from previous title entry
+
+    param[journal_id] = biophys
+    param[short_journal_id] = bb
+
     au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 37 ; 37 >
     au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 38 ; 38 >
-    au < ready ; Annual Review of Biophysics and Biomolecular Structure Volume 39 ; 39 >
-  }
+
+  }  
 
 
   {
     title <
-      name = Annual Review of Cell Biology
+      name = Annual Review of Cell Biology ;
+      issn = 0743-4634
     >
 
 comment[cb1] = next title entry is a continuation of this journal
@@ -462,7 +481,8 @@ comment[cb24] = times out due to 500 errors (see relevant email)
 
   {
     title <
-      name = Annual Review of Ecology and Systematics
+      name = Annual Review of Ecology and Systematics ;
+      issn = 0066-4162
     >
 
     param[journal_id] = ecolsys
@@ -528,7 +548,8 @@ comment[cb24] = times out due to 500 errors (see relevant email)
 
   {
     title <
-      name = Annual Review of Energy
+      name = Annual Review of Energy ;
+      issn = 0362-1626
     >
 
 comment[eg1] = next 3 title entries are continuation of the same journal
@@ -557,7 +578,8 @@ comment[eg1] = next 3 title entries are continuation of the same journal
 
   {
     title <
-      name = Annual Review of Energy and the Environment
+      name = Annual Review of Energy and the Environment ;
+      issn = 1056-3466
     >
 
 comment[eg2] = continued from previous title entry
@@ -872,7 +894,8 @@ comment[eg3] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Materials Science
+      name = Annual Review of Materials Science ;
+      issn = 0084-6600
     >
 
 comment[ms1] = next title entry is a continuation of this journal
@@ -1140,7 +1163,8 @@ comment[ms2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Nuclear Science
+      name = Annual Review of Nuclear Science ;
+      issn = 0066-4243
     >
 
 comment[ns1] = next title entry is a continuation of this journal
@@ -1293,7 +1317,8 @@ comment[ns2] = continued from previous title entry
 
   {
     title <
-      name = Annual Review of Pharmacology
+      name = Annual Review of Pharmacology ;
+      issn = 0362-1642
     >
 
 comment[pa1] = next title entry is a continuation of this journal

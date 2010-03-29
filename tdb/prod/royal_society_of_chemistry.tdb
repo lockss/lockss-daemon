@@ -54,7 +54,9 @@
   {
   
     title <
-      name = Analytical Methods
+      name = Analytical Methods ;
+      issn = 1759-9660 ;
+      eissn = 1759-9679
     >
     
     param[journal_code] = ay
@@ -66,7 +68,9 @@
   {
   
     title <
-      name = Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry
+      name = Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry ;
+      issn = 0260-1818 ;
+      eissn = 1460-4760
     >
     
     param[journal_code] = ic
@@ -79,7 +83,9 @@
   {
   
     title <
-      name = Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry
+      name = Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry ;
+      issn = 0069-3030 ;
+      eissn = 1460-4779
     >
     
     param[journal_code] = oc
@@ -92,7 +98,9 @@
   {
   
     title <
-      name = Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry
+      name = Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry ;
+      issn = 0260-1826 ;
+      eissn = 1460-4787
     >
     
     param[journal_code] = pc
@@ -321,7 +329,9 @@
   {
 
     title <
-      name = Journal of Analytical Atomic Spectrometry
+      name = Journal of Analytical Atomic Spectrometry ;
+      issn = 0267-9477 ;
+      eissn = 1364-5544
     >
 
     param[journal_code] = ja
