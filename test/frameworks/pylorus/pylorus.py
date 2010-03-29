@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.9 2010-03-26 17:37:37 edwardsb1 Exp $'''
+$Id: pylorus.py,v 2.10 2010-03-29 16:44:04 edwardsb1 Exp $'''
 
 
 import ConfigParser
@@ -22,7 +22,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.9 $'.split()[ 1 ]
+REVISION = '$Revision: 2.10 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 60
@@ -188,6 +188,7 @@ class Content:
             except urllib2.URLError:
                 num_URLError += 1
                 if num_URLError < MAXIMUM_URLError:
+                    logging.warn( self.status_message( 'URL error while attempting to crawl %s on %s.  Continuing.' ))
                     continue
                 else:
                     raise
