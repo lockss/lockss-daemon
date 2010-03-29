@@ -359,7 +359,9 @@
 
   {
     title <
-      name = MLQ: Modern Language Quarterly
+      name = MLQ: Modern Language Quarterly ;
+      issn = 1527-1943 ;
+      eissn = 0026-7929
     >
 
     param[journal_dir] = modern_language_quarterly
@@ -375,7 +377,9 @@
 
   {
     title <
-      name = Nepantla: Views from South
+      name = Nepantla: Views from South ;
+      issn = 1529-1650 ;
+      eissn = 1527-0858
     >
 
     param[journal_dir] = nepantla

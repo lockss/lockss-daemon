@@ -9,7 +9,9 @@
 
   {
     title <
-      name = CR: The New Centennial Review
+      name = CR: The New Centennial Review ;
+      issn = 1528-4204 ;
+      eissn = 0009-2002
     >
 
     param[journal_dir] = new_centennial_review
