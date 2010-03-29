@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Le Mouvement Social
+      name = Le Mouvement Social ;
+      issn = 0027-2671 ;
+      eissn = 1961-8646
     >
 
     param[journal_dir] = le_mouvement_social

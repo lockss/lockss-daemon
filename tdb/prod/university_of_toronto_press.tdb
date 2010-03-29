@@ -313,7 +313,9 @@
 
   {
     title <
-      name = The Tocqueville Review/La revue Tocqueville
+      name = The Tocqueville Review/La revue Tocqueville ;
+      issn = 0730-479X ;
+      eissn = 1918-6649
     >
 
     param[journal_dir] = tocqueville_reviewla_revue_tocqueville

@@ -140,7 +140,9 @@
 
   {
     title <
-      name = Revista Hispánica Moderna
+      name = Revista Hispánica Moderna ;
+      issn = 0034-9593 ;
+      eissn = 1944-6446
     >
 
     param[journal_dir] = revista_hispanica_moderna
