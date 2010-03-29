@@ -83,7 +83,9 @@
 
   {
     title <
-      name = Italian Culture
+      name = Italian Culture ;
+      issn = 1559-0909 ;
+      eissn = 0161-4622
     >
 
     param[journal_dir] = italian_culture

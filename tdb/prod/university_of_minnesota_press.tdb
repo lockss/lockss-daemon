@@ -77,7 +77,9 @@
 
   {
     title <
-      name = Mechademia
+      name = Mechademia ;
+      issn = 2152-6648 ;
+      eissn = 1934-2489
     >
 
     param[journal_dir] = mechademia

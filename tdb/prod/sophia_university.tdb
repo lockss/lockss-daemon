@@ -11,7 +11,9 @@
   {
   
     title <
-      name = Monumenta Nipponica
+      name = Monumenta Nipponica ;
+      issn = 1880-1390 ;
+      eissn = 0027-0741
     >
 
     param[journal_dir] = monumenta_nipponica

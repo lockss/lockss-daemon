@@ -10,7 +10,9 @@
 
   {
     title <
-      name = Steinbeck Studies
+      name = Steinbeck Studies ;
+      issn = 1551-6903 ;
+      eissn = 0898-7734
     >
 
     param[journal_dir] = steinbeck_studies

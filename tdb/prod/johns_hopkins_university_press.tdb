@@ -166,7 +166,9 @@
 
   {
     title <
-      name = Book History
+      name = Book History ;
+      issn = 1529-1499 ;
+      eissn = 1098-7371
     >
 
     param[journal_dir] = book_history
@@ -481,7 +483,9 @@
   {
 
     title <
-      name = Hispania
+      name = Hispania ;
+      issn = 2153-6414 ;
+      eissn = 0018-2133
     >
 
     param[journal_dir] = hispania
@@ -1010,7 +1014,9 @@
 
   {
     title <
-      name = NWSA Journal
+      name = NWSA Journal ;
+      issn = 1527-1889 ;
+      eissn = 1040-0656
     >
 
     param[journal_dir] = nwsa_journal

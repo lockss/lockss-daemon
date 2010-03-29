@@ -46,7 +46,9 @@
   {
   
     title <
-      name = Philosophy and Rhetoric
+      name = Philosophy and Rhetoric ;
+      issn = 1527-2079 ;
+      eissn = 0031-8213
     >
 
     param[journal_dir] = philosophy_and_rhetoric
@@ -68,7 +70,9 @@
   {
   
     title <
-      name = Resources for American Literary Study
+      name = Resources for American Literary Study ;
+      issn = 1529-1502 ;
+      eissn = 0048-7384
     >
 
     param[journal_dir] = resources_for_american_literary_study

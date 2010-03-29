@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Harvard Journal of Asiatic Studies
+      name = Harvard Journal of Asiatic Studies ;
+      issn = 1944-6454 ;
+      eissn = 0073-0548
     >
 
     param[journal_dir] = harvard_journal_of_asiatic_studies

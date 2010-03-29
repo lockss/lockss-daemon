@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Hume Studies
+      name = Hume Studies ;
+      issn = 1947-9921 ;
+      eissn = 0319-7336
     >
 
     param[journal_dir] = hume_studies

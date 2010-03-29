@@ -20,7 +20,9 @@
 
   {
     title <
-      name = Anthropological Linguistics
+      name = Anthropological Linguistics ;
+      issn = 1944-6527 ;
+      eissn = 0003-5483
     >
 
     param[journal_dir] = anthropological_linguistics
@@ -31,7 +33,9 @@
 
   {
     title <
-      name = Collaborative Anthropologies
+      name = Collaborative Anthropologies ;
+      issn = 2152-4009 ;
+      eissn = 1943-2550
     >
 
     param[journal_dir] = collaborative_anthropologies
@@ -85,7 +89,9 @@
 
   {
     title <
-      name = Histories of Anthropology Annual
+      name = Histories of Anthropology Annual ;
+      issn = 1940-5138 ;
+      eissn = 1557-637X
     >
 
     param[journal_dir] = histories_of_anthropology_annual
@@ -159,7 +165,9 @@
 
   {
     title <
-      name = Native South
+      name = Native South ;
+      issn = 2152-4025 ;
+      eissn = 1943-2569
     >
 
     param[journal_dir] = native_south
@@ -239,7 +247,9 @@
 
   {
     title <
-      name = Studies in American Naturalism
+      name = Studies in American Naturalism ;
+      issn = 1944-6519 ;
+      eissn = 1931-2555
     >
 
     param[journal_dir] = studies_in_american_naturalism

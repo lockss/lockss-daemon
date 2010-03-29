@@ -60,7 +60,9 @@
 
   {
     title <
-      name = Canadian Public Policy
+      name = Canadian Public Policy ;
+      issn = 1911-9917 ;
+      eissn = 0317-0861
     >
 
     param[journal_dir] = canadian_public_policy
@@ -89,7 +91,9 @@
 
   {
     title <
-      name = Canadian Theatre Review
+      name = Canadian Theatre Review ;
+      issn = 1920-941X ;
+      eissn = 0315-0836
     >
 
     param[journal_dir] = canadian_theatre_review

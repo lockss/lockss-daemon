@@ -46,7 +46,9 @@
 
   {
     title <
-      name = Social Forces
+      name = Social Forces ;
+      issn = 1534-7605 ;
+      eissn = 0037-7732
     >
 
     param[journal_dir] = social_forces

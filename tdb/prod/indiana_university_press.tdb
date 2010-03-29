@@ -49,7 +49,9 @@
 
   {
     title <
-      name = Black Camera
+      name = Black Camera ;
+      issn = 1947-4237 ;
+      eissn = 1536-3155
     >
 
     param[journal_dir] = black_camera
@@ -194,7 +196,9 @@
 
   {
     title <
-      name = International Journal of Feminist Approaches to Bioethics
+      name = International Journal of Feminist Approaches to Bioethics ;
+      issn = 1937-4577 ;
+      eissn = 1937-4585
     >
 
     param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
@@ -326,7 +330,9 @@
 
   {
     title <
-      name = Journal of Modern Literature
+      name = Journal of Modern Literature ;
+      issn = 1529-1464 ;
+      eissn = 0022-281X
     >
 
     param[journal_dir] = journal_of_modern_literature
@@ -428,7 +434,9 @@
 
   {
     title <
-      name = Prooftexts
+      name = Prooftexts ;
+      issn = 1086-3311 ;
+      eissn = 0272-9601
     >
 
     param[journal_dir] = prooftexts
@@ -460,7 +468,9 @@
 
   {
     title <
-      name = Research in African Literatures
+      name = Research in African Literatures ;
+      issn = 1527-2044 ;
+      eissn = 0034-5210
     >
 
     param[journal_dir] = research_in_african_literatures
@@ -526,7 +536,9 @@
 
   {
     title <
-      name = Transition
+      name = Transition ;
+      issn = 1527-8042 ;
+      eissn = 0041-1191
     >
 
     param[journal_dir] = transition
@@ -546,7 +558,9 @@
 
   {
     title <
-      name = Victorian Studies
+      name = Victorian Studies ;
+      issn = 1527-2052 ;
+      eissn = 0042-5222
     >
 
     param[journal_dir] = victorian_studies
