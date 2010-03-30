@@ -9108,6 +9108,21 @@
    </property>
   </property>
 
+  <property name="MolecularandCellularBiology30">
+   <property name="attributes.publisher" value="American Society for Microbiology" />
+   <property name="journalTitle" value="Molecular and Cellular Biology" />
+   <property name="title" value="Molecular and Cellular Biology Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://mcb.asm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
  </property>
 
 </lockss-config>
