@@ -205,7 +205,10 @@
         <value>org.lockss.plugin.ingenta.IngentaJournalPlugin</value>
 	<value>org.lockss.plugin.medknow.MedknowPlugin</value>
 	<value>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin</value>
-	      </list>
+	<value>org.lockss.plugin.clockss.ClockssElsevierSourcePlugin</value>
+	<value>org.lockss.plugin.clockss.ClockssSpringerSourcePlugin</value>
+	<value>org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin</value>
+      </list>
     </property>
 
   </property>
