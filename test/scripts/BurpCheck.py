@@ -272,7 +272,8 @@ def _find_inconsistent_information(db, options):
                 isBlankReport = False
                 
             # Verify that no articles have had a successful crawl, but still have zero DOIs reported.
-            cursor2.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult = 'successful' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
+            cursor2.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult = 'successful' GROUP BY machinename, port;" % 
+                            (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             crawledbutzero = cursor2.fetchone()
             crawledbutzeroflag = True
             while crawledbutzero is not None:
@@ -287,8 +288,17 @@ def _find_inconsistent_information(db, options):
                 fileInconsistent.write("\n") 
                 
             # Verify that zero DOIs have not been waiting for too long.  
-            # **** TO DO ****
-            
+            cursor2.execute("SELECT machinename, port, created FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult != 'successful' GROUP BY machinename, port;" %
+                            (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
+            notcrawled = cursor2.fetchone()
+            while notcrawled is not None and notcrawled[2] is not None:            
+                timesincecreated = datetime.now() - notcrawled[2];
+                if timesincecreated > datetime.timedelta(OPTION_DAYS_WITHOUT_CRAWL_DEFAULT):
+                    fileInconsistent.write("`%s' has been waiting too long for a successful crawl on %s:%d." %
+                                           (arAuid[1], notcrawled[0], notcrawled[1]))
+                    isBlankReport = False
+                notcrawled = cursor2.fetchone()
+                 
             # Verify that the current article on one machine does not have fewer articles than any previous run.
             cursorMachine.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             arMachineName = cursorMachine.fetchone()
