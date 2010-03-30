@@ -7,6 +7,7 @@ from datetime import date, timedelta
 
 import MySQLdb
 import optparse
+import urllib2
 
 # Constants
 
