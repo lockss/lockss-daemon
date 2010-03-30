@@ -8658,6 +8658,21 @@
    </property>
   </property>
 
+  <property name="MicrobiologyandMolecularBiologyReviews74">
+   <property name="attributes.publisher" value="American Society for Microbiology" />
+   <property name="journalTitle" value="Microbiology and Molecular Biology Reviews" />
+   <property name="title" value="Microbiology and Molecular Biology Reviews Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://mmbr.asm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="74" />
+   </property>
+  </property>
+
   <property name="MolecularandCellularBiology1">
    <property name="attributes.publisher" value="American Society for Microbiology" />
    <property name="journalTitle" value="Molecular and Cellular Biology" />
