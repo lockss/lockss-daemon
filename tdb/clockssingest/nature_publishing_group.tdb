@@ -832,7 +832,7 @@ comment[bmt44] = attempt full recrawls
     au < manifest ; 2006 ; Molecular Psychiatry Volume 11 ; 2006 ; 11 >
     au < manifest ; 2007 ; Molecular Psychiatry Volume 12 ; 2007 ; 12 >
     au < ready  ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
-    au < testing  ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
+    au < ready  ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
     au < testing ; 2010 ; Molecular Psychiatry Volume 15 ; 2010 ; 15 >
 
   }
@@ -1124,7 +1124,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrc
 
-    au < testing ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
+    au < ready ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
     au < released ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
     au < testing ; 2010 ; Nature Reviews Cancer Volume 10 ; 2010 ; 10 >
 
@@ -1138,7 +1138,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrcardio
 
-    au < testing ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
+    au < ready ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
     au < testing ; 2010 ; Nature Reviews Cardiology Volume 7 ; 2010 ; 7 >
 
@@ -1166,7 +1166,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrd
 
-    au < testing ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
+    au < ready ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
     au < released ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
     au < testing ; 2010 ; Nature Reviews Drug Discovery Volume 9 ; 2010 ; 9 >
 
@@ -1321,7 +1321,7 @@ comment[nprot4] = poll mismatch
     param[journal_id] = nrurol
 
     au < testing ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
-    au < testing ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
+    au < ready ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
     au < testing ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
 
   }
