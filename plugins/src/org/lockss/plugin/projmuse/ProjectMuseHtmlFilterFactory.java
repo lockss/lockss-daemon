@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseHtmlFilterFactory.java,v 1.2 2009-06-17 22:42:31 thib_gc Exp $*/
+ * $Id: ProjectMuseHtmlFilterFactory.java,v 1.3 2010-03-30 20:45:36 greya Exp $*/
 
 /*
 
@@ -59,6 +59,10 @@ public class ProjectMuseHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "credits")),                                                                  
+        // Filter out <div id="citationsblock">...</div>
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+                                                                         "id",
+                                                                         "citationsblock")), 
     };
     
     // First filter with HtmlParser
