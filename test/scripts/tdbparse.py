@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.17 2010-03-11 19:03:32 thib_gc Exp $
+# $Id: tdbparse.py,v 1.18 2010-03-31 11:09:19 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -399,7 +399,6 @@ class TdbParser(object):
         if self.__token[0] == TOKEN_KEYWORD_AU:
             self.__au()
         elif self.__token[0] == TOKEN_CURLY_OPEN:
-            self.__current_au.append(AU(self.__current_au[-1]))
             self.__au_container()
         else:
             raise RuntimeError, 'expected %s or %s but got %s' % (_translate_token(TOKEN_KEYWORD_AU),
