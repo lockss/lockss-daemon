@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.17 2010-03-11 02:14:03 thib_gc Exp $
+# $Id: tdb.py,v 1.18 2010-03-31 11:08:08 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -63,7 +63,7 @@ class ChainedMap(Map):
         Map.__init__(self)
         self._next = next
 
-    def get(self, key):        
+    def get(self, key):
         myval = super(ChainedMap,self).get(key)
         if self._next is None: return myval
         nextval = self._next.get(key)
