@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.11 2010-03-30 20:28:19 edwardsb1 Exp $'''
+$Id: pylorus.py,v 2.12 2010-03-31 16:25:26 edwardsb1 Exp $'''
 
 
 import ConfigParser
 import cPickle
+import httplib
 import logging
 import optparse
 import os
@@ -23,7 +24,7 @@ import lockss_daemon
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.11 $'.split()[ 1 ]
+REVISION = '$Revision: 2.12 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 60
@@ -186,7 +187,7 @@ class Content:
                 # Local or repeated remote crawl failures are fatal
                 self.state = Content.State.CRAWL_FAILURE
                 raise Leaving_Pipeline
-            except urllib2.URLError:
+            except (urllib2.URLError, httplib.BadStatusLine):
                 num_URLError += 1
                 if num_URLError < MAXIMUM_URLError:
                     logging.warn( self.status_message( 'URL error while attempting to crawl %s on %s.  Continuing.' ))
