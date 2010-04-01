@@ -163,6 +163,9 @@ def _article_report(client, db, options):
     auarticles = {}
     cursor = db.cursor()
     for auid in auids:
+        # Because it's hard to know if the Burp is running without SOME feedback...
+        print options.host + ":" + auname[auid]
+        
         rerun = True
         numRuns = 0
         while rerun:
@@ -196,9 +199,6 @@ def _article_report(client, db, options):
             
         _get_list_articles(client, auid, auarticles)
       
-        # Because it's hard to know if the Burp is running without SOME feedback...
-        print options.host + ":" + auname[auid]
-        
         # Note: There is no article iterator for RSC.  This is a work-around.
         if auid.find('ClockssRoyalSocietyOfChemistryPlugin') >= 0 and (options.host.find("ingest") >= 0):
             _get_list_urls(client, auid, auarticles)
