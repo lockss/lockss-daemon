@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbproc.py,v 1.7 2010-03-11 01:36:39 thib_gc Exp $
+# $Id: tdbproc.py,v 1.8 2010-04-01 10:33:08 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,8 +27,6 @@
 # in this Software without prior written authorization from Stanford University.
 
 from tdbconst import *
-import tdblint
-import tdbsel
 
 TDBPROC_VERSION = '0.1.2'
 
@@ -56,22 +54,9 @@ def _make_command_line_parser():
                       default=TDB_STYLE_DEFAULT,
                       help='output style (default: %default)')
 
-## @begin tdblint
-    tdblint.__option_parser__(parser)
-## @end tdblint
-## @begin tdbsel
-    tdbsel.__option_parser__(parser)
-## @end tdbsel
-
     return parser
 
 def _dispatch(tdb, options):
-## @begin tdblint
-    if tdblint.__dispatch__(options): tdblint.tdblint(tdb, options)
-## @end tdblint
-## @begin tdbsel
-    if tdbsel.__dispatch__(options): tdb = tdbsel.tdb_select(tdb, options)
-## @end tdbsel
 ## @begin tdbxml
     if options.style in [ TDB_STYLE_XML, TDB_STYLE_XML_ENTRIES, TDB_STYLE_XML_LEGACY ]:
         from tdbxml import tdb_to_xml

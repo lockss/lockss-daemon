@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.20 2010-03-26 22:46:33 thib_gc Exp $
+# $Id: tdbxml.py,v 1.21 2010-04-01 10:33:08 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -126,9 +126,12 @@ def _process_au(au, options):
         _short_au_name(au),
         _escape(au.title().publisher().name()),
         _escape(au.title().name()) )
-    if au.issn() is not None: # There's a bug here: au.title().issn() is intended
+    if au.title().issn() is not None:
         print '''\
-   <property name="issn" value="%s" />''' % ( au.issn(), )
+   <property name="issn" value="%s" />''' % ( au.title().issn(), )
+    if au.title().eissn() is not None:
+        print '''\
+   <property name="eissn" value="%s" />''' % ( au.title().eissn(), )
     print '''\
    <property name="title" value="%s" />
    <property name="plugin" value="%s" />''' % (

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.18 2010-03-31 11:08:08 thib_gc Exp $
+# $Id: tdb.py,v 1.19 2010-04-01 10:33:08 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -92,7 +92,9 @@ class Publisher(Map):
 
 class Title(Map):
 
-    NAME = 'name'
+    NAME  = 'name'
+    EISSN = 'eissn'
+    ISSN  = 'issn'
     PUBLISHER = 'publisher'
 
     def __init__(self):
@@ -102,12 +104,13 @@ class Title(Map):
     def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
 
     def name(self): return self.get(Title.NAME)
+    def eissn(self): return self.get(Title.EISSN)
+    def issn(self): return self.get(Title.ISSN)
     def publisher(self): return self.get(Title.PUBLISHER)
 
 class AU(ChainedMap):
 
     ATTR = 'attr'
-    ISSN = 'issn'
     NAME = 'name'
     NONDEFPARAM = 'nondefparam'
     PARAM = 'param'
@@ -161,7 +164,6 @@ class AU(ChainedMap):
 
     def attr(self, attr): return self.get( (AU.ATTR, attr) )
     def attrs(self): return self.get(AU.ATTR) or dict()
-    def issn(self): return self.get(AU.ISSN)
     def name(self): return self.get(AU.NAME)
     def nondefparam(self, nondefparam):
         val = self.get( (AU.NONDEFPARAM, nondefparam) )
