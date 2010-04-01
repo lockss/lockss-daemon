@@ -192,6 +192,7 @@ def _article_report(client, db, options):
             aucreated[auid] = time.strptime(created, "%H:%M:%S %m/%d/%y")
         else:
             print "FAIL: created time was not set.\n"
+            aucreated[auid] = None
             
         _get_list_articles(client, auid, auarticles)
       
@@ -207,13 +208,20 @@ VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", %d, "rsc", '%s')""" % \
                             (host, port, auname[auid], auid, auyear[auid], len(auarticles[auid]), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
         else:
             # Standard article...
-            cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
+            if aucreated[auid] is not None:
+                cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
 auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
 aurepository, numarticles, publisher, created)
 VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
 "%s", "%s", "default", '%s')"""  % \
                        (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], int(len(auarticles[auid])), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
-
+            else:
+                cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
+auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
+aurepository, numarticles, publisher, created)
+VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
+"%s", "%s", "default", NULL)"""  % \
+                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], int(len(auarticles[auid]))))
     
     cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, NOW())" %
                    (host, int(port)))
