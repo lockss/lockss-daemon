@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.7 2009-10-30 20:09:45 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.8 2010-04-01 22:27:24 edwardsb1 Exp $
  */
 
 /*
@@ -212,7 +212,13 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "id",
                                                                          "natpav")),
-
+                                                                         
+       /*
+        * Nature has changed items within JavaScript.  We're now deleting JavaScript.
+        */
+       HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("script", 
+                                                                        "type", 
+                                                                        "text/javascript")),
 
     };
 
