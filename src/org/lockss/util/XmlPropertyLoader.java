@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.35 2009-02-05 05:10:19 tlipkis Exp $
+ * $Id: XmlPropertyLoader.java,v 1.36 2010-04-02 23:33:49 pgust Exp $
  */
 
 /*
@@ -70,17 +70,47 @@ public class XmlPropertyLoader {
 
   public static void load(PropertyTree props, InputStream istr)
       throws ParserConfigurationException, SAXException, IOException {
+    load(props, (Tdb)null, istr);
+  }
+  
+  /**
+   * Load a property tree and title database from the input
+   * stream. If Tdb is specified, properties in the "org.lockss.title"
+   * subtree are added to the title database rather than the configuration
+   * tree.
+   * 
+   * @param props the property tree to add to
+   * @param tdb the title database to add to
+   * @param istr the input stream
+   * @throws ParserConfigurationException for parse exceptions
+   * @throws SAXException for SAX exceptions
+   * @throws IOException for IO exceptions
+   */
+  public static void load(PropertyTree props, Tdb tdb, InputStream istr)
+      throws ParserConfigurationException, SAXException, IOException {
     if (m_instance == null) {
       m_instance = new XmlPropertyLoader();
     }
 
-    m_instance.loadProperties(props, istr);
+    m_instance.loadProperties(props, tdb, istr);
   }
 
   /**
    * Load a set of XML properties from the input stream.
    */
   void loadProperties(PropertyTree props, InputStream istr)
+      throws ParserConfigurationException, SAXException, IOException {
+    loadProperties(props, (Tdb)null, istr);
+  }
+  
+  /**
+   * Load a set of XML properties and title database from the input stream.
+   * 
+   * @param props the property tree to load from
+   * @param tdb the Tdb to load into
+   * @para istr the input stream
+   */
+  void loadProperties(PropertyTree props, Tdb tdb, InputStream istr)
       throws ParserConfigurationException, SAXException, IOException {
 
     SAXParserFactory factory = SAXParserFactory.newInstance();
@@ -90,7 +120,7 @@ public class XmlPropertyLoader {
 
     SAXParser parser = factory.newSAXParser();
 
-    parser.parse(istr, new LockssConfigHandler(props));
+    parser.parse(istr, new LockssConfigHandler(props, tdb));
   }
 
   public Version getDaemonVersion() {
@@ -155,7 +185,18 @@ public class XmlPropertyLoader {
 
     // The property tree we're adding to.
     private PropertyTree m_props;
+    
+    // The title database we're adding to.
+    private Tdb m_tdb;
 
+    // The current title property name (e.g. "org.lockss.title.BetterHomesAndGardens")
+    private String titlePropName = null;
+    
+    // The property map for the current title
+    // properties added to this map should be stripped of their leading titlePropName
+    // (e.g. "org.lockss.title.BetterHomesAndGardens.journalTitle" -> "journalTitle")
+    Properties titleProps = null;
+    
     // A stringbuffer to hold current character data until it's all
     // been read.
     private StringBuffer m_charBuffer;
@@ -169,8 +210,11 @@ public class XmlPropertyLoader {
 
     /**
      * Default constructor.
+     * 
+     * @param props the property tree to append to
+     * @param tdb the title database to append to
      */
-    public LockssConfigHandler(PropertyTree props) {
+    public LockssConfigHandler(PropertyTree props, Tdb tdb) {
       super();
       // Because the users expect to be able to put conditionals anywhere:
       m_testEval.push(new Stack<Boolean>());
@@ -185,6 +229,7 @@ public class XmlPropertyLoader {
       m_sysHostname = getPlatformHostname();
 
       m_props = props;
+      m_tdb = tdb;
       log.debug2("Conditionals: {platformVer=" + m_sysPlatformVer + "}, " +
 		 "{daemonVer=" + m_sysDaemonVer + "}, " +
 		 "{groups=" + m_sysGroups + "}, " +
@@ -378,18 +423,24 @@ public class XmlPropertyLoader {
      */
     private void startPropertyTag(Attributes attrs) {
       if (doEval()) {
-	boolean hasValueAttr = false;
 	String name = attrs.getValue("name");
 	String value = attrs.getValue("value");
 
-	if (value != null) hasValueAttr = true;
-
 	m_propStack.push(name);
-
+	
 	// If we have both a name and a value we can add it to the
 	// property tree right away.
-	if (hasValueAttr) {
+	if (value != null) {
 	  setProperty(value);
+	} else if ((m_tdb != null) && (titlePropName == null)) {
+          String propName = getPropname();
+          if (propName.startsWith(ConfigManager.PREFIX_TITLE_DB)) {
+            if (propName.indexOf(ConfigManager.PREFIX_TITLE_DB.length(), '.') < 0) {
+              // create Properties for new title.
+              titlePropName = propName;
+              titleProps = new Properties();
+            }
+          }
 	}
       }
     }
@@ -515,7 +566,19 @@ public class XmlPropertyLoader {
      */
     private void endPropertyTag() {
       if (doEval()) {
-	m_propStack.pop();
+        // add AU to TDB at end of processing current title
+        if (getPropname().equals(titlePropName)) {
+          try {
+            m_tdb.addTdbAuFromProperties(titleProps);
+          } catch (Throwable ex) {
+            log.error(titlePropName + ": " + ex.getMessage());
+          }
+          titleProps = null;
+          titlePropName = null;
+          
+        }
+
+        m_propStack.pop();
       }
     }
 
@@ -619,7 +682,15 @@ public class XmlPropertyLoader {
      * Log a warning if overwriting an existing property.
      */
     private void setProperty(String value) {
-      m_props.put(getPropname(), value);
+      String propName = getPropname();
+      if (titleProps != null) {
+        // add property to title properties map
+        String pname = propName.substring(titlePropName.length()+1);
+        titleProps.put(pname, value);
+      } else {
+        // add property to property tree 
+        m_props.put(propName, value);
+      }
     }
     
     /**
