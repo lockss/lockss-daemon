@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.90 2010-02-24 03:55:31 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.91 2010-04-02 23:32:18 pgust Exp $
  */
 
 /*
@@ -709,7 +709,18 @@ public class StringUtil {
    * newline characters. 
    */
   public static Reader getLineReader(InputStream in) {
-    return getLineReader(new InputStreamReader(in));
+    return getLineReader(in, null);
+  }
+  
+  /** Return a reader that transforms platform newline sequences to standard
+   * newline characters. 
+   * @param in an input stream
+   * @param encoding the character encoding
+   * @return a filtered reader that transforms platform newline sequences to standard
+   * newline characters. 
+   */
+  public static Reader getLineReader(InputStream in, String encoding) {
+    return getLineReader(StreamUtil.getReader(in, encoding));
   }
 
   /** Return a string with lines from a reader, separated by a newline character,
