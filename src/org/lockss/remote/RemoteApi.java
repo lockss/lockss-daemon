@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.70 2009-07-22 06:37:20 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.71 2010-04-02 23:27:53 pgust Exp $
  */
 
 /*
@@ -973,15 +973,15 @@ public class RemoteApi
 		    ", current: " + normOld + ", new: " + normNew);
 	}
 	stat.setStatus("Conflict", STATUS_ORDER_ERROR);
-	Set diffKeys = normNew.differentKeys(normOld);
+	Set<String> diffKeys = normNew.differentKeys(normOld);
 	StringBuffer sb = new StringBuffer();
 	sb.append("Conflict:<br>");
-	for (Iterator iter = diffKeys.iterator(); iter.hasNext(); ) {
-	  String key = (String)iter.next();
-	  String foo = "Key: " + key + ", current=" + normOld.get(key) +
-	    ", file=" + normNew.get(key) + "<br>";
-	  sb.append(foo);
-	}
+        for (Iterator iter = diffKeys.iterator(); iter.hasNext(); ) {
+          String key = (String)iter.next();
+          String foo = "Key: " + key + ", current=" + normOld.get(key) +
+                       ", file=" + normNew.get(key) + "<br>";
+          sb.append(foo);
+        }
 	stat.setExplanation(sb.toString());
       }
     } else if (getAuFromId(auid) != null) {
