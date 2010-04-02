@@ -153,6 +153,31 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="Shampoo2005superseded">
+   <property name="attributes.publisher" value="Shampoo Poetry" />
+   <property name="journalTitle" value="Shampoo" />
+   <property name="title" value="Shampoo 2005 [superseded]" />
+   <property name="plugin" value="org.nypl.plugin.shampoo.ShampooPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shampoopoetry.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issue_set" />
+    <property name="value" value="Twentyfive, Twentyonefour, Twentythree" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="Shampoo2005">
    <property name="attributes.publisher" value="Shampoo Poetry" />
    <property name="journalTitle" value="Shampoo" />

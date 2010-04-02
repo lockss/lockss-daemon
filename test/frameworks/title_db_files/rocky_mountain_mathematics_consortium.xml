@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Rocky Mountain Mathematics Consortium">
+   <property name="name" value="All Rocky Mountain Mathematics Consortium Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Rocky Mountain Mathematics Consortium']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="RockyMountainJournalofMathematics1">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics2">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics3">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics4">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics5">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics6">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics7">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics8">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics9">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics10">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics11">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics12">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics13">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics14">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics15">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics16">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics17">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics18">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics19">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics20">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics21">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics22">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics23">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics24">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics25">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics26">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics27">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics28">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics29">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics30">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics31">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics32">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics33">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics34">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="34" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics35">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="35" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics36">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="36" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics37">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics38">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics39">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="39" />
+   </property>
+  </property>
+
+  <property name="RockyMountainJournalofMathematics40">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Rocky Mountain Journal of Mathematics" />
+   <property name="title" value="Rocky Mountain Journal of Mathematics Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="rmj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="40" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications1">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications2">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications3">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications4">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications5">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications6">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications7">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications8">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications9">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications10">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications11">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications12">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications13">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications14">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications15">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications16">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications17">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications18">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications19">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications20">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications21">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+  </property>
+
+  <property name="JournalofIntegralEquationsandApplications22">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Integral Equations and Applications" />
+   <property name="title" value="Journal of Integral Equations and Applications Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jie" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+  </property>
+
+  <property name="JournalofCommutativeAlgebra1">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Commutative Algebra" />
+   <property name="title" value="Journal of Commutative Algebra Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jca" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+  </property>
+
+  <property name="JournalofCommutativeAlgebra2">
+   <property name="attributes.publisher" value="Rocky Mountain Mathematics Consortium" />
+   <property name="journalTitle" value="Journal of Commutative Algebra" />
+   <property name="title" value="Journal of Commutative Algebra Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.rockymountainmathematicsconsortium.RockyMountainMathematicsConsortiumPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://rmmc.asu.edu/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jca" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
