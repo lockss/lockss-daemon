@@ -192,7 +192,11 @@ def _article_report(client, db, options):
         
         created = summary.get('Created')
         if created is not None:
-            aucreated[auid] = time.strptime(created, "%H:%M:%S %m/%d/%y")
+            try:
+                aucreated[auid] = time.strptime(created, "%H:%M:%S %m/%d/%y")
+            except ValueError:
+                print "FAIL: 'Created' date was '%s', which is not the right format.  Continuing.\n"
+                aucreated[auid] = None
         else:
             print "FAIL: created time was not set.\n"
             aucreated[auid] = None
