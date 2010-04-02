@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.19 2010-04-01 10:33:08 thib_gc Exp $
+# $Id: tdb.py,v 1.20 2010-04-02 11:15:16 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -155,6 +155,7 @@ class AU(ChainedMap):
                  STATUS_SUPERSEDED,
                  STATUS_RETRACTED ]
     TITLE = 'title'
+    YEAR = 'year'
 
     def __init__(self, next=None):
         '''Constructor.'''
@@ -180,6 +181,7 @@ class AU(ChainedMap):
     def rights(self): return self.get(AU.RIGHTS)
     def status(self): return self.get(AU.STATUS)
     def title(self): return self.get(AU.TITLE)
+    def year(self): return self.get(AU.YEAR)
 
 class Tdb(object):
 

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbproc.py,v 1.8 2010-04-01 10:33:08 thib_gc Exp $
+# $Id: tdbproc.py,v 1.9 2010-04-02 11:15:16 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,13 +27,14 @@
 # in this Software without prior written authorization from Stanford University.
 
 from tdbconst import *
+import tdbout
+import tdbq
 
-TDBPROC_VERSION = '0.1.2'
+TDBPROC_VERSION = '0.2.0'
 
 OPTION_LONG        = '--'
 OPTION_SHORT       = '-'
 
-TDB_OPTION_LEVEL_SHORT = 'l'
 TDB_OPTION_STYLE_SHORT = 's'
 
 def _make_command_line_parser():
@@ -42,11 +43,6 @@ def _make_command_line_parser():
     from optparse import OptionGroup, OptionParser
     parser = OptionParser(version=TDBPROC_VERSION)
 
-    parser.add_option(OPTION_SHORT + TDB_OPTION_LEVEL_SHORT,
-                      OPTION_LONG + TDB_OPTION_LEVEL,
-                      dest=TDB_OPTION_LEVEL,
-                      action='append',
-                      help='output level, comma-separated (%default)')
     parser.add_option(OPTION_SHORT + TDB_OPTION_STYLE_SHORT,
                       OPTION_LONG + TDB_OPTION_STYLE,
                       dest=TDB_OPTION_STYLE,
@@ -54,41 +50,37 @@ def _make_command_line_parser():
                       default=TDB_STYLE_DEFAULT,
                       help='output style (default: %default)')
 
+    tdbq.__option_parser__(parser)
+    tdbout.__option_parser__(parser)
+
     return parser
 
 def _dispatch(tdb, options):
-## @begin tdbxml
+    if tdbout.__dispatch__(tdb, options):
+        return
     if options.style in [ TDB_STYLE_XML, TDB_STYLE_XML_ENTRIES, TDB_STYLE_XML_LEGACY ]:
         from tdbxml import tdb_to_xml
         tdb_to_xml(tdb, options)
-## @end tdbxml
     else:
         if options.style is not TDB_STYLE_NONE:
             print '(no output)'
 
-def _reprocess_levels(options):
-    if options.level is None or len(options.level) == 0:
-        options.level = TDB_LEVEL_DEFAULT
-    levels = []
-    input = []
-    for str in options.level: input.extend(str.split(','))
-    for level in input:
-        add = []
-        if level == TDB_LEVEL_CONTENT_TESTING: add.extend(TDB_LEVEL_CONTENT_TESTING_STATUSES)
-        elif level == TDB_LEVEL_EVERYTHING: add.extend(TDB_LEVEL_EVERYTHING_STATUSES)
-        elif level == TDB_LEVEL_PRODUCTION: add.extend(TDB_LEVEL_PRODUCTION_STATUSES)
-        elif level != '': add.append(level)
-        for lev in add:
-            if lev not in levels: levels.append(lev)
-    options.level = levels
+def _reprocess_options(parser, options):
+    tdbq.__reprocess_options__(parser, options)
+    tdbout.__reprocess_options__(parser, options)
+
+def _reprocess_tdb(tdb, options):
+    tdb = tdbq.__reprocess_tdb__(tdb, options)
+    return tdb
         
 if __name__ == '__main__':
     from tdbparse import TdbScanner, TdbParser
     from sys import stdin, argv
     parser = _make_command_line_parser()
     (options, argv[1:]) = parser.parse_args(values=parser.get_default_values())
-    _reprocess_levels(options)
+    _reprocess_options(parser, options)
     scanner = TdbScanner(stdin)
     parser = TdbParser(scanner)
     tdb = parser.parse()
+    tdb = _reprocess_tdb(tdb, options)
     _dispatch(tdb, options)
