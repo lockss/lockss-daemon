@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.10 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: RegistryPlugin.java,v 1.11 2010-04-02 23:23:24 pgust Exp $
  */
 
 /*
@@ -34,9 +34,9 @@ package org.lockss.plugin;
 
 import java.util.*;
 
+import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.config.*;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.*;
@@ -69,8 +69,9 @@ public class RegistryPlugin extends BasePlugin {
 
     // Now configure it.
     au.setConfiguration(auConfig);
-    au.setConfig(ConfigManager.getCurrentConfig(), null,
-		 Configuration.DIFFERENCES_ALL);
+    Configuration curConfig = ConfigManager.getCurrentConfig();
+    au.setConfig(curConfig, ConfigManager.EMPTY_CONFIGURATION,
+		 curConfig.differences(ConfigManager.EMPTY_CONFIGURATION));
     return au;
   }
 
