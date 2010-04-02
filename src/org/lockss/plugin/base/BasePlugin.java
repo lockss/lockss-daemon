@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.65 2010-03-25 07:34:46 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.66 2010-04-02 23:24:44 pgust Exp $
  */
 
 /*
@@ -30,8 +30,9 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.app.*;
-import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.config.Tdb;
+import org.lockss.config.TdbAu;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.rewriter.*;
@@ -47,7 +48,6 @@ public abstract class BasePlugin
     implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
 
-  static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
   public static final String DEFAULT_ARTICLE_MIME_TYPE = "text/html";
 
   // Below org.lockss.title.xxx.
@@ -65,8 +65,8 @@ public abstract class BasePlugin
 
   protected LockssDaemon theDaemon;
   protected PluginManager pluginMgr;
-  protected Collection aus = new ArrayList();
-  protected Map titleConfigMap;
+  protected Collection<ArchivalUnit> aus = new ArrayList();
+  protected Map<String, TitleConfig> titleConfigMap;
   // XXX need to generalize this
   protected CacheResultMap resultMap;
   protected MimeTypeMap mimeMap;
@@ -81,8 +81,8 @@ public abstract class BasePlugin
   Configuration.Callback configCb = new Configuration.Callback() {
       public void configurationChanged(Configuration newConfig,
 				       Configuration prevConfig,
-				       Configuration.Differences changedKeys) {
-	setConfig(newConfig, prevConfig, changedKeys);
+				       Configuration.Differences diffs) {
+	setConfig(newConfig, prevConfig, diffs);
       }
       public String toString() {
 	return getPluginId();
@@ -185,36 +185,37 @@ public abstract class BasePlugin
    */
   protected void setConfig(Configuration newConfig,
 			   Configuration prevConfig,
-			   Configuration.Differences changedKeys) {
-    if (changedKeys.contains(PARAM_TITLE_DB)) {
-      setTitleConfig(newConfig);
+			   Configuration.Differences diffs) {
+    // PJG: should we get this from the changedKeys?
+    if (diffs.containsTdbPluginId(getPluginId())) {
+      setTitleConfig(newConfig.getTdb());
     }
   }
 
-  private void setTitleConfig(Configuration config) {
-    String myName = getPluginId();
-    Map titleMap = new HashMap();
-    Collection myTitles = config.getTitleConfigs(myName);
-    if (myTitles != null) {
-      for (Iterator iter = myTitles.iterator(); iter.hasNext(); ) {
-	Configuration titleConfig = (Configuration)iter.next();
-	String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
-	if (myName.equals(pluginName)) {
-	  if (log.isDebug2()) {
-	    log.debug2("my titleConfig: " + titleConfig);
-	  }
-	  String title = titleConfig.get(TITLE_PARAM_TITLE);
-	  TitleConfig tc = initOneTitle(titleConfig);
-	  if (titleMap.containsKey(title)) {
-	    log.warning("Duplicate title: " + tc);
-	    log.warning("Previous def   : " + tc);
-	  }
-	  titleMap.put(title, tc);
-	} else {
-	  if (log.isDebug3()) {
-	    log.debug3("titleConfig: " + titleConfig);
-	  }
-	}
+  /**
+   * Set the TitleConfig from the title database
+   * @param tdb
+   */
+  private void setTitleConfig(Tdb tdb) {
+    String myId = getPluginId();
+    Map<String, TitleConfig> titleMap = new HashMap();
+    for (TdbAu au : tdb.getTdbAus(myId)) {
+      String pluginId = au.getPluginId();
+      if (myId.equals(pluginId)) {
+        if (log.isDebug2()) {
+          log.debug2("my titleConfig: " + au);
+        }
+        String title = au.getName();
+        TitleConfig tc = titleConfigFromTdbAu(au);
+        if (titleMap.containsKey(title)) {
+          log.warning("Duplicate title: " + tc);
+          log.warning("Previous def   : " + tc);
+        }
+        titleMap.put(title, tc);
+      } else {
+        if (log.isDebug3()) {
+          log.debug3("titleConfig: " + au.getName());
+        }
       }
     }
     //TODO: decide on how to support plug-ins which do not use the title registry
@@ -224,53 +225,58 @@ public abstract class BasePlugin
     }
   }
 
-  TitleConfig initOneTitle(Configuration titleConfig) {
-    String title = titleConfig.get(TITLE_PARAM_TITLE);
+  /**
+   * Create a TitleConfig from the information in a TdbAu.
+   * 
+   * @param tdbAu the TdbAu
+   * @return a TitleConfig
+   */
+  TitleConfig titleConfigFromTdbAu(TdbAu tdbAu) {
+    String title = tdbAu.getName();
     TitleConfig tc = new TitleConfig(title, this);
-    tc.setPluginVersion(titleConfig.get(TITLE_PARAM_PLUGIN_VERSION));
-    tc.setJournalTitle(titleConfig.get(TITLE_PARAM_JOURNAL));
-    if (titleConfig.containsKey(TITLE_PARAM_EST_SIZE)) {
-      tc.setEstimatedSize(titleConfig.getSize(TITLE_PARAM_EST_SIZE, 0));
+    tc.setJournalTitle(tdbAu.getTdbTitle().getName());
+    
+    long estSize = tdbAu.getEstimatedSize();
+    if (estSize > 0) {
+      tc.setEstimatedSize(estSize);
     }
-
-    Configuration attrs = titleConfig.getConfigTree(TITLE_PARAM_ATTRIBUTES);
-    if (!attrs.isEmpty()) {
-      Map attrMap = new HashMap();
-      for (Iterator iter = attrs.nodeIterator(); iter.hasNext(); ) {
-	String attr = (String)iter.next();
-	String val = attrs.get(attr);
-	attrMap.put(attr, val);
-      }
+    
+    String pluginVersion = tdbAu.getPluginVersion();
+    if (pluginVersion != null) {
+      tc.setPluginVersion(pluginVersion);
+    }
+    
+    // set attributes -- OK to have TdbAu share attributes?
+    Map<String,String> attrMap =tdbAu.getAttrs();
+    if (!attrMap.isEmpty()) {
       tc.setAttributes(attrMap);
     }
-    ArrayList params = new ArrayList();
-    Configuration allParams = titleConfig.getConfigTree(TITLE_PARAM_PARAM);
-    for (Iterator iter = allParams.nodeIterator(); iter.hasNext(); ) {
-      Configuration oneParam = allParams.getConfigTree((String)iter.next());
-      String key = oneParam.get(TITLE_PARAM_PARAM_KEY);
-      String val = oneParam.get(TITLE_PARAM_PARAM_VALUE);
+    
+    // set params
+    ArrayList<ConfigParamAssignment> params = new ArrayList<ConfigParamAssignment>();
+    for (Map.Entry<String,String> param : tdbAu.getParams().entrySet()) {
+      String key = param.getKey();
+      String val = param.getValue();
       ConfigParamDescr descr = findAuConfigDescr(key);
       if (descr != null) {
-	ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
-	if (oneParam.containsKey(TITLE_PARAM_PARAM_EDITABLE)) {
-	  cpa.setEditable(oneParam.getBoolean(TITLE_PARAM_PARAM_EDITABLE,
-					      cpa.isEditable()));
-	}
-	params.add(cpa);
+        ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
+        params.add(cpa);
       } else {
-	log.warning("Unknown parameter key: " + key + " in title: " + title);
-	log.debug("   title config: " + titleConfig);
+        log.warning("Unknown parameter key: " + key + " in title: " + title);
+        log.debug("   au: " + tdbAu.getName());
       }
     }
     // This list is kept permanently, so trim array to size
-    params.trimToSize();
-    tc.setParams(params);
+    if (!params.isEmpty()) {
+      params.trimToSize();
+      tc.setParams(params);
+    }
+    
     return tc;
 
   }
 
-
-  protected void setTitleConfigMap(Map titleConfigMap) {
+  protected void setTitleConfigMap(Map<String, TitleConfig> titleConfigMap) {
     this.titleConfigMap = titleConfigMap;
     pluginMgr.resetTitles();
   }
