@@ -38,19 +38,62 @@
 
  <property name="org.lockss.titleSet">
 
-  <property name="ARKIVOC">
-   <property name="name" value="All ARKIVOC Titles" />
+  <property name="ARKAT USA">
+   <property name="name" value="All ARKAT USA Titles" />
    <property name="class" value="xpath" />
-   <property name="xpath" value="[attributes/publisher='ARKIVOC']" />
+   <property name="xpath" value="[attributes/publisher='ARKAT USA']" />
   </property>
   
  </property>
  
  <property name="org.lockss.title">
 
-  <property name="ARKIVOC2000">
-   <property name="attributes.publisher" value="ARKIVOC" />
+  <property name="ARKIVOCVolume2004retracted">
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
+   <property name="title" value="ARKIVOC Volume 2004 [retracted]" />
+   <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.arkat-usa.org/ark/arkivoc/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ARKIVOCVolume2004superseded">
+   <property name="attributes.publisher" value="ARKAT USA" />
+   <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
+   <property name="title" value="ARKIVOC Volume 2004 [superseded]" />
+   <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ARKIVOC2000">
+   <property name="attributes.publisher" value="ARKAT USA" />
+   <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2000" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -69,8 +112,9 @@
   </property>
 
   <property name="ARKIVOC2001">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2001" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -89,8 +133,9 @@
   </property>
 
   <property name="ARKIVOC2002">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2002" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -109,8 +154,9 @@
   </property>
 
   <property name="ARKIVOC2003">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2003" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -129,8 +175,9 @@
   </property>
 
   <property name="ARKIVOC2004">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2004" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -149,8 +196,9 @@
   </property>
 
   <property name="ARKIVOC2005">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2005" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -169,8 +217,9 @@
   </property>
 
   <property name="ARKIVOC2006">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2006" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -185,8 +234,9 @@
   </property>
 
   <property name="ARKIVOC2007">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2007" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -201,8 +251,9 @@
   </property>
 
   <property name="ARKIVOC2008">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2008" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
@@ -217,8 +268,9 @@
   </property>
 
   <property name="ARKIVOC2009">
-   <property name="attributes.publisher" value="ARKIVOC" />
+   <property name="attributes.publisher" value="ARKAT USA" />
    <property name="journalTitle" value="ARKIVOC" />
+   <property name="issn" value="1424-6376" />
    <property name="title" value="ARKIVOC Volume 2009" />
    <property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
    <property name="param.1">
