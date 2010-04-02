@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.65 2009-03-24 04:32:37 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.66 2010-04-02 23:28:32 pgust Exp $
  */
 
 /*
@@ -768,7 +768,7 @@ public class AuConfig extends LockssServlet {
 
   /** Return true iff newConfig is different from oldConfig */
   boolean isChanged(Configuration oldConfig, Configuration newConfig) {
-    Collection dk = oldConfig.differentKeys(newConfig);
+    Collection<String> dk = oldConfig.differentKeys(newConfig);
     boolean changed = false;
     for (Iterator iter = dk.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
