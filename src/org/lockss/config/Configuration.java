@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.24 2009-06-01 07:46:20 tlipkis Exp $
+ * $Id: Configuration.java,v 1.25 2010-04-02 23:08:25 pgust Exp $
  */
 
 /*
@@ -34,10 +34,8 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
-import org.apache.commons.collections.map.*;
 
 import org.lockss.util.*;
-import org.lockss.plugin.base.*;
 
 /** <code>Configuration</code> provides access to the LOCKSS configuration
  * parameters.  Instances of (concrete subclasses of)
@@ -62,10 +60,11 @@ public abstract class Configuration {
     Logger.getLoggerWithInitialLevel("Config",
                                      Logger.getInitialDefaultLevel());
 
-  /** A Configuration.Differences object representing a totally different
-   * Configuration */
-  public static final Differences DIFFERENCES_ALL = new DifferencesAll();
-
+  /**
+   * The title database for this configuration
+   */
+  private Tdb tdb;
+  
   /**
    * Convenience methods for getting useful platform settings.
    */
@@ -91,43 +90,63 @@ public abstract class Configuration {
     return ConfigManager.getPlatformHostname();
   }
 
-  // Support for the title db config subtree.  Finding relevant entries
-  // when title subtree changes allows plugins to retrieve their entries
-  // without excessive copying.
-
-  private MultiValueMap titleMap;
-
-  /** Returns a list of configs for the plugin's title DB entries  */
-  public Collection getTitleConfigs(String pluginName) {
-    return (Collection)titleMap.getCollection(pluginName);
+  /**
+   * Gets the title database (TDB) for this configuration
+   * @return
+   */
+  public Tdb getTdb() {
+    return tdb;
   }
 
-  /** Returns the map of plugin -> list of title db configs */
-  MultiValueMap getAllTitleConfigs() {
-    return titleMap;
+  /**
+   * Return number of TdbAus in this instance's Tdb.
+   * 
+   * @return the number of TdbAus in this instances's Tdb
+   */
+  public int getTdbAuCount() {
+    return (tdb == null) ? 0 : tdb.getTdbAuCount();
   }
 
-  /** Replace the map of plugin -> list of title db configs */
-  void setAllTitleConfigs(MultiValueMap map) {
-    titleMap = map;
-  }
-
-  /** Build map of plugin name -> list of title db config entries */
-  void setTitleConfig(Configuration tc) {
-    if (tc == null) return;
-    MultiValueMap titleMap = new MultiValueMap();
-    int cnt = 0;
-    for (Iterator iter = tc.nodeIterator(); iter.hasNext(); ) {
-      String titleKey = (String)iter.next();
-      Configuration titleConfig = tc.getConfigTree(titleKey);
-      String pluginName = titleConfig.get(BasePlugin.TITLE_PARAM_PLUGIN);
-      titleMap.put(pluginName, titleConfig);
-      cnt++;
+  /**
+   * Determine whether Tdbs for the two configurations are different.
+   * 
+   * @param config the other configuration
+   * @return <code>true</code> if different
+   */
+  public boolean isTdbDifferent(Configuration config) {
+    if (tdb == null) {
+      return config.getTdb() != null;
+    } 
+    if (config.getTdb() == null) {
+      return (tdb != null);
+      
     }
-    log.info(cnt + " title db entries");
-    this.titleMap = titleMap;
+    return !tdb.getPluginIdsForDifferences(config.getTdb()).isEmpty();
   }
-
+  /**
+   * Sets the Tdb for this configuration.
+   * 
+   * @param tdb the Tdb to set
+   */
+  public void setTdb(Tdb tdb) {
+    if (isSealed()) {
+      throw new IllegalStateException("Can't modify sealed configuration");
+    }
+    this.tdb = tdb;
+  }
+  
+  /**
+   * Special operation allows setting the title database of one
+   * configuration from the title database of another.  This operation
+   * is for use only within support routines in the "org.lockss.config"
+   * package.
+   * 
+   * @param config another Configuration
+   */
+  protected void setTdbFromConfig(Configuration config) {
+    this.tdb = config.getTdb();
+  }
+  
   /** Return a copy of the configuration with the specified prefix
    * prepended to all keys. */
   public Configuration addPrefix(String prefix) {
@@ -164,9 +183,19 @@ public abstract class Configuration {
    *  keys will be overwritten.
    */
   public void copyFrom(Configuration other) {
+    // merge other config tree into this one
     for (Iterator iter = other.keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       put(key, other.get(key));
+    }
+    
+    // merge other config Tdb into this one
+    Tdb otherTdb = other.getTdb();
+    if (otherTdb != null) {
+      if (tdb == null) {
+        tdb = new Tdb();
+      }
+      tdb.copyFrom(otherTdb);
     }
   }
 
@@ -223,11 +252,26 @@ public abstract class Configuration {
   /** Return the set of keys whose values differ.
    * @param otherConfig the config to compare with.  May be null.
    */
-  public abstract Set differentKeys(Configuration otherConfig);
+  public abstract Set<String> differentKeys(Configuration otherConfig);
+  
+
+  /** Return the set of pluginIds involved in differences between two configurations.
+   * @param otherConfig the config to compare with.  May be null.
+   */
+  public abstract Set<String> differentPluginIds(Configuration otherConfig);
+  
 
   /** Return true iff config has no keys/ */
   public boolean isEmpty() {
-    return !(keyIterator().hasNext());
+    if (keyIterator().hasNext()) {
+      return false;
+    } 
+    Tdb tdb = getTdb();
+    if ((tdb != null) && !tdb.isEmpty()) {
+      return false;
+    }
+    
+    return true;
   }
 
   /** Return the config value associated with <code>key</code>.
@@ -689,48 +733,171 @@ public abstract class Configuration {
    * configurationChanged().
    */
   public interface Differences {
-    /** Determine whether the value of a key has changed.  Can also be used
+    /** 
+     * Determine whether the value of a key has changed.  Can also be used
      * to determine whether there have been any changes in a named
      * Configuration subtree.  (<i>Eg</i>, if contains() is true of
      * "org.lockss.foo.bar", it will also be true of "org.lockss.foo.",
      * "org.lockss.foo", "org.lockss.", "org.lockss", "org."  and "org".)
+     * 
      * @param key the key or key prefix
      * @return true iff the value of the key, or any key in the tree below
-     * it, has changed. */
+     * it, has changed. 
+     */
     public boolean contains(String key);
 
-    /** Return the set of changed keys, or null if all keys have changed.
-     * This method should not generally be used. */
-    public Set getDifferenceSet();
+    /** 
+     * Return the set of changed keys.
+     * This method should not generally be used. 
+     * 
+     * @return the set of keys that have changed.  
+     */
+    public Set<String> getDifferenceSet();
+    
+    /**
+     * Return a set of pluginIDs for differences between two Tdbs.
+     * This method is normally used by plugins.
+     * 
+     * @return a set of pluginIDs for differences between two Tdbs.
+     */
+    public Set<String> getTdbDifferencePluginIds();
+
+    /**
+     * Determines whether a plugin ID is involved in differences between
+     * to Tdbs.  This method is normally used by plugins.
+     * 
+     * @param pluginID the pluginID
+     * @return <code>true</code iff differences between two TDBs involves
+     *  the specified plugin
+     */
+    public boolean containsTdbPluginId(String pluginId);
+    
+    /**
+     * Return the difference in the number of TdbAus between the old
+     * and new Tdbs.
+     * 
+     * @return the difference in the number of Tdbs
+     */
+    public int getTdbAuDifferenceCount();
   }
 
-  /** A Differences used when all keys have changed (<i>E.g.</i>, after the
-   * initial config load, or when a new config callback is registered). */
+  /** 
+   * A Differences used when all keys have changed (<i>E.g.</i>, after the
+   * initial config load, or when a new config callback is registered). 
+   */
   static class DifferencesAll implements Differences {
+    final Configuration config;
+    
+    public DifferencesAll(Configuration config) {
+      if (config == null) {
+        throw new IllegalArgumentException("config cannot be null");
+      }
+      this.config = config;
+    }
+
+    /**
+     * Return true, indicating that the key has changed.
+     * <p>
+     * Note: parts of the system rely on this method returning 
+     * <code>true</code> for initialization, even though the the
+     * new Configuration <i>doesn't</i> contain the key. 
+     * 
+     * @return <code>true</code>
+     */
     public boolean contains(String key) {
       return true;
     }
 
-    /** Return null, indicating that all keys have changed. */
-    public Set getDifferenceSet() {
-      return null;
+    /** 
+     * Return null, indicating that all keys have changed.
+     * 
+     * @return <code>null</code>
+     */
+    public Set<String> getDifferenceSet() {
+      return config.keySet();
+    }
+   
+    /**
+     * Return null, indicating that all Tdb entries have changed
+     * 
+     * @return <code>null</code>
+     */
+    public Set<String> getTdbDifferencePluginIds() {
+      Tdb tdb = config.getTdb();
+      return (tdb == null) ? Collections.EMPTY_SET : tdb.getAllTdbAus().keySet();
+    }
+
+    /**
+     * Determines whether a plugin ID is involved in differences between
+     * to Tdbs.  This method is normally used by plugins.
+     * 
+     * @param pluginID the pluginID
+     * @return <code>true</code iff differences between two TDBs involves
+     *  the specified plugin
+     */
+    public boolean containsTdbPluginId(String pluginId) {
+      return getTdbDifferencePluginIds().contains(pluginId);
+    }
+    
+    /**
+     * Return the difference in the number of TdbAus between the old
+     * and new Tdbs.
+     * 
+     * @return the difference in the number of Tdbs
+     */
+    public int getTdbAuDifferenceCount() {
+      Tdb tdb = config.getTdb();
+      return (tdb == null) ? 0 : tdb.getTdbAuCount();
     }
   }
 
-  /** A Differences that contains a set of changed keys and key prefixes */
+  /** 
+   * A Differences that contains a set of changed keys
+   * and whether configuration TDBs are different
+   */
   static class DifferencesSet implements Differences {
-    private Set diffKeys;
-
-    DifferencesSet(Set diffKeys) {
+    private Set<String> diffKeys;
+    private Set<String> diffPluginIds;
+    private int tdbAuCountDiff;
+    
+    DifferencesSet(Set diffKeys, int tdbAuCountDiff, Set<String>diffPluginIds) {
       this.diffKeys = diffKeys;
+      this.diffPluginIds = diffPluginIds;
+      this.tdbAuCountDiff = tdbAuCountDiff;
     }
 
     public boolean contains(String key) {
-      return diffKeys.contains(key);
+      if (!key.endsWith(".")) {
+        return diffKeys.contains(key);
+      }
+      for (String diffKey : diffKeys) {
+        if (diffKey.startsWith(key)) {
+          return true;
+        }
+      }
+      return false;
     }
 
-    public Set getDifferenceSet() {
+    public Set<String> getDifferenceSet() {
       return diffKeys;
+    }
+    
+    public Set<String> getTdbDifferencePluginIds() {
+      return diffPluginIds;
+    }
+
+    public boolean containsTdbPluginId(String pluginId) {
+      return diffPluginIds.contains(pluginId);
+    }
+    
+    /**
+     * Return the difference in the number of TdbAus between the old
+     * and new Tdbs.
+     * 
+     * @return the difference in the number of Tdbs
+     */
+    public int getTdbAuDifferenceCount() {
+      return tdbAuCountDiff;
     }
   }
 

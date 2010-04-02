@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.71 2010-02-22 07:00:14 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.72 2010-04-02 23:07:51 pgust Exp $
  */
 
 /*
@@ -97,7 +97,10 @@ public class ConfigManager implements LockssManager {
     HashService.PREFIX + "use.scheduler";
   static final boolean DEFAULT_NEW_SCHEDULER = true;
 
+  /** Root of TitleDB definitions.  */
   public static final String PARAM_TITLE_DB = Configuration.PREFIX + "title";
+  /** Prefix of TitleDB definitions.  */
+  public static final String PREFIX_TITLE_DB = PARAM_TITLE_DB + ".";
 
   /** List of URLs of title DBs locally set on cache from UI.  Do not set
    * on prop server */
@@ -267,14 +270,13 @@ public class ConfigManager implements LockssManager {
 
   /** Allow only params below o.l.title and o.l.titleSet .  For use with
    * title DB files */
-  static final String titleDot = PARAM_TITLE_DB + ".";
-  static final String titleSetDot = PluginManager.PARAM_TITLE_SETS + ".";
+  static final String PREFIX_TITLE_SETS_DOT = PluginManager.PARAM_TITLE_SETS + ".";
 
   KeyPredicate titleDbOnlyPred = new KeyPredicate() {
       public boolean evaluate(Object obj) {
 	if (obj instanceof String) {
-	  return ((String)obj).startsWith(titleDot) ||
-	    ((String)obj).startsWith(titleSetDot);
+	  return ((String)obj).startsWith(PREFIX_TITLE_DB) ||
+	    ((String)obj).startsWith(PREFIX_TITLE_SETS_DOT);
 	}
 	return false;
       }
@@ -1037,12 +1039,8 @@ public class ConfigManager implements LockssManager {
       updateGenerations(gens);
       return false;
     }
+
     Configuration.Differences diffs = newConfig.differences(oldConfig);
-    if (diffs.contains(PARAM_TITLE_DB)) {
-      newConfig.setTitleConfig(newConfig.getConfigTree(PARAM_TITLE_DB));
-    } else {
-      newConfig.setAllTitleConfigs(oldConfig.getAllTitleConfigs());
-    }
     // XXX for test utils.  ick
     initCacheConfig(newConfig);
     setCurrentConfig(newConfig);
@@ -1299,22 +1297,23 @@ public class ConfigManager implements LockssManager {
 			 Configuration.Differences diffs) {
     int maxLogValLen = config.getInt(PARAM_MAX_LOG_VAL_LEN,
 				     DEFAULT_MAX_LOG_VAL_LEN);
-    Set diffSet = diffs.getDifferenceSet();
-    SortedSet keys = new TreeSet(diffSet != null ? diffSet : config.keySet());
+    Set<String> diffSet = diffs.getDifferenceSet();
+    SortedSet<String> keys = new TreeSet<String>(diffSet);
     int numDiffs = keys.size();
-    for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
+    for (String key : keys) {
       if (numDiffs <= 40 || log.isDebug3() ||
 	  (!key.startsWith(PARAM_TITLE_DB) &&
 	   !key.startsWith(PluginManager.PARAM_AU_TREE))) {
 	if (config.containsKey(key)) {
 	  String val = config.get(key);
-	  log.debug(key + " = " + StringUtils.abbreviate(val, maxLogValLen));
+	  log.debug("  " +key + " = " + StringUtils.abbreviate(val, maxLogValLen));
 	} else if (oldConfig.containsKey(key)) {
-	  log.debug(key + " (removed)");
+	  log.debug("  " + key + " (removed)");
 	}
       }
     }
+    log.debug("Difference count in Configuratioin keys: " + numDiffs);
+    log.debug("Difference count in TdbAus: " + diffs.getTdbAuDifferenceCount());
   }
 
   public static boolean shouldParamBeLogged(String key) {
@@ -1362,12 +1361,12 @@ public class ConfigManager implements LockssManager {
    * immediately.
    * @param c <code>Configuration.Callback</code> to add.  */
   public void registerConfigurationCallback(Configuration.Callback c) {
-    log.debug3("registering " + c);
+    log.debug2("registering " + c);
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
       if (!currentConfig.isEmpty()) {
-	runCallback(c, currentConfig, EMPTY_CONFIGURATION,
-		    Configuration.DIFFERENCES_ALL);
+	runCallback(c, currentConfig, ConfigManager.EMPTY_CONFIGURATION,
+		    currentConfig.differences(ConfigManager.EMPTY_CONFIGURATION));
       }
     }
   }
