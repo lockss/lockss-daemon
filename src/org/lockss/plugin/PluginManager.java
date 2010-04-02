@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.206 2010-03-25 07:34:27 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.207 2010-04-02 23:21:34 pgust Exp $
  */
 
 /*
@@ -278,8 +278,8 @@ public class PluginManager
   private Map titleMap = null;
   private List allTitles = null;
   private List allTitleConfigs = null;
-  private Map titleSetMap;
-  private TreeSet titleSets;
+  private Map<String,TitleSet> titleSetMap;
+  private TreeSet<TitleSet> titleSets;
 
   private static Map<String,String> configurablePluginNameMap = new HashMap();
   static {
@@ -468,8 +468,8 @@ public class PluginManager
   }
 
   private void configureTitleSets(Configuration config) {
-    Map map = new HashMap();
-    TreeSet list = new TreeSet();
+    Map<String,TitleSet> map = new HashMap<String,TitleSet>();
+    TreeSet<TitleSet> list = new TreeSet<TitleSet>();
     Configuration allSets = config.getConfigTree(PARAM_TITLE_SETS);
     for (Iterator iter = allSets.nodeIterator(); iter.hasNext(); ) {
       String id = (String)iter.next();
@@ -488,8 +488,7 @@ public class PluginManager
 	log.warning("Error creating TitleSet from: " + setDef, e);
       }
     }
-    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
-      TitleSet ts = (TitleSet)iter.next();
+    for (TitleSet ts : list) {
       map.put(ts.getName(), ts);
     }
     titleSets = list;
@@ -517,13 +516,13 @@ public class PluginManager
 
   /** Return the TitleSet name to {@link org.lockss.daemon.TitleSet}
    * mapping */
-  public Map getTitleSetMap() {
-    return titleSetMap;
+  public Map<String,TitleSet> getTitleSetMap() {
+    return (titleSetMap != null) ? titleSetMap : Collections.EMPTY_MAP;
   }
 
   /** Return the TitleSets, in display order */
-  public Collection getTitleSets() {
-    return titleSets;
+  public Collection<TitleSet> getTitleSets() {
+    return (titleSets != null) ? titleSets : Collections.EMPTY_LIST;
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.14 2006-04-07 21:44:35 thib_gc Exp $
+ * $Id: TitleConfig.java,v 1.15 2010-04-02 23:17:00 pgust Exp $
  */
 
 /*
@@ -49,8 +49,16 @@ public class TitleConfig {
   private String pluginName;
   private String pluginVersion = null;
   private long estSize = 0;
-  private List params = null;
-  private Map attrs = null;
+  
+  /**
+   * TitleConfig params
+   */
+  private List<ConfigParamAssignment> params = null;
+  
+  /**
+   * TitleConfig attributes
+   */
+  private Map<String,String> attrs = null;
 
   /**
    * Create a TitleConfig associating a title with a plugin.
@@ -99,21 +107,21 @@ public class TitleConfig {
   /**
    * @return the parameter assignments
    */
-  public List getParams() {
+  public List<ConfigParamAssignment> getParams() {
     return params;
   }
 
   /**
    * Set the attributes
    */
-  public void setAttributes(Map attrs) {
+  public void setAttributes(Map<String,String>  attrs) {
     this.attrs = attrs;
   }
 
   /**
    * @return the attributes
    */
-  public Map getAttributes() {
+  public Map<String,String> getAttributes() {
     return attrs;
   }
 
@@ -315,7 +323,7 @@ public class TitleConfig {
       // params is order-independent, can't call List.equals()
       (params == null ?
        o.getParams() == null : (params.size() == o.getParams().size() &&
-				params.containsAll(o.getParams())));
+                              params.containsAll(o.getParams())));
   }
 
   public int hashCode() {
