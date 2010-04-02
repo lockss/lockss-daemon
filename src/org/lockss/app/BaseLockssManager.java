@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.22 2009-06-01 07:45:40 tlipkis Exp $
+ * $Id: BaseLockssManager.java,v 1.23 2010-04-02 23:04:37 pgust Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public abstract class BaseLockssManager implements LockssManager {
       ConfigurableManager cmgr = (ConfigurableManager)this;
       Configuration cur = CurrentConfig.getCurrentConfig();
       cmgr.setConfig(cur, ConfigManager.EMPTY_CONFIGURATION,
-		     Configuration.DIFFERENCES_ALL);
+		     cur.differences(ConfigManager.EMPTY_CONFIGURATION));
     } else {
       throw new RuntimeException("Not a ConfigurableManager");
     }
