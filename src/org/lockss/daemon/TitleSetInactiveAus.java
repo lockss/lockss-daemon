@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetInactiveAus.java,v 1.5 2008-08-17 08:40:30 tlipkis Exp $
+ * $Id: TitleSetInactiveAus.java,v 1.6 2010-04-02 23:40:55 pgust Exp $
  */
 
 /*
@@ -50,13 +50,14 @@ public class TitleSetInactiveAus extends BaseTitleSet {
 
   /** Return the titles in the set.
    * @return a collection of TitleConfig */
-  public Collection getTitles() {
+  public Collection<TitleConfig> getTitles() {
     Collection aus = daemon.getRemoteApi().getInactiveAus();
-    List res = new ArrayList(aus.size());
+    ArrayList<TitleConfig> res = new ArrayList<TitleConfig>(aus.size());
     for (Iterator iter = aus.iterator(); iter.hasNext();) {
       InactiveAuProxy aup = (InactiveAuProxy)iter.next();
       res.add(titleConfigFromAu(aup));
     }
+    res.trimToSize();
     return res;
   }
 
@@ -67,7 +68,7 @@ public class TitleSetInactiveAus extends BaseTitleSet {
     String auname = au.getName();
     TitleConfig tc = new TitleConfig(auname, plugin.getPluginId());
     Configuration auConfig = au.getConfiguration();
-    List params = new ArrayList();
+    ArrayList<ConfigParamAssignment> params = new ArrayList();
     for (Iterator iter = auConfig.keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       if (!ConfigParamDescr.isReservedParam(key)) {
@@ -81,6 +82,7 @@ public class TitleSetInactiveAus extends BaseTitleSet {
 	}
       }
     }
+    params.trimToSize();
     tc.setParams(params);
     return tc;
   }
