@@ -1,5 +1,5 @@
 /*
- * $Id: RamLinkExtractor.java,v 1.3 2007-03-13 01:14:39 thib_gc Exp $
+ * $Id: RamLinkExtractor.java,v 1.4 2010-04-02 23:20:22 pgust Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class RamLinkExtractor implements LinkExtractor {
       throw new IllegalArgumentException("Called with null callback");
     }
     BufferedReader bReader =
-      new BufferedReader(StreamUtil.getReader(in, encoding));
+      new BufferedReader(StringUtil.getLineReader(in, encoding));
     for (String line = bReader.readLine();
 	 line != null;
 	 line = bReader.readLine()) {
