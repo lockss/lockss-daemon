@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommons.java,v 1.7 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: FuncCommons.java,v 1.8 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -55,8 +55,7 @@ public class FuncCommons extends LockssTestCase {
   public void testRefMapHW() {
     ReferenceMap map = new ReferenceMap(ReferenceMap.HARD,
 					ReferenceMap.WEAK);
-
-    int drop = 20;		      // number of drops in map size needed
+    int drop = 5; /* 20 too big - PJG */// number of drops in map size needed
     int loop = 10000;			// inner loop repetitions
 
     Integer aKey = null;		// one key that we will hold on to

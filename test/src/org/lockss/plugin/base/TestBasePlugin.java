@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.20 2010-03-14 18:33:45 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.21 2010-04-02 23:38:12 pgust Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.plugin.base;
 import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
@@ -149,25 +149,42 @@ public class TestBasePlugin extends LockssTestCase {
   public void testInitTitleDB() {
     String plugName = "org.lockss.plugin.base.TestBasePlugin$MyBasePlugin";
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
-    Properties p = new Properties();
-    p.put("org.lockss.title.0.title", "Not me");
-    p.put("org.lockss.title.0.plugin", "org.lockss.NotThisClass");
-    p.put("org.lockss.title.1.title", "It's");
-    p.put("org.lockss.title.1.journalTitle", "jtitle");
-    p.put("org.lockss.title.1.plugin", plugName);
-    p.put("org.lockss.title.1.pluginVersion", "4");
-    p.put("org.lockss.title.1.param.1.key", AUPARAM_VOL);
-    p.put("org.lockss.title.1.param.1.value", "vol_1");
-    p.put("org.lockss.title.1.param.2.key", AUPARAM_YEAR);
-    p.put("org.lockss.title.1.param.2.value", "year_1");
-    p.put("org.lockss.title.1.param.2.editable", "true");
-    p.put("org.lockss.title.2.title", "Howl");
-    p.put("org.lockss.title.2.journalTitle", "hj");
-    p.put("org.lockss.title.2.plugin", plugName);
-    p.put("org.lockss.title.2.pluginVersion", "4");
-    p.put("org.lockss.title.2.attributes.attr1", "av111");
-    p.put("org.lockss.title.2.attributes.attr2", "av222");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    
+    // set title database properties
+    Properties p0 = new Properties();
+    p0.put("title", "Not me");
+    p0.put("plugin", "org.lockss.NotThisClass");
+    
+    Properties p1 = new Properties();
+    p1.put("title", "It's");
+    p1.put("journalTitle", "jtitle");
+    p1.put("plugin", plugName);
+    p1.put("pluginVersion", "4");
+    p1.put("param.1.key", AUPARAM_VOL);
+    p1.put("param.1.value", "vol_1");
+    p1.put("param.2.key", AUPARAM_YEAR);
+    p1.put("param.2.value", "year_1");
+    p1.put("param.2.editable", "true");
+
+    Properties p2 = new Properties();
+    p2.put("title", "Howl");
+    p2.put("journalTitle", "hj");
+    p2.put("plugin", plugName);
+    p2.put("pluginVersion", "4");
+    p2.put("attributes.attr1", "av111");
+    p2.put("attributes.attr2", "av222");
+    
+    // populate the title database from the properties
+    Tdb tdb = new Tdb();
+    tdb.addTdbAuFromProperties(p0);
+    tdb.addTdbAuFromProperties(p1);
+    tdb.addTdbAuFromProperties(p2);
+    
+    // install a new configuration with the TDB
+    Configuration config = ConfigManager.newConfiguration();
+    config.setTdb(tdb);
+    ConfigurationUtil.installConfig(config);
+
     assertSameElements(ListUtil.list("It's", "Howl"),
 		       mbp.getSupportedTitles());
     TitleConfig tc = mbp.getTitleConfig(new String("It's"));
@@ -175,10 +192,11 @@ public class TestBasePlugin extends LockssTestCase {
     assertEquals("jtitle", tc.getJournalTitle());
     assertEquals("4", tc.getPluginVersion());
     assertEquals(plugName, tc.getPluginName());
+
     ConfigParamAssignment epa1 = new ConfigParamAssignment(PD_YEAR, "year_1");
-    epa1.setEditable(true);
-    assertEquals(SetUtil.set(epa1, new ConfigParamAssignment(PD_VOL, "vol_1")),
-		 SetUtil.theSet(tc.getParams()));
+    ConfigParamAssignment epa2 = new ConfigParamAssignment(PD_VOL, "vol_1");
+    List<ConfigParamAssignment> tcParams = tc.getParams(); 
+    assertEquals(SetUtil.set(epa1, epa2), SetUtil.theSet(tcParams));
     assertNull(tc.getAttributes());
 
     tc = mbp.getTitleConfig(new String("Howl"));

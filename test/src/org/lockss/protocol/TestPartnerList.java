@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.16 2005-03-01 03:51:33 tlipkis Exp $
+ * $Id: TestPartnerList.java,v 1.17 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class TestPartnerList extends LockssTestCase {
 
   private void setConfig(PartnerList pl, Configuration config) {
     pl.setConfig(config, ConfigManager.EMPTY_CONFIGURATION,
-		 Configuration.DIFFERENCES_ALL);
+		 config.differences(ConfigManager.EMPTY_CONFIGURATION));
   }
 
   public void setUp() throws Exception {

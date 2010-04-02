@@ -1,5 +1,5 @@
 /*
- * $Id: FuncClock.java,v 1.7 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: FuncClock.java,v 1.8 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -42,7 +42,8 @@ import org.lockss.util.*;
 public class FuncClock extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestClock");
 
-  public void testClockResolution() throws Exception {
+  
+  public long getClockResolution() throws Exception {
     long start = System.currentTimeMillis();
     long now = start;
     long min = Long.MAX_VALUE;
@@ -59,21 +60,32 @@ public class FuncClock extends LockssTestCase {
       now = next;
       if ((now - start) > Constants.SECOND) break;
     }
-    log.info("Clock resolution is " + min + "ms");
+    return min;
   }
 
-  public void testSleep() throws Exception {
+  public void testClockResolution() throws Exception {
+    long clockResolution = getClockResolution();
+    log.info("Clock resolution is " + clockResolution + "ms");
+  }
+
+    public void testSleep() throws Exception {
     Thread t = Thread.currentThread();
-    long sleeps[] = {1, 10, 50, 100, 200};
+    long sleeps[] = {1, 10, 50, 100, 500};
     int fail = 0;
+    long clockResolution = getClockResolution();
     for (int ix = 0, len = sleeps.length; ix < len; ix++) {
       long sleep = sleeps[ix];
       long start = System.currentTimeMillis();
       Thread.sleep(sleep);
       long slept = System.currentTimeMillis() - start;
       if (slept < sleep) {
-	log.error("sleep(" + sleep + ") returned in " + slept);
-	fail++;
+        if (sleep < clockResolution) {
+          // returning too soon OK if sleep time below clock resolution
+          log.info("sleep(" + sleep + ") returned in " + slept + " (below clock resolution");
+        } else {
+          log.error("sleep(" + sleep + ") returned in " + slept);
+          fail++;
+        }
       }
     }
     if (fail > 0) fail(fail + " sleeps returned early");

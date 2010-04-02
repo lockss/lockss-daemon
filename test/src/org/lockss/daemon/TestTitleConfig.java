@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.10 2006-04-05 22:51:15 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.11 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.daemon.TitleConfig;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;

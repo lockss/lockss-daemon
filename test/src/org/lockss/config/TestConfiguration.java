@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.12 2009-06-01 07:46:20 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.13 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -39,6 +39,10 @@ import org.lockss.util.*;
 import org.lockss.config.ConfigFile;
 import org.lockss.config.Configuration;
 import org.lockss.config.ConfigurationPropTreeImpl;
+import org.lockss.config.Tdb;
+import org.lockss.config.TdbAu;
+import org.lockss.config.TdbPublisher;
+import org.lockss.config.TdbTitle;
 import org.lockss.test.*;
 
 /**
@@ -69,12 +73,54 @@ public class TestConfiguration extends LockssTestCase {
     return new ConfigurationPropTreeImpl();
   }
 
+  private Tdb newTdb() {
+    Tdb tdb = new Tdb();
+    TdbPublisher p1 = new TdbPublisher("p1");
+    // create title with 2 aus with different plugins
+    TdbTitle t1p1 = new TdbTitle("t1p1");
+    p1.addTdbTitle(t1p1);
+    TdbAu a1t1p1 = new TdbAu("a1t1p1");
+    a1t1p1.setPluginId("plugin_t1p1");
+    t1p1.addTdbAu(a1t1p1);
+    TdbAu a2t1p1 = new TdbAu("a2t1p1");
+    a2t1p1.setPluginId("plugin_t1p1");
+    t1p1.addTdbAu(a2t1p1);
+
+    // create title with 2 aus with the same plugin
+    TdbTitle t2p1 = new TdbTitle("t2p1");
+    p1.addTdbTitle(t2p1);
+    TdbAu a1t2p1 = new TdbAu("a1t2p1");
+    a1t2p1.setPluginId("plugin_t2p1");
+    t2p1.addTdbAu(a1t2p1);
+    TdbAu a2t2p1 = new TdbAu("a2t2p1");
+    a2t2p1.setPluginId("plugin_t2p1");
+    t2p1.addTdbAu(a2t2p1);
+
+
+    // add AUs for publisher p1
+    tdb.addTdbAu(a1t1p1);
+    tdb.addTdbAu(a2t1p1);
+    tdb.addTdbAu(a1t2p1);
+    tdb.addTdbAu(a2t2p1);
+    
+    return tdb;
+  }
+  
   public void testSet() {
     Configuration config = newConfiguration();
     assertEquals(0, config.keySet().size());
     config.put("a", "b");
     assertEquals(1, config.keySet().size());
     assertEquals("b", config.get("a"));
+  }
+
+  public void testSetTdb() {
+    Configuration config = newConfiguration();
+    assertNull(config.getTdb());
+    
+    Tdb tdb = newTdb();
+    config.setTdb(tdb);
+    assertNotNull(config.getTdb());
   }
 
   public void testRemove() {
@@ -147,6 +193,9 @@ public class TestConfiguration extends LockssTestCase {
       fail("remove from sealed config should throw IllegalStateException");
     } catch (IllegalStateException e) {
     }
+    
+    Tdb tdb = config.getTdb();
+    assertTrue((tdb == null) || tdb.isSealed());
   }
 
   public void testSeal() {
@@ -154,12 +203,12 @@ public class TestConfiguration extends LockssTestCase {
     config.put("a", "1");
     config.put("b", "2");
     config.put("b.x", "3");
+    config.setTdb(newTdb());
     config.seal();
     assertSealed(config);
     assertEquals(3, config.keySet().size());
     assertEquals("1", config.get("a"));
     assertEquals("2", config.get("b"));
-    // check that subconfig of sealed config is sealed
     assertSealed(config.getConfigTree("b"));
   }
 
@@ -168,6 +217,8 @@ public class TestConfiguration extends LockssTestCase {
     c1.put("a", "1");
     c1.put("b", "2");
     c1.put("b.x", "3");
+    Tdb tdb1 = newTdb();
+    c1.setTdb(tdb1);
     c1.seal();
     Configuration c2 = c1.copy();
     assertEquals(3, c2.keySet().size());
@@ -176,6 +227,9 @@ public class TestConfiguration extends LockssTestCase {
     assertFalse(c2.isSealed());
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
+    Tdb tdb2 = c2.getTdb();
+    assertTrue(tdb1.getPluginIdsForDifferences(tdb2).isEmpty());
+    assertFalse(tdb1 == tdb2);
   }
 
   public void testCopyFrom() {
@@ -183,6 +237,8 @@ public class TestConfiguration extends LockssTestCase {
     c1.put("a", "1");
     c1.put("b", "2");
     c1.put("b.x", "3");
+    Tdb tdb1 = newTdb();
+    c1.setTdb(tdb1);
     c1.seal();
     Configuration c2 = newConfiguration();
     c2.copyFrom(c1);
@@ -192,6 +248,9 @@ public class TestConfiguration extends LockssTestCase {
     assertFalse(c2.isSealed());
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
+    Tdb tdb2 = c2.getTdb();
+    assertTrue(tdb1.getPluginIdsForDifferences(tdb2).isEmpty());
+    assertFalse(tdb1 == tdb2);
   }
 
   public void testLoad() throws IOException, Configuration.InvalidParam {
@@ -525,57 +584,6 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(2, c3.keySet().size());
     assertEquals("a", c3.get("foo.bar.p1"));
     assertEquals("b", c3.get("foo.bar.p2"));
-  }
-
-  public void testSetTitleConfig() throws Exception {
-    Properties p1 = new Properties();
-    Properties p2 = new Properties();
-    Properties p3 = new Properties();
-    String tprf = ConfigManager.PARAM_TITLE_DB;
-    p1.put("title", "T1");
-    p1.put("plugin", "o|l|p1");
-    p1.put("param.1.key", "k1");
-    p1.put("param.1.value", "v1");
-    p1.put("param.2.key", "k2");
-    p1.put("param.2.value", "v2");
-
-    p2.put("title", "T2");
-    p2.put("plugin", "o|l|p1");
-    p2.put("param.1.key", "k1");
-    p2.put("param.1.value", "v1a");
-    p2.put("param.2.key", "k2");
-    p2.put("param.2.value", "v2a");
-
-    p3.put("title", "T3");
-    p3.put("plugin", "o|l|p2");
-    p3.put("param.1.key", "x1");
-    p3.put("param.1.value", "v1b");
-    p3.put("param.2.key", "x2");
-    p3.put("param.2.value", "v2b");
-
-    Configuration all = ConfigManager.newConfiguration();
-    all.addAsSubTree(ConfigurationUtil.fromProps(p1), tprf + ".one");
-    all.addAsSubTree(ConfigurationUtil.fromProps(p2), tprf + ".two");
-    all.addAsSubTree(ConfigurationUtil.fromProps(p3), tprf + ".three");
-    assertEquals("x2", all.get("org.lockss.title.three.param.2.key"));
-
-    all.setTitleConfig(all.getConfigTree(ConfigManager.PARAM_TITLE_DB));
-    Collection t1 = all.getTitleConfigs("o|l|p1");
-    Collection t2 = all.getTitleConfigs("o|l|p2");
-    assertEquals(ConfigurationUtil.fromProps(p3), new ArrayList(t2).get(0));
-
-    // Should be two titles in t1, but since Configuration doesn't
-    // implement hashCode() we can't make a set for orderless compare
-    List exp = ListUtil.list(ConfigurationUtil.fromProps(p1),
-			     ConfigurationUtil.fromProps(p2));
-    for (Iterator iter = t1.iterator(); iter.hasNext(); ) {
-      Configuration onetitle = (Configuration)iter.next();
-      if (!exp.contains(onetitle)) {
-	fail("Didn't find " + onetitle + " in " + exp);
-      }
-      exp.remove(onetitle);
-    }
-    assertEmpty(exp);
   }
 
   private ConfigFile loadFCF(String url) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.26 2008-03-15 04:56:11 tlipkis Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.27 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -40,6 +40,8 @@ import javax.xml.parsers.*;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.*;
 import org.lockss.test.*;
+import org.lockss.config.*;
+import org.lockss.util.*;
 
 /**
  * Test class for <code>org.lockss.util.XmlPropertyLoader</code> and
@@ -1297,6 +1299,65 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertTrue(vs.contains("4"));
   }
   
+  /**
+   * Test loading title database information.
+   */
+  public void testLoadTdb() throws Exception {
+    StringBuffer sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <property name=\"org.lockss\">\n");
+    sb.append("    <property name=\"title\">\n");
+    sb.append("      <property name=\"BioOneTheAmericanMidlandNaturalist139\">\n");
+    sb.append("        <property name=\"attributes.publisher\" value=\"University of Notre Dame\" />\n");
+    sb.append("        <property name=\"issn\" value=\"0003-0031\" />\n");
+    sb.append("        <property name=\"journalTitle\" value=\"The American Midland Naturalist\" />\n");
+    sb.append("        <property name=\"title\" value=\"The American Midland Naturalist Volume 139\" />\n");
+    sb.append("        <property name=\"plugin\" value=\"org.lockss.plugin.bioone.BioOnePlugin\" />\n");
+    sb.append("        <property name=\"param.1\">\n");
+    sb.append("          <property name=\"key\" value=\"base_url\" />\n");
+    sb.append("          <property name=\"value\" value=\"http://www.bioone.org/\" />\n");
+    sb.append("        </property>\n");
+    sb.append("        <property name=\"param.2\">\n");
+    sb.append("          <property name=\"key\" value=\"journal_id\" />\n");
+    sb.append("          <property name=\"value\" value=\"0003-0031\" />\n");
+    sb.append("        </property>\n");
+    sb.append("        <property name=\"param.3\">\n");
+    sb.append("          <property name=\"key\" value=\"volume\" />\n");
+    sb.append("          <property name=\"value\" value=\"139\" />\n");
+    sb.append("        </property>\n");
+    sb.append("        <property name=\"param.4\">\n");
+    sb.append("          <property name=\"key\" value=\"pub_down\" />\n");
+    sb.append("          <property name=\"value\" value=\"true\" />\n");
+    sb.append("        </property>\n");
+    sb.append("      </property>\n");
+    sb.append("    </property>\n");
+    sb.append("  </property>\n");
+    sb.append("</lockss-config>\n");
+
+    InputStream istr =
+      new ReaderInputStream(new StringReader(sb.toString()));
+    PropertyTree props = new PropertyTree();
+    m_xmlPropertyLoader.loadProperties(props, istr);
+    assertFalse(props.isEmpty());
+    Object prop = props.get("org.lockss.title.BioOneTheAmericanMidlandNaturalist139.param.3.value");
+    assertNotNull(prop);
+    assertEquals("139", prop);
+
+    istr = new ReaderInputStream(new StringReader(sb.toString()));
+    props = new PropertyTree();
+    Tdb tdb = new Tdb();
+    m_xmlPropertyLoader.loadProperties(props, tdb, istr);
+    assertTrue(props.isEmpty());
+    assertFalse(tdb.isEmpty());
+    TdbPublisher pub = tdb.getTdbPublisher("University of Notre Dame");
+    assertNotNull(pub);
+    TdbTitle title = pub.getTitleById("0003-0031");
+    assertNotNull(title);
+    Collection<TdbAu> aus = title.getTdbAusByName("The American Midland Naturalist Volume 139");
+    assertEquals(1, aus.size());
+    String volume = aus.iterator().next().getParam("volume");
+    assertEquals("139", volume);
+  }
   /**
    * Set default values for testing conditionals.
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyManager.java,v 1.5 2007-03-13 22:07:32 tlipkis Exp $
+ * $Id: TestProxyManager.java,v 1.6 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -176,7 +176,6 @@ public class TestProxyManager extends LockssTestCase {
     assertTrue(mgr.isMethodAllowed("POST"));
     assertTrue(mgr.isMethodAllowed("HEAD"));
     assertTrue(mgr.isMethodAllowed("CONNECT"));
-
   }
 
   class MyProxyManager extends ProxyManager {

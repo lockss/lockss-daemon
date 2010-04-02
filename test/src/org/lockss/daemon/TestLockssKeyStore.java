@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.7 2010-03-26 01:02:14 tlipkis Exp $
+ * $Id: TestLockssKeyStore.java,v 1.8 2010-04-02 23:38:11 pgust Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public class TestLockssKeyStore extends LockssTestCase {
   public void testNoFile() throws Exception {
     File tmpDir = getTempDir("kstmp");
     File file = new File(tmpDir, "ks1");
-    assertFalse(file.exists());
+    assertFalse(file.exists()); 
     try {
       LockssKeyStore lk = createFromProp("lkone", file.toString(),
 					 PASSWD, "pass42");
