@@ -1,5 +1,5 @@
 /*
- * $Id: AuActivityBase.java,v 1.5 2005-10-20 22:57:49 troberts Exp $
+ * $Id: AuActivityBase.java,v 1.6 2010-04-02 23:30:20 pgust Exp $
  */
 
 /*
@@ -32,27 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.uiapi.commands;
 
-import java.io.*;
-import java.net.*;
 import java.util.*;
-import java.text.*;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.xml.parsers.*;
 
 import org.w3c.dom.*;
-import org.xml.sax.*;
 
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.remote.*;
-import org.lockss.servlet.*;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
-import org.lockss.daemon.status.*;
-
-import org.lockss.uiapi.servlet.*;
 import org.lockss.uiapi.util.*;
 
 /**
@@ -225,15 +212,13 @@ public class AuActivityBase extends StatusActivityBase {
 
     Collection dk   = oldConfig.differentKeys(newConfig);
     boolean changed = false;
-
     for (Iterator iter = dk.iterator(); iter.hasNext(); ) {
       String key    = (String) iter.next();
       String oldVal = oldConfig.get(key);
       String newVal = newConfig.get(key);
 
       if (!isEqual(oldVal, newVal)) {
-	      changed = true;
-
+	changed = true;
         log.debug("Key " + key + " changed from \"" +
                   oldVal + "\" to \"" + newVal + "\"");
       }
