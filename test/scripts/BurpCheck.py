@@ -202,11 +202,17 @@ def _find_year_zeros(db, options):
     
     cursor = db.cursor()    
     cursor2 = db.cursor()
-    cursor.execute("SELECT auname, auid, machinename, port FROM burp WHERE auyear = '0' AND rundate >=  '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' GROUP BY auid;")
+    cursorMaxDate = db.cursor()
     
+    cursor.execute("SELECT auname, auid, machinename, port, rundate FROM burp WHERE auyear = '0' AND rundate >=  '%s' AND rundate <= '%s' GROUP BY auid;" %
+                   (str(options.reportdatestart), str(options.reportdateend)))
     arYearZero = cursor.fetchone()
     while arYearZero is not None:
-        if _is_reported(arYearZero[1]):
+        cursorMaxDate.execute("SELECT MAX(rundate) FROM burp WHERE auid = '%s' AND machinename = '%s' AND port = %d;" % 
+                              (arYearZero[1], arYearZero[2], arYearZero[3]))
+        arMaxDate = cursorMaxDate.fetchone()
+        
+        if arMaxDate[0] == arYearZero[4] and _is_reported(arYearZero[1]):
             cursor2.execute("SELECT auyear, machinename, port, rundate FROM burp WHERE auid = '%s' AND auyear > 0 AND rundate < '%s';" %
                             (arYearZero[1], str(options.reportdatestart)))
             year = cursor2.fetchone()            

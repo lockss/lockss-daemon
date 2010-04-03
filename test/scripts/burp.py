@@ -144,9 +144,8 @@ def _need_report(db, options):
         return True
     
     # lastComplete[0] seems to be a datetime.
-    difference = datetime.timedelta(days=2)
-    twodaysago = datetime.datetime.now() - difference
-        
+    twodaysago = datetime.datetime.now() - datetime.timedelta(days=2)
+    
     return lastComplete[0] < twodaysago
 
     
@@ -162,10 +161,32 @@ def _article_report(client, db, options):
     aurepository = {}
     auarticles = {}
     cursor = db.cursor()
+    
+    cursorStarted = db.cursor()
+    cursorStarted.execute("SELECT MAX(start) FROM executions");
+    arStarted = cursorStarted.fetchone()
+    
+    if arStarted is None:
+        print "You must insert the start time before you do an article report.\n"
+        raise RuntimeError("You must insert the start time before you do an article report.")
+    
+    startExecution = arStarted[0]
+    
+    print "startExecution = %s" % (startExecution, )
+    
     for auid in auids:
         # Because it's hard to know if the Burp is running without SOME feedback...
         print options.host + ":" + auname[auid]
         
+        # Skip the AUID if it has been seen in this (overall) execution.
+        cursor.execute("SELECT MAX(rundate) FROM burp WHERE machinename = '%s' AND port = %s AND auid = '%s'" %
+                       (host, port, auid)) 
+        arRunDate = cursor.fetchone()
+        if (arRunDate is not None) and (arRunDate[0] > startExecution):
+            print("Skipping: This AU was last recorded on %s, and the execution started on %s." %
+                (time.strftime("%Y-%m-%d %H:%M:%S", arRunDate[0]), time.strftime("%Y-%m-%d %H:%M:%S", startExecution)))
+            continue
+         
         rerun = True
         numRuns = 0
         while rerun:
@@ -195,7 +216,7 @@ def _article_report(client, db, options):
             try:
                 aucreated[auid] = time.strptime(created, "%H:%M:%S %m/%d/%y")
             except ValueError:
-                print "FAIL: 'Created' date was '%s', which is not the right format.  Continuing.\n"
+                print "FAIL: 'Created' date was '%s', which is not the right format.  Continuing.\n" % (created,)
                 aucreated[auid] = None
         else:
             print "FAIL: created time was not set.\n"
