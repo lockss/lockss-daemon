@@ -172,8 +172,6 @@ def _article_report(client, db, options):
     
     startExecution = arStarted[0]
     
-    print "startExecution = %s" % (startExecution, )
-    
     for auid in auids:
         # Because it's hard to know if the Burp is running without SOME feedback...
         print options.host + ":" + auname[auid]
@@ -182,9 +180,13 @@ def _article_report(client, db, options):
         cursor.execute("SELECT MAX(rundate) FROM burp WHERE machinename = '%s' AND port = %s AND auid = '%s'" %
                        (host, port, auid)) 
         arRunDate = cursor.fetchone()
-        if (arRunDate is not None) and (arRunDate[0] > startExecution):
-            print("Skipping: This AU was last recorded on %s, and the execution started on %s." %
-                (time.strftime("%Y-%m-%d %H:%M:%S", arRunDate[0]), time.strftime("%Y-%m-%d %H:%M:%S", startExecution)))
+        if (arRunDate is None) or (arRunDate[0] is None):
+            arRunDate = [datetime.datetime(1900, 1, 1)]
+        if (arRunDate[0] > startExecution):
+            print("Skipping: This AU was last recorded on %s." %
+                (arRunDate[0].strftime("%Y-%m-%d %H:%M:%S"),))
+            print("The execution started on %s." %
+                (startExecution.strftime("%Y-%m-%d %H:%M:%S"),))
             continue
          
         rerun = True
