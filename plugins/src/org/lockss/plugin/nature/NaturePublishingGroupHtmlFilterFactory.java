@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.9 2010-04-01 22:50:46 thib_gc Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.10 2010-04-03 02:56:10 edwardsb1 Exp $
  */
 
 /*
@@ -218,6 +218,7 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
         * Nature has changed items within JavaScript.  We're now filtering JavaScript.
         */
        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
+       HtmlNodeFilterTransform.exclude(new TagNameFilter("noscript")),
 
     };
 
