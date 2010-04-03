@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="American Society of Mammalogists">
+   <property name="name" value="All American Society of Mammalogists Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='American Society of Mammalogists']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="JournalofMammalogy81">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="81" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogy82">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 82" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="82" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogy83">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 83" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="83" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogy84">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 84" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="84" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogy85">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="85" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogy86">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="086" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogyVolume86superseded">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 86 [superseded]" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="86" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogy87">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="87" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+  <property name="JournalofMammalogy88">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="1545-1542" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="88" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
