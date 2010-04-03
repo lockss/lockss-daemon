@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.10 2010-02-23 04:45:26 pgust Exp $
+ * $Id: TestConfigFile.java,v 1.11 2010-04-03 17:06:50 pgust Exp $
  */
 
 /*
@@ -38,6 +38,9 @@ import java.util.zip.*;
 import java.net.*;
 import junit.framework.*;
 
+import org.lockss.config.Configuration;
+import org.lockss.config.Tdb;
+import org.lockss.config.TdbTitle;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -62,6 +65,89 @@ public abstract class TestConfigFile extends LockssTestCase {
     "prop.2=bar\n" +
     "prop.3=baz";
 
+  // valid tdb entry
+  private static final String tdbText1 =
+    "org.lockss.prop=value\n" +
+    "org.lockss.title.title1.title=Air & Space volume 3\n" +
+    "org.lockss.title.title1.plugin=org.lockss.testplugin1\n" +
+    "org.lockss.title.title1.pluginVersion=4\n" +
+    "org.lockss.title.title1.issn=0003-0031\n" +
+    "org.lockss.title.title1.journal.link.1.type=\n" + TdbTitle.LinkType.continuedBy.toString() +
+    "org.lockss.title.title1.journal.link.1.journalId=0003-0031\n" +  // link to self
+    "org.lockss.title.title1.param.1.key=volume\n" +
+    "org.lockss.title.title1.param.1.value=3\n" +
+    "org.lockss.title.title1.param.2.key=year\n" +
+    "org.lockss.title.title1.param.2.value=1999\n" +
+    "org.lockss.title.title1.attributes.publisher=The Smithsonian Institution";
+
+  // invalid tdb entry: missing "plugin"
+  private static final String tdbText2 =
+    "org.lockss.prop=value\n" +
+    "org.lockss.title.title1.title=Air & Space volume 3\n" +
+//    "org.lockss.title.title1.plugin=org.lockss.testplugin1\n" +
+    "org.lockss.title.title1.pluginVersion=4\n" +
+    "org.lockss.title.title1.issn=0003-0031\n" +
+    "org.lockss.title.title1.journal.link.1.type=\n" + TdbTitle.LinkType.continuedBy.toString() +
+    "org.lockss.title.title1.journal.link.1.journalId=0003-0031\n" +  // link to self
+    "org.lockss.title.title1.param.1.key=volume\n" +
+    "org.lockss.title.title1.param.1.value=3\n" +
+    "org.lockss.title.title1.param.2.key=year\n" +
+    "org.lockss.title.title1.param.2.value=1999\n" +
+    "org.lockss.title.title1.attributes.publisher=The Smithsonian Institution";
+
+
+  // valid tdb entry
+  private static final String tdbXml1 =
+    "<lockss-config>\n" +
+    "  <property name=\"org.lockss\">\n" +
+    "    <property name=\"prop\" value=\"value\" />\n" +
+    "    <property name=\"title\">\n" +
+    "      <property name=\"title1\">\n" +
+    "        <property name=\"title\" value=\"Air &amp; Space volume 3\" />\n" +
+    "        <property name=\"plugin\" value=\"org.lockss.testplugin1\" />\n" +
+    "        <property name=\"pluginVersion\" value=\"4\" />\n" +
+    "        <property name=\"issn\" value=\"0003-0031\" />\n" +
+    "        <property name=\"journal\">\n" +
+    "          <property name=\"link.1.type\" value=\"" + TdbTitle.LinkType.continuedBy.toString() + "\" />\n" +
+    "          <property name=\"link.1.journalId\" value=\"0003-0031\" />\n" +  // link to self
+    "        </property>\n" +
+    "        <property name=\"param.1.key\" value=\"volume\" />\n" +
+    "        <property name=\"param.1.value\" value=\"3\" />\n" +
+    "        <property name=\"param.2.key\" value=\"year\" />\n" +
+    "        <property name=\"param.2.value\" value=\"1999\" />\n" +
+    "        <property name=\"attributes.publisher\" value=\"The Smithsonian Institution\" />\n" +
+    "      </property>\n" +
+    "    </property>\n" +
+    "  </property>\n" +
+  "</lockss-config>";
+  
+  // invalid tdb entry: missing "plugin"
+  private static final String tdbXml2 =
+    "<lockss-config>\n" +
+    "  <property name=\"org.lockss\">\n" +
+    "    <property name=\"prop\" value=\"value\" />\n" +
+    "    <property name=\"title\">\n" +
+    "      <property name=\"title1\">\n" +
+    "        <property name=\"title\" value=\"Air &amp; Space volume 3\" />\n" +
+//    "        <property name=\"plugin\" value=\"org.lockss.testplugin1\" />\n" +
+    "        <property name=\"pluginVersion\" value=\"4\" />\n" +
+    "        <property name=\"issn\" value=\"0003-0031\" />\n" +
+    "        <property name=\"journal\">\n" +
+    "          <property name=\"link.1.type\" value=\"" + TdbTitle.LinkType.continuedBy.toString() + "\" />\n" +
+    "          <property name=\"link.1.journalId\" value=\"0003-0031\" />\n" +  // link to self
+    "        </property>\n" +
+    "        <property name=\"param.1.key\" value=\"volume\" />\n" +
+    "        <property name=\"param.1.value\" value=\"3\" />\n" +
+    "        <property name=\"param.2.key\" value=\"year\" />\n" +
+    "        <property name=\"param.2.value\" value=\"1999\" />\n" +
+    "        <property name=\"attributes.publisher\" value=\"The Smithsonian Institution\" />\n" +
+    "      </property>\n" +
+    "    </property>\n" +
+    "  </property>\n" +
+  "</lockss-config>";
+  
+/*
+ */
   private static final String xml1 =
     "<lockss-config>\n" +
     "  <property name=\"prop.7\" value=\"foo\" />\n" +
@@ -243,6 +329,25 @@ public abstract class TestConfigFile extends LockssTestCase {
     assertEquals("baz", config.get("prop.3"));
   }
 
+  /** Load valid Tdb property file with a single entry */
+  public void testValidLoadTdbText() throws IOException {
+    Configuration config = testLoad(tdbText1, false);
+    assertEquals("value", config.get("org.lockss.prop"));
+    
+    Tdb tdb = config.getTdb();
+    assertNotNull(tdb);
+    assertEquals(1, tdb.getTdbAuCount());
+  }
+
+  /** Load invalid Tdb property file with a single entry */
+  public void testInvalidLoadTdbText() throws IOException {
+    Configuration config = testLoad(tdbText2, false);
+    assertEquals("value", config.get("org.lockss.prop"));
+    
+    Tdb tdb = config.getTdb();
+    assertNull(tdb);
+  }
+
   /** Load an XML file */
   public void testLoadXml() throws IOException {
     Configuration config = testLoad(xml1, true);
@@ -254,6 +359,25 @@ public abstract class TestConfigFile extends LockssTestCase {
   /** Try to load a bogus XML file */
   public void testIllXml() throws IOException {
     testIllContent(badConfig, true, "SAXParseException");
+  }
+
+  /** Load valid Tdb XML file with a single entry */
+  public void testValidLoadTdbXml() throws IOException {
+    Configuration config = testLoad(tdbXml1, true);
+    assertEquals("value", config.get("org.lockss.prop"));
+    
+    Tdb tdb = config.getTdb();
+    assertNotNull(tdb);
+    assertEquals(1, tdb.getTdbAuCount());
+  }
+
+  /** Load invalid Tdb XML file with a single entry */
+  public void testInvalidLoadTdbXml() throws IOException {
+    Configuration config = testLoad(tdbXml2, true);
+    assertEquals("value", config.get("org.lockss.prop"));
+    
+    Tdb tdb = config.getTdb();
+    assertNull(tdb);
   }
 
   public void testGeneration() throws IOException {
