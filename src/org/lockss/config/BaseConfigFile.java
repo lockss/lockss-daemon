@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.6 2010-04-02 23:05:45 pgust Exp $
+ * $Id: BaseConfigFile.java,v 1.7 2010-04-03 17:05:48 pgust Exp $
  */
 
 /*
@@ -34,7 +34,9 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+
 import org.apache.commons.lang.StringUtils;
+import org.lockss.state.AuStateBean;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -185,17 +187,23 @@ public abstract class BaseConfigFile implements ConfigFile {
   protected void setConfigFrom(InputStream in) throws IOException {
     ConfigurationPropTreeImpl newConfig = new ConfigurationPropTreeImpl();
     try {
+      Tdb tdb = new Tdb();
+      PropertyTree propTree = newConfig.getPropertyTree();
+      
       // Load the configuration
       if (m_fileType == XML_FILE) {
-        Tdb tdb = new Tdb();
-	XmlPropertyLoader.load(newConfig.getPropertyTree(), tdb, in);
-	if (!tdb.isEmpty()) {
-	  newConfig.setTdb(tdb);
-	}
+	XmlPropertyLoader.load(propTree, tdb, in);
       } else {
-	newConfig.getPropertyTree().load(in);
+	propTree.load(in);
+	extractTdb(propTree, tdb);
       }
+      
+      if (!tdb.isEmpty()) {
+        newConfig.setTdb(tdb);
+      }
+
       filterConfig(newConfig);
+      
       // update stored configuration atomically
       newConfig.seal();
       m_config = newConfig;
@@ -212,6 +220,42 @@ public abstract class BaseConfigFile implements ConfigFile {
     }
   }
 
+  /**
+   * Extract title database entries from the PropertyTree and add them to Tdb.
+   * 
+   * @param propTree the property tree
+   * @param tdb the title database
+   * @return <code>true</code> if title database entries were extracted
+   */
+  protected boolean extractTdb(PropertyTree propTree, Tdb tdb) {
+    PropertyTree tdbTree = propTree.getTree(ConfigManager.PARAM_TITLE_DB);
+    if (tdbTree.isEmpty()) {
+      return false;
+    }
+    
+    // remove title database keys from propTree
+    // (why doesn't PropertyTree encapsulate this?)
+    for (Object key : new HashSet(propTree.keySet())) {
+      if (((String)key).startsWith(ConfigManager.PREFIX_TITLE_DB)) {
+        propTree.remove(key);
+      }
+    }
+
+    // process title database
+    Enumeration elements = tdbTree.getNodes();
+    while (elements.hasMoreElements()) {
+      String element = (String)elements.nextElement();
+      PropertyTree tdbProps = tdbTree.getTree(element);
+      try {
+        tdb.addTdbAuFromProperties(tdbProps);
+      } catch (Throwable ex) {
+        log.error("Error processing TdbAu entry " + element + ": " + ex.getMessage());
+      }
+    }
+    
+    return true;
+  }
+  
   public void setKeyPredicate(ConfigManager.KeyPredicate pred) {
     keyPred = pred;
   }
