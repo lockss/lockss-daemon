@@ -10272,6 +10272,30 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="Nature462">
+   <property name="attributes.publisher" value="Nature Publishing Group" />
+   <property name="journalTitle" value="Nature" />
+   <property name="title" value="Nature Volume 462" />
+   <property name="plugin" value="org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.nature.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="nature" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.4">
+    <property name="key" value="volume_name" />
+    <property name="value" value="462" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
   <property name="Nature463">
    <property name="attributes.publisher" value="Nature Publishing Group" />
    <property name="journalTitle" value="Nature" />
