@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.2 2010-04-05 17:18:39 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.2 2010-04-05 17:18:39 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -96,6 +96,7 @@ public class TestTdbAu extends LockssTestCase {
     TdbTitle title = new TdbTitle("Test Title");
 
     TdbAu au = new TdbAu("Test AU");
+    au.setPluginId("pluginA");
     title.addTdbAu(au);
     Collection<TdbAu> aus = title.getTdbAus();
     assertEquals(1, aus.size());
@@ -120,6 +121,7 @@ public class TestTdbAu extends LockssTestCase {
     
     // add au
     TdbAu au = new TdbAu("Test AU");
+    au.setPluginId("pluginA");
     title.addTdbAu(au);
     
     // ensure same as publisher for AU's title
@@ -163,6 +165,7 @@ public class TestTdbAu extends LockssTestCase {
   public void testParams() {
     // set two params
     TdbAu au = new TdbAu("Test AU");
+    au.setPluginId("pluginA");
     au.setParam("name1", "val1");
     au.setParam("name2", "val2");
     au.setParam("name3", "val3");
@@ -192,6 +195,18 @@ public class TestTdbAu extends LockssTestCase {
     assertEquals(3, getParams.size());
     getParams = au.getParams();
     assertEquals("val2", getParams.get("name2"));
+    
+    TdbTitle title = new TdbTitle("Test Title");
+    title.addTdbAu(au);
+    try {
+      au.setParam("name4", "newval4");
+      fail("TdbAu did not throw IllegalStateException setting param once added to title.");
+    } catch (IllegalStateException ex) {
+    }
+    assertNotNull(getParams);
+    assertEquals(3, getParams.size());
+    getParams = au.getParams();
+    assertNull(getParams.get("name4"));
   }
 
   /**
