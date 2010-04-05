@@ -32,7 +32,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jcb.rupress.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -156,7 +156,10 @@
       au < manifest ; The Journal of Cell Biology Volume 183 ; 183 >
       au < manifest ; The Journal of Cell Biology Volume 184 ; 184 >
       au < manifest ; The Journal of Cell Biology Volume 185 ; 185 >
-      au < exists ; The Journal of Cell Biology Volume 186 ; 186 >
+      au < manifest ; The Journal of Cell Biology Volume 186 ; 186 >
+      au < manifest ; The Journal of Cell Biology Volume 187 ; 187 >
+      au < manifest ; The Journal of Cell Biology Volume 188 ; 188 >
+      au < manifest ; The Journal of Cell Biology Volume 189 ; 189 >
 
     }
 
@@ -182,7 +185,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jem.rupress.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -294,6 +297,7 @@
       au < manifest ; The Journal of Experimental Medicine Volume 204 ; 204 >
       au < manifest ; The Journal of Experimental Medicine Volume 205 ; 205 >
       au < manifest ; The Journal of Experimental Medicine Volume 206 ; 206 >
+      au < manifest ; The Journal of Experimental Medicine Volume 207 ; 207 >
 
     }
 
@@ -318,7 +322,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://jgp.rupress.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -430,6 +434,7 @@
       au < manifest ; The Journal of General Physiology Volume 132 ; 132 >
       au < manifest ; The Journal of General Physiology Volume 133 ; 133 >
       au < manifest ; The Journal of General Physiology Volume 134 ; 134 >
+      au < manifest ; The Journal of General Physiology Volume 135 ; 135 >
 
     }
 
