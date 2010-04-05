@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbPublisher.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestTdbPublisher.java,v 1.2 2010-04-05 17:19:18 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbPublisher</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbPublisher.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * @version $Id: TestTdbPublisher.java,v 1.2 2010-04-05 17:19:18 pgust Exp $
  */
 
 public class TestTdbPublisher extends LockssTestCase {
@@ -119,6 +119,14 @@ public class TestTdbPublisher extends LockssTestCase {
     }
     titles = publisher.getTdbTitles();
     assertEquals(1, titles.size());
+
+    TdbTitle title2 = new TdbTitle("Test Title 2");
+    title2.setId(title.getId());
+    try {
+      publisher.addTdbTitle(title2);
+      fail("TdbPublisher did not throw IllegalStateException adding duplicate title");
+    } catch (IllegalStateException ex) {
+    }
   }
 
   /**
