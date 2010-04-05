@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.1 2010-04-02 23:15:13 pgust Exp $
+ * $Id: TdbAu.java,v 1.2 2010-04-05 16:29:48 pgust Exp $
  */
 
 /*
@@ -114,11 +114,7 @@ public class TdbAu {
               && au.getParams().equals(auId.au.getParams()));
     }
     public int hashCode() {
-      if (au.getPluginId() == null) {
-        // use hash code of name if plugin ID not set
-        return au.getName().hashCode();
-      }
-      return au.pluginId.hashCode() ^ au.getParams().hashCode();
+      throw new UnsupportedOperationException();
     }
     public String toString() {
       Properties props = new Properties();
@@ -213,9 +209,11 @@ public class TdbAu {
   }
   
   /**
-   * Set the ID fo the plugin for this AU
+   * Set the ID for the plugin for this TdbAu.  The pluginId must be set before adding 
+   * this TdbAu to its TdbTitle because changing pluginId could change the Id of this TdbAu.
    * 
    * @param pluginId the ID of the plugin for this AU
+   * @throws IllegalStateException if pluginID is already set (would change au's Id) 
    */
   protected void setPluginId(String pluginId) {
     if (pluginId == null) {
@@ -311,11 +309,13 @@ public class TdbAu {
   }
   
   /**
-   * Set the value of a parameter.
+   * Set the value of a param.  All params must be set before adding this TdbAu
+   * to its TdbTitle because changing params could change the Id of this TdbAu.
    * 
    * @param name the param name
    * @param value the non-null param value
-   * @throws IllegalStateException if param already set
+   * @throws IllegalStateException if param is already set, or 
+   *   au has been added to its title (could change its Id);
    */
   protected void setParam(String name, String value) {
     if (name == null) {
@@ -325,6 +325,9 @@ public class TdbAu {
       throw new IllegalArgumentException("au param value cannot be null");
     }
     
+    if (title != null) {
+      throw new IllegalStateException("cannot add param once au has been added to its title");
+    }
     if (params.containsKey(name)) {
       throw new IllegalStateException("cannot replace value of au param \"" + name + "\" for au \"" + this.name + "\"");
     }
