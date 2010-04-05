@@ -1,5 +1,5 @@
 /*
- * $Id: FileTestUtil.java,v 1.7 2005-09-06 23:06:52 tlipkis Exp $
+ * $Id: FileTestUtil.java,v 1.8 2010-04-05 17:22:57 pgust Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -89,19 +89,19 @@ public class FileTestUtil {
   /** Store the string in a temp file and return a file: url for it */
   public static String urlOfString(String s) throws IOException {
     File file = FileTestUtil.writeTempFile("test", s);
-    return file.toURL().toString();
+    return file.toURI().toURL().toString();
   }
 
   /** Store the string in a temp file and return a file: url for it */
   public static String urlOfString(String s, String suffix) throws IOException {
     File file = FileTestUtil.writeTempFile("test", suffix, s);
-    return file.toURL().toString();
+    return file.toURI().toURL().toString();
   }
 
   /** Return the (absolute) url for the (possibly relative) file name */
   public static String urlOfFile(String s) throws IOException {
     File file = new File(s);
-    return file.toURL().toString();
+    return file.toURI().toURL().toString();
   }
 
   /**
