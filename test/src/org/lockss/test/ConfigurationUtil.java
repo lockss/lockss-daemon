@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.19 2008-01-27 06:48:23 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.20 2010-04-05 17:21:50 pgust Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -88,10 +88,7 @@ public class ConfigurationUtil {
    */
   public static Configuration merge(Configuration c1, Configuration c2) {
     Configuration res = c1.copy();
-    for (Iterator iter = c2.keyIterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      res.put(key, c2.get(key));
-    }
+    res.copyFrom(c2);
     return res;
   }
 
