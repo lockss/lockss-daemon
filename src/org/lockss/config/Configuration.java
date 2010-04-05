@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.25 2010-04-02 23:08:25 pgust Exp $
+ * $Id: Configuration.java,v 1.26 2010-04-05 17:01:19 pgust Exp $
  */
 
 /*
@@ -59,7 +59,6 @@ public abstract class Configuration {
   protected static Logger log =
     Logger.getLoggerWithInitialLevel("Config",
                                      Logger.getInitialDefaultLevel());
-
   /**
    * The title database for this configuration
    */
@@ -243,25 +242,52 @@ public abstract class Configuration {
   public abstract boolean store(OutputStream ostr, String header)
       throws IOException;
 
-  /** Return a Configuration.Differences representing the set of keys whose
-   * values differ.
+  /** Return the difference between this instance and another Configuration.  
+   * This operation is transitive: c1.differences(c2) yields the same result 
+   * as c2.differences(c1).
+   * <p>
+   * NOTE: By definition, the difference between any configuration and 
+   * {@link ConfigManager#EMPTY_CONFIGURATION is the special difference
+   * set, {@link Configuration#DifferencesAll}.
+   * 
    * @param otherConfig the config to compare with.  May be null.
    */
-  public abstract Differences differences(Configuration otherConfig);
+  public Configuration.Differences differences(Configuration otherConfig) {
+    return new Configuration.Differences(this, otherConfig);
+  }
 
   /** Return the set of keys whose values differ.
+   * This operation is transitive: c1.differentKeys(c2) yields the same 
+   * result as c2.differentKeys(c1).
+   * 
    * @param otherConfig the config to compare with.  May be null.
    */
   public abstract Set<String> differentKeys(Configuration otherConfig);
   
 
   /** Return the set of pluginIds involved in differences between two configurations.
+   * This operation is transitive: c1.differentPluginIds(c2) yields the same 
+   * result as c2.differentPluginIds(c1).
    * @param otherConfig the config to compare with.  May be null.
    */
-  public abstract Set<String> differentPluginIds(Configuration otherConfig);
-  
+  public Set<String> differentPluginIds(Configuration otherConfig) {
+    Tdb tdb = getTdb();
+    Tdb otherTdb = (otherConfig == null) ? null : otherConfig.getTdb();
+    if (otherTdb == null) {
+      return (tdb == null) ? Collections.EMPTY_SET : tdb.getAllTdbAus().keySet();
+    }
+    
+    if (tdb == null) {
+      return otherTdb.getAllTdbAus().keySet();
+    }
 
-  /** Return true iff config has no keys/ */
+    return tdb.getPluginIdsForDifferences(otherTdb);
+  }
+
+  /** Return true iff config has no keys or title database 
+   * 
+   * @return <code>true</code> iff config has no keys or title databases
+   * */
   public boolean isEmpty() {
     if (keyIterator().hasNext()) {
       return false;
@@ -644,10 +670,23 @@ public abstract class Configuration {
 
   abstract void reset();
 
-  /** return true iff the configurations have the same keys
+  /** Return true iff the configurations have the same keys
    * with the same values.
    */
-  public abstract boolean equals(Object c);
+  public boolean equals(Object c) {
+    if (! (c instanceof Configuration)) {
+      return false;
+    }
+    return this.differences((Configuration)c).isEmpty();
+  }
+
+  /** Throws UnsupportedOperationException always.
+   * @throws UnsupportedOperationException always
+   */
+  public int hashCode() {
+    throw new UnsupportedOperationException();
+  }
+
 
   /** Return true if the key is present
    * @param key the key to test
@@ -732,7 +771,40 @@ public abstract class Configuration {
    * interest, has changed value since the previous call to
    * configurationChanged().
    */
-  public interface Differences {
+  static public class Differences  {
+    private final boolean containsAll;
+    private final Set<String> diffKeys;
+    private final Set<String> diffPluginIds;
+    private final int tdbAuCountDiff;
+    
+    /**
+     * Create instance for differences between thisConfig and otherConfig.
+     * If otherConfig is null, the contains() method always returns <code>true</code>
+     * and the isEmpty() method always returns <code>false</code>.
+     * 
+     * @param thisConfig
+     * @param otherConfig
+     */
+    protected Differences(Configuration thisConfig, Configuration otherConfig) {
+      if (thisConfig == null) {
+        throw new IllegalArgumentException("thisConfig cannot be null");
+      }
+      this.containsAll = (otherConfig == null);
+      this.tdbAuCountDiff = Math.abs(thisConfig.getTdbAuCount()-((otherConfig == null) ? 0 : otherConfig.getTdbAuCount()));
+      this.diffKeys = thisConfig.differentKeys(otherConfig);
+      this.diffPluginIds = thisConfig.differentPluginIds(otherConfig);
+    }
+
+    
+    /**
+     * Determine whether this instance has no differences.
+     * 
+     * @return <code>true</code> if this instance has no differences
+     */
+    public boolean isEmpty() {
+      return (containsAll) ? false : (tdbAuCountDiff == 0) && diffKeys.isEmpty();
+    }
+    
     /** 
      * Determine whether the value of a key has changed.  Can also be used
      * to determine whether there have been any changes in a named
@@ -744,7 +816,9 @@ public abstract class Configuration {
      * @return true iff the value of the key, or any key in the tree below
      * it, has changed. 
      */
-    public boolean contains(String key);
+    public boolean contains(String key) {
+      return (containsAll) ? true : diffKeys.contains(key);
+    }
 
     /** 
      * Return the set of changed keys.
@@ -752,7 +826,9 @@ public abstract class Configuration {
      * 
      * @return the set of keys that have changed.  
      */
-    public Set<String> getDifferenceSet();
+    public Set<String> getDifferenceSet() {
+      return diffKeys;
+    }
     
     /**
      * Return a set of pluginIDs for differences between two Tdbs.
@@ -760,132 +836,18 @@ public abstract class Configuration {
      * 
      * @return a set of pluginIDs for differences between two Tdbs.
      */
-    public Set<String> getTdbDifferencePluginIds();
-
-    /**
-     * Determines whether a plugin ID is involved in differences between
-     * to Tdbs.  This method is normally used by plugins.
-     * 
-     * @param pluginID the pluginID
-     * @return <code>true</code iff differences between two TDBs involves
-     *  the specified plugin
-     */
-    public boolean containsTdbPluginId(String pluginId);
-    
-    /**
-     * Return the difference in the number of TdbAus between the old
-     * and new Tdbs.
-     * 
-     * @return the difference in the number of Tdbs
-     */
-    public int getTdbAuDifferenceCount();
-  }
-
-  /** 
-   * A Differences used when all keys have changed (<i>E.g.</i>, after the
-   * initial config load, or when a new config callback is registered). 
-   */
-  static class DifferencesAll implements Differences {
-    final Configuration config;
-    
-    public DifferencesAll(Configuration config) {
-      if (config == null) {
-        throw new IllegalArgumentException("config cannot be null");
-      }
-      this.config = config;
-    }
-
-    /**
-     * Return true, indicating that the key has changed.
-     * <p>
-     * Note: parts of the system rely on this method returning 
-     * <code>true</code> for initialization, even though the the
-     * new Configuration <i>doesn't</i> contain the key. 
-     * 
-     * @return <code>true</code>
-     */
-    public boolean contains(String key) {
-      return true;
-    }
-
-    /** 
-     * Return null, indicating that all keys have changed.
-     * 
-     * @return <code>null</code>
-     */
-    public Set<String> getDifferenceSet() {
-      return config.keySet();
-    }
-   
-    /**
-     * Return null, indicating that all Tdb entries have changed
-     * 
-     * @return <code>null</code>
-     */
-    public Set<String> getTdbDifferencePluginIds() {
-      Tdb tdb = config.getTdb();
-      return (tdb == null) ? Collections.EMPTY_SET : tdb.getAllTdbAus().keySet();
-    }
-
-    /**
-     * Determines whether a plugin ID is involved in differences between
-     * to Tdbs.  This method is normally used by plugins.
-     * 
-     * @param pluginID the pluginID
-     * @return <code>true</code iff differences between two TDBs involves
-     *  the specified plugin
-     */
-    public boolean containsTdbPluginId(String pluginId) {
-      return getTdbDifferencePluginIds().contains(pluginId);
-    }
-    
-    /**
-     * Return the difference in the number of TdbAus between the old
-     * and new Tdbs.
-     * 
-     * @return the difference in the number of Tdbs
-     */
-    public int getTdbAuDifferenceCount() {
-      Tdb tdb = config.getTdb();
-      return (tdb == null) ? 0 : tdb.getTdbAuCount();
-    }
-  }
-
-  /** 
-   * A Differences that contains a set of changed keys
-   * and whether configuration TDBs are different
-   */
-  static class DifferencesSet implements Differences {
-    private Set<String> diffKeys;
-    private Set<String> diffPluginIds;
-    private int tdbAuCountDiff;
-    
-    DifferencesSet(Set diffKeys, int tdbAuCountDiff, Set<String>diffPluginIds) {
-      this.diffKeys = diffKeys;
-      this.diffPluginIds = diffPluginIds;
-      this.tdbAuCountDiff = tdbAuCountDiff;
-    }
-
-    public boolean contains(String key) {
-      if (!key.endsWith(".")) {
-        return diffKeys.contains(key);
-      }
-      for (String diffKey : diffKeys) {
-        if (diffKey.startsWith(key)) {
-          return true;
-        }
-      }
-      return false;
-    }
-
-    public Set<String> getDifferenceSet() {
-      return diffKeys;
-    }
-    
     public Set<String> getTdbDifferencePluginIds() {
       return diffPluginIds;
     }
 
+    /**
+     * Determines whether a plugin ID is involved in differences between
+     * to Tdbs.  This method is normally used by plugins.
+     * 
+     * @param pluginID the pluginID
+     * @return <code>true</code iff differences between two TDBs involves
+     *  the specified plugin
+     */
     public boolean containsTdbPluginId(String pluginId) {
       return diffPluginIds.contains(pluginId);
     }
