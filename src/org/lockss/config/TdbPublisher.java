@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.1 2010-04-02 23:12:26 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.2 2010-04-05 16:27:00 pgust Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.util.Set;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.1 2010-04-02 23:12:26 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.2 2010-04-05 16:27:00 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -154,12 +154,27 @@ public class TdbPublisher {
     if (title == null) {
       throw new IllegalArgumentException("published title cannot be null");
     }
+    
+    String id = title.getId();
+    if (id == null) {
+      id = genTdbTitleId(title);
+    }
+    TdbTitle existingTitle = getTitleById(id);
+    if (existingTitle != null) {
+      if (title.getName().equals(existingTitle.getName())) {
+        throw new IllegalStateException("cannot add duplicate title entry: \"" + title.getName() + "\"");
+      } else {
+        // error because it could lead to a missing AU -- one probably has a typo
+        throw new IllegalStateException("cannot add duplicate title entry: \"" + title.getName() 
+                     + "\" with the same id as existing title \"" + existingTitle.getName() + "\"");
+      }
+    }
 
-    title.setTdbPublisher(this);
     if (title.getId() == null) {
       // generate titleID for title
-      title.setId(genTdbTitleId(title));
+      title.setId(id);
     }
+    title.setTdbPublisher(this);
     
     titles.add(title); 
   }
