@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.8 2010-04-02 23:09:24 pgust Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.9 2010-04-05 17:05:51 pgust Exp $
  */
 
 /*
@@ -64,65 +64,29 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return true;
   }
 
+  /**
+   * Reset this instance.
+   */
   void reset() {
+    super.reset();
     props.clear();
   }
 
-  public boolean equals(Object c) {
-    if (! (c instanceof ConfigurationPropTreeImpl)) {
-      return false;
-    }
-    ConfigurationPropTreeImpl c0 = (ConfigurationPropTreeImpl)c;
-    return PropUtil.equalProps(props, c0.getPropertyTree());
-  }
-
-  public int hashCode() {
-    throw new UnsupportedOperationException();
-  }
-
   /** Return the set of keys whose values differ.
+   * This operation is transitive: c1.differentKeys(c2) yields the same 
+   * result as c2.differentKeys(c1).
+   * 
    * @param otherConfig the config to compare with.  May be null.
-   */
-  public Configuration.Differences differences(Configuration otherConfig) {
-    if (otherConfig == null || otherConfig.isEmpty()) {
-      return new Configuration.DifferencesAll(this);
-    }
-    ConfigurationPropTreeImpl oc = (ConfigurationPropTreeImpl)otherConfig;
-    Set<String> diffSet = PropUtil.differentKeysAndPrefixes(getPropertyTree(),
-                                                            oc.getPropertyTree());
-    Set<String> diffPluginIds = differentPluginIds(otherConfig);
-    return new Configuration.DifferencesSet(diffSet, (getTdbAuCount()-otherConfig.getTdbAuCount()), diffPluginIds);
-  }
-
-  /** Return the set of keys whose values differ.
-   * @param otherConfig the config to compare with.
    */
   public Set<String> differentKeys(Configuration otherConfig) {
-    if (otherConfig == null) {
-      otherConfig = ConfigManager.EMPTY_CONFIGURATION;
+    if (this == otherConfig) {
+      return Collections.EMPTY_SET;
     }
-    ConfigurationPropTreeImpl oc = (ConfigurationPropTreeImpl)otherConfig;
-    return PropUtil.differentKeys(getPropertyTree(), oc.getPropertyTree());
+    PropertyTree otherTree = (otherConfig == null) ? 
+        new PropertyTree() : ((ConfigurationPropTreeImpl)otherConfig).getPropertyTree();
+    return PropUtil.differentKeysAndPrefixes(getPropertyTree(), otherTree);
   }
 
-  /** Return the set of pluginIds involved in differences between two configurations.
-   * @param otherConfig the config to compare with.  May be null.
-   */
-  public Set<String> differentPluginIds(Configuration otherConfig) {
-    Tdb tdb = getTdb();
-    Tdb otherTdb = (otherConfig == null) ? null : otherConfig.getTdb();
-    
-    if (otherTdb == null) {
-      return (tdb == null) ? Collections.EMPTY_SET : tdb.getAllTdbAus().keySet();
-    }
-    
-    if (tdb == null) {
-      return otherTdb.getAllTdbAus().keySet();
-    }
-
-    return tdb.getPluginIdsForDifferences(otherTdb);
-  }
-  
   public boolean containsKey(String key) {
     return props.containsKey(key);
   }
@@ -226,5 +190,4 @@ public class ConfigurationPropTreeImpl extends Configuration {
   public String toString() {
     return getPropertyTree().toString();
   }
-
 }
