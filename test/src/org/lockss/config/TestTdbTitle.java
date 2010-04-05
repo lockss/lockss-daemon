@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbTitle.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestTdbTitle.java,v 1.2 2010-04-05 17:25:32 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * @version $Id: TestTdbTitle.java,v 1.2 2010-04-05 17:25:32 pgust Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
@@ -140,7 +140,9 @@ public class TestTdbTitle extends LockssTestCase {
     assertTrue(titles.contains(title));
 
     TdbAu au = new TdbAu("Test Title, Volume 1");
+    au.setPluginId("plugin1");
     title.addTdbAu(au);
+    
     Collection<TdbAu> aus = title.getTdbAus();
     assertNotNull(aus);
     assertEquals(1, aus.size());
@@ -163,6 +165,17 @@ public class TestTdbTitle extends LockssTestCase {
     }
     assertEquals(1, aus.size());
     assertTrue(aus.contains(au));
+
+    // can't add another AU with the same id
+    TdbAu au2 = new TdbAu("Test Title, Volume 1a");
+    au2.setPluginId("plugin1");
+    try {
+      title.addTdbAu(au2);
+      fail("TdbTitle did not throw IllegalStateException adding au with Id of existing one.");
+    } catch (IllegalStateException ex) {
+    }
+    aus = title.getTdbAus();
+    assertEquals(1, aus.size());
   }
 
   /**
@@ -177,9 +190,11 @@ public class TestTdbTitle extends LockssTestCase {
 
     // add an AU to the title
     TdbAu au1 = new TdbAu("Journal Title, Issue 1");
+    au1.setPluginId("plugin1");
     title.addTdbAu(au1);
     
     TdbAu au2 = new TdbAu("Journal Title, Issue 2");
+    au2.setPluginId("plugin2");
     title.addTdbAu(au2);
 
     // retrieve the AU from the title
