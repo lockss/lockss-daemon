@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.2 2010-04-05 16:27:00 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.3 2010-04-05 16:33:15 pgust Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.util.Set;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.2 2010-04-05 16:27:00 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.3 2010-04-05 16:33:15 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -134,7 +134,7 @@ public class TdbPublisher {
    * @param titleId the title ID 
    * @return the TdbTitle with the specified title ID. 
    */
-  public TdbTitle getTitleById(String titleId) {
+  public TdbTitle getTdbTitleById(String titleId) {
     for (TdbTitle title : titles) {
       if (title.getId().equals(titleId)) {
         return title;
@@ -159,7 +159,7 @@ public class TdbPublisher {
     if (id == null) {
       id = genTdbTitleId(title);
     }
-    TdbTitle existingTitle = getTitleById(id);
+    TdbTitle existingTitle = getTdbTitleById(id);
     if (existingTitle != null) {
       if (title.getName().equals(existingTitle.getName())) {
         throw new IllegalStateException("cannot add duplicate title entry: \"" + title.getName() + "\"");
@@ -222,7 +222,7 @@ public class TdbPublisher {
     
     // add pluginIDs for TdbTitles that only appear in publisher
     for (TdbTitle publisherTitle : publisher.getTdbTitles()) {
-      if (this.getTitleById(publisherTitle.getId()) == null) {
+      if (this.getTdbTitleById(publisherTitle.getId()) == null) {
         // add all pluginIDs for publisher title not in this TdbPublisher
         publisherTitle.addAllPluginIds(pluginIds);
       }
@@ -230,7 +230,7 @@ public class TdbPublisher {
     
     // search titles in this publisher
     for (TdbTitle thisTitle : this.titles) {
-      TdbTitle publisherTitle = publisher.getTitleById(thisTitle.getId());
+      TdbTitle publisherTitle = publisher.getTdbTitleById(thisTitle.getId());
       if (publisherTitle == null) {
         // add all pluginIDs for title not in publisher
         thisTitle.addAllPluginIds(pluginIds);
