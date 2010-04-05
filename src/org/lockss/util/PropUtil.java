@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.19 2010-02-22 07:05:04 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.20 2010-04-05 16:22:04 pgust Exp $
  */
 /*
 
@@ -33,7 +33,6 @@ package org.lockss.util;
 
 import java.util.*;
 import java.io.*;
-import java.net.URLEncoder;
 
 
 /** Utilities for Properties
