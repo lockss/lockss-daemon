@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.35 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestConfigManager.java,v 1.36 2010-04-05 17:16:43 pgust Exp $
  */
 
 /*
@@ -41,6 +41,9 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.protocol.*;
 import org.lockss.clockss.*;
+import org.lockss.config.Configuration;
+import org.lockss.config.Tdb;
+import org.lockss.config.TdbTitle;
 import org.lockss.servlet.*;
 
 /**
@@ -892,14 +895,30 @@ try {
   }
 
   public void testLoadTitleDb() throws IOException {
-    String u2 = FileTestUtil.urlOfString("org.lockss.title.foo=bar");
+    String props =       
+      "org.lockss.title.title1.title=Air & Space volume 3\n" +
+      "org.lockss.title.title1.plugin=org.lockss.testplugin1\n" +
+      "org.lockss.title.title1.pluginVersion=4\n" +
+      "org.lockss.title.title1.issn=0003-0031\n" +
+      "org.lockss.title.title1.journal.link.1.type=continuedBy\n" +
+      "org.lockss.title.title1.journal.link.1.journalId=0003-0031\n" +
+      "org.lockss.title.title1.param.1.key=volume\n" +
+      "org.lockss.title.title1.param.1.value=3\n" +
+      "org.lockss.title.title1.param.2.key=year\n" +
+      "org.lockss.title.title1.param.2.value=1999\n" +
+      "org.lockss.title.title1.attributes.publisher=The Smithsonian Institution";
+    String u2 = FileTestUtil.urlOfString(props);
     String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.titleDbs="+u2);
     assertFalse(mgr.waitConfig(Deadline.EXPIRED));
     assertTrue(mgr.updateConfig(ListUtil.list(u1)));
     assertTrue(mgr.waitConfig(Deadline.EXPIRED));
+    
     Configuration config = mgr.getCurrentConfig();
-    assertEquals("bar", config.get("org.lockss.title.foo"));
     assertEquals("1", config.get("a"));
+    
+    Tdb tdb = config.getTdb();
+    assertNotNull(tdb);
+    assertEquals(1, tdb.getTdbAuCount());
   }
 
   public void testLoadAuxProps() throws IOException {
