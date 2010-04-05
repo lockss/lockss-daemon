@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.11 2010-04-02 23:23:24 pgust Exp $
+ * $Id: RegistryPlugin.java,v 1.12 2010-04-05 16:37:22 pgust Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class RegistryPlugin extends BasePlugin {
     au.setConfiguration(auConfig);
     Configuration curConfig = ConfigManager.getCurrentConfig();
     au.setConfig(curConfig, ConfigManager.EMPTY_CONFIGURATION,
-		 curConfig.differences(ConfigManager.EMPTY_CONFIGURATION));
+		 curConfig.differences(null));  // all differences
     return au;
   }
 

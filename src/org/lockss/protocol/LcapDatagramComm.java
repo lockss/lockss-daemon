@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.18 2010-04-02 23:26:12 pgust Exp $
+ * $Id: LcapDatagramComm.java,v 1.19 2010-04-05 16:37:44 pgust Exp $
  */
 
 /*
@@ -136,9 +136,8 @@ public class LcapDatagramComm
   /** For testing */
   LcapDatagramComm(SocketFactory factory, Configuration config) {
     sockFact = factory;
-    configure(config,
-	      ConfigManager.EMPTY_CONFIGURATION,
-	      config.differences(ConfigManager.EMPTY_CONFIGURATION));
+    configure(config, ConfigManager.EMPTY_CONFIGURATION,
+	      config.differences(null));  // all differences  
   }
 
   /**

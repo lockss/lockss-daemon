@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.72 2010-04-02 23:07:51 pgust Exp $
+ * $Id: ConfigManager.java,v 1.73 2010-04-05 16:41:09 pgust Exp $
  */
 
 /*
@@ -1366,7 +1366,7 @@ public class ConfigManager implements LockssManager {
       configChangedCallbacks.add(c);
       if (!currentConfig.isEmpty()) {
 	runCallback(c, currentConfig, ConfigManager.EMPTY_CONFIGURATION,
-		    currentConfig.differences(ConfigManager.EMPTY_CONFIGURATION));
+		    currentConfig.differences(null));  // all differences
       }
     }
   }
