@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.26 2010-04-05 17:01:19 pgust Exp $
+ * $Id: Configuration.java,v 1.27 2010-04-05 17:06:24 pgust Exp $
  */
 
 /*
@@ -88,6 +88,7 @@ public abstract class Configuration {
   public static String getPlatformHostname() {
     return ConfigManager.getPlatformHostname();
   }
+
 
   /**
    * Gets the title database (TDB) for this configuration
@@ -666,9 +667,9 @@ public abstract class Configuration {
     }
   }
 
-  // must be implemented by implementation subclass
-
-  abstract void reset();
+  void reset() {
+    tdb = null;
+  }
 
   /** Return true iff the configurations have the same keys
    * with the same values.
@@ -687,6 +688,8 @@ public abstract class Configuration {
     throw new UnsupportedOperationException();
   }
 
+
+  // must be implemented by implementation subclass
 
   /** Return true if the key is present
    * @param key the key to test
@@ -795,7 +798,6 @@ public abstract class Configuration {
       this.diffPluginIds = thisConfig.differentPluginIds(otherConfig);
     }
 
-    
     /**
      * Determine whether this instance has no differences.
      * 
