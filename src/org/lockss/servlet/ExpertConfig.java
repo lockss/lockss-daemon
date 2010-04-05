@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.4 2009-11-24 04:33:45 dshr Exp $
+ * $Id: ExpertConfig.java,v 1.5 2010-04-05 16:22:55 pgust Exp $
  */
 
 /*
@@ -218,7 +218,7 @@ public class ExpertConfig extends LockssServlet {
       StringUtil.toFile(tmpfile, etext);
 
       ConfigManager.KeyPredicate keyPred = configMgr.expertConfigKeyPredicate;
-      String tmpUrl = tmpfile.toURL().toString();
+      String tmpUrl = tmpfile.toURI().toURL().toString();
       Configuration testConfig = configMgr.loadConfigFromFile(tmpUrl);
       List<String> illKeys = new ArrayList<String>();
       for (String key : testConfig.keySet()) {
