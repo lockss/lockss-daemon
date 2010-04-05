@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.36 2010-04-05 17:16:43 pgust Exp $
+ * $Id: TestConfigManager.java,v 1.37 2010-04-05 17:31:36 pgust Exp $
  */
 
 /*
@@ -127,7 +127,6 @@ public class TestConfigManager extends LockssTestCase {
   List<Configuration> configs;
 
   public void testCallbackWhenRegister() throws IOException {
-try {    
     configs = new ArrayList<Configuration>();
     setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
 					      FileTestUtil.urlOfString(c1a)));
@@ -145,12 +144,6 @@ try {
     assertEquals(1, configs.size());
     assertEquals(config, configs.get(0));
     assertTrue(cbDiffs.contains("everything"));
-    // see Configuration.DifferencesAll; initial difference set 
-    // in ConfigManager contains all keys of the first config
-    assertEquals(cbDiffs.getDifferenceSet().size(), config.keySet().size());
-} catch (Throwable ex) {
-  fail("", ex);
-}
   }
 
   public void testCallback() throws IOException {
