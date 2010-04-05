@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestTdb.java,v 1.2 2010-04-05 17:17:57 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.1 2010-04-02 23:38:11 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.2 2010-04-05 17:17:57 pgust Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -75,9 +75,11 @@ public class TestTdb extends LockssTestCase {
     p1.addTdbTitle(t1p1);
     TdbAu a1t1p1 = new TdbAu("a1t1p1");
     a1t1p1.setPluginId("plugin_t1p1");
+    a1t1p1.setParam("param", "1");
     t1p1.addTdbAu(a1t1p1);
     TdbAu a2t1p1 = new TdbAu("a2t1p1");
     a2t1p1.setPluginId("plugin_t1p1");
+    a2t1p1.setParam("param", "2");
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
@@ -86,9 +88,11 @@ public class TestTdb extends LockssTestCase {
     p1.addTdbTitle(t2p1);
     TdbAu a1t2p1 = new TdbAu("a1t2p1");
     a1t2p1.setPluginId("plugin_t2p1");
+    a1t2p1.setParam("param", "1");
     t2p1.addTdbAu(a1t2p1);
     TdbAu a2t2p1 = new TdbAu("a2t2p1");
     a2t2p1.setPluginId("plugin_t2p1");
+    a2t2p1.setParam("param", "2");
     t2p1.addTdbAu(a2t2p1);
 
     // add AUs for publisher p1
@@ -114,10 +118,12 @@ public class TestTdb extends LockssTestCase {
     p1.addTdbTitle(t1p1);
     TdbAu a1t1p1 = new TdbAu("a1t1p1");
     a1t1p1.setPluginId("plugin_t1p1");
+    a1t1p1.setParam("param", "1");
     a1t1p1.setPluginVersion("3");
     t1p1.addTdbAu(a1t1p1);
     TdbAu a2t1p1 = new TdbAu("a2t1p1");
     a2t1p1.setPluginId("plugin_t1p1");
+    a2t1p1.setParam("param", "2");
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
@@ -126,9 +132,11 @@ public class TestTdb extends LockssTestCase {
     p1.addTdbTitle(t2p1);
     TdbAu a1t2p1 = new TdbAu("a1t2p1");
     a1t2p1.setPluginId("plugin_t2p1");
+    a1t2p1.setParam("param", "1");
     t2p1.addTdbAu(a1t2p1);
     TdbAu a2t2p1 = new TdbAu("a2t2p1");
     a2t2p1.setPluginId("plugin_t2p1");
+    a2t2p1.setParam("param", "2");
     t2p1.addTdbAu(a2t2p1);
 
     // add AUs for publisher p1
@@ -150,18 +158,22 @@ public class TestTdb extends LockssTestCase {
     p2.addTdbTitle(t1p2);
     TdbAu a1t1p2 = new TdbAu("a1t1p2");
     a1t1p2.setPluginId("plugin_p2");
+    a1t1p2.setParam("param", "1");
     t1p2.addTdbAu(a1t1p2);
     TdbAu a2t1p2 = new TdbAu("a2t1p2");
     a2t1p2.setPluginId("plugin_p2");
+    a2t1p2.setParam("param", "2");
     t1p2.addTdbAu(a2t1p2);
 
     TdbTitle t2p2 = new TdbTitle("t2p2");
     p2.addTdbTitle(t2p2);
     TdbAu a1t2p2 = new TdbAu("a1t2p2");
     a1t2p2.setPluginId("plugin_p2");
+    a1t2p2.setParam("param", "1");
     t2p2.addTdbAu(a1t2p2);
     TdbAu a2t2p2 = new TdbAu("a2t2p2");
     a2t2p2.setPluginId("plugin_p2");
+    a2t2p2.setParam("param", "2");
     t2p2.addTdbAu(a2t2p2);
 
     // add AUs for publisher p2
@@ -186,19 +198,23 @@ public class TestTdb extends LockssTestCase {
     p2.addTdbTitle(t1p2);
     TdbAu a1t1p2 = new TdbAu("a1t1p2");
     a1t1p2.setPluginId("plugin_p2");
+    a1t1p2.setParam("param", "1");
     t1p2.addTdbAu(a1t1p2);
     TdbAu a2t1p2 = new TdbAu("a2t1p2");
     a2t1p2.setPluginId("plugin_p2");
+    a2t1p2.setParam("param", "2");
     t1p2.addTdbAu(a2t1p2);
 
     TdbTitle t2p2 = new TdbTitle("t2p2");
     p2.addTdbTitle(t2p2);
     TdbAu a1t2p2 = new TdbAu("a1t2p2");
     a1t2p2.setPluginId("plugin_p2");
+    a1t2p2.setParam("param", "1");
     t2p2.addTdbAu(a1t2p2);
     TdbAu a2t2p2 = new TdbAu("a2t2p2");
     a2t2p2.setPluginId("plugin_p2");
     a2t2p2.setParam("param1", "value1");
+    a2t2p2.setParam("param", "2");
     t2p2.addTdbAu(a2t2p2);
 
     // add AUs for publisher p2
@@ -385,6 +401,7 @@ public class TestTdb extends LockssTestCase {
     TdbTitle t1p1 = new TdbTitle("t1p1");
     p1.addTdbTitle(t1p1);
     TdbAu a1t1p1 = new TdbAu("a1t1p1");
+    a1t1p1.setPluginId("a1t1p1");
     t1p1.addTdbAu(a1t1p1);
 
     // try adding AU to sealed TDB
@@ -415,6 +432,7 @@ public class TestTdb extends LockssTestCase {
     Tdb copyTdb = new Tdb();
     copyTdb.copyFrom(tdb);
     assertFalse(copyTdb.isEmpty());
+    assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
     assertEquals(1, copyTdb.getAllTdbAus().size());
     assertEquals(1, copyTdb.getAllTdbPublishers().size());
   }

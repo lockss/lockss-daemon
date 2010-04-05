@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.13 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestConfiguration.java,v 1.14 2010-04-05 17:17:33 pgust Exp $
  */
 
 /*
@@ -81,9 +81,11 @@ public class TestConfiguration extends LockssTestCase {
     p1.addTdbTitle(t1p1);
     TdbAu a1t1p1 = new TdbAu("a1t1p1");
     a1t1p1.setPluginId("plugin_t1p1");
+    a1t1p1.setParam("auName", "a1t1p1");  // distinguishing parameter
     t1p1.addTdbAu(a1t1p1);
     TdbAu a2t1p1 = new TdbAu("a2t1p1");
     a2t1p1.setPluginId("plugin_t1p1");
+    a2t1p1.setParam("auName", "a2t1p1");  // distinguishing parameter
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
@@ -91,9 +93,11 @@ public class TestConfiguration extends LockssTestCase {
     p1.addTdbTitle(t2p1);
     TdbAu a1t2p1 = new TdbAu("a1t2p1");
     a1t2p1.setPluginId("plugin_t2p1");
+    a1t2p1.setParam("auName", "a1t2p1");  // distinguishing parameter
     t2p1.addTdbAu(a1t2p1);
     TdbAu a2t2p1 = new TdbAu("a2t2p1");
     a2t2p1.setPluginId("plugin_t2p1");
+    a2t2p1.setParam("auName", "a2t2p1");  // distinguishing parameter
     t2p1.addTdbAu(a2t2p1);
 
 
@@ -251,6 +255,45 @@ public class TestConfiguration extends LockssTestCase {
     Tdb tdb2 = c2.getTdb();
     assertTrue(tdb1.getPluginIdsForDifferences(tdb2).isEmpty());
     assertFalse(tdb1 == tdb2);
+  }
+
+  public void testEquals() {
+    // ensure configuration always equal to itself
+    Configuration c1 = newConfiguration();
+    c1.put("a", "1");
+    c1.put("b", "2");
+    c1.put("b.x", "3");
+    Tdb tdb1 = newTdb();
+    c1.setTdb(tdb1);
+    assertEquals(c1, c1);
+    
+    // ensure that a copy of a configuration same as the original
+    Configuration c2 = c1.copy();
+    Configuration.Differences diffc1c2 = c1.differences(c2);
+    assertEquals(c1, c2);
+    assertTrue(diffc1c2.isEmpty());
+    
+    // ensure config with additional tdbau is not equal
+    Configuration c3 = c1.copy();
+    Properties p1 = new Properties();
+    p1.put("title", "Air & Space volume 3");
+    p1.put("plugin", "org.lockss.testplugin1");
+    p1.put("pluginVersion", "4");
+    p1.put("issn", "0003-0031");
+    p1.put("journal.link.1.type", TdbTitle.LinkType.continuedBy.toString());
+    p1.put("journal.link.1.journalId", "0003-0031");  // link to self
+    p1.put("param.1.key", "volume");
+    p1.put("param.1.value", "3");
+    p1.put("param.2.key", "year");
+    p1.put("param.2.value", "1999");
+    p1.put("attributes.publisher", "The Smithsonian Institution");
+    c3.getTdb().addTdbAuFromProperties(p1);
+    assertNotEquals(c1, c3);
+    
+    // ensure config with additional property not equal
+    Configuration c4 = c1.copy();
+    c4.put("c", "4");
+    assertNotEquals(c1, c4);
   }
 
   public void testLoad() throws IOException, Configuration.InvalidParam {
