@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.66 2010-04-02 23:24:44 pgust Exp $
+ * $Id: BasePlugin.java,v 1.67 2010-04-06 18:20:23 pgust Exp $
  */
 
 /*
@@ -188,15 +188,15 @@ public abstract class BasePlugin
 			   Configuration.Differences diffs) {
     // PJG: should we get this from the changedKeys?
     if (diffs.containsTdbPluginId(getPluginId())) {
-      setTitleConfig(newConfig.getTdb());
+      setTitleConfigs(newConfig.getTdb());
     }
   }
 
   /**
-   * Set the TitleConfig from the title database
-   * @param tdb
+   * Set TitleConfigs from the title database
+   * @param tdb the Tdb used to set TitleConfigs.
    */
-  private void setTitleConfig(Tdb tdb) {
+  private void setTitleConfigs(Tdb tdb) {
     String myId = getPluginId();
     Map<String, TitleConfig> titleMap = new HashMap();
     for (TdbAu au : tdb.getTdbAus(myId)) {
