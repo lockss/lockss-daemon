@@ -1,0 +1,33 @@
+{
+  publisher <
+    name = David S.H. Rosenthal
+  >
+  
+  {
+ 
+    title <
+      name = David S.H. Rosenthal's Blog ;
+    >
+    
+    plugin = org.lockss.plugin.blogger.BasicBloggerPlugin
+    implicit < status ; name >
+  
+    {
+
+      param[base_url] = http://blog.dshr.org/
+    
+      < released ; DSHR's Blog >
+    
+    }
+
+    {
+
+      param[base_url] = http://blog.dhsr.org/
+    
+      < down ; Basic Blogger http://blog.dhsr.org/ [superseded] >
+    
+    }
+    
+  }
+  
+}

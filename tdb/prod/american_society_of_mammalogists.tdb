@@ -26,7 +26,17 @@
       au < superseded ; Journal of Mammalogy Volume 86 [superseded] ; 86 >
       au < superseded ; Journal of Mammalogy Volume 87 ; 87 >
       au < superseded ; Journal of Mammalogy Volume 88 ; 88 >
+      
     }
+    
+    {
+    
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_code] = mamm
+  
+      au < released ; Journal of Mammalogy Volume 86 ; 86 >      
 
   }
   

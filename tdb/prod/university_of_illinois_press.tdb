@@ -172,30 +172,4 @@
     
   }
   
-  {
-    
-    title <
-      name = Journal of Seventeenth-Century Music
-    >
-
-    plugin = org.lockss.plugin.universityofillinoispress.JournalOfSeventeenthCenturyMusic
-    param[base_url] = http://sscm-jscm.press.uiuc.edu/
-    implicit < status ; name ; param[volume_name] ; param[issue_set] >
-
-    au < ready ; Journal of Seventeenth-Century Music Volume 1 ; 1 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 2 ; 2 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 3 ; 3 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 4 ; 4 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 5 ; 5 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 6 ; 6 ; 1,2 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 7 ; 7 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 8 ; 8 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 9 ; 9 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 10 ; 10 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 11 ; 11 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 12 ; 12 ; 1 >
-    au < ready ; Journal of Seventeenth-Century Music Volume 13 ; 13 ; 1 >
-    
-  }
-  
 }

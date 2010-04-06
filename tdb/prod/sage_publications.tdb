@@ -4229,6 +4229,18 @@ comment[ghj] = now published by Oxford Univeristy Press
 
       {
 
+        plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+        implicit < status ; name ; param[volume] >
+        param[base_url] = http://muse.jhu.edu/
+        
+        param[journal_dir] = harvard_international_journal_of_press_politics
+
+        au < released ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
+
+      }
+
+      {
+
         pluginSuffix = HighWirePlugin
         param[base_url] = http://hij.sagepub.com/
         implicit < status ; name ; param[volume] >

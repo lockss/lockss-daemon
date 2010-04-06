@@ -103,6 +103,111 @@
       au < ready ; 1963 ; Cancer Research Volume 23 ; 23 >
       au < ready ; 1964 ; Cancer Research Volume 24 ; 24 >
       au < ready ; 1965 ; Cancer Research Volume 25 ; 25 >
+      au < ready ; 1966 ; Cancer Research Volume 26 ; 26 >{
+
+  publisher <
+    name = American Association for Cancer Research
+  >
+
+  {
+
+    title <
+      name = Cancer Epidemiology Biomarkers & Prevention ;
+      issn = 1055-9965 ;
+      eissn = 1538-7755
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://cebp.aacrjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < ready ; 1991-1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 ; 1 >
+      au < testing ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 >
+      au < ready ; 1994 ; Cancer Epidemiology Biomarkers & Prevention Volume 3 ; 3 >
+      au < ready ; 1995 ; Cancer Epidemiology Biomarkers & Prevention Volume 4 ; 4 >
+      au < ready ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 >
+      au < ready ; 1997 ; Cancer Epidemiology Biomarkers & Prevention Volume 6 ; 6 >
+      au < ready ; 1998 ; Cancer Epidemiology Biomarkers & Prevention Volume 7 ; 7 >
+      au < ready ; 1999 ; Cancer Epidemiology Biomarkers & Prevention Volume 8 ; 8 >
+      au < ready ; 2000 ; Cancer Epidemiology Biomarkers & Prevention Volume 9 ; 9 >
+      au < ready ; 2001 ; Cancer Epidemiology Biomarkers & Prevention Volume 10 ; 10 >
+      au < ready ; 2002 ; Cancer Epidemiology Biomarkers & Prevention Volume 11 ; 11 >
+      au < ready ; 2003 ; Cancer Epidemiology Biomarkers & Prevention Volume 12 ; 12 >
+      au < ready ; 2004 ; Cancer Epidemiology Biomarkers & Prevention Volume 13 ; 13 >
+      au < ready ; 2005 ; Cancer Epidemiology Biomarkers & Prevention Volume 14 ; 14 >
+      au < ready ; 2006 ; Cancer Epidemiology Biomarkers & Prevention Volume 15 ; 15 >
+      au < ready ; 2007 ; Cancer Epidemiology Biomarkers & Prevention Volume 16 ; 16 >
+      au < ready ; 2008 ; Cancer Epidemiology Biomarkers & Prevention Volume 17 ; 17 >
+      au < ready ; 2009 ; Cancer Epidemiology Biomarkers & Prevention Volume 18 ; 18 >
+      au < ready ; 2010 ; Cancer Epidemiology Biomarkers & Prevention Volume 19 ; 19 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Cancer Prevention Research ;
+      issn = 1940-6207 ;
+      eissn = 1940-6215
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://cancerpreventionresearch.aacrjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < manifest ; 2008 ; Cancer Prevention Research Volume 1 ; 1 >
+      au < manifest ; 2009 ; Cancer Prevention Research Volume 2 ; 2 >
+      au < manifest ; 2010 ; Cancer Prevention Research Volume 3 ; 3 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Cancer Research ;
+      issn = 0008-5472 ;
+      eissn = 1538-7445
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      param[base_url] = http://cancerres.aacrjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < testing ; 1941 ; Cancer Research Volume 1 ; 1 >
+      au < testing ; 1942 ; Cancer Research Volume 2 ; 2 >
+      au < testing ; 1943 ; Cancer Research Volume 3 ; 3 >
+      au < testing ; 1944 ; Cancer Research Volume 4 ; 4 >
+      au < testing ; 1945 ; Cancer Research Volume 5 ; 5 >
+      au < testing ; 1946 ; Cancer Research Volume 6 ; 6 >
+      au < testing ; 1947 ; Cancer Research Volume 7 ; 7 >
+      au < testing ; 1948 ; Cancer Research Volume 8 ; 8 >
+      au < testing ; 1949 ; Cancer Research Volume 9 ; 9 >
+      au < testing ; 1950 ; Cancer Research Volume 10 ; 10 >
+      au < testing ; 1951 ; Cancer Research Volume 11 ; 11 >
+      au < testing ; 1952 ; Cancer Research Volume 12 ; 12 >
+      au < testing ; 1953 ; Cancer Research Volume 13 ; 13 >
+      au < testing ; 1954 ; Cancer Research Volume 14 ; 14 >
+      au < testing ; 1955 ; Cancer Research Volume 15 ; 15 >
+      au < testing ; 1956 ; Cancer Research Volume 16 ; 16 >
+      au < testing ; 1957 ; Cancer Research Volume 17 ; 17 >
+      au < testing ; 1958 ; Cancer Research Volume 18 ; 18 >
+      au < testing ; 1959 ; Cancer Research Volume 19 ; 19 >
+      au < ready ; 1960 ; Cancer Research Volume 20 ; 20 >
+      au < ready ; 1961 ; Cancer Research Volume 21 ; 21 >
+      au < ready ; 1962 ; Cancer Research Volume 22 ; 22 >
+      au < ready ; 1963 ; Cancer Research Volume 23 ; 23 >
+      au < ready ; 1964 ; Cancer Research Volume 24 ; 24 >
+      au < ready ; 1965 ; Cancer Research Volume 25 ; 25 >
       au < ready ; 1966 ; Cancer Research Volume 26 ; 26 >
       au < ready ; 1967 ; Cancer Research Volume 27 ; 27 >
       au < ready ; 1968 ; Cancer Research Volume 28 ; 28 >
@@ -117,25 +222,166 @@
       au < ready ; 1977 ; Cancer Research Volume 37 ; 37 >
       au < ready ; 1978 ; Cancer Research Volume 38 ; 38 >
       au < ready ; 1979 ; Cancer Research Volume 39 ; 39 >
-      au < testing ; 1980 ; Cancer Research Volume 40 ; 40 >
-      au < testing ; 1981 ; Cancer Research Volume 41 ; 41 >
-      au < testing ; 1982 ; Cancer Research Volume 42 ; 42 >
-      au < testing ; 1983 ; Cancer Research Volume 43 ; 43 >
+      au < ready ; 1980 ; Cancer Research Volume 40 ; 40 >
+      au < ready ; 1981 ; Cancer Research Volume 41 ; 41 >
+      au < ready ; 1982 ; Cancer Research Volume 42 ; 42 >
+      au < ready ; 1983 ; Cancer Research Volume 43 ; 43 >
       au < testing ; 1984 ; Cancer Research Volume 44 ; 44 >
-      au < testing ; 1985 ; Cancer Research Volume 45 ; 45 >
+      au < ready ; 1985 ; Cancer Research Volume 45 ; 45 >
       au < testing ; 1986 ; Cancer Research Volume 46 ; 46 >
-      au < testing ; 1987 ; Cancer Research Volume 47 ; 47 >
-      au < testing ; 1988 ; Cancer Research Volume 48 ; 48 >
-      au < testing ; 1989 ; Cancer Research Volume 49 ; 49 >
-      au < testing ; 1990 ; Cancer Research Volume 50 ; 50 >
-      au < testing ; 1991 ; Cancer Research Volume 51 ; 51 >
+      au < ready ; 1987 ; Cancer Research Volume 47 ; 47 >
+      au < ready ; 1988 ; Cancer Research Volume 48 ; 48 >
+      au < ready ; 1989 ; Cancer Research Volume 49 ; 49 >
+      au < ready ; 1990 ; Cancer Research Volume 50 ; 50 >
+      au < ready ; 1991 ; Cancer Research Volume 51 ; 51 >
       au < testing ; 1992 ; Cancer Research Volume 52 ; 52 >
-      au < testing ; 1993 ; Cancer Research Volume 53 ; 53 >
-      au < testing ; 1994 ; Cancer Research Volume 54 ; 54 >
-      au < testing ; 1995 ; Cancer Research Volume 55 ; 55 >
-      au < testing ; 1996 ; Cancer Research Volume 56 ; 56 >
-      au < testing ; 1997 ; Cancer Research Volume 57 ; 57 >
-      au < testing ; 1998 ; Cancer Research Volume 58 ; 58 >
+      au < ready ; 1993 ; Cancer Research Volume 53 ; 53 >
+      au < ready ; 1994 ; Cancer Research Volume 54 ; 54 >
+      au < ready ; 1995 ; Cancer Research Volume 55 ; 55 >
+      au < ready ; 1996 ; Cancer Research Volume 56 ; 56 >
+      au < ready ; 1997 ; Cancer Research Volume 57 ; 57 >
+      au < ready ; 1998 ; Cancer Research Volume 58 ; 58 >
+      au < testing ; 1999 ; Cancer Research Volume 59 ; 59 >
+      au < testing ; 2000 ; Cancer Research Volume 60 ; 60 >
+      au < testing ; 2001 ; Cancer Research Volume 61 ; 61 >
+      au < testing ; 2002 ; Cancer Research Volume 62 ; 62 >
+      au < testing ; 2003 ; Cancer Research Volume 63 ; 63 >
+      au < testing ; 2004 ; Cancer Research Volume 64 ; 64 >
+      au < testing ; 2005 ; Cancer Research Volume 65 ; 65 >
+      au < testing ; 2006 ; Cancer Research Volume 66 ; 66 >
+      au < testing ; 2007 ; Cancer Research Volume 67 ; 67 >
+      au < testing ; 2008 ; Cancer Research Volume 68 ; 68 >
+      au < testing ; 2009 ; Cancer Research Volume 69 ; 69 >
+      au < testing ; 2010 ; Cancer Research Volume 70 ; 70 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Clinical Cancer Research ;
+      issn = 1078-0432 ;
+      eissn = 1557-3265
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://clincancerres.aacrjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < ready ; 1995 ; Clinical Cancer Research Volume 1 ; 1 >
+      au < ready ; 1996 ; Clinical Cancer Research Volume 2 ; 2 >
+      au < ready ; 1997 ; Clinical Cancer Research Volume 3 ; 3 >
+      au < ready ; 1998 ; Clinical Cancer Research Volume 4 ; 4 >
+      au < ready ; 1999 ; Clinical Cancer Research Volume 5 ; 5 >
+      au < ready ; 2000 ; Clinical Cancer Research Volume 6 ; 6 >
+      au < ready ; 2001 ; Clinical Cancer Research Volume 7 ; 7 >
+      au < ready ; 2002 ; Clinical Cancer Research Volume 8 ; 8 >
+      au < ready ; 2003 ; Clinical Cancer Research Volume 9 ; 9 >
+      au < ready ; 2004 ; Clinical Cancer Research Volume 10 ; 10 >
+      au < ready ; 2005 ; Clinical Cancer Research Volume 11 ; 11 >
+      au < ready ; 2006 ; Clinical Cancer Research Volume 12 ; 12 >
+      au < ready ; 2007 ; Clinical Cancer Research Volume 13 ; 13 >
+      au < ready ; 2008 ; Clinical Cancer Research Volume 14 ; 14 >
+      au < ready ; 2009 ; Clinical Cancer Research Volume 15 ; 15 >
+      au < ready ; 2010 ; Clinical Cancer Research Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Molecular Cancer Research ;
+      issn = 1541-7786 ;
+      eissn = 1557-3125
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://mcr.aacrjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < ready ; 2002-2003 ; Molecular Cancer Research Volume 1 ; 1 >
+      au < ready ; 2004 ; Molecular Cancer Research Volume 2 ; 2 >
+      au < ready ; 2005 ; Molecular Cancer Research Volume 3 ; 3 >
+      au < ready ; 2006 ; Molecular Cancer Research Volume 4 ; 4 >
+      au < ready ; 2007 ; Molecular Cancer Research Volume 5 ; 5 >
+      au < ready ; 2008 ; Molecular Cancer Research Volume 6 ; 6 >
+      au < ready ; 2009 ; Molecular Cancer Research Volume 7 ; 7 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = Molecular Cancer Therapeutics ;
+      issn = 1535-7163 ;
+      eissn = 1538-8514
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://mct.aacrjournals.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < ready ; 2001-2002 ; Molecular Cancer Therapeutics Volume 1 ; 1 >
+      au < ready ; 2003 ; Molecular Cancer Therapeutics Volume 2 ; 2 >
+      au < ready ; 2004 ; Molecular Cancer Therapeutics Volume 3 ; 3 >
+      au < ready ; 2005 ; Molecular Cancer Therapeutics Volume 4 ; 4 >
+      au < ready ; 2006 ; Molecular Cancer Therapeutics Volume 5 ; 5 >
+      au < ready ; 2007 ; Molecular Cancer Therapeutics Volume 6 ; 6 >
+      au < ready ; 2008 ; Molecular Cancer Therapeutics Volume 7 ; 7 >
+      au < ready ; 2009 ; Molecular Cancer Therapeutics Volume 8 ; 8 >
+      au < ready ; 2010 ; Molecular Cancer Therapeutics Volume 9 ; 9 >
+
+    }
+
+  }
+
+}
+
+
+      au < ready ; 1967 ; Cancer Research Volume 27 ; 27 >
+      au < ready ; 1968 ; Cancer Research Volume 28 ; 28 >
+      au < ready ; 1969 ; Cancer Research Volume 29 ; 29 >
+      au < ready ; 1970 ; Cancer Research Volume 30 ; 30 >
+      au < ready ; 1971 ; Cancer Research Volume 31 ; 31 >
+      au < ready ; 1972 ; Cancer Research Volume 32 ; 32 >
+      au < ready ; 1973 ; Cancer Research Volume 33 ; 33 >
+      au < ready ; 1974 ; Cancer Research Volume 34 ; 34 >
+      au < ready ; 1975 ; Cancer Research Volume 35 ; 35 >
+      au < ready ; 1976 ; Cancer Research Volume 36 ; 36 >
+      au < ready ; 1977 ; Cancer Research Volume 37 ; 37 >
+      au < ready ; 1978 ; Cancer Research Volume 38 ; 38 >
+      au < ready ; 1979 ; Cancer Research Volume 39 ; 39 >
+      au < ready ; 1980 ; Cancer Research Volume 40 ; 40 >
+      au < ready ; 1981 ; Cancer Research Volume 41 ; 41 >
+      au < ready ; 1982 ; Cancer Research Volume 42 ; 42 >
+      au < ready ; 1983 ; Cancer Research Volume 43 ; 43 >
+      au < testing ; 1984 ; Cancer Research Volume 44 ; 44 >
+      au < ready ; 1985 ; Cancer Research Volume 45 ; 45 >
+      au < testing ; 1986 ; Cancer Research Volume 46 ; 46 >
+      au < ready ; 1987 ; Cancer Research Volume 47 ; 47 >
+      au < ready ; 1988 ; Cancer Research Volume 48 ; 48 >
+      au < ready ; 1989 ; Cancer Research Volume 49 ; 49 >
+      au < ready ; 1990 ; Cancer Research Volume 50 ; 50 >
+      au < ready ; 1991 ; Cancer Research Volume 51 ; 51 >
+      au < testing ; 1992 ; Cancer Research Volume 52 ; 52 >
+      au < ready ; 1993 ; Cancer Research Volume 53 ; 53 >
+      au < ready ; 1994 ; Cancer Research Volume 54 ; 54 >
+      au < ready ; 1995 ; Cancer Research Volume 55 ; 55 >
+      au < ready ; 1996 ; Cancer Research Volume 56 ; 56 >
+      au < ready ; 1997 ; Cancer Research Volume 57 ; 57 >
+      au < ready ; 1998 ; Cancer Research Volume 58 ; 58 >
       au < testing ; 1999 ; Cancer Research Volume 59 ; 59 >
       au < testing ; 2000 ; Cancer Research Volume 60 ; 60 >
       au < testing ; 2001 ; Cancer Research Volume 61 ; 61 >

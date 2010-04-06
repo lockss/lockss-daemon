@@ -803,7 +803,9 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 72 ; 72 >
-        au < HighWireStrVolPlugin ; released ; British Medical Bulletin Volume 73-74 ; 83 >
+        au < HighWireStrVolPlugin ; released ; British Medical Bulletin Volume 73-74 ; 73-74 >
+        au < HighWireStrVolPlugin ; released ; British Medical Bulletin Volume 75-76 ; 75-76 >
+        au < HighWireStrVolPlugin ; released ; British Medical Bulletin Volume 77-78 ; 77-78 >
         au < HighWirePressPlugin ; manifest ; British Medical Bulletin Volume 84 ; 84 >
         au < HighWirePressPlugin ; released ; British Medical Bulletin Volume 85 ; 85 >
         au < HighWirePressPlugin ; released ; British Medical Bulletin Volume 86 ; 86 >
@@ -1400,6 +1402,8 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; released ; English Historical Review Volume 120 ; 120 >
+        au < HighWireStrVolPlugin ; released ; English Historical Review Volume CXXI ; CXXI >
+        au < HighWireStrVolPlugin ; released ; English Historical Review Volume CXXII ; CXXII >
 
       }
 
@@ -1947,6 +1951,7 @@
         param[base_url] = http://fsb.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
+        au < HighWireStrVolPlugin ; released ; French Studies Bulletin Volume LX ; LX >
 
       }
 
@@ -2169,6 +2174,7 @@
         param[base_url] = http://hmg.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
+        au < released ; Human Molecular Genetics Volume 13 ; 13 >
         au < released ; Human Molecular Genetics Volume 14 ; 14 >
 
       }
@@ -2178,6 +2184,7 @@
         param[base_url] = http://hmg.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
+        au < HighWirePressPlugin ; doNotProcess ; Human Molecular Genetics Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Human Molecular Genetics Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Human Molecular Genetics Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; released ; Human Molecular Genetics Volume 16 ; 16 >
@@ -2309,6 +2316,8 @@
         comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
+        au < HighWireStrVolPlugin ; released ; ICES Journal of Marine Science Volume E89-B ; E89-B >
+        au < HighWireStrVolPlugin ; released ; ICES Journal of Marine Science Volume E90-B ; E90-B >
 
       }
 
@@ -2326,6 +2335,8 @@
         comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Electronics Volume E89-C ; E89-C >
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Electronics Volume E90-C ; E90-C >
 
       }
 
@@ -2343,6 +2354,8 @@
         comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E89-A ; E89-A >
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Fundamentals of Electronics, Communication & Computer Science Volume E90-A ; E90-A >
 
       }
 
@@ -2360,6 +2373,8 @@
         comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Information and Systems Volume E89-D ; E89-D >
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Information and Systems Volume E90-D ; E90-D >
 
       }
 
@@ -3650,6 +3665,27 @@
 
     }
 
+    {
+
+      title <
+        name = Journal of Medicine and Philosophy ;
+        issn = 0360-5310 ;
+        eissn = 1744-5019
+      >
+
+      {
+
+        param[base_url] = http://logcom.oxfordjournals.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 33 ; 33 >
+        au < HighWirePressPlugin ; released ; Journal of Medicine and Philosophy Volume 34 ; 34 >
+        au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 35 ; 35 >
+
+      }
+
+    }
+    
     {
 
       title <

@@ -703,8 +703,8 @@
 
     param[journal_id] = asmp
 
-    au < testing ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 >
-    au < testing ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 >
+    au < ready ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2007 ; 2007 >
+    au < ready ; EURASIP Journal on Audio, Speech, and Music Processing Volume 2008 ; 2008 >
 
   }
 
@@ -717,10 +717,10 @@
 
     param[journal_id] = bsb
 
-    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 >
-    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 >
+    au < ready ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 >
+    au < ready ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 >
     au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 >
-    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 >
+    au < ready ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 >
 
   }
 
@@ -733,9 +733,9 @@
 
     param[journal_id] = es
 
-    au < testing ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 >
-    au < testing ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 >
-    au < testing ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 >
+    au < ready ; EURASIP Journal on Embedded Systems Volume 2006 ; 2006 >
+    au < ready ; EURASIP Journal on Embedded Systems Volume 2007 ; 2007 >
+    au < ready ; EURASIP Journal on Embedded Systems Volume 2008 ; 2008 >
 
   }
 
@@ -748,7 +748,7 @@
 
     param[journal_id] = ivp
 
-    au < testing ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
+    au < ready ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
     au < testing ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
 
   }
@@ -762,8 +762,8 @@
 
     param[journal_id] = is
 
-    au < testing ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
-    au < testing ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
+    au < ready ; EURASIP Journal on Information Security Volume 2007 ; 2007 >
+    au < ready ; EURASIP Journal on Information Security Volume 2008 ; 2008 >
 
   }
 
@@ -776,11 +776,11 @@
 
     param[journal_id] = wcn
 
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 >
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 >
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 >
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 >
-    au < testing ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2004 ; 2004 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2005 ; 2005 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2006 ; 2006 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2007 ; 2007 >
+    au < ready ; EURASIP Journal on Wireless Communications and Networking Volume 2008 ; 2008 >
 
   }
 

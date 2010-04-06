@@ -825,6 +825,7 @@
       param[base_url] = http://ip.bmj.com/
       implicit < status ; name ; param[volume_name] >
 
+      au < released ; Injury Prevention Volume 10 ; 10 >
       au < released ; Injury Prevention Volume 11 ; 11 >
 
     }
@@ -845,7 +846,7 @@
       au < exists ; Injury Prevention Volume 7 ; 7 >
       au < exists ; Injury Prevention Volume 8 ; 8 >
       au < exists ; Injury Prevention Volume 9 ; 9 >
-      au < exists ; Injury Prevention Volume 10 ; 10 >
+      au < doNotProcess ; Injury Prevention Volume 10 ; 10 >
       au < doNotProcess ; Injury Prevention Volume 11 ; 11 >
       au < manifest ; Injury Prevention Volume 12 ; 12 >
       au < manifest ; Injury Prevention Volume 13 ; 13 >

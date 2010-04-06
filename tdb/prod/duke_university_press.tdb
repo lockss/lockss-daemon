@@ -3,83 +3,114 @@
     name = Duke University Press
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
-
-  {
-    title <
-      name = American Literary Scholarship ;
-      issn = 0065-9142 ;
-      eissn = 1527-2125
-    >
-
-    param[journal_dir] = american_literary_scholarship
-
-    au < ready ; American Literary Scholarship Volume 1998 ; 1998 >
-    au < released ; American Literary Scholarship Volume 1999 ; 1999 >
-    au < released ; American Literary Scholarship Volume 2000 ; 2000 >
-    au < released ; American Literary Scholarship Volume 2001 ; 2001 >
-    au < released ; American Literary Scholarship Volume 2002 ; 2002 >
-    au < released ; American Literary Scholarship Volume 2003 ; 2003 >
-    au < ready ; American Literary Scholarship Volume 2004 ; 2004 >
-    au < ready ; American Literary Scholarship Volume 2005 ; 2005 >
-    au < ready ; American Literary Scholarship Volume 2006 ; 2006 >
-    au < ready ; American Literary Scholarship Volume 2007 ; 2007 >
-
-  }
-
   {
     title <
       name = American Literature ;
       issn = 1527-2117 ;
       eissn = 0002-9831
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = american_literature
 
-    param[journal_dir] = american_literature
-
-    au < released ; American Literature Volume 71 ; 71 >
-    au < released ; American Literature Volume 72 ; 72 >
-    au < released ; American Literature Volume 73 ; 73 >
-    au < released ; American Literature Volume 74 ; 74 >
-    au < released ; American Literature Volume 75 ; 75 >
-    au < released ; American Literature Volume 76 ; 76 >
+      au < released ; American Literature Volume 71 ; 71 >
+      au < released ; American Literature Volume 72 ; 72 >
+      au < released ; American Literature Volume 73 ; 73 >
+      au < released ; American Literature Volume 74 ; 74 >
+      au < released ; American Literature Volume 75 ; 75 >
+      au < released ; American Literature Volume 76 ; 76 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://americanliterature.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      < released ; American Literature Volume 77 ; 77 >
+      < released ; American Literature Volume 78 ; 78 >
+      < released ; American Literature Volume 79 ; 79 >
+    
+    }
 
   }
-
+  
   {
     title <
       name = American Speech ;
       issn = 1527-2133 ;
       eissn = 0003-1283
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = american_speech
 
-    param[journal_dir] = american_speech
-
-    au < released ; American Speech Volume 74 ; 74 >
-    au < released ; American Speech Volume 75 ; 75 >
-    au < released ; American Speech Volume 76 ; 76 >
-    au < released ; American Speech Volume 77 ; 77 >
-    au < released ; American Speech Volume 78 ; 78 >
-    au < released ; American Speech Volume 79 ; 79 >
+      au < released ; American Speech Volume 74 ; 74 >
+      au < released ; American Speech Volume 75 ; 75 >
+      au < released ; American Speech Volume 76 ; 76 >
+      au < released ; American Speech Volume 77 ; 77 >
+      au < released ; American Speech Volume 78 ; 78 >
+      au < released ; American Speech Volume 79 ; 79 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://americanspeech.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      < released ; American Speech Volume 80 ; 80 >
+      < released ; American Speech Volume 81 ; 81 >
+      < released ; American Speech Volume 82 ; 82 >
+    
+    }
 
   }
-
+  
   {
     title <
       name = boundary 2 ;
       issn = 1527-2141 ;
       eissn = 0190-3659
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = boundary
 
-    param[journal_dir] = boundary
-
-    au < ready ; boundary 2 Volume 26 ; 26 >
-    au < ready ; boundary 2 Volume 27 ; 27 >
-    au < ready ; boundary 2 Volume 28 ; 28 >
-    au < ready ; boundary 2 Volume 29 ; 29 >
-    au < ready ; boundary 2 Volume 30 ; 30 >
-    au < ready ; boundary 2 Volume 31 ; 31 >
+      au < ready ; boundary 2 Volume 26 ; 26 >
+      au < ready ; boundary 2 Volume 27 ; 27 >
+      au < ready ; boundary 2 Volume 28 ; 28 >
+      au < ready ; boundary 2 Volume 29 ; 29 >
+      au < ready ; boundary 2 Volume 30 ; 30 >
+      au < ready ; boundary 2 Volume 31 ; 31 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://boundary2.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; boundary 2 Volume 32 ; 32 >
+      au < released ; boundary 2 Volume 33 ; 33 >
+      au < released ; boundary 2 Volume 34 ; 34 >
+      
+    }
 
   }
 
@@ -89,57 +120,33 @@
       issn = 0270-5346 ;
       eissn = 1529-1510
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = camera_obscura
 
-    param[journal_dir] = camera_obscura
-
-    au < released ; Camera Obscura Volume 15 ; 15 >
-    au < released ; Camera Obscura Volume 16 ; 16 >
-    au < released ; Camera Obscura Volume 17 ; 17 >
-    au < released ; Camera Obscura Volume 18 ; 18 >
-    au < released ; Camera Obscura Volume 19 ; 19 >
-
-  }
-
-  {
-    title <
-      name = Common Knowledge ;
-      issn = 0961-754X ;
-      eissn = 1538-4578
-    >
-
-    param[journal_dir] = common_knowledge
-
-    au < released ; Common Knowledge Volume 8 ; 8 >
-    au < released ; Common Knowledge Volume 9 ; 9 >
-    au < released ; Common Knowledge Volume 10 ; 10 >
-    au < released ; Common Knowledge Volume 11 ; 11 >
-    au < released ; Common Knowledge Volume 12 ; 12 >
-    au < released ; Common Knowledge Volume 13 ; 13 >
-    au < testing ; Common Knowledge Volume 14 ; 14 >
-    au < testing ; Common Knowledge Volume 15 ; 15 >
-    au < testing ; Common Knowledge Volume 16 ; 16 >
-
-  }
-
-  {
-    title <
-      name = Comparative Studies of South Asia, Africa and the Middle East ;
-      issn = 1089-201X ;
-      eissn = 1548-226X
-    >
-
-    param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
-
-    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
-    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 >
-    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 >
-    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 >
-    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 >
-    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
-    au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
-    au < testing ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
-    au < testing ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
-    au < testing ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < released ; Camera Obscura Volume 15 ; 15 >
+      au < released ; Camera Obscura Volume 16 ; 16 >
+      au < released ; Camera Obscura Volume 17 ; 17 >
+      au < released ; Camera Obscura Volume 18 ; 18 >
+      au < released ; Camera Obscura Volume 19 ; 19 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://cameraobscura.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Camera Obscura Volume 20 ; 20 >
+      au < released ; Camera Obscura Volume 21 ; 21 >
+      au < released ; Camera Obscura Volume 22 ; 22 >
+      
+    }
 
   }
 
@@ -149,60 +156,70 @@
       issn = 1040-7391 ;
       eissn = 1527-1986
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = differences
 
-    param[journal_dir] = differences
-
-    au < released ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
-    au < released ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
-    au < released ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
-    au < released ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
-    au < released ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
-    au < released ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
-
-  }
-
-  {
-    title <
-      name = Eighteenth-Century Life ;
-      issn = 0098-2601 ;
-      eissn = 1086-3192
-    >
-
-    param[journal_dir] = eighteenth-century_life
-
-    au < released ; Eighteenth-Century Life Volume 20 ; 20 >
-    au < released ; Eighteenth-Century Life Volume 21 ; 21 >
-    au < released ; Eighteenth-Century Life Volume 22 ; 22 >
-    au < released ; Eighteenth-Century Life Volume 23 ; 23 >
-    au < released ; Eighteenth-Century Life Volume 24 ; 24 >
-    au < released ; Eighteenth-Century Life Volume 25 ; 25 >
-    au < released ; Eighteenth-Century Life Volume 26 ; 26 >
-    au < released ; Eighteenth-Century Life Volume 27 ; 27 >
-    au < released ; Eighteenth-Century Life Volume 28 ; 28 >
-    au < released ; Eighteenth-Century Life Volume 29 ; 29 >
-    au < released ; Eighteenth-Century Life Volume 30 ; 30 >
-    au < released ; Eighteenth-Century Life Volume 31 ; 31 >
-    au < testing ; Eighteenth-Century Life Volume 32 ; 32 >
-    au < testing ; Eighteenth-Century Life Volume 33 ; 33 >
-    au < testing ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 10 ; 10 >
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 11 ; 11 >
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 12 ; 12 >
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 13 ; 13 >
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 14 ; 14 >
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 15 ; 15 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://cameraobscura.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
+      au < released ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >
+      
+    }
 
   }
-
+ 
   {
     title <
       name = Ethnohistory ;
       issn = 0014-1801 ;
       eissn = 1527-5477
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = ethnohistory
 
-    param[journal_dir] = ethnohistory
-
-    au < released ; Ethnohistory Volume 46 ; 46 >
-    au < released ; Ethnohistory Volume 47 ; 47 >
-    au < released ; Ethnohistory Volume 48 ; 48 >
-    au < released ; Ethnohistory Volume 49 ; 49 >
-    au < released ; Ethnohistory Volume 50 ; 50 >
-    au < released ; Ethnohistory Volume 51 ; 51 >
+      au < released ; Ethnohistory Volume 46 ; 46 >
+      au < released ; Ethnohistory Volume 47 ; 47 >
+      au < released ; Ethnohistory Volume 48 ; 48 >
+      au < released ; Ethnohistory Volume 49 ; 49 >
+      au < released ; Ethnohistory Volume 50 ; 50 >
+      au < released ; Ethnohistory Volume 51 ; 51 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ethnohistory.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      < released ; Ethnohistory Volume 52 ; 52 >
+      < released ; Ethnohistory Volume 53 ; 53 >
+      < released ; Ethnohistory Volume 54 ; 54 >
+    
+    }
 
   }
 
@@ -212,39 +229,34 @@
       issn = 0016-1071 ;
       eissn = 1527-5493
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = french_historical_studies
 
-    param[journal_dir] = french_historical_studies
-
-    au < released ; French Historical Studies Volume 22 ; 22 >
-    au < released ; French Historical Studies Volume 23 ; 23 >
-    au < released ; French Historical Studies Volume 24 ; 24 >
-    au < released ; French Historical Studies Volume 25 ; 25 >
-    au < released ; French Historical Studies Volume 26 ; 26 >
-    au < released ; French Historical Studies Volume 27 ; 27 >
-
-  }
-
-  {
-    title <
-      name = GLQ: A Journal of Lesbian and Gay Studies ;
-      issn = 1064-2684 ;
-      eissn = 1527-9375
-    >
-
-    param[journal_dir] = journal_of_lesbian_and_gay_studies
-
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
-    au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
-    au < testing ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
-    au < testing ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
-    au < testing ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < released ; French Historical Studies Volume 22 ; 22 >
+      au < released ; French Historical Studies Volume 23 ; 23 >
+      au < released ; French Historical Studies Volume 24 ; 24 >
+      au < released ; French Historical Studies Volume 25 ; 25 >
+      au < released ; French Historical Studies Volume 26 ; 26 >
+      au < released ; French Historical Studies Volume 27 ; 27 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://fhs.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      < released ; French Historical Studies Volume 28 ; 28 >
+      < released ; French Historical Studies Volume 29 ; 29 >
+      < released ; French Historical Studies Volume 30 ; 30 >
+    
+    }
 
   }
 
@@ -254,15 +266,34 @@
       issn = 0018-2168 ;
       eissn = 1527-1900
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = hispanic_american_historical_review
 
-    param[journal_dir] = hispanic_american_historical_review
-
-    au < released ; Hispanic American Historical Review Volume 79 ; 79 >
-    au < released ; Hispanic American Historical Review Volume 80 ; 80 >
-    au < released ; Hispanic American Historical Review Volume 81 ; 81 >
-    au < released ; Hispanic American Historical Review Volume 82 ; 82 >
-    au < released ; Hispanic American Historical Review Volume 83 ; 83 >
-    au < released ; Hispanic American Historical Review Volume 84 ; 84 >
+      au < released ; Hispanic American Historical Review Volume 79 ; 79 >
+      au < released ; Hispanic American Historical Review Volume 80 ; 80 >
+      au < released ; Hispanic American Historical Review Volume 81 ; 81 >
+      au < released ; Hispanic American Historical Review Volume 82 ; 82 >
+      au < released ; Hispanic American Historical Review Volume 83 ; 83 >
+      au < released ; Hispanic American Historical Review Volume 84 ; 84 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://hahr.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      < released ; Hispanic American Historical Review Volume 85 ; 85 >
+      < released ; Hispanic American Historical Review Volume 86 ; 86 >
+      < released ; Hispanic American Historical Review Volume 87 ; 87 >
+    
+    }
 
   }
 
@@ -272,29 +303,34 @@
       issn = 0018-2702 ;
       eissn = 1527-1919
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = history_of_political_economy
 
-    param[journal_dir] = history_of_political_economy
-
-    au < released ; History of Political Economy Volume 31 ; 31 >
-    au < released ; History of Political Economy Volume 32 ; 32 >
-    au < released ; History of Political Economy Volume 33 ; 33 >
-    au < released ; History of Political Economy Volume 34 ; 34 >
-    au < released ; History of Political Economy Volume 35 ; 35 >
-    au < released ; History of Political Economy Volume 36 ; 36 >
-
-  }
-
-  {
-    title <
-      name = Hopscotch: A Cultural Review ;
-      issn = 1098-6995 ;
-      eissn = 1527-800x
-    >
-
-    param[journal_dir] = hopscotch
-
-    au < released ; Hopscotch: A Cultural Review Volume 1 ; 1 >
-    au < released ; Hopscotch: A Cultural Review Volume 2 ; 2 >
+      au < released ; History of Political Economy Volume 31 ; 31 >
+      au < released ; History of Political Economy Volume 32 ; 32 >
+      au < released ; History of Political Economy Volume 33 ; 33 >
+      au < released ; History of Political Economy Volume 34 ; 34 >
+      au < released ; History of Political Economy Volume 35 ; 35 >
+      au < released ; History of Political Economy Volume 36 ; 36 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://hope.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      < released ; History of Political Economy Volume 37 ; 37 >
+      < released ; History of Political Economy Volume 38 ; 38 >
+      < released ; History of Political Economy Volume 39 ; 39 >
+    
+    }
 
   }
 
@@ -304,15 +340,34 @@
       issn = 0361-6878 ;
       eissn = 1527-1927
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_health_politics_policy_and_law
 
-    param[journal_dir] = journal_of_health_politics_policy_and_law
-
-    au < released ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
-    au < released ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
-    au < released ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
-    au < released ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
-    au < released ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
-    au < released ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 24 ; 24 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 25 ; 25 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 26 ; 26 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 27 ; 27 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 28 ; 28 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 29 ; 29 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jhppl.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
+      au < released ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >
+    
+    }
 
   }
 
@@ -322,38 +377,55 @@
       issn = 1082-9636 ;
       eissn = 1527-8263
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_medieval_and_early_modern_studies
 
-    param[journal_dir] = journal_of_medieval_and_early_modern_studies
-
-    au < manifest ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
-    au < released ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
-    au < released ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
-    au < released ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
-    au < released ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
-    au < released ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
+      au < manifest ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
+      au < released ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
+      au < released ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
+      au < released ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
+      au < released ; Journal of Medieval and Early Modern Studies Volume 33 ; 33 >
+      au < released ; Journal of Medieval and Early Modern Studies Volume 34 ; 34 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jmems.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
+      au < released ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
+      au < released ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >
+    
+    }
 
   }
 
   {
     title <
-      name = Mediterranean Quarterly ;
-      issn = 1047-4552 ;
-      eissn = 1527-1935
+      name = Labor: Studies in Working-Class History of the Americas ;
+      issn = 1547-6715 ;
+      eissn = 1558-1454
     >
-
-    param[journal_dir] = mediterranean_quarterly
-
-    au < released ; Mediterranean Quarterly Volume 10 ; 10 >
-    au < released ; Mediterranean Quarterly Volume 11 ; 11 >
-    au < released ; Mediterranean Quarterly Volume 12 ; 12 >
-    au < released ; Mediterranean Quarterly Volume 13 ; 13 >
-    au < released ; Mediterranean Quarterly Volume 14 ; 14 >
-    au < released ; Mediterranean Quarterly Volume 15 ; 15 >
-    au < released ; Mediterranean Quarterly Volume 16 ; 16 >
-    au < released ; Mediterranean Quarterly Volume 17 ; 17 >
-    au < released ; Mediterranean Quarterly Volume 18 ; 18 >
-    au < testing ; Mediterranean Quarterly Volume 19 ; 19 >
-    au < testing ; Mediterranean Quarterly Volume 20 ; 20 >
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://labor.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
+      au < released ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
+      au < released ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
+    
+    }
 
   }
 
@@ -363,53 +435,34 @@
       issn = 1527-1943 ;
       eissn = 0026-7929
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = modern_language_quarterly
 
-    param[journal_dir] = modern_language_quarterly
-
-    au < released ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
-    au < released ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
-    au < released ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
-    au < released ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
-    au < released ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
-    au < released ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
-
-  }
-
-  {
-    title <
-      name = Nepantla: Views from South ;
-      issn = 1529-1650 ;
-      eissn = 1527-0858
-    >
-
-    param[journal_dir] = nepantla
-
-    au < released ; Nepantla: Views from South Volume 1 ; 1 >
-    au < released ; Nepantla: Views from South Volume 2 ; 2 >
-    au < released ; Nepantla: Views from South Volume 3 ; 3 >
-    au < released ; Nepantla: Views from South Volume 4 ; 4 >
-
-  }
-
-  {
-    title <
-      name = Pedagogy ;
-      issn = 1531-4200 ;
-      eissn = 1533-6255
-    >
-
-    param[journal_dir] = pedagogy
-
-    au < released ; Pedagogy Volume 1 ; 1 >
-    au < released ; Pedagogy Volume 2 ; 2 >
-    au < released ; Pedagogy Volume 3 ; 3 >
-    au < released ; Pedagogy Volume 4 ; 4 >
-    au < released ; Pedagogy Volume 5 ; 5 >
-    au < released ; Pedagogy Volume 6 ; 6 >
-    au < released ; Pedagogy Volume 7 ; 7 >
-    au < testing ; Pedagogy Volume 8 ; 8 >
-    au < testing ; Pedagogy Volume 9 ; 9 >
-    au < testing ; Pedagogy Volume 10 ; 10 >
+      au < released ; MLQ: Modern Language Quarterly Volume 60 ; 60 >
+      au < released ; MLQ: Modern Language Quarterly Volume 61 ; 61 >
+      au < released ; MLQ: Modern Language Quarterly Volume 62 ; 62 >
+      au < released ; MLQ: Modern Language Quarterly Volume 63 ; 63 >
+      au < released ; MLQ: Modern Language Quarterly Volume 64 ; 64 >
+      au < released ; MLQ: Modern Language Quarterly Volume 65 ; 65 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mlq.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
+      au < released ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
+      au < released ; MLQ: Modern Language Quarterly Volume 68 ; 68 >
+    
+    }
 
   }
 
@@ -419,38 +472,34 @@
       issn = 0333-5372 ;
       eissn = 1527-5507
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = poetics_today
 
-    param[journal_dir] = poetics_today
-
-    au < released ; Poetics Today Volume 20 ; 20 >
-    au < released ; Poetics Today Volume 21 ; 21 >
-    au < released ; Poetics Today Volume 22 ; 22 >
-    au < released ; Poetics Today Volume 23 ; 23 >
-    au < released ; Poetics Today Volume 24 ; 24 >
-    au < released ; Poetics Today Volume 25 ; 25 >
-
-  }
-
-  {
-    title <
-      name = positions: east asia cultures critique ;
-      issn = 1067-9847 ;
-      eissn = 1527-8271
-    >
-
-    param[journal_dir] = positions
-
-    au < released ; positions: east asia cultures critique Volume 7 ; 7 >
-    au < released ; positions: east asia cultures critique Volume 8 ; 8 >
-    au < released ; positions: east asia cultures critique Volume 9 ; 9 >
-    au < released ; positions: east asia cultures critique Volume 10 ; 10 >
-    au < released ; positions: east asia cultures critique Volume 11 ; 11 >
-    au < released ; positions: east asia cultures critique Volume 12 ; 12 >
-    au < released ; positions: east asia cultures critique Volume 13 ; 13 >
-    au < released ; positions: east asia cultures critique Volume 14 ; 14 >
-    au < released ; positions: east asia cultures critique Volume 15 ; 15 >
-    au < testing ; positions: east asia cultures critique Volume 16 ; 16 >
-    au < testing ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < released ; Poetics Today Volume 20 ; 20 >
+      au < released ; Poetics Today Volume 21 ; 21 >
+      au < released ; Poetics Today Volume 22 ; 22 >
+      au < released ; Poetics Today Volume 23 ; 23 >
+      au < released ; Poetics Today Volume 24 ; 24 >
+      au < released ; Poetics Today Volume 25 ; 25 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://poeticstoday.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Poetics Today Volume 26 ; 26 >
+      au < released ; Poetics Today Volume 27 ; 27 >
+      au < released ; Poetics Today Volume 28 ; 28 >
+    
+    }
 
   }
 
@@ -460,85 +509,78 @@
       issn = 0899-2363 ;
       eissn = 1527-8018
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = public_culture
 
-    param[journal_dir] = public_culture
-
-    au < released ; Public Culture Volume 11 ; 11 >
-    au < released ; Public Culture Volume 12 ; 12 >
-    au < released ; Public Culture Volume 13 ; 13 >
-    au < released ; Public Culture Volume 14 ; 14 >
-    au < released ; Public Culture Volume 15 ; 15 >
-    au < released ; Public Culture Volume 16 ; 16 >
-
+      au < released ; Public Culture Volume 11 ; 11 >
+      au < released ; Public Culture Volume 12 ; 12 >
+      au < released ; Public Culture Volume 13 ; 13 >
+      au < released ; Public Culture Volume 14 ; 14 >
+      au < released ; Public Culture Volume 15 ; 15 >
+      au < released ; Public Culture Volume 16 ; 16 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://publicculture.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Public Culture Volume 17 ; 17 >
+      au < released ; Public Culture Volume 18 ; 18 >
+      au < released ; Public Culture Volume 19 ; 19 >
+    
+    }
+  
   }
-
+ 
   {
     title <
       name = Radical History Review ;
       issn = 0163-6545 ;
       eissn = 1534-1453
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = radical_history_review
 
-    param[journal_dir] = radical_history_review
-
-    au < released ; Radical History Review Volume 79 ; 79 >
-    au < released ; Radical History Review Volume 80 ; 80 >
-    au < released ; Radical History Review Volume 81 ; 81 >
-    au < released ; Radical History Review Volume 82 ; 82 >
-    au < released ; Radical History Review Volume 83 ; 83 >
-    au < released ; Radical History Review Volume 84 ; 84 >
-    au < released ; Radical History Review Volume 85 ; 85 >
-    au < released ; Radical History Review Volume 86 ; 86 >
-    au < released ; Radical History Review Volume 87 ; 87 >
-    au < released ; Radical History Review Volume 88 ; 88 >
-    au < released ; Radical History Review Volume 89 ; 89 >
-    au < released ; Radical History Review Volume 90 ; 90 >
-
-  }
-
-  {
-    title <
-      name = Small Axe ;
-      issn = 0799-0537 ;
-      eissn = 1534-6714
-    >
-
-    param[journal_dir] = small_axe
-
-    au < released ; Small Axe Volume 5 ; 5 >
-    au < released ; Small Axe Volume 6 ; 6 >
-    au < released ; Small Axe Volume 7 ; 7 >
-    au < released ; Small Axe Volume 8 ; 8 >
-    au < released ; Small Axe Volume 9 ; 9 >
-    au < released ; Small Axe Volume 10 ; 10 >
-    au < released ; Small Axe Volume 11 ; 11 >
-    au < testing ; Small Axe Volume 12 ; 12 >
-    au < testing ; Small Axe Volume 13 ; 13 >
-
-  }
-
-  {
-    title <
-      name = Social Science History ;
-      issn = 0145-5532 ;
-      eissn = 1527-8034
-    >
-
-    param[journal_dir] = social_science_history
-
-    au < released ; Social Science History Volume 23 ; 23 >
-    au < released ; Social Science History Volume 24 ; 24 >
-    au < released ; Social Science History Volume 25 ; 25 >
-    au < released ; Social Science History Volume 26 ; 26 >
-    au < released ; Social Science History Volume 27 ; 27 >
-    au < released ; Social Science History Volume 28 ; 28 >
-    au < released ; Social Science History Volume 29 ; 29 >
-    au < released ; Social Science History Volume 30 ; 30 >
-    au < released ; Social Science History Volume 31 ; 31 >
-    au < testing ; Social Science History Volume 32 ; 32 >
-    au < testing ; Social Science History Volume 33 ; 33 >
-    au < testing ; Social Science History Volume 34 ; 34 >
-
+      au < released ; Radical History Review Volume 79 ; 79 >
+      au < released ; Radical History Review Volume 80 ; 80 >
+      au < released ; Radical History Review Volume 81 ; 81 >
+      au < released ; Radical History Review Volume 82 ; 82 >
+      au < released ; Radical History Review Volume 83 ; 83 >
+      au < released ; Radical History Review Volume 84 ; 84 >
+      au < released ; Radical History Review Volume 85 ; 85 >
+      au < released ; Radical History Review Volume 86 ; 86 >
+      au < released ; Radical History Review Volume 87 ; 87 >
+      au < released ; Radical History Review Volume 88 ; 88 >
+      au < released ; Radical History Review Volume 89 ; 89 >
+      au < released ; Radical History Review Volume 90 ; 90 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://rhr.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Radical History Review Volume 2005 ; 2005 >
+      au < released ; Radical History Review Volume 2006 ; 2006 >
+      au < released ; Radical History Review Volume 2007 ; 2007 >
+    
+    }
+  
   }
 
   {
@@ -547,16 +589,34 @@
       issn = 0164-2472 ;
       eissn = 1527-1951
     >
-
-    param[journal_dir] = social_text
-
-    au < released ; Social Text Volume 17 ; 17 >
-    au < released ; Social Text Volume 18 ; 18 >
-    au < released ; Social Text Volume 19 ; 19 >
-    au < released ; Social Text Volume 20 ; 20 >
-    au < released ; Social Text Volume 21 ; 21 >
-    au < released ; Social Text Volume 22 ; 22 >
     
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = social_text
+
+      au < released ; Social Text Volume 17 ; 17 >
+      au < released ; Social Text Volume 18 ; 18 >
+      au < released ; Social Text Volume 19 ; 19 >
+      au < released ; Social Text Volume 20 ; 20 >
+      au < released ; Social Text Volume 21 ; 21 >
+      au < released ; Social Text Volume 22 ; 22 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://socialtext.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Social Text Volume 23 ; 23 >
+      au < released ; Social Text Volume 24 ; 24 >
+    
+    }
+  
   }
 
   {
@@ -565,16 +625,35 @@
       issn = 0164-2472 ;
       eissn = 1527-1951
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = south_atlantic_quarterly
 
-    param[journal_dir] = south_atlantic_quarterly
-
-    au < released ; The South Atlantic Quarterly Volume 98 ; 98 >
-    au < released ; The South Atlantic Quarterly Volume 99 ; 99 >
-    au < released ; The South Atlantic Quarterly Volume 100 ; 100 >
-    au < released ; The South Atlantic Quarterly Volume 101 ; 101 >
-    au < released ; The South Atlantic Quarterly Volume 102 ; 102 >
-    au < released ; The South Atlantic Quarterly Volume 103 ; 103 >
-
+      au < released ; The South Atlantic Quarterly Volume 98 ; 98 >
+      au < released ; The South Atlantic Quarterly Volume 99 ; 99 >
+      au < released ; The South Atlantic Quarterly Volume 100 ; 100 >
+      au < released ; The South Atlantic Quarterly Volume 101 ; 101 >
+      au < released ; The South Atlantic Quarterly Volume 102 ; 102 >
+      au < released ; The South Atlantic Quarterly Volume 103 ; 103 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://saq.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; The South Atlantic Quarterly Volume 104 ; 104 >
+      au < released ; The South Atlantic Quarterly Volume 105 ; 105 >
+      au < released ; The South Atlantic Quarterly Volume 106 ; 106 >
+    
+    }
+  
   }
 
   {
@@ -583,16 +662,302 @@
       issn = 0161-0775 ;
       eissn = 1527-196X
     >
+    
+    {
+    
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      implicit < status ; name ; param[volume] >
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = theater
 
-    param[journal_dir] = theater
-
-    au < released ; Theater Volume 29 ; 29 >
-    au < released ; Theater Volume 30 ; 30 >
-    au < released ; Theater Volume 31 ; 31 >
-    au < released ; Theater Volume 32 ; 32 >
-    au < released ; Theater Volume 33 ; 33 >
-    au < released ; Theater Volume 34 ; 34 >
-
+      au < released ; Theater Volume 29 ; 29 >
+      au < released ; Theater Volume 30 ; 30 >
+      au < released ; Theater Volume 31 ; 31 >
+      au < released ; Theater Volume 32 ; 32 >
+      au < released ; Theater Volume 33 ; 33 >
+      au < released ; Theater Volume 34 ; 34 >
+      
+    }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://theater.dukejournals.org
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < released ; Theater Volume 35 ; 35 >
+      au < released ; Theater Volume 36 ; 36 >
+      au < released ; Theater Volume 37 ; 37 >
+    
+    }
+  
   }
+   
+  {
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    implicit < status ; name ; param[volume] >
+    param[base_url] = http://muse.jhu.edu/
+
+    {
+      title <
+        name = American Literary Scholarship ;
+        issn = 0065-9142 ;
+        eissn = 1527-2125
+      >
+
+      param[journal_dir] = american_literary_scholarship
+
+      au < ready ; American Literary Scholarship Volume 1998 ; 1998 >
+      au < released ; American Literary Scholarship Volume 1999 ; 1999 >
+      au < released ; American Literary Scholarship Volume 2000 ; 2000 >
+      au < released ; American Literary Scholarship Volume 2001 ; 2001 >
+      au < released ; American Literary Scholarship Volume 2002 ; 2002 >
+      au < released ; American Literary Scholarship Volume 2003 ; 2003 >
+      au < ready ; American Literary Scholarship Volume 2004 ; 2004 >
+      au < ready ; American Literary Scholarship Volume 2005 ; 2005 >
+      au < ready ; American Literary Scholarship Volume 2006 ; 2006 >
+      au < ready ; American Literary Scholarship Volume 2007 ; 2007 >
+
+    }
+
+    {
+      title <
+        name = Common Knowledge ;
+        issn = 0961-754X ;
+        eissn = 1538-4578
+      >
+
+      param[journal_dir] = common_knowledge
+
+      au < released ; Common Knowledge Volume 8 ; 8 >
+      au < released ; Common Knowledge Volume 9 ; 9 >
+      au < released ; Common Knowledge Volume 10 ; 10 >
+      au < released ; Common Knowledge Volume 11 ; 11 >
+      au < released ; Common Knowledge Volume 12 ; 12 >
+      au < released ; Common Knowledge Volume 13 ; 13 >
+      au < ready ; Common Knowledge Volume 14 ; 14 >
+      au < ready ; Common Knowledge Volume 15 ; 15 >
+      au < ready ; Common Knowledge Volume 16 ; 16 >
+
+    }
+
+    {
+      title <
+        name = Comparative Studies of South Asia, Africa and the Middle East ;
+        issn = 1089-201X ;
+        eissn = 1548-226X
+      >
+
+      param[journal_dir] = comparative_studies_of_south_asia_africa_and_the_middle_east
+
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 23 ; 23 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+      au < ready ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
+      au < ready ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+      au < ready ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+
+    }
+
+    {
+      title <
+        name = Eighteenth-Century Life ;
+        issn = 0098-2601 ;
+        eissn = 1086-3192
+      >
+
+      param[journal_dir] = eighteenth-century_life
+
+      au < released ; Eighteenth-Century Life Volume 20 ; 20 >
+      au < released ; Eighteenth-Century Life Volume 21 ; 21 >
+      au < released ; Eighteenth-Century Life Volume 22 ; 22 >
+      au < released ; Eighteenth-Century Life Volume 23 ; 23 >
+      au < released ; Eighteenth-Century Life Volume 24 ; 24 >
+      au < released ; Eighteenth-Century Life Volume 25 ; 25 >
+      au < released ; Eighteenth-Century Life Volume 26 ; 26 >
+      au < released ; Eighteenth-Century Life Volume 27 ; 27 >
+      au < released ; Eighteenth-Century Life Volume 28 ; 28 >
+      au < released ; Eighteenth-Century Life Volume 29 ; 29 >
+      au < released ; Eighteenth-Century Life Volume 30 ; 30 >
+      au < released ; Eighteenth-Century Life Volume 31 ; 31 >
+      au < ready ; Eighteenth-Century Life Volume 32 ; 32 >
+      au < testing ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < ready ; Eighteenth-Century Life Volume 34 ; 34 >
+
+    }
+
+    {
+      title <
+        name = GLQ: A Journal of Lesbian and Gay Studies ;
+        issn = 1064-2684 ;
+        eissn = 1527-9375
+      >
+
+      param[journal_dir] = journal_of_lesbian_and_gay_studies
+
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 5 ; 5 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 6 ; 6 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 7 ; 7 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 8 ; 8 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 9 ; 9 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 10 ; 10 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
+      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
+      au < ready ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
+      au < ready ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+      au < ready ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+
+    }
+
+    {
+      title <
+        name = Hopscotch: A Cultural Review ;
+        issn = 1098-6995 ;
+        eissn = 1527-800x
+      >
+
+      param[journal_dir] = hopscotch
+
+      au < released ; Hopscotch: A Cultural Review Volume 1 ; 1 >
+      au < released ; Hopscotch: A Cultural Review Volume 2 ; 2 >
+
+    }
+
+    {
+      title <
+        name = Mediterranean Quarterly ;
+        issn = 1047-4552 ;
+        eissn = 1527-1935
+      >
+
+      param[journal_dir] = mediterranean_quarterly
+
+      au < released ; Mediterranean Quarterly Volume 10 ; 10 >
+      au < released ; Mediterranean Quarterly Volume 11 ; 11 >
+      au < released ; Mediterranean Quarterly Volume 12 ; 12 >
+      au < released ; Mediterranean Quarterly Volume 13 ; 13 >
+      au < released ; Mediterranean Quarterly Volume 14 ; 14 >
+      au < released ; Mediterranean Quarterly Volume 15 ; 15 >
+      au < released ; Mediterranean Quarterly Volume 16 ; 16 >
+      au < released ; Mediterranean Quarterly Volume 17 ; 17 >
+      au < released ; Mediterranean Quarterly Volume 18 ; 18 >
+      au < ready ; Mediterranean Quarterly Volume 19 ; 19 >
+      au < ready ; Mediterranean Quarterly Volume 20 ; 20 >
+
+    }
+
+    {
+      title <
+        name = Nepantla: Views from South ;
+        issn = 1529-1650 ;
+        eissn = 1527-0858
+      >
+
+      param[journal_dir] = nepantla
+
+      au < released ; Nepantla: Views from South Volume 1 ; 1 >
+      au < released ; Nepantla: Views from South Volume 2 ; 2 >
+      au < released ; Nepantla: Views from South Volume 3 ; 3 >
+      au < released ; Nepantla: Views from South Volume 4 ; 4 >
+
+    }
+
+    {
+      title <
+        name = Pedagogy ;
+        issn = 1531-4200 ;
+        eissn = 1533-6255
+      >
+
+      param[journal_dir] = pedagogy
+
+      au < released ; Pedagogy Volume 1 ; 1 >
+      au < released ; Pedagogy Volume 2 ; 2 >
+      au < released ; Pedagogy Volume 3 ; 3 >
+      au < released ; Pedagogy Volume 4 ; 4 >
+      au < released ; Pedagogy Volume 5 ; 5 >
+      au < released ; Pedagogy Volume 6 ; 6 >
+      au < released ; Pedagogy Volume 7 ; 7 >
+      au < ready ; Pedagogy Volume 8 ; 8 >
+      au < ready ; Pedagogy Volume 9 ; 9 >
+      au < ready ; Pedagogy Volume 10 ; 10 >
+
+    }
+
+    {
+      title <
+        name = positions: east asia cultures critique ;
+        issn = 1067-9847 ;
+        eissn = 1527-8271
+      >
+
+      param[journal_dir] = positions
+
+      au < released ; positions: east asia cultures critique Volume 7 ; 7 >
+      au < released ; positions: east asia cultures critique Volume 8 ; 8 >
+      au < released ; positions: east asia cultures critique Volume 9 ; 9 >
+      au < released ; positions: east asia cultures critique Volume 10 ; 10 >
+      au < released ; positions: east asia cultures critique Volume 11 ; 11 >
+      au < released ; positions: east asia cultures critique Volume 12 ; 12 >
+      au < released ; positions: east asia cultures critique Volume 13 ; 13 >
+      au < released ; positions: east asia cultures critique Volume 14 ; 14 >
+      au < released ; positions: east asia cultures critique Volume 15 ; 15 >
+      au < ready ; positions: east asia cultures critique Volume 16 ; 16 >
+      au < ready ; positions: east asia cultures critique Volume 17 ; 17 >
+
+    }
+
+    {
+      title <
+        name = Small Axe ;
+        issn = 0799-0537 ;
+        eissn = 1534-6714
+      >
+
+      param[journal_dir] = small_axe
+
+      au < released ; Small Axe Volume 5 ; 5 >
+      au < released ; Small Axe Volume 6 ; 6 >
+      au < released ; Small Axe Volume 7 ; 7 >
+      au < released ; Small Axe Volume 8 ; 8 >
+      au < released ; Small Axe Volume 9 ; 9 >
+      au < released ; Small Axe Volume 10 ; 10 >
+      au < released ; Small Axe Volume 11 ; 11 >
+      au < ready ; Small Axe Volume 12 ; 12 >
+      au < ready ; Small Axe Volume 13 ; 13 >
+
+    }
+
+    {
+      title <
+        name = Social Science History ;
+        issn = 0145-5532 ;
+        eissn = 1527-8034
+      >
+
+      param[journal_dir] = social_science_history
+
+      au < released ; Social Science History Volume 23 ; 23 >
+      au < released ; Social Science History Volume 24 ; 24 >
+      au < released ; Social Science History Volume 25 ; 25 >
+      au < released ; Social Science History Volume 26 ; 26 >
+      au < released ; Social Science History Volume 27 ; 27 >
+      au < released ; Social Science History Volume 28 ; 28 >
+      au < released ; Social Science History Volume 29 ; 29 >
+      au < released ; Social Science History Volume 30 ; 30 >
+      au < released ; Social Science History Volume 31 ; 31 >
+      au < ready ; Social Science History Volume 32 ; 32 >
+      au < ready ; Social Science History Volume 33 ; 33 >
+      au < ready ; Social Science History Volume 34 ; 34 >
+
+    }
+   
+  }
+    
 }

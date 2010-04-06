@@ -6,7 +6,7 @@
 
   {
     title <
-      name = Herpetological ;
+      name = Herpetologica ;
       issn = 0018-0831
     >
 
@@ -16,12 +16,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0018-0831
   
-      au < doNotProcess ; Herpetological Volume 58 ; 58 >
-      au < doNotProcess ; Herpetological Volume 59 ; 59 >
-      au < doNotProcess ; Herpetological Volume 60 ; 60 >
-      au < superseded ; Herpetological Volume 61 ; 61 >
-      au < doNotProcess ; Herpetological Volume 62 ; 62 >
-      au < doNotProcess ; Herpetological Volume 63 ; 63 >
+      au < doNotProcess ; Herpetologica Volume 58 ; 58 >
+      au < doNotProcess ; Herpetologica Volume 59 ; 59 >
+      au < doNotProcess ; Herpetologica Volume 60 ; 60 >
+      au < superseded ; Herpetologica Volume 61 ; 61 >
+      au < doNotProcess ; Herpetologica Volume 62 ; 62 >
+      au < doNotProcess ; Herpetologica Volume 63 ; 63 >
     }
 
   }
@@ -29,7 +29,7 @@
   {
 
     title <
-      name = Herpetological Monographs ;
+      name = Herpetologica Monographs ;
       issn = 0733-1347
     >
 
@@ -39,11 +39,11 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0733-1347
   
-      au < doNotProcess ; Herpetological Monographs Volume 16 ; 16 >
-      au < doNotProcess ; Herpetological Monographs Volume 17 ; 17 >
-      au < superseded ; Herpetological Monographs Volume 18 ; 18 >
-      au < doNotProcess ; Herpetological Monographs Volume 19 ; 19 >
-      au < doNotProcess ; Herpetological Monographs Volume 20 ; 20 >
+      au < doNotProcess ; Herpetologica Monographs Volume 16 ; 16 >
+      au < doNotProcess ; Herpetologica Monographs Volume 17 ; 17 >
+      au < superseded ; Herpetologica Monographs Volume 18 ; 18 >
+      au < doNotProcess ; Herpetologica Monographs Volume 19 ; 19 >
+      au < doNotProcess ; Herpetologica Monographs Volume 20 ; 20 >
     }
 
     {
