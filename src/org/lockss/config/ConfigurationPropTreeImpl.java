@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.9 2010-04-05 17:05:51 pgust Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.10 2010-04-06 18:09:48 pgust Exp $
  */
 
 /*
@@ -72,6 +72,37 @@ public class ConfigurationPropTreeImpl extends Configuration {
     props.clear();
   }
 
+  /** Return true iff the Configurations are equal. 
+   * Equality is based on the equality of their property
+   * trees and Tdbs.
+   * <p>
+   * This implementation is more efficient if the other
+   * object is an instance of ConfigurationPropertyTreeImpl.
+   * Otherwise it falls back on Configuration.equals().
+   * 
+   * @param o the other object
+   * @return <code>true</code> iff the configurations are equal
+   */
+  public boolean equals(Object o) {
+    if (o instanceof ConfigurationPropTreeImpl) {
+      // compare configuration properties
+      ConfigurationPropTreeImpl config = (ConfigurationPropTreeImpl)o;
+      if (!PropUtil.equalProps(props, (config.getPropertyTree()))) {
+        return false;
+      }
+      
+      // compare Tdbs
+      Tdb thisTdb = getTdb();
+      Tdb otherTdb = config.getTdb();
+      if (thisTdb == null) {
+        return (otherTdb == null);
+      }
+      return thisTdb.equals(otherTdb);
+    }
+
+    return super.equals(o);
+  }
+  
   /** Return the set of keys whose values differ.
    * This operation is transitive: c1.differentKeys(c2) yields the same 
    * result as c2.differentKeys(c1).
