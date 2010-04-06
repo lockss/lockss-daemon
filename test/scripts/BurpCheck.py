@@ -3,7 +3,7 @@
 # This program contains routines that examine the database for 
 # potential problems.
 
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 
 import MySQLdb
 import optparse
@@ -11,7 +11,7 @@ import urllib2
 
 # Constants
 
-OPTION_BURPCHECK_VERSION          = '0.0.0'
+OPTION_BURPCHECK_VERSION          = '0.0.13'
 
 OPTION_SHORT                    = '-'
 OPTION_LONG                     = '--'
@@ -292,16 +292,16 @@ def _find_inconsistent_information(db, options):
                 fileInconsistent.write("%s:%d " %(crawledbutzero[0], crawledbutzero[1]))
                 crawledbutzero = cursor2.fetchone()
             if not crawledbutzeroflag:
-                fileInconsistent.write("\n") 
+                fileInconsistent.write("\n\n") 
                 
             # Verify that zero DOIs have not been waiting for too long.  
             cursor2.execute("SELECT machinename, port, created FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult != 'successful' GROUP BY machinename, port;" %
                             (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             notcrawled = cursor2.fetchone()
             while notcrawled is not None and notcrawled[2] is not None:            
-                timesincecreated = datetime.now() - notcrawled[2];
-                if timesincecreated > datetime.timedelta(OPTION_DAYS_WITHOUT_CRAWL_DEFAULT):
-                    fileInconsistent.write("`%s' has been waiting too long for a successful crawl on %s:%d." %
+                timeSinceCreated = datetime.now() - notcrawled[2];
+                if timeSinceCreated > timedelta(OPTION_DAYS_WITHOUT_CRAWL_DEFAULT):
+                    fileInconsistent.write("`%s' has been waiting too long for a successful crawl on %s:%d.\n" %
                                            (arAuid[1], notcrawled[0], notcrawled[1]))
                     isBlankReport = False
                 notcrawled = cursor2.fetchone()
@@ -360,7 +360,7 @@ def _find_inconsistent_information(db, options):
         arFound = cursor.fetchone
         
         if arFound is None:
-            fileInconsistent.write("The AU '%s' was known by %s:%d in the previous run, but not in the current run." % 
+            fileInconsistent.write("The AU '%s' was known by %s:%d in the previous run, but not in the current run.\n" % 
                                    (arPreviousAu[1], arPreviousAu[2], arPreviousAu[3]))
             isBlankReport = False
         arPreviousAu = cursor.fetchone()
