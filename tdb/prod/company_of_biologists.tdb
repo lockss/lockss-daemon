@@ -12,129 +12,130 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://dev.biologists.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < exists ; Development Volume 18 ; 18 >
-      au < exists ; Development Volume 19 ; 19 >
-      au < exists ; Development Volume 20 ; 20 >
-      au < exists ; Development Volume 21 ; 21 >
-      au < exists ; Development Volume 22 ; 22 >
-      au < exists ; Development Volume 23 ; 23 >
-      au < exists ; Development Volume 24 ; 24 >
-      au < exists ; Development Volume 25 ; 25 >
-      au < exists ; Development Volume 26 ; 26 >
-      au < exists ; Development Volume 27 ; 27 >
-      au < exists ; Development Volume 28 ; 28 >
-      au < exists ; Development Volume 29 ; 29 >
-      au < exists ; Development Volume 30 ; 30 >
-      au < exists ; Development Volume 31 ; 31 >
-      au < exists ; Development Volume 32 ; 32 >
-      au < exists ; Development Volume 33 ; 33 >
-      au < exists ; Development Volume 34 ; 34 >
-      au < exists ; Development Volume 35 ; 35 >
-      au < exists ; Development Volume 36 ; 36 >
-      au < exists ; Development Volume 37 ; 37 >
-      au < exists ; Development Volume 38 ; 38 >
-      au < exists ; Development Volume 39 ; 39 >
-      au < exists ; Development Volume 40 ; 40 >
-      au < exists ; Development Volume 41 ; 41 >
-      au < exists ; Development Volume 42 ; 42 >
-      au < exists ; Development Volume 43 ; 43 >
-      au < exists ; Development Volume 44 ; 44 >
-      au < exists ; Development Volume 45 ; 45 >
-      au < exists ; Development Volume 46 ; 46 >
-      au < exists ; Development Volume 47 ; 47 >
-      au < exists ; Development Volume 48 ; 48 >
-      au < exists ; Development Volume 49 ; 49 >
-      au < exists ; Development Volume 50 ; 50 >
-      au < exists ; Development Volume 51 ; 51 >
-      au < exists ; Development Volume 52 ; 52 >
-      au < exists ; Development Volume 53 ; 53 >
-      au < exists ; Development Volume 54 ; 54 >
-      au < exists ; Development Volume 55 ; 55 >
-      au < exists ; Development Volume 56 ; 56 >
-      au < exists ; Development Volume 57 ; 57 >
-      au < exists ; Development Volume 58 ; 58 >
-      au < exists ; Development Volume 59 ; 59 >
-      au < exists ; Development Volume 60 ; 60 >
-      au < exists ; Development Volume 61 ; 61 >
-      au < exists ; Development Volume 62 ; 62 >
-      au < exists ; Development Volume 63 ; 63 >
-      au < exists ; Development Volume 64 ; 64 >
-      au < exists ; Development Volume 65 ; 65 >
-      au < exists ; Development Volume 66 ; 66 >
-      au < exists ; Development Volume 67 ; 67 >
-      au < exists ; Development Volume 68 ; 68 >
-      au < exists ; Development Volume 69 ; 69 >
-      au < exists ; Development Volume 70 ; 70 >
-      au < exists ; Development Volume 71 ; 71 >
-      au < exists ; Development Volume 72 ; 72 >
-      au < exists ; Development Volume 73 ; 73 >
-      au < exists ; Development Volume 74 ; 74 >
-      au < exists ; Development Volume 75 ; 75 >
-      au < exists ; Development Volume 76 ; 76 >
-      au < exists ; Development Volume 77 ; 77 >
-      au < exists ; Development Volume 78 ; 78 >
-      au < exists ; Development Volume 79 ; 79 >
-      au < exists ; Development Volume 80 ; 80 >
-      au < exists ; Development Volume 81 ; 81 >
-      au < exists ; Development Volume 82 ; 82 >
-      au < exists ; Development Volume 83 ; 83 >
-      au < exists ; Development Volume 84 ; 84 >
-      au < exists ; Development Volume 85 ; 85 >
-      au < exists ; Development Volume 86 ; 86 >
-      au < exists ; Development Volume 87 ; 87 >
-      au < exists ; Development Volume 88 ; 88 >
-      au < exists ; Development Volume 89 ; 89 >
-      au < exists ; Development Volume 90 ; 90 >
-      au < exists ; Development Volume 91 ; 91 >
-      au < exists ; Development Volume 92 ; 92 >
-      au < exists ; Development Volume 93 ; 93 >
-      au < exists ; Development Volume 94 ; 94 >
-      au < exists ; Development Volume 95 ; 95 >
-      au < exists ; Development Volume 96 ; 96 >
-      au < exists ; Development Volume 97 ; 97 >
-      au < exists ; Development Volume 98 ; 98 >
-      au < wanted ; Development Volume 99 ; 99 >
-      au < wanted ; Development Volume 100 ; 100 >
-      au < wanted ; Development Volume 101 ; 101 >
-      au < wanted ; Development Volume 102 ; 102 >
-      au < wanted ; Development Volume 103 ; 103 >
-      au < wanted ; Development Volume 104 ; 104 >
-      au < wanted ; Development Volume 105 ; 105 >
-      au < wanted ; Development Volume 106 ; 106 >
-      au < wanted ; Development Volume 107 ; 107 >
-      au < wanted ; Development Volume 108 ; 108 >
-      au < wanted ; Development Volume 109 ; 109 >
-      au < wanted ; Development Volume 110 ; 110 >
-      au < wanted ; Development Volume 111 ; 111 >
-      au < wanted ; Development Volume 112 ; 112 >
-      au < wanted ; Development Volume 113 ; 113 >
-      au < wanted ; Development Volume 114 ; 114 >
-      au < wanted ; Development Volume 115 ; 115 >
-      au < wanted ; Development Volume 116 ; 116 >
-      au < wanted ; Development Volume 117 ; 117 >
-      au < wanted ; Development Volume 118 ; 118 >
-      au < wanted ; Development Volume 119 ; 119 >
-      au < wanted ; Development Volume 120 ; 120 >
-      au < wanted ; Development Volume 121 ; 121 >
-      au < wanted ; Development Volume 122 ; 122 >
-      au < wanted ; Development Volume 123 ; 123 >
-      au < released ; Development Volume 124 ; 124 >
-      au < released ; Development Volume 125 ; 125 >
-      au < released ; Development Volume 126 ; 126 >
-      au < released ; Development Volume 127 ; 127 >
-      au < released ; Development Volume 128 ; 128 >
-      au < released ; Development Volume 129 ; 129 >
-      au < released ; Development Volume 130 ; 130 >
-      au < released ; Development Volume 131 ; 131 >
-      au < released ; Development Volume 132 ; 132 >
-      au < released ; Development Volume 133 ; 133 >
-      au < wanted ; Development Volume 134 ; 134 >
-      au < wanted ; Development Volume 135 ; 135 >
-      au < wanted ; Development Volume 136 ; 136 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 19 ; 19 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 20 ; 20 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 21 ; 21 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 22 ; 22 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 23 ; 23 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 24 ; 24 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 25 ; 25 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 26 ; 26 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 27 ; 27 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 28 ; 28 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 29 ; 29 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 30 ; 30 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 31 ; 31 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 32 ; 32 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 33 ; 33 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 34 ; 34 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 35 ; 35 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 36 ; 36 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 37 ; 37 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 38 ; 38 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 39 ; 39 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 40 ; 40 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 41 ; 41 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 42 ; 42 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 43 ; 43 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 44 ; 44 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 45 ; 45 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 46 ; 46 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 47 ; 47 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 48 ; 48 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 49 ; 49 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 54 ; 54 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 55 ; 55 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 56 ; 56 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 57 ; 57 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 58 ; 58 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 59 ; 59 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 60 ; 60 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 61 ; 61 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 62 ; 62 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 63 ; 63 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 64 ; 64 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 65 ; 65 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 66 ; 66 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 67 ; 67 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 68 ; 68 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 69 ; 69 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 70 ; 70 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 71 ; 71 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 78 ; 78 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 79 ; 79 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 80 ; 80 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 81 ; 81 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 82 ; 82 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 83 ; 83 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 84 ; 84 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 85 ; 85 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 86 ; 86 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 87 ; 87 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 88 ; 88 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 89 ; 89 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 90 ; 90 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 91 ; 91 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 92 ; 92 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 93 ; 93 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 94 ; 94 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 95 ; 95 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 96 ; 96 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 97 ; 97 >
+      au < HighWirePressH20Plugin ; exists ; Development Volume 98 ; 98 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 99 ; 99 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 100 ; 100 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 101 ; 101 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 102 ; 102 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 103 ; 103 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 104 ; 104 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 105 ; 105 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 106 ; 106 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 107 ; 107 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 108 ; 108 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 109 ; 109 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 110 ; 110 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 111 ; 111 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 112 ; 112 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 113 ; 113 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 114 ; 114 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 115 ; 115 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 116 ; 116 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 117 ; 117 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 118 ; 118 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 119 ; 119 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 120 ; 120 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 121 ; 121 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 122 ; 122 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 123 ; 123 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 124 ; 124 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 125 ; 125 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 126 ; 126 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 127 ; 127 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 128 ; 128 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 129 ; 129 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 130 ; 130 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 131 ; 131 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 132 ; 132 >
+      au < HighWireStrVolPlugin ; released ; Development Volume 133 ; 133 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 134 ; 134 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 135 ; 135 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 136 ; 136 >
+      au < HighWirePressH20Plugin ; testing ; Development Volume 137 ; 137 >
 
     }
 
