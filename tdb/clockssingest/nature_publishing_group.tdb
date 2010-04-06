@@ -1080,7 +1080,7 @@ comment[bmt44] = attempt full recrawls
 
     param[journal_id] = nphoton
 
-    au < testing ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
+    au < ready ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
     au < released ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
     au < testing ; 2010 ; Nature Photonics Volume 4 ; 2010 ; 4 >
 
@@ -1111,7 +1111,7 @@ comment[bmt44] = attempt full recrawls
 comment[nprot4] = poll mismatch
 
     au < testing ; 2008 ; Nature Protocols Volume 3 ; 2008 ; 3 >
-    au < notReady ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
+    au < ready ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
     au < testing ; 2010 ; Nature Protocols Volume 5 ; 2010 ; 5 >
 
   }
@@ -1152,7 +1152,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrclinonc
 
-    au < testing ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
+    au < ready ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
     au < testing ; 2010 ; Nature Reviews Clinical Oncology Volume 7 ; 2010 ; 7 >
 
@@ -1292,7 +1292,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrn
 
-    au < testing ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
+    au < ready ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
     au < released ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
     au < testing ; 2010 ; Nature Reviews Neuroscience Volume 11 ; 2010 ; 11 >
 
@@ -1306,7 +1306,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrrheum
 
-    au < testing ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
+    au < ready ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
     au < released ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
     au < testing ; 2010 ; Nature Reviews Rheumatology Volume 6 ; 2010 ; 6 >
 
@@ -1320,7 +1320,7 @@ comment[nprot4] = poll mismatch
 
     param[journal_id] = nrurol
 
-    au < testing ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
+    au < ready ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
     au < ready ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
     au < testing ; 2010 ; Nature Reviews Urology Volume 7 ; 2010 ; 7 >
 
@@ -1381,7 +1381,7 @@ comment[nprot4] = poll mismatch
     au < manifest ; 2005 ; Oncogene Volume 24 ; 2005 ; 24 >
     au < manifest ; 2006 ; Oncogene Volume 25 ; 2006 ; 25 >
     au < manifest ; 2007 ; Oncogene Volume 26 ; 2007 ; 26 >
-    au < testing ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
+    au < ready ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < notReady ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
     au < testing ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
 
@@ -1426,7 +1426,7 @@ comment[nprot4] = poll mismatch
     au < manifest ; 2005 ; Prostate Cancer and Prostatic Diseases Volume 8 ; 2005 ; 8 >
     au < manifest ; 2006 ; Prostate Cancer and Prostatic Diseases Volume 9 ; 2006 ; 9 >
     au < manifest ; 2007 ; Prostate Cancer and Prostatic Diseases Volume 10 ; 2007 ; 10 >
-    au < testing ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
+    au < ready ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
     au < released ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
     au < testing ; 2010 ; Prostate Cancer and Prostatic Diseases Volume 13 ; 2010 ; 13 >
 
@@ -1476,8 +1476,8 @@ comment[nprot4] = poll mismatch
     param[journal_id] = vital
     param[comment] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
     
-    au < manifest ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
-    au < manifest ; 2009 ; Vital Volume 7 (year 2009) ; 2009 ; 7 >
+    au < ready ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
+    au < ready ; 2009 ; Vital Volume 7 (year 2009) ; 2009 ; 7 >
     au < manifest ; 2010 ; Vital Volume 7 (year 2010) ; 2010 ; 7 >
   }
 
