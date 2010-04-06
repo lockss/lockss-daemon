@@ -15,7 +15,7 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://www.chestjournal.org/
+      param[base_url] = http://chestjournal.chestpubs.org/
       implicit < status ; name ; param[volume_name] >
 
       au < exists ; Chest Volume 1 ; 1 >
@@ -144,16 +144,17 @@
       au < exists ; Chest Volume 124 ; 124 >
       au < exists ; Chest Volume 125 ; 125 >
       au < exists ; Chest Volume 126 ; 126 >
-      au < manifest ; Chest Volume 127 ; 127 >
-      au < manifest ; Chest Volume 128 ; 128 >
-      au < manifest ; Chest Volume 129 ; 129 >
-      au < manifest ; Chest Volume 130 ; 130 >
-      au < manifest ; Chest Volume 131 ; 131 >
-      au < manifest ; Chest Volume 132 ; 132 >
-      au < manifest ; Chest Volume 133 ; 133 >
-      au < manifest ; Chest Volume 134 ; 134 >
-      au < manifest ; Chest Volume 135 ; 135 >
-      au < exists ; Chest Volume 136 ; 136 >
+      au < wanted ; Chest Volume 127 ; 127 >
+      au < wanted ; Chest Volume 128 ; 128 >
+      au < wanted ; Chest Volume 129 ; 129 >
+      au < wanted ; Chest Volume 130 ; 130 >
+      au < wanted ; Chest Volume 131 ; 131 >
+      au < wanted ; Chest Volume 132 ; 132 >
+      au < wanted ; Chest Volume 133 ; 133 >
+      au < wanted ; Chest Volume 134 ; 134 >
+      au < wanted ; Chest Volume 135 ; 135 >
+      au < wanted ; Chest Volume 136 ; 136 >
+      au < wanted ; Chest Volume 137 ; 137 >
 
     }
 

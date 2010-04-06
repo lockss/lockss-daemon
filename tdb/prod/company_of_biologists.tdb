@@ -97,31 +97,31 @@
       au < exists ; Development Volume 96 ; 96 >
       au < exists ; Development Volume 97 ; 97 >
       au < exists ; Development Volume 98 ; 98 >
-      au < manifest ; Development Volume 99 ; 99 >
-      au < manifest ; Development Volume 100 ; 100 >
-      au < manifest ; Development Volume 101 ; 101 >
-      au < manifest ; Development Volume 102 ; 102 >
-      au < manifest ; Development Volume 103 ; 103 >
-      au < manifest ; Development Volume 104 ; 104 >
-      au < manifest ; Development Volume 105 ; 105 >
-      au < manifest ; Development Volume 106 ; 106 >
-      au < manifest ; Development Volume 107 ; 107 >
-      au < manifest ; Development Volume 108 ; 108 >
-      au < manifest ; Development Volume 109 ; 109 >
-      au < manifest ; Development Volume 110 ; 110 >
-      au < manifest ; Development Volume 111 ; 111 >
-      au < manifest ; Development Volume 112 ; 112 >
-      au < manifest ; Development Volume 113 ; 113 >
-      au < manifest ; Development Volume 114 ; 114 >
-      au < manifest ; Development Volume 115 ; 115 >
-      au < manifest ; Development Volume 116 ; 116 >
-      au < manifest ; Development Volume 117 ; 117 >
-      au < manifest ; Development Volume 118 ; 118 >
-      au < manifest ; Development Volume 119 ; 119 >
-      au < manifest ; Development Volume 120 ; 120 >
-      au < manifest ; Development Volume 121 ; 121 >
-      au < manifest ; Development Volume 122 ; 122 >
-      au < manifest ; Development Volume 123 ; 123 >
+      au < wanted ; Development Volume 99 ; 99 >
+      au < wanted ; Development Volume 100 ; 100 >
+      au < wanted ; Development Volume 101 ; 101 >
+      au < wanted ; Development Volume 102 ; 102 >
+      au < wanted ; Development Volume 103 ; 103 >
+      au < wanted ; Development Volume 104 ; 104 >
+      au < wanted ; Development Volume 105 ; 105 >
+      au < wanted ; Development Volume 106 ; 106 >
+      au < wanted ; Development Volume 107 ; 107 >
+      au < wanted ; Development Volume 108 ; 108 >
+      au < wanted ; Development Volume 109 ; 109 >
+      au < wanted ; Development Volume 110 ; 110 >
+      au < wanted ; Development Volume 111 ; 111 >
+      au < wanted ; Development Volume 112 ; 112 >
+      au < wanted ; Development Volume 113 ; 113 >
+      au < wanted ; Development Volume 114 ; 114 >
+      au < wanted ; Development Volume 115 ; 115 >
+      au < wanted ; Development Volume 116 ; 116 >
+      au < wanted ; Development Volume 117 ; 117 >
+      au < wanted ; Development Volume 118 ; 118 >
+      au < wanted ; Development Volume 119 ; 119 >
+      au < wanted ; Development Volume 120 ; 120 >
+      au < wanted ; Development Volume 121 ; 121 >
+      au < wanted ; Development Volume 122 ; 122 >
+      au < wanted ; Development Volume 123 ; 123 >
       au < released ; Development Volume 124 ; 124 >
       au < released ; Development Volume 125 ; 125 >
       au < released ; Development Volume 126 ; 126 >
@@ -132,9 +132,9 @@
       au < released ; Development Volume 131 ; 131 >
       au < released ; Development Volume 132 ; 132 >
       au < released ; Development Volume 133 ; 133 >
-      au < manifest ; Development Volume 134 ; 134 >
-      au < manifest ; Development Volume 135 ; 135 >
-      au < manifest ; Development Volume 136 ; 136 >
+      au < wanted ; Development Volume 134 ; 134 >
+      au < wanted ; Development Volume 135 ; 135 >
+      au < wanted ; Development Volume 136 ; 136 >
 
     }
 
@@ -174,6 +174,11 @@
       param[base_url] = http://jcs.biologists.org/
       implicit < status ; name ; param[volume_name] >
 
+      comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
+
+      au < manifest ; Journal of Cell Science Volume 1 ; 1 >
+      au < manifest ; Journal of Cell Science Volume 2 ; 2 >
+      au < manifest ; Journal of Cell Science Volume 3 ; 3 >
       au < manifest ; Journal of Cell Science Volume 4 ; 4 >
       au < manifest ; Journal of Cell Science Volume 5 ; 5 >
       au < manifest ; Journal of Cell Science Volume 6 ; 6 >
@@ -311,6 +316,99 @@
       param[base_url] = http://jeb.biologists.org/
       implicit < status ; name ; param[volume_name] >
 
+      au < manifest ; Journal of Experimental Biology Volume 1 ; 1 >
+      au < manifest ; Journal of Experimental Biology Volume 2 ; 2 >
+      au < manifest ; Journal of Experimental Biology Volume 3 ; 3 >
+      au < manifest ; Journal of Experimental Biology Volume 4 ; 4 >
+      au < manifest ; Journal of Experimental Biology Volume 5 ; 5 >
+      au < manifest ; Journal of Experimental Biology Volume 6 ; 6 >
+      au < manifest ; Journal of Experimental Biology Volume 7 ; 7 >
+      au < manifest ; Journal of Experimental Biology Volume 8 ; 8 >
+      au < manifest ; Journal of Experimental Biology Volume 9 ; 9 >
+      au < manifest ; Journal of Experimental Biology Volume 10 ; 10 >
+      au < manifest ; Journal of Experimental Biology Volume 11 ; 11 >
+      au < manifest ; Journal of Experimental Biology Volume 12 ; 12 >
+      au < manifest ; Journal of Experimental Biology Volume 13 ; 13 >
+      au < manifest ; Journal of Experimental Biology Volume 14 ; 14 >
+      au < manifest ; Journal of Experimental Biology Volume 15 ; 15 >
+      au < manifest ; Journal of Experimental Biology Volume 16 ; 16 >
+      au < manifest ; Journal of Experimental Biology Volume 17 ; 17 >
+      au < manifest ; Journal of Experimental Biology Volume 18 ; 18 >
+      au < manifest ; Journal of Experimental Biology Volume 19 ; 19 >
+      au < manifest ; Journal of Experimental Biology Volume 20 ; 20 >
+      au < manifest ; Journal of Experimental Biology Volume 21 ; 21 >
+      au < manifest ; Journal of Experimental Biology Volume 22 ; 22 >
+      au < manifest ; Journal of Experimental Biology Volume 23 ; 23 >
+      au < manifest ; Journal of Experimental Biology Volume 24 ; 24 >
+      au < manifest ; Journal of Experimental Biology Volume 25 ; 25 >
+      au < manifest ; Journal of Experimental Biology Volume 26 ; 26 >
+      au < manifest ; Journal of Experimental Biology Volume 27 ; 27 >
+      au < manifest ; Journal of Experimental Biology Volume 28 ; 28 >
+      au < manifest ; Journal of Experimental Biology Volume 29 ; 29 >
+      au < manifest ; Journal of Experimental Biology Volume 30 ; 30 >
+      au < manifest ; Journal of Experimental Biology Volume 31 ; 31 >
+      au < manifest ; Journal of Experimental Biology Volume 32 ; 32 >
+      au < manifest ; Journal of Experimental Biology Volume 33 ; 33 >
+      au < manifest ; Journal of Experimental Biology Volume 34 ; 34 >
+      au < manifest ; Journal of Experimental Biology Volume 35 ; 35 >
+      au < manifest ; Journal of Experimental Biology Volume 36 ; 36 >
+      au < manifest ; Journal of Experimental Biology Volume 37 ; 37 >
+      au < manifest ; Journal of Experimental Biology Volume 38 ; 38 >
+      au < manifest ; Journal of Experimental Biology Volume 39 ; 39 >
+      au < manifest ; Journal of Experimental Biology Volume 40 ; 40 >
+      au < manifest ; Journal of Experimental Biology Volume 41 ; 41 >
+      au < manifest ; Journal of Experimental Biology Volume 42 ; 42 >
+      au < manifest ; Journal of Experimental Biology Volume 43 ; 43 >
+      au < manifest ; Journal of Experimental Biology Volume 44 ; 44 >
+      au < manifest ; Journal of Experimental Biology Volume 45 ; 45 >
+      au < manifest ; Journal of Experimental Biology Volume 46 ; 46 >
+      au < manifest ; Journal of Experimental Biology Volume 47 ; 47 >
+      au < manifest ; Journal of Experimental Biology Volume 48 ; 48 >
+      au < manifest ; Journal of Experimental Biology Volume 49 ; 49 >
+      au < manifest ; Journal of Experimental Biology Volume 50 ; 50 >
+      au < manifest ; Journal of Experimental Biology Volume 51 ; 51 >
+      au < manifest ; Journal of Experimental Biology Volume 52 ; 52 >
+      au < manifest ; Journal of Experimental Biology Volume 53 ; 53 >
+      au < manifest ; Journal of Experimental Biology Volume 54 ; 54 >
+      au < manifest ; Journal of Experimental Biology Volume 55 ; 55 >
+      au < manifest ; Journal of Experimental Biology Volume 56 ; 56 >
+      au < manifest ; Journal of Experimental Biology Volume 57 ; 57 >
+      au < manifest ; Journal of Experimental Biology Volume 58 ; 58 >
+      au < manifest ; Journal of Experimental Biology Volume 59 ; 59 >
+      au < manifest ; Journal of Experimental Biology Volume 60 ; 60 >
+      au < manifest ; Journal of Experimental Biology Volume 61 ; 61 >
+      au < manifest ; Journal of Experimental Biology Volume 62 ; 62 >
+      au < manifest ; Journal of Experimental Biology Volume 63 ; 63 >
+      au < manifest ; Journal of Experimental Biology Volume 64 ; 64 >
+      au < manifest ; Journal of Experimental Biology Volume 65 ; 65 >
+      au < manifest ; Journal of Experimental Biology Volume 66 ; 66 >
+      au < manifest ; Journal of Experimental Biology Volume 67 ; 67 >
+      au < manifest ; Journal of Experimental Biology Volume 68 ; 68 >
+      au < manifest ; Journal of Experimental Biology Volume 69 ; 69 >
+      au < manifest ; Journal of Experimental Biology Volume 70 ; 70 >
+      au < manifest ; Journal of Experimental Biology Volume 71 ; 71 >
+      au < manifest ; Journal of Experimental Biology Volume 72 ; 72 >
+      au < manifest ; Journal of Experimental Biology Volume 73 ; 73 >
+      au < manifest ; Journal of Experimental Biology Volume 74 ; 74 >
+      au < manifest ; Journal of Experimental Biology Volume 75 ; 75 >
+      au < manifest ; Journal of Experimental Biology Volume 76 ; 76 >
+      au < manifest ; Journal of Experimental Biology Volume 77 ; 77 >
+      au < manifest ; Journal of Experimental Biology Volume 78 ; 78 >
+      au < manifest ; Journal of Experimental Biology Volume 79 ; 79 >
+      au < manifest ; Journal of Experimental Biology Volume 80 ; 80 >
+      au < manifest ; Journal of Experimental Biology Volume 81 ; 81 >
+      au < manifest ; Journal of Experimental Biology Volume 82 ; 82 >
+      au < manifest ; Journal of Experimental Biology Volume 83 ; 83 >
+      au < manifest ; Journal of Experimental Biology Volume 84 ; 84 >
+      au < manifest ; Journal of Experimental Biology Volume 85 ; 85 >
+      au < manifest ; Journal of Experimental Biology Volume 86 ; 86 >
+      au < manifest ; Journal of Experimental Biology Volume 87 ; 87 >
+      au < manifest ; Journal of Experimental Biology Volume 88 ; 88 >
+      au < manifest ; Journal of Experimental Biology Volume 89 ; 89 >
+      au < manifest ; Journal of Experimental Biology Volume 90 ; 90 >
+      au < manifest ; Journal of Experimental Biology Volume 91 ; 91 >
+      au < manifest ; Journal of Experimental Biology Volume 92 ; 92 >
+      au < manifest ; Journal of Experimental Biology Volume 93 ; 93 >
       au < manifest ; Journal of Experimental Biology Volume 94 ; 94 >
       au < manifest ; Journal of Experimental Biology Volume 95 ; 95 >
       au < manifest ; Journal of Experimental Biology Volume 96 ; 96 >
