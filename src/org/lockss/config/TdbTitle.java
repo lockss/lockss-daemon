@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.2 2010-04-05 16:25:21 pgust Exp $
+ * $Id: TdbTitle.java,v 1.3 2010-04-06 18:17:49 pgust Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.Logger;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.2 2010-04-05 16:25:21 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.3 2010-04-06 18:17:49 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -425,6 +425,50 @@ public class TdbTitle {
   }
   
   /**
+   * Determines two TdbsTitles are equal. Equality is based on having
+   * equal TdbTitles and their child TdbAus.   The parent hierarchy is 
+   * not checked.
+   * 
+   * @param o the other object
+   * @return <code>true</code> iff they are equal TdbTitles
+   */
+  public boolean equals(Object o) {
+    // check for identity
+    if (this == o) {
+      return true;
+    }
+
+    if (o instanceof TdbTitle) {
+      try {
+        // if no exception thrown, there are no differences
+        // because the method did not try to modify the set
+        addPluginIdsForDifferences(Collections.EMPTY_SET, (TdbTitle)o);
+        return true;
+      } catch (UnsupportedOperationException ex) {
+        // differences because method tried to add to unmodifiable set
+      } catch (IllegalArgumentException ex) {
+        // if something was wrong with the other title
+      } catch (IllegalStateException ex) {
+        // if something is wrong with this title
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Return the hashcode.  The hashcode of this instance is the
+   * hashcode of its Id.
+   * 
+   * @throws the hashcode of this instance
+   */
+  public int hashCode() {
+    if (id == null) {
+      throw new IllegalStateException("id not set");
+    }
+    return id.hashCode();
+  }
+
+  /**
    * Add all plugin IDs for TdbAus that are different between this and
    * the specified title.
    * <p>
@@ -467,7 +511,6 @@ public class TdbTitle {
           pluginIds.add(titleAu.getPluginId());
         }
       }
-
       for (TdbAu thisAu : this.tdbAus) {
         TdbAu titleAu = title.getTdbAuById(thisAu.getId()); 
         if (titleAu == null) {
