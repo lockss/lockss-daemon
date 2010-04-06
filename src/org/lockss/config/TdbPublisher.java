@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.3 2010-04-05 16:33:15 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.4 2010-04-06 18:16:55 pgust Exp $
  */
 
 /*
@@ -33,13 +33,14 @@ package org.lockss.config;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Set;
 
 /**
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.3 2010-04-05 16:33:15 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.4 2010-04-06 18:16:55 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -241,6 +242,45 @@ public class TdbPublisher {
     }
   }
   
+  /**
+   * Determines two TdbsPublshers are equal. The parent hierarchy is not checked.
+   * 
+   * @param o the other object
+   * @return <code>true</code> iff they are equal TdbPubishers
+   */
+  public boolean equals(Object o) {
+    // check for identity
+    if (this == o) {
+      return true;
+    }
+
+    if (o instanceof TdbPublisher) {
+      try {
+        // if no exception thrown, there are no differences
+        // because the method did not try to modify the set
+        addPluginIdsForDifferences(Collections.EMPTY_SET, (TdbPublisher)o);
+        return true;
+      } catch (UnsupportedOperationException ex) {
+        // differences because method tried to add to unmodifiable set
+      } catch (IllegalArgumentException ex) {
+        // if something was wrong with the other publisher
+      } catch (IllegalStateException ex) {
+        // if something is wrong with this publisher
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Returns the hashcode.  The hashcode for this instance
+   * is the hashcode of its name.
+   * 
+   * @return the hashcode for this instance
+   */
+  public int hashCode() {
+    return name.hashCode();
+  }
+
   /**
    * Return a String representation of the publisher.
    * 
