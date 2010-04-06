@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbPublisher.java,v 1.3 2010-04-05 17:37:50 pgust Exp $
+ * $Id: TestTdbPublisher.java,v 1.4 2010-04-06 18:21:56 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbPublisher</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbPublisher.java,v 1.3 2010-04-05 17:37:50 pgust Exp $
+ * @version $Id: TestTdbPublisher.java,v 1.4 2010-04-06 18:21:56 pgust Exp $
  */
 
 public class TestTdbPublisher extends LockssTestCase {
@@ -85,6 +85,34 @@ public class TestTdbPublisher extends LockssTestCase {
       
     }
     assertNull(publisher);
+  }
+  
+  /**
+   * Test equals() method for publisher.
+   */
+  public void testEquals() {
+    TdbPublisher publisher1 = new TdbPublisher("Test Publisher");
+    TdbTitle title1 = new TdbTitle("Test Title 1");
+    publisher1.addTdbTitle(title1);
+    assertEquals(publisher1, publisher1);
+    
+    // same as publisher1
+    TdbPublisher publisher2 = new TdbPublisher("Test Publisher");
+    TdbTitle title2 = new TdbTitle("Test Title 1");
+    publisher2.addTdbTitle(title2);
+    assertEquals(publisher2, publisher2);
+
+    // differs from publisher1 by title name
+    TdbPublisher publisher3 = new TdbPublisher("Test Publisher");
+    TdbTitle title3 = new TdbTitle("Test Title 3");
+    publisher3.addTdbTitle(title3);
+    assertEquals(publisher1, publisher3);
+
+    // differs from publisher3 by publisher name
+    TdbPublisher publisher4 = new TdbPublisher("Test Publisher 4");
+    TdbTitle title4 = new TdbTitle("Test Title 3");
+    publisher4.addTdbTitle(title4);
+    assertEquals(publisher1, publisher4);
   }
   
   /**

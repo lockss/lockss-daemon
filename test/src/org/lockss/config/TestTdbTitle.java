@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbTitle.java,v 1.2 2010-04-05 17:25:32 pgust Exp $
+ * $Id: TestTdbTitle.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.2 2010-04-05 17:25:32 pgust Exp $
+ * @version $Id: TestTdbTitle.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
@@ -95,6 +95,55 @@ public class TestTdbTitle extends LockssTestCase {
     assertNull(title);
   }
   
+  public void testEquals() {
+    TdbAu au1 = new TdbAu("Test AU");
+    au1.setPluginId("pluginA");
+    au1.setParam("name1", "val1");
+    au1.setParam("name2", "val2");
+    assertEquals(au1, au1);
+    
+    TdbTitle title1 = new TdbTitle("Test Title");
+    title1.setId("0001-0001");
+    title1.addTdbAu(au1);
+    assertEquals(title1, title1);
+    
+    // same as title1
+    TdbAu au2 = new TdbAu("Test AU");
+    au2.setPluginId("pluginA");
+    au2.setParam("name1", "val1");
+    au2.setParam("name2", "val2");
+    assertEquals(au1, au2);
+
+    TdbTitle title2 = new TdbTitle("Test Title");
+    title2.setId("0001-0001");
+    title2.addTdbAu(au2);
+    assertEquals(title1, title2);
+    
+    // differes from title1 only by au param
+    TdbAu au3 = new TdbAu("Test AU");
+    au3.setPluginId("pluginA");
+    au3.setParam("name1", "val1");
+    au3.setParam("name2", "val3");
+    assertNotEquals(au1, au3);
+    
+    TdbTitle title3 = new TdbTitle("Test Title");
+    title3.setId("0001-0001");
+    title3.addTdbAu(au3);
+    assertNotEquals(title1, title3);
+    
+    // differs from title3 only by title id 
+    TdbAu au4 = new TdbAu("Test AU");
+    au4.setPluginId("pluginA");
+    au4.setParam("name1", "val1");
+    au4.setParam("name2", "val3");
+    assertEquals(au3, au4);
+    
+    TdbTitle title4 = new TdbTitle("Test Title");
+    title4.setId("0002-0002");
+    title4.addTdbAu(au4);
+    assertNotEquals(title3, title4);
+  }
+  
   /**
    * Test addTitle() method.
    */
@@ -112,7 +161,7 @@ public class TestTdbTitle extends LockssTestCase {
     
     // get publisher
     TdbPublisher getPublisher = title.getTdbPublisher();
-    assertEquals(publisher, getPublisher);
+    assertSame(publisher, getPublisher);
   }
   
   /**
@@ -204,8 +253,8 @@ public class TestTdbTitle extends LockssTestCase {
     Collection<TdbAu> getAus2 = title.getTdbAusByName("unknown");
     assertTrue(getAus2.isEmpty());
 
-    assertEquals(au1, title.getTdbAuById(au1.getId()));
-    assertEquals(au2, title.getTdbAuById(au2.getId()));
+    assertSame(au1, title.getTdbAuById(au1.getId()));
+    assertSame(au2, title.getTdbAuById(au2.getId()));
   }
   
   /**
@@ -296,7 +345,9 @@ public class TestTdbTitle extends LockssTestCase {
     
     TdbPublisher publisher4 = new TdbPublisher("Test Publisher4");
     TdbTitle title4 = title3.copyForTdbPublisher(publisher4);
-    assertEquals(publisher4, title4.getTdbPublisher());
+    assertSame(publisher4, title4.getTdbPublisher());
+    assertNotSame(title3, title4);
     assertEquals(title3.getId(), title4.getId());
+    assertEquals(title3, title4);
   }
 }

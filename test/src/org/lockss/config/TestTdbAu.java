@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.2 2010-04-05 17:18:39 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.2 2010-04-05 17:18:39 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
@@ -90,11 +90,44 @@ public class TestTdbAu extends LockssTestCase {
   }
   
   /**
+   * Test equals() method
+   */
+  public void testEquals() {
+    TdbAu au1 = new TdbAu("Test AU");
+    au1.setPluginId("pluginA");
+    au1.setParam("name1", "val1");
+    au1.setParam("name2", "val2");
+    assertEquals(au1, au1);
+    
+    // same as title1
+    TdbAu au2 = new TdbAu("Test AU");
+    au2.setPluginId("pluginA");
+    au2.setParam("name1", "val1");
+    au2.setParam("name2", "val2");
+    assertEquals(au1, au2);
+
+    // differs from title1 only by au param
+    TdbAu au3 = new TdbAu("Test AU");
+    au3.setPluginId("pluginA");
+    au3.setParam("name1", "val1");
+    au3.setParam("name2", "val3");
+    assertNotEquals(au1, au3);
+    
+    // differs from title3 only by plugin id 
+    TdbAu au4 = new TdbAu("Test AU");
+    au4.setPluginId("pluginB");
+    au4.setParam("name1", "val1");
+    au4.setParam("name2", "val3");
+    assertNotEquals(au3, au4);
+  }
+  
+  /**
    * Test addAu() method.
    */
   public void testGetTitle() {
     TdbTitle title = new TdbTitle("Test Title");
-
+    title.setId("0000-0000");
+    
     TdbAu au = new TdbAu("Test AU");
     au.setPluginId("pluginA");
     title.addTdbAu(au);
@@ -104,7 +137,7 @@ public class TestTdbAu extends LockssTestCase {
     
     // get title
     TdbTitle getTitle = au.getTdbTitle();
-    assertEquals(title, getTitle);
+    assertSame(title, getTitle);
   }
   
   /**
@@ -285,11 +318,14 @@ public class TestTdbAu extends LockssTestCase {
     au1.setPluginVersion("3");
 
     TdbTitle title1 = new TdbTitle("Test Title1");
+    title1.setId("0000-0000");
     title1.addTdbAu(au1);
     
     TdbTitle title2 = new TdbTitle("Test Title2");
+    title2.setId("0000-0000");
     TdbAu au2 = au1.copyForTdbTitle(title2);
-    assertEquals(title2, au2.getTdbTitle());
+    assertSame(title2, au2.getTdbTitle());
+    assertNotSame(title1, title2);
     assertEquals(au1.getName(), au2.getName());
     assertEquals(au1.getAttr("a"), au2.getAttr("a"));
     assertEquals(au1.getParam("x"), au2.getParam("x"));

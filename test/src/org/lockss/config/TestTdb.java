@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.2 2010-04-05 17:17:57 pgust Exp $
+ * $Id: TestTdb.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.2 2010-04-05 17:17:57 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -169,11 +169,11 @@ public class TestTdb extends LockssTestCase {
     p2.addTdbTitle(t2p2);
     TdbAu a1t2p2 = new TdbAu("a1t2p2");
     a1t2p2.setPluginId("plugin_p2");
-    a1t2p2.setParam("param", "1");
+    a1t2p2.setParam("param", "3");
     t2p2.addTdbAu(a1t2p2);
     TdbAu a2t2p2 = new TdbAu("a2t2p2");
     a2t2p2.setPluginId("plugin_p2");
-    a2t2p2.setParam("param", "2");
+    a2t2p2.setParam("param", "4");
     t2p2.addTdbAu(a2t2p2);
 
     // add AUs for publisher p2
@@ -209,12 +209,12 @@ public class TestTdb extends LockssTestCase {
     p2.addTdbTitle(t2p2);
     TdbAu a1t2p2 = new TdbAu("a1t2p2");
     a1t2p2.setPluginId("plugin_p2");
-    a1t2p2.setParam("param", "1");
+    a1t2p2.setParam("param", "3");
     t2p2.addTdbAu(a1t2p2);
     TdbAu a2t2p2 = new TdbAu("a2t2p2");
     a2t2p2.setPluginId("plugin_p2");
     a2t2p2.setParam("param1", "value1");
-    a2t2p2.setParam("param", "2");
+    a2t2p2.setParam("param", "3");
     t2p2.addTdbAu(a2t2p2);
 
     // add AUs for publisher p2
@@ -238,7 +238,17 @@ public class TestTdb extends LockssTestCase {
     assertEquals(4, tdb.getTdbAuCount());
 
     addTestPublisher2(tdb);
-    assertEquals(2, tdb.getAllTdbPublishers().size());
+    assertEquals(2, tdb.getTdbPublisherCount());
+    assertEquals(4, tdb.getTdbTitleCount());
+    for (TdbPublisher publisher : tdb.getAllTdbPublishers().values()) {
+      log.info("Publisher " + publisher.getName());
+      for (TdbTitle title : publisher.getTdbTitles()) {
+        log.info("  Title " + title.getName() + " (" + title.getId() + ")");
+        for (TdbAu au : title.getTdbAus()) {
+          log.info("    Au: " + au.getName() + " (" + au.getPluginId() + ") [id " + au.getId() + "]");
+        }
+      }
+    }
     assertEquals(8, tdb.getTdbAuCount());
 
     assertEquals(4, tdb.getTdbAus("plugin_p2").size());
@@ -336,12 +346,49 @@ public class TestTdb extends LockssTestCase {
     tdb.addTdbAu(a1t1p1);
     assertFalse(tdb.isEmpty());
     assertEquals(1, tdb.getTdbAus("plugin1").size());
-
-    tdb.addTdbAu(a1t1p1);
+    try {
+      tdb.addTdbAu(a1t1p1);
+      fail("failed to detect adding duplicate au \"" + a1t1p1.getName() + "\"");
+    } catch (IllegalStateException ex) {
+    }
     assertFalse(tdb.isEmpty());
     assertEquals(1, tdb.getTdbAus("plugin1").size());
   }
 
+  /**
+   * Test equals function for Tdbs
+   */
+  public void testEquals() {
+    Tdb tdb1 = new Tdb();
+    addTestPublisher1(tdb1);
+    addTestPublisher2(tdb1);
+    assertEquals(tdb1, tdb1);
+    
+    // same as tdb1
+    Tdb tdb2 = new Tdb();
+    addTestPublisher1(tdb2);
+    addTestPublisher2(tdb2);
+    assertEquals(tdb1, tdb2);
+    
+    // different than tdb1 by publisher1
+    Tdb tdb3 = new Tdb();
+    addTestPublisher1_Changed(tdb3);
+    addTestPublisher2(tdb3);
+    assertNotEquals(tdb1, tdb3);
+
+    // different than tdb1 by publisher2
+    Tdb tdb4 = new Tdb();
+    addTestPublisher1(tdb4);
+    addTestPublisher2_Changed(tdb4);
+    assertNotEquals(tdb1, tdb4);
+
+    // different than tdb1 by publisher1 and publisher2
+    Tdb tdb5 = new Tdb();
+    addTestPublisher1_Changed(tdb5);
+    addTestPublisher2_Changed(tdb5);
+    assertNotEquals(tdb1, tdb5);
+}
+  
   /**
    * Test creating valid TdbTitle.
    */
