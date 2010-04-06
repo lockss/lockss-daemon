@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.3 2010-04-05 16:33:15 pgust Exp $
+ * $Id: Tdb.java,v 1.4 2010-04-06 18:14:51 pgust Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.util.Logger;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.3 2010-04-05 16:33:15 pgust Exp $
+ * @version $Id: Tdb.java,v 1.4 2010-04-06 18:14:51 pgust Exp $
  */
 public class Tdb {
   /**
@@ -130,6 +130,18 @@ public class Tdb {
     }
     
     Set<String> pluginIds = new HashSet<String>();
+    addPluginIdsForDifferences (pluginIds, otherTdb);
+    return pluginIds;
+  }
+  
+  /**
+   * Adds a collection of pluginIds for TdbAus that are
+   * different from those in this Tdb.
+   * 
+   * @param pluginIds the set of pluginIds
+   * @param otherTdb a Tdb
+   */
+  private void addPluginIdsForDifferences(Set<String> pluginIds, Tdb otherTdb) {
     Map<String, TdbPublisher> tdbPublishers = otherTdb.getAllTdbPublishers();
 
     for (TdbPublisher tdbPublisher : tdbPublishers.values()) {
@@ -149,10 +161,47 @@ public class Tdb {
         thisPublisher.addPluginIdsForDifferences(pluginIds, tdbPublisher);
       }
     }
-    
-    return pluginIds;
   }
 
+  /**
+   * Determines two Tdbs are equal.  Equality is based on having
+   * equal TdbPublishers, and their child TdbTitles and TdbAus.
+   * 
+   * @param o the other object
+   * @return <code>true</code> iff they are equal Tdbs
+   */
+  public boolean equals(Object o) {
+    // check for identity
+    if (this == o) {
+      return true;
+    }
+    
+    if (o instanceof Tdb) {
+      try {
+        // if no exception thrown, there are no differences
+        // because the method did not try to modify the set
+        addPluginIdsForDifferences(Collections.EMPTY_SET, (Tdb)o);
+        return true;
+      } catch (UnsupportedOperationException ex) {
+        // differences because method tried to add to unmodifiable set
+      } catch (IllegalArgumentException ex) {
+        // if something was wrong with the other Tdb
+      } catch (IllegalStateException ex) {
+        // if something is wrong with this Tdb
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Not supported for this class.
+   * 
+   * @throws UnsupportedOperationException
+   */
+  public int hashCode() {
+    throw new UnsupportedOperationException();
+  }
+  
   /**
    * Merge another Tdb into this one. Makes copies of otherTdb's non-duplicate 
    * TdbPublisher, TdbTitle, and TdbAu objects and their non-duplicate children.
@@ -310,17 +359,20 @@ public class Tdb {
       throw new IllegalArgumentException("TdbAu's publisher not set");
     }
 
-    // add publisher
+    // make sure publisher is not a duplicate
     String publisherName = publisher.getName();
-    TdbPublisher oldPublisher = tdbPublisherMap.put(publisherName, publisher);
+    TdbPublisher oldPublisher = tdbPublisherMap.get(publisherName);
     if ((oldPublisher != null) && (oldPublisher != publisher)) {
-      // restore old publisher for name
-      tdbPublisherMap.put(publisherName, oldPublisher);
       throw new IllegalArgumentException("new au publisher with duplicate name: " + publisherName);
     }
    
-    // finally register the au with this instance
+    // register the au with this instance
     registerTdbAu(au);
+    
+    // if that was successful, OK to add new publisher to publisher map
+    if (oldPublisher == null) {
+      tdbPublisherMap.put(publisherName, publisher);
+    }
   }
   
   /**
@@ -336,8 +388,10 @@ public class Tdb {
       aus = new ArrayList<TdbAu>();
       pluginTdbAusMap.put(pluginId, aus);
     } else if (aus.contains(au)) {
-      // don't register TdbAU that is already registered
-      return;
+      // cannot register TdbAU that is already registered
+      throw new IllegalStateException("cannot add au \"" + au.getName() 
+                                      + "\": another au with id \"" + au.getId()
+                                      + "\" already exists");
     }
     aus.add(au);
     
