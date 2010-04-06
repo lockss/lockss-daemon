@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.2 2010-04-05 16:29:48 pgust Exp $
+ * $Id: TdbAu.java,v 1.3 2010-04-06 18:19:02 pgust Exp $
  */
 
 /*
@@ -144,6 +144,35 @@ public class TdbAu {
     }
   }
   
+  /**
+   * Determines two TdbsAus are equal. Equality is based on 
+   * equality of their Ids.  The parent hierarchy is not checked.
+   * 
+   * @param o the other object
+   * @return <code>true</code> iff they are equal TdbTitles
+   */
+  public boolean equals(Object o) {
+    // check for identity
+    if (this == o) {
+      return true;
+    }
+
+    if (o instanceof TdbAu) {
+      return tdbAuId.equals(((TdbAu)o).getId());
+    }
+    return false;
+  }
+
+  /**
+   * Return the hashcode.  The hashcode of this instance
+   * is the hashcode of its Id.
+   * 
+   * @returns hashcode of this instance
+   */
+  public int hashCode() {
+    return getId().hashCode();
+  }
+
   /**
    * Get the name of the AU.  The name normally consists of the the TdbTitle
    * plus a volume or date specifier.
