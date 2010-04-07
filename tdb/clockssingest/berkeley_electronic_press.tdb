@@ -800,6 +800,7 @@
     param[journal_abbr] = wpsr
 
     comment[4] = malformed manifest page, ticket #1352
+    comment[2008] = Manifest page's lockss-probe links to an article behind a login page. 
 
     au < manifest ; 2005 ; World Political Science Review Volume 1 ; 1 >
     au < manifest ; 2006 ; World Political Science Review Volume 2 ; 2 >
