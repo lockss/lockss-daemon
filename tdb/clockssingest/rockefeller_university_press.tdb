@@ -1,0 +1,470 @@
+{
+
+  publisher <
+    name = Rockefeller University Press
+  >
+
+  {
+
+    title <
+      name = The Journal of Cell Biology ;
+      issn = 0021-9525 ;
+      eissn = 1540-8140
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jcb.rupress.org/
+      implicit < status ; attr[year] ; name ; param[volume_name] >
+
+        au < manifest ; 1955 ; The Journal of Biophysical and Biochemical Cytology Volume 1 ; 1 >
+        au < manifest ; 1956 ; The Journal of Biophysical and Biochemical Cytology Volume 2 ; 2 >
+        au < manifest ; 1957 ; The Journal of Biophysical and Biochemical Cytology Volume 3 ; 3 >
+        au < manifest ; 1958 ; The Journal of Biophysical and Biochemical Cytology Volume 4 ; 4 >
+        au < manifest ; 1959 ; The Journal of Biophysical and Biochemical Cytology Volume 5 ; 5 >
+        au < manifest ; 1959 ; The Journal of Biophysical and Biochemical Cytology Volume 6 ; 6 >
+        au < manifest ; 1960 ; The Journal of Biophysical and Biochemical Cytology Volume 7 ; 7 >
+        au < manifest ; 1960 ; The Journal of Biophysical and Biochemical Cytology Volume 8 ; 8 >
+        au < manifest ; 1961 ; The Journal of Biophysical and Biochemical Cytology Volume 9 ; 9 >
+        au < manifest ; 1961 ; The Journal of Biophysical and Biochemical Cytology Volume 10 ; 10 >
+        au < manifest ; 1961 ; The Journal of Biophysical and Biochemical Cytology Volume 11 ; 11 >
+        au < manifest ; 1961 ; The Journal of Biophysical and Biochemical Cytology Volume 12 ; 12 >
+        au < manifest ; 1962 ; The Journal of Cell Biology Volume 13 ; 13 >
+        au < manifest ; 1962 ; The Journal of Cell Biology Volume 14 ; 14 >
+        au < manifest ; 1962 ; The Journal of Cell Biology Volume 15 ; 15 >
+        au < manifest ; 1962 ; The Journal of Cell Biology Volume 16 ; 16 >
+        au < manifest ; 1963 ; The Journal of Cell Biology Volume 17 ; 17 >
+        au < manifest ; 1963 ; The Journal of Cell Biology Volume 18 ; 18 >
+        au < manifest ; 1963 ; The Journal of Cell Biology Volume 19 ; 19 >
+        au < manifest ; 1963 ; The Journal of Cell Biology Volume 20 ; 20 >
+        au < manifest ; 1964 ; The Journal of Cell Biology Volume 21 ; 21 >
+        au < manifest ; 1964 ; The Journal of Cell Biology Volume 22 ; 22 >
+        au < manifest ; 1964 ; The Journal of Cell Biology Volume 23 ; 23 >
+        au < manifest ; 1964 ; The Journal of Cell Biology Volume 24 ; 24 >
+        au < manifest ; 1965 ; The Journal of Cell Biology Volume 25 ; 25 >
+        au < manifest ; 1965 ; The Journal of Cell Biology Volume 26 ; 26 >
+        au < manifest ; 1965 ; The Journal of Cell Biology Volume 27 ; 27 >
+        au < manifest ; 1965 ; The Journal of Cell Biology Volume 28 ; 28 >
+        au < manifest ; 1966 ; The Journal of Cell Biology Volume 29 ; 29 >
+        au < manifest ; 1966 ; The Journal of Cell Biology Volume 30 ; 30 >
+        au < manifest ; 1966 ; The Journal of Cell Biology Volume 31 ; 31 >
+        au < manifest ; 1966 ; The Journal of Cell Biology Volume 32 ; 32 >
+        au < manifest ; 1967 ; The Journal of Cell Biology Volume 33 ; 33 >
+        au < manifest ; 1967 ; The Journal of Cell Biology Volume 34 ; 34 >
+        au < manifest ; 1967 ; The Journal of Cell Biology Volume 35 ; 35 >
+        au < manifest ; 1967 ; The Journal of Cell Biology Volume 36 ; 36 >
+        au < manifest ; 1968 ; The Journal of Cell Biology Volume 37 ; 37 >
+        au < manifest ; 1968 ; The Journal of Cell Biology Volume 38 ; 38 >
+        au < manifest ; 1968 ; The Journal of Cell Biology Volume 39 ; 39 >
+        au < manifest ; 1968 ; The Journal of Cell Biology Volume 40 ; 40 >
+        au < manifest ; 1969 ; The Journal of Cell Biology Volume 41 ; 41 >
+        au < manifest ; 1969 ; The Journal of Cell Biology Volume 42 ; 42 >
+        au < manifest ; 1969 ; The Journal of Cell Biology Volume 43 ; 43 >
+        au < manifest ; 1969 ; The Journal of Cell Biology Volume 44 ; 44 >
+        au < manifest ; 1970 ; The Journal of Cell Biology Volume 45 ; 45 >
+        au < manifest ; 1970 ; The Journal of Cell Biology Volume 46 ; 46 >
+        au < manifest ; 1970 ; The Journal of Cell Biology Volume 47 ; 47 >
+        au < manifest ; 1970 ; The Journal of Cell Biology Volume 48 ; 48 >
+        au < manifest ; 1971 ; The Journal of Cell Biology Volume 49 ; 49 >
+        au < manifest ; 1971 ; The Journal of Cell Biology Volume 50 ; 50 >
+        au < manifest ; 1971 ; The Journal of Cell Biology Volume 51 ; 51 >
+        au < manifest ; 1971 ; The Journal of Cell Biology Volume 52 ; 52 >
+        au < manifest ; 1972 ; The Journal of Cell Biology Volume 53 ; 53 >
+        au < manifest ; 1972 ; The Journal of Cell Biology Volume 54 ; 54 >
+        au < manifest ; 1972 ; The Journal of Cell Biology Volume 55 ; 55 >
+        au < manifest ; 1972 ; The Journal of Cell Biology Volume 56 ; 56 >
+        au < manifest ; 1973 ; The Journal of Cell Biology Volume 57 ; 57 >
+        au < manifest ; 1973 ; The Journal of Cell Biology Volume 58 ; 58 >
+        au < manifest ; 1973 ; The Journal of Cell Biology Volume 59 ; 59 >
+        au < manifest ; 1973 ; The Journal of Cell Biology Volume 60 ; 60 >
+        au < manifest ; 1974 ; The Journal of Cell Biology Volume 61 ; 61 >
+        au < manifest ; 1974 ; The Journal of Cell Biology Volume 62 ; 62 >
+        au < manifest ; 1974 ; The Journal of Cell Biology Volume 63 ; 63 >
+        au < manifest ; 1974 ; The Journal of Cell Biology Volume 64 ; 64 >
+        au < manifest ; 1975 ; The Journal of Cell Biology Volume 65 ; 65 >
+        au < manifest ; 1975 ; The Journal of Cell Biology Volume 66 ; 66 >
+        au < manifest ; 1975 ; The Journal of Cell Biology Volume 67 ; 67 >
+        au < manifest ; 1975 ; The Journal of Cell Biology Volume 68 ; 68 >
+        au < manifest ; 1976 ; The Journal of Cell Biology Volume 69 ; 69 >
+        au < manifest ; 1976 ; The Journal of Cell Biology Volume 70 ; 70 >
+        au < manifest ; 1976 ; The Journal of Cell Biology Volume 71 ; 71 >
+        au < manifest ; 1976 ; The Journal of Cell Biology Volume 72 ; 72 >
+        au < manifest ; 1977 ; The Journal of Cell Biology Volume 73 ; 73 >
+        au < manifest ; 1977 ; The Journal of Cell Biology Volume 74 ; 74 >
+        au < manifest ; 1977 ; The Journal of Cell Biology Volume 75 ; 75 >
+        au < manifest ; 1977 ; The Journal of Cell Biology Volume 76 ; 76 >
+        au < manifest ; 1978 ; The Journal of Cell Biology Volume 77 ; 77 >
+        au < manifest ; 1978 ; The Journal of Cell Biology Volume 78 ; 78 >
+        au < manifest ; 1978 ; The Journal of Cell Biology Volume 79 ; 79 >
+        au < manifest ; 1978 ; The Journal of Cell Biology Volume 80 ; 80 >
+        au < manifest ; 1979 ; The Journal of Cell Biology Volume 81 ; 81 >
+        au < manifest ; 1979 ; The Journal of Cell Biology Volume 82 ; 82 >
+        au < manifest ; 1979 ; The Journal of Cell Biology Volume 83 ; 83 >
+        au < manifest ; 1979 ; The Journal of Cell Biology Volume 84 ; 84 >
+        au < manifest ; 1980 ; The Journal of Cell Biology Volume 85 ; 85 >
+        au < manifest ; 1980 ; The Journal of Cell Biology Volume 86 ; 86 >
+        au < manifest ; 1980 ; The Journal of Cell Biology Volume 87 ; 87 >
+        au < manifest ; 1980 ; The Journal of Cell Biology Volume 88 ; 88 >
+        au < manifest ; 1981 ; The Journal of Cell Biology Volume 89 ; 89 >
+        au < manifest ; 1981 ; The Journal of Cell Biology Volume 90 ; 90 >
+        au < manifest ; 1981 ; The Journal of Cell Biology Volume 91 ; 91 >
+        au < manifest ; 1981 ; The Journal of Cell Biology Volume 92 ; 92 >
+        au < manifest ; 1982 ; The Journal of Cell Biology Volume 93 ; 93 >
+        au < manifest ; 1982 ; The Journal of Cell Biology Volume 94 ; 94 >
+        au < manifest ; 1982 ; The Journal of Cell Biology Volume 95 ; 95 >
+        au < manifest ; 1982 ; The Journal of Cell Biology Volume 96 ; 96 >
+        au < manifest ; 1983 ; The Journal of Cell Biology Volume 97 ; 97 >
+        au < manifest ; 1983 ; The Journal of Cell Biology Volume 98 ; 98 >
+        au < manifest ; 1984 ; The Journal of Cell Biology Volume 99 ; 99 >
+        au < manifest ; 1984 ; The Journal of Cell Biology Volume 100 ; 100 >
+        au < manifest ; 1985 ; The Journal of Cell Biology Volume 101 ; 101 >
+        au < manifest ; 1985 ; The Journal of Cell Biology Volume 102 ; 102 >
+        au < manifest ; 1986 ; The Journal of Cell Biology Volume 103 ; 103 >
+        au < manifest ; 1986 ; The Journal of Cell Biology Volume 104 ; 104 >
+        au < manifest ; 1987 ; The Journal of Cell Biology Volume 105 ; 105 >
+        au < manifest ; 1987 ; The Journal of Cell Biology Volume 106 ; 106 >
+        au < manifest ; 1988 ; The Journal of Cell Biology Volume 107 ; 107 >
+        au < manifest ; 1988 ; The Journal of Cell Biology Volume 108 ; 108 >
+        au < manifest ; 1989 ; The Journal of Cell Biology Volume 109 ; 109 >
+        au < manifest ; 1989 ; The Journal of Cell Biology Volume 110 ; 110 >
+        au < manifest ; 1990 ; The Journal of Cell Biology Volume 111 ; 111 >
+        au < manifest ; 1990 ; The Journal of Cell Biology Volume 112 ; 112 >
+        au < manifest ; 1991 ; The Journal of Cell Biology Volume 113 ; 113 >
+        au < manifest ; 1991 ; The Journal of Cell Biology Volume 114 ; 114 >
+        au < manifest ; 1991 ; The Journal of Cell Biology Volume 115 ; 115 >
+        au < manifest ; 1991 ; The Journal of Cell Biology Volume 116 ; 116 >
+        au < manifest ; 1992 ; The Journal of Cell Biology Volume 117 ; 117 >
+        au < manifest ; 1992 ; The Journal of Cell Biology Volume 118 ; 118 >
+        au < manifest ; 1992 ; The Journal of Cell Biology Volume 119 ; 119 >
+        au < manifest ; 1992 ; The Journal of Cell Biology Volume 120 ; 120 >
+        au < manifest ; 1993 ; The Journal of Cell Biology Volume 121 ; 121 >
+        au < manifest ; 1993 ; The Journal of Cell Biology Volume 122 ; 122 >
+        au < manifest ; 1993 ; The Journal of Cell Biology Volume 123 ; 123 >
+        au < manifest ; 1993 ; The Journal of Cell Biology Volume 124 ; 124 >
+        au < manifest ; 1994 ; The Journal of Cell Biology Volume 125 ; 125 >
+        au < manifest ; 1994 ; The Journal of Cell Biology Volume 126 ; 126 >
+        au < manifest ; 1994 ; The Journal of Cell Biology Volume 127 ; 127 >
+        au < manifest ; 1994 ; The Journal of Cell Biology Volume 128 ; 128 >
+        au < manifest ; 1995 ; The Journal of Cell Biology Volume 129 ; 129 >
+        au < manifest ; 1995 ; The Journal of Cell Biology Volume 130 ; 130 >
+        au < manifest ; 1995 ; The Journal of Cell Biology Volume 131 ; 131 >
+        au < manifest ; 1995 ; The Journal of Cell Biology Volume 132 ; 132 >
+        au < manifest ; 1996 ; The Journal of Cell Biology Volume 133 ; 133 >
+        au < manifest ; 1996 ; The Journal of Cell Biology Volume 134 ; 134 >
+        au < manifest ; 1996 ; The Journal of Cell Biology Volume 135 ; 135 >
+        au < manifest ; 1996 ; The Journal of Cell Biology Volume 136 ; 136 >
+        au < manifest ; 1997 ; The Journal of Cell Biology Volume 137 ; 137 >
+        au < manifest ; 1997 ; The Journal of Cell Biology Volume 138 ; 138 >
+        au < manifest ; 1997 ; The Journal of Cell Biology Volume 139 ; 139 >
+        au < manifest ; 1997 ; The Journal of Cell Biology Volume 140 ; 140 >
+        au < manifest ; 1998 ; The Journal of Cell Biology Volume 141 ; 141 >
+        au < manifest ; 1998 ; The Journal of Cell Biology Volume 142 ; 142 >
+        au < manifest ; 1998 ; The Journal of Cell Biology Volume 143 ; 143 >
+        au < manifest ; 1998 ; The Journal of Cell Biology Volume 144 ; 144 >
+        au < manifest ; 1999 ; The Journal of Cell Biology Volume 145 ; 145 >
+        au < manifest ; 1999 ; The Journal of Cell Biology Volume 146 ; 146 >
+        au < manifest ; 1999 ; The Journal of Cell Biology Volume 147 ; 147 >
+        au < manifest ; 1999 ; The Journal of Cell Biology Volume 148 ; 148 >
+        au < manifest ; 2000 ; The Journal of Cell Biology Volume 149 ; 149 >
+        au < manifest ; 2000 ; The Journal of Cell Biology Volume 150 ; 150 >
+        au < manifest ; 2000 ; The Journal of Cell Biology Volume 151 ; 151 >
+        au < manifest ; 2000 ; The Journal of Cell Biology Volume 152 ; 152 >
+        au < manifest ; 2001 ; The Journal of Cell Biology Volume 153 ; 153 >
+        au < manifest ; 2001 ; The Journal of Cell Biology Volume 154 ; 154 >
+        au < manifest ; 2001 ; The Journal of Cell Biology Volume 155 ; 155 >
+        au < manifest ; 2001 ; The Journal of Cell Biology Volume 156 ; 156 >
+        au < manifest ; 2002 ; The Journal of Cell Biology Volume 157 ; 157 >
+        au < manifest ; 2002 ; The Journal of Cell Biology Volume 158 ; 158 >
+        au < manifest ; 2002 ; The Journal of Cell Biology Volume 159 ; 159 >
+        au < manifest ; 2002 ; The Journal of Cell Biology Volume 160 ; 160 >
+        au < manifest ; 2003 ; The Journal of Cell Biology Volume 161 ; 161 >
+        au < manifest ; 2003 ; The Journal of Cell Biology Volume 162 ; 162 >
+        au < manifest ; 2003 ; The Journal of Cell Biology Volume 163 ; 163 >
+        au < manifest ; 2003 ; The Journal of Cell Biology Volume 164 ; 164 >
+        au < manifest ; 2004 ; The Journal of Cell Biology Volume 165 ; 165 >
+        au < manifest ; 2004 ; The Journal of Cell Biology Volume 166 ; 166 >
+        au < manifest ; 2004 ; The Journal of Cell Biology Volume 167 ; 167 >
+        au < manifest ; 2004 ; The Journal of Cell Biology Volume 168 ; 168 >
+        au < manifest ; 2005 ; The Journal of Cell Biology Volume 169 ; 169 >
+        au < manifest ; 2005 ; The Journal of Cell Biology Volume 170 ; 170 >
+        au < manifest ; 2005 ; The Journal of Cell Biology Volume 171 ; 171 >
+        au < manifest ; 2005 ; The Journal of Cell Biology Volume 172 ; 172 >
+        au < manifest ; 2006 ; The Journal of Cell Biology Volume 173 ; 173 >
+        au < manifest ; 2006 ; The Journal of Cell Biology Volume 174 ; 174 >
+        au < manifest ; 2006 ; The Journal of Cell Biology Volume 175 ; 175 >
+        au < manifest ; 2006 ; The Journal of Cell Biology Volume 176 ; 176 >
+        au < manifest ; 2007 ; The Journal of Cell Biology Volume 177 ; 177 >
+        au < manifest ; 2007 ; The Journal of Cell Biology Volume 178 ; 178 >
+        au < manifest ; 2007 ; The Journal of Cell Biology Volume 179 ; 179 >
+        au < manifest ; 2007 ; The Journal of Cell Biology Volume 180 ; 180 >
+        au < manifest ; 2008 ; The Journal of Cell Biology Volume 181 ; 181 >
+        au < manifest ; 2008 ; The Journal of Cell Biology Volume 182 ; 182 >
+        au < manifest ; 2008 ; The Journal of Cell Biology Volume 183 ; 183 >
+        au < manifest ; 2008 ; The Journal of Cell Biology Volume 184 ; 184 >
+        au < manifest ; 2009 ; The Journal of Cell Biology Volume 185 ; 185 >
+        au < manifest ; 2009 ; The Journal of Cell Biology Volume 186 ; 186 >
+        au < manifest ; 2009 ; The Journal of Cell Biology Volume 187 ; 187 >
+        au < manifest ; 2009 ; The Journal of Cell Biology Volume 188 ; 188 >
+        au < manifest ; 2010 ; The Journal of Cell Biology Volume 189 ; 189 >
+
+    }
+
+  }
+
+  {
+  
+    title <
+      name = The Journal of Experimental Medicine ;
+      issn = 0022-1007 ;
+      eissn = 1540-9538
+    >
+
+     {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jem.rupress.org/
+      implicit < status ; attr[year] ; name ; param[volume_name] >
+
+        au < manifest ; 1955 ; The Journal of Experimental Medicine Volume 101 ; 101 >
+        au < manifest ; 1955 ; The Journal of Experimental Medicine Volume 102 ; 102 >
+        au < manifest ; 1956 ; The Journal of Experimental Medicine Volume 103 ; 103 >
+        au < manifest ; 1956 ; The Journal of Experimental Medicine Volume 104 ; 104 >
+        au < manifest ; 1957 ; The Journal of Experimental Medicine Volume 105 ; 105 >
+        au < manifest ; 1957 ; The Journal of Experimental Medicine Volume 106 ; 106 >
+        au < manifest ; 1958 ; The Journal of Experimental Medicine Volume 107 ; 107 >
+        au < manifest ; 1958 ; The Journal of Experimental Medicine Volume 108 ; 108 >
+        au < manifest ; 1959 ; The Journal of Experimental Medicine Volume 109 ; 109 >
+        au < manifest ; 1959 ; The Journal of Experimental Medicine Volume 110 ; 110 >
+        au < manifest ; 1960 ; The Journal of Experimental Medicine Volume 111 ; 111 >
+        au < manifest ; 1960 ; The Journal of Experimental Medicine Volume 112 ; 112 >
+        au < manifest ; 1961 ; The Journal of Experimental Medicine Volume 113 ; 113 >
+        au < manifest ; 1961 ; The Journal of Experimental Medicine Volume 114 ; 114 >
+        au < manifest ; 1962 ; The Journal of Experimental Medicine Volume 115 ; 115 >
+        au < manifest ; 1962 ; The Journal of Experimental Medicine Volume 116 ; 116 >
+        au < manifest ; 1963 ; The Journal of Experimental Medicine Volume 117 ; 117 >
+        au < manifest ; 1963 ; The Journal of Experimental Medicine Volume 118 ; 118 >
+        au < manifest ; 1964 ; The Journal of Experimental Medicine Volume 119 ; 119 >
+        au < manifest ; 1964 ; The Journal of Experimental Medicine Volume 120 ; 120 >
+        au < manifest ; 1965 ; The Journal of Experimental Medicine Volume 121 ; 121 >
+        au < manifest ; 1965 ; The Journal of Experimental Medicine Volume 122 ; 122 >
+        au < manifest ; 1966 ; The Journal of Experimental Medicine Volume 123 ; 123 >
+        au < manifest ; 1966 ; The Journal of Experimental Medicine Volume 124 ; 124 >
+        au < manifest ; 1967 ; The Journal of Experimental Medicine Volume 125 ; 125 >
+        au < manifest ; 1967 ; The Journal of Experimental Medicine Volume 126 ; 126 >
+        au < manifest ; 1968 ; The Journal of Experimental Medicine Volume 127 ; 127 >
+        au < manifest ; 1968 ; The Journal of Experimental Medicine Volume 128 ; 128 >
+        au < manifest ; 1969 ; The Journal of Experimental Medicine Volume 129 ; 129 >
+        au < manifest ; 1969 ; The Journal of Experimental Medicine Volume 130 ; 130 >
+        au < manifest ; 1970 ; The Journal of Experimental Medicine Volume 131 ; 131 >
+        au < manifest ; 1970 ; The Journal of Experimental Medicine Volume 132 ; 132 >
+        au < manifest ; 1971 ; The Journal of Experimental Medicine Volume 133 ; 133 >
+        au < manifest ; 1971 ; The Journal of Experimental Medicine Volume 134 ; 134 >
+        au < manifest ; 1972 ; The Journal of Experimental Medicine Volume 135 ; 135 >
+        au < manifest ; 1972 ; The Journal of Experimental Medicine Volume 136 ; 136 >
+        au < manifest ; 1973 ; The Journal of Experimental Medicine Volume 137 ; 137 >
+        au < manifest ; 1973 ; The Journal of Experimental Medicine Volume 138 ; 138 >
+        au < manifest ; 1974 ; The Journal of Experimental Medicine Volume 139 ; 139 >
+        au < manifest ; 1974 ; The Journal of Experimental Medicine Volume 140 ; 140 >
+        au < manifest ; 1975 ; The Journal of Experimental Medicine Volume 141 ; 141 >
+        au < manifest ; 1975 ; The Journal of Experimental Medicine Volume 142 ; 142 >
+        au < manifest ; 1976 ; The Journal of Experimental Medicine Volume 143 ; 143 >
+        au < manifest ; 1976 ; The Journal of Experimental Medicine Volume 144 ; 144 >
+        au < manifest ; 1977 ; The Journal of Experimental Medicine Volume 145 ; 145 >
+        au < manifest ; 1977 ; The Journal of Experimental Medicine Volume 146 ; 146 >
+        au < manifest ; 1978 ; The Journal of Experimental Medicine Volume 147 ; 147 >
+        au < manifest ; 1978 ; The Journal of Experimental Medicine Volume 148 ; 148 >
+        au < manifest ; 1979 ; The Journal of Experimental Medicine Volume 149 ; 149 >
+        au < manifest ; 1979 ; The Journal of Experimental Medicine Volume 150 ; 150 >
+        au < manifest ; 1980 ; The Journal of Experimental Medicine Volume 151 ; 151 >
+        au < manifest ; 1980 ; The Journal of Experimental Medicine Volume 152 ; 152 >
+        au < manifest ; 1981 ; The Journal of Experimental Medicine Volume 153 ; 153 >
+        au < manifest ; 1981 ; The Journal of Experimental Medicine Volume 154 ; 154 >
+        au < manifest ; 1982 ; The Journal of Experimental Medicine Volume 155 ; 155 >
+        au < manifest ; 1982 ; The Journal of Experimental Medicine Volume 156 ; 156 >
+        au < manifest ; 1983 ; The Journal of Experimental Medicine Volume 157 ; 157 >
+        au < manifest ; 1983 ; The Journal of Experimental Medicine Volume 158 ; 158 >
+        au < manifest ; 1984 ; The Journal of Experimental Medicine Volume 159 ; 159 >
+        au < manifest ; 1984 ; The Journal of Experimental Medicine Volume 160 ; 160 >
+        au < manifest ; 1985 ; The Journal of Experimental Medicine Volume 161 ; 161 >
+        au < manifest ; 1985 ; The Journal of Experimental Medicine Volume 162 ; 162 >
+        au < manifest ; 1986 ; The Journal of Experimental Medicine Volume 163 ; 163 >
+        au < manifest ; 1986 ; The Journal of Experimental Medicine Volume 164 ; 164 >
+        au < manifest ; 1987 ; The Journal of Experimental Medicine Volume 165 ; 165 >
+        au < manifest ; 1987 ; The Journal of Experimental Medicine Volume 166 ; 166 >
+        au < manifest ; 1988 ; The Journal of Experimental Medicine Volume 167 ; 167 >
+        au < manifest ; 1988 ; The Journal of Experimental Medicine Volume 168 ; 168 >
+        au < manifest ; 1989 ; The Journal of Experimental Medicine Volume 169 ; 169 >
+        au < manifest ; 1989 ; The Journal of Experimental Medicine Volume 170 ; 170 >
+        au < manifest ; 1990 ; The Journal of Experimental Medicine Volume 171 ; 171 >
+        au < manifest ; 1990 ; The Journal of Experimental Medicine Volume 172 ; 172 >
+        au < manifest ; 1991 ; The Journal of Experimental Medicine Volume 173 ; 173 >
+        au < manifest ; 1991 ; The Journal of Experimental Medicine Volume 174 ; 174 >
+        au < manifest ; 1992 ; The Journal of Experimental Medicine Volume 175 ; 175 >
+        au < manifest ; 1992 ; The Journal of Experimental Medicine Volume 176 ; 176 >
+        au < manifest ; 1993 ; The Journal of Experimental Medicine Volume 177 ; 177 >
+        au < manifest ; 1993 ; The Journal of Experimental Medicine Volume 178 ; 178 >
+        au < manifest ; 1994 ; The Journal of Experimental Medicine Volume 179 ; 179 >
+        au < manifest ; 1994 ; The Journal of Experimental Medicine Volume 180 ; 180 >
+        au < manifest ; 1995 ; The Journal of Experimental Medicine Volume 181 ; 181 >
+        au < manifest ; 1995 ; The Journal of Experimental Medicine Volume 182 ; 182 >
+        au < manifest ; 1996 ; The Journal of Experimental Medicine Volume 183 ; 183 >
+        au < manifest ; 1996 ; The Journal of Experimental Medicine Volume 184 ; 184 >
+        au < manifest ; 1997 ; The Journal of Experimental Medicine Volume 185 ; 185 >
+        au < manifest ; 1997 ; The Journal of Experimental Medicine Volume 186 ; 186 >
+        au < manifest ; 1998 ; The Journal of Experimental Medicine Volume 187 ; 187 >
+        au < manifest ; 1998 ; The Journal of Experimental Medicine Volume 188 ; 188 >
+        au < manifest ; 1999 ; The Journal of Experimental Medicine Volume 189 ; 189 >
+        au < manifest ; 1999 ; The Journal of Experimental Medicine Volume 190 ; 190 >
+        au < manifest ; 2000 ; The Journal of Experimental Medicine Volume 191 ; 191 >
+        au < manifest ; 2000 ; The Journal of Experimental Medicine Volume 192 ; 192 >
+        au < manifest ; 2001 ; The Journal of Experimental Medicine Volume 193 ; 193 >
+        au < manifest ; 2001 ; The Journal of Experimental Medicine Volume 194 ; 194 >
+        au < manifest ; 2002 ; The Journal of Experimental Medicine Volume 195 ; 195 >
+        au < manifest ; 2002 ; The Journal of Experimental Medicine Volume 196 ; 196 >
+        au < manifest ; 2003 ; The Journal of Experimental Medicine Volume 197 ; 197 >
+        au < manifest ; 2003 ; The Journal of Experimental Medicine Volume 198 ; 198 >
+        au < manifest ; 2004 ; The Journal of Experimental Medicine Volume 199 ; 199 >
+        au < manifest ; 2004 ; The Journal of Experimental Medicine Volume 200 ; 200 >
+        au < manifest ; 2005 ; The Journal of Experimental Medicine Volume 201 ; 201 >
+        au < manifest ; 2005 ; The Journal of Experimental Medicine Volume 202 ; 202 >
+        au < manifest ; 2006 ; The Journal of Experimental Medicine Volume 203 ; 203 >
+        au < manifest ; 2007 ; The Journal of Experimental Medicine Volume 204 ; 204 >
+        au < manifest ; 2008 ; The Journal of Experimental Medicine Volume 205 ; 205 >
+        au < manifest ; 2009 ; The Journal of Experimental Medicine Volume 206 ; 206 >
+        au < manifest ; 2010 ; The Journal of Experimental Medicine Volume 207 ; 207 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = The Journal of General Physiology ;
+      issn = 0022-1295 ;
+      eissn = 1540-7748
+    >
+
+     {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jgp.rupress.org/
+      implicit < status ; attr[year] ; name ; param[volume_name] >
+      
+              au < manifest ; 1954 ; The Journal of General Physiology Volume 38 ; 38 >
+        au < manifest ; 1955 ; The Journal of General Physiology Volume 38 ; 38 >
+        au < manifest ; 1955 ; The Journal of General Physiology Volume 39 ; 39 >
+        au < manifest ; 1956 ; The Journal of General Physiology Volume 39 ; 39 >
+        au < manifest ; 1956 ; The Journal of General Physiology Volume 40 ; 40 >
+        au < manifest ; 1957 ; The Journal of General Physiology Volume 40 ; 40 >
+        au < manifest ; 1957 ; The Journal of General Physiology Volume 41 ; 41 >
+        au < manifest ; 1958 ; The Journal of General Physiology Volume 41 ; 41 >
+        au < manifest ; 1958 ; The Journal of General Physiology Volume 42 ; 42 >
+        au < manifest ; 1959 ; The Journal of General Physiology Volume 42 ; 42 >
+        au < manifest ; 1959 ; The Journal of General Physiology Volume 43 ; 43 >
+        au < manifest ; 1960 ; The Journal of General Physiology Volume 43 ; 43 >
+        au < manifest ; 1960 ; The Journal of General Physiology Volume 44 ; 44 >
+        au < manifest ; 1961 ; The Journal of General Physiology Volume 44 ; 44 >
+        au < manifest ; 1961 ; The Journal of General Physiology Volume 45 ; 45 >
+        au < manifest ; 1962 ; The Journal of General Physiology Volume 45 ; 45 >
+        au < manifest ; 1962 ; The Journal of General Physiology Volume 46 ; 46 >
+        au < manifest ; 1963 ; The Journal of General Physiology Volume 46 ; 46 >
+        au < manifest ; 1963 ; The Journal of General Physiology Volume 47 ; 47 >
+        au < manifest ; 1964 ; The Journal of General Physiology Volume 47 ; 47 >
+        au < manifest ; 1964 ; The Journal of General Physiology Volume 48 ; 48 >
+        au < manifest ; 1965 ; The Journal of General Physiology Volume 48 ; 48 >
+        au < manifest ; 1965 ; The Journal of General Physiology Volume 49 ; 49 >
+        au < manifest ; 1966 ; The Journal of General Physiology Volume 49 ; 49 >
+        au < manifest ; 1966 ; The Journal of General Physiology Volume 50 ; 50 >
+        au < manifest ; 1967 ; The Journal of General Physiology Volume 50 ; 50 >
+        au < manifest ; 1968 ; The Journal of General Physiology Volume 51 ; 51 >
+        au < manifest ; 1968 ; The Journal of General Physiology Volume 52 ; 52 >
+        au < manifest ; 1969 ; The Journal of General Physiology Volume 53 ; 53 >
+        au < manifest ; 1969 ; The Journal of General Physiology Volume 54 ; 54 >
+        au < manifest ; 1970 ; The Journal of General Physiology Volume 55 ; 55 >
+        au < manifest ; 1970 ; The Journal of General Physiology Volume 56 ; 56 >
+        au < manifest ; 1971 ; The Journal of General Physiology Volume 57 ; 57 >
+        au < manifest ; 1971 ; The Journal of General Physiology Volume 58 ; 58 >
+        au < manifest ; 1972 ; The Journal of General Physiology Volume 59 ; 59 >
+        au < manifest ; 1972 ; The Journal of General Physiology Volume 60 ; 60 >
+        au < manifest ; 1973 ; The Journal of General Physiology Volume 61 ; 61 >
+        au < manifest ; 1973 ; The Journal of General Physiology Volume 62 ; 62 >
+        au < manifest ; 1974 ; The Journal of General Physiology Volume 63 ; 63 >
+        au < manifest ; 1974 ; The Journal of General Physiology Volume 64 ; 64 >
+        au < manifest ; 1975 ; The Journal of General Physiology Volume 65 ; 65 >
+        au < manifest ; 1975 ; The Journal of General Physiology Volume 66 ; 66 >
+        au < manifest ; 1976 ; The Journal of General Physiology Volume 67 ; 67 >
+        au < manifest ; 1976 ; The Journal of General Physiology Volume 68 ; 68 >
+        au < manifest ; 1977 ; The Journal of General Physiology Volume 69 ; 69 >
+        au < manifest ; 1977 ; The Journal of General Physiology Volume 70 ; 70 >
+        au < manifest ; 1978 ; The Journal of General Physiology Volume 71 ; 71 >
+        au < manifest ; 1978 ; The Journal of General Physiology Volume 72 ; 72 >
+        au < manifest ; 1979 ; The Journal of General Physiology Volume 73 ; 73 >
+        au < manifest ; 1979 ; The Journal of General Physiology Volume 74 ; 74 >
+        au < manifest ; 1980 ; The Journal of General Physiology Volume 75 ; 75 >
+        au < manifest ; 1980 ; The Journal of General Physiology Volume 76 ; 76 >
+        au < manifest ; 1981 ; The Journal of General Physiology Volume 77 ; 77 >
+        au < manifest ; 1981 ; The Journal of General Physiology Volume 78 ; 78 >
+        au < manifest ; 1982 ; The Journal of General Physiology Volume 79 ; 79 >
+        au < manifest ; 1982 ; The Journal of General Physiology Volume 80 ; 80 >
+        au < manifest ; 1983 ; The Journal of General Physiology Volume 81 ; 81 >
+        au < manifest ; 1983 ; The Journal of General Physiology Volume 82 ; 82 >
+        au < manifest ; 1984 ; The Journal of General Physiology Volume 83 ; 83 >
+        au < manifest ; 1984 ; The Journal of General Physiology Volume 84 ; 84 >
+        au < manifest ; 1985 ; The Journal of General Physiology Volume 85 ; 85 >
+        au < manifest ; 1985 ; The Journal of General Physiology Volume 86 ; 86 >
+        au < manifest ; 1986 ; The Journal of General Physiology Volume 87 ; 87 >
+        au < manifest ; 1986 ; The Journal of General Physiology Volume 88 ; 88 >
+        au < manifest ; 1987 ; The Journal of General Physiology Volume 89 ; 89 >
+        au < manifest ; 1987 ; The Journal of General Physiology Volume 90 ; 90 >
+        au < manifest ; 1988 ; The Journal of General Physiology Volume 91 ; 91 >
+        au < manifest ; 1988 ; The Journal of General Physiology Volume 92 ; 92 >
+        au < manifest ; 1989 ; The Journal of General Physiology Volume 93 ; 93 >
+        au < manifest ; 1989 ; The Journal of General Physiology Volume 94 ; 94 >
+        au < manifest ; 1990 ; The Journal of General Physiology Volume 95 ; 95 >
+        au < manifest ; 1990 ; The Journal of General Physiology Volume 96 ; 96 >
+        au < manifest ; 1991 ; The Journal of General Physiology Volume 97 ; 97 >
+        au < manifest ; 1991 ; The Journal of General Physiology Volume 98 ; 98 >
+        au < manifest ; 1992 ; The Journal of General Physiology Volume 99 ; 99 >
+        au < manifest ; 1992 ; The Journal of General Physiology Volume 100 ; 100 >
+        au < manifest ; 1993 ; The Journal of General Physiology Volume 101 ; 101 >
+        au < manifest ; 1993 ; The Journal of General Physiology Volume 102 ; 102 >
+        au < manifest ; 1994 ; The Journal of General Physiology Volume 103 ; 103 >
+        au < manifest ; 1994 ; The Journal of General Physiology Volume 104 ; 104 >
+        au < manifest ; 1995 ; The Journal of General Physiology Volume 105 ; 105 >
+        au < manifest ; 1995 ; The Journal of General Physiology Volume 106 ; 106 >
+        au < manifest ; 1996 ; The Journal of General Physiology Volume 107 ; 107 >
+        au < manifest ; 1996 ; The Journal of General Physiology Volume 108 ; 108 >
+        au < manifest ; 1997 ; The Journal of General Physiology Volume 109 ; 109 >
+        au < manifest ; 1997 ; The Journal of General Physiology Volume 110 ; 110 >
+        au < manifest ; 1998 ; The Journal of General Physiology Volume 111 ; 111 >
+        au < manifest ; 1998 ; The Journal of General Physiology Volume 112 ; 112 >
+        au < manifest ; 1999 ; The Journal of General Physiology Volume 113 ; 113 >
+        au < manifest ; 1999 ; The Journal of General Physiology Volume 114 ; 114 >
+        au < manifest ; 2000 ; The Journal of General Physiology Volume 115 ; 115 >
+        au < manifest ; 2000 ; The Journal of General Physiology Volume 116 ; 116 >
+        au < manifest ; 2001 ; The Journal of General Physiology Volume 117 ; 117 >
+        au < manifest ; 2001 ; The Journal of General Physiology Volume 118 ; 118 >
+        au < manifest ; 2002 ; The Journal of General Physiology Volume 119 ; 119 >
+        au < manifest ; 2002 ; The Journal of General Physiology Volume 120 ; 120 >
+        au < manifest ; 2003 ; The Journal of General Physiology Volume 121 ; 121 >
+        au < manifest ; 2003 ; The Journal of General Physiology Volume 122 ; 122 >
+        au < manifest ; 2004 ; The Journal of General Physiology Volume 123 ; 123 >
+        au < manifest ; 2004 ; The Journal of General Physiology Volume 124 ; 124 >
+        au < manifest ; 2005 ; The Journal of General Physiology Volume 125 ; 125 >
+        au < manifest ; 2005 ; The Journal of General Physiology Volume 126 ; 126 >
+        au < manifest ; 2006 ; The Journal of General Physiology Volume 127 ; 127 >
+        au < manifest ; 2006 ; The Journal of General Physiology Volume 128 ; 128 >
+        au < manifest ; 2007 ; The Journal of General Physiology Volume 129 ; 129 >
+        au < manifest ; 2007 ; The Journal of General Physiology Volume 130 ; 130 >
+        au < manifest ; 2008 ; The Journal of General Physiology Volume 131 ; 131 >
+        au < manifest ; 2008 ; The Journal of General Physiology Volume 132 ; 132 >
+        au < manifest ; 2009 ; The Journal of General Physiology Volume 133 ; 133 >
+        au < manifest ; 2009 ; The Journal of General Physiology Volume 134 ; 134 >
+        au < manifest ; 2010 ; The Journal of General Physiology Volume 135 ; 135 >
+      
+    }
+
+  }
+
+}
