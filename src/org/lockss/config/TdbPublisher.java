@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.4 2010-04-06 18:16:55 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.5 2010-04-07 03:13:10 pgust Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import java.util.Set;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.4 2010-04-06 18:16:55 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.5 2010-04-07 03:13:10 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -158,7 +158,7 @@ public class TdbPublisher {
     
     String id = title.getId();
     if (id == null) {
-      id = genTdbTitleId(title);
+      id = genTdbTitleId(title.getName());
     }
     TdbTitle existingTitle = getTdbTitleById(id);
     if (existingTitle != null) {
@@ -186,11 +186,11 @@ public class TdbPublisher {
    * 
    * @return a unique title ID
    */
-  protected String genTdbTitleId(TdbTitle title) {
+  protected String genTdbTitleId(String titleName) {
     // use a hash of publisher name and title name for now
     // todo: should we verify this and retry if collision found
     // with other titles in this publisher?
-    return Integer.toString((title.getName() + name).hashCode());  
+    return Integer.toString((titleName + name).hashCode());
   }
   
   /**
