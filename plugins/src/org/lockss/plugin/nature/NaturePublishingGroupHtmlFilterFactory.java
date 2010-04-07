@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.10 2010-04-03 02:56:10 edwardsb1 Exp $
+ * $Id: NaturePublishingGroupHtmlFilterFactory.java,v 1.11 2010-04-07 22:26:41 edwardsb1 Exp $
  */
 
 /*
@@ -165,8 +165,8 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
          * Remove <div class="logo">
          */
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "logo")),
+                                                                         "id",
+                                                                         "footer-copyright")),
         /*
          * Article pages may have a dynamically-generated list of
          * articles similar to the current one.
@@ -220,6 +220,10 @@ public class NaturePublishingGroupHtmlFilterFactory implements FilterFactory {
        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
        HtmlNodeFilterTransform.exclude(new TagNameFilter("noscript")),
 
+       HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+           "class",
+           "baseline-wrapper")),
+       
     };
 
     return new HtmlFilterInputStream(in,
