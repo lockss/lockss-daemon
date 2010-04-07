@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.4 2010-04-06 18:14:51 pgust Exp $
+ * $Id: Tdb.java,v 1.5 2010-04-07 03:11:50 pgust Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.util.Logger;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.4 2010-04-06 18:14:51 pgust Exp $
+ * @version $Id: Tdb.java,v 1.5 2010-04-07 03:11:50 pgust Exp $
  */
 public class Tdb {
   /**
@@ -651,19 +651,13 @@ public class Tdb {
       // get the title name 
       String titleName = getTdbTitleName(props, au);
 
-      // find a matching title for this publisher
-      if (titleId != null) {
-        title = publisher.getTdbTitleById(titleId); 
-      } else {
-        // locate title with no title ID by name
-        Collection<TdbTitle> titles = publisher.getTdbTitlesByName(titleName);
-        for (TdbTitle aTitle : titles) {
-          if (aTitle.getId() == null) {
-            title = aTitle;
-            break;
-          }
-        }
+      // generate titleId if one not specified
+      if (titleId == null) {
+        titleId = publisher.genTdbTitleId(titleName);
       }
+
+      // find a matching title for this publisher
+      title = publisher.getTdbTitleById(titleId); 
 
       // create and add title to publisher if not found
       if (title == null) {
@@ -672,9 +666,8 @@ public class Tdb {
           logger.warning("Journal title name missing. Using: \"" + titleName + "\"");
         }
         title = new TdbTitle(titleName);
-        if (titleId != null) {
-          title.setId(titleId);
-        }
+        title.setId(titleId);
+
         publisher.addTdbTitle(title);
       }
     }
