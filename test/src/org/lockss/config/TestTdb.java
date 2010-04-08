@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
+ * $Id: TestTdb.java,v 1.4 2010-04-08 01:40:23 pgust Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.3 2010-04-06 18:21:56 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.4 2010-04-08 01:40:23 pgust Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -240,15 +240,6 @@ public class TestTdb extends LockssTestCase {
     addTestPublisher2(tdb);
     assertEquals(2, tdb.getTdbPublisherCount());
     assertEquals(4, tdb.getTdbTitleCount());
-    for (TdbPublisher publisher : tdb.getAllTdbPublishers().values()) {
-      log.info("Publisher " + publisher.getName());
-      for (TdbTitle title : publisher.getTdbTitles()) {
-        log.info("  Title " + title.getName() + " (" + title.getId() + ")");
-        for (TdbAu au : title.getTdbAus()) {
-          log.info("    Au: " + au.getName() + " (" + au.getPluginId() + ") [id " + au.getId() + "]");
-        }
-      }
-    }
     assertEquals(8, tdb.getTdbAuCount());
 
     assertEquals(4, tdb.getTdbAus("plugin_p2").size());
@@ -283,7 +274,7 @@ public class TestTdb extends LockssTestCase {
     assertFalse(title0.getTdbAusByName("Not me").isEmpty());
     assertEquals(tdbAu0, title0.getTdbAuById(tdbAu0.getId()));
     Properties p1 = new Properties();
-    p1.put("title", "Air & Space volume 3");
+    p1.put("title", "Air & Space Volume 3");
     p1.put("plugin", "org.lockss.testplugin1");
 
     p1.put("pluginVersion", "4");
@@ -296,6 +287,7 @@ public class TestTdb extends LockssTestCase {
     p1.put("param.2.key", "year");
     p1.put("param.2.value", "1999");
     p1.put("attributes.publisher", "The Smithsonian Institution");
+
     TdbAu tdbAu1 = tdb.addTdbAuFromProperties(p1);
 
     pubsMap = tdb.getAllTdbPublishers();
@@ -321,13 +313,41 @@ public class TestTdb extends LockssTestCase {
     
     TdbAu au1  = aus1.iterator().next();
     assertNotNull(au1);
-    assertEquals("Air & Space volume 3", au1.getName());
+    assertEquals("Air & Space Volume 3", au1.getName());
     assertEquals("1999", au1.getParam("year"));
     assertEquals("Air & Space", au1.getJournalTitle());
     assertEquals("0003-0031", au1.getPropertyByName("issn"));
     assertEquals("4", au1.getPluginVersion());
     
     assertEquals(title1, tdb.getTdbTitleForId("0003-0031"));
+
+    try {
+      // try to add from the properties again
+      tdb.addTdbAuFromProperties(p1);
+      fail("exception not thrown when adding duplicate TdbAu 1 from properties");
+    } catch (IllegalStateException ex) {
+    }
+
+    Properties p2 = new Properties();
+    p2.put("title", "Air & Space Volume 4");
+    p2.put("plugin", "org.lockss.testplugin1");
+
+    p2.put("pluginVersion", "4");
+    p2.put("issn", "0032-0032");
+   
+    p2.put("journal.link.1.type", TdbTitle.LinkType.continuedBy.toString());
+    p2.put("journal.link.1.journalId", "0032-0032");  // link to self
+    p2.put("param.1.key", "volume");
+    p2.put("param.1.value", "3");
+    p2.put("param.2.key", "year");
+    p2.put("param.2.value", "1999");
+    p2.put("attributes.publisher", "The Smithsonian Institution");
+
+    try {
+      tdb.addTdbAuFromProperties(p2);
+      fail("exception not thrown when adding duplicate TdbAu 2 from properties");
+    } catch (IllegalStateException ex) {
+    }
   }
 
   /**
@@ -476,11 +496,38 @@ public class TestTdb extends LockssTestCase {
     t1p1.addTdbAu(a1t1p1);
     tdb.addTdbAu(a1t1p1);
     
+    // copy into new Tdb
     Tdb copyTdb = new Tdb();
     copyTdb.copyFrom(tdb);
     assertFalse(copyTdb.isEmpty());
     assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
     assertEquals(1, copyTdb.getAllTdbAus().size());
     assertEquals(1, copyTdb.getAllTdbPublishers().size());
+
+    // copy all duplicates -- should be unchanged
+    copyTdb.copyFrom(tdb);
+    assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
+    assertEquals(1, copyTdb.getAllTdbAus().size());
+    assertEquals(1, copyTdb.getAllTdbPublishers().size());
+try {
+    Tdb tdb3 = new Tdb();
+
+    // create a duplicate AU for a different publisher
+    TdbPublisher p3 = new TdbPublisher("p3");
+    TdbTitle t3p3 = new TdbTitle("t3p3");
+    p3.addTdbTitle(t3p3);
+    TdbAu a3t3p3 = new TdbAu("a1t3p3");
+    a3t3p3.setPluginId("plugin1");
+    t3p3.addTdbAu(a3t3p3);
+    tdb3.addTdbAu(a3t3p3);
+    
+    // copy all duplicates -- should be unchanged
+    tdb.copyFrom(tdb3);
+    assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
+    assertEquals(1, copyTdb.getAllTdbAus().size());
+    assertEquals(1, copyTdb.getAllTdbPublishers().size());
+} catch (Throwable ex) {
+  fail("", ex);
+}
   }
 }
