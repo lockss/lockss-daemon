@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.5 2010-04-07 03:11:50 pgust Exp $
+ * $Id: Tdb.java,v 1.6 2010-04-08 01:38:15 pgust Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.util.Logger;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.5 2010-04-07 03:11:50 pgust Exp $
+ * @version $Id: Tdb.java,v 1.6 2010-04-08 01:38:15 pgust Exp $
  */
 public class Tdb {
   /**
@@ -239,22 +239,55 @@ public class Tdb {
                        + "\" with the same ID as \"" + thisTitle.getName() + "\"");
         }
         
+
+        
         // merge non-duplicate TdbAus of otherTitle into thisTitle
         for (TdbAu otherAu : otherTitle.getTdbAus()) {
-          TdbAu thisAu = thisTitle.getTdbAuById(otherAu.getId());
+          TdbAu thisAu = findExistingTdbAu(otherAu);
           if (thisAu == null) {
             thisAu = otherAu.copyForTdbTitle(thisTitle);
+            // exception won't be thrown because we've already checked for duplicate
             registerTdbAu(thisAu);
-          } else if (thisAu.getName().equals(otherAu.getName())) {
-            logger.warning("Ignoring duplicate au entry: \"" + otherAu.getName() + "\"");
-          } else {
+          } else if (!thisAu.getTdbTitle().getName().equals(otherAu.getTdbTitle().getName())) {
+            if (!thisAu.getName().equals(otherAu.getName())) {
+              logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
+                           + "\" for title \"" + otherAu.getTdbTitle().getName() 
+                           + "\" with same definion as existing au entry: \"" 
+                           + thisAu.getName() + "\" for title \"" 
+                           + thisAu.getTdbTitle().getName() + "\"");
+            } else {
+              logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
+                           + "\" for title \"" + otherAu.getTdbTitle().getName() 
+                           + "\" with same definion as existing one for title \""
+                           + thisAu.getTdbTitle().getName() + "\"");
+            }
+          } else if (!thisAu.getName().equals(otherAu.getName())) {
             // error because it could lead to a missing AU -- one probably has a typo
             logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
-                         + "\" with the same definition as \"" + thisAu.getName() + "\"");
+                         + "\" with the same definition as \"" + thisAu.getName() 
+                         + "\" for title \"" + otherAu.getTdbTitle().getName());
+          } else {
+            logger.warning("Ignoring duplicate au entry: \"" + otherAu.getName() 
+                           + "\" for title \"" + otherAu.getTdbTitle().getName());
           }
         }
       }
     }
+  }
+  
+  /**
+   * Find existing TdbAu with same Id as another one.
+   * @param otherAu another TdbAu
+   * @return an existing TdbAu already in thisTdb
+   */
+  protected TdbAu findExistingTdbAu(TdbAu otherAu) {
+    // check for duplicate AU with same plugin for this Tdb
+    for (TdbAu au : getTdbAus(otherAu.getPluginId())) {
+      if (au.equals(otherAu)) {
+        return au;
+      }
+    }
+    return null;
   }
   
   /**
@@ -433,7 +466,8 @@ public class Tdb {
    * 
    * @param props a map of title properties
    * @return the TdbAu that was added
-   * @throws IllegalStateException if this Tdb is sealed
+   * @throws IllegalStateException if this Tdb is sealed, or the
+   *    AU already exists in this Tdb
    */
   public TdbAu addTdbAuFromProperties(Properties props) {
     if (props == null) {
@@ -533,10 +567,35 @@ public class Tdb {
    * 
    * @param props the properties
    * @param au the TdbAu to add
+   * @throws IllegalStateException if the AU already exists in this Tdb
    */
   private void addTdbAu(Properties props, TdbAu au) {
     if (au.getPluginId() == null) {
       throw new IllegalArgumentException("TdbAu plugin ID cannot be null");
+    }
+    
+    // check for duplicate au
+    TdbAu existingAu = findExistingTdbAu(au);
+    if (existingAu != null) {
+      String titleName = getTdbTitleName(props, au);
+      if (!existingAu.getName().equals(au.getName())) {
+        throw new IllegalStateException(
+                       "Duplicate au entry: \"" + au.getName() 
+                     + "\" for title \"" + titleName 
+                     + "\" with same definition as existing au entry: \"" 
+                     + existingAu.getName() + "\" for title \"" 
+                     + existingAu.getTdbTitle().getName() + "\"");
+      } else if (!existingAu.getName().equals(au.getName())) {
+        // error because it could lead to a missing AU -- one probably has a typo
+        throw new IllegalStateException(
+                   "Duplicate au entry: \"" + au.getName() 
+                   + "\" with the same definition as \"" + existingAu.getName() 
+                   + "\" for title \"" + titleName);
+      } else {
+        throw new IllegalStateException(
+                     "Duplicate au entry: \"" + au.getName() 
+                     + "\" for title \"" + titleName + "\"");
+      }
     }
 
     // get or create the TdbTitle for this 
