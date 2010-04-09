@@ -385,7 +385,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_medieval_and_early_modern_studies
 
-      au < manifest ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
+      au < testing ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
       au < released ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
       au < released ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
       au < released ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
@@ -786,7 +786,7 @@
       au < released ; Eighteenth-Century Life Volume 30 ; 30 >
       au < released ; Eighteenth-Century Life Volume 31 ; 31 >
       au < ready ; Eighteenth-Century Life Volume 32 ; 32 >
-      au < testing ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < ready ; Eighteenth-Century Life Volume 33 ; 33 >
       au < ready ; Eighteenth-Century Life Volume 34 ; 34 >
 
     }

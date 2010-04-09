@@ -18,10 +18,10 @@
     param[base_url] = http://www.journal.chemistrycentral.com/
     param[journal_issn] = 1752-153X
     
-    au < wanted ; 2007 ; Chemistry Central Journal Volume 1 ; 1 >
-    au < wanted ; 2008 ; Chemistry Central Journal Volume 2 ; 2 >
-    au < wanted ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
-    au < wanted ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
+    au < testing ; 2007 ; Chemistry Central Journal Volume 1 ; 1 >
+    au < testing ; 2008 ; Chemistry Central Journal Volume 2 ; 2 >
+    au < testing ; 2009 ; Chemistry Central Journal Volume 3 ; 3 >
+    au < testing ; 2010 ; Chemistry Central Journal Volume 4 ; 4 >
   
   }
   

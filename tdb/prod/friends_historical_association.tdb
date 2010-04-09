@@ -16,8 +16,8 @@
 
     param[journal_dir] = quaker_history
 
-    au < manifest ; Quaker History Volume 97 ; 97 >
-    au < manifest ; Quaker History Volume 98 ; 98 >
+    au < testing ; Quaker History Volume 97 ; 97 >
+    au < testing ; Quaker History Volume 98 ; 98 >
 
   }
 
