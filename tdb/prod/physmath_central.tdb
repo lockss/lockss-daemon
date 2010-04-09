@@ -18,9 +18,9 @@
 
     param[journal_issn] = 1757-5036
     
-    au < testing ; 2008 ; PMC Biophysics Volume 1 ; 1 >
-    au < testing ; 2009 ; PMC Biophysics Volume 2 ; 2 >
-    au < testing ; 2010 ; PMC Biophysics Volume 3 ; 3 >
+    au < ready ; 2008 ; PMC Biophysics Volume 1 ; 1 >
+    au < ready ; 2009 ; PMC Biophysics Volume 2 ; 2 >
+    au < ready ; 2010 ; PMC Biophysics Volume 3 ; 3 >
   
   }
   
@@ -34,9 +34,9 @@
     param[journal_issn] = 1754-0410
 
     au < testing ; 2007 ; PMC Physics A Volume 1 ; 1 >
-    au < testing ; 2008 ; PMC Physics A Volume 2 ; 2 >
-    au < testing ; 2009 ; PMC Physics A Volume 3 ; 3 >
-    au < testing ; 2010 ; PMC Physics A Volume 4 ; 4 >
+    au < ready ; 2008 ; PMC Physics A Volume 2 ; 2 >
+    au < ready ; 2009 ; PMC Physics A Volume 3 ; 3 >
+    au < ready ; 2010 ; PMC Physics A Volume 4 ; 4 >
   
   }
   
@@ -49,9 +49,9 @@
   
     param[journal_issn] = 1754-0429
 
-    au < testing ; 2008 ; PMC Physics B Volume 1 ; 1 >
-    au < testing ; 2009 ; PMC Physics B Volume 2 ; 2 >
-    au < testing ; 2010 ; PMC Physics B Volume 3 ; 3 >
+    au < ready ; 2008 ; PMC Physics B Volume 1 ; 1 >
+    au < ready ; 2009 ; PMC Physics B Volume 2 ; 2 >
+    au < ready ; 2010 ; PMC Physics B Volume 3 ; 3 >
 
   }
 
