@@ -17,62 +17,63 @@
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://rsbm.royalsocietypublishing.org/
       implicit < status ; name ; param[volume_name] >
+      comment[manifest] = As of 8 Apr 2010, the manifest page does not point to content.  When the manifest page works, change the 'doNotProcess' tag.
 
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 2 ; 2 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 3 ; 3 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 4 ; 4 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 5 ; 5 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 6 ; 6 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 7 ; 7 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 8 ; 8 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 9 ; 9 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 10 ; 10 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 11 ; 11 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 12 ; 12 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 13 ; 13 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 14 ; 14 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 15 ; 15 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 16 ; 16 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 17 ; 17 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 18 ; 18 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 19 ; 19 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 20 ; 20 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 21 ; 21 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 23 ; 23 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 27 ; 27 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 28 ; 28 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 29 ; 29 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 30 ; 30 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 31 ; 31 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 32 ; 32 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 38 ; 38 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 40 ; 40 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 41 ; 41 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 42 ; 42 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 43 ; 43 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 44 ; 44 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 45 ; 45 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 46 ; 46 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 47 ; 47 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 49 ; 49 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 50 ; 50 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 51 ; 51 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 52 ; 52 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 53 ; 53 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
-      au < manifest ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 1 ; 1 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 2 ; 2 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 3 ; 3 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 4 ; 4 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 5 ; 5 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 6 ; 6 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 7 ; 7 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 8 ; 8 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 9 ; 9 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 10 ; 10 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 11 ; 11 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 12 ; 12 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 13 ; 13 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 14 ; 14 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 15 ; 15 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 16 ; 16 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 17 ; 17 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 18 ; 18 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 19 ; 19 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 20 ; 20 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 21 ; 21 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 22 ; 22 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 23 ; 23 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 24 ; 24 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 25 ; 25 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 26 ; 26 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 27 ; 27 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 28 ; 28 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 29 ; 29 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 30 ; 30 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 31 ; 31 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 32 ; 32 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 33 ; 33 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 34 ; 34 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 35 ; 35 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 36 ; 36 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 37 ; 37 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 38 ; 38 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 39 ; 39 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 40 ; 40 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 41 ; 41 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 42 ; 42 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 43 ; 43 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 44 ; 44 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 45 ; 45 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 46 ; 46 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 47 ; 47 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 48 ; 48 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 49 ; 49 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 50 ; 50 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 51 ; 51 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 52 ; 52 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 53 ; 53 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 54 ; 54 >
+      au < doNotProcess ; Biographical Memoirs of Fellows of the Royal Society Volume 55 ; 55 >
 
     }
 
@@ -96,9 +97,9 @@
       au < manifest ; Biology Letters Volume 1 ; 1 >
       au < manifest ; Biology Letters Volume 2 ; 2 >
       au < manifest ; Biology Letters Volume 3 ; 3 >
-      au < manifest ; Biology Letters Volume 4 ; 4 >
-      au < manifest ; Biology Letters Volume 5 ; 5 >
-      au < manifest ; Biology Letters Volume 6 ; 6 >
+      au < testing ; Biology Letters Volume 4 ; 4 >
+      au < testing ; Biology Letters Volume 5 ; 5 >
+      au < testing ; Biology Letters Volume 6 ; 6 >
 
     }
 
@@ -123,9 +124,9 @@
       au < manifest ; Journal of The Royal Society Interface Volume 2 ; 2 >
       au < manifest ; Journal of The Royal Society Interface Volume 3 ; 3 >
       au < manifest ; Journal of The Royal Society Interface Volume 4 ; 4 >
-      au < manifest ; Journal of The Royal Society Interface Volume 5 ; 5 >
-      au < manifest ; Journal of The Royal Society Interface Volume 6 ; 6 >
-      au < manifest ; Journal of The Royal Society Interface Volume 7 ; 7 >
+      au < testing ; Journal of The Royal Society Interface Volume 5 ; 5 >
+      au < testing ; Journal of The Royal Society Interface Volume 6 ; 6 >
+      au < testing ; Journal of The Royal Society Interface Volume 7 ; 7 >
 
     }
 
@@ -207,9 +208,9 @@
       au < manifest ; Notes and Records of the Royal Society Volume 59 ; 59 >
       au < manifest ; Notes and Records of the Royal Society Volume 60 ; 60 >
       au < manifest ; Notes and Records of the Royal Society Volume 61 ; 61 >
-      au < manifest ; Notes and Records of the Royal Society Volume 62 ; 62 >
-      au < manifest ; Notes and Records of the Royal Society Volume 63 ; 63 >
-      au < manifest ; Notes and Records of the Royal Society Volume 64 ; 64 >
+      au < testing ; Notes and Records of the Royal Society Volume 62 ; 62 >
+      au < testing ; Notes and Records of the Royal Society Volume 63 ; 63 >
+      au < testing ; Notes and Records of the Royal Society Volume 64 ; 64 >
 
     }
 
@@ -418,9 +419,9 @@
       au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 363 ; 363 >
       au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 364 ; 364 >
       au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 365 ; 365 >
-      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 >
-      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
-      au < manifest ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
+      au < testing ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 366 ; 366 >
+      au < testing ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 367 ; 367 >
+      au < testing ; Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 368 ; 368 >
 
     }
 
@@ -626,9 +627,9 @@
       au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 360 ; 360 >
       au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 361 ; 361 >
       au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 362 ; 362 >
-      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 363 ; 363 >
-      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
-      au < manifest ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
+      au < testing ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 363 ; 363 >
+      au < testing ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 364 ; 364 >
+      au < testing ; Philosophical Transactions of the Royal Society B: Biological Sciences Volume 365 ; 365 >
 
     }
 
@@ -691,9 +692,9 @@
       au < manifest ; Philosophical Transactions of the Royal Society of London Volume 41 ; 41 >
       au < manifest ; Philosophical Transactions of the Royal Society of London Volume 42 ; 42 >
       au < manifest ; Philosophical Transactions of the Royal Society of London Volume 43 ; 43 >
-      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 >
-      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 45 ; 45 >
-      au < manifest ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 >
+      au < testing ; Philosophical Transactions of the Royal Society of London Volume 44 ; 44 >
+      au < testing ; Philosophical Transactions of the Royal Society of London Volume 45 ; 45 >
+      au < testing ; Philosophical Transactions of the Royal Society of London Volume 46 ; 46 >
       au < doesNotExist ; Philosophical Transactions of the Royal Society of London Volume 47 ; 47 >
 
     }
@@ -1103,9 +1104,9 @@
       au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 461 ; 461 >
       au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 462 ; 462 >
       au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 463 ; 463 >
-      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 464 ; 464 >
-      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
-      au < manifest ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
+      au < testing ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 464 ; 464 >
+      au < testing ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 465 ; 465 >
+      au < testing ; Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences Volume 466 ; 466 >
 
     }
 
@@ -1325,9 +1326,9 @@
       au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 272 ; 272 >
       au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 273 ; 273 >
       au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 274 ; 274 >
-      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 275 ; 275 >
-      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
-      au < manifest ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
+      au < testing ; Proceedings of the Royal Society B: Biological Sciences Volume 275 ; 275 >
+      au < testing ; Proceedings of the Royal Society B: Biological Sciences Volume 276 ; 276 >
+      au < testing ; Proceedings of the Royal Society B: Biological Sciences Volume 277 ; 277 >
 
     }
 
@@ -1418,9 +1419,9 @@
       au < manifest ; Proceedings of the Royal Society of London Volume 69 ; 69 >
       au < manifest ; Proceedings of the Royal Society of London Volume 70 ; 70 >
       au < manifest ; Proceedings of the Royal Society of London Volume 71 ; 71 >
-      au < manifest ; Proceedings of the Royal Society of London Volume 72 ; 72 >
-      au < manifest ; Proceedings of the Royal Society of London Volume 73 ; 73 >
-      au < manifest ; Proceedings of the Royal Society of London Volume 74 ; 74 >
+      au < testing ; Proceedings of the Royal Society of London Volume 72 ; 72 >
+      au < testing ; Proceedings of the Royal Society of London Volume 73 ; 73 >
+      au < testing ; Proceedings of the Royal Society of London Volume 74 ; 74 >
       au < doesNotExist ; Proceedings of the Royal Society of London Volume 75 ; 75 >
 
     }
