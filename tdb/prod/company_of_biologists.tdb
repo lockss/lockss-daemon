@@ -12,7 +12,7 @@
 
     {
 
-      pluginPrefix = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://dev.biologists.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
