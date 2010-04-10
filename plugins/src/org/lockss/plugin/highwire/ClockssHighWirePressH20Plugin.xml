@@ -61,7 +61,7 @@
       <string>1,&quot;^%sclockss-manifest/vol_%s_manifest\.dtl$&quot;, base_url, volume_name</string>
       <string>2,&quot;^%s(content|lookup/volpage)/%s/.*(cited-by|related-urls)=yes&quot;, base_url, volume_name</string>
       <string>2,&quot;^%slookup/volpage/%s(/[^/]+)?$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%s(content|lookup/volpage)/%s/&quot;, base_url, volume_name</string>
+      <string>1,&quot;^%s(content|lookup/volpage)/%s(/|\.)&quot;, base_url, volume_name</string>
       <string>1,&quot;^%scontent/vol%s/&quot;, base_url, volume_name</string>
       <string>1,&quot;^%s[^?]*DC(Supplemental|[0-9])&quot;, base_url</string>
     </list>
