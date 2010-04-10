@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Arctic Institute of North America
+  >
+
+  rights = openaccess
+  implicit < status ; year ; name ; param[year] >
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+
+  {
+  
+    title <
+      name = Arctic ;
+      issn = 0004-0843
+    >
+    
+    param[base_url] = http://arctic.synergiesprairies.ca/arctic/
+    param[journal_id] = arctic
+
+    au < released ; 2003 ; Arctic Volume 56 ; 2003 >
+    au < released ; 2004 ; Arctic Volume 57 ; 2004 >
+    au < released ; 2005 ; Arctic Volume 58 ; 2005 >
+    au < released ; 2006 ; Arctic Volume 59 ; 2006 >
+    au < released ; 2007 ; Arctic Volume 60 ; 2007 >
+    au < released ; 2008 ; Arctic Volume 61 ; 2008 >
+    au < doNotProcess ; 2009 ; Arctic Volume 62 ; 2009 >
+    au < doNotProcess ; 2010 ; Arctic Volume 63 ; 2010 >
+
+  }
+  
+}

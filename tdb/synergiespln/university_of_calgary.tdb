@@ -4,13 +4,15 @@
     name = University of Calgary
   >
 
+  rights = openaccess
   implicit < status ; year ; name ; param[year] >
   plugin = org.lockss.plugin.ojs2.OJS2Plugin
   
   {
   
     title <
-      name = ARIEL: A Review of International English Literature
+      name = ARIEL: A Review of International English Literature ;
+      issn = 1920-1222
     >
     
     param[base_url] = http://ariel.synergiesprairies.ca/ariel/
@@ -44,23 +46,26 @@
     au < released ; 1995 ; ARIEL: A Review of International English Literature Volume 26 ; 1995 >
     au < released ; 1996 ; ARIEL: A Review of International English Literature Volume 27 ; 1996 >
     au < released ; 1997 ; ARIEL: A Review of International English Literature Volume 28 ; 1997 >
-    au < doesNotExist ; 1998 ; ARIEL: A Review of International English Literature Volume 29 ; 1998 >
-    au < doesNotExist ; 1999 ; ARIEL: A Review of International English Literature Volume 30 ; 1999 >
-    au < doesNotExist ; 2000 ; ARIEL: A Review of International English Literature Volume 31 ; 2000 >
-    au < doesNotExist ; 2001 ; ARIEL: A Review of International English Literature Volume 32 ; 2001 >
-    au < doesNotExist ; 2002 ; ARIEL: A Review of International English Literature Volume 33 ; 2002 >
-    au < doesNotExist ; 2003 ; ARIEL: A Review of International English Literature Volume 34 ; 2003 >
+    au < released ; 1998 ; ARIEL: A Review of International English Literature Volume 29 ; 1998 >
+    au < released ; 1999 ; ARIEL: A Review of International English Literature Volume 30 ; 1999 >
+    au < released ; 2000 ; ARIEL: A Review of International English Literature Volume 31 ; 2000 >
+    au < released ; 2001 ; ARIEL: A Review of International English Literature Volume 32 ; 2001 >
+    au < released ; 2002 ; ARIEL: A Review of International English Literature Volume 33 ; 2002 >
+    au < released ; 2003 ; ARIEL: A Review of International English Literature Volume 34 ; 2003 >
     au < released ; 2004 ; ARIEL: A Review of International English Literature Volume 35 ; 2004 >
     au < released ; 2005 ; ARIEL: A Review of International English Literature Volume 36 ; 2005 >
     au < released ; 2006 ; ARIEL: A Review of International English Literature Volume 37 ; 2006 >
     au < released ; 2007 ; ARIEL: A Review of International English Literature Volume 38 ; 2007 >
+    au < doNotProcess ; 2008 ; ARIEL: A Review of International English Literature Volume 39 ; 2008 >
+    au < doNotProcess ; 2009 ; ARIEL: A Review of International English Literature Volume 40 ; 2009 >
 
   }
   
   {
   
     title <
-      name = Canadian Journal of Counselling / Revue Canadienne de Counseling
+      name = Canadian Journal of Counselling / Revue Canadienne de Counseling ;
+      issn = 1920-0994
     >
     
     param[base_url] = http://cjc-rcc.ucalgary.ca/cjc/
@@ -82,6 +87,77 @@
     au < released ; 2005 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 39 ; 2005 >
     au < released ; 2006 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 40 ; 2006 >
     au < released ; 2007 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 41 ; 2007 >
+    au < released ; 2008 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 42 ; 2008 >
+    au < doNotProcess ; 2009 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 43 ; 2009 >
+    au < doNotProcess ; 2010 ; Canadian Journal of Counselling / Revue Canadienne de Counseling Volume 44 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = Currents: New Scholarship in the Human Services ;
+      issn = 1499-6073
+    >
+    
+    param[base_url] = http://currents.synergiesprairies.ca/currents/
+    param[journal_id] = currents
+
+    au < released ; 2008 ; Currents: New Scholarship in the Human Services Volume 7 ; 2008 >
+    au < released ; 2009 ; Currents: New Scholarship in the Human Services Volume 8 ; 2009 >
+    au < released ; 2010 ; Currents: New Scholarship in the Human Services Volume 9 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = International Electronic Journal for Leadership in Learning ;
+      issn = 1206-9620
+    >
+    
+    param[base_url] = http://iejll.synergiesprairies.ca/iejll/
+    param[journal_id] = iejll
+
+    au < released ; 1997 ; International Electronic Journal for Leadership in Learning Volume 1 ; 1997 >
+    au < released ; 1998 ; International Electronic Journal for Leadership in Learning Volume 2 ; 1998 >
+    au < released ; 1999 ; International Electronic Journal for Leadership in Learning Volume 3 ; 1999 >
+    au < released ; 2000 ; International Electronic Journal for Leadership in Learning Volume 4 ; 2000 >
+    au < released ; 2001 ; International Electronic Journal for Leadership in Learning Volume 5 ; 2001 >
+    au < released ; 2002 ; International Electronic Journal for Leadership in Learning Volume 6 ; 2002 >
+    au < released ; 2003 ; International Electronic Journal for Leadership in Learning Volume 7 ; 2003 >
+    au < released ; 2004 ; International Electronic Journal for Leadership in Learning Volume 8 ; 2004 >
+    au < released ; 2005 ; International Electronic Journal for Leadership in Learning Volume 9 ; 2005 >
+    au < released ; 2006 ; International Electronic Journal for Leadership in Learning Volume 10 ; 2006 >
+    au < released ; 2007 ; International Electronic Journal for Leadership in Learning Volume 11 ; 2007 >
+    au < released ; 2008 ; International Electronic Journal for Leadership in Learning Volume 12 ; 2008 >
+    au < released ; 2009 ; International Electronic Journal for Leadership in Learning Volume 13 ; 2009 >
+
+  }
+  
+  {
+  
+    title <
+      name = Journal of Military and Strategic Studies ;
+      issn = 1488-559X
+    >
+    
+    param[base_url] = http://www.jmss.org/jmss/
+    param[journal_id] = jmss
+
+    au < released ; 1998 ; Journal of Military and Strategic Studies Volume 1 ; 1998 >
+    au < released ; 1999 ; Journal of Military and Strategic Studies Volume 2 ; 1999 >
+    au < released ; 2000 ; Journal of Military and Strategic Studies Volume 3 ; 2000 >
+    au < released ; 2001 ; Journal of Military and Strategic Studies Volume 4 ; 2001 >
+    au < released ; 2002 ; Journal of Military and Strategic Studies Volume 5 ; 2002 >
+    au < released ; 2003 ; Journal of Military and Strategic Studies Volume 6 (2003) ; 2003 >
+    au < released ; 2004 ; Journal of Military and Strategic Studies Volume 6-7 (2004) ; 2004 >
+    au < released ; 2005 ; Journal of Military and Strategic Studies Volume 7-8 (2005) ; 2005 >
+    au < released ; 2006 ; Journal of Military and Strategic Studies Volume 8-9 (2006) ; 2006 >
+    au < released ; 2007 ; Journal of Military and Strategic Studies Volume 9-10 (2007) ; 2007 >
+    au < released ; 2008 ; Journal of Military and Strategic Studies Volume 10 (2008) ; 2008 >
+    au < released ; 2009 ; Journal of Military and Strategic Studies Volume 11-12 (2009) ; 2009 >
+    au < released ; 2010 ; Journal of Military and Strategic Studies Volume 12 (2010) ; 2010 >
 
   }
   
