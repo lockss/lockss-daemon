@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHtmlFilterFactory.java,v 1.1 2010-04-10 01:29:21 edwardsb1 Exp $
+ * $Id: EdinburghUniversityPressHtmlFilterFactory.java,v 1.2 2010-04-12 22:58:10 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
@@ -45,17 +45,17 @@ public class EdinburghUniversityPressHtmlFilterFactory implements FilterFactory 
     HtmlTransform[] transforms = new HtmlTransform[] {
         HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
 
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
             "class",
-            "sidebar_panel panel_256")),
+            "sidebar_panel")),
             
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
             "id",
             "footer")),
             
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
             "class",
-            "rightColumn_panels panel_246")),
+            "rightColumn_panels")),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
