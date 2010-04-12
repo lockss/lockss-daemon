@@ -13,7 +13,7 @@
 
     rights = openaccess
     plugin = org.lockss.plugin.disputatio.DisputatioPlugin
-    implicit < status ; attr[year] ; name ; param[base_url] ; param[year] ; nondefparam[issues] >
+    implicit < status ; year ; name ; param[base_url] ; param[year] ; nondefparam[issues] >
     
     au < down ; 1996 ; Disputatio 1996 ; http://www.disputatio.com/ ; 1996 ; 001 >
     au < down ; 1997 ; Disputatio 1997 ; http://www.disputatio.com/ ; 1997 ; 002,003 >

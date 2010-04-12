@@ -6,7 +6,7 @@
     
   rights = openaccess
   plugin = org.lockss.plugin.medknow.MedknowPlugin
-  implicit < status ; attr[year] ; name ; param[year] ; param[volume_name] >
+  implicit < status ; year ; name ; param[year] ; param[volume_name] >
     
   {
     title <

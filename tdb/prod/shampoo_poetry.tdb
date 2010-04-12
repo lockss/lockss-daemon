@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = org.nypl.plugin.shampoo.ShampooPlugin
     param[base_url] = http://www.shampoopoetry.com/
-    implicit < status ; attr[year] ; name ; param[year] ; param[issue_set] >
+    implicit < status ; year ; name ; param[year] ; param[issue_set] >
 
     au < released ; 2000 ; Shampoo 2000 ; 2000 ; One, Two, Three >
     au < released ; 2001 ; Shampoo 2001 ; 2001 ; Four, Five, Six, Seven, Eight, Nine >

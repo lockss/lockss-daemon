@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
   param[base_url] = http://www.nature.com/
-  implicit < status ; attr[year] ; name ; param[year] ; param[volume_name] >
+  implicit < status ; year ; name ; param[year] ; param[volume_name] >
   
   {
 

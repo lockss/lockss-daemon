@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin
     param[base_url] = http://www.19thc-artworldwide.org/
-    implicit < status ; attr[year] ; name ; param[year] ; param[volume] >
+    implicit < status ; year ; name ; param[year] ; param[volume] >
     
     au < down ; 2002 ; Nineteenth-Century Art Worldwide Volume 1 ; 2002 ; 1 >
     au < down ; 2003 ; Nineteenth-Century Art Worldwide Volume 2 ; 2003 ; 2 >

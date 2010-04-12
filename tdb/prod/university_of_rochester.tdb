@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = org.lockss.plugin.invisibleculture.InvisibleCulturePlugin
     param[base_url] = http://www.rochester.edu/
-    implicit < status ; attr[year] ; name ; param[year] ; param[num_issue_range] >
+    implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
 
     au < released ; 1998 ; Invisible Culture 1998 ; 1998 ; 1-1 >    
     au < released ; 1999 ; Invisible Culture 1999 ; 1999 ; 2-2 >    

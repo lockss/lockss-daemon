@@ -14,7 +14,7 @@
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
     param[base_url] = http://www.pnas.org/
-    implicit < status ; attr[year] ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < manifest ; 2005 ; Proceedings of the National Academy of Sciences Volume 102 ; 102 >
     au < manifest ; 2006 ; Proceedings of the National Academy of Sciences Volume 103 ; 103 >

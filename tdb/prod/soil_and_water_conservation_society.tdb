@@ -16,7 +16,7 @@
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jswconline.org/
-      implicit < status ; attr[year] ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
       au < released ; 1981 ; Journal of Soil and Water Conservation Volume 36 ; 36 >
       au < released ; 1982 ; Journal of Soil and Water Conservation Volume 37 ; 37 >

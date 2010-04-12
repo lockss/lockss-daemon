@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = edu.indiana.lib.plugin.jcjpc.JcjpcPlugin
     param[base_url] = http://www.albany.edu/scj/jcjpc/
-    implicit < status ; attr[year] ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
     au < manifest ; 1993 ; Journal of Criminal Justice and Popular Culture Volume 1 ; 1 >
     au < manifest ; 1994 ; Journal of Criminal Justice and Popular Culture Volume 2 ; 2 >

@@ -6,7 +6,7 @@
   
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
   param[base_url] = http://www.bepress.com/
-  implicit < status ; attr[year] ; name ; param[volume] >
+  implicit < status ; year ; name ; param[volume] >
   
   {
 

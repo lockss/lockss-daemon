@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = org.nypl.plugin.PoetryBayPlugin
     param[base_url] = http://www.poetrybay.com/
-    implicit < status ; attr[year] ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
 
     au < released ; 2000 ; Poetry Bay 2000 ; 2000 >
     au < released ; 2001 ; Poetry Bay 2001 ; 2001 >

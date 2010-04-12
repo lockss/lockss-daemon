@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin
     param[base_url] = http://web.mit.edu/cis/www/mitejmes/
-    implicit < status ; attr[year] ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
 
     au < down ; 2001 ; MIT Electronic Journal of Middle East Studies 2001 ; 2001 >
     au < down ; 2002 ; MIT Electronic Journal of Middle East Studies 2002 ; 2002 >

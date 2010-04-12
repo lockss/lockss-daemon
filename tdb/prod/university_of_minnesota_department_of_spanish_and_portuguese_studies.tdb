@@ -13,7 +13,7 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.hispanicissuesonline.HispanicIssuesOnLinePlugin
-    implicit < status ; attr[year] ; name ; param[base_url] ; param[volume_name] >
+    implicit < status ; year ; name ; param[base_url] ; param[volume_name] >
 
     au < superseded ; 2006 ; Hispanic Issues On Line 2006 [superseded] ; http://spanport.cla.umn.edu/publications/HispanicIssues/ ; 2006 >
     au < exists ; 2006 ; Hispanic Issues On Line 2006 ; http://hispanicissues.umn.edu/ ; 2006 >

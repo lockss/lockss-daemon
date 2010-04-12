@@ -564,7 +564,13 @@ EOF
 		then
 			if [ ! -L /etc/rc3.d/S99lockss ]
 			then
-				chkconfig --add lockss
+				CHKCONFIG_CMD=`which chkconfig 2>/dev/null`
+				if [ "X${CHKCONFIG_CMD}" = "X" ]
+				then
+					# e.g. CentOS
+					CHKCONFIG_CMD=/sbin/chkconfig
+				fi
+				$CHKCONFIG_CMD --add lockss
 			fi
 			echo "LOCKSS will start automatically at next reboot, or you may"
 			echo " start it now by running   /etc/init.d/lockss start"

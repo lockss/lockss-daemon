@@ -16,7 +16,7 @@
 
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://jcb.rupress.org/
-      implicit < status ; attr[year] ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1955 ; The Journal of Biophysical and Biochemical Cytology Volume 1 ; 1 >
         au < manifest ; 1956 ; The Journal of Biophysical and Biochemical Cytology Volume 2 ; 2 >
@@ -224,7 +224,7 @@
 
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://jem.rupress.org/
-      implicit < status ; attr[year] ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
 
         au < manifest ; 1955 ; The Journal of Experimental Medicine Volume 101 ; 101 >
         au < manifest ; 1955 ; The Journal of Experimental Medicine Volume 102 ; 102 >
@@ -349,7 +349,7 @@
 
       plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
       param[base_url] = http://jgp.rupress.org/
-      implicit < status ; attr[year] ; name ; param[volume_name] >
+      implicit < status ; year ; name ; param[volume_name] >
       
               au < manifest ; 1954 ; The Journal of General Physiology Volume 38 ; 38 >
         au < manifest ; 1955 ; The Journal of General Physiology Volume 38 ; 38 >

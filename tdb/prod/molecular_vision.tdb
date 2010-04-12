@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = org.molvis.plugin.MolVisPlugin
     param[base_url] = http://www.molvis.org/molvis/
-    implicit < status ; attr[year] ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
 
     au < released ; 1995 ; Molecular Vision Volume 1 ; 1 >
     au < released ; 1996 ; Molecular Vision Volume 2 ; 2 >

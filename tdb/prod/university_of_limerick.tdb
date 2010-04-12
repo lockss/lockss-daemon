@@ -15,7 +15,7 @@
     plugin = org.lockss.plugin.minerva.MinervaPlugin
     param[base_url] = http://www.ul.ie/
     param[base_url2] = http://www.mic.ul.ie/
-    implicit < status ; attr[year] ; name ; param[volume_name] >
+    implicit < status ; year ; name ; param[volume_name] >
 
     au < released ; 1997 ; Minerva: An Internet Journal of Philosophy Volume 1 ; 1 >
     au < released ; 1998 ; Minerva: An Internet Journal of Philosophy Volume 2 ; 2 >

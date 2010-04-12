@@ -15,7 +15,7 @@
     plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://radiology.casereports.net/
     param[journal_id] = rcr
-    implicit < status ; attr[year] ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
     
     au < manifest ; 2006 ; Radiology Case Reports Volume 1 ; 2006 >
     au < manifest ; 2007 ; Radiology Case Reports Volume 2 ; 2007 >

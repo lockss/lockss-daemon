@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbproc.py,v 1.9 2010-04-02 11:15:16 thib_gc Exp $
+# $Id: tdbproc.py,v 1.10 2010-04-12 05:53:32 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -30,7 +30,7 @@ from tdbconst import *
 import tdbout
 import tdbq
 
-TDBPROC_VERSION = '0.2.0'
+TDBPROC_VERSION = '0.2.1'
 
 OPTION_LONG        = '--'
 OPTION_SHORT       = '-'

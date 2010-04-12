@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.22 2010-04-02 11:15:16 thib_gc Exp $
+# $Id: tdbxml.py,v 1.23 2010-04-12 05:53:32 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -159,6 +159,8 @@ def _process_au(au, options):
     au_attrs = au.attrs()
     for attr in au_attrs:
         _do_attr(au, attr, au_attrs[attr])
+    if au.year() is not None:
+        _do_attr(au, 'year', au.year())
     if au.status() == AU.STATUS_PRE_RELEASED:
         _do_attr(au, 'releaseStatus', 'pre-release')
     if au.rights() == 'openaccess':

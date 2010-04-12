@@ -13,7 +13,7 @@
     
     rights = openaccess
     plugin = org.lockss.plugin.emls.EmlsPlugin
-    implicit < status ; attr[year] ; name ; param[base_url] ; param[volume] ; nondefparam[issues] >
+    implicit < status ; year ; name ; param[base_url] ; param[volume] ; nondefparam[issues] >
     
     comment[nondef] = Only the manifest page for volume 9 has the correct link to its special issue, need to ask the publisher to fix the manifests or switch to some other mechanism
     

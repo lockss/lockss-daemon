@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = org.lockss.plugin.lapetitezine.LaPetiteZinePlugin
     param[base_url] = http://www.lapetitezine.org/
-    implicit < status ; attr[year] ; name ; param[year] ; param[num_issue_range] >
+    implicit < status ; year ; name ; param[year] ; param[num_issue_range] >
     
     au < released ; 2000 ; La Petite Zine 2000 ; 2000 ; 1-5 >
     au < released ; 2001 ; La Petite Zine 2001 ; 2001 ; 6-8 >

@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin
     param[base_url] = http://www.urdustudies.com/
-    implicit < status ; attr[year] ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     
     au < exists ; 1981-1990 ; Annual of Urdu Studies Volume 1-7 ; 00 >
     au < released ; 1993 ; Annual of Urdu Studies Volume 8 ; 08 >

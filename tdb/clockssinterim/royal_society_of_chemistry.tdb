@@ -7,7 +7,7 @@
   plugin = org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin
   param[base_url] = http://www.rsc.org/
   param[resolver_url] = http://xlink.rsc.org/
-  implicit < status ; attr[year] ; name ; param[volume_name] ; param[year] >
+  implicit < status ; year ; name ; param[volume_name] ; param[year] >
   
   {
   

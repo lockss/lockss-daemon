@@ -14,7 +14,7 @@
     rights = openaccess
     plugin = org.lockss.plugin.blackbird.BlackbirdPlugin
     param[base_url] = http://www.blackbird.vcu.edu/
-    implicit < status ; attr[year] ; name ; param[volume] >
+    implicit < status ; year ; name ; param[volume] >
     
     au < released ; 2002 ; Blackbird Volume 1 ; 1 >
     au < released ; 2003 ; Blackbird Volume 2 ; 2 >
