@@ -170,8 +170,7 @@
 	<value>org.lockss.plugin.madhattersreview.MadHattersReviewPlugin</value>
 	<value>edu.jhu.library.plugin.jrf.JournalOfReligionAndFilmPlugin</value>
 	<value>org.lockss.plugin.sage.ClockssSageIngentaPlugin</value>
-	<value>org.lockss.plugin.nature.ClockssNaturePlugin</value>
-	<value>org.lockss.plugin.acs.ClockssAmericanChemicalSocietyPlugin</value>
+	<value>org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin</value>
 	<value>nz.ac.otago.plugin.scholia.ScholiaPlugin</value>
 	<value>za.ac.nlsa.lockss.plugin.WaterSAPlugin</value>
 	<value>edu.nyu.plugin.heplwebzine.HEPLwebzine</value>
@@ -205,8 +204,8 @@
         <value>org.lockss.plugin.ingenta.IngentaJournalPlugin</value>
 	<value>org.lockss.plugin.medknow.MedknowPlugin</value>
 	<value>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryPlugin</value>
-	<value>org.lockss.plugin.clockss.ClockssElsevierSourcePlugin</value>
-	<value>org.lockss.plugin.clockss.ClockssSpringerSourcePlugin</value>
+	<value>org.lockss.plugin.elsevier.ClockssElsevierSourcePlugin</value>
+	<value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
 	<value>org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin</value>
       </list>
     </property>
