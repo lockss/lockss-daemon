@@ -1,0 +1,1566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+
+ <property name="org.lockss.titleSet">
+
+  <property name="Massachusetts Medical Society">
+   <property name="name" value="All Massachusetts Medical Society Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Massachusetts Medical Society']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="NewEnglandJournalofMedicine274">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 274" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="274" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine275">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 275" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="275" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine276">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 276" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="276" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine277">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 277" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="277" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine278">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 278" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="278" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine279">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 279" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="279" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine280">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 280" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="280" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine281">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 281" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="281" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine282">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 282" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="282" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine283">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 283" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="283" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine284">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 284" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="284" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine285">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 285" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="285" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine286">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 286" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="286" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine287">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 287" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="287" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine288">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 288" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="288" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine289">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 289" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="289" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine290">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 290" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="290" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine291">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 291" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="291" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine292">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 292" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="292" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine293">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 293" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="293" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine294">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 294" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="294" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine295">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 295" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="295" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine296">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 296" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="296" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine297">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 297" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="297" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine298">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 298" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="298" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine299">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 299" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="299" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine300">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 300" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="300" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine301">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 301" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="301" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine302">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 302" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="302" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine303">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 303" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="303" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine304">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 304" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="304" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine305">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 305" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="305" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine306">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 306" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="306" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine307">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 307" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="307" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine308">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 308" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="308" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine309">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 309" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="309" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine310">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 310" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="310" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine311">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 311" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="311" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine312">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 312" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="312" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine313">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 313" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="313" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine314">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 314" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="314" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine315">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 315" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="315" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine316">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 316" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="316" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine317">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 317" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="317" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine318">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 318" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="318" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine319">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 319" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="319" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine320">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 320" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="320" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine321">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 321" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="321" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine322">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 322" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="322" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine323">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 323" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="323" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine324">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 324" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="324" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine325">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 325" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="325" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine326">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 326" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="326" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine327">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 327" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="327" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine328">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 328" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="328" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine329">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 329" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="329" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine330">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 330" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="330" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine331">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 331" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="331" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine332">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 332" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="332" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine333">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 333" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="333" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine334">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 334" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="334" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine335">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 335" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="335" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine336">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 336" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="336" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine337">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 337" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="337" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine338">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 338" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="338" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine339">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 339" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="339" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine340">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 340" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="340" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine341">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 341" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="341" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine342">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 342" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="342" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine343">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 343" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="343" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine344">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 344" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="344" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine345">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 345" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="345" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine346">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 346" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="346" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine347">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 347" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="347" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine348">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 348" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="348" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine349">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 349" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="349" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine350">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 350" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="350" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine351">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 351" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="351" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine352">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 352" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="352" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine353">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 353" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="353" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine354">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 354" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="354" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine355">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 355" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="355" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine356">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 356" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="356" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine357">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 357" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="357" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine358">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 358" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="358" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine359">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 359" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="359" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine360">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 360" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="360" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine361">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 361" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="361" />
+   </property>
+  </property>
+
+  <property name="NewEnglandJournalofMedicine362">
+   <property name="attributes.publisher" value="Massachusetts Medical Society" />
+   <property name="journalTitle" value="New England Journal of Medicine" />
+   <property name="issn" value="0028-4793" />
+   <property name="eissn" value="1533-4406" />
+   <property name="title" value="New England Journal of Medicine Volume 362" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://content.nejm.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="362" />
+   </property>
+  </property>
+
+ </property>
+
+</lockss-config>
