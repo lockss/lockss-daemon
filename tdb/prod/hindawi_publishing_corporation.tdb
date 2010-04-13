@@ -643,9 +643,9 @@
 
     param[journal_id] = denm
 
-    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 >
-    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 >
-    au < testing ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 >
+    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2006 ; 2006 >
+    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2007 ; 2007 >
+    au < ready ; Differential Equations and Nonlinear Mechanics Volume 2008 ; 2008 >
 
   }
 
@@ -658,18 +658,18 @@
 
     param[journal_id] = ddns
 
-    au < testing ; Discrete Dynamics in Nature and Society Volume 1 (1997) ; 1997 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2 (1998) ; 1998 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 3 (1999) ; 1999 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 4 (2000) ; 2000 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 5 (2001) ; 2001 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 6 (2002) ; 2002 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 7 (2003) ; 2003 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2004 ; 2004 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2005 ; 2005 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 >
-    au < testing ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 1 (1997) ; 1997 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 2 (1998) ; 1998 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 3 (1999) ; 1999 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 4 (2000) ; 2000 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 5 (2001) ; 2001 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 6 (2002) ; 2002 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 7 (2003) ; 2003 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 2004 ; 2004 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 2005 ; 2005 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 2006 ; 2006 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 2007 ; 2007 >
+    au < ready ; Discrete Dynamics in Nature and Society Volume 2008 ; 2008 >
 
   }
 
@@ -682,15 +682,15 @@
 
     param[journal_id] = asp
 
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2003 ; 2003 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2004 ; 2004 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2005 ; 2005 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2006 ; 2006 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2007 ; 2007 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2008 ; 2008 >
-    au < testing ; EURASIP Journal on Advances in Signal Processing Volume 2009 ; 2009 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2001 ; 2001 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2002 ; 2002 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2003 ; 2003 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2004 ; 2004 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2005 ; 2005 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2006 ; 2006 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2007 ; 2007 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2008 ; 2008 >
+    au < ready ; EURASIP Journal on Advances in Signal Processing Volume 2009 ; 2009 >
 
   }
 
@@ -719,7 +719,7 @@
 
     au < ready ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2006 ; 2006 >
     au < ready ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2007 ; 2007 >
-    au < testing ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 >
+    au < ready ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2008 ; 2008 >
     au < ready ; EURASIP Journal on Bioinformatics and Systems Biology Volume 2009 ; 2009 >
 
   }
@@ -749,7 +749,7 @@
     param[journal_id] = ivp
 
     au < ready ; EURASIP Journal on Image and Video Processing Volume 2007 ; 2007 >
-    au < testing ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
+    au < ready ; EURASIP Journal on Image and Video Processing Volume 2008 ; 2008 >
 
   }
 
@@ -793,13 +793,13 @@
 
     param[journal_id] = edr
 
-    au < manifest ; Experimental Diabetes Research Volume 1 (2002) ; 2002 >
-    au < manifest ; Experimental Diabetes Research Volume 2 (2003) ; 2003 >
-    au < manifest ; Experimental Diabetes Research Volume 3 (2004) ; 2004 >
-    au < manifest ; Experimental Diabetes Research Volume 4 (2005) ; 2005 >
-    au < manifest ; Experimental Diabetes Research Volume 5 (2006) ; 2006 >
-    au < manifest ; Experimental Diabetes Research Volume 2007 ; 2007 >
-    au < manifest ; Experimental Diabetes Research Volume 2008 ; 2008 >
+    au < testing ; Experimental Diabetes Research Volume 1 (2002) ; 2002 >
+    au < testing ; Experimental Diabetes Research Volume 2 (2003) ; 2003 >
+    au < testing ; Experimental Diabetes Research Volume 3 (2004) ; 2004 >
+    au < testing ; Experimental Diabetes Research Volume 4 (2005) ; 2005 >
+    au < testing ; Experimental Diabetes Research Volume 5 (2006) ; 2006 >
+    au < testing ; Experimental Diabetes Research Volume 2007 ; 2007 >
+    au < testing ; Experimental Diabetes Research Volume 2008 ; 2008 >
 
   }
 
@@ -812,11 +812,11 @@
 
     param[journal_id] = fpta
 
-    au < manifest ; Fixed Point Theory and Applications Volume 2004 ; 2004 >
-    au < manifest ; Fixed Point Theory and Applications Volume 2005 ; 2005 >
-    au < manifest ; Fixed Point Theory and Applications Volume 2006 ; 2006 >
-    au < manifest ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
-    au < manifest ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
+    au < testing ; Fixed Point Theory and Applications Volume 2004 ; 2004 >
+    au < testing ; Fixed Point Theory and Applications Volume 2005 ; 2005 >
+    au < testing ; Fixed Point Theory and Applications Volume 2006 ; 2006 >
+    au < testing ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
+    au < testing ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
 
   }
 
@@ -829,7 +829,7 @@
 
     param[journal_id] = grp
 
-    au < manifest ; Gastroenterology Research and Practice Volume 2008 ; 2008 >
+    au < testing ; Gastroenterology Research and Practice Volume 2008 ; 2008 >
 
   }
 
@@ -842,18 +842,18 @@
 
     param[journal_id] = hpb
 
-    au < manifest ; HPB Surgery Volume 1 (1997) ; 1997 >
-    au < manifest ; HPB Surgery Volume 2 (1998) ; 1998 >
-    au < manifest ; HPB Surgery Volume 3 (1999) ; 1999 >
-    au < manifest ; HPB Surgery Volume 4 (2000) ; 2000 >
-    au < manifest ; HPB Surgery Volume 5 (2001) ; 2001 >
-    au < manifest ; HPB Surgery Volume 6 (2002) ; 2002 >
-    au < manifest ; HPB Surgery Volume 7 (2003) ; 2003 >
-    au < manifest ; HPB Surgery Volume 8 (2004) ; 2004 >
-    au < manifest ; HPB Surgery Volume 9 (2005) ; 2005 >
-    au < manifest ; HPB Surgery Volume 10 (2006) ; 2006 >
-    au < manifest ; HPB Surgery Volume 11 (2007) ; 2007 >
-    au < manifest ; HPB Surgery Volume 2008 ; 2008 >
+    au < testing ; HPB Surgery Volume 1 (1997) ; 1997 >
+    au < testing ; HPB Surgery Volume 2 (1998) ; 1998 >
+    au < testing ; HPB Surgery Volume 3 (1999) ; 1999 >
+    au < testing ; HPB Surgery Volume 4 (2000) ; 2000 >
+    au < testing ; HPB Surgery Volume 5 (2001) ; 2001 >
+    au < testing ; HPB Surgery Volume 6 (2002) ; 2002 >
+    au < testing ; HPB Surgery Volume 7 (2003) ; 2003 >
+    au < testing ; HPB Surgery Volume 8 (2004) ; 2004 >
+    au < testing ; HPB Surgery Volume 9 (2005) ; 2005 >
+    au < testing ; HPB Surgery Volume 10 (2006) ; 2006 >
+    au < testing ; HPB Surgery Volume 11 (2007) ; 2007 >
+    au < testing ; HPB Surgery Volume 2008 ; 2008 >
 
   }
 
@@ -866,22 +866,22 @@
 
     param[journal_id] = idog
 
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 1 (1993) ; 1993 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2 (1994) ; 1994 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 3 (1995) ; 1995 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 4 (1996) ; 1996 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 5 (1997) ; 1997 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 6 (1998) ; 1998 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 7 (1999) ; 1999 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 8 (2000) ; 2000 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 9 (2001) ; 2001 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 10 (2002) ; 2002 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 11 (2003) ; 2003 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 12 (2004) ; 2004 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 13 (2005) ; 2005 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 >
-    au < manifest ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 1 (1993) ; 1993 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2 (1994) ; 1994 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 3 (1995) ; 1995 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 4 (1996) ; 1996 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 5 (1997) ; 1997 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 6 (1998) ; 1998 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 7 (1999) ; 1999 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 8 (2000) ; 2000 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 9 (2001) ; 2001 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 10 (2002) ; 2002 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 11 (2003) ; 2003 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 12 (2004) ; 2004 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 13 (2005) ; 2005 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 >
+    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 >
 
   }
 
@@ -894,7 +894,7 @@
 
     param[journal_id] = ipid
 
-    au < manifest ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 >
+    au < testing ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 >
 
   }
 
@@ -907,7 +907,7 @@
 
     param[journal_id] = ijae
 
-    au < manifest ; International Journal of Aerospace Engineering Volume 2008 ; 2008 >
+    au < testing ; International Journal of Aerospace Engineering Volume 2008 ; 2008 >
 
   }
 
@@ -920,7 +920,7 @@
 
     param[journal_id] = ija
 
-    au < manifest ; International Journal of Agronomy Volume 2009 ; 2009 >
+    au < testing ; International Journal of Agronomy Volume 2009 ; 2009 >
 
   }
 
@@ -945,8 +945,8 @@
 
     param[journal_id] = ijap
 
-    au < manifest ; International Journal of Antennas and Propagation Volume 2007 ; 2007 >
-    au < manifest ; International Journal of Antennas and Propagation Volume 2008 ; 2008 >
+    au < testing ; International Journal of Antennas and Propagation Volume 2007 ; 2007 >
+    au < testing ; International Journal of Antennas and Propagation Volume 2008 ; 2008 >
 
   }
 
@@ -971,9 +971,9 @@
 
     param[journal_id] = ijbi
 
-    au < manifest ; International Journal of Biomedical Imaging Volume 2006 ; 2006 >
-    au < manifest ; International Journal of Biomedical Imaging Volume 2007 ; 2007 >
-    au < manifest ; International Journal of Biomedical Imaging Volume 2008 ; 2008 >
+    au < testing ; International Journal of Biomedical Imaging Volume 2006 ; 2006 >
+    au < testing ; International Journal of Biomedical Imaging Volume 2007 ; 2007 >
+    au < testing ; International Journal of Biomedical Imaging Volume 2008 ; 2008 >
 
   }
 

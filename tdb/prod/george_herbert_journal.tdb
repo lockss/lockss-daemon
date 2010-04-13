@@ -16,11 +16,11 @@
 
     param[journal_dir] = george_herbert_journal
 
-    au < manifest ; George Herbert Journal Volume 27 ; 27 >
-    au < manifest ; George Herbert Journal Volume 28 ; 28 >
-    au < manifest ; George Herbert Journal Volume 29 ; 29 >
-    au < manifest ; George Herbert Journal Volume 30 ; 30 >
-    au < manifest ; George Herbert Journal Volume 31 ; 31 >
+    au < ready ; George Herbert Journal Volume 27 ; 27 >
+    au < ready ; George Herbert Journal Volume 28 ; 28 >
+    au < ready ; George Herbert Journal Volume 29 ; 29 >
+    au < ready ; George Herbert Journal Volume 30 ; 30 >
+    au < ready ; George Herbert Journal Volume 31 ; 31 >
 
   }
 

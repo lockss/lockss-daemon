@@ -25,7 +25,7 @@
     au < released ; Africa Today Volume 53 ; 53 >
     au < ready ; Africa Today Volume 54 ; 54 >
     au < ready ; Africa Today Volume 55 ; 55 >
-    au < manifest ; Africa Today Volume 56 ; 56 >
+    au < testing ; Africa Today Volume 56 ; 56 >
 
   }
 
@@ -89,8 +89,8 @@
     au < released ; e-Service Journal Volume 2 ; 2 >
     au < released ; e-Service Journal Volume 3 ; 3 >
     au < released ; e-Service Journal Volume 4 ; 4 >
-    au < manifest ; e-Service Journal Volume 5 ; 5 >
-    au < manifest ; e-Service Journal Volume 6 ; 6 >
+    au < testing ; e-Service Journal Volume 5 ; 5 >
+    au < testing ; e-Service Journal Volume 6 ; 6 >
 
   }
   
@@ -110,8 +110,8 @@
     au < released ; Ethics & the Environment Volume 10 ; 10 >
     au < released ; Ethics & the Environment Volume 11 ; 11 >
     au < released ; Ethics & the Environment Volume 12 ; 12 >
-    au < manifest ; Ethics & the Environment Volume 13 ; 13 >
-    au < manifest ; Ethics & the Environment Volume 14 ; 14 >
+    au < testing ; Ethics & the Environment Volume 13 ; 13 >
+    au < testing ; Ethics & the Environment Volume 14 ; 14 >
 
   }
 
@@ -127,8 +127,8 @@
     au < released ; Film History: An International Journal Volume 17 ; 17 >
     au < released ; Film History: An International Journal Volume 18 ; 18 >
     au < released ; Film History: An International Journal Volume 19 ; 19 >
-    au < manifest ; Film History: An International Journal Volume 20 ; 20 >
-    au < manifest ; Film History: An International Journal Volume 21 ; 21 >
+    au < testing ; Film History: An International Journal Volume 20 ; 20 >
+    au < testing ; Film History: An International Journal Volume 21 ; 21 >
 
   }
 
@@ -148,8 +148,8 @@
     au < released ; History & Memory Volume 17 ; 17 >
     au < released ; History & Memory Volume 18 ; 18 >
     au < released ; History & Memory Volume 19 ; 19 >
-    au < manifest ; History & Memory Volume 20 ; 20 >
-    au < manifest ; History & Memory Volume 21 ; 21 >
+    au < testing ; History & Memory Volume 20 ; 20 >
+    au < testing ; History & Memory Volume 21 ; 21 >
 
   }
 
@@ -171,7 +171,7 @@
     au < released ; Hypatia Volume 20 ; 20 >
     au < released ; Hypatia Volume 21 ; 21 >
     au < released ; Hypatia Volume 22 ; 22 >
-    au < manifest ; Hypatia Volume 23 ; 23 >
+    au < testing ; Hypatia Volume 23 ; 23 >
 
   }
 
@@ -188,9 +188,9 @@
     au < released ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
     au < released ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
     au < released ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
-    au < manifest ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
-    au < manifest ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
-    au < manifest ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
+    au < testing ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
+    au < testing ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
+    au < testing ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
 
   }
 
@@ -203,8 +203,8 @@
 
     param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
 
-    au < manifest ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
-    au < manifest ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+    au < testing ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
+    au < testing ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
 
   }
 
@@ -229,9 +229,9 @@
     au < released ; Israel Studies Volume 10 ; 10 >
     au < released ; Israel Studies Volume 11 ; 11 >
     au < released ; Israel Studies Volume 12 ; 12 >
-    au < manifest ; Israel Studies Volume 13 ; 13 >
-    au < manifest ; Israel Studies Volume 14 ; 14 >
-    au < manifest ; Israel Studies Volume 15 ; 15 >
+    au < testing ; Israel Studies Volume 13 ; 13 >
+    au < testing ; Israel Studies Volume 14 ; 14 >
+    au < testing ; Israel Studies Volume 15 ; 15 >
 
   }
 
@@ -253,8 +253,8 @@
     au < released ; Jewish Social Studies Volume 11 ; 11 >
     au < released ; Jewish Social Studies Volume 12 ; 12 >
     au < released ; Jewish Social Studies Volume 13 ; 13 >
-    au < manifest ; Jewish Social Studies Volume 14 ; 14 >
-    au < manifest ; Jewish Social Studies Volume 15 ; 15 >
+    au < testing ; Jewish Social Studies Volume 14 ; 14 >
+    au < testing ; Jewish Social Studies Volume 15 ; 15 >
 
   }
 
@@ -270,8 +270,8 @@
     au < released ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
     au < released ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
     au < released ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
-    au < manifest ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
-    au < manifest ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+    au < testing ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+    au < testing ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
 
   }
 
@@ -286,9 +286,9 @@
 
     au < released ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
     au < released ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
-    au < manifest ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
-    au < manifest ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
-    au < manifest ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+    au < testing ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
+    au < testing ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
+    au < testing ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
 
   }
 
@@ -305,9 +305,9 @@
     au < released ; Journal of Folklore Research Volume 41 ; 41 >
     au < released ; Journal of Folklore Research Volume 42 ; 42 >
     au < released ; Journal of Folklore Research Volume 43 ; 43 >
-    au < manifest ; Journal of Folklore Research Volume 44 ; 44 >
-    au < manifest ; Journal of Folklore Research Volume 45 ; 45 >
-    au < manifest ; Journal of Folklore Research Volume 46 ; 46 >
+    au < testing ; Journal of Folklore Research Volume 44 ; 44 >
+    au < testing ; Journal of Folklore Research Volume 45 ; 45 >
+    au < testing ; Journal of Folklore Research Volume 46 ; 46 >
 
   }
 

@@ -12195,6 +12195,25 @@ comment[mpj] = now published by Brill
     {
 
       title <
+        name = World Journal for Pediatric and Congenital Heart Surgery ;
+        issn = 2150-1351 ;
+        eissn = 2150-0136
+      >
+
+      {
+
+        param[base_url] = http://pch.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; manifest ; World Journal for Pediatric and Congenital Heart Surgery Volume 1 ; 1 >
+
+      }
+
+    }
+    
+    {
+
+      title <
         name = Written Communication ;
         issn = 0741-0883 ;
         eissn = 1552-8472
