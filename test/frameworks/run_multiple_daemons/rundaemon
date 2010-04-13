@@ -30,7 +30,7 @@ while true ; do
       args="$args -Dorg.lockss.defaultLogLevel=DEBUG3"
       shift; continue;;
     "-notitle" )
-      TITLE_DBS=""
+      TITLE_DBS=" "
       shift; continue;;
     "-titlepat" )
       TITLE_DBS="${TITLE_DBS} $2"
