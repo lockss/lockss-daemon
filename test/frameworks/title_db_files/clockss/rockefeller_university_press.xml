@@ -5391,25 +5391,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="38" />
    </property>
-   <property name="attributes.year" value="1954" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology38">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 38" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="38" />
-   </property>
-   <property name="attributes.year" value="1955" />
+   <property name="attributes.year" value="1954-1955" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology39">
@@ -5427,25 +5409,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="39" />
    </property>
-   <property name="attributes.year" value="1955" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology39">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 39" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="39" />
-   </property>
-   <property name="attributes.year" value="1956" />
+   <property name="attributes.year" value="1955-1956" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology40">
@@ -5463,25 +5427,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="40" />
    </property>
-   <property name="attributes.year" value="1956" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology40">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 40" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="40" />
-   </property>
-   <property name="attributes.year" value="1957" />
+   <property name="attributes.year" value="1956-1957" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology41">
@@ -5499,25 +5445,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="41" />
    </property>
-   <property name="attributes.year" value="1957" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology41">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 41" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="41" />
-   </property>
-   <property name="attributes.year" value="1958" />
+   <property name="attributes.year" value="1957-1958" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology42">
@@ -5535,25 +5463,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="42" />
    </property>
-   <property name="attributes.year" value="1958" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology42">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 42" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="42" />
-   </property>
-   <property name="attributes.year" value="1959" />
+   <property name="attributes.year" value="1958-1959" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology43">
@@ -5571,25 +5481,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="43" />
    </property>
-   <property name="attributes.year" value="1959" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology43">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 43" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="43" />
-   </property>
-   <property name="attributes.year" value="1960" />
+   <property name="attributes.year" value="1959-1960" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology44">
@@ -5607,25 +5499,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="44" />
    </property>
-   <property name="attributes.year" value="1960" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology44">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 44" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="44" />
-   </property>
-   <property name="attributes.year" value="1961" />
+   <property name="attributes.year" value="1960-1961" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology45">
@@ -5643,25 +5517,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="45" />
    </property>
-   <property name="attributes.year" value="1961" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology45">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 45" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="45" />
-   </property>
-   <property name="attributes.year" value="1962" />
+   <property name="attributes.year" value="1961-1962" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology46">
@@ -5679,25 +5535,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="46" />
    </property>
-   <property name="attributes.year" value="1962" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology46">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 46" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="46" />
-   </property>
-   <property name="attributes.year" value="1963" />
+   <property name="attributes.year" value="1962-1963" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology47">
@@ -5715,25 +5553,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="47" />
    </property>
-   <property name="attributes.year" value="1963" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology47">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 47" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="47" />
-   </property>
-   <property name="attributes.year" value="1964" />
+   <property name="attributes.year" value="1963-1964" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology48">
@@ -5751,25 +5571,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="48" />
    </property>
-   <property name="attributes.year" value="1964" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology48">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 48" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="48" />
-   </property>
-   <property name="attributes.year" value="1965" />
+   <property name="attributes.year" value="1964-1965" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology49">
@@ -5787,25 +5589,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="49" />
    </property>
-   <property name="attributes.year" value="1965" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology49">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 49" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="49" />
-   </property>
-   <property name="attributes.year" value="1966" />
+   <property name="attributes.year" value="1965-1966" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology50">
@@ -5823,25 +5607,7 @@
     <property name="key" value="volume_name" />
     <property name="value" value="50" />
    </property>
-   <property name="attributes.year" value="1966" />
-  </property>
-
-  <property name="TheJournalofGeneralPhysiology50">
-   <property name="attributes.publisher" value="Rockefeller University Press" />
-   <property name="journalTitle" value="The Journal of General Physiology" />
-   <property name="issn" value="0022-1295" />
-   <property name="eissn" value="1540-7748" />
-   <property name="title" value="The Journal of General Physiology Volume 50" />
-   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://jgp.rupress.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="volume_name" />
-    <property name="value" value="50" />
-   </property>
-   <property name="attributes.year" value="1967" />
+   <property name="attributes.year" value="1966-1967" />
   </property>
 
   <property name="TheJournalofGeneralPhysiology51">

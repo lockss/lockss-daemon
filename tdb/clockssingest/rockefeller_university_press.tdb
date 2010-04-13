@@ -351,32 +351,19 @@
       param[base_url] = http://jgp.rupress.org/
       implicit < status ; year ; name ; param[volume_name] >
       
-              au < manifest ; 1954 ; The Journal of General Physiology Volume 38 ; 38 >
-        au < manifest ; 1955 ; The Journal of General Physiology Volume 38 ; 38 >
-        au < manifest ; 1955 ; The Journal of General Physiology Volume 39 ; 39 >
-        au < manifest ; 1956 ; The Journal of General Physiology Volume 39 ; 39 >
-        au < manifest ; 1956 ; The Journal of General Physiology Volume 40 ; 40 >
-        au < manifest ; 1957 ; The Journal of General Physiology Volume 40 ; 40 >
-        au < manifest ; 1957 ; The Journal of General Physiology Volume 41 ; 41 >
-        au < manifest ; 1958 ; The Journal of General Physiology Volume 41 ; 41 >
-        au < manifest ; 1958 ; The Journal of General Physiology Volume 42 ; 42 >
-        au < manifest ; 1959 ; The Journal of General Physiology Volume 42 ; 42 >
-        au < manifest ; 1959 ; The Journal of General Physiology Volume 43 ; 43 >
-        au < manifest ; 1960 ; The Journal of General Physiology Volume 43 ; 43 >
-        au < manifest ; 1960 ; The Journal of General Physiology Volume 44 ; 44 >
-        au < manifest ; 1961 ; The Journal of General Physiology Volume 44 ; 44 >
-        au < manifest ; 1961 ; The Journal of General Physiology Volume 45 ; 45 >
-        au < manifest ; 1962 ; The Journal of General Physiology Volume 45 ; 45 >
-        au < manifest ; 1962 ; The Journal of General Physiology Volume 46 ; 46 >
-        au < manifest ; 1963 ; The Journal of General Physiology Volume 46 ; 46 >
-        au < manifest ; 1963 ; The Journal of General Physiology Volume 47 ; 47 >
-        au < manifest ; 1964 ; The Journal of General Physiology Volume 47 ; 47 >
-        au < manifest ; 1964 ; The Journal of General Physiology Volume 48 ; 48 >
-        au < manifest ; 1965 ; The Journal of General Physiology Volume 48 ; 48 >
-        au < manifest ; 1965 ; The Journal of General Physiology Volume 49 ; 49 >
-        au < manifest ; 1966 ; The Journal of General Physiology Volume 49 ; 49 >
-        au < manifest ; 1966 ; The Journal of General Physiology Volume 50 ; 50 >
-        au < manifest ; 1967 ; The Journal of General Physiology Volume 50 ; 50 >
+        au < manifest ; 1954-1955 ; The Journal of General Physiology Volume 38 ; 38 >
+        au < manifest ; 1955-1956 ; The Journal of General Physiology Volume 39 ; 39 >
+        au < manifest ; 1956-1957 ; The Journal of General Physiology Volume 40 ; 40 >
+        au < manifest ; 1957-1958 ; The Journal of General Physiology Volume 41 ; 41 >
+        au < manifest ; 1958-1959 ; The Journal of General Physiology Volume 42 ; 42 >
+        au < manifest ; 1959-1960 ; The Journal of General Physiology Volume 43 ; 43 >
+        au < manifest ; 1960-1961 ; The Journal of General Physiology Volume 44 ; 44 >
+        au < manifest ; 1961-1962 ; The Journal of General Physiology Volume 45 ; 45 >
+        au < manifest ; 1962-1963 ; The Journal of General Physiology Volume 46 ; 46 >
+        au < manifest ; 1963-1964 ; The Journal of General Physiology Volume 47 ; 47 >
+        au < manifest ; 1964-1965 ; The Journal of General Physiology Volume 48 ; 48 >
+        au < manifest ; 1965-1966 ; The Journal of General Physiology Volume 49 ; 49 >
+        au < manifest ; 1966-1967 ; The Journal of General Physiology Volume 50 ; 50 >
         au < manifest ; 1968 ; The Journal of General Physiology Volume 51 ; 51 >
         au < manifest ; 1968 ; The Journal of General Physiology Volume 52 ; 52 >
         au < manifest ; 1969 ; The Journal of General Physiology Volume 53 ; 53 >
