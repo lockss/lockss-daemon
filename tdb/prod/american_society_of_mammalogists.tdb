@@ -5,6 +5,7 @@
   >
 
   {
+
     title <
       name = Journal of Mammalogy ;
       issn = 1545-1542 ;
@@ -12,10 +13,11 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1545-1542
+      implicit < status ; name ; param[volume] >
   
       au < superseded ; Journal of Mammalogy Volume 81 ; 81 >
       au < superseded ; Journal of Mammalogy Volume 82 ; 82 >
@@ -36,7 +38,9 @@
       param[base_url] = http://www.bioone.org/
       param[journal_code] = mamm
   
-      au < released ; Journal of Mammalogy Volume 86 ; 86 >      
+      au < exists ; Journal of Mammalogy Volume 86 ; 86 >      
+
+    }
 
   }
   
@@ -49,10 +53,11 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1545-1410
+      implicit < status ; name ; param[volume] >
   
       au < doNotProcess ; Mammalian Species Volume 632 ; 632 >
       au < doNotProcess ; Mammalian Species Volume 633 ; 633 >

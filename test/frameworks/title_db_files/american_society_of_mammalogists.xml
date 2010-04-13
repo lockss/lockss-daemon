@@ -273,6 +273,27 @@
    </property>
   </property>
 
+  <property name="JournalofMammalogy86">
+   <property name="attributes.publisher" value="American Society of Mammalogists" />
+   <property name="journalTitle" value="Journal of Mammalogy" />
+   <property name="issn" value="1545-1542" />
+   <property name="eissn" value="1545-1542" />
+   <property name="title" value="Journal of Mammalogy Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.bioone.BioOneAtyponPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bioone.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_code" />
+    <property name="value" value="mamm" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="86" />
+   </property>
+  </property>
+
  </property>
 
 </lockss-config>

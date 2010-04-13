@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = LOCKSS Program
   >
@@ -6,7 +7,7 @@
   {
  
     title <
-      name = LOCKSS Card ;
+      name = LOCKSS Card
     >
     
     plugin = org.lockss.plugin.locksscard.LockssCardPlugin
@@ -16,8 +17,8 @@
 
       param[base_url] = http://www.lockss.org/
     
-      < released ; LOCKSS Card 2005 ; 2005 >
-      < released ; LOCKSS Card 2006 ; 2006 >
+      au < down ; LOCKSS Card 2005 ; 2005 >
+      au < down ; LOCKSS Card 2006 ; 2006 >
     
     }
     
@@ -25,7 +26,7 @@
 
       param[base_url] = http://www.lockss.org/za/
     
-      < released ; LOCKSS Card 2006 (South Africa Edition) ; 2006 >
+      au < down ; LOCKSS Card 2006 (South Africa Edition) ; 2006 >
     
     }
       
@@ -33,7 +34,7 @@
 
       param[base_url] = http://www.lockss.org/za/proxy/
     
-      < released ; LOCKSS Card 2006 (South Africa Proxy Edition) ; 2006 >
+      au < down ; LOCKSS Card 2006 (South Africa Proxy Edition) ; 2006 >
     
     }
 

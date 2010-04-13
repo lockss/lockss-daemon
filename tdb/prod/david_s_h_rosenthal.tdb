@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = David S.H. Rosenthal
   >
@@ -6,7 +7,7 @@
   {
  
     title <
-      name = David S.H. Rosenthal's Blog ;
+      name = DSHR's Blog
     >
     
     plugin = org.lockss.plugin.blogger.BasicBloggerPlugin
@@ -16,7 +17,7 @@
 
       param[base_url] = http://blog.dshr.org/
     
-      < released ; DSHR's Blog >
+      au < released ; DSHR's Blog >
     
     }
 
@@ -24,7 +25,7 @@
 
       param[base_url] = http://blog.dhsr.org/
     
-      < down ; Basic Blogger http://blog.dhsr.org/ [superseded] >
+      au < superseded ; DSHR's Blog [superseded] >
     
     }
     

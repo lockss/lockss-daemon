@@ -5,6 +5,7 @@
   >
 
   {
+
     title <
       name = Copeia ;
       issn = 0045-8511 ;
@@ -12,40 +13,43 @@
     >
 
     {
-      implicit < status ; name ; param[volume] >
+
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0045-8511
+      implicit < status ; name ; param[volume] >
   
-      au < down ; Copeia 2000 ; 2000 >
-      au < down ; Copeia 2001 ; 2001 >
-      au < down ; Copeia 2002 ; 2002 >
-      au < down ; Copeia 2003 ; 2003 >
-      au < down ; Copeia 2004 ; 2004 >
-      au < down ; Copeia 2005 ; 2005 >
-      au < down ; Copeia 2006 ; 2006 >
-      au < down ; Copeia 2007 ; 2007 >
+      au < superseded ; Copeia 2000 ; 2000 >
+      au < superseded ; Copeia 2001 ; 2001 >
+      au < superseded ; Copeia 2002 ; 2002 >
+      au < superseded ; Copeia 2003 ; 2003 >
+      au < superseded ; Copeia 2004 ; 2004 >
+      au < superseded ; Copeia 2005 ; 2005 >
+      au < superseded ; Copeia 2006 ; 2006 >
+      au < superseded ; Copeia 2007 ; 2007 >
       
     }
     
     {
     
       plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
-      implicit < status ; name ; param[volume_name] >
       param[base_url] = http://www.bioone.org/
       param[journal_code] = cope
+      implicit < status ; name ; param[volume_name] >
 
-      au < exists ; Copeia 2000 ; 2000 >  
-      au < exists ; Copeia 2001 ; 2001 >  
-      au < exists ; Copeia 2002 ; 2002 >  
-      au < exists ; Copeia 2003 ; 2003 >  
-      au < exists ; Copeia 2004 ; 2004 >  
-      au < exists ; Copeia 2005 ; 2005 >  
-      au < exists ; Copeia 2006 ; 2006 >  
-      au < exists ; Copeia 2007 ; 2007 >  
+      au < doNotProcess ; Copeia 2000 ; 2000 >  
+      au < doNotProcess ; Copeia 2001 ; 2001 >  
+      au < doNotProcess ; Copeia 2002 ; 2002 >  
+      au < doNotProcess ; Copeia 2003 ; 2003 >  
+      au < doNotProcess ; Copeia 2004 ; 2004 >  
+      au < doNotProcess ; Copeia 2005 ; 2005 >  
+      au < doNotProcess ; Copeia 2006 ; 2006 >  
+      au < doNotProcess ; Copeia 2007 ; 2007 >  
       au < exists ; Copeia 2008 ; 2008 >  
       au < exists ; Copeia 2009 ; 2009 >  
       au < exists ; Copeia 2010 ; 2010 >  
+
+    }
 
   }
   

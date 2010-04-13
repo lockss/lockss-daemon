@@ -32,9 +32,9 @@
       param[base_url] = http://americanliterature.dukejournals.org
       implicit < status ; name ; param[volume_name] >  
       
-      < released ; American Literature Volume 77 ; 77 >
-      < released ; American Literature Volume 78 ; 78 >
-      < released ; American Literature Volume 79 ; 79 >
+     au < released ; American Literature Volume 77 ; 77 >
+     au < released ; American Literature Volume 78 ; 78 >
+     au < released ; American Literature Volume 79 ; 79 >
     
     }
 
@@ -69,9 +69,9 @@
       param[base_url] = http://americanspeech.dukejournals.org
       implicit < status ; name ; param[volume_name] >  
       
-      < released ; American Speech Volume 80 ; 80 >
-      < released ; American Speech Volume 81 ; 81 >
-      < released ; American Speech Volume 82 ; 82 >
+     au < released ; American Speech Volume 80 ; 80 >
+     au < released ; American Speech Volume 81 ; 81 >
+     au < released ; American Speech Volume 82 ; 82 >
     
     }
 
@@ -215,9 +215,9 @@
       param[base_url] = http://ethnohistory.dukejournals.org
       implicit < status ; name ; param[volume_name] >  
       
-      < released ; Ethnohistory Volume 52 ; 52 >
-      < released ; Ethnohistory Volume 53 ; 53 >
-      < released ; Ethnohistory Volume 54 ; 54 >
+     au < released ; Ethnohistory Volume 52 ; 52 >
+     au < released ; Ethnohistory Volume 53 ; 53 >
+     au < released ; Ethnohistory Volume 54 ; 54 >
     
     }
 
@@ -252,9 +252,9 @@
       param[base_url] = http://fhs.dukejournals.org
       implicit < status ; name ; param[volume_name] >  
       
-      < released ; French Historical Studies Volume 28 ; 28 >
-      < released ; French Historical Studies Volume 29 ; 29 >
-      < released ; French Historical Studies Volume 30 ; 30 >
+     au < released ; French Historical Studies Volume 28 ; 28 >
+     au < released ; French Historical Studies Volume 29 ; 29 >
+     au < released ; French Historical Studies Volume 30 ; 30 >
     
     }
 
@@ -289,9 +289,9 @@
       param[base_url] = http://hahr.dukejournals.org
       implicit < status ; name ; param[volume_name] >  
       
-      < released ; Hispanic American Historical Review Volume 85 ; 85 >
-      < released ; Hispanic American Historical Review Volume 86 ; 86 >
-      < released ; Hispanic American Historical Review Volume 87 ; 87 >
+     au < released ; Hispanic American Historical Review Volume 85 ; 85 >
+     au < released ; Hispanic American Historical Review Volume 86 ; 86 >
+     au < released ; Hispanic American Historical Review Volume 87 ; 87 >
     
     }
 
@@ -326,9 +326,9 @@
       param[base_url] = http://hope.dukejournals.org
       implicit < status ; name ; param[volume_name] >  
       
-      < released ; History of Political Economy Volume 37 ; 37 >
-      < released ; History of Political Economy Volume 38 ; 38 >
-      < released ; History of Political Economy Volume 39 ; 39 >
+     au < released ; History of Political Economy Volume 37 ; 37 >
+     au < released ; History of Political Economy Volume 38 ; 38 >
+     au < released ; History of Political Economy Volume 39 ; 39 >
     
     }
 

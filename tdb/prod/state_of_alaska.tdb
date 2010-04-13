@@ -3,14 +3,15 @@
     name = State of Alaska
   >
 
-  plugin = us.ak.state.library.plugin.AlaskaStateDocsPlugin
-  implicit < status ; name ; param[year] >
-  param[base_url] = http://library.state.ak.us/asp/
-
   {
+
     title <
-      name = Alaska State Documents ;
+      name = Alaska State Documents
     >
+
+    plugin = us.ak.state.library.plugin.AlaskaStateDocsPlugin
+    param[base_url] = http://library.state.ak.us/asp/
+    implicit < status ; name ; param[year] >
 
     au < released ; Alaska State Documents 2006 ; 2006 >
 
