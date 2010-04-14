@@ -96,6 +96,20 @@
   {
   
     title <
+      name = Canadian Medical Education Journal ;
+      issn = 1923-1202
+    >
+    
+    param[base_url] = http://www.cmej.ca/
+    param[journal_id] = cmej
+
+    au < released ; 2010 ; Canadian Medical Education Journal Volume 1 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
       name = Currents: New Scholarship in the Human Services ;
       issn = 1499-6073
     >

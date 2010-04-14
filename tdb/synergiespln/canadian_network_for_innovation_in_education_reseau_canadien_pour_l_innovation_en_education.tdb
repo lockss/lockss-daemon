@@ -1,0 +1,43 @@
+{
+
+  publisher <
+    name = Canadian Network for Innovation in Education / Réseau canadien pour l'innovation en éducation
+  >
+
+  {
+  
+    title <
+      name = Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie
+    >
+    
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    param[base_url] = http://www.cjlt.ca/
+    param[journal_id] = cjlt
+    implicit < status ; year ; name ; param[year] >
+
+    au < released ; 1986 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 15 ; 1986 >
+    au < released ; 1987 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 16 ; 1987 >
+    au < released ; 1988 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 17 ; 1988 >
+    au < released ; 1989 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 18 ; 1989 >
+    au < released ; 1990 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 19 ; 1990 >
+    au < released ; 1991 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 20 ; 1991 >
+    au < released ; 1992 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 21 ; 1992 >
+    au < released ; 1993 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 22 ; 1993 >
+    au < released ; 1994 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 23 ; 1994 >
+    au < released ; 1995 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 24 ; 1995 >
+    au < released ; 1996 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 25 ; 1996 >
+    au < released ; 1997 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 26 ; 1997 >
+    au < released ; 1998 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 27 (1998) ; 1998 >
+    au < released ; 1999 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 27 (1999) ; 1999 >
+    au < released ; 2002 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 28 ; 2002 >
+    au < released ; 2003 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 29 ; 2003 >
+    au < released ; 2004 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 30 ; 2004 >
+    au < released ; 2005 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 31 ; 2005 >
+    au < released ; 2006 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 32 ; 2006 >
+    au < released ; 2007 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 33 ; 2007 >
+    au < released ; 2008 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 34 ; 2008 >
+    au < released ; 2009 ; Canadian Journal of Learning and Technology / La revue canadienne de l’apprentissage et de la technologie Volume 35 ; 2009 >
+
+  }
+
+}
