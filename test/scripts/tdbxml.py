@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.23 2010-04-12 05:53:32 thib_gc Exp $
+# $Id: tdbxml.py,v 1.24 2010-04-14 00:02:50 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -154,7 +154,7 @@ def _process_au(au, options):
     au_proxy = au.proxy()
     if au_proxy is not None:
         _do_param(au, 98, 'crawl_proxy', value=au_proxy)
-    if au.status() in [AU.STATUS_DOWN, AU.STATUS_SUPERSEDED]:
+    if not options.tdbxmlNoPubDown and au.status() in [AU.STATUS_DOWN, AU.STATUS_SUPERSEDED]:
         _do_param(au, 99, 'pub_down', value='true')
     au_attrs = au.attrs()
     for attr in au_attrs:

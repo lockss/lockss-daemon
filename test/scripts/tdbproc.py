@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbproc.py,v 1.10 2010-04-12 05:53:32 thib_gc Exp $
+# $Id: tdbproc.py,v 1.11 2010-04-14 00:02:50 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -30,12 +30,15 @@ from tdbconst import *
 import tdbout
 import tdbq
 
-TDBPROC_VERSION = '0.2.1'
+TDBPROC_VERSION = '0.2.2'
 
 OPTION_LONG        = '--'
 OPTION_SHORT       = '-'
 
 TDB_OPTION_STYLE_SHORT = 's'
+
+TDB_OPTION_XMLNOPUBDOWN         = 'tdbxmlNoPubDown'
+TDB_OPTION_XMLNOPUBDOWN_SHORT   = 'D'
 
 def _make_command_line_parser():
     '''Builds a new command line option parser'''
@@ -49,6 +52,11 @@ def _make_command_line_parser():
                       choices=TDB_STYLES,
                       default=TDB_STYLE_DEFAULT,
                       help='output style (default: %default)')
+    parser.add_option(OPTION_SHORT + TDB_OPTION_XMLNOPUBDOWN_SHORT,
+                      OPTION_LONG + TDB_OPTION_XMLNOPUBDOWN,
+                      dest=TDB_OPTION_XMLNOPUBDOWN,
+                      action='store_true',
+                      help='do not include pub_down marker in XML')
 
     tdbq.__option_parser__(parser)
     tdbout.__option_parser__(parser)
