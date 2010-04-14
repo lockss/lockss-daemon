@@ -54,7 +54,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 274" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -71,7 +71,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 275" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -88,7 +88,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 276" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -105,7 +105,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 277" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -122,7 +122,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 278" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -139,7 +139,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 279" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -156,7 +156,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 280" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -173,7 +173,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 281" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -190,7 +190,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 282" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -207,7 +207,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 283" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -224,7 +224,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 284" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -241,7 +241,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 285" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -258,7 +258,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 286" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -275,7 +275,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 287" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -292,7 +292,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 288" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -309,7 +309,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 289" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -326,7 +326,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 290" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -343,7 +343,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 291" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -360,7 +360,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 292" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -377,7 +377,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 293" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -394,7 +394,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 294" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -411,7 +411,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 295" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -428,7 +428,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 296" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -445,7 +445,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 297" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -462,7 +462,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 298" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -479,7 +479,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 299" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -496,7 +496,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 300" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -513,7 +513,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 301" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -530,7 +530,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 302" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -547,7 +547,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 303" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -564,7 +564,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 304" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -581,7 +581,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 305" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -598,7 +598,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 306" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -615,7 +615,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 307" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -632,7 +632,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 308" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -649,7 +649,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 309" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -666,7 +666,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 310" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -683,7 +683,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 311" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -700,7 +700,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 312" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -717,7 +717,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 313" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -734,7 +734,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 314" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -751,7 +751,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 315" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -768,7 +768,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 316" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -785,7 +785,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 317" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -802,7 +802,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 318" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -819,7 +819,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 319" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -836,7 +836,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 320" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -853,7 +853,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 321" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -870,7 +870,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 322" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -887,7 +887,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 323" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -904,7 +904,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 324" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -921,7 +921,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 325" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -938,7 +938,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 326" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -955,7 +955,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 327" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -972,7 +972,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 328" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -989,7 +989,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 329" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1006,7 +1006,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 330" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1023,7 +1023,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 331" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1040,7 +1040,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 332" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1057,7 +1057,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 333" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1074,7 +1074,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 334" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1091,7 +1091,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 335" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1108,7 +1108,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 336" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1125,7 +1125,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 337" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1142,7 +1142,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 338" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1159,7 +1159,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 339" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1176,7 +1176,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 340" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1193,7 +1193,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 341" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1210,7 +1210,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 342" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1227,7 +1227,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 343" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1244,7 +1244,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 344" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1261,7 +1261,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 345" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1278,7 +1278,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 346" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1295,7 +1295,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 347" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1312,7 +1312,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 348" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1329,7 +1329,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 349" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1346,7 +1346,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 350" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1363,7 +1363,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 351" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1448,7 +1448,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 356" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1465,7 +1465,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 357" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1482,7 +1482,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 358" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1499,7 +1499,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 359" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1516,7 +1516,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 360" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1533,7 +1533,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 361" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />
@@ -1550,7 +1550,7 @@
    <property name="issn" value="0028-4793" />
    <property name="eissn" value="1533-4406" />
    <property name="title" value="New England Journal of Medicine Volume 362" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://content.nejm.org/" />

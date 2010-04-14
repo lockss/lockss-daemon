@@ -13,7 +13,6 @@
     {
 
       pluginPrefix = org.lockss.plugin.highwire.
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://content.nejm.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
