@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.5 2010-03-26 21:06:20 edwardsb1 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.6 2010-04-14 18:11:58 edwardsb1 Exp $
  */
 
 /*
@@ -69,6 +69,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "ad-top2"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "ad-footer"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "ad-footer2"),
+        // For Chest pages
+        HtmlNodeFilters.tagWithAttribute("span", "class", "free"),
     };
     
     return new HtmlFilterInputStream(in,
