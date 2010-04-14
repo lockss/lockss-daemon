@@ -2725,6 +2725,8 @@
       au < ready ; Thrombosis Journal Volume 4 ; 4 >
       au < ready ; Thrombosis Journal Volume 5 ; 5 >
       au < ready ; Thrombosis Journal Volume 6 ; 6 >
+      au < testing ; Thrombosis Journal Volume 7 ; 7 >
+      au < testing ; Thrombosis Journal Volume 8 ; 8 >
     }
 
     {
@@ -2745,6 +2747,8 @@
       au < ready ; Trials Volume 7 ; 7 >
       au < ready ; Trials Volume 8 ; 8 >
       au < ready ; Trials Volume 9 ; 9 >
+      au < testing ; Trials Volume 10 ; 10 >
+      au < testing ; Trials Volume 11 ; 11 >
     }
 
     {
@@ -2761,6 +2765,8 @@
       au < ready ; Virology Journal Volume 3 ; 3 >
       au < ready ; Virology Journal Volume 4 ; 4 >
       au < ready ; Virology Journal Volume 5 ; 5 >
+      au < testing ; Virology Journal Volume 6 ; 6 >
+      au < testing ; Virology Journal Volume 7 ; 7 >      
     }
 
     {
@@ -2775,6 +2781,9 @@
       au < ready ; World Journal of Emergency Surgery Volume 1 ; 1 >
       au < ready ; World Journal of Emergency Surgery Volume 2 ; 2 >
       au < ready ; World Journal of Emergency Surgery Volume 3 ; 3 >
+      au < testing ; World Journal of Emergency Surgery Volume 4 ; 4 >
+      au < testing ; World Journal of Emergency Surgery Volume 5 ; 5 >
+      
     }
 
     {
@@ -2792,6 +2801,8 @@
       au < ready ; World Journal of Surgical Oncology Volume 4 ; 4 >
       au < ready ; World Journal of Surgical Oncology Volume 5 ; 5 >
       au < ready ; World Journal of Surgical Oncology Volume 6 ; 6 >
+      au < testing ; World Journal of Surgical Oncology Volume 7 ; 7 >
+      au < testing ; World Journal of Surgical Oncology Volume 8 ; 8 >
     }
         
   }
