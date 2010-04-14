@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbout.py,v 1.1 2010-04-02 11:15:16 thib_gc Exp $
+# $Id: tdbout.py,v 1.2 2010-04-14 00:02:25 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -33,7 +33,7 @@ import sys
 
 class TdboutConstants:
     
-    VERSION = '0.1.0'
+    VERSION = '0.1.1'
     OPTION_LONG = '--'
     OPTION_SHORT = '-'
     OPTION_CSV = 'csv'
@@ -44,17 +44,31 @@ class TdboutConstants:
     OPTION_TSV_SHORT = 't'
     OPTION_TSV_META = 'CSFIELDS'
     OPTION_TSV_HELP = 'display the comma-separated fields as tab-separated values'
+    OPTION_HEADINGS = 'tdboutHeadings'
+    OPTION_HEADINGS_SHORT = 'H'
+    OPTION_HEADINGS_HELP = 'include column headings'
+    OPTION_WARNINGS = 'tdboutWarnings'
+    OPTION_WARNINGS_SHORT = 'W'
+    OPTION_WARNINGS_HELP = 'include warnings at both ends of the output'
 
 def __dispatch__(tdb, options):
     if not (options.csv or options.tsv): return False
-    lambdas = list()
+    lambdas = []
     if options.tsv: str = options.tsv
     else: str = options.csv
+    headings = [[]]
     for word in str.split(','):
         fn = tdbq.str_to_lambda_au(word)
         if fn is None: raise RuntimeError, 'invalid field: %s' % (word,)
-        else: lambdas.append(fn)
+        lambdas.append(fn)
+        headings[0].append(word.capitalize())
     rows = [[f(au) or '' for f in lambdas] for au in tdb.aus()]
+    if options.tdboutHeadings: rows = headings + rows
+    if options.tdboutWarnings:
+        from datetime import date
+        warnings = [['Current as of %s' % (date.today())],
+                    ['Subject to change without notice']]
+        rows = warnings + [[]] + rows + [[]] + warnings
     if options.tsv:
         for row in rows: print '\t'.join(row)
     else:
@@ -83,4 +97,14 @@ def __option_parser__(parser):
                             metavar=TdboutConstants.OPTION_TSV_META,
                             dest=TdboutConstants.OPTION_TSV,
                             help=TdboutConstants.OPTION_TSV_HELP)
+    tdbout_group.add_option(TdboutConstants.OPTION_SHORT + TdboutConstants.OPTION_HEADINGS_SHORT,
+                            TdboutConstants.OPTION_LONG + TdboutConstants.OPTION_HEADINGS,
+                            dest=TdboutConstants.OPTION_HEADINGS,
+                            action='store_true',
+                            help=TdboutConstants.OPTION_HEADINGS_HELP)
+    tdbout_group.add_option(TdboutConstants.OPTION_SHORT + TdboutConstants.OPTION_WARNINGS_SHORT,
+                            TdboutConstants.OPTION_LONG + TdboutConstants.OPTION_WARNINGS,
+                            dest=TdboutConstants.OPTION_WARNINGS,
+                            action='store_true',
+                            help=TdboutConstants.OPTION_WARNINGS_HELP)
     parser.add_option_group(tdbout_group)
