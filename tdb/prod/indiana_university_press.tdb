@@ -25,7 +25,7 @@
     au < released ; Africa Today Volume 53 ; 53 >
     au < ready ; Africa Today Volume 54 ; 54 >
     au < ready ; Africa Today Volume 55 ; 55 >
-    au < testing ; Africa Today Volume 56 ; 56 >
+    au < ready ; Africa Today Volume 56 ; 56 >
 
   }
 
@@ -89,8 +89,8 @@
     au < released ; e-Service Journal Volume 2 ; 2 >
     au < released ; e-Service Journal Volume 3 ; 3 >
     au < released ; e-Service Journal Volume 4 ; 4 >
-    au < testing ; e-Service Journal Volume 5 ; 5 >
-    au < testing ; e-Service Journal Volume 6 ; 6 >
+    au < ready ; e-Service Journal Volume 5 ; 5 >
+    au < ready ; e-Service Journal Volume 6 ; 6 >
 
   }
   
@@ -110,8 +110,8 @@
     au < released ; Ethics & the Environment Volume 10 ; 10 >
     au < released ; Ethics & the Environment Volume 11 ; 11 >
     au < released ; Ethics & the Environment Volume 12 ; 12 >
-    au < testing ; Ethics & the Environment Volume 13 ; 13 >
-    au < testing ; Ethics & the Environment Volume 14 ; 14 >
+    au < ready ; Ethics & the Environment Volume 13 ; 13 >
+    au < ready ; Ethics & the Environment Volume 14 ; 14 >
 
   }
 
@@ -127,8 +127,8 @@
     au < released ; Film History: An International Journal Volume 17 ; 17 >
     au < released ; Film History: An International Journal Volume 18 ; 18 >
     au < released ; Film History: An International Journal Volume 19 ; 19 >
-    au < testing ; Film History: An International Journal Volume 20 ; 20 >
-    au < testing ; Film History: An International Journal Volume 21 ; 21 >
+    au < ready ; Film History: An International Journal Volume 20 ; 20 >
+    au < ready ; Film History: An International Journal Volume 21 ; 21 >
 
   }
 
@@ -148,8 +148,8 @@
     au < released ; History & Memory Volume 17 ; 17 >
     au < released ; History & Memory Volume 18 ; 18 >
     au < released ; History & Memory Volume 19 ; 19 >
-    au < testing ; History & Memory Volume 20 ; 20 >
-    au < testing ; History & Memory Volume 21 ; 21 >
+    au < ready ; History & Memory Volume 20 ; 20 >
+    au < ready ; History & Memory Volume 21 ; 21 >
 
   }
 
@@ -171,7 +171,7 @@
     au < released ; Hypatia Volume 20 ; 20 >
     au < released ; Hypatia Volume 21 ; 21 >
     au < released ; Hypatia Volume 22 ; 22 >
-    au < testing ; Hypatia Volume 23 ; 23 >
+    au < ready ; Hypatia Volume 23 ; 23 >
 
   }
 
@@ -188,9 +188,9 @@
     au < released ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
     au < released ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
     au < released ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
-    au < testing ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
-    au < testing ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
-    au < testing ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
+    au < ready ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
+    au < ready ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
+    au < ready ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
 
   }
 
@@ -203,8 +203,8 @@
 
     param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
 
-    au < testing ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
-    au < testing ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+    au < ready ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
+    au < ready ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
 
   }
 
@@ -229,9 +229,9 @@
     au < released ; Israel Studies Volume 10 ; 10 >
     au < released ; Israel Studies Volume 11 ; 11 >
     au < released ; Israel Studies Volume 12 ; 12 >
-    au < testing ; Israel Studies Volume 13 ; 13 >
-    au < testing ; Israel Studies Volume 14 ; 14 >
-    au < testing ; Israel Studies Volume 15 ; 15 >
+    au < ready ; Israel Studies Volume 13 ; 13 >
+    au < ready ; Israel Studies Volume 14 ; 14 >
+    au < ready ; Israel Studies Volume 15 ; 15 >
 
   }
 
@@ -253,8 +253,8 @@
     au < released ; Jewish Social Studies Volume 11 ; 11 >
     au < released ; Jewish Social Studies Volume 12 ; 12 >
     au < released ; Jewish Social Studies Volume 13 ; 13 >
-    au < testing ; Jewish Social Studies Volume 14 ; 14 >
-    au < testing ; Jewish Social Studies Volume 15 ; 15 >
+    au < ready ; Jewish Social Studies Volume 14 ; 14 >
+    au < ready ; Jewish Social Studies Volume 15 ; 15 >
 
   }
 
@@ -270,8 +270,8 @@
     au < released ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
     au < released ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
     au < released ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
-    au < testing ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
-    au < testing ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+    au < ready ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+    au < ready ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
 
   }
 
@@ -286,9 +286,9 @@
 
     au < released ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
     au < released ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
-    au < testing ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
-    au < testing ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
-    au < testing ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+    au < ready ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
+    au < ready ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
+    au < ready ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
 
   }
 
@@ -305,9 +305,9 @@
     au < released ; Journal of Folklore Research Volume 41 ; 41 >
     au < released ; Journal of Folklore Research Volume 42 ; 42 >
     au < released ; Journal of Folklore Research Volume 43 ; 43 >
-    au < testing ; Journal of Folklore Research Volume 44 ; 44 >
-    au < testing ; Journal of Folklore Research Volume 45 ; 45 >
-    au < testing ; Journal of Folklore Research Volume 46 ; 46 >
+    au < ready ; Journal of Folklore Research Volume 44 ; 44 >
+    au < ready ; Journal of Folklore Research Volume 45 ; 45 >
+    au < ready ; Journal of Folklore Research Volume 46 ; 46 >
 
   }
 
@@ -322,9 +322,9 @@
 
     au < released ; Journal of Middle East Women's Studies Volume 2 ; 2 >
     au < released ; Journal of Middle East Women's Studies Volume 3 ; 3 >
-    au < manifest ; Journal of Middle East Women's Studies Volume 4 ; 4 >
-    au < manifest ; Journal of Middle East Women's Studies Volume 5 ; 5 >
-    au < manifest ; Journal of Middle East Women's Studies Volume 6 ; 6 >
+    au < ready ; Journal of Middle East Women's Studies Volume 4 ; 4 >
+    au < ready ; Journal of Middle East Women's Studies Volume 5 ; 5 >
+    au < ready ; Journal of Middle East Women's Studies Volume 6 ; 6 >
 
   }
 
@@ -346,9 +346,9 @@
     au < released ; Journal of Modern Literature Volume 28 ; 28 >
     au < released ; Journal of Modern Literature Volume 29 ; 29 >
     au < released ; Journal of Modern Literature Volume 30 ; 30 >
-    au < manifest ; Journal of Modern Literature Volume 31 ; 31 >
-    au < manifest ; Journal of Modern Literature Volume 32 ; 32 >
-    au < manifest ; Journal of Modern Literature Volume 33 ; 33 >
+    au < ready ; Journal of Modern Literature Volume 31 ; 31 >
+    au < ready ; Journal of Modern Literature Volume 32 ; 32 >
+    au < ready ; Journal of Modern Literature Volume 33 ; 33 >
 
   }
 
@@ -365,8 +365,8 @@
     au < released ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
     au < released ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
     au < released ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
-    au < manifest ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
-    au < manifest ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
+    au < ready ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
+    au < ready ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
 
   }
 
@@ -386,12 +386,12 @@
     au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 ; 10 >
     au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 ; 11 >
     au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 ; 12 >
-    au < manifest ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 ; 13 >
-    au < manifest ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 ; 14 >
-    au < manifest ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 ; 15 >
-    au < manifest ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
-    au < manifest ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
-    au < manifest ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
+    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 ; 13 >
+    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 ; 14 >
+    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 ; 15 >
+    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
+    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
+    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
 
   }
 
@@ -408,8 +408,8 @@
     au < released ; Native Plants Journal Volume 6 ; 6 >
     au < released ; Native Plants Journal Volume 7 ; 7 >
     au < released ; Native Plants Journal Volume 8 ; 8 >
-    au < manifest ; Native Plants Journal Volume 9 ; 9 >
-    au < manifest ; Native Plants Journal Volume 10 ; 10 >
+    au < ready ; Native Plants Journal Volume 9 ; 9 >
+    au < ready ; Native Plants Journal Volume 10 ; 10 >
 
   }
 
@@ -426,9 +426,9 @@
     au < released ; Philosophy of Music Education Review Volume 12 ; 12 >
     au < released ; Philosophy of Music Education Review Volume 13 ; 13 >
     au < released ; Philosophy of Music Education Review Volume 14 ; 14 >
-    au < manifest ; Philosophy of Music Education Review Volume 15 ; 15 >
-    au < manifest ; Philosophy of Music Education Review Volume 16 ; 16 >
-    au < manifest ; Philosophy of Music Education Review Volume 17 ; 17 >
+    au < ready ; Philosophy of Music Education Review Volume 15 ; 15 >
+    au < ready ; Philosophy of Music Education Review Volume 16 ; 16 >
+    au < ready ; Philosophy of Music Education Review Volume 17 ; 17 >
 
   }
 
@@ -448,9 +448,9 @@
     au < released ; Prooftexts Volume 24 ; 24 >
     au < released ; Prooftexts Volume 25 ; 25 >
     au < released ; Prooftexts Volume 26 ; 26 >
-    au < manifest ; Prooftexts Volume 27 ; 27 >
-    au < manifest ; Prooftexts Volume 28 ; 28 >
-    au < manifest ; Prooftexts Volume 29 ; 29 >
+    au < ready ; Prooftexts Volume 27 ; 27 >
+    au < ready ; Prooftexts Volume 28 ; 28 >
+    au < ready ; Prooftexts Volume 29 ; 29 >
 
   }
 
@@ -461,8 +461,8 @@
 
     param[journal_dir] = race_ethnicity
 
-    au < manifest ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
-    au < manifest ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
+    au < ready ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
+    au < ready ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
 
   }
 
@@ -484,9 +484,9 @@
     au < released ; Research in African Literatures Volume 36 ; 36 >
     au < released ; Research in African Literatures Volume 37 ; 37 >
     au < released ; Research in African Literatures Volume 38 ; 38 >
-    au < manifest ; Research in African Literatures Volume 39 ; 39 >
-    au < manifest ; Research in African Literatures Volume 40 ; 40 >
-    au < manifest ; Research in African Literatures Volume 41 ; 41 >
+    au < testing ; Research in African Literatures Volume 39 ; 39 >
+    au < testing ; Research in African Literatures Volume 40 ; 40 >
+    au < testing ; Research in African Literatures Volume 41 ; 41 >
 
   }
 
@@ -497,10 +497,10 @@
 
     param[journal_dir] = textual_cultures
 
-    au < manifest ; Textual Cultures:  Texts, Contexts, Interpretation Volume 1 ; 1 >
-    au < manifest ; Textual Cultures:  Texts, Contexts, Interpretation Volume 2 ; 2 >
-    au < manifest ; Textual Cultures:  Texts, Contexts, Interpretation Volume 3 ; 3 >
-    au < manifest ; Textual Cultures:  Texts, Contexts, Interpretation Volume 4 ; 4 >
+    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 1 ; 1 >
+    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 2 ; 2 >
+    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 3 ; 3 >
+    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 4 ; 4 >
 
   }
 
@@ -513,8 +513,8 @@
 
     param[journal_dir] = the_global_south
 
-    au < manifest ; The Global South Volume 2 ; 2 >
-    au < manifest ; The Global South Volume 3 ; 3 >
+    au < testing ; The Global South Volume 2 ; 2 >
+    au < testing ; The Global South Volume 3 ; 3 >
 
   }
 
@@ -527,10 +527,10 @@
 
     param[journal_dir] = transactions_of_the_charles_s_peirce_society
 
-    au < manifest ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
-    au < manifest ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
-    au < manifest ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
-    au < manifest ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
+    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
+    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
+    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
 
   }
 
@@ -548,11 +548,11 @@
     au < released ; Transition Volume 11 ; 11 >
     au < released ; Transition Volume 12 ; 12 >
     au < released ; Transition Volume 13 ; 13 >
-    au < manifest ; Transition Issue 98 ; 98 >
-    au < manifest ; Transition Issue 99 ; 99 >
-    au < manifest ; Transition Issue 100 ; 100 >
-    au < manifest ; Transition Issue 101 ; 101 >
-    au < manifest ; Transition Issue 102 ; 102 >
+    au < testing ; Transition Issue 98 ; 98 >
+    au < testing ; Transition Issue 99 ; 99 >
+    au < testing ; Transition Issue 100 ; 100 >
+    au < testing ; Transition Issue 101 ; 101 >
+    au < testing ; Transition Issue 102 ; 102 >
 
   }
 
@@ -573,9 +573,9 @@
     au < released ; Victorian Studies Volume 47 ; 47 >
     au < released ; Victorian Studies Volume 48 ; 48 >
     au < released ; Victorian Studies Volume 49 ; 49 >
-    au < manifest ; Victorian Studies Volume 50 ; 50 >
-    au < manifest ; Victorian Studies Volume 51 ; 51 >
-    au < manifest ; Victorian Studies Volume 52 ; 52 >
+    au < testing ; Victorian Studies Volume 50 ; 50 >
+    au < testing ; Victorian Studies Volume 51 ; 51 >
+    au < testing ; Victorian Studies Volume 52 ; 52 >
 
   }
 

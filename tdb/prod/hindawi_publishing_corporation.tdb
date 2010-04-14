@@ -793,13 +793,13 @@
 
     param[journal_id] = edr
 
-    au < testing ; Experimental Diabetes Research Volume 1 (2002) ; 2002 >
-    au < testing ; Experimental Diabetes Research Volume 2 (2003) ; 2003 >
-    au < testing ; Experimental Diabetes Research Volume 3 (2004) ; 2004 >
-    au < testing ; Experimental Diabetes Research Volume 4 (2005) ; 2005 >
-    au < testing ; Experimental Diabetes Research Volume 5 (2006) ; 2006 >
-    au < testing ; Experimental Diabetes Research Volume 2007 ; 2007 >
-    au < testing ; Experimental Diabetes Research Volume 2008 ; 2008 >
+    au < ready ; Experimental Diabetes Research Volume 1 (2002) ; 2002 >
+    au < ready ; Experimental Diabetes Research Volume 2 (2003) ; 2003 >
+    au < ready ; Experimental Diabetes Research Volume 3 (2004) ; 2004 >
+    au < ready ; Experimental Diabetes Research Volume 4 (2005) ; 2005 >
+    au < ready ; Experimental Diabetes Research Volume 5 (2006) ; 2006 >
+    au < ready ; Experimental Diabetes Research Volume 2007 ; 2007 >
+    au < ready ; Experimental Diabetes Research Volume 2008 ; 2008 >
 
   }
 
@@ -812,11 +812,11 @@
 
     param[journal_id] = fpta
 
-    au < testing ; Fixed Point Theory and Applications Volume 2004 ; 2004 >
-    au < testing ; Fixed Point Theory and Applications Volume 2005 ; 2005 >
-    au < testing ; Fixed Point Theory and Applications Volume 2006 ; 2006 >
-    au < testing ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
-    au < testing ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
+    au < ready ; Fixed Point Theory and Applications Volume 2004 ; 2004 >
+    au < ready ; Fixed Point Theory and Applications Volume 2005 ; 2005 >
+    au < ready ; Fixed Point Theory and Applications Volume 2006 ; 2006 >
+    au < ready ; Fixed Point Theory and Applications Volume 2007 ; 2007 >
+    au < ready ; Fixed Point Theory and Applications Volume 2008 ; 2008 >
 
   }
 
@@ -829,7 +829,7 @@
 
     param[journal_id] = grp
 
-    au < testing ; Gastroenterology Research and Practice Volume 2008 ; 2008 >
+    au < ready ; Gastroenterology Research and Practice Volume 2008 ; 2008 >
 
   }
 
@@ -842,18 +842,18 @@
 
     param[journal_id] = hpb
 
-    au < testing ; HPB Surgery Volume 1 (1997) ; 1997 >
-    au < testing ; HPB Surgery Volume 2 (1998) ; 1998 >
-    au < testing ; HPB Surgery Volume 3 (1999) ; 1999 >
-    au < testing ; HPB Surgery Volume 4 (2000) ; 2000 >
-    au < testing ; HPB Surgery Volume 5 (2001) ; 2001 >
-    au < testing ; HPB Surgery Volume 6 (2002) ; 2002 >
-    au < testing ; HPB Surgery Volume 7 (2003) ; 2003 >
-    au < testing ; HPB Surgery Volume 8 (2004) ; 2004 >
-    au < testing ; HPB Surgery Volume 9 (2005) ; 2005 >
-    au < testing ; HPB Surgery Volume 10 (2006) ; 2006 >
-    au < testing ; HPB Surgery Volume 11 (2007) ; 2007 >
-    au < testing ; HPB Surgery Volume 2008 ; 2008 >
+    au < ready ; HPB Surgery Volume 1 (1997) ; 1997 >
+    au < ready ; HPB Surgery Volume 2 (1998) ; 1998 >
+    au < ready ; HPB Surgery Volume 3 (1999) ; 1999 >
+    au < ready ; HPB Surgery Volume 4 (2000) ; 2000 >
+    au < ready ; HPB Surgery Volume 5 (2001) ; 2001 >
+    au < ready ; HPB Surgery Volume 6 (2002) ; 2002 >
+    au < ready ; HPB Surgery Volume 7 (2003) ; 2003 >
+    au < ready ; HPB Surgery Volume 8 (2004) ; 2004 >
+    au < ready ; HPB Surgery Volume 9 (2005) ; 2005 >
+    au < ready ; HPB Surgery Volume 10 (2006) ; 2006 >
+    au < ready ; HPB Surgery Volume 11 (2007) ; 2007 >
+    au < ready ; HPB Surgery Volume 2008 ; 2008 >
 
   }
 
@@ -866,22 +866,22 @@
 
     param[journal_id] = idog
 
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 1 (1993) ; 1993 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2 (1994) ; 1994 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 3 (1995) ; 1995 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 4 (1996) ; 1996 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 5 (1997) ; 1997 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 6 (1998) ; 1998 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 7 (1999) ; 1999 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 8 (2000) ; 2000 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 9 (2001) ; 2001 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 10 (2002) ; 2002 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 11 (2003) ; 2003 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 12 (2004) ; 2004 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 13 (2005) ; 2005 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 >
-    au < testing ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 1 (1993) ; 1993 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 2 (1994) ; 1994 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 3 (1995) ; 1995 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 4 (1996) ; 1996 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 5 (1997) ; 1997 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 6 (1998) ; 1998 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 7 (1999) ; 1999 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 8 (2000) ; 2000 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 9 (2001) ; 2001 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 10 (2002) ; 2002 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 11 (2003) ; 2003 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 12 (2004) ; 2004 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 13 (2005) ; 2005 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 2006 ; 2006 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 2007 ; 2007 >
+    au < ready ; Infectious Diseases in Obstetrics and Gynecology Volume 2008 ; 2008 >
 
   }
 
@@ -894,7 +894,7 @@
 
     param[journal_id] = ipid
 
-    au < testing ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 >
+    au < ready ; Interdisciplinary Perspectives on Infectious Diseases Volume 2008 ; 2008 >
 
   }
 
@@ -907,7 +907,7 @@
 
     param[journal_id] = ijae
 
-    au < testing ; International Journal of Aerospace Engineering Volume 2008 ; 2008 >
+    au < ready ; International Journal of Aerospace Engineering Volume 2008 ; 2008 >
 
   }
 
@@ -920,7 +920,7 @@
 
     param[journal_id] = ija
 
-    au < testing ; International Journal of Agronomy Volume 2009 ; 2009 >
+    au < ready ; International Journal of Agronomy Volume 2009 ; 2009 >
 
   }
 
@@ -945,8 +945,8 @@
 
     param[journal_id] = ijap
 
-    au < testing ; International Journal of Antennas and Propagation Volume 2007 ; 2007 >
-    au < testing ; International Journal of Antennas and Propagation Volume 2008 ; 2008 >
+    au < ready ; International Journal of Antennas and Propagation Volume 2007 ; 2007 >
+    au < ready ; International Journal of Antennas and Propagation Volume 2008 ; 2008 >
 
   }
 
@@ -971,9 +971,9 @@
 
     param[journal_id] = ijbi
 
-    au < testing ; International Journal of Biomedical Imaging Volume 2006 ; 2006 >
-    au < testing ; International Journal of Biomedical Imaging Volume 2007 ; 2007 >
-    au < testing ; International Journal of Biomedical Imaging Volume 2008 ; 2008 >
+    au < ready ; International Journal of Biomedical Imaging Volume 2006 ; 2006 >
+    au < ready ; International Journal of Biomedical Imaging Volume 2007 ; 2007 >
+    au < ready ; International Journal of Biomedical Imaging Volume 2008 ; 2008 >
 
   }
 
@@ -1008,7 +1008,7 @@
 
     param[journal_id] = ijce
 
-    au < manifest ; International Journal of Chemical Engineering Volume 2008 ; 2008 >
+    au < testing ; International Journal of Chemical Engineering Volume 2008 ; 2008 >
 
   }
 
@@ -1033,8 +1033,8 @@
 
     param[journal_id] = ijcgt
 
-    au < manifest ; International Journal of Computer Games Technology Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Computer Games Technology Volume 2009 ; 2009 >
+    au < testing ; International Journal of Computer Games Technology Volume 2008 ; 2008 >
+    au < testing ; International Journal of Computer Games Technology Volume 2009 ; 2009 >
 
   }
 
@@ -1081,7 +1081,7 @@
 
     param[journal_id] = ijdmb
 
-    au < manifest ; International Journal of Digital Multimedia Broadcasting Volume 2008 ; 2008 >
+    au < testing ; International Journal of Digital Multimedia Broadcasting Volume 2008 ; 2008 >
 
   }
 
@@ -1104,7 +1104,7 @@
 
     param[journal_id] = ije
 
-    au < manifest ; International Journal of Endocrinology Volume 2009 ; 2009 >
+    au < testing ; International Journal of Endocrinology Volume 2009 ; 2009 >
 
   }
 
@@ -1141,25 +1141,25 @@
 
     param[journal_id] = ijmms
 
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 1 (1971) ; 1971 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 2 (1972) ; 1972 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 3 (1973) ; 1973 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 4 (1974) ; 1974 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 5 (1975) ; 1975 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 6 (1976) ; 1976 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 7 (1977) ; 1977 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 8 (1978) ; 1978 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 9 (1979) ; 1979 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 10 (1980) ; 1980 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 11 (1981) ; 1981 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 12 (1982) ; 1982 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 13 (1983) ; 1983 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 14 (1984) ; 1984 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 15 (1985) ; 1985 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 16 (1986) ; 1986 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 17 (1987) ; 1987 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 18 (1988) ; 1988 >
-    au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 19 (1989) ; 1989 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 1 (1971) ; 1971 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 2 (1972) ; 1972 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 3 (1973) ; 1973 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 4 (1974) ; 1974 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 5 (1975) ; 1975 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 6 (1976) ; 1976 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 7 (1977) ; 1977 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 8 (1978) ; 1978 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 9 (1979) ; 1979 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 10 (1980) ; 1980 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 11 (1981) ; 1981 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 12 (1982) ; 1982 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 13 (1983) ; 1983 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 14 (1984) ; 1984 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 15 (1985) ; 1985 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 16 (1986) ; 1986 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 17 (1987) ; 1987 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 18 (1988) ; 1988 >
+    au < testing ; International Journal of Mathematics and Mathematical Sciences Volume 19 (1989) ; 1989 >
     au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 20 (1990) ; 1990 >
     au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 21 (1991) ; 1991 >
     au < manifest ; International Journal of Mathematics and Mathematical Sciences Volume 22 (1992) ; 1992 >

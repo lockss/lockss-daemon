@@ -858,10 +858,10 @@
 
     param[journal_dir] = library_trends
 
-    au < manifest ; Library Trends Volume 54 ; 54 >
-    au < manifest ; Library Trends Volume 55 ; 55 >
-    au < manifest ; Library Trends Volume 56 ; 56 >
-    au < manifest ; Library Trends Volume 57 ; 57 >
+    au < testing ; Library Trends Volume 54 ; 54 >
+    au < testing ; Library Trends Volume 55 ; 55 >
+    au < testing ; Library Trends Volume 56 ; 56 >
+    au < testing ; Library Trends Volume 57 ; 57 >
 
   }
 
@@ -885,7 +885,7 @@
     au < released ; Literature and Medicine Volume 23 ; 23 >
     au < released ; Literature and Medicine Volume 24 ; 24 >
     au < released ; Literature and Medicine Volume 25 ; 25 >
-    au < manifest ; Literature and Medicine Volume 26 ; 26 >
+    au < testing ; Literature and Medicine Volume 26 ; 26 >
 
   }
 
@@ -898,7 +898,7 @@
 
     param[journal_dir] = modern_fiction_studies
 
-    au < manifest ; MFS Modern Fiction Studies Volume 40 ; 40 >
+    au < testing ; MFS Modern Fiction Studies Volume 40 ; 40 >
     au < released ; MFS Modern Fiction Studies Volume 41 ; 41 >
     au < released ; MFS Modern Fiction Studies Volume 42 ; 42 >
     au < released ; MFS Modern Fiction Studies Volume 43 ; 43 >
@@ -912,7 +912,7 @@
     au < released ; MFS Modern Fiction Studies Volume 51 ; 51 >
     au < released ; MFS Modern Fiction Studies Volume 52 ; 52 >
     au < released ; MFS Modern Fiction Studies Volume 53 ; 53 >
-    au < manifest ; MFS Modern Fiction Studies Volume 54 ; 54 >
+    au < testing ; MFS Modern Fiction Studies Volume 54 ; 54 >
 
   }
 
@@ -954,7 +954,7 @@
     au < released ; MLN Volume 120 ; 120 >
     au < released ; MLN Volume 121 ; 121 >
     au < released ; MLN Volume 122 ; 122 >
-    au < manifest ; MLN Volume 123 ; 123 >
+    au < testing ; MLN Volume 123 ; 123 >
 
   }
 
@@ -981,8 +981,8 @@
     au < released ; Modernism/modernity Volume 12 ; 12 >
     au < released ; Modernism/modernity Volume 13 ; 13 >
     au < released ; Modernism/modernity Volume 14 ; 14 >
-    au < manifest ; Modernism/modernity Volume 15 ; 15 >
-    au < manifest ; Modernism/modernity Volume 16 ; 16 >
+    au < testing ; Modernism/modernity Volume 15 ; 15 >
+    au < testing ; Modernism/modernity Volume 16 ; 16 >
 
   }
 
@@ -1007,8 +1007,8 @@
     au < released ; New Literary History Volume 35 ; 35 >
     au < released ; New Literary History Volume 36 ; 36 >
     au < released ; New Literary History Volume 37 ; 37 >
-    au < manifest ; New Literary History Volume 38 ; 38 >
-    au < manifest ; New Literary History Volume 39 ; 39 >
+    au < testing ; New Literary History Volume 38 ; 38 >
+    au < testing ; New Literary History Volume 39 ; 39 >
 
   }
 
@@ -1021,17 +1021,17 @@
 
     param[journal_dir] = nwsa_journal
 
-    au < manifest ; NWSA Journal Volume 11 ; 11 >
-    au < manifest ; NWSA Journal Volume 12 ; 12 >
-    au < manifest ; NWSA Journal Volume 13 ; 13 >
-    au < manifest ; NWSA Journal Volume 14 ; 14 >
-    au < manifest ; NWSA Journal Volume 15 ; 15 >
-    au < manifest ; NWSA Journal Volume 16 ; 16 >
-    au < manifest ; NWSA Journal Volume 17 ; 17 >
-    au < manifest ; NWSA Journal Volume 18 ; 18 >
-    au < manifest ; NWSA Journal Volume 19 ; 19 >
-    au < manifest ; NWSA Journal Volume 20 ; 20 >
-    au < manifest ; NWSA Journal Volume 21 ; 21 >
+    au < testing ; NWSA Journal Volume 11 ; 11 >
+    au < testing ; NWSA Journal Volume 12 ; 12 >
+    au < testing ; NWSA Journal Volume 13 ; 13 >
+    au < testing ; NWSA Journal Volume 14 ; 14 >
+    au < testing ; NWSA Journal Volume 15 ; 15 >
+    au < testing ; NWSA Journal Volume 16 ; 16 >
+    au < testing ; NWSA Journal Volume 17 ; 17 >
+    au < testing ; NWSA Journal Volume 18 ; 18 >
+    au < testing ; NWSA Journal Volume 19 ; 19 >
+    au < testing ; NWSA Journal Volume 20 ; 20 >
+    au < testing ; NWSA Journal Volume 21 ; 21 >
 
   }
   

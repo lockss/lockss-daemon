@@ -153,7 +153,6 @@
 
     comment[h20] = H20 title
 
-    comment[0] = dynamic pdfs
     comment[17] = vol 17, repository error caused by too-long urls
 
     {
@@ -179,9 +178,9 @@
       au < testing ; Genome Research Volume 15 ; 15 >
       au < testing ; Genome Research Volume 16 ; 16 >
       au < testing ; Genome Research Volume 17 ; 17 >
-      au < testing ; Genome Research Volume 18 ; 18 >
-      au < testing ; Genome Research Volume 19 ; 19 >
-      au < testing ; Genome Research Volume 20 ; 20 >
+      au < ready ; Genome Research Volume 18 ; 18 >
+      au < ready ; Genome Research Volume 19 ; 19 >
+      au < ready ; Genome Research Volume 20 ; 20 >
 
     }
 
@@ -196,6 +195,7 @@
     >
 
     comment[h20] = H20 title
+    comment[lm13] = waiting for H20 stamped PDF deactiveation
 
     {
 
@@ -214,12 +214,12 @@
       au < exists ; Learning & Memory Volume 9 ; 9 >
       au < exists ; Learning & Memory Volume 10 ; 10 >
       au < exists ; Learning & Memory Volume 11 ; 11 >
-      au < testing ; Learning & Memory Volume 12 ; 12 >
+      au < ready ; Learning & Memory Volume 12 ; 12 >
       au < testing ; Learning & Memory Volume 13 ; 13 >
-      au < testing ; Learning & Memory Volume 14 ; 14 >
-      au < testing ; Learning & Memory Volume 15 ; 15 >
-      au < testing ; Learning & Memory Volume 16 ; 16 >
-      au < testing ; Learning & Memory Volume 17 ; 17 >
+      au < ready ; Learning & Memory Volume 14 ; 14 >
+      au < ready ; Learning & Memory Volume 15 ; 15 >
+      au < ready ; Learning & Memory Volume 16 ; 16 >
+      au < ready ; Learning & Memory Volume 17 ; 17 >
 
     }
 
