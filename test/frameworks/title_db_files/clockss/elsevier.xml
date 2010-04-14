@@ -65,6 +65,7 @@
     <property name="key" value="crawl_proxy" />
     <property name="value" value="DIRECT" />
    </property>
+   <property name="attributes.year" value="2009" />
   </property>
 
   <property name="ElsevierSourceContent2010">
@@ -84,6 +85,7 @@
     <property name="key" value="crawl_proxy" />
     <property name="value" value="DIRECT" />
    </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
  </property>
