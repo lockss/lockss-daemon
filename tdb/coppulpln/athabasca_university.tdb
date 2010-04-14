@@ -10,30 +10,6 @@
   {
   
     title <
-      name = The International Review of Research in Open and Distance Learning
-    >
-    
-    comment[irrodl00] = the journal is behind a 1-year pay wall, so last year is always marked notReady, and should be tested a year later
-    
-    param[base_url] = http://www.irrodl.org/
-    param[journal_id] = irrodl
-
-    au < released ; 2000 ; The International Review of Research in Open and Distance Learning Volume 1 (2000) ; 2000 >
-    au < released ; 2001 ; The International Review of Research in Open and Distance Learning Volume 1-2 (2001) ; 2001 >
-    au < released ; 2002 ; The International Review of Research in Open and Distance Learning Volume 2-3 (2002) ; 2002 >
-    au < released ; 2003 ; The International Review of Research in Open and Distance Learning Volume 4 ; 2003 >
-    au < released ; 2004 ; The International Review of Research in Open and Distance Learning Volume 5 ; 2004 >
-    au < released ; 2005 ; The International Review of Research in Open and Distance Learning Volume 6 ; 2005 >
-    au < released ; 2006 ; The International Review of Research in Open and Distance Learning Volume 7 ; 2006 >
-    au < released ; 2007 ; The International Review of Research in Open and Distance Learning Volume 8 ; 2007 >
-    au < ready ; 2008 ; The International Review of Research in Open and Distance Learning Volume 9 ; 2008 >
-    au < notReady ; 2009 ; The International Review of Research in Open and Distance Learning Volume 10; 2009 >
-
-  }
-
-  {
-  
-    title <
       name = Cinema Canada
     >
 
@@ -52,6 +28,30 @@
     au < released ; 1981 ; Cinema Canada 1981 ; 1981 >
     au < released ; 1982 ; Cinema Canada 1982 ; 1982 >
     au < released ; 1983 ; Cinema Canada 1983 ; 1983 >
+
+  }
+
+  {
+  
+    title <
+      name = The International Review of Research in Open and Distance Learning
+    >
+    
+    comment[irrodl00] = the journal is behind a 1-year pay wall, so last year is always marked notReady, and should be tested a year later
+    
+    param[base_url] = http://www.irrodl.org/
+    param[journal_id] = irrodl
+
+    au < released ; 2000 ; The International Review of Research in Open and Distance Learning Volume 1 (2000) ; 2000 >
+    au < released ; 2001 ; The International Review of Research in Open and Distance Learning Volume 1-2 (2001) ; 2001 >
+    au < released ; 2002 ; The International Review of Research in Open and Distance Learning Volume 2-3 (2002) ; 2002 >
+    au < released ; 2003 ; The International Review of Research in Open and Distance Learning Volume 4 ; 2003 >
+    au < released ; 2004 ; The International Review of Research in Open and Distance Learning Volume 5 ; 2004 >
+    au < released ; 2005 ; The International Review of Research in Open and Distance Learning Volume 6 ; 2005 >
+    au < released ; 2006 ; The International Review of Research in Open and Distance Learning Volume 7 ; 2006 >
+    au < released ; 2007 ; The International Review of Research in Open and Distance Learning Volume 8 ; 2007 >
+    au < ready ; 2008 ; The International Review of Research in Open and Distance Learning Volume 9 ; 2008 >
+    au < notReady ; 2009 ; The International Review of Research in Open and Distance Learning Volume 10; 2009 >
 
   }
 
