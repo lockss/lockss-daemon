@@ -36,7 +36,9 @@ comment[abbs40] = manifest page 404
   {
 
     title <
-      name = Age and Ageing
+      name = Age and Ageing ;
+      issn = 0002-0729 ;
+      eissn = 1468-2834
     >
 
     param[base_url] = http://ageing.oxfordjournals.org/
@@ -48,7 +50,9 @@ comment[abbs40] = manifest page 404
   {
 
     title <
-      name = Alcohol and Alcoholism
+      name = Alcohol and Alcoholism ;
+      issn = 0735-0414 ;
+      eissn = 1464-3502
     >
 
 comment[alcalc44] = fetch error
@@ -61,7 +65,9 @@ comment[alcalc44] = fetch error
   {
 
     title <
-      name = American Journal of Epidemiology
+      name = American Journal of Epidemiology ;
+      issn = 0002-9262 ;
+      eissn = 1476-6256
     >
 
     param[base_url] = http://aje.oxfordjournals.org/
@@ -74,7 +80,9 @@ comment[alcalc44] = fetch error
   {
 
     title <
-      name = American Law and Economics Review
+      name = American Law and Economics Review ;
+      issn = 1465-7252 ;
+      eissn = 1465-7260
     >
 
     param[base_url] = http://aler.oxfordjournals.org/
@@ -85,7 +93,9 @@ comment[alcalc44] = fetch error
   {
 
     title <
-      name = American Literary History
+      name = American Literary History ;
+      issn = 0896-7148 ;
+      eissn = 1468-4365
     >
 
     param[base_url] = http://alh.oxfordjournals.org/
@@ -109,7 +119,9 @@ comment[analysis68] = no manifest page
   {
 
     title <
-      name = Annals of Botany
+      name = Annals of Botany ;
+      issn = 0305-7364 ;
+      eissn = 1095-8290
     >
 
 comment[aob102] = 500 errors, content3
@@ -123,7 +135,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = The Annals of Occupational Hygiene
+      name = The Annals of Occupational Hygiene ;
+      issn = 0003-4878 ;
+      eissn = 1475-3162
     >
 
     param[base_url] = http://annhyg.oxfordjournals.org/
@@ -134,7 +148,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Annals of Oncology
+      name = Annals of Oncology ;
+      issn = 0923-7534 ;
+      eissn = 1569-8041
     >
 
     param[base_url] = http://annonc.oxfordjournals.org/
@@ -145,7 +161,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Applied Linguistics
+      name = Applied Linguistics ;
+      issn = 0142-6001 ;
+      eissn = 1477-450X
     >
 
     param[base_url] = http://applij.oxfordjournals.org/
@@ -167,7 +185,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Behavioral Ecology
+      name = Behavioral Ecology ;
+      issn = 1045-2249 ;
+      eissn = 1465-7279
     >
 
     param[base_url] = http://beheco.oxfordjournals.org/
@@ -178,7 +198,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Bioinformatics
+      name = Bioinformatics ;
+      issn = 1367-4803 ;
+      eissn = 1460-2059
     >
 
     param[base_url] = http://bioinformatics.oxfordjournals.org/
@@ -189,7 +211,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Biometrika
+      name = Biometrika ;
+      issn = 0006-3444 ;
+      eissn = 1464-3510
     >
 
     param[base_url] = http://biomet.oxfordjournals.org/
@@ -213,7 +237,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Biostatistics
+      name = Biostatistics ;
+      issn = 1465-4644 ;
+      eissn = 1468-4357
     >
 
     param[base_url] = http://biostatistics.oxfordjournals.org/
@@ -238,7 +264,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Brain
+      name = Brain ;
+      issn = 0006-8950 ;
+      eissn = 1460-2156
     >
 
     param[base_url] = http://brain.oxfordjournals.org/
@@ -250,7 +278,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Briefings in Bioinformatics
+      name = Briefings in Bioinformatics ;
+      issn = 1467-5463 ;
+      eissn = 1477-4054
     >
 
     param[base_url] = http://bib.oxfordjournals.org/
@@ -262,7 +292,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Briefings in Functional Genomics and Proteomics
+      name = Briefings in Functional Genomics and Proteomics ;
+      issn = 1473-9550 ;
+      eissn = 1477-4062
     >
 
     param[base_url] = http://bfgp.oxfordjournals.org/
@@ -274,7 +306,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = The British Journal of Aesthetics
+      name = The British Journal of Aesthetics ;
+      issn = 0007-0904 ;
+      eissn = 1468-2842
     >
 
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
@@ -298,7 +332,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = The British Journal for the Philosophy of Science
+      name = The British Journal for the Philosophy of Science ;
+      issn = 0007-0882 ;
+      eissn = 1464-3537
     >
 
     param[base_url] = http://bjps.oxfordjournals.org/
@@ -310,7 +346,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = The British Journal of Social Work
+      name = The British Journal of Social Work ;
+      issn = 0045-3102 ;
+      eissn = 1468-263X
     >
 
     param[base_url] = http://bjsw.oxfordjournals.org/
@@ -322,7 +360,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = British Medical Bulletin
+      name = British Medical Bulletin ;
+      issn = 0007-1420 ;
+      eissn = 1471-8391
     >
 
     param[base_url] = http://bmb.oxfordjournals.org/
@@ -336,7 +376,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Bulletin of the London Mathematical Society
+      name = Bulletin of the London Mathematical Society ;
+      issn = 0024-6093 ;
+      eissn = 1469-2120
     >
 
     param[base_url] = http://blms.oxfordjournals.org/
@@ -348,7 +390,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Cambridge Journal of Economics
+      name = Cambridge Journal of Economics ;
+      issn = 0309-166X ;
+      eissn = 1464-3545
     >
 
     param[base_url] = http://cje.oxfordjournals.org/
@@ -372,7 +416,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = The Cambridge Quarterly
+      name = The Cambridge Quarterly ;
+      issn = 0008-199X ;
+      eissn = 1471-6836
     >
 
     param[base_url] = http://camqtly.oxfordjournals.org/
@@ -384,7 +430,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Capital Markets Law Journal
+      name = Capital Markets Law Journal ;
+      issn = 1750-7219 ;
+      eissn = 1750-7227
     >
 
     param[base_url] = http://cmlj.oxfordjournals.org/
@@ -396,7 +444,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Carcinogenesis
+      name = Carcinogenesis ;
+      issn = 0143-3334 ;
+      eissn = 1460-2180
     >
 
     param[base_url] = http://carcin.oxfordjournals.org/
@@ -422,7 +472,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Cerebral Cortex
+      name = Cerebral Cortex ;
+      issn = 1047-3211 ;
+      eissn = 1460-2199
     >
 
     param[base_url] = http://cercor.oxfordjournals.org/
@@ -434,7 +486,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = CESifo Economic Studies
+      name = CESifo Economic Studies ;
+      issn = 1610-241X ;
+      eissn = 1612-7501
     >
 
     param[base_url] = http://cesifo.oxfordjournals.org/
@@ -446,7 +500,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Chemical Senses
+      name = Chemical Senses ;
+      issn = 0379-864X ;
+      eissn = 1464-3553
     >
 
     param[base_url] = http://chemse.oxfordjournals.org/
@@ -458,7 +514,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = Chinese Journal of International Law
+      name = Chinese Journal of International Law ;
+      issn = 1540-1650 ;
+      eissn = 1746-9937
     >
 
     param[base_url] = http://chinesejil.oxfordjournals.org/
@@ -469,7 +527,9 @@ comment[aob103_104] = fetch error
   {
 
     title <
-      name = The Chinese Journal of International Politics
+      name = The Chinese Journal of International Politics ;
+      issn = 1750-8916 ;
+      eissn = 1750-8924
     >
 
 comment[cjip] = no subscription
@@ -494,7 +554,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = Community Development Journal
+      name = Community Development Journal ;
+      issn = 0010-3802 ;
+      eissn = 1468-2656
     >
 
     param[base_url] = http://cdj.oxfordjournals.org/
@@ -506,7 +568,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = The Computer Journal
+      name = The Computer Journal ;
+      issn = 0010-4620 ;
+      eissn = 1460-2067
     >
 
     param[base_url] = http://comjnl.oxfordjournals.org/
@@ -542,7 +606,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = Contributions to Political Economy
+      name = Contributions to Political Economy ;
+      issn = 0277-5921 ;
+      eissn = 1464-3588
     >
 
     param[base_url] = http://cpe.oxfordjournals.org/
@@ -554,7 +620,8 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = DNA Research
+      name = DNA Research ;
+      issn = 1340-2838
     >
 
     param[base_url] = http://dnaresearch.oxfordjournals.org/
@@ -566,7 +633,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = Early Music
+      name = Early Music ;
+      issn = 0306-1078 ;
+      eissn = 1741-7260
     >
 
     param[base_url] = http://em.oxfordjournals.org/
@@ -578,7 +647,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = ELT Journal
+      name = ELT Journal ;
+      issn = 0951-0893 ;
+      eissn = 1477-4526
     >
 
     param[base_url] = http://eltj.oxfordjournals.org/
@@ -614,7 +685,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = Epidemiologic Reviews
+      name = Epidemiologic Reviews ;
+      issn = 0193-936X ;
+      eissn = 1478-6729
     >
 
     param[base_url] = http://epirev.oxfordjournals.org/
@@ -625,7 +698,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = ESHRE Monographs
+      name = ESHRE Monographs ;
+      issn = 1477-741X ;
+      eissn = 1477-8378
     >
 
     param[base_url] = http://eshremonographs.oxfordjournals.org/
@@ -636,7 +711,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = Essays in Criticism
+      name = Essays in Criticism ;
+      issn = 0014-0856 ;
+      eissn = 1471-6852
     >
 
     param[base_url] = http://eic.oxfordjournals.org/
@@ -648,7 +725,9 @@ comment[cjip] = no subscription
   {
 
     title <
-      name = European Heart Journal
+      name = European Heart Journal ;
+      issn = 0195-668X ;
+      eissn = 1522-9645
     >
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
@@ -674,7 +753,9 @@ comment[eurh30] = crawl failed because of a fetch error
   {
 
     title <
-      name = European Journal of International Law
+      name = European Journal of International Law ;
+      issn = 0938-5428 ;
+      eissn = 1464-3596
     >
 
     param[base_url] = http://ejil.oxfordjournals.org/
@@ -700,7 +781,9 @@ comment[eurjhf10] = manifest page not found (404)
   {
 
     title <
-      name = The European Journal of Orthodontics
+      name = The European Journal of Orthodontics ;
+      issn = 0141-5387 ;
+      eissn = 1460-2210
     >
 
     param[base_url] = http://ejo.oxfordjournals.org/
@@ -712,7 +795,9 @@ comment[eurjhf10] = manifest page not found (404)
   {
 
     title <
-      name = The European Journal of Public Health
+      name = The European Journal of Public Health ;
+      issn = 1101-1262 ;
+      eissn = 1464-360X
     >
 
 comment[eurpub19] = fetch error
@@ -726,7 +811,9 @@ comment[eurpub19] = fetch error
   {
 
     title <
-      name = European Review of Agricultural Economics
+      name = European Review of Agricultural Economics ;
+      issn = 0165-1587 ;
+      eissn = 1464-3618
     >
 
     param[base_url] = http://erae.oxfordjournals.org/
@@ -738,7 +825,9 @@ comment[eurpub19] = fetch error
   {
 
     title <
-      name = European Sociological Review
+      name = European Sociological Review ;
+      issn = 0266-7215 ;
+      eissn = 1468-2672
     >
 
     param[base_url] = http://esr.oxfordjournals.org/
@@ -750,7 +839,9 @@ comment[eurpub19] = fetch error
   {
 
     title <
-      name = Evidence-based Complementary and Alternative Medicine
+      name = Evidence-based Complementary and Alternative Medicine ;
+      issn = 1741-427X ;
+      eissn = 1741-4288
     >
 
     param[base_url] = http://ecam.oxfordjournals.org/
@@ -762,7 +853,9 @@ comment[eurpub19] = fetch error
   {
 
     title <
-      name = Family Practice
+      name = Family Practice ;
+      issn = 0263-2136 ;
+      eissn = 1460-2229
     >
 
 comment[fampra26] = fetch error
@@ -788,7 +881,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Forum for Modern Language Studies
+      name = Forum for Modern Language Studies ;
+      issn = 0015-8518 ;
+      eissn = 1471-6860
     >
 
     param[base_url] = http://fmls.oxfordjournals.org/
@@ -800,7 +895,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = French History
+      name = French History ;
+      issn = 0269-1191 ;
+      eissn = 1477-4542
     >
 
     param[base_url] = http://fh.oxfordjournals.org/
@@ -812,7 +909,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = French Studies
+      name = French Studies ;
+      issn = 0016-1128 ;
+      eissn = 1468-2931
     >
 
     param[base_url] = http://fs.oxfordjournals.org/
@@ -824,7 +923,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = German History
+      name = German History ;
+      issn = 0266-3554 ;
+      eissn = 1477-089X
     >
 
     param[base_url] = http://gh.oxfordjournals.org/
@@ -848,7 +949,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Glycobiology
+      name = Glycobiology ;
+      issn = 0959-6658 ;
+      eissn = 1460-2423
     >
 
     param[base_url] = http://glycob.oxfordjournals.org/
@@ -860,7 +963,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Health Education Research
+      name = Health Education Research ;
+      issn = 0268-1153 ;
+      eissn = 1465-3648
     >
 
     param[base_url] = http://her.oxfordjournals.org/
@@ -872,7 +977,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Health Policy and Planning
+      name = Health Policy and Planning ;
+      issn = 0268-1080 ;
+      eissn = 1460-2237
     >
 
     param[base_url] = http://heapol.oxfordjournals.org/
@@ -884,7 +991,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Health Promotion International
+      name = Health Promotion International ;
+      issn = 0957-4824 ;
+      eissn = 1460-2245
     >
 
     param[base_url] = http://heapro.oxfordjournals.org/
@@ -896,7 +1005,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = History Workshop Journal
+      name = History Workshop Journal ;
+      issn = 1363-3554 ;
+      eissn = 1477-4569
     >
 
     param[base_url] = http://hwj.oxfordjournals.org/
@@ -909,7 +1020,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Holocaust and Genocide Studies
+      name = Holocaust and Genocide Studies ;
+      issn = 8756-6583 ;
+      eissn = 1476-7937
     >
 
     param[base_url] = http://hgs.oxfordjournals.org/
@@ -921,7 +1034,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Human Molecular Genetics
+      name = Human Molecular Genetics ;
+      issn = 0964-6906 ;
+      eissn = 1460-2083
     >
 
     param[base_url] = http://hmg.oxfordjournals.org/
@@ -933,7 +1048,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Human Reproduction
+      name = Human Reproduction ;
+      issn = 0268-1161 ;
+      eissn = 1460-2350
     >
 
     param[base_url] = http://humrep.oxfordjournals.org/
@@ -945,7 +1062,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Human Reproduction Update
+      name = Human Reproduction Update ;
+      issn = 1355-4786 ;
+      eissn = 1460-2369
     >
 
     param[base_url] = http://humupd.oxfordjournals.org/
@@ -957,7 +1076,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Human Rights Law Review
+      name = Human Rights Law Review ;
+      issn = 1461-7781 ;
+      eissn = 1744-1021
     >
 
     param[base_url] = http://hrlr.oxfordjournals.org/
@@ -1029,7 +1150,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = IMA Journal of Applied Mathematics
+      name = IMA Journal of Applied Mathematics ;
+      issn = 0272-4960 ;
+      eissn = 1464-3634
     >
 
     param[base_url] = http://imamat.oxfordjournals.org/
@@ -1041,7 +1164,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = IMA Journal of Management Mathematics
+      name = IMA Journal of Management Mathematics ;
+      issn = 1471-678X ;
+      eissn = 1471-6798
     >
 
     param[base_url] = http://imaman.oxfordjournals.org/
@@ -1053,7 +1178,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = IMA Journal of Mathematical Control and Information
+      name = IMA Journal of Mathematical Control and Information ;
+      issn = 0265-0754 ;
+      eissn = 1471-6887
     >
 
     param[base_url] = http://imamci.oxfordjournals.org/
@@ -1065,7 +1192,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = IMA Journal of Numerical Analysis
+      name = IMA Journal of Numerical Analysis ;
+      issn = 0272-4979 ;
+      eissn = 1464-3642
     >
 
     param[base_url] = http://imajna.oxfordjournals.org/
@@ -1077,7 +1206,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Industrial and Corporate Change
+      name = Industrial and Corporate Change ;
+      issn = 0960-6491 ;
+      eissn = 1464-3650
     >
 
     param[base_url] = http://icc.oxfordjournals.org/
@@ -1089,7 +1220,9 @@ comment[fampra26] = fetch error
   {
 
     title <
-      name = Industrial Law Journal
+      name = Industrial Law Journal ;
+      issn = 0305-9332 ;
+      eissn = 1464-3669
     >
 
     param[base_url] = http://ilj.oxfordjournals.org/
@@ -1115,7 +1248,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Integrative and Comparative Biology
+      name = Integrative and Comparative Biology ;
+      issn = 1540-7063 ;
+      eissn = 1557-7023
     >
 
     param[base_url] = http://icb.oxfordjournals.org/
@@ -1139,7 +1274,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Immunology
+      name = International Immunology ;
+      issn = 0953-8178 ;
+      eissn = 1460-2377
     >
 
     param[base_url] = http://intimm.oxfordjournals.org/
@@ -1151,7 +1288,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Constitutional Law
+      name = International Journal of Constitutional Law ;
+      issn = 1474-2640 ;
+      eissn = 1474-2659
     >
 
     param[base_url] = http://icon.oxfordjournals.org/
@@ -1163,7 +1302,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Epidemiology
+      name = International Journal of Epidemiology ;
+      issn = 0300-5771 ;
+      eissn = 1464-3685
     >
 
     param[base_url] = http://ije.oxfordjournals.org/
@@ -1175,7 +1316,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Law and Information Technology
+      name = International Journal of Law and Information Technology ;
+      issn = 0967-0769 ;
+      eissn = 1464-3693
     >
 
     param[base_url] = http://ijlit.oxfordjournals.org/
@@ -1187,7 +1330,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Law, Policy and the Family
+      name = International Journal of Law, Policy and the Family ;
+      issn = 1360-9939 ;
+      eissn = 1464-3707
     >
 
     param[base_url] = http://lawfam.oxfordjournals.org/
@@ -1199,7 +1344,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Lexicography
+      name = International Journal of Lexicography ;
+      issn = 0950-3846 ;
+      eissn = 1477-4577
     >
 
     param[base_url] = http://ijl.oxfordjournals.org/
@@ -1223,7 +1370,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Public Opinion Research
+      name = International Journal of Public Opinion Research ;
+      issn = 0954-2892 ;
+      eissn = 1471-6909
     >
 
     param[base_url] = http://ijpor.oxfordjournals.org/
@@ -1235,7 +1384,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal for Quality in Health Care
+      name = International Journal for Quality in Health Care ;
+      issn = 1353-4505 ;
+      eissn = 1464-3677
     >
 
     param[base_url] = http://intqhc.oxfordjournals.org/
@@ -1247,7 +1398,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Refugee Law
+      name = International Journal of Refugee Law ;
+      issn = 0953-8186 ;
+      eissn = 1464-3715
     >
 
     param[base_url] = http://ijrl.oxfordjournals.org/
@@ -1259,7 +1412,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Journal of Transitional Justice
+      name = International Journal of Transitional Justice ;
+      issn = 1752-7716 ;
+      eissn = 1752-7724
     >
 
     param[base_url] = http://ijtj.oxfordjournals.org/
@@ -1283,7 +1438,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = International Relations of the Asia-Pacific
+      name = International Relations of the Asia-Pacific ;
+      issn = 1470-482X ;
+      eissn = 1470-4838
     >
 
     param[base_url] = http://irap.oxfordjournals.org/
@@ -1295,7 +1452,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = ITNOW
+      name = ITNOW ;
+      issn = 1746-5702 ;
+      eissn = 1746-5710
     >
 
     param[base_url] = http://itnow.oxfordjournals.org/
@@ -1307,7 +1466,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Japanese Journal of Clinical Oncology
+      name = Japanese Journal of Clinical Oncology ;
+      issn = 0368-2811 ;
+      eissn = 1465-3621
     >
 
     param[base_url] = http://jjco.oxfordjournals.org/
@@ -1318,7 +1479,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of African Economies
+      name = Journal of African Economies ;
+      issn = 0963-8024 ;
+      eissn = 1464-3723
     >
 
     param[base_url] = http://jae.oxfordjournals.org/
@@ -1329,7 +1492,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of the American Academy of Religion
+      name = Journal of the American Academy of Religion ;
+      issn = 0002-7189 ;
+      eissn = 1477-4585
     >
 
     param[base_url] = http://jaar.oxfordjournals.org/
@@ -1340,7 +1505,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Antimicrobial Chemotherapy
+      name = Journal of Antimicrobial Chemotherapy ;
+      issn = 0305-7453 ;
+      eissn = 1460-2091
     >
 
     param[base_url] = http://jac.oxfordjournals.org/
@@ -1351,7 +1518,8 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = The Journal of Biochemistry
+      name = The Journal of Biochemistry ;
+      issn = 0021-924X
     >
 
     param[base_url] = http://jb.oxfordjournals.org/
@@ -1385,7 +1553,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Conflict and Security Law
+      name = Journal of Conflict and Security Law ;
+      issn = 1467-7954 ;
+      eissn = 1467-7962
     >
 
     param[base_url] = http://jcsl.oxfordjournals.org/
@@ -1397,7 +1567,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = The Journal of Deaf Studies and Deaf Education
+      name = The Journal of Deaf Studies and Deaf Education ;
+      issn = 1081-4159 ;
+      eissn = 1465-7325
     >
 
     param[base_url] = http://jdsde.oxfordjournals.org/
@@ -1409,7 +1581,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Design History
+      name = Journal of Design History ;
+      issn = 0952-4649 ;
+      eissn = 1741-7279
     >
 
     param[base_url] = http://jdh.oxfordjournals.org/
@@ -1421,7 +1595,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Economic Geography
+      name = Journal of Economic Geography ;
+      issn = 1468-2702 ;
+      eissn = 1468-2710
     >
 
     param[base_url] = http://joeg.oxfordjournals.org/
@@ -1433,7 +1609,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Electron Microscopy
+      name = Journal of Electron Microscopy ;
+      issn = 0022-0744 ;
+      eissn = 1477-9986
     >
 
     param[base_url] = http://jmicro.oxfordjournals.org/
@@ -1445,7 +1623,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Environmental Law
+      name = Journal of Environmental Law ;
+      issn = 0952-8873 ;
+      eissn = 1464-374X
     >
 
     param[base_url] = http://jel.oxfordjournals.org/
@@ -1456,7 +1636,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Experimental Botany
+      name = Journal of Experimental Botany ;
+      issn = 0022-0957 ;
+      eissn = 1460-2431
     >
 
     param[base_url] = http://jxb.oxfordjournals.org/
@@ -1467,7 +1649,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Financial Econometrics
+      name = Journal of Financial Econometrics ;
+      issn = 1479-8409 ;
+      eissn = 1479-8417
     >
 
     param[base_url] = http://jfec.oxfordjournals.org/
@@ -1500,7 +1684,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Heredity
+      name = Journal of Heredity ;
+      issn = 0022-1503 ;
+      eissn = 1465-7333
     >
 
     param[base_url] = http://jhered.oxfordjournals.org/
@@ -1522,7 +1708,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of the History of Collections
+      name = Journal of the History of Collections ;
+      issn = 0954-6650 ;
+      eissn = 1477-8564
     >
 
     param[base_url] = http://jhc.oxfordjournals.org/
@@ -1533,7 +1721,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of the History of Medicine and Allied Sciences
+      name = Journal of the History of Medicine and Allied Sciences ;
+      issn = 0022-5045 ;
+      eissn = 1468-4373
     >
 
     param[base_url] = http://jhmas.oxfordjournals.org/
@@ -1544,7 +1734,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Human Rights Practice
+      name = Journal of Human Rights Practice ;
+      issn = 1757-9619 ;
+      eissn = 1757-9627
     >
 
     param[base_url] = http://jhrp.oxfordjournals.org/
@@ -1555,7 +1747,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Intellectual Property Law & Practice
+      name = Journal of Intellectual Property Law & Practice ;
+      issn = 1747-1532 ;
+      eissn = 1747-1540
     >
 
     param[base_url] = http://jiplp.oxfordjournals.org/
@@ -1566,7 +1760,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of International Criminal Justice
+      name = Journal of International Criminal Justice ;
+      issn = 1478-1387 ;
+      eissn = 1478-1395
     >
 
     param[base_url] = http://jicj.oxfordjournals.org/
@@ -1577,7 +1773,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of International Economic Law
+      name = Journal of International Economic Law ;
+      issn = 1369-3034 ;
+      eissn = 1464-3758
     >
 
     param[base_url] = http://jiel.oxfordjournals.org/
@@ -1588,7 +1786,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Islamic Studies
+      name = Journal of Islamic Studies ;
+      issn = 0955-2340 ;
+      eissn = 1471-6917
     >
 
     param[base_url] = http://jis.oxfordjournals.org/
@@ -1599,7 +1799,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = The Journal of Law, Economics, and Organization
+      name = The Journal of Law, Economics, and Organization ;
+      issn = 8756-6222 ;
+      eissn = 1465-7341
     >
 
     param[base_url] = http://jleo.oxfordjournals.org/
@@ -1610,7 +1812,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Logic and Computation
+      name = Journal of Logic and Computation ;
+      issn = 0955-792X ;
+      eissn = 1465-363X
     >
 
     param[base_url] = http://logcom.oxfordjournals.org/
@@ -1621,7 +1825,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of the London Mathematical Society
+      name = Journal of the London Mathematical Society ;
+      issn = 0024-6107 ;
+      eissn = 1469-7750
     >
 
     param[base_url] = http://jlms.oxfordjournals.org/
@@ -1643,7 +1849,8 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Molecular Cell Biology
+      name = Journal of Molecular Cell Biology ;
+      issn = 1674-2788
     >
 
     param[base_url] = http://jmcb.oxfordjournals.org/
@@ -1654,7 +1861,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Molluscan Studies
+      name = Journal of Molluscan Studies ;
+      issn = 0260-1230 ;
+      eissn = 1464-3766
     >
 
     param[base_url] = http://mollus.oxfordjournals.org/
@@ -1698,7 +1907,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Pediatric Psychology
+      name = Journal of Pediatric Psychology ;
+      issn = 0146-8693 ;
+      eissn = 1465-735X
     >
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
@@ -1709,7 +1920,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Petrology
+      name = Journal of Petrology ;
+      issn = 0022-3530 ;
+      eissn = 1460-2415
     >
 
     param[base_url] = http://petrology.oxfordjournals.org/
@@ -1720,7 +1933,9 @@ comment[in1] = 500 errors
   {
 
     title <
-      name = Journal of Plankton Research
+      name = Journal of Plankton Research ;
+      issn = 0142-7873 ;
+      eissn = 1464-3774
     >
 
     param[base_url] = http://plankt.oxfordjournals.org/
@@ -1744,7 +1959,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Journal of Public Administration Research and Theory
+      name = Journal of Public Administration Research and Theory ;
+      issn = 1053-1858 ;
+      eissn = 1477-9803
     >
 
     param[base_url] = http://jpart.oxfordjournals.org/
@@ -1755,7 +1972,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Journal of Public Health
+      name = Journal of Public Health ;
+      issn = 1741-3842 ;
+      eissn = 1741-3850
     >
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
@@ -1766,7 +1985,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Journal of Refugee Studies
+      name = Journal of Refugee Studies ;
+      issn = 0951-6328 ;
+      eissn = 1471-6925
     >
 
     param[base_url] = http://jrs.oxfordjournals.org/
@@ -1777,7 +1998,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Journal of Semantics
+      name = Journal of Semantics ;
+      issn = 0167-5133 ;
+      eissn = 1477-4593
     >
 
     param[base_url] = http://jos.oxfordjournals.org/
@@ -1788,7 +2011,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Journal of Semitic Studies
+      name = Journal of Semitic Studies ;
+      issn = 0167-5133 ;
+      eissn = 1477-4593
     >
 
     param[base_url] = http://jss.oxfordjournals.org/
@@ -1799,7 +2024,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = The Journal of Theological Studies
+      name = The Journal of Theological Studies ;
+      issn = 0022-5185 ;
+      eissn = 1477-4607
     >
 
     param[base_url] = http://jts.oxfordjournals.org/
@@ -1810,7 +2037,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Journal of Topology
+      name = Journal of Topology ;
+      issn = 1753-8416 ;
+      eissn = 1753-8424
     >
 
     param[base_url] = http://jtopol.oxfordjournals.org/
@@ -1821,7 +2050,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Journal of Tropical Pediatrics
+      name = Journal of Tropical Pediatrics ;
+      issn = 0142-6338 ;
+      eissn = 1465-3664
     >
 
     param[base_url] = http://tropej.oxfordjournals.org/
@@ -1832,7 +2063,9 @@ comment[jpe12] = no manifest
   {
 
     title <
-      name = Law, Probability and Risk
+      name = Law, Probability and Risk ;
+      issn = 1470-8396 ;
+      eissn = 1470-840X
     >
 
     param[base_url] = http://lpr.oxfordjournals.org/
@@ -1856,7 +2089,9 @@ comment[leobaeck2] = no manifest
   {
 
     title <
-      name = The Library
+      name = The Library ;
+      issn = 0024-2160 ;
+      eissn = 1744-8581
     >
 
     param[base_url] = http://library.oxfordjournals.org/
@@ -1867,7 +2102,9 @@ comment[leobaeck2] = no manifest
   {
 
     title <
-      name = Literary Imagination
+      name = Literary Imagination ;
+      issn = 1523-9012 ;
+      eissn = 1752-6566
     >
 
     param[base_url] = http://litimag.oxfordjournals.org/
@@ -1878,7 +2115,9 @@ comment[leobaeck2] = no manifest
   {
 
     title <
-      name = Literary and Linguistic Computing
+      name = Literary and Linguistic Computing ;
+      issn = 0268-1145 ;
+      eissn = 1477-4615
     >
 
     param[base_url] = http://llc.oxfordjournals.org/
@@ -1889,7 +2128,9 @@ comment[leobaeck2] = no manifest
   {
 
     title <
-      name = Literature and Theology
+      name = Literature and Theology ;
+      issn = 0269-1205 ;
+      eissn = 1477-4623
     >
 
     param[base_url] = http://litthe.oxfordjournals.org/
@@ -1924,7 +2165,9 @@ comment[j17] = no subscription
   {
 
     title <
-      name = Medical Law Review
+      name = Medical Law Review ;
+      issn = 0967-0742 ;
+      eissn = 1464-3790
     >
 
     param[base_url] = http://medlaw.oxfordjournals.org/
@@ -1957,7 +2200,9 @@ comment[j17] = no subscription
   {
 
     title <
-      name = Molecular Biology and Evolution
+      name = Molecular Biology and Evolution ;
+      issn = 0737-4038 ;
+      eissn = 1537-1719
     >
 
     param[base_url] = http://mbe.oxfordjournals.org/
@@ -1968,7 +2213,9 @@ comment[j17] = no subscription
   {
 
     title <
-      name = Molecular Plant
+      name = Molecular Plant ;
+      issn = 1674-2052 ;
+      eissn = 1752-9867
     >
 
     param[base_url] = http://mplant.oxfordjournals.org/
@@ -1981,7 +2228,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Music and Letters
+      name = Music and Letters ;
+      issn = 0027-4224 ;
+      eissn = 1477-4631
     >
 
     param[base_url] = http://ml.oxfordjournals.org/
@@ -1992,7 +2241,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Mutagenesis
+      name = Mutagenesis ;
+      issn = 0267-8357 ;
+      eissn = 1464-3804
     >
 
     param[base_url] = http://mutage.oxfordjournals.org/
@@ -2003,7 +2254,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = NDT Plus
+      name = NDT Plus ;
+      issn = 0931-0509 ;
+      eissn = 1460-2385
     >
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
@@ -2014,7 +2267,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Nephrology Dialysis Transplantation
+      name = Nephrology Dialysis Transplantation ;
+      issn = 0931-0509 ;
+      eissn = 1460-2385
     >
 
     param[base_url] = http://ndt.oxfordjournals.org/
@@ -2036,7 +2291,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Notes and Queries
+      name = Notes and Queries ;
+      issn = 0029-3970 ;
+      eissn = 1471-6941
     >
 
     param[base_url] = http://nq.oxfordjournals.org/
@@ -2047,7 +2304,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Nucleic Acids Research
+      name = Nucleic Acids Research ;
+      issn = 0305-1048 ;
+      eissn = 1368-4962
     >
 
     param[base_url] = http://nar.oxfordjournals.org/
@@ -2058,7 +2317,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Nucleic Acids Symposium Series
+      name = Nucleic Acids Symposium Series ;
+      issn = 0261-3166 ;
+      eissn = 1746-8272
     >
 
     param[base_url] = http://nass.oxfordjournals.org/
@@ -2069,7 +2330,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Occupational Medicine
+      name = Occupational Medicine ;
+      issn = 0962-7480 ;
+      eissn = 1471-8405
     >
 
     param[base_url] = http://occmed.oxfordjournals.org/
@@ -2080,7 +2343,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = The Oral History Review
+      name = The Oral History Review ;
+      issn = 0094-0798 ;
+      eissn = 1533-8592
     >
 
     param[base_url] = http://ohr.oxfordjournals.org/
@@ -2091,7 +2356,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Oxford Art Journal
+      name = Oxford Art Journal ;
+      issn = 0142-6540 ;
+      eissn = 1741-7287
     >
 
     param[base_url] = http://oaj.oxfordjournals.org/
@@ -2102,7 +2369,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Oxford Economic Papers
+      name = Oxford Economic Papers ;
+      issn = 0030-7653 ;
+      eissn = 1464-3812
     >
 
     param[base_url] = http://oep.oxfordjournals.org/
@@ -2113,7 +2382,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Oxford Journal of Legal Studies
+      name = Oxford Journal of Legal Studies ;
+      issn = 0143-6503 ;
+      eissn = 1464-3820
     >
 
     param[base_url] = http://ojls.oxfordjournals.org/
@@ -2124,7 +2395,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Oxford Review of Economic Policy
+      name = Oxford Review of Economic Policy ;
+      issn = 0266-903X ;
+      eissn = 1460-2121
     >
 
     param[base_url] = http://oxrep.oxfordjournals.org/
@@ -2135,7 +2408,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Parliamentary Affairs
+      name = Parliamentary Affairs ;
+      issn = 0031-2290 ;
+      eissn = 1460-2482
     >
 
     param[base_url] = http://pa.oxfordjournals.org/
@@ -2146,7 +2421,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Past & Present
+      name = Past & Present ;
+      issn = 0031-2746 ;
+      eissn = 1477-464X
     >
 
     param[base_url] = http://past.oxfordjournals.org/
@@ -2157,7 +2434,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Philosophia Mathematica
+      name = Philosophia Mathematica ;
+      issn = 0031-8019 ;
+      eissn = 1744-6406
     >
 
     param[base_url] = http://philmat.oxfordjournals.org/
@@ -2168,7 +2447,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Plant and Cell Physiology
+      name = Plant and Cell Physiology ;
+      issn = 0032-0781 ;
+      eissn = 1471-9053
     >
 
     param[base_url] = http://pcp.oxfordjournals.org/
@@ -2190,7 +2471,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Political Analysis
+      name = Political Analysis ;
+      issn = 1047-1987 ;
+      eissn = 1476-4989
     >
 
     param[base_url] = http://pan.oxfordjournals.org/
@@ -2201,7 +2484,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Proceedings of the London Mathematical Society
+      name = Proceedings of the London Mathematical Society ;
+      issn = 0024-6115 ;
+      eissn = 1460-244X
     >
 
     param[base_url] = http://plms.oxfordjournals.org/
@@ -2223,7 +2508,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Public Health Ethics
+      name = Public Health Ethics ;
+      issn = 1072-7928 ;
+      eissn = TBC
     >
 
     param[base_url] = http://phe.oxfordjournals.org/
@@ -2234,7 +2521,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Public Opinion Quarterly
+      name = Public Opinion Quarterly ;
+      issn = 0033-362X ;
+      eissn = 1537-5331
     >
 
     param[base_url] = http://poq.oxfordjournals.org/
@@ -2245,7 +2534,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Publius: The Journal of Federalism
+      name = Publius: The Journal of Federalism ;
+      issn = 0048-5950 ;
+      eissn = 1747-7107
     >
 
     param[base_url] = http://publius.oxfordjournals.org/
@@ -2267,7 +2558,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = The Quarterly Journal of Mathematics
+      name = The Quarterly Journal of Mathematics ;
+      issn = 0033-5606 ;
+      eissn = 1464-3847
     >
 
     param[base_url] = http://qjmath.oxfordjournals.org/
@@ -2278,7 +2571,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = The Quarterly Journal of Mechanics and Applied Mathematics
+      name = The Quarterly Journal of Mechanics and Applied Mathematics ;
+      issn = 0033-5614 ;
+      eissn = 1464-3855
     >
 
     param[base_url] = http://qjmam.oxfordjournals.org/
@@ -2289,7 +2584,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Radiation Protection Dosimetry
+      name = Radiation Protection Dosimetry ;
+      issn = 0144-8420 ;
+      eissn = 1742-3406
     >
 
     param[base_url] = http://rpd.oxfordjournals.org/
@@ -2302,7 +2599,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Refugee Survey Quarterly
+      name = Refugee Survey Quarterly ;
+      issn = 1020-4067 ;
+      eissn = 1471-695X
     >
 
     param[base_url] = http://rsq.oxfordjournals.org/
@@ -2326,7 +2625,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Review of Environmental Economics and Policy
+      name = Review of Environmental Economics and Policy ;
+      issn = 0034-6551 ;
+      eissn = 1471-6968
     >
 
     param[base_url] = http://reep.oxfordjournals.org/
@@ -2338,7 +2639,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Review of Finance
+      name = Review of Finance ;
+      issn = 1572-3097 ;
+      eissn = 1573-692X
     >
 
     param[base_url] = http://rof.oxfordjournals.org/
@@ -2350,7 +2653,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = The Review of Financial Studies
+      name = The Review of Financial Studies ;
+      issn = 0893-9454 ;
+      eissn = 1465-7368
     >
 
     param[base_url] = http://rfs.oxfordjournals.org/
@@ -2362,7 +2667,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Rheumatology
+      name = Rheumatology ;
+      issn = 1462-0324 ;
+      eissn = 1460-2172
     >
 
     param[base_url] = http://rheumatology.oxfordjournals.org/
@@ -2374,7 +2681,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Schizophrenia Bulletin
+      name = Schizophrenia Bulletin ;
+      issn = 0586-7614 ;
+      eissn = 1745-1701
     >
 
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
@@ -2386,7 +2695,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Screen
+      name = Screen ;
+      issn = 0036-9543 ;
+      eissn = 1460-2474
     >
 
     param[base_url] = http://screen.oxfordjournals.org/
@@ -2398,7 +2709,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Social Cognitive and Affective Neuroscience
+      name = Social Cognitive and Affective Neuroscience ;
+      issn = 1749-5016 ;
+      eissn = 1749-5024
     >
 
     param[base_url] = http://scan.oxfordjournals.org/
@@ -2410,7 +2723,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Social History of Medicine
+      name = Social History of Medicine ;
+      issn = 0951-631X ;
+      eissn = 1477-4666
     >
 
     param[base_url] = http://shm.oxfordjournals.org/
@@ -2422,7 +2737,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Social Politics: International Studies in Gender, State & Society
+      name = Social Politics: International Studies in Gender, State & Society ;
+      issn = 1072-4745 ;
+      eissn = 1468-2893
     >
 
     param[base_url] = http://sp.oxfordjournals.org/
@@ -2433,7 +2750,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Social Science Japan Journal
+      name = Social Science Japan Journal ;
+      issn = 1369-1465 ;
+      eissn = 1468-2680
     >
 
     param[base_url] = http://ssjj.oxfordjournals.org/
@@ -2444,7 +2763,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Socio-Economic Review
+      name = Socio-Economic Review ;
+      issn = 1475-1461 ;
+      eissn = 1475-147X
     >
 
     param[base_url] = http://ser.oxfordjournals.org/
@@ -2466,7 +2787,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Statute Law Review
+      name = Statute Law Review ;
+      issn = 0144-3593 ;
+      eissn = 1464-3863
     >
 
     param[base_url] = http://slr.oxfordjournals.org/
@@ -2499,7 +2822,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Toxicological Sciences
+      name = Toxicological Sciences ;
+      issn = 1096-6080 ;
+      eissn = 1096-0929
     >
 
     param[base_url] = http://toxsci.oxfordjournals.org/
@@ -2510,7 +2835,9 @@ comment[mplant] = no manifest page
   {
 
     title <
-      name = Tree Physiology
+      name = Tree Physiology ;
+      issn = 0829-318X ;
+      eissn = 1758-4469
     >
 
 comment[tre28] = no manifest
@@ -2523,7 +2850,8 @@ comment[tre28] = no manifest
   {
 
     title <
-      name = Trusts & Trustees
+      name = Trusts & Trustees ;
+      issn = 1363-1780
     >
 
     param[base_url] = http://tandt.oxfordjournals.org/
@@ -2534,7 +2862,9 @@ comment[tre28] = no manifest
   {
 
     title <
-      name = Twentieth Century British History
+      name = Twentieth Century British History ;
+      issn = 0955-2359 ;
+      eissn = 1477-4674
     >
 
     param[base_url] = http://tcbh.oxfordjournals.org/
@@ -2545,7 +2875,9 @@ comment[tre28] = no manifest
   {
 
     title <
-      name = The World Bank Economic Review
+      name = The World Bank Economic Review ;
+      issn = 0258-6770 ;
+      eissn = 1564-698X
     >
 
     param[base_url] = http://wber.oxfordjournals.org/
@@ -2556,7 +2888,9 @@ comment[tre28] = no manifest
   {
 
     title <
-      name = The World Bank Research Observer
+      name = The World Bank Research Observer ;
+      issn = 0257-3032 ;
+      eissn = 1564-6971
     >
 
     param[base_url] = http://wbro.oxfordjournals.org/
@@ -2567,7 +2901,9 @@ comment[tre28] = no manifest
   {
 
     title <
-      name = The Year's Work in Critical and Cultural Theory
+      name = The Year's Work in Critical and Cultural Theory ;
+      issn = 1077-4254 ;
+      eissn = 1471-681X
     >
 
     param[base_url] = http://ywcct.oxfordjournals.org/
@@ -2578,7 +2914,9 @@ comment[tre28] = no manifest
   {
 
     title <
-      name = The Year's Work in English Studies
+      name = The Year's Work in English Studies ;
+      issn = 0084-4144 ;
+      eissn = 1471-6801
     >
 
     param[base_url] = http://ywes.oxfordjournals.org/

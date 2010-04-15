@@ -11,7 +11,8 @@
   {
   
     title <
-      name = Archives of Dermatology
+      name = Archives of Dermatology ;
+      issn = 0003-987X
     >
     
     param[base_url] = http://archderm.ama-assn.org/
@@ -167,7 +168,8 @@
   {
   
     title <
-      name = Archives of Family Medicine
+      name = Archives of Family Medicine ;
+      issn = 1063-3987
     >
     
     param[base_url] = http://archfami.ama-assn.org/
@@ -187,7 +189,8 @@
   {
   
     title <
-      name = Archives of Facial Plastic Surgery
+      name = Archives of Facial Plastic Surgery ;
+      issn = 1521-2491
     >
     
     param[base_url] = http://archfaci.ama-assn.org/
@@ -203,13 +206,14 @@
     au < released ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
     au < released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
     au < released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
-  
+      
   }
 
   {
   
     title <
-      name = Archives of General Psychiatry
+      name = Archives of General Psychiatry ;
+      issn = 0003-990X
     >
     
     param[base_url] = http://archpsyc.ama-assn.org/
@@ -280,13 +284,15 @@
     au < released ; 2007 ; Archives of General Psychiatry Volume 64 ; 64 ; reingest4.clockss.org:8082 >
     au < released ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
     au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
-  
+    au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
+    
   }
 
   {
   
     title <
-      name = Archives of Internal Medicine
+      name = Archives of Internal Medicine ;
+      issn = 0003-9926
     >
     
     param[base_url] = http://archinte.ama-assn.org/
@@ -465,7 +471,8 @@
   {
   
     title <
-      name = Archives of Neurology
+      name = Archives of Neurology ;
+      issn = 0003-9942
     >
     
     param[base_url] = http://archneur.ama-assn.org/
@@ -541,7 +548,8 @@
   {
   
     title <
-      name = Archives of Ophthalmology
+      name = Archives of Ophthalmology ;
+      issn = 0003-9950
     >
     
     param[base_url] = http://archopht.ama-assn.org/
@@ -678,7 +686,8 @@
   {
   
     title <
-      name = Archives of Otolaryngology - Head & Neck Surgery
+      name = Archives of Otolaryngology - Head & Neck Surgery ;
+      issn = 0886-4470
     >
     
     param[base_url] = http://archotol.ama-assn.org/
@@ -824,7 +833,9 @@
   {
   
     title <
-      name = Archives of Pediatrics & Adolescent Medicine
+      name = Archives of Pediatrics & Adolescent Medicine ;
+      issn = 1072-4710 ;
+      eissn = 1538-3628
     >
     
     param[base_url] = http://archpedi.ama-assn.org/
@@ -997,7 +1008,8 @@
   {
   
     title <
-      name = Archives of Surgery
+      name = Archives of Surgery ;
+      issn = 0004-0010
     >
     
     param[base_url] = http://archsurg.ama-assn.org/
@@ -1152,13 +1164,16 @@
   {
   
     title <
-      name = JAMA: The Journal of the American Medical Association
+      name = JAMA: The Journal of the American Medical Association ;
+      issn = 0098-7484 ;
+      eissn = 1538-3598
     >
     
     comment[jama_183_202] = volumes 183-202 are assigned differently to reingest[1234].clockss.org than other AUs
 
     param[base_url] = http://jama.ama-assn.org/
-
+    param[comment] = 17-Mar-2010 Volumes LV LX and LXI have mismatch between (Roman number) journal name and URLs
+    
     au < released ; 1883 ; Journal of the American Medical Association Volume I ; I ; reingest4.clockss.org:8082 >                                              
     au < released ; 1884 ; Journal of the American Medical Association Volume II ; II ; reingest1.clockss.org:8082 >                                            
     au < released ; 1884 ; Journal of the American Medical Association Volume III ; III ; reingest1.clockss.org:8082 >                                          

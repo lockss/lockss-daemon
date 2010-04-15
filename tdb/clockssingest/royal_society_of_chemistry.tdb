@@ -12,7 +12,9 @@
   {
   
     title <
-      name = The Analyst
+      name = The Analyst ;
+      issn = 0003-2654 ;
+      eissn = 1364-5528
     >
     
     param[journal_code] = an
@@ -26,7 +28,9 @@
   {
 
     title <
-      name = Analytical Communications
+      name = Analytical Communications ;
+      issn = 0260-1818 ;
+      eissn = 1460-4760
     >
 
     param[journal_code] = ac
@@ -40,7 +44,9 @@
   {
   
     title <
-      name = Analytical Methods
+      name = Analytical Methods ;
+      issn = 1759-9660 ;
+      eissn = 1759-9679
     >
     
     param[journal_code] = ay
@@ -53,7 +59,9 @@
   {
   
     title <
-      name = Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry
+      name = Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry ;
+      issn = 0260-1818 ;
+      eissn = 1460-4760
     >
     
     param[journal_code] = ic
@@ -67,7 +75,9 @@
   {
   
     title <
-      name = Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry
+      name = Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry ;
+      issn = 0069-3030 ;
+      eissn = 1460-4779
     >
     
     param[journal_code] = oc
@@ -81,7 +91,9 @@
   {
   
     title <
-      name = Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry
+      name = Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry ;
+      issn = 0260-1826 ;
+      eissn = 1460-4787
     >
     
     param[journal_code] = pc
@@ -95,7 +107,9 @@
   {
   
     title <
-      name = Chemical Communications
+      name = Chemical Communications ;
+      issn = 1477-9226 ;
+      eissn = 1364-5447
     >
     
     param[journal_code] = cc
@@ -109,7 +123,9 @@
   {
   
     title <
-      name = Chemical Society Reviews
+      name = Chemical Society Reviews ;
+      issn = 1463-9262 ;
+      eissn = 1463-9270
     >
     
     param[journal_code] = cs
@@ -123,7 +139,8 @@
   {
   
     title <
-      name = Chemistry Education Research and Practice
+      name = Chemistry Education Research and Practice ;
+      issn = 1109-4028
     >
     
     param[journal_code] = rp
@@ -149,7 +166,9 @@
   {
   
     title <
-      name = CrystEngComm
+      name = CrystEngComm ;
+      issn = 0300-922X ;
+      eissn = 1364-5463
     >
     
     param[journal_code] = ce
@@ -163,7 +182,9 @@
   {
   
     title <
-      name = Dalton Transactions
+      name = Dalton Transactions ;
+      issn = 0300-9580 ;
+      eissn = 1364-5471
     >
     
     param[journal_code] = dt
@@ -177,7 +198,8 @@
   {
   
     title <
-      name = Energy & Environmental Science
+      name = Energy & Environmental Science ;
+      issn = 1350-7583
     >
     
     param[journal_code] = ee
@@ -191,7 +213,9 @@
   {
   
     title <
-      name = Faraday Discussions
+      name = Faraday Discussions ;
+      issn = 0267-9477 ;
+      eissn = 1364-5544
     >
     
     param[journal_code] = fd
@@ -211,7 +235,8 @@
   {
 
     title <
-      name = Geochemical Transactions
+      name = Geochemical Transactions ;
+      issn = 1467-4866
     >
 
     param[journal_code] = gt
@@ -227,7 +252,9 @@
   {
   
     title <
-      name = Green Chemistry
+      name = Green Chemistry ;
+      issn = 1464-0325 ;
+      eissn = 1464-0333
     >
     
     param[journal_code] = gc
@@ -241,7 +268,8 @@
   {
   
     title <
-      name = Integrative Biology
+      name = Integrative Biology ;
+      issn = 1757-9694
     >
     
     param[journal_code] = ib
@@ -254,7 +282,9 @@
   {
   
     title <
-      name = Journal of Analytical Atomic Spectrometry
+      name = Journal of Analytical Atomic Spectrometry ;
+      issn = 0267-9477 ;
+      eissn = 1364-5544
     >
     
     param[journal_code] = ja
@@ -282,7 +312,8 @@
   {
 
     title <
-      name = Journal of the Chemical Society, Faraday Transactions
+      name = Journal of the Chemical Society, Faraday Transactions ;
+      issn = 0300-9599
     >
 
     param[journal_code] = ft
@@ -295,7 +326,8 @@
   {
 
     title <
-      name = Journal of the Chemical Society, Perkin Transactions 1
+      name = Journal of the Chemical Society, Perkin Transactions 1 ;
+      issn = 0300-922X
     >
 
     param[journal_code] = p1
@@ -312,7 +344,8 @@
   {
 
     title <
-      name = Journal of the Chemical Society, Perkin Transactions 2
+      name = Journal of the Chemical Society, Perkin Transactions 2 ;
+      issn = 0300-9580
     >
 
     param[journal_code] = p2
@@ -329,7 +362,9 @@
   {
   
     title <
-      name = Journal of Environmental Monitoring
+      name = Journal of Environmental Monitoring ;
+      issn = 1144-0546 ;
+      eissn = 1369-9261
     >
     
     param[journal_code] = em
@@ -343,7 +378,9 @@
   {
   
     title <
-      name = Journal of Materials Chemistry
+      name = Journal of Materials Chemistry ;
+      issn = 1477-0520 ;
+      eissn = 1477-0539
     >
     
     param[journal_code] = jm
@@ -357,7 +394,9 @@
   {
   
     title <
-      name = Lab on a Chip
+      name = Lab on a Chip ;
+      issn = 1474-905X ;
+      eissn = 1474-9092
     >
     
     param[journal_code] = lc
@@ -371,7 +410,8 @@
   {
   
     title <
-      name = Metallomics
+      name = Metallomics ;
+      issn = 1756-5901
     >
     
     param[journal_code] = mt
@@ -384,7 +424,8 @@
   {
   
     title <
-      name = Molecular BioSystems
+      name = Molecular BioSystems ;
+      issn = 1460-2733
     >
     
     param[journal_code] = mb
@@ -411,7 +452,9 @@
   {
   
     title <
-      name = Natural Product Reports
+      name = Natural Product Reports ;
+      issn = 1463-9076 ;
+      eissn = 1463-9084
     >
     
     param[journal_code] = np
@@ -425,7 +468,9 @@
   {
   
     title <
-      name = New Journal of Chemistry
+      name = New Journal of Chemistry ;
+      issn = 1744-683X ;
+      eissn = 1744-6848
     >
     
     param[journal_code] = nj
@@ -439,7 +484,9 @@
   {
   
     title <
-      name = Organic & Biomolecular Chemistry
+      name = Organic & Biomolecular Chemistry ;
+      issn = 0003-2654 ;
+      eissn = 1364-5528
     >
     
     param[journal_code] = ob
@@ -453,7 +500,9 @@
   {
 
     title <
-      name = Pesticide Outlook
+      name = Pesticide Outlook ;
+      issn = 1743-1026 ;
+      eissn = 1743-1034
     >
 
     param[journal_code] = po
@@ -468,7 +517,9 @@
   {
   
     title <
-      name = Photochemical & Photobiological Sciences
+      name = Photochemical & Photobiological Sciences ;
+      issn = 1474-905X ;
+      eissn = 1474-9092
     >
     
     param[journal_code] = pp
@@ -482,7 +533,8 @@
   {
 
     title <
-      name = PhysChemComm
+      name = PhysChemComm ;
+      issn = 1460-2733
     >
 
     param[journal_code] = qu
@@ -499,7 +551,9 @@
   {
   
     title <
-      name = Physical Chemistry Chemical Physics
+      name = Physical Chemistry Chemical Physics ;
+      issn = 1463-9076 ;
+      eissn = 1463-9084
     >
     
     param[journal_code] = cp
@@ -513,7 +567,9 @@
   {
 
     title <
-      name = Russian Chemical Reviews
+      name = Russian Chemical Reviews ;
+      issn = 0036-021X ;
+      eissn = 1468-4837
     >
 
     param[journal_code] = rc
@@ -531,7 +587,9 @@
   {
   
     title <
-      name = Soft Matter
+      name = Soft Matter ;
+      issn = 1744-683X ;
+      eissn = 1744-6848
     >
     
     param[journal_code] = sm

@@ -11,7 +11,8 @@
   {
   
     title <
-      name = AAP Grand Rounds
+      name = AAP Grand Rounds ;
+      issn = 1099-6605
     >
     
     param[base_url] = http://aapgrandrounds.aappublications.org/
@@ -26,7 +27,9 @@
   {
   
     title <
-      name = AAP News
+      name = AAP News ;
+      issn = 1073-0397 ;
+      eissn = 1556-3332
     >
     
     param[base_url] = http://aapnews.aappublications.org/
@@ -39,13 +42,12 @@
   {
   
     title <
-      name = NeoReviews
+      name = NeoReviews ;
+      issn = 1526-9906
     >
     
     param[base_url] = http://neoreviews.aappublications.org/
 
-comment[nr] = 500 error on index-by-author pages
-    
     au < ready ; 2008 ; NeoReviews Volume 9 ; 9 >
     au < ready ; 2009 ; NeoReviews Volume 10 ; 10 >
   
@@ -54,11 +56,11 @@ comment[nr] = 500 error on index-by-author pages
   {
   
     title <
-      name = Pediatrics
+      name = Pediatrics ;
+      issn = 0031-4005 ;
+      eissn = 1098-4275
     >
 
-comment[p122_123] = 500 error http://pediatrics.aappublications.org/cgi/eletters/123/2/PRIMACK_WALSH_CRTQ_fichiers/filelist.xml
-    
     param[base_url] = http://pediatrics.aappublications.org/
     
     au < released ; 2008 ; Pediatrics Volume 121 ; 121 >
@@ -71,7 +73,9 @@ comment[p122_123] = 500 error http://pediatrics.aappublications.org/cgi/eletters
   {
   
     title <
-      name = Pediatrics in Review
+      name = Pediatrics in Review ;
+      issn = 0191-9601 ;
+      eissn = 1526-3347
     >
     
     param[base_url] = http://pedsinreview.aappublications.org/

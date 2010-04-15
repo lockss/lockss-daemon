@@ -11,7 +11,9 @@
   {
 
     title <
-      name = Acta Pharmacologica Sinica
+      name = Acta Pharmacologica Sinica ;
+      issn = 1671-4083 ;
+      eissn = 1745-7254
     >
 
     param[journal_id] = aps
@@ -28,7 +30,9 @@
   {
 
     title <
-      name = American Journal of Gastroenterology
+      name = American Journal of Gastroenterology ;
+      issn = 0002-9270 ;
+      eissn = 1572-0241
     >
 
     param[journal_id] = ajg
@@ -38,7 +42,9 @@
   {
 
     title <
-      name = American Journal of Hypertension
+      name = American Journal of Hypertension ;
+      issn = 0895-7061 ;
+      eissn = 1941-7225
     >
 
     param[journal_id] = ajh
@@ -48,7 +54,9 @@
   {
 
     title <
-      name = Asian Journal of Andrology
+      name = Asian Journal of Andrology ;
+      issn = 1008-682X ;
+      eissn = 1745-7262
     >
 
     param[journal_id] = aja
@@ -65,7 +73,9 @@
   {
 
     title <
-      name = Bone Marrow Transplantation
+      name = Bone Marrow Transplantation ;
+      issn = 0268-3369 ;
+      eissn = 1476-5365
     >
 
     param[journal_id] = bmt
@@ -105,7 +115,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = British Dental Journal
+      name = British Dental Journal ;
+      issn = 0007-0610 ;
+      eissn = 1476-5373
     >
 
     param[journal_id] = bdj
@@ -115,7 +127,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = British Journal of Cancer
+      name = British Journal of Cancer ;
+      issn = 0007-0920 ;
+      eissn = 1532-1827
     >
 
     param[journal_id] = bjc
@@ -153,7 +167,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Cancer Gene Therapy
+      name = Cancer Gene Therapy ;
+      issn = 0929-1903 ;
+      eissn = 1476-5500
     >
 
     param[journal_id] = cgt
@@ -177,7 +193,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Cell Death and Differentiation
+      name = Cell Death and Differentiation ;
+      issn = 1350-9047 ;
+      eissn = 1476-5403
     >
 
     param[journal_id] = cdd
@@ -202,7 +220,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Cell Research
+      name = Cell Research ;
+      issn = 1001-0602 ;
+      eissn = 1748-7838
     >
 
     param[journal_id] = cr
@@ -216,7 +236,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Clinical Pharmacology & Therapeutics
+      name = Clinical Pharmacology & Therapeutics ;
+      issn = 0009-9236 ;
+      eissn = 1532-6535
     >
 
     param[journal_id] = clpt
@@ -265,7 +287,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = European Journal of Clinical Nutrition
+      name = European Journal of Clinical Nutrition ;
+      issn = 0954-3007 ;
+      eissn = 1476-5640
     >
 
     param[journal_id] = ejcn
@@ -290,7 +314,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = European Journal of Human Genetics
+      name = European Journal of Human Genetics ;
+      issn = 1018-4813 ;
+      eissn = 1476-5438
     >
 
     param[journal_id] = ejhg
@@ -300,7 +326,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Evidence-Based Dentistry
+      name = Evidence-Based Dentistry ;
+      issn = 1462-0049 ;
+      eissn = 1476-5446
     >
 
     param[journal_id] = ebd
@@ -310,7 +338,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Eye
+      name = Eye ;
+      issn = 0950-222X ;
+      eissn = 1476-5454
     >
 
     param[journal_id] = eye
@@ -330,7 +360,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Gene Therapy
+      name = Gene Therapy ;
+      issn = 0969-7128 ;
+      eissn = 1476-5462
     >
 
     param[journal_id] = gt
@@ -355,7 +387,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Genes and Immunity
+      name = Genes and Immunity ;
+      issn = 1466-4879 ;
+      eissn = 1476-5470
     >
 
     param[journal_id] = gene
@@ -377,7 +411,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Heredity
+      name = Heredity ;
+      issn = 0018-067X ;
+      eissn = 1365-2540
     >
 
     param[journal_id] = hdy
@@ -415,7 +451,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Hypertension Research
+      name = Hypertension Research ;
+      issn = 0916-9636 ;
+      eissn = 1348-4214
     >
 
     param[journal_id] = hr
@@ -432,7 +470,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Immunology & Cell Biology
+      name = Immunology & Cell Biology ;
+      issn = 0818-9641 ;
+      eissn = 1440-1711
     >
 
     param[journal_id] = icb
@@ -446,7 +486,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = International Journal of Impotence Research
+      name = International Journal of Impotence Research ;
+      issn = 0955-9930 ;
+      eissn = 1476-5489
     >
 
     param[journal_id] = ijir
@@ -471,7 +513,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = International Journal of Obesity
+      name = International Journal of Obesity ;
+      issn = 0307-0565 ;
+      eissn = 1476-5497
     >
 
     param[journal_id] = ijo
@@ -496,7 +540,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = The ISME Journal
+      name = The ISME Journal ;
+      issn = 1751-7362 ;
+      eissn = 1751-7370
     >
 
     param[journal_id] = ismej
@@ -506,7 +552,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = JID Symposium Proceedings
+      name = JID Symposium Proceedings ;
+      issn = 1087-0024 ;
+      eissn = 1529-1774
     >
 
     param[journal_id] = jidsp
@@ -516,7 +564,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = The Journal of Antibiotics
+      name = The Journal of Antibiotics ;
+      issn = 0021-8820 ;
+      eissn = 1881-1469
     >
 
     param[journal_id] = ja
@@ -533,7 +583,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Journal of Cerebral Blood Flow and Metabolism
+      name = Journal of Cerebral Blood Flow and Metabolism ;
+      issn = 0271-678X ;
+      eissn = 1559-7016
     >
 
     param[journal_id] = jcbfm
@@ -543,7 +595,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Journal of Exposure Science and Environmental Epidemiology
+      name = Journal of Exposure Science and Environmental Epidemiology ;
+      issn = 1559-0631 ;
+      eissn = 1559-064X
     >
 
     param[journal_id] = jes
@@ -561,7 +615,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Journal of Human Genetics
+      name = Journal of Human Genetics ;
+      issn = 1434-5161 ;
+      eissn = 1435-232X
     >
 
     param[journal_id] = jhg
@@ -585,7 +641,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Journal of Human Hypertension
+      name = Journal of Human Hypertension ;
+      issn = 0950-9240 ;
+      eissn = 1476-5527
     >
 
     param[journal_id] = jhh
@@ -610,7 +668,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = The Journal of Investigative Dermatology
+      name = The Journal of Investigative Dermatology ;
+      issn = 0022-202X ;
+      eissn = 1523-1747
     >
 
     param[journal_id] = jid
@@ -737,7 +797,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Journal of Perinatology
+      name = Journal of Perinatology ;
+      issn = 0743-8346 ;
+      eissn = 1476-5543
     >
 
     param[journal_id] = jp
@@ -760,7 +822,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Kidney International 
+      name = Kidney International ;
+      issn = 0085-2538 ;
+      eissn = 1523-1755
     >
 
     param[journal_id] = ki
@@ -770,7 +834,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Laboratory Investigation
+      name = Laboratory Investigation ;
+      issn = 0023-6837 ;
+      eissn = 1530-0307
     >
 
     param[journal_id] = labinvest
@@ -780,7 +846,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Leukemia
+      name = Leukemia ;
+      issn = 0887-6924 ;
+      eissn = 1476-5551
     >
 
     param[journal_id] = leu
@@ -805,7 +873,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Modern Pathology
+      name = Modern Pathology ;
+      issn = 0893-3952 ;
+      eissn = 1530-0285
     >
 
     param[journal_id] = modpathol
@@ -815,7 +885,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Molecular Psychiatry
+      name = Molecular Psychiatry ;
+      issn = 1359-4184 ;
+      eissn = 1476-5578
     >
 
     param[journal_id] = mp
@@ -850,7 +922,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Molecular Therapy
+      name = Molecular Therapy ;
+      issn = 1525-0016 ;
+      eissn = 1525-0024
     >
 
     param[journal_id] = mt
@@ -860,7 +934,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Mucosal Immunology
+      name = Mucosal Immunology ;
+      issn = 1933-0219 ;
+      eissn = 1935-3456
     >
 
     param[journal_id] = mi
@@ -870,7 +946,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature
+      name = Nature ;
+      issn = 0028-0836 ;
+      eissn = 1476-4687
     >
 
     param[journal_id] = nature
@@ -894,7 +972,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Biotechnology
+      name = Nature Biotechnology ;
+      issn = 1087-0156 ;
+      eissn = 1546-1696
     >
 
     param[journal_id] = nbt
@@ -908,7 +988,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Cell Biology
+      name = Nature Cell Biology ;
+      issn = 1465-7392 ;
+      eissn = 1476-4679
     >
 
     param[journal_id] = ncb
@@ -922,7 +1004,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Chemical Biology
+      name = Nature Chemical Biology ;
+      issn = 1552-4450 ;
+      eissn = 1548-7105
     >
 
     param[journal_id] = nchembio
@@ -936,7 +1020,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Chemistry
+      name = Nature Chemistry ;
+      issn = 1755-4330 ;
+      eissn = 1755-4349
     >
 
     param[journal_id] = nchem
@@ -949,7 +1035,8 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Digest
+      name = Nature Digest ;
+      issn = 1880-0556
     >
 
     param[journal_id] = ndigest
@@ -963,7 +1050,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Genetics
+      name = Nature Genetics ;
+      issn = 1061-4036 ;
+      eissn = 1546-1718
     >
 
     param[journal_id] = ng
@@ -977,7 +1066,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Geoscience
+      name = Nature Geoscience ;
+      issn = 1752-0894 ;
+      eissn = 1752-0908
     >
 
     param[journal_id] = ngeo
@@ -991,7 +1082,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Immunology
+      name = Nature Immunology ;
+      issn = 1529-2908 ;
+      eissn = 1529-2916
     >
 
     param[journal_id] = ni
@@ -1005,7 +1098,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Materials
+      name = Nature Materials ;
+      issn = 1476-1122 ;
+      eissn = 1476-4660
     >
 
     param[journal_id] = nmat
@@ -1019,7 +1114,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Medicine
+      name = Nature Medicine ;
+      issn = 1078-8956 ;
+      eissn = 1546-170X
     >
 
     param[journal_id] = nm
@@ -1033,7 +1130,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Methods
+      name = Nature Methods ;
+      issn = 1548-7091 ;
+      eissn = 1548-7105
     >
 
     param[journal_id] = nmeth
@@ -1047,7 +1146,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Nanotechnology
+      name = Nature Nanotechnology ;
+      issn = 1748-3387 ;
+      eissn = 1748-3395
     >
 
     param[journal_id] = nnano
@@ -1061,7 +1162,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Neuroscience
+      name = Nature Neuroscience ;
+      issn = 1097-6256 ;
+      eissn = 1546-1726
     >
 
     param[journal_id] = neuro
@@ -1075,7 +1178,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Photonics
+      name = Nature Photonics ;
+      issn = 1749-4885 ;
+      eissn = 1749-4893
     >
 
     param[journal_id] = nphoton
@@ -1089,7 +1194,9 @@ comment[bmt44] = attempt full recrawls
   {
 
     title <
-      name = Nature Physics
+      name = Nature Physics ;
+      issn = 1745-2473 ;
+      eissn = 1745-2481
     >
 
     param[journal_id] = nphys
@@ -1119,7 +1226,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Cancer
+      name = Nature Reviews Cancer ;
+      issn = 1474-175X ;
+      eissn = 1474-1768
     >
 
     param[journal_id] = nrc
@@ -1133,7 +1242,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Cardiology
+      name = Nature Reviews Cardiology ;
+      issn = 1759-5002 ;
+      eissn = 1759-5010
     >
 
     param[journal_id] = nrcardio
@@ -1147,7 +1258,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Clinical Oncology
+      name = Nature Reviews Clinical Oncology ;
+      issn = 1759-4774 ;
+      eissn = 1759-4782
     >
 
     param[journal_id] = nrclinonc
@@ -1161,7 +1274,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Drug Discovery
+      name = Nature Reviews Drug Discovery ;
+      issn = 1474-1776 ;
+      eissn = 1474-1784
     >
 
     param[journal_id] = nrd
@@ -1175,7 +1290,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Endocrinology
+      name = Nature Reviews Endocrinology ;
+      issn = 1759-5029 ;
+      eissn = 1759-5037
     >
 
     param[journal_id] = nrendo
@@ -1189,7 +1306,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Gastroenterology and Hepatology
+      name = Nature Reviews Gastroenterology and Hepatology ;
+      issn = 1759-5045 ;
+      eissn = 1759-5053
     >
 
     param[journal_id] = nrgastro
@@ -1203,7 +1322,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Genetics
+      name = Nature Reviews Genetics ;
+      issn = 1471-0056 ;
+      eissn = 1471-0064
     >
 
     param[journal_id] = nrg
@@ -1217,7 +1338,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Immunology
+      name = Nature Reviews Immunology ;
+      issn = 1474-1733 ;
+      eissn = 1474-1741
     >
 
     param[journal_id] = nri
@@ -1231,7 +1354,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Microbiology
+      name = Nature Reviews Microbiology ;
+      issn = 1740-1526 ;
+      eissn = 1740-1534
     >
 
     param[journal_id] = nrmicro
@@ -1245,7 +1370,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Molecular Cell Biology
+      name = Nature Reviews Molecular Cell Biology ;
+      issn = 1471-0072 ;
+      eissn = 1471-0080
     >
 
     param[journal_id] = nrm
@@ -1259,7 +1386,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Nephrology
+      name = Nature Reviews Nephrology ;
+      issn = 1759-5061 ;
+      eissn = 1759-507X
     >
 
     param[journal_id] = nrneph
@@ -1273,7 +1402,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Neurology
+      name = Nature Reviews Neurology ;
+      issn = 1759-4758 ;
+      eissn = 1759-4766
     >
 
     param[journal_id] = nrneurol
@@ -1287,7 +1418,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Neuroscience
+      name = Nature Reviews Neuroscience ;
+      issn = 1471-003X ;
+      eissn = 1471-0048
     >
 
     param[journal_id] = nrn
@@ -1301,7 +1434,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Rheumatology
+      name = Nature Reviews Rheumatology ;
+      issn = 1759-4790 ;
+      eissn = 1759-4804
     >
 
     param[journal_id] = nrrheum
@@ -1315,7 +1450,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Reviews Urology
+      name = Nature Reviews Urology ;
+      issn = 1759-4812 ;
+      eissn = 1759-4820
     >
 
     param[journal_id] = nrurol
@@ -1329,7 +1466,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Nature Structural and Molecular Biology
+      name = Nature Structural and Molecular Biology ;
+      issn = 1545-9993 ;
+      eissn = 1545-9985
     >
 
     param[journal_id] = nsmb
@@ -1343,7 +1482,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Neuropsychopharmacology
+      name = Neuropsychopharmacology ;
+      issn = 0893-133X ;
+      eissn = 1470-634X
     >
 
     param[journal_id] = npp
@@ -1353,7 +1494,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Obesity
+      name = Obesity ;
+      issn = 1930-7381 ;
+      eissn = 1930-739X
     >
 
     param[journal_id] = oby
@@ -1363,7 +1506,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Oncogene
+      name = Oncogene ;
+      issn = 0950-9232 ;
+      eissn = 1476-5594
     >
 
     param[journal_id] = onc
@@ -1390,7 +1535,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Pharmacogenomics Journal
+      name = Pharmacogenomics Journal ;
+      issn = 1470-269X ;
+      eissn = 1473-1150
     >
 
     param[journal_id] = tpj
@@ -1411,7 +1558,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Prostate Cancer and Prostatic Diseases
+      name = Prostate Cancer and Prostatic Diseases ;
+      issn = 1365-7852 ;
+      eissn = 1476-5608
     >
 
     param[journal_id] = pcan
@@ -1445,7 +1594,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Spinal Cord
+      name = Spinal Cord ;
+      issn = 1362-4393 ;
+      eissn = 1476-5624
     >
 
     param[journal_id] = sc
@@ -1470,7 +1621,9 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = Vital
+      name = Vital ;
+      issn = 1741-7503 ;
+      eissn = 1741-7511
     >
 
     param[journal_id] = vital
