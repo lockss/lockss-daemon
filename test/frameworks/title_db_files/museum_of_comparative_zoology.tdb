@@ -1,9 +1,0 @@
-#	@formatString	x,S,t,%,%,%
-#	@publishingPlatform	BioOne
-#	@publisherTitleSet	publisher=Museum of Comparative Zoology
-#	@fixedValues	P=Museum of Comparative Zoology	p=org.lockss.plugin.bioone.BioOnePlugin
-#	@fixedValues	i=0006-9698	j=Breviora
-	ready	Breviora Volume 512	base_url=http://www.bioone.org/	journal_id=0006-9698	volume=512
-#	@fixedValues	i=0027-4100	j=Bulletin of the Museum of Comparative Zoology
-	ready	Bulletin of the Museum of Comparative Zoology Volume 158	base_url=http://www.bioone.org/	journal_id=0027-4100	volume=158
-	ready	Bulletin of the Museum of Comparative Zoology Volume 159	base_url=http://www.bioone.org/	journal_id=0027-4100	volume=159
