@@ -20,8 +20,8 @@
     param[base_url] = http://www.ethicsandglobalpolitics.net/
     param[journal_id] = egp
 
-    au < ready ; 2008 ; Ethics & Global Politics Volume 1 ; 2008 >
-    au < ready ; 2009 ; Ethics & Global Politics Volume 2 ; 2009 >
+    au < manifest ; 2008 ; Ethics & Global Politics Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Ethics & Global Politics Volume 2 ; 2009 >
     au < manifest ; 2010 ; Ethics & Global Politics Volume 3 ; 2010 >
 
   }
@@ -39,14 +39,14 @@
 
 comment[fnr2008] = 502 Proxy Error
 
-    au < ready ; 2002 ; Food & Nutrition Research Volume 46 ; 2002 >
-    au < ready ; 2003 ; Food & Nutrition Research Volume 47 ; 2003 >
-    au < ready ; 2004 ; Food & Nutrition Research Volume 48 ; 2004 >
-    au < ready ; 2005 ; Food & Nutrition Research Volume 49 ; 2005 >
-    au < ready ; 2006 ; Food & Nutrition Research Volume 50 ; 2006 >
-    au < ready ; 2007 ; Food & Nutrition Research Volume 51 ; 2007 >
-    au < notReady ; 2008 ; Food & Nutrition Research Volume 52 ; 2008 >
-    au < ready ; 2009 ; Food & Nutrition Research Volume 53 ; 2009 >
+    au < manifest ; 2002 ; Food & Nutrition Research Volume 46 ; 2002 >
+    au < manifest ; 2003 ; Food & Nutrition Research Volume 47 ; 2003 >
+    au < manifest ; 2004 ; Food & Nutrition Research Volume 48 ; 2004 >
+    au < manifest ; 2005 ; Food & Nutrition Research Volume 49 ; 2005 >
+    au < manifest ; 2006 ; Food & Nutrition Research Volume 50 ; 2006 >
+    au < manifest ; 2007 ; Food & Nutrition Research Volume 51 ; 2007 >
+    au < manifest ; 2008 ; Food & Nutrition Research Volume 52 ; 2008 >
+    au < manifest ; 2009 ; Food & Nutrition Research Volume 53 ; 2009 >
     au < manifest ; 2010 ; Food & Nutrition Research Volume 54 ; 2010 >
 
   }
@@ -61,8 +61,8 @@ comment[fnr2008] = 502 Proxy Error
     param[base_url] = http://www.globalhealthaction.net/
     param[journal_id] = gha
 
-    au < ready ; 2008 ; Global Health Action Volume 1 ; 2008 >
-    au < ready ; 2009 ; Global Health Action Volume 2 ; 2009 >
+    au < manifest ; 2008 ; Global Health Action Volume 1 ; 2008 >
+    au < manifest ; 2009 ; Global Health Action Volume 2 ; 2009 >
     au < manifest ; 2010 ; Global Health Action Volume 3 ; 2010 >
 
   }
@@ -111,7 +111,7 @@ comment[fnr2008] = 502 Proxy Error
     param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = jom
 
-    au < ready ; 2009 ; Journal of Oral Microbiology Volume 1 ; 2009 >
+    au < manifest ; 2009 ; Journal of Oral Microbiology Volume 1 ; 2009 >
     au < manifest ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2010 >
 
   }

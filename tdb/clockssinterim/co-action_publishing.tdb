@@ -1,0 +1,135 @@
+{
+
+  publisher <
+    name = Co-Action Publishing
+  >
+
+  comment[0] = requires a parent plugin
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; name ; param[year] >
+
+  {
+
+    title <
+      name = Ethics & Global Politics ;
+      issn = 1654-4951 ;
+      eissn = 1654-6369
+    >
+
+    param[base_url] = http://www.ethicsandglobalpolitics.net/
+    param[journal_id] = egp
+
+
+  }
+    
+  {
+
+    title <
+      name = Food & Nutrition Research ;
+      issn = 1654-6628 ;
+      eissn = 1654-661
+    >
+
+    param[base_url] = http://www.foodandnutritionresearch.net/
+    param[journal_id] = fnr
+
+comment[fnr2008] = 502 Proxy Error
+
+
+  }
+
+  {
+
+    title <
+      name = Global Health Action ;
+      issn = 1654-9880
+    >
+
+    param[base_url] = http://www.globalhealthaction.net/
+    param[journal_id] = gha
+
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Qualitative Studies on Health and Well-being ;
+      issn = 1748-2623 ;
+      eissn = 1748-2631
+    >
+
+    param[base_url] = http://www.ijqhw.net/
+    param[journal_id] = qhw
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Aesthetics & Culture ;
+      issn = 2000-4214
+    >
+
+    param[base_url] = http://www.aestheticsandculture.net/
+    param[journal_id] = jac
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of Oral Microbiology ;
+      issn = 2000-2297
+    >
+
+    param[base_url] = http://www.journaloforalmicrobiology.net/
+    param[journal_id] = jom
+
+
+  }
+
+  {
+
+    title <
+      name = Libyan Journal of Medicine ;
+      issn = 1993-2820 ;
+      eissn = 1819-6357
+    >
+
+    param[base_url] = http://www.libyanjournalofmedicine.net/
+    param[journal_id] = ljm
+
+
+  }
+
+  {
+
+    title <
+      name = Medical Education Online ;
+      issn = 1087-2981
+    >
+
+    param[base_url] = http://www.med-ed-online.net/
+    param[journal_id] = meo
+
+    
+  }
+
+  {
+
+    title <
+      name = Nano Reviews ;
+      issn = 2000-5121
+    >
+
+    param[base_url] = http://www.nano-reviews.net/
+    param[journal_id] = nano
+
+
+  }
+
+}
