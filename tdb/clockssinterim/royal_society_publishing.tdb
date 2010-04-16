@@ -1,0 +1,141 @@
+{
+
+  publisher <
+    name = Royal Society Publishing
+  >
+
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Biographical Memoirs of Fellows of the Royal Society ;
+      issn = 0080-4606 ;
+      eissn = 1748-8494
+    >
+
+    param[base_url] = http://rsbm.royalsocietypublishing.org/
+    comment[manifest] = As of 8 Apr 2010, the manifest page does not point to content.  When the manifest page works, change the 'manifest' tag.
+    comment[legacy] = there are more AUs in an earlier incarnation of the journal
+
+
+  }
+
+  {
+
+    title <
+      name = Biology Letters ;
+      issn = 1744-9561 ;
+      eissn = 1744-957X
+    >
+
+    param[base_url] = http://rsbl.royalsocietypublishing.org/
+
+
+  }
+
+  {
+  
+    title <
+      name = Journal of the Royal Society Interface ;
+      issn = 1742-5689 ;
+      eissn = 1742-5662
+    >
+
+    param[base_url] = http://rsif.royalsocietypublishing.org/
+
+
+  }
+
+  {
+  
+    title <
+      name = Notes and Records of the Royal Society ;
+      issn = 0035-9149 ;
+      eissn = 1743-0178
+    >
+
+    param[base_url] = http://rsnr.royalsocietypublishing.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences ;
+      issn = 1364-503X ;
+      eissn = 1471-2962
+    >
+
+    param[base_url] = http://rsta.royalsocietypublishing.org/
+    
+
+  }
+
+  {
+
+    title <
+      name = Philosophical Transactions of the Royal Society B: Biological Sciences ;
+      issn = 0962-8436 ;
+      eissn = 1471-2970
+    >
+
+    param[base_url] = http://rstb.royalsocietypublishing.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Philosophical Transactions of the Royal Society of London ;
+      issn = 0261-0523
+    >
+
+    param[base_url] = http://rstl.royalsocietypublishing.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences ;
+      issn = 1364-5021 ;
+      eissn = 1471-2946
+    >
+
+    param[base_url] = http://rspa.royalsocietypublishing.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Proceedings of the Royal Society B: Biological Sciences ;
+      issn = 0962-8452 ;
+      eissn = 1471-2954
+    >
+
+    param[base_url] = http://rspb.royalsocietypublishing.org/
+
+
+  }
+
+  {
+
+    title <
+      name = Proceedings of the Royal Society of London ;
+      issn = 0370-1662
+    >
+
+    param[base_url] = http://rspl.royalsocietypublishing.org/
+
+
+  }
+
+}
+
