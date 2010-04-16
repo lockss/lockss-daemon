@@ -4,7 +4,7 @@
     name = Royal Society Publishing
   >
 
-  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
   implicit < status ; year ; name ; param[volume_name] >
 
   {
