@@ -23,7 +23,7 @@
         <string>1,&quot;^%sclockss/%s/%s/index.html$&quot;, base_url, journal_id, volume_name</string>
         <string>1,&quot;^%stoc/%s(\.[0-9]+)?/%s(/[^/]+)?$&quot;, base_url, journal_id, volume_name</string>
         <string>2,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/[-.9]+$&quot;, base_url</string>
-        <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/E[0-9X]+&quot;, base_url, journal_id, volume_name</string>
+        <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/E[0-9X]+&quot;, base_url</string>
     </list>
   </entry>
     <entry>
