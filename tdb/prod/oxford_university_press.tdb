@@ -4163,7 +4163,7 @@
 
         au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 33 ; 33 >
         au < HighWirePressPlugin ; released ; Journal of Medicine and Philosophy Volume 34 ; 34 >
-        au < HighWirePressPlugin ; testing ; Journal of Medicine and Philosophy Volume 35 ; 35 >
+        au < HighWirePressPlugin ; ready ; Journal of Medicine and Philosophy Volume 35 ; 35 >
 
       }
 
@@ -4182,7 +4182,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; released ; Journal of Molecular Cell Biology Volume 1 ; 1 >
-        au < HighWirePressPlugin ; testing ; Journal of Molecular Cell Biology Volume 2 ; 2 >
+        au < HighWirePressPlugin ; ready ; Journal of Molecular Cell Biology Volume 2 ; 2 >
 
       }
 
@@ -4301,7 +4301,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Journal of Tropical Pediatrics Volume 53 ; 53 >
         au < HighWirePressPlugin ; released ; Journal of Tropical Pediatrics Volume 54 ; 54 >
         au < HighWirePressPlugin ; released ; Journal of Tropical Pediatrics Volume 55 ; 55 >
-        au < HighWirePressPlugin ; testing ; Journal of Tropical Pediatrics Volume 56 ; 56 >
+        au < HighWirePressPlugin ; ready ; Journal of Tropical Pediatrics Volume 56 ; 56 >
 
       }
 
@@ -4730,7 +4730,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Music and Letters Volume 88 ; 88 >
         au < HighWirePressPlugin ; released ; Music and Letters Volume 89 ; 89 >
         au < HighWirePressPlugin ; released ; Music and Letters Volume 90 ; 90 >
-        au < HighWirePressPlugin ; testing ; Music and Letters Volume 91 ; 91 >
+        au < HighWirePressPlugin ; ready ; Music and Letters Volume 91 ; 91 >
 
       }
 
@@ -4818,7 +4818,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
   
         au < HighWirePressPlugin ; released ; NDT Plus Volume 1 ; 1 >
         au < HighWirePressPlugin ; released ; NDT Plus Volume 2 ; 2 >
-        au < HighWirePressPlugin ; testing ; NDT Plus Volume 3 ; 3 >
+        au < HighWirePressPlugin ; ready ; NDT Plus Volume 3 ; 3 >
 
       }
 
@@ -5037,7 +5037,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 23 ; 23 >
         au < HighWirePressPlugin ; released ; The Opera Quarterly Volume 24 ; 24 >
-        au < HighWirePressPlugin ; testing ; The Opera Quarterly Volume 25 ; 25 >
+        au < HighWirePressPlugin ; ready ; The Opera Quarterly Volume 25 ; 25 >
       }
 
     }
@@ -5305,7 +5305,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Philosophia Mathematica Volume 15 ; 15 >
         au < HighWirePressPlugin ; released ; Philosophia Mathematica Volume 16 ; 16 >
         au < HighWirePressPlugin ; released ; Philosophia Mathematica Volume 17 ; 17 >
-        au < HighWirePressPlugin ; testing ; Philosophia Mathematica Volume 18 ; 18 >
+        au < HighWirePressPlugin ; ready ; Philosophia Mathematica Volume 18 ; 18 >
         
       }
 
@@ -5504,6 +5504,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Public Opinion Quarterly Volume 71 ; 71 >
         au < HighWirePressPlugin ; released ; Public Opinion Quarterly Volume 72 ; 72 >
         au < HighWirePressPlugin ; released ; Public Opinion Quarterly Volume 73 ; 73 >
+        au < HighWirePressPlugin ; testing ; Public Opinion Quarterly Volume 74 ; 74 >
 
       }
 
@@ -5602,7 +5603,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; released ; The Quarterly Journal of Mathematics Volume 58 ; 58 >
         au < HighWirePressPlugin ; released ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
         au < HighWirePressPlugin ; released ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
-
+		au < HighWirePressPlugin ; ready ; The Quarterly Journal of Mathematics Volume 61 ; 61 >
+		
       }
 
     }
@@ -5823,7 +5825,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; released ; Review of Financial Studies Volume 20 ; 20 >
         au < HighWirePressPlugin ; released ; Review of Financial Studies Volume 21 ; 21 >
         au < HighWirePressPlugin ; ready ; Review of Financial Studies Volume 22 ; 22 >
-        au < HighWirePressPlugin ; testing ; Review of Financial Studies Volume 23 ; 23 >
+        au < HighWirePressPlugin ; ready ; Review of Financial Studies Volume 23 ; 23 >
         
       }
 
