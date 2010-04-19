@@ -55,7 +55,8 @@ comment[fnr2008] = 502 Proxy Error
 
     title <
       name = Global Health Action ;
-      issn = 1654-9880
+      issn = 1654-9716 ;
+      eissn = 1654-9880
     >
 
     param[base_url] = http://www.globalhealthaction.net/
@@ -105,7 +106,7 @@ comment[fnr2008] = 502 Proxy Error
 
     title <
       name = Journal of Oral Microbiology ;
-      issn = 2000-2297
+      eissn = 2000-2297
     >
 
     param[base_url] = http://www.journaloforalmicrobiology.net/

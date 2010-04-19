@@ -597,7 +597,7 @@
   {
     title <
       name = Journal of Colonialism and Colonial History ;
-      issn = 1532-5768
+      eissn = 1532-5768
     >
 
     param[journal_dir] = journal_of_colonialism_and_colonial_history
@@ -1015,8 +1015,8 @@
   {
     title <
       name = NWSA Journal ;
-      issn = 1527-1889 ;
-      eissn = 1040-0656
+      issn = 1040-0656 ;
+      eissn = 1527-1889
     >
 
     param[journal_dir] = nwsa_journal
@@ -1144,7 +1144,7 @@
   {
     title <
       name = Postmodern Culture ;
-      issn = 1053-1920
+      eissn = 1053-1920
     >
 
     param[journal_dir] = postmodern_culture

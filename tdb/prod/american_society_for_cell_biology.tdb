@@ -6,7 +6,7 @@
   {
     title <
       name = CBE-Life Sciences Education ;
-      issn = 1931-7913
+      eissn = 1931-7913
     >
 
     {
@@ -15,10 +15,10 @@
       param[base_url] = http://www.lifescied.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < released ; CBE - Life Sciences Education Volume 1 ; 1 >
-      au < released ; CBE - Life Sciences Education Volume 2 ; 2 >
-      au < released ; CBE - Life Sciences Education Volume 3 ; 3 >
-      au < released ; CBE - Life Sciences Education Volume 4 ; 4 >
+      au < released ; CBE-Life Sciences Education Volume 1 ; 1 >
+      au < released ; CBE-Life Sciences Education Volume 2 ; 2 >
+      au < released ; CBE-Life Sciences Education Volume 3 ; 3 >
+      au < released ; CBE-Life Sciences Education Volume 4 ; 4 >
       au < manifest ; CBE-Life Sciences Education Volume 5 ; 5 >
       au < manifest ; CBE-Life Sciences Education Volume 6 ; 6 >
       au < manifest ; CBE-Life Sciences Education Volume 7 ; 7 >

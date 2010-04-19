@@ -9,7 +9,9 @@
 
   {
     title <
-      name = Journal of Literary & Cultural Disability Studies
+      name = Journal of Literary & Cultural Disability Studies ;
+      issn = 1757-6458 ;
+      eissn = 1757-6466
     >
 
     param[journal_dir] = journal_of_literary_and_cultural_disability_studies
@@ -20,7 +22,9 @@
 
   {
     title <
-      name = Music, Sound, and the Moving Image
+      name = Music, Sound, and the Moving Image ;
+      issn = 1753-0768 ;
+      eissn = 1753-0776
     >
 
     param[journal_dir] = music_sound_and_the_moving_image
@@ -34,8 +38,8 @@
   {
     title <
       name = Romani Studies ;
-      issn = 1757-2274 ;
-      eissn = 1528-0748
+      issn = 1528-0748 ;
+      eissn = 1757-2274
     >
 
     param[journal_dir] = romani_studies
@@ -47,8 +51,8 @@
   {
     title <
       name = Science Fiction Film and Television ;
-      issn = 1754-3789 ;
-      eissn = 1754-3770
+      issn = 1754-3770 ;
+      eissn = 1754-3789
     >
 
     param[journal_dir] = science_fiction_film_and_television
@@ -60,7 +64,9 @@
 
   {
     title <
-      name = The Bulletin of Hispanic Studies
+      name = The Bulletin of Hispanic Studies ;
+      issn = 1475-3839 ;
+      eissn = 1478-3398
     >
 
     param[journal_dir] = bulletin_of_hispanic_studies

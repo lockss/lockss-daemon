@@ -6,8 +6,8 @@
   {
     title <
       name = American Literature ;
-      issn = 1527-2117 ;
-      eissn = 0002-9831
+      issn = 0002-9831 ;
+      eissn = 1527-2117
     >
     
     {
@@ -29,7 +29,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://americanliterature.dukejournals.org
+      param[base_url] = http://americanliterature.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
      au < released ; American Literature Volume 77 ; 77 >
@@ -43,8 +43,8 @@
   {
     title <
       name = American Speech ;
-      issn = 1527-2133 ;
-      eissn = 0003-1283
+      issn = 0003-1283 ;
+      eissn = 1527-2133
     >
     
     {
@@ -66,7 +66,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://americanspeech.dukejournals.org
+      param[base_url] = http://americanspeech.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
      au < released ; American Speech Volume 80 ; 80 >
@@ -80,8 +80,8 @@
   {
     title <
       name = boundary 2 ;
-      issn = 1527-2141 ;
-      eissn = 0190-3659
+      issn = 0190-3659 ;
+      eissn = 1527-2141
     >
     
     {
@@ -103,7 +103,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://boundary2.dukejournals.org
+      param[base_url] = http://boundary2.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; boundary 2 Volume 32 ; 32 >
@@ -139,7 +139,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://cameraobscura.dukejournals.org
+      param[base_url] = http://cameraobscura.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Camera Obscura Volume 20 ; 20 >
@@ -176,7 +176,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://cameraobscura.dukejournals.org
+      param[base_url] = http://cameraobscura.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
@@ -212,7 +212,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://ethnohistory.dukejournals.org
+      param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
      au < released ; Ethnohistory Volume 52 ; 52 >
@@ -249,7 +249,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://fhs.dukejournals.org
+      param[base_url] = http://fhs.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
      au < released ; French Historical Studies Volume 28 ; 28 >
@@ -286,7 +286,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://hahr.dukejournals.org
+      param[base_url] = http://hahr.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
      au < released ; Hispanic American Historical Review Volume 85 ; 85 >
@@ -323,7 +323,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://hope.dukejournals.org
+      param[base_url] = http://hope.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
      au < released ; History of Political Economy Volume 37 ; 37 >
@@ -360,7 +360,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://jhppl.dukejournals.org
+      param[base_url] = http://jhppl.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
@@ -397,7 +397,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://jmems.dukejournals.org
+      param[base_url] = http://jmems.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
@@ -418,7 +418,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://labor.dukejournals.org
+      param[base_url] = http://labor.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
@@ -432,8 +432,8 @@
   {
     title <
       name = MLQ: Modern Language Quarterly ;
-      issn = 1527-1943 ;
-      eissn = 0026-7929
+      issn = 0026-7929 ;
+      eissn = 1527-1943
     >
     
     {
@@ -455,7 +455,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://mlq.dukejournals.org
+      param[base_url] = http://mlq.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
@@ -492,7 +492,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://poeticstoday.dukejournals.org
+      param[base_url] = http://poeticstoday.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Poetics Today Volume 26 ; 26 >
@@ -529,7 +529,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://publicculture.dukejournals.org
+      param[base_url] = http://publicculture.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Public Culture Volume 17 ; 17 >
@@ -572,7 +572,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://rhr.dukejournals.org
+      param[base_url] = http://rhr.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Radical History Review Volume 2005 ; 2005 >
@@ -609,7 +609,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://socialtext.dukejournals.org
+      param[base_url] = http://socialtext.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Social Text Volume 23 ; 23 >
@@ -645,7 +645,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://saq.dukejournals.org
+      param[base_url] = http://saq.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; The South Atlantic Quarterly Volume 104 ; 104 >
@@ -682,7 +682,7 @@
     {
     
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://theater.dukejournals.org
+      param[base_url] = http://theater.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
       au < released ; Theater Volume 35 ; 35 >

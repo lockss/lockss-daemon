@@ -5,56 +5,6 @@
   >
 
   {
-
-    title <
-      name = Pacific Science ;
-      issn = 1534-6188 ;
-      eissn = 1534-6188
-    >
-
-    {
-      implicit < status ; name ; param[volume] >
-      plugin = org.lockss.plugin.bioone.BioOnePlugin
-      param[base_url] = http://www.bioone.org/
-      param[journal_id] = 1534-6188
-  
-      au < doNotProcess ; Pacific Science Volume 59 ; 59 >
-      au < doNotProcess ; Pacific Science Volume 60 ; 60 >
-      au < doNotProcess ; Pacific Science Volume 61 ; 61 >
-      au < doNotProcess ; Pacific Science Volume 62 ; 62 >
-    }
-
-    {
-
-comment[0] = Atypon AUs
-
-    }
-
-  }
-    
-  {
-    title <
-      name = Pacific Science ;
-      issn = 0030-8870 ;
-      eissn = 1534-6188
-    >
-
-    implicit < status ; name ; param[volume] >
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
-    param[journal_dir] = pacific_science
-
-    au < manifest ; Pacific Science Volume 55 ; 55 >
-    au < manifest ; Pacific Science Volume 56 ; 56 >
-    au < manifest ; Pacific Science Volume 57 ; 57 >
-    au < manifest ; Pacific Science Volume 58 ; 58 >
-    au < manifest ; Pacific Science Volume 59 ; 59 >
-    au < manifest ; Pacific Science Volume 60 ; 60 >
-    au < manifest ; Pacific Science Volume 61 ; 61 >
-
-  }
-
-  {
     title <
       name = Archives of Asian Art ;
       issn = 1944-6497 ;
@@ -369,6 +319,49 @@ comment[0] = Atypon AUs
     }
   }
   
+  {
+
+    title <
+      name = Pacific Science ;
+      issn = 0030-8870 ;
+      eissn = 1534-6188
+    >
+
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 1534-6188
+  
+      au < doNotProcess ; Pacific Science Volume 59 ; 59 >
+      au < doNotProcess ; Pacific Science Volume 60 ; 60 >
+      au < doNotProcess ; Pacific Science Volume 61 ; 61 >
+      au < doNotProcess ; Pacific Science Volume 62 ; 62 >
+    }
+
+    {
+
+comment[0] = Atypon AUs
+
+    }
+    
+    {
+      implicit < status ; name ; param[volume] >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = pacific_science
+
+      au < manifest ; Pacific Science Volume 55 ; 55 >
+      au < manifest ; Pacific Science Volume 56 ; 56 >
+      au < manifest ; Pacific Science Volume 57 ; 57 >
+      au < manifest ; Pacific Science Volume 58 ; 58 >
+      au < manifest ; Pacific Science Volume 59 ; 59 >
+      au < manifest ; Pacific Science Volume 60 ; 60 >
+      au < manifest ; Pacific Science Volume 61 ; 61 >
+    }
+
+  }
+    
   {
     title <
       name = Philosophy East and West ;
