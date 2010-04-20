@@ -12,8 +12,6 @@
       eissn = 1943-4456
     >
 
-    comment[h20] = H20 title
-
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -106,8 +104,6 @@
       eissn = 1549-5477
     >
 
-    comment[h20] = H20 title
-
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -151,8 +147,6 @@
       eissn = 1549-5469
     >
 
-    comment[h20] = H20 title
-
     comment[17] = vol 17, repository error caused by too-long urls
 
     {
@@ -194,9 +188,6 @@
       eissn = 1549-5485
     >
 
-    comment[h20] = H20 title
-    comment[lm13] = waiting for H20 stamped PDF deactiveation
-
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -232,8 +223,6 @@
       issn = 1355-8382 ;
       eissn = 1469-9001
     >
-
-    comment[h20] = H20 title
 
     {
 
