@@ -1,0 +1,1665 @@
+{
+  publisher <
+    name = BMJ Group
+  >
+
+  {
+    title <
+      name = Acupuncture in Medicine ;
+      issn = 0964-5284 ;
+      eissn = 1759-9873
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://aim.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Acupuncture in Medicine Volume 1 ; 1 >
+      au < exists ; Acupuncture in Medicine Volume 2 ; 2 >
+      au < exists ; Acupuncture in Medicine Volume 3 ; 3 >
+      au < exists ; Acupuncture in Medicine Volume 4 ; 4 >
+      au < exists ; Acupuncture in Medicine Volume 5 ; 5 >
+      au < exists ; Acupuncture in Medicine Volume 6 ; 6 >
+      au < exists ; Acupuncture in Medicine Volume 7 ; 7 >
+      au < exists ; Acupuncture in Medicine Volume 9 ; 9 >
+      au < exists ; Acupuncture in Medicine Volume 10 ; 10 >
+      au < exists ; Acupuncture in Medicine Volume 11 ; 11 >
+      au < exists ; Acupuncture in Medicine Volume 12 ; 12 >
+      au < exists ; Acupuncture in Medicine Volume 13 ; 13 >
+      au < exists ; Acupuncture in Medicine Volume 14 ; 14 >
+      au < exists ; Acupuncture in Medicine Volume 15 ; 15 >
+      au < exists ; Acupuncture in Medicine Volume 16 ; 16 >
+      au < exists ; Acupuncture in Medicine Volume 17 ; 17 >
+      au < exists ; Acupuncture in Medicine Volume 18 ; 18 >
+      au < exists ; Acupuncture in Medicine Volume 19 ; 19 >
+      au < exists ; Acupuncture in Medicine Volume 20 ; 20 >
+      au < exists ; Acupuncture in Medicine Volume 22 ; 22 >
+      au < exists ; Acupuncture in Medicine Volume 23 ; 23 >
+      au < exists ; Acupuncture in Medicine Volume 24 ; 24 >
+      au < exists ; Acupuncture in Medicine Volume 26 ; 26 >
+      au < exists ; Acupuncture in Medicine Volume 27 ; 27 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Annals of the Rheumatic Diseases ;
+      issn = 0003-4967 ;
+      eissn = 1468-2060
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ard.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Annals of the Rheumatic Diseases Volume 1 ; 1 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 2 ; 2 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 3 ; 3 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 4 ; 4 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 5 ; 5 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 6 ; 6 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 7 ; 7 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 8 ; 8 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 9 ; 9 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 10 ; 10 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 11 ; 11 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 12 ; 12 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 13 ; 13 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 14 ; 14 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 15 ; 15 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 16 ; 16 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 17 ; 17 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 18 ; 18 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 19 ; 19 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 20 ; 20 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 21 ; 21 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 22 ; 22 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 23 ; 23 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 24 ; 24 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 26 ; 26 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 27 ; 27 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 28 ; 28 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 29 ; 29 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 30 ; 30 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 31 ; 31 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 32 ; 32 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 33 ; 33 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 34 ; 34 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 35 ; 35 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 36 ; 36 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 37 ; 37 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 38 ; 38 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 39 ; 39 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 40 ; 40 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 41 ; 41 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 42 ; 42 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 43 ; 43 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 44 ; 44 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 45 ; 45 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 46 ; 46 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 47 ; 47 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 48 ; 48 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 49 ; 49 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 50 ; 50 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 51 ; 51 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 52 ; 52 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 53 ; 53 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 54 ; 54 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 55 ; 55 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 56 ; 56 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 57 ; 57 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 58 ; 58 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 59 ; 59 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 60 ; 60 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 61 ; 61 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 62 ; 62 >
+      au < exists ; Annals of the Rheumatic Diseases Volume 63 ; 63 >
+      au < manifest ; Annals of the Rheumatic Diseases Volume 64 ; 64 >
+      au < released ; Annals of the Rheumatic Diseases Volume 65 ; 65 >
+      au < manifest ; Annals of the Rheumatic Diseases Volume 66 ; 66 >
+      au < manifest ; Annals of the Rheumatic Diseases Volume 67 ; 67 >
+      au < manifest ; Annals of the Rheumatic Diseases Volume 68 ; 68 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Archives of Disease in Childhood ;
+      issn = 0003-9888 ;
+      eissn = 1468-2044
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://adc.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Archives of Disease in Childhood Volume 48 ; 48 >
+      au < exists ; Archives of Disease in Childhood Volume 49 ; 49 >
+      au < exists ; Archives of Disease in Childhood Volume 50 ; 50 >
+      au < exists ; Archives of Disease in Childhood Volume 51 ; 51 >
+      au < exists ; Archives of Disease in Childhood Volume 52 ; 52 >
+      au < exists ; Archives of Disease in Childhood Volume 53 ; 53 >
+      au < exists ; Archives of Disease in Childhood Volume 54 ; 54 >
+      au < exists ; Archives of Disease in Childhood Volume 55 ; 55 >
+      au < exists ; Archives of Disease in Childhood Volume 56 ; 56 >
+      au < exists ; Archives of Disease in Childhood Volume 58 ; 58 >
+      au < exists ; Archives of Disease in Childhood Volume 59 ; 59 >
+      au < exists ; Archives of Disease in Childhood Volume 60 ; 60 >
+      au < exists ; Archives of Disease in Childhood Volume 61 ; 61 >
+      au < exists ; Archives of Disease in Childhood Volume 62 ; 62 >
+      au < exists ; Archives of Disease in Childhood Volume 63 ; 63 >
+      au < exists ; Archives of Disease in Childhood Volume 64 ; 64 >
+      au < exists ; Archives of Disease in Childhood Volume 65 ; 65 >
+      au < exists ; Archives of Disease in Childhood Volume 66 ; 66 >
+      au < exists ; Archives of Disease in Childhood Volume 67 ; 67 >
+      au < exists ; Archives of Disease in Childhood Volume 68 ; 68 >
+      au < exists ; Archives of Disease in Childhood Volume 69 ; 69 >
+      au < exists ; Archives of Disease in Childhood Volume 70 ; 70 >
+      au < exists ; Archives of Disease in Childhood Volume 71 ; 71 >
+      au < exists ; Archives of Disease in Childhood Volume 72 ; 72 >
+      au < exists ; Archives of Disease in Childhood Volume 73 ; 73 >
+      au < exists ; Archives of Disease in Childhood Volume 74 ; 74 >
+      au < exists ; Archives of Disease in Childhood Volume 75 ; 75 >
+      au < exists ; Archives of Disease in Childhood Volume 76 ; 76 >
+      au < exists ; Archives of Disease in Childhood Volume 77 ; 77 >
+      au < exists ; Archives of Disease in Childhood Volume 78 ; 78 >
+      au < exists ; Archives of Disease in Childhood Volume 79 ; 79 >
+      au < exists ; Archives of Disease in Childhood Volume 80 ; 80 >
+      au < exists ; Archives of Disease in Childhood Volume 81 ; 81 >
+      au < exists ; Archives of Disease in Childhood Volume 82 ; 82 >
+      au < exists ; Archives of Disease in Childhood Volume 83 ; 83 >
+      au < exists ; Archives of Disease in Childhood Volume 84 ; 84 >
+      au < exists ; Archives of Disease in Childhood Volume 85 ; 85 >
+      au < exists ; Archives of Disease in Childhood Volume 86 ; 86 >
+      au < exists ; Archives of Disease in Childhood Volume 87 ; 87 >
+      au < exists ; Archives of Disease in Childhood Volume 88 ; 88 >
+      au < exists ; Archives of Disease in Childhood Volume 89 ; 89 >
+      au < released ; Archives of Disease in Childhood Volume 90 ; 90 >
+      au < released ; Archives of Disease in Childhood Volume 91 ; 91 >
+      au < manifest ; Archives of Disease in Childhood Volume 92 ; 92 >
+      au < manifest ; Archives of Disease in Childhood Volume 93 ; 93 >
+      au < manifest ; Archives of Disease in Childhood Volume 94 ; 94 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Archives of Disease in Childhood - Education and Practice ;
+      issn = 1743-0585 ;
+      eissn = 1743-0593
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ep.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Archives of Disease in Childhood - Education and Practice Volume 89 ; 89 >
+      au < released ; Archives of Disease in Childhood - Education and Practice Volume 90 ; 90 >
+      au < released ; Archives of Disease in Childhood - Education and Practice Volume 91 ; 91 >
+      au < released ; Archives of Disease in Childhood - Education and Practice Volume 92 ; 92 >
+      au < manifest ; Archives of Disease in Childhood - Education and Practice Volume 93 ; 93 >
+      au < manifest ; Archives of Disease in Childhood - Education and Practice Volume 94 ; 94 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Archives of Disease in Childhood - Fetal and Neonatal Edition ;
+      issn = 1359-2998 ;
+      eissn = 1468-2052
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://fn.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 70 ; 70 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 71 ; 71 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 72 ; 72 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 73 ; 73 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 74 ; 74 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 75 ; 75 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 76 ; 76 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 77 ; 77 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 78 ; 78 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 79 ; 79 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 80 ; 80 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 81 ; 81 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 82 ; 82 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 83 ; 83 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 84 ; 84 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 85 ; 85 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 86 ; 86 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 87 ; 87 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 88 ; 88 >
+      au < exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 89 ; 89 >
+      au < released ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 90 ; 90 >
+      au < released ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91 ; 91 >
+      au < released ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 92 ; 92 >
+      au < manifest ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 93 ; 93 >
+      au < manifest ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 94 ; 94 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = BMJ ;
+      issn = 0959-8138 ;
+      eissn = 1468-5833
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://www.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < manifest ; BMJ Volume 330 ; 330 >
+      au < manifest ; BMJ Volume 331 ; 331 >
+      au < manifest ; BMJ Volume 332 ; 332 >
+      au < manifest ; BMJ Volume 333 ; 333 >
+      au < manifest ; BMJ Volume 334 ; 334 >
+      au < manifest ; BMJ Volume 335 ; 335 >
+      au < manifest ; BMJ Volume 336 ; 336 >
+      au < manifest ; BMJ Volume 337 ; 337 >
+      au < manifest ; BMJ Volume 338 ; 338 >
+      au < manifest ; BMJ Volume 339 ; 339 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = British Journal of Ophthalmology ;
+      issn = 0007-1161 ;
+      eissn = 1468-2079
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://bjo.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; British Journal of Ophthalmology Volume 1 ; 1 >
+      au < exists ; British Journal of Ophthalmology Volume 2 ; 2 >
+      au < exists ; British Journal of Ophthalmology Volume 3 ; 3 >
+      au < exists ; British Journal of Ophthalmology Volume 4 ; 4 >
+      au < exists ; British Journal of Ophthalmology Volume 5 ; 5 >
+      au < exists ; British Journal of Ophthalmology Volume 6 ; 6 >
+      au < exists ; British Journal of Ophthalmology Volume 7 ; 7 >
+      au < exists ; British Journal of Ophthalmology Volume 8 ; 8 >
+      au < exists ; British Journal of Ophthalmology Volume 9 ; 9 >
+      au < exists ; British Journal of Ophthalmology Volume 10 ; 10 >
+      au < exists ; British Journal of Ophthalmology Volume 11 ; 11 >
+      au < exists ; British Journal of Ophthalmology Volume 12 ; 12 >
+      au < exists ; British Journal of Ophthalmology Volume 13 ; 13 >
+      au < exists ; British Journal of Ophthalmology Volume 14 ; 14 >
+      au < exists ; British Journal of Ophthalmology Volume 15 ; 15 >
+      au < exists ; British Journal of Ophthalmology Volume 16 ; 16 >
+      au < exists ; British Journal of Ophthalmology Volume 17 ; 17 >
+      au < exists ; British Journal of Ophthalmology Volume 18 ; 18 >
+      au < exists ; British Journal of Ophthalmology Volume 19 ; 19 >
+      au < exists ; British Journal of Ophthalmology Volume 20 ; 20 >
+      au < exists ; British Journal of Ophthalmology Volume 21 ; 21 >
+      au < exists ; British Journal of Ophthalmology Volume 22 ; 22 >
+      au < exists ; British Journal of Ophthalmology Volume 23 ; 23 >
+      au < exists ; British Journal of Ophthalmology Volume 24 ; 24 >
+      au < exists ; British Journal of Ophthalmology Volume 25 ; 25 >
+      au < exists ; British Journal of Ophthalmology Volume 26 ; 26 >
+      au < exists ; British Journal of Ophthalmology Volume 27 ; 27 >
+      au < exists ; British Journal of Ophthalmology Volume 28 ; 28 >
+      au < exists ; British Journal of Ophthalmology Volume 29 ; 29 >
+      au < exists ; British Journal of Ophthalmology Volume 30 ; 30 >
+      au < exists ; British Journal of Ophthalmology Volume 31 ; 31 >
+      au < exists ; British Journal of Ophthalmology Volume 32 ; 32 >
+      au < exists ; British Journal of Ophthalmology Volume 33 ; 33 >
+      au < exists ; British Journal of Ophthalmology Volume 34 ; 34 >
+      au < exists ; British Journal of Ophthalmology Volume 35 ; 35 >
+      au < exists ; British Journal of Ophthalmology Volume 36 ; 36 >
+      au < exists ; British Journal of Ophthalmology Volume 37 ; 37 >
+      au < exists ; British Journal of Ophthalmology Volume 38 ; 38 >
+      au < exists ; British Journal of Ophthalmology Volume 39 ; 39 >
+      au < exists ; British Journal of Ophthalmology Volume 40 ; 40 >
+      au < exists ; British Journal of Ophthalmology Volume 41 ; 41 >
+      au < exists ; British Journal of Ophthalmology Volume 42 ; 42 >
+      au < exists ; British Journal of Ophthalmology Volume 43 ; 43 >
+      au < exists ; British Journal of Ophthalmology Volume 44 ; 44 >
+      au < exists ; British Journal of Ophthalmology Volume 45 ; 45 >
+      au < exists ; British Journal of Ophthalmology Volume 46 ; 46 >
+      au < exists ; British Journal of Ophthalmology Volume 47 ; 47 >
+      au < exists ; British Journal of Ophthalmology Volume 48 ; 48 >
+      au < exists ; British Journal of Ophthalmology Volume 49 ; 49 >
+      au < exists ; British Journal of Ophthalmology Volume 50 ; 50 >
+      au < exists ; British Journal of Ophthalmology Volume 51 ; 51 >
+      au < exists ; British Journal of Ophthalmology Volume 52 ; 52 >
+      au < exists ; British Journal of Ophthalmology Volume 53 ; 53 >
+      au < exists ; British Journal of Ophthalmology Volume 54 ; 54 >
+      au < exists ; British Journal of Ophthalmology Volume 55 ; 55 >
+      au < exists ; British Journal of Ophthalmology Volume 56 ; 56 >
+      au < exists ; British Journal of Ophthalmology Volume 57 ; 57 >
+      au < exists ; British Journal of Ophthalmology Volume 58 ; 58 >
+      au < exists ; British Journal of Ophthalmology Volume 59 ; 59 >
+      au < exists ; British Journal of Ophthalmology Volume 60 ; 60 >
+      au < exists ; British Journal of Ophthalmology Volume 61 ; 61 >
+      au < exists ; British Journal of Ophthalmology Volume 62 ; 62 >
+      au < exists ; British Journal of Ophthalmology Volume 63 ; 63 >
+      au < exists ; British Journal of Ophthalmology Volume 64 ; 64 >
+      au < exists ; British Journal of Ophthalmology Volume 65 ; 65 >
+      au < exists ; British Journal of Ophthalmology Volume 66 ; 66 >
+      au < exists ; British Journal of Ophthalmology Volume 67 ; 67 >
+      au < exists ; British Journal of Ophthalmology Volume 68 ; 68 >
+      au < exists ; British Journal of Ophthalmology Volume 69 ; 69 >
+      au < exists ; British Journal of Ophthalmology Volume 70 ; 70 >
+      au < exists ; British Journal of Ophthalmology Volume 71 ; 71 >
+      au < exists ; British Journal of Ophthalmology Volume 72 ; 72 >
+      au < exists ; British Journal of Ophthalmology Volume 73 ; 73 >
+      au < exists ; British Journal of Ophthalmology Volume 74 ; 74 >
+      au < exists ; British Journal of Ophthalmology Volume 75 ; 75 >
+      au < exists ; British Journal of Ophthalmology Volume 76 ; 76 >
+      au < exists ; British Journal of Ophthalmology Volume 77 ; 77 >
+      au < exists ; British Journal of Ophthalmology Volume 78 ; 78 >
+      au < exists ; British Journal of Ophthalmology Volume 79 ; 79 >
+      au < exists ; British Journal of Ophthalmology Volume 80 ; 80 >
+      au < exists ; British Journal of Ophthalmology Volume 81 ; 81 >
+      au < exists ; British Journal of Ophthalmology Volume 82 ; 82 >
+      au < exists ; British Journal of Ophthalmology Volume 83 ; 83 >
+      au < exists ; British Journal of Ophthalmology Volume 84 ; 84 >
+      au < exists ; British Journal of Ophthalmology Volume 85 ; 85 >
+      au < exists ; British Journal of Ophthalmology Volume 86 ; 86 >
+      au < exists ; British Journal of Ophthalmology Volume 87 ; 87 >
+      au < exists ; British Journal of Ophthalmology Volume 88 ; 88 >
+      au < manifest ; British Journal of Ophthalmology Volume 89 ; 89 >
+      au < manifest ; British Journal of Ophthalmology Volume 90 ; 90 >
+      au < manifest ; British Journal of Ophthalmology Volume 91 ; 91 >
+      au < manifest ; British Journal of Ophthalmology Volume 92 ; 92 >
+      au < manifest ; British Journal of Ophthalmology Volume 93 ; 93 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = British Journal of Sports Medicine ;
+      issn = 0306-3674 ;
+      eissn = 1473-0480
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://bjsm.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; British Journal of Sports Medicine Volume 1 ; 1 >
+      au < exists ; British Journal of Sports Medicine Volume 2 ; 2 >
+      au < exists ; British Journal of Sports Medicine Volume 3 ; 3 >
+      au < exists ; British Journal of Sports Medicine Volume 5 ; 5 >
+      au < exists ; British Journal of Sports Medicine Volume 6 ; 6 >
+      au < exists ; British Journal of Sports Medicine Volume 8 ; 8 >
+      au < exists ; British Journal of Sports Medicine Volume 9 ; 9 >
+      au < exists ; British Journal of Sports Medicine Volume 10 ; 10 >
+      au < exists ; British Journal of Sports Medicine Volume 11 ; 11 >
+      au < exists ; British Journal of Sports Medicine Volume 12 ; 12 >
+      au < exists ; British Journal of Sports Medicine Volume 13 ; 13 >
+      au < exists ; British Journal of Sports Medicine Volume 14 ; 14 >
+      au < exists ; British Journal of Sports Medicine Volume 15 ; 15 >
+      au < exists ; British Journal of Sports Medicine Volume 16 ; 16 >
+      au < exists ; British Journal of Sports Medicine Volume 17 ; 17 >
+      au < exists ; British Journal of Sports Medicine Volume 18 ; 18 >
+      au < exists ; British Journal of Sports Medicine Volume 19 ; 19 >
+      au < exists ; British Journal of Sports Medicine Volume 20 ; 20 >
+      au < exists ; British Journal of Sports Medicine Volume 21 ; 21 >
+      au < exists ; British Journal of Sports Medicine Volume 22 ; 22 >
+      au < exists ; British Journal of Sports Medicine Volume 23 ; 23 >
+      au < exists ; British Journal of Sports Medicine Volume 24 ; 24 >
+      au < exists ; British Journal of Sports Medicine Volume 25 ; 25 >
+      au < exists ; British Journal of Sports Medicine Volume 26 ; 26 >
+      au < exists ; British Journal of Sports Medicine Volume 27 ; 27 >
+      au < exists ; British Journal of Sports Medicine Volume 28 ; 28 >
+      au < exists ; British Journal of Sports Medicine Volume 29 ; 29 >
+      au < exists ; British Journal of Sports Medicine Volume 30 ; 30 >
+      au < exists ; British Journal of Sports Medicine Volume 31 ; 31 >
+      au < exists ; British Journal of Sports Medicine Volume 32 ; 32 >
+      au < exists ; British Journal of Sports Medicine Volume 33 ; 33 >
+      au < exists ; British Journal of Sports Medicine Volume 34 ; 34 >
+      au < exists ; British Journal of Sports Medicine Volume 35 ; 35 >
+      au < exists ; British Journal of Sports Medicine Volume 36 ; 36 >
+      au < exists ; British Journal of Sports Medicine Volume 37 ; 37 >
+      au < exists ; British Journal of Sports Medicine Volume 38 ; 38 >
+      au < released ; British Journal of Sports Medicine Volume 39 ; 39 >
+      au < released ; British Journal of Sports Medicine Volume 40 ; 40 >
+      au < manifest ; British Journal of Sports Medicine Volume 41 ; 41 >
+      au < manifest ; British Journal of Sports Medicine Volume 42 ; 42 >
+      au < manifest ; British Journal of Sports Medicine Volume 43 ; 43 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = DTB - Drug and Therapeutics Bulletin ;
+      issn = 0012-6543 ;
+      eissn = 1755-5248
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://dtb.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 32 ; 32 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 33 ; 33 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 34 ; 34 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 35 ; 35 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 36 ; 36 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 37 ; 37 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 38 ; 38 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 39 ; 39 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 40 ; 40 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 41 ; 41 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 42 ; 42 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 43 ; 43 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 44 ; 44 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 46 ; 46 >
+      au < exists ; DTB - Drug and Therapeutics Bulletin Volume 47 ; 47 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Emergency Medicine Journal ;
+      issn = 1472-0205 ;
+      eissn = 1472-0213
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://emj.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Emergency Medicine Journal Volume 1 ; 1 >
+      au < exists ; Emergency Medicine Journal Volume 2 ; 2 >
+      au < exists ; Emergency Medicine Journal Volume 3 ; 3 >
+      au < exists ; Emergency Medicine Journal Volume 4 ; 4 >
+      au < exists ; Emergency Medicine Journal Volume 5 ; 5 >
+      au < exists ; Emergency Medicine Journal Volume 6 ; 6 >
+      au < exists ; Emergency Medicine Journal Volume 7 ; 7 >
+      au < exists ; Emergency Medicine Journal Volume 8 ; 8 >
+      au < exists ; Emergency Medicine Journal Volume 9 ; 9 >
+      au < exists ; Emergency Medicine Journal Volume 10 ; 10 >
+      au < exists ; Emergency Medicine Journal Volume 11 ; 11 >
+      au < exists ; Emergency Medicine Journal Volume 12 ; 12 >
+      au < exists ; Emergency Medicine Journal Volume 13 ; 13 >
+      au < exists ; Emergency Medicine Journal Volume 14 ; 14 >
+      au < exists ; Emergency Medicine Journal Volume 15 ; 15 >
+      au < exists ; Emergency Medicine Journal Volume 16 ; 16 >
+      au < exists ; Emergency Medicine Journal Volume 17 ; 17 >
+      au < exists ; Emergency Medicine Journal Volume 18 ; 18 >
+      au < exists ; Emergency Medicine Journal Volume 19 ; 19 >
+      au < exists ; Emergency Medicine Journal Volume 20 ; 20 >
+      au < exists ; Emergency Medicine Journal Volume 21 ; 21 >
+      au < manifest ; Emergency Medicine Journal Volume 22 ; 22 >
+      au < manifest ; Emergency Medicine Journal Volume 23 ; 23 >
+      au < manifest ; Emergency Medicine Journal Volume 24 ; 24 >
+      au < manifest ; Emergency Medicine Journal Volume 25 ; 25 >
+      au < manifest ; Emergency Medicine Journal Volume 26 ; 26 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Evidence-Based Medicine ;
+      issn = 1356-5524 ;
+      eissn = 1473-6810
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ebm.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Evidence-Based Medicine Volume 5 ; 5 >
+      au < exists ; Evidence-Based Medicine Volume 6 ; 6 >
+      au < exists ; Evidence-Based Medicine Volume 7 ; 7 >
+      au < exists ; Evidence-Based Medicine Volume 8 ; 8 >
+      au < exists ; Evidence-Based Medicine Volume 9 ; 9 >
+      au < released ; Evidence-Based Medicine Volume 10 ; 10 >
+      au < released ; Evidence-Based Medicine Volume 11 ; 11 >
+      au < released ; Evidence-Based Medicine Volume 12 ; 12 >
+      au < manifest ; Evidence-Based Medicine Volume 13 ; 13 >
+      au < manifest ; Evidence-Based Medicine Volume 14 ; 14 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Evidence-Based Mental Health ;
+      issn = 1362-0347 ;
+      eissn = 1468-960X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ebmh.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Evidence-Based Mental Health Volume 1 ; 1 >
+      au < exists ; Evidence-Based Mental Health Volume 2 ; 2 >
+      au < exists ; Evidence-Based Mental Health Volume 3 ; 3 >
+      au < exists ; Evidence-Based Mental Health Volume 4 ; 4 >
+      au < exists ; Evidence-Based Mental Health Volume 5 ; 5 >
+      au < exists ; Evidence-Based Mental Health Volume 6 ; 6 >
+      au < exists ; Evidence-Based Mental Health Volume 7 ; 7 >
+      au < manifest ; Evidence-Based Mental Health Volume 8 ; 8 >
+      au < manifest ; Evidence-Based Mental Health Volume 9 ; 9 >
+      au < manifest ; Evidence-Based Mental Health Volume 10 ; 10 >
+      au < manifest ; Evidence-Based Mental Health Volume 11 ; 11 >
+      au < manifest ; Evidence-Based Mental Health Volume 12 ; 12 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Evidence-Based Nursing ;
+      issn = 1367-6539 ;
+      eissn = 1468-9618
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ebn.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Evidence-Based Nursing Volume 1 ; 1 >
+      au < exists ; Evidence-Based Nursing Volume 2 ; 2 >
+      au < exists ; Evidence-Based Nursing Volume 3 ; 3 >
+      au < exists ; Evidence-Based Nursing Volume 4 ; 4 >
+      au < exists ; Evidence-Based Nursing Volume 5 ; 5 >
+      au < exists ; Evidence-Based Nursing Volume 6 ; 6 >
+      au < exists ; Evidence-Based Nursing Volume 7 ; 7 >
+      au < released ; Evidence-Based Nursing Volume 8 ; 8 >
+      au < manifest ; Evidence-Based Nursing Volume 9 ; 9 >
+      au < manifest ; Evidence-Based Nursing Volume 10 ; 10 >
+      au < manifest ; Evidence-Based Nursing Volume 11 ; 11 >
+      au < manifest ; Evidence-Based Nursing Volume 12 ; 12 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Gut ;
+      issn = 0017-5749 ;
+      eissn = 1468-3288
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://gut.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Gut Volume 1 ; 1 >
+      au < exists ; Gut Volume 2 ; 2 >
+      au < exists ; Gut Volume 3 ; 3 >
+      au < exists ; Gut Volume 4 ; 4 >
+      au < exists ; Gut Volume 5 ; 5 >
+      au < exists ; Gut Volume 6 ; 6 >
+      au < exists ; Gut Volume 7 ; 7 >
+      au < exists ; Gut Volume 8 ; 8 >
+      au < exists ; Gut Volume 9 ; 9 >
+      au < exists ; Gut Volume 10 ; 10 >
+      au < exists ; Gut Volume 11 ; 11 >
+      au < exists ; Gut Volume 12 ; 12 >
+      au < exists ; Gut Volume 13 ; 13 >
+      au < exists ; Gut Volume 14 ; 14 >
+      au < exists ; Gut Volume 15 ; 15 >
+      au < exists ; Gut Volume 16 ; 16 >
+      au < exists ; Gut Volume 17 ; 17 >
+      au < exists ; Gut Volume 18 ; 18 >
+      au < exists ; Gut Volume 19 ; 19 >
+      au < exists ; Gut Volume 20 ; 20 >
+      au < exists ; Gut Volume 21 ; 21 >
+      au < exists ; Gut Volume 22 ; 22 >
+      au < exists ; Gut Volume 23 ; 23 >
+      au < exists ; Gut Volume 24 ; 24 >
+      au < exists ; Gut Volume 25 ; 25 >
+      au < exists ; Gut Volume 26 ; 26 >
+      au < exists ; Gut Volume 27 ; 27 >
+      au < exists ; Gut Volume 28 ; 28 >
+      au < exists ; Gut Volume 29 ; 29 >
+      au < exists ; Gut Volume 30 ; 30 >
+      au < exists ; Gut Volume 31 ; 31 >
+      au < exists ; Gut Volume 32 ; 32 >
+      au < exists ; Gut Volume 33 ; 33 >
+      au < exists ; Gut Volume 34 ; 34 >
+      au < exists ; Gut Volume 35 ; 35 >
+      au < exists ; Gut Volume 36 ; 36 >
+      au < exists ; Gut Volume 37 ; 37 >
+      au < exists ; Gut Volume 38 ; 38 >
+      au < exists ; Gut Volume 39 ; 39 >
+      au < exists ; Gut Volume 40 ; 40 >
+      au < exists ; Gut Volume 41 ; 41 >
+      au < exists ; Gut Volume 42 ; 42 >
+      au < exists ; Gut Volume 43 ; 43 >
+      au < exists ; Gut Volume 44 ; 44 >
+      au < exists ; Gut Volume 45 ; 45 >
+      au < exists ; Gut Volume 46 ; 46 >
+      au < exists ; Gut Volume 47 ; 47 >
+      au < exists ; Gut Volume 48 ; 48 >
+      au < exists ; Gut Volume 49 ; 49 >
+      au < exists ; Gut Volume 50 ; 50 >
+      au < exists ; Gut Volume 51 ; 51 >
+      au < exists ; Gut Volume 52 ; 52 >
+      au < exists ; Gut Volume 53 ; 53 >
+      au < released ; Gut Volume 54 ; 54 >
+      au < released ; Gut Volume 55 ; 55 >
+      au < released ; Gut Volume 56 ; 56 >
+      au < manifest ; Gut Volume 57 ; 57 >
+      au < manifest ; Gut Volume 58 ; 58 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Heart ;
+      issn = 1355-6037 ;
+      eissn = 1468-201X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://heart.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Heart Volume 1 ; 1 >
+      au < exists ; Heart Volume 2 ; 2 >
+      au < exists ; Heart Volume 3 ; 3 >
+      au < exists ; Heart Volume 5 ; 5 >
+      au < exists ; Heart Volume 6 ; 6 >
+      au < exists ; Heart Volume 7 ; 7 >
+      au < exists ; Heart Volume 8 ; 8 >
+      au < exists ; Heart Volume 9 ; 9 >
+      au < exists ; Heart Volume 10 ; 10 >
+      au < exists ; Heart Volume 11 ; 11 >
+      au < exists ; Heart Volume 12 ; 12 >
+      au < exists ; Heart Volume 13 ; 13 >
+      au < exists ; Heart Volume 14 ; 14 >
+      au < exists ; Heart Volume 15 ; 15 >
+      au < exists ; Heart Volume 16 ; 16 >
+      au < exists ; Heart Volume 17 ; 17 >
+      au < exists ; Heart Volume 18 ; 18 >
+      au < exists ; Heart Volume 19 ; 19 >
+      au < exists ; Heart Volume 20 ; 20 >
+      au < exists ; Heart Volume 21 ; 21 >
+      au < exists ; Heart Volume 22 ; 22 >
+      au < exists ; Heart Volume 23 ; 23 >
+      au < exists ; Heart Volume 24 ; 24 >
+      au < exists ; Heart Volume 25 ; 25 >
+      au < exists ; Heart Volume 26 ; 26 >
+      au < exists ; Heart Volume 27 ; 27 >
+      au < exists ; Heart Volume 28 ; 28 >
+      au < exists ; Heart Volume 29 ; 29 >
+      au < exists ; Heart Volume 30 ; 30 >
+      au < exists ; Heart Volume 31 ; 31 >
+      au < exists ; Heart Volume 32 ; 32 >
+      au < exists ; Heart Volume 33 ; 33 >
+      au < exists ; Heart Volume 34 ; 34 >
+      au < exists ; Heart Volume 35 ; 35 >
+      au < exists ; Heart Volume 36 ; 36 >
+      au < exists ; Heart Volume 37 ; 37 >
+      au < exists ; Heart Volume 38 ; 38 >
+      au < exists ; Heart Volume 39 ; 39 >
+      au < exists ; Heart Volume 40 ; 40 >
+      au < exists ; Heart Volume 41 ; 41 >
+      au < exists ; Heart Volume 42 ; 42 >
+      au < exists ; Heart Volume 43 ; 43 >
+      au < exists ; Heart Volume 44 ; 44 >
+      au < exists ; Heart Volume 45 ; 45 >
+      au < exists ; Heart Volume 46 ; 46 >
+      au < exists ; Heart Volume 47 ; 47 >
+      au < exists ; Heart Volume 48 ; 48 >
+      au < exists ; Heart Volume 49 ; 49 >
+      au < exists ; Heart Volume 50 ; 50 >
+      au < exists ; Heart Volume 51 ; 51 >
+      au < exists ; Heart Volume 52 ; 52 >
+      au < exists ; Heart Volume 53 ; 53 >
+      au < exists ; Heart Volume 54 ; 54 >
+      au < exists ; Heart Volume 55 ; 55 >
+      au < exists ; Heart Volume 56 ; 56 >
+      au < exists ; Heart Volume 57 ; 57 >
+      au < exists ; Heart Volume 58 ; 58 >
+      au < exists ; Heart Volume 59 ; 59 >
+      au < exists ; Heart Volume 60 ; 60 >
+      au < exists ; Heart Volume 61 ; 61 >
+      au < exists ; Heart Volume 62 ; 62 >
+      au < exists ; Heart Volume 63 ; 63 >
+      au < exists ; Heart Volume 64 ; 64 >
+      au < exists ; Heart Volume 65 ; 65 >
+      au < exists ; Heart Volume 66 ; 66 >
+      au < exists ; Heart Volume 67 ; 67 >
+      au < exists ; Heart Volume 69 ; 69 >
+      au < exists ; Heart Volume 70 ; 70 >
+      au < exists ; Heart Volume 71 ; 71 >
+      au < exists ; Heart Volume 72 ; 72 >
+      au < exists ; Heart Volume 73 ; 73 >
+      au < exists ; Heart Volume 74 ; 74 >
+      au < exists ; Heart Volume 75 ; 75 >
+      au < exists ; Heart Volume 76 ; 76 >
+      au < exists ; Heart Volume 77 ; 77 >
+      au < exists ; Heart Volume 78 ; 78 >
+      au < exists ; Heart Volume 79 ; 79 >
+      au < exists ; Heart Volume 80 ; 80 >
+      au < exists ; Heart Volume 81 ; 81 >
+      au < exists ; Heart Volume 82 ; 82 >
+      au < exists ; Heart Volume 83 ; 83 >
+      au < exists ; Heart Volume 84 ; 84 >
+      au < exists ; Heart Volume 85 ; 85 >
+      au < exists ; Heart Volume 86 ; 86 >
+      au < exists ; Heart Volume 87 ; 87 >
+      au < exists ; Heart Volume 88 ; 88 >
+      au < exists ; Heart Volume 89 ; 89 >
+      au < exists ; Heart Volume 90 ; 90 >
+      au < released ; Heart Volume 91 ; 91 >
+      au < released ; Heart Volume 92 ; 92 >
+      au < released ; Heart Volume 93 ; 93 >
+      au < manifest ; Heart Volume 94 ; 94 >
+      au < manifest ; Heart Volume 95 ; 95 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Injury Prevention ;
+      issn = 1353-8047 ;
+      eissn = 1475-5785
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://ip.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; Injury Prevention Volume 10 ; 10 >
+      au < released ; Injury Prevention Volume 11 ; 11 >
+
+    }
+
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://injuryprevention.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Injury Prevention Volume 1 ; 1 >
+      au < exists ; Injury Prevention Volume 2 ; 2 >
+      au < exists ; Injury Prevention Volume 3 ; 3 >
+      au < exists ; Injury Prevention Volume 4 ; 4 >
+      au < exists ; Injury Prevention Volume 5 ; 5 >
+      au < exists ; Injury Prevention Volume 6 ; 6 >
+      au < exists ; Injury Prevention Volume 7 ; 7 >
+      au < exists ; Injury Prevention Volume 8 ; 8 >
+      au < exists ; Injury Prevention Volume 9 ; 9 >
+      au < doNotProcess ; Injury Prevention Volume 10 ; 10 >
+      au < doNotProcess ; Injury Prevention Volume 11 ; 11 >
+      au < manifest ; Injury Prevention Volume 12 ; 12 >
+      au < manifest ; Injury Prevention Volume 13 ; 13 >
+      au < manifest ; Injury Prevention Volume 14 ; 14 >
+      au < manifest ; Injury Prevention Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Clinical Pathology ;
+      issn = 0021-9746 ;
+      eissn = 1472-4146
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jcp.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Clinical Pathology Volume 1 ; 1 >
+      au < exists ; Journal of Clinical Pathology Volume 2 ; 2 >
+      au < exists ; Journal of Clinical Pathology Volume 3 ; 3 >
+      au < exists ; Journal of Clinical Pathology Volume 4 ; 4 >
+      au < exists ; Journal of Clinical Pathology Volume 5 ; 5 >
+      au < exists ; Journal of Clinical Pathology Volume 6 ; 6 >
+      au < exists ; Journal of Clinical Pathology Volume 7 ; 7 >
+      au < exists ; Journal of Clinical Pathology Volume 8 ; 8 >
+      au < exists ; Journal of Clinical Pathology Volume 9 ; 9 >
+      au < exists ; Journal of Clinical Pathology Volume 10 ; 10 >
+      au < exists ; Journal of Clinical Pathology Volume 11 ; 11 >
+      au < exists ; Journal of Clinical Pathology Volume 12 ; 12 >
+      au < exists ; Journal of Clinical Pathology Volume 13 ; 13 >
+      au < exists ; Journal of Clinical Pathology Volume 14 ; 14 >
+      au < exists ; Journal of Clinical Pathology Volume 15 ; 15 >
+      au < exists ; Journal of Clinical Pathology Volume 16 ; 16 >
+      au < exists ; Journal of Clinical Pathology Volume 17 ; 17 >
+      au < exists ; Journal of Clinical Pathology Volume 18 ; 18 >
+      au < exists ; Journal of Clinical Pathology Volume 19 ; 19 >
+      au < exists ; Journal of Clinical Pathology Volume 20 ; 20 >
+      au < exists ; Journal of Clinical Pathology Volume 21 ; 21 >
+      au < exists ; Journal of Clinical Pathology Volume 22 ; 22 >
+      au < exists ; Journal of Clinical Pathology Volume 23 ; 23 >
+      au < exists ; Journal of Clinical Pathology Volume 24 ; 24 >
+      au < exists ; Journal of Clinical Pathology Volume 25 ; 25 >
+      au < exists ; Journal of Clinical Pathology Volume 26 ; 26 >
+      au < exists ; Journal of Clinical Pathology Volume 27 ; 27 >
+      au < exists ; Journal of Clinical Pathology Volume 28 ; 28 >
+      au < exists ; Journal of Clinical Pathology Volume 29 ; 29 >
+      au < exists ; Journal of Clinical Pathology Volume 30 ; 30 >
+      au < exists ; Journal of Clinical Pathology Volume 31 ; 31 >
+      au < exists ; Journal of Clinical Pathology Volume 32 ; 32 >
+      au < exists ; Journal of Clinical Pathology Volume 33 ; 33 >
+      au < exists ; Journal of Clinical Pathology Volume 34 ; 34 >
+      au < exists ; Journal of Clinical Pathology Volume 35 ; 35 >
+      au < exists ; Journal of Clinical Pathology Volume 36 ; 36 >
+      au < exists ; Journal of Clinical Pathology Volume 37 ; 37 >
+      au < exists ; Journal of Clinical Pathology Volume 38 ; 38 >
+      au < exists ; Journal of Clinical Pathology Volume 39 ; 39 >
+      au < exists ; Journal of Clinical Pathology Volume 40 ; 40 >
+      au < exists ; Journal of Clinical Pathology Volume 41 ; 41 >
+      au < exists ; Journal of Clinical Pathology Volume 42 ; 42 >
+      au < exists ; Journal of Clinical Pathology Volume 43 ; 43 >
+      au < exists ; Journal of Clinical Pathology Volume 44 ; 44 >
+      au < exists ; Journal of Clinical Pathology Volume 45 ; 45 >
+      au < exists ; Journal of Clinical Pathology Volume 46 ; 46 >
+      au < exists ; Journal of Clinical Pathology Volume 47 ; 47 >
+      au < exists ; Journal of Clinical Pathology Volume 48 ; 48 >
+      au < exists ; Journal of Clinical Pathology Volume 49 ; 49 >
+      au < exists ; Journal of Clinical Pathology Volume 50 ; 50 >
+      au < exists ; Journal of Clinical Pathology Volume 51 ; 51 >
+      au < exists ; Journal of Clinical Pathology Volume 52 ; 52 >
+      au < exists ; Journal of Clinical Pathology Volume 53 ; 53 >
+      au < exists ; Journal of Clinical Pathology Volume 54 ; 54 >
+      au < exists ; Journal of Clinical Pathology Volume 55 ; 55 >
+      au < exists ; Journal of Clinical Pathology Volume 56 ; 56 >
+      au < exists ; Journal of Clinical Pathology Volume 57 ; 57 >
+      au < released ; Journal of Clinical Pathology Volume 58 ; 58 >
+      au < released ; Journal of Clinical Pathology Volume 59 ; 59 >
+      au < manifest ; Journal of Clinical Pathology Volume 60 ; 60 >
+      au < manifest ; Journal of Clinical Pathology Volume 61 ; 61 >
+      au < manifest ; Journal of Clinical Pathology Volume 62 ; 62 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Epidemiology & Community Health ;
+      issn = 0143-005X ;
+      eissn = 1470-2738
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jech.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Epidemiology & Community Health Volume 1 ; 1 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 2 ; 2 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 3 ; 3 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 4 ; 4 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 5 ; 5 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 6 ; 6 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 7 ; 7 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 8 ; 8 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 9 ; 9 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 10 ; 10 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 11 ; 11 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 12 ; 12 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 13 ; 13 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 14 ; 14 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 15 ; 15 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 16 ; 16 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 17 ; 17 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 18 ; 18 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 19 ; 19 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 20 ; 20 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 21 ; 21 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 22 ; 22 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 23 ; 23 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 24 ; 24 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 25 ; 25 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 26 ; 26 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 27 ; 27 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 28 ; 28 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 29 ; 29 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 30 ; 30 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 31 ; 31 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 32 ; 32 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 33 ; 33 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 34 ; 34 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 35 ; 35 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 36 ; 36 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 37 ; 37 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 38 ; 38 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 39 ; 39 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 40 ; 40 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 41 ; 41 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 42 ; 42 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 43 ; 43 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 44 ; 44 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 45 ; 45 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 46 ; 46 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 47 ; 47 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 48 ; 48 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 49 ; 49 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 50 ; 50 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 51 ; 51 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 52 ; 52 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 53 ; 53 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 54 ; 54 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 55 ; 55 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 56 ; 56 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 57 ; 57 >
+      au < exists ; Journal of Epidemiology & Community Health Volume 58 ; 58 >
+      au < released ; Journal of Epidemiology & Community Health Volume 59 ; 59 >
+      au < released ; Journal of Epidemiology & Community Health Volume 60 ; 60 >
+      au < manifest ; Journal of Epidemiology & Community Health Volume 61 ; 61 >
+      au < manifest ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
+      au < manifest ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Ethics ;
+      issn = 0306-6800 ;
+      eissn = 1473-4257
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jme.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Medical Ethics Volume 1 ; 1 >
+      au < exists ; Journal of Medical Ethics Volume 3 ; 3 >
+      au < exists ; Journal of Medical Ethics Volume 4 ; 4 >
+      au < exists ; Journal of Medical Ethics Volume 5 ; 5 >
+      au < exists ; Journal of Medical Ethics Volume 6 ; 6 >
+      au < exists ; Journal of Medical Ethics Volume 7 ; 7 >
+      au < exists ; Journal of Medical Ethics Volume 8 ; 8 >
+      au < exists ; Journal of Medical Ethics Volume 9 ; 9 >
+      au < exists ; Journal of Medical Ethics Volume 10 ; 10 >
+      au < exists ; Journal of Medical Ethics Volume 11 ; 11 >
+      au < exists ; Journal of Medical Ethics Volume 12 ; 12 >
+      au < exists ; Journal of Medical Ethics Volume 13 ; 13 >
+      au < exists ; Journal of Medical Ethics Volume 14 ; 14 >
+      au < exists ; Journal of Medical Ethics Volume 15 ; 15 >
+      au < exists ; Journal of Medical Ethics Volume 16 ; 16 >
+      au < exists ; Journal of Medical Ethics Volume 17 ; 17 >
+      au < exists ; Journal of Medical Ethics Volume 18 ; 18 >
+      au < exists ; Journal of Medical Ethics Volume 19 ; 19 >
+      au < exists ; Journal of Medical Ethics Volume 20 ; 20 >
+      au < exists ; Journal of Medical Ethics Volume 21 ; 21 >
+      au < exists ; Journal of Medical Ethics Volume 22 ; 22 >
+      au < exists ; Journal of Medical Ethics Volume 23 ; 23 >
+      au < exists ; Journal of Medical Ethics Volume 24 ; 24 >
+      au < exists ; Journal of Medical Ethics Volume 25 ; 25 >
+      au < exists ; Journal of Medical Ethics Volume 26 ; 26 >
+      au < exists ; Journal of Medical Ethics Volume 27 ; 27 >
+      au < exists ; Journal of Medical Ethics Volume 28 ; 28 >
+      au < exists ; Journal of Medical Ethics Volume 29 ; 29 >
+      au < exists ; Journal of Medical Ethics Volume 30 ; 30 >
+      au < released ; Journal of Medical Ethics Volume 31 ; 31 >
+      au < released ; Journal of Medical Ethics Volume 32 ; 32 >
+      au < manifest ; Journal of Medical Ethics Volume 33 ; 33 >
+      au < manifest ; Journal of Medical Ethics Volume 34 ; 34 >
+      au < manifest ; Journal of Medical Ethics Volume 35 ; 35 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Medical Genetics ;
+      issn = 0022-2593 ;
+      eissn = 1468-6244
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jmg.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Medical Genetics Volume 1 ; 1 >
+      au < exists ; Journal of Medical Genetics Volume 2 ; 2 >
+      au < exists ; Journal of Medical Genetics Volume 3 ; 3 >
+      au < exists ; Journal of Medical Genetics Volume 4 ; 4 >
+      au < exists ; Journal of Medical Genetics Volume 5 ; 5 >
+      au < exists ; Journal of Medical Genetics Volume 6 ; 6 >
+      au < exists ; Journal of Medical Genetics Volume 7 ; 7 >
+      au < exists ; Journal of Medical Genetics Volume 8 ; 8 >
+      au < exists ; Journal of Medical Genetics Volume 9 ; 9 >
+      au < exists ; Journal of Medical Genetics Volume 10 ; 10 >
+      au < exists ; Journal of Medical Genetics Volume 11 ; 11 >
+      au < exists ; Journal of Medical Genetics Volume 12 ; 12 >
+      au < exists ; Journal of Medical Genetics Volume 13 ; 13 >
+      au < exists ; Journal of Medical Genetics Volume 14 ; 14 >
+      au < exists ; Journal of Medical Genetics Volume 15 ; 15 >
+      au < exists ; Journal of Medical Genetics Volume 16 ; 16 >
+      au < exists ; Journal of Medical Genetics Volume 17 ; 17 >
+      au < exists ; Journal of Medical Genetics Volume 18 ; 18 >
+      au < exists ; Journal of Medical Genetics Volume 19 ; 19 >
+      au < exists ; Journal of Medical Genetics Volume 20 ; 20 >
+      au < exists ; Journal of Medical Genetics Volume 21 ; 21 >
+      au < exists ; Journal of Medical Genetics Volume 22 ; 22 >
+      au < exists ; Journal of Medical Genetics Volume 23 ; 23 >
+      au < exists ; Journal of Medical Genetics Volume 24 ; 24 >
+      au < exists ; Journal of Medical Genetics Volume 25 ; 25 >
+      au < exists ; Journal of Medical Genetics Volume 26 ; 26 >
+      au < exists ; Journal of Medical Genetics Volume 27 ; 27 >
+      au < exists ; Journal of Medical Genetics Volume 28 ; 28 >
+      au < exists ; Journal of Medical Genetics Volume 29 ; 29 >
+      au < exists ; Journal of Medical Genetics Volume 30 ; 30 >
+      au < exists ; Journal of Medical Genetics Volume 31 ; 31 >
+      au < exists ; Journal of Medical Genetics Volume 32 ; 32 >
+      au < exists ; Journal of Medical Genetics Volume 33 ; 33 >
+      au < exists ; Journal of Medical Genetics Volume 34 ; 34 >
+      au < exists ; Journal of Medical Genetics Volume 35 ; 35 >
+      au < exists ; Journal of Medical Genetics Volume 36 ; 36 >
+      au < exists ; Journal of Medical Genetics Volume 37 ; 37 >
+      au < exists ; Journal of Medical Genetics Volume 38 ; 38 >
+      au < exists ; Journal of Medical Genetics Volume 39 ; 39 >
+      au < exists ; Journal of Medical Genetics Volume 40 ; 40 >
+      au < exists ; Journal of Medical Genetics Volume 41 ; 41 >
+      au < released ; Journal of Medical Genetics Volume 42 ; 42 >
+      au < released ; Journal of Medical Genetics Volume 43 ; 43 >
+      au < manifest ; Journal of Medical Genetics Volume 44 ; 44 >
+      au < manifest ; Journal of Medical Genetics Volume 45 ; 45 >
+      au < manifest ; Journal of Medical Genetics Volume 46 ; 46 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Journal of Neurology, Neurosurgery & Psychiatry ;
+      issn = 0022-3050 ;
+      eissn = 1468-330X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://jnnp.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 1 ; 1 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 2 ; 2 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 3 ; 3 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 4 ; 4 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 9 ; 9 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 10 ; 10 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 11 ; 11 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 12 ; 12 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 13 ; 13 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 14 ; 14 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 15 ; 15 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 16 ; 16 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 17 ; 17 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 18 ; 18 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 19 ; 19 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 20 ; 20 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 21 ; 21 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 22 ; 22 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 23 ; 23 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 24 ; 24 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 25 ; 25 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 26 ; 26 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 27 ; 27 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 28 ; 28 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 29 ; 29 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 30 ; 30 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 31 ; 31 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 32 ; 32 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 33 ; 33 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 34 ; 34 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 35 ; 35 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 36 ; 36 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 37 ; 37 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 38 ; 38 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 39 ; 39 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 40 ; 40 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 41 ; 41 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 42 ; 42 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 43 ; 43 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 44 ; 44 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 45 ; 45 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 46 ; 46 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 47 ; 47 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 48 ; 48 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 49 ; 49 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 50 ; 50 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 51 ; 51 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 52 ; 52 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 53 ; 53 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 54 ; 54 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 55 ; 55 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 56 ; 56 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 57 ; 57 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 58 ; 58 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 59 ; 59 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 60 ; 60 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 61 ; 61 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 62 ; 62 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 63 ; 63 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 64 ; 64 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 65 ; 65 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 66 ; 66 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 67 ; 67 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 68 ; 68 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 69 ; 69 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 70 ; 70 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 71 ; 71 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 72 ; 72 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 73 ; 73 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 74 ; 74 >
+      au < exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 75 ; 75 >
+      au < released ; Journal of Neurology, Neurosurgery & Psychiatry Volume 76 ; 76 >
+      au < released ; Journal of Neurology, Neurosurgery & Psychiatry Volume 77 ; 77 >
+      au < manifest ; Journal of Neurology, Neurosurgery & Psychiatry Volume 78 ; 78 >
+      au < manifest ; Journal of Neurology, Neurosurgery & Psychiatry Volume 79 ; 79 >
+      au < manifest ; Journal of Neurology, Neurosurgery & Psychiatry Volume 80 ; 80 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Medical Humanities ;
+      issn = 1468-215X ;
+      eissn = 1473-4265
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mh.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Medical Humanities Volume 26 ; 26 >
+      au < exists ; Medical Humanities Volume 27 ; 27 >
+      au < exists ; Medical Humanities Volume 28 ; 28 >
+      au < exists ; Medical Humanities Volume 29 ; 29 >
+      au < exists ; Medical Humanities Volume 30 ; 30 >
+      au < released ; Medical Humanities Volume 31 ; 31 >
+      au < manifest ; Medical Humanities Volume 32 ; 32 >
+      au < manifest ; Medical Humanities Volume 33 ; 33 >
+      au < manifest ; Medical Humanities Volume 34 ; 34 >
+      au < manifest ; Medical Humanities Volume 35 ; 35 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Molecular Pathology ;
+      issn = 1366-8714 ;
+      eissn = 1472-4154
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://mp.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Molecular Pathology Volume 48 ; 48 >
+      au < exists ; Molecular Pathology Volume 49 ; 49 >
+      au < exists ; Molecular Pathology Volume 50 ; 50 >
+      au < exists ; Molecular Pathology Volume 51 ; 51 >
+      au < exists ; Molecular Pathology Volume 52 ; 52 >
+      au < exists ; Molecular Pathology Volume 53 ; 53 >
+      au < exists ; Molecular Pathology Volume 54 ; 54 >
+      au < exists ; Molecular Pathology Volume 55 ; 55 >
+      au < manifest ; Molecular Pathology Volume 56 ; 56 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Occupational and Environmental Medicine ;
+      issn = 1351-0711 ;
+      eissn = 1470-7926
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://oem.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Occupational and Environmental Medicine Volume 1 ; 1 >
+      au < exists ; Occupational and Environmental Medicine Volume 2 ; 2 >
+      au < exists ; Occupational and Environmental Medicine Volume 3 ; 3 >
+      au < exists ; Occupational and Environmental Medicine Volume 4 ; 4 >
+      au < exists ; Occupational and Environmental Medicine Volume 5 ; 5 >
+      au < exists ; Occupational and Environmental Medicine Volume 6 ; 6 >
+      au < exists ; Occupational and Environmental Medicine Volume 7 ; 7 >
+      au < exists ; Occupational and Environmental Medicine Volume 8 ; 8 >
+      au < exists ; Occupational and Environmental Medicine Volume 9 ; 9 >
+      au < exists ; Occupational and Environmental Medicine Volume 10 ; 10 >
+      au < exists ; Occupational and Environmental Medicine Volume 11 ; 11 >
+      au < exists ; Occupational and Environmental Medicine Volume 12 ; 12 >
+      au < exists ; Occupational and Environmental Medicine Volume 13 ; 13 >
+      au < exists ; Occupational and Environmental Medicine Volume 14 ; 14 >
+      au < exists ; Occupational and Environmental Medicine Volume 15 ; 15 >
+      au < exists ; Occupational and Environmental Medicine Volume 16 ; 16 >
+      au < exists ; Occupational and Environmental Medicine Volume 17 ; 17 >
+      au < exists ; Occupational and Environmental Medicine Volume 18 ; 18 >
+      au < exists ; Occupational and Environmental Medicine Volume 19 ; 19 >
+      au < exists ; Occupational and Environmental Medicine Volume 20 ; 20 >
+      au < exists ; Occupational and Environmental Medicine Volume 21 ; 21 >
+      au < exists ; Occupational and Environmental Medicine Volume 22 ; 22 >
+      au < exists ; Occupational and Environmental Medicine Volume 23 ; 23 >
+      au < exists ; Occupational and Environmental Medicine Volume 24 ; 24 >
+      au < exists ; Occupational and Environmental Medicine Volume 25 ; 25 >
+      au < exists ; Occupational and Environmental Medicine Volume 26 ; 26 >
+      au < exists ; Occupational and Environmental Medicine Volume 27 ; 27 >
+      au < exists ; Occupational and Environmental Medicine Volume 28 ; 28 >
+      au < exists ; Occupational and Environmental Medicine Volume 29 ; 29 >
+      au < exists ; Occupational and Environmental Medicine Volume 30 ; 30 >
+      au < exists ; Occupational and Environmental Medicine Volume 31 ; 31 >
+      au < exists ; Occupational and Environmental Medicine Volume 32 ; 32 >
+      au < exists ; Occupational and Environmental Medicine Volume 33 ; 33 >
+      au < exists ; Occupational and Environmental Medicine Volume 34 ; 34 >
+      au < exists ; Occupational and Environmental Medicine Volume 35 ; 35 >
+      au < exists ; Occupational and Environmental Medicine Volume 36 ; 36 >
+      au < exists ; Occupational and Environmental Medicine Volume 37 ; 37 >
+      au < exists ; Occupational and Environmental Medicine Volume 38 ; 38 >
+      au < exists ; Occupational and Environmental Medicine Volume 39 ; 39 >
+      au < exists ; Occupational and Environmental Medicine Volume 40 ; 40 >
+      au < exists ; Occupational and Environmental Medicine Volume 41 ; 41 >
+      au < exists ; Occupational and Environmental Medicine Volume 42 ; 42 >
+      au < exists ; Occupational and Environmental Medicine Volume 43 ; 43 >
+      au < exists ; Occupational and Environmental Medicine Volume 44 ; 44 >
+      au < exists ; Occupational and Environmental Medicine Volume 45 ; 45 >
+      au < exists ; Occupational and Environmental Medicine Volume 46 ; 46 >
+      au < exists ; Occupational and Environmental Medicine Volume 47 ; 47 >
+      au < exists ; Occupational and Environmental Medicine Volume 48 ; 48 >
+      au < exists ; Occupational and Environmental Medicine Volume 49 ; 49 >
+      au < exists ; Occupational and Environmental Medicine Volume 50 ; 50 >
+      au < exists ; Occupational and Environmental Medicine Volume 51 ; 51 >
+      au < exists ; Occupational and Environmental Medicine Volume 52 ; 52 >
+      au < exists ; Occupational and Environmental Medicine Volume 53 ; 53 >
+      au < exists ; Occupational and Environmental Medicine Volume 54 ; 54 >
+      au < exists ; Occupational and Environmental Medicine Volume 55 ; 55 >
+      au < exists ; Occupational and Environmental Medicine Volume 56 ; 56 >
+      au < exists ; Occupational and Environmental Medicine Volume 57 ; 57 >
+      au < exists ; Occupational and Environmental Medicine Volume 58 ; 58 >
+      au < exists ; Occupational and Environmental Medicine Volume 59 ; 59 >
+      au < exists ; Occupational and Environmental Medicine Volume 60 ; 60 >
+      au < exists ; Occupational and Environmental Medicine Volume 61 ; 61 >
+      au < released ; Occupational and Environmental Medicine Volume 62 ; 62 >
+      au < released ; Occupational and Environmental Medicine Volume 63 ; 63 >
+      au < manifest ; Occupational and Environmental Medicine Volume 64 ; 64 >
+      au < manifest ; Occupational and Environmental Medicine Volume 65 ; 65 >
+      au < manifest ; Occupational and Environmental Medicine Volume 66 ; 66 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Postgraduate Medical Journal ;
+      issn = 0032-5473 ;
+      eissn = 1469-0756
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://pmj.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; Postgraduate Medical Journal Volume 81 ; 81 >
+      au < released ; Postgraduate Medical Journal Volume 82 ; 82 >
+      au < released ; Postgraduate Medical Journal Volume 83 ; 83 >
+      au < manifest ; Postgraduate Medical Journal Volume 84 ; 84 >
+      au < manifest ; Postgraduate Medical Journal Volume 85 ; 85 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Quality and Safety in Health Care ;
+      issn = 0963-8172 ;
+      eissn = 1470-7934
+    >
+
+    {
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://qhc.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; Quality and Safety in Health Care Volume 15 ; 15 >
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://qshc.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Quality and Safety in Health Care Volume 1 ; 1 >
+      au < exists ; Quality and Safety in Health Care Volume 2 ; 2 >
+      au < exists ; Quality and Safety in Health Care Volume 3 ; 3 >
+      au < exists ; Quality and Safety in Health Care Volume 4 ; 4 >
+      au < exists ; Quality and Safety in Health Care Volume 5 ; 5 >
+      au < exists ; Quality and Safety in Health Care Volume 6 ; 6 >
+      au < exists ; Quality and Safety in Health Care Volume 7 ; 7 >
+      au < exists ; Quality and Safety in Health Care Volume 8 ; 8 >
+      au < exists ; Quality and Safety in Health Care Volume 9 ; 9 >
+      au < exists ; Quality and Safety in Health Care Volume 10 ; 10 >
+      au < exists ; Quality and Safety in Health Care Volume 11 ; 11 >
+      au < exists ; Quality and Safety in Health Care Volume 12 ; 12 >
+      au < exists ; Quality and Safety in Health Care Volume 13 ; 13 >
+      au < released ; Quality and Safety in Health Care Volume 14 ; 14 >
+      au < doNotProcess ; Quality and Safety in Health Care Volume 15 ; 15 >
+      au < released ; Quality and Safety in Health Care Volume 16 ; 16 >
+      au < manifest ; Quality and Safety in Health Care Volume 17 ; 17 >
+      au < manifest ; Quality and Safety in Health Care Volume 18 ; 18 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Sexually Transmitted Infections ;
+      issn = 1368-4973 ;
+      eissn = 1472-3263
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://sti.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Sexually Transmitted Infections Volume 1 ; 1 >
+      au < exists ; Sexually Transmitted Infections Volume 3 ; 3 >
+      au < exists ; Sexually Transmitted Infections Volume 4 ; 4 >
+      au < exists ; Sexually Transmitted Infections Volume 5 ; 5 >
+      au < exists ; Sexually Transmitted Infections Volume 6 ; 6 >
+      au < exists ; Sexually Transmitted Infections Volume 7 ; 7 >
+      au < exists ; Sexually Transmitted Infections Volume 8 ; 8 >
+      au < exists ; Sexually Transmitted Infections Volume 9 ; 9 >
+      au < exists ; Sexually Transmitted Infections Volume 10 ; 10 >
+      au < exists ; Sexually Transmitted Infections Volume 11 ; 11 >
+      au < exists ; Sexually Transmitted Infections Volume 12 ; 12 >
+      au < exists ; Sexually Transmitted Infections Volume 13 ; 13 >
+      au < exists ; Sexually Transmitted Infections Volume 14 ; 14 >
+      au < exists ; Sexually Transmitted Infections Volume 15 ; 15 >
+      au < exists ; Sexually Transmitted Infections Volume 19 ; 19 >
+      au < exists ; Sexually Transmitted Infections Volume 20 ; 20 >
+      au < exists ; Sexually Transmitted Infections Volume 21 ; 21 >
+      au < exists ; Sexually Transmitted Infections Volume 22 ; 22 >
+      au < exists ; Sexually Transmitted Infections Volume 23 ; 23 >
+      au < exists ; Sexually Transmitted Infections Volume 24 ; 24 >
+      au < exists ; Sexually Transmitted Infections Volume 25 ; 25 >
+      au < exists ; Sexually Transmitted Infections Volume 26 ; 26 >
+      au < exists ; Sexually Transmitted Infections Volume 27 ; 27 >
+      au < exists ; Sexually Transmitted Infections Volume 28 ; 28 >
+      au < exists ; Sexually Transmitted Infections Volume 29 ; 29 >
+      au < exists ; Sexually Transmitted Infections Volume 30 ; 30 >
+      au < exists ; Sexually Transmitted Infections Volume 31 ; 31 >
+      au < exists ; Sexually Transmitted Infections Volume 32 ; 32 >
+      au < exists ; Sexually Transmitted Infections Volume 33 ; 33 >
+      au < exists ; Sexually Transmitted Infections Volume 34 ; 34 >
+      au < exists ; Sexually Transmitted Infections Volume 35 ; 35 >
+      au < exists ; Sexually Transmitted Infections Volume 36 ; 36 >
+      au < exists ; Sexually Transmitted Infections Volume 37 ; 37 >
+      au < exists ; Sexually Transmitted Infections Volume 38 ; 38 >
+      au < exists ; Sexually Transmitted Infections Volume 39 ; 39 >
+      au < exists ; Sexually Transmitted Infections Volume 40 ; 40 >
+      au < exists ; Sexually Transmitted Infections Volume 41 ; 41 >
+      au < exists ; Sexually Transmitted Infections Volume 42 ; 42 >
+      au < exists ; Sexually Transmitted Infections Volume 43 ; 43 >
+      au < exists ; Sexually Transmitted Infections Volume 44 ; 44 >
+      au < exists ; Sexually Transmitted Infections Volume 45 ; 45 >
+      au < exists ; Sexually Transmitted Infections Volume 46 ; 46 >
+      au < exists ; Sexually Transmitted Infections Volume 47 ; 47 >
+      au < exists ; Sexually Transmitted Infections Volume 48 ; 48 >
+      au < exists ; Sexually Transmitted Infections Volume 49 ; 49 >
+      au < exists ; Sexually Transmitted Infections Volume 50 ; 50 >
+      au < exists ; Sexually Transmitted Infections Volume 51 ; 51 >
+      au < exists ; Sexually Transmitted Infections Volume 52 ; 52 >
+      au < exists ; Sexually Transmitted Infections Volume 53 ; 53 >
+      au < exists ; Sexually Transmitted Infections Volume 54 ; 54 >
+      au < exists ; Sexually Transmitted Infections Volume 55 ; 55 >
+      au < exists ; Sexually Transmitted Infections Volume 56 ; 56 >
+      au < exists ; Sexually Transmitted Infections Volume 57 ; 57 >
+      au < exists ; Sexually Transmitted Infections Volume 58 ; 58 >
+      au < exists ; Sexually Transmitted Infections Volume 59 ; 59 >
+      au < exists ; Sexually Transmitted Infections Volume 60 ; 60 >
+      au < exists ; Sexually Transmitted Infections Volume 61 ; 61 >
+      au < exists ; Sexually Transmitted Infections Volume 62 ; 62 >
+      au < exists ; Sexually Transmitted Infections Volume 63 ; 63 >
+      au < exists ; Sexually Transmitted Infections Volume 64 ; 64 >
+      au < exists ; Sexually Transmitted Infections Volume 65 ; 65 >
+      au < exists ; Sexually Transmitted Infections Volume 66 ; 66 >
+      au < exists ; Sexually Transmitted Infections Volume 67 ; 67 >
+      au < exists ; Sexually Transmitted Infections Volume 68 ; 68 >
+      au < exists ; Sexually Transmitted Infections Volume 69 ; 69 >
+      au < exists ; Sexually Transmitted Infections Volume 70 ; 70 >
+      au < exists ; Sexually Transmitted Infections Volume 71 ; 71 >
+      au < exists ; Sexually Transmitted Infections Volume 72 ; 72 >
+      au < exists ; Sexually Transmitted Infections Volume 73 ; 73 >
+      au < exists ; Sexually Transmitted Infections Volume 74 ; 74 >
+      au < exists ; Sexually Transmitted Infections Volume 75 ; 75 >
+      au < exists ; Sexually Transmitted Infections Volume 76 ; 76 >
+      au < exists ; Sexually Transmitted Infections Volume 77 ; 77 >
+      au < exists ; Sexually Transmitted Infections Volume 78 ; 78 >
+      au < exists ; Sexually Transmitted Infections Volume 79 ; 79 >
+      au < exists ; Sexually Transmitted Infections Volume 80 ; 80 >
+      au < released ; Sexually Transmitted Infections Volume 81 ; 81 >
+      au < released ; Sexually Transmitted Infections Volume 82 ; 82 >
+      au < released ; Sexually Transmitted Infections Volume 83 ; 83 >
+      au < manifest ; Sexually Transmitted Infections Volume 84 ; 84 >
+      au < manifest ; Sexually Transmitted Infections Volume 85 ; 85 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Thorax ;
+      issn = 0040-6376 ;
+      eissn = 1468-3296
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://thorax.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Thorax Volume 1 ; 1 >
+      au < exists ; Thorax Volume 2 ; 2 >
+      au < exists ; Thorax Volume 3 ; 3 >
+      au < exists ; Thorax Volume 4 ; 4 >
+      au < exists ; Thorax Volume 5 ; 5 >
+      au < exists ; Thorax Volume 6 ; 6 >
+      au < exists ; Thorax Volume 7 ; 7 >
+      au < exists ; Thorax Volume 8 ; 8 >
+      au < exists ; Thorax Volume 9 ; 9 >
+      au < exists ; Thorax Volume 10 ; 10 >
+      au < exists ; Thorax Volume 11 ; 11 >
+      au < exists ; Thorax Volume 12 ; 12 >
+      au < exists ; Thorax Volume 13 ; 13 >
+      au < exists ; Thorax Volume 14 ; 14 >
+      au < exists ; Thorax Volume 15 ; 15 >
+      au < exists ; Thorax Volume 16 ; 16 >
+      au < exists ; Thorax Volume 17 ; 17 >
+      au < exists ; Thorax Volume 18 ; 18 >
+      au < exists ; Thorax Volume 19 ; 19 >
+      au < exists ; Thorax Volume 20 ; 20 >
+      au < exists ; Thorax Volume 21 ; 21 >
+      au < exists ; Thorax Volume 22 ; 22 >
+      au < exists ; Thorax Volume 23 ; 23 >
+      au < exists ; Thorax Volume 24 ; 24 >
+      au < exists ; Thorax Volume 25 ; 25 >
+      au < exists ; Thorax Volume 26 ; 26 >
+      au < exists ; Thorax Volume 27 ; 27 >
+      au < exists ; Thorax Volume 28 ; 28 >
+      au < exists ; Thorax Volume 29 ; 29 >
+      au < exists ; Thorax Volume 30 ; 30 >
+      au < exists ; Thorax Volume 31 ; 31 >
+      au < exists ; Thorax Volume 32 ; 32 >
+      au < exists ; Thorax Volume 33 ; 33 >
+      au < exists ; Thorax Volume 34 ; 34 >
+      au < exists ; Thorax Volume 35 ; 35 >
+      au < exists ; Thorax Volume 36 ; 36 >
+      au < exists ; Thorax Volume 37 ; 37 >
+      au < exists ; Thorax Volume 38 ; 38 >
+      au < exists ; Thorax Volume 39 ; 39 >
+      au < exists ; Thorax Volume 40 ; 40 >
+      au < exists ; Thorax Volume 41 ; 41 >
+      au < exists ; Thorax Volume 42 ; 42 >
+      au < exists ; Thorax Volume 43 ; 43 >
+      au < exists ; Thorax Volume 44 ; 44 >
+      au < exists ; Thorax Volume 45 ; 45 >
+      au < exists ; Thorax Volume 46 ; 46 >
+      au < exists ; Thorax Volume 47 ; 47 >
+      au < exists ; Thorax Volume 48 ; 48 >
+      au < exists ; Thorax Volume 49 ; 49 >
+      au < exists ; Thorax Volume 50 ; 50 >
+      au < exists ; Thorax Volume 51 ; 51 >
+      au < exists ; Thorax Volume 52 ; 52 >
+      au < exists ; Thorax Volume 53 ; 53 >
+      au < exists ; Thorax Volume 54 ; 54 >
+      au < exists ; Thorax Volume 55 ; 55 >
+      au < exists ; Thorax Volume 56 ; 56 >
+      au < exists ; Thorax Volume 57 ; 57 >
+      au < exists ; Thorax Volume 58 ; 58 >
+      au < exists ; Thorax Volume 59 ; 59 >
+      au < released ; Thorax Volume 60 ; 60 >
+      au < released ; Thorax Volume 61 ; 61 >
+      au < manifest ; Thorax Volume 62 ; 62 >
+      au < manifest ; Thorax Volume 63 ; 63 >
+      au < manifest ; Thorax Volume 64 ; 64 >
+
+    }
+
+  }
+
+  {
+    title <
+      name = Tobacco Control ;
+      issn = 0964-4563 ;
+      eissn = 1468-3318
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://tc.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < released ; Tobacco Control Volume 14 ; 14 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://tobaccocontrol.bmj.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < exists ; Tobacco Control Volume 1 ; 1 >
+      au < exists ; Tobacco Control Volume 2 ; 2 >
+      au < exists ; Tobacco Control Volume 3 ; 3 >
+      au < exists ; Tobacco Control Volume 4 ; 4 >
+      au < exists ; Tobacco Control Volume 5 ; 5 >
+      au < exists ; Tobacco Control Volume 6 ; 6 >
+      au < exists ; Tobacco Control Volume 7 ; 7 >
+      au < exists ; Tobacco Control Volume 8 ; 8 >
+      au < exists ; Tobacco Control Volume 9 ; 9 >
+      au < exists ; Tobacco Control Volume 10 ; 10 >
+      au < exists ; Tobacco Control Volume 11 ; 11 >
+      au < exists ; Tobacco Control Volume 12 ; 12 >
+      au < exists ; Tobacco Control Volume 13 ; 13 >
+      au < no_not_process ; Tobacco Control Volume 14 ; 14 >
+      au < manifest ; Tobacco Control Volume 15 ; 15 >
+      au < manifest ; Tobacco Control Volume 16 ; 16 >
+      au < manifest ; Tobacco Control Volume 17 ; 17 >
+      au < manifest ; Tobacco Control Volume 18 ; 18 >
+
+    }
+
+  }
+
+}
+
