@@ -337,6 +337,8 @@
 
     param[journal_dir] = journal_of_modern_literature
 
+    comment[jml31_32] = 500 errors
+
     au < released ; Journal of Modern Literature Volume 22 ; 22 >
     au < released ; Journal of Modern Literature Volume 23 ; 23 >
     au < released ; Journal of Modern Literature Volume 24 ; 24 >
@@ -346,8 +348,8 @@
     au < released ; Journal of Modern Literature Volume 28 ; 28 >
     au < released ; Journal of Modern Literature Volume 29 ; 29 >
     au < released ; Journal of Modern Literature Volume 30 ; 30 >
-    au < ready ; Journal of Modern Literature Volume 31 ; 31 >
-    au < ready ; Journal of Modern Literature Volume 32 ; 32 >
+    au < notReady ; Journal of Modern Literature Volume 31 ; 31 >
+    au < notReady ; Journal of Modern Literature Volume 32 ; 32 >
     au < ready ; Journal of Modern Literature Volume 33 ; 33 >
 
   }
@@ -361,11 +363,13 @@
 
     param[journal_dir] = meridians
 
+    comment[m8] = 500 errors
+
     au < released ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
     au < released ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
     au < released ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
     au < released ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
-    au < ready ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
+    au < notReady ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
     au < ready ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
 
   }
@@ -379,6 +383,8 @@
 
     param[journal_dir] = nashim
 
+    comment[nm15_16] = 500 errors
+
     au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 ; 6 >
     au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 ; 7 >
     au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 ; 8 >
@@ -389,7 +395,7 @@
     au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 ; 13 >
     au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 ; 14 >
     au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 ; 15 >
-    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
+    au < notReady ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
     au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
     au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
 
@@ -440,6 +446,8 @@
     >
 
     param[journal_dir] = prooftexts
+    
+    comment[pt28] = 500 errors
 
     au < released ; Prooftexts Volume 20 ; 20 >
     au < released ; Prooftexts Volume 21 ; 21 >
@@ -449,7 +457,7 @@
     au < released ; Prooftexts Volume 25 ; 25 >
     au < released ; Prooftexts Volume 26 ; 26 >
     au < ready ; Prooftexts Volume 27 ; 27 >
-    au < ready ; Prooftexts Volume 28 ; 28 >
+    au < notReady ; Prooftexts Volume 28 ; 28 >
     au < ready ; Prooftexts Volume 29 ; 29 >
 
   }
@@ -475,6 +483,8 @@
 
     param[journal_dir] = research_in_african_literatures
 
+    comment[ral39_40] = 500 errors
+
     au < released ; Research in African Literatures Volume 30 ; 30 >
     au < released ; Research in African Literatures Volume 31 ; 31 >
     au < released ; Research in African Literatures Volume 32 ; 32 >
@@ -484,9 +494,9 @@
     au < released ; Research in African Literatures Volume 36 ; 36 >
     au < released ; Research in African Literatures Volume 37 ; 37 >
     au < released ; Research in African Literatures Volume 38 ; 38 >
-    au < testing ; Research in African Literatures Volume 39 ; 39 >
-    au < testing ; Research in African Literatures Volume 40 ; 40 >
-    au < testing ; Research in African Literatures Volume 41 ; 41 >
+    au < notReady ; Research in African Literatures Volume 39 ; 39 >
+    au < notReady ; Research in African Literatures Volume 40 ; 40 >
+    au < ready ; Research in African Literatures Volume 41 ; 41 >
 
   }
 
