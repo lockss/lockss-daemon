@@ -1,5 +1,5 @@
 /*
- * $Id: BMCHtmlFilterFactory.java,v 1.2 2008-01-04 19:21:48 thib_gc Exp $
+ * $Id: BMCHtmlFilterFactory.java,v 1.3 2010-04-23 01:11:31 edwardsb1 Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class BMCHtmlFilterFactory implements FilterFactory {
         new HtmlTagFilter.TagPair("<table", "</table>", true, false),
         new HtmlTagFilter.TagPair("<script", "</script>", true, false),
         new HtmlTagFilter.TagPair("<noscript", "</noscript>", true, false),
+        new HtmlTagFilter.TagPair("<div id=\"browse\"", "</div>", true, true),
         new HtmlTagFilter.TagPair("<", ">", false, false)
         );
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
