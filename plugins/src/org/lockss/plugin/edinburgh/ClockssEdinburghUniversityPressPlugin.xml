@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -23,8 +23,7 @@
         <string>1,&quot;^%sclockss/%s/%s/index.html$&quot;, base_url, journal_id, volume_name</string>
         <string>1,&quot;^%stoc/%s(\.[0-9]+)?/%s(/[^/]+)?$&quot;, base_url, journal_id, volume_name</string>
         <string>2,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/[-.9]+$&quot;, base_url</string>
-        <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/E?[0-9X]+$&quot;, base_url</string>
-        <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/[.0-9]+/%s&quot;, base_url, journal_id</string>
+        <string>1,&quot;^%sdoi/(pdf|pdfplus|abs)/&quot;, base_url</string>
     </list>
   </entry>
     <entry>
@@ -43,9 +42,13 @@
     <string>au_def_pause_time</string>
     <long>6000</long>
   </entry>
-    <entry>
+  <entry>
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
