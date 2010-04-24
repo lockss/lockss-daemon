@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHtmlLinkExtractorFactory.java,v 1.1 2010-04-23 19:08:53 edwardsb1 Exp $
+ * $Id: EdinburghUniversityPressHtmlLinkExtractorFactory.java,v 1.2 2010-04-24 00:17:37 edwardsb1 Exp $
  */
 /*
  Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
@@ -24,32 +24,28 @@
  */
 package org.lockss.plugin.edinburgh;
 
-import java.io.InputStream;
-
-import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
-import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 
 /**
  * @author edwardsb
  *
  */
 public class EdinburghUniversityPressHtmlLinkExtractorFactory implements
-    FilterFactory {
+    LinkExtractorFactory {
 
   /* (non-Javadoc)
    * @see org.lockss.plugin.FilterFactory#createFilteredInputStream(org.lockss.plugin.ArchivalUnit, java.io.InputStream, java.lang.String)
    */
-  public InputStream createFilteredInputStream(ArchivalUnit au, InputStream in,
-      String encoding) throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
-            "class",
-            "sidebar_panel")),
-    };
-    
-    return new HtmlFilterInputStream(in, encoding, new HtmlCompoundTransform(transforms));
+  public LinkExtractor createLinkExtractor(String mimetype) throws PluginException {
+    return new EdinburghUniversityPressHtmlLinkExtractor();
+//    HtmlTransform[] transforms = new HtmlTransform[] {
+//        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
+//            "class",
+//            "sidebar_panel")),
+//    };
+//    
+//    return new HtmlFilterInputStream(in, encoding, new HtmlCompoundTransform(transforms));
   }
 
 }
