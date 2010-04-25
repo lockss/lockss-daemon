@@ -115,6 +115,8 @@
   <property name="AgeandAgeing37">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Age and Ageing" />
+   <property name="issn" value="0002-0729" />
+   <property name="eissn" value="1468-2834" />
    <property name="title" value="Age and Ageing Volume 37" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -131,6 +133,8 @@
   <property name="AgeandAgeing38">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Age and Ageing" />
+   <property name="issn" value="0002-0729" />
+   <property name="eissn" value="1468-2834" />
    <property name="title" value="Age and Ageing Volume 38" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -147,6 +151,8 @@
   <property name="AlcoholandAlcoholism43">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Alcohol and Alcoholism" />
+   <property name="issn" value="0735-0414" />
+   <property name="eissn" value="1464-3502" />
    <property name="title" value="Alcohol and Alcoholism Volume 43" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -163,6 +169,8 @@
   <property name="AlcoholandAlcoholism44">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Alcohol and Alcoholism" />
+   <property name="issn" value="0735-0414" />
+   <property name="eissn" value="1464-3502" />
    <property name="title" value="Alcohol and Alcoholism Volume 44" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -179,6 +187,8 @@
   <property name="AmericanJournalofEpidemiology167">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="American Journal of Epidemiology" />
+   <property name="issn" value="0002-9262" />
+   <property name="eissn" value="1476-6256" />
    <property name="title" value="American Journal of Epidemiology Volume 167" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -195,6 +205,8 @@
   <property name="AmericanJournalofEpidemiology168">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="American Journal of Epidemiology" />
+   <property name="issn" value="0002-9262" />
+   <property name="eissn" value="1476-6256" />
    <property name="title" value="American Journal of Epidemiology Volume 168" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -211,6 +223,8 @@
   <property name="AmericanJournalofEpidemiology169">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="American Journal of Epidemiology" />
+   <property name="issn" value="0002-9262" />
+   <property name="eissn" value="1476-6256" />
    <property name="title" value="American Journal of Epidemiology Volume 169" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -227,6 +241,8 @@
   <property name="AmericanJournalofEpidemiology170">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="American Journal of Epidemiology" />
+   <property name="issn" value="0002-9262" />
+   <property name="eissn" value="1476-6256" />
    <property name="title" value="American Journal of Epidemiology Volume 170" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -243,6 +259,8 @@
   <property name="AmericanLawandEconomicsReview10">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="American Law and Economics Review" />
+   <property name="issn" value="1465-7252" />
+   <property name="eissn" value="1465-7260" />
    <property name="title" value="American Law and Economics Review Volume 10" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -259,6 +277,8 @@
   <property name="AmericanLawandEconomicsReview11">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="American Law and Economics Review" />
+   <property name="issn" value="1465-7252" />
+   <property name="eissn" value="1465-7260" />
    <property name="title" value="American Law and Economics Review Volume 11" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -275,6 +295,8 @@
   <property name="AmericanLiteraryHistory21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="American Literary History" />
+   <property name="issn" value="0896-7148" />
+   <property name="eissn" value="1468-4365" />
    <property name="title" value="American Literary History Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -286,6 +308,22 @@
     <property name="value" value="21" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="Analysis68">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="Analysis" />
+   <property name="title" value="Analysis Volume 68" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://analysis.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="68" />
+   </property>
+   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="Analysis69">
@@ -304,9 +342,47 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="AnnalsofBotany101">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="Annals of Botany" />
+   <property name="issn" value="0305-7364" />
+   <property name="eissn" value="1095-8290" />
+   <property name="title" value="Annals of Botany Volume 101" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aob.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="101" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="AnnalsofBotany102">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="Annals of Botany" />
+   <property name="issn" value="0305-7364" />
+   <property name="eissn" value="1095-8290" />
+   <property name="title" value="Annals of Botany Volume 102" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://aob.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="102" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
   <property name="AnnalsofBotany103">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Annals of Botany" />
+   <property name="issn" value="0305-7364" />
+   <property name="eissn" value="1095-8290" />
    <property name="title" value="Annals of Botany Volume 103" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -323,6 +399,8 @@
   <property name="AnnalsofBotany104">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Annals of Botany" />
+   <property name="issn" value="0305-7364" />
+   <property name="eissn" value="1095-8290" />
    <property name="title" value="Annals of Botany Volume 104" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -336,9 +414,29 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="TheAnnalsofOccupationalHygiene52">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="The Annals of Occupational Hygiene" />
+   <property name="issn" value="0003-4878" />
+   <property name="eissn" value="1475-3162" />
+   <property name="title" value="The Annals of Occupational Hygiene Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://annhyg.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="52" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
   <property name="TheAnnalsofOccupationalHygiene53">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Annals of Occupational Hygiene" />
+   <property name="issn" value="0003-4878" />
+   <property name="eissn" value="1475-3162" />
    <property name="title" value="The Annals of Occupational Hygiene Volume 53" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -352,9 +450,29 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="AnnalsofOncology19">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="Annals of Oncology" />
+   <property name="issn" value="0923-7534" />
+   <property name="eissn" value="1569-8041" />
+   <property name="title" value="Annals of Oncology Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://annonc.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
   <property name="AnnalsofOncology20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Annals of Oncology" />
+   <property name="issn" value="0923-7534" />
+   <property name="eissn" value="1569-8041" />
    <property name="title" value="Annals of Oncology Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -368,9 +486,29 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="AppliedLinguistics29">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="Applied Linguistics" />
+   <property name="issn" value="0142-6001" />
+   <property name="eissn" value="1477-450X" />
+   <property name="title" value="Applied Linguistics Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://applij.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
   <property name="AppliedLinguistics30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Applied Linguistics" />
+   <property name="issn" value="0142-6001" />
+   <property name="eissn" value="1477-450X" />
    <property name="title" value="Applied Linguistics Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -382,6 +520,22 @@
     <property name="value" value="30" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="ArchivesofClinicalNeuropsychology23">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="Archives of Clinical Neuropsychology" />
+   <property name="title" value="Archives of Clinical Neuropsychology Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://acn.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.year" value="2008" />
   </property>
 
   <property name="ArchivesofClinicalNeuropsychology24">
@@ -403,6 +557,8 @@
   <property name="BehavioralEcology19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Behavioral Ecology" />
+   <property name="issn" value="1045-2249" />
+   <property name="eissn" value="1465-7279" />
    <property name="title" value="Behavioral Ecology Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -419,6 +575,8 @@
   <property name="BehavioralEcology20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Behavioral Ecology" />
+   <property name="issn" value="1045-2249" />
+   <property name="eissn" value="1465-7279" />
    <property name="title" value="Behavioral Ecology Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -435,6 +593,8 @@
   <property name="Bioinformatics24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Bioinformatics" />
+   <property name="issn" value="1367-4803" />
+   <property name="eissn" value="1460-2059" />
    <property name="title" value="Bioinformatics Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -451,6 +611,8 @@
   <property name="Bioinformatics25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Bioinformatics" />
+   <property name="issn" value="1367-4803" />
+   <property name="eissn" value="1460-2059" />
    <property name="title" value="Bioinformatics Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -467,6 +629,8 @@
   <property name="Biometrika95">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Biometrika" />
+   <property name="issn" value="0006-3444" />
+   <property name="eissn" value="1464-3510" />
    <property name="title" value="Biometrika Volume 95" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -483,6 +647,8 @@
   <property name="Biometrika96">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Biometrika" />
+   <property name="issn" value="0006-3444" />
+   <property name="eissn" value="1464-3510" />
    <property name="title" value="Biometrika Volume 96" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -531,6 +697,8 @@
   <property name="Biostatistics9">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Biostatistics" />
+   <property name="issn" value="1465-4644" />
+   <property name="eissn" value="1468-4357" />
    <property name="title" value="Biostatistics Volume 9" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -547,6 +715,8 @@
   <property name="Biostatistics10">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Biostatistics" />
+   <property name="issn" value="1465-4644" />
+   <property name="eissn" value="1468-4357" />
    <property name="title" value="Biostatistics Volume 10" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -627,6 +797,8 @@
   <property name="Brain131">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Brain" />
+   <property name="issn" value="0006-8950" />
+   <property name="eissn" value="1460-2156" />
    <property name="title" value="Brain Volume 131" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -643,6 +815,8 @@
   <property name="Brain132">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Brain" />
+   <property name="issn" value="0006-8950" />
+   <property name="eissn" value="1460-2156" />
    <property name="title" value="Brain Volume 132" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -659,6 +833,8 @@
   <property name="BriefingsinBioinformatics9">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Briefings in Bioinformatics" />
+   <property name="issn" value="1467-5463" />
+   <property name="eissn" value="1477-4054" />
    <property name="title" value="Briefings in Bioinformatics Volume 9" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -675,6 +851,8 @@
   <property name="BriefingsinBioinformatics10">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Briefings in Bioinformatics" />
+   <property name="issn" value="1467-5463" />
+   <property name="eissn" value="1477-4054" />
    <property name="title" value="Briefings in Bioinformatics Volume 10" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -691,6 +869,8 @@
   <property name="BriefingsinFunctionalGenomicsandProteomics7">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Briefings in Functional Genomics and Proteomics" />
+   <property name="issn" value="1473-9550" />
+   <property name="eissn" value="1477-4062" />
    <property name="title" value="Briefings in Functional Genomics and Proteomics Volume 7" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -707,6 +887,8 @@
   <property name="BriefingsinFunctionalGenomicsandProteomics8">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Briefings in Functional Genomics and Proteomics" />
+   <property name="issn" value="1473-9550" />
+   <property name="eissn" value="1477-4062" />
    <property name="title" value="Briefings in Functional Genomics and Proteomics Volume 8" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -723,6 +905,8 @@
   <property name="TheBritishJournalofAesthetics48">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The British Journal of Aesthetics" />
+   <property name="issn" value="0007-0904" />
+   <property name="eissn" value="1468-2842" />
    <property name="title" value="The British Journal of Aesthetics Volume 48" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -739,6 +923,8 @@
   <property name="TheBritishJournalofAesthetics49">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The British Journal of Aesthetics" />
+   <property name="issn" value="0007-0904" />
+   <property name="eissn" value="1468-2842" />
    <property name="title" value="The British Journal of Aesthetics Volume 49" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -787,6 +973,8 @@
   <property name="TheBritishJournalforthePhilosophyofScience59">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The British Journal for the Philosophy of Science" />
+   <property name="issn" value="0007-0882" />
+   <property name="eissn" value="1464-3537" />
    <property name="title" value="The British Journal for the Philosophy of Science Volume 59" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -803,6 +991,8 @@
   <property name="TheBritishJournalforthePhilosophyofScience60">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The British Journal for the Philosophy of Science" />
+   <property name="issn" value="0007-0882" />
+   <property name="eissn" value="1464-3537" />
    <property name="title" value="The British Journal for the Philosophy of Science Volume 60" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -816,9 +1006,29 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="TheBritishJournalofSocialWork38">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="The British Journal of Social Work" />
+   <property name="issn" value="0045-3102" />
+   <property name="eissn" value="1468-263X" />
+   <property name="title" value="The British Journal of Social Work Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bjsw.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
   <property name="TheBritishJournalofSocialWork39">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The British Journal of Social Work" />
+   <property name="issn" value="0045-3102" />
+   <property name="eissn" value="1468-263X" />
    <property name="title" value="The British Journal of Social Work Volume 39" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -832,9 +1042,83 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="BritishMedicalBulletin85">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="British Medical Bulletin" />
+   <property name="issn" value="0007-1420" />
+   <property name="eissn" value="1471-8391" />
+   <property name="title" value="British Medical Bulletin Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bmb.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="85" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="BritishMedicalBulletin86">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="British Medical Bulletin" />
+   <property name="issn" value="0007-1420" />
+   <property name="eissn" value="1471-8391" />
+   <property name="title" value="British Medical Bulletin Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bmb.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="86" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="BritishMedicalBulletin87">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="British Medical Bulletin" />
+   <property name="issn" value="0007-1420" />
+   <property name="eissn" value="1471-8391" />
+   <property name="title" value="British Medical Bulletin Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bmb.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="87" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="BritishMedicalBulletin88">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="British Medical Bulletin" />
+   <property name="issn" value="0007-1420" />
+   <property name="eissn" value="1471-8391" />
+   <property name="title" value="British Medical Bulletin Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bmb.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="88" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
   <property name="BritishMedicalBulletin89">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="British Medical Bulletin" />
+   <property name="issn" value="0007-1420" />
+   <property name="eissn" value="1471-8391" />
    <property name="title" value="British Medical Bulletin Volume 89" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -851,6 +1135,8 @@
   <property name="BritishMedicalBulletin90">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="British Medical Bulletin" />
+   <property name="issn" value="0007-1420" />
+   <property name="eissn" value="1471-8391" />
    <property name="title" value="British Medical Bulletin Volume 90" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -867,6 +1153,8 @@
   <property name="BritishMedicalBulletin91">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="British Medical Bulletin" />
+   <property name="issn" value="0007-1420" />
+   <property name="eissn" value="1471-8391" />
    <property name="title" value="British Medical Bulletin Volume 91" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -880,9 +1168,29 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="BulletinoftheLondonMathematicalSociety40">
+   <property name="attributes.publisher" value="Oxford University Press" />
+   <property name="journalTitle" value="Bulletin of the London Mathematical Society" />
+   <property name="issn" value="0024-6093" />
+   <property name="eissn" value="1469-2120" />
+   <property name="title" value="Bulletin of the London Mathematical Society Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://blms.oxfordjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="40" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
   <property name="BulletinoftheLondonMathematicalSociety41">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Bulletin of the London Mathematical Society" />
+   <property name="issn" value="0024-6093" />
+   <property name="eissn" value="1469-2120" />
    <property name="title" value="Bulletin of the London Mathematical Society Volume 41" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -899,6 +1207,8 @@
   <property name="CambridgeJournalofEconomics32">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Cambridge Journal of Economics" />
+   <property name="issn" value="0309-166X" />
+   <property name="eissn" value="1464-3545" />
    <property name="title" value="Cambridge Journal of Economics Volume 32" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -915,6 +1225,8 @@
   <property name="CambridgeJournalofEconomics33">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Cambridge Journal of Economics" />
+   <property name="issn" value="0309-166X" />
+   <property name="eissn" value="1464-3545" />
    <property name="title" value="Cambridge Journal of Economics Volume 33" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -963,6 +1275,8 @@
   <property name="TheCambridgeQuarterly37">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Cambridge Quarterly" />
+   <property name="issn" value="0008-199X" />
+   <property name="eissn" value="1471-6836" />
    <property name="title" value="The Cambridge Quarterly Volume 37" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -979,6 +1293,8 @@
   <property name="TheCambridgeQuarterly38">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Cambridge Quarterly" />
+   <property name="issn" value="0008-199X" />
+   <property name="eissn" value="1471-6836" />
    <property name="title" value="The Cambridge Quarterly Volume 38" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -995,6 +1311,8 @@
   <property name="CapitalMarketsLawJournal3">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Capital Markets Law Journal" />
+   <property name="issn" value="1750-7219" />
+   <property name="eissn" value="1750-7227" />
    <property name="title" value="Capital Markets Law Journal Volume 3" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1011,6 +1329,8 @@
   <property name="CapitalMarketsLawJournal4">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Capital Markets Law Journal" />
+   <property name="issn" value="1750-7219" />
+   <property name="eissn" value="1750-7227" />
    <property name="title" value="Capital Markets Law Journal Volume 4" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1027,6 +1347,8 @@
   <property name="Carcinogenesis29">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Carcinogenesis" />
+   <property name="issn" value="0143-3334" />
+   <property name="eissn" value="1460-2180" />
    <property name="title" value="Carcinogenesis Volume 29" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1043,6 +1365,8 @@
   <property name="Carcinogenesis30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Carcinogenesis" />
+   <property name="issn" value="0143-3334" />
+   <property name="eissn" value="1460-2180" />
    <property name="title" value="Carcinogenesis Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1187,6 +1511,8 @@
   <property name="CerebralCortex18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Cerebral Cortex" />
+   <property name="issn" value="1047-3211" />
+   <property name="eissn" value="1460-2199" />
    <property name="title" value="Cerebral Cortex Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1203,6 +1529,8 @@
   <property name="CerebralCortex19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Cerebral Cortex" />
+   <property name="issn" value="1047-3211" />
+   <property name="eissn" value="1460-2199" />
    <property name="title" value="Cerebral Cortex Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1219,6 +1547,8 @@
   <property name="CESifoEconomicStudies54">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="CESifo Economic Studies" />
+   <property name="issn" value="1610-241X" />
+   <property name="eissn" value="1612-7501" />
    <property name="title" value="CESifo Economic Studies Volume 54" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1235,6 +1565,8 @@
   <property name="CESifoEconomicStudies55">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="CESifo Economic Studies" />
+   <property name="issn" value="1610-241X" />
+   <property name="eissn" value="1612-7501" />
    <property name="title" value="CESifo Economic Studies Volume 55" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1251,6 +1583,8 @@
   <property name="ChemicalSenses33">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Chemical Senses" />
+   <property name="issn" value="0379-864X" />
+   <property name="eissn" value="1464-3553" />
    <property name="title" value="Chemical Senses Volume 33" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1267,6 +1601,8 @@
   <property name="ChemicalSenses34">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Chemical Senses" />
+   <property name="issn" value="0379-864X" />
+   <property name="eissn" value="1464-3553" />
    <property name="title" value="Chemical Senses Volume 34" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1283,6 +1619,8 @@
   <property name="ChineseJournalofInternationalLaw7">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Chinese Journal of International Law" />
+   <property name="issn" value="1540-1650" />
+   <property name="eissn" value="1746-9937" />
    <property name="title" value="Chinese Journal of International Law Volume 7" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1299,6 +1637,8 @@
   <property name="ChineseJournalofInternationalLaw8">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Chinese Journal of International Law" />
+   <property name="issn" value="1540-1650" />
+   <property name="eissn" value="1746-9937" />
    <property name="title" value="Chinese Journal of International Law Volume 8" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1315,6 +1655,8 @@
   <property name="TheChineseJournalofInternationalPolitics2">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Chinese Journal of International Politics" />
+   <property name="issn" value="1750-8916" />
+   <property name="eissn" value="1750-8924" />
    <property name="title" value="The Chinese Journal of International Politics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1363,6 +1705,8 @@
   <property name="CommunityDevelopmentJournal43">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Community Development Journal" />
+   <property name="issn" value="0010-3802" />
+   <property name="eissn" value="1468-2656" />
    <property name="title" value="Community Development Journal Volume 43" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1379,6 +1723,8 @@
   <property name="CommunityDevelopmentJournal44">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Community Development Journal" />
+   <property name="issn" value="0010-3802" />
+   <property name="eissn" value="1468-2656" />
    <property name="title" value="Community Development Journal Volume 44" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1395,6 +1741,8 @@
   <property name="TheComputerJournal51">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Computer Journal" />
+   <property name="issn" value="0010-4620" />
+   <property name="eissn" value="1460-2067" />
    <property name="title" value="The Computer Journal Volume 51" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1411,6 +1759,8 @@
   <property name="TheComputerJournal52">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Computer Journal" />
+   <property name="issn" value="0010-4620" />
+   <property name="eissn" value="1460-2067" />
    <property name="title" value="The Computer Journal Volume 52" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1491,6 +1841,8 @@
   <property name="ContributionstoPoliticalEconomy27">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Contributions to Political Economy" />
+   <property name="issn" value="0277-5921" />
+   <property name="eissn" value="1464-3588" />
    <property name="title" value="Contributions to Political Economy Volume 27" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1507,6 +1859,8 @@
   <property name="ContributionstoPoliticalEconomy28">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Contributions to Political Economy" />
+   <property name="issn" value="0277-5921" />
+   <property name="eissn" value="1464-3588" />
    <property name="title" value="Contributions to Political Economy Volume 28" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1523,6 +1877,7 @@
   <property name="DNAResearch15">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="DNA Research" />
+   <property name="issn" value="1340-2838" />
    <property name="title" value="DNA Research Volume 15" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1539,6 +1894,7 @@
   <property name="DNAResearch16">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="DNA Research" />
+   <property name="issn" value="1340-2838" />
    <property name="title" value="DNA Research Volume 16" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1555,6 +1911,8 @@
   <property name="EarlyMusic36">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Early Music" />
+   <property name="issn" value="0306-1078" />
+   <property name="eissn" value="1741-7260" />
    <property name="title" value="Early Music Volume 36" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1571,6 +1929,8 @@
   <property name="EarlyMusic37">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Early Music" />
+   <property name="issn" value="0306-1078" />
+   <property name="eissn" value="1741-7260" />
    <property name="title" value="Early Music Volume 37" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1587,6 +1947,8 @@
   <property name="ELTJournal62">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="ELT Journal" />
+   <property name="issn" value="0951-0893" />
+   <property name="eissn" value="1477-4526" />
    <property name="title" value="ELT Journal Volume 62" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1603,6 +1965,8 @@
   <property name="ELTJournal63">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="ELT Journal" />
+   <property name="issn" value="0951-0893" />
+   <property name="eissn" value="1477-4526" />
    <property name="title" value="ELT Journal Volume 63" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1683,6 +2047,8 @@
   <property name="EpidemiologicReviews30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Epidemiologic Reviews" />
+   <property name="issn" value="0193-936X" />
+   <property name="eissn" value="1478-6729" />
    <property name="title" value="Epidemiologic Reviews Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1699,6 +2065,8 @@
   <property name="ESHREMonographs2008">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="ESHRE Monographs" />
+   <property name="issn" value="1477-741X" />
+   <property name="eissn" value="1477-8378" />
    <property name="title" value="ESHRE Monographs Volume 2008" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1715,6 +2083,8 @@
   <property name="EssaysinCriticism58">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Essays in Criticism" />
+   <property name="issn" value="0014-0856" />
+   <property name="eissn" value="1471-6852" />
    <property name="title" value="Essays in Criticism Volume 58" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1731,6 +2101,8 @@
   <property name="EssaysinCriticism59">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Essays in Criticism" />
+   <property name="issn" value="0014-0856" />
+   <property name="eissn" value="1471-6852" />
    <property name="title" value="Essays in Criticism Volume 59" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1747,6 +2119,8 @@
   <property name="EuropeanHeartJournal29">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Heart Journal" />
+   <property name="issn" value="0195-668X" />
+   <property name="eissn" value="1522-9645" />
    <property name="title" value="European Heart Journal Volume 29" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1763,6 +2137,8 @@
   <property name="EuropeanHeartJournal30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Heart Journal" />
+   <property name="issn" value="0195-668X" />
+   <property name="eissn" value="1522-9645" />
    <property name="title" value="European Heart Journal Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1815,6 +2191,8 @@
   <property name="EuropeanJournalofInternationalLaw19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Journal of International Law" />
+   <property name="issn" value="0938-5428" />
+   <property name="eissn" value="1464-3596" />
    <property name="title" value="European Journal of International Law Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1831,6 +2209,8 @@
   <property name="EuropeanJournalofInternationalLaw20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Journal of International Law" />
+   <property name="issn" value="0938-5428" />
+   <property name="eissn" value="1464-3596" />
    <property name="title" value="European Journal of International Law Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1879,6 +2259,8 @@
   <property name="TheEuropeanJournalofOrthodontics30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The European Journal of Orthodontics" />
+   <property name="issn" value="0141-5387" />
+   <property name="eissn" value="1460-2210" />
    <property name="title" value="The European Journal of Orthodontics Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1895,6 +2277,8 @@
   <property name="TheEuropeanJournalofOrthodontics31">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The European Journal of Orthodontics" />
+   <property name="issn" value="0141-5387" />
+   <property name="eissn" value="1460-2210" />
    <property name="title" value="The European Journal of Orthodontics Volume 31" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1911,6 +2295,8 @@
   <property name="TheEuropeanJournalofPublicHealth18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The European Journal of Public Health" />
+   <property name="issn" value="1101-1262" />
+   <property name="eissn" value="1464-360X" />
    <property name="title" value="The European Journal of Public Health Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1927,6 +2313,8 @@
   <property name="TheEuropeanJournalofPublicHealth19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The European Journal of Public Health" />
+   <property name="issn" value="1101-1262" />
+   <property name="eissn" value="1464-360X" />
    <property name="title" value="The European Journal of Public Health Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1947,6 +2335,8 @@
   <property name="EuropeanReviewofAgriculturalEconomics35">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Review of Agricultural Economics" />
+   <property name="issn" value="0165-1587" />
+   <property name="eissn" value="1464-3618" />
    <property name="title" value="European Review of Agricultural Economics Volume 35" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1963,6 +2353,8 @@
   <property name="EuropeanReviewofAgriculturalEconomics36">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Review of Agricultural Economics" />
+   <property name="issn" value="0165-1587" />
+   <property name="eissn" value="1464-3618" />
    <property name="title" value="European Review of Agricultural Economics Volume 36" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1979,6 +2371,8 @@
   <property name="EuropeanSociologicalReview24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Sociological Review" />
+   <property name="issn" value="0266-7215" />
+   <property name="eissn" value="1468-2672" />
    <property name="title" value="European Sociological Review Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -1995,6 +2389,8 @@
   <property name="EuropeanSociologicalReview25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="European Sociological Review" />
+   <property name="issn" value="0266-7215" />
+   <property name="eissn" value="1468-2672" />
    <property name="title" value="European Sociological Review Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2011,6 +2407,8 @@
   <property name="EvidencebasedComplementaryandAlternativeMedicine5">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Evidence-based Complementary and Alternative Medicine" />
+   <property name="issn" value="1741-427X" />
+   <property name="eissn" value="1741-4288" />
    <property name="title" value="Evidence-based Complementary and Alternative Medicine Volume 5" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2027,6 +2425,8 @@
   <property name="EvidencebasedComplementaryandAlternativeMedicine6">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Evidence-based Complementary and Alternative Medicine" />
+   <property name="issn" value="1741-427X" />
+   <property name="eissn" value="1741-4288" />
    <property name="title" value="Evidence-based Complementary and Alternative Medicine Volume 6" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2043,6 +2443,8 @@
   <property name="FamilyPractice25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Family Practice" />
+   <property name="issn" value="0263-2136" />
+   <property name="eissn" value="1460-2229" />
    <property name="title" value="Family Practice Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2059,6 +2461,8 @@
   <property name="FamilyPractice26">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Family Practice" />
+   <property name="issn" value="0263-2136" />
+   <property name="eissn" value="1460-2229" />
    <property name="title" value="Family Practice Volume 26" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2111,6 +2515,8 @@
   <property name="ForumforModernLanguageStudies44">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Forum for Modern Language Studies" />
+   <property name="issn" value="0015-8518" />
+   <property name="eissn" value="1471-6860" />
    <property name="title" value="Forum for Modern Language Studies Volume 44" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2127,6 +2533,8 @@
   <property name="ForumforModernLanguageStudies45">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Forum for Modern Language Studies" />
+   <property name="issn" value="0015-8518" />
+   <property name="eissn" value="1471-6860" />
    <property name="title" value="Forum for Modern Language Studies Volume 45" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2143,6 +2551,8 @@
   <property name="FrenchHistory22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="French History" />
+   <property name="issn" value="0269-1191" />
+   <property name="eissn" value="1477-4542" />
    <property name="title" value="French History Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2159,6 +2569,8 @@
   <property name="FrenchHistory23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="French History" />
+   <property name="issn" value="0269-1191" />
+   <property name="eissn" value="1477-4542" />
    <property name="title" value="French History Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2175,6 +2587,8 @@
   <property name="FrenchStudies62">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="French Studies" />
+   <property name="issn" value="0016-1128" />
+   <property name="eissn" value="1468-2931" />
    <property name="title" value="French Studies Volume 62" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2191,6 +2605,8 @@
   <property name="FrenchStudies63">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="French Studies" />
+   <property name="issn" value="0016-1128" />
+   <property name="eissn" value="1468-2931" />
    <property name="title" value="French Studies Volume 63" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2207,6 +2623,8 @@
   <property name="GermanHistory26">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="German History" />
+   <property name="issn" value="0266-3554" />
+   <property name="eissn" value="1477-089X" />
    <property name="title" value="German History Volume 26" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2223,6 +2641,8 @@
   <property name="GermanHistory27">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="German History" />
+   <property name="issn" value="0266-3554" />
+   <property name="eissn" value="1477-089X" />
    <property name="title" value="German History Volume 27" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2255,6 +2675,8 @@
   <property name="Glycobiology18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Glycobiology" />
+   <property name="issn" value="0959-6658" />
+   <property name="eissn" value="1460-2423" />
    <property name="title" value="Glycobiology Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2271,6 +2693,8 @@
   <property name="Glycobiology19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Glycobiology" />
+   <property name="issn" value="0959-6658" />
+   <property name="eissn" value="1460-2423" />
    <property name="title" value="Glycobiology Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2287,6 +2711,8 @@
   <property name="HealthEducationResearch23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Health Education Research" />
+   <property name="issn" value="0268-1153" />
+   <property name="eissn" value="1465-3648" />
    <property name="title" value="Health Education Research Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2303,6 +2729,8 @@
   <property name="HealthEducationResearch24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Health Education Research" />
+   <property name="issn" value="0268-1153" />
+   <property name="eissn" value="1465-3648" />
    <property name="title" value="Health Education Research Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2319,6 +2747,8 @@
   <property name="HealthPolicyandPlanning23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Health Policy and Planning" />
+   <property name="issn" value="0268-1080" />
+   <property name="eissn" value="1460-2237" />
    <property name="title" value="Health Policy and Planning Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2335,6 +2765,8 @@
   <property name="HealthPolicyandPlanning24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Health Policy and Planning" />
+   <property name="issn" value="0268-1080" />
+   <property name="eissn" value="1460-2237" />
    <property name="title" value="Health Policy and Planning Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2351,6 +2783,8 @@
   <property name="HealthPromotionInternational23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Health Promotion International" />
+   <property name="issn" value="0957-4824" />
+   <property name="eissn" value="1460-2245" />
    <property name="title" value="Health Promotion International Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2367,6 +2801,8 @@
   <property name="HealthPromotionInternational24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Health Promotion International" />
+   <property name="issn" value="0957-4824" />
+   <property name="eissn" value="1460-2245" />
    <property name="title" value="Health Promotion International Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2383,6 +2819,8 @@
   <property name="HistoryWorkshopJournal65">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="History Workshop Journal" />
+   <property name="issn" value="1363-3554" />
+   <property name="eissn" value="1477-4569" />
    <property name="title" value="History Workshop Journal Volume 65" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2399,6 +2837,8 @@
   <property name="HistoryWorkshopJournal66">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="History Workshop Journal" />
+   <property name="issn" value="1363-3554" />
+   <property name="eissn" value="1477-4569" />
    <property name="title" value="History Workshop Journal Volume 66" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2415,6 +2855,8 @@
   <property name="HistoryWorkshopJournal67">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="History Workshop Journal" />
+   <property name="issn" value="1363-3554" />
+   <property name="eissn" value="1477-4569" />
    <property name="title" value="History Workshop Journal Volume 67" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2431,6 +2873,8 @@
   <property name="HistoryWorkshopJournal68">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="History Workshop Journal" />
+   <property name="issn" value="1363-3554" />
+   <property name="eissn" value="1477-4569" />
    <property name="title" value="History Workshop Journal Volume 68" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2447,6 +2891,8 @@
   <property name="HolocaustandGenocideStudies22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Holocaust and Genocide Studies" />
+   <property name="issn" value="8756-6583" />
+   <property name="eissn" value="1476-7937" />
    <property name="title" value="Holocaust and Genocide Studies Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2463,6 +2909,8 @@
   <property name="HolocaustandGenocideStudies23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Holocaust and Genocide Studies" />
+   <property name="issn" value="8756-6583" />
+   <property name="eissn" value="1476-7937" />
    <property name="title" value="Holocaust and Genocide Studies Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2479,6 +2927,8 @@
   <property name="HumanMolecularGenetics17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Molecular Genetics" />
+   <property name="issn" value="0964-6906" />
+   <property name="eissn" value="1460-2083" />
    <property name="title" value="Human Molecular Genetics Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2495,6 +2945,8 @@
   <property name="HumanMolecularGenetics18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Molecular Genetics" />
+   <property name="issn" value="0964-6906" />
+   <property name="eissn" value="1460-2083" />
    <property name="title" value="Human Molecular Genetics Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2511,6 +2963,8 @@
   <property name="HumanReproduction23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Reproduction" />
+   <property name="issn" value="0268-1161" />
+   <property name="eissn" value="1460-2350" />
    <property name="title" value="Human Reproduction Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2527,6 +2981,8 @@
   <property name="HumanReproduction24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Reproduction" />
+   <property name="issn" value="0268-1161" />
+   <property name="eissn" value="1460-2350" />
    <property name="title" value="Human Reproduction Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2543,6 +2999,8 @@
   <property name="HumanReproductionUpdate14">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Reproduction Update" />
+   <property name="issn" value="1355-4786" />
+   <property name="eissn" value="1460-2369" />
    <property name="title" value="Human Reproduction Update Volume 14" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2559,6 +3017,8 @@
   <property name="HumanReproductionUpdate15">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Reproduction Update" />
+   <property name="issn" value="1355-4786" />
+   <property name="eissn" value="1460-2369" />
    <property name="title" value="Human Reproduction Update Volume 15" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2575,6 +3035,8 @@
   <property name="HumanRightsLawReview8">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Rights Law Review" />
+   <property name="issn" value="1461-7781" />
+   <property name="eissn" value="1744-1021" />
    <property name="title" value="Human Rights Law Review Volume 8" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2591,6 +3053,8 @@
   <property name="HumanRightsLawReview9">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Human Rights Law Review" />
+   <property name="issn" value="1461-7781" />
+   <property name="eissn" value="1744-1021" />
    <property name="title" value="Human Rights Law Review Volume 9" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2719,6 +3183,8 @@
   <property name="IMAJournalofAppliedMathematics73">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Applied Mathematics" />
+   <property name="issn" value="0272-4960" />
+   <property name="eissn" value="1464-3634" />
    <property name="title" value="IMA Journal of Applied Mathematics Volume 73" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2735,6 +3201,8 @@
   <property name="IMAJournalofAppliedMathematics74">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Applied Mathematics" />
+   <property name="issn" value="0272-4960" />
+   <property name="eissn" value="1464-3634" />
    <property name="title" value="IMA Journal of Applied Mathematics Volume 74" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2751,6 +3219,8 @@
   <property name="IMAJournalofManagementMathematics19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Management Mathematics" />
+   <property name="issn" value="1471-678X" />
+   <property name="eissn" value="1471-6798" />
    <property name="title" value="IMA Journal of Management Mathematics Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2767,6 +3237,8 @@
   <property name="IMAJournalofManagementMathematics20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Management Mathematics" />
+   <property name="issn" value="1471-678X" />
+   <property name="eissn" value="1471-6798" />
    <property name="title" value="IMA Journal of Management Mathematics Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2783,6 +3255,8 @@
   <property name="IMAJournalofMathematicalControlandInformation25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Mathematical Control and Information" />
+   <property name="issn" value="0265-0754" />
+   <property name="eissn" value="1471-6887" />
    <property name="title" value="IMA Journal of Mathematical Control and Information Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2799,6 +3273,8 @@
   <property name="IMAJournalofMathematicalControlandInformation26">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Mathematical Control and Information" />
+   <property name="issn" value="0265-0754" />
+   <property name="eissn" value="1471-6887" />
    <property name="title" value="IMA Journal of Mathematical Control and Information Volume 26" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2815,6 +3291,8 @@
   <property name="IMAJournalofNumericalAnalysis28">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Numerical Analysis" />
+   <property name="issn" value="0272-4979" />
+   <property name="eissn" value="1464-3642" />
    <property name="title" value="IMA Journal of Numerical Analysis Volume 28" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2831,6 +3309,8 @@
   <property name="IMAJournalofNumericalAnalysis29">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="IMA Journal of Numerical Analysis" />
+   <property name="issn" value="0272-4979" />
+   <property name="eissn" value="1464-3642" />
    <property name="title" value="IMA Journal of Numerical Analysis Volume 29" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2847,6 +3327,8 @@
   <property name="IndustrialandCorporateChange17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Industrial and Corporate Change" />
+   <property name="issn" value="0960-6491" />
+   <property name="eissn" value="1464-3650" />
    <property name="title" value="Industrial and Corporate Change Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2863,6 +3345,8 @@
   <property name="IndustrialandCorporateChange18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Industrial and Corporate Change" />
+   <property name="issn" value="0960-6491" />
+   <property name="eissn" value="1464-3650" />
    <property name="title" value="Industrial and Corporate Change Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2879,6 +3363,8 @@
   <property name="IndustrialLawJournal37">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Industrial Law Journal" />
+   <property name="issn" value="0305-9332" />
+   <property name="eissn" value="1464-3669" />
    <property name="title" value="Industrial Law Journal Volume 37" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2895,6 +3381,8 @@
   <property name="IndustrialLawJournal38">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Industrial Law Journal" />
+   <property name="issn" value="0305-9332" />
+   <property name="eissn" value="1464-3669" />
    <property name="title" value="Industrial Law Journal Volume 38" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2943,6 +3431,8 @@
   <property name="IntegrativeandComparativeBiology48">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Integrative and Comparative Biology" />
+   <property name="issn" value="1540-7063" />
+   <property name="eissn" value="1557-7023" />
    <property name="title" value="Integrative and Comparative Biology Volume 48" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -2959,6 +3449,8 @@
   <property name="IntegrativeandComparativeBiology49">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Integrative and Comparative Biology" />
+   <property name="issn" value="1540-7063" />
+   <property name="eissn" value="1557-7023" />
    <property name="title" value="Integrative and Comparative Biology Volume 49" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3007,6 +3499,8 @@
   <property name="InternationalImmunology20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Immunology" />
+   <property name="issn" value="0953-8178" />
+   <property name="eissn" value="1460-2377" />
    <property name="title" value="International Immunology Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3023,6 +3517,8 @@
   <property name="InternationalImmunology21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Immunology" />
+   <property name="issn" value="0953-8178" />
+   <property name="eissn" value="1460-2377" />
    <property name="title" value="International Immunology Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3039,6 +3535,8 @@
   <property name="InternationalJournalofConstitutionalLaw6">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Constitutional Law" />
+   <property name="issn" value="1474-2640" />
+   <property name="eissn" value="1474-2659" />
    <property name="title" value="International Journal of Constitutional Law Volume 6" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3055,6 +3553,8 @@
   <property name="InternationalJournalofConstitutionalLaw7">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Constitutional Law" />
+   <property name="issn" value="1474-2640" />
+   <property name="eissn" value="1474-2659" />
    <property name="title" value="International Journal of Constitutional Law Volume 7" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3071,6 +3571,8 @@
   <property name="InternationalJournalofEpidemiology37">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Epidemiology" />
+   <property name="issn" value="0300-5771" />
+   <property name="eissn" value="1464-3685" />
    <property name="title" value="International Journal of Epidemiology Volume 37" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3087,6 +3589,8 @@
   <property name="InternationalJournalofEpidemiology38">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Epidemiology" />
+   <property name="issn" value="0300-5771" />
+   <property name="eissn" value="1464-3685" />
    <property name="title" value="International Journal of Epidemiology Volume 38" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3103,6 +3607,8 @@
   <property name="InternationalJournalofLawandInformationTechnology16">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Law and Information Technology" />
+   <property name="issn" value="0967-0769" />
+   <property name="eissn" value="1464-3693" />
    <property name="title" value="International Journal of Law and Information Technology Volume 16" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3119,6 +3625,8 @@
   <property name="InternationalJournalofLawandInformationTechnology17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Law and Information Technology" />
+   <property name="issn" value="0967-0769" />
+   <property name="eissn" value="1464-3693" />
    <property name="title" value="International Journal of Law and Information Technology Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3135,6 +3643,8 @@
   <property name="InternationalJournalofLawPolicyandtheFamily22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Law, Policy and the Family" />
+   <property name="issn" value="1360-9939" />
+   <property name="eissn" value="1464-3707" />
    <property name="title" value="International Journal of Law, Policy and the Family Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3151,6 +3661,8 @@
   <property name="InternationalJournalofLawPolicyandtheFamily23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Law, Policy and the Family" />
+   <property name="issn" value="1360-9939" />
+   <property name="eissn" value="1464-3707" />
    <property name="title" value="International Journal of Law, Policy and the Family Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3167,6 +3679,8 @@
   <property name="InternationalJournalofLexicography21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Lexicography" />
+   <property name="issn" value="0950-3846" />
+   <property name="eissn" value="1477-4577" />
    <property name="title" value="International Journal of Lexicography Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3183,6 +3697,8 @@
   <property name="InternationalJournalofLexicography22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Lexicography" />
+   <property name="issn" value="0950-3846" />
+   <property name="eissn" value="1477-4577" />
    <property name="title" value="International Journal of Lexicography Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3231,6 +3747,8 @@
   <property name="InternationalJournalofPublicOpinionResearch20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Public Opinion Research" />
+   <property name="issn" value="0954-2892" />
+   <property name="eissn" value="1471-6909" />
    <property name="title" value="International Journal of Public Opinion Research Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3247,6 +3765,8 @@
   <property name="InternationalJournalofPublicOpinionResearch21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Public Opinion Research" />
+   <property name="issn" value="0954-2892" />
+   <property name="eissn" value="1471-6909" />
    <property name="title" value="International Journal of Public Opinion Research Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3263,6 +3783,8 @@
   <property name="InternationalJournalforQualityinHealthCare20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal for Quality in Health Care" />
+   <property name="issn" value="1353-4505" />
+   <property name="eissn" value="1464-3677" />
    <property name="title" value="International Journal for Quality in Health Care Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3279,6 +3801,8 @@
   <property name="InternationalJournalforQualityinHealthCare21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal for Quality in Health Care" />
+   <property name="issn" value="1353-4505" />
+   <property name="eissn" value="1464-3677" />
    <property name="title" value="International Journal for Quality in Health Care Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3295,6 +3819,8 @@
   <property name="InternationalJournalofRefugeeLaw20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Refugee Law" />
+   <property name="issn" value="0953-8186" />
+   <property name="eissn" value="1464-3715" />
    <property name="title" value="International Journal of Refugee Law Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3311,6 +3837,8 @@
   <property name="InternationalJournalofRefugeeLaw21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Refugee Law" />
+   <property name="issn" value="0953-8186" />
+   <property name="eissn" value="1464-3715" />
    <property name="title" value="International Journal of Refugee Law Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3327,6 +3855,8 @@
   <property name="InternationalJournalofTransitionalJustice2">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Transitional Justice" />
+   <property name="issn" value="1752-7716" />
+   <property name="eissn" value="1752-7724" />
    <property name="title" value="International Journal of Transitional Justice Volume 2" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3343,6 +3873,8 @@
   <property name="InternationalJournalofTransitionalJustice3">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Journal of Transitional Justice" />
+   <property name="issn" value="1752-7716" />
+   <property name="eissn" value="1752-7724" />
    <property name="title" value="International Journal of Transitional Justice Volume 3" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3375,6 +3907,8 @@
   <property name="InternationalRelationsoftheAsiaPacific8">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Relations of the Asia-Pacific" />
+   <property name="issn" value="1470-482X" />
+   <property name="eissn" value="1470-4838" />
    <property name="title" value="International Relations of the Asia-Pacific Volume 8" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3391,6 +3925,8 @@
   <property name="InternationalRelationsoftheAsiaPacific9">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="International Relations of the Asia-Pacific" />
+   <property name="issn" value="1470-482X" />
+   <property name="eissn" value="1470-4838" />
    <property name="title" value="International Relations of the Asia-Pacific Volume 9" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3407,6 +3943,8 @@
   <property name="ITNOW50">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="ITNOW" />
+   <property name="issn" value="1746-5702" />
+   <property name="eissn" value="1746-5710" />
    <property name="title" value="ITNOW Volume 50" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3423,6 +3961,8 @@
   <property name="ITNOW51">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="ITNOW" />
+   <property name="issn" value="1746-5702" />
+   <property name="eissn" value="1746-5710" />
    <property name="title" value="ITNOW Volume 51" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3439,6 +3979,8 @@
   <property name="JapaneseJournalofClinicalOncology38">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Japanese Journal of Clinical Oncology" />
+   <property name="issn" value="0368-2811" />
+   <property name="eissn" value="1465-3621" />
    <property name="title" value="Japanese Journal of Clinical Oncology Volume 38" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3455,6 +3997,8 @@
   <property name="JapaneseJournalofClinicalOncology39">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Japanese Journal of Clinical Oncology" />
+   <property name="issn" value="0368-2811" />
+   <property name="eissn" value="1465-3621" />
    <property name="title" value="Japanese Journal of Clinical Oncology Volume 39" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3471,6 +4015,8 @@
   <property name="JournalofAfricanEconomies17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of African Economies" />
+   <property name="issn" value="0963-8024" />
+   <property name="eissn" value="1464-3723" />
    <property name="title" value="Journal of African Economies Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3487,6 +4033,8 @@
   <property name="JournalofAfricanEconomies18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of African Economies" />
+   <property name="issn" value="0963-8024" />
+   <property name="eissn" value="1464-3723" />
    <property name="title" value="Journal of African Economies Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3503,6 +4051,8 @@
   <property name="JournaloftheAmericanAcademyofReligion76">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the American Academy of Religion" />
+   <property name="issn" value="0002-7189" />
+   <property name="eissn" value="1477-4585" />
    <property name="title" value="Journal of the American Academy of Religion Volume 76" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3519,6 +4069,8 @@
   <property name="JournaloftheAmericanAcademyofReligion77">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the American Academy of Religion" />
+   <property name="issn" value="0002-7189" />
+   <property name="eissn" value="1477-4585" />
    <property name="title" value="Journal of the American Academy of Religion Volume 77" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3535,6 +4087,8 @@
   <property name="JournalofAntimicrobialChemotherapy61">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Antimicrobial Chemotherapy" />
+   <property name="issn" value="0305-7453" />
+   <property name="eissn" value="1460-2091" />
    <property name="title" value="Journal of Antimicrobial Chemotherapy Volume 61" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3551,6 +4105,8 @@
   <property name="JournalofAntimicrobialChemotherapy62">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Antimicrobial Chemotherapy" />
+   <property name="issn" value="0305-7453" />
+   <property name="eissn" value="1460-2091" />
    <property name="title" value="Journal of Antimicrobial Chemotherapy Volume 62" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3567,6 +4123,8 @@
   <property name="JournalofAntimicrobialChemotherapy63">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Antimicrobial Chemotherapy" />
+   <property name="issn" value="0305-7453" />
+   <property name="eissn" value="1460-2091" />
    <property name="title" value="Journal of Antimicrobial Chemotherapy Volume 63" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3583,6 +4141,8 @@
   <property name="JournalofAntimicrobialChemotherapy64">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Antimicrobial Chemotherapy" />
+   <property name="issn" value="0305-7453" />
+   <property name="eissn" value="1460-2091" />
    <property name="title" value="Journal of Antimicrobial Chemotherapy Volume 64" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3599,6 +4159,7 @@
   <property name="TheJournalofBiochemistry143">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Biochemistry" />
+   <property name="issn" value="0021-924X" />
    <property name="title" value="The Journal of Biochemistry Volume 143" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3615,6 +4176,7 @@
   <property name="TheJournalofBiochemistry144">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Biochemistry" />
+   <property name="issn" value="0021-924X" />
    <property name="title" value="The Journal of Biochemistry Volume 144" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3631,6 +4193,7 @@
   <property name="TheJournalofBiochemistry145">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Biochemistry" />
+   <property name="issn" value="0021-924X" />
    <property name="title" value="The Journal of Biochemistry Volume 145" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3647,6 +4210,7 @@
   <property name="TheJournalofBiochemistry146">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Biochemistry" />
+   <property name="issn" value="0021-924X" />
    <property name="title" value="The Journal of Biochemistry Volume 146" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3711,6 +4275,8 @@
   <property name="JournalofConflictandSecurityLaw13">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Conflict and Security Law" />
+   <property name="issn" value="1467-7954" />
+   <property name="eissn" value="1467-7962" />
    <property name="title" value="Journal of Conflict and Security Law Volume 13" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3727,6 +4293,8 @@
   <property name="JournalofConflictandSecurityLaw14">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Conflict and Security Law" />
+   <property name="issn" value="1467-7954" />
+   <property name="eissn" value="1467-7962" />
    <property name="title" value="Journal of Conflict and Security Law Volume 14" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3743,6 +4311,8 @@
   <property name="TheJournalofDeafStudiesandDeafEducation13">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Deaf Studies and Deaf Education" />
+   <property name="issn" value="1081-4159" />
+   <property name="eissn" value="1465-7325" />
    <property name="title" value="The Journal of Deaf Studies and Deaf Education Volume 13" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3759,6 +4329,8 @@
   <property name="TheJournalofDeafStudiesandDeafEducation14">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Deaf Studies and Deaf Education" />
+   <property name="issn" value="1081-4159" />
+   <property name="eissn" value="1465-7325" />
    <property name="title" value="The Journal of Deaf Studies and Deaf Education Volume 14" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3775,6 +4347,8 @@
   <property name="JournalofDesignHistory21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Design History" />
+   <property name="issn" value="0952-4649" />
+   <property name="eissn" value="1741-7279" />
    <property name="title" value="Journal of Design History Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3791,6 +4365,8 @@
   <property name="JournalofDesignHistory22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Design History" />
+   <property name="issn" value="0952-4649" />
+   <property name="eissn" value="1741-7279" />
    <property name="title" value="Journal of Design History Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3807,6 +4383,8 @@
   <property name="JournalofEconomicGeography8">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Economic Geography" />
+   <property name="issn" value="1468-2702" />
+   <property name="eissn" value="1468-2710" />
    <property name="title" value="Journal of Economic Geography Volume 8" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3823,6 +4401,8 @@
   <property name="JournalofEconomicGeography9">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Economic Geography" />
+   <property name="issn" value="1468-2702" />
+   <property name="eissn" value="1468-2710" />
    <property name="title" value="Journal of Economic Geography Volume 9" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3839,6 +4419,8 @@
   <property name="JournalofElectronMicroscopy57">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Electron Microscopy" />
+   <property name="issn" value="0022-0744" />
+   <property name="eissn" value="1477-9986" />
    <property name="title" value="Journal of Electron Microscopy Volume 57" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3855,6 +4437,8 @@
   <property name="JournalofElectronMicroscopy58">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Electron Microscopy" />
+   <property name="issn" value="0022-0744" />
+   <property name="eissn" value="1477-9986" />
    <property name="title" value="Journal of Electron Microscopy Volume 58" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3871,6 +4455,8 @@
   <property name="JournalofEnvironmentalLaw20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Environmental Law" />
+   <property name="issn" value="0952-8873" />
+   <property name="eissn" value="1464-374X" />
    <property name="title" value="Journal of Environmental Law Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3887,6 +4473,8 @@
   <property name="JournalofEnvironmentalLaw21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Environmental Law" />
+   <property name="issn" value="0952-8873" />
+   <property name="eissn" value="1464-374X" />
    <property name="title" value="Journal of Environmental Law Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3903,6 +4491,8 @@
   <property name="JournalofExperimentalBotany59">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Experimental Botany" />
+   <property name="issn" value="0022-0957" />
+   <property name="eissn" value="1460-2431" />
    <property name="title" value="Journal of Experimental Botany Volume 59" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3919,6 +4509,8 @@
   <property name="JournalofExperimentalBotany60">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Experimental Botany" />
+   <property name="issn" value="0022-0957" />
+   <property name="eissn" value="1460-2431" />
    <property name="title" value="Journal of Experimental Botany Volume 60" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3935,6 +4527,8 @@
   <property name="JournalofFinancialEconometrics6">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Financial Econometrics" />
+   <property name="issn" value="1479-8409" />
+   <property name="eissn" value="1479-8417" />
    <property name="title" value="Journal of Financial Econometrics Volume 6" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3951,6 +4545,8 @@
   <property name="JournalofFinancialEconometrics7">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Financial Econometrics" />
+   <property name="issn" value="1479-8409" />
+   <property name="eissn" value="1479-8417" />
    <property name="title" value="Journal of Financial Econometrics Volume 7" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -3999,6 +4595,8 @@
   <property name="JournalofHeredity99">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Heredity" />
+   <property name="issn" value="0022-1503" />
+   <property name="eissn" value="1465-7333" />
    <property name="title" value="Journal of Heredity Volume 99" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4015,6 +4613,8 @@
   <property name="JournalofHeredity100">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Heredity" />
+   <property name="issn" value="0022-1503" />
+   <property name="eissn" value="1465-7333" />
    <property name="title" value="Journal of Heredity Volume 100" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4047,6 +4647,8 @@
   <property name="JournaloftheHistoryofCollections20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the History of Collections" />
+   <property name="issn" value="0954-6650" />
+   <property name="eissn" value="1477-8564" />
    <property name="title" value="Journal of the History of Collections Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4063,6 +4665,8 @@
   <property name="JournaloftheHistoryofCollections21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the History of Collections" />
+   <property name="issn" value="0954-6650" />
+   <property name="eissn" value="1477-8564" />
    <property name="title" value="Journal of the History of Collections Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4079,6 +4683,8 @@
   <property name="JournaloftheHistoryofMedicineandAlliedSciences63">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the History of Medicine and Allied Sciences" />
+   <property name="issn" value="0022-5045" />
+   <property name="eissn" value="1468-4373" />
    <property name="title" value="Journal of the History of Medicine and Allied Sciences Volume 63" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4095,6 +4701,8 @@
   <property name="JournaloftheHistoryofMedicineandAlliedSciences64">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the History of Medicine and Allied Sciences" />
+   <property name="issn" value="0022-5045" />
+   <property name="eissn" value="1468-4373" />
    <property name="title" value="Journal of the History of Medicine and Allied Sciences Volume 64" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4111,6 +4719,8 @@
   <property name="JournalofHumanRightsPractice1">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Human Rights Practice" />
+   <property name="issn" value="1757-9619" />
+   <property name="eissn" value="1757-9627" />
    <property name="title" value="Journal of Human Rights Practice Volume 1" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4127,6 +4737,8 @@
   <property name="JournalofIntellectualPropertyLawPractice3">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Intellectual Property Law &amp; Practice" />
+   <property name="issn" value="1747-1532" />
+   <property name="eissn" value="1747-1540" />
    <property name="title" value="Journal of Intellectual Property Law &amp; Practice Volume 3" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4143,6 +4755,8 @@
   <property name="JournalofIntellectualPropertyLawPractice4">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Intellectual Property Law &amp; Practice" />
+   <property name="issn" value="1747-1532" />
+   <property name="eissn" value="1747-1540" />
    <property name="title" value="Journal of Intellectual Property Law &amp; Practice Volume 4" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4159,6 +4773,8 @@
   <property name="JournalofInternationalCriminalJustice6">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of International Criminal Justice" />
+   <property name="issn" value="1478-1387" />
+   <property name="eissn" value="1478-1395" />
    <property name="title" value="Journal of International Criminal Justice Volume 6" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4175,6 +4791,8 @@
   <property name="JournalofInternationalCriminalJustice7">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of International Criminal Justice" />
+   <property name="issn" value="1478-1387" />
+   <property name="eissn" value="1478-1395" />
    <property name="title" value="Journal of International Criminal Justice Volume 7" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4191,6 +4809,8 @@
   <property name="JournalofInternationalEconomicLaw11">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of International Economic Law" />
+   <property name="issn" value="1369-3034" />
+   <property name="eissn" value="1464-3758" />
    <property name="title" value="Journal of International Economic Law Volume 11" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4207,6 +4827,8 @@
   <property name="JournalofInternationalEconomicLaw12">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of International Economic Law" />
+   <property name="issn" value="1369-3034" />
+   <property name="eissn" value="1464-3758" />
    <property name="title" value="Journal of International Economic Law Volume 12" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4223,6 +4845,8 @@
   <property name="JournalofIslamicStudies19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Islamic Studies" />
+   <property name="issn" value="0955-2340" />
+   <property name="eissn" value="1471-6917" />
    <property name="title" value="Journal of Islamic Studies Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4239,6 +4863,8 @@
   <property name="JournalofIslamicStudies20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Islamic Studies" />
+   <property name="issn" value="0955-2340" />
+   <property name="eissn" value="1471-6917" />
    <property name="title" value="Journal of Islamic Studies Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4255,6 +4881,8 @@
   <property name="TheJournalofLawEconomicsandOrganization24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Law, Economics, and Organization" />
+   <property name="issn" value="8756-6222" />
+   <property name="eissn" value="1465-7341" />
    <property name="title" value="The Journal of Law, Economics, and Organization Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4271,6 +4899,8 @@
   <property name="TheJournalofLawEconomicsandOrganization25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Law, Economics, and Organization" />
+   <property name="issn" value="8756-6222" />
+   <property name="eissn" value="1465-7341" />
    <property name="title" value="The Journal of Law, Economics, and Organization Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4287,6 +4917,8 @@
   <property name="JournalofLogicandComputation18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Logic and Computation" />
+   <property name="issn" value="0955-792X" />
+   <property name="eissn" value="1465-363X" />
    <property name="title" value="Journal of Logic and Computation Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4303,6 +4935,8 @@
   <property name="JournalofLogicandComputation19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Logic and Computation" />
+   <property name="issn" value="0955-792X" />
+   <property name="eissn" value="1465-363X" />
    <property name="title" value="Journal of Logic and Computation Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4319,6 +4953,8 @@
   <property name="JournaloftheLondonMathematicalSociety77">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the London Mathematical Society" />
+   <property name="issn" value="0024-6107" />
+   <property name="eissn" value="1469-7750" />
    <property name="title" value="Journal of the London Mathematical Society Volume 77" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4335,6 +4971,8 @@
   <property name="JournaloftheLondonMathematicalSociety78">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the London Mathematical Society" />
+   <property name="issn" value="0024-6107" />
+   <property name="eissn" value="1469-7750" />
    <property name="title" value="Journal of the London Mathematical Society Volume 78" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4351,6 +4989,8 @@
   <property name="JournaloftheLondonMathematicalSociety79">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the London Mathematical Society" />
+   <property name="issn" value="0024-6107" />
+   <property name="eissn" value="1469-7750" />
    <property name="title" value="Journal of the London Mathematical Society Volume 79" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4367,6 +5007,8 @@
   <property name="JournaloftheLondonMathematicalSociety80">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of the London Mathematical Society" />
+   <property name="issn" value="0024-6107" />
+   <property name="eissn" value="1469-7750" />
    <property name="title" value="Journal of the London Mathematical Society Volume 80" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4415,6 +5057,7 @@
   <property name="JournalofMolecularCellBiology1">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Molecular Cell Biology" />
+   <property name="issn" value="1674-2788" />
    <property name="title" value="Journal of Molecular Cell Biology Volume 1" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4431,6 +5074,8 @@
   <property name="JournalofMolluscanStudies74">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Molluscan Studies" />
+   <property name="issn" value="0260-1230" />
+   <property name="eissn" value="1464-3766" />
    <property name="title" value="Journal of Molluscan Studies Volume 74" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4447,6 +5092,8 @@
   <property name="JournalofMolluscanStudies75">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Molluscan Studies" />
+   <property name="issn" value="0260-1230" />
+   <property name="eissn" value="1464-3766" />
    <property name="title" value="Journal of Molluscan Studies Volume 75" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4559,6 +5206,8 @@
   <property name="JournalofPediatricPsychology33">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Pediatric Psychology" />
+   <property name="issn" value="0146-8693" />
+   <property name="eissn" value="1465-735X" />
    <property name="title" value="Journal of Pediatric Psychology Volume 33" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4575,6 +5224,8 @@
   <property name="JournalofPediatricPsychology34">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Pediatric Psychology" />
+   <property name="issn" value="0146-8693" />
+   <property name="eissn" value="1465-735X" />
    <property name="title" value="Journal of Pediatric Psychology Volume 34" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4591,6 +5242,8 @@
   <property name="JournalofPetrology49">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Petrology" />
+   <property name="issn" value="0022-3530" />
+   <property name="eissn" value="1460-2415" />
    <property name="title" value="Journal of Petrology Volume 49" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4607,6 +5260,8 @@
   <property name="JournalofPetrology50">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Petrology" />
+   <property name="issn" value="0022-3530" />
+   <property name="eissn" value="1460-2415" />
    <property name="title" value="Journal of Petrology Volume 50" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4623,6 +5278,8 @@
   <property name="JournalofPlanktonResearch30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Plankton Research" />
+   <property name="issn" value="0142-7873" />
+   <property name="eissn" value="1464-3774" />
    <property name="title" value="Journal of Plankton Research Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4639,6 +5296,8 @@
   <property name="JournalofPlanktonResearch31">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Plankton Research" />
+   <property name="issn" value="0142-7873" />
+   <property name="eissn" value="1464-3774" />
    <property name="title" value="Journal of Plankton Research Volume 31" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4687,6 +5346,8 @@
   <property name="JournalofPublicAdministrationResearchandTheory18">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Public Administration Research and Theory" />
+   <property name="issn" value="1053-1858" />
+   <property name="eissn" value="1477-9803" />
    <property name="title" value="Journal of Public Administration Research and Theory Volume 18" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4703,6 +5364,8 @@
   <property name="JournalofPublicAdministrationResearchandTheory19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Public Administration Research and Theory" />
+   <property name="issn" value="1053-1858" />
+   <property name="eissn" value="1477-9803" />
    <property name="title" value="Journal of Public Administration Research and Theory Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4719,6 +5382,8 @@
   <property name="JournalofPublicHealth30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Public Health" />
+   <property name="issn" value="1741-3842" />
+   <property name="eissn" value="1741-3850" />
    <property name="title" value="Journal of Public Health Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4735,6 +5400,8 @@
   <property name="JournalofPublicHealth31">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Public Health" />
+   <property name="issn" value="1741-3842" />
+   <property name="eissn" value="1741-3850" />
    <property name="title" value="Journal of Public Health Volume 31" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4751,6 +5418,8 @@
   <property name="JournalofRefugeeStudies21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Refugee Studies" />
+   <property name="issn" value="0951-6328" />
+   <property name="eissn" value="1471-6925" />
    <property name="title" value="Journal of Refugee Studies Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4767,6 +5436,8 @@
   <property name="JournalofRefugeeStudies22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Refugee Studies" />
+   <property name="issn" value="0951-6328" />
+   <property name="eissn" value="1471-6925" />
    <property name="title" value="Journal of Refugee Studies Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4783,6 +5454,8 @@
   <property name="JournalofSemantics25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Semantics" />
+   <property name="issn" value="0167-5133" />
+   <property name="eissn" value="1477-4593" />
    <property name="title" value="Journal of Semantics Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4799,6 +5472,8 @@
   <property name="JournalofSemantics26">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Semantics" />
+   <property name="issn" value="0167-5133" />
+   <property name="eissn" value="1477-4593" />
    <property name="title" value="Journal of Semantics Volume 26" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4815,6 +5490,8 @@
   <property name="JournalofSemiticStudies53">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Semitic Studies" />
+   <property name="issn" value="0167-5133" />
+   <property name="eissn" value="1477-4593" />
    <property name="title" value="Journal of Semitic Studies Volume 53" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4831,6 +5508,8 @@
   <property name="JournalofSemiticStudies54">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Semitic Studies" />
+   <property name="issn" value="0167-5133" />
+   <property name="eissn" value="1477-4593" />
    <property name="title" value="Journal of Semitic Studies Volume 54" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4847,6 +5526,8 @@
   <property name="TheJournalofTheologicalStudies59">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Theological Studies" />
+   <property name="issn" value="0022-5185" />
+   <property name="eissn" value="1477-4607" />
    <property name="title" value="The Journal of Theological Studies Volume 59" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4863,6 +5544,8 @@
   <property name="TheJournalofTheologicalStudies60">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Journal of Theological Studies" />
+   <property name="issn" value="0022-5185" />
+   <property name="eissn" value="1477-4607" />
    <property name="title" value="The Journal of Theological Studies Volume 60" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4879,6 +5562,8 @@
   <property name="JournalofTopology1">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Topology" />
+   <property name="issn" value="1753-8416" />
+   <property name="eissn" value="1753-8424" />
    <property name="title" value="Journal of Topology Volume 1" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4895,6 +5580,8 @@
   <property name="JournalofTopology2">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Topology" />
+   <property name="issn" value="1753-8416" />
+   <property name="eissn" value="1753-8424" />
    <property name="title" value="Journal of Topology Volume 2" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4911,6 +5598,8 @@
   <property name="JournalofTropicalPediatrics54">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Tropical Pediatrics" />
+   <property name="issn" value="0142-6338" />
+   <property name="eissn" value="1465-3664" />
    <property name="title" value="Journal of Tropical Pediatrics Volume 54" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4927,6 +5616,8 @@
   <property name="JournalofTropicalPediatrics55">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Journal of Tropical Pediatrics" />
+   <property name="issn" value="0142-6338" />
+   <property name="eissn" value="1465-3664" />
    <property name="title" value="Journal of Tropical Pediatrics Volume 55" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4943,6 +5634,8 @@
   <property name="LawProbabilityandRisk7">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Law, Probability and Risk" />
+   <property name="issn" value="1470-8396" />
+   <property name="eissn" value="1470-840X" />
    <property name="title" value="Law, Probability and Risk Volume 7" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -4959,6 +5652,8 @@
   <property name="LawProbabilityandRisk8">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Law, Probability and Risk" />
+   <property name="issn" value="1470-8396" />
+   <property name="eissn" value="1470-840X" />
    <property name="title" value="Law, Probability and Risk Volume 8" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5007,6 +5702,8 @@
   <property name="TheLibrary9">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Library" />
+   <property name="issn" value="0024-2160" />
+   <property name="eissn" value="1744-8581" />
    <property name="title" value="The Library Volume 9" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5023,6 +5720,8 @@
   <property name="TheLibrary10">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Library" />
+   <property name="issn" value="0024-2160" />
+   <property name="eissn" value="1744-8581" />
    <property name="title" value="The Library Volume 10" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5039,6 +5738,8 @@
   <property name="LiteraryImagination10">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Literary Imagination" />
+   <property name="issn" value="1523-9012" />
+   <property name="eissn" value="1752-6566" />
    <property name="title" value="Literary Imagination Volume 10" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5055,6 +5756,8 @@
   <property name="LiteraryImagination11">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Literary Imagination" />
+   <property name="issn" value="1523-9012" />
+   <property name="eissn" value="1752-6566" />
    <property name="title" value="Literary Imagination Volume 11" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5071,6 +5774,8 @@
   <property name="LiteraryandLinguisticComputing23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Literary and Linguistic Computing" />
+   <property name="issn" value="0268-1145" />
+   <property name="eissn" value="1477-4615" />
    <property name="title" value="Literary and Linguistic Computing Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5087,6 +5792,8 @@
   <property name="LiteraryandLinguisticComputing24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Literary and Linguistic Computing" />
+   <property name="issn" value="0268-1145" />
+   <property name="eissn" value="1477-4615" />
    <property name="title" value="Literary and Linguistic Computing Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5103,6 +5810,8 @@
   <property name="LiteratureandTheology22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Literature and Theology" />
+   <property name="issn" value="0269-1205" />
+   <property name="eissn" value="1477-4623" />
    <property name="title" value="Literature and Theology Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5119,6 +5828,8 @@
   <property name="LiteratureandTheology23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Literature and Theology" />
+   <property name="issn" value="0269-1205" />
+   <property name="eissn" value="1477-4623" />
    <property name="title" value="Literature and Theology Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5199,6 +5910,8 @@
   <property name="MedicalLawReview16">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Medical Law Review" />
+   <property name="issn" value="0967-0742" />
+   <property name="eissn" value="1464-3790" />
    <property name="title" value="Medical Law Review Volume 16" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5215,6 +5928,8 @@
   <property name="MedicalLawReview17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Medical Law Review" />
+   <property name="issn" value="0967-0742" />
+   <property name="eissn" value="1464-3790" />
    <property name="title" value="Medical Law Review Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5295,6 +6010,8 @@
   <property name="MolecularBiologyandEvolution25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Molecular Biology and Evolution" />
+   <property name="issn" value="0737-4038" />
+   <property name="eissn" value="1537-1719" />
    <property name="title" value="Molecular Biology and Evolution Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5311,6 +6028,8 @@
   <property name="MolecularBiologyandEvolution26">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Molecular Biology and Evolution" />
+   <property name="issn" value="0737-4038" />
+   <property name="eissn" value="1537-1719" />
    <property name="title" value="Molecular Biology and Evolution Volume 26" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5327,6 +6046,8 @@
   <property name="MolecularPlant1">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Molecular Plant" />
+   <property name="issn" value="1674-2052" />
+   <property name="eissn" value="1752-9867" />
    <property name="title" value="Molecular Plant Volume 1" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5343,6 +6064,8 @@
   <property name="MolecularPlant2">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Molecular Plant" />
+   <property name="issn" value="1674-2052" />
+   <property name="eissn" value="1752-9867" />
    <property name="title" value="Molecular Plant Volume 2" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5359,6 +6082,8 @@
   <property name="MusicandLetters89">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Music and Letters" />
+   <property name="issn" value="0027-4224" />
+   <property name="eissn" value="1477-4631" />
    <property name="title" value="Music and Letters Volume 89" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5375,6 +6100,8 @@
   <property name="MusicandLetters90">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Music and Letters" />
+   <property name="issn" value="0027-4224" />
+   <property name="eissn" value="1477-4631" />
    <property name="title" value="Music and Letters Volume 90" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5391,6 +6118,8 @@
   <property name="Mutagenesis23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Mutagenesis" />
+   <property name="issn" value="0267-8357" />
+   <property name="eissn" value="1464-3804" />
    <property name="title" value="Mutagenesis Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5407,6 +6136,8 @@
   <property name="Mutagenesis24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Mutagenesis" />
+   <property name="issn" value="0267-8357" />
+   <property name="eissn" value="1464-3804" />
    <property name="title" value="Mutagenesis Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5423,6 +6154,8 @@
   <property name="NDTPlus1">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="NDT Plus" />
+   <property name="issn" value="0931-0509" />
+   <property name="eissn" value="1460-2385" />
    <property name="title" value="NDT Plus Volume 1" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5439,6 +6172,8 @@
   <property name="NDTPlus2">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="NDT Plus" />
+   <property name="issn" value="0931-0509" />
+   <property name="eissn" value="1460-2385" />
    <property name="title" value="NDT Plus Volume 2" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5455,6 +6190,8 @@
   <property name="NephrologyDialysisTransplantation23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Nephrology Dialysis Transplantation" />
+   <property name="issn" value="0931-0509" />
+   <property name="eissn" value="1460-2385" />
    <property name="title" value="Nephrology Dialysis Transplantation Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5471,6 +6208,8 @@
   <property name="NephrologyDialysisTransplantation24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Nephrology Dialysis Transplantation" />
+   <property name="issn" value="0931-0509" />
+   <property name="eissn" value="1460-2385" />
    <property name="title" value="Nephrology Dialysis Transplantation Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5519,6 +6258,8 @@
   <property name="NotesandQueries55">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Notes and Queries" />
+   <property name="issn" value="0029-3970" />
+   <property name="eissn" value="1471-6941" />
    <property name="title" value="Notes and Queries Volume 55" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5535,6 +6276,8 @@
   <property name="NotesandQueries56">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Notes and Queries" />
+   <property name="issn" value="0029-3970" />
+   <property name="eissn" value="1471-6941" />
    <property name="title" value="Notes and Queries Volume 56" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5551,6 +6294,8 @@
   <property name="NucleicAcidsResearch36">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Nucleic Acids Research" />
+   <property name="issn" value="0305-1048" />
+   <property name="eissn" value="1368-4962" />
    <property name="title" value="Nucleic Acids Research Volume 36" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5567,6 +6312,8 @@
   <property name="NucleicAcidsResearch37">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Nucleic Acids Research" />
+   <property name="issn" value="0305-1048" />
+   <property name="eissn" value="1368-4962" />
    <property name="title" value="Nucleic Acids Research Volume 37" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5583,6 +6330,8 @@
   <property name="NucleicAcidsSymposiumSeries52">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Nucleic Acids Symposium Series" />
+   <property name="issn" value="0261-3166" />
+   <property name="eissn" value="1746-8272" />
    <property name="title" value="Nucleic Acids Symposium Series Volume 52" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5599,6 +6348,8 @@
   <property name="NucleicAcidsSymposiumSeries53">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Nucleic Acids Symposium Series" />
+   <property name="issn" value="0261-3166" />
+   <property name="eissn" value="1746-8272" />
    <property name="title" value="Nucleic Acids Symposium Series Volume 53" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5615,6 +6366,8 @@
   <property name="OccupationalMedicine58">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Occupational Medicine" />
+   <property name="issn" value="0962-7480" />
+   <property name="eissn" value="1471-8405" />
    <property name="title" value="Occupational Medicine Volume 58" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5631,6 +6384,8 @@
   <property name="OccupationalMedicine59">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Occupational Medicine" />
+   <property name="issn" value="0962-7480" />
+   <property name="eissn" value="1471-8405" />
    <property name="title" value="Occupational Medicine Volume 59" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5647,6 +6402,8 @@
   <property name="TheOralHistoryReview35">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Oral History Review" />
+   <property name="issn" value="0094-0798" />
+   <property name="eissn" value="1533-8592" />
    <property name="title" value="The Oral History Review Volume 35" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5663,6 +6420,8 @@
   <property name="TheOralHistoryReview36">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Oral History Review" />
+   <property name="issn" value="0094-0798" />
+   <property name="eissn" value="1533-8592" />
    <property name="title" value="The Oral History Review Volume 36" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5679,6 +6438,8 @@
   <property name="OxfordArtJournal31">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Art Journal" />
+   <property name="issn" value="0142-6540" />
+   <property name="eissn" value="1741-7287" />
    <property name="title" value="Oxford Art Journal Volume 31" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5695,6 +6456,8 @@
   <property name="OxfordArtJournal32">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Art Journal" />
+   <property name="issn" value="0142-6540" />
+   <property name="eissn" value="1741-7287" />
    <property name="title" value="Oxford Art Journal Volume 32" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5711,6 +6474,8 @@
   <property name="OxfordEconomicPapers60">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Economic Papers" />
+   <property name="issn" value="0030-7653" />
+   <property name="eissn" value="1464-3812" />
    <property name="title" value="Oxford Economic Papers Volume 60" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5727,6 +6492,8 @@
   <property name="OxfordEconomicPapers61">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Economic Papers" />
+   <property name="issn" value="0030-7653" />
+   <property name="eissn" value="1464-3812" />
    <property name="title" value="Oxford Economic Papers Volume 61" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5743,6 +6510,8 @@
   <property name="OxfordJournalofLegalStudies28">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Journal of Legal Studies" />
+   <property name="issn" value="0143-6503" />
+   <property name="eissn" value="1464-3820" />
    <property name="title" value="Oxford Journal of Legal Studies Volume 28" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5759,6 +6528,8 @@
   <property name="OxfordJournalofLegalStudies29">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Journal of Legal Studies" />
+   <property name="issn" value="0143-6503" />
+   <property name="eissn" value="1464-3820" />
    <property name="title" value="Oxford Journal of Legal Studies Volume 29" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5775,6 +6546,8 @@
   <property name="OxfordReviewofEconomicPolicy24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Review of Economic Policy" />
+   <property name="issn" value="0266-903X" />
+   <property name="eissn" value="1460-2121" />
    <property name="title" value="Oxford Review of Economic Policy Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5791,6 +6564,8 @@
   <property name="OxfordReviewofEconomicPolicy25">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Oxford Review of Economic Policy" />
+   <property name="issn" value="0266-903X" />
+   <property name="eissn" value="1460-2121" />
    <property name="title" value="Oxford Review of Economic Policy Volume 25" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5807,6 +6582,8 @@
   <property name="ParliamentaryAffairs61">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Parliamentary Affairs" />
+   <property name="issn" value="0031-2290" />
+   <property name="eissn" value="1460-2482" />
    <property name="title" value="Parliamentary Affairs Volume 61" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5823,6 +6600,8 @@
   <property name="ParliamentaryAffairs62">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Parliamentary Affairs" />
+   <property name="issn" value="0031-2290" />
+   <property name="eissn" value="1460-2482" />
    <property name="title" value="Parliamentary Affairs Volume 62" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5839,6 +6618,8 @@
   <property name="PastPresent198">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Past &amp; Present" />
+   <property name="issn" value="0031-2746" />
+   <property name="eissn" value="1477-464X" />
    <property name="title" value="Past &amp; Present Volume 198" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5855,6 +6636,8 @@
   <property name="PastPresent199">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Past &amp; Present" />
+   <property name="issn" value="0031-2746" />
+   <property name="eissn" value="1477-464X" />
    <property name="title" value="Past &amp; Present Volume 199" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5871,6 +6654,8 @@
   <property name="PastPresent200">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Past &amp; Present" />
+   <property name="issn" value="0031-2746" />
+   <property name="eissn" value="1477-464X" />
    <property name="title" value="Past &amp; Present Volume 200" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5887,6 +6672,8 @@
   <property name="PastPresent201">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Past &amp; Present" />
+   <property name="issn" value="0031-2746" />
+   <property name="eissn" value="1477-464X" />
    <property name="title" value="Past &amp; Present Volume 201" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5903,6 +6690,8 @@
   <property name="PastPresent202">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Past &amp; Present" />
+   <property name="issn" value="0031-2746" />
+   <property name="eissn" value="1477-464X" />
    <property name="title" value="Past &amp; Present Volume 202" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5919,6 +6708,8 @@
   <property name="PastPresent203">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Past &amp; Present" />
+   <property name="issn" value="0031-2746" />
+   <property name="eissn" value="1477-464X" />
    <property name="title" value="Past &amp; Present Volume 203" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5935,6 +6726,8 @@
   <property name="PhilosophiaMathematica16">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Philosophia Mathematica" />
+   <property name="issn" value="0031-8019" />
+   <property name="eissn" value="1744-6406" />
    <property name="title" value="Philosophia Mathematica Volume 16" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5951,6 +6744,8 @@
   <property name="PhilosophiaMathematica17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Philosophia Mathematica" />
+   <property name="issn" value="0031-8019" />
+   <property name="eissn" value="1744-6406" />
    <property name="title" value="Philosophia Mathematica Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5967,6 +6762,8 @@
   <property name="PlantandCellPhysiology49">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Plant and Cell Physiology" />
+   <property name="issn" value="0032-0781" />
+   <property name="eissn" value="1471-9053" />
    <property name="title" value="Plant and Cell Physiology Volume 49" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -5983,6 +6780,8 @@
   <property name="PlantandCellPhysiology50">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Plant and Cell Physiology" />
+   <property name="issn" value="0032-0781" />
+   <property name="eissn" value="1471-9053" />
    <property name="title" value="Plant and Cell Physiology Volume 50" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6031,6 +6830,8 @@
   <property name="PoliticalAnalysis16">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Political Analysis" />
+   <property name="issn" value="1047-1987" />
+   <property name="eissn" value="1476-4989" />
    <property name="title" value="Political Analysis Volume 16" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6047,6 +6848,8 @@
   <property name="PoliticalAnalysis17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Political Analysis" />
+   <property name="issn" value="1047-1987" />
+   <property name="eissn" value="1476-4989" />
    <property name="title" value="Political Analysis Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6063,6 +6866,8 @@
   <property name="ProceedingsoftheLondonMathematicalSociety96">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Proceedings of the London Mathematical Society" />
+   <property name="issn" value="0024-6115" />
+   <property name="eissn" value="1460-244X" />
    <property name="title" value="Proceedings of the London Mathematical Society Volume 96" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6079,6 +6884,8 @@
   <property name="ProceedingsoftheLondonMathematicalSociety97">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Proceedings of the London Mathematical Society" />
+   <property name="issn" value="0024-6115" />
+   <property name="eissn" value="1460-244X" />
    <property name="title" value="Proceedings of the London Mathematical Society Volume 97" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6095,6 +6902,8 @@
   <property name="ProceedingsoftheLondonMathematicalSociety98">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Proceedings of the London Mathematical Society" />
+   <property name="issn" value="0024-6115" />
+   <property name="eissn" value="1460-244X" />
    <property name="title" value="Proceedings of the London Mathematical Society Volume 98" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6111,6 +6920,8 @@
   <property name="ProceedingsoftheLondonMathematicalSociety99">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Proceedings of the London Mathematical Society" />
+   <property name="issn" value="0024-6115" />
+   <property name="eissn" value="1460-244X" />
    <property name="title" value="Proceedings of the London Mathematical Society Volume 99" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6159,6 +6970,8 @@
   <property name="PublicHealthEthics1">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Public Health Ethics" />
+   <property name="issn" value="1072-7928" />
+   <property name="eissn" value="TBC" />
    <property name="title" value="Public Health Ethics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6175,6 +6988,8 @@
   <property name="PublicHealthEthics2">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Public Health Ethics" />
+   <property name="issn" value="1072-7928" />
+   <property name="eissn" value="TBC" />
    <property name="title" value="Public Health Ethics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6191,6 +7006,8 @@
   <property name="PublicOpinionQuarterly72">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Public Opinion Quarterly" />
+   <property name="issn" value="0033-362X" />
+   <property name="eissn" value="1537-5331" />
    <property name="title" value="Public Opinion Quarterly Volume 72" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6207,6 +7024,8 @@
   <property name="PublicOpinionQuarterly73">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Public Opinion Quarterly" />
+   <property name="issn" value="0033-362X" />
+   <property name="eissn" value="1537-5331" />
    <property name="title" value="Public Opinion Quarterly Volume 73" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6223,6 +7042,8 @@
   <property name="PubliusTheJournalofFederalism38">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Publius: The Journal of Federalism" />
+   <property name="issn" value="0048-5950" />
+   <property name="eissn" value="1747-7107" />
    <property name="title" value="Publius: The Journal of Federalism Volume 38" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6239,6 +7060,8 @@
   <property name="PubliusTheJournalofFederalism39">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Publius: The Journal of Federalism" />
+   <property name="issn" value="0048-5950" />
+   <property name="eissn" value="1747-7107" />
    <property name="title" value="Publius: The Journal of Federalism Volume 39" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6287,6 +7110,8 @@
   <property name="TheQuarterlyJournalofMathematics59">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Quarterly Journal of Mathematics" />
+   <property name="issn" value="0033-5606" />
+   <property name="eissn" value="1464-3847" />
    <property name="title" value="The Quarterly Journal of Mathematics Volume 59" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6303,6 +7128,8 @@
   <property name="TheQuarterlyJournalofMathematics60">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Quarterly Journal of Mathematics" />
+   <property name="issn" value="0033-5606" />
+   <property name="eissn" value="1464-3847" />
    <property name="title" value="The Quarterly Journal of Mathematics Volume 60" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6319,6 +7146,8 @@
   <property name="TheQuarterlyJournalofMechanicsandAppliedMathematics61">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Quarterly Journal of Mechanics and Applied Mathematics" />
+   <property name="issn" value="0033-5614" />
+   <property name="eissn" value="1464-3855" />
    <property name="title" value="The Quarterly Journal of Mechanics and Applied Mathematics Volume 61" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6335,6 +7164,8 @@
   <property name="TheQuarterlyJournalofMechanicsandAppliedMathematics62">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Quarterly Journal of Mechanics and Applied Mathematics" />
+   <property name="issn" value="0033-5614" />
+   <property name="eissn" value="1464-3855" />
    <property name="title" value="The Quarterly Journal of Mechanics and Applied Mathematics Volume 62" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6351,6 +7182,8 @@
   <property name="RadiationProtectionDosimetry128">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 128" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6367,6 +7200,8 @@
   <property name="RadiationProtectionDosimetry130">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 130" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6383,6 +7218,8 @@
   <property name="RadiationProtectionDosimetry131">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 131" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6399,6 +7236,8 @@
   <property name="RadiationProtectionDosimetry132">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 132" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6415,6 +7254,8 @@
   <property name="RadiationProtectionDosimetry133">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 133" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6431,6 +7272,8 @@
   <property name="RadiationProtectionDosimetry134">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 134" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6447,6 +7290,8 @@
   <property name="RadiationProtectionDosimetry135">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 135" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6463,6 +7308,8 @@
   <property name="RadiationProtectionDosimetry136">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Radiation Protection Dosimetry" />
+   <property name="issn" value="0144-8420" />
+   <property name="eissn" value="1742-3406" />
    <property name="title" value="Radiation Protection Dosimetry Volume 136" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6479,6 +7326,8 @@
   <property name="RefugeeSurveyQuarterly27">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Refugee Survey Quarterly" />
+   <property name="issn" value="1020-4067" />
+   <property name="eissn" value="1471-695X" />
    <property name="title" value="Refugee Survey Quarterly Volume 27" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6495,6 +7344,8 @@
   <property name="RefugeeSurveyQuarterly28">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Refugee Survey Quarterly" />
+   <property name="issn" value="1020-4067" />
+   <property name="eissn" value="1471-695X" />
    <property name="title" value="Refugee Survey Quarterly Volume 28" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6543,6 +7394,8 @@
   <property name="ReviewofEnvironmentalEconomicsandPolicy2">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Review of Environmental Economics and Policy" />
+   <property name="issn" value="0034-6551" />
+   <property name="eissn" value="1471-6968" />
    <property name="title" value="Review of Environmental Economics and Policy Volume 2" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6559,6 +7412,8 @@
   <property name="ReviewofEnvironmentalEconomicsandPolicy3">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Review of Environmental Economics and Policy" />
+   <property name="issn" value="0034-6551" />
+   <property name="eissn" value="1471-6968" />
    <property name="title" value="Review of Environmental Economics and Policy Volume 3" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6575,6 +7430,8 @@
   <property name="ReviewofFinance12">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Review of Finance" />
+   <property name="issn" value="1572-3097" />
+   <property name="eissn" value="1573-692X" />
    <property name="title" value="Review of Finance Volume 12" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6591,6 +7448,8 @@
   <property name="ReviewofFinance13">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Review of Finance" />
+   <property name="issn" value="1572-3097" />
+   <property name="eissn" value="1573-692X" />
    <property name="title" value="Review of Finance Volume 13" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6607,6 +7466,8 @@
   <property name="TheReviewofFinancialStudies21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Review of Financial Studies" />
+   <property name="issn" value="0893-9454" />
+   <property name="eissn" value="1465-7368" />
    <property name="title" value="The Review of Financial Studies Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6623,6 +7484,8 @@
   <property name="TheReviewofFinancialStudies22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Review of Financial Studies" />
+   <property name="issn" value="0893-9454" />
+   <property name="eissn" value="1465-7368" />
    <property name="title" value="The Review of Financial Studies Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6639,6 +7502,8 @@
   <property name="Rheumatology47">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Rheumatology" />
+   <property name="issn" value="1462-0324" />
+   <property name="eissn" value="1460-2172" />
    <property name="title" value="Rheumatology Volume 47" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6655,6 +7520,8 @@
   <property name="Rheumatology48">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Rheumatology" />
+   <property name="issn" value="1462-0324" />
+   <property name="eissn" value="1460-2172" />
    <property name="title" value="Rheumatology Volume 48" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6671,6 +7538,8 @@
   <property name="SchizophreniaBulletin34">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Schizophrenia Bulletin" />
+   <property name="issn" value="0586-7614" />
+   <property name="eissn" value="1745-1701" />
    <property name="title" value="Schizophrenia Bulletin Volume 34" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6687,6 +7556,8 @@
   <property name="SchizophreniaBulletin35">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Schizophrenia Bulletin" />
+   <property name="issn" value="0586-7614" />
+   <property name="eissn" value="1745-1701" />
    <property name="title" value="Schizophrenia Bulletin Volume 35" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6703,6 +7574,8 @@
   <property name="Screen49">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Screen" />
+   <property name="issn" value="0036-9543" />
+   <property name="eissn" value="1460-2474" />
    <property name="title" value="Screen Volume 49" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6719,6 +7592,8 @@
   <property name="Screen50">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Screen" />
+   <property name="issn" value="0036-9543" />
+   <property name="eissn" value="1460-2474" />
    <property name="title" value="Screen Volume 50" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6735,6 +7610,8 @@
   <property name="SocialCognitiveandAffectiveNeuroscience3">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social Cognitive and Affective Neuroscience" />
+   <property name="issn" value="1749-5016" />
+   <property name="eissn" value="1749-5024" />
    <property name="title" value="Social Cognitive and Affective Neuroscience Volume 3" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6751,6 +7628,8 @@
   <property name="SocialCognitiveandAffectiveNeuroscience4">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social Cognitive and Affective Neuroscience" />
+   <property name="issn" value="1749-5016" />
+   <property name="eissn" value="1749-5024" />
    <property name="title" value="Social Cognitive and Affective Neuroscience Volume 4" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6767,6 +7646,8 @@
   <property name="SocialHistoryofMedicine21">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social History of Medicine" />
+   <property name="issn" value="0951-631X" />
+   <property name="eissn" value="1477-4666" />
    <property name="title" value="Social History of Medicine Volume 21" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6783,6 +7664,8 @@
   <property name="SocialHistoryofMedicine22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social History of Medicine" />
+   <property name="issn" value="0951-631X" />
+   <property name="eissn" value="1477-4666" />
    <property name="title" value="Social History of Medicine Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6799,6 +7682,8 @@
   <property name="SocialPoliticsInternationalStudiesinGenderStateSociety15">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social Politics: International Studies in Gender, State &amp; Society" />
+   <property name="issn" value="1072-4745" />
+   <property name="eissn" value="1468-2893" />
    <property name="title" value="Social Politics: International Studies in Gender, State &amp; Society Volume 15" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6815,6 +7700,8 @@
   <property name="SocialPoliticsInternationalStudiesinGenderStateSociety16">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social Politics: International Studies in Gender, State &amp; Society" />
+   <property name="issn" value="1072-4745" />
+   <property name="eissn" value="1468-2893" />
    <property name="title" value="Social Politics: International Studies in Gender, State &amp; Society Volume 16" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6831,6 +7718,8 @@
   <property name="SocialScienceJapanJournal11">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social Science Japan Journal" />
+   <property name="issn" value="1369-1465" />
+   <property name="eissn" value="1468-2680" />
    <property name="title" value="Social Science Japan Journal Volume 11" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6847,6 +7736,8 @@
   <property name="SocialScienceJapanJournal12">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Social Science Japan Journal" />
+   <property name="issn" value="1369-1465" />
+   <property name="eissn" value="1468-2680" />
    <property name="title" value="Social Science Japan Journal Volume 12" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6863,6 +7754,8 @@
   <property name="SocioEconomicReview6">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Socio-Economic Review" />
+   <property name="issn" value="1475-1461" />
+   <property name="eissn" value="1475-147X" />
    <property name="title" value="Socio-Economic Review Volume 6" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6879,6 +7772,8 @@
   <property name="SocioEconomicReview7">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Socio-Economic Review" />
+   <property name="issn" value="1475-1461" />
+   <property name="eissn" value="1475-147X" />
    <property name="title" value="Socio-Economic Review Volume 7" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6911,6 +7806,8 @@
   <property name="StatuteLawReview29">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Statute Law Review" />
+   <property name="issn" value="0144-3593" />
+   <property name="eissn" value="1464-3863" />
    <property name="title" value="Statute Law Review Volume 29" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -6927,6 +7824,8 @@
   <property name="StatuteLawReview30">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Statute Law Review" />
+   <property name="issn" value="0144-3593" />
+   <property name="eissn" value="1464-3863" />
    <property name="title" value="Statute Law Review Volume 30" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7007,6 +7906,8 @@
   <property name="ToxicologicalSciences101">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 101" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7023,6 +7924,8 @@
   <property name="ToxicologicalSciences102">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 102" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7039,6 +7942,8 @@
   <property name="ToxicologicalSciences103">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 103" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7055,6 +7960,8 @@
   <property name="ToxicologicalSciences104">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 104" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7071,6 +7978,8 @@
   <property name="ToxicologicalSciences105">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 105" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7087,6 +7996,8 @@
   <property name="ToxicologicalSciences106">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 106" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7103,6 +8014,8 @@
   <property name="ToxicologicalSciences107">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 107" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7119,6 +8032,8 @@
   <property name="ToxicologicalSciences108">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 108" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7135,6 +8050,8 @@
   <property name="ToxicologicalSciences109">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 109" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7151,6 +8068,8 @@
   <property name="ToxicologicalSciences110">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 110" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7167,6 +8086,8 @@
   <property name="ToxicologicalSciences111">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Toxicological Sciences" />
+   <property name="issn" value="1096-6080" />
+   <property name="eissn" value="1096-0929" />
    <property name="title" value="Toxicological Sciences Volume 111" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7183,6 +8104,8 @@
   <property name="TreePhysiology28">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Tree Physiology" />
+   <property name="issn" value="0829-318X" />
+   <property name="eissn" value="1758-4469" />
    <property name="title" value="Tree Physiology Volume 28" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7199,6 +8122,8 @@
   <property name="TreePhysiology29">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Tree Physiology" />
+   <property name="issn" value="0829-318X" />
+   <property name="eissn" value="1758-4469" />
    <property name="title" value="Tree Physiology Volume 29" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7215,6 +8140,7 @@
   <property name="TrustsTrustees14">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Trusts &amp; Trustees" />
+   <property name="issn" value="1363-1780" />
    <property name="title" value="Trusts &amp; Trustees Volume 14" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7231,6 +8157,7 @@
   <property name="TrustsTrustees15">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Trusts &amp; Trustees" />
+   <property name="issn" value="1363-1780" />
    <property name="title" value="Trusts &amp; Trustees Volume 15" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7247,6 +8174,8 @@
   <property name="TwentiethCenturyBritishHistory19">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Twentieth Century British History" />
+   <property name="issn" value="0955-2359" />
+   <property name="eissn" value="1477-4674" />
    <property name="title" value="Twentieth Century British History Volume 19" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7263,6 +8192,8 @@
   <property name="TwentiethCenturyBritishHistory20">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="Twentieth Century British History" />
+   <property name="issn" value="0955-2359" />
+   <property name="eissn" value="1477-4674" />
    <property name="title" value="Twentieth Century British History Volume 20" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7279,6 +8210,8 @@
   <property name="TheWorldBankEconomicReview22">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The World Bank Economic Review" />
+   <property name="issn" value="0258-6770" />
+   <property name="eissn" value="1564-698X" />
    <property name="title" value="The World Bank Economic Review Volume 22" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7295,6 +8228,8 @@
   <property name="TheWorldBankEconomicReview23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The World Bank Economic Review" />
+   <property name="issn" value="0258-6770" />
+   <property name="eissn" value="1564-698X" />
    <property name="title" value="The World Bank Economic Review Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7311,6 +8246,8 @@
   <property name="TheWorldBankResearchObserver23">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The World Bank Research Observer" />
+   <property name="issn" value="0257-3032" />
+   <property name="eissn" value="1564-6971" />
    <property name="title" value="The World Bank Research Observer Volume 23" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7327,6 +8264,8 @@
   <property name="TheWorldBankResearchObserver24">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The World Bank Research Observer" />
+   <property name="issn" value="0257-3032" />
+   <property name="eissn" value="1564-6971" />
    <property name="title" value="The World Bank Research Observer Volume 24" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7343,6 +8282,8 @@
   <property name="TheYearsWorkinCriticalandCulturalTheory16">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Year's Work in Critical and Cultural Theory" />
+   <property name="issn" value="1077-4254" />
+   <property name="eissn" value="1471-681X" />
    <property name="title" value="The Year's Work in Critical and Cultural Theory Volume 16" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7359,6 +8300,8 @@
   <property name="TheYearsWorkinCriticalandCulturalTheory17">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Year's Work in Critical and Cultural Theory" />
+   <property name="issn" value="1077-4254" />
+   <property name="eissn" value="1471-681X" />
    <property name="title" value="The Year's Work in Critical and Cultural Theory Volume 17" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
@@ -7375,6 +8318,8 @@
   <property name="TheYearsWorkinEnglishStudies87">
    <property name="attributes.publisher" value="Oxford University Press" />
    <property name="journalTitle" value="The Year's Work in English Studies" />
+   <property name="issn" value="0084-4144" />
+   <property name="eissn" value="1471-6801" />
    <property name="title" value="The Year's Work in English Studies Volume 87" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
