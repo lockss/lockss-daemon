@@ -50,6 +50,9 @@ DEFAULT_USERNAME                = 'lockss-u'
 OPTION_DATABASE_PASSWORD        = 'dbpassword'
 OPTION_DATABASE_PASSWORD_SHORT  = 'D'
 
+OPTION_LOG_FILE                 = 'logfile'
+OPTION_LOG_FILE_SHORT           = 'L'
+
 PARAM_READY_TIMEOUT             = 30
 PARAM_REPEAT_LIST_ARTICLES      = 5  
 PARAM_REPEAT_GET_STATUS_TABLE   = 5
@@ -72,12 +75,16 @@ def _make_command_line_parser():
                       dest=OPTION_USERNAME,
                       default=DEFAULT_USERNAME,
                       help='daemon UI username (default: %default)')
-    
-    # The database password
     parser.add_option(OPTION_SHORT + OPTION_DATABASE_PASSWORD_SHORT,
                       OPTION_LONG + OPTION_DATABASE_PASSWORD,
                       dest=OPTION_DATABASE_PASSWORD,
                       help="The password for the database (required)")
+    parser.add_option(OPTION_SHORT + OPTION_LOG_FILE_SHORT,
+                      OPTION_LONG + OPTION_LOG_FILE,
+                      dest=OPTION_LOG_FILE,
+                      default=None,
+                      help="Where to store extra log information (not required nor usually desirable)")
+
     
     return parser
     
@@ -106,7 +113,7 @@ def _get_auids(client):
         auname[id] = map['AuName']['value']
     return auids, auname
 
-def _get_list_articles(client, auid, auarticles):
+def _get_list_articles(client, auid, auarticles, options):
     reps = 0
 
     while (reps < PARAM_REPEAT_LIST_ARTICLES):
@@ -121,6 +128,15 @@ def _get_list_articles(client, auid, auarticles):
             print "_get_list_articles has URLError.  This is repeat %d." % (reps,)
     else:
         raise RuntimeError, '%s did not give the list of articles after %d tries' % (options.host, PARAM_REPEAT_LIST_ARTICLES)
+    
+    if options.logfile is not None:
+        f = open(options.logfile, 'a')
+        
+        f.write(auid + ":\n")
+        for art in auarticles[auid]:
+            f.write(art + "\n")
+            
+        f.close()
 
 def _get_list_urls(client, auid, auarticles):
     lst = client.getListOfUrls(lockss_daemon.AU(auid))
@@ -224,7 +240,7 @@ def _article_report(client, db, options):
             print "FAIL: created time was not set.\n"
             aucreated[auid] = None
             
-        _get_list_articles(client, auid, auarticles)
+        _get_list_articles(client, auid, auarticles, options)
       
         # Note: There is no article iterator for RSC.  This is a work-around.
         if auid.find('ClockssRoyalSocietyOfChemistryPlugin') >= 0 and (options.host.find("ingest") >= 0):
