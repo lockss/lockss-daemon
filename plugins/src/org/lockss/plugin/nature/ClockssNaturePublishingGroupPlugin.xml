@@ -55,7 +55,7 @@
       <string>2,&quot;^%s%s/journal/v%s/[^/]+/(products|pubmed)/&quot;, base_url, journal_id, volume_name</string>
       <string>2,&quot;^%s.*url_ver=&quot;,base_url</string>
       <string>1,&quot;^%s%s/journal/v%s/&quot;, base_url, journal_id, volume_name</string>
-      <string>1,&quot;^%s%s/journal/ndigest/index_ja.html?volume=%s&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%s%s/index_ja\.html\?volume=%s&quot;, base_url, journal_id, volume_name</string>
     </list>
   </entry>
   <entry>
