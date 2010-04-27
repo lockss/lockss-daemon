@@ -19,7 +19,7 @@
       implicit < status ; year ; name ; param[volume_name] >
 
       au < ready ; 1991-1992 ; Cancer Epidemiology Biomarkers & Prevention Volume 1 ; 1 >
-      au < ready ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 >
+      au < testing ; 1993 ; Cancer Epidemiology Biomarkers & Prevention Volume 2 ; 2 >
       au < ready ; 1994 ; Cancer Epidemiology Biomarkers & Prevention Volume 3 ; 3 >
       au < ready ; 1995 ; Cancer Epidemiology Biomarkers & Prevention Volume 4 ; 4 >
       au < ready ; 1996 ; Cancer Epidemiology Biomarkers & Prevention Volume 5 ; 5 >
@@ -137,17 +137,17 @@
       au < ready ; 1997 ; Cancer Research Volume 57 ; 57 >
       au < ready ; 1998 ; Cancer Research Volume 58 ; 58 >
       au < ready ; 1999 ; Cancer Research Volume 59 ; 59 >
-      au < testing ; 2000 ; Cancer Research Volume 60 ; 60 >
+      au < ready ; 2000 ; Cancer Research Volume 60 ; 60 >
       au < testing ; 2001 ; Cancer Research Volume 61 ; 61 >
       au < testing ; 2002 ; Cancer Research Volume 62 ; 62 >
-      au < testing ; 2003 ; Cancer Research Volume 63 ; 63 >
-      au < testing ; 2004 ; Cancer Research Volume 64 ; 64 >
+      au < ready ; 2003 ; Cancer Research Volume 63 ; 63 >
+      au < ready ; 2004 ; Cancer Research Volume 64 ; 64 >
       au < testing ; 2005 ; Cancer Research Volume 65 ; 65 >
-      au < testing ; 2006 ; Cancer Research Volume 66 ; 66 >
+      au < ready ; 2006 ; Cancer Research Volume 66 ; 66 >
       au < ready ; 2007 ; Cancer Research Volume 67 ; 67 >
       au < testing ; 2008 ; Cancer Research Volume 68 ; 68 >
       au < ready ; 2009 ; Cancer Research Volume 69 ; 69 >
-      au < testing ; 2010 ; Cancer Research Volume 70 ; 70 >
+      au < ready ; 2010 ; Cancer Research Volume 70 ; 70 >
 
     }
 
