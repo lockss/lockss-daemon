@@ -1,15 +1,15 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;CLOCKSS Edinburgh University Press Plugin, Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
+    <string>&quot;Edinburgh University Press Plugin (CLOCKSS), Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Edinburgh University Press Plugin</string>
+    <string>Edinburgh University Press Plugin (CLOCKSS)</string>
   </entry>
     <entry>
     <string>au_def_new_content_crawl</string>
@@ -44,11 +44,11 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressHtmlFilterFactory</string>
+    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressHashHtmlFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_link_extractor_factory</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressHtmlLinkExtractorFactory</string>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressCrawlHtmlLinkExtractorFactory</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
