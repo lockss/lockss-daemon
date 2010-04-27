@@ -735,31 +735,36 @@
       eissn = 1475-5785
     >
 
-    param[base_url] = http://ip.bmj.com/
+    {
 
-    au < HighWireStrVolPlugin ; released ; Injury Prevention Volume 10 ; 10 >
-    au < HighWireStrVolPlugin ; released ; Injury Prevention Volume 11 ; 11 >
+      param[base_url] = http://ip.bmj.com/
+
+      au < HighWireStrVolPlugin ; released ; Injury Prevention Volume 10 ; 10 >
+      au < HighWireStrVolPlugin ; released ; Injury Prevention Volume 11 ; 11 >
 
     }
 
+    {
 
-    param[base_url] = http://injuryprevention.bmj.com/
+      param[base_url] = http://injuryprevention.bmj.com/
 
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 1 ; 1 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 2 ; 2 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 3 ; 3 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 4 ; 4 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 5 ; 5 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 6 ; 6 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 7 ; 7 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 14 ; 14 >
-    au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 1 ; 1 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 2 ; 2 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 3 ; 3 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 4 ; 4 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 11 ; 11 >
+      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 15 ; 15 >
+      
+    }
 
   }
 
