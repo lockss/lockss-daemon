@@ -2362,12 +2362,12 @@
       param[base_url] = http://www.molecularpain.com/
       param[journal_issn] = 1744-8069
 
-      au < testing ; Molecular Pain Volume 1 ; 1 >
-      au < testing ; Molecular Pain Volume 2 ; 2 >
-      au < testing ; Molecular Pain Volume 3 ; 3 >
+      au < ready ; Molecular Pain Volume 1 ; 1 >
+      au < ready ; Molecular Pain Volume 2 ; 2 >
+      au < ready ; Molecular Pain Volume 3 ; 3 >
       au < testing ; Molecular Pain Volume 4 ; 4 >
-      au < testing ; Molecular Pain Volume 5 ; 5 >
-      au < testing ; Molecular Pain Volume 6 ; 6 >
+      au < ready ; Molecular Pain Volume 5 ; 5 >
+      au < ready ; Molecular Pain Volume 6 ; 6 >
     }
 
     {
@@ -2379,10 +2379,10 @@
       param[base_url] = http://www.neuraldevelopment.com/
       param[journal_issn] = 1749-8104
 
-      au < testing ; Neural Development Volume 1 ; 1 >
-      au < testing ; Neural Development Volume 2 ; 2 >
+      au < ready ; Neural Development Volume 1 ; 1 >
+      au < ready ; Neural Development Volume 2 ; 2 >
       au < testing ; Neural Development Volume 3 ; 3 >
-      au < testing ; Neural Development Volume 4 ; 4 >
+      au < ready ; Neural Development Volume 4 ; 4 >
       au < testing ; Neural Development Volume 5 ; 5 >
     }
 
@@ -2395,10 +2395,10 @@
       param[base_url] = http://www.nonlinearbiomedphys.com/
       param[journal_issn] = 1753-4631
 
-      au < manifest ; Nonlinear Biomedical Physics Volume 1 ; 1 >
-      au < manifest ; Nonlinear Biomedical Physics Volume 2 ; 2 >
-      au < manifest ; Nonlinear Biomedical Physics Volume 3 ; 3 >
-      au < manifest ; Nonlinear Biomedical Physics Volume 4 ; 4 >      
+      au < ready ; Nonlinear Biomedical Physics Volume 1 ; 1 >
+      au < ready ; Nonlinear Biomedical Physics Volume 2 ; 2 >
+      au < ready ; Nonlinear Biomedical Physics Volume 3 ; 3 >
+      au < ready ; Nonlinear Biomedical Physics Volume 4 ; 4 >      
     }
 
     {
@@ -2410,13 +2410,13 @@
       param[base_url] = http://www.nutritionandmetabolism.com/
       param[journal_issn] = 1743-7075
 
-      au < testing ; Nutrition & Metabolism Volume 1 ; 1 >
-      au < testing ; Nutrition & Metabolism Volume 2 ; 2 >
-      au < testing ; Nutrition & Metabolism Volume 3 ; 3 >
-      au < testing ; Nutrition & Metabolism Volume 4 ; 4 >
-      au < testing ; Nutrition & Metabolism Volume 5 ; 5 >
-      au < testing ; Nutrition & Metabolism Volume 6 ; 6 >
-      au < testing ; Nutrition & Metabolism Volume 7 ; 7 >      
+      au < ready ; Nutrition & Metabolism Volume 1 ; 1 >
+      au < ready ; Nutrition & Metabolism Volume 2 ; 2 >
+      au < ready ; Nutrition & Metabolism Volume 3 ; 3 >
+      au < ready ; Nutrition & Metabolism Volume 4 ; 4 >
+      au < ready ; Nutrition & Metabolism Volume 5 ; 5 >
+      au < ready ; Nutrition & Metabolism Volume 6 ; 6 >
+      au < ready ; Nutrition & Metabolism Volume 7 ; 7 >      
     }
 
     {
@@ -2428,15 +2428,15 @@
       param[base_url] = http://www.nutritionj.com/
       param[journal_issn] = 1475-2891
 
-      au < testing ; Nutrition Journal Volume 1 ; 1 >
-      au < testing ; Nutrition Journal Volume 2 ; 2 >
-      au < testing ; Nutrition Journal Volume 3 ; 3 >
-      au < testing ; Nutrition Journal Volume 4 ; 4 >
-      au < testing ; Nutrition Journal Volume 5 ; 5 >
-      au < testing ; Nutrition Journal Volume 6 ; 6 >
+      au < ready ; Nutrition Journal Volume 1 ; 1 >
+      au < ready ; Nutrition Journal Volume 2 ; 2 >
+      au < ready ; Nutrition Journal Volume 3 ; 3 >
+      au < ready ; Nutrition Journal Volume 4 ; 4 >
+      au < ready ; Nutrition Journal Volume 5 ; 5 >
+      au < ready ; Nutrition Journal Volume 6 ; 6 >
       au < testing ; Nutrition Journal Volume 7 ; 7 >
-      au < testing ; Nutrition Journal Volume 8 ; 8 >
-      au < testing ; Nutrition Journal Volume 9 ; 9 >      
+      au < ready ; Nutrition Journal Volume 8 ; 8 >
+      au < ready ; Nutrition Journal Volume 9 ; 9 >      
     }
 
     {
