@@ -48,8 +48,8 @@
     
     param[base_url] = http://neoreviews.aappublications.org/
 
-    au < ready ; 2008 ; NeoReviews Volume 9 ; 9 >
-    au < ready ; 2009 ; NeoReviews Volume 10 ; 10 >
+    au < released ; 2008 ; NeoReviews Volume 9 ; 9 >
+    au < released ; 2009 ; NeoReviews Volume 10 ; 10 >
   
   }
 
@@ -64,8 +64,8 @@
     param[base_url] = http://pediatrics.aappublications.org/
     
     au < released ; 2008 ; Pediatrics Volume 121 ; 121 >
-    au < ready ; 2008 ; Pediatrics Volume 122 ; 122 >
-    au < ready ; 2009 ; Pediatrics Volume 123 ; 123 >
+    au < released ; 2008 ; Pediatrics Volume 122 ; 122 >
+    au < released ; 2009 ; Pediatrics Volume 123 ; 123 >
     au < released ; 2009 ; Pediatrics Volume 124 ; 124 >
   
   }
