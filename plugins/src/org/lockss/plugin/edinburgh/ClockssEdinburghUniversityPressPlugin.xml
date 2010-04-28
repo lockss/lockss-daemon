@@ -48,7 +48,7 @@
   </entry>
   <entry>
     <string>text/html_crawl_filter_factory</string>
-    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressCrawlHtmlLinkExtractorFactory</string>
+    <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressCrawlHtmlFilterFactory</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
