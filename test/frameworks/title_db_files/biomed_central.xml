@@ -16354,6 +16354,48 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="MicrobialCellFactories8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Microbial Cell Factories" />
+   <property name="issn" value="1475-2859" />
+   <property name="title" value="Microbial Cell Factories Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.microbialcellfactories.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1475-2859" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MicrobialCellFactories9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Microbial Cell Factories" />
+   <property name="issn" value="1475-2859" />
+   <property name="title" value="Microbial Cell Factories Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.microbialcellfactories.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1475-2859" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="MolecularBrain1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="Molecular Brain" />
@@ -16371,6 +16413,48 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="1" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MolecularBrain2">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Brain" />
+   <property name="issn" value="1756-6606" />
+   <property name="title" value="Molecular Brain Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecularbrain.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1756-6606" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MolecularBrain3">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Brain" />
+   <property name="issn" value="1756-6606" />
+   <property name="title" value="Molecular Brain Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecularbrain.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1756-6606" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -16522,6 +16606,48 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="MolecularCancer8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Cancer" />
+   <property name="issn" value="1476-4598" />
+   <property name="title" value="Molecular Cancer Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecular-cancer.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1476-4598" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MolecularCancer9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Cancer" />
+   <property name="issn" value="1476-4598" />
+   <property name="title" value="Molecular Cancer Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecular-cancer.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1476-4598" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="MolecularCytogenetics1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="Molecular Cytogenetics" />
@@ -16539,6 +16665,48 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="1" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MolecularCytogenetics2">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Cytogenetics" />
+   <property name="issn" value="1755-8166" />
+   <property name="title" value="Molecular Cytogenetics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecularcytogenetics.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1755-8166" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MolecularCytogenetics3">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Cytogenetics" />
+   <property name="issn" value="1755-8166" />
+   <property name="title" value="Molecular Cytogenetics Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecularcytogenetics.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1755-8166" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -16602,6 +16770,48 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="3" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MolecularNeurodegeneration4">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Neurodegeneration" />
+   <property name="issn" value="1750-1326" />
+   <property name="title" value="Molecular Neurodegeneration Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecularneurodegeneration.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1750-1326" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="MolecularNeurodegeneration5">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="Molecular Neurodegeneration" />
+   <property name="issn" value="1750-1326" />
+   <property name="title" value="Molecular Neurodegeneration Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BioMedCentralPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.molecularneurodegeneration.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1750-1326" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>

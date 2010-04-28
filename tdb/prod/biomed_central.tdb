@@ -2288,13 +2288,16 @@
       param[base_url] = http://www.microbialcellfactories.com/
       param[journal_issn] = 1475-2859
 
-      au < manifest ; Microbial Cell Factories Volume 1 ; 1 >
-      au < manifest ; Microbial Cell Factories Volume 2 ; 2 >
-      au < manifest ; Microbial Cell Factories Volume 3 ; 3 >
-      au < manifest ; Microbial Cell Factories Volume 4 ; 4 >
-      au < manifest ; Microbial Cell Factories Volume 5 ; 5 >
-      au < manifest ; Microbial Cell Factories Volume 6 ; 6 >
-      au < manifest ; Microbial Cell Factories Volume 7 ; 7 >
+      au < testing ; Microbial Cell Factories Volume 1 ; 1 >
+      au < testing ; Microbial Cell Factories Volume 2 ; 2 >
+      au < testing ; Microbial Cell Factories Volume 3 ; 3 >
+      au < testing ; Microbial Cell Factories Volume 4 ; 4 >
+      au < testing ; Microbial Cell Factories Volume 5 ; 5 >
+      au < testing ; Microbial Cell Factories Volume 6 ; 6 >
+      au < testing ; Microbial Cell Factories Volume 7 ; 7 >
+      au < testing ; Microbial Cell Factories Volume 8 ; 8 >
+      au < testing ; Microbial Cell Factories Volume 9 ; 9 >
+
     }
 
     {
@@ -2306,7 +2309,9 @@
       param[base_url] = http://www.molecularbrain.com/
       param[journal_issn] = 1756-6606
 
-      au < manifest ; Molecular Brain Volume 1 ; 1 >
+      au < testing ; Molecular Brain Volume 1 ; 1 >
+      au < testing ; Molecular Brain Volume 2 ; 2 >
+      au < testing ; Molecular Brain Volume 3 ; 3 >
     }
 
     {
@@ -2318,13 +2323,15 @@
       param[base_url] = http://www.molecular-cancer.com/
       param[journal_issn] = 1476-4598
 
-      au < manifest ; Molecular Cancer Volume 1 ; 1 >
-      au < manifest ; Molecular Cancer Volume 2 ; 2 >
-      au < manifest ; Molecular Cancer Volume 3 ; 3 >
-      au < manifest ; Molecular Cancer Volume 4 ; 4 >
-      au < manifest ; Molecular Cancer Volume 5 ; 5 >
-      au < manifest ; Molecular Cancer Volume 6 ; 6 >
-      au < manifest ; Molecular Cancer Volume 7 ; 7 >
+      au < testing ; Molecular Cancer Volume 1 ; 1 >
+      au < testing ; Molecular Cancer Volume 2 ; 2 >
+      au < testing ; Molecular Cancer Volume 3 ; 3 >
+      au < testing ; Molecular Cancer Volume 4 ; 4 >
+      au < testing ; Molecular Cancer Volume 5 ; 5 >
+      au < testing ; Molecular Cancer Volume 6 ; 6 >
+      au < testing ; Molecular Cancer Volume 7 ; 7 >
+      au < testing ; Molecular Cancer Volume 8 ; 8 >
+      au < testing ; Molecular Cancer Volume 9 ; 9 >
     }
 
     {
@@ -2336,7 +2343,10 @@
       param[base_url] = http://www.molecularcytogenetics.org/
       param[journal_issn] = 1755-8166
 
-      au < manifest ; Molecular Cytogenetics Volume 1 ; 1 >
+      au < testing ; Molecular Cytogenetics Volume 1 ; 1 >
+      au < testing ; Molecular Cytogenetics Volume 2 ; 2 >
+      au < testing ; Molecular Cytogenetics Volume 3 ; 3 >
+      
     }
 
     {
@@ -2348,9 +2358,11 @@
       param[base_url] = http://www.molecularneurodegeneration.com/
       param[journal_issn] = 1750-1326
 
-      au < manifest ; Molecular Neurodegeneration Volume 1 ; 1 >
-      au < manifest ; Molecular Neurodegeneration Volume 2 ; 2 >
-      au < manifest ; Molecular Neurodegeneration Volume 3 ; 3 >
+      au < testing ; Molecular Neurodegeneration Volume 1 ; 1 >
+      au < testing ; Molecular Neurodegeneration Volume 2 ; 2 >
+      au < testing ; Molecular Neurodegeneration Volume 3 ; 3 >
+      au < testing ; Molecular Neurodegeneration Volume 4 ; 4 >
+      au < testing ; Molecular Neurodegeneration Volume 5 ; 5 >      
     }
 
     {
