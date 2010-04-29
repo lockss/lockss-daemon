@@ -4791,6 +4791,23 @@
    </property>
   </property>
 
+  <property name="BritishJournalofSportsMedicine7">
+   <property name="attributes.publisher" value="BMJ Group" />
+   <property name="journalTitle" value="British Journal of Sports Medicine" />
+   <property name="issn" value="0306-3674" />
+   <property name="eissn" value="1473-0480" />
+   <property name="title" value="British Journal of Sports Medicine Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://bjsm.bmj.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+  </property>
+
   <property name="BritishJournalofSportsMedicine8">
    <property name="attributes.publisher" value="BMJ Group" />
    <property name="journalTitle" value="British Journal of Sports Medicine" />
