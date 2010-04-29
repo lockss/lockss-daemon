@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>5</string>
+    <string>6</string>
   </entry>
   <entry>
     <string>plugin_identifier</string>
@@ -75,9 +75,5 @@
   <entry>
     <string>au_login_page_checker</string>
     <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineTextbooksLoginPageChecker</string>
-  </entry>
-  <entry>
-    <string>au_crawlwindow</string>
-    <string>org.lockss.plugin.psychiatryonline.PsychiatryOnlineCrawlWindow</string>
   </entry>
 </map>

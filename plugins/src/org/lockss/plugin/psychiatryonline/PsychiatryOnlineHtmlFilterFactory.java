@@ -1,10 +1,10 @@
 /*
- * $Id: PsychiatryOnlineHtmlFilterFactory.java,v 1.2 2009-03-13 22:45:21 thib_gc Exp $
+ * $Id: PsychiatryOnlineHtmlFilterFactory.java,v 1.3 2010-04-29 08:29:42 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,8 @@ package org.lockss.plugin.psychiatryonline;
 
 import java.io.*;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.StringFilter;
 import org.lockss.filter.html.*;
@@ -63,19 +65,19 @@ public class PsychiatryOnlineHtmlFilterFactory implements FilterFactory {
     }
 
     // Then filter out HTML constructs
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <span id="lblSeeAlso">...</span>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("span",
-                                                                         "id",
-                                                                         "lblSeeAlso")),
-        // Filter out <input type="hidden">...</input>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("input",
-                                                                         "type",
-                                                                         "hidden")),
+    
+    NodeFilter[] filters = new NodeFilter[] {
+        // Filter out <script>
+        new TagNameFilter("script"),
+        // Filter out <span id=~"lblSeeAlso">
+        HtmlNodeFilters.tagWithAttributeRegex("span", "id", "lblSeeAlso"),
+        // Filter out <input type="hidden">
+        HtmlNodeFilters.tagWithAttribute("input", "type", "hidden"),
     };
+    
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     new HtmlCompoundTransform(transforms));
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
