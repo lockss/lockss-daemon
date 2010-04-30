@@ -1010,8 +1010,8 @@
       au < released ; Acta Veterinaria Scandinavica Volume 48 ; 48 >
       au < released ; Acta Veterinaria Scandinavica Volume 49 ; 49 >
       au < released ; Acta Veterinaria Scandinavica Volume 50 ; 50 >
-      au < testing ; Acta Veterinaria Scandinavica Volume 51 ; 51 >
-      au < testing ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
+      au < ready ; Acta Veterinaria Scandinavica Volume 51 ; 51 >
+      au < ready ; Acta Veterinaria Scandinavica Volume 52 ; 52 >
     }
 
     {
@@ -1028,8 +1028,8 @@
       au < released ; AIDS Research and Therapy Volume 3 ; 3 >
       au < released ; AIDS Research and Therapy Volume 4 ; 4 >
       au < released ; AIDS Research and Therapy Volume 5 ; 5 >
-      au < testing ; AIDS Research and Therapy Volume 6 ; 6 >
-      au < testing ; AIDS Research and Therapy Volume 7 ; 7 >
+      au < ready ; AIDS Research and Therapy Volume 6 ; 6 >
+      au < ready ; AIDS Research and Therapy Volume 7 ; 7 >
     }
 
     {
@@ -1044,8 +1044,8 @@
       au < released ; Algorithms for Molecular Biology Volume 1 ; 1 >
       au < released ; Algorithms for Molecular Biology Volume 2 ; 2 >
       au < released ; Algorithms for Molecular Biology Volume 3 ; 3 >
-      au < testing ; Algorithms for Molecular Biology Volume 4 ; 4 >
-      au < testing ; Algorithms for Molecular Biology Volume 5 ; 5 >
+      au < ready ; Algorithms for Molecular Biology Volume 4 ; 4 >
+      au < ready ; Algorithms for Molecular Biology Volume 5 ; 5 >
     }
 
     {
@@ -1064,8 +1064,8 @@
       au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 5 ; 5 >
       au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 6 ; 6 >
       au < released ; Annals of Clinical Microbiology and Antimicrobials Volume 7 ; 7 >
-      au < testing ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
-      au < testing ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
+      au < ready ; Annals of Clinical Microbiology and Antimicrobials Volume 8 ; 8 >
+      au < ready ; Annals of Clinical Microbiology and Antimicrobials Volume 9 ; 9 >
     }
 
     {
@@ -1084,8 +1084,8 @@
       au < released ; Annals of General Psychiatry Volume 5 ; 5 >
       au < released ; Annals of General Psychiatry Volume 6 ; 6 >
       au < released ; Annals of General Psychiatry Volume 7 ; 7 >
-      au < testing ; Annals of General Psychiatry Volume 8 ; 8 >
-      au < testing ; Annals of General Psychiatry Volume 9 ; 9 >
+      au < ready ; Annals of General Psychiatry Volume 8 ; 8 >
+      au < ready ; Annals of General Psychiatry Volume 9 ; 9 >
     }
 
     {
@@ -1099,8 +1099,8 @@
 
       au < released ; Annals of Surgical Innovation and Research Volume 1 ; 1 >
       au < released ; Annals of Surgical Innovation and Research Volume 2 ; 2 >
-      au < testing ; Annals of Surgical Innovation and Research Volume 3 ; 3 >
-      au < testing ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
+      au < ready ; Annals of Surgical Innovation and Research Volume 3 ; 3 >
+      au < ready ; Annals of Surgical Innovation and Research Volume 4 ; 4 >
     }
 
     {
@@ -1123,6 +1123,8 @@
       au < released ; Arthritis Research & Therapy Volume 8 ; 8 >
       au < released ; Arthritis Research & Therapy Volume 9 ; 9 >
       au < released ; Arthritis Research & Therapy Volume 10 ; 10 >
+      au < testing ; Arthritis Research & Therapy Volume 11 ; 11 >
+      au < testing ; Arthritis Research & Therapy Volume 12 ; 12 >
     }
 
     {
@@ -1134,11 +1136,13 @@
       param[base_url] = http://www.anzhealthpolicy.com/
       param[journal_issn] = 1743-8462
 
-      au < manifest ; Australia and New Zealand Health Policy Volume 1 ; 1 >
-      au < manifest ; Australia and New Zealand Health Policy Volume 2 ; 2 >
-      au < manifest ; Australia and New Zealand Health Policy Volume 3 ; 3 >
-      au < manifest ; Australia and New Zealand Health Policy Volume 4 ; 4 >
-      au < manifest ; Australia and New Zealand Health Policy Volume 5 ; 5 >
+      au < ready ; Australia and New Zealand Health Policy Volume 1 ; 1 >
+      au < ready ; Australia and New Zealand Health Policy Volume 2 ; 2 >
+      au < ready ; Australia and New Zealand Health Policy Volume 3 ; 3 >
+      au < ready ; Australia and New Zealand Health Policy Volume 4 ; 4 >
+      au < ready ; Australia and New Zealand Health Policy Volume 5 ; 5 >
+      au < ready ; Australia and New Zealand Health Policy Volume 6 ; 6 >
+      au < ready ; Australia and New Zealand Health Policy Volume 7 ; 7 >
     }
 
     {
@@ -1154,6 +1158,8 @@
       au < released ; Behavioral and Brain Functions Volume 2 ; 2 >
       au < released ; Behavioral and Brain Functions Volume 3 ; 3 >
       au < released ; Behavioral and Brain Functions Volume 4 ; 4 >
+      au < ready ; Behavioral and Brain Functions Volume 5 ; 5 >
+      au < ready ; Behavioral and Brain Functions Volume 6 ; 6 >
     }
 
     {
@@ -1168,6 +1174,8 @@
       au < released ; Biology Direct Volume 1 ; 1 >
       au < released ; Biology Direct Volume 2 ; 2 >
       au < released ; Biology Direct Volume 3 ; 3 >
+      au < ready ; Biology Direct Volume 4 ; 4 >
+      au < testing ; Biology Direct Volume 5 ; 5 >
     }
 
     {
@@ -1175,6 +1183,8 @@
         name = BioMagnetic Research and Technology ;
         issn = 1477-044X
       >
+
+comment[bmr] = journal archive available, but no new volumes
 
       param[base_url] = http://www.biomagres.com/
       param[journal_issn] = 1477-044X
@@ -1203,6 +1213,8 @@
       au < released ; BioMedical Engineering OnLine Volume 5 ; 5 >
       au < released ; BioMedical Engineering OnLine Volume 6 ; 6 >
       au < released ; BioMedical Engineering OnLine Volume 7 ; 7 >
+      au < testing ; BioMedical Engineering OnLine Volume 8 ; 8 >
+      au < testing ; BioMedical Engineering OnLine Volume 9 ; 9 >
     }
 
     {
@@ -1216,6 +1228,9 @@
 
       au < released ; BioPsychoSocial Medicine Volume 1 ; 1 >
       au < released ; BioPsychoSocial Medicine Volume 2 ; 2 >
+      au < testing ; BioPsychoSocial Medicine Volume 3 ; 3 >
+      au < testing ; BioPsychoSocial Medicine Volume 4 ; 4 >
+      
     }
 
     {
@@ -1228,6 +1243,9 @@
       param[journal_issn] = 1754-6834
 
       au < released ; Biotechnology for Biofuels Volume 1 ; 1 >
+      au < testing ; Biotechnology for Biofuels Volume 2 ; 2 >
+      au < testing ; Biotechnology for Biofuels Volume 3 ; 3 >
+      
     }
 
     {
@@ -1249,6 +1267,9 @@
       au < released ; Breast Cancer Research Volume 8 ; 8 >
       au < released ; Breast Cancer Research Volume 9 ; 9 >
       au < released ; Breast Cancer Research Volume 10 ; 10 >
+      au < testing ; Breast Cancer Research Volume 11 ; 11 >
+      au < testing ; Breast Cancer Research Volume 12 ; 12 >
+      
     }
 
     {
@@ -1268,6 +1289,9 @@
       au < released ; Cancer Cell International Volume 6 ; 6 >
       au < released ; Cancer Cell International Volume 7 ; 7 >
       au < released ; Cancer Cell International Volume 8 ; 8 >
+      au < testing ; Cancer Cell International Volume 9 ; 9 >
+      au < testing ; Cancer Cell International Volume 10 ; 10 >
+
     }
 
     {
@@ -1282,6 +1306,9 @@
       au < released ; Carbon Balance and Management Volume 1 ; 1 >
       au < released ; Carbon Balance and Management Volume 2 ; 2 >
       au < released ; Carbon Balance and Management Volume 3 ; 3 >
+      au < testing ; Carbon Balance and Management Volume 4 ; 4 >
+      au < testing ; Carbon Balance and Management Volume 5 ; 5 >
+
     }
 
     {
