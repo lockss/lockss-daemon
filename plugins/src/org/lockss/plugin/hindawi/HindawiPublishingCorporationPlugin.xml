@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>9</string>
+    <string>10</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -91,5 +91,11 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.hindawi.HindawiPublishingCorporationUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>400=org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException</string>
+    </list>
   </entry>
 </map>
