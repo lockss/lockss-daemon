@@ -437,7 +437,10 @@
     {
 
       title <
-        name = The American Psychiatric Publishing Textbook of Psychiatry
+        name = The American Psychiatric Publishing Textbook of Psychiatry ;
+        type = book ;
+        isbn = 978-1-58562-257-3 ;
+        eisbn = 1-58562-340-2
       >
 
       param[resource_id] = 5
@@ -449,12 +452,30 @@
     {
 
       title <
-        name = Essentials of Clinical Psychopharmacology
+        name = Essentials of Clinical Psychopharmacology ;
+        type = book ;
+        isbn = 1-58562-243-5 ;
+        eisbn = 1-58562-316-4
       >
 
       param[resource_id] = 7
 
       au < down ; Essentials of Clinical Psychopharmacology (2nd Edition) >
+
+    }
+
+    {
+
+      title <
+        name = Manual of Clinical Psychopharmacology ;
+        type = book ;
+        isbn = 978-1-58562-317-4 ;
+        eisbn = 978-1-58562-282-5
+      >
+
+      param[resource_id] = 29
+
+      au < released ; Manual of Clinical Psychopharmacology (6th Edition) >
 
     }
 
