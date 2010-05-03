@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.8 2010-04-21 00:45:55 edwardsb1 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.9 2010-05-03 22:16:14 edwardsb1 Exp $
  */
 
 /*
@@ -76,6 +76,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // For Royal Society pages
         HtmlNodeFilters.tagWithAttribute("div", "id", "ac"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "social_network"),
+        // For biologists.org
+        HtmlNodeFilters.tagWithAttribute("div", "id", "authstring"),
     };
     
     return new HtmlFilterInputStream(in,
