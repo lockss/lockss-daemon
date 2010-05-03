@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressArticleIteratorFactory.java,v 1.1 2010-03-23 01:39:30 thib_gc Exp $
+ * $Id: TestBePressArticleIteratorFactory.java,v 1.2 2010-05-03 15:37:58 thib_gc Exp $
  */
 
 /*
@@ -55,12 +55,29 @@ public class TestBePressArticleIteratorFactory extends LockssTestCase {
                                                                                   "jour",
                                                                                   "123"));
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/iss4/art5");
+    urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/vol123/iss4/art5");
+    urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/iss4/editorial5");
+    urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/vol123/iss4/editorial5");
     urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/iss4/art5");
+    urlShouldNotMatch(pat, "http://www.example.com/wrong/default/vol123/iss4/art5");
+    urlShouldNotMatch(pat, "http://www.example.com/wrong/vol123/iss4/editorial5");
+    urlShouldNotMatch(pat, "http://www.example.com/wrong/default/vol123/iss4/editorial5");
     urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/iss4/art5");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol999/iss4/art5");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/vol999/iss4/editorial5");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol999/iss4/editorial5");
     urlShouldMatch(pat, "http://www.example.com/jour/vol123/iss4/art5");
+    urlShouldMatch(pat, "http://www.example.com/jour/default/vol123/iss4/art5");
+    urlShouldMatch(pat, "http://www.example.com/jour/vol123/iss4/editorial5");
+    urlShouldMatch(pat, "http://www.example.com/jour/default/vol123/iss4/editorial5");
     urlShouldNotMatch(pat, "http://www.example.com/jour/vol123");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123");
     urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/iss4");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123/iss4");
     urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/iss4/art5/wrong");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123/iss4/art5/wrong");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/iss4/editorial5/wrong");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/vol123/iss4/editorial5/wrong");
   }
   
   public void testUrlsWithoutPrefixes() throws Exception {
@@ -68,12 +85,19 @@ public class TestBePressArticleIteratorFactory extends LockssTestCase {
                                                                                   "jour",
                                                                                   "123"));
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/123/4/5");
+    urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/123/4/5");
     urlShouldNotMatch(pat, "http://www.example.com/wrong/123/4/5");
+    urlShouldNotMatch(pat, "http://www.example.com/wrong/default/123/4/5");
     urlShouldNotMatch(pat, "http://www.example.com/jour/999/4/5");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/999/4/5");
     urlShouldMatch(pat, "http://www.example.com/jour/123/4/5");
+    urlShouldMatch(pat, "http://www.example.com/jour/default/123/4/5");
     urlShouldNotMatch(pat, "http://www.example.com/jour/123");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/123");
     urlShouldNotMatch(pat, "http://www.example.com/jour/123/4");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/123/4");
     urlShouldNotMatch(pat, "http://www.example.com/jour/123/4/5/wrong");
+    urlShouldNotMatch(pat, "http://www.example.com/jour/default/123/4/5/wrong");
   }
   
   public void testShortArticleUrls() throws Exception {
