@@ -51,6 +51,8 @@
   <property name="PLoSGenetics1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
+   <property name="issn" value="1553-7390" />
+   <property name="eissn" value="1553-7404" />
    <property name="title" value="PLoS Genetics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -65,12 +67,15 @@
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSGenetics2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
+   <property name="issn" value="1553-7390" />
+   <property name="eissn" value="1553-7404" />
    <property name="title" value="PLoS Genetics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -85,12 +90,15 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSGenetics3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
+   <property name="issn" value="1553-7390" />
+   <property name="eissn" value="1553-7404" />
    <property name="title" value="PLoS Genetics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -105,12 +113,15 @@
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSGenetics4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Genetics" />
+   <property name="issn" value="1553-7390" />
+   <property name="eissn" value="1553-7404" />
    <property name="title" value="PLoS Genetics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -125,12 +136,15 @@
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSComputationalBiology1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
+   <property name="issn" value="1553-734X" />
+   <property name="eissn" value="1553-7358" />
    <property name="title" value="PLoS Computational Biology Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -145,12 +159,15 @@
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSComputationalBiology2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
+   <property name="issn" value="1553-734X" />
+   <property name="eissn" value="1553-7358" />
    <property name="title" value="PLoS Computational Biology Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -165,12 +182,15 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSComputationalBiology3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
+   <property name="issn" value="1553-734X" />
+   <property name="eissn" value="1553-7358" />
    <property name="title" value="PLoS Computational Biology Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -185,12 +205,15 @@
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSComputationalBiology4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Computational Biology" />
+   <property name="issn" value="1553-734X" />
+   <property name="eissn" value="1553-7358" />
    <property name="title" value="PLoS Computational Biology Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -205,12 +228,14 @@
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSOne1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS One" />
+   <property name="issn" value="1932-6203" />
    <property name="title" value="PLoS One Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -225,12 +250,14 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSOne2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS One" />
+   <property name="issn" value="1932-6203" />
    <property name="title" value="PLoS One Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -245,12 +272,14 @@
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSOne3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS One" />
+   <property name="issn" value="1932-6203" />
    <property name="title" value="PLoS One Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -265,12 +294,14 @@
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSNeglectedTropicalDiseases1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Neglected Tropical Diseases" />
+   <property name="issn" value="1935-2735" />
    <property name="title" value="PLoS Neglected Tropical Diseases Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -285,12 +316,14 @@
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSNeglectedTropicalDiseases2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Neglected Tropical Diseases" />
+   <property name="issn" value="1935-2735" />
    <property name="title" value="PLoS Neglected Tropical Diseases Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -305,12 +338,15 @@
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSPathogens1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
+   <property name="issn" value="1553-7366" />
+   <property name="eissn" value="1553-7374" />
    <property name="title" value="PLoS Pathogens Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -325,12 +361,15 @@
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSPathogens2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
+   <property name="issn" value="1553-7366" />
+   <property name="eissn" value="1553-7374" />
    <property name="title" value="PLoS Pathogens Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -345,12 +384,15 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSPathogens3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
+   <property name="issn" value="1553-7366" />
+   <property name="eissn" value="1553-7374" />
    <property name="title" value="PLoS Pathogens Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -365,12 +407,15 @@
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSPathogens4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
+   <property name="issn" value="1553-7366" />
+   <property name="eissn" value="1553-7374" />
    <property name="title" value="PLoS Pathogens Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -385,13 +430,16 @@
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="PLoSPathogens4">
+  <property name="PLoSPathogens5">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Pathogens" />
-   <property name="title" value="PLoS Pathogens Volume 4" />
+   <property name="issn" value="1553-7366" />
+   <property name="eissn" value="1553-7374" />
+   <property name="title" value="PLoS Pathogens Volume 5" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -405,7 +453,8 @@
     <property name="key" value="year" />
     <property name="value" value="2009" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2009" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSClinicalTrials1">
@@ -425,7 +474,8 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSClinicalTrials2">
@@ -445,7 +495,8 @@
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSClinicalTrials3">
@@ -465,12 +516,15 @@
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSMedicine1">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Medicine" />
+   <property name="issn" value="1549-1277" />
+   <property name="eissn" value="1549-1676" />
    <property name="title" value="PLoS Medicine Volume 1" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -485,12 +539,15 @@
     <property name="key" value="year" />
     <property name="value" value="2004" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2004" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSMedicine2">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Medicine" />
+   <property name="issn" value="1549-1277" />
+   <property name="eissn" value="1549-1676" />
    <property name="title" value="PLoS Medicine Volume 2" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -505,12 +562,15 @@
     <property name="key" value="year" />
     <property name="value" value="2005" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2005" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSMedicine3">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Medicine" />
+   <property name="issn" value="1549-1277" />
+   <property name="eissn" value="1549-1676" />
    <property name="title" value="PLoS Medicine Volume 3" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -525,12 +585,15 @@
     <property name="key" value="year" />
     <property name="value" value="2006" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2006" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSMedicine4">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Medicine" />
+   <property name="issn" value="1549-1277" />
+   <property name="eissn" value="1549-1676" />
    <property name="title" value="PLoS Medicine Volume 4" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -545,12 +608,15 @@
     <property name="key" value="year" />
     <property name="value" value="2007" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2007" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSMedicine5">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Medicine" />
+   <property name="issn" value="1549-1277" />
+   <property name="eissn" value="1549-1676" />
    <property name="title" value="PLoS Medicine Volume 5" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -565,12 +631,15 @@
     <property name="key" value="year" />
     <property name="value" value="2008" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2008" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
   <property name="PLoSMedicine6">
    <property name="attributes.publisher" value="Public Library of Science" />
    <property name="journalTitle" value="PLoS Medicine" />
+   <property name="issn" value="1549-1277" />
+   <property name="eissn" value="1549-1676" />
    <property name="title" value="PLoS Medicine Volume 6" />
    <property name="plugin" value="org.lockss.plugin.topaz.TopazPlugin" />
    <property name="param.1">
@@ -585,7 +654,8 @@
     <property name="key" value="year" />
     <property name="value" value="2009" />
    </property>
-   <property name="attribute.rights" value="openaccess" />
+   <property name="attributes.year" value="2009" />
+   <property name="attributes.rights" value="openaccess" />
   </property>
 
  </property>

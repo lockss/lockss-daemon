@@ -5,7 +5,7 @@
   
   rights = openaccess
   plugin = org.lockss.plugin.topaz.TopazPlugin
-  implicit < status ; name ; param[year] >
+  implicit < status ; year ; name ; param[year] >
 
   {
     title <
@@ -17,10 +17,10 @@
     param[base_url] = http://www.plosgenetics.org/    
     param[journal_id] = genetics
 
-    au < released ; PLoS Genetics Volume 1 ; 2005 >
-    au < released ; PLoS Genetics Volume 2 ; 2006 >
-    au < released ; PLoS Genetics Volume 3 ; 2007 >
-    au < released ; PLoS Genetics Volume 4 ; 2008 >
+    au < released ; 2005 ; PLoS Genetics Volume 1 ; 2005 >
+    au < released ; 2006 ; PLoS Genetics Volume 2 ; 2006 >
+    au < released ; 2007 ; PLoS Genetics Volume 3 ; 2007 >
+    au < released ; 2008 ; PLoS Genetics Volume 4 ; 2008 >
 
   }
 
@@ -34,10 +34,10 @@
     param[base_url] = http://www.ploscompbiol.org/    
     param[journal_id] = compbiol
 
-    au < released ; PLoS Computational Biology Volume 1 ; 2005 >
-    au < released ; PLoS Computational Biology Volume 2 ; 2006 >
-    au < released ; PLoS Computational Biology Volume 3 ; 2007 >
-    au < released ; PLoS Computational Biology Volume 4 ; 2008 >
+    au < released ; 2005 ; PLoS Computational Biology Volume 1 ; 2005 >
+    au < released ; 2006 ; PLoS Computational Biology Volume 2 ; 2006 >
+    au < released ; 2007 ; PLoS Computational Biology Volume 3 ; 2007 >
+    au < released ; 2008 ; PLoS Computational Biology Volume 4 ; 2008 >
 
   }
 
@@ -53,9 +53,9 @@
     param[base_url] = http://www.plosone.org/    
     param[journal_id] = plosone
 
-    au < notReady ; PLoS One Volume 1 ; 2006 >
-    au < notReady ; PLoS One Volume 2 ; 2007 >
-    au < notReady ; PLoS One Volume 3 ; 2008 >
+    au < notReady ; 2006 ; PLoS One Volume 1 ; 2006 >
+    au < notReady ; 2007 ; PLoS One Volume 2 ; 2007 >
+    au < notReady ; 2008 ; PLoS One Volume 3 ; 2008 >
 
   }
   
@@ -69,8 +69,8 @@
     param[base_url] = http://www.plosntds.org/    
     param[journal_id] = ntd
 
-    au < releasing ; PLoS Neglected Tropical Diseases Volume 1 ; 2007 >
-    au < releasing ; PLoS Neglected Tropical Diseases Volume 2 ; 2008 >
+    au < released ; 2007 ; PLoS Neglected Tropical Diseases Volume 1 ; 2007 >
+    au < released ; 2008 ; PLoS Neglected Tropical Diseases Volume 2 ; 2008 >
 
   }
   
@@ -85,11 +85,11 @@
     param[base_url] = http://www.plospathogens.org/    
     param[journal_id] = pathogens
 
-    au < released ; PLoS Pathogens Volume 1 ; 2005 >
-    au < released ; PLoS Pathogens Volume 2 ; 2006 >
-    au < released ; PLoS Pathogens Volume 3 ; 2007 >
-    au < released ; PLoS Pathogens Volume 4 ; 2008 >
-    au < released ; PLoS Pathogens Volume 5 ; 2009 >
+    au < released ; 2005 ; PLoS Pathogens Volume 1 ; 2005 >
+    au < released ; 2006 ; PLoS Pathogens Volume 2 ; 2006 >
+    au < released ; 2007 ; PLoS Pathogens Volume 3 ; 2007 >
+    au < released ; 2008 ; PLoS Pathogens Volume 4 ; 2008 >
+    au < released ; 2009 ; PLoS Pathogens Volume 5 ; 2009 >
 
   }
   
@@ -104,9 +104,9 @@
     param[base_url] = http://clinicaltrials.ploshubs.org/    
     param[journal_id] = clinicalTrials
 
-    au < exists ; PLoS Clinical Trials Volume 1 ; 2006 >
-    au < exists ; PLoS Clinical Trials Volume 2 ; 2007 >
-    au < exists ; PLoS Clinical Trials Volume 3 ; 2008 >
+    au < exists ; 2006 ; PLoS Clinical Trials Volume 1 ; 2006 >
+    au < exists ; 2007 ; PLoS Clinical Trials Volume 2 ; 2007 >
+    au < exists ; 2008 ; PLoS Clinical Trials Volume 3 ; 2008 >
 
   }
 
@@ -120,12 +120,12 @@
     param[base_url] = http://www.plosmedicine.org/   
     param[journal_id] = medicine
 
-    au < released ; PLoS Medicine Volume 1 ; 2004 >
-    au < released ; PLoS Medicine Volume 2 ; 2005 >
-    au < released ; PLoS Medicine Volume 3 ; 2006 >
-    au < released ; PLoS Medicine Volume 4 ; 2007 >
-    au < released ; PLoS Medicine Volume 5 ; 2008 >
-    au < released ; PLoS Medicine Volume 6 ; 2009 >
+    au < released ; 2004 ; PLoS Medicine Volume 1 ; 2004 >
+    au < released ; 2005 ; PLoS Medicine Volume 2 ; 2005 >
+    au < released ; 2006 ; PLoS Medicine Volume 3 ; 2006 >
+    au < released ; 2007 ; PLoS Medicine Volume 4 ; 2007 >
+    au < released ; 2008 ; PLoS Medicine Volume 5 ; 2008 >
+    au < released ; 2009 ; PLoS Medicine Volume 6 ; 2009 >
 
   }
 
