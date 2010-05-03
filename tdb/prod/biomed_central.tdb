@@ -2315,13 +2315,13 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.microbialcellfactories.com/
       param[journal_issn] = 1475-2859
 
-      au < testing ; Microbial Cell Factories Volume 1 ; 1 >
-      au < testing ; Microbial Cell Factories Volume 2 ; 2 >
-      au < testing ; Microbial Cell Factories Volume 3 ; 3 >
+      au < ready ; Microbial Cell Factories Volume 1 ; 1 >
+      au < ready ; Microbial Cell Factories Volume 2 ; 2 >
+      au < ready ; Microbial Cell Factories Volume 3 ; 3 >
       au < testing ; Microbial Cell Factories Volume 4 ; 4 >
-      au < testing ; Microbial Cell Factories Volume 5 ; 5 >
-      au < testing ; Microbial Cell Factories Volume 6 ; 6 >
-      au < testing ; Microbial Cell Factories Volume 7 ; 7 >
+      au < ready ; Microbial Cell Factories Volume 5 ; 5 >
+      au < ready ; Microbial Cell Factories Volume 6 ; 6 >
+      au < ready ; Microbial Cell Factories Volume 7 ; 7 >
       au < testing ; Microbial Cell Factories Volume 8 ; 8 >
       au < testing ; Microbial Cell Factories Volume 9 ; 9 >
 
@@ -2336,9 +2336,9 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.molecularbrain.com/
       param[journal_issn] = 1756-6606
 
-      au < testing ; Molecular Brain Volume 1 ; 1 >
-      au < testing ; Molecular Brain Volume 2 ; 2 >
-      au < testing ; Molecular Brain Volume 3 ; 3 >
+      au < ready ; Molecular Brain Volume 1 ; 1 >
+      au < ready ; Molecular Brain Volume 2 ; 2 >
+      au < ready ; Molecular Brain Volume 3 ; 3 >
     }
 
     {
@@ -2350,15 +2350,15 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.molecular-cancer.com/
       param[journal_issn] = 1476-4598
 
-      au < testing ; Molecular Cancer Volume 1 ; 1 >
-      au < testing ; Molecular Cancer Volume 2 ; 2 >
-      au < testing ; Molecular Cancer Volume 3 ; 3 >
-      au < testing ; Molecular Cancer Volume 4 ; 4 >
-      au < testing ; Molecular Cancer Volume 5 ; 5 >
-      au < testing ; Molecular Cancer Volume 6 ; 6 >
-      au < testing ; Molecular Cancer Volume 7 ; 7 >
+      au < ready ; Molecular Cancer Volume 1 ; 1 >
+      au < ready ; Molecular Cancer Volume 2 ; 2 >
+      au < ready ; Molecular Cancer Volume 3 ; 3 >
+      au < ready ; Molecular Cancer Volume 4 ; 4 >
+      au < ready ; Molecular Cancer Volume 5 ; 5 >
+      au < ready ; Molecular Cancer Volume 6 ; 6 >
+      au < ready ; Molecular Cancer Volume 7 ; 7 >
       au < testing ; Molecular Cancer Volume 8 ; 8 >
-      au < testing ; Molecular Cancer Volume 9 ; 9 >
+      au < ready ; Molecular Cancer Volume 9 ; 9 >
     }
 
     {
@@ -2370,9 +2370,9 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.molecularcytogenetics.org/
       param[journal_issn] = 1755-8166
 
-      au < testing ; Molecular Cytogenetics Volume 1 ; 1 >
-      au < testing ; Molecular Cytogenetics Volume 2 ; 2 >
-      au < testing ; Molecular Cytogenetics Volume 3 ; 3 >
+      au < ready ; Molecular Cytogenetics Volume 1 ; 1 >
+      au < ready ; Molecular Cytogenetics Volume 2 ; 2 >
+      au < ready ; Molecular Cytogenetics Volume 3 ; 3 >
       
     }
 
@@ -2385,11 +2385,11 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.molecularneurodegeneration.com/
       param[journal_issn] = 1750-1326
 
-      au < testing ; Molecular Neurodegeneration Volume 1 ; 1 >
-      au < testing ; Molecular Neurodegeneration Volume 2 ; 2 >
+      au < ready ; Molecular Neurodegeneration Volume 1 ; 1 >
+      au < ready ; Molecular Neurodegeneration Volume 2 ; 2 >
       au < testing ; Molecular Neurodegeneration Volume 3 ; 3 >
-      au < testing ; Molecular Neurodegeneration Volume 4 ; 4 >
-      au < testing ; Molecular Neurodegeneration Volume 5 ; 5 >      
+      au < ready ; Molecular Neurodegeneration Volume 4 ; 4 >
+      au < ready ; Molecular Neurodegeneration Volume 5 ; 5 >      
     }
 
     {
@@ -2420,9 +2420,9 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < ready ; Neural Development Volume 1 ; 1 >
       au < ready ; Neural Development Volume 2 ; 2 >
-      au < testing ; Neural Development Volume 3 ; 3 >
+      au < ready ; Neural Development Volume 3 ; 3 >
       au < ready ; Neural Development Volume 4 ; 4 >
-      au < testing ; Neural Development Volume 5 ; 5 >
+      au < ready ; Neural Development Volume 5 ; 5 >
     }
 
     {
@@ -2806,7 +2806,7 @@ comment[bmr] = journal archive available, but no new volumes
       au < ready ; Trials Volume 8 ; 8 >
       au < ready ; Trials Volume 9 ; 9 >
       au < ready ; Trials Volume 10 ; 10 >
-      au < testing ; Trials Volume 11 ; 11 >
+      au < ready ; Trials Volume 11 ; 11 >
     }
 
     {
