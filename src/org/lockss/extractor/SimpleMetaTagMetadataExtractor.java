@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleMetaTagMetadataExtractor.java,v 1.2 2009-05-27 16:39:04 dshr Exp $
+ * $Id: SimpleMetaTagMetadataExtractor.java,v 1.3 2010-05-04 23:34:51 tlipkis Exp $
  */
 
 /*
@@ -49,14 +49,14 @@ public class SimpleMetaTagMetadataExtractor implements MetadataExtractor {
     }
     Metadata ret = new Metadata();
     BufferedReader bReader =
-	new BufferedReader(cu.openForReading());
+      new BufferedReader(cu.openForReading());
     for (String line = bReader.readLine();
 	 line != null;
 	 line = bReader.readLine()) {
       line = line.trim();
       if (StringUtil.startsWithIgnoreCase(line, "<meta ")) {
-	  log.debug2("Line: " + line);
-	  addTag(line, ret);
+	if (log.isDebug3()) log.debug3("Line: " + line);
+	addTag(line, ret);
       }
     }
     IOUtil.safeClose(bReader);
@@ -66,37 +66,39 @@ public class SimpleMetaTagMetadataExtractor implements MetadataExtractor {
     String nameFlag = "name=\"";
     int nameBegin = StringUtil.indexOfIgnoreCase(line, nameFlag);
     if (nameBegin <= 0) {
-      log.debug(line + " : no " + nameFlag);
+      if (log.isDebug3()) log.debug3(line + " : no " + nameFlag);
       return;
     }
     nameBegin += nameFlag.length();
     int nameEnd = line.indexOf('"', nameBegin + 1);
     if (nameEnd <= nameBegin) {
-      log.debug(line + " : " + nameFlag + " unterminated");
+      log.debug2(line + " : " + nameFlag + " unterminated");
       return;
     }
     String name = line.substring(nameBegin, nameEnd);
     String contentFlag = "content=\"";
     int contentBegin = StringUtil.indexOfIgnoreCase(line, contentFlag);
     if (contentBegin <= 0) {
-      log.debug(line + " : no " + contentFlag);
+      if (log.isDebug3()) log.debug3(line + " : no " + contentFlag);
       return;
     }
     if (nameBegin <= contentBegin && nameEnd >= contentBegin) {
-      log.debug(line + " : " + contentFlag + " overlaps " + nameFlag);
+      log.debug2(line + " : " + contentFlag + " overlaps " + nameFlag);
       return;
     }
     contentBegin += contentFlag.length();
     int contentEnd = line.indexOf('"', contentBegin + 1);
-    log.debug(line + " name [" + nameBegin + "," + nameEnd + "] cont [" +
-	      contentBegin + "," + contentEnd + "]");
+    if (log.isDebug3()) {
+      log.debug3(line + " name [" + nameBegin + "," + nameEnd + "] cont [" +
+		 contentBegin + "," + contentEnd + "]");
+    }
     if (contentEnd <= contentBegin) {
-      log.debug(line + " : " + contentFlag + " unterminated");
+      log.debug2(line + " : " + contentFlag + " unterminated");
       return;
     }
     if (contentBegin <= (nameBegin - nameFlag.length())
 	&& contentEnd >= (nameBegin - nameFlag.length())) {
-      log.debug(line + " : " + nameFlag + " overlaps " + contentFlag);
+      log.debug2(line + " : " + nameFlag + " overlaps " + contentFlag);
       return;
     }
       
@@ -105,7 +107,7 @@ public class SimpleMetaTagMetadataExtractor implements MetadataExtractor {
       String oldContent = ret.getProperty(name);
       content = oldContent + ";" + content;
     }
-    log.debug("Add: " + name + " = " + content);
+    if (log.isDebug3()) log.debug3("Add: " + name + " = " + content);
     ret.setProperty(name, content);
   }
 }
