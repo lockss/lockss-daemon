@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.36 2010-02-23 13:50:54 pgust Exp $
+ * $Id: TestUrlUtil.java,v 1.37 2010-05-04 23:34:40 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
 public class TestUrlUtil extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestUrlUtil");
@@ -367,6 +368,18 @@ public class TestUrlUtil extends LockssTestCase {
 
     assertEquals("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033",
 		 UrlUtil.normalizeUrl("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033#content"));
+  }
+
+  public void testNormalizeSite()
+      throws MalformedURLException, PluginBehaviorException {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setUrlNormalizeString("remove");
+    String s = "http://a.com/b";
+    assertSame(s, UrlUtil.normalizeUrl(s, mau));
+    assertEquals("http://a.com/b",
+		 UrlUtil.normalizeUrl("http://a.com/removeb", mau));
+    assertEquals("http://a.com/REMOVEB",
+		 UrlUtil.normalizeUrl("HTTP://A.COM/REMOVEB", mau));
   }
 
   public void testNormalizeAkamai() throws MalformedURLException {

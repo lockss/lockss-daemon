@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.21 2009-10-03 02:55:07 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.22 2010-05-04 23:34:40 tlipkis Exp $
  */
 
 /*
@@ -127,6 +127,7 @@ public class ServeContent extends LockssServlet {
 
   private String action;
   private String verbose;
+  private ArchivalUnit au;
   private String url;
   private String doi;
   private String issn;
@@ -149,6 +150,7 @@ public class ServeContent extends LockssServlet {
   protected void resetLocals() {
     cu = null;
     url = null;
+    au = null;
     doi = null;
     issn = null;
     volume = null;
@@ -216,9 +218,23 @@ public class ServeContent extends LockssServlet {
 
     verbose = getParameter("verbose");
     url = getParameter("url");
+    String auid = getParameter("auid");
     if (!StringUtil.isNullString(url)) {
+      if (!StringUtil.isNullString(auid)) {
+	au = pluginMgr.getAuFromId(auid);
+      }
       if (normalizeUrl) {
-	String normUrl = UrlUtil.normalizeUrl(url);
+	String normUrl;
+	if (au != null) {
+	  try {
+	    normUrl = UrlUtil.normalizeUrl(url, au);
+	  } catch (PluginBehaviorException e) {
+	    log.warning("Couldn't site-normalize URL: " + url, e);
+	    normUrl = UrlUtil.normalizeUrl(url);
+	  }
+	} else {
+	  normUrl = UrlUtil.normalizeUrl(url);
+	}
 	if (normUrl != url) {
 	  log.debug(url + " normalized to " + normUrl);
 	  url = normUrl;
@@ -251,11 +267,16 @@ public class ServeContent extends LockssServlet {
     log.debug("url " + url);
     try {
       // Get the CachedUrl for the URL, only if it has content.
-      cu = pluginMgr.findCachedUrl(url, true);
+      if (au != null) {
+	cu = au.makeCachedUrl(url);
+      } else {
+	cu = pluginMgr.findCachedUrl(url, true);
+      }
       if (cu != null && cu.hasContent()) {
 	handleCuRequest();
       } else {
-	log.debug(url + " not found");
+	log.debug(url + " not found"
+		  + ((au != null) ? " in AU: " + au.getName() : ""));
 	handleMissingUrlRequest(url);
       }
     } catch (IOException e) {
@@ -363,36 +384,38 @@ public class ServeContent extends LockssServlet {
 
   protected void handleMissingUrlRequest(String missingUrl)
       throws IOException {
-    String err = "URL " + missingUrl + " not found";
+    String missing =
+      missingUrl + ((au != null) ? " in AU: " + au.getName() : "");
     switch (missingFileAction) {
     case Error_404:
       resp.sendError(HttpServletResponse.SC_NOT_FOUND,
-		     missingUrl + " is not preserved on this LOCKSS box");
+		     missing + " is not preserved on this LOCKSS box");
       break;
     case HostAuIndex:
       Collection candidateAus = pluginMgr.getCandidateAus(missingUrl);
       if (candidateAus != null && !candidateAus.isEmpty()) {
 	displayIndexPage(candidateAus,
 			 HttpResponse.__404_Not_Found,
-			 "Requested URL ( " + missingUrl
+			 "Requested URL ( " + missing
 			 + " ) is not preserved on this LOCKSS box.  "
 			 + "Possibly related content may be found "
 			 + "in the following Archival Units");
       } else {
 	resp.sendError(HttpServletResponse.SC_NOT_FOUND,
-		       missingUrl + " is not preserved on this LOCKSS box");
+		       missing + " is not preserved on this LOCKSS box");
       }
       break;
     case AuIndex:
       displayIndexPage(pluginMgr.getAllAus(),
 		       HttpResponse.__404_Not_Found,
-		       "Requested URL ( " + missingUrl
+		       "Requested URL ( " + missing
 		       + " ) is not preserved on this LOCKSS box.");
       break;
     case ForwardRequest:
       // Easiest way to do this is probably to return without handling the
       // request and add a proxy handler to the context.
-      resp.sendError(HttpServletResponse.SC_NOT_FOUND, err); // placeholder
+      resp.sendError(HttpServletResponse.SC_NOT_FOUND,
+		     "URL " + missing + " not found"); // placeholder
       break;
     }
   }
@@ -437,10 +460,15 @@ public class ServeContent extends LockssServlet {
 				  pred,
 				  header,
 				  new ServletUtil.ManifestUrlTransform() {
-				    public Object transformUrl(String url) {
+				    public Object transformUrl(String url,
+							       ArchivalUnit au){
+				      Properties query =
+					PropUtil.fromArgs("url", url);
+				      if (au != null) {
+					query.put("auid", au.getAuId());
+				      }
 				      return srvLink(myServletDescr(),
-						     url,
-						     "url=" + url);
+						     url, query);
 				    }},
 				  true);
       page.add(ele);

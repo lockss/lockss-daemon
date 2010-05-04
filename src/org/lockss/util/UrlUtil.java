@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.52 2010-02-10 01:03:28 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.53 2010-05-04 23:34:40 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -253,33 +253,40 @@ public class UrlUtil {
    * changes constitute more than "normalization".  This might be too
    * strict; transformations such as <code>publisher.com ->
    * www.publisher.com</code> might fall within the scope of normalization.
+   * @param url the url to normalize
+   * @param au the AU in which to look for a plugin-specific normalizer, or
+   * null for no plugin-specific normalization
    * @throws MalformedURLException if the plugin's normalizer throws, or if
    * the URL it returns is malformed.
    * @throws PluginBehaviorException if the plugin changes the URL in a way
-   * it should (<i>e.g.</i>, the protocol)
+   * it shouldn't (the protocol, host or port)
    */
   public static String normalizeUrl(String url, ArchivalUnit au)
       throws MalformedURLException, PluginBehaviorException {
     String site;
-    try {
-      site = au.siteNormalizeUrl(url);
-    } catch (RuntimeException w) {
-      throw new MalformedURLException(url);
-    }
-    if (site != url) {
-      if (site.equals(url)) {
-	// ensure return arg if equal
-	site = url;
-      } else {
-	// illegal normalization if changed proto, host or port
-	URL origUrl = new URL(url);
-	URL siteUrl = new URL(site);
-	if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
-	       origUrl.getHost().equals(siteUrl.getHost()) &&
-	       origUrl.getPort() == siteUrl.getPort())) {
-	  throw new PluginBehaviorException("siteNormalizeUrl(" + url +
-					    ") altered non-alterable component: " +
-					    site);
+    if (au == null) {
+      site = url;
+    } else {
+      try {
+	site = au.siteNormalizeUrl(url);
+      } catch (RuntimeException w) {
+	throw new MalformedURLException(url);
+      }
+      if (site != url) {
+	if (site.equals(url)) {
+	  // ensure return arg if equal
+	  site = url;
+	} else {
+	  // illegal normalization if changed proto, host or port
+	  URL origUrl = new URL(url);
+	  URL siteUrl = new URL(site);
+	  if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
+		 origUrl.getHost().equals(siteUrl.getHost()) &&
+		 origUrl.getPort() == siteUrl.getPort())) {
+	    throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+					      ") altered non-alterable component: " +
+					      site);
+	  }
 	}
       }
     }
