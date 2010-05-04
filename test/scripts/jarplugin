@@ -1,0 +1,62 @@
+#!/bin/sh
+
+# Bare-bones plugin packager that builds a plugin jar containing possibly
+# multiple plugins from possibly multiple plugin dirs.  The resulting jar
+# must then be signed (e.g., with signplugin).
+#
+usage() {
+  echo "usage: $0 [-b basedir] -j jarfile -d plugin-dirN -p pluginN"
+  echo "  -b basedir     top dir of plugin class hierarchy, default: ./plugins/classes"
+  echo "  -j jarfile     output jar file"
+  echo "  -d plugin-dirN path to plugin class dir (relative to basedir)"
+  echo "  -p pluginN     path to plugin .xml or .class file (rel to basedir)"
+  echo
+  echo "All the files in each directory named with -d are added to the jar;"
+  echo "all the files named with -p (which must be in the -d dirs) are"
+  echo "marked as being plugins that the daemon may load."
+  exit 2
+}
+
+basedir=plugins/classes
+plugs=""
+dirs=""
+jar=""
+
+while true ; do
+  case "$1" in
+    "-b" )
+      basedir="$2"
+      shift; shift; continue;;
+    "-j" )
+      jar="$2"
+      shift; shift; continue;;
+    "-p" )
+      plugs="$plugs $2"
+      shift; shift; continue;;
+    "-d" )
+      dirs="$dirs $2"
+      shift; shift; continue;;
+  esac
+  break;
+done
+
+if [ -z "$jar" -o -z "$dirs" -o -z "$plugs" ]; then
+  usage
+fi
+
+tmpdir=`mktemp -d /tmp/jartmp.XXXXXX`
+manifest=`mktemp /tmp/manifest.XXXXXX`
+
+echo "" >$manifest
+
+for p in $plugs; do
+  echo "Name: $p" >>$manifest
+  echo "Lockss-Plugin: true" >>$manifest
+  echo "" >>$manifest
+done
+
+(cd $basedir; tar --create --exclude=CVS --file - $dirs) | (cd $tmpdir; tar xfBp -)
+(cd $tmpdir; jar cfm $jar $manifest .)
+
+rm $manifest
+rm -r $tmpdir
