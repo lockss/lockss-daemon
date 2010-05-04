@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.37 2010-04-05 17:31:36 pgust Exp $
+ * $Id: TestConfigManager.java,v 1.38 2010-05-04 03:37:04 tlipkis Exp $
  */
 
 /*
@@ -728,7 +728,7 @@ public class TestConfigManager extends LockssTestCase {
     mgr.updateConfig(Collections.EMPTY_LIST);
     assertTrue(mgr.isLegalExpertConfigKey("org.lockss.unrelated.param"));
     assertTrue(mgr.isLegalExpertConfigKey("org.lockss.foo.passwordFrob"));
-    assertTrue(mgr.isLegalExpertConfigKey("org.lockss.keystore.abcdy.keyFile"));
+    assertFalse(mgr.isLegalExpertConfigKey("org.lockss.keystore.abcdy.keyFile"));
     assertFalse(mgr.isLegalExpertConfigKey("org.lockss.foo.password"));
     assertFalse(mgr.isLegalExpertConfigKey("org.lockss.keystore.foo.keyPasswordFile"));
     assertFalse(mgr.isLegalExpertConfigKey("org.lockss.platform.anything"));
