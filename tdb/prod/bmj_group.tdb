@@ -621,8 +621,9 @@
     au < HighWireStrVolPlugin ; released ; Gut Volume 54 ; 54 >
     au < HighWireStrVolPlugin ; released ; Gut Volume 55 ; 55 >
     au < HighWireStrVolPlugin ; released ; Gut Volume 56 ; 56 >
-    au < HighWirePressH20Plugin ; manifest ; Gut Volume 57 ; 57 >
-    au < HighWirePressH20Plugin ; manifest ; Gut Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; Gut Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; testing ; Gut Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; testing ; Gut Volume 59 ; 59 >
 
   }
 
@@ -726,8 +727,9 @@
     au < HighWireStrVolPlugin ; released ; Heart Volume 91 ; 91 >
     au < HighWireStrVolPlugin ; released ; Heart Volume 92 ; 92 >
     au < HighWireStrVolPlugin ; released ; Heart Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; manifest ; Heart Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; manifest ; Heart Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; testing ; Heart Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; testing ; Heart Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; testing ; Heart Volume 96 ; 96 >
 
   }
 
@@ -762,10 +764,11 @@
       au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; Injury Prevention Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; Injury Prevention Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; testing ; Injury Prevention Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; testing ; Injury Prevention Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; testing ; Injury Prevention Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; Injury Prevention Volume 16 ; 16 >
       
     }
 

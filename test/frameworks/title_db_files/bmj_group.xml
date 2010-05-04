@@ -7732,6 +7732,23 @@
    </property>
   </property>
 
+  <property name="Gut59">
+   <property name="attributes.publisher" value="BMJ Group" />
+   <property name="journalTitle" value="Gut" />
+   <property name="issn" value="0017-5749" />
+   <property name="eissn" value="1468-3288" />
+   <property name="title" value="Gut Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://gut.bmj.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="59" />
+   </property>
+  </property>
+
   <property name="Heart1">
    <property name="attributes.publisher" value="BMJ Group" />
    <property name="journalTitle" value="Heart" />
@@ -9313,6 +9330,23 @@
    </property>
   </property>
 
+  <property name="Heart96">
+   <property name="attributes.publisher" value="BMJ Group" />
+   <property name="journalTitle" value="Heart" />
+   <property name="issn" value="1355-6037" />
+   <property name="eissn" value="1468-201X" />
+   <property name="title" value="Heart Volume 96" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://heart.bmj.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="96" />
+   </property>
+  </property>
+
   <property name="InjuryPrevention10">
    <property name="attributes.publisher" value="BMJ Group" />
    <property name="journalTitle" value="Injury Prevention" />
@@ -9565,6 +9599,23 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="15" />
+   </property>
+  </property>
+
+  <property name="InjuryPrevention16">
+   <property name="attributes.publisher" value="BMJ Group" />
+   <property name="journalTitle" value="Injury Prevention" />
+   <property name="issn" value="1353-8047" />
+   <property name="eissn" value="1475-5785" />
+   <property name="title" value="Injury Prevention Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://injuryprevention.bmj.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
    </property>
   </property>
 
