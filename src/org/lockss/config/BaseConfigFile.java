@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.7 2010-04-03 17:05:48 pgust Exp $
+ * $Id: BaseConfigFile.java,v 1.8 2010-05-04 03:36:51 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 import java.util.*;
 
 import org.apache.commons.lang.StringUtils;
-import org.lockss.state.AuStateBean;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
