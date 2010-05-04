@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.18 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.19 2010-05-04 03:36:36 tlipkis Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -121,14 +121,18 @@ public class AlertManagerImpl
 					DEFAULT_DELAY_MAX);
       ignoredAlerts = SetUtil.theSet(config.getList(PARAM_IGNORED_ALERTS));
 
-      if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)) {
+      if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)
+	  || changedKeys.contains(PARAM_CONFIG)) {
 	String allEmail = config.get(PARAM_ALERT_ALL_EMAIL);
+	log.info("Installing allEmail config, to: " + allEmail);
 	if (!StringUtil.isNullString(allEmail)) {
 	  tmpConfig(allEmail);
 	}
-      }
-      if (changedKeys.contains(PARAM_CONFIG)) {
-	loadConfig(config.getConfigTree(PARAM_CONFIG));
+	Configuration cfg = config.getConfigTree(PARAM_CONFIG);
+	if (cfg != null && !cfg.isEmpty()) {
+	  log.info("Installing config: " + cfg);
+	  loadConfig(cfg);
+	}
       }
     }
   }

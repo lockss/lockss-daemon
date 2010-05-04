@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.14 2009-06-09 06:11:53 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.15 2010-05-04 03:36:36 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,32 @@ public class TestAlertManagerImpl extends LockssTestCase {
     ConfigurationUtil.setFromArgs(AlertManagerImpl.PARAM_CONFIG + ".foo", str);
 
     assertEquals(conf, mgr.getConfig());
+  }
+
+  public void testAllEmail() throws Exception {
+    String addr = "foo@bar";
+    AlertAction action = new AlertActionMail(addr);
+    AlertConfig expac =
+      new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
+						    action)));
+    Properties p = new Properties();
+    // no real config, allEmail set, should have tmpConfig
+    p.put(AlertManagerImpl.PARAM_ALERT_ALL_EMAIL, addr);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    assertEquals(expac, mgr.getConfig());
+
+    // Add a real config, it should be installed
+    String emptyXmlConfig = "<org.lockss.alert.AlertConfig>" +
+      "</org.lockss.alert.AlertConfig>";
+
+    p.put(AlertManagerImpl.PARAM_CONFIG + ".foo", emptyXmlConfig);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    assertEquals(new AlertConfig(), mgr.getConfig());
+
+    // Remove real config, should go back to tmpConfig
+    p.remove(AlertManagerImpl.PARAM_CONFIG + ".foo");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    assertEquals(expac, mgr.getConfig());
   }
 
 
