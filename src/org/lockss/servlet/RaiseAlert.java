@@ -1,5 +1,5 @@
 /*
- * $Id: RaiseAlert.java,v 1.13 2006-04-05 22:55:25 tlipkis Exp $
+ * $Id: RaiseAlert.java,v 1.14 2010-05-04 03:37:28 tlipkis Exp $
  */
 
 /*
@@ -73,8 +73,7 @@ public class RaiseAlert extends LockssServlet {
   String auid;
   String name;
   String text;
-  ArchivalUnit au;
-  boolean showResult;
+
   protected void resetLocals() {
     resetVars();
     super.resetLocals();
@@ -82,6 +81,9 @@ public class RaiseAlert extends LockssServlet {
 
   void resetVars() {
     auid = null;
+    name = null;
+    text = null;
+    name = null;
     errMsg = null;
     statusMsg = null;
   }
@@ -105,7 +107,7 @@ public class RaiseAlert extends LockssServlet {
 
   private boolean doRaise() {
     auid = getParameter(KEY_AUID);
-    au = pluginMgr.getAuFromId(auid);
+    ArchivalUnit au = pluginMgr.getAuFromId(auid);
     name = getParameter(KEY_NAME_SEL);
     if (StringUtil.isNullString(name)) {
       name = getParameter(KEY_NAME_TYPE);
