@@ -12,12 +12,11 @@ on Linux depends on the security of the underlying Linux platform.
 
 Prerequisites:
 - Public (routable) IP address
-- Java 1.5 or 1.6.
+- Java 1.6.
 
 Java:
-At present the daemon will only work with the Sun JDK or JRE.  It has been
-reported that Fedora's SELinux support must be disabled in order for this
-JVM to run.
+The daemon works on CentOS 5.3 using the Sun JRE, and on CentOS 5.4 using
+the java-1.6.0-openjdk package.
 
 Configuration:
 After installing the RPM, run /etc/locks/hostconfig as root.  You will be

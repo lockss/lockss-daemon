@@ -1,0 +1,74 @@
+#!/bin/bash
+# Script run as root from /etc/init.d/lockss to start the daemon
+# as the specific user provided as the argument.  Linux specific.
+
+if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/functions ]
+then
+	. ${LOCKSS_HOME}/etc/lockss/functions
+elif [ -f /etc/lockss/functions ]
+then
+	. /etc/lockss/functions
+elif [ -f ${HOME}/etc/lockss/functions ]
+then
+	. ${HOME}/etc/lockss/functions
+else
+	echo "Can't find LOCKSS functions"
+	exit 1
+fi
+
+if [ "${USER}X" != "rootX" ]
+then
+    echo "Must run as root."
+    exit 1
+fi
+if [ "X$1" = X ]
+then
+    echo "Usage: startdaemon user"
+    exit 1
+fi
+set_variables $1
+if [ -f ${CFG_FILE} ]; then
+  . ${CFG_FILE}
+else
+  echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
+  exit 1
+fi
+
+touch ${KEEP_GOING}
+chown $1 ${KEEP_GOING}
+if [ -x ${LOCKSS_HOME}/etc/lockss/runssl.$1 ]; then
+    RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl.$1"
+elif [ -x ${LOCKSS_HOME}/etc/lockss/runssl ]; then
+    RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
+fi
+
+while [ -f ${KEEP_GOING} ]; do
+    rm -f ${LOCAL_TXT}
+    # If optional SSL setup script exists and is executable, run it.
+    # It will have the environment variables set by set_variables()
+    # in /etc/lockss/functions and by ${CFG_FILE}
+    if [ "X${RUN_SSL}" != X ]; then
+	if [ -x ${RUN_SSL} ]; then
+            LOCKSS_CONFIG_DIR=/var/run/lockss
+            mkdir -p ${LOCKSS_CONFIG_DIR}
+            chmod go-w ${LOCKSS_CONFIG_DIR}
+	    rm -f ${LOCKSS_SSL_CONFIG}
+            ${RUN_SSL} --release @RELEASENAME@ --user $1
+	    chmod go-rwx ${LOCKSS_SSL_CONFIG}
+	    chown $1 ${LOCKSS_SSL_CONFIG}
+	fi
+    fi
+    START_TIME=`date +%s`
+    runuser -s /bin/bash - $1 -c "ulimit -S -c 0 >/dev/null 2>&1 ; ${LOCKSS_HOME}/etc/lockss/rundaemon wait"
+    EXIT_CODE=$?
+    END_TIME=`date +%s`
+    RUN_TIME=`expr ${END_TIME} - ${START_TIME}`
+    echo "stopped with status ${EXIT_CODE} at `date` after ${RUN_TIME} sec." >>${LOG_FILE}
+    if [ ${RUN_TIME} -lt 60 ]; then
+	exit 1
+    fi
+    if [ -f ${KEEP_GOING} ]; then
+	sleep 30
+    fi
+done &
+exit 0

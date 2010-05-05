@@ -17,38 +17,30 @@ fi
 case "$1" in
     start)
 	if [ ! -r ${CFG_FILE} ]; then
-	    echo "Can't start LOCKSS: ${CFG_FILE} missing or not readable"
+	    echo "Can't start ${2}: ${CFG_FILE} missing or not readable"
 	    exit 1
 	fi
 	if [ ! -d ${LOG_DIR} ]; then
 	    mkdir -p ${LOG_DIR}
-	    if [ "X${CONFIG_USER}" != "X$2" ] ; then
-		chown $2 ${LOG_DIR}
-		chmod 755 ${LOG_DIR}
-	    fi
+	    chown $2 ${LOG_DIR}
+	    chmod 755 ${LOG_DIR}
 	fi
 	if [ ! -f ${PID_FILE} ]; then
 	    touch ${PID_FILE}
 	fi
-	if [ "X${CONFIG_USER}" != "X$2" ] ; then
-	    chown $2 ${PID_FILE}
-	    chmod 644 ${PID_FILE}
-	fi
-	echo "Starting LOCKSS"
-	echo "Starting LOCKSS at `date`" >> ${LOG_FILE}
-	if [ "X${CONFIG_USER}" != "X$2" ] ; then
-	    chown $2 ${LOG_FILE}
-	    daemon --user $2 --check $2 /etc/lockss/runforever
-	else
-	    sh /etc/lockss/rundaemon
-	fi
-	echo "."
+	chown $2 ${PID_FILE}
+	chmod 644 ${PID_FILE}
+	echo -n "Starting ${2}: "
+	echo "Starting LOCKSS for user $2 at `date`" >> ${LOG_FILE}
+	chown $2 ${LOG_FILE}
+	daemon /etc/lockss/startdaemon $2
+	echo
 	;;
     stop)
-	echo "Stopping LOCKSS"
+	echo -n "Stopping ${2}: "
 	rm -f "${KEEP_GOING}"
 	killproc $2
-	echo "."
+	echo
 	;;
     *)
 	echo "Usage: $0 {start|stop}"

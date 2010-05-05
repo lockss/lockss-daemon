@@ -1,6 +1,6 @@
 #!/bin/sh
-# Do not edit the line above. The script must work with
-# /bin/sh on Solaris.
+# Do not edit the line above. This script starts and restarts the daemon
+# using /bin/sh on Solaris.
 
 if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/functions ]
 then

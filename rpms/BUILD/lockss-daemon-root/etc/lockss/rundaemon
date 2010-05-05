@@ -87,9 +87,12 @@ fi
 # if LOCKSS_PROPS_URL starts with "-" it is assumed to be the of the form
 #    -p <url1> [-p <url2> ...]
 if [ "X${LOCKSS_PROPS_URL}" = "X-*" ]; then
-    DAEMON_ARGS="-p ${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
+    DAEMON_ARGS="${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
 else
     DAEMON_ARGS="-p ${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
+fi
+if [ "X${LOCKSS_SSL_CONFIG}" != "X" -a -s ${LOCKSS_SSL_CONFIG} ]; then
+    DAEMON_ARGS="${DAEMON_ARGS} -p ${LOCKSS_SSL_CONFIG}"
 fi
 if [ "X${LOCKSS_TEST_GROUP}" != "X" ]; then
     DAEMON_ARGS="-g ${LOCKSS_TEST_GROUP} ${DAEMON_ARGS}"
@@ -137,12 +140,6 @@ org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
 org.lockss.platform.propsProxy=${LOCKSS_PROPS_PROXY}
 EOF
-
-# If optional SSL setup script exists and is executable, run it.
-RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
-if [ -x ${RUN_SSL} ]; then
-   ${RUN_SSL} --release @RELEASENAME@
-fi
 
 cd ${LOCKSS_HOME}/
 echo "Starting daemon at `date`" >> ${LOG_FILE}

@@ -24,7 +24,7 @@ then
 fi
 if [ "X${LOCKSS_USER}" = X ]
 then
-        LOCKSS_USER=lockss
+        export LOCKSS_USER=lockss
 fi
 }
 
@@ -49,6 +49,10 @@ SunOS)
 	then
 	        export LOCAL_TXT=${HOME_DIR}/local.txt
 	fi
+	if [ "X${LOCKSS_SSL_CONFIG}" = "X" ]
+	then
+		export LOCKSS_SSL_CONFIG=/var/run/lockss/ssl.${1}.txt
+	fi
         ;;
 Linux)
 	local HOME_DIR=`echo "cd ~$1 ; pwd" | bash`
@@ -57,6 +61,10 @@ Linux)
 	if [ "${LOCAL_TXT}X" = "X" ]
 	then
 	        export LOCAL_TXT=${HOME_DIR}/local.txt
+	fi
+	if [ "X${LOCKSS_SSL_CONFIG}" = "X" ]
+	then
+		export LOCKSS_SSL_CONFIG=/var/run/lockss/ssl.${1}.txt
 	fi
         ;;
 esac
@@ -85,5 +93,10 @@ LOG_DIR=
 LOG_FILE=
 PID_FILE=
 CFG_FILE=
+LOCKSS_USER=
+LOCKSS_HOME=
+KEEP_GOING=
+CONFIG_SCRIPT=
+LOCKSS_SSL_CONFIG=
 }
 
