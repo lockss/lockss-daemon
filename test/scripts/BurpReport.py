@@ -20,7 +20,7 @@ import os
 import sys
 
 # Constants
-OPTION_BURP_VERSION             = '0.2.1'
+OPTION_BURP_VERSION             = '0.2.2'
 
 OPTION_SHORT                    = '-'
 OPTION_LONG                     = '--'
@@ -141,9 +141,11 @@ def _main_procedure():
     _update_required_options(db, options)
 
     # Initialize the hashes.
-    # WARNING: If you update this list, you need to update the
-    # summary report as well.
-    publishers = ['aap', 'aip', 'ama', 'aps', 'acm', 'bep', 'bmc', 'eup', 'elsevier', 'iop', 'wiley', 'lup', 'npg', 'oup', 'rsc', 'sage', 'springer', 'tf', 'rup', 'rs']
+    # WARNING: If you update this list, you need to update three places:
+    # 1. The list of publishers in the 'while auid is not None' loop.
+    # 2. The summary report
+    # 3. In BurpCheck.py, the _is_reported() method.
+    publishers = ['aap', 'aip', 'ama', 'aps', 'acm', 'bep', 'bmc', 'cap', 'eup', 'elsevier', 'gtv', 'iop', 'wiley', 'lup', 'npg', 'oup', 'rup', 'rsc', 'rsp', 'sage', 'springer', 'ssr', 'tf']
 
     total = {}
     pubyear = {}
@@ -174,6 +176,8 @@ def _main_procedure():
         if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("aappublications") != -1):
             pubyear['aap'][strYear] += articles[0]
             total['aap'] += articles[0]
+
+	# No criteria for American Institute of Physics.
             
         if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("ama-assn") != -1):
             pubyear['ama'][strYear] += articles[0]
@@ -182,11 +186,35 @@ def _main_procedure():
         if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("physiology%2Eorg") != -1):
             pubyear['aps'][strYear] += articles[0]
             total['aps'] += articles[0]
+
+	# No criteria for Association for Computing Machinery
             
         if (auid[0].find("ClockssBerkeleyElectronicPressPlugin") != -1):
             pubyear['bep'][strYear] += articles[0]
             total['bep'] += articles[0]
             
+	# No criteria for BioMed Central.
+
+	if (auid[0].find("ClockssCoActionPublishingPlugin") != -1):
+	    pubyear['cap'][strYear] += articles[0]
+	    total['cap'] += articles[0]
+
+	if (auid[0].find("ClockssEdinburghUniversityPressPlugin") != -1):
+	    pubyear['eup'][strYear] += articles[0]
+	    total['eup'] += articles[0]
+
+	# No criteria for Elsevier.
+
+	if (auid[0].find("ClockssGeorgThiemeVerlagPlugin") != -1):
+	    pubyear['gtv'][strYear] += articles[0]
+	    total['gtv'] += articles[0]	    
+
+	# No criteria for IOP Publishing
+
+	# No criteria for Wiley
+
+	# No criteria for Liverpool
+
         if (auid[0].find("ClockssNaturePublishingGroupPlugin") != -1):
             pubyear['npg'][strYear] += articles[0]
             total['npg'] += articles[0]
@@ -194,15 +222,30 @@ def _main_procedure():
         if (auid[0].find("HighWire") != -1) and (auid[0].find("oxfordjournals") != -1):
             pubyear['oup'][strYear] += articles[0]
             total['oup'] += articles[0]
+
+	# No criteria for Rockefeller University Press
             
         if (auid[0].find("ClockssRoyalSocietyOfChemistryPlugin") != -1):
             pubyear['rsc'][strYear] += articles[0]
             total['rsc'] += articles[0]
             
+	if (auid[0].find("HighWire") != -1) and (auid[0].find("royalsocietypublishing") != 0):
+	    pubyear['rsp'][strYear] += articles[0]
+	    total['rsp'][strYear] += articles[0]
+
         if (auid[0].find("HighWire") != -1) and (auid[0].find("sagepub") != -1):
             pubyear['sage'][strYear] += articles[0]
             total['sage'] += articles[0]
+
+	# No criteria for Springer
         
+	if (auid[0].find("HighWire") != -1) and (auid[0].find("biolreprod%2Eorg") != -1):
+	    pubyear['ssr'][strYear] += articles[0]
+	    total['ssr'] += articles[0]
+
+	# No criteria for Taylor & Francis
+
+
         auid = cursorAuid.fetchone()  
 
     # Verify our numbers!
@@ -270,19 +313,22 @@ def _main_procedure():
     _print_summary_line(summary, "Association for Computing Machinery", "acm", currentyear, pubyear, total)
     _print_summary_line(summary, "Berkeley Electronic Press", "bep", currentyear, pubyear, total)
     _print_summary_line(summary, "BioMed Central", "bmc", currentyear, pubyear, total)
+    _print_summary_line(summary, "Co-Action Publishing", currentyear, pubyear, total)
     _print_summary_line(summary, "Edinburgh University Press", "eup", currentyear, pubyear, total)
     _print_summary_line(summary, "Elsevier", "elsevier", currentyear, pubyear, total)
+    _print_summary_line(summary, "Georg Thieme Verlag", currentyear, pubyear, total)
     _print_summary_line(summary, "IOP Publishing", "iop", currentyear, pubyear, total)
     _print_summary_line(summary, "John Wiley and Sons", "wiley", currentyear, pubyear, total)
     _print_summary_line(summary, "Liverpool University Press", "lup", currentyear, pubyear, total)
     _print_summary_line(summary, "Nature Publishing Group", "npg", currentyear, pubyear, total)
     _print_summary_line(summary, "Oxford University Press", "oup", currentyear, pubyear, total)
+    _print_summary_line(summary, "Rockefeller University Press", "rup", currentyear, pubyear, total)
     _print_summary_line(summary, "RSC Publishing", "rsc", currentyear, pubyear, total)
-    _print_summary_line(summary, "Sage", "sage", currentyear, pubyear, total)
+    _print_summary_line(summary, "Royal Society Publishing", "rs", currentyear, pubyear, total)
+    _print_summary_line(summary, "SAGE Publications", "sage", currentyear, pubyear, total)
     _print_summary_line(summary, "Springer", "springer", currentyear, pubyear, total)
+    _print_summary_line(summary, "Society for the Study of Reproduction", currentyear, pubyear, total)
     _print_summary_line(summary, "Taylor and Francis", "tf", currentyear, pubyear, total)
-    _print_summary_line(summary, "The Rockefeller University Press", "rup", currentyear, pubyear, total)
-    _print_summary_line(summary, "The Royal Society", "rs", currentyear, pubyear, total)
 
 
 if __name__ == '__main__':    
