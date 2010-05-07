@@ -231,7 +231,7 @@ def _main_procedure():
             
 	if (auid[0].find("HighWire") != -1) and (auid[0].find("royalsocietypublishing") != 0):
 	    pubyear['rsp'][strYear] += articles[0]
-	    total['rsp'][strYear] += articles[0]
+	    total['rsp'] += articles[0]
 
         if (auid[0].find("HighWire") != -1) and (auid[0].find("sagepub") != -1):
             pubyear['sage'][strYear] += articles[0]
@@ -313,10 +313,10 @@ def _main_procedure():
     _print_summary_line(summary, "Association for Computing Machinery", "acm", currentyear, pubyear, total)
     _print_summary_line(summary, "Berkeley Electronic Press", "bep", currentyear, pubyear, total)
     _print_summary_line(summary, "BioMed Central", "bmc", currentyear, pubyear, total)
-    _print_summary_line(summary, "Co-Action Publishing", currentyear, pubyear, total)
+    _print_summary_line(summary, "Co-Action Publishing", "cap", currentyear, pubyear, total)
     _print_summary_line(summary, "Edinburgh University Press", "eup", currentyear, pubyear, total)
     _print_summary_line(summary, "Elsevier", "elsevier", currentyear, pubyear, total)
-    _print_summary_line(summary, "Georg Thieme Verlag", currentyear, pubyear, total)
+    _print_summary_line(summary, "Georg Thieme Verlag", "gtv", currentyear, pubyear, total)
     _print_summary_line(summary, "IOP Publishing", "iop", currentyear, pubyear, total)
     _print_summary_line(summary, "John Wiley and Sons", "wiley", currentyear, pubyear, total)
     _print_summary_line(summary, "Liverpool University Press", "lup", currentyear, pubyear, total)
@@ -324,10 +324,10 @@ def _main_procedure():
     _print_summary_line(summary, "Oxford University Press", "oup", currentyear, pubyear, total)
     _print_summary_line(summary, "Rockefeller University Press", "rup", currentyear, pubyear, total)
     _print_summary_line(summary, "RSC Publishing", "rsc", currentyear, pubyear, total)
-    _print_summary_line(summary, "Royal Society Publishing", "rs", currentyear, pubyear, total)
+    _print_summary_line(summary, "Royal Society Publishing", "rsp", currentyear, pubyear, total)
     _print_summary_line(summary, "SAGE Publications", "sage", currentyear, pubyear, total)
     _print_summary_line(summary, "Springer", "springer", currentyear, pubyear, total)
-    _print_summary_line(summary, "Society for the Study of Reproduction", currentyear, pubyear, total)
+    _print_summary_line(summary, "Society for the Study of Reproduction", "ssr", currentyear, pubyear, total)
     _print_summary_line(summary, "Taylor and Francis", "tf", currentyear, pubyear, total)
 
 
