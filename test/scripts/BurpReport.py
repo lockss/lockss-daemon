@@ -229,7 +229,7 @@ def _main_procedure():
             pubyear['rsc'][strYear] += articles[0]
             total['rsc'] += articles[0]
             
-	if (auid[0].find("HighWire") != -1) and (auid[0].find("royalsocietypublishing") != 0):
+	if (auid[0].find("HighWire") != -1) and (auid[0].find("royalsocietypublishing") != -1):
 	    pubyear['rsp'][strYear] += articles[0]
 	    total['rsp'] += articles[0]
 
