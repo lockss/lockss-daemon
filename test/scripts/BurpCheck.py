@@ -187,16 +187,15 @@ def _is_reported(auid):
              ((auid.find("ClockssHighWirePlugin") != -1) and (auid.find("ama-assn") != -1)) or
              ((auid.find("ClockssHighWirePlugin") != -1) and (auid.find("physiology%2Eorg") != -1)) or            
              ((auid.find("ClockssBerkeleyElectronicPressPlugin") != -1)) or 
-	     (auid.find("ClockssBerkeleyElectronicPressPlugin") != -1) or           
 	     (auid.find("ClockssCoActionPublishingPlugin") != -1) or
              (auid.find("ClockssEdinburghUniversityPressPlugin") != -1) or
-             (auid[0].find("ClockssGeorgThiemeVerlagPlugin") != -1) or
+             (auid.find("ClockssGeorgThiemeVerlagPlugin") != -1) or
              ((auid.find("ClockssNaturePublishingGroupPlugin") != -1)) or            
              ((auid.find("HighWire") != -1) and (auid.find("oxfordjournals") != -1)) or            
              ((auid.find("ClockssRoyalSocietyOfChemistryPlugin") != -1)) or
-             ((auid[0].find("HighWire") != -1) and (auid[0].find("royalsocietypublishing") != 0)) or            
+             ((auid.find("HighWire") != -1) and (auid.find("royalsocietypublishing") != 0)) or            
              ((auid.find("HighWire") != -1) and (auid.find("sagepub") != -1)) or
-             ((auid[0].find("HighWire") != -1) and (auid[0].find("biolreprod%2Eorg") != -1))
+             ((auid.find("HighWire") != -1) and (auid.find("biolreprod%2Eorg") != -1))
             )
   
     
