@@ -209,7 +209,8 @@ def _find_year_zeros(db, options):
     cursor2 = db.cursor()
     cursorMaxDate = db.cursor()
     
-    cursor.execute("SELECT auname, auid, machinename, port, rundate FROM burp WHERE auyear = '0' AND rundate >=  '%s' AND rundate <= '%s' GROUP BY auid;" %
+    # NOTE: Machines are now limited to 'ingest1', 'ingest2', ...
+    cursor.execute("SELECT auname, auid, machinename, port, rundate FROM burp WHERE auyear = '0' AND rundate >=  '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%' GROUP BY auid;" %
                    (str(options.reportdatestart), str(options.reportdateend)))
     arYearZero = cursor.fetchone()
     while arYearZero is not None:
@@ -251,18 +252,18 @@ def _find_inconsistent_information(db, options):
     cursor3       = db.cursor()
 
     print("Looking for inconsistent information within one run.\n")
-    cursor.execute("SELECT auid, auname, max(numarticles) FROM burp WHERE rundate >= '%s' AND rundate <= '%s' GROUP BY auid, auname ORDER BY auname;" %
-                   (str(options.reportdatestart), str(options.reportdateend)))
+    cursor.execute("SELECT auid, auname, max(numarticles) FROM burp WHERE rundate >= '%s' AND rundate <= '%s' GROUP BY auid, auname ORDER BY auname;" % (str(options.reportdatestart), str(options.reportdateend)))
     arAuid = cursor.fetchone()
     while arAuid is not None:        
         if _is_reported(arAuid[0]):
             # Verify that the years and names remain consistent across AUs.                        
-            cursor2.execute("SELECT COUNT(DISTINCT(auyear)), COUNT(DISTINCT(auname)) FROM burp WHERE auid = '" + arAuid[0] + "' AND rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
+            cursor2.execute("SELECT COUNT(DISTINCT(auyear)), COUNT(DISTINCT(auname)) FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s';" % (str(arAuid[0]), str(options.reportdatestart), str(options.reportdateend))
             countInformation = cursor2.fetchone()            
             if countInformation[0] > 1:                
                 fileInconsistent.write("`" + arAuid[1] + "' has inconsistent years: \n")
                 
-                cursor3.execute("SELECT DISTINCT(auyear), machinename, port FROM burp WHERE auid = '" + arAuid[0]  + "' AND rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
+                # Note: This program only examines ingest machines.
+                cursor3.execute("SELECT DISTINCT(auyear), machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%';" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend))
                 year = cursor3.fetchone()
                 while year is not None:
                     fileInconsistent.write("%s (on %s:%d) " % (year[0], year[1], year[2]))
@@ -274,7 +275,8 @@ def _find_inconsistent_information(db, options):
             if countInformation[1] > 1:
                 fileInconsistent.write("`" + arAuid[1] + "' has inconsistent AU Names: \n")
 
-                cursor3.execute("SELECT DISTINCT(auname), machinename, port FROM burp WHERE auid = '" + arAuid[0]  + "' AND rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "';")
+                # This program only examines ingest machines.
+                cursor3.execute("SELECT DISTINCT(auname), machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' and machinename LIKE 'ingest%%';" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
                 name = cursor3.fetchone()
                 while name is not None:
                     fileInconsistent.write("`%s' (on %s:%d) " % (name[0], name[1], name[2]))
@@ -284,8 +286,8 @@ def _find_inconsistent_information(db, options):
                 isBlankReport = False
                 
             # Verify that no articles have had a successful crawl, but still have zero DOIs reported.
-            cursor2.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult = 'successful' GROUP BY machinename, port;" % 
-                            (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
+            # This program only examines ingest machines.
+            cursor2.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult = 'successful' AND machinename LIKE 'ingest%%' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             crawledbutzero = cursor2.fetchone()
             crawledbutzeroflag = True
             while crawledbutzero is not None:
@@ -300,7 +302,8 @@ def _find_inconsistent_information(db, options):
                 fileInconsistent.write("\n\n") 
                 
             # Verify that zero DOIs have not been waiting for too long.  
-            cursor2.execute("SELECT machinename, port, created FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult != 'successful' GROUP BY machinename, port;" %
+            # This program only examines ingest machines.
+            cursor2.execute("SELECT machinename, port, created FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND numarticles = 0 AND aulastcrawlresult != 'successful' AND machinename LIKE 'ingest%%' GROUP BY machinename, port;" %
                             (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             notcrawled = cursor2.fetchone()
             while notcrawled is not None and notcrawled[2] is not None:            
@@ -312,7 +315,9 @@ def _find_inconsistent_information(db, options):
                 notcrawled = cursor2.fetchone()
                  
             # Verify that the current article on one machine does not have fewer articles than any previous run.
-            cursorMachine.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
+            # This program only examines ingest machines.
+
+            cursorMachine.execute("SELECT machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' and machinename LIKE 'ingest%%' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             arMachineName = cursorMachine.fetchone()
             while arMachineName is not None:
                 cursor2.execute("SELECT numarticles FROM burp WHERE auid = '%s' AND machinename = '%s' AND port = %d AND rundate >= '%s' AND rundate <= '%s';" % (arAuid[0], arMachineName[0], arMachineName[1], str(options.reportdatestart), str(options.reportdateend)))
@@ -327,7 +332,8 @@ def _find_inconsistent_information(db, options):
                 arMachineName = cursorMachine.fetchone()
                 
             # Verify that the maximum number of articles is not significantly greater than the number of articles on any machine.
-            cursorMachine.execute("SELECT numarticles, machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
+            # This program only examines ingest machines.
+            cursorMachine.execute("SELECT numarticles, machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%' GROUP BY machinename, port;" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
             arNumArticles = cursorMachine.fetchone()
             while arNumArticles is not None:
                 if arNumArticles[0] + options.maxarticlediff < arAuid[2] and arNumArticles[0] > 0:
@@ -355,8 +361,9 @@ def _find_inconsistent_information(db, options):
         arPublisherYear = cursor.fetchone()
         
     # List all AUs that have disappeared since the previous run.
+    # This program only examines ingest machines.
     print("Listing disappearing AUs.\n")
-    cursor.execute("SELECT auid, auname, machinename, port FROM burp WHERE rundate >= '%s' AND rundate <= '%s' GROUP BY auid, auname ORDER BY auname;" %
+    cursor.execute("SELECT auid, auname, machinename, port FROM burp WHERE rundate >= '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%' GROUP BY auid, auname ORDER BY auname;" %
                    (str(options.previousreportdatestart), str(options.previousreportdateend)))
     arPreviousAu = cursor.fetchone()
     while arPreviousAu is not None:
