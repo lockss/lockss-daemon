@@ -210,7 +210,7 @@ def _find_year_zeros(db, options):
     cursorMaxDate = db.cursor()
     
     # NOTE: Machines are now limited to 'ingest1', 'ingest2', ...
-    cursor.execute("SELECT auname, auid, machinename, port, rundate FROM burp WHERE auyear = '0' AND rundate >=  '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%' GROUP BY auid;" %
+    cursor.execute("SELECT auname, auid, machinename, port, rundate FROM burp WHERE auyear = '0' AND rundate >=  '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%' GROUP BY auid;" %
                    (str(options.reportdatestart), str(options.reportdateend)))
     arYearZero = cursor.fetchone()
     while arYearZero is not None:
@@ -257,13 +257,13 @@ def _find_inconsistent_information(db, options):
     while arAuid is not None:        
         if _is_reported(arAuid[0]):
             # Verify that the years and names remain consistent across AUs.                        
-            cursor2.execute("SELECT COUNT(DISTINCT(auyear)), COUNT(DISTINCT(auname)) FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s';" % (str(arAuid[0]), str(options.reportdatestart), str(options.reportdateend))
+            cursor2.execute("SELECT COUNT(DISTINCT(auyear)), COUNT(DISTINCT(auname)) FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s';" % (str(arAuid[0]), str(options.reportdatestart), str(options.reportdateend)))
             countInformation = cursor2.fetchone()            
             if countInformation[0] > 1:                
                 fileInconsistent.write("`" + arAuid[1] + "' has inconsistent years: \n")
                 
                 # Note: This program only examines ingest machines.
-                cursor3.execute("SELECT DISTINCT(auyear), machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%';" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend))
+                cursor3.execute("SELECT DISTINCT(auyear), machinename, port FROM burp WHERE auid = '%s' AND rundate >= '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%';" % (arAuid[0], str(options.reportdatestart), str(options.reportdateend)))
                 year = cursor3.fetchone()
                 while year is not None:
                     fileInconsistent.write("%s (on %s:%d) " % (year[0], year[1], year[2]))
