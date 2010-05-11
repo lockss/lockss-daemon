@@ -1044,8 +1044,8 @@
     param[journal_dir] = partial_answers
 
     au < released ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
-    au < manifest ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
-    au < manifest ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
+    au < testing ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
+    au < testing ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
 
   }
 
@@ -1066,8 +1066,8 @@
     au < released ; Perspectives in Biology and Medicine Volume 48 ; 48 >
     au < released ; Perspectives in Biology and Medicine Volume 49 ; 49 >
     au < released ; Perspectives in Biology and Medicine Volume 50 ; 50 >
-    au < manifest ; Perspectives in Biology and Medicine Volume 51 ; 51 >
-    au < manifest ; Perspectives in Biology and Medicine Volume 52 ; 52 >
+    au < testing ; Perspectives in Biology and Medicine Volume 51 ; 51 >
+    au < testing ; Perspectives in Biology and Medicine Volume 52 ; 52 >
 
   }
 
@@ -1093,7 +1093,7 @@
     au < released ; Philosophy and Literature Volume 29 ; 29 >
     au < released ; Philosophy and Literature Volume 30 ; 30 >
     au < released ; Philosophy and Literature Volume 31 ; 31 >
-    au < manifest ; Philosophy and Literature Volume 32 ; 32 >
+    au < testing ; Philosophy and Literature Volume 32 ; 32 >
 
   }
 
@@ -1115,8 +1115,8 @@
     au < released ; Philosophy, Psychiatry & Psychology Volume 11 ; 11 >
     au < released ; Philosophy, Psychiatry & Psychology Volume 12 ; 12 >
     au < released ; Philosophy, Psychiatry & Psychology Volume 13 ; 13 >
-    au < manifest ; Philosophy, Psychiatry & Psychology Volume 14 ; 14 >
-    au < manifest ; Philosophy, Psychiatry & Psychology Volume 15 ; 15 >
+    au < testing ; Philosophy, Psychiatry & Psychology Volume 14 ; 14 >
+    au < testing ; Philosophy, Psychiatry & Psychology Volume 15 ; 15 >
 
   }
 
@@ -1129,15 +1129,15 @@
 
     param[journal_dir] = portal_libraries_and_the_academy
 
-    au < manifest ; portal: Libraries and the Academy Volume 1 ; 1 >
+    au < testing ; portal: Libraries and the Academy Volume 1 ; 1 >
     au < released ; portal: Libraries and the Academy Volume 2 ; 2 >
     au < released ; portal: Libraries and the Academy Volume 3 ; 3 >
     au < released ; portal: Libraries and the Academy Volume 4 ; 4 >
     au < released ; portal: Libraries and the Academy Volume 5 ; 5 >
-    au < manifest ; portal: Libraries and the Academy Volume 6 ; 6 >
+    au < testing ; portal: Libraries and the Academy Volume 6 ; 6 >
     au < released ; portal: Libraries and the Academy Volume 7 ; 7 >
-    au < manifest ; portal: Libraries and the Academy Volume 8 ; 8 >
-    au < manifest ; portal: Libraries and the Academy Volume 9 ; 9 >
+    au < testing ; portal: Libraries and the Academy Volume 8 ; 8 >
+    au < testing ; portal: Libraries and the Academy Volume 9 ; 9 >
 
   }
 
@@ -1149,24 +1149,24 @@
 
     param[journal_dir] = postmodern_culture
 
-    au < manifest ; Postmodern Culture Volume 1 ; 1 >
-    au < manifest ; Postmodern Culture Volume 2 ; 2 >
-    au < manifest ; Postmodern Culture Volume 3 ; 3 >
-    au < manifest ; Postmodern Culture Volume 4 ; 4 >
-    au < manifest ; Postmodern Culture Volume 5 ; 5 >
-    au < manifest ; Postmodern Culture Volume 6 ; 6 >
-    au < manifest ; Postmodern Culture Volume 7 ; 7 >
+    au < testing ; Postmodern Culture Volume 1 ; 1 >
+    au < testing ; Postmodern Culture Volume 2 ; 2 >
+    au < testing ; Postmodern Culture Volume 3 ; 3 >
+    au < testing ; Postmodern Culture Volume 4 ; 4 >
+    au < testing ; Postmodern Culture Volume 5 ; 5 >
+    au < testing ; Postmodern Culture Volume 6 ; 6 >
+    au < testing ; Postmodern Culture Volume 7 ; 7 >
     au < released ; Postmodern Culture Volume 8 ; 8 >
     au < released ; Postmodern Culture Volume 9 ; 9 >
     au < released ; Postmodern Culture Volume 10 ; 10 >
-    au < manifest ; Postmodern Culture Volume 11 ; 11 >
-    au < manifest ; Postmodern Culture Volume 12 ; 12 >
+    au < testing ; Postmodern Culture Volume 11 ; 11 >
+    au < testing ; Postmodern Culture Volume 12 ; 12 >
     au < released ; Postmodern Culture Volume 13 ; 13 >
     au < released ; Postmodern Culture Volume 14 ; 14 >
     au < released ; Postmodern Culture Volume 15 ; 15 >
     au < released ; Postmodern Culture Volume 16 ; 16 >
-    au < manifest ; Postmodern Culture Volume 17 ; 17 >
-    au < manifest ; Postmodern Culture Volume 18 ; 18 >
+    au < testing ; Postmodern Culture Volume 17 ; 17 >
+    au < testing ; Postmodern Culture Volume 18 ; 18 >
 
   }
 
@@ -1179,7 +1179,7 @@
     param[journal_dir] = progress_in_community_health_partnerships_research_education_and_action
 
     au < released ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
-    au < manifest ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
+    au < testing ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
 
   }
 
@@ -1205,8 +1205,8 @@
     au < released ; Reviews in American History Volume 33 ; 33 >
     au < released ; Reviews in American History Volume 34 ; 34 >
     au < released ; Reviews in American History Volume 35 ; 35 >
-    au < manifest ; Reviews in American History Volume 36 ; 36 >
-    au < manifest ; Reviews in American History Volume 37 ; 37 >
+    au < testing ; Reviews in American History Volume 36 ; 36 >
+    au < testing ; Reviews in American History Volume 37 ; 37 >
 
   }
 

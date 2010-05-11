@@ -1213,8 +1213,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; BioMedical Engineering OnLine Volume 5 ; 5 >
       au < released ; BioMedical Engineering OnLine Volume 6 ; 6 >
       au < released ; BioMedical Engineering OnLine Volume 7 ; 7 >
-      au < testing ; BioMedical Engineering OnLine Volume 8 ; 8 >
-      au < testing ; BioMedical Engineering OnLine Volume 9 ; 9 >
+      au < ready ; BioMedical Engineering OnLine Volume 8 ; 8 >
+      au < ready ; BioMedical Engineering OnLine Volume 9 ; 9 >
     }
 
     {
@@ -1228,8 +1228,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; BioPsychoSocial Medicine Volume 1 ; 1 >
       au < released ; BioPsychoSocial Medicine Volume 2 ; 2 >
-      au < testing ; BioPsychoSocial Medicine Volume 3 ; 3 >
-      au < testing ; BioPsychoSocial Medicine Volume 4 ; 4 >
+      au < ready ; BioPsychoSocial Medicine Volume 3 ; 3 >
+      au < ready ; BioPsychoSocial Medicine Volume 4 ; 4 >
       
     }
 
@@ -1243,8 +1243,8 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1754-6834
 
       au < released ; Biotechnology for Biofuels Volume 1 ; 1 >
-      au < testing ; Biotechnology for Biofuels Volume 2 ; 2 >
-      au < testing ; Biotechnology for Biofuels Volume 3 ; 3 >
+      au < ready ; Biotechnology for Biofuels Volume 2 ; 2 >
+      au < ready ; Biotechnology for Biofuels Volume 3 ; 3 >
       
     }
 
@@ -1289,8 +1289,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cancer Cell International Volume 6 ; 6 >
       au < released ; Cancer Cell International Volume 7 ; 7 >
       au < released ; Cancer Cell International Volume 8 ; 8 >
-      au < testing ; Cancer Cell International Volume 9 ; 9 >
-      au < testing ; Cancer Cell International Volume 10 ; 10 >
+      au < ready ; Cancer Cell International Volume 9 ; 9 >
+      au < ready ; Cancer Cell International Volume 10 ; 10 >
 
     }
 
@@ -1306,8 +1306,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Carbon Balance and Management Volume 1 ; 1 >
       au < released ; Carbon Balance and Management Volume 2 ; 2 >
       au < released ; Carbon Balance and Management Volume 3 ; 3 >
-      au < testing ; Carbon Balance and Management Volume 4 ; 4 >
-      au < testing ; Carbon Balance and Management Volume 5 ; 5 >
+      au < ready ; Carbon Balance and Management Volume 4 ; 4 >
+      au < ready ; Carbon Balance and Management Volume 5 ; 5 >
 
     }
 
@@ -1327,6 +1327,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cardiovascular Diabetology Volume 5 ; 5 >
       au < released ; Cardiovascular Diabetology Volume 6 ; 6 >
       au < released ; Cardiovascular Diabetology Volume 7 ; 7 >
+      au < ready ; Cardiovascular Diabetology Volume 8 ; 8 >
+      au < ready ; Cardiovascular Diabetology Volume 9 ; 9 >
+
     }
 
     {
@@ -1344,6 +1347,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cardiovascular Ultrasound Volume 4 ; 4 >
       au < released ; Cardiovascular Ultrasound Volume 5 ; 5 >
       au < released ; Cardiovascular Ultrasound Volume 6 ; 6 >
+      au < ready ; Cardiovascular Ultrasound Volume 7 ; 7 >
+      au < ready ; Cardiovascular Ultrasound Volume 8 ; 8 >
+      
     }
 
     {
@@ -1356,6 +1362,9 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1757-1626
 
       au < released ; Cases Journal Volume 1 ; 1 >
+      au < ready ; Cases Journal Volume 2 ; 2 >
+      au < ready ; Cases Journal Volume 3 ; 3 >
+
     }
 
     {
@@ -1372,6 +1381,10 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cell Communication and Signaling Volume 3 ; 3 >
       au < released ; Cell Communication and Signaling Volume 4 ; 4 >
       au < released ; Cell Communication and Signaling Volume 5 ; 5 >
+      au < ready ; Cell Communication and Signaling Volume 6 ; 6 >
+      au < ready ; Cell Communication and Signaling Volume 7 ; 7 >
+      au < ready ; Cell Communication and Signaling Volume 8 ; 8 >
+      
     }
 
     {
@@ -1386,6 +1399,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cell Division Volume 1 ; 1 >
       au < released ; Cell Division Volume 2 ; 2 >
       au < released ; Cell Division Volume 3 ; 3 >
+      au < ready ; Cell Division Volume 4 ; 4 >
+      au < ready ; Cell Division Volume 5 ; 5 >
+
     }
 
     {
@@ -1402,6 +1418,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cerebrospinal Fluid Research Volume 3 ; 3 >
       au < released ; Cerebrospinal Fluid Research Volume 4 ; 4 >
       au < released ; Cerebrospinal Fluid Research Volume 5 ; 5 >
+      au < ready ; Cerebrospinal Fluid Research Volume 5 ; 6 >
+      au < ready ; Cerebrospinal Fluid Research Volume 6 ; 7 >
+
     }
 
     {
