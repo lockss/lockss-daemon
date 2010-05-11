@@ -2233,13 +2233,13 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jissn.com/
       param[journal_issn] = 1550-2783
 
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 1 ; 1 >
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 2 ; 2 >
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 3 ; 3 >
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 4 ; 4 >
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
-      au < testing ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >      
+      au < ready ; Journal of the International Society of Sports Nutrition Volume 1 ; 1 >
+      au < ready ; Journal of the International Society of Sports Nutrition Volume 2 ; 2 >
+      au < ready ; Journal of the International Society of Sports Nutrition Volume 3 ; 3 >
+      au < ready ; Journal of the International Society of Sports Nutrition Volume 4 ; 4 >
+      au < ready ; Journal of the International Society of Sports Nutrition Volume 5 ; 5 >
+      au < ready ; Journal of the International Society of Sports Nutrition Volume 6 ; 6 >
+      au < ready ; Journal of the International Society of Sports Nutrition Volume 7 ; 7 >      
     }
 
     {
@@ -2251,14 +2251,14 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.translational-medicine.com/
       param[journal_issn] = 1479-5876
 
-      au < testing ; Journal of Translational Medicine Volume 1 ; 1 >
-      au < testing ; Journal of Translational Medicine Volume 2 ; 2 >
-      au < testing ; Journal of Translational Medicine Volume 3 ; 3 >
-      au < testing ; Journal of Translational Medicine Volume 4 ; 4 >
-      au < testing ; Journal of Translational Medicine Volume 5 ; 5 >
-      au < testing ; Journal of Translational Medicine Volume 6 ; 6 >
-      au < testing ; Journal of Translational Medicine Volume 7 ; 7 >
-      au < testing ; Journal of Translational Medicine Volume 8 ; 8 >
+      au < ready ; Journal of Translational Medicine Volume 1 ; 1 >
+      au < ready ; Journal of Translational Medicine Volume 2 ; 2 >
+      au < ready ; Journal of Translational Medicine Volume 3 ; 3 >
+      au < ready ; Journal of Translational Medicine Volume 4 ; 4 >
+      au < ready ; Journal of Translational Medicine Volume 5 ; 5 >
+      au < ready ; Journal of Translational Medicine Volume 6 ; 6 >
+      au < ready ; Journal of Translational Medicine Volume 7 ; 7 >
+      au < ready ; Journal of Translational Medicine Volume 8 ; 8 >
       
     }
 
@@ -2271,10 +2271,10 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.traumamanagement.org/
       param[journal_issn] = 1752-2897
 
-      au < testing ; Journal of Trauma Management & Outcomes Volume 1 ; 1 >
-      au < testing ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
-      au < testing ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
-      au < testing ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
+      au < ready ; Journal of Trauma Management & Outcomes Volume 1 ; 1 >
+      au < ready ; Journal of Trauma Management & Outcomes Volume 2 ; 2 >
+      au < ready ; Journal of Trauma Management & Outcomes Volume 3 ; 3 >
+      au < ready ; Journal of Trauma Management & Outcomes Volume 4 ; 4 >
     }
 
     {
@@ -2286,15 +2286,15 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.lipidworld.com/
       param[journal_issn] = 1476-511X
 
-      au < testing ; Lipids in Health and Disease Volume 1 ; 1 >
-      au < testing ; Lipids in Health and Disease Volume 2 ; 2 >
-      au < testing ; Lipids in Health and Disease Volume 3 ; 3 >
-      au < testing ; Lipids in Health and Disease Volume 4 ; 4 >
-      au < testing ; Lipids in Health and Disease Volume 5 ; 5 >
-      au < testing ; Lipids in Health and Disease Volume 6 ; 6 >
-      au < testing ; Lipids in Health and Disease Volume 7 ; 7 >
-      au < testing ; Lipids in Health and Disease Volume 8 ; 8 >
-      au < testing ; Lipids in Health and Disease Volume 9 ; 9 >
+      au < ready ; Lipids in Health and Disease Volume 1 ; 1 >
+      au < ready ; Lipids in Health and Disease Volume 2 ; 2 >
+      au < ready ; Lipids in Health and Disease Volume 3 ; 3 >
+      au < ready ; Lipids in Health and Disease Volume 4 ; 4 >
+      au < ready ; Lipids in Health and Disease Volume 5 ; 5 >
+      au < ready ; Lipids in Health and Disease Volume 6 ; 6 >
+      au < ready ; Lipids in Health and Disease Volume 7 ; 7 >
+      au < ready ; Lipids in Health and Disease Volume 8 ; 8 >
+      au < ready ; Lipids in Health and Disease Volume 9 ; 9 >
     }
 
     {
@@ -2306,14 +2306,14 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.malariajournal.com/
       param[journal_issn] = 1475-2875
 
-      au < testing ; Malaria Journal Volume 1 ; 1 >
-      au < testing ; Malaria Journal Volume 2 ; 2 >
-      au < testing ; Malaria Journal Volume 3 ; 3 >
+      au < ready ; Malaria Journal Volume 1 ; 1 >
+      au < ready ; Malaria Journal Volume 2 ; 2 >
+      au < ready ; Malaria Journal Volume 3 ; 3 >
       au < testing ; Malaria Journal Volume 4 ; 4 >
-      au < testing ; Malaria Journal Volume 5 ; 5 >
-      au < testing ; Malaria Journal Volume 6 ; 6 >
-      au < testing ; Malaria Journal Volume 7 ; 7 >
-      au < testing ; Malaria Journal Volume 8 ; 8 >
+      au < ready ; Malaria Journal Volume 5 ; 5 >
+      au < ready ; Malaria Journal Volume 6 ; 6 >
+      au < ready ; Malaria Journal Volume 7 ; 7 >
+      au < ready ; Malaria Journal Volume 8 ; 8 >
       au < testing ; Malaria Journal Volume 9 ; 9 >
     }
 
