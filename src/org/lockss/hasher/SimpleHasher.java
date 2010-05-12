@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHasher.java,v 1.7 2009-11-15 04:42:56 mrbax Exp $
+ * $Id: SimpleHasher.java,v 1.8 2010-05-12 03:52:37 tlipkis Exp $
  */
 
 /*
@@ -114,18 +114,20 @@ public class SimpleHasher {
   }
 
   /** Do a V3 hash of the AU, recording the results to blockFile */
-  public void doV3Hash(ArchivalUnit au, File blockFile, String comments)
+  public void doV3Hash(ArchivalUnit au, File blockFile,
+		       String header, String footer)
       throws IOException {
-    doV3Hash(au.getAuCachedUrlSet(), blockFile, comments);
+    doV3Hash(au.getAuCachedUrlSet(), blockFile, header, footer);
   }
 
   /** Do a V3 hash of the CUS, recording the results to blockFile */
-  public void doV3Hash(CachedUrlSet cus, File blockFile, String comments)
+  public void doV3Hash(CachedUrlSet cus, File blockFile,
+		       String header, String footer)
       throws IOException {
     PrintStream blockOuts =
       new PrintStream(new BufferedOutputStream(new FileOutputStream(blockFile)));
-    if (comments != null) {
-      blockOuts.println(comments);
+    if (header != null) {
+      blockOuts.println(header);
     }
     BlockHasher hasher = new BlockHasher(cus, 1,
 					 initHasherDigests(),
@@ -134,6 +136,9 @@ public class SimpleHasher {
 
     hasher.setIncludeUrl(isIncludeUrl);
     doHash(hasher);
+    if (footer != null) {
+      blockOuts.println(footer);
+    }
     blockOuts.close();
   }
 
@@ -181,6 +186,8 @@ public class SimpleHasher {
     }
   }
 
+  // XXX This should probably use PrintWriter with ISO-8859-1, as the
+  // result is generally sent in an HTTP response
   private class BlockEventHandler implements BlockHasher.EventHandler {
     PrintStream outs;
     BlockEventHandler(PrintStream outs) {

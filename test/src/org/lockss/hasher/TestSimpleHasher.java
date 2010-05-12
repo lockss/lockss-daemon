@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHasher.java,v 1.6 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id: TestSimpleHasher.java,v 1.7 2010-05-12 03:52:37 tlipkis Exp $
  */
 
 /*
@@ -121,7 +121,8 @@ public class TestSimpleHasher extends LockssTestCase {
     "V73T8Z0QqJoWgsX++DGDRcpE0qA=   http://www.test.com/blah/foo/2/d.txt\n" +
     "oBTGK4E/0nq3aECsA3IxDF5eWhM=   http://www.test.com/blah/foo/3\n" +
     "x017Anoxzp+IWsrRBtQyBDiytps=   http://www.test.com/blah/foo/3/a.html\n" +
-    "QJNf5ePFKC9tBrWs7b2QmxLeP8A=   http://www.test.com/blah/foo/3/b.html\n";
+    "QJNf5ePFKC9tBrWs7b2QmxLeP8A=   http://www.test.com/blah/foo/3/b.html\n" +
+    "#end\n";
 
   public void testV3() throws Exception {
     MockArchivalUnit mau = setupContentTree();
@@ -129,7 +130,7 @@ public class TestSimpleHasher extends LockssTestCase {
     SimpleHasher hasher = new SimpleHasher(getMessageDigest(HASH_ALG),
 					   challenge, verifier);
     File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
-    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
+    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17", null);
     assertEquals(2282, hasher.getBytesHashed());
     assertEquals(12, hasher.getFilesHashed());
     assertEquals(exp, StringUtil.fromFile(blockFile));
@@ -142,7 +143,7 @@ public class TestSimpleHasher extends LockssTestCase {
 					   challenge, verifier);
     hasher.setBase64Result(true);
     File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
-    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
+    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17", "#end");
     assertEquals(2282, hasher.getBytesHashed());
     assertEquals(12, hasher.getFilesHashed());
     assertEquals(exp64, StringUtil.fromFile(blockFile));
@@ -185,7 +186,7 @@ public class TestSimpleHasher extends LockssTestCase {
 					   challenge, verifier);
     hasher.setFiltered(true);
     File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
-    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
+    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17", null);
     assertEquals(2282, hasher.getBytesHashed());
     assertEquals(12, hasher.getFilesHashed());
     assertEquals(expFilt, StringUtil.fromFile(blockFile));
@@ -199,7 +200,7 @@ public class TestSimpleHasher extends LockssTestCase {
     hasher.setFiltered(true);
     hasher.setBase64Result(true);
     File blockFile = FileTestUtil.tempFile("hashtest", ".tmp");
-    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17");
+    hasher.doV3Hash(mau.getAuCachedUrlSet(), blockFile, "# comment 17", null);
     assertEquals(2282, hasher.getBytesHashed());
     assertEquals(12, hasher.getFilesHashed());
     assertEquals(expFilt64, StringUtil.fromFile(blockFile));

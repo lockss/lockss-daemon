@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlEndReport.java,v 1.3 2009-03-05 05:40:07 tlipkis Exp $
+ * $Id: CrawlEndReport.java,v 1.4 2010-05-12 03:52:37 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class CrawlEndReport {
     MessageDigest digest = MessageDigest.getInstance(hashAlg);
     SimpleHasher hasher = new SimpleHasher(digest);
     File blockFile = FileUtil.createTempFile("auhash", ".tmp");
-    hasher.doV3Hash(au.getAuCachedUrlSet(), blockFile, textPart);
+    hasher.doV3Hash(au.getAuCachedUrlSet(), blockFile, textPart, null);
     return blockFile;
   }
 
