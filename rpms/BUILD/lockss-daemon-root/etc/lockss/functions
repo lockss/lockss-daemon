@@ -84,6 +84,10 @@ if [ "${CFG_FILE}X" = "X" ]
 then
         export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 fi
+if [ "${RUN_DIR}X" = "X" ]
+then
+        export RUN_DIR=${LOCKSS_HOME}/var/run/lockss
+fi
 export CONFIG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
 }
 
@@ -98,5 +102,6 @@ LOCKSS_HOME=
 KEEP_GOING=
 CONFIG_SCRIPT=
 LOCKSS_SSL_CONFIG=
+RUN_DIR=
 }
 
