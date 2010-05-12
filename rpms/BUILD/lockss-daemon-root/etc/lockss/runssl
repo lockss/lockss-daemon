@@ -101,7 +101,7 @@ done
 
 rm -f ${LOCKSS_SSL_CONFIG}
 cat <<Funky-EOF >${LOCKSS_SSL_CONFIG}
-#org.lockss.scomm.v3OverSsl=true
+org.lockss.scomm.v3OverSsl=true
 org.lockss.scomm.sslClientAuth=true
 org.lockss.scomm.sslPrivateKeystoreName=v3PrivateKey
 org.lockss.scomm.sslPublicKeystoreName=v3PubKeys
