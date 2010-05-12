@@ -13104,6 +13104,23 @@
    </property>
   </property>
 
+  <property name="JournalofMedicalGenetics47">
+   <property name="attributes.publisher" value="BMJ Group" />
+   <property name="journalTitle" value="Journal of Medical Genetics" />
+   <property name="issn" value="0022-2593" />
+   <property name="eissn" value="1468-6244" />
+   <property name="title" value="Journal of Medical Genetics Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jmg.bmj.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="47" />
+   </property>
+  </property>
+
   <property name="JournalofNeurologyNeurosurgeryPsychiatry1">
    <property name="attributes.publisher" value="BMJ Group" />
    <property name="journalTitle" value="Journal of Neurology, Neurosurgery &amp; Psychiatry" />
@@ -14393,6 +14410,23 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="80" />
+   </property>
+  </property>
+
+  <property name="JournalofNeurologyNeurosurgeryPsychiatry81">
+   <property name="attributes.publisher" value="BMJ Group" />
+   <property name="journalTitle" value="Journal of Neurology, Neurosurgery &amp; Psychiatry" />
+   <property name="issn" value="0022-3050" />
+   <property name="eissn" value="1468-330X" />
+   <property name="title" value="Journal of Neurology, Neurosurgery &amp; Psychiatry Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jnnp.bmj.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="81" />
    </property>
   </property>
 
