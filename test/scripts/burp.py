@@ -10,15 +10,7 @@ This script is part of the toolset to generate the monthly DOI report.
 one other machine (given as the -H parameter), and inserts its results into
 a database.
 
-It assumes that there is a MySQL database program running, with the following 
-tables created:
-
-create table burp(machinename VARCHAR(127), port INT, rundate DATE, auname VARCHAR(255), 
-auid VARCHAR(2047), auyear VARCHAR(32), austatus VARCHAR(255), aulastcrawlresult VARCHAR(255), 
-aucontentsize VARCHAR(255), audisksize REAL, aurepository VARCHAR(255), numarticles INT, 
-publisher VARCHAR(16));
-
-create table lastcomplete(machinename VARCHAR(127), port INT, completedate DATE);
+It assumes that there is a MySQL database program running, with appropriate tables.
 '''
 import datetime
 import httplib
@@ -33,7 +25,7 @@ sys.path.append(os.path.realpath(os.path.join(os.path.dirname(sys.argv[0]), '../
 import lockss_daemon
 
 
-BURP_VERSION = '0.2.1'
+BURP_VERSION = '0.2.2'
 
 OPTION_LONG  = '--'
 OPTION_SHORT = '-'
@@ -112,16 +104,48 @@ def _get_auids(client):
         auids.append(id)
         auname[id] = map['AuName']['value']
     return auids, auname
+    
+def _parse_list_of_articles(lst):
+    val = []
+    if lst is not None and len(lst) > 0: 
+       val = lst.splitlines()
+       i = 0
+       # Eliminate empty lines and lines that start with "#".
+       while i < len(val):
+           if val[i].startswith("#") or len(val[i]) == 0 or val[i].isspace():
+                del val[i]
+           else:
+                i = i + 1
+    return val
 
+# Verify that the _parse_list_of_articles is likely to work.    
+def _test_parse_list_of_articles():
+    # No comments, no blank lines.
+    arts = "Title1\nTitle 2\n"
+    lstArts = _parse_list_of_articles(arts)
+    if len(lstArts) != 2:
+        raise RuntimeError, "_parse_list_of_articles did not pass the no comments, no blank lines test."
+    
+    # Test with comments.    
+    arts = "# Comment\nTitle 1\nTitle 2\n# Comment"
+    lstArts = _parse_list_of_articles(arts)
+    if len(lstArts) != 2:
+        raise RuntimeError, "_parse_list_of_articles did not pass the comments test."
+        
+    # Test with blank lines.
+    arts = "\n\nTitle 1\n\n\n\n\nTitle 2\n\n"
+    lstArts = _parse_list_of_articles(arts)
+    if len(lstArts) != 2:
+        raise RuntimeError, "_parse_list_of_articles did not pass the blank lines test."
+        
+    
 def _get_list_articles(client, auid, auarticles, options):
     reps = 0
 
     while (reps < PARAM_REPEAT_LIST_ARTICLES):
         try:
             lst = client.getListOfArticles(lockss_daemon.AU(auid))
-            val = []
-            if lst is not None and len(lst) > 0: val = lst.splitlines()[2:]
-            auarticles[auid] = val
+            auarticles[auid] = _parse_list_of_articles(lst)
             break
         except urllib2.URLError:
             reps = reps + 1
@@ -276,6 +300,9 @@ def _main_procedure():
     parser = _make_command_line_parser()
     (options, args) = parser.parse_args(values=parser.get_default_values())
     _check_required_options(parser, options)
+
+    # Verification
+    _test_parse_list_of_articles()
 
     try:
         db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
