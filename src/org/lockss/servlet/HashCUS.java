@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.45 2010-05-12 03:52:37 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.46 2010-05-12 04:07:52 tlipkis Exp $
  */
 
 /*
@@ -512,6 +512,7 @@ public class HashCUS extends LockssServlet {
     Reader rdr = new BufferedReader(new FileReader(blockFile));
     org.mortbay.util.IO.copy(rdr, wrtr);
     rdr.close();
+    blockFile.delete();
   }
 
   String getElapsedString() {
