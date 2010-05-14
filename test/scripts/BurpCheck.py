@@ -39,9 +39,9 @@ OPTION_DATE_PREVIOUS_REPORT_END_SHORT    = 'E'
 # A date report of 'None' means the second most recent execution 
 OPTION_DATE_PREVIOUS_REPORT_END_DEFAULT         = None
 
-OPTION_FILENAME_DISAPPEARING           = 'disappearing'
-OPTION_FILENAME_DISAPPEARING_SHORT     = 'd'
-OPTION_FILENAME_DISAPPEARING_DEFAULT   = 'Disappearing.txt'
+OPTION_FILENAME_DISAPPEARED           = 'disappeared'
+OPTION_FILENAME_DISAPPEARED_SHORT     = 'd'
+OPTION_FILENAME_DISAPPEARED_DEFAULT   = 'Disappeared.txt'
 
 OPTION_FILENAME_INCONSISTENT           = 'inconsistent'
 OPTION_FILENAME_INCONSISTENT_SHORT     = 'i'
@@ -58,6 +58,8 @@ OPTION_MAX_ARTICLE_DIFF_DEFAULT         = 50
 OPTION_DAYS_WITHOUT_CRAWL               = 'dayswithoutcrawl'
 OPTION_DAYS_WITHOUT_CRAWL_SHORT         = 'w'
 OPTION_DAYS_WITHOUT_CRAWL_DEFAULT       = 30
+
+
 
 
 def _make_command_line_parser():
@@ -82,11 +84,11 @@ def _make_command_line_parser():
                       default = OPTION_FILENAME_YEAR_ZERO_DEFAULT,
                       help = "The filename for the report of AUs with a zero year.  (Default: %default)")
     
-    parser.add_option(OPTION_SHORT + OPTION_FILENAME_DISAPPEARING_SHORT,
-                      OPTION_LONG + OPTION_FILENAME_DISAPPEARING,
-                      dest = OPTION_FILENAME_DISAPPEARING,
-                      default = OPTION_FILENAME_DISAPPEARING_DEFAULT,
-                      help = "The filename for the report of disappearing AUs.  (Default: %default)")
+    parser.add_option(OPTION_SHORT + OPTION_FILENAME_DISAPPEARED_SHORT,
+                      OPTION_LONG + OPTION_FILENAME_DISAPPEARED,
+                      dest = OPTION_FILENAME_DISAPPEARED,
+                      default = OPTION_FILENAME_DISAPPEARED_DEFAULT,
+                      help = "The filename for the report of disappeared AUs.  (Default: %default)")
     
     # The date for the report: the date that the 'burp.py' program was run.
     parser.add_option(OPTION_SHORT + OPTION_DATE_REPORT_SHORT,
@@ -360,23 +362,6 @@ def _find_inconsistent_information(db, options):
         
         arPublisherYear = cursor.fetchone()
         
-    # List all AUs that have disappeared since the previous run.
-    # This program only examines ingest machines.
-    print("Listing disappearing AUs.\n")
-    cursor.execute("SELECT auid, auname, machinename, port FROM burp WHERE rundate >= '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%' GROUP BY auid, auname ORDER BY auname;" %
-                   (str(options.previousreportdatestart), str(options.previousreportdateend)))
-    arPreviousAu = cursor.fetchone()
-    while arPreviousAu is not None:
-        cursor2.execute("SELECT auname FROM burp WHERE auid = '%s' AND machinename = '%s' AND port = %d AND rundate >= '%s' AND rundate <= '%s'" %
-                        (arPreviousAu[0], arPreviousAu[2], arPreviousAu[3], str(options.reportdatestart), str(options.reportdateend)))
-        arFound = cursor.fetchone
-        
-        if arFound is None:
-            fileInconsistent.write("The AU '%s' was known by %s:%d in the previous run, but not in the current run.\n" % 
-                                   (arPreviousAu[1], arPreviousAu[2], arPreviousAu[3]))
-            isBlankReport = False
-        arPreviousAu = cursor.fetchone()
-        
     if isBlankReport:
         fileInconsistent.write("Congratulations: no AU has inconsistent data!\n")
         
@@ -384,6 +369,41 @@ def _find_inconsistent_information(db, options):
     cursor3.close()
     cursor2.close()
     cursor.close()
+    
+    
+def _find_disappeared_aus(db, options):
+    # List all AUs that have disappeared since the previous run.
+    # This program only examines ingest machines.
+    print("Listing disappeared AUs.\n")
+
+    isBlankReport = True
+    fileDisappeared = open(options.disappeared, 'w')
+    cursor = db.cursor()    
+    cursor2 = db.cursor()
+
+    sqlPreviousAu = "SELECT auid, auname, machinename, port FROM burp WHERE rundate >= '%s' AND rundate <= '%s' AND machinename LIKE 'ingest%%' ORDER BY auname;" % (str(options.previousreportdatestart), str(options.previousreportdateend))
+    print(sqlPreviousAu)
+    cursor.execute(sqlPreviousAu)
+    arPreviousAu = cursor.fetchone()
+    while arPreviousAu is not None:
+        sqlFound = "SELECT auname FROM burp WHERE auid = '%s' AND machinename = '%s' AND port = %d AND rundate >= '%s' AND rundate <= '%s';" % (arPreviousAu[0], arPreviousAu[2], arPreviousAu[3], str(options.reportdatestart), str(options.reportdateend))
+        print(sqlFound)
+        cursor2.execute(sqlFound)
+        arFound = cursor.fetchone
+        
+        if arFound is None:
+            fileDisappeared.write("The AU '%s' was known by %s:%d in the previous run, but it has not been found in the current run.\n" % 
+                                   (arPreviousAu[1], arPreviousAu[2], arPreviousAu[3]))
+            isBlankReport = False
+        arPreviousAu = cursor.fetchone()
+
+    if isBlankReport:
+        fileDisappeared.write("Congratulations; there are no missing AUs.")
+
+    cursor2.close()
+    cursor.close()
+    fileDisappeared.close()
+    
     
 
 def _main_procedure():
@@ -397,6 +417,7 @@ def _main_procedure():
 
     _find_year_zeros(db, options)
     _find_inconsistent_information(db, options)
+    _find_disappeared_aus(db, options)
 
 
 if __name__ == '__main__':    
