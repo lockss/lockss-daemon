@@ -1232,9 +1232,9 @@
     au < HighWirePressH20Plugin ; exists ; Occupational and Environmental Medicine Volume 61 ; 61 >
     au < HighWireStrVolPlugin ; released ; Occupational and Environmental Medicine Volume 62 ; 62 >
     au < HighWireStrVolPlugin ; released ; Occupational and Environmental Medicine Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; Occupational and Environmental Medicine Volume 64 ; 64 >
-    au < HighWirePressH20Plugin ; manifest ; Occupational and Environmental Medicine Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; manifest ; Occupational and Environmental Medicine Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; ready ; Occupational and Environmental Medicine Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; Occupational and Environmental Medicine Volume 65 ; 65 >
+    au < HighWirePressH20Plugin ; ready ; Occupational and Environmental Medicine Volume 66 ; 66 >
 
   }
 
@@ -1250,8 +1250,26 @@
     au < HighWireStrVolPlugin ; released ; Postgraduate Medical Journal Volume 81 ; 81 >
     au < HighWireStrVolPlugin ; released ; Postgraduate Medical Journal Volume 82 ; 82 >
     au < HighWireStrVolPlugin ; released ; Postgraduate Medical Journal Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; manifest ; Postgraduate Medical Journal Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; Postgraduate Medical Journal Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; ready ; Postgraduate Medical Journal Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; ready ; Postgraduate Medical Journal Volume 85 ; 85 >
+
+  }
+
+  {
+    title <
+      name = Practical Neurology ;
+      issn = 1474-7758 ;
+      eissn = 1474-7766
+    >
+
+    param[base_url] = http://pn.bmj.com/
+
+    au < HighWirePressH20Plugin ; ready ; Practical Neurology Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; ready ; Practical Neurology Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; ready ; Practical Neurology Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; ready ; Practical Neurology Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; ready ; Practical Neurology Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; ready ; Practical Neurology Volume 10 ; 10 >
 
   }
 
@@ -1290,8 +1308,8 @@
       au < HighWireStrVolPlugin ; released ; Quality and Safety in Health Care Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; doNotProcess ; Quality and Safety in Health Care Volume 15 ; 15 >
       au < HighWireStrVolPlugin ; released ; Quality and Safety in Health Care Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; Quality and Safety in Health Care Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; Quality and Safety in Health Care Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; ready ; Quality and Safety in Health Care Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; ready ; Quality and Safety in Health Care Volume 18 ; 18 >
       
     }
 
@@ -1385,8 +1403,8 @@
     au < HighWireStrVolPlugin ; released ; Sexually Transmitted Infections Volume 81 ; 81 >
     au < HighWireStrVolPlugin ; released ; Sexually Transmitted Infections Volume 82 ; 82 >
     au < HighWireStrVolPlugin ; released ; Sexually Transmitted Infections Volume 83 ; 83 >
-    au < HighWirePressH20Plugin ; manifest ; Sexually Transmitted Infections Volume 84 ; 84 >
-    au < HighWirePressH20Plugin ; manifest ; Sexually Transmitted Infections Volume 85 ; 85 >
+    au < HighWirePressH20Plugin ; ready ; Sexually Transmitted Infections Volume 84 ; 84 >
+    au < HighWirePressH20Plugin ; ready ; Sexually Transmitted Infections Volume 85 ; 85 >
 
   }
 
@@ -1460,9 +1478,9 @@
     au < HighWirePressH20Plugin ; exists ; Thorax Volume 59 ; 59 >
     au < HighWireStrVolPlugin ; released ; Thorax Volume 60 ; 60 >
     au < HighWireStrVolPlugin ; released ; Thorax Volume 61 ; 61 >
-    au < HighWirePressH20Plugin ; manifest ; Thorax Volume 62 ; 62 >
-    au < HighWirePressH20Plugin ; manifest ; Thorax Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; manifest ; Thorax Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; Thorax Volume 62 ; 62 >
+    au < HighWirePressH20Plugin ; ready ; Thorax Volume 63 ; 63 >
+    au < HighWirePressH20Plugin ; ready ; Thorax Volume 64 ; 64 >
 
   }
 

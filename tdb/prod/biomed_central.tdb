@@ -1267,8 +1267,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Breast Cancer Research Volume 8 ; 8 >
       au < released ; Breast Cancer Research Volume 9 ; 9 >
       au < released ; Breast Cancer Research Volume 10 ; 10 >
-      au < testing ; Breast Cancer Research Volume 11 ; 11 >
-      au < testing ; Breast Cancer Research Volume 12 ; 12 >
+      au < ready ; Breast Cancer Research Volume 11 ; 11 >
+      au < ready ; Breast Cancer Research Volume 12 ; 12 >
       
     }
 
@@ -1434,6 +1434,9 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 >
       au < released ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
+      au < testing ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 >
+      au < testing ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
+      
     }
 
     {
@@ -1448,6 +1451,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Chinese Medicine Volume 1 ; 1 >
       au < released ; Chinese Medicine Volume 2 ; 2 >
       au < released ; Chinese Medicine Volume 3 ; 3 >
+      au < testing ; Chinese Medicine Volume 4 ; 4 >
+      au < testing ; Chinese Medicine Volume 5 ; 5 >
+
     }
 
     {
@@ -1463,6 +1469,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Chiropractic & Osteopathy Volume 14 ; 14 >
       au < released ; Chiropractic & Osteopathy Volume 15 ; 15 >
       au < released ; Chiropractic & Osteopathy Volume 16 ; 16 >
+      au < testing ; Chiropractic & Osteopathy Volume 17 ; 17 >
+      au < testing ; Chiropractic & Osteopathy Volume 18 ; 18 >
+      
     }
 
     {
@@ -1480,6 +1489,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Clinical and Molecular Allergy Volume 4 ; 4 >
       au < released ; Clinical and Molecular Allergy Volume 5 ; 5 >
       au < released ; Clinical and Molecular Allergy Volume 6 ; 6 >
+      au < testing ; Clinical and Molecular Allergy Volume 7 ; 7 >
+      au < testing ; Clinical and Molecular Allergy Volume 8 ; 8 >
     }
 
     {
@@ -1495,6 +1506,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cough Volume 2 ; 2 >
       au < released ; Cough Volume 3 ; 3 >
       au < released ; Cough Volume 4 ; 4 >
+      au < testing ; Cough Volume 5 ; 5 >
+      au < testing ; Cough Volume 6 ; 6 >
     }
 
     {

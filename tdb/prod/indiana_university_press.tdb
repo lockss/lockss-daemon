@@ -507,10 +507,10 @@
 
     param[journal_dir] = textual_cultures
 
-    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 1 ; 1 >
-    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 2 ; 2 >
-    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 3 ; 3 >
-    au < testing ; Textual Cultures:  Texts, Contexts, Interpretation Volume 4 ; 4 >
+    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 1 ; 1 >
+    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 2 ; 2 >
+    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 3 ; 3 >
+    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 4 ; 4 >
 
   }
 
@@ -524,7 +524,7 @@
     param[journal_dir] = the_global_south
 
     au < testing ; The Global South Volume 2 ; 2 >
-    au < testing ; The Global South Volume 3 ; 3 >
+    au < ready ; The Global South Volume 3 ; 3 >
 
   }
 
@@ -537,10 +537,10 @@
 
     param[journal_dir] = transactions_of_the_charles_s_peirce_society
 
-    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
-    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
-    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
-    au < testing ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
+    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
+    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
+    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
 
   }
 
@@ -558,11 +558,11 @@
     au < released ; Transition Volume 11 ; 11 >
     au < released ; Transition Volume 12 ; 12 >
     au < released ; Transition Volume 13 ; 13 >
-    au < testing ; Transition Issue 98 ; 98 >
-    au < testing ; Transition Issue 99 ; 99 >
-    au < testing ; Transition Issue 100 ; 100 >
-    au < testing ; Transition Issue 101 ; 101 >
-    au < testing ; Transition Issue 102 ; 102 >
+    au < ready ; Transition Issue 98 ; 98 >
+    au < ready ; Transition Issue 99 ; 99 >
+    au < ready ; Transition Issue 100 ; 100 >
+    au < ready ; Transition Issue 101 ; 101 >
+    au < ready ; Transition Issue 102 ; 102 >
 
   }
 
@@ -583,9 +583,9 @@
     au < released ; Victorian Studies Volume 47 ; 47 >
     au < released ; Victorian Studies Volume 48 ; 48 >
     au < released ; Victorian Studies Volume 49 ; 49 >
-    au < testing ; Victorian Studies Volume 50 ; 50 >
-    au < testing ; Victorian Studies Volume 51 ; 51 >
-    au < testing ; Victorian Studies Volume 52 ; 52 >
+    au < ready ; Victorian Studies Volume 50 ; 50 >
+    au < ready ; Victorian Studies Volume 51 ; 51 >
+    au < ready ; Victorian Studies Volume 52 ; 52 >
 
   }
 

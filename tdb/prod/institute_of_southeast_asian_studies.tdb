@@ -32,9 +32,9 @@
 
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
 
-    au < testing ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
-    au < testing ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
-    au < testing ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
+    au < ready ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
+    au < ready ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
+    au < ready ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
     au < testing ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
 
   }
@@ -46,12 +46,12 @@
       eissn = 1793-2858
     >
 
-    param[journal_dir] = sojourn_journal_of_social_issues_in_southeast_asia
+    param[journal_dir] = ready_journal_of_social_issues_in_southeast_asia
 
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
-    au < testing ; Sojourn: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
+    au < testing ; ready: Journal of Social Issues in Southeast Asia Volume 21 ; 21 >
+    au < testing ; ready: Journal of Social Issues in Southeast Asia Volume 22 ; 22 >
+    au < testing ; ready: Journal of Social Issues in Southeast Asia Volume 23 ; 23 >
+    au < testing ; ready: Journal of Social Issues in Southeast Asia Volume 24 ; 24 >
 
   }
 
