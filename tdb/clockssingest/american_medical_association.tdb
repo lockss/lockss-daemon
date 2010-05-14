@@ -4,9 +4,8 @@
     name = American Medical Association
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  pluginPrefix = org.lockss.plugin.highwire.
   attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified
-  implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
   
   {
   
@@ -16,7 +15,9 @@
     >
     
     param[base_url] = http://archderm.ama-assn.org/
-
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
+    
     au < released ; 1920 ; Archives of Dermatology and Syphilology Volume 1 ; 1 ; reingest1.clockss.org:8082 >                                                  
     au < released ; 1920 ; Archives of Dermatology and Syphilology Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                  
     au < released ; 1921 ; Archives of Dermatology and Syphilology Volume 3 ; 3 ; reingest2.clockss.org:8085 >                                                  
@@ -174,6 +175,8 @@
     >
     
     param[base_url] = http://archfami.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
 
     au < released ; 1992 ; Archives of Family Medicine Volume 1 ; 1 ; reingest1.clockss.org:8082 >
     au < released ; 1993 ; Archives of Family Medicine Volume 2 ; 2 ; reingest2.clockss.org:8085 >
@@ -195,20 +198,34 @@
     >
     
     param[base_url] = http://archfaci.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; comment[proxy] >
     
-    au < released ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < released ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < released ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < released ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < released ; 2003 ; Archives of Facial Plastic Surgery Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < released ; 2004 ; Archives of Facial Plastic Surgery Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < released ; 2005 ; Archives of Facial Plastic Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < released ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < released ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
-    au < released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
-    au < testing ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ;  >
-      
+    au < ClockssHighWirePlugin ; released ; 1999 ; Archives of Facial Plastic Surgery Volume 1 (H10) ; 1 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; released ; 2000 ; Archives of Facial Plastic Surgery Volume 2 (H10) ; 2 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; released ; 2001 ; Archives of Facial Plastic Surgery Volume 3 (H10) ; 3 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePlugin ; released ; 2002 ; Archives of Facial Plastic Surgery Volume 4 (H10) ; 4 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePlugin ; released ; 2003 ; Archives of Facial Plastic Surgery Volume 5 (H10) ; 5 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; released ; 2004 ; Archives of Facial Plastic Surgery Volume 6 (H10) ; 6 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; released ; 2005 ; Archives of Facial Plastic Surgery Volume 7 (H10) ; 7 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePlugin ; released ; 2006 ; Archives of Facial Plastic Surgery Volume 8 (H10) ; 8 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePlugin ; released ; 2007 ; Archives of Facial Plastic Surgery Volume 9 (H10) ; 9 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 (H10) ; 10 ; >
+    au < ClockssHighWirePlugin ; released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 (H10) ; 11 ; >
+    au < ClockssHighWirePlugin ; testing ; 2010 ; Archives of Facial Plastic Surgery Volume 12 (H10) ; 12 ;  >
+
+    au < ClockssHighWirePressH20Plugin ; manifest ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2003 ; Archives of Facial Plastic Surgery Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2004 ; Archives of Facial Plastic Surgery Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2005 ; Archives of Facial Plastic Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ;  >      
   }
 
   {
@@ -219,6 +236,8 @@
     >
     
     param[base_url] = http://archpsyc.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
 
     au < released ; 1959 ; AMA Archives of General Psychiatry Volume 1 ; 1 ; reingest4.clockss.org:8082 >                                                                         
     au < released ; 1960 ; AMA Archives of General Psychiatry Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                     
@@ -299,6 +318,9 @@
     >
     
     param[base_url] = http://archinte.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
+
     au < released ; 1908 ; Archives of Internal Medicine Volume I ; I ; reingest1.clockss.org:8082 >
     au < released ; 1908 ; Archives of Internal Medicine Volume II ; II ; reingest1.clockss.org:8082 >
     au < released ; 1909 ; Archives of Internal Medicine Volume III ; III ; reingest2.clockss.org:8085 >
@@ -480,6 +502,9 @@
     >
     
     param[base_url] = http://archneur.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
+    
     au < released ; 1959 ; AMA Archives of Neurology Volume 1 ; 1 ; reingest4.clockss.org:8082 >                                                                          
     au < released ; 1960 ; AMA Archives of Neurology Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                          
     au < released ; 1960 ; AMA Archives of Neurology Volume 3 ; 3 ; reingest1.clockss.org:8082 >                                                                          
@@ -558,6 +583,9 @@
     >
     
     param[base_url] = http://archopht.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
+
     au < released ; 1929 ; Archives of Ophthalmology Volume 1 ; 1 ; reingest2.clockss.org:8085 >                                                                           
     au < released ; 1929 ; Archives of Ophthalmology Volume 2 ; 2 ; reingest2.clockss.org:8085 >                                                                           
     au < released ; 1930 ; Archives of Ophthalmology Volume 3 ; 3 ; reingest3.clockss.org:8083 >                                                                           
@@ -697,6 +725,8 @@
     >
     
     param[base_url] = http://archotol.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
 
     au < released ; 1925 ; Archives of Otolaryngology Volume 1 ; 1 ; reingest2.clockss.org:8085 >                                                                         
     au < released ; 1925 ; Archives of Otolaryngology Volume 2 ; 2 ; reingest2.clockss.org:8085 >                                                                         
@@ -846,6 +876,9 @@
     >
     
     param[base_url] = http://archpedi.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
+
     au < released ; 1911 ; American Journal of Diseases of Children Volume I ; I ; reingest4.clockss.org:8082 >
     au < released ; 1911 ; American Journal of Diseases of Children Volume II ; II ; reingest4.clockss.org:8082 >
     au < released ; 1912 ; American Journal of Diseases of Children Volume III ; III ; reingest1.clockss.org:8082 >
@@ -1021,6 +1054,9 @@
     >
     
     param[base_url] = http://archsurg.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
+
     au < released ; 1920 ; Archives of Surgery Volume 1 ; 1 ; reingest1.clockss.org:8082 >                                                                                
     au < released ; 1920 ; Archives of Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >                                                                                
     au < released ; 1921 ; Archives of Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >                                                                                
@@ -1182,6 +1218,8 @@
 
     param[base_url] = http://jama.ama-assn.org/
     param[comment] = 17-Mar-2010 Volumes LV LX and LXI have mismatch between (Roman number) journal name and URLs
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
     
     au < released ; 1883 ; Journal of the American Medical Association Volume I ; I ; reingest4.clockss.org:8082 >                                              
     au < released ; 1884 ; Journal of the American Medical Association Volume II ; II ; reingest1.clockss.org:8082 >                                            
