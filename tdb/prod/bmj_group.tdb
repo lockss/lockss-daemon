@@ -1,12 +1,15 @@
 {
+
   publisher <
     name = BMJ Group
   >
 
   pluginPrefix = org.lockss.plugin.highwire.
   implicit < pluginSuffix ; status ; name ; param[volume_name] >
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.BritishMedicalJournalPublishingGroupPdfTransform$Simplified
 
   {
+  
     title <
       name = Acupuncture in Medicine ;
       issn = 0964-5284 ;
@@ -43,6 +46,7 @@
   }
 
   {
+  
     title <
       name = Annals of the Rheumatic Diseases ;
       issn = 0003-4967 ;
@@ -114,7 +118,7 @@
     au < HighWirePressH20Plugin ; exists ; Annals of the Rheumatic Diseases Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; exists ; Annals of the Rheumatic Diseases Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; testing ; Annals of the Rheumatic Diseases Volume 64 ; 64 >
-    au < HighWireStrVolPlugin ; released ; Annals of the Rheumatic Diseases Volume 65 ; 65 >
+    au < HighWireStrVolPlugin ; down ; Annals of the Rheumatic Diseases Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; testing ; Annals of the Rheumatic Diseases Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; testing ; Annals of the Rheumatic Diseases Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; ready ; Annals of the Rheumatic Diseases Volume 68 ; 68 >
@@ -122,6 +126,7 @@
   }
 
   {
+  
     title <
       name = Archives of Disease in Childhood ;
       issn = 0003-9888 ;
@@ -171,8 +176,8 @@
     au < HighWirePressH20Plugin ; exists ; Archives of Disease in Childhood Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; exists ; Archives of Disease in Childhood Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; exists ; Archives of Disease in Childhood Volume 89 ; 89 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood Volume 90 ; 90 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood Volume 91 ; 91 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood Volume 90 ; 90 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood Volume 91 ; 91 >
     au < HighWirePressH20Plugin ; testing ; Archives of Disease in Childhood Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; testing ; Archives of Disease in Childhood Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; testing ; Archives of Disease in Childhood Volume 94 ; 94 >
@@ -180,6 +185,7 @@
   }
 
   {
+  
     title <
       name = Archives of Disease in Childhood - Education and Practice ;
       issn = 1743-0585 ;
@@ -189,9 +195,9 @@
     param[base_url] = http://ep.bmj.com/
 
     au < HighWirePressH20Plugin ; exists ; Archives of Disease in Childhood - Education and Practice Volume 89 ; 89 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood - Education and Practice Volume 90 ; 90 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood - Education and Practice Volume 91 ; 91 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood - Education and Practice Volume 92 ; 92 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood - Education and Practice Volume 90 ; 90 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood - Education and Practice Volume 91 ; 91 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood - Education and Practice Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; ready ; Archives of Disease in Childhood - Education and Practice Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; ready ; Archives of Disease in Childhood - Education and Practice Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; ready ; Archives of Disease in Childhood - Education and Practice Volume 95 ; 95 >
@@ -199,6 +205,7 @@
   }
 
   {
+  
     title <
       name = Archives of Disease in Childhood - Fetal and Neonatal Edition ;
       issn = 1359-2998 ;
@@ -227,9 +234,9 @@
     au < HighWirePressH20Plugin ; exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; exists ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 89 ; 89 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 90 ; 90 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91 ; 91 >
-    au < HighWireStrVolPlugin ; released ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 92 ; 92 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 90 ; 90 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 91 ; 91 >
+    au < HighWireStrVolPlugin ; down ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; ready ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; ready ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; ready ; Archives of Disease in Childhood - Fetal and Neonatal Edition Volume 95 ; 95 >
@@ -410,8 +417,8 @@
     au < HighWirePressH20Plugin ; exists ; British Journal of Sports Medicine Volume 36 ; 36 >
     au < HighWirePressH20Plugin ; exists ; British Journal of Sports Medicine Volume 37 ; 37 >
     au < HighWirePressH20Plugin ; exists ; British Journal of Sports Medicine Volume 38 ; 38 >
-    au < HighWireStrVolPlugin ; released ; British Journal of Sports Medicine Volume 39 ; 39 >
-    au < HighWireStrVolPlugin ; released ; British Journal of Sports Medicine Volume 40 ; 40 >
+    au < HighWireStrVolPlugin ; down ; British Journal of Sports Medicine Volume 39 ; 39 >
+    au < HighWireStrVolPlugin ; down ; British Journal of Sports Medicine Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; ready ; British Journal of Sports Medicine Volume 41 ; 41 >
     au < HighWirePressH20Plugin ; ready ; British Journal of Sports Medicine Volume 42 ; 42 >
     au < HighWirePressH20Plugin ; ready ; British Journal of Sports Medicine Volume 43 ; 43 >
@@ -500,9 +507,9 @@
     au < HighWirePressH20Plugin ; exists ; Evidence-Based Medicine Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; exists ; Evidence-Based Medicine Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; exists ; Evidence-Based Medicine Volume 9 ; 9 >
-    au < HighWireStrVolPlugin ; released ; Evidence-Based Medicine Volume 10 ; 10 >
-    au < HighWireStrVolPlugin ; released ; Evidence-Based Medicine Volume 11 ; 11 >
-    au < HighWireStrVolPlugin ; released ; Evidence-Based Medicine Volume 12 ; 12 >
+    au < HighWireStrVolPlugin ; down ; Evidence-Based Medicine Volume 10 ; 10 >
+    au < HighWireStrVolPlugin ; down ; Evidence-Based Medicine Volume 11 ; 11 >
+    au < HighWireStrVolPlugin ; down ; Evidence-Based Medicine Volume 12 ; 12 >
     au < HighWirePressH20Plugin ; testing ; Evidence-Based Medicine Volume 13 ; 13 >
     au < HighWirePressH20Plugin ; testing ; Evidence-Based Medicine Volume 14 ; 14 >
 
@@ -548,7 +555,7 @@
     au < HighWirePressH20Plugin ; exists ; Evidence-Based Nursing Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; exists ; Evidence-Based Nursing Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; exists ; Evidence-Based Nursing Volume 7 ; 7 >
-    au < HighWireStrVolPlugin ; released ; Evidence-Based Nursing Volume 8 ; 8 >
+    au < HighWireStrVolPlugin ; down ; Evidence-Based Nursing Volume 8 ; 8 >
     au < HighWirePressH20Plugin ; manifest ; Evidence-Based Nursing Volume 9 ; 9 >
     au < HighWirePressH20Plugin ; manifest ; Evidence-Based Nursing Volume 10 ; 10 >
     au < HighWirePressH20Plugin ; manifest ; Evidence-Based Nursing Volume 11 ; 11 >
@@ -618,9 +625,9 @@
     au < HighWirePressH20Plugin ; exists ; Gut Volume 51 ; 51 >
     au < HighWirePressH20Plugin ; exists ; Gut Volume 52 ; 52 >
     au < HighWirePressH20Plugin ; exists ; Gut Volume 53 ; 53 >
-    au < HighWireStrVolPlugin ; released ; Gut Volume 54 ; 54 >
-    au < HighWireStrVolPlugin ; released ; Gut Volume 55 ; 55 >
-    au < HighWireStrVolPlugin ; released ; Gut Volume 56 ; 56 >
+    au < HighWireStrVolPlugin ; down ; Gut Volume 54 ; 54 >
+    au < HighWireStrVolPlugin ; down ; Gut Volume 55 ; 55 >
+    au < HighWireStrVolPlugin ; down ; Gut Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; ready ; Gut Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; ready ; Gut Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; ready ; Gut Volume 59 ; 59 >
@@ -724,9 +731,9 @@
     au < HighWirePressH20Plugin ; exists ; Heart Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; exists ; Heart Volume 89 ; 89 >
     au < HighWirePressH20Plugin ; exists ; Heart Volume 90 ; 90 >
-    au < HighWireStrVolPlugin ; released ; Heart Volume 91 ; 91 >
-    au < HighWireStrVolPlugin ; released ; Heart Volume 92 ; 92 >
-    au < HighWireStrVolPlugin ; released ; Heart Volume 93 ; 93 >
+    au < HighWireStrVolPlugin ; down ; Heart Volume 91 ; 91 >
+    au < HighWireStrVolPlugin ; down ; Heart Volume 92 ; 92 >
+    au < HighWireStrVolPlugin ; down ; Heart Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; ready ; Heart Volume 94 ; 94 >
     au < HighWirePressH20Plugin ; ready ; Heart Volume 95 ; 95 >
     au < HighWirePressH20Plugin ; ready ; Heart Volume 96 ; 96 >
@@ -744,8 +751,7 @@
 
       param[base_url] = http://ip.bmj.com/
 
-      au < HighWireStrVolPlugin ; released ; Injury Prevention Volume 10 ; 10 >
-      au < HighWireStrVolPlugin ; released ; Injury Prevention Volume 11 ; 11 >
+      au < HighWireStrVolPlugin ; down ; Injury Prevention Volume 11 ; 11 >
 
     }
 
@@ -762,7 +768,7 @@
       au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 8 ; 8 >
       au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; exists ; Injury Prevention Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; doNotProcess ; Injury Prevention Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; testing ; Injury Prevention Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; testing ; Injury Prevention Volume 13 ; 13 >
@@ -840,8 +846,8 @@
     au < HighWirePressH20Plugin ; exists ; Journal of Clinical Pathology Volume 55 ; 55 >
     au < HighWirePressH20Plugin ; exists ; Journal of Clinical Pathology Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; exists ; Journal of Clinical Pathology Volume 57 ; 57 >
-    au < HighWireStrVolPlugin ; released ; Journal of Clinical Pathology Volume 58 ; 58 >
-    au < HighWireStrVolPlugin ; released ; Journal of Clinical Pathology Volume 59 ; 59 >
+    au < HighWireStrVolPlugin ; down ; Journal of Clinical Pathology Volume 58 ; 58 >
+    au < HighWireStrVolPlugin ; down ; Journal of Clinical Pathology Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; ready ; Journal of Clinical Pathology Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; ready ; Journal of Clinical Pathology Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; ready ; Journal of Clinical Pathology Volume 62 ; 62 >
@@ -915,8 +921,8 @@
     au < HighWirePressH20Plugin ; exists ; Journal of Epidemiology & Community Health Volume 56 ; 56 >
     au < HighWirePressH20Plugin ; exists ; Journal of Epidemiology & Community Health Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; exists ; Journal of Epidemiology & Community Health Volume 58 ; 58 >
-    au < HighWireStrVolPlugin ; released ; Journal of Epidemiology & Community Health Volume 59 ; 59 >
-    au < HighWireStrVolPlugin ; released ; Journal of Epidemiology & Community Health Volume 60 ; 60 >
+    au < HighWireStrVolPlugin ; down ; Journal of Epidemiology & Community Health Volume 59 ; 59 >
+    au < HighWireStrVolPlugin ; down ; Journal of Epidemiology & Community Health Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; ready ; Journal of Epidemiology & Community Health Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; ready ; Journal of Epidemiology & Community Health Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; Journal of Epidemiology & Community Health Volume 63 ; 63 >
@@ -961,8 +967,8 @@
     au < HighWirePressH20Plugin ; exists ; Journal of Medical Ethics Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; exists ; Journal of Medical Ethics Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; exists ; Journal of Medical Ethics Volume 30 ; 30 >
-    au < HighWireStrVolPlugin ; released ; Journal of Medical Ethics Volume 31 ; 31 >
-    au < HighWireStrVolPlugin ; released ; Journal of Medical Ethics Volume 32 ; 32 >
+    au < HighWireStrVolPlugin ; down ; Journal of Medical Ethics Volume 31 ; 31 >
+    au < HighWireStrVolPlugin ; down ; Journal of Medical Ethics Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; ready ; Journal of Medical Ethics Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; ready ; Journal of Medical Ethics Volume 34 ; 34 >
     au < HighWirePressH20Plugin ; ready ; Journal of Medical Ethics Volume 35 ; 35 >
@@ -1019,8 +1025,8 @@
     au < HighWirePressH20Plugin ; exists ; Journal of Medical Genetics Volume 39 ; 39 >
     au < HighWirePressH20Plugin ; exists ; Journal of Medical Genetics Volume 40 ; 40 >
     au < HighWirePressH20Plugin ; exists ; Journal of Medical Genetics Volume 41 ; 41 >
-    au < HighWireStrVolPlugin ; released ; Journal of Medical Genetics Volume 42 ; 42 >
-    au < HighWireStrVolPlugin ; released ; Journal of Medical Genetics Volume 43 ; 43 >
+    au < HighWireStrVolPlugin ; down ; Journal of Medical Genetics Volume 42 ; 42 >
+    au < HighWireStrVolPlugin ; down ; Journal of Medical Genetics Volume 43 ; 43 >
     au < HighWirePressH20Plugin ; testing ; Journal of Medical Genetics Volume 44 ; 44 >
     au < HighWirePressH20Plugin ; testing ; Journal of Medical Genetics Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; testing ; Journal of Medical Genetics Volume 46 ; 46 >
@@ -1108,8 +1114,8 @@
     au < HighWirePressH20Plugin ; exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 73 ; 73 >
     au < HighWirePressH20Plugin ; exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 74 ; 74 >
     au < HighWirePressH20Plugin ; exists ; Journal of Neurology, Neurosurgery & Psychiatry Volume 75 ; 75 >
-    au < HighWireStrVolPlugin ; released ; Journal of Neurology, Neurosurgery & Psychiatry Volume 76 ; 76 >
-    au < HighWireStrVolPlugin ; released ; Journal of Neurology, Neurosurgery & Psychiatry Volume 77 ; 77 >
+    au < HighWireStrVolPlugin ; down ; Journal of Neurology, Neurosurgery & Psychiatry Volume 76 ; 76 >
+    au < HighWireStrVolPlugin ; down ; Journal of Neurology, Neurosurgery & Psychiatry Volume 77 ; 77 >
     au < HighWirePressH20Plugin ; testing ; Journal of Neurology, Neurosurgery & Psychiatry Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; testing ; Journal of Neurology, Neurosurgery & Psychiatry Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; testing ; Journal of Neurology, Neurosurgery & Psychiatry Volume 80 ; 80 >
@@ -1131,7 +1137,7 @@
     au < HighWirePressH20Plugin ; exists ; Medical Humanities Volume 28 ; 28 >
     au < HighWirePressH20Plugin ; exists ; Medical Humanities Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; exists ; Medical Humanities Volume 30 ; 30 >
-    au < HighWireStrVolPlugin ; released ; Medical Humanities Volume 31 ; 31 >
+    au < HighWireStrVolPlugin ; down ; Medical Humanities Volume 31 ; 31 >
     au < HighWirePressH20Plugin ; testing ; Medical Humanities Volume 32 ; 32 >
     au < HighWirePressH20Plugin ; testing ; Medical Humanities Volume 33 ; 33 >
     au < HighWirePressH20Plugin ; testing ; Medical Humanities Volume 34 ; 34 >
@@ -1230,8 +1236,8 @@
     au < HighWirePressH20Plugin ; exists ; Occupational and Environmental Medicine Volume 59 ; 59 >
     au < HighWirePressH20Plugin ; exists ; Occupational and Environmental Medicine Volume 60 ; 60 >
     au < HighWirePressH20Plugin ; exists ; Occupational and Environmental Medicine Volume 61 ; 61 >
-    au < HighWireStrVolPlugin ; released ; Occupational and Environmental Medicine Volume 62 ; 62 >
-    au < HighWireStrVolPlugin ; released ; Occupational and Environmental Medicine Volume 63 ; 63 >
+    au < HighWireStrVolPlugin ; down ; Occupational and Environmental Medicine Volume 62 ; 62 >
+    au < HighWireStrVolPlugin ; down ; Occupational and Environmental Medicine Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; Occupational and Environmental Medicine Volume 64 ; 64 >
     au < HighWirePressH20Plugin ; ready ; Occupational and Environmental Medicine Volume 65 ; 65 >
     au < HighWirePressH20Plugin ; ready ; Occupational and Environmental Medicine Volume 66 ; 66 >
@@ -1247,9 +1253,9 @@
 
     param[base_url] = http://pmj.bmj.com/
 
-    au < HighWireStrVolPlugin ; released ; Postgraduate Medical Journal Volume 81 ; 81 >
-    au < HighWireStrVolPlugin ; released ; Postgraduate Medical Journal Volume 82 ; 82 >
-    au < HighWireStrVolPlugin ; released ; Postgraduate Medical Journal Volume 83 ; 83 >
+    au < HighWireStrVolPlugin ; down ; Postgraduate Medical Journal Volume 81 ; 81 >
+    au < HighWireStrVolPlugin ; down ; Postgraduate Medical Journal Volume 82 ; 82 >
+    au < HighWireStrVolPlugin ; down ; Postgraduate Medical Journal Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; ready ; Postgraduate Medical Journal Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; ready ; Postgraduate Medical Journal Volume 85 ; 85 >
 
@@ -1284,7 +1290,7 @@
     
       param[base_url] = http://qhc.bmj.com/
 
-      au < HighWireStrVolPlugin ; released ; Quality and Safety in Health Care Volume 15 ; 15 >
+      au < HighWireStrVolPlugin ; down ; Quality and Safety in Health Care Volume 15 ; 15 >
       
     }
     
@@ -1305,9 +1311,9 @@
       au < HighWirePressH20Plugin ; exists ; Quality and Safety in Health Care Volume 11 ; 11 >
       au < HighWirePressH20Plugin ; exists ; Quality and Safety in Health Care Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; exists ; Quality and Safety in Health Care Volume 13 ; 13 >
-      au < HighWireStrVolPlugin ; released ; Quality and Safety in Health Care Volume 14 ; 14 >
+      au < HighWireStrVolPlugin ; down ; Quality and Safety in Health Care Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; doNotProcess ; Quality and Safety in Health Care Volume 15 ; 15 >
-      au < HighWireStrVolPlugin ; released ; Quality and Safety in Health Care Volume 16 ; 16 >
+      au < HighWireStrVolPlugin ; down ; Quality and Safety in Health Care Volume 16 ; 16 >
       au < HighWirePressH20Plugin ; ready ; Quality and Safety in Health Care Volume 17 ; 17 >
       au < HighWirePressH20Plugin ; ready ; Quality and Safety in Health Care Volume 18 ; 18 >
       
@@ -1400,9 +1406,9 @@
     au < HighWirePressH20Plugin ; exists ; Sexually Transmitted Infections Volume 78 ; 78 >
     au < HighWirePressH20Plugin ; exists ; Sexually Transmitted Infections Volume 79 ; 79 >
     au < HighWirePressH20Plugin ; exists ; Sexually Transmitted Infections Volume 80 ; 80 >
-    au < HighWireStrVolPlugin ; released ; Sexually Transmitted Infections Volume 81 ; 81 >
-    au < HighWireStrVolPlugin ; released ; Sexually Transmitted Infections Volume 82 ; 82 >
-    au < HighWireStrVolPlugin ; released ; Sexually Transmitted Infections Volume 83 ; 83 >
+    au < HighWireStrVolPlugin ; down ; Sexually Transmitted Infections Volume 81 ; 81 >
+    au < HighWireStrVolPlugin ; down ; Sexually Transmitted Infections Volume 82 ; 82 >
+    au < HighWireStrVolPlugin ; down ; Sexually Transmitted Infections Volume 83 ; 83 >
     au < HighWirePressH20Plugin ; ready ; Sexually Transmitted Infections Volume 84 ; 84 >
     au < HighWirePressH20Plugin ; ready ; Sexually Transmitted Infections Volume 85 ; 85 >
 
@@ -1476,8 +1482,8 @@
     au < HighWirePressH20Plugin ; exists ; Thorax Volume 57 ; 57 >
     au < HighWirePressH20Plugin ; exists ; Thorax Volume 58 ; 58 >
     au < HighWirePressH20Plugin ; exists ; Thorax Volume 59 ; 59 >
-    au < HighWireStrVolPlugin ; released ; Thorax Volume 60 ; 60 >
-    au < HighWireStrVolPlugin ; released ; Thorax Volume 61 ; 61 >
+    au < HighWireStrVolPlugin ; down ; Thorax Volume 60 ; 60 >
+    au < HighWireStrVolPlugin ; down ; Thorax Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; ready ; Thorax Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; ready ; Thorax Volume 63 ; 63 >
     au < HighWirePressH20Plugin ; ready ; Thorax Volume 64 ; 64 >
@@ -1495,7 +1501,7 @@
 
       param[base_url] = http://tc.bmj.com/
 
-      au < HighWireStrVolPlugin ; released ; Tobacco Control Volume 14 ; 14 >
+      au < HighWireStrVolPlugin ; down ; Tobacco Control Volume 14 ; 14 >
 
     }
 

@@ -18,15 +18,15 @@
       param[base_url] = http://www.jcb.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < superseded ; The Journal of Cell Biology Volume 168 ; 168 >
-      au < superseded ; The Journal of Cell Biology Volume 169 ; 169 >
-      au < superseded ; The Journal of Cell Biology Volume 170 ; 170 >
-      au < superseded ; The Journal of Cell Biology Volume 171 ; 171 >
-      au < superseded ; The Journal of Cell Biology Volume 172 ; 172 >
-      au < superseded ; The Journal of Cell Biology Volume 173 ; 173 >
-      au < superseded ; The Journal of Cell Biology Volume 174 ; 174 >
-      au < superseded ; The Journal of Cell Biology Volume 175 ; 175 >
-      au < superseded ; The Journal of Cell Biology Volume 176 ; 176 >
+      au < down ; The Journal of Cell Biology Volume 168 ; 168 >
+      au < down ; The Journal of Cell Biology Volume 169 ; 169 >
+      au < down ; The Journal of Cell Biology Volume 170 ; 170 >
+      au < down ; The Journal of Cell Biology Volume 171 ; 171 >
+      au < down ; The Journal of Cell Biology Volume 172 ; 172 >
+      au < down ; The Journal of Cell Biology Volume 173 ; 173 >
+      au < down ; The Journal of Cell Biology Volume 174 ; 174 >
+      au < down ; The Journal of Cell Biology Volume 175 ; 175 >
+      au < down ; The Journal of Cell Biology Volume 176 ; 176 >
 
     }
 
@@ -179,7 +179,7 @@
       param[base_url] = http://www.jem.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < superseded ; The Journal of Experimental Medicine Volume 202 ; 202 >
+      au < down ; The Journal of Experimental Medicine Volume 202 ; 202 >
 
     }
 
@@ -316,7 +316,7 @@
       param[base_url] = http://www.jgp.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < superseded ; The Journal of General Physiology Volume 127 ; 127 >
+      au < down ; The Journal of General Physiology Volume 127 ; 127 >
 
     }
 

@@ -3243,14 +3243,24 @@
 
       {
 
+        pluginSuffix = HighWirePlugin
+        param[base_url] = http://deafed.oxfordjournals.org/
+        implicit < status ; name ; param[volume] >
+
+        au < released ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
+
+      }
+
+      {
+
         param[base_url] = http://jdsde.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; released ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; released ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
-        au < HighWirePressPlugin ; released ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
-        au < HighWirePressPlugin ; released ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doNotProcess ; Journal of Deaf Studies and Deaf Education Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; down ; Journal of Deaf Studies and Deaf Education Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; Journal of Deaf Studies and Deaf Education Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; Journal of Deaf Studies and Deaf Education Volume 13 ; 13 >
+        au < HighWirePressPlugin ; down ; Journal of Deaf Studies and Deaf Education Volume 14 ; 14 >
 
       }
 
