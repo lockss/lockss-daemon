@@ -5,103 +5,103 @@
 # Common functions for lockss startup scripts
 
 set_lockss_user () {
-HOME_DIR=`echo "cd ~$1 ; pwd" | sh`
-if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/config.dat ]
-then
-	export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-elif [ -f ${HOME_DIR}/etc/lockss/config.dat ]
-then
-	export CFG_FILE=${HOME_DIR}/etc/lockss/config.dat
-elif [ -f /etc/lockss/config.dat ]
-then
-	export CFG_FILE=/etc/lockss/config.dat
-else
-	export CFG_FILE=
-fi
-if [ "${LOCKSS_USER}X" = "X" -a "X${CFG_FILE}" != "X" ]
-then
-	export LOCKSS_USER=`sed -n '/^LOCKSS_USER="\(.*\)"/s//\1/p' ${CFG_FILE}`
-fi
-if [ "X${LOCKSS_USER}" = X ]
-then
+    HOME_DIR=`echo "cd ~$1 ; pwd" | sh`
+    if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/config.dat ]
+    then
+        export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
+    elif [ -f ${HOME_DIR}/etc/lockss/config.dat ]
+    then
+        export CFG_FILE=${HOME_DIR}/etc/lockss/config.dat
+    elif [ -f /etc/lockss/config.dat ]
+    then
+        export CFG_FILE=/etc/lockss/config.dat
+    else
+        export CFG_FILE=
+    fi
+    if [ "${LOCKSS_USER}X" = "X" -a "X${CFG_FILE}" != "X" ]
+    then
+        export LOCKSS_USER=`sed -n '/^LOCKSS_USER="\(.*\)"/s//\1/p' ${CFG_FILE}`
+    fi
+    if [ "X${LOCKSS_USER}" = X ]
+    then
         export LOCKSS_USER=lockss
-fi
+    fi
 }
 
 set_variables () {
-OS_TYPE=`uname -s`
-case ${OS_TYPE} in
-SunOS)
-	if [ "X${LOCKSS_HOME}" = X ]
-	then
-		# Next line weird because of evaluation order of
-		# ~ and shell parameters
-               	HOME_DIR=`echo "cd ~$1 ; pwd" | sh`
-		if [ -d /etc/lockss ]
-		then
-			export LOCKSS_HOME=
-		else
-			export LOCKSS_HOME=${HOME_DIR}
-		fi
-	fi
-	export KEEP_GOING=${HOME_DIR}/KeepGoing
-	if [ "${LOCAL_TXT}X" = "X" ]
-	then
-	        export LOCAL_TXT=${HOME_DIR}/local.txt
-	fi
-	if [ "X${LOCKSS_SSL_CONFIG}" = "X" ]
-	then
-		export LOCKSS_SSL_CONFIG=/var/run/lockss/ssl.${1}.txt
-	fi
+    OS_TYPE=`uname -s`
+    case ${OS_TYPE} in
+    SunOS)
+        if [ "X${LOCKSS_HOME}" = X ]
+        then
+            # Next line weird because of evaluation order of
+            # ~ and shell parameters
+            HOME_DIR=`echo "cd ~$1 ; pwd" | sh`
+            if [ -d /etc/lockss ]
+            then
+                export LOCKSS_HOME=
+            else
+                export LOCKSS_HOME=${HOME_DIR}
+            fi
+        fi
+        export KEEP_GOING=${HOME_DIR}/KeepGoing
+        if [ "${LOCAL_TXT}X" = "X" ]
+        then
+            export LOCAL_TXT=${HOME_DIR}/local.txt
+        fi
+        if [ "X${LOCKSS_SSL_CONFIG}" = "X" ]
+        then
+            export LOCKSS_SSL_CONFIG=/var/run/lockss/ssl.${1}.txt
+        fi
         ;;
-Linux)
-	local HOME_DIR=`echo "cd ~$1 ; pwd" | bash`
-	export LOCKSS_HOME=
-	export KEEP_GOING=${HOME_DIR}/KeepGoing
-	if [ "${LOCAL_TXT}X" = "X" ]
-	then
-	        export LOCAL_TXT=${HOME_DIR}/local.txt
-	fi
-	if [ "X${LOCKSS_SSL_CONFIG}" = "X" ]
-	then
-		export LOCKSS_SSL_CONFIG=/var/run/lockss/ssl.${1}.txt
-	fi
+    Linux)
+        local HOME_DIR=`echo "cd ~$1 ; pwd" | bash`
+        export LOCKSS_HOME=
+        export KEEP_GOING=${HOME_DIR}/KeepGoing
+        if [ "${LOCAL_TXT}X" = "X" ]
+        then
+            export LOCAL_TXT=${HOME_DIR}/local.txt
+        fi
+        if [ "X${LOCKSS_SSL_CONFIG}" = "X" ]
+        then
+            export LOCKSS_SSL_CONFIG=/var/run/lockss/ssl.${1}.txt
+        fi
         ;;
-esac
-if [ "${LOG_DIR}X" = "X" ]
-then
+    esac
+    if [ "${LOG_DIR}X" = "X" ]
+    then
         export LOG_DIR="${LOCKSS_HOME}/var/log/$1"
-fi
-if [ "${LOG_FILE}X" = "X" ]
-then
+    fi
+    if [ "${LOG_FILE}X" = "X" ]
+    then
         export LOG_FILE="${LOG_DIR}/stdout"
-fi
-if [ "${PID_FILE}X" = "X" ]
-then
+    fi
+    if [ "${PID_FILE}X" = "X" ]
+    then
         export PID_FILE="${LOCKSS_HOME}/var/run/$1.pid"
-fi
-if [ "${CFG_FILE}X" = "X" ]
-then
+    fi
+    if [ "${CFG_FILE}X" = "X" ]
+    then
         export CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-fi
-if [ "${RUN_DIR}X" = "X" ]
-then
+    fi
+    if [ "${RUN_DIR}X" = "X" ]
+    then
         export RUN_DIR=${LOCKSS_HOME}/var/run/lockss
-fi
-export CONFIG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
+    fi
+    export CONFIG_SCRIPT=${LOCKSS_HOME}/etc/lockss/hostconfig
 }
 
 unset_variables () {
-LOCAL_TXT=
-LOG_DIR=
-LOG_FILE=
-PID_FILE=
-CFG_FILE=
-LOCKSS_USER=
-LOCKSS_HOME=
-KEEP_GOING=
-CONFIG_SCRIPT=
-LOCKSS_SSL_CONFIG=
-RUN_DIR=
+    LOCAL_TXT=
+    LOG_DIR=
+    LOG_FILE=
+    PID_FILE=
+    CFG_FILE=
+    LOCKSS_USER=
+    LOCKSS_HOME=
+    KEEP_GOING=
+    CONFIG_SCRIPT=
+    LOCKSS_SSL_CONFIG=
+    RUN_DIR=
 }
 

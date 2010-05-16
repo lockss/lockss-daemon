@@ -1,19 +1,18 @@
 #!/bin/sh
 # Do not edit the line above. The script must work with
 # /bin/sh on Solaris.
-
 if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/functions ]
 then
-        . ${LOCKSS_HOME}/etc/lockss/functions
+    . ${LOCKSS_HOME}/etc/lockss/functions
 elif [ -f /etc/lockss/functions ]
 then
-        . /etc/lockss/functions
+    . /etc/lockss/functions
 elif [ -f ${HOME}/etc/lockss/functions ]
 then
-        . ${HOME}/etc/lockss/functions
+    . ${HOME}/etc/lockss/functions
 else
-        echo "Can't find LOCKSS functions" 
-        exit 1
+    echo "Can't find LOCKSS functions" >>${LOG_FILE}
+    exit 1
 fi
 
 if [ "X$1" = Xwait ]; then
@@ -24,12 +23,12 @@ set_variables ${USER}
 DAEMON_COUNT=0
 for A in ${LOCKSS_USER}
 do
-	DAEMON_COUNT=`expr ${DAEMON_COUNT} + 1`
+    DAEMON_COUNT=`expr ${DAEMON_COUNT} + 1`
 done
 NUMERATOR=2
 if [ "${DAEMON_COUNT}X" = 2X ]
 then
-	NUMERATOR=1
+    NUMERATOR=1
 fi
 # Default is to use  2/3 of physical memory for all daemons combined.
 # Set LOCKSS_JAVA_HEAP to override.
@@ -39,51 +38,44 @@ MAX_JAVA_HEAP_IN_MB=1024
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 Linux)          
-	# look in /proc/meminfo for "MemTotal:      1002108 kB"
-	if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ]
-	then
-		MEM_IN_KB=`sed -n -e 's/MemTotal:[ 	]*\([0-9]*\) kB/\1/p' </proc/meminfo`
-		MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' ${NUMERATOR} \) / 3`
-		MEM_IN_MB=`expr ${MEM_IN_KB} '/' 1024`
-		if [ ${MEM_IN_MB} -lt ${MIN_JAVA_HEAP_IN_MB} ]; then
-		    MEM_IN_MB=${MIN_JAVA_HEAP_IN_MB}
-		fi
-		if [ ${MEM_IN_MB} -gt ${MAX_JAVA_HEAP_IN_MB} ]; then
-		    MEM_IN_MB=${MAX_JAVA_HEAP_IN_MB}
-		fi
-		LOCKSS_JAVA_HEAP=${MEM_IN_MB}m
-	fi
-        ;;
+    # look in /proc/meminfo for "MemTotal:      1002108 kB"
+    if [ "${LOCKSS_JAVA_HEAP}X" = X -a -f /proc/meminfo ] ; then
+        MEM_IN_KB=`sed -n -e 's/MemTotal:[     ]*\([0-9]*\) kB/\1/p' </proc/meminfo`
+        MEM_IN_KB=`expr \( ${MEM_IN_KB} '*' ${NUMERATOR} \) / 3`
+        MEM_IN_MB=`expr ${MEM_IN_KB} '/' 1024`
+        if [ ${MEM_IN_MB} -lt ${MIN_JAVA_HEAP_IN_MB} ]; then
+            MEM_IN_MB=${MIN_JAVA_HEAP_IN_MB}
+        fi
+        if [ ${MEM_IN_MB} -gt ${MAX_JAVA_HEAP_IN_MB} ]; then
+            MEM_IN_MB=${MAX_JAVA_HEAP_IN_MB}
+        fi
+        LOCKSS_JAVA_HEAP=${MEM_IN_MB}m
+    fi
+    ;;
 esac
-
-if [ -f ${LOCKSS_HOME}/etc/lockss/config.$USER.dat ]
-then
-	CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.$USER.dat
+if [ -f ${LOCKSS_HOME}/etc/lockss/config.$USER.dat ]; then
+    CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.$USER.dat
 fi
-
 if [ -f ${CFG_FILE} ]; then
-  . ${CFG_FILE}
+    . ${CFG_FILE}
 else
-  echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
-  exit 1
+    echo "${CFG_FILE} missing; run ${CFG_SCRIPT}" >>${LOG_FILE}
+    exit 1
 fi
-
 JAVA_VERSION=`${LOCKSS_JAVA_CMD} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/'`
 case "X${JAVA_VERSION}" in
 X1.[6789]*)
-	;;
+    ;;
 *)
-	echo "Java version is ${JAVA_VERSION}: 1.6 or higher required"
-	exit 1
-	;;
+    echo "Java version is ${JAVA_VERSION}: 1.6 or higher required" >>${LOG_FILE}
+    exit 1
+    ;;
 esac
-
 CLASSPATH=@CLASSPATH@
 DAEMON_CLASS=org.lockss.app.LockssDaemon
 if [ "X${LOCKSS_JAVA_SWITCHES}" = "X" ]; then
     LOCKSS_JAVA_SWITCHES="-server -Xmx${LOCKSS_JAVA_HEAP:-500m} -Dsun.net.inetaddr.ttl=3600 -showversion"
 fi
-
 # if LOCKSS_PROPS_URL starts with "-" it is assumed to be the of the form
 #    -p <url1> [-p <url2> ...]
 if [ "X${LOCKSS_PROPS_URL}" = "X-*" ]; then
@@ -99,27 +91,23 @@ if [ "X${LOCKSS_TEST_GROUP}" != "X" ]; then
 else
     DAEMON_ARGS="-g prod ${DAEMON_ARGS}"
 fi
-
 if [ "X${LOCKSS_EXTERNAL_IPADDR}" != X ]; then
     LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_EXTERNAL_IPADDR}]:${LOCKSS_V3_PORT}"
 else
     LOCKSS_V3_IDENTITY="TCP:[${LOCKSS_IPADDR}]:${LOCKSS_V3_PORT}"
 fi
-
 #LOCKSS_JAVA_SWITCHES="${LOCKSS_JAVA_SWITCHES} -Dorg.lockss.defaultLogLevel=DEBUG3"
-
 if [ "X$LOCKSS_CLEAR_TMPDIR" = Xyes ]; then
-  case "X${LOCKSS_TMPDIR}" in
+    case "X${LOCKSS_TMPDIR}" in
     X | X/tmp | X/var/tmp )
-	# don't clear if unset, or /tmp or /var/tmp
-	;;
+        # don't clear if unset, or /tmp or /var/tmp
+        ;;
     * )
-	echo "Clearing ${LOCKSS_TMPDIR}" >> ${LOG_FILE}
-	(cd ${LOCKSS_TMPDIR}; rm -rf *) >> ${LOG_FILE}
-      ;;
-  esac
+        echo "Clearing ${LOCKSS_TMPDIR}" >> ${LOG_FILE}
+        (cd ${LOCKSS_TMPDIR}; rm -rf *) >> ${LOG_FILE}
+        ;;
+    esac
 fi
-
 cat >${LOCAL_TXT} <<EOF
 org.lockss.platform.localIPAddress=${LOCKSS_IPADDR}
 org.lockss.platform.v3.identity=${LOCKSS_V3_IDENTITY}
@@ -140,7 +128,6 @@ org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
 org.lockss.platform.propsProxy=${LOCKSS_PROPS_PROXY}
 EOF
-
 cd ${LOCKSS_HOME}/
 echo "Starting daemon at `date`" >> ${LOG_FILE}
 ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOG_FILE" 2>&1 &
@@ -148,5 +135,3 @@ echo $! >${PID_FILE}
 if [ X${WAIT} != X ]; then
     wait `cat ${PID_FILE}`
 fi
-
-

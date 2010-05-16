@@ -1,32 +1,41 @@
 #!/bin/sh
 # This script is run as root before the daemon is started. Its task is
-# to copy the password needed to decrypt the keystore from its
-# permanent location in /etc/lockss.keys, where it is readable only
+# to copy the keystore and the password needed to decrypt it from their
+# permanent location in /etc/lockss.keys, where they are readable only
 # by root, to a temporary location where they are readable only by
 # lockss.  And to create a file called ${LOCKSS_SSL_CONFIG} containing
 # suitable properties to set up SSL communication using the keys in the
 # keystore.  LOCKSS_SSL_CONFIG is in the environment, and is added to
 # the daemon command line.  The daemon reads then destroys the password.
 
+is_secure() {
+    local TMPFILE=`mktemp /tmp/runssl.XXXXX`
+    local RET=0
+    ls -l ${1} >${TMPFILE}
+    read A B C D E <${TMPFILE}
+    if [ "X${A}" != "X-rw-------" -o "X${C}" != "Xroot" ]; then
+        RET=1
+    fi
+    rm -f ${TMPFILE}
+    return ${RET}
+}
+
 # Parse args
-for ARG in $*
-do
+for ARG in $* ; do
     case ${ARG} in
     --release)
-	RELEASE_NAME=$2
-	;;
+        RELEASE_NAME=$2
+        ;;
     --user)
-	LOCKSS_USER=$2
-	;;
+        LOCKSS_USER=$2
+        ;;
     esac
     shift
 done
 # If no LOCKSS_SSL_CONFIG then SSL not in use
-if [ "${LOCKSS_SSL_CONFIG}X" = X ]
-then
+if [ "${LOCKSS_SSL_CONFIG}X" = X ]; then
     exit 0
 fi
-
 PERM_DIR=/etc/lockss/keys
 if [ "X${RUN_DIR}" = X ]; then
     TEMP_DIR=/var/run/lockss
@@ -34,72 +43,56 @@ else
     TEMP_DIR=${RUN_DIR}
 fi
 # If no directory ${PERM_DIR} then SSL not in use.
-if [ ! -d ${PERM_DIR} ]
-then
+if [ ! -d ${PERM_DIR} ]; then
     exit 0
 fi
-
-if [ -f /etc/lockss/config.${LOCKSS_USER}.dat ]
-then
+if [ -f /etc/lockss/config.${LOCKSS_USER}.dat ]; then
     CFG_FILE=/etc/lockss/config.${LOCKSS_USER}.dat
-elif [ -f /etc/lockss/config.dat ]
-then
+elif [ -f /etc/lockss/config.dat ]; then
     CFG_FILE=/etc/lockss/config.dat
 fi
 if [ "X${CFG_FILE}" = X ]; then
     echo "WARNING: no CFG_FILE"
     exit 1
 fi
-
 LOCKSS_HOSTNAME=`sed -n 's/LOCKSS_HOSTNAME=//p' ${CFG_FILE}`
-if [ "X${LOCKSS_HOSTNAME}" = X ]
-then
+if [ "X${LOCKSS_HOSTNAME}" = X ]; then
     echo "WARNING: host name not configured"
     exit 0
 fi
-
 # If no private keystore or no password for it for this host then SSL not in use
-if [ ! -s ${PERM_DIR}/${LOCKSS_HOSTNAME}.jceks -o ! -s ${PERM_DIR}/${LOCKSS_HOSTNAME}.pass ]
-then
+if [ ! -s ${PERM_DIR}/${LOCKSS_HOSTNAME}.jceks -o ! -s ${PERM_DIR}/${LOCKSS_HOSTNAME}.pass ]; then
     exit 0
 fi
-
-TMPFILE=`mktemp /tmp/runssl.XXXXX`
 # Check that private keystore password owned by and only accessible by root.
-ls -l ${PERM_DIR}/${LOCKSS_HOSTNAME}.pass >${TMPFILE}
-read A B C D E <${TMPFILE}
-if [ "X${A}" != "X-rw-------" -o "X${C}" != "Xroot" ]
-then
+if ! is_secure ${PERM_DIR}/${LOCKSS_HOSTNAME}.pass ; then
     echo "WARNING: keystore password for ${LOCKSS_HOSTNAME} insecure - not starting SSL"
-    rm -f ${TMPFILE}
     exit 1
 fi
 # Check that private keystore owned by and only accessible to root.
-ls -l ${PERM_DIR}/${LOCKSS_HOSTNAME}.jceks >${TMPFILE}
-read A B C D E <${TMPFILE}
-if [ "X${A}" != "X-rw-------" -o "X${C}" != "Xroot" ]
-then
+if ! is_secure ${PERM_DIR}/${LOCKSS_HOSTNAME}.jceks ; then
     echo "WARNING: keystore for ${LOCKSS_HOSTNAME} insecure - not starting SSL"
-    rm -f ${TMPFILE}
     exit 1
 fi
-rm -f ${TMPFILE}
-
 if [ -s ${TEMP_DIR}/${LOCKSS_USER}-ssl.pid ]; then
     kill `cat ${TEMP_DIR}/${LOCKSS_USER}-ssl.pid`
 fi
 rm -f ${TEMP_DIR}/${LOCKSS_USER}-ssl.pid
-
-for A in jceks pass
-do
+for A in jceks pass; do
     rm -f ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
     touch ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
-    chown lockss:lockss ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
+    chown ${LOCKSS_USER}:${LOCKSS_USER} ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
+    chmod u-wx ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
     chmod go-rwx ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
     cp ${PERM_DIR}/${LOCKSS_HOSTNAME}.${A} ${TEMP_DIR}/${LOCKSS_HOSTNAME}.${A}
 done
-
+# password must be writable by $LOCKSS_USER to overwrite it after use
+chmod u+w ${TEMP_DIR}/${LOCKSS_HOSTNAME}.pass
 rm -f ${LOCKSS_SSL_CONFIG}
+touch ${LOCKSS_SSL_CONFIG}
+chown root ${LOCKSS_SSL_CONFIG}
+chmod go-rwx ${LOCKSS_SSL_CONFIG}
+chmod a+r ${LOCKSS_SSL_CONFIG}
 cat <<Funky-EOF >${LOCKSS_SSL_CONFIG}
 org.lockss.scomm.v3OverSsl=true
 org.lockss.scomm.sslClientAuth=true
@@ -110,11 +103,9 @@ org.lockss.keyMgr.keystore.priv.file=${TEMP_DIR}/${LOCKSS_HOSTNAME}.jceks
 org.lockss.keyMgr.keystore.priv.keyPasswordFile=${TEMP_DIR}/${LOCKSS_HOSTNAME}.pass
 org.lockss.keyMgr.keystore.priv.name=v3PrivateKey
 
-org.lockss.keyMgr.keystore.pub.file=${PERM_DIR}/test-pubkey
+org.lockss.keyMgr.keystore.pub.file=${PERM_DIR}/pub-keystore.jceks
 org.lockss.keyMgr.keystore.pub.name=v3PubKeys
 Funky-EOF
-chmod a+r ${LOCKSS_SSL_CONFIG}
-
 # Allow the daemon time to start up then, in case it doesn't,
 # delete the lockss-readable files.
 ( sleep 600 ; rm -f ${TEMP_DIR}/${LOCKSS_HOSTNAME}.{pass,jceks} ; rm -f ${TEMP_DIR}/${LOCKSS_USER}-ssl.pid ) &
