@@ -6,28 +6,28 @@ BASH_NAME=bash
 BASH=`which ${BASH_NAME} 2>/dev/null`
 if [ "X${BASH}" = "X" ]
 then
-	for A in /bin /usr/bin /usr/gnu/bin /usr/local/bin
-	do
-		if [ -x $A/${BASH_NAME} ]
-		then
-			BASH=$A
-			break
-		fi
-	done
+    for A in /bin /usr/bin /usr/gnu/bin /usr/local/bin
+    do
+        if [ -x $A/${BASH_NAME} ]
+        then
+            BASH=$A
+            break
+        fi
+    done
 fi
 if [ "X${BASH}" = "X" ]
 then
-	while true
-	do
-		echo "This script needs the \"${BASH_NAME}\" shell - please enter its path."
-		read A
-		if [ -x ${A} ]
-		then
-			BASH=${A}
-			break
-		fi
-		echo "${A} not executable"
-	done
+    while true
+    do
+        echo "This script needs the \"${BASH_NAME}\" shell - please enter its path."
+        read A
+        if [ -x ${A} ]
+        then
+            BASH=${A}
+            break
+        fi
+        echo "${A} not executable"
+    done
 fi
 SCRIPT=`mktemp /tmp/hostconfig.XXXXX`
 cat >${SCRIPT} <<'Funky-EOF'
@@ -61,9 +61,9 @@ ask_for_input_shadow() {
 is_yes() {
     local WORD="$1"
     if [ "X${WORD}" = Xy -o "X${WORD}" = XY ]; then
-	return 0
+        return 0
     else
-	return 1
+        return 1
     fi
 }
 
@@ -76,61 +76,61 @@ parse_ip_address() {
     local IPADDR=0
     for A in ${INP}; do
       if  ( expr ${A} + 1 >/dev/null 2>&1 ); then
-	  if [ ${A} -ge 0 -a ${A} -lt 256 ]; then
-	      GOODCOUNT=`expr ${GOODCOUNT} + 1`
-	      IPADDR=`expr ${IPADDR} \* 256 + ${A}`
-	  fi
+          if [ ${A} -ge 0 -a ${A} -lt 256 ]; then
+              GOODCOUNT=`expr ${GOODCOUNT} + 1`
+              IPADDR=`expr ${IPADDR} \* 256 + ${A}`
+          fi
       fi
       COUNT=`expr ${COUNT} + 1`
     done
     IFS="${OLD_IFS}"
     if [ ${COUNT} != 4 -o ${GOODCOUNT} != 4 ]; then
-	echo 0
+        echo 0
     else
-	echo ${IPADDR}
+        echo ${IPADDR}
     fi
 }
 
 valid_ip_address() {
     local IPADDR=`parse_ip_address "$1"`
     if [ ${IPADDR} -eq 0 ]; then
-	return 1
+        return 1
     else
-	return 0
+        return 0
     fi
 }
 
 valid_subnet() {
     local INP=$1
     if ! echo ${INP} | grep -s '/' >/dev/null; then
-	oct='[0-9]{1,3}'
-	if echo $1 | egrep -s "^(($oct\.$oct\.$oct\.\*)|($oct\.$oct\.\*.\*)|($oct\.\*.\*.\*))$" >/dev/null; then
-	    return 0
-	fi
-	return 1
+        oct='[0-9]{1,3}'
+        if echo $1 | egrep -s "^(($oct\.$oct\.$oct\.\*)|($oct\.$oct\.\*.\*)|($oct\.\*.\*.\*))$" >/dev/null; then
+            return 0
+        fi
+        return 1
     fi
     local NET=`echo ${INP} | sed 's/\/.*//'`
     local MASK=`echo ${INP} | sed 's/.*\///'`
     local NETADDR=`parse_ip_address "${NET}"`
     if [ ${NETADDR} -eq 0 ]; then
-	return 1
+        return 1
     fi
     if echo ${MASK} | grep -s '\.' >/dev/null; then
-	local MASKADDR=`parse_ip_address "${MASK}"`
-	if [ ${MASKADDR} -eq 0 ]; then
-	    return 1
-	fi
-	# should check that (${MASKADDR}|(-${MASKADDR})) == ${MASKADDR}
-	return 0;
-    else
-	if ! expr ${MASK} + 1 >/dev/null 2>&1; then
-	    return 1
-	fi
-	if [ ${MASK} -lt 0 -o ${MASK} -gt 32 ]; then
-	    return 1
+        local MASKADDR=`parse_ip_address "${MASK}"`
+        if [ ${MASKADDR} -eq 0 ]; then
+            return 1
         fi
-	# should check legal cidr
-	return 0;
+        # should check that (${MASKADDR}|(-${MASKADDR})) == ${MASKADDR}
+        return 0;
+    else
+        if ! expr ${MASK} + 1 >/dev/null 2>&1; then
+            return 1
+        fi
+        if [ ${MASK} -lt 0 -o ${MASK} -gt 32 ]; then
+            return 1
+        fi
+        # should check legal cidr
+        return 0;
     fi
 }
 
@@ -141,7 +141,7 @@ read_config() {
 '
     for A in `sed -e '/[a-zA-Z0-9_]* *= *.*/!d' -e 's/\([a-zA-Z0-9_]*\) *= *\(.*\)/\
 \1=\2/' $1` ; do
-      eval "$A"
+        eval "$A"
     done
     IFS="${OLD_IFS}"
 }
@@ -151,8 +151,8 @@ assign_first_element() {
     local IFS=";"
     FIRST=""
     for WORD in ${WORDS}; do
-	FIRST="${WORD}"
-	break
+        FIRST="${WORD}"
+        break
     done
 }
 
@@ -164,9 +164,9 @@ init_cache_dirs() {
     IFS=";"
     local DIR
     for DIR in ${DIRS}; do
-	IFS="${OLD_IFS}"
-	init_one_dir "${DIR}" $2
-	IFS=";"
+        IFS="${OLD_IFS}"
+        init_one_dir "${DIR}" $2
+        IFS=";"
     done
     IFS="${OLD_IFS}"
 }
@@ -177,15 +177,15 @@ check_writable() {
     true&
     local PROBE_FILE=${DIR}/probe_$!
     if [ "X${CONFIG_USER}" != "X${2}" ] ; then
-	SUDO="sudo -u ${2}"
+        SUDO="sudo -u ${2}"
     else
-	SUDO=""
+        SUDO=""
     fi
     if ${SUDO} touch ${PROBE_FILE} >/dev/null 2>&1; then
-	rm -f ${PROBE_FILE}
-	return 0
+        rm -f ${PROBE_FILE}
+        return 0
     else
-	return 1
+        return 1
     fi
 }
 
@@ -193,42 +193,42 @@ check_writable() {
 init_one_dir() {
     local DIR="$1"
     if [ ! -d "${DIR}" ]; then
-	ask_for_input "${DIR} does not exist; shall I create it" Y
-	if is_yes "${ANS}"; then
-	    mkdir -p "${DIR}"
-	    if [ "X${CONFIG_USER}" != "X${2}" ] ; then
-		chown ${2} "${DIR}"
-	    fi
-	    if check_writable "${DIR}" ${2} ; then
-		return 0
-	    else
-		echo "${DIR} not writable by user ${2}"
-		echo " Please make it so (check parent dir execute bits)"
-		echo " LOCKSS will not run properly without it."
-	    fi
-	else
-	    echo "Please create ${DIR} and make it writable by user ${2};"
-	    echo " LOCKSS will not run properly without it."
-	fi
-	return 0
+        ask_for_input "${DIR} does not exist; shall I create it" Y
+        if is_yes "${ANS}"; then
+            mkdir -p "${DIR}"
+            if [ "X${CONFIG_USER}" != "X${2}" ] ; then
+                chown ${2} "${DIR}"
+            fi
+            if check_writable "${DIR}" ${2} ; then
+                return 0
+            else
+                echo "${DIR} not writable by user ${2}"
+                echo " Please make it so (check parent dir execute bits)"
+                echo " LOCKSS will not run properly without it."
+            fi
+        else
+            echo "Please create ${DIR} and make it writable by user ${2};"
+            echo " LOCKSS will not run properly without it."
+        fi
+        return 0
     fi
     if check_writable "${DIR}" $2 ; then
-	echo "${DIR} exists and is writable by ${2}"
+        echo "${DIR} exists and is writable by ${2}"
     else
-	ask_for_input "${DIR} is not writable; shall I chown it" Y
-	if is_yes "${ANS}"; then
-	    chown ${2} "${DIR}"
-	    if check_writable "${DIR}" $2 ; then
-		return 0
-	    else
-		echo "${DIR} still not writable by user ${2}"
-		echo " Please make it so (check parent dir execute bits)"
-		echo " LOCKSS will not run properly without it."
-	    fi
-	else
-	    echo "Please ensure that ${DIR} is writable by user ${2};"
-	    echo " LOCKSS will not run properly without it."
-	fi
+        ask_for_input "${DIR} is not writable; shall I chown it" Y
+        if is_yes "${ANS}"; then
+            chown ${2} "${DIR}"
+            if check_writable "${DIR}" $2 ; then
+                return 0
+            else
+                echo "${DIR} still not writable by user ${2}"
+                echo " Please make it so (check parent dir execute bits)"
+                echo " LOCKSS will not run properly without it."
+            fi
+        else
+            echo "Please ensure that ${DIR} is writable by user ${2};"
+            echo " LOCKSS will not run properly without it."
+        fi
     fi
 }
 
@@ -237,208 +237,181 @@ build_config_file () {
     echo "Configuring for user ${2}"
     CONFIG_OK=N
     until is_yes ${CONFIG_OK}; do
-    
         if [ "X${LOCKSS_HOSTNAME}" = X ]; then
-    	LOCKSS_HOSTNAME=${LOCAL_HOSTNAME}
+            LOCKSS_HOSTNAME=${LOCAL_HOSTNAME}
         fi
         ask_for_input "Fully qualified hostname (FQDN) of this machine" "${LOCKSS_HOSTNAME}"
         LOCKSS_HOSTNAME=${ANS}
-    
         if [ "X${LOCKSS_IPADDR}" = X ]; then
-    	LOCKSS_IPADDR=${LOCAL_IPADDR}
+            LOCKSS_IPADDR=${LOCAL_IPADDR}
         fi
         IP_OK=N
         until is_yes ${IP_OK}; do
-    	ask_for_input "IP address of this machine" ${LOCKSS_IPADDR}
-    	if valid_ip_address "${ANS}"; then
-    	    LOCKSS_IPADDR="${ANS}"
-    	    IP_OK=Y
-    	fi
+            ask_for_input "IP address of this machine" ${LOCKSS_IPADDR}
+            if valid_ip_address "${ANS}"; then
+                LOCKSS_IPADDR="${ANS}"
+                IP_OK=Y
+            fi
         done
-    
         if [ "X${LOCKSS_ACCESS_SUBNET}" = X ]; then
-    	LOCKSS_ACCESS_SUBNET=`echo ${LOCKSS_IPADDR} | sed 's/\.[0-9][0-9]*$/.0\/24/'`
+            LOCKSS_ACCESS_SUBNET=`echo ${LOCKSS_IPADDR} | sed 's/\.[0-9][0-9]*$/.0\/24/'`
         fi
-    
         NAT=N
-        if [ "${LOCKSS_EXTERNAL_IPADDR}X" != X ]
-        then
-    	NAT=Y
+        if [ "${LOCKSS_EXTERNAL_IPADDR}X" != X ]; then
+            NAT=Y
         fi
         ask_for_input "Is this machine behind NAT?" ${NAT}
-        if is_yes "${ANS}"
-        then
-    	EXT_OK=N
-    	until is_yes ${EXT_OK}; do
-    	    ask_for_input "External IP address for NAT" ${LOCKSS_EXTERNAL_IPADDR}
-    	    if valid_ip_address ${ANS}; then
-    		LOCKSS_EXTERNAL_IPADDR=${ANS}
-    		EXT_OK=Y
-    	    fi
-    	done
+        if is_yes "${ANS}"; then
+            EXT_OK=N
+            until is_yes ${EXT_OK}; do
+                ask_for_input "External IP address for NAT" ${LOCKSS_EXTERNAL_IPADDR}
+                if valid_ip_address ${ANS}; then
+                    LOCKSS_EXTERNAL_IPADDR=${ANS}
+                    EXT_OK=Y
+                fi
+            done
         else
-    	unset LOCKSS_EXTERNAL_IPADDR
+            unset LOCKSS_EXTERNAL_IPADDR
         fi
-    
         SUBNET_OK=N
         until is_yes ${SUBNET_OK}; do
-    	ask_for_input "Initial subnet for admin UI access" ${LOCKSS_ACCESS_SUBNET}
-    	if valid_subnet "${ANS}"; then
-    	    LOCKSS_ACCESS_SUBNET="${ANS}"
-    	    SUBNET_OK=Y
-    	fi
+            ask_for_input "Initial subnet for admin UI access" ${LOCKSS_ACCESS_SUBNET}
+            if valid_subnet "${ANS}"; then
+                LOCKSS_ACCESS_SUBNET="${ANS}"
+                SUBNET_OK=Y
+            fi
         done
-    
         if [ "X${LOCKSS_V3_PORT}" = X ]; then
-    	LOCKSS_V3_PORT=9729
+            LOCKSS_V3_PORT=9729
         fi
         ask_for_input "LCAP V3 protocol port" ${LOCKSS_V3_PORT}
         if [ "X${ANS}" != "X" ]; then
-    	LOCKSS_V3_PORT="${ANS}"
+            LOCKSS_V3_PORT="${ANS}"
         fi
-    
         if [ "X${LOCKSS_PROXY_PORT}" = X ]; then
-    	LOCKSS_PROXY_PORT=8080
+            LOCKSS_PROXY_PORT=8080
         fi
         ask_for_input "PROXY port" ${LOCKSS_PROXY_PORT}
         if [ "X${ANS}" != "X" ]; then
-    	LOCKSS_PROXY_PORT="${ANS}"
+            LOCKSS_PROXY_PORT="${ANS}"
         fi
-    
         if [ "X${LOCKSS_UI_PORT}" = X ]; then
-    	LOCKSS_UI_PORT=8081
+            LOCKSS_UI_PORT=8081
         fi
         ask_for_input "Admin UI port" ${LOCKSS_UI_PORT}
         if [ "X${ANS}" != "X" ]; then
-    	LOCKSS_UI_PORT="${ANS}"
+            LOCKSS_UI_PORT="${ANS}"
         fi
-    
         if [ "X${LOCKSS_MAILHUB}" = X ]; then
-    	LOCKSS_MAILHUB=localhost
+            LOCKSS_MAILHUB=localhost
         fi
         ask_for_input "Mail relay for this machine" ${LOCKSS_MAILHUB}
         LOCKSS_MAILHUB="${ANS}"
-    
         NEED_USER=N
         if [ "X${LOCKSS_MAILHUB_USER}" != X ] ; then
-    	NEED_USER=Y
+            NEED_USER=Y
         fi
         ask_for_input "Does mail relay ${LOCKSS_MAILHUB} need user & password" ${NEED_USER}
-        if is_yes "${ANS}"
-        then
-    	ask_for_input "User for ${LOCKSS_MAILHUB}" ${LOCKSS_MAILHUB_USER}
-    	LOCKSS_MAILHUB_USER="${ANS}"
-    	MAILHUB_PASSWORD=
-    	while [ "X${MAILHUB_PASSWORD}" = X ] ; do
-    	    ask_for_input_shadow "Password for ${LOCKSS_MAILHUB_USER}@${LOCKSS_MAILHUB}" ""
-    	    P1=${ANS}
-    	    ask_for_input_shadow "Again" ""
-    	    if [ "X${ANS}" = "X${P1}" ] ; then
-    		MAILHUB_PASSWORD="${ANS}"
-    	    fi
+        if is_yes "${ANS}" ; then
+            ask_for_input "User for ${LOCKSS_MAILHUB}" ${LOCKSS_MAILHUB_USER}
+            LOCKSS_MAILHUB_USER="${ANS}"
+            MAILHUB_PASSWORD=
+            while [ "X${MAILHUB_PASSWORD}" = X ] ; do
+                ask_for_input_shadow "Password for ${LOCKSS_MAILHUB_USER}@${LOCKSS_MAILHUB}" ""
+                P1=${ANS}
+                ask_for_input_shadow "Again" ""
+                if [ "X${ANS}" = "X${P1}" ] ; then
+                    MAILHUB_PASSWORD="${ANS}"
+                fi
             done
-    	LOCKSS_MAILHUB_PASSWORD="\"${MAILHUB_PASSWORD}\""
+            LOCKSS_MAILHUB_PASSWORD="\"${MAILHUB_PASSWORD}\""
         fi
-    
         EMAIL_OK=N
         until is_yes ${EMAIL_OK}; do
-    	ask_for_input "E-mail address for administrator" ${LOCKSS_EMAIL}
-    	if [ "X${ANS}" != X ]; then
-    	    LOCKSS_EMAIL="${ANS}"
-    	    EMAIL_OK=Y
-    	fi
+            ask_for_input "E-mail address for administrator" ${LOCKSS_EMAIL}
+            if [ "X${ANS}" != X ]; then
+                LOCKSS_EMAIL="${ANS}"
+                EMAIL_OK=Y
+            fi
         done
-    
         if [ "X${LOCKSS_JAVA_CMD}" = X ]; then
-    	LOCKSS_JAVA_CMD=`which java 2>/dev/null`
+            LOCKSS_JAVA_CMD=`which java 2>/dev/null`
         fi
         JAVA_OK=N
         while [ "X${JAVA_OK}" != XY ]
         do
-          ask_for_input "Path to java" ${LOCKSS_JAVA_CMD}
-          if [ -x ${ANS} ]
-          then
-            JAVA_VERSION=`${ANS} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/
+            ask_for_input "Path to java" ${LOCKSS_JAVA_CMD}
+            if [ -x ${ANS} ] ; then
+                JAVA_VERSION=`${ANS} -version 2>&1 | head -1 | sed -e 's/.* "\(.*\)"/\1/
     '`
-            case "X${JAVA_VERSION}" in
-            X1.[6789]*)
-              JAVA_OK=Y
-              ;;
-            *)
-              echo "Java version is ${JAVA_VERSION}: 1.6 or higher required"
-              ;;
-            esac
-          else
-            echo "${ANS} not executable"
-          fi
+                case "X${JAVA_VERSION}" in
+                X1.[6789]*)
+                    JAVA_OK=Y
+                    ;;
+                *)
+                    echo "Java version is ${JAVA_VERSION}: 1.6 or higher required"
+                    ;;
+                esac
+            else
+                echo "${ANS} not executable"
+            fi
         done
         LOCKSS_JAVA_CMD="${ANS}"
-    
         ask_for_input "Java switches" ${LOCKSS_JAVA_SWITCHES}
         LOCKSS_JAVA_SWITCHES="${ANS}"
-    
         if [ "X${LOCKSS_PROPS_URL}" = X ]; then
-    	LOCKSS_PROPS_URL="http://props.lockss.org:8001/daemon/lockss.xml"
+            LOCKSS_PROPS_URL="http://props.lockss.org:8001/daemon/lockss.xml"
         fi
         ask_for_input "Configuration URL" ${LOCKSS_PROPS_URL}
         LOCKSS_PROPS_URL="${ANS}"
-    
         if [ "X${LOCKSS_PROPS_PROXY}" = X ]; then
-    	LOCKSS_PROPS_PROXY="NONE"
+            LOCKSS_PROPS_PROXY="NONE"
         fi
         ask_for_input "Configuration proxy (host:port)" ${LOCKSS_PROPS_PROXY}
         LOCKSS_PROPS_PROXY="${ANS}"
-    
         if [ "X${LOCKSS_TEST_GROUP}" = X ]; then
-    	LOCKSS_TEST_GROUP="prod"
+            LOCKSS_TEST_GROUP="prod"
         fi
         ask_for_input "Preservation group(s)" "${LOCKSS_TEST_GROUP}"
         LOCKSS_TEST_GROUP="${ANS}"
-    
         DISK_PATHS_OK=N
         until is_yes ${DISK_PATHS_OK}; do
-    	ask_for_input "Content storage directories" ${LOCKSS_DISK_PATHS}
-    	if [ "X${ANS}" != X ]; then
-    	    LOCKSS_DISK_PATHS="${ANS}"
-    	    DISK_PATHS_OK=Y
-    	fi
+            ask_for_input "Content storage directories" ${LOCKSS_DISK_PATHS}
+            if [ "X${ANS}" != X ]; then
+                LOCKSS_DISK_PATHS="${ANS}"
+                DISK_PATHS_OK=Y
+            fi
         done
-    
         if [ "X${LOCKSS_TMPDIR}" = X ]; then
-    	assign_first_element ${LOCKSS_DISK_PATHS}
-    	FIRST=`echo ${FIRST} | sed 's^/$^^'`
-    	LOCKSS_TMPDIR=${FIRST}/tmp
+            assign_first_element ${LOCKSS_DISK_PATHS}
+            FIRST=`echo ${FIRST} | sed 's^/$^^'`
+            LOCKSS_TMPDIR=${FIRST}/tmp
         fi
         ask_for_input "Temporary storage directory" ${LOCKSS_TMPDIR}
         LOCKSS_TMPDIR="${ANS}"
-    
         USER_OK=N
         until is_yes ${USER_OK}; do
-    	ask_for_input "User name for web UI administration" "${LOCKSS_ADMIN_USER}"
-    	if [ "X${ANS}" != X ]; then
-    	    LOCKSS_ADMIN_USER="${ANS}"
-    	    USER_OK=Y
-    	fi
+            ask_for_input "User name for web UI administration" "${LOCKSS_ADMIN_USER}"
+            if [ "X${ANS}" != X ]; then
+                LOCKSS_ADMIN_USER="${ANS}"
+                USER_OK=Y
+            fi
         done
-    
         LOCKSS_ADMIN_PASSWD=""
         while [ "X${LOCKSS_ADMIN_PASSWD}" = X ]; do
-    	P1=
-    	while [ "X${P1}" = X ]; do
-    	    ask_for_input_shadow "Password for web UI administration user ${LOCKSS_ADMIN_USER}" ""
-    	    P1="${ANS}"
-    	done
-    	ask_for_input_shadow "Password for web UI administration (again)" ""
-    	if [ "X${ANS}" = "X${P1}" ]; then
-    	    SHA1=`echo -n "${P1}" | ${SHA1SUM}`
-    	    SHA1=`echo ${SHA1} | sed 's/ .*$//'`
-    	    LOCKSS_ADMIN_PASSWD="SHA1:${SHA1}"
-    	fi
+            P1=
+            while [ "X${P1}" = X ]; do
+                ask_for_input_shadow "Password for web UI administration user ${LOCKSS_ADMIN_USER}" ""
+                P1="${ANS}"
+            done
+            ask_for_input_shadow "Password for web UI administration (again)" ""
+            if [ "X${ANS}" = "X${P1}" ]; then
+                SHA1=`echo -n "${P1}" | ${SHA1SUM}`
+                SHA1=`echo ${SHA1} | sed 's/ .*$//'`
+                LOCKSS_ADMIN_PASSWD="SHA1:${SHA1}"
+            fi
         done
-    
-    
         TMP_CONFIG=/tmp/lockss.dat$$
-    
         cat >${TMP_CONFIG} <<EOF
 LOCKSS_USER="${2}"
 LOCKSS_HOSTNAME=${LOCKSS_HOSTNAME}
@@ -463,56 +436,52 @@ LOCKSS_UI_PORT=${LOCKSS_UI_PORT}
 LOCKSS_TMPDIR=${LOCKSS_TMPDIR}
 LOCKSS_CLEAR_TMPDIR=${LOCKSS_CLEAR_TMPDIR:-yes}
 EOF
-
         echo
         echo "Configuration:"
         cat ${TMP_CONFIG}
         ask_for_input "OK to store this configuration" Y
         if is_yes "${ANS}"; then
-    	if ! cp ${TMP_CONFIG} ${1}; then
-    	    echo "Config not installed, left in ${TMP_CONFIG}"
-    	    exit 1
-    	fi
-    	echo "Checking content storage dirs"
-    	if ! init_cache_dirs ${LOCKSS_DISK_PATHS} $2 ; then
-    	    exit 1
-    	fi
-    
-    	if [ ! -d ${LOCKSS_HOME}/var/run ] ; then
-    	    init_one_dir ${LOCKSS_HOME}/var/run $2
-    	fi
-    	if [ "X${CONFIG_USER}" = Xroot -a ! -f ${LOCKSS_HOME}/var/run/lockss.pid ]
-    	then
-    		touch ${LOCKSS_HOME}/var/run/lockss.pid
-    		chown ${2} ${LOCKSS_HOME}/var/run/lockss.pid
-    	fi
-    	if [ ! -d ${LOCKSS_HOME}/var/log/lockss ] ; then
-    	    init_one_dir ${LOCKSS_HOME}/var/log/lockss $2
-    	fi
-    	if [ ! -d ${LOCKSS_TMPDIR} ] ; then
-    	    init_one_dir ${LOCKSS_TMPDIR} $2
-    	fi
-    	echo Done
-    
-    	case ${OS_TYPE} in
-    	SunOS)
-    		echo ${LOCKSS_HOME}/etc/lockss/runforever to run the daemon.
-    		;;
-    	Linux)
-    		if [ -x /etc/init.d/lockss ]
-    		then
-    			if [ ! -L /etc/rc3.d/S99lockss ]
-    			then
-    				chkconfig --add lockss
-    			fi
-    			echo "LOCKSS will start automatically at next reboot, or you may"
-    			echo " start it now by running   /etc/init.d/lockss start"
-    		else
-    			echo "Start LOCKSS by ${LOCKSS_HOME}/etc/init.d/lockss"
-    		fi
-    		;;
-    	esac
-    	CONFIG_OK=Y
+            if ! cp ${TMP_CONFIG} ${1}; then
+                echo "Config not installed, left in ${TMP_CONFIG}"
+                exit 1
+            fi
+            echo "Checking content storage dirs"
+            if ! init_cache_dirs ${LOCKSS_DISK_PATHS} $2 ; then
+                exit 1
+            fi
+            if [ ! -d ${LOCKSS_HOME}/var/run ] ; then
+                init_one_dir ${LOCKSS_HOME}/var/run $2
+            fi
+            if [ "X${CONFIG_USER}" = Xroot -a ! -f ${LOCKSS_HOME}/var/run/lockss.pid ]; then
+                touch ${LOCKSS_HOME}/var/run/lockss.pid
+                chown ${2} ${LOCKSS_HOME}/var/run/lockss.pid
+            fi
+            if [ ! -d ${LOCKSS_HOME}/var/log/lockss ] ; then
+                init_one_dir ${LOCKSS_HOME}/var/log/lockss $2
+            fi
+            if [ ! -d ${LOCKSS_TMPDIR} ] ; then
+                init_one_dir ${LOCKSS_TMPDIR} $2
+            fi
+            echo Done
+            case ${OS_TYPE} in
+            SunOS)
+                echo ${LOCKSS_HOME}/etc/lockss/runforever to run the daemon.
+                ;;
+            Linux)
+                if [ -x /etc/init.d/lockss ]
+                then
+                    if [ ! -L /etc/rc3.d/S99lockss ]
+                    then
+                        chkconfig --add lockss
+                    fi
+                    echo "LOCKSS will start automatically at next reboot, or you may"
+                    echo " start it now by running   /etc/init.d/lockss start"
+                else
+                    echo "Start LOCKSS by ${LOCKSS_HOME}/etc/init.d/lockss"
+                fi
+                ;;
+            esac
+            CONFIG_OK=Y
         fi
     done
 }
@@ -520,87 +489,78 @@ EOF
 ###
 # Start
 ###
-
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 SunOS)
-        if [ "${LOCKSS_HOME}X" = X ]
-	then
-		case ${CONFIG_USER} in
-		root)
-			LOCKSS_HOME=
-        		LOCKSS_USER=lockss
-			;;
-		lockss)
-			LOCKSS_HOME=~lockss
-        		LOCKSS_USER=lockss
-			;;
-		lockss2)
-			LOCKSS_HOME=~lockss2
-        		LOCKSS_USER=lockss2
-			;;
-		esac
-	fi
-	PATH=/usr/ucb:/sbin:$PATH
-	LOCAL_HOSTNAME=`uname -n`
-	LOCAL_IPADDR=`ifconfig -a | grep 'inet ' | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
-	export SHA1SUM
-	for A in sha1sum digest
-	do
-		WHICH=`which $A | sed "s/.*\///"`
-		if [ "X${A}" = "X${WHICH}" ]
-		then
-			SHA1SUM=$A
-			break
-		fi
-	done
-	case "X${SHA1SUM}" in
-	Xdigest)
-		SHA1SUM="digest -a sha1"
-		;;
-	X)
-		echo "Can't find a SHA1 command"
-		exit
-		;;
-	esac
+    if [ "${LOCKSS_HOME}X" = X ]; then
+        case ${CONFIG_USER} in
+        root)
+            LOCKSS_HOME=
+            LOCKSS_USER=lockss
+            ;;
+        lockss)
+            LOCKSS_HOME=~lockss
+            LOCKSS_USER=lockss
+            ;;
+        lockss2)
+            LOCKSS_HOME=~lockss2
+            LOCKSS_USER=lockss2
+            ;;
+        esac
+    fi
+    PATH=/usr/ucb:/sbin:$PATH
+    LOCAL_HOSTNAME=`uname -n`
+    LOCAL_IPADDR=`ifconfig -a | grep 'inet ' | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
+    export SHA1SUM
+    for A in sha1sum digest
+    do
+        WHICH=`which $A | sed "s/.*\///"`
+        if [ "X${A}" = "X${WHICH}" ]
+        then
+            SHA1SUM=$A
+            break
+        fi
+    done
+    case "X${SHA1SUM}" in
+    Xdigest)
+        SHA1SUM="digest -a sha1"
         ;;
+    X)
+        echo "Can't find a SHA1 command"
+        exit
+        ;;
+    esac
+    ;;
 Linux)
-        LOCKSS_USER=lockss
-	LOCAL_HOSTNAME=`hostname -f`
-	LOCAL_IPADDR=`hostname -i`
-	SHA1SUM=sha1sum
-        ;;
+    LOCKSS_USER=lockss
+    SHA1SUM=sha1sum
+    ;;
 esac
 CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
-
 echo "LOCKSS host configuration for ${OS_TYPE}."
 echo "For more information see /etc/lockss/README"
-
 USER_COUNT=1
 if [ -r "${CONFIG_FILE}" ]; then
     echo "Setting defaults from existing config: ${CONFIG_FILE}"
     read_config ${CONFIG_FILE}
     if [ "${LOCKSS_USER}X" != X ] ; then
-	USER_COUNT=`echo ${LOCKSS_USER} | wc -w`
+        USER_COUNT=`echo ${LOCKSS_USER} | wc -w`
     fi
 else
     # these dirs should be owned by config user; don't need to chown them
     mkdir -p ${LOCKSS_HOME}/etc/lockss
 fi
-
 if [ ${USER_COUNT} -eq 1 ] ; then
     build_config_file ${CONFIG_FILE} ${LOCKSS_USER}
 else
-    for USER in ${LOCKSS_USER}
-    do
-	if [ -s ${LOCKSS_HOME}/etc/lockss/config.${USER}.dat ] ; then
-	    echo "Re-setting defaults from existing config for ${USER}"
-	    read_config ${LOCKSS_HOME}/etc/lockss/config.${USER}.dat
+    for USER in ${LOCKSS_USER} ; do
+        if [ -s ${LOCKSS_HOME}/etc/lockss/config.${USER}.dat ] ; then
+            echo "Re-setting defaults from existing config for ${USER}"
+            read_config ${LOCKSS_HOME}/etc/lockss/config.${USER}.dat
         fi
         build_config_file ${LOCKSS_HOME}/etc/lockss/config.${USER}.dat ${USER}
     done
 fi
-
 Funky-EOF
 export CONFIG_USER=`ls -l ${SCRIPT} | while read BITS N U FOO; do echo $U; done`
 ${BASH} ${SCRIPT}
