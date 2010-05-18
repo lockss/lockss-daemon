@@ -1434,8 +1434,8 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < released ; Child and Adolescent Psychiatry and Mental Health Volume 1 ; 1 >
       au < released ; Child and Adolescent Psychiatry and Mental Health Volume 2 ; 2 >
-      au < testing ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 >
-      au < testing ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
+      au < ready ; Child and Adolescent Psychiatry and Mental Health Volume 3 ; 3 >
+      au < ready ; Child and Adolescent Psychiatry and Mental Health Volume 4 ; 4 >
       
     }
 
@@ -1451,8 +1451,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Chinese Medicine Volume 1 ; 1 >
       au < released ; Chinese Medicine Volume 2 ; 2 >
       au < released ; Chinese Medicine Volume 3 ; 3 >
-      au < testing ; Chinese Medicine Volume 4 ; 4 >
-      au < testing ; Chinese Medicine Volume 5 ; 5 >
+      au < ready ; Chinese Medicine Volume 4 ; 4 >
+      au < ready ; Chinese Medicine Volume 5 ; 5 >
 
     }
 
@@ -1469,8 +1469,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Chiropractic & Osteopathy Volume 14 ; 14 >
       au < released ; Chiropractic & Osteopathy Volume 15 ; 15 >
       au < released ; Chiropractic & Osteopathy Volume 16 ; 16 >
-      au < testing ; Chiropractic & Osteopathy Volume 17 ; 17 >
-      au < testing ; Chiropractic & Osteopathy Volume 18 ; 18 >
+      au < ready ; Chiropractic & Osteopathy Volume 17 ; 17 >
+      au < ready ; Chiropractic & Osteopathy Volume 18 ; 18 >
       
     }
 
@@ -1489,8 +1489,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Clinical and Molecular Allergy Volume 4 ; 4 >
       au < released ; Clinical and Molecular Allergy Volume 5 ; 5 >
       au < released ; Clinical and Molecular Allergy Volume 6 ; 6 >
-      au < testing ; Clinical and Molecular Allergy Volume 7 ; 7 >
-      au < testing ; Clinical and Molecular Allergy Volume 8 ; 8 >
+      au < ready ; Clinical and Molecular Allergy Volume 7 ; 7 >
+      au < ready ; Clinical and Molecular Allergy Volume 8 ; 8 >
     }
 
     {
@@ -1506,8 +1506,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Cough Volume 2 ; 2 >
       au < released ; Cough Volume 3 ; 3 >
       au < released ; Cough Volume 4 ; 4 >
-      au < testing ; Cough Volume 5 ; 5 >
-      au < testing ; Cough Volume 6 ; 6 >
+      au < ready ; Cough Volume 5 ; 5 >
+      au < ready ; Cough Volume 6 ; 6 >
     }
 
     {
@@ -1531,6 +1531,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Critical Care Volume 10 ; 10 >
       au < released ; Critical Care Volume 11 ; 11 >
       au < released ; Critical Care Volume 12 ; 12 >
+      au < testing ; Critical Care Volume 13 ; 13 >
+      au < testing ; Critical Care Volume 14 ; 14 >
+
     }
 
     {
@@ -1545,6 +1548,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Diagnostic Pathology Volume 1 ; 1 >
       au < released ; Diagnostic Pathology Volume 2 ; 2 >
       au < released ; Diagnostic Pathology Volume 3 ; 3 >
+      au < testing ; Diagnostic Pathology Volume 4 ; 4 >
+      au < testing ; Diagnostic Pathology Volume 5 ; 5 >
+
     }
 
     {
@@ -1563,6 +1569,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Dynamic Medicine Volume 5 ; 5 >
       au < released ; Dynamic Medicine Volume 6 ; 6 >
       au < released ; Dynamic Medicine Volume 7 ; 7 >
+      au < testing ; Dynamic Medicine Volume 8 ; 8 >
+      au < testing ; Dynamic Medicine Volume 9 ; 9 >
+
     }
 
     {
@@ -1579,6 +1588,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Emerging Themes in Epidemiology Volume 3 ; 3 >
       au < released ; Emerging Themes in Epidemiology Volume 4 ; 4 >
       au < released ; Emerging Themes in Epidemiology Volume 5 ; 5 >
+      au < testing ; Emerging Themes in Epidemiology Volume 6 ; 6 >
+      au < testing ; Emerging Themes in Epidemiology Volume 7 ; 7 >
+
     }
 
     {
