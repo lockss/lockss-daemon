@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.32 2010-02-11 21:02:16 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.33 2010-05-18 06:15:37 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class TestV3Poller extends LockssTestCase {
   private ArchivalUnit testau;
   private PollManager pollmanager;
   private HashService hashService;
+  private PluginManager pluginMgr;
 
   private PeerIdentity[] voters;
   private V3LcapMessage[] pollAcks;
@@ -833,6 +834,35 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(BlockTally.RESULT_LOST, blockTally.getTallyResult());
   }
   
+  public void testSignalAuEvent() throws Exception {
+    MyV3Poller poller = makeV3Poller("testkey");
+    pluginMgr.registerAuEventHandler(new MyAuEventHandler());
+    List<String> urls = ListUtil.list("url1", "foo2");
+    List<PollerStateBean.Repair> rep = new ArrayList<PollerStateBean.Repair>();
+    for (String u : urls) {
+      rep.add(new PollerStateBean.Repair(u));
+    }
+    poller.setCompletedRepairs(rep);
+    assertEquals(0, changeEvents.size());
+    poller.signalAuEvent();
+    assertEquals(1, changeEvents.size());
+    AuEventHandler.ChangeInfo ci = changeEvents.get(0);
+    assertEquals(AuEventHandler.ChangeInfo.Type.Repair, ci.getType());
+    assertTrue(ci.isComplete());
+    assertEquals(2, ci.getNumUrls());
+    assertNull(ci.getMimeCounts());
+    assertEquals(urls, ci.getUrls());
+  }
+
+  List<AuEventHandler.ChangeInfo> changeEvents = new ArrayList();
+
+  class MyAuEventHandler extends AuEventHandler.Base {
+    public void auContentChanged(ArchivalUnit au,
+				 AuEventHandler.ChangeInfo info) {
+      changeEvents.add(info);
+    }
+  }
+
   private MyV3Poller makeV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau.getAuCachedUrlSet(), null, null,
                                    Poll.V3_POLL);
@@ -860,6 +890,7 @@ public class TestV3Poller extends LockssTestCase {
     // For testing:  Hashmap of voter IDs to V3LcapMessages.
     private Map sentMsgs = Collections.synchronizedMap(new HashMap());
     private Map semaphores = new HashMap();
+    private List<PollerStateBean.Repair> repairs;
 
     MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
                    String pollkey, long duration, String hashAlg)
@@ -885,13 +916,25 @@ public class TestV3Poller extends LockssTestCase {
       sem.take(5000); // Really shouldn't take this long
       return (V3LcapMessage)sentMsgs.get(voter);
     }
+
+    void setCompletedRepairs(List<PollerStateBean.Repair> repairs) {
+      this.repairs = repairs;
+    }
+
+    @Override
+    public List getCompletedRepairs() {
+      if (repairs != null) {
+	return repairs;
+      }
+      return super.getCompletedRepairs();
+    }
   }
 
   private void initRequiredServices() throws Exception {
     pollmanager = theDaemon.getPollManager();
     hashService = theDaemon.getHashService();
 
-    theDaemon.getPluginManager();
+    pluginMgr = theDaemon.getPluginManager();
 
     tempDir = getTempDir();
     tempDirPath = tempDir.getAbsolutePath();

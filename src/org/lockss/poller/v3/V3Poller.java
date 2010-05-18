@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.100 2009-12-22 02:19:43 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.101 2010-05-18 06:15:38 tlipkis Exp $
  */
 
 /*
@@ -1780,6 +1780,54 @@ public class V3Poller extends BasePoll {
                   + getKey());
       return;
     }
+    computeNewRepairers();
+    if (hasQuorum()) {
+      // If the poll is quorate, update 
+
+      // Tell the PollManager to hang on to our statistics for this poll.
+      PollManager.V3PollStatusAccessor stats = pollManager.getV3Status();
+      String auId = getAu().getAuId();
+      stats.setAgreement(auId, getPercentAgreement());
+      stats.setLastPollTime(auId, TimeBase.nowMs());
+      stats.incrementNumPolls(auId);
+      // Update the last poll time on the AU.
+      AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
+      auState.setV3Agreement(getPercentAgreement());
+      signalAuEvent();
+      stopPoll(POLLER_STATUS_COMPLETE);
+    } else {
+      stopPoll(V3Poller.POLLER_STATUS_NO_QUORUM);
+    }
+  }
+
+  // Inform AuEvent listeners of change in AU content
+  void signalAuEvent() {
+    List<PollerStateBean.Repair> repairs = getCompletedRepairs();
+    int nrepairs = repairs.size();
+    if (nrepairs > 0) {
+      List<String> urls = new ArrayList<String>();
+      for (PollerStateBean.Repair rp : repairs) {
+	urls.add(rp.getUrl());
+      }
+      final ArchivalUnit au = getAu();
+      final AuEventHandler.ChangeInfo chInfo = new AuEventHandler.ChangeInfo();
+      chInfo.setType(AuEventHandler.ChangeInfo.Type.Repair);
+      chInfo.setNumUrls(nrepairs);
+      chInfo.setUrls(urls);
+      chInfo.setAu(au);
+      chInfo.setComplete(true);
+      PluginManager plugMgr = theDaemon.getPluginManager();
+      plugMgr.applyAuEvent(new PluginManager.AuEventClosure() {
+	  public void execute(AuEventHandler hand) {
+	    hand.auContentChanged(au, chInfo);
+	  }
+	});
+    }
+  }
+
+  // Independent of quorum, remember peers that agreed with us as they're
+  // now entitled to receive repairs
+  private void computeNewRepairers() {
     int newRepairees = 0;
     // CR: repair thread holds this lock for a long time?
     synchronized(theParticipants) {
@@ -1819,22 +1867,6 @@ public class V3Poller extends BasePoll {
 				 "new agreeing peers");
       log.info(info + " for " + getAu().getName());
       pollerState.setAdditionalInfo(info);
-    }
-    if (hasQuorum()) {
-      // If the poll is quorate, update 
-
-      // Tell the PollManager to hang on to our statistics for this poll.
-      PollManager.V3PollStatusAccessor stats = pollManager.getV3Status();
-      String auId = getAu().getAuId();
-      stats.setAgreement(auId, getPercentAgreement());
-      stats.setLastPollTime(auId, TimeBase.nowMs());
-      stats.incrementNumPolls(auId);
-      // Update the last poll time on the AU.
-      AuState auState = theDaemon.getNodeManager(getAu()).getAuState();
-      auState.setV3Agreement(getPercentAgreement());
-      stopPoll(POLLER_STATUS_COMPLETE);
-    } else {
-      stopPoll(V3Poller.POLLER_STATUS_NO_QUORUM);
     }
   }
 

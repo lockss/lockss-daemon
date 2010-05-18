@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.78 2009-07-22 06:38:04 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.79 2010-05-18 06:15:38 tlipkis Exp $
  */
 
 /*
@@ -484,6 +484,96 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       activityRegulator.assertRepairCrawlFinished(cus2);
     }
 
+    List<AuEventHandler.ChangeInfo> changeEvents = new ArrayList();
+    SimpleBinarySemaphore eventSem = new SimpleBinarySemaphore();
+
+    class MyAuEventHandler extends AuEventHandler.Base {
+      public void auContentChanged(ArchivalUnit au,
+				   AuEventHandler.ChangeInfo info) {
+	changeEvents.add(info);
+	eventSem.give();
+      }
+    }
+
+    public void testAuEventCrawl() {
+      AuEventCrawler auc = new AuEventCrawler(mau);
+      crawler = auc;
+      auc.setCrawlSuccessful(true);
+      auc.setMimes(ListUtil.list(ListUtil.list("text1", "text/plain"),
+				 ListUtil.list("html1", "text/html"),
+				 ListUtil.list("html2", "text/html;charset=foo"),
+				 ListUtil.list("pdf1", "application/pdf")));
+      crawlManager.setTestCrawler(auc);
+
+      pluginMgr.registerAuEventHandler(new MyAuEventHandler());
+      crawlManager.startNewContentCrawl(mau, null, null, null);
+      waitForCrawlToFinish(eventSem);
+      assertEquals(1, changeEvents.size());
+      AuEventHandler.ChangeInfo ci = changeEvents.get(0);
+      assertEquals(AuEventHandler.ChangeInfo.Type.Crawl, ci.getType());
+      assertTrue(ci.isComplete());
+      Map expMime = MapUtil.map("text/plain", 1,
+				"text/html", 2,
+				"application/pdf", 1);
+      assertEquals(4, ci.getNumUrls());
+      assertEquals(expMime, ci.getMimeCounts());
+      assertFalse(ci.hasUrls());
+      assertNull(ci.getUrls());
+    }
+
+    public void testAuEventCrawlAborted() {
+      AuEventCrawler auc = new AuEventCrawler(mau);
+      crawler = auc;
+      auc.setCrawlSuccessful(false);
+      auc.setMimes(ListUtil.list(ListUtil.list("text1", "text/plain"),
+				 ListUtil.list("html1", "text/html"),
+				 ListUtil.list("html2", "text/html;charset=foo"),
+				 ListUtil.list("pdf1", "application/pdf")));
+      crawlManager.setTestCrawler(auc);
+
+      pluginMgr.registerAuEventHandler(new MyAuEventHandler());
+      crawlManager.startNewContentCrawl(mau, null, null, null);
+      waitForCrawlToFinish(eventSem);
+      assertEquals(1, changeEvents.size());
+      AuEventHandler.ChangeInfo ci = changeEvents.get(0);
+      assertEquals(AuEventHandler.ChangeInfo.Type.Crawl, ci.getType());
+      assertFalse(ci.isComplete());
+      Map expMime = MapUtil.map("text/plain", 1,
+				"text/html", 2,
+				"application/pdf", 1);
+      assertEquals(4, ci.getNumUrls());
+      assertEquals(expMime, ci.getMimeCounts());
+      assertFalse(ci.hasUrls());
+      assertNull(ci.getUrls());
+    }
+
+    public void testAuEventRepairCrawl() {
+      AuEventCrawler auc = new AuEventCrawler(mau);
+      crawler = auc;
+      auc.setCrawlSuccessful(true);
+      auc.setIsWholeAU(false);
+      auc.setMimes(ListUtil.list(ListUtil.list("text1", "text/plain"),
+				 ListUtil.list("html1", "text/html"),
+				 ListUtil.list("html2", "text/html;charset=foo"),
+				 ListUtil.list("pdf1", "application/pdf")));
+      crawlManager.setTestCrawler(auc);
+
+      pluginMgr.registerAuEventHandler(new MyAuEventHandler());
+      crawlManager.startRepair(mau, ListUtil.list("foo"), null, null, null);
+      waitForCrawlToFinish(eventSem);
+      assertEquals(1, changeEvents.size());
+      AuEventHandler.ChangeInfo ci = changeEvents.get(0);
+      assertEquals(AuEventHandler.ChangeInfo.Type.Repair, ci.getType());
+      assertTrue(ci.isComplete());
+      Map expMime = MapUtil.map("text/plain", 1,
+				"text/html", 2,
+				"application/pdf", 1);
+      assertEquals(4, ci.getNumUrls());
+      assertEquals(expMime, ci.getMimeCounts());
+      assertTrue(ci.hasUrls());
+      assertSameElements(ListUtil.list("text1", "html1", "html2", "pdf1"),
+			 ci.getUrls());
+    }
 
     public void testNewContentCallbackTriggered() {
       SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
@@ -1583,6 +1673,34 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       return false;
     }
   }
+
+  private static class AuEventCrawler extends MockCrawler {
+    List<List<String>> urls = Collections.EMPTY_LIST;
+
+    public AuEventCrawler(ArchivalUnit au) {
+      setStatus(new CrawlerStatus(au, ListUtil.list("foo"), "New content"));
+    }
+
+    void setMimes(List<List<String>> urls) {
+      this.urls = urls;
+    }
+
+    public boolean doCrawl() {
+      for (List<String> pair : urls) {
+	getStatus().signalUrlFetched(pair.get(0));
+	String mime = HeaderUtil.getMimeTypeFromContentType(pair.get(1));
+	getStatus().signalMimeTypeOfUrl(mime, pair.get(0)); 
+      }
+      if (super.doCrawl()) {
+	getStatus().setCrawlStatus(Crawler.STATUS_SUCCESSFUL);
+	return true;
+      } else {
+	getStatus().setCrawlStatus(Crawler.STATUS_ERROR);
+	return false;
+      }
+    }
+  }
+
 
   private static class ThrowingAU extends NullPlugin.ArchivalUnit {
     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec) {

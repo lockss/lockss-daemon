@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.85 2010-03-25 07:34:26 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.86 2010-05-18 06:15:38 tlipkis Exp $
  */
 
 /*
@@ -736,6 +736,13 @@ public class TestPluginManager extends LockssTestCase {
     private ArchivalUnit processOneRegistryAuThrowIf = null;
     private String processOneRegistryJarThrowIf = null;
     private DaemonVersion mockDaemonVersion = null;
+    private List<ArchivalUnit> regAus = new ArrayList<ArchivalUnit>();
+
+    @Override
+    public boolean isRegistryAu(ArchivalUnit au) {
+      return (au instanceof MyMockRegistryArchivalUnit)
+	|| super.isRegistryAu(au);
+    }
 
     protected String getConfigurablePluginName(String pluginName) {
       return MyDefinablePlugin.class.getName();
@@ -744,7 +751,11 @@ public class TestPluginManager extends LockssTestCase {
       if (au == processOneRegistryAuThrowIf) {
 	throw new ExpectedRuntimeException("fake error for " + au);
       }
+      regAus.add(au);
       super.processOneRegistryAu(au, tmpMap);
+    }
+    List<ArchivalUnit> getProcessedRegAus() {
+      return regAus;
     }
     protected void processOneRegistryJar(CachedUrl cu, String url,
 					 ArchivalUnit au, Map tmpMap) {
@@ -1377,6 +1388,31 @@ public class TestPluginManager extends LockssTestCase {
     assertSame(plugin2, au2.getPlugin());
     assertEquals("V2: http://example.com/a/, 1942", au2.getName());
     assertEquals(0, mgr.getNumFailedAuRestarts());
+  }
+
+  public void testRegistryAuEventHandler() throws Exception {
+    mgr.setLoadablePluginsReady(false);
+    mgr.startService();
+    Properties p = new Properties();
+    mgr.startLoadablePlugins();
+    MyMockRegistryArchivalUnit mrau =
+      new MyMockRegistryArchivalUnit(Collections.EMPTY_LIST);
+    assertEmpty(mgr.getProcessedRegAus());
+    signalAuEvent(mrau);
+    assertEquals(ListUtil.list(mrau), mgr.getProcessedRegAus());
+  }
+
+  private void signalAuEvent(final ArchivalUnit au) {
+    final AuEventHandler.ChangeInfo chInfo = new AuEventHandler.ChangeInfo();
+    chInfo.setAu(au);
+    chInfo.setType(AuEventHandler.ChangeInfo.Type.Crawl);
+    chInfo.setNumUrls(4);
+    chInfo.setComplete(true);
+    mgr.applyAuEvent(new PluginManager.AuEventClosure() {
+	public void execute(AuEventHandler hand) {
+	  hand.auContentChanged(au, chInfo);
+	}
+      });
   }
 
   public static Test suite() {

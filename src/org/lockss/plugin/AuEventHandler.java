@@ -1,5 +1,5 @@
 /*
- * $Id: AuEventHandler.java,v 1.2 2006-02-23 06:57:02 tlipkis Exp $
+ * $Id: AuEventHandler.java,v 1.3 2010-05-18 06:15:38 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
+import java.util.*;
+
 import org.lockss.config.*;
 
 /**
@@ -48,6 +50,104 @@ public interface AuEventHandler {
   void auDeleted(ArchivalUnit au);
   /** Called after an existing AU's configuration is changed */
   void auReconfigured(ArchivalUnit au, Configuration oldAuConf);
+  /** Called after a change to the AU's content */
+  void auContentChanged(ArchivalUnit au, ChangeInfo info);
+
+  /** Passed to {@link #auContentChanged(ArchivalUnit,ChangeInfo)} to
+   * describe the nature of the content change. */
+  public class ChangeInfo {
+    /** Crawl means new content crawl, Repair means either peer repair or
+     * repair crawl */
+    public enum Type {
+      Crawl, Repair;
+    }
+
+    private ArchivalUnit au;
+    private Type type;
+    private boolean complete;
+    private Collection<String> urls;
+    private Map<String,Integer> mimeCounts;
+    private int numUrls;
+
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      sb.append("[AuChange: ");
+      sb.append(type);
+      sb.append(", ");
+      sb.append(urls == null ? 0 : urls.size());
+      sb.append(" urls, ");
+      sb.append(mimeCounts.size());
+      sb.append(" mime types]");
+      return sb.toString();
+    }      
+
+    public void setType(Type type) {
+      this.type = type;
+    }
+
+    /** Type of content changes: Crawl means new content crawl, Repair
+     * means either peer repair or repair crawl */
+    public Type getType() {
+      return type;
+    }
+
+    public void setAu(ArchivalUnit au) {
+      this.au = au;
+    }
+
+    /** The AU that changed */
+    public ArchivalUnit getAu() {
+      return au;
+    }
+
+    public void setComplete(boolean complete) {
+      this.complete = complete;
+    }
+
+    /** True if this is expected to be a partial change (<i>e.g.</i> new
+     * content crawl that ended in error and will be repeated/continued
+     * soonish */
+    public boolean isComplete() {
+      return complete;
+    }
+
+    public void setUrls(Collection<String> urls) {
+      this.urls = urls;
+    }
+
+    /** The list of URLs that change, if known and manageable. */
+    public Collection<String> getUrls() {
+      return urls;
+    }
+
+    /** True iff {@link #getUrls()} will return an accurate collection of
+     * changed URLs */
+    public boolean hasUrls() {
+      return urls != null && numUrls == urls.size();
+    }
+
+    public void setNumUrls(int numUrls) {
+      this.numUrls = numUrls;
+    }
+
+    /** The number of URLs that changed.  This is always available even if
+     * {@link #hasUrls()} is false */
+    public int getNumUrls() {
+      return numUrls;
+    }
+
+    public void setMimeCounts(Map<String,Integer> mimeCounts) {
+      this.mimeCounts = mimeCounts;
+    }
+
+    /** Returns a map from MIME type to the count of files of that MIME
+     * type that were changed.  If null, the MIME counts aren't
+     * available. */
+    public Map<String,Integer> getMimeCounts() {
+      return mimeCounts;
+    }
+
+  }
 
   /** Convenience class with null handlers for all AuEventHandler events.
    * Specialize this and override the events of interest */
@@ -55,5 +155,6 @@ public interface AuEventHandler {
     public void auCreated(ArchivalUnit au) {}
     public void auDeleted(ArchivalUnit au) {}
     public void auReconfigured(ArchivalUnit au, Configuration oldAuConf) {}
+    public void auContentChanged(ArchivalUnit au, ChangeInfo info) {}
   }
 }

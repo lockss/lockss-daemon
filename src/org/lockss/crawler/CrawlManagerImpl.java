@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.127 2010-02-22 07:00:29 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.128 2010-05-18 06:15:38 tlipkis Exp $
  */
 
 /*
@@ -271,7 +271,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private Map pluginRegistryNewContentRateLimiters = new HashMap();
   private RateLimiter newContentStartRateLimiter;
 
-  private AuEventHandler auEventHandler;
+  private AuEventHandler auCreateDestroyHandler;
 
   PooledExecutor pool;
   BoundedPriorityQueue poolQueue;
@@ -300,7 +300,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE,
                                       new SingleCrawlStatusAccessor(this));     
     // register our AU event handler
-    auEventHandler = new AuEventHandler.Base() {
+    auCreateDestroyHandler = new AuEventHandler.Base() {
 	public void auDeleted(ArchivalUnit au) {
 	  cancelAuCrawls(au);
 	}
@@ -308,7 +308,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  rebuildQueueSoon();
 	}
       };
-    pluginMgr.registerAuEventHandler(auEventHandler);
+    pluginMgr.registerAuEventHandler(auCreateDestroyHandler);
 
     if (!paramOdc && paramQueueEnabled) {
       poolQueue = new BoundedPriorityQueue(paramPoolQueueSize,
@@ -346,9 +346,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (pool != null) {
       pool.shutdownNow();
     }
-    if (auEventHandler != null) {
-      pluginMgr.unregisterAuEventHandler(auEventHandler);
-      auEventHandler = null;
+    if (auCreateDestroyHandler != null) {
+      pluginMgr.unregisterAuEventHandler(auCreateDestroyHandler);
+      auCreateDestroyHandler = null;
     }
     // checkpoint here
     StatusService statusServ = getDaemon().getStatusService();
@@ -1036,10 +1036,39 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	cmStatus.incrFinished(crawlSuccessful);
 	CrawlerStatus cs = crawler.getStatus();
 	cmStatus.touchCrawlStatus(cs);
-	callCallback(cb, cookie, crawlSuccessful, cs);
+	signalAuEvent(crawler, cs);
 	if (cs != null) cs.sealCounters();
+	callCallback(cb, cookie, crawlSuccessful, cs);
       }
     }
+  }
+
+  private void signalAuEvent(Crawler crawler, CrawlerStatus cs) {
+    final ArchivalUnit au = crawler.getAu();
+    final AuEventHandler.ChangeInfo chInfo = new AuEventHandler.ChangeInfo();
+    Collection<String> mimeTypes = cs.getMimeTypes();
+    if (mimeTypes != null) {
+      Map<String,Integer> mimeCounts = new HashMap<String,Integer>();
+      for (String mimeType : mimeTypes) {
+        mimeCounts.put(mimeType, cs.getMimeTypeCtr(mimeType).getCount());
+      }
+      chInfo.setMimeCounts(mimeCounts);
+    }
+    int num = cs.getNumFetched();
+    chInfo.setNumUrls(num);
+    if (crawler.isWholeAU()) {
+      chInfo.setType(AuEventHandler.ChangeInfo.Type.Crawl);
+    } else {
+      chInfo.setType(AuEventHandler.ChangeInfo.Type.Repair);
+      chInfo.setUrls(cs.getUrlsFetched());
+    }
+    chInfo.setAu(au);
+    chInfo.setComplete(!cs.isCrawlError());
+    pluginMgr.applyAuEvent(new PluginManager.AuEventClosure() {
+	public void execute(AuEventHandler hand) {
+	  hand.auContentChanged(au, chInfo);
+	}
+      });
   }
 
   // For testing only.  See TestCrawlManagerImpl
@@ -1494,12 +1523,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   void startCrawl(ArchivalUnit au) {
     CrawlManager.Callback rc = null;
-    if (au instanceof RegistryArchivalUnit) {
-      if (logger.isDebug3()) {
-	logger.debug3("Adding callback to registry AU: " + au.getName());
-      }
-      rc = new PluginManager.RegistryCallback(pluginMgr, au);
-    }
     // Activity lock prevents AUs with pending crawls from being
     // queued twice.  If ActivityRegulator goes away some other
     // mechanism will be needed.
@@ -1509,12 +1532,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   void startCrawl(CrawlReq req) {
     ArchivalUnit au = req.au;
     try {
-      if (pluginMgr.isRegistryAu(au) && req.cb == null) {
-	if (logger.isDebug3()) {
-	  logger.debug3("Adding callback to registry AU: " + au.getName());
-	}
-	req.setCb(new PluginManager.RegistryCallback(pluginMgr, au));
-      }
       // doesn't return until thread available for next request
       handReqToPool(req);
     } catch (RuntimeException e) {

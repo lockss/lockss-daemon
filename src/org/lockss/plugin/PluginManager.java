@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.207 2010-04-02 23:21:34 pgust Exp $
+ * $Id: PluginManager.java,v 1.208 2010-05-18 06:15:38 tlipkis Exp $
  */
 
 /*
@@ -250,7 +250,8 @@ public class PluginManager
 
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
-  private List auEventHandlers = new ArrayList();
+  private List<AuEventHandler> auEventHandlers =
+    new ArrayList<AuEventHandler>();
   // AUs running under plugins that have been replaced by new versions.
   private List<ArchivalUnit> needRestartAus = new ArrayList();
   private int numAusRestarting = 0;
@@ -332,8 +333,9 @@ public class PluginManager
     for (Plugin plugin : pluginMap.values()) {
       plugin.stopPlugin();
     }
-    auEventHandlers = new ArrayList();
+    auEventHandlers = new ArrayList<AuEventHandler>();
     PluginStatus.unregister(getDaemon());
+    unregisterAuEventHandler(regAuEventHandler);
     super.stopService();
   }
 
@@ -353,6 +355,8 @@ public class PluginManager
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
     initPluginRegistry(config);
     configureAllPlugins(config);
+    // Start watching for changes to plugin registry AUs
+    registerAuEventHandler(regAuEventHandler);
     loadablePluginsReady = true;
   }
 
@@ -820,7 +824,7 @@ public class PluginManager
    * @param aueh AuEventHandler to add
    */
   public void registerAuEventHandler(AuEventHandler aueh) {
-    log.debug3("registering " + aueh);
+    log.debug2("registering AuEventHandler " + aueh);
     if (!auEventHandlers.contains(aueh)) {
       auEventHandlers.add(aueh);
     }
@@ -835,26 +839,46 @@ public class PluginManager
     auEventHandlers.remove(aueh);
   }
 
-  void signalAuEvent(ArchivalUnit au, int how, Configuration oldAuConfig) {
+  void signalAuEvent(final ArchivalUnit au,
+		     final int how,
+		     final Configuration oldAuConfig) {
     if (log.isDebug2()) log.debug2("AuEvent " + how + ": " + au);
-    // copy the list of handler as it could change during the loop.
-    List handlers = new ArrayList(auEventHandlers);
-    for (Iterator iter = handlers.iterator(); iter.hasNext();) {
-      try {
-	AuEventHandler hand = (AuEventHandler)iter.next();
-	switch (how) {
-	case AU_CHANGE_CREATED:
-	  hand.auCreated(au);
-	  break;
-	case AU_CHANGE_DELETED:
-	  hand.auDeleted(au);
-	  break;
-	case AU_CHANGE_RECONFIG:
-	  hand.auReconfigured(au, oldAuConfig);
-	  break;
+    applyAuEvent(new AuEventClosure() {
+	public void execute(AuEventHandler hand) {
+	  try {
+	    switch (how) {
+	    case AU_CHANGE_CREATED:
+	      hand.auCreated(au);
+	      break;
+	    case AU_CHANGE_DELETED:
+	      hand.auDeleted(au);
+	      break;
+	    case AU_CHANGE_RECONFIG:
+	      hand.auReconfigured(au, oldAuConfig);
+	      break;
+	    }
+	  } catch (Exception e) {
+	    log.error("AuEventHandler threw", e);
+	  }
 	}
+      });
+  }
+      
+  /** Closure applied to each AuEventHandler by {@link
+   * #applyAuEvent(AuEventClosure) */
+  public interface AuEventClosure {
+    public void execute(AuEventHandler hand);
+  }
+
+  /** Apply an {@link #AuEventClosure} to each registered {@link
+   * #AuEventHandler} */
+  public void applyAuEvent(AuEventClosure closure) {
+    // copy the list of handler as it could change during the loop.
+    for (AuEventHandler hand : new ArrayList<AuEventHandler>(auEventHandlers)) {
+      try {
+	closure.execute(hand);
       } catch (Exception e) {
-	log.error("AuEventHandler threw", e);
+	log.error("AuEventClosure threw", e);
       }
     }
   }
@@ -2444,28 +2468,15 @@ public class PluginManager
     }
   }
 
-  /**
-   * CrawlManager callback that causes a check for new plugins.  Meant to
-   * be used for asynchronous registry crawls
-   */
-  public static class RegistryCallback implements CrawlManager.Callback {
-    private PluginManager pluginMgr;
-    private ArchivalUnit registryAu;
-
-    public RegistryCallback(PluginManager pluginMgr, ArchivalUnit au) {
-      this.pluginMgr = pluginMgr;
-      this.registryAu = au;
-    }
-
-    public void signalCrawlAttemptCompleted(boolean success,
-					    Object cookie,
-					    CrawlerStatus status) {
-      if (success) {
-	log.debug2("Registry crawl completed successfully, checking for new plugins");
-	pluginMgr.processRegistryAus(ListUtil.list(registryAu));
+  class RegistryAuEventHandler extends AuEventHandler.Base {
+    public void auContentChanged(ArchivalUnit au,
+				 AuEventHandler.ChangeInfo info) {
+      if (isRegistryAu(au)) {
+	processRegistryAus(ListUtil.list(au));
       }
     }
   }
+  private AuEventHandler regAuEventHandler = new RegistryAuEventHandler();
 
   /**
    * A simple class that wraps information about a loadable plugin,
