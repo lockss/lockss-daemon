@@ -2199,15 +2199,15 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jnrbm.com/
       param[journal_issn] = 1477-5751
 
-      au < testing ; Journal of Negative Results in Biomedicine Volume 1 ; 1 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 2 ; 2 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 3 ; 3 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 4 ; 4 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 5 ; 5 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 6 ; 6 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 8 ; 8 >
-      au < testing ; Journal of Negative Results in Biomedicine Volume 9 ; 9 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 1 ; 1 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 2 ; 2 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 3 ; 3 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 4 ; 4 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 5 ; 5 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 6 ; 6 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 7 ; 7 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 8 ; 8 >
+      au < ready ; Journal of Negative Results in Biomedicine Volume 9 ; 9 >
     }
 
     {
@@ -2219,13 +2219,13 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jneuroengrehab.com/
       param[journal_issn] = 1743-0003
 
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 1 ; 1 >
+      au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 1 ; 1 >
       au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 2 ; 2 >
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 3 ; 3 >
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 4 ; 4 >
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
+      au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 3 ; 3 >
+      au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 4 ; 4 >
+      au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
+      au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 6 ; 6 >
+      au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 7 ; 7 >
     }
 
     {
@@ -2237,13 +2237,13 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jneuroinflammation.com/
       param[journal_issn] = 1742-2094
 
-      au < testing ; Journal of Neuroinflammation Volume 1 ; 1 >
-      au < testing ; Journal of Neuroinflammation Volume 2 ; 2 >
-      au < testing ; Journal of Neuroinflammation Volume 3 ; 3 >
+      au < ready ; Journal of Neuroinflammation Volume 1 ; 1 >
+      au < ready ; Journal of Neuroinflammation Volume 2 ; 2 >
+      au < ready ; Journal of Neuroinflammation Volume 3 ; 3 >
       au < testing ; Journal of Neuroinflammation Volume 4 ; 4 >
       au < testing ; Journal of Neuroinflammation Volume 5 ; 5 >
-      au < testing ; Journal of Neuroinflammation Volume 6 ; 6 >
-      au < testing ; Journal of Neuroinflammation Volume 7 ; 7 >
+      au < ready ; Journal of Neuroinflammation Volume 6 ; 6 >
+      au < ready ; Journal of Neuroinflammation Volume 7 ; 7 >
     }
 
     {
@@ -2255,11 +2255,11 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.occup-med.com/
       param[journal_issn] = 1745-6673
 
-      au < testing ; Journal of Occupational Medicine and Toxicology Volume 1 ; 1 >
-      au < testing ; Journal of Occupational Medicine and Toxicology Volume 2 ; 2 >
-      au < testing ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
-      au < testing ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
-      au < testing ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
+      au < ready ; Journal of Occupational Medicine and Toxicology Volume 1 ; 1 >
+      au < ready ; Journal of Occupational Medicine and Toxicology Volume 2 ; 2 >
+      au < ready ; Journal of Occupational Medicine and Toxicology Volume 3 ; 3 >
+      au < ready ; Journal of Occupational Medicine and Toxicology Volume 4 ; 4 >
+      au < ready ; Journal of Occupational Medicine and Toxicology Volume 5 ; 5 >
     }
 
     {
@@ -2271,11 +2271,11 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.josr-online.com/
       param[journal_issn] = 1749-799X
 
-      au < testing ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
-      au < testing ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
+      au < ready ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
+      au < ready ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
       au < testing ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
-      au < testing ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
-      au < testing ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
+      au < ready ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
+      au < ready ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
     }
 
     {
