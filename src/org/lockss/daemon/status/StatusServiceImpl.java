@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.32 2008-08-26 03:04:55 dshr Exp $
+ * $Id: StatusServiceImpl.java,v 1.33 2010-05-18 06:15:57 tlipkis Exp $
  */
 
 /*
@@ -145,14 +145,14 @@ public class StatusServiceImpl
       }
       statusAccessors.put(tableName, statusAccessor);
     }
-    logger.debug("Registered statusAccessor for table "+tableName);
+    logger.debug2("Registered statusAccessor for table "+tableName);
   }
 
   public void unregisterStatusAccessor(String tableName){
     synchronized(statusAccessors) {
       statusAccessors.remove(tableName);
     }
-    logger.debug("Unregistered statusAccessor for table "+tableName);
+    logger.debug2("Unregistered statusAccessor for table "+tableName);
   }
 
   public void registerOverviewAccessor(String tableName,
@@ -171,14 +171,14 @@ public class StatusServiceImpl
       }
       overviewAccessors.put(tableName, acc);
     }
-    logger.debug("Registered overview accessor for table "+tableName);
+    logger.debug2("Registered overview accessor for table "+tableName);
   }
 
   public void unregisterOverviewAccessor(String tableName){
     synchronized(overviewAccessors) {
       overviewAccessors.remove(tableName);
     }
-    logger.debug("Unregistered overviewAccessor for table "+tableName);
+    logger.debug2("Unregistered overviewAccessor for table "+tableName);
   }
 
   static final BitSet EMPTY_BITSET = new BitSet();
@@ -233,8 +233,8 @@ public class StatusServiceImpl
 						       objRefAccessor);
       objRefAccessors.put(tableName, spec);
     }
-    logger.debug("Registered ObjectReferenceAccessor for table "+tableName +
-		 ", class " + cls);
+    logger.debug2("Registered ObjectReferenceAccessor for table "+tableName +
+		  ", class " + cls);
   }
 
   public void
@@ -242,7 +242,7 @@ public class StatusServiceImpl
     synchronized (objRefAccessors) {
       objRefAccessors.remove(tableName);
     }
-    logger.debug("Unregistered ObjectReferenceAccessor for table "+tableName);
+    logger.debug2("Unregistered ObjectReferenceAccessor for table "+tableName);
   }
 
   private static class ObjRefAccessorSpec {
