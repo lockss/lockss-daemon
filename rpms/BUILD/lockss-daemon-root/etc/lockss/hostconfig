@@ -2,6 +2,10 @@
 # do not edit the line above, or edit the parts of this file outside
 # Funky-EOF without making sure that it works with /bin/sh on Solaris.
 PATH=/sbin:/usr/sbin:$PATH
+# LOCKSS_CONFIG_VERSION must be incremented at each change to the set of
+# variables stored in the config file.
+export LOCKSS_CONFIG_VERSION=1
+export LOCKSS_TEAM=lockssdiag@lockss.org
 BASH_NAME=bash
 BASH=`which ${BASH_NAME} 2>/dev/null`
 if [ "X${BASH}" = "X" ]
@@ -413,6 +417,7 @@ build_config_file () {
         done
         TMP_CONFIG=/tmp/lockss.dat$$
         cat >${TMP_CONFIG} <<EOF
+LOCKSS_CONFIG_VERSION=${LOCKSS_CONFIG_VERSION}
 LOCKSS_USER="${2}"
 LOCKSS_HOSTNAME=${LOCKSS_HOSTNAME}
 LOCKSS_IPADDR=${LOCKSS_IPADDR}
@@ -482,6 +487,10 @@ EOF
                 ;;
             esac
             CONFIG_OK=Y
+            if ! mail -s "Config for ${2}@${LOCKSS_HOSTNAME}" -c ${LOCKSS_TEAM} ${LOCKSS_EMAIL} <${1} ; then
+                echo "Sending mail failed. Please check mail configuration."
+                echo "Please also send ${1} to ${LOCKSS_TEAM}."
+            fi
         fi
     done
 }
