@@ -51,6 +51,14 @@ else
     echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
     exit 1
 fi
+if [ "X${LOCKSS_CONFIG_VERSION}" != X ] ; then
+    CURRENT_CONFIG_VERSION=`sed -n 's/^.*LOCKSS_CONFIG_VERSION=\([1-9][0-9]*\).*$/\1/p' </etc/lockss/hostconfig`
+    if [ "X${CURRENT_CONFIG_VERSION}" != X -a "${LOCKSS_CONFIG_VERSION}" != "${CURRENT_CONFIG_VERSION}" ] ; then
+        echo "Config version skew: required ${CURRENT_CONFIG_VERSION} have ${LOCKSS_CONFIG_VERSION}."
+        echo "Not starting LOCKSS. Please run /etc/lockss/hostconfig."
+        exit 1
+    fi
+fi
 if [ "X${LOG_FILE}" = X -o ! -f ${LOG_FILE} ]; then
     echo "No log file - can't start $1"
     exit 1
