@@ -10,9 +10,9 @@
 . /etc/lockss/functions
 
 do_command () {
-if [ -f ${LOCKSS_HOME}/config.$2.dat ]
+if [ -f /etc/lockss/config.$2.dat ]
 then
-        ${CFG_FILE}=${LOCKSS_HOME}/config.$2.dat
+        CFG_FILE=/etc/lockss/config.$2.dat
 fi
 case "$1" in
     start)

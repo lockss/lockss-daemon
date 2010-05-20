@@ -35,7 +35,7 @@ exit 0
 
 %pre
 grep -q ^lockss: /etc/passwd || ( useradd -d /home/lockss -s /bin/false lockss ; echo "Created user 'lockss'" )
-if [ -x /etc/init.d/lockss ]; then /etc/init.d/lockss stop ; echo "Stopped LOCKSS" ; fi
+if [ -x /etc/init.d/lockss -a -s /etc/lockss/config.dat ]; then /etc/init.d/lockss stop ; echo "Stopped LOCKSS" ; fi
 
 %post
 if [ -s /etc/lockss/config.dat ]; then /etc/init.d/lockss start ; echo "Started LOCKSS" ; else echo Please run /etc/lockss/hostconfig .  See /etc/lockss/README for details. ; fi
