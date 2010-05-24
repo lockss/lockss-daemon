@@ -117,11 +117,11 @@
       param[journal_issn] = 1471-2407
 
       au < testing ; BMC Cancer Volume 1 ; 1 >
-      au < testing ; BMC Cancer Volume 2 ; 2 >
-      au < testing ; BMC Cancer Volume 3 ; 3 >
-      au < testing ; BMC Cancer Volume 4 ; 4 >
+      au < ready ; BMC Cancer Volume 2 ; 2 >
+      au < ready ; BMC Cancer Volume 3 ; 3 >
+      au < ready ; BMC Cancer Volume 4 ; 4 >
       au < ready ; BMC Cancer Volume 5 ; 5 >
-      au < testing ; BMC Cancer Volume 6 ; 6 >
+      au < ready ; BMC Cancer Volume 6 ; 6 >
     }
 
     {
@@ -1967,11 +1967,11 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.jautoimdis.com/
       param[journal_issn] = 1740-2557
 
-      au < testing ; Journal of Autoimmune Diseases Volume 1 ; 1 >
-      au < testing ; Journal of Autoimmune Diseases Volume 2 ; 2 >
-      au < testing ; Journal of Autoimmune Diseases Volume 3 ; 3 >
-      au < testing ; Journal of Autoimmune Diseases Volume 4 ; 4 >
-      au < testing ; Journal of Autoimmune Diseases Volume 5 ; 5 >
+      au < ready ; Journal of Autoimmune Diseases Volume 1 ; 1 >
+      au < ready ; Journal of Autoimmune Diseases Volume 2 ; 2 >
+      au < ready ; Journal of Autoimmune Diseases Volume 3 ; 3 >
+      au < ready ; Journal of Autoimmune Diseases Volume 4 ; 4 >
+      au < ready ; Journal of Autoimmune Diseases Volume 5 ; 5 >
     }
 
     {
