@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>8</string>
+    <string>9</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -50,6 +50,9 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressCrawlHtmlFilterFactory</string>
   </entry>
+  <entry>
+    <string>application/pdf_article_iterator_factory</string>
+    <string>org.lockss.plugin.edinburgh.EdinburghArticleIteratorFactory</string>
   <entry>
     <string>plugin_config_props</string>
     <list>
