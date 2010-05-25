@@ -1,0 +1,534 @@
+{
+
+  publisher <
+    name = Royal Society of Chemistry
+  >
+  
+  plugin = org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin
+  param[base_url] = http://www.rsc.org/
+  param[resolver_url] = http://xlink.rsc.org/
+  implicit < status ; year ; name ; param[volume_name] ; param[year] >
+  
+  {
+  
+    title <
+      name = The Analyst ;
+      issn = 0003-2654 ;
+      eissn = 1364-5528
+    >
+    
+    param[journal_code] = an
+    
+    au < released ; 2008 ; The Analyst Volume 133 ; 133 ; 2008 >
+    au < released ; 2009 ; The Analyst Volume 134 ; 134 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Analytical Communications ;
+      issn = 0260-1818 ;
+      eissn = 1460-4760
+    >
+
+    param[journal_code] = ac
+
+
+  }
+
+  {
+  
+    title <
+      name = Analytical Methods ;
+      issn = 1759-9660 ;
+      eissn = 1759-9679
+    >
+    
+    param[journal_code] = ay
+    
+    au < released ; 2009 ; Analytical Methods Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry ;
+      issn = 0260-1818 ;
+      eissn = 1460-4760
+    >
+    
+    param[journal_code] = ic
+
+    au < released ; 2008 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 104 ; 104 ; 2008 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section A: Inorganic Chemistry Volume 105 ; 105 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry ;
+      issn = 0069-3030 ;
+      eissn = 1460-4779
+    >
+    
+    param[journal_code] = oc
+
+    au < released ; 2008 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 104 ; 104 ; 2008 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section B: Organic Chemistry Volume 105 ; 105 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry ;
+      issn = 0260-1826 ;
+      eissn = 1460-4787
+    >
+    
+    param[journal_code] = pc
+
+    au < released ; 2008 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 104 ; 104 ; 2008 >
+    au < released ; 2009 ; Annual Reports on the Progress of Chemistry, Section C: Physical Chemistry Volume 105 ; 105 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Chemical Communications ;
+      issn = 1477-9226 ;
+      eissn = 1364-5447
+    >
+    
+    param[journal_code] = cc
+    
+    au < released ; 2008 ; Chemical Communications 2008 ; 0 ; 2008 >
+    au < released ; 2009 ; Chemical Communications 2009 ; 0 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Chemical Society Reviews ;
+      issn = 1463-9262 ;
+      eissn = 1463-9270
+    >
+    
+    param[journal_code] = cs
+    
+    au < released ; 2008 ; Chemical Society Reviews Volume 37 ; 37 ; 2008 >
+    au < released ; 2009 ; Chemical Society Reviews Volume 38 ; 38 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Chemistry Education Research and Practice ;
+      issn = 1109-4028
+    >
+    
+    param[journal_code] = rp
+    
+    au < released ; 2008 ; Chemistry Education Research and Practice Volume 9 ; 9 ; 2008 >
+    au < released ; 2009 ; Chemistry Education Research and Practice Volume 10 ; 10 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Contemporary Organic Synthesis
+    >
+
+    param[journal_code] = co
+
+
+  }
+
+  {
+  
+    title <
+      name = CrystEngComm ;
+      issn = 0300-922X ;
+      eissn = 1364-5463
+    >
+    
+    param[journal_code] = ce
+    
+    au < released ; 2008 ; CrystEngComm Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; CrystEngComm Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Dalton Transactions ;
+      issn = 0300-9580 ;
+      eissn = 1364-5471
+    >
+    
+    param[journal_code] = dt
+    
+    au < released ; 2008 ; Dalton Transactions 2008 ; 0 ; 2008 >
+    au < released ; 2009 ; Dalton Transactions 2009 ; 0 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Energy & Environmental Science ;
+      issn = 1350-7583
+    >
+    
+    param[journal_code] = ee
+    
+    au < released ; 2008 ; Energy & Environmental Science Volume 1 ; 1 ; 2008 >
+    au < released ; 2009 ; Energy & Environmental Science Volume 2 ; 2 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Faraday Discussions ;
+      issn = 0267-9477 ;
+      eissn = 1364-5544
+    >
+    
+    param[journal_code] = fd
+
+    au < released ; 2008 ; Faraday Discussions Volume 137 ; 137 ; 2008 >
+    au < released ; 2008 ; Faraday Discussions Volume 138 ; 138 ; 2008 >
+    au < released ; 2008 ; Faraday Discussions Volume 139 ; 139 ; 2008 >
+    au < released ; 2009 ; Faraday Discussions Volume 140 ; 140 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 141 ; 141 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 142 ; 142 ; 2009 >
+    au < released ; 2009 ; Faraday Discussions Volume 143 ; 143 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Geochemical Transactions ;
+      eissn = 1467-4866
+    >
+
+    param[journal_code] = gt
+
+
+  }
+
+  {
+  
+    title <
+      name = Green Chemistry ;
+      issn = 1464-0325 ;
+      eissn = 1464-0333
+    >
+    
+    param[journal_code] = gc
+    
+    au < released ; 2008 ; Green Chemistry Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; Green Chemistry Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Integrative Biology ;
+      issn = 1757-9694
+    >
+    
+    param[journal_code] = ib
+    
+    au < released ; 2009 ; Integrative Biology Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Analytical Atomic Spectrometry ;
+      issn = 0267-9477 ;
+      eissn = 1364-5544
+    >
+    
+    param[journal_code] = ja
+    
+    au < released ; 2008 ; Journal of Analytical Atomic Spectrometry Volume 23 ; 23 ; 2008 >
+    au < released ; 2009 ; Journal of Analytical Atomic Spectrometry Volume 24 ; 24 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Journal of Chemical Research, Synopses
+    >
+
+    param[journal_code] = jc
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Chemical Society, Faraday Transactions ;
+      issn = 0300-9599
+    >
+
+    param[journal_code] = ft
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Chemical Society, Perkin Transactions 1 ;
+      issn = 0300-922X
+    >
+
+    param[journal_code] = p1
+
+
+  }
+
+  {
+
+    title <
+      name = Journal of the Chemical Society, Perkin Transactions 2 ;
+      issn = 0300-9580
+    >
+
+    param[journal_code] = p2
+
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Environmental Monitoring ;
+      issn = 1144-0546 ;
+      eissn = 1369-9261
+    >
+    
+    param[journal_code] = em
+    
+    au < released ; 2008 ; Journal of Environmental Monitoring Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; Journal of Environmental Monitoring Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Journal of Materials Chemistry ;
+      issn = 1477-0520 ;
+      eissn = 1477-0539
+    >
+    
+    param[journal_code] = jm
+    
+    au < released ; 2008 ; Journal of Materials Chemistry Volume 18 ; 18 ; 2008 >
+    au < released ; 2009 ; Journal of Materials Chemistry Volume 19 ; 19 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Lab on a Chip ;
+      issn = 1474-905X ;
+      eissn = 1474-9092
+    >
+    
+    param[journal_code] = lc
+    
+    au < released ; 2008 ; Lab on a Chip Volume 8 ; 8 ; 2008 >
+    au < released ; 2009 ; Lab on a Chip Volume 9 ; 9 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Metallomics ;
+      issn = 1756-5901
+    >
+    
+    param[journal_code] = mt
+    
+    au < released ; 2009 ; Metallomics Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Molecular BioSystems ;
+      issn = 1742-206X ;
+      eissn = 1742-2051
+    >
+    
+    param[journal_code] = mb
+    
+    au < released ; 2008 ; Molecular BioSystems Volume 4 ; 4 ; 2008 >
+    au < released ; 2009 ; Molecular BioSystems Volume 5 ; 5 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Nanoscale
+    >
+    
+    param[journal_code] = nr
+    
+    au < released ; 2009 ; Nanoscale Volume 1 ; 1 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Natural Product Reports ;
+      issn = 1463-9076 ;
+      eissn = 1463-9084
+    >
+    
+    param[journal_code] = np
+    
+    au < released ; 2008 ; Natural Product Reports Volume 25 ; 25 ; 2008 >
+    au < released ; 2009 ; Natural Product Reports Volume 26 ; 26 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = New Journal of Chemistry ;
+      issn = 1744-683X ;
+      eissn = 1744-6848
+    >
+    
+    param[journal_code] = nj
+    
+    au < released ; 2008 ; New Journal of Chemistry Volume 32 ; 32 ; 2008 >
+    au < released ; 2009 ; New Journal of Chemistry Volume 33 ; 33 ; 2009 >
+  
+  }
+
+  {
+  
+    title <
+      name = Organic & Biomolecular Chemistry ;
+      issn = 0003-2654 ;
+      eissn = 1364-5528
+    >
+    
+    param[journal_code] = ob
+    
+    au < released ; 2008 ; Organic & Biomolecular Chemistry Volume 6 ; 6 ; 2008 >
+    au < released ; 2009 ; Organic & Biomolecular Chemistry Volume 7 ; 7 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Pesticide Outlook ;
+      issn = 1743-1026 ;
+      eissn = 1743-1034
+    >
+
+    param[journal_code] = po
+
+
+  }
+
+  {
+  
+    title <
+      name = Photochemical & Photobiological Sciences ;
+      issn = 1474-905X ;
+      eissn = 1474-9092
+    >
+    
+    param[journal_code] = pp
+    
+    au < released ; 2008 ; Photochemical & Photobiological Sciences Volume 7 ; 7 ; 2008 >
+    au < released ; 2009 ; Photochemical & Photobiological Sciences Volume 8 ; 8 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = PhysChemComm ;
+      eissn = 1460-2733
+    >
+
+    param[journal_code] = qu
+
+
+  }
+
+  {
+  
+    title <
+      name = Physical Chemistry Chemical Physics ;
+      issn = 1463-9076 ;
+      eissn = 1463-9084
+    >
+    
+    param[journal_code] = cp
+    
+    au < released ; 2008 ; Physical Chemistry Chemical Physics Volume 10 ; 10 ; 2008 >
+    au < released ; 2009 ; Physical Chemistry Chemical Physics Volume 11 ; 11 ; 2009 >
+  
+  }
+
+  {
+
+    title <
+      name = Russian Chemical Reviews ;
+      issn = 0036-021X ;
+      eissn = 1468-4837
+    >
+
+    param[journal_code] = rc
+
+
+  }
+
+  {
+  
+    title <
+      name = Soft Matter ;
+      issn = 1744-683X ;
+      eissn = 1744-6848
+    >
+    
+    param[journal_code] = sm
+    
+    au < released ; 2008 ; Soft Matter Volume 4 ; 4 ; 2008 >
+    au < released ; 2009 ; Soft Matter Volume 5 ; 5 ; 2009 >
+  
+  }
+
+}
+

@@ -1,0 +1,1186 @@
+{
+
+  publisher <
+    name = Nature Publishing Group
+  >
+
+  plugin = org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin
+  param[base_url] = http://www.nature.com/
+  implicit < status ; year ; name ; param[year] ; param[volume_name] >
+  
+  {
+
+    title <
+      name = Acta Pharmacologica Sinica ;
+      issn = 1671-4083 ;
+      eissn = 1745-7254
+    >
+
+    param[journal_id] = aps
+
+    au < released ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
+    au < released ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Gastroenterology ;
+      issn = 0002-9270 ;
+      eissn = 1572-0241
+    >
+
+    param[journal_id] = ajg
+
+  }
+
+  {
+
+    title <
+      name = American Journal of Hypertension ;
+      issn = 0895-7061 ;
+      eissn = 1941-7225
+    >
+
+    param[journal_id] = ajh
+
+  }
+
+  {
+
+    title <
+      name = Asian Journal of Andrology ;
+      issn = 1008-682X ;
+      eissn = 1745-7262
+    >
+
+    param[journal_id] = aja
+
+    au < released ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
+    au < released ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = Bone Marrow Transplantation ;
+      issn = 0268-3369 ;
+      eissn = 1476-5365
+    >
+
+    param[journal_id] = bmt
+    
+comment[bmt44] = attempt full recrawls
+
+    au < released ; 2008 ; Bone Marrow Transplantation Volume 41 ; 2008 ; 41 >
+    au < released ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
+    au < released ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
+    au < released ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
+
+  }
+
+  {
+
+    title <
+      name = British Dental Journal ;
+      issn = 0007-0610 ;
+      eissn = 1476-5373
+    >
+
+    param[journal_id] = bdj
+
+  }
+
+  {
+
+    title <
+      name = British Journal of Cancer ;
+      issn = 0007-0920 ;
+      eissn = 1532-1827
+    >
+
+    param[journal_id] = bjc
+
+    comment[clockss] = True
+    comment[verify] = different website design?
+
+    au < released ; 2008 ; British Journal of Cancer Volume 99 ; 2008 ; 99 >
+    au < released ; 2009 ; British Journal of Cancer Volume 100 ; 2009 ; 100 >
+    au < released ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
+
+  }
+
+  {
+
+    title <
+      name = Cancer Gene Therapy ;
+      issn = 0929-1903 ;
+      eissn = 1476-5500
+    >
+
+    param[journal_id] = cgt
+
+    au < released ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
+    au < released ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Cell Death and Differentiation ;
+      issn = 1350-9047 ;
+      eissn = 1476-5403
+    >
+
+    param[journal_id] = cdd
+
+    au < released ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
+    au < released ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Cell Research ;
+      issn = 1001-0602 ;
+      eissn = 1748-7838
+    >
+
+    param[journal_id] = cr
+
+    au < released ; 2008 ; Cell Research Volume 18 ; 2008 ; 18 >
+    au < released ; 2009 ; Cell Research Volume 19 ; 2009 ; 19 >
+
+  }
+
+  {
+
+    title <
+      name = Clinical Pharmacology & Therapeutics ;
+      issn = 0009-9236 ;
+      eissn = 1532-6535
+    >
+
+    param[journal_id] = clpt
+
+  }
+
+  {
+
+    title <
+      name = The EMBO Journal
+    >
+
+    param[journal_id] = emboj
+
+    au < released  ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
+    au < released ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
+
+  }
+
+  {
+
+    title <
+      name = EMBO Reports
+    >
+
+    param[journal_id] = embor
+
+    au < released  ; 2009 ; EMBO Reports Volume 10 ; 2009 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Clinical Nutrition ;
+      issn = 0954-3007 ;
+      eissn = 1476-5640
+    >
+
+    param[journal_id] = ejcn
+
+    au < released  ; 2008 ; European Journal of Clinical Nutrition Volume 62 ; 2008 ; 62 >
+    au < released ; 2009 ; European Journal of Clinical Nutrition Volume 63 ; 2009 ; 63 >
+
+  }
+
+  {
+
+    title <
+      name = European Journal of Human Genetics ;
+      issn = 1018-4813 ;
+      eissn = 1476-5438
+    >
+
+    param[journal_id] = ejhg
+
+  }
+
+  {
+
+    title <
+      name = Evidence-Based Dentistry ;
+      issn = 1462-0049 ;
+      eissn = 1476-5446
+    >
+
+    param[journal_id] = ebd
+
+  }
+
+  {
+
+    title <
+      name = Eye ;
+      issn = 0950-222X ;
+      eissn = 1476-5454
+    >
+
+    param[journal_id] = eye
+
+    au < released  ; 2008 ; Eye Volume 22 ; 2008 ; 22 >
+    au < released ; 2009 ; Eye Volume 23 ; 2009 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = Gene Therapy ;
+      issn = 0969-7128 ;
+      eissn = 1476-5462
+    >
+
+    param[journal_id] = gt
+
+    au < released ; 2009 ; Gene Therapy Volume 16 ; 2009 ; 16 >
+
+  }
+
+  {
+
+    title <
+      name = Genes and Immunity ;
+      issn = 1466-4879 ;
+      eissn = 1476-5470
+    >
+
+    param[journal_id] = gene
+
+    au < released ; 2009 ; Genes and Immunity Volume 10 ; 2009 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Heredity ;
+      issn = 0018-067X ;
+      eissn = 1365-2540
+    >
+
+    param[journal_id] = hdy
+
+    au < released ; 2008 ; Heredity Volume 100 ; 2008 ; 100 >
+    au < released ; 2008 ; Heredity Volume 101 ; 2008 ; 101 >
+    au < released ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
+    au < released ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
+
+  }
+
+  {
+
+    title <
+      name = Hypertension Research ;
+      issn = 0916-9636 ;
+      eissn = 1348-4214
+    >
+
+    param[journal_id] = hr
+
+    au < released ; 2008 ; Hypertension Research Volume 31 ; 2008 ; 31 >
+    au < released ; 2009 ; Hypertension Research Volume 32 ; 2009 ; 32 >
+    
+  }
+
+  {
+
+    title <
+      name = Immunology & Cell Biology ;
+      issn = 0818-9641 ;
+      eissn = 1440-1711
+    >
+
+    param[journal_id] = icb
+
+    au < released ; 2008 ; Immunology & Cell Biology Volume 86 ; 2008 ; 86 >
+    au < released ; 2009 ; Immunology & Cell Biology Volume 87 ; 2009 ; 87 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Impotence Research ;
+      issn = 0955-9930 ;
+      eissn = 1476-5489
+    >
+
+    param[journal_id] = ijir
+
+    au < released ; 2008 ; International Journal of Impotence Research Volume 20 ; 2008 ; 20 >
+    au < released ; 2009 ; International Journal of Impotence Research Volume 21 ; 2009 ; 21 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Obesity ;
+      issn = 0307-0565 ;
+      eissn = 1476-5497
+    >
+
+    param[journal_id] = ijo
+
+    au < released ; 2008 ; International Journal of Obesity Volume 32 ; 2008 ; 32 >
+    au < released ; 2009 ; International Journal of Obesity Volume 33 ; 2009 ; 33 >
+
+  }
+
+  {
+
+    title <
+      name = The ISME Journal ;
+      issn = 1751-7362 ;
+      eissn = 1751-7370
+    >
+
+    param[journal_id] = ismej
+
+  }
+
+  {
+
+    title <
+      name = JID Symposium Proceedings ;
+      issn = 1087-0024 ;
+      eissn = 1529-1774
+    >
+
+    param[journal_id] = jidsp
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Antibiotics ;
+      issn = 0021-8820 ;
+      eissn = 1881-1469
+    >
+
+    param[journal_id] = ja
+
+    au < released  ; 2008 ; The Journal of Antibiotics Volume 61 ; 2008 ; 61 >
+    au < released ; 2009 ; The Journal of Antibiotics Volume 62 ; 2009 ; 62 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Cerebral Blood Flow and Metabolism ;
+      issn = 0271-678X ;
+      eissn = 1559-7016
+    >
+
+    param[journal_id] = jcbfm
+
+  }
+
+  {
+
+    title <
+      name = Journal of Exposure Science and Environmental Epidemiology ;
+      issn = 1559-0631 ;
+      eissn = 1559-064X
+    >
+
+    param[journal_id] = jes
+
+    comment[19] = Stubburn lack of consensus in issue 6, almost at agreement threshold
+
+    au < released ; 2008 ; Journal of Exposure Science and Environmental Epidemiology Volume 18 ; 2008 ; 18 >
+    au < released ; 2009 ; Journal of Exposure Science and Environmental Epidemiology Volume 19 ; 2009 ; 19 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Human Genetics ;
+      issn = 1434-5161 ;
+      eissn = 1435-232X
+    >
+
+    param[journal_id] = jhg
+
+    au < released ; 2008 ; Journal of Human Genetics Volume 53 ; 2008 ; 53 >
+    au < released ; 2009 ; Journal of Human Genetics Volume 54 ; 2009 ; 54 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Human Hypertension ;
+      issn = 0950-9240 ;
+      eissn = 1476-5527
+    >
+
+    param[journal_id] = jhh
+
+    au < released  ; 2008 ; Journal of Human Hypertension Volume 22 ; 2008 ; 22 >
+    au < released ; 2009 ; Journal of Human Hypertension Volume 23 ; 2009 ; 23 >
+
+  }
+
+  {
+
+    title <
+      name = The Journal of Investigative Dermatology ;
+      issn = 0022-202X ;
+      eissn = 1523-1747
+    >
+
+    param[journal_id] = jid
+    comment[1967] = The manifest page for 1967 is missing, and 1966 is odd.
+
+    au < released  ; 2008 ; The Journal of Investigative Dermatology Volume 128 ; 2008 ; 128 >
+    au < released ; 2009 ; The Journal of Investigative Dermatology Volume 129 ; 2009 ; 129 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Perinatology ;
+      issn = 0743-8346 ;
+      eissn = 1476-5543
+    >
+
+    param[journal_id] = jp
+
+    au < released ; 2008 ; Journal of Perinatology Volume 28 ; 2008 ; 28 >
+    au < released ; 2009 ; Journal of Perinatology Volume 29 ; 2009 ; 29 >
+    
+  }
+
+  {
+
+    title <
+      name = Kidney International ;
+      issn = 0085-2538 ;
+      eissn = 1523-1755
+    >
+
+    param[journal_id] = ki
+
+  }
+
+  {
+
+    title <
+      name = Laboratory Investigation ;
+      issn = 0023-6837 ;
+      eissn = 1530-0307
+    >
+
+    param[journal_id] = labinvest
+
+  }
+
+  {
+
+    title <
+      name = Leukemia ;
+      issn = 0887-6924 ;
+      eissn = 1476-5551
+    >
+
+    param[journal_id] = leu
+
+    
+  }
+
+  {
+
+    title <
+      name = Modern Pathology ;
+      issn = 0893-3952 ;
+      eissn = 1530-0285
+    >
+
+    param[journal_id] = modpathol
+
+  }
+
+  {
+
+    title <
+      name = Molecular Psychiatry ;
+      issn = 1359-4184 ;
+      eissn = 1476-5578
+    >
+
+    param[journal_id] = mp
+
+    au < released  ; 2008 ; Molecular Psychiatry Volume 13 ; 2008 ; 13 >
+    au < released  ; 2009 ; Molecular Psychiatry Volume 14 ; 2009 ; 14 >
+
+  }
+
+  {
+
+    title <
+      name = Molecular Systems Biology
+    >
+
+    param[journal_id] = msb
+
+  }
+
+  {
+
+    title <
+      name = Molecular Therapy ;
+      issn = 1525-0016 ;
+      eissn = 1525-0024
+    >
+
+    param[journal_id] = mt
+
+  }
+
+  {
+
+    title <
+      name = Mucosal Immunology ;
+      issn = 1933-0219 ;
+      eissn = 1935-3456
+    >
+
+    param[journal_id] = mi
+
+  }
+
+  {
+
+    title <
+      name = Nature ;
+      issn = 0028-0836 ;
+      eissn = 1476-4687
+    >
+
+    param[journal_id] = nature
+
+    au < released ; 2008 ; Nature Volume 451 ; 2008 ; 451 >
+    au < released ; 2008 ; Nature Volume 452 ; 2008 ; 452 >
+    au < released ; 2008 ; Nature Volume 453 ; 2008 ; 453 >
+    au < released ; 2008 ; Nature Volume 454 ; 2008 ; 454 >
+    au < released ; 2008 ; Nature Volume 455 ; 2008 ; 455 >
+    au < released ; 2008 ; Nature Volume 456 ; 2008 ; 456 >
+    au < released ; 2009 ; Nature Volume 457 ; 2009 ; 457 >
+    au < released ; 2009 ; Nature Volume 458 ; 2009 ; 458 >
+    au < released ; 2009 ; Nature Volume 459 ; 2009 ; 459 >
+    au < released ; 2009 ; Nature Volume 460 ; 2009 ; 460 >
+    au < released ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
+    au < released ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Biotechnology ;
+      issn = 1087-0156 ;
+      eissn = 1546-1696
+    >
+
+    param[journal_id] = nbt
+
+    au < released ; 2008 ; Nature Biotechnology Volume 26 ; 2008 ; 26 >
+    au < released ; 2009 ; Nature Biotechnology Volume 27 ; 2009 ; 27 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Cell Biology ;
+      issn = 1465-7392 ;
+      eissn = 1476-4679
+    >
+
+    param[journal_id] = ncb
+
+    au < released ; 2008 ; Nature Cell Biology Volume 10 ; 2008 ; 10 >
+    au < released ; 2009 ; Nature Cell Biology Volume 11 ; 2009 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Chemical Biology ;
+      issn = 1552-4450 ;
+      eissn = 1548-7105
+    >
+
+    param[journal_id] = nchembio
+
+    au < released ; 2008 ; Nature Chemical Biology Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Chemical Biology Volume 5 ; 2009 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Chemistry ;
+      issn = 1755-4330 ;
+      eissn = 1755-4349
+    >
+
+    param[journal_id] = nchem
+
+    au < released ; 2009 ; Nature Chemistry Volume 1 ; 2009 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Digest ;
+      issn = 1880-0556
+    >
+
+    param[journal_id] = ndigest
+
+    au < released ; 2008 ; Nature Digest Volume 5 ; 2008 ; 5 >
+    au < released ; 2009 ; Nature Digest Volume 6 ; 2009 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Genetics ;
+      issn = 1061-4036 ;
+      eissn = 1546-1718
+    >
+
+    param[journal_id] = ng
+
+    au < released ; 2009 ; Nature Genetics Volume 41 ; 2009 ; 41 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Geoscience ;
+      issn = 1752-0894 ;
+      eissn = 1752-0908
+    >
+
+    param[journal_id] = ngeo
+
+    au < released ; 2008 ; Nature Geoscience Volume 1 ; 2008 ; 1 >
+    au < released ; 2009 ; Nature Geoscience Volume 2 ; 2009 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Immunology ;
+      issn = 1529-2908 ;
+      eissn = 1529-2916
+    >
+
+    param[journal_id] = ni
+
+
+  }
+
+  {
+
+    title <
+      name = Nature Materials ;
+      issn = 1476-1122 ;
+      eissn = 1476-4660
+    >
+
+    param[journal_id] = nmat
+
+    au < released ; 2008 ; Nature Materials Volume 7 ; 2008 ; 7 >
+    au < released ; 2009 ; Nature Materials Volume 8 ; 2009 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Medicine ;
+      issn = 1078-8956 ;
+      eissn = 1546-170X
+    >
+
+    param[journal_id] = nm
+
+    au < released ; 2008 ; Nature Medicine Volume 14 ; 2008 ; 14 >
+    au < released ; 2009 ; Nature Medicine Volume 15 ; 2009 ; 15 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Methods ;
+      issn = 1548-7091 ;
+      eissn = 1548-7105
+    >
+
+    param[journal_id] = nmeth
+
+    au < released ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
+    au < released ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Nanotechnology ;
+      issn = 1748-3387 ;
+      eissn = 1748-3395
+    >
+
+    param[journal_id] = nnano
+
+    au < released ; 2008 ; Nature Nanotechnology Volume 3 ; 2008 ; 3 >
+    au < released ; 2009 ; Nature Nanotechnology Volume 4 ; 2009 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Neuroscience ;
+      issn = 1097-6256 ;
+      eissn = 1546-1726
+    >
+
+    param[journal_id] = neuro
+
+    au < released ; 2008 ; Nature Neuroscience Volume 11 ; 2008 ; 11 >
+    au < released ; 2009 ; Nature Neuroscience Volume 12 ; 2009 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Photonics ;
+      issn = 1749-4885 ;
+      eissn = 1749-4893
+    >
+
+    param[journal_id] = nphoton
+
+    au < released ; 2008 ; Nature Photonics Volume 2 ; 2008 ; 2 >
+    au < released ; 2009 ; Nature Photonics Volume 3 ; 2009 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Physics ;
+      issn = 1745-2473 ;
+      eissn = 1745-2481
+    >
+
+    param[journal_id] = nphys
+
+    au < released ; 2008 ; Nature Physics Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Physics Volume 5 ; 2009 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Protocols
+    >
+
+    param[journal_id] = nprot
+
+comment[nprot4] = poll mismatch
+
+    au < released ; 2009 ; Nature Protocols Volume 4 ; 2009 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Cancer ;
+      issn = 1474-175X ;
+      eissn = 1474-1768
+    >
+
+    param[journal_id] = nrc
+
+    au < released ; 2008 ; Nature Reviews Cancer Volume 8 ; 2008 ; 8 >
+    au < released ; 2009 ; Nature Reviews Cancer Volume 9 ; 2009 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Cardiology ;
+      issn = 1759-5002 ;
+      eissn = 1759-5010
+    >
+
+    param[journal_id] = nrcardio
+
+    au < released ; 2008 ; Nature Reviews Cardiology Volume 5 ; 2008 ; 5 >
+    au < released ; 2009 ; Nature Reviews Cardiology Volume 6 ; 2009 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Clinical Oncology ;
+      issn = 1759-4774 ;
+      eissn = 1759-4782
+    >
+
+    param[journal_id] = nrclinonc
+
+    au < released ; 2008 ; Nature Reviews Clinical Oncology Volume 5 ; 2008 ; 5 >
+    au < released ; 2009 ; Nature Reviews Clinical Oncology Volume 6 ; 2009 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Drug Discovery ;
+      issn = 1474-1776 ;
+      eissn = 1474-1784
+    >
+
+    param[journal_id] = nrd
+
+    au < released ; 2008 ; Nature Reviews Drug Discovery Volume 7 ; 2008 ; 7 >
+    au < released ; 2009 ; Nature Reviews Drug Discovery Volume 8 ; 2009 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Endocrinology ;
+      issn = 1759-5029 ;
+      eissn = 1759-5037
+    >
+
+    param[journal_id] = nrendo
+
+    au < released ; 2008 ; Nature Reviews Endocrinology Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Reviews Endocrinology Volume 5 ; 2009 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Gastroenterology and Hepatology ;
+      issn = 1759-5045 ;
+      eissn = 1759-5053
+    >
+
+    param[journal_id] = nrgastro
+
+    au < released ; 2008 ; Nature Reviews Gastroenterology and Hepatology Volume 5 ; 2008 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Genetics ;
+      issn = 1471-0056 ;
+      eissn = 1471-0064
+    >
+
+    param[journal_id] = nrg
+
+    au < released ; 2008 ; Nature Reviews Genetics Volume 9 ; 2008 ; 9 >
+    au < released ; 2009 ; Nature Reviews Genetics Volume 10 ; 2009 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Immunology ;
+      issn = 1474-1733 ;
+      eissn = 1474-1741
+    >
+
+    param[journal_id] = nri
+
+    au < released ; 2008 ; Nature Reviews Immunology Volume 8 ; 2008 ; 8 >
+    au < released ; 2009 ; Nature Reviews Immunology Volume 9 ; 2009 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Microbiology ;
+      issn = 1740-1526 ;
+      eissn = 1740-1534
+    >
+
+    param[journal_id] = nrmicro
+
+    au < released ; 2008 ; Nature Reviews Microbiology Volume 6 ; 2008 ; 6 >
+    au < released ; 2009 ; Nature Reviews Microbiology Volume 7 ; 2009 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Molecular Cell Biology ;
+      issn = 1471-0072 ;
+      eissn = 1471-0080
+    >
+
+    param[journal_id] = nrm
+
+    au < released ; 2008 ; Nature Reviews Molecular Cell Biology Volume 9 ; 2008 ; 9 >
+    au < released ; 2009 ; Nature Reviews Molecular Cell Biology Volume 10 ; 2009 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Nephrology ;
+      issn = 1759-5061 ;
+      eissn = 1759-507X
+    >
+
+    param[journal_id] = nrneph
+
+    au < released ; 2008 ; Nature Reviews Nephrology Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Reviews Nephrology Volume 5 ; 2009 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Neurology ;
+      issn = 1759-4758 ;
+      eissn = 1759-4766
+    >
+
+    param[journal_id] = nrneurol
+
+    au < released ; 2008 ; Nature Reviews Neurology Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Reviews Neurology Volume 5 ; 2009 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Neuroscience ;
+      issn = 1471-003X ;
+      eissn = 1471-0048
+    >
+
+    param[journal_id] = nrn
+
+    au < released ; 2008 ; Nature Reviews Neuroscience Volume 9 ; 2008 ; 9 >
+    au < released ; 2009 ; Nature Reviews Neuroscience Volume 10 ; 2009 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Rheumatology ;
+      issn = 1759-4790 ;
+      eissn = 1759-4804
+    >
+
+    param[journal_id] = nrrheum
+
+    au < released ; 2008 ; Nature Reviews Rheumatology Volume 4 ; 2008 ; 4 >
+    au < released ; 2009 ; Nature Reviews Rheumatology Volume 5 ; 2009 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Reviews Urology ;
+      issn = 1759-4812 ;
+      eissn = 1759-4820
+    >
+
+    param[journal_id] = nrurol
+
+    au < released ; 2008 ; Nature Reviews Urology Volume 5 ; 2008 ; 5 >
+    au < released ; 2009 ; Nature Reviews Urology Volume 6 ; 2009 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Nature Structural and Molecular Biology ;
+      issn = 1545-9993 ;
+      eissn = 1545-9985
+    >
+
+    param[journal_id] = nsmb
+
+
+  }
+
+  {
+
+    title <
+      name = Neuropsychopharmacology ;
+      issn = 0893-133X ;
+      eissn = 1470-634X
+    >
+
+    param[journal_id] = npp
+
+  }
+
+  {
+
+    title <
+      name = Obesity ;
+      issn = 1930-7381 ;
+      eissn = 1930-739X
+    >
+
+    param[journal_id] = oby
+
+  }
+
+  {
+
+    title <
+      name = Oncogene ;
+      issn = 0950-9232 ;
+      eissn = 1476-5594
+    >
+
+    param[journal_id] = onc
+
+    au < released ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
+
+  }
+
+  {
+
+    title <
+      name = Pharmacogenomics Journal ;
+      issn = 1470-269X ;
+      eissn = 1473-1150
+    >
+
+    param[journal_id] = tpj
+
+    au < released ; 2008 ; The Pharmacogenomics Journal Volume 8 ; 2008 ; 8 >
+    
+  }
+
+  {
+
+    title <
+      name = Prostate Cancer and Prostatic Diseases ;
+      issn = 1365-7852 ;
+      eissn = 1476-5608
+    >
+
+    param[journal_id] = pcan
+
+    au < released ; 2008 ; Prostate Cancer and Prostatic Diseases Volume 11 ; 2008 ; 11 >
+    au < released ; 2009 ; Prostate Cancer and Prostatic Diseases Volume 12 ; 2009 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = SciBX: Science-Business eXchange
+    >
+
+    param[journal_id] = scibx
+
+  }
+
+  {
+
+    title <
+      name = Spinal Cord ;
+      issn = 1362-4393 ;
+      eissn = 1476-5624
+    >
+
+    param[journal_id] = sc
+
+    au < released ; 2008 ; Spinal Cord Volume 46 ; 2008 ; 46 >
+    au < released ; 2009 ; Spinal Cord Volume 47 ; 2009 ; 47 >
+    
+  }
+
+  {
+
+    title <
+      name = Vital ;
+      issn = 1741-7503 ;
+      eissn = 1741-7511
+    >
+
+    param[journal_id] = vital
+    param[comment] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
+    
+    au < released ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
+    au < released ; 2009 ; Vital Volume 7 (year 2009) ; 2009 ; 7 >
+  }
+
+}

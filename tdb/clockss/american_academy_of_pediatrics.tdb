@@ -1,0 +1,85 @@
+{
+
+  publisher <
+    name = American Academy of Pediatrics
+  >
+  
+  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+  implicit < status ; year ; name ; param[volume_name] >
+  
+  {
+  
+    title <
+      name = AAP Grand Rounds ;
+      issn = 1099-6605
+    >
+    
+    param[base_url] = http://aapgrandrounds.aappublications.org/
+    
+    au < released ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
+    au < released ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
+    au < released ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
+    au < released ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+  
+  }
+
+  {
+  
+    title <
+      name = AAP News ;
+      issn = 1073-0397 ;
+      eissn = 1556-3332
+    >
+    
+    param[base_url] = http://aapnews.aappublications.org/
+       
+  }
+
+  {
+  
+    title <
+      name = NeoReviews ;
+      issn = 1526-9906
+    >
+    
+    param[base_url] = http://neoreviews.aappublications.org/
+
+    au < released ; 2008 ; NeoReviews Volume 9 ; 9 >
+    au < released ; 2009 ; NeoReviews Volume 10 ; 10 >
+  
+  }
+
+  {
+  
+    title <
+      name = Pediatrics ;
+      issn = 0031-4005 ;
+      eissn = 1098-4275
+    >
+
+    param[base_url] = http://pediatrics.aappublications.org/
+    
+    au < released ; 2008 ; Pediatrics Volume 121 ; 121 >
+    au < released ; 2008 ; Pediatrics Volume 122 ; 122 >
+    au < released ; 2009 ; Pediatrics Volume 123 ; 123 >
+    au < released ; 2009 ; Pediatrics Volume 124 ; 124 >
+  
+  }
+
+  {
+  
+    title <
+      name = Pediatrics in Review ;
+      issn = 0191-9601 ;
+      eissn = 1526-3347
+    >
+    
+    param[base_url] = http://pedsinreview.aappublications.org/
+    
+    au < released ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
+    au < released ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+  
+  }
+
+}

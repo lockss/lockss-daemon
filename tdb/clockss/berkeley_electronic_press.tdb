@@ -1,0 +1,630 @@
+{
+
+  publisher <
+    name = Berkeley Electronic Press
+  >
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  param[base_url] = http://www.bepress.com/
+  implicit < status ; year ; name ; param[volume] >
+  
+  {
+
+    title <
+      name = Asian Journal of Comparative Law ;
+      eissn = 1932-0205
+    >
+
+    param[journal_abbr] = asjcl
+
+    au < released ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
+    au < released ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Economic Analysis & Policy ;
+      eissn = 1935-1682
+    >
+
+    param[journal_abbr] = bejeap
+    param[comment] = There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004.
+
+    au < released ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
+    au < released ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Macroeconomics ;
+      eissn = 1935-1690
+    >
+
+    param[journal_abbr] = bejm
+    param[comment] = There are no typos below, either.  Volume 1 and 2 were published after volume 3.
+
+    au < released ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
+    au < released ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = The B.E. Journal of Theoretical Economics ;
+      eissn = 1935-1704
+    >
+
+    param[journal_abbr] = bejte
+    param[comment] = 
+    au < released ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
+    au < released ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Basic Income Studies ;
+      eissn = 1932-0183
+    >
+
+    param[journal_abbr] = bis
+
+    au < released ; 2008 ; Basic Income Studies Volume 3 ; 3 >
+    au < released ; 2009 ; Basic Income Studies Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Business and Politics ;
+      eissn = 1469-3569
+    >
+
+    param[journal_abbr] = bap
+
+    au < released ; 2008 ; Business and Politics Volume 10 ; 10 >
+    au < released ; 2009 ; Business and Politics Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
+      name = California Journal of Politics and Policy
+    >
+
+    param[journal_abbr] = cjpp
+
+    au < released ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Capitalism and Society ;
+      eissn = 1932-0213
+    >
+
+    param[journal_abbr] = cas
+
+    au < released ; 2008 ; Capitalism and Society Volume 3 ; 3 >
+    au < released ; 2009 ; Capitalism and Society Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Chemical Product and Process Modeling ;
+      eissn = 1934-2659
+    >
+
+    param[journal_abbr] = cppm
+
+    au < released ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
+    au < released ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = The Economists' Voice ;
+      eissn = 1553-3832
+    >
+
+    param[journal_abbr] = ev
+
+    au < released ; 2008 ; The Economists' Voice Volume 5 ; 5 >
+    au < released ; 2009 ; The Economists' Voice Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = The Forum ;
+      eissn = 1540-8884
+    >
+
+    param[journal_abbr] = forum
+
+    au < released ; 2008 ; The Forum Volume 6 ; 6 >
+    au < released ; 2009 ; The Forum Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Forum for Health Economics & Policy ;
+      eissn = 1558-9544
+    >
+
+    param[journal_abbr] = fhep
+
+    au < released ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
+    au < released ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
+
+  }
+
+  {
+
+    title <
+      name = Global Economy Journal ;
+      eissn = 1524-5861
+    >
+
+    param[journal_abbr] = gej
+
+    au < released ; 2008 ; Global Economy Journal Volume 8 ; 8 >
+    au < released ; 2009 ; Global Economy Journal Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = Global Jurist ;
+      eissn = 1934-2640
+    >
+
+    param[journal_abbr] = gj
+
+    au < released ; 2008 ; Global Jurist Volume 8 ; 8 >
+    au < released ; 2009 ; Global Jurist Volume 9 ; 9 >
+
+  }
+
+  {
+
+    title <
+      name = International Commentary on Evidence ;
+      eissn = 1554-4567
+    >
+
+    param[journal_abbr] = ice
+
+    au < released ; 2008 ; International Commentary on Evidence Volume 6 ; 6 >
+    au < released ; 2009 ; International Commentary on Evidence Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = The International Journal of Biostatistics ;
+      eissn = 1557-4679
+    >
+
+    param[journal_abbr] = ijb
+
+    au < released ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
+    au < released ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Chemical Reactor Engineering ;
+      eissn = 1542-6580
+    >
+
+    param[journal_abbr] = ijcre
+
+    au < released ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
+    au < released ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Emerging Electric Power Systems ;
+      eissn = 1553-779X
+    >
+
+    param[journal_abbr] = ijeeps
+
+    au < released ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
+    au < released ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Food Engineering ;
+      eissn = 1556-3758
+    >
+
+    param[journal_abbr] = ijfe
+
+    au < released ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
+    au < released ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Nursing Education Scholarship ;
+      eissn = 1548-923X
+    >
+
+    param[journal_abbr] = ijnes
+
+    au < released ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
+    au < released ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Agricultural & Food Industrial Organization ;
+      eissn = 1542-0485
+    >
+
+    param[journal_abbr] = jafio
+
+    au < released ; 2008 ; Journal of Agricultural & Food Industrial Organization Volume 6 ; 6 >
+    au < released ; 2009 ; Journal of Agricultural & Food Industrial Organization Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Business Valuation and Economic Loss Analysis ;
+      eissn = 1932-9156
+    >
+
+    param[journal_abbr] = jbvela
+
+    au < released ; 2008 ; Journal of Business Valuation and Economic Loss Analysis Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Business Valuation and Economic Loss Analysis Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Complementary and Integrative Medicine ;
+      eissn = 1553-3840
+    >
+
+    param[journal_abbr] = jcim
+
+    au < released ; 2008 ; Journal of Complementary and Integrative Medicine Volume 5 ; 5 >
+    au < released ; 2009 ; Journal of Complementary and Integrative Medicine Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Drug Policy Analysis
+    >
+
+    param[journal_abbr] = jdpa
+
+    au < released ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 >
+    au < released ; 2009 ; Journal of Drug Policy Analysis Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Homeland Security and Emergency Management ;
+      eissn = 1547-7355
+    >
+
+    param[journal_abbr] = jhsem
+
+    au < released ; 2008 ; Journal of Homeland Security and Emergency Management Volume 5 ; 5 >
+    au < released ; 2009 ; Journal of Homeland Security and Emergency Management Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Imagery Research in Sport and Physical Activity ;
+      eissn = 1932-0191
+    >
+
+    param[journal_abbr] = jirspa
+
+    au < released ; 2008 ; Journal of Imagery Research in Sport and Physical Activity Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Imagery Research in Sport and Physical Activity Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Industrial Organization Education ;
+      eissn = 1935-5041
+    >
+
+    param[journal_abbr] = jioe
+
+    au < released ; 2008 ; Journal of Industrial Organization Education Volume 3 ; 3 >
+    au < released ; 2009 ; Journal of Industrial Organization Education Volume 4 ; 4 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Quantitative Analysis in Sports ;
+      eissn = 1559-0410
+    >
+
+    param[journal_abbr] = jqas
+
+    au < released ; 2008 ; Journal of Quantitative Analysis in Sports Volume 4 ; 4 >
+    au < released ; 2009 ; Journal of Quantitative Analysis in Sports Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Time Series Econometrics
+    >
+
+    param[journal_abbr] = jtse
+
+    au < released ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Journal of Tort Law ;
+      eissn = 1932-9148
+    >
+
+    param[journal_abbr] = jtl
+
+    au < released ; 2008 ; Journal of Tort Law Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Law & Ethics of Human Rights
+    >
+
+    param[journal_abbr] = lehr
+
+    au < released ; 2008 ; Law & Ethics of Human Rights Volume 2 ; 2 >
+    au < released ; 2009 ; Law & Ethics of Human Rights Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = The Law and Development Review
+    >
+
+    param[journal_abbr] = ldr
+
+    au < released ; 2008 ; The Law and Development Review Volume 1 ; 1 >
+    au < released ; 2009 ; The Law and Development Review Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
+      name = Muslim World Journal of Human Rights ;
+      eissn = 1554-4419
+    >
+
+    param[journal_abbr] = mwjhr
+
+    au < released ; 2007 ; Muslim World Journal of Human Rights Volume 4 ; 4 >
+    au < released ; 2008 ; Muslim World Journal of Human Rights Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = New Global Studies
+    >
+
+    param[journal_abbr] = ngs
+
+    au < released ; 2008 ; New Global Studies Volume 2 ; 2 >
+    au < released ; 2009 ; New Global Studies Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Peace Economics, Peace Science and Public Policy ;
+      eissn = 1554-8597
+    >
+
+    param[journal_abbr] = peps
+
+    au < released ; 2008 ; Peace Economics, Peace Science and Public Policy Volume 14 ; 14 >
+    au < released ; 2009 ; Peace Economics, Peace Science and Public Policy Volume 15 ; 15 >
+
+  }
+
+  {
+
+    title <
+      name = Poverty & Public Policy
+    >
+
+    param[journal_abbr] = pso_poverty
+
+    au < released ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Law & Economics ;
+      eissn = 1555-5879
+    >
+
+    param[journal_abbr] = rle
+
+    au < released ; 2008 ; Review of Law & Economics Volume 4 ; 4 >
+    au < released ; 2009 ; Review of Law & Economics Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Marketing Science ;
+      eissn = 1546-5616
+    >
+
+    param[journal_abbr] = romsjournal
+
+    au < released ; 2008 ; Review of Marketing Science Volume 6 ; 6 >
+    au < released ; 2009 ; Review of Marketing Science Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
+      name = Review of Middle East Economics and Finance
+    >
+
+    param[journal_abbr] = rmeef
+
+    au < released ; 2008 ; Review of Middle East Economics and Finance Volume 4 ; 4 >
+    au < released ; 2009 ; Review of Middle East Economics and Finance Volume 5 ; 5 >
+
+  }
+
+  {
+
+    title <
+      name = Statistical Applications in Genetics and Molecular Biology ;
+      eissn = 1544-6115
+    >
+
+    param[journal_abbr] = sagmb
+
+    au < released ; 2008 ; Statistical Applications in Genetics and Molecular Biology Volume 7 ; 7 >
+    au < released ; 2009 ; Statistical Applications in Genetics and Molecular Biology Volume 8 ; 8 >
+
+  }
+
+  {
+
+    title <
+      name = Statistical Communications in Infectious Diseases
+    >
+
+    param[journal_abbr] = scid
+
+    au < released ; 2009 ; Statistical Communications in Infectious Diseases Volume 1 ; 1 >
+
+  }
+
+  {
+
+    title <
+      name = Studies in Ethics, Law, and Technology
+    >
+
+    param[journal_abbr] = selt
+
+    au < released ; 2008 ; Studies in Ethics, Law, and Technology Volume 2 ; 2 >
+    au < released ; 2009 ; Studies in Ethics, Law, and Technology Volume 3 ; 3 >
+
+  }
+
+  {
+
+    title <
+      name = Studies in Nonlinear Dynamics & Econometrics ;
+      eissn = 1558-3708
+    >
+
+    param[journal_abbr] = snde
+
+    au < released ; 2008 ; Studies in Nonlinear Dynamics & Econometrics Volume 12 ; 12 >
+    au < released ; 2009 ; Studies in Nonlinear Dynamics & Econometrics Volume 13 ; 13 >
+
+  }
+
+  {
+
+    title <
+      name = Theoretical Inquiries in Law ;
+      eissn = 1565-3404
+    >
+
+    param[journal_abbr] = til
+
+    au < released ; 2008 ; Theoretical Inquiries in Law Volume 9 ; 9 >
+    au < released ; 2009 ; Theoretical Inquiries in Law Volume 10 ; 10 >
+
+  }
+
+  {
+
+    title <
+      name = World Political Science Review ;
+      eissn = 1935-6226
+    >
+
+    param[journal_abbr] = wpsr
+
+    comment[4] = malformed manifest page, ticket #1352
+    comment[2008] = Manifest page's lockss-probe links to an article behind a login page. 
+
+    au < released ; 2009 ; World Political Science Review Volume 5 ; 5 >
+
+  }
+
+}
