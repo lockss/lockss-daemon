@@ -82,7 +82,7 @@ while [ -f ${KEEP_GOING} ]; do
             chown root ${LOCKSS_CONFIG_DIR}
             chmod go-w ${LOCKSS_CONFIG_DIR}
             rm -f ${LOCKSS_SSL_CONFIG}
-            ${RUN_SSL} --release @RELEASENAME@ --user $1 >${LOG_FILE} 2>&1
+            ${RUN_SSL} --release @RELEASENAME@ --user $1 >>${LOG_FILE} 2>&1
             if [ -s ${LOCKSS_SSL_CONFIG} ]; then
                 chmod go-rwx ${LOCKSS_SSL_CONFIG}
                 chown $1 ${LOCKSS_SSL_CONFIG}
