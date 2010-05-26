@@ -9,15 +9,15 @@
 # the daemon command line.  The daemon reads then destroys the password.
 
 is_secure() {
-    local TMPFILE=`mktemp /tmp/runssl.XXXXX`
-    local RET=0
-    ls -l ${1} >${TMPFILE}
-    read A B C D E <${TMPFILE}
+    IS_SECURE_TMPFILE=`mktemp /tmp/runssl.XXXXX`
+    IS_SECURE_RET=0
+    ls -l ${1} >${IS_SECURE_TMPFILE}
+    read A B C D E <${IS_SECURE_TMPFILE}
     if [ "X${A}" != "X-rw-------" -o "X${C}" != "Xroot" ]; then
-        RET=1
+        IS_SECURE_RET=1
     fi
-    rm -f ${TMPFILE}
-    return ${RET}
+    rm -f ${IS_SECURE_TMPFILE}
+    return ${IS_SECURE_RET}
 }
 
 # Parse args
@@ -36,7 +36,7 @@ done
 if [ "${LOCKSS_SSL_CONFIG}X" = X ]; then
     exit 0
 fi
-PERM_DIR=/etc/lockss/keys
+PERM_DIR=${LOCKSS_HOME}/etc/lockss/keys
 if [ "X${RUN_DIR}" = X ]; then
     TEMP_DIR=/var/run/lockss
 else
@@ -46,10 +46,10 @@ fi
 if [ ! -d ${PERM_DIR} ]; then
     exit 0
 fi
-if [ -f /etc/lockss/config.${LOCKSS_USER}.dat ]; then
-    CFG_FILE=/etc/lockss/config.${LOCKSS_USER}.dat
-elif [ -f /etc/lockss/config.dat ]; then
-    CFG_FILE=/etc/lockss/config.dat
+if [ -f ${LOCKSS_HOME}/etc/lockss/config.${LOCKSS_USER}.dat ]; then
+    CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.${LOCKSS_USER}.dat
+elif [ -f ${LOCKSS_HOME}/etc/lockss/config.dat ]; then
+    CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 fi
 if [ "X${CFG_FILE}" = X ]; then
     echo "WARNING: no CFG_FILE"
