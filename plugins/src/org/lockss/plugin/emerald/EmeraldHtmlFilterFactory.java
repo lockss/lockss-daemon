@@ -1,5 +1,5 @@
 /*
- *  * $Id: EmeraldHtmlFilterFactory.java,v 1.1 2008-05-12 23:13:07 estro Exp $ 
+ *  * $Id: EmeraldHtmlFilterFactory.java,v 1.2 2010-05-26 10:13:40 arusbridge Exp $ 
  *   */
 
 /*
@@ -47,8 +47,12 @@ public class EmeraldHtmlFilterFactory implements FilterFactory {
                                                String encoding)
     throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <meta http-equiv>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("meta")),
+        /*
+         * Exclude <div class="welcomeBox">
+         */
+        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div",
+                                                                              "class",
+                                                                              "welcomeBox")),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
