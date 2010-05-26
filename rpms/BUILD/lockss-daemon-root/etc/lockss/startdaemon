@@ -1,28 +1,29 @@
 #!/bin/bash
 # Script run as root from /etc/init.d/lockss to start the daemon
-# as the specific user provided as the argument.  Linux specific.
+# as the specific user provided as the argument.
 
 is_secure() {
-    local TMPFILE=`mktemp /tmp/runssl.XXXXX`
-    local RET=0
-    ls -l ${1} >${TMPFILE}
-    read A B C D E <${TMPFILE}
+    IS_SECURE_TMPFILE=`mktemp /tmp/runssl.XXXXX`
+    IS_SECURE_RET=0
+    ls -l ${1} >${IS_SECURE_TMPFILE}
+    read A B C D E <${IS_SECURE_TMPFILE}
     if [ "X${A}" != "X-rwxr-xr-x" -o "X${C}" != "Xroot" ]; then
-        RET=1
+        IS_SECURE_RET=1
     fi
-    rm -f ${TMPFILE}
-    return ${RET}
+    rm -f ${IS_SECURE_TMPFILE}
+    return ${IS_SECURE_RET}
 }
 
-if [ "${USER}X" != "rootX" ]; then
-    echo "Must run as root."
-    exit 1
-fi
-if [ -x /etc/lockss/functions ] ; then
-    if is_secure /etc/lockss/functions ; then
-        . /etc/lockss/functions
+PATH=/usr/xpg4/bin:$PATH
+#if [ "${USER}X" != "rootX" ]; then
+#    echo "Must run as root."
+#    exit 1
+#fi
+if [ -x ${LOCKSS_HOME}/etc/lockss/functions ] ; then
+    if is_secure ${LOCKSS_HOME}/etc/lockss/functions ; then
+        . ${LOCKSS_HOME}/etc/lockss/functions
     else
-        echo "/etc/lockss/functions insecure"
+        echo "${LOCKSS_HOME}/etc/lockss/functions insecure"
         exit 1
     fi
 else
@@ -52,10 +53,10 @@ else
     exit 1
 fi
 if [ "X${LOCKSS_CONFIG_VERSION}" != X ] ; then
-    CURRENT_CONFIG_VERSION=`sed -n 's/^.*LOCKSS_CONFIG_VERSION=\([1-9][0-9]*\).*$/\1/p' </etc/lockss/hostconfig`
+    CURRENT_CONFIG_VERSION=`sed -n 's/^.*LOCKSS_CONFIG_VERSION=\([1-9][0-9]*\).*$/\1/p' <${LOCKSS_HOME}/etc/lockss/hostconfig`
     if [ "X${CURRENT_CONFIG_VERSION}" != X -a "${LOCKSS_CONFIG_VERSION}" != "${CURRENT_CONFIG_VERSION}" ] ; then
         echo "Config version skew: required ${CURRENT_CONFIG_VERSION} have ${LOCKSS_CONFIG_VERSION}."
-        echo "Not starting LOCKSS. Please run /etc/lockss/hostconfig."
+        echo "Not starting LOCKSS. Please run ${LOCKSS_HOME}/etc/lockss/hostconfig."
         exit 1
     fi
 fi
@@ -65,16 +66,16 @@ if [ "X${LOG_FILE}" = X -o ! -f ${LOG_FILE} ]; then
 fi
 touch ${KEEP_GOING}
 chown $1 ${KEEP_GOING}
-if [ -x /etc/lockss/runssl.$1 ]; then
-    RUN_SSL="/etc/lockss/runssl.$1"
-elif [ -x /etc/lockss/runssl ]; then
-    RUN_SSL="/etc/lockss/runssl"
+if [ -x ${LOCKSS_HOME}/etc/lockss/runssl.$1 ]; then
+    RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl.$1"
+elif [ -x ${LOCKSS_HOME}/etc/lockss/runssl ]; then
+    RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
 fi
 while [ -f ${KEEP_GOING} ]; do
     rm -f ${LOCAL_TXT}
     # If optional SSL setup script exists and is executable, run it.
     # It will have the environment variables set by set_variables()
-    # in /etc/lockss/functions and by ${CFG_FILE}
+    # in ${LOCKSS_HOME}/etc/lockss/functions and by ${CFG_FILE}
     if [ "X${RUN_SSL}" != X ]; then
         if [ -x ${RUN_SSL} ]; then
             LOCKSS_CONFIG_DIR=${RUN_DIR}
@@ -89,13 +90,20 @@ while [ -f ${KEEP_GOING} ]; do
             fi
         fi
     fi
-    START_TIME=`date +%s`
-    runuser -s /bin/bash - $1 -c "ulimit -S -c 0 >/dev/null 2>&1 ; /etc/lockss/rundaemon wait"
+    FLAG_FILE=`mktemp /tmp/lockss.flag.XXXXX`
+    sleep 60 && rm -f ${FLAG_FILE} &
+    COMMAND="ulimit -S -c 0 >/dev/null 2>&1 ; ${LOCKSS_HOME}/etc/lockss/rundaemon wait"
+    case `uname -s` in
+    Linux)
+        runuser -s /bin/bash - $1 -c "${COMMAND}"
+        ;;
+    SunOS)
+        su $1 -c "${COMMAND}"
+        ;;
+    esac
     EXIT_CODE=$?
-    END_TIME=`date +%s`
-    RUN_TIME=`expr ${END_TIME} - ${START_TIME}`
-    echo "stopped with status ${EXIT_CODE} at `date` after ${RUN_TIME} sec." >>${LOG_FILE}
-    if [ ${RUN_TIME} -lt 60 ]; then
+    echo "stopped with status ${EXIT_CODE} at `date`." >>${LOG_FILE}
+    if [ -s ${FLAG_FILE} ]; then
         exit 1
     fi
     if [ -f ${KEEP_GOING} ]; then

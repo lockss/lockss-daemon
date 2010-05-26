@@ -2,10 +2,6 @@
 # do not edit the line above, or edit the parts of this file outside
 # Funky-EOF without making sure that it works with /bin/sh on Solaris.
 PATH=/sbin:/usr/sbin:$PATH
-# LOCKSS_CONFIG_VERSION must be incremented at each change to the set of
-# variables stored in the config file.
-export LOCKSS_CONFIG_VERSION=1
-export LOCKSS_TEAM=lockssdiag@lockss.org
 BASH_NAME=bash
 BASH=`which ${BASH_NAME} 2>/dev/null`
 if [ "X${BASH}" = "X" ]
@@ -180,17 +176,33 @@ check_writable() {
     local DIR="$1"
     true&
     local PROBE_FILE=${DIR}/probe_$!
-    if [ "X${CONFIG_USER}" != "X${2}" ] ; then
-        SUDO="sudo -u ${2}"
-    else
-        SUDO=""
-    fi
-    if ${SUDO} touch ${PROBE_FILE} >/dev/null 2>&1; then
-        rm -f ${PROBE_FILE}
-        return 0
-    else
-        return 1
-    fi
+    case `uname -s ` in
+    Linux)
+        if [ "X${CONFIG_USER}" != "X${2}" ] ; then
+            SUDO="sudo -u ${2}"
+        else
+            SUDO=""
+        fi
+        if ${SUDO} touch ${PROBE_FILE} >/dev/null 2>&1; then
+            rm -f ${PROBE_FILE}
+            return 0
+        fi
+        ;;
+    SunOS)
+        if [ "X${CONFIG_USER}" != "X${2}" ] ; then
+            if su ${2} -c "touch ${PROBE_FILE} >/dev/null 2>&1"; then
+                rm -f ${PROBE_FILE}
+                return 0
+            fi
+        else
+            if ${SU} "touch ${PROBE_FILE} >/dev/null 2>&1"; then
+                rm -f ${PROBE_FILE}
+                return 0
+            fi
+        fi
+        ;;
+    esac
+    return 1
 }
 
 # init_one_dir dir user
@@ -416,6 +428,9 @@ build_config_file () {
             fi
         done
         TMP_CONFIG=/tmp/lockss.dat$$
+        # LOCKSS_CONFIG_VERSION must be incremented at each change to the set of
+        # variables stored in the config file.
+        export LOCKSS_CONFIG_VERSION=1
         cat >${TMP_CONFIG} <<EOF
 LOCKSS_CONFIG_VERSION=${LOCKSS_CONFIG_VERSION}
 LOCKSS_USER="${2}"
@@ -444,6 +459,13 @@ EOF
         echo
         echo "Configuration:"
         cat ${TMP_CONFIG}
+        echo "LOCKSS_HOME is ${LOCKSS_HOME}"
+        if [ "X${LOCKSS_HOME}" != X ]; then
+            if [ ! -d ${LOCKSS_HOME} ]; then
+                echo "No ${LOCKSS_HOME}"
+                return
+            fi
+        fi
         ask_for_input "OK to store this configuration" Y
         if is_yes "${ANS}"; then
             if ! cp ${TMP_CONFIG} ${1}; then
@@ -470,7 +492,17 @@ EOF
             echo Done
             case ${OS_TYPE} in
             SunOS)
-                echo ${LOCKSS_HOME}/etc/lockss/runforever to run the daemon.
+		if [ -x /etc/init.d/lockss ] ; then
+                    if [ ! -x /etc/rc3.d/S99lockss ] ; then
+                        ln /etc/init.d/lockss /etc/rc3.d/S99lockss
+                        for A in 0 1 2 S ; do
+                            ln /etc/init.d/lockss /etc/rc${A}.d/K99lockss
+                        done
+                    fi
+                    echo "LOCKSS will start automatically at next reboot, or you may"
+                    echo " start it now by running   /etc/init.d/lockss start"
+
+                fi
                 ;;
             Linux)
                 if [ -x /etc/init.d/lockss ]
@@ -498,28 +530,13 @@ EOF
 ###
 # Start
 ###
+export LOCKSS_TEAM=lockssdiag@lockss.org
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 SunOS)
-    if [ "${LOCKSS_HOME}X" = X ]; then
-        case ${CONFIG_USER} in
-        root)
-            LOCKSS_HOME=
-            LOCKSS_USER=lockss
-            ;;
-        lockss)
-            LOCKSS_HOME=~lockss
-            LOCKSS_USER=lockss
-            ;;
-        lockss2)
-            LOCKSS_HOME=~lockss2
-            LOCKSS_USER=lockss2
-            ;;
-        esac
-    fi
+    LOCKSS_HOME=/opt/lockss
     PATH=/usr/ucb:/sbin:$PATH
-    LOCAL_HOSTNAME=`uname -n`
-    LOCAL_IPADDR=`ifconfig -a | grep 'inet ' | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
+    LOCAL_IPADDR=`ifconfig -a | grep 'inet ' | grep -v 127.0.0.1 | tail -1 | sed 's/.*inet \(.*\) netmask.*/\1/'`
     export SHA1SUM
     for A in sha1sum digest
     do
@@ -541,10 +558,17 @@ SunOS)
     esac
     ;;
 Linux)
-    LOCKSS_USER=lockss
+    LOCKSS_HOME=
     SHA1SUM=sha1sum
+    LOCAL_IPADDR=`ifconfig eth0 | grep 'inet addr:' | grep -v 127.0.0.1 | tail -1 | sed 's/.*inet addr:\(.*\)  Mask.*/\1/'`
+    ;;
+*)
+    echo "${OS_NAME} not supported"
+    exit 1
     ;;
 esac
+LOCKSS_USER=lockss
+LOCAL_HOSTNAME=`uname -n`
 CONFIG_FILE=${LOCKSS_HOME}/etc/lockss/config.dat
 echo "LOCKSS host configuration for ${OS_TYPE}."
 echo "For more information see /etc/lockss/README"
@@ -555,9 +579,6 @@ if [ -r "${CONFIG_FILE}" ]; then
     if [ "${LOCKSS_USER}X" != X ] ; then
         USER_COUNT=`echo ${LOCKSS_USER} | wc -w`
     fi
-else
-    # these dirs should be owned by config user; don't need to chown them
-    mkdir -p ${LOCKSS_HOME}/etc/lockss
 fi
 if [ ${USER_COUNT} -eq 1 ] ; then
     build_config_file ${CONFIG_FILE} ${LOCKSS_USER}
@@ -571,6 +592,8 @@ else
     done
 fi
 Funky-EOF
-export CONFIG_USER=`ls -l ${SCRIPT} | while read BITS N U FOO; do echo $U; done`
+CONFIG_USER=`ls -l ${SCRIPT} | while read BITS N U FOO; do echo $U; done`
+echo ${CONFIG_USER} is configuring
+export CONFIG_USER
 ${BASH} ${SCRIPT}
 rm ${SCRIPT}
