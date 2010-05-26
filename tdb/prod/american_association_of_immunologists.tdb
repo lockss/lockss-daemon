@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.jimmunol.org/
       implicit < status ; name ; param[volume_name] >
 

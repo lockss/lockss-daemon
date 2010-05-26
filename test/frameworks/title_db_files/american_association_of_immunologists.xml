@@ -54,7 +54,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 64" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -71,7 +71,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 65" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -88,7 +88,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 66" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -105,7 +105,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 67" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -122,7 +122,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 68" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -139,7 +139,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 69" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -156,7 +156,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 70" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -173,7 +173,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 71" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -190,7 +190,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 72" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -207,7 +207,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 73" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -224,7 +224,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 74" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -241,7 +241,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 75" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -258,7 +258,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 76" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -275,7 +275,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 77" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -292,7 +292,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 78" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -309,7 +309,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 79" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -326,7 +326,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 80" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -343,7 +343,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 81" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -360,7 +360,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 82" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -377,7 +377,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 83" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -394,7 +394,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 84" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -411,7 +411,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 85" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -428,7 +428,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 86" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -445,7 +445,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 87" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -462,7 +462,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 88" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -479,7 +479,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 89" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -496,7 +496,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 90" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -513,7 +513,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 91" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -530,7 +530,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 92" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -547,7 +547,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 93" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -564,7 +564,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 94" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -581,7 +581,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 95" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -598,7 +598,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 96" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -615,7 +615,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 97" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -632,7 +632,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 98" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -649,7 +649,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 99" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -666,7 +666,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 100" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -683,7 +683,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 101" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -700,7 +700,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 102" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -717,7 +717,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 103" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -734,7 +734,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 104" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -751,7 +751,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 105" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -768,7 +768,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 106" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -785,7 +785,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 107" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -802,7 +802,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 108" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -819,7 +819,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 109" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -836,7 +836,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 110" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -853,7 +853,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 111" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -870,7 +870,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 112" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -887,7 +887,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 113" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -904,7 +904,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 115" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -921,7 +921,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 116" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -938,7 +938,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 117" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -955,7 +955,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 118" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -972,7 +972,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 119" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -989,7 +989,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 120" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1006,7 +1006,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 121" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1023,7 +1023,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 122" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1040,7 +1040,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 123" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1057,7 +1057,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 124" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1074,7 +1074,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 125" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1091,7 +1091,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 126" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1108,7 +1108,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 127" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1125,7 +1125,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 128" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1142,7 +1142,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 129" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1159,7 +1159,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 130" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1176,7 +1176,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 131" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1193,7 +1193,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 132" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1210,7 +1210,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 133" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1227,7 +1227,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 134" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1244,7 +1244,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 135" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1261,7 +1261,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 136" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1278,7 +1278,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 137" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1295,7 +1295,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 138" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1312,7 +1312,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 139" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1329,7 +1329,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 140" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1346,7 +1346,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 141" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1363,7 +1363,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 142" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1380,7 +1380,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 143" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1397,7 +1397,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 144" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1414,7 +1414,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 145" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1431,7 +1431,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 146" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1448,7 +1448,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 147" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1465,7 +1465,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 148" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1482,7 +1482,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 149" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1499,7 +1499,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 150" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1516,7 +1516,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 151" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1533,7 +1533,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 152" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1550,7 +1550,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 153" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1567,7 +1567,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 154" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1584,7 +1584,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 155" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1601,7 +1601,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 156" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1618,7 +1618,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 157" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1635,7 +1635,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 158" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1652,7 +1652,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 159" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1669,7 +1669,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 160" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1686,7 +1686,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 161" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1703,7 +1703,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 162" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1720,7 +1720,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 163" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1737,7 +1737,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 164" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1754,7 +1754,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 165" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1771,7 +1771,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 166" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1788,7 +1788,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 167" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1805,7 +1805,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 168" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1822,7 +1822,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 169" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1839,7 +1839,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 170" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1856,7 +1856,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 171" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1873,7 +1873,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 172" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1890,7 +1890,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 173" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1907,7 +1907,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 174" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1924,7 +1924,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 175" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1941,7 +1941,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 176" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1958,7 +1958,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 177" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1975,7 +1975,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 178" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -1992,7 +1992,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 179" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -2009,7 +2009,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 180" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -2026,7 +2026,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 181" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -2043,7 +2043,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 182" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
@@ -2060,7 +2060,7 @@
    <property name="issn" value="0022-1767" />
    <property name="eissn" value="1550-6606" />
    <property name="title" value="The Journal of Immunology Volume 183" />
-   <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://www.jimmunol.org/" />
