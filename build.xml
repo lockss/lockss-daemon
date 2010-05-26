@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.255 2010-03-10 03:27:44 tlipkis Exp $
+ $Id: build.xml,v 1.255.4.1 2010-05-26 23:13:11 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -447,6 +447,7 @@ Args:
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
+           encoding="iso8859-1"
            fork="${forkc}"
            listfiles="${listfiles}"
            nowarn="${nowarn}"
@@ -1100,9 +1101,10 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <copy todir="${rpm.jardir}" flatten="true" >
      <fileset refid="rpm.jars.set" />
     </copy>
+    <delete file="${rpm.root}/etc/init.d/lockss.solaris" quiet="true" />
     <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}" />
     <!-- rpmbuild failure doesn't necessarily cause rpm task to fail, so
-         check whether an rpms were built  -->
+         check whether any rpms were built  -->
     <fileset id="rpm.filesetid" dir="${rpm.rpms}" />
     <pathconvert refid="rpm.filesetid" property="rpm.files"
       targetos="${detected.os}" />
@@ -1115,6 +1117,78 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <copy todir="${protorpm.rpms}" >
      <fileset refid="rpm.filesetid" />
     </copy>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="solaris-pkg" depends="jar-lockss,check.contrib"
+   description="Package up the daemon as a Solaris 10 package" >
+
+    <mkdir dir="${temp.build}" />
+    <tempfile property="temp.solaris.dir" destdir="${temp.build}" prefix="solaris"/>
+    <mkdir dir="${temp.solaris.dir}" />
+
+    <property name="solarisrelease" value="1" />
+
+    <property name="protosolaris.top" value="${basedir}/rpms" />
+    <property name="solaris.top" value="${temp.solaris.dir}" />
+    <property name="solaris.build" value="${solaris.top}/BUILD" />
+    <property name="solaris.root" value="${solaris.build}/lockss-daemon-root" />
+    <property name="solaris.jardir" value="${solaris.root}/opt/lockss/usr/share/lockss" />
+    <property name="solaris.lockss.etc" value="${solaris.root}/opt/lockss/etc/lockss" />
+    <property name="protosolaris.source" value="${protosolaris.top}/Solaris" />
+
+    <!-- make classpath to substitute into start script -->
+    <pathconvert refid="prod.run.classpath" property="solaris.clspth"
+       targetos="unix">
+      <map from="${basedir}/lib" to="/opt/lockss/usr/share/lockss" />
+    </pathconvert>
+    <!-- copy prototype rpm tree to tmp dir -->
+    <copy todir="${solaris.top}" >
+      <fileset dir="${protosolaris.top}">
+       <exclude name="RPMS/**/*"/>
+      </fileset>
+      <filterset>
+       <filter token="CLASSPATH" value="${solaris.clspth}"/>
+       <filter token="RELEASENAME" value="${releasename}"/>
+       <filter token="RPMRELEASE" value="${solarisrelease}"/>
+       <filter token="PLATFORM_VERSION" value="Solaris-10-${release}"/>
+      </filterset>
+    </copy>
+    <!-- copy Solaris build stuff to top of build tree -->
+    <copy todir="${solaris.build}" >
+      <fileset dir="${protosolaris.source}"/>
+    </copy>
+    <!-- copy /etc/lockss to /opt/lockss/etc/lockss -->
+    <!-- XXX need to handle change to /etc/init.d/lockss -->
+    <copy todir="${solaris.lockss.etc}" >
+      <fileset dir="${solaris.root}/etc/lockss"/>
+    </copy>
+    
+    <!-- copy jars on run.classpath to jardir -->
+    <pathtofileset dir="" pathrefid="prod.run.classpath"
+      name="solaris.jars.set" ignorenonrelative="true" />
+    <copy todir="${solaris.jardir}" flatten="true" >
+     <fileset refid="solaris.jars.set" />
+    </copy>
+    <delete file="${solaris.root}/etc/init.d/lockss" quiet="true" />
+    <move file="${solaris.root}/etc/init.d/lockss.solaris" tofile="${solaris.root}/etc/init.d/lockss" />
+    <exec executable="sh" dir="${solaris.build}" output="${solaris.build}/build.out">
+      <arg line="mkpkg" />
+    </exec>
+    <!-- mkpkg failure doesn't necessarily cause task to fail, so
+         check whether any packages were built  -->
+    <fileset id="solaris.filesetid" dir="${solaris.build}">
+      <include name="*.tgz"/>
+    </fileset>
+    <pathconvert refid="solaris.filesetid" property="solaris.files"
+      targetos="${detected.os}" />
+    <if>
+     <equals arg1="${solaris.files}" arg2="" />
+     <then>
+      <fail message="solaris build did not produce any packages" />
+     </then>
+    </if>
+    <move file="${solaris.files}" todir="${protosolaris.top}/RPMS" />
   </target>
 
   <!-- ==================================================================== -->

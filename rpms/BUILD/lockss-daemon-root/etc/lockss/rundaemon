@@ -1,6 +1,7 @@
 #!/bin/sh
 # Do not edit the line above. The script must work with
-# /bin/sh on Solaris.
+# /bin/sh on Solaris. After any change to this file it must be
+# tested on both Linux and Solaris.
 if [ "X${LOCKSS_HOME}" != "X" -a -f ${LOCKSS_HOME}/etc/lockss/functions ]
 then
     . ${LOCKSS_HOME}/etc/lockss/functions
