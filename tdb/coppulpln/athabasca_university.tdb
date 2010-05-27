@@ -51,7 +51,7 @@
     au < released ; 2005 ; The International Review of Research in Open and Distance Learning Volume 6 ; 2005 >
     au < released ; 2006 ; The International Review of Research in Open and Distance Learning Volume 7 ; 2006 >
     au < released ; 2007 ; The International Review of Research in Open and Distance Learning Volume 8 ; 2007 >
-    au < ready ; 2008 ; The International Review of Research in Open and Distance Learning Volume 9 ; 2008 >
+    au < releasing ; 2008 ; The International Review of Research in Open and Distance Learning Volume 9 ; 2008 >
     au < notReady ; 2009 ; The International Review of Research in Open and Distance Learning Volume 10; 2009 >
 
   }
@@ -66,30 +66,30 @@
     param[base_url] = http://www.jofde.ca/
     param[journal_id] = jde
     
-    au < ready ; 1986 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 1 ; 1986 >
-    au < ready ; 1987 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 2 ; 1987 >
-    au < ready ; 1988 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 3 ; 1988 >
-    au < ready ; 1989 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 4 ; 1989 >
-    au < ready ; 1990 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 5 ; 1990 >
-    au < ready ; 1991 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 6 ; 1991 >
-    au < ready ; 1992 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 7 ; 1992 >
-    au < ready ; 1993 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 8 ; 1993 >
-    au < ready ; 1994 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 9 ; 1994 >
-    au < ready ; 1995 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 10 ; 1995 >
-    au < ready ; 1996 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 11 ; 1996 >
-    au < ready ; 1997 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 12 ; 1997 >
-    au < ready ; 1998 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 13 ; 1998 >
-    au < ready ; 1999 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 14 ; 1999 >
-    au < ready ; 2000 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 15 ; 2000 >
-    au < ready ; 2001 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 16 ; 2001 >
-    au < ready ; 2002 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 17 ; 2002 >
-    au < ready ; 2003 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 18 ; 2003 >
-    au < ready ; 2004 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 19 ; 2004 >
-    au < ready ; 2005 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 20 ; 2005 >
-    au < ready ; 2006 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21 (2006) ; 2006 >
-    au < ready ; 2007 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21-22 (2007) ; 2007 >
-    au < ready ; 2008 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 22 (2008) ; 2008 >    
-    au < ready ; 2009 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 23 ; 2009 >
+    au < releasing ; 1986 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 1 ; 1986 >
+    au < releasing ; 1987 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 2 ; 1987 >
+    au < releasing ; 1988 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 3 ; 1988 >
+    au < releasing ; 1989 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 4 ; 1989 >
+    au < releasing ; 1990 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 5 ; 1990 >
+    au < releasing ; 1991 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 6 ; 1991 >
+    au < releasing ; 1992 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 7 ; 1992 >
+    au < releasing ; 1993 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 8 ; 1993 >
+    au < releasing ; 1994 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 9 ; 1994 >
+    au < releasing ; 1995 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 10 ; 1995 >
+    au < releasing ; 1996 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 11 ; 1996 >
+    au < releasing ; 1997 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 12 ; 1997 >
+    au < releasing ; 1998 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 13 ; 1998 >
+    au < releasing ; 1999 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 14 ; 1999 >
+    au < releasing ; 2000 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 15 ; 2000 >
+    au < releasing ; 2001 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 16 ; 2001 >
+    au < releasing ; 2002 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 17 ; 2002 >
+    au < releasing ; 2003 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 18 ; 2003 >
+    au < releasing ; 2004 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 19 ; 2004 >
+    au < releasing ; 2005 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 20 ; 2005 >
+    au < releasing ; 2006 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21 (2006) ; 2006 >
+    au < releasing ; 2007 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 21-22 (2007) ; 2007 >
+    au < releasing ; 2008 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 22 (2008) ; 2008 >    
+    au < releasing ; 2009 ; The Journal of Distance Education / Revue de l'Education à Distance Volume 23 ; 2009 >
         
   }
   
@@ -147,7 +147,7 @@
     au < released ; 2006 ; The Trumpeter Volume 22 ; 2006 >
     au < released ; 2007 ; The Trumpeter Volume 23 ; 2007 >
     au < released ; 2008 ; The Trumpeter Volume 24 ; 2008 >      
-    au < ready ; 2009 ; The Trumpeter Volume 25 ; 2009 >      
+    au < releasing ; 2009 ; The Trumpeter Volume 25 ; 2009 >      
     
   } 
   
