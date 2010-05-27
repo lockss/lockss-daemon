@@ -1,9 +1,9 @@
 /*
- * $Id: MimeTypeMap.java,v 1.6 2008-09-18 02:10:22 dshr Exp $
+ * $Id: MimeTypeMap.java,v 1.7 2010-05-27 07:00:01 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -28,6 +28,7 @@ package org.lockss.daemon;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
@@ -41,18 +42,49 @@ public class MimeTypeMap {
 
   public static MimeTypeMap DEFAULT = new MimeTypeMap();
 
+  static final String PREFIX = Configuration.PREFIX + "mimeInfo.";
+
+  public static final String PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY =
+    PREFIX + "defaultCssExtractorFactory";
+  public static final String DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY =
+    "org.lockss.extractor.FluteCssLinkExtractor$Factory";
+
   private static MimeTypeInfo.Mutable HTML = new MimeTypeInfo.Impl();
   private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
+
   static {
     HTML.setLinkExtractorFactory(new GoslingHtmlLinkExtractor.Factory());
     // XXX
     // HTML.setLinkRewriterFactory(new JavascriptHtmlLinkRewriterFactory());
     HTML.setLinkRewriterFactory(new NodeFilterHtmlLinkRewriterFactory());
     DEFAULT.putMimeTypeInfo("text/html", HTML);
-    CSS.setLinkExtractorFactory(new CssLinkExtractor.Factory());
+    setLinkExtractorFactory(CSS,
+			    DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY);
+//     CSS.setLinkExtractorFactory(new FluteCssLinkExtractor.Factory());
     // XXX
     CSS.setLinkRewriterFactory(new StringFilterCssLinkRewriterFactory());
     DEFAULT.putMimeTypeInfo("text/css", CSS);
+  }
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY)) {
+      setLinkExtractorFactory(CSS,
+			      config.get(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
+					 DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY));
+    }
+  }
+					  
+  private static void setLinkExtractorFactory(MimeTypeInfo.Mutable mti,
+					      String className) {
+    LinkExtractorFactory fact =
+      (LinkExtractorFactory)newFact(className,
+				    LinkExtractorFactory.class,
+				    new FluteCssLinkExtractor.Factory());
+    mti.setLinkExtractorFactory(fact);
   }
 
   private Map map = new HashMap();
@@ -68,6 +100,22 @@ public class MimeTypeMap {
   public MimeTypeMap getParent() {
     return parent;
   }      
+
+  public static Object newFact(String factClassName, Class expectedType,
+			       Object dfault) {
+    Object obj = null;
+    try {
+      obj = Class.forName(factClassName).newInstance();
+      if (!expectedType.isInstance(obj)) {
+	throw new IllegalArgumentException(factClassName + " is not a "
+					   + expectedType.getName());
+      }
+      return obj;
+  } catch (Exception e) {
+      log.error(e.toString());
+      return dfault;
+    }
+  }
 
   void putMimeTypeInfo(String contentType, MimeTypeInfo mti) {
     String mime = HeaderUtil.getMimeTypeFromContentType(contentType);

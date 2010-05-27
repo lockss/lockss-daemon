@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.51 2010-04-02 23:38:12 pgust Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.52 2010-05-27 07:00:01 tlipkis Exp $
  */
 
 /*
@@ -742,7 +742,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testGetLinkExtractor_text_css() {
     assertTrue(mbau.getLinkExtractor("text/css")
-	       instanceof CssLinkExtractor);
+	       instanceof FluteCssLinkExtractor);
   }
 
   public void testGetLinkExtractor_application_pdf() {

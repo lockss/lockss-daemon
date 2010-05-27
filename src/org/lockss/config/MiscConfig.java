@@ -1,10 +1,10 @@
 /*
- * $Id: MiscConfig.java,v 1.5 2008-07-23 08:15:01 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.6 2010-05-27 07:00:01 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2001-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2001-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.config;
 
+import org.lockss.daemon.MimeTypeMap;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.servlet.ServletUtil;
@@ -50,6 +51,7 @@ public class MiscConfig {
 	  UrlUtil.setConfig(config, oldConfig, diffs);
 	  PluginUtil.setConfig(config, oldConfig, diffs);
 	  ServletUtil.setConfig(config, oldConfig, diffs);
+	  MimeTypeMap.setConfig(config, oldConfig, diffs);
 	}
       };
   }

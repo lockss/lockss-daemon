@@ -1,10 +1,10 @@
 /*
- * $Id: TestBasePlugin.java,v 1.21 2010-04-02 23:38:12 pgust Exp $
+ * $Id: TestBasePlugin.java,v 1.22 2010-05-27 07:00:01 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -215,9 +215,14 @@ public class TestBasePlugin extends LockssTestCase {
     assertNull(mti.getCrawlFilterFactory());
     mti = mbp.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
-	       instanceof CssLinkExtractor.Factory);
+	       instanceof FluteCssLinkExtractor.Factory);
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
+
+    ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
+				  "org.lockss.extractor.RegexpCssLinkExtractor$Factory");
+    assertTrue(mti.getLinkExtractorFactory()
+	       instanceof RegexpCssLinkExtractor.Factory);
   }
 
   public void testGetLinkExtractor() throws IOException {
