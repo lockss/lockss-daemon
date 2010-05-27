@@ -1,0 +1,14 @@
+#!/bin/sh
+LOCKSS_HOME=/opt/lockss
+export LOCKSS_HOME
+if [ -x /etc/init.d/lockss ]; then
+    for A in 0 1 2 S ; do
+        ln /etc/init.d/lockss /etc/rc${A}.d/K99lockss
+    done
+    ln /etc/init.d/lockss /etc/rc3.d/S99lockss
+    if [ -s ${LOCKSS_HOME}/etc/lockss/config.dat ]; then
+        /etc/init.d/lockss start
+    else
+        echo "As root, please run ${LOCKSS_HOME}/etc/lockss/hostconfig"
+    fi
+fi

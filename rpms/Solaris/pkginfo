@@ -1,0 +1,15 @@
+PKG="LOCKSS"
+NAME="LOCKSS daemon @RELEASENAME@ Solaris 10"
+VERSION="@RELEASENAME@"
+ARCH="i386"
+CLASSES="none"
+CATEGORY="utility"
+VENDOR="LOCKSS"
+PSTAMP="25thMay2010"
+EMAIL="lockss-support@lockss.org"
+ISTATES="S s 1 2 3"
+RSTATES="S s 1 2 3"
+BASEDIR="/"
+
+
+

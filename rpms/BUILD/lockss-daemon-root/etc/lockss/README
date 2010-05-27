@@ -1,14 +1,14 @@
 	      Instructions for Configuring and Running LOCKSS
 
-This is a Linux version of the LOCKSS preservation daemon.  The LOCKSS
-daemon is usually distributed and used in conjunction with the LOCKSS
+This is a Linux and Solaris version of the LOCKSS preservation daemon.  The
+LOCKSS daemon is usually distributed and used in conjunction with the LOCKSS
 platform, a secure, easy-to-administer, appliance-like bootable CD (see
 http://www.lockss.org/lockss/Installing_LOCKSS).
 
-The Linux version is functionally the same, but installing and maintaining
-the underlying operating system, and periodically upgrading the daemon, is
-the responsibility of the user.  The security and trustworthiness of LOCKSS
-on Linux depends on the security of the underlying Linux platform.
+The Linux and Solaris versions are functionally the same, but installing and
+maintaining the underlying operating system, and periodically upgrading the
+daemon, is the responsibility of the user.  The security and trustworthiness
+of LOCKSS depends on the security of the underlying platform.
 
 Prerequisites:
 - Public (routable) IP address
@@ -16,10 +16,11 @@ Prerequisites:
 
 Java:
 The daemon works on CentOS 5.3 using the Sun JRE, and on CentOS 5.4 using
-the java-1.6.0-openjdk package.
+the java-1.6.0-openjdk package, and on Solaris 10 using the 1.6 JVM.
 
 Configuration:
-After installing the RPM, run /etc/locks/hostconfig as root.  You will be
+After installing the package, run /etc/lockss/hostconfig (Linux) or
+/opt/lockss/etc/lockss/hostconfig as root.  You will be
 asked for the following information.  Most values will default to reasonable
 guesses, or to their previous value if hostconfig has previously been run.
 hostconfig should also be run after upgrading to a new version of the LOCKSS
@@ -92,9 +93,8 @@ The script will then echo the values and ask for confirmation, store the
 configuration and create any necessary directories.
 
 The LOCKSS daemon can be started by running "/etc/init.d/lockss start".
-To have the daemon start automatically at boot time run
-  /sbin/chkconfig -add lockss
-as root.  This only needs to be done once, after the initial install.
+It can be stopped by running "/etc/init.d/lockss stop".  It starts
+automatically on boot-up.
 
 To further administer the daemon, go to http://<hostname>:8081/ (or other
 port, if not using the standard daemon configuration).

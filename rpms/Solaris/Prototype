@@ -1,0 +1,54 @@
+i pkginfo
+i preinstall
+i postinstall
+i preremove
+d none /etc 0755 root sys
+d none /etc/init.d 0755 root sys
+f none /etc/init.d/lockss 0744 root sys
+d none /opt 0755 root sys
+d none /opt/lockss 0755 root sys
+d none /opt/lockss/etc 0755 root sys
+d none /opt/lockss/etc/lockss 0755 root sys
+f none /opt/lockss/etc/lockss/README 0644 root sys
+f none /opt/lockss/etc/lockss/functions 0755 root sys
+f none /opt/lockss/etc/lockss/hostconfig 0744 root sys
+f none /opt/lockss/etc/lockss/rundaemon 0755 root sys
+f none /opt/lockss/etc/lockss/runssl 0744 root sys
+f none /opt/lockss/etc/lockss/startdaemon 0744 root sys
+d none /opt/lockss/usr 0755 root sys
+d none /opt/lockss/usr/share 0755 root sys
+d none /opt/lockss/usr/share/lockss 0755 root sys
+f none /opt/lockss/usr/share/lockss/pjl-comp-filter-1.6.5.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/PDFBox-0.7.3.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/javamail-mailapi-1.3.2.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-io-1.4.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/xercesImpl-2.7.1.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/harvester2-0.1.6L1.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/sac-1.3.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/xstream-1.1.3.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/rdf-api-2001-01-19.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/lockss.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/javax.servlet.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-collections-3.2.1.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/xml-apis.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/heritrix-1.14.3-p1.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-codec-1.3.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-lang-2.4.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/bcprov-jdk14-132.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/htmlparser-1.6p.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/fastutil-5.0.3-heritrix-subset-1.0.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/castor-0.9.4.1-xml.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/bcmail-jdk14-132.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-logging-1.1.1.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/jakarta-oro-2.0.8.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-httpclient-3.0-rc4.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/xalan.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-jxpath-1.2.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/flute-1.3.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/log4j-1.2.13.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/activation-1.0.2.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/jetty-5.1.5.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/concurrent.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/FontBox-0.1.0-dev.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/JimiProClasses.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/tar-2.3.jar 0644 root sys

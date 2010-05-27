@@ -1,0 +1,63 @@
+#!/sbin/sh
+
+# Start and stop LOCKSS daemon(s) on Solaris
+# XXX copyright
+#
+
+do_command () {
+if [ -f ${LOCKSS_HOME}/etc/lockss/config.$2.dat ]
+then
+        CFG_FILE=${LOCKSS_HOME}/etc/lockss/config.$2.dat
+fi
+case "$1" in
+    start)
+        if [ ! -r ${CFG_FILE} ]; then
+            echo "Can't start ${2}: ${CFG_FILE} missing or not readable"
+            exit 1
+        fi
+        if [ ! -d ${LOG_DIR} ]; then
+            mkdir -p ${LOG_DIR}
+            chown $2 ${LOG_DIR}
+            chmod 755 ${LOG_DIR}
+        fi
+        if [ ! -f ${PID_FILE} ]; then
+            touch ${PID_FILE}
+        fi
+        chown $2 ${PID_FILE}
+        chmod 644 ${PID_FILE}
+        echo "Starting LOCKSS for user $2 at `date`" >> ${LOG_FILE}
+        chown $2 ${LOG_FILE}
+        if [ -x /usr/bin/bash ]; then
+            /usr/bin/bash ${LOCKSS_HOME}/etc/lockss/startdaemon $2
+        else
+            echo "Needs /usr/bin/bash"
+            exit 1
+        fi
+        ;;
+    stop)
+        rm -f "${KEEP_GOING}"
+        /usr/bin/pkill -U $2
+        rm -f ${PID_FILE} ${RUN_DIR}/${2}-ssl.pid
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
+}
+
+LOCKSS_HOME=/opt/lockss
+export LOCKSS_HOME
+FUNCTIONS=${LOCKSS_HOME}/etc/lockss/functions
+if [ ! -x ${FUNCTIONS} ] ; then
+    echo "Can't find ${FUNCTIONS}"
+    exit 1
+fi
+. ${FUNCTIONS}
+set_lockss_user
+for A in ${LOCKSS_USER}
+do
+        set_variables ${A}
+        do_command $1 $A
+        unset_variables
+done

@@ -1,0 +1,19 @@
+#!/bin/sh
+LOCKSS_HOME=/opt/lockss
+export LOCKSS_HOME
+if [ -x /etc/init.d/lockss -a -s ${LOCKSS_HOME}/etc/lockss/config.dat ]; then
+    /etc/init.d/lockss stop
+fi
+MY_HOME=/export/home/lockss
+MY_SHELL=/usr/bin/bash
+if grep -s lockss /etc/group >/dev/null; then
+    echo "Group lockss exists"
+else
+    groupadd lockss
+fi
+if grep -s lockss /etc/passwd >/dev/null; then
+    echo "User lockss exists"
+else
+    useradd -d ${MY_HOME} -s ${MY_SHELL} -m lockss
+fi
+rm -f /etc/rc?.d/?99lockss

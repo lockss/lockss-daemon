@@ -1,0 +1,7 @@
+#!/bin/sh
+LOCKSS_HOME=/opt/lockss
+export LOCKSS_HOME
+if [ -x /etc/init.d/lockss ]; then
+    /etc/init.d/lockss stop
+    rm -f /etc/rc?.d/?99lockss
+fi

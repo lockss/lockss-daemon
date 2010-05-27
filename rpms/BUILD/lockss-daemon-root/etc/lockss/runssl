@@ -1,4 +1,8 @@
 #!/bin/sh
+# Do not edit the line above.  This script must work with /bin/sh on
+# Solaris. After any change to this file it must be tested on both
+# Linux and Solaris.
+
 # This script is run as root before the daemon is started. Its task is
 # to copy the keystore and the password needed to decrypt it from their
 # permanent location in /etc/lockss.keys, where they are readable only

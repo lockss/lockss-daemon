@@ -1,0 +1,26 @@
+#!/bin/sh
+pkg=LOCKSS
+pkgfile=LOCKSS.@RELEASENAME@.Solaris.10.pkg.tgz
+if pkgmk -o -r lockss-daemon-root -d . -f Prototype
+then
+    find ${pkg} -type d -print | xargs chmod 755
+    if [ -f ${pkg}/install/preinstall ]; then
+        chmod 755 ${pkg}/install/preinstall
+    fi
+    if [ -f ${pkg}/install/postinstall ]; then
+        chmod 755 ${pkg}/install/postinstall
+    fi
+    if [ -f ${pkg}/install/preremove ]; then
+        chmod 755 ${pkg}/install/preremove
+    fi
+    if [ -f ${pkg}/install/postremove ]; then
+        chmod 755 ${pkg}/install/postremove
+    fi
+    if [ -f ${pkg}/install/request ]; then
+        chmod 755 ${pkg}/install/request
+    fi
+    if [ -f ${pkg}/install/checkinstall ]; then
+        chmod 755 ${pkg}/install/checkinstall
+    fi
+    /usr/bin/tar -cf - $pkg | gzip -9c > $pkgfile
+fi
