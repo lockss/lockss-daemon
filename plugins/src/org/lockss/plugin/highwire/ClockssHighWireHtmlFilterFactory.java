@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.9 2010-02-25 18:14:39 greya Exp $
+ * $Id: ClockssHighWireHtmlFilterFactory.java,v 1.10 2010-05-27 21:35:49 edwardsb1 Exp $
  */
 
 /*
@@ -97,6 +97,8 @@ public class ClockssHighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "oas_bottom"),
         // Optional institution-specific citation resolver (e.g. SAGE Publications)
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/openurl"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/external-ref"),        
         // Contains ad-dependent URLs (e.g. American Academy of Pediatrics)
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://ads.adhostingsolutions.com/"),
         // alt for less/greater than confuses WhiteSpace filter

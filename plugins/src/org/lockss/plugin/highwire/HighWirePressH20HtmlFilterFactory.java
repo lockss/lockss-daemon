@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.11 2010-05-12 21:09:56 edwardsb1 Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.12 2010-05-27 21:35:49 edwardsb1 Exp $
  */
 
 /*
@@ -85,6 +85,10 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // For JCB
         HtmlNodeFilters.tagWithAttribute("div", "id", "leaderboard-ads"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "current-issue"),
+        // Optional institution-specific citation resolver (e.g. SAGE Publications)
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/openurl"),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/external-ref"),        
 
     };
     
