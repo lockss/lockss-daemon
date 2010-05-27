@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.24 2010-04-14 00:02:50 thib_gc Exp $
+# $Id: tdbxml.py,v 1.25 2010-05-27 18:50:26 edwardsb1 Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -118,6 +118,15 @@ def _do_attr(au, attr, value=None):
    <property name="attributes.%s" value="%s" />''' % ( attr, value )
 
 def _process_au(au, options):
+    # Added by BEE:
+    # Give a warning message if the plugin is org.lockss.plugin.highwire.{
+    # HighWirePlugin, HighWireStrVolPlugin} and the status is 'testing'.
+    import sys
+    if (au.status() == AU.STATUS_TESTING and \
+            au.plugin() in ["org.lockss.plugin.highwire.HighWirePlugin",
+                            "org.lockss.plugin.highwire.HighWireStrVolPlugin"]):
+        sys.stderr.write("Warning: %s is using an old HighWire plugin.\n" % au.name())
+    
     print '''\
   <property name="%s">
    <property name="attributes.publisher" value="%s" />
