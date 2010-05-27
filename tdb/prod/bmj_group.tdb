@@ -118,11 +118,12 @@
     au < HighWirePressH20Plugin ; exists ; 2002 ; Annals of the Rheumatic Diseases Volume 61 ; 61 >
     au < HighWirePressH20Plugin ; exists ; 2003 ; Annals of the Rheumatic Diseases Volume 62 ; 62 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Annals of the Rheumatic Diseases Volume 63 ; 63 >
-    au < HighWirePressH20Plugin ; testing ; 2005 ; Annals of the Rheumatic Diseases Volume 64 ; 64 >
+    au < HighWirePressH20Plugin ; ready ; 2005 ; Annals of the Rheumatic Diseases Volume 64 ; 64 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Annals of the Rheumatic Diseases Volume 65 ; 65 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Annals of the Rheumatic Diseases Volume 66 ; 66 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Annals of the Rheumatic Diseases Volume 67 ; 67 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Annals of the Rheumatic Diseases Volume 66 ; 66 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Annals of the Rheumatic Diseases Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Annals of the Rheumatic Diseases Volume 68 ; 68 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Annals of the Rheumatic Diseases Volume 69 ; 69 >
 
   }
 
@@ -182,6 +183,7 @@
     au < HighWirePressH20Plugin ; testing ; 2007 ; Archives of Disease in Childhood Volume 92 ; 92 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; Archives of Disease in Childhood Volume 93 ; 93 >
     au < HighWirePressH20Plugin ; testing ; 2009 ; Archives of Disease in Childhood Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Archives of Disease in Childhood Volume 95 ; 95 >
 
   }
 
@@ -454,6 +456,7 @@
     au < HighWirePressH20Plugin ; exists ; 2007 ; DTB - Drug and Therapeutics Bulletin Volume 45 ; 45 >
     au < HighWirePressH20Plugin ; exists ; 2008 ; DTB - Drug and Therapeutics Bulletin Volume 46 ; 46 >
     au < HighWirePressH20Plugin ; exists ; 2009 ; DTB - Drug and Therapeutics Bulletin Volume 47 ; 47 >
+    au < HighWirePressH20Plugin ; testing ; 2010 ; DTB - Drug and Therapeutics Bulletin Volume 48 ; 48 >
 
   }
 
@@ -505,6 +508,8 @@
 
     param[base_url] = http://ebm.bmj.com/
 
+comment[ebm13] = Site depth exceeds max crawl depth (1000)
+
     au < HighWirePressH20Plugin ; exists ; 2000 ; Evidence-Based Medicine Volume 5 ; 5 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Evidence-Based Medicine Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; Evidence-Based Medicine Volume 7 ; 7 >
@@ -513,8 +518,9 @@
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-Based Medicine Volume 10 ; 10 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Evidence-Based Medicine Volume 11 ; 11 >
     au < HighWireStrVolPlugin ; down ; 2007 ; Evidence-Based Medicine Volume 12 ; 12 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Evidence-Based Medicine Volume 13 ; 13 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Evidence-Based Medicine Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; notReady ; 2008 ; Evidence-Based Medicine Volume 13 ; 13 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Evidence-Based Medicine Volume 14 ; 14 >
+    au < HighWirePressH20Plugin ; ready ; 2010; Evidence-Based Medicine Volume 15 ; 15 >
 
   }
 
@@ -1526,10 +1532,10 @@
       au < HighWirePressH20Plugin ; exists ; 2003 ; Tobacco Control Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Tobacco Control Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Tobacco Control Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; manifest ; 2006 ; Tobacco Control Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; manifest ; 2007 ; Tobacco Control Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; manifest ; 2008 ; Tobacco Control Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; manifest ; 2009 ; Tobacco Control Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; testing ; 2006 ; Tobacco Control Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; testing ; 2007 ; Tobacco Control Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; testing ; 2008 ; Tobacco Control Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; testing ; 2009 ; Tobacco Control Volume 18 ; 18 >
 
     }
 

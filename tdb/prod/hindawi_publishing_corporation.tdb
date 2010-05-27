@@ -1310,6 +1310,8 @@
     au < ready ; International Journal of Photoenergy Volume 2006 ; 2006 >
     au < ready ; International Journal of Photoenergy Volume 2007 ; 2007 >
     au < ready ; International Journal of Photoenergy Volume 2008 ; 2008 >
+    au < testing ; International Journal of Photoenergy Volume 2009 ; 2009 >
+    au < testing ; International Journal of Photoenergy Volume 2010 ; 2010 >
 
   }
 
@@ -1324,6 +1326,7 @@
 
     au < manifest ; International Journal of Plant Genomics Volume 2007 ; 2007 >
     au < manifest ; International Journal of Plant Genomics Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Plant Genomics Volume 2009 ; 2009 >
 
   }
 
@@ -1337,6 +1340,7 @@
     param[journal_id] = ijpse
 
     au < manifest ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Plasma Science and Engineering Volume 2009 ; 2009 >
 
   }
 
@@ -1401,6 +1405,7 @@
     param[journal_id] = ijrc
 
     au < manifest ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 >
+    au < manifest ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 >
 
   }
 

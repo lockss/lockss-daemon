@@ -16,6 +16,8 @@
       param[base_url] = http://www.eje-online.org/
       implicit < status ; name ; param[volume_name] >
 
+comment[eje130_136] = manifest present, but AUs have login pages
+
       au < exists ; European Journal of Endocrinology Volume 42 ; 42 >
       au < exists ; European Journal of Endocrinology Volume 43 ; 43 >
       au < exists ; European Journal of Endocrinology Volume 44 ; 44 >
@@ -104,13 +106,13 @@
       au < exists ; European Journal of Endocrinology Volume 127 ; 127 >
       au < exists ; European Journal of Endocrinology Volume 128 ; 128 >
       au < exists ; European Journal of Endocrinology Volume 129 ; 129 >
-      au < testing ; European Journal of Endocrinology Volume 130 ; 130 >
-      au < testing ; European Journal of Endocrinology Volume 131 ; 131 >
-      au < testing ; European Journal of Endocrinology Volume 132 ; 132 >
-      au < testing ; European Journal of Endocrinology Volume 133 ; 133 >
-      au < testing ; European Journal of Endocrinology Volume 134 ; 134 >
-      au < testing ; European Journal of Endocrinology Volume 135 ; 135 >
-      au < testing ; European Journal of Endocrinology Volume 136 ; 136 >
+      au < notReady ; European Journal of Endocrinology Volume 130 ; 130 >
+      au < notReady ; European Journal of Endocrinology Volume 131 ; 131 >
+      au < notReady ; European Journal of Endocrinology Volume 132 ; 132 >
+      au < notReady ; European Journal of Endocrinology Volume 133 ; 133 >
+      au < notReady ; European Journal of Endocrinology Volume 134 ; 134 >
+      au < notReady ; European Journal of Endocrinology Volume 135 ; 135 >
+      au < notReady ; European Journal of Endocrinology Volume 136 ; 136 >
       au < ready ; European Journal of Endocrinology Volume 137 ; 137 >
       au < ready ; European Journal of Endocrinology Volume 138 ; 138 >
       au < ready ; European Journal of Endocrinology Volume 139 ; 139 >
