@@ -1,10 +1,10 @@
 /*
- * $Id: TestStringUtil.java,v 1.76 2010-02-24 03:55:31 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.77 2010-05-27 06:59:07 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -338,6 +338,29 @@ public class TestStringUtil extends LockssTestCase {
   public void testGetLineReader() throws Exception {
     this.assertReaderMatchesString(safter, StringUtil.getLineReader(new StringReader(sbefore)));
   }
+
+  void assertLineSequence(List<String> exp, String str) throws IOException {
+    BufferedReader rdr = new BufferedReader(new StringReader(str));
+    List<String> act = new ArrayList<String>();
+    String s;
+    while ((s = StringUtil.readLineWithContinuation(rdr)) != null) {
+      act.add(s);
+    }
+    assertEquals(exp, act);
+  }
+
+  public void testReadLineWithContinuation() throws Exception {
+    assertLineSequence(ListUtil.list(), "");
+    assertLineSequence(ListUtil.list(" "), " ");
+    assertLineSequence(ListUtil.list("foo"), "foo");
+    assertLineSequence(ListUtil.list("foo"), "foo\n");
+    assertLineSequence(ListUtil.list("foo", "bar"), "foo\nbar");
+    assertLineSequence(ListUtil.list("foo"), "foo\\");
+    assertLineSequence(ListUtil.list("foo"), "foo\\\n");
+    assertLineSequence(ListUtil.list("foobar"), "foo\\\nbar");
+    assertLineSequence(ListUtil.list("foo\\bar"), "foo\\bar");
+  }
+
   public void testFromReader() throws Exception {
     Reader r = new InputStreamReader(new StringInputStream(sbefore));
     assertEquals(safter, StringUtil.fromReader(r));

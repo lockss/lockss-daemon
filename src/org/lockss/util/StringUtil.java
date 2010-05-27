@@ -1,10 +1,10 @@
 /*
- * $Id: StringUtil.java,v 1.91 2010-04-02 23:32:18 pgust Exp $
+ * $Id: StringUtil.java,v 1.92 2010-05-27 06:59:07 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -721,6 +721,34 @@ public class StringUtil {
    */
   public static Reader getLineReader(InputStream in, String encoding) {
     return getLineReader(StreamUtil.getReader(in, encoding));
+  }
+
+  /** Reads a line from a BuffereReader, interpreting backslash-newline as
+   * line-continuation. */
+  public static String readLineWithContinuation(BufferedReader rdr)
+      throws IOException {
+    StringBuilder sb = null;
+    while (true) {
+      String s = rdr.readLine();
+      if (s == null) {
+	if (sb == null || sb.length() == 0) {
+	  return null;
+	} else {
+	  return sb.toString();
+	}
+      }
+      if (s.endsWith("\\")) {
+	if (sb == null) {
+	  sb = new StringBuilder(120);
+	}
+	sb.append(s, 0, s.length() - 1);
+      } else if (sb == null || sb.length() == 0) {
+	return s;
+      } else {
+	sb.append(s);
+	return sb.toString();
+      }
+    }
   }
 
   /** Return a string with lines from a reader, separated by a newline character,
