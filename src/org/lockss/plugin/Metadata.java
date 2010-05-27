@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.9 2009-11-08 01:29:11 tlipkis Exp $
+ * $Id: Metadata.java,v 1.10 2010-05-27 18:37:04 pgust Exp $
  */
 
 /*
@@ -393,6 +393,20 @@ public class Metadata extends Properties {
   /*
    * Return the ISSN, if any.
    */
+  public static final String KEY_ISBN = "LOCKSS.isbn";
+  public String getISBN() {
+    String ret = getProperty(KEY_ISBN);
+    // XXX
+    return ret;
+  }
+  public void putISBN(String isbn) {
+    // XXX protocol?
+    setProperty(KEY_ISBN, isbn);
+  }
+
+  /*
+   * Return the ISSN, if any.
+   */
   public static final String KEY_ISSN = "LOCKSS.issn";
   public String getISSN() {
     String ret = getProperty(KEY_ISSN);
@@ -444,6 +458,50 @@ public class Metadata extends Properties {
   public void putStartPage(String spage) {
     // XXX protocol?
     setProperty(KEY_START_PAGE, spage);
+  }
+
+  /*
+   * Return the date, if any.  A date can be just a year,
+   * a month and year, or a specific issue date.
+   */
+  public static final String KEY_DATE = "LOCKSS.date";
+  public String getDate() {
+    String ret = getProperty(KEY_DATE);
+    // XXX
+    return ret;
+  }
+  public void putDate(String date) {
+    // XXX protocol?
+    setProperty(KEY_DATE, date);
+  }
+
+  /*
+   * Return the title, if any.
+   */
+  public static final String KEY_TITLE = "LOCKSS.title";
+  public String getTitle() {
+    String ret = getProperty(KEY_TITLE);
+    // XXX
+    return ret;
+  }
+  public void putTitle(String title) {
+    // XXX protocol?
+    setProperty(KEY_TITLE, title);
+  }
+
+  /*
+   * Return the author(s), if any. Authors are a 
+   * delimited list of one or more authors.
+   */
+  public static final String KEY_AUTHOR = "LOCKSS.author";
+  public String getAuthor() {
+    String ret = getProperty(KEY_AUTHOR);
+    // XXX
+    return ret;
+  }
+  public void putAuthor(String author) {
+    // XXX protocol?
+    setProperty(KEY_AUTHOR, author);
   }
 
   /*
