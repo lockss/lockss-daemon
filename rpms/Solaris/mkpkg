@@ -1,6 +1,6 @@
 #!/bin/sh
 pkg=LOCKSS
-pkgfile=LOCKSS.1.45.2.i386.Solaris.10.pkg.tgz
+pkgfile=LOCKSS.@RELEASENAME@.Solaris.10.pkg.tgz
 if pkgmk -o -r lockss-daemon-root -d . -f Prototype
 then
     find ${pkg} -type d -print | xargs chmod 755

@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.255.4.1 2010-05-26 23:13:11 dshr Exp $
+ $Id: build.xml,v 1.255.4.2 2010-05-27 01:38:25 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1151,15 +1151,14 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
        <filter token="CLASSPATH" value="${solaris.clspth}"/>
        <filter token="RELEASENAME" value="${releasename}"/>
        <filter token="RPMRELEASE" value="${solarisrelease}"/>
-       <filter token="PLATFORM_VERSION" value="Solaris-10-${release}"/>
+       <filter token="PLATFORM_VERSION" value="Solaris-10-${solarisrelease}"/>
       </filterset>
     </copy>
     <!-- copy Solaris build stuff to top of build tree -->
     <copy todir="${solaris.build}" >
-      <fileset dir="${protosolaris.source}"/>
+      <fileset dir="${solaris.top}/Solaris"/>
     </copy>
     <!-- copy /etc/lockss to /opt/lockss/etc/lockss -->
-    <!-- XXX need to handle change to /etc/init.d/lockss -->
     <copy todir="${solaris.lockss.etc}" >
       <fileset dir="${solaris.root}/etc/lockss"/>
     </copy>
