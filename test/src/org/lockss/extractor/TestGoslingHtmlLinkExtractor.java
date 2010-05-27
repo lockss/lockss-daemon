@@ -1,10 +1,10 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.5 2008-08-11 23:39:01 tlipkis Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.6 2010-05-27 07:00:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -966,7 +966,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
 
   private Set parseSingleSource(String source) throws IOException {
     MockArchivalUnit mau = new MockArchivalUnit();
-    LinkExtractor ue = new CssLinkExtractor();
+    LinkExtractor ue = new FluteCssLinkExtractor();
     mau.setLinkExtractor("text/css", ue);
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com", mau);
     mcu.setContent(source);

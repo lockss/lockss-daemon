@@ -1,10 +1,10 @@
 /*
- * $Id: CssLinkExtractor.java,v 1.6 2008-10-24 07:09:00 tlipkis Exp $
+ * $Id: FluteCssLinkExtractor.java,v 1.1 2010-05-27 07:00:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,7 +47,7 @@ import org.w3c.flute.parser.Parser;
  * @author Thib Guicherd-Callin
  * @see <a href="http://www.w3.org/Style/CSS/SAC/">SAC and Flute at the W3C</a>
  */
-public class CssLinkExtractor implements LinkExtractor {
+public class FluteCssLinkExtractor implements LinkExtractor {
 
   /**
    * <p>A subclass of {@link CSSException} that wraps a Java-style
@@ -199,11 +199,12 @@ public class CssLinkExtractor implements LinkExtractor {
     }
   }
   
-  private static final Logger logger = Logger.getLogger("CssLinkExtractor");
+  private static final Logger logger =
+    Logger.getLogger("FluteCssLinkExtractor");
   
   public static class Factory implements LinkExtractorFactory {
     public LinkExtractor createLinkExtractor(String mimeType) {
-      return new CssLinkExtractor();
+      return new FluteCssLinkExtractor();
     }
   }
 

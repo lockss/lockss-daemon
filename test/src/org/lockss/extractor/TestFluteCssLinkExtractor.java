@@ -1,10 +1,10 @@
 /*
- * $Id: TestCssLinkExtractor.java,v 1.6 2008-12-04 22:19:06 thib_gc Exp $
+ * $Id: TestFluteCssLinkExtractor.java,v 1.1 2010-05-27 07:00:47 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,13 +44,13 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 
-public class TestCssLinkExtractor extends LinkExtractorTestCase {
+public class TestFluteCssLinkExtractor extends LinkExtractorTestCase {
 
-  protected MyCssLinkExtractor cssExtractor;
+  protected MyFluteCssLinkExtractor cssExtractor;
 
   public void setUp() throws Exception {
     super.setUp();
-    cssExtractor = (MyCssLinkExtractor)cssExtractor;
+    cssExtractor = (MyFluteCssLinkExtractor)cssExtractor;
   }
 
   public String getMimeType() {
@@ -58,7 +58,7 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
   }
 
   public LinkExtractorFactory getFactory() {
-    return new MyCssLinkExtractor.Factory();
+    return new MyFluteCssLinkExtractor.Factory();
   }
 
   public void testAbsoluteUrl() throws Exception {
@@ -222,7 +222,7 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
     }
   }
 
-  static class MyCssLinkExtractor extends CssLinkExtractor {
+  static class MyFluteCssLinkExtractor extends FluteCssLinkExtractor {
     private RuntimeException toThrow;
 
     protected Parser makeParser() {
@@ -233,7 +233,7 @@ public class TestCssLinkExtractor extends LinkExtractorTestCase {
 
     public static class Factory implements LinkExtractorFactory {
       public LinkExtractor createLinkExtractor(String mimeType) {
-        return new MyCssLinkExtractor();
+        return new MyFluteCssLinkExtractor();
       }
     }
 
