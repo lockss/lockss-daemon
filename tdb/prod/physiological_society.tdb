@@ -127,16 +127,16 @@
     
     param[base_url] = http://ep.physoc.org/
 
-    au < testing ; 1990 ; Experimental Physiology Volume 75 ; 75  >
-    au < testing ; 1991 ; Experimental Physiology Volume 76 ; 76  >
-    au < testing ; 1992 ; Experimental Physiology Volume 77 ; 77  >
-    au < testing ; 1993 ; Experimental Physiology Volume 78 ; 78  >
-    au < testing ; 1994 ; Experimental Physiology Volume 79 ; 79  >
-    au < testing ; 1995 ; Experimental Physiology Volume 80 ; 80  >
-    au < testing ; 1996 ; Experimental Physiology Volume 81 ; 81  >
-    au < testing ; 1997 ; Experimental Physiology Volume 82 ; 82  >
-    au < testing ; 1998 ; Experimental Physiology Volume 83 ; 83  >
-    au < testing ; 1999 ; Experimental Physiology Volume 84 ; 84  >
+    au < manifest ; 1990 ; Experimental Physiology Volume 75 ; 75  >
+    au < manifest ; 1991 ; Experimental Physiology Volume 76 ; 76  >
+    au < manifest ; 1992 ; Experimental Physiology Volume 77 ; 77  >
+    au < ready ; 1993 ; Experimental Physiology Volume 78 ; 78  >
+    au < manifest ; 1994 ; Experimental Physiology Volume 79 ; 79  >
+    au < manifest ; 1995 ; Experimental Physiology Volume 80 ; 80  >
+    au < manifest ; 1996 ; Experimental Physiology Volume 81 ; 81  >
+    au < manifest ; 1997 ; Experimental Physiology Volume 82 ; 82  >
+    au < manifest ; 1998 ; Experimental Physiology Volume 83 ; 83  >
+    au < manifest ; 1999 ; Experimental Physiology Volume 84 ; 84  >
     au < testing ; 2000 ; Experimental Physiology Volume 85 ; 85  >
     au < testing ; 2001 ; Experimental Physiology Volume 86 ; 86  >
     au < testing ; 2002 ; Experimental Physiology Volume 87 ; 87  >
@@ -580,113 +580,113 @@
     au < manifest ; 1989 ; Journal of Physiology Volume 417 ; 417  >
     au < manifest ; 1989 ; Journal of Physiology Volume 418 ; 418  >
     au < manifest ; 1989 ; Journal of Physiology Volume 419 ; 419  >
-    au < testing ; 1990 ; Journal of Physiology Volume 420 ; 420  >
-    au < testing ; 1990 ; Journal of Physiology Volume 421 ; 421  >
-    au < testing ; 1990 ; Journal of Physiology Volume 422 ; 422  >
-    au < testing ; 1990 ; Journal of Physiology Volume 423 ; 423  >
-    au < testing ; 1990 ; Journal of Physiology Volume 424 ; 424  >
-    au < testing ; 1990 ; Journal of Physiology Volume 425 ; 425  >
-    au < testing ; 1990 ; Journal of Physiology Volume 426 ; 426  >
-    au < testing ; 1990 ; Journal of Physiology Volume 427 ; 427  >
-    au < testing ; 1990 ; Journal of Physiology Volume 428 ; 428  >
-    au < testing ; 1990 ; Journal of Physiology Volume 429 ; 429  >
-    au < testing ; 1990 ; Journal of Physiology Volume 430 ; 430  >
-    au < testing ; 1990-1991 ; Journal of Physiology Volume 431 ; 431  >
-    au < testing ; 1991 ; Journal of Physiology Volume 432 ; 432  >
-    au < testing ; 1991 ; Journal of Physiology Volume 433 ; 433  >
-    au < testing ; 1991 ; Journal of Physiology Volume 434 ; 434  >
-    au < testing ; 1991 ; Journal of Physiology Volume 435 ; 435  >
-    au < testing ; 1991 ; Journal of Physiology Volume 436 ; 436  >
-    au < testing ; 1991 ; Journal of Physiology Volume 437 ; 437  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 420 ; 420  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 421 ; 421  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 422 ; 422  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 423 ; 423  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 424 ; 424  >
+    au < ready ; 1990 ; Journal of Physiology Volume 425 ; 425  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 426 ; 426  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 427 ; 427  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 428 ; 428  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 429 ; 429  >
+    au < manifest ; 1990 ; Journal of Physiology Volume 430 ; 430  >
+    au < manifest ; 1990-1991 ; Journal of Physiology Volume 431 ; 431  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 432 ; 432  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 433 ; 433  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 434 ; 434  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 435 ; 435  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 436 ; 436  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 437 ; 437  >
     au < ready ; 1991 ; Journal of Physiology Volume 438 ; 438  >
-    au < testing ; 1991 ; Journal of Physiology Volume 439 ; 439  >
-    au < testing ; 1991 ; Journal of Physiology Volume 440 ; 440  >
-    au < testing ; 1991 ; Journal of Physiology Volume 441 ; 441  >
-    au < testing ; 1991 ; Journal of Physiology Volume 442 ; 442  >
-    au < testing ; 1991 ; Journal of Physiology Volume 443 ; 443  >
-    au < testing ; 1991 ; Journal of Physiology Volume 444 ; 444  >
-    au < testing ; 1992 ; Journal of Physiology Volume 445 ; 445  >
-    au < testing ; 1992 ; Journal of Physiology Volume 446 ; 446  >
+    au < ready ; 1991 ; Journal of Physiology Volume 439 ; 439  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 440 ; 440  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 441 ; 441  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 442 ; 442  >
+    au < ready ; 1991 ; Journal of Physiology Volume 443 ; 443  >
+    au < manifest ; 1991 ; Journal of Physiology Volume 444 ; 444  >
+    au < ready ; 1992 ; Journal of Physiology Volume 445 ; 445  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 446 ; 446  >
     au < ready ; 1992 ; Journal of Physiology Volume 447 ; 447  >
-    au < testing ; 1992 ; Journal of Physiology Volume 448 ; 448  >
-    au < testing ; 1992 ; Journal of Physiology Volume 449 ; 449  >
-    au < testing ; 1992 ; Journal of Physiology Volume 450 ; 450  >
-    au < testing ; 1992 ; Journal of Physiology Volume 451 ; 451  >
-    au < testing ; 1992 ; Journal of Physiology Volume 452 ; 452  >
-    au < testing ; 1992 ; Journal of Physiology Volume 453 ; 453  >
-    au < testing ; 1992 ; Journal of Physiology Volume 454 ; 454  >
-    au < testing ; 1992 ; Journal of Physiology Volume 455 ; 455  >
-    au < testing ; 1992 ; Journal of Physiology Volume 456 ; 456  >
-    au < testing ; 1992 ; Journal of Physiology Volume 457 ; 457  >
-    au < testing ; 1992 ; Journal of Physiology Volume 458 ; 458  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 448 ; 448  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 449 ; 449  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 450 ; 450  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 451 ; 451  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 452 ; 452  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 453 ; 453  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 454 ; 454  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 455 ; 455  >
+    au < ready ; 1992 ; Journal of Physiology Volume 456 ; 456  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 457 ; 457  >
+    au < manifest ; 1992 ; Journal of Physiology Volume 458 ; 458  >
     au < ready ; 1993 ; Journal of Physiology Volume 459 ; 459  >
-    au < testing ; 1993 ; Journal of Physiology Volume 460 ; 460  >
-    au < testing ; 1993 ; Journal of Physiology Volume 461 ; 461  >
-    au < testing ; 1993 ; Journal of Physiology Volume 462 ; 462  >
-    au < testing ; 1993 ; Journal of Physiology Volume 463 ; 463  >
-    au < testing ; 1993 ; Journal of Physiology Volume 464 ; 464  >
-    au < testing ; 1993 ; Journal of Physiology Volume 465 ; 465  >
-    au < testing ; 1993 ; Journal of Physiology Volume 466 ; 466  >
-    au < testing ; 1993 ; Journal of Physiology Volume 467 ; 467  >
-    au < testing ; 1993 ; Journal of Physiology Volume 468 ; 468  >
-    au < testing ; 1993 ; Journal of Physiology Volume 469 ; 469  >
-    au < testing ; 1993 ; Journal of Physiology Volume 470 ; 470  >
-    au < testing ; 1993 ; Journal of Physiology Volume 471 ; 471  >
-    au < testing ; 1993 ; Journal of Physiology Volume 472 ; 472  >
-    au < testing ; 1993 ; Journal of Physiology Volume 473 ; 473  >
-    au < testing ; 1994 ; Journal of Physiology Volume 474 ; 474  >
-    au < testing ; 1994 ; Journal of Physiology Volume 475 ; 475  >
-    au < testing ; 1994 ; Journal of Physiology Volume 476 ; 476  >
-    au < testing ; 1994 ; Journal of Physiology Volume 477 ; 477  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 460 ; 460  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 461 ; 461  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 462 ; 462  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 463 ; 463  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 464 ; 464  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 465 ; 465  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 466 ; 466  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 467 ; 467  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 468 ; 468  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 469 ; 469  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 470 ; 470  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 471 ; 471  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 472 ; 472  >
+    au < manifest ; 1993 ; Journal of Physiology Volume 473 ; 473  >
+    au < manifest ; 1994 ; Journal of Physiology Volume 474 ; 474  >
+    au < manifest ; 1994 ; Journal of Physiology Volume 475 ; 475  >
+    au < manifest ; 1994 ; Journal of Physiology Volume 476 ; 476  >
+    au < manifest ; 1994 ; Journal of Physiology Volume 477 ; 477  >
     au < ready ; 1994 ; Journal of Physiology Volume 478 ; 478  >
-    au < testing ; 1994 ; Journal of Physiology Volume 479 ; 479  >
-    au < testing ; 1994 ; Journal of Physiology Volume 480 ; 480  >
-    au < testing ; 1994-1995 ; Journal of Physiology Volume 481 ; 481  >
-    au < testing ; 1995 ; Journal of Physiology Volume 482 ; 482  >
-    au < testing ; 1995 ; Journal of Physiology Volume 483 ; 483  >
-    au < testing ; 1995 ; Journal of Physiology Volume 484 ; 484  >
-    au < testing ; 1995 ; Journal of Physiology Volume 485 ; 485  >
-    au < testing ; 1995 ; Journal of Physiology Volume 486 ; 486  >
-    au < testing ; 1995 ; Journal of Physiology Volume 487 ; 487  >
-    au < testing ; 1995 ; Journal of Physiology Volume 488 ; 488  >
-    au < testing ; 1995 ; Journal of Physiology Volume 489 ; 489  >
-    au < testing ; 1996 ; Journal of Physiology Volume 490 ; 490  >
-    au < testing ; 1996 ; Journal of Physiology Volume 491 ; 491  >
-    au < testing ; 1996 ; Journal of Physiology Volume 492 ; 492  >
-    au < testing ; 1996 ; Journal of Physiology Volume 493 ; 493  >
-    au < testing ; 1996 ; Journal of Physiology Volume 494 ; 494  >
-    au < testing ; 1996 ; Journal of Physiology Volume 495 ; 495  >
-    au < testing ; 1996 ; Journal of Physiology Volume 496 ; 496  >
+    au < manifest ; 1994 ; Journal of Physiology Volume 479 ; 479  >
+    au < manifest ; 1994 ; Journal of Physiology Volume 480 ; 480  >
+    au < manifest ; 1994-1995 ; Journal of Physiology Volume 481 ; 481  >
+    au < manifest ; 1995 ; Journal of Physiology Volume 482 ; 482  >
+    au < manifest ; 1995 ; Journal of Physiology Volume 483 ; 483  >
+    au < manifest ; 1995 ; Journal of Physiology Volume 484 ; 484  >
+    au < ready ; 1995 ; Journal of Physiology Volume 485 ; 485  >
+    au < manifest ; 1995 ; Journal of Physiology Volume 486 ; 486  >
+    au < manifest ; 1995 ; Journal of Physiology Volume 487 ; 487  >
+    au < ready ; 1995 ; Journal of Physiology Volume 488 ; 488  >
+    au < ready ; 1995 ; Journal of Physiology Volume 489 ; 489  >
+    au < manifest ; 1996 ; Journal of Physiology Volume 490 ; 490  >
+    au < manifest ; 1996 ; Journal of Physiology Volume 491 ; 491  >
+    au < manifest ; 1996 ; Journal of Physiology Volume 492 ; 492  >
+    au < manifest ; 1996 ; Journal of Physiology Volume 493 ; 493  >
+    au < manifest ; 1996 ; Journal of Physiology Volume 494 ; 494  >
+    au < manifest ; 1996 ; Journal of Physiology Volume 495 ; 495  >
+    au < manifest ; 1996 ; Journal of Physiology Volume 496 ; 496  >
     au < ready ; 1996 ; Journal of Physiology Volume 497 ; 497  >
-    au < testing ; 1997 ; Journal of Physiology Volume 498 ; 498  >
-    au < testing ; 1997 ; Journal of Physiology Volume 499 ; 499  >
-    au < testing ; 1997 ; Journal of Physiology Volume 500 ; 500  >
-    au < testing ; 1997 ; Journal of Physiology Volume 501 ; 501  >
-    au < testing ; 1997 ; Journal of Physiology Volume 502 ; 502  >
-    au < testing ; 1997 ; Journal of Physiology Volume 503 ; 503  >
-    au < testing ; 1997 ; Journal of Physiology Volume 504 ; 504  >
-    au < testing ; 1997 ; Journal of Physiology Volume 505 ; 505  >
-    au < testing ; 1998 ; Journal of Physiology Volume 506 ; 506  >
-    au < testing ; 1998 ; Journal of Physiology Volume 507 ; 507  >
-    au < testing ; 1998 ; Journal of Physiology Volume 508 ; 508  >
-    au < testing ; 1998 ; Journal of Physiology Volume 509 ; 509  >
-    au < testing ; 1998 ; Journal of Physiology Volume 510 ; 510  >
-    au < testing ; 1998 ; Journal of Physiology Volume 511 ; 511  >
-    au < testing ; 1998 ; Journal of Physiology Volume 512 ; 512  >
-    au < testing ; 1998 ; Journal of Physiology Volume 513 ; 513  >
-    au < testing ; 1999 ; Journal of Physiology Volume 514 ; 514  >
-    au < testing ; 1999 ; Journal of Physiology Volume 515 ; 515  >
-    au < testing ; 1999 ; Journal of Physiology Volume 516 ; 516  >
-    au < testing ; 1999 ; Journal of Physiology Volume 517 ; 517  >
-    au < testing ; 1999 ; Journal of Physiology Volume 518 ; 518  >
-    au < testing ; 1999 ; Journal of Physiology Volume 519 ; 519  >
-    au < testing ; 1999 ; Journal of Physiology Volume 520 ; 520  >
-    au < testing ; 1999 ; Journal of Physiology Volume 521 ; 521  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 498 ; 498  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 499 ; 499  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 500 ; 500  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 501 ; 501  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 502 ; 502  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 503 ; 503  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 504 ; 504  >
+    au < manifest ; 1997 ; Journal of Physiology Volume 505 ; 505  >
+    au < manifest ; 1998 ; Journal of Physiology Volume 506 ; 506  >
+    au < manifest ; 1998 ; Journal of Physiology Volume 507 ; 507  >
+    au < manifest ; 1998 ; Journal of Physiology Volume 508 ; 508  >
+    au < manifest ; 1998 ; Journal of Physiology Volume 509 ; 509  >
+    au < ready ; 1998 ; Journal of Physiology Volume 510 ; 510  >
+    au < manifest ; 1998 ; Journal of Physiology Volume 511 ; 511  >
+    au < manifest ; 1998 ; Journal of Physiology Volume 512 ; 512  >
+    au < manifest ; 1998 ; Journal of Physiology Volume 513 ; 513  >
+    au < manifest ; 1999 ; Journal of Physiology Volume 514 ; 514  >
+    au < manifest ; 1999 ; Journal of Physiology Volume 515 ; 515  >
+    au < manifest ; 1999 ; Journal of Physiology Volume 516 ; 516  >
+    au < manifest ; 1999 ; Journal of Physiology Volume 517 ; 517  >
+    au < ready ; 1999 ; Journal of Physiology Volume 518 ; 518  >
+    au < manifest ; 1999 ; Journal of Physiology Volume 519 ; 519  >
+    au < manifest ; 1999 ; Journal of Physiology Volume 520 ; 520  >
+    au < manifest ; 1999 ; Journal of Physiology Volume 521 ; 521  >
     au < testing ; 2000 ; Journal of Physiology Volume 522 ; 522  >
     au < testing ; 2000 ; Journal of Physiology Volume 523 ; 523  >
-    au < testing ; 2000 ; Journal of Physiology Volume 524 ; 524  >
+    au < ready ; 2000 ; Journal of Physiology Volume 524 ; 524  >
     au < testing ; 2000 ; Journal of Physiology Volume 525 ; 525  >
-    au < testing ; 2000 ; Journal of Physiology Volume 526 ; 526  >
+    au < ready ; 2000 ; Journal of Physiology Volume 526 ; 526  >
     au < testing ; 2000 ; Journal of Physiology Volume 527 ; 527  >
     au < testing ; 2000 ; Journal of Physiology Volume 528 ; 528  >
     au < testing ; 2000 ; Journal of Physiology Volume 529 ; 529  >
@@ -697,7 +697,7 @@
     au < testing ; 2001 ; Journal of Physiology Volume 534 ; 534  >
     au < testing ; 2001 ; Journal of Physiology Volume 535 ; 535  >
     au < testing ; 2001 ; Journal of Physiology Volume 536 ; 536  >
-    au < testing ; 2001 ; Journal of Physiology Volume 537 ; 537  >
+    au < ready ; 2001 ; Journal of Physiology Volume 537 ; 537  >
     au < testing ; 2002 ; Journal of Physiology Volume 538 ; 538  >
     au < testing ; 2002 ; Journal of Physiology Volume 539 ; 539  >
     au < testing ; 2002 ; Journal of Physiology Volume 540 ; 540  >
@@ -721,7 +721,7 @@
     au < testing ; 2004 ; Journal of Physiology Volume 558 ; 558  >
     au < testing ; 2004 ; Journal of Physiology Volume 559 ; 559  >
     au < testing ; 2004 ; Journal of Physiology Volume 560 ; 560  >
-    au < testing ; 2004 ; Journal of Physiology Volume 561 ; 561  >
+    au < ready ; 2004 ; Journal of Physiology Volume 561 ; 561  >
     au < testing ; 2005 ; Journal of Physiology Volume 562 ; 562  >
     au < testing ; 2005 ; Journal of Physiology Volume 563 ; 563  >
     au < testing ; 2005 ; Journal of Physiology Volume 564 ; 564  >
