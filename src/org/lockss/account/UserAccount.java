@@ -1,10 +1,10 @@
 /*
- * $Id: UserAccount.java,v 1.10 2009-11-24 04:33:44 dshr Exp $
+ * $Id: UserAccount.java,v 1.11 2010-05-27 06:58:50 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -109,7 +109,6 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     hashAlg = getDefaultHashAlgorithm();
     lastPasswordChange = -1;
     lastUserPasswordChange = -1;
-    auditableEvent("account initialized");
   }
 
   /** Setup configuration before first use.  Called by factory. */
@@ -194,10 +193,24 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
 
   /** Set the user's roles */
   public void setRoles(String val) {
+    setRoles(val, false);
+  }
+
+  /** Set the user's roles */
+  public void setRoles(String val, boolean isInteractive) {
     if (log.isDebug2()) log.debug2(userName + ".setRoles(" + val + ")");
-    setChanged(!StringUtil.equalStrings(roles, val));
-    roles = val;
-    roleSet = null;
+    if (!StringUtil.equalStrings(roles, val)) {
+      if (isInteractive) {
+	auditableEvent("changed roles from " + none(roles) + " to " + none(val));
+      }
+      setChanged(true);
+      roles = val;
+      roleSet = null;
+    }
+  }
+
+  private String none(String s) {
+    return StringUtil.isNullString(s) ? "none" : s;
   }
 
   /** Set the user's roles */
@@ -265,6 +278,9 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
       shiftArrayUp(passwordHistory);
       passwordHistory[0] = currentPassword;
     }
+    boolean isChange = (currentPassword != null
+			&& !currentPassword.equals(hash));
+
     currentPassword = hash;
     lastPasswordChange = TimeBase.nowMs();
     if (isAdmin) {
@@ -272,10 +288,13 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
     } else {
       lastUserPasswordChange = lastPasswordChange;
     }
+    boolean isReenable = isDisabled;
     enable();
     setChanged(true);
     clearCaches();
-    auditableEvent("changed password");
+    if (isChange) {
+      auditableEvent("changed password" + (isDisabled ? " and reenabled" : ""));
+    }
   }
 
   /** Account has logged in */
@@ -326,7 +345,7 @@ public abstract class UserAccount implements LockssSerializable, Comparable {
   public void auditableEvent(String text) {
     if (acctMgr != null) {
       AlertManager alertMgr = acctMgr.getDaemon().getAlertManager();
-      String msg = userName + ": " + text;
+      String msg = "User " + userName + " " + text;
       if (alertMgr != null) {
 	Alert alert = Alert.cacheAlert(Alert.AUDITABLE_EVENT);
 	alertMgr.raiseAlert(alert, msg);
