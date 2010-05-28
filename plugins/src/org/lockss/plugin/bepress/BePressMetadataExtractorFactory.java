@@ -1,5 +1,5 @@
 /*
- * $Id: BePressMetadataExtractorFactory.java,v 1.5 2009-10-14 21:43:06 dshr Exp $
+ * $Id: BePressMetadataExtractorFactory.java,v 1.6 2010-05-28 16:02:36 dsferopoulos Exp $
  */
 
 /*
@@ -31,106 +31,127 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin.bepress;
+
 import java.io.*;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
+
 public class BePressMetadataExtractorFactory
-    implements MetadataExtractorFactory {
+        implements MetadataExtractorFactory {
   static Logger log = Logger.getLogger("SimpleMetaTagMetadataExtractor");
+
   /**
    * Create a MetadataExtractor
+   *
    * @param contentType the content type type from which to extract URLs
    */
   public MetadataExtractor createMetadataExtractor(String contentType)
-      throws PluginException {
+          throws PluginException {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {
       return new BePressMetadataExtractor();
     }
     return null;
   }
+
   public class BePressMetadataExtractor extends SimpleMetaTagMetadataExtractor {
 
     public BePressMetadataExtractor() {
     }
+
     String[] bePressField = {
-      "bepress_citation_doi",
-      "bepress_citation_date",
-      "bepress_citation_authors",
-      "bepress_citation_title",
+            "bepress_citation_doi",
+            "bepress_citation_date",
+            "bepress_citation_authors",
+            "bepress_citation_title",
     };
     String[] dublinCoreField = {
-      "dc.Identifier",
-      "dc.Date",
-      "dc.Contributor",
-      "dc.Title",
+            "dc.Identifier",
+            "dc.Date",
+            "dc.Contributor",
+            "dc.Title",
     };
     String[] bePressField2 = {
-      "bepress_citation_volume",
-      "bepress_citation_issue",
-      "bepress_citation_firstpage",
+            "bepress_citation_volume",
+            "bepress_citation_issue",
+            "bepress_citation_firstpage",
+            "bepress_citation_authors",
+            "bepress_citation_title",
     };
 
     public Metadata extract(CachedUrl cu) throws IOException {
       Metadata ret = super.extract(cu);
       for (int i = 0; i < bePressField.length; i++) {
-	String content = ret.getProperty(bePressField[i]);
-	if (content != null) {
-	  ret.setProperty(dublinCoreField[i], content);
-	  if (dublinCoreField[i].equalsIgnoreCase("dc.Identifier")) {
-	    ret.putDOI(content);
-	  }
-	}
+        String content = ret.getProperty(bePressField[i]);
+        if (content != null) {
+          ret.setProperty(dublinCoreField[i], content);
+          
+          if (dublinCoreField[i].equalsIgnoreCase("dc.Identifier")) {
+            ret.putDOI(content);
+          }
+        }
       }
       for (int i = 0; i < bePressField2.length; i++) {
-	String content = ret.getProperty(bePressField2[i]);
-	if (content != null) {
-	  switch (i) {
-	  case 0:
-	    ret.putVolume(content);
-	    break;
-	  case 1:
-	    ret.putIssue(content);
-	    break;
-	  case 2:
-	    ret.putStartPage(content);
-	    break;
-	  }
-	}
+        String content = ret.getProperty(bePressField2[i]);
+        if (content != null) {
+          switch (i) {
+            case 0:
+              ret.putVolume(content);
+              break;
+            case 1:
+              ret.putIssue(content);
+              break;
+            case 2:
+              ret.putStartPage(content);
+              break;
+            case 3:
+              if(content.contains(";")){
+                content = content.replaceAll(",", "");
+                content = content.replaceAll(";", ",");
+              }
+              ret.putAuthor(content);              
+              break;
+            case 4:
+              ret.putTitle(content);              
+              break;
+          }
+        }
       }
       // The ISSN is not in a meta tag but we can find it in the text
       if (cu == null) {
-	throw new IllegalArgumentException("extract(null)");
+        throw new IllegalArgumentException("extract(null)");
       }
       BufferedReader bReader =
-	new BufferedReader(cu.openForReading());
+              new BufferedReader(cu.openForReading());
       for (String line = bReader.readLine();
-	   line != null;
-	   line = bReader.readLine()) {
-	line = line.trim();
-	if (StringUtil.startsWithIgnoreCase(line, "<div id=\"issn\">")) {
-	  log.debug2("Line: " + line);
-	  addISSN(line, ret);
-	}
+           line != null;
+           line = bReader.readLine()) {
+        line = line.trim();
+        if (StringUtil.startsWithIgnoreCase(line, "<div id=\"issn\">")) {
+          log.debug2("Line: " + line);
+          addISSN(line, ret);
+        }
       }
       IOUtil.safeClose(bReader);
       return ret;
     }
+
     protected void addISSN(String line, Metadata ret) {
       String issnFlag = "ISSN: ";
       int issnBegin = StringUtil.indexOfIgnoreCase(line, issnFlag);
       if (issnBegin <= 0) {
-	log.debug(line + " : no " + issnFlag);
-	return;
+        log.debug(line + " : no " + issnFlag);
+        return;
       }
       issnBegin += issnFlag.length();
       String issn = line.substring(issnBegin, issnBegin + 9);
       if (issn.length() < 9) {
-	log.debug(line + " : too short");
-	return;
+        log.debug(line + " : too short");
+        return;
       }
       ret.putISSN(issn);
     }

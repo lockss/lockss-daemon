@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireMetadataExtractorFactory.java,v 1.5 2009-10-27 13:00:30 dshr Exp $
+ * $Id: HighWireMetadataExtractorFactory.java,v 1.6 2010-05-28 16:02:36 dsferopoulos Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin.highwire;
+
 import java.io.*;
 
 import org.lockss.util.*;
@@ -38,21 +39,25 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
+
 public class HighWireMetadataExtractorFactory
-    implements MetadataExtractorFactory {
+        implements MetadataExtractorFactory {
   static Logger log = Logger.getLogger("HighWireMetadataExtractorFactory");
+
   /**
    * Create a MetadataExtractor
+   *
    * @param contentType the content type type from which to extract URLs
    */
   public MetadataExtractor createMetadataExtractor(String contentType)
-      throws PluginException {
+          throws PluginException {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {
       return new HighWireMetadataExtractor();
     }
     return null;
   }
+
   public class HighWireMetadataExtractor extends SimpleMetaTagMetadataExtractor {
 
     public HighWireMetadataExtractor() {
@@ -61,51 +66,69 @@ public class HighWireMetadataExtractorFactory
     public Metadata extract(CachedUrl cu) throws IOException {
       final String reprintPrefix = "/cgi/reprint/";
       final String reprintframedPrefix = "/cgi/reprintframed/";
-      
+
       Metadata ret = null;
       String reprintUrl = cu.getUrl();
       if (reprintUrl.contains(reprintPrefix)) {
         String reprintframedUrl =
-	  reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
+                reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
         CachedUrl reprintframedCu =
-	  cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
-	if (reprintframedCu != null) {
-	  cu = reprintframedCu;
-	}
+                cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
+        if (reprintframedCu != null) {
+          cu = reprintframedCu;
+        }
       }
       try {
-	if (cu != null && cu.hasContent()) {
-	  ret = super.extract(cu);
-	  // HighWire doesn't prefix the DOI in dc.Identifier with doi:
-	  String content = ret.getProperty("dc.Identifier");
-	  if (content != null && !"".equals(content)) {
-	    ret.putDOI(content);
-	  }
-	  // Many HighWire journals either omit citation_issn
-	  // or have an empty citation_issn
-	  content = ret.getProperty("citation_issn");
-	  if (content != null && !"".equals(content)) {
-	    ret.putISSN(content);
-	  }
-	  content = ret.getProperty("citation_volume");
-	  if (content != null && !"".equals(content)) {
-	    ret.putVolume(content);
-	  }
-	  content = ret.getProperty("citation_issue");
-	  if (content != null && !"".equals(content)) {
-	    ret.putIssue(content);
-	  }
-	  content = ret.getProperty("citation_firstpage");
-	  if (content != null && !"".equals(content)) {
-	    ret.putStartPage(content);
-	  }
-	}
+        if (cu != null && cu.hasContent()) {
+          ret = super.extract(cu);
+          // HighWire doesn't prefix the DOI in dc.Identifier with doi:
+          String content = ret.getProperty("dc.Identifier");
+          if (content != null && !"".equals(content)) {
+            ret.putDOI(content);
+          }
+          // Many HighWire journals either omit citation_issn
+          // or have an empty citation_issn
+          content = ret.getProperty("citation_issn");
+          if (content != null && !"".equals(content)) {
+            ret.putISSN(content);
+          }
+          content = ret.getProperty("citation_volume");
+          if (content != null && !"".equals(content)) {
+            ret.putVolume(content);
+          }
+          content = ret.getProperty("citation_issue");
+          if (content != null && !"".equals(content)) {
+            ret.putIssue(content);
+          }
+          content = ret.getProperty("citation_firstpage");
+          if (content != null && !"".equals(content)) {
+            ret.putStartPage(content);
+          }
+          content = ret.getProperty("citation_authors");
+          if (content != null && !"".equals(content)) {
+            if (content.contains(";")) { // if there is more than one authors then add them in a comma delimited list
+              content = content.replaceAll(", ", " ");
+              content = content.replaceAll(";", ",");
+            }
+            ret.putAuthor(content);
+          }
+          content = ret.getProperty("citation_title");
+          if (content != null && !"".equals(content)) {
+            ret.putTitle(content);
+          }
+          content = ret.getProperty("citation_date");
+          if (content != null && !"".equals(content)) {
+            ret.putDate(content);
+          }
+
+        }
       }
       finally {
-	AuUtil.safeRelease(cu);
-      }        
-      
+        AuUtil.safeRelease(cu);
+      }
+
       return ret;
     }
   }
+
 }
