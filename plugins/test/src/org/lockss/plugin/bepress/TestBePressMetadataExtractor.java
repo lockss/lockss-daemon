@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.4 2009-12-08 23:43:59 dshr Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.5 2010-05-28 16:08:04 dsferopoulos Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
   String goodStartPage = "123";
   String goodISSN = "1234-5678";
   String goodDate = "4/1/2000";
-  String goodAuthor = "Fred Bloggs";
+  String goodAuthor = "Gandhi, Pankaj J.; Talia, Yogen H.; Murthy, Z.V.P.";
   String goodTitle = "Spurious Results";
   String goodAbsUrl = "http://www.example.com/bogus/vol13/iss4/art123/abs";
   String goodPdfUrl = "http://www.example.com/bogus/vol13/iss4/art123/pdf";
@@ -224,6 +224,12 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     assertEquals(goodIssue, md.getIssue());
     assertEquals(goodStartPage, md.getStartPage());
     assertEquals(goodISSN, md.getISSN());
+
+    goodAuthor = goodAuthor.replaceAll(",", "");
+    goodAuthor = goodAuthor.replaceAll(";", ",");
+    
+    assertEquals(goodAuthor, md.getAuthor());
+    assertEquals(goodTitle, md.getTitle());
     for (int i = 1; i < dublinCoreField.length; i++) {
       assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
     }
@@ -327,8 +333,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
       assertEquals(expected_content, actual_content);
     }
 
-    // Do the accessors return the expected values?
-    System.out.println(md.getISSN());
+    // Do the accessors return the expected values?    
     assertEquals(getFieldContent(tagMap.get("bepress_citation_volume"), fileNum, depth, branchNum), md.getVolume());
     assertEquals(getFieldContent(issnTemplate, fileNum, depth, branchNum),  md.getISSN());    
     assertEquals(getFieldContent(tagMap.get("bepress_citation_issue"), fileNum, depth, branchNum), md.getIssue());

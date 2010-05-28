@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.3 2009-12-09 05:13:03 dshr Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.4 2010-05-28 16:08:04 dsferopoulos Exp $
  */
 
 /*
@@ -186,7 +186,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
   String goodStartPage = "123";
   String goodISSN = "1234-5678";
   String goodDate = "4/1/2000";
-  String goodAuthor = "Fred Bloggs";
+  String goodAuthor = "Regnard, Claud; Leslie, Paula; Crawford, Hannah; Matthews, Dorothy; Gibson, Lynn";
   String goodTitle = "Spurious Results";
   String goodAbsUrl = "http://www.example.com/cgi/content/abstract/13/4/123";
   String goodPdfUrl = "http://www.example.com/cgi/content/reprint/13/4/123";
@@ -247,6 +247,11 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     assertEquals(goodIssue, md.getIssue());
     assertEquals(goodStartPage, md.getStartPage());
     assertEquals(goodISSN, md.getISSN());
+    goodAuthor = goodAuthor.replaceAll(", ", " ");
+    goodAuthor = goodAuthor.replaceAll(";", ",");
+    assertEquals(goodAuthor, md.getAuthor());
+    assertEquals(goodTitle, md.getTitle());
+    assertEquals(goodDate, md.getDate());
     for (int i = 1; i < dublinCoreField.length; i++) {
       assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
     }
@@ -276,6 +281,9 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     assertNull(md.getIssue());
     assertNull(md.getStartPage());
     assertNull(md.getISSN());
+    assertNull(md.getAuthor());
+    assertNull(md.getTitle());
+    assertNull(md.getDate());
     for (int i = 1; i < dublinCoreField.length; i++) {
       assertNull(md.getProperty(dublinCoreField[i]));
     }
