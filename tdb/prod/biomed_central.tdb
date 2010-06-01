@@ -985,10 +985,10 @@
       au < released ; BMC Surgery Volume 4 ; 4 >
       au < released ; BMC Surgery Volume 5 ; 5 >
       au < released ; BMC Surgery Volume 6 ; 6 >
-      au < testing ; BMC Surgery Volume 7 ; 7 >
-      au < testing ; BMC Surgery Volume 8 ; 8 >
-      au < testing ; BMC Surgery Volume 9 ; 9 >
-      au < testing ; BMC Surgery Volume 10 ; 10 >
+      au < ready ; BMC Surgery Volume 7 ; 7 >
+      au < ready ; BMC Surgery Volume 8 ; 8 >
+      au < ready ; BMC Surgery Volume 9 ; 9 >
+      au < ready ; BMC Surgery Volume 10 ; 10 >
     }
 
     {
@@ -1000,9 +1000,9 @@
       param[journal_issn] = 1752-0509
 
       au < released ; BMC Systems Biology Volume 1 ; 1 >
-      au < testing ; BMC Systems Biology Volume 2 ; 2 >
+      au < ready ; BMC Systems Biology Volume 2 ; 2 >
       au < testing ; BMC Systems Biology Volume 3 ; 3 >
-      au < testing ; BMC Systems Biology Volume 4 ; 4 >
+      au < ready ; BMC Systems Biology Volume 4 ; 4 >
     }
 
     {
@@ -1019,10 +1019,10 @@
       au < released ; BMC Urology Volume 4 ; 4 >
       au < released ; BMC Urology Volume 5 ; 5 >
       au < released ; BMC Urology Volume 6 ; 6 >
-      au < testing ; BMC Urology Volume 7 ; 7 >
-      au < testing ; BMC Urology Volume 8 ; 8 >
-      au < testing ; BMC Urology Volume 9 ; 9 >
-      au < testing ; BMC Urology Volume 10 ; 10 >
+      au < ready ; BMC Urology Volume 7 ; 7 >
+      au < ready ; BMC Urology Volume 8 ; 8 >
+      au < ready ; BMC Urology Volume 9 ; 9 >
+      au < ready ; BMC Urology Volume 10 ; 10 >
     }
 
     {
@@ -1035,10 +1035,10 @@
 
       au < released ; BMC Veterinary Research Volume 1 ; 1 >
       au < released ; BMC Veterinary Research Volume 2 ; 2 >
-      au < testing ; BMC Veterinary Research Volume 3 ; 3 >
-      au < testing ; BMC Veterinary Research Volume 4 ; 4 >
-      au < testing ; BMC Veterinary Research Volume 5 ; 5 >
-      au < testing ; BMC Veterinary Research Volume 6 ; 6 >
+      au < ready ; BMC Veterinary Research Volume 3 ; 3 >
+      au < ready ; BMC Veterinary Research Volume 4 ; 4 >
+      au < ready ; BMC Veterinary Research Volume 5 ; 5 >
+      au < ready ; BMC Veterinary Research Volume 6 ; 6 >
     }
 
     {
@@ -1055,10 +1055,10 @@
       au < released ; BMC Women's Health Volume 4 ; 4 >
       au < released ; BMC Women's Health Volume 5 ; 5 >
       au < released ; BMC Women's Health Volume 6 ; 6 >
-      au < testing ; BMC Women's Health Volume 7 ; 7 >
-      au < testing ; BMC Women's Health Volume 8 ; 8 >
-      au < testing ; BMC Women's Health Volume 9 ; 9 >
-      au < testing ; BMC Women's Health Volume 10 ; 10 >
+      au < ready ; BMC Women's Health Volume 7 ; 7 >
+      au < ready ; BMC Women's Health Volume 8 ; 8 >
+      au < ready ; BMC Women's Health Volume 9 ; 9 >
+      au < ready ; BMC Women's Health Volume 10 ; 10 >
      
     }
     
