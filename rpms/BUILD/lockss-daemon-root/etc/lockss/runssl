@@ -69,12 +69,14 @@ if [ ! -s ${PERM_DIR}/${LOCKSS_HOSTNAME}.jceks -o ! -s ${PERM_DIR}/${LOCKSS_HOST
     exit 0
 fi
 # Check that private keystore password owned by and only accessible by root.
-if ! is_secure ${PERM_DIR}/${LOCKSS_HOSTNAME}.pass ; then
+is_secure ${PERM_DIR}/${LOCKSS_HOSTNAME}.pass 
+if [ $? -ne 0 ]; then
     echo "WARNING: keystore password for ${LOCKSS_HOSTNAME} insecure - not starting SSL"
     exit 1
 fi
 # Check that private keystore owned by and only accessible to root.
-if ! is_secure ${PERM_DIR}/${LOCKSS_HOSTNAME}.jceks ; then
+is_secure ${PERM_DIR}/${LOCKSS_HOSTNAME}.jceks
+if [ $? -ne 0 ]; then
     echo "WARNING: keystore for ${LOCKSS_HOSTNAME} insecure - not starting SSL"
     exit 1
 fi
