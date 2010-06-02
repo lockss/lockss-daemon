@@ -174,6 +174,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCAnesthesiology7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Anesthesiology" />
+   <property name="issn" value="1471-2253" />
+   <property name="title" value="BMC Anesthesiology Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2253" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCAnesthesiology8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Anesthesiology" />
+   <property name="issn" value="1471-2253" />
+   <property name="title" value="BMC Anesthesiology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2253" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCAnesthesiology9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Anesthesiology" />
+   <property name="issn" value="1471-2253" />
+   <property name="title" value="BMC Anesthesiology Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2253" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCAnesthesiology10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Anesthesiology" />
+   <property name="issn" value="1471-2253" />
+   <property name="title" value="BMC Anesthesiology Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2253" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCBiochemistry1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Biochemistry" />
@@ -317,6 +401,90 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiochemistry8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biochemistry" />
+   <property name="issn" value="1471-2091" />
+   <property name="title" value="BMC Biochemistry Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2091" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiochemistry9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biochemistry" />
+   <property name="issn" value="1471-2091" />
+   <property name="title" value="BMC Biochemistry Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2091" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiochemistry10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biochemistry" />
+   <property name="issn" value="1471-2091" />
+   <property name="title" value="BMC Biochemistry Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2091" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiochemistry11">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biochemistry" />
+   <property name="issn" value="1471-2091" />
+   <property name="title" value="BMC Biochemistry Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2091" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -468,6 +636,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCBioinformatics8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Bioinformatics" />
+   <property name="issn" value="1471-2105" />
+   <property name="title" value="BMC Bioinformatics Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2105" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBioinformatics9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Bioinformatics" />
+   <property name="issn" value="1471-2105" />
+   <property name="title" value="BMC Bioinformatics Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2105" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBioinformatics10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Bioinformatics" />
+   <property name="issn" value="1471-2105" />
+   <property name="title" value="BMC Bioinformatics Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2105" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBioinformatics11">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Bioinformatics" />
+   <property name="issn" value="1471-2105" />
+   <property name="title" value="BMC Bioinformatics Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2105" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCBiology1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Biology" />
@@ -548,6 +800,90 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="4" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiology5">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biology" />
+   <property name="issn" value="1741-7007" />
+   <property name="title" value="BMC Biology Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1741-7007" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiology6">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biology" />
+   <property name="issn" value="1741-7007" />
+   <property name="title" value="BMC Biology Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1741-7007" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiology7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biology" />
+   <property name="issn" value="1741-7007" />
+   <property name="title" value="BMC Biology Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1741-7007" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiology8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biology" />
+   <property name="issn" value="1741-7007" />
+   <property name="title" value="BMC Biology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1741-7007" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -678,6 +1014,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCBiotechnology7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biotechnology" />
+   <property name="issn" value="1472-6750" />
+   <property name="title" value="BMC Biotechnology Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6750" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiotechnology8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biotechnology" />
+   <property name="issn" value="1472-6750" />
+   <property name="title" value="BMC Biotechnology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6750" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiotechnology9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biotechnology" />
+   <property name="issn" value="1472-6750" />
+   <property name="title" value="BMC Biotechnology Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6750" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBiotechnology10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Biotechnology" />
+   <property name="issn" value="1472-6750" />
+   <property name="title" value="BMC Biotechnology Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6750" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCBloodDisorders1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Blood Disorders" />
@@ -800,6 +1220,90 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBloodDisorders7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Blood Disorders" />
+   <property name="issn" value="1471-2326" />
+   <property name="title" value="BMC Blood Disorders Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2326" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBloodDisorders8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Blood Disorders" />
+   <property name="issn" value="1471-2326" />
+   <property name="title" value="BMC Blood Disorders Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2326" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBloodDisorders9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Blood Disorders" />
+   <property name="issn" value="1471-2326" />
+   <property name="title" value="BMC Blood Disorders Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2326" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCBloodDisorders10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Blood Disorders" />
+   <property name="issn" value="1471-2326" />
+   <property name="title" value="BMC Blood Disorders Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2326" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -930,6 +1434,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCCancer7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cancer" />
+   <property name="issn" value="1471-2407" />
+   <property name="title" value="BMC Cancer Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2407" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCancer8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cancer" />
+   <property name="issn" value="1471-2407" />
+   <property name="title" value="BMC Cancer Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2407" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCancer9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cancer" />
+   <property name="issn" value="1471-2407" />
+   <property name="title" value="BMC Cancer Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2407" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCancer10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cancer" />
+   <property name="issn" value="1471-2407" />
+   <property name="title" value="BMC Cancer Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2407" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCCardiovascularDisorders1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Cardiovascular Disorders" />
@@ -1052,6 +1640,90 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCardiovascularDisorders7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cardiovascular Disorders" />
+   <property name="issn" value="1471-2261" />
+   <property name="title" value="BMC Cardiovascular Disorders Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2261" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCardiovascularDisorders8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cardiovascular Disorders" />
+   <property name="issn" value="1471-2261" />
+   <property name="title" value="BMC Cardiovascular Disorders Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2261" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCardiovascularDisorders9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cardiovascular Disorders" />
+   <property name="issn" value="1471-2261" />
+   <property name="title" value="BMC Cardiovascular Disorders Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2261" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCardiovascularDisorders10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cardiovascular Disorders" />
+   <property name="issn" value="1471-2261" />
+   <property name="title" value="BMC Cardiovascular Disorders Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2261" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -1203,6 +1875,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCCellBiology8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cell Biology" />
+   <property name="issn" value="1471-2121" />
+   <property name="title" value="BMC Cell Biology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2121" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCellBiology9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cell Biology" />
+   <property name="issn" value="1471-2121" />
+   <property name="title" value="BMC Cell Biology Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2121" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCellBiology10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cell Biology" />
+   <property name="issn" value="1471-2121" />
+   <property name="title" value="BMC Cell Biology Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2121" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCCellBiology11">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Cell Biology" />
+   <property name="issn" value="1471-2121" />
+   <property name="title" value="BMC Cell Biology Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2121" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCChemicalBiology1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Chemical Biology" />
@@ -1329,6 +2085,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCChemicalBiology7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Chemical Biology" />
+   <property name="issn" value="1472-6769" />
+   <property name="title" value="BMC Chemical Biology Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6769" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCChemicalBiology8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Chemical Biology" />
+   <property name="issn" value="1472-6769" />
+   <property name="title" value="BMC Chemical Biology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6769" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCChemicalBiology9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Chemical Biology" />
+   <property name="issn" value="1472-6769" />
+   <property name="title" value="BMC Chemical Biology Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6769" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCChemicalBiology10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Chemical Biology" />
+   <property name="issn" value="1472-6769" />
+   <property name="title" value="BMC Chemical Biology Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6769" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCClinicalPathology1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Clinical Pathology" />
@@ -1451,6 +2291,90 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCClinicalPathology7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Clinical Pathology" />
+   <property name="issn" value="1472-6890" />
+   <property name="title" value="BMC Clinical Pathology Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6890" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCClinicalPathology8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Clinical Pathology" />
+   <property name="issn" value="1472-6890" />
+   <property name="title" value="BMC Clinical Pathology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6890" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCClinicalPathology9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Clinical Pathology" />
+   <property name="issn" value="1472-6890" />
+   <property name="title" value="BMC Clinical Pathology Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6890" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCClinicalPathology10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Clinical Pathology" />
+   <property name="issn" value="1472-6890" />
+   <property name="title" value="BMC Clinical Pathology Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6890" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -6768,6 +7692,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCPregnancyandChildbirth7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pregnancy and Childbirth" />
+   <property name="issn" value="1471-2393" />
+   <property name="title" value="BMC Pregnancy and Childbirth Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2393" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPregnancyandChildbirth8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pregnancy and Childbirth" />
+   <property name="issn" value="1471-2393" />
+   <property name="title" value="BMC Pregnancy and Childbirth Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2393" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPregnancyandChildbirth9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pregnancy and Childbirth" />
+   <property name="issn" value="1471-2393" />
+   <property name="title" value="BMC Pregnancy and Childbirth Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2393" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPregnancyandChildbirth10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pregnancy and Childbirth" />
+   <property name="issn" value="1471-2393" />
+   <property name="title" value="BMC Pregnancy and Childbirth Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2393" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCPsychiatry1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Psychiatry" />
@@ -6890,6 +7898,90 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPsychiatry7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Psychiatry" />
+   <property name="issn" value="1471-244X" />
+   <property name="title" value="BMC Psychiatry Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-244X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPsychiatry8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Psychiatry" />
+   <property name="issn" value="1471-244X" />
+   <property name="title" value="BMC Psychiatry Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-244X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPsychiatry9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Psychiatry" />
+   <property name="issn" value="1471-244X" />
+   <property name="title" value="BMC Psychiatry Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-244X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPsychiatry10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Psychiatry" />
+   <property name="issn" value="1471-244X" />
+   <property name="title" value="BMC Psychiatry Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-244X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -7020,6 +8112,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCPublicHealth7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Public Health" />
+   <property name="issn" value="1471-2458" />
+   <property name="title" value="BMC Public Health Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2458" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPublicHealth8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Public Health" />
+   <property name="issn" value="1471-2458" />
+   <property name="title" value="BMC Public Health Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2458" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPublicHealth9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Public Health" />
+   <property name="issn" value="1471-2458" />
+   <property name="title" value="BMC Public Health Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2458" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPublicHealth10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Public Health" />
+   <property name="issn" value="1471-2458" />
+   <property name="title" value="BMC Public Health Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2458" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCPulmonaryMedicine1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Pulmonary Medicine" />
@@ -7146,6 +8322,90 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
+  <property name="BMCPulmonaryMedicine7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pulmonary Medicine" />
+   <property name="issn" value="1471-2466" />
+   <property name="title" value="BMC Pulmonary Medicine Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2466" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPulmonaryMedicine8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pulmonary Medicine" />
+   <property name="issn" value="1471-2466" />
+   <property name="title" value="BMC Pulmonary Medicine Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2466" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPulmonaryMedicine9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pulmonary Medicine" />
+   <property name="issn" value="1471-2466" />
+   <property name="title" value="BMC Pulmonary Medicine Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2466" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCPulmonaryMedicine10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Pulmonary Medicine" />
+   <property name="issn" value="1471-2466" />
+   <property name="title" value="BMC Pulmonary Medicine Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1471-2466" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="BMCStructuralBiology1">
    <property name="attributes.publisher" value="BioMed Central" />
    <property name="journalTitle" value="BMC Structural Biology" />
@@ -7268,6 +8528,90 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCStructuralBiology7">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Structural Biology" />
+   <property name="issn" value="1472-6807" />
+   <property name="title" value="BMC Structural Biology Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6807" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCStructuralBiology8">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Structural Biology" />
+   <property name="issn" value="1472-6807" />
+   <property name="title" value="BMC Structural Biology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6807" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCStructuralBiology9">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Structural Biology" />
+   <property name="issn" value="1472-6807" />
+   <property name="title" value="BMC Structural Biology Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6807" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="BMCStructuralBiology10">
+   <property name="attributes.publisher" value="BioMed Central" />
+   <property name="journalTitle" value="BMC Structural Biology" />
+   <property name="issn" value="1472-6807" />
+   <property name="title" value="BMC Structural Biology Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bmc.BMCPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.biomedcentral.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1472-6807" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
