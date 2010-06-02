@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.11 2010-06-02 11:07:10 dsferopoulos Exp $
+ * $Id: Metadata.java,v 1.12 2010-06-02 21:09:49 tlipkis Exp $
  */
 
 /*
@@ -39,8 +39,12 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.state.*;
+import org.lockss.poller.*;
+import org.lockss.repository.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-
+import org.lockss.plugin.definable.*;
 
 /**
  * Collect and search metadata, supporting metadata-based access to content.
@@ -447,7 +451,7 @@ public class Metadata extends Properties {
    */
   public static final String KEY_START_PAGE = "LOCKSS.startpage";
   public String getStartPage() {
-    String ret = getProperty(KEY_START_PAGE);                          
+    String ret = getProperty(KEY_START_PAGE);
     // XXX
     return ret;
   }
@@ -472,32 +476,17 @@ public class Metadata extends Properties {
   }
 
   /*
-   * Return the article title, if any.
+   * Return the title, if any.
    */
-  public static final String KEY_ARTICLE_TITLE = "LOCKSS.article.title";
-  public String getArticleTitle() {
-    String ret = getProperty(KEY_ARTICLE_TITLE);
+  public static final String KEY_TITLE = "LOCKSS.title";
+  public String getTitle() {
+    String ret = getProperty(KEY_TITLE);
     // XXX
     return ret;
   }
-  public void putArticleTitle(String articleTitle) {
+  public void putTitle(String title) {
     // XXX protocol?
-    setProperty(KEY_ARTICLE_TITLE, articleTitle);
-  }
-
-
-  /**
-   * Return the journal title, if any
-   */
-  public static final String KEY_JOURNAL_TITLE = "LOCKSS.journal.title";
-  public String getJournalTitle(){
-    String ret = getProperty(KEY_JOURNAL_TITLE);
-    // XXX
-    return ret;
-  }
-  public void putJournalTitle(String journalTitle){
-    // XXX protocol?
-    setProperty(KEY_JOURNAL_TITLE, journalTitle);
+    setProperty(KEY_TITLE, title);
   }
 
   /*
