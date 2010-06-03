@@ -72,7 +72,7 @@ set_variables () {
         fi
         if [ "X${LOCKSS_SSL_CONFIG}" = "X" ]
         then
-            LOCKSS_SSL_CONFIG=/var/run/lockss/ssl.${1}.txt
+            LOCKSS_SSL_CONFIG=${LOCKSS_HOME}/var/run/lockss/ssl.${1}.txt
             export LOCKSS_SSL_CONFIG
         fi
         ;;
