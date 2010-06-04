@@ -1627,7 +1627,7 @@ comment[nprot4] = poll mismatch
     >
 
     param[journal_id] = vital
-    param[comment] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
+    comment[years] = 2009 is the only year with a manifest page.  Volume 6 and 7 seem to be part of multi-year volumes, so these years are likely to change.
     
     au < released ; 2009 ; Vital Volume 6 ; 2009 ; 6 >
     au < released ; 2009 ; Vital Volume 7 (year 2009) ; 2009 ; 7 >

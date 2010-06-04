@@ -51,6 +51,7 @@
   <property name="AsianJournalofComparativeLaw1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="eissn" value="1932-0205" />
    <property name="title" value="Asian Journal of Comparative Law Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -71,6 +72,7 @@
   <property name="AsianJournalofComparativeLaw2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="eissn" value="1932-0205" />
    <property name="title" value="Asian Journal of Comparative Law Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -91,6 +93,7 @@
   <property name="AsianJournalofComparativeLaw3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="eissn" value="1932-0205" />
    <property name="title" value="Asian Journal of Comparative Law Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -111,6 +114,7 @@
   <property name="AsianJournalofComparativeLaw4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="eissn" value="1932-0205" />
    <property name="title" value="Asian Journal of Comparative Law Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -131,6 +135,7 @@
   <property name="AsianJournalofComparativeLaw5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Asian Journal of Comparative Law" />
+   <property name="eissn" value="1932-0205" />
    <property name="title" value="Asian Journal of Comparative Law Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -151,6 +156,7 @@
   <property name="TheBEJournalofEconomicAnalysisPolicy1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -165,16 +171,13 @@
     <property name="key" value="volume" />
     <property name="value" value="1" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2005" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -189,16 +192,13 @@
     <property name="key" value="volume" />
     <property name="value" value="2" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2006" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -213,16 +213,13 @@
     <property name="key" value="volume" />
     <property name="value" value="3" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2004" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -237,16 +234,13 @@
     <property name="key" value="volume" />
     <property name="value" value="4" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2005" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -261,16 +255,13 @@
     <property name="key" value="volume" />
     <property name="value" value="5" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2006" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -285,16 +276,13 @@
     <property name="key" value="volume" />
     <property name="value" value="6" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2006" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -309,16 +297,13 @@
     <property name="key" value="volume" />
     <property name="value" value="7" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2007" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -333,16 +318,13 @@
     <property name="key" value="volume" />
     <property name="value" value="8" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2008" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -357,16 +339,13 @@
     <property name="key" value="volume" />
     <property name="value" value="9" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2009" />
   </property>
 
   <property name="TheBEJournalofEconomicAnalysisPolicy10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Economic Analysis &amp; Policy" />
+   <property name="eissn" value="1935-1682" />
    <property name="title" value="The B.E. Journal of Economic Analysis &amp; Policy Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -381,16 +360,13 @@
     <property name="key" value="volume" />
     <property name="value" value="10" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004." />
-   </property>
    <property name="attributes.year" value="2010" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -405,16 +381,13 @@
     <property name="key" value="volume" />
     <property name="value" value="1" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2004" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -429,16 +402,13 @@
     <property name="key" value="volume" />
     <property name="value" value="2" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2006" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -453,16 +423,13 @@
     <property name="key" value="volume" />
     <property name="value" value="3" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2003" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -477,16 +444,13 @@
     <property name="key" value="volume" />
     <property name="value" value="4" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2004" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -501,16 +465,13 @@
     <property name="key" value="volume" />
     <property name="value" value="3" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2005" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -525,16 +486,13 @@
     <property name="key" value="volume" />
     <property name="value" value="4" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2006" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -549,16 +507,13 @@
     <property name="key" value="volume" />
     <property name="value" value="3" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2007" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -573,16 +528,13 @@
     <property name="key" value="volume" />
     <property name="value" value="8" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2008" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -597,16 +549,13 @@
     <property name="key" value="volume" />
     <property name="value" value="9" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2009" />
   </property>
 
   <property name="TheBEJournalofMacroeconomics10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Macroeconomics" />
+   <property name="eissn" value="1935-1690" />
    <property name="title" value="The B.E. Journal of Macroeconomics Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -621,16 +570,13 @@
     <property name="key" value="volume" />
     <property name="value" value="10" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="There are no typos below, either.  Volume 1 and 2 were published after volume 3." />
-   </property>
    <property name="attributes.year" value="2010" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -645,16 +591,13 @@
     <property name="key" value="volume" />
     <property name="value" value="1" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2002" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -669,16 +612,13 @@
     <property name="key" value="volume" />
     <property name="value" value="2" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2006" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -693,16 +633,13 @@
     <property name="key" value="volume" />
     <property name="value" value="3" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2003" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -717,16 +654,13 @@
     <property name="key" value="volume" />
     <property name="value" value="4" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2004" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -741,16 +675,13 @@
     <property name="key" value="volume" />
     <property name="value" value="5" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2005" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -765,16 +696,13 @@
     <property name="key" value="volume" />
     <property name="value" value="6" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2006" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -789,16 +717,13 @@
     <property name="key" value="volume" />
     <property name="value" value="7" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2007" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -813,16 +738,13 @@
     <property name="key" value="volume" />
     <property name="value" value="8" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2008" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -837,16 +759,13 @@
     <property name="key" value="volume" />
     <property name="value" value="9" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2009" />
   </property>
 
   <property name="TheBEJournalofTheoreticalEconomics10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The B.E. Journal of Theoretical Economics" />
+   <property name="eissn" value="1935-1704" />
    <property name="title" value="The B.E. Journal of Theoretical Economics Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -861,16 +780,13 @@
     <property name="key" value="volume" />
     <property name="value" value="10" />
    </property>
-   <property name="param.4">
-    <property name="key" value="comment" />
-    <property name="value" value="None" />
-   </property>
    <property name="attributes.year" value="2010" />
   </property>
 
   <property name="BasicIncomeStudies1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Basic Income Studies" />
+   <property name="eissn" value="1932-0183" />
    <property name="title" value="Basic Income Studies Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -891,6 +807,7 @@
   <property name="BasicIncomeStudies2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Basic Income Studies" />
+   <property name="eissn" value="1932-0183" />
    <property name="title" value="Basic Income Studies Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -911,6 +828,7 @@
   <property name="BasicIncomeStudies3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Basic Income Studies" />
+   <property name="eissn" value="1932-0183" />
    <property name="title" value="Basic Income Studies Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -931,6 +849,7 @@
   <property name="BasicIncomeStudies4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Basic Income Studies" />
+   <property name="eissn" value="1932-0183" />
    <property name="title" value="Basic Income Studies Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -951,6 +870,7 @@
   <property name="BusinessandPolitics1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -971,6 +891,7 @@
   <property name="BusinessandPolitics2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -991,6 +912,7 @@
   <property name="BusinessandPolitics3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1011,6 +933,7 @@
   <property name="BusinessandPolitics4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1031,6 +954,7 @@
   <property name="BusinessandPolitics5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1051,6 +975,7 @@
   <property name="BusinessandPolitics6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1071,6 +996,7 @@
   <property name="BusinessandPolitics7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1091,6 +1017,7 @@
   <property name="BusinessandPolitics8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1111,6 +1038,7 @@
   <property name="BusinessandPolitics9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1131,6 +1059,7 @@
   <property name="BusinessandPolitics10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1151,6 +1080,7 @@
   <property name="BusinessandPolitics11">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 11" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1171,6 +1101,7 @@
   <property name="BusinessandPolitics12">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Business and Politics" />
+   <property name="eissn" value="1469-3569" />
    <property name="title" value="Business and Politics Volume 12" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1231,6 +1162,7 @@
   <property name="CapitalismandSociety1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Capitalism and Society" />
+   <property name="eissn" value="1932-0213" />
    <property name="title" value="Capitalism and Society Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1251,6 +1183,7 @@
   <property name="CapitalismandSociety2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Capitalism and Society" />
+   <property name="eissn" value="1932-0213" />
    <property name="title" value="Capitalism and Society Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1271,6 +1204,7 @@
   <property name="CapitalismandSociety3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Capitalism and Society" />
+   <property name="eissn" value="1932-0213" />
    <property name="title" value="Capitalism and Society Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1291,6 +1225,7 @@
   <property name="CapitalismandSociety4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Capitalism and Society" />
+   <property name="eissn" value="1932-0213" />
    <property name="title" value="Capitalism and Society Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1311,6 +1246,7 @@
   <property name="CapitalismandSociety5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Capitalism and Society" />
+   <property name="eissn" value="1932-0213" />
    <property name="title" value="Capitalism and Society Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1331,6 +1267,7 @@
   <property name="ChemicalProductandProcessModeling1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="eissn" value="1934-2659" />
    <property name="title" value="Chemical Product and Process Modeling Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1351,6 +1288,7 @@
   <property name="ChemicalProductandProcessModeling2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="eissn" value="1934-2659" />
    <property name="title" value="Chemical Product and Process Modeling Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1371,6 +1309,7 @@
   <property name="ChemicalProductandProcessModeling3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="eissn" value="1934-2659" />
    <property name="title" value="Chemical Product and Process Modeling Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1391,6 +1330,7 @@
   <property name="ChemicalProductandProcessModeling4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="eissn" value="1934-2659" />
    <property name="title" value="Chemical Product and Process Modeling Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1411,6 +1351,7 @@
   <property name="ChemicalProductandProcessModeling5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Chemical Product and Process Modeling" />
+   <property name="eissn" value="1934-2659" />
    <property name="title" value="Chemical Product and Process Modeling Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1431,6 +1372,7 @@
   <property name="TheEconomistsVoice1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
    <property name="title" value="The Economists' Voice Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1451,6 +1393,7 @@
   <property name="TheEconomistsVoice2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
    <property name="title" value="The Economists' Voice Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1471,6 +1414,7 @@
   <property name="TheEconomistsVoice3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
    <property name="title" value="The Economists' Voice Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1491,6 +1435,7 @@
   <property name="TheEconomistsVoice4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
    <property name="title" value="The Economists' Voice Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1511,6 +1456,7 @@
   <property name="TheEconomistsVoice5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
    <property name="title" value="The Economists' Voice Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1531,6 +1477,7 @@
   <property name="TheEconomistsVoice6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
    <property name="title" value="The Economists' Voice Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1551,6 +1498,7 @@
   <property name="TheEconomistsVoice7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
    <property name="title" value="The Economists' Voice Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1571,6 +1519,7 @@
   <property name="TheForum1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1591,6 +1540,7 @@
   <property name="TheForum2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1611,6 +1561,7 @@
   <property name="TheForum3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1631,6 +1582,7 @@
   <property name="TheForum4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1651,6 +1603,7 @@
   <property name="TheForum5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1671,6 +1624,7 @@
   <property name="TheForum6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1691,6 +1645,7 @@
   <property name="TheForum7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1711,6 +1666,7 @@
   <property name="TheForum8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
+   <property name="eissn" value="1540-8884" />
    <property name="title" value="The Forum Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1731,6 +1687,7 @@
   <property name="ForumforHealthEconomicsPolicy1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1751,6 +1708,7 @@
   <property name="ForumforHealthEconomicsPolicy2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1771,6 +1729,7 @@
   <property name="ForumforHealthEconomicsPolicy3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1791,6 +1750,7 @@
   <property name="ForumforHealthEconomicsPolicy4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1811,6 +1771,7 @@
   <property name="ForumforHealthEconomicsPolicy5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1831,6 +1792,7 @@
   <property name="ForumforHealthEconomicsPolicy6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1851,6 +1813,7 @@
   <property name="ForumforHealthEconomicsPolicy7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1871,6 +1834,7 @@
   <property name="ForumforHealthEconomicsPolicy8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1891,6 +1855,7 @@
   <property name="ForumforHealthEconomicsPolicy9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1911,6 +1876,7 @@
   <property name="ForumforHealthEconomicsPolicy10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1931,6 +1897,7 @@
   <property name="ForumforHealthEconomicsPolicy11">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 11" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1951,6 +1918,7 @@
   <property name="ForumforHealthEconomicsPolicy12">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 12" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1971,6 +1939,7 @@
   <property name="ForumforHealthEconomicsPolicy13">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Forum for Health Economics &amp; Policy" />
+   <property name="eissn" value="1558-9544" />
    <property name="title" value="Forum for Health Economics &amp; Policy Volume 13" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -1991,6 +1960,7 @@
   <property name="GlobalEconomyJournal1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2011,6 +1981,7 @@
   <property name="GlobalEconomyJournal2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2031,6 +2002,7 @@
   <property name="GlobalEconomyJournal3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2051,6 +2023,7 @@
   <property name="GlobalEconomyJournal4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2071,6 +2044,7 @@
   <property name="GlobalEconomyJournal5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2091,6 +2065,7 @@
   <property name="GlobalEconomyJournal6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2111,6 +2086,7 @@
   <property name="GlobalEconomyJournal7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2131,6 +2107,7 @@
   <property name="GlobalEconomyJournal8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2151,6 +2128,7 @@
   <property name="GlobalEconomyJournal9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2171,6 +2149,7 @@
   <property name="GlobalEconomyJournal10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Economy Journal" />
+   <property name="eissn" value="1524-5861" />
    <property name="title" value="Global Economy Journal Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2191,6 +2170,7 @@
   <property name="GlobalJurist1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2211,6 +2191,7 @@
   <property name="GlobalJurist2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2231,6 +2212,7 @@
   <property name="GlobalJurist3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2251,6 +2233,7 @@
   <property name="GlobalJurist4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2271,6 +2254,7 @@
   <property name="GlobalJurist5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2291,6 +2275,7 @@
   <property name="GlobalJurist6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2311,6 +2296,7 @@
   <property name="GlobalJurist7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2331,6 +2317,7 @@
   <property name="GlobalJurist8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2351,6 +2338,7 @@
   <property name="GlobalJurist9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2371,6 +2359,7 @@
   <property name="GlobalJurist10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Global Jurist" />
+   <property name="eissn" value="1934-2640" />
    <property name="title" value="Global Jurist Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2391,6 +2380,7 @@
   <property name="InternationalCommentaryonEvidence1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="eissn" value="1554-4567" />
    <property name="title" value="International Commentary on Evidence Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2411,6 +2401,7 @@
   <property name="InternationalCommentaryonEvidence2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="eissn" value="1554-4567" />
    <property name="title" value="International Commentary on Evidence Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2431,6 +2422,7 @@
   <property name="InternationalCommentaryonEvidence3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="eissn" value="1554-4567" />
    <property name="title" value="International Commentary on Evidence Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2451,6 +2443,7 @@
   <property name="InternationalCommentaryonEvidence4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="eissn" value="1554-4567" />
    <property name="title" value="International Commentary on Evidence Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2471,6 +2464,7 @@
   <property name="InternationalCommentaryonEvidence5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="eissn" value="1554-4567" />
    <property name="title" value="International Commentary on Evidence Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2491,6 +2485,7 @@
   <property name="InternationalCommentaryonEvidence6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="eissn" value="1554-4567" />
    <property name="title" value="International Commentary on Evidence Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2511,6 +2506,7 @@
   <property name="InternationalCommentaryonEvidence7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Commentary on Evidence" />
+   <property name="eissn" value="1554-4567" />
    <property name="title" value="International Commentary on Evidence Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2531,6 +2527,7 @@
   <property name="TheInternationalJournalofBiostatistics1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="eissn" value="1557-4679" />
    <property name="title" value="The International Journal of Biostatistics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2551,6 +2548,7 @@
   <property name="TheInternationalJournalofBiostatistics2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="eissn" value="1557-4679" />
    <property name="title" value="The International Journal of Biostatistics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2571,6 +2569,7 @@
   <property name="TheInternationalJournalofBiostatistics3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="eissn" value="1557-4679" />
    <property name="title" value="The International Journal of Biostatistics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2591,6 +2590,7 @@
   <property name="TheInternationalJournalofBiostatistics4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="eissn" value="1557-4679" />
    <property name="title" value="The International Journal of Biostatistics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2611,6 +2611,7 @@
   <property name="TheInternationalJournalofBiostatistics5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="eissn" value="1557-4679" />
    <property name="title" value="The International Journal of Biostatistics Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2631,6 +2632,7 @@
   <property name="TheInternationalJournalofBiostatistics6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The International Journal of Biostatistics" />
+   <property name="eissn" value="1557-4679" />
    <property name="title" value="The International Journal of Biostatistics Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2651,6 +2653,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2671,6 +2674,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2691,6 +2695,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2711,6 +2716,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2731,6 +2737,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2751,6 +2758,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2771,6 +2779,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2791,6 +2800,7 @@
   <property name="InternationalJournalofChemicalReactorEngineering8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Chemical Reactor Engineering" />
+   <property name="eissn" value="1542-6580" />
    <property name="title" value="International Journal of Chemical Reactor Engineering Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2811,6 +2821,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2831,6 +2842,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2851,6 +2863,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2871,6 +2884,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2891,6 +2905,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2911,6 +2926,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2931,6 +2947,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2951,6 +2968,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2971,6 +2989,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -2991,6 +3010,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3011,6 +3031,7 @@
   <property name="InternationalJournalofEmergingElectricPowerSystems11">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Emerging Electric Power Systems" />
+   <property name="eissn" value="1553-779X" />
    <property name="title" value="International Journal of Emerging Electric Power Systems Volume 11" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3031,6 +3052,7 @@
   <property name="InternationalJournalofFoodEngineering1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="eissn" value="1556-3758" />
    <property name="title" value="International Journal of Food Engineering Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3051,6 +3073,7 @@
   <property name="InternationalJournalofFoodEngineering2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="eissn" value="1556-3758" />
    <property name="title" value="International Journal of Food Engineering Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3071,6 +3094,7 @@
   <property name="InternationalJournalofFoodEngineering3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="eissn" value="1556-3758" />
    <property name="title" value="International Journal of Food Engineering Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3091,6 +3115,7 @@
   <property name="InternationalJournalofFoodEngineering4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="eissn" value="1556-3758" />
    <property name="title" value="International Journal of Food Engineering Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3111,6 +3136,7 @@
   <property name="InternationalJournalofFoodEngineering5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="eissn" value="1556-3758" />
    <property name="title" value="International Journal of Food Engineering Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3131,6 +3157,7 @@
   <property name="InternationalJournalofFoodEngineering6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Food Engineering" />
+   <property name="eissn" value="1556-3758" />
    <property name="title" value="International Journal of Food Engineering Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3151,6 +3178,7 @@
   <property name="InternationalJournalofNursingEducationScholarship1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="eissn" value="1548-923X" />
    <property name="title" value="International Journal of Nursing Education Scholarship Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3171,6 +3199,7 @@
   <property name="InternationalJournalofNursingEducationScholarship2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="eissn" value="1548-923X" />
    <property name="title" value="International Journal of Nursing Education Scholarship Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3191,6 +3220,7 @@
   <property name="InternationalJournalofNursingEducationScholarship3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="eissn" value="1548-923X" />
    <property name="title" value="International Journal of Nursing Education Scholarship Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3211,6 +3241,7 @@
   <property name="InternationalJournalofNursingEducationScholarship4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="eissn" value="1548-923X" />
    <property name="title" value="International Journal of Nursing Education Scholarship Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3231,6 +3262,7 @@
   <property name="InternationalJournalofNursingEducationScholarship5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="eissn" value="1548-923X" />
    <property name="title" value="International Journal of Nursing Education Scholarship Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3251,6 +3283,7 @@
   <property name="InternationalJournalofNursingEducationScholarship6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="eissn" value="1548-923X" />
    <property name="title" value="International Journal of Nursing Education Scholarship Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3271,6 +3304,7 @@
   <property name="InternationalJournalofNursingEducationScholarship7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="International Journal of Nursing Education Scholarship" />
+   <property name="eissn" value="1548-923X" />
    <property name="title" value="International Journal of Nursing Education Scholarship Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3291,6 +3325,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3311,6 +3346,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3331,6 +3367,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3351,6 +3388,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3371,6 +3409,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3391,6 +3430,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3411,6 +3451,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3431,6 +3472,7 @@
   <property name="JournalofAgriculturalFoodIndustrialOrganization8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Agricultural &amp; Food Industrial Organization" />
+   <property name="eissn" value="1542-0485" />
    <property name="title" value="Journal of Agricultural &amp; Food Industrial Organization Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3451,6 +3493,7 @@
   <property name="JournalofBusinessValuationandEconomicLossAnalysis1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
+   <property name="eissn" value="1932-9156" />
    <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3471,6 +3514,7 @@
   <property name="JournalofBusinessValuationandEconomicLossAnalysis2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
+   <property name="eissn" value="1932-9156" />
    <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3491,6 +3535,7 @@
   <property name="JournalofBusinessValuationandEconomicLossAnalysis3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
+   <property name="eissn" value="1932-9156" />
    <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3511,6 +3556,7 @@
   <property name="JournalofBusinessValuationandEconomicLossAnalysis4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
+   <property name="eissn" value="1932-9156" />
    <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3531,6 +3577,7 @@
   <property name="JournalofBusinessValuationandEconomicLossAnalysis5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Business Valuation and Economic Loss Analysis" />
+   <property name="eissn" value="1932-9156" />
    <property name="title" value="Journal of Business Valuation and Economic Loss Analysis Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3551,6 +3598,7 @@
   <property name="JournalofComplementaryandIntegrativeMedicine1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="eissn" value="1553-3840" />
    <property name="title" value="Journal of Complementary and Integrative Medicine Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3571,6 +3619,7 @@
   <property name="JournalofComplementaryandIntegrativeMedicine2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="eissn" value="1553-3840" />
    <property name="title" value="Journal of Complementary and Integrative Medicine Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3591,6 +3640,7 @@
   <property name="JournalofComplementaryandIntegrativeMedicine3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="eissn" value="1553-3840" />
    <property name="title" value="Journal of Complementary and Integrative Medicine Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3611,6 +3661,7 @@
   <property name="JournalofComplementaryandIntegrativeMedicine4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="eissn" value="1553-3840" />
    <property name="title" value="Journal of Complementary and Integrative Medicine Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3631,6 +3682,7 @@
   <property name="JournalofComplementaryandIntegrativeMedicine5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="eissn" value="1553-3840" />
    <property name="title" value="Journal of Complementary and Integrative Medicine Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3651,6 +3703,7 @@
   <property name="JournalofComplementaryandIntegrativeMedicine6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="eissn" value="1553-3840" />
    <property name="title" value="Journal of Complementary and Integrative Medicine Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3671,6 +3724,7 @@
   <property name="JournalofComplementaryandIntegrativeMedicine7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
+   <property name="eissn" value="1553-3840" />
    <property name="title" value="Journal of Complementary and Integrative Medicine Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3751,6 +3805,7 @@
   <property name="JournalofHomelandSecurityandEmergencyManagement1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="eissn" value="1547-7355" />
    <property name="title" value="Journal of Homeland Security and Emergency Management Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3771,6 +3826,7 @@
   <property name="JournalofHomelandSecurityandEmergencyManagement2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="eissn" value="1547-7355" />
    <property name="title" value="Journal of Homeland Security and Emergency Management Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3791,6 +3847,7 @@
   <property name="JournalofHomelandSecurityandEmergencyManagement3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="eissn" value="1547-7355" />
    <property name="title" value="Journal of Homeland Security and Emergency Management Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3811,6 +3868,7 @@
   <property name="JournalofHomelandSecurityandEmergencyManagement4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="eissn" value="1547-7355" />
    <property name="title" value="Journal of Homeland Security and Emergency Management Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3831,6 +3889,7 @@
   <property name="JournalofHomelandSecurityandEmergencyManagement5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="eissn" value="1547-7355" />
    <property name="title" value="Journal of Homeland Security and Emergency Management Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3851,6 +3910,7 @@
   <property name="JournalofHomelandSecurityandEmergencyManagement6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="eissn" value="1547-7355" />
    <property name="title" value="Journal of Homeland Security and Emergency Management Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3871,6 +3931,7 @@
   <property name="JournalofHomelandSecurityandEmergencyManagement7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Homeland Security and Emergency Management" />
+   <property name="eissn" value="1547-7355" />
    <property name="title" value="Journal of Homeland Security and Emergency Management Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3891,6 +3952,7 @@
   <property name="JournalofImageryResearchinSportandPhysicalActivity1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
+   <property name="eissn" value="1932-0191" />
    <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3911,6 +3973,7 @@
   <property name="JournalofImageryResearchinSportandPhysicalActivity2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
+   <property name="eissn" value="1932-0191" />
    <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3931,6 +3994,7 @@
   <property name="JournalofImageryResearchinSportandPhysicalActivity3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
+   <property name="eissn" value="1932-0191" />
    <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3951,6 +4015,7 @@
   <property name="JournalofImageryResearchinSportandPhysicalActivity4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
+   <property name="eissn" value="1932-0191" />
    <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3971,6 +4036,7 @@
   <property name="JournalofImageryResearchinSportandPhysicalActivity5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Imagery Research in Sport and Physical Activity" />
+   <property name="eissn" value="1932-0191" />
    <property name="title" value="Journal of Imagery Research in Sport and Physical Activity Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -3991,6 +4057,7 @@
   <property name="JournalofIndustrialOrganizationEducation1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Industrial Organization Education" />
+   <property name="eissn" value="1935-5041" />
    <property name="title" value="Journal of Industrial Organization Education Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4011,6 +4078,7 @@
   <property name="JournalofIndustrialOrganizationEducation2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Industrial Organization Education" />
+   <property name="eissn" value="1935-5041" />
    <property name="title" value="Journal of Industrial Organization Education Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4031,6 +4099,7 @@
   <property name="JournalofIndustrialOrganizationEducation3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Industrial Organization Education" />
+   <property name="eissn" value="1935-5041" />
    <property name="title" value="Journal of Industrial Organization Education Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4051,6 +4120,7 @@
   <property name="JournalofIndustrialOrganizationEducation4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Industrial Organization Education" />
+   <property name="eissn" value="1935-5041" />
    <property name="title" value="Journal of Industrial Organization Education Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4071,6 +4141,7 @@
   <property name="JournalofQuantitativeAnalysisinSports1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="eissn" value="1559-0410" />
    <property name="title" value="Journal of Quantitative Analysis in Sports Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4091,6 +4162,7 @@
   <property name="JournalofQuantitativeAnalysisinSports2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="eissn" value="1559-0410" />
    <property name="title" value="Journal of Quantitative Analysis in Sports Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4111,6 +4183,7 @@
   <property name="JournalofQuantitativeAnalysisinSports3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="eissn" value="1559-0410" />
    <property name="title" value="Journal of Quantitative Analysis in Sports Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4131,6 +4204,7 @@
   <property name="JournalofQuantitativeAnalysisinSports4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="eissn" value="1559-0410" />
    <property name="title" value="Journal of Quantitative Analysis in Sports Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4151,6 +4225,7 @@
   <property name="JournalofQuantitativeAnalysisinSports5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="eissn" value="1559-0410" />
    <property name="title" value="Journal of Quantitative Analysis in Sports Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4171,6 +4246,7 @@
   <property name="JournalofQuantitativeAnalysisinSports6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Quantitative Analysis in Sports" />
+   <property name="eissn" value="1559-0410" />
    <property name="title" value="Journal of Quantitative Analysis in Sports Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4231,6 +4307,7 @@
   <property name="JournalofTortLaw1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Tort Law" />
+   <property name="eissn" value="1932-9148" />
    <property name="title" value="Journal of Tort Law Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4251,6 +4328,7 @@
   <property name="JournalofTortLaw2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Tort Law" />
+   <property name="eissn" value="1932-9148" />
    <property name="title" value="Journal of Tort Law Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4271,6 +4349,7 @@
   <property name="JournalofTortLaw3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Tort Law" />
+   <property name="eissn" value="1932-9148" />
    <property name="title" value="Journal of Tort Law Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4431,6 +4510,7 @@
   <property name="MuslimWorldJournalofHumanRights1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="eissn" value="1554-4419" />
    <property name="title" value="Muslim World Journal of Human Rights Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4451,6 +4531,7 @@
   <property name="MuslimWorldJournalofHumanRights2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="eissn" value="1554-4419" />
    <property name="title" value="Muslim World Journal of Human Rights Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4471,6 +4552,7 @@
   <property name="MuslimWorldJournalofHumanRights3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="eissn" value="1554-4419" />
    <property name="title" value="Muslim World Journal of Human Rights Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4491,6 +4573,7 @@
   <property name="MuslimWorldJournalofHumanRights4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="eissn" value="1554-4419" />
    <property name="title" value="Muslim World Journal of Human Rights Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4511,6 +4594,7 @@
   <property name="MuslimWorldJournalofHumanRights5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="eissn" value="1554-4419" />
    <property name="title" value="Muslim World Journal of Human Rights Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4531,6 +4615,7 @@
   <property name="MuslimWorldJournalofHumanRights6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Muslim World Journal of Human Rights" />
+   <property name="eissn" value="1554-4419" />
    <property name="title" value="Muslim World Journal of Human Rights Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4611,6 +4696,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4631,6 +4717,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4651,6 +4738,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4671,6 +4759,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4691,6 +4780,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4711,6 +4801,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4731,6 +4822,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4751,6 +4843,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4771,6 +4864,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4791,6 +4885,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4811,6 +4906,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy11">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 11" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4831,6 +4927,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy12">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 12" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4851,6 +4948,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy13">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 13" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4871,6 +4969,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy14">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 14" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4891,6 +4990,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy15">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 15" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4911,6 +5011,7 @@
   <property name="PeaceEconomicsPeaceScienceandPublicPolicy16">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Peace Economics, Peace Science and Public Policy" />
+   <property name="eissn" value="1554-8597" />
    <property name="title" value="Peace Economics, Peace Science and Public Policy Volume 16" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4951,6 +5052,7 @@
   <property name="ReviewofLawEconomics1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="eissn" value="1555-5879" />
    <property name="title" value="Review of Law &amp; Economics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4971,6 +5073,7 @@
   <property name="ReviewofLawEconomics2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="eissn" value="1555-5879" />
    <property name="title" value="Review of Law &amp; Economics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -4991,6 +5094,7 @@
   <property name="ReviewofLawEconomics3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="eissn" value="1555-5879" />
    <property name="title" value="Review of Law &amp; Economics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5011,6 +5115,7 @@
   <property name="ReviewofLawEconomics4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="eissn" value="1555-5879" />
    <property name="title" value="Review of Law &amp; Economics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5031,6 +5136,7 @@
   <property name="ReviewofLawEconomics5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="eissn" value="1555-5879" />
    <property name="title" value="Review of Law &amp; Economics Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5051,6 +5157,7 @@
   <property name="ReviewofLawEconomics6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Law &amp; Economics" />
+   <property name="eissn" value="1555-5879" />
    <property name="title" value="Review of Law &amp; Economics Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5071,6 +5178,7 @@
   <property name="ReviewofMarketingScience1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5091,6 +5199,7 @@
   <property name="ReviewofMarketingScience2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5111,6 +5220,7 @@
   <property name="ReviewofMarketingScience3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5131,6 +5241,7 @@
   <property name="ReviewofMarketingScience4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5151,6 +5262,7 @@
   <property name="ReviewofMarketingScience5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5171,6 +5283,7 @@
   <property name="ReviewofMarketingScience6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5191,6 +5304,7 @@
   <property name="ReviewofMarketingScience7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5211,6 +5325,7 @@
   <property name="ReviewofMarketingScience8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Review of Marketing Science" />
+   <property name="eissn" value="1546-5616" />
    <property name="title" value="Review of Marketing Science Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5331,6 +5446,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5351,6 +5467,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5371,6 +5488,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5391,6 +5509,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5411,6 +5530,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5431,6 +5551,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5451,6 +5572,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5471,6 +5593,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5491,6 +5614,7 @@
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Statistical Applications in Genetics and Molecular Biology" />
+   <property name="eissn" value="1544-6115" />
    <property name="title" value="Statistical Applications in Genetics and Molecular Biology Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5611,6 +5735,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5631,6 +5756,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5651,6 +5777,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5671,6 +5798,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5691,6 +5819,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5711,6 +5840,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5731,6 +5861,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5751,6 +5882,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5771,6 +5903,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5791,6 +5924,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5811,6 +5945,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics11">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 11" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5831,6 +5966,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics12">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 12" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5851,6 +5987,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics13">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 13" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5871,6 +6008,7 @@
   <property name="StudiesinNonlinearDynamicsEconometrics14">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Studies in Nonlinear Dynamics &amp; Econometrics" />
+   <property name="eissn" value="1558-3708" />
    <property name="title" value="Studies in Nonlinear Dynamics &amp; Econometrics Volume 14" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5891,6 +6029,7 @@
   <property name="TheoreticalInquiriesinLaw1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5911,6 +6050,7 @@
   <property name="TheoreticalInquiriesinLaw2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5931,6 +6071,7 @@
   <property name="TheoreticalInquiriesinLaw3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5951,6 +6092,7 @@
   <property name="TheoreticalInquiriesinLaw4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5971,6 +6113,7 @@
   <property name="TheoreticalInquiriesinLaw5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -5991,6 +6134,7 @@
   <property name="TheoreticalInquiriesinLaw6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6011,6 +6155,7 @@
   <property name="TheoreticalInquiriesinLaw7">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 7" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6031,6 +6176,7 @@
   <property name="TheoreticalInquiriesinLaw8">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 8" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6051,6 +6197,7 @@
   <property name="TheoreticalInquiriesinLaw9">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 9" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6071,6 +6218,7 @@
   <property name="TheoreticalInquiriesinLaw10">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 10" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6091,6 +6239,7 @@
   <property name="TheoreticalInquiriesinLaw11">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Theoretical Inquiries in Law" />
+   <property name="eissn" value="1565-3404" />
    <property name="title" value="Theoretical Inquiries in Law Volume 11" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6111,6 +6260,7 @@
   <property name="WorldPoliticalScienceReview1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="World Political Science Review" />
+   <property name="eissn" value="1935-6226" />
    <property name="title" value="World Political Science Review Volume 1" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6131,6 +6281,7 @@
   <property name="WorldPoliticalScienceReview2">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="World Political Science Review" />
+   <property name="eissn" value="1935-6226" />
    <property name="title" value="World Political Science Review Volume 2" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6151,6 +6302,7 @@
   <property name="WorldPoliticalScienceReview3">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="World Political Science Review" />
+   <property name="eissn" value="1935-6226" />
    <property name="title" value="World Political Science Review Volume 3" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6171,6 +6323,7 @@
   <property name="WorldPoliticalScienceReview4">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="World Political Science Review" />
+   <property name="eissn" value="1935-6226" />
    <property name="title" value="World Political Science Review Volume 4" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6191,6 +6344,7 @@
   <property name="WorldPoliticalScienceReview5">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="World Political Science Review" />
+   <property name="eissn" value="1935-6226" />
    <property name="title" value="World Political Science Review Volume 5" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
@@ -6211,6 +6365,7 @@
   <property name="WorldPoliticalScienceReview6">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="World Political Science Review" />
+   <property name="eissn" value="1935-6226" />
    <property name="title" value="World Political Science Review Volume 6" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
