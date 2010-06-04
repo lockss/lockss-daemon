@@ -1,5 +1,5 @@
 /*
- * $Id: BePressMetadataExtractorFactory.java,v 1.6 2010-05-28 16:02:36 dsferopoulos Exp $
+ * $Id: BePressMetadataExtractorFactory.java,v 1.7 2010-06-04 16:47:00 dsferopoulos Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class BePressMetadataExtractorFactory
               ret.putAuthor(content);              
               break;
             case 4:
-              ret.putTitle(content);              
+              ret.putArticleTitle(content);
               break;
           }
         }

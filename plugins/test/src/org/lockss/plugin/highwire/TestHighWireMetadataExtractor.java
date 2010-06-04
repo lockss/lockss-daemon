@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.4 2010-05-28 16:08:04 dsferopoulos Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.5 2010-06-04 16:47:00 dsferopoulos Exp $
  */
 
 /*
@@ -250,7 +250,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     goodAuthor = goodAuthor.replaceAll(", ", " ");
     goodAuthor = goodAuthor.replaceAll(";", ",");
     assertEquals(goodAuthor, md.getAuthor());
-    assertEquals(goodTitle, md.getTitle());
+    assertEquals(goodTitle, md.getArticleTitle());
     assertEquals(goodDate, md.getDate());
     for (int i = 1; i < dublinCoreField.length; i++) {
       assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
@@ -282,7 +282,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     assertNull(md.getStartPage());
     assertNull(md.getISSN());
     assertNull(md.getAuthor());
-    assertNull(md.getTitle());
+    assertNull(md.getArticleTitle());
     assertNull(md.getDate());
     for (int i = 1; i < dublinCoreField.length; i++) {
       assertNull(md.getProperty(dublinCoreField[i]));
