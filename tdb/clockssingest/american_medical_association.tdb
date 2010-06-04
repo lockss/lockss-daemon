@@ -1217,7 +1217,7 @@
     comment[jama_183_202] = volumes 183-202 are assigned differently to reingest[1234].clockss.org than other AUs
 
     param[base_url] = http://jama.ama-assn.org/
-    param[comment] = 17-Mar-2010 Volumes LV LX and LXI have mismatch between (Roman number) journal name and URLs
+    comment[roman] = 17-Mar-2010 Volumes LV LX and LXI have mismatch between (Roman number) journal name and URLs
     pluginSuffix = ClockssHighWirePlugin
     implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
     
