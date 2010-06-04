@@ -30,7 +30,6 @@
     >
 
     param[journal_abbr] = bejeap
-    param[comment] = There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004.
 
     au < released ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < released ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
@@ -45,7 +44,6 @@
     >
 
     param[journal_abbr] = bejm
-    param[comment] = There are no typos below, either.  Volume 1 and 2 were published after volume 3.
 
     au < released ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
     au < released ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
@@ -60,7 +58,6 @@
     >
 
     param[journal_abbr] = bejte
-    param[comment] = 
     au < released ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
     au < released ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
 
@@ -620,8 +617,6 @@
 
     param[journal_abbr] = wpsr
 
-    comment[4] = malformed manifest page, ticket #1352
-    comment[2008] = Manifest page's lockss-probe links to an article behind a login page. 
 
     au < released ; 2009 ; World Political Science Review Volume 5 ; 5 >
 

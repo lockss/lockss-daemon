@@ -90,7 +90,7 @@ sub iterate_lines {
 	    
 	} 
 	elsif ($lines[$k] =~ m/au\s*</) {
-	    
+	    # Don't copy other AUs.
 	}
 	elsif ($lines[$k] =~ m/implicit <.*? comment\[proxy\] .*?>/) {
 	    
@@ -98,6 +98,9 @@ sub iterate_lines {
 	    
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }    
 	    
+	}
+	elsif ($lines[$k] =~ m/comment/) {
+	    # Don't copy lines with comments in them.
 	}
 	else {
 	    
