@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.12 2010-06-02 21:09:49 tlipkis Exp $
+ * $Id: Metadata.java,v 1.13 2010-06-04 16:51:51 dsferopoulos Exp $
  */
 
 /*
@@ -478,16 +478,31 @@ public class Metadata extends Properties {
   /*
    * Return the title, if any.
    */
-  public static final String KEY_TITLE = "LOCKSS.title";
-  public String getTitle() {
-    String ret = getProperty(KEY_TITLE);
+  public static final String KEY_ARTICLE_TITLE = "LOCKSS.article.title";
+  public String getArticleTitle() {
+    String ret = getProperty(KEY_ARTICLE_TITLE);
     // XXX
     return ret;
   }
-  public void putTitle(String title) {
+  public void putArticleTitle(String title) {
     // XXX protocol?
-    setProperty(KEY_TITLE, title);
+    setProperty(KEY_ARTICLE_TITLE, title);
   }
+
+  /**
+   * Return the title, if any
+   */
+  public static final String KEY_JOURNAL_TITLE = "LOCKSS.journal.title";
+  public String getJournalTitle(){
+    String ret = getProperty(KEY_JOURNAL_TITLE);
+    // XXX
+    return ret;
+  }
+  public void putJournalTitle(String title){
+    // XXX protocol?
+    setProperty(KEY_JOURNAL_TITLE, title);
+  }
+
 
   /*
    * Return the author(s), if any. Authors are a 
