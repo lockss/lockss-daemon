@@ -171,6 +171,27 @@ def _get_list_urls(client, auid, auarticles):
                 val.append(art)
     auarticles[auid] = val
 
+# This method counts the number of articles minus the number of articles
+# that have been superseded. 
+
+# The table was created with 
+# 'create table overrideauid (overridden varchar(2047), 
+# overrider varchar(2047));'
+
+# At this time, the 'overrider' column is not used.
+
+def _count_articles(db, listAuids):
+    cursorFindAuid = db.cursor()
+    
+    numArticles = 0
+    for auid in listAuids:
+        cursorFindAuid.execute("SELECT count(overridden) FROM overrideauid WHERE overridden = '{0}';".format(auid))
+        numFindAuid = cursorFindAuid.fetchone()
+        if numFindAuid[0] == 0:
+            numArticles += 1
+
+    return numArticles
+
 
 def _need_report(db, options):
     hostname = options.host.split(':',1)[0]
@@ -272,7 +293,7 @@ def _article_report(client, db, options):
             cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
 auname, auid, auyear, numarticles, publisher, created)
 VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", %d, "rsc", '%s')""" % \
-                            (host, port, auname[auid], auid, auyear[auid], len(auarticles[auid]), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
+                            (host, port, auname[auid], auid, auyear[auid], _count_articles(db, auarticles[auid]), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
         else:
             # Standard article...
             if aucreated[auid] is not None:
@@ -281,14 +302,14 @@ auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize,
 aurepository, numarticles, publisher, created)
 VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
 "%s", "%s", "default", '%s')"""  % \
-                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], int(len(auarticles[auid])), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
+                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], _count_articles(db, auarticles[auid]), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
             else:
                 cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
 auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
 aurepository, numarticles, publisher, created)
 VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
 "%s", "%s", "default", NULL)"""  % \
-                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], int(len(auarticles[auid]))))
+                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], _count_articles(db, auarticles[auid])))
     
     cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, NOW())" %
                    (host, int(port)))
