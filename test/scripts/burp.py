@@ -181,16 +181,21 @@ def _get_list_urls(client, auid, auarticles):
 # At this time, the 'overrider' column is not used.
 
 def _count_articles(db, listAuids):
-    cursorFindAuid = db.cursor()
-    
-    numArticles = 0
+    cursorDuplicated = db.cursor()
+    cursorDuplicated.execute("CREATE TEMPORARY TABLE listAuids (auid varchar(2047));")
+    # There may be a better way to insert large amounts of data into
+    # a MySQL database.
     for auid in listAuids:
-        cursorFindAuid.execute("SELECT count(overridden) FROM overrideauid WHERE overridden = '{0}';".format(auid))
-        numFindAuid = cursorFindAuid.fetchone()
-        if numFindAuid[0] == 0:
-            numArticles += 1
+        cursorDuplicated.execute("INSERT INTO listAuids VALUE (\"{0}\");".format(auid))
 
-    return numArticles
+    # Count the number of duplicated articles.
+    cursorDuplicated.execute("SELECT COUNT(listAuids.auid) FROM listAuids, overrideauid WHERE listAuids.auid = overrideauid.overridden;")
+    fetchDuplicated = cursorDuplicated.fetchone()
+    numDuplicated = fetchDuplicated[0]
+
+    cursorDuplicated.execute("DROP TEMPORARY TABLE listAuids;")
+
+    return len(listAuids) - numDuplicated
 
 
 def _need_report(db, options):
@@ -241,14 +246,14 @@ def _article_report(client, db, options):
         cursor.execute("SELECT MAX(rundate) FROM burp WHERE machinename = '%s' AND port = %s AND auid = '%s'" %
                        (host, port, auid)) 
         arRunDate = cursor.fetchone()
-        if (arRunDate is None) or (arRunDate[0] is None):
-            arRunDate = [datetime.datetime(1900, 1, 1)]
-        if (arRunDate[0] > startExecution):
-            print("Skipping: This AU was last recorded on %s." %
-                (arRunDate[0].strftime("%Y-%m-%d %H:%M:%S"),))
-            print("The execution started on %s." %
-                (startExecution.strftime("%Y-%m-%d %H:%M:%S"),))
-            continue
+#        if (arRunDate is None) or (arRunDate[0] is None):
+#            arRunDate = [datetime.datetime(1900, 1, 1)]
+#        if (arRunDate[0] > startExecution):
+#            print("Skipping: This AU was last recorded on %s." %
+#                (arRunDate[0].strftime("%Y-%m-%d %H:%M:%S"),))
+#            print("The execution started on %s." %
+#                (startExecution.strftime("%Y-%m-%d %H:%M:%S"),))
+#            continue
          
         rerun = True
         numRuns = 0
