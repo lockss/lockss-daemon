@@ -28,7 +28,7 @@
       au < released ; BMC Anesthesiology Volume 6 ; 6 >
       au < ready ; BMC Anesthesiology Volume 7 ; 7 >
       au < ready ; BMC Anesthesiology Volume 8 ; 8 >
-      au < testing ; BMC Anesthesiology Volume 9 ; 9 >
+      au < ready ; BMC Anesthesiology Volume 9 ; 9 >
       au < ready ; BMC Anesthesiology Volume 10 ; 10 >
 
     }
@@ -72,8 +72,8 @@
       au < released ; BMC Bioinformatics Volume 7 ; 7 >
       au < ready ; BMC Bioinformatics Volume 8 ; 8 >
       au < ready ; BMC Bioinformatics Volume 9 ; 9 >
-      au < testing ; BMC Bioinformatics Volume 10 ; 10 >
-      au < testing ; BMC Bioinformatics Volume 11 ; 11 >
+      au < ready ; BMC Bioinformatics Volume 10 ; 10 >
+      au < ready ; BMC Bioinformatics Volume 11 ; 11 >
 
     }
 
@@ -152,10 +152,10 @@
       au < ready ; BMC Cancer Volume 4 ; 4 >
       au < ready ; BMC Cancer Volume 5 ; 5 >
       au < ready ; BMC Cancer Volume 6 ; 6 >
-      au < testing ; BMC Cancer Volume 7 ; 7 >
-      au < testing ; BMC Cancer Volume 8 ; 8 >
-      au < testing ; BMC Cancer Volume 9 ; 9 >
-      au < testing ; BMC Cancer Volume 10 ; 10 >
+      au < ready ; BMC Cancer Volume 7 ; 7 >
+      au < ready ; BMC Cancer Volume 8 ; 8 >
+      au < ready ; BMC Cancer Volume 9 ; 9 >
+      au < ready ; BMC Cancer Volume 10 ; 10 >
 
     }
 
@@ -173,10 +173,10 @@
       au < released ; BMC Cardiovascular Disorders Volume 4 ; 4 >
       au < released ; BMC Cardiovascular Disorders Volume 5 ; 5 >
       au < released ; BMC Cardiovascular Disorders Volume 6 ; 6 >
-      au < testing ; BMC Cardiovascular Disorders Volume 7 ; 7 >
-      au < testing ; BMC Cardiovascular Disorders Volume 8 ; 8 >
-      au < testing ; BMC Cardiovascular Disorders Volume 9 ; 9 >
-      au < testing ; BMC Cardiovascular Disorders Volume 10 ; 10 >
+      au < ready ; BMC Cardiovascular Disorders Volume 7 ; 7 >
+      au < ready ; BMC Cardiovascular Disorders Volume 8 ; 8 >
+      au < ready ; BMC Cardiovascular Disorders Volume 9 ; 9 >
+      au < ready ; BMC Cardiovascular Disorders Volume 10 ; 10 >
 
     }
 
@@ -195,10 +195,10 @@
       au < released ; BMC Cell Biology Volume 5 ; 5 >
       au < released ; BMC Cell Biology Volume 6 ; 6 >
       au < released ; BMC Cell Biology Volume 7 ; 7 >
-      au < testing ; BMC Cell Biology Volume 8 ; 8 >
-      au < testing ; BMC Cell Biology Volume 9 ; 9 >
-      au < testing ; BMC Cell Biology Volume 10 ; 10 >
-      au < testing ; BMC Cell Biology Volume 11 ; 11 >
+      au < ready ; BMC Cell Biology Volume 8 ; 8 >
+      au < ready ; BMC Cell Biology Volume 9 ; 9 >
+      au < ready ; BMC Cell Biology Volume 10 ; 10 >
+      au < ready ; BMC Cell Biology Volume 11 ; 11 >
 
     }
 
@@ -216,10 +216,10 @@
       au < released ; BMC Chemical Biology Volume 4 ; 4 >
       au < released ; BMC Chemical Biology Volume 5 ; 5 >
       au < released ; BMC Chemical Biology Volume 6 ; 6 >
-      au < testing ; BMC Chemical Biology Volume 7 ; 7 >
-      au < testing ; BMC Chemical Biology Volume 8 ; 8 >
-      au < testing ; BMC Chemical Biology Volume 9 ; 9 >
-      au < testing ; BMC Chemical Biology Volume 10 ; 10 >
+      au < ready ; BMC Chemical Biology Volume 7 ; 7 >
+      au < ready ; BMC Chemical Biology Volume 8 ; 8 >
+      au < ready ; BMC Chemical Biology Volume 9 ; 9 >
+      au < ready ; BMC Chemical Biology Volume 10 ; 10 >
 
     }
 
@@ -237,10 +237,10 @@
       au < released ; BMC Clinical Pathology Volume 4 ; 4 >
       au < released ; BMC Clinical Pathology Volume 5 ; 5 >
       au < released ; BMC Clinical Pathology Volume 6 ; 6 >
-      au < testing ; BMC Clinical Pathology Volume 7 ; 7 >
-      au < testing ; BMC Clinical Pathology Volume 8 ; 8 >
-      au < testing ; BMC Clinical Pathology Volume 9 ; 9 >
-      au < testing ; BMC Clinical Pathology Volume 10 ; 10 >
+      au < ready ; BMC Clinical Pathology Volume 7 ; 7 >
+      au < ready ; BMC Clinical Pathology Volume 8 ; 8 >
+      au < ready ; BMC Clinical Pathology Volume 9 ; 9 >
+      au < ready ; BMC Clinical Pathology Volume 10 ; 10 >
 
     }
 
@@ -258,6 +258,11 @@
       au < released ; BMC Clinical Pharmacology Volume 4 ; 4 >
       au < released ; BMC Clinical Pharmacology Volume 5 ; 5 >
       au < released ; BMC Clinical Pharmacology Volume 6 ; 6 >
+      au < testing ; BMC Clinical Pharmacology Volume 7 ; 7 >
+      au < testing ; BMC Clinical Pharmacology Volume 8 ; 8 >
+      au < testing ; BMC Clinical Pharmacology Volume 9 ; 9 >
+      au < testing ; BMC Clinical Pharmacology Volume 10 ; 10 >
+
     }
 
     {
@@ -274,6 +279,11 @@
       au < released ; BMC Complementary and Alternative Medicine Volume 4 ; 4 >
       au < released ; BMC Complementary and Alternative Medicine Volume 5 ; 5 >
       au < released ; BMC Complementary and Alternative Medicine Volume 6 ; 6 >
+      au < testing ; BMC Complementary and Alternative Medicine Volume 7 ; 7 >
+      au < testing ; BMC Complementary and Alternative Medicine Volume 8 ; 8 >
+      au < testing ; BMC Complementary and Alternative Medicine Volume 9 ; 9 >
+      au < testing ; BMC Complementary and Alternative Medicine Volume 10 ; 10 >
+
     }
 
     {
@@ -290,6 +300,11 @@
       au < released ; BMC Dermatology Volume 4 ; 4 >
       au < released ; BMC Dermatology Volume 5 ; 5 >
       au < released ; BMC Dermatology Volume 6 ; 6 >
+      au < testing ; BMC Dermatology Volume 7 ; 7 >
+      au < testing ; BMC Dermatology Volume 8 ; 8 >
+      au < testing ; BMC Dermatology Volume 9 ; 9 >
+      au < testing ; BMC Dermatology Volume 10 ; 10 >
+
     }
 
     {
@@ -306,6 +321,11 @@
       au < released ; BMC Developmental Biology Volume 4 ; 4 >
       au < released ; BMC Developmental Biology Volume 5 ; 5 >
       au < released ; BMC Developmental Biology Volume 6 ; 6 >
+      au < testing ; BMC Developmental Biology Volume 7 ; 7 >
+      au < testing ; BMC Developmental Biology Volume 8 ; 8 >
+      au < testing ; BMC Developmental Biology Volume 9 ; 9 >
+      au < testing ; BMC Developmental Biology Volume 10 ; 10 >
+
     }
 
     {
@@ -322,6 +342,11 @@
       au < released ; BMC Ear, Nose and Throat Disorders Volume 4 ; 4 >
       au < released ; BMC Ear, Nose and Throat Disorders Volume 5 ; 5 >
       au < released ; BMC Ear, Nose and Throat Disorders Volume 6 ; 6 >
+      au < testing ; BMC Ear, Nose and Throat Disorders Volume 7 ; 7 >
+      au < testing ; BMC Ear, Nose and Throat Disorders Volume 8 ; 8 >
+      au < testing ; BMC Ear, Nose and Throat Disorders Volume 9 ; 9 >
+      au < testing ; BMC Ear, Nose and Throat Disorders Volume 10 ; 10 >
+
     }
 
     {
@@ -338,6 +363,11 @@
       au < released ; BMC Ecology Volume 4 ; 4 >
       au < released ; BMC Ecology Volume 5 ; 5 >
       au < released ; BMC Ecology Volume 6 ; 6 >
+      au < testing ; BMC Ecology Volume 7 ; 7 >
+      au < testing ; BMC Ecology Volume 8 ; 8 >
+      au < testing ; BMC Ecology Volume 9 ; 9 >
+      au < testing ; BMC Ecology Volume 10 ; 10 >
+
     }
 
     {
@@ -1626,8 +1656,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Critical Care Volume 10 ; 10 >
       au < released ; Critical Care Volume 11 ; 11 >
       au < released ; Critical Care Volume 12 ; 12 >
-      au < testing ; Critical Care Volume 13 ; 13 >
-      au < testing ; Critical Care Volume 14 ; 14 >
+      au < ready ; Critical Care Volume 13 ; 13 >
+      au < ready ; Critical Care Volume 14 ; 14 >
 
     }
 
@@ -1643,8 +1673,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Diagnostic Pathology Volume 1 ; 1 >
       au < released ; Diagnostic Pathology Volume 2 ; 2 >
       au < released ; Diagnostic Pathology Volume 3 ; 3 >
-      au < testing ; Diagnostic Pathology Volume 4 ; 4 >
-      au < testing ; Diagnostic Pathology Volume 5 ; 5 >
+      au < ready ; Diagnostic Pathology Volume 4 ; 4 >
+      au < ready ; Diagnostic Pathology Volume 5 ; 5 >
 
     }
 
@@ -1664,8 +1694,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Dynamic Medicine Volume 5 ; 5 >
       au < released ; Dynamic Medicine Volume 6 ; 6 >
       au < released ; Dynamic Medicine Volume 7 ; 7 >
-      au < testing ; Dynamic Medicine Volume 8 ; 8 >
-      au < testing ; Dynamic Medicine Volume 9 ; 9 >
+      au < ready ; Dynamic Medicine Volume 8 ; 8 >
+      au < ready ; Dynamic Medicine Volume 9 ; 9 >
 
     }
 
@@ -1683,8 +1713,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Emerging Themes in Epidemiology Volume 3 ; 3 >
       au < released ; Emerging Themes in Epidemiology Volume 4 ; 4 >
       au < released ; Emerging Themes in Epidemiology Volume 5 ; 5 >
-      au < testing ; Emerging Themes in Epidemiology Volume 6 ; 6 >
-      au < testing ; Emerging Themes in Epidemiology Volume 7 ; 7 >
+      au < ready ; Emerging Themes in Epidemiology Volume 6 ; 6 >
+      au < ready ; Emerging Themes in Epidemiology Volume 7 ; 7 >
 
     }
 
@@ -1704,6 +1734,9 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Environmental Health Volume 5 ; 5 >
       au < released ; Environmental Health Volume 6 ; 6 >
       au < released ; Environmental Health Volume 7 ; 7 >
+      au < ready ; Environmental Health Volume 8 ; 8 >
+      au < ready ; Environmental Health Volume 9 ; 9 >
+      
     }
 
     {
@@ -1775,6 +1808,19 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Genome Biology Volume 9 ; 9 >
     }
 
+    {
+      title <
+        name = Genome Integrity ;
+        issn = 2041-9414
+      >
+
+      param[base_url] = http://www.genomeintegrity.com/
+      param[journal_issn] = 2041-9414
+
+      au < manifest ; Genome Integrity Volume 1 ; 1 >
+      
+    }
+      
     {
       title <
         name = Geochemical Transactions ;

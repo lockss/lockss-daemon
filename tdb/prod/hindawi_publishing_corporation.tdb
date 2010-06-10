@@ -1310,8 +1310,8 @@
     au < ready ; International Journal of Photoenergy Volume 2006 ; 2006 >
     au < ready ; International Journal of Photoenergy Volume 2007 ; 2007 >
     au < ready ; International Journal of Photoenergy Volume 2008 ; 2008 >
-    au < testing ; International Journal of Photoenergy Volume 2009 ; 2009 >
-    au < testing ; International Journal of Photoenergy Volume 2010 ; 2010 >
+    au < ready ; International Journal of Photoenergy Volume 2009 ; 2009 >
+    au < ready ; International Journal of Photoenergy Volume 2010 ; 2010 >
 
   }
 
@@ -1324,9 +1324,9 @@
 
     param[journal_id] = ijpg
 
-    au < manifest ; International Journal of Plant Genomics Volume 2007 ; 2007 >
-    au < manifest ; International Journal of Plant Genomics Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Plant Genomics Volume 2009 ; 2009 >
+    au < ready ; International Journal of Plant Genomics Volume 2007 ; 2007 >
+    au < ready ; International Journal of Plant Genomics Volume 2008 ; 2008 >
+    au < ready ; International Journal of Plant Genomics Volume 2009 ; 2009 >
 
   }
 
@@ -1339,8 +1339,8 @@
 
     param[journal_id] = ijpse
 
-    au < manifest ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Plasma Science and Engineering Volume 2009 ; 2009 >
+    au < ready ; International Journal of Plasma Science and Engineering Volume 2008 ; 2008 >
+    au < ready ; International Journal of Plasma Science and Engineering Volume 2009 ; 2009 >
 
   }
 
@@ -1365,7 +1365,7 @@
 
     param[journal_id] = ijpme
 
-    au < manifest ; International Journal of Power Management Electronics Volume 2008 ; 2008 >
+    au < ready ; International Journal of Power Management Electronics Volume 2008 ; 2008 >
 
   }
 
@@ -1378,7 +1378,7 @@
 
     param[journal_id] = ijqsr
 
-    au < manifest ; International Journal of Quality, Statistics, and Reliability Volume 2008 ; 2008 >
+    au < ready ; International Journal of Quality, Statistics, and Reliability Volume 2008 ; 2008 >
 
   }
 
@@ -1391,7 +1391,7 @@
 
     param[journal_id] = ijrs
 
-    au < manifest ; International Journal of Reacting Systems Volume 2008 ; 2008 >
+    au < ready ; International Journal of Reacting Systems Volume 2008 ; 2008 >
 
   }
 
@@ -1404,8 +1404,8 @@
 
     param[journal_id] = ijrc
 
-    au < manifest ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 >
-    au < manifest ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 >
+    au < ready ; International Journal of Reconfigurable Computing Volume 2008 ; 2008 >
+    au < ready ; International Journal of Reconfigurable Computing Volume 2009 ; 2009 >
 
   }
 
@@ -1430,20 +1430,21 @@
 
     param[journal_id] = ijrm
 
-    au < manifest ; International Journal of Rotating Machinery Volume 1 (1995) ; 1995 >
-    au < manifest ; International Journal of Rotating Machinery Volume 2 (1996) ; 1996 >
-    au < manifest ; International Journal of Rotating Machinery Volume 3 (1997) ; 1997 >
-    au < manifest ; International Journal of Rotating Machinery Volume 4 (1998) ; 1998 >
-    au < manifest ; International Journal of Rotating Machinery Volume 5 (1999) ; 1999 >
-    au < manifest ; International Journal of Rotating Machinery Volume 6 (2000) ; 2000 >
-    au < manifest ; International Journal of Rotating Machinery Volume 7 (2001) ; 2001 >
-    au < manifest ; International Journal of Rotating Machinery Volume 8 (2002) ; 2002 >
-    au < manifest ; International Journal of Rotating Machinery Volume 9 (2003) ; 2003 >
-    au < manifest ; International Journal of Rotating Machinery Volume 10 (2004) ; 2004 >
-    au < manifest ; International Journal of Rotating Machinery Volume 2005 ; 2005 >
-    au < manifest ; International Journal of Rotating Machinery Volume 2006 ; 2006 >
-    au < manifest ; International Journal of Rotating Machinery Volume 2007 ; 2007 >
-    au < manifest ; International Journal of Rotating Machinery Volume 2008 ; 2008 >
+    au < ready ; International Journal of Rotating Machinery Volume 1 (1995) ; 1995 >
+    au < ready ; International Journal of Rotating Machinery Volume 2 (1996) ; 1996 >
+    au < ready ; International Journal of Rotating Machinery Volume 3 (1997) ; 1997 >
+    au < ready ; International Journal of Rotating Machinery Volume 4 (1998) ; 1998 >
+    au < ready ; International Journal of Rotating Machinery Volume 5 (1999) ; 1999 >
+    au < ready ; International Journal of Rotating Machinery Volume 6 (2000) ; 2000 >
+    au < ready ; International Journal of Rotating Machinery Volume 7 (2001) ; 2001 >
+    au < ready ; International Journal of Rotating Machinery Volume 8 (2002) ; 2002 >
+    au < ready ; International Journal of Rotating Machinery Volume 9 (2003) ; 2003 >
+    au < ready ; International Journal of Rotating Machinery Volume 10 (2004) ; 2004 >
+    au < ready ; International Journal of Rotating Machinery Volume 2005 ; 2005 >
+    au < ready ; International Journal of Rotating Machinery Volume 2006 ; 2006 >
+    au < ready ; International Journal of Rotating Machinery Volume 2007 ; 2007 >
+    au < ready ; International Journal of Rotating Machinery Volume 2008 ; 2008 >
+    au < ready ; International Journal of Rotating Machinery Volume 2009 ; 2009 >
 
   }
 
@@ -1468,7 +1469,9 @@
 
     param[journal_id] = ijta
 
-    au < manifest ; International Journal of Telemedicine and Applications Volume 2008 ; 2008 >
+    au < ready ; International Journal of Telemedicine and Applications Volume 2008 ; 2008 >
+    au < ready ; International Journal of Telemedicine and Applications Volume 2009 ; 2009 >
+    au < ready ; International Journal of Telemedicine and Applications Volume 2010 ; 2010 >
 
   }
 
@@ -1481,7 +1484,9 @@
 
     param[journal_id] = ijvt
 
-    au < manifest ; International Journal of Vehicular Technology Volume 2008 ; 2008 >
+    au < ready ; International Journal of Vehicular Technology Volume 2008 ; 2008 >
+    au < ready ; International Journal of Vehicular Technology Volume 2009 ; 2009 >
+    au < ready ; International Journal of Vehicular Technology Volume 2010 ; 2010 >
 
   }
 
@@ -1494,7 +1499,7 @@
 
     param[journal_id] = ijz
 
-    au < manifest ; International Journal of Zoology Volume 2009 ; 2009 >
+    au < ready ; International Journal of Zoology Volume 2009 ; 2009 >
 
   }
 
@@ -1517,14 +1522,15 @@
 
     param[journal_id] = jam
 
-    au < manifest ; Journal of Applied Mathematics Volume 1 (2001) ; 2001 >
-    au < manifest ; Journal of Applied Mathematics Volume 2 (2002) ; 2002 >
-    au < manifest ; Journal of Applied Mathematics Volume 2003 ; 2003 >
-    au < manifest ; Journal of Applied Mathematics Volume 2004 ; 2004 >
-    au < manifest ; Journal of Applied Mathematics Volume 2005 ; 2005 >
-    au < manifest ; Journal of Applied Mathematics Volume 2006 ; 2006 >
-    au < manifest ; Journal of Applied Mathematics Volume 2007 ; 2007 >
-    au < manifest ; Journal of Applied Mathematics Volume 2008 ; 2008 >
+    au < ready ; Journal of Applied Mathematics Volume 1 (2001) ; 2001 >
+    au < ready ; Journal of Applied Mathematics Volume 2 (2002) ; 2002 >
+    au < ready ; Journal of Applied Mathematics Volume 2003 ; 2003 >
+    au < ready ; Journal of Applied Mathematics Volume 2004 ; 2004 >
+    au < ready ; Journal of Applied Mathematics Volume 2005 ; 2005 >
+    au < ready ; Journal of Applied Mathematics Volume 2006 ; 2006 >
+    au < ready ; Journal of Applied Mathematics Volume 2007 ; 2007 >
+    au < ready ; Journal of Applied Mathematics Volume 2008 ; 2008 >
+    au < ready ; Journal of Applied Mathematics Volume 2009 ; 2009 >
 
   }
 
@@ -1537,18 +1543,18 @@
 
     param[journal_id] = jamds
 
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2 (1998) ; 1998 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 3 (1999) ; 1999 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 4 (2000) ; 2000 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 5 (2001) ; 2001 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 6 (2002) ; 2002 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 7 (2003) ; 2003 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 8 (2004) ; 2004 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 >
-    au < manifest ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 1 (1997) ; 1997 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 2 (1998) ; 1998 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 3 (1999) ; 1999 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 4 (2000) ; 2000 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 5 (2001) ; 2001 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 6 (2002) ; 2002 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 7 (2003) ; 2003 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 8 (2004) ; 2004 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 2005 ; 2005 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 2006 ; 2006 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 2007 ; 2007 >
+    au < tesing ; Journal of Applied Mathematics and Decision Sciences Volume 2008 ; 2008 >
 
   }
 
@@ -1559,7 +1565,7 @@
       eissn = 1687-2177
     >
 
-    param[journal_id] = jamsa
+    param[journal_id] = ijsa
 
     au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 1 (1988) ; 1988 >
     au < manifest ; Journal of Applied Mathematics and Stochastic Analysis Volume 2 (1989) ; 1989 >
