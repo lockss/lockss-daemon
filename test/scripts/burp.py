@@ -246,14 +246,14 @@ def _article_report(client, db, options):
         cursor.execute("SELECT MAX(rundate) FROM burp WHERE machinename = '%s' AND port = %s AND auid = '%s'" %
                        (host, port, auid)) 
         arRunDate = cursor.fetchone()
-#        if (arRunDate is None) or (arRunDate[0] is None):
-#            arRunDate = [datetime.datetime(1900, 1, 1)]
-#        if (arRunDate[0] > startExecution):
-#            print("Skipping: This AU was last recorded on %s." %
-#                (arRunDate[0].strftime("%Y-%m-%d %H:%M:%S"),))
-#            print("The execution started on %s." %
-#                (startExecution.strftime("%Y-%m-%d %H:%M:%S"),))
-#            continue
+        if (arRunDate is None) or (arRunDate[0] is None):
+            arRunDate = [datetime.datetime(1900, 1, 1)]
+        if (arRunDate[0] > startExecution):
+            print("Skipping: This AU was last recorded on %s." %
+                (arRunDate[0].strftime("%Y-%m-%d %H:%M:%S"),))
+            print("The execution started on %s." %
+                (startExecution.strftime("%Y-%m-%d %H:%M:%S"),))
+            continue
          
         rerun = True
         numRuns = 0
