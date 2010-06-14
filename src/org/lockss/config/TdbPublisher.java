@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.6 2010-06-14 11:32:24 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.7 2010-06-14 11:48:49 pgust Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.util.Logger;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.6 2010-06-14 11:32:24 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.7 2010-06-14 11:48:49 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -156,7 +156,8 @@ public class TdbPublisher {
    * 
    * @param title a new TdbTitle
    * @throws IllegalArgumentException if the title ID is not set
-   * @throws TdbException if title already added to a publisher
+   * @throws TdbException if trying to add different TdbTitle with same id
+   *   as existing TdbTitle
    */
   protected void addTdbTitle(TdbTitle title) throws TdbException{
     if (title == null) {
