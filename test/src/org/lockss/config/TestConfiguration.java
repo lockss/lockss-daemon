@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.14 2010-04-05 17:17:33 pgust Exp $
+ * $Id: TestConfiguration.java,v 1.15 2010-06-14 11:55:37 pgust Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.ConfigFile;
 import org.lockss.config.Configuration;
 import org.lockss.config.ConfigurationPropTreeImpl;
 import org.lockss.config.Tdb;
+import org.lockss.config.Tdb.TdbException;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
@@ -73,30 +74,26 @@ public class TestConfiguration extends LockssTestCase {
     return new ConfigurationPropTreeImpl();
   }
 
-  private Tdb newTdb() {
+  private Tdb newTdb() throws TdbException {
     Tdb tdb = new Tdb();
     TdbPublisher p1 = new TdbPublisher("p1");
     // create title with 2 aus with different plugins
-    TdbTitle t1p1 = new TdbTitle("t1p1");
+    TdbTitle t1p1 = new TdbTitle("t1p1", "0000-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1");
-    a1t1p1.setPluginId("plugin_t1p1");
+    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin_t1p1");
     a1t1p1.setParam("auName", "a1t1p1");  // distinguishing parameter
     t1p1.addTdbAu(a1t1p1);
-    TdbAu a2t1p1 = new TdbAu("a2t1p1");
-    a2t1p1.setPluginId("plugin_t1p1");
+    TdbAu a2t1p1 = new TdbAu("a2t1p1", "plugin_t1p1");
     a2t1p1.setParam("auName", "a2t1p1");  // distinguishing parameter
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
-    TdbTitle t2p1 = new TdbTitle("t2p1");
+    TdbTitle t2p1 = new TdbTitle("t2p1", "0000-0002");
     p1.addTdbTitle(t2p1);
-    TdbAu a1t2p1 = new TdbAu("a1t2p1");
-    a1t2p1.setPluginId("plugin_t2p1");
+    TdbAu a1t2p1 = new TdbAu("a1t2p1", "plugin_t2p1");
     a1t2p1.setParam("auName", "a1t2p1");  // distinguishing parameter
     t2p1.addTdbAu(a1t2p1);
-    TdbAu a2t2p1 = new TdbAu("a2t2p1");
-    a2t2p1.setPluginId("plugin_t2p1");
+    TdbAu a2t2p1 = new TdbAu("a2t2p1", "plugin_t2p1");
     a2t2p1.setParam("auName", "a2t2p1");  // distinguishing parameter
     t2p1.addTdbAu(a2t2p1);
 
@@ -118,7 +115,7 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("b", config.get("a"));
   }
 
-  public void testSetTdb() {
+  public void testSetTdb() throws TdbException {
     Configuration config = newConfiguration();
     assertNull(config.getTdb());
     
@@ -202,7 +199,7 @@ public class TestConfiguration extends LockssTestCase {
     assertTrue((tdb == null) || tdb.isSealed());
   }
 
-  public void testSeal() {
+  public void testSeal() throws TdbException {
     Configuration config = newConfiguration();
     config.put("a", "1");
     config.put("b", "2");
@@ -216,7 +213,7 @@ public class TestConfiguration extends LockssTestCase {
     assertSealed(config.getConfigTree("b"));
   }
 
-  public void testCopy() {
+  public void testCopy() throws TdbException {
     Configuration c1 = newConfiguration();
     c1.put("a", "1");
     c1.put("b", "2");
@@ -236,7 +233,7 @@ public class TestConfiguration extends LockssTestCase {
     assertFalse(tdb1 == tdb2);
   }
 
-  public void testCopyFrom() {
+  public void testCopyFrom() throws TdbException {
     Configuration c1 = newConfiguration();
     c1.put("a", "1");
     c1.put("b", "2");
@@ -257,7 +254,7 @@ public class TestConfiguration extends LockssTestCase {
     assertFalse(tdb1 == tdb2);
   }
 
-  public void testEquals() {
+  public void testEquals() throws TdbException {
     // ensure configuration always equal to itself
     Configuration c1 = newConfiguration();
     c1.put("a", "1");

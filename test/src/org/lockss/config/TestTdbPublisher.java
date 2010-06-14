@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbPublisher.java,v 1.4 2010-04-06 18:21:56 pgust Exp $
+ * $Id: TestTdbPublisher.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.config;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.test.*;
+import org.lockss.config.Tdb.TdbException;
 
 import java.util.*;
 
@@ -42,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbPublisher</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbPublisher.java,v 1.4 2010-04-06 18:21:56 pgust Exp $
+ * @version $Id: TestTdbPublisher.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
  */
 
 public class TestTdbPublisher extends LockssTestCase {
@@ -89,54 +90,47 @@ public class TestTdbPublisher extends LockssTestCase {
   
   /**
    * Test equals() method for publisher.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testEquals() {
+  public void testEquals() throws TdbException {
     TdbPublisher publisher1 = new TdbPublisher("Test Publisher");
-    TdbTitle title1 = new TdbTitle("Test Title 1");
+    TdbTitle title1 = new TdbTitle("Test Title 1", "0000-0001");
     publisher1.addTdbTitle(title1);
     assertEquals(publisher1, publisher1);
     
     // same as publisher1
     TdbPublisher publisher2 = new TdbPublisher("Test Publisher");
-    TdbTitle title2 = new TdbTitle("Test Title 1");
+    TdbTitle title2 = new TdbTitle("Test Title 1", "0000-0002");
     publisher2.addTdbTitle(title2);
     assertEquals(publisher2, publisher2);
 
     // differs from publisher1 by title name
     TdbPublisher publisher3 = new TdbPublisher("Test Publisher");
-    TdbTitle title3 = new TdbTitle("Test Title 3");
+    TdbTitle title3 = new TdbTitle("Test Title 3", "0000-0003");
     publisher3.addTdbTitle(title3);
     assertEquals(publisher1, publisher3);
 
     // differs from publisher3 by publisher name
     TdbPublisher publisher4 = new TdbPublisher("Test Publisher 4");
-    TdbTitle title4 = new TdbTitle("Test Title 3");
+    TdbTitle title4 = new TdbTitle("Test Title 3", "0000-0004");
     publisher4.addTdbTitle(title4);
     assertEquals(publisher1, publisher4);
   }
   
   /**
    * Test addTitle() method.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testAddTitle() {
+  public void testAddTitle() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
     Collection titles = publisher.getTdbTitles();
     assertEmpty(titles);
     
     // add title
-    TdbTitle title = new TdbTitle("Test Title 1");
+    TdbTitle title = new TdbTitle("Test Title 1", "0000-0001");
     publisher.addTdbTitle(title);
     titles = publisher.getTdbTitles();
     assertNotNull(titles);
-    assertEquals(1, titles.size());
-
-    // can't add same title twice
-    try {
-      publisher.addTdbTitle(title);
-      fail("TdbPublisher did not throw IllegalStateException adding duplicate title.");
-    } catch (IllegalStateException ex) {
-    }
-    titles = publisher.getTdbTitles();
     assertEquals(1, titles.size());
 
     // can't add null title
@@ -148,37 +142,37 @@ public class TestTdbPublisher extends LockssTestCase {
     titles = publisher.getTdbTitles();
     assertEquals(1, titles.size());
 
-    TdbTitle title2 = new TdbTitle("Test Title 2");
-    title2.setId(title.getId());
+    TdbTitle title2 = new TdbTitle("Test Title 2", title.getId());
     try {
       publisher.addTdbTitle(title2);
-      fail("TdbPublisher did not throw IllegalStateException adding duplicate title");
-    } catch (IllegalStateException ex) {
+      fail("TdbPublisher did not throw TdbException adding duplicate title");
+    } catch (TdbException ex) {
     }
   }
 
   /**
    * Test getTitlesByName() and getTitleById() methods.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testGetTitle() {
+  public void testGetTitle() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
 
-    Collection titles = publisher.getTdbTitles();
+    Collection<TdbTitle> titles = publisher.getTdbTitles();
     assertEmpty(titles);
     
     // add two titles
-    TdbTitle title1 = new TdbTitle("Journal Title");
-    title1.setId("1234-5678");
+    TdbTitle title1 = new TdbTitle("Journal Title", "1234-5678");
     publisher.addTdbTitle(title1);
 
-    TdbTitle title2 = new TdbTitle("Book Title");
-    title2.setId("978-0521807678");
+    TdbTitle title2 = new TdbTitle("Book Title", "978-0521807678");
     publisher.addTdbTitle(title2);
 
-    TdbTitle title3 = new TdbTitle("Book Title");
-    title3.setId("978-0345303066");
+    TdbTitle title3 = new TdbTitle("Book Title", "978-0345303066");
     publisher.addTdbTitle(title3);
 
+    titles = publisher.getTdbTitles();
+    assertEquals(3, titles.size());
+    
     // get two titles by name
     Collection<TdbTitle> getTitle1 = publisher.getTdbTitlesByName("Journal Title");
     assertEquals(1, getTitle1.size());
@@ -204,48 +198,49 @@ public class TestTdbPublisher extends LockssTestCase {
   
   /**
    * Test TdbAu.addPluginIdsForDifferences() method.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testAddPluginIdsForDifferences() {
+  public void testAddPluginIdsForDifferences() throws TdbException {
     TdbPublisher pub1 = new TdbPublisher("Test Publisher");
-    TdbTitle title1 = new TdbTitle("Test Title");
+    TdbTitle title1 = new TdbTitle("Test Title", "0000-0001");
     
-    TdbAu au1 = new TdbAu("Test AU1");
+    TdbAu au1 = new TdbAu("Test AU1", "pluginA");
     au1.setAttr("a", "A");
     au1.setAttr("b", "A");
     au1.setParam("x", "X");
-    au1.setPluginId("pluginA");
     au1.setPluginVersion("3");
     title1.addTdbAu(au1);
     pub1.addTdbTitle(title1);
     
+    // duplicate of pub1
     TdbPublisher pub2 = new TdbPublisher("Test Publisher");
-    TdbTitle title2 = new TdbTitle("Test Title");
+    TdbTitle title2 = new TdbTitle("Test Title", "0000-0001");
     
-    TdbAu au2 = new TdbAu("Test AU1");
+    TdbAu au2 = new TdbAu("Test AU1", "pluginA");
     au2.setAttr("a", "A");
     au2.setAttr("b", "A");
     au2.setParam("x", "X");
-    au2.setPluginId("pluginA");
     au2.setPluginVersion("3");
     title2.addTdbAu(au2);
     pub2.addTdbTitle(title2);
 
     TdbPublisher pub3 = new TdbPublisher("Test Publisher");
-    TdbTitle title3 = new TdbTitle("Test Title");
+    TdbTitle title3 = new TdbTitle("Test Title", "0000-0003");
     
-    TdbAu au3 = new TdbAu("Test AU1");
+    TdbAu au3 = new TdbAu("Test AU1", "pluginB");
     au3.setAttr("a", "A");
     au3.setAttr("b", "A");
     au3.setParam("x", "X");
-    au3.setPluginId("pluginB");
     au3.setPluginVersion("3");
     title3.addTdbAu(au3);
     pub3.addTdbTitle(title3);
 
+    // no differences becuase pub1 and pub2 are duplicates
     Set<String> diff12 = new HashSet();
     pub1.addPluginIdsForDifferences(diff12, pub2);
     assertEquals(0, diff12.size());
     
+    // differences are 'pluginA' and 'pluginB'
     Set<String> diff13 = new HashSet();
     pub1.addPluginIdsForDifferences(diff13, pub3);
     assertEquals(2, diff13.size());

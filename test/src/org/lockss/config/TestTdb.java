@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.4 2010-04-08 01:40:23 pgust Exp $
+ * $Id: TestTdb.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import org.lockss.util.*;
 import org.lockss.config.*;
+import org.lockss.config.Tdb.TdbException;
 import org.lockss.test.*;
 
 import java.util.*;
@@ -42,7 +43,7 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.4 2010-04-08 01:40:23 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
  */
 
 public class TestTdb extends LockssTestCase {
@@ -65,33 +66,28 @@ public class TestTdb extends LockssTestCase {
    * Add test publisher1 to this Tdb. 
    * 
    * @param tdb the Tdb
+   * @throws TdbException for invalid Tdb operations
    */
-  private void addTestPublisher1(Tdb tdb) {
+  private void addTestPublisher1(Tdb tdb) throws TdbException {
     TdbPublisher p1 = new TdbPublisher("p1");
   
     // create title with 2 aus with different plugins
-    TdbTitle t1p1 = new TdbTitle("t1p1");
-    t1p1.setId("0001-0001");
+    TdbTitle t1p1 = new TdbTitle("t1p1", "0001-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1");
-    a1t1p1.setPluginId("plugin_t1p1");
+    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin_t1p1");
     a1t1p1.setParam("param", "1");
     t1p1.addTdbAu(a1t1p1);
-    TdbAu a2t1p1 = new TdbAu("a2t1p1");
-    a2t1p1.setPluginId("plugin_t1p1");
+    TdbAu a2t1p1 = new TdbAu("a2t1p1", "plugin_t1p1");
     a2t1p1.setParam("param", "2");
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
-    TdbTitle t2p1 = new TdbTitle("t2p1");
-    t2p1.setId("0010-0010");
+    TdbTitle t2p1 = new TdbTitle("t2p1", "0010-0010");
     p1.addTdbTitle(t2p1);
-    TdbAu a1t2p1 = new TdbAu("a1t2p1");
-    a1t2p1.setPluginId("plugin_t2p1");
+    TdbAu a1t2p1 = new TdbAu("a1t2p1", "plugin_t2p1");
     a1t2p1.setParam("param", "1");
     t2p1.addTdbAu(a1t2p1);
-    TdbAu a2t2p1 = new TdbAu("a2t2p1");
-    a2t2p1.setPluginId("plugin_t2p1");
+    TdbAu a2t2p1 = new TdbAu("a2t2p1", "plugin_t2p1");
     a2t2p1.setParam("param", "2");
     t2p1.addTdbAu(a2t2p1);
 
@@ -108,34 +104,29 @@ public class TestTdb extends LockssTestCase {
    * of "t2p1", and TdbAu "a1t1p1 has a pluign version property set.
    * 
    * @param tdb the Tdb
+   * @throws TdbException for invalid Tdb operations
    */
-  private void addTestPublisher1_Changed(Tdb tdb) {
+  private void addTestPublisher1_Changed(Tdb tdb) throws TdbException {
     TdbPublisher p1 = new TdbPublisher("p1");
   
     // create title with 2 aus with different plugins
-    TdbTitle t1p1 = new TdbTitle("t1p1");
-    t1p1.setId("0001-0001");
+    TdbTitle t1p1 = new TdbTitle("t1p1", "0001-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1");
-    a1t1p1.setPluginId("plugin_t1p1");
+    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin_t1p1");
     a1t1p1.setParam("param", "1");
     a1t1p1.setPluginVersion("3");
     t1p1.addTdbAu(a1t1p1);
-    TdbAu a2t1p1 = new TdbAu("a2t1p1");
-    a2t1p1.setPluginId("plugin_t1p1");
+    TdbAu a2t1p1 = new TdbAu("a2t1p1", "plugin_t1p1");
     a2t1p1.setParam("param", "2");
     t1p1.addTdbAu(a2t1p1);
 
     // create title with 2 aus with the same plugin
-    TdbTitle t2p1 = new TdbTitle("xyzzy");
-    t2p1.setId("0010-0010");
+    TdbTitle t2p1 = new TdbTitle("xyzzy", "0010-0010");
     p1.addTdbTitle(t2p1);
-    TdbAu a1t2p1 = new TdbAu("a1t2p1");
-    a1t2p1.setPluginId("plugin_t2p1");
+    TdbAu a1t2p1 = new TdbAu("a1t2p1", "plugin_t2p1");
     a1t2p1.setParam("param", "1");
     t2p1.addTdbAu(a1t2p1);
-    TdbAu a2t2p1 = new TdbAu("a2t2p1");
-    a2t2p1.setPluginId("plugin_t2p1");
+    TdbAu a2t2p1 = new TdbAu("a2t2p1", "plugin_t2p1");
     a2t2p1.setParam("param", "2");
     t2p1.addTdbAu(a2t2p1);
 
@@ -150,29 +141,26 @@ public class TestTdb extends LockssTestCase {
    * Add publisher2 to this Tdb.
    * 
    * @param tdb the Tdb
+   * @throws TdbException for invalid Tdb operations
    */
-  private void addTestPublisher2(Tdb tdb) {
+  private void addTestPublisher2(Tdb tdb) throws TdbException {
     TdbPublisher p2 = new TdbPublisher("p2");
     // add two title to p2
-    TdbTitle t1p2 = new TdbTitle("t1p2");
+    TdbTitle t1p2 = new TdbTitle("t1p2", "0000-0001");
     p2.addTdbTitle(t1p2);
-    TdbAu a1t1p2 = new TdbAu("a1t1p2");
-    a1t1p2.setPluginId("plugin_p2");
+    TdbAu a1t1p2 = new TdbAu("a1t1p2", "plugin_p2");
     a1t1p2.setParam("param", "1");
     t1p2.addTdbAu(a1t1p2);
-    TdbAu a2t1p2 = new TdbAu("a2t1p2");
-    a2t1p2.setPluginId("plugin_p2");
+    TdbAu a2t1p2 = new TdbAu("a2t1p2", "plugin_p2");
     a2t1p2.setParam("param", "2");
     t1p2.addTdbAu(a2t1p2);
 
-    TdbTitle t2p2 = new TdbTitle("t2p2");
+    TdbTitle t2p2 = new TdbTitle("t2p2", "0000-0002");
     p2.addTdbTitle(t2p2);
-    TdbAu a1t2p2 = new TdbAu("a1t2p2");
-    a1t2p2.setPluginId("plugin_p2");
+    TdbAu a1t2p2 = new TdbAu("a1t2p2", "plugin_p2");
     a1t2p2.setParam("param", "3");
     t2p2.addTdbAu(a1t2p2);
-    TdbAu a2t2p2 = new TdbAu("a2t2p2");
-    a2t2p2.setPluginId("plugin_p2");
+    TdbAu a2t2p2 = new TdbAu("a2t2p2", "plugin_p2");
     a2t2p2.setParam("param", "4");
     t2p2.addTdbAu(a2t2p2);
 
@@ -189,30 +177,27 @@ public class TestTdb extends LockssTestCase {
    * set, and TdbAu a2t2p2 has a param set.
    * 
    * @param tdb the Tdb
+   * @throws TdbException for invalid Tdb operations
    */
-  private void addTestPublisher2_Changed(Tdb tdb) {
+  private void addTestPublisher2_Changed(Tdb tdb) throws TdbException {
     TdbPublisher p2 = new TdbPublisher("p2");
     // add two title to p2
-    TdbTitle t1p2 = new TdbTitle("t1p2");
+    TdbTitle t1p2 = new TdbTitle("t1p2", "0000-0001");
     t1p2.addLinkToTdbTitleId(TdbTitle.LinkType.continuedBy, "0001-0001");
     p2.addTdbTitle(t1p2);
-    TdbAu a1t1p2 = new TdbAu("a1t1p2");
-    a1t1p2.setPluginId("plugin_p2");
+    TdbAu a1t1p2 = new TdbAu("a1t1p2", "plugin_p2");
     a1t1p2.setParam("param", "1");
     t1p2.addTdbAu(a1t1p2);
-    TdbAu a2t1p2 = new TdbAu("a2t1p2");
-    a2t1p2.setPluginId("plugin_p2");
+    TdbAu a2t1p2 = new TdbAu("a2t1p2", "plugin_p2");
     a2t1p2.setParam("param", "2");
     t1p2.addTdbAu(a2t1p2);
 
-    TdbTitle t2p2 = new TdbTitle("t2p2");
+    TdbTitle t2p2 = new TdbTitle("t2p2", "0000-0002");
     p2.addTdbTitle(t2p2);
-    TdbAu a1t2p2 = new TdbAu("a1t2p2");
-    a1t2p2.setPluginId("plugin_p2");
+    TdbAu a1t2p2 = new TdbAu("a1t2p2", "plugin_p2");
     a1t2p2.setParam("param", "3");
     t2p2.addTdbAu(a1t2p2);
-    TdbAu a2t2p2 = new TdbAu("a2t2p2");
-    a2t2p2.setPluginId("plugin_p2");
+    TdbAu a2t2p2 = new TdbAu("a2t2p2", "plugin_p2");
     a2t2p2.setParam("param1", "value1");
     a2t2p2.setParam("param", "3");
     t2p2.addTdbAu(a2t2p2);
@@ -226,8 +211,9 @@ public class TestTdb extends LockssTestCase {
   
   /**
    * Test creating valid TdbTitle.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testAddAu() {
+  public void testAddAu() throws TdbException {
     Tdb tdb = new Tdb();
     // add aus to tdb
     assertTrue(tdb.isEmpty());
@@ -246,15 +232,16 @@ public class TestTdb extends LockssTestCase {
     assertEquals(2, tdb.getTdbAus("plugin_t1p1").size());
     assertEquals(2, tdb.getTdbAus("plugin_t2p1").size());
     
-    assertEquals("t1p1", tdb.getTdbTitleForId("0001-0001").getName());
+    assertEquals("t1p1", tdb.getTdbTitleById("0001-0001").getName());
   }
   
   /**
    * Test adding an AU from a properties that define the AU.
    * The property names are of the form "name", "param.1.name",
    * or "attributes.attr0.name".
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testAddAuFromProperties() {
+  public void testAddAuFromProperties() throws TdbException {
     Tdb tdb = new Tdb();
 
     // set title database properties
@@ -319,13 +306,13 @@ public class TestTdb extends LockssTestCase {
     assertEquals("0003-0031", au1.getPropertyByName("issn"));
     assertEquals("4", au1.getPluginVersion());
     
-    assertEquals(title1, tdb.getTdbTitleForId("0003-0031"));
+    assertEquals(title1, tdb.getTdbTitleById("0003-0031"));
 
     try {
       // try to add from the properties again
       tdb.addTdbAuFromProperties(p1);
-      fail("exception not thrown when adding duplicate TdbAu 1 from properties");
-    } catch (IllegalStateException ex) {
+      fail("TdbException not thrown when adding duplicate TdbAu 1 from properties");
+    } catch (TdbException ex) {
     }
 
     Properties p2 = new Properties();
@@ -345,31 +332,31 @@ public class TestTdb extends LockssTestCase {
 
     try {
       tdb.addTdbAuFromProperties(p2);
-      fail("exception not thrown when adding duplicate TdbAu 2 from properties");
-    } catch (IllegalStateException ex) {
+      fail("TdbException not thrown when adding duplicate TdbAu 2 from properties");
+    } catch (TdbException ex) {
     }
   }
 
   /**
    * Test adding duplicate AU to TDB.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testDuplicateAu() {
+  public void testDuplicateAu() throws TdbException {
     Tdb tdb = new Tdb();
 
     // create an AU
     TdbPublisher p1 = new TdbPublisher("p1");
-    TdbTitle t1p1 = new TdbTitle("t1p1");
+    TdbTitle t1p1 = new TdbTitle("t1p1", "0000-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1");
-    a1t1p1.setPluginId("plugin1");
+    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin1");
     t1p1.addTdbAu(a1t1p1);
     tdb.addTdbAu(a1t1p1);
     assertFalse(tdb.isEmpty());
     assertEquals(1, tdb.getTdbAus("plugin1").size());
     try {
       tdb.addTdbAu(a1t1p1);
-      fail("failed to detect adding duplicate au \"" + a1t1p1.getName() + "\"");
-    } catch (IllegalStateException ex) {
+      fail("Failed to throw TdbException adding duplicate au \"" + a1t1p1.getName() + "\"");
+    } catch (TdbException ex) {
     }
     assertFalse(tdb.isEmpty());
     assertEquals(1, tdb.getTdbAus("plugin1").size());
@@ -377,8 +364,9 @@ public class TestTdb extends LockssTestCase {
 
   /**
    * Test equals function for Tdbs
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testEquals() {
+  public void testEquals() throws TdbException {
     Tdb tdb1 = new Tdb();
     addTestPublisher1(tdb1);
     addTestPublisher2(tdb1);
@@ -411,8 +399,9 @@ public class TestTdb extends LockssTestCase {
   
   /**
    * Test creating valid TdbTitle.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testGetPluginIdsForDifferences() {
+  public void testGetPluginIdsForDifferences()  throws TdbException {
     Tdb tdb1 = new Tdb();
     addTestPublisher1(tdb1);
     addTestPublisher2(tdb1);
@@ -455,8 +444,9 @@ public class TestTdb extends LockssTestCase {
   
   /**
    * Test sealing a TdbTitle.
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testSealTDB() {
+  public void testSealTDB() throws TdbException {
     Tdb tdb = new Tdb();
     assertFalse(tdb.isSealed());
 
@@ -465,17 +455,16 @@ public class TestTdb extends LockssTestCase {
 
     // create an AU
     TdbPublisher p1 = new TdbPublisher("p1");
-    TdbTitle t1p1 = new TdbTitle("t1p1");
+    TdbTitle t1p1 = new TdbTitle("t1p1", "0000-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1");
-    a1t1p1.setPluginId("a1t1p1");
+    TdbAu a1t1p1 = new TdbAu("a1t1p1", "a1t1p1");
     t1p1.addTdbAu(a1t1p1);
 
     // try adding AU to sealed TDB
     try {
       tdb.addTdbAu(a1t1p1);
-      fail("Tdb did not throw IllegalStateException adding AU to sealed TDB.");
-    } catch (IllegalStateException ex) {
+      fail("Tdb did not throw TdbException adding AU to sealed TDB.");
+    } catch (TdbException ex) {
     }
     
     assertTrue(tdb.isEmpty());
@@ -483,16 +472,16 @@ public class TestTdb extends LockssTestCase {
 
   /**
    * Test copyFrom() method
+   * @throws TdbException for invalid Tdb operations
    */
-  public void testCopyTDB() {
+  public void testCopyTDB() throws TdbException {
     Tdb tdb = new Tdb();
 
     // create an AU
     TdbPublisher p1 = new TdbPublisher("p1");
-    TdbTitle t1p1 = new TdbTitle("t1p1");
+    TdbTitle t1p1 = new TdbTitle("t1p1", "0000-0001");
     p1.addTdbTitle(t1p1);
-    TdbAu a1t1p1 = new TdbAu("a1t1p1");
-    a1t1p1.setPluginId("plugin1");
+    TdbAu a1t1p1 = new TdbAu("a1t1p1", "plugin1");
     t1p1.addTdbAu(a1t1p1);
     tdb.addTdbAu(a1t1p1);
     
@@ -509,15 +498,14 @@ public class TestTdb extends LockssTestCase {
     assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
     assertEquals(1, copyTdb.getAllTdbAus().size());
     assertEquals(1, copyTdb.getAllTdbPublishers().size());
-try {
+
     Tdb tdb3 = new Tdb();
 
     // create a duplicate AU for a different publisher
     TdbPublisher p3 = new TdbPublisher("p3");
-    TdbTitle t3p3 = new TdbTitle("t3p3");
+    TdbTitle t3p3 = new TdbTitle("t3p3", "0000-0003");
     p3.addTdbTitle(t3p3);
-    TdbAu a3t3p3 = new TdbAu("a1t3p3");
-    a3t3p3.setPluginId("plugin1");
+    TdbAu a3t3p3 = new TdbAu("a1t3p3", "plugin1");
     t3p3.addTdbAu(a3t3p3);
     tdb3.addTdbAu(a3t3p3);
     
@@ -526,8 +514,5 @@ try {
     assertEquals(tdb.getTdbAuCount(),copyTdb.getTdbAuCount());
     assertEquals(1, copyTdb.getAllTdbAus().size());
     assertEquals(1, copyTdb.getAllTdbPublishers().size());
-} catch (Throwable ex) {
-  fail("", ex);
-}
   }
 }
