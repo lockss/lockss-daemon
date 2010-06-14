@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.3 2010-04-06 18:17:49 pgust Exp $
+ * $Id: TdbTitle.java,v 1.4 2010-06-14 11:32:24 pgust Exp $
  */
 
 /*
@@ -39,13 +39,14 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
+import org.lockss.config.Tdb.TdbException;
 import org.lockss.util.Logger;
 
 /**
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.3 2010-04-06 18:17:49 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.4 2010-06-14 11:32:24 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -125,7 +126,7 @@ public class TdbTitle {
   /**
    * A collection of AUs for this title
    */
-  private final ArrayList<TdbAu> tdbAus = new ArrayList<TdbAu>();
+  private final HashMap<TdbAu.Id, TdbAu> tdbAus = new HashMap<TdbAu.Id, TdbAu>();
 
   /**
    * A map of link types to a collection of title IDs
@@ -133,17 +134,25 @@ public class TdbTitle {
   private Map<LinkType, Collection<String>> linkTitles;
   
   /**
-   * Create a new instance for the specified name.
+   * Create a new instance for the specified name and id.
+   * The title ID must be globally unique. For example, 
+   * the ID of a journal may be its ISSN.
    * 
    * @param name the title name
+   * @param id the title id
    */
-  protected TdbTitle(String name)
+  protected TdbTitle(String name, String id)
   {
     if (name == null) {
       throw new IllegalArgumentException("name cannot be null");
     }
     
+    if (id == null) {
+      throw new IllegalArgumentException("id cannot be null");
+    }
+
     this.name = name;
+    this.id = id;
   }
   
   /**
@@ -172,28 +181,6 @@ public class TdbTitle {
   }
   
   /**
-   * Sets the ID of this title.  The ID must be one that is
-   * globally unique.  For example, the ID of a journal may be
-   * its ISSN.
-   * <p>
-   * If ID is not set by the time this instance is added to its
-   * TdbPublisher, the publisher will generate and assign one
-   * to this instance.
-   * 
-   * @param id the ID of this title
-   * @throws IllegalStateException if the ID is already set
-   */
-  protected void setId(String id) {
-    if (id == null) {
-      throw new IllegalArgumentException("id cannot be null");
-    }
-    if (this.id != null) {
-      throw new IllegalStateException("id canot be reset"); 
-    }
-    this.id = id;
-  }
-  
-  /**
    * Return the publisher of this title.
    * 
    * @return the publisher of this title
@@ -206,14 +193,14 @@ public class TdbTitle {
    * Set the publisher of this title.  
    * 
    * @param publisher the publisher of this title
-   * @throws IllegalStateException if publisher already set
+   * @throws TdbException if publisher already set
    */
-  protected void setTdbPublisher(TdbPublisher publisher) {
+  protected void setTdbPublisher(TdbPublisher publisher) throws TdbException{
     if (publisher == null) {
       throw new IllegalArgumentException("title publisher cannot be null");
     }
     if (this.publisher != null) {
-      throw new IllegalStateException("publisher cannot be reset");
+      throw new TdbException("publisher cannot be reset");
     }
     
     this.publisher = publisher;
@@ -318,7 +305,7 @@ public class TdbTitle {
    * @return a collection of TdbAus for this title
    */
   public Collection<TdbAu> getTdbAus() {
-    return tdbAus;
+    return tdbAus.values();
   }
   
   /**
@@ -326,42 +313,58 @@ public class TdbTitle {
    * to adding tdbAu to this title.
    * 
    * @param tdbAu a new TdbAus
-   * @throws IllegalStateException if trying to add a TdbAu with the same id as
+   * @throws TdbException if trying to add a TdbAu with the same id as
    *   an existing TdbAu
    */
-  public void addTdbAu(TdbAu tdbAu) {
+  public void addTdbAu(TdbAu tdbAu) throws TdbException {
     if (tdbAu == null) {
       throw new IllegalArgumentException("au cannot be null");
     }
     if (tdbAu.getPluginId() == null) {
-      throw new IllegalArgumentException("cannot add au because its plugin ID is not set: \"" 
-                                         + tdbAu.getName() + "\"");
+      throw new IllegalArgumentException(
+                        "cannot add au because its plugin ID is not set: \"" 
+                      + tdbAu.getName() + "\"");
     }
     TdbTitle otherTitle = tdbAu.getTdbTitle();
     if (otherTitle == this) {
-      throw new IllegalArgumentException("au entry \"" + tdbAu.getName() + "\" already exists in title \"" + name + "\"");
+      throw new IllegalArgumentException(
+                        "au entry \"" + tdbAu.getName() 
+                      + "\" already exists in title \"" + name + "\"");
     } else if (otherTitle != null) {
-      throw new IllegalArgumentException("au entry \"" + tdbAu.getName() 
-                                         + "\" already in another title: \"" 
-                                         + otherTitle.getName() + "\"");
+      throw new IllegalArgumentException(
+                        "au entry \"" + tdbAu.getName() 
+                      + "\" already in another title: \"" + otherTitle.getName() + "\"");
     }
 
-    // ensure Id of new au is unique for this title 
-    TdbAu existingAu = this.getTdbAuById(tdbAu.getId());
-    if (existingAu != null) {
+    // add au assuming that it is not a duplicate
+    TdbAu.Id id = tdbAu.getId();
+    TdbAu existingAu = tdbAus.put(id, tdbAu);
+    if (existingAu == tdbAu) {
+      // au is already added
+      return;
+    } else if (existingAu != null) {
+
+      // au already added -- restore and report existing au
+      tdbAus.put(id, existingAu);
       if (tdbAu.getName().equals(existingAu.getName())) {
-        throw new IllegalStateException("cannot add duplicate au entry: \"" + tdbAu.getName() 
-                                        + "\" to title \"" + name + "\"");
+        throw new TdbException(
+                        "Cannot add duplicate au entry: \"" + tdbAu.getName() 
+                      + "\" to title \"" + name + "\"");
       } else {
-        // error because it could lead to a missing AU -- one probably has a typo
-        throw new IllegalStateException("cannot add duplicate au entry: \"" + tdbAu.getName() 
+        // error because it could lead to a missing su -- one probably has a typo
+        throw new TdbException(
+                       "Cannot add duplicate au entry: \"" + tdbAu.getName() 
                      + "\" with the same id as existing au entry \"" + existingAu.getName()
                      + "\" to title \"" + name + "\"");
         }
     }
-    tdbAu.setTdbTitle(this);
-    tdbAus.add(tdbAu);
-    
+    try {
+      tdbAu.setTdbTitle(this);
+    } catch (TdbException ex) {
+      // if we can't set the title, remove the au and re-throw exception
+      tdbAus.remove(id);
+      throw ex;
+    }
   }
   
   /**
@@ -383,7 +386,7 @@ public class TdbTitle {
   public Collection<TdbAu> getTdbAusByName(String tdbAuName)
   {
     ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
-    for (TdbAu tdbAu : tdbAus) {
+    for (TdbAu tdbAu : tdbAus.values()) {
       if (tdbAu.getName().equals(tdbAuName)) {
         aus.add(tdbAu);
       }
@@ -400,12 +403,7 @@ public class TdbTitle {
    */
   public TdbAu getTdbAuById(TdbAu.Id tdbAuId)
   {
-    for (TdbAu tdbAu : tdbAus) {
-      if (tdbAu.getId().equals(tdbAuId)) {
-        return tdbAu;
-      }
-    }
-    return null;
+    return tdbAus.get(tdbAuId);
   }
 
   /**
@@ -419,7 +417,7 @@ public class TdbTitle {
       throw new IllegalArgumentException("pluginIds cannot be null");
     }
     
-    for (TdbAu au : tdbAus) {
+    for (TdbAu au : tdbAus.values()) {
       pluginIds.add(au.getPluginId());
     }
   }
@@ -448,7 +446,7 @@ public class TdbTitle {
         // differences because method tried to add to unmodifiable set
       } catch (IllegalArgumentException ex) {
         // if something was wrong with the other title
-      } catch (IllegalStateException ex) {
+      } catch (TdbException ex) {
         // if something is wrong with this title
       }
     }
@@ -474,9 +472,11 @@ public class TdbTitle {
    * <p>
    * This method is used by {@link Tdb#getChangedPluginIds(Tdb)}.
    * @param pluginIds the pluginIds for TdbAus that are different 
-   * @throws IllegalStateException if this TdbTitle's ID not set
+   * @throws TdbException if this TdbTitle's ID not set
    */
-  protected void addPluginIdsForDifferences(Set<String>pluginIds, TdbTitle title) {
+  protected void addPluginIdsForDifferences(Set<String>pluginIds, TdbTitle title) 
+    throws TdbException {
+    
     if (pluginIds == null) {
       throw new IllegalArgumentException("pluginIds cannot be null");
     }
@@ -485,14 +485,6 @@ public class TdbTitle {
       throw new IllegalArgumentException("title cannot be null");
     }
     
-    if (id == null) {
-      throw new IllegalStateException("ID must be set");
-    }
-      
-    if (title.getId() == null) {
-      throw new IllegalArgumentException("title ID must be set");
-    }
-      
     if (!title.getId().equals(id)) {
       throw new IllegalArgumentException("title ID \"" + title.getId() + "\" different than \"" + getId() + "\"");
     }
@@ -506,14 +498,13 @@ public class TdbTitle {
 
       // pluginIDs for TdbAus that only appear in title
       for (TdbAu titleAu : title.getTdbAus()) {
-        if (this.getTdbAuById(titleAu.getId()) == null) {
+        if (!this.getTdbAus().contains(titleAu)) {
           // add pluginID for title AU that is not in this TdbTitle
           pluginIds.add(titleAu.getPluginId());
         }
       }
-      for (TdbAu thisAu : this.tdbAus) {
-        TdbAu titleAu = title.getTdbAuById(thisAu.getId()); 
-        if (titleAu == null) {
+      for (TdbAu thisAu : this.getTdbAus()) {
+        if (!title.getTdbAus().contains(thisAu)) {
           // add pluginId for AU in this TdbTitle that is not in title 
           pluginIds.add(thisAu.getPluginId());
         }
@@ -528,10 +519,10 @@ public class TdbTitle {
    * This is method is used by Tdb to make a deep copy of a publisher.
    * 
    * @param publisher the publisher
+   * @throws TdbException if publisher already has this title
    */
-  protected TdbTitle copyForTdbPublisher(TdbPublisher publisher) {
-    TdbTitle title = new TdbTitle(name);
-    title.setId(id);
+  protected TdbTitle copyForTdbPublisher(TdbPublisher publisher) throws TdbException {
+    TdbTitle title = new TdbTitle(name, id);
     publisher.addTdbTitle(title);
     title.linkTitles = linkTitles;  // immutable: no need to copy
     return title;

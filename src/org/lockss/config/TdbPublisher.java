@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.5 2010-04-07 03:13:10 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.6 2010-06-14 11:32:24 pgust Exp $
  */
 
 /*
@@ -34,24 +34,33 @@ package org.lockss.config;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Set;
+
+import org.lockss.config.Tdb.TdbException;
+import org.lockss.util.Logger;
 
 /**
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.5 2010-04-07 03:13:10 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.6 2010-06-14 11:32:24 pgust Exp $
  */
 public class TdbPublisher {
+  /**
+   * Set up logger
+   */
+  protected final static Logger logger = Logger.getLogger("TdbPublisher");
+
   /**
    * The name of the publisher
    */
   private final String name;
   
   /**
-   * The set of titles for this publisher
+   * The map of title IDs to titles for this publisher
    */
-  private final ArrayList<TdbTitle> titles = new ArrayList<TdbTitle>();
+  private final HashMap<String, TdbTitle> titlesById = new HashMap<String, TdbTitle>();
 
 
   /**
@@ -82,7 +91,7 @@ public class TdbPublisher {
    * @return the number of TdbTitles for this publisher
    */
   public int getTdbTitleCount() {
-    return titles.size();
+    return titlesById.size();
   }
 
   /**
@@ -92,7 +101,7 @@ public class TdbPublisher {
    */
   public int getTdbAuCount() {
     int auCount = 0;
-    for (TdbTitle title : titles) {
+    for (TdbTitle title : titlesById.values()) {
       auCount += title.getTdbAuCount();
     }
     return auCount;
@@ -106,26 +115,29 @@ public class TdbPublisher {
    * @return the collection of TdbTitles for this publisher
    */
   public Collection<TdbTitle> getTdbTitles() {
-    return titles;
+    return titlesById.values();
   }
   
   /**
    * Return the collection of TdbTitles for this publisher
    * with the specified title name.
-   * <p>
-   * Note: the returned collection should note be modified.
    * 
    * @param titleName the title name
    * @return the set of TdbTitles with the specified title name
    */
   public Collection<TdbTitle> getTdbTitlesByName(String titleName) {
-    Collection<TdbTitle> theTitles = new ArrayList<TdbTitle>();
-    for (TdbTitle title : titles) {
+    if (titleName == null) {
+      return Collections.EMPTY_LIST;
+    }
+
+    ArrayList<TdbTitle> matchTitles = new ArrayList<TdbTitle>();
+    for (TdbTitle title : titlesById.values()) {
       if (title.getName().equals(titleName)) {
-        theTitles.add(title);
+        matchTitles.add(title);
       }
     }
-    return theTitles;
+    matchTitles.trimToSize();
+    return matchTitles;
   }
   
   /**
@@ -136,61 +148,52 @@ public class TdbPublisher {
    * @return the TdbTitle with the specified title ID. 
    */
   public TdbTitle getTdbTitleById(String titleId) {
-    for (TdbTitle title : titles) {
-      if (title.getId().equals(titleId)) {
-        return title;
-      }
-    }
-    return null;
+    return titlesById.get(titleId);
   }
   
   /**
-   * Add a new TdbTitle for this publisher. Sets the title ID to a
-   * generated ID if the title ID is not already set.
+   * Add a new TdbTitle for this publisher. 
    * 
    * @param title a new TdbTitle
-   * @throws IllegalStateException if title already added to a publisher
+   * @throws IllegalArgumentException if the title ID is not set
+   * @throws TdbException if title already added to a publisher
    */
-  protected void addTdbTitle(TdbTitle title) {
+  protected void addTdbTitle(TdbTitle title) throws TdbException{
     if (title == null) {
       throw new IllegalArgumentException("published title cannot be null");
     }
-    
-    String id = title.getId();
-    if (id == null) {
-      id = genTdbTitleId(title.getName());
-    }
-    TdbTitle existingTitle = getTdbTitleById(id);
-    if (existingTitle != null) {
+
+    // add the title assuming that is not a duplicate
+    String titleId = title.getId();
+    TdbTitle existingTitle = titlesById.put(titleId, title);
+    if (existingTitle == title) {
+      // title already added
+      return;
+      
+    } else if (existingTitle != null) {
+      
+      // title already added -- restore and report existing title
+      titlesById.put(titleId, existingTitle);
       if (title.getName().equals(existingTitle.getName())) {
-        throw new IllegalStateException("cannot add duplicate title entry: \"" + title.getName() + "\"");
+        throw new TdbException("Cannot add duplicate title entry: \"" + title.getName() 
+                               + "\" for title id: " + titleId
+                               + " to publisher \"" + name + "\"");
       } else {
         // error because it could lead to a missing AU -- one probably has a typo
-        throw new IllegalStateException("cannot add duplicate title entry: \"" + title.getName() 
-                     + "\" with the same id as existing title \"" + existingTitle.getName() + "\"");
+        throw new TdbException(
+                       "Cannot add duplicate title entry: \"" + title.getName() 
+                     + "\" with the same id: " + titleId + " as existing title \"" 
+                     + existingTitle.getName() + "\" to publisher \"" + name + "\"");
       }
     }
 
-    if (title.getId() == null) {
-      // generate titleID for title
-      title.setId(id);
+    try {
+      title.setTdbPublisher(this);
+    } catch (TdbException ex) {
+      // if can't set the publisher, remove title and re-throw exception
+      titlesById.remove(title.getId());
+      throw ex;
     }
-    title.setTdbPublisher(this);
-    
-    titles.add(title); 
-  }
-  
-  /**
-   * Generate a unique title ID.  This method generates the same
-   * title ID for the same title every time it is called.
-   * 
-   * @return a unique title ID
-   */
-  protected String genTdbTitleId(String titleName) {
-    // use a hash of publisher name and title name for now
-    // todo: should we verify this and retry if collision found
-    // with other titles in this publisher?
-    return Integer.toString((titleName + name).hashCode());
   }
   
   /**
@@ -200,7 +203,7 @@ public class TdbPublisher {
    * @param pluginIds the set of plugin IDs to add to.
    */
   protected void addAllPluginIds(Set<String>pluginIds) {
-    for (TdbTitle title : titles) {
+    for (TdbTitle title : titlesById.values()) {
       title.addAllPluginIds(pluginIds);
     }
   }
@@ -230,14 +233,20 @@ public class TdbPublisher {
     }
     
     // search titles in this publisher
-    for (TdbTitle thisTitle : this.titles) {
+    for (TdbTitle thisTitle : this.titlesById.values()) {
       TdbTitle publisherTitle = publisher.getTdbTitleById(thisTitle.getId());
       if (publisherTitle == null) {
         // add all pluginIDs for title not in publisher
         thisTitle.addAllPluginIds(pluginIds);
       } else {
+        try {
         // add pluginIDs for differences in titles with the same title ID
         thisTitle.addPluginIdsForDifferences(pluginIds, publisherTitle);
+        } catch (TdbException ex) {
+          // won't happen because all titles for publisher have an ID
+          logger.error("Internal error: title with no id: " + thisTitle, ex);
+          
+        }
       }
     }
   }

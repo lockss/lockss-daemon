@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.3 2010-04-06 18:19:02 pgust Exp $
+ * $Id: TdbAu.java,v 1.4 2010-06-14 11:32:24 pgust Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import org.lockss.config.Tdb.TdbException;
 import org.lockss.util.OrderedProperties;
 
 /**
@@ -81,7 +82,7 @@ public class TdbAu {
    * The key for identity testing
    */
   private final Id tdbAuId = new Id(this);
-  
+
   /**
    * This class encapsulates the key for a TdbAu.  As with
    * the Plugin, it uses the pluginId and params.  Since the
@@ -92,9 +93,23 @@ public class TdbAu {
    */
   static public class Id {
     final private TdbAu au;
+    private int hash = 0;
     public Id(TdbAu au) {
       this.au = au;
     }
+    /** 
+     * Return the TdbAu for this ID.
+     * @return the TdbAu for this ID
+     */
+    public TdbAu getTdbAu() {
+      return au;
+    }
+    
+    /**
+     * Determines this ID is equal to another object
+     * @param obj the other object
+     * @return <code>true</code> if this ID equals the other object
+     */
     public boolean equals(Object obj) {
       if (!(obj instanceof Id)) {
         return false;
@@ -113,9 +128,26 @@ public class TdbAu {
       return (   au.getPluginId().equals(auId.au.getPluginId())
               && au.getParams().equals(auId.au.getParams()));
     }
-    public int hashCode() {
-      throw new UnsupportedOperationException();
+    /**
+     * Force hashcode to be recomputed because of a TdbAu change.
+     */
+    private void invalidateHashCode() {
+      hash = 0;
     }
+    /**
+     * Returns the hashcode for this ID.
+     * @return the hashcode for this ID
+     */
+    public int hashCode() {
+      if (hash == 0) {
+        hash = au.getPluginId().hashCode() ^ au.getParams().hashCode();
+      } 
+      return hash;
+    }
+    /**
+     * Returns the string value for this ID.
+     * @return the string value of this ID
+     */
     public String toString() {
       Properties props = new Properties();
       props.putAll(au.getParams());
@@ -124,17 +156,23 @@ public class TdbAu {
   }
 
     /**
-   * Create a new instance of an AU.
+   * Create a new instance of an au.
    * 
-   * @param name the name of the AU
+   * @param name the name of the au
+   * @param pluginId the id of the plugin.
    * @param pluginId the plugin ID of this AU
    */
-  protected TdbAu(String name) {
+  protected TdbAu(String name, String pluginId) {
     if (name == null) {
       throw new IllegalArgumentException("au name cannot be null");
     }
     
+    if (pluginId == null) {
+      throw new IllegalArgumentException("au pluginId cannot be null");
+    }
+    
     this.name = name;
+    this.pluginId = pluginId;
 
     if (System.getProperty("org.lockss.unitTesting", "false").equals("true")) {
       // use LinkedHashMap to preserve param order for testing
@@ -170,7 +208,7 @@ public class TdbAu {
    * @returns hashcode of this instance
    */
   public int hashCode() {
-    return getId().hashCode();
+      return getId().hashCode();
   }
 
   /**
@@ -215,13 +253,14 @@ public class TdbAu {
    * Set the title for this AU.
    * 
    * @param title the title for this AU
+   * @throws TdbException if the title is already set
    */
-  protected void setTdbTitle(TdbTitle title) {
+  protected void setTdbTitle(TdbTitle title) throws TdbException{
     if (title == null) {
       throw new IllegalArgumentException("au title cannot be null");
     }
     if (this.title != null) {
-      throw new IllegalArgumentException("cannot reset title for au \"" + name + "\"");
+      throw new TdbException("cannot reset title for au \"" + name + "\"");
     }
     
     this.title = title;
@@ -237,26 +276,6 @@ public class TdbAu {
     return pluginId;
   }
   
-  /**
-   * Set the ID for the plugin for this TdbAu.  The pluginId must be set before adding 
-   * this TdbAu to its TdbTitle because changing pluginId could change the Id of this TdbAu.
-   * 
-   * @param pluginId the ID of the plugin for this AU
-   * @throws IllegalStateException if pluginID is already set (would change au's Id) 
-   */
-  protected void setPluginId(String pluginId) {
-    if (pluginId == null) {
-      throw new IllegalArgumentException("au pluginId cannot be null");
-    }
-    if (this.pluginId != null) {
-      throw new IllegalStateException("cannot reset au pluginId for au \"" + name + "\"");
-    }
-    
-    // set plugin ID if different than default
-    this.pluginId = pluginId; 
-  }
-  
-
   /**
    * Get the properties for this instance.
    * <p>
@@ -296,18 +315,19 @@ public class TdbAu {
    * 
    * @param name the property name
    * @param value the property value
+   * @throws TdbException if cannot set property
    */
-  protected void setPropertyByName(String name, String value) {
+  protected void setPropertyByName(String name, String value) throws TdbException {
     if (name == null) {
       throw new IllegalArgumentException("property name cannot be null");
     }
     if (name.equals("pluginId")) {
-      setPluginId(value);
+      throw new TdbException("cannot reset pluginId property \"" + pluginId + "\" for au \"" + this.name + "\"");
     } else if (name.equals("name")) {
-      throw new IllegalStateException("cannot reset name property \"" + name + "\" for au \"" + this.name + "\"");
+      throw new TdbException("cannot reset name property \"" + name + "\" for au \"" + this.name + "\"");
     } else {
       if (value == null) {
-        throw new IllegalArgumentException("value cannot be null for property \"" + name + "\" for au \"" + this.name + "\"");
+        throw new TdbException("value cannot be null for property \"" + name + "\" for au \"" + this.name + "\"");
       }
       if (props == null) {
         props = new HashMap<String,String>();
@@ -324,7 +344,7 @@ public class TdbAu {
    * @return the params for this instance
    */
   public Map<String, String> getParams() {
-    return (params != null) ? params : Collections.EMPTY_MAP;
+    return params;
   }
   
   /**
@@ -334,7 +354,7 @@ public class TdbAu {
    * @return the param value, or <code>null</code> if not defined
    */
   public String getParam(String name) {
-    return (params != null) ? params.get(name) : null;
+    return params.get(name);
   }
   
   /**
@@ -343,10 +363,10 @@ public class TdbAu {
    * 
    * @param name the param name
    * @param value the non-null param value
-   * @throws IllegalStateException if param is already set, or 
+   * @throws TdbException if param is already set, or 
    *   au has been added to its title (could change its Id);
    */
-  protected void setParam(String name, String value) {
+  protected void setParam(String name, String value) throws TdbException {
     if (name == null) {
       throw new IllegalArgumentException("au param name cannot be null");
     }
@@ -355,12 +375,13 @@ public class TdbAu {
     }
     
     if (title != null) {
-      throw new IllegalStateException("cannot add param once au has been added to its title");
+      throw new TdbException("cannot add param once au has been added to its title");
     }
     if (params.containsKey(name)) {
-      throw new IllegalStateException("cannot replace value of au param \"" + name + "\" for au \"" + this.name + "\"");
+      throw new TdbException("cannot replace value of au param \"" + name + "\" for au \"" + this.name + "\"");
     }
     params.put(name, value);
+    getId().invalidateHashCode();  // setting params modifies ID hashcode
   }
   
   /**
@@ -389,9 +410,9 @@ public class TdbAu {
    * 
    * @param name the attr name
    * @param value the non-null attr value
-   * @throws IllegalStateException if attr already set
+   * @throws TdbException if attr already set
    */
-  protected void setAttr(String name, String value) {
+  protected void setAttr(String name, String value) throws TdbException {
     if (name == null) {
       throw new IllegalArgumentException("attr name cannot be null for au \"" + this.name + "\"");
     }
@@ -404,7 +425,7 @@ public class TdbAu {
     }
     
     if (attrs.containsKey(name)) {
-      throw new IllegalStateException("cannot replace value of au attr \"" + name + "\" for au \"" + this.name + "\"");
+      throw new TdbException("cannot replace value of au attr \"" + name + "\" for au \"" + this.name + "\"");
     }
     attrs.put(name, value);
   }
@@ -424,8 +445,9 @@ public class TdbAu {
    * the "pluginVersion" property.
    * 
    * @return pluginVersion the pluginVersion
+   * @throws TdbException if plugin version already set
    */
-  public void setPluginVersion(String pluginVersion) {
+  public void setPluginVersion(String pluginVersion) throws TdbException {
     setPropertyByName("pluginVersion", pluginVersion);
   }
 
@@ -433,8 +455,9 @@ public class TdbAu {
    * Convenience method sets the "estSize" property to the estimated size.
    * 
    * @param size estimated size in bytes
+   * @throws TdbException if size already set
    */
-  public void setEstimatedSize(long size) {
+  public void setEstimatedSize(long size) throws TdbException {
     if (size < 0) {
       throw new IllegalArgumentException("estimated size cannot be negative");
     }
@@ -499,9 +522,7 @@ public class TdbAu {
       // This will go away when the external
       // representation includes separate title records.
       p.put("journal.title", title.getName());  // proposed replacement for journalTitle
-      if (title.getId() != null) {
-        p.put("journal.id", title.getId());     // proposed new property
-      }
+      p.put("journal.id", title.getId());     // proposed new property
 
       if (title.getTdbPublisher() != null) {
         // proposed new property to replace attribute.publisher
@@ -549,10 +570,11 @@ public class TdbAu {
    * This is method is used by Tdb to make a deep copy of a publisher.
    * 
    * @param publisher the publisher
+   * @throws TdbException if trying to add a TdbAu  to title with the 
+   *   same id as this one
    */
-  protected TdbAu copyForTdbTitle(TdbTitle title) {
-    TdbAu au = new TdbAu(name);
-    au.setPluginId(pluginId);
+  protected TdbAu copyForTdbTitle(TdbTitle title) throws TdbException {
+    TdbAu au = new TdbAu(name, pluginId);
     title.addTdbAu(au);
 
     // immutable -- no need to copy        
@@ -563,6 +585,7 @@ public class TdbAu {
     return au;
     
   }
+  
   /**
    * Return a String representation of the title.
    * 
