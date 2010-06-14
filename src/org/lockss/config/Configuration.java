@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.29 2010-04-07 19:20:40 pgust Exp $
+ * $Id: Configuration.java,v 1.30 2010-06-14 11:21:09 pgust Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.config;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.config.Tdb.TdbException;
 import org.lockss.util.*;
 
 /** <code>Configuration</code> provides access to the LOCKSS configuration
@@ -209,12 +210,16 @@ public abstract class Configuration {
       if (tdb == null) {
         tdb = new Tdb();
       }
-      tdb.copyFrom(otherTdb);
+      try {
+        tdb.copyFrom(otherTdb);
+      } catch (TdbException ex) {
+        log.error("Error copying into Tdb", ex);
+      }
     }
   }
 
   /** Copy contents of the argument into this config.  Duplicate keys
-   *  will <em>not</em> be overwritten.
+   *  will <em>not</em> be overwritten. Title Database is not copied.
    */
   public void copyFromNonDestructively(Configuration other) {
     for (Iterator iter = other.keyIterator(); iter.hasNext(); ) {
@@ -233,6 +238,8 @@ public abstract class Configuration {
    * Given a Config File, load its configuration into this one.  This
    * will overwrite any existing properties with the properties from
    * the Config File.
+   * 
+   * @throws IOException if error reading configuration
    */
   void load(ConfigFile cf) throws IOException {
     copyFrom(cf.getConfiguration());
