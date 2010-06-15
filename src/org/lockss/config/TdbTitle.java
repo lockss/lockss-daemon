@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.5 2010-06-14 11:49:06 pgust Exp $
+ * $Id: TdbTitle.java,v 1.6 2010-06-15 15:03:21 pgust Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.util.Logger;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.5 2010-06-14 11:49:06 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.6 2010-06-15 15:03:21 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -309,7 +309,7 @@ public class TdbTitle {
   }
   
   /**
-   * Add a new TdbAu for this title.  The pluginID and all params must be set prior
+   * Add a new TdbAu for this title.  All params must be set prior
    * to adding tdbAu to this title.
    * 
    * @param tdbAu a new TdbAus

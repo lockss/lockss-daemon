@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.7 2010-06-14 11:28:49 pgust Exp $
+ * $Id: Tdb.java,v 1.8 2010-06-15 15:03:21 pgust Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.util.Logger;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.7 2010-06-14 11:28:49 pgust Exp $
+ * @version $Id: Tdb.java,v 1.8 2010-06-15 15:03:21 pgust Exp $
  */
 public class Tdb {
   /**
@@ -64,9 +64,9 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.7 2010-06-14 11:28:49 pgust Exp $
+   * @version $Id: Tdb.java,v 1.8 2010-06-15 15:03:21 pgust Exp $
    */
-  static public class TdbException extends IOException {
+  static public class TdbException extends Exception {
     /**
      * Constructs a new exception with the specified detail message.  The
      * cause is not initialized, and may subsequently be initialized by
@@ -476,9 +476,6 @@ public class Tdb {
    *    if no TdbAus for the specified plugin in this configuration.
    */
   public Collection<TdbAu> getTdbAus(String pluginId) {
-    if (pluginIdTdbAusMap == null) {
-      return Collections.EMPTY_LIST;
-    }
     Collection<TdbAu> aus = pluginIdTdbAusMap.get(pluginId);
     return (aus != null) ? aus : Collections.EMPTY_LIST;
   }
@@ -665,9 +662,8 @@ public class Tdb {
   }
   
   /**
-   * Add an TdbAu to a TdbTitle and TdbPubisher, and adds links to 
-   * the TdbTitle specified by the properties.  The TdbAu plugin ID
-   * must be set before adding it to the Tdb.
+   * Add a TdbAu to a TdbTitle and TdbPubisher, and add links to 
+   * the TdbTitle specified by the properties.
    * 
    * @param props the properties
    * @param au the TdbAu to add
@@ -1012,5 +1008,4 @@ public class Tdb {
   public Map<String, TdbPublisher> getAllTdbPublishers() {
     return (tdbPublisherMap != null) ? tdbPublisherMap : Collections.EMPTY_MAP;
   }
-
 }
