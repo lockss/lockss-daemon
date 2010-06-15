@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.22 2010-05-27 07:00:01 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.23 2010-06-15 14:48:48 pgust Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.config.Tdb.TdbException;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
@@ -146,7 +147,7 @@ public class TestBasePlugin extends LockssTestCase {
     assertNull(mbp.findAuConfigDescr("noparam"));
   }
 
-  public void testInitTitleDB() {
+  public void testInitTitleDB() throws TdbException {
     String plugName = "org.lockss.plugin.base.TestBasePlugin$MyBasePlugin";
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
     
