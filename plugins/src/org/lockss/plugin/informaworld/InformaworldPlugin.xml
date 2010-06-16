@@ -13,7 +13,7 @@
   </entry>	
   <entry>
     <string>au_name</string>
-    <string>&quot;Informaworld Plugin, Base URL %s, Journal ISSN %s, Journal ID %s, Volume %s&quot;, base_url, journal_issn, journal_id, volume_name</string>
+    <string>&quot;Informaworld Plugin, Base URL %s, PDF Host URL %s, Journal ISSN %s, Journal ID %s, Volume %s&quot;, base_url, pdf_url, journal_issn, journal_id, volume_name</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -24,26 +24,44 @@
     <long>1209600000</long>
   </entry>
   <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.informaworld.InformaworldHtmlFilterFactory</string>
+  </entry>
+  <entry>
     <string>au_crawlrules</string>
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
-      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>4,&quot;^(%s|%s)&quot;, base_url, pdf_url</string>
       <string>1,&quot;%ssmpp/lockss\?journalcode=%s&amp;volume=%s&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%s.*&quot;, pdf_url</string>
       <string>1,&quot;^%sopenurl\?genre=(issue|article)&quot;, base_url</string>
       <string>1,&quot;^%ssmpp/urlmapping\?request=&quot;, base_url</string>
-      <string>1,&quot;^%ssmpp/title~content=g[0-9]+/~db=all$&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/title~db=all~content=g[0-9]+$&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/title~db=all~content=g[0-9]+~tab=toc~order=page$&quot;, base_url</string>
+      <string>2,&quot;^%ssmpp/title~content=g[0-9]+~db=all(~tab=forthcoming|~tab=jdb_table_of_contents_previous|\?logout=true)&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/title~content=g[0-9]+~db=all&quot;, base_url</string>
       <string>2,&quot;^%ssmpp/content~db=all\?content=[0-9]{2}\.[0-9]{4}/[0-9]+&amp;(logout=true|tab=citations)&quot;, base_url</string>
       <string>1,&quot;^%ssmpp/content~db=all\?content=[0-9]{2}\.[0-9]{4}&quot;, base_url</string>
-      <string>2,&quot;^%ssmpp/content~db=all.*tab=(send|citation|related)$&quot;, base_url</string>
+      <string>2,&quot;^%ssmpp/content~db=all.*tab=(send|citation|related)&quot;, base_url</string>
       <string>1,&quot;^%ssmpp/content~db=all.*tab=(references|content)&quot;, base_url</string>
       <string>1,&quot;^%ssmpp/ftinterface~db=all~content=.*~fulltext=&quot;, base_url</string>
       <string>1,&quot;^%ssmpp/ftinterface~content=a[0-9]+~fulltext=&quot;, base_url</string>
-
+      <string>2,&quot;^%ssmpp/content~db=all~content=a[0-9]*~jumptype&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/content~db=all~content=a[0-9]*&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/ftinterface~db=all~content=a[0-9]+\?tab=references&quot;, base_url</string>
+      <string>1,&quot;^%ssmpp/section\?content=a[0-9]+&quot;, base_url</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
     <string>&quot;%ssmpp/lockss?journalcode=%s&amp;volume=%s&quot;, base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+      <list>
+        <string>&quot;%ssmpp/lockss?journalcode=%s&amp;volume=%s&quot;, base_url, journal_id, volume_name</string>
+        <string>&quot;%sPdf/lockss.html&quot;, pdf_url</string>
+      </list>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -52,6 +70,15 @@
         <key>base_url</key>
         <displayName>Base URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>pdf_url</key>
+        <displayName>PDF Host URL</displayName>
+        <description>Parameter for pdfserve.informaworld.com/</description>
         <type>3</type>
         <size>40</size>
         <definitional>true</definitional>
@@ -88,5 +115,9 @@
   <entry>
     <string>au_url_normalizer</string>
     <string>org.lockss.plugin.informaworld.InformaworldUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>text/css_link_extractor_factory</string>
+    <string>org.lockss.extractor.RegexpCssLinkExtractor$Factory</string>
   </entry>
 </map>
