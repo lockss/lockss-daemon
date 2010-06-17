@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.24 2009-10-26 13:51:45 dshr Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.25 2010-06-17 18:49:23 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -124,6 +124,10 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
       props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
     } else if (fileName.endsWith(".html")) {
       props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    } else if (fileName.endsWith(".xml")) {
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
+    } else if (fileName.endsWith(".xml.meta")) {
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/xml");
     } else if (fileName.endsWith(".pdf")) {
       props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
     } else if (fileName.endsWith(".jpg")) {
@@ -141,7 +145,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   }
 
   private String mapUrlToContentFileName() {
-    return SimulatedArchivalUnit.mapUrlToContentFileName(origUrl);
+    return ((SimulatedArchivalUnit) au).mapUrlToContentFileName(origUrl);
   }
 
   private boolean toBeDamaged() {

@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.70 2009-10-30 16:43:12 dshr Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.71 2010-06-17 18:49:23 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.extractor.*;
 import org.lockss.state.*;
 
 /**
@@ -57,13 +58,13 @@ import org.lockss.state.*;
 public class SimulatedArchivalUnit extends BaseArchivalUnit {
   static final Logger log = Logger.getLogger("SAU");
 
-  private static final String SIMULATED_URL_STEM = "http://www.example.com";
+  private static final String SIMULATED_URL_BASE = "http://www.example.com/";
 
   /**
    * This is the url which the Crawler should start at.
    */
   private static final String SIMULATED_URL_START =
-    SIMULATED_URL_STEM + "/index.html";
+    SIMULATED_URL_BASE + "index.html";
 
   /**
    * This is the root of the url which the SimAU pretends to be.
@@ -75,6 +76,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private SimulatedContentGenerator scgen;
   private String auId = StringUtil.gensym("SimAU_");
   String simRoot; //sim root dir returned by content generator
+  String baseUrlNoSlash;
   private boolean doFilter = false;
   private List pauseContentTypes = new ArrayList();
 
@@ -108,12 +110,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   protected String makeStartUrl() {
-    return SIMULATED_URL_START;
-  }
-
-  public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
-    log.debug3("getArticleIteratorFactory: " + articleIteratorFactory);
-    return articleIteratorFactory;
+    return paramMap.getUrl(KEY_AU_BASE_URL) + "index.html";
   }
 
   public ArticleIteratorFactory getArticleIteratorFactory() {
@@ -205,6 +202,11 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     }
   }
 
+  /** Return true if the simulated content has been generated */
+  public boolean hasContentTree() {
+    return scgen != null && scgen.isContentTree();
+  }
+
   /**
    * resetContentTree() deletes and regenerates the simulated content,
    * restoring it to its starting state.
@@ -254,8 +256,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @param url the url to map
    * @return fileName the mapping result
    */
-  public static String mapUrlToContentFileName(String url) {
-    String baseStr =  StringUtil.replaceString(url, SIMULATED_URL_ROOT,
+  public String mapUrlToContentFileName(String url) {
+    String baseStr =  StringUtil.replaceString(url, baseUrlNoSlash,
 					       SimulatedContentGenerator.ROOT_NAME);
     return FileUtil.sysDepPath(baseStr);
   }
@@ -267,7 +269,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    */
   public String mapContentFileNameToUrl(String filename) {
     String baseStr = StringUtil.replaceString(filename, simRoot,
-					      SIMULATED_URL_ROOT);
+					      baseUrlNoSlash);
     return FileUtil.sysIndepPath(baseStr);
   }
 
@@ -276,8 +278,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return the number of links between the top index page and the url.
    * This knows about the structure of the simulated content */
   public int getLinkDepth(String url) {
-    String relname = StringUtil.replaceString(url, SIMULATED_URL_ROOT, "");
-    String absname = StringUtil.replaceString(url, SIMULATED_URL_ROOT,
+    String relname = StringUtil.replaceString(url, baseUrlNoSlash, "");
+    String absname = StringUtil.replaceString(url, baseUrlNoSlash,
 					      simRoot);
     int dirDepth = StringUtil.countOccurences(relname, "/") - 1;
     File absfile = new File(absname);
@@ -292,24 +294,22 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     }
   }
 
-  public List getNewContentCrawlUrls() {
-    return ListUtil.list(SIMULATED_URL_START);
-  }
-
   public Collection getUrlStems() {
-    return ListUtil.list(SIMULATED_URL_STEM);
+    try {
+      String stem = UrlUtil.getUrlPrefix(paramMap.getUrl(KEY_AU_BASE_URL));
+      return ListUtil.list(stem);
+    } catch (MalformedURLException e) {
+      throw new RuntimeException(e);
+    }
   }
 
   public String getUrlRoot() {
-    return SIMULATED_URL_ROOT;
-  }
-
-  protected CrawlRule makeRules() {
-    throw new UnsupportedOperationException("Not implemented");
+    return baseUrlNoSlash;
   }
 
   protected void loadAuConfigDescrs(Configuration config) throws
   ConfigurationException {
+    super.loadAuConfigDescrs(config);
     try {
       fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
       if (fileRoot == null) {
@@ -382,36 +382,39 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     }
   }
 
+  public void setConfiguration(Configuration config)
+      throws ArchivalUnit.ConfigurationException {
+    if (!config.containsKey(ConfigParamDescr.BASE_URL.getKey())) {
+      if (config.isSealed()) {
+	config = config.copy();
+      }
+      config.put(ConfigParamDescr.BASE_URL.getKey(), SIMULATED_URL_BASE);
+    }
+    super.setConfiguration(config);
+  }
+
   protected void setBaseAuParams(Configuration config)
       throws ConfigurationException {
-    try {
-      URL baseUrl = new URL(SIMULATED_URL_START);
-      paramMap.putUrl(KEY_AU_BASE_URL, baseUrl);
-    }
-    catch (MalformedURLException murle) {
-      throw new ConfigurationException("Bad URL for " + SIMULATED_URL_START,
-				       murle);
-    }
+    super.setBaseAuParams(config);
+    String baseurl = paramMap.getUrl(KEY_AU_BASE_URL).toString();
+    baseUrlNoSlash = StringUtil.upToFinal(baseurl, "/");
+
     newContentCrawlIntv = config.getTimeInterval(KEY_NEW_CONTENT_CRAWL_INTERVAL,
                                                  defaultContentCrawlIntv);
     paramMap.putLong(KEY_AU_NEW_CONTENT_CRAWL_INTERVAL, newContentCrawlIntv);
-    try {
-      CrawlRule rule1 =
-	new CrawlRules.RE("xxxexclude", CrawlRules.RE.MATCH_EXCLUDE);
-      CrawlRule rule2 =
-	new CrawlRules.RE(".*", CrawlRules.RE.MATCH_INCLUDE);
-      CrawlRule rules =
-	new CrawlRules.FirstMatch(ListUtil.list(rule1, rule2));
-      crawlSpec =
-	new SpiderCrawlSpec(SIMULATED_URL_START, rules);
-    } catch (LockssRegexpException e) {
-      throw new ConfigurationException(e.toString());
-    }
-    paramMap.setMapElement(KEY_AU_CRAWL_SPEC, crawlSpec);
     auName = makeName();
     paramMap.putString(KEY_AU_TITLE, auName);
 
     titleDbChanged();
+  }
+
+  protected CrawlRule makeRules() throws LockssRegexpException {
+    CrawlRule rule1 =
+      new CrawlRules.RE("xxxexclude", CrawlRules.RE.MATCH_EXCLUDE);
+    CrawlRule rule2 =
+      new CrawlRules.RE(paramMap.getUrl(KEY_AU_BASE_URL) + ".*",
+			CrawlRules.RE.MATCH_INCLUDE);
+    return new CrawlRules.FirstMatch(ListUtil.list(rule1, rule2));
   }
 
   public RateLimiter findFetchRateLimiter() {
@@ -426,7 +429,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   boolean isUrlToBeDamaged(String url) {
-    String file = StringUtil.replaceString(url,SIMULATED_URL_ROOT,"");
+    String file = StringUtil.replaceString(url, baseUrlNoSlash, "");
     if (toBeDamaged.contains(file)) {
       boolean x = toBeDamaged.remove(file);
       return true;

@@ -1,10 +1,10 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.28 2009-10-27 13:00:31 dshr Exp $
+ * $Id: SimulatedPlugin.java,v 1.29 2010-06-17 18:49:23 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,6 +59,19 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     PD_ROOT.setSize(20);
   }
   public static final String AU_PARAM_ROOT = PD_ROOT.getKey();
+
+  /**
+   * Non-definitional base_url param, because lots of tests know that
+   * SimulatedPlugin has only one definitional param
+   */
+  static final ConfigParamDescr PD_NON_DEF_BASE_URL =
+    new ConfigParamDescr()
+    .setKey("base_url")
+    .setDisplayName("Base URL")
+    .setType(ConfigParamDescr.TYPE_URL)
+    .setSize(40)
+    .setDefinitional(false)
+    .setDescription("Usually of the form http://<journal-name>.com/");
 
   /**
    * The depth of the tree to generate (0 equals just the root dir).
@@ -298,7 +311,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * which values are needed in order to configure an AU
    */
   public List getLocalAuConfigDescrs() {
-    return ListUtil.list(PD_ROOT, PD_DEPTH,
+    return ListUtil.list(PD_NON_DEF_BASE_URL, PD_ROOT, PD_DEPTH,
 			 PD_BRANCH, PD_NUM_FILES,
 			 PD_BIN_FILE_SIZE, PD_BIN_RANDOM_SEED,
 			 PD_MAXFILE_NAME,
@@ -323,12 +336,22 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     return au;
   }
 
+  private String defaultArticleMimeType = null;
+
+  public void setDefaultArticleMimeType(String val) {
+    defaultArticleMimeType = val;
+  }
+
   public String getDefaultArticleMimeType() {
+    if (defaultArticleMimeType != null) {
+      return defaultArticleMimeType;
+    }
     if (auConfig == null) {
-      throw new IllegalArgumentException("auConfig null");
+      return null;
     }
     String ret = auConfig.get(AU_PARAM_DEFAULT_ARTICLE_MIME_TYPE,
-			      "never/happens");
+			      null);
+// 			      "never/happens");
     log.debug("DefaultArticleMimeType is " + ret);
     return ret;
   }

@@ -1,10 +1,10 @@
 /*
- * $Id: TestSimulatedArchivalUnit.java,v 1.8 2008-05-06 21:35:36 dshr Exp $
+ * $Id: TestSimulatedArchivalUnit.java,v 1.9 2010-06-17 18:49:23 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,8 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
-import org.lockss.test.LockssTestCase;
-import org.lockss.util.FileUtil;
+import org.lockss.test.*;
+import org.lockss.util.*;
+import org.lockss.config.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedArchivalUnit
@@ -42,10 +43,6 @@ import org.lockss.util.FileUtil;
  * @version 0.0
  */
 public class TestSimulatedArchivalUnit extends LockssTestCase {
-
-  public TestSimulatedArchivalUnit(String msg) {
-    super(msg);
-  }
 
   public void testResetContentTree() {
 //    SimulatedArchivalUnit au = new SimulatedArchivalUnit("");
@@ -59,27 +56,75 @@ public class TestSimulatedArchivalUnit extends LockssTestCase {
     //XXX test the changes
   }
 
-  public void testMapUrlToContentFileName() {
+  public void testMapUrlToContentFileName(String base) throws Exception {
     SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
+    Configuration config = ConfigurationUtil.fromArgs("root", "foo");
+    if (base != null) {
+      config.put("base_url", base);
+    }
+    sau.setConfiguration(config);
+    if (base != null) {
+      assertEquals(StringUtil.upToFinal(base, "/"), sau.getUrlRoot());
+    } else {
+      assertEquals("http://www.example.com", sau.getUrlRoot());
+    }
     String testStr = sau.getUrlRoot() + "/branch1/branch2";
     String expectedStr = SimulatedContentGenerator.ROOT_NAME + "/branch1/branch2";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-        SimulatedArchivalUnit.mapUrlToContentFileName(testStr));
+		 sau.mapUrlToContentFileName(testStr));
 
     testStr = "ftp://www.wrong.com/branch2/branch3";
     expectedStr = "ftp://www.wrong.com/branch2/branch3";
     assertEquals(FileUtil.sysDepPath(expectedStr),
-        SimulatedArchivalUnit.mapUrlToContentFileName(testStr));
+		 sau.mapUrlToContentFileName(testStr));
   }
 
-  public void testMapContentFileNameToUrl() {
+  public void testMapUrlToContentFileName() throws Exception {
+    testMapUrlToContentFileName(null);
+  }
+
+  public void testMapUrlToContentFileNameWithBaseUrl() throws Exception {
+    testMapUrlToContentFileName("http://foo.bar/");
+  }
+
+  public void testMapUrlToContentFileNameWithBaseUrlPath() throws Exception {
+    testMapUrlToContentFileName("http://foo.bar/a/path/");
+  }
+
+
+  public void testMapContentFileNameToUrl(String base) throws Exception {
+    SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
+    Configuration config = ConfigurationUtil.fromArgs("root", "foo");
+    if (base != null) {
+      config.put("base_url", base);
+    }
+    sau.setConfiguration(config);
+
     // make sure to test proper file separator manipulation
     String MY_ROOT = "/simcontent/test";
-    SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
     sau.simRoot = FileUtil.sysDepPath(MY_ROOT);
+
+    if (base != null) {
+      assertEquals(StringUtil.upToFinal(base, "/"), sau.getUrlRoot());
+    } else {
+      assertEquals("http://www.example.com", sau.getUrlRoot());
+    }
     String testStr = MY_ROOT + "/branch1/branch2";
     String expectedStr = sau.getUrlRoot() + "/branch1/branch2";
-    assertEquals(expectedStr, sau.mapContentFileNameToUrl(FileUtil.sysDepPath(testStr)));
+    assertEquals(expectedStr,
+		 sau.mapContentFileNameToUrl(FileUtil.sysDepPath(testStr)));
+  }
+
+  public void testMapContentFileNameToUrl() throws Exception {
+    testMapContentFileNameToUrl(null);
+  }
+
+  public void testMapContentFileNameToUrlWithBaseUrl() throws Exception {
+    testMapContentFileNameToUrl("http://foo.bar/");
+  }
+
+  public void testMapContentFileNameToUrlWithBaseUrlPath() throws Exception {
+    testMapContentFileNameToUrl("http://foo.bar/a/path/");
   }
 
 }
