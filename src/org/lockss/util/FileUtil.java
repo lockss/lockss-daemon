@@ -1,8 +1,8 @@
 /*
- * $Id: FileUtil.java,v 1.12 2009-06-01 19:15:07 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.13 2010-06-17 18:48:25 tlipkis Exp $
  *
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -318,6 +318,17 @@ public class FileUtil {
 
   public static File relativeFile(File file, String relativeTo) {
     return new File(relativeName(file.getPath(), relativeTo));
+  }
+
+  /** Return just the file extension (after final dot) */
+  public static String getExtension(String filename) {
+    return filename.substring(filename.lastIndexOf('.')+1,
+			      filename.length());
+  }
+
+  /** Return everything up to the file extension (final dot) */
+  public static String getButExtension(String filename) {
+    return filename.substring(0, filename.lastIndexOf('.'));
   }
 
   /**
