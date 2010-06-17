@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.128 2010-05-18 06:15:38 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.129 2010-06-17 18:47:45 tlipkis Exp $
  */
 
 /*
@@ -1037,8 +1037,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	CrawlerStatus cs = crawler.getStatus();
 	cmStatus.touchCrawlStatus(cs);
 	signalAuEvent(crawler, cs);
-	if (cs != null) cs.sealCounters();
+	// must call callback before sealing counters.  V3Poller relies
+	// on fetched URL list
 	callCallback(cb, cookie, crawlSuccessful, cs);
+	if (cs != null) cs.sealCounters();
       }
     }
   }
