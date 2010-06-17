@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressArticleIteratorFactory.java,v 1.2 2010-05-03 15:37:58 thib_gc Exp $
+ * $Id: TestBePressArticleIteratorFactory.java,v 1.3 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
@@ -34,26 +34,39 @@ package org.lockss.plugin.bepress;
 
 import java.util.regex.Pattern;
 
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.test.*;
 
 public class TestBePressArticleIteratorFactory extends LockssTestCase {
 
-  protected static ArchivalUnit makeAuFromParams(String base_url,
-                                                 String journal_abbr,
-                                                 String volume)
-      throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
-    mau.setConfiguration(ConfigurationUtil.fromArgs("base_url", base_url,
-                                                    "journal_abbr", journal_abbr,
-                                                    "volume", volume));
-    return mau;
+  private ArchivalUnit bau;
+
+  public void setUp() throws Exception {
+    super.setUp();
+
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    daemon.getPluginManager().setLoadablePluginsReady(true);
+    daemon.setDaemonInited(true);
+    daemon.getPluginManager().startService();
+
+    bau =
+      PluginTestUtil.createAu("org.lockss.plugin.bepress.BePressPlugin",
+			      ConfigurationUtil.fromArgs("base_url",
+							 "http://www.example.com/",
+							 "journal_abbr", "jour",
+							 "volume", "123"));
   }
-  
+
+  Pattern makePattern(ArchivalUnit au) {
+    String pat = BePressArticleIteratorFactory.pat;
+
+    PrintfConverter.MatchPattern mp =
+      new PrintfConverter.RegexpConverter(au).getMatchPattern(pat);
+    return Pattern.compile(mp.getRegexp(), Pattern.CASE_INSENSITIVE);
+  }
+
   public void testUrlsWithPrefixes() throws Exception {
-    Pattern pat = BePressArticleIteratorFactory.makePatternForAu(makeAuFromParams("http://www.example.com/",
-                                                                                  "jour",
-                                                                                  "123"));
+    Pattern pat = makePattern(bau);
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/iss4/art5");
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/vol123/iss4/art5");
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/iss4/editorial5");
@@ -81,9 +94,7 @@ public class TestBePressArticleIteratorFactory extends LockssTestCase {
   }
   
   public void testUrlsWithoutPrefixes() throws Exception {
-    Pattern pat = BePressArticleIteratorFactory.makePatternForAu(makeAuFromParams("http://www.example.com/",
-                                                                                  "jour",
-                                                                                  "123"));
+    Pattern pat = makePattern(bau);
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/123/4/5");
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/default/123/4/5");
     urlShouldNotMatch(pat, "http://www.example.com/wrong/123/4/5");
@@ -101,9 +112,7 @@ public class TestBePressArticleIteratorFactory extends LockssTestCase {
   }
   
   public void testShortArticleUrls() throws Exception {
-    Pattern pat = BePressArticleIteratorFactory.makePatternForAu(makeAuFromParams("http://www.example.com/",
-                                                                                  "jour",
-                                                                                  "123"));
+    Pattern pat = makePattern(bau);
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/A456");
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/P456");
     urlShouldNotMatch(pat, "http://www.wrong.com/jour/vol123/R456");
@@ -127,12 +136,14 @@ public class TestBePressArticleIteratorFactory extends LockssTestCase {
     urlShouldNotMatch(pat, "http://www.example.com/jour/vol123/S456/wrong");
   }
   
-  protected static void urlShouldMatch(Pattern pat, String url) throws Exception {
-    assertTrue(url + " does not match " + pat.pattern(), pat.matcher(url).find());
+  protected static void urlShouldMatch(Pattern pat, String url)
+      throws Exception {
+    assertTrue(url + " does not match " + pat.pattern(),
+	       pat.matcher(url).find());
   }
 
-  protected static void urlShouldNotMatch(Pattern pat, String url) throws Exception {
+  protected static void urlShouldNotMatch(Pattern pat, String url)
+      throws Exception {
     assertTrue(url + " matches " + pat.pattern(), !pat.matcher(url).find());
   }
-  
 }

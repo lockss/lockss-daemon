@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.11 2009-09-04 23:09:41 thib_gc Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.12 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,14 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
+import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 import org.lockss.daemon.PluginException;
 
-public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
+public class HighWireArticleIteratorFactory
+  implements ArticleIteratorFactory,
+	     ArticleMetadataExtractorFactory {
   static Logger log = Logger.getLogger("HighWireArticleIterator");
 
   /*
@@ -53,25 +57,67 @@ public class HighWireArticleIteratorFactory implements ArticleIteratorFactory {
    * prepended with a letter reminiscent of the journal title's main
    * keyword.
    */
-  protected String subTreeRoot = "cgi/reprint";
+  protected String root = "\"%scgi/reprint\",base_url";
   protected Pattern pat = Pattern.compile("/[^/]+/[^/]+/[^/]+",
-				  Pattern.CASE_INSENSITIVE);
+					  Pattern.CASE_INSENSITIVE);
 
-  public HighWireArticleIteratorFactory() {
-  }
-  /**
-   * Create an Iterator that iterates through the AU's articles, pointing
-   * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-   * choice of CachedUrl if mimeType is null
-   * @param mimeType the MIME type desired for the CachedUrls
-   * @param au the ArchivalUnit to iterate through
-   * @return the ArticleIterator
-   */
-  public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+  private final String reprintPrefix = "/cgi/reprint/";
+  private final String reprintframedPrefix = "/cgi/reprintframed/";
+
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+						      MetadataTarget target)
       throws PluginException {
-    log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
-              ") " + subTreeRoot);
-    return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
+    return new SubTreeArticleIterator(au,
+				      new SubTreeArticleIterator.Spec()
+				      .setTarget(target)
+				      .setRootTemplate(root)
+				      .setPattern(pat)) {
+      protected ArticleFiles createArticleFiles(CachedUrl cu) {
+	ArticleFiles res = new ArticleFiles();
+	res.setFullTextCu(cu);
+	// cu points to a file whose name is .../main.pdf
+	// but the DOI we want is in a file whose name is .../main.xml
+	// The rest of the metadata is in the dataset.toc file that
+	// describes the package in which the article was delivered.
+
+	String reprintUrl = cu.getUrl();
+	if (reprintUrl.contains(reprintPrefix)) {
+	  String reprintframedUrl =
+	    reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
+	  CachedUrl reprintframedCu =
+	    cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
+	  try {
+	    if (reprintframedCu != null && reprintframedCu.hasContent()) {
+	      res.setRoleCu("reprintFramed", reprintframedCu);
+	    }
+	  } finally {
+	    AuUtil.safeRelease(reprintframedCu);
+	  }
+	}
+	return res;
+      }
+    };
   }
 
+  public ArticleMetadataExtractor
+    createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new HighWireArticleMetadataExtractor();
+  }
+
+  public static class HighWireArticleMetadataExtractor
+    implements ArticleMetadataExtractor {
+
+    public Metadata extract(ArticleFiles af)
+	throws IOException, PluginException {
+      CachedUrl cu = af.getRoleCu("reprintFramed");
+      if (cu != null) {
+	FileMetadataExtractor me = cu.getFileMetadataExtractor();
+	if (me != null) {
+	  return me.extract(cu);
+	}
+      }
+      return null;
+    }
+  }
 }

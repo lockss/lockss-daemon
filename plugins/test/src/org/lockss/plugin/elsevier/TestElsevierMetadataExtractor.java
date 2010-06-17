@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerMetadataExtractorFactory.java,v 1.2 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: TestElsevierMetadataExtractor.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
@@ -30,61 +30,56 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.springer;
+package org.lockss.plugin.elsevier;
 
 import java.io.*;
 import java.util.*;
-import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.plugin.springer.*;
 import org.lockss.extractor.*;
 
-public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
-  static Logger log = Logger.getLogger("TestSpringerMetadataExtractorFactory");
+public class TestElsevierMetadataExtractor extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestElsevierMetadataExtractor");
 
-  private SimulatedArchivalUnit simau;	// Simulated AU to generate content
-  private ArchivalUnit spau;		// Springer AU
+  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
+  private ArchivalUnit eau;		// Elsevier AU
   private MockLockssDaemon theDaemon;
+  private PluginManager pluginMgr;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
 
   private static String PLUGIN_NAME =
-    "org.lockss.plugin.springer.ClockssSpringerExplodedPlugin";
+    "org.lockss.plugin.elsevier.ClockssElsevierExplodedPlugin";
 
   private static String BASE_URL =
-    "http://source.lockss.org/sourcefiles/springer-released/";
+    "http://source.lockss.org/sourcefiles/elsevier-released/";
 
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-				  tempDirPath,
-				  "org.lockss.plugin.simulated.SimulatedContentGenerator.doSpringer",
-				  "true");
+				  tempDirPath);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    PluginManager pluginMgr = theDaemon.getPluginManager();
+    pluginMgr = theDaemon.getPluginManager();
     pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginMgr.startService();
     theDaemon.getCrawlManager();
 
-    simau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
-    spau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, springerAuConfig());
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath));
+    eau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, elsevierAuConfig());
   }
 
   public void tearDown() throws Exception {
-    simau.deleteContentTree();
+    sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
   }
@@ -98,10 +93,11 @@ public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
     conf.put("numFiles", "7");
     conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
 				SimulatedContentGenerator.FILE_TYPE_XML));
+//     conf.put("default_article_mime_type", "application/pdf");
     return conf;
   }
 
-  Configuration springerAuConfig() {
+  Configuration elsevierAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
     conf.put("year", "2009");
@@ -109,27 +105,28 @@ public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
   }
 
   public void testDOI() throws Exception {
-    PluginTestUtil.crawlSimAu(simau);
-    PluginTestUtil.copyAu(simau, spau);
+    PluginTestUtil.crawlSimAu(sau);
+    PluginTestUtil.copyAu(sau, eau);
 
-    Plugin plugin = spau.getPlugin();
+    Plugin plugin = eau.getPlugin();
     String articleMimeType = "application/pdf";
-    ArticleMetadataExtractor me =
-      plugin.getArticleMetadataExtractor(null, spau);
-    assertNotNull(me);
-    assertTrue(""+me.getClass(),
-	       me instanceof SpringerArticleIteratorFactory.SpringerArticleMetadataExtractor);
+    ArticleMetadataExtractor me = plugin.getArticleMetadataExtractor(null, eau);
+    assertTrue(""+me,
+	       me instanceof ElsevierArticleIteratorFactory.ElsevierArticleMetadataExtractor);
     int count = 0;
-    for (Iterator<ArticleFiles> it = spau.getArticleIterator(); it.hasNext();){
+    for (Iterator<ArticleFiles> it = eau.getArticleIterator(); it.hasNext(); ) {
       ArticleFiles af = it.next();
       assertNotNull(af);
       CachedUrl fcu = af.getFullTextCu();
       assertNotNull("full text CU", fcu);
       String contentType = fcu.getContentType();
-      assertNotNull(contentType);
-      assertTrue(contentType,
-		 contentType.toLowerCase().startsWith(articleMimeType));
       log.debug("count " + count + " url " + fcu.getUrl() + " " + contentType);
+      assertTrue(contentType.toLowerCase().startsWith(articleMimeType));
+      CachedUrl xcu = af.getRoleCu("xml");
+      assertNotNull("role CU (xml)", xcu);
+      contentType = xcu.getContentType();
+      assertTrue("XML cu is " + contentType + " (" + xcu + ")",
+		 contentType.toLowerCase().startsWith("text/xml"));
       count++;
       Metadata md = me.extract(af);
       assertNotNull(md);
@@ -137,10 +134,11 @@ public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
       assertNotNull(doi);
       log.debug(fcu.getUrl() + " doi " + doi);
       String doi2 = md.getProperty(Metadata.KEY_DOI);
-      assertTrue(doi2, doi2.startsWith(Metadata.PROTOCOL_DOI));
+      assertTrue(doi2.startsWith(Metadata.PROTOCOL_DOI));
       assertEquals(doi, doi2.substring(Metadata.PROTOCOL_DOI.length()));
     }
     log.debug("Article count is " + count);
     assertEquals(28, count);
   }
+
 }

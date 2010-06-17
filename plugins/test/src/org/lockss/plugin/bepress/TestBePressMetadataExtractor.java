@@ -1,10 +1,10 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.6 2010-06-04 16:47:00 dsferopoulos Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.7 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,19 +52,13 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
 
   static Logger log = Logger.getLogger("TestBePressMetadataExtractor");
 
-  private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
-  private CrawlManager crawlMgr;
-  private static int exceptionCount;
-  private static final int DEFAULT_MAX_DEPTH = 1000;
-  private static final int DEFAULT_FILESIZE = 3000;
-  private static int fileSize = DEFAULT_FILESIZE;
-  private static int maxDepth=DEFAULT_MAX_DEPTH;
-  private static int urlCount = 28;
-  private static int testExceptions = 3;
+  private SimulatedArchivalUnit sau;	// Simulated AU to generate content
+  private ArchivalUnit bau;		// BePress AU
   private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";
 
-  private static final Map<String, String> tagMap = new HashMap<String, String>();
+  private static final Map<String, String> tagMap =
+    new HashMap<String, String>();
   static {
     tagMap.put("bepress_citation_journal_title", "JOURNAL %1 %2 %3");
     //tagMap.put("issn", "%1%2%3%1-%3%1%2%3"); // issn in bepress is in a div tag
@@ -75,57 +69,32 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     tagMap.put("bepress_citation_issue", "%3%2%1");
     tagMap.put("bepress_citation_firstpage", "%2%1%3");
     tagMap.put("bepress_citation_pdf_url", "http://www.example.com/cgi/viewcontent.cgi?article=%1%2%3%1&amp;context=%2%1");
-    tagMap.put("bepress_citation_abstract_html_url", "http://www.example.com/ev/vol%1/iss%2/art%3");
+    tagMap.put("bepress_citation_abstract_html_url",
+	       "http://www.example.com/ev/vol%1/iss%2/art%3");
     tagMap.put("bepress_citation_doi", "10.2202/%1%2%3%1-%3%2%1%2-%2%1%3%1");
   };
 
-  public static void main(String[] args) throws Exception {
-    TestBePressMetadataExtractor test = new TestBePressMetadataExtractor();
-    if (args.length>0) {
-      try {
-        maxDepth = Integer.parseInt(args[0]);
-      } catch (NumberFormatException ex) { }
-    }
+  private static String PLUGIN_NAME = "org.lockss.plugin.bepress.BePressPlugin";
 
-    test.setUp(maxDepth);
-    test.testExtraction();
-    test.tearDown();
-  }
+  private static String BASE_URL = "http://www.bepress.com/";
+  private static String SIM_ROOT = BASE_URL + "xyzjn/";
 
   public void setUp() throws Exception {
     super.setUp();
-    this.setUp(DEFAULT_MAX_DEPTH);
-  }
-
-  public void setUp(int max) throws Exception {
-
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|bepress|TestBePressMetadataExtractor$MySimulatedPlugin.root~" + PropKeyEncoder.encode(tempDirPath);
-    Properties props = new Properties();
-    props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
-    maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-
-    props.setProperty("org.lockss.au." + auId + "." + SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId + "." + SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId + "." + SimulatedPlugin.AU_PARAM_BRANCH, "3");
-    props.setProperty("org.lockss.au." + auId + "." + SimulatedPlugin.AU_PARAM_NUM_FILES, "7");
-    props.setProperty("org.lockss.au." + auId + "." + SimulatedPlugin.AU_PARAM_FILE_TYPES, "" + (SimulatedContentGenerator.FILE_TYPE_PDF + SimulatedContentGenerator.FILE_TYPE_HTML));
-    props.setProperty("org.lockss.au." + auId + "." + SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
+    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+				  tempDirPath);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
-    crawlMgr = theDaemon.getCrawlManager();
+    theDaemon.getCrawlManager();
 
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    sau = (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau);
+    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
+					     simAuConfig(tempDirPath));
+    bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, bePressAuConfig());
   }
 
   public void tearDown() throws Exception {
@@ -134,31 +103,50 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     super.tearDown();
   }
 
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("base_url", SIM_ROOT);
+    conf.put("depth", "2");
+    conf.put("branch", "3");
+    conf.put("numFiles", "7");
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
+				SimulatedContentGenerator.FILE_TYPE_HTML));
+    conf.put("default_article_mime_type", "application/html");
+    return conf;
+  }
+
+  Configuration bePressAuConfig() {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", BASE_URL);
+    conf.put("volume", "1");
+    conf.put("journal_abbr", "xyzjn");
+    return conf;
+  }
+
   public void testExtraction() throws Exception {
-    createContent();
+    PluginTestUtil.crawlSimAu(sau);
+    String pat = "branch(\\d+)/branch(\\d+)/(\\d+)file\\.html";
+    String rep = "vol$1/iss$2/art$3";
+    PluginTestUtil.copyAu(sau, bau, null, pat, rep);
 
-    // get the root of the simContent
-    String simDir = sau.getSimRoot();
-
-    crawlContent();
-
-    exceptionCount = 0;
+    Plugin plugin = bau.getPlugin();
+    ArticleMetadataExtractor me = plugin.getArticleMetadataExtractor(null, bau);
+    log.debug("Extractor: " + me.toString());
+    assertTrue(me instanceof BePressArticleIteratorFactory.BePressArticleMetadataExtractor);
     int count = 0;
-    for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
-        BaseCachedUrl cu = (BaseCachedUrl)it.next();
-        assertNotNull(cu);
-        assertTrue(cu instanceof CachedUrl);
-        log.debug3("count " + count + " url " + cu.getUrl());
-        MetadataExtractor me = cu.getMetadataExtractor();
-        log.debug3("Extractor: " + me.toString());
-        assertTrue(me instanceof BePressMetadataExtractorFactory.BePressMetadataExtractor);
-        Metadata md = me.extract(cu);
-        assertNotNull(md);
-        checkMetadata(md);
-        count++;
+    for (Iterator<ArticleFiles> it = bau.getArticleIterator(); it.hasNext(); ) {
+      ArticleFiles af = it.next();
+      CachedUrl cu = af.getFullTextCu();
+      assertNotNull(cu);
+      log.debug3("count " + count + " url " + cu.getUrl());
+      Metadata md = me.extract(af);
+      assertNotNull(md);
+      checkMetadata(md);
+      count++;
     }
     log.debug("Article count is " + count);
-    assertEquals(urlCount, count);
+    assertEquals(21, count);
   }
 
   String goodDOI = "10.2202/bogus.13.4.123";
@@ -209,14 +197,12 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
 
   public void testExtractFromGoodContent() throws Exception {
     String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, sau);
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
     cu.setContent(goodContent);
     cu.setContentSize(goodContent.length());
-    MetadataExtractorFactory mef = new BePressMetadataExtractorFactory();
-    MetadataExtractor me = mef.createMetadataExtractor("text/html");
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    assertTrue(me instanceof BePressMetadataExtractorFactory.BePressMetadataExtractor);
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me =
+      new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
     Metadata md = me.extract(cu);
     assertNotNull(md);
     assertEquals(goodDOI, md.getDOI());
@@ -244,14 +230,12 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
 
   public void testExtractFromBadContent() throws Exception {
     String url = "http://www.example.com/vol1/issue2/art3/";
-    MockCachedUrl cu = new MockCachedUrl(url, sau);
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
     cu.setContent(badContent);
     cu.setContentSize(badContent.length());
-    MetadataExtractorFactory mef = new BePressMetadataExtractorFactory();
-    MetadataExtractor me = mef.createMetadataExtractor("text/html");
-    assertNotNull(me);
-    log.debug3("Extractor: " + me.toString());
-    assertTrue(me instanceof BePressMetadataExtractorFactory.BePressMetadataExtractor);
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me =
+      new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
     Metadata md = me.extract(cu);
     assertNotNull(md);
     assertNull(md.getDOI());
@@ -264,19 +248,6 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     }
     assertEquals(1, md.size());
     assertEquals("bar", md.getProperty("foo"));
-  }
-
-  private void createContent() {
-    log.debug("Generating tree of size 3x1x2 with "+fileSize +"byte files...");
-    sau.generateContentTree();
-  }
-
-  private void crawlContent() {
-    log.debug("Crawling tree...");
-    CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    NewContentCrawler crawler = new NewContentCrawler(sau, spec, new MockAuState());
-    //crawler.setCrawlManager(crawlMgr);
-    crawler.doCrawl();
   }
 
   private static String getFieldContent(String content, int fileNum, int depth, int branchNum) {
@@ -349,78 +320,11 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
       au.setConfiguration(auConfig);
       return au;
     }
-    /**
-     * Returns the article iterator factory for the mime type, if any
-     * @param contentType the content type
-     * @return the ArticleIteratorFactory
-     */
-    public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
-      MySubTreeArticleIteratorFactory ret =
-	  new MySubTreeArticleIteratorFactory();
-      ret.setSubTreeRoot("branch1/branch1");
-      return ret;
-    }
 
     public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
       return new MySimulatedContentGenerator(fileRoot);
     }
 
-    public MetadataExtractor getMetadataExtractor(String fileType, ArchivalUnit au) {
-
-      MetadataExtractorFactory mef = new BePressMetadataExtractorFactory();
-      MetadataExtractor me = null;
-      try {
-	    me = mef.createMetadataExtractor("text/html");
-      } catch (PluginException ex) {
-	    log.error("createMetadataExtractor threw: " + ex);
-      }
-      return me;
-    }
-
-  }
-
-  public static class MySubTreeArticleIteratorFactory implements ArticleIteratorFactory {
-    String subTreeRoot;
-    MySubTreeArticleIteratorFactory() {
-    }
-    /**
-     * Create an Iterator that iterates through the AU's articles, pointing
-     * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-     * choice of CachedUrl if mimeType is null
-     * @param mimeType the MIME type desired for the CachedUrls
-     * @param au the ArchivalUnit to iterate through
-     * @return the ArticleIterator
-     */
-    public Iterator createArticleIterator(String mimeType, ArchivalUnit au) throws PluginException {
-      Iterator ret;
-      Pattern pat = Pattern.compile("^.*[0-9][0-9][0-9]file.html$");
-      if (exceptionCount == 0) {
-	    ret = new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
-      } else {
-	    ret = new MySubTreeArticleIterator(mimeType, au, subTreeRoot, exceptionCount);
-      }
-      return ret;
-    }
-    public void setSubTreeRoot(String root) {
-      subTreeRoot = root;
-      log.debug("Set subTreeRoot: " + subTreeRoot);
-    }
-  }
-
-  public static class MySubTreeArticleIterator extends SubTreeArticleIterator {
-    int exceptionCount;
-    MySubTreeArticleIterator(String mimeType, ArchivalUnit au, String subTreeRoot, int exceptionCount) {
-      super(mimeType, au, subTreeRoot);
-      this.exceptionCount = exceptionCount;
-    }
-
-    protected void processCachedUrl(CachedUrl cu) {
-      if (exceptionCount > 0 && cu.getUrl().endsWith(".html")) {
-        exceptionCount--;
-        throw new UnsupportedOperationException();
-      }
-      super.processCachedUrl(cu);
-    }
   }
 
   public static class MySimulatedContentGenerator extends SimulatedContentGenerator {
@@ -442,7 +346,8 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
 
       file_content += getHtmlContent(fileNum, depth, branchNum, isAbnormal);
       file_content += "\n</BODY></HTML>";
-      logger.debug("MySimulatedContentGenerator.getHtmlFileContent: " + file_content);
+      logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
+		    + file_content);
       
       return file_content;
     }

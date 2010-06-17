@@ -1,10 +1,10 @@
 /*
- * $Id: BePressMetadataExtractorFactory.java,v 1.7 2010-06-04 16:47:00 dsferopoulos Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,28 +40,18 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 
-public class BePressMetadataExtractorFactory
-        implements MetadataExtractorFactory {
-  static Logger log = Logger.getLogger("SimpleMetaTagMetadataExtractor");
+public class BePressHtmlMetadataExtractorFactory
+  implements FileMetadataExtractorFactory {
+  static Logger log = Logger.getLogger("BePressHtmlMetadataExtractorFactory");
 
-  /**
-   * Create a MetadataExtractor
-   *
-   * @param contentType the content type type from which to extract URLs
-   */
-  public MetadataExtractor createMetadataExtractor(String contentType)
-          throws PluginException {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new BePressMetadataExtractor();
-    }
-    return null;
+  public FileMetadataExtractor
+    createFileMetadataExtractor(String contentType)
+      throws PluginException {
+    return new BePressHtmlMetadataExtractor();
   }
 
-  public class BePressMetadataExtractor extends SimpleMetaTagMetadataExtractor {
-
-    public BePressMetadataExtractor() {
-    }
+  public static class BePressHtmlMetadataExtractor
+    extends SimpleMetaTagMetadataExtractor {
 
     String[] bePressField = {
             "bepress_citation_doi",

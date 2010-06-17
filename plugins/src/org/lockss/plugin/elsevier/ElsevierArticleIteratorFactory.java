@@ -1,10 +1,10 @@
 /*
- * $Id: ElsevierArticleIteratorFactory.java,v 1.1 2009-08-28 22:40:05 dshr Exp $
+ * $Id: ElsevierArticleIteratorFactory.java,v 1.2 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,15 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.elsevier;
 
+import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.extractor.*;
 import org.lockss.daemon.PluginException;
 
-public class ElsevierArticleIteratorFactory implements ArticleIteratorFactory {
+public class ElsevierArticleIteratorFactory
+  implements ArticleIteratorFactory,
+	     ArticleMetadataExtractorFactory {
   static Logger log = Logger.getLogger("ElsevierArticleIterator");
 
   /*
@@ -48,26 +52,55 @@ public class ElsevierArticleIteratorFactory implements ArticleIteratorFactory {
    * is at a URL like http://elsevier.clockss.org/<issn>/<issue>/<article>/main.xml
    * The DOI is between <ce:doi> and </ce:doi>.
    */
-  protected String subTreeRoot = "";
-  protected Pattern pat = null;
-
-  public ElsevierArticleIteratorFactory() {
-  }
-  /**
-   * Create an Iterator that iterates through the AU's articles, pointing
-   * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-   * choice of CachedUrl if mimeType is null
-   * @param mimeType the MIME type desired for the CachedUrls
-   * @param au the ArchivalUnit to iterate through
-   * @return the ArticleIterator
-   */
-  public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+						      MetadataTarget target)
       throws PluginException {
-    if (mimeType == null) {
-      mimeType = au.getPlugin().getDefaultArticleMimeType();
+    return new SubTreeArticleIterator(au,
+				      new SubTreeArticleIterator.Spec()
+				      .setTarget(target)) {
+      protected ArticleFiles createArticleFiles(CachedUrl cu) {
+	ArticleFiles res = new ArticleFiles();
+	res.setFullTextCu(cu);
+	// cu points to a file whose name is .../main.pdf
+	// but the DOI we want is in a file whose name is .../main.xml
+	// The rest of the metadata is in the dataset.toc file that
+	// describes the package in which the article was delivered.
+	String pdfUrl = cu.getUrl();
+	if (StringUtil.endsWithIgnoreCase(pdfUrl, ".pdf")) {
+	  String xmlUrl = pdfUrl.substring(0, pdfUrl.length()-4) + ".xml";
+	  CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
+	  try {
+	    if (xmlCu != null && xmlCu.hasContent()) {
+	      res.setRoleCu("xml", xmlCu);
+	    }
+	  } finally {
+	    AuUtil.safeRelease(xmlCu);
+	  }
+	}
+	return res;
+      }
+    };
+  }
+
+  public ArticleMetadataExtractor
+    createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new ElsevierArticleMetadataExtractor();
+  }
+
+  public class ElsevierArticleMetadataExtractor
+    implements ArticleMetadataExtractor {
+
+    public Metadata extract(ArticleFiles af)
+	throws IOException, PluginException {
+      CachedUrl cu = af.getRoleCu("xml");
+      if (cu != null) {
+	FileMetadataExtractor me = cu.getFileMetadataExtractor();
+	if (me != null) {
+	  return me.extract(cu);
+	}
+      }
+      return null;
     }
-    log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
-              ") " + subTreeRoot);
-    return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
   }
 }

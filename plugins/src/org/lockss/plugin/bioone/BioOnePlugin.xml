@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.46.0</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bioone.BioOnePlugin</string>
   </entry>
@@ -84,5 +88,26 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bioone.BioOneArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_default_article_mime_type</string>
+    <string>text/html</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.bioone.BioOneArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.bioone.BioOneHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
   </entry>
 </map>

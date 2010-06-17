@@ -1,8 +1,8 @@
 /*
- * $Id: EdinburghArticleIteratorFactory.java,v 1.1 2010-05-24 19:13:27 edwardsb1 Exp $
+ * $Id: EdinburghArticleIteratorFactory.java,v 1.2 2010-06-17 18:41:27 tlipkis Exp $
  */
 /*
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,8 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
+import org.lockss.extractor.*;
+import org.lockss.util.*;
 
 /**
  * @author edwardsb
@@ -54,18 +55,18 @@ public class EdinburghArticleIteratorFactory implements ArticleIteratorFactory {
    *    not always four digits long.) 
    */
   
-  protected String subTreeRoot = "doi/pdfplus/10.3366/";
+  protected String root = "\"%sdoi/pdfplus/10.3366/\",base_url";
   protected Pattern pat = Pattern.compile("(E[0-9X]+)|([a-z]+.[0-9]+.[0-9]+)",
-                                  Pattern.CASE_INSENSITIVE);
+					  Pattern.CASE_INSENSITIVE);
 
-  /* (non-Javadoc)
-   * @see org.lockss.plugin.ArticleIteratorFactory#createArticleIterator(java.lang.String, org.lockss.plugin.ArchivalUnit)
-   */
-  public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+						      MetadataTarget target)
       throws PluginException {
-    log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
-        ") " + subTreeRoot);
-    return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
+    return new SubTreeArticleIterator(au,
+				      new SubTreeArticleIterator.Spec()
+				      .setTarget(target)
+				      .setRootTemplate(root)
+				      .setPattern(pat));
   }
 
 }

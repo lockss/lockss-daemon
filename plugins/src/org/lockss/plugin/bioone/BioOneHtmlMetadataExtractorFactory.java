@@ -1,10 +1,10 @@
 /*
- * $Id: BioOneMetadataExtractorFactory.java,v 1.1 2009-12-20 00:04:59 dshr Exp $
+ * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,26 +45,17 @@ import java.net.MalformedURLException;
 import java.net.URLDecoder;
 
 
-public class BioOneMetadataExtractorFactory implements MetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BioOneMetadataExtractorFactory");
+public class BioOneHtmlMetadataExtractorFactory
+  implements FileMetadataExtractorFactory {
+  static Logger log = Logger.getLogger("BioOneHtmlMetadataExtractorFactory");
 
-  /**
-   * Create a MetadataExtractor
-   *
-   * @param contentType the content type type from which to extract URLs
-   */
-  public MetadataExtractor createMetadataExtractor(String contentType) throws PluginException {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new BioOneMetadataExtractor();
-    }
-    return null;
+  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
+      throws PluginException {
+    return new BioOneHtmlMetadataExtractor();
   }
 
-  public class BioOneMetadataExtractor extends SimpleMetaTagMetadataExtractor {
-
-    public BioOneMetadataExtractor() {
-    }
+  public static class BioOneHtmlMetadataExtractor
+    extends SimpleMetaTagMetadataExtractor {
 
     public Metadata extract(CachedUrl cu) throws IOException {
       if (cu == null) {

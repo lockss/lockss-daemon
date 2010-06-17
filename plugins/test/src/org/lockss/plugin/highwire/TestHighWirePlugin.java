@@ -1,10 +1,10 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.13 2010-02-11 10:05:41 tlipkis Exp $
+ * $Id: TestHighWirePlugin.java,v 1.14 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -139,7 +139,7 @@ public class TestHighWirePlugin extends LockssTestCase {
 
   }
 
-  public void testGetMetadataExtractor() {
+  public void testGetArticleMetadataExtractor() {
     Properties props = new Properties();
     props.setProperty(BASE_URL_KEY, "http://www.example.com/");
     props.setProperty(VOL_KEY, "32");
@@ -150,9 +150,11 @@ public class TestHighWirePlugin extends LockssTestCase {
     }
     catch (ConfigurationException ex) {
     }
-    assertNull(plugin.getMetadataExtractor("BogusExtractor", au));
-    assertNotNull(plugin.getMetadataExtractor("text/html", au));
-    assertTrue(plugin.getMetadataExtractor("text/html", au) instanceof
+    assertTrue(""+plugin.getArticleMetadataExtractor(null, au),
+	       plugin.getArticleMetadataExtractor(null, au) instanceof
+	       HighWireArticleIteratorFactory.HighWireArticleMetadataExtractor);
+    assertTrue(""+plugin.getFileMetadataExtractor("text/html", au),
+	       plugin.getFileMetadataExtractor("text/html", au) instanceof
 	       org.lockss.extractor.SimpleMetaTagMetadataExtractor);
   }
   public void testGetHashFilterFactory() {
@@ -162,9 +164,7 @@ public class TestHighWirePlugin extends LockssTestCase {
 	       instanceof org.lockss.plugin.highwire.HighWirePdfFilterFactory);
   }
   public void testGetArticleIteratorFactory() {
-    assertNull(plugin.getArticleIteratorFactory("BogusArticleIterator"));
-    assertNotNull(plugin.getArticleIteratorFactory("text/html"));
-    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory("text/html"))
+    assertTrue(WrapperUtil.unwrap(plugin.getArticleIteratorFactory())
 	       instanceof org.lockss.plugin.highwire.HighWireArticleIteratorFactory);
   }
   public void testGetDefaultArticleMimeType() {

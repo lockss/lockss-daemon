@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.46.0</string>
+  </entry>
+  <entry>
     <string>plugin_version</string>
     <string>9</string>
   </entry>
@@ -51,7 +55,7 @@
     <string>org.lockss.plugin.edinburgh.EdinburghUniversityPressCrawlHtmlFilterFactory</string>
   </entry>
   <entry>
-    <string>application/pdf_article_iterator_factory</string>
+    <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.edinburgh.EdinburghArticleIteratorFactory</string>
   </entry>
   <entry>

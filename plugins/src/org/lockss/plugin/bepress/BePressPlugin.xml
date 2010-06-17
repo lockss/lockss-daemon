@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.27.0</string>
+    <string>1.46.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -86,19 +86,19 @@
     <string>org.lockss.plugin.bepress.BePressPermissionCheckerFactory</string>
   </entry>
   <entry>
-    <string>text/html_article_iterator_factory</string>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.bepress.BePressMetadataExtractorFactory</string>
-      </entry>
-      <entry>
-        <string>DublinCore</string>
-        <string>org.lockss.plugin.bepress.BePressMetadataExtractorFactory</string>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.bepress.BePressHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

@@ -1,5 +1,5 @@
 /*
- * $Id: NatureArticleIteratorFactory.java,v 1.6 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: BioOneArticleIteratorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
@@ -30,49 +30,47 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.nature;
+package org.lockss.plugin.bioone;
 
 import java.io.*;
 import java.util.*;
 import java.util.regex.*;
-
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 import org.lockss.extractor.*;
 import org.lockss.daemon.PluginException;
 
-public class NatureArticleIteratorFactory
+public class BioOneArticleIteratorFactory
   implements ArticleIteratorFactory,
 	     ArticleMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("NatureArticleIteratorFactory");
+  static Logger log = Logger.getLogger("BioOneArticleIterator");
 
   /*
-   * The Nature URL structure means that the HTML for an article is
-   * at a URL like http://www.nature.com/gt/journal/v16/n5/full/gt200929a.html
-   * ie <base_url>/<journal_id>/journal/v<volume> is the subtree we want.
+   * The BioOne exploded URL structure means that the metadata for an article
+   * is at a URL like http://bioone.clockss.org/<issn>/<issue>/<article>/main.xml
+   * The DOI is between <ce:doi> and </ce:doi>.
    */
+
+  Pattern pat = Pattern.compile("^.*[0-9][0-9][0-9]file\\.html$");
+
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
-    String rootPat = "\"%s%s/journal/v%s\", base_url, journal_id, volume_name";
-    Pattern pat = Pattern.compile("journal/v[^/]+/n[^/]+/full/",
-				  Pattern.CASE_INSENSITIVE);
-    
     return new SubTreeArticleIterator(au,
 				      new SubTreeArticleIterator.Spec()
 				      .setTarget(target)
-				      .setRootTemplate(rootPat)
 				      .setPattern(pat));
   }
 
   public ArticleMetadataExtractor
     createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new NatureArticleMetadataExtractor();
+    return new BioOneArticleMetadataExtractor();
   }
 
-  public class NatureArticleMetadataExtractor
+  public static class BioOneArticleMetadataExtractor
     implements ArticleMetadataExtractor {
 
     public Metadata extract(ArticleFiles af)

@@ -1,5 +1,5 @@
 /*
- * $Id: BePressArticleIteratorFactory.java,v 1.5 2010-05-03 15:37:58 thib_gc Exp $
+ * $Id: BePressArticleIteratorFactory.java,v 1.6 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
@@ -32,14 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.bepress;
 
+import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 import org.lockss.daemon.PluginException;
 
-public class BePressArticleIteratorFactory implements ArticleIteratorFactory {
+public class BePressArticleIteratorFactory
+  implements ArticleIteratorFactory,
+	     ArticleMetadataExtractorFactory {
   static Logger log = Logger.getLogger("BePressArticleIteratorFactory");
 
   /*
@@ -50,48 +54,42 @@ public class BePressArticleIteratorFactory implements ArticleIteratorFactory {
    * is an apparently arbitrary word.  So for now we just use the journal
    * abbreviation as the subTreeRoot.
    */
-  protected String subTreeRoot;
+  protected String subTreeRoot = "\"%s%s\",base_url, journal_abbr";
 
-  public BePressArticleIteratorFactory() {
-  }
-  /**
-   * Create an Iterator that iterates through the AU's articles, pointing
-   * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-   * choice of CachedUrl if mimeType is null
-   * @param mimeType the MIME type desired for the CachedUrls
-   * @param au the ArchivalUnit to iterate through
-   * @return the ArticleIterator
-   */
-  public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+  static final String pat =
+    "\"%s%s/((default/)?(vol)?%d/(iss)?[0-9]+/(art|editorial)?[0-9]+|vol%d/[A-Z][0-9]+)$\",base_url, journal_abbr, volume, volume";
+
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+						      MetadataTarget target)
       throws PluginException {
-    String journal_abbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
-    subTreeRoot = journal_abbr;
-    log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
-              ") " + subTreeRoot);
-    Pattern pat = makePatternForAu(au);
-    return new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat);
+    String journal_abbr =
+      au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+    return new SubTreeArticleIterator(au,
+				      new SubTreeArticleIterator.Spec()
+				      .setTarget(target)
+				      .setRootTemplate(subTreeRoot)
+				      .setPatternTemplate(pat));
   }
   
-  /**
-   * <p>Extracted to be testable.</p>
-   * @param au The BePress AU that will be iterated on
-   * @return A Java regex pattern that matches article URLs for the AU
-   * @throws PluginException
-   */
-  static Pattern makePatternForAu(ArchivalUnit au) throws PluginException {
-    String base_url = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
-    String journal_abbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
-    String volume = au.getConfiguration().get(ConfigParamDescr.VOLUME_NUMBER.getKey());
-    Pattern pat = Pattern.compile("^"
-                                  + base_url.replaceAll(".", "\\.")
-                                  + journal_abbr
-                                  + "/((default/)?(vol)?"
-                                  + volume
-                                  + "/(iss)?[0-9]+/(art|editorial)?[0-9]+|vol"
-                                  + volume
-                                  + "/[A-Z][0-9]+)$",
-                                  Pattern.CASE_INSENSITIVE);
-    return pat;
+  public ArticleMetadataExtractor
+    createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new BePressArticleMetadataExtractor();
   }
-  
+
+  public class BePressArticleMetadataExtractor
+    implements ArticleMetadataExtractor {
+
+    public Metadata extract(ArticleFiles af)
+	throws IOException, PluginException {
+      CachedUrl cu = af.getFullTextCu();
+      if (cu != null) {
+	FileMetadataExtractor me = cu.getFileMetadataExtractor();
+	if (me != null) {
+	  return me.extract(cu);
+	}
+      }
+      return null;
+    }
+  }
 }

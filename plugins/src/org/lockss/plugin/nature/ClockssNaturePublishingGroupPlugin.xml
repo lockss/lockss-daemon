@@ -1,5 +1,9 @@
 <map>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.46.0</string>
+  </entry>
+  <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.nature.ClockssNaturePublishingGroupPlugin</string>
   </entry>
@@ -16,19 +20,23 @@
     <string>org.lockss.plugin.nature.NaturePublishingGroupHtmlFilterFactory</string>
   </entry>
   <entry>
-    <string>text/html_article_iterator_factory</string>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.nature.NatureArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_default_article_mime_type</string>
+    <string>text/html</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.nature.NatureArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
     <map>
       <entry>
-        <string>*</string>
-        <string>org.lockss.plugin.nature.NatureMetadataExtractorFactory</string>
-      </entry>
-      <entry>
-        <string>DublinCore</string>
-        <string>org.lockss.plugin.nature.NatureMetadataExtractorFactory</string>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.nature.NatureHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

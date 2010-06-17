@@ -1,10 +1,10 @@
 /*
- * $Id: SpringerArticleIteratorFactory.java,v 1.1 2009-08-28 22:40:05 dshr Exp $
+ * $Id: SpringerArticleIteratorFactory.java,v 1.2 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,15 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer;
 
+import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.extractor.*;
 import org.lockss.daemon.PluginException;
 
-public class SpringerArticleIteratorFactory implements ArticleIteratorFactory {
+public class SpringerArticleIteratorFactory
+  implements ArticleIteratorFactory,
+	     ArticleMetadataExtractorFactory {
   static Logger log = Logger.getLogger("SpringerArticleIterator");
 
   /*
@@ -50,30 +54,91 @@ public class SpringerArticleIteratorFactory implements ArticleIteratorFactory {
    * and the PDF at
    * http://springer.clockss.org/PUB=./JOU=./VOL=./ISU=./ART=./BodyRef/PDF/..pdf
    */
-  protected String subTreeRoot = "";
-  protected Pattern pat = Pattern.compile(".*\\.xml\\.Meta$",
-					  Pattern.CASE_INSENSITIVE);
+//   protected Pattern pat = Pattern.compile(".*\\.xml\\.Meta$",
+// 					  Pattern.CASE_INSENSITIVE);
+  Pattern pat = null;
 
-  public SpringerArticleIteratorFactory() {
-  }
-  /**
-   * Create an Iterator that iterates through the AU's articles, pointing
-   * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-   * choice of CachedUrl if mimeType is null
-   * @param mimeType the MIME type desired for the CachedUrls
-   * @param au the ArchivalUnit to iterate through
-   * @return the ArticleIterator
-   */
-  public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+  private static final String part1 = "/BodyRef/PDF";
+  private static final String part2 = "\\.pdf";
+  private static final String regex = ".*" + part1 + "/.*" + part2;
+
+
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+						      MetadataTarget target)
       throws PluginException {
-    if (mimeType == null) {
-      mimeType = au.getPlugin().getDefaultArticleMimeType();
+    return new SubTreeArticleIterator(au,
+				      new SubTreeArticleIterator.Spec()
+				      .setTarget(target)) {
+      protected ArticleFiles createArticleFiles(CachedUrl cu) {
+	ArticleFiles res = new ArticleFiles();
+	res.setFullTextCu(cu);
+	// cu points to a file whose name is ....pdf
+	// but the metadata we want is in a file whose name is ....xml.Meta
+	String pdfUrl = cu.getUrl();
+	if (pdfUrl.matches(regex)) {
+	  String xmlUrl =
+	    pdfUrl.replaceFirst(part1, "").replaceFirst(part2, ".xml.Meta");
+	  CachedUrl xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
+	  if (xmlCu == null || !xmlCu.hasContent()) {
+	    if (xmlCu == null) {
+	      log.debug2("xmlCu is null");
+	    } else {
+	      log.debug2(xmlCu.getUrl() + " no content");
+	    }
+	    xmlUrl = 
+	      pdfUrl.replaceFirst(part1, "").replaceFirst(part2, ".xml.meta");
+	    xmlCu = cu.getArchivalUnit().makeCachedUrl(xmlUrl);
+	  }
+	  try {
+	    if (xmlCu != null && xmlCu.hasContent()) {
+	      String mimeType =
+		HeaderUtil.getMimeTypeFromContentType(xmlCu.getContentType());
+	      if ("text/xml".equalsIgnoreCase(mimeType)) {
+		res.setRoleCu("xml", xmlCu);
+	      } else {
+		log.debug2("xml.meta wrong mime type: " + mimeType + ": "
+			   + xmlCu.getUrl());
+	      }
+	    } else {
+	      if (xmlCu == null) {
+		log.debug2("xmlCu is null");
+	      } else {
+		log.debug2(xmlCu.getUrl() + " no content");
+	      }
+	    }
+	  } finally {
+	    AuUtil.safeRelease(xmlCu);
+	  }
+	} else {
+	  log.debug2(pdfUrl + " doesn't match " + regex);
+	}
+	if (log.isDebug3()) {
+	  log.debug3("Iter: " + res);
+	}
+	return res;
+      }
+    };
+  }
+
+  public ArticleMetadataExtractor
+    createArticleMetadataExtractor(MetadataTarget target)
+      throws PluginException {
+    return new SpringerArticleMetadataExtractor();
+  }
+
+  public class SpringerArticleMetadataExtractor
+    implements ArticleMetadataExtractor {
+
+    public Metadata extract(ArticleFiles af)
+	throws IOException, PluginException {
+      CachedUrl cu = af.getRoleCu("xml");
+      if (cu != null) {
+	FileMetadataExtractor me = cu.getFileMetadataExtractor();
+	if (me != null) {
+	  return me.extract(cu);
+	}
+      }
+      return null;
     }
-    log.debug("createArticleIterator(" + mimeType + "," + au.toString() +
-              ") " + subTreeRoot);
-    if (!"application/xml".equals(mimeType)) {
-      pat = null;
-    }
-    return (new SubTreeArticleIterator(mimeType, au, subTreeRoot, pat));
   }
 }

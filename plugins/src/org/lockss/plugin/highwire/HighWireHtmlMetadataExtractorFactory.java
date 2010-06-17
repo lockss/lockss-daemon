@@ -1,10 +1,10 @@
 /*
- * $Id: HighWireMetadataExtractorFactory.java,v 1.7 2010-06-04 16:47:00 dsferopoulos Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,48 +40,25 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 
-public class HighWireMetadataExtractorFactory
-        implements MetadataExtractorFactory {
-  static Logger log = Logger.getLogger("HighWireMetadataExtractorFactory");
+public class HighWireHtmlMetadataExtractorFactory
+  implements FileMetadataExtractorFactory {
+  static Logger log = Logger.getLogger("HighWireHtmlMetadataExtractorFactory");
 
-  /**
-   * Create a MetadataExtractor
-   *
-   * @param contentType the content type type from which to extract URLs
-   */
-  public MetadataExtractor createMetadataExtractor(String contentType)
-          throws PluginException {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new HighWireMetadataExtractor();
-    }
-    return null;
+  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
+      throws PluginException {
+    return new HighWireHtmlMetadataExtractor();
   }
 
-  public class HighWireMetadataExtractor extends SimpleMetaTagMetadataExtractor {
-
-    public HighWireMetadataExtractor() {
-    }
+  public static class HighWireHtmlMetadataExtractor
+    extends SimpleMetaTagMetadataExtractor {
 
     public Metadata extract(CachedUrl cu) throws IOException {
-      final String reprintPrefix = "/cgi/reprint/";
-      final String reprintframedPrefix = "/cgi/reprintframed/";
-
       Metadata ret = null;
-      String reprintUrl = cu.getUrl();
-      if (reprintUrl.contains(reprintPrefix)) {
-        String reprintframedUrl =
-                reprintUrl.replaceFirst(reprintPrefix, reprintframedPrefix);
-        CachedUrl reprintframedCu =
-                cu.getArchivalUnit().makeCachedUrl(reprintframedUrl);
-        if (reprintframedCu != null) {
-          cu = reprintframedCu;
-        }
-      }
       try {
         if (cu != null && cu.hasContent()) {
           ret = super.extract(cu);
           // HighWire doesn't prefix the DOI in dc.Identifier with doi:
+
           String content = ret.getProperty("dc.Identifier");
           if (content != null && !"".equals(content)) {
             ret.putDOI(content);
@@ -120,13 +97,11 @@ public class HighWireMetadataExtractorFactory
           if (content != null && !"".equals(content)) {
             ret.putDate(content);
           }
-
         }
       }
       finally {
         AuUtil.safeRelease(cu);
       }
-
       return ret;
     }
   }

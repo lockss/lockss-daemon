@@ -1,5 +1,5 @@
 /*
- * $Id: NatureMetadataExtractorFactory.java,v 1.4 2009-10-14 21:43:06 dshr Exp $
+ * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
  */
 
 /*
@@ -39,24 +39,18 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-public class NatureMetadataExtractorFactory implements MetadataExtractorFactory {
+public class NatureHtmlMetadataExtractorFactory
+  implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("NatureMetadataExtractorFactory");
-  /**
-   * Create a MetadataExtractor
-   * @param contentType the content type type from which to extract URLs
-   */
-  public MetadataExtractor createMetadataExtractor(String contentType)
+ 
+  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
       throws PluginException {
-    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
-    if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new NatureMetadataExtractor();
-    }
-    return null;
+    return new NatureHtmlMetadataExtractor();
   }
-  public class NatureMetadataExtractor extends SimpleMetaTagMetadataExtractor {
 
-    public NatureMetadataExtractor() {
-    }
+  public static class NatureHtmlMetadataExtractor
+    extends SimpleMetaTagMetadataExtractor {
+
     String[] natureField = {
       "dc.creator",
     };
@@ -71,7 +65,6 @@ public class NatureMetadataExtractorFactory implements MetadataExtractorFactory 
       "prism.issn", // <meta name="prism.issn" content="0955-9930" />
       "prism.eIssn", // <meta name="prism.eIssn" content="1476-5489" />
     };
-
 
     public Metadata extract(CachedUrl cu) throws IOException {
       Metadata ret = super.extract(cu);
