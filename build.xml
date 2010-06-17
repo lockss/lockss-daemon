@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.256 2010-05-27 01:40:49 dshr Exp $
+ $Id: build.xml,v 1.257 2010-06-17 18:36:01 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-20010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1804,19 +1804,27 @@ Test results in ${test.results}
          <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
          <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
       </fileset>
+      <fileset id="test.one.plugin.filesetid" dir="${plugins.test.src}">
+	 <include name="**/${class}.java" />
+         <excludesfile name="${requires-1.5}" unless="is-java-1.5" />
+         <excludesfile name="${requires-1.6}" unless="is-java-1.6" />
+      </fileset>
       <!-- test whether fileset is empty by converting it to a string -->
       <pathconvert refid="test.one.filesetid" property="test.one.files"
         targetos="${detected.os}" />
+      <pathconvert refid="test.one.plugin.filesetid" property="test.one.plugin.files"
+        targetos="${detected.os}" />
       <if>
-       <equals arg1="${test.one.files}" arg2="" />
+       <equals arg1="${test.one.files}${test.one.plugin.files}" arg2="" />
        <then>
 	<fail message="Pattern '${class}' does not match any classes" />
        </then>
       </if>
-      <dojunit cpid="test.run.classpath" usefile="false">
+      <dojunit cpid="one.test.run.classpath" usefile="false">
        <junitelem>
        <batchtest fork="${fork}">
 	 <fileset refid="test.one.filesetid"/>
+	 <fileset refid="test.one.plugin.filesetid"/>
        </batchtest>
        </junitelem>
       </dojunit>
