@@ -1,10 +1,10 @@
 /*
- * $Id: ArchivalUnit.java,v 1.52 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.53 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -245,6 +245,14 @@ public interface ArchivalUnit {
   public LinkExtractor getLinkExtractor(String contentType);
 
   /**
+   * Return a {@link FileMetadataExtractor} that knows how to extract URLs
+   * from content of the given MIME type
+   * @param contentType content type to get a content parser for
+   * @return A FileMetadataExtractor or null
+   */
+  public FileMetadataExtractor getFileMetadataExtractor(String contentType);
+
+  /**
    * Return the {@link FilterRule} for the given contentType or null if there
    * is none
    * @param contentType content type of the content we are going to filter
@@ -285,7 +293,7 @@ public interface ArchivalUnit {
    * one, an empty iterator will be returned.
    * @return the ArticleIterator
    */
-  public Iterator getArticleIterator();
+  public Iterator<ArticleFiles> getArticleIterator();
   
   /**
    * Returns an Iterator for articles from the AU's plugin. If there isn't
@@ -293,7 +301,7 @@ public interface ArchivalUnit {
    * @param contentType the content type of the articles
    * @return the ArticleIterator
    */
-  public Iterator getArticleIterator(String contentType);
+  public Iterator<ArticleFiles> getArticleIterator(MetadataTarget target);
   
   /**
    * Create a {@link CachedUrlSet}representing the content

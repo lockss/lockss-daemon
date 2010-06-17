@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.101 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.102 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
@@ -131,17 +131,23 @@ public class NullPlugin {
       return null;
     }
 
-    public org.lockss.extractor.MetadataExtractor
-	getMetadataExtractor(String contentType,
-			     org.lockss.plugin.ArchivalUnit au) {
-      return null;
-    }
-
-    public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
-      return null;
-    }
-
     public String getDefaultArticleMimeType() {
+      return null;
+    }
+
+    public org.lockss.extractor.ArticleMetadataExtractor
+	getArticleMetadataExtractor(MetadataTarget target,
+				    org.lockss.plugin.ArchivalUnit au) {
+      return null;
+    }
+
+    public ArticleIteratorFactory getArticleIteratorFactory() {
+      return null;
+    }
+
+    public FileMetadataExtractor
+      getFileMetadataExtractor(String contentType,
+			       org.lockss.plugin.ArchivalUnit au) {
       return null;
     }
   }
@@ -223,7 +229,7 @@ public class NullPlugin {
       return null;
     }
 
-    public MetadataExtractor getMetadataExtractor() {
+    public FileMetadataExtractor getFileMetadataExtractor() {
       return null;
     }
 
@@ -521,12 +527,16 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public Iterator getArticleIterator() {
+    public Iterator<ArticleFiles> getArticleIterator() {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public Iterator getArticleIterator(String contentType) {
+    public Iterator<ArticleFiles> getArticleIterator(MetadataTarget target) {
       throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public FileMetadataExtractor getFileMetadataExtractor(String contentType) {
+      return null;
     }
 
     public TypedEntryMap getProperties() {

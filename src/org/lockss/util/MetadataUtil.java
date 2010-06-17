@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataUtil.java,v 1.2 2009-12-20 00:09:44 dshr Exp $
+ * $Id: MetadataUtil.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,14 +38,26 @@ import java.net.URLDecoder;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
-public class MetadataUtil {
+import org.lockss.extractor.*;
+import org.lockss.plugin.*;
 
+public class MetadataUtil {
 
   static Logger log = Logger.getLogger("MetadataUtil");
 
+  public static String getTargetMimeType(MetadataTarget target,
+					 ArchivalUnit au) {
+    String mimeType = target != null ? target.getFormat() : null;
+    if (mimeType == null) {
+      mimeType = au.getPlugin().getDefaultArticleMimeType();
+    }
+    return mimeType;
+  }
+
   /**
-   * Check that ISSN is valid. Method checks that ISSN number is correctly balanced (4 digits on either side of a hyphen)
-   * and that the ckeck digit (rightmost digit) is valid.
+   * Check that ISSN is valid. Method checks that ISSN number is correctly
+   * balanced (4 digits on either side of a hyphen) and that the ckeck
+   * digit (rightmost digit) is valid.
    * @param issn the issn string
    * @return true if issn is valid, false otherwise
    */

@@ -1,10 +1,10 @@
 /*
- * $Id: SimpleXmlMetadataExtractor.java,v 1.2 2009-08-31 16:31:03 dshr Exp $
+ * $Id: SimpleXmlMetadataExtractor.java,v 1.3 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
-public class SimpleXmlMetadataExtractor implements MetadataExtractor {
+public class SimpleXmlMetadataExtractor implements FileMetadataExtractor {
   static Logger log = Logger.getLogger("SimpleXmlMetadataExtractor");
   private Map<String, String> tagMap;
 
@@ -51,9 +51,7 @@ public class SimpleXmlMetadataExtractor implements MetadataExtractor {
   /*
    * XXX this should really do an XML parse and get all the metadata
    */
-  public Metadata extract(CachedUrl cu)
-      throws IOException {
-
+  public Metadata extract(CachedUrl cu) throws IOException {
     if (cu == null) {
       throw new IllegalArgumentException("extract(null)");
     }

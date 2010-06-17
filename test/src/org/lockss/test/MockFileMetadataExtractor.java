@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataExtractor.java,v 1.2 2009-06-01 23:48:25 dshr Exp $
+ * $Id: MockFileMetadataExtractor.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,20 +30,26 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.extractor;
-
+package org.lockss.test;
+import java.util.*;
 import java.io.*;
-
-import org.lockss.daemon.*;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 
-/** Content parser that extracts metadata from CachedUrl objects */
-public interface MetadataExtractor {
-  /**
-   * Parse content on CachedUrl,  Return a Metadata object describing it
-   * @param cu the CachedUrl to extract from
-   */
-  public Metadata extract(CachedUrl cu)
-    throws IOException, PluginException;
+public class MockFileMetadataExtractor implements FileMetadataExtractor {
+
+  private Metadata metadata = null;
+
+  public MockFileMetadataExtractor() {
+  }
+
+  public Metadata extract(CachedUrl cu) {
+    return metadata;
+  }
+
+  public void setMetadataToReturn(Metadata metadata) {
+    this.metadata = metadata;
+  }
 
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: SimpleMetaTagMetadataExtractorFactory.java,v 1.2 2009-05-23 18:06:26 dshr Exp $
+ * $Id: SimpleMetaTagMetadataExtractorFactory.java,v 1.3 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,12 +37,12 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 public class SimpleMetaTagMetadataExtractorFactory
-    implements MetadataExtractorFactory {
+    implements FileMetadataExtractorFactory {
   /**
    * Create a MetadataExtractor
    * @param contentType the content type type from which to extract URLs
    */
-  public MetadataExtractor createMetadataExtractor(String contentType)
+  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
       throws PluginException {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {

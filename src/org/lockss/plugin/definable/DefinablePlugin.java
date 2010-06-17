@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.48 2010-02-11 19:37:31 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.49 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
@@ -86,8 +86,20 @@ public class DefinablePlugin extends BasePlugin {
   public static final String KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE =
     "plugin_fetch_rate_limiter_source";
 
+  public static final String KEY_PLUGIN_ARTICLE_ITERATOR_FACTORY =
+    "plugin_article_iterator_factory";
+
+  public static final String KEY_PLUGIN_ARTICLE_METADATA_EXTRACTOR_FACTORY =
+    "plugin_article_metadata_extractor_factory";
+
   public static final String KEY_DEFAULT_ARTICLE_MIME_TYPE =
     "plugin_default_article_mime_type";
+
+  public static final String KEY_ARTICLE_ITERATOR_ROOT =
+    "plugin_article_iterator_root";
+
+  public static final String KEY_ARTICLE_ITERATOR_PATTERN =
+    "plugin_article_iterator_pattern";
 
   public static final String DEFAULT_PLUGIN_VERSION = "1";
   public static final String DEFAULT_REQUIRED_DAEMON_VERSION = "0.0.0";
@@ -402,16 +414,6 @@ public class DefinablePlugin extends BasePlugin {
 	  (LinkRewriterFactory)newAuxClass(factName,
 					   LinkRewriterFactory.class);
 	mti.setLinkRewriterFactory(fact);
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY)) {
-	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_ARTICLE_ITERATOR_FACTORY);
-	String factName = (String)val;
-	log.debug(mime + " article iterator: " + factName);
-	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
-	ArticleIteratorFactory fact =
-	  (ArticleIteratorFactory)newAuxClass(factName,
-					      ArticleIteratorFactory.class);
-	mti.setArticleIteratorFactory(fact);
       } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP)) {
 	String mime =
 	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP);
@@ -420,17 +422,23 @@ public class DefinablePlugin extends BasePlugin {
 	Map factClassMap = new HashMap();
 	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	for (Iterator it = factNameMap.keySet().iterator(); it.hasNext(); ) {
-          String mdType = (String)it.next();
-	  String factName = (String)factNameMap.get(mdType);
-	  log.debug3("Metadata type: " + mdType + " factory " + factName);
-	  MetadataExtractorFactory fact =
-	    (MetadataExtractorFactory)newAuxClass(factName,
-						  MetadataExtractorFactory.class);
-	  factClassMap.put(mdType, fact);
+          String mdTypes = (String)it.next();
+	  String factName = (String)factNameMap.get(mdTypes);
+	  for (String mdType : (List<String>)StringUtil.breakAt(mdTypes, ";")) {
+	    setMdTypeFact(factClassMap, mdType, factName);
+	  }
 	}
-	mti.setMetadataExtractorFactoryMap(factClassMap);
+	mti.setFileMetadataExtractorFactoryMap(factClassMap);
       }
     }
+  }
+
+  private void setMdTypeFact(Map factClassMap, String mdType, String factName) {
+    log.debug3("Metadata type: " + mdType + " factory " + factName);
+    FileMetadataExtractorFactory fact =
+      (FileMetadataExtractorFactory)newAuxClass(factName,
+						FileMetadataExtractorFactory.class);
+    factClassMap.put(mdType, fact);
   }
 
   protected void initResultMap() throws PluginException.InvalidDefinition {
@@ -631,6 +639,47 @@ public class DefinablePlugin extends BasePlugin {
       }
     }
     return super.constructFilterRule(mimeType);
+  }
+
+  protected ArticleIteratorFactory articleIteratorFact = null;
+  protected ArticleMetadataExtractorFactory articleMetadataFact = null;
+
+  /**
+   * Returns the plugin's article iterator factory, if any
+   * @return the ArticleIteratorFactory
+   */
+  public ArticleIteratorFactory getArticleIteratorFactory() {
+    if (articleIteratorFact == null) {
+      String factClass =
+	definitionMap.getString(KEY_PLUGIN_ARTICLE_ITERATOR_FACTORY,
+				null);
+      if (factClass != null) {
+	articleIteratorFact =
+	  (ArticleIteratorFactory)newAuxClass(factClass,
+					      ArticleIteratorFactory.class);
+      }
+    }
+    return articleIteratorFact;
+  }
+
+  /**
+   * Returns the article iterator factory for the content type, if any
+   * @param contentType the content type
+   * @return the ArticleIteratorFactory
+   */
+  public ArticleMetadataExtractorFactory
+    getArticleMetadataExtractorFactory(MetadataTarget target) {
+    if (articleMetadataFact == null) {
+      String factClass =
+	definitionMap.getString(KEY_PLUGIN_ARTICLE_METADATA_EXTRACTOR_FACTORY,
+				null);
+      if (factClass != null) {
+	articleMetadataFact =
+	  (ArticleMetadataExtractorFactory)newAuxClass(factClass,
+						       ArticleMetadataExtractorFactory.class);
+      }
+    }
+    return articleMetadataFact;
   }
 
   public String getPluginId() {

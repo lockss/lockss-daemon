@@ -1,10 +1,10 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.5 2009-10-11 23:09:18 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.6 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,114 +38,268 @@ import java.util.regex.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.*;
+import org.lockss.extractor.*;
 
 
 /*
- * XXX This implementation builds an ArrayList of the CachedUrls.
- * XXX Not a good idea - the iterator returned should invoke
- * XXX internal iterators to avoid holding that much memory.
  */
-public class SubTreeArticleIterator implements Iterator {
+public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   
   static Logger log = Logger.getLogger("SubTreeArticleIterator");
   
+  public static final String DEFAULT_MIME_TYPE = null;
+
+  public static class Spec {
+    private MetadataTarget target;
+    private String mimeType;
+    private List<String> roots;
+    private List<String> rootTemplates;
+    private Pattern pat;
+    private String patTempl;
+
+    public Spec setMimeType(String val) {
+      mimeType = val;
+      return this;
+    }
+
+    public Spec setTarget(MetadataTarget val) {
+      target = val;
+      return this;
+    }
+
+    public Spec setRoot(String root) {
+      return setRoots(ListUtil.list(root));
+    }
+
+    public Spec setRootTemplate(String rootTemplate) {
+      return setRootTemplates(ListUtil.list(rootTemplate));
+    }
+
+    public Spec setRoots(List<String> roots) {
+      if (rootTemplates != null) {
+	throw new
+	  IllegalArgumentException("Can't set both roots and rootTemplates");
+      }
+      this.roots = roots;
+      return this;
+    }
+
+    public Spec setRootTemplates(List<String> rootTemplates) {
+      if (roots != null) {
+	throw new
+	  IllegalArgumentException("Can't set both roots and rootTemplates");
+      }
+      this.rootTemplates = rootTemplates;
+      return this;
+    }
+
+    public Spec setPattern(Pattern regex) {
+      pat = regex;
+      return this;
+    }
+
+    public Spec setPatternTemplate(String patternTemplate) {
+      if (pat != null) {
+	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
+      }
+      this.patTempl = patternTemplate;
+      return this;
+    }
+
+    public Spec setPattern(String regex) {
+      if (patTempl != null) {
+	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
+      }
+      pat = Pattern.compile(regex);
+      return this;
+    }
+  }
+
+  Spec spec;
   String mimeType;
   ArchivalUnit au;
   Iterator it = null;
-  ArrayList al = new ArrayList();
-  String subTreeRoot = null;
   Pattern pat = null;
+  private Iterator cusIter = null;
+  private Iterator<CachedUrlSet> rootIter = null;
+
   
-  public SubTreeArticleIterator(String mimeType, ArchivalUnit au,
-				String subTreeRoot) {
-    this(mimeType, au, subTreeRoot, null);
-  }
-  
-  public SubTreeArticleIterator(String mimeType, ArchivalUnit au,
-				String subTreeRoot, Pattern pat) {
-    this.mimeType = ( mimeType == null ? "text/html" : mimeType );
+  // if null, we have to look for nextElement
+  private ArticleFiles nextElement = null;
+
+
+  public SubTreeArticleIterator(ArchivalUnit au, Spec spec) {
     this.au = au;
-    this.subTreeRoot = subTreeRoot;
-    this.pat = pat;
-    log.debug("Mime " + this.mimeType + " subTree " + this.subTreeRoot +
-	      " au " + this.au.toString());
-  }
-  
-  public void makeIterator() {
-    Collection stems = au.getUrlStems();
-    for (Iterator it = stems.iterator(); it.hasNext(); ) {
-      String stem = (String) it.next();
-      if (!stem.endsWith("/")) stem += "/";
-      log.debug("Subtree: " + stem + " + " + subTreeRoot);
-      CachedUrlSet cus = null;
-      if ("".equals(subTreeRoot)) {
-	  cus = ((BaseArchivalUnit)au).getAuCachedUrlSet();
-      } else {
-        CachedUrlSetSpec cuss = new RangeCachedUrlSetSpec(stem + subTreeRoot);
-	cus = au.makeCachedUrlSet(cuss);
-      }
-      Iterator chi = cus.contentHashIterator();
-      while (chi.hasNext()) {
-	Object n = chi.next();
-	if (n instanceof CachedUrl) {
-	  CachedUrl cu = (CachedUrl) n;
-	  try {
-	    processCachedUrl(cu);
-	  } catch (Exception ex) {
-	    // No action intended - iterator should ignore this cu.
-	    log.warning("Error processing " + cu.getUrl(), ex);
-	  }
-	  finally {
-	    AuUtil.safeRelease(cu);
-	  }
-	} else if (n instanceof CachedUrlSet) {
-	  CachedUrlSet cus2 = (CachedUrlSet) n;
-	  if (log.isDebug2()) log.debug2("CUS: " + cus.getUrl());
-	} else {
-	  log.warning("Unknown node type: " + n.getClass());
-	}
-      }
-    }
-    al.trimToSize();
-    it = al.iterator();
+    this.spec = spec;
+    mimeType = getMimeType();
+    Collection<CachedUrlSet> roots = makeRoots();
+    this.pat = makePattern();
+    rootIter = roots.iterator();
+    log.debug("Create: AU: " + au.getName() + ", Mime: " + this.mimeType
+	      + ", roots: " + roots + ", pat: " + pat);
   }
 
-  protected void processCachedUrl(CachedUrl cu) {
-    if (cu.hasContent()) {
-      String contentType = cu.getContentType();
-      String mimeType2 =
-	HeaderUtil.getMimeTypeFromContentType(contentType);
-      if (log.isDebug2()) {
-	log.debug2("CU: " + cu.getUrl() + " mime " + mimeType2);
+  // XXX fix when work out how target is used
+  private String getMimeType() {
+    String tmpMime = spec.target != null ? spec.target.getFormat() : null;
+    if (tmpMime == null) {
+      tmpMime = spec.mimeType;
+    }
+    if (tmpMime == null) {
+      tmpMime = au.getPlugin().getDefaultArticleMimeType();
+    }
+    if (tmpMime == null) {
+      tmpMime = DEFAULT_MIME_TYPE;
+    }
+    return tmpMime;
+  }
+
+  private Pattern makePattern() {
+    if (spec.pat != null) {
+      return spec.pat;
+    }
+    if (spec.patTempl != null) {
+      String re = convertVariableRegexpString(spec.patTempl).getRegexp();
+      return Pattern.compile(re);
+    }
+    return null;
+  }
+
+  private Collection<CachedUrlSet> makeRoots() {
+    Collection<String> roots = makeRootUrls();
+    log.debug("rootUrls: " + roots);
+    if (roots == null || roots.isEmpty()) {
+      return ListUtil.list(au.getAuCachedUrlSet());
+    }
+    Collection<CachedUrlSet> res = new ArrayList<CachedUrlSet>();
+    for (String root : roots) {
+      res.add(au.makeCachedUrlSet(new RangeCachedUrlSetSpec(root)));
+    }
+    return res;
+  }
+
+  private Collection<String> makeRootUrls() {
+    if (spec.roots != null) {
+      return spec.roots;
+    }
+    if (spec.rootTemplates == null) {
+      return null;
+    }
+    Collection<String> res = new ArrayList<String>();
+    for (String template : spec.rootTemplates) {
+      List<String> lst = convertUrlList(template);
+      if (lst == null) {
+	log.warning("Null converted string from " + template);
+	continue;
       }
-      Matcher match = null;
-      if (pat != null) {
-	match = pat.matcher(cu.getUrl());
-      }
-      if (mimeType.equalsIgnoreCase(mimeType2)
-	  && (match == null || match.find())) {
-	if (log.isDebug2()) log.debug2("Add " + cu.getUrl());
-	al.add(cu);
+      res.addAll(lst);
+    }
+    return res;
+  }
+
+  List<String> convertUrlList(String printfString) {
+    log.debug("convert("+printfString+"): "+ au);
+    log.debug("params: " + au.getProperties());
+    return new PrintfConverter.UrlListConverter(au).getUrlList(printfString);
+  }
+
+  PrintfConverter.MatchPattern
+    convertVariableRegexpString(String printfString) {
+    log.debug("reconvert("+printfString+"): "+ au);
+    return new PrintfConverter.RegexpConverter(au).getMatchPattern(printfString);
+  }
+
+  private ArticleFiles findNextElement() {
+    if (nextElement != null) {
+      return nextElement;
+    }
+    while (true) {
+      CachedUrl cu = null;
+      try {
+	if (cusIter == null || !cusIter.hasNext()) {
+	  if (!rootIter.hasNext()) {
+	    return null;
+	  } else {
+	    CachedUrlSet root = rootIter.next();
+	    cusIter = root.contentHashIterator();
+	    continue;
+	  }
+	} else {
+	  CachedUrlSetNode node = (CachedUrlSetNode)cusIter.next();
+	  if (node instanceof CachedUrl) {
+	    cu = (CachedUrl)node;
+	    if (isArticleCu(cu)) {
+	      nextElement = createArticleFiles(cu);
+	      if (nextElement == null) {
+		continue;
+	      }
+	      return nextElement;
+	    }
+	  }
+	}
+      } catch (Exception ex) {
+	// No action intended - iterator should ignore this cu.
+	if (cu == null) {
+	  log.error("Error", ex);
+	} else {
+	  log.error("Error processing " + cu.getUrl(), ex);
+	}
+      } finally {
+	AuUtil.safeRelease(cu);
       }
     }
   }
-  
+
+  protected ArticleFiles createArticleFiles(CachedUrl cu) {
+    ArticleFiles res = new ArticleFiles();
+    res.setFullTextCu(cu);
+    return res;
+  }
+
+
+  protected boolean isArticleCu(CachedUrl cu) {
+    log.debug3("isArticleCu(" + cu.getUrl() + ")");
+
+    if (!cu.hasContent()) {
+      log.debug3("No content for: " + cu.getUrl());
+      return false;
+    }
+    // Match pattern first; it's cheaper than getContentType()
+    if (pat != null) {
+      Matcher match = pat.matcher(cu.getUrl());
+      if (!match.find()) {
+	log.debug3("No match for " + pat + ": " + cu.getUrl());
+	return false;
+      }
+    }
+    if (mimeType != null) {
+      String cuMime =
+	HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
+      if (!mimeType.equalsIgnoreCase(cuMime)) {
+	log.debug3("Mime mismatch (" + mimeType + "): " + cu.getUrl()
+		   + "(" + cu.getContentType() + ")");
+	return false;
+      }
+    }
+    return true;
+  }
+
   public boolean hasNext() {
-    if (it == null) {
-      makeIterator();
-    }
-    return it.hasNext();
+    return findNextElement() != null;
   }
-  
-  public Object next() {
-    if (it == null) {
-      makeIterator();
+
+  public ArticleFiles next() {
+    ArticleFiles element = findNextElement();
+    nextElement = null;
+
+    if (element != null) {
+      return element;
     }
-    return it.next();
+    throw new NoSuchElementException();
   }
   
   public void remove() {
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException("Not implemented");
   }
   
 }

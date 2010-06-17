@@ -34,7 +34,7 @@
     </list>
   </entry>
   <entry>
-    <string>application/pdf_article_iterator_factory</string>
+    <string>pluginarticle_iterator_factory</string>
     <string>org.lockss.plugin.springer.SpringerArticleIteratorFactory</string>
   </entry>
   <entry>
@@ -42,11 +42,11 @@
     <map>
       <entry>
         <string>*</string>
-        <string>org.lockss.plugin.springer.SpringerMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.springer.SpringerXmlMetadataExtractorFactory</string>
       </entry>
       <entry>
         <string>DublinCore</string>
-        <string>org.lockss.plugin.springer.SpringerMetadataExtractorFactory</string>
+        <string>org.lockss.plugin.springer.SpringerXmlMetadataExtractorFactory</string>
       </entry>
     </map>
   </entry>

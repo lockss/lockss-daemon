@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.140 2010-02-11 10:03:39 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.141 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
@@ -723,36 +723,46 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   /**
    * Returns an article iterator from the AU's plugin.  If there isn't
-   * one, an empty iterator will be returned.
-   * @return the Iterator for the AU's articles.
+   * one, return an empty iterator.
+   * @return an Iterator over the AU's ArticleFiles.
    */
-  public Iterator getArticleIterator(String contentType) {
+  public Iterator<ArticleFiles> getArticleIterator(MetadataTarget target) {
     Iterator ret = CollectionUtil.EMPTY_ITERATOR;
-    ArticleIteratorFactory aif = plugin.getArticleIteratorFactory(contentType);
+    ArticleIteratorFactory aif = plugin.getArticleIteratorFactory();
     if (aif != null) try {
-      Iterator it = aif.createArticleIterator(contentType, this);
+      Iterator<ArticleFiles> it = aif.createArticleIterator(this, target);
       if (it != null) {
 	ret = it;
       }
     } catch (PluginException ex) {
-      logger.warning("createArticleIterator(" + contentType + ") threw " + ex);
+      logger.warning("createArticleIterator(" + target + ") threw " + ex);
     }
     return ret;
   }
   
   /**
+   * Return a {@link FileMetadataExtractor} that knows how to extract URLs
+   * from content of the given MIME type
+   * @param contentType content type to get a content parser for
+   * @return A FileMetadataExtractor or null
+   */
+  public FileMetadataExtractor getFileMetadataExtractor(String contentType) {
+    return plugin.getFileMetadataExtractor(contentType, this);
+  }
+
+  /**
    * Returns the article iterator for the default content type.
    * @return the Iterator for the AU's articles.
    */
-  public Iterator getArticleIterator() {
+  public Iterator<ArticleFiles> getArticleIterator() {
     return getArticleIterator(null);
   }
 
 
   public long getArticleCount() {
     long ret = 0;
-    for (Iterator it = getArticleIterator(); it.hasNext(); ) {
-      CachedUrl cu = (CachedUrl)it.next();
+    for (Iterator<ArticleFiles> it = getArticleIterator(); it.hasNext(); ) {
+      it.next();
       ret++;
     }
     return ret;

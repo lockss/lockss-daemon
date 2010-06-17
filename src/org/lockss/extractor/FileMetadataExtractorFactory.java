@@ -1,10 +1,10 @@
 /*
- * $Id: MockMetadataExtractorFactory.java,v 1.1 2009-05-22 19:14:55 dshr Exp $
+ * $Id: FileMetadataExtractorFactory.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,18 +30,17 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.test;
-import java.util.*;
-import java.io.*;
-import org.lockss.plugin.*;
-import org.lockss.extractor.*;
+package org.lockss.extractor;
 
-public class MockMetadataExtractorFactory implements MetadataExtractorFactory {
+import org.lockss.daemon.*;
 
-  public MockMetadataExtractorFactory() {
-  }
-
-  public MetadataExtractor createMetadataExtractor(String mimeType) {
-    return new MockMetadataExtractor();
-  }
+/** Factory to create a FileMetadataExtractor */
+public interface FileMetadataExtractorFactory {
+  /**
+   * Create a FileMetadataExtractor
+   * @param contentType the MIME type from which to extract URLs
+   */
+  public FileMetadataExtractor
+    createFileMetadataExtractor(String contentType)
+      throws PluginException;
 }

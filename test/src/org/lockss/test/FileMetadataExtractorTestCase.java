@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataExtractorTestCase.java,v 1.2 2009-08-29 04:26:28 dshr Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,17 +39,17 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-/** Framework for MetadataExtractor tests.  Subs must implement only {@link
- * #getFactory()} and {@link #getMimeType()}, and tests which call {@link
- * #extractFrom(String)}. */
-public abstract class MetadataExtractorTestCase extends LockssTestCase {
+/** Framework for FileMetadataExtractor tests.  Subs must implement only
+ * {@link #getFactory()} and {@link #getMimeType()}, and tests which call
+ * {@link #extractFrom(String)}. */
+public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   public static String URL = "http://www.example.com/";
 
   public static String MIME_TYPE_HTML = "text/html";
   public static String MIME_TYPE_XML = "application/xml";
   public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
 
-  protected MetadataExtractor extractor = null;
+  protected FileMetadataExtractor extractor = null;
   protected String encoding;
   protected MockArchivalUnit mau;
   protected MockCachedUrl cu;
@@ -58,12 +58,12 @@ public abstract class MetadataExtractorTestCase extends LockssTestCase {
     super.setUp();
     mau = new MockArchivalUnit();
     cu = new MockCachedUrl(getUrl(), mau);
-    extractor = getFactory().createMetadataExtractor(getMimeType());
+    extractor = getFactory().createFileMetadataExtractor(getMimeType());
     encoding = getEncoding();
   }
 
   public abstract String getMimeType();
-  public abstract MetadataExtractorFactory getFactory();
+  public abstract FileMetadataExtractorFactory getFactory();
 
   public String getEncoding() {
     return Constants.DEFAULT_ENCODING;

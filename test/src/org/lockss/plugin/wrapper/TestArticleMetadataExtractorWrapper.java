@@ -1,10 +1,10 @@
 /*
- * $Id: TestMetadataExtractorWrapper.java,v 1.1 2009-05-22 19:14:55 dshr Exp $
+ * $Id: TestArticleMetadataExtractorWrapper.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,41 +41,45 @@ import org.lockss.test.*;
 import org.lockss.extractor.*;
 import org.lockss.util.*;
 
-public class TestMetadataExtractorWrapper extends LockssTestCase {
+public class TestArticleMetadataExtractorWrapper extends LockssTestCase {
 
   private static final String url = "http://www.example.com/";
   public void testWrap() throws PluginException, IOException {
-    MetadataExtractor obj = new MockMetadataExtractor();
-    MetadataExtractor wrapper =
-      (MetadataExtractor)WrapperUtil.wrap(obj, MetadataExtractor.class);
-    assertTrue(wrapper instanceof MetadataExtractorWrapper);
-    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockMetadataExtractor);
+    ArticleMetadataExtractor obj = new MyArticleMetadataExtractor();
+    ArticleMetadataExtractor wrapper =
+      (ArticleMetadataExtractor)WrapperUtil.wrap(obj, ArticleMetadataExtractor.class);
+    assertTrue(wrapper instanceof ArticleMetadataExtractorWrapper);
+    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MyArticleMetadataExtractor);
 
     CachedUrl cu = new MockCachedUrl(url);
-    wrapper.extract(cu);
-    MockMetadataExtractor mn = (MockMetadataExtractor)obj;
-    assertEquals(ListUtil.list(cu), mn.args);
+    ArticleFiles af = new ArticleFiles();
+    wrapper.extract(af);
+    MyArticleMetadataExtractor mn = (MyArticleMetadataExtractor)obj;
+    log.info("xxxx: "+mn);
+    assertEquals(ListUtil.list(af), mn.args);
   }
 
   public void testLinkageError() throws IOException {
-    MetadataExtractor obj = new MockMetadataExtractor();
-    MetadataExtractor wrapper =
-      (MetadataExtractor)WrapperUtil.wrap(obj, MetadataExtractor.class);
-    assertTrue(wrapper instanceof MetadataExtractorWrapper);
-    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MockMetadataExtractor);
+    ArticleMetadataExtractor obj = new MyArticleMetadataExtractor();
+    ArticleMetadataExtractor wrapper =
+      (ArticleMetadataExtractor)WrapperUtil.wrap(obj, ArticleMetadataExtractor.class);
+    assertTrue(wrapper instanceof ArticleMetadataExtractorWrapper);
+    assertTrue(WrapperUtil.unwrap(wrapper) instanceof MyArticleMetadataExtractor);
     Error err = new LinkageError("bar");
-    MockMetadataExtractor a = (MockMetadataExtractor)obj;
+    MyArticleMetadataExtractor a = (MyArticleMetadataExtractor)obj;
     a.setError(err);
+    ArticleFiles af = new ArticleFiles();
     CachedUrl cu = new MockCachedUrl(url);
     try {
-      wrapper.extract(cu);
+      wrapper.extract(af);
       fail("Should have thrown PluginException");
     } catch (PluginException e) {
       assertTrue(e instanceof PluginException.LinkageError);
     }
   }
 
-  public static class MockMetadataExtractor implements MetadataExtractor {
+  public static class MyArticleMetadataExtractor
+    implements ArticleMetadataExtractor {
     List args;
     Error error;
 
@@ -83,9 +87,9 @@ public class TestMetadataExtractorWrapper extends LockssTestCase {
       this.error = error;
     }
 
-    public Metadata extract(CachedUrl cu)
+    public Metadata extract(ArticleFiles af)
 	throws IOException {
-      args = ListUtil.list(cu);
+      args = ListUtil.list(af);
       if (error != null) {
 	throw error;
       }

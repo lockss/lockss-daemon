@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleIteratorFactoryWrapper.java,v 1.2 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: FileMetadataExtractorWrapper.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
@@ -32,18 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.wrapper;
 import java.io.*;
-import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.extractor.*;
 
-/** Error catching wrapper for ArticleIteratorFactory */
-public class ArticleIteratorFactoryWrapper
-  implements ArticleIteratorFactory, PluginCodeWrapper {
+/** Error catching wrapper for FileMetadataExtractor */
+public class FileMetadataExtractorWrapper
+  implements FileMetadataExtractor, PluginCodeWrapper {
 
-  ArticleIteratorFactory inst;
+  FileMetadataExtractor inst;
 
-  public ArticleIteratorFactoryWrapper(ArticleIteratorFactory inst) {
+  public FileMetadataExtractorWrapper(FileMetadataExtractor inst) {
     this.inst = inst;
   }
 
@@ -51,18 +50,20 @@ public class ArticleIteratorFactoryWrapper
     return inst;
   }
 
-  public Iterator createArticleIterator(ArchivalUnit au, MetadataTarget target)
-      throws PluginException {
+  public Metadata extract(CachedUrl cu)
+      throws IOException, PluginException {
+    Metadata ret = null;
     try {
-      return inst.createArticleIterator(au, target);
+      ret = inst.extract(cu);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
+    return ret;
   }
 
   static class Factory implements WrapperFactory {
     public Object wrap(Object obj) {
-      return new ArticleIteratorFactoryWrapper((ArticleIteratorFactory)obj);
+      return new FileMetadataExtractorWrapper((FileMetadataExtractor)obj);
     }
   }
 }

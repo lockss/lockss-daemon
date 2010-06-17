@@ -1,10 +1,10 @@
 /*
- * $Id: MetadataExtractorFactoryWrapper.java,v 1.1 2009-05-22 19:14:55 dshr Exp $
+ * $Id: ArticleMetadataExtractorWrapper.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,13 +36,13 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.extractor.*;
 
-/** Error catching wrapper for MetadataExtractorFactory */
-public class MetadataExtractorFactoryWrapper
-  implements MetadataExtractorFactory, PluginCodeWrapper {
+/** Error catching wrapper for ArticleMetadataExtractor */
+public class ArticleMetadataExtractorWrapper
+  implements ArticleMetadataExtractor, PluginCodeWrapper {
 
-  MetadataExtractorFactory inst;
+  ArticleMetadataExtractor inst;
 
-  public MetadataExtractorFactoryWrapper(MetadataExtractorFactory inst) {
+  public ArticleMetadataExtractorWrapper(ArticleMetadataExtractor inst) {
     this.inst = inst;
   }
 
@@ -50,18 +50,20 @@ public class MetadataExtractorFactoryWrapper
     return inst;
   }
 
-  public MetadataExtractor createMetadataExtractor(String mimeType)
-      throws PluginException {
+  public Metadata extract(ArticleFiles af)
+      throws IOException, PluginException {
+    Metadata ret = null;
     try {
-      return inst.createMetadataExtractor(mimeType);
+      ret = inst.extract(af);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
+    return ret;
   }
 
   static class Factory implements WrapperFactory {
     public Object wrap(Object obj) {
-      return new MetadataExtractorFactoryWrapper((MetadataExtractorFactory)obj);
+      return new ArticleMetadataExtractorWrapper((ArticleMetadataExtractor)obj);
     }
   }
 }

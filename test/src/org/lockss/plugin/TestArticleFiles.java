@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleIteratorFactoryWrapper.java,v 1.2 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: TestArticleFiles.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
@@ -30,39 +30,37 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.wrapper;
+package org.lockss.plugin;
+
 import java.io.*;
 import java.util.*;
+import org.lockss.app.*;
+import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.extractor.*;
+import org.lockss.state.*;
+import org.lockss.test.*;
+import org.lockss.plugin.base.*;
+import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 
-/** Error catching wrapper for ArticleIteratorFactory */
-public class ArticleIteratorFactoryWrapper
-  implements ArticleIteratorFactory, PluginCodeWrapper {
+public class TestArticleFiles extends LockssTestCase {
 
-  ArticleIteratorFactory inst;
+  public void testAccessors() {
+    ArticleFiles af1 = new ArticleFiles();
+    assertNull(af1.getFullTextCu());
+    assertNull(af1.getRoleCu("xml"));
+    CachedUrl cu1 = new MockCachedUrl("full");
+    af1.setFullTextCu(cu1);
+    assertSame(cu1, af1.getFullTextCu());
+    assertNull(af1.getRoleCu("xml"));
 
-  public ArticleIteratorFactoryWrapper(ArticleIteratorFactory inst) {
-    this.inst = inst;
+    CachedUrl cu2 = new MockCachedUrl("xml");
+    af1.setRoleCu("xml", cu2);
+    assertSame(cu1, af1.getFullTextCu());
+    assertSame(cu2, af1.getRoleCu("xml"));
+    assertEquals("full", af1.getFullTextUrl());
+    assertEquals("xml", af1.getRoleUrl("xml"));
+    assertEquals(null, af1.getRoleUrl("html"));
   }
 
-  public Object getWrappedObj() {
-    return inst;
-  }
-
-  public Iterator createArticleIterator(ArchivalUnit au, MetadataTarget target)
-      throws PluginException {
-    try {
-      return inst.createArticleIterator(au, target);
-    } catch (LinkageError e) {
-      throw new PluginException.LinkageError(e);
-    }
-  }
-
-  static class Factory implements WrapperFactory {
-    public Object wrap(Object obj) {
-      return new ArticleIteratorFactoryWrapper((ArticleIteratorFactory)obj);
-    }
-  }
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: MockMetadataExtractor.java,v 1.1 2009-05-22 19:14:55 dshr Exp $
+ * $Id: MockFileMetadataExtractorFactory.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,23 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import java.util.*;
 import java.io.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.extractor.*;
 
-public class MockMetadataExtractor implements MetadataExtractor {
+public class MockFileMetadataExtractorFactory
+  implements FileMetadataExtractorFactory {
 
-  private Metadata metadata = null;
-
-  public MockMetadataExtractor() {
+  public MockFileMetadataExtractorFactory() {
   }
 
-  public Metadata extract(CachedUrl cu) {
-      return metadata;
+  public FileMetadataExtractor createFileMetadataExtractor(String mimeType) {
+    return new MockFileMetadataExtractor();
   }
-
-  public void setMetadataToReturn(Metadata metadata) {
-    this.metadata = metadata;
-  }
-
 }

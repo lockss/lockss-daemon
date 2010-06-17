@@ -127,4 +127,29 @@
       <string>&quot;%s/issue-%d/issue.htm&quot;, resolver_url, num_issue_range</string>
     </list>
   </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$ArtIterFact</string>
+  </entry>
+  <entry>
+    <string>plugin_default_article_mime_type</string>
+    <string>application/pdf</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.definable.MockFactories$MetaExtFact</string>
+  </entry>
+  <entry>
+    <string>text/xml_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+	<string>org.lockss.plugin.definable.MockFactories$XmlMetaExtFact</string>
+      </entry>
+      <entry>
+        <string>DublinRind</string>
+	<string>org.lockss.plugin.definable.MockFactories$XmlRindMetaExtFact</string>
+      </entry>
+    </map>
+  </entry>
 </map>

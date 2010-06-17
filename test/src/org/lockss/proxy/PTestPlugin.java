@@ -1,10 +1,10 @@
 /*
- * $Id: PTestPlugin.java,v 1.28 2009-05-23 18:06:26 dshr Exp $
+ * $Id: PTestPlugin.java,v 1.29 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -122,6 +122,10 @@ public class PTestPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
+    public FileMetadataExtractor getFileMetadataExtractor() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
     public long getContentSize() {
       return contents.length();
     }
@@ -141,7 +145,7 @@ public class PTestPlugin {
     public void release() {
     }
 
-    public MetadataExtractor getMetadataExtractor() {
+    public ArticleMetadataExtractor getArticleMetadataExtractor() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

@@ -1,10 +1,10 @@
 /*
- * $Id: ListObjects.java,v 1.8 2010-05-12 03:52:56 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.9 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,6 +40,7 @@ import org.mortbay.html.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 
 /** Output a plain list of the URLs in an AU
  */
@@ -139,11 +140,14 @@ public class ListObjects extends LockssServlet {
     resp.setContentType("text/plain");
     wrtr.println("# DOIs in " + au.getName());
     wrtr.println();
-    for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
-      CachedUrl cu = (CachedUrl)iter.next();
+    for (Iterator<ArticleFiles> iter = au.getArticleIterator();
+	 iter.hasNext(); ) {
+      ArticleFiles af = iter.next();
+      CachedUrl cu = af.getFullTextCu();
       try {
         if (cu.hasContent()) {
-          Metadata md = cu.getMetadataExtractor().extract(cu);
+          Metadata md =
+	    au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au).extract(af);
           if (md != null) {
             String doi = md.getDOI();
             if (doi != null) {
@@ -193,11 +197,14 @@ public class ListObjects extends LockssServlet {
     resp.setContentType("text/plain");
     wrtr.println("# Articles in " + au.getName());
     wrtr.println();
-    for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
-      CachedUrl cu = (CachedUrl)iter.next();
+    for (Iterator<ArticleFiles> iter = au.getArticleIterator();
+	 iter.hasNext(); ) {
+      ArticleFiles af = iter.next();
+      CachedUrl cu = af.getFullTextCu();
       try {
         if (cu.hasContent()) {
-          Metadata md = cu.getMetadataExtractor().extract(cu);
+          Metadata md =
+	    au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au).extract(af);
           if (md == null) {
             wrtr.println(cu.getUrl() + "\t");
           }

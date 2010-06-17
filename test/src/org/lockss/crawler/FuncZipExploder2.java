@@ -1,10 +1,10 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.12 2009-12-20 03:56:58 dshr Exp $
+ * $Id: FuncZipExploder2.java,v 1.13 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -269,30 +269,30 @@ public class FuncZipExploder2 extends LockssTestCase {
 	String articleMimeType = "application/pdf";
 	mep.setDefaultArticleMimeType(articleMimeType);
 	mep.setArticleIteratorFactory(new SpringerArticleIteratorFactory());
-	mep.setMetadataExtractorFactory(new SpringerMetadataExtractorFactory());
-	MetadataExtractor me = plugin.getMetadataExtractor(articleMimeType, au);
+	mep.setArticleMetadataExtractorFactory(new SpringerArticleIteratorFactory());
+	ArticleMetadataExtractor me =
+	  plugin.getArticleMetadataExtractor(null, au);
 	assertNotNull(me);
-	assert(me instanceof
-	       SpringerMetadataExtractorFactory.SpringerMetadataExtractor);
+	assertTrue(me instanceof SpringerArticleIteratorFactory.SpringerArticleMetadataExtractor);
 	int count = 0;
 	Set foundDoiSet = new HashSet();
-	for (Iterator it = au.getArticleIterator(); it.hasNext(); ) {
-	  BaseCachedUrl cu = (BaseCachedUrl)it.next();
+	for (Iterator<ArticleFiles> it = au.getArticleIterator(); it.hasNext(); ) {
+	  ArticleFiles af = it.next();
+	  CachedUrl cu = af.getFullTextCu();
 	  assertNotNull(cu);
-	  assert(cu instanceof CachedUrl);
 	  String contentType = cu.getContentType();
 	  assertNotNull(contentType);
-	  assert(contentType.toLowerCase().startsWith(articleMimeType));
+	  assertTrue(contentType.toLowerCase().startsWith(articleMimeType));
 	  log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
 	  count++;
 	  try {
-	    Metadata md = me.extract(cu);
+	    Metadata md = me.extract(af);
 	    assertNotNull(md);
 	    String doi = md.getDOI();
 	    assertNotNull(doi);
 	    log.debug(cu.getUrl() + " doi " + doi);
 	    String doi2 = md.getProperty(Metadata.KEY_DOI);
-	    assert(doi2.startsWith(Metadata.PROTOCOL_DOI));
+	    assertTrue(doi2.startsWith(Metadata.PROTOCOL_DOI));
 	    assertEquals(doi, doi2.substring(Metadata.PROTOCOL_DOI.length()));
 	    foundDoiSet.add(doi);
 	  } catch (Exception ex) {

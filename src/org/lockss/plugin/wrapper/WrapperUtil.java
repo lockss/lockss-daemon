@@ -1,10 +1,10 @@
 /*
- * $Id: WrapperUtil.java,v 1.8 2009-08-03 04:35:51 tlipkis Exp $
+ * $Id: WrapperUtil.java,v 1.9 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,10 +63,14 @@ public class WrapperUtil {
 			   new LinkRewriterFactoryWrapper.Factory());
     registerWrapperFactory(org.lockss.plugin.ArticleIteratorFactory.class,
 			   new ArticleIteratorFactoryWrapper.Factory());
-    registerWrapperFactory(org.lockss.extractor.MetadataExtractorFactory.class,
-			   new MetadataExtractorFactoryWrapper.Factory());
-    registerWrapperFactory(org.lockss.extractor.MetadataExtractor.class,
-			   new MetadataExtractorWrapper.Factory());
+    registerWrapperFactory(org.lockss.extractor.ArticleMetadataExtractorFactory.class,
+			   new ArticleMetadataExtractorFactoryWrapper.Factory());
+    registerWrapperFactory(org.lockss.extractor.ArticleMetadataExtractor.class,
+			   new ArticleMetadataExtractorWrapper.Factory());
+    registerWrapperFactory(org.lockss.extractor.FileMetadataExtractorFactory.class,
+			   new FileMetadataExtractorFactoryWrapper.Factory());
+    registerWrapperFactory(org.lockss.extractor.FileMetadataExtractor.class,
+			   new FileMetadataExtractorWrapper.Factory());
     registerWrapperFactory(LoginPageChecker.class,
 			   new LoginPageCheckerWrapper.Factory());
     registerWrapperFactory(PermissionCheckerFactory.class,
@@ -89,6 +93,11 @@ public class WrapperUtil {
 
   /** Wrap the object using the wrapper factory registered for inter */
   public static Object wrap(Object obj, Class inter) {
+//     ClassLoader objCL = obj.getClass().getClassLoader();
+//     if (WrapperUtil.class.getClassLoader() == objCL) {
+//       log.debug("Not wrapping " + obj.getClass());
+//       return obj;
+//     }
     WrapperFactory fact = (WrapperFactory)wrapperFactories.get(inter);
     if (fact == null) {
       warnNoWrapper(obj);

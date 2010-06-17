@@ -1,10 +1,10 @@
 /*
- * $Id: Metadata.java,v 1.13 2010-06-04 16:51:51 dsferopoulos Exp $
+ * $Id: Metadata.java,v 1.14 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.extractor.*;
 import org.lockss.state.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
@@ -123,11 +124,15 @@ public class Metadata extends Properties {
       if (pluginMgr.isInternalAu(au)) {
 	continue;
       }
-      for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
-	BaseCachedUrl cu = (BaseCachedUrl)iter.next();
+      ArticleMetadataExtractor mdExtractor =
+	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au);
+      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
+	   iter.hasNext(); ) {
+	ArticleFiles af = iter.next();
+	CachedUrl cu = af.getFullTextCu();
 	try {
 	  if (cu.hasContent()) {
-	    Metadata md = cu.getMetadataExtractor().extract(cu);
+	    Metadata md = mdExtractor.extract(af);
 	    if (md != null) {
 	      String doi = md.getDOI();
 	      if (doi != null) {
@@ -203,11 +208,15 @@ public class Metadata extends Properties {
       if (pluginMgr.isInternalAu(au)) {
 	continue;
       }
-      for (Iterator iter = au.getArticleIterator(); iter.hasNext(); ) {
-	BaseCachedUrl cu = (BaseCachedUrl)iter.next();
+      ArticleMetadataExtractor mdExtractor =
+	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.OpenURL, au);
+      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
+	   iter.hasNext(); ) {
+	ArticleFiles af = iter.next();
+	CachedUrl cu = af.getFullTextCu();
 	try {
 	  if (cu.hasContent()) {
-	    Metadata md = cu.getMetadataExtractor().extract(cu);
+	    Metadata md = mdExtractor.extract(af);
 	    if (md != null) {
 	      // Key for OpenURL map is
 	      // issn + "/" + volume + "/" + issue + "/" + spage

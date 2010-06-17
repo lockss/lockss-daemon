@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleIteratorFactoryWrapper.java,v 1.2 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: MetadataTarget.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
@@ -30,39 +30,44 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.wrapper;
-import java.io.*;
-import java.util.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.extractor.*;
+package org.lockss.extractor;
 
-/** Error catching wrapper for ArticleIteratorFactory */
-public class ArticleIteratorFactoryWrapper
-  implements ArticleIteratorFactory, PluginCodeWrapper {
 
-  ArticleIteratorFactory inst;
+/**
+ * Describes the purpose for which metadata is being extracted and the
+ * format desired.  Passed to ArticleIterator.
+ */
+public class MetadataTarget {
 
-  public ArticleIteratorFactoryWrapper(ArticleIteratorFactory inst) {
-    this.inst = inst;
+  public static MetadataTarget DOI = new MetadataTarget("DOI");
+  public static MetadataTarget OpenURL = new MetadataTarget("OpenURL");
+  public static MetadataTarget Article = new MetadataTarget("Article");
+
+  private String format;
+  private String purpose;
+
+  public MetadataTarget() {
   }
 
-  public Object getWrappedObj() {
-    return inst;
+  public MetadataTarget(String purpose) {
+    this.purpose = purpose;
   }
 
-  public Iterator createArticleIterator(ArchivalUnit au, MetadataTarget target)
-      throws PluginException {
-    try {
-      return inst.createArticleIterator(au, target);
-    } catch (LinkageError e) {
-      throw new PluginException.LinkageError(e);
-    }
+  public MetadataTarget setFormat(String format) {
+    this.format = format;
+    return this;
   }
 
-  static class Factory implements WrapperFactory {
-    public Object wrap(Object obj) {
-      return new ArticleIteratorFactoryWrapper((ArticleIteratorFactory)obj);
-    }
+  public String getFormat() {
+    return format;
+  }
+
+  public MetadataTarget setPurpose(String purpose) {
+    this.purpose = purpose;
+    return this;
+  }
+
+  public String getPurpose() {
+    return purpose;
   }
 }

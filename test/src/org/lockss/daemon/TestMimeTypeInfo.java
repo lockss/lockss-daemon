@@ -1,10 +1,10 @@
 /*
- * $Id: TestMimeTypeInfo.java,v 1.7 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestMimeTypeInfo.java,v 1.8 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -74,18 +74,14 @@ public class TestMimeTypeInfo extends LockssTestCase {
     mti.setLinkRewriterFactory(lr);
     assertSame(lr, mti.getLinkRewriterFactory());
 
-    ArticleIteratorFactory ai = new MockArticleIteratorFactory();
-    mti.setArticleIteratorFactory(ai);
-    assertSame(ai, mti.getArticleIteratorFactory());
-
     Map factMap = new HashMap();
-    MetadataExtractorFactory me = new MockMetadataExtractorFactory();
+    FileMetadataExtractorFactory me = new MockFileMetadataExtractorFactory();
     factMap.put(MimeTypeInfo.DEFAULT_METADATA_TYPE, me);
-    mti.setMetadataExtractorFactoryMap(factMap);
-    assertSame(factMap, mti.getMetadataExtractorFactoryMap());
-    assertSame(me, mti.getMetadataExtractorFactory());
-    assertSame(me, mti.getMetadataExtractorFactory(MimeTypeInfo.DEFAULT_METADATA_TYPE));
-    assertNull(mti.getMetadataExtractorFactory("BogusMetadataType"));
+    mti.setFileMetadataExtractorFactoryMap(factMap);
+    assertSame(factMap, mti.getFileMetadataExtractorFactoryMap());
+    assertSame(me, mti.getFileMetadataExtractorFactory());
+    assertSame(me, mti.getFileMetadataExtractorFactory(MimeTypeInfo.DEFAULT_METADATA_TYPE));
+    assertNull(mti.getFileMetadataExtractorFactory("BogusMetadataType"));
 
     MimeTypeInfo m2 = new MimeTypeInfo.Impl(mti);
     assertSame(ff, m2.getHashFilterFactory());
@@ -93,9 +89,8 @@ public class TestMimeTypeInfo extends LockssTestCase {
     assertSame(uf, m2.getLinkExtractorFactory());
     assertSame(rl, m2.getFetchRateLimiter());
     assertSame(lr, m2.getLinkRewriterFactory());
-    assertSame(ai, m2.getArticleIteratorFactory());
-    assertSame(factMap, m2.getMetadataExtractorFactoryMap());
-    assertSame(me, m2.getMetadataExtractorFactory());
+    assertSame(factMap, m2.getFileMetadataExtractorFactoryMap());
+    assertSame(me, m2.getFileMetadataExtractorFactory());
 
   }
 }

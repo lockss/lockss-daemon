@@ -1,10 +1,10 @@
 /*
- * $Id: MockArticleIteratorFactory.java,v 1.1 2009-05-19 03:49:09 dshr Exp $
+ * $Id: MockArticleIteratorFactory.java,v 1.2 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,31 +34,26 @@ package org.lockss.test;
 
 import java.util.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 
 import org.lockss.daemon.PluginException;
 
 /** Factory to create an Iterator that iterates through an AU's articles */
 public class MockArticleIteratorFactory implements ArticleIteratorFactory {
-  private Iterator articleIterator = null;
+  private Iterator<ArticleFiles> articleIterator = null;
   public MockArticleIteratorFactory() {
   }
-  public MockArticleIteratorFactory(Iterator it) {
+  public MockArticleIteratorFactory(Iterator<ArticleFiles> it) {
     articleIterator = it;
   }
-  /**
-   * Create an Iterator that iterates through the AU's articles, pointing
-   * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-   * choice of CachedUrl if mimeType is null
-   * @param mimeType the MIME type desired for the CachedUrls
-   * @param au the ArchivalUnit to iterate through
-   * @return the ArticleIterator
-   */
-  public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+						      MetadataTarget target)
     throws PluginException {
     return articleIterator;
   }
 
-  public void setArticleIterator(Iterator it) {
+  public void setArticleIterator(Iterator<ArticleFiles> it) {
     articleIterator = it;
   }
 }

@@ -1,10 +1,10 @@
 /*
- * $Id: FuncTarExploder.java,v 1.9 2009-09-05 18:03:27 dshr Exp $
+ * $Id: FuncTarExploder.java,v 1.10 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2007-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

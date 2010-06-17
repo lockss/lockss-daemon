@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.38 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.39 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -217,21 +217,21 @@ public class BaseCachedUrl implements CachedUrl {
    * Return a MetadataExtractor for the CachedUrl's content type.
    * If there isn't one, a null extractor will be returned.
    */
-  public MetadataExtractor getMetadataExtractor() {
+  public FileMetadataExtractor getFileMetadataExtractor() {
     String ct = getContentType();
-    MetadataExtractor ret = au.getPlugin().getMetadataExtractor(ct, au);
+    FileMetadataExtractor ret = au.getFileMetadataExtractor(ct);
     if (ret == null) {
       ret = new NullMetadataExtractor();
     }
     return ret;
   }
 
-  public class NullMetadataExtractor implements MetadataExtractor {
+  public class NullMetadataExtractor implements FileMetadataExtractor {
     public NullMetadataExtractor() {
     }
     public Metadata extract(CachedUrl cu)
         throws IOException, PluginException {
-	return new EmptyMetadata();
+      return new EmptyMetadata();
     }
   }
   public class EmptyMetadata extends Metadata {

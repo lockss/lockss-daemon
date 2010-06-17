@@ -1,10 +1,10 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.52 2010-05-27 07:00:01 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.53 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -541,7 +541,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
   }
 
   public void testGetArticleIterator() {
-    Iterator articleIterator = mbau.getArticleIterator();
+    Iterator<ArticleFiles> articleIterator = mbau.getArticleIterator();
     assertNotNull(articleIterator);
     assertFalse(articleIterator.hasNext());
     MockArticleIteratorFactory maif = new MockArticleIteratorFactory();
@@ -554,14 +554,18 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 	"http://www.example.com/5",
     };
     int listSize = urls.length;
-    ArrayList l = new ArrayList(listSize);
+    ArrayList<ArticleFiles> l = new ArrayList(listSize);
     for (int i = 0; i < listSize; i++) {
-      l.add(new MockCachedUrl(urls[i]));
+      ArticleFiles af = new ArticleFiles();
+      af.setFullTextCu(new MockCachedUrl(urls[i]));
+      l.add(af);
     }
     maif.setArticleIterator(l.iterator());
     int count = 0;
-    for (Iterator it = mbau.getArticleIterator(); it.hasNext(); count++) {
-      MockCachedUrl cu = (MockCachedUrl)it.next();
+    for (Iterator<ArticleFiles> it = mbau.getArticleIterator();
+	 it.hasNext();
+	 count++) {
+      CachedUrl cu = it.next().getFullTextCu();
       assertEquals(urls[count], cu.getUrl());
     }
     assertEquals(count,listSize);

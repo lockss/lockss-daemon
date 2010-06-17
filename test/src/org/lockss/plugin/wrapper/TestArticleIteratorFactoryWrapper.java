@@ -1,10 +1,10 @@
 /*
- * $Id: TestArticleIteratorFactoryWrapper.java,v 1.1 2009-05-19 03:49:09 dshr Exp $
+ * $Id: TestArticleIteratorFactoryWrapper.java,v 1.2 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +36,13 @@ import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.extractor.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class TestArticleIteratorFactoryWrapper extends LockssTestCase {
+
+  private MetadataTarget fooTarget = new MetadataTarget("foo");
 
   public void testWrap() throws PluginException, IOException {
     ArticleIteratorFactory obj = new MockArticleIteratorFactory();
@@ -49,9 +52,9 @@ public class TestArticleIteratorFactoryWrapper extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockArticleIteratorFactory);
 
-    wrapper.createArticleIterator("foomime", new MockArchivalUnit());
+    wrapper.createArticleIterator(new MockArchivalUnit(), fooTarget);
     MockArticleIteratorFactory mn = (MockArticleIteratorFactory)obj;
-    assertEquals(ListUtil.list("foomime"), mn.args);
+    assertEquals(ListUtil.list(fooTarget), mn.args);
   }
 
   public void testLinkageError() throws IOException {
@@ -65,7 +68,7 @@ public class TestArticleIteratorFactoryWrapper extends LockssTestCase {
     MockArticleIteratorFactory a = (MockArticleIteratorFactory)obj;
     a.setError(err);
     try {
-      wrapper.createArticleIterator(null, new MockArchivalUnit());
+      wrapper.createArticleIterator(new MockArchivalUnit(), fooTarget);
       fail("Should have thrown PluginException");
     } catch (PluginException e) {
       assertTrue(e instanceof PluginException.LinkageError);
@@ -82,9 +85,10 @@ public class TestArticleIteratorFactoryWrapper extends LockssTestCase {
       this.error = error;
     }
 
-      public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+							MetadataTarget target)
 	throws PluginException {
-      args = ListUtil.list(mimeType);
+      args = ListUtil.list(target);
       if (error != null) {
 	throw error;
       }

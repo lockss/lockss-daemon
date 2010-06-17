@@ -1,10 +1,10 @@
 /*
- * $Id: MockExplodedPlugin.java,v 1.2 2009-09-01 20:56:32 dshr Exp $
+ * $Id: MockExplodedPlugin.java,v 1.3 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,8 +44,9 @@ import org.lockss.extractor.*;
 
 public class MockExplodedPlugin extends ExplodedPlugin {
 
-  private ArticleIteratorFactory articleIteratorFactory = null;
-  private MetadataExtractorFactory metadataExtractorFactory = null;
+  private ArticleIteratorFactory articleIteratorFactory;
+  private ArticleMetadataExtractorFactory articleMetadataExtractorFactory;
+  private FileMetadataExtractorFactory fileMetadataExtractorFactory;
   private String defaultArticleMimeType = null;
 
   public MockExplodedPlugin() {
@@ -69,27 +70,39 @@ public class MockExplodedPlugin extends ExplodedPlugin {
     daemon.setNodeManager(new MockNodeManager(), au);
   }
 
-  /**
-   * Return a {@link MetadataExtractor} that knows how to extract URLs from
-   * content of the given MIME type
-   * @param contentType content type to get a content parser for
-   * @param au the AU in question
-   * @return A MetadataExtractor or null
-   */
-  public MetadataExtractor getMetadataExtractor(String contentType,
-						ArchivalUnit au) {
-    MetadataExtractor ret = null;
-    if (metadataExtractorFactory != null) {
+  public ArticleMetadataExtractor
+    getArticleMetadataExtractor(MetadataTarget target,
+				ArchivalUnit au) {
+    if (articleMetadataExtractorFactory != null) {
       try {
-	ret = metadataExtractorFactory.createMetadataExtractor(contentType);
+	return
+	  articleMetadataExtractorFactory.createArticleMetadataExtractor(target);
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }
     }
-    return ret;
+    return null;
   }
-  public void setMetadataExtractorFactory(MetadataExtractorFactory mef) {
-    metadataExtractorFactory = mef;
+  public void
+    setArticleMetadataExtractorFactory(ArticleMetadataExtractorFactory mef) {
+    articleMetadataExtractorFactory = mef;
+  }
+
+  public FileMetadataExtractor getFileMetadataExtractor(String contentType,
+							ArchivalUnit au) {
+    if (fileMetadataExtractorFactory != null) {
+      try {
+	return
+	  fileMetadataExtractorFactory.createFileMetadataExtractor(contentType);
+      } catch (PluginException e) {
+	throw new RuntimeException(e);
+      }
+    }
+    return null;
+  }
+  public void
+    setFileMetadataExtractorFactory(FileMetadataExtractorFactory mef) {
+    fileMetadataExtractorFactory = mef;
   }
 
   /**
@@ -97,7 +110,7 @@ public class MockExplodedPlugin extends ExplodedPlugin {
    * @param contentType the content type
    * @return the ArticleIteratorFactory
    */
-  public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+  public ArticleIteratorFactory getArticleIteratorFactory() {
     return articleIteratorFactory;
   }
   public void setArticleIteratorFactory(ArticleIteratorFactory aif) {

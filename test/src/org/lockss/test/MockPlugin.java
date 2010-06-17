@@ -1,10 +1,10 @@
 /*
- * $Id: MockPlugin.java,v 1.29 2009-05-23 18:06:26 dshr Exp $
+ * $Id: MockPlugin.java,v 1.30 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private List auConfigDescrs = ListUtil.list(ConfigParamDescr.BASE_URL,
 					      ConfigParamDescr.VOLUME_NUMBER);
 
-  private MetadataExtractor metadataExtractor = null;
+  private ArticleMetadataExtractor metadataExtractor = null;
   private ArticleIteratorFactory articleIteratorFactory = null;
   
 
@@ -129,16 +129,17 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     this.pubPlatform = pubPlatform;
   }
 
-  public MetadataExtractor getMetadataExtractor(String contentType,
-						ArchivalUnit au) {
+  public ArticleMetadataExtractor
+    getArticleMetadataExtractor(MetadataTarget target,
+				ArchivalUnit au) {
     return metadataExtractor;
   }
 
-  public void setMetadataExtractor(MetadataExtractor me) {
+  public void setArticleMetadataExtractor(ArticleMetadataExtractor me) {
     metadataExtractor = me;
   }
 
-  public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
+  public ArticleIteratorFactory getArticleIteratorFactory() {
     return articleIteratorFactory;
   }
 

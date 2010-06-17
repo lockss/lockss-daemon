@@ -1,10 +1,10 @@
 /*
- * $Id: ArticleIteratorFactory.java,v 1.1 2009-05-19 03:49:09 dshr Exp $
+ * $Id: ArticleIteratorFactory.java,v 1.2 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,17 +36,18 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.daemon.PluginException;
+import org.lockss.extractor.*;
 
 /** Factory to create an Iterator that iterates through an AU's articles */
 public interface ArticleIteratorFactory {
   /**
-   * Create an Iterator that iterates through the AU's articles, pointing
-   * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-   * choice of CachedUrl if mimeType is null
-   * @param mimeType the MIME type desired for the CachedUrls
+   * Create an Iterator that returns a sequence of ArticleFiles, each
+   * describing one article in the AU
    * @param au the ArchivalUnit to iterate through
-   * @return the ArticleIterator
+   * @param target describes the objects the iterator should find
+   * @return an Iterator over ArticleFiles objects
    */
-    public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+						      MetadataTarget target)
       throws PluginException;
 }

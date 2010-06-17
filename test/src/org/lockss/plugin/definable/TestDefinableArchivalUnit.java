@@ -1,10 +1,10 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.40 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.41 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -153,9 +153,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
     setupAu(additionalAuConfig);
     String substr = "\"My Test Range = %s\", " + key;
-    DefinableArchivalUnit.MatchPattern mp =
+    PrintfConverter.MatchPattern mp =
       cau.convertVariableRegexpString(substr);
-    assertEquals("My Test Range = (\\d+)", mp.regexp);
+    assertEquals("My Test Range = (\\d+)", mp.getRegexp());
   }
 
   public void testConvertUrlListWithNumRange() {
@@ -226,24 +226,24 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     setupAu(additionalAuConfig);
     String substr = "\"My Test Integer = %d\", INTEGER";
     String expectedReturn = "My Test Integer = 10";
-    DefinableArchivalUnit.MatchPattern mp =
+    PrintfConverter.MatchPattern mp =
       cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.regexp);
+    assertEquals(expectedReturn, mp.getRegexp());
 
     substr = "\"My Test Boolean = %s\", BOOLEAN";
     expectedReturn = "My Test Boolean = true";
     mp = cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.regexp);
+    assertEquals(expectedReturn, mp.getRegexp());
 
     substr = "\"My Test String = %s\", STRING";
     expectedReturn = "My Test String = Yo\\.M\\[am\\]a\\?foo\\=bar\\!";
     mp = cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.regexp);
+    assertEquals(expectedReturn, mp.getRegexp());
 
     substr = "\"My Test Short Year = %02d\", au_short_year";
     expectedReturn = "My Test Short Year = 03";
     mp = cau.convertVariableRegexpString(substr);
-    assertEquals(expectedReturn, mp.regexp);
+    assertEquals(expectedReturn, mp.getRegexp());
   }
 
   public void testConvertRule() throws LockssRegexpException {
@@ -704,7 +704,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testIsLoginPageUrlBadPat()
       throws ArchivalUnit.ConfigurationException {
     setupAu();
-    String pat = "\"%s.*\\?.*\\blo[gin=yes\\b.*\", base_url";
+    String pat = "\"%s.*\\?.*\\mal[formed_pattern\\b.*\", base_url";
     defMap.putString(DefinableArchivalUnit.KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN, pat);
     Configuration config =
       ConfigurationUtil.fromArgs(ConfigParamDescr.BASE_URL.getKey(),
@@ -864,7 +864,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(fact) instanceof MyMockFilterFactory);
   }
 
-
   CrawlRule makeExpRule() {
     try {
       CrawlRules.RE expRules[] = {
@@ -890,7 +889,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   public void testLargePlugin() throws Exception {
 
-    PluginManager pmgr = getMockLockssDaemon().getPluginManager();
+    MyPluginManager pmgr = new MyPluginManager();
+    getMockLockssDaemon().setPluginManager(pmgr);
+    pmgr.initService(getMockLockssDaemon());
 
     // Load a complex plugin definition
     String pname = "org.lockss.plugin.definable.LargeTestPlugin";
@@ -943,6 +944,34 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(expStartUrls, au.getNewContentCrawlUrls());
     assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
 		 au.makeName());
+
+    assertEquals("application/pdf", au.getPlugin().getDefaultArticleMimeType());
+
+    ArticleIteratorFactory afact = au.getPlugin().getArticleIteratorFactory();
+    assertTrue(afact instanceof ArticleIteratorFactoryWrapper);
+    assertTrue(""+WrapperUtil.unwrap(afact),
+	       WrapperUtil.unwrap(afact) instanceof MockFactories.ArtIterFact);
+    assertEquals(CollectionUtil.EMPTY_ITERATOR, au.getArticleIterator());
+
+    assertNull(au.getFileMetadataExtractor("application/pdf"));
+    FileMetadataExtractor ext =
+      au.getFileMetadataExtractor("text/xml");
+    assertTrue(""+ext, ext instanceof MockFactories.XmlMetaExt);
+
+    MimeTypeInfo mti =
+      ((MyDefinablePlugin)au.getPlugin()).getMimeTypeInfo("text/xml");
+    FileMetadataExtractorFactory mfact = mti.getFileMetadataExtractorFactory();
+    assertTrue(mfact instanceof FileMetadataExtractorFactoryWrapper);
+    assertTrue(""+WrapperUtil.unwrap(mfact),
+	       WrapperUtil.unwrap(mfact) instanceof MockFactories.XmlMetaExtFact);
+    FileMetadataExtractorFactory mfact2 =
+      mti.getFileMetadataExtractorFactory("DublinCore");
+    assertTrue(""+WrapperUtil.unwrap(mfact2),
+	       WrapperUtil.unwrap(mfact2) instanceof MockFactories.XmlMetaExtFact);
+    FileMetadataExtractorFactory mfact3 =
+      mti.getFileMetadataExtractorFactory("DublinRind");
+    assertTrue(""+WrapperUtil.unwrap(mfact3),
+	       WrapperUtil.unwrap(mfact3) instanceof MockFactories.XmlRindMetaExtFact);
   }
 
   public void testRateLimiterSourceDefault() throws Exception {
@@ -1068,6 +1097,18 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 						 InputStream in,
 						 String encoding) {
       throw new UnsupportedOperationException("not implemented");
+    }
+  }
+
+  public static class MyDefinablePlugin extends DefinablePlugin {
+    public MimeTypeInfo getMimeTypeInfo(String contentType) {
+      return super.getMimeTypeInfo(contentType);
+    }
+  }
+
+  public static class MyPluginManager extends PluginManager {
+    protected String getConfigurablePluginName(String pluginName) {
+      return MyDefinablePlugin.class.getName();
     }
   }
 }

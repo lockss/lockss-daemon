@@ -1,10 +1,10 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.3 2009-10-27 13:00:31 dshr Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.4 2010-06-17 18:47:18 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,84 +39,40 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.*;
+import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.SubTreeArticleIterator.Spec;
+import org.lockss.extractor.*;
 import org.lockss.plugin.simulated.*;
 
 public class TestSubTreeArticleIterator extends LockssTestCase {
   static Logger log = Logger.getLogger("TestSubTreeArticleIterator");
 
+  static final String BASE_URL = "http://example.org/wombat/";
+
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
-  private CrawlManager crawlMgr;
-  private static int exceptionCount;
-  private static final int DEFAULT_MAX_DEPTH = 1000;
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
-  private static int maxDepth=DEFAULT_MAX_DEPTH;
   private static int urlCount = 32;
   private static int testExceptions = 3;
 
-  public static void main(String[] args) throws Exception {
-    TestSubTreeArticleIterator test = new TestSubTreeArticleIterator();
-    if (args.length>0) {
-      try {
-        maxDepth = Integer.parseInt(args[0]);
-      } catch (NumberFormatException ex) { }
-    }
-
-    test.setUp(maxDepth);
-    test.testArticleCount();
-    test.testException();
-    test.tearDown();
-  }
-
   public void setUp() throws Exception {
     super.setUp();
-    this.setUp(DEFAULT_MAX_DEPTH);
-  }
-
-  public void setUp(int max) throws Exception {
-
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|TestSubTreeArticleIterator$MySimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
-    Properties props = new Properties();
-    props.setProperty(NewContentCrawler.PARAM_MAX_CRAWL_DEPTH, ""+max);
-    maxDepth=max;
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "3");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "7");
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES, "" +
-                      (SimulatedContentGenerator.FILE_TYPE_PDF +
-		       SimulatedContentGenerator.FILE_TYPE_HTML));
-    props.setProperty("org.lockss.au." + auId + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
-
+    ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+				  tempDirPath);
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
-    crawlMgr = theDaemon.getCrawlManager();
+    theDaemon.getCrawlManager();
 
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
-    sau =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau);
+    sau = PluginTestUtil.createAndStartSimAu(/*MySimulatedPlugin.class,*/
+					     simAuConfig(tempDirPath));
   }
 
   public void tearDown() throws Exception {
@@ -125,125 +81,138 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     super.tearDown();
   }
 
-  public void testArticleCount() throws Exception {
-    createContent();
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("base_url", BASE_URL);
+    conf.put("depth", "3");
+    conf.put("branch", "2");
+    conf.put("numFiles", "7");
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
+				SimulatedContentGenerator.FILE_TYPE_HTML));
+    conf.put("binFileSize", ""+fileSize);
+    return conf;
+  }
 
-    // get the root of the simContent
-    String simDir = sau.getSimRoot();
+  public void testOne() throws Exception {
+    PluginTestUtil.crawlSimAu(sau);
 
-    crawlContent();
+    assertEquals(225, countArticles(new Spec()));
+    assertEquals(120, countArticles(new Spec().setMimeType("text/html")));
+    assertEquals(105, countArticles(new Spec().setMimeType("application/pdf")));
+    assertEquals(120, countArticles(new Spec().setPattern("\\.html")));
+    assertEquals(15, countArticles(new Spec().setPattern("index\\.html")));
+    assertEquals(105, countArticles(new Spec().setPattern("\\.pdf")));
+    assertEquals(0, countArticles(new Spec()
+				  .setMimeType("text/html")
+				  .setPattern("\\.pdf")));
 
-    exceptionCount = 0;
-    int count = 0;
-    for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
-	BaseCachedUrl cu = (BaseCachedUrl)it.next();
-	assertNotNull(cu);
-	assert(cu instanceof CachedUrl);
-	log.debug("count " + count + " url " + cu.getUrl());
-	count++;
+    assertEquals(0, countArticles(new Spec()
+				  .setRoot("http://example.com/")));
+    assertEquals(225, countArticles(new Spec()
+				    .setRoot("http://example.org/")));
+    assertEquals(225, countArticles(new Spec()
+				    .setRootTemplate("\"%s\",base_url")));
+    assertEquals(105, countArticles(new Spec()
+				    .setRootTemplate("\"%sbranch1\",base_url")));
+    assertEquals(49, countArticles(new Spec()
+				   .setRootTemplate("\"%sbranch1\",base_url")
+				   .setPattern("\\.pdf")));
+    Spec s1 = new Spec().setPatternTemplate("\"00%dfile\\.html\",branch");
+    Spec s2 = new Spec().setPattern("002file\\.html");
+    List l1 = getArticles(s1);
+    assertEquals(15, l1.size());
+
+    assertEquals(getFullTextUrls(l1), getFullTextUrls(getArticles(s2)));
+
+    Spec s3 = new Spec().setPattern("branch2/002file\\.html");
+    String a = "http://example.org/wombat/";
+    String b = "branch2/002file.html";
+    List exp = ListUtil.list(a+"branch1/branch1/"+b,
+			     a+"branch1/"+b,
+			     a+"branch1/branch2/"+b,
+			     a+""+b,
+			     a+"branch2/branch1/"+b,
+			     a+"branch2/"+b,
+			     a+"branch2/branch2/"+b);
+
+    assertEquals(exp,  getFullTextUrls(getArticles(s3)));
+  }
+
+  int countArticles(Spec spec) {
+    return getArticles(spec).size();
+  }
+
+  List<ArticleFiles> getArticles(Spec spec) {
+    return getArticles(new SubTreeArticleIterator(sau, spec));
+  }
+
+  List<String> getFullTextUrls(List<ArticleFiles> aflist) {
+    List<String> res = new ArrayList<String>();
+    for (ArticleFiles af : aflist) {
+      res.add(af.getFullTextUrl());
     }
-    log.debug("Article count is " + count);
-    assertEquals(urlCount, count);
+    return res;
+  }
+
+  List<ArticleFiles> getArticles(SubTreeArticleIterator it) {
+    List<ArticleFiles> res = new ArrayList<ArticleFiles>();
+    while (it.hasNext()) {
+      ArticleFiles af = it.next();
+      log.debug2("iter af: " + af);
+      CachedUrl cu = af.getFullTextCu();
+      assertNotNull(cu);
+      res.add(af);
+    }
+    return res;
   }
 
   public void testException() throws Exception {
-    createContent();
+    PluginTestUtil.crawlSimAu(sau);
 
-    // get the root of the simContent
-    String simDir = sau.getSimRoot();
-
-    crawlContent();
-
-    exceptionCount = testExceptions;
     int count = 0;
-    for (Iterator it = sau.getArticleIterator(); it.hasNext(); ) {
-	BaseCachedUrl cu = (BaseCachedUrl)it.next();
-	assertNotNull(cu);
-	assert(cu instanceof CachedUrl);
-	log.debug("count " + count + " url " + cu.getUrl());
-	count++;
+    
+    for (Iterator<ArticleFiles> it =
+	   new MySubTreeArticleIterator(sau,
+					(new Spec()
+					 .setPattern("branch1/branch1")),
+					testExceptions);
+	 it.hasNext(); ) {
+      ArticleFiles af = it.next();
+      CachedUrl cu = af.getFullTextCu();
+      assertNotNull(cu);
+      assertTrue(""+cu.getClass(), cu instanceof CachedUrl);
+      log.debug("count " + count + " url " + cu.getUrl());
+      count++;
     }
     log.debug("Article count is " + count);
-    assertEquals(urlCount - testExceptions, count);
+    assertEquals(60 - testExceptions, count);
   }
 
-  private void createContent() {
-    log.debug("Generating tree of size 3x1x2 with "+fileSize
-	      +"byte files...");
-    sau.generateContentTree();
-  }
-
-  private void crawlContent() {
-    log.debug("Crawling tree...");
-    CrawlSpec spec = new SpiderCrawlSpec(sau.getNewContentCrawlUrls(), null);
-    NewContentCrawler crawler =
-      new NewContentCrawler(sau, spec, new MockAuState());
-    //crawler.setCrawlManager(crawlMgr);
-    crawler.doCrawl();
-  }
-
-  public static class MySimulatedPlugin extends SimulatedPlugin {
-    public ArchivalUnit createAu0(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
-      ArchivalUnit au = new SimulatedArchivalUnit(this);
-      au.setConfiguration(auConfig);
-      return au;
-    }
-    /**
-     * Returns the article iterator factory for the mime type, if any
-     * @param contentType the content type
-     * @return the ArticleIteratorFactory
-     */
-    public ArticleIteratorFactory getArticleIteratorFactory(String contentType) {
-      MySubTreeArticleIteratorFactory ret =
-	  new MySubTreeArticleIteratorFactory();
-      ret.setSubTreeRoot("branch1/branch1");
-      return ret;
-    }
-  }
-
-  public static class MySubTreeArticleIteratorFactory
-      implements ArticleIteratorFactory {
-    String subTreeRoot;
-    MySubTreeArticleIteratorFactory() {
-    }
-    /**
-     * Create an Iterator that iterates through the AU's articles, pointing
-     * to the appropriate CachedUrl of type mimeType for each, or to the plugin's
-     * choice of CachedUrl if mimeType is null
-     * @param mimeType the MIME type desired for the CachedUrls
-     * @param au the ArchivalUnit to iterate through
-     * @return the ArticleIterator
-     */
-    public Iterator createArticleIterator(String mimeType, ArchivalUnit au)
-	throws PluginException {
-      Iterator ret;
-      if (exceptionCount == 0) {
-	ret = new SubTreeArticleIterator(mimeType, au, subTreeRoot);
-      } else {
-	ret = new MySubTreeArticleIterator(mimeType, au, subTreeRoot,
-					   exceptionCount);
-      }
-      return ret;
-    }
-    public void setSubTreeRoot(String root) {
-      subTreeRoot = root;
-      log.debug("Set subTreeRoot: " + subTreeRoot);
-    }
-  }
   public static class MySubTreeArticleIterator extends SubTreeArticleIterator {
     int exceptionCount;
-    MySubTreeArticleIterator(String mimeType, ArchivalUnit au,
-			     String subTreeRoot, int exceptionCount) {
-      super(mimeType, au, subTreeRoot);
+    MySubTreeArticleIterator(ArchivalUnit au, Spec spec, int exceptionCount) {
+      super(au, spec);
       this.exceptionCount = exceptionCount;
     }
-    protected void processCachedUrl(CachedUrl cu) {
-      if (exceptionCount > 0 && cu.getUrl().endsWith(".html")) {
-	exceptionCount--;
-	throw new UnsupportedOperationException();
+
+    @Override
+    protected boolean isArticleCu(CachedUrl cu) {
+      if (super.isArticleCu(cu)) {
+	if (exceptionCount > 0 && cu.getUrl().endsWith(".html")) {
+	  exceptionCount--;
+	  throw new UnsupportedOperationException();
+	}
+	return true;
       }
-      super.processCachedUrl(cu);
+      return false;
+    }
+  }
+
+  static class AF extends ArticleFiles {
+    AF(String url) {
+      super();
+      fullTextCu = new MockCachedUrl(url);
     }
   }
 }

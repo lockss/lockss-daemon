@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleIteratorFactoryWrapper.java,v 1.2 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ArticleMetadataExtractor.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
@@ -30,39 +30,22 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.wrapper;
+package org.lockss.extractor;
+
 import java.io.*;
-import java.util.*;
+
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.extractor.*;
 
-/** Error catching wrapper for ArticleIteratorFactory */
-public class ArticleIteratorFactoryWrapper
-  implements ArticleIteratorFactory, PluginCodeWrapper {
+/** Content parser that extracts metadata from CachedUrl objects */
+public interface ArticleMetadataExtractor {
+  /**
+   * Parse content on CachedUrl,  Return a Metadata object describing it
+   * @param cu the CachedUrl to extract from
+   */
+  public Metadata extract(/*ArchivalUnit au,
+			    MetadataTarget target,*/
+			  ArticleFiles af)
+    throws IOException, PluginException;
 
-  ArticleIteratorFactory inst;
-
-  public ArticleIteratorFactoryWrapper(ArticleIteratorFactory inst) {
-    this.inst = inst;
-  }
-
-  public Object getWrappedObj() {
-    return inst;
-  }
-
-  public Iterator createArticleIterator(ArchivalUnit au, MetadataTarget target)
-      throws PluginException {
-    try {
-      return inst.createArticleIterator(au, target);
-    } catch (LinkageError e) {
-      throw new PluginException.LinkageError(e);
-    }
-  }
-
-  static class Factory implements WrapperFactory {
-    public Object wrap(Object obj) {
-      return new ArticleIteratorFactoryWrapper((ArticleIteratorFactory)obj);
-    }
-  }
 }

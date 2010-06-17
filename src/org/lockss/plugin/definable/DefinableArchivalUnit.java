@@ -1,9 +1,9 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.76 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.77 2010-06-17 18:47:19 tlipkis Exp $
  */
 
 /*
- Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -93,8 +93,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "_crawl_filter_factory";
   public static final String SUFFIX_LINK_REWRITER_FACTORY =
     "_link_rewriter_factory";
-  public static final String SUFFIX_ARTICLE_ITERATOR_FACTORY =
-    "_article_iterator_factory";
   public static final String SUFFIX_ARTICLE_MIME_TYPE =
     "_article_mime_type";
   public static final String SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP =
@@ -111,11 +109,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "au_redirect_to_login_url_pattern";
   public static final String KEY_DONT_POLL =
     "au_dont_poll";
-
-  public static final String RANGE_SUBSTITUTION_STRING = "(.*)";
-  public static final String NUM_SUBSTITUTION_STRING = "(\\d+)";
-
-  public static final int MAX_NUM_RANGE_SIZE = 100;
 
   protected ExternalizableMap definitionMap;
 
@@ -262,7 +255,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   protected Pattern makeLoginUrlPattern(String val)
       throws ArchivalUnit.ConfigurationException {
 
-    String patStr = convertVariableRegexpString(val).regexp;
+    String patStr = convertVariableRegexpString(val).getRegexp();
     if (patStr == null) {
       String msg = "Missing regexp args: " + val;
       log.error(msg);
@@ -440,16 +433,17 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
 // ---------------------------------------------------------------------
 
-  MatchPattern convertVariableRegexpString(String printfString) {
-    return new RegexpConverter().getMatchPattern(printfString);
+  PrintfConverter.MatchPattern
+    convertVariableRegexpString(String printfString) {
+    return new PrintfConverter.RegexpConverter(plugin, paramMap).getMatchPattern(printfString);
   }
 
   List<String> convertUrlList(String printfString) {
-    return new UrlListConverter().getUrlList(printfString);
+    return new PrintfConverter.UrlListConverter(plugin, paramMap).getUrlList(printfString);
   }
 
   String convertNameString(String printfString) {
-    return new NameConverter().getName(printfString);
+    return new PrintfConverter.NameConverter(plugin, paramMap).getName(printfString);
   }
 
   CrawlRule convertRule(String ruleString, boolean ignoreCase)
@@ -459,26 +453,26 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     int action = Integer.parseInt(ruleString.substring(0, pos));
     String printfString = ruleString.substring(pos + 1);
 
-    MatchPattern mp = convertVariableRegexpString(printfString);
-    if (mp.regexp == null) {
+    PrintfConverter.MatchPattern mp = convertVariableRegexpString(printfString);
+    if (mp.getRegexp() == null) {
       return null;
     }
-    List<List> matchArgs = mp.matchArgs;
+    List<List> matchArgs = mp.getMatchArgs();
     switch (matchArgs.size()) {
     case 0:
-      return new CrawlRules.RE(mp.regexp, ignoreCase, action);
+      return new CrawlRules.RE(mp.getRegexp(), ignoreCase, action);
     case 1:
       List argPair = matchArgs.get(0);
-      ConfigParamDescr descr = mp.matchArgDescrs.get(0);
+      ConfigParamDescr descr = mp.getMatchArgDescrs().get(0);
       switch (descr.getType()) {
       case ConfigParamDescr.TYPE_RANGE:
-	return new CrawlRules.REMatchRange(mp.regexp,
+	return new CrawlRules.REMatchRange(mp.getRegexp(),
 					   ignoreCase,
 					   action,
 					   (String)argPair.get(0),
 					   (String)argPair.get(1));
       case ConfigParamDescr.TYPE_NUM_RANGE:
-	return new CrawlRules.REMatchRange(mp.regexp,
+	return new CrawlRules.REMatchRange(mp.getRegexp(),
 					   ignoreCase,
 					   action,
 					   ((Long)argPair.get(0)).longValue(),
@@ -492,250 +486,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
   }
 
-  abstract class Converter {
-    PrintfUtil.PrintfData p_data;
-    String format;
-    PrintfFormat pf;
-    Collection<String> p_args;
-    ArrayList substitute_args;
-    boolean missingArgs = false;
-
-    void convert(String printfString) {
-      p_data = PrintfUtil.stringToPrintf(printfString);
-      format = p_data.getFormat();
-      p_args = p_data.getArguments();
-      pf = new PrintfFormat(format);
-      substitute_args = new ArrayList(p_args.size());
-
-      for (String key : p_args) {
-	Object val = paramMap.getMapElement(key);
-	ConfigParamDescr descr = plugin.findAuConfigDescr(key);
-	if (val != null) {
-	  interpArg(key, val, descr);
-	} else {
-	  missingArgs = true;
-	  log.warning("missing argument for : " + key);
-	  interpNullArg(key, val, descr);
-	}
-      }
-    }
-
-    void interpArg(String key, Object val, ConfigParamDescr descr) {
-      switch (descr != null ? descr.getType()
-	      : ConfigParamDescr.TYPE_STRING) {
-      case ConfigParamDescr.TYPE_SET:
-	interpSetArg(key, val, descr);
-	break;
-      case ConfigParamDescr.TYPE_RANGE:
-	interpRangeArg(key, val, descr);
-	break;
-      case ConfigParamDescr.TYPE_NUM_RANGE:
-	interpNumRangeArg(key, val, descr);
-	break;
-      default:
-	interpPlainArg(key, val, descr);
-	break;
-      }
-    }
-
-    abstract void interpSetArg(String key, Object val,
-			       ConfigParamDescr descr);
-    abstract void interpRangeArg(String key, Object val,
-				 ConfigParamDescr descr);
-    abstract void interpNumRangeArg(String key, Object val,
-				    ConfigParamDescr descr);
-    abstract void interpPlainArg(String key, Object val,
-				 ConfigParamDescr descr);
-    void interpNullArg(String key, Object val, ConfigParamDescr descr) {
-    }
-  }
-
-  class RegexpConverter extends Converter {
-    ArrayList matchArgs = new ArrayList();
-    ArrayList matchArgDescrs = new ArrayList();
-
-    void interpSetArg(String key, Object val, ConfigParamDescr descr) {
-      // val must be a list; ok to throw if not
-      List<String> vec = (List<String>)val;
-      List tmplst = new ArrayList(vec.size());
-      for (String ele : vec) {
-	tmplst.add(Perl5Compiler.quotemeta(ele));
-      }
-      substitute_args.add(StringUtil.separatedString(tmplst, "(?:", "|", ")"));
-    }
-
-    void interpRangeArg(String key, Object val, ConfigParamDescr descr) {
-      substitute_args.add(RANGE_SUBSTITUTION_STRING);
-      matchArgs.add(val);
-      matchArgDescrs.add(descr);
-    }
-
-    void interpNumRangeArg(String key, Object val, ConfigParamDescr descr) {
-      substitute_args.add(NUM_SUBSTITUTION_STRING);
-      matchArgs.add(val);
-      matchArgDescrs.add(descr);
-    }
-
-    void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
-      if (val instanceof String) {
-	val = Perl5Compiler.quotemeta((String)val);
-      }
-      substitute_args.add(val);
-    }
-
-    MatchPattern getMatchPattern(String printfString) {
-      convert(printfString);
-      if (missingArgs) {
-	log.warning("Missing variable arguments: " + p_data);
-	return new MatchPattern();
-      }
-      if (log.isDebug3()) {
-	log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
-      }
-      return new MatchPattern(pf.sprintf(substitute_args.toArray()),
-			      matchArgs, matchArgDescrs);
-    }
-
-  }
-
-  class UrlListConverter extends Converter {
-    boolean haveSets = false;
-
-    void haveSets() {
-      if (!haveSets) {
-	// if this is first set seen, replace all values so far with
-	// singleton list of value
-	for (int ix = 0; ix < substitute_args.size(); ix++) {
-	  substitute_args.set(ix,
-			      Collections.singletonList(substitute_args.get(ix)));
-	}
-	haveSets = true;
-      }
-    }
-
-    void interpSetArg(String key, Object val, ConfigParamDescr descr) {
-      haveSets();
-      // val must be a list; ok to throw if not
-      List<String> vec = (List<String>)val;
-      substitute_args.add(vec);
-    }
-
-    void interpRangeArg(String key, Object val, ConfigParamDescr descr) {
-      throw new PluginException.InvalidDefinition("String range params are not allowed in URL patterns: " + key);
-    }
-
-    void interpNumRangeArg(String key, Object val, ConfigParamDescr descr) {
-      haveSets();
-      // val must be a list; ok to throw if not
-      List<Long> vec = (List<Long>)val;
-      long min = vec.get(0).longValue();
-      long max = vec.get(1).longValue();
-      long size = max - min + 1;
-      if (size > MAX_NUM_RANGE_SIZE) {
-	log.error("Excessively large numeric range: " + min + "-" + max
-		  + ", truncating");
-	max = min + MAX_NUM_RANGE_SIZE;
-	size = max - min + 1;
-      }
-      List lst = new ArrayList((int)size);
-      for (long x = min; x <= max; x++) {
-	lst.add(x);
-      }
-      substitute_args.add(lst);
-    }
-
-    void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
-      if (haveSets) {
-	substitute_args.add(Collections.singletonList(val));
-      } else {
-	substitute_args.add(val);
-      }
-    }
-
-    List getUrlList(String printfString) {
-      convert(printfString);
-      if (missingArgs) {
-	log.warning("Missing variable arguments: " + p_data);
-	return null;
-      }
-      if (!substitute_args.isEmpty() && haveSets) {
-	ArrayList res = new ArrayList();
-	for (CartesianProductIterator iter =
-	       new CartesianProductIterator(substitute_args);
-	     iter.hasNext(); ) {
-	  Object[] oneCombo = (Object[])iter.next();
-	  if (log.isDebug3()) {
-	    log.debug3("sprintf(\""+format+"\", "+oneCombo+")");
-	  }
-	  res.add(pf.sprintf(oneCombo));
-	}
-	res.trimToSize();
-	return res;
-      } else {
-	if (log.isDebug3()) {
-	  log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
-	}
-	return
-	  Collections.singletonList(pf.sprintf(substitute_args.toArray()));
-      }
-    }
-  }
-
-  class NameConverter extends Converter {
-
-    void interpSetArg(String key, Object val, ConfigParamDescr descr) {
-      // val must be a list; ok to throw if not
-      List<String> vec = (List<String>)val;
-      substitute_args.add(StringUtil.separatedString(vec, ", "));
-    }
-
-    void interpRangeArg(String key, Object val, ConfigParamDescr descr) {
-      // val must be a list; ok to throw if not
-      List<String> vec = (List<String>)val;
-      substitute_args.add(StringUtil.separatedString(vec, "-"));
-    }
-
-    void interpNumRangeArg(String key, Object val, ConfigParamDescr descr) {
-      interpRangeArg(key, val, descr);
-    }
-
-    void interpPlainArg(String key, Object val, ConfigParamDescr descr) {
-      substitute_args.add(val);
-    }
-
-    void interpNullArg(String key, Object val, ConfigParamDescr descr) {
-      substitute_args.add("(null)");
-    }
-
-    String getName(String printfString) {
-      convert(printfString);
-      if (missingArgs) {
-	log.warning("Missing variable arguments: " + p_data);
-      }
-      if (log.isDebug3()) {
-	log.debug3("sprintf(\""+format+"\", "+substitute_args+")");
-      }
-      return pf.sprintf(substitute_args.toArray());
-    }
-  }
-
-
-  static class MatchPattern {
-    String regexp;
-    List<List> matchArgs;
-    List<ConfigParamDescr> matchArgDescrs;
-
-    MatchPattern() {
-    }
-
-    MatchPattern(String regexp,
-		 List<List> matchArgs,
-		 List<ConfigParamDescr> matchArgDescrs) {
-      this.regexp = regexp;
-      this.matchArgs = matchArgs;
-      this.matchArgDescrs = matchArgDescrs;
-    }
-  }
 
   public interface ConfigurableCrawlWindow {
     public CrawlWindow makeCrawlWindow()
