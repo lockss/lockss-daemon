@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.6 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.7 2010-06-18 21:15:30 thib_gc Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       CachedUrl cu = af.getFullTextCu();
       assertNotNull(cu);
       log.debug2("count " + count + " url " + cu.getUrl());
-      Metadata md = me.extract(af);
+      ArticleMetadata md = me.extract(af);
       if (!cu.getUrl().endsWith("index.html")) {
 	assertNotNull(md);
 	checkMetadata(md);
@@ -221,7 +221,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       new HighWireHtmlMetadataExtractorFactory.HighWireHtmlMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
-    Metadata md = me.extract(cu);
+    ArticleMetadata md = me.extract(cu);
     assertNotNull(md);
     assertEquals(goodDOI, md.getDOI());
     assertEquals(goodVolume, md.getVolume());
@@ -254,7 +254,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       new HighWireHtmlMetadataExtractorFactory.HighWireHtmlMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
-    Metadata md = me.extract(cu);
+    ArticleMetadata md = me.extract(cu);
     assertNotNull(md);
     assertNull(md.getDOI());
     assertNull(md.getVolume());
@@ -280,7 +280,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     return content;
   }
 
-  public void checkMetadata(Metadata md) {
+  public void checkMetadata(ArticleMetadata md) {
     String temp = null;
     temp = (String) md.get("lockss.filenum");
     int fileNum = -1;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierMetadataExtractor.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: TestElsevierMetadataExtractor.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -128,14 +128,14 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
       assertTrue("XML cu is " + contentType + " (" + xcu + ")",
 		 contentType.toLowerCase().startsWith("text/xml"));
       count++;
-      Metadata md = me.extract(af);
+      ArticleMetadata md = me.extract(af);
       assertNotNull(md);
       String doi = md.getDOI();
       assertNotNull(doi);
       log.debug(fcu.getUrl() + " doi " + doi);
-      String doi2 = md.getProperty(Metadata.KEY_DOI);
-      assertTrue(doi2.startsWith(Metadata.PROTOCOL_DOI));
-      assertEquals(doi, doi2.substring(Metadata.PROTOCOL_DOI.length()));
+      String doi2 = md.getProperty(ArticleMetadata.KEY_DOI);
+      assertTrue(doi2.startsWith(ArticleMetadata.PROTOCOL_DOI));
+      assertEquals(doi, doi2.substring(ArticleMetadata.PROTOCOL_DOI.length()));
     }
     log.debug("Article count is " + count);
     assertEquals(28, count);

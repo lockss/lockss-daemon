@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierArticleIteratorFactory.java,v 1.2 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: ElsevierArticleIteratorFactory.java,v 1.3 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class ElsevierArticleIteratorFactory
   public class ElsevierArticleMetadataExtractor
     implements ArticleMetadataExtractor {
 
-    public Metadata extract(ArticleFiles af)
+    public ArticleMetadata extract(ArticleFiles af)
 	throws IOException, PluginException {
       CachedUrl cu = af.getRoleCu("xml");
       if (cu != null) {

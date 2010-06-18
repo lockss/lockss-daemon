@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.13 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: FuncZipExploder2.java,v 1.14 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -286,14 +286,14 @@ public class FuncZipExploder2 extends LockssTestCase {
 	  log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
 	  count++;
 	  try {
-	    Metadata md = me.extract(af);
+	    ArticleMetadata md = me.extract(af);
 	    assertNotNull(md);
 	    String doi = md.getDOI();
 	    assertNotNull(doi);
 	    log.debug(cu.getUrl() + " doi " + doi);
-	    String doi2 = md.getProperty(Metadata.KEY_DOI);
-	    assertTrue(doi2.startsWith(Metadata.PROTOCOL_DOI));
-	    assertEquals(doi, doi2.substring(Metadata.PROTOCOL_DOI.length()));
+	    String doi2 = md.getProperty(ArticleMetadata.KEY_DOI);
+	    assertTrue(doi2.startsWith(ArticleMetadata.PROTOCOL_DOI));
+	    assertEquals(doi, doi2.substring(ArticleMetadata.PROTOCOL_DOI.length()));
 	    foundDoiSet.add(doi);
 	  } catch (Exception ex) {
 	    fail(ex.toString());

@@ -1,5 +1,5 @@
 /*
- * $Id: MockFactories.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: MockFactories.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -86,13 +86,13 @@ public class MockFactories {
   }
 
   public static class MetaExt implements ArticleMetadataExtractor {
-    public Metadata extract(ArticleFiles af) {
+    public ArticleMetadata extract(ArticleFiles af) {
       return null;
     }
   }
 
   public static class XmlMetaExt implements FileMetadataExtractor {
-    public Metadata extract(CachedUrl cu) {
+    public ArticleMetadata extract(CachedUrl cu) {
       return null;
     }
   }

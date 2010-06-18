@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -57,12 +57,12 @@ public class BioOneHtmlMetadataExtractorFactory
   public static class BioOneHtmlMetadataExtractor
     extends SimpleMetaTagMetadataExtractor {
 
-    public Metadata extract(CachedUrl cu) throws IOException {
+    public ArticleMetadata extract(CachedUrl cu) throws IOException {
       if (cu == null) {
         throw new IllegalArgumentException("extract(null)");
       }
 
-      Metadata ret = super.extract(cu);
+      ArticleMetadata ret = super.extract(cu);
 
       // extract DOI from URL
       addDOI(cu.getUrl(), ret);
@@ -101,7 +101,7 @@ public class BioOneHtmlMetadataExtractorFactory
       return ret;
     }
 
-    protected void addISSN(String line, Metadata ret) {
+    protected void addISSN(String line, ArticleMetadata ret) {
       String issnFlag = " </strong>";
       int issnBegin = StringUtil.indexOfIgnoreCase(line, issnFlag);
       if (issnBegin <= 0) {
@@ -117,7 +117,7 @@ public class BioOneHtmlMetadataExtractorFactory
       ret.putISSN(issn);
     }
 
-    protected void addVolume(String line, Metadata ret) {
+    protected void addVolume(String line, ArticleMetadata ret) {
       String volumeFlag = "volume ";
 
       int start = StringUtil.indexOfIgnoreCase(line, volumeFlag);
@@ -134,7 +134,7 @@ public class BioOneHtmlMetadataExtractorFactory
       ret.putVolume(volume);
     }
 
-    protected void addIssue(String line, Metadata ret) {
+    protected void addIssue(String line, ArticleMetadata ret) {
       String issueFlag = "issue ";
 
       int start = StringUtil.indexOfIgnoreCase(line, issueFlag);
@@ -151,7 +151,7 @@ public class BioOneHtmlMetadataExtractorFactory
       ret.putIssue(issue);
     }
 
-    protected void addFirstPage(String line, Metadata ret) {
+    protected void addFirstPage(String line, ArticleMetadata ret) {
       String fPageFlag = "g(s) ";
       int fPageBegin = StringUtil.indexOfIgnoreCase(line, fPageFlag);
       int fPageEnd = StringUtil.indexOfIgnoreCase(line, "-");
@@ -167,7 +167,7 @@ public class BioOneHtmlMetadataExtractorFactory
       ret.putStartPage(fPage);
     }
 
-    protected void addDOI(String url, Metadata ret) {
+    protected void addDOI(String url, ArticleMetadata ret) {
       // The URL is of the following form:
       // http://www.bioone.org/doi/abs/10.3377/004.044.0201      
       try {

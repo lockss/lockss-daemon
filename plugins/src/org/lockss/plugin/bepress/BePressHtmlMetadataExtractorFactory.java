@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
  */
 
 /*
@@ -73,8 +73,8 @@ public class BePressHtmlMetadataExtractorFactory
             "bepress_citation_title",
     };
 
-    public Metadata extract(CachedUrl cu) throws IOException {
-      Metadata ret = super.extract(cu);
+    public ArticleMetadata extract(CachedUrl cu) throws IOException {
+      ArticleMetadata ret = super.extract(cu);
       for (int i = 0; i < bePressField.length; i++) {
         String content = ret.getProperty(bePressField[i]);
         if (content != null) {
@@ -130,7 +130,7 @@ public class BePressHtmlMetadataExtractorFactory
       return ret;
     }
 
-    protected void addISSN(String line, Metadata ret) {
+    protected void addISSN(String line, ArticleMetadata ret) {
       String issnFlag = "ISSN: ";
       int issnBegin = StringUtil.indexOfIgnoreCase(line, issnFlag);
       if (issnBegin <= 0) {

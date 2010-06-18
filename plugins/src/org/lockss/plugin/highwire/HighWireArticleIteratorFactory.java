@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArticleIteratorFactory.java,v 1.12 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: HighWireArticleIteratorFactory.java,v 1.13 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class HighWireArticleIteratorFactory
   public static class HighWireArticleMetadataExtractor
     implements ArticleMetadataExtractor {
 
-    public Metadata extract(ArticleFiles af)
+    public ArticleMetadata extract(ArticleFiles af)
 	throws IOException, PluginException {
       CachedUrl cu = af.getRoleCu("reprintFramed");
       if (cu != null) {

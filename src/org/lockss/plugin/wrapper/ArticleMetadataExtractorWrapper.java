@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataExtractorWrapper.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ArticleMetadataExtractorWrapper.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
  */
 
 /*
@@ -50,9 +50,9 @@ public class ArticleMetadataExtractorWrapper
     return inst;
   }
 
-  public Metadata extract(ArticleFiles af)
+  public ArticleMetadata extract(ArticleFiles af)
       throws IOException, PluginException {
-    Metadata ret = null;
+    ArticleMetadata ret = null;
     try {
       ret = inst.extract(af);
     } catch (LinkageError e) {

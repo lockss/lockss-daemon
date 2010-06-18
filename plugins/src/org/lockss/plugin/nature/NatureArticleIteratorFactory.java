@@ -1,5 +1,5 @@
 /*
- * $Id: NatureArticleIteratorFactory.java,v 1.6 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: NatureArticleIteratorFactory.java,v 1.7 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class NatureArticleIteratorFactory
   public class NatureArticleMetadataExtractor
     implements ArticleMetadataExtractor {
 
-    public Metadata extract(ArticleFiles af)
+    public ArticleMetadata extract(ArticleFiles af)
 	throws IOException, PluginException {
       CachedUrl cu = af.getFullTextCu();
       if (cu != null) {

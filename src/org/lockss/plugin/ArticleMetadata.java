@@ -1,5 +1,5 @@
 /*
- * $Id: Metadata.java,v 1.14 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ArticleMetadata.java,v 1.1 2010-06-18 21:15:30 thib_gc Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.plugin.definable.*;
 /**
  * Collect and search metadata, supporting metadata-based access to content.
  */
-public class Metadata extends Properties {
+public class ArticleMetadata extends Properties {
   private static Logger log = Logger.getLogger("Metadata");
 
   public static final String PARAM_DOIMAP =
@@ -132,7 +132,7 @@ public class Metadata extends Properties {
 	CachedUrl cu = af.getFullTextCu();
 	try {
 	  if (cu.hasContent()) {
-	    Metadata md = mdExtractor.extract(af);
+	    ArticleMetadata md = mdExtractor.extract(af);
 	    if (md != null) {
 	      String doi = md.getDOI();
 	      if (doi != null) {
@@ -216,7 +216,7 @@ public class Metadata extends Properties {
 	CachedUrl cu = af.getFullTextCu();
 	try {
 	  if (cu.hasContent()) {
-	    Metadata md = mdExtractor.extract(af);
+	    ArticleMetadata md = mdExtractor.extract(af);
 	    if (md != null) {
 	      // Key for OpenURL map is
 	      // issn + "/" + volume + "/" + issue + "/" + spage
@@ -316,7 +316,7 @@ public class Metadata extends Properties {
 	String param = url.substring(doiResolvers[i].length());
 	log.debug3("doiResolver: " + url + " doi " + param);
 	String newUrl =
-	  Metadata.doiToUrl(param);
+	  ArticleMetadata.doiToUrl(param);
 	if (newUrl != null) {
 	  ret = newUrl;
 	  found = true;
@@ -357,7 +357,7 @@ public class Metadata extends Properties {
 		issue + "/" + spage;
 	      log.debug3("openUrl: " + openUrl);
 	      String newUrl =
-		Metadata.openUrlToUrl(openUrl);
+		ArticleMetadata.openUrlToUrl(openUrl);
 	      if (newUrl != null) {
 		ret = newUrl;
 		found = true;
@@ -371,10 +371,10 @@ public class Metadata extends Properties {
     return ret;
   }
 
-  public Metadata() {
+  public ArticleMetadata() {
   }
 
-  public Metadata(Properties props) {
+  public ArticleMetadata(Properties props) {
     super(props);
   }
 

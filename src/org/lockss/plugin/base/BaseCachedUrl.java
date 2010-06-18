@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.39 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.40 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -229,12 +229,12 @@ public class BaseCachedUrl implements CachedUrl {
   public class NullMetadataExtractor implements FileMetadataExtractor {
     public NullMetadataExtractor() {
     }
-    public Metadata extract(CachedUrl cu)
+    public ArticleMetadata extract(CachedUrl cu)
         throws IOException, PluginException {
       return new EmptyMetadata();
     }
   }
-  public class EmptyMetadata extends Metadata {
+  public class EmptyMetadata extends ArticleMetadata {
     private EmptyMetadata() {
     }
     public Object setProperty(String key, String value) {

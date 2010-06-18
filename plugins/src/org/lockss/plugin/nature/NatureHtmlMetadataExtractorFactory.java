@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -66,8 +66,8 @@ public class NatureHtmlMetadataExtractorFactory
       "prism.eIssn", // <meta name="prism.eIssn" content="1476-5489" />
     };
 
-    public Metadata extract(CachedUrl cu) throws IOException {
-      Metadata ret = super.extract(cu);
+    public ArticleMetadata extract(CachedUrl cu) throws IOException {
+      ArticleMetadata ret = super.extract(cu);
       for (int i = 0; i < natureField.length; i++) {
 	String content = ret.getProperty(natureField[i]);
 	if (content != null) {

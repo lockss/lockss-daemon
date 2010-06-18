@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -62,9 +62,9 @@ public class ElsevierXmlMetadataExtractorFactory
       super(tagMap);
     }
 
-    public Metadata extract(CachedUrl cu) throws IOException {
+    public ArticleMetadata extract(CachedUrl cu) throws IOException {
       try {
-	Metadata ret = super.extract(cu);
+	ArticleMetadata ret = super.extract(cu);
 	// Elsevier doesn't prefix the DOI in dc.Identifier with doi:
 	String content = ret.getProperty("dc.Identifier");
 	if (content != null) {

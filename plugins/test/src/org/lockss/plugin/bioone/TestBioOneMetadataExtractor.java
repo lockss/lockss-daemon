@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneMetadataExtractor.java,v 1.2 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: TestBioOneMetadataExtractor.java,v 1.3 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
 		 me instanceof BioOneArticleIteratorFactory.BioOneArticleMetadataExtractor);
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(cu);
-      Metadata md = me.extract(af);
+      ArticleMetadata md = me.extract(af);
       assertNotNull(md);
       checkMetadata(md);
       count++;
@@ -166,7 +166,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
                   "</BODY></HTML>";
 
   public void testExtractFromGoodContent() throws Exception {
-    Metadata md = extractFromTestContent(goodContent);
+    ArticleMetadata md = extractFromTestContent(goodContent);
     assertTrue(MetadataUtil.isDOI(md.getDOI()));
     assertEquals(goodDOI, md.getDOI());
     assertEquals(goodVolume, md.getVolume());
@@ -190,7 +190,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
                   "</BODY></HTML>";
 
   public void testExtractFromBadContent() throws Exception {
-    Metadata md = extractFromTestContent(badContent);
+    ArticleMetadata md = extractFromTestContent(badContent);
 
     assertNull(md.getVolume());
     assertNull(md.getIssue());
@@ -200,7 +200,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     assertEquals(1, md.size());
   }
 
-  private Metadata extractFromTestContent(String content) throws Exception {
+  private ArticleMetadata extractFromTestContent(String content) throws Exception {
     String url = "http://www.example.org/doi/abs/10.1640/0002-8444-99.2.61";
     MockCachedUrl cu = new MockCachedUrl(url, sau);
     cu.setContent(content);
@@ -216,7 +216,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
 	       me instanceof BioOneArticleIteratorFactory.BioOneArticleMetadataExtractor);
     ArticleFiles af = new ArticleFiles();
     af.setFullTextCu(cu);
-    Metadata md = me.extract(af);
+    ArticleMetadata md = me.extract(af);
     assertNotNull(md);
     return md;
   }
@@ -228,7 +228,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     return content;
   }
 
-  public void checkMetadata(Metadata md) {
+  public void checkMetadata(ArticleMetadata md) {
     String temp = null;
     temp = (String) md.get("lockss.filenum");
     int fileNum = -1;

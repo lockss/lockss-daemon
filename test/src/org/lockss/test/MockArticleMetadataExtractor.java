@@ -1,5 +1,5 @@
 /*
- * $Id: MockArticleMetadataExtractor.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: MockArticleMetadataExtractor.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
  */
 
 /*
@@ -39,17 +39,17 @@ import org.lockss.extractor.*;
 
 public class MockArticleMetadataExtractor implements ArticleMetadataExtractor {
 
-  private Metadata metadata = null;
+  private ArticleMetadata metadata = null;
 
   public MockArticleMetadataExtractor() {
   }
 
-  public Metadata extract(ArticleFiles af) {
+  public ArticleMetadata extract(ArticleFiles af) {
 //     CachedUrl cu = af.getFullTextCu();
     return metadata;
   }
 
-  public void setMetadataToReturn(Metadata metadata) {
+  public void setMetadataToReturn(ArticleMetadata metadata) {
     this.metadata = metadata;
   }
 

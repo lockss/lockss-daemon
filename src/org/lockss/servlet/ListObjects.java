@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.9 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.10 2010-06-18 21:15:30 thib_gc Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class ListObjects extends LockssServlet {
       CachedUrl cu = af.getFullTextCu();
       try {
         if (cu.hasContent()) {
-          Metadata md =
+          ArticleMetadata md =
 	    au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au).extract(af);
           if (md != null) {
             String doi = md.getDOI();
@@ -203,7 +203,7 @@ public class ListObjects extends LockssServlet {
       CachedUrl cu = af.getFullTextCu();
       try {
         if (cu.hasContent()) {
-          Metadata md =
+          ArticleMetadata md =
 	    au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au).extract(af);
           if (md == null) {
             wrtr.println(cu.getUrl() + "\t");

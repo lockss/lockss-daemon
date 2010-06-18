@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -52,8 +52,8 @@ public class HighWireHtmlMetadataExtractorFactory
   public static class HighWireHtmlMetadataExtractor
     extends SimpleMetaTagMetadataExtractor {
 
-    public Metadata extract(CachedUrl cu) throws IOException {
-      Metadata ret = null;
+    public ArticleMetadata extract(CachedUrl cu) throws IOException {
+      ArticleMetadata ret = null;
       try {
         if (cu != null && cu.hasContent()) {
           ret = super.extract(cu);

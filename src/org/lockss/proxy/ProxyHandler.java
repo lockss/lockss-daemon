@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.65 2009-10-22 03:14:11 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.66 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.65 2009-10-22 03:14:11 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.66 2010-06-18 21:15:31 thib_gc Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -319,7 +319,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
     // Does the URL point to a resolver rather than a
     // server?
-    String resolvedUrl = Metadata.proxyResolver(urlString);
+    String resolvedUrl = ArticleMetadata.proxyResolver(urlString);
     if (resolvedUrl != null) {
       // Yes - send a redirect
       sendRedirect(request, response, resolvedUrl);

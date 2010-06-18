@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataExtractorWrapper.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestArticleMetadataExtractorWrapper.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -87,13 +87,13 @@ public class TestArticleMetadataExtractorWrapper extends LockssTestCase {
       this.error = error;
     }
 
-    public Metadata extract(ArticleFiles af)
+    public ArticleMetadata extract(ArticleFiles af)
 	throws IOException {
       args = ListUtil.list(af);
       if (error != null) {
 	throw error;
       }
-      return new Metadata(new Properties());
+      return new ArticleMetadata(new Properties());
     }
   }
 }

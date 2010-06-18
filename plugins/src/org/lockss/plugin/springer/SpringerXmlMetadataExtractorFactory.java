@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
  */
 
 /*
@@ -55,12 +55,12 @@ public class SpringerXmlMetadataExtractorFactory
     new HashMap<String, String>();
   static {
     tagMap.put("articledoi", "dc.Identifier");
-    tagMap.put("JournalPrintISSN", Metadata.KEY_ISSN);
+    tagMap.put("JournalPrintISSN", ArticleMetadata.KEY_ISSN);
     tagMap.put("VolumeIDStart", VOLUME_START);
     tagMap.put("VolumeIDEnd", VOLUME_END);
     tagMap.put("IssueIDStart", ISSUE_START);
     tagMap.put("IssueIDEnd", ISSUE_END);
-    tagMap.put("ArticleFirstPage", Metadata.KEY_START_PAGE);
+    tagMap.put("ArticleFirstPage", ArticleMetadata.KEY_START_PAGE);
   };
 
 
@@ -71,8 +71,8 @@ public class SpringerXmlMetadataExtractorFactory
       super(tagMap);
     }
 
-    public Metadata extract(CachedUrl xmlCu) throws IOException {
-      Metadata ret = super.extract(xmlCu);
+    public ArticleMetadata extract(CachedUrl xmlCu) throws IOException {
+      ArticleMetadata ret = super.extract(xmlCu);
       // Springer doesn't prefix the DOI in dc.Identifier with doi:
       String doi = ret.getProperty("dc.Identifier");
       if (doi != null) {
