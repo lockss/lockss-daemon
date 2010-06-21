@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.13 2010-02-23 04:26:01 pgust Exp $
+ * $Id: PlatformUtil.java,v 1.14 2010-06-21 23:43:38 pgust Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class PlatformUtil {
       if ("openbsd".equalsIgnoreCase(os)) {
 	instance = new OpenBSD();
       }
-      if ("mac os".equalsIgnoreCase(os)) {
+      if ("mac os x".equalsIgnoreCase(os)) {
 	instance = new MacOS();
       }
       if (SystemUtils.IS_OS_WINDOWS) {
