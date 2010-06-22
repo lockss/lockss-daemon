@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkExtractor.java,v 1.1 2010-05-27 07:00:47 tlipkis Exp $
+ * $Id: RegexpCssLinkExtractor.java,v 1.2 2010-06-22 08:59:32 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
 
   // Adapted from Heritrix's ExtractorCSS
   private static final String CSS_URI_EXTRACTOR =    
-    "(?i)(?:@import (?:url[(]|)|url[(])\\s*([\\\"\']?)" + // G1
+    "(?i)(?:@import\\s+(?:url[(]|)|url[(])\\s*([\\\"\']?)" + // G1
     "(.{0," + MAX_URL_LENGTH + "}?)\\1\\s*[);]"; // G2
     // GROUPS:
     // (G1) optional ' or "
@@ -88,10 +88,7 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
       while ((line = StringUtil.readLineWithContinuation(rdr)) != null) {
 	Matcher m1 = CSS_URL_PAT.matcher(line);
 	while (m1.find()) {
-	  String url = m1.group(2);
-	  // Remove backslashes when used as escape character in CSS URL
-	  Matcher m2 = CSS_BACKSLASH_PAT.matcher(url);
-	  url = m2.replaceAll("$1");
+	  String url = processUrlEscapes(m1.group(2));
 	  if (!StringUtil.isNullString(url)) {
 	    try {
 	      String resolved = UrlUtil.resolveUri(baseUrl, url);
@@ -111,6 +108,13 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
     }
   }
   
+  // Remove backslashes when used as escape character in CSS URL
+  // Should probably also process hex URL encodings
+  String processUrlEscapes(String url) {
+    Matcher m2 = CSS_BACKSLASH_PAT.matcher(url);
+    return m2.replaceAll("$1");
+  }
+
   public static class Factory implements LinkExtractorFactory {
     public LinkExtractor createLinkExtractor(String mimeType) {
       return new RegexpCssLinkExtractor();

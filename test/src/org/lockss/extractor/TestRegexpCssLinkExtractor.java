@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpCssLinkExtractor.java,v 1.1 2010-05-27 07:00:47 tlipkis Exp $
+ * $Id: TestRegexpCssLinkExtractor.java,v 1.2 2010-06-22 08:59:32 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    cssExtractor = (RegexpCssLinkExtractor)cssExtractor;
+    cssExtractor = (RegexpCssLinkExtractor)extractor;
   }
 
   public String getMimeType() {
@@ -57,18 +57,36 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
     return new RegexpCssLinkExtractor.Factory();
   }
 
+  public void testBackslashEscapePattern() throws Exception {
+    assertEquals("foo", cssExtractor.processUrlEscapes("foo"));
+    assertEquals("f,oo", cssExtractor.processUrlEscapes("f,oo"));
+    assertEquals("f,oo", cssExtractor.processUrlEscapes("f\\,oo"));
+    assertEquals("f,o'o\"b(a r)",
+		 cssExtractor.processUrlEscapes("f\\,o\\'o\\\"b\\(a\\ r\\)"));
+  }
+
   public void testAbsoluteUrl() throws Exception {
     String url = "http://not.example.com/stylesheet.css";
     
     // Normal @import syntax
     doTestOneUrl("@import url(\'", url, "\');", url);
     doTestOneUrl("@import url(\"", url, "\");", url);
+    doTestOneUrl("@import url( \'", url, "\');", url);
+    doTestOneUrl("@import  url(\"", url, "\");", url);
+    doTestOneUrl("@import\turl(\"", url, "\");", url);
+    doTestOneUrl("@import \turl(\"", url, "\");", url);
+    doTestOneUrl("@import  url(\'", url, "\');", url);
     // Simplified @import syntax
     doTestOneUrl("@import \'", url, "\';", url);
     doTestOneUrl("@import \"", url, "\";", url);
     // Property
     doTestOneUrl("bar { foo: url(\'", url, "\'); }", url);
     doTestOneUrl("bar { foo: url(\"", url, "\"); }", url);
+
+//     // newlines
+//     doTestOneUrl("@import\nurl(\'", url, "\');", url);
+//     doTestOneUrl("@import url(\n\'", url, "\');", url);
+//     doTestOneUrl("@import \n url(\n\'", url, "\'\n);", url);
   }
   
   public void testHandlesInputWithNoUrls() throws Exception {
@@ -114,6 +132,8 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
     String url1 = "foo1.css";
     String url2 = "foo2.css";
     String url3 = "foo3.css";
+    String url3a = "foo3.c\\(ss";
+    String url3b = "foo3.c(ss";
     String url4 = "foo4.css";
     String url5 = "img5.gif";
     String url6 = "img6.gif";
@@ -124,6 +144,7 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
       "@import url(\'" + url1 + "\');\n" +
       "@import url(  \"" + url2 + "\"  );\n" +
       "@import \'" + url3 + "\';\n" +
+      "@import \'" + url3a + "\';\n" +
       "@import \"" + givenPrefix + url4 + "\";\n" +
       "foo {\n" +
       " bar: url(\'" + givenPrefix + url5 + "\');\n" +
@@ -136,6 +157,7 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
                              expectedPrefix + url1,
                              expectedPrefix + url2,
                              expectedPrefix + url3,
+                             expectedPrefix + url3b,
                              givenPrefix + url4,
                              givenPrefix + url5,
                              givenPrefix + url6,
