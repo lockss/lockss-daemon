@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ArticleFiles.java,v 1.2 2010-06-22 08:59:59 tlipkis Exp $
  */
 
 /*
@@ -36,13 +36,24 @@ import java.util.*;
 
 
 /**
- * Describes the files comprising one article in an AU.
+ * Describes the files comprising one <i>article</i> in an AU, or a subset
+ * of those files.  An <i>article</i> is defined as the smallest object
+ * that has metadata.
  */
 public class ArticleFiles {
 
+  /** Role for CU that holds metadata */
+  public static final String ROLE_ARTICLE_METADATA = "ArticleMetadata";
+  /** Role for CU that holds metadata for larger entity such as issue */
+  public static final String ROLE_ISSUE_METADATA = "IssueMetadata";
+  /** Role for handle (name, index, etc.) to article metadata within issue
+   * metadata file */
+  public static final String ROLE_ARTICLE_HANDLE = "ArticleHandle";
+
   protected CachedUrl fullTextCu;
 
-  protected Map<String,CachedUrl> roleCus = new HashMap<String,CachedUrl>();
+//   protected Map<String,CachedUrl> roleCus = new HashMap<String,CachedUrl>();
+  protected Map<String,Object> roles = new HashMap<String,Object>();
 
   /** Set the primary full text URL
    * @param cu the CachedUrl for the primary full text file
@@ -70,19 +81,49 @@ public class ArticleFiles {
     return cu.getUrl();
   }
 
-  /** Set the URL associated with an article role
+  /** Set the CachedUrl associated with an article role
    * @param key the name of the role
    * @param cu the CachedUrl for the file filling that role
    */
   public void setRoleCu(String key, CachedUrl cu) {
-    roleCus.put(key, cu);
+    roles.put(key, cu);
   }
 
   /** Get the CU associated with the role
    * @param key the name of the role
    */
   public CachedUrl getRoleCu(String key) {
-    return roleCus.get(key);
+    return (CachedUrl)roles.get(key);
+  }
+
+  /** Set the String associated with an article role
+   * @param key the name of the role
+   * @param str the String filling that role
+   */
+  public void setRoleString(String key, String str) {
+    roles.put(key, str);
+  }
+
+  /** Get the String associated with the role
+   * @param key the name of the role
+   */
+  public String getRoleString(String key) {
+    return (String)roles.get(key);
+  }
+
+  /** Set the Object associated with an article role
+   * @param key the name of the role
+   * @param obj the Object to associate with the role
+   */
+  public void setRole(String key, Object obj) {
+    roles.put(key, obj);
+  }
+
+  /** Get the Object associated with the role
+   * @param key the name of the role
+   */
+  public Object getRole(String key) {
+    return roles.get(key);
   }
 
   /** Get the URL associated with the role
@@ -92,17 +133,12 @@ public class ArticleFiles {
     return urlOrNull(getRoleCu(key));
   }
 
-  /** Return the role map; used by equals() */
-  Map<String,CachedUrl> getRoleCuMap() {
-    return roleCus;
-  }
-
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[af: ft=");
     sb.append(getFullTextCu());
     sb.append(" map=");
-    sb.append(roleCus);
+    sb.append(roles);
     sb.append("]");
     return sb.toString();
   }
