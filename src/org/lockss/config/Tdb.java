@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.8 2010-06-15 15:03:21 pgust Exp $
+ * $Id: Tdb.java,v 1.9 2010-06-22 23:44:44 pgust Exp $
  */
 
 /*
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.config;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -50,7 +49,7 @@ import org.lockss.util.Logger;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.8 2010-06-15 15:03:21 pgust Exp $
+ * @version $Id: Tdb.java,v 1.9 2010-06-22 23:44:44 pgust Exp $
  */
 public class Tdb {
   /**
@@ -64,8 +63,9 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.8 2010-06-15 15:03:21 pgust Exp $
+   * @version $Id: Tdb.java,v 1.9 2010-06-22 23:44:44 pgust Exp $
    */
+  @SuppressWarnings("serial")
   static public class TdbException extends Exception {
     /**
      * Constructs a new exception with the specified detail message.  The
@@ -194,20 +194,21 @@ public class Tdb {
     }
 
     // make sure publisher is not a duplicate
-    String publisherName = publisher.getName();
-    TdbPublisher oldPublisher = tdbPublisherMap.get(publisherName);
+    String pubName = publisher.getName();
+    TdbPublisher oldPublisher = tdbPublisherMap.put(pubName, publisher);
     if ((oldPublisher != null) && (oldPublisher != publisher)) {
-      throw new TdbException("New au publisher with duplicate name: " + publisherName);
+      // restore old publisher and report error
+      tdbPublisherMap.put(pubName, oldPublisher);
+      throw new TdbException("New au publisher with duplicate name: " + pubName);
     }
    
     // register the au with this instance
     if (!addTdbAuForPlugin(au)) {
-      throw new TdbException("Cannot register au");
-    }
-    
-    // if that was successful, OK to add new publisher to publisher map
-    if (oldPublisher == null) {
-      tdbPublisherMap.put(publisherName, publisher);
+      // remove new publisher and report error 
+      if (oldPublisher == null) {
+        tdbPublisherMap.remove(pubName);
+      }
+      throw new TdbException("Cannot register au " + au.getName());
     }
   }
   
@@ -258,7 +259,7 @@ public class Tdb {
       // they will not be modified now that the Tdb is sealed.
       synchronized(pluginIdTdbAusMap) {
         for (Map.Entry<String, Collection<TdbAu>> entry : pluginIdTdbAusMap.entrySet()) {
-          ArrayList<TdbAu> list = new ArrayList(entry.getValue());
+          ArrayList<TdbAu> list = new ArrayList<TdbAu>(entry.getValue());
           list.trimToSize();
           entry.setValue(list);
         }
@@ -297,7 +298,7 @@ public class Tdb {
       return pluginIdTdbAusMap.keySet();
     }
     if (otherTdb == this) {
-      return Collections.EMPTY_SET;
+      return Collections.emptySet();
     }
     
     Set<String> pluginIds = new HashSet<String>();
@@ -351,7 +352,7 @@ public class Tdb {
       try {
         // if no exception thrown, there are no differences
         // because the method did not try to modify the set
-        addPluginIdsForDifferences(Collections.EMPTY_SET, (Tdb)o);
+        addPluginIdsForDifferences(Collections.<String>emptySet(), (Tdb)o);
         return true;
       } catch (UnsupportedOperationException ex) {
         // differences because method tried to add to unmodifiable set
@@ -374,7 +375,7 @@ public class Tdb {
   }
   
   /**
-   * Merge another Tdb into this one. Makes copies of otherTdb's non-duplicate 
+   * Merge other Tdb into this one. Makes copies of otherTdb's non-duplicate 
    * TdbPublisher, TdbTitle, and TdbAu objects and their non-duplicate children.
    * The object themselves are not merged.
    * 
@@ -390,61 +391,83 @@ public class Tdb {
     if (isSealed()) {
       throw new TdbException("Cannot add otherTdb AUs to sealed Tdb");
     }
-    
+
     // merge non-duplicate publishers of otherTdb
+    boolean tdbIsNew = tdbPublisherMap.isEmpty();
     for (TdbPublisher otherPublisher : otherTdb.getAllTdbPublishers().values()) {
       String pubName = otherPublisher.getName();
-      TdbPublisher thisPublisher = tdbPublisherMap.get(pubName);
-      if (thisPublisher == null) {
-        // copy publisher if not present in this Tdb
+      TdbPublisher thisPublisher;
+      boolean publisherIsNew = true;
+      if (tdbIsNew) {
+        // no need to check for existing publisher if TDB is new
         thisPublisher = new TdbPublisher(pubName);
         tdbPublisherMap.put(pubName, thisPublisher);
+      } else {
+        thisPublisher = tdbPublisherMap.get(pubName);
+        publisherIsNew = (thisPublisher == null);
+        if (publisherIsNew) {
+          // copy publisher if not present in this Tdb
+          thisPublisher = new TdbPublisher(pubName);
+          tdbPublisherMap.put(pubName, thisPublisher);
+        }
       }
       
       // merge non-duplicate titles of otherPublisher into thisPublisher
       for (TdbTitle otherTitle : otherPublisher.getTdbTitles()) {
         String otherId = otherTitle.getId();
-        TdbTitle thisTitle = thisPublisher.getTdbTitleById(otherId);
-        if (thisTitle == null) {
-          // copy title if not present in this publisher
+        TdbTitle thisTitle;
+        boolean titleIsNew = true;
+        if (publisherIsNew) {
+          // no need to check for existing title if publisher is new
           thisTitle = otherTitle.copyForTdbPublisher(thisPublisher);
-        } else if (! thisTitle.getName().equals(otherTitle.getName())) {
-          // error because it could lead to a missing title -- one probably has a typo
-          // (what about checking other title elements too?)
-          logger.error("Ignorning duplicate title entry: \"" + otherTitle.getName() 
-                       + "\" with the same ID as \"" + thisTitle.getName() + "\"");
+          thisPublisher.addTdbTitle(thisTitle);
+        } else {
+          thisTitle = thisPublisher.getTdbTitleById(otherId);
+          titleIsNew = (thisTitle == null);
+          if (titleIsNew) {
+            // copy title if not present in this publisher
+            thisTitle = otherTitle.copyForTdbPublisher(thisPublisher);
+            thisPublisher.addTdbTitle(thisTitle);
+          } else if (! thisTitle.getName().equals(otherTitle.getName())) {
+            // error because it could lead to a missing title -- one probably has a typo
+            // (what about checking other title elements too?)
+            logger.error("Ignorning duplicate title entry: \"" + otherTitle.getName() 
+                         + "\" with the same ID as \"" + thisTitle.getName() + "\"");
+          }
         }
-        
-
         
         // merge non-duplicate TdbAus of otherTitle into thisTitle
         for (TdbAu otherAu : otherTitle.getTdbAus()) {
-          TdbAu thisAu = findExistingTdbAu(otherAu);
-          if (thisAu == null) {
-            thisAu = otherAu.copyForTdbTitle(thisTitle);
+          // no need to check for existing au if title is new
+          String pluginId = otherAu.getPluginId();
+          if (titleIsNew || !getTdbAus(pluginId).contains(otherAu)) {
             // always succeeds we've already checked for duplicate
+            TdbAu thisAu = otherAu.copyForTdbTitle(thisTitle);            
             addTdbAuForPlugin(thisAu);
-          } else if (!thisAu.getTdbTitle().getName().equals(otherAu.getTdbTitle().getName())) {
-            if (!thisAu.getName().equals(otherAu.getName())) {
-              logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
-                           + "\" for title \"" + otherAu.getTdbTitle().getName() 
-                           + "\" with same definion as existing au entry: \"" 
-                           + thisAu.getName() + "\" for title \"" 
-                           + thisAu.getTdbTitle().getName() + "\"");
-            } else {
-              logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
-                           + "\" for title \"" + otherAu.getTdbTitle().getName() 
-                           + "\" with same definion as existing one for title \""
-                           + thisAu.getTdbTitle().getName() + "\"");
-            }
-          } else if (!thisAu.getName().equals(otherAu.getName())) {
-            // error because it could lead to a missing AU -- one probably has a typo
-            logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
-                         + "\" with the same definition as \"" + thisAu.getName() 
-                         + "\" for title \"" + otherAu.getTdbTitle().getName());
           } else {
-            logger.warning("Ignoring duplicate au entry: \"" + otherAu.getName() 
+            TdbAu thisAu = findExistingTdbAu(otherAu);
+            if (!thisAu.getTdbTitle().getName().equals(otherAu.getTdbTitle().getName())) {
+              if (!thisAu.getName().equals(otherAu.getName())) {
+                logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
+                             + "\" for title \"" + otherAu.getTdbTitle().getName()
+                             + "\" with same definion as existing au entry: \"" 
+                             + thisAu.getName() + "\" for title \"" 
+                             + thisAu.getTdbTitle().getName() + "\"");
+              } else {
+                logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
+                             + "\" for title \"" + otherAu.getTdbTitle().getName() 
+                             + "\" with same definion as existing one for title \""
+                             + thisAu.getTdbTitle().getName() + "\"");
+              }
+            } else if (!thisAu.getName().equals(otherAu.getName())) {
+              // error because it could lead to a missing AU -- one probably has a typo
+              logger.error("Ignorning duplicate au entry: \"" + otherAu.getName() 
+                           + "\" with the same definition as \"" + thisAu.getName() 
                            + "\" for title \"" + otherAu.getTdbTitle().getName());
+            } else {
+              logger.warning("Ignoring duplicate au entry: \"" + otherAu.getName() 
+                             + "\" for title \"" + otherAu.getTdbTitle().getName());
+            }
           }
         }
       }
@@ -458,7 +481,8 @@ public class Tdb {
    */
   protected TdbAu findExistingTdbAu(TdbAu otherAu) {
     // check for duplicate AU with same plugin for this Tdb
-    for (TdbAu au : getTdbAus(otherAu.getPluginId())) {
+    Collection<TdbAu> aus = getTdbAus(otherAu.getPluginId());
+    for (TdbAu au : aus) {
       if (au.equals(otherAu)) {
         return au;
       }
@@ -477,7 +501,7 @@ public class Tdb {
    */
   public Collection<TdbAu> getTdbAus(String pluginId) {
     Collection<TdbAu> aus = pluginIdTdbAusMap.get(pluginId);
-    return (aus != null) ? aus : Collections.EMPTY_LIST;
+    return (aus != null) ? aus : Collections.<TdbAu>emptyList();
   }
   
   /**
@@ -488,7 +512,7 @@ public class Tdb {
    * @return the TdbAus for all plugin IDs
    */
   public Map<String, Collection<TdbAu>> getAllTdbAus() {
-    return (pluginIdTdbAusMap != null) ? pluginIdTdbAusMap : Collections.EMPTY_MAP; 
+    return (pluginIdTdbAusMap != null) ? pluginIdTdbAusMap : Collections.<String,Collection<TdbAu>>emptyMap(); 
   }
   
   /**
@@ -670,10 +694,6 @@ public class Tdb {
    * @throws TdbException if the AU already exists in this Tdb
    */
   private void addTdbAu(Properties props, TdbAu au) throws TdbException {
-    if (au.getPluginId() == null) {
-      throw new IllegalArgumentException("TdbAu plugin ID cannot be null");
-    }
-
     // add au for plugin assuming it is not a duplicate
     if (!addTdbAuForPlugin(au)) {
       // au already registered -- report existing au
@@ -808,7 +828,8 @@ public class Tdb {
     if (titleId == null) {
       // generate a titleId if one not specified, using the
       // hash code of the combined title name and publisher names
-      titleId = "titleId:" + (titleNameFromProps + publisherNameFromProps).hashCode();
+      int hash = (titleNameFromProps + publisherNameFromProps).hashCode();
+      titleId = (hash < 0) ? ("id:1" +(-hash)) : ("id:0" + hash);
     }
     
     // get publisher specified by property name
@@ -932,7 +953,7 @@ public class Tdb {
     }
     Collection<String> titleIds = title.getLinkedTdbTitleIdsForType(linkType);
     if (titleIds.isEmpty()) {
-      return Collections.EMPTY_LIST;
+      return Collections.emptyList();
     }
     ArrayList<TdbTitle> titles = new ArrayList<TdbTitle>();
     for (String titleId : titleIds) {
@@ -977,7 +998,7 @@ public class Tdb {
   public Collection<TdbTitle> getTdbTitlesByName(String titleName)
   {
     if (titleName == null) {
-      return Collections.EMPTY_LIST;
+      return Collections.emptyList();
     }
     
     ArrayList<TdbTitle> titles = new ArrayList<TdbTitle>();
@@ -1006,6 +1027,6 @@ public class Tdb {
    * @return a map of publisher names to publishers
    */
   public Map<String, TdbPublisher> getAllTdbPublishers() {
-    return (tdbPublisherMap != null) ? tdbPublisherMap : Collections.EMPTY_MAP;
+    return (tdbPublisherMap != null) ? tdbPublisherMap : Collections.<String,TdbPublisher>emptyMap();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.4 2010-06-14 11:32:24 pgust Exp $
+ * $Id: TdbAu.java,v 1.5 2010-06-22 23:44:44 pgust Exp $
  */
 
 /*
@@ -118,13 +118,6 @@ public class TdbAu {
         return true;
       }
       TdbAu.Id auId = (TdbAu.Id)obj;
-      if ((au.getPluginId() == null) && (auId.au.getPluginId() == null)) {
-        // compare names only if neither pluginIDs not set
-        return au.getName().equals(auId.au.getName());
-      } else if ((au.getPluginId() == null) || (auId.au.getPluginId() == null)) {
-        // not equal if one but not both pluginIDs not set
-        return false;
-      }
       return (   au.getPluginId().equals(auId.au.getPluginId())
               && au.getParams().equals(auId.au.getParams()));
     }
@@ -140,7 +133,8 @@ public class TdbAu {
      */
     public int hashCode() {
       if (hash == 0) {
-        hash = au.getPluginId().hashCode() ^ au.getParams().hashCode();
+        hash = au.getParams().hashCode();;
+//        hash = au.getPluginId().hashCode() + au.getParams().hashCode();
       } 
       return hash;
     }
@@ -181,7 +175,7 @@ public class TdbAu {
       params = new HashMap<String,String>();
     }
   }
-  
+
   /**
    * Determines two TdbsAus are equal. Equality is based on 
    * equality of their Ids.  The parent hierarchy is not checked.
@@ -286,7 +280,7 @@ public class TdbAu {
    */
   public Map<String,String> getProperties()
   {
-    return (props != null) ? props : Collections.EMPTY_MAP;
+    return (props != null) ? props : Collections.<String,String>emptyMap();
   }
   
   /**
@@ -392,7 +386,7 @@ public class TdbAu {
    * @return the attrs for this instance
    */
   public Map<String, String> getAttrs() {
-    return (attrs != null) ? attrs : Collections.EMPTY_MAP;
+    return (attrs != null) ? attrs : Collections.<String,String>emptyMap();
   }
   
   /**
