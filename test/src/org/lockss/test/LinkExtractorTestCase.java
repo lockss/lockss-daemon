@@ -1,5 +1,5 @@
 /*
- * $Id: LinkExtractorTestCase.java,v 1.2 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: LinkExtractorTestCase.java,v 1.3 2010-06-22 09:01:59 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public abstract class LinkExtractorTestCase extends LockssTestCase {
 
   protected Collection extractUrls(String source)
       throws IOException, PluginException {
+    cb.reset();
     return extractUrls(source, cb);
   }
 
@@ -139,6 +140,10 @@ public abstract class LinkExtractorTestCase extends LockssTestCase {
 
     public Collection getFoundUrls() {
       return foundUrls;
+    }
+
+    public void reset() {
+      foundUrls = new HashSet();
     }
   }
 }
