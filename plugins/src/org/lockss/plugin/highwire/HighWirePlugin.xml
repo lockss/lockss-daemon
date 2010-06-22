@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>46</string>
+    <string>48</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -119,5 +119,9 @@
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:HighWire</string>
+  </entry>
+  <entry>
+    <string>plugin_default_article_mime_type</string>
+    <string>text/html</string>
   </entry>
 </map>

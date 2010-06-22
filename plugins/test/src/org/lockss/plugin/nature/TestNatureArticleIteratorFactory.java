@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureArticleIteratorFactory.java,v 1.1 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: TestNatureArticleIteratorFactory.java,v 1.2 2010-06-22 01:00:17 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.nature;
 import java.io.*;
 import java.util.*;
 
+import org.lockss.state.NodeManager;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -84,10 +85,12 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
     conf.put("base_url", BASE_URL);
-    conf.put("depth", "2");
-    conf.put("branch", "2");
+    conf.put("depth", "1");
+    conf.put("branch", "4");
     conf.put("numFiles", "7");
-    conf.put("fileTypes", "" + SimulatedContentGenerator.FILE_TYPE_HTML);
+    conf.put("fileTypes",
+             "" + (  SimulatedContentGenerator.FILE_TYPE_HTML
+                   | SimulatedContentGenerator.FILE_TYPE_PDF));
     conf.put("binFileSize", ""+fileSize);
     return conf;
   }
@@ -96,45 +99,78 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
     conf.put("journal_id", "aps");
-    conf.put("volume_name", "2");
+    conf.put("volume_name", "123");
     conf.put("year", "2008");
     return conf;
   }
 
-  public void testArticleCountAndType(String articleMimeType,
-				      boolean isDefaultTarget,
-				      int expCount)
-      throws Exception {
+  public void testArticleCountAndType() throws Exception {
+    int expCount = 28;
     PluginTestUtil.crawlSimAu(sau);
-    String pat = "branch(\\d+)/branch(\\d+)/(\\d+file\\.html)";
-    String rep = "aps/journal/v$1/n$2/full/$3";
-    PluginTestUtil.copyAu(sau, nau, null, pat, rep);
+    String pat1 = "branch(\\d+)/(\\d+file\\.html)";
+    String rep1 = "aps/journal/v123/n$1/full/$2";
+    PluginTestUtil.copyAu(sau, nau, ".*[^.][^p][^d][^f]$", pat1, rep1);
+    String pat2 = "branch(\\d+)/(\\d+file\\.pdf)";
+    String rep2 = "aps/journal/v123/n$1/pdf/$2";
+    PluginTestUtil.copyAu(sau, nau, ".*\\.pdf$", pat2, rep2);
+    
+    // Remove some URLs
+    int deleted = 0; 
+    for (Iterator it = nau.getAuCachedUrlSet().contentHashIterator() ; it.hasNext() ; ) {
+      CachedUrlSetNode cusn = (CachedUrlSetNode)it.next();
+      if (cusn instanceof CachedUrl) {
+        CachedUrl cu = (CachedUrl)cusn;
+        String url = cu.getUrl();
+        if (url.contains("/journal/") && (url.endsWith("1file.html") || url.endsWith("2file.pdf"))) {
+          deleteBlock(cu);
+          ++deleted;
+        }
+      }
+    }
+    assertEquals(8, deleted);
 
-    Iterator<ArticleFiles> it =
-      isDefaultTarget
-      ? nau.getArticleIterator()
-      : nau.getArticleIterator(new MetadataTarget().setFormat(articleMimeType));
+    Iterator<ArticleFiles> it = nau.getArticleIterator();
     int count = 0;
+    int countHtmlOnly = 0;
+    int countPdfOnly = 0;
     while (it.hasNext()) {
       ArticleFiles af = it.next();
+      log.info(af.toString());
       CachedUrl cu = af.getFullTextCu();
+      String url = cu.getUrl();
       assertNotNull(cu);
       String contentType = cu.getContentType();
-      assertTrue(contentType,
-		 contentType.toLowerCase().startsWith(articleMimeType));
-      log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
+      log.debug("count " + count + " url " + url + " " + contentType);
       count++;
+      if (af.getRoleUrl(NatureArticleIteratorFactory.ARTICLE_FILES_KEY_PDF) == null) {
+        ++countHtmlOnly;
+      }
+      if (cu == af.getRoleCu(NatureArticleIteratorFactory.ARTICLE_FILES_KEY_PDF)) {
+        ++countPdfOnly;
+      }
     }
     log.debug("Article count is " + count);
     assertEquals(expCount, count);
+    assertEquals(4, countHtmlOnly);
+    assertEquals(4, countPdfOnly);
   }
 
-  public void testArticleCountAndDefaultType() throws Exception {
-    testArticleCountAndType("text/html", true, 14);
+//  public void testArticleCountAndDefaultType() throws Exception {
+//    testArticleCountAndType("text/html", true, 24);
+//  }
+//
+//  public void testArticleCountAndPdf() throws Exception {
+//    testArticleCountAndType("application/pdf", false, 0);
+//  }
+
+  private void deleteBlock(CachedUrl cu) throws IOException {
+    log.info("deleting " + cu.getUrl());
+    CachedUrlSetSpec cuss = new SingleNodeCachedUrlSetSpec(cu.getUrl());
+    ArchivalUnit au = cu.getArchivalUnit();
+    CachedUrlSet cus = au.makeCachedUrlSet(cuss);
+    NodeManager nm = au.getPlugin().getDaemon().getNodeManager(au);
+    nm.deleteNode(cus);
   }
 
-  public void testArticleCountAndPdf() throws Exception {
-    testArticleCountAndType("application/pdf", false, 0);
-  }
-
+  
 }

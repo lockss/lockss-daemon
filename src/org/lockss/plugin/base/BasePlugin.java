@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.68 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.69 2010-06-22 01:00:18 thib_gc Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public abstract class BasePlugin
     implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
 
-  public static final String DEFAULT_ARTICLE_MIME_TYPE = "text/html";
+  public static final String DEFAULT_ARTICLE_MIME_TYPE = null;
 
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";

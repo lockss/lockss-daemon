@@ -1,5 +1,5 @@
 /*
- * $Id: NatureArticleIteratorFactory.java,v 1.7 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: NatureArticleIteratorFactory.java,v 1.8 2010-06-22 01:00:17 thib_gc Exp $
  */
 
 /*
@@ -45,25 +45,63 @@ import org.lockss.daemon.PluginException;
 public class NatureArticleIteratorFactory
   implements ArticleIteratorFactory,
 	     ArticleMetadataExtractorFactory {
+  
+  protected static final String ARTICLE_FILES_KEY_PDF = "full-text PDF";
+
   static Logger log = Logger.getLogger("NatureArticleIteratorFactory");
 
+  protected static Pattern patHtml = Pattern.compile("/full/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
+  protected static Pattern patPdf = Pattern.compile("/pdf/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
+  
   /*
    * The Nature URL structure means that the HTML for an article is
    * at a URL like http://www.nature.com/gt/journal/v16/n5/full/gt200929a.html
    * ie <base_url>/<journal_id>/journal/v<volume> is the subtree we want.
    */
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
+  public Iterator<ArticleFiles> createArticleIterator(final ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
-    String rootPat = "\"%s%s/journal/v%s\", base_url, journal_id, volume_name";
-    Pattern pat = Pattern.compile("journal/v[^/]+/n[^/]+/full/",
-				  Pattern.CASE_INSENSITIVE);
+    String rootTpl = "\"%s%s/journal/v%s/\", base_url, journal_id, volume_name";
+    String patTpl = "\"^%s%s/journal/v[^/]+/n[^/]+/(full|pdf)/[^/]+\\.(html|pdf)$\", base_url, journal_id, volume_name";
     
     return new SubTreeArticleIterator(au,
 				      new SubTreeArticleIterator.Spec()
 				      .setTarget(target)
-				      .setRootTemplate(rootPat)
-				      .setPattern(pat));
+				      .setRootTemplate(rootTpl)
+				      .setPatternTemplate(patTpl)) {
+      @Override
+      protected ArticleFiles createArticleFiles(CachedUrl cu) {
+        String url = cu.getUrl();
+        ArticleFiles af;
+        Matcher mat = null;
+        
+        mat = patHtml.matcher(url);
+        if (mat.find()) {
+          af = new ArticleFiles();
+          af.setFullTextCu(cu);
+          CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/pdf/$1.pdf"));
+          if (pdfCu != null && pdfCu.hasContent()) {
+            af.setRoleCu(ARTICLE_FILES_KEY_PDF, pdfCu);
+          }
+          return af;
+        }
+
+        mat = patPdf.matcher(url);
+        if (mat.find()) {
+          CachedUrl htmlCu = au.makeCachedUrl(mat.replaceFirst("/full/$1.html"));
+          if (htmlCu != null && htmlCu.hasContent()) {
+            return null;
+          }
+          af = new ArticleFiles();
+          af.setFullTextCu(cu);
+          af.setRoleCu(ARTICLE_FILES_KEY_PDF, cu);
+          return af;
+        }
+        
+        log.siteWarning("Mismatch between path and extension: " + url);
+        return null;
+      }
+    };
   }
 
   public ArticleMetadataExtractor

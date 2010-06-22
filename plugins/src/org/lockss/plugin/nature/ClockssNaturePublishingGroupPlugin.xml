@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>18</string>
+    <string>19</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -22,10 +22,6 @@
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.nature.NatureArticleIteratorFactory</string>
-  </entry>
-  <entry>
-    <string>plugin_default_article_mime_type</string>
-    <string>text/html</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>

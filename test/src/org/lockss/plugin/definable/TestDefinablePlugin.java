@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.33 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.34 2010-06-22 01:00:18 thib_gc Exp $
  */
 
 /*
@@ -255,7 +255,7 @@ public class TestDefinablePlugin extends LockssTestCase {
   }
 
   public void testGetDefaultArticleMimeType() throws Exception {
-    assertEquals("text/html", definablePlugin.getDefaultArticleMimeType());
+    assertEquals(null, definablePlugin.getDefaultArticleMimeType());
     String expectedReturn = "mime/type";
     defMap.putString(DefinablePlugin.KEY_DEFAULT_ARTICLE_MIME_TYPE,
 		     expectedReturn);
