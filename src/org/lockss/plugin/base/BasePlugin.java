@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.69 2010-06-22 01:00:18 thib_gc Exp $
+ * $Id: BasePlugin.java,v 1.70 2010-06-22 09:00:47 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,6 @@ import org.lockss.extractor.*;
 public abstract class BasePlugin
     implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
-
-  public static final String DEFAULT_ARTICLE_MIME_TYPE = null;
 
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";
@@ -618,16 +616,16 @@ public abstract class BasePlugin
    * @param au the AU in question
    * @return A FileMetadataExtractor or null
    */
-    public FileMetadataExtractor
-      getFileMetadataExtractor(String contentType, ArchivalUnit au) {
+  public FileMetadataExtractor
+    getFileMetadataExtractor(String contentType, ArchivalUnit au) {
     if (contentType == null) {
       return null;
     }
     MimeTypeInfo mti = getMimeTypeInfo(contentType);
     if (mti == null) {
       if (log.isDebug3())
-	  log.debug3("No mimeTypeInfo for " +
-		     (contentType== null ? "null" : contentType));
+	log.debug3("No mimeTypeInfo for " +
+		   (contentType== null ? "null" : contentType));
       return null;
     }
     FileMetadataExtractorFactory fact = mti.getFileMetadataExtractorFactory();
@@ -639,11 +637,12 @@ public abstract class BasePlugin
       }
     }
     return null;
-}
+  }
 
+  /** Returns null - plugins do not have a default article mime type unless
+   * they explicitly declare one */
   public String getDefaultArticleMimeType() {
-    log.debug3("getDefaultArticleMimeType: " + DEFAULT_ARTICLE_MIME_TYPE);
-    return DEFAULT_ARTICLE_MIME_TYPE;
+    return null;
   }
 
   // ---------------------------------------------------------------------

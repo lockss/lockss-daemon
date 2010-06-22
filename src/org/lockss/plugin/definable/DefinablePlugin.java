@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.49 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.50 2010-06-22 09:00:47 tlipkis Exp $
  */
 
 /*
@@ -292,8 +292,7 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   public String getDefaultArticleMimeType() {
-    String ret = definitionMap.getString(KEY_DEFAULT_ARTICLE_MIME_TYPE,
-					 DEFAULT_ARTICLE_MIME_TYPE);
+    String ret = definitionMap.getString(KEY_DEFAULT_ARTICLE_MIME_TYPE, null);
     log.debug3("DefaultArticleMimeType " + ret);
     if (ret == null) {
       ret = super.getDefaultArticleMimeType();
