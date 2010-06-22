@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.33 2009-10-26 13:51:45 dshr Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.34 2010-06-22 09:01:43 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,7 @@ public class SimulatedContentGenerator {
   private InputStream randomIn;
   private boolean fillOutFilenames = false;
   private boolean oddBranchesHaveContent = false;
+  private boolean isMixedCase = false;
   private int fileTypes = FILE_TYPE_TXT;
   private boolean isSpringer = false;
 
@@ -381,6 +382,14 @@ public class SimulatedContentGenerator {
    * @return max file name length
    */
   public int getMaxFilenameLength() { return maxFilenameLength; }
+
+  public void setMixedCase(boolean val) {
+    isMixedCase = val;
+  }
+
+  public boolean getMixedCase() {
+    return isMixedCase;
+  }
 
   /**
    * Tests whether the root of the generated tree exists.
@@ -856,7 +865,11 @@ public class SimulatedContentGenerator {
   }
 
   public String getDirectoryName(int branchNum) {
-    return BRANCH_PREFIX + branchNum;
+    if (isMixedCase && (branchNum % 2 == 0)) {
+      return BRANCH_PREFIX.toUpperCase() + branchNum;
+    } else {
+      return BRANCH_PREFIX + branchNum;
+    }
   }
 
   public String getDirectoryContentFile(String dirPath) {

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.29 2010-06-17 18:49:23 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.30 2010-06-22 09:01:43 tlipkis Exp $
  */
 
 /*
@@ -269,6 +269,20 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   }
   public static final String AU_PARAM_DEFAULT_ARTICLE_MIME_TYPE =
     PD_DEFAULT_ARTICLE_MIME_TYPE.getKey();
+
+  /**
+   * If true, mixed case names will be generated.
+   */
+  static final ConfigParamDescr PD_MIXED_CASE =
+    new ConfigParamDescr();
+  static {
+    PD_MIXED_CASE.setKey("mixed_case");
+    PD_MIXED_CASE.setDisplayName("DefaultArticleMimeType");
+    PD_MIXED_CASE.setType(ConfigParamDescr.TYPE_STRING);
+    PD_MIXED_CASE.setSize(20);
+  }
+  public static final String AU_PARAM_MIXED_CASE =
+    PD_MIXED_CASE.getKey();
 
   private String pluginId = "SimulatedPlugin";
   private int initCtr = 0;
