@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.97 2010-02-11 10:04:04 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.98 2010-06-22 08:58:58 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,8 @@ public class LockssTestCase extends TestCase {
   public static final int DEFAULT_TIMEOUT_SHOULDNT = 2000;
   public static int TIMEOUT_SHOULDNT = DEFAULT_TIMEOUT_SHOULDNT;
 
+  static final String TEST_ID_FILE_NAME = ".locksstestcase";
+
   private MockLockssDaemon mockDaemon = null;
 
   List tmpDirs;
@@ -105,7 +107,7 @@ public class LockssTestCase extends TestCase {
     // tests to fail (expecting empty dir).
     if (!isKeepTempFiles()
 	&& Boolean.getBoolean("org.lockss.test.idTempDirs")) {
-      FileTestUtil.writeFile(new File(res, ".locksstestcase"),
+      FileTestUtil.writeFile(new File(res, TEST_ID_FILE_NAME),
 			     StringUtil.shortName(this.getClass()));
     }
     return res;
@@ -182,11 +184,19 @@ public class LockssTestCase extends TestCase {
     if (tmpDirs != null && !isKeepTempFiles()) {
       for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
 	File dir = (File)iter.next();
+	File idFile = new File(dir, TEST_ID_FILE_NAME);
+	String idContent = null;
+	if (idFile.exists()) {
+	  idContent = StringUtil.fromFile(idFile);
+	}
 	if (FileUtil.delTree(dir)) {
 	  log.debug2("deltree(" + dir + ") = true");
 	  iter.remove();
 	} else {
 	  log.debug2("deltree(" + dir + ") = false");
+	  if (idContent != null) {
+	    FileTestUtil.writeFile(idFile, idContent);
+	  }
 	}
       }
     }

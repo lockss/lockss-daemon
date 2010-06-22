@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.257 2010-06-17 18:36:01 tlipkis Exp $
+ $Id: build.xml,v 1.258 2010-06-22 08:58:58 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -97,6 +97,7 @@ Args:
   <property name="filtertrace" value="yes" />
   <property name="timeout" value="" />
   <property name="keeptempfiles" value="" />
+  <property name="idtempfiles" value="" />
   <property name="nonetwork" value="" />
 <!-- Some tests will not work right if fork=no  -->
   <property name="fork" value="yes" />
@@ -484,6 +485,7 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.test.idTempDirs" value="${idtempfiles}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
       <sysproperty key="org.lockss.test.skipNetworkTests" value="${nonetwork}"/>
