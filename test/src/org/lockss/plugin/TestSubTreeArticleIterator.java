@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.4 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.5 2010-06-22 09:00:18 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -58,10 +59,11 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   private static int fileSize = DEFAULT_FILESIZE;
   private static int urlCount = 32;
   private static int testExceptions = 3;
+  String tempDirPath;
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setFromArgs(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 				  tempDirPath);
     theDaemon = getMockLockssDaemon();
@@ -70,9 +72,6 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getCrawlManager();
-
-    sau = PluginTestUtil.createAndStartSimAu(/*MySimulatedPlugin.class,*/
-					     simAuConfig(tempDirPath));
   }
 
   public void tearDown() throws Exception {
@@ -95,6 +94,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   }
 
   public void testOne() throws Exception {
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
     PluginTestUtil.crawlSimAu(sau);
 
     assertEquals(225, countArticles(new Spec()));
@@ -118,6 +118,15 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     assertEquals(49, countArticles(new Spec()
 				   .setRootTemplate("\"%sbranch1\",base_url")
 				   .setPattern("\\.pdf")));
+    assertEquals(49, countArticles(new Spec()
+				   .setRootTemplate("\"%sbranch1\",base_url")
+				   .setPattern("\\.pdf$")));
+    assertEquals(49, countArticles(new Spec()
+				   .setRootTemplate("\"%sbranch1\",base_url")
+				   .setPattern("^.*\\.pdf$")));
+    assertEquals(0, countArticles(new Spec()
+				   .setRootTemplate("\"%sbranch1\",base_url")
+				   .setPattern("^\\.pdf")));
     Spec s1 = new Spec().setPatternTemplate("\"00%dfile\\.html\",branch");
     Spec s2 = new Spec().setPattern("002file\\.html");
     List l1 = getArticles(s1);
@@ -137,6 +146,35 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 			     a+"branch2/branch2/"+b);
 
     assertEquals(exp,  getFullTextUrls(getArticles(s3)));
+  }
+
+  public void testFlags() throws Exception {
+    Configuration config2 = simAuConfig(tempDirPath + "1/");
+    // arrange for different numbers of upper and lower case names
+    config2.put("branch", "3");
+    config2.put("depth", "2");
+    config2.put("mixed_case", "true");
+    sau = PluginTestUtil.createAndStartSimAu(config2);
+    PluginTestUtil.crawlSimAu(sau);
+
+    assertEquals(150, countArticles(new Spec()
+				    .setPattern("/branch")));
+    assertEquals(180, countArticles(new Spec()
+				    .setPattern("/branch",
+						Pattern.CASE_INSENSITIVE)));
+    assertEquals(90, countArticles(new Spec()
+				   .setPattern("/BRANCH")));
+    assertEquals(180, countArticles(new Spec()
+				    .setPattern("/BRANCH",
+						Pattern.CASE_INSENSITIVE)));
+
+    assertEquals(8,
+		 countArticles(new Spec()
+			       .setPatternTemplate("\"/branch[0-9]+/00%dfile\\.html\",branch")));
+    assertEquals(12,
+		 countArticles(new Spec()
+			       .setPatternTemplate("\"/branch[0-9]+/00%dfile\\.html\",branch",
+						   Pattern.CASE_INSENSITIVE)));
   }
 
   int countArticles(Spec spec) {
@@ -168,6 +206,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
   }
 
   public void testException() throws Exception {
+    sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
     PluginTestUtil.crawlSimAu(sau);
 
     int count = 0;
@@ -201,7 +240,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
       if (super.isArticleCu(cu)) {
 	if (exceptionCount > 0 && cu.getUrl().endsWith(".html")) {
 	  exceptionCount--;
-	  throw new UnsupportedOperationException();
+	  throw new UnsupportedOperationException("expected");
 	}
 	return true;
       }
