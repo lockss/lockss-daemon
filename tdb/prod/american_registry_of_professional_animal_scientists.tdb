@@ -20,19 +20,19 @@
       param[base_url] = http://pas.fass.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; The Professional Animal Scientist Volume 13 ; 13 >
-      au < manifest ; The Professional Animal Scientist Volume 14 ; 14 >
-      au < manifest ; The Professional Animal Scientist Volume 15 ; 15 >
-      au < manifest ; The Professional Animal Scientist Volume 16 ; 16 >
-      au < manifest ; The Professional Animal Scientist Volume 17 ; 17 >
-      au < manifest ; The Professional Animal Scientist Volume 18 ; 18 >
-      au < manifest ; The Professional Animal Scientist Volume 19 ; 19 >
-      au < manifest ; The Professional Animal Scientist Volume 20 ; 20 >
-      au < manifest ; The Professional Animal Scientist Volume 21 ; 21 >
-      au < manifest ; The Professional Animal Scientist Volume 22 ; 22 >
-      au < manifest ; The Professional Animal Scientist Volume 23 ; 23 >
-      au < manifest ; The Professional Animal Scientist Volume 24 ; 24 >
-      au < manifest ; The Professional Animal Scientist Volume 25 ; 25 >
+      au < ready ; The Professional Animal Scientist Volume 13 ; 13 >
+      au < ready ; The Professional Animal Scientist Volume 14 ; 14 >
+      au < ready ; The Professional Animal Scientist Volume 15 ; 15 >
+      au < ready ; The Professional Animal Scientist Volume 16 ; 16 >
+      au < ready ; The Professional Animal Scientist Volume 17 ; 17 >
+      au < ready ; The Professional Animal Scientist Volume 18 ; 18 >
+      au < ready ; The Professional Animal Scientist Volume 19 ; 19 >
+      au < ready ; The Professional Animal Scientist Volume 20 ; 20 >
+      au < ready ; The Professional Animal Scientist Volume 21 ; 21 >
+      au < ready ; The Professional Animal Scientist Volume 22 ; 22 >
+      au < ready ; The Professional Animal Scientist Volume 23 ; 23 >
+      au < testing ; The Professional Animal Scientist Volume 24 ; 24 >
+      au < testing ; The Professional Animal Scientist Volume 25 ; 25 >
 
     }
 

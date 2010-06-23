@@ -258,10 +258,10 @@
       au < released ; BMC Clinical Pharmacology Volume 4 ; 4 >
       au < released ; BMC Clinical Pharmacology Volume 5 ; 5 >
       au < released ; BMC Clinical Pharmacology Volume 6 ; 6 >
-      au < testing ; BMC Clinical Pharmacology Volume 7 ; 7 >
-      au < testing ; BMC Clinical Pharmacology Volume 8 ; 8 >
-      au < testing ; BMC Clinical Pharmacology Volume 9 ; 9 >
-      au < testing ; BMC Clinical Pharmacology Volume 10 ; 10 >
+      au < ready ; BMC Clinical Pharmacology Volume 7 ; 7 >
+      au < ready ; BMC Clinical Pharmacology Volume 8 ; 8 >
+      au < ready ; BMC Clinical Pharmacology Volume 9 ; 9 >
+      au < ready ; BMC Clinical Pharmacology Volume 10 ; 10 >
 
     }
 
@@ -279,10 +279,10 @@
       au < released ; BMC Complementary and Alternative Medicine Volume 4 ; 4 >
       au < released ; BMC Complementary and Alternative Medicine Volume 5 ; 5 >
       au < released ; BMC Complementary and Alternative Medicine Volume 6 ; 6 >
-      au < testing ; BMC Complementary and Alternative Medicine Volume 7 ; 7 >
-      au < testing ; BMC Complementary and Alternative Medicine Volume 8 ; 8 >
-      au < testing ; BMC Complementary and Alternative Medicine Volume 9 ; 9 >
-      au < testing ; BMC Complementary and Alternative Medicine Volume 10 ; 10 >
+      au < ready ; BMC Complementary and Alternative Medicine Volume 7 ; 7 >
+      au < ready ; BMC Complementary and Alternative Medicine Volume 8 ; 8 >
+      au < ready ; BMC Complementary and Alternative Medicine Volume 9 ; 9 >
+      au < ready ; BMC Complementary and Alternative Medicine Volume 10 ; 10 >
 
     }
 
@@ -300,10 +300,10 @@
       au < released ; BMC Dermatology Volume 4 ; 4 >
       au < released ; BMC Dermatology Volume 5 ; 5 >
       au < released ; BMC Dermatology Volume 6 ; 6 >
-      au < testing ; BMC Dermatology Volume 7 ; 7 >
-      au < testing ; BMC Dermatology Volume 8 ; 8 >
-      au < testing ; BMC Dermatology Volume 9 ; 9 >
-      au < testing ; BMC Dermatology Volume 10 ; 10 >
+      au < ready ; BMC Dermatology Volume 7 ; 7 >
+      au < ready ; BMC Dermatology Volume 8 ; 8 >
+      au < ready ; BMC Dermatology Volume 9 ; 9 >
+      au < ready ; BMC Dermatology Volume 10 ; 10 >
 
     }
 
@@ -342,10 +342,10 @@
       au < released ; BMC Ear, Nose and Throat Disorders Volume 4 ; 4 >
       au < released ; BMC Ear, Nose and Throat Disorders Volume 5 ; 5 >
       au < released ; BMC Ear, Nose and Throat Disorders Volume 6 ; 6 >
-      au < testing ; BMC Ear, Nose and Throat Disorders Volume 7 ; 7 >
-      au < testing ; BMC Ear, Nose and Throat Disorders Volume 8 ; 8 >
-      au < testing ; BMC Ear, Nose and Throat Disorders Volume 9 ; 9 >
-      au < testing ; BMC Ear, Nose and Throat Disorders Volume 10 ; 10 >
+      au < ready ; BMC Ear, Nose and Throat Disorders Volume 7 ; 7 >
+      au < ready ; BMC Ear, Nose and Throat Disorders Volume 8 ; 8 >
+      au < ready ; BMC Ear, Nose and Throat Disorders Volume 9 ; 9 >
+      au < ready ; BMC Ear, Nose and Throat Disorders Volume 10 ; 10 >
 
     }
 
@@ -363,10 +363,10 @@
       au < released ; BMC Ecology Volume 4 ; 4 >
       au < released ; BMC Ecology Volume 5 ; 5 >
       au < released ; BMC Ecology Volume 6 ; 6 >
-      au < testing ; BMC Ecology Volume 7 ; 7 >
-      au < testing ; BMC Ecology Volume 8 ; 8 >
-      au < testing ; BMC Ecology Volume 9 ; 9 >
-      au < testing ; BMC Ecology Volume 10 ; 10 >
+      au < ready ; BMC Ecology Volume 7 ; 7 >
+      au < ready ; BMC Ecology Volume 8 ; 8 >
+      au < ready ; BMC Ecology Volume 9 ; 9 >
+      au < ready ; BMC Ecology Volume 10 ; 10 >
 
     }
 
@@ -1293,6 +1293,8 @@
         issn = 1745-6150
       >
 
+comment[bdr5] = volume 5 has 500 error.  http://www.biology-direct.com/content/supplementary/OST-HTH_Supp.html
+
       param[base_url] = http://www.biology-direct.com/
       param[journal_issn] = 1745-6150
 
@@ -1300,7 +1302,7 @@
       au < released ; Biology Direct Volume 2 ; 2 >
       au < released ; Biology Direct Volume 3 ; 3 >
       au < ready ; Biology Direct Volume 4 ; 4 >
-      au < testing ; Biology Direct Volume 5 ; 5 >
+      au < notReady ; Biology Direct Volume 5 ; 5 >
     }
 
     {

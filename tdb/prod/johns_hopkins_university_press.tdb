@@ -858,10 +858,10 @@
 
     param[journal_dir] = library_trends
 
-    au < testing ; Library Trends Volume 54 ; 54 >
-    au < testing ; Library Trends Volume 55 ; 55 >
-    au < testing ; Library Trends Volume 56 ; 56 >
-    au < testing ; Library Trends Volume 57 ; 57 >
+    au < ready ; Library Trends Volume 54 ; 54 >
+    au < ready ; Library Trends Volume 55 ; 55 >
+    au < ready ; Library Trends Volume 56 ; 56 >
+    au < ready ; Library Trends Volume 57 ; 57 >
 
   }
 
@@ -885,7 +885,7 @@
     au < released ; Literature and Medicine Volume 23 ; 23 >
     au < released ; Literature and Medicine Volume 24 ; 24 >
     au < released ; Literature and Medicine Volume 25 ; 25 >
-    au < testing ; Literature and Medicine Volume 26 ; 26 >
+    au < ready ; Literature and Medicine Volume 26 ; 26 >
 
   }
 
