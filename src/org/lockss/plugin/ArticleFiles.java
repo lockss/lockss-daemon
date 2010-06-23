@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.2 2010-06-22 08:59:59 tlipkis Exp $
+ * $Id: ArticleFiles.java,v 1.3 2010-06-23 02:42:56 thib_gc Exp $
  */
 
 /*
@@ -42,12 +42,44 @@ import java.util.*;
  */
 public class ArticleFiles {
 
-  /** Role for CU that holds metadata */
+  /** Role for the CU representing the article's abstract, if
+   * applicable */
+  public static final String ROLE_ABSTRACT = "Abstract";
+  
+  /** Role for the CU representing the article's citations,
+   * if different from the full text HTML */
+  public static final String ROLE_CITATIONS = "Citations";
+  
+  /** Role for the CU representing the article's supplementary
+   * materials, if applicable */
+  public static final String ROLE_SUPPLEMENTARY_MATERIALS = "SupplementaryMaterials";
+  
+  /** Role for the CU representing the article's full text HTML */
+  public static final String ROLE_FULL_TEXT_HTML = "FullTextHtml";
+  
+  /** Role for the CU representing an HTML page containing or
+   * otherwise linking to the article's full text HTML, if
+   * applicable */
+  public static final String ROLE_FULL_TEXT_HTML_LANDING_PAGE = "FullTextHtmlLanding";
+  
+  /** Role for the CU representing the article's full text PDF file;
+   * must be the CU of an actual PDF file */
+  public static final String ROLE_FULL_TEXT_PDF = "FullTextPdfFile";
+  
+  /** Role for the CU representing an HTML page containing or
+   * otherwise linking to the article's full text PDF, if
+   * applicable */
+  public static final String ROLE_FULL_TEXT_PDF_LANDING_PAGE = "FullTextPdfLanding";
+  
+  /** Role for CU that holds article-level metadata */
   public static final String ROLE_ARTICLE_METADATA = "ArticleMetadata";
-  /** Role for CU that holds metadata for larger entity such as issue */
+  
+  /** Role for CU that holds issue-level metadata if applicable */
   public static final String ROLE_ISSUE_METADATA = "IssueMetadata";
-  /** Role for handle (name, index, etc.) to article metadata within issue
-   * metadata file */
+  
+  /** Role for an object (String, array, list, etc.) used to identify
+   * the article inside aggregate metadata (e.g. issue-level metadata)
+   * by identifier, index, or any other scheme applicable */
   public static final String ROLE_ARTICLE_HANDLE = "ArticleHandle";
 
   protected CachedUrl fullTextCu;

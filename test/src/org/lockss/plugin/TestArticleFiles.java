@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleFiles.java,v 1.2 2010-06-22 08:59:59 tlipkis Exp $
+ * $Id: TestArticleFiles.java,v 1.3 2010-06-23 02:42:56 thib_gc Exp $
  */
 
 /*
@@ -32,16 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.*;
 import java.util.*;
-import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.state.*;
 import org.lockss.test.*;
-import org.lockss.plugin.base.*;
-import org.lockss.util.*;
-import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 
 public class TestArticleFiles extends LockssTestCase {
 

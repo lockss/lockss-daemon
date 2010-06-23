@@ -1,5 +1,5 @@
 /*
- * $Id: NatureArticleIteratorFactory.java,v 1.8 2010-06-22 01:00:17 thib_gc Exp $
+ * $Id: NatureArticleIteratorFactory.java,v 1.9 2010-06-23 02:42:56 thib_gc Exp $
  */
 
 /*
@@ -46,8 +46,6 @@ public class NatureArticleIteratorFactory
   implements ArticleIteratorFactory,
 	     ArticleMetadataExtractorFactory {
   
-  protected static final String ARTICLE_FILES_KEY_PDF = "full-text PDF";
-
   static Logger log = Logger.getLogger("NatureArticleIteratorFactory");
 
   protected static Pattern patHtml = Pattern.compile("/full/([^/]+)\\.html$", Pattern.CASE_INSENSITIVE);
@@ -79,9 +77,10 @@ public class NatureArticleIteratorFactory
         if (mat.find()) {
           af = new ArticleFiles();
           af.setFullTextCu(cu);
+          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, cu);
           CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/pdf/$1.pdf"));
           if (pdfCu != null && pdfCu.hasContent()) {
-            af.setRoleCu(ARTICLE_FILES_KEY_PDF, pdfCu);
+            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
           }
           return af;
         }
@@ -94,7 +93,7 @@ public class NatureArticleIteratorFactory
           }
           af = new ArticleFiles();
           af.setFullTextCu(cu);
-          af.setRoleCu(ARTICLE_FILES_KEY_PDF, cu);
+          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
           return af;
         }
         

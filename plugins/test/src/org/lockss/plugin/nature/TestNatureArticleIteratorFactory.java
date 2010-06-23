@@ -1,5 +1,5 @@
 /*
- * $Id: TestNatureArticleIteratorFactory.java,v 1.2 2010-06-22 01:00:17 thib_gc Exp $
+ * $Id: TestNatureArticleIteratorFactory.java,v 1.3 2010-06-23 02:42:56 thib_gc Exp $
  */
 
 /*
@@ -142,10 +142,10 @@ public class TestNatureArticleIteratorFactory extends LockssTestCase {
       String contentType = cu.getContentType();
       log.debug("count " + count + " url " + url + " " + contentType);
       count++;
-      if (af.getRoleUrl(NatureArticleIteratorFactory.ARTICLE_FILES_KEY_PDF) == null) {
+      if (af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) == null) {
         ++countHtmlOnly;
       }
-      if (cu == af.getRoleCu(NatureArticleIteratorFactory.ARTICLE_FILES_KEY_PDF)) {
+      if (af.getRoleUrl(ArticleFiles.ROLE_FULL_TEXT_PDF) == url) {
         ++countPdfOnly;
       }
     }
