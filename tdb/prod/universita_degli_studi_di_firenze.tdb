@@ -12,7 +12,7 @@
     >
     
     rights = openaccess
-    plugin = plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
     param[base_url] = http://leo.cilea.it/
     param[journal_id] = jlis
     implicit < status ; year ; name ; param[year] >

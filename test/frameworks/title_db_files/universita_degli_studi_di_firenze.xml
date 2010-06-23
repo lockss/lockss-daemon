@@ -53,7 +53,7 @@
    <property name="journalTitle" value="JLIS.it" />
    <property name="issn" value="2038-1026" />
    <property name="title" value="JLIS.it Volume 1" />
-   <property name="plugin" value="plugin = org.lockss.plugin.ojs2.OJS2Plugin" />
+   <property name="plugin" value="org.lockss.plugin.ojs2.OJS2Plugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
     <property name="value" value="http://leo.cilea.it/" />
