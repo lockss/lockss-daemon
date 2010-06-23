@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.25 2010-05-27 18:50:26 edwardsb1 Exp $
+# $Id: tdbxml.py,v 1.26 2010-06-23 22:58:49 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -49,6 +49,8 @@ def _short_au_name(au):
     str = au.name()
     str = re.sub(r'Volume\s+(\S+)$', r'\1', str)
     str = re.sub(r'\s+', '', str)
+    str = re.sub(r'Á|À|Â|Ä', 'A', str)
+    str = re.sub(r'á|à|â|ä', 'a', str)
     str = re.sub(r'É|È|Ê|Ë', 'E', str)
     str = re.sub(r'é|è|ê|ë', 'e', str)
     str = re.sub(r'Í|Ì|Î|Ï', 'I', str)
