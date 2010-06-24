@@ -17,7 +17,7 @@
     param[journal_id] = jlis
     implicit < status ; year ; name ; param[year] >
     
-    au < testing ; 2010 ; JLIS.it Volume 1 ; 2010 >
+    au < ready ; 2010 ; JLIS.it Volume 1 ; 2010 >
 
   }
   
