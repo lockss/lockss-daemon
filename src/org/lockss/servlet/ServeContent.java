@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.23 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: ServeContent.java,v 1.24 2010-06-25 07:42:16 tlipkis Exp $
  */
 
 /*
@@ -314,44 +314,44 @@ public class ServeContent extends LockssServlet {
     if (!aus.isOpenAccess()) {
       resp.setHeader(HttpFields.__CacheControl, "private");
     }    
-    Writer outWriter = null;
-    Reader original = cu.openForReading();
-    Reader rewritten = original;
+    OutputStream outStr = null;
+    InputStream original = cu.getUnfilteredInputStream();
+    InputStream rewritten = original;
     try {
-      outWriter = resp.getWriter();
-      LinkRewriterFactory lrf = cu.getLinkRewriterFactory();
-      if (!StringUtil.isNullString(getParameter("norewrite"))) {
-	log.info("Not rewriting " + url);
-	lrf = null;
+      LinkRewriterFactory lrf = null;
+      if (StringUtil.isNullString(getParameter("norewrite"))) {
+	lrf = cu.getLinkRewriterFactory();
       }
       if (lrf != null) {
 	try {
 	  rewritten =
-	    lrf.createLinkRewriterReader(mimeType,
-					 cu.getArchivalUnit(),
-					 original,
-					 cu.getEncoding(),
-					 url,
-					 new ServletUtil.LinkTransform() {
-					   public String rewrite(String url) {
-					     if (absoluteLinks) {
-					       return srvAbsURL(myServletDescr(),
-								"url=" + url);
-					     } else {
-					       return srvURL(myServletDescr(),
-							     "url=" + url);
-					     }
-					   }});
+	    lrf.createLinkRewriter(mimeType,
+				   cu.getArchivalUnit(),
+				   original,
+				   cu.getEncoding(),
+				   url,
+				   new ServletUtil.LinkTransform() {
+				     public String rewrite(String url) {
+				       if (absoluteLinks) {
+					 return srvAbsURL(myServletDescr(),
+							  "url=" + url);
+				       } else {
+					 return srvURL(myServletDescr(),
+						       "url=" + url);
+				       }
+				     }});
 	} catch (PluginException e) {
-	  log.error("Can't create link rewriter " + e.toString());
+	  log.error("Can't create link rewriter, not rewriting", e);
 	}
       }
-      long bytes = StreamUtil.copy(rewritten, outWriter);
+      outStr = resp.getOutputStream();
+
+      long bytes = StreamUtil.copy(rewritten, outStr);
       if (bytes <= Integer.MAX_VALUE) {
 	  resp.setContentLength((int)bytes);
       }
     } finally {
-      IOUtil.safeClose(outWriter);
+      IOUtil.safeClose(outStr);
       IOUtil.safeClose(original);
       IOUtil.safeClose(rewritten);
     }

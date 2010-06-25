@@ -1,5 +1,5 @@
 /*
-* $Id: MockLinkRewriterFactory.java,v 1.4 2008-09-18 02:10:23 dshr Exp $
+* $Id: MockLinkRewriterFactory.java,v 1.5 2010-06-25 07:42:15 tlipkis Exp $
 */
 
 /*
@@ -41,30 +41,30 @@ import org.lockss.servlet.*;
 public class MockLinkRewriterFactory implements LinkRewriterFactory {
 
   private PluginException ex;
-  private Reader reader;
+  private InputStream is;
 
   public MockLinkRewriterFactory() {
     ex = null;
-    reader = null;
+    is = null;
   }
 
-  public Reader createLinkRewriterReader(String mimeType,
+  public InputStream createLinkRewriter(String mimeType,
 					ArchivalUnit au,
-					Reader in,
+					InputStream in,
 					String encoding,
 					String url,
-					 ServletUtil.LinkTransform xform)
+					ServletUtil.LinkTransform xform)
     throws PluginException {
     if (ex != null)
       throw ex;
-    return reader;
+    return is;
   }
 
   public void setException(PluginException e) {
     ex = e;
   }
 
-  public void setLinkRewriter(Reader r) {
-    reader = r;
+  public void setLinkRewriter(InputStream strm) {
+    is = strm;
   }
 }

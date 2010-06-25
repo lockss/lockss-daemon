@@ -1,5 +1,5 @@
 /*
- * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.4 2008-09-18 02:10:23 dshr Exp $
+ * $Id: TestJavascriptHtmlLinkRewriterFactory.java,v 1.5 2010-06-25 07:42:15 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>" +
     "</body>" +
     "</foo>";
-  private Reader in;
+  private InputStream in;
   private static final String jsTag = "<SCRIPT language=\"Javascript\">";
   private ServletUtil.LinkTransform xform = null;
   private String testPort = "9524";
@@ -98,56 +98,48 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNotHtml() {
-    in = new StringReader(withHtmlTag);
+    in = new StringInputStream(withHtmlTag);
     setupConfig(true);
     try {
-      Reader ret =
-	jhlrf.createLinkRewriterReader("application/pdf", au, in, encoding,
-				       url, xform);
+      InputStream ret =
+	jhlrf.createLinkRewriter("application/pdf", au, in, encoding,
+				 url, xform);
       fail("createLinkRewriter should have thrown on non-html mime type");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
 	return;
       }
-      fail("createLinkRewriterReader should have thrown PluginException but threw " +
+      fail("createLinkRewriter should have thrown PluginException but threw " +
 	   ex.toString());
     }
   }
 
   public void testThrowsIfNoPort() {
-    in = new StringReader(withHtmlTag);
+    in = new StringInputStream(withHtmlTag);
     setupConfig(false);
     try {
-      Reader ret =
-	jhlrf.createLinkRewriterReader("text/html", au, in,
-				       encoding, url, xform);
+      InputStream ret =
+	jhlrf.createLinkRewriter("text/html", au, in,
+				 encoding, url, xform);
       fail("createLinkRewriter should have thrown without port");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
 	return;
       }
-      fail("createLinkRewriterReader should have thrown PluginException but threw " +
+      fail("createLinkRewriter should have thrown PluginException but threw " +
 	   ex.toString());
     }
   }
 
   public void testInsertsJavascriptIfHtmlTag() {
-    in = new StringReader(withHtmlTag);
+    in = new StringInputStream(withHtmlTag);
     setupConfig(true);
     try {
-      Reader r =
-	jhlrf.createLinkRewriterReader("text/html", au, in,
-				       encoding, url, xform);
-      assertNotNull(r);
-      // Read from r, look for javascript
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
+      InputStream is =
+	jhlrf.createLinkRewriter("text/html", au, in,
+				 encoding, url, xform);
+      assertNotNull(is);
+      String out = StringUtil.fromInputStream(is);
       log.debug3(out);
       assertTrue(out.length() > withHtmlTag.length());
       assertTrue(out.indexOf(jsTag) > 0);
@@ -158,22 +150,14 @@ public class TestJavascriptHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testCopiesUnchangedIfNoHtmlTag() {
-    in = new StringReader(withoutHtmlTag);
+    in = new StringInputStream(withoutHtmlTag);
     setupConfig(true);
     try {
-      Reader r =
-	jhlrf.createLinkRewriterReader("text/html", au, in, encoding,
-				       url, xform);
-      assertNotNull(r);
-      // Read from r, look for javascript
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
+      InputStream is =
+	jhlrf.createLinkRewriter("text/html", au, in, encoding,
+				 url, xform);
+      assertNotNull(is);
+      String out = StringUtil.fromInputStream(is);
       assertTrue(out.length() == withoutHtmlTag.length());
       assertTrue(out.indexOf(jsTag) < 0);
       assertTrue(out.equals(withoutHtmlTag));

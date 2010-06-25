@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilterCssLinkRewriterFactory.java,v 1.2 2008-09-18 02:10:23 dshr Exp $
+ * $Id: StringFilterCssLinkRewriterFactory.java,v 1.3 2010-06-25 07:42:16 tlipkis Exp $
  */
 
 /*
@@ -53,12 +53,12 @@ public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
   public StringFilterCssLinkRewriterFactory() {
   }
 
-  public Reader createLinkRewriterReader(String mimeType,
-					 ArchivalUnit au,
-					 Reader in,
-					 String encoding,
-					 String url,
-					 ServletUtil.LinkTransform xform)
+  public InputStream createLinkRewriter(String mimeType,
+					ArchivalUnit au,
+					InputStream in,
+					String encoding,
+					String url,
+					ServletUtil.LinkTransform xform)
       throws PluginException {
     if ("text/css".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
@@ -99,8 +99,10 @@ public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
 	String[] line = {"@import url(", "^" + urlStem, urlPrefix + urlStem};
 	replace[i++] = line;
       }
-      CssLinkFilter sf = CssLinkFilter.makeNestedFilter(in, replace, true);
-      return sf;
+      CssLinkFilter sf =
+	CssLinkFilter.makeNestedFilter(FilterUtil.getReader(in, encoding),
+				       replace, true);
+      return new ReaderInputStream(sf, encoding);
     } else {
       throw new PluginException("StringFilterCssLinkRewriterFactory vs. " +
 				mimeType);

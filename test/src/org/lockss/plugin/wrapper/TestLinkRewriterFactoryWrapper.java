@@ -1,5 +1,5 @@
 /*
- * $Id: TestLinkRewriterFactoryWrapper.java,v 1.1 2009-05-19 03:49:09 dshr Exp $
+ * $Id: TestLinkRewriterFactoryWrapper.java,v 1.2 2010-06-25 07:42:16 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestLinkRewriterFactoryWrapper extends LockssTestCase {
     assertTrue(WrapperUtil.unwrap(wrapper)
 	       instanceof MockLinkRewriterFactory);
 
-    wrapper.createLinkRewriterReader("foomime", new MockArchivalUnit(),
+    wrapper.createLinkRewriter("foomime", new MockArchivalUnit(),
 			       null, "", "", null);
     MockLinkRewriterFactory mn = (MockLinkRewriterFactory)obj;
     assertEquals(ListUtil.list("foomime"), mn.args);
@@ -69,7 +69,7 @@ public class TestLinkRewriterFactoryWrapper extends LockssTestCase {
     MockLinkRewriterFactory a = (MockLinkRewriterFactory)obj;
     a.setError(err);
     try {
-      wrapper.createLinkRewriterReader("", new MockArchivalUnit(),
+      wrapper.createLinkRewriter("", new MockArchivalUnit(),
 				 null, "", "", null);
       fail("Should have thrown PluginException");
     } catch (PluginException e) {
@@ -87,12 +87,12 @@ public class TestLinkRewriterFactoryWrapper extends LockssTestCase {
       this.error = error;
     }
 
-      public Reader createLinkRewriterReader(String mimeType,
-					     ArchivalUnit au,
-					     Reader in,
-					     String encoding,
-					     String url,
-					     ServletUtil.LinkTransform xform)
+      public InputStream createLinkRewriter(String mimeType,
+					    ArchivalUnit au,
+					    InputStream in,
+					    String encoding,
+					    String url,
+					    ServletUtil.LinkTransform xform)
 	throws PluginException {
       args = ListUtil.list(mimeType);
       if (error != null) {

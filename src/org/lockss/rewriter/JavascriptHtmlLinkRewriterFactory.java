@@ -1,5 +1,5 @@
 /*
- * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.4 2008-09-18 02:10:23 dshr Exp $
+ * $Id: JavascriptHtmlLinkRewriterFactory.java,v 1.5 2010-06-25 07:42:16 tlipkis Exp $
  */
 
 /*
@@ -59,12 +59,12 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
   // Javascript to insert
   private static final String jsTextName = "urlrewriter.js";
 
-  public Reader createLinkRewriterReader(String mimeType,
-					 ArchivalUnit au,
-					 Reader in,
-					 String encoding,
-					 String url,
-					 ServletUtil.LinkTransform xform)
+  public InputStream createLinkRewriter(String mimeType,
+					ArchivalUnit au,
+					InputStream in,
+					String encoding,
+					String url,
+					ServletUtil.LinkTransform xform)
       throws PluginException {
     if ("text/html".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
@@ -72,9 +72,10 @@ public class JavascriptHtmlLinkRewriterFactory implements LinkRewriterFactory {
       StringBuffer jsInit = initializeJs(au, url, xform);
       StringBuffer jsText = getJs();
       String replace = jsInit.toString() + jsText + "\n" + jsTag;
-      StringFilter sf = new StringFilter(in, jsTag, replace);
+      StringFilter sf = new StringFilter(FilterUtil.getReader(in, encoding),
+					 jsTag, replace);
       sf.setIgnoreCase(true);
-      return sf;
+      return new ReaderInputStream(sf, encoding);
     } else {
       throw new PluginException("JavascriptHtmlLinkRewriterFactory vs. " +
 				mimeType);

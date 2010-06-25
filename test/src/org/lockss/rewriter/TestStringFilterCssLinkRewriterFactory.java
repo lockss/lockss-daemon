@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.2 2008-09-18 02:10:23 dshr Exp $
+ * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.3 2010-06-25 07:42:15 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
       "@import url(/" + urlSuffix + testFile + ")";
   private static final String siteRelImportAfter =
       servlet + urlStem + "test/../../" + urlSuffix + testFile;
-  private Reader in;
+  private InputStream in;
   private ServletUtil.LinkTransform xform = null;
   private String testPort = "9524";
 
@@ -103,11 +103,11 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNotCss() {
-    in = new StringReader(page);
+    in = new StringInputStream(page);
     setupConfig(true);
     try {
-      Reader r = sfclrf.createLinkRewriterReader("text/html", au, in,
-						  encoding, url, xform);
+      sfclrf.createLinkRewriter("text/html", au, in,
+				encoding, url, xform);
       fail("createLinkRewriter should have thrown on non-css mime type");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -119,11 +119,11 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNoPort() {
-    in = new StringReader(page);
+    in = new StringInputStream(page);
     setupConfig(false);
     try {
-      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
-						  encoding, url, xform);
+      sfclrf.createLinkRewriter("text/css", au, in,
+				encoding, url, xform);
       fail("createLinkRewriter should have thrown if no port");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -134,153 +134,89 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
     }
   }
 
-  public void testAbsRewriting() {
-    in = new StringReader(absImportBefore);
+  public void testAbsRewriting() throws Exception {
+    in = new StringInputStream(absImportBefore);
     log.debug3("page is " + absImportBefore);
     setupConfig(true);
-    try {
-      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
-						 encoding, url, xform);
-      assertNotNull(r);
-      // Read from r, make String
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
-      log.debug3("rewritten page is\n" + out);
-      // Now check the rewriting
-      assertTrue("Abs import bad rewrite " + out, out.indexOf(importAfter) > 0);
-    } catch (Exception ex) {
-      fail("createLinkRewriter should not have thrown " + ex +
-	   " on css mime type");
-    }
+    InputStream is = sfclrf.createLinkRewriter("text/css", au, in,
+					       encoding, url, xform);
+    assertNotNull(is);
+
+    String out = StringUtil.fromInputStream(is);
+    log.debug3("rewritten page is\n" + out);
+    // Now check the rewriting
+    assertTrue("Abs import bad rewrite " + out, out.indexOf(importAfter) > 0);
   }
 
-  public void testPageRelRewriting() {
-    in = new StringReader(pageRelImportBefore);
+  public void testPageRelRewriting() throws Exception {
+    in = new StringInputStream(pageRelImportBefore);
     log.debug3("page is " + pageRelImportBefore + " url is " + url);
     setupConfig(true);
-    try {
-      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
-						 encoding, url, xform);
-      assertNotNull(r);
-      // Read from r, make String
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
-      log.debug3("rewritten page is\n" + out);
-      log.debug3("should match\n" + pageRelImportAfter);
-      // Now check the rewriting
-      assertTrue("Rel import bad rewrite " + out,
-		 out.indexOf(pageRelImportAfter) > 0);
-    } catch (Exception ex) {
-      fail("createLinkRewriter should not have thrown " + ex +
-	   " on css mime type");
-    }
+    InputStream is = sfclrf.createLinkRewriter("text/css", au, in,
+					       encoding, url, xform);
+    assertNotNull(is);
+    String out = StringUtil.fromInputStream(is);
+    log.debug3("rewritten page is\n" + out);
+    log.debug3("should match\n" + pageRelImportAfter);
+    // Now check the rewriting
+    assertTrue("Rel import bad rewrite " + out,
+	       out.indexOf(pageRelImportAfter) > 0);
   }
 
-  public void testDotDotRelRewriting() {
-    in = new StringReader(dotDotRelImportBefore);
+  public void testDotDotRelRewriting() throws Exception {
+    in = new StringInputStream(dotDotRelImportBefore);
     log.debug3("page is " + dotDotRelImportBefore + " url is " + url);
     setupConfig(true);
-    try {
-      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
-						 encoding, url, xform);
-      assertNotNull(r);
-      // Read from r, make String
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
-      log.debug3("rewritten page is\n" + out);
-      log.debug3("should match\n" + dotDotRelImportAfter);
-      // Now check the rewriting
-      assertTrue("Rel import bad rewrite " + out,
-		 out.indexOf(dotDotRelImportAfter) > 0);
-    } catch (Exception ex) {
-      fail("createLinkRewriter should not have thrown " + ex +
-	   " on css mime type");
-    }
+    InputStream is = sfclrf.createLinkRewriter("text/css", au, in,
+					       encoding, url, xform);
+    assertNotNull(is);
+    String out = StringUtil.fromInputStream(is);
+    log.debug3("rewritten page is\n" + out);
+    log.debug3("should match\n" + dotDotRelImportAfter);
+    // Now check the rewriting
+    assertTrue("Rel import bad rewrite " + out,
+	       out.indexOf(dotDotRelImportAfter) > 0);
   }
 
-  public void testSiteRelRewriting() {
-    in = new StringReader(siteRelImportBefore);
+  public void testSiteRelRewriting() throws Exception {
+    in = new StringInputStream(siteRelImportBefore);
     log.debug3("page is " + siteRelImportBefore + " url is " + url);
     setupConfig(true);
-    try {
-      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
-						 encoding, url, xform);
-      assertNotNull(r);
-      // Read from r, make String
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
-      log.debug3("rewritten page is\n" + out);
-      log.debug3("should match\n" + siteRelImportAfter);
-      // Now check the rewriting
-      assertTrue("Rel import bad rewrite " + out,
-		 out.indexOf(siteRelImportAfter) > 0);
-    } catch (Exception ex) {
-      fail("createLinkRewriter should not have thrown " + ex +
-	   " on css mime type");
-    }
+    InputStream is = sfclrf.createLinkRewriter("text/css", au, in,
+					       encoding, url, xform);
+    assertNotNull(is);
+    String out = StringUtil.fromInputStream(is);
+    log.debug3("rewritten page is\n" + out);
+    log.debug3("should match\n" + siteRelImportAfter);
+    // Now check the rewriting
+    assertTrue("Rel import bad rewrite " + out,
+	       out.indexOf(siteRelImportAfter) > 0);
   }
 
-  public void testRewriting() {
-    in = new StringReader(page);
+  public void testRewriting() throws Exception {
+    in = new StringInputStream(page);
     setupConfig(true);
     log.debug3("page is \n" + page);
-    try {
-      Reader r = sfclrf.createLinkRewriterReader("text/css", au, in,
-						 encoding, url, xform);
-      assertNotNull(r);
-      // Read from r, make String
-      StringBuffer sb = new StringBuffer();
-      char[] buf = new char[4096];
-      int i;
-      while ((i = r.read(buf)) > 0) {
-	sb.append(buf, 0, i);
-      }
-      String out = sb.toString();
-      assertNotNull(out);
-      log.debug3("rewritten page is\n" + out);
-      // Now check the rewriting
-      int ix = 0;
-      for (i = 0; i < linkCount; i++) {
-	int nix = out.indexOf(servlet + urlStem, ix);
-	assertTrue("Start of rewritten url not found", nix > ix);
-	int endix = out.indexOf(")", nix);
-	assertTrue("End of rewritten url not found", endix > nix);
-	log.debug3("Link rewritten: " + out.substring(nix, endix));
-	ix = endix;
-      }
-      ix = out.indexOf("ServeContent?url=" + urlStem, ix);
-      if (ix >= 0) {
-	log.error(out.substring(ix));
-      }
-      assertTrue("wrong url rewritten", ix < 0);
-    } catch (Exception ex) {
-      fail("createLinkRewriter should not have thrown " + ex +
-	   " on css mime type");
+    InputStream is = sfclrf.createLinkRewriter("text/css", au, in,
+					       encoding, url, xform);
+    assertNotNull(is);
+    String out = StringUtil.fromInputStream(is);
+    log.debug3("rewritten page is\n" + out);
+    // Now check the rewriting
+    int ix = 0;
+    for (int i = 0; i < linkCount; i++) {
+      int nix = out.indexOf(servlet + urlStem, ix);
+      assertTrue("Start of rewritten url not found", nix > ix);
+      int endix = out.indexOf(")", nix);
+      assertTrue("End of rewritten url not found", endix > nix);
+      log.debug3("Link rewritten: " + out.substring(nix, endix));
+      ix = endix;
     }
+    ix = out.indexOf("ServeContent?url=" + urlStem, ix);
+    if (ix >= 0) {
+      log.error(out.substring(ix));
+    }
+    assertTrue("wrong url rewritten", ix < 0);
   }
 
   private void setupConfig(boolean good) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.15 2009-06-01 19:15:49 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.16 2010-06-25 07:42:15 tlipkis Exp $
  */
 
 /*
@@ -204,10 +204,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testThrowsIfNotHtml() {
-    Reader in = new StringReader(orig);
+    InputStream in = new StringInputStream(orig);
     try {
-      Reader r = nfhlrf.createLinkRewriterReader("application/pdf", au, in,
-						  encoding, url, xform);
+      nfhlrf.createLinkRewriter("application/pdf", au, in,
+				encoding, url, xform);
       fail("createLinkRewriter should have thrown on non-html mime type");
     } catch (Exception ex) {
       if (ex instanceof PluginException) {
@@ -219,11 +219,10 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
   }
 
   public void testRewriting() throws Exception {
-    Reader r = nfhlrf.createLinkRewriterReader("text/html",
-					       au,
-					       new StringReader(orig),
+    InputStream is = nfhlrf.createLinkRewriter("text/html", au,
+					       new StringInputStream(orig),
 					       encoding, url, xform);
-    String out = StringUtil.fromReader(r);
+    String out = StringUtil.fromInputStream(is);
     log.debug3("Original:\n" + orig);
     log.debug3("Transformed:\n" + out);
     assertEquals(xformed, out);
