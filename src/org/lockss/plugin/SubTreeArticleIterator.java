@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.7 2010-06-22 09:00:18 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.8 2010-06-25 07:41:18 tlipkis Exp $
  */
 
 /*
@@ -52,8 +52,6 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   
   static Logger log = Logger.getLogger("SubTreeArticleIterator");
   
-  public static final String DEFAULT_MIME_TYPE = null;
-
   /** Specification of the CachedUrls the iterator should return.  Setters
    * are chained. */
   public static class Spec {
@@ -73,10 +71,20 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return this;
     }
 
+    /** Return the MIME type */
+    public String getMimeType() {
+      return mimeType;
+    }
+
     /** The MetadataTarget determines the type of articles desired */
     public Spec setTarget(MetadataTarget val) {
       target = val;
       return this;
+    }
+
+    /** Return the target */
+    public MetadataTarget getTarget() {
+      return target;
     }
 
     /** Set the URL of root of the subtree below which to iterate. */
@@ -112,6 +120,16 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return this;
     }
 
+    /** Return the roots */
+    public List<String> getRoots() {
+      return roots;
+    }
+
+    /** Return the root templates */
+    public List<String> getRootTemplates() {
+      return rootTemplates;
+    }
+
     /** Set the regular expression the article URLs must match */
     public Spec setPattern(Pattern regex) {
       pat = regex;
@@ -128,6 +146,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       if (patTempl != null) {
 	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
       }
+      patFlags = flags;
       pat = Pattern.compile(regex, flags);
       return this;
     }
@@ -144,15 +163,30 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       this.patFlags = flags;
       return this;
     }
+
+    /** Return the pattern */
+    public Pattern getPattern() {
+      return pat;
+    }
+
+    /** Return the pattern template */
+    public String getPatternTemplate() {
+      return patTempl;
+    }
+
+    /** Return the pattern compilation flags */
+    public int getPatternFlags() {
+      return patFlags;
+    }
   }
 
-  Spec spec;
-  String mimeType;
-  ArchivalUnit au;
-  Iterator it = null;
-  Pattern pat = null;
-  private Iterator cusIter = null;
-  private Iterator<CachedUrlSet> rootIter = null;
+
+  protected Spec spec;
+  protected String mimeType;
+  protected ArchivalUnit au;
+  protected Pattern pat = null;
+  protected Iterator cusIter = null;
+  protected Iterator<CachedUrlSet> rootIter = null;
 
   
   // if null, we have to look for nextElement
@@ -171,32 +205,31 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   }
 
   // XXX fix when work out how target is used
-  private String getMimeType() {
-    String tmpMime = spec.target != null ? spec.target.getFormat() : null;
+  protected String getMimeType() {
+    String tmpMime =
+      spec.getTarget() != null ? spec.getTarget().getFormat() : null;
     if (tmpMime == null) {
-      tmpMime = spec.mimeType;
+      tmpMime = spec.getMimeType();
     }
     if (tmpMime == null) {
       tmpMime = au.getPlugin().getDefaultArticleMimeType();
     }
-    if (tmpMime == null) {
-      tmpMime = DEFAULT_MIME_TYPE;
-    }
     return tmpMime;
   }
 
-  private Pattern makePattern() {
-    if (spec.pat != null) {
-      return spec.pat;
+  protected Pattern makePattern() {
+    if (spec.getPattern() != null) {
+      return spec.getPattern();
     }
-    if (spec.patTempl != null) {
-      String re = convertVariableRegexpString(spec.patTempl).getRegexp();
-      return Pattern.compile(re, spec.patFlags);
+    if (spec.getPatternTemplate() != null) {
+      String re =
+	convertVariableRegexpString(spec.getPatternTemplate()).getRegexp();
+      return Pattern.compile(re, spec.getPatternFlags());
     }
     return null;
   }
 
-  private Collection<CachedUrlSet> makeRoots() {
+  protected Collection<CachedUrlSet> makeRoots() {
     Collection<String> roots = makeRootUrls();
     log.debug("rootUrls: " + roots);
     if (roots == null || roots.isEmpty()) {
@@ -209,15 +242,15 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     return res;
   }
 
-  private Collection<String> makeRootUrls() {
-    if (spec.roots != null) {
-      return spec.roots;
+  protected Collection<String> makeRootUrls() {
+    if (spec.getRoots() != null) {
+      return spec.getRoots();
     }
-    if (spec.rootTemplates == null) {
+    if (spec.getRootTemplates() == null) {
       return null;
     }
     Collection<String> res = new ArrayList<String>();
-    for (String template : spec.rootTemplates) {
+    for (String template : spec.getRootTemplates()) {
       List<String> lst = convertUrlList(template);
       if (lst == null) {
 	log.warning("Null converted string from " + template);
@@ -228,13 +261,13 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     return res;
   }
 
-  List<String> convertUrlList(String printfString) {
+  protected List<String> convertUrlList(String printfString) {
     log.debug("convert("+printfString+"): "+ au);
     log.debug("params: " + au.getProperties());
     return new PrintfConverter.UrlListConverter(au).getUrlList(printfString);
   }
 
-  PrintfConverter.MatchPattern
+  protected PrintfConverter.MatchPattern
     convertVariableRegexpString(String printfString) {
     log.debug("reconvert("+printfString+"): "+ au);
     return new PrintfConverter.RegexpConverter(au).getMatchPattern(printfString);
