@@ -152,4 +152,20 @@
       </entry>
     </map>
   </entry>
+  <entry>
+    <!-- Crawl window open from midnight to 6:00AM EST -->
+    <string>au_crawlwindow_ser</string>
+    <org.lockss.daemon.CrawlWindows-Interval>
+      <start>
+        <time>1277362837493</time>
+        <timezone>America/Los_Angeles</timezone>
+      </start>
+      <end>
+        <time>1277298037493</time>
+        <timezone>America/Los_Angeles</timezone>
+      </end>
+      <fieldMask>3</fieldMask>
+      <timeZoneId>US/Eastern</timeZoneId>
+    </org.lockss.daemon.CrawlWindows-Interval>
+  </entry>
 </map>

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.41 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.42 2010-06-25 07:42:35 tlipkis Exp $
  */
 
 /*
@@ -919,7 +919,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     // normalize
     SpiderCrawlSpec cspec = (SpiderCrawlSpec)au.getCrawlSpec();
     assertEquals(3, cspec.getRefetchDepth());
-    assertEquals(null, cspec.getCrawlWindow());
     assertEquals(null, cspec.getPermissionChecker());
     assertEquals(null, cspec.getExploderPattern());
     assertEquals(null, cspec.getExploderHelper());
@@ -972,6 +971,20 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       mti.getFileMetadataExtractorFactory("DublinRind");
     assertTrue(""+WrapperUtil.unwrap(mfact3),
 	       WrapperUtil.unwrap(mfact3) instanceof MockFactories.XmlRindMetaExtFact);
+
+    CrawlWindow window = cspec.getCrawlWindow();
+    CrawlWindows.Interval intr = (CrawlWindows.Interval)window;
+    assertNotNull(window);
+    long testTime = new Date("Jan 1 2010, 11:59:00 EST").getTime();
+    for (int ix = 0; ix <= 24; ix++) {
+      boolean isOpen = window.canCrawl(new Date(testTime));
+      if (ix <= 12 || ix >= 19) {
+	assertFalse("Window should be closed at ix " + ix, isOpen);
+      } else {
+	assertTrue("Window should be open at ix " + ix, isOpen);
+      }
+      testTime += Constants.HOUR;
+    }
   }
 
   public void testRateLimiterSourceDefault() throws Exception {
