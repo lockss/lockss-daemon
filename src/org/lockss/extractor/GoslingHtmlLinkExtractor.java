@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlLinkExtractor.java,v 1.6 2010-04-02 23:19:57 pgust Exp $
+ * $Id: GoslingHtmlLinkExtractor.java,v 1.7 2010-06-25 07:40:58 tlipkis Exp $
  */
 
 /*
@@ -538,8 +538,7 @@ public class GoslingHtmlLinkExtractor implements LinkExtractor {
       }
     };
 
-    // XXX This isn't as inefficient as it looks. ...
-    InputStream cssIn = new ReaderInputStream(cssReader);
+    InputStream cssIn = new ReaderInputStream(cssReader, encoding);
     try {
       LinkExtractor cssExtractor = au.getLinkExtractor("text/css");
       logger.debug2("CSS extractor: " + cssExtractor + ", " + au);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestReaderInputStream.java,v 1.6 2006-09-16 23:00:33 tlipkis Exp $
+ * $Id: TestReaderInputStream.java,v 1.7 2010-06-25 07:40:58 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,95 @@ public class TestReaderInputStream extends LockssTestCase {
       fail("Stream shouldn't be readable after close()");
     } catch (IOException e) {
     }
+  }
+
+  public void test8859() throws Exception {
+    compareBytes("a", "iso-8859-1");
+    compareBytes("abc", "iso-8859-1");
+    compareBytes("abcé", "iso-8859-1");
+    compareWithWriter("abc", "iso-8859-1");
+    compareEncodeDecode("abéèôfoo", "iso-8859-1");
+  }
+
+  public void testUtf8() throws Exception {
+    compareBytes("a", "utf-8");
+    compareBytes("abc", "utf-8");
+    compareBytes("abcé", "utf-8");
+    compareWithWriter("abc", "utf-8");
+    compareEncodeDecode("abéèôfoo", "utf-8");
+  }
+
+  public void test16() throws Exception {
+    compareBytes("a", "utf-16");
+    compareWithWriter("a", "utf-16");
+    // Encoding produced by UTF-16 depends on buffer sizes so can't compare
+    // directly
+    compareEncodeDecode("ab", "utf-16");
+    compareEncodeDecode("abéèôfoo", "utf-16");
+  }
+
+  public void testReadZero() throws Exception {
+    ReaderInputStream r = new ReaderInputStream(new StringReader("abc"));
+    byte[] bytes = new byte[30];
+    // First read in zero bytes
+    r.read(bytes, 0, 0);
+    // Now read in the string
+    int readin = r.read(bytes, 0, 10);
+    // Make sure that the counts are the same
+    assertEquals("abc".getBytes().length, readin);
+  }
+
+  private void compareBytes(String s, String encoding) throws Exception {
+    byte[] expected = s.getBytes(encoding);
+        
+    ReaderInputStream r = new ReaderInputStream(
+						new StringReader(s), encoding);
+    for (int i = 0; i < expected.length; ++i) {
+      int expect = expected[i] & 0xFF;
+      int read = r.read();
+      if (expect != read) {
+	fail("Mismatch in ReaderInputStream at index " + i
+	     + " expecting " + expect + " got " + read + " for string "
+	     + s + " with encoding " + encoding);
+      }
+    }
+    if (r.read() != -1) {
+      fail("Mismatch in ReaderInputStream - EOF not seen for string "
+	   + s + " with encoding " + encoding);
+    }
+  }
+
+  private void compareWithWriter(String s, String encoding) throws Exception {
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    Writer wrtr = new OutputStreamWriter(baos, encoding);
+    wrtr.write(s);
+    wrtr.flush();
+    byte[] expected = baos.toByteArray();
+    log.info("String: " + s + ", " + encoding + " writer len: " + expected.length);
+        
+    ReaderInputStream r = new ReaderInputStream(new StringReader(s), encoding);
+    for (int i = 0; i < expected.length; ++i) {
+      int expect = expected[i] & 0xFF;
+      int read = r.read();
+      if (expect != read) {
+	fail("Mismatch in ReaderInputStream at index " + i
+	     + " expecting " + expect + " got " + read + " for string "
+	     + s + " with encoding " + encoding);
+      }
+    }
+    if (r.read() != -1) {
+      fail("Mismatch in ReaderInputStream - EOF not seen for string "
+	   + s + " with encoding " + encoding);
+    }
+  }
+
+  private void compareEncodeDecode(String s, String encoding) throws Exception {
+    Reader rdr =
+      new InputStreamReader(new ReaderInputStream(new StringReader(s),
+						  encoding),
+			    encoding);
+    String s2 = StringUtil.fromReader(rdr);
+    assertEquals(s, s2);
   }
 
 }
