@@ -1,11 +1,11 @@
 <map>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.46.0</string>
+    <string>1.27.0</string>
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>12</string>
+    <string>13</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -89,6 +89,7 @@
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
   </entry>
+<!--
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
@@ -102,4 +103,5 @@
       </entry>
     </map>
   </entry>
+-->
 </map>

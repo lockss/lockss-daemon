@@ -1,8 +1,10 @@
 <map>
+<!--
   <entry>
     <string>required_daemon_version</string>
     <string>1.46.0</string>
   </entry>
+-->
   <entry>
     <string>plugin_identifier</string>
     <string>org.lockss.plugin.bioone.BioOnePlugin</string>
@@ -17,7 +19,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>6</string>
+    <string>7</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -97,6 +99,7 @@
     <string>plugin_default_article_mime_type</string>
     <string>text/html</string>
   </entry>
+<!--
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.bioone.BioOneArticleIteratorFactory</string>
@@ -110,4 +113,5 @@
       </entry>
     </map>
   </entry>
+-->
 </map>
