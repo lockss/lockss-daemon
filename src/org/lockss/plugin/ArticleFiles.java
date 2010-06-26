@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.3 2010-06-23 02:42:56 thib_gc Exp $
+ * $Id: ArticleFiles.java,v 1.4 2010-06-26 00:25:52 thib_gc Exp $
  */
 
 /*
@@ -46,13 +46,22 @@ public class ArticleFiles {
    * applicable */
   public static final String ROLE_ABSTRACT = "Abstract";
   
-  /** Role for the CU representing the article's citations,
+  /** Role for the CU representing the article's references,
    * if different from the full text HTML */
-  public static final String ROLE_CITATIONS = "Citations";
+  public static final String ROLE_REFERENCES = "References";
+  
+  /** Role for the CU representing a citation to this article,
+   * if applicable. Intended as a prefix, if multiple MIME types for
+   * this role are present. */
+  public static final String ROLE_CITATION = "Citation";
   
   /** Role for the CU representing the article's supplementary
    * materials, if applicable */
   public static final String ROLE_SUPPLEMENTARY_MATERIALS = "SupplementaryMaterials";
+  
+  /** Role for the CU representing the article's figures and tables,
+   * if there is a single CU just for them */
+  public static final String ROLE_FIGURES_TABLES = "FiguresTables";
   
   /** Role for the CU representing the article's full text HTML */
   public static final String ROLE_FULL_TEXT_HTML = "FullTextHtml";

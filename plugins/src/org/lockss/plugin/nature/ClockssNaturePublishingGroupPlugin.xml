@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>19</string>
+    <string>20</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -21,11 +21,11 @@
   </entry>
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.nature.NatureArticleIteratorFactory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.nature.NatureArticleIteratorFactory</string>
+    <string>org.lockss.plugin.nature.NaturePublishingGroupArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
