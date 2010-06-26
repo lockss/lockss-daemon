@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>49</string>
+    <string>50</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -99,11 +99,11 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePdfFilterFactory</string>
   </entry>
+<!--
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.highwire.HighWireArticleIteratorFactory</string>
   </entry>
-<!--
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
     <string>org.lockss.plugin.highwire.HighWireArticleIteratorFactory</string>
