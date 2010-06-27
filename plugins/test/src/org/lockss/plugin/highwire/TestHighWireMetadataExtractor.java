@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.7 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.8 2010-06-27 07:50:25 thib_gc Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
   private static int fileSize = DEFAULT_FILESIZE;
 
   private static String PLUGIN_NAME =
-    "org.lockss.plugin.highwire.HighWireStrVolPlugin";
+    "org.lockss.plugin.highwire.ClockssHighWirePlugin";
 
   private static String BASE_URL = "http://www.jhc.org/";
   private static String SIM_ROOT = BASE_URL + "cgi/reprint/";

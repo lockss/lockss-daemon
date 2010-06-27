@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArticleIteratorFactory.java,v 1.5 2010-06-17 18:41:27 tlipkis Exp $
+ * $Id: TestHighWireArticleIteratorFactory.java,v 1.6 2010-06-27 07:50:25 thib_gc Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestHighWireArticleIteratorFactory extends LockssTestCase {
   private static int fileSize = DEFAULT_FILESIZE;
 
   private static String PLUGIN_NAME =
-    "org.lockss.plugin.highwire.HighWireStrVolPlugin";
+    "org.lockss.plugin.highwire.ClockssHighWirePlugin";
 
   private static String BASE_URL = "http://www.jhc.org/";
   private static String SIM_ROOT = BASE_URL + "cgi/reprint/";

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.8 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.9 2010-06-27 07:50:25 thib_gc Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     tagMap.put("bepress_citation_doi", "10.2202/%1%2%3%1-%3%2%1%2-%2%1%3%1");
   };
 
-  private static String PLUGIN_NAME = "org.lockss.plugin.bepress.BePressPlugin";
+  private static String PLUGIN_NAME = "org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin";
 
   private static String BASE_URL = "http://www.bepress.com/";
   private static String SIM_ROOT = BASE_URL + "xyzjn/";
