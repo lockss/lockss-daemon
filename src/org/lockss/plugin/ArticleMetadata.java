@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.1 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: ArticleMetadata.java,v 1.2 2010-06-28 23:19:59 pgust Exp $
  */
 
 /*
@@ -526,6 +526,20 @@ public class ArticleMetadata extends Properties {
   public void putAuthor(String author) {
     // XXX protocol?
     setProperty(KEY_AUTHOR, author);
+  }
+
+  /*
+   * Return the article URL.
+   */
+  public static final String KEY_ARTICLE_URL = "LOCKSS.article.url";
+  public String getArticleUrl() {
+    String ret = getProperty(KEY_ARTICLE_URL);
+    // XXX
+    return ret;
+  }
+  public void putArticleUrl(String articleUrl) {
+    // XXX protocol?
+    setProperty(KEY_ARTICLE_URL, articleUrl);
   }
 
   /*
