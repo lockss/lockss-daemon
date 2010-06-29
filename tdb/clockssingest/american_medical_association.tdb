@@ -201,31 +201,31 @@
     pluginSuffix = ClockssHighWirePlugin
     implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; comment[proxy] >
     
-    au < ClockssHighWirePlugin ; released ; 1999 ; Archives of Facial Plastic Surgery Volume 1 (H10) ; 1 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePlugin ; released ; 2000 ; Archives of Facial Plastic Surgery Volume 2 (H10) ; 2 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePlugin ; released ; 2001 ; Archives of Facial Plastic Surgery Volume 3 (H10) ; 3 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePlugin ; released ; 2002 ; Archives of Facial Plastic Surgery Volume 4 (H10) ; 4 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePlugin ; released ; 2003 ; Archives of Facial Plastic Surgery Volume 5 (H10) ; 5 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePlugin ; released ; 2004 ; Archives of Facial Plastic Surgery Volume 6 (H10) ; 6 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePlugin ; released ; 2005 ; Archives of Facial Plastic Surgery Volume 7 (H10) ; 7 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePlugin ; released ; 2006 ; Archives of Facial Plastic Surgery Volume 8 (H10) ; 8 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePlugin ; released ; 2007 ; Archives of Facial Plastic Surgery Volume 9 (H10) ; 9 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePlugin ; released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 (H10) ; 10 ; >
-    au < ClockssHighWirePlugin ; released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 (H10) ; 11 ; >
-    au < ClockssHighWirePlugin ; testing ; 2010 ; Archives of Facial Plastic Surgery Volume 12 (H10) ; 12 ;  >
+    au < ClockssHighWirePlugin ; superseded ; 1999 ; Archives of Facial Plastic Surgery Volume 1 [superseded] ; 1 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2000 ; Archives of Facial Plastic Surgery Volume 2 [superseded] ; 2 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2001 ; Archives of Facial Plastic Surgery Volume 3 [superseded] ; 3 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePlugin ; superseded ; 2002 ; Archives of Facial Plastic Surgery Volume 4 [superseded] ; 4 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePlugin ; superseded ; 2003 ; Archives of Facial Plastic Surgery Volume 5 [superseded] ; 5 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2004 ; Archives of Facial Plastic Surgery Volume 6 [superseded] ; 6 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2005 ; Archives of Facial Plastic Surgery Volume 7 [superseded] ; 7 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePlugin ; superseded ; 2006 ; Archives of Facial Plastic Surgery Volume 8 [superseded] ; 8 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePlugin ; superseded ; 2007 ; Archives of Facial Plastic Surgery Volume 9 [superseded] ; 9 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2008 ; Archives of Facial Plastic Surgery Volume 10 [superseded] ; 10 ; >
+    au < ClockssHighWirePlugin ; superseded ; 2009 ; Archives of Facial Plastic Surgery Volume 11 [superseded] ; 11 ; >
+    au < ClockssHighWirePlugin ; superseded ; 2010 ; Archives of Facial Plastic Surgery Volume 12 [superseded] ; 12 ;  >
 
-    au < ClockssHighWirePressH20Plugin ; manifest ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2003 ; Archives of Facial Plastic Surgery Volume 5 ; 5 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2004 ; Archives of Facial Plastic Surgery Volume 6 ; 6 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2005 ; Archives of Facial Plastic Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ;  >      
+    au < ClockssHighWirePressH20Plugin ; testing ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2003 ; Archives of Facial Plastic Surgery Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2004 ; Archives of Facial Plastic Surgery Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2005 ; Archives of Facial Plastic Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ;  >      
   }
 
   {
