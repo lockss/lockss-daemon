@@ -83,7 +83,7 @@ sub iterate_lines {
     
     foreach $k (0..@lines-1) {
 	
-	if ($lines[$k] =~ m/au\s*<\s*.*\s;\s(reTesting|released|ready|down|superseded)/) {
+	if ($lines[$k] =~ m/au\s*<\s*(.*\s;\s)?(reTesting|released|ready|down|superseded)/) {
 	    
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }
 	    
