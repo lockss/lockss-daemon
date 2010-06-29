@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.92 2010-05-27 06:59:07 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.93 2010-06-29 20:11:25 tlipkis Exp $
  */
 
 /*
@@ -751,6 +751,30 @@ public class StringUtil {
     }
   }
 
+  /** Reads line from a BuffereReader into a StringBuilder, interpreting
+   * backslash-newline as line-continuation, until either end-of-stream or
+   * maxSize chars read.  May read one more line beyond maxSize.  */
+  public static boolean readLinesWithContinuation(BufferedReader rdr,
+						  StringBuilder sb,
+						  int maxSize)
+      throws IOException {
+    while (true) {
+      String s = rdr.readLine();
+      if (s == null) {
+	return sb.length() != 0;
+      }
+      if (s.endsWith("\\")) {
+	sb.append(s, 0, s.length() - 1);
+	continue;
+      }
+      sb.append(s, 0, s.length());
+      sb.append("\n");
+      if (sb.length() >= maxSize) {
+	return true;
+      }
+    }
+  }
+
   /** Return a string with lines from a reader, separated by a newline character,
    * throwing if more than maxSize chars. Reader is wrapped with a reader
    * returned by {@link #getLineReader(Reader) before processing. 
@@ -873,6 +897,53 @@ public class StringUtil {
       return s2 == null;
     } else {
       return s1.equalsIgnoreCase(s2);
+    }
+  }
+
+  /** Shift n or fewer lines from the end of the buffer to the beginning,
+   * shortening the buffer to contain just those lines.
+   * @param sb the buffer
+   * @param lines the number of lines at the end of the buffer to shift.
+   * If there are fewer lines in the buffer, fewer lines will be shifted.
+   * If there's only one line in the buffer it will not be shifted. */
+  public static void shiftLinesUp(StringBuilder sb, int lines) {
+    if (lines <= 0) {
+      return;
+    }
+    int len = sb.length();
+    int lastpos = len - 1;
+    int pos;
+    while (lastpos > 0 && (pos = sb.lastIndexOf("\n", lastpos)) > 0) {
+      if (--lines < 0) {
+	copyChars(sb, pos + 1, 0, len - pos - 1);
+	sb.setLength(len - pos - 1);
+	return;
+      }
+      lastpos = pos - 1;
+    }
+    // Didn't find enough lines; copy fewer lines unless didn't find any
+    // newlines
+    if (lastpos < len - 2) {
+      copyChars(sb, lastpos + 2, 0, len - lastpos - 2);
+      sb.setLength(len - lastpos - 2);
+    }
+  }
+
+  /** Like System.arrayCopy, for characters within one StringBuilder.
+   * @param sb the buffer
+   * @param srcPos chars copied starting from here
+   * @param destPos chars copied starting to here
+   * @param len number of chars copied */
+  public static void copyChars(StringBuilder sb,
+			       int srcPos, int destPos, int len) {
+    if (srcPos > destPos) {
+      while (--len >= 0) {
+	sb.setCharAt(destPos++, sb.charAt(srcPos++));
+      }
+    } else {
+      for (int ix = len - 1; ix >= 0; ix--) {
+	sb.setCharAt(destPos + ix, sb.charAt(srcPos + ix));
+      }
     }
   }
 

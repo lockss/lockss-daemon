@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.77 2010-05-27 06:59:07 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.78 2010-06-29 20:11:25 tlipkis Exp $
  */
 
 /*
@@ -361,6 +361,28 @@ public class TestStringUtil extends LockssTestCase {
     assertLineSequence(ListUtil.list("foo\\bar"), "foo\\bar");
   }
 
+  void assertLinesSequence(List<String> exp, String str, int maxSize)
+      throws IOException {
+    BufferedReader rdr = new BufferedReader(new StringReader(str));
+    List<String> act = new ArrayList<String>();
+    StringBuilder sb = new StringBuilder();
+    while (StringUtil.readLinesWithContinuation(rdr, sb, maxSize)) {
+      act.add(sb.toString());
+      sb.setLength(0);
+    }
+    assertEquals(exp, act);
+  }
+
+  public void testReadLinesWithContinuation() throws Exception {
+    assertLinesSequence(ListUtil.list(), "", 1);
+    assertLinesSequence(ListUtil.list(" \n"), " ", 10);
+    assertLinesSequence(ListUtil.list("foo\nbar\n"), "foo\nbar", 100);
+    assertLinesSequence(ListUtil.list("foo\nbar\n"), "foo\nbar\n", 100);
+    assertLinesSequence(ListUtil.list("foo\n", "bar\n"), "foo\nbar", 3);
+    assertLinesSequence(ListUtil.list("foo\n", "bar\n"), "foo\nbar\n", 3);
+    assertLinesSequence(ListUtil.list("foo\n", "bar\n"), "fo\\\no\nbar\n", 3);
+  }
+
   public void testFromReader() throws Exception {
     Reader r = new InputStreamReader(new StringInputStream(sbefore));
     assertEquals(safter, StringUtil.fromReader(r));
@@ -369,7 +391,7 @@ public class TestStringUtil extends LockssTestCase {
   String makeTestString(int approxLen) {
     String s = "a\nsdfjsfdsdfkljasdlkjasdflkjasdlfkjasdflkjasldkfjasd";
     if (s.length() >= approxLen) return s;
-    StringBuffer sb = new StringBuffer(approxLen + 100);
+    StringBuilder sb = new StringBuilder(approxLen + 100);
     while (sb.length() < approxLen) {
       sb.append(s);
     }
@@ -434,6 +456,46 @@ public class TestStringUtil extends LockssTestCase {
     assertTrue(StringUtil.isNullString(""));
     assertTrue(StringUtil.isNullString(new String()));
     assertFalse(StringUtil.isNullString(" "));
+  }
+
+  void assertCopy(String exp, String orig, int from, int to, int len) {
+    StringBuilder sb = new StringBuilder(orig);
+    StringUtil.copyChars(sb, from, to, len);
+    assertEquals(exp, sb.toString());
+  }
+
+  public void testCopyChars() {
+    assertCopy("foo", "foo", 0, 0, 0);
+    assertCopy("foofoo", "barfoo", 3, 0, 3);
+    assertCopy("barbar", "barfoo", 0, 3, 3);
+    assertCopy("bfoooo", "barfoo", 3, 1, 3);
+    assertCopy("bfofoo", "barfoo", 3, 1, 2);
+    assertCopy("bararf", "barfoo", 1, 3, 3);
+    assertCopy("bararo", "barfoo", 1, 3, 2);
+  }
+
+  void assertShift(String exp, String orig, int lines) {
+    StringBuilder sb = new StringBuilder(orig);
+    StringUtil.shiftLinesUp(sb, lines);
+    assertEquals(exp, sb.toString());
+  }
+
+  public void testShiftLinesUp() {
+    assertShift("foo", "foo", 0);
+    assertShift("five\n",
+		"one\ntwo\nthree\nfour\nfive\n", 1);
+    assertShift("four\nfive\n",
+		"one\ntwo\nthree\nfour\nfive\n", 2);
+    assertShift("three\nfour\nfive\n",
+		"one\ntwo\nthree\nfour\nfive\n", 3);
+    assertShift("two\nthree\nfour\nfive\n",
+		"one\ntwo\nthree\nfour\nfive\n", 4);
+    assertShift("two\nthree\nfour\nfive\n",
+		"one\ntwo\nthree\nfour\nfive\n", 5);
+    assertShift("two\nthree\nfour\nfive\n",
+		"one\ntwo\nthree\nfour\nfive\n", 6);
+    assertShift("onelongline\n", "onelongline\n", 1);
+    assertShift("onelongline", "onelongline", 1);
   }
 
   public void testGensym() {
