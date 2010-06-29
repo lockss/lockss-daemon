@@ -75,8 +75,6 @@ sub iterate_lines {
     my $source_location = shift();
     my $dest_location = shift();
     my $write_to = shift();
-
-print $source_location."\n".$dest_location."\n".$write_to."\n";
     
     open (INPUT, $source_location) || die "Can't open $source_location: $!";
     open (OUTPUT, ">$dest_location") || die "Can't open $dest_location: $!";
