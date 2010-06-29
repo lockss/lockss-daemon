@@ -65,7 +65,6 @@ if ($ARGV[0] eq "-h") {
     my $source_location = abs_path($ARGV[0]);
     my $dest_location = $source_location;
     $dest_location =~ s/clockssingest/clockss/i;
-    
     iterate_lines ($source_location, $dest_location, "tofile");      
 }
 
@@ -76,6 +75,8 @@ sub iterate_lines {
     my $source_location = shift();
     my $dest_location = shift();
     my $write_to = shift();
+
+print $source_location."\n".$dest_location."\n".$write_to."\n";
     
     open (INPUT, $source_location) || die "Can't open $source_location: $!";
     open (OUTPUT, ">$dest_location") || die "Can't open $dest_location: $!";
@@ -84,7 +85,7 @@ sub iterate_lines {
     
     foreach $k (0..@lines-1) {
 	
-	if ($lines[$k] =~ m/au\s*<\s*(reTesting|released|ready|down|superseded)/) {
+	if ($lines[$k] =~ m/au\s*<\s*.*\s;\s(reTesting|released|ready|down|superseded)/) {
 	    
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }
 	    
