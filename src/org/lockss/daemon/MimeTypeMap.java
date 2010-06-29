@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.7 2010-05-27 07:00:01 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.7.2.1 2010-06-29 20:10:42 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class MimeTypeMap {
   public static final String PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY =
     PREFIX + "defaultCssExtractorFactory";
   public static final String DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY =
-    "org.lockss.extractor.FluteCssLinkExtractor$Factory";
+    "org.lockss.extractor.RegexpCssLinkExtractor$Factory";
 
   private static MimeTypeInfo.Mutable HTML = new MimeTypeInfo.Impl();
   private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
@@ -83,7 +83,7 @@ public class MimeTypeMap {
     LinkExtractorFactory fact =
       (LinkExtractorFactory)newFact(className,
 				    LinkExtractorFactory.class,
-				    new FluteCssLinkExtractor.Factory());
+				    new RegexpCssLinkExtractor.Factory());
     mti.setLinkExtractorFactory(fact);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.23 2010-06-15 14:48:48 pgust Exp $
+ * $Id: TestBasePlugin.java,v 1.23.2.1 2010-06-29 20:10:42 tlipkis Exp $
  */
 
 /*
@@ -216,7 +216,7 @@ public class TestBasePlugin extends LockssTestCase {
     assertNull(mti.getCrawlFilterFactory());
     mti = mbp.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
-	       instanceof FluteCssLinkExtractor.Factory);
+	       instanceof RegexpCssLinkExtractor.Factory);
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
 

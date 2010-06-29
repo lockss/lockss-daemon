@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.34 2010-06-22 01:00:18 thib_gc Exp $
+ * $Id: TestDefinablePlugin.java,v 1.34.2.1 2010-06-29 20:10:42 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertNull(mti.getFileMetadataExtractorFactory());
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
-	       instanceof FluteCssLinkExtractor.Factory);
+	       instanceof RegexpCssLinkExtractor.Factory);
     assertTrue(mti.getLinkRewriterFactory()
 	       instanceof StringFilterCssLinkRewriterFactory);
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
@@ -137,7 +137,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
-	       instanceof FluteCssLinkExtractor.Factory);
+	       instanceof RegexpCssLinkExtractor.Factory);
     assertNull(mti.getFetchRateLimiter());
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertTrue(mti.getHashFilterFactory()
@@ -160,7 +160,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertNull(mti.getFileMetadataExtractorFactory());
     mti = p2.getMimeTypeInfo("text/css");
     assertTrue(mti.getLinkExtractorFactory()
-	       instanceof FluteCssLinkExtractor.Factory);
+	       instanceof RegexpCssLinkExtractor.Factory);
     assertTrue(mti.getLinkRewriterFactory()
 	       instanceof StringFilterCssLinkRewriterFactory);
 
