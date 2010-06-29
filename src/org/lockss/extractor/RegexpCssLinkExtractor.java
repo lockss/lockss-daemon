@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkExtractor.java,v 1.2 2010-06-22 08:59:32 tlipkis Exp $
+ * $Id: RegexpCssLinkExtractor.java,v 1.2.2.1 2010-06-29 20:10:00 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
   private static final Logger log = Logger.getLogger("RegexpCssLinkExtractor");
   
   private static final int MAX_URL_LENGTH = 2100;
+  private static final int DEFAULT_MAX_BUF = 32 * 1024;
 
   // Adapted from Heritrix's ExtractorCSS
   private static final String CSS_URI_EXTRACTOR =    
@@ -65,6 +66,15 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
   private static Pattern CSS_BACKSLASH_PAT =
     Pattern.compile(CSS_BACKSLASH_ESCAPE);
 
+  private int maxBuf = DEFAULT_MAX_BUF;
+
+  public RegexpCssLinkExtractor() {
+  }
+
+  public RegexpCssLinkExtractor(int maxBuf) {
+    this.maxBuf = maxBuf;
+  }
+
   /* Inherit documentation */
   public void extractUrls(ArchivalUnit au,
                           InputStream in,
@@ -81,12 +91,18 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
     }
     URL baseUrl = new URL(srcUrl);
 
-    String line;
+    // This needs a regexp matcher that can match against a Reader.
+    // Interim solution is to loop reading lines into a StringBuilder,
+    // matching, shifting the last few lines to the beginning of the buffer
+    // and refilling.  Can miss URLs in pathological situations
+    // (excessively long single-line CSS files).
+
     BufferedReader rdr =
       new BufferedReader(StringUtil.getLineReader(in, encoding));
+    StringBuilder sb = new StringBuilder();
     try {
-      while ((line = StringUtil.readLineWithContinuation(rdr)) != null) {
-	Matcher m1 = CSS_URL_PAT.matcher(line);
+      while (StringUtil.readLinesWithContinuation(rdr, sb, maxBuf)) {
+	Matcher m1 = CSS_URL_PAT.matcher(sb);
 	while (m1.find()) {
 	  String url = processUrlEscapes(m1.group(2));
 	  if (!StringUtil.isNullString(url)) {
@@ -101,6 +117,19 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
 			    + ": " + e.toString());
 	    }
 	  }
+	}
+	int sblen = sb.length();
+	if (sblen < maxBuf) {
+	  break;
+	}
+	// Move the last 4 lines to the beginning
+	StringUtil.shiftLinesUp(sb, 4);
+	if (sblen == sb.length() && sblen >= maxBuf) {
+	  // if buffer is still full it must be one line long; shift half
+	  // the chars up
+	  int half = sblen / 2;
+	  StringUtil.copyChars(sb, half, 0, sblen - half);
+	  sb.setLength(sblen - half);
 	}
       }
     } finally {

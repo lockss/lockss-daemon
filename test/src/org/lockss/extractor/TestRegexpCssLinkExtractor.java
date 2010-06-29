@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpCssLinkExtractor.java,v 1.2 2010-06-22 08:59:32 tlipkis Exp $
+ * $Id: TestRegexpCssLinkExtractor.java,v 1.2.2.1 2010-06-29 20:10:00 tlipkis Exp $
  */
 
 /*
@@ -83,10 +83,10 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
     doTestOneUrl("bar { foo: url(\'", url, "\'); }", url);
     doTestOneUrl("bar { foo: url(\"", url, "\"); }", url);
 
-//     // newlines
-//     doTestOneUrl("@import\nurl(\'", url, "\');", url);
-//     doTestOneUrl("@import url(\n\'", url, "\');", url);
-//     doTestOneUrl("@import \n url(\n\'", url, "\'\n);", url);
+    // newlines
+    doTestOneUrl("@import\nurl(\'", url, "\');", url);
+    doTestOneUrl("@import url(\n\'", url, "\');", url);
+    doTestOneUrl("@import \n url(\n\'", url, "\'\n);", url);
   }
   
   public void testHandlesInputWithNoUrls() throws Exception {
@@ -138,20 +138,21 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
     String url5 = "img5.gif";
     String url6 = "img6.gif";
     String url7 = "img7.gif";
+    String url8 = "img8.gif";
 
     String source =
       "@import url(" + url0 + ");\n" +
-      "@import url(\'" + url1 + "\');\n" +
+      "@import url(\'" + url1 + "\'); " + // no newline
       "@import url(  \"" + url2 + "\"  );\n" +
       "@import \'" + url3 + "\';\n" +
       "@import \'" + url3a + "\';\n" +
       "@import \"" + givenPrefix + url4 + "\";\n" +
       "foo {\n" +
-      " bar: url(\'" + givenPrefix + url5 + "\');\n" +
+      " bar: url(\n\'" + givenPrefix + url5 + "\');\n" + // embedded newline
       " baz: url(\"" + givenPrefix + "\\\n" + url6 + "\");\n" +
       " baq: url(  " + givenPrefix + url7 + "  );\n" +
       "}\n" +
-      "/* Comment */\n";
+      "/* Comment */ url(" + url8 + ");\n";
     
     assertEquals(SetUtil.set(expectedPrefix + url0,
                              expectedPrefix + url1,
@@ -161,10 +162,20 @@ public class TestRegexpCssLinkExtractor extends LinkExtractorTestCase {
                              givenPrefix + url4,
                              givenPrefix + url5,
                              givenPrefix + url6,
-                             givenPrefix + url7),
+                             givenPrefix + url7,
+                             expectedPrefix + url8),
                  extractUrls(source));
   }
-  
+
+  public void testCssFragmentSmallBuf() throws Exception {
+    extractor = new RegexpCssLinkExtractor(10);
+    testCssFragment();
+    extractor = new RegexpCssLinkExtractor(20);
+    testCssFragment();
+    extractor = new RegexpCssLinkExtractor(40);
+    testCssFragment();
+  }
+
   public void testMalformedUrl() throws Exception {
     String badUrl = "unknown://www.bad.url/foo.gif";
     
