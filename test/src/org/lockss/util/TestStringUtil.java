@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.78 2010-06-29 20:11:25 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.79 2010-07-01 04:04:38 tlipkis Exp $
  */
 
 /*
@@ -336,7 +336,31 @@ public class TestStringUtil extends LockssTestCase {
   static final String safter =  "Here is some weird text. It has \n\n\n\n\n newlines.";
 
   public void testGetLineReader() throws Exception {
-    this.assertReaderMatchesString(safter, StringUtil.getLineReader(new StringReader(sbefore)));
+    assertReaderMatchesString(safter, StringUtil.getLineReader(new StringReader(sbefore)));
+  }
+
+  void testGetLineContinuationReader(String exp, String src,
+				     int bufmin, int bufmax)
+      throws IOException {
+    for (int size = bufmin; size <= bufmax; size++) {
+      Reader rdr = new StringReader(src);
+      assertReaderMatchesString(exp,
+				StringUtil.getLineContinuationReader(rdr),
+				size);
+    }
+  }
+
+  public void testGetLineContinuationReader() throws Exception {
+    // important to test all the buffer size edge cases
+    testGetLineContinuationReader("abc", "abc", 1, 4);
+    testGetLineContinuationReader("a\nbc", "a\nbc", 1, 5);
+    testGetLineContinuationReader("abc", "a\\\nbc", 1, 5);
+    testGetLineContinuationReader("abc", "\\\nabc", 1, 5);
+    testGetLineContinuationReader("abc", "\\\nabc\\\n", 1, 7);
+    testGetLineContinuationReader("a\nbc", "a\\\n\nbc", 1, 6);
+    testGetLineContinuationReader("a\nbc", "a\n\\\nbc", 1, 6);
+    testGetLineContinuationReader("a\\bc", "a\\bc", 1, 5);
+    testGetLineContinuationReader("a\\\\bc", "a\\\\bc", 1, 6);
   }
 
   void assertLineSequence(List<String> exp, String str) throws IOException {
@@ -414,6 +438,20 @@ public class TestStringUtil extends LockssTestCase {
     }
   }
 
+  public void testFillFromReader() throws Exception {
+    String s = makeTestString(10000);
+    int slen = s.length();
+    Reader r = new StringReader(s);
+    StringBuilder sb = new StringBuilder();
+    assertTrue(StringUtil.fillFromReader(r, sb, 1000));
+    assertEquals(1000, sb.length());
+    assertTrue(StringUtil.fillFromReader(r, sb, 1000));
+    assertEquals(2000, sb.length());
+    assertTrue(StringUtil.fillFromReader(r, sb, 1000000));
+    assertEquals(slen, sb.length());
+    assertEquals(s, sb.toString());
+  }
+
   public void testFromInputStream() throws Exception {
     String s = "asdfjsfd";
     assertEquals(s, StringUtil.fromInputStream(new StringInputStream(s)));
@@ -472,30 +510,6 @@ public class TestStringUtil extends LockssTestCase {
     assertCopy("bfofoo", "barfoo", 3, 1, 2);
     assertCopy("bararf", "barfoo", 1, 3, 3);
     assertCopy("bararo", "barfoo", 1, 3, 2);
-  }
-
-  void assertShift(String exp, String orig, int lines) {
-    StringBuilder sb = new StringBuilder(orig);
-    StringUtil.shiftLinesUp(sb, lines);
-    assertEquals(exp, sb.toString());
-  }
-
-  public void testShiftLinesUp() {
-    assertShift("foo", "foo", 0);
-    assertShift("five\n",
-		"one\ntwo\nthree\nfour\nfive\n", 1);
-    assertShift("four\nfive\n",
-		"one\ntwo\nthree\nfour\nfive\n", 2);
-    assertShift("three\nfour\nfive\n",
-		"one\ntwo\nthree\nfour\nfive\n", 3);
-    assertShift("two\nthree\nfour\nfive\n",
-		"one\ntwo\nthree\nfour\nfive\n", 4);
-    assertShift("two\nthree\nfour\nfive\n",
-		"one\ntwo\nthree\nfour\nfive\n", 5);
-    assertShift("two\nthree\nfour\nfive\n",
-		"one\ntwo\nthree\nfour\nfive\n", 6);
-    assertShift("onelongline\n", "onelongline\n", 1);
-    assertShift("onelongline", "onelongline", 1);
   }
 
   public void testGensym() {
