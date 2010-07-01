@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.2 2010-06-28 23:19:59 pgust Exp $
+ * $Id: ArticleMetadata.java,v 1.3 2010-07-01 18:55:55 pgust Exp $
  */
 
 /*
@@ -40,16 +40,11 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.state.*;
-import org.lockss.poller.*;
-import org.lockss.repository.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.plugin.definable.*;
 
 /**
  * Collect and search metadata, supporting metadata-based access to content.
  */
+@SuppressWarnings("serial")
 public class ArticleMetadata extends Properties {
   private static Logger log = Logger.getLogger("Metadata");
 
@@ -531,15 +526,15 @@ public class ArticleMetadata extends Properties {
   /*
    * Return the article URL.
    */
-  public static final String KEY_ARTICLE_URL = "LOCKSS.article.url";
-  public String getArticleUrl() {
-    String ret = getProperty(KEY_ARTICLE_URL);
+  public static final String KEY_ACCESS_URL = "LOCKSS.access.url";
+  public String getAccessUrl() {
+    String ret = getProperty(KEY_ACCESS_URL);
     // XXX
     return ret;
   }
-  public void putArticleUrl(String articleUrl) {
+  public void putAccessUrl(String articleUrl) {
     // XXX protocol?
-    setProperty(KEY_ARTICLE_URL, articleUrl);
+    setProperty(KEY_ACCESS_URL, articleUrl);
   }
 
   /*
