@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.92.2.1 2010-06-29 20:09:42 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.92.2.2 2010-07-01 04:02:54 tlipkis Exp $
  */
 
 /*
@@ -723,6 +723,71 @@ public class StringUtil {
     return getLineReader(StreamUtil.getReader(in, encoding));
   }
 
+  /** Return a reader that removes backslash-newline sequences
+   * (line-continuation)
+   * @param r a Reader
+   * @return a filtered reader that removes line-continuation sequences
+   */
+  public static Reader getLineContinuationReader(final Reader r) {
+    return new Reader() {
+      boolean saw_bslash = false;
+      final char[] cb = new char[1];
+      int lastch = -1;
+      public int read(char cbuf[], int off, int len) throws IOException {
+        int i;
+        int n = 0;
+	int endoff = off + len;
+	while (off < endoff) {
+	  // if have a character waiting, emit it
+	  if (lastch >= 0) {
+	    cbuf[off++] = (char)lastch;
+	    lastch = -1;
+	  } else {
+	    if ((n = r.read(cb, 0, 1)) <= 0) {
+	      // end of input.  do we have a hanging backslash?
+	      if (saw_bslash) {
+		cbuf[off++] = '\\';
+		saw_bslash = false;
+	      }
+	      break;
+	    }
+	    switch (cb[0]) {
+	    case '\\':
+	      if (saw_bslash) {
+		// if already seen a backslash, output that one
+		cbuf[off++] = '\\';
+	      } else {
+		saw_bslash = true;
+	      }
+	      break;
+	    case '\n':
+	      if (saw_bslash) {
+		saw_bslash = false;
+	      } else {
+		cbuf[off++] = cb[0];
+	      }
+	      break;
+	    default:
+	      if (saw_bslash) {
+		cbuf[off++] = '\\';
+		saw_bslash = false;
+		lastch = cb[0];
+	      } else {
+		cbuf[off++] = cb[0];
+	      }
+	      break;
+	    }
+	  }
+        }
+        int nread = len - (endoff - off);
+	return nread == 0 ? -1 : nread;
+      }
+      public void close() throws IOException {
+        r.close();
+      }
+    };
+  }
+  
   /** Reads a line from a BuffereReader, interpreting backslash-newline as
    * line-continuation. */
   public static String readLineWithContinuation(BufferedReader rdr)
@@ -791,6 +856,26 @@ public class StringUtil {
       }
     }
     return sb.toString();
+  }
+
+  /** Read chars from a Reader into a StringBuilder up to maxSize.
+   * @param r the Reader to read from
+   * @param sb the StringBuilder to fill
+   * @param maxChars maximum number of chars to read
+   * @return true if anything was read (false if reader was already at
+   * eof) */
+  public static boolean fillFromReader(Reader r, StringBuilder sb, int maxChars)
+      throws IOException {
+    char[] buf = new char[1000];
+    int tot = 0;
+    int len;
+    while (tot < maxChars
+	   && (len = r.read(buf, 0,
+			    Math.min(buf.length, maxChars - tot))) >= 0) {
+      sb.append(buf, 0, len);
+      tot += len;
+    }
+    return tot != 0;
   }
 
   /** Return a string with lines from a reader, separated by a newline character.
@@ -900,35 +985,6 @@ public class StringUtil {
     }
   }
 
-  /** Shift n or fewer lines from the end of the buffer to the beginning,
-   * shortening the buffer to contain just those lines.
-   * @param sb the buffer
-   * @param lines the number of lines at the end of the buffer to shift.
-   * If there are fewer lines in the buffer, fewer lines will be shifted.
-   * If there's only one line in the buffer it will not be shifted. */
-  public static void shiftLinesUp(StringBuilder sb, int lines) {
-    if (lines <= 0) {
-      return;
-    }
-    int len = sb.length();
-    int lastpos = len - 1;
-    int pos;
-    while (lastpos > 0 && (pos = sb.lastIndexOf("\n", lastpos)) > 0) {
-      if (--lines < 0) {
-	copyChars(sb, pos + 1, 0, len - pos - 1);
-	sb.setLength(len - pos - 1);
-	return;
-      }
-      lastpos = pos - 1;
-    }
-    // Didn't find enough lines; copy fewer lines unless didn't find any
-    // newlines
-    if (lastpos < len - 2) {
-      copyChars(sb, lastpos + 2, 0, len - lastpos - 2);
-      sb.setLength(len - lastpos - 2);
-    }
-  }
-
   /** Like System.arrayCopy, for characters within one StringBuilder.
    * @param sb the buffer
    * @param srcPos chars copied starting from here
@@ -940,9 +996,9 @@ public class StringUtil {
       while (--len >= 0) {
 	sb.setCharAt(destPos++, sb.charAt(srcPos++));
       }
-    } else {
-      for (int ix = len - 1; ix >= 0; ix--) {
-	sb.setCharAt(destPos + ix, sb.charAt(srcPos + ix));
+    } else if (srcPos < destPos) {
+      while (--len >= 0) {
+	sb.setCharAt(destPos + len, sb.charAt(srcPos + len));
       }
     }
   }
