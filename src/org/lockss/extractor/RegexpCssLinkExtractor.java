@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkExtractor.java,v 1.2.2.1 2010-06-29 20:10:00 tlipkis Exp $
+ * $Id: RegexpCssLinkExtractor.java,v 1.2.2.2 2010-07-01 04:03:16 tlipkis Exp $
  */
 
 /*
@@ -43,12 +43,18 @@ import org.lockss.util.*;
  * Extracts links from CSS by matching a regular expression.  Processes
  * backslash-escaped URL chars (parentheses, commas, whitespace, single and
  * double quotes) but not numeric escapes.  Illegal URLs are ignored.
+ *
+ * This implementation may miss pathological cases where huge amounts of
+ * whitespace make a single statement larger than the buffer overlap.
  */
 public class RegexpCssLinkExtractor implements LinkExtractor {
   private static final Logger log = Logger.getLogger("RegexpCssLinkExtractor");
   
   private static final int MAX_URL_LENGTH = 2100;
+  // Amount of CSS input to buffer up for matcher
   private static final int DEFAULT_MAX_BUF = 32 * 1024;
+  // Amount and end of buffer to rescan at beginning of next bufferfull
+  private static final int DEFAULT_OVERLAP = 2 * 1024;
 
   // Adapted from Heritrix's ExtractorCSS
   private static final String CSS_URI_EXTRACTOR =    
@@ -68,11 +74,14 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
 
   private int maxBuf = DEFAULT_MAX_BUF;
 
+  private int overlap = DEFAULT_OVERLAP;
+
   public RegexpCssLinkExtractor() {
   }
 
-  public RegexpCssLinkExtractor(int maxBuf) {
+  public RegexpCssLinkExtractor(int maxBuf, int overlap) {
     this.maxBuf = maxBuf;
+    this.overlap = overlap;
   }
 
   /* Inherit documentation */
@@ -92,16 +101,15 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
     URL baseUrl = new URL(srcUrl);
 
     // This needs a regexp matcher that can match against a Reader.
-    // Interim solution is to loop reading lines into a StringBuilder,
-    // matching, shifting the last few lines to the beginning of the buffer
-    // and refilling.  Can miss URLs in pathological situations
-    // (excessively long single-line CSS files).
+    // Interim solution is to loop matching against a rolling fixed-length
+    // chunk of input, with overlaps between chunks.  Can miss URLs in
+    // pathological situations.
 
-    BufferedReader rdr =
-      new BufferedReader(StringUtil.getLineReader(in, encoding));
+    Reader rdr = new BufferedReader(StringUtil.getLineReader(in, encoding));
+    rdr = StringUtil.getLineContinuationReader(rdr);
     StringBuilder sb = new StringBuilder();
     try {
-      while (StringUtil.readLinesWithContinuation(rdr, sb, maxBuf)) {
+      while (StringUtil.fillFromReader(rdr, sb, maxBuf - sb.length())) {
 	Matcher m1 = CSS_URL_PAT.matcher(sb);
 	while (m1.find()) {
 	  String url = processUrlEscapes(m1.group(2));
@@ -122,15 +130,10 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
 	if (sblen < maxBuf) {
 	  break;
 	}
-	// Move the last 4 lines to the beginning
-	StringUtil.shiftLinesUp(sb, 4);
-	if (sblen == sb.length() && sblen >= maxBuf) {
-	  // if buffer is still full it must be one line long; shift half
-	  // the chars up
-	  int half = sblen / 2;
-	  StringUtil.copyChars(sb, half, 0, sblen - half);
-	  sb.setLength(sblen - half);
-	}
+	// Move the overlap amount to the beginning of the buffer
+	int shift = Math.min(overlap, maxBuf / 2);
+	StringUtil.copyChars(sb, sblen - shift, 0, shift);
+	sb.setLength(shift);
       }
     } finally {
       IOUtil.safeClose(rdr);
