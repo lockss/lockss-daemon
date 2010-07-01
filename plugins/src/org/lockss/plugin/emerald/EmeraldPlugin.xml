@@ -29,6 +29,8 @@
       <string>1,&quot;^%s.*\.(bmp|css|ico|gif|jpe?g|js|mol|png|tif?f)$&quot;, base_url</string>
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%scrawlers/lockss\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*&amp;nolog=[0-9]{6}&quot;, base_url, journal_issn, volume_name</string>
+      <string>2,&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s.*&amp;view=normal&quot;, base_url, journal_issn, volume_name</string>
       <string>1,&quot;^%sjournals\.htm\?issn=%s&amp;volume=%s&quot;, base_url, journal_issn, volume_name</string>
     </list>
   </entry>
@@ -71,4 +73,8 @@
     <string>text/html_filter_factory</string>
     <string>org.lockss.plugin.emerald.EmeraldHtmlFilterFactory</string>
   </entry>
+ <entry>
+   <string>text/css_link_extractor_factory</string>
+   <string>org.lockss.extractor.RegexpCssLinkExtractor$Factory</string>
+ </entry>
 </map>
