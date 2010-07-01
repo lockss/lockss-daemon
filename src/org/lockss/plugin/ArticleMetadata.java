@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.1 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: ArticleMetadata.java,v 1.1.2.1 2010-07-01 19:11:34 pgust Exp $
  */
 
 /*
@@ -40,16 +40,11 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.state.*;
-import org.lockss.poller.*;
-import org.lockss.repository.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.plugin.definable.*;
 
 /**
  * Collect and search metadata, supporting metadata-based access to content.
  */
+@SuppressWarnings("serial")
 public class ArticleMetadata extends Properties {
   private static Logger log = Logger.getLogger("Metadata");
 
@@ -526,6 +521,34 @@ public class ArticleMetadata extends Properties {
   public void putAuthor(String author) {
     // XXX protocol?
     setProperty(KEY_AUTHOR, author);
+  }
+
+  /*
+   * Return the article access URL.
+   */
+  public static final String KEY_ACCESS_URL = "LOCKSS.access.url";
+  public String getAccessUrl() {
+    String ret = getProperty(KEY_ACCESS_URL);
+    // XXX
+    return ret;
+  }
+  public void putAccessUrl(String articleUrl) {
+    // XXX protocol?
+    setProperty(KEY_ACCESS_URL, articleUrl);
+  }
+
+  /*
+   * Return the article keywords
+   */
+  public static final String KEY_KEYWORDS = "LOCKSS.keywords";
+  public String getKeywords() {
+    String ret = getProperty(KEY_KEYWORDS);
+    // XXX
+    return ret;
+  }
+  public void putKeywords(String keywords) {
+    // XXX protocol?
+    setProperty(KEY_KEYWORDS, keywords);
   }
 
   /*
