@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneMetadataExtractor.java,v 1.4 2010-06-27 07:50:25 thib_gc Exp $
+ * $Id: TestBioOneMetadataExtractor.java,v 1.5 2010-07-02 10:44:15 dsferopoulos Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -138,46 +139,73 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     //assertEquals(28, count); // XXX Uncomment when iterators and extractors are back
   }
 
-  String goodDOI = "10.1640/0002-8444-99.2.61";
-  String goodVolume = "13";
-  String goodIssue = "4";
-  String goodStartPage = "123";
-  String goodEndPage = "134";
-  String goodOnlineISSN = "1234-5679";
-  String goodPrintISSN = "2345-567X";
-  String goodDate = "4/1/2000";
-  String goodAuthor = "Fred Bloggs";
-  String goodTitle = "Spurious Results";
-  String goodAbsUrl = "http://www.example.org/doi/abs/10.1640/0002-8444-99.2.61";
-  String goodHtmUrl = "http://www.example.org/doi/full/10.1640/0002-8444-99.2.61";
-  String goodPdfUrl = "http://www.example.org/doi/pdf/10.1640/0002-8444-99.2.61";
+  	String goodDOI = "10.1640/0002-8444-99.2.61";
+	String goodVolume = "13";
+	String goodIssue = "4";
+	String goodStartPage = "123";
+	String goodEndPage = "134";
+	String goodOnlineISSN = "1234-5679";
+	String goodPrintISSN = "2345-567X";
+	String goodDate = "2008-10-23";
+	String goodAuthor1 = "Fred Bloggs";
+	String goodAuthor2 = "Patr&#237;cia Hadler";
+	String goodAuthor3 = "Ana Maria Ribeiro";
+	String goodArticleTitle = "Spurious Results";
+	String goodJournalTitle = "Acta Chiropterologica";
+	String goodAbsUrl = "http://www.bioone.org/doi/abs/10.1640/0002-8444-99.2.61";
+	String goodHtmUrl = "http://www.bioone.org/doi/full/10.1640/0002-8444-99.2.61";
+	String goodPdfUrl = "http://www.bioone.org/doi/pdf/10.1640/0002-8444-99.2.61";
 
-  String goodContent =
-          "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" +
-                  "<p><strong>Print ISSN: </strong>" + goodPrintISSN + " </p>\n" +
-                  "<p><strong>Online ISSN: </strong>" + goodOnlineISSN + "</p>\n" +
-                  "<p><strong>Current: </strong>Apr 2009 : Volume " + goodVolume + " Issue " + goodIssue + "</p>\n" +
-                  "<span class=\"title\">\n" +
-                  "        \n" +
-                  "                pg(s) " + goodStartPage + "-" + goodEndPage + "\n" +
-                  "            \n" +
-                  "            </span>\n" +
-                  "    \n" +
-                  "</BODY></HTML>";
+	String goodContent = "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\">\n" +
+    "<head>\n" +
+    "    <title>\n" +
+    "        BioOne Online Journals\n" +
+    "        -\n" +
+    "        \n" +
+    "                "+goodArticleTitle+"\n"+					    
+    "            \n" +
+    "    </title>" +
+    "\n" +
+    "<link rel=\"schema.DC\" href=\"http://purl.org/DC/elements/1.0/\"></link><meta name=\"dc.Title\" content=\""+goodArticleTitle+"\"></meta><meta name=\"dc.Creator\" content=\" "+goodAuthor1+" \"></meta><meta name=\"dc.Creator\" content=\" "+goodAuthor2+" \"></meta><meta name=\"dc.Creator\" content=\" "+goodAuthor3+" \"></meta><meta name=\"dc.Date\" scheme=\"WTN8601\" content=\""+goodDate+"\"></meta>"+
+    "        <div class=\"clearFloats\">&nbsp;</div>\n" +
+    "         \n" +
+    "\n" +
+    "\n" +
+    " <h1 class=\"pageTitleNoRule\">"+goodJournalTitle+"</h1>\n" +
+    " "+
+    "        <p><strong>Print ISSN: </strong>"+goodPrintISSN+" </p>\n" +
+    "        \n" +
+    "        \n" +
+    "        <p><strong>Online ISSN: </strong>"+goodOnlineISSN+"</p>\n" +
+    "        \n" +
+    "        <p><strong>Current: </strong>Jun 2010 : Volume "+goodVolume+" Issue "+goodIssue+"</p>" +
+    "\n" +
+    "        / <span class=\"title\">\n" +
+    "        \n" +
+    "                pg(s) "+goodStartPage+"-"+goodEndPage+"\n" +
+    "            \n" +
+    "            </span>"+
+    "    \n" + "</BODY></HTML>";
 
   public void testExtractFromGoodContent() throws Exception {
     ArticleMetadata md = extractFromTestContent(goodContent);
+    
     assertTrue(MetadataUtil.isDOI(md.getDOI()));
-    assertEquals(goodDOI, md.getDOI());
-    assertEquals(goodVolume, md.getVolume());
-    assertEquals(goodIssue, md.getIssue());
-    assertEquals(goodStartPage, md.getStartPage());
-    assertTrue(MetadataUtil.isISSN(md.getISSN()));
-    assertEquals(goodOnlineISSN, md.getISSN());
+	assertEquals(goodDOI, md.getDOI());				
+	assertEquals(goodVolume, md.getVolume());
+	assertEquals(goodIssue, md.getIssue());
+	assertEquals(goodStartPage, md.getStartPage());
+	assertTrue(MetadataUtil.isISSN(md.getISSN()));
+	assertEquals(goodOnlineISSN, md.getISSN());
+	String authors = StringEscapeUtils.unescapeHtml(goodAuthor1)+", "+StringEscapeUtils.unescapeHtml(goodAuthor2)+", "+StringEscapeUtils.unescapeHtml(goodAuthor3);
+	assertEquals(authors, md.getAuthor());
+	assertEquals(goodArticleTitle, md.getArticleTitle());
+	assertEquals(goodJournalTitle, md.getJournalTitle());
+	assertEquals(goodDate, md.getDate());
   }
 
   String badContent =
-          "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" +
+          "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" +
                   "<p><strong>ISSN: </strong>" + goodPrintISSN + " </p>\n" +
                   "<p><strong>ISSN: </strong>" + goodOnlineISSN + "</p>\n" +
                   "<p><strong>foo: </strong>Apr 2009 : Volume " + goodVolume + " Issue " + goodIssue + "</p>\n" +
