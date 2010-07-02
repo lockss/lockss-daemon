@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.3 2010-07-02 10:44:14 dsferopoulos Exp $
+ * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.4 2010-07-02 14:12:20 dsferopoulos Exp $
  */
 
 /*
@@ -69,16 +69,7 @@ public class BioOneHtmlMetadataExtractorFactory implements
 				throw new IllegalArgumentException("extract(null)");
 			}
 						
-			ArticleMetadata ret = super.extract(cu);
-			
-			String date = ret.getProperty("dc.Date");
-			String title = ret.getProperty("dc.Title");
-			if(date != null)
-				System.out.println("date: "+date);
-			if(title != null)
-				System.out.println("title: "+title);
-			//ret.putDate(date);
-			//ret.putArticleTitle(title);
+			ArticleMetadata ret = super.extract(cu);						
 			
 			// extract DOI from URL
 			addDOI(cu.getUrl(), ret);
