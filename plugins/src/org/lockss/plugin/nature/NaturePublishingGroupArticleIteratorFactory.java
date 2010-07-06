@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.2 2010-06-26 00:25:52 thib_gc Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.3 2010-07-06 23:34:16 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import java.util.regex.*;
 
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.SubTreeArticleIterator.Spec;
 import org.lockss.extractor.*;
 import org.lockss.daemon.PluginException;
 
@@ -46,7 +45,7 @@ public class NaturePublishingGroupArticleIteratorFactory
     implements ArticleIteratorFactory,
 	       ArticleMetadataExtractorFactory {
   
-  protected static Logger log = Logger.getLogger("NatureArticleIteratorFactory");
+  protected static Logger log = Logger.getLogger("NaturePublishingGroupArticleIteratorFactory");
 
   protected static final String ROOT_TEMPLATE = "\"%s%s/journal/v%s/\", base_url, journal_id, volume_name";
   
@@ -60,7 +59,6 @@ public class NaturePublishingGroupArticleIteratorFactory
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
-    
     return new NaturePublishingGroupArticleIterator(au, new SubTreeArticleIterator.Spec()
                                                         .setTarget(target)
                                                         .setRootTemplate(ROOT_TEMPLATE)
@@ -79,7 +77,8 @@ public class NaturePublishingGroupArticleIteratorFactory
     
     protected static Pattern PDF_PATTERN = Pattern.compile("/pdf/([^/]+)\\.pdf$", Pattern.CASE_INSENSITIVE);
     
-    protected NaturePublishingGroupArticleIterator(ArchivalUnit au, Spec spec) {
+    protected NaturePublishingGroupArticleIterator(ArchivalUnit au,
+                                                   SubTreeArticleIterator.Spec spec) {
       super(au, spec);
     }
 
@@ -147,7 +146,7 @@ public class NaturePublishingGroupArticleIteratorFactory
     protected void guessFigures(ArticleFiles af, Matcher mat) {
       CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/fig_tab/$1_ft.html"));
       if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+        af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
       }
     }
     
@@ -171,14 +170,19 @@ public class NaturePublishingGroupArticleIteratorFactory
 
     public ArticleMetadata extract(ArticleFiles af)
 	throws IOException, PluginException {
+      ArticleMetadata am = null;
       CachedUrl cu = af.getFullTextCu();
       if (cu != null) {
 	FileMetadataExtractor me = cu.getFileMetadataExtractor();
 	if (me != null) {
-	  return me.extract(cu);
+	  am = me.extract(cu);
 	}
       }
-      return null;
+      if (am == null) {
+        am = new ArticleMetadata();
+      }
+      am.put(ArticleMetadata.KEY_ACCESS_URL, cu.getUrl());
+      return am;
     }
   }
 }
