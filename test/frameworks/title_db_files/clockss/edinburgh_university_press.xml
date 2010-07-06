@@ -928,6 +928,28 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="BenJonsonJournal17">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Ben Jonson Journal" />
+   <property name="issn" value="1079-3453" />
+   <property name="eissn" value="1755-165X" />
+   <property name="title" value="Ben Jonson Journal Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="bjj" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="ComparativeCriticalStudies1">
    <property name="attributes.publisher" value="Edinburgh University Press" />
    <property name="journalTitle" value="Comparative Critical Studies" />
@@ -1390,6 +1412,28 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="DanceResearch28">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Dance Research" />
+   <property name="issn" value="0264-2875" />
+   <property name="eissn" value="1750-0095" />
+   <property name="title" value="Dance Research Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="drs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="DeleuzeStudies1">
    <property name="attributes.publisher" value="Edinburgh University Press" />
    <property name="journalTitle" value="Deleuze Studies" />
@@ -1520,6 +1564,28 @@
     <property name="value" value="2" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="DerridaToday3">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Derrida Today" />
+   <property name="issn" value="1754-8500" />
+   <property name="eissn" value="1754-8519" />
+   <property name="title" value="Derrida Today Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="drt" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
   <property name="EdinburghLawReview8">
