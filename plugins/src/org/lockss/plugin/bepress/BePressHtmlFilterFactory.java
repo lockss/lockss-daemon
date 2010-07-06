@@ -1,10 +1,10 @@
 /*
- * $Id: BePressHtmlFilterFactory.java,v 1.2 2009-08-24 23:39:26 thib_gc Exp $
+ * $Id: BePressHtmlFilterFactory.java,v 1.3 2010-07-06 23:03:21 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,8 @@ package org.lockss.plugin.bepress;
 
 import java.io.InputStream;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -44,35 +46,17 @@ public class BePressHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        
-        /*
-         * The top-right corner of all pages of a journal may contain
-         * a news item.
-         * 
-         * Remove <div id="news">
-         */
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "id",
-                                                                         "news")),
-        
-        /*
-         * In the right-hand column of every page, there is a drop-
-         * down box with a list of issues in this journal. This list
-         * changes forever as long as the journal is being published.
-         * It should be removed.
-         * 
-         * Remove <div id="url">
-         */
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("select",
-                                                                         "name",
-                                                                         "url")),
-
+    NodeFilter[] filters = new NodeFilter[] {
+        // News item in top-right corner of some journals
+        HtmlNodeFilters.tagWithAttribute("div", "id", "news"),
+        // Monotonically-growing drop-down list of issues
+        HtmlNodeFilters.tagWithAttribute("select", "name", "url"),
+        // Sidebar can contain short-term customizations (e.g. promos about special issues)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar"),
     };
-    
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     new HtmlCompoundTransform(transforms));
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }

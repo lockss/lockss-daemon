@@ -1,5 +1,5 @@
 /*
- * $Id: BePressArticleIteratorFactory.java,v 1.7 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: BePressArticleIteratorFactory.java,v 1.8 2010-07-06 23:03:21 thib_gc Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.bepress;
 import java.io.*;
 import java.util.*;
 import java.util.regex.*;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -44,52 +45,77 @@ import org.lockss.daemon.PluginException;
 public class BePressArticleIteratorFactory
   implements ArticleIteratorFactory,
 	     ArticleMetadataExtractorFactory {
-  static Logger log = Logger.getLogger("BePressArticleIteratorFactory");
-
-  /*
-   * The BePress URL structure means that the HTML for an article
-   * is normally at a URL like http://www.bepress.com/bis/vol3/iss3/art7
-   * but is sometimes at a URL like
-   * http://www.bepress.com/bejte/frontiers/vol1/iss1/art1 where "frontiers"
-   * is an apparently arbitrary word.  So for now we just use the journal
-   * abbreviation as the subTreeRoot.
-   */
-  protected String subTreeRoot = "\"%s%s\",base_url, journal_abbr";
-
-  static final String pat =
-    "\"%s%s/((default/)?(vol)?%d/(iss)?[0-9]+/(art|editorial)?[0-9]+|vol%d/[A-Z][0-9]+)$\",base_url, journal_abbr, volume, volume";
+  
+  protected static Logger log = Logger.getLogger("BePressArticleIteratorFactory");
+  
+  protected static final String ROOT_TEMPLATE = "\"%s%s\", base_url, journal_abbr";
+  
+  protected static final String PATTERN_TEMPLATE = "\"^%s%s/((([^0-9]+/)?(vol)?%d/(iss)?[0-9]+/(art|editorial)?[0-9]+)|(vol%d/(?-i:[A-Z])[0-9]+))$\", base_url, journal_abbr, volume, volume";
 
   public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
 						      MetadataTarget target)
       throws PluginException {
-    String journal_abbr =
-      au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
-    return new SubTreeArticleIterator(au,
-				      new SubTreeArticleIterator.Spec()
-				      .setTarget(target)
-				      .setRootTemplate(subTreeRoot)
-				      .setPatternTemplate(pat));
+    return new BePressArticleIterator(au, new SubTreeArticleIterator.Spec()
+				          .setTarget(target)
+				          .setRootTemplate(ROOT_TEMPLATE)
+				          .setPatternTemplate(PATTERN_TEMPLATE));
   }
   
-  public ArticleMetadataExtractor
-    createArticleMetadataExtractor(MetadataTarget target)
+  protected static class BePressArticleIterator extends SubTreeArticleIterator {
+    
+    protected Pattern pattern;
+    
+    public BePressArticleIterator(ArchivalUnit au,
+                                  SubTreeArticleIterator.Spec spec) {
+      super(au, spec);
+      String journalAbbr = au.getConfiguration().get(ConfigParamDescr.JOURNAL_ABBR.getKey());
+      String volumeAsString = au.getConfiguration().get(ConfigParamDescr.VOLUME_NUMBER.getKey());
+      this.pattern = Pattern.compile(String.format("/%s/((([^0-9]+/)?(vol)?%s/(iss)?[0-9]+/(art)?[0-9]+)|(vol%s/(?-i:[A-Z])[0-9]+))$", journalAbbr, volumeAsString, volumeAsString), Pattern.CASE_INSENSITIVE);
+    }
+    
+    @Override
+    protected ArticleFiles createArticleFiles(CachedUrl cu) {
+      String url = cu.getUrl();
+      Matcher mat = pattern.matcher(url);
+      if (mat.find()) {
+        return processUrl(cu, mat);
+      }
+      log.warning("Mismatch between article iterator factory and article iterator: " + url);
+      return null;
+    }
+    
+    protected ArticleFiles processUrl(CachedUrl cu, Matcher mat) {
+      ArticleFiles af = new ArticleFiles();
+      af.setFullTextCu(cu);
+      af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, cu);
+      // XXX Full text PDF link embedded in page, cannot guess URL
+      return af;
+    }
+    
+  }
+  
+  public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
     return new BePressArticleMetadataExtractor();
   }
 
-  public class BePressArticleMetadataExtractor
-    implements ArticleMetadataExtractor {
+  public class BePressArticleMetadataExtractor implements ArticleMetadataExtractor {
 
-    public ArticleMetadata extract(ArticleFiles af)
-	throws IOException, PluginException {
+    public ArticleMetadata extract(ArticleFiles af) throws IOException, PluginException {
+      ArticleMetadata am = null;
       CachedUrl cu = af.getFullTextCu();
       if (cu != null) {
-	FileMetadataExtractor me = cu.getFileMetadataExtractor();
-	if (me != null) {
-	  return me.extract(cu);
-	}
+        FileMetadataExtractor me = cu.getFileMetadataExtractor();
+        if (me != null) {
+          am = me.extract(cu);
+        }
       }
-      return null;
+      if (am == null) {
+        am = new ArticleMetadata();
+      }
+      am.put(ArticleMetadata.KEY_ACCESS_URL, cu.getUrl());
+      return am;
     }
   }
+
 }
