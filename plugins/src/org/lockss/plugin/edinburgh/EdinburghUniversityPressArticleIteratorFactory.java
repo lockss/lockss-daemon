@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.1 2010-07-06 05:34:53 thib_gc Exp $
+ * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.2 2010-07-06 07:23:45 thib_gc Exp $
  */
 
 /*
@@ -112,6 +112,7 @@ public class EdinburghUniversityPressArticleIteratorFactory
       String doi = mat.group(1);
       
       ArticleMetadata am = new ArticleMetadata();
+      am.put(ArticleMetadata.KEY_ACCESS_URL, url);
       am.putDOI(doi);
       return am;
     }
