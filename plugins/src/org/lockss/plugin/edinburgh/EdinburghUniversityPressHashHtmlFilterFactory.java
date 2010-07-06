@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.1 2010-04-27 23:32:09 thib_gc Exp $
+ * $Id: EdinburghUniversityPressHashHtmlFilterFactory.java,v 1.2 2010-07-06 05:34:53 thib_gc Exp $
  */
 
 /*
@@ -49,6 +49,8 @@ public class EdinburghUniversityPressHashHtmlFilterFactory implements FilterFact
     NodeFilter[] filters = new NodeFilter[] {
         // Variable identifiers
         new TagNameFilter("script"),
+        // Contains name and logo of institution
+        HtmlNodeFilters.tagWithAttribute("div", "id", "institutionBanner"),
         // Contains "most downloaded articles" section
         HtmlNodeFilters.tagWithAttribute("div", "id", "journalSidebar"),
         // Contains the current year
