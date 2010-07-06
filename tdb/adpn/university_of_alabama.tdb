@@ -48,7 +48,7 @@
   
   {
   
-    plugin = edu.ua.adpn.contentdm.ContentDmPlugin
+    plugin = edu.ua.adpn.contentdm.UAContentDmPlugin
     param[base_url] = http://libcontent1.lib.ua.edu/lockss/
     implicit < status ; name ; param[collection_path] >
     

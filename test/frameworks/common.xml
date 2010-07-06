@@ -188,6 +188,7 @@
 	<value>org.lockss.plugin.usenix.UsenixPlugin</value>
 	<value>org.lockss.plugin.emerald.EmeraldPlugin</value>
         <value>edu.auburn.contentdm.ContentDmPlugin</value>
+        <value>edu.ua.adpn.contentdm.UAContentDmPlugin</value>
 	<value>org.lockss.plugin.archiveit.ArchiveItPlugin</value>
 	<value>org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin</value>
 	<value>org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin</value>
