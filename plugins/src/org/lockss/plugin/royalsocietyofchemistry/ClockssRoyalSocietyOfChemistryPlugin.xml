@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>10</string>
+    <string>11</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -117,5 +117,13 @@
       <string>&quot;%spublishing/journals/lockss/?journalcode=%s&amp;volume=%s&amp;year=%d&quot;, base_url, journal_code, volume_name, year</string>
       <string>&quot;%slockss.htm&quot;, resolver_url</string>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.royalsocietyofchemistry.RoyalSocietyOfChemistryArticleIteratorFactory</string>
   </entry>
 </map>
