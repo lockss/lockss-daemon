@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.42 2010-06-25 07:42:35 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.43 2010-07-09 08:03:35 tlipkis Exp $
  */
 
 /*
@@ -1012,6 +1012,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("au", au.getFetchRateLimiterSource());
     assertEquals(null, au.getFetchRateLimiterKey());
 
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_OVERRIDE_FETCH_RATE_LIMITER_SOURCE,
+				  "foo");
+    assertEquals("foo", au.getFetchRateLimiterSource());
   }
 
   public void testRateLimiterSourceAu() throws Exception {
@@ -1031,6 +1034,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     assertEquals("au", au.getFetchRateLimiterSource());
     assertEquals(null, au.getFetchRateLimiterKey());
+
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_OVERRIDE_FETCH_RATE_LIMITER_SOURCE,
+				  "foo");
+    assertEquals("foo", au.getFetchRateLimiterSource());
   }
 
   public void testRateLimiterSourcePlugin() throws Exception {
@@ -1050,6 +1057,10 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     assertEquals("plugin", au.getFetchRateLimiterSource());
     assertEquals(pname, au.getFetchRateLimiterKey());
+
+    ConfigurationUtil.addFromArgs(BaseArchivalUnit.PARAM_OVERRIDE_FETCH_RATE_LIMITER_SOURCE,
+				  "au");
+    assertEquals("au", au.getFetchRateLimiterSource());
   }
 
   public void testRateLimiterSourceKey() throws Exception {
