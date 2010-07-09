@@ -85,7 +85,6 @@
     <string>au_permission_checker_factory</string>
     <string>org.lockss.plugin.bepress.BePressPermissionCheckerFactory</string>
   </entry>
-<!--
   <entry>
     <string>plugin_article_iterator_factory</string>
     <string>org.lockss.plugin.bepress.BePressArticleIteratorFactory</string>
@@ -103,5 +102,4 @@
       </entry>
     </map>
   </entry>
--->
 </map>
