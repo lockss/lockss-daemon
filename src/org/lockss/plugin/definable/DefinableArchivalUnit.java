@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.77 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.77.2.1 2010-07-09 18:46:20 tlipkis Exp $
  */
 
 /*
@@ -197,7 +197,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String pluginSrc = 
       definitionMap.getString(DefinablePlugin.KEY_PLUGIN_FETCH_RATE_LIMITER_SOURCE,
 			      defaultSource);
-    return paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, pluginSrc);
+    String auSrc =
+      paramMap.getString(KEY_AU_FETCH_RATE_LIMITER_SOURCE, pluginSrc);
+    return CurrentConfig.getParam(PARAM_OVERRIDE_FETCH_RATE_LIMITER_SOURCE,
+				  auSrc);
   }
 
   @Override
