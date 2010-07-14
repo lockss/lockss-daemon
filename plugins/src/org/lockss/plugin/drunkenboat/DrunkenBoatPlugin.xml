@@ -28,9 +28,9 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%slockss\.txt$&quot;, base_url</string>      
       <string>1,&quot;^%s(www/)?db%s[-/]&quot;, base_url, volume_name</string>
       <string>1,&quot;^%sdb%s$&quot;, base_url, volume_name</string>
-      <string>1,&quot;^%slockss\.txt$&quot;, base_url</string>      
     </list>
   </entry>
   <entry>
