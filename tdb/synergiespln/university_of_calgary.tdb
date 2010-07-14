@@ -174,5 +174,19 @@
     au < released ; 2010 ; Journal of Military and Strategic Studies Volume 12 (2010) ; 2010 >
 
   }
+
+  {
+  
+    title <
+      name = Journal of Modern Science (Proxy Test)
+    >
+    
+    param[base_url] = http://136.159.25.41/ojstest/
+    param[journal_id] = jms
+
+    au < released ; 2009 ; Journal of Modern Science (Proxy Test) 2009 ; 2009 >
+    au < released ; 2010 ; Journal of Modern Science (Proxy Test) 2010 ; 2010 >
+
+  }
   
 }
