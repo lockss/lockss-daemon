@@ -11,17 +11,36 @@
   {
   
     title <
-      name = BC Studies: The British Columbian Quarterly
+      name = BC Studies: The British Columbian Quarterly ;
+      issn = 2005-2949
     >
     
     param[journal_id] = bcstudies
+    comment = has manifest pages to 1968
 
   }
 
   {
   
     title <
-      name = Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme
+      name = Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur ;
+      issn = 0316-1218
+    >
+    
+    param[journal_id] = cjhe
+    
+    au < releasing ; 2007 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 37 ; 2007 >
+    au < releasing ; 2008 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 38 ; 2008 >
+    au < releasing ; 2009 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 39 ; 2009 >
+    au < releasing ; 2010 ; Canadian Journal of Higher Education / La revue canadienne d'enseignement supérieur Volume 40 ; 2010 >
+
+  }
+
+  {
+  
+    title <
+      name = Canadian Journal of Midwifery Research and Practice - Revue Canadienne de la Recherche et de la Pratique Sage-Femme ;
+      issn = 1703-2121
     >
     
     param[journal_id] = cjmrp
@@ -39,7 +58,8 @@
   {
   
     title <
-      name = Transnational Curriculum Inquiry
+      name = Transnational Curriculum Inquiry ;
+      issn = 1449-8855
     >
     
     param[journal_id] = tci
@@ -55,7 +75,8 @@
   {
   
     title <
-      name = New Proposals: Journal of Marxism and Interdisciplinary Inquiry
+      name = New Proposals: Journal of Marxism and Interdisciplinary Inquiry ;
+      issn = 1715-6718
     >
     
     param[journal_id] = newproposals
