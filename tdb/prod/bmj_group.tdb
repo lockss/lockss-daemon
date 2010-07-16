@@ -123,7 +123,7 @@
     au < HighWirePressH20Plugin ; ready ; 2007 ; Annals of the Rheumatic Diseases Volume 66 ; 66 >
     au < HighWirePressH20Plugin ; ready ; 2008 ; Annals of the Rheumatic Diseases Volume 67 ; 67 >
     au < HighWirePressH20Plugin ; ready ; 2009 ; Annals of the Rheumatic Diseases Volume 68 ; 68 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Annals of the Rheumatic Diseases Volume 69 ; 69 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Annals of the Rheumatic Diseases Volume 69 ; 69 >
 
   }
 
@@ -180,10 +180,10 @@
     au < HighWirePressH20Plugin ; exists ; 2004 ; Archives of Disease in Childhood Volume 89 ; 89 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Archives of Disease in Childhood Volume 90 ; 90 >
     au < HighWireStrVolPlugin ; down ; 2006 ; Archives of Disease in Childhood Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Archives of Disease in Childhood Volume 92 ; 92 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Archives of Disease in Childhood Volume 93 ; 93 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Archives of Disease in Childhood Volume 94 ; 94 >
-    au < HighWirePressH20Plugin ; testing ; 2010 ; Archives of Disease in Childhood Volume 95 ; 95 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Archives of Disease in Childhood Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Archives of Disease in Childhood Volume 93 ; 93 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Archives of Disease in Childhood Volume 94 ; 94 >
+    au < HighWirePressH20Plugin ; ready ; 2010 ; Archives of Disease in Childhood Volume 95 ; 95 >
 
   }
 
@@ -1171,7 +1171,7 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; exists ; 2000 ; Molecular Pathology Volume 53 ; 53 >
     au < HighWirePressH20Plugin ; exists ; 2001 ; Molecular Pathology Volume 54 ; 54 >
     au < HighWirePressH20Plugin ; exists ; 2002 ; Molecular Pathology Volume 55 ; 55 >
-    au < HighWirePressH20Plugin ; manifest ; 2003 ; Molecular Pathology Volume 56 ; 56 >
+    au < HighWirePressH20Plugin ; ready ; 2003 ; Molecular Pathology Volume 56 ; 56 >
 
   }
 

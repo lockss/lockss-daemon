@@ -1044,8 +1044,8 @@
     param[journal_dir] = partial_answers
 
     au < released ; Partial Answers: Journal of Literature and the History of Ideas Volume 5 ; 5 >
-    au < testing ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
-    au < testing ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
+    au < ready ; Partial Answers: Journal of Literature and the History of Ideas Volume 6 ; 6 >
+    au < ready ; Partial Answers: Journal of Literature and the History of Ideas Volume 7 ; 7 >
 
   }
 
@@ -1093,7 +1093,7 @@
     au < released ; Philosophy and Literature Volume 29 ; 29 >
     au < released ; Philosophy and Literature Volume 30 ; 30 >
     au < released ; Philosophy and Literature Volume 31 ; 31 >
-    au < testing ; Philosophy and Literature Volume 32 ; 32 >
+    au < ready ; Philosophy and Literature Volume 32 ; 32 >
 
   }
 
@@ -1205,8 +1205,8 @@
     au < released ; Reviews in American History Volume 33 ; 33 >
     au < released ; Reviews in American History Volume 34 ; 34 >
     au < released ; Reviews in American History Volume 35 ; 35 >
-    au < testing ; Reviews in American History Volume 36 ; 36 >
-    au < testing ; Reviews in American History Volume 37 ; 37 >
+    au < ready ; Reviews in American History Volume 36 ; 36 >
+    au < ready ; Reviews in American History Volume 37 ; 37 >
 
   }
 
@@ -1232,7 +1232,7 @@
     au < released ; SAIS Review Volume 25 ; 25 >
     au < released ; SAIS Review Volume 26 ; 26 >
     au < released ; SAIS Review Volume 27 ; 27 >
-    au < manifest ; SAIS Review Volume 28 ; 28 >
+    au < testing ; SAIS Review Volume 28 ; 28 >
 
   }
 
@@ -1254,8 +1254,8 @@
     au < released ; SEL Studies in English Literature 1500-1900 Volume 45 ; 45 >
     au < released ; SEL Studies in English Literature 1500-1900 Volume 46 ; 46 >
     au < released ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
-    au < manifest ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
-    au < manifest ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
+    au < testing ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
+    au < testing ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
 
   }
 
@@ -1268,8 +1268,8 @@
     param[journal_dir] = sewanee_review
 
     au < released ; Sewanee Review Volume 115 ; 115 >
-    au < manifest ; Sewanee Review Volume 116 ; 116 >
-    au < manifest ; Sewanee Review Volume 117 ; 117 >
+    au < testing ; Sewanee Review Volume 116 ; 116 >
+    au < testing ; Sewanee Review Volume 117 ; 117 >
 
   }
 
@@ -1284,7 +1284,7 @@
 
     au < released ; Shakespeare Bulletin Volume 24 ; 24 >
     au < released ; Shakespeare Bulletin Volume 25 ; 25 >
-    au < manifest ; Shakespeare Bulletin Volume 26 ; 26 >
+    au < testing ; Shakespeare Bulletin Volume 26 ; 26 >
 
   }
 
@@ -1297,14 +1297,14 @@
 
     param[journal_dir] = shakespeare_quarterly
 
-    au < manifest ; Shakespeare Quarterly Volume 52 ; 52 >
-    au < manifest ; Shakespeare Quarterly Volume 53 ; 53 >
-    au < manifest ; Shakespeare Quarterly Volume 54 ; 54 >
-    au < manifest ; Shakespeare Quarterly Volume 55 ; 55 >
-    au < manifest ; Shakespeare Quarterly Volume 56 ; 56 >
-    au < manifest ; Shakespeare Quarterly Volume 57 ; 57 >
-    au < manifest ; Shakespeare Quarterly Volume 58 ; 58 >
-    au < manifest ; Shakespeare Quarterly Volume 59 ; 59 >
+    au < testing ; Shakespeare Quarterly Volume 52 ; 52 >
+    au < testing ; Shakespeare Quarterly Volume 53 ; 53 >
+    au < testing ; Shakespeare Quarterly Volume 54 ; 54 >
+    au < testing ; Shakespeare Quarterly Volume 55 ; 55 >
+    au < testing ; Shakespeare Quarterly Volume 56 ; 56 >
+    au < testing ; Shakespeare Quarterly Volume 57 ; 57 >
+    au < testing ; Shakespeare Quarterly Volume 58 ; 58 >
+    au < testing ; Shakespeare Quarterly Volume 59 ; 59 >
 
   }
 
