@@ -9,11 +9,11 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>50</string>
+    <string>51</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
-    <string>1.43.0</string>
+    <string>1.46.0</string>
   </entry>
   <entry>
     <string>plugin_publishing_platform</string>
@@ -99,14 +99,13 @@
     <string>application/pdf_filter_factory</string>
     <string>org.lockss.plugin.highwire.HighWirePdfFilterFactory</string>
   </entry>
-<!--
   <entry>
     <string>plugin_article_iterator_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>plugin_article_metadata_extractor_factory</string>
-    <string>org.lockss.plugin.highwire.HighWireArticleIteratorFactory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressArticleIteratorFactory</string>
   </entry>
   <entry>
     <string>text/html_metadata_extractor_factory_map</string>
@@ -117,7 +116,6 @@
       </entry>
     </map>
   </entry>
- -->
   <entry>
     <string>plugin_fetch_rate_limiter_source</string>
     <string>key:HighWire</string>
