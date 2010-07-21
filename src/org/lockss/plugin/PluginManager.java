@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.208 2010-05-18 06:15:38 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.209 2010-07-21 06:10:06 tlipkis Exp $
  */
 
 /*
@@ -252,8 +252,8 @@ public class PluginManager
 
   private List<AuEventHandler> auEventHandlers =
     new ArrayList<AuEventHandler>();
-  // AUs running under plugins that have been replaced by new versions.
-  private List<ArchivalUnit> needRestartAus = new ArrayList();
+
+  // Counters for AUs restarted due to new plugin loaded
   private int numAusRestarting = 0;
   private int numFailedAuRestarts = 0;
 
@@ -353,7 +353,7 @@ public class PluginManager
     Configuration config = CurrentConfig.getCurrentConfig();
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(getPluginRegistryUrls(config));
-    initPluginRegistry(config);
+    synchStaticPluginList(config);
     configureAllPlugins(config);
     // Start watching for changes to plugin registry AUs
     registerAuEventHandler(regAuEventHandler);
@@ -443,7 +443,7 @@ public class PluginManager
       // Process the built-in plugin registry.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY) ||
 	  changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
-	initPluginRegistry(config);
+	synchStaticPluginList(config);
       }
 
       // Process any changed AU config
@@ -453,21 +453,41 @@ public class PluginManager
     }
   }
 
+  private enum SkipConfigCondition {ConfigUnchanged, AuRunning};
+
   private void configureAllPlugins(Configuration config) {
     Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
     if (!allPlugs.equals(currentAllPlugs)) {
-      List plugList = ListUtil.fromIterator(allPlugs.nodeIterator());
-      plugList = CollectionUtil.randomPermutation(plugList);
-      for (Iterator iter = plugList.iterator(); iter.hasNext(); ) {
-	String pluginKey = (String)iter.next();
-	log.debug2("Configuring plugin key: " + pluginKey);
-	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
-	Configuration prevPluginConf =
-	  currentAllPlugs.getConfigTree(pluginKey);
-
-	configurePlugin(pluginKey, pluginConf, prevPluginConf);
-      }
+      List<String> plugKeys = ListUtil.fromIterator(allPlugs.nodeIterator());
+      List<String> randKeys = CollectionUtil.randomPermutation(plugKeys);
+      configurePlugins(randKeys, allPlugs, SkipConfigCondition.ConfigUnchanged);
       currentAllPlugs = allPlugs;
+    }
+  }
+
+  // Called to (try to) start AUs configured for changed plugins, that
+  // didn't previously start (either because the plugin didn't exist, or
+  // the AU didn't successfully start with the old definition)
+  private void configurePlugins(Collection<String> pluginKeys) {
+    Configuration config = ConfigManager.getCurrentConfig();
+    Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
+    configurePlugins(pluginKeys, allPlugs, SkipConfigCondition.AuRunning);
+  }
+
+  private void configurePlugins(Collection<String> pluginKeys,
+				Configuration allPlugs,
+				SkipConfigCondition scc) {
+    for (String pluginKey : pluginKeys) {
+      log.debug2("Configuring plugin key: " + pluginKey);
+      Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
+      Configuration prevPluginConf = null;
+      switch (scc) {
+      case ConfigUnchanged:
+	prevPluginConf = currentAllPlugs.getConfigTree(pluginKey);
+	break;
+      }
+
+      configurePlugin(pluginKey, pluginConf, prevPluginConf, scc);
     }
   }
 
@@ -624,17 +644,14 @@ public class PluginManager
     return StringUtil.replaceFirst(auid, "&", ".");
   }
 
-  /**
-   * Return the plugin with the given key.
-   * @param pluginKey the plugin key
-   * @return the plugin or null
-   */
-  public Plugin getPlugin(String pluginKey) {
-    return pluginMap.get(pluginKey);
-  }
-
   private void configurePlugin(String pluginKey, Configuration pluginConf,
-			       Configuration oldPluginConf) {
+			       Configuration oldPluginConf,
+			       SkipConfigCondition scc) {
+    if (!ensurePluginLoaded(pluginKey)) {
+      log.warning("Plugin " + pluginKey
+		  + " not loaded, not configuring its AUs");
+      return;
+    }
     List auList = ListUtil.fromIterator(pluginConf.nodeIterator());
     auList = CollectionUtil.randomPermutation(auList);
     nextAU:
@@ -643,41 +660,48 @@ public class PluginManager
       String auId = generateAuId(pluginKey, auKey);
       try {
 	Configuration auConf = pluginConf.getConfigTree(auKey);
-	Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	if (auConf.getBoolean(AU_PARAM_DISABLED, false)) {
 	  // tk should actually remove AU?
 	  if (log.isDebug2())
-	    log.debug("Not configuring disabled AU id: " + auKey);
+	    log.debug2("Not configuring disabled AU id: " + auKey);
 	  if (auMap.get(auId) == null) {
 	    // don't add to inactive if it's still running
 	    inactiveAuIds.add(auId);
 	  }
-	} else if (auConf.equals(oldAuConf)) {
-	  if (log.isDebug3())
-	    log.debug3("AU already configured, not reconfiguring: " + auKey);
-	} else {
-	  log.debug("Configuring AU id: " + auKey);
-	  boolean pluginOk = ensurePluginLoaded(pluginKey);
-	  if (pluginOk) {
-	    Plugin plugin = getPlugin(pluginKey);
-	    try {
-	      String genAuid = generateAuId(plugin, auConf);
-	      if (!auId.equals(genAuid)) {
-		log.warning("Generated AUID " + genAuid +
-			    " does not match stored AUID " + auId +
-			    ". Proceeding anyway.");
-	      }
-	    } catch (RuntimeException e) {
-	      log.warning("Not configuring probable non-AU.  " +
-			  "Can't generate AUID from config: " + auConf);
-	      continue nextAU;
-	    }
-	    configureAu(plugin, auConf, auId);
-	    inactiveAuIds.remove(generateAuId(pluginKey, auKey));
-	  } else {
-	    log.warning("Not configuring AU " + auKey);
-	  }
+	  continue nextAU;
 	}
+	switch (scc) {
+	case ConfigUnchanged:
+	  if (auConf.equals(oldPluginConf.getConfigTree(auKey))) {
+	    if (log.isDebug3())
+	      log.debug3("AU already configured, not reconfiguring: "
+			 + auKey);
+	    continue nextAU;
+	  }
+	  break;
+	case AuRunning:
+	  if (auMap.containsKey(auId)) {
+	    continue nextAU;
+	  }
+	  log.debug2("Retrying previously unstarted AU id: " + auId);
+	  break;
+	}
+	log.debug("Configuring AU id: " + auKey);
+	Plugin plugin = getPlugin(pluginKey);
+	try {
+	  String genAuid = generateAuId(plugin, auConf);
+	  if (!auId.equals(genAuid)) {
+	    log.warning("Generated AUID " + genAuid +
+			" does not match stored AUID " + auId +
+			". Proceeding anyway.");
+	  }
+	} catch (RuntimeException e) {
+	  log.warning("Not configuring probable non-AU.  " +
+		      "Can't generate AUID from config: " + auConf);
+	  continue nextAU;
+	}
+	configureAu(plugin, auConf, auId);
+	inactiveAuIds.remove(generateAuId(pluginKey, auKey));
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Failed to configure AU " + auKey, e);
       } catch (Exception e) {
@@ -1422,6 +1446,15 @@ public class PluginManager
     return null;
   }
 
+  /**
+   * Return the plugin with the given key.
+   * @param pluginKey the plugin key
+   * @return the plugin or null
+   */
+  public Plugin getPlugin(String pluginKey) {
+    return pluginMap.get(pluginKey);
+  }
+
   protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
@@ -1429,12 +1462,6 @@ public class PluginManager
     }
     Plugin oldPlug = pluginMap.get(pluginKey);
     if (oldPlug != null) {
-      Collection aus = oldPlug.getAllAus();
-      if (aus != null && paramRestartAus) {
-	synchronized (this) {
-	  needRestartAus.addAll(aus);
-	}
-      }
       log.debug("Stopping old plugin " + oldPlug.getPluginName());
       oldPlug.stopPlugin();
     }
@@ -1950,7 +1977,7 @@ public class PluginManager
   }
 
   // Synch the plugin registry with the plugins listed in names
-  void initPluginRegistry(Configuration config) {
+  void synchStaticPluginList(Configuration config) {
     List nameList = config.getList(PARAM_PLUGIN_REGISTRY);
     Collection newKeys = new HashSet();
     for (Iterator iter = nameList.iterator(); iter.hasNext(); ) {
@@ -2163,11 +2190,16 @@ public class PluginManager
     return plugins;
   }
 
+  public synchronized void processRegistryAus(List registryAus) {
+    processRegistryAus(registryAus, false);
+  }
+
   /**
    * Run through the list of Registry AUs and verify and load any JARs
    * that need to be loaded.
    */
-  public synchronized void processRegistryAus(List registryAus) {
+  public synchronized void processRegistryAus(List registryAus,
+					      boolean startAus) {
 
     if (jarValidator == null) {
       jarValidator = new JarValidator(keystore, pluginDir);
@@ -2189,6 +2221,11 @@ public class PluginManager
     // After the temporary plugin map has been built, install it into
     // the global maps.
     List classloaders = new ArrayList();
+
+    // AUs running under plugins that have been replaced by new versions.
+    List<ArchivalUnit> needRestartAus = new ArrayList();
+    List<String> changedPluginKeys = new ArrayList<String>();
+
     for (Iterator pluginIter = tmpMap.entrySet().iterator();
 	 pluginIter.hasNext(); ) {
       Map.Entry entry = (Map.Entry)pluginIter.next();
@@ -2197,7 +2234,21 @@ public class PluginManager
       PluginInfo info = (PluginInfo)entry.getValue();
       pluginfoMap.put(key, info);
       classloaders.add(info.getClassLoader());
-      setPlugin(key, info.getPlugin());
+
+      Plugin oldPlug = getPlugin(key);
+      if (oldPlug != null && paramRestartAus) {
+	Collection aus = oldPlug.getAllAus();
+	if (aus != null) {
+	  needRestartAus.addAll(aus);
+	}
+      }
+
+      Plugin newPlug = info.getPlugin();
+      setPlugin(key, newPlug);
+      if (startAus && newPlug != oldPlug) {
+	log.debug2("new/changed plugin: " + key);
+	changedPluginKeys.add(key);
+      }
     }
 
     // Add the JAR's bundled titledb config (if any) to the ConfigManager.
@@ -2211,7 +2262,13 @@ public class PluginManager
 
     if (!needRestartAus.isEmpty()) {
       restartAus(needRestartAus);
-      needRestartAus = new ArrayList();
+    }
+
+    if (startAus && !changedPluginKeys.isEmpty()) {
+      // Try to start any AUs configured for changed plugins, that didn't
+      // previously start (either because the plugin didn't exist, or the
+      // AU didn't successfully start with the old definition)
+      configurePlugins(changedPluginKeys);
     }
   }
 
@@ -2472,7 +2529,7 @@ public class PluginManager
     public void auContentChanged(ArchivalUnit au,
 				 AuEventHandler.ChangeInfo info) {
       if (isRegistryAu(au)) {
-	processRegistryAus(ListUtil.list(au));
+	processRegistryAus(ListUtil.list(au), true);
       }
     }
   }

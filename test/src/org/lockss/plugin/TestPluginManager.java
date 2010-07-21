@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.86 2010-05-18 06:15:38 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.87 2010-07-21 06:10:06 tlipkis Exp $
  */
 
 /*
@@ -255,6 +255,7 @@ public class TestPluginManager extends LockssTestCase {
   public void testLoadBuiltinPlugin() throws Exception {
     mgr.startService();
     // Non-plugin class shouldn't load
+    log.info("Expect ClassCastException");
     assertNull(mgr.loadBuiltinPlugin(String.class));
     Plugin plug = mgr.loadBuiltinPlugin(APlugin.class);
     assertTrue(plug instanceof APlugin);
@@ -737,6 +738,20 @@ public class TestPluginManager extends LockssTestCase {
     private String processOneRegistryJarThrowIf = null;
     private DaemonVersion mockDaemonVersion = null;
     private List<ArchivalUnit> regAus = new ArrayList<ArchivalUnit>();
+    private List<String> suppressEnxurePluginLoaded;
+
+    @Override
+    public boolean ensurePluginLoaded(String pluginKey) {
+      if (suppressEnxurePluginLoaded != null
+	  && suppressEnxurePluginLoaded.contains(pluginKey)) {
+	return false;
+      }
+      return super.ensurePluginLoaded(pluginKey);
+    }
+
+    void suppressEnxurePluginLoaded(List<String> pluginKeys) {
+      suppressEnxurePluginLoaded = pluginKeys;
+    }
 
     @Override
     public boolean isRegistryAu(ArchivalUnit au) {
@@ -1101,10 +1116,10 @@ public class TestPluginManager extends LockssTestCase {
   public void testConfigKeyFromAuId() {
     mgr.startService();
     String pluginId = "org|lockss|plugin|Blah";
-    String auId = "base_url~foo&volume~123";
+    String auKey = "base_url~foo&volume~123";
 
-    String totalId = PluginManager.generateAuId(pluginId, auId);
-    String expectedStr = pluginId + "." + auId;
+    String totalId = PluginManager.generateAuId(pluginId, auKey);
+    String expectedStr = pluginId + "." + auKey;
     assertEquals(expectedStr, PluginManager.configKeyFromAuId(totalId));
   }
 
@@ -1413,6 +1428,45 @@ public class TestPluginManager extends LockssTestCase {
 	  hand.auContentChanged(au, chInfo);
 	}
       });
+  }
+
+  // Test that a configured AU that isn't running (because its plugin
+  // wasn't loaded) gets started when the plugin is loaded
+  public void testStartUnstartedAu() throws Exception {
+    mgr.startService();
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_PREFER_LOADABLE_PLUGIN, "true");
+    String k1 = "base_url";
+    String v1 = "http://example.com/a/";
+    String k2 = "year";
+    String v2 = "1942";
+    String pluginKey = "org|lockss|test|MockConfigurablePlugin";
+    Properties auProps = PropUtil.fromArgs(k1, v1, k2, v2);
+    String auid = PluginManager.generateAuId(pluginKey, auProps);
+    String prefix = PluginManager.PARAM_AU_TREE + "."
+      + PluginManager.configKeyFromAuId(auid) + ".";
+    p.setProperty(prefix + k1, v1);
+    p.setProperty(prefix + k2, v2);
+    assertEquals(null, mgr.getAuFromId(auid));
+    mgr.suppressEnxurePluginLoaded(ListUtil.list(pluginKey));
+    prepareLoadablePluginTests(p);
+    assertEquals(null, mgr.getAuFromId(auid));
+
+    mgr.suppressEnxurePluginLoaded(null);
+
+    // Set up a MyMockRegistryArchivalUnit with the right data.
+    MyMockRegistryArchivalUnit mmau1 =
+      new MyMockRegistryArchivalUnit(ListUtil.list(pluginJar));
+    assertNull(mgr.getPlugin(pluginKey));
+    mgr.processRegistryAus(ListUtil.list(mmau1), true);
+    Plugin plugin1 = mgr.getPlugin(pluginKey);
+    assertNotNull(plugin1);
+    assertTrue(mgr.isLoadablePlugin(plugin1));
+    assertFalse(mgr.isInternalPlugin(plugin1));
+    assertEquals("1", plugin1.getVersion());
+
+    ArchivalUnit au = mgr.getAuFromId(auid);
+    assertNotNull(au);
   }
 
   public static Test suite() {
