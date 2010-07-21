@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.70 2010-06-22 09:00:47 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.71 2010-07-21 06:10:30 tlipkis Exp $
  */
 
 /*
@@ -452,8 +452,6 @@ public abstract class BasePlugin
   protected UrlNormalizer getUrlNormalizer() {
     return NullUrlNormalizer.INSTANCE;
   }
-
-  protected UrlNormalizer urlNorm;
 
   public static class NullUrlNormalizer implements UrlNormalizer {
     public static final UrlNormalizer INSTANCE = new NullUrlNormalizer();
