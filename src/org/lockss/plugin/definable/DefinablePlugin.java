@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.50 2010-06-22 09:00:47 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.51 2010-07-21 06:11:27 tlipkis Exp $
  */
 
 /*
@@ -565,6 +565,40 @@ public class DefinablePlugin extends BasePlugin {
     crawlWindow = window;
     return window;
   }
+
+  LoginPageChecker loginChecker;
+
+  protected LoginPageChecker makeLoginPageChecker() {
+    if (loginChecker == null) {
+      String loginPageCheckerClass =
+	definitionMap.getString(DefinableArchivalUnit.KEY_AU_LOGIN_PAGE_CHECKER,
+				null);
+      if (loginPageCheckerClass != null) {
+	loginChecker = (LoginPageChecker)newAuxClass(loginPageCheckerClass,
+						     LoginPageChecker.class);
+      }
+    }
+    return loginChecker;
+  }
+
+  PermissionCheckerFactory permissionCheckerFact;
+
+  protected PermissionCheckerFactory getPermissionCheckerFactory() {
+    if (permissionCheckerFact == null) {
+      String permissionCheckerFactoryClass =
+	definitionMap.getString(DefinableArchivalUnit.KEY_AU_PERMISSION_CHECKER_FACTORY,
+				null);
+      if (permissionCheckerFactoryClass != null) {
+	permissionCheckerFact =
+	  (PermissionCheckerFactory)newAuxClass(permissionCheckerFactoryClass,
+						PermissionCheckerFactory.class);
+	log.debug2("Loaded PermissionCheckerFactory: " + permissionCheckerFact);
+      }
+    }
+    return permissionCheckerFact;
+  }
+
+  protected UrlNormalizer urlNorm;
 
   protected UrlNormalizer getUrlNormalizer() {
     if (urlNorm == null) {

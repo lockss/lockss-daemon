@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.78 2010-07-09 08:03:35 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.79 2010-07-21 06:11:27 tlipkis Exp $
  */
 
 /*
@@ -376,41 +376,25 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected LoginPageChecker makeLoginPageChecker() {
-    String loginPageCheckerClass =
-      definitionMap.getString(KEY_AU_LOGIN_PAGE_CHECKER, null);
-    if (loginPageCheckerClass == null) {
-      return null;
-    }
-    LoginPageChecker checker =
-      (LoginPageChecker)newAuxClass(loginPageCheckerClass,
-				    LoginPageChecker.class);
-    return checker;
+    return getDefinablePlugin().makeLoginPageChecker();
   }
 
   protected PermissionChecker makePermissionChecker() {
-    String permissionCheckerFactoryClass =
-      definitionMap.getString(KEY_AU_PERMISSION_CHECKER_FACTORY, null);
-    if (permissionCheckerFactoryClass == null) {
-      return null;
-    }
-    log.debug3("Found PermissionCheckerFactory class: " +
-	       permissionCheckerFactoryClass);
-
     PermissionCheckerFactory fact =
-      (PermissionCheckerFactory)newAuxClass(permissionCheckerFactoryClass,
-					    PermissionCheckerFactory.class);
-    log.debug("Loaded PermissionCheckerFactory: " + fact);
-    try {
-      List permissionCheckers = fact.createPermissionCheckers(this);
-      if (permissionCheckers.size() > 1) {
-        log.error("Plugin specifies multiple permission checkers, but we " +
-		  "only support one: " + this);
-
+      getDefinablePlugin().getPermissionCheckerFactory();
+    if (fact != null) {
+      try {
+	List permissionCheckers = fact.createPermissionCheckers(this);
+	if (permissionCheckers.size() > 1) {
+	  log.error("Plugin specifies multiple permission checkers, but we " +
+		    "only support one: " + this);
+	}
+	return (PermissionChecker)permissionCheckers.get(0);
+      } catch (PluginException e) {
+	throw new RuntimeException(e);
       }
-      return (PermissionChecker)permissionCheckers.get(0);
-    } catch (PluginException e) {
-      throw new RuntimeException(e);
     }
+    return null;
   }
 
   protected CrawlWindow makeCrawlWindow() {
