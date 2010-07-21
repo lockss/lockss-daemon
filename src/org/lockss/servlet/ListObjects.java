@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.10 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: ListObjects.java,v 1.11 2010-07-21 06:12:21 tlipkis Exp $
  */
 
 /*
@@ -193,6 +193,7 @@ public class ListObjects extends LockssServlet {
   }
 
   void listArticles() throws IOException {
+    boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/plain");
     wrtr.println("# Articles in " + au.getName());
@@ -201,29 +202,36 @@ public class ListObjects extends LockssServlet {
 	 iter.hasNext(); ) {
       ArticleFiles af = iter.next();
       CachedUrl cu = af.getFullTextCu();
-      try {
-        if (cu.hasContent()) {
-          ArticleMetadata md =
-	    au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au).extract(af);
-          if (md == null) {
-            wrtr.println(cu.getUrl() + "\t");
-          }
-          else {
-            String doi = md.getDOI();
-            if (doi != null) {
-              wrtr.println(cu.getUrl() + "\t" + doi);
-            }
-            else {
-              wrtr.println(cu.getUrl() + "\t");
-            }
-          }
-        }
-      } catch (IOException e) {
-        log.warning("listArticles() threw " + e);
-      } catch (PluginException e) {
-        log.warning("listArticles() threw " + e);
-      } finally {
-        AuUtil.safeRelease(cu);       
+      String url = cu.getUrl();
+      String doi = null;
+      if (isDoi) {
+	log.debug2("isDoi");
+	try {
+	  if (cu.hasContent()) {
+	    ArticleMetadataExtractor me =
+	      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article,
+							 au);
+	    log.debug2("me: " + me);
+	    if (me != null) {
+	      ArticleMetadata md = me.extract(af);
+	      log.debug2("md: " + md);
+	      if (md != null) {
+		doi = md.getDOI();
+	      }
+	    }
+	  }
+	} catch (IOException e) {
+	  log.warning("listArticles() threw " + e);
+	} catch (PluginException e) {
+	  log.warning("listArticles() threw " + e);
+	} finally {
+	  AuUtil.safeRelease(cu);       
+	}
+      }
+      if (doi != null) {
+	wrtr.println(url + "\t" + doi);
+      } else {
+	wrtr.println(url);
       }
     }
     wrtr.println("# end");
