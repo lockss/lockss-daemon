@@ -1,5 +1,5 @@
-This is the source tree for LOCKSS.  See http://www.lockss.org for
-information about the project.
+This is the source tree for the LOCKSS daemon.
+See http://www.lockss.org/ for information about the project.
 
 Obtaining Source
 ----------------
@@ -18,8 +18,9 @@ Installed Packages:
 
 - Ant 1.7.1 or greater.  (http://ant.apache.org/)
 
-- Python 2.5 or greater is required in order to generate plugin jars and
-  plugin signing keys, and to run some of the testing frameworks.
+- Python 2.5 or greater (but not 3.x) is required in order to generate
+  plugin jars and plugin signing keys, and to run some of the testing
+  frameworks.
 
 (On Debian or Ubuntu,
   apt-get install python sun-java6-jdk ant ant-optional
