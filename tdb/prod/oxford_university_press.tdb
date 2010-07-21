@@ -1573,12 +1573,14 @@
 
       {
 
+        comment[h20] = has switched to H20 early
+
         param[base_url] = http://eurheartj.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; European Heart Journal Volume 26 ; 26 >
-        au < HighWireStrVolPlugin ; released ; European Heart Journal Volume 27 ; 27 >
-        au < HighWireStrVolPlugin ; released ; European Heart Journal Volume 28 ; 28 >
+        au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 26 ; 26 >
+        au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 27 ; 27 >
+        au < HighWireStrVolPlugin ; down ; European Heart Journal Volume 28 ; 28 >
 
       }
 
