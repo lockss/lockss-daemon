@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.8 2010-06-25 07:41:18 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.9 2010-07-21 06:10:18 tlipkis Exp $
  */
 
 /*
@@ -41,11 +41,11 @@ import org.lockss.plugin.base.*;
 import org.lockss.extractor.*;
 
 
-/*
+/**
  * Article iterator that finds articles by iterating through all the
  * CachedUrls of the AU, or through specific subtrees, visiting those that
  * match a MIME type and/or regular expression, or a subclass-specified
- * condition.  Fir each node visited, and ArticleFiles may (or, by a
+ * condition.  For each node visited, an ArticleFiles may (or, by a
  * sobclass, may not) be generated.
  */
 public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
@@ -65,20 +65,27 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 
 
     /** Set the MIME type of the desired files.  If null or not set, MIME
-     * type is ignored. */
-    public Spec setMimeType(String val) {
-      mimeType = val;
+     * type does not enter into  determination of which files to visit.
+     * @param mimeType
+     * @return this
+     */
+    public Spec setMimeType(String mimeType) {
+      this.mimeType = mimeType;
       return this;
     }
 
-    /** Return the MIME type */
+    /** Return the desired MIME type */
     public String getMimeType() {
       return mimeType;
     }
 
-    /** The MetadataTarget determines the type of articles desired */
-    public Spec setTarget(MetadataTarget val) {
-      target = val;
+    /** The MetadataTarget determines the type of articles desired.
+     * Currently the format can be used to specify the MIME type.
+     * @param target
+     * @return this
+     */
+    public Spec setTarget(MetadataTarget target) {
+      this.target = target;
       return this;
     }
 
@@ -87,19 +94,27 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return target;
     }
 
-    /** Set the URL of root of the subtree below which to iterate. */
+    /** Set the URL of the root of the subtree below which to iterate.
+     * @param root subtree root
+     * @return this
+     */
     public Spec setRoot(String root) {
       return setRoots(ListUtil.list(root));
     }
 
-    /** Set the URL(s) of the root(s) to the result of expanding the printf
-     * template. */
+    /** Set the URL(s) of the root(s) of the subtree(s) below which to
+     * iterate to the result of expanding the printf template.
+     * @param rootTemplate template (printf string and args) for subtree root
+     * @return this
+     */
     public Spec setRootTemplate(String rootTemplate) {
       return setRootTemplates(ListUtil.list(rootTemplate));
     }
 
-    /** Set the URLs of multiple roots of the subtree below which to
-     * iterate. */
+    /** Set the URLs of the roots of the subtrees below which to iterate.
+     * @param rootTemplates templates (printf string and args) for subtree roots
+     * @return this
+     */
     public Spec setRoots(List<String> roots) {
       if (rootTemplates != null) {
 	throw new
@@ -109,8 +124,11 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return this;
     }
 
-    /** Set the URLs of the roots to the result of expanding the printf
-     * templates. */
+    /** Set the URL(s) of the root(s) of the subtree(s) below which to
+     * iterate to the result of expanding the printf templates.
+     * @param rootTemplates template (printf string and args) for subtree roots
+     * @return this
+     */
     public Spec setRootTemplates(List<String> rootTemplates) {
       if (roots != null) {
 	throw new
@@ -130,18 +148,28 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return rootTemplates;
     }
 
-    /** Set the regular expression the article URLs must match */
+    /** Set the regular expression the article URLs must match
+     * @param regex compiled regular expression
+     * @return this
+     */
     public Spec setPattern(Pattern regex) {
       pat = regex;
       return this;
     }
 
-    /** Set the regular expression the article URLs must match */
+    /** Set the regular expression the article URLs must match
+     * @param regex regular expression
+     * @return this
+     */
     public Spec setPattern(String regex) {
       return setPattern(regex, 0);
     }
 
-    /** Set the regular expression the article URLs must match */
+    /** Set the regular expression the article URLs must match
+     * @param regex regular expression
+     * @param flags compilation flags for regex
+     * @return this
+     */
     public Spec setPattern(String regex, int flags) {
       if (patTempl != null) {
 	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
@@ -151,10 +179,21 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return this;
     }
 
+    /** Set the regular expression the article URLs must match to the
+     * expanstion of the template
+     * @param patternTemplate printf string and args
+     * @return this
+     */
     public Spec setPatternTemplate(String patternTemplate) {
       return setPatternTemplate(patternTemplate, 0);
     }
 
+    /** Set the regular expression the article URLs must match to the
+     * expanstion of the template
+     * @param patternTemplate printf string and args
+     * @param flags compilation flags for regex
+     * @return this
+     */
     public Spec setPatternTemplate(String patternTemplate, int flags) {
       if (pat != null) {
 	throw new IllegalArgumentException("Can't set both pattern and patternTemplate");
@@ -181,11 +220,17 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   }
 
 
+  /** The spec that URLs must match */
   protected Spec spec;
+  /** The mimeType that files must match */
   protected String mimeType;
+  /** The AU being iterated over */
   protected ArchivalUnit au;
+  /** Pattern that URLs must match */
   protected Pattern pat = null;
+  /** Underlying CachedUrlSet iterator */
   protected Iterator cusIter = null;
+  /** Iterator over subtree roots */
   protected Iterator<CachedUrlSet> rootIter = null;
 
   
@@ -231,7 +276,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 
   protected Collection<CachedUrlSet> makeRoots() {
     Collection<String> roots = makeRootUrls();
-    log.debug("rootUrls: " + roots);
+    log.debug2("rootUrls: " + roots);
     if (roots == null || roots.isEmpty()) {
       return ListUtil.list(au.getAuCachedUrlSet());
     }
@@ -262,14 +307,11 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   }
 
   protected List<String> convertUrlList(String printfString) {
-    log.debug("convert("+printfString+"): "+ au);
-    log.debug("params: " + au.getProperties());
     return new PrintfConverter.UrlListConverter(au).getUrlList(printfString);
   }
 
   protected PrintfConverter.MatchPattern
     convertVariableRegexpString(String printfString) {
-    log.debug("reconvert("+printfString+"): "+ au);
     return new PrintfConverter.RegexpConverter(au).getMatchPattern(printfString);
   }
 
@@ -368,6 +410,7 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     throw new NoSuchElementException();
   }
   
+  /** Not implemented */
   public void remove() {
     throw new UnsupportedOperationException("Not implemented");
   }
