@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.3 2010-07-21 13:54:51 dsferopoulos Exp $
  */
 
 /*
@@ -55,15 +55,11 @@ public class BePressHtmlMetadataExtractorFactory
 
     String[] bePressField = {
             "bepress_citation_doi",
-            "bepress_citation_date",
-            "bepress_citation_authors",
-            "bepress_citation_title",
+            "bepress_citation_date",            
     };
     String[] dublinCoreField = {
             "dc.Identifier",
-            "dc.Date",
-            "dc.Contributor",
-            "dc.Title",
+            "dc.Date",            
     };
     String[] bePressField2 = {
             "bepress_citation_volume",
@@ -71,10 +67,12 @@ public class BePressHtmlMetadataExtractorFactory
             "bepress_citation_firstpage",
             "bepress_citation_authors",
             "bepress_citation_title",
+            "bepress_citation_journal_title",
     };
 
     public ArticleMetadata extract(CachedUrl cu) throws IOException {
       ArticleMetadata ret = super.extract(cu);
+      
       for (int i = 0; i < bePressField.length; i++) {
         String content = ret.getProperty(bePressField[i]);
         if (content != null) {
@@ -82,9 +80,12 @@ public class BePressHtmlMetadataExtractorFactory
           
           if (dublinCoreField[i].equalsIgnoreCase("dc.Identifier")) {
             ret.putDOI(content);
+          }else if(dublinCoreField[i].equalsIgnoreCase("dc.Date")){
+        	  ret.putDate(content);
           }
         }
       }
+            
       for (int i = 0; i < bePressField2.length; i++) {
         String content = ret.getProperty(bePressField2[i]);
         if (content != null) {
@@ -107,6 +108,9 @@ public class BePressHtmlMetadataExtractorFactory
               break;
             case 4:
               ret.putArticleTitle(content);
+              break;
+            case 5:
+              ret.putJournalTitle(content);
               break;
           }
         }

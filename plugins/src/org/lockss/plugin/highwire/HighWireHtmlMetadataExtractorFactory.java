@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.3 2010-07-21 13:54:51 dsferopoulos Exp $
  */
 
 /*
@@ -93,6 +93,10 @@ public class HighWireHtmlMetadataExtractorFactory
           if (content != null && !"".equals(content)) {
             ret.putArticleTitle(content);
           }
+          content = ret.getProperty("citation_journal_title");
+          if(content !=null && !"".equals(content)){
+        	  ret.putJournalTitle(content);
+          }          
           content = ret.getProperty("citation_date");
           if (content != null && !"".equals(content)) {
             ret.putDate(content);

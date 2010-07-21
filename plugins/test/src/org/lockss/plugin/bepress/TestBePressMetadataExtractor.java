@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.9 2010-06-27 07:50:25 thib_gc Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.10 2010-07-21 13:54:51 dsferopoulos Exp $
  */
 
 /*
@@ -149,36 +149,24 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     assertEquals(21, count);
   }
 
-  String goodDOI = "10.2202/bogus.13.4.123";
+  String goodDOI = "10.2202/2153-3792.1037";
   String goodVolume = "13";
   String goodIssue = "4";
   String goodStartPage = "123";
   String goodISSN = "1234-5678";
   String goodDate = "4/1/2000";
   String goodAuthor = "Gandhi, Pankaj J.; Talia, Yogen H.; Murthy, Z.V.P.";
-  String goodTitle = "Spurious Results";
+  String goodArticleTitle = "Spurious Results";
+  String goodJournalTitle = "Chemical Product and Process Modeling";
   String goodAbsUrl = "http://www.example.com/bogus/vol13/iss4/art123/abs";
   String goodPdfUrl = "http://www.example.com/bogus/vol13/iss4/art123/pdf";
   String goodHtmUrl = "http://www.example.com/bogus/vol13/iss4/art123/full";
-  String[] dublinCoreField = {
-    "dc.Identifier",
-    "dc.Date",
-    "dc.Contributor",
-    "dc.Title",
-  };
-  String[] dublinCoreValue = {
-    goodDOI,
-    goodDate,
-    goodAuthor,
-    goodTitle,
-  };
+ 
   String goodContent =
-    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
-    "<meta name=\"bepress_citation_journal_title\"" + 
-      " content=\"Bogus\">\n" +	
-    "<meta name=\"bepress_citation_authors\"" + 
-      " content=\"" + goodAuthor + "\">\n" + 
-    "<meta name=\"bepress_citation_title\" content=\"" + goodTitle + "\">\n" +
+    "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"bepress_citation_journal_title\" content=\""+goodJournalTitle+"\">\n" +	
+    "<meta name=\"bepress_citation_authors\" content=\"" + goodAuthor + "\">\n" + 
+    "<meta name=\"bepress_citation_title\" content=\"" + goodArticleTitle + "\">\n" +
     "<meta name=\"bepress_citation_date\" content=\"" + goodDate + "\">\n" +
     "<meta name=\"bepress_citation_volume\"" +
       " content=\"" + goodVolume + "\">\n" +
@@ -209,20 +197,19 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     assertEquals(goodVolume, md.getVolume());
     assertEquals(goodIssue, md.getIssue());
     assertEquals(goodStartPage, md.getStartPage());
-    assertEquals(goodISSN, md.getISSN());
+    assertEquals(goodISSN, md.getISSN());    
 
     goodAuthor = goodAuthor.replaceAll(",", "");
     goodAuthor = goodAuthor.replaceAll(";", ",");
     
-    assertEquals(goodAuthor, md.getAuthor());
-    assertEquals(goodTitle, md.getArticleTitle());
-    for (int i = 1; i < dublinCoreField.length; i++) {
-      assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
-    }
+    assertEquals(goodAuthor, md.getAuthor());    
+    assertEquals(goodArticleTitle, md.getArticleTitle());
+    assertEquals(goodJournalTitle, md.getJournalTitle());    
+    assertEquals(goodDate, md.getDate());    
   }
 
   String badContent =
-    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" + 
     "<meta name=\"foo\"" +  " content=\"bar\">\n" +
     "  <div id=\"issn\">" +
     "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
@@ -243,9 +230,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase{
     assertNull(md.getIssue());
     assertNull(md.getStartPage());
     assertNull(md.getISSN());
-    for (int i = 1; i < dublinCoreField.length; i++) {
-      assertNull(md.getProperty(dublinCoreField[i]));
-    }
+    
     assertEquals(1, md.size());
     assertEquals("bar", md.getProperty("foo"));
   }

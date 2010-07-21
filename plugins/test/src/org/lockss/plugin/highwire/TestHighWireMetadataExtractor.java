@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.9 2010-07-07 23:22:10 thib_gc Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.10 2010-07-21 13:54:51 dsferopoulos Exp $
  */
 
 /*
@@ -168,7 +168,8 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
   String goodISSN = "1234-5678";
   String goodDate = "4/1/2000";
   String goodAuthor = "Regnard, Claud; Leslie, Paula; Crawford, Hannah; Matthews, Dorothy; Gibson, Lynn";
-  String goodTitle = "Spurious Results";
+  String goodArticleTitle = "Spurious Results";
+  String goodJournalTitle = "Drug Metabolism and Disposition";
   String goodAbsUrl = "http://www.example.com/cgi/content/abstract/13/4/123";
   String goodPdfUrl = "http://www.example.com/cgi/content/reprint/13/4/123";
   String goodHtmUrl = "http://www.example.com/cgi/content/full/13/4/123";
@@ -182,15 +183,14 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     goodDOI,
     goodDate,
     goodAuthor,
-    goodTitle,
+    goodArticleTitle,
   };
   String goodContent =
-    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
-    "<meta name=\"citation_journal_title\"" + 
-      " content=\"Bogus\">\n" +	
+    "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<meta name=\"citation_journal_title\"" + " content=\""+goodJournalTitle+"\">\n" +	
     "<meta name=\"citation_authors\"" + 
       " content=\"" + goodAuthor + "\">\n" + 
-    "<meta name=\"citation_title\" content=\"" + goodTitle + "\">\n" +
+    "<meta name=\"citation_title\" content=\"" + goodArticleTitle + "\">\n" +
     "<meta name=\"citation_date\" content=\"" + goodDate + "\">\n" +
     "<meta name=\"citation_volume\"" +
       " content=\"" + goodVolume + "\">\n" +
@@ -207,7 +207,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     "<meta name=\"citation_mjid\"" + " content=\"MJID;13/4/123\">\n" +
     "<meta name=\"citation_pmid\"" + " content=\"13.4.123\">\n" +
     "<meta name=\"dc.Contributor\"" + " content=\"" + goodAuthor + "\">\n" +
-    "<meta name=\"dc.Title\"" + " content=\"" + goodTitle + "\">\n" +
+    "<meta name=\"dc.Title\"" + " content=\"" + goodArticleTitle + "\">\n" +
     "<meta name=\"dc.Identifier\"" + " content=\"" + goodDOI + "\">\n" +
       "<meta name=\"dc.Date\"" + " content=\"" + goodDate + "\">\n";
 
@@ -231,7 +231,9 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     goodAuthor = goodAuthor.replaceAll(", ", " ");
     goodAuthor = goodAuthor.replaceAll(";", ",");
     assertEquals(goodAuthor, md.getAuthor());
-    assertEquals(goodTitle, md.getArticleTitle());
+    assertEquals(goodArticleTitle, md.getArticleTitle());
+    assertEquals(goodJournalTitle, md.getJournalTitle());    
+    
     assertEquals(goodDate, md.getDate());
     for (int i = 1; i < dublinCoreField.length; i++) {
       assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
@@ -239,7 +241,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
   }
 
   String badContent =
-    "<HTML><HEAD><TITLE>" + goodTitle + "</TITLE></HEAD><BODY>\n" + 
+    "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" + 
     "<meta name=\"foo\"" +  " content=\"bar\">\n" +
     "  <div id=\"issn\">" +
     "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: " +
