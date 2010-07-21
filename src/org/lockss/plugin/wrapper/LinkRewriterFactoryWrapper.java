@@ -1,10 +1,10 @@
 /*
- * $Id: LinkRewriterFactoryWrapper.java,v 1.5 2010-06-25 07:42:16 tlipkis Exp $
+ * $Id: LinkRewriterFactoryWrapper.java,v 1.6 2010-07-21 06:12:02 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -64,6 +64,10 @@ public class LinkRewriterFactoryWrapper
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
+  }
+
+  public String toString() {
+    return "[W: " + inst.toString() + "]";
   }
 
   static class Factory implements WrapperFactory {

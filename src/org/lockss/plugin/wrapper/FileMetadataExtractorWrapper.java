@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorWrapper.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: FileMetadataExtractorWrapper.java,v 1.3 2010-07-21 06:12:02 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,10 @@ public class FileMetadataExtractorWrapper
       throw new PluginException.LinkageError(e);
     }
     return ret;
+  }
+
+  public String toString() {
+    return "[W: " + inst.toString() + "]";
   }
 
   static class Factory implements WrapperFactory {

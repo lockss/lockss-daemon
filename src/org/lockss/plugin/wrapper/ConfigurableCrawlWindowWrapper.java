@@ -1,10 +1,10 @@
 /*
- * $Id: ConfigurableCrawlWindowWrapper.java,v 1.1 2006-12-09 07:09:00 tlipkis Exp $
+ * $Id: ConfigurableCrawlWindowWrapper.java,v 1.2 2010-07-21 06:12:02 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -58,6 +58,10 @@ public class ConfigurableCrawlWindowWrapper
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
+  }
+
+  public String toString() {
+    return "[W: " + inst.toString() + "]";
   }
 
   static class Factory implements WrapperFactory {

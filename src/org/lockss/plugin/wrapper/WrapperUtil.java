@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperUtil.java,v 1.9 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: WrapperUtil.java,v 1.10 2010-07-21 06:12:02 tlipkis Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public class WrapperUtil {
       return obj;
     }
     Object wrapped = fact.wrap(obj);
-    log.debug2("Wrapped " + obj + " in " + wrapped);
+    log.debug2("Wrapped " + obj);
     return wrapped;
   }
 

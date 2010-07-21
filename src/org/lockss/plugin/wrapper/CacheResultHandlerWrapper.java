@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultHandlerWrapper.java,v 1.4 2010-02-11 10:05:41 tlipkis Exp $
+ * $Id: CacheResultHandlerWrapper.java,v 1.5 2010-07-21 06:12:02 tlipkis Exp $
  */
 
 /*
@@ -78,6 +78,10 @@ public class CacheResultHandlerWrapper
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
+  }
+
+  public String toString() {
+    return "[W: " + inst.toString() + "]";
   }
 
   static class Factory implements WrapperFactory {

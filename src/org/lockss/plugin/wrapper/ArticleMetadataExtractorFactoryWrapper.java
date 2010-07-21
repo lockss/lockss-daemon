@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataExtractorFactoryWrapper.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ArticleMetadataExtractorFactoryWrapper.java,v 1.2 2010-07-21 06:12:02 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,10 @@ public class ArticleMetadataExtractorFactoryWrapper
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }
+  }
+
+  public String toString() {
+    return "[W: " + inst.toString() + "]";
   }
 
   static class Factory implements WrapperFactory {
