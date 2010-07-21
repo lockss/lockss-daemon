@@ -140,7 +140,7 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
   }
 
   public void testCharsetFailsIfNoMark() throws Exception {
-    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_MARK_SIZE, "0"); 
+    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_MARK_SIZE, "0");
     log.info("read(): exception following is expected");
     try {
       doParseCharset();
@@ -149,9 +149,8 @@ public class TestHtmlFilterInputStream extends LockssTestCase {
     }
   }
 
+  // Test default mark size
   public void testCharset() throws Exception {
-    ConfigurationUtil.setFromArgs(HtmlFilterInputStream.PARAM_MARK_SIZE,
-				  "20000"); 
     doParseCharset();
   }
 

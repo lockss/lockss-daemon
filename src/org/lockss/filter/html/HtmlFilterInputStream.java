@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlFilterInputStream.java,v 1.9 2010-02-04 06:53:00 tlipkis Exp $
+ * $Id: HtmlFilterInputStream.java,v 1.10 2010-07-21 06:09:48 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ import org.htmlparser.util.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 
+import org.apache.commons.io.input.*;
+
 /**
  * InputStream that parses HTML input, applies a user-supplied
  * transformation to the parse tree, then makes the regenerated HTML text
@@ -78,11 +80,22 @@ import org.lockss.util.*;
 public class HtmlFilterInputStream extends InputStream {
   private static Logger log = Logger.getLogger("HtmlFilterInputStream");
 
-  /** The readlimit used to mark() the input stream in case of charset
-   * changes requiring reset() */
+  /** Maximum offset into file of charset change (<code>&lt;META
+   * HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=..."&gt;</code>)
+   * that is guaranteed to be handled.  Due to various hard-to-control
+   * internal buffering this should be set at least 16K higher than
+   * desired. */
   public static final String PARAM_MARK_SIZE =
     Configuration.PREFIX + "filter.html.mark";
-  public static final int DEFAULT_MARK_SIZE = 16 * 1024;
+  public static final int DEFAULT_MARK_SIZE = 32 * 1024;
+
+  /** Reader bufffer size.  This is one of the two buffers that
+   * <code>org.lockss.filter.html.mark</code> must take into account.  The
+   * other is the StreamDecoder beffer, for which HtmlParser doesn't
+   * provide an API.  */
+  public static final String PARAM_RDR_BUF_SIZE =
+    Configuration.PREFIX + "filter.html.readerBufSize";
+  public static final int DEFAULT_RDR_BUF_SIZE = 8 * 1024;
 
   /** If true, html output will be as close as possible to the input.  If
    * false, missing end tags will be inserted.  */
@@ -121,10 +134,11 @@ public class HtmlFilterInputStream extends InputStream {
   void parse() throws IOException {
     try {
       Configuration config = ConfigManager.getCurrentConfig();
-      int mark = config.getInt(PARAM_MARK_SIZE, DEFAULT_MARK_SIZE);
+      int markSize = config.getInt(PARAM_MARK_SIZE, DEFAULT_MARK_SIZE);
+      int rdrBufSize = config.getInt(PARAM_RDR_BUF_SIZE, DEFAULT_RDR_BUF_SIZE);
       boolean verbatim = config.getBoolean(PARAM_VERBATIM, DEFAULT_VERBATIM);
 
-      Parser parser = makeParser(mark);
+      Parser parser = makeParser(markSize, rdrBufSize);
       NodeList nl = parser.parse(null);
       if (nl.size() <= 0) {
 	log.warning("nl.size(): " + nl.size());
@@ -138,7 +152,6 @@ public class HtmlFilterInputStream extends InputStream {
       String h = nl.toHtml(verbatim);
       out = new ReaderInputStream(new StringReader(h));
     } catch (ParserException e) {
-      log.warning("read()", e);
       IOException ioe = new IOException();
       ioe.initCause(e);
       throw ioe;
@@ -146,13 +159,14 @@ public class HtmlFilterInputStream extends InputStream {
   }
 
   /** Make a parser, register our extra nodes */
-  Parser makeParser(int mark) throws UnsupportedEncodingException {
+  Parser makeParser(int marksize, int rdrBufSize)
+      throws UnsupportedEncodingException {
     // InputStreamSource may reset() the stream if it encounters a charset
     // change.  It expects the stream already to have been mark()ed.
-    if (mark > 0) {
-      in.mark(mark);
+    if (marksize > 0) {
+      in.mark(marksize);
     }
-    Page pg = new Page(new InputStreamSource(in, charset));
+    Page pg = new Page(new InputStreamSource(in, charset, rdrBufSize));
     setupHtmlParser();
 
     Lexer lx = new Lexer(pg);
