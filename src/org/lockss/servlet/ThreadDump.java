@@ -1,10 +1,10 @@
 /*
- * $Id: ThreadDump.java,v 1.9 2008-07-22 07:18:20 tlipkis Exp $
+ * $Id: ThreadDump.java,v 1.10 2010-07-21 06:12:30 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -136,35 +136,35 @@ public class ThreadDump extends LockssServlet {
     frm.method("POST");
     Table htbl = new Table(0);
     boolean isForm = false;
+
     htbl.newRow();
-    htbl.addHeading("ThreadCpuTimeSupported", "align='right'");
-    htbl.newCell();
+    htbl.newCell("align='right'");
+    htbl.add(tmxb.getThreadCount());
+    htbl.add(" threads, ");
+    htbl.add(tmxb.getPeakThreadCount());
+    htbl.add(" peak, ");
+    htbl.add(tmxb.getTotalStartedThreadCount());
+    htbl.add(" started");
+
     if (tmxb.isThreadCpuTimeSupported()) {
       isForm = true;
-      htbl.add("true");
       htbl.newRow();
-      htbl.addHeading("ThreadCpuTimeEnabled", "align='right'");
+      htbl.newCell("align='right'");
+      htbl.add("ThreadCpuTimeEnabled");
       htbl.newCell();
       htbl.add(checkBox(null, "true",
 			KEY_IS_THREAD_CPU_TIME_ENABLED,
 			tmxb.isThreadCpuTimeEnabled()));
-    } else {
-      htbl.add("false");
     }
-    htbl.newRow();
-    htbl.addHeading("ThreadContentionMonitoringSupported", "align='right'");
-    htbl.newCell();
     if (tmxb.isThreadContentionMonitoringSupported()) {
       isForm = true;
-      htbl.add("true");
       htbl.newRow();
-      htbl.addHeading("ThreadContentionMonitoringEnabled", "align='right'");
+      htbl.newCell("align='right'");
+      htbl.add("ThreadContentionMonitoringEnabled");
       htbl.newCell();
       htbl.add(checkBox(null, "true",
 			KEY_IS_THREAD_CONTENTION_MONITORING_ENABLED,
 			tmxb.isThreadContentionMonitoringEnabled()));
-    } else {
-      htbl.add("false");
     }
     if (isForm) {
       htbl.newRow();
