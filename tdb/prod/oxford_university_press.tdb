@@ -1595,22 +1595,26 @@
 
       {
 
+        comment[h20] = has switched to H20 early
+
         pluginSuffix = HighWirePlugin
         param[base_url] = http://eurheartjsupp.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; European Heart Journal Supplements Volume 8 ; 8 >
+        au < down ; European Heart Journal Supplements Volume 8 ; 8 >
 
       }
 
       {
 
+        comment[h20] = has switched to H20 early
+
         param[base_url] = http://eurheartjsupp.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; European Heart Journal Supplements Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 7 ; 7 >
         au < HighWirePressPlugin ; doNotProcess ; European Heart Journal Supplements Volume 8 ; 8 >
-        au < HighWireStrVolPlugin ; released ; European Heart Journal Supplements Volume 9 ; 9 >
+        au < HighWireStrVolPlugin ; down ; European Heart Journal Supplements Volume 9 ; 9 >
 
       }
 
