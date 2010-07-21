@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.51 2010-03-14 08:09:03 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.52 2010-07-21 06:09:23 tlipkis Exp $
  */
 
 /*
@@ -1002,7 +1002,7 @@ public class BlockingStreamComm
       sockFact = null;
     }
     KeyManagerFactory kmf =
-      keystoreMgr.getKeyManagerFactory(paramSslPrivateKeyStoreName);
+      keystoreMgr.getKeyManagerFactory(paramSslPrivateKeyStoreName, "LCAP");
     if (kmf == null) {
       throw new IllegalArgumentException("Keystore not found: "
 					 + paramSslPrivateKeyStoreName);
@@ -1010,7 +1010,7 @@ public class BlockingStreamComm
     KeyManager[] kma = kmf.getKeyManagers();
 
     TrustManagerFactory tmf =
-      keystoreMgr.getTrustManagerFactory(paramSslPublicKeyStoreName);
+      keystoreMgr.getTrustManagerFactory(paramSslPublicKeyStoreName, "LCAP");
     if (tmf == null) {
       throw new IllegalArgumentException("Keystore not found: "
 					 + paramSslPublicKeyStoreName);

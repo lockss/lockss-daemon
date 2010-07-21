@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStoreManager.java,v 1.7 2010-03-27 03:08:11 tlipkis Exp $
+ * $Id: LockssKeyStoreManager.java,v 1.8 2010-07-21 06:09:23 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,11 @@ public class LockssKeyStoreManager
    * identifier and use it in place of &lt;id&gt; in the following */
   public static final String PARAM_KEYSTORE = PREFIX + "keystore";
 
+  /** If true the daemon will exit if a critical keystore is missing.  */
+  public static final String PARAM_EXIT_IF_MISSING_KEYSTORE =
+    PREFIX + "exitIfMissingKeystore";
+  public static final boolean DEFAULT_EXIT_IF_MISSING_KEYSTORE = true;
+
   /** keystore name, used by clients to refer to it */
   public static final String KEYSTORE_PARAM_NAME = "name";
   /** keystore file.  Only one of file, resource or url should be set */
@@ -90,6 +95,8 @@ public class LockssKeyStoreManager
 
   protected String defaultKeyStoreType = DEFAULT_DEFAULT_KEYSTORE_TYPE;
   protected String defaultKeyStoreProvider = DEFAULT_DEFAULT_KEYSTORE_PROVIDER;
+  protected boolean paramExitIfMissingKeyStore =
+    DEFAULT_EXIT_IF_MISSING_KEYSTORE;
 
   // Pseudo params for param doc
   public static final String DOC_PREFIX = PARAM_KEYSTORE + ".<id>.";
@@ -145,6 +152,10 @@ public class LockssKeyStoreManager
 				       DEFAULT_DEFAULT_KEYSTORE_TYPE);
       defaultKeyStoreProvider = config.get(PARAM_DEFAULT_KEYSTORE_PROVIDER,
 					   DEFAULT_DEFAULT_KEYSTORE_PROVIDER);
+      paramExitIfMissingKeyStore =
+	config.getBoolean(PARAM_EXIT_IF_MISSING_KEYSTORE,
+			  DEFAULT_EXIT_IF_MISSING_KEYSTORE);
+
       if (changedKeys.contains(PARAM_KEYSTORE)) {
 	configureKeyStores(config);
 	// defer initial set of keystore loading until startService
@@ -156,17 +167,50 @@ public class LockssKeyStoreManager
     }
   }
 
-  /** Return the named LockssKeyStore or null */
+  /** Return the named LockssKeyStore or null
+   * @param name the keystore name
+   */
   public LockssKeyStore getLockssKeyStore(String name) {
-    return keystoreMap.get(name);
+    return getLockssKeyStore(name, null);
+  }
+
+  /** Return the named LockssKeyStore
+   * @param name the keystore name
+   * @param criticalServiceName if non-null, this is a criticial keystore
+   * whose unavailability should cause the daemon to exit (if
+   * org.lockss.keyMgr.exitIfMissingKeystore is true)
+   */
+  public LockssKeyStore getLockssKeyStore(String name,
+					  String criticalServiceName) {
+    LockssKeyStore res = keystoreMap.get(name);
+    checkFact(res, name, criticalServiceName, null);
+    return res;
   }
 
   /** Convenience method to return the KeyManagerFactory from the named
-   * LockssKeyStore, or null */
+   * LockssKeyStore, or null
+   * @param name the keystore name
+   */
   public KeyManagerFactory getKeyManagerFactory(String name) {
-    LockssKeyStore lk = getLockssKeyStore(name);
+    return getKeyManagerFactory(name, null);
+  }
+
+  /** Convenience method to return the KeyManagerFactory from the named
+   * LockssKeyStore.
+   * @param name the keystore name
+   * @param criticalServiceName if non-null, this is a criticial keystore
+   * whose unavailability should cause the daemon to exit (if
+   * org.lockss.keyMgr.exitIfMissingKeystore is true)
+   */
+  public KeyManagerFactory getKeyManagerFactory(String name,
+						String criticalServiceName) {
+    LockssKeyStore lk = getLockssKeyStore(name, criticalServiceName);
     if (lk != null) {
-      return lk.getKeyManagerFactory();
+      KeyManagerFactory fact = lk.getKeyManagerFactory();
+      checkFact(fact, name, criticalServiceName,
+		"found but contains no private keys");
+      
+      return fact;
     }
     return null;
   }
@@ -174,11 +218,44 @@ public class LockssKeyStoreManager
   /** Convenience method to return the TrustManagerFactory from the named
    * LockssKeyStore, or null */
   public TrustManagerFactory getTrustManagerFactory(String name) {
-    LockssKeyStore lk = getLockssKeyStore(name);
+    return getTrustManagerFactory(name, null);
+  }
+
+  /** Convenience method to return the TrustManagerFactory from the named
+   * LockssKeyStore.
+   * @param name the keystore name
+   * @param criticalServiceName if non-null, this is a criticial keystore
+   * whose unavailability should cause the daemon to exit (if
+   * org.lockss.keyMgr.exitIfMissingKeystore is true)
+   */
+  public TrustManagerFactory getTrustManagerFactory(String name,
+						    String criticalServiceName){
+    LockssKeyStore lk = getLockssKeyStore(name, criticalServiceName);
     if (lk != null) {
-      return lk.getTrustManagerFactory();
+      TrustManagerFactory fact = lk.getTrustManagerFactory();
+      checkFact(fact, name, criticalServiceName,
+		"found but contains no trusted certificates");
+      return fact;
     }
     return null;
+  }
+
+  private void checkFact(Object fact, String name, String criticalServiceName,
+			 String message) {
+    if (fact == null && criticalServiceName != null
+	&& paramExitIfMissingKeyStore) {
+      if (StringUtil.isNullString(name)) {
+	log.critical("No keystore name given for critical keystore"
+		     + " needed for service "
+		     + criticalServiceName + ", daemon exiting");
+      } else {
+	log.critical("Critical keystore " + name + " " +
+		     ((message != null) ? message : "not found or not loadable")
+		     + " for service " + criticalServiceName
+		     + ", daemon exiting");
+      }
+      System.exit(Constants.EXIT_CODE_KEYSTORE_MISSING);
+    }
   }
 
   /** Create LockssKeystores from config subtree below {@link

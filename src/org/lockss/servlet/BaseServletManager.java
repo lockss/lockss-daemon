@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.29 2009-11-08 01:29:11 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.30 2010-07-21 06:09:23 tlipkis Exp $
  */
 
 /*
@@ -371,7 +371,8 @@ public abstract class BaseServletManager
 	LockssSslListener lsl =
 	  new LockssSslListener(new org.mortbay.util.InetAddrPort(port));
 	KeyManagerFactory kmf =
-	  keystoreMgr.getKeyManagerFactory(sslKeystoreName);
+	  keystoreMgr.getKeyManagerFactory(sslKeystoreName,
+					   mi.serverName + " server");
 	if (kmf == null) {
 	  log.critical("Keystore " + sslKeystoreName +
 		       " not found, not starting " + mi.serverName + " server");

@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.20 2010-02-22 07:03:59 tlipkis Exp $
+ * $Id: Constants.java,v 1.21 2010-07-21 06:13:37 tlipkis Exp $
  */
 
 /*
@@ -141,5 +141,9 @@ public interface Constants {
 
   /** Exit code - required resource unavailable */
   public static int EXIT_CODE_RESOURCE_UNAVAILABLE = 105;
+
+  /** Exit code - critical keystore missing or not loadable (wrong
+   * password, missing password file) */
+  public static int EXIT_CODE_KEYSTORE_MISSING = 106;
 
 }
