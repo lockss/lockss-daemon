@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.35 2010-02-23 06:25:21 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.36 2010-07-21 06:08:42 tlipkis Exp $
  */
 
 /*
@@ -294,7 +294,7 @@ public abstract class BaseCrawler
       logger.error("doCrawl0()", e);
       alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
 			  "Crawl of " + au.getName() +
-			  "threw " + e.getMessage());
+			  " threw " + e.getMessage());
       if (isWholeAU()) {
 	NodeManager nodeManager = getDaemon().getNodeManager(au);
 	nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,

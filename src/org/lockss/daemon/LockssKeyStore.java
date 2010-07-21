@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.9 2010-03-27 03:15:12 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.10 2010-07-21 06:08:42 tlipkis Exp $
  */
 
 /*
@@ -186,7 +186,7 @@ public class LockssKeyStore {
       loaded = true;
       log.info("Loaded keystore: " + name);
     } catch (Exception e) {
-      log.error("Error loading keystore: " + name, e);
+      // logged at higher level
       throw new UnavailableKeyStoreException(e);
     }
   }
