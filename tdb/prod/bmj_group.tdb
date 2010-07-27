@@ -1516,6 +1516,8 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
 
     {
 
+comment[tc15] = recursive URL structure
+
       param[base_url] = http://tobaccocontrol.bmj.com/
 
       au < HighWirePressH20Plugin ; exists ; 1992 ; Tobacco Control Volume 1 ; 1 >
@@ -1532,10 +1534,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; exists ; 2003 ; Tobacco Control Volume 12 ; 12 >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Tobacco Control Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Tobacco Control Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 2006 ; Tobacco Control Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 2007 ; Tobacco Control Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Tobacco Control Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Tobacco Control Volume 18 ; 18 >
+      au < HighWirePressH20Plugin ; notReady ; 2006 ; Tobacco Control Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; Tobacco Control Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Tobacco Control Volume 17 ; 17 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Tobacco Control Volume 18 ; 18 >
 
     }
 

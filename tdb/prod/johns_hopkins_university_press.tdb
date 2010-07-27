@@ -1066,8 +1066,8 @@
     au < released ; Perspectives in Biology and Medicine Volume 48 ; 48 >
     au < released ; Perspectives in Biology and Medicine Volume 49 ; 49 >
     au < released ; Perspectives in Biology and Medicine Volume 50 ; 50 >
-    au < testing ; Perspectives in Biology and Medicine Volume 51 ; 51 >
-    au < testing ; Perspectives in Biology and Medicine Volume 52 ; 52 >
+    au < ready ; Perspectives in Biology and Medicine Volume 51 ; 51 >
+    au < ready ; Perspectives in Biology and Medicine Volume 52 ; 52 >
 
   }
 
@@ -1115,8 +1115,8 @@
     au < released ; Philosophy, Psychiatry & Psychology Volume 11 ; 11 >
     au < released ; Philosophy, Psychiatry & Psychology Volume 12 ; 12 >
     au < released ; Philosophy, Psychiatry & Psychology Volume 13 ; 13 >
-    au < testing ; Philosophy, Psychiatry & Psychology Volume 14 ; 14 >
-    au < testing ; Philosophy, Psychiatry & Psychology Volume 15 ; 15 >
+    au < ready ; Philosophy, Psychiatry & Psychology Volume 14 ; 14 >
+    au < ready ; Philosophy, Psychiatry & Psychology Volume 15 ; 15 >
 
   }
 
@@ -1129,15 +1129,15 @@
 
     param[journal_dir] = portal_libraries_and_the_academy
 
-    au < testing ; portal: Libraries and the Academy Volume 1 ; 1 >
+    au < ready ; portal: Libraries and the Academy Volume 1 ; 1 >
     au < released ; portal: Libraries and the Academy Volume 2 ; 2 >
     au < released ; portal: Libraries and the Academy Volume 3 ; 3 >
     au < released ; portal: Libraries and the Academy Volume 4 ; 4 >
     au < released ; portal: Libraries and the Academy Volume 5 ; 5 >
-    au < testing ; portal: Libraries and the Academy Volume 6 ; 6 >
+    au < ready ; portal: Libraries and the Academy Volume 6 ; 6 >
     au < released ; portal: Libraries and the Academy Volume 7 ; 7 >
-    au < testing ; portal: Libraries and the Academy Volume 8 ; 8 >
-    au < testing ; portal: Libraries and the Academy Volume 9 ; 9 >
+    au < ready ; portal: Libraries and the Academy Volume 8 ; 8 >
+    au < ready ; portal: Libraries and the Academy Volume 9 ; 9 >
 
   }
 
@@ -1155,7 +1155,7 @@
     au < ready ; Postmodern Culture Volume 4 ; 4 >
     au < ready ; Postmodern Culture Volume 5 ; 5 >
     au < ready ; Postmodern Culture Volume 6 ; 6 >
-    au < testing ; Postmodern Culture Volume 7 ; 7 >
+    au < ready ; Postmodern Culture Volume 7 ; 7 >
     au < released ; Postmodern Culture Volume 8 ; 8 >
     au < released ; Postmodern Culture Volume 9 ; 9 >
     au < released ; Postmodern Culture Volume 10 ; 10 >
@@ -1179,7 +1179,7 @@
     param[journal_dir] = progress_in_community_health_partnerships_research_education_and_action
 
     au < released ; Progress in Community Health Partnerships: Research, Education, and Action Volume 1 ; 1 >
-    au < testing ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
+    au < ready ; Progress in Community Health Partnerships: Research, Education, and Action Volume 2 ; 2 >
 
   }
 
@@ -1232,7 +1232,7 @@
     au < released ; SAIS Review Volume 25 ; 25 >
     au < released ; SAIS Review Volume 26 ; 26 >
     au < released ; SAIS Review Volume 27 ; 27 >
-    au < testing ; SAIS Review Volume 28 ; 28 >
+    au < ready ; SAIS Review Volume 28 ; 28 >
 
   }
 
@@ -1254,8 +1254,8 @@
     au < released ; SEL Studies in English Literature 1500-1900 Volume 45 ; 45 >
     au < released ; SEL Studies in English Literature 1500-1900 Volume 46 ; 46 >
     au < released ; SEL Studies in English Literature 1500-1900 Volume 47 ; 47 >
-    au < testing ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
-    au < testing ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
+    au < ready ; SEL Studies in English Literature 1500-1900 Volume 48 ; 48 >
+    au < ready ; SEL Studies in English Literature 1500-1900 Volume 49 ; 49 >
 
   }
 
@@ -1268,8 +1268,8 @@
     param[journal_dir] = sewanee_review
 
     au < released ; Sewanee Review Volume 115 ; 115 >
-    au < testing ; Sewanee Review Volume 116 ; 116 >
-    au < testing ; Sewanee Review Volume 117 ; 117 >
+    au < ready ; Sewanee Review Volume 116 ; 116 >
+    au < ready ; Sewanee Review Volume 117 ; 117 >
 
   }
 
@@ -1297,14 +1297,14 @@
 
     param[journal_dir] = shakespeare_quarterly
 
-    au < testing ; Shakespeare Quarterly Volume 52 ; 52 >
-    au < testing ; Shakespeare Quarterly Volume 53 ; 53 >
-    au < testing ; Shakespeare Quarterly Volume 54 ; 54 >
-    au < testing ; Shakespeare Quarterly Volume 55 ; 55 >
-    au < testing ; Shakespeare Quarterly Volume 56 ; 56 >
-    au < testing ; Shakespeare Quarterly Volume 57 ; 57 >
-    au < testing ; Shakespeare Quarterly Volume 58 ; 58 >
-    au < testing ; Shakespeare Quarterly Volume 59 ; 59 >
+    au < ready ; Shakespeare Quarterly Volume 52 ; 52 >
+    au < ready ; Shakespeare Quarterly Volume 53 ; 53 >
+    au < ready ; Shakespeare Quarterly Volume 54 ; 54 >
+    au < ready ; Shakespeare Quarterly Volume 55 ; 55 >
+    au < ready ; Shakespeare Quarterly Volume 56 ; 56 >
+    au < ready ; Shakespeare Quarterly Volume 57 ; 57 >
+    au < ready ; Shakespeare Quarterly Volume 58 ; 58 >
+    au < ready ; Shakespeare Quarterly Volume 59 ; 59 >
 
   }
 
