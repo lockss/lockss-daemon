@@ -13,7 +13,7 @@ use Cwd 'abs_path';
 if ($ARGV[0] eq "-h") {
 
     print "To convert the entire 'clockssingest' directory use -d [directory_name].\n";
-    print "To convert a single .tdb file use [filename].\n";
+    print "To convert a single .tdb file use [filename].  The output is written into /clockss/[filename].\n";
     
 } elsif ($ARGV[0] eq "-d") {
     
