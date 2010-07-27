@@ -1,4 +1,4 @@
-﻿#!/usr/bin/perl
+#!/usr/bin/perl
 
 # Suggestions by BEE:
 # 'iterate_lines' has two modes: write to file, or write to screen.
