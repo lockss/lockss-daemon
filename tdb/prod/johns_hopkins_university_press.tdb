@@ -1284,7 +1284,7 @@
 
     au < released ; Shakespeare Bulletin Volume 24 ; 24 >
     au < released ; Shakespeare Bulletin Volume 25 ; 25 >
-    au < testing ; Shakespeare Bulletin Volume 26 ; 26 >
+    au < ready ; Shakespeare Bulletin Volume 26 ; 26 >
 
   }
 
@@ -1320,7 +1320,7 @@
     au < released ; Sirena: poesia, arte y critica Volume 2005 ; 2005 >
     au < released ; Sirena: poesia, arte y critica Volume 2006 ; 2006 >
     au < released ; Sirena: poesia, arte y critica Volume 2007 ; 2007 >
-    au < manifest ; Sirena: poesia, arte y critica Volume 2008 ; 2008 >
+    au < ready ; Sirena: poesia, arte y critica Volume 2008 ; 2008 >
 
   }
 
@@ -1337,7 +1337,7 @@
     au < released ; South Central Review Volume 22 ; 22 >
     au < released ; South Central Review Volume 23 ; 23 >
     au < released ; South Central Review Volume 24 ; 24 >
-    au < manifest ; South Central Review Volume 25 ; 25 >
+    au < ready ; South Central Review Volume 25 ; 25 >
 
   }
 
@@ -1357,7 +1357,7 @@
     au < released ; Spiritus: A Journal of Christian Spirituality Volume 5 ; 5 >
     au < released ; Spiritus: A Journal of Christian Spirituality Volume 6 ; 6 >
     au < released ; Spiritus: A Journal of Christian Spirituality Volume 7 ; 7 >
-    au < manifest ; Spiritus: A Journal of Christian Spirituality Volume 8 ; 8 >
+    au < ready ; Spiritus: A Journal of Christian Spirituality Volume 8 ; 8 >
 
   }
 
@@ -1370,10 +1370,10 @@
 
     param[journal_dir] = studies_in_eighteenth_century_culture
 
-    au < manifest ; Studies in Eighteenth Century Culture Volume 36 ; 36 >
-    au < manifest ; Studies in Eighteenth Century Culture Volume 37 ; 37 >
-    au < manifest ; Studies in Eighteenth Century Culture Volume 38 ; 38 >
-    au < manifest ; Studies in Eighteenth Century Culture Volume 39 ; 39 >
+    au < ready ; Studies in Eighteenth Century Culture Volume 36 ; 36 >
+    au < ready ; Studies in Eighteenth Century Culture Volume 37 ; 37 >
+    au < ready ; Studies in Eighteenth Century Culture Volume 38 ; 38 >
+    au < ready ; Studies in Eighteenth Century Culture Volume 39 ; 39 >
 
   }
   
@@ -1396,8 +1396,8 @@
     au < released ; Technology and Culture Volume 46 ; 46 >
     au < released ; Technology and Culture Volume 47 ; 47 >
     au < released ; Technology and Culture Volume 48 ; 48 >
-    au < manifest ; Technology and Culture Volume 49 ; 49 >
-    au < manifest ; Technology and Culture Volume 50 ; 50 >
+    au < ready ; Technology and Culture Volume 49 ; 49 >
+    au < testing ; Technology and Culture Volume 50 ; 50 >
 
   }
 
@@ -1420,7 +1420,7 @@
     au < released ; The Emily Dickinson Journal Volume 14 ; 14 >
     au < released ; The Emily Dickinson Journal Volume 15 ; 15 >
     au < released ; The Emily Dickinson Journal Volume 16 ; 16 >
-    au < manifest ; The Emily Dickinson Journal Volume 17 ; 17 >
+    au < ready ; The Emily Dickinson Journal Volume 17 ; 17 >
 
   }
 
@@ -1446,8 +1446,8 @@
     au < released ; The Henry James Review Volume 26 ; 26 >
     au < released ; The Henry James Review Volume 27 ; 27 >
     au < released ; The Henry James Review Volume 28 ; 28 >
-    au < manifest ; The Henry James Review Volume 29 ; 29 >
-    au < manifest ; The Henry James Review Volume 30 ; 30 >
+    au < ready ; The Henry James Review Volume 29 ; 29 >
+    au < ready ; The Henry James Review Volume 30 ; 30 >
 
   }
 
@@ -1473,8 +1473,8 @@
     au < released ; The Lion and the Unicorn Volume 29 ; 29 >
     au < released ; The Lion and the Unicorn Volume 30 ; 30 >
     au < released ; The Lion and the Unicorn Volume 31 ; 31 >
-    au < manifest ; The Lion and the Unicorn Volume 32 ; 32 >
-    au < manifest ; The Lion and the Unicorn Volume 33 ; 33 >
+    au < ready ; The Lion and the Unicorn Volume 32 ; 32 >
+    au < ready ; The Lion and the Unicorn Volume 33 ; 33 >
 
   }
 
@@ -1498,8 +1498,8 @@
     au < released ; The Review of Higher Education Volume 28 ; 28 >
     au < released ; The Review of Higher Education Volume 29 ; 29 >
     au < released ; The Review of Higher Education Volume 30 ; 30 >
-    au < manifest ; The Review of Higher Education Volume 31 ; 31 >
-    au < manifest ; The Review of Higher Education Volume 32 ; 32 >
+    au < ready ; The Review of Higher Education Volume 31 ; 31 >
+    au < ready ; The Review of Higher Education Volume 32 ; 32 >
 
   }
 
@@ -1546,7 +1546,7 @@
     au < released ; Theatre Journal Volume 57 ; 57 >
     au < released ; Theatre Journal Volume 58 ; 58 >
     au < released ; Theatre Journal Volume 59 ; 59 >
-    au < manifest ; Theatre Journal Volume 60 ; 60 >
+    au < ready ; Theatre Journal Volume 60 ; 60 >
 
   }
 
@@ -1571,8 +1571,8 @@
     au < released ; Theatre Topics Volume 15 ; 15 >
     au < released ; Theatre Topics Volume 16 ; 16 >
     au < released ; Theatre Topics Volume 17 ; 17 >
-    au < manifest ; Theatre Topics Volume 18 ; 18 >
-    au < manifest ; Theatre Topics Volume 19 ; 19 >
+    au < ready ; Theatre Topics Volume 18 ; 18 >
+    au < testing ; Theatre Topics Volume 19 ; 19 >
 
   }
 
@@ -1592,8 +1592,8 @@
     au < released ; Theory and Event Volume 7 ; 7 >
     au < released ; Theory and Event Volume 8 ; 8 >
     au < released ; Theory and Event Volume 9 ; 9 >
-    au < manifest ; Theory and Event Volume 10 ; 10 >
-    au < manifest ; Theory and Event Volume 11 ; 11 >
+    au < testing ; Theory and Event Volume 10 ; 10 >
+    au < testing ; Theory and Event Volume 11 ; 11 >
 
   }
 
@@ -1613,8 +1613,8 @@
     au < released ; Transactions of the American Philological Association Volume 134 ; 134 >
     au < released ; Transactions of the American Philological Association Volume 135 ; 135 >
     au < released ; Transactions of the American Philological Association Volume 136 ; 136 >
-    au < manifest ; Transactions of the American Philological Association Volume 137 ; 137 >
-    au < manifest ; Transactions of the American Philological Association Volume 138 ; 138 >
+    au < testing ; Transactions of the American Philological Association Volume 137 ; 137 >
+    au < testing ; Transactions of the American Philological Association Volume 138 ; 138 >
 
   }
   
@@ -1627,11 +1627,11 @@
 
     param[journal_dir] = victorian_periodicals_review
 
-    au < manifest ; Victorian Periodicals Review Volume 38 ; 38 >
-    au < manifest ; Victorian Periodicals Review Volume 39 ; 39 >
-    au < manifest ; Victorian Periodicals Review Volume 40 ; 40 >
-    au < manifest ; Victorian Periodicals Review Volume 41 ; 41 >
-    au < manifest ; Victorian Periodicals Review Volume 42 ; 42 >
+    au < testing ; Victorian Periodicals Review Volume 38 ; 38 >
+    au < testing ; Victorian Periodicals Review Volume 39 ; 39 >
+    au < testing ; Victorian Periodicals Review Volume 40 ; 40 >
+    au < testing ; Victorian Periodicals Review Volume 41 ; 41 >
+    au < testing ; Victorian Periodicals Review Volume 42 ; 42 >
 
   }
   
@@ -1644,10 +1644,10 @@
 
     param[journal_dir] = wide_angle
 
-    au < manifest ; Wide Angle Volume 18 ; 18 >
-    au < manifest ; Wide Angle Volume 19 ; 19 >
-    au < manifest ; Wide Angle Volume 20 ; 20 >
-    au < manifest ; Wide Angle Volume 21 ; 21 >
+    au < testing ; Wide Angle Volume 18 ; 18 >
+    au < testing ; Wide Angle Volume 19 ; 19 >
+    au < testing ; Wide Angle Volume 20 ; 20 >
+    au < testing ; Wide Angle Volume 21 ; 21 >
 
   }
 
