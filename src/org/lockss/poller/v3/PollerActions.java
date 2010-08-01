@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.28 2009-01-21 04:07:02 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.29 2010-08-01 21:33:06 tlipkis Exp $
  */
 
 /*
@@ -268,8 +268,9 @@ public class PollerActions {
     ParticipantUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtError;
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
+    PeerIdentity pid = msg.getOriginatorId();
     log.debug2("Received repair from voter "
-               + msg.getOriginatorId() + " in poll "
+               + pid + " in poll "
                + msg.getKey() + " for URL "
                + msg.getTargetUrl());
     // Apply the repair
@@ -283,6 +284,9 @@ public class PollerActions {
                   "for block " + repairTarget);
         return V3Events.evtError;
       }
+      props.setProperty(CachedUrl.PROPERTY_REPAIR_FROM, pid.getIdString());
+      props.setProperty(CachedUrl.PROPERTY_REPAIR_DATE,
+			Long.toString(TimeBase.nowMs()));
       uc.storeContent(msg.getRepairDataInputStream(),
                       props);
       ud.getPoller().receivedRepair(msg.getTargetUrl());

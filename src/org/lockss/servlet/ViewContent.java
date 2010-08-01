@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.15 2009-11-08 01:30:07 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.16 2010-08-01 21:32:32 tlipkis Exp $
  */
 
 /*
@@ -232,6 +232,17 @@ public class ViewContent extends LockssServlet {
 	Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
       addPropRow(tbl, "Collected at", ServletUtil.headerDf.format(new Date(sdate)));
     } catch (NumberFormatException ignore) {
+    }
+    String repairFrom = props.getProperty(CachedUrl.PROPERTY_REPAIR_FROM);
+    if (!StringUtil.isNullString(repairFrom)) {
+      addPropRow(tbl, "Repaired from", repairFrom);
+      try {
+	long rdate =
+	  Long.parseLong(props.getProperty(CachedUrl.PROPERTY_REPAIR_DATE));
+	addPropRow(tbl, "Repair date",
+		   ServletUtil.headerDf.format(new Date(rdate)));
+      } catch (NumberFormatException ignore) {
+      }
     }
     page.add(tbl);
     page.add("<br>");

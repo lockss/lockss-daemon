@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.24 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.25 2010-08-01 21:32:32 tlipkis Exp $
  */
 
 /*
@@ -74,8 +74,12 @@ public interface CachedUrl extends CachedUrlSetNode {
   /** The URL immediately redirected to from here, if any. */
   public static final String PROPERTY_REDIRECTED_TO = "X-Lockss-redirected-to";
 
-  /** The final URL (that had content) if redirected from here */
+  /** The identity of the peer from which this file was obtained as a
+   * repair */
   public static final String PROPERTY_REPAIR_FROM = "X-Lockss-repaired-from";
+
+  /** The time the repair was obtained, as a long */
+  public static final String PROPERTY_REPAIR_DATE = "X-Lockss-repaired-date";
 
   /** From response.getContentType(); might be inferred */
   public static final String PROPERTY_CONTENT_TYPE = "X-Lockss-content-type";
