@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRules.java,v 1.5 2008-08-17 08:38:32 tlipkis Exp $
+ * $Id: TestCrawlRules.java,v 1.6 2010-08-01 21:32:13 tlipkis Exp $
  */
 
 /*
@@ -315,6 +315,18 @@ public class TestCrawlRules extends LockssTestCase {
       fail("CrawlRules.FirstMatch.match(null) should throw");
     } catch (NullPointerException e) {
     }
+  }
+
+  public void testContains() throws LockssRegexpException {
+    List<String> l = ListUtil.list("http://foo.bar/one",
+				   "http://foo.bar/two",
+				   "http://foo.bar/three");
+    CrawlRule cr = new CrawlRules.Contains(l);
+    for (String url : l) {
+      assertEquals(CrawlRule.INCLUDE, cr.match(url));
+    }
+    assertEquals(CrawlRule.IGNORE, cr.match("http://foo.bar/threex"));
+    assertEquals(CrawlRule.IGNORE, cr.match("other"));
   }
 
   public void testNullStringRange() throws LockssRegexpException {

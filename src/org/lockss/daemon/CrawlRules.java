@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.11 2008-08-17 08:38:33 tlipkis Exp $
+ * $Id: CrawlRules.java,v 1.12 2010-08-01 21:32:13 tlipkis Exp $
  */
 
 /*
@@ -468,6 +468,41 @@ public class CrawlRules {
 
     public String toString() {
       return "[CrawlRule.FirstMatch: " + rules + "]";
+    }
+  }
+
+  /**
+   * CrawlRules.Contains matches against a collection of URLs, returning
+   * <code>CrawlRule.INCLUDE</code> if the URLs is found, else
+   * <code>CrawlRule.IGNORE</code>.
+   */
+  public static class Contains implements CrawlRule {
+    private Collection<String> urls;
+
+    /**
+     * Create a rule that matches an explicit set of URLs
+     * @param urls Collection of URL strings
+     * @throws NullPointerException if the list is null.
+     */
+    public Contains(Collection urls) {
+      if (urls == null) {
+	throw
+	  new NullPointerException("CrawlRules.Contains with null collection");
+      }
+      this.urls = urls;
+    }
+
+    /**
+     * @param url URL string to check against this rule
+     * @return INCLUDE if the string is contained in the collection, else
+     * IGNORE.
+     */
+    public int match(String url) {
+      return urls.contains(url) ? INCLUDE : IGNORE;
+    }
+
+    public String toString() {
+      return "[CrawlRule.Contains: " + urls + "]";
     }
   }
 }
