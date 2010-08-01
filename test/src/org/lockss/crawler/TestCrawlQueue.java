@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlQueue.java,v 1.3 2009-08-04 02:19:56 tlipkis Exp $
+ * $Id: TestCrawlQueue.java,v 1.4 2010-08-01 21:31:55 tlipkis Exp $
  */
 
 /*
@@ -50,8 +50,9 @@ public class TestCrawlQueue extends LockssTestCase {
     }
   }
 
-  public void testDefaultSort() {
-    CrawlQueue cq = new CrawlQueue(null);
+  public void testAlphabeticalBreadthFirst() {
+    CrawlQueue cq =
+      new CrawlQueue(new CrawlQueue.AlphabeticalBreadthFirstUrlComparator());
     CrawlUrlData c1 = new CrawlUrlData("x1", 0);
     CrawlUrlData c2 = new CrawlUrlData("u3", 1);
     CrawlUrlData c3 = new CrawlUrlData("u2", 1);
@@ -80,6 +81,38 @@ public class TestCrawlQueue extends LockssTestCase {
       lst.add(cq.remove());
     }
     assertEquals(ListUtil.list(c1, c3, c2, c4, c5), lst);
+  }
+
+  public void testBreadthFirst() {
+    CrawlQueue cq = new CrawlQueue(null);
+    CrawlUrlData c1 = new CrawlUrlData("x1", 0);
+    CrawlUrlData c2 = new CrawlUrlData("u3", 1);
+    CrawlUrlData c3 = new CrawlUrlData("u2", 1);
+    CrawlUrlData c4 = new CrawlUrlData("u4", 2);
+    CrawlUrlData c5 = new CrawlUrlData("a5", 3);
+    
+    assertTrue(cq.isEmpty());
+    assertNull(cq.get(c4.getUrl()));
+    cq.add(c4);
+    assertFalse(cq.isEmpty());
+    assertSame(c4, cq.get(c4.getUrl()));
+    assertIsomorphic(ListUtil.list(c4), cq.asList());
+    cq.add(c3);
+    assertIsomorphic(ListUtil.list(c4, c3), cq.asList());
+    assertSame(c3, cq.get(c3.getUrl()));
+    assertSame(c4, cq.get(c4.getUrl()));
+    cq.add(c2);
+    assertIsomorphic(ListUtil.list(c4, c3, c2), cq.asList());
+    cq.add(c1);
+    assertIsomorphic(ListUtil.list(c4, c3, c2, c1), cq.asList());
+    cq.add(c5);
+    assertIsomorphic(ListUtil.list(c4, c3, c2, c1, c5), cq.asList());
+
+    List lst = new ArrayList();
+    while (!cq.isEmpty()) {
+      lst.add(cq.remove());
+    }
+    assertEquals(ListUtil.list(c4, c3, c2, c1, c5), lst);
   }
 
   public void testCustomSort() {

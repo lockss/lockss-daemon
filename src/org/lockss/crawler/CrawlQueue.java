@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlQueue.java,v 1.3 2009-08-04 02:19:56 tlipkis Exp $
+ * $Id: CrawlQueue.java,v 1.4 2010-08-01 21:31:55 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.crawler;
 import java.util.*;
 import java.io.*;
 import java.text.*;
+
+import org.apache.commons.collections.Buffer;
 import org.apache.commons.collections.buffer.*;
 import org.lockss.util.*;
 
@@ -49,16 +51,22 @@ import org.lockss.util.*;
 public class CrawlQueue {
   static Logger log = Logger.getLogger("CrawlQueue");
 
-  PriorityBuffer sorted;
+  Buffer sorted;
   Map<String,CrawlUrlData> map;
 
-  /** Create a CrawlQueue that sorts {@link CrawlUrlData} object (viewed as
-   * {@link CrawlUrl}) by the specified comparator. */
+  /** Create a CrawlQueue that sorts {@link CrawlUrlData} objects (viewed
+   * as {@link CrawlUrl}) by the specified comparator.
+   * @param comparator the comparator that determines the order of URLs in
+   * the queue.  If null, the crawl will be breadth first, with the URLs at
+   * each level fetched in the order they were discovered (at the previous
+   * level).
+   */
   public CrawlQueue(Comparator<CrawlUrl> comparator) {
     if (comparator == null) {
-      comparator = new BreadthFirstUrlComparator();
+      sorted = new UnboundedFifoBuffer();
+    } else {
+      sorted = new PriorityBuffer(comparator);
     }
-    sorted = new PriorityBuffer(comparator);
     map = new HashMap<String,CrawlUrlData>();
   }
 
@@ -86,6 +94,11 @@ public class CrawlQueue {
     return (CrawlUrlData)sorted.get();
   }
 
+  /** For unit tests */
+  Collection asList() {
+    return new ArrayList(sorted);
+  }
+
   /** Remove the first CrawlUrlData from the queue and return it */
   public CrawlUrlData remove() {
     CrawlUrlData res = (CrawlUrlData)sorted.remove();
@@ -111,7 +124,10 @@ public class CrawlQueue {
     return "[" + StringUtil.separatedString(sorted, ", ") + "]";
   }
 
-  static class BreadthFirstUrlComparator implements Comparator<CrawlUrl> {
+  /** A comparator that implements a breadth-first crawl where, at each
+   * level, the URLs are fetched in alphabetic order */
+  public static class AlphabeticalBreadthFirstUrlComparator
+    implements Comparator<CrawlUrl> {
     public int compare(CrawlUrl curl1, CrawlUrl curl2) {
       int res = curl1.getDepth() - curl2.getDepth();
       if (res == 0) {

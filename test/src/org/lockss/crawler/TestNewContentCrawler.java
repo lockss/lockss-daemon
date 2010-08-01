@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.73 2009-08-09 07:38:50 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.74 2010-08-01 21:31:55 tlipkis Exp $
  */
 
 /*
@@ -966,14 +966,14 @@ public class TestNewContentCrawler extends LockssTestCase {
 				      url1, url2, url3, url4, url5,
 				      url6, url7, url8, url9, url10);
     extractor.addUrlsToReturn(startUrl, SetUtil.set(url1, url4));
-    extractor.addUrlsToReturn(url1, SetUtil.set(url2, url3));
-    extractor.addUrlsToReturn(url2, SetUtil.set(url7));
-    extractor.addUrlsToReturn(url7, SetUtil.set(url8));
-    extractor.addUrlsToReturn(url4, SetUtil.set(url5, url6, url8));
-    extractor.addUrlsToReturn(url6, SetUtil.set(url9));
-    extractor.addUrlsToReturn(url8, SetUtil.set(url10));
+    extractor.addUrlsToReturn(url1, ListUtil.list(url2, url3));
+    extractor.addUrlsToReturn(url2, ListUtil.list(url7));
+    extractor.addUrlsToReturn(url7, ListUtil.list(url8));
+    extractor.addUrlsToReturn(url4, ListUtil.list(url5, url6, url8));
+    extractor.addUrlsToReturn(url6, ListUtil.list(url9));
+    extractor.addUrlsToReturn(url8, ListUtil.list(url10));
     // Add a cycle for good measure
-    extractor.addUrlsToReturn(url9, SetUtil.set(url2));
+    extractor.addUrlsToReturn(url9, ListUtil.list(url2));
 
     mau.addUrl(startUrl, false, true);
     for (String url : urls) {
@@ -987,12 +987,12 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testPriorityQueueBreadthFirst1() {
     testPriorityQueue(1, false, null,
-		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
+		      ListUtil.list(0, 1, 4, 2, 3, 5, 6, 8, 7, 9, 10));
   }
 
   public void testPriorityQueueBreadthFirst3() {
     testPriorityQueue(3, false, null,
-		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
+		      ListUtil.list(0, 1, 4, 2, 3, 5, 6, 8, 7, 9, 10));
   }
 
   public void testPriorityQueueBreadthFirstRecrawl1() {
@@ -1002,6 +1002,26 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testPriorityQueueBreadthFirstRecrawl3() {
     testPriorityQueue(3, true, null,
+		      ListUtil.list(0, 1, 4, 2, 3, 5, 6, 8));
+  }
+
+  public void testPriorityQueueAlphabeticBreadthFirst1() {
+    testPriorityQueue(1, false, new CrawlQueue.AlphabeticalBreadthFirstUrlComparator(),
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
+  }
+
+  public void testPriorityQueueAlphabeticBreadthFirst3() {
+    testPriorityQueue(3, false, new CrawlQueue.AlphabeticalBreadthFirstUrlComparator(),
+		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
+  }
+
+  public void testPriorityQueueAlphabeticBreadthFirstRecrawl1() {
+    testPriorityQueue(1, true, new CrawlQueue.AlphabeticalBreadthFirstUrlComparator(),
+		      ListUtil.list(0));
+  }
+
+  public void testPriorityQueueAlphabeticBreadthFirstRecrawl3() {
+    testPriorityQueue(3, true, new CrawlQueue.AlphabeticalBreadthFirstUrlComparator(),
 		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6));
   }
 
@@ -1029,14 +1049,14 @@ public class TestNewContentCrawler extends LockssTestCase {
     ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
 				  "4");
     testPriorityQueue(1, false, null,
-		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6, 7, 9, 10));
+		      ListUtil.list(0, 1, 4, 2, 3, 5, 6, 8, 7, 9, 10));
   }
 
   public void testPriorityQueueBreadthFirst1MaxDepth3() {
     ConfigurationUtil.addFromArgs(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH,
 				  "3");
     testPriorityQueue(1, false, null,
-		      ListUtil.list(0, 1, 4, 8, 2, 3, 5, 6),
+		      ListUtil.list(0, 1, 4, 2, 3, 5, 6, 8),
 		      false);
   }
 
@@ -1445,7 +1465,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     void setErrorUrl(String url) {
       errorUrl = url;
     }
-
   }
 
   public static void main(String[] argv) {
