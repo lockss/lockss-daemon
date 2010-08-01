@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.43 2010-07-09 08:03:35 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.44 2010-08-01 21:34:11 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   private TypedEntryMap additionalAuConfig = new TypedEntryMap();
   private ExternalizableMap defMap;
   private List configProps;
-  private List crawlRules = ListUtil.list("1,\"%s\", base_url",
+  private List crawlRules = ListUtil.list("1,\"%spath/\", base_url",
                                           "1,\".*\\.gif\"");
 
   private static String PLUGIN_NAME = "Test Plugin";
@@ -401,19 +401,48 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
-  public void testMakeRules() throws LockssRegexpException {
-    additionalAuConfig.putString("base_url", "http://www.example.com/");
+  public void testMakeRules(boolean includeStart) throws Exception {
+    ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
+				  ""+includeStart);
     defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
-    setupAu(additionalAuConfig);
+    defMap.putString(ArchivalUnit.KEY_AU_START_URL,
+		     "\"%svolume/%i.html\", base_url, volume");
+    String permUrl = "http://other.host/permission.html";
+    defMap.putString(DefinableArchivalUnit.KEY_AU_MANIFEST,
+		     "\"" + permUrl + "\"");
+    setupAu();
 
-    CrawlRule rules = cau.makeRules();
+    Configuration auConf = ConfigManager.newConfiguration();
+    auConf.put("base_url", "http://www.example.com/");
+    auConf.put("volume", "43");
+    cau.setConfiguration(auConf);
+
+    SpiderCrawlSpec spec = (SpiderCrawlSpec)cau.getCrawlSpec();
+    CrawlRule rule = spec.getCrawlRule();
     assertEquals(CrawlRule.INCLUDE,
-                 rules.match("http://www.example.com/mygif.gif"));
+                 rule.match("http://www.example.com/mygif.gif"));
     assertEquals(CrawlRule.INCLUDE,
-                 rules.match("http://www.example.com/"));
+                 rule.match("http://www.example.com/path/"));
+    if (includeStart) {
+      assertEquals(CrawlRule.INCLUDE,
+		   rule.match("http://www.example.com/volume/43.html"));
+      assertEquals(CrawlRule.INCLUDE, rule.match(permUrl));
+    } else {
+      assertEquals(CrawlRule.IGNORE,
+		   rule.match("http://www.example.com/volume/43.html"));
+      assertEquals(CrawlRule.IGNORE, rule.match(permUrl));
+    }
   }
 
-  public void testMakeRulesIgnCase() throws LockssRegexpException {
+  public void testMakeRules() throws Exception {
+    testMakeRules(false);
+  }
+
+  public void testMakeRulesWithImplicitStart() throws Exception {
+    testMakeRules(true);
+  }
+
+  public void testMakeRulesIgnCase() throws Exception {
     additionalAuConfig.putString("base_url", "http://www.example.com/");
     defMap.putCollection(DefinableArchivalUnit.KEY_AU_CRAWL_RULES, crawlRules);
     defMap.putBoolean(DefinableArchivalUnit.KEY_AU_CRAWL_RULES_IGNORE_CASE,
@@ -428,7 +457,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals(CrawlRule.INCLUDE,
                  rules.match("http://www.EXAMPLE.com/mygif.GIF"));
     assertEquals(CrawlRule.INCLUDE,
-                 rules.match("http://www.example.com/"));
+                 rules.match("http://www.example.com/path/"));
   }
 
   public void testMakeRulesDontIgnCase() throws LockssRegexpException {
@@ -441,12 +470,12 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
                  rules.match("http://www.example.com/mygif.gif"));
-    assertEquals(CrawlRule.INCLUDE,
+    assertEquals(CrawlRule.IGNORE,
                  rules.match("http://www.example.com/mygif.GIF"));
     assertEquals(CrawlRule.IGNORE,
                  rules.match("http://www.EXAMPLE.com/mygif.GIF"));
     assertEquals(CrawlRule.INCLUDE,
-                 rules.match("http://www.example.com/"));
+                 rules.match("http://www.example.com/path/"));
   }
 
   public void testMakeStartUrl() throws Exception {
@@ -888,6 +917,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
   public void testLargePlugin() throws Exception {
+    ConfigurationUtil.addFromArgs(DefinableArchivalUnit.PARAM_CRAWL_RULES_INCLUDE_START,
+				  "false");
 
     MyPluginManager pmgr = new MyPluginManager();
     getMockLockssDaemon().setPluginManager(pmgr);

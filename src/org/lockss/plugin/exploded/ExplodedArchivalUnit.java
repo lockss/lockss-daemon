@@ -1,5 +1,5 @@
 /*
- * $Id: ExplodedArchivalUnit.java,v 1.8 2009-09-04 03:52:19 dshr Exp $
+ * $Id: ExplodedArchivalUnit.java,v 1.9 2010-08-01 21:34:11 tlipkis Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class ExplodedArchivalUnit extends DefinableArchivalUnit {
     return new ArrayList(urlStems);
   }
 
-  protected List getPermissionPages() {
+  protected List<String> getPermissionPages() {
     return new ArrayList(permissionPageUrls);
   }
 

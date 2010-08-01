@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.79 2010-07-21 06:11:27 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.80 2010-08-01 21:34:12 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,13 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     Configuration.PREFIX + "plugin.crawlRulesIgnoreCase";
   static final boolean DEFAULT_CRAWL_RULES_IGNORE_CASE = true;
 
+  /** If true, crawl rules implicitly include the start URLs and permission
+   * URLs */
+  static final String PARAM_CRAWL_RULES_INCLUDE_START =
+    Configuration.PREFIX + "plugin.crawlRulesIncludeStartUrl";
+  static final boolean DEFAULT_CRAWL_RULES_INCLUDE_START = true;
+
+  static final int CRAWL_RULE_CONTAINS_SET_THRESHOLD = 12;
 
   public static final String PREFIX_NUMERIC = "numeric_";
   public static final int DEFAULT_AU_CRAWL_DEPTH = 1;
@@ -175,7 +182,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return res;
   }
 
-  protected List getPermissionPages() {
+  protected List<String> getPermissionPages() {
     List res = convertPatternList(KEY_AU_MANIFEST);
     if (res == null) {
       return super.getPermissionPages();
@@ -292,6 +299,49 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected CrawlRule makeRules() throws LockssRegexpException {
+    CrawlRule rule = makeRules0();
+    if (rule == null
+	|| !CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_INCLUDE_START,
+					  DEFAULT_CRAWL_RULES_INCLUDE_START)) {
+      return rule;
+    }
+    // If any of the the start URLs or permission URLs aren't otherwise
+    // included in the crawl rule, add them explicitly, by wrapping the
+    // rule in one that first checks the start and permission URLs.
+
+    Collection<String> expUrls = new HashSet<String>();
+
+    List<String> perms = getPermissionPages();
+    if (perms != null) {
+      for (String url : perms) {
+	if (rule.match(url) != CrawlRule.INCLUDE) {
+	  expUrls.add(url);
+	}
+      }
+    }
+    List<String> starts = getNewContentCrawlUrls();
+    if (starts != null) {
+      for (String url : starts) {
+	if (rule.match(url) != CrawlRule.INCLUDE) {
+	  expUrls.add(url);
+	}
+      }
+    }
+    if (expUrls.isEmpty()) {
+      return rule;
+    } else {
+      if (expUrls.size() < CRAWL_RULE_CONTAINS_SET_THRESHOLD) {
+	expUrls = new ArrayList(expUrls);
+      }
+      // Must check the explicit list first, even though it will hardly
+      // ever match, as main rule could return EXCLUDE
+      return new CrawlRules.FirstMatch(ListUtil.list(new CrawlRules.Contains(expUrls),
+						     rule));
+
+    }
+  }
+
+  CrawlRule makeRules0() throws LockssRegexpException {
     Object rule = definitionMap.getMapElement(KEY_AU_CRAWL_RULES);
     boolean defaultIgnoreCase =
       CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_IGNORE_CASE,
