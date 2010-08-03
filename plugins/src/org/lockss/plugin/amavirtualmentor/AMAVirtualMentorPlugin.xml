@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;AMA Virtual Mentor Plugin, Base URL %s, Poll URL %s, Year %d&quot;, base_url, poll_url, year</string>
+    <string>&quot;AMA Virtual Mentor Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
@@ -30,7 +30,6 @@
       <string>4,&quot;^%s&quot;, base_url</string>
       <string>1,&quot;^%ssite/manifests/&quot;, base_url</string>
       <string>1,&quot;^%s%d/&quot;, base_url, year</string>
-      <string>1,&quot;^%scgi-bin/qpoll/&quot;, poll_url</string>
     </list>
   </entry>
   <entry>
@@ -55,15 +54,6 @@
         <description>Four digit year (e.g., 2004)</description>
         <type>4</type>
         <size>4</size>
-        <definitional>true</definitional>
-        <defaultOnly>false</defaultOnly>
-      </org.lockss.daemon.ConfigParamDescr>
-      <org.lockss.daemon.ConfigParamDescr>
-        <key>poll_url</key>
-        <displayName>Poll URL</displayName>
-        <description>AMA URL where the per-issue polls are located</description>
-        <type>3</type>
-        <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
