@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.1 2010-07-07 10:08:08 thib_gc Exp $
+ * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.2 2010-08-03 15:45:20 dsferopoulos Exp $
  */
 
 /*
@@ -51,9 +51,7 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
   
   protected static final String PATTERN_TEMPLATE = "\"^%s\\?DOI=\", resolver_url";
 
-  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au,
-                                                      MetadataTarget target)
-      throws PluginException {
+  public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, MetadataTarget target) throws PluginException {
     return new RoyalSocietyOfChemistryArticleIterator(au, new SubTreeArticleIterator.Spec()
                                                           .setTarget(target)
                                                           .setRootTemplate(ROOT_TEMPLATE)
@@ -172,7 +170,7 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
 
   }
   
-  protected static class RoyalSocietyOfChemistryArticleMetadataExtractor implements ArticleMetadataExtractor {
+  public static class RoyalSocietyOfChemistryArticleMetadataExtractor implements ArticleMetadataExtractor {
 
     public ArticleMetadata extract(ArticleFiles af) throws IOException, PluginException {
       String url = af.getFullTextUrl();
