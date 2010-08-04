@@ -98,9 +98,9 @@ sub iterate_lines {
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }    
 	    
 	}
-	elsif ($lines[$k] =~ m/comment\[/) {
+#	elsif ($lines[$k] =~ m/comment\[/) {
 	    # Don't copy lines with comments in them.
-	}
+#	}
 	else {
 	    
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }

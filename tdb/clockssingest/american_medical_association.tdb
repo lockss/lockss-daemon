@@ -1526,4 +1526,17 @@
     au < testing ; 2010 ; JAMA: The Journal of the American Medical Association Volume 303 ; 303 ; >
   }
 
+  {
+  
+    title <
+      name = Virtual Mentor ;
+      issn = 1937-7010
+    >
+    
+    param[base_url] = http://virtualmentor.ama-assn.org/
+
+comment[vm] = requires a new plugin
+
+  }
+  
 }
