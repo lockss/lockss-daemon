@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.amavirtualmentor.AMAVirtualMentorPlugin</string>
+    <string>org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -13,11 +13,11 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;AMA Virtual Mentor Plugin, Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>&quot;AMA Virtual Mentor Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>AMA Virtual Mentor Plugin</string>
+    <string>AMA Virtual Mentor Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -28,7 +28,7 @@
     <list>
       <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%ssite/manifests/&quot;, base_url</string>
+      <string>1,&quot;^%ssite/manifests/manifest%d\.html$&quot;, base_url, year</string>
       <string>1,&quot;^%s%d/&quot;, base_url, year</string>
     </list>
   </entry>
