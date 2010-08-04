@@ -61,6 +61,6 @@
   </entry>
   <entry>
     <string>text/html_filter_factory</string>
-    <string>org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorFilterFactory</string>
+    <string>org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorHtmlFilterFactory</string>
   </entry>
 </map>
