@@ -195,8 +195,8 @@
     param[base_url] = http://aer.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Educational Research Journal Volume 45 ; 45 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Educational Research Journal Volume 47 ; 47 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; American Educational Research Journal Volume 46 ; 46 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Educational Research Journal Volume 47 ; 47 ; >
 
   }
 
@@ -210,8 +210,8 @@
     param[base_url] = http://aja.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Alzheimer's Disease and Other Dementias Volume 23 ; 23 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; American Journal of Alzheimer's Disease and Other Dementias Volume 24 ; 24 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Alzheimer's Disease and Other Dementias Volume 25 ; 25 ; >
 
   }
 
@@ -227,7 +227,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Evaluation Volume 29 ; 29 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Journal of Evaluation Volume 30 ; 30 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Evaluation Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Evaluation Volume 31 ; 31 ; >
 
   }
 
@@ -242,7 +242,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Hospice and Palliative Medicine Volume 25 ; 25 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Journal of Hospice and Palliative Medicine Volume 26 ; 26 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Hospice and Palliative Medicine Volume 27 ; 27 ; >
 
   }
 
@@ -258,7 +258,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Lifestyle Medicine Volume 2 ; 2 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Journal of Lifestyle Medicine Volume 3 ; 3 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Lifestyle Medicine Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Lifestyle Medicine Volume 4 ; 4 ; >
 
   }
 
@@ -274,7 +274,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Medical Quality Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Journal of Medical Quality Volume 24 ; 24 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Medical Quality Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Medical Quality Volume 25 ; 25 ; >
 
   }
 
@@ -290,7 +290,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Men's Health Volume 2 ; 2 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Journal of Men's Health Volume 3 ; 3 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Men's Health Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Men's Health Volume 4 ; 4 ; >
 
   }
 
@@ -304,8 +304,8 @@
 
     param[base_url] = http://ajs.sagepub.com/
 
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The American Journal of Sports Medicine Volume 38 ; 38 ; >
-
+    comment[ajs] = no CLOCKSS manifest
+    
   }
 
   {
@@ -320,7 +320,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Politics Research Volume 36 ; 36 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Politics Research Volume 37 ; 37 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Politics Research Volume 38 ; 38 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Politics Research Volume 38 ; 38 ; >
 
   }
 
@@ -336,7 +336,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The American Review of Public Administration Volume 38 ; 38 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The American Review of Public Administration Volume 39 ; 39 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The American Review of Public Administration Volume 40 ; 40 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The American Review of Public Administration Volume 40 ; 40 ; >
 
   }
 
@@ -351,6 +351,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Angiology Volume 59 ; 59 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Angiology Volume 60 ; 60 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Angiology Volume 61 ; 61 ; >
 
   }
 
@@ -366,6 +367,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Animation Volume 3 ; 3 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Animation Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Animation Volume 5 ; 5 ; >
 
   }
 
@@ -388,6 +390,11 @@
     au < ClockssHighWirePlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 623 ; 623 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 624 ; 624 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The Annals of the American Academy of Political and Social Science Volume 625 ; 625 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 626 ; 626 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 627 ; 627 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 628 ; 628 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 629 ; 629 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Annals of the American Academy of Political and Social Science Volume 630 ; 630 ; >
 
   }
 
@@ -403,6 +410,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Anthropological Theory Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Anthropological Theory Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Anthropological Theory Volume 10 ; 10 ; >
 
   }
 
@@ -418,6 +426,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Applied Psychological Measurement Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Applied Psychological Measurement Volume 34 ; 34 ; >
 
   }
 
@@ -432,6 +441,7 @@
     param[base_url] = http://afs.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Armed Forces & Society Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Armed Forces & Society Volume 36 ; 36 ; >
 
   }
 
@@ -447,6 +457,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; >
 
   }
 
@@ -462,6 +473,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Asia Pacific Journal of Human Resources Volume 46 ; 46 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 ; >
 
   }
 
@@ -476,6 +488,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 ; >
 
   }
 
@@ -490,6 +503,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 ; >
 
   }
 
@@ -519,7 +533,7 @@
 
     au < ClockssHighWirePlugin ; retesting ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 ; >
     au < ClockssHighWirePlugin ; down ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 ; >
-    au < ClockssHighWirePlugin ; manifest ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009-2010 ; Assessment for Effective Intervention Volume 35 ; 35 ; >
 
   }
 
@@ -813,7 +827,7 @@
 
     param[base_url] = http://chd.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Childhood Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Childhood Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Childhood Volume 16 ; 16 ; >
 
   }
@@ -828,7 +842,7 @@
 
     param[base_url] = http://cin.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; China Information Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; China Information Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; China Information Volume 23 ; 23 ; >
 
   }
@@ -844,7 +858,7 @@
 
     comment[legacy] = Last issue in 2008
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; China Report Volume 44 ; 44 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; China Report Volume 44 ; 44 ; >
 
   }
 
@@ -858,7 +872,7 @@
 
     param[base_url] = http://chi.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Chronic Illness Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Chronic Illness Volume 4 ; 4 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Chronic Illness Volume 5 ; 5 ; >
 
   }
@@ -873,7 +887,7 @@
 
     param[base_url] = http://crd.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Chronic Respiratory Disease Volume 5 ; 5 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Chronic Respiratory Disease Volume 5 ; 5 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Chronic Respiratory Disease Volume 6 ; 6 ; >
 
   }
@@ -888,7 +902,7 @@
 
     param[base_url] = http://cla.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Clin-Alert Volume 46 ; 46 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Clin-Alert Volume 46 ; 46 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Clin-Alert Volume 47 ; 47 ; >
 
   }
@@ -902,7 +916,7 @@
 
     param[base_url] = http://cat.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Clinical and Applied Thrombosis/Hemostasis Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Clinical and Applied Thrombosis/Hemostasis Volume 15 ; 15 ; >
 
   }
@@ -917,7 +931,7 @@
 
     param[base_url] = http://ccs.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Clinical Case Studies Volume 7 ; 7 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Clinical Case Studies Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Clinical Case Studies Volume 8 ; 8 ; >
 
   }
@@ -1022,7 +1036,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2007-2008 ; Communication Disorders Quarterly Volume 29 ; 29 ; >
     au < ClockssHighWirePlugin ; down ; 2008-2009 ; Communication Disorders Quarterly Volume 30 ; 30 ; >
-    au < ClockssHighWirePlugin ; manifest ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009-2010 ; Communication Disorders Quarterly Volume 31 ; 31 ; >
 
   }
 
@@ -1636,7 +1650,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2007-2008 ; Education and Urban Society Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; down ; 2008-2009 ; Education and Urban Society Volume 41 ; 41 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePlugin ; manifest ; 2009-2010 ; Education and Urban Society Volume 42 ; 42 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009-2010 ; Education and Urban Society Volume 42 ; 42 ; >
 
   }
 
@@ -1769,7 +1783,7 @@
 
     param[base_url] = http://eab.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Environment and Behavior Volume 40 ; 40 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Environment and Behavior Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Environment and Behavior Volume 41 ; 41 ; reingest3.clockss.org:8083 >
 
   }
@@ -1784,7 +1798,7 @@
 
     param[base_url] = http://eau.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Environment and Urbanization Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Environment and Urbanization Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Environment and Urbanization Volume 21 ; 21 ; reingest3.clockss.org:8083 >
 
   }
@@ -2072,9 +2086,9 @@ comment[ext121] = no xml entry
 
     param[base_url] = http://ext.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2007-2008 ; The Expository Times Volume 119 ; 119 ; >
-    au < ClockssHighWirePlugin ; testing ; 2008-2009 ; The Expository Times Volume 120 ; 120 ; >
-    au < ClockssHighWirePlugin ; manifest ; 2009-2010 ; The Expository Times Volume 121 ; 121 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2007-2008 ; The Expository Times Volume 119 ; 119 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008-2009 ; The Expository Times Volume 120 ; 120 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009-2010 ; The Expository Times Volume 121 ; 121 ; >
 
   }
 
@@ -2089,7 +2103,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://fcs.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2007-2008 ; Family and Consumer Sciences Research Journal Volume 36 ; 36 ; >
-    au < ClockssHighWirePlugin ; testing ; 2008-2009 ; Family and Consumer Sciences Research Journal Volume 37 ; 37 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008-2009 ; Family and Consumer Sciences Research Journal Volume 37 ; 37 ; >
 
   }
 
@@ -3508,7 +3522,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://jbs.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Black Studies Volume 39 ; 39 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Journal of Black Studies Volume 40 ; 40 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Journal of Black Studies Volume 40 ; 40 ; >
 
   }
 
@@ -3522,7 +3536,7 @@ comment[ext121] = no xml entry
 
     param[base_url] = http://jen.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Journal of Building Physics Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Journal of Building Physics Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Building Physics Volume 33 ; 33 ; >
 
   }
@@ -3685,7 +3699,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://jcp.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 ; >
 
   }
 
@@ -3699,8 +3713,8 @@ comment[ext121] = no xml entry
 
     param[base_url] = http://jcl.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; The Journal of Commonwealth Literature Volume 43 ; 43 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; The Journal of Commonwealth Literature Volume 43 ; 43 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 ; >
 
   }
 
@@ -3714,8 +3728,8 @@ comment[ext121] = no xml entry
 
     param[base_url] = http://jci.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Journal of Communication Inquiry Volume 32 ; 32 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Journal of Communication Inquiry Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 ; >
 
   }
 
@@ -5606,7 +5620,7 @@ comment[ext121] = no xml entry
 
     param[base_url] = http://mcs.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Media, Culture & Society Volume 30 ; 30 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Media, Culture & Society Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Media, Culture & Society Volume 31 ; 31 ; reingest1.clockss.org:8082 >
 
   }
@@ -6443,7 +6457,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://qrj.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Qualitative Research Volume 8 ; 8 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Qualitative Research Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Qualitative Research Volume 9 ; 9 ; >
 
   }
 
@@ -7265,7 +7279,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     param[base_url] = http://tak.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
 
   }
@@ -7362,7 +7376,7 @@ comment[the99] = no xml entry
     au < ClockssHighWirePlugin ; down ; 2009 ; Thesis Eleven Volume 96 ; 96 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePlugin ; down ; 2009 ; Thesis Eleven Volume 97 ; 97 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePlugin ; down ; 2009 ; Thesis Eleven Volume 98 ; 98 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePlugin ; manifest ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
 
   }
 
@@ -7419,7 +7433,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://tpx.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Toxicologic Pathology Volume 36 ; 36 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Toxicologic Pathology Volume 36 ; 36 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Toxicologic Pathology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
 
   }
@@ -7669,7 +7683,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://wih.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; War in History Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; War in History Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; War in History Volume 16 ; 16 ; >
 
   }
@@ -7684,7 +7698,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://wmr.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Waste Management & Research Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Waste Management & Research Volume 26 ; 26 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Waste Management & Research Volume 27 ; 27 ; >
 
   }
@@ -7699,7 +7713,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://wjn.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
 
   }
@@ -7713,7 +7727,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://wom.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Word of Mouth Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Word of Mouth Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Word of Mouth Volume 21 ; 21 ; >
 
   }
@@ -7728,7 +7742,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://wox.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Work and Occupations Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Work and Occupations Volume 35 ; 35 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Work and Occupations Volume 36 ; 36 ; >
 
   }
@@ -7743,7 +7757,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://wes.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Work, Employment & Society Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Work, Employment & Society Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
 
   }
@@ -7758,7 +7772,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://wcx.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Written Communication Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Written Communication Volume 25 ; 25 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Written Communication Volume 26 ; 26 ; >
 
   }
@@ -7773,7 +7787,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://you.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Young Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Young Volume 16 ; 16 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Young Volume 17 ; 17 ; >
 
   }
@@ -7787,7 +7801,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://yec.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Young Exceptional Children Volume 12 ; 12 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Young Exceptional Children Volume 12 ; 12 ; >
 
   }
 
@@ -7801,7 +7815,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://yas.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Youth & Society Volume 40 ; 40 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Youth & Society Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Youth & Society Volume 41 ; 41 ; >
 
   }
@@ -7816,7 +7830,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://yjj.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Youth Justice Volume 8 ; 8 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Youth Justice Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Youth Justice Volume 9 ; 9 ; >
 
   }
@@ -7831,7 +7845,7 @@ comment[the99] = no xml entry
 
     param[base_url] = http://yvj.sagepub.com/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 ; >
 
   }
