@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.1 2010-08-04 11:28:13 thib_gc Exp $
+# $Id: tdb.py,v 1.2 2010-08-04 18:49:00 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.0'''
+__version__ = '''0.3.1'''
 
 import re
 
@@ -118,8 +118,8 @@ class Title(Map):
     def name(self): return self.get(Title.NAME)
     def eisbn(self): return self.get(Title.EISBN)
     def eissn(self): return self.get(Title.EISSN)
-    def issn(self): return self.get(Title.ISBN)
-    def isbn(self): return self.get(Title.ISSN)
+    def isbn(self): return self.get(Title.ISBN)
+    def issn(self): return self.get(Title.ISSN)
     def publisher(self): return self.get(Title.PUBLISHER)
     def type(self): return self.get(Title.TYPE) or Title.Type.DEFAULT
 

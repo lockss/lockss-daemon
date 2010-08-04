@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbq.py,v 1.1 2010-08-04 11:28:13 thib_gc Exp $
+# $Id: tdbq.py,v 1.2 2010-08-04 18:49:00 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,21 +26,30 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.0'''
+__version__ = '''0.3.1'''
 
-from optparse import OptionError, OptionGroup
+from optparse import OptionGroup, OptionParser
 import re
+import sys
 from tdb import AU, Tdb
 
 class TdbqConstants:
     '''Constants associated with the tdbq module.'''
     
-    OPTION_QUERY = 'query'
-    OPTION_QUERY_SHORT = 'q'
-    OPTION_QUERY_HELP = 'principal query expression'
     OPTION_PRODUCTION_STATUSES = 'productionStatuses'
     OPTION_PRODUCTION_STATUSES_SHORT = 'P'
     OPTION_PRODUCTION_STATUSES_HELP = 'only keep AUs in production statuses'
+    
+    OPTION_QUERY = 'query'
+    OPTION_QUERY_SHORT = 'q'
+    OPTION_QUERY_HELP = 'principal query expression'
+    
+    OPTION_TDBQ_ECHO_QUERY = 'tdbq-echo-query'
+    OPTION_TDBQ_ECHO_QUERY_HELP = 'echo the query string to stderr'
+    
+    OPTION_TDBQ_ECHO_TOKENS = 'tdbq-echo-tokens'
+    OPTION_TDBQ_ECHO_TOKENS_HELP = 'echo each token built by tdbq to stderr'
+    
     OPTION_TESTING_STATUSES = 'testingStatuses'
     OPTION_TESTING_STATUSES_SHORT = 'T'
     OPTION_TESTING_STATUSES_HELP = 'only keep AUs in testing statuses'
@@ -111,6 +120,26 @@ class TdbqToken(object):
     def value(self):
         '''Returns this token's associated value (or None).'''
         return self.__value
+    
+    def translate(self):
+        '''Translates this token's type into a human-readable string.'''
+        return {TdbqToken.NONE: '<none>',
+                TdbqToken.AND: TdbqLiteral.AND,
+                TdbqToken.OR: TdbqLiteral.OR,
+                TdbqToken.IS: TdbqLiteral.IS,
+                TdbqToken.NOT: TdbqLiteral.NOT,
+                TdbqToken.SET: TdbqLiteral.SET,
+                TdbqToken.EQUAL: TdbqLiteral.EQUAL,
+                TdbqToken.NOT_EQUAL: TdbqLiteral.NOT_EQUAL,
+                TdbqToken.MATCHES: TdbqLiteral.MATCHES,
+                TdbqToken.DOES_NOT_MATCH: TdbqLiteral.DOES_NOT_MATCH,
+                TdbqToken.PAREN_OPEN: TdbqLiteral.PAREN_OPEN,
+                TdbqToken.PAREN_CLOSE: TdbqLiteral.PAREN_CLOSE,
+                TdbqToken.STRING: 'a string',
+                TdbqToken.IDENTIFIER: 'an identifier',
+                TdbqToken.END_OF_STRING: 'end of string'}.get(self.type()) or '<unknown: %d>' % (self.type(),)
+    
+    def __str__(self): return '<TdbqToken index %d: %s%s>' % (self.index(), self.translate(), '' if self.value() is None else ' [%s]' % (self.value(),))
 
 class Tdbq(object):
     def __init__(self): object.__init__(self)
@@ -142,14 +171,16 @@ class TdbqScanner(object):
     the current input string, the current index into the input string,
     and the current token.'''
     
-    def __init__(self, str):
+    def __init__(self, str, options):
         '''Builds a lexical analyzer for a TDB query string.
         
         str: A TDB query string.'''
         self.__orig = str
         self.__str = str
+        self.__options = options
         self.__ind = 0
         self.__token(TdbqToken.NONE)
+        if self.__options.tdbq_echo_query: sys.stderr.write(self.orig() + '\n')
     
     def next(self):
         '''Consumes and returns one token from the input string.
@@ -291,6 +322,11 @@ class TdbqScanner(object):
         
         typ: A token type. See TdbqToken.'''
         self.__cur = TdbqToken(typ, self.__ind)
+        
+    def orig(self):
+        '''Return the query string this scanner was originally built
+        for.'''
+        return self.__orig
 
 class TdbqParser(object):
     '''An LL(0) parser for the TDB query language.
@@ -299,9 +335,10 @@ class TdbqParser(object):
     to parse() consumes the entirety of the scanner's input and
     returns a filter of type Tdbq.'''
     
-    def __init__(self, scanner):
+    def __init__(self, scanner, options):
         object.__init__(self)
         self.__scanner = scanner
+        self.__options = options
         self.__ind = 0
         self.__input = []
         self.__stack = []
@@ -313,9 +350,11 @@ class TdbqParser(object):
         ;
         '''
         tok = self.__scanner.next()
+        if self.__options.tdbq_echo_tokens: sys.stderr.write(str(tok) + '\n')
         while tok.type() != TdbqToken.END_OF_STRING:
             self.__input.append(tok)
             tok = self.__scanner.next()
+            if self.__options.tdbq_echo_tokens: sys.stderr.write(str(tok) + '\n')
         self.__input.append(tok) # TdbqToken.END_OF_STRING
         self.__or_expression()
         self.__expect(TdbqToken.END_OF_STRING, self.__input[self.__ind].index())
@@ -335,7 +374,7 @@ class TdbqParser(object):
             self.__or_expression()
             op2 = self.__stack.pop()
             op1 = self.__stack.pop()
-            self.__stack.append(TdbqPredicate(lambda au: op1.keep_au(au) or op2.keep_au(au)))
+            self.__stack.append(TdbqOr(op1, op2))
     
     def __and_expression(self):
         '''and_expression :
@@ -351,7 +390,7 @@ class TdbqParser(object):
             self.__and_expression()
             op2 = self.__stack.pop()
             op1 = self.__stack.pop()
-            self.__stack.append(TdbqPredicate(lambda au: op1.keep_au(au) and op2.keep_au(au)))
+            self.__stack.append(TdbqAnd(op1, op2))
             
     def __expression(self):
         '''expression :
@@ -389,7 +428,7 @@ class TdbqParser(object):
         elif opertyp in [TdbqToken.EQUAL, TdbqToken.NOT_EQUAL, TdbqToken.MATCHES, TdbqToken.DOES_NOT_MATCH]:
             self.__expect(opertyp, oper.index())
         else:
-            raise RuntimeError, 'expected "%s" %s %s %s or %s at index %d but got: %s' % (TdbqLiteral.IS, TdbqLiteral.EQUAL, TdbqLiteral.NOT_EQUAL, TdbqLiteral.MATCHES, TdbqLiteral.DOES_NOT_MATCH, oper.index(), oper.type())
+            raise RuntimeError, 'expected "%s", "%s", "%s", "%s",or "%s" at index %d but got: %s' % (TdbqLiteral.IS, TdbqLiteral.EQUAL, TdbqLiteral.NOT_EQUAL, TdbqLiteral.MATCHES, TdbqLiteral.DOES_NOT_MATCH, oper.index(), oper.translate())
 
         # "set" or string
         value = self.__input[self.__ind]
@@ -411,34 +450,40 @@ class TdbqParser(object):
             else:
                 raise RuntimeError, 'internal error: bad operator at index %d: %s' % (oper.index(), opertyp)
         else:
-            raise RuntimeError, 'expected "%s" or string at index %d but got: %s' % (TdbqLiteral.SET, value.index(), value.type())
+            raise RuntimeError, 'expected "%s" or a string at index %d but got: %s' % (TdbqLiteral.SET, value.index(), value.translate())
 
         # Putting it all together
         self.__stack.append(TdbqPredicate(lambda au: func_value(func_ident(au))))
     
-    def __accept(self, tok):
-        if self.__input[self.__ind].type() == tok:
+    def __accept(self, toktyp):
+        if self.__input[self.__ind].type() == toktyp:
             self.__move()
             return True
         return False
     
-    def __expect(self, tok, ind):
-        if not self.__accept(tok): raise RuntimeError, 'expected %s but got %s at index %d' % (tok, self.__input[self.__ind].type(), ind)
+    def __expect(self, toktyp, ind):
+        if not self.__accept(toktyp): raise RuntimeError, 'unexpected syntax at index %d: %s' % (self.__input[self.__ind].index(), self.__scanner.orig()[self.__input[self.__ind].index():])
             
     def __move(self): self.__ind = self.__ind + 1
 
 def __option_parser__(parser=None):
     if parser is None: parser = OptionParser(version=__version__)
     tdbq_group = OptionGroup(parser, 'tdbq module (%s)' % (__version__,))
-    tdbq_group.add_option('-' + TdbqConstants.OPTION_QUERY_SHORT,
-                          '--' + TdbqConstants.OPTION_QUERY,
-                          dest=TdbqConstants.OPTION_QUERY,
-                          help=TdbqConstants.OPTION_QUERY_HELP)
     tdbq_group.add_option('-' + TdbqConstants.OPTION_PRODUCTION_STATUSES_SHORT,
                           '--' + TdbqConstants.OPTION_PRODUCTION_STATUSES,
                           dest=TdbqConstants.OPTION_PRODUCTION_STATUSES,
                           action='store_true',
                           help=TdbqConstants.OPTION_PRODUCTION_STATUSES_HELP)
+    tdbq_group.add_option('-' + TdbqConstants.OPTION_QUERY_SHORT,
+                          '--' + TdbqConstants.OPTION_QUERY,
+                          dest=TdbqConstants.OPTION_QUERY,
+                          help=TdbqConstants.OPTION_QUERY_HELP)
+    tdbq_group.add_option('--' + TdbqConstants.OPTION_TDBQ_ECHO_QUERY,
+                          action='store_true',
+                          help=TdbqConstants.OPTION_TDBQ_ECHO_QUERY_HELP)
+    tdbq_group.add_option('--' + TdbqConstants.OPTION_TDBQ_ECHO_TOKENS,
+                          action='store_true',
+                          help=TdbqConstants.OPTION_TDBQ_ECHO_TOKENS_HELP)
     tdbq_group.add_option('-' + TdbqConstants.OPTION_TESTING_STATUSES_SHORT,
                           '--' + TdbqConstants.OPTION_TESTING_STATUSES,
                           dest=TdbqConstants.OPTION_TESTING_STATUSES,
@@ -458,7 +503,7 @@ def tdbq_reprocess(tdb, options):
     Returns the same Tdb instance if there is no query.'''
     if not (options.testingStatuses or options.productionStatuses or options.query): return tdb
     query = None
-    if options.query: query = TdbqParser(TdbqScanner(options.query)).parse()
+    if options.query: query = TdbqParser(TdbqScanner(options.query, options), options).parse()
     statuses = None
     if options.productionStatuses:
         statuses = TdbqPredicate(lambda au: au.status() in [AU.STATUS_RELEASED,

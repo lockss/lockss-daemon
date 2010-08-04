@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.1 2010-08-04 11:28:13 thib_gc Exp $
+# $Id: tdbparse.py,v 1.2 2010-08-04 18:49:00 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,11 +26,27 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.0'''
+__version__ = '''0.3.1'''
 
+from optparse import OptionGroup, OptionParser
 import re
+import sys
 from tdb import *
 import tdbq
+
+###
+### TdbparseConstants
+###
+
+class TdbparseConstants:
+    '''Constants associated with the tdbparse module.'''
+
+    OPTION_TDBPARSE_ECHO_LINES = 'tdbparse-echo-lines'
+    OPTION_TDBPARSE_ECHO_LINES_HELP = 'echo each line read by tdbparse to stderr'
+    
+    OPTION_TDBPARSE_ECHO_TOKENS = 'tdbparse-echo-tokens'
+    OPTION_TDBPARSE_ECHO_TOKENS_HELP = 'echo each token built by tdbparse to stderr'
+    
 
 ###
 ### TdbparseLiteral
@@ -130,6 +146,8 @@ class TdbparseToken:
                 TdbparseToken.STRING: 'a string',
                 TdbparseToken.IDENTIFIER: 'an identifier',
                 TdbparseToken.END_OF_FILE: 'end of file'}.get(self.type()) or '<unknown: %d>' % (self.type(),)
+                
+    def __str__(self): return '<TdbparseToken line %d column %d: %s%s>' % (self.line(), self.col(), self.translate(), '' if self.value() is None else ' [%s]' % (self.value(),))
 
 ###
 ### TdbScanner
@@ -144,13 +162,13 @@ class TdbScanner(object):
     The constructor accepts keyword arguments which are interpreted
     as options. Option keys cannot begin with an underscore.'''
 
-    def __init__(self, file, **kwargs):
+    def __init__(self, file, options):
         '''Constructor.
 
         Keyword arguments are stored as options.'''
         object.__init__(self)
         self.__file = file
-        self.__options = kwargs.copy()
+        self.__options = options
         self.__stringFlag = None
         self.__cur = ''
         self.__line = 0
@@ -181,7 +199,10 @@ class TdbScanner(object):
             if self.__cur == '':
                 self.__token(TdbparseToken.END_OF_FILE)
                 return self.__tok
-            if self.__cur.endswith('\n'): self.__cur = self.__cur[0:-1] # Remove line reader's trailing newline
+            # Remove line reader's trailing newline; idiom to avoid removing other meaningful whitespace
+            if self.__cur.endswith('\n'): self.__cur = self.__cur[0:-1]
+            # Optional debug output
+            if self.__options.tdbparse_echo_lines: sys.stderr.write(self.__cur + '\n')
             match = re.match(r'\s+', self.__cur)
             if match: self.__move(match.end())
         # Skip initial whitespace
@@ -348,9 +369,9 @@ class TdbParser(object):
 
     LOOKAHEAD = 1
 
-    def __init__(self, scanner, **kwargs):
+    def __init__(self, scanner, options):
         self.__scanner = scanner
-        self.__options = kwargs.copy()
+        self.__options = options
         self.__initialize_data()
         self.__initialize_parser()
 
@@ -648,6 +669,7 @@ class TdbParser(object):
                 tok = TdbparseToken(TdbparseToken.NONE, 0, 0)
             else:
                 tok = self.__scanner.next()
+                if self.__options.tdbparse_echo_tokens: sys.stderr.write(str(tok) + '\n')
                 if tok.type() == TdbparseToken.END_OF_FILE: self.__scanner = None
             self.__token.append(tok)
 
@@ -658,6 +680,7 @@ class TdbParser(object):
         if self.__scanner is None: tok = TdbparseToken(TdbparseToken.NONE, 0, 0)
         else:
             tok = self.__scanner.next()
+            if self.__options.tdbparse_echo_tokens: sys.stderr.write(str(tok) + '\n')
             if tok.type() == TdbparseToken.END_OF_FILE: self.__scanner = None
         self.__token.pop(0)
         self.__token.append(tok)
@@ -684,12 +707,20 @@ class TdbParser(object):
         self.__stack = []
 
 def tdbparse(file, options):
-    tdb = TdbParser(TdbScanner(file)).parse()
+    tdb = TdbParser(TdbScanner(file, options), options).parse()
     return tdbq.tdbq_reprocess(tdb, options)
 
 def __option_parser__(parser=None):
     if parser is None: parser = OptionParser(version=__version__)
     parser = tdbq.__option_parser__(parser)
+    tdbparse_group = OptionGroup(parser, 'tdbparse module (%s)' % (__version__,))
+    tdbparse_group.add_option('--' + TdbparseConstants.OPTION_TDBPARSE_ECHO_LINES,
+                              action='store_true',
+                              help=TdbparseConstants.OPTION_TDBPARSE_ECHO_LINES_HELP)
+    tdbparse_group.add_option('--' + TdbparseConstants.OPTION_TDBPARSE_ECHO_TOKENS,
+                              action='store_true',
+                              help=TdbparseConstants.OPTION_TDBPARSE_ECHO_TOKENS_HELP)
+    parser.add_option_group(tdbparse_group)
     return parser
 
 def __reprocess_options__(parser, options):
