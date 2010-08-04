@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbq.py,v 1.3 2010-08-04 22:31:03 thib_gc Exp $
+# $Id: tdbq.py,v 1.4 2010-08-04 22:32:02 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.1'''
+__version__ = '''0.3.2'''
 
 from optparse import OptionGroup, OptionParser
 import re
