@@ -51,11 +51,12 @@
   <property name="ElectronicPoetryReview2001">
    <property name="attributes.publisher" value="Electronic Poetry Review" />
    <property name="journalTitle" value="Electronic Poetry Review" />
+   <property name="issn" value="1552-2083" />
    <property name="title" value="Electronic Poetry Review 2001" />
    <property name="plugin" value="edu.cornell.library.epr.EPRPlugin2001" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.leahbrowning.net/" />
+    <property name="value" value="http://www.epoetry.org/" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -63,11 +64,12 @@
   <property name="ElectronicPoetryReview2002">
    <property name="attributes.publisher" value="Electronic Poetry Review" />
    <property name="journalTitle" value="Electronic Poetry Review" />
+   <property name="issn" value="1552-2083" />
    <property name="title" value="Electronic Poetry Review 2002" />
    <property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.leahbrowning.net/" />
+    <property name="value" value="http://www.epoetry.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
@@ -83,11 +85,12 @@
   <property name="ElectronicPoetryReview2003">
    <property name="attributes.publisher" value="Electronic Poetry Review" />
    <property name="journalTitle" value="Electronic Poetry Review" />
+   <property name="issn" value="1552-2083" />
    <property name="title" value="Electronic Poetry Review 2003" />
    <property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://www.leahbrowning.net/" />
+    <property name="value" value="http://www.epoetry.org/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
@@ -96,6 +99,27 @@
    <property name="param.3">
     <property name="key" value="num_issue_range" />
     <property name="value" value="5-6" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="ElectronicPoetryReview2005">
+   <property name="attributes.publisher" value="Electronic Poetry Review" />
+   <property name="journalTitle" value="Electronic Poetry Review" />
+   <property name="issn" value="1552-2083" />
+   <property name="title" value="Electronic Poetry Review 2005" />
+   <property name="plugin" value="edu.cornell.library.epr.EPRPlugin2002On" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.epoetry.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="7-7" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>

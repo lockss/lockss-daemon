@@ -3,8 +3,6 @@
     name = Electronic Poetry Review
   >
   
-  param[base_url] = http://www.leahbrowning.net/  
-  
   {
   
     title <
@@ -13,12 +11,12 @@
     >  
 
     rights = openaccess
-
-comment[epr1] = EPRPlugin2002On might be broken (includes issue1 URLs in years 2002 and 2003)
+    comment[epr1] = EPRPlugin2002On might be broken (includes issue1 URLs in years 2002 and 2003)
     
     {
     
       plugin = edu.cornell.library.epr.EPRPlugin2001
+      param[base_url] = http://www.epoetry.org/  
       implicit < status ; name >
   
       au < released ; Electronic Poetry Review 2001 >
@@ -28,6 +26,7 @@ comment[epr1] = EPRPlugin2002On might be broken (includes issue1 URLs in years 2
     {
 
       plugin = edu.cornell.library.epr.EPRPlugin2002On
+      param[base_url] = http://www.epoetry.org/  
       implicit < status ; name ; param[year] ; param[num_issue_range] >    
     
       au < released ; Electronic Poetry Review 2002 ; 2002 ; 3-4 >
