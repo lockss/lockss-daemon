@@ -34,6 +34,7 @@ package org.lockss.plugin.amavirtualmentor;
 
 import java.io.InputStream;
 
+import org.htmlparser.filters.TagNameFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -46,7 +47,7 @@ public class ClockssAMAVirtualMentorHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     HtmlTransform[] transforms = new HtmlTransform[] {
         // Filter out scripts
- //       HtmlNodeFilterTransform.exclude(new TagNameFilter("script")), 
+        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")), 
         // Filter out <div class="announcebox">...</div>
         HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
                                                                          "class",
