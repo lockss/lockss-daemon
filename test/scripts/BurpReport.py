@@ -145,7 +145,29 @@ def _main_procedure():
     # 1. The list of publishers in the 'while auid is not None' loop.
     # 2. The summary report
     # 3. In BurpCheck.py, the _is_reported() method.
-    publishers = ['aap', 'aip', 'ama', 'aps', 'acm', 'bep', 'bmc', 'cap', 'eup', 'elsevier', 'gtv', 'iop', 'wiley', 'lup', 'npg', 'oup', 'rup', 'rsc', 'rsp', 'sage', 'springer', 'ssr', 'tf']
+    publishers = ['aap',
+                  'aip',
+                  'ama',
+                  'aps',
+                  'acm',
+                  'bep',
+                  'bmc',
+                  'cap',
+                  'eup',
+                  'elsevier',
+                  'gtv',
+                  'iop',
+                  'wiley',
+                  'lup',
+                  'npg',
+                  'oup',
+                  'rup',
+                  'rsc',
+                  'rsp',
+                  'sage',
+                  'springer',
+                  'ssr',
+                  'tf']
 
     total = {}
     pubyear = {}
@@ -173,78 +195,93 @@ def _main_procedure():
         # If you change this list, be sure to change the equivalent
         # list in BurpCheck.py.
         
-        if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("aappublications") != -1):
+        # aap
+        if ('ClockssHighWirePlugin' in auid or 'ClockssHighWirePressH20Plugin' in auid) and ('aappublications' in auid):
             pubyear['aap'][strYear] += articles[0]
             total['aap'] += articles[0]
 
-	# No criteria for American Institute of Physics.
-            
-        if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("ama-assn") != -1):
+	    # aip
+
+        # ama            
+        if ('ClockssHighWirePlugin' in auid or 'ClockssHighWirePressH20Plugin' in auid) and ('ama-assn' in auid):
             pubyear['ama'][strYear] += articles[0]
             total['ama'] += articles[0]
-            
-        if (auid[0].find("ClockssHighWirePlugin") != -1) and (auid[0].find("physiology%2Eorg") != -1):
+ 
+        # aps           
+        if ('ClockssHighWirePlugin' in auid or 'ClockssHighWirePressH20Plugin' in auid) and ('physiology%2Eorg' in auid):
             pubyear['aps'][strYear] += articles[0]
             total['aps'] += articles[0]
 
-	# No criteria for Association for Computing Machinery
-            
-        if (auid[0].find("ClockssBerkeleyElectronicPressPlugin") != -1):
+	    # acm
+
+        # bep            
+        if 'ClockssBerkeleyElectronicPressPlugin' in auid:
             pubyear['bep'][strYear] += articles[0]
             total['bep'] += articles[0]
             
-	# No criteria for BioMed Central.
+        # bmc
 
-	if (auid[0].find("ClockssCoActionPublishingPlugin") != -1):
-	    pubyear['cap'][strYear] += articles[0]
-	    total['cap'] += articles[0]
+        # cap
+        if 'ClockssCoActionPublishingPlugin' in auid:
+            pubyear['cap'][strYear] += articles[0]
+            total['cap'] += articles[0]
 
-	if (auid[0].find("ClockssEdinburghUniversityPressPlugin") != -1):
-	    pubyear['eup'][strYear] += articles[0]
-	    total['eup'] += articles[0]
+        # eup
+        if 'ClockssEdinburghUniversityPressPlugin' in auid:
+            pubyear['eup'][strYear] += articles[0]
+            total['eup'] += articles[0]
 
-	# No criteria for Elsevier.
+        # elsevier
+        
+        # gtv
+        if 'ClockssGeorgThiemeVerlagPlugin' in auid:
+            pubyear['gtv'][strYear] += articles[0]
+            total['gtv'] += articles[0]	    
 
-	if (auid[0].find("ClockssGeorgThiemeVerlagPlugin") != -1):
-	    pubyear['gtv'][strYear] += articles[0]
-	    total['gtv'] += articles[0]	    
-
-	# No criteria for IOP Publishing
-
-	# No criteria for Wiley
-
-	# No criteria for Liverpool
-
-        if (auid[0].find("ClockssNaturePublishingGroupPlugin") != -1):
+        # iop
+        
+        # wiley
+        
+        # lup
+        
+        # npg
+        if 'ClockssNaturePublishingGroupPlugin' in auid:
             pubyear['npg'][strYear] += articles[0]
             total['npg'] += articles[0]
-            
-        if (auid[0].find("HighWire") != -1) and (auid[0].find("oxfordjournals") != -1):
+        
+        # oup
+        if ('HighWire' in auid) and ('oxfordjournals' in auid):
             pubyear['oup'][strYear] += articles[0]
             total['oup'] += articles[0]
 
-	# No criteria for Rockefeller University Press
+        # rup
+        if ('ClockssHighWirePressH20Plugin' in auid) and ('rupress%2Eorg' in auid):
+            pubyear['rup'][strYear] += articles[0]
+            total['rup'] += articles[0]
             
-        if (auid[0].find("ClockssRoyalSocietyOfChemistryPlugin") != -1):
+        # rsc
+        if 'ClockssRoyalSocietyOfChemistryPlugin' in auid:
             pubyear['rsc'][strYear] += articles[0]
             total['rsc'] += articles[0]
             
-	if (auid[0].find("HighWire") != -1) and (auid[0].find("royalsocietypublishing") != -1):
-	    pubyear['rsp'][strYear] += articles[0]
-	    total['rsp'] += articles[0]
+        # rsp
+        if ('HighWire' in auid) and ('royalsocietypublishing' in auid):
+            pubyear['rsp'][strYear] += articles[0]
+            total['rsp'] += articles[0]
 
-        if (auid[0].find("HighWire") != -1) and (auid[0].find("sagepub") != -1):
+        # sage
+        if ('HighWire' in auid) and ('sagepub' in auid):
             pubyear['sage'][strYear] += articles[0]
             total['sage'] += articles[0]
 
-	# No criteria for Springer
+        # springer
         
-	if (auid[0].find("HighWire") != -1) and (auid[0].find("biolreprod%2Eorg") != -1):
-	    pubyear['ssr'][strYear] += articles[0]
-	    total['ssr'] += articles[0]
+        # ssr
+        if ('HighWire' in auid) and ('biolreprod%2Eorg' in auid):
+            pubyear['ssr'][strYear] += articles[0]
+            total['ssr'] += articles[0]
 
-	# No criteria for Taylor & Francis
-
+        # tf
 
         auid = cursorAuid.fetchone()  
 

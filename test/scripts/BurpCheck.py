@@ -11,7 +11,7 @@ import urllib2
 
 # Constants
 
-OPTION_BURPCHECK_VERSION          = '0.0.13'
+OPTION_BURPCHECK_VERSION          = '0.0.14'
 
 OPTION_SHORT                    = '-'
 OPTION_LONG                     = '--'
@@ -184,20 +184,53 @@ def _is_reported(auid):
     # If you change this list, be sure to change the equivalent list
     # in BurpReport.py.
     
-    return  ( 
-             ((auid.find("ClockssHighWirePlugin") != -1) and (auid.find("aappublications") != -1)) or            
-             ((auid.find("ClockssHighWirePlugin") != -1) and (auid.find("ama-assn") != -1)) or
-             ((auid.find("ClockssHighWirePlugin") != -1) and (auid.find("physiology%2Eorg") != -1)) or            
-             ((auid.find("ClockssBerkeleyElectronicPressPlugin") != -1)) or 
-	     (auid.find("ClockssCoActionPublishingPlugin") != -1) or
-             (auid.find("ClockssEdinburghUniversityPressPlugin") != -1) or
-             (auid.find("ClockssGeorgThiemeVerlagPlugin") != -1) or
-             ((auid.find("ClockssNaturePublishingGroupPlugin") != -1)) or            
-             ((auid.find("HighWire") != -1) and (auid.find("oxfordjournals") != -1)) or            
-             ((auid.find("ClockssRoyalSocietyOfChemistryPlugin") != -1)) or
-             ((auid.find("HighWire") != -1) and (auid.find("royalsocietypublishing") != 0)) or            
-             ((auid.find("HighWire") != -1) and (auid.find("sagepub") != -1)) or
-             ((auid.find("HighWire") != -1) and (auid.find("biolreprod%2Eorg") != -1))
+    return  (
+             # aap 
+             (('ClockssHighWirePlugin' in auid or 'ClockssHighWirePressH20Plugin' in auid) and ('aappublications' in auid)) or
+             # aip
+             
+             # ama            
+             (('ClockssHighWirePlugin' in auid or 'ClockssHighWirePressH20Plugin' in auid) and ('ama-assn' in auid)) or
+             # aps
+             (('ClockssHighWirePlugin' in auid or 'ClockssHighWirePressH20Plugin' in auid) and ('physiology%2Eorg' in auid)) or            
+             # acm
+             
+             # bep
+             ('ClockssBerkeleyElectronicPressPlugin' in auid) or
+             # bmc 
+             
+             # cap
+             ('ClockssCoActionPublishingPlugin' in auid) or
+             # eup
+             ('ClockssEdinburghUniversityPressPlugin' in auid) or
+             # elsevier
+             
+             # gtv
+             ('ClockssGeorgThiemeVerlagPlugin' in auid) or
+             # iop
+             
+             # wiley
+             
+             # lup
+             
+             # npg
+             ('ClockssNaturePublishingGroupPlugin' in auid) or
+             # oup            
+             (('HighWire' in auid) and ('oxfordjournals' in auid)) or
+             # rup
+             (('ClockssHighWirePressH20Plugin' in auid) and ('rupress%2Eorg' in auid)) or
+             # rsc
+             ('ClockssRoyalSocietyOfChemistryPlugin' in auid) or
+             # rsp
+             (('HighWire' in auid) and ('royalsocietypublishing' in auid)) or
+             # sage            
+             (('HighWire' in auid) and ('sagepub' in auid)) or
+             # springer
+             
+             # ssr
+             (('HighWire' in auid) and ('biolreprod%2Eorg' in auid))
+             # tf
+             
             )
   
     
