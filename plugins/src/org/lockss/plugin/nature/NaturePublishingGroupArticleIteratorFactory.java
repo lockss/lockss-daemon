@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.4 2010-08-05 09:23:24 thib_gc Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.5 2010-08-05 10:54:03 thib_gc Exp $
  */
 
 /*
@@ -89,6 +89,9 @@ public class NaturePublishingGroupArticleIteratorFactory
       
       mat = HTML_PATTERN.matcher(url);
       if (mat.find()) {
+        if ("index".equalsIgnoreCase(mat.group(1))) {
+          return null; // HTTP 404 served as HTTP 200
+        }
         return processFullTextHtml(cu, mat);
       }
         
@@ -184,7 +187,7 @@ public class NaturePublishingGroupArticleIteratorFactory
       if (am == null || am.size() == 0) {
         am = new ArticleMetadata();
       }
-      am.put(ArticleMetadata.KEY_ACCESS_URL, cu.getUrl());
+      am.put(ArticleMetadata.KEY_ACCESS_URL, af.getFullTextCu());
       return am;
     }
   }
