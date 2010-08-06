@@ -82,8 +82,22 @@ sub iterate_lines {
     my @lines = <INPUT>;
     
     foreach $k (0..@lines-1) {
+
+	if ($lines[$k] =~ m/au\s*<\s*(.*\s;\s)?down/) {
 	
-	if ($lines[$k] =~ m/au\s*<\s*(.*\s;\s)?(reTesting|released|ready|down|superseded)/) {
+	    $lines[$k] =~ s/(<|;) down ;/$1 released ;/;
+	    
+	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }
+	    
+	} 	
+	elsif ($lines[$k] =~ m/au\s*<\s*(.*\s;\s)?(retracted)/) {
+	
+	    $lines[$k] =~ s/(<|;) retracted ;/$1 down ;/;
+	    
+	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }
+	    
+	} 
+	elsif ($lines[$k] =~ m/au\s*<\s*(.*\s;\s)?(reTesting|released|ready|superseded)/) {
 	    
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }
 	    
