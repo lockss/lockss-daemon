@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.1 2010-08-05 20:59:11 pgust Exp $
+ * $Id: TdbDiff.java,v 1.2 2010-08-06 16:32:59 pgust Exp $
  */
 
 /*
@@ -342,7 +342,7 @@ public class TdbDiff {
           System.exit(1);
         }
       } else if (arg.equalsIgnoreCase("-help")) {
-        usage();
+        usage("List the differences between two TDBs specified by two sets of configurations");
         System.exit(0);
       } else if (arg.startsWith("-")) {
         usage("Unknown flag " + arg);
