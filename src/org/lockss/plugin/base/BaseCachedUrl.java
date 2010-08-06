@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.40 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: BaseCachedUrl.java,v 1.41 2010-08-06 06:08:29 tlipkis Exp $
  */
 
 /*
@@ -214,41 +214,13 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   /**
-   * Return a MetadataExtractor for the CachedUrl's content type.
-   * If there isn't one, a null extractor will be returned.
+   * Return a FileMetadataExtractor for the CachedUrl's content type, or
+   * null if the plugin has no FileMetadataExtractor for that MIME type
    */
   public FileMetadataExtractor getFileMetadataExtractor() {
     String ct = getContentType();
     FileMetadataExtractor ret = au.getFileMetadataExtractor(ct);
-    if (ret == null) {
-      ret = new NullMetadataExtractor();
-    }
     return ret;
-  }
-
-  public class NullMetadataExtractor implements FileMetadataExtractor {
-    public NullMetadataExtractor() {
-    }
-    public ArticleMetadata extract(CachedUrl cu)
-        throws IOException, PluginException {
-      return new EmptyMetadata();
-    }
-  }
-  public class EmptyMetadata extends ArticleMetadata {
-    private EmptyMetadata() {
-    }
-    public Object setProperty(String key, String value) {
-        throw new UnsupportedOperationException();
-    }
-    public void load(InputStream is) throws IOException {
-        throw new UnsupportedOperationException();
-    }
-    public Object put(Object key, Object value) {
-        throw new UnsupportedOperationException();
-    }
-    public void putAll(Map m) {
-        throw new UnsupportedOperationException();
-    }
   }
 
   public void release() {
