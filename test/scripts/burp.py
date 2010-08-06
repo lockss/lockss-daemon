@@ -118,27 +118,6 @@ def _parse_list_of_articles(lst):
                 i = i + 1
     return val
 
-# Verify that the _parse_list_of_articles is likely to work.    
-def _test_parse_list_of_articles():
-    # No comments, no blank lines.
-    arts = "Title1\nTitle 2\n"
-    lstArts = _parse_list_of_articles(arts)
-    if len(lstArts) != 2:
-        raise RuntimeError, "_parse_list_of_articles did not pass the no comments, no blank lines test."
-    
-    # Test with comments.    
-    arts = "# Comment\nTitle 1\nTitle 2\n# Comment"
-    lstArts = _parse_list_of_articles(arts)
-    if len(lstArts) != 2:
-        raise RuntimeError, "_parse_list_of_articles did not pass the comments test."
-        
-    # Test with blank lines.
-    arts = "\n\nTitle 1\n\n\n\n\nTitle 2\n\n"
-    lstArts = _parse_list_of_articles(arts)
-    if len(lstArts) != 2:
-        raise RuntimeError, "_parse_list_of_articles did not pass the blank lines test."
-        
-    
 def _get_list_articles(client, auid, auarticles, options):
     reps = 0
 
@@ -161,42 +140,6 @@ def _get_list_articles(client, auid, auarticles, options):
             f.write(art + "\n")
             
         f.close()
-
-def _get_list_urls(client, auid, auarticles):
-    lst = client.getListOfUrls(lockss_daemon.AU(auid))
-    val = []
-    if lst is not None and len(lst) > 0:
-        for art in lst.splitlines()[2:]:
-            if art.startswith('http://www.rsc.org/publishing/journals/') and art.find('/article.asp?doi=') >= 0:
-                val.append(art)
-    auarticles[auid] = val
-
-# This method counts the number of articles minus the number of articles
-# that have been superseded. 
-
-# The table was created with 
-# 'create table overrideauid (overridden varchar(2047), 
-# overrider varchar(2047));'
-
-# At this time, the 'overrider' column is not used.
-
-def _count_articles(db, listAuids):
-    cursorDuplicated = db.cursor()
-    cursorDuplicated.execute("CREATE TEMPORARY TABLE listAuids (auid varchar(2047));")
-    # There may be a better way to insert large amounts of data into
-    # a MySQL database.
-    for auid in listAuids:
-        cursorDuplicated.execute("INSERT INTO listAuids VALUE (\"{0}\");".format(auid))
-
-    # Count the number of duplicated articles.
-    cursorDuplicated.execute("SELECT COUNT(listAuids.auid) FROM listAuids, overrideauid WHERE listAuids.auid = overrideauid.overridden;")
-    fetchDuplicated = cursorDuplicated.fetchone()
-    numDuplicated = fetchDuplicated[0]
-
-    cursorDuplicated.execute("DROP TEMPORARY TABLE listAuids;")
-
-    return len(listAuids) - numDuplicated
-
 
 def _need_report(db, options):
     hostname = options.host.split(':',1)[0]
@@ -292,29 +235,11 @@ def _article_report(client, db, options):
             
         _get_list_articles(client, auid, auarticles, options)
       
-        # Note: There is no article iterator for RSC.  This is a work-around.
-        if auid.find('ClockssRoyalSocietyOfChemistryPlugin') >= 0 and (options.host.find("ingest") >= 0):
-            _get_list_urls(client, auid, auarticles)
-            cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
-auname, auid, auyear, numarticles, publisher, created)
-VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", %d, "rsc", '%s')""" % \
-                            (host, port, auname[auid], auid, auyear[auid], _count_articles(db, auarticles[auid]), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
-        else:
-            # Standard article...
-            if aucreated[auid] is not None:
-                cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
+        cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
 auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
 aurepository, numarticles, publisher, created)
 VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
-"%s", "%s", "default", '%s')"""  % \
-                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], _count_articles(db, auarticles[auid]), time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid])))
-            else:
-                cursor.execute("""INSERT INTO burp(machinename, port, rundate, 
-auname, auid, auyear, austatus, aulastcrawlresult, aucontentsize, audisksize, 
-aurepository, numarticles, publisher, created)
-VALUES ("%s", "%s", NOW(), "%s", "%s", "%s", "%s", "%s", "%s", "%s", 
-"%s", "%s", "default", NULL)"""  % \
-                       (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], _count_articles(db, auarticles[auid])))
+"%s", "%s", "default", %s)"""  % (host, port, auname[auid], auid, auyear[auid], austatus[auid], aulastcrawlresult[auid], aucontentsize[auid], audisksize[auid], aurepository[auid], len(auarticles[auid]), "'%s'" % (time.strftime("%Y-%m-%d %H:%M:%S", aucreated[auid]),) if aucreated[auid] else "NULL"))
     
     cursor.execute("INSERT INTO lastcomplete(machinename, port, completedate) VALUES (\"%s\", %d, NOW())" %
                    (host, int(port)))
@@ -326,9 +251,6 @@ def _main_procedure():
     parser = _make_command_line_parser()
     (options, args) = parser.parse_args(values=parser.get_default_values())
     _check_required_options(parser, options)
-
-    # Verification
-    _test_parse_list_of_articles()
 
     try:
         db = MySQLdb.connect(host="localhost", user="edwardsb", passwd=options.dbpassword, db="burp")
