@@ -48,6 +48,82 @@
  
  <property name="org.lockss.title">
 
+  <property name="CortlandReview1998">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 1998" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin98" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview1999">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 1999" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin99" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2000">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2000" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin00" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2001">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2001" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="15-18" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2002">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2002" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="19-21" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
   <property name="CortlandReview2003">
    <property name="attributes.publisher" value="Cortland Review" />
    <property name="journalTitle" value="Cortland Review" />
@@ -55,7 +131,7 @@
    <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
-    <property name="value" value="http://cortlandreview.com/" />
+    <property name="value" value="http://www.cortlandreview.com/" />
    </property>
    <property name="param.2">
     <property name="key" value="year" />
@@ -68,6 +144,146 @@
    <property name="param.99">
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2004">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2004" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="25-26" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2005">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2005" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="27-30" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2006">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2006" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="31-33" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2007">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2007" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="34-37" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2008">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2008" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="38-41" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2009">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2009" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="42-45" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="CortlandReview2010">
+   <property name="attributes.publisher" value="Cortland Review" />
+   <property name="journalTitle" value="Cortland Review" />
+   <property name="title" value="Cortland Review 2010" />
+   <property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.cortlandreview.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2010" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="num_issue_range" />
+    <property name="value" value="46" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>

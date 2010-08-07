@@ -51,6 +51,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue1">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 1" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -71,6 +72,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue2">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 2" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -91,6 +93,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue3">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 3" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -111,6 +114,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue4">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 4" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -131,6 +135,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue5">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 5" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -151,6 +156,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue6">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 6" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -171,6 +177,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue7">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 7" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -191,6 +198,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue8">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 8" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -211,6 +219,7 @@
   <property name="HighEnergyPhysicsLibrariesWebzineIssue9">
    <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
    <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
    <property name="title" value="High Energy Physics Libraries Webzine Issue 9" />
    <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
    <property name="param.1">
@@ -224,6 +233,116 @@
    <property name="param.99">
     <property name="key" value="pub_down" />
     <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="HighEnergyPhysicsLibrariesWebzineIssue10">
+   <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
+   <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
+   <property name="title" value="High Energy Physics Libraries Webzine Issue 10" />
+   <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://library.cern.ch/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_no" />
+    <property name="value" value="10" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="HighEnergyPhysicsLibrariesWebzineIssue11">
+   <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
+   <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
+   <property name="title" value="High Energy Physics Libraries Webzine Issue 11" />
+   <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://library.cern.ch/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_no" />
+    <property name="value" value="11" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="HighEnergyPhysicsLibrariesWebzineIssue10">
+   <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
+   <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
+   <property name="title" value="High Energy Physics Libraries Webzine Issue 10" />
+   <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://library.web.cern.ch/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_no" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="HighEnergyPhysicsLibrariesWebzineIssue11">
+   <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
+   <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
+   <property name="title" value="High Energy Physics Libraries Webzine Issue 11" />
+   <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://library.web.cern.ch/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_no" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="HighEnergyPhysicsLibrariesWebzineIssue12">
+   <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
+   <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
+   <property name="title" value="High Energy Physics Libraries Webzine Issue 12" />
+   <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://library.web.cern.ch/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_no" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="HighEnergyPhysicsLibrariesWebzineIssue13">
+   <property name="attributes.publisher" value="High Energy Physics Libraries Webzine" />
+   <property name="journalTitle" value="High Energy Physics Libraries Webzine" />
+   <property name="issn" value="1424-2729" />
+   <property name="title" value="High Energy Physics Libraries Webzine Issue 13" />
+   <property name="plugin" value="edu.nyu.plugin.heplwebzine.HEPLwebzine" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://library.web.cern.ch/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="issue_no" />
+    <property name="value" value="13" />
    </property>
    <property name="attributes.rights" value="openaccess" />
   </property>
