@@ -1,10 +1,8 @@
 {
+
   publisher <
     name = Bryn Mawr College
   >
-  
-  implicit < status ; name ; param[year] >
-  plugin = edu.princeton.plugin.bmcr.BMCRPlugin
   
   {
   
@@ -13,14 +11,16 @@
       issn = 1063-2948
     >  
 
-    rights = openaccess
     
     {
     
-      param[base_url] = http://ccat.sas.upenn.edu/bmcr
+      rights = openaccess
+      plugin = edu.princeton.plugin.bmcr.BMCRPlugin
+      param[base_url] = http://ccat.sas.upenn.edu/bmcr/
+      implicit < status ; name ; param[year] >
 
-comment[bmcr1] = the journal has moved to http://bmcr.brynmawr.edu/ 
-comment[bmcr2] = however, the links within AUs still use the upenn base URL
+      comment[bmcr1] = the journal has moved to http://bmcr.brynmawr.edu/ 
+      comment[bmcr2] = however, the links within AUs still use the upenn base URL
     
       au < down ; Bryn Mawr Classical Review 1990 ; 1990 >
       au < down ; Bryn Mawr Classical Review 1991 ; 1991 >

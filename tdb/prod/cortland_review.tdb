@@ -1,10 +1,9 @@
 {
+
   publisher <
     name = Cortland Review
   >
 
-  param[base_url] = http://cortlandreview.com/ 
-  
   {
   
     title <
@@ -13,15 +12,12 @@
 
     rights = openaccess
  
-comment[cr0] = when converting to xml, error: "TypeError: zip argument #1 must support iteration"
- 
-comment[cr1] = The Cortland Review: An Online Literary Magazine in RealAudio
-comment[cr2] = there are 4 CR plugins - CortlandReviewPlugin98, CortlandReviewPlugin99, CortlandReviewPlugin00, and CortlandReviewPlugin
-comment[cr3] = all lockss manifests have disappeared
+    comment[cr] = all manifests have disappeared
 
     {
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin98
+      param[base_url] = http://www.cortlandreview.com/ 
       implicit < status ; name >
       
       au < exists ; Cortland Review 1998 >     
@@ -31,6 +27,7 @@ comment[cr3] = all lockss manifests have disappeared
     {
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin99
+      param[base_url] = http://www.cortlandreview.com/ 
       implicit < status ; name >
       
       au < exists ; Cortland Review 1999 >     
@@ -40,6 +37,7 @@ comment[cr3] = all lockss manifests have disappeared
     {
     
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin00
+      param[base_url] = http://www.cortlandreview.com/ 
       implicit < status ; name >
       
       au < exists ; Cortland Review 2000 >     
@@ -49,6 +47,7 @@ comment[cr3] = all lockss manifests have disappeared
     {  
             
       plugin = edu.wisc.library.plugin.CortlandReviewPlugin
+      param[base_url] = http://www.cortlandreview.com/ 
       implicit < status ; name ; param[year] ; param[num_issue_range] >
       
       au < exists ; Cortland Review 2001 ; 2001 ; 15-18 >

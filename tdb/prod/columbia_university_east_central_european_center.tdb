@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Columbia University East Central European Center
   >
@@ -23,6 +24,7 @@
       
     {
       
+      comment[thib] = Thib is not 100% certain this base URL is still good for release
       param[base_url] = http://www.sipa.columbia.edu/ece/research/intermarium/  
     
       au < ready ; InterMarium Volume 1  ; 1 ; 1997 >

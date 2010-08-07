@@ -155,9 +155,9 @@
     au < down ; Anthropology News Volume 18 ; 18 >
     au < down ; Anthropology News Volume 19 ; 19 >
     au < down ; Anthropology News Volume 20 ; 20 >
-    au < down ; Anthropology News Volume 46 ; 46 >
-    au < down ; Anthropology News Volume 47 ; 47 >
-    au < down ; Anthropology News Volume 48 ; 48 >
+    au < doNotProcess ; Anthropology News Volume 46 ; 46 >
+    au < doNotProcess ; Anthropology News Volume 47 ; 47 >
+    au < doNotProcess ; Anthropology News Volume 48 ; 48 >
         
   }
 
@@ -404,7 +404,6 @@
     au < down ; Cultural Anthropology Volume 17 ; 17 >
     au < down ; Cultural Anthropology Volume 18 ; 18 >
     au < down ; Cultural Anthropology Volume 19 ; 19 >
-    au < down ; Cultural Anthropology Volume 10 ; 10 >
     au < down ; Cultural Anthropology Volume 20 ; 20 >
     au < down ; Cultural Anthropology Volume 21 ; 21 >
     au < down ; Cultural Anthropology Volume 22 ; 22 >
@@ -818,7 +817,7 @@
     au < down ; SOLGAN Volume 18 ; 18 >
     au < down ; SOLGAN Volume 19 ; 19 >
     au < down ; SOLGAN Volume 20 ; 20 >
-    au < down ; SOLGAN Volume 21 ; 21 >
+    au < doNotProcess ; SOLGAN Volume 21 ; 21 >
     au < down ; SOLGAN Volume 22 ; 22 >
     
   }
