@@ -183,10 +183,11 @@ def _main_procedure():
     cursorAuid = db.cursor()
     cursorAuid.execute("SELECT DISTINCT(auid) from burp WHERE rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) + "' order by auid;")
     
-    auid = cursorAuid.fetchone()
-    while auid is not None:
+    auidrow = cursorAuid.fetchone()
+    while auidrow is not None:
+        auid = auidrow[0]
         cursorArticles = db.cursor()
-        cursorArticles.execute("SELECT MAX(numarticles), auyear FROM burp WHERE auid = \"" + auid[0] + "\" and rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) +"';")
+        cursorArticles.execute("SELECT MAX(numarticles), auyear FROM burp WHERE auid = \"" + auid + "\" and rundate >= '" + str(options.reportdatestart) + "' AND rundate <= '" + str(options.reportdateend) +"';")
         articles = cursorArticles.fetchone()
         strYear = articles[1]
         if "-" in strYear:
@@ -283,7 +284,7 @@ def _main_procedure():
 
         # tf
 
-        auid = cursorAuid.fetchone()  
+        auidrow = cursorAuid.fetchone()  
 
     # Verify our numbers!
     for publisher in publishers:
