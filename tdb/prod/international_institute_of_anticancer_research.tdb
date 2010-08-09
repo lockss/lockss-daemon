@@ -1,0 +1,70 @@
+{
+
+  publisher <
+    name = International Institute of Anticancer Research
+  >
+
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  implicit < status ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Anticancer Research ;
+      issn = 0250-7005 ;
+      eissn = 1791-7530
+    >
+
+    param[base_url] = http://ar.iiarjournals.org/
+
+    au < manifest ; Anticancer Research Volume 24 ; 24 >
+    au < manifest ; Anticancer Research Volume 25 ; 25 >
+    au < manifest ; Anticancer Research Volume 26 ; 26 >
+    au < manifest ; Anticancer Research Volume 27 ; 27 >
+    au < manifest ; Anticancer Research Volume 28 ; 28 >
+    au < manifest ; Anticancer Research Volume 29 ; 29 >
+    au < manifest ; Anticancer Research Volume 30 ; 30 >
+
+  }
+  
+  {
+
+    title <
+      name = Cancer Genomics and Proteomics ;
+      issn = 1109-6535 ;
+      eissn = 1790-6295
+    >
+  
+   param[base_url] = http://cgp.iiarjournals.org/
+
+    au < manifest ; Cancer Genomics and Proteomics Volume 1 ; 1 >
+    au < manifest ; Cancer Genomics and Proteomics Volume 2 ; 2 >
+    au < manifest ; Cancer Genomics and Proteomics Volume 3 ; 3 >
+    au < manifest ; Cancer Genomics and Proteomics Volume 4 ; 4 >
+    au < manifest ; Cancer Genomics and Proteomics Volume 5 ; 5 >
+    au < manifest ; Cancer Genomics and Proteomics Volume 6 ; 6 >
+    au < manifest ; Cancer Genomics and Proteomics Volume 7 ; 7 >
+
+  }
+  
+  {
+
+    title <
+      name = In Vivo ;
+      issn = 0258-851X ;
+      eissn = 1791-7549
+    >
+
+    param[base_url] = http://ar.iiarjournals.org/
+
+    au < manifest ; In Vivo Volume 18 ; 18 >
+    au < manifest ; In Vivo Volume 19 ; 19 >
+    au < manifest ; In Vivo Volume 20 ; 20 >
+    au < manifest ; In Vivo Volume 21 ; 21 >
+    au < manifest ; In Vivo Volume 22 ; 22 >
+    au < manifest ; In Vivo Volume 23 ; 23 >
+    au < manifest ; In Vivo Volume 24 ; 24 >
+
+  }
+
+}
