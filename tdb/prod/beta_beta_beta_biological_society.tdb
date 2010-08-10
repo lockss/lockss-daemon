@@ -5,6 +5,7 @@
   >
 
   {
+  
     title <
       name = BIOS ;
       issn = 0005-3155
@@ -16,7 +17,7 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0005-3155
   
-      au < superseded ; BIOS Volume 75 ; 75 >
+      au < superseded ; BIOS Volume 75 ; 075 >
       au < doNotProcess ; BIOS Volume 76 ; 76 >
       au < doNotProcess ; BIOS Volume 77 ; 77 >
       au < doNotProcess ; BIOS Volume 78 ; 78 >

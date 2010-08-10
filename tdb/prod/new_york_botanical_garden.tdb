@@ -16,13 +16,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0007-196X
   
-      au < released ; Brittonia Volume 54 ; 54 >
-      au < released ; Brittonia Volume 55 ; 55 >
-      au < doNotProcess ; Brittonia Volume 56 ; 56 >
+      au < superseded ; Brittonia Volume 54 ; 54 >
+      au < superseded ; Brittonia Volume 55 ; 55 >
       au < superseded ; Brittonia Volume 56 ; 056 >
-      au < released ; Brittonia Volume 57 ; 57 >
-      au < released ; Brittonia Volume 58 ; 58 >
-      au < released ; Brittonia Volume 59 ; 59 >
+      au < superseded ; Brittonia Volume 57 ; 57 >
+      au < superseded ; Brittonia Volume 58 ; 58 >
+      au < superseded ; Brittonia Volume 59 ; 59 >
     }
 
   }
@@ -40,13 +39,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0013-0001
   
-      au < released ; Economic Botany Volume 56 ; 56 >
-      au < released ; Economic Botany Volume 57 ; 57 >
-      au < doNotProcess ; Economic Botany Volume 58 ; 58 >
+      au < superseded ; Economic Botany Volume 56 ; 56 >
+      au < superseded ; Economic Botany Volume 57 ; 57 >
       au < superseded ; Economic Botany Volume 58 ; 058 >
-      au < released ; Economic Botany Volume 59 ; 59 >
-      au < released ; Economic Botany Volume 60 ; 60 >
-      au < released ; Economic Botany Volume 61 ; 61 >
+      au < superseded ; Economic Botany Volume 59 ; 59 >
+      au < superseded ; Economic Botany Volume 60 ; 60 >
+      au < superseded ; Economic Botany Volume 61 ; 61 >
     }
 
   }
@@ -64,13 +62,12 @@
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 0006-8101
   
-      au < released ; The Botanical Review Volume 68 ; 68 >
-      au < released ; The Botanical Review Volume 69 ; 69 >
-      au < doNotProcess ; The Botanical Review Volume 70 ; 70 >
+      au < superseded ; The Botanical Review Volume 68 ; 68 >
+      au < superseded ; The Botanical Review Volume 69 ; 69 >
       au < superseded ; The Botanical Review Volume 70 ; 070 >
-      au < released ; The Botanical Review Volume 71 ; 71 >
-      au < released ; The Botanical Review Volume 72 ; 72 >
-      au < released ; The Botanical Review Volume 73 ; 73 >
+      au < superseded ; The Botanical Review Volume 71 ; 71 >
+      au < superseded ; The Botanical Review Volume 72 ; 72 >
+      au < superseded ; The Botanical Review Volume 73 ; 73 >
     }
 
     {

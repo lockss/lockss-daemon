@@ -537,7 +537,7 @@
         param[base_url] = http://brief-treatment.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
+        au < down ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
 
       }
 
@@ -546,14 +546,14 @@
         param[base_url] = http://brief-treatment.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
-        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 1 ; 1 >
+        au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 2 ; 2 >
+        au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 4 ; 4 >
         au < HighWirePressPlugin ; doNotProcess ; Brief Treatment and Crisis Intervention Volume 5 ; 5 >
-        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
-        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
-        au < HighWireStrVolPlugin ; released ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
+        au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 6 ; 6 >
+        au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 7 ; 7 >
+        au < HighWireStrVolPlugin ; down ; Brief Treatment and Crisis Intervention Volume 8 ; 8 >
 
       }
 
@@ -2180,7 +2180,6 @@
         param[base_url] = http://hmg.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; Human Molecular Genetics Volume 13 ; 13 >
         au < released ; Human Molecular Genetics Volume 14 ; 14 >
 
       }
@@ -2190,7 +2189,7 @@
         param[base_url] = http://hmg.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; doNotProcess ; Human Molecular Genetics Volume 13 ; 13 >
+        au < HighWirePressPlugin ; manifest ; Human Molecular Genetics Volume 13 ; 13 >
         au < HighWirePressPlugin ; doNotProcess ; Human Molecular Genetics Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; Human Molecular Genetics Volume 15 ; 15 >
         au < HighWireStrVolPlugin ; released ; Human Molecular Genetics Volume 16 ; 16 >
@@ -2489,10 +2488,10 @@
       {
 
         pluginSuffix = HighWirePlugin
-        param[base_url] = http://imajna.oxfordjournals.org/
+        param[base_url] = http://imanum.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
+        au < down ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
 
       }
 
@@ -2767,7 +2766,7 @@
         implicit < status ; name ; param[volume] >
 
         au < released ; International Journal of Law and Information Technology Volume 13 ; 13 >
-        au < released ; International Journal of Law and Information Technology Volume 14 ; 14 >
+        au < down ; International Journal of Law and Information Technology Volume 14 [superseded] ; 14 >
 
       }
 
@@ -2777,7 +2776,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; International Journal of Law and Information Technology Volume 13 ; 13 >
-        au < HighWirePressPlugin ; doNotProcess ; International Journal of Law and Information Technology Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; released ; International Journal of Law and Information Technology Volume 14 ; 14 >
         au < HighWireStrVolPlugin ; released ; International Journal of Law and Information Technology Volume 15 ; 15 >
 
       }
@@ -3691,7 +3690,7 @@
 
       {
 
-        param[base_url] = http://logcom.oxfordjournals.org/
+        param[base_url] = http://jmp.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 33 ; 33 >

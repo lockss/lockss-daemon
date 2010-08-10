@@ -5,7 +5,7 @@
   
   plugin = org.lockss.plugin.evergreenreview.EvergreenReviewPlugin
   implicit < status ; name ; param[volume_name] >
-  param[base_url] = http://evergreenreview.com/ 
+  param[base_url] = http://www.evergreenreview.com/ 
   
   {
   

@@ -146,12 +146,12 @@
 
       param[journal_issn] = 1471-2407
 
-      au < ready ; BMC Cancer Volume 1 ; 1 >
-      au < ready ; BMC Cancer Volume 2 ; 2 >
-      au < ready ; BMC Cancer Volume 3 ; 3 >
-      au < ready ; BMC Cancer Volume 4 ; 4 >
-      au < ready ; BMC Cancer Volume 5 ; 5 >
-      au < ready ; BMC Cancer Volume 6 ; 6 >
+      au < released ; BMC Cancer Volume 1 ; 1 >
+      au < released ; BMC Cancer Volume 2 ; 2 >
+      au < released ; BMC Cancer Volume 3 ; 3 >
+      au < released ; BMC Cancer Volume 4 ; 4 >
+      au < released ; BMC Cancer Volume 5 ; 5 >
+      au < released ; BMC Cancer Volume 6 ; 6 >
       au < ready ; BMC Cancer Volume 7 ; 7 >
       au < ready ; BMC Cancer Volume 8 ; 8 >
       au < ready ; BMC Cancer Volume 9 ; 9 >
@@ -420,13 +420,13 @@
 
       param[journal_issn] = 1471-2148
 
-      au < released ; BMC Evolutionary Biology Volume 1 ; 1 >
-      au < released ; BMC Evolutionary Biology Volume 2 ; 2 >
-      au < released ; BMC Evolutionary Biology Volume 3 ; 3 >
-      au < released ; BMC Evolutionary Biology Volume 4 ; 4 >
-      au < released ; BMC Evolutionary Biology Volume 5 ; 5 >
-      au < released ; BMC Evolutionary Biology Volume 6 ; 6 >
-      au < released ; BMC Evolutionary Biology Volume 7 ; 7 >
+      au < ready ; BMC Evolutionary Biology Volume 1 ; 1 >
+      au < ready ; BMC Evolutionary Biology Volume 2 ; 2 >
+      au < ready ; BMC Evolutionary Biology Volume 3 ; 3 >
+      au < ready ; BMC Evolutionary Biology Volume 4 ; 4 >
+      au < ready ; BMC Evolutionary Biology Volume 5 ; 5 >
+      au < ready ; BMC Evolutionary Biology Volume 6 ; 6 >
+      au < ready ; BMC Evolutionary Biology Volume 7 ; 7 >
       au < testing ; BMC Evolutionary Biology Volume 8 ; 8 >
       au < testing ; BMC Evolutionary Biology Volume 9 ; 9 >
       au < testing ; BMC Evolutionary Biology Volume 10 ; 10 >
@@ -611,11 +611,12 @@
       >
 
       param[journal_issn] = 1472-698X
+      comment[4] = was in props marked down, probably never released
 
       au < released ; BMC International Health and Human Rights Volume 1 ; 1 >
       au < released ; BMC International Health and Human Rights Volume 2 ; 2 >
       au < released ; BMC International Health and Human Rights Volume 3 ; 3 >
-      au < released ; BMC International Health and Human Rights Volume 4 ; 4 >
+      au < down ; BMC International Health and Human Rights Volume 4 ; 4 >
       au < released ; BMC International Health and Human Rights Volume 5 ; 5 >
       au < released ; BMC International Health and Human Rights Volume 6 ; 6 >
     }

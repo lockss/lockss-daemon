@@ -392,15 +392,17 @@
       param[base_url] = http://www.mcponline.org/
       implicit < status ; name ; param[volume_name] >
 
+      comment = has switched to H20
+
       au < exists ; Molecular & Cellular Proteomics Volume 1 ; 1 >
       au < exists ; Molecular & Cellular Proteomics Volume 2 ; 2 >
       au < exists ; Molecular & Cellular Proteomics Volume 3 ; 3 >
-      au < released ; Molecular & Cellular Proteomics Volume 4 ; 4 >
-      au < released ; Molecular & Cellular Proteomics Volume 5 ; 5 >
-      au < released ; Molecular & Cellular Proteomics Volume 6 ; 6 >
-      au < released ; Molecular & Cellular Proteomics Volume 7 ; 7 >
-      au < released ; Molecular & Cellular Proteomics Volume 8 ; 8 >
-      au < released ; Molecular & Cellular Proteomics Volume 9 ; 9 >
+      au < down ; Molecular & Cellular Proteomics Volume 4 ; 4 >
+      au < down ; Molecular & Cellular Proteomics Volume 5 ; 5 >
+      au < down ; Molecular & Cellular Proteomics Volume 6 ; 6 >
+      au < down ; Molecular & Cellular Proteomics Volume 7 ; 7 >
+      au < down ; Molecular & Cellular Proteomics Volume 8 ; 8 >
+      au < down ; Molecular & Cellular Proteomics Volume 9 ; 9 >
 
     }
 
