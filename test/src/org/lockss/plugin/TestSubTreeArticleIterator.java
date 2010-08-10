@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.5 2010-06-22 09:00:18 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.5.4.1 2010-08-10 21:25:42 tlipkis Exp $
  */
 
 /*
@@ -93,14 +93,28 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     return conf;
   }
 
+  private void crawlSimAu(SimulatedArchivalUnit sau) throws IOException {
+    PluginTestUtil.crawlSimAu(sau);
+    // Ensure there's at least one content file with a child, as that was a
+    // failing case in SubTreeArticleIterator
+    String url = "http://example.org/wombat/branch1/001file.html";
+    CachedUrl cu = sau.makeCachedUrl(url);
+    assertTrue(cu.hasContent());
+    String url2 = url + "/child.html";
+    UrlCacher uc = sau.makeUrlCacher(url2);
+    CIProperties props =
+      CIProperties.fromProperties(PropUtil.fromArgs(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html"));
+    uc.storeContent(new StringInputStream("child content"), props);
+  }
+
   public void testOne() throws Exception {
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
-    PluginTestUtil.crawlSimAu(sau);
+    crawlSimAu(sau);
 
-    assertEquals(225, countArticles(new Spec()));
-    assertEquals(120, countArticles(new Spec().setMimeType("text/html")));
+    assertEquals(226, countArticles(new Spec()));
+    assertEquals(121, countArticles(new Spec().setMimeType("text/html")));
     assertEquals(105, countArticles(new Spec().setMimeType("application/pdf")));
-    assertEquals(120, countArticles(new Spec().setPattern("\\.html")));
+    assertEquals(121, countArticles(new Spec().setPattern("\\.html")));
     assertEquals(15, countArticles(new Spec().setPattern("index\\.html")));
     assertEquals(105, countArticles(new Spec().setPattern("\\.pdf")));
     assertEquals(0, countArticles(new Spec()
@@ -109,11 +123,11 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
     assertEquals(0, countArticles(new Spec()
 				  .setRoot("http://example.com/")));
-    assertEquals(225, countArticles(new Spec()
+    assertEquals(226, countArticles(new Spec()
 				    .setRoot("http://example.org/")));
-    assertEquals(225, countArticles(new Spec()
+    assertEquals(226, countArticles(new Spec()
 				    .setRootTemplate("\"%s\",base_url")));
-    assertEquals(105, countArticles(new Spec()
+    assertEquals(106, countArticles(new Spec()
 				    .setRootTemplate("\"%sbranch1\",base_url")));
     assertEquals(49, countArticles(new Spec()
 				   .setRootTemplate("\"%sbranch1\",base_url")
@@ -155,16 +169,16 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     config2.put("depth", "2");
     config2.put("mixed_case", "true");
     sau = PluginTestUtil.createAndStartSimAu(config2);
-    PluginTestUtil.crawlSimAu(sau);
+    crawlSimAu(sau);
 
-    assertEquals(150, countArticles(new Spec()
+    assertEquals(151, countArticles(new Spec()
 				    .setPattern("/branch")));
-    assertEquals(180, countArticles(new Spec()
+    assertEquals(181, countArticles(new Spec()
 				    .setPattern("/branch",
 						Pattern.CASE_INSENSITIVE)));
     assertEquals(90, countArticles(new Spec()
 				   .setPattern("/BRANCH")));
-    assertEquals(180, countArticles(new Spec()
+    assertEquals(181, countArticles(new Spec()
 				    .setPattern("/BRANCH",
 						Pattern.CASE_INSENSITIVE)));
 
@@ -207,7 +221,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 
   public void testException() throws Exception {
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
-    PluginTestUtil.crawlSimAu(sau);
+    crawlSimAu(sau);
 
     int count = 0;
     

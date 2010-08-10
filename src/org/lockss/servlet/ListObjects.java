@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.11 2010-07-21 06:12:21 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.11.2.1 2010-08-10 21:25:42 tlipkis Exp $
  */
 
 /*
@@ -175,8 +175,8 @@ public class ListObjects extends LockssServlet {
     for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
 	 iter.hasNext(); ) {
       CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-      if (cusn.isLeaf()) {
-	CachedUrl cu = (CachedUrl)cusn;
+      if (cusn.hasContent()) {
+	CachedUrl cu = getCu(cusn);
 	if (cu.hasContent()) {
 	  String url = cu.getUrl();
 	  String contentType = cu.getContentType();
@@ -190,6 +190,17 @@ public class ListObjects extends LockssServlet {
       }
     }
     wrtr.println("# end");
+  }
+
+  private CachedUrl getCu(CachedUrlSetNode node) {
+    switch (node.getType()) {
+    case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+      CachedUrlSet cus = (CachedUrlSet)node;
+      return au.makeCachedUrl(cus.getUrl());
+    case CachedUrlSetNode.TYPE_CACHED_URL:
+      return (CachedUrl)node;
+    }
+    throw new RuntimeException("Can't happen");
   }
 
   void listArticles() throws IOException {

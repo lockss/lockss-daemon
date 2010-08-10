@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.9 2010-07-21 06:10:18 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.9.2.1 2010-08-10 21:25:42 tlipkis Exp $
  */
 
 /*
@@ -332,8 +332,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	  }
 	} else {
 	  CachedUrlSetNode node = (CachedUrlSetNode)cusIter.next();
-	  if (node instanceof CachedUrl) {
-	    cu = (CachedUrl)node;
+	  if (node.hasContent()) {
+	    cu = getCu(node);
 	    if (isArticleCu(cu)) {
 	      nextElement = createArticleFiles(cu);
 	      if (nextElement == null) {
@@ -354,6 +354,17 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	AuUtil.safeRelease(cu);
       }
     }
+  }
+
+  protected CachedUrl getCu(CachedUrlSetNode node) {
+    switch (node.getType()) {
+    case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+      CachedUrlSet cus = (CachedUrlSet)node;
+      return au.makeCachedUrl(cus.getUrl());
+    case CachedUrlSetNode.TYPE_CACHED_URL:
+      return (CachedUrl)node;
+    }
+    throw new RuntimeException("Can't happen");
   }
 
   /** Default implementation creates an ArticleFiles with the full text CU
