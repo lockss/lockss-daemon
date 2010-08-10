@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.1 2010-08-04 11:28:13 thib_gc Exp $
+# $Id: tdbxml.py,v 1.2 2010-08-10 23:21:47 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -248,7 +248,7 @@ def __option_parser__(parser=None):
     tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_NO_PUB_DOWN_SHORT,
                             '--' + TdbxmlConstants.OPTION_NO_PUB_DOWN,
                             action='store_true',
-                            help=TdbxmlConstants.OPTION_STYLE_HELP)
+                            help=TdbxmlConstants.OPTION_NO_PUB_DOWN_HELP)
     parser.add_option_group(tdbxml_group)
     return parser
 
