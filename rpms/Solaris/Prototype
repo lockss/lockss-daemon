@@ -32,8 +32,8 @@ f none /opt/lockss/usr/share/lockss/javax.servlet.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/commons-collections-3.2.1.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/xml-apis.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/heritrix-1.14.3-p1.jar 0644 root sys
-f none /opt/lockss/usr/share/lockss/commons-codec-1.3.jar 0644 root sys
-f none /opt/lockss/usr/share/lockss/commons-lang-2.4.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-codec-1.4.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-lang-2.5.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/bcprov-jdk14-132.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/htmlparser-1.6p.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/fastutil-5.0.3-heritrix-subset-1.0.jar 0644 root sys
@@ -43,7 +43,7 @@ f none /opt/lockss/usr/share/lockss/commons-logging-1.1.1.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/jakarta-oro-2.0.8.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/commons-httpclient-3.0-rc4.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/xalan.jar 0644 root sys
-f none /opt/lockss/usr/share/lockss/commons-jxpath-1.2.jar 0644 root sys
+f none /opt/lockss/usr/share/lockss/commons-jxpath-1.3.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/flute-1.3.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/log4j-1.2.13.jar 0644 root sys
 f none /opt/lockss/usr/share/lockss/activation-1.0.2.jar 0644 root sys
