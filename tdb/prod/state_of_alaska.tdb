@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = State of Alaska
   >
@@ -14,6 +15,8 @@
     implicit < status ; name ; param[year] >
 
     au < released ; Alaska State Documents 2006 ; 2006 >
+    au < released ; Alaska State Documents 2007 ; 2007 >
+    au < released ; Alaska State Documents 2008 ; 2008 >
 
   }
   

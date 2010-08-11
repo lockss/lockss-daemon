@@ -19,6 +19,15 @@
 
       {
 
+        param[base_url] = http://radiographics.rsnajnls.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWireStrVolPlugin ; down ; RadioGraphics Volume 26 ; 26 >
+
+      }
+
+      {
+
         param[base_url] = http://radiographics.rsna.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
@@ -47,7 +56,7 @@
         au < HighWirePressH20Plugin ; exists ; RadioGraphics Volume 23 ; 23 >
         au < HighWirePressH20Plugin ; exists ; RadioGraphics Volume 24 ; 24 >
         au < HighWirePressH20Plugin ; ready ; RadioGraphics Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; released ; RadioGraphics Volume 26 ; 26 >
+        au < HighWirePressH20Plugin ; doNotProcess ; RadioGraphics Volume 26 ; 26 >
         au < HighWirePressH20Plugin ; ready ; RadioGraphics Volume 27 ; 27 >
         au < HighWirePressH20Plugin ; ready ; RadioGraphics Volume 28 ; 28 >
         au < HighWirePressH20Plugin ; ready ; RadioGraphics Volume 29 ; 29 >
@@ -62,6 +71,15 @@
         issn = 0033-8419 ;
         eissn = 1527-1315
       >
+
+      {
+
+        param[base_url] = http://radiology.rsnajnls.org/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWireStrVolPlugin ; down ; Radiology Volume 241 ; 241 >
+
+      }
 
       {
 
@@ -176,7 +194,7 @@
         au < HighWirePressH20Plugin ; exists ; Radiology Volume 238 ; 238 >
         au < HighWirePressH20Plugin ; ready ; Radiology Volume 239 ; 239 >
         au < HighWirePressH20Plugin ; ready ; Radiology Volume 240 ; 240 >
-        au < HighWireStrVolPlugin ; released ; Radiology Volume 241 ; 241 >
+        au < HighWirePressH20Plugin ; doNotProcess ; Radiology Volume 241 ; 241 >
         au < HighWirePressH20Plugin ; ready ; Radiology Volume 242 ; 242 >
         au < HighWirePressH20Plugin ; ready ; Radiology Volume 243 ; 243 >
         au < HighWirePressH20Plugin ; ready ; Radiology Volume 244 ; 244 >

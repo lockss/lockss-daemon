@@ -1957,7 +1957,9 @@
         param[base_url] = http://fsb.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; French Studies Bulletin Volume LX ; LX >
+        comment = there is no such volume, this was probably an error
+
+        au < HighWireStrVolPlugin ; down ; French Studies Bulletin Volume LX ; LX >
 
       }
 
@@ -5273,9 +5275,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Past & Present Volume 188 ; 188 >
         au < HighWirePressPlugin ; manifest ; Past & Present Volume 189 ; 189 >
         au < HighWirePressPlugin ; doNotProcess ; Past & Present Volume 190 ; 190 >
-        au < HighWirePressPlugin ; manifest ; Past & Present Volume 191 ; 191 >
-        au < HighWirePressPlugin ; manifest ; Past & Present Volume 192 ; 192 >
-        au < HighWirePressPlugin ; manifest ; Past & Present Volume 193 ; 193 >
+        au < HighWirePressPlugin ; released ; Past & Present Volume 191 ; 191 >
+        au < HighWirePressPlugin ; released ; Past & Present Volume 192 ; 192 >
+        au < HighWirePressPlugin ; released ; Past & Present Volume 193 ; 193 >
         au < HighWirePressPlugin ; released ; Past & Present Volume 194 ; 194 >
         au < HighWirePressPlugin ; released ; Past & Present Volume 195 ; 195 >
         au < HighWirePressPlugin ; released ; Past & Present Volume 196 ; 196 >
@@ -6190,11 +6192,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; exists ; Toxicological Sciences Volume 89 ; 89 >
         au < HighWirePressPlugin ; exists ; Toxicological Sciences Volume 90 ; 90 >
         au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 91 ; 91 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 92 ; 92 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 93 ; 93 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 94 ; 94 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 95 ; 95 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 96 ; 96 >
+        au < HighWireStrVolPlugin ; released ; Toxicological Sciences Volume 92 ; 92 >
+        au < HighWireStrVolPlugin ; released ; Toxicological Sciences Volume 93 ; 93 >
+        au < HighWireStrVolPlugin ; released ; Toxicological Sciences Volume 94 ; 94 >
+        au < HighWireStrVolPlugin ; released ; Toxicological Sciences Volume 95 ; 95 >
+        au < HighWireStrVolPlugin ; released ; Toxicological Sciences Volume 96 ; 96 >
         au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 97 ; 97 >
         au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 98 ; 98 >
         au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 99 ; 99 >

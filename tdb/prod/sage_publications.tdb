@@ -1206,7 +1206,7 @@ comment[ajs] = this journal has been moved to H20 platform
         param[base_url] = http://bst.sagepub.com/
         implicit < status ; name ; param[volume] >
 
-        au < down ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
+        au < down ; Bulletin of Science, Technology & Society Volume 26 [superseded] ; 26 >
 
       }
 
@@ -3991,11 +3991,11 @@ comment[exm] = now published by Springer
         param[base_url] = http://ghj.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-comment[ghj] = now published by Oxford Univeristy Press
+        comment[ghj] = now published by Oxford Univeristy Press
 
         au < HighWireStrVolPlugin ; down ; German History Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; German History Volume 22 ; 22 >
-        au < HighWireStrVolPlugin ; down ; German History Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; doNotProcess ; German History Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; doNotProcess ; German History Volume 23 ; 23 >
         au < HighWireStrVolPlugin ; down ; German History Volume 24 ; 24 >
         au < HighWireStrVolPlugin ; down ; German History Volume 25 ; 25 >
 
@@ -5667,9 +5667,9 @@ comment[jhj] = now published by Brill
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 1 ; 1 >
-        au < HighWireStrVolPlugin ; down ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
-        au < HighWireStrVolPlugin ; down ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
-        au < HighWireStrVolPlugin ; down ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
+        au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 3 ; 3 >
+        au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 4 ; 4 >
+        au < HighWireStrVolPlugin ; notReady ; Journal for the Study of the Historical Jesus Volume 5 ; 5 >
 
       }
 
