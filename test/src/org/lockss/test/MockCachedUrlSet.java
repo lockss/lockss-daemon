@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.54 2010-08-11 03:03:23 tlipkis Exp $
+ * $Id: MockCachedUrlSet.java,v 1.55 2010-08-11 03:06:50 tlipkis Exp $
  */
 
 /*
@@ -87,11 +87,6 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public MockCachedUrlSet(String url) {
-    this.url = url;
-  }
-
-  public MockCachedUrlSet(MockArchivalUnit owner, String url) {
-    this.au = owner;
     this.url = url;
   }
 

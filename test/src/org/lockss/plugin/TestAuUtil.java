@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.11 2010-08-11 02:58:57 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.12 2010-08-11 03:06:50 tlipkis Exp $
  */
 
 /*
@@ -300,7 +300,8 @@ public class TestAuUtil extends LockssTestCase {
     MockArchivalUnit mau = new MockArchivalUnit();
     CachedUrl mcu = new MockCachedUrl(url, mau);
     assertSame(mcu, AuUtil.getCu(mcu));
-    CachedUrlSet mcus = new MockCachedUrlSet(mau, url);
+    MockCachedUrlSet mcus = new MockCachedUrlSet(url);
+    mcus.setArchivalUnit(mau);
     assertNull(AuUtil.getCu(mcus));
     mau.addUrl(url, "foo");
     CachedUrl cu2 = AuUtil.getCu(mcus);
