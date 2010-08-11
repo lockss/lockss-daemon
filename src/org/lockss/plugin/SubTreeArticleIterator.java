@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.9 2010-07-21 06:10:18 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.10 2010-08-11 02:58:58 tlipkis Exp $
  */
 
 /*
@@ -332,8 +332,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
 	  }
 	} else {
 	  CachedUrlSetNode node = (CachedUrlSetNode)cusIter.next();
-	  if (node instanceof CachedUrl) {
-	    cu = (CachedUrl)node;
+	  cu = AuUtil.getCu(node);
+	  if (cu != null && cu.hasContent()) {
 	    if (isArticleCu(cu)) {
 	      nextElement = createArticleFiles(cu);
 	      if (nextElement == null) {

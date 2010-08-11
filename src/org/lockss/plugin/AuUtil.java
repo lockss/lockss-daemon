@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.24 2010-02-23 06:25:21 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.25 2010-08-11 02:58:58 tlipkis Exp $
  */
 
 /*
@@ -374,4 +374,18 @@ public class AuUtil {
       cu.release();
     } catch (Exception e) {}
   }
+
+  /** Return the CachedUrl for a content node, or null if not a content
+   * node */
+  public static CachedUrl getCu(CachedUrlSetNode node) {
+    switch (node.getType()) {
+    case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+      CachedUrlSet cus = (CachedUrlSet)node;
+      return cus.getArchivalUnit().makeCachedUrl(cus.getUrl());
+    case CachedUrlSetNode.TYPE_CACHED_URL:
+      return (CachedUrl)node;
+    }
+    return null;
+  }
+
 }

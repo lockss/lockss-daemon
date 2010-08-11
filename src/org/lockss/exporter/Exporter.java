@@ -1,5 +1,5 @@
 /*
- * $Id: Exporter.java,v 1.5 2010-02-24 03:55:31 tlipkis Exp $
+ * $Id: Exporter.java,v 1.6 2010-08-11 02:58:58 tlipkis Exp $
  */
 
 /*
@@ -239,19 +239,8 @@ public abstract class Exporter {
     Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
     while (iter.hasNext()) {
       CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
-      if (node.hasContent()) {
-	CachedUrl curCu;
-	switch (node.getType()) {
-	case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-	  CachedUrlSet cus = (CachedUrlSet)node;
-	  curCu = au.makeCachedUrl(cus.getUrl());
-	  break;
-	case CachedUrlSetNode.TYPE_CACHED_URL:
-	  curCu = (CachedUrl)node;
-	  break;
-	default:
-	  throw new RuntimeException("Unknown node type");
-	}
+      CachedUrl curCu = AuUtil.getCu(node);
+      if (curCu != null && curCu.hasContent()) {
 	CachedUrl[] cuVersions =
 	  curCu.getCuVersions(maxVersions > 0
 			      ? maxVersions : Integer.MAX_VALUE);
@@ -263,6 +252,8 @@ public abstract class Exporter {
 	    recordError("Unable to write " + cu.getUrl(), e);
 	  }
 	}
+      } else {
+	throw new RuntimeException("Unknown node type");
       }
     }
   }

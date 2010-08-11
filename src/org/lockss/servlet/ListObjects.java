@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.11 2010-07-21 06:12:21 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.12 2010-08-11 02:58:58 tlipkis Exp $
  */
 
 /*
@@ -175,9 +175,9 @@ public class ListObjects extends LockssServlet {
     for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
 	 iter.hasNext(); ) {
       CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-      if (cusn.isLeaf()) {
-	CachedUrl cu = (CachedUrl)cusn;
-	if (cu.hasContent()) {
+      if (cusn.hasContent()) {
+	CachedUrl cu = AuUtil.getCu(cusn);
+	if (cu != null && cu.hasContent()) {
 	  String url = cu.getUrl();
 	  String contentType = cu.getContentType();
 	  long bytes = cu.getContentSize();

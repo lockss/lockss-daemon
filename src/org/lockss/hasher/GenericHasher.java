@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.22 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.23 2010-08-11 02:58:58 tlipkis Exp $
  */
 
 /*
@@ -191,15 +191,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 
   protected CachedUrl getCurrentCu() {
     if (curCu == null) {
-      switch (curNode.getType()) {
-      case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-        CachedUrlSet cus = (CachedUrlSet)curNode;
-        curCu = au.makeCachedUrl(cus.getUrl());
-        break;
-      case CachedUrlSetNode.TYPE_CACHED_URL:
-        curCu = (CachedUrl)curNode;
-        break;
-      }
+      curCu = AuUtil.getCu(curNode);
     }
     return curCu;
   }
