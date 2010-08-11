@@ -1,5 +1,5 @@
 /*
- * $Id: Exporter.java,v 1.6 2010-08-11 02:58:58 tlipkis Exp $
+ * $Id: Exporter.java,v 1.7 2010-08-11 03:27:20 tlipkis Exp $
  */
 
 /*
@@ -252,8 +252,6 @@ public abstract class Exporter {
 	    recordError("Unable to write " + cu.getUrl(), e);
 	  }
 	}
-      } else {
-	throw new RuntimeException("Unknown node type");
       }
     }
   }
