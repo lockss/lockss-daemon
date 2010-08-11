@@ -30,7 +30,10 @@
       eissn = 1557-7023
     >
 
+    comment = there is an incarnation of this journal under OUP
+
     {
+    
       implicit < status ; name ; param[volume] >
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
@@ -38,7 +41,7 @@
   
       au < doNotProcess ; Integrative and Comparative Biology Volume 42 ; 42 >
       au < doNotProcess ; Integrative and Comparative Biology Volume 43 ; 43 >
-      au < superseded ; Integrative and Comparative Biology Volume 44 ; 44 >
+      au < superseded ; Integrative and Comparative Biology Volume 44 ; 044 >
       au < doNotProcess ; Integrative and Comparative Biology Volume 45 ; 45 >
     }
 
