@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = University of Leicester
+  >
+  
+  {
+  
+    title <
+      name = Museum and Society ;
+      issn = 1479-8360
+    >
+    
+    rights = openaccess
+    plugin = uk.org.lockss.plugin.museumandsociety.MuseumAndSocietyPlugin
+    param[base_url] = http://www.le.ac.uk/ms/
+    implicit < status ; name >
+    
+    comment = this AU is broken, the left frame switched from links to a drop-down menu
+    
+    au < released ; Museum and Society >
+  
+  }
+
+}

@@ -249,13 +249,13 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = korean_studies
       
-      au < manifest ; Korean Studies Volume 24 ; 24 >
-      au < manifest ; Korean Studies Volume 25 ; 25 >
-      au < manifest ; Korean Studies Volume 26 ; 26 >
-      au < manifest ; Korean Studies Volume 27 ; 27 >
-      au < manifest ; Korean Studies Volume 28 ; 28 >
-      au < manifest ; Korean Studies Volume 29 ; 29 >
-      au < manifest ; Korean Studies Volume 30 ; 30 >
+      au < released ; Korean Studies Volume 24 ; 24 >
+      au < released ; Korean Studies Volume 25 ; 25 >
+      au < released ; Korean Studies Volume 26 ; 26 >
+      au < released ; Korean Studies Volume 27 ; 27 >
+      au < released ; Korean Studies Volume 28 ; 28 >
+      au < released ; Korean Studies Volume 29 ; 29 >
+      au < released ; Korean Studies Volume 30 ; 30 >
       au < manifest ; Korean Studies Volume 31 ; 31 >
       au < manifest ; Korean Studies Volume 32 ; 32 >
       au < manifest ; Korean Studies Volume 33 ; 33 >
@@ -351,13 +351,13 @@ comment[0] = Atypon AUs
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = pacific_science
 
-      au < manifest ; Pacific Science Volume 55 ; 55 >
-      au < manifest ; Pacific Science Volume 56 ; 56 >
-      au < manifest ; Pacific Science Volume 57 ; 57 >
-      au < manifest ; Pacific Science Volume 58 ; 58 >
-      au < manifest ; Pacific Science Volume 59 ; 59 >
-      au < manifest ; Pacific Science Volume 60 ; 60 >
-      au < manifest ; Pacific Science Volume 61 ; 61 >
+      au < released ; Pacific Science Volume 55 ; 55 >
+      au < released ; Pacific Science Volume 56 ; 56 >
+      au < released ; Pacific Science Volume 57 ; 57 >
+      au < released ; Pacific Science Volume 58 ; 58 >
+      au < released ; Pacific Science Volume 59 ; 59 >
+      au < released ; Pacific Science Volume 60 ; 60 >
+      au < released ; Pacific Science Volume 61 ; 61 >
     }
 
   }

@@ -1,0 +1,22 @@
+{
+  
+  publisher <
+    name = Research Libraries Group
+  >
+  
+  {
+  
+    title <
+      name = RLG DigiNews
+    >
+    
+    rights = openaccess
+    plugin = org.lockss.plugin.rlg.RLGDigiNewsPlugin
+    param[base_url] = http://www.rlg.org/
+    implicit < status ; name >
+    
+    au < down ; RLG DigiNews >
+  
+  }
+  
+}

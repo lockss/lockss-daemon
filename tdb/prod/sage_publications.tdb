@@ -494,8 +494,8 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; doNotProcess ; American Journal of Medical Quality Volume 20 ; 20 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Medical Quality Volume 21 ; 21 >
-        au < HighWireStrVolPlugin ; down ; American Journal of Medical Quality Volume 22 ; 22 >
+        au < HighWireStrVolPlugin ; manifest ; American Journal of Medical Quality Volume 21 ; 21 >
+        au < HighWireStrVolPlugin ; manifest ; American Journal of Medical Quality Volume 22 ; 22 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; American Journal of Medical Quality Volume 24 ; 24 >
 
@@ -1216,7 +1216,7 @@ comment[ajs] = this journal has been moved to H20 platform
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Bulletin of Science, Technology & Society Volume 25 ; 25 >
-        au < HighWireStrVolPlugin ; doNotProcess ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
+        au < HighWireStrVolPlugin ; down ; Bulletin of Science, Technology & Society Volume 26 ; 26 >
         au < HighWireStrVolPlugin ; down ; Bulletin of Science, Technology & Society Volume 27 ; 27 >
         au < HighWirePressPlugin ; down ; Bulletin of Science, Technology & Society Volume 28 ; 28 >
         au < HighWirePressPlugin ; down ; Bulletin of Science, Technology & Society Volume 29 ; 29 >
@@ -4235,7 +4235,7 @@ comment[exm] = now published by Springer
         
         param[journal_dir] = harvard_international_journal_of_press_politics
 
-        au < down ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
+        au < manifest ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
 
       }
 

@@ -13,7 +13,10 @@
 
     {
 
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = american_literary_scholarship
+      implicit < status ; name ; param[volume] >
 
       au < ready ; American Literary Scholarship Volume 1998 ; 1998 >
       au < released ; American Literary Scholarship Volume 1999 ; 1999 >
@@ -134,7 +137,7 @@
       au < ready ; boundary 2 Volume 28 ; 28 >
       au < ready ; boundary 2 Volume 29 ; 29 >
       au < ready ; boundary 2 Volume 30 ; 30 >
-      au < ready ; boundary 2 Volume 31 ; 31 >
+      au < released ; boundary 2 Volume 31 ; 31 >
       
     }
     
@@ -222,9 +225,9 @@
       param[base_url] = http://cssaame.dukejournals.org/
       implicit < status ; name ; param[volume_name] >  
       
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 20 ; 20 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 21 ; 21 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 22 ; 22 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
       
     }
 
@@ -276,7 +279,10 @@
 
     {
 
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = eighteenth-century_life
+      implicit < status ; name ; param[volume] >
 
       au < released ; Eighteenth-Century Life Volume 20 ; 20 >
       au < released ; Eighteenth-Century Life Volume 21 ; 21 >
@@ -441,7 +447,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = hispanic_american_historical_review
 
-      au < released ; Hispanic American Historical Review Volume 79 ; 79 >
+      au < manifest ; Hispanic American Historical Review Volume 79 ; 79 >
       au < released ; Hispanic American Historical Review Volume 80 ; 80 >
       au < released ; Hispanic American Historical Review Volume 81 ; 81 >
       au < released ; Hispanic American Historical Review Volume 82 ; 82 >
@@ -636,6 +642,8 @@
       au < released ; Mediterranean Quarterly Volume 18 ; 18 >
 
     }
+    
+  }
 
   {
     title <
@@ -844,7 +852,10 @@
 
     {
 
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = social_science_history
+      implicit < status ; name ; param[volume] >
 
       au < released ; Social Science History Volume 23 ; 23 >
       au < released ; Social Science History Volume 24 ; 24 >

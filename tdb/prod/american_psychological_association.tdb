@@ -1,0 +1,33 @@
+{
+
+  publisher <
+    name = American Psychological Association
+  >
+  
+  {
+  
+    title <
+      name = Psycoloquy ;
+      issn = 1055-0143
+    >
+    
+    {
+    
+      rights = openaccess
+      plugin = uk.org.lockss.plugin.psycoloquy.PsycoloquyPlugin
+      param[base_url] = http://psycprints.ecs.soton.ac.uk/
+      implicit < status ; name >
+      
+      au < superseded ; Psycoloquy [superseded] >
+      
+    }
+    
+    {
+    
+      comment = completely new version at http://www.cogsci.ecs.soton.ac.uk/cgi/psyc/newpsy
+    
+    }
+  
+  }
+
+}

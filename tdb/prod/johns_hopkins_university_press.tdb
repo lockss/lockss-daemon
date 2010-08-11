@@ -383,16 +383,16 @@
 
     param[journal_dir] = configurations
 
-    au < released ; Configurations Volume 1 ; 1 >
-    au < released ; Configurations Volume 2 ; 2 >
-    au < released ; Configurations Volume 3 ; 3 >
-    au < released ; Configurations Volume 4 ; 4 >
-    au < released ; Configurations Volume 5 ; 5 >
-    au < released ; Configurations Volume 6 ; 6 >
-    au < released ; Configurations Volume 7 ; 7 >
-    au < released ; Configurations Volume 8 ; 8 >
-    au < released ; Configurations Volume 9 ; 9 >
-    au < released ; Configurations Volume 10 ; 10 >
+    au < manifest ; Configurations Volume 1 ; 1 >
+    au < manifest ; Configurations Volume 2 ; 2 >
+    au < manifest ; Configurations Volume 3 ; 3 >
+    au < manifest ; Configurations Volume 4 ; 4 >
+    au < manifest ; Configurations Volume 5 ; 5 >
+    au < manifest ; Configurations Volume 6 ; 6 >
+    au < manifest ; Configurations Volume 7 ; 7 >
+    au < manifest ; Configurations Volume 8 ; 8 >
+    au < manifest ; Configurations Volume 9 ; 9 >
+    au < manifest ; Configurations Volume 10 ; 10 >
     au < released ; Configurations Volume 11 ; 11 >
     au < released ; Configurations Volume 12 ; 12 >
     au < released ; Configurations Volume 13 ; 13 >
@@ -602,8 +602,8 @@
 
     param[journal_dir] = journal_of_colonialism_and_colonial_history
 
-    au < released ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
-    au < released ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
+    au < manifest ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
+    au < manifest ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
     au < released ; Journal of Colonialism and Colonial History Volume 3 ; 3 >
     au < released ; Journal of Colonialism and Colonial History Volume 4 ; 4 >
     au < released ; Journal of Colonialism and Colonial History Volume 5 ; 5 >
@@ -1021,15 +1021,15 @@
 
     param[journal_dir] = nwsa_journal
 
-    au < testing ; NWSA Journal Volume 11 ; 11 >
-    au < testing ; NWSA Journal Volume 12 ; 12 >
-    au < testing ; NWSA Journal Volume 13 ; 13 >
-    au < testing ; NWSA Journal Volume 14 ; 14 >
-    au < testing ; NWSA Journal Volume 15 ; 15 >
-    au < testing ; NWSA Journal Volume 16 ; 16 >
-    au < testing ; NWSA Journal Volume 17 ; 17 >
-    au < testing ; NWSA Journal Volume 18 ; 18 >
-    au < testing ; NWSA Journal Volume 19 ; 19 >
+    au < released ; NWSA Journal Volume 11 ; 11 >
+    au < released ; NWSA Journal Volume 12 ; 12 >
+    au < released ; NWSA Journal Volume 13 ; 13 >
+    au < released ; NWSA Journal Volume 14 ; 14 >
+    au < released ; NWSA Journal Volume 15 ; 15 >
+    au < released ; NWSA Journal Volume 16 ; 16 >
+    au < released ; NWSA Journal Volume 17 ; 17 >
+    au < released ; NWSA Journal Volume 18 ; 18 >
+    au < released ; NWSA Journal Volume 19 ; 19 >
     au < testing ; NWSA Journal Volume 20 ; 20 >
     au < testing ; NWSA Journal Volume 21 ; 21 >
 
@@ -1627,9 +1627,9 @@
 
     param[journal_dir] = victorian_periodicals_review
 
-    au < testing ; Victorian Periodicals Review Volume 38 ; 38 >
-    au < testing ; Victorian Periodicals Review Volume 39 ; 39 >
-    au < testing ; Victorian Periodicals Review Volume 40 ; 40 >
+    au < released ; Victorian Periodicals Review Volume 38 ; 38 >
+    au < released ; Victorian Periodicals Review Volume 39 ; 39 >
+    au < released ; Victorian Periodicals Review Volume 40 ; 40 >
     au < testing ; Victorian Periodicals Review Volume 41 ; 41 >
     au < testing ; Victorian Periodicals Review Volume 42 ; 42 >
 

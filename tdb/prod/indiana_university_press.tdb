@@ -555,9 +555,9 @@
 
     au < released ; Transition Volume 9 ; 9 >
     au < released ; Transition Volume 10 ; 10 >
-    au < released ; Transition Volume 11 ; 11 >
-    au < released ; Transition Volume 12 ; 12 >
-    au < released ; Transition Volume 13 ; 13 >
+    au < manifest ; Transition Volume 11 ; 11 >
+    au < manifest ; Transition Volume 12 ; 12 >
+    au < manifest ; Transition Volume 13 ; 13 >
     au < ready ; Transition Issue 98 ; 98 >
     au < ready ; Transition Issue 99 ; 99 >
     au < ready ; Transition Issue 100 ; 100 >
