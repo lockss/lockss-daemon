@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.2 2010-08-06 16:32:59 pgust Exp $
+ * $Id: TdbDiff.java,v 1.3 2010-08-11 23:49:45 tlipkis Exp $
  */
 
 /*
@@ -34,10 +34,7 @@ package org.lockss.devtools;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Properties;
-import java.util.TreeMap;
+import java.util.*;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
@@ -63,6 +60,12 @@ public class TdbDiff {
   Tdb tdb1;
   Tdb tdb2;
   
+  boolean showFields = false;		// show the params that are
+					// different for the same auid
+  boolean showAll = false;		// show even auids that are the
+					// same with no leading marker
+  Collection<String> excludeFields = null;
+
   /**
    * Create an instance for the specified PluginManager and Tdbs.
    * 
@@ -152,10 +155,8 @@ public class TdbDiff {
    * Print the differences between the TdbAus for the two Tdbs by auId.
    * 
    * @param ps the stream to print to
-   * @param showProps show the props that are different for the same auid
-   * @param showAll show even auids that are the same with no leading marker
    */
-  public void printTdbDiffsByAu(PrintStream ps, boolean showProps, boolean showAll) {
+  public void printTdbDiffsByAu(PrintStream ps) {
     Iterator<Map.Entry<String,TdbAu>> auItr1 = getTdbAusFor(tdb1).entrySet().iterator();
     Iterator<Map.Entry<String,TdbAu>> auItr2 = getTdbAusFor(tdb2).entrySet().iterator();
     Map.Entry<String,TdbAu> auEntry1 = auItr1.hasNext() ? auItr1.next() : null;
@@ -165,15 +166,15 @@ public class TdbDiff {
       if (auEntry2 == null) {
         // no more aus for tdb2; list au for tdb1
         ps.println("< " + auEntry1.getKey());
-        if (showProps && showAll) {
-          printTdbAuDiffs(ps, auEntry1.getValue(), auEntry1.getValue(), showAll);
+        if (showFields && showAll) {
+          printTdbAuDiffs(ps, auEntry1.getValue(), auEntry1.getValue());
         }
         auEntry1 = auItr1.hasNext() ? auItr1.next() : null;
       } else if (auEntry1 == null) {
         // no more aus for tdb1; list au for tdb2
         ps.println("> " + auEntry2.getKey());
-        if (showProps && showAll) {
-          printTdbAuDiffs(ps, auEntry2.getValue(), auEntry2.getValue(), showAll);
+        if (showFields && showAll) {
+          printTdbAuDiffs(ps, auEntry2.getValue(), auEntry2.getValue());
         }
         auEntry2 = auItr2.hasNext() ? auItr2.next() : null;
       } else {
@@ -182,34 +183,35 @@ public class TdbDiff {
         if (auCmpr < 0) {
           // list auid1 that does not exist in tdb2
           ps.println("< " + auEntry1.getKey());
-          if (showProps && showAll) {
-            printTdbAuDiffs(ps, auEntry1.getValue(), auEntry1.getValue(), showAll);
+          if (showFields && showAll) {
+            printTdbAuDiffs(ps, auEntry1.getValue(), auEntry1.getValue());
           }
           auEntry1 = auItr1.hasNext() ? auItr1.next() : null;
         } else if (auCmpr > 0) {
           // list auid2 that does not exist in tdb1
           ps.println("> " + auEntry2.getKey());
-          if (showProps && showAll) {
-            printTdbAuDiffs(ps, auEntry2.getValue(), auEntry2.getValue(), showAll);
+          if (showFields && showAll) {
+            printTdbAuDiffs(ps, auEntry2.getValue(), auEntry2.getValue());
           }
           auEntry2 = auItr2.hasNext() ? auItr2.next() : null;
         } else {
           // compare same auid in au1 and au2 
           Map<String,String> paramMap1 = auEntry1.getValue().getParams();
           Map<String,String> paramMap2 = auEntry2.getValue().getParams();
-          if (paramMap1.equals(paramMap2)) {
+	  String diffs = tdbAuDiffs(auEntry1.getValue(), auEntry2.getValue());
+          if (diffs.isEmpty()) {
             if (showAll) {
               // all parameters are the same so list as same
               System.out.println("  " + auEntry1.getKey());
-              if (showProps && showAll) {
-                printTdbAuDiffs(ps, auEntry1.getValue(), auEntry1.getValue(), showAll);
+              if (showFields && showAll) {
+                printTdbAuDiffs(ps, auEntry1.getValue(), auEntry1.getValue());
               }
             }
           } else {
             // some parameters are different so list as different
-            System.out.println("- " + auEntry1.getKey());
-            if (showProps) {
-              printTdbAuDiffs(ps, auEntry1.getValue(), auEntry2.getValue(), showAll);
+            System.out.println("! " + auEntry1.getKey());
+            if (showFields) {
+	      ps.print(diffs);
             }
           }
           
@@ -224,57 +226,91 @@ public class TdbDiff {
   /**
    * Print the parameter differences between two aus.
    *  
-   * @param ps the PrintStream
    * @param tdbAu1 the first au
    * @param tdbAu2 the second au
-   * @param showAll <code>true</code> to show properties that are not different as well
    */
-  public void printTdbAuDiffs(PrintStream ps, TdbAu tdbAu1, TdbAu tdbAu2, boolean showAll) {
-    // get parameter maps for aus
-    Map<String,String> paramMap1 = tdbAu1.getParams();
-    Map<String,String> paramMap2 = tdbAu2.getParams();
+  public void printTdbAuDiffs(PrintStream ps, TdbAu tdbAu1, TdbAu tdbAu2) {
+    ps.print(tdbAuDiffs(tdbAu1, tdbAu2));
+  }
 
-    // determine which props are different
-    Iterator<Map.Entry<String,String>> paramItr1 = 
-      new TreeMap<String,String>(paramMap1).entrySet().iterator();
-    Iterator<Map.Entry<String,String>> paramItr2 = 
-      new TreeMap<String,String>(paramMap2).entrySet().iterator();
-    Map.Entry<String,String> paramEntry1 = paramItr1.hasNext() ? paramItr1.next() : null;
-    Map.Entry<String,String> paramEntry2 = paramItr2.hasNext() ? paramItr2.next() : null;
+  public String tdbAuDiffs(TdbAu tdbAu1, TdbAu tdbAu2) {
+    StringBuilder sb = new StringBuilder();
+    // determine which params are different
+    Map<String,String> props1 = allTopLevelProps(tdbAu1);
+    Map<String,String> props2 = allTopLevelProps(tdbAu2);
+    appendMapDiffs(sb, props1, props2);
+    appendMapDiffs(sb, tdbAu1.getParams(), tdbAu2.getParams());
+    appendMapDiffs(sb, tdbAu1.getAttrs(), tdbAu2.getAttrs());
+    return sb.toString();
+  }
+
+  Map<String,String> allTopLevelProps(TdbAu au) {
+    Map<String,String> props = new HashMap<String,String>(au.getProperties());
+    props.put("journaltitle", au.getJournalTitle());
+    props.put("title", au.getName());
+    return props;
+  }
+
+  boolean isIncl(String name) {
+    return excludeFields == null || !excludeFields.contains(name);
+  }
+
+  void appendln(StringBuilder sb, String str) {
+    sb.append(str);
+    sb.append("\n");
+  }
+
+  void appendMapDiffs(StringBuilder sb,
+		      Map<String,String> map1, Map<String,String> map2) {
+    Iterator<Map.Entry<String,String>> iter1 = 
+      new TreeMap<String,String>(map1).entrySet().iterator();
+    Iterator<Map.Entry<String,String>> iter2 = 
+      new TreeMap<String,String>(map2).entrySet().iterator();
+    Map.Entry<String,String> paramEntry1 = iter1.hasNext() ? iter1.next() : null;
+    Map.Entry<String,String> paramEntry2 = iter2.hasNext() ? iter2.next() : null;
     while ((paramEntry1 != null) || (paramEntry2 != null)) {
       if (paramEntry2 == null) {
-        // no more parameters for au2; list parameter for au1 
-        ps.println("  < " + paramEntry1.getKey());
-        paramEntry1 = paramItr1.hasNext() ? paramItr1.next() : null;
+	// no more parameters for au2; list parameter for au1 
+	if (isIncl(paramEntry2.getKey())) {
+	  appendln(sb, "  < " + paramEntry1.getKey());
+	}
+	paramEntry1 = iter1.hasNext() ? iter1.next() : null;
       } else if (paramEntry1 == null) {
         // no more parameters for au1; list parameter for au2 
-        ps.println("  > " + paramEntry2.getKey());
-        paramEntry2 = paramItr2.hasNext() ? paramItr2.next() : null;
+	if (isIncl(paramEntry1.getKey())) {
+	  appendln(sb, "  > " + paramEntry2.getKey());
+	}
+	paramEntry2 = iter2.hasNext() ? iter2.next() : null;
       } else {
         // compare parameters for au1 and au2
-        int paramCmpr = paramEntry1.getKey().compareTo(paramEntry2.getKey());
-        if (paramCmpr < 0) {
-          // list parameter1 that does not exist in au2
-          ps.println("  < " + paramEntry1.getKey());
-          paramEntry1 = paramItr1.hasNext() ? paramItr1.next() : null;
-        } else if (paramCmpr > 0) {
-          // list parameter2 that does not exist in au1
-          ps.println("  > " + paramEntry2.getKey());
-          paramEntry2 = paramItr2.hasNext() ? paramItr2.next() : null;
-        } else {
-          if (paramEntry1.getValue().equals(paramEntry2.getValue())) {
-            if (showAll) {
-              // list parameter whose value is the same in au1 and au2
-              ps.println("    " + paramEntry1.getKey());
-            }
-          } else {
-            // list parameter whose value is different in au1 and au2
-            ps.println("  - " + paramEntry1.getKey());
-          }
-          // advance to next param for au1 and au2
-          paramEntry1 = paramItr1.hasNext() ? paramItr1.next() : null;
-          paramEntry2 = paramItr2.hasNext() ? paramItr2.next() : null;
-        }
+	boolean incl = isIncl(paramEntry1.getKey());
+	int paramCmpr = paramEntry1.getKey().compareTo(paramEntry2.getKey());
+	if (paramCmpr < 0) {
+	  // list parameter1 that does not exist in au2
+	  if (incl) {
+	    appendln(sb, "  < " + paramEntry1.getKey());
+	  }
+	  paramEntry1 = iter1.hasNext() ? iter1.next() : null;
+	} else if (paramCmpr > 0) {
+	  // list parameter2 that does not exist in au1
+	  if (incl) {
+	    appendln(sb, "  > " + paramEntry2.getKey());
+	  }
+	  paramEntry2 = iter2.hasNext() ? iter2.next() : null;
+	} else {
+	  if (paramEntry1.getValue().equals(paramEntry2.getValue())) {
+	    if (showAll && incl) {
+	      // list parameter whose value is the same in au1 and au2
+	      appendln(sb, "    " + paramEntry1.getKey());
+	    }
+	  } else if (incl) {
+	    // list parameter whose value is different in au1 and au2
+	    appendln(sb, "  ! " + paramEntry1.getKey());
+	  }
+	  // advance to next param for au1 and au2
+	  paramEntry1 = iter1.hasNext() ? iter1.next() : null;
+	  paramEntry2 = iter2.hasNext() ? iter2.next() : null;
+	}
       }
     }
   }
@@ -295,7 +331,7 @@ public class TdbDiff {
    * @param message the message to display
    */
   static public void usage() {
-    System.err.println("Usage: tdbdiff [-showAll] [-showParams] -config from1 ... fromN -config to1 ... toN");
+    System.err.println("Usage: tdbdiff [-showAll] [-showFields] [-excludeFields <field1> ... <fieldN>] -config <file1> ... <fileN> -config <file1> ... <fileN>");
   }
 
   /**
@@ -303,14 +339,13 @@ public class TdbDiff {
    * and compares the Tdbs that they specify.  The output is a list of auIDs that are
    * different.  Aus that appear in the first group but not the second are preceded
    * by a "&lt;"; ones that are in the second group but not the first are preceded by
-   * a "&gt;"; ones that are in both but different are preceded by a "-".
+   * a "&gt;"; ones that are in both but different are preceded by a "!".
    * <p>
-   * The -showProps switch expands the the same au whose properties are different 
+   * The -showFields switch expands the the same au whose parameters are different 
    * between the two configurations.
    * <p>
    * The -showAll switch also shows aus that are the same between two configurations,
-   * with no leading marker, and properties that are the same
-   * properties that are different. 
+   * with no leading marker, and parameters that are the same
    * @param args
    */
   static public void main(String[] args) {
@@ -321,7 +356,9 @@ public class TdbDiff {
     ConfigManager configMgr = daemon.getConfigManager();
 
     boolean showAll = false;
-    boolean showProps = false;
+    boolean showFields = false;
+    Collection<String> excludeFields = null;
+    boolean inExclude = false;
     
     Configuration config1 = null;
     Configuration config2 = null;
@@ -330,8 +367,8 @@ public class TdbDiff {
     for (String arg : args) {
       if (arg.equalsIgnoreCase("-showAll")) {
         showAll = true;
-      } else if (arg.equalsIgnoreCase("-showParams")) {
-        showProps = true;
+      } else if (arg.equalsIgnoreCase("-showFields")) {
+        showFields = true;
       } else if (arg.equalsIgnoreCase("-config")) {
         if (config1 == null) {
           curConfig = config1 = ConfigManager.newConfiguration();
@@ -341,6 +378,11 @@ public class TdbDiff {
           usage("Too many -config switches specified");
           System.exit(1);
         }
+      } else if (arg.equalsIgnoreCase("-excludeFields")) {
+	if (excludeFields == null) {
+	  excludeFields = new HashSet<String>();
+	}
+	inExclude = true;
       } else if (arg.equalsIgnoreCase("-help")) {
         usage("List the differences between two TDBs specified by two sets of configurations");
         System.exit(0);
@@ -351,13 +393,17 @@ public class TdbDiff {
         usage("Configuration file specified before -config1 or -config2 flag");
         System.exit(1);
       } else {
-        try {
-          Configuration config = configMgr.loadConfigFromFile(new File(arg).toURI().toURL().toExternalForm());
-          curConfig.copyFrom(config);
-        } catch (IOException ex) {
-          System.err.println("Error loading configuration file \"" + arg + "\"");
-          System.exit(1);
-        }
+	if (inExclude) {
+	  excludeFields.add(arg);
+	} else {
+	  try {
+	    Configuration config = configMgr.loadConfigFromFile(new File(arg).toURI().toURL().toExternalForm());
+	    curConfig.copyFrom(config);
+	  } catch (IOException ex) {
+	    System.err.println("Error loading configuration file \"" + arg + "\"");
+	    System.exit(1);
+	  }
+	}
       }
     }
 
@@ -377,6 +423,9 @@ public class TdbDiff {
     }
     
     TdbDiff tdbDiff = new TdbDiff(pluginMgr, tdb1, tdb2);
-    tdbDiff.printTdbDiffsByAu(System.out, showProps, showAll);
+    tdbDiff.showFields = showFields;
+    tdbDiff.showAll = showAll;
+    tdbDiff.excludeFields = excludeFields;
+    tdbDiff.printTdbDiffsByAu(System.out);
   }
 }
