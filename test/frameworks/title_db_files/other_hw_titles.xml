@@ -7929,51 +7929,6 @@
         <property name="attributes.publisher" value="Marine Biological Laboratory" />
       </property>
 
-       <property name="HighWireProceedingsoftheNationalAcademyofSciencesoftheUnitedStatesofAmerica(PNAS)102"> 
-        <property name="title" value="Proceedings of the National Academy of Sciences of the United States of America (PNAS) Volume 102" />
-        <property name="journalTitle" value="Proceedings of the National Academy of Sciences of the United States of America (PNAS)" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.pnas.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="102" />
-        </property>
-        <property name="attributes.publisher" value="National Academy of Sciences" />
-      </property>
-
-       <property name="HighWireProceedingsoftheNationalAcademyofSciencesoftheUnitedStatesofAmerica(PNAS)103"> 
-        <property name="title" value="Proceedings of the National Academy of Sciences of the United States of America (PNAS) Volume 103" />
-        <property name="journalTitle" value="Proceedings of the National Academy of Sciences of the United States of America (PNAS)" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.pnas.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="103" />
-        </property>
-        <property name="attributes.publisher" value="National Academy of Sciences" />
-      </property>
-
-       <property name="HighWireProceedingsoftheNationalAcademyofSciencesoftheUnitedStatesofAmerica(PNAS)104"> 
-        <property name="title" value="Proceedings of the National Academy of Sciences of the United States of America (PNAS) Volume 104" />
-        <property name="journalTitle" value="Proceedings of the National Academy of Sciences of the United States of America (PNAS)" />
-        <property name="plugin" value="org.lockss.plugin.highwire.HighWireStrVolPlugin" />
-        <property name="param.1">
-          <property name="key" value="base_url" />
-          <property name="value" value="http://www.pnas.org/" />
-        </property>
-        <property name="param.2">
-          <property name="key" value="volume_name" />
-          <property name="value" value="104" />
-        </property>
-        <property name="attributes.publisher" value="National Academy of Sciences" />
-      </property>
-
        <property name="HighWireHealthAffairs24"> 
         <property name="title" value="Health Affairs Volume 24" />
         <property name="journalTitle" value="Health Affairs" />
