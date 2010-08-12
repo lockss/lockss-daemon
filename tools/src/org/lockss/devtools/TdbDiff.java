@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.4 2010-08-12 00:32:58 thib_gc Exp $
+ * $Id: TdbDiff.java,v 1.5 2010-08-12 07:38:29 tlipkis Exp $
  */
 
 /*
@@ -372,6 +372,7 @@ public class TdbDiff {
       } else if (arg.equalsIgnoreCase("-showFields")) {
         showFields = true;
       } else if (arg.equalsIgnoreCase("-config")) {
+	inExclude = false;
         if (config1 == null) {
           curConfig = config1 = ConfigManager.newConfiguration();
         } else if (config2 == null) {
