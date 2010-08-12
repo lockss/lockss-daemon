@@ -51,6 +51,8 @@
   <property name="ProceedingsoftheNationalAcademyofSciences102">
    <property name="attributes.publisher" value="National Academy of Sciences" />
    <property name="journalTitle" value="Proceedings of the National Academy of Sciences" />
+   <property name="issn" value="0027-8424" />
+   <property name="eissn" value="1091-6490" />
    <property name="title" value="Proceedings of the National Academy of Sciences Volume 102" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
    <property name="param.1">
@@ -67,6 +69,8 @@
   <property name="ProceedingsoftheNationalAcademyofSciences103">
    <property name="attributes.publisher" value="National Academy of Sciences" />
    <property name="journalTitle" value="Proceedings of the National Academy of Sciences" />
+   <property name="issn" value="0027-8424" />
+   <property name="eissn" value="1091-6490" />
    <property name="title" value="Proceedings of the National Academy of Sciences Volume 103" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
    <property name="param.1">
@@ -83,6 +87,8 @@
   <property name="ProceedingsoftheNationalAcademyofSciences104">
    <property name="attributes.publisher" value="National Academy of Sciences" />
    <property name="journalTitle" value="Proceedings of the National Academy of Sciences" />
+   <property name="issn" value="0027-8424" />
+   <property name="eissn" value="1091-6490" />
    <property name="title" value="Proceedings of the National Academy of Sciences Volume 104" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
    <property name="param.1">
@@ -99,6 +105,8 @@
   <property name="ProceedingsoftheNationalAcademyofSciences105">
    <property name="attributes.publisher" value="National Academy of Sciences" />
    <property name="journalTitle" value="Proceedings of the National Academy of Sciences" />
+   <property name="issn" value="0027-8424" />
+   <property name="eissn" value="1091-6490" />
    <property name="title" value="Proceedings of the National Academy of Sciences Volume 105" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
    <property name="param.1">
@@ -115,6 +123,8 @@
   <property name="ProceedingsoftheNationalAcademyofSciences106">
    <property name="attributes.publisher" value="National Academy of Sciences" />
    <property name="journalTitle" value="Proceedings of the National Academy of Sciences" />
+   <property name="issn" value="0027-8424" />
+   <property name="eissn" value="1091-6490" />
    <property name="title" value="Proceedings of the National Academy of Sciences Volume 106" />
    <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
    <property name="param.1">
@@ -126,6 +136,24 @@
     <property name="value" value="106" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="ProceedingsoftheNationalAcademyofSciences107">
+   <property name="attributes.publisher" value="National Academy of Sciences" />
+   <property name="journalTitle" value="Proceedings of the National Academy of Sciences" />
+   <property name="issn" value="0027-8424" />
+   <property name="eissn" value="1091-6490" />
+   <property name="title" value="Proceedings of the National Academy of Sciences Volume 107" />
+   <property name="plugin" value="org.lockss.plugin.highwire.HighWirePressH20Plugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.pnas.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
  </property>
