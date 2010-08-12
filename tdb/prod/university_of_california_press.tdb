@@ -133,8 +133,8 @@
     au < released ; Journal of Vietnamese Studies Volume 1 ; 1 >
     au < released ; Journal of Vietnamese Studies Volume 2 ; 2 >
     au < released ; Journal of Vietnamese Studies Volume 3 ; 3 >
-    au < testing ; Journal of Vietnamese Studies Volume 4 ; 4 >
-    au < testing ; Journal of Vietnamese Studies Volume 5 ; 5 >
+    au < ready ; Journal of Vietnamese Studies Volume 4 ; 4 >
+    au < ready ; Journal of Vietnamese Studies Volume 5 ; 5 >
   }
 
 
@@ -171,8 +171,8 @@
     au < released ; Mexican Studies/Estudios Mexicanos Volume 22 ; 22 >
     au < released ; Mexican Studies/Estudios Mexicanos Volume 23 ; 23 >
     au < released ; Mexican Studies/Estudios Mexicanos Volume 24 ; 24 >
-    au < testing ; Mexican Studies/Estudios Mexicanos Volume 25 ; 25 >
-    au < testing ; Mexican Studies/Estudios Mexicanos Volume 24 ; 26 >
+    au < ready ; Mexican Studies/Estudios Mexicanos Volume 25 ; 25 >
+    au < ready ; Mexican Studies/Estudios Mexicanos Volume 24 ; 26 >
   }
 
 
@@ -209,8 +209,8 @@
     au < released ; Journal of Empirical Research on Human Research Ethics Volume 1 ; 1 >
     au < released ; Journal of Empirical Research on Human Research Ethics Volume 2 ; 2 >
     au < released ; Journal of Empirical Research on Human Research Ethics Volume 3 ; 3 >
-    au < testing ; Journal of Empirical Research on Human Research Ethics Volume 4 ; 4 >
-    au < testing ; Journal of Empirical Research on Human Research Ethics Volume 5 ; 5 >
+    au < ready ; Journal of Empirical Research on Human Research Ethics Volume 4 ; 4 >
+    au < ready ; Journal of Empirical Research on Human Research Ethics Volume 5 ; 5 >
   }
 
 
@@ -284,8 +284,8 @@
     au < released ; Film Quarterly Volume 59 ; 59 >
     au < released ; Film Quarterly Volume 60 ; 60 >
     au < released ; Film Quarterly Volume 61 ; 61 >
-    au < manifest ; Film Quarterly Volume 62 ; 62 >
-    au < manifest ; Film Quarterly Volume 63 ; 63 >
+    au < testing ; Film Quarterly Volume 62 ; 62 >
+    au < testing ; Film Quarterly Volume 63 ; 63 >
   }
 
 
@@ -306,8 +306,8 @@
     au < released ; Gastronomica Volume 6 ; 6 >
     au < released ; Gastronomica Volume 7 ; 7 >
     au < released ; Gastronomica Volume 8 ; 8 >
-    au < manifest ; Gastronomica Volume 9 ; 9 >
-    au < manifest ; Gastronomica Volume 10 ; 10 >
+    au < testing ; Gastronomica Volume 9 ; 9 >
+    au < testing ; Gastronomica Volume 10 ; 10 >
   }
 
 
@@ -328,8 +328,8 @@
     au < manifest ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
     au < released ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
     au < released ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
-    au < manifest ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
-    au < manifest ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
   }
 
 
@@ -343,15 +343,15 @@
     param[journal_id] = hlq
 
     au < ready ; Huntington Library Quarterly Volume 67 ; 67 >
-    au < manifest ; Huntington Library Quarterly Volume 68 ; 68 >
+    au < testing ; Huntington Library Quarterly Volume 68 ; 68 >
     au < ready ; Huntington Library Quarterly Volume 69 ; 69 >
     au < ready ; Huntington Library Quarterly Volume 70 ; 70 >
-    au < manifest ; Huntington Library Quarterly Volume 68 ; 68 >
-    au < manifest ; Huntington Library Quarterly Volume 69 ; 69 >
-    au < manifest ; Huntington Library Quarterly Volume 70 ; 70 >
-    au < manifest ; Huntington Library Quarterly Volume 71 ; 71 >
-    au < manifest ; Huntington Library Quarterly Volume 72 ; 72 >
-    au < manifest ; Huntington Library Quarterly Volume 73 ; 73 >
+    au < testing ; Huntington Library Quarterly Volume 68 ; 68 >
+    au < testing ; Huntington Library Quarterly Volume 69 ; 69 >
+    au < testing ; Huntington Library Quarterly Volume 70 ; 70 >
+    au < testing ; Huntington Library Quarterly Volume 71 ; 71 >
+    au < testing ; Huntington Library Quarterly Volume 72 ; 72 >
+    au < testing ; Huntington Library Quarterly Volume 73 ; 73 >
   }
 
 
