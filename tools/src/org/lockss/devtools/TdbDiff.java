@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.3 2010-08-11 23:49:45 tlipkis Exp $
+ * $Id: TdbDiff.java,v 1.4 2010-08-12 00:32:58 thib_gc Exp $
  */
 
 /*
@@ -271,13 +271,13 @@ public class TdbDiff {
     while ((paramEntry1 != null) || (paramEntry2 != null)) {
       if (paramEntry2 == null) {
 	// no more parameters for au2; list parameter for au1 
-	if (isIncl(paramEntry2.getKey())) {
+	if (isIncl(paramEntry1.getKey())) {
 	  appendln(sb, "  < " + paramEntry1.getKey());
 	}
 	paramEntry1 = iter1.hasNext() ? iter1.next() : null;
       } else if (paramEntry1 == null) {
         // no more parameters for au1; list parameter for au2 
-	if (isIncl(paramEntry1.getKey())) {
+	if (isIncl(paramEntry2.getKey())) {
 	  appendln(sb, "  > " + paramEntry2.getKey());
 	}
 	paramEntry2 = iter2.hasNext() ? iter2.next() : null;
@@ -287,25 +287,27 @@ public class TdbDiff {
 	int paramCmpr = paramEntry1.getKey().compareTo(paramEntry2.getKey());
 	if (paramCmpr < 0) {
 	  // list parameter1 that does not exist in au2
-	  if (incl) {
+	  if (isIncl(paramEntry1.getKey())) {
 	    appendln(sb, "  < " + paramEntry1.getKey());
 	  }
 	  paramEntry1 = iter1.hasNext() ? iter1.next() : null;
 	} else if (paramCmpr > 0) {
 	  // list parameter2 that does not exist in au1
-	  if (incl) {
+	  if (isIncl(paramEntry2.getKey())) {
 	    appendln(sb, "  > " + paramEntry2.getKey());
 	  }
 	  paramEntry2 = iter2.hasNext() ? iter2.next() : null;
 	} else {
-	  if (paramEntry1.getValue().equals(paramEntry2.getValue())) {
-	    if (showAll && incl) {
-	      // list parameter whose value is the same in au1 and au2
-	      appendln(sb, "    " + paramEntry1.getKey());
+	  if (isIncl(paramEntry1.getKey())) {
+            if (paramEntry1.getValue().equals(paramEntry2.getValue())) {
+	      if (showAll) {
+	        // list parameter whose value is the same in au1 and au2
+	        appendln(sb, "    " + paramEntry1.getKey());
+	      }
+	    } else {
+	      // list parameter whose value is different in au1 and au2
+	      appendln(sb, "  ! " + paramEntry1.getKey());
 	    }
-	  } else if (incl) {
-	    // list parameter whose value is different in au1 and au2
-	    appendln(sb, "  ! " + paramEntry1.getKey());
 	  }
 	  // advance to next param for au1 and au2
 	  paramEntry1 = iter1.hasNext() ? iter1.next() : null;
