@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.100 2009-03-05 05:41:58 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.101 2010-08-12 07:30:16 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,10 @@ public class TestPollManager extends LockssTestCase {
     initRequiredServices();
     initTestAddr();
     initTestMsg();
+    // Many of these tests are prone to timer events running after the test
+    // harness has been torn down, leading to spurious NPEs & such in the
+    // timer thread.
+    setErrorIfTimerThrows(false);
   }
 
 
