@@ -284,8 +284,8 @@
     au < released ; Film Quarterly Volume 59 ; 59 >
     au < released ; Film Quarterly Volume 60 ; 60 >
     au < released ; Film Quarterly Volume 61 ; 61 >
-    au < testing ; Film Quarterly Volume 62 ; 62 >
-    au < testing ; Film Quarterly Volume 63 ; 63 >
+    au < ready ; Film Quarterly Volume 62 ; 62 >
+    au < ready ; Film Quarterly Volume 63 ; 63 >
   }
 
 
@@ -306,8 +306,8 @@
     au < released ; Gastronomica Volume 6 ; 6 >
     au < released ; Gastronomica Volume 7 ; 7 >
     au < released ; Gastronomica Volume 8 ; 8 >
-    au < testing ; Gastronomica Volume 9 ; 9 >
-    au < testing ; Gastronomica Volume 10 ; 10 >
+    au < ready ; Gastronomica Volume 9 ; 9 >
+    au < ready ; Gastronomica Volume 10 ; 10 >
   }
 
 
@@ -320,16 +320,16 @@
 
     param[journal_id] = hsns
 
-    au < manifest ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
-    au < manifest ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
-    au < manifest ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
-    au < manifest ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
-    au < manifest ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
-    au < manifest ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
+    au < testing ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
     au < released ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
     au < released ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
-    au < testing ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
-    au < testing ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 40 ; 40 >
   }
 
 
@@ -343,14 +343,14 @@
     param[journal_id] = hlq
 
     au < ready ; Huntington Library Quarterly Volume 67 ; 67 >
-    au < testing ; Huntington Library Quarterly Volume 68 ; 68 >
+    au < ready ; Huntington Library Quarterly Volume 68 ; 68 >
     au < ready ; Huntington Library Quarterly Volume 69 ; 69 >
     au < ready ; Huntington Library Quarterly Volume 70 ; 70 >
-    au < testing ; Huntington Library Quarterly Volume 69 ; 69 >
-    au < testing ; Huntington Library Quarterly Volume 70 ; 70 >
-    au < testing ; Huntington Library Quarterly Volume 71 ; 71 >
-    au < testing ; Huntington Library Quarterly Volume 72 ; 72 >
-    au < testing ; Huntington Library Quarterly Volume 73 ; 73 >
+    au < ready ; Huntington Library Quarterly Volume 69 ; 69 >
+    au < ready ; Huntington Library Quarterly Volume 70 ; 70 >
+    au < ready ; Huntington Library Quarterly Volume 71 ; 71 >
+    au < ready ; Huntington Library Quarterly Volume 72 ; 72 >
+    au < ready ; Huntington Library Quarterly Volume 73 ; 73 >
   }
 
 
@@ -391,8 +391,8 @@
     au < released ; Pacific Historical Review Volume 75 ; 75 >
     au < released ; Pacific Historical Review Volume 76 ; 76 >
     au < released ; Pacific Historical Review Volume 77 ; 77 >
-    au < manifest ; Pacific Historical Review Volume 78 ; 78 >
-    au < manifest ; Pacific Historical Review Volume 79 ; 79 >
+    au < testing ; Pacific Historical Review Volume 78 ; 78 >
+    au < testing ; Pacific Historical Review Volume 79 ; 79 >
   }
 
 
@@ -413,8 +413,8 @@
     au < released ; The Public Historian Volume 28 ; 28 >
     au < released ; The Public Historian Volume 29 ; 29 >
     au < released ; The Public Historian Volume 30 ; 30 >
-    au < manifest ; The Public Historian Volume 31 ; 31 >
-    au < manifest ; The Public Historian Volume 32 ; 32 >
+    au < testing ; The Public Historian Volume 31 ; 31 >
+    au < testing ; The Public Historian Volume 32 ; 32 >
   }
 
 
@@ -427,8 +427,8 @@
 
     au < manifest ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
     au < ready ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
-    au < manifest ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
-    au < manifest ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
+    au < testing ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
+    au < testing ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
   }
 
 
@@ -461,9 +461,9 @@
     au < released ; Law and Literature Volume 18 ; 18 >
     au < released ; Law and Literature Volume 19 ; 19 >
     au < released ; Law and Literature Volume 20 ; 20 >
-    au < manifest ; Law and Literature Volume 21 ; 21 >
-    au < manifest ; Law and Literature Volume 21 ; 21 >
-    au < manifest ; Law and Literature Volume 22 ; 22 >
+    au < testing ; Law and Literature Volume 21 ; 21 >
+    au < testing ; Law and Literature Volume 21 ; 21 >
+    au < testing ; Law and Literature Volume 22 ; 22 >
   }
 
 
@@ -484,8 +484,8 @@
     au < released ; Music Perception Volume 23 ; 23 >
     au < released ; Music Perception Volume 24 ; 24 >
     au < released ; Music Perception Volume 25 ; 25 >
-    au < manifest ; Music Perception Volume 26 ; 26 >
-    au < manifest ; Music Perception Volume 27 ; 27 >
+    au < testing ; Music Perception Volume 26 ; 26 >
+    au < testing ; Music Perception Volume 27 ; 27 >
   }
 
 
