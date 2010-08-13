@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbparse.py,v 1.2 2010-08-04 18:49:00 thib_gc Exp $
+# $Id: tdbparse.py,v 1.3 2010-08-13 20:16:56 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.1'''
+__version__ = '''0.3.2'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -922,6 +922,6 @@ class TestTdbParser(unittest.TestCase):
 ''', 'mismatch line 10 column 5: expected 3 implicit assignments but got 4')]:
             parser = TdbParser(TdbScanner(StringIO(src)))
             try: parser.parse()
-            except RuntimeError as (exc,): self.assertEquals(mes, exc)
+            except RuntimeError, exc: self.assertEquals(mes, exc)
 
 if __name__ == '__main__': unittest.main()
