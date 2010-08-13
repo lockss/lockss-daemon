@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.6 2010-08-13 20:20:15 tlipkis Exp $
+ * $Id: TdbDiff.java,v 1.7 2010-08-13 21:25:23 tlipkis Exp $
  */
 
 /*
@@ -307,10 +307,10 @@ public class TdbDiff {
 	    if (showAll && isIncl(paramEntry1.getKey())) {
 	      // list parameter whose value is the same in au1 and au2
 	      appendln(sb, "    " + paramEntry1.getKey());
-	    } else if (isIncl(paramEntry1.getKey(), "!")) {
+	    }
+	  } else if (isIncl(paramEntry1.getKey(), "!")) {
 	      // list parameter whose value is different in au1 and au2
 	      appendln(sb, "  ! " + paramEntry1.getKey());
-	    }
 	  }
 	  // advance to next param for au1 and au2
 	  paramEntry1 = iter1.hasNext() ? iter1.next() : null;
