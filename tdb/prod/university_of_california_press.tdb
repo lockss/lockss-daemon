@@ -497,16 +497,16 @@
 
     param[journal_id] = fsr
 
-    au < testing ; Federal Sentencing Reporter Volume 13 ; 13 >
-    au < testing ; Federal Sentencing Reporter Volume 14 ; 14 >
-    au < testing ; Federal Sentencing Reporter Volume 15 ; 15 >
-    au < testing ; Federal Sentencing Reporter Volume 16 ; 16 >
-    au < testing ; Federal Sentencing Reporter Volume 17 ; 17 >
-    au < testing ; Federal Sentencing Reporter Volume 18 ; 18 >
-    au < testing ; Federal Sentencing Reporter Volume 19 ; 19 >
-    au < testing ; Federal Sentencing Reporter Volume 20 ; 20 >
-    au < testing ; Federal Sentencing Reporter Volume 21 ; 21 >
-    au < testing ; Federal Sentencing Reporter Volume 22 ; 22 >
+    au < ready ; Federal Sentencing Reporter Volume 13 ; 13 >
+    au < ready ; Federal Sentencing Reporter Volume 14 ; 14 >
+    au < ready ; Federal Sentencing Reporter Volume 15 ; 15 >
+    au < ready ; Federal Sentencing Reporter Volume 16 ; 16 >
+    au < ready ; Federal Sentencing Reporter Volume 17 ; 17 >
+    au < ready ; Federal Sentencing Reporter Volume 18 ; 18 >
+    au < ready ; Federal Sentencing Reporter Volume 19 ; 19 >
+    au < ready ; Federal Sentencing Reporter Volume 20 ; 20 >
+    au < ready ; Federal Sentencing Reporter Volume 21 ; 21 >
+    au < ready ; Federal Sentencing Reporter Volume 22 ; 22 >
   }
 
 
@@ -530,8 +530,8 @@
     au < released ; New Criminal Law Review Volume 9 ; 9 >
     au < released ; New Criminal Law Review Volume 10 ; 10 >
     au < released ; New Criminal Law Review Volume 11 ; 11 >
-    au < testing ; New Criminal Law Review Volume 12 ; 12 >
-    au < testing ; New Criminal Law Review Volume 13 ; 13 >
+    au < ready ; New Criminal Law Review Volume 12 ; 12 >
+    au < ready ; New Criminal Law Review Volume 13 ; 13 >
   }
 
 
@@ -606,9 +606,9 @@
     au < released ; Nineteenth-Century Literature Volume 60 ; 60 >
     au < released ; Nineteenth-Century Literature Volume 61 ; 61 >
     au < released ; Nineteenth-Century Literature Volume 62 ; 62 >
-    au < testing ; Nineteenth-Century Literature Volume 63 ; 63 >
-    au < testing ; Nineteenth-Century Literature Volume 64 ; 64 >
-    au < testing ; Nineteenth-Century Literature Volume 65 ; 65 >
+    au < ready ; Nineteenth-Century Literature Volume 63 ; 63 >
+    au < ready ; Nineteenth-Century Literature Volume 64 ; 64 >
+    au < ready ; Nineteenth-Century Literature Volume 65 ; 65 >
   }
 
 
@@ -701,37 +701,37 @@
     au < ready ; Representations Volume 78 ; 78 >
     au < ready ; Representations Volume 79 ; 79 >
     au < ready ; Representations Volume 80 ; 80 >
-    au < manifest ; Representations Volume 81 ; 81 >
-    au < manifest ; Representations Volume 82 ; 82 >
-    au < manifest ; Representations Volume 83 ; 83 >
-    au < manifest ; Representations Volume 84 ; 84 >
-    au < manifest ; Representations Volume 85 ; 85 >
-    au < manifest ; Representations Volume 86 ; 86 >
-    au < manifest ; Representations Volume 87 ; 87 >
-    au < manifest ; Representations Volume 88 ; 88 >
-    au < manifest ; Representations Volume 89 ; 89 >
-    au < manifest ; Representations Volume 90 ; 90 >
-    au < manifest ; Representations Volume 91 ; 91 >
-    au < manifest ; Representations Volume 92 ; 92 >
-    au < manifest ; Representations Volume 93 ; 93 >
-    au < manifest ; Representations Volume 94 ; 94 >
-    au < manifest ; Representations Volume 95 ; 95 >
-    au < manifest ; Representations Volume 96 ; 96 >
-    au < manifest ; Representations Volume 97 ; 97 >
-    au < manifest ; Representations Volume 98 ; 98 >
-    au < manifest ; Representations Volume 99 ; 99 >
-    au < manifest ; Representations Volume 100 ; 100 >
-    au < manifest ; Representations Volume 101 ; 101 >
-    au < manifest ; Representations Volume 102 ; 102 >
-    au < manifest ; Representations Volume 103 ; 103 > 
-    au < manifest ; Representations Volume 104 ; 104 > 
-    au < manifest ; Representations Volume 105 ; 105 > 
-    au < manifest ; Representations Volume 106 ; 106 > 
-    au < manifest ; Representations Volume 107 ; 107 > 
-    au < manifest ; Representations Volume 108 ; 108 > 
-    au < manifest ; Representations Volume 109 ; 109 > 
-    au < manifest ; Representations Volume 110 ; 110 > 
-    au < manifest ; Representations Volume 111 ; 111 > 
+    au < testing ; Representations Volume 81 ; 81 >
+    au < testing ; Representations Volume 82 ; 82 >
+    au < testing ; Representations Volume 83 ; 83 >
+    au < testing ; Representations Volume 84 ; 84 >
+    au < testing ; Representations Volume 85 ; 85 >
+    au < testing ; Representations Volume 86 ; 86 >
+    au < testing ; Representations Volume 87 ; 87 >
+    au < testing ; Representations Volume 88 ; 88 >
+    au < testing ; Representations Volume 89 ; 89 >
+    au < testing ; Representations Volume 90 ; 90 >
+    au < testing ; Representations Volume 91 ; 91 >
+    au < testing ; Representations Volume 92 ; 92 >
+    au < testing ; Representations Volume 93 ; 93 >
+    au < testing ; Representations Volume 94 ; 94 >
+    au < testing ; Representations Volume 95 ; 95 >
+    au < testing ; Representations Volume 96 ; 96 >
+    au < testing ; Representations Volume 97 ; 97 >
+    au < testing ; Representations Volume 98 ; 98 >
+    au < testing ; Representations Volume 99 ; 99 >
+    au < testing ; Representations Volume 100 ; 100 >
+    au < testing ; Representations Volume 101 ; 101 >
+    au < testing ; Representations Volume 102 ; 102 >
+    au < testing ; Representations Volume 103 ; 103 > 
+    au < testing ; Representations Volume 104 ; 104 > 
+    au < testing ; Representations Volume 105 ; 105 > 
+    au < testing ; Representations Volume 106 ; 106 > 
+    au < testing ; Representations Volume 107 ; 107 > 
+    au < testing ; Representations Volume 108 ; 108 > 
+    au < testing ; Representations Volume 109 ; 109 > 
+    au < testing ; Representations Volume 110 ; 110 > 
+    au < testing ; Representations Volume 111 ; 111 > 
   }
 
 
