@@ -320,12 +320,12 @@
 
     param[journal_id] = hsns
 
-    au < testing ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
-    au < testing ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
-    au < testing ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
-    au < testing ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
-    au < testing ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
-    au < testing ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 31 ; 31 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 32 ; 32 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 33 ; 33 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 34 ; 34 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 35 ; 35 >
+    au < ready ; Historical Studies in the Natural Sciences Volume 36 ; 36 >
     au < released ; Historical Studies in the Natural Sciences Volume 37 ; 37 >
     au < released ; Historical Studies in the Natural Sciences Volume 38 ; 38 >
     au < ready ; Historical Studies in the Natural Sciences Volume 39 ; 39 >
@@ -391,8 +391,8 @@
     au < released ; Pacific Historical Review Volume 75 ; 75 >
     au < released ; Pacific Historical Review Volume 76 ; 76 >
     au < released ; Pacific Historical Review Volume 77 ; 77 >
-    au < testing ; Pacific Historical Review Volume 78 ; 78 >
-    au < testing ; Pacific Historical Review Volume 79 ; 79 >
+    au < ready ; Pacific Historical Review Volume 78 ; 78 >
+    au < ready ; Pacific Historical Review Volume 79 ; 79 >
   }
 
 
@@ -413,8 +413,8 @@
     au < released ; The Public Historian Volume 28 ; 28 >
     au < released ; The Public Historian Volume 29 ; 29 >
     au < released ; The Public Historian Volume 30 ; 30 >
-    au < testing ; The Public Historian Volume 31 ; 31 >
-    au < testing ; The Public Historian Volume 32 ; 32 >
+    au < ready ; The Public Historian Volume 31 ; 31 >
+    au < ready ; The Public Historian Volume 32 ; 32 >
   }
 
 
@@ -427,8 +427,8 @@
 
     au < manifest ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
     au < ready ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
-    au < testing ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
-    au < testing ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
+    au < ready ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
+    au < ready ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
   }
 
 
@@ -437,7 +437,7 @@
       name = Law and Literature ;
       issn = 1535-685X ;
       eissn = 1541-2601
-    >
+    > 
 
     param[journal_id] = lal
 
@@ -461,9 +461,8 @@
     au < released ; Law and Literature Volume 18 ; 18 >
     au < released ; Law and Literature Volume 19 ; 19 >
     au < released ; Law and Literature Volume 20 ; 20 >
-    au < testing ; Law and Literature Volume 21 ; 21 >
-    au < testing ; Law and Literature Volume 21 ; 21 >
-    au < testing ; Law and Literature Volume 22 ; 22 >
+    au < ready ; Law and Literature Volume 21 ; 21 >
+    au < ready ; Law and Literature Volume 22 ; 22 >
   }
 
 
@@ -484,8 +483,8 @@
     au < released ; Music Perception Volume 23 ; 23 >
     au < released ; Music Perception Volume 24 ; 24 >
     au < released ; Music Perception Volume 25 ; 25 >
-    au < testing ; Music Perception Volume 26 ; 26 >
-    au < testing ; Music Perception Volume 27 ; 27 >
+    au < ready ; Music Perception Volume 26 ; 26 >
+    au < ready ; Music Perception Volume 27 ; 27 >
   }
 
 
@@ -498,16 +497,16 @@
 
     param[journal_id] = fsr
 
-    au < manifest ; Federal Sentencing Reporter Volume 13 ; 13 >
-    au < manifest ; Federal Sentencing Reporter Volume 14 ; 14 >
-    au < manifest ; Federal Sentencing Reporter Volume 15 ; 15 >
-    au < manifest ; Federal Sentencing Reporter Volume 16 ; 16 >
-    au < manifest ; Federal Sentencing Reporter Volume 17 ; 17 >
-    au < manifest ; Federal Sentencing Reporter Volume 18 ; 18 >
-    au < manifest ; Federal Sentencing Reporter Volume 19 ; 19 >
-    au < manifest ; Federal Sentencing Reporter Volume 20 ; 20 >
-    au < manifest ; Federal Sentencing Reporter Volume 21 ; 21 >
-    au < manifest ; Federal Sentencing Reporter Volume 22 ; 22 >
+    au < testing ; Federal Sentencing Reporter Volume 13 ; 13 >
+    au < testing ; Federal Sentencing Reporter Volume 14 ; 14 >
+    au < testing ; Federal Sentencing Reporter Volume 15 ; 15 >
+    au < testing ; Federal Sentencing Reporter Volume 16 ; 16 >
+    au < testing ; Federal Sentencing Reporter Volume 17 ; 17 >
+    au < testing ; Federal Sentencing Reporter Volume 18 ; 18 >
+    au < testing ; Federal Sentencing Reporter Volume 19 ; 19 >
+    au < testing ; Federal Sentencing Reporter Volume 20 ; 20 >
+    au < testing ; Federal Sentencing Reporter Volume 21 ; 21 >
+    au < testing ; Federal Sentencing Reporter Volume 22 ; 22 >
   }
 
 
@@ -531,8 +530,8 @@
     au < released ; New Criminal Law Review Volume 9 ; 9 >
     au < released ; New Criminal Law Review Volume 10 ; 10 >
     au < released ; New Criminal Law Review Volume 11 ; 11 >
-    au < manifest ; New Criminal Law Review Volume 12 ; 12 >
-    au < manifest ; New Criminal Law Review Volume 13 ; 13 >
+    au < testing ; New Criminal Law Review Volume 12 ; 12 >
+    au < testing ; New Criminal Law Review Volume 13 ; 13 >
   }
 
 
@@ -607,9 +606,9 @@
     au < released ; Nineteenth-Century Literature Volume 60 ; 60 >
     au < released ; Nineteenth-Century Literature Volume 61 ; 61 >
     au < released ; Nineteenth-Century Literature Volume 62 ; 62 >
-    au < manifest ; Nineteenth-Century Literature Volume 63 ; 63 >
-    au < manifest ; Nineteenth-Century Literature Volume 64 ; 64 >
-    au < manifest ; Nineteenth-Century Literature Volume 65 ; 65 >
+    au < testing ; Nineteenth-Century Literature Volume 63 ; 63 >
+    au < testing ; Nineteenth-Century Literature Volume 64 ; 64 >
+    au < testing ; Nineteenth-Century Literature Volume 65 ; 65 >
   }
 
 
