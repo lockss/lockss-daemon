@@ -611,7 +611,7 @@
       >
 
       param[journal_issn] = 1472-698X
-      comment[4] = was in props marked down, probably never released
+      comment[ihhr4] = was in props marked down, probably never released
 
       au < released ; BMC International Health and Human Rights Volume 1 ; 1 >
       au < released ; BMC International Health and Human Rights Volume 2 ; 2 >
@@ -619,6 +619,11 @@
       au < down ; BMC International Health and Human Rights Volume 4 ; 4 >
       au < released ; BMC International Health and Human Rights Volume 5 ; 5 >
       au < released ; BMC International Health and Human Rights Volume 6 ; 6 >
+      au < testing ; BMC International Health and Human Rights Volume 7 ; 7 >
+      au < testing ; BMC International Health and Human Rights Volume 8 ; 8 >
+      au < testing ; BMC International Health and Human Rights Volume 9 ; 9 >
+      au < testing ; BMC International Health and Human Rights Volume 10 ; 10 >
+
     }
 
     {
@@ -635,6 +640,11 @@
       au < released ; BMC Medical Education Volume 4 ; 4 >
       au < released ; BMC Medical Education Volume 5 ; 5 >
       au < released ; BMC Medical Education Volume 6 ; 6 >
+      au < testing ; BMC Medical Education Volume 7 ; 7 >
+      au < testing ; BMC Medical Education Volume 8 ; 8 >
+      au < testing ; BMC Medical Education Volume 9 ; 9 >
+      au < testing ; BMC Medical Education Volume 10 ; 10 >
+
     }
 
     {
@@ -652,6 +662,11 @@
       au < released ; BMC Medical Ethics Volume 5 ; 5 >
       au < released ; BMC Medical Ethics Volume 6 ; 6 >
       au < released ; BMC Medical Ethics Volume 7 ; 7 >
+      au < testing ; BMC Medical Ethics Volume 8 ; 8 >
+      au < testing ; BMC Medical Ethics Volume 9 ; 9 >
+      au < testing ; BMC Medical Ethics Volume 10 ; 10 >
+      au < testing ; BMC Medical Ethics Volume 11 ; 11 >
+      
     }
 
     {
@@ -669,6 +684,11 @@
       au < released ; BMC Medical Genetics Volume 5 ; 5 >
       au < released ; BMC Medical Genetics Volume 6 ; 6 >
       au < released ; BMC Medical Genetics Volume 7 ; 7 >
+      au < testing ; BMC Medical Genetics Volume 8 ; 8 >
+      au < testing ; BMC Medical Genetics Volume 9 ; 9 >
+      au < testing ; BMC Medical Genetics Volume 10 ; 10 >
+      au < testing ; BMC Medical Genetics Volume 11 ; 11 >
+
     }
 
     {
