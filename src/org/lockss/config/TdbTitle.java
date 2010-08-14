@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.7 2010-06-22 23:44:44 pgust Exp $
+ * $Id: TdbTitle.java,v 1.8 2010-08-14 22:26:46 tlipkis Exp $
  */
 
 /*
@@ -31,22 +31,17 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.config;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
 import org.lockss.config.Tdb.TdbException;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 
 /**
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.7 2010-06-22 23:44:44 pgust Exp $
+ * @version $Id: TdbTitle.java,v 1.8 2010-08-14 22:26:46 tlipkis Exp $
  */
 public class TdbTitle {
   /**
@@ -523,6 +518,19 @@ public class TdbTitle {
     publisher.addTdbTitle(title);
     title.linkTitles = linkTitles;  // immutable: no need to copy
     return title;
+  }
+
+  /** Print a full description of the title and all its AUs */
+  public void prettyPrint(PrintStream ps, int indent) {
+    ps.println(StringUtil.tab(indent) + "Title: " + name);
+    TreeMap<String, TdbAu> sorted =
+      new TreeMap<String, TdbAu>(CatalogueOrderComparator.SINGLETON);
+    for (TdbAu au : getTdbAus()) {
+      sorted.put(au.getName(), au);
+    }
+    for (TdbAu au : sorted.values()) {
+      au.prettyPrint(ps, indent + 2);
+    }
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.5 2010-06-22 23:44:44 pgust Exp $
+ * $Id: TdbAu.java,v 1.6 2010-08-14 22:26:46 tlipkis Exp $
  */
 
 /*
@@ -31,15 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.config;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Properties;
+import java.io.*;
+import java.util.*;
 
 import org.lockss.config.Tdb.TdbException;
-import org.lockss.util.OrderedProperties;
+import org.lockss.util.*;
 
 /**
  * This class represents a title database archive unit (AU).
@@ -571,15 +567,40 @@ public class TdbAu {
     TdbAu au = new TdbAu(name, pluginId);
     title.addTdbAu(au);
 
-    // immutable -- no need to copy        
-    au.attrs = attrs;  
+    // immutable -- no need to copy
+    au.attrs = attrs;
     au.props = props;
-    au.params = params; 
+    au.params = params;
 
     return au;
     
   }
   
+  /** Print a full description of the AU */
+  public void prettyPrint(PrintStream ps, int indent) {
+    ps.println(StringUtil.tab(indent) + "AU: " + name);
+    indent += 2;
+    ps.println(StringUtil.tab(indent) + "Plugin: " + pluginId);
+    pprintSortedMap("Params:", params, ps, indent);
+    if (attrs != null && !attrs.isEmpty()) {
+      pprintSortedMap("Attrs:", attrs, ps, indent);
+    }
+    if (props != null && !props.isEmpty()) {
+      pprintSortedMap("Additional props:", props, ps, indent);
+    }
+  }
+
+  void pprintSortedMap(String title, Map<String,String> map,
+		       PrintStream ps, int indent) {
+    ps.println(StringUtil.tab(indent) + title);
+    indent += 2;
+    TreeMap<String, String> sorted = new TreeMap<String, String>(map);
+    for (Map.Entry<String,String> ent : sorted.entrySet()) {
+      ps.println(StringUtil.tab(indent) +
+		 ent.getKey() + " = " + ent.getValue());
+    }
+  }
+
   /**
    * Return a String representation of the title.
    * 

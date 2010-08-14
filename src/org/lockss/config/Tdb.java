@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.9 2010-06-22 23:44:44 pgust Exp $
+ * $Id: Tdb.java,v 1.10 2010-08-14 22:26:46 tlipkis Exp $
  */
 
 /*
@@ -31,16 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.config;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
+import java.io.*;
+import java.util.*;
 
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 
 /**
  * This class represents a title database (TDB).  The TDB consists of
@@ -49,7 +43,7 @@ import org.lockss.util.Logger;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.9 2010-06-22 23:44:44 pgust Exp $
+ * @version $Id: Tdb.java,v 1.10 2010-08-14 22:26:46 tlipkis Exp $
  */
 public class Tdb {
   /**
@@ -63,7 +57,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.9 2010-06-22 23:44:44 pgust Exp $
+   * @version $Id: Tdb.java,v 1.10 2010-08-14 22:26:46 tlipkis Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -1029,4 +1023,16 @@ public class Tdb {
   public Map<String, TdbPublisher> getAllTdbPublishers() {
     return (tdbPublisherMap != null) ? tdbPublisherMap : Collections.<String,TdbPublisher>emptyMap();
   }
+
+  /** Print a full description of all elements in the Tdb */
+  public void prettyPrint(PrintStream ps) {
+    ps.println("Tdb");
+    TreeMap<String, TdbPublisher> sorted =
+      new TreeMap<String, TdbPublisher>(CatalogueOrderComparator.SINGLETON);
+    sorted.putAll(getAllTdbPublishers());
+    for (TdbPublisher tdbPublisher : sorted.values()) {
+      tdbPublisher.prettyPrint(ps, 2);
+    }
+  }
+
 }
