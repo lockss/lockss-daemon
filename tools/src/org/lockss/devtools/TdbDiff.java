@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.7 2010-08-13 21:25:23 tlipkis Exp $
+ * $Id: TdbDiff.java,v 1.8 2010-08-14 00:09:16 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,8 @@ public class TdbDiff {
   boolean showAll = false;		// show even auids that are the
 					// same with no leading marker
   Collection<String> excludeFields = null;
+
+  boolean verbose = false;
 
   /**
    * Create an instance for the specified PluginManager and Tdbs.
@@ -311,6 +313,10 @@ public class TdbDiff {
 	  } else if (isIncl(paramEntry1.getKey(), "!")) {
 	      // list parameter whose value is different in au1 and au2
 	      appendln(sb, "  ! " + paramEntry1.getKey());
+	      if (verbose) {
+		appendln(sb, "   < " + paramEntry1.getValue());
+		appendln(sb, "   > " + paramEntry2.getValue());
+	      }
 	  }
 	  // advance to next param for au1 and au2
 	  paramEntry1 = iter1.hasNext() ? iter1.next() : null;
@@ -362,6 +368,7 @@ public class TdbDiff {
 
     boolean showAll = false;
     boolean showFields = false;
+    boolean verbose = false;
     Collection<String> excludeFields = null;
     boolean inExclude = false;
     
@@ -374,6 +381,8 @@ public class TdbDiff {
         showAll = true;
       } else if (arg.equalsIgnoreCase("-showFields")) {
         showFields = true;
+      } else if (arg.equalsIgnoreCase("-v")) {
+        verbose = true;
       } else if (arg.equalsIgnoreCase("-config")) {
 	inExclude = false;
         if (config1 == null) {
@@ -432,6 +441,7 @@ public class TdbDiff {
     tdbDiff.showFields = showFields;
     tdbDiff.showAll = showAll;
     tdbDiff.excludeFields = excludeFields;
+    tdbDiff.verbose = verbose;
     tdbDiff.printTdbDiffsByAu(System.out);
   }
 }
