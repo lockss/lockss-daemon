@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.8 2010-08-14 00:09:16 tlipkis Exp $
+ * $Id: TdbDiff.java,v 1.9 2010-08-14 22:27:01 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ import org.lockss.util.Logger;
  * @author  Philip Gust
  */
 public class TdbDiff {
+
   PluginManager pluginMgr;
   Tdb tdb1;
   Tdb tdb2;
@@ -66,7 +67,7 @@ public class TdbDiff {
 					// same with no leading marker
   Collection<String> excludeFields = null;
 
-  boolean verbose = false;
+  int verbose = 0;
 
   /**
    * Create an instance for the specified PluginManager and Tdbs.
@@ -313,7 +314,7 @@ public class TdbDiff {
 	  } else if (isIncl(paramEntry1.getKey(), "!")) {
 	      // list parameter whose value is different in au1 and au2
 	      appendln(sb, "  ! " + paramEntry1.getKey());
-	      if (verbose) {
+	      if (verbose >= 1) {
 		appendln(sb, "   < " + paramEntry1.getValue());
 		appendln(sb, "   > " + paramEntry2.getValue());
 	      }
@@ -345,6 +346,8 @@ public class TdbDiff {
     System.err.println("Usage: tdbdiff [-showAll] [-showFields] [-excludeFields <field1> ... <fieldN>] -config <file1> ... <fileN> -config <file1> ... <fileN>");
   }
 
+  enum Mode {Diff, PPrint};
+
   /**
    * Main method takes two groups of configuration files preceded by -config switch
    * and compares the Tdbs that they specify.  The output is a list of auIDs that are
@@ -368,9 +371,10 @@ public class TdbDiff {
 
     boolean showAll = false;
     boolean showFields = false;
-    boolean verbose = false;
+    int verbose = 0;
     Collection<String> excludeFields = null;
     boolean inExclude = false;
+    Mode mode = Mode.Diff;
     
     Configuration config1 = null;
     Configuration config2 = null;
@@ -382,7 +386,9 @@ public class TdbDiff {
       } else if (arg.equalsIgnoreCase("-showFields")) {
         showFields = true;
       } else if (arg.equalsIgnoreCase("-v")) {
-        verbose = true;
+        verbose++;
+      } else if (arg.equalsIgnoreCase("-pp")) {
+	mode = Mode.PPrint;
       } else if (arg.equalsIgnoreCase("-config")) {
 	inExclude = false;
         if (config1 == null) {
@@ -415,14 +421,20 @@ public class TdbDiff {
 	    Configuration config = configMgr.loadConfigFromFile(new File(arg).toURI().toURL().toExternalForm());
 	    curConfig.copyFrom(config);
 	  } catch (IOException ex) {
-	    System.err.println("Error loading configuration file \"" + arg + "\"");
+	    System.err.println("Error loading configuration file \""
+			       + arg + "\": " + ex.getMessage());
 	    System.exit(1);
 	  }
 	}
       }
     }
 
-    if ((config1 == null) || (config2 == null)) {
+    if (config1 == null) {
+      usage("No -config switches specified.");
+      System.exit(1);
+    }
+
+    if (mode == Mode.Diff && config2 == null) {
       usage("Too few -config switches specified.");
       System.exit(1);
     }
@@ -432,16 +444,22 @@ public class TdbDiff {
       tdb1 = new Tdb();
     }
     
-    Tdb tdb2 = config2.getTdb();
-    if (tdb2 == null) {
-      tdb2 = new Tdb();
-    }
-    
-    TdbDiff tdbDiff = new TdbDiff(pluginMgr, tdb1, tdb2);
-    tdbDiff.showFields = showFields;
-    tdbDiff.showAll = showAll;
-    tdbDiff.excludeFields = excludeFields;
-    tdbDiff.verbose = verbose;
-    tdbDiff.printTdbDiffsByAu(System.out);
+    switch (mode) {
+    case Diff:
+      Tdb tdb2 = config2.getTdb();
+      if (tdb2 == null) {
+	tdb2 = new Tdb();
+      }
+      TdbDiff tdbDiff = new TdbDiff(pluginMgr, tdb1, tdb2);
+      tdbDiff.showFields = showFields;
+      tdbDiff.showAll = showAll;
+      tdbDiff.excludeFields = excludeFields;
+      tdbDiff.verbose = verbose;
+      tdbDiff.printTdbDiffsByAu(System.out);
+      break;
+    case PPrint:
+      tdb1.prettyPrint(System.out);
+      break;
+    }      
   }
 }
