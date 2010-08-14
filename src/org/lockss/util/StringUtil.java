@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.94 2010-07-01 04:04:38 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.95 2010-08-14 22:26:25 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.text.*;
 import java.lang.reflect.*;
 import org.apache.oro.text.regex.*;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * This is a class to contain generic string utilities
@@ -1014,6 +1015,11 @@ public class StringUtil {
   public static String gensym(String base) {
     return base + (gensymCtr++);
   }
+
+  public static String tab(int n) {
+    return StringUtils.repeat(" ", n);
+  }      
+
 
   /**
    * Trim a hostname, removing "www." from the front, if present, and the
