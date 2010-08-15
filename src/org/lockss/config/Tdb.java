@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.10 2010-08-14 22:26:46 tlipkis Exp $
+ * $Id: Tdb.java,v 1.11 2010-08-15 13:23:40 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.10 2010-08-14 22:26:46 tlipkis Exp $
+ * @version $Id: Tdb.java,v 1.11 2010-08-15 13:23:40 pgust Exp $
  */
 public class Tdb {
   /**
@@ -57,7 +57,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.10 2010-08-14 22:26:46 tlipkis Exp $
+   * @version $Id: Tdb.java,v 1.11 2010-08-15 13:23:40 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -663,7 +663,7 @@ public class Tdb {
     for (Map<String, String> pmap : paramMap.values()) {
       String name = pmap.get("key");
       String value = pmap.get("value");
-      if ((name == null) || (value == null)) {
+      if (name == null) {
         logger.warning("Ignoring property with null name");
       } else if (value == null) {
         logger.warning("Ignoring property \"" + name + "\" with null value");
@@ -832,6 +832,12 @@ public class Tdb {
       // find title from publisher
       title = publisher.getTdbTitleById(titleId);
       if (title != null) {
+        // warn that title name is different
+        if (!title.getName().equals(titleNameFromProps)) {
+          logger.warning("Title for au \"" + au.getName() + "\": \"" + titleNameFromProps 
+                         + "\" is different than existing title \"" + title.getName() 
+                         + "\" for id " + titleId + " -- using existing title.");
+        }
         return title;
       }
     }
