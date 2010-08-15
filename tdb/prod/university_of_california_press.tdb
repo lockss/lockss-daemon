@@ -109,7 +109,7 @@
     au < doNotProcess ; Journal of Palestine Studies Volume 28 ; 28 >
     au < doNotProcess ; Journal of Palestine Studies Volume 29 ; 29 >
     au < doNotProcess ; Journal of Palestine Studies Volume 30 ; 30 >
-    au < testing ; Journal of Palestine Studies Volume 31 ; 31 >
+    au < ready ; Journal of Palestine Studies Volume 31 ; 31 >
     au < released ; Journal of Palestine Studies Volume 32 ; 32 >
     au < released ; Journal of Palestine Studies Volume 33 ; 33 >
     au < released ; Journal of Palestine Studies Volume 34 ; 34 >
@@ -346,8 +346,6 @@
     au < ready ; Huntington Library Quarterly Volume 68 ; 68 >
     au < ready ; Huntington Library Quarterly Volume 69 ; 69 >
     au < ready ; Huntington Library Quarterly Volume 70 ; 70 >
-    au < ready ; Huntington Library Quarterly Volume 69 ; 69 >
-    au < ready ; Huntington Library Quarterly Volume 70 ; 70 >
     au < ready ; Huntington Library Quarterly Volume 71 ; 71 >
     au < ready ; Huntington Library Quarterly Volume 72 ; 72 >
     au < ready ; Huntington Library Quarterly Volume 73 ; 73 >
@@ -425,7 +423,7 @@
 
     param[journal_id] = jung
 
-    au < testing ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
+    au < ready ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
     au < ready ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
     au < ready ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
     au < ready ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
@@ -936,28 +934,6 @@
 
   {
     title <
-      name = Music Perception ;
-      issn = 0730-7829 ;
-      eissn = 1533-8312
-    >
-
-    param[journal_id] = mp
-
-    au < testing ; Music Perception Volume 18 ; 18 >
-    au < testing ; Music Perception Volume 19 ; 19 >
-    au < testing ; Music Perception Volume 20 ; 20 >
-    au < testing ; Music Perception Volume 21 ; 21 >
-    au < testing ; Music Perception Volume 22 ; 22 >
-    au < testing ; Music Perception Volume 23 ; 23 >
-    au < testing ; Music Perception Volume 24 ; 24 >
-    au < testing ; Music Perception Volume 25 ; 25 >
-    au < testing ; Music Perception Volume 26 ; 26 >
-    au < testing ; Music Perception Volume 27 ; 27 >
-  }
-
-
-  {
-    title <
       name = Music Theory Spectrum ;
       issn = 0195-6167 ;
       eissn = 1533-8339
@@ -1061,8 +1037,8 @@
     au < ready ; Nova Religioi Volume 10 ; 10 >
     au < ready ; Nova Religioi Volume 11 ; 11 >
     au < ready ; Nova Religioi Volume 12 ; 12 >
-    au < testing ; Nova Religioi Volume 13 ; 13 >
-    au < testing ; Nova Religioi Volume 14 ; 14 >
+    au < ready ; Nova Religioi Volume 13 ; 13 >
+    au < ready ; Nova Religioi Volume 14 ; 14 >
   }
 
 
@@ -1093,8 +1069,8 @@
     au < ready ; Religion and American Culture Volume 16 ; 16 >
     au < ready ; Religion and American Culture Volume 17 ; 17 >
     au < ready ; Religion and American Culture Volume 18 ; 18 >
-    au < testing ; Religion and American Culture Volume 19 ; 19 >
-    au < testing ; Religion and American Culture Volume 20 ; 20 >
+    au < ready ; Religion and American Culture Volume 19 ; 19 >
+    au < ready ; Religion and American Culture Volume 20 ; 20 >
   }
 
 
@@ -1118,15 +1094,15 @@
 
     param[journal_id] = ctx
 
-    au < testing ; Contexts Volume 1 ; 1 >
-    au < testing ; Contexts Volume 2 ; 2 >
-    au < testing ; Contexts Volume 3 ; 3 >
-    au < testing ; Contexts Volume 4 ; 4 >
-    au < testing ; Contexts Volume 5 ; 5 >
-    au < testing ; Contexts Volume 6 ; 6 >
-    au < testing ; Contexts Volume 7 ; 7 >
-    au < testing ; Contexts Volume 8 ; 8 >
-    au < testing ; Contexts Volume 9 ; 9 >
+    au < ready ; Contexts Volume 1 ; 1 >
+    au < ready ; Contexts Volume 2 ; 2 >
+    au < ready ; Contexts Volume 3 ; 3 >
+    au < ready ; Contexts Volume 4 ; 4 >
+    au < ready ; Contexts Volume 5 ; 5 >
+    au < ready ; Contexts Volume 6 ; 6 >
+    au < ready ; Contexts Volume 7 ; 7 >
+    au < ready ; Contexts Volume 8 ; 8 >
+    au < ready ; Contexts Volume 9 ; 9 >
   }
 
 
@@ -1194,8 +1170,8 @@
     au < released ; Social Problems Volume 53 ; 53 >
     au < released ; Social Problems Volume 54 ; 54 >
     au < released ; Social Problems Volume 55 ; 55 >
-    au < testing ; Social Problems Volume 56 ; 56 >
-    au < testing ; Social Problems Volume 57 ; 57 >
+    au < ready ; Social Problems Volume 56 ; 56 >
+    au < ready ; Social Problems Volume 57 ; 57 >
   }
 
 
@@ -1216,8 +1192,8 @@
     au < released ; Sociological Perspectives Volume 49 ; 49 >
     au < released ; Sociological Perspectives Volume 50 ; 50 >
     au < released ; Sociological Perspectives Volume 51 ; 51 >
-    au < testing ; Sociological Perspectives Volume 52 ; 52 >
-    au < testing ; Sociological Perspectives Volume 53 ; 53 >
+    au < ready ; Sociological Perspectives Volume 52 ; 52 >
+    au < ready ; Sociological Perspectives Volume 53 ; 53 >
   }
 
 
@@ -1251,7 +1227,7 @@
     au < released ; Symbolic Interaction Volume 19 ; 19 >
     au < released ; Symbolic Interaction Volume 20 ; 20 >
     au < released ; Symbolic Interaction Volume 21 ; 21 >
-    au < testing ; Symbolic Interaction Volume 22 ; 22 >
+    au < ready ; Symbolic Interaction Volume 22 ; 22 >
     au < released ; Symbolic Interaction Volume 23 ; 23 >
     au < released ; Symbolic Interaction Volume 24 ; 24 >
     au < released ; Symbolic Interaction Volume 25 ; 25 >
@@ -1261,8 +1237,8 @@
     au < released ; Symbolic Interaction Volume 29 ; 29 >
     au < released ; Symbolic Interaction Volume 30 ; 30 >
     au < released ; Symbolic Interaction Volume 31 ; 31 >
-    au < testing ; Symbolic Interaction Volume 32 ; 32 >
-    au < testing ; Symbolic Interaction Volume 33 ; 33 >
+    au < ready ; Symbolic Interaction Volume 32 ; 32 >
+    au < ready ; Symbolic Interaction Volume 33 ; 33 >
   }
 
 }
