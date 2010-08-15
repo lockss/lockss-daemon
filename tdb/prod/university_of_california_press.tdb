@@ -109,7 +109,7 @@
     au < doNotProcess ; Journal of Palestine Studies Volume 28 ; 28 >
     au < doNotProcess ; Journal of Palestine Studies Volume 29 ; 29 >
     au < doNotProcess ; Journal of Palestine Studies Volume 30 ; 30 >
-    au < manifest ; Journal of Palestine Studies Volume 31 ; 31 >
+    au < testing ; Journal of Palestine Studies Volume 31 ; 31 >
     au < released ; Journal of Palestine Studies Volume 32 ; 32 >
     au < released ; Journal of Palestine Studies Volume 33 ; 33 >
     au < released ; Journal of Palestine Studies Volume 34 ; 34 >
@@ -425,7 +425,7 @@
 
     param[journal_id] = jung
 
-    au < manifest ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
+    au < testing ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
     au < ready ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
     au < ready ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
     au < ready ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
@@ -770,8 +770,8 @@
     au < released ; Rhetorica Volume 24 ; 24 >
     au < released ; Rhetorica Volume 25 ; 25 >
     au < released ; Rhetorica Volume 26 ; 26 >
-    au < testing ; Rhetorica Volume 27 ; 27 >
-    au < testing ; Rhetorica Volume 28 ; 28 >
+    au < ready ; Rhetorica Volume 27 ; 27 >
+    au < ready ; Rhetorica Volume 28 ; 28 >
   }
 
 
@@ -815,8 +815,8 @@
     au < released ; 19th-Century Music Volume 29 ; 29 >
     au < released ; 19th-Century Music Volume 30 ; 30 >
     au < released ; 19th-Century Music Volume 31 ; 31 >
-    au < testing ; 19th-Century Music Volume 32 ; 32 >
-    au < testing ; 19th-Century Music Volume 33 ; 33 >
+    au < ready ; 19th-Century Music Volume 32 ; 32 >
+    au < ready ; 19th-Century Music Volume 33 ; 33 >
   }
 
 
@@ -854,8 +854,8 @@
     au < ready ; Journal of Musicology Volume 23 ; 23 >
     au < ready ; Journal of Musicology Volume 24 ; 24 >
     au < ready ; Journal of Musicology Volume 25 ; 25 >
-    au < testing ; Journal of Musicology Volume 26 ; 26 >
-    au < testing ; Journal of Musicology Volume 27 ; 27 >
+    au < ready ; Journal of Musicology Volume 26 ; 26 >
+    au < ready ; Journal of Musicology Volume 27 ; 27 >
   }
 
 
@@ -921,16 +921,16 @@
     au < doNotProcess ; Journal of the American Musicological Society Volume 51 ; 51 >
     au < doNotProcess ; Journal of the American Musicological Society Volume 52 ; 52 >
     au < doNotProcess ; Journal of the American Musicological Society Volume 53 ; 53 >
-    au < testing ; Journal of the American Musicological Society Volume 54 ; 54 >
-    au < testing ; Journal of the American Musicological Society Volume 55 ; 55 >
-    au < testing ; Journal of the American Musicological Society Volume 56 ; 56 >
-    au < testing ; Journal of the American Musicological Society Volume 57 ; 57 >
+    au < ready ; Journal of the American Musicological Society Volume 54 ; 54 >
+    au < ready ; Journal of the American Musicological Society Volume 55 ; 55 >
+    au < ready ; Journal of the American Musicological Society Volume 56 ; 56 >
+    au < ready ; Journal of the American Musicological Society Volume 57 ; 57 >
     au < ready ; Journal of the American Musicological Society Volume 58 ; 58 >
     au < ready ; Journal of the American Musicological Society Volume 59 ; 59 >
     au < ready ; Journal of the American Musicological Society Volume 60 ; 60 >
     au < ready ; Journal of the American Musicological Society Volume 61 ; 61 >
-    au < testing ; Journal of the American Musicological Society Volume 62 ; 62 >
-    au < testing ; Journal of the American Musicological Society Volume 63 ; 63 >
+    au < ready ; Journal of the American Musicological Society Volume 62 ; 62 >
+    au < ready ; Journal of the American Musicological Society Volume 63 ; 63 >
   }
 
 
@@ -943,16 +943,16 @@
 
     param[journal_id] = mp
 
-    au < manifest ; Music Perception Volume 18 ; 18 >
-    au < manifest ; Music Perception Volume 19 ; 19 >
-    au < manifest ; Music Perception Volume 20 ; 20 >
-    au < manifest ; Music Perception Volume 21 ; 21 >
-    au < manifest ; Music Perception Volume 22 ; 22 >
-    au < manifest ; Music Perception Volume 23 ; 23 >
-    au < manifest ; Music Perception Volume 24 ; 24 >
-    au < manifest ; Music Perception Volume 25 ; 25 >
-    au < manifest ; Music Perception Volume 26 ; 26 >
-    au < manifest ; Music Perception Volume 27 ; 27 >
+    au < testing ; Music Perception Volume 18 ; 18 >
+    au < testing ; Music Perception Volume 19 ; 19 >
+    au < testing ; Music Perception Volume 20 ; 20 >
+    au < testing ; Music Perception Volume 21 ; 21 >
+    au < testing ; Music Perception Volume 22 ; 22 >
+    au < testing ; Music Perception Volume 23 ; 23 >
+    au < testing ; Music Perception Volume 24 ; 24 >
+    au < testing ; Music Perception Volume 25 ; 25 >
+    au < testing ; Music Perception Volume 26 ; 26 >
+    au < testing ; Music Perception Volume 27 ; 27 >
   }
 
 
@@ -987,16 +987,16 @@
     au < doNotProcess ; Music Theory Spectrum Volume 20 ; 20 >
     au < doNotProcess ; Music Theory Spectrum Volume 21 ; 21 >
     au < doNotProcess ; Music Theory Spectrum Volume 22 ; 22 >
-    au < testing ; Music Theory Spectrum Volume 23 ; 23 >
-    au < testing ; Music Theory Spectrum Volume 24 ; 24 >
-    au < testing ; Music Theory Spectrum Volume 25 ; 25 >
-    au < testing ; Music Theory Spectrum Volume 26 ; 26 >
-    au < testing ; Music Theory Spectrum Volume 27 ; 27 >
-    au < testing ; Music Theory Spectrum Volume 28 ; 28 >
-    au < testing ; Music Theory Spectrum Volume 29 ; 29 >
-    au < testing ; Music Theory Spectrum Volume 30 ; 30 >
-    au < testing ; Music Theory Spectrum Volume 31 ; 31 >
-    au < testing ; Music Theory Spectrum Volume 32 ; 32 >
+    au < ready ; Music Theory Spectrum Volume 23 ; 23 >
+    au < ready ; Music Theory Spectrum Volume 24 ; 24 >
+    au < ready ; Music Theory Spectrum Volume 25 ; 25 >
+    au < ready ; Music Theory Spectrum Volume 26 ; 26 >
+    au < ready ; Music Theory Spectrum Volume 27 ; 27 >
+    au < ready ; Music Theory Spectrum Volume 28 ; 28 >
+    au < ready ; Music Theory Spectrum Volume 29 ; 29 >
+    au < ready ; Music Theory Spectrum Volume 30 ; 30 >
+    au < ready ; Music Theory Spectrum Volume 31 ; 31 >
+    au < ready ; Music Theory Spectrum Volume 32 ; 32 >
   }
 
 
@@ -1008,8 +1008,8 @@
     param[journal_id] = auk
 
     au < ready ; The Auk: A Quarterly Journal of Ornithology Volume 125 ; 125 >
-    au < testing ; The Auk: A Quarterly Journal of Ornithology Volume 126 ; 126 >
-    au < testing ; The Auk: A Quarterly Journal of Ornithology Volume 127 ; 127 >
+    au < ready ; The Auk: A Quarterly Journal of Ornithology Volume 126 ; 126 >
+    au < ready ; The Auk: A Quarterly Journal of Ornithology Volume 127 ; 127 >
   }
 
 
@@ -1020,9 +1020,9 @@
 
     param[journal_id] = cond
 
-    au < testing ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
-    au < testing ; The Condor: An International Journal of Avian Biology Volume 111 ; 111 >
-    au < testing ; The Condor: An International Journal of Avian Biology Volume 112 ; 112 >
+    au < ready ; The Condor: An International Journal of Avian Biology Volume 110 ; 110 >
+    au < ready ; The Condor: An International Journal of Avian Biology Volume 111 ; 111 >
+    au < ready ; The Condor: An International Journal of Avian Biology Volume 112 ; 112 >
   }
 
 
@@ -1035,10 +1035,10 @@
 
     param[journal_id] = om
 
-    au < testing ; Ornithological Monographs Volume 65 ; 65 >
-    au < testing ; Ornithological Monographs Volume 66 ; 66 >
-    au < testing ; Ornithological Monographs Volume 67 ; 67 >
-    au < testing ; Ornithological Monographs Volume 68 ; 68 >
+    au < ready ; Ornithological Monographs Volume 65 ; 65 >
+    au < ready ; Ornithological Monographs Volume 66 ; 66 >
+    au < ready ; Ornithological Monographs Volume 67 ; 67 >
+    au < ready ; Ornithological Monographs Volume 68 ; 68 >
   }
 
 
@@ -1049,10 +1049,10 @@
 
     param[journal_id] = jung
 
-    au < manifest ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
-    au < manifest ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
-    au < manifest ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
-    au < manifest ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
+    au < testing ; Jung Journal: Culture and Psyche Volume 1 ; 1 >
+    au < testing ; Jung Journal: Culture and Psyche Volume 2 ; 2 >
+    au < testing ; Jung Journal: Culture and Psyche Volume 3 ; 3 >
+    au < testing ; Jung Journal: Culture and Psyche Volume 4 ; 4 >
   }
 
 
@@ -1075,8 +1075,8 @@
     au < ready ; Nova Religioi Volume 10 ; 10 >
     au < ready ; Nova Religioi Volume 11 ; 11 >
     au < ready ; Nova Religioi Volume 12 ; 12 >
-    au < manifest ; Nova Religioi Volume 13 ; 13 >
-    au < manifest ; Nova Religioi Volume 14 ; 14 >
+    au < testing ; Nova Religioi Volume 13 ; 13 >
+    au < testing ; Nova Religioi Volume 14 ; 14 >
   }
 
 
@@ -1107,8 +1107,8 @@
     au < ready ; Religion and American Culture Volume 16 ; 16 >
     au < ready ; Religion and American Culture Volume 17 ; 17 >
     au < ready ; Religion and American Culture Volume 18 ; 18 >
-    au < manifest ; Religion and American Culture Volume 19 ; 19 >
-    au < manifest ; Religion and American Culture Volume 20 ; 20 >
+    au < testing ; Religion and American Culture Volume 19 ; 19 >
+    au < testing ; Religion and American Culture Volume 20 ; 20 >
   }
 
 
@@ -1132,15 +1132,15 @@
 
     param[journal_id] = ctx
 
-    au < manifest ; Contexts Volume 1 ; 1 >
-    au < manifest ; Contexts Volume 2 ; 2 >
-    au < manifest ; Contexts Volume 3 ; 3 >
-    au < manifest ; Contexts Volume 4 ; 4 >
-    au < manifest ; Contexts Volume 5 ; 5 >
-    au < manifest ; Contexts Volume 6 ; 6 >
-    au < manifest ; Contexts Volume 7 ; 7 >
-    au < manifest ; Contexts Volume 8 ; 8 >
-    au < manifest ; Contexts Volume 9 ; 9 >
+    au < testing ; Contexts Volume 1 ; 1 >
+    au < testing ; Contexts Volume 2 ; 2 >
+    au < testing ; Contexts Volume 3 ; 3 >
+    au < testing ; Contexts Volume 4 ; 4 >
+    au < testing ; Contexts Volume 5 ; 5 >
+    au < testing ; Contexts Volume 6 ; 6 >
+    au < testing ; Contexts Volume 7 ; 7 >
+    au < testing ; Contexts Volume 8 ; 8 >
+    au < testing ; Contexts Volume 9 ; 9 >
   }
 
 
@@ -1208,8 +1208,8 @@
     au < released ; Social Problems Volume 53 ; 53 >
     au < released ; Social Problems Volume 54 ; 54 >
     au < released ; Social Problems Volume 55 ; 55 >
-    au < manifest ; Social Problems Volume 56 ; 56 >
-    au < manifest ; Social Problems Volume 57 ; 57 >
+    au < testing ; Social Problems Volume 56 ; 56 >
+    au < testing ; Social Problems Volume 57 ; 57 >
   }
 
 
@@ -1230,8 +1230,8 @@
     au < released ; Sociological Perspectives Volume 49 ; 49 >
     au < released ; Sociological Perspectives Volume 50 ; 50 >
     au < released ; Sociological Perspectives Volume 51 ; 51 >
-    au < manifest ; Sociological Perspectives Volume 52 ; 52 >
-    au < manifest ; Sociological Perspectives Volume 53 ; 53 >
+    au < testing ; Sociological Perspectives Volume 52 ; 52 >
+    au < testing ; Sociological Perspectives Volume 53 ; 53 >
   }
 
 
@@ -1265,7 +1265,7 @@
     au < released ; Symbolic Interaction Volume 19 ; 19 >
     au < released ; Symbolic Interaction Volume 20 ; 20 >
     au < released ; Symbolic Interaction Volume 21 ; 21 >
-    au < manifest ; Symbolic Interaction Volume 22 ; 22 >
+    au < testing ; Symbolic Interaction Volume 22 ; 22 >
     au < released ; Symbolic Interaction Volume 23 ; 23 >
     au < released ; Symbolic Interaction Volume 24 ; 24 >
     au < released ; Symbolic Interaction Volume 25 ; 25 >
@@ -1275,8 +1275,8 @@
     au < released ; Symbolic Interaction Volume 29 ; 29 >
     au < released ; Symbolic Interaction Volume 30 ; 30 >
     au < released ; Symbolic Interaction Volume 31 ; 31 >
-    au < manifest ; Symbolic Interaction Volume 32 ; 32 >
-    au < manifest ; Symbolic Interaction Volume 33 ; 33 >
+    au < testing ; Symbolic Interaction Volume 32 ; 32 >
+    au < testing ; Symbolic Interaction Volume 33 ; 33 >
   }
 
 }
