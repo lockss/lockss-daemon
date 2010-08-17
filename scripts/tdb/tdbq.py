@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbq.py,v 1.5 2010-08-17 10:44:05 thib_gc Exp $
+# $Id: tdbq.py,v 1.6 2010-08-17 19:05:36 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -574,6 +574,9 @@ def __option_parser__(parser=None):
 
 def __reprocess_options__(parser, options):
     # Reprocess the statuses
+    if options.statuses is None:
+        options.statuses = []
+        return 
     sta = []
     for s in options.statuses:
         if type(s) is list: sta.extend(s)

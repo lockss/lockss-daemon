@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbout.py,v 1.2 2010-08-17 10:44:05 thib_gc Exp $
+# $Id: tdbout.py,v 1.3 2010-08-17 19:05:36 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -77,7 +77,7 @@ class TdboutConstants:
 
 def __process(tdb, options):
     fields = options.fields.split(',')
-    result = [[lam(au) for lam in map(tdbq.str_to_lambda_au, fields)] for au in tdb.aus()]
+    result = [[lam(au) or '' for lam in map(tdbq.str_to_lambda_au, fields)] for au in tdb.aus()]
     if options.style == TdboutConstants.OPTION_STYLE_CSV:
         import csv
         if options.headings: result = [[w.capitalize() for w in fields]] + result
