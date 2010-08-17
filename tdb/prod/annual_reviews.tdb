@@ -242,13 +242,14 @@
 
 
   {
+  
     title <
-      name = Annual Review of Biophysics and Bioengineering ;
+      name = Annual Review of Biophysics ;
       issn = 0084-6589
     >
 
-comment[bb1a] = next 3 title entries are continuation of the same journal
-comment[bb1b] = pdf filter issues
+    comment[continuity] = interrupted by 1056-8700
+    comment[bb1b] = pdf filter issues
 
     param[journal_id] = biophys
     param[short_journal_id] = bb
@@ -266,22 +267,6 @@ comment[bb1b] = pdf filter issues
     au < released ; Annual Review of Biophysics and Bioengineering Volume 11 ; 11 >
     au < released ; Annual Review of Biophysics and Bioengineering Volume 12 ; 12 >
     au < manifest ; Annual Review of Biophysics and Bioengineering Volume 13 ; 13 >
-
-  }
-
-
-  {
-    title <
-      name = Annual Review of Biophysics and Biophysical Chemistry ;
-      issn = 0084-6589
-    >
-
-comment[bb2] = continued from previous title entry
-comment[bb19_17] = pdf filter issues
-
-    param[journal_id] = biophys
-    param[short_journal_id] = bb
-
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 14 ; 14 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 15 ; 15 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 16 ; 16 >
@@ -289,16 +274,21 @@ comment[bb19_17] = pdf filter issues
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 18 ; 18 >
     au < notReady ; Annual Review of Biophysics and Biophysical Chemistry Volume 19 ; 19 >
     au < released ; Annual Review of Biophysics and Biophysical Chemistry Volume 20 ; 20 >
+  
+    au < ready ; Annual Review of Biophysics Volume 37 ; 37 >
+    au < ready ; Annual Review of Biophysics Volume 38 ; 38 >
+    au < manifest ; Annual Review of Biophysics Volume 39 ; 39 >
+
   }
 
-
   {
+
     title <
       name = Annual Review of Biophysics and Biomolecular Structure ;
       issn = 1056-8700
     >
 
-comment[bb3] = continued from previous title entry
+    comment[continuity] = interrupts 0084-6589
 
     param[journal_id] = biophys
     param[short_journal_id] = bb
@@ -1316,12 +1306,12 @@ comment[ns2] = continued from previous title entry
 
 
   {
+  
     title <
-      name = Annual Review of Pharmacology ;
-      issn = 0362-1642
+      name = Annual Review of Pharmacology and Toxicology ;
+      issn = 0362-1642 ;
+      eissn = 1545-4304
     >
-
-comment[pa1] = next title entry is a continuation of this journal
 
     param[journal_id] = pharmtox
     param[short_journal_id] = pa
@@ -1341,22 +1331,6 @@ comment[pa1] = next title entry is a continuation of this journal
     au < released ; Annual Review of Pharmacology Volume 13 ; 13 >
     au < released ; Annual Review of Pharmacology Volume 14 ; 14 >
     au < released ; Annual Review of Pharmacology Volume 15 ; 15 >
-  }
-
-
-
-  {
-    title <
-      name = Annual Review of Pharmacology and Toxicology ;
-      issn = 0362-1642 ;
-      eissn = 1545-4304
-    >
-
-comment[pa2] = continued from previous title entry
-
-    param[journal_id] = pharmtox
-    param[short_journal_id] = pa
-
     au < released ; Annual Review of Pharmacology and Toxicology Volume 16 ; 16 >
     au < released ; Annual Review of Pharmacology and Toxicology Volume 17 ; 17 >
     au < released ; Annual Review of Pharmacology and Toxicology Volume 18 ; 18 >
@@ -1392,9 +1366,8 @@ comment[pa2] = continued from previous title entry
     au < ready ; Annual Review of Pharmacology and Toxicology Volume 48 ; 48 >
     au < ready ; Annual Review of Pharmacology and Toxicology Volume 49 ; 49 >
     au < ready ; Annual Review of Pharmacology and Toxicology Volume 50 ; 50 >
+
   }
-
-
 
   {
     title <
