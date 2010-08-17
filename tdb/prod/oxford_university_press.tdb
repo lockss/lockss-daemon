@@ -3690,27 +3690,6 @@
     {
 
       title <
-        name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine ;
-        issn = 0360-5310 ;
-        eissn = 1744-5019
-      >
-
-      {
-
-        param[base_url] = http://jmp.oxfordjournals.org/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-        au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
-        au < HighWirePressPlugin ; released ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
-        au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 35 ; 35 >
-
-      }
-
-    }
-    
-    {
-
-      title <
         name = Journal of Molluscan Studies ;
         issn = 0260-1230 ;
         eissn = 1464-3766
@@ -5067,7 +5046,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
 
       title <
-        name = The Oral History Review ;
+        name = Oral History Review ;
         issn = 0094-0798 ;
         eissn = 1533-8592
       >
@@ -5077,9 +5056,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://ohr.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; The Oral History Review Volume 34 ; 34 >
-        au < HighWirePressPlugin ; released ; The Oral History Review Volume 35 ; 35 >
-        au < HighWirePressPlugin ; released ; The Oral History Review Volume 36 ; 36 >
+        au < HighWirePressPlugin ; manifest ; Oral History Review Volume 34 ; 34 >
+        au < HighWirePressPlugin ; released ; Oral History Review Volume 35 ; 35 >
+        au < HighWirePressPlugin ; released ; Oral History Review Volume 36 ; 36 >
 
       }
       
@@ -6482,8 +6461,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
       title <
         name = Enterprise & Society ;
-        issn = 0896-7148 ;
-        eissn = 1468-4365
+        issn = 1467-2227 ;
+        eissn = 1467-2235
       >
 
       param[journal_dir] = enterprise_and_society
