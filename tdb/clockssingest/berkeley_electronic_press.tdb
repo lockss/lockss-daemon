@@ -487,16 +487,16 @@
     param[base_url] = http://journals.naspa.org/
     param[journal_abbr] = jcc
 
-    au < manifest ; 2010 ; Journal of College and Character Volume 1 ; 1 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 2 ; 2 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 3 ; 3 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 4 ; 4 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 5 ; 5 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 6 ; 6 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 7 ; 7 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 8 ; 8 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 9 ; 9 >
-    au < manifest ; 2010 ; Journal of College and Character Volume 10 ; 10 >
+    au < manifest ; 2000 ; Journal of College and Character Volume 1 ; 1 >
+    au < manifest ; 2001 ; Journal of College and Character Volume 2 ; 2 >
+    au < manifest ; 2002 ; Journal of College and Character Volume 3 ; 3 >
+    au < manifest ; 2003 ; Journal of College and Character Volume 4 ; 4 >
+    au < manifest ; 2004 ; Journal of College and Character Volume 5 ; 5 >
+    au < manifest ; 2005 ; Journal of College and Character Volume 6 ; 6 >
+    au < manifest ; 2006 ; Journal of College and Character Volume 7 ; 7 >
+    au < manifest ; 2007 ; Journal of College and Character Volume 8 ; 8 >
+    au < manifest ; 2008 ; Journal of College and Character Volume 9 ; 9 >
+    au < manifest ; 2009 ; Journal of College and Character Volume 10 ; 10 >
     au < manifest ; 2010 ; Journal of College and Character Volume 11 ; 11 >
 
   }
@@ -728,8 +728,8 @@
     param[journal_abbr] = njawhe
 
     au < manifest ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 ; 1 >
-    au < manifest ; 2008 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
-    au < manifest ; 2008 ; NASPA Journal About Women in Higher Education Volume 3 ; 3 >
+    au < manifest ; 2009 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
+    au < manifest ; 2010 ; NASPA Journal About Women in Higher Education Volume 3 ; 3 >
 
   }
 
