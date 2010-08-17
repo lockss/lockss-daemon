@@ -39,8 +39,8 @@
 
     title <
       name = Analytical Communications ;
-      issn = 0260-1818 ;
-      eissn = 1460-4760
+      issn = 1359-7337 ;
+      eissn = 1364-5536
     >
 
     param[journal_code] = ac
@@ -114,8 +114,8 @@
 
     title <
       name = Chemical Communications ;
-      issn = 1477-9226 ;
-      eissn = 1364-5447
+      issn = 1359-7345 ;
+      eissn = 1364-548X
     >
 
     param[journal_code] = cc
@@ -140,8 +140,8 @@
 
     title <
       name = Chemical Society Reviews ;
-      issn = 1463-9262 ;
-      eissn = 1463-9270
+      issn = 0306-0012 ;
+      eissn = 1460-4744
     >
 
     param[journal_code] = cs
@@ -178,7 +178,8 @@
   {
 
     title <
-      name = Contemporary Organic Synthesis
+      name = Contemporary Organic Synthesis ;
+      issn = 1350-4894
     >
 
     param[journal_code] = co
@@ -191,8 +192,7 @@
 
     title <
       name = CrystEngComm ;
-      issn = 0300-922X ;
-      eissn = 1364-5463
+      issn = 1466-8033
     >
 
     param[journal_code] = ce
@@ -215,8 +215,8 @@
 
     title <
       name = Dalton Transactions ;
-      issn = 0300-9580 ;
-      eissn = 1364-5471
+      issn = 1477-9226 ;
+      eissn = 1477-9234
     >
 
     param[journal_code] = dt
@@ -241,7 +241,8 @@
   
     title <
       name = Energy & Environmental Science ;
-      issn = 1350-7583
+      issn = 1754-5692 ;
+      eissn = 1754-5706
     >
     
     param[journal_code] = ee
@@ -255,8 +256,8 @@
   
     title <
       name = Faraday Discussions ;
-      issn = 0267-9477 ;
-      eissn = 1364-5544
+      issn = 1359-6640 ;
+      eissn = 1364-5498
     >
     
     param[journal_code] = fd
@@ -293,8 +294,8 @@
 
     title <
       name = Green Chemistry ;
-      issn = 1464-0325 ;
-      eissn = 1464-0333
+      issn = 1463-9262 ;
+      eissn = 1463-9270
     >
 
     param[journal_code] = gc
@@ -317,7 +318,8 @@
   
     title <
       name = Integrative Biology ;
-      issn = 1757-9694
+      issn = 1757-9694 ;
+      eissn = 1757-9708
     >
     
     param[journal_code] = ib
@@ -384,7 +386,8 @@
 
     title <
       name = Journal of the Chemical Society, Perkin Transactions 1 ;
-      issn = 0300-922X
+      issn = 0300-922X ;
+      eissn = 1364-5463
     >
 
     param[journal_code] = p1
@@ -402,7 +405,8 @@
 
     title <
       name = Journal of the Chemical Society, Perkin Transactions 2 ;
-      issn = 0300-9580
+      issn = 0300-9580 ;
+      eissn = 1364-5471
     >
 
     param[journal_code] = p2
@@ -420,8 +424,8 @@
 
     title <
       name = Journal of Environmental Monitoring ;
-      issn = 1144-0546 ;
-      eissn = 1369-9261
+      issn = 1464-0325 ;
+      eissn = 1464-0333
     >
 
     param[journal_code] = em
@@ -444,8 +448,8 @@
 
     title <
       name = Journal of Materials Chemistry ;
-      issn = 1477-0520 ;
-      eissn = 1477-0539
+      issn = 0959-9428 ;
+      eissn = 1364-5501
     >
 
     param[journal_code] = jm
@@ -470,8 +474,8 @@
 
     title <
       name = Lab on a Chip ;
-      issn = 1474-905X ;
-      eissn = 1474-9092
+      issn = 1473-0197 ;
+      eissn = 1473-0189
     >
 
     param[journal_code] = lc
@@ -492,7 +496,8 @@
   
     title <
       name = Metallomics ;
-      issn = 1756-5901
+      issn = 1756-5901 ;
+      eissn = 1756-591X
     >
     
     param[journal_code] = mt
@@ -535,8 +540,8 @@
 
     title <
       name = Natural Product Reports ;
-      issn = 1463-9076 ;
-      eissn = 1463-9084
+      issn = 0265-0568 ;
+      eissn = 1460-4752
     >
 
     param[journal_code] = np
@@ -561,8 +566,8 @@
 
     title <
       name = New Journal of Chemistry ;
-      issn = 1744-683X ;
-      eissn = 1744-6848
+      issn = 1144-0546 ;
+      eissn = 1369-9261
     >
 
     param[journal_code] = nj
@@ -586,8 +591,8 @@
 
     title <
       name = Organic & Biomolecular Chemistry ;
-      issn = 0003-2654 ;
-      eissn = 1364-5528
+      issn = 1477-0520 ;
+      eissn = 1477-0539
     >
 
     param[journal_code] = ob

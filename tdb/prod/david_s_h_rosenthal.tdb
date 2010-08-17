@@ -9,10 +9,11 @@
     title <
       name = DSHR's Blog
     >
-    
+  
+    rights = openaccess  
     plugin = org.lockss.plugin.blogger.BasicBloggerPlugin
     implicit < status ; name >
-  
+    
     {
 
       param[base_url] = http://blog.dshr.org/

@@ -691,8 +691,8 @@
 
       title <
         name = British Journal of Anaesthesia ;
-        issn = 0007-0904 ;
-        eissn = 1468-2842
+        issn = 0007-0912 ;
+        eissn = 1471-6771 
       >
 
       {
@@ -1413,8 +1413,8 @@
 
       title <
         name = Enterprise & Society ;
-        issn = 0896-7148 ;
-        eissn = 1468-4365
+        issn = 1467-2227 ;
+        eissn = 1467-2235
       >
 
       {
@@ -1916,7 +1916,7 @@
     {
 
       title <
-        name = French Studies ;
+        name = French Studies: A Quarterly Review ;
         issn = 0016-1128 ;
         eissn = 1468-2931
       >
@@ -1927,7 +1927,7 @@
         param[base_url] = http://fs.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; French Studies Volume 60 ; 60 >
+        au < released ; French Studies: A Quarterly Review Volume 60 ; 60 >
 
       }
 
@@ -1936,9 +1936,9 @@
         param[base_url] = http://fs.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; French Studies Volume 59 ; 59 >
-        au < HighWirePressPlugin ; doNotProcess ; French Studies Volume 60 ; 60 >
-        au < HighWireStrVolPlugin ; released ; French Studies Volume 61 ; 61 >
+        au < HighWireStrVolPlugin ; released ; French Studies: A Quarterly Review Volume 59 ; 59 >
+        au < HighWirePressPlugin ; doNotProcess ; French Studies: A Quarterly Review Volume 60 ; 60 >
+        au < HighWireStrVolPlugin ; released ; French Studies: A Quarterly Review Volume 61 ; 61 >
 
       }
 
@@ -2487,11 +2487,14 @@
         eissn = 1464-3642
       >
 
+
       {
 
         pluginSuffix = HighWirePlugin
         param[base_url] = http://imanum.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
+
+        comment = moved to http://imajna.oxfordjournals.org/
 
         au < down ; IMA Journal of Numerical Analysis Volume 26 ; 26 >
 
@@ -3687,7 +3690,7 @@
     {
 
       title <
-        name = Journal of Medicine and Philosophy ;
+        name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine ;
         issn = 0360-5310 ;
         eissn = 1744-5019
       >
@@ -3697,9 +3700,9 @@
         param[base_url] = http://jmp.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 33 ; 33 >
-        au < HighWirePressPlugin ; released ; Journal of Medicine and Philosophy Volume 34 ; 34 >
-        au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 35 ; 35 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 >
+        au < HighWirePressPlugin ; released ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 >
+        au < HighWirePressPlugin ; manifest ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 35 ; 35 >
 
       }
 
@@ -3973,8 +3976,8 @@
 
       title <
         name = Journal of Semitic Studies ;
-        issn = 0167-5133 ;
-        eissn = 1477-4593
+        issn = 0022-4480 ;
+        eissn = 1477-8556
       >
 
       {
@@ -4826,8 +4829,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
       title <
         name = NDT Plus ;
-        issn = 0931-0509 ;
-        eissn = 1460-2385
+        issn = 1753-0784 ;
+        eissn = 1753-0792
       >
 
       {
@@ -5032,7 +5035,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
 
       title <
-        name = The Opera Quarterly ;
+        name = Opera Quarterly ;
         issn = 0736-0053 ;
         eissn = 1476-2870
       >
@@ -5043,7 +5046,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://oq.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; The Opera Quarterly Volume 21 ; 21 >
+        au < released ; Opera Quarterly Volume 21 ; 21 >
 
       }
 
@@ -5052,11 +5055,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://oq.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 21 ; 21 >
-        au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 22 ; 22 >
-        au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 23 ; 23 >
-        au < HighWirePressPlugin ; released ; The Opera Quarterly Volume 24 ; 24 >
-        au < HighWirePressPlugin ; ready ; The Opera Quarterly Volume 25 ; 25 >
+        au < HighWirePressPlugin ; doNotProcess ; Opera Quarterly Volume 21 ; 21 >
+        au < HighWirePressPlugin ; manifest ; Opera Quarterly Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; Opera Quarterly Volume 23 ; 23 >
+        au < HighWirePressPlugin ; released ; Opera Quarterly Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; Opera Quarterly Volume 25 ; 25 >
       }
 
     }
@@ -5775,8 +5778,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
       title <
         name = Review of Environmental Economics and Policy ;
-        issn = 0034-6551 ;
-        eissn = 1471-6968
+        issn = 1750-6816 ;
+        eissn = 1750-6824
       >
 
       {
@@ -5999,7 +6002,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
 
       title <
-        name = Social Politics: International Studies in Gender, State & Society ;
+        name = Social Politics: International Studies in Gender, State and Society ;
         issn = 1072-4745 ;
         eissn = 1468-2893
       >
@@ -6010,7 +6013,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://sp.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
+        au < released ; Social Politics: International Studies in Gender, State and Society Volume 12 ; 12 >
 
       }
 
@@ -6019,11 +6022,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://sp.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; doNotProcess ; Social Politics: International Studies in Gender, State & Society Volume 12 ; 12 >
-        au < HighWireStrVolPlugin ; released ; Social Politics: International Studies in Gender, State & Society Volume 13 ; 13 >
-        au < HighWirePressPlugin ; ready ; Social Politics: International Studies in Gender, State & Society Volume 14 ; 14 >
-        au < HighWirePressPlugin ; released ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 >
-        au < HighWirePressPlugin ; manifest ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 >
+        au < HighWirePressPlugin ; doNotProcess ; Social Politics: International Studies in Gender, State and Society Volume 12 ; 12 >
+        au < HighWireStrVolPlugin ; released ; Social Politics: International Studies in Gender, State and Society Volume 13 ; 13 >
+        au < HighWirePressPlugin ; ready ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
+        au < HighWirePressPlugin ; released ; Social Politics: International Studies in Gender, State and Society Volume 15 ; 15 >
+        au < HighWirePressPlugin ; manifest ; Social Politics: International Studies in Gender, State and Society Volume 16 ; 16 >
 
       }
 
@@ -6300,7 +6303,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
 
       title <
-        name = The World Bank Economic Review ;
+        name = World Bank Economic Review ;
         issn = 0258-6770 ;
         eissn = 1564-698X
       >
@@ -6311,7 +6314,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://wber.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; The World Bank Economic Review Volume 20 ; 20 >
+        au < released ; World Bank Economic Review Volume 20 ; 20 >
 
       }
 
@@ -6320,11 +6323,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://wber.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; The World Bank Economic Review Volume 19 ; 19 >
-        au < HighWirePressPlugin ; doNotProcess ; The World Bank Economic Review Volume 20 ; 20 >
-        au < HighWirePressPlugin ; released ; The World Bank Economic Review Volume 21 ; 21 >
-        au < HighWirePressPlugin ; released ; The World Bank Economic Review Volume 22 ; 22 >
-        au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; released ; World Bank Economic Review Volume 19 ; 19 >
+        au < HighWirePressPlugin ; doNotProcess ; World Bank Economic Review Volume 20 ; 20 >
+        au < HighWirePressPlugin ; released ; World Bank Economic Review Volume 21 ; 21 >
+        au < HighWirePressPlugin ; released ; World Bank Economic Review Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; World Bank Economic Review Volume 23 ; 23 >
 
       }
 

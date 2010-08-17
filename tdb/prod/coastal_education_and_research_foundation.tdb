@@ -16,6 +16,8 @@
       plugin = org.lockss.plugin.bioone.BioOnePlugin
       param[base_url] = http://www.bioone.org/
       param[journal_id] = 1551-5036
+
+      comment[journal_id] = conventionally we use the ISSN for journal_id but this one we got wrong
   
       au < superseded ; Journal of Coastal Research Volume 20 ; 20 >
       au < superseded ; Journal of Coastal Research Volume 21 ; 21 >
