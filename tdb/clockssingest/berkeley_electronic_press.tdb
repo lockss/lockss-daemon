@@ -5,7 +5,6 @@
   >
   
   plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
-  param[base_url] = http://www.bepress.com/
   implicit < status ; year ; name ; param[volume] >
   
   {
@@ -15,7 +14,8 @@
       eissn = 1932-0205
     >
 
-    param[journal_abbr] = asjcl
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] =  asjcl
 
     au < manifest ; 2006 ; Asian Journal of Comparative Law Volume 1 ; 1 >
     au < manifest ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
@@ -32,6 +32,7 @@
       eissn = 1935-1682
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejeap
     comment[years] = There is no typo below.  Volume 1 was published in 2005.  Volume 3 was published in 2004.
 
@@ -55,6 +56,7 @@
       eissn = 1935-1690
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejm
     comment[years] = There are no typos below, either.  Volume 1 and 2 were published after volume 3.
 
@@ -78,6 +80,7 @@
       eissn = 1935-1704
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bejte
 
     au < manifest ; 2002 ; The B.E. Journal of Theoretical Economics Volume 1 ; 1 >
@@ -100,6 +103,7 @@
       eissn = 1932-0183
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bis
 
     au < manifest ; 2006 ; Basic Income Studies Volume 1 ; 1 >
@@ -116,6 +120,7 @@
       eissn = 1469-3569
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = bap
 
     au < manifest ; 1999 ; Business and Politics Volume 1 ; 1 >
@@ -139,6 +144,7 @@
       name = California Journal of Politics and Policy
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cjpp
 
     au < released ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
@@ -153,6 +159,7 @@
       eissn = 1932-0213
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cas
 
     au < manifest ; 2006 ; Capitalism and Society Volume 1 ; 1 >
@@ -170,6 +177,7 @@
       eissn = 1934-2659
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = cppm
 
     au < manifest ; 2006 ; Chemical Product and Process Modeling Volume 1 ; 1 >
@@ -187,6 +195,7 @@
       eissn = 1553-3832
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ev
 
     au < manifest ; 2004 ; The Economists' Voice Volume 1 ; 1 >
@@ -202,10 +211,25 @@
   {
 
     title <
+      name = The Economists' Voice ;
+      eissn = 1553-3832
+    >
+
+    param[base_url] = http://www.bepress.com/
+    param[journal_abbr] = ev
+
+    au < manifest ; 2004 ; The Economists' Voice Volume 1 ; 1 >
+
+  }
+  
+  {
+
+    title <
       name = The Forum ;
       eissn = 1540-8884
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = forum
 
     au < manifest ; 2002 ; The Forum Volume 1 ; 1 >
@@ -226,6 +250,7 @@
       eissn = 1558-9544
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = fhep
 
     au < manifest ; 1998 ; Forum for Health Economics & Policy Volume 1 ; 1 >
@@ -251,6 +276,7 @@
       eissn = 1524-5861
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gej
 
     au < manifest ; 2000 ; Global Economy Journal Volume 1 ; 1 >
@@ -273,6 +299,7 @@
       eissn = 1934-2640
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = gj
 
     au < manifest ; 2001 ; Global Jurist Volume 1 ; 1 >
@@ -295,6 +322,7 @@
       eissn = 1554-4567
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ice
 
     au < manifest ; 2003 ; International Commentary on Evidence Volume 1 ; 1 >
@@ -314,6 +342,7 @@
       eissn = 1557-4679
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijb
 
     au < manifest ; 2005 ; The International Journal of Biostatistics Volume 1 ; 1 >
@@ -332,6 +361,7 @@
       eissn = 1542-6580
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijcre
 
     au < manifest ; 2003 ; International Journal of Chemical Reactor Engineering Volume 1 ; 1 >
@@ -352,6 +382,7 @@
       eissn = 1553-779X
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijeeps
 
     au < manifest ; 2004 ; International Journal of Emerging Electric Power Systems Volume 1 ; 1 >
@@ -375,6 +406,7 @@
       eissn = 1556-3758
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijfe
 
     au < manifest ; 2005 ; International Journal of Food Engineering Volume 1 ; 1 >
@@ -393,6 +425,7 @@
       eissn = 1548-923X
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ijnes
 
     au < manifest ; 2004 ; International Journal of Nursing Education Scholarship Volume 1 ; 1 >
@@ -412,6 +445,7 @@
       eissn = 1542-0485
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jafio
 
     au < manifest ; 2003 ; Journal of Agricultural & Food Industrial Organization Volume 1 ; 1 >
@@ -432,6 +466,7 @@
       eissn = 1932-9156
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jbvela
 
     au < manifest ; 2006 ; Journal of Business Valuation and Economic Loss Analysis Volume 1 ; 1 >
@@ -445,10 +480,35 @@
   {
 
     title <
+      name = Journal of College and Character ;
+      issn = 1944-2866
+    >
+
+    param[base_url] = http://journals.naspa.org/
+    param[journal_abbr] = jcc
+
+    au < manifest ; 2010 ; Journal of College and Character Volume 1 ; 1 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 2 ; 2 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 3 ; 3 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 4 ; 4 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 5 ; 5 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 6 ; 6 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 7 ; 7 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 8 ; 8 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 9 ; 9 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 10 ; 10 >
+    au < manifest ; 2010 ; Journal of College and Character Volume 11 ; 11 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Complementary and Integrative Medicine ;
       eissn = 1553-3840
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jcim
 
     au < manifest ; 2004 ; Journal of Complementary and Integrative Medicine Volume 1 ; 1 >
@@ -467,6 +527,7 @@
       name = Journal of Drug Policy Analysis
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jdpa
 
     au < released ; 2008 ; Journal of Drug Policy Analysis Volume 1 ; 1 >
@@ -482,6 +543,7 @@
       eissn = 1547-7355
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jhsem
 
     au < manifest ; 2004 ; Journal of Homeland Security and Emergency Management Volume 1 ; 1 >
@@ -501,6 +563,7 @@
       eissn = 1932-0191
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jirspa
 
     au < manifest ; 2006 ; Journal of Imagery Research in Sport and Physical Activity Volume 1 ; 1 >
@@ -518,6 +581,7 @@
       eissn = 1935-5041
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jioe
 
     au < manifest ; 2006 ; Journal of Industrial Organization Education Volume 1 ; 1 >
@@ -534,6 +598,7 @@
       eissn = 1559-0410
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jqas
 
     au < manifest ; 2005 ; Journal of Quantitative Analysis in Sports Volume 1 ; 1 >
@@ -548,9 +613,37 @@
   {
 
     title <
+      name = Journal of Student Affairs Research and Practice ;
+      issn = 1949-6605
+    >
+
+    param[base_url] = http://journals.naspa.org/
+    param[journal_abbr] = jsarp
+
+    au < manifest ; 1997 ; Journal of Student Affairs Research and Practice Volume 34 ; 34 >
+    au < manifest ; 1998 ; Journal of Student Affairs Research and Practice Volume 35 ; 35 >
+    au < manifest ; 1999 ; Journal of Student Affairs Research and Practice Volume 36 ; 36 >
+    au < manifest ; 2000 ; Journal of Student Affairs Research and Practice Volume 37 ; 37 >
+    au < manifest ; 2001 ; Journal of Student Affairs Research and Practice Volume 38 ; 38 >
+    au < manifest ; 2002 ; Journal of Student Affairs Research and Practice Volume 39 ; 39 >
+    au < manifest ; 2003 ; Journal of Student Affairs Research and Practice Volume 40 ; 40 >
+    au < manifest ; 2004 ; Journal of Student Affairs Research and Practice Volume 41 ; 41 >
+    au < manifest ; 2005 ; Journal of Student Affairs Research and Practice Volume 42 ; 42 >
+    au < manifest ; 2006 ; Journal of Student Affairs Research and Practice Volume 43 ; 43 >
+    au < manifest ; 2007 ; Journal of Student Affairs Research and Practice Volume 44 ; 44 >
+    au < manifest ; 2008 ; Journal of Student Affairs Research and Practice Volume 45 ; 45 >
+    au < manifest ; 2009 ; Journal of Student Affairs Research and Practice Volume 46 ; 46 >
+    au < manifest ; 2010 ; Journal of Student Affairs Research and Practice Volume 47 ; 47 >
+
+  }
+
+  {
+
+    title <
       name = Journal of Time Series Econometrics
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jtse
 
     au < released ; 2009 ; Journal of Time Series Econometrics Volume 1 ; 1 >
@@ -565,6 +658,7 @@
       eissn = 1932-9148
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = jtl
 
     au < manifest ; 2006 ; Journal of Tort Law Volume 1 ; 1 >
@@ -579,6 +673,7 @@
       name = Law & Ethics of Human Rights
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = lehr
 
     au < manifest ; 2007 ; Law & Ethics of Human Rights Volume 1 ; 1 >
@@ -594,6 +689,7 @@
       name = The Law and Development Review
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ldr
 
     au < released ; 2008 ; The Law and Development Review Volume 1 ; 1 >
@@ -609,6 +705,7 @@
       eissn = 1554-4419
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = mwjhr
 
     au < manifest ; 2004 ; Muslim World Journal of Human Rights Volume 1 ; 1 >
@@ -619,6 +716,22 @@
     au < manifest ; 2009 ; Muslim World Journal of Human Rights Volume 6 ; 6 >
 
   }
+  
+  {
+
+    title <
+      name = NASPA Journal About Women in Higher Education ;
+      issn = 1940-7890
+    >
+
+    param[base_url] = http://journals.naspa.org/
+    param[journal_abbr] = njawhe
+
+    au < manifest ; 2008 ; NASPA Journal About Women in Higher Education Volume 1 ; 1 >
+    au < manifest ; 2008 ; NASPA Journal About Women in Higher Education Volume 2 ; 2 >
+    au < manifest ; 2008 ; NASPA Journal About Women in Higher Education Volume 3 ; 3 >
+
+  }
 
   {
 
@@ -626,6 +739,7 @@
       name = New Global Studies
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ngs
 
     au < manifest ; 2007 ; New Global Studies Volume 1 ; 1 >
@@ -641,6 +755,7 @@
       eissn = 1554-8597
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = peps
 
     au < manifest ; 1993 ; Peace Economics, Peace Science and Public Policy Volume 1 ; 1 >
@@ -665,12 +780,42 @@
   {
 
     title <
+      name = Policy & Internet ;
+      issn = 1944-2866
+    >
+
+    param[base_url] = http://www.psocommons.org/
+    param[journal_abbr] = policyandinternet
+
+    au < manifest ; 2009 ; Review of Law & Economics Volume 1 ; 1 >
+    au < manifest ; 2010 ; Review of Law & Economics Volume 2 ; 2 >
+
+  }
+
+  {
+
+    title <
       name = Poverty & Public Policy
     >
 
-    param[journal_abbr] = pso_poverty
+    {
 
-    au < released ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >
+      param[base_url] = http://www.bepress.com/
+      param[journal_abbr] = pso_poverty
+
+      au < superseded ; 2009 ; Poverty & Public Policy Volume 1 [superseded] ; 1 >
+
+    }
+
+    {
+    
+      param[base_url] = http://www.psocommons.org/
+      param[journal_abbr] = ppp
+
+      au < manifest ; 2009 ; Poverty & Public Policy Volume 1 ; 1 >    
+      au < manifest ; 2010 ; Poverty & Public Policy Volume 2 ; 2 >    
+    
+    }
 
   }
 
@@ -681,6 +826,7 @@
       eissn = 1555-5879
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rle
 
     au < manifest ; 2005 ; Review of Law & Economics Volume 1 ; 1 >
@@ -699,6 +845,7 @@
       eissn = 1546-5616
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = romsjournal
 
     au < manifest ; 2003 ; Review of Marketing Science Volume 1 ; 1 >
@@ -718,6 +865,7 @@
       name = Review of Middle East Economics and Finance
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = rmeef
 
     au < manifest ; 2003 ; Review of Middle East Economics and Finance Volume 1 ; 1 >
@@ -731,10 +879,25 @@
   {
 
     title <
+      name = Risk, Hazards & Crisis in Public Policy ;
+      issn = 1944-4079
+    >
+
+    param[base_url] = http://www.psocommons.org/
+    param[journal_abbr] = rhcpp
+
+    au < manifest ; 2010 ; Risk, Hazards & Crisis in Public Policy Volume 1 ; 1 >
+
+  }
+  
+  {
+
+    title <
       name = Statistical Applications in Genetics and Molecular Biology ;
       eissn = 1544-6115
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = sagmb
 
     au < manifest ; 2002 ; Statistical Applications in Genetics and Molecular Biology Volume 1 ; 1 >
@@ -755,6 +918,7 @@
       name = Statistical Communications in Infectious Diseases
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = scid
 
     au < released ; 2009 ; Statistical Communications in Infectious Diseases Volume 1 ; 1 >
@@ -768,6 +932,7 @@
       name = Studies in Ethics, Law, and Technology
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = selt
 
     au < manifest ; 2007 ; Studies in Ethics, Law, and Technology Volume 1 ; 1 >
@@ -783,6 +948,7 @@
       eissn = 1558-3708
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = snde
 
     au < manifest ; 1996 ; Studies in Nonlinear Dynamics & Econometrics Volume 1 ; 1 >
@@ -809,6 +975,7 @@
       eissn = 1565-3404
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = til
 
     au < manifest ; 2000 ; Theoretical Inquiries in Law Volume 1 ; 1 >
@@ -828,10 +995,26 @@
   {
 
     title <
+      name = World Medical & Health Policy ;
+      issn = 1948-4682
+    >
+
+    param[base_url] = http://www.psocommons.org/
+    param[journal_abbr] = wmhp
+
+    au < manifest ; 2009 ; World Medical & Health Policy Volume 1 ; 1 >
+    au < manifest ; 2010 ; World Medical & Health Policy Volume 2 ; 2 >
+
+  }
+  
+  {
+
+    title <
       name = World Political Science Review ;
       eissn = 1935-6226
     >
 
+    param[base_url] = http://www.bepress.com/
     param[journal_abbr] = wpsr
 
     comment[4] = malformed manifest page, ticket #1352
@@ -845,5 +1028,5 @@
     au < manifest ; 2010 ; World Political Science Review Volume 6 ; 6 >
 
   }
-
+  
 }
