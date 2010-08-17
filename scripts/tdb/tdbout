@@ -1,0 +1,18 @@
+#!/bin/sh
+
+PROG=scripts/tdb/tdbout.py
+while [ true ]; do
+  if [ -x $PROG ]; then
+    break
+  fi
+  if [ -f $PROG ]; then
+    echo "$PROG must be executable"
+    exit 1
+  fi
+  if [ `pwd` = '/' ]; then
+    echo "$PROG must be run under a project directory"
+    exit 1
+  fi
+  cd ..
+done
+$PROG $*

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.2 2010-08-10 23:21:47 thib_gc Exp $
+# $Id: tdbxml.py,v 1.3 2010-08-17 10:44:05 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,7 +27,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '0.3.0'
+__version__ = '0.3.1'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -38,7 +38,7 @@ import tdbparse
 class TdbxmlConstants:
     
     OPTION_NO_PUB_DOWN = 'nopubdown'
-    OPTION_NO_PUB_DOWN_SHORT = 'D'
+    OPTION_NO_PUB_DOWN_SHORT = 'd'
     OPTION_NO_PUB_DOWN_HELP = 'do not include pub_down markers'
 
     OPTION_STYLE = 'style'
@@ -49,7 +49,7 @@ class TdbxmlConstants:
     OPTION_STYLE_DEFAULT = OPTION_STYLE_PUBLISHER
     OPTION_STYLES = [OPTION_STYLE_ENTRIES, OPTION_STYLE_LEGACY, OPTION_STYLE_PUBLISHER]
     OPTION_STYLE_HELP = 'output style (%s) (default: %s)' % (', '.join(OPTION_STYLES), '%default')
-
+    
 __IMPLICIT_PARAM_ORDER = [
     'base_url', 'base_url2', 'base_url3', 'base_url4', 'base_url5',
     'oai_request_url',

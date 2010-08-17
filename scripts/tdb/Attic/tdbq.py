@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbq.py,v 1.4 2010-08-04 22:32:02 thib_gc Exp $
+# $Id: tdbq.py,v 1.5 2010-08-17 10:44:05 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.2'''
+__version__ = '''0.3.3'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -35,14 +35,68 @@ from tdb import AU, Tdb
 
 class TdbqConstants:
     '''Constants associated with the tdbq module.'''
+
+    CONTENT_TESTING_STATUSES = [AU.Status.MANIFEST,
+                                AU.Status.WANTED,
+                                AU.Status.TESTING,
+                                AU.Status.RETESTING,
+                                AU.Status.NOT_READY,
+                                AU.Status.TESTED,
+                                AU.Status.READY,
+                                AU.Status.PRE_RELEASING,
+                                AU.Status.PRE_RELEASED,
+                                AU.Status.RELEASING,
+                                AU.Status.RELEASED,
+                                AU.Status.DOWN,
+                                AU.Status.SUPERSEDED,
+                                AU.Status.RETRACTED]
+    OPTION_CONTENT_TESTING = 'content-testing-aus'
+    OPTION_CONTENT_TESTING_SHORT = 'C'
+    OPTION_CONTENT_TESTING_HELP = 'only keep AUs whose status is %s' % (', '.join(['"%s"' % (st,) for st in CONTENT_TESTING_STATUSES]))
+        
+    OPTION_DOWN = 'down-aus'
+    OPTION_DOWN_SHORT = 'D'
+    OPTION_DOWN_HELP = 'keep AUs whose status is "%s"' % (AU.Status.DOWN,)
     
-    OPTION_PRODUCTION_STATUSES = 'productionStatuses'
-    OPTION_PRODUCTION_STATUSES_SHORT = 'P'
-    OPTION_PRODUCTION_STATUSES_HELP = 'only keep AUs in production statuses'
+    OPTION_EXISTS = 'exists-aus'
+    OPTION_EXISTS_SHORT = 'E'
+    OPTION_EXISTS_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXISTS,)
+    
+    OPTION_MANIFEST = 'manifest-aus'
+    OPTION_MANIFEST_SHORT = 'M'
+    OPTION_MANIFEST_HELP = 'keep AUs whose status is "%s"' % (AU.Status.MANIFEST,)
+    
+    PRODUCTION_STATUSES = [AU.Status.RELEASED,
+                           AU.Status.DOWN,
+                           AU.Status.SUPERSEDED,
+                           AU.Status.RETRACTED]
+    OPTION_PRODUCTION = 'production-aus'
+    OPTION_PRODUCTION_SHORT = 'P'
+    OPTION_PRODUCTION_HELP = 'only keep AUs whose status is %s' % (', '.join(['"%s"' % (st,) for st in PRODUCTION_STATUSES]))
     
     OPTION_QUERY = 'query'
-    OPTION_QUERY_SHORT = 'q'
+    OPTION_QUERY_SHORT = 'Q'
     OPTION_QUERY_HELP = 'principal query expression'
+    
+    OPTION_READY = 'ready-aus'
+    OPTION_READY_SHORT = 'Y'
+    OPTION_READY_HELP = 'keep AUs whose status is "%s"' % (AU.Status.READY,)
+    
+    OPTION_RELEASED = 'released-aus'
+    OPTION_RELEASED_SHORT = 'R'
+    OPTION_RELEASED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RELEASED,)
+    
+    OPTION_RELEASING = 'releasing-aus'
+    OPTION_RELEASING_SHORT = 'G'
+    OPTION_RELEASING_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RELEASING,)
+    
+    OPTION_RETRACTED = 'retracted-aus'
+    OPTION_RETRACTED_SHORT = 'A'
+    OPTION_RETRACTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RETRACTED,)
+    
+    OPTION_SUPERSEDED = 'superseded-aus'
+    OPTION_SUPERSEDED_SHORT = 'S'
+    OPTION_SUPERSEDED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.SUPERSEDED,)
     
     OPTION_TDBQ_ECHO_QUERY = 'tdbq-echo-query'
     OPTION_TDBQ_ECHO_QUERY_HELP = 'echo the query string to stderr'
@@ -50,10 +104,28 @@ class TdbqConstants:
     OPTION_TDBQ_ECHO_TOKENS = 'tdbq-echo-tokens'
     OPTION_TDBQ_ECHO_TOKENS_HELP = 'echo each token built by tdbq to stderr'
     
-    OPTION_TESTING_STATUSES = 'testingStatuses'
-    OPTION_TESTING_STATUSES_SHORT = 'T'
-    OPTION_TESTING_STATUSES_HELP = 'only keep AUs in testing statuses'
-        
+    OPTION_TESTING = 'testing-aus'
+    OPTION_TESTING_SHORT = 'T'
+    OPTION_TESTING_HELP = 'keep AUs whose status is "%s"' % (AU.Status.TESTING,)
+    
+    OPTION_WANTED = 'wanted-aus'
+    OPTION_WANTED_SHORT = 'W'
+    OPTION_WANTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.WANTED,)
+    
+    OPTION_STATUSES = 'statuses'
+    
+    STATUS_SWITCHES = [OPTION_RETRACTED_SHORT,
+                       OPTION_CONTENT_TESTING,
+                       OPTION_DOWN_SHORT,
+                       OPTION_EXISTS_SHORT,
+                       OPTION_RELEASING_SHORT,
+                       OPTION_MANIFEST_SHORT,
+                       OPTION_PRODUCTION,
+                       OPTION_RELEASED_SHORT,
+                       OPTION_SUPERSEDED_SHORT,
+                       OPTION_TESTING_SHORT,
+                       OPTION_READY_SHORT]
+
 class TdbqLiteral:
     '''Literals encountered in TDB query strings.'''
     
@@ -469,14 +541,27 @@ class TdbqParser(object):
 def __option_parser__(parser=None):
     if parser is None: parser = OptionParser(version=__version__)
     tdbq_group = OptionGroup(parser, 'tdbq module (%s)' % (__version__,))
-    tdbq_group.add_option('-' + TdbqConstants.OPTION_PRODUCTION_STATUSES_SHORT,
-                          '--' + TdbqConstants.OPTION_PRODUCTION_STATUSES,
-                          dest=TdbqConstants.OPTION_PRODUCTION_STATUSES,
-                          action='store_true',
-                          help=TdbqConstants.OPTION_PRODUCTION_STATUSES_HELP)
+    
+    for sho, lon, hel, con in [(TdbqConstants.OPTION_RETRACTED_SHORT, TdbqConstants.OPTION_RETRACTED, TdbqConstants.OPTION_RETRACTED_HELP, AU.Status.RETRACTED),
+                               (TdbqConstants.OPTION_CONTENT_TESTING_SHORT, TdbqConstants.OPTION_CONTENT_TESTING, TdbqConstants.OPTION_CONTENT_TESTING_HELP, TdbqConstants.CONTENT_TESTING_STATUSES),
+                               (TdbqConstants.OPTION_DOWN_SHORT, TdbqConstants.OPTION_DOWN, TdbqConstants.OPTION_DOWN_HELP, AU.Status.DOWN),
+                               (TdbqConstants.OPTION_EXISTS_SHORT, TdbqConstants.OPTION_EXISTS, TdbqConstants.OPTION_EXISTS_HELP, AU.Status.EXISTS),
+                               (TdbqConstants.OPTION_RELEASING_SHORT, TdbqConstants.OPTION_RELEASING, TdbqConstants.OPTION_RELEASING_HELP, AU.Status.RELEASING),
+                               (TdbqConstants.OPTION_MANIFEST_SHORT, TdbqConstants.OPTION_MANIFEST, TdbqConstants.OPTION_MANIFEST_HELP, AU.Status.MANIFEST),
+                               (TdbqConstants.OPTION_PRODUCTION_SHORT, TdbqConstants.OPTION_PRODUCTION, TdbqConstants.OPTION_PRODUCTION_HELP, TdbqConstants.PRODUCTION_STATUSES),
+                               (TdbqConstants.OPTION_RELEASED_SHORT, TdbqConstants.OPTION_RELEASED, TdbqConstants.OPTION_RELEASED_HELP, AU.Status.RELEASED),
+                               (TdbqConstants.OPTION_SUPERSEDED_SHORT, TdbqConstants.OPTION_SUPERSEDED, TdbqConstants.OPTION_SUPERSEDED_HELP, AU.Status.SUPERSEDED),
+                               (TdbqConstants.OPTION_TESTING_SHORT, TdbqConstants.OPTION_TESTING, TdbqConstants.OPTION_TESTING_HELP, AU.Status.TESTING),
+                               (TdbqConstants.OPTION_WANTED_SHORT, TdbqConstants.OPTION_WANTED, TdbqConstants.OPTION_WANTED_HELP, AU.Status.WANTED),
+                               (TdbqConstants.OPTION_READY_SHORT, TdbqConstants.OPTION_READY, TdbqConstants.OPTION_READY_HELP, AU.Status.READY)]:
+        tdbq_group.add_option('-' + sho,
+                              '--' + lon,
+                              help=hel,
+                              action='append_const',
+                              const=con,
+                              dest=TdbqConstants.OPTION_STATUSES)
     tdbq_group.add_option('-' + TdbqConstants.OPTION_QUERY_SHORT,
                           '--' + TdbqConstants.OPTION_QUERY,
-                          dest=TdbqConstants.OPTION_QUERY,
                           help=TdbqConstants.OPTION_QUERY_HELP)
     tdbq_group.add_option('--' + TdbqConstants.OPTION_TDBQ_ECHO_QUERY,
                           action='store_true',
@@ -484,51 +569,28 @@ def __option_parser__(parser=None):
     tdbq_group.add_option('--' + TdbqConstants.OPTION_TDBQ_ECHO_TOKENS,
                           action='store_true',
                           help=TdbqConstants.OPTION_TDBQ_ECHO_TOKENS_HELP)
-    tdbq_group.add_option('-' + TdbqConstants.OPTION_TESTING_STATUSES_SHORT,
-                          '--' + TdbqConstants.OPTION_TESTING_STATUSES,
-                          dest=TdbqConstants.OPTION_TESTING_STATUSES,
-                          action='store_true',
-                          help=TdbqConstants.OPTION_TESTING_STATUSES_HELP)
     parser.add_option_group(tdbq_group)
     return parser
 
 def __reprocess_options__(parser, options):
-    if options.testingStatuses and options.productionStatuses:
-        parser.error('-%s/--%s and -%s/--%s are mutually exclusive' % (TdbqConstants.OPTION_TESTING_STATUSES_SHORT, TdbqConstants.OPTION_TESTING_STATUSES, TdbqConstants.OPTION_PRODUCTION_STATUSES_SHORT, TdbqConstants.OPTION_PRODUCTION_STATUSES))
+    # Reprocess the statuses
+    sta = []
+    for s in options.statuses:
+        if type(s) is list: sta.extend(s)
+        else: sta.append(s)
+    options.statuses = sta
 
 def tdbq_reprocess(tdb, options):
     '''Reprocesses a Tdb instance according to the query that may be
     included in the options.
     
     Returns the same Tdb instance if there is no query.'''
-    if not (options.testingStatuses or options.productionStatuses or options.query): return tdb
-    query = None
+    if options.query is None and len(options.statuses) == 0: return tdb
+    query = TdbqPredicate(lambda au: True)
     if options.query: query = TdbqParser(TdbqScanner(options.query, options), options).parse()
-    statuses = None
-    if options.productionStatuses:
-        statuses = TdbqPredicate(lambda au: au.status() in [AU.Status.RELEASED,
-                                                            AU.Status.DOWN,
-                                                            AU.Status.SUPERSEDED,
-                                                            AU.Status.RETRACTED])
-    elif options.testingStatuses:
-        statuses = TdbqPredicate(lambda au: au.status() in [AU.Status.EXISTS,
-                                                            AU.Status.MANIFEST,
-                                                            AU.Status.WANTED,
-                                                            AU.Status.TESTING,
-                                                            AU.Status.NOT_READY,
-                                                            AU.Status.TESTED,
-                                                            AU.Status.RETESTING,
-                                                            AU.Status.READY,
-                                                            AU.Status.PRE_RELEASING,
-                                                            AU.Status.PRE_RELEASED,
-                                                            AU.Status.RELEASING,
-                                                            AU.Status.RELEASED,
-                                                            AU.Status.DOWN,
-                                                            AU.Status.SUPERSEDED,
-                                                            AU.Status.RETRACTED])
-    if query and statuses: prog = TdbqAnd(query, statuses)
-    elif query: prog = query
-    else: prog = statuses
+    statuses = TdbqPredicate(lambda au: True)
+    if len(options.statuses) > 0: statuses = TdbqPredicate(lambda au: au.status() in options.statuses)
+    prog = TdbqAnd(query, statuses)
     newtdb = Tdb()
     for au in tdb.aus():
         if prog.keep_au(au):

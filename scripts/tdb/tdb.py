@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdb.py,v 1.2 2010-08-04 18:49:00 thib_gc Exp $
+# $Id: tdb.py,v 1.3 2010-08-17 10:44:05 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -127,14 +127,14 @@ class AU(ChainedMap):
 
     class Status:
         DOES_NOT_EXIST = 'doesNotExist'
-        DO_NOT_PROCESS = 'doNotProcess'
         EXISTS = 'exists'
+        DO_NOT_PROCESS = 'doNotProcess'
         MANIFEST = 'manifest'
         WANTED = 'wanted'
         TESTING = 'testing'
+        RETESTING = 'retesting'
         NOT_READY = 'notReady'
         TESTED = 'tested'
-        RETESTING = 'retesting'
         READY = 'ready'
         PRE_RELEASING = 'preReleasing'
         PRE_RELEASED = 'preReleased'

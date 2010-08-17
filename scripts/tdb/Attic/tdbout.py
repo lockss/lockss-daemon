@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# $Id: tdbout.py,v 1.1 2010-08-04 11:28:13 thib_gc Exp $
+# $Id: tdbout.py,v 1.2 2010-08-17 10:44:05 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.0'''
+__version__ = '''0.3.1'''
 
 from optparse import OptionGroup, OptionParser
 import sys
@@ -67,12 +67,12 @@ class TdboutConstants:
     OPTION_TSV_META = OPTION_FIELDS.upper()
     OPTION_TSV_HELP = 'equivalent of \'-%s tsv -%s %s\'' % (OPTION_STYLE_SHORT, OPTION_FIELDS_SHORT, OPTION_TSV_META)
 
-    OPTION_HEADINGS = 'headings'
-    OPTION_HEADINGS_SHORT = 'H'
-    OPTION_HEADINGS_HELP = 'include column headings'
+    OPTION_NAMES = 'names'
+    OPTION_NAMES_SHORT = 'n'
+    OPTION_NAMES_HELP = 'include column names'
 
     OPTION_WARNINGS = 'warnings'
-    OPTION_WARNINGS_SHORT = 'W'
+    OPTION_WARNINGS_SHORT = 'w'
     OPTION_WARNINGS_HELP = 'include warnings with the CSV or TSV output'
 
 def __process(tdb, options):
@@ -145,14 +145,12 @@ def __option_parser__(parser=None):
                             action='callback',
                             help=TdboutConstants.OPTION_TSV_HELP,
                             callback=__synonym_tsv) 
-    tdbout_group.add_option('-' + TdboutConstants.OPTION_HEADINGS_SHORT,
-                            '--' + TdboutConstants.OPTION_HEADINGS,
-                            dest=TdboutConstants.OPTION_HEADINGS,
+    tdbout_group.add_option('-' + TdboutConstants.OPTION_NAMES_SHORT,
+                            '--' + TdboutConstants.OPTION_NAMES,
                             action='store_true',
-                            help=TdboutConstants.OPTION_HEADINGS_HELP)
+                            help=TdboutConstants.OPTION_NAMES_HELP)
     tdbout_group.add_option('-' + TdboutConstants.OPTION_WARNINGS_SHORT,
                             '--' + TdboutConstants.OPTION_WARNINGS,
-                            dest=TdboutConstants.OPTION_WARNINGS,
                             action='store_true',
                             help=TdboutConstants.OPTION_WARNINGS_HELP)
     parser.add_option_group(tdbout_group)
