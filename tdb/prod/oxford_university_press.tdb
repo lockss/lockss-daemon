@@ -5014,7 +5014,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
 
       title <
-        name = Opera Quarterly ;
+        name = The Opera Quarterly ;
         issn = 0736-0053 ;
         eissn = 1476-2870
       >
@@ -5025,7 +5025,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://oq.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; Opera Quarterly Volume 21 ; 21 >
+        au < released ; The Opera Quarterly Volume 21 ; 21 >
 
       }
 
@@ -5034,11 +5034,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://oq.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; doNotProcess ; Opera Quarterly Volume 21 ; 21 >
-        au < HighWirePressPlugin ; manifest ; Opera Quarterly Volume 22 ; 22 >
-        au < HighWirePressPlugin ; manifest ; Opera Quarterly Volume 23 ; 23 >
-        au < HighWirePressPlugin ; released ; Opera Quarterly Volume 24 ; 24 >
-        au < HighWirePressPlugin ; ready ; Opera Quarterly Volume 25 ; 25 >
+        au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 21 ; 21 >
+        au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 23 ; 23 >
+        au < HighWirePressPlugin ; released ; The Opera Quarterly Volume 24 ; 24 >
+        au < HighWirePressPlugin ; ready ; The Opera Quarterly Volume 25 ; 25 >
       }
 
     }

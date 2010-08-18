@@ -483,6 +483,22 @@
   {
 
     title <
+      name = Feminist Formations ;
+      issn = 2151-7363 ;
+      eissn = 2151-7371
+    >
+    
+    comment[continuity] = continued from 1040-0656
+
+    param[journal_dir] = feminist_formations
+    
+    au < manifest ; Feminist Formations Volume 22 ; 22 >
+
+  }
+
+  {
+
+    title <
       name = Hispania ;
       issn = 2153-6414 ;
       eissn = 0018-2133
@@ -1019,6 +1035,8 @@
       eissn = 1527-1889
     >
 
+    comment[continuity] = continued by 2151-7363
+
     param[journal_dir] = nwsa_journal
 
     au < released ; NWSA Journal Volume 11 ; 11 >
@@ -1099,24 +1117,24 @@
 
   {
     title <
-      name = Philosophy, Psychiatry & Psychology
+      name = Philosophy, Psychiatry, & Psychology
     >
 
     param[journal_dir] = philosophy_psychiatry_and_psychology
 
-    au < released ; Philosophy, Psychiatry & Psychology Volume 3 ; 3 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 4 ; 4 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 5 ; 5 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 6 ; 6 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 7 ; 7 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 8 ; 8 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 9 ; 9 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 10 ; 10 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 11 ; 11 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 12 ; 12 >
-    au < released ; Philosophy, Psychiatry & Psychology Volume 13 ; 13 >
-    au < ready ; Philosophy, Psychiatry & Psychology Volume 14 ; 14 >
-    au < ready ; Philosophy, Psychiatry & Psychology Volume 15 ; 15 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 3 ; 3 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 4 ; 4 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 5 ; 5 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 6 ; 6 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 7 ; 7 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 8 ; 8 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 9 ; 9 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 10 ; 10 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 11 ; 11 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 12 ; 12 >
+    au < released ; Philosophy, Psychiatry, & Psychology Volume 13 ; 13 >
+    au < ready ; Philosophy, Psychiatry, & Psychology Volume 14 ; 14 >
+    au < ready ; Philosophy, Psychiatry, & Psychology Volume 15 ; 15 >
 
   }
 
@@ -1317,10 +1335,10 @@
 
     param[journal_dir] = sirena_poesia_arte_y_critica
 
-    au < released ; Sirena: poesia, arte y critica Volume 2005 ; 2005 >
-    au < released ; Sirena: poesia, arte y critica Volume 2006 ; 2006 >
-    au < released ; Sirena: poesia, arte y critica Volume 2007 ; 2007 >
-    au < ready ; Sirena: poesia, arte y critica Volume 2008 ; 2008 >
+    au < released ; Sirena: poesia, arte y critica 2005 ; 2005 >
+    au < released ; Sirena: poesia, arte y critica 2006 ; 2006 >
+    au < released ; Sirena: poesia, arte y critica 2007 ; 2007 >
+    au < ready ; Sirena: poesia, arte y critica 2008 ; 2008 >
 
   }
 
