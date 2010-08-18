@@ -21,7 +21,7 @@
     au < manifest ; 2007 ; Asian Journal of Comparative Law Volume 2 ; 2 >
     au < released ; 2008 ; Asian Journal of Comparative Law Volume 3 ; 3 >
     au < released ; 2009 ; Asian Journal of Comparative Law Volume 4 ; 4 >
-    au < manifest ; 2010 ; Asian Journal of Comparative Law Volume 5 ; 5 >
+    au < testing ; 2010 ; Asian Journal of Comparative Law Volume 5 ; 5 >
 
   }
 
@@ -45,7 +45,7 @@
     au < manifest ; 2007 ; The B.E. Journal of Economic Analysis & Policy Volume 7 ; 7 >    
     au < released ; 2008 ; The B.E. Journal of Economic Analysis & Policy Volume 8 ; 8 >
     au < released ; 2009 ; The B.E. Journal of Economic Analysis & Policy Volume 9 ; 9 >
-    au < manifest ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 >
+    au < testing ; 2010 ; The B.E. Journal of Economic Analysis & Policy Volume 10 ; 10 >
 
   }
 
@@ -69,7 +69,7 @@
     au < manifest ; 2007 ; The B.E. Journal of Macroeconomics Volume 7 ; 3 >    
     au < released ; 2008 ; The B.E. Journal of Macroeconomics Volume 8 ; 8 >
     au < released ; 2009 ; The B.E. Journal of Macroeconomics Volume 9 ; 9 >
-    au < manifest ; 2010 ; The B.E. Journal of Macroeconomics Volume 10 ; 10 >    
+    au < testing ; 2010 ; The B.E. Journal of Macroeconomics Volume 10 ; 10 >    
 
   }
 
@@ -92,7 +92,7 @@
     au < manifest ; 2007 ; The B.E. Journal of Theoretical Economics Volume 7 ; 7 >
     au < released ; 2008 ; The B.E. Journal of Theoretical Economics Volume 8 ; 8 >
     au < released ; 2009 ; The B.E. Journal of Theoretical Economics Volume 9 ; 9 >
-    au < manifest ; 2010 ; The B.E. Journal of Theoretical Economics Volume 10 ; 10 >
+    au < testing ; 2010 ; The B.E. Journal of Theoretical Economics Volume 10 ; 10 >
 
   }
 
@@ -109,7 +109,7 @@
     au < manifest ; 2006 ; Basic Income Studies Volume 1 ; 1 >
     au < manifest ; 2007 ; Basic Income Studies Volume 2 ; 2 >
     au < released ; 2008 ; Basic Income Studies Volume 3 ; 3 >
-    au < released ; 2009 ; Basic Income Studies Volume 4 ; 4 >
+    au < testing ; 2009 ; Basic Income Studies Volume 4 ; 4 >
 
   }
 
@@ -134,7 +134,7 @@
     au < manifest ; 2007 ; Business and Politics Volume 9 ; 9 >
     au < released ; 2008 ; Business and Politics Volume 10 ; 10 >
     au < released ; 2009 ; Business and Politics Volume 11 ; 11 >
-    au < manifest ; 2010 ; Business and Politics Volume 12 ; 12 >
+    au < testing ; 2010 ; Business and Politics Volume 12 ; 12 >
 
   }
 
@@ -148,7 +148,7 @@
     param[journal_abbr] = cjpp
 
     au < released ; 2009 ; California Journal of Politics and Policy Volume 1 ; 1 >
-    au < manifest ; 2010 ; California Journal of Politics and Policy Volume 2 ; 2 >
+    au < testing ; 2010 ; California Journal of Politics and Policy Volume 2 ; 2 >
 
   }
 
@@ -166,7 +166,7 @@
     au < manifest ; 2007 ; Capitalism and Society Volume 2 ; 2 >
     au < released ; 2008 ; Capitalism and Society Volume 3 ; 3 >
     au < released ; 2009 ; Capitalism and Society Volume 4 ; 4 >
-    au < manifest ; 2010 ; Capitalism and Society Volume 5 ; 5 >
+    au < testing ; 2010 ; Capitalism and Society Volume 5 ; 5 >
 
   }
 
@@ -184,7 +184,7 @@
     au < manifest ; 2007 ; Chemical Product and Process Modeling Volume 2 ; 2 >
     au < released ; 2008 ; Chemical Product and Process Modeling Volume 3 ; 3 >
     au < released ; 2009 ; Chemical Product and Process Modeling Volume 4 ; 4 >
-    au < manifest ; 2010 ; Chemical Product and Process Modeling Volume 5 ; 5 >
+    au < testing ; 2010 ; Chemical Product and Process Modeling Volume 5 ; 5 >
 
   }
 
@@ -204,7 +204,7 @@
     au < manifest ; 2007 ; The Economists' Voice Volume 4 ; 4 >
     au < released ; 2008 ; The Economists' Voice Volume 5 ; 5 >
     au < released ; 2009 ; The Economists' Voice Volume 6 ; 6 >
-    au < manifest ; 2010 ; The Economists' Voice Volume 7 ; 7 >
+    au < testing ; 2010 ; The Economists' Voice Volume 7 ; 7 >
 
   }
 
@@ -218,7 +218,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ev
 
-    au < manifest ; 2004 ; The Economists' Voice Volume 1 ; 1 >
+    au < testing ; 2004 ; The Economists' Voice Volume 1 ; 1 >
 
   }
   
@@ -239,7 +239,7 @@
     au < manifest ; 2007 ; The Forum Volume 5 ; 5 >
     au < released ; 2008 ; The Forum Volume 6 ; 6 >
     au < released ; 2009 ; The Forum Volume 7 ; 7 >
-    au < manifest ; 2010 ; The Forum Volume 8 ; 8 >
+    au < testing ; 2010 ; The Forum Volume 8 ; 8 >
 
   }
 
@@ -265,7 +265,7 @@
     au < manifest ; 2007 ; Forum for Health Economics & Policy Volume 10 ; 10 >
     au < released ; 2008 ; Forum for Health Economics & Policy Volume 11 ; 11 >
     au < released ; 2009 ; Forum for Health Economics & Policy Volume 12 ; 12 >
-    au < manifest ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 >
+    au < testing ; 2010 ; Forum for Health Economics & Policy Volume 13 ; 13 >
 
   }
 
@@ -288,7 +288,7 @@
     au < manifest ; 2007 ; Global Economy Journal Volume 7 ; 7 >
     au < released ; 2008 ; Global Economy Journal Volume 8 ; 8 >
     au < released ; 2009 ; Global Economy Journal Volume 9 ; 9 >
-    au < manifest ; 2010 ; Global Economy Journal Volume 10 ; 10 >
+    au < testing ; 2010 ; Global Economy Journal Volume 10 ; 10 >
 
   }
 
@@ -311,7 +311,7 @@
     au < manifest ; 2007 ; Global Jurist Volume 7 ; 7 >
     au < released ; 2008 ; Global Jurist Volume 8 ; 8 >
     au < released ; 2009 ; Global Jurist Volume 9 ; 9 >
-    au < manifest ; 2010 ; Global Jurist Volume 10 ; 10 >
+    au < testing ; 2010 ; Global Jurist Volume 10 ; 10 >
 
   }
 
@@ -350,7 +350,7 @@
     au < manifest ; 2007 ; The International Journal of Biostatistics Volume 3 ; 3 >
     au < released ; 2008 ; The International Journal of Biostatistics Volume 4 ; 4 >
     au < released ; 2009 ; The International Journal of Biostatistics Volume 5 ; 5 >
-    au < manifest ; 2010 ; The International Journal of Biostatistics Volume 6 ; 6 >
+    au < testing ; 2010 ; The International Journal of Biostatistics Volume 6 ; 6 >
 
   }
 
@@ -371,7 +371,7 @@
     au < manifest ; 2007 ; International Journal of Chemical Reactor Engineering Volume 5 ; 5 >
     au < released ; 2008 ; International Journal of Chemical Reactor Engineering Volume 6 ; 6 >
     au < released ; 2009 ; International Journal of Chemical Reactor Engineering Volume 7 ; 7 >
-    au < manifest ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 >
+    au < testing ; 2010 ; International Journal of Chemical Reactor Engineering Volume 8 ; 8 >
 
   }
 
@@ -395,7 +395,7 @@
     au < manifest ; 2007 ; International Journal of Emerging Electric Power Systems Volume 8 ; 8 >
     au < released ; 2008 ; International Journal of Emerging Electric Power Systems Volume 9 ; 9 >
     au < released ; 2009 ; International Journal of Emerging Electric Power Systems Volume 10 ; 10 >
-    au < manifest ; 2010 ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 >
+    au < testing ; 2010 ; International Journal of Emerging Electric Power Systems Volume 11 ; 11 >
 
   }
 
@@ -414,7 +414,7 @@
     au < manifest ; 2007 ; International Journal of Food Engineering Volume 3 ; 3 >
     au < released ; 2008 ; International Journal of Food Engineering Volume 4 ; 4 >
     au < released ; 2009 ; International Journal of Food Engineering Volume 5 ; 5 >
-    au < manifest ; 2010 ; International Journal of Food Engineering Volume 6 ; 6 >
+    au < testing ; 2010 ; International Journal of Food Engineering Volume 6 ; 6 >
 
   }
 
@@ -434,7 +434,7 @@
     au < manifest ; 2007 ; International Journal of Nursing Education Scholarship Volume 4 ; 4 >
     au < released ; 2008 ; International Journal of Nursing Education Scholarship Volume 5 ; 5 >
     au < released ; 2009 ; International Journal of Nursing Education Scholarship Volume 6 ; 6 >
-    au < manifest ; 2010 ; International Journal of Nursing Education Scholarship Volume 7 ; 7 >
+    au < testing ; 2010 ; International Journal of Nursing Education Scholarship Volume 7 ; 7 >
 
   }
 
