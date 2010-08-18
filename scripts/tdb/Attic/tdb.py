@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
-# $Id: tdb.py,v 1.3 2010-08-17 10:44:05 thib_gc Exp $
+# $Id: tdb.py,v 1.4 2010-08-18 00:30:50 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
