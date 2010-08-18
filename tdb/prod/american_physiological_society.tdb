@@ -3,6 +3,8 @@
     name = American Physiological Society
   >
 
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform$Simplified
+
   {
     title <
       name = Advances in Physiology Education ;
@@ -27,9 +29,9 @@
       au < manifest ; Advances in Physiology Education Volume 26 ; 26 >
       au < manifest ; Advances in Physiology Education Volume 27 ; 27 >
       au < manifest ; Advances in Physiology Education Volume 28 ; 28 >
-      au < released ; American Journal of Physiology: Advances in Physiology Education Volume 29 ; 29 >
-      au < released ; American Journal of Physiology: Advances in Physiology Education Volume 30 ; 30 >
-      au < released ; American Journal of Physiology: Advances in Physiology Education Volume 31 ; 31 >
+      au < released ; Advances in Physiology Education Volume 29 ; 29 >
+      au < released ; Advances in Physiology Education Volume 30 ; 30 >
+      au < released ; Advances in Physiology Education Volume 31 ; 31 >
       au < manifest ; Advances in Physiology Education Volume 32 ; 32 >
       au < manifest ; Advances in Physiology Education Volume 33 ; 33 >
 
@@ -123,7 +125,7 @@
 
   {
     title <
-      name = American Journal of Physiology - Endocrinology And Metabolism ;
+      name = American Journal of Physiology - Endocrinology and Metabolism ;
       issn = 0193-1849 ;
       eissn = 1522-1555
     >
@@ -134,72 +136,72 @@
       param[base_url] = http://ajpendo.physiology.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 232 ; 232 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 233 ; 233 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 234 ; 234 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 235 ; 235 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 236 ; 236 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 237 ; 237 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 238 ; 238 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 239 ; 239 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 240 ; 240 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 241 ; 241 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 242 ; 242 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 243 ; 243 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 244 ; 244 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 245 ; 245 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 246 ; 246 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 247 ; 247 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 248 ; 248 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 249 ; 249 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 250 ; 250 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 251 ; 251 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 252 ; 252 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 253 ; 253 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 254 ; 254 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 255 ; 255 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 256 ; 256 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 257 ; 257 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 258 ; 258 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 259 ; 259 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 260 ; 260 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 261 ; 261 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 262 ; 262 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 263 ; 263 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 264 ; 264 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 265 ; 265 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 266 ; 266 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 267 ; 267 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 268 ; 268 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 269 ; 269 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 270 ; 270 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 271 ; 271 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 272 ; 272 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 273 ; 273 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 274 ; 274 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 275 ; 275 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 276 ; 276 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 277 ; 277 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 278 ; 278 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 279 ; 279 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 280 ; 280 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 281 ; 281 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 282 ; 282 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 283 ; 283 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 284 ; 284 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 285 ; 285 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 286 ; 286 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 287 ; 287 >
-      au < released ; American Journal of Physiology: Endocrinology and Metabolism Volume 288 ; 288 >
-      au < released ; American Journal of Physiology: Endocrinology and Metabolism Volume 289 ; 289 >
-      au < released ; American Journal of Physiology: Endocrinology and Metabolism Volume 290 ; 290 >
-      au < released ; American Journal of Physiology: Endocrinology and Metabolism Volume 291 ; 291 >
-      au < released ; American Journal of Physiology: Endocrinology and Metabolism Volume 292 ; 292 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 293 ; 293 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 294 ; 294 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 295 ; 295 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 296 ; 296 >
-      au < manifest ; American Journal of Physiology - Endocrinology And Metabolism Volume 297 ; 297 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 234 ; 234 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 235 ; 235 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 236 ; 236 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 237 ; 237 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 238 ; 238 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 239 ; 239 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 240 ; 240 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 241 ; 241 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 242 ; 242 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 243 ; 243 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 244 ; 244 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 245 ; 245 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 246 ; 246 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 247 ; 247 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 248 ; 248 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 249 ; 249 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 250 ; 250 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 251 ; 251 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 252 ; 252 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 253 ; 253 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 254 ; 254 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 255 ; 255 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 256 ; 256 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 257 ; 257 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 258 ; 258 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 259 ; 259 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 260 ; 260 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 261 ; 261 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 262 ; 262 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 263 ; 263 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 264 ; 264 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 265 ; 265 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 266 ; 266 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 267 ; 267 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 268 ; 268 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 269 ; 269 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 270 ; 270 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 271 ; 271 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 272 ; 272 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 273 ; 273 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 274 ; 274 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 275 ; 275 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 276 ; 276 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 277 ; 277 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 278 ; 278 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 279 ; 279 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 280 ; 280 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 281 ; 281 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 282 ; 282 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 283 ; 283 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 284 ; 284 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 285 ; 285 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 286 ; 286 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 287 ; 287 >
+      au < released ; American Journal of Physiology - Endocrinology and Metabolism Volume 288 ; 288 >
+      au < released ; American Journal of Physiology - Endocrinology and Metabolism Volume 289 ; 289 >
+      au < released ; American Journal of Physiology - Endocrinology and Metabolism Volume 290 ; 290 >
+      au < released ; American Journal of Physiology - Endocrinology and Metabolism Volume 291 ; 291 >
+      au < released ; American Journal of Physiology - Endocrinology and Metabolism Volume 292 ; 292 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 293 ; 293 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 294 ; 294 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 295 ; 295 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 296 ; 296 >
+      au < manifest ; American Journal of Physiology - Endocrinology and Metabolism Volume 297 ; 297 >
 
     }
 
@@ -274,11 +276,11 @@
       au < manifest ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 285 ; 285 >
       au < manifest ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 286 ; 286 >
       au < manifest ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 287 ; 287 >
-      au < released ; American Journal of Physiology: Gastrointestinal and Liver Physiology Volume 288 ; 288 >
-      au < released ; American Journal of Physiology: Gastrointestinal and Liver Physiology Volume 289 ; 289 >
-      au < released ; American Journal of Physiology: Gastrointestinal and Liver Physiology Volume 290 ; 290 >
-      au < released ; American Journal of Physiology: Gastrointestinal and Liver Physiology Volume 291 ; 291 >
-      au < released ; American Journal of Physiology: Gastrointestinal and Liver Physiology Volume 292 ; 292 >
+      au < released ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 288 ; 288 >
+      au < released ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 289 ; 289 >
+      au < released ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 290 ; 290 >
+      au < released ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 291 ; 291 >
+      au < released ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 292 ; 292 >
       au < manifest ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 293 ; 293 >
       au < manifest ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 294 ; 294 >
       au < manifest ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 295 ; 295 >
@@ -358,11 +360,11 @@
       au < manifest ; American Journal of Physiology - Heart and Circulatory Physiology Volume 285 ; 285 >
       au < manifest ; American Journal of Physiology - Heart and Circulatory Physiology Volume 286 ; 286 >
       au < manifest ; American Journal of Physiology - Heart and Circulatory Physiology Volume 287 ; 287 >
-      au < released ; American Journal of Physiology: Heart and Circulatory Physiology Volume 288 ; 288 >
-      au < released ; American Journal of Physiology: Heart and Circulatory Physiology Volume 289 ; 289 >
-      au < released ; American Journal of Physiology: Heart and Circulatory Physiology Volume 290 ; 290 >
-      au < released ; American Journal of Physiology: Heart and Circulatory Physiology Volume 291 ; 291 >
-      au < released ; American Journal of Physiology: Heart and Circulatory Physiology Volume 292 ; 292 >
+      au < released ; American Journal of Physiology - Heart and Circulatory Physiology Volume 288 ; 288 >
+      au < released ; American Journal of Physiology - Heart and Circulatory Physiology Volume 289 ; 289 >
+      au < released ; American Journal of Physiology - Heart and Circulatory Physiology Volume 290 ; 290 >
+      au < released ; American Journal of Physiology - Heart and Circulatory Physiology Volume 291 ; 291 >
+      au < released ; American Journal of Physiology - Heart and Circulatory Physiology Volume 292 ; 292 >
       au < manifest ; American Journal of Physiology - Heart and Circulatory Physiology Volume 293 ; 293 >
       au < manifest ; American Journal of Physiology - Heart and Circulatory Physiology Volume 294 ; 294 >
       au < manifest ; American Journal of Physiology - Heart and Circulatory Physiology Volume 295 ; 295 >
@@ -417,11 +419,11 @@
       au < manifest ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 285 ; 285 >
       au < manifest ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 286 ; 286 >
       au < manifest ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 287 ; 287 >
-      au < released ; American Journal of Physiology: Lung Cellular and Molecular Physiology Volume 288 ; 288 >
-      au < released ; American Journal of Physiology: Lung Cellular and Molecular Physiology Volume 289 ; 289 >
-      au < released ; American Journal of Physiology: Lung Cellular and Molecular Physiology Volume 290 ; 290 >
-      au < released ; American Journal of Physiology: Lung Cellular and Molecular Physiology Volume 291 ; 291 >
-      au < released ; American Journal of Physiology: Lung Cellular and Molecular Physiology Volume 292 ; 292 >
+      au < released ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 288 ; 288 >
+      au < released ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 289 ; 289 >
+      au < released ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 290 ; 290 >
+      au < released ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 291 ; 291 >
+      au < released ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 292 ; 292 >
       au < manifest ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 293 ; 293 >
       au < manifest ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 294 ; 294 >
       au < manifest ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 295 ; 295 >
@@ -501,11 +503,11 @@
       au < manifest ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 285 ; 285 >
       au < manifest ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 286 ; 286 >
       au < manifest ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 287 ; 287 >
-      au < released ; American Journal of Physiology: Regulatory, Integrative and Comparative Physiology Volume 288 ; 288 >
-      au < released ; American Journal of Physiology: Regulatory, Integrative and Comparative Physiology Volume 289 ; 289 >
-      au < released ; American Journal of Physiology: Regulatory, Integrative and Comparative Physiology Volume 290 ; 290 >
-      au < released ; American Journal of Physiology: Regulatory, Integrative and Comparative Physiology Volume 291 ; 291 >
-      au < released ; American Journal of Physiology: Regulatory, Integrative and Comparative Physiology Volume 292 ; 292 >
+      au < released ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 288 ; 288 >
+      au < released ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 289 ; 289 >
+      au < released ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 290 ; 290 >
+      au < released ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 291 ; 291 >
+      au < released ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 292 ; 292 >
       au < manifest ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 293 ; 293 >
       au < manifest ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 294 ; 294 >
       au < manifest ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 295 ; 295 >
@@ -585,11 +587,11 @@
       au < manifest ; American Journal of Physiology - Renal Physiology Volume 285 ; 285 >
       au < manifest ; American Journal of Physiology - Renal Physiology Volume 286 ; 286 >
       au < manifest ; American Journal of Physiology - Renal Physiology Volume 287 ; 287 >
-      au < released ; American Journal of Physiology: Renal Physiology Volume 288 ; 288 >
-      au < released ; American Journal of Physiology: Renal Physiology Volume 289 ; 289 >
-      au < released ; American Journal of Physiology: Renal Physiology Volume 290 ; 290 >
-      au < released ; American Journal of Physiology: Renal Physiology Volume 291 ; 291 >
-      au < released ; American Journal of Physiology: Renal Physiology Volume 292 ; 292 >
+      au < released ; American Journal of Physiology - Renal Physiology Volume 288 ; 288 >
+      au < released ; American Journal of Physiology - Renal Physiology Volume 289 ; 289 >
+      au < released ; American Journal of Physiology - Renal Physiology Volume 290 ; 290 >
+      au < released ; American Journal of Physiology - Renal Physiology Volume 291 ; 291 >
+      au < released ; American Journal of Physiology - Renal Physiology Volume 292 ; 292 >
       au < manifest ; American Journal of Physiology - Renal Physiology Volume 293 ; 293 >
       au < manifest ; American Journal of Physiology - Renal Physiology Volume 294 ; 294 >
       au < manifest ; American Journal of Physiology - Renal Physiology Volume 295 ; 295 >
@@ -602,7 +604,7 @@
 
   {
     title <
-      name = American Journal of Physiology -- Legacy Content ;
+      name = American Journal of Physiology ;
       issn = 0002-9513
     >
 
@@ -612,125 +614,125 @@
       param[base_url] = http://ajplegacy.physiology.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 113 ; 113 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 114 ; 114 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 115 ; 115 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 116 ; 116 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 117 ; 117 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 118 ; 118 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 119 ; 119 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 120 ; 120 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 121 ; 121 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 122 ; 122 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 123 ; 123 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 124 ; 124 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 125 ; 125 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 126 ; 126 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 127 ; 127 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 128 ; 128 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 129 ; 129 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 130 ; 130 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 131 ; 131 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 132 ; 132 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 133 ; 133 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 134 ; 134 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 135 ; 135 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 136 ; 136 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 137 ; 137 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 138 ; 138 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 139 ; 139 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 140 ; 140 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 141 ; 141 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 142 ; 142 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 143 ; 143 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 144 ; 144 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 145 ; 145 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 146 ; 146 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 147 ; 147 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 148 ; 148 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 149 ; 149 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 150 ; 150 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 151 ; 151 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 152 ; 152 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 153 ; 153 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 154 ; 154 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 155 ; 155 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 156 ; 156 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 157 ; 157 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 158 ; 158 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 159 ; 159 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 160 ; 160 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 161 ; 161 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 162 ; 162 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 163 ; 163 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 164 ; 164 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 165 ; 165 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 166 ; 166 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 167 ; 167 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 168 ; 168 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 169 ; 169 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 170 ; 170 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 171 ; 171 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 172 ; 172 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 173 ; 173 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 174 ; 174 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 175 ; 175 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 176 ; 176 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 177 ; 177 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 178 ; 178 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 179 ; 179 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 180 ; 180 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 181 ; 181 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 182 ; 182 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 183 ; 183 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 184 ; 184 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 185 ; 185 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 186 ; 186 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 187 ; 187 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 188 ; 188 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 189 ; 189 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 190 ; 190 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 191 ; 191 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 192 ; 192 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 193 ; 193 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 194 ; 194 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 195 ; 195 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 196 ; 196 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 197 ; 197 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 198 ; 198 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 199 ; 199 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 200 ; 200 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 201 ; 201 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 202 ; 202 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 203 ; 203 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 204 ; 204 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 205 ; 205 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 206 ; 206 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 207 ; 207 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 208 ; 208 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 209 ; 209 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 210 ; 210 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 211 ; 211 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 212 ; 212 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 213 ; 213 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 214 ; 214 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 215 ; 215 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 216 ; 216 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 217 ; 217 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 218 ; 218 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 219 ; 219 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 220 ; 220 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 221 ; 221 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 222 ; 222 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 223 ; 223 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 224 ; 224 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 225 ; 225 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 226 ; 226 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 227 ; 227 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 228 ; 228 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 229 ; 229 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 230 ; 230 >
-      au < manifest ; American Journal of Physiology -- Legacy Content Volume 231 ; 231 >
+      au < manifest ; American Journal of Physiology Volume 113 ; 113 >
+      au < manifest ; American Journal of Physiology Volume 114 ; 114 >
+      au < manifest ; American Journal of Physiology Volume 115 ; 115 >
+      au < manifest ; American Journal of Physiology Volume 116 ; 116 >
+      au < manifest ; American Journal of Physiology Volume 117 ; 117 >
+      au < manifest ; American Journal of Physiology Volume 118 ; 118 >
+      au < manifest ; American Journal of Physiology Volume 119 ; 119 >
+      au < manifest ; American Journal of Physiology Volume 120 ; 120 >
+      au < manifest ; American Journal of Physiology Volume 121 ; 121 >
+      au < manifest ; American Journal of Physiology Volume 122 ; 122 >
+      au < manifest ; American Journal of Physiology Volume 123 ; 123 >
+      au < manifest ; American Journal of Physiology Volume 124 ; 124 >
+      au < manifest ; American Journal of Physiology Volume 125 ; 125 >
+      au < manifest ; American Journal of Physiology Volume 126 ; 126 >
+      au < manifest ; American Journal of Physiology Volume 127 ; 127 >
+      au < manifest ; American Journal of Physiology Volume 128 ; 128 >
+      au < manifest ; American Journal of Physiology Volume 129 ; 129 >
+      au < manifest ; American Journal of Physiology Volume 130 ; 130 >
+      au < manifest ; American Journal of Physiology Volume 131 ; 131 >
+      au < manifest ; American Journal of Physiology Volume 132 ; 132 >
+      au < manifest ; American Journal of Physiology Volume 133 ; 133 >
+      au < manifest ; American Journal of Physiology Volume 134 ; 134 >
+      au < manifest ; American Journal of Physiology Volume 135 ; 135 >
+      au < manifest ; American Journal of Physiology Volume 136 ; 136 >
+      au < manifest ; American Journal of Physiology Volume 137 ; 137 >
+      au < manifest ; American Journal of Physiology Volume 138 ; 138 >
+      au < manifest ; American Journal of Physiology Volume 139 ; 139 >
+      au < manifest ; American Journal of Physiology Volume 140 ; 140 >
+      au < manifest ; American Journal of Physiology Volume 141 ; 141 >
+      au < manifest ; American Journal of Physiology Volume 142 ; 142 >
+      au < manifest ; American Journal of Physiology Volume 143 ; 143 >
+      au < manifest ; American Journal of Physiology Volume 144 ; 144 >
+      au < manifest ; American Journal of Physiology Volume 145 ; 145 >
+      au < manifest ; American Journal of Physiology Volume 146 ; 146 >
+      au < manifest ; American Journal of Physiology Volume 147 ; 147 >
+      au < manifest ; American Journal of Physiology Volume 148 ; 148 >
+      au < manifest ; American Journal of Physiology Volume 149 ; 149 >
+      au < manifest ; American Journal of Physiology Volume 150 ; 150 >
+      au < manifest ; American Journal of Physiology Volume 151 ; 151 >
+      au < manifest ; American Journal of Physiology Volume 152 ; 152 >
+      au < manifest ; American Journal of Physiology Volume 153 ; 153 >
+      au < manifest ; American Journal of Physiology Volume 154 ; 154 >
+      au < manifest ; American Journal of Physiology Volume 155 ; 155 >
+      au < manifest ; American Journal of Physiology Volume 156 ; 156 >
+      au < manifest ; American Journal of Physiology Volume 157 ; 157 >
+      au < manifest ; American Journal of Physiology Volume 158 ; 158 >
+      au < manifest ; American Journal of Physiology Volume 159 ; 159 >
+      au < manifest ; American Journal of Physiology Volume 160 ; 160 >
+      au < manifest ; American Journal of Physiology Volume 161 ; 161 >
+      au < manifest ; American Journal of Physiology Volume 162 ; 162 >
+      au < manifest ; American Journal of Physiology Volume 163 ; 163 >
+      au < manifest ; American Journal of Physiology Volume 164 ; 164 >
+      au < manifest ; American Journal of Physiology Volume 165 ; 165 >
+      au < manifest ; American Journal of Physiology Volume 166 ; 166 >
+      au < manifest ; American Journal of Physiology Volume 167 ; 167 >
+      au < manifest ; American Journal of Physiology Volume 168 ; 168 >
+      au < manifest ; American Journal of Physiology Volume 169 ; 169 >
+      au < manifest ; American Journal of Physiology Volume 170 ; 170 >
+      au < manifest ; American Journal of Physiology Volume 171 ; 171 >
+      au < manifest ; American Journal of Physiology Volume 172 ; 172 >
+      au < manifest ; American Journal of Physiology Volume 173 ; 173 >
+      au < manifest ; American Journal of Physiology Volume 174 ; 174 >
+      au < manifest ; American Journal of Physiology Volume 175 ; 175 >
+      au < manifest ; American Journal of Physiology Volume 176 ; 176 >
+      au < manifest ; American Journal of Physiology Volume 177 ; 177 >
+      au < manifest ; American Journal of Physiology Volume 178 ; 178 >
+      au < manifest ; American Journal of Physiology Volume 179 ; 179 >
+      au < manifest ; American Journal of Physiology Volume 180 ; 180 >
+      au < manifest ; American Journal of Physiology Volume 181 ; 181 >
+      au < manifest ; American Journal of Physiology Volume 182 ; 182 >
+      au < manifest ; American Journal of Physiology Volume 183 ; 183 >
+      au < manifest ; American Journal of Physiology Volume 184 ; 184 >
+      au < manifest ; American Journal of Physiology Volume 185 ; 185 >
+      au < manifest ; American Journal of Physiology Volume 186 ; 186 >
+      au < manifest ; American Journal of Physiology Volume 187 ; 187 >
+      au < manifest ; American Journal of Physiology Volume 188 ; 188 >
+      au < manifest ; American Journal of Physiology Volume 189 ; 189 >
+      au < manifest ; American Journal of Physiology Volume 190 ; 190 >
+      au < manifest ; American Journal of Physiology Volume 191 ; 191 >
+      au < manifest ; American Journal of Physiology Volume 192 ; 192 >
+      au < manifest ; American Journal of Physiology Volume 193 ; 193 >
+      au < manifest ; American Journal of Physiology Volume 194 ; 194 >
+      au < manifest ; American Journal of Physiology Volume 195 ; 195 >
+      au < manifest ; American Journal of Physiology Volume 196 ; 196 >
+      au < manifest ; American Journal of Physiology Volume 197 ; 197 >
+      au < manifest ; American Journal of Physiology Volume 198 ; 198 >
+      au < manifest ; American Journal of Physiology Volume 199 ; 199 >
+      au < manifest ; American Journal of Physiology Volume 200 ; 200 >
+      au < manifest ; American Journal of Physiology Volume 201 ; 201 >
+      au < manifest ; American Journal of Physiology Volume 202 ; 202 >
+      au < manifest ; American Journal of Physiology Volume 203 ; 203 >
+      au < manifest ; American Journal of Physiology Volume 204 ; 204 >
+      au < manifest ; American Journal of Physiology Volume 205 ; 205 >
+      au < manifest ; American Journal of Physiology Volume 206 ; 206 >
+      au < manifest ; American Journal of Physiology Volume 207 ; 207 >
+      au < manifest ; American Journal of Physiology Volume 208 ; 208 >
+      au < manifest ; American Journal of Physiology Volume 209 ; 209 >
+      au < manifest ; American Journal of Physiology Volume 210 ; 210 >
+      au < manifest ; American Journal of Physiology Volume 211 ; 211 >
+      au < manifest ; American Journal of Physiology Volume 212 ; 212 >
+      au < manifest ; American Journal of Physiology Volume 213 ; 213 >
+      au < manifest ; American Journal of Physiology Volume 214 ; 214 >
+      au < manifest ; American Journal of Physiology Volume 215 ; 215 >
+      au < manifest ; American Journal of Physiology Volume 216 ; 216 >
+      au < manifest ; American Journal of Physiology Volume 217 ; 217 >
+      au < manifest ; American Journal of Physiology Volume 218 ; 218 >
+      au < manifest ; American Journal of Physiology Volume 219 ; 219 >
+      au < manifest ; American Journal of Physiology Volume 220 ; 220 >
+      au < manifest ; American Journal of Physiology Volume 221 ; 221 >
+      au < manifest ; American Journal of Physiology Volume 222 ; 222 >
+      au < manifest ; American Journal of Physiology Volume 223 ; 223 >
+      au < manifest ; American Journal of Physiology Volume 224 ; 224 >
+      au < manifest ; American Journal of Physiology Volume 225 ; 225 >
+      au < manifest ; American Journal of Physiology Volume 226 ; 226 >
+      au < manifest ; American Journal of Physiology Volume 227 ; 227 >
+      au < manifest ; American Journal of Physiology Volume 228 ; 228 >
+      au < manifest ; American Journal of Physiology Volume 229 ; 229 >
+      au < manifest ; American Journal of Physiology Volume 230 ; 230 >
+      au < manifest ; American Journal of Physiology Volume 231 ; 231 >
 
     }
 

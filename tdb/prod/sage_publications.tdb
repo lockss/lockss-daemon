@@ -2712,7 +2712,9 @@ comment[ecc] = this journal does not exist on Sage website.  moved to Brill
     {
 
       title <
-        name = Economics
+        name = Economic Development Quarterly ;
+        issn = 0891-2424 ;
+        eissn = 1552-3543
       >
 
       {
@@ -8301,26 +8303,6 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journal of Positive Behavior Interventions ;
-        issn = 0734-2829 ;
-        eissn = 1557-5144
-      >
-    
-      {
-
-        param[base_url] = http://pbi.sagepub.com/
-        implicit < pluginSuffix ; status ; name ; param[volume_name] >
-
-        au < HighWirePressPlugin ; down ; Journal of Positive Behavior Interventions Volume 10 ; 10 >
-        au < HighWirePressPlugin ; down ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
-  
-      }
-  
-    }
-  
-    {
-
-      title <
         name = Journal of Planning Literature ;
         issn = 0885-4122 ;
         eissn = 1552-6593
@@ -8363,6 +8345,26 @@ comment[mpj] = now published by Brill
 
     }
 
+    {
+
+      title <
+        name = Journal of Positive Behavior Interventions ;
+        issn = 1098-3007 ;
+        eissn = 1538-4772
+      >
+    
+      {
+
+        param[base_url] = http://pbi.sagepub.com/
+        implicit < pluginSuffix ; status ; name ; param[volume_name] >
+
+        au < HighWirePressPlugin ; down ; Journal of Positive Behavior Interventions Volume 10 ; 10 >
+        au < HighWirePressPlugin ; down ; Journal of Positive Behavior Interventions Volume 11 ; 11 >
+  
+      }
+  
+    }
+  
     {
 
       title <

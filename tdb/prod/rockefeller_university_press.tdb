@@ -4,6 +4,8 @@
     name = Rockefeller University Press
   >
 
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.RockefellerUniversityPressPdfTransform$Simplified
+
   {
 
     title <

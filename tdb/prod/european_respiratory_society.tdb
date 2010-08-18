@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://erj.ersjournals.com/
       implicit < status ; name ; param[volume_name] >
 
@@ -50,6 +50,8 @@
       au < exists ; European Respiratory Journal Volume 32 ; 32 >
       au < exists ; European Respiratory Journal Volume 33 ; 33 >
       au < exists ; European Respiratory Journal Volume 34 ; 34 >
+      au < exists ; European Respiratory Journal Volume 35 ; 35 >
+      au < manifest ; European Respiratory Journal Volume 36 ; 36 >
 
     }
 

@@ -2323,8 +2323,8 @@
         comment[down] = The online versions of the journals have moved to JSTAGE
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; ICES Journal of Marine Science Volume E89-B ; E89-B >
-        au < HighWireStrVolPlugin ; released ; ICES Journal of Marine Science Volume E90-B ; E90-B >
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Communications Volume E89-B ; E89-B >
+        au < HighWireStrVolPlugin ; released ; IEICE-Transactions on Communications Volume E90-B ; E90-B >
 
       }
 
@@ -5046,7 +5046,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
 
       title <
-        name = Oral History Review ;
+        name = The Oral History Review ;
         issn = 0094-0798 ;
         eissn = 1533-8592
       >
@@ -5056,9 +5056,9 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://ohr.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; manifest ; Oral History Review Volume 34 ; 34 >
-        au < HighWirePressPlugin ; released ; Oral History Review Volume 35 ; 35 >
-        au < HighWirePressPlugin ; released ; Oral History Review Volume 36 ; 36 >
+        au < HighWirePressPlugin ; manifest ; The Oral History Review Volume 34 ; 34 >
+        au < HighWirePressPlugin ; released ; The Oral History Review Volume 35 ; 35 >
+        au < HighWirePressPlugin ; released ; The Oral History Review Volume 36 ; 36 >
 
       }
       
@@ -6282,7 +6282,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
     {
 
       title <
-        name = World Bank Economic Review ;
+        name = The World Bank Economic Review ;
         issn = 0258-6770 ;
         eissn = 1564-698X
       >
@@ -6293,7 +6293,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://wber.oxfordjournals.org/
         implicit < status ; name ; param[volume] >
 
-        au < released ; World Bank Economic Review Volume 20 ; 20 >
+        au < released ; The World Bank Economic Review Volume 20 ; 20 >
 
       }
 
@@ -6302,11 +6302,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://wber.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; released ; World Bank Economic Review Volume 19 ; 19 >
-        au < HighWirePressPlugin ; doNotProcess ; World Bank Economic Review Volume 20 ; 20 >
-        au < HighWirePressPlugin ; released ; World Bank Economic Review Volume 21 ; 21 >
-        au < HighWirePressPlugin ; released ; World Bank Economic Review Volume 22 ; 22 >
-        au < HighWirePressPlugin ; manifest ; World Bank Economic Review Volume 23 ; 23 >
+        au < HighWireStrVolPlugin ; released ; The World Bank Economic Review Volume 19 ; 19 >
+        au < HighWirePressPlugin ; doNotProcess ; The World Bank Economic Review Volume 20 ; 20 >
+        au < HighWirePressPlugin ; released ; The World Bank Economic Review Volume 21 ; 21 >
+        au < HighWirePressPlugin ; released ; The World Bank Economic Review Volume 22 ; 22 >
+        au < HighWirePressPlugin ; manifest ; The World Bank Economic Review Volume 23 ; 23 >
 
       }
 
