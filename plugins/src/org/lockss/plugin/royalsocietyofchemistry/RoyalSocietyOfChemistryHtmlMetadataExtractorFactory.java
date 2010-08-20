@@ -17,6 +17,17 @@ import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
+
+/**
+ * ---------------------------------------------- IMPORTANT --------------------------------------------------------
+ * This class is not yet complete. Only some of the metadata is extracted. These are:
+ * DOI, Vol, Date (date can be the volume when volume is not present), StartPage, Authors, ArticleTitle and JournalTitle
+ * The Issue and Issn are not extracted because they are not currently present neither within metadata tags nor in the html content in none of the article pages.
+ * An idea is to use the tdb files to extract the Issn from. Extracting the issue is probably going to be harder. Have to come up with ideas on how to go on this.
+ * The new RSC site contains metadata tags and it is going to be trivial to extract metadata from there. However, this content is NOT yet collected by LOCKSS amd thus
+ * have to work with the old site.
+ * -----------------------------------------------------------------------------------------------------------------
+ */
 public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory{
 
 	static Logger log = Logger.getLogger("RoyalSocietyOfChemistryHtmlMetadataExtractorFactory");
@@ -32,7 +43,7 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 		
 		/**
 		 * Extract metadata from the cached URL
-		 * @param cu The cached URL to extract the metadat from
+		 * @param cu The cached URL to extract the metadata from
 		 */
 		public ArticleMetadata extract(CachedUrl cu) throws IOException {
 			if (cu == null) {
@@ -40,7 +51,7 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 			}
 						
 			ArticleMetadata ret = super.extract(cu);						
-									
+			
 			// extract DOI from URL
 			addDOI(cu.getUrl(), ret);
 			
@@ -73,6 +84,7 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 					}															
 				}				
 				
+				// regex to extract content from articles where the volume is represented by the year
 				Pattern patternWithoutVol = Pattern.compile("(\\d{4}),\\s*(\\d*)\\s*-\\s*(\\d*),.*<font color=\"#9C0000\">(.*)</font>.*</span><p><strong>(.*)</strong>");
 				Matcher matcherWithoutVol = patternWithoutVol.matcher("");
 				matcherWithoutVol.reset(metaContent);

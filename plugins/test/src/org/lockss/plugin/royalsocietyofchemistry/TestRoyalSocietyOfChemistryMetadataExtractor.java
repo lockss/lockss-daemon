@@ -148,7 +148,7 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    assertNotNull(md);	    
 	    
 	    assertEquals(goodDoiPrefix+"/"+goodDoiSuffix, md.getDOI());
-	    assertEquals(goodDate, md.getVolume()); // year is the volume where it's not volume is not present.
+	    assertEquals(goodDate, md.getVolume()); // year is the volume where volume is not present.
 	    //assertEquals(goodIssue, md.getIssue());
 	    assertEquals(goodStartPage, md.getStartPage());
 	    //assertEquals(goodISSN, md.getISSN());    	    
