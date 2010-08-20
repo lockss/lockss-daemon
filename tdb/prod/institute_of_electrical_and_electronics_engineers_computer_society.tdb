@@ -1,11 +1,7 @@
 {
   publisher <
-    name = IEEE Computer Society
+    name = Institute of Electrical and Electronics Engineers Computer Society
   >
-
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
 
   {
     title <
@@ -14,7 +10,10 @@
       eissn = 1934-1547
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = ieee_annals_of_the_history_of_computing
+    implicit < status ; name ; param[volume] >
 
     au < ready ; IEEE Annals of the History of Computing Volume 30 ; 30 >
     au < ready ; IEEE Annals of the History of Computing Volume 31 ; 31 >

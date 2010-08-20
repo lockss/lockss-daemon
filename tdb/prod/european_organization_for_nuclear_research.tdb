@@ -1,10 +1,8 @@
 {
+
   publisher <
-    name = High Energy Physics Libraries Webzine
+    name = European Organization for Nuclear Research
   >
-  
-  plugin =  edu.nyu.plugin.heplwebzine.HEPLwebzine
-  implicit < status ; name ; param[issue_no] >
   
   {
   
@@ -14,6 +12,8 @@
     >  
 
     rights = openaccess
+    plugin =  edu.nyu.plugin.heplwebzine.HEPLwebzine
+    implicit < status ; name ; param[issue_no] >
 
     {  
       
