@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.4 2010-08-03 11:52:24 dsferopoulos Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.5 2010-08-23 14:32:55 dsferopoulos Exp $
  */
 
 /*
@@ -48,18 +48,20 @@ public class BePressHtmlMetadataExtractorFactory implements	FileMetadataExtracto
 
 	public static class BePressHtmlMetadataExtractor extends SimpleMetaTagMetadataExtractor {
 
-		
-		String[] bePressField = { "bepress_citation_doi",
-								  "bepress_citation_date", };
+		// Specify the metadata names used in the BePress source code and from where we need to extract our metadata 
+		String[] bePressField = { "bepress_citation_doi",  "bepress_citation_date", };
 		String[] dublinCoreField = { "dc.Identifier", "dc.Date", };
-		String[] bePressField2 = { "bepress_citation_volume",
-								   "bepress_citation_issue", "bepress_citation_firstpage",
-								   "bepress_citation_authors", "bepress_citation_title",
-								   "bepress_citation_journal_title", };
+		String[] bePressField2 = { "bepress_citation_volume", "bepress_citation_issue", "bepress_citation_firstpage",
+								   						 "bepress_citation_authors", "bepress_citation_title", "bepress_citation_journal_title", };
 
+		/**
+		 * This method is called to extract the metadata that we need. If the data is kept in metadata tags then use the getProperty method to extract it, otherwise loop
+		 * through the source code and do some string manipulation to get what we need.
+		 */
 		public ArticleMetadata extract(CachedUrl cu) throws IOException {
 			ArticleMetadata ret = super.extract(cu);
 
+			// extract metadata from BePress specific metadata tags
 			for (int i = 0; i < bePressField.length; i++) {
 				String content = ret.getProperty(bePressField[i]);
 				if (content != null) {
@@ -73,6 +75,7 @@ public class BePressHtmlMetadataExtractorFactory implements	FileMetadataExtracto
 				}
 			}
 
+			// extract some more BePress specific metadata
 			for (int i = 0; i < bePressField2.length; i++) {
 				String content = ret.getProperty(bePressField2[i]);
 				if (content != null) {
@@ -102,7 +105,8 @@ public class BePressHtmlMetadataExtractorFactory implements	FileMetadataExtracto
 					}
 				}
 			}
-			// The ISSN is not in a meta tag but we can find it in the text
+			// The ISSN is not in a meta tag but we can find it in the source code. Here we need to some string manipulation and use some REGEX to find the right index
+			// where the ISSN number is located.
 			if (cu == null) {
 				throw new IllegalArgumentException("extract(null)");
 			}
@@ -118,6 +122,12 @@ public class BePressHtmlMetadataExtractorFactory implements	FileMetadataExtracto
 			return ret;
 		}
 		
+		/**
+		 * Extract the ISSN from a line of HTML source code.
+		 * @param line The HTML source code that contains the ISSN and should have the following form:
+		 * <div id="issn"><p><!-- FILE: /main/production/doc/data/templates/www.bepress.com/proto_bpjournal/assets/issn.inc -->ISSN: 1934-2659 <!-- FILE:/main/production/doc/data/templates/www.bepress.com/proto_bpjournal/assets/footer.pregen (cont) --></p></div> 
+		 * @param ret The ArticleMetadat object used to put the ISSN in extracted metadata
+		 */
 		protected void addISSN(String line, ArticleMetadata ret) {
 			String issnFlag = "ISSN: ";
 			int issnBegin = StringUtil.indexOfIgnoreCase(line, issnFlag);
@@ -130,8 +140,7 @@ public class BePressHtmlMetadataExtractorFactory implements	FileMetadataExtracto
 			if (issn.length() < 9) {
 				log.debug(line + " : too short");
 				return;
-			}
-			System.out.println(issn);
+			}			
 			ret.putISSN(issn);
 		}
 	}

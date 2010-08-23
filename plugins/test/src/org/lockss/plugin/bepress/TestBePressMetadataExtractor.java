@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.11 2010-08-03 11:52:25 dsferopoulos Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.12 2010-08-23 14:32:55 dsferopoulos Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 	private ArchivalUnit bau; // BePress AU
 	private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";	
 
-	private static String PLUGIN_NAME = "org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin";
+	private static String PLUGIN_NAME = "org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin"; // XML file in org.lockss.plugin.bepress package
 
 	private static String BASE_URL = "http://www.bepress.com/";
 	private static String SIM_ROOT = BASE_URL + "xyzjn/";
@@ -74,8 +74,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 		theDaemon.getPluginManager().startService();
 		theDaemon.getCrawlManager();
 
-		sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,
-				simAuConfig(tempDirPath));
+		sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,	simAuConfig(tempDirPath));
 		bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, bePressAuConfig());
 	}
 
@@ -97,6 +96,10 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 		return conf;
 	}
 
+	/**
+	 * Configuration method. 
+	 * @return
+	 */
 	Configuration bePressAuConfig() {
 		Configuration conf = ConfigManager.newConfiguration();
 		conf.put("base_url", BASE_URL);
@@ -105,6 +108,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 		return conf;
 	}
 
+	// the metadata that should be extracted
 	String goodDOI = "10.2202/2153-3792.1037";
 	String goodVolume = "13";
 	String goodIssue = "4";
@@ -118,6 +122,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 	String goodPdfUrl = "http://www.example.com/bogus/vol13/iss4/art123/pdf";
 	String goodHtmUrl = "http://www.example.com/bogus/vol13/iss4/art123/full";
 
+	// a chunk of html source code from the publisher's site from where the metadata should be extracted
 	String goodContent = "<HTML><HEAD><TITLE>"+ goodArticleTitle+ "</TITLE></HEAD><BODY>\n"
 			+ "<meta name=\"bepress_citation_journal_title\" content=\""+ goodJournalTitle+ "\">\n"
 			+ "<meta name=\"bepress_citation_authors\" content=\""+ goodAuthor+ "\">\n"
@@ -133,8 +138,12 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
             "<p>ISSN: "+goodISSN+"</p>\n" +
             "</div>";
 	
-			//+ "  <div id=\"issn\"><!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->ISSN: " + goodISSN + " </div>\n";
-
+		
+	/**
+	 * Method that creates a simulated Cached URL from the source code provided by the goodContent String. It then asserts that the metadata extracted, by using
+	 * the BePressHtmlMetadataExtractorFactory, match the metadata in the source code. 
+	 * @throws Exception
+	 */
 	public void testExtractFromGoodContent() throws Exception {
 		String url = "http://www.example.com/vol1/issue2/art3/";
 		MockCachedUrl cu = new MockCachedUrl(url, bau);
@@ -159,6 +168,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 		assertEquals(goodDate, md.getDate());
 	}
 
+	// a chunk of html source code from where the BePressHtmlMetadataExtractorFactory should NOT be able to extract metadata
 	String badContent = "<HTML><HEAD><TITLE>"
 			+ goodArticleTitle
 			+ "</TITLE></HEAD><BODY>\n"
@@ -168,6 +178,11 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 			+ "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: "
 			+ goodISSN + " </div>\n";
 
+	/**
+	 * Method that creates a simulated Cached URL from the source code provided by the badContent Sring. It then asserts that NO metadata is extracted by using 
+	 * the BePressHtmlMetadataExtractorFactory as the source code is broken.
+	 * @throws Exception
+	 */
 	public void testExtractFromBadContent() throws Exception {
 		String url = "http://www.example.com/vol1/issue2/art3/";
 		MockCachedUrl cu = new MockCachedUrl(url, bau);
@@ -187,6 +202,10 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 		assertEquals("bar", md.getProperty("foo"));
 	}	
 
+	/**
+	 * Inner class that where a number of Archival Units can be created
+	 *
+	 */
 	public static class MySimulatedPlugin extends SimulatedPlugin {
 		public ArchivalUnit createAu0(Configuration auConfig)
 				throws ArchivalUnit.ConfigurationException {
@@ -195,32 +214,30 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
 			return au;
 		}
 
-		public SimulatedContentGenerator getContentGenerator(Configuration cf,
-				String fileRoot) {
+		public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
 			return new MySimulatedContentGenerator(fileRoot);
 		}
 
 	}
 
-	public static class MySimulatedContentGenerator extends
-			SimulatedContentGenerator {
+	/**
+	 * Inner class to create a html source code simulated content
+	 *
+	 */
+	public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
 		protected MySimulatedContentGenerator(String fileRoot) {
 			super(fileRoot);
 		}
 
-		public String getHtmlFileContent(String filename, int fileNum,
-				int depth, int branchNum, boolean isAbnormal) {
+		public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+			
 			String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
 			
-			file_content += "  <meta name=\"lockss.filenum\" content=\""
-					+ fileNum + "\">\n";
-			file_content += "  <meta name=\"lockss.depth\" content=\"" + depth
-					+ "\">\n";
-			file_content += "  <meta name=\"lockss.branchnum\" content=\""
-					+ branchNum + "\">\n";			
+			file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
+			file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
+			file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
 
-			file_content += getHtmlContent(fileNum, depth, branchNum,
-					isAbnormal);
+			file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
 			file_content += "\n</BODY></HTML>";
 			logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
 					+ file_content);
