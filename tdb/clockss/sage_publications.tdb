@@ -93,6 +93,7 @@
 
     au < ClockssHighWirePlugin ; released ; 2008 ; Administration & Society Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Administration & Society Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Administration & Society Volume 42 ; 42 ; >
 
   }
 
@@ -108,6 +109,7 @@
 
     au < ClockssHighWirePlugin ; released ; 2007-2008 ; Adult Education Quarterly Volume 58 ; 58 ; >
     au < ClockssHighWirePlugin ; released ; 2008-2009 ; Adult Education Quarterly Volume 59 ; 59 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2009-2010 ; Adult Education Quarterly Volume 60 ; 60 ; >
 
   }
 
@@ -123,6 +125,7 @@
 
     au < ClockssHighWirePlugin ; released ; 2008 ; Advances in Dental Research Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Advances in Dental Research Volume 21 ; 21 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Advances in Dental Research Volume 22 ; 22 ; >
 
   }
 
@@ -138,6 +141,7 @@
 
     au < ClockssHighWirePlugin ; released ; 2008 ; Advances in Developing Human Resources Volume 10 ; 10 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Advances in Developing Human Resources Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Advances in Developing Human Resources Volume 12 ; 12 ; >
 
   }
 
@@ -336,6 +340,7 @@
 
     au < ClockssHighWirePlugin ; released ; 2008 ; Angiology Volume 59 ; 59 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Angiology Volume 60 ; 60 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Angiology Volume 61 ; 61 ; >
 
   }
 
@@ -417,6 +422,7 @@
     param[base_url] = http://afs.sagepub.com/
 
     au < ClockssHighWirePlugin ; released ; 2008 ; Armed Forces & Society Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Armed Forces & Society Volume 36 ; 36 ; >
 
   }
 
@@ -461,6 +467,7 @@
 
     au < ClockssHighWirePlugin ; released ; 2008 ; Asia-Pacific Journal of Public Health Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Asia-Pacific Journal of Public Health Volume 21 ; 21 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Asia-Pacific Journal of Public Health Volume 22 ; 22 ; >
 
   }
 
@@ -488,6 +495,7 @@
 
     param[base_url] = http://asm.sagepub.com/
 
+    au < ClockssHighWirePlugin ; reTesting ; 2008 ; Assessment Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Assessment Volume 16 ; 16 ; >
 
   }
@@ -501,6 +509,7 @@
 
     param[base_url] = http://aei.sagepub.com/
 
+    au < ClockssHighWirePlugin ; reTesting ; 2007-2008 ; Assessment for Effective Intervention Volume 33 ; 33 ; >
     au < ClockssHighWirePlugin ; released ; 2008-2009 ; Assessment for Effective Intervention Volume 34 ; 34 ; >
 
   }
@@ -530,6 +539,7 @@
 
     param[base_url] = http://bmo.sagepub.com/
 
+    au < ClockssHighWirePlugin ; reTesting ; 2008 ; Behavior Modification Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Behavior Modification Volume 33 ; 33 ; >
 
   }
@@ -558,6 +568,7 @@
 
     param[base_url] = http://btb.sagepub.com/
 
+    au < ClockssHighWirePlugin ; reTesting ; 2008 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 38 ; 38 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Biblical Theology Bulletin: A Journal of Bible and Theology Volume 39 ; 39 ; >
 
   }
@@ -572,6 +583,7 @@
 
     param[base_url] = http://brn.sagepub.com/
 
+    au < ClockssHighWirePlugin ; reTesting ; 2008 ; Biological Research For Nursing Volume 10 ; 10 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Biological Research For Nursing Volume 11 ; 11 ; >
 
   }
@@ -586,6 +598,7 @@
 
     param[base_url] = http://bod.sagepub.com/
 
+    au < ClockssHighWirePlugin ; reTesting ; 2008 ; Body & Society Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; released ; 2009 ; Body & Society Volume 15 ; 15 ; >
 
   }
