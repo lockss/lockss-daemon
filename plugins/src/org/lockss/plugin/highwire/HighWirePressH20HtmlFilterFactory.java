@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.14 2010-08-20 23:51:37 greya Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.15 2010-08-23 22:15:35 greya Exp $
  */
 
 /*
@@ -92,7 +92,10 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         //For SAGE (at least).  Name of the institution. E.g. </a> INDIANA UNIV </div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header-Uni"),
 
+        //Filter for <li class="subscr-ref">....</li>
         HtmlNodeFilters.tagWithAttribute("li", "class", "subscr-ref"),
+        //Filter for <div class="col-3adverTower"> (SAGE)
+        HtmlNodeFilters.tagWithAttribute("div", "class", "col-3adverTower"),        
 
     };
     
