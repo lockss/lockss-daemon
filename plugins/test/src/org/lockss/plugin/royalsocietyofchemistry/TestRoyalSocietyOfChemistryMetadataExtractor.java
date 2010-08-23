@@ -27,7 +27,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-
+/**
+ * Two of the articles used to get the html source for this plugin is:
+ * http://www.rsc.org/publishing/journals/JC/article.asp?doi=a700024c
+ * http://www.rsc.org/publishing/journals/FT/article.asp?doi=a706359h
+ * Need to proxy content through beta2.lockss.org or another LOCKSS box.
+ * The content online is NOT relevant to this plugin.
+ *
+ */
 public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase {
 
 	  static Logger log = Logger.getLogger("TestRoyalSocietyOfChemistryMetadataExtractor");

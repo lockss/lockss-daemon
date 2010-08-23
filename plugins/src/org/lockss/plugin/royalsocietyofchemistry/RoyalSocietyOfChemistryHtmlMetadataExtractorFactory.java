@@ -19,6 +19,12 @@ import org.lockss.util.StringUtil;
 
 
 /**
+ * Two of the articles used to get the html source for this plugin is:
+ * http://www.rsc.org/publishing/journals/JC/article.asp?doi=a700024c
+ * http://www.rsc.org/publishing/journals/FT/article.asp?doi=a706359h
+ * Need to proxy content through beta2.lockss.org or another LOCKSS box.
+ * The content online is NOT relevant to this plugin.
+ * 
  * ---------------------------------------------- IMPORTANT --------------------------------------------------------
  * This class is not yet complete. Only some of the metadata is extracted. These are:
  * DOI, Vol, Date (date can be the volume when volume is not present), StartPage, Authors, ArticleTitle and JournalTitle

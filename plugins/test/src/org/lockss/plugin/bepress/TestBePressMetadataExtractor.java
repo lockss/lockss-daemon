@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.12 2010-08-23 14:32:55 dsferopoulos Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.13 2010-08-23 16:38:47 dsferopoulos Exp $
  */
 
 /*
@@ -47,6 +47,11 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
+/**
+ * One of the articles used to get the html source for this plugin is:
+ * http://www.bepress.com/cppm/vol5/iss1/17/
+ *
+ */
 public class TestBePressMetadataExtractor extends LockssTestCase {
 
 	static Logger log = Logger.getLogger("TestBePressMetadataExtractor");

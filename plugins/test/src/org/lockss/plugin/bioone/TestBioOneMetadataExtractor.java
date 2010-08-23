@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneMetadataExtractor.java,v 1.5 2010-07-02 10:44:15 dsferopoulos Exp $
+ * $Id: TestBioOneMetadataExtractor.java,v 1.6 2010-08-23 16:38:47 dsferopoulos Exp $
  */
 
 /*
@@ -48,6 +48,12 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
+/**
+ * Two of the articles used to get the html source for this plugin is:
+ * http://www.bioone.org/doi/abs/10.4202/app.2009.0087
+ * http://www.bioone.org/doi/abs/10.3161/150811010X504554
+ *
+ */
 public class TestBioOneMetadataExtractor extends LockssTestCase {
 
   static Logger log = Logger.getLogger("TestBioOneMetadataExtractor");
@@ -68,6 +74,9 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
 
   private static String BASE_URL = "http://www.bioone.org/";
 
+  /**
+   * Method to set up the daemon and create the simulated Archival Unit (AU). To be copied as it is to all future plugins
+   */
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
@@ -87,12 +96,18 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, biooneAuConfig());
   }
 
+  
   public void tearDown() throws Exception {
     sau.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
   }
 
+  /**
+   * Configure the simulated archival unit.
+   * @param rootPath
+   * @return
+   */
   Configuration simAuConfig(String rootPath) {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("root", rootPath);
@@ -100,12 +115,15 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     conf.put("depth", "2");
     conf.put("branch", "2");
     conf.put("numFiles", "4");
-    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-				SimulatedContentGenerator.FILE_TYPE_HTML));
-//     conf.put("default_article_mime_type", "application/pdf");
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF + SimulatedContentGenerator.FILE_TYPE_HTML));
+    //     conf.put("default_article_mime_type", "application/pdf");
     return conf;
   }
 
+  /**
+   * Configure the bioone AU
+   * @return
+   */
   Configuration biooneAuConfig() {
     Configuration conf = ConfigManager.newConfiguration();
     conf.put("base_url", BASE_URL);
@@ -156,6 +174,8 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
 	String goodHtmUrl = "http://www.bioone.org/doi/full/10.1640/0002-8444-99.2.61";
 	String goodPdfUrl = "http://www.bioone.org/doi/pdf/10.1640/0002-8444-99.2.61";
 
+	// A String holding a chunk of relevant HTML of a Bioone article. Only relevant chunks are added to minimise the length of the string and
+	// maximise readability. 
 	String goodContent = "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\">\n" +
     "<head>\n" +
     "    <title>\n" +
@@ -187,6 +207,12 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     "            </span>"+
     "    \n" + "</BODY></HTML>";
 
+	
+  /**
+   * Method that asserts all metadata extracted from the html. This is the method where we test whether the BePressHtmlMetadataExtractor can extract
+   * the data that should be extracted
+   * @throws Exception
+   */
   public void testExtractFromGoodContent() throws Exception {
     ArticleMetadata md = extractFromTestContent(goodContent);
     
@@ -204,6 +230,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
 	assertEquals(goodDate, md.getDate());
   }
 
+  // A string representing bad html markup for a bioone article. Metadata from this code should NOT be extracted
   String badContent =
           "<HTML><HEAD><TITLE>" + goodArticleTitle + "</TITLE></HEAD><BODY>\n" +
                   "<p><strong>ISSN: </strong>" + goodPrintISSN + " </p>\n" +
@@ -217,6 +244,10 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
                   "    \n" +
                   "</BODY></HTML>";
 
+  /**
+   * Method that asserts that data is NOT extracted from the badContend string
+   * @throws Exception
+   */
   public void testExtractFromBadContent() throws Exception {
     ArticleMetadata md = extractFromTestContent(badContent);
 
@@ -228,6 +259,12 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     assertEquals(1, md.size());
   }
 
+  /**
+   * Method that makes use of the BioOneHtmlMetadataExtractor to extract the metadata of the html content passed as a parameter.
+   * @param content The html code we want to extract the metadata from
+   * @return An articleMetadata object where we can retreive all relevant metadata.
+   * @throws Exception
+   */
   private ArticleMetadata extractFromTestContent(String content) throws Exception {
     String url = "http://www.example.org/doi/abs/10.1640/0002-8444-99.2.61";
     MockCachedUrl cu = new MockCachedUrl(url, sau);
@@ -249,6 +286,14 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     return md;
   }
 
+  /**
+   * Method to replace strings containing for example "%1%3" with ints according to the fileNum, depth and branchNum
+   * @param content The string to replace
+   * @param fileNum
+   * @param depth
+   * @param branchNum
+   * @return
+   */
   private static String getFieldContent(String content, int fileNum, int depth, int branchNum) {
     content = StringUtil.replaceString(content, "%1", "" + fileNum);
     content = StringUtil.replaceString(content, "%2", "" + depth);
@@ -293,15 +338,18 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
 
   public static class MySimulatedPlugin extends SimulatedPlugin {
 
-    public SimulatedContentGenerator getContentGenerator(Configuration cf,
-							 String fileRoot) {
+    public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
       return new MySimulatedContentGenerator(fileRoot);
     }
 
   }
 
-  public static class MySimulatedContentGenerator
-    extends SimulatedContentGenerator {
+  /**
+   * Inner class that generates simulated content. It is not an essential part of this test class. In this case the content representing the AU does
+   * not even resembles actual BioOne html article content.
+   *    
+   */
+  public static class MySimulatedContentGenerator extends SimulatedContentGenerator {
 
     protected MySimulatedContentGenerator(String fileRoot) {
       super(fileRoot);

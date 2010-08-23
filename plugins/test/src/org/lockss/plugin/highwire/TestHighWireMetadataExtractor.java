@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.10 2010-07-21 13:54:51 dsferopoulos Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.11 2010-08-23 16:38:47 dsferopoulos Exp $
  */
 
 /*
@@ -47,6 +47,10 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.simulated.*;
 
+/**
+ * One of the articles used to get the html source for this plugin is:
+ * http://asj.sagepub.com/content/53/2/99.abstract
+ */
 public class TestHighWireMetadataExtractor extends LockssTestCase {
   static Logger log = Logger.getLogger("TestHighWireMetadataExtractor");
 
@@ -132,7 +136,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     return conf;
   }
 
-  public void testExtraction() throws Exception {
+  //public void testExtraction() throws Exception {
 //    PluginTestUtil.crawlSimAu(sau);
 //    PluginTestUtil.copyAu(sau, hau);
 //    PluginTestUtil.copyAu(sau, hau, ".*file\\.html",
@@ -159,7 +163,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
 //    }
 //    log.debug("Article count is " + count);
 //    assertEquals(28, count);
-  }
+  //}
 
   String goodDOI = "10.1152/ajprenal.13.4.123";
   String goodVolume = "13";

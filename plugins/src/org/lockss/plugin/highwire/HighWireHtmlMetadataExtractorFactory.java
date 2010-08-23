@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.3 2010-07-21 13:54:51 dsferopoulos Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.4 2010-08-23 16:38:47 dsferopoulos Exp $
  */
 
 /*
@@ -40,8 +40,11 @@ import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
 
-public class HighWireHtmlMetadataExtractorFactory
-  implements FileMetadataExtractorFactory {
+/**
+ * One of the articles used to get the html source for this plugin is:
+ * http://asj.sagepub.com/content/53/2/99.abstract
+ */
+public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("HighWireHtmlMetadataExtractorFactory");
 
   public FileMetadataExtractor createFileMetadataExtractor(String contentType)

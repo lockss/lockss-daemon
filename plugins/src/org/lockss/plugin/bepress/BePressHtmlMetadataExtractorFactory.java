@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.5 2010-08-23 14:32:55 dsferopoulos Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.6 2010-08-23 16:38:45 dsferopoulos Exp $
  */
 
 /*
@@ -39,6 +39,11 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
+/**
+ * One of the articles used to get the html source for this plugin is:
+ * http://www.bepress.com/cppm/vol5/iss1/17/
+ *
+ */
 public class BePressHtmlMetadataExtractorFactory implements	FileMetadataExtractorFactory {
 	static Logger log = Logger.getLogger("BePressHtmlMetadataExtractorFactory");
 
