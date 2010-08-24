@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.16 2010-08-24 23:46:54 greya Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.17 2010-08-24 23:50:03 thib_gc Exp $
  */
 
 /*
@@ -92,14 +92,14 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         //For SAGE (at least).  Name of the institution. E.g. </a> INDIANA UNIV </div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header-Uni"),
 
-        //Filter for <li class="subscr-ref">....</li>
+        // Filter for <li class="subscr-ref">....</li>
         HtmlNodeFilters.tagWithAttribute("li", "class", "subscr-ref"),
-        //Filter for <div class="col-3adverTower"> (SAGE)
+        // Filter for <div class="col-3adverTower"> (SAGE)
         HtmlNodeFilters.tagWithAttribute("div", "class", "col-3adverTower"),        
-        //Filter for <div class="social-bookmarking"> 
+        // Filter for <div class="social-bookmarking"> 
         HtmlNodeFilters.tagWithAttribute("div", "class", "social-bookmarking"), 
-        //Filter out .abstract/.short links
-        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "(\\.abstract|\\.short)$"),   
+        // Normalize the probabilistic substitution of .short for .abstract
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "\\.(abstract|short)$"),   
         
         
     };
