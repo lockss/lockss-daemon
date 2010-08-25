@@ -5,9 +5,9 @@
   >
   
   plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
-  param[base_url] = http://www.ingentaconnect.com/    
-  param[api_url] = http://api.ingentaconnect.com/    
-  param[graphics_url] = http://graphics.ingentaconnect.com/    
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
   param[publisher_id] = bpsoc
   implicit < status ; year; name ; param[volume_name] >
 
