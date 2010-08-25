@@ -20,7 +20,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Accounting History Volume 13 ; 13 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Accounting History Volume 14 ; 14 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Accounting History Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Accounting History Volume 15 ; 15 ; >
 
   }
 
@@ -36,7 +36,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Acta Sociologica Volume 51 ; 51 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Acta Sociologica Volume 52 ; 52 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Acta Sociologica Volume 53 ; 53 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Acta Sociologica Volume 53 ; 53 ; >
 
   }
 
@@ -68,7 +68,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Active Learning in Higher Education Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Active Learning in Higher Education Volume 10 ; 10 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Active Learning in Higher Education Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Active Learning in Higher Education Volume 11 ; 11 ; >
 
   }
 
@@ -84,7 +84,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Adaptive Behavior Volume 16 ; 16 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Adaptive Behavior Volume 17 ; 17 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Adaptive Behavior Volume 18 ; 18 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Adaptive Behavior Volume 18 ; 18 ; >
 
   }
 
@@ -164,7 +164,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Affilia Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Affilia Volume 24 ; 24 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Affilia Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Affilia Volume 25 ; 25 ; >
 
   }
 
@@ -175,6 +175,8 @@
       issn = 0002-7642 ;
       eissn = 1552-3381
     >
+
+comment[54] = volume does not exist yet
 
     param[base_url] = http://abs.sagepub.com/
 
@@ -367,7 +369,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Animation Volume 3 ; 3 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Animation Volume 4 ; 4 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Animation Volume 5 ; 5 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Animation Volume 5 ; 5 ; >
 
   }
 
@@ -411,7 +413,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Anthropological Theory Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Anthropological Theory Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Anthropological Theory Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Anthropological Theory Volume 10 ; 10 ; >
 
   }
 
@@ -427,7 +429,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Applied Psychological Measurement Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Applied Psychological Measurement Volume 33 ; 33 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Applied Psychological Measurement Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Applied Psychological Measurement Volume 34 ; 34 ; >
 
   }
 
@@ -458,7 +460,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Arts and Humanities in Higher Education Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Arts and Humanities in Higher Education Volume 8 ; 8 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Arts and Humanities in Higher Education Volume 9 ; 9 ; >
 
   }
 
@@ -474,7 +476,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Asia Pacific Journal of Human Resources Volume 46 ; 46 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Asia Pacific Journal of Human Resources Volume 47 ; 47 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Asia Pacific Journal of Human Resources Volume 48 ; 48 ; >
 
   }
 
@@ -504,7 +506,7 @@
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Asian Journal of Management Cases Volume 5 ; 5 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Asian Journal of Management Cases Volume 6 ; 6 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Asian Journal of Management Cases Volume 7 ; 7 ; >
 
   }
 
