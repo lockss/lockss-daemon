@@ -11,7 +11,14 @@
       issn = 0009-8604
     >
     
-    comment[platform] = Ingenta
+    plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+    param[base_url] = http://www.ingentaconnect.com/
+    param[api_url] = http://api.ingentaconnect.com/    
+    param[graphics_url] = http://graphics.ingentaconnect.com/    
+    param[publisher_id] = cms
+    param[journal_id] = ccm
+    param[journal_issn] = 0009-8604
+    implicit < status ; year; name ; param[volume_name] >
   
   }
 
