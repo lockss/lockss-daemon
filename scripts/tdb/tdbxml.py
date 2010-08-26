@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.4 2010-08-18 00:30:50 thib_gc Exp $
+# $Id: tdbxml.py,v 1.5 2010-08-26 01:14:07 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -68,12 +68,12 @@ def __short_au_name(au):
     str = au.name()
     str = re.sub(r'Volume\s+(\S+)$', r'\1', str)
     str = re.sub(r'\s+', '', str)
-    str = re.sub(r'Á|À|Â|Ä', 'A', str)
-    str = re.sub(r'á|à|â|ä', 'a', str)
-    str = re.sub(r'É|È|Ê|Ë', 'E', str)
-    str = re.sub(r'é|è|ê|ë', 'e', str)
-    str = re.sub(r'Í|Ì|Î|Ï', 'I', str)
-    str = re.sub(r'í|ì|î|ï', 'i', str)
+    str = re.sub(r'Á|À|Â|Ä|̣Ā', 'A', str)
+    str = re.sub(r'á|à|â|ä|ā', 'a', str)
+    str = re.sub(r'É|È|Ê|Ë|Ē', 'E', str)
+    str = re.sub(r'é|è|ê|ë|ē', 'e', str)
+    str = re.sub(r'Í|Ì|Î|Ï|Ī', 'I', str)
+    str = re.sub(r'í|ì|î|ï|ī', 'i', str)
     str = re.sub(r'\W+', '', str)
     return __escape(str)
 
