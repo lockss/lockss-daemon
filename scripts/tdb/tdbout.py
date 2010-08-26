@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.4 2010-08-18 00:30:50 thib_gc Exp $
+# $Id: tdbout.py,v 1.5 2010-08-26 01:12:29 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -80,7 +80,7 @@ def __process(tdb, options):
     result = [[lam(au) or '' for lam in map(tdbq.str_to_lambda_au, fields)] for au in tdb.aus()]
     if options.style == TdboutConstants.OPTION_STYLE_CSV:
         import csv
-        if options.headings: result = [[w.capitalize() for w in fields]] + result
+        if options.names: result = [[w.capitalize() for w in fields]] + result
         if options.warnings:
             from datetime import date
             warnings = [['Current as of %s' % (date.today())],
