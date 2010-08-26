@@ -15,4 +15,4 @@ while [ true ]; do
   fi
   cd ..
 done
-$PROG $*
+$PROG "$@"
