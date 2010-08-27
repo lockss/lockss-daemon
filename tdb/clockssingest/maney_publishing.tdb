@@ -12,7 +12,7 @@
       eissn = 1465-3133
     >
 
-    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
     param[base_url] = http://jorthod.maneyjournals.org/
     implicit < status ; year ; name ; param[volume_name] >
 
