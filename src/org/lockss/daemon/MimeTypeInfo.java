@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeInfo.java,v 1.10 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: MimeTypeInfo.java,v 1.11 2010-08-31 21:42:55 thib_gc Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public interface MimeTypeInfo {
 
   /** Returns the hash FilterFactory, or null */
   public FilterFactory getHashFilterFactory();
-  /** Returns the crarl FilterFactory, or null */
+  /** Returns the crawl FilterFactory, or null */
   public FilterFactory getCrawlFilterFactory();
   /** Returns the LinkExtractorFactory, or null */
   public LinkExtractorFactory getLinkExtractorFactory();
