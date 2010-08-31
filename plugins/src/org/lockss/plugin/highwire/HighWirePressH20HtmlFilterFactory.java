@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.19 2010-08-30 23:33:38 thib_gc Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.20 2010-08-31 10:14:15 thib_gc Exp $
  */
 
 /*
@@ -63,6 +63,9 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "most-links-box"),
         // e.g. PNAS
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-recm"),
+        // e.g. PNAS (optional 'sid' query arg in URLs)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-svcs"),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-cit"),
         // e.g. SWCS TOC pages
         HtmlNodeFilters.tagWithAttribute("div", "class", "cit-form-select"),
         // For JBC pages
