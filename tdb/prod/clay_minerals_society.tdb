@@ -7,7 +7,7 @@
   {
   
     title <
-      name = Clays and Clay Minerals ;
+      name = Clays and Clay Minerals;
       issn = 0009-8604
     >
     
@@ -20,6 +20,15 @@
     param[journal_issn] = 0009-8604
     implicit < status ; year; name ; param[volume_name] >
   
+    au < testing ; 2002 ; Clays and Clay Minerals Volume 50 ; 50 >
+    au < testing ; 2003 ; Clays and Clay Minerals Volume 51 ; 51 >
+    au < testing ; 2004 ; Clays and Clay Minerals Volume 52 ; 52 >
+    au < testing ; 2005 ; Clays and Clay Minerals Volume 53 ; 53 >
+    au < testing ; 2006 ; Clays and Clay Minerals Volume 54 ; 54 >
+    au < testing ; 2007 ; Clays and Clay Minerals Volume 55 ; 55 >
+    au < testing ; 2008 ; Clays and Clay Minerals Volume 56 ; 56 >
+    au < testing ; 2009 ; Clays and Clay Minerals Volume 57 ; 57 >
+    au < testing ; 2010 ; Clays and Clay Minerals Volume 58 ; 58 >
   }
 
 }
