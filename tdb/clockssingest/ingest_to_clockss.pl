@@ -97,7 +97,7 @@ sub iterate_lines {
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }
 	    
 	} 
-	elsif ($lines[$k] =~ m/au\s*<\s*(.*\s;\s)?(reTesting|released|ready|superseded)/) {
+	elsif ($lines[$k] =~ m/au\s*<\s*(.*\s;\s)?(released|ready|superseded)/) {
 	    
 	    if ($write_to eq "tostdout") { print $lines[$k]; } else { print OUTPUT $lines[$k]; }
 	    

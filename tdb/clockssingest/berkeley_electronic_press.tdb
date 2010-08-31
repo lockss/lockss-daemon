@@ -109,7 +109,7 @@
     au < manifest ; 2006 ; Basic Income Studies Volume 1 ; 1 >
     au < manifest ; 2007 ; Basic Income Studies Volume 2 ; 2 >
     au < released ; 2008 ; Basic Income Studies Volume 3 ; 3 >
-    au < testing ; 2009 ; Basic Income Studies Volume 4 ; 4 >
+    au < ready ; 2009 ; Basic Income Studies Volume 4 ; 4 >
 
   }
 
@@ -218,7 +218,7 @@
     param[base_url] = http://www.bepress.com/
     param[journal_abbr] = ev
 
-    au < testing ; 2004 ; The Economists' Voice Volume 1 ; 1 >
+    au < ready ; 2004 ; The Economists' Voice Volume 1 ; 1 >
 
   }
   
