@@ -1698,7 +1698,9 @@
 
 comment[444] = test 2009 and 2010 volumes above last 2 batches
 
-    au < manifest ; Journal of Biophysics Volume 2008 ; 2008 >
+    au < testing ; Journal of Biophysics Volume 2008 ; 2008 >
+    au < testing ; Journal of Biophysics Volume 2009 ; 2009 >
+    au < testing ; Journal of Biophysics Volume 2010 ; 2010 >
 
   }
 
@@ -1711,7 +1713,9 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jce
 
-    au < manifest ; Journal of Cancer Epidemiology Volume 2008 ; 2008 >
+    au < testing ; Journal of Cancer Epidemiology Volume 2008 ; 2008 >
+    au < testing ; Journal of Cancer Epidemiology Volume 2009 ; 2009 >
+    au < testing ; Journal of Cancer Epidemiology Volume 2010 ; 2010 >
 
   }
 
@@ -1724,7 +1728,9 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jcsnc
 
-    au < manifest ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 >
+    au < testing ; Journal of Computer Systems, Networks, and Communications Volume 2008 ; 2008 >
+    au < testing ; Journal of Computer Systems, Networks, and Communications Volume 2009 ; 2009 >
+    au < testing ; Journal of Computer Systems, Networks, and Communications Volume 2010 ; 2010 >
 
   }
 
@@ -1737,8 +1743,10 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jcse
 
-    au < manifest ; Journal of Control Science and Engineering Volume 2007 ; 2007 >
-    au < manifest ; Journal of Control Science and Engineering Volume 2008 ; 2008 >
+    au < testing ; Journal of Control Science and Engineering Volume 2007 ; 2007 >
+    au < testing ; Journal of Control Science and Engineering Volume 2008 ; 2008 >
+    au < testing ; Journal of Control Science and Engineering Volume 2009 ; 2009 >
+    au < testing ; Journal of Control Science and Engineering Volume 2010 ; 2010 >
 
   }
 
@@ -1749,6 +1757,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jeph
 
+    au < testing ; Journal of Environmental and Public Health Volume 2009 ; 2009 > 
+    au < testing ; Journal of Environmental and Public Health Volume 2010 ; 2010 > 
 
   }
 
@@ -1761,6 +1771,7 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jgr
 
+    au < testing Journal of Geological Research Volume 2009 ; 2009 >
 
   }
 
@@ -1773,17 +1784,19 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jia
 
-    au < manifest ; Journal of Inequalities and Applications Volume 1 (1998) ; 1998 >
-    au < manifest ; Journal of Inequalities and Applications Volume 2 (1999) ; 1999 >
-    au < manifest ; Journal of Inequalities and Applications Volume 3 (2000) ; 2000 >
-    au < manifest ; Journal of Inequalities and Applications Volume 4 (2001) ; 2001 >
-    au < manifest ; Journal of Inequalities and Applications Volume 5 (2002) ; 2002 >
-    au < manifest ; Journal of Inequalities and Applications Volume 6 (2003) ; 2003 >
-    au < manifest ; Journal of Inequalities and Applications Volume 7 (2004) ; 2004 >
-    au < manifest ; Journal of Inequalities and Applications Volume 2005 ; 2005 >
-    au < manifest ; Journal of Inequalities and Applications Volume 2006 ; 2006 >
-    au < manifest ; Journal of Inequalities and Applications Volume 2007 ; 2007 >
-    au < manifest ; Journal of Inequalities and Applications Volume 2008 ; 2008 >
+    au < testing ; Journal of Inequalities and Applications Volume 1 (1998) ; 1998 >
+    au < testing ; Journal of Inequalities and Applications Volume 2 (1999) ; 1999 >
+    au < testing ; Journal of Inequalities and Applications Volume 3 (2000) ; 2000 >
+    au < testing ; Journal of Inequalities and Applications Volume 4 (2001) ; 2001 >
+    au < testing ; Journal of Inequalities and Applications Volume 5 (2002) ; 2002 >
+    au < testing ; Journal of Inequalities and Applications Volume 6 (2003) ; 2003 >
+    au < testing ; Journal of Inequalities and Applications Volume 7 (2004) ; 2004 >
+    au < testing ; Journal of Inequalities and Applications Volume 2005 ; 2005 >
+    au < testing ; Journal of Inequalities and Applications Volume 2006 ; 2006 >
+    au < testing ; Journal of Inequalities and Applications Volume 2007 ; 2007 >
+    au < testing ; Journal of Inequalities and Applications Volume 2008 ; 2008 >
+    au < testing ; Journal of Inequalities and Applications Volume 2009 ; 2009 >
+    au < testing ; Journal of Inequalities and Applications Volume 2010 ; 2010 >
 
   }
 
@@ -1806,6 +1819,7 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jmb
 
+    au < testing ; Journal of Marine Biology Volume 2009 ; 2009 >
 
   }
 
@@ -1818,6 +1832,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jm
 
+    au < testing ; Journal of Metallurgy Volume 2009 ; 2009 >
+    au < testing ; Journal of Metallurgy Volume 2010 ; 2010 >
 
   }
 
@@ -1830,9 +1846,11 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jnm
 
-    au < manifest ; Journal of Nanomaterials Volume 2006 ; 2006 >
-    au < manifest ; Journal of Nanomaterials Volume 2007 ; 2007 >
-    au < manifest ; Journal of Nanomaterials Volume 2008 ; 2008 >
+    au < testing ; Journal of Nanomaterials Volume 2006 ; 2006 >
+    au < testing ; Journal of Nanomaterials Volume 2007 ; 2007 >
+    au < testing ; Journal of Nanomaterials Volume 2008 ; 2008 >
+    au < testing ; Journal of Nanomaterials Volume 2009 ; 2009 >
+    au < testing ; Journal of Nanomaterials Volume 2010 ; 2010 >
 
   }
 
@@ -1845,6 +1863,9 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jnt
 
+    au < testing ; Journal of Nanotechnology VOlume 2008 ; 2008 >
+    au < testing ; Journal of Nanotechnology Volume 2009 ; 2009 >
+    au < testing ; Journal of Nanotechnology Volume 2010 ; 2010 >
 
   }
 
@@ -1857,7 +1878,9 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jo
 
-    au < manifest ; Journal of Oncology Volume 2008 ; 2008 >
+    au < testing ; Journal of Oncology Volume 2008 ; 2008 >
+    au < testing ; Journal of Oncology Volume 2009 ; 2009 >
+    au < testing ; Journal of Oncology Volume 2010 ; 2010 >
 
   }
 
@@ -1868,6 +1891,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jpr
 
+    au < testing ; Journal of Parasitology Research Volume 2009 ; 2009 >
+    au < testing ; Journal of Parasitology Research Volume 2010 ; 2010 >
 
   }
 
@@ -1880,6 +1905,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jps
 
+    au < testing ; Journal of Probability and Statistics Volume 2009 ; 2009 >
+    au < testing ; Journal of Probability and Statistics Volume 2010 ; 2010 >    
 
   }
 
@@ -1891,6 +1918,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jr
 
+    au < testing ; Journal of Robotics Volume 2009 ; 2009 >
+    au < testing ; Journal of Robotics Volume 2010 ; 2010 >  
 
   }
 
@@ -1903,7 +1932,9 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = js
 
-    au < manifest ; Journal of Sensors Volume 2008 ; 2008 >
+    au < testing ; Journal of Sensors Volume 2008 ; 2008 >
+    au < testing ; Journal of Sensors Volume 2009 ; 2009 >
+    au < testing ; Journal of Sensors Volume 2010 ; 2010 >
 
   }
 
@@ -1916,6 +1947,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jtd
 
+    au < testing ; Journal of Thermodynamics Volume 2009 ; 2009 >
+    au < testing ; Journal of Thermodynamics Volume 2010 ; 2010 >
 
   }
 
@@ -1928,7 +1961,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jt
 
-    au < manifest ; Journal of Toxicology Volume 2009 ; 2009 >
+    au < testing ; Journal of Toxicology Volume 2009 ; 2009 >
+    au < testing ; Journal of Toxicology Volume 2010 ; 2010 >
 
   }
 
@@ -1939,6 +1973,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jtran
 
+    au < testing ; Journal of Transplantation Volume 2009 ; 2009 >
+    au < testing ; Journal of Transplantation Volume 2010 ; 2010 >
 
   }
 
@@ -1949,6 +1985,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = jtm
 
+    au < testing ; Journal of Tropical Medicine Volume 2009 ; 2009 >
+    au < testing ; Journal of Tropical Medicine Volume 2010 ; 2010 >
 
   }
 
@@ -1961,29 +1999,31 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = lc
 
-    au < manifest ; Laser Chemistry Volume 1 (1996) ; 1996 >
-    au < manifest ; Laser Chemistry Volume 2 (1997) ; 1997 >
-    au < manifest ; Laser Chemistry Volume 3 (1998) ; 1998 >
-    au < manifest ; Laser Chemistry Volume 4 (1999) ; 1999 >
-    au < manifest ; Laser Chemistry Volume 5 (2000) ; 2000 >
-    au < manifest ; Laser Chemistry Volume 6 (2001) ; 2001 >
-    au < manifest ; Laser Chemistry Volume 7 (2002) ; 2002 >
-    au < manifest ; Laser Chemistry Volume 8 (2003) ; 2003 >
-    au < manifest ; Laser Chemistry Volume 9 (1994) ; 1994 >
-    au < manifest ; Laser Chemistry Volume 10 (1995) ; 1995 >
-    au < manifest ; Laser Chemistry Volume 11 (1996) ; 1996 >
-    au < manifest ; Laser Chemistry Volume 12 (1997) ; 1997 >
-    au < manifest ; Laser Chemistry Volume 13 (1998) ; 1998 >
-    au < manifest ; Laser Chemistry Volume 14 (1999) ; 1999 >
-    au < manifest ; Laser Chemistry Volume 15 (2000) ; 2000 >
-    au < manifest ; Laser Chemistry Volume 16 (2001) ; 2001 >
-    au < manifest ; Laser Chemistry Volume 17 (2002) ; 2002 >
-    au < manifest ; Laser Chemistry Volume 18 (2003) ; 2003 >
-    au < manifest ; Laser Chemistry Volume 19 (2004) ; 2004 >
-    au < manifest ; Laser Chemistry Volume 20 (2005) ; 2005 >
-    au < manifest ; Laser Chemistry Volume 2006 ; 2006 >
-    au < manifest ; Laser Chemistry Volume 2007 ; 2007 >
-    au < manifest ; Laser Chemistry Volume 2008 ; 2008 >
+    au < testing ; Laser Chemistry Volume 1 (1996) ; 1996 >
+    au < testing ; Laser Chemistry Volume 2 (1997) ; 1997 >
+    au < testing ; Laser Chemistry Volume 3 (1998) ; 1998 >
+    au < testing ; Laser Chemistry Volume 4 (1999) ; 1999 >
+    au < testing ; Laser Chemistry Volume 5 (2000) ; 2000 >
+    au < testing ; Laser Chemistry Volume 6 (2001) ; 2001 >
+    au < testing ; Laser Chemistry Volume 7 (2002) ; 2002 >
+    au < testing ; Laser Chemistry Volume 8 (2003) ; 2003 >
+    au < testing ; Laser Chemistry Volume 9 (1994) ; 1994 >
+    au < testing ; Laser Chemistry Volume 10 (1995) ; 1995 >
+    au < testing ; Laser Chemistry Volume 11 (1996) ; 1996 >
+    au < testing ; Laser Chemistry Volume 12 (1997) ; 1997 >
+    au < testing ; Laser Chemistry Volume 13 (1998) ; 1998 >
+    au < testing ; Laser Chemistry Volume 14 (1999) ; 1999 >
+    au < testing ; Laser Chemistry Volume 15 (2000) ; 2000 >
+    au < testing ; Laser Chemistry Volume 16 (2001) ; 2001 >
+    au < testing ; Laser Chemistry Volume 17 (2002) ; 2002 >
+    au < testing ; Laser Chemistry Volume 18 (2003) ; 2003 >
+    au < testing ; Laser Chemistry Volume 19 (2004) ; 2004 >
+    au < testing ; Laser Chemistry Volume 20 (2005) ; 2005 >
+    au < testing ; Laser Chemistry Volume 2006 ; 2006 >
+    au < testing ; Laser Chemistry Volume 2007 ; 2007 >
+    au < testing ; Laser Chemistry Volume 2008 ; 2008 >
+    au < testing ; Laser Chemistry Volume 2009 ; 2009 >
+    au < testing ; Laser Chemistry Volume 2010 ; 2010 >
 
   }
 
@@ -1996,20 +2036,22 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = mpe
 
-    au < manifest ; Mathematical Problems in Engineering Volume 1 (1995) ; 1995 >
-    au < manifest ; Mathematical Problems in Engineering Volume 2 (1996) ; 1996 >
-    au < manifest ; Mathematical Problems in Engineering Volume 3 (1997) ; 1997 >
-    au < manifest ; Mathematical Problems in Engineering Volume 4 (1998) ; 1998 >
-    au < manifest ; Mathematical Problems in Engineering Volume 5 (1999) ; 1999 >
-    au < manifest ; Mathematical Problems in Engineering Volume 6 (2000) ; 2000 >
-    au < manifest ; Mathematical Problems in Engineering Volume 7 (2001) ; 2001 >
-    au < manifest ; Mathematical Problems in Engineering Volume 8 (2002) ; 2002 >
-    au < manifest ; Mathematical Problems in Engineering Volume 2003 ; 2003 >
-    au < manifest ; Mathematical Problems in Engineering Volume 2004 ; 2004 >
-    au < manifest ; Mathematical Problems in Engineering Volume 2005 ; 2005 >
-    au < manifest ; Mathematical Problems in Engineering Volume 2006 ; 2006 >
-    au < manifest ; Mathematical Problems in Engineering Volume 2007 ; 2007 >
-    au < manifest ; Mathematical Problems in Engineering Volume 2008 ; 2008 >
+    au < testing ; Mathematical Problems in Engineering Volume 1 (1995) ; 1995 >
+    au < testing ; Mathematical Problems in Engineering Volume 2 (1996) ; 1996 >
+    au < testing ; Mathematical Problems in Engineering Volume 3 (1997) ; 1997 >
+    au < testing ; Mathematical Problems in Engineering Volume 4 (1998) ; 1998 >
+    au < testing ; Mathematical Problems in Engineering Volume 5 (1999) ; 1999 >
+    au < testing ; Mathematical Problems in Engineering Volume 6 (2000) ; 2000 >
+    au < testing ; Mathematical Problems in Engineering Volume 7 (2001) ; 2001 >
+    au < testing ; Mathematical Problems in Engineering Volume 8 (2002) ; 2002 >
+    au < testing ; Mathematical Problems in Engineering Volume 2003 ; 2003 >
+    au < testing ; Mathematical Problems in Engineering Volume 2004 ; 2004 >
+    au < testing ; Mathematical Problems in Engineering Volume 2005 ; 2005 >
+    au < testing ; Mathematical Problems in Engineering Volume 2006 ; 2006 >
+    au < testing ; Mathematical Problems in Engineering Volume 2007 ; 2007 >
+    au < testing ; Mathematical Problems in Engineering Volume 2008 ; 2008 >
+    au < testing ; Mathematical Problems in Engineering Volume 2009 ; 2009 >
+    au < testing ; Mathematical Problems in Engineering Volume 2010 ; 2010 >
 
   }
 
@@ -2022,23 +2064,25 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = mi
 
-    au < manifest ; Mediators of Inflammation Volume 1 (2002) ; 2002 >
-    au < manifest ; Mediators of Inflammation Volume 2 (2003) ; 2003 >
-    au < manifest ; Mediators of Inflammation Volume 3 (1994) ; 1994 >
-    au < manifest ; Mediators of Inflammation Volume 4 (1995) ; 1995 >
-    au < manifest ; Mediators of Inflammation Volume 5 (1996) ; 1996 >
-    au < manifest ; Mediators of Inflammation Volume 6 (1997) ; 1997 >
-    au < manifest ; Mediators of Inflammation Volume 7 (1998) ; 1998 >
-    au < manifest ; Mediators of Inflammation Volume 8 (1999) ; 1999 >
-    au < manifest ; Mediators of Inflammation Volume 9 (2000) ; 2000 >
-    au < manifest ; Mediators of Inflammation Volume 10 (2001) ; 2001 >
-    au < manifest ; Mediators of Inflammation Volume 11 (2002) ; 2002 >
-    au < manifest ; Mediators of Inflammation Volume 12 (2003) ; 2003 >
-    au < manifest ; Mediators of Inflammation Volume 13 (2004) ; 2004 >
-    au < manifest ; Mediators of Inflammation Volume 2005 ; 2005 >
-    au < manifest ; Mediators of Inflammation Volume 2006 ; 2006 >
-    au < manifest ; Mediators of Inflammation Volume 2007 ; 2007 >
-    au < manifest ; Mediators of Inflammation Volume 2008 ; 2008 >
+    au < testing ; Mediators of Inflammation Volume 1 (2002) ; 2002 >
+    au < testing ; Mediators of Inflammation Volume 2 (2003) ; 2003 >
+    au < testing ; Mediators of Inflammation Volume 3 (1994) ; 1994 >
+    au < testing ; Mediators of Inflammation Volume 4 (1995) ; 1995 >
+    au < testing ; Mediators of Inflammation Volume 5 (1996) ; 1996 >
+    au < testing ; Mediators of Inflammation Volume 6 (1997) ; 1997 >
+    au < testing ; Mediators of Inflammation Volume 7 (1998) ; 1998 >
+    au < testing ; Mediators of Inflammation Volume 8 (1999) ; 1999 >
+    au < testing ; Mediators of Inflammation Volume 9 (2000) ; 2000 >
+    au < testing ; Mediators of Inflammation Volume 10 (2001) ; 2001 >
+    au < testing ; Mediators of Inflammation Volume 11 (2002) ; 2002 >
+    au < testing ; Mediators of Inflammation Volume 12 (2003) ; 2003 >
+    au < testing ; Mediators of Inflammation Volume 13 (2004) ; 2004 >
+    au < testing ; Mediators of Inflammation Volume 2005 ; 2005 >
+    au < testing ; Mediators of Inflammation Volume 2006 ; 2006 >
+    au < testing ; Mediators of Inflammation Volume 2007 ; 2007 >
+    au < testing ; Mediators of Inflammation Volume 2008 ; 2008 >
+    au < testing ; Mediators of Inflammation Volume 2009 ; 2009 >
+    au < testing ; Mediators of Inflammation Volume 2010 ; 2010 >
 
   }
 
@@ -2051,17 +2095,19 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = mbd
 
-    au < manifest ; Metal-Based Drugs Volume 1 (1998) ; 1998 >
-    au < manifest ; Metal-Based Drugs Volume 2 (1999) ; 1999 >
-    au < manifest ; Metal-Based Drugs Volume 3 (2000) ; 2000 >
-    au < manifest ; Metal-Based Drugs Volume 4 (2001) ; 2001 >
-    au < manifest ; Metal-Based Drugs Volume 5 (2002) ; 2002 >
-    au < manifest ; Metal-Based Drugs Volume 6 (2003) ; 2003 >
-    au < manifest ; Metal-Based Drugs Volume 7 (2004) ; 2004 >
-    au < manifest ; Metal-Based Drugs Volume 8 (2005) ; 2005 >
-    au < manifest ; Metal-Based Drugs Volume 9 (2006) ; 2006 >
-    au < manifest ; Metal-Based Drugs Volume 2007 ; 2007 >
-    au < manifest ; Metal-Based Drugs Volume 2008 ; 2008 >
+    au < testing ; Metal-Based Drugs Volume 1 (1998) ; 1998 >
+    au < testing ; Metal-Based Drugs Volume 2 (1999) ; 1999 >
+    au < testing ; Metal-Based Drugs Volume 3 (2000) ; 2000 >
+    au < testing ; Metal-Based Drugs Volume 4 (2001) ; 2001 >
+    au < testing ; Metal-Based Drugs Volume 5 (2002) ; 2002 >
+    au < testing ; Metal-Based Drugs Volume 6 (2003) ; 2003 >
+    au < testing ; Metal-Based Drugs Volume 7 (2004) ; 2004 >
+    au < testing ; Metal-Based Drugs Volume 8 (2005) ; 2005 >
+    au < testing ; Metal-Based Drugs Volume 9 (2006) ; 2006 >
+    au < testing ; Metal-Based Drugs Volume 2007 ; 2007 >
+    au < testing ; Metal-Based Drugs Volume 2008 ; 2008 >
+    au < testing ; Metal-Based Drugs Volume 2009 ; 2009 >
+    au < testing ; Metal-Based Drugs Volume 2010 ; 2010 >
 
   }
 
@@ -2074,8 +2120,10 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = mse
 
-    au < manifest ; Modelling and Simulation in Engineering Volume 2007 ; 2007 >
-    au < manifest ; Modelling and Simulation in Engineering Volume 2008 ; 2008 >
+    au < testing ; Modelling and Simulation in Engineering Volume 2007 ; 2007 >
+    au < testing ; Modelling and Simulation in Engineering Volume 2008 ; 2008 >
+    au < testing ; Modelling and Simulation in Engineering Volume 2009 ; 2009 >
+    au < testing ; Modelling and Simulation in Engineering Volume 2010 ; 2010 >
 
   }
 
@@ -2088,20 +2136,22 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = np
 
-    au < manifest ; Neural Plasticity Volume 1 (1995) ; 1995 >
-    au < manifest ; Neural Plasticity Volume 2 (1996) ; 1996 >
-    au < manifest ; Neural Plasticity Volume 3 (1997) ; 1997 >
-    au < manifest ; Neural Plasticity Volume 4 (1998) ; 1998 >
-    au < manifest ; Neural Plasticity Volume 5 (1999) ; 1999 >
-    au < manifest ; Neural Plasticity Volume 6 (2000) ; 2000 >
-    au < manifest ; Neural Plasticity Volume 7 (2001) ; 2001 >
-    au < manifest ; Neural Plasticity Volume 8 (2002) ; 2002 >
-    au < manifest ; Neural Plasticity Volume 9 (2003) ; 2003 >
-    au < manifest ; Neural Plasticity Volume 10 (2004) ; 2004 >
-    au < manifest ; Neural Plasticity Volume 11 (2005) ; 2005 >
-    au < manifest ; Neural Plasticity Volume 12 (2006) ; 2006 >
-    au < manifest ; Neural Plasticity Volume 2007 ; 2007 >
-    au < manifest ; Neural Plasticity Volume 2008 ; 2008 >
+    au < testing ; Neural Plasticity Volume 1 (1995) ; 1995 >
+    au < testing ; Neural Plasticity Volume 2 (1996) ; 1996 >
+    au < testing ; Neural Plasticity Volume 3 (1997) ; 1997 >
+    au < testing ; Neural Plasticity Volume 4 (1998) ; 1998 >
+    au < testing ; Neural Plasticity Volume 5 (1999) ; 1999 >
+    au < testing ; Neural Plasticity Volume 6 (2000) ; 2000 >
+    au < testing ; Neural Plasticity Volume 7 (2001) ; 2001 >
+    au < testing ; Neural Plasticity Volume 8 (2002) ; 2002 >
+    au < testing ; Neural Plasticity Volume 9 (2003) ; 2003 >
+    au < testing ; Neural Plasticity Volume 10 (2004) ; 2004 >
+    au < testing ; Neural Plasticity Volume 11 (2005) ; 2005 >
+    au < testing ; Neural Plasticity Volume 12 (2006) ; 2006 >
+    au < testing ; Neural Plasticity Volume 2007 ; 2007 >
+    au < testing ; Neural Plasticity Volume 2008 ; 2008 >
+    au < testing ; Neural Plasticity Volume 2009 ; 2009 >
+    au < testing ; Neural Plasticity Volume 2010 ; 2010 >
 
   }
 
@@ -2113,6 +2163,8 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = ogi
 
+    au < testing ; Obstetrics and Gynecology International Volume 2009 ; 2009 >
+    au < testing ; Obstetrics and Gynecology International Volume 2010 ; 2010 >
 
   }
 
@@ -2125,21 +2177,23 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = psse
 
-    au < manifest ; Physical Separation in Science and Engineering Volume 1 (1994) ; 1994 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 2 (1995) ; 1995 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 3 (1996) ; 1996 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 4 (1997) ; 1997 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 5 (1998) ; 1998 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 6 (1999) ; 1999 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 7 (2000) ; 2000 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 8 (2001) ; 2001 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 9 (2002) ; 2002 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 10 (2003) ; 2003 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 11 (2004) ; 2004 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 12 (2005) ; 2005 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 13 (2006) ; 2006 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 2007 ; 2007 >
-    au < manifest ; Physical Separation in Science and Engineering Volume 2008 ; 2008 >
+    au < testing ; Physical Separation in Science and Engineering Volume 1 (1994) ; 1994 >
+    au < testing ; Physical Separation in Science and Engineering Volume 2 (1995) ; 1995 >
+    au < testing ; Physical Separation in Science and Engineering Volume 3 (1996) ; 1996 >
+    au < testing ; Physical Separation in Science and Engineering Volume 4 (1997) ; 1997 >
+    au < testing ; Physical Separation in Science and Engineering Volume 5 (1998) ; 1998 >
+    au < testing ; Physical Separation in Science and Engineering Volume 6 (1999) ; 1999 >
+    au < testing ; Physical Separation in Science and Engineering Volume 7 (2000) ; 2000 >
+    au < testing ; Physical Separation in Science and Engineering Volume 8 (2001) ; 2001 >
+    au < testing ; Physical Separation in Science and Engineering Volume 9 (2002) ; 2002 >
+    au < testing ; Physical Separation in Science and Engineering Volume 10 (2003) ; 2003 >
+    au < testing ; Physical Separation in Science and Engineering Volume 11 (2004) ; 2004 >
+    au < testing ; Physical Separation in Science and Engineering Volume 12 (2005) ; 2005 >
+    au < testing ; Physical Separation in Science and Engineering Volume 13 (2006) ; 2006 >
+    au < testing ; Physical Separation in Science and Engineering Volume 2007 ; 2007 >
+    au < testing ; Physical Separation in Science and Engineering Volume 2008 ; 2008 >
+    au < testing ; Physical Separation in Science and Engineering Volume 2009 ; 2009 >
+    au < testing ; Physical Separation in Science and Engineering Volume 2010 ; 2010 >
 
   }
 
@@ -2152,9 +2206,11 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = ppar
 
-    au < manifest ; PPAR Research Volume 2006 ; 2006 >
-    au < manifest ; PPAR Research Volume 2007 ; 2007 >
-    au < manifest ; PPAR Research Volume 2008 ; 2008 >
+    au < testing ; PPAR Research Volume 2006 ; 2006 >
+    au < testing ; PPAR Research Volume 2007 ; 2007 >
+    au < testing ; PPAR Research Volume 2008 ; 2008 >
+    au < testing ; PPAR Research Volume 2009 ; 2009 >
+    au < testing ; PPAR Research Volume 2010 ; 2010 >
 
   }
 
@@ -2167,9 +2223,11 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
 
     param[journal_id] = psyche
 
-    au < manifest ; Psyche Volume 1 (1804) ; 1804 >
-    au < manifest ; Psyche Volume 2 (1805) ; 1805 >
-    au < manifest ; Psyche Volume 3 (1806) ; 1806 >
+comment[volume_order] = volume order is wrong, goes back to 1974
+
+    au < manifest ; Psyche Volume 1 (1804) ; 1894 >
+    au < manifest ; Psyche Volume 2 (1805) ; 1895 >
+    au < manifest ; Psyche Volume 3 (1806) ; 1896 >
     au < manifest ; Psyche Volume 4 (1897) ; 1897 >
     au < manifest ; Psyche Volume 5 (1898) ; 1898 >
     au < manifest ; Psyche Volume 6 (1899) ; 1899 >
@@ -2278,6 +2336,7 @@ comment[444] = test 2009 and 2010 volumes above last 2 batches
     au < doesNotExist ; Psyche Volume 2007 ; 2007 >
     au < doesNotExist ; Psyche Volume 2008 ; 2008 >
     au < manifest ; Psyche Volume 2009 ; 2009 >
+    au < manifest ; Psyche Volume 2010 ; 2010 >
 
   }
 
