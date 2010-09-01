@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.129 2010-06-17 18:47:45 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.129.4.1 2010-09-01 08:00:48 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -217,6 +217,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     PREFIX + "historySize";
   static final int DEFAULT_HISTORY_MAX = 500;
 
+  /** Map of regexp to priority.  If set, AUIDs are assigned the
+   * corresponding crawl priority of the first regexp they match. */
+  static final String PARAM_CRAWL_PRIORITY_AUID_MAP =
+    PREFIX + "crawlPriorityAuidMap";
+  static final List DEFAULT_CRAWL_PRIORITY_AUID_MAP = null;
+
   /** Regexp matching URLs we never want to collect.  Intended to stop
    * runaway crawls by catching recursive URLS */
   static final String PARAM_EXCLUDE_URL_PATTERN =
@@ -263,6 +269,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long paramMinWindowOpenFor = DEFAULT_MIN_WINDOW_OPEN_FOR;
   private boolean paramRestartAfterCrash = DEFAULT_RESTART_AFTER_CRASH;
   private Pattern globallyExcludedUrlPattern;
+  private Map<Pattern,Integer> crawlPriorityAuidMap;
 
   private int histSize = DEFAULT_HISTORY_MAX;
 
@@ -431,6 +438,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       paramStartCrawlsInitialDelay =
 	config.getTimeInterval(PARAM_START_CRAWLS_INITIAL_DELAY,
 			       DEFAULT_START_CRAWLS_INITIAL_DELAY);
+      if (config.containsKey(PARAM_CRAWL_PRIORITY_AUID_MAP)) {
+	crawlPriorityAuidMap =
+	  makeCrawlPriorityAuidMap(config.getList(PARAM_CRAWL_PRIORITY_AUID_MAP,
+						  DEFAULT_CRAWL_PRIORITY_AUID_MAP));
+      }
       if (changedKeys.contains(PARAM_START_CRAWLS_INTERVAL)) {
 	paramStartCrawlsInterval =
 	  config.getTimeInterval(PARAM_START_CRAWLS_INTERVAL,
@@ -642,6 +654,37 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  /** Set up crawl priority map. */
+  Map<Pattern,Integer> makeCrawlPriorityAuidMap(Collection<String> patternPairs) {
+    if (patternPairs != null) {
+      Map<Pattern,Integer> map = new LinkedMap();
+      for (String pair : patternPairs) {
+	// Find the last occurrence of comma to avoid regexp quoting
+	int pos = pair.lastIndexOf(',');
+	if (pos < 0) {
+	  logger.error("Malformed auid-regexp,priority pair, ignored: " + pair);
+	  continue;
+	}
+	String regexp = pair.substring(0, pos);
+	String pristr = pair.substring(pos + 1);
+	int pri;
+	Pattern pat;
+	try {
+	  pri = Integer.parseInt(pristr);
+	  int flags = Perl5Compiler.READ_ONLY_MASK;
+	  pat = RegexpUtil.getCompiler().compile(regexp, flags);
+	  logger.info("Crawl priority " + pri +
+		      ", auid pattern: " + pat.getPattern());
+	  map.put(pat, pri);
+	} catch (MalformedPatternException e) {
+	  logger.error("Illegal crawl priority pattern, ignored: " + regexp, e);
+	}	  
+      }
+      return map;
+    }
+    return null;
+  }
+
   public void startRepair(ArchivalUnit au, Collection urls,
 			  CrawlManager.Callback cb, Object cookie,
                           ActivityRegulator.Lock lock) {
@@ -770,6 +813,12 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
 				   Object cookie, ActivityRegulator.Lock lock) {
+    startNewContentCrawl(au, 0, cb, cookie, lock);
+  }
+
+  public void startNewContentCrawl(ArchivalUnit au, int priority,
+				   CrawlManager.Callback cb,
+				   Object cookie, ActivityRegulator.Lock lock) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
@@ -781,7 +830,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     CrawlReq req;
     try {
       req = new CrawlReq(au, cb, cookie, lock);
-      req.setPriority(1);
+      req.setPriority(priority);
     } catch (RuntimeException e) {
       logger.error("Couldn't create CrawlReq: " + au, e);
       callCallback(cb, cookie, false, null);
@@ -1388,6 +1437,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	      ausEligibleCrawl++;
 	      if (req == null) {
 		req = new CrawlReq(au);
+		setReqPriority(req);
 	      }
 	      Object rateKey = au.getFetchRateLimiterKey();
 	      if (rateKey == null) {
@@ -1413,6 +1463,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  void setReqPriority(CrawlReq req) {
+    if (crawlPriorityAuidMap != null) {
+      Perl5Matcher matcher = RegexpUtil.getMatcher();
+      String auid = req.getAu().getAuId();
+      for (Map.Entry<Pattern,Integer> ent : crawlPriorityAuidMap.entrySet()) {
+	if (matcher.contains(auid, ent.getKey())) {
+	  req.setPriority(ent.getValue());
+	  return;
+	}
+      }
+    }
+  }
 
   /** Orders AUs (wrapped in CrawlReq) by crawl priority:<ol>
    * <li>Explicit request priority

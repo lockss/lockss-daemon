@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.23 2008-09-09 07:52:06 tlipkis Exp $
+ * $Id: MockCrawlManager.java,v 1.23.30.1 2010-09-01 08:00:48 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,12 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
   }
 
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
+                                   Object cookie, ActivityRegulator.Lock lock) {
+    scheduleNewContentCrawl(au, cb, cookie);
+  }
+
+  public void startNewContentCrawl(ArchivalUnit au, int priority,
+				   CrawlManager.Callback cb,
                                    Object cookie, ActivityRegulator.Lock lock) {
     scheduleNewContentCrawl(au, cb, cookie);
   }
