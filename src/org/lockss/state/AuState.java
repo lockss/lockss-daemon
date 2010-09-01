@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.40 2009-05-06 16:36:36 tlipkis Exp $
+ * $Id: AuState.java,v 1.41 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class AuState implements LockssSerializable {
 
   public enum AccessType {OpenAccess, Subscription};
 
+
   // Persistent state vars
   protected long lastCrawlTime;		// last successful crawl
   protected long lastCrawlAttempt;
@@ -67,6 +68,7 @@ public class AuState implements LockssSerializable {
   protected double v3Agreement = -1.0;
   protected double highestV3Agreement = -1.0;
   protected AccessType accessType;
+  protected SubstanceChecker.State hasSubstance;
 
   protected transient long lastPollAttempt; // last time we attempted to
 					    // start a poll
@@ -110,7 +112,9 @@ public class AuState implements LockssSerializable {
 	 lastTopLevelPoll, lastPollStart, -1, null, 0,
 	 lastTreeWalk,
 	 crawlUrls, null, clockssSubscriptionStatus,
-	 v3Agreement, highestV3Agreement,  historyRepo);
+	 v3Agreement, highestV3Agreement,
+	 SubstanceChecker.State.Unknown,
+	 historyRepo);
   }
 
   public AuState(ArchivalUnit au,
@@ -124,6 +128,7 @@ public class AuState implements LockssSerializable {
 		 int clockssSubscriptionStatus,
 		 double v3Agreement,
 		 double highestV3Agreement,
+		 SubstanceChecker.State hasSubstance,
 		 HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
@@ -141,6 +146,7 @@ public class AuState implements LockssSerializable {
     this.clockssSubscriptionStatus = clockssSubscriptionStatus;
     this.v3Agreement = v3Agreement;
     this.highestV3Agreement = highestV3Agreement;
+    this.hasSubstance = hasSubstance;
     this.historyRepo = historyRepo;
   }
 
@@ -303,16 +309,7 @@ public class AuState implements LockssSerializable {
     if (previousCrawlState != null) {
       logger.error("saveLastCrawl() called twice", new Throwable());
     }
-    previousCrawlState =
-      new AuState(au,
-		  lastCrawlTime, lastCrawlAttempt,
-		  lastCrawlResult, lastCrawlResultMsg,
-		  lastTopLevelPoll, lastPollStart,
-		  lastPollResult, lastPollResultMsg, pollDuration,
-		  lastTreeWalk, crawlUrls,
-		  accessType,
-		  clockssSubscriptionStatus, v3Agreement, highestV3Agreement,
-		  null);
+    previousCrawlState = copy();
   }
 
   /**
@@ -347,20 +344,25 @@ public class AuState implements LockssSerializable {
     historyRepo.storeAuState(this);
   }
 
+  private AuState copy() {
+    return new AuState(au,
+		       lastCrawlTime, lastCrawlAttempt,
+		       lastCrawlResult, lastCrawlResultMsg,
+		       lastTopLevelPoll, lastPollStart,
+		       lastPollResult, lastPollResultMsg, pollDuration,
+		       lastTreeWalk, crawlUrls,
+		       accessType,
+		       clockssSubscriptionStatus,
+		       v3Agreement, highestV3Agreement,
+		       hasSubstance,
+		       null);
+  }
+
   private void saveLastPoll() {
     if (previousPollState != null) {
       logger.error("saveLastPoll() called twice", new Throwable());
     }
-    previousPollState =
-      new AuState(au,
-		  lastCrawlTime, lastCrawlAttempt,
-		  lastCrawlResult, lastCrawlResultMsg,
-		  lastTopLevelPoll, lastPollStart,
-		  lastPollResult, lastPollResultMsg, pollDuration,
-		  lastTreeWalk, crawlUrls,
-		  accessType,
-		  clockssSubscriptionStatus, v3Agreement, highestV3Agreement,
-		  null);
+    previousPollState = copy();
   }
 
   /**
@@ -431,6 +433,21 @@ public class AuState implements LockssSerializable {
     return v3Agreement > highestV3Agreement ? v3Agreement : highestV3Agreement;
   }
   
+  public void setSubstanceState(SubstanceChecker.State state) {
+    hasSubstance = state;
+  }
+
+  public SubstanceChecker.State getSubstanceState() {
+    if (hasSubstance == null) {
+      hasSubstance = SubstanceChecker.State.Unknown;
+    }
+    return hasSubstance;
+  }
+
+  public boolean hasNoSubstance() {
+    return hasSubstance == SubstanceChecker.State.No;
+  }
+
   /**
    * Sets the last treewalk time to the current time.  Does not save itself
    * to disk, as it is desireable for the treewalk to run every time the
@@ -511,6 +528,10 @@ public class AuState implements LockssSerializable {
       clockssSubscriptionStatus = val;
       historyRepo.storeAuState(this);
     }
+  }
+
+  public void storeAuState() {
+    historyRepo.storeAuState(this);
   }
 
   public String toString() {

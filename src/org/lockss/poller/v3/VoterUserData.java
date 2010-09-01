@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.21 2008-08-12 18:34:26 dshr Exp $
+ * $Id: VoterUserData.java,v 1.22 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 
 /**
@@ -76,6 +77,7 @@ public class VoterUserData
   private String errorDetail;
   private boolean activePoll = true;
   private double agreementHint;
+  private SubstanceChecker.State subCheckerState;
   /** @deprecated 
    * Left here only for deserialization compatibility */
   private String statusString;
@@ -94,7 +96,7 @@ public class VoterUserData
                        String pollKey, long duration, String hashAlgorithm,
                        byte[] pollerNonce, byte[] voterNonce,
                        byte[] introEffortProof, File messageDir) throws IOException {
-    log.debug3("Creating V3 Voter User Data for poll " + pollKey);
+    log.debug3("Creating V3 Voter User Data for poll " + pollKey + ", " + spec);
     this.spec = spec;
     this.auId = spec.getAuId();
     this.url = spec.getUrl();
@@ -387,6 +389,14 @@ public class VoterUserData
 
   public void setAgreementHint(double agreementHint) {
     this.agreementHint = agreementHint;
+  }
+
+  public SubstanceChecker.State getSubstanceCheckerState() {
+    return subCheckerState;
+  }
+
+  public void setSubstanceCheckerState(SubstanceChecker.State subCheckerState) {
+    this.subCheckerState = subCheckerState;
   }
 
   /*

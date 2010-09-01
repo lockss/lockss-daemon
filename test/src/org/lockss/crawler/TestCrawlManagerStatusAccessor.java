@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatusAccessor.java,v 1.13 2007-10-05 23:31:10 tlipkis Exp $
+ * $Id: TestCrawlManagerStatusAccessor.java,v 1.14 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,8 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
 // 			   ColumnDescriptor.TYPE_STRING),
     });
 
+  private MockLockssDaemon theDaemon;
+
 
   public void setUp() throws Exception {
     // Must set up a plugin manager for these tests, otherwise
@@ -116,7 +118,7 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
     // checks if AUs are internal or not (using
     // PluginManager.isInternalAu(foo))
     super.setUp();
-    MockLockssDaemon theDaemon = getMockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
     theDaemon.setPluginManager(new PluginManager());
 
     statusSource = new MockCrawlManagerStatusSource(theDaemon);
@@ -150,6 +152,12 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   private MockArchivalUnit makeMockAuWithId(String auid) {
     MockArchivalUnit mau = new MockArchivalUnit();
     mau.setAuId(auid);
+    mau.setPlugin(new MockPlugin(theDaemon));
+    PluginTestUtil.registerArchivalUnit(mau);
+    MockAuState aus = new MockAuState();
+    MockNodeManager nodeManager = new MockNodeManager();
+    getMockLockssDaemon().setNodeManager(nodeManager, mau);
+    nodeManager.setAuState(aus);
     return mau;
   }
 
@@ -421,28 +429,26 @@ public class TestCrawlManagerStatusAccessor extends LockssTestCase {
   }
 
 
-
-  /** @deprecated */
-  private static MockCrawlStatus makeStatus(String type, long start, long end) {
+  private  MockCrawlStatus makeStatus(String type, long start, long end) {
     MockCrawlStatus status = makeStatus(type, Crawler.STATUS_UNKNOWN);
     status.setStartTime(start);
     status.setEndTime(end);
     return status;
   }
 
-  private static MockCrawlStatus makeStatus(String type, int code) {
+  private MockCrawlStatus makeStatus(String type, int code) {
     MockCrawlStatus status = new MockCrawlStatus();
     status.setType(type);
-    status.setAu(new MockArchivalUnit());
+    status.setAu(makeMockAuWithId("foo"));
     status.setCrawlStatus(code);
     return status;
   }
 
-  private static MockCrawlStatus makeStatus(String type, int code,
-					    String crawlStatus) {
+  private MockCrawlStatus makeStatus(String type, int code,
+				     String crawlStatus) {
     MockCrawlStatus status = new MockCrawlStatus();
     status.setType(type);
-    status.setAu(new MockArchivalUnit());
+    status.setAu(makeMockAuWithId("foo"));
     status.setCrawlStatus(code, crawlStatus);
     return status;
   }

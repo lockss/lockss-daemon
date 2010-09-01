@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.46 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.47 2010-09-01 07:54:31 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class MockCachedUrl implements CachedUrl {
   private ArchivalUnit au;
   private String url;
   private InputStream cachedIS;
-  private CIProperties cachedProp;
+  private CIProperties cachedProp = new CIProperties();
 
   private boolean isLeaf = true;
 
@@ -261,7 +261,6 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public String getContentType(){
-    if (cachedProp == null) return null;
     return cachedProp.getProperty(PROPERTY_CONTENT_TYPE);
   }
 
@@ -304,7 +303,6 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public void setProperty(String key, String val) {
-    if (cachedProp == null) cachedProp = new CIProperties();
     cachedProp.put(key, val);
   }
 

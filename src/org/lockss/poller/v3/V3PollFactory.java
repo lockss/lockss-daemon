@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.29 2009-03-05 05:42:01 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.30 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -277,8 +277,25 @@ public class V3PollFactory extends BasePollFactory {
     }
     ArchivalUnit au = cus.getArchivalUnit();
 
-    // Never vote if not crawled, even if pub down
-    if (AuUtil.getAuState(au).getLastCrawlTime() <= 0) { 
+    AuState aus = AuUtil.getAuState(au);
+
+    // Decline poll if AU is known not to have substance.  (Might drop out
+    // later if we discover, while hashing, that AU has no substance.)
+    switch (aus.getSubstanceState()) {
+    case No:
+      log.debug("Declining poll request from " + orig +
+		", AU has no substantial content: " + au.getName());
+      sendNak(daemon, PollNak.NAK_NO_SUBSTANCE, pollspec.getAuId(), m);
+      return null;
+    default:
+    }
+
+    // Never vote if not crawled, even if pub down XXX Voting should be
+    // allowed if either crawled or recovered.  Substance test isn't
+    // enoough.  Should vote only after *complete* crawl or recovery (which
+    // might be determined by poll agreement), but might have substance
+    // after incomplete crawl.
+    if (aus.getLastCrawlTime() <= 0) { 
       log.debug("AU not crawled, not voting: " + pollspec.getAuId());
       sendNak(daemon, PollNak.NAK_NOT_CRAWLED, pollspec.getAuId(), m);
       return null;

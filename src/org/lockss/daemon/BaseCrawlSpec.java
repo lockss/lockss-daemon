@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.10 2008-08-17 08:45:41 tlipkis Exp $
+ * $Id: BaseCrawlSpec.java,v 1.11 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -94,6 +94,11 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
    */
   public void setCrawlWindow(CrawlWindow window) {
     this.window = window;
+  }
+
+  /** Default implementation returns null */
+  public List getStartingUrls() {
+    return null;
   }
 
   public List getPermissionPages() {

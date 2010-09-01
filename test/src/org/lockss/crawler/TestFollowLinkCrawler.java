@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.33 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.34 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.util.*;
 import java.io.*;
 
 import org.apache.commons.collections.set.*;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.*;
@@ -43,6 +44,7 @@ import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.state.*;
 import org.lockss.util.urlconn.*;
+import static org.lockss.state.SubstanceChecker.State;
 
 public class TestFollowLinkCrawler extends LockssTestCase {
 
@@ -73,6 +75,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau = new MyMockArchivalUnit();
     mau.setPlugin(plug);
     mau.setAuId("MyMockTestAu");
+    MockNodeManager nodeManager = new MockNodeManager();
+    getMockLockssDaemon().setNodeManager(nodeManager, mau);
+    nodeManager.setAuState(aus);
     startUrls = ListUtil.list(startUrl);
     mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 
@@ -386,6 +391,122 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     // url2 should have been eliminated by the crawl filter
     assertEquals(SetUtil.set(url1, url3, url4), crawler.fetched);
   }
+
+  List<Pattern> compileRegexps(List<String> regexps)
+      throws MalformedPatternException {
+    return RegexpUtil.compileRegexps(regexps);
+  }
+
+  String nsurl1="http://www.example.com/one.html";
+  String nsurl2="http://www.example.com/two";
+  String nsurl3="http://www.example.com/three";
+  String nsurl4="http://www.example.com/four";
+  String nsurl5="http://www.example.com/redir1";
+
+  public void testNoSubstance(SubstanceChecker.State expSubState,
+			      List<String> substanceUrlRegexps,
+			      List<String> nonSubstanceUrlRegexps)
+      throws Exception {
+    testNoSubstance(expSubState, substanceUrlRegexps,
+		    nonSubstanceUrlRegexps, null);
+  }
+
+  public void testNoSubstance(SubstanceChecker.State expSubState,
+			      List<String> substanceUrlRegexps,
+			      List<String> nonSubstanceUrlRegexps,
+			      List<String> urlsToFollow
+			      )
+      throws Exception {
+
+    if (substanceUrlRegexps != null)
+      mau.setSubstanceUrlPatterns(compileRegexps(substanceUrlRegexps));
+    if (nonSubstanceUrlRegexps != null)
+      mau.setNonSubstanceUrlPatterns(compileRegexps(nonSubstanceUrlRegexps));
+
+    if (urlsToFollow == null) {
+      urlsToFollow = ListUtil.list(nsurl1, nsurl2, nsurl4);
+    }
+    crawler.setUrlsToFollow(urlsToFollow);
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    mau.addUrl(startUrl, false, true);
+//     mau.addUrl(url1, StringUtil.separatedString(ListUtil.list(nsurl2, nsurl3, nsurl4),
+// 						" "));
+    mau.addUrl(nsurl1, false, true);
+    mau.addUrl(nsurl2, false, true);
+    CIProperties props = new CIProperties();
+    props.put(CachedUrl.PROPERTY_CONTENT_URL, nsurl5);
+    mau.addUrl(nsurl3, false, true, props);
+
+    mau.addUrl(nsurl4, true, true);
+
+    assertTrue(crawler.doCrawl());
+    AuState aus1 = AuUtil.getAuState(mau);
+    SubstanceChecker.State subState = aus1.getSubstanceState();
+    assertEquals(expSubState, subState);
+  }
+
+
+  public void testNoSubstanceNoPats() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.Unknown, null, null);
+  }
+
+  public void testNoSubstanceNoUrlsMatchSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.No, ListUtil.list("important"), null);
+  }
+
+  public void testNoSubstanceSomeUrlsMatchSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.Yes, ListUtil.list("important","two"), null);
+  }
+
+  // Same as previous but disabled
+  public void testNoSubstanceDisabled() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "None");
+    testNoSubstance(State.Unknown, ListUtil.list("important","two"), null);
+  }
+
+  public void testNoSubstanceSomeAlreadyCachedUrlsMatchSubstancePatterns()
+      throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.Yes, ListUtil.list("four"), null);
+  }
+
+  public void testNoSubstanceRedirUrlMatchesSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.Yes, ListUtil.list("important","redir"), null,
+		    ListUtil.list(nsurl1, nsurl2, nsurl3));
+  }
+
+  public void testNoSubstanceSumeUrlsMatchNonSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.Yes, null, ListUtil.list("important","two"));
+  }
+
+  public void testNoSubstanceAllUrlsMatchNonSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.No, null,
+		    ListUtil.list("one","two","three", "four"));
+  }
+
+  public void testNoSubstanceMostUrlsMatchNonSubstancePatterns() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Crawl");
+    testNoSubstance(State.Yes, null,
+		    ListUtil.list("one","tow","three", "four"));
+  }
+
+
 
   private static class MyFiltFact implements FilterFactory {
     int skip;

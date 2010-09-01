@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.78 2010-02-22 07:00:29 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.79 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.net.*;
 import java.io.*;
 import org.apache.commons.collections.map.LRUMap;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
@@ -136,6 +137,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
   protected boolean storeArchive = false;  // XXX need to keep stub archive
   protected String crawlEndReportEmail = DEFAULT_CRAWL_END_REPORT_EMAIL;
   protected String crawlEndReportHashAlg = DEFAULT_CRAWL_END_REPORT_HASH_ALG;
+  protected SubstanceChecker subChecker;
 
   // Cache recent negative results from au.shouldBeCached().  This is set
   // to an LRUMsp when crawl is initialzed, it's initialized here to a
@@ -213,7 +215,6 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 				     DEFAULT_CRAWL_END_REPORT_EMAIL);
     crawlEndReportHashAlg = config.get(PARAM_CRAWL_END_REPORT_HASH_ALG,
 				       DEFAULT_CRAWL_END_REPORT_HASH_ALG);
-
   }
 
   protected boolean doCrawl0() {
@@ -234,6 +235,16 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     if (!withinCrawlWindow()) {
       crawlStatus.setCrawlStatus(Crawler.STATUS_WINDOW_CLOSED);
       return aborted();
+    }
+
+    // Enable no-substance-collected detection if so configured and
+    // supported by plugin
+    subChecker = new SubstanceChecker(au);
+    if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_CRAWL)) {
+      logger.debug2("Checking AU for substance during crawl");
+    } else {
+      subChecker = null;
+      logger.debug3("Not checking AU for substance during crawl");
     }
 
     if (!populatePermissionMap()) {
@@ -325,6 +336,31 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 		 + Math.round(((double)fqSumLen) / ((double)fqSamples)));
     if (crawlAborted) {
       return aborted();
+    }
+
+    if (subChecker != null) {
+      switch (subChecker.hasSubstance()) {
+      case No:
+	String msg =
+	  "No files containing substantial content were collected.";
+	if (!aus.hasNoSubstance()) {
+	  // Alert only on transition to no substance from other than no
+	  // substance.
+	  // XXX should raise this alert only if at least one new file (not
+	  // just new version) was collected
+	  if (alertMgr != null) {
+	    alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE, au),
+				msg);
+	  }
+	  aus.setSubstanceState(SubstanceChecker.State.No);
+	}
+	logger.siteWarning("" + au + ": " + msg);
+	break;
+      case Yes:
+	aus.setSubstanceState(SubstanceChecker.State.Yes);
+	break;
+      default:
+      }
     }
 
     if (crawlStatus.isCrawlError()) {
@@ -442,6 +478,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  } else {
 	    cacheWithRetries(uc);
 	  }
+	  checkSubstanceCollected(uc.getCachedUrl());
 	  curl.setFetched(true);
 	}
       } catch (CacheException.RepositoryException ex) {
@@ -489,6 +526,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
       if (wdog != null) {
 	wdog.pokeWDog();
       }
+      // If didn't fetch, check for existing substance file
+      checkSubstanceCollected(uc.getCachedUrl());
       if (!reparse) {
 	logger.debug2(uc+" exists, not reparsing");
 	processedUrls.put(uc.getUrl(), curl);
@@ -568,6 +607,12 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     }
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (!crawlStatus.isCrawlError());
+  }
+
+  void checkSubstanceCollected(CachedUrl cu) {
+    if (subChecker != null) {
+      subChecker.checkSubstance(cu);
+    }
   }
 
   private String getCharset(CachedUrl cu) {

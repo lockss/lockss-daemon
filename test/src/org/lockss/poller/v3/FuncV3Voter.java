@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.25 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: FuncV3Voter.java,v 1.26 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
+import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -54,7 +55,8 @@ public class FuncV3Voter extends LockssTestCase {
   private PeerIdentity voterId;
 
   private String tempDirPath;
-  private ArchivalUnit testau;
+  private MockPlugin plug;
+  private MockArchivalUnit mau;
   private PollManager pollmanager;
   private HashService hashService;
 
@@ -97,7 +99,6 @@ public class FuncV3Voter extends LockssTestCase {
   }
 
   private void startDaemon() throws Exception {
-    this.testau = setupAu();
     theDaemon = getMockLockssDaemon();
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
@@ -125,11 +126,15 @@ public class FuncV3Voter extends LockssTestCase {
     theDaemon.setStreamCommManager(new MyMockStreamCommManager(theDaemon));
     theDaemon.setDatagramRouterManager(new MyMockLcapDatagramRouter());
     theDaemon.setRouterManager(new MyMockLcapRouter());
-    theDaemon.setNodeManager(new MockNodeManager(), testau);
-    theDaemon.setPluginManager(new MyMockPluginManager(theDaemon, testau));
+    setupAu();
+
+    theDaemon.setNodeManager(new MockNodeManager(), mau);
+    theDaemon.getPluginManager();
     theDaemon.setDaemonInited(true);
     theDaemon.getSchedService().startService();
-    theDaemon.getActivityRegulator(testau).startService();
+
+
+    theDaemon.getActivityRegulator(mau).startService();
     idmgr.startService();
     hashService.startService();
     pollmanager.startService();
@@ -144,7 +149,7 @@ public class FuncV3Voter extends LockssTestCase {
   private void stopDaemon() throws Exception {
     theDaemon.getPollManager().stopService();
     theDaemon.getPluginManager().stopService();
-    theDaemon.getActivityRegulator(testau).stopService();
+    theDaemon.getActivityRegulator(mau).stopService();
     theDaemon.getSystemMetrics().stopService();
     theDaemon.getRouterManager().stopService();
     theDaemon.getDatagramRouterManager().stopService();
@@ -152,15 +157,16 @@ public class FuncV3Voter extends LockssTestCase {
     theDaemon.getSchedService().stopService();
     theDaemon.getIdentityManager().stopService();
     theDaemon.setDaemonInited(false);
-    this.testau = null;
+    this.mau = null;
     TimeBase.setReal();
   }
 
-  private MockArchivalUnit setupAu() {
-    MockArchivalUnit mau = new MockArchivalUnit();
+  private void setupAu() {
+    mau = new MockArchivalUnit();
     mau.setAuId("mock");
-    MockPlugin plug = new MockPlugin();
+    plug = new MockPlugin(theDaemon);
     mau.setPlugin(plug);
+    PluginTestUtil.registerArchivalUnit(plug, mau);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.setEstimatedHashDuration(1000);
     List files = new ArrayList();
@@ -172,12 +178,11 @@ public class FuncV3Voter extends LockssTestCase {
     }
     cus.setHashItSource(files);
     cus.setFlatItSource(files);
-    return mau;
   }
 
   public V3LcapMessage makePollMsg() {
     V3LcapMessage msg =
-      new V3LcapMessage("auid", "key", "3", ByteArray.makeRandomBytes(20),
+      new V3LcapMessage("mock", "key", "3", ByteArray.makeRandomBytes(20),
                         ByteArray.makeRandomBytes(20),
                         V3LcapMessage.MSG_POLL,
                         msgDeadline, pollerId, tempDir, theDaemon);
@@ -224,8 +229,13 @@ public class FuncV3Voter extends LockssTestCase {
     return msg;
   }
 
-  public void testNonRepairPoll() throws Exception {
-    PollSpec ps = new PollSpec(testau.getAuCachedUrlSet(), null, null,
+  public void testNonRepairPoll(int expOp) throws Exception {
+    testNonRepairPoll(expOp, null);
+  }
+
+  public void testNonRepairPoll(int expOp, V3LcapMessage.PollNak expNak)
+      throws Exception {
+    PollSpec ps = new PollSpec(mau.getAuCachedUrlSet(), null, null,
                                Poll.V1_CONTENT_POLL);
     byte[] introEffortProof = ByteArray.makeRandomBytes(20);
       
@@ -250,7 +260,10 @@ public class FuncV3Voter extends LockssTestCase {
 
     V3LcapMessage vote = voter.getSentMessage();
     assertNotNull(vote);
-    assertEquals(vote.getOpcode(), V3LcapMessage.MSG_VOTE);
+    assertEquals(expOp, vote.getOpcode());
+    if (expOp == V3LcapMessage.MSG_POLL_ACK) {
+      assertEquals(expNak, vote.getNak());
+    }
 
     /*
     voter.handleMessage(msgRepairRequest);
@@ -261,7 +274,35 @@ public class FuncV3Voter extends LockssTestCase {
     voter.receiveMessage(msgReceipt);
   }
   
+  public void testNonRepairPoll() throws Exception {
+    testNonRepairPoll(V3LcapMessage.MSG_VOTE);
+  }
+
+  public void testDetectNoSubstance() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Vote");
+    List<String> pats = ListUtil.list("foo");
+    mau.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(pats));
+
+    testNonRepairPoll(V3LcapMessage.MSG_VOTE,
+		      V3LcapMessage.PollNak.NAK_NO_SUBSTANCE);
+  }
+
+  public void testDetectSubstance() throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Vote");
+    List<String> pats = ListUtil.list(".*\\.html$");
+    mau.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(pats));
+
+    testNonRepairPoll(V3LcapMessage.MSG_VOTE);
+  }
+
   public void testSerializeAndReloadVoter() throws Exception {
+    testSerializeAndReloadVoter(false);
+  }
+
+  public void testSerializeAndReloadVoter(boolean expSubChecker)
+      throws Exception {
     
     // Just check to be sure that checkpointing and restoring a poll
     // does not fail.
@@ -269,7 +310,11 @@ public class FuncV3Voter extends LockssTestCase {
     MyMockV3Voter voter1 = new MyMockV3Voter(theDaemon, msgPoll);
     voter1.startPoll();
     voter1.getPsmInterp().waitIdle(TIMEOUT_SHOULDNT);
-
+    SubstanceChecker subChecker1 = voter1.getSubstanceChecker();
+    if (expSubChecker) {
+      assertNotNull("Expected a SubstanceChecker", subChecker1);
+      subChecker1.setHasSubstance(SubstanceChecker.State.Yes);
+    }
     voter1.checkpointPoll();
     File stateDir = voter1.getStateDir();
     
@@ -286,8 +331,23 @@ public class FuncV3Voter extends LockssTestCase {
     assertFalse(voter1.isPollCompleted());
     assertTrue(voter2.isPollActive());
     assertFalse(voter2.isPollCompleted());
+    SubstanceChecker subChecker2 = voter1.getSubstanceChecker();
+    if (expSubChecker) {
+      assertEquals(SubstanceChecker.State.Yes, subChecker2.hasSubstance());
+    }
   }
   
+  public void testSerializeAndReloadVoterWithSubstanceChecker()
+      throws Exception {
+    ConfigurationUtil.addFromArgs(SubstanceChecker.PARAM_DETECT_NO_SUBSTANCE_MODE,
+				  "Vote");
+    List<String> pats = ListUtil.list(".*\\.html$");
+    mau.setSubstanceUrlPatterns(RegexpUtil.compileRegexps(pats));
+
+    testSerializeAndReloadVoter(true);
+  }
+
+
   private class MyMockV3Voter extends V3Voter {
     private FifoQueue sentMessages = new FifoQueue();
 
@@ -411,29 +471,6 @@ public class FuncV3Voter extends LockssTestCase {
     }
     protected void resetConfig() {
       log.debug("MockStreamCommManager: resetConfig()");
-    }
-
-  }
-  
-  class MyMockPluginManager extends PluginManager {
-    ArchivalUnit au;
-    LockssDaemon daemon;
-
-    public MyMockPluginManager(LockssDaemon daemon, ArchivalUnit au) {
-      this.daemon = daemon;
-      this.au = au;
-    }
-
-    public LockssDaemon getDaemon() {
-      return daemon;
-    }
-
-    public CachedUrlSet findCachedUrlSet(PollSpec spec) {
-      return au.getAuCachedUrlSet();
-    }
-
-    public CachedUrlSet findCachedUrlSet(String auId) {
-      return au.getAuCachedUrlSet();
     }
   }
 }

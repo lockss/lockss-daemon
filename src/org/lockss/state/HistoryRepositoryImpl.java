@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.87 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.88 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -274,6 +274,7 @@ public class HistoryRepositoryImpl
                          auState.getClockssSubscriptionStatus(),
                          auState.getV3Agreement(),
                          auState.getHighestV3Agreement(),
+			 auState.getSubstanceState(),
                          this);
     }
     catch (SerializationException.FileNotFound fnf) {

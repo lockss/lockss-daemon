@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.16 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.17 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.security.*;
 
 import org.lockss.config.*;
 import org.lockss.plugin.*;
+import org.lockss.state.SubstanceChecker;
 import org.lockss.util.*;
 
 /**
@@ -77,6 +78,8 @@ public class BlockHasher extends GenericHasher {
   private long verBytesRead;
   InputStream is = null;
   MessageDigest[] peerDigests;
+
+  protected SubstanceChecker subChecker = null;
 
   public BlockHasher(CachedUrlSet cus,
 		     MessageDigest[] digests,
@@ -138,6 +141,12 @@ public class BlockHasher extends GenericHasher {
     includeUrl = val;
   }
 
+  /** Tell the BlockHasher to run all the hashed URLs through a substance
+   * checker */
+  public void setSubstanceChecker(SubstanceChecker subChecker) {
+    this.subChecker = subChecker;
+  }
+
   private String ts = null;
   public String typeString() {
     if (ts == null) {
@@ -175,6 +184,10 @@ public class BlockHasher extends GenericHasher {
       }
     }
     if (isTrace) log.debug3("isIncluded(" + url + "): " + res);
+    if (res && subChecker != null) {
+      CachedUrl cu = AuUtil.getCu(node);
+      subChecker.checkSubstance(cu);
+    }
     return res;
   }
 

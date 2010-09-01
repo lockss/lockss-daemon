@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.69 2009-12-22 02:19:43 tlipkis Exp $
+ * $Id: V3Voter.java,v 1.70 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.*;
 import org.apache.commons.collections.*;
 
 import org.lockss.app.*;
+import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.daemon.CachedUrlSetHasher;
 import org.lockss.hasher.*;
@@ -75,12 +76,14 @@ public class V3Voter extends BasePoll {
   public static final int STATUS_DECLINED_POLL = 8;
   public static final int STATUS_VOTE_ACCEPTED = 9;
   public static final int STATUS_ABORTED = 10;
+  public static final int STATUS_NO_SUBSTANCE = 11;
   
   public static final String[] STATUS_STRINGS = 
   {
    "Initialized", "Accepted Poll", "Hashing", "Voted",
    "No Time Available", "Complete", "Expired w/o Voting", "Error",
    "Declined Poll", "Vote Accepted", "Aborted",
+   "Aborted: No Substantial Content",
   };
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
@@ -188,8 +191,10 @@ public class V3Voter extends BasePoll {
     30 * Constants.SECOND;
 
   /**
-   * If true, previous agreement will be required to serve repairs even for
-   * open access AUs
+   * If true, when an invitation is declined because our estimated hash
+   * time is so long that it can't be completed within the vote time, even
+   * if no other hashes are scheduled, the estimated hash time for the AU
+   * will be recalculated.
    */
   public static final String PARAM_RECALC_EXCESSIVE_HASH_ESTIMATE =
     PREFIX + "recalcExcessiveHashEstimate";
@@ -240,6 +245,7 @@ public class V3Voter extends BasePoll {
   private int blockErrorCount = 0;
   private int maxBlockErrorCount = V3Poller.DEFAULT_MAX_BLOCK_ERROR_COUNT;
   private boolean isAsynch;
+  private SubstanceChecker subChecker;
 
   // Task used to reserve time for hashing at the start of the poll.
   // This task is cancelled before the real hash is scheduled.
@@ -314,7 +320,7 @@ public class V3Voter extends BasePoll {
     }
     log.debug2("Will choose " + nomineeCount
                + " outer circle nominees to send to poller");
-    stateMachine = makeStateMachine(voterUserData);
+    postConstruct();
     checkpointPoll();
   }
 
@@ -346,7 +352,33 @@ public class V3Voter extends BasePoll {
     voterUserData.setPollSpec(new PollSpec(cus, Poll.V3_POLL));
     voterUserData.setVoter(this);
 
+    postConstruct();
+  }
+
+  private void postConstruct() {
     stateMachine = makeStateMachine(voterUserData);
+
+    AuState aus = AuUtil.getAuState(getAu());
+    switch (aus.getSubstanceState()) {
+    case No:
+    case Unknown:
+      subChecker = new SubstanceChecker(getAu());
+      if (subChecker.isEnabledFor(SubstanceChecker.CONTEXT_VOTE)) {
+	log.debug2("Enabling substance checking");
+	SubstanceChecker.State state = voterUserData.getSubstanceCheckerState();
+	if (state != null) {
+	  subChecker.setHasSubstance(state);
+	}
+      } else {
+	subChecker = null;
+      }
+      break;
+    case Yes:
+      // Don't need to check for substance if already known to exist.  Only
+      // valid assumption since polls don't delete files.
+      subChecker = null;
+      break;
+    }
   }
 
   PsmInterp newPsmInterp(PsmMachine stateMachine, Object userData) {
@@ -858,11 +890,14 @@ public class V3Voter extends BasePoll {
    */
   boolean generateVote() throws NoSuchAlgorithmException {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
-    CachedUrlSetHasher hasher =
+    BlockHasher hasher =
       new BlockHasher(voterUserData.getCachedUrlSet(),
 		      initHasherDigests(),
 		      initHasherByteArrays(),
 		      new BlockEventHandler());
+    if (subChecker != null) {
+      hasher.setSubstanceChecker(subChecker);
+    }
     HashService hashService = theDaemon.getHashService();
     Deadline hashDeadline = task.getLatestFinish();
 
@@ -889,7 +924,7 @@ public class V3Voter extends BasePoll {
   }
 
   /**
-   * Called by the HashService callback when hashing for this CU is
+   * Called by the HashService callback when hashing for this AU is
    * complete.
    */
   public void hashComplete() {
@@ -1053,14 +1088,48 @@ public class V3Voter extends BasePoll {
 	return;
       }
       if (e == null) {
-        hashComplete();
+	if (subChecker != null) {
+	  switch (subChecker.hasSubstance()) {
+	  case No:
+	    AuState aus = AuUtil.getAuState(getAu());
+	    if (!aus.hasNoSubstance()) {
+	      // Alert only on transition to no substance from other than no
+	      // substance.
+	      String msg =
+		"AU has no files containing substantial content; not voting.";
+	      pollManager.raiseAlert(Alert.auAlert(Alert.CRAWL_NO_SUBSTANCE,
+						   getAu()),
+				     msg);
+	    }
+ 	    aus.setSubstanceState(SubstanceChecker.State.No);
+	    aus.storeAuState();
+	    log.warning("No files containing substantial content found during hash; not voting");
+	    V3LcapMessage msg =
+	      voterUserData.makeMessage(V3LcapMessage.MSG_VOTE);
+	    msg.setVoterNonce(null);
+	    msg.setNak(PollNak.NAK_NO_SUBSTANCE);
+	    try {
+	      sendMessageTo(msg, getPollerId());
+	    } catch (IOException ex) {
+	      log.error("Unable to send message in poll " + getKey() + ": " +
+			msg, ex);
+	    }
+	    stopPoll(STATUS_NO_SUBSTANCE);
+	    break;
+	  default:
+	    hashComplete();
+	    break;
+	  }
+	} else {
+	  hashComplete();
+	}
       } else {
         if (e instanceof SchedService.Timeout) {
           log.warning("Hash deadline passed before the hash was finished.");
 	  sendNak(V3LcapMessage.PollNak.NAK_HASH_TIMEOUT);
           stopPoll(STATUS_EXPIRED);
         } else {
-          log.warning("Hash failed : " + e.getMessage(), e);
+          log.warning("Hash failed: " + e.getMessage(), e);
           voterUserData.setErrorDetail(e.getMessage());
 	  sendNak(V3LcapMessage.PollNak.NAK_HASH_ERROR);
           abortPollWithError();
@@ -1113,6 +1182,10 @@ public class V3Voter extends BasePoll {
 
   public VoterUserData getVoterUserData() {
     return voterUserData;
+  }
+  
+  SubstanceChecker getSubstanceChecker() {
+    return subChecker;
   }
   
   public String getStatusString() {
@@ -1221,6 +1294,9 @@ public class V3Voter extends BasePoll {
     // This is sometimes the case during testing.
     if (pollSerializer == null) return;
     try {
+      if (subChecker != null) {
+	voterUserData.setSubstanceCheckerState(subChecker.hasSubstance());
+      }
       pollSerializer.saveVoterUserData(voterUserData);
     } catch (PollSerializerException ex) {
       log.warning("Unable to save voter state.");

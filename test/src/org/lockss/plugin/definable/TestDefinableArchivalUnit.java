@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.44 2010-08-01 21:34:11 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.45 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.plugin.definable;
 
 import java.util.*;
 import java.io.*;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.plugin.*;
@@ -183,7 +184,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertIsomorphic(exp, res);
   }
 
-  public void testConverUrlListWithRange() {
+  public void testConvertUrlListWithRange() {
     configProps.add(ConfigParamDescr.ISSUE_RANGE);
     Vector vec = new Vector(2);
     String key = ConfigParamDescr.ISSUE_RANGE.getKey();
@@ -194,7 +195,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     String expectedReturn = "My Test Range = (.*)";
     try {
       cau.convertUrlList("\"My Test Range = %s\", " + key);
-      fail("Range param in non-regexp should throw");
+      fail("Range param in URL template should throw");
     } catch (PluginException.InvalidDefinition e) {
     }
   }
@@ -392,13 +393,21 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testMakeName() {
     additionalAuConfig.putString("journal_id", "MyJournal");
     additionalAuConfig.putInt("volume", 43);
+    additionalAuConfig.putCollection("issue_range", ListUtil.list("a", "d"));
+    additionalAuConfig.putCollection("num_issue_range", ListUtil.list(12,17));
+    additionalAuConfig.putCollection("issue_set",
+				     ListUtil.list("red", "green", "blue"));
     configProps.add(ConfigParamDescr.JOURNAL_ID);
+    configProps.add(ConfigParamDescr.ISSUE_RANGE);
+    configProps.add(ConfigParamDescr.NUM_ISSUE_RANGE);
+    configProps.add(ConfigParamDescr.ISSUE_SET);
     defMap.putString(DefinableArchivalUnit.KEY_AU_NAME,
-                  "\"%s Vol %d\",journal_id,volume");
+                  "\"%s Vol: %d Range: %s NumRange: %s Set: %s\"," +
+		     "journal_id,volume,issue_range,num_issue_range,issue_set");
     setupAu(additionalAuConfig);
-    String expectedReturn = "MyJournal Vol 43";
-    String actualReturn = cau.makeName();
-    assertEquals("return value", expectedReturn, actualReturn);
+    String expectedReturn =
+      "MyJournal Vol: 43 Range: a-d NumRange: 12-17 Set: red, green, blue";
+    assertEquals("return value", expectedReturn, cau.makeName());
   }
 
   public void testMakeRules(boolean includeStart) throws Exception {
@@ -746,6 +755,31 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
       assertMatchesRE("Can't compile URL pattern", e.getMessage());
     }
+  }
+
+  public void testMakeNonSubstanceUrlPatterns() throws Exception {
+    defMap.putString(DefinableArchivalUnit.KEY_AU_NON_SUBSTANCE_URL_PATTERN,
+		     "\"vol%d/images/\",volume");
+    additionalAuConfig.putInt("volume", 43);
+    setupAu(additionalAuConfig);
+
+    assertNull(cau.makeSubstanceUrlPatterns());
+    assertIsomorphic(ListUtil.list("vol43/images/"),
+		     RegexpUtil.regexpCollection(cau.makeNonSubstanceUrlPatterns()));
+  }
+
+  public void testMakeSubstanceUrlPatterns() throws Exception {
+    defMap.putCollection(DefinableArchivalUnit.KEY_AU_SUBSTANCE_URL_PATTERN,
+			 ListUtil.list("\"vol%d/pdf/\",volume",
+				       "\"%s/toc\",base_url"));
+    additionalAuConfig.putInt("volume", 47);
+    additionalAuConfig.putString("base_url", "http://si.te/path/");
+    setupAu(additionalAuConfig);
+
+    assertNull(cau.makeNonSubstanceUrlPatterns());
+    assertIsomorphic(ListUtil.list("vol47/pdf/",
+				   "http\\:\\/\\/si\\.te\\/path\\//toc"),
+		     RegexpUtil.regexpCollection(cau.makeSubstanceUrlPatterns()));
   }
 
   /*

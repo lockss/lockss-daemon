@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.209 2010-02-11 21:02:17 tlipkis Exp $
+ * $Id: PollManager.java,v 1.210 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -942,8 +942,12 @@ public class PollManager
     return (pollspecs.iterator());
   }
 
-  void raiseAlert(Alert alert) {
+  public void raiseAlert(Alert alert) {
     theAlertManager.raiseAlert(alert);
+  }
+
+  public void raiseAlert(Alert alert, String msg) {
+    theAlertManager.raiseAlert(alert, msg);
   }
 
   /**

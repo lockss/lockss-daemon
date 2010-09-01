@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.51 2010-07-21 06:11:27 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.52 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -212,19 +212,16 @@ public class DefinablePlugin extends BasePlugin {
 
 
 
+  enum PrintfContext {Regexp, URL, Display};
+
   void checkParamAgreement() {
-    for (String key : DefinableArchivalUnit.printfUrlListKeys) {
-      checkParamAgreement(key, false);
-    }
-    for (String key : DefinableArchivalUnit.printfStringKeys) {
-      checkParamAgreement(key, false);
-    }
-    for (String key : DefinableArchivalUnit.printfRegexpKeys) {
-      checkParamAgreement(key, true);
+    for (Map.Entry<String,PrintfContext> ent
+	   : DefinableArchivalUnit.printfKeysContext.entrySet()) {
+      checkParamAgreement(ent.getKey(), ent.getValue());
     }
   }
 
-  void checkParamAgreement(String key, boolean isRE) {
+  void checkParamAgreement(String key, PrintfContext context) {
     List<String> printfList = getElementList(key);
     if (printfList == null) {
       return;
@@ -244,14 +241,23 @@ public class DefinablePlugin extends BasePlugin {
 					      arg + " in " + printf + " in " +
 					      getPluginName());
 	}
-	// ensure range params used only in REs
-	if (!isRE) {
+	// ensure range and set params used only in legal context
+	switch (context) {
+	case Regexp:
+	case Display:
+	  // everything is legal in a regexp or a display string
+	  break;
+	case URL:
+	  // NUM_RANGE and SET legal because can enumerate.  Can't
+	  // enumerate RANGE
 	  switch (descr.getType()) {
 	  case ConfigParamDescr.TYPE_RANGE:
 	  throw new
 	    PluginException.InvalidDefinition("Range parameter (" + arg +
-					      ") used in non-regexp in " +
-					      getPluginName() + ": " + printf);
+					      ") used in illegal context in " +
+					      getPluginName() + ": "
+					      + key + ": " + printf);
+	  default:
 	  }
 	}
       }

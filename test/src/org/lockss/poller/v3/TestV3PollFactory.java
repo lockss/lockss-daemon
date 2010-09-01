@@ -112,6 +112,7 @@ public class TestV3PollFactory extends LockssTestCase {
     mau.setAuId("mock");
     MockPlugin plug = new MockPlugin(theDaemon);
     mau.setPlugin(plug);
+    PluginTestUtil.registerArchivalUnit(mau);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.setEstimatedHashDuration(1000);
     List files = new ArrayList();

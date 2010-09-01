@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateMachineFactory.java,v 1.10 2008-02-15 09:10:56 tlipkis Exp $
+ * $Id: PollerStateMachineFactory.java,v 1.11 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -96,6 +96,7 @@ public class PollerStateMachineFactory implements PsmMachine.Factory {
                                      new PsmMethodMsgAction(actionClass,
                                                            "handleReceiveVote")),
                      new PsmResponse(V3Events.evtError, "FinalizePoller"),
+                     new PsmResponse(V3Events.evtFinalize, "FinalizePoller"),
                      new PsmResponse(V3Events.evtOk, "TallyVote")).setResumable(true),
         new PsmState("TallyVote", new PsmMethodAction(actionClass,
                                                       "handleTallyVote"),

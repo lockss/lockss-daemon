@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.47 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.48 2010-09-01 07:54:32 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
     },
     NAK_NO_AU {
       public String toString() { return "No AU"; }
+    },
+    NAK_NO_SUBSTANCE {
+      public String toString() {
+	return "AU has no files containing substantial content"; }
     },
     NAK_PLUGIN_VERSION_MISMATCH {
       public String toString() { return "Plugin Version Mismatch"; }
@@ -862,6 +866,10 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
       if (getNak() != null) {
 	sb.append(" Nak:");
 	sb.append(getNak());
+      }
+      if (m_archivalID != null) {
+	sb.append(" AUID: ");
+	sb.append(m_archivalID);
       }
       sb.append(" Key:");
       sb.append(m_key);

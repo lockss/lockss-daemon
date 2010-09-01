@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.9 2009-04-07 04:50:51 tlipkis Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.10 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 
 public class SingleCrawlStatusAccessor implements StatusAccessor {
@@ -142,11 +143,21 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     return true;
   }
 
+  public static final String FOOT_NO_SUBSTANCE_CRAWL_STATUS =
+    "Though the crawl finished successfully, no files containing substantial content were collected.";
+
   private List getSummaryInfo(CrawlerStatus status) {
     List res = new ArrayList();
-    res.add(new StatusTable.SummaryInfo("Status",
-					ColumnDescriptor.TYPE_STRING,
-					status.getCrawlStatusMsg()));
+    StatusTable.SummaryInfo statusSi =
+      new StatusTable.SummaryInfo("Status",
+				  ColumnDescriptor.TYPE_STRING,
+				  status.getCrawlStatusMsg());
+    AuState aus = AuUtil.getAuState(status.getAu());
+    if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
+	aus.hasNoSubstance()) {
+      statusSi.setValueFootnote(FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+    }
+    res.add(statusSi);
     String sources = StringUtil.separatedString(status.getSources());
     res.add(new StatusTable.SummaryInfo("Source",
 					ColumnDescriptor.TYPE_STRING,
@@ -155,12 +166,6 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
     res.add(new StatusTable.SummaryInfo("Starting Url(s)",
 					ColumnDescriptor.TYPE_STRING,
 					startUrls));
-//     res.add(new StatusTable.SummaryInfo("",
-// 					ColumnDescriptor.TYPE_STRING,
-// 					));
-
-
-//     addIfNonZero(res, "Active Crawls", ct.active);
     return res;
   }
 
@@ -171,6 +176,4 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
 					  new Long(val)));
     }
   }
-
-
 }

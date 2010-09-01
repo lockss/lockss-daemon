@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.53 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.54 2010-09-01 07:54:33 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 import java.util.*;
 
+import org.apache.oro.text.regex.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
@@ -211,6 +212,20 @@ public interface ArchivalUnit {
    * @return path, or null if no such rule
    */
   public String getPerHostPermissionPath();
+
+  /**
+   * Construct a list of Patterns of non-substance URLs.  Used to determine
+   * whether initial crawl collects actual content.
+   */
+  public List<Pattern> makeNonSubstanceUrlPatterns()
+      throws ArchivalUnit.ConfigurationException;
+
+  /**
+   * Construct a list of Patterns of substance URLs.  Used to determine
+   * whether initial crawl collects actual content.
+   */
+  public List<Pattern> makeSubstanceUrlPatterns()
+      throws ArchivalUnit.ConfigurationException;
 
   /**
    * Query the {@link AuState} object to determine if this is the proper
