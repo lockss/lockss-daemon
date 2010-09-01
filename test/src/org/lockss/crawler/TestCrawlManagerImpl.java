@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.79 2010-05-18 06:15:38 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.80 2010-09-01 07:50:37 tlipkis Exp $
  */
 
 /*
@@ -1245,7 +1245,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       aus[12].setShouldCrawlForNewContent(false);
       aus[7].setShouldCrawlForNewContent(false);
       auPri.setShouldCrawlForNewContent(false);
-      crawlManager.startNewContentCrawl(auPri, null, null, null);
+      crawlManager.startNewContentCrawl(auPri, 1, null, null, null);
       assertEquals(auPri, crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(auPri);
       auPri.setShouldCrawlForNewContent(false);
@@ -1262,6 +1262,25 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	BoundedTreeSet coll = (BoundedTreeSet)ent.getValue();
 	assertEquals(3, coll.getMaxSize());
       }
+    }
+
+    public void testCrawlPriorityPatterns() {
+      ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
+				    "foo(4|5),3;bar,5");
+      MockArchivalUnit mau1 = new MockArchivalUnit(new MockPlugin(theDaemon));
+      mau1.setAuId("other");
+      CrawlReq req = new CrawlReq(mau1);
+      crawlManager.setReqPriority(req);
+      assertEquals(0, req.getPriority());
+      mau1.setAuId("foo4");
+      crawlManager.setReqPriority(req);
+      assertEquals(3, req.getPriority());
+      mau1.setAuId("foo5");
+      crawlManager.setReqPriority(req);
+      assertEquals(3, req.getPriority());
+      mau1.setAuId("x~ybar~z");
+      crawlManager.setReqPriority(req);
+      assertEquals(5, req.getPriority());
     }
 
     public void testOdcCrawlStarter() {

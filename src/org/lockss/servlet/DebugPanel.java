@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.17 2009-11-24 04:33:45 dshr Exp $
+ * $Id: DebugPanel.java,v 1.18 2010-09-01 07:50:37 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,16 @@ import org.lockss.daemon.status.*;
 /** UI to invoke various daemon actions
  */
 public class DebugPanel extends LockssServlet {
+
+  public static final String PREFIX = Configuration.PREFIX + "debugPanel.";
+
+  /**
+   * Priority for crawls started from the debug panel
+   */
+  public static final String PARAM_CRAWL_PRIORITY = 
+    PREFIX + "crawlPriority";
+  private static final int DEFAULT_CRAWL_PRIORITY = 10;
+
   static final String KEY_ACTION = "action";
   static final String KEY_MSG = "msg";
   static final String KEY_NAME_SEL = "name_sel";
@@ -171,7 +181,9 @@ public class DebugPanel extends LockssServlet {
     if (au == null) return;
     try {
       if (((CrawlManagerImpl)crawlMgr).isEligibleForNewContentCrawl(au)) {
-	crawlMgr.startNewContentCrawl(au, null, null, null);
+	Configuration config = cfgMgr.getCurrentConfig();
+	int pri = config.getInt(PARAM_CRAWL_PRIORITY, DEFAULT_CRAWL_PRIORITY);
+	crawlMgr.startNewContentCrawl(au, pri, null, null, null);
 	statusMsg = "Crawl requested for " + au.getName();
       } else {
  	errMsg = "Not eligible for crawl.  Click again to override rate limiter.";
