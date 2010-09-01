@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.20 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.20.32.1 2010-09-01 08:04:13 tlipkis Exp $
  */
 
 /*
@@ -290,7 +290,13 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 //     row.put(SOURCES,
 // 	    (StringUtil.separatedString(status.getSources(), "\n")));
     if (statusColRef == null) {
-      statusColRef = makeRef(status.getCrawlStatusMsg(),
+      Object statusMsg = status.getCrawlStatusMsg();
+      if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
+	  AuUtil.getAuState(au).hasNoSubstance()) {
+	statusMsg =
+	  new StatusTable.DisplayedValue(statusMsg).setFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+      }
+      statusColRef = makeRef(statusMsg,
 			     SINGLE_CRAWL_STATUS_ACCESSOR, key);
     }
     row.put(CRAWL_STATUS, statusColRef);

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.20 2007-09-24 18:37:11 dshr Exp $
+ * $Id: CrawlSpec.java,v 1.20.44.1 2010-09-01 08:04:13 tlipkis Exp $
  */
 
 /*
@@ -56,10 +56,17 @@ public interface CrawlSpec {
   public void setCrawlWindow(CrawlWindow window);
 
   /**
+   * Get the URLs from which to start crawling.  May be null if the crawl
+   * type has nother way of finding starting points (e.g., OAI)
+   * @return an immutable list of URLs, as Strings, or null
+   */
+  public List getStartingUrls();
+
+  /**
    * Gets the permission pages list
    * @return a list of permission pages URLS, as Strings
    */
-  public List getPermissionPages();
+  public List<String> getPermissionPages();
 
   /**
    * Returns whether the rule is null

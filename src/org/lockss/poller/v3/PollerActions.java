@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.29 2010-08-01 21:33:06 tlipkis Exp $
+ * $Id: PollerActions.java,v 1.29.2.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public class PollerActions {
   }
   
   @ReturnEvents("evtFinalize")
-  public static PsmEvent handleDeclinePoll(PsmEvent evt,  PsmInterp interp) {
+  public static PsmEvent handleDeclinePoll(PsmEvent evt, PsmInterp interp) {
     // Remove the participant from the poll.
     ParticipantUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtFinalize;
@@ -231,7 +231,7 @@ public class PollerActions {
     return V3Events.evtOk;
   }
 
-  @ReturnEvents("evtOk,evtError")
+  @ReturnEvents("evtOk,evtError,evtFinalize")
   public static PsmEvent handleReceiveVote(PsmMsgEvent evt, PsmInterp interp) {
     ParticipantUserData ud = getUserData(interp);
     if (!ud.isPollActive()) return V3Events.evtError;
@@ -241,10 +241,9 @@ public class PollerActions {
       ud.setPollNak(nak);
       log.debug2("Received nak (" + nak + ") instead of vote from "
 		 + ud.getVoterId() + " in poll " + ud.getKey());
-      ud.setStatus(V3Poller.PEER_STATUS_DROPPED_OUT,
-		   ud.getPollNak().toString());
+      ud.setStatus(V3Poller.PEER_STATUS_DROPPED_OUT, nak.toString());
       ud.removeParticipant();
-      return V3Events.evtError;
+      return V3Events.evtFinalize;
     }
     log.debug2("Received vote from " + ud.getVoterId() + " in poll "
                + ud.getKey());

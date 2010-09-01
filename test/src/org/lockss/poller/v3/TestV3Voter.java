@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.15 2010-02-11 21:02:16 tlipkis Exp $
+ * $Id: TestV3Voter.java,v 1.15.8.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -91,20 +91,9 @@ public class TestV3Voter extends LockssTestCase {
     lockssDaemon.getPluginManager().startService();
     lockssDaemon.getPollManager().startService();
 
-    repairRequestor = findPid("TCP:[192.168.0.100]:9723");
-
-    startMsg = new V3LcapMessage("auid", "key", "1",
-                                 ByteArray.makeRandomBytes(20),
-                                 ByteArray.makeRandomBytes(20),
-                                 V3LcapMessage.MSG_POLL,
-                                 987654321,
-                                 repairRequestor,
-                                 tempDir, lockssDaemon);
-    
-    voter = new V3Voter(lockssDaemon, startMsg);
-
     // Create an AU
     au = new MockArchivalUnit(new MockPlugin(lockssDaemon));
+    PluginTestUtil.registerArchivalUnit(au);
     ((MockArchivalUnit)au).addUrl(repairUrl);
 
     // Create the repository
@@ -117,6 +106,19 @@ public class TestV3Voter extends LockssTestCase {
     MockNodeManager nodeManager = new MockNodeManager();
     getMockLockssDaemon().setNodeManager(nodeManager, au);
     nodeManager.setAuState(aus);
+
+    repairRequestor = findPid("TCP:[192.168.0.100]:9723");
+
+    startMsg = new V3LcapMessage(au.getAuId(), "key", "1",
+                                 ByteArray.makeRandomBytes(20),
+                                 ByteArray.makeRandomBytes(20),
+                                 V3LcapMessage.MSG_POLL,
+                                 987654321,
+                                 repairRequestor,
+                                 tempDir, lockssDaemon);
+    
+    voter = new V3Voter(lockssDaemon, startMsg);
+
   }
   
   public void tearDown() throws Exception {

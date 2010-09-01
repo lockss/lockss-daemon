@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.80 2010-08-01 21:34:12 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.80.2.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.definable.DefinablePlugin.*;
 import org.lockss.oai.*;
 import org.lockss.state.AuState;
+import static org.lockss.plugin.definable.DefinablePlugin.PrintfContext;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -86,6 +87,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   //public static final String KEY_AU_URL_NORMALIZER = "au_url_normalizer";
   public static final String KEY_AU_EXPLODER_HELPER = "au_exploder_helper";
   public static final String KEY_AU_EXPLODER_PATTERN = "au_exploder_pattern";
+  public static final String KEY_AU_SUBSTANCE_URL_PATTERN =
+    "au_substance_url_pattern";
+  public static final String KEY_AU_NON_SUBSTANCE_URL_PATTERN =
+    "au_non_substance_url_pattern";
 
   public static final String SUFFIX_PARSER = "_parser";
   public static final String SUFFIX_LINK_EXTRACTOR_FACTORY =
@@ -119,24 +124,22 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected ExternalizableMap definitionMap;
 
-  /** Array of DefinablePlugin keys that hold parameterized printf strings
-   * used to generate URL lists */ 
-  public static String[] printfUrlListKeys = {
-    KEY_AU_START_URL,
-    KEY_AU_MANIFEST,
-    KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
-  };
+  /** Context in which various printf templates are interpreted, for
+   * argument type checking */
+  static Map<String,PrintfContext> printfKeysContext = new HashMap();
+  static {
+    printfKeysContext.put(KEY_AU_START_URL, PrintfContext.URL);
+    printfKeysContext.put(KEY_AU_MANIFEST, PrintfContext.URL);
+    printfKeysContext.put(KEY_AU_START_URL, PrintfContext.URL);
 
-  /** Array of DefinablePlugin keys that hold parameterized printf strings
-   * used to generate human readable strings */ 
-  public static String[] printfStringKeys = {
-    KEY_AU_NAME,
-  };
+    printfKeysContext.put(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN,
+			  PrintfContext.Regexp);
+    printfKeysContext.put(KEY_AU_CRAWL_RULES, PrintfContext.Regexp);
+    printfKeysContext.put(KEY_AU_SUBSTANCE_URL_PATTERN, PrintfContext.Regexp);
+    printfKeysContext.put(KEY_AU_NON_SUBSTANCE_URL_PATTERN,
+			  PrintfContext.Regexp);
 
-  /** Array of all DefinablePlugin keys that hold parameterized printf
-   * regexp strings */ 
-  public static String[] printfRegexpKeys = {
-    KEY_AU_CRAWL_RULES,
+    printfKeysContext.put(KEY_AU_NAME, PrintfContext.Display);
   };
 
   protected DefinableArchivalUnit(Plugin myPlugin) {
@@ -155,35 +158,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return (DefinablePlugin)plugin;
   }
 
-  protected List<String> getElementList(String key) {
-    return getDefinablePlugin().getElementList(key);
-  }
-
-  protected List convertPatternList(String key) {
-    List<String> patternList = getElementList(key);
-
-    if (patternList == null) {
-      return null;
-    }
-    ArrayList<String> res = new ArrayList(patternList.size());
-    for (String pattern : patternList) {
-      if (StringUtil.isNullString(pattern)) {
-	log.warning("Null pattern string in " + key);
-	continue;
-      }
-      List<String> lst = convertUrlList(pattern);
-      if (lst == null) {
-	log.warning("Null converted string in " + key + ", from " + pattern);
-	continue;
-      }
-      res.addAll(lst);
-    }
-    res.trimToSize();
-    return res;
-  }
-
   protected List<String> getPermissionPages() {
-    List res = convertPatternList(KEY_AU_MANIFEST);
+    List res = convertUrlListList(KEY_AU_MANIFEST);
     if (res == null) {
       return super.getPermissionPages();
     }
@@ -212,7 +188,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   @Override
   protected List<String> makeStartUrls() throws ConfigurationException {
-    List res = convertPatternList(KEY_AU_START_URL);
+    List res = convertUrlListList(KEY_AU_START_URL);
     if (res == null) {
       String msg = "Bad start url pattern: "
 	+ getElementList(KEY_AU_START_URL);
@@ -281,6 +257,45 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
   }
 
+  public List<Pattern> makeNonSubstanceUrlPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return compileRegexpList(KEY_AU_NON_SUBSTANCE_URL_PATTERN);
+  }
+
+  public List<Pattern> makeSubstanceUrlPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return compileRegexpList(KEY_AU_SUBSTANCE_URL_PATTERN);
+  }
+
+  List<Pattern> compileRegexpList(String key)
+      throws ArchivalUnit.ConfigurationException {
+    List<String> lst = convertRegexpList(key);
+    if (lst == null) {
+      return null;
+    }
+    return compileRegexpList(lst, key);
+  }
+
+  List<Pattern> compileRegexpList(List<String> regexps, String key)
+      throws ArchivalUnit.ConfigurationException {
+    List<Pattern> res = new ArrayList<Pattern>(regexps.size());
+    Perl5Compiler comp = RegexpUtil.getCompiler();
+    int flags = Perl5Compiler.READ_ONLY_MASK;
+    if (isCaseIndependentCrawlRules()) {
+      flags += Perl5Compiler.CASE_INSENSITIVE_MASK;
+    }
+    for (String re : regexps) {
+      try {
+	res.add(comp.compile(re, flags));
+      } catch (MalformedPatternException e) {
+	String msg = "Can't compile URL pattern: " + re;
+	log.error(msg + ": " + e.toString());
+	throw new ArchivalUnit.ConfigurationException(msg, e);
+      }
+    }
+    return res;
+  }
+
   public boolean isLoginPageUrl(String url) {
     Pattern urlPat =
       (Pattern)paramMap.getMapElement(KEY_AU_REDIRECT_TO_LOGIN_URL_PATTERN);
@@ -341,14 +356,16 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
   }
 
-  CrawlRule makeRules0() throws LockssRegexpException {
-    Object rule = definitionMap.getMapElement(KEY_AU_CRAWL_RULES);
+  boolean isCaseIndependentCrawlRules() {
     boolean defaultIgnoreCase =
       CurrentConfig.getBooleanParam(PARAM_CRAWL_RULES_IGNORE_CASE,
 				    DEFAULT_CRAWL_RULES_IGNORE_CASE);
-    boolean ignoreCase =
-      definitionMap.getBoolean(KEY_AU_CRAWL_RULES_IGNORE_CASE,
-			       defaultIgnoreCase);
+    return definitionMap.getBoolean(KEY_AU_CRAWL_RULES_IGNORE_CASE,
+				    defaultIgnoreCase);
+  }
+
+  CrawlRule makeRules0() throws LockssRegexpException {
+    Object rule = definitionMap.getMapElement(KEY_AU_CRAWL_RULES);
 
     if (rule instanceof String) {
 	CrawlRuleFromAuFactory fact = (CrawlRuleFromAuFactory)
@@ -360,7 +377,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       List<String> templates = (List<String>)rule;
       rules = new ArrayList(templates.size());
       for (String rule_template : templates) {
-	CrawlRule cr = convertRule(rule_template, ignoreCase);
+	CrawlRule cr = convertRule(rule_template,
+				   isCaseIndependentCrawlRules());
 	if (cr != null) {
 	  rules.add(cr);
 	}
@@ -458,6 +476,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return super.shouldCallTopLevelPoll(aus);
   }
 
+  protected List<String> convertUrlListList(String key) {
+    return convertUrlList(getElementList(key), key);
+  }
+
+  protected List<String> convertRegexpList(String key) {
+    return convertRegexpList(getElementList(key), key);
+  }
+
 // ---------------------------------------------------------------------
 //   CLASS LOADING SUPPORT ROUTINES
 // ---------------------------------------------------------------------
@@ -481,6 +507,53 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   String convertNameString(String printfString) {
     return new PrintfConverter.NameConverter(plugin, paramMap).getName(printfString);
+  }
+
+  protected List convertUrlList(List<String> printfStrings, String key) {
+    if (printfStrings == null) {
+      return null;
+    }
+    // Just a guess; each printf may generate more than one URL
+    ArrayList<String> res = new ArrayList(printfStrings.size());
+    for (String pattern : printfStrings) {
+      if (StringUtil.isNullString(pattern)) {
+	log.warning("Null pattern string in " + key);
+	continue;
+      }
+      List<String> lst = convertUrlList(pattern);
+      if (lst == null) {
+	log.warning("Null converted string in " + key + ", from " + pattern);
+	continue;
+      }
+      res.addAll(lst);
+    }
+    res.trimToSize();
+    return res;
+  }
+
+  protected List<String> convertRegexpList(List<String> printfStrings,
+					    String key) {
+    if (printfStrings == null) {
+      return null;
+    }
+    ArrayList<String> res = new ArrayList<String>(printfStrings.size());
+    for (String pattern : printfStrings) {
+      if (StringUtil.isNullString(pattern)) {
+	log.warning("Null pattern string in " + key);
+	continue;
+      }
+      String pat = convertVariableRegexpString(pattern).getRegexp();
+      if (pat == null) {
+	log.warning("Null converted regexp in " + key + ", from " + pattern);
+	continue;
+      }
+      res.add(pat);
+    }
+    return res;
+  }
+
+  protected List<String> getElementList(String key) {
+    return getDefinablePlugin().getElementList(key);
   }
 
   CrawlRule convertRule(String ruleString, boolean ignoreCase)

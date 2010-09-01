@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.7 2007-03-16 23:32:11 dshr Exp $
+ * $Id: RegexpUtil.java,v 1.7.56.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -95,6 +95,29 @@ public class RegexpUtil {
       compiledPatterns.put(re, pat);
     }
     return getMatcher().contains(s, pat);
+  }
+
+  /** Convert a Collection of Patterns to a Collection or regexp strings */
+  public static Collection<String> regexpCollection(Collection<Pattern> pats) {
+    if (pats == null) {
+      return null;
+    }
+    List<String> res = new ArrayList<String>(pats.size());
+    for (Pattern pat : pats) {
+      res.add(pat.getPattern());
+    }
+    return res;
+  }
+
+  /** Compile a list of Regexps */
+  public static List<Pattern> compileRegexps(List<String> regexps)
+      throws MalformedPatternException {
+    Perl5Compiler comp = RegexpUtil.getCompiler();
+    List<Pattern> res = new ArrayList<Pattern>();
+    for (String re : regexps) {
+      res.add(comp.compile(re));
+    }
+    return res;
   }
 
   private static class REInst {

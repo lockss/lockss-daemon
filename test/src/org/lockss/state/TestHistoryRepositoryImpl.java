@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.76 2010-02-23 05:03:36 pgust Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.76.8.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -301,7 +301,9 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
 				    321000, 222000, 3, "pollres", 12345,
 				    456000, strCol,
 				    AuState.AccessType.OpenAccess,
-				    2, 1.0, 1.0, repository);
+				    2, 1.0, 1.0,
+				    SubstanceChecker.State.Yes,
+				    repository);
     repository.storeAuState(origState);
 
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
@@ -323,6 +325,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(12345, loadedState.getPollDuration());
     assertEquals(2, loadedState.getClockssSubscriptionStatus());
     assertEquals(AuState.AccessType.OpenAccess, loadedState.getAccessType());
+    assertEquals(SubstanceChecker.State.Yes, loadedState.getSubstanceState());
     assertEquals(mau.getAuId(), loadedState.getArchivalUnit().getAuId());
 
     // check crawl urls

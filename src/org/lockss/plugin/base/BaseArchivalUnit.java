@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.143 2010-08-01 21:34:12 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.143.2.1 2010-09-01 08:04:13 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import org.apache.commons.collections.map.LRUMap;
+import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
 import org.lockss.crawler.*;
@@ -582,6 +583,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return paramMap.getString(KEY_AU_TITLE, auName);
   }
 
+  public List<Pattern> makeNonSubstanceUrlPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return null;
+  }
+
+  public List<Pattern> makeSubstanceUrlPatterns()
+      throws ArchivalUnit.ConfigurationException {
+    return null;
+  }
 
   /**
    * Use the starting url and the crawl rules to make the crawl spec needed

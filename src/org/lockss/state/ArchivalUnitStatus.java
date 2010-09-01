@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.91 2010-03-25 07:35:13 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.91.6.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -158,9 +158,10 @@ public class ArchivalUnitStatus
   static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
 
-    static final String FOOT_STATUS = "Flags may follow status: C means the AU is complete, D means that the AU is no longer available from the publisher";
+    static final String FOOT_STATUS = "Flags may follow status: C means the AU is complete, D means that the AU is no longer available from the publisher, NS means the AU has no files containing substantial content.";
 
     static final String FOOT_SIZE = "If blank, size has changed and is being recalculated.  Check again later.";
+
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
@@ -272,6 +273,7 @@ public class ArchivalUnitStatus
       long lastAttempt = auState.getLastCrawlAttempt();
       int lastResultCode = auState.getLastCrawlResult();
       String lastResult = auState.getLastCrawlResultMsg();
+      
       rowMap.put("AuLastCrawl", new Long(lastCrawl));
       // AuState files that show a successful crawl but no lastAttempt just
       // have uninitialized lastXxx fields.  Display time and status of
@@ -282,9 +284,14 @@ public class ArchivalUnitStatus
 	lastResult = "Successful";
       }
       rowMap.put("AuLastCrawlAttempt", new Long(lastAttempt));
-      String lastCrawlStatus =
+      Object lastCrawlStatus =
 	lastCrawlStatus(au, lastCrawl, lastResultCode, lastResult);
       if (lastCrawlStatus != null) {
+	if (lastResultCode == Crawler.STATUS_SUCCESSFUL &&
+	    auState.hasNoSubstance()) {
+	  lastCrawlStatus =
+	    new StatusTable.DisplayedValue(lastCrawlStatus).setFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+	}
 	rowMap.put("AuLastCrawlResultMsg", lastCrawlStatus);
       }
 
@@ -327,17 +334,21 @@ public class ArchivalUnitStatus
 
       boolean isPubDown = AuUtil.isPubDown(au);
       boolean isClosed = AuUtil.isClosed(au);
+      boolean noSubstance = auState.hasNoSubstance();
         
-      if (isPubDown || isClosed) {
-	List val = ListUtil.list(stat, " (");
+      if (isPubDown || isClosed || noSubstance) {
+	List flags = new ArrayList();
 	if (isClosed) {
-	  val.add("C");
+	  flags.add("C");
 	}
 	if (isPubDown) {
-	  val.add("D");
+	  flags.add("D");
 	}
-	val.add(")");
-	stat = val;
+	if (noSubstance) {
+	  flags.add("NS");
+	}
+	String flagStr = StringUtil.separatedString(flags, " (", ",", ")");
+	stat = ListUtil.list(stat, flagStr);
       }
 
       rowMap.put("Damaged", stat);
@@ -558,7 +569,8 @@ public class ArchivalUnitStatus
       table.setTitle(getTitle(au.getName()));
       CachedUrlSet auCus = au.getAuCachedUrlSet();
       NodeState topNode = nodeMan.getNodeState(auCus);
-      table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState(), topNode));
+      table.setSummaryInfo(getSummaryInfo(table, au,
+					  nodeMan.getAuState(), topNode));
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
 	table.setColumnDescriptors(columnDescriptors);
 	table.setDefaultSortRules(sortRules);
@@ -710,8 +722,11 @@ public class ArchivalUnitStatus
       return "Status of AU: " + key;
     }
 
-    private List getSummaryInfo(ArchivalUnit au, AuState state,
+    private List getSummaryInfo(StatusTable table,
+				ArchivalUnit au, AuState state,
                                 NodeState topNode) {
+      boolean debug = table.getOptions().get(StatusTable.OPTION_DEBUG_USER);
+
       int clockssPos = 1;
       
       // Make the status string.
@@ -829,6 +844,29 @@ public class ArchivalUnitStatus
 					  ColumnDescriptor.TYPE_STRING,
 					  (AuUtil.isPubDown(au)
 					   ? "No" : "Yes")));
+      SubstanceChecker.State subState = state.getSubstanceState();
+      boolean hasSubstancePatterns = false;
+      try {
+	hasSubstancePatterns = (au.makeSubstanceUrlPatterns() != null ||
+				au.makeNonSubstanceUrlPatterns() != null);
+      } catch (Exception e) {
+	// ignore
+      }
+
+      if (debug) {
+	if (hasSubstancePatterns) {
+	  res.add(new StatusTable.SummaryInfo("Has Substance",
+					      ColumnDescriptor.TYPE_STRING,
+					      subState.toString()));
+	}
+      } else {
+	switch (subState) {
+	case No:
+	  res.add(new StatusTable.SummaryInfo("AU has no files containing substantial content",
+					      ColumnDescriptor.TYPE_STRING,
+					      null));
+	}
+      }
 //             res.add(new StatusTable.SummaryInfo("Volume Complete",
 // 						ColumnDescriptor.TYPE_STRING,
 // 						(AuUtil.isClosed(au)

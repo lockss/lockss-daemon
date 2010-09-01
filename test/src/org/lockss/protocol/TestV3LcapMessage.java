@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.26 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.26.28.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -142,7 +142,8 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   public void testTestMessageToString() throws IOException {
     String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
-      ", Vote Key:key " +
+      ", Vote AUID: TestAU_1.0 " +
+      "Key:key " +
       "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
       "B:10 ver 3 rev 4]";

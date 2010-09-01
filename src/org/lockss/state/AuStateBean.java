@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.27 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: AuStateBean.java,v 1.27.24.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public class AuStateBean extends AuState {
 				      auState.clockssSubscriptionStatus,
 				      auState.v3Agreement,
 				      auState.highestV3Agreement,
+				      auState.hasSubstance,
 				      null);
   }
 

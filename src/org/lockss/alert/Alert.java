@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.13 2009-11-04 03:13:19 dshr Exp $
+ * $Id: Alert.java,v 1.13.14.1 2010-09-01 08:04:13 tlipkis Exp $
  */
 
 /*
@@ -95,6 +95,10 @@ public class Alert {
 
   public static final Alert CRAWL_EXCLUDED_URL =
     cAlert("CrawlExcludedURL").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
+  public static final Alert CRAWL_NO_SUBSTANCE =
+    cAlert("CrawlCollectedNoSubstantialContent").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
   public static final Alert NEW_CONTENT =

@@ -1,10 +1,10 @@
 /*
- * $Id: TestAuState.java,v 1.15 2009-03-11 06:24:27 tlipkis Exp $
+ * $Id: TestAuState.java,v 1.15.24.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2008 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,7 +39,6 @@ import org.lockss.daemon.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.v3.*;
-import org.lockss.state.*;
 import org.lockss.util.TimeBase;
 
 public class TestAuState extends LockssTestCase {
@@ -324,6 +323,18 @@ public class TestAuState extends LockssTestCase {
     aus.setAccessType(AuState.AccessType.OpenAccess);
     assertEquals(AuState.AccessType.OpenAccess, aus.getAccessType());
     assertTrue(aus.isOpenAccess());
+  }
+
+  public void testSubstanceState() {
+    AuState aus = new AuState(mau, historyRepo);
+    assertEquals(SubstanceChecker.State.Unknown, aus.getSubstanceState());
+    assertFalse(aus.hasNoSubstance());
+    aus.setSubstanceState(SubstanceChecker.State.Yes);
+    assertEquals(SubstanceChecker.State.Yes, aus.getSubstanceState());
+    assertFalse(aus.hasNoSubstance());
+    aus.setSubstanceState(SubstanceChecker.State.No);
+    assertEquals(SubstanceChecker.State.No, aus.getSubstanceState());
+    assertTrue(aus.hasNoSubstance());
   }
 
   public static void main(String[] argv) {

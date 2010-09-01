@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.88 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.88.4.1 2010-09-01 08:04:12 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+import org.apache.oro.text.regex.*;
+
 import org.lockss.daemon.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
@@ -55,6 +57,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   private CachedUrlSet cus = null;
   private MockObjectCallback pauseCallback = null;
   private List newContentUrls = null;
+  private List<Pattern> nonSubstanceUrlPatterns = null;
+  private List<Pattern> substanceUrlPatterns = null;
   private boolean shouldCrawlForNewContent = true;
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
@@ -137,6 +141,22 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public List getNewContentCrawlUrls() {
     return newContentUrls;
+  }
+
+  public List<Pattern> makeNonSubstanceUrlPatterns() {
+    return nonSubstanceUrlPatterns;
+  }
+
+  public List<Pattern> makeSubstanceUrlPatterns() {
+    return substanceUrlPatterns;
+  }
+
+  public void setNonSubstanceUrlPatterns(List<Pattern> pats) {
+    nonSubstanceUrlPatterns = pats;
+  }
+
+  public void setSubstanceUrlPatterns(List<Pattern> pats) {
+    substanceUrlPatterns = pats;
   }
 
   public TitleConfig getTitleConfig() {
