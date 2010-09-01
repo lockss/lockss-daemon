@@ -18,6 +18,7 @@
     param[publisher_id] = cms
     param[journal_id] = ccm
     param[journal_issn] = 0009-8604
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ClayMineralsSocietyPdfTransform
     implicit < status ; year; name ; param[volume_name] >
   
     au < testing ; 2002 ; Clays and Clay Minerals Volume 50 ; 50 >
