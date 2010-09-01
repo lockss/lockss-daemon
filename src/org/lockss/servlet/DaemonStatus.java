@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.79 2009-10-20 00:32:34 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.80 2010-09-01 07:51:28 tlipkis Exp $
  */
 
 /*
@@ -656,8 +656,8 @@ public class DaemonStatus extends LockssServlet {
 	  sb = new StringBuilder();
 	  sb.append("<b>");
 	  sb.append(stitle);
-	  if (sInfo.getFootnote() != null) {
-	    sb.append(addFootnote(sInfo.getFootnote()));
+	  if (sInfo.getHeaderFootnote() != null) {
+	    sb.append(addFootnote(sInfo.getHeaderFootnote()));
 	  }
 	  sb.append("</b>:&nbsp;");
 	}
@@ -673,7 +673,12 @@ public class DaemonStatus extends LockssServlet {
 	Object sval = sInfo.getValue();
 	if (sval != null) {
 	  itemtab.newCell();
-	  itemtab.add(getDisplayString(sval, sInfo.getType()));
+	  StringBuilder valSb = new StringBuilder();
+	  valSb.append(getDisplayString(sval, sInfo.getType()));
+	  if (sInfo.getValueFootnote() != null) {
+	    valSb.append(addFootnote(sInfo.getValueFootnote()));
+	  }
+	  itemtab.add(valSb.toString());
 	}
 	table.add(itemtab);
       }
@@ -800,11 +805,15 @@ public class DaemonStatus extends LockssServlet {
       StatusTable.DisplayedValue aval = (StatusTable.DisplayedValue)val;
       String str = getDisplayString1(aval.getValue(), type);
       String color = aval.getColor();
+      String footnote = aval.getFootnote();
       if (color != null) {
 	str = "<font color=" + color + ">" + str + "</font>";
       }
       if (aval.getBold()) {
 	str = "<b>" + str + "</b>";
+      }
+      if (footnote != null) {
+	str = str + addFootnote(footnote);
       }
       return str;
     } else {

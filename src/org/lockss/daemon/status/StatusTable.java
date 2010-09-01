@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.53 2008-10-07 18:13:10 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.54 2010-09-01 07:51:29 tlipkis Exp $
  */
 
 /*
@@ -328,6 +328,7 @@ public class StatusTable {
   public static class DisplayedValue implements EmbeddedValue {
     private Object value;
     private String color = null;
+    private String footnote = null;
     private boolean bold = false;
 
     /** Create a DisplayedValue with the specified value.  Any
@@ -368,6 +369,19 @@ public class StatusTable {
     /** Get the bold */
     public boolean getBold() {
       return bold;
+    }
+
+    /** Set footnote.
+     * @param footnote the footnote string
+     */
+    public DisplayedValue setFootnote(String footnote) {
+      this.footnote = footnote;
+      return this;
+    }
+
+    /** Get the footnote */
+    public String getFootnote() {
+      return footnote;
     }
 
   }
@@ -577,7 +591,8 @@ public class StatusTable {
     private String title;
     private int type;
     private Object value;
-    private String footnote;
+    private String headerFootnote;
+    private String valueFootnote;
 
     /**
      * @param title title for this SummaryInfo
@@ -606,12 +621,20 @@ public class StatusTable {
       return value;
     }
 
-    public String getFootnote() {
-      return this.footnote;
+    public String getHeaderFootnote() {
+      return this.headerFootnote;
     }
 
-    public void setFootnote(String footnote) {
-      this.footnote = footnote;
+    public void setHeaderFootnote(String footnote) {
+      this.headerFootnote = footnote;
+    }
+
+    public String getValueFootnote() {
+      return this.valueFootnote;
+    }
+
+    public void setValueFootnote(String footnote) {
+      this.valueFootnote = footnote;
     }
   }
 
