@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.102 2010-06-17 18:48:09 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.103 2010-09-01 07:58:06 tlipkis Exp $
  */
 
 /*
@@ -401,6 +401,7 @@ public class V3Poller extends BasePoll {
   private TimerQueue.Request pollCompleteRequest;
   private TimerQueue.Request voteCompleteRequest;
   private Deadline voteTallyStart;
+  private Deadline nextInvitationTime;
   private long bytesHashedSinceLastCheckpoint = 0;
   private int voteDeadlineMultiplier = DEFAULT_VOTE_DURATION_MULTIPLIER;
   private boolean enableDiscovery = DEFAULT_ENABLE_DISCOVERY;
@@ -767,8 +768,9 @@ public class V3Poller extends BasePoll {
       // If we haven't got enough peers, invite more.
       log.debug("Scheduling check for more peers to invite in " +
                 StringUtil.timeIntervalToString(timeBetweenInvitations));
+      nextInvitationTime = Deadline.in(timeBetweenInvitations);
       invitationRequest = 
-        TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+        TimerQueue.schedule(nextInvitationTime,
                             new InvitationCallback(), this);
     } else {
       log.debug("Not scheduling a followup invitation check, " +
@@ -1944,6 +1946,11 @@ public class V3Poller extends BasePoll {
 	}
         checkpointPoll();
       }
+      if (getPollSize() == 0) {
+	log.debug("Accelerating next invitation cycle because no participants in poll");
+
+	nextInvitationTime.expire();
+      }
     } catch (Exception ex) {
       log.error("Unable to remove voter from poll!", ex);
       stopPoll(V3Poller.POLLER_STATUS_ERROR);
@@ -2343,10 +2350,16 @@ public class V3Poller extends BasePoll {
 
       if (enlargeInnerCircle() && isPollActive()) {
 	// Schedule another check
+	nextInvitationTime.expireIn(timeBetweenInvitations);
 	invitationRequest =
-	  TimerQueue.schedule(Deadline.in(timeBetweenInvitations),
+	  TimerQueue.schedule(nextInvitationTime,
 			      new InvitationCallback(),
 			      cookie);
+      } else {
+	if (getPollSize() == 0) {
+	  log.debug("Talying early because no participants and no more to invite");
+	  voteTallyStart.expire();
+	}
       }
     }
 
