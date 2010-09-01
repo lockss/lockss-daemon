@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.12 2010-08-11 02:58:58 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.13 2010-09-01 07:58:47 tlipkis Exp $
  */
 
 /*
@@ -175,19 +175,17 @@ public class ListObjects extends LockssServlet {
     for (Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
 	 iter.hasNext(); ) {
       CachedUrlSetNode cusn = (CachedUrlSetNode)iter.next();
-      if (cusn.hasContent()) {
-	CachedUrl cu = AuUtil.getCu(cusn);
-	if (cu != null && cu.hasContent()) {
-	  String url = cu.getUrl();
-	  String contentType = cu.getContentType();
-	  long bytes = cu.getContentSize();
-	  if (contentType == null) {
-	    contentType = "unknown";
-	  }
-	  wrtr.println(url + "\t" + contentType + "\t" + bytes);
+      CachedUrl cu = AuUtil.getCu(cusn);
+      if (cu != null && cu.hasContent()) {
+	String url = cu.getUrl();
+	String contentType = cu.getContentType();
+	long bytes = cu.getContentSize();
+	if (contentType == null) {
+	  contentType = "unknown";
 	}
-	AuUtil.safeRelease(cu);
+	wrtr.println(url + "\t" + contentType + "\t" + bytes);
       }
+      AuUtil.safeRelease(cu);
     }
     wrtr.println("# end");
   }
