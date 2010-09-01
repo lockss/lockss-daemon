@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.8 2010-06-29 20:12:10 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.8.2.1 2010-09-01 09:10:31 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class MimeTypeMap {
     // HTML.setLinkRewriterFactory(new JavascriptHtmlLinkRewriterFactory());
     HTML.setLinkRewriterFactory(new NodeFilterHtmlLinkRewriterFactory());
     DEFAULT.putMimeTypeInfo("text/html", HTML);
+    DEFAULT.putMimeTypeInfo("application/xhtml+xml", HTML);
     setLinkExtractorFactory(CSS,
 			    DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY);
 //     CSS.setLinkExtractorFactory(new FluteCssLinkExtractor.Factory());
