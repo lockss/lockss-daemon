@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.28 2007-08-23 06:33:27 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.28.44.1 2010-09-01 08:01:25 tlipkis Exp $
  */
 
 /*
@@ -429,8 +429,8 @@ public class PollerStatus {
       StatusTable.SummaryInfo s1 =
 	new StatusTable.SummaryInfo("Caller", STRINGTYPE,
 				    poll.getCallerID());
-      s1.setFootnote("Actually, the identity of the first poll packet we saw." +
-		     "  This is not necessarily the original poll caller.");
+      s1.setHeaderFootnote("Actually, the identity of the first poll packet we saw." +
+			   "  This is not necessarily the original poll caller.");
       list.add(s1);
       list.add(new StatusTable.SummaryInfo("Start Time",
 					   ColumnDescriptor.TYPE_DATE,

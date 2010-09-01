@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.15 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: MockStatusAccessor.java,v 1.15.86.1 2010-09-01 08:01:25 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class MockStatusAccessor implements StatusAccessor {
 			       ((Integer)summaryInfoArray[ix][1]).intValue(),
 			       summaryInfoArray[ix][2]);
       if (summaryInfoArray[ix].length >= 4) {
-	summaryInfo.setFootnote((String)summaryInfoArray[ix][3]);
+	summaryInfo.setHeaderFootnote((String)summaryInfoArray[ix][3]);
       }
       list.add(summaryInfo);
     }
