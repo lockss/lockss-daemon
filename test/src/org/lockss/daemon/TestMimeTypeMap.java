@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeMap.java,v 1.6 2010-06-29 20:12:09 tlipkis Exp $
+ * $Id: TestMimeTypeMap.java,v 1.7 2010-09-01 09:11:29 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,13 @@ public class TestMimeTypeMap extends LockssTestCase {
     assertNull(mt2.getCrawlFilterFactory());
     assertTrue(mt2.getLinkExtractorFactory()
 	       instanceof RegexpCssLinkExtractor.Factory);
+
+    MimeTypeInfo mt3 =
+      MimeTypeMap.DEFAULT.getMimeTypeInfo("application/xhtml+xml");
+    assertNull(mt3.getHashFilterFactory());
+    assertNull(mt3.getCrawlFilterFactory());
+    assertTrue(mt3.getLinkExtractorFactory()
+	       instanceof GoslingHtmlLinkExtractor.Factory);
 
     ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
 				  "No.Such.Class");
