@@ -127,8 +127,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scgi/content/[^/]+/([^/]+;)?%s/&quot;, base_url, volume_name</string>
-      <string>&quot;^%scgi/(framedreprint|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar)/([^/]+;)?%s/&quot;, base_url, volume_name</string>
+      <string>&quot;^%scgi/content/[^/]+/([^/]+;)?%s/&quot;, base_url, volume</string>
+      <string>&quot;^%scgi/(framedreprint|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar)/([^/]+;)?%s/&quot;, base_url, volume</string>
     </list>
   </entry>
 </map>
