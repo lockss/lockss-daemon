@@ -589,6 +589,13 @@ class RepairHugeFromPeerV3TestCase( RepairFromPeerV3Tests ):
         return [ node ]
 
 
+# Load configuration (*before* creating test instances)
+lockss_util.config.load( 'testsuite.props' )
+
+if os.path.isfile( 'testsuite.opt' ):
+    lockss_util.config.load( 'testsuite.opt' )
+
+
 tinyUiTests = unittest.TestSuite( ( TinyUiUnknownHostTestCase(),
                                     TinyUiMalformedUrlTestCase(),
                                     TinyUiForbiddenTestCase(),
@@ -616,11 +623,6 @@ v3Tests = unittest.TestSuite( ( simpleV3Tests, randomV3Tests ) )
 # Release-candidate tests
 postTagTests = unittest.TestSuite( ( tinyUiTests, v3Tests ) )
 
-
-# Load configuration
-lockss_util.config.load( 'testsuite.props' )
-if os.path.isfile( 'testsuite.opt' ):
-    lockss_util.config.load( 'testsuite.opt' )
 
 # Module globals
 frameworkList = []
