@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.10 2010-02-23 06:25:21 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.10.8.1 2010-09-01 08:05:27 tlipkis Exp $
  */
 
 /*
@@ -295,6 +295,19 @@ public class TestAuUtil extends LockssTestCase {
     assertFalse(AuUtil.okDeleteExtraFiles(new ExplodedArchivalUnit(new ExplodedPlugin(), null)));
   }
 
+  public void testGetCu() {
+    String url = "http://foo/";
+    MockArchivalUnit mau = new MockArchivalUnit();
+    CachedUrl mcu = new MockCachedUrl(url, mau);
+    assertSame(mcu, AuUtil.getCu(mcu));
+    MockCachedUrlSet mcus = new MockCachedUrlSet(url);
+    mcus.setArchivalUnit(mau);
+    assertNull(AuUtil.getCu(mcus));
+    mau.addUrl(url, "foo");
+    CachedUrl cu2 = AuUtil.getCu(mcus);
+    assertEquals(url, cu2.getUrl());
+  }
+ 
   private static class LocalMockArchivalUnit extends MockArchivalUnit {
     TitleConfig tc = null;
 
