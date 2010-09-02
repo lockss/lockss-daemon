@@ -1,5 +1,5 @@
 /*
- * $Id: ClockssPermission.java,v 1.1 2006-08-07 07:38:25 tlipkis Exp $
+ * $Id: ClockssPermission.java,v 1.2 2010-09-02 18:15:19 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class ClockssPermission {
                                   new StringPermissionChecker.StringFilterRule());
     permissionList.add(spc);
     permissionList.add(new CreativeCommonsPermissionChecker());
+    permissionList.add(new CreativeCommonsV3PermissionChecker());
   }
 
   public List getCheckers() {

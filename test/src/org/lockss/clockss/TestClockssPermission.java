@@ -1,5 +1,5 @@
 /*
- * $Id: TestClockssPermission.java,v 1.2 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: TestClockssPermission.java,v 1.3 2010-09-02 18:15:19 tlipkis Exp $
  */
 
 /*
@@ -79,12 +79,14 @@ public class TestClockssPermission extends LockssPermissionCheckerTestCase {
    */
   public void testGetCheckersHasProperCheckers() {
     List checkers = new ClockssPermission().getCheckers();
-    assertEquals("Expected two Permission checkers, but only found one",
-		 2, checkers.size());
+    assertEquals("Expected three Permission checkers",
+		 3, checkers.size());
     assertTrue("First checker wasn't a StringPermission Checker",
 	       checkers.get(0) instanceof StringPermissionChecker);
     assertTrue("Second checker wasn't a CreativeCommonsPermissionChecker",
 	       checkers.get(1) instanceof CreativeCommonsPermissionChecker);
+    assertTrue("Third checker wasn't a CreativeCommonsV3PermissionChecker",
+	       checkers.get(2) instanceof CreativeCommonsV3PermissionChecker);
   }
 
 }
