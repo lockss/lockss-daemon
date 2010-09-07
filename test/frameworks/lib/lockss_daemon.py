@@ -465,9 +465,17 @@ class Client:
         """Return the detailed crawl status table for the specified AU and key."""
         return self._getStatusTable( 'single_crawl_status_table', key )
 
+    def getListOfAuids(self):
+        '''Returns the list of AUIDs held by the daemons'''
+        return [map['AuId'] for map in self._getStatusTable('AuIds')[1]]
+
     def getListOfArticles(self, au):
+        '''Gets a list of article URLs for the AU'''
         post = self.__execute_post('ListObjects', {'type': 'articles', 'auid': au.auId})
-        return post.read()
+        r = post.read()
+        lst = r.splitlines()
+        if lst[-1] != '# end': raise LockssError, 'Incomplete or malformed article list'
+        return filter(lambda x: not (len(x) == 0 or x.isspace() or x.startswith('#')), lst)
         
     def getListOfUrls(self, au):
         post = self.__execute_post('ListObjects', {'type': 'urls', 'auid': au.auId})
