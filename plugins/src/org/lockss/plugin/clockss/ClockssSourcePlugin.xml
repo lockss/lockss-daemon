@@ -4,16 +4,20 @@
     <string>org.lockss.plugin.clockss.ClockssSourcePlugin</string>
   </entry>
   <entry>
-    <string>au_def_pause_time</string>
-    <long>6000</long>
+    <string>plugin_version</string>
+    <string>3</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Parent Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
     <string>&quot;Parent Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Parent Source Plugin (CLOCKSS)</string>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -27,7 +31,8 @@
     <string>au_crawlrules</string>
     <list>
       <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;^%s%d/.*&quot;, base_url, year</string>
+      <string>2,&quot;^%s%d/.*;O=[AD]$&quot;, base_url, year</string>
+      <string>1,&quot;^%s%d/&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
@@ -56,9 +61,5 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>      
     </list>
-  </entry>
-  <entry>
-    <string>plugin_version</string>
-    <string>2</string>
   </entry>
 </map>

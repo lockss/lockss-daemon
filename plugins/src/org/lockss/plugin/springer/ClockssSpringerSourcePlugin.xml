@@ -4,12 +4,12 @@
     <string>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</string>
   </entry>
   <entry>
-    <string>au_name</string>
-    <string>&quot;Springer Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>plugin_version</string>
+    <string>3</string>
   </entry>
   <entry>
-    <string>plugin_name</string>
-    <string>Springer Source Plugin (CLOCKSS)</string>
+    <string>required_daemon_version</string>
+    <string>1.38.0</string>
   </entry>
   <entry>
     <string>plugin_parent</string>
@@ -17,14 +17,14 @@
   </entry>
   <entry>
     <string>plugin_parent_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
-    <string>plugin_version</string>
-    <string>2</string>
+    <string>plugin_name</string>
+    <string>Springer Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
-    <string>required_daemon_version</string>
-    <string>1.38.0</string>
+    <string>au_name</string>
+    <string>&quot;Springer Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
 </map>
