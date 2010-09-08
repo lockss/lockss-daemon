@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS %s (
     last_completed_poll DATETIME,
     
     /* The AU's content size */
-    content_size INT UNSIGNED,
+    content_size BIGINT UNSIGNED,
     
     /* The AU's disk usage in MB */
     disk_usage FLOAT UNSIGNED
