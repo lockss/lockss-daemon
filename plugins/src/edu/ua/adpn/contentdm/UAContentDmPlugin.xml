@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>2</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
@@ -52,7 +52,11 @@
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
-    <long>1209600000</long>
+    <long>2419200000</long>
+  </entry>
+  <entry>
+    <string>au_crawl_depth</string>
+    <int>99</int>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
