@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20LoginPageChecker.java,v 1.1 2010-03-15 18:44:26 thib_gc Exp $
+ * $Id: HighWirePressH20LoginPageChecker.java,v 1.2 2010-09-08 09:41:09 thib_gc Exp $
  */
 
 /*
@@ -41,11 +41,14 @@ public class HighWirePressH20LoginPageChecker implements LoginPageChecker {
 
   private static final String HIGHWIRE_H20_LOGIN_PAGE_MARKER = "X-Highwire-Login";
 
+  private static final String HIGHWIRE_H20_LOGIN_PAGE_MARKER_LOWER = "x-highwire-login";
+
   public boolean isLoginPage(Properties props,
                              Reader reader)
       throws IOException,
              PluginException {
-    return props.containsKey(HIGHWIRE_H20_LOGIN_PAGE_MARKER);
+    return    props.containsKey(HIGHWIRE_H20_LOGIN_PAGE_MARKER)
+           || props.containsKey(HIGHWIRE_H20_LOGIN_PAGE_MARKER_LOWER);
   }
 
 }

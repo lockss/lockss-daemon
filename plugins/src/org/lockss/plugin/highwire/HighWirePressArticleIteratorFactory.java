@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.2 2010-08-06 11:04:39 thib_gc Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.3 2010-09-08 09:41:09 thib_gc Exp $
  */
 
 /*
@@ -102,11 +102,17 @@ public class HighWirePressArticleIteratorFactory
       
       mat = HTML_PATTERN.matcher(url);
       if (mat.find()) {
+        if (log.isDebug2()) {
+          log.debug2("HTML match: " + url);
+        }
         return processFullTextHtml(cu, mat);
       }
         
       mat = PDF_PATTERN.matcher(url);
       if (mat.find()) {
+        if (log.isDebug2()) {
+          log.debug2("PDF match: " + url);
+        }
         return processFullTextPdf(cu, mat);
       }
       
@@ -115,12 +121,16 @@ public class HighWirePressArticleIteratorFactory
     }
 
     protected ArticleFiles processFullTextHtml(CachedUrl htmlCu, Matcher htmlMat) {
-      if (htmlMat.group(1) != null) {
-        CachedUrl altCu = au.makeCachedUrl(htmlMat.replaceFirst("/cgi/content/full/$2"));
-        if (altCu != null && altCu.hasContent()) {
-          return null;
+      CachedUrl altCu = guessDifferentFrom(htmlCu, htmlMat,
+                                           "/cgi/content/full/$2");
+
+      if (altCu != null) {
+        if (log.isDebug2()) {
+          log.debug2("Skipping " + htmlCu.getUrl() + " because of " + altCu.getUrl());
         }
+        return null;
       }
+
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
@@ -131,46 +141,23 @@ public class HighWirePressArticleIteratorFactory
     }
     
     protected ArticleFiles processFullTextPdf(CachedUrl pdfCu, Matcher pdfMat) {
-      if (pdfMat.group(1) != null) {
-        CachedUrl altPdfCu = au.makeCachedUrl(pdfMat.replaceFirst("/cgi/reprint/$2.pdf"));
-        if (altPdfCu != null && altPdfCu.hasContent()) {
-          return null;
+      CachedUrl altCu = guessDifferentFrom(pdfCu, pdfMat,
+                                           "/cgi/reprint/$2.pdf",
+                                           "/cgi/content/full/$1$2",
+                                           "/cgi/content/full/$2");
+      if (altCu != null) {
+        if (log.isDebug2()) {
+          log.debug2("Skipping " + pdfCu.getUrl() + " because of " + altCu.getUrl());
         }
-        CachedUrl altHtmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/cgi/content/full/$1$2"));
-        if (altHtmlCu != null && altHtmlCu.hasContent()) {
-          return null;
-        }
-      }
-      CachedUrl htmlCu = au.makeCachedUrl(pdfMat.replaceFirst("/cgi/content/full/$2"));
-      if (htmlCu != null && htmlCu.hasContent()) {
         return null;
       }
-      
+
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-
-      String[] successiveAttempts = new String[] {
-          "/cgi/reprint/$2",
-          "/cgi/reprint/$1$2",
-          "/cgi/reprintframed/$2",
-          "/cgi/reprintframed/$1$2",
-          "/cgi/framedreprint/$2",
-          "/cgi/framedreprint/$1$2",
-      };
-      for (String repl : successiveAttempts) {
-        if (repl.contains("$1") && pdfMat.group(1) == null) {
-          continue;
-        }
-        CachedUrl pdfLandCu = au.makeCachedUrl(pdfMat.replaceFirst(repl));
-        if (pdfLandCu != null && pdfLandCu.hasContent()) {
-          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-          af.setFullTextCu(pdfLandCu);
-          break;
-        }
-      }
-      if (af.getFullTextCu() == null) {
-        af.setFullTextCu(pdfCu);
-      }
+      guessPdfLandingPage(af, pdfMat);
+      af.setFullTextCu(af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) != null
+                       ? af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE)
+                       : pdfCu);
       guessOtherParts(af, pdfMat);
       return af;
     }
@@ -182,77 +169,116 @@ public class HighWirePressArticleIteratorFactory
     }
     
     protected void guessFullTextPdf(ArticleFiles af, Matcher htmlMat) {
-      CachedUrl pdfCu = null;
-      if (htmlMat.group(1) != null) {
-        pdfCu = au.makeCachedUrl(htmlMat.replaceFirst("/cgi/reprint/$1$2.pdf"));
+      CachedUrl cu = guess(htmlMat,
+                           "/cgi/reprint/$1$2.pdf",
+                           "/cgi/reprint/$2.pdf");
+      if (cu != null) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+        guessPdfLandingPage(af, htmlMat);
       }
-      if (pdfCu == null || !pdfCu.hasContent()) {
-        pdfCu = au.makeCachedUrl(htmlMat.replaceFirst("/cgi/reprint/$2.pdf"));
-      }
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-        
-        String[] successiveAttempts = new String[] {
-            "/cgi/reprint/$1$2",
-            "/cgi/reprint/$2",
-            "/cgi/reprintframed/$1$2",
-            "/cgi/reprintframed/$2",
-            "/cgi/framedreprint/$1$2",
-            "/cgi/framedreprint/$2",
-        };
-        for (String repl : successiveAttempts) {
-          if (repl.contains("$1") && htmlMat.group(1) == null) {
-            continue;
-          }
-          CachedUrl pdfLandCu = au.makeCachedUrl(htmlMat.replaceFirst(repl));
-          if (pdfLandCu != null && pdfLandCu.hasContent()) {
-            af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-            if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
-              af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, pdfLandCu);
-            }
-            break;
-          }
-        }
+    }
+    
+    protected void guessPdfLandingPage(ArticleFiles af, Matcher mat) {
+      CachedUrl pdfLandCu = guess(mat,
+                                  "/cgi/reprint/$1$2",
+                                  "/cgi/reprint/$2",
+                                  "/cgi/reprintframed/$1$2",
+                                  "/cgi/reprintframed/$2",
+                                  "/cgi/framedreprint/$1$2",
+                                  "/cgi/framedreprint/$2");
+      if (pdfLandCu != null) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
       }
     }
 
     protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/cgi/content/abstract/$2"));
-      if (absCu != null && absCu.hasContent()) {
+      CachedUrl absCu = guess(mat,
+                              "/cgi/content/abstract/$1$2",
+                              "/cgi/content/abstract/$2");
+      if (absCu != null) {
         af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      }
-      else if (mat.group(1) != null) {
-        CachedUrl altAbsCu = au.makeCachedUrl(mat.replaceFirst("/cgi/content/abstract/$1$2"));
-        if (altAbsCu != null && altAbsCu.hasContent()) {
-          af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, altAbsCu);
+        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
+          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
         }
       }
     }
     
     protected void guessReferences(ArticleFiles af, Matcher mat) {
-      CachedUrl refsCu = au.makeCachedUrl(mat.replaceFirst("/cgi/content/refs/$2"));
-      if (refsCu != null && refsCu.hasContent()) {
+      CachedUrl refsCu = guess(mat,
+                               "/cgi/content/refs/$1$2",
+                               "/cgi/content/refs/$2");
+      if (refsCu != null) {
         af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refsCu);
-      }
-      else if (mat.group(1) != null) {
-        CachedUrl altRefsCu = au.makeCachedUrl(mat.replaceFirst("/cgi/content/refs/$1$2"));
-        if (altRefsCu != null && altRefsCu.hasContent()) {
-          af.setRoleCu(ArticleFiles.ROLE_REFERENCES, altRefsCu);
-        }
       }
     }
     
     protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-      CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/cgi/content/full/$2/DC1"));
-      if (suppinfoCu != null && suppinfoCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
+      CachedUrl suppCu = guess(mat,
+                               "/cgi/content/full/$1$2/DC1",
+                               "/cgi/content/full/$2/DC1");
+      if (suppCu != null) {
+        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
       }
-      else if (mat.group(1) != null) {
-        CachedUrl altSuppinfoCu = au.makeCachedUrl(mat.replaceFirst("/cgi/content/full/$1$2/DC1"));
-        if (altSuppinfoCu != null && altSuppinfoCu.hasContent()) {
-          af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, altSuppinfoCu);
+    }
+    
+    /**
+     * <p>Tries various URLs in this AU similar to the one in the
+     * given matcher, using each one of the given matcher replacement
+     * patterns in turn, until one is found that exists and has
+     * content.</p>
+     * <p>The replacement patterns are applied to the matcher using
+     * {@link Matcher#replaceFirst(String)}.</p>
+     * <p>This method is a candidate to be refactored into a utility
+     * framework for article iterators.</p>
+     * @param mat      A matcher encapsulating a previously-matched
+     *                 URL in this AU.
+     * @param replPats Any number of replacement patterns consistent
+     *                 with the matcher, to try in sequence.
+     * @return A {@link CachedUrl} if one of the replacement patterns
+     *         produces a URL in this AU that exists and has content,
+     *         or <code>null</code> otherwise.
+     * @see Matcher#replaceFirst(String)
+     * @see CachedUrl#hasContent()
+     */
+    protected CachedUrl guess(Matcher mat,
+                              String... replPats) {
+      for (String replPat : replPats) {
+        CachedUrl guessCu = au.makeCachedUrl(mat.replaceFirst(replPat));
+        if (guessCu != null && guessCu.hasContent()) {
+          return guessCu;
         }
       }
+      return null;
+    }
+    
+    /**
+     * <p>Does the same thing as
+     * {@link #guess(Matcher, String...)}, with the
+     * further guarantee that the returned variant URL does not
+     * represent the same URL as the given URL.</p>
+     * <p>This method is a candidate to be refactored into a utility
+     * framework for article iterators.</p>
+     * @param original The original URL from this AU.
+     * @param mat      A matcher encapsulating a previously-matched
+     *                 URL in this AU.
+     * @param replPats Any number of replacement patterns consistent
+     *                 with the matcher, to try in sequence.
+     * @return A {@link CachedUrl} if one of the replacement patterns
+     *         produces a URL in this AU that exists, does not
+     *         represent the same URL as the original, and has
+     *         content, or <code>null</code> otherwise.
+     * @see #guess(Matcher, String...)
+     */
+    protected CachedUrl guessDifferentFrom(CachedUrl original,
+                                           Matcher mat,
+                                           String... replPats) {
+      for (String replPat : replPats) {
+        CachedUrl guessCu = au.makeCachedUrl(mat.replaceFirst(replPat));
+        if (guessCu != null && guessCu.hasContent() && !guessCu.getUrl().equals(original.getUrl())) {
+          return guessCu;
+        }
+      }
+      return null;
     }
    
   }
@@ -268,4 +294,12 @@ public class HighWirePressArticleIteratorFactory
 
   }
 
+  public static void main(String[] args) {
+    String input = "http://pediatrics.aappublications.org/cgi/reprint/foo;125/Supplement_3/S69.pdf";
+    Matcher mat = HighWirePressArticleIterator.PDF_PATTERN.matcher(input);
+    System.out.println(mat.find());
+    System.out.println(mat.replaceFirst("/cgi/content/full/$1$2"));
+    System.out.println(mat.reset().group());
+  }
+  
 }
