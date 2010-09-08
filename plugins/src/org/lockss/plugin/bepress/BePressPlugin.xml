@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>15</string>
+    <string>16</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -101,5 +101,11 @@
         <string>org.lockss.plugin.bepress.BePressHtmlMetadataExtractorFactory</string>
       </entry>
     </map>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>&quot;^%scgi/viewcontent\.cgi\?.*context=%s&quot;, base_url, journal_abbr</string>
+    </list>
   </entry>
 </map>
