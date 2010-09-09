@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.1 2010-09-07 08:08:26 thib_gc Exp $
+# $Id: slurp.py,v 1.2 2010-09-09 11:33:04 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -44,10 +44,10 @@ class SlurpConstants:
     DESCRIPTION = '''Connects to a LOCKSS Web user interface, scrapes
 information about the LOCKSS daemon from it, and stores the data in a
 MySQL database. The database must have been properly initialized to
-receive the data, for instance using the slurpdb program. To run this
-program, Python needs to have access to the MySQLdb module, which may 
-not be installed by default. In many popular package repositories, it
-is known as "python-mysqldb".'''
+receive the data, for instance using Slurpdb. To run this program,
+Python needs to have access to the MySQLdb module, which may not be 
+installed by default. In many popular package repositories, it is
+known as "python-mysqldb".'''
     
     OPTION_DBCONNECT = 'dbconnect'
     OPTION_DBCONNECT_SHORT = 'C'
@@ -284,12 +284,12 @@ def __aus(db, ui, id, auids_aids, options):
         cursor = db.cursor()
         cursor.execute('''
                 INSERT INTO ''' + Slurpdb.AUS + '''
-                (sid, aid, name, publisher, year, repository, creation_date, status, available,
+                (aid, name, publisher, year, repository, creation_date, status, available,
                 last_crawl, last_crawl_result, last_completed_crawl,
                 last_poll, last_poll_result, last_completed_poll,
                 content_size, disk_usage)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-        ''', (id, aid, name, publisher, year_str, repository, creation_date, status, available,
+        ''', (aid, name, publisher, year_str, repository, creation_date, status, available,
               last_crawl, last_crawl_result, last_completed_crawl,
               last_poll, last_poll_result, last_completed_poll,
               content_size, disk_usage))
@@ -317,9 +317,9 @@ def __articles(db, ui, id, auids_aids, options):
         cursor = db.cursor()
         cursor.executemany('''
                 INSERT INTO ''' + Slurpdb.ARTICLES + '''
-                (sid, aid, article)
-                VALUES (%s, %s, %s)
-        ''', [(id, aid, art) for art in articles])
+                (aid, article)
+                VALUES (%s, %s)
+        ''', [(aid, art) for art in articles])
         cursor.close()
         db.commit()
 
@@ -332,21 +332,24 @@ def __process(options):
                          user=options[SlurpConstants.OPTION_DBUSER],
                          passwd=options[SlurpConstants.OPTION_DBPASSWORD],
                          db=options[SlurpConstants.OPTION_DBNAME])
-    __log('Done.', options)
-    __log('Opening connection to UI on %s as %s...' % (options[SlurpConstants.OPTION_UICONNECT], options[SlurpConstants.OPTION_UIUSER]), options)
-    ui = lockss_daemon.Client(options[SlurpConstants.OPTION_UICONNECT].split(':')[0],
-                              options[SlurpConstants.OPTION_UICONNECT].split(':')[1],
-                              options[SlurpConstants.OPTION_UIUSER],
-                              options[SlurpConstants.OPTION_UIPASSWORD])
-    if not ui.waitForDaemonReady(options[SlurpConstants.OPTION_UITIMEOUT]):
-        __log('Error: %s is not ready after %d seconds' % (options[SlurpConstants.OPTION_UICONNECT], options[SlurpConstants.OPTION_UITIMEOUT]), options)
-        raise RuntimeError, '%s is not ready after %d seconds' % (options[SlurpConstants.OPTION_UICONNECT], options[SlurpConstants.OPTION_UITIMEOUT])
-    __log('Done.', options)
-    id = __begin(db, options)
-    auids_aids = __auids(db, ui, id, options)
-    __aus(db, ui, id, auids_aids, options)
-    __articles(db, ui, id, auids_aids, options)
-    __end(db, id, options)
+    try:
+        __log('Done.', options)
+        __log('Opening connection to UI on %s as %s...' % (options[SlurpConstants.OPTION_UICONNECT], options[SlurpConstants.OPTION_UIUSER]), options)
+        ui = lockss_daemon.Client(options[SlurpConstants.OPTION_UICONNECT].split(':')[0],
+                                  options[SlurpConstants.OPTION_UICONNECT].split(':')[1],
+                                  options[SlurpConstants.OPTION_UIUSER],
+                                  options[SlurpConstants.OPTION_UIPASSWORD])
+        if not ui.waitForDaemonReady(options[SlurpConstants.OPTION_UITIMEOUT]):
+            __log('Error: %s is not ready after %d seconds' % (options[SlurpConstants.OPTION_UICONNECT], options[SlurpConstants.OPTION_UITIMEOUT]), options)
+            raise RuntimeError, '%s is not ready after %d seconds' % (options[SlurpConstants.OPTION_UICONNECT], options[SlurpConstants.OPTION_UITIMEOUT])
+        __log('Done.', options)
+        id = __begin(db, options)
+        auids_aids = __auids(db, ui, id, options)
+        __aus(db, ui, id, auids_aids, options)
+        __articles(db, ui, id, auids_aids, options)
+        __end(db, id, options)
+    finally:
+        db.close()
 
 if __name__ == '__main__':
     parser = __option_parser()

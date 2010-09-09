@@ -13,10 +13,10 @@ CREATE TABLE IF NOT EXISTS %s (
     /* A required LOCKSS UI host name and port */
     ui VARCHAR(%d) NOT NULL,
     
-    /* A required timestamp, default NOW() */
+    /* A required timestamp */
     begin DATETIME NOT NULL,
     
     /* A timestamp */
     end DATETIME
 
-);
+) ENGINE=INNODB;

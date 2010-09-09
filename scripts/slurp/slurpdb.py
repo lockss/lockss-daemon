@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpdb.py,v 1.1 2010-09-07 08:08:26 thib_gc Exp $
+# $Id: slurpdb.py,v 1.2 2010-09-09 11:33:04 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -161,18 +161,21 @@ def __process(options):
     try:
         __check_empty(db)
         __make_table(db, Slurpdb.SESSIONS, (Slurpdb.SESSIONS,
-                                                  Slurpdb.SESSIONS_UI_MAX))
+                                            Slurpdb.SESSIONS_UI_MAX))
         __make_table(db, Slurpdb.AUIDS, (Slurpdb.AUIDS,
-                                         Slurpdb.AUIDS_AUID_MAX))
+                                         Slurpdb.AUIDS_AUID_MAX,
+                                         Slurpdb.SESSIONS))
         __make_table(db, Slurpdb.AUS, (Slurpdb.AUS,
-                                               Slurpdb.AUS_NAME_MAX,
-                                               Slurpdb.AUS_PUBLISHER_MAX,
-                                               Slurpdb.AUS_REPOSITORY_MAX,
-                                               Slurpdb.AUS_STATUS_MAX,
-                                               Slurpdb.AUS_CRAWL_RESULT_MAX,
-                                               Slurpdb.AUS_POLL_RESULT_MAX))
+                                       Slurpdb.AUS_NAME_MAX,
+                                       Slurpdb.AUS_PUBLISHER_MAX,
+                                       Slurpdb.AUS_REPOSITORY_MAX,
+                                       Slurpdb.AUS_STATUS_MAX,
+                                       Slurpdb.AUS_CRAWL_RESULT_MAX,
+                                       Slurpdb.AUS_POLL_RESULT_MAX,
+                                       Slurpdb.AUIDS))
         __make_table(db, Slurpdb.ARTICLES, (Slurpdb.ARTICLES,
-                                            Slurpdb.ARTICLES_ARTICLE_MAX))
+                                            Slurpdb.ARTICLES_ARTICLE_MAX,
+                                            Slurpdb.AUIDS))
     finally:
         db.close()
 

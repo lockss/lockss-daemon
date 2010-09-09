@@ -7,13 +7,12 @@
    (4) The maximum length of the status string (integer).
    (5) The maximum length of the last crawl result (integer).
    (6) The maximum length of the last poll result (integer).
+   (7) The name of the AUIDs table (string).
+   This table references the AUIDs table.
 */
 
 /* Create the AUs table */
 CREATE TABLE IF NOT EXISTS %s (
-
-    /* A reference to a row ID in the sessions table */
-    sid INT UNSIGNED NOT NULL,
 
     /* A reference to a row ID in the auids table */
     aid INT UNSIGNED NOT NULL,
@@ -61,6 +60,9 @@ CREATE TABLE IF NOT EXISTS %s (
     content_size BIGINT UNSIGNED,
     
     /* The AU's disk usage in MB */
-    disk_usage FLOAT UNSIGNED
+    disk_usage FLOAT UNSIGNED,
+    
+    /* aid is a foreign key */
+    FOREIGN KEY (aid) REFERENCES %s(id) ON DELETE CASCADE ON UPDATE CASCADE
 
-);
+) ENGINE=INNODB;
