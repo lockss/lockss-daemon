@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_def_pause_time</string>
@@ -32,7 +32,7 @@
       <string>1,&quot;^%s(abstract|misc|ref|ris)\.cgi\?id=%s&quot;, base_url, short_journal_code</string>
       <string>1,&quot;^%s%s/fulltext/%s0?%s/&quot;, base_url, journal_code, short_journal_code, volume_name</string>
       <string>1,&quot;^%s%s/editorials/%s&quot;, base_url, journal_code, short_journal_code</string>
-      <string>1,&quot;^%s[^/]+/misc/%s0?%s/&quot;, base_url, short_journal_code, volume_name</string>
+      <string>1,&quot;^%s[^/]+/misc/&quot;, base_url, short_journal_code, volume_name</string>
     </list>
   </entry>
   <entry>
