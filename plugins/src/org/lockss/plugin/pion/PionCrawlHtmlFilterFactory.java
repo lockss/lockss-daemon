@@ -1,5 +1,5 @@
 /*
- * $Id: PionHtmlFilterFactory.java,v 1.1 2010-09-07 23:52:04 thib_gc Exp $
+ * $Id: PionCrawlHtmlFilterFactory.java,v 1.1 2010-09-14 23:52:31 thib_gc Exp $
  */
 
 /*
@@ -42,33 +42,19 @@ import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 
-public class PionHtmlFilterFactory implements FilterFactory {
+public class PionCrawlHtmlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
-        // Contains an ever-growing list of volumes/years
-        HtmlNodeFilters.tagWithAttribute("div", "class", "dropdown"),
-        // Contains the year in progress
-        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Reference pages contain cross-links
+        HtmlNodeFilters.tagWithAttribute("p", "class", "ref"),
     };
-    
-    // First filter with HtmlParser constructs
-    OrFilter orFilter = new OrFilter(filters);
-    InputStream filteredInputStream = new HtmlFilterInputStream(in,
-                                                                encoding,
-                                                                HtmlNodeFilterTransform.exclude(orFilter));
-
-    // Then filter with non-HtmlParser constructs
-    Reader filteredReader = HtmlTagFilter.makeNestedFilter(FilterUtil.getReader(filteredInputStream,
-                                                                                encoding),
-                                                           ListUtil.list(new HtmlTagFilter.TagPair("<p><a href='http://library.stanford.edu/sfx",
-                                                                                                   "<!-- AddThis Button BEGIN -->"),
-                                                                         new HtmlTagFilter.TagPair("</a><br><br>",
-                                                                                                   "<!-- AddThis Button BEGIN -->")));
-    return new ReaderInputStream(filteredReader);
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
