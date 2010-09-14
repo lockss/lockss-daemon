@@ -4,11 +4,23 @@
     name = Co-Action Publishing
   >
 
-  comment[0] = requires a parent plugin
-
-  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
   implicit < status ; year ; name ; param[year] >
 
+  {
+
+    title <
+      name = Diabetic Foot & Ankle ;
+      issn = 2000-625X
+    >
+
+    param[base_url] = http://www.diabeticfootandankle.net/
+    param[journal_id] = dfa
+
+    au < manifest ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 2010 >
+
+  }
+    
   {
 
     title <
@@ -36,8 +48,6 @@
 
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
-
-comment[fnr2008] = 502 Proxy Error
 
     au < manifest ; 2002 ; Food & Nutrition Research Volume 46 ; 2002 >
     au < manifest ; 2003 ; Food & Nutrition Research Volume 47 ; 2003 >
@@ -132,6 +142,20 @@ comment[fnr2008] = 502 Proxy Error
     au < manifest ; 2008 ; Libyan Journal of Medicine Volume 3 ; 2008 >
     au < manifest ; 2009 ; Libyan Journal of Medicine Volume 4 ; 2009 >
     au < manifest ; 2010 ; Libyan Journal of Medicine Volume 5 ; 2010 >
+
+  }
+
+  {
+
+    title <
+      name = Mechanical Circulatory Support ;
+      issn = 2000-6993
+    >
+
+    param[base_url] = http://www.mechanicalcirculatorysupport.net/
+    param[journal_id] = mcs
+
+    au < manifest ; 2010 ; Mechanical Circulatory Support Volume 1 ; 2010 >
 
   }
 
