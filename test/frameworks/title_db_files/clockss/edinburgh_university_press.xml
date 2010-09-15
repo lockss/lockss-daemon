@@ -2028,6 +2028,28 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="HolyLandStudies9">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Holy Land Studies" />
+   <property name="issn" value="1474-9475" />
+   <property name="eissn" value="1750-0125" />
+   <property name="title" value="Holy Land Studies Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="hls" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="InnesReview55">
    <property name="attributes.publisher" value="Edinburgh University Press" />
    <property name="journalTitle" value="Innes Review" />
@@ -2248,6 +2270,28 @@
    <property name="attributes.year" value="2008" />
   </property>
 
+  <property name="InternationalJournalofHumanitiesandArtsComputing3">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="International Journal of Humanities and Arts Computing" />
+   <property name="issn" value="1753-8548" />
+   <property name="eissn" value="1755-1706" />
+   <property name="title" value="International Journal of Humanities and Arts Computing Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ijhac" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
   <property name="InternationalResearchinChildrensLiterature1">
    <property name="attributes.publisher" value="Edinburgh University Press" />
    <property name="journalTitle" value="International Research in Children's Literature" />
@@ -2290,6 +2334,28 @@
     <property name="value" value="2" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="InternationalResearchinChildrensLiterature3">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="International Research in Children's Literature" />
+   <property name="issn" value="1755-6198" />
+   <property name="eissn" value="1755-6201" />
+   <property name="title" value="International Research in Children's Literature Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="ircl" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
   <property name="JournalofBeckettStudies17">
@@ -2952,6 +3018,28 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="JournalofScottishHistoricalStudies30">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Journal of Scottish Historical Studies" />
+   <property name="issn" value="1748-538X" />
+   <property name="eissn" value="1755-1749" />
+   <property name="title" value="Journal of Scottish Historical Studies Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="jshs" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="JournalofScottishPhilosophy1">
    <property name="attributes.publisher" value="Edinburgh University Press" />
    <property name="journalTitle" value="Journal of Scottish Philosophy" />
@@ -3150,6 +3238,138 @@
    <property name="attributes.year" value="2009" />
   </property>
 
+  <property name="ModernistCultures1">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Modernist Cultures" />
+   <property name="issn" value="2041-1022" />
+   <property name="eissn" value="1753-8629" />
+   <property name="title" value="Modernist Cultures Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="mod" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="ModernistCultures2">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Modernist Cultures" />
+   <property name="issn" value="2041-1022" />
+   <property name="eissn" value="1753-8629" />
+   <property name="title" value="Modernist Cultures Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="mod" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="ModernistCultures3">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Modernist Cultures" />
+   <property name="issn" value="2041-1022" />
+   <property name="eissn" value="1753-8629" />
+   <property name="title" value="Modernist Cultures Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="mod" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="ModernistCultures4">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Modernist Cultures" />
+   <property name="issn" value="2041-1022" />
+   <property name="eissn" value="1753-8629" />
+   <property name="title" value="Modernist Cultures Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="mod" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="ModernistCultures5">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Modernist Cultures" />
+   <property name="issn" value="2041-1022" />
+   <property name="eissn" value="1753-8629" />
+   <property name="title" value="Modernist Cultures Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="mod" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="NorthernScotland1">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Northern Scotland" />
+   <property name="issn" value="0306-5278" />
+   <property name="eissn" value="2042-2717" />
+   <property name="title" value="Northern Scotland Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="nor" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="OxfordLiteraryReview29">
    <property name="attributes.publisher" value="Edinburgh University Press" />
    <property name="journalTitle" value="Oxford Literary Review" />
@@ -3214,6 +3434,28 @@
     <property name="value" value="31" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="OxfordLiteraryReview32">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Oxford Literary Review" />
+   <property name="issn" value="0305-1498" />
+   <property name="eissn" value="1757-1634" />
+   <property name="title" value="Oxford Literary Review Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="olr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
   <property name="Paragraph24">
@@ -4270,6 +4512,28 @@
     <property name="value" value="88" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="ScottishHistoricalReview89">
+   <property name="attributes.publisher" value="Edinburgh University Press" />
+   <property name="journalTitle" value="Scottish Historical Review" />
+   <property name="issn" value="0036-9241" />
+   <property name="eissn" value="1750-0222" />
+   <property name="title" value="Scottish Historical Review Volume 89" />
+   <property name="plugin" value="org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.euppublishing.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_id" />
+    <property name="value" value="shr" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="89" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
   <property name="StudiesinWorldChristianity7">

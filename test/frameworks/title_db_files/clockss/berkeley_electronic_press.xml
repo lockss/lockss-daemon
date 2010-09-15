@@ -1516,6 +1516,27 @@
    <property name="attributes.year" value="2010" />
   </property>
 
+  <property name="TheEconomistsVoice1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="The Economists' Voice" />
+   <property name="eissn" value="1553-3832" />
+   <property name="title" value="The Economists' Voice Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.bepress.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ev" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2004" />
+  </property>
+
   <property name="TheForum1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="The Forum" />
@@ -3595,6 +3616,237 @@
    <property name="attributes.year" value="2010" />
   </property>
 
+  <property name="JournalofCollegeandCharacter1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter4">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter5">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter6">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter7">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter8">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter9">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter10">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="JournalofCollegeandCharacter11">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of College and Character" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Journal of College and Character Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jcc" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="JournalofComplementaryandIntegrativeMedicine1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Complementary and Integrative Medicine" />
@@ -4264,6 +4516,300 @@
    <property name="attributes.year" value="2010" />
   </property>
 
+  <property name="JournalofStudentAffairsResearchandPractice34">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="34" />
+   </property>
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice35">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="35" />
+   </property>
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice36">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="36" />
+   </property>
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice37">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="37" />
+   </property>
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice38">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="38" />
+   </property>
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice39">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="39" />
+   </property>
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice40">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="40" />
+   </property>
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice41">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="41" />
+   </property>
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice42">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="42" />
+   </property>
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice43">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="43" />
+   </property>
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice44">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="44" />
+   </property>
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice45">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="45" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice46">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="46" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="JournalofStudentAffairsResearchandPractice47">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Journal of Student Affairs Research and Practice" />
+   <property name="issn" value="1949-6605" />
+   <property name="title" value="Journal of Student Affairs Research and Practice Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="jsarp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="47" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="JournalofTimeSeriesEconometrics1">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Journal of Time Series Econometrics" />
@@ -4631,6 +5177,69 @@
     <property name="value" value="6" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="NASPAJournalAboutWomeninHigherEducation1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="NASPA Journal About Women in Higher Education" />
+   <property name="issn" value="1940-7890" />
+   <property name="title" value="NASPA Journal About Women in Higher Education Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="njawhe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="NASPAJournalAboutWomeninHigherEducation2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="NASPA Journal About Women in Higher Education" />
+   <property name="issn" value="1940-7890" />
+   <property name="title" value="NASPA Journal About Women in Higher Education Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="njawhe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="NASPAJournalAboutWomeninHigherEducation3">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="NASPA Journal About Women in Higher Education" />
+   <property name="issn" value="1940-7890" />
+   <property name="title" value="NASPA Journal About Women in Higher Education Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://journals.naspa.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="njawhe" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
   <property name="NewGlobalStudies1">
@@ -5029,10 +5638,52 @@
    <property name="attributes.year" value="2010" />
   </property>
 
-  <property name="PovertyPublicPolicy1">
+  <property name="ReviewofLawEconomics1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Policy &amp; Internet" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Review of Law &amp; Economics Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.psocommons.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="policyandinternet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="ReviewofLawEconomics2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Policy &amp; Internet" />
+   <property name="issn" value="1944-2866" />
+   <property name="title" value="Review of Law &amp; Economics Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.psocommons.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="policyandinternet" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="PovertyPublicPolicyVolume1superseded">
    <property name="attributes.publisher" value="Berkeley Electronic Press" />
    <property name="journalTitle" value="Poverty &amp; Public Policy" />
-   <property name="title" value="Poverty &amp; Public Policy Volume 1" />
+   <property name="title" value="Poverty &amp; Public Policy Volume 1 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -5046,7 +5697,51 @@
     <property name="key" value="volume" />
     <property name="value" value="1" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="PovertyPublicPolicy1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Poverty &amp; Public Policy" />
+   <property name="title" value="Poverty &amp; Public Policy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.psocommons.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ppp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="PovertyPublicPolicy2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Poverty &amp; Public Policy" />
+   <property name="title" value="Poverty &amp; Public Policy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.psocommons.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="ppp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
   <property name="ReviewofLawEconomics1">
@@ -5441,6 +6136,27 @@
     <property name="value" value="5" />
    </property>
    <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="RiskHazardsCrisisinPublicPolicy1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="Risk, Hazards &amp; Crisis in Public Policy" />
+   <property name="issn" value="1944-4079" />
+   <property name="title" value="Risk, Hazards &amp; Crisis in Public Policy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.psocommons.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="rhcpp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2010" />
   </property>
 
   <property name="StatisticalApplicationsinGeneticsandMolecularBiology1">
@@ -6253,6 +6969,48 @@
    <property name="param.3">
     <property name="key" value="volume" />
     <property name="value" value="11" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="WorldMedicalHealthPolicy1">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="World Medical &amp; Health Policy" />
+   <property name="issn" value="1948-4682" />
+   <property name="title" value="World Medical &amp; Health Policy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.psocommons.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="wmhp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="WorldMedicalHealthPolicy2">
+   <property name="attributes.publisher" value="Berkeley Electronic Press" />
+   <property name="journalTitle" value="World Medical &amp; Health Policy" />
+   <property name="issn" value="1948-4682" />
+   <property name="title" value="World Medical &amp; Health Policy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.psocommons.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_abbr" />
+    <property name="value" value="wmhp" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume" />
+    <property name="value" value="2" />
    </property>
    <property name="attributes.year" value="2010" />
   </property>
