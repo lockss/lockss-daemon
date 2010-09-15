@@ -1786,15 +1786,15 @@
     au < ready ; Journal of Inequalities and Applications Volume 2 (1999) ; 1999 >
     au < ready ; Journal of Inequalities and Applications Volume 3 (2000) ; 2000 >
     au < ready ; Journal of Inequalities and Applications Volume 4 (2001) ; 2001 >
-    au < testing ; Journal of Inequalities and Applications Volume 5 (2002) ; 2002 >
-    au < testing ; Journal of Inequalities and Applications Volume 6 (2003) ; 2003 >
-    au < testing ; Journal of Inequalities and Applications Volume 7 (2004) ; 2004 >
-    au < testing ; Journal of Inequalities and Applications Volume 2005 ; 2005 >
-    au < testing ; Journal of Inequalities and Applications Volume 2006 ; 2006 >
-    au < testing ; Journal of Inequalities and Applications Volume 2007 ; 2007 >
-    au < testing ; Journal of Inequalities and Applications Volume 2008 ; 2008 >
-    au < testing ; Journal of Inequalities and Applications Volume 2009 ; 2009 >
-    au < testing ; Journal of Inequalities and Applications Volume 2010 ; 2010 >
+    au < ready ; Journal of Inequalities and Applications Volume 5 (2002) ; 2002 >
+    au < ready ; Journal of Inequalities and Applications Volume 6 (2003) ; 2003 >
+    au < ready ; Journal of Inequalities and Applications Volume 7 (2004) ; 2004 >
+    au < ready ; Journal of Inequalities and Applications Volume 2005 ; 2005 >
+    au < ready ; Journal of Inequalities and Applications Volume 2006 ; 2006 >
+    au < ready ; Journal of Inequalities and Applications Volume 2007 ; 2007 >
+    au < ready ; Journal of Inequalities and Applications Volume 2008 ; 2008 >
+    au < ready ; Journal of Inequalities and Applications Volume 2009 ; 2009 >
+    au < ready ; Journal of Inequalities and Applications Volume 2010 ; 2010 >
 
   }
 
@@ -1817,7 +1817,7 @@
 
     param[journal_id] = jmb
 
-    au < testing ; Journal of Marine Biology Volume 2009 ; 2009 >
+    au < ready ; Journal of Marine Biology Volume 2009 ; 2009 >
 
   }
 
@@ -1830,8 +1830,8 @@
 
     param[journal_id] = jm
 
-    au < testing ; Journal of Metallurgy Volume 2009 ; 2009 >
-    au < testing ; Journal of Metallurgy Volume 2010 ; 2010 >
+    au < ready ; Journal of Metallurgy Volume 2009 ; 2009 >
+    au < ready ; Journal of Metallurgy Volume 2010 ; 2010 >
 
   }
 
@@ -1844,11 +1844,11 @@
 
     param[journal_id] = jnm
 
-    au < testing ; Journal of Nanomaterials Volume 2006 ; 2006 >
-    au < testing ; Journal of Nanomaterials Volume 2007 ; 2007 >
-    au < testing ; Journal of Nanomaterials Volume 2008 ; 2008 >
-    au < testing ; Journal of Nanomaterials Volume 2009 ; 2009 >
-    au < testing ; Journal of Nanomaterials Volume 2010 ; 2010 >
+    au < ready ; Journal of Nanomaterials Volume 2006 ; 2006 >
+    au < ready ; Journal of Nanomaterials Volume 2007 ; 2007 >
+    au < ready ; Journal of Nanomaterials Volume 2008 ; 2008 >
+    au < ready ; Journal of Nanomaterials Volume 2009 ; 2009 >
+    au < ready ; Journal of Nanomaterials Volume 2010 ; 2010 >
 
   }
 
@@ -1861,9 +1861,9 @@
 
     param[journal_id] = jnt
 
-    au < testing ; Journal of Nanotechnology VOlume 2008 ; 2008 >
-    au < testing ; Journal of Nanotechnology Volume 2009 ; 2009 >
-    au < testing ; Journal of Nanotechnology Volume 2010 ; 2010 >
+    au < ready ; Journal of Nanotechnology VOlume 2008 ; 2008 >
+    au < ready ; Journal of Nanotechnology Volume 2009 ; 2009 >
+    au < ready ; Journal of Nanotechnology Volume 2010 ; 2010 >
 
   }
 
@@ -2191,7 +2191,7 @@
     au < ready ; Physical Separation in Science and Engineering Volume 2007 ; 2007 >
     au < ready ; Physical Separation in Science and Engineering Volume 2008 ; 2008 >
     au < ready ; Physical Separation in Science and Engineering Volume 2009 ; 2009 >
-    au < testing ; Physical Separation in Science and Engineering Volume 2010 ; 2010 >
+    au < ready ; Physical Separation in Science and Engineering Volume 2010 ; 2010 >
 
   }
 
@@ -2204,11 +2204,11 @@
 
     param[journal_id] = ppar
 
-    au < testing ; PPAR Research Volume 2006 ; 2006 >
-    au < testing ; PPAR Research Volume 2007 ; 2007 >
-    au < testing ; PPAR Research Volume 2008 ; 2008 >
-    au < testing ; PPAR Research Volume 2009 ; 2009 >
-    au < testing ; PPAR Research Volume 2010 ; 2010 >
+    au < ready ; PPAR Research Volume 2006 ; 2006 >
+    au < ready ; PPAR Research Volume 2007 ; 2007 >
+    au < ready ; PPAR Research Volume 2008 ; 2008 >
+    au < ready ; PPAR Research Volume 2009 ; 2009 >
+    au < ready ; PPAR Research Volume 2010 ; 2010 >
 
   }
 
@@ -2223,46 +2223,46 @@
 
 comment[volume_order] = volume order is wrong, goes back to 1974
 
-    au < testing ; Psyche Volume 1 (1874) ; 1874 >
-    au < testing ; Psyche Volume 1 (1875) ; 1875 >
-    au < testing ; Psyche Volume 1 (1876) ; 1876 >
-    au < testing ; Psyche Volume 2 (1877) ; 1877 >
-    au < testing ; Psyche Volume 2 (1878) ; 1878 >
-    au < testing ; Psyche Volume 2 (1879) ; 1879 >
-    au < testing ; Psyche Volume 3 (1880) ; 1880 >
-    au < testing ; Psyche Volume 3 (1881) ; 1881 >
-    au < testing ; Psyche Volume 3 (1882) ; 1882 >
-    au < testing ; Psyche Volume 4 (1883) ; 1883 >
-    au < testing ; Psyche Volume 4 (1884) ; 1884 >
-    au < testing ; Psyche Volume 4 (1885) ; 1885 >
-    au < testing ; Psyche Volume 5 (1888) ; 1888 >
-    au < testing ; Psyche Volume 5 (1889) ; 1889 >
-    au < testing ; Psyche Volume 5 (1890) ; 1890 >
-    au < testing ; Psyche Volume 6 (1891) ; 1891 >
-    au < testing ; Psyche Volume 6 (1892) ; 1892 >
-    au < testing ; Psyche Volume 6 (1893) ; 1893 >
-    au < testing ; Psyche Volume 7 (1894) ; 1894 >
-    au < testing ; Psyche Volume 7 (1895) ; 1895 >
-    au < testing ; Psyche Volume 7 (1896) ; 1896 >
-    au < testing ; Psyche Volume 8 (1897) ; 1897 >
-    au < testing ; Psyche Volume 8 (1897) ; 1897 >
-    au < testing ; Psyche Volume 8 (1897) ; 1897 >
-    au < testing ; Psyche Volume 9 (1900) ; 1900 >
-    au < testing ; Psyche Volume 9 (1901) ; 1901 >
-    au < testing ; Psyche Volume 9 (1902) ; 1902 >
-    au < testing ; Psyche Volume 10 (1903) ; 1903 >
-    au < testing ; Psyche Volume 11 (1904) ; 1904 >
-    au < testing ; Psyche Volume 12 (1905) ; 1905 >
-    au < testing ; Psyche Volume 13 (1906) ; 1906 >
-    au < testing ; Psyche Volume 14 (1907) ; 1907 >
-    au < testing ; Psyche Volume 15 (1908) ; 1908 >
-    au < testing ; Psyche Volume 16 (1909) ; 1909 >
-    au < testing ; Psyche Volume 17 (1910) ; 1910 >
-    au < testing ; Psyche Volume 19 (1912) ; 1912 >
-    au < testing ; Psyche Volume 20 (1913) ; 1913 >
-    au < testing ; Psyche Volume 21 (1914) ; 1914 >
-    au < testing ; Psyche Volume 22 (1915) ; 1915 >
-    au < testing ; Psyche Volume 23 (1916) ; 1916 >
+    au < ready ; Psyche Volume 1 (1874) ; 1874 >
+    au < ready ; Psyche Volume 1 (1875) ; 1875 >
+    au < ready ; Psyche Volume 1 (1876) ; 1876 >
+    au < ready ; Psyche Volume 2 (1877) ; 1877 >
+    au < ready ; Psyche Volume 2 (1878) ; 1878 >
+    au < ready ; Psyche Volume 2 (1879) ; 1879 >
+    au < ready ; Psyche Volume 3 (1880) ; 1880 >
+    au < ready ; Psyche Volume 3 (1881) ; 1881 >
+    au < ready ; Psyche Volume 3 (1882) ; 1882 >
+    au < ready ; Psyche Volume 4 (1883) ; 1883 >
+    au < ready ; Psyche Volume 4 (1884) ; 1884 >
+    au < ready ; Psyche Volume 4 (1885) ; 1885 >
+    au < ready ; Psyche Volume 5 (1888) ; 1888 >
+    au < ready ; Psyche Volume 5 (1889) ; 1889 >
+    au < ready ; Psyche Volume 5 (1890) ; 1890 >
+    au < ready ; Psyche Volume 6 (1891) ; 1891 >
+    au < ready ; Psyche Volume 6 (1892) ; 1892 >
+    au < ready ; Psyche Volume 6 (1893) ; 1893 >
+    au < ready ; Psyche Volume 7 (1894) ; 1894 >
+    au < ready ; Psyche Volume 7 (1895) ; 1895 >
+    au < ready ; Psyche Volume 7 (1896) ; 1896 >
+    au < ready ; Psyche Volume 8 (1897) ; 1897 >
+    au < ready ; Psyche Volume 8 (1897) ; 1897 >
+    au < ready ; Psyche Volume 8 (1897) ; 1897 >
+    au < ready ; Psyche Volume 9 (1900) ; 1900 >
+    au < ready ; Psyche Volume 9 (1901) ; 1901 >
+    au < ready ; Psyche Volume 9 (1902) ; 1902 >
+    au < ready ; Psyche Volume 10 (1903) ; 1903 >
+    au < ready ; Psyche Volume 11 (1904) ; 1904 >
+    au < ready ; Psyche Volume 12 (1905) ; 1905 >
+    au < ready ; Psyche Volume 13 (1906) ; 1906 >
+    au < ready ; Psyche Volume 14 (1907) ; 1907 >
+    au < ready ; Psyche Volume 15 (1908) ; 1908 >
+    au < ready ; Psyche Volume 16 (1909) ; 1909 >
+    au < ready ; Psyche Volume 17 (1910) ; 1910 >
+    au < ready ; Psyche Volume 19 (1912) ; 1912 >
+    au < ready ; Psyche Volume 20 (1913) ; 1913 >
+    au < ready ; Psyche Volume 21 (1914) ; 1914 >
+    au < ready ; Psyche Volume 22 (1915) ; 1915 >
+    au < ready ; Psyche Volume 23 (1916) ; 1916 >
     au < ready ; Psyche Volume 24 (1917) ; 1917 >
     au < ready ; Psyche Volume 25 (1918) ; 1918 >
     au < ready ; Psyche Volume 26 (1919) ; 1919 >
@@ -2314,35 +2314,35 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < testing ; Psyche Volume 72 (1965) ; 1965 >
     au < testing ; Psyche Volume 73 (1966) ; 1966 >
     au < testing ; Psyche Volume 74 (1967) ; 1967 >
-    au < testing ; Psyche Volume 75 (1968) ; 1968 >
-    au < testing ; Psyche Volume 76 (1969) ; 1969 >
-    au < testing ; Psyche Volume 77 (1970) ; 1970 >
-    au < testing ; Psyche Volume 78 (1971) ; 1971 >
-    au < testing ; Psyche Volume 79 (1972) ; 1972 >
-    au < testing ; Psyche Volume 80 (1973) ; 1973 >
-    au < testing ; Psyche Volume 81 (1974) ; 1974 >
-    au < testing ; Psyche Volume 82 (1975) ; 1975 >
-    au < testing ; Psyche Volume 83 (1976) ; 1976 >
-    au < testing ; Psyche Volume 84 (1977) ; 1977 >
-    au < testing ; Psyche Volume 85 (1978) ; 1978 >
-    au < testing ; Psyche Volume 86 (1979) ; 1979 >
-    au < testing ; Psyche Volume 87 (1980) ; 1980 >
-    au < testing ; Psyche Volume 88 (1981) ; 1981 >
-    au < testing ; Psyche Volume 89 (1982) ; 1982 >
-    au < testing ; Psyche Volume 90 (1983) ; 1983 >
-    au < testing ; Psyche Volume 91 (1984) ; 1984 >
-    au < testing ; Psyche Volume 92 (1985) ; 1985 >
-    au < testing ; Psyche Volume 93 (1986) ; 1986 >
-    au < testing ; Psyche Volume 94 (1987) ; 1987 >
-    au < testing ; Psyche Volume 95 (1988) ; 1988 >
-    au < testing ; Psyche Volume 96 (1989) ; 1989 >
-    au < testing ; Psyche Volume 97 (1990) ; 1990 >
-    au < testing ; Psyche Volume 98 (1991) ; 1991 >
-    au < testing ; Psyche Volume 99 (1992) ; 1992 >
-    au < testing ; Psyche Volume 100 (1993) ; 1993 >
-    au < testing ; Psyche Volume 101 (1994) ; 1994 >
-    au < testing ; Psyche Volume 102 (1995) ; 1995 >
-    au < testing ; Psyche Volume 103 (2000) ; 2000 >
+    au < ready ; Psyche Volume 75 (1968) ; 1968 >
+    au < ready ; Psyche Volume 76 (1969) ; 1969 >
+    au < ready ; Psyche Volume 77 (1970) ; 1970 >
+    au < ready ; Psyche Volume 78 (1971) ; 1971 >
+    au < ready ; Psyche Volume 79 (1972) ; 1972 >
+    au < ready ; Psyche Volume 80 (1973) ; 1973 >
+    au < ready ; Psyche Volume 81 (1974) ; 1974 >
+    au < ready ; Psyche Volume 82 (1975) ; 1975 >
+    au < ready ; Psyche Volume 83 (1976) ; 1976 >
+    au < ready ; Psyche Volume 84 (1977) ; 1977 >
+    au < ready ; Psyche Volume 85 (1978) ; 1978 >
+    au < ready ; Psyche Volume 86 (1979) ; 1979 >
+    au < ready ; Psyche Volume 87 (1980) ; 1980 >
+    au < ready ; Psyche Volume 88 (1981) ; 1981 >
+    au < ready ; Psyche Volume 89 (1982) ; 1982 >
+    au < ready ; Psyche Volume 90 (1983) ; 1983 >
+    au < ready ; Psyche Volume 91 (1984) ; 1984 >
+    au < ready ; Psyche Volume 92 (1985) ; 1985 >
+    au < ready ; Psyche Volume 93 (1986) ; 1986 >
+    au < ready ; Psyche Volume 94 (1987) ; 1987 >
+    au < ready ; Psyche Volume 95 (1988) ; 1988 >
+    au < ready ; Psyche Volume 96 (1989) ; 1989 >
+    au < ready ; Psyche Volume 97 (1990) ; 1990 >
+    au < ready ; Psyche Volume 98 (1991) ; 1991 >
+    au < ready ; Psyche Volume 99 (1992) ; 1992 >
+    au < ready ; Psyche Volume 100 (1993) ; 1993 >
+    au < ready ; Psyche Volume 101 (1994) ; 1994 >
+    au < ready ; Psyche Volume 102 (1995) ; 1995 >
+    au < ready ; Psyche Volume 103 (2000) ; 2000 >
     au < doesNotExist ; Psyche Volume 2001 ; 2001 >
     au < doesNotExist ; Psyche Volume 2002 ; 2002 >
     au < doesNotExist ; Psyche Volume 2003 ; 2003 >
