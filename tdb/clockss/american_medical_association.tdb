@@ -189,7 +189,46 @@
       au < released ; 1999 ; Archives of Family Medicine Volume 8 ; 8 ; reingest4.clockss.org:8082 >
       au < released ; 2000 ; Archives of Family Medicine Volume 9 ; 9 ; reingest1.clockss.org:8082 >
     
+<<<<<<< american_medical_association.tdb
+    param[base_url] = http://archfaci.ama-assn.org/
+    pluginSuffix = ClockssHighWirePlugin
+    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] ; proxy >
+    
+    au < ClockssHighWirePlugin ; superseded ; 1999 ; Archives of Facial Plastic Surgery Volume 1 [superseded] ; 1 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2000 ; Archives of Facial Plastic Surgery Volume 2 [superseded] ; 2 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2001 ; Archives of Facial Plastic Surgery Volume 3 [superseded] ; 3 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePlugin ; superseded ; 2002 ; Archives of Facial Plastic Surgery Volume 4 [superseded] ; 4 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePlugin ; superseded ; 2003 ; Archives of Facial Plastic Surgery Volume 5 [superseded] ; 5 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2004 ; Archives of Facial Plastic Surgery Volume 6 [superseded] ; 6 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2005 ; Archives of Facial Plastic Surgery Volume 7 [superseded] ; 7 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePlugin ; superseded ; 2006 ; Archives of Facial Plastic Surgery Volume 8 [superseded] ; 8 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePlugin ; superseded ; 2007 ; Archives of Facial Plastic Surgery Volume 9 [superseded] ; 9 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePlugin ; superseded ; 2008 ; Archives of Facial Plastic Surgery Volume 10 [superseded] ; 10 ; >
+    au < ClockssHighWirePlugin ; superseded ; 2009 ; Archives of Facial Plastic Surgery Volume 11 [superseded] ; 11 ; >
+    au < ClockssHighWirePlugin ; superseded ; 2010 ; Archives of Facial Plastic Surgery Volume 12 [superseded] ; 12 ;  >
+
+<<<<<<< american_medical_association.tdb
+    au < ClockssHighWirePressH20Plugin ; released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; released ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ;  >      
+=======
+    au < ClockssHighWirePressH20Plugin ; ready ; 1999 ; Archives of Facial Plastic Surgery Volume 1 ; 1 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2000 ; Archives of Facial Plastic Surgery Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2001 ; Archives of Facial Plastic Surgery Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2002 ; Archives of Facial Plastic Surgery Volume 4 ; 4 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2003 ; Archives of Facial Plastic Surgery Volume 5 ; 5 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2004 ; Archives of Facial Plastic Surgery Volume 6 ; 6 ; reingest1.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2005 ; Archives of Facial Plastic Surgery Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2006 ; Archives of Facial Plastic Surgery Volume 8 ; 8 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2007 ; Archives of Facial Plastic Surgery Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    au < ClockssHighWirePressH20Plugin ; released ; 2008 ; Archives of Facial Plastic Surgery Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; released ; 2009 ; Archives of Facial Plastic Surgery Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; released ; 2010 ; Archives of Facial Plastic Surgery Volume 12 ; 12 ;  >      
+>>>>>>> 1.63
+  }
+=======
     }
+>>>>>>> 1.65
 
     {
     
@@ -1164,7 +1203,7 @@
       au < released ; 1974 ; AMA Archives of Surgery Volume 108 ; 108 ; reingest3.clockss.org:8083 >
       au < released ; 1974 ; AMA Archives of Surgery Volume 109 ; 109 ; reingest3.clockss.org:8083 >
       au < released ; 1975 ; Archives of Surgery Volume 110 ; 110 ; reingest4.clockss.org:8082 >
-      au < released ; 1976 ; Archives of Surgery Volume 112 ; 111 ; reingest1.clockss.org:8082 >
+      au < released ; 1976 ; Archives of Surgery Volume 111 ; 111 ; reingest1.clockss.org:8082 >
       au < released ; 1977 ; Archives of Surgery Volume 112 ; 112 ; reingest2.clockss.org:8085 >
       au < released ; 1978 ; Archives of Surgery Volume 113 ; 113 ; reingest3.clockss.org:8083 >
       au < released ; 1979 ; Archives of Surgery Volume 114 ; 114 ; reingest4.clockss.org:8082 >
@@ -1265,11 +1304,14 @@
       au < released ; 1909 ; Journal of the American Medical Association Volume LII ; LII ; reingest2.clockss.org:8085 >
       au < released ; 1909 ; Journal of the American Medical Association Volume LIII ; LIII ; reingest2.clockss.org:8085 >
       au < released ; 1910 ; Journal of the American Medical Association Volume LIV ; LIV ; reingest3.clockss.org:8083 >
-      au < released ; 1910 ; Journal of the American Medical Association Volume LV ; LV ; reingest3.clockss.org:8083 >
+      au < down ; 1910 ; Journal of the American Medical Association Volume LV [superseded] ; LV ; reingest3.clockss.org:8083 >
+      au < released ; 1910 ; Journal of the American Medical Association Volume 55 ; 55 ; reingest3.clockss.org:8083 >
       au < released ; 1911 ; Journal of the American Medical Association Volume LVI ; LVI ; reingest4.clockss.org:8082 >
       au < released ; 1911 ; Journal of the American Medical Association Volume LVII ; LVII ; reingest4.clockss.org:8082 >
-      au < released ; 1913 ; Journal of the American Medical Association Volume LX ; LX ; reingest2.clockss.org:8085 >
-      au < released ; 1913 ; Journal of the American Medical Association Volume LXI ; LXI ; reingest2.clockss.org:8085 >
+      au < down ; 1913 ; Journal of the American Medical Association Volume LX [superseded] ; LX ; reingest2.clockss.org:8085 >
+      au < released ; 1913 ; Journal of the American Medical Association Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+      au < down ; 1913 ; Journal of the American Medical Association Volume LXI [superseded] ; LXI ; reingest2.clockss.org:8085 >
+      au < released ; 1913 ; Journal of the American Medical Association Volume 61 ; 61 ; reingest2.clockss.org:8085 >
       au < released ; 1914 ; Journal of the American Medical Association Volume LXII ; LXII ; reingest3.clockss.org:8083 >
       au < released ; 1914 ; Journal of the American Medical Association Volume LXIII ; LXIII ; reingest3.clockss.org:8083 >
       au < released ; 1915 ; Journal of the American Medical Association Volume LXIV ; LXIV ; reingest4.clockss.org:8082 >
