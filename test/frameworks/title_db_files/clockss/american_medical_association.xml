@@ -2838,11 +2838,11 @@
    <property name="attributes.year" value="2000" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume1H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume1superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 1 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 1 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2852,15 +2852,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="1" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="1999" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume2H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume2superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 2 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 2 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2870,15 +2874,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="2" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2000" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume3H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume3superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 3 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 3 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2888,15 +2896,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="3" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2001" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume4H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume4superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 4 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 4 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2906,15 +2918,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="4" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2002" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume5H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume5superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 5 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 5 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2924,15 +2940,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="5" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2003" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume6H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume6superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 6 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 6 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2942,15 +2962,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="6" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2004" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume7H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume7superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 7 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 7 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2960,15 +2984,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="7" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2005" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume8H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume8superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 8 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 8 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2978,15 +3006,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="8" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2006" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume9H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume9superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 9 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 9 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -2996,15 +3028,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="9" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2007" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume10H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume10superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 10 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 10 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -3014,15 +3050,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="10" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2008" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume11H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume11superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 11 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 11 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -3032,15 +3072,19 @@
     <property name="key" value="volume_name" />
     <property name="value" value="11" />
    </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2009" />
   </property>
 
-  <property name="ArchivesofFacialPlasticSurgeryVolume12H10">
+  <property name="ArchivesofFacialPlasticSurgeryVolume12superseded">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Facial Plastic Surgery" />
    <property name="issn" value="1521-2491" />
-   <property name="title" value="Archives of Facial Plastic Surgery Volume 12 (H10)" />
+   <property name="title" value="Archives of Facial Plastic Surgery Volume 12 [superseded]" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -3049,6 +3093,10 @@
    <property name="param.2">
     <property name="key" value="volume_name" />
     <property name="value" value="12" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2010" />
@@ -18626,11 +18674,11 @@
    <property name="attributes.year" value="1975" />
   </property>
 
-  <property name="ArchivesofSurgery112">
+  <property name="ArchivesofSurgery111">
    <property name="attributes.publisher" value="American Medical Association" />
    <property name="journalTitle" value="Archives of Surgery" />
    <property name="issn" value="0004-0010" />
-   <property name="title" value="Archives of Surgery Volume 112" />
+   <property name="title" value="Archives of Surgery Volume 111" />
    <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -25011,6 +25059,198 @@
    </property>
    <property name="attributes.hint_application/pdf_filter_factory" value="org.lockss.plugin.highwire.AmericanMedicalAssociationPdfTransform$Simplified" />
    <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="VirtualMentor1">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="1999" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor2">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2000" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor3">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2001" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor4">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2002" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor5">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2003" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor6">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2004" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor7">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2005" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor8">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2006" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor9">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2007" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor10">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2008" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor11">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2009" />
+   </property>
+  </property>
+
+  <property name="VirtualMentor12">
+   <property name="attributes.publisher" value="American Medical Association" />
+   <property name="journalTitle" value="Virtual Mentor" />
+   <property name="issn" value="1937-7010" />
+   <property name="title" value="Virtual Mentor Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://virtualmentor.ama-assn.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="year" />
+    <property name="value" value="2010" />
+   </property>
   </property>
 
  </property>
