@@ -1,10 +1,10 @@
 /*
- * $Id: 
+ * $Id: AMAVirtualMentorHtmlFilterFactory.java,v 1.1 2010-09-16 01:03:37 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,33 +34,29 @@ package org.lockss.plugin.amavirtualmentor;
 
 import java.io.InputStream;
 
-import org.htmlparser.filters.TagNameFilter;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
 
-public class ClockssAMAVirtualMentorHtmlFilterFactory implements FilterFactory {
+public class AMAVirtualMentorHtmlFilterFactory implements FilterFactory {
 
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
+    NodeFilter[] filters = new NodeFilter[] {
         // Filter out scripts
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")), 
-        // Filter out <div class="announcebox">...</div>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div",
-                                                                         "class",
-                                                                         "announcebox")),
-        // Filter out <p id="copyright">...</p>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("p",
-                                                                         "id",
-                                                                         "copyright")),
-                                                                         
+        new TagNameFilter("script"),
+        // Filter out announcements
+        HtmlNodeFilters.tagWithAttribute("div", "class", "announcebox"),
+        // Filter out current copyright year
+        HtmlNodeFilters.tagWithAttribute("p", "id", "copyright"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
-                                     new HtmlCompoundTransform(transforms));
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }

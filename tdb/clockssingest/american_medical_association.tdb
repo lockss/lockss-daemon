@@ -308,7 +308,6 @@
       au < released ; 2007 ; Archives of General Psychiatry Volume 64 ; 64 ; reingest4.clockss.org:8082 >
       au < released ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
       au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
-      au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
       au < testing ; 2010 ; Archives of General Psychiatry Volume 67 ; 67 ; >
       
     }
@@ -1530,6 +1529,8 @@
       au < notReady ; 2009 ; JAMA: The Journal of the American Medical Association Volume 301 ; 301 ; >
       au < notReady ; 2009 ; JAMA: The Journal of the American Medical Association Volume 302 ; 302 ; > 
       au < testing ; 2010 ; JAMA: The Journal of the American Medical Association Volume 303 ; 303 ; >
+      au < wanted ; 2010 ; JAMA: The Journal of the American Medical Association Volume 304 ; 304 ; >
+
     }
     
   }
@@ -1542,21 +1543,21 @@
     >
     
     plugin = org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin
-    implicit < status ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
     param[base_url] = http://virtualmentor.ama-assn.org/
     
-    au < manifest ; Virtual Mentor Volume 1 ; 1999 >
-    au < manifest ; Virtual Mentor Volume 2 ; 2000 >
-    au < manifest ; Virtual Mentor Volume 3 ; 2001 >
-    au < manifest ; Virtual Mentor Volume 4 ; 2002 >
-    au < manifest ; Virtual Mentor Volume 5 ; 2003 >
-    au < manifest ; Virtual Mentor Volume 6 ; 2004 >
-    au < manifest ; Virtual Mentor Volume 7 ; 2005 >
-    au < manifest ; Virtual Mentor Volume 8 ; 2006 >
-    au < manifest ; Virtual Mentor Volume 9 ; 2007 >
-    au < manifest ; Virtual Mentor Volume 10 ; 2008 >
-    au < manifest ; Virtual Mentor Volume 11 ; 2009 >
-    au < manifest ; Virtual Mentor Volume 12 ; 2010 >
+    au < testing ; 1999 ; Virtual Mentor Volume 1 ; 1999 >
+    au < testing ; 2000 ; Virtual Mentor Volume 2 ; 2000 >
+    au < testing ; 2001 ; Virtual Mentor Volume 3 ; 2001 >
+    au < testing ; 2002 ; Virtual Mentor Volume 4 ; 2002 >
+    au < testing ; 2003 ; Virtual Mentor Volume 5 ; 2003 >
+    au < testing ; 2004 ; Virtual Mentor Volume 6 ; 2004 >
+    au < testing ; 2005 ; Virtual Mentor Volume 7 ; 2005 >
+    au < testing ; 2006 ; Virtual Mentor Volume 8 ; 2006 >
+    au < testing ; 2007 ; Virtual Mentor Volume 9 ; 2007 >
+    au < testing ; 2008 ; Virtual Mentor Volume 10 ; 2008 >
+    au < testing ; 2009 ; Virtual Mentor Volume 11 ; 2009 >
+    au < ready ; 2010 ; Virtual Mentor Volume 12 ; 2010 >
 
   }
   
