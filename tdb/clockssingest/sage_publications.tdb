@@ -1499,7 +1499,7 @@ comment[54] = volume does not exist yet
 
     au < ClockssHighWirePlugin ; down ; 2008 ; "Cultural Studies <=> Critical Methodologies Volume 8" ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; "Cultural Studies <=> Critical Methodologies Volume 9" ; 9 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePlugin ; testing ; 2010 ; "Cultural Studies <=> Critical Methodologies Volume 10" ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; "Cultural Studies <=> Critical Methodologies Volume 10" ; 10 ; >
 
   }
 
@@ -2743,7 +2743,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; History of the Human Sciences Volume 21 ; 21 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; History of the Human Sciences Volume 22 ; 22 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; History of the Human Sciences Volume 23 ; 23 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; History of the Human Sciences Volume 23 ; 23 ; >
 
   }
 
@@ -2759,7 +2759,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Holocene Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The Holocene Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Holocene Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Holocene Volume 20 ; 20 ; >
 
   }
 
@@ -2774,7 +2774,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://hhc.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Home Health Care Management & Practice Volume 21 ; 21 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Home Health Care Management & Practice Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Home Health Care Management & Practice Volume 22 ; 22 ; >
     au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Home Health Care Management & Practice Volume 23 ; 23 ; >
 
   }

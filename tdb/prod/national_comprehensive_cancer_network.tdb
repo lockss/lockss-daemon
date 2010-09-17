@@ -16,14 +16,14 @@
     implicit < status ; year ; name ; param[volume_name] >
     param[base_url] = http://www.jnccn.org/
   
-    au < testing ; 2003 ; Journal of the National Comprehensive Cancer Network Volume 1 ; 1 >
-    au < testing ; 2004 ; Journal of the National Comprehensive Cancer Network Volume 2 ; 2 >
-    au < testing ; 2005 ; Journal of the National Comprehensive Cancer Network Volume 3 ; 3 >
-    au < testing ; 2006 ; Journal of the National Comprehensive Cancer Network Volume 4 ; 4 >
-    au < testing ; 2007 ; Journal of the National Comprehensive Cancer Network Volume 5 ; 5 >
-    au < testing ; 2008 ; Journal of the National Comprehensive Cancer Network Volume 6 ; 6 >
-    au < testing ; 2009 ; Journal of the National Comprehensive Cancer Network Volume 7 ; 7 >
-    au < testing ; 2010 ; Journal of the National Comprehensive Cancer Network Volume 8 ; 8 >
+    au < ready ; 2003 ; Journal of the National Comprehensive Cancer Network Volume 1 ; 1 >
+    au < ready ; 2004 ; Journal of the National Comprehensive Cancer Network Volume 2 ; 2 >
+    au < ready ; 2005 ; Journal of the National Comprehensive Cancer Network Volume 3 ; 3 >
+    au < ready ; 2006 ; Journal of the National Comprehensive Cancer Network Volume 4 ; 4 >
+    au < ready ; 2007 ; Journal of the National Comprehensive Cancer Network Volume 5 ; 5 >
+    au < ready ; 2008 ; Journal of the National Comprehensive Cancer Network Volume 6 ; 6 >
+    au < ready ; 2009 ; Journal of the National Comprehensive Cancer Network Volume 7 ; 7 >
+    au < ready ; 2010 ; Journal of the National Comprehensive Cancer Network Volume 8 ; 8 >
   
   }
   

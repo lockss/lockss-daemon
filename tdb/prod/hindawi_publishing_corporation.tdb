@@ -2645,16 +2645,16 @@ comment[volume_order] = volume order is wrong, goes back to 1974
     au < testing ; VLSI Design Volume 7 (1998) ; 1998 >
     au < testing ; VLSI Design Volume 8 (1999) ; 1999 >
     au < testing ; VLSI Design Volume 9 (2000) ; 2000 >
-    au < testing ; VLSI Design Volume 10 (2001) ; 2001 >
-    au < testing ; VLSI Design Volume 11 (2002) ; 2002 >
-    au < testing ; VLSI Design Volume 12 (2003) ; 2003 >
-    au < testing ; VLSI Design Volume 13 (2004) ; 2004 >
-    au < testing ; VLSI Design Volume 14 (2005) ; 2005 >
-    au < testing ; VLSI Design Volume 15 (2006) ; 2006 >
-    au < testing ; VLSI Design Volume 2007 ; 2007 >
-    au < testing ; VLSI Design Volume 2008 ; 2008 >
-    au < testing ; VLSI Design Volume 2009 ; 2009 >
-    au < testing ; VLSI Design Volume 2010 ; 2010 >
+    au < ready ; VLSI Design Volume 10 (2001) ; 2001 >
+    au < ready ; VLSI Design Volume 11 (2002) ; 2002 >
+    au < ready ; VLSI Design Volume 12 (2003) ; 2003 >
+    au < ready ; VLSI Design Volume 13 (2004) ; 2004 >
+    au < ready ; VLSI Design Volume 14 (2005) ; 2005 >
+    au < ready ; VLSI Design Volume 15 (2006) ; 2006 >
+    au < ready ; VLSI Design Volume 2007 ; 2007 >
+    au < ready ; VLSI Design Volume 2008 ; 2008 >
+    au < ready ; VLSI Design Volume 2009 ; 2009 >
+    au < ready ; VLSI Design Volume 2010 ; 2010 >
 
   }
 
@@ -2667,9 +2667,9 @@ comment[volume_order] = volume order is wrong, goes back to 1974
 
     param[journal_id] = xroi
 
-    au < testing ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 >
-    au < testing ; X-Ray Optics and Instrumentation Volume 2009 ; 2009 >
-    au < testing ; X-Ray Optics and Instrumentation Volume 2010 ; 2010 >
+    au < ready ; X-Ray Optics and Instrumentation Volume 2008 ; 2008 >
+    au < ready ; X-Ray Optics and Instrumentation Volume 2009 ; 2009 >
+    au < ready ; X-Ray Optics and Instrumentation Volume 2010 ; 2010 >
 
   }
 
