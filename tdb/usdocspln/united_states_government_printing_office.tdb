@@ -563,7 +563,7 @@
 
     plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
     param[base_url] = http://www.gpo.gov/
-    param[collection_id] = HOB
+    param[collection_id] = HMAN
     implicit < status ; year ; name ; param[year] >
 
     au < manifest ; 2009 ; House Rules and Manual 2009 ; 2009 >
