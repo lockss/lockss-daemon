@@ -1,0 +1,76 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;GPO FDSys Plugin (via sitemaps, by year), Base URL %s, Collection ID %s, Year %d&quot;, base_url, collection_id, year</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>GPO FDSys Plugin (via sitemaps, by year)</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>4,&quot;^%s&quot;, base_url</string>
+      <string>1,&quot;^%ssmap/fdsys/sitemap_%d/%d_%s_sitemap\.xml$&quot;, base_url, year, year, collection_id</string>
+      <string>1,&quot;^%sfdsys/(granule|pkg)/%s-[^/]*/&quot;, base_url, collection_id</string>
+      <string>1,&quot;^%sfdsys/delivery/(getpackage|pagedetails)\.action\?(granuleId|packageId)=%s-&quot;, base_url, collection_id</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+      <string>&quot;%ssmap/fdsys/sitemap_%d/%d_%s_sitemap.xml&quot;, base_url, year, year, collection_id</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>collection_id</key>
+        <displayName>Collection Identifier</displayName>
+        <description>A short code identifying the top-level collection, e.g. FR for the Federal Register. Case-sensitive.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsLinkExtractorFactory</string>
+  </entry>
+</map>

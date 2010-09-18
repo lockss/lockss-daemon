@@ -9,25 +9,73 @@
   {
   
     title <
+      name = Additional Government Publications
+    >
+    
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = GPO
+    implicit < status ; year ; name ; param[year] >
+    
+    au < manifest ; 2009 ; Additional Government Publications 2009 ; 2009 >
+    au < manifest ; 2010 ; Additional Government Publications 2010 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name =  Budget of the United States Government
+    >
+    
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = BUDGET
+    implicit < status ; year ; name ; param[year] >
+    
+    au < manifest ; 2009 ; Budget of the United States Government 2009 ; 2009 >
+    au < manifest ; 2010 ; Budget of the United States Government 2010 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
       name = Code of Federal Regulations
     >
     
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataYearPlugin
-    param[base_url] = http://www.gpo.gov/fdsys/bulkdata/
-    param[collection_id] = CFR
-    implicit < status ; year ; name ; param[year] >
+    {
 
-    au < manifest ; 2000 ; Code of Federal Regulations 2000 [GPO FDSys] ; 2000 >
-    au < manifest ; 2001 ; Code of Federal Regulations 2001 [GPO FDSys] ; 2001 >
-    au < manifest ; 2002 ; Code of Federal Regulations 2002 [GPO FDSys] ; 2002 >
-    au < manifest ; 2003 ; Code of Federal Regulations 2003 [GPO FDSys] ; 2003 >
-    au < manifest ; 2004 ; Code of Federal Regulations 2004 [GPO FDSys] ; 2004 >
-    au < manifest ; 2005 ; Code of Federal Regulations 2005 [GPO FDSys] ; 2005 >
-    au < manifest ; 2006 ; Code of Federal Regulations 2006 [GPO FDSys] ; 2006 >
-    au < manifest ; 2007 ; Code of Federal Regulations 2007 [GPO FDSys] ; 2007 >
-    au < manifest ; 2008 ; Code of Federal Regulations 2008 [GPO FDSys] ; 2008 >
-    au < manifest ; 2009 ; Code of Federal Regulations 2009 [GPO FDSys] ; 2009 >
-    au < manifest ; 2010 ; Code of Federal Regulations 2010 [GPO FDSys] ; 2010 >
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = CFR
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
+      au < manifest ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
+
+    }
+      
+    {
+    
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataYearPlugin
+      param[base_url] = http://www.gpo.gov/fdsys/bulkdata/
+      param[collection_id] = CFR
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2000 ; Code of Federal Regulations 2000 Bulk Data ; 2000 >
+      au < manifest ; 2001 ; Code of Federal Regulations 2001 Bulk Data ; 2001 >
+      au < manifest ; 2002 ; Code of Federal Regulations 2002 Bulk Data ; 2002 >
+      au < manifest ; 2003 ; Code of Federal Regulations 2003 Bulk Data ; 2003 >
+      au < manifest ; 2004 ; Code of Federal Regulations 2004 Bulk Data ; 2004 >
+      au < manifest ; 2005 ; Code of Federal Regulations 2005 Bulk Data ; 2005 >
+      au < manifest ; 2006 ; Code of Federal Regulations 2006 Bulk Data ; 2006 >
+      au < manifest ; 2007 ; Code of Federal Regulations 2007 Bulk Data ; 2007 >
+      au < manifest ; 2008 ; Code of Federal Regulations 2008 Bulk Data ; 2008 >
+      au < manifest ; 2009 ; Code of Federal Regulations 2009 Bulk Data ; 2009 >
+      au < manifest ; 2010 ; Code of Federal Regulations 2010 Bulk Data ; 2010 >
+    
+    }
 
   }
 
@@ -37,19 +85,100 @@
       name = Congressional Bills
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin
-    param[base_url] = http://bulk.resource.org/
-    implicit < status ; name ; param[congress] >
+    {
 
-    au < wanted ; Congressional Bills, 103rd Congress [Public.Resource.Org] ; 103 >
-    au < released ; Congressional Bills, 104th Congress [Public.Resource.Org] ; 104 >
-    au < released ; Congressional Bills, 105th Congress [Public.Resource.Org] ; 105 >
-    au < released ; Congressional Bills, 106th Congress [Public.Resource.Org] ; 106 >
-    au < released ; Congressional Bills, 107th Congress [Public.Resource.Org] ; 107 >
-    au < released ; Congressional Bills, 108th Congress [Public.Resource.Org] ; 108 >
-    au < released ; Congressional Bills, 109th Congress [Public.Resource.Org] ; 109 >
-    au < released ; Congressional Bills, 110th Congress [Public.Resource.Org] ; 110 >
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = BILLS
+      implicit < status ; year ; name ; param[year] >
 
+      au < manifest ; 2009 ; Congressional Bills 2009 ; 2009 >
+      au < manifest ; 2010 ; Congressional Bills 2010 ; 2010 >
+
+    }
+      
+    {
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin
+      param[base_url] = http://bulk.resource.org/
+      implicit < status ; name ; param[congress] >
+
+      au < wanted ; Congressional Bills, 103rd Congress [Public.Resource.Org] ; 103 >
+      au < released ; Congressional Bills, 104th Congress [Public.Resource.Org] ; 104 >
+      au < released ; Congressional Bills, 105th Congress [Public.Resource.Org] ; 105 >
+      au < released ; Congressional Bills, 106th Congress [Public.Resource.Org] ; 106 >
+      au < released ; Congressional Bills, 107th Congress [Public.Resource.Org] ; 107 >
+      au < released ; Congressional Bills, 108th Congress [Public.Resource.Org] ; 108 >
+      au < released ; Congressional Bills, 109th Congress [Public.Resource.Org] ; 109 >
+      au < released ; Congressional Bills, 110th Congress [Public.Resource.Org] ; 110 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Congressional Calendars
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = CCAL
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; Congressional Calendars 2009 ; 2009 >
+    au < manifest ; 2010 ; Congressional Calendars 2010 ; 2010 >
+      
+  }
+
+  {
+
+    title <
+      name = Congressional Committee Prints
+    >
+
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = CPRT
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
+      au < manifest ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
+
+    }
+      
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
+      param[base_url] = http://bulk.resource.org/      
+      implicit < status ; name ; param[congress] >
+
+      au < released ; Congressional Committee Prints, 105th Congress [Public.Resource.Org] ; 105 >
+      au < released ; Congressional Committee Prints, 106th Congress [Public.Resource.Org] ; 106 >
+      au < released ; Congressional Committee Prints, 107th Congress [Public.Resource.Org] ; 107 >
+      au < released ; Congressional Committee Prints, 108th Congress [Public.Resource.Org] ; 108 >
+      au < released ; Congressional Committee Prints, 109th Congress [Public.Resource.Org] ; 109 > 
+      au < released ; Congressional Committee Prints, 110th Congress [Public.Resource.Org] ; 110 >
+    
+    }
+
+  }
+  
+  {
+
+    title <
+      name = Congressional Directory
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = HOB
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; Congressional Directory 2009 ; 2009 >
+      
   }
 
   {
@@ -58,18 +187,34 @@
       name = Congressional Documents
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
-    param[base_url] = http://bulk.resource.org/
-    implicit < status ; name ; param[congress] >
+    {
 
-    au < released ; Congressional Documents, 104th Congress [Public.Resource.Org] ; 104 >
-    au < released ; Congressional Documents, 105th Congress [Public.Resource.Org] ; 105 >
-    au < released ; Congressional Documents, 106th Congress [Public.Resource.Org] ; 106 >
-    au < released ; Congressional Documents, 107th Congress [Public.Resource.Org] ; 107 >
-    au < released ; Congressional Documents, 108th Congress [Public.Resource.Org] ; 108 >
-    au < released ; Congressional Documents, 109th Congress [Public.Resource.Org] ; 109 >
-    au < released ; Congressional Documents, 110th Congress [Public.Resource.Org] ; 110 >
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = CDOC
+      implicit < status ; year ; name ; param[year] >
 
+      au < manifest ; 2009 ; Congressional Documents 2009 ; 2009 >
+      au < manifest ; 2010 ; Congressional Documents 2010 ; 2010 >
+
+    }
+      
+    {
+  
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.documents.CongressionalDocumentsPlugin
+      param[base_url] = http://bulk.resource.org/
+      implicit < status ; name ; param[congress] >
+
+      au < released ; Congressional Documents, 104th Congress [Public.Resource.Org] ; 104 >
+      au < released ; Congressional Documents, 105th Congress [Public.Resource.Org] ; 105 >
+      au < released ; Congressional Documents, 106th Congress [Public.Resource.Org] ; 106 >
+      au < released ; Congressional Documents, 107th Congress [Public.Resource.Org] ; 107 >
+      au < released ; Congressional Documents, 108th Congress [Public.Resource.Org] ; 108 >
+      au < released ; Congressional Documents, 109th Congress [Public.Resource.Org] ; 109 >
+      au < released ; Congressional Documents, 110th Congress [Public.Resource.Org] ; 110 >
+ 
+    }
+ 
   }
 
   {
@@ -78,6 +223,18 @@
       name = Congressional Hearings
     >
 
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = CHRG
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; Congressional Hearings 2009 ; 2009 >
+      au < manifest ; 2010 ; Congressional Hearings 2010 ; 2010 >
+
+    }
+      
     {
 
       plugin = org.lockss.plugin.usdocspln.gov.gpo.hearings.CongressionalHearingsHouseOnlyPlugin
@@ -109,28 +266,21 @@
   {
 
     title <
-      name = Congressional Prints 
-    >
-
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.prints.CongressionalPrintsPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[congress] >
-
-    au < released ; Congressional Prints, 105th Congress [Public.Resource.Org] ; 105 >
-    au < released ; Congressional Prints, 106th Congress [Public.Resource.Org] ; 106 >
-    au < released ; Congressional Prints, 107th Congress [Public.Resource.Org] ; 107 >
-    au < released ; Congressional Prints, 108th Congress [Public.Resource.Org] ; 108 >
-    au < released ; Congressional Prints, 109th Congress [Public.Resource.Org] ; 109 > 
-    au < released ; Congressional Prints, 110th Congress [Public.Resource.Org] ; 110 >
-
-  }
-  
-  {
-
-    title <
       name = Congressional Record
     >
 
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = CREC
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; Congressional Record 2009 ; 2009 >
+      au < manifest ; 2010 ; Congressional Record 2010 ; 2010 >
+
+    }
+      
     {
 
       plugin = org.lockss.plugin.usdocspln.gov.gpo.record.CongressionalRecordEarlyYearsPlugin
@@ -169,22 +319,54 @@
   }
   
   {
-  
+
     title <
-      name = Congressional Reports 
+      name = Congressional Record Index 
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[congress] >
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = CRI
+    implicit < status ; year ; name ; param[year] >
 
-    au < released ; Congressional Reports, 104th Congress [Public.Resource.Org] ; 104 >
-    au < released ; Congressional Reports, 105th Congress [Public.Resource.Org] ; 105 >
-    au < released ; Congressional Reports, 106th Congress [Public.Resource.Org] ; 106 >
-    au < released ; Congressional Reports, 107th Congress [Public.Resource.Org] ; 107 >
-    au < released ; Congressional Reports, 108th Congress [Public.Resource.Org] ; 108 >
-    au < released ; Congressional Reports, 109th Congress [Public.Resource.Org] ; 109 > 
-    au < released ; Congressional Reports, 110th Congress [Public.Resource.Org] ; 110 >
+    au < manifest ; 2009 ; Congressional Record Index 2009 ; 2009 >
+    au < manifest ; 2010 ; Congressional Record Index 2010 ; 2010 >
+      
+  }
+
+  {
+  
+    title <
+      name = Congressional Reports
+    >
+
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = CRPT
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; Congressional Reports 2009 ; 2009 >
+      au < manifest ; 2010 ; Congressional Reports 2010 ; 2010 >
+
+    }
+      
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.reports.CongressionalReportsPlugin
+      param[base_url] = http://bulk.resource.org/      
+      implicit < status ; name ; param[congress] >
+
+      au < released ; Congressional Reports, 104th Congress [Public.Resource.Org] ; 104 >
+      au < released ; Congressional Reports, 105th Congress [Public.Resource.Org] ; 105 >
+      au < released ; Congressional Reports, 106th Congress [Public.Resource.Org] ; 106 >
+      au < released ; Congressional Reports, 107th Congress [Public.Resource.Org] ; 107 >
+      au < released ; Congressional Reports, 108th Congress [Public.Resource.Org] ; 108 >
+      au < released ; Congressional Reports, 109th Congress [Public.Resource.Org] ; 109 > 
+      au < released ; Congressional Reports, 110th Congress [Public.Resource.Org] ; 110 >
+
+    }
 
   }
 
@@ -226,9 +408,69 @@
   {
 
     title <
+      name = Daily Compilation of Presidential Documents
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = DCPD
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
+    au < manifest ; 2010 ; Daily Compilation of Presidential Documents 2010 ; 2010 >
+      
+  }
+
+  {
+
+    title <
+      name = Economic Indicators
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = ECONI
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; Economic Indicators 2009 ; 2009 >
+    au < manifest ; 2010 ; Economic Indicators 2010 ; 2010 >
+      
+  }
+
+  {
+
+    title <
+      name = Economic Report of the President
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = ERP
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; Economic Report of the President 2009 ; 2009 >
+    au < manifest ; 2010 ; Economic Report of the President 2010 ; 2010 >
+      
+  }
+
+  {
+
+    title <
       name = Federal Register
     >
 
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = FR
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; Federal Register 2009 ; 2009 >
+      au < manifest ; 2010 ; Federal Register 2010 ; 2010 >
+
+    }
+      
     {
 
       plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataYearPlugin
@@ -236,17 +478,17 @@
       param[collection_id] = FR
       implicit < status ; year ; name ; param[year] >
 
-      au < manifest ; 2000 ; Federal Register 2000 [GPO FDSys] ; 2000 >
-      au < manifest ; 2001 ; Federal Register 2001 [GPO FDSys] ; 2001 >
-      au < manifest ; 2002 ; Federal Register 2002 [GPO FDSys] ; 2002 >
-      au < manifest ; 2003 ; Federal Register 2003 [GPO FDSys] ; 2003 >
-      au < manifest ; 2004 ; Federal Register 2004 [GPO FDSys] ; 2004 >
-      au < manifest ; 2005 ; Federal Register 2005 [GPO FDSys] ; 2005 >
-      au < manifest ; 2006 ; Federal Register 2006 [GPO FDSys] ; 2006 >
-      au < manifest ; 2007 ; Federal Register 2007 [GPO FDSys] ; 2007 >
-      au < manifest ; 2008 ; Federal Register 2008 [GPO FDSys] ; 2008 >
-      au < manifest ; 2009 ; Federal Register 2009 [GPO FDSys] ; 2009 >
-      au < manifest ; 2010 ; Federal Register 2010 [GPO FDSys] ; 2010 >
+      au < manifest ; 2000 ; Federal Register 2000 Bulk Data ; 2000 >
+      au < manifest ; 2001 ; Federal Register 2001 Bulk Data ; 2001 >
+      au < manifest ; 2002 ; Federal Register 2002 Bulk Data ; 2002 >
+      au < manifest ; 2003 ; Federal Register 2003 Bulk Data ; 2003 >
+      au < manifest ; 2004 ; Federal Register 2004 Bulk Data ; 2004 >
+      au < manifest ; 2005 ; Federal Register 2005 Bulk Data ; 2005 >
+      au < manifest ; 2006 ; Federal Register 2006 Bulk Data ; 2006 >
+      au < manifest ; 2007 ; Federal Register 2007 Bulk Data ; 2007 >
+      au < manifest ; 2008 ; Federal Register 2008 Bulk Data ; 2008 >
+      au < manifest ; 2009 ; Federal Register 2009 Bulk Data ; 2009 >
+      au < manifest ; 2010 ; Federal Register 2010 Bulk Data ; 2010 >
     
     }
 
@@ -278,6 +520,22 @@
   {
 
     title <
+      name = History of Bills
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = HOB
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; History of Bills 2009 ; 2009 >
+    au < manifest ; 2010 ; History of Bills 2010 ; 2010 >
+      
+  }
+
+  {
+
+    title <
       name = House Journal
     >
 
@@ -297,6 +555,37 @@
  
   }
   
+  {
+
+    title <
+      name = House Rules and Manual
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = HOB
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; House Rules and Manual 2009 ; 2009 >
+      
+  }
+
+  {
+
+    title <
+      name = List of CFR Sections Affected
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = LSA
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
+    au < manifest ; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
+      
+  }
+
   {
 
     title <
@@ -327,44 +616,105 @@
   {
 
     title <
-      name = Public and Private Laws 
+      name = Public and Private Laws
     >
-      
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[congress] >
+    
+    {
 
-    au < released ; Public and Private Laws, 104th Congress [Public.Resource.Org] ; 104 >
-    au < released ; Public and Private Laws, 105th Congress [Public.Resource.Org] ; 105 >
-    au < released ; Public and Private Laws, 106th Congress [Public.Resource.Org] ; 106 >
-    au < released ; Public and Private Laws, 107th Congress [Public.Resource.Org] ; 107 >
-    au < released ; Public and Private Laws, 108th Congress [Public.Resource.Org] ; 108 >
-    au < released ; Public and Private Laws, 109th Congress [Public.Resource.Org] ; 109 > 
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = PLAW
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; Public and Private Laws 2009 ; 2009 >
+      au < manifest ; 2010 ; Public and Private Laws 2010 ; 2010 >
+
+    }
+      
+    {
+      
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.laws.PublicLawsPlugin
+      param[base_url] = http://bulk.resource.org/      
+      implicit < status ; name ; param[congress] >
+
+      au < released ; Public and Private Laws, 104th Congress [Public.Resource.Org] ; 104 >
+      au < released ; Public and Private Laws, 105th Congress [Public.Resource.Org] ; 105 >
+      au < released ; Public and Private Laws, 106th Congress [Public.Resource.Org] ; 106 >
+      au < released ; Public and Private Laws, 107th Congress [Public.Resource.Org] ; 107 >
+      au < released ; Public and Private Laws, 108th Congress [Public.Resource.Org] ; 108 >
+      au < released ; Public and Private Laws, 109th Congress [Public.Resource.Org] ; 109 >
+    
+    } 
 
   }
   
   {
 
     title <
-      name = U.S. Government Manual
+      name = United States Code
     >
 
-    plugin = org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin
-    param[base_url] = http://bulk.resource.org/      
-    implicit < status ; name ; param[year] >
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = USCODE
+    implicit < status ; year ; name ; param[year] >
 
-    au < released ; U.S. Government Manual 1997 [Public.Resource.Org] ; 1997 >
-    au < released ; U.S. Government Manual 1998 [Public.Resource.Org] ; 1998 >
-    au < released ; U.S. Government Manual 1999 [Public.Resource.Org] ; 1999 >
-    au < released ; U.S. Government Manual 2000 [Public.Resource.Org] ; 2000 >
-    au < released ; U.S. Government Manual 2001 [Public.Resource.Org] ; 2001 >
-    au < released ; U.S. Government Manual 2002 [Public.Resource.Org] ; 2002 >
-    au < released ; U.S. Government Manual 2003 [Public.Resource.Org] ; 2003 >
-    au < released ; U.S. Government Manual 2004 [Public.Resource.Org] ; 2004 >
-    au < released ; U.S. Government Manual 2005 [Public.Resource.Org] ; 2005 >
-    au < released ; U.S. Government Manual 2006 [Public.Resource.Org] ; 2006 >
-    au < released ; U.S. Government Manual 2007 [Public.Resource.Org] ; 2007 >
+    au < manifest ; 2009 ; United States Code 2009 ; 2009 >
+      
+  }
+
+  {
+
+    title <
+      name = United States Government Manual
+    >
+
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+      param[base_url] = http://www.gpo.gov/
+      param[collection_id] = GOVMAN
+      implicit < status ; year ; name ; param[year] >
+
+      au < manifest ; 2009 ; United States Government Manual 2009 ; 2009 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.usdocspln.gov.gpo.manual.GovernmentManualPlugin
+      param[base_url] = http://bulk.resource.org/      
+      implicit < status ; name ; param[year] >
+
+      au < released ; United States Government Manual 1997 [Public.Resource.Org] ; 1997 >
+      au < released ; United States Government Manual 1998 [Public.Resource.Org] ; 1998 >
+      au < released ; United States Government Manual 1999 [Public.Resource.Org] ; 1999 >
+      au < released ; United States Government Manual 2000 [Public.Resource.Org] ; 2000 >
+      au < released ; United States Government Manual 2001 [Public.Resource.Org] ; 2001 >
+      au < released ; United States Government Manual 2002 [Public.Resource.Org] ; 2002 >
+      au < released ; United States Government Manual 2003 [Public.Resource.Org] ; 2003 >
+      au < released ; United States Government Manual 2004 [Public.Resource.Org] ; 2004 >
+      au < released ; United States Government Manual 2005 [Public.Resource.Org] ; 2005 >
+      au < released ; United States Government Manual 2006 [Public.Resource.Org] ; 2006 >
+      au < released ; United States Government Manual 2007 [Public.Resource.Org] ; 2007 >
+      
+    }
    
+  }
+
+  {
+
+    title <
+      name = Weekly Compilation of Presidential Documents
+    >
+
+    plugin = org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin
+    param[base_url] = http://www.gpo.gov/
+    param[collection_id] = WCPD
+    implicit < status ; year ; name ; param[year] >
+
+    au < manifest ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
+      
   }
 
 }

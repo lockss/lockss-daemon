@@ -190,6 +190,7 @@
         <value>edu.auburn.contentdm.ContentDmPlugin</value>
         <value>edu.ua.adpn.contentdm.UAContentDmPlugin</value>
 	<value>org.lockss.plugin.archiveit.ArchiveItPlugin</value>
+	<value>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsYearPlugin</value>
 	<value>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysBulkDataYearPlugin</value>
 	<value>org.lockss.plugin.usdocspln.gov.gpo.bills.CongressionalBillsPlugin</value>
 	<value>org.lockss.plugin.usdocspln.gov.gpo.constitution.AnnotatedConstitutionPlugin</value>
