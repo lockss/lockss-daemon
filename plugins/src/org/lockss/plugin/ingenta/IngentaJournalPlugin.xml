@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>7</string>
+    <string>8</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -34,6 +34,7 @@
       <string>4,&quot;^(%s|%s|%s)&quot;, base_url, api_url, graphics_url</string>
       <string>1,&quot;^(%s|%s)content/%s\?format=lockss&amp;volume=%s$&quot;, base_url, api_url, journal_issn, volume_name</string>
       <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}$&quot;, api_url, publisher_id, journal_id, volume_name</string>
+      <string>2,&quot;^%scontent/%s/%s/[0-9]{4}/0*%s/.{8}/.{8}$&quot;, api_url, publisher_id, journal_id, volume_name</string>
       <string>2,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/.*(/trial|/citations|\?format=rss)$&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
       <string>1,&quot;^(%s|%s)content/%s/%s/[0-9]{4}/0*%s/&quot;, base_url, api_url, publisher_id, journal_id, volume_name</string>
       <string>1,&quot;^%s&quot;, graphics_url</string>
