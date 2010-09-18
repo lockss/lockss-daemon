@@ -13,7 +13,7 @@
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;GPO FDSys Bulk Data Year Plugin, Base URL %s, Collection ID %s, Year %d&quot;, base_url, collection_id, year</string>
+    <string>&quot;GPO FDSys Plugin (via bulk data, by year), Base URL %s, Collection ID %s, Year %d&quot;, base_url, collection_id, year</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -21,7 +21,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>GPO FDSys Bulk Data Year Plugin</string>
+    <string>GPO FDSys Plugin (via bulk data, by year)</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
@@ -65,7 +65,7 @@
       <org.lockss.daemon.ConfigParamDescr>
         <key>collection_id</key>
         <displayName>Collection Identifier</displayName>
-        <description>A short code identifying the top-level collection, e.g. FR for the Federal Register</description>
+        <description>A short code identifying the top-level collection, e.g. FR for the Federal Register. Case-sensitive.</description>
         <type>1</type>
         <size>20</size>
         <definitional>true</definitional>
