@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,6 +31,8 @@
       <string>1,&quot;^%ssmap/fdsys/sitemap_%d/%d_%s_sitemap\.xml$&quot;, base_url, year, year, collection_id</string>
       <string>1,&quot;^%sfdsys/(granule|pkg)/%s-[^/]*/&quot;, base_url, collection_id</string>
       <string>1,&quot;^%sfdsys/delivery/(getpackage|pagedetails)\.action\?(granuleId|packageId)=%s-&quot;, base_url, collection_id</string>
+      <string>1,&quot;^%sfdsys/delivery/pagedetails\.action\?.*&amp;(granuleId|packageId)=%s-%d&quot;, base_url, collection_id, year</string>
+      <string>1,&quot;^%sfdsys/search/getfrtoc\.action\?selectedDate=%d&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
