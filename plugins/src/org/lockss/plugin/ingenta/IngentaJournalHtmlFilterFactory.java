@@ -1,5 +1,5 @@
 /*
- * $Id: IngentaJournalHtmlFilterFactory.java,v 1.11 2010-09-17 19:45:10 pgust Exp $
+ * $Id: IngentaJournalHtmlFilterFactory.java,v 1.12 2010-09-20 22:16:51 pgust Exp $
  */ 
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.ingenta;
 
 import java.io.InputStream;
 
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.OrFilter;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -44,52 +46,40 @@ public class IngentaJournalHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
+    NodeFilter[] filters = new NodeFilter[] {
         // Filter out <div id="footer">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","footer")),
-          // Filter out <div id="top-ad-alignment">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","top-ad-alignmentr")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+        // Filter out <div id="top-ad-alignment">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "top-ad-alignment"),
         // Filter out <div id="top-ad">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","top-ad")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "top-ad"),
         // Filter out <div id="ident">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","ident")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ident"),         
         // Filter out <div id="ad">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","ad")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ad"),
         // Filter out <div id="vertical-ad">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","vertical-ad")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "vertical-ad"),
         // Filter out <div class="right-col-download">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "class","right-col-download")),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "right-col-download"),                                                               
         // Filter out <div id="cart-navbar">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","cart-navbar")),
-//        // Filter out <div class="heading-macfix article-access-options">...</div>
-//        HtmlNodeFilterTransform.exclude(
-//          HtmlNodeFilters.tagWithAttribute("div", "class","heading-macfix article-access-options")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cart-navbar"),   
+//         // Filter out <div class="heading-macfix article-access-options">...</div>
+//        HtmlNodeFilters.tagWithAttribute("div", "class", "heading-macfix article-access-options"),                                                                           
         // Filter out <div id="baynote-recommendations">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","baynote-recommendations")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "baynote-recommendations"),
         // Filter out <div id="bookmarks-container">...</div>
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","bookmarks-container")),
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("div", "id","llb")),
+        HtmlNodeFilters.tagWithAttribute("div", "id", "bookmarks-container"),   
+        // Filter out <div id="llb">...</div>
+        HtmlNodeFilters.tagWithAttribute("div", "id", "llb"),   
         // Filter out <a href="...">...</a> where the href value includes "exitTargetId" as a parameter
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttributeRegex("a", "href", "[\\?&]exitTargetId=")),
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "[\\?&]exitTargetId="),
         // Filter out <input name="exitTargetId">
-        HtmlNodeFilterTransform.exclude(
-          HtmlNodeFilters.tagWithAttribute("input", "name", "exitTargetId")),
+        HtmlNodeFilters.tagWithAttribute("input", "name", "exitTargetId"),
     };
     
-    return new HtmlFilterInputStream(
-          in, encoding, new HtmlCompoundTransform(transforms));
+    return new HtmlFilterInputStream(in,
+                                     encoding,
+                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
