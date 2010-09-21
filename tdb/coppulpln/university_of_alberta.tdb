@@ -18,7 +18,8 @@
 
       param[journal_id] = af
 
-      au < released ; 2008 ; Alternative Francophone Volume 1 ; 2008 >
+      au < released ; 2008 ; Alternative Francophone Volume 1 (2008) ; 2008 >
+      au < released ; 2009 ; Alternative Francophone Volume 1 (2009) ; 2009 >
 
     }
 
@@ -46,16 +47,7 @@
       param[journal_id] = cjfy
 
       au < released ; 2008 ; Canadian Journal of Family and Youth Volume 1 ; 2008 >
-
-    }
-
-    {
-    
-      title <
-        name = Canadian Journal of Irish Studies
-      >
-
-      param[journal_id] = cjis
+      au < released ; 2009 ; Canadian Journal of Family and Youth Volume 2 ; 2002 >
 
     }
 
@@ -69,6 +61,7 @@
 
       au < released ; 2008 ; Canadian Journal of Sociology Volume 33 ; 2008 >
       au < released ; 2009 ; Canadian Journal of Sociology Volume 34 ; 2009 >
+      au < released ; 2010 ; Canadian Journal of Sociology Volume 35 ; 2010 >
 
     }
 
@@ -95,6 +88,24 @@
     {
     
       title <
+        name = Complicity: An International Journal of Complexity and Education
+      >
+
+      param[journal_id] = complicity
+
+      au < released ; 2004 ; Complicity: An International Journal of Complexity and Education Volume 1 ; 2004 >
+      au < released ; 2005 ; Complicity: An International Journal of Complexity and Education Volume 2 ; 2005 >
+      au < released ; 2006 ; Complicity: An International Journal of Complexity and Education Volume 3 ; 2006 >
+      au < released ; 2007 ; Complicity: An International Journal of Complexity and Education Volume 4 ; 2007 >
+      au < released ; 2008 ; Complicity: An International Journal of Complexity and Education Volume 5 ; 2008 >
+      au < released ; 2009 ; Complicity: An International Journal of Complexity and Education Volume 6 ; 2009 >
+      au < released ; 2010 ; Complicity: An International Journal of Complexity and Education Volume 7 ; 2010 >
+
+    }
+
+    {
+    
+      title <
         name = ESC: English Studies in Canada
       >
 
@@ -104,6 +115,19 @@
       au < released ; 2004 ; ESC: English Studies in Canada Volume 30 ; 2004 >
       au < released ; 2005 ; ESC: English Studies in Canada Volume 31 ; 2005 >
       au < released ; 2006 ; ESC: English Studies in Canada Volume 32 ; 2006 >
+      au < released ; 2007 ; ESC: English Studies in Canada Volume 33 ; 2007 >
+
+    }
+
+    {
+    
+      title <
+        name = Eureka: The University of Alberta Science Undergraduate Research Journal
+      >
+
+      param[journal_id] = eureka
+
+      au < released ; 2010 ; Eureka: The University of Alberta Science Undergraduate Research Journal Volume 1 ; 2010 >
 
     }
 
@@ -133,6 +157,7 @@
       au < released ; 2007 ; Evidence Based Library and Information Practice Volume 2 ; 2007 >
       au < released ; 2008 ; Evidence Based Library and Information Practice Volume 3 ; 2008 >
       au < released ; 2009 ; Evidence Based Library and Information Practice Volume 4 ; 2009 >
+      au < released ; 2010 ; Evidence Based Library and Information Practice Volume 5 ; 2010 >
 
     }
 
@@ -150,16 +175,7 @@
       au < released ; 2007 ; International Journal of Qualitative Methods Volume 6 ; 2007 >
       au < released ; 2008 ; International Journal of Qualitative Methods Volume 7 ; 2008 >
       au < released ; 2009 ; International Journal of Qualitative Methods Volume 8 ; 2009 >
-
-    }
-
-    {
-    
-      title <
-        name = In Tune
-      >
-
-      param[journal_id] = it
+      au < released ; 2010 ; International Journal of Qualitative Methods Volume 9 ; 2010 >
 
     }
 
@@ -266,28 +282,8 @@
 
       param[journal_id] = tc
 
-      au < released ; 2008 ; TranscUlturAl Volume 1 ; 2008 >
-      au < released ; 2009 ; TranscUlturAl Volume 2 ; 2009 >
-
-    }
-
-    {
-    
-      title <
-        name = U of A Engineer
-      >
-
-      param[journal_id] = uaeng
-
-    }
-
-    {
-    
-      title <
-        name = UArctic Research Papers
-      >
-
-      param[journal_id] = uarp
+      au < released ; 2008 ; TranscUlturAl Volume 1 (2008) ; 2008 >
+      au < released ; 2009 ; TranscUlturAl Volume 1 (2009) ; 2009 >
 
     }
 

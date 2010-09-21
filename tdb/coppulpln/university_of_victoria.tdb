@@ -1,0 +1,136 @@
+{
+
+  publisher <
+    name = University of Victoria
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  param[base_url] = http://journals.uvic.ca/
+  implicit < status ; year ; name ; param[year] >
+  
+  {
+  
+    title <
+      name = Cultural Reflections ;
+      issn = 1492-4293
+    >
+    
+    comment[continued_by] = PlatForum
+    comment[x_continued_by] = (hence the journal_id)
+    
+    param[journal_id] = platforum
+
+    au < released ; 2002 ; Cultural Reflections Volume 4 ; 2002 >
+    au < released ; 2003 ; Cultural Reflections Volume 5 ; 2003 >
+    au < doesNotExist ; 2004 ; Cultural Reflections Volume 6 (2004) ; 2004 >
+    au < released ; 2005 ; Cultural Reflections Volume 6 ; 2005 >
+
+  }
+  
+  {
+  
+    title <
+      name = International Journal of Child, Youth and Family Studies ;
+      issn = 1920-7298
+    >
+    
+    param[journal_id] = ijcyfs
+
+    au < released ; 2009 ; International Journal of Child, Youth and Family Studies Volume 1 (2009) ; 2009 >
+    au < released ; 2010 ; International Journal of Child, Youth and Family Studies Volume 1 (2010) ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = Musicological Explorations
+    >
+    
+    param[journal_id] = me
+
+    au < released ; 2004 ; Musicological Explorations Volume 5 ; 2004 >
+    au < released ; 2005 ; Musicological Explorations Volume 6 ; 2005 >
+    au < released ; 2006 ; Musicological Explorations Volume 7 ; 2006 >
+    au < released ; 2007 ; Musicological Explorations Volume 8 ; 2007 >
+    au < released ; 2008 ; Musicological Explorations Volume 9 ; 2008 >
+    au < released ; 2009 ; Musicological Explorations Volume 10 ; 2009 >
+    au < released ; 2010 ; Musicological Explorations Volume 11 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = New Knowledge Environments
+    >
+    
+    param[journal_id] = inke
+
+    au < released ; 2009 ; New Knowledge Environments Volume 1 (2009) ; 2009 >
+    au < released ; 2010 ; New Knowledge Environments Volume 1 (2010) ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = On Politics
+    >
+    
+    param[journal_id] = onpolitics
+
+    au < released ; 2005 ; On Politics 2005 ; 2005 >
+    au < released ; 2006 ; On Politics 2006 ; 2006 >
+    au < released ; 2007 ; On Politics 2007 ; 2007 >
+
+  }
+  
+  {
+  
+    title <
+      name = Philosophy in Review ;
+      issn = 1920-8936
+    >
+    
+    param[journal_id] = pir
+
+    au < released ; 2007 ; Philosophy in Review Volume 27 ; 2007 >
+    au < released ; 2008 ; Philosophy in Review Volume 28 ; 2008 >
+    au < released ; 2009 ; Philosophy in Review Volume 29 ; 2009 >
+    au < released ; 2010 ; Philosophy in Review Volume 30 ; 2010 >
+
+  }
+  
+  {
+  
+    title <
+      name = PlatForum ;
+      issn = 1922-7043 ;
+      eissn = 1923-6549
+    >
+    
+    comment[continues] = Cultural Reflections
+    
+    param[journal_id] = platforum
+
+    au < released ; 2008 ; PlatForum Volume 9 ; 2008 >
+    au < released ; 2009 ; PlatForum Volume 10 ; 2009 >
+
+  }
+  
+  {
+  
+    title <
+      name = Preteritus
+    >
+    
+    comment[continues] = Cultural Reflections
+    
+    param[journal_id] = preteritus
+
+    au < released ; 2010 ; Preteritus Volume 1 ; 2010 >
+
+  }
+  
+}
