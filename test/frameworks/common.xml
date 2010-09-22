@@ -213,6 +213,7 @@
 	<value>org.lockss.plugin.springer.ClockssSpringerSourcePlugin</value>
 	<value>org.lockss.plugin.royalsocietyofchemistry.ClockssRoyalSocietyOfChemistryPlugin</value>
 	<value>org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin</value>
+	<value>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyPlugin</value>
       </list>
     </property>
 
@@ -220,3 +221,4 @@
 
   <!-- End org.lockss -->
 </lockss-config>
+
