@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.21 2010-09-13 08:19:52 thib_gc Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.22 2010-09-22 18:52:36 pgust Exp $
  */
 
 /*
@@ -66,6 +66,8 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         // e.g. PNAS (optional 'sid' query arg in URLs)
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-svcs"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-cit"),
+        // e.g. BMJ (optional 'sid' query arg in URLs)
+        HtmlNodeFilters.tagWithAttribute("div", "id", "cb-art-rel"),
         // e.g. SWCS TOC pages
         HtmlNodeFilters.tagWithAttribute("div", "class", "cit-form-select"),
         // For JBC pages
