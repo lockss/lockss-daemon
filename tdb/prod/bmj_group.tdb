@@ -780,11 +780,11 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
       au < HighWirePressH20Plugin ; exists ; 2003 ; Injury Prevention Volume 9 ; 9 >
       au < HighWirePressH20Plugin ; exists ; 2004 ; Injury Prevention Volume 10 ; 10 >
       au < HighWirePressH20Plugin ; doNotProcess ; 2005 ; Injury Prevention Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; testing ; 2006 ; Injury Prevention Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; testing ; 2007 ; Injury Prevention Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; testing ; 2008 ; Injury Prevention Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; testing ; 2009 ; Injury Prevention Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; testing ; 2010 ; Injury Prevention Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; ready ; 2006 ; Injury Prevention Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; ready ; 2007 ; Injury Prevention Volume 13 ; 13 >
+      au < HighWirePressH20Plugin ; ready ; 2008 ; Injury Prevention Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; ready ; 2009 ; Injury Prevention Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; ready ; 2010 ; Injury Prevention Volume 16 ; 16 >
       
     }
 
@@ -1148,10 +1148,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; exists ; 2003 ; Medical Humanities Volume 29 ; 29 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Medical Humanities Volume 30 ; 30 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Medical Humanities Volume 31 ; 31 >
-    au < HighWirePressH20Plugin ; testing ; 2006 ; Medical Humanities Volume 32 ; 32 >
-    au < HighWirePressH20Plugin ; testing ; 2007 ; Medical Humanities Volume 33 ; 33 >
-    au < HighWirePressH20Plugin ; testing ; 2008 ; Medical Humanities Volume 34 ; 34 >
-    au < HighWirePressH20Plugin ; testing ; 2009 ; Medical Humanities Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; 2006 ; Medical Humanities Volume 32 ; 32 >
+    au < HighWirePressH20Plugin ; ready ; 2007 ; Medical Humanities Volume 33 ; 33 >
+    au < HighWirePressH20Plugin ; ready ; 2008 ; Medical Humanities Volume 34 ; 34 >
+    au < HighWirePressH20Plugin ; ready ; 2009 ; Medical Humanities Volume 35 ; 35 >
 
   }
 
