@@ -307,7 +307,6 @@
       au < released ; 2007 ; Archives of General Psychiatry Volume 64 ; 64 ; reingest4.clockss.org:8082 >
       au < released ; 2008 ; Archives of General Psychiatry Volume 65 ; 65 ; >
       au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
-      au < released ; 2009 ; Archives of General Psychiatry Volume 66 ; 66 ; >
       
     }
 
@@ -1512,6 +1511,7 @@
       au < released ; 2007 ; JAMA: The Journal of the American Medical Association Volume 298 ; 298 ; >
       au < released ; 2008 ; JAMA: The Journal of the American Medical Association Volume 299 ; 299 ; >
       au < released ; 2008 ; JAMA: The Journal of the American Medical Association Volume 300 ; 300 ; >
+
     }
     
   }
@@ -1524,9 +1524,10 @@
     >
     
     plugin = org.lockss.plugin.amavirtualmentor.ClockssAMAVirtualMentorPlugin
-    implicit < status ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
     param[base_url] = http://virtualmentor.ama-assn.org/
     
+    au < ready ; 2010 ; Virtual Mentor Volume 12 ; 2010 >
 
   }
   
