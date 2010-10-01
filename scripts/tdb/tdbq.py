@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.7 2010-08-18 00:30:50 thib_gc Exp $
+# $Id: tdbq.py,v 1.8 2010-10-01 22:35:35 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -36,31 +36,9 @@ from tdb import AU, Tdb
 class TdbqConstants:
     '''Constants associated with the tdbq module.'''
 
-    CONTENT_TESTING_STATUSES = [AU.Status.MANIFEST,
-                                AU.Status.WANTED,
-                                AU.Status.TESTING,
-                                AU.Status.RETESTING,
-                                AU.Status.NOT_READY,
-                                AU.Status.TESTED,
-                                AU.Status.READY,
-                                AU.Status.PRE_RELEASING,
-                                AU.Status.PRE_RELEASED,
-                                AU.Status.RELEASING,
-                                AU.Status.RELEASED,
-                                AU.Status.DOWN,
-                                AU.Status.SUPERSEDED,
-                                AU.Status.RETRACTED]
-    OPTION_CONTENT_TESTING = 'content-testing-aus'
-    OPTION_CONTENT_TESTING_SHORT = 'C'
-    OPTION_CONTENT_TESTING_HELP = 'only keep AUs whose status is %s' % (', '.join(['"%s"' % (st,) for st in CONTENT_TESTING_STATUSES]))
-        
     OPTION_DOWN = 'down-aus'
     OPTION_DOWN_SHORT = 'D'
     OPTION_DOWN_HELP = 'keep AUs whose status is "%s"' % (AU.Status.DOWN,)
-    
-    OPTION_EXISTS = 'exists-aus'
-    OPTION_EXISTS_SHORT = 'E'
-    OPTION_EXISTS_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXISTS,)
     
     OPTION_MANIFEST = 'manifest-aus'
     OPTION_MANIFEST_SHORT = 'M'
@@ -72,7 +50,7 @@ class TdbqConstants:
                            AU.Status.RETRACTED]
     OPTION_PRODUCTION = 'production-aus'
     OPTION_PRODUCTION_SHORT = 'P'
-    OPTION_PRODUCTION_HELP = 'only keep AUs whose status is %s' % (', '.join(['"%s"' % (st,) for st in PRODUCTION_STATUSES]))
+    OPTION_PRODUCTION_HELP = 'keep AUs in production, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in PRODUCTION_STATUSES]))
     
     OPTION_QUERY = 'query'
     OPTION_QUERY_SHORT = 'Q'
@@ -91,7 +69,7 @@ class TdbqConstants:
     OPTION_RELEASING_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RELEASING,)
     
     OPTION_RETRACTED = 'retracted-aus'
-    OPTION_RETRACTED_SHORT = 'A'
+    OPTION_RETRACTED_SHORT = 'E'
     OPTION_RETRACTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RETRACTED,)
     
     OPTION_SUPERSEDED = 'superseded-aus'
@@ -108,22 +86,42 @@ class TdbqConstants:
     OPTION_TESTING_SHORT = 'T'
     OPTION_TESTING_HELP = 'keep AUs whose status is "%s"' % (AU.Status.TESTING,)
     
+    UNRELEASED_STATUSES = [AU.Status.MANIFEST,
+                           AU.Status.WANTED,
+                           AU.Status.TESTING,
+                           AU.Status.RETESTING,
+                           AU.Status.NOT_READY,
+                           AU.Status.TESTED,
+                           AU.Status.READY,
+                           AU.Status.PRE_RELEASING,
+                           AU.Status.PRE_RELEASED,
+                           AU.Status.RELEASING]
+    OPTION_UNRELEASED = 'unreleased-aus'
+    OPTION_UNRELEASED_SHORT = 'U'
+    OPTION_UNRELEASED_HELP = 'keep unreleased AUs, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in UNRELEASED_STATUSES]))
+    
     OPTION_WANTED = 'wanted-aus'
     OPTION_WANTED_SHORT = 'W'
     OPTION_WANTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.WANTED,)
     
     OPTION_STATUSES = 'statuses'
     
-    STATUS_SWITCHES = [OPTION_RETRACTED_SHORT,
-                       OPTION_CONTENT_TESTING,
+    CONTENT_TESTING_STATUSES = UNRELEASED_STATUSES + PRODUCTION_STATUSES 
+    OPTION_CONTENT_TESTING = 'content-testing-aus'
+    OPTION_CONTENT_TESTING_SHORT = 'C'
+    OPTION_CONTENT_TESTING_HELP = 'keep testable AUs, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in CONTENT_TESTING_STATUSES]))
+        
+    STATUS_SWITCHES = [OPTION_CONTENT_TESTING,
                        OPTION_DOWN_SHORT,
-                       OPTION_EXISTS_SHORT,
+                       OPTION_RETRACTED_SHORT,
                        OPTION_RELEASING_SHORT,
                        OPTION_MANIFEST_SHORT,
                        OPTION_PRODUCTION,
                        OPTION_RELEASED_SHORT,
                        OPTION_SUPERSEDED_SHORT,
                        OPTION_TESTING_SHORT,
+                       OPTION_UNRELEASED,
+                       OPTION_WANTED_SHORT,
                        OPTION_READY_SHORT]
 
 class TdbqLiteral:
@@ -542,18 +540,18 @@ def __option_parser__(parser=None):
     if parser is None: parser = OptionParser(version=__version__)
     tdbq_group = OptionGroup(parser, 'tdbq module (%s)' % (__version__,))
     
-    for sho, lon, hel, con in [(TdbqConstants.OPTION_RETRACTED_SHORT, TdbqConstants.OPTION_RETRACTED, TdbqConstants.OPTION_RETRACTED_HELP, AU.Status.RETRACTED),
-                               (TdbqConstants.OPTION_CONTENT_TESTING_SHORT, TdbqConstants.OPTION_CONTENT_TESTING, TdbqConstants.OPTION_CONTENT_TESTING_HELP, TdbqConstants.CONTENT_TESTING_STATUSES),
-                               (TdbqConstants.OPTION_DOWN_SHORT, TdbqConstants.OPTION_DOWN, TdbqConstants.OPTION_DOWN_HELP, AU.Status.DOWN),
-                               (TdbqConstants.OPTION_EXISTS_SHORT, TdbqConstants.OPTION_EXISTS, TdbqConstants.OPTION_EXISTS_HELP, AU.Status.EXISTS),
-                               (TdbqConstants.OPTION_RELEASING_SHORT, TdbqConstants.OPTION_RELEASING, TdbqConstants.OPTION_RELEASING_HELP, AU.Status.RELEASING),
-                               (TdbqConstants.OPTION_MANIFEST_SHORT, TdbqConstants.OPTION_MANIFEST, TdbqConstants.OPTION_MANIFEST_HELP, AU.Status.MANIFEST),
-                               (TdbqConstants.OPTION_PRODUCTION_SHORT, TdbqConstants.OPTION_PRODUCTION, TdbqConstants.OPTION_PRODUCTION_HELP, TdbqConstants.PRODUCTION_STATUSES),
-                               (TdbqConstants.OPTION_RELEASED_SHORT, TdbqConstants.OPTION_RELEASED, TdbqConstants.OPTION_RELEASED_HELP, AU.Status.RELEASED),
-                               (TdbqConstants.OPTION_SUPERSEDED_SHORT, TdbqConstants.OPTION_SUPERSEDED, TdbqConstants.OPTION_SUPERSEDED_HELP, AU.Status.SUPERSEDED),
-                               (TdbqConstants.OPTION_TESTING_SHORT, TdbqConstants.OPTION_TESTING, TdbqConstants.OPTION_TESTING_HELP, AU.Status.TESTING),
+    for sho, lon, hel, con in [(TdbqConstants.OPTION_MANIFEST_SHORT, TdbqConstants.OPTION_MANIFEST, TdbqConstants.OPTION_MANIFEST_HELP, AU.Status.MANIFEST),
                                (TdbqConstants.OPTION_WANTED_SHORT, TdbqConstants.OPTION_WANTED, TdbqConstants.OPTION_WANTED_HELP, AU.Status.WANTED),
-                               (TdbqConstants.OPTION_READY_SHORT, TdbqConstants.OPTION_READY, TdbqConstants.OPTION_READY_HELP, AU.Status.READY)]:
+                               (TdbqConstants.OPTION_TESTING_SHORT, TdbqConstants.OPTION_TESTING, TdbqConstants.OPTION_TESTING_HELP, AU.Status.TESTING),
+                               (TdbqConstants.OPTION_READY_SHORT, TdbqConstants.OPTION_READY, TdbqConstants.OPTION_READY_HELP, AU.Status.READY),
+                               (TdbqConstants.OPTION_RELEASING_SHORT, TdbqConstants.OPTION_RELEASING, TdbqConstants.OPTION_RELEASING_HELP, AU.Status.RELEASING),
+                               (TdbqConstants.OPTION_RELEASED_SHORT, TdbqConstants.OPTION_RELEASED, TdbqConstants.OPTION_RELEASED_HELP, AU.Status.RELEASED),
+                               (TdbqConstants.OPTION_DOWN_SHORT, TdbqConstants.OPTION_DOWN, TdbqConstants.OPTION_DOWN_HELP, AU.Status.DOWN),
+                               (TdbqConstants.OPTION_SUPERSEDED_SHORT, TdbqConstants.OPTION_SUPERSEDED, TdbqConstants.OPTION_SUPERSEDED_HELP, AU.Status.SUPERSEDED),
+                               (TdbqConstants.OPTION_RETRACTED_SHORT, TdbqConstants.OPTION_RETRACTED, TdbqConstants.OPTION_RETRACTED_HELP, AU.Status.RETRACTED),
+                               (TdbqConstants.OPTION_UNRELEASED_SHORT, TdbqConstants.OPTION_UNRELEASED, TdbqConstants.OPTION_UNRELEASED_HELP, TdbqConstants.UNRELEASED_STATUSES),
+                               (TdbqConstants.OPTION_PRODUCTION_SHORT, TdbqConstants.OPTION_PRODUCTION, TdbqConstants.OPTION_PRODUCTION_HELP, TdbqConstants.PRODUCTION_STATUSES),
+                               (TdbqConstants.OPTION_CONTENT_TESTING_SHORT, TdbqConstants.OPTION_CONTENT_TESTING, TdbqConstants.OPTION_CONTENT_TESTING_HELP, TdbqConstants.CONTENT_TESTING_STATUSES)]:
         tdbq_group.add_option('-' + sho,
                               '--' + lon,
                               help=hel,

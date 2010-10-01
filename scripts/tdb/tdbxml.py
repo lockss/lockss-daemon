@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.5 2010-08-26 01:14:07 thib_gc Exp $
+# $Id: tdbxml.py,v 1.6 2010-10-01 22:35:35 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,7 +27,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '0.3.1'
+__version__ = '0.3.2'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -75,7 +75,7 @@ def __short_au_name(au):
     str = re.sub(r'Í|Ì|Î|Ï|Ī', 'I', str)
     str = re.sub(r'í|ì|î|ï|ī', 'i', str)
     str = re.sub(r'\W+', '', str)
-    return __escape(str)
+    return au.plugin().split('.')[-1] + __escape(str)
 
 def __preamble(tdb, options):
     if options.style == TdbxmlConstants.OPTION_STYLE_ENTRIES: return
@@ -252,6 +252,13 @@ def __option_parser__(parser=None):
     parser.add_option_group(tdbxml_group)
     return parser
 
+def tdb_to_xml(tdb, options):
+    __preamble(tdb, options)
+    __introduction(tdb, options)
+    __process(tdb, options)
+    __conclusion(tdb, options)
+    __postamble(tdb, options)
+
 def __reprocess_options__(parser, options):
     tdbparse.__reprocess_options__(parser, options)
 
@@ -260,8 +267,4 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args(values=parser.get_default_values())
     __reprocess_options__(parser, options)
     tdb = tdbparse.tdbparse(sys.stdin, options) 
-    __preamble(tdb, options)
-    __introduction(tdb, options)
-    __process(tdb, options)
-    __conclusion(tdb, options)
-    __postamble(tdb, options)
+    tdb_to_xml(tdb, options)
