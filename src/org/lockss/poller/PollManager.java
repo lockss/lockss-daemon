@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.210 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: PollManager.java,v 1.211 2010-10-02 22:26:32 tlipkis Exp $
  */
 
 /*
@@ -2064,6 +2064,9 @@ public class PollManager
 	pollManager.getV3Status().setNextPollStartTime(null);
 	try {
 	  startOnePoll();
+	} catch (RuntimeException e) {
+	  // Can happen if AU deactivated recently
+	  log.debug2("Error starting poll", e);
 	} catch (InterruptedException e) {
 	  // check goOn
 	}
