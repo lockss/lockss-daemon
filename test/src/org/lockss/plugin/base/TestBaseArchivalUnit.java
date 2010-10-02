@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.54 2010-06-29 20:12:09 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.55 2010-10-02 22:24:21 tlipkis Exp $
  */
 
 /*
@@ -629,7 +629,6 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
-    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
     props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config);
@@ -667,13 +666,11 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
     // per-plugin or per-au crawl window settings are overridden by the
     // o.l.baseau.useCrawlWindowByDefault
-    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "false");
     props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
     Configuration config = ConfigurationUtil.fromProps(props);
     mbau.doSetAuParams(true);
     mbau.loadAuConfigDescrs(config);
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "55555");
-    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "false");
     props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "67890");
     Configuration config2 = ConfigurationUtil.fromProps(props);
     mbau.setBaseAuParams(config2);
@@ -797,7 +794,6 @@ try {
     props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
     props.setProperty(BaseArchivalUnit.KEY_PAUSE_TIME, "10000");
-    props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
     props.setProperty(BaseArchivalUnit.KEY_NEW_CONTENT_CRAWL_INTERVAL, "10000");
 
     Configuration config = ConfigurationUtil.fromProps(props);

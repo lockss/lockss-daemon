@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.144 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.145 2010-10-02 22:24:21 tlipkis Exp $
  */
 
 /*
@@ -78,12 +78,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   //Short term conf parameter to get around the fact that DefinablePlugins
   //don't load crawl windows
-  public static final String PARAM_USE_CRAWL_WINDOW_BY_DEFAULT =
+  public static final String PARAM_USE_CRAWL_WINDOW =
     Configuration.PREFIX+"baseau.useCrawlWindowByDefault";
-  public static final boolean DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT = true;
-
-  public static final String USE_CRAWL_WINDOW = "use_crawl_window";
-  private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
+  public static final boolean DEFAULT_USE_CRAWL_WINDOW = true;
 
   public static final String KEY_NEW_CONTENT_CRAWL_INTERVAL = "nc_interval";
   public static final String KEY_PAUSE_TIME = "pause_time";
@@ -260,26 +257,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     startUrls = makeStartUrls();
 
 
-    // get crawl window setting
-    boolean useCrawlWindow =
-      (config.containsKey(USE_CRAWL_WINDOW)
-       ? config.getBoolean(USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW)
-       :
-       paramMap.getBoolean(KEY_AU_USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW));
-    paramMap.putBoolean(KEY_AU_USE_CRAWL_WINDOW, useCrawlWindow);
-
-
-    if (CurrentConfig.getBooleanParam(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT,
-                                      DEFAULT_USE_CRAWL_WINDOW_BY_DEFAULT)) {
-      logger.debug3(PARAM_USE_CRAWL_WINDOW_BY_DEFAULT+
-                    " set to true, so using as default.");
-      useCrawlWindow = true; //XXX hack for now
-    }
-
     // make our crawl spec
     try {
       crawlSpec = makeCrawlSpec();
-      if (useCrawlWindow) {
+      if (CurrentConfig.getBooleanParam(PARAM_USE_CRAWL_WINDOW,
+					DEFAULT_USE_CRAWL_WINDOW)) {
         CrawlWindow window = makeCrawlWindow();
 	//XXX need to get rid of setCrawlWindow and set that in constructor
         logger.debug3("Setting crawl window to "+window);

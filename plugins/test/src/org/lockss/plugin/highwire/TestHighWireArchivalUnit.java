@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.12 2009-10-19 05:27:00 tlipkis Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.13 2010-10-02 22:24:21 tlipkis Exp $
  */
 
 /*
@@ -225,7 +225,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
    */
   public void testCrawlWindowNone() throws Exception {
     Properties props = new Properties();
-    props.put(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW_BY_DEFAULT, "false");
+    props.put(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW, "false");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     DefinableArchivalUnit au =
@@ -236,7 +236,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testCrawlWindow() throws Exception {
     Properties props = new Properties();
-    props.put(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW_BY_DEFAULT, "true");
+    props.put(BaseArchivalUnit.PARAM_USE_CRAWL_WINDOW, "true");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     DefinableArchivalUnit au =
