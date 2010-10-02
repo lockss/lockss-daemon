@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.6 2010-10-01 22:35:35 thib_gc Exp $
+# $Id: tdbxml.py,v 1.7 2010-10-02 00:13:09 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -215,7 +215,7 @@ def __process(tdb, options):
  </property>
  
  <property name="org.lockss.title">
-''' % { 'publisher': __escape(current_pub.name()),
+''' % { 'publisher': __escape(current_pub.name().replace('.', '')),
         'publisher2': re.sub(r'\'', '&apos;', __escape(current_pub.name())),
         'outer': '"' if current_pub.name().find('\'') < 0 else '\'',
         'inner': '\'' if current_pub.name().find('\'') < 0 else '"' }
