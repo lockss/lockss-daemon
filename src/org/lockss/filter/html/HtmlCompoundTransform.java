@@ -1,10 +1,10 @@
 /*
- * $Id: HtmlCompoundTransform.java,v 1.2 2007-10-02 21:02:17 thib_gc Exp $
+ * $Id: HtmlCompoundTransform.java,v 1.3 2010-10-02 22:25:41 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2006 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -44,8 +44,27 @@ import org.lockss.config.*;
 import org.lockss.util.*;
 
 /**
- * An HtmlTransform that applies a series of HtmlTransforms */
-
+ * An HtmlTransform that applies a series of HtmlTransforms.  Each transform
+ * requires a separate pass through the parse tree, so if you have a set of
+ * transforms that perform a similar action, <i>eg</i>, exclude nodes
+ * matching a pattern, it's more efficient to apply one transform with a
+ * complex condition:<pre>
+ *  NodeFilter[] filters = new NodeFilter[] {
+ *    // Filter out &lt;div id="footer"&gt;...&lt;/div&gt;
+ *    HtmlNodeFilters.tagWithAttribute("div", "id", "footer"),
+ *    // Filter out &lt;div class="...advert..."&gt;...&lt;/div&gt;
+ *    HtmlNodeFilters.tagWithAttributeRegex("div", "class", ".*advert.*"),
+ *  }
+ *  return HtmlNodeFilterTransform.exclude(new OrFilter(filters));</pre>
+ * than to apply a series of separate transforms:<pre>
+ *  HtmlTransform[] transforms = new HtmlTransform[] {
+ *    // Filter out &lt;div id="footer"&gt;...&lt;/div&gt;
+ *    HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("div", "id","footer")),
+ *    // Filter out &lt;div class="...advert..."&gt;...&lt;/div&gt;
+ *    HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("div", "class", ".*advert.*")),
+ *  }
+ *  return new HtmlCompoundTransform(transforms));</pre>
+ */
 public class HtmlCompoundTransform implements HtmlTransform {
   private static Logger log = Logger.getLogger("HtmlCompoundTransform");
 
