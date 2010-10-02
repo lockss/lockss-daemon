@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.261 2010-10-02 22:22:24 tlipkis Exp $
+ $Id: build.xml,v 1.262 2010-10-02 22:39:46 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -57,6 +57,8 @@ Args:
                               be compiled, to find package/dir disagreements.
   -Dloglevel=debug         Set default log level to debug for
                              test-all, test-one, test-class, run-class.
+  -Dtdbloglevel=warning    Set log level to warning when loading tdb files
+                             (default is "error").
   -Dlogtarget=Class        Set default log target.
   -Dnonetwork=true         Skip tests that require a working network
   -Dnowarn=true            Turn off compiler warnings.
@@ -1890,10 +1892,10 @@ Test results in ${test.results}
      <not> <equals arg1="${xml.files}" arg2="" /> </not>
      <then>
       <echo message="Validating xml config files"/>
-      <property name="loglevel" value="error" />
+      <property name="tdbloglevel" value="error" />
       <java classname="ConfigDump" fork="true" failonerror="true" >
 	<classpath refid="test.run.classpath" />
-        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+        <sysproperty key="org.lockss.defaultLogLevel" value="${tdbloglevel}"/>
 	<arg line="-v -g prod -h host.foo ${xml.files}" />
       </java>
      </then>
