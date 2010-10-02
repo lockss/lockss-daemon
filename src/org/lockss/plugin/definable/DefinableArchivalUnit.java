@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.81 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.82 2010-10-02 22:26:05 tlipkis Exp $
  */
 
 /*
@@ -210,14 +210,15 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
         DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
 
     // install any other values - should these be config params?
-    long l_val;
-    l_val = definitionMap.getLong(KEY_AU_MAX_SIZE,
-                                  DEFAULT_AU_MAX_SIZE);
-    paramMap.putLong(KEY_AU_MAX_SIZE, l_val);
+    // If/when these are used, don't waste map entries on default values
+//     long l_val;
+//     l_val = definitionMap.getLong(KEY_AU_MAX_SIZE,
+//                                   DEFAULT_AU_MAX_SIZE);
+//     paramMap.putLong(KEY_AU_MAX_SIZE, l_val);
 
-    l_val = definitionMap.getLong(KEY_AU_MAX_FILE_SIZE,
-                                  DEFAULT_AU_MAX_FILE_SIZE);
-    paramMap.putLong(KEY_AU_MAX_FILE_SIZE, l_val);
+//     l_val = definitionMap.getLong(KEY_AU_MAX_FILE_SIZE,
+//                                   DEFAULT_AU_MAX_FILE_SIZE);
+//     paramMap.putLong(KEY_AU_MAX_FILE_SIZE, l_val);
 
   }
 
