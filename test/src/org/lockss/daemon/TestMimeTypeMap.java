@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeTypeMap.java,v 1.7 2010-09-01 09:11:29 tlipkis Exp $
+ * $Id: TestMimeTypeMap.java,v 1.8 2010-10-02 22:23:37 tlipkis Exp $
  */
 
 /*
@@ -105,12 +105,6 @@ public class TestMimeTypeMap extends LockssTestCase {
     assertTrue(""+mt2.getLinkExtractorFactory(),
 	       mt2.getLinkExtractorFactory()
 	       instanceof RegexpCssLinkExtractor.Factory);
-    ConfigurationUtil.setFromArgs(MimeTypeMap.PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
-				  "org.lockss.extractor.FluteCssLinkExtractor$Factory");
-    assertTrue(""+mt2.getLinkExtractorFactory(),
-	       mt2.getLinkExtractorFactory()
-	       instanceof FluteCssLinkExtractor.Factory);
-
   }
 
   public void testModifyMimeTypeInfo() {

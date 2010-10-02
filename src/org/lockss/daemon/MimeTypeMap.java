@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.9 2010-09-01 09:11:29 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.10 2010-10-02 22:23:37 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,6 @@ public class MimeTypeMap {
     DEFAULT.putMimeTypeInfo("application/xhtml+xml", HTML);
     setLinkExtractorFactory(CSS,
 			    DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY);
-//     CSS.setLinkExtractorFactory(new FluteCssLinkExtractor.Factory());
     // XXX
     CSS.setLinkRewriterFactory(new StringFilterCssLinkRewriterFactory());
     DEFAULT.putMimeTypeInfo("text/css", CSS);

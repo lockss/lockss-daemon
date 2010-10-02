@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlLinkExtractor.java,v 1.6 2010-05-27 07:00:47 tlipkis Exp $
+ * $Id: TestGoslingHtmlLinkExtractor.java,v 1.7 2010-10-02 22:23:37 tlipkis Exp $
  */
 
 /*
@@ -212,7 +212,8 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
   }
 
   // ensure that scanning continues after a nested parser throws an error
-  public void testDoCrawlStyleError() throws IOException {
+  // XXX Need to cause an IOException while reading CSS from the stream
+  public void xxxtestDoCrawlStyleError() throws IOException {
     String url1= "http://example.com/blah1.html";
     String url2= "http://example.com/blah2.html";
     String url3= "http://example.com/blah3.html";
@@ -966,7 +967,7 @@ public class TestGoslingHtmlLinkExtractor extends LockssTestCase {
 
   private Set parseSingleSource(String source) throws IOException {
     MockArchivalUnit mau = new MockArchivalUnit();
-    LinkExtractor ue = new FluteCssLinkExtractor();
+    LinkExtractor ue = new RegexpCssLinkExtractor();
     mau.setLinkExtractor("text/css", ue);
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com", mau);
     mcu.setContent(source);
