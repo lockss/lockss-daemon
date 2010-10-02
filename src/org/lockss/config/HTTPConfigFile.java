@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.13 2010-02-24 06:25:33 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.14 2010-10-02 22:24:57 tlipkis Exp $
  */
 
 /*
@@ -49,9 +49,11 @@ public class HTTPConfigFile extends BaseConfigFile {
   public static final String PREFIX = Configuration.PREFIX + "config.";
 
   // Connect and data timeouts
-  /** Connect Timeout for property server */
+  /** Amount of time the daemon will wait for the property server to open
+   * a connection. */
   public static final String PARAM_CONNECT_TIMEOUT = PREFIX+ "timeout.connect";
-  /** Data timeout for property server */
+  /** Amount of time the daemon will wait to receive data on an open
+   * connection to the property server. */
   public static final long DEFAULT_CONNECT_TIMEOUT = 1 * Constants.MINUTE;
   public static final String PARAM_DATA_TIMEOUT = PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 10 * Constants.MINUTE;

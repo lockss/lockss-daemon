@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.36 2010-07-21 06:08:42 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.37 2010-10-02 22:24:57 tlipkis Exp $
  */
 
 /*
@@ -66,10 +66,21 @@ public abstract class BaseCrawler
   public static final String PREFIX = Configuration.PREFIX + "crawler.";
 
   // See comments regarding connect timeouts in HttpClientUrlConnection
+  /** Amount of time the crawler will wait for a server to open a
+   * connection.  One or two minutes is generally sufficient; it's unusual
+   * for a functioning server to take longer than that to open a
+   * connection.  A large connect timeout will cause crawl attempts of down
+   * or unreachable servers to take a long time to fail. */
   public static final String PARAM_CONNECT_TIMEOUT =
     PREFIX + "timeout.connect";
   public static final long DEFAULT_CONNECT_TIMEOUT = 60 * Constants.SECOND;
 
+  /** Amount of time that may elapse without any data being received on an
+   * open connection, before the crawler will give up.  Should generally be
+   * much larger than the connect timeout.  The fact that the connection
+   * was opened indicates that the server is up (or was up recently), and
+   * busy servers or complicated transactions may legitimately take a long
+   * time to begin sending data. */
   public static final String PARAM_DATA_TIMEOUT =
     PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
