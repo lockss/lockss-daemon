@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.7 2007-11-06 07:09:17 tlipkis Exp $
+ * $Id: IpAccessHandler.java,v 1.8 2010-10-02 22:25:53 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.7 2007-11-06 07:09:17 tlipkis Exp $
+// $Id: IpAccessHandler.java,v 1.8 2010-10-02 22:25:53 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -108,7 +108,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
     try	{
       String ip = request.getRemoteAddr();
       boolean authorized = isIpAuthorized(ip);
-
+      if (log.isDebug3()) log.debug3("Access to " + serverName + " from " + ip);
       if (!authorized) {
 	// The IP is NOT allowed
 	if (logForbidden) {
