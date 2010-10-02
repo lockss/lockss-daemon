@@ -1,5 +1,5 @@
 /*
- * $Id: ValidatePluginResultsDialog.java,v 1.10 2006-10-31 07:01:06 thib_gc Exp $
+ * $Id: ValidatePluginResultsDialog.java,v 1.11 2010-10-02 22:25:22 tlipkis Exp $
  */
 
 /*
@@ -190,7 +190,7 @@ public class ValidatePluginResultsDialog extends JDialog {
       output += "Validating Starting Url (" + startingUrl + ")...\n";
 
       //Checks if the Crawl Rules have been set
-      if(m_au.getCrawlSpec().isRuleNull()){
+      if(m_au.getCrawlSpec().getCrawlRule() == null){
 	  succeeded = false;
 	  output += "  Validation Error:      Crawl Rules have not been set for plugin\n";
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.11 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: BaseCrawlSpec.java,v 1.12 2010-10-02 22:25:22 tlipkis Exp $
  */
 
 /*
@@ -105,17 +105,11 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
     return permissionList;
   }
 
-  /** Not part of CrawlSpec interface - for testing */
+  /**
+   * Return the crawl rule
+   */
   public CrawlRule getCrawlRule() {
     return rule;
-  }
-
-  /**
-   * Returns whether the rule is null
-   * @author Rebecca Illowsky
-   */
-  public boolean isRuleNull(){
-      return (rule == null);
   }
 
   /**
