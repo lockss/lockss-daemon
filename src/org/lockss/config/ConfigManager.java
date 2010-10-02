@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.75 2010-06-17 18:47:33 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.76 2010-10-02 22:24:38 tlipkis Exp $
  */
 
 /*
@@ -1318,7 +1318,8 @@ public class ConfigManager implements LockssManager {
   }
 
   public static boolean shouldParamBeLogged(String key) {
-    return !(key.startsWith(ConfigManager.PARAM_TITLE_DB)
+    return !(key.startsWith(ConfigManager.PARAM_TITLE_DB + ".")
+	     || key.startsWith(PluginManager.PARAM_TITLE_SETS + ".")
 	     || key.startsWith(PluginManager.PARAM_AU_TREE + ".")
 	     || StringUtils.endsWithIgnoreCase(key, "password"));
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.38 2010-05-04 03:37:04 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.39 2010-10-02 22:24:38 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.clockss.*;
 import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbTitle;
+import org.lockss.plugin.*;
 import org.lockss.servlet.*;
 
 /**
@@ -544,6 +545,22 @@ public class TestConfigManager extends LockssTestCase {
   public void testConfigVersionProp() {
     assertEquals("org.lockss.config.fileVersion.foo",
 		 ConfigManager.configVersionProp("foo"));
+  }
+
+  public void testShouldParamBeLogged() {
+    assertTrue(mgr.shouldParamBeLogged("org.lockss.arbitrary.param"));
+    assertTrue(mgr.shouldParamBeLogged(ConfigManager.PARAM_TITLE_DB_URLS));
+    assertTrue(mgr.shouldParamBeLogged(ConfigManager.PARAM_USER_TITLE_DB_URLS));
+    assertFalse(mgr.shouldParamBeLogged(ConfigManager.PREFIX_TITLE_DB +
+					"foo.bar"));
+    // runon param name not a titleset def
+    assertTrue(mgr.shouldParamBeLogged(PluginManager.PARAM_TITLE_SETS +
+					"foo.bar"));
+    assertFalse(mgr.shouldParamBeLogged(PluginManager.PARAM_TITLE_SETS +
+					".foo.bar"));
+    assertFalse(mgr.shouldParamBeLogged(PluginManager.PARAM_AU_TREE +
+					".foo.bar"));
+    assertFalse(mgr.shouldParamBeLogged("org.lockss.user.password"));
   }
 
   public void testCompatibilityParams() {
