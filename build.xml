@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.260 2010-08-05 21:02:17 pgust Exp $
+ $Id: build.xml,v 1.261 2010-10-02 22:22:24 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -238,9 +238,6 @@ Args:
   <property name="bouncycastle.provider.jar" value="${lib}/bcprov-jdk14-132.jar" />
   <!-- Needed by PDFBox: -->
   <property name="bouncycastle.mail.jar" value="${lib}/bcmail-jdk14-132.jar" />
-  <property name="flute.jar" value="${lib}/flute-1.3.jar" />
-  <!-- Needed by Flute: -->
-  <property name="sac.jar" value="${lib}/sac-1.3.jar" />
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
   <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p1.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
@@ -327,9 +324,6 @@ Args:
   	<pathelement path="${bouncycastle.provider.jar}" />
   	<!-- Needed by PDFBox: -->
   	<pathelement path="${bouncycastle.mail.jar}" />
-  	<pathelement path="${flute.jar}" />
-  	<!-- Needed by Flute: -->
-  	<pathelement path="${sac.jar}" />
     <!-- jars needed to run the OAI harvester -->
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
@@ -459,6 +453,7 @@ Args:
            fork="${forkc}"
            listfiles="${listfiles}"
            nowarn="${nowarn}"
+	   memoryMaximumSize="128m"
            >
        <classpath refid="@{cpid}" />
       <javacelem/>
@@ -1895,6 +1890,7 @@ Test results in ${test.results}
      <not> <equals arg1="${xml.files}" arg2="" /> </not>
      <then>
       <echo message="Validating xml config files"/>
+      <property name="loglevel" value="error" />
       <java classname="ConfigDump" fork="true" failonerror="true" >
 	<classpath refid="test.run.classpath" />
         <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
