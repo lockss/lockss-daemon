@@ -4164,7 +4164,7 @@
 
         au < HighWirePressPlugin ; manifest ; Journal of Medicine and Philosophy Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; Journal of Medicine and Philosophy Volume 34 ; 34 >
-        au < HighWirePressPlugin ; ready ; Journal of Medicine and Philosophy Volume 35 ; 35 >
+        au < HighWirePressPlugin ; doNotProcess ; Journal of Medicine and Philosophy Volume 35 ; 35 >
 
       }
 
@@ -4183,7 +4183,7 @@
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; down ; Journal of Molecular Cell Biology Volume 1 ; 1 >
-        au < HighWirePressPlugin ; ready ; Journal of Molecular Cell Biology Volume 2 ; 2 >
+        au < HighWirePressPlugin ; doNotProcess ; Journal of Molecular Cell Biology Volume 2 ; 2 >
 
       }
 
@@ -4302,7 +4302,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; Journal of Tropical Pediatrics Volume 53 ; 53 >
         au < HighWirePressPlugin ; down ; Journal of Tropical Pediatrics Volume 54 ; 54 >
         au < HighWirePressPlugin ; down ; Journal of Tropical Pediatrics Volume 55 ; 55 >
-        au < HighWirePressPlugin ; ready ; Journal of Tropical Pediatrics Volume 56 ; 56 >
+        au < HighWirePressPlugin ; doNotProcess ; Journal of Tropical Pediatrics Volume 56 ; 56 >
 
       }
 
@@ -4731,7 +4731,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; down ; Music and Letters Volume 88 ; 88 >
         au < HighWirePressPlugin ; down ; Music and Letters Volume 89 ; 89 >
         au < HighWirePressPlugin ; down ; Music and Letters Volume 90 ; 90 >
-        au < HighWirePressPlugin ; ready ; Music and Letters Volume 91 ; 91 >
+        au < HighWirePressPlugin ; doNotProcess ; Music and Letters Volume 91 ; 91 >
 
       }
 
@@ -4819,7 +4819,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
   
         au < HighWirePressPlugin ; down ; NDT Plus Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; NDT Plus Volume 2 ; 2 >
-        au < HighWirePressPlugin ; ready ; NDT Plus Volume 3 ; 3 >
+        au < HighWirePressPlugin ; doNotProcess ; NDT Plus Volume 3 ; 3 >
 
       }
 
@@ -5038,7 +5038,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 22 ; 22 >
         au < HighWirePressPlugin ; manifest ; The Opera Quarterly Volume 23 ; 23 >
         au < HighWirePressPlugin ; down ; The Opera Quarterly Volume 24 ; 24 >
-        au < HighWirePressPlugin ; ready ; The Opera Quarterly Volume 25 ; 25 >
+        au < HighWirePressPlugin ; doNotProcess ; The Opera Quarterly Volume 25 ; 25 >
       }
 
     }
@@ -5306,7 +5306,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; down ; Philosophia Mathematica Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Philosophia Mathematica Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Philosophia Mathematica Volume 17 ; 17 >
-        au < HighWirePressPlugin ; ready ; Philosophia Mathematica Volume 18 ; 18 >
+        au < HighWirePressPlugin ; doNotProcess ; Philosophia Mathematica Volume 18 ; 18 >
         
       }
 
@@ -5392,7 +5392,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; down ; Political Analysis Volume 15 ; 15 >
         au < HighWirePressPlugin ; down ; Political Analysis Volume 16 ; 16 >
         au < HighWirePressPlugin ; down ; Political Analysis Volume 17 ; 17 >
-        au < HighWirePressPlugin ; ready ; Political Analysis Volume 18 ; 18 >
+        au < HighWirePressPlugin ; doNotProcess ; Political Analysis Volume 18 ; 18 >
         
       }
 
@@ -5604,7 +5604,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mathematics Volume 58 ; 58 >
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mathematics Volume 59 ; 59 >
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mathematics Volume 60 ; 60 >
-		au < HighWirePressPlugin ; ready ; The Quarterly Journal of Mathematics Volume 61 ; 61 >
+		au < HighWirePressPlugin ; doNotProcess ; The Quarterly Journal of Mathematics Volume 61 ; 61 >
 		
       }
 
@@ -5628,7 +5628,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; manifest ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 60 ; 60 >
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 >
         au < HighWirePressPlugin ; down ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 >
-        au < HighWirePressPlugin ; ready ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 >
+        au < HighWirePressPlugin ; doNotProcess ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 >
 
       }
 
@@ -5682,7 +5682,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 135 ; 135 >
         au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 136 ; 136 >
         au < HighWirePressPlugin ; testing ; Radiation Protection Dosimetry Volume 137 ; 137 >
-        au < HighWirePressPlugin ; ready ; Radiation Protection Dosimetry Volume 138 ; 138 >
+        au < HighWirePressPlugin ; doNotProcess ; Radiation Protection Dosimetry Volume 138 ; 138 >
       }
 
     }
@@ -5769,7 +5769,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; testing ; Review of Environmental Economics and Policy Volume 1 ; 1 >
         au < HighWirePressPlugin ; down ; Review of Environmental Economics and Policy Volume 2 ; 2 >
         au < HighWirePressPlugin ; testing ; Review of Environmental Economics and Policy Volume 3 ; 3 >
-        au < HighWirePressPlugin ; ready ; Review of Environmental Economics and Policy Volume 4 ; 4 >
+        au < HighWirePressPlugin ; doNotProcess ; Review of Environmental Economics and Policy Volume 4 ; 4 >
 
       }
 
@@ -5788,11 +5788,11 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://rof.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; ready ; Review of Finance Volume 10 ; 10 >
-        au < HighWirePressPlugin ; ready ; Review of Finance Volume 11 ; 11 >
+        au < HighWirePressPlugin ; doNotProcess ; Review of Finance Volume 10 ; 10 >
+        au < HighWirePressPlugin ; doNotProcess ; Review of Finance Volume 11 ; 11 >
         au < HighWirePressPlugin ; down ; Review of Finance Volume 12 ; 12 >
         au < HighWirePressPlugin ; testing ; Review of Finance Volume 13 ; 13 >
-        au < HighWirePressPlugin ; ready ; Review of Finance Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doNotProcess ; Review of Finance Volume 14 ; 14 >
 
       }
 
@@ -5825,8 +5825,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 19 ; 19 >
         au < HighWireStrVolPlugin ; down ; Review of Financial Studies Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Review of Financial Studies Volume 21 ; 21 >
-        au < HighWirePressPlugin ; ready ; Review of Financial Studies Volume 22 ; 22 >
-        au < HighWirePressPlugin ; ready ; Review of Financial Studies Volume 23 ; 23 >
+        au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 22 ; 22 >
+        au < HighWirePressPlugin ; doNotProcess ; Review of Financial Studies Volume 23 ; 23 >
         
       }
 
@@ -5846,10 +5846,10 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWireStrVolPlugin ; down ; Rheumatology Volume 44 ; 44 >
-        au < HighWirePressPlugin ; ready ; Rheumatology Volume 45 ; 45 >
-        au < HighWirePressPlugin ; ready ; Rheumatology Volume 46 ; 46 >
+        au < HighWirePressPlugin ; doNotProcess ; Rheumatology Volume 45 ; 45 >
+        au < HighWirePressPlugin ; doNotProcess ; Rheumatology Volume 46 ; 46 >
         au < HighWirePressPlugin ; down ; Rheumatology Volume 47 ; 47 >
-        au < HighWirePressPlugin ; ready ; Rheumatology Volume 48 ; 48 >
+        au < HighWirePressPlugin ; doNotProcess ; Rheumatology Volume 48 ; 48 >
         au < HighWirePressPlugin ; down ; Rheumatology Volume 49 ; 49 >
 
       }
@@ -5881,7 +5881,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; exists ; Schizophrenia Bulletin Volume 31 ; 31 >
         au < HighWirePressPlugin ; doNotProcess ; Schizophrenia Bulletin Volume 32 ; 32 >
-        au < HighWirePressPlugin ; ready ; Schizophrenia Bulletin Volume 33 ; 33 >
+        au < HighWirePressPlugin ; doNotProcess ; Schizophrenia Bulletin Volume 33 ; 33 >
         au < HighWirePressPlugin ; down ; Schizophrenia Bulletin Volume 34 ; 34 >
         au < HighWirePressPlugin ; testing ; Schizophrenia Bulletin Volume 35 ; 35 >
         au < HighWirePressPlugin ; down ; Schizophrenia Bulletin Volume 36 ; 36 >
@@ -5915,7 +5915,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Screen Volume 46 ; 46 >
         au < HighWireStrVolPlugin ; down ; Screen Volume 47 ; 47 >
-        au < HighWirePressPlugin ; ready ; Screen Volume 48 ; 48 >
+        au < HighWirePressPlugin ; doNotProcess ; Screen Volume 48 ; 48 >
         au < HighWirePressPlugin ; down ; Screen Volume 49 ; 49 >
         au < HighWirePressPlugin ; manifest ; Screen Volume 50 ; 50 >
 
@@ -5936,8 +5936,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://scan.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
-        au < HighWirePressPlugin ; ready ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
+        au < HighWirePressPlugin ; doNotProcess ; Social Cognitive and Affective Neuroscience Volume 1 ; 1 >
+        au < HighWirePressPlugin ; doNotProcess ; Social Cognitive and Affective Neuroscience Volume 2 ; 2 >
         au < HighWirePressPlugin ; down ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 >
         au < HighWirePressPlugin ; manifest ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 >
 
@@ -5970,7 +5970,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Social History of Medicine Volume 18 ; 18 >
         au < HighWireStrVolPlugin ; down ; Social History of Medicine Volume 19 ; 19 >
-        au < HighWirePressPlugin ; ready ; Social History of Medicine Volume 20 ; 20 >
+        au < HighWirePressPlugin ; doNotProcess ; Social History of Medicine Volume 20 ; 20 >
         au < HighWirePressPlugin ; down ; Social History of Medicine Volume 21 ; 21 >
         au < HighWirePressPlugin ; manifest ; Social History of Medicine Volume 22 ; 22 >
 
@@ -6003,7 +6003,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWirePressPlugin ; doNotProcess ; Social Politics: International Studies in Gender, State and Society Volume 12 ; 12 >
         au < HighWireStrVolPlugin ; down ; Social Politics: International Studies in Gender, State and Society Volume 13 ; 13 >
-        au < HighWirePressPlugin ; ready ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
+        au < HighWirePressPlugin ; doNotProcess ; Social Politics: International Studies in Gender, State and Society Volume 14 ; 14 >
         au < HighWirePressPlugin ; down ; Social Politics: International Studies in Gender, State and Society Volume 15 ; 15 >
         au < HighWirePressPlugin ; manifest ; Social Politics: International Studies in Gender, State and Society Volume 16 ; 16 >
 
@@ -6035,8 +6035,8 @@ comment[jrma] = moved to informaworld.  should be marked down?
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
         au < HighWirePressPlugin ; doNotProcess ; Social Science Japan Journal Volume 8 ; 8 >
-        au < HighWirePressPlugin ; ready ; Social Science Japan Journal Volume 9 ; 9 >
-        au < HighWirePressPlugin ; ready ; Social Science Japan Journal Volume 10 ; 10 >
+        au < HighWirePressPlugin ; doNotProcess ; Social Science Japan Journal Volume 9 ; 9 >
+        au < HighWirePressPlugin ; doNotProcess ; Social Science Japan Journal Volume 10 ; 10 >
         au < HighWirePressPlugin ; down ; Social Science Japan Journal Volume 11 ; 11 >
         au < HighWirePressPlugin ; manifest ; Social Science Japan Journal Volume 12 ; 12 >
 
@@ -6067,12 +6067,12 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://ser.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; ready ; Socio-Economic Review Volume 3 ; 3 >
+        au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 3 ; 3 >
         au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 4 ; 4 >
-        au < HighWirePressPlugin ; ready ; Socio-Economic Review Volume 5 ; 5 >
+        au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 5 ; 5 >
         au < HighWirePressPlugin ; down ; Socio-Economic Review Volume 6 ; 6 >
-        au < HighWirePressPlugin ; ready ; Socio-Economic Review Volume 7 ; 7 >
-        au < HighWirePressPlugin ; ready ; Socio-Economic Review Volume 8 ; 8 >
+        au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 7 ; 7 >
+        au < HighWirePressPlugin ; doNotProcess ; Socio-Economic Review Volume 8 ; 8 >
 
       }
 
@@ -6136,7 +6136,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
 
         au < HighWireStrVolPlugin ; down ; Teaching Mathematics and its Applications Volume 24 ; 24 >
         au < HighWirePressPlugin ; doNotProcess ; Teaching Mathematics and its Applications Volume 25 ; 25 >
-        au < HighWirePressPlugin ; ready ; Teaching Mathematics and its Applications Volume 26 ; 26 >
+        au < HighWirePressPlugin ; doNotProcess ; Teaching Mathematics and its Applications Volume 26 ; 26 >
         au < HighWirePressPlugin ; down ; Teaching Mathematics and its Applications Volume 27 ; 27 >
         au < HighWirePressPlugin ; manifest ; Teaching Mathematics and its Applications Volume 28 ; 28 >
 
@@ -6181,23 +6181,23 @@ comment[jrma] = moved to informaworld.  should be marked down?
         au < HighWireStrVolPlugin ; down ; Toxicological Sciences Volume 94 ; 94 >
         au < HighWireStrVolPlugin ; down ; Toxicological Sciences Volume 95 ; 95 >
         au < HighWireStrVolPlugin ; down ; Toxicological Sciences Volume 96 ; 96 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 97 ; 97 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 98 ; 98 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 97 ; 97 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 98 ; 98 >
         au < HighWirePressPlugin ; testing ; Toxicological Sciences Volume 99 ; 99 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 100 ; 100 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 100 ; 100 >
         au < HighWirePressPlugin ; down ; Toxicological Sciences Volume 101 ; 101 >
         au < HighWirePressPlugin ; down ; Toxicological Sciences Volume 102 ; 102 >
         au < HighWirePressPlugin ; down ; Toxicological Sciences Volume 103 ; 103 >
         au < HighWirePressPlugin ; down ; Toxicological Sciences Volume 104 ; 104 >
         au < HighWirePressPlugin ; down ; Toxicological Sciences Volume 105 ; 105 >
         au < HighWirePressPlugin ; down ; Toxicological Sciences Volume 106 ; 106 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 107 ; 107 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 108 ; 108 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 109 ; 109 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 110 ; 110 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 111 ; 111 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 112 ; 112 >
-        au < HighWirePressPlugin ; ready ; Toxicological Sciences Volume 113 ; 113 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 107 ; 107 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 108 ; 108 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 109 ; 109 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 110 ; 110 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 111 ; 111 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 112 ; 112 >
+        au < HighWirePressPlugin ; doNotProcess ; Toxicological Sciences Volume 113 ; 113 >
         
       }
 
@@ -6216,7 +6216,7 @@ comment[jrma] = moved to informaworld.  should be marked down?
         param[base_url] = http://treephys.oxfordjournals.org/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWirePressPlugin ; ready ; Tree Physiology Volume 29 ; 29 >
+        au < HighWirePressPlugin ; doNotProcess ; Tree Physiology Volume 29 ; 29 >
         au < HighWirePressPlugin ; down ; Tree Physiology Volume 30 ; 30 >
         
       }
