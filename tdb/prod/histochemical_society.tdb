@@ -3,9 +3,6 @@
     name = Histochemical Society
   >
 
-  pluginPrefix = org.lockss.plugin.highwire.
-  param[base_url] = http://www.jhc.org/
-
   {
     title <
       name = Journal of Histochemistry and Cytochemistry ;
@@ -13,12 +10,15 @@
       eissn = 1551-5044
     >
 
+    pluginPrefix = org.lockss.plugin.highwire.
+    param[base_url] = http://www.jhc.org/
+
     {
 
       pluginSuffix = HighWirePlugin
       implicit < status ; name ; param[volume] >
       
-      au < down ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < released ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
       au < released ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
 
     }
@@ -82,9 +82,9 @@
       au < HighWireStrVolPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
       au < HighWirePressPlugin ; doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
       au < HighWireStrVolPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
-      au < HighWirePressPlugin ; ready ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
-      au < HighWirePressPlugin ; ready ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
-      au < HighWirePressPlugin ; ready ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
+      au < HighWirePressPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+      au < HighWirePressPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+      au < HighWirePressPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
 
     }
 
