@@ -16,17 +16,17 @@
     implicit < status ; name ; param[volume_name] >
     param[base_url] = http://www.drunkenboat.com/
   
-    au < releasing ; Drunken Boat Volume 1 ; 1 >
-    au < releasing ; Drunken Boat Volume 2 ; 2 >
-    au < releasing ; Drunken Boat Volume 3 ; 3 >
-    au < releasing ; Drunken Boat Volume 4 ; 4 >
-    au < releasing ; Drunken Boat Volume 5 ; 5 >
-    au < releasing ; Drunken Boat Volume 6 ; 6 >
-    au < releasing ; Drunken Boat Volume 7 ; 7 >
-    au < releasing ; Drunken Boat Volume 8 ; 8 >
-    au < releasing ; Drunken Boat Volume 9 ; 9 >
-    au < releasing ; Drunken Boat Volume 10 ; 10 >
-    au < releasing ; Drunken Boat Volume 11 ; 11 >
+    au < ready ; Drunken Boat Volume 1 ; 1 >
+    au < ready ; Drunken Boat Volume 2 ; 2 >
+    au < ready ; Drunken Boat Volume 3 ; 3 >
+    au < ready ; Drunken Boat Volume 4 ; 4 >
+    au < ready ; Drunken Boat Volume 5 ; 5 >
+    au < ready ; Drunken Boat Volume 6 ; 6 >
+    au < ready ; Drunken Boat Volume 7 ; 7 >
+    au < ready ; Drunken Boat Volume 8 ; 8 >
+    au < ready ; Drunken Boat Volume 9 ; 9 >
+    au < ready ; Drunken Boat Volume 10 ; 10 >
+    au < ready ; Drunken Boat Volume 11 ; 11 >
 
   }
   
