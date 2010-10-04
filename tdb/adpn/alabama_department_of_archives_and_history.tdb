@@ -7,6 +7,21 @@
   {
 
     title <
+      name = Alabama Department of Archives and History 1867 Voter Registration Collection 
+    >
+
+    plugin = gov.alabama.archives.adpn.goldstar.GoldstarPlugin
+    param[base_url] = http://www.archives.alabama.gov/lockss/
+    implicit < status ; name ; param[subdirectory] >
+  
+    au < released ; Alabama Department of Archives and History 1867 Voter Registration Collection 1 ; 1867VoterReg1 >
+    au < released ; Alabama Department of Archives and History 1867 Voter Registration Collection 2 ; 1867VoterReg2 >
+  
+  }
+
+  {
+
+    title <
       name = Alabama Department of Archives and History Executive Orders 
     >
 
