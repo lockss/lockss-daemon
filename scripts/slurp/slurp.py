@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.2 2010-09-09 11:33:04 thib_gc Exp $
+# $Id: slurp.py,v 1.3 2010-10-05 01:00:08 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -288,7 +288,7 @@ def __aus(db, ui, id, auids_aids, options):
                 last_crawl, last_crawl_result, last_completed_crawl,
                 last_poll, last_poll_result, last_completed_poll,
                 content_size, disk_usage)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         ''', (aid, name, publisher, year_str, repository, creation_date, status, available,
               last_crawl, last_crawl_result, last_completed_crawl,
               last_poll, last_poll_result, last_completed_poll,
