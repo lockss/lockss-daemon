@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.22 2010-09-22 18:52:36 pgust Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.23 2010-10-05 17:34:15 pgust Exp $
  */
 
 /*
@@ -95,8 +95,11 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/cgi/openurl"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/openurl"),
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/external-ref"),   
+        // filter BMJ article reply links that are often bad
+        HtmlNodeFilters.tagWithAttribute("a", "shape", "rect"), 
         //For SAGE (at least).  Name of the institution. E.g. </a> INDIANA UNIV </div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header-Uni"),
+
 
         // Filter for <li class="subscr-ref">....</li>
         HtmlNodeFilters.tagWithAttribute("li", "class", "subscr-ref"),

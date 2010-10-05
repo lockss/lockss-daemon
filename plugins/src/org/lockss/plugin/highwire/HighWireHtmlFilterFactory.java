@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlFilterFactory.java,v 1.7 2010-10-05 15:52:16 pgust Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.8 2010-10-05 17:34:15 pgust Exp $
  */
 
 /*
@@ -69,8 +69,6 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "user_nav"),
         HtmlNodeFilters.tagWithAttribute("table", "class", "content_box_inner_table"),
         HtmlNodeFilters.tagWithAttribute("a", "class", "contentbox"),
-        // filter BMJ article reply links that are often bad
-        HtmlNodeFilters.tagWithAttribute("a", "shape", "rect"), 
         HtmlNodeFilters.tagWithAttribute("div", "id", "ArchivesNav"),
         HtmlNodeFilters.tagWithText("strong", "related", true),
         HtmlNodeFilters.lowestLevelMatchFilter(HtmlNodeFilters.tagWithText("table", "Related Content", false)),
