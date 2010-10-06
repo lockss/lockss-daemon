@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbout.py,v 1.6 2010-10-01 22:35:35 thib_gc Exp $
+# $Id: tdbout.py,v 1.7 2010-10-06 22:51:29 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.2'''
+__version__ = '''0.3.3'''
 
 from optparse import OptionGroup, OptionParser
 import sys
@@ -133,7 +133,7 @@ def __option_parser__(parser=None):
                             metavar=TdboutConstants.OPTION_LIST_META,
                             action='callback',
                             help=TdboutConstants.OPTION_LIST_HELP,
-                            callback=__synonym_csv) 
+                            callback=__synonym_list) 
     def __synonym_tsv(opt, str, val, par):
         if getattr(par.values, TdboutConstants.OPTION_STYLE, None): par.error('cannot specify -%s and -%s together' % (TdboutConstants.OPTION_TSV_SHORT, TdboutConstants.OPTION_STYLE_SHORT))
         setattr(par.values, TdboutConstants.OPTION_STYLE, TdboutConstants.OPTION_STYLE_TSV)
