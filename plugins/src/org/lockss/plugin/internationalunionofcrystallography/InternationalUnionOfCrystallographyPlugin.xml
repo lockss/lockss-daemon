@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>1</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -31,8 +31,7 @@
       <string>1,&quot;^%slockss\.html$&quot;, scripts_url</string>
       <string>2,&quot;^%s.*\?[DMNS]=[AD]$&quot;, base_url</string>
       <string>1,&quot;^%s%s/issues/%d/&quot;, base_url, journal_id, year</string>
-      <string>1,&quot;^%scgi-bin/sendcif\?&quot;, scripts_url</string>
-      <string>1,&quot;^%sjava/jmol/JmolApplet\.jar$&quot;, base_url</string>
+      <string>1,&quot;^%scgi-bin/(sendcif|sendsup|sendsupfiles)\?&quot;, scripts_url</string>
     </list>
   </entry>
   <entry>
@@ -86,5 +85,9 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.internationalunionofcrystallography.InternationalUnionOfCrystallographyArticleIteratorFactory</string>
   </entry>
 </map>
