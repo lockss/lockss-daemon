@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.81 2010-02-23 04:19:20 pgust Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.81.8.1 2010-10-07 01:31:39 tlipkis Exp $
  */
 
 /*
@@ -509,12 +509,17 @@ public class LockssRepositoryImpl
 	return null;
       }
       logger.debug3("Creating new au directory for '" + auid + "'.");
-      String auDir = lastPluginDir;
-      for (int cnt = 10000; cnt > 0; cnt--) {
+      String auDir = localRepo.getPrevAuDir();
+      for (int cnt = RepositoryManager.getMaxUnusedDirSearch();
+	   cnt > 0; cnt--) {
 	// loop through looking for an available dir
 	auDir = getNextDirName(auDir);
 	File testDir = new File(repoCachePath, auDir);
+	if (logger.isDebug3()) logger.debug3("Probe for unused: " + testDir);
 	if (!testDir.exists()) {
+	  if (RepositoryManager.isStatefulUnusedDirSearch()) {
+	    localRepo.setPrevAuDir(auDir);
+	  }
 	  String auPath = testDir.toString();
 	  logger.debug3("New au directory: "+auPath);
 	  auPathSlash = auPath + File.separator;
@@ -535,7 +540,8 @@ public class LockssRepositoryImpl
       }
     }
     throw new RuntimeException("Can't find unused repository dir after " +
-			       "10000 tries in " + repoCachePath);
+			       RepositoryManager.getMaxUnusedDirSearch() +
+			       " tries in " + repoCachePath);
   }
 
   static LocalRepository getLocalRepository(ArchivalUnit au) {
@@ -699,6 +705,7 @@ public class LockssRepositoryImpl
     String repoPath;
     File repoCacheFile;
     Map auMap;
+    String prevAuDir;
 
     LocalRepository(String repoPath) {
       this.repoPath = repoPath;
@@ -707,6 +714,17 @@ public class LockssRepositoryImpl
 
     public String getRepositoryPath() {
       return repoPath;
+    }
+
+    public String getPrevAuDir() {
+      if (prevAuDir == null) {
+	prevAuDir = lastPluginDir;
+      }
+      return prevAuDir;
+    }
+
+    public void setPrevAuDir(String dir) {
+      prevAuDir = dir;
     }
 
     /** Return the auid -> au-subdir-path mapping.  Enumerating the
@@ -751,6 +769,10 @@ public class LockssRepositoryImpl
 	}
       }
       return auMap;
+    }
+
+    public String toString() {
+      return "[LR: " + repoPath + "]";
     }
   }
 

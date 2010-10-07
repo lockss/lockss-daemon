@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.63 2007-08-22 06:47:00 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.63.44.1 2010-10-07 01:31:38 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.lockss.plugin.*;
 public class TestLockssRepositoryImpl extends LockssTestCase {
   private static Logger logger = Logger.getLogger("LockssRepository");
   private MockLockssDaemon daemon;
+  private RepositoryManager repoMgr;
   private LockssRepositoryImpl repo;
   private MockArchivalUnit mau;
   private String tempDirPath;
@@ -56,6 +57,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     super.setUp();
     daemon = getMockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    repoMgr = daemon.getRepositoryManager();
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
@@ -441,6 +443,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testMapAuToFileLocation() {
+    LockssRepositoryImpl.localRepositories.clear();
     LockssRepositoryImpl.lastPluginDir = "ba";
     String expectedStr = getCacheLocation() + "bb/";
     assertEquals(FileUtil.sysDepPath(expectedStr),
@@ -449,6 +452,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testDoesAuDirExist() {
+    LockssRepositoryImpl.localRepositories.clear();
     MockArchivalUnit mau = new MockArchivalUnit();
     String auid = "sdflkjsd";
     mau.setAuId(auid);
@@ -462,16 +466,47 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertTrue(LockssRepositoryImpl.doesAuDirExist(auid, tempDirPath));
   }
 
-  public void testGetAuDirSkipping() {
-    String location = getCacheLocation() + "ab";
-    File dirFile = new File(location);
-    dirFile.mkdirs();
-
-    LockssRepositoryImpl.lastPluginDir = "aa";
-    String expectedStr = getCacheLocation() + "ac/";
-    assertEquals(FileUtil.sysDepPath(expectedStr),
+  public void testGetAuDirInitWithOne() {
+    LockssRepositoryImpl.localRepositories.clear();
+    String root = getCacheLocation();
+    assertEquals(FileUtil.sysDepPath(root + "b/"),
                  LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
 							  new MockArchivalUnit()));
+  }
+
+  public void testGetAuDirSkipping() {
+    LockssRepositoryImpl.localRepositories.clear();
+    String root = getCacheLocation();
+    // a already made by setup
+    assertTrue(new File(root + "a").exists());
+    new File(root + "b").mkdirs();
+    new File(root + "c").mkdirs();
+    new File(root + "e").mkdirs();
+
+    assertEquals(expDir("d"), probe());
+    assertEquals(expDir("f"), probe());
+    new File(root + "g").mkdirs();
+    new File(root + "h").mkdirs();
+    new File(root + "i").mkdirs();
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_MAX_UNUSED_DIR_SEARCH,
+				 "2");
+    try {
+      probe();
+      fail("Shouldn't find next unused dir with maxUnusedDirSearch = 2");
+    } catch (RuntimeException e) {
+    }
+    ConfigurationUtil.addFromArgs(RepositoryManager.PARAM_MAX_UNUSED_DIR_SEARCH,
+				 "5");
+    assertEquals(expDir("j"), probe());
+  }
+
+  String expDir(String sub) {
+    return FileUtil.sysDepPath(getCacheLocation() + sub + "/");
+  }
+
+  String probe() {
+    return LockssRepositoryImpl.mapAuToFileLocation(tempDirPath,
+						    new MockArchivalUnit());
   }
 
   public void testMapUrlToFileLocation() throws MalformedURLException {
