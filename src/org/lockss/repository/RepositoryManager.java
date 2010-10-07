@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.12 2007-10-13 03:16:57 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.13 2010-10-07 01:37:25 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,16 @@ public class RepositoryManager
     GLOBAL_CACHE_PREFIX + "enabled";
   public static final boolean DEFAULT_GLOBAL_CACHE_ENABLED = false;
 
+  /** Max times to loop looking for unused AU directory. */
+  public static final String PARAM_MAX_UNUSED_DIR_SEARCH =
+    PREFIX + "maxUnusedDirSearch";
+  public static final int DEFAULT_MAX_UNUSED_DIR_SEARCH = 30000;
+
+  /** If true, LocalRepository keeps track of next subdir name to probe. */
+  public static final String PARAM_IS_STATEFUL_UNUSED_DIR_SEARCH =
+    PREFIX + "enableStatefulUnusedDirSearch";
+  public static final boolean DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH = true;
+
   /** Max percent of time size calculation thread may run. */
   public static final String PARAM_SIZE_CALC_MAX_LOAD =
     PREFIX + "sizeCalcMaxLoad";
@@ -100,6 +110,9 @@ public class RepositoryManager
   UniqueRefLruCache globalNodeCache =
       new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);
   Map localRepos = new HashMap();
+  private static int maxUnusedDirSearch = DEFAULT_MAX_UNUSED_DIR_SEARCH;
+  private static boolean isStatefulUnusedDirSearch =
+    DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH;
 
   PlatformUtil.DF paramDFWarn =
     PlatformUtil.DF.makeThreshold(DEFAULT_DISK_WARN_FRRE_MB,
@@ -169,6 +182,11 @@ public class RepositoryManager
       sizeCalcMaxLoad = config.getPercentage(PARAM_SIZE_CALC_MAX_LOAD,
 					     DEFAULT_SIZE_CALC_MAX_LOAD);
     }
+    maxUnusedDirSearch = config.getInt(PARAM_MAX_UNUSED_DIR_SEARCH,
+				       DEFAULT_MAX_UNUSED_DIR_SEARCH);
+    isStatefulUnusedDirSearch =
+      config.getBoolean(PARAM_IS_STATEFUL_UNUSED_DIR_SEARCH,
+			DEFAULT_IS_STATEFUL_UNUSED_DIR_SEARCH);
   }
 
   /** Return list of known repository names.  Needs a registration
@@ -219,6 +237,14 @@ public class RepositoryManager
 
   public PlatformUtil.DF getDiskFullThreshold() {
     return paramDFFull;
+  }
+
+  public static int getMaxUnusedDirSearch() {
+    return maxUnusedDirSearch;
+  }
+
+  public static boolean isStatefulUnusedDirSearch() {
+    return isStatefulUnusedDirSearch;
   }
 
   public List findExistingRepositoriesFor(String auid) {
