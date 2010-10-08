@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpart.py,v 1.1 2010-09-09 11:33:04 thib_gc Exp $
+# $Id: slurpart.py,v 1.2 2010-10-08 22:07:53 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -38,7 +38,7 @@ class SlurpartConstants:
     VERSION = '0.3.0'
     
     DESCRIPTION = '''Produces an article report from data collected by
-Slurp and stored in a Slurb database, arranged by publisher and by
+Slurp and stored in a Slurp database, arranged by publisher and by
 year. Displays progress information to standard error and produces
 comma-separated output to standard output.'''
 
