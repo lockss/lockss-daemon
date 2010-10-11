@@ -3,59 +3,36 @@
     name = European Respiratory Society
   >
 
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  implicit < status ; name ; param[volume_name] >
+
   {
+
     title <
       name = European Respiratory Journal ;
       issn = 0903-1936 ;
       eissn = 1399-3003
     >
 
-    {
+    param[base_url] = http://erj.ersjournals.com/
+  
+    au < manifest ; European Respiratory Journal Volume 36 ; 36 >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://erj.ersjournals.com/
-      implicit < status ; name ; param[volume_name] >
+  }
 
-      au < exists ; European Respiratory Journal Volume 1 ; 1 >
-      au < exists ; European Respiratory Journal Volume 2 ; 2 >
-      au < exists ; European Respiratory Journal Volume 3 ; 3 >
-      au < exists ; European Respiratory Journal Volume 4 ; 4 >
-      au < exists ; European Respiratory Journal Volume 5 ; 5 >
-      au < exists ; European Respiratory Journal Volume 6 ; 6 >
-      au < exists ; European Respiratory Journal Volume 7 ; 7 >
-      au < exists ; European Respiratory Journal Volume 8 ; 8 >
-      au < exists ; European Respiratory Journal Volume 9 ; 9 >
-      au < exists ; European Respiratory Journal Volume 10 ; 10 >
-      au < exists ; European Respiratory Journal Volume 11 ; 11 >
-      au < exists ; European Respiratory Journal Volume 12 ; 12 >
-      au < exists ; European Respiratory Journal Volume 13 ; 13 >
-      au < exists ; European Respiratory Journal Volume 14 ; 14 >
-      au < exists ; European Respiratory Journal Volume 15 ; 15 >
-      au < exists ; European Respiratory Journal Volume 16 ; 16 >
-      au < exists ; European Respiratory Journal Volume 17 ; 17 >
-      au < exists ; European Respiratory Journal Volume 18 ; 18 >
-      au < exists ; European Respiratory Journal Volume 19 ; 19 >
-      au < exists ; European Respiratory Journal Volume 20 ; 20 >
-      au < exists ; European Respiratory Journal Volume 21 ; 21 >
-      au < exists ; European Respiratory Journal Volume 22 ; 22 >
-      au < exists ; European Respiratory Journal Volume 23 ; 23 >
-      au < exists ; European Respiratory Journal Volume 24 ; 24 >
-      au < exists ; European Respiratory Journal Volume 25 ; 25 >
-      au < exists ; European Respiratory Journal Volume 26 ; 26 >
-      au < exists ; European Respiratory Journal Volume 27 ; 27 >
-      au < exists ; European Respiratory Journal Volume 28 ; 28 >
-      au < exists ; European Respiratory Journal Volume 29 ; 29 >
-      au < exists ; European Respiratory Journal Volume 30 ; 30 >
-      au < exists ; European Respiratory Journal Volume 31 ; 31 >
-      au < exists ; European Respiratory Journal Volume 32 ; 32 >
-      au < exists ; European Respiratory Journal Volume 33 ; 33 >
-      au < exists ; European Respiratory Journal Volume 34 ; 34 >
-      au < exists ; European Respiratory Journal Volume 35 ; 35 >
-      au < manifest ; European Respiratory Journal Volume 36 ; 36 >
+  {
+  
+    title <
+      name = European Respiratory Review ;
+      issn = 0905-9180 ;
+      eissn = 1600-0617
+    >
 
-    }
+    param[base_url] = http://err.ersjournals.com/
+  
+    au < manifest ; European Respiratory Review Volume 19 ; 19 >
+ 
 
   }
 
 }
-
