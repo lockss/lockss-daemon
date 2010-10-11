@@ -875,10 +875,10 @@
       au < released ; BMC Neurology Volume 5 ; 5 >
       au < released ; BMC Neurology Volume 6 ; 6 >
       au < released ; BMC Neurology Volume 7 ; 7 >
-      au < testing ; BMC Medical Genetics Volume 8 ; 8 >
-      au < testing ; BMC Medical Genetics Volume 9 ; 9 >
-      au < testing ; BMC Medical Genetics Volume 10 ; 10 >
-      au < testing ; BMC Medical Genetics Volume 11 ; 11 >
+      au < ready ; BMC Medical Genetics Volume 8 ; 8 >
+      au < ready ; BMC Medical Genetics Volume 9 ; 9 >
+      au < ready ; BMC Medical Genetics Volume 10 ; 10 >
+      au < ready ; BMC Medical Genetics Volume 11 ; 11 >
 
     }
 
@@ -897,10 +897,10 @@
       au < released ; BMC Neuroscience Volume 5 ; 5 >
       au < released ; BMC Neuroscience Volume 6 ; 6 >
       au < released ; BMC Neuroscience Volume 7 ; 7 >
-      au < testing ; BMC Medical Genetics Volume 8 ; 8 >
-      au < testing ; BMC Medical Genetics Volume 9 ; 9 >
-      au < testing ; BMC Medical Genetics Volume 10 ; 10 >
-      au < testing ; BMC Medical Genetics Volume 11 ; 11 >
+      au < ready ; BMC Medical Genetics Volume 8 ; 8 >
+      au < ready ; BMC Medical Genetics Volume 9 ; 9 >
+      au < ready ; BMC Medical Genetics Volume 10 ; 10 >
+      au < ready ; BMC Medical Genetics Volume 11 ; 11 >
 
     }
 
@@ -918,10 +918,10 @@
       au < released ; BMC Nuclear Medicine Volume 4 ; 4 >
       au < released ; BMC Nuclear Medicine Volume 5 ; 5 >
       au < released ; BMC Nuclear Medicine Volume 6 ; 6 >
-      au < testing ; BMC Medical Imaging Volume 7 ; 7 >
-      au < testing ; BMC Medical Imaging Volume 8 ; 8 >
-      au < testing ; BMC Medical Imaging Volume 9 ; 9 >
-      au < testing ; BMC Medical Imaging Volume 10 ; 10 >
+      au < ready ; BMC Medical Imaging Volume 7 ; 7 >
+      au < ready ; BMC Medical Imaging Volume 8 ; 8 >
+      au < ready ; BMC Medical Imaging Volume 9 ; 9 >
+      au < ready ; BMC Medical Imaging Volume 10 ; 10 >
       
     }
 
@@ -938,10 +938,10 @@
       au < released ; BMC Nursing Volume 3 ; 3 >
       au < released ; BMC Nursing Volume 4 ; 4 >
       au < released ; BMC Nursing Volume 5 ; 5 >
-      au < testing ; BMC Nursing Volume 6 ; 6 >
-      au < testing ; BMC Nursing Volume 7 ; 7 >
-      au < testing ; BMC Nursing Volume 8 ; 8 >
-      au < testing ; BMC Nursing Volume 9 ; 9 >
+      au < ready ; BMC Nursing Volume 6 ; 6 >
+      au < ready ; BMC Nursing Volume 7 ; 7 >
+      au < ready ; BMC Nursing Volume 8 ; 8 >
+      au < ready ; BMC Nursing Volume 9 ; 9 >
 
     }
 
@@ -959,10 +959,10 @@
       au < released ; BMC Ophthalmology Volume 4 ; 4 >
       au < released ; BMC Ophthalmology Volume 5 ; 5 >
       au < released ; BMC Ophthalmology Volume 6 ; 6 >
-      au < testing ; BMC Medical Imaging Volume 7 ; 7 >
-      au < testing ; BMC Medical Imaging Volume 8 ; 8 >
-      au < testing ; BMC Medical Imaging Volume 9 ; 9 >
-      au < testing ; BMC Medical Imaging Volume 10 ; 10 >
+      au < ready ; BMC Medical Imaging Volume 7 ; 7 >
+      au < ready ; BMC Medical Imaging Volume 8 ; 8 >
+      au < ready ; BMC Medical Imaging Volume 9 ; 9 >
+      au < ready ; BMC Medical Imaging Volume 10 ; 10 >
 
     }
 
@@ -1429,8 +1429,8 @@
       au < released ; Arthritis Research & Therapy Volume 8 ; 8 >
       au < released ; Arthritis Research & Therapy Volume 9 ; 9 >
       au < released ; Arthritis Research & Therapy Volume 10 ; 10 >
-      au < testing ; Arthritis Research & Therapy Volume 11 ; 11 >
-      au < testing ; Arthritis Research & Therapy Volume 12 ; 12 >
+      au < ready ; Arthritis Research & Therapy Volume 11 ; 11 >
+      au < ready ; Arthritis Research & Therapy Volume 12 ; 12 >
     }
 
     {
@@ -2000,7 +2000,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[base_url] = http://www.genomeintegrity.com/
       param[journal_issn] = 2041-9414
 
-      au < manifest ; Genome Integrity Volume 1 ; 1 >
+      au < ready ; Genome Integrity Volume 1 ; 1 >
       
     }
       
@@ -2544,7 +2544,7 @@ comment[bmr] = journal archive available, but no new volumes
       param[journal_issn] = 1743-0003
 
       au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 1 ; 1 >
-      au < testing ; Journal of NeuroEngineering and Rehabilitation Volume 2 ; 2 >
+      au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 2 ; 2 >
       au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 3 ; 3 >
       au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 4 ; 4 >
       au < ready ; Journal of NeuroEngineering and Rehabilitation Volume 5 ; 5 >
@@ -2564,8 +2564,8 @@ comment[bmr] = journal archive available, but no new volumes
       au < ready ; Journal of Neuroinflammation Volume 1 ; 1 >
       au < ready ; Journal of Neuroinflammation Volume 2 ; 2 >
       au < ready ; Journal of Neuroinflammation Volume 3 ; 3 >
-      au < testing ; Journal of Neuroinflammation Volume 4 ; 4 >
-      au < testing ; Journal of Neuroinflammation Volume 5 ; 5 >
+      au < ready ; Journal of Neuroinflammation Volume 4 ; 4 >
+      au < ready ; Journal of Neuroinflammation Volume 5 ; 5 >
       au < ready ; Journal of Neuroinflammation Volume 6 ; 6 >
       au < ready ; Journal of Neuroinflammation Volume 7 ; 7 >
     }
@@ -2597,7 +2597,7 @@ comment[bmr] = journal archive available, but no new volumes
 
       au < ready ; Journal of Orthopaedic Surgery and Research Volume 1 ; 1 >
       au < ready ; Journal of Orthopaedic Surgery and Research Volume 2 ; 2 >
-      au < testing ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
+      au < ready ; Journal of Orthopaedic Surgery and Research Volume 3 ; 3 >
       au < ready ; Journal of Orthopaedic Surgery and Research Volume 4 ; 4 >
       au < ready ; Journal of Orthopaedic Surgery and Research Volume 5 ; 5 >
     }
