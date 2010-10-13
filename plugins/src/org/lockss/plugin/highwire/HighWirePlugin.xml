@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>54</string>
+    <string>55</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -127,8 +127,8 @@
   <entry>
     <string>au_substance_url_pattern</string>
     <list>
-      <string>&quot;^%scgi/content/[^/]+/([^/]+;)?%s/&quot;, base_url, volume</string>
-      <string>&quot;^%scgi/(framedreprint|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar)/([^/]+;)?%s/&quot;, base_url, volume</string>
+      <string>&quot;^%scgi/content/[^/]+/([^/]+;)?%d/&quot;, base_url, volume</string>
+      <string>&quot;^%scgi/(framedreprint|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar)/([^/]+;)?%d/&quot;, base_url, volume</string>
     </list>
   </entry>
 </map>
