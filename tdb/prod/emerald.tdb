@@ -4,10 +4,9 @@
     name = Emerald
   >
 
-  implicit < status ; name ; param[volume_name] >
-
   plugin = org.lockss.plugin.emerald.EmeraldPlugin
   param[base_url] = http://www.emeraldinsight.com/
+  implicit < status ; year ; name ; param[volume_name] >
 
   {
     title <
