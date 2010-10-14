@@ -52,7 +52,7 @@ comment[erc16] = no permission on manifest page (no subscription)
 comment[joe153] = 500 error (content2a)
 comment[joe154] = found a login page (content2a) vol 154 and down
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://joe.endocrinology-journals.org/
       implicit < status ; name ; param[volume_name] >
 
