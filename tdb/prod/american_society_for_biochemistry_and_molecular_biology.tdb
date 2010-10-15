@@ -318,7 +318,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://www.jlr.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -367,12 +367,12 @@
       au < exists ; The Journal of Lipid Research Volume 43 ; 43 >
       au < exists ; The Journal of Lipid Research Volume 44 ; 44 >
       au < exists ; The Journal of Lipid Research Volume 45 ; 45 >
-      au < manifest ; The Journal of Lipid Research Volume 46 ; 46 >
-      au < manifest ; The Journal of Lipid Research Volume 47 ; 47 >
-      au < manifest ; The Journal of Lipid Research Volume 48 ; 48 >
-      au < manifest ; The Journal of Lipid Research Volume 49 ; 49 >
-      au < manifest ; The Journal of Lipid Research Volume 50 ; 50 >
-      au < manifest ; The Journal of Lipid Research Volume 51 ; 51 >
+      au < ready ; The Journal of Lipid Research Volume 46 ; 46 >
+      au < ready ; The Journal of Lipid Research Volume 47 ; 47 >
+      au < ready ; The Journal of Lipid Research Volume 48 ; 48 >
+      au < testing ; The Journal of Lipid Research Volume 49 ; 49 >
+      au < ready ; The Journal of Lipid Research Volume 50 ; 50 >
+      au < testing ; The Journal of Lipid Research Volume 51 ; 51 >
 
     }
 
