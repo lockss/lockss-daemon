@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.1 2010-10-16 01:02:00 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.2 2010-10-16 01:49:49 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.plugin.springer;
 import java.io.InputStream;
 
 import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.OrFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -48,6 +48,8 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
                                                String encoding)
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
+        // Contains ad-specific cookies
+        new TagNameFilter("script"),
         // Contains cross-links to other articles in other journals/volumes
         HtmlNodeFilters.tagWithAttribute("div", "id", "RelatedSection"),
         // Contains ads
@@ -58,6 +60,8 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "MasterHeaderRecognition"),
         // Contains SFX links
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "linkoutView"),
+        // Has a session cookie
+        HtmlNodeFilters.tagWithAttribute("form", "id", "LoginForm"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
