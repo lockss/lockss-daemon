@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.2 2010-10-16 01:49:49 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.3 2010-10-18 23:52:03 thib_gc Exp $
  */
 
 /*
@@ -62,6 +62,8 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("div", "class", "linkoutView"),
         // Has a session cookie
         HtmlNodeFilters.tagWithAttribute("form", "id", "LoginForm"),
+        // CSS file names are versioned
+        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "\\.css$"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
