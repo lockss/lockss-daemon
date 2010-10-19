@@ -3,14 +3,40 @@
   publisher <
     name = Springer
   >
+
+  plugin = org.lockss.plugin.springer.SpringerLinkPlugin
+  param[base_url] = http://www.springerlink.com/
+  implicit < status ; year ; name ; param[volume_name] >
   
   {
   
     title <
-      name = All Springer titles (coming soon) ;
-      placeholder = True
+      name = Astronomy and Astrophysics Review ;
+      issn = 0935-4956 ;
+      eissn = 1432-0754
     >
+    
+    param[journal_issn] = 0935-4956
+    
+    au < manifest ; 1989 ; Astronomy and Astrophysics Review Volume 1 ; 1 >
+    au < manifest ; 1990-1991 ; Astronomy and Astrophysics Review Volume 2 ; 2 >
+    au < manifest ; 1991-1992 ; Astronomy and Astrophysics Review Volume 3 ; 3 >
+    au < manifest ; 1992-1993 ; Astronomy and Astrophysics Review Volume 4 ; 4 >
+    au < manifest ; 1993-1994 ; Astronomy and Astrophysics Review Volume 5 ; 5 >
+    au < manifest ; 1994-1995 ; Astronomy and Astrophysics Review Volume 6 ; 6 >
+    au < manifest ; 1996 ; Astronomy and Astrophysics Review Volume 7 ; 7 >
+    au < manifest ; 1997-1998 ; Astronomy and Astrophysics Review Volume 8 ; 8 >
+    au < manifest ; 1998-1999 ; Astronomy and Astrophysics Review Volume 9 ; 9 >
+    au < manifest ; 2000-2002 ; Astronomy and Astrophysics Review Volume 10 ; 10 >
+    au < manifest ; 2002-2003 ; Astronomy and Astrophysics Review Volume 11 ; 11 >
+    au < manifest ; 2003-2004 ; Astronomy and Astrophysics Review Volume 12 ; 12 >
+    au < manifest ; 2006 ; Astronomy and Astrophysics Review Volume 13 ; 13 >
+    au < manifest ; 2007 ; Astronomy and Astrophysics Review Volume 14 ; 14 >
+    au < manifest ; 2007-2008 ; Astronomy and Astrophysics Review Volume 15 ; 15 >
+    au < manifest ; 2008 ; Astronomy and Astrophysics Review Volume 16 ; 16 >
+    au < manifest ; 2009 ; Astronomy and Astrophysics Review Volume 17 ; 17 >
+    au < manifest ; 2010 ; Astronomy and Astrophysics Review Volume 18 ; 18 >
   
-  }
+  }  
 
 }
