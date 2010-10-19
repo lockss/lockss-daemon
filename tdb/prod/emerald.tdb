@@ -16,10 +16,10 @@
 
     param[journal_issn] = 1030-9616
 
-    au < testing ; 2005 ; Accounting Research Journal Volume 18 ; 18 >
-    au < testing ; 2006 ; Accounting Research Journal Volume 19 ; 19 >
-    au < testing ; 2007 ; Accounting Research Journal Volume 20 ; 20 >
-    au < testing ; 2008 ; Accounting Research Journal Volume 21 ; 21 >
+    au < ready ; 2005 ; Accounting Research Journal Volume 18 ; 18 >
+    au < ready ; 2006 ; Accounting Research Journal Volume 19 ; 19 >
+    au < ready ; 2007 ; Accounting Research Journal Volume 20 ; 20 >
+    au < ready ; 2008 ; Accounting Research Journal Volume 21 ; 21 >
     au < testing ; 2009 ; Accounting Research Journal Volume 22 ; 22 >
     au < manifest ; 2010 ; Accounting Research Journal Volume 23 ; 23 >
 
@@ -33,28 +33,28 @@
 
     param[journal_issn] = 0951-3574
 
-    au < testing ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 >
-    au < testing ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 >
-    au < testing ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 >
-    au < testing ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 >
-    au < testing ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 >
-    au < testing ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 >
-    au < testing ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 >
-    au < testing ; 1995 ; Accounting, Auditing & Accountability Journal Volume 8 ; 8 >
-    au < testing ; 1996 ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 >
-    au < testing ; 1997 ; Accounting, Auditing & Accountability Journal Volume 10 ; 10 >
-    au < testing ; 1998 ; Accounting, Auditing & Accountability Journal Volume 11 ; 11 >
-    au < testing ; 1999 ; Accounting, Auditing & Accountability Journal Volume 12 ; 12 >
-    au < testing ; 2000 ; Accounting, Auditing & Accountability Journal Volume 13 ; 13 >
-    au < testing ; 2001 ; Accounting, Auditing & Accountability Journal Volume 14 ; 14 >
-    au < testing ; 2002 ; Accounting, Auditing & Accountability Journal Volume 15 ; 15 >
-    au < testing ; 2003 ; Accounting, Auditing & Accountability Journal Volume 16 ; 16 >
-    au < testing ; 2004 ; Accounting, Auditing & Accountability Journal Volume 17 ; 17 >
-    au < testing ; 2005 ; Accounting, Auditing & Accountability Journal Volume 18 ; 18 >
-    au < testing ; 2006 ; Accounting, Auditing & Accountability Journal Volume 19 ; 19 >
-    au < testing ; 2007 ; Accounting, Auditing & Accountability Journal Volume 20 ; 20 >
-    au < testing ; 2008 ; Accounting, Auditing & Accountability Journal Volume 21 ; 21 >
-    au < testing ; 2009 ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 >
+    au < ready ; 1988 ; Accounting, Auditing & Accountability Journal Volume 1 ; 1 >
+    au < ready ; 1989 ; Accounting, Auditing & Accountability Journal Volume 2 ; 2 >
+    au < ready ; 1990 ; Accounting, Auditing & Accountability Journal Volume 3 ; 3 >
+    au < ready ; 1991 ; Accounting, Auditing & Accountability Journal Volume 4 ; 4 >
+    au < ready ; 1992 ; Accounting, Auditing & Accountability Journal Volume 5 ; 5 >
+    au < ready ; 1993 ; Accounting, Auditing & Accountability Journal Volume 6 ; 6 >
+    au < ready ; 1994 ; Accounting, Auditing & Accountability Journal Volume 7 ; 7 >
+    au < ready ; 1995 ; Accounting, Auditing & Accountability Journal Volume 8 ; 8 >
+    au < ready ; 1996 ; Accounting, Auditing & Accountability Journal Volume 9 ; 9 >
+    au < ready ; 1997 ; Accounting, Auditing & Accountability Journal Volume 10 ; 10 >
+    au < ready ; 1998 ; Accounting, Auditing & Accountability Journal Volume 11 ; 11 >
+    au < ready ; 1999 ; Accounting, Auditing & Accountability Journal Volume 12 ; 12 >
+    au < ready ; 2000 ; Accounting, Auditing & Accountability Journal Volume 13 ; 13 >
+    au < ready ; 2001 ; Accounting, Auditing & Accountability Journal Volume 14 ; 14 >
+    au < ready ; 2002 ; Accounting, Auditing & Accountability Journal Volume 15 ; 15 >
+    au < ready ; 2003 ; Accounting, Auditing & Accountability Journal Volume 16 ; 16 >
+    au < ready ; 2004 ; Accounting, Auditing & Accountability Journal Volume 17 ; 17 >
+    au < ready ; 2005 ; Accounting, Auditing & Accountability Journal Volume 18 ; 18 >
+    au < ready ; 2006 ; Accounting, Auditing & Accountability Journal Volume 19 ; 19 >
+    au < ready ; 2007 ; Accounting, Auditing & Accountability Journal Volume 20 ; 20 >
+    au < ready ; 2008 ; Accounting, Auditing & Accountability Journal Volume 21 ; 21 >
+    au < ready ; 2009 ; Accounting, Auditing & Accountability Journal Volume 22 ; 22 >
     au < manifest ; 2010 ; Accounting, Auditing & Accountability Journal Volume 23 ; 23 >
 
   }
@@ -67,7 +67,6 @@
 
     param[journal_issn] = 2040-0705
 
-    
     au < manifest ; 2010 ; African Journal of Economic and Management Studies Volume 1 ; 1 >
 
   }
@@ -80,17 +79,16 @@
 
     param[journal_issn] = 0002-1466
 
-    
-    au < manifest ; 2000 ; Agricultural Finance Review Volume 60 ; 60 >
-    au < manifest ; 2001 ; Agricultural Finance Review Volume 61 ; 61 >
-    au < manifest ; 2002 ; Agricultural Finance Review Volume 62 ; 62 >
-    au < manifest ; 2003 ; Agricultural Finance Review Volume 63 ; 63 >
-    au < manifest ; 2004 ; Agricultural Finance Review Volume 64 ; 64 >
-    au < manifest ; 2005 ; Agricultural Finance Review Volume 65 ; 65 >
-    au < manifest ; 2006 ; Agricultural Finance Review Volume 66 ; 66 >
-    au < manifest ; 2007 ; Agricultural Finance Review Volume 67 ; 67 >
-    au < manifest ; 2008 ; Agricultural Finance Review Volume 68 ; 68 >
-    au < manifest ; 2009 ; Agricultural Finance Review Volume 69 ; 69 >
+    au < ready ; 2000 ; Agricultural Finance Review Volume 60 ; 60 >
+    au < ready ; 2001 ; Agricultural Finance Review Volume 61 ; 61 >
+    au < ready ; 2002 ; Agricultural Finance Review Volume 62 ; 62 >
+    au < ready ; 2003 ; Agricultural Finance Review Volume 63 ; 63 >
+    au < ready ; 2004 ; Agricultural Finance Review Volume 64 ; 64 >
+    au < ready ; 2005 ; Agricultural Finance Review Volume 65 ; 65 >
+    au < ready ; 2006 ; Agricultural Finance Review Volume 66 ; 66 >
+    au < ready ; 2007 ; Agricultural Finance Review Volume 67 ; 67 >
+    au < ready ; 2008 ; Agricultural Finance Review Volume 68 ; 68 >
+    au < ready ; 2009 ; Agricultural Finance Review Volume 69 ; 69 >
     au < manifest ; 2010 ; Agricultural Finance Review Volume 70 ; 70 >
 
   }
@@ -103,88 +101,87 @@
 
     param[journal_issn] = 0002-2667
 
-    
-    au < manifest ; 1929 ; Aircraft Engineering and Aerospace Technology Volume 1 ; 1 >
-    au < manifest ; 1930 ; Aircraft Engineering and Aerospace Technology Volume 2 ; 2 >
-    au < manifest ; 1931 ; Aircraft Engineering and Aerospace Technology Volume 3 ; 3 >
-    au < manifest ; 1932 ; Aircraft Engineering and Aerospace Technology Volume 4 ; 4 >
-    au < manifest ; 1933 ; Aircraft Engineering and Aerospace Technology Volume 5 ; 5 >
-    au < manifest ; 1934 ; Aircraft Engineering and Aerospace Technology Volume 6 ; 6 >
-    au < manifest ; 1935 ; Aircraft Engineering and Aerospace Technology Volume 7 ; 7 >
-    au < manifest ; 1936 ; Aircraft Engineering and Aerospace Technology Volume 8 ; 8 >
-    au < manifest ; 1937 ; Aircraft Engineering and Aerospace Technology Volume 9 ; 9 >
-    au < manifest ; 1938 ; Aircraft Engineering and Aerospace Technology Volume 10 ; 10 >
-    au < manifest ; 1939 ; Aircraft Engineering and Aerospace Technology Volume 11 ; 11 >
-    au < manifest ; 1940 ; Aircraft Engineering and Aerospace Technology Volume 12 ; 12 >
-    au < manifest ; 1941 ; Aircraft Engineering and Aerospace Technology Volume 13 ; 13 >
-    au < manifest ; 1942 ; Aircraft Engineering and Aerospace Technology Volume 14 ; 14 >
-    au < manifest ; 1943 ; Aircraft Engineering and Aerospace Technology Volume 15 ; 15 >
-    au < manifest ; 1944 ; Aircraft Engineering and Aerospace Technology Volume 16 ; 16 >
-    au < manifest ; 1945 ; Aircraft Engineering and Aerospace Technology Volume 17 ; 17 >
-    au < manifest ; 1946 ; Aircraft Engineering and Aerospace Technology Volume 18 ; 18 >
-    au < manifest ; 1947 ; Aircraft Engineering and Aerospace Technology Volume 19 ; 19 >
-    au < manifest ; 1948 ; Aircraft Engineering and Aerospace Technology Volume 20 ; 20 >
-    au < manifest ; 1949 ; Aircraft Engineering and Aerospace Technology Volume 21 ; 21 >
-    au < manifest ; 1950 ; Aircraft Engineering and Aerospace Technology Volume 22 ; 22 >
-    au < manifest ; 1951 ; Aircraft Engineering and Aerospace Technology Volume 23 ; 23 >
-    au < manifest ; 1952 ; Aircraft Engineering and Aerospace Technology Volume 24 ; 24 >
-    au < manifest ; 1953 ; Aircraft Engineering and Aerospace Technology Volume 25 ; 25 >
-    au < manifest ; 1954 ; Aircraft Engineering and Aerospace Technology Volume 26 ; 26 >
-    au < manifest ; 1955 ; Aircraft Engineering and Aerospace Technology Volume 27 ; 27 >
-    au < manifest ; 1956 ; Aircraft Engineering and Aerospace Technology Volume 28 ; 28 >
-    au < manifest ; 1957 ; Aircraft Engineering and Aerospace Technology Volume 29 ; 29 >
-    au < manifest ; 1958 ; Aircraft Engineering and Aerospace Technology Volume 30 ; 30 >
-    au < manifest ; 1959 ; Aircraft Engineering and Aerospace Technology Volume 31 ; 31 >
-    au < manifest ; 1960 ; Aircraft Engineering and Aerospace Technology Volume 32 ; 32 >
-    au < manifest ; 1961 ; Aircraft Engineering and Aerospace Technology Volume 33 ; 33 >
-    au < manifest ; 1962 ; Aircraft Engineering and Aerospace Technology Volume 34 ; 34 >
-    au < manifest ; 1963 ; Aircraft Engineering and Aerospace Technology Volume 35 ; 35 >
-    au < manifest ; 1964 ; Aircraft Engineering and Aerospace Technology Volume 36 ; 36 >
-    au < manifest ; 1965 ; Aircraft Engineering and Aerospace Technology Volume 37 ; 37 >
-    au < manifest ; 1966 ; Aircraft Engineering and Aerospace Technology Volume 38 ; 38 >
-    au < manifest ; 1967 ; Aircraft Engineering and Aerospace Technology Volume 39 ; 39 >
-    au < manifest ; 1968 ; Aircraft Engineering and Aerospace Technology Volume 40 ; 40 >
-    au < manifest ; 1969 ; Aircraft Engineering and Aerospace Technology Volume 41 ; 41 >
-    au < manifest ; 1970 ; Aircraft Engineering and Aerospace Technology Volume 42 ; 42 >
-    au < manifest ; 1971 ; Aircraft Engineering and Aerospace Technology Volume 43 ; 43 >
-    au < manifest ; 1972 ; Aircraft Engineering and Aerospace Technology Volume 44 ; 44 >
-    au < manifest ; 1973 ; Aircraft Engineering and Aerospace Technology Volume 45 ; 45 >
-    au < manifest ; 1974 ; Aircraft Engineering and Aerospace Technology Volume 46 ; 46 >
-    au < manifest ; 1975 ; Aircraft Engineering and Aerospace Technology Volume 47 ; 47 >
-    au < manifest ; 1976 ; Aircraft Engineering and Aerospace Technology Volume 48 ; 48 >
-    au < manifest ; 1977 ; Aircraft Engineering and Aerospace Technology Volume 49 ; 49 >
-    au < manifest ; 1978 ; Aircraft Engineering and Aerospace Technology Volume 50 ; 50 >
-    au < manifest ; 1979 ; Aircraft Engineering and Aerospace Technology Volume 51 ; 51 >
-    au < manifest ; 1980 ; Aircraft Engineering and Aerospace Technology Volume 52 ; 52 >
-    au < manifest ; 1981 ; Aircraft Engineering and Aerospace Technology Volume 53 ; 53 >
-    au < manifest ; 1982 ; Aircraft Engineering and Aerospace Technology Volume 54 ; 54 >
-    au < manifest ; 1983 ; Aircraft Engineering and Aerospace Technology Volume 55 ; 55 >
-    au < manifest ; 1984 ; Aircraft Engineering and Aerospace Technology Volume 56 ; 56 >
-    au < manifest ; 1985 ; Aircraft Engineering and Aerospace Technology Volume 57 ; 57 >
-    au < manifest ; 1986 ; Aircraft Engineering and Aerospace Technology Volume 58 ; 58 >
-    au < manifest ; 1987 ; Aircraft Engineering and Aerospace Technology Volume 59 ; 59 >
-    au < manifest ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 >
-    au < manifest ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 >
-    au < manifest ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 >
-    au < manifest ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 >
-    au < manifest ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 >
-    au < manifest ; 1993 ; Aircraft Engineering and Aerospace Technology Volume 65 ; 65 >
-    au < manifest ; 1994 ; Aircraft Engineering and Aerospace Technology Volume 66 ; 66 >
-    au < manifest ; 1995 ; Aircraft Engineering and Aerospace Technology Volume 67 ; 67 >
-    au < manifest ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 >
-    au < manifest ; 1997 ; Aircraft Engineering and Aerospace Technology Volume 69 ; 69 >
-    au < manifest ; 1998 ; Aircraft Engineering and Aerospace Technology Volume 70 ; 70 >
-    au < manifest ; 1999 ; Aircraft Engineering and Aerospace Technology Volume 71 ; 71 >
-    au < manifest ; 2000 ; Aircraft Engineering and Aerospace Technology Volume 72 ; 72 >
-    au < manifest ; 2001 ; Aircraft Engineering and Aerospace Technology Volume 73 ; 73 >
-    au < manifest ; 2002 ; Aircraft Engineering and Aerospace Technology Volume 74 ; 74 >
-    au < manifest ; 2003 ; Aircraft Engineering and Aerospace Technology Volume 75 ; 75 >
-    au < manifest ; 2004 ; Aircraft Engineering and Aerospace Technology Volume 76 ; 76 >
-    au < manifest ; 2005 ; Aircraft Engineering and Aerospace Technology Volume 77 ; 77 >
-    au < manifest ; 2006 ; Aircraft Engineering and Aerospace Technology Volume 78 ; 78 >
-    au < manifest ; 2007 ; Aircraft Engineering and Aerospace Technology Volume 79 ; 79 >
-    au < manifest ; 2008 ; Aircraft Engineering and Aerospace Technology Volume 80 ; 80 >
-    au < manifest ; 2009 ; Aircraft Engineering and Aerospace Technology Volume 81 ; 81 >
+    au < testing ; 1929 ; Aircraft Engineering and Aerospace Technology Volume 1 ; 1 >
+    au < testing ; 1930 ; Aircraft Engineering and Aerospace Technology Volume 2 ; 2 >
+    au < testing ; 1931 ; Aircraft Engineering and Aerospace Technology Volume 3 ; 3 >
+    au < testing ; 1932 ; Aircraft Engineering and Aerospace Technology Volume 4 ; 4 >
+    au < testing ; 1933 ; Aircraft Engineering and Aerospace Technology Volume 5 ; 5 >
+    au < testing ; 1934 ; Aircraft Engineering and Aerospace Technology Volume 6 ; 6 >
+    au < testing ; 1935 ; Aircraft Engineering and Aerospace Technology Volume 7 ; 7 >
+    au < testing ; 1936 ; Aircraft Engineering and Aerospace Technology Volume 8 ; 8 >
+    au < testing ; 1937 ; Aircraft Engineering and Aerospace Technology Volume 9 ; 9 >
+    au < testing ; 1938 ; Aircraft Engineering and Aerospace Technology Volume 10 ; 10 >
+    au < testing ; 1939 ; Aircraft Engineering and Aerospace Technology Volume 11 ; 11 >
+    au < testing ; 1940 ; Aircraft Engineering and Aerospace Technology Volume 12 ; 12 >
+    au < testing ; 1941 ; Aircraft Engineering and Aerospace Technology Volume 13 ; 13 >
+    au < testing ; 1942 ; Aircraft Engineering and Aerospace Technology Volume 14 ; 14 >
+    au < testing ; 1943 ; Aircraft Engineering and Aerospace Technology Volume 15 ; 15 >
+    au < testing ; 1944 ; Aircraft Engineering and Aerospace Technology Volume 16 ; 16 >
+    au < testing ; 1945 ; Aircraft Engineering and Aerospace Technology Volume 17 ; 17 >
+    au < testing ; 1946 ; Aircraft Engineering and Aerospace Technology Volume 18 ; 18 >
+    au < testing ; 1947 ; Aircraft Engineering and Aerospace Technology Volume 19 ; 19 >
+    au < testing ; 1948 ; Aircraft Engineering and Aerospace Technology Volume 20 ; 20 >
+    au < testing ; 1949 ; Aircraft Engineering and Aerospace Technology Volume 21 ; 21 >
+    au < testing ; 1950 ; Aircraft Engineering and Aerospace Technology Volume 22 ; 22 >
+    au < testing ; 1951 ; Aircraft Engineering and Aerospace Technology Volume 23 ; 23 >
+    au < testing ; 1952 ; Aircraft Engineering and Aerospace Technology Volume 24 ; 24 >
+    au < testing ; 1953 ; Aircraft Engineering and Aerospace Technology Volume 25 ; 25 >
+    au < testing ; 1954 ; Aircraft Engineering and Aerospace Technology Volume 26 ; 26 >
+    au < testing ; 1955 ; Aircraft Engineering and Aerospace Technology Volume 27 ; 27 >
+    au < testing ; 1956 ; Aircraft Engineering and Aerospace Technology Volume 28 ; 28 >
+    au < testing ; 1957 ; Aircraft Engineering and Aerospace Technology Volume 29 ; 29 >
+    au < testing ; 1958 ; Aircraft Engineering and Aerospace Technology Volume 30 ; 30 >
+    au < testing ; 1959 ; Aircraft Engineering and Aerospace Technology Volume 31 ; 31 >
+    au < testing ; 1960 ; Aircraft Engineering and Aerospace Technology Volume 32 ; 32 >
+    au < testing ; 1961 ; Aircraft Engineering and Aerospace Technology Volume 33 ; 33 >
+    au < testing ; 1962 ; Aircraft Engineering and Aerospace Technology Volume 34 ; 34 >
+    au < testing ; 1963 ; Aircraft Engineering and Aerospace Technology Volume 35 ; 35 >
+    au < testing ; 1964 ; Aircraft Engineering and Aerospace Technology Volume 36 ; 36 >
+    au < testing ; 1965 ; Aircraft Engineering and Aerospace Technology Volume 37 ; 37 >
+    au < testing ; 1966 ; Aircraft Engineering and Aerospace Technology Volume 38 ; 38 >
+    au < testing ; 1967 ; Aircraft Engineering and Aerospace Technology Volume 39 ; 39 >
+    au < testing ; 1968 ; Aircraft Engineering and Aerospace Technology Volume 40 ; 40 >
+    au < testing ; 1969 ; Aircraft Engineering and Aerospace Technology Volume 41 ; 41 >
+    au < testing ; 1970 ; Aircraft Engineering and Aerospace Technology Volume 42 ; 42 >
+    au < testing ; 1971 ; Aircraft Engineering and Aerospace Technology Volume 43 ; 43 >
+    au < testing ; 1972 ; Aircraft Engineering and Aerospace Technology Volume 44 ; 44 >
+    au < testing ; 1973 ; Aircraft Engineering and Aerospace Technology Volume 45 ; 45 >
+    au < testing ; 1974 ; Aircraft Engineering and Aerospace Technology Volume 46 ; 46 >
+    au < testing ; 1975 ; Aircraft Engineering and Aerospace Technology Volume 47 ; 47 >
+    au < testing ; 1976 ; Aircraft Engineering and Aerospace Technology Volume 48 ; 48 >
+    au < testing ; 1977 ; Aircraft Engineering and Aerospace Technology Volume 49 ; 49 >
+    au < testing ; 1978 ; Aircraft Engineering and Aerospace Technology Volume 50 ; 50 >
+    au < testing ; 1979 ; Aircraft Engineering and Aerospace Technology Volume 51 ; 51 >
+    au < testing ; 1980 ; Aircraft Engineering and Aerospace Technology Volume 52 ; 52 >
+    au < testing ; 1981 ; Aircraft Engineering and Aerospace Technology Volume 53 ; 53 >
+    au < testing ; 1982 ; Aircraft Engineering and Aerospace Technology Volume 54 ; 54 >
+    au < testing ; 1983 ; Aircraft Engineering and Aerospace Technology Volume 55 ; 55 >
+    au < testing ; 1984 ; Aircraft Engineering and Aerospace Technology Volume 56 ; 56 >
+    au < testing ; 1985 ; Aircraft Engineering and Aerospace Technology Volume 57 ; 57 >
+    au < testing ; 1986 ; Aircraft Engineering and Aerospace Technology Volume 58 ; 58 >
+    au < testing ; 1987 ; Aircraft Engineering and Aerospace Technology Volume 59 ; 59 >
+    au < testing ; 1988 ; Aircraft Engineering and Aerospace Technology Volume 60 ; 60 >
+    au < testing ; 1989 ; Aircraft Engineering and Aerospace Technology Volume 61 ; 61 >
+    au < testing ; 1990 ; Aircraft Engineering and Aerospace Technology Volume 62 ; 62 >
+    au < testing ; 1991 ; Aircraft Engineering and Aerospace Technology Volume 63 ; 63 >
+    au < testing ; 1992 ; Aircraft Engineering and Aerospace Technology Volume 64 ; 64 >
+    au < testing ; 1993 ; Aircraft Engineering and Aerospace Technology Volume 65 ; 65 >
+    au < testing ; 1994 ; Aircraft Engineering and Aerospace Technology Volume 66 ; 66 >
+    au < testing ; 1995 ; Aircraft Engineering and Aerospace Technology Volume 67 ; 67 >
+    au < testing ; 1996 ; Aircraft Engineering and Aerospace Technology Volume 68 ; 68 >
+    au < testing ; 1997 ; Aircraft Engineering and Aerospace Technology Volume 69 ; 69 >
+    au < testing ; 1998 ; Aircraft Engineering and Aerospace Technology Volume 70 ; 70 >
+    au < testing ; 1999 ; Aircraft Engineering and Aerospace Technology Volume 71 ; 71 >
+    au < testing ; 2000 ; Aircraft Engineering and Aerospace Technology Volume 72 ; 72 >
+    au < testing ; 2001 ; Aircraft Engineering and Aerospace Technology Volume 73 ; 73 >
+    au < testing ; 2002 ; Aircraft Engineering and Aerospace Technology Volume 74 ; 74 >
+    au < testing ; 2003 ; Aircraft Engineering and Aerospace Technology Volume 75 ; 75 >
+    au < testing ; 2004 ; Aircraft Engineering and Aerospace Technology Volume 76 ; 76 >
+    au < testing ; 2005 ; Aircraft Engineering and Aerospace Technology Volume 77 ; 77 >
+    au < testing ; 2006 ; Aircraft Engineering and Aerospace Technology Volume 78 ; 78 >
+    au < testing ; 2007 ; Aircraft Engineering and Aerospace Technology Volume 79 ; 79 >
+    au < testing ; 2008 ; Aircraft Engineering and Aerospace Technology Volume 80 ; 80 >
+    au < testing ; 2009 ; Aircraft Engineering and Aerospace Technology Volume 81 ; 81 >
     au < manifest ; 2010 ; Aircraft Engineering and Aerospace Technology Volume 82 ; 82 >
 
   }
