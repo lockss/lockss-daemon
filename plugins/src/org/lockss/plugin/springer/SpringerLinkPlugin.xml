@@ -77,4 +77,10 @@
     <string>text/html_crawl_filter_factory</string>
     <string>org.lockss.plugin.springer.SpringerLinkHtmlCrawlFilterFactory</string>
   </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3</string>
+    </list>
+  </entry>
 </map>
