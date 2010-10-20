@@ -7,6 +7,18 @@
   {
 
     title <
+      name = Cancer Discovery
+    >
+
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://cancerdiscovery.aacrjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+  }
+
+  {
+
+    title <
       name = Cancer Epidemiology Biomarkers & Prevention ;
       issn = 1055-9965 ;
       eissn = 1538-7755
