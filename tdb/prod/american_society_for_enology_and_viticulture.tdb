@@ -1,85 +1,82 @@
 {
+
   publisher <
     name = American Society for Enology and Viticulture
   >
 
   {
+
     title <
       name = American Journal of Enology and Viticulture ;
       issn = 0002-9254
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+    param[base_url] = http://www.ajevonline.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://www.ajevonline.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < ready ; American Journal of Enology and Viticulture Volume 1 ; 1 >
-      au < ready ; American Journal of Enology and Viticulture Volume 2 ; 2 >
-      au < ready ; American Journal of Enology and Viticulture Volume 3 ; 3 >
-      au < ready ; American Journal of Enology and Viticulture Volume 4 ; 4 >
-      au < ready ; American Journal of Enology and Viticulture Volume 5 ; 5 >
-      au < ready ; American Journal of Enology and Viticulture Volume 6 ; 6 >
-      au < ready ; American Journal of Enology and Viticulture Volume 7 ; 7 >
-      au < ready ; American Journal of Enology and Viticulture Volume 8 ; 8 >
-      au < ready ; American Journal of Enology and Viticulture Volume 9 ; 9 >
-      au < ready ; American Journal of Enology and Viticulture Volume 10 ; 10 >
-      au < ready ; American Journal of Enology and Viticulture Volume 11 ; 11 >
-      au < ready ; American Journal of Enology and Viticulture Volume 12 ; 12 >
-      au < ready ; American Journal of Enology and Viticulture Volume 13 ; 13 >
-      au < ready ; American Journal of Enology and Viticulture Volume 14 ; 14 >
-      au < ready ; American Journal of Enology and Viticulture Volume 15 ; 15 >
-      au < ready ; American Journal of Enology and Viticulture Volume 16 ; 16 >
-      au < ready ; American Journal of Enology and Viticulture Volume 17 ; 17 >
-      au < ready ; American Journal of Enology and Viticulture Volume 18 ; 18 >
-      au < ready ; American Journal of Enology and Viticulture Volume 19 ; 19 >
-      au < ready ; American Journal of Enology and Viticulture Volume 20 ; 20 >
-      au < ready ; American Journal of Enology and Viticulture Volume 21 ; 21 >
-      au < ready ; American Journal of Enology and Viticulture Volume 22 ; 22 >
-      au < ready ; American Journal of Enology and Viticulture Volume 23 ; 23 >
-      au < ready ; American Journal of Enology and Viticulture Volume 24 ; 24 >
-      au < ready ; American Journal of Enology and Viticulture Volume 25 ; 25 >
-      au < ready ; American Journal of Enology and Viticulture Volume 26 ; 26 >
-      au < ready ; American Journal of Enology and Viticulture Volume 27 ; 27 >
-      au < ready ; American Journal of Enology and Viticulture Volume 28 ; 28 >
-      au < ready ; American Journal of Enology and Viticulture Volume 29 ; 29 >
-      au < ready ; American Journal of Enology and Viticulture Volume 30 ; 30 >
-      au < ready ; American Journal of Enology and Viticulture Volume 31 ; 31 >
-      au < ready ; American Journal of Enology and Viticulture Volume 32 ; 32 >
-      au < ready ; American Journal of Enology and Viticulture Volume 33 ; 33 >
-      au < ready ; American Journal of Enology and Viticulture Volume 34 ; 34 >
-      au < ready ; American Journal of Enology and Viticulture Volume 35 ; 35 >
-      au < ready ; American Journal of Enology and Viticulture Volume 36 ; 36 >
-      au < ready ; American Journal of Enology and Viticulture Volume 37 ; 37 >
-      au < ready ; American Journal of Enology and Viticulture Volume 38 ; 38 >
-      au < ready ; American Journal of Enology and Viticulture Volume 39 ; 39 >
-      au < ready ; American Journal of Enology and Viticulture Volume 40 ; 40 >
-      au < ready ; American Journal of Enology and Viticulture Volume 41 ; 41 >
-      au < ready ; American Journal of Enology and Viticulture Volume 42 ; 42 >
-      au < ready ; American Journal of Enology and Viticulture Volume 43 ; 43 >
-      au < ready ; American Journal of Enology and Viticulture Volume 44 ; 44 >
-      au < ready ; American Journal of Enology and Viticulture Volume 45 ; 45 >
-      au < ready ; American Journal of Enology and Viticulture Volume 46 ; 46 >
-      au < ready ; American Journal of Enology and Viticulture Volume 47 ; 47 >
-      au < ready ; American Journal of Enology and Viticulture Volume 48 ; 48 >
-      au < ready ; American Journal of Enology and Viticulture Volume 49 ; 49 >
-      au < ready ; American Journal of Enology and Viticulture Volume 50 ; 50 >
-      au < ready ; American Journal of Enology and Viticulture Volume 51 ; 51 >
-      au < ready ; American Journal of Enology and Viticulture Volume 52 ; 52 >
-      au < ready ; American Journal of Enology and Viticulture Volume 53 ; 53 >
-      au < ready ; American Journal of Enology and Viticulture Volume 54 ; 54 >
-      au < ready ; American Journal of Enology and Viticulture Volume 55 ; 55 >
-      au < ready ; American Journal of Enology and Viticulture Volume 56 ; 56 >
-      au < ready ; American Journal of Enology and Viticulture Volume 57 ; 57 >
-      au < ready ; American Journal of Enology and Viticulture Volume 58 ; 58 >
-      au < ready ; American Journal of Enology and Viticulture Volume 59 ; 59 >
-      au < ready ; American Journal of Enology and Viticulture Volume 60 ; 60 >
-      au < ready ; American Journal of Enology and Viticulture Volume 61 ; 61 >
-
-    }
+    au < released ; American Journal of Enology and Viticulture Volume 1 ; 1 >
+    au < released ; American Journal of Enology and Viticulture Volume 2 ; 2 >
+    au < released ; American Journal of Enology and Viticulture Volume 3 ; 3 >
+    au < released ; American Journal of Enology and Viticulture Volume 4 ; 4 >
+    au < released ; American Journal of Enology and Viticulture Volume 5 ; 5 >
+    au < released ; American Journal of Enology and Viticulture Volume 6 ; 6 >
+    au < released ; American Journal of Enology and Viticulture Volume 7 ; 7 >
+    au < released ; American Journal of Enology and Viticulture Volume 8 ; 8 >
+    au < released ; American Journal of Enology and Viticulture Volume 9 ; 9 >
+    au < released ; American Journal of Enology and Viticulture Volume 10 ; 10 >
+    au < released ; American Journal of Enology and Viticulture Volume 11 ; 11 >
+    au < released ; American Journal of Enology and Viticulture Volume 12 ; 12 >
+    au < released ; American Journal of Enology and Viticulture Volume 13 ; 13 >
+    au < released ; American Journal of Enology and Viticulture Volume 14 ; 14 >
+    au < released ; American Journal of Enology and Viticulture Volume 15 ; 15 >
+    au < released ; American Journal of Enology and Viticulture Volume 16 ; 16 >
+    au < released ; American Journal of Enology and Viticulture Volume 17 ; 17 >
+    au < released ; American Journal of Enology and Viticulture Volume 18 ; 18 >
+    au < released ; American Journal of Enology and Viticulture Volume 19 ; 19 >
+    au < released ; American Journal of Enology and Viticulture Volume 20 ; 20 >
+    au < released ; American Journal of Enology and Viticulture Volume 21 ; 21 >
+    au < released ; American Journal of Enology and Viticulture Volume 22 ; 22 >
+    au < released ; American Journal of Enology and Viticulture Volume 23 ; 23 >
+    au < released ; American Journal of Enology and Viticulture Volume 24 ; 24 >
+    au < released ; American Journal of Enology and Viticulture Volume 25 ; 25 >
+    au < released ; American Journal of Enology and Viticulture Volume 26 ; 26 >
+    au < released ; American Journal of Enology and Viticulture Volume 27 ; 27 >
+    au < released ; American Journal of Enology and Viticulture Volume 28 ; 28 >
+    au < released ; American Journal of Enology and Viticulture Volume 29 ; 29 >
+    au < released ; American Journal of Enology and Viticulture Volume 30 ; 30 >
+    au < released ; American Journal of Enology and Viticulture Volume 31 ; 31 >
+    au < released ; American Journal of Enology and Viticulture Volume 32 ; 32 >
+    au < released ; American Journal of Enology and Viticulture Volume 33 ; 33 >
+    au < released ; American Journal of Enology and Viticulture Volume 34 ; 34 >
+    au < released ; American Journal of Enology and Viticulture Volume 35 ; 35 >
+    au < released ; American Journal of Enology and Viticulture Volume 36 ; 36 >
+    au < released ; American Journal of Enology and Viticulture Volume 37 ; 37 >
+    au < released ; American Journal of Enology and Viticulture Volume 38 ; 38 >
+    au < released ; American Journal of Enology and Viticulture Volume 39 ; 39 >
+    au < released ; American Journal of Enology and Viticulture Volume 40 ; 40 >
+    au < released ; American Journal of Enology and Viticulture Volume 41 ; 41 >
+    au < released ; American Journal of Enology and Viticulture Volume 42 ; 42 >
+    au < released ; American Journal of Enology and Viticulture Volume 43 ; 43 >
+    au < released ; American Journal of Enology and Viticulture Volume 44 ; 44 >
+    au < released ; American Journal of Enology and Viticulture Volume 45 ; 45 >
+    au < released ; American Journal of Enology and Viticulture Volume 46 ; 46 >
+    au < released ; American Journal of Enology and Viticulture Volume 47 ; 47 >
+    au < released ; American Journal of Enology and Viticulture Volume 48 ; 48 >
+    au < released ; American Journal of Enology and Viticulture Volume 49 ; 49 >
+    au < released ; American Journal of Enology and Viticulture Volume 50 ; 50 >
+    au < released ; American Journal of Enology and Viticulture Volume 51 ; 51 >
+    au < released ; American Journal of Enology and Viticulture Volume 52 ; 52 >
+    au < released ; American Journal of Enology and Viticulture Volume 53 ; 53 >
+    au < released ; American Journal of Enology and Viticulture Volume 54 ; 54 >
+    au < released ; American Journal of Enology and Viticulture Volume 55 ; 55 >
+    au < released ; American Journal of Enology and Viticulture Volume 56 ; 56 >
+    au < released ; American Journal of Enology and Viticulture Volume 57 ; 57 >
+    au < released ; American Journal of Enology and Viticulture Volume 58 ; 58 >
+    au < released ; American Journal of Enology and Viticulture Volume 59 ; 59 >
+    au < released ; American Journal of Enology and Viticulture Volume 60 ; 60 >
+    au < released ; American Journal of Enology and Viticulture Volume 61 ; 61 >
 
   }
 
 }
-
