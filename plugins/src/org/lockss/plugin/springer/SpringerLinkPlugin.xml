@@ -8,6 +8,10 @@
     <string>1</string>
   </entry>
   <entry>
+    <string>required_daemon_version</string>
+    <string>1.48.0</string>
+  </entry>
+  <entry>
     <string>plugin_name</string>
     <string>SpringerLink Plugin</string>
   </entry>
@@ -80,7 +84,7 @@
   <entry>
     <string>plugin_cache_result_list</string>
     <list>
-      <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_3</string>
+      <string>java.io.IOException=org.lockss.util.urlconn.CacheException$RetryableNetworkException_5_30S</string>
     </list>
   </entry>
 </map>

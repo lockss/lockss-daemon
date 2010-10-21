@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.15 2010-02-11 10:05:40 tlipkis Exp $
+ * $Id: CacheException.java,v 1.16 2010-10-21 03:21:10 thib_gc Exp $
  */
 
 /*
@@ -267,6 +267,27 @@ public class CacheException
     }
   }
 
+  /** Retryable network error; five tries with default */
+  public static class RetryableNetworkException_5 extends RetryableException {
+    public RetryableNetworkException_5() {
+      super();
+    }
+
+    public RetryableNetworkException_5(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_5(Exception e) {
+      super(e.toString());
+      initCause(e);
+    }
+
+    public int getRetryCount() {
+      return 5;
+    }
+  }
+
   /** Retryable network error; two tries with 10 second delay */
   public static class RetryableNetworkException_2_10S
     extends RetryableNetworkException_2 {
@@ -434,6 +455,94 @@ public class CacheException
 
     /** Create this if details of causal exception are more relevant. */
     public RetryableNetworkException_3_5M(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 5 * Constants.MINUTE;
+    }
+
+  }
+
+  /** Retryable network error; five tries with 10 second delay */
+  public static class RetryableNetworkException_5_10S
+    extends RetryableNetworkException_5 {
+    public RetryableNetworkException_5_10S() {
+      super();
+    }
+
+    public RetryableNetworkException_5_10S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_5_10S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 10 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; five tries with 30 second delay */
+  public static class RetryableNetworkException_5_30S
+    extends RetryableNetworkException_3 {
+    public RetryableNetworkException_5_30S() {
+      super();
+    }
+
+    public RetryableNetworkException_5_30S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_5_30S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 30 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; five tries with 60 second delay */
+  public static class RetryableNetworkException_5_60S
+    extends RetryableNetworkException_3 {
+    public RetryableNetworkException_5_60S() {
+      super();
+    }
+
+    public RetryableNetworkException_5_60S(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_5_60S(Exception e) {
+      super(e);
+    }
+
+    public long getRetryDelay() {
+      return 60 * Constants.SECOND;
+    }
+
+  }
+
+  /** Retryable network error; five tries with 5 minute delay */
+  public static class RetryableNetworkException_5_5M
+    extends RetryableNetworkException_3 {
+    public RetryableNetworkException_5_5M() {
+      super();
+    }
+
+    public RetryableNetworkException_5_5M(String message) {
+      super(message);
+    }
+
+    /** Create this if details of causal exception are more relevant. */
+    public RetryableNetworkException_5_5M(Exception e) {
       super(e);
     }
 

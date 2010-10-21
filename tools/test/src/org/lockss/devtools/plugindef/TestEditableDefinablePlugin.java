@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.33 2010-07-21 06:12:54 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.34 2010-10-21 03:21:10 thib_gc Exp $
  */
 
 /*
@@ -188,6 +188,7 @@ public class TestEditableDefinablePlugin
     "ExtractionError",
     "RetryableNetworkException_2",
     "RetryableNetworkException_3",
+    "RetryableNetworkException_5",
     "RetryableNetworkException_2_10S",
     "RetryableNetworkException_2_30S",
     "RetryableNetworkException_2_60S",
@@ -196,6 +197,10 @@ public class TestEditableDefinablePlugin
     "RetryableNetworkException_3_30S",
     "RetryableNetworkException_3_60S",
     "RetryableNetworkException_3_5M",
+    "RetryableNetworkException_5_10S",
+    "RetryableNetworkException_5_30S",
+    "RetryableNetworkException_5_60S",
+    "RetryableNetworkException_5_5M",
   };
 
   public void testGetKnownCacheExceptions() {
