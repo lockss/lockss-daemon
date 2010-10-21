@@ -48,6 +48,2646 @@
  
  <property name="org.lockss.title">
 
+  <property name="SpringerLinkPluginActaNeuropathologica1">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="1961-1962" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica2">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="1962-1963" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica3">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="1963-1964" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica4">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.year" value="1964-1965" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica5">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.year" value="1965" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica6">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.year" value="1966" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica7">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.year" value="1966-1967" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica8">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.year" value="1967" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica9">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.year" value="1967" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica10">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.year" value="1968" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica11">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.year" value="1968" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica12">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.year" value="1969" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica13">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.year" value="1969" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica14">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.year" value="1969-1970" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica15">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.year" value="1970" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica16">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.year" value="1970" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica17">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.year" value="1971" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica18">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.year" value="1971" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica19">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.year" value="1971" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica20">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.year" value="1972" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica21">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.year" value="1972" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica22">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.year" value="1972" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica23">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.year" value="1973" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica24">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.year" value="1973" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica25">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="attributes.year" value="1973" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica26">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="attributes.year" value="1973" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica27">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+   <property name="attributes.year" value="1974" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica28">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.year" value="1974" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica29">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+   <property name="attributes.year" value="1974" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica30">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+   <property name="attributes.year" value="1974" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica31">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+   <property name="attributes.year" value="1975" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica32">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+   <property name="attributes.year" value="1975" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica33">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
+   </property>
+   <property name="attributes.year" value="1975" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica34">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="34" />
+   </property>
+   <property name="attributes.year" value="1976" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica35">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="35" />
+   </property>
+   <property name="attributes.year" value="1976" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica36">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="36" />
+   </property>
+   <property name="attributes.year" value="1976" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica37">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+   <property name="attributes.year" value="1977" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica38">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+   <property name="attributes.year" value="1977" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica39">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="39" />
+   </property>
+   <property name="attributes.year" value="1977" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica40">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="40" />
+   </property>
+   <property name="attributes.year" value="1977" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica41">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="41" />
+   </property>
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica42">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="42" />
+   </property>
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica43">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="43" />
+   </property>
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica44">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="44" />
+   </property>
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica45">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="45" />
+   </property>
+   <property name="attributes.year" value="1979" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica46">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="46" />
+   </property>
+   <property name="attributes.year" value="1979" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica47">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="47" />
+   </property>
+   <property name="attributes.year" value="1979" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica48">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="48" />
+   </property>
+   <property name="attributes.year" value="1979" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica49">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="49" />
+   </property>
+   <property name="attributes.year" value="1980" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica50">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="50" />
+   </property>
+   <property name="attributes.year" value="1980" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica51">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="51" />
+   </property>
+   <property name="attributes.year" value="1980" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica52">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="52" />
+   </property>
+   <property name="attributes.year" value="1980" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica53">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="53" />
+   </property>
+   <property name="attributes.year" value="1981" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica54">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 54" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="54" />
+   </property>
+   <property name="attributes.year" value="1981" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica55">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 55" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="55" />
+   </property>
+   <property name="attributes.year" value="1981" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica56">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 56" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="56" />
+   </property>
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica57">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 57" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="57" />
+   </property>
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica58">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 58" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="58" />
+   </property>
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica59">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 59" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="59" />
+   </property>
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica60">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 60" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="60" />
+   </property>
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica61">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 61" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="61" />
+   </property>
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica62">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 62" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="62" />
+   </property>
+   <property name="attributes.year" value="1983-1984" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica63">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 63" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="63" />
+   </property>
+   <property name="attributes.year" value="1984" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica64">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 64" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="64" />
+   </property>
+   <property name="attributes.year" value="1984" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica65">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 65" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="65" />
+   </property>
+   <property name="attributes.year" value="1984-1985" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica66">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 66" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="66" />
+   </property>
+   <property name="attributes.year" value="1985" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica67">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 67" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="67" />
+   </property>
+   <property name="attributes.year" value="1985" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica68">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 68" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="68" />
+   </property>
+   <property name="attributes.year" value="1985" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica69">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 69" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="69" />
+   </property>
+   <property name="attributes.year" value="1986" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica70">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 70" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="70" />
+   </property>
+   <property name="attributes.year" value="1986" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica71">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 71" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="71" />
+   </property>
+   <property name="attributes.year" value="1986" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica72">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 72" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="72" />
+   </property>
+   <property name="attributes.year" value="1986-1987" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica73">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 73" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="73" />
+   </property>
+   <property name="attributes.year" value="1987" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica74">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 74" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="74" />
+   </property>
+   <property name="attributes.year" value="1987" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica75">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 75" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="75" />
+   </property>
+   <property name="attributes.year" value="1987-1988" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica76">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 76" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="76" />
+   </property>
+   <property name="attributes.year" value="1988" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica77">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 77" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="77" />
+   </property>
+   <property name="attributes.year" value="1988-1989" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica78">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 78" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="78" />
+   </property>
+   <property name="attributes.year" value="1989" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica79">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 79" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="79" />
+   </property>
+   <property name="attributes.year" value="1989-1990" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica80">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 80" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="80" />
+   </property>
+   <property name="attributes.year" value="1990" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica81">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 81" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="81" />
+   </property>
+   <property name="attributes.year" value="1990-1991" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica82">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 82" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="82" />
+   </property>
+   <property name="attributes.year" value="1991" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica83">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 83" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="83" />
+   </property>
+   <property name="attributes.year" value="1991-1992" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica84">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 84" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="84" />
+   </property>
+   <property name="attributes.year" value="1992" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica85">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 85" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="85" />
+   </property>
+   <property name="attributes.year" value="1992-1993" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica86">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 86" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="86" />
+   </property>
+   <property name="attributes.year" value="1993" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica87">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 87" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="87" />
+   </property>
+   <property name="attributes.year" value="1994" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica88">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 88" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="88" />
+   </property>
+   <property name="attributes.year" value="1994" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica89">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 89" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="89" />
+   </property>
+   <property name="attributes.year" value="1995" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica90">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 90" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="90" />
+   </property>
+   <property name="attributes.year" value="1995" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica91">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 91" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="91" />
+   </property>
+   <property name="attributes.year" value="1995-1996" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica92">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 92" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="92" />
+   </property>
+   <property name="attributes.year" value="1996" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica93">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 93" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="93" />
+   </property>
+   <property name="attributes.year" value="1996-1997" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica94">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 94" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="94" />
+   </property>
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica95">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 95" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="95" />
+   </property>
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica96">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 96" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="96" />
+   </property>
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica97">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 97" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="97" />
+   </property>
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica98">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 98" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="98" />
+   </property>
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica99">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 99" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="99" />
+   </property>
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica100">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 100" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="100" />
+   </property>
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica101">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 101" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="101" />
+   </property>
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica102">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 102" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="102" />
+   </property>
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica103">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 103" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="103" />
+   </property>
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica104">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 104" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="104" />
+   </property>
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica105">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 105" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="105" />
+   </property>
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica106">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 106" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="106" />
+   </property>
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica107">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 107" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="107" />
+   </property>
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica108">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 108" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="108" />
+   </property>
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica109">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 109" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="109" />
+   </property>
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica110">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 110" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="110" />
+   </property>
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica111">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 111" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="111" />
+   </property>
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica112">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 112" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="112" />
+   </property>
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica113">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 113" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="113" />
+   </property>
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica114">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 114" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="114" />
+   </property>
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica115">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 115" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="115" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica116">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 116" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="116" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica117">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 117" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="117" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica118">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 118" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="118" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica119">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 119" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="119" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="SpringerLinkPluginActaNeuropathologica120">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Acta Neuropathologica" />
+   <property name="issn" value="0001-6322" />
+   <property name="eissn" value="1432-0533" />
+   <property name="title" value="Acta Neuropathologica Volume 120" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0001-6322" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="120" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="SpringerLinkPluginAstronomyandAstrophysicsReview1">
    <property name="attributes.publisher" value="Springer" />
    <property name="journalTitle" value="Astronomy and Astrophysics Review" />
@@ -440,6 +3080,1810 @@
    <property name="param.3">
     <property name="key" value="volume_name" />
     <property name="value" value="18" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews1">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews2">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews3">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="1984" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews4">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.year" value="1985" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews5">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.year" value="1986-1987" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews6">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.year" value="1987" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews7">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.year" value="1988" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews8">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.year" value="1989-1990" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews9">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.year" value="1990" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews10">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.year" value="1991" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews11">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.year" value="1992" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews12">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.year" value="1993" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews13">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.year" value="1994" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews14">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.year" value="1995" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews15">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.year" value="1996" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews16">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews17">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews18">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews19">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews20">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews21">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews22">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews23">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews24">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews25">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews26">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews27">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews28">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginCancerandMetastasisReviews29">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Cancer and Metastasis Reviews" />
+   <property name="issn" value="0167-7659" />
+   <property name="eissn" value="1573-7233" />
+   <property name="title" value="Cancer and Metastasis Reviews Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0167-7659" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia1">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.year" value="1965-1966" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia2">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.year" value="1966" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia3">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.year" value="1967" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia4">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.year" value="1968" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia5">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.year" value="1969" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia6">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.year" value="1970" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia7">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.year" value="1971" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia8">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.year" value="1972" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia9">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.year" value="1973" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia10">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.year" value="1974" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia11">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.year" value="1975" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia12">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.year" value="1976" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia13">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.year" value="1977" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia14">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia15">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia16">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.year" value="1979" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia17">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.year" value="1979" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia18">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.year" value="1980" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia19">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.year" value="1980" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia20">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.year" value="1981" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia21">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.year" value="1981" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia22">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia23">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia24">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia25">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia26">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="attributes.year" value="1984" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia27">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+   <property name="attributes.year" value="1984" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia28">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.year" value="1985" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia29">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+   <property name="attributes.year" value="1986" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia30">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+   <property name="attributes.year" value="1987" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia31">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+   <property name="attributes.year" value="1988" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia32">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+   <property name="attributes.year" value="1989" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia33">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 33" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="33" />
+   </property>
+   <property name="attributes.year" value="1990" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia34">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 34" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="34" />
+   </property>
+   <property name="attributes.year" value="1991" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia35">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 35" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="35" />
+   </property>
+   <property name="attributes.year" value="1992" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia36">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 36" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="36" />
+   </property>
+   <property name="attributes.year" value="1993" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia37">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+   <property name="attributes.year" value="1994" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia38">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 38" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="38" />
+   </property>
+   <property name="attributes.year" value="1995" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia39">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 39" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="39" />
+   </property>
+   <property name="attributes.year" value="1996" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia40">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 40" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="40" />
+   </property>
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia41">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 41" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="41" />
+   </property>
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia42">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 42" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="42" />
+   </property>
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia43">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 43" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="43" />
+   </property>
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia44">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 44" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="44" />
+   </property>
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia45">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 45" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="45" />
+   </property>
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia46">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 46" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="46" />
+   </property>
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia47">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 47" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="47" />
+   </property>
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia48">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 48" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="48" />
+   </property>
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia49">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 49" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="49" />
+   </property>
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia50">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 50" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="50" />
+   </property>
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia51">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 51" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="51" />
+   </property>
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia52">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 52" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="52" />
+   </property>
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginDiabetologia53">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Diabetologia" />
+   <property name="issn" value="0012-186X" />
+   <property name="eissn" value="1432-0428" />
+   <property name="title" value="Diabetologia Volume 53" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0012-186X" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="53" />
    </property>
    <property name="attributes.year" value="2010" />
   </property>
