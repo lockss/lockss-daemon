@@ -105,15 +105,15 @@
   
     param[base_url] = http://ep.physoc.org/
   
-    au < manifest ; 1981 ; Quarterly Journal of Experimental Physiology Volume 66 ; 66  >
-    au < manifest ; 1982 ; Quarterly Journal of Experimental Physiology Volume 67 ; 67  >
-    au < manifest ; 1983 ; Quarterly Journal of Experimental Physiology Volume 68 ; 68  >
-    au < manifest ; 1984 ; Quarterly Journal of Experimental Physiology Volume 69 ; 69  >
-    au < manifest ; 1985 ; Quarterly Journal of Experimental Physiology Volume 70 ; 70  >
-    au < manifest ; 1986 ; Quarterly Journal of Experimental Physiology Volume 71 ; 71  >
-    au < manifest ; 1987 ; Quarterly Journal of Experimental Physiology Volume 72 ; 72  >
-    au < manifest ; 1988 ; Quarterly Journal of Experimental Physiology Volume 73 ; 73  >
-    au < manifest ; 1989 ; Quarterly Journal of Experimental Physiology Volume 74 ; 74  >
+    au < testing ; 1981 ; Quarterly Journal of Experimental Physiology Volume 66 ; 66  >
+    au < testing ; 1982 ; Quarterly Journal of Experimental Physiology Volume 67 ; 67  >
+    au < testing ; 1983 ; Quarterly Journal of Experimental Physiology Volume 68 ; 68  >
+    au < testing ; 1984 ; Quarterly Journal of Experimental Physiology Volume 69 ; 69  >
+    au < testing ; 1985 ; Quarterly Journal of Experimental Physiology Volume 70 ; 70  >
+    au < testing ; 1986 ; Quarterly Journal of Experimental Physiology Volume 71 ; 71  >
+    au < testing ; 1987 ; Quarterly Journal of Experimental Physiology Volume 72 ; 72  >
+    au < testing ; 1988 ; Quarterly Journal of Experimental Physiology Volume 73 ; 73  >
+    au < testing ; 1989 ; Quarterly Journal of Experimental Physiology Volume 74 ; 74  >
 
   }
   
@@ -127,27 +127,27 @@
     
     param[base_url] = http://ep.physoc.org/
 
-    au < testing ; 1990 ; Experimental Physiology Volume 75 ; 75  >
-    au < testing ; 1991 ; Experimental Physiology Volume 76 ; 76  >
-    au < testing ; 1992 ; Experimental Physiology Volume 77 ; 77  >
+    au < ready ; 1990 ; Experimental Physiology Volume 75 ; 75  >
+    au < ready ; 1991 ; Experimental Physiology Volume 76 ; 76  >
+    au < ready ; 1992 ; Experimental Physiology Volume 77 ; 77  >
     au < ready ; 1993 ; Experimental Physiology Volume 78 ; 78  >
-    au < testing ; 1994 ; Experimental Physiology Volume 79 ; 79  >
-    au < testing ; 1995 ; Experimental Physiology Volume 80 ; 80  >
-    au < testing ; 1996 ; Experimental Physiology Volume 81 ; 81  >
-    au < testing ; 1997 ; Experimental Physiology Volume 82 ; 82  >
-    au < testing ; 1998 ; Experimental Physiology Volume 83 ; 83  >
-    au < testing ; 1999 ; Experimental Physiology Volume 84 ; 84  >
-    au < testing ; 2000 ; Experimental Physiology Volume 85 ; 85  >
-    au < testing ; 2001 ; Experimental Physiology Volume 86 ; 86  >
-    au < testing ; 2002 ; Experimental Physiology Volume 87 ; 87  >
-    au < testing ; 2003 ; Experimental Physiology Volume 88 ; 88  >
-    au < testing ; 2004 ; Experimental Physiology Volume 89 ; 89  >
-    au < testing ; 2005 ; Experimental Physiology Volume 90 ; 90  >
-    au < testing ; 2006 ; Experimental Physiology Volume 91 ; 91  >
-    au < testing ; 2007 ; Experimental Physiology Volume 92 ; 92  >
-    au < testing ; 2008 ; Experimental Physiology Volume 93 ; 93  >
+    au < ready ; 1994 ; Experimental Physiology Volume 79 ; 79  >
+    au < ready ; 1995 ; Experimental Physiology Volume 80 ; 80  >
+    au < ready ; 1996 ; Experimental Physiology Volume 81 ; 81  >
+    au < ready ; 1997 ; Experimental Physiology Volume 82 ; 82  >
+    au < ready ; 1998 ; Experimental Physiology Volume 83 ; 83  >
+    au < ready ; 1999 ; Experimental Physiology Volume 84 ; 84  >
+    au < ready ; 2000 ; Experimental Physiology Volume 85 ; 85  >
+    au < ready ; 2001 ; Experimental Physiology Volume 86 ; 86  >
+    au < ready ; 2002 ; Experimental Physiology Volume 87 ; 87  >
+    au < ready ; 2003 ; Experimental Physiology Volume 88 ; 88  >
+    au < ready ; 2004 ; Experimental Physiology Volume 89 ; 89  >
+    au < ready ; 2005 ; Experimental Physiology Volume 90 ; 90  >
+    au < ready ; 2006 ; Experimental Physiology Volume 91 ; 91  >
+    au < ready ; 2007 ; Experimental Physiology Volume 92 ; 92  >
+    au < ready ; 2008 ; Experimental Physiology Volume 93 ; 93  >
     au < ready ; 2009 ; Experimental Physiology Volume 94 ; 94  >
-    au < testing ; 2010 ; Experimental Physiology Volume 95 ; 95  >       
+    au < ready ; 2010 ; Experimental Physiology Volume 95 ; 95  >       
 
   }
     
@@ -698,13 +698,13 @@
     au < manifest ; 2001 ; Journal of Physiology Volume 535 ; 535  >
     au < manifest ; 2001 ; Journal of Physiology Volume 536 ; 536  >
     au < ready ; 2001 ; Journal of Physiology Volume 537 ; 537  >
-    au < manifest ; 2002 ; Journal of Physiology Volume 538 ; 538  >
-    au < manifest ; 2002 ; Journal of Physiology Volume 539 ; 539  >
-    au < manifest ; 2002 ; Journal of Physiology Volume 540 ; 540  >
+    au < testing ; 2002 ; Journal of Physiology Volume 538 ; 538  >
+    au < testing ; 2002 ; Journal of Physiology Volume 539 ; 539  >
+    au < testing ; 2002 ; Journal of Physiology Volume 540 ; 540  >
     au < ready ; 2002 ; Journal of Physiology Volume 541 ; 541  >
-    au < manifest ; 2002 ; Journal of Physiology Volume 542 ; 542  >
-    au < manifest ; 2002 ; Journal of Physiology Volume 543 ; 543  >
-    au < manifest ; 2002 ; Journal of Physiology Volume 544 ; 544  >
+    au < testing ; 2002 ; Journal of Physiology Volume 542 ; 542  >
+    au < testing ; 2002 ; Journal of Physiology Volume 543 ; 543  >
+    au < testing ; 2002 ; Journal of Physiology Volume 544 ; 544  >
     au < manifest ; 2002 ; Journal of Physiology Volume 545 ; 545  >
     au < ready ; 2003 ; Journal of Physiology Volume 546 ; 546  >
     au < ready ; 2003 ; Journal of Physiology Volume 547 ; 547  >
