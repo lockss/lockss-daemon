@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.4 2010-10-25 21:09:53 thib_gc Exp $
+ * $Id: SpringerLinkCssFilterFactory.java,v 1.1 2010-10-25 21:09:53 thib_gc Exp $
  */
 
 /*
@@ -32,44 +32,24 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.springer;
 
-import java.io.InputStream;
+import java.io.*;
 
-import org.htmlparser.NodeFilter;
-import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
-import org.lockss.filter.html.*;
+import org.lockss.filter.*;
+import org.lockss.filter.HtmlTagFilter.TagPair;
 import org.lockss.plugin.*;
+import org.lockss.util.*;
 
-public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
+public class SpringerLinkCssFilterFactory implements FilterFactory {
 
   @Override
   public InputStream createFilteredInputStream(ArchivalUnit au,
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    NodeFilter[] filters = new NodeFilter[] {
-        // Contains ad-specific cookies
-        new TagNameFilter("script"),
-        // Contains cross-links to other articles in other journals/volumes
-        HtmlNodeFilters.tagWithAttribute("div", "id", "RelatedSection"),
-        // Contains ads
-        HtmlNodeFilters.tagWithAttribute("div", "class", "advertisement"),
-        // Contains account and user agent information
-        HtmlNodeFilters.tagWithAttribute("ul", "id", "Footer"),
-        // Contains institution name or account name
-        HtmlNodeFilters.tagWithAttribute("div", "id", "MasterHeaderRecognition"),
-        // Contains SFX links
-        HtmlNodeFilters.tagWithAttributeRegex("div", "class", "linkoutView"),
-        // Has a session cookie
-        HtmlNodeFilters.tagWithAttribute("form", "id", "LoginForm"),
-        // CSS file names can be spuriously versioned
-        HtmlNodeFilters.tagWithAttributeRegex("link", "href", "^/styles/"),
-        // Icon names can be spuriously versioned
-        HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/images/"),
-    };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
+    Reader reader = StreamUtil.getReader(null, encoding);
+    Reader filteredReader = new HtmlTagFilter(reader, new TagPair("url(", ")"));
+    return new ReaderInputStream(filteredReader);
   }
-
+  
 }
