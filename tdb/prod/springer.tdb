@@ -108,36 +108,36 @@
     au < manifest ; 1994 ; Acta Neuropathologica Volume 88 ; 88 >
     au < manifest ; 1995 ; Acta Neuropathologica Volume 89 ; 89 >
     au < manifest ; 1995 ; Acta Neuropathologica Volume 90 ; 90 >
-    au < manifest ; 1995-1996 ; Acta Neuropathologica Volume 91 ; 91 >
-    au < manifest ; 1996 ; Acta Neuropathologica Volume 92 ; 92 >
-    au < manifest ; 1996-1997 ; Acta Neuropathologica Volume 93 ; 93 >
-    au < manifest ; 1997 ; Acta Neuropathologica Volume 94 ; 94 >
-    au < manifest ; 1997 ; Acta Neuropathologica Volume 95 ; 95 >
-    au < manifest ; 1998 ; Acta Neuropathologica Volume 96 ; 96 >
-    au < manifest ; 1999 ; Acta Neuropathologica Volume 97 ; 97 >
-    au < manifest ; 1999 ; Acta Neuropathologica Volume 98 ; 98 >
-    au < manifest ; 2000 ; Acta Neuropathologica Volume 99 ; 99 >
-    au < manifest ; 2000 ; Acta Neuropathologica Volume 100 ; 100 >
-    au < manifest ; 2001 ; Acta Neuropathologica Volume 101 ; 101 >
-    au < manifest ; 2001 ; Acta Neuropathologica Volume 102 ; 102 >
-    au < manifest ; 2002 ; Acta Neuropathologica Volume 103 ; 103 >
-    au < manifest ; 2002 ; Acta Neuropathologica Volume 104 ; 104 >
-    au < manifest ; 2003 ; Acta Neuropathologica Volume 105 ; 105 >
-    au < manifest ; 2003 ; Acta Neuropathologica Volume 106 ; 106 >
-    au < manifest ; 2004 ; Acta Neuropathologica Volume 107 ; 107 >
-    au < manifest ; 2004 ; Acta Neuropathologica Volume 108 ; 108 >
-    au < manifest ; 2005 ; Acta Neuropathologica Volume 109 ; 109 >
-    au < manifest ; 2005 ; Acta Neuropathologica Volume 110 ; 110 >
-    au < manifest ; 2006 ; Acta Neuropathologica Volume 111 ; 111 >
-    au < manifest ; 2006 ; Acta Neuropathologica Volume 112 ; 112 >
-    au < manifest ; 2007 ; Acta Neuropathologica Volume 113 ; 113 >
-    au < manifest ; 2007 ; Acta Neuropathologica Volume 114 ; 114 >
-    au < manifest ; 2008 ; Acta Neuropathologica Volume 115 ; 115 >
-    au < manifest ; 2008 ; Acta Neuropathologica Volume 116 ; 116 >
-    au < manifest ; 2009 ; Acta Neuropathologica Volume 117 ; 117 >
-    au < manifest ; 2009 ; Acta Neuropathologica Volume 118 ; 118 >
-    au < manifest ; 2010 ; Acta Neuropathologica Volume 119 ; 119 >
-    au < manifest ; 2010 ; Acta Neuropathologica Volume 120 ; 120 >
+    au < testing ; 1995-1996 ; Acta Neuropathologica Volume 91 ; 91 >
+    au < testing ; 1996 ; Acta Neuropathologica Volume 92 ; 92 >
+    au < testing ; 1996-1997 ; Acta Neuropathologica Volume 93 ; 93 >
+    au < testing ; 1997 ; Acta Neuropathologica Volume 94 ; 94 >
+    au < testing ; 1997 ; Acta Neuropathologica Volume 95 ; 95 >
+    au < testing ; 1998 ; Acta Neuropathologica Volume 96 ; 96 >
+    au < testing ; 1999 ; Acta Neuropathologica Volume 97 ; 97 >
+    au < testing ; 1999 ; Acta Neuropathologica Volume 98 ; 98 >
+    au < testing ; 2000 ; Acta Neuropathologica Volume 99 ; 99 >
+    au < testing ; 2000 ; Acta Neuropathologica Volume 100 ; 100 >
+    au < testing ; 2001 ; Acta Neuropathologica Volume 101 ; 101 >
+    au < testing ; 2001 ; Acta Neuropathologica Volume 102 ; 102 >
+    au < testing ; 2002 ; Acta Neuropathologica Volume 103 ; 103 >
+    au < testing ; 2002 ; Acta Neuropathologica Volume 104 ; 104 >
+    au < testing ; 2003 ; Acta Neuropathologica Volume 105 ; 105 >
+    au < testing ; 2003 ; Acta Neuropathologica Volume 106 ; 106 >
+    au < testing ; 2004 ; Acta Neuropathologica Volume 107 ; 107 >
+    au < testing ; 2004 ; Acta Neuropathologica Volume 108 ; 108 >
+    au < testing ; 2005 ; Acta Neuropathologica Volume 109 ; 109 >
+    au < testing ; 2005 ; Acta Neuropathologica Volume 110 ; 110 >
+    au < testing ; 2006 ; Acta Neuropathologica Volume 111 ; 111 >
+    au < testing ; 2006 ; Acta Neuropathologica Volume 112 ; 112 >
+    au < testing ; 2007 ; Acta Neuropathologica Volume 113 ; 113 >
+    au < testing ; 2007 ; Acta Neuropathologica Volume 114 ; 114 >
+    au < testing ; 2008 ; Acta Neuropathologica Volume 115 ; 115 >
+    au < testing ; 2008 ; Acta Neuropathologica Volume 116 ; 116 >
+    au < testing ; 2009 ; Acta Neuropathologica Volume 117 ; 117 >
+    au < testing ; 2009 ; Acta Neuropathologica Volume 118 ; 118 >
+    au < testing ; 2010 ; Acta Neuropathologica Volume 119 ; 119 >
+    au < testing ; 2010 ; Acta Neuropathologica Volume 120 ; 120 >
 
   }
 
@@ -151,12 +151,12 @@
     
     param[journal_issn] = 0935-4956
     
-    au < testing ; 1989 ; Astronomy and Astrophysics Review Volume 1 ; 1 >
-    au < testing ; 1990-1991 ; Astronomy and Astrophysics Review Volume 2 ; 2 >
-    au < testing ; 1991-1992 ; Astronomy and Astrophysics Review Volume 3 ; 3 >
-    au < testing ; 1992-1993 ; Astronomy and Astrophysics Review Volume 4 ; 4 >
+    au < ready ; 1989 ; Astronomy and Astrophysics Review Volume 1 ; 1 >
+    au < ready ; 1990-1991 ; Astronomy and Astrophysics Review Volume 2 ; 2 >
+    au < ready ; 1991-1992 ; Astronomy and Astrophysics Review Volume 3 ; 3 >
+    au < ready ; 1992-1993 ; Astronomy and Astrophysics Review Volume 4 ; 4 >
     au < ready ; 1993-1994 ; Astronomy and Astrophysics Review Volume 5 ; 5 >
-    au < testing ; 1994-1995 ; Astronomy and Astrophysics Review Volume 6 ; 6 >
+    au < ready ; 1994-1995 ; Astronomy and Astrophysics Review Volume 6 ; 6 >
     au < ready ; 1996 ; Astronomy and Astrophysics Review Volume 7 ; 7 >
     au < ready ; 1997-1998 ; Astronomy and Astrophysics Review Volume 8 ; 8 >
     au < ready ; 1998-1999 ; Astronomy and Astrophysics Review Volume 9 ; 9 >
@@ -182,35 +182,35 @@
     
     param[journal_issn] = 0167-7659
 
-    au < manifest ; 1982 ; Cancer and Metastasis Reviews Volume 1 ; 1 >
-    au < manifest ; 1983 ; Cancer and Metastasis Reviews Volume 2 ; 2 >
-    au < manifest ; 1984 ; Cancer and Metastasis Reviews Volume 3 ; 3 >
-    au < manifest ; 1985 ; Cancer and Metastasis Reviews Volume 4 ; 4 >
-    au < manifest ; 1986-1987 ; Cancer and Metastasis Reviews Volume 5 ; 5 >
-    au < manifest ; 1987 ; Cancer and Metastasis Reviews Volume 6 ; 6 >
-    au < manifest ; 1988 ; Cancer and Metastasis Reviews Volume 7 ; 7 >
-    au < manifest ; 1989-1990 ; Cancer and Metastasis Reviews Volume 8 ; 8 >
-    au < manifest ; 1990 ; Cancer and Metastasis Reviews Volume 9 ; 9 >
-    au < manifest ; 1991 ; Cancer and Metastasis Reviews Volume 10 ; 10 >
-    au < manifest ; 1992 ; Cancer and Metastasis Reviews Volume 11 ; 11 >
-    au < manifest ; 1993 ; Cancer and Metastasis Reviews Volume 12 ; 12 >
-    au < manifest ; 1994 ; Cancer and Metastasis Reviews Volume 13 ; 13 >
-    au < manifest ; 1995 ; Cancer and Metastasis Reviews Volume 14 ; 14 >
-    au < manifest ; 1996 ; Cancer and Metastasis Reviews Volume 15 ; 15 >
-    au < manifest ; 1997 ; Cancer and Metastasis Reviews Volume 16 ; 16 >
-    au < manifest ; 1998 ; Cancer and Metastasis Reviews Volume 17 ; 17 >
-    au < manifest ; 1999 ; Cancer and Metastasis Reviews Volume 18 ; 18 >
-    au < manifest ; 2000 ; Cancer and Metastasis Reviews Volume 19 ; 19 >
-    au < manifest ; 2001 ; Cancer and Metastasis Reviews Volume 20 ; 20 >
-    au < manifest ; 2002 ; Cancer and Metastasis Reviews Volume 21 ; 21 >
-    au < manifest ; 2003 ; Cancer and Metastasis Reviews Volume 22 ; 22 >
-    au < manifest ; 2004 ; Cancer and Metastasis Reviews Volume 23 ; 23 >
-    au < manifest ; 2005 ; Cancer and Metastasis Reviews Volume 24 ; 24 >
-    au < manifest ; 2006 ; Cancer and Metastasis Reviews Volume 25 ; 25 >
-    au < manifest ; 2007 ; Cancer and Metastasis Reviews Volume 26 ; 26 >
-    au < manifest ; 2008 ; Cancer and Metastasis Reviews Volume 27 ; 27 >
-    au < manifest ; 2009 ; Cancer and Metastasis Reviews Volume 28 ; 28 >
-    au < manifest ; 2010 ; Cancer and Metastasis Reviews Volume 29 ; 29 >
+    au < ready ; 1982 ; Cancer and Metastasis Reviews Volume 1 ; 1 >
+    au < ready ; 1983 ; Cancer and Metastasis Reviews Volume 2 ; 2 >
+    au < ready ; 1984 ; Cancer and Metastasis Reviews Volume 3 ; 3 >
+    au < ready ; 1985 ; Cancer and Metastasis Reviews Volume 4 ; 4 >
+    au < ready ; 1986-1987 ; Cancer and Metastasis Reviews Volume 5 ; 5 >
+    au < ready ; 1987 ; Cancer and Metastasis Reviews Volume 6 ; 6 >
+    au < ready ; 1988 ; Cancer and Metastasis Reviews Volume 7 ; 7 >
+    au < ready ; 1989-1990 ; Cancer and Metastasis Reviews Volume 8 ; 8 >
+    au < ready ; 1990 ; Cancer and Metastasis Reviews Volume 9 ; 9 >
+    au < ready ; 1991 ; Cancer and Metastasis Reviews Volume 10 ; 10 >
+    au < ready ; 1992 ; Cancer and Metastasis Reviews Volume 11 ; 11 >
+    au < ready ; 1993 ; Cancer and Metastasis Reviews Volume 12 ; 12 >
+    au < ready ; 1994 ; Cancer and Metastasis Reviews Volume 13 ; 13 >
+    au < ready ; 1995 ; Cancer and Metastasis Reviews Volume 14 ; 14 >
+    au < ready ; 1996 ; Cancer and Metastasis Reviews Volume 15 ; 15 >
+    au < ready ; 1997 ; Cancer and Metastasis Reviews Volume 16 ; 16 >
+    au < ready ; 1998 ; Cancer and Metastasis Reviews Volume 17 ; 17 >
+    au < ready ; 1999 ; Cancer and Metastasis Reviews Volume 18 ; 18 >
+    au < ready ; 2000 ; Cancer and Metastasis Reviews Volume 19 ; 19 >
+    au < ready ; 2001 ; Cancer and Metastasis Reviews Volume 20 ; 20 >
+    au < ready ; 2002 ; Cancer and Metastasis Reviews Volume 21 ; 21 >
+    au < ready ; 2003 ; Cancer and Metastasis Reviews Volume 22 ; 22 >
+    au < ready ; 2004 ; Cancer and Metastasis Reviews Volume 23 ; 23 >
+    au < ready ; 2005 ; Cancer and Metastasis Reviews Volume 24 ; 24 >
+    au < ready ; 2006 ; Cancer and Metastasis Reviews Volume 25 ; 25 >
+    au < ready ; 2007 ; Cancer and Metastasis Reviews Volume 26 ; 26 >
+    au < ready ; 2008 ; Cancer and Metastasis Reviews Volume 27 ; 27 >
+    au < ready ; 2009 ; Cancer and Metastasis Reviews Volume 28 ; 28 >
+    au < ready ; 2010 ; Cancer and Metastasis Reviews Volume 29 ; 29 >
 
   }
 
@@ -224,59 +224,59 @@
     
     param[journal_issn] = 0012-186X
 
-    au < manifest ; 1965-1966 ; Diabetologia Volume 1 ; 1 >
-    au < manifest ; 1966 ; Diabetologia Volume 2 ; 2 >
-    au < manifest ; 1967 ; Diabetologia Volume 3 ; 3 >
-    au < manifest ; 1968 ; Diabetologia Volume 4 ; 4 >
-    au < manifest ; 1969 ; Diabetologia Volume 5 ; 5 >
-    au < manifest ; 1970 ; Diabetologia Volume 6 ; 6 >
-    au < manifest ; 1971 ; Diabetologia Volume 7 ; 7 >
-    au < manifest ; 1972 ; Diabetologia Volume 8 ; 8 >
-    au < manifest ; 1973 ; Diabetologia Volume 9 ; 9 >
-    au < manifest ; 1974 ; Diabetologia Volume 10 ; 10 >
-    au < manifest ; 1975 ; Diabetologia Volume 11 ; 11 >
-    au < manifest ; 1976 ; Diabetologia Volume 12 ; 12 >
-    au < manifest ; 1977 ; Diabetologia Volume 13 ; 13 >
-    au < manifest ; 1978 ; Diabetologia Volume 14 ; 14 >
-    au < manifest ; 1978 ; Diabetologia Volume 15 ; 15 >
-    au < manifest ; 1979 ; Diabetologia Volume 16 ; 16 >
-    au < manifest ; 1979 ; Diabetologia Volume 17 ; 17 >
-    au < manifest ; 1980 ; Diabetologia Volume 18 ; 18 >
-    au < manifest ; 1980 ; Diabetologia Volume 19 ; 19 >
-    au < manifest ; 1981 ; Diabetologia Volume 20 ; 20 >
-    au < manifest ; 1981 ; Diabetologia Volume 21 ; 21 >
-    au < manifest ; 1982 ; Diabetologia Volume 22 ; 22 >
-    au < manifest ; 1982 ; Diabetologia Volume 23 ; 23 >
-    au < manifest ; 1983 ; Diabetologia Volume 24 ; 24 >
-    au < manifest ; 1983 ; Diabetologia Volume 25 ; 25 >
-    au < manifest ; 1984 ; Diabetologia Volume 26 ; 26 >
-    au < manifest ; 1984 ; Diabetologia Volume 27 ; 27 >
-    au < manifest ; 1985 ; Diabetologia Volume 28 ; 28 >
-    au < manifest ; 1986 ; Diabetologia Volume 29 ; 29 >
-    au < manifest ; 1987 ; Diabetologia Volume 30 ; 30 >
-    au < manifest ; 1988 ; Diabetologia Volume 31 ; 31 >
-    au < manifest ; 1989 ; Diabetologia Volume 32 ; 32 >
-    au < manifest ; 1990 ; Diabetologia Volume 33 ; 33 >
-    au < manifest ; 1991 ; Diabetologia Volume 34 ; 34 >
-    au < manifest ; 1992 ; Diabetologia Volume 35 ; 35 >
-    au < manifest ; 1993 ; Diabetologia Volume 36 ; 36 >
-    au < manifest ; 1994 ; Diabetologia Volume 37 ; 37 >
-    au < manifest ; 1995 ; Diabetologia Volume 38 ; 38 >
-    au < manifest ; 1996 ; Diabetologia Volume 39 ; 39 >
-    au < manifest ; 1997 ; Diabetologia Volume 40 ; 40 >
-    au < manifest ; 1998 ; Diabetologia Volume 41 ; 41 >
-    au < manifest ; 1999 ; Diabetologia Volume 42 ; 42 >
-    au < manifest ; 2000 ; Diabetologia Volume 43 ; 43 >
-    au < manifest ; 2001 ; Diabetologia Volume 44 ; 44 >
-    au < manifest ; 2002 ; Diabetologia Volume 45 ; 45 >
-    au < manifest ; 2003 ; Diabetologia Volume 46 ; 46 >
-    au < manifest ; 2004 ; Diabetologia Volume 47 ; 47 >
-    au < manifest ; 2005 ; Diabetologia Volume 48 ; 48 >
-    au < manifest ; 2006 ; Diabetologia Volume 49 ; 49 >
-    au < manifest ; 2007 ; Diabetologia Volume 50 ; 50 >
-    au < manifest ; 2008 ; Diabetologia Volume 51 ; 51 >
-    au < manifest ; 2009 ; Diabetologia Volume 52 ; 52 >
-    au < manifest ; 2010 ; Diabetologia Volume 53 ; 53 >
+    au < testing ; 1965-1966 ; Diabetologia Volume 1 ; 1 >
+    au < testing ; 1966 ; Diabetologia Volume 2 ; 2 >
+    au < testing ; 1967 ; Diabetologia Volume 3 ; 3 >
+    au < testing ; 1968 ; Diabetologia Volume 4 ; 4 >
+    au < testing ; 1969 ; Diabetologia Volume 5 ; 5 >
+    au < testing ; 1970 ; Diabetologia Volume 6 ; 6 >
+    au < testing ; 1971 ; Diabetologia Volume 7 ; 7 >
+    au < testing ; 1972 ; Diabetologia Volume 8 ; 8 >
+    au < testing ; 1973 ; Diabetologia Volume 9 ; 9 >
+    au < testing ; 1974 ; Diabetologia Volume 10 ; 10 >
+    au < testing ; 1975 ; Diabetologia Volume 11 ; 11 >
+    au < testing ; 1976 ; Diabetologia Volume 12 ; 12 >
+    au < testing ; 1977 ; Diabetologia Volume 13 ; 13 >
+    au < testing ; 1978 ; Diabetologia Volume 14 ; 14 >
+    au < testing ; 1978 ; Diabetologia Volume 15 ; 15 >
+    au < testing ; 1979 ; Diabetologia Volume 16 ; 16 >
+    au < testing ; 1979 ; Diabetologia Volume 17 ; 17 >
+    au < testing ; 1980 ; Diabetologia Volume 18 ; 18 >
+    au < testing ; 1980 ; Diabetologia Volume 19 ; 19 >
+    au < testing ; 1981 ; Diabetologia Volume 20 ; 20 >
+    au < testing ; 1981 ; Diabetologia Volume 21 ; 21 >
+    au < testing ; 1982 ; Diabetologia Volume 22 ; 22 >
+    au < testing ; 1982 ; Diabetologia Volume 23 ; 23 >
+    au < testing ; 1983 ; Diabetologia Volume 24 ; 24 >
+    au < testing ; 1983 ; Diabetologia Volume 25 ; 25 >
+    au < testing ; 1984 ; Diabetologia Volume 26 ; 26 >
+    au < testing ; 1984 ; Diabetologia Volume 27 ; 27 >
+    au < testing ; 1985 ; Diabetologia Volume 28 ; 28 >
+    au < testing ; 1986 ; Diabetologia Volume 29 ; 29 >
+    au < testing ; 1987 ; Diabetologia Volume 30 ; 30 >
+    au < testing ; 1988 ; Diabetologia Volume 31 ; 31 >
+    au < testing ; 1989 ; Diabetologia Volume 32 ; 32 >
+    au < testing ; 1990 ; Diabetologia Volume 33 ; 33 >
+    au < testing ; 1991 ; Diabetologia Volume 34 ; 34 >
+    au < testing ; 1992 ; Diabetologia Volume 35 ; 35 >
+    au < testing ; 1993 ; Diabetologia Volume 36 ; 36 >
+    au < testing ; 1994 ; Diabetologia Volume 37 ; 37 >
+    au < testing ; 1995 ; Diabetologia Volume 38 ; 38 >
+    au < testing ; 1996 ; Diabetologia Volume 39 ; 39 >
+    au < testing ; 1997 ; Diabetologia Volume 40 ; 40 >
+    au < testing ; 1998 ; Diabetologia Volume 41 ; 41 >
+    au < testing ; 1999 ; Diabetologia Volume 42 ; 42 >
+    au < testing ; 2000 ; Diabetologia Volume 43 ; 43 >
+    au < testing ; 2001 ; Diabetologia Volume 44 ; 44 >
+    au < testing ; 2002 ; Diabetologia Volume 45 ; 45 >
+    au < testing ; 2003 ; Diabetologia Volume 46 ; 46 >
+    au < testing ; 2004 ; Diabetologia Volume 47 ; 47 >
+    au < testing ; 2005 ; Diabetologia Volume 48 ; 48 >
+    au < testing ; 2006 ; Diabetologia Volume 49 ; 49 >
+    au < testing ; 2007 ; Diabetologia Volume 50 ; 50 >
+    au < testing ; 2008 ; Diabetologia Volume 51 ; 51 >
+    au < testing ; 2009 ; Diabetologia Volume 52 ; 52 >
+    au < testing ; 2010 ; Diabetologia Volume 53 ; 53 >
 
   }
 
