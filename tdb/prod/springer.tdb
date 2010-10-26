@@ -778,14 +778,48 @@
   }
 
   {
-
+  
     title <
       name = AGE ;
       issn = 0161-9152 ;
-      placeholder = True
+      eissn = 1574-4647
     >
-
+    
     param[journal_issn] = 0161-9152
+    attr[where] = content4b
+
+    au < testing ; 1978 ; AGE Volume 1 ; 1 >
+    au < testing ; 1979 ; AGE Volume 2 ; 2 >
+    au < testing ; 1980 ; AGE Volume 3 ; 3 >
+    au < testing ; 1981 ; AGE Volume 4 ; 4 >
+    au < testing ; 1982 ; AGE Volume 5 ; 5 >
+    au < testing ; 1983 ; AGE Volume 6 ; 6 >
+    au < testing ; 1984 ; AGE Volume 7 ; 7 >
+    au < testing ; 1985 ; AGE Volume 8 ; 8 >
+    au < testing ; 1986 ; AGE Volume 9 ; 9 >
+    au < testing ; 1987 ; AGE Volume 10 ; 10 >
+    au < testing ; 1988 ; AGE Volume 11 ; 11 >
+    au < testing ; 1989 ; AGE Volume 12 ; 12 >
+    au < testing ; 1990 ; AGE Volume 13 ; 13 >
+    au < testing ; 1991 ; AGE Volume 14 ; 14 >
+    au < testing ; 1992 ; AGE Volume 15 ; 15 >
+    au < testing ; 1993 ; AGE Volume 16 ; 16 >
+    au < testing ; 1994 ; AGE Volume 17 ; 17 >
+    au < testing ; 1995 ; AGE Volume 18 ; 18 >
+    au < testing ; 1996 ; AGE Volume 19 ; 19 >
+    au < testing ; 1997 ; AGE Volume 20 ; 20 >
+    au < testing ; 1998 ; AGE Volume 21 ; 21 >
+    au < testing ; 1999 ; AGE Volume 22 ; 22 >
+    au < testing ; 2000 ; AGE Volume 23 ; 23 >
+    au < testing ; 2001 ; AGE Volume 24 ; 24 >
+    au < testing ; 2002 ; AGE Volume 25 ; 25 >
+    au < testing ; 2003 ; AGE Volume 26 ; 26 >
+    au < testing ; 2005 ; AGE Volume 27 ; 27 >
+    au < testing ; 2006 ; AGE Volume 28 ; 28 >
+    au < testing ; 2007 ; AGE Volume 29 ; 29 >
+    au < testing ; 2008 ; AGE Volume 30 ; 30 >
+    au < testing ; 2009 ; AGE Volume 31 ; 31 >
+    au < testing ; 2010 ; AGE Volume 32 ; 32 >
 
   }
 
@@ -11441,14 +11475,31 @@
   }
 
   {
-
+  
     title <
       name = Heart Failure Reviews ;
       issn = 1382-4147 ;
-      placeholder = True
+      eissn = 1573-7322
     >
-
+    
     param[journal_issn] = 1382-4147
+    attr[where] = content4a
+
+    au < testing ; 1996-1997 ; Heart Failure Reviews Volume 1 ; 1 >
+    au < testing ; 1997 ; Heart Failure Reviews Volume 2 ; 2 >
+    au < testing ; 1998 ; Heart Failure Reviews Volume 3 ; 3 >
+    au < testing ; 1999 ; Heart Failure Reviews Volume 4 ; 4 >
+    au < testing ; 2000 ; Heart Failure Reviews Volume 5 ; 5 >
+    au < testing ; 2001 ; Heart Failure Reviews Volume 6 ; 6 >
+    au < testing ; 2002 ; Heart Failure Reviews Volume 7 ; 7 >
+    au < testing ; 2003 ; Heart Failure Reviews Volume 8 ; 8 >
+    au < testing ; 2004 ; Heart Failure Reviews Volume 9 ; 9 >
+    au < testing ; 2005 ; Heart Failure Reviews Volume 10 ; 10 >
+    au < testing ; 2006 ; Heart Failure Reviews Volume 11 ; 11 >
+    au < testing ; 2007 ; Heart Failure Reviews Volume 12 ; 12 >
+    au < testing ; 2008 ; Heart Failure Reviews Volume 13 ; 13 >
+    au < testing ; 2009 ; Heart Failure Reviews Volume 14 ; 14 >
+    au < testing ; 2010 ; Heart Failure Reviews Volume 15 ; 15 >
 
   }
 
@@ -16589,14 +16640,16 @@
   }
 
   {
-
+  
     title <
       name = Journal of High Energy Physics ;
-      issn = 1029-8479 ;
-      placeholder = True
+      issn = 1029-8479
     >
-
+    
     param[journal_issn] = 1029-8479
+    attr[where] = content4a
+
+    au < testing ; 2010 ; Journal of High Energy Physics Volume 2010 ; 2010 >
 
   }
 
