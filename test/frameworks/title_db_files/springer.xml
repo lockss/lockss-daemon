@@ -2688,6 +2688,742 @@
    <property name="attributes.year" value="2010" />
   </property>
 
+  <property name="SpringerLinkPluginAGE1">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE2">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1979" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE3">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1980" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE4">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1981" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE5">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE6">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE7">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1984" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE8">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1985" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE9">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1986" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE10">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1987" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE11">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1988" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE12">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1989" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE13">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1990" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE14">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1991" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE15">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1992" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE16">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1993" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE17">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1994" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE18">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1995" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE19">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1996" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE20">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE21">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE22">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE23">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE24">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE25">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE26">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE27">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE28">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE29">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE30">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE31">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginAGE32">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="AGE" />
+   <property name="issn" value="0161-9152" />
+   <property name="eissn" value="1574-4647" />
+   <property name="title" value="AGE Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0161-9152" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+   <property name="attributes.where" value="content4b" />
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="SpringerLinkPluginAstronomyandAstrophysicsReview1">
    <property name="attributes.publisher" value="Springer" />
    <property name="journalTitle" value="Astronomy and Astrophysics Review" />
@@ -4885,6 +5621,373 @@
     <property name="key" value="volume_name" />
     <property name="value" value="53" />
    </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews1">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="1996-1997" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews2">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews3">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews4">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews5">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews6">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews7">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews8">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews9">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews10">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews11">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews12">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews13">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews14">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginHeartFailureReviews15">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Heart Failure Reviews" />
+   <property name="issn" value="1382-4147" />
+   <property name="eissn" value="1573-7322" />
+   <property name="title" value="Heart Failure Reviews Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1382-4147" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.where" value="content4a" />
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="SpringerLinkPluginJournalofHighEnergyPhysics2010">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Journal of High Energy Physics" />
+   <property name="issn" value="1029-8479" />
+   <property name="title" value="Journal of High Energy Physics Volume 2010" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1029-8479" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2010" />
+   </property>
+   <property name="attributes.where" value="content4a" />
    <property name="attributes.year" value="2010" />
   </property>
 
