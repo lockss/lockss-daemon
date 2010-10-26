@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.8 2010-10-01 22:35:35 thib_gc Exp $
+# $Id: tdbq.py,v 1.9 2010-10-26 21:53:25 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -616,4 +616,8 @@ def str_to_lambda_au(str):
                    ('eissn', lambda au: au.title().eissn()),
                    ('publisher', lambda au: au.title().publisher().name())]:
         if id == str: return fn
+    if str.endswith(']'):
+        if str.startswith('attr['): return lambda au: au.attr(str[5:-1]) 
+        if str.startswith('param['): return lambda au: au.param(str[6:-1]) 
+        if str.startswith('nondefparam['): return lambda au: au.nondefparam(str[12:-1]) 
     return None
