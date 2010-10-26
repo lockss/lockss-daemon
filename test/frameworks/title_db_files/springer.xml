@@ -5624,6 +5624,650 @@
    <property name="attributes.year" value="2010" />
   </property>
 
+  <property name="SpringerLinkPluginExperimentalAstronomy1">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1989-1990" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy2">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1991-1992" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy3">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1994" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy4">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1993-1994" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy5">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1994" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy6">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1995" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy7">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy8">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy9">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy10">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy11">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy12">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy13">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy14">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy15">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy16">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy17">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy18">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy19">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy20">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy21">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2006" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy22">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy23">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy24">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy25">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy26">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy27">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginExperimentalAstronomy28">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Experimental Astronomy" />
+   <property name="issn" value="0922-6435" />
+   <property name="eissn" value="1572-9508" />
+   <property name="title" value="Experimental Astronomy Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0922-6435" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.where" value="content5b" />
+   <property name="attributes.year" value="2010" />
+  </property>
+
   <property name="SpringerLinkPluginHeartFailureReviews1">
    <property name="attributes.publisher" value="Springer" />
    <property name="journalTitle" value="Heart Failure Reviews" />
@@ -5989,6 +6633,742 @@
    </property>
    <property name="attributes.where" value="content4a" />
    <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="SpringerLinkPluginSeminarsinImmunopathology29">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Seminars in Immunopathology" />
+   <property name="issn" value="1863-2297" />
+   <property name="eissn" value="1863-2300" />
+   <property name="title" value="Seminars in Immunopathology Volume 29" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1863-2297" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="29" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2007" />
+  </property>
+
+  <property name="SpringerLinkPluginSeminarsinImmunopathology30">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Seminars in Immunopathology" />
+   <property name="issn" value="1863-2297" />
+   <property name="eissn" value="1863-2300" />
+   <property name="title" value="Seminars in Immunopathology Volume 30" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1863-2297" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="30" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2008" />
+  </property>
+
+  <property name="SpringerLinkPluginSeminarsinImmunopathology31">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Seminars in Immunopathology" />
+   <property name="issn" value="1863-2297" />
+   <property name="eissn" value="1863-2300" />
+   <property name="title" value="Seminars in Immunopathology Volume 31" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1863-2297" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="31" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2009" />
+  </property>
+
+  <property name="SpringerLinkPluginSeminarsinImmunopathology32">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Seminars in Immunopathology" />
+   <property name="issn" value="1863-2297" />
+   <property name="eissn" value="1863-2300" />
+   <property name="title" value="Seminars in Immunopathology Volume 32" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="1863-2297" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="32" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2010" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology1">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 1" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="1" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1978" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology2">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 2" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="2" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1979-1980" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology3">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 3" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="3" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1980-1981" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology4">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 4" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="4" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1981-1982" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology5">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 5" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="5" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1982" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology6">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 6" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="6" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1983" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology7">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 7" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="7" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1984" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology8">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 8" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="8" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1985" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology9">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 9" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="9" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1986-1987" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology10">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 10" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="10" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1988" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology11">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 11" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="11" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1989" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology12">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 12" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="12" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1990" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology13">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 13" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="13" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1991-1992" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology14">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 14" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="14" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1992-1993" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology15">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="15" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1993-1994" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology16">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 16" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="16" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1994-1995" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology17">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 17" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="17" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1995-1996" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology18">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 18" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="18" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1996-1997" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology19">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 19" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="19" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1997" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology20">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 20" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="20" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1998" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology21">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 21" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="21" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="1999" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology22">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 22" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="22" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2000" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology23">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 23" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="23" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2001" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology24">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 24" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="24" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2002" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology25">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 25" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="25" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2003" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology26">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 26" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="26" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2004" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology27">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 27" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="27" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2005" />
+  </property>
+
+  <property name="SpringerLinkPluginSpringerSeminarsinImmunopathology28">
+   <property name="attributes.publisher" value="Springer" />
+   <property name="journalTitle" value="Springer Seminars in Immunopathology" />
+   <property name="issn" value="0344-4325" />
+   <property name="eissn" value="1432-2196" />
+   <property name="title" value="Springer Seminars in Immunopathology Volume 28" />
+   <property name="plugin" value="org.lockss.plugin.springer.SpringerLinkPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.springerlink.com/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="journal_issn" />
+    <property name="value" value="0344-4325" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="volume_name" />
+    <property name="value" value="28" />
+   </property>
+   <property name="attributes.where" value="content5a" />
+   <property name="attributes.year" value="2006" />
   </property>
 
  </property>

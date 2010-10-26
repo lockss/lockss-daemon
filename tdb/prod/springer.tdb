@@ -9579,14 +9579,44 @@
   }
 
   {
-
+  
     title <
       name = Experimental Astronomy ;
       issn = 0922-6435 ;
-      placeholder = True
+      eissn = 1572-9508
     >
-
+    
     param[journal_issn] = 0922-6435
+    attr[where] = content5b
+
+    au < testing ; 1989-1990 ; Experimental Astronomy Volume 1 ; 1 >
+    au < testing ; 1991-1992 ; Experimental Astronomy Volume 2 ; 2 >
+    au < testing ; 1994 ; Experimental Astronomy Volume 3 ; 3 >
+    au < testing ; 1993-1994 ; Experimental Astronomy Volume 4 ; 4 >
+    au < testing ; 1994 ; Experimental Astronomy Volume 5 ; 5 >
+    au < testing ; 1995 ; Experimental Astronomy Volume 6 ; 6 >
+    au < testing ; 1997 ; Experimental Astronomy Volume 7 ; 7 >
+    au < testing ; 1998 ; Experimental Astronomy Volume 8 ; 8 >
+    au < testing ; 1999 ; Experimental Astronomy Volume 9 ; 9 >
+    au < testing ; 2000 ; Experimental Astronomy Volume 10 ; 10 >
+    au < testing ; 2001 ; Experimental Astronomy Volume 11 ; 11 >
+    au < testing ; 2001 ; Experimental Astronomy Volume 12 ; 12 >
+    au < testing ; 2002 ; Experimental Astronomy Volume 13 ; 13 >
+    au < testing ; 2002 ; Experimental Astronomy Volume 14 ; 14 >
+    au < testing ; 2003 ; Experimental Astronomy Volume 15 ; 15 >
+    au < testing ; 2003 ; Experimental Astronomy Volume 16 ; 16 >
+    au < testing ; 2004 ; Experimental Astronomy Volume 17 ; 17 >
+    au < testing ; 2004 ; Experimental Astronomy Volume 18 ; 18 >
+    au < testing ; 2005 ; Experimental Astronomy Volume 19 ; 19 >
+    au < testing ; 2005 ; Experimental Astronomy Volume 20 ; 20 >
+    au < testing ; 2006 ; Experimental Astronomy Volume 21 ; 21 >
+    au < testing ; 2008 ; Experimental Astronomy Volume 22 ; 22 >
+    au < testing ; 2009 ; Experimental Astronomy Volume 23 ; 23 >
+    au < testing ; 2009 ; Experimental Astronomy Volume 24 ; 24 >
+    au < testing ; 2009 ; Experimental Astronomy Volume 25 ; 25 >
+    au < testing ; 2009 ; Experimental Astronomy Volume 26 ; 26 >
+    au < testing ; 2009 ; Experimental Astronomy Volume 27 ; 27 >
+    au < testing ; 2010 ; Experimental Astronomy Volume 28 ; 28 >
 
   }
 
@@ -26590,14 +26620,21 @@
   }
 
   {
-
+  
     title <
       name = Seminars in Immunopathology ;
       issn = 1863-2297 ;
-      placeholder = True
+      eissn = 1863-2300
     >
-
+    
+    comment[continued_from] = 0344-4325
     param[journal_issn] = 1863-2297
+    attr[where] = content5a
+
+    au < testing ; 2007 ; Seminars in Immunopathology Volume 29 ; 29 >
+    au < testing ; 2008 ; Seminars in Immunopathology Volume 30 ; 30 >
+    au < testing ; 2009 ; Seminars in Immunopathology Volume 31 ; 31 >
+    au < testing ; 2010 ; Seminars in Immunopathology Volume 32 ; 32 >
 
   }
 
@@ -27334,14 +27371,45 @@
   }
 
   {
-
+  
     title <
       name = Springer Seminars in Immunopathology ;
       issn = 0344-4325 ;
-      placeholder = True
+      eissn = 1432-2196
     >
-
+    
+    comment[continued_by] = 1863-2297
     param[journal_issn] = 0344-4325
+    attr[where] = content5a
+
+    au < testing ; 1978 ; Springer Seminars in Immunopathology Volume 1 ; 1 >
+    au < testing ; 1979-1980 ; Springer Seminars in Immunopathology Volume 2 ; 2 >
+    au < testing ; 1980-1981 ; Springer Seminars in Immunopathology Volume 3 ; 3 >
+    au < testing ; 1981-1982 ; Springer Seminars in Immunopathology Volume 4 ; 4 >
+    au < testing ; 1982 ; Springer Seminars in Immunopathology Volume 5 ; 5 >
+    au < testing ; 1983 ; Springer Seminars in Immunopathology Volume 6 ; 6 >
+    au < testing ; 1984 ; Springer Seminars in Immunopathology Volume 7 ; 7 >
+    au < testing ; 1985 ; Springer Seminars in Immunopathology Volume 8 ; 8 >
+    au < testing ; 1986-1987 ; Springer Seminars in Immunopathology Volume 9 ; 9 >
+    au < testing ; 1988 ; Springer Seminars in Immunopathology Volume 10 ; 10 >
+    au < testing ; 1989 ; Springer Seminars in Immunopathology Volume 11 ; 11 >
+    au < testing ; 1990 ; Springer Seminars in Immunopathology Volume 12 ; 12 >
+    au < testing ; 1991-1992 ; Springer Seminars in Immunopathology Volume 13 ; 13 >
+    au < testing ; 1992-1993 ; Springer Seminars in Immunopathology Volume 14 ; 14 >
+    au < testing ; 1993-1994 ; Springer Seminars in Immunopathology Volume 15 ; 15 >
+    au < testing ; 1994-1995 ; Springer Seminars in Immunopathology Volume 16 ; 16 >
+    au < testing ; 1995-1996 ; Springer Seminars in Immunopathology Volume 17 ; 17 >
+    au < testing ; 1996-1997 ; Springer Seminars in Immunopathology Volume 18 ; 18 >
+    au < testing ; 1997 ; Springer Seminars in Immunopathology Volume 19 ; 19 >
+    au < testing ; 1998 ; Springer Seminars in Immunopathology Volume 20 ; 20 >
+    au < testing ; 1999 ; Springer Seminars in Immunopathology Volume 21 ; 21 >
+    au < testing ; 2000 ; Springer Seminars in Immunopathology Volume 22 ; 22 >
+    au < testing ; 2001 ; Springer Seminars in Immunopathology Volume 23 ; 23 >
+    au < testing ; 2002 ; Springer Seminars in Immunopathology Volume 24 ; 24 >
+    au < testing ; 2003 ; Springer Seminars in Immunopathology Volume 25 ; 25 >
+    au < testing ; 2004 ; Springer Seminars in Immunopathology Volume 26 ; 26 >
+    au < testing ; 2005 ; Springer Seminars in Immunopathology Volume 27 ; 27 >
+    au < testing ; 2006 ; Springer Seminars in Immunopathology Volume 28 ; 28 >
 
   }
 
