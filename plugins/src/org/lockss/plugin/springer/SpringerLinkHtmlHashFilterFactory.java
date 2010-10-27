@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.4 2010-10-25 21:09:53 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.5 2010-10-27 23:01:40 thib_gc Exp $
  */
 
 /*
@@ -66,6 +66,10 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("link", "href", "^/styles/"),
         // Icon names can be spuriously versioned
         HtmlNodeFilters.tagWithAttributeRegex("img", "src", "^/images/"),
+        // Contains ASP state blob
+        HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
+        // Contains ASP state blob
+        HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
