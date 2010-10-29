@@ -105,15 +105,15 @@
   
     param[base_url] = http://ep.physoc.org/
   
-    au < manifest ; 1981 ; Quarterly Journal of Experimental Physiology Volume 66 ; 66  >
-    au < manifest ; 1982 ; Quarterly Journal of Experimental Physiology Volume 67 ; 67  >
-    au < manifest ; 1983 ; Quarterly Journal of Experimental Physiology Volume 68 ; 68  >
-    au < manifest ; 1984 ; Quarterly Journal of Experimental Physiology Volume 69 ; 69  >
-    au < manifest ; 1985 ; Quarterly Journal of Experimental Physiology Volume 70 ; 70  >
-    au < manifest ; 1986 ; Quarterly Journal of Experimental Physiology Volume 71 ; 71  >
-    au < manifest ; 1987 ; Quarterly Journal of Experimental Physiology Volume 72 ; 72  >
-    au < manifest ; 1988 ; Quarterly Journal of Experimental Physiology Volume 73 ; 73  >
-    au < manifest ; 1989 ; Quarterly Journal of Experimental Physiology Volume 74 ; 74  >
+    au < testing ; 1981 ; Quarterly Journal of Experimental Physiology Volume 66 ; 66  >
+    au < testing ; 1982 ; Quarterly Journal of Experimental Physiology Volume 67 ; 67  >
+    au < testing ; 1983 ; Quarterly Journal of Experimental Physiology Volume 68 ; 68  >
+    au < testing ; 1984 ; Quarterly Journal of Experimental Physiology Volume 69 ; 69  >
+    au < testing ; 1985 ; Quarterly Journal of Experimental Physiology Volume 70 ; 70  >
+    au < testing ; 1986 ; Quarterly Journal of Experimental Physiology Volume 71 ; 71  >
+    au < testing ; 1987 ; Quarterly Journal of Experimental Physiology Volume 72 ; 72  >
+    au < testing ; 1988 ; Quarterly Journal of Experimental Physiology Volume 73 ; 73  >
+    au < testing ; 1989 ; Quarterly Journal of Experimental Physiology Volume 74 ; 74  >
 
   }
   
@@ -698,14 +698,14 @@
     au < manifest ; 2001 ; Journal of Physiology Volume 535 ; 535  >
     au < manifest ; 2001 ; Journal of Physiology Volume 536 ; 536  >
     au < ready ; 2001 ; Journal of Physiology Volume 537 ; 537  >
-    au < testing ; 2002 ; Journal of Physiology Volume 538 ; 538  >
-    au < testing ; 2002 ; Journal of Physiology Volume 539 ; 539  >
-    au < testing ; 2002 ; Journal of Physiology Volume 540 ; 540  >
+    au < ready ; 2002 ; Journal of Physiology Volume 538 ; 538  >
+    au < ready ; 2002 ; Journal of Physiology Volume 539 ; 539  >
+    au < ready ; 2002 ; Journal of Physiology Volume 540 ; 540  >
     au < ready ; 2002 ; Journal of Physiology Volume 541 ; 541  >
-    au < testing ; 2002 ; Journal of Physiology Volume 542 ; 542  >
-    au < testing ; 2002 ; Journal of Physiology Volume 543 ; 543  >
-    au < testing ; 2002 ; Journal of Physiology Volume 544 ; 544  >
-    au < manifest ; 2002 ; Journal of Physiology Volume 545 ; 545  >
+    au < ready ; 2002 ; Journal of Physiology Volume 542 ; 542  >
+    au < ready ; 2002 ; Journal of Physiology Volume 543 ; 543  >
+    au < ready ; 2002 ; Journal of Physiology Volume 544 ; 544  >
+    au < ready ; 2002 ; Journal of Physiology Volume 545 ; 545  >
     au < ready ; 2003 ; Journal of Physiology Volume 546 ; 546  >
     au < ready ; 2003 ; Journal of Physiology Volume 547 ; 547  >
     au < ready ; 2003 ; Journal of Physiology Volume 548 ; 548  >
