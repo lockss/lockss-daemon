@@ -17,58 +17,11 @@
   
       param[base_url] = http://aac.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; exists ; Antimicrobial Agents and Chemotherapy Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; ready ; Antimicrobial Agents and Chemotherapy Volume 49 ; 49 >
-      au < HighWireStrVolPlugin ; released ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; ready ; Antimicrobial Agents and Chemotherapy Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; ready ; Antimicrobial Agents and Chemotherapy Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; ready ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
+      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 49 ; 49 >
+      au < HighWireStrVolPlugin ; down ; Antimicrobial Agents and Chemotherapy Volume 50 ; 50 >
+      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 51 ; 51 >
+      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 52 ; 52 >
+      au < HighWirePressH20Plugin ; released ; Antimicrobial Agents and Chemotherapy Volume 53 ; 53 >
   
     }
   
@@ -81,81 +34,11 @@
   
       param[base_url] = http://aem.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 66 ; 66 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 67 ; 67 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 68 ; 68 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 69 ; 69 >
-      au < HighWirePressH20Plugin ; exists ; Applied and Environmental Microbiology Volume 70 ; 70 >
       au < HighWireStrVolPlugin ; released ; Applied and Environmental Microbiology Volume 71 ; 71 >
       au < HighWireStrVolPlugin ; released ; Applied and Environmental Microbiology Volume 72 ; 72 >
       au < HighWireStrVolPlugin ; released ; Applied and Environmental Microbiology Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; ready ; Applied and Environmental Microbiology Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; ready ; Applied and Environmental Microbiology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; Applied and Environmental Microbiology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; released ; Applied and Environmental Microbiology Volume 75 ; 75 >
   
     }
   
@@ -168,22 +51,11 @@
   
       param[base_url] = http://cvi.asm.org/
   
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; Clinical and Vaccine Immunology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; ready ; Clinical and Vaccine Immunology Volume 12 ; 12 >
+      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 12 ; 12 >
       au < HighWireStrVolPlugin ; released ; Clinical and Vaccine Immunology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; ready ; Clinical and Vaccine Immunology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; ready ; Clinical and Vaccine Immunology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; ready ; Clinical and Vaccine Immunology Volume 16 ; 16 >
+      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 14 ; 14 >
+      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 15 ; 15 >
+      au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 16 ; 16 >
   
     }
   
