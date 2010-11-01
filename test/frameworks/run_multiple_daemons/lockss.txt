@@ -37,7 +37,6 @@ org.lockss.metrics.slowest.hashrate = 250
 org.lockss.state.recall.delay=5m
 
 org.lockss.crawler.startCrawlsInterval=5m
-org.lockss.crawler.threadPool.max=3
 
 # prod group modes
 org.lockss.baseau.defaultFetchRateLimiterSource = plugin
