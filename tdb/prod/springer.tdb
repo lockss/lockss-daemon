@@ -341,6 +341,7 @@
     >
     
     param[journal_issn] = 0001-6322
+    attr[where] = sul-lockss30a
 
     au < manifest ; 1961-1962 ; Acta Neuropathologica Volume 1 ; 1 >
     au < manifest ; 1962-1963 ; Acta Neuropathologica Volume 2 ; 2 >
@@ -7726,6 +7727,7 @@
     >
     
     param[journal_issn] = 0012-186X
+    attr[where] = sul-lockss30b
 
     au < testing ; 1965-1966 ; Diabetologia Volume 1 ; 1 >
     au < testing ; 1966 ; Diabetologia Volume 2 ; 2 >
@@ -17854,95 +17856,96 @@
     >
 
     param[journal_issn] = 0946-2716
+    attr[where] = content2a,content4a,content4b
 
-    au < manifest ; 1922 ; Klinische Wochenschrift Volume 1 ; 1 >
-    au < manifest ; 1923 ; Klinische Wochenschrift Volume 2 ; 2 >
-    au < manifest ; 1924 ; Klinische Wochenschrift Volume 3 ; 3 >
-    au < manifest ; 1925 ; Klinische Wochenschrift Volume 4 ; 4 >
-    au < manifest ; 1926 ; Klinische Wochenschrift Volume 5 ; 5 >
-    au < manifest ; 1927 ; Klinische Wochenschrift Volume 6 ; 6 >
-    au < manifest ; 1928 ; Klinische Wochenschrift Volume 7 ; 7 >
-    au < manifest ; 1929 ; Klinische Wochenschrift Volume 8 ; 8 >
-    au < manifest ; 1930 ; Klinische Wochenschrift Volume 9 ; 9 >
-    au < manifest ; 1931 ; Klinische Wochenschrift Volume 10 ; 10 >
-    au < manifest ; 1932 ; Klinische Wochenschrift Volume 11 ; 11 >
-    au < manifest ; 1932-1933 ; Klinische Wochenschrift Volume 12 ; 12 >
-    au < manifest ; 1934 ; Klinische Wochenschrift Volume 13 ; 13 >
-    au < manifest ; 1935 ; Klinische Wochenschrift Volume 14 ; 14 >
-    au < manifest ; 1936 ; Klinische Wochenschrift Volume 15 ; 15 >
-    au < manifest ; 1937 ; Klinische Wochenschrift Volume 16 ; 16 >
-    au < manifest ; 1938 ; Klinische Wochenschrift Volume 17 ; 17 >
-    au < manifest ; 1939 ; Klinische Wochenschrift Volume 18 ; 18 >
-    au < manifest ; 1940 ; Klinische Wochenschrift Volume 19 ; 19 >
-    au < manifest ; 1941 ; Klinische Wochenschrift Volume 20 ; 20 >
-    au < manifest ; 1942 ; Klinische Wochenschrift Volume 21 ; 21 >
-    au < manifest ; 1943 ; Klinische Wochenschrift Volume 22 ; 22 >
-    au < manifest ; 1944 ; Klinische Wochenschrift Volume 23 ; 23 >
-    au < manifest ; 1946 ; Klinische Wochenschrift Volume 24 ; 24 >
-    au < manifest ; 1946-1947 ; Klinische Wochenschrift Volume 24-25 ; 24-25 >
-    au < manifest ; 1948 ; Klinische Wochenschrift Volume 26 ; 26 >
-    au < manifest ; 1949 ; Klinische Wochenschrift Volume 27 ; 27 >
-    au < manifest ; 1950 ; Klinische Wochenschrift Volume 28 ; 28 >
-    au < manifest ; 1951 ; Klinische Wochenschrift Volume 29 ; 29 >
-    au < manifest ; 1952 ; Klinische Wochenschrift Volume 30 ; 30 >
-    au < manifest ; 1953 ; Klinische Wochenschrift Volume 31 ; 31 >
-    au < manifest ; 1954 ; Klinische Wochenschrift Volume 32 ; 32 >
-    au < manifest ; 1955 ; Klinische Wochenschrift Volume 33 ; 33 >
-    au < manifest ; 1956 ; Klinische Wochenschrift Volume 34 ; 34 >
-    au < manifest ; 1957 ; Klinische Wochenschrift Volume 35 ; 35 >
-    au < manifest ; 1958 ; Klinische Wochenschrift Volume 36 ; 36 >
-    au < manifest ; 1959 ; Klinische Wochenschrift Volume 37 ; 37 >
-    au < manifest ; 1960 ; Klinische Wochenschrift Volume 38 ; 38 >
-    au < manifest ; 1961 ; Klinische Wochenschrift Volume 39 ; 39 >
-    au < manifest ; 1962 ; Klinische Wochenschrift Volume 40 ; 40 >
-    au < manifest ; 1963 ; Klinische Wochenschrift Volume 41 ; 41 >
-    au < manifest ; 1964 ; Klinische Wochenschrift Volume 42 ; 42 >
-    au < manifest ; 1965 ; Klinische Wochenschrift Volume 43 ; 43 >
-    au < manifest ; 1966 ; Klinische Wochenschrift Volume 44 ; 44 >
-    au < manifest ; 1967 ; Klinische Wochenschrift Volume 45 ; 45 >
-    au < manifest ; 1968 ; Klinische Wochenschrift Volume 46 ; 46 >
-    au < manifest ; 1969 ; Klinische Wochenschrift Volume 47 ; 47 >
-    au < manifest ; 1970 ; Klinische Wochenschrift Volume 48 ; 48 >
-    au < manifest ; 1971 ; Klinische Wochenschrift Volume 49 ; 49 >
-    au < manifest ; 1972 ; Klinische Wochenschrift Volume 50 ; 50 >
-    au < manifest ; 1973 ; Klinische Wochenschrift Volume 51 ; 51 >
-    au < manifest ; 1974 ; Klinische Wochenschrift Volume 52 ; 52 >
-    au < manifest ; 1975 ; Klinische Wochenschrift Volume 53 ; 53 >
-    au < manifest ; 1976 ; Klinische Wochenschrift Volume 54 ; 54 >
-    au < manifest ; 1977 ; Klinische Wochenschrift Volume 55 ; 55 >
-    au < manifest ; 1978 ; Klinische Wochenschrift Volume 56 ; 56 >
-    au < manifest ; 1979 ; Klinische Wochenschrift Volume 57 ; 57 >
-    au < manifest ; 1980 ; Klinische Wochenschrift Volume 58 ; 58 >
-    au < manifest ; 1981 ; Klinische Wochenschrift Volume 59 ; 59 >
-    au < manifest ; 1982 ; Klinische Wochenschrift Volume 60 ; 60 >
-    au < manifest ; 1983 ; Klinische Wochenschrift Volume 61 ; 61 >
-    au < manifest ; 1984 ; Klinische Wochenschrift Volume 62 ; 62 >
-    au < manifest ; 1985 ; Klinische Wochenschrift Volume 63 ; 63 >
-    au < manifest ; 1986 ; Klinische Wochenschrift Volume 64 ; 64 >
-    au < manifest ; 1987 ; Klinische Wochenschrift Volume 65 ; 65 >
-    au < manifest ; 1988 ; Klinische Wochenschrift Volume 66 ; 66 >
-    au < manifest ; 1989 ; Klinische Wochenschrift Volume 67 ; 67 >
-    au < manifest ; 1990 ; Klinische Wochenschrift Volume 68 ; 68 >
-    au < manifest ; 1991 ; Klinische Wochenschrift Volume 69 ; 69 >
-    au < manifest ; 1992 ; The Clinical Investigator Volume 70 ; 70 >
-    au < manifest ; 1993 ; The Clinical Investigator Volume 71 ; 71 >
-    au < manifest ; 1993-1994 ; The Clinical Investigator Volume 72 ; 72 >
-    au < manifest ; 1995 ; Journal of Molecular Medicine Volume 73 ; 73 >
-    au < manifest ; 1996 ; Journal of Molecular Medicine Volume 74 ; 74 >
-    au < manifest ; 1997 ; Journal of Molecular Medicine Volume 75 ; 75 >
-    au < manifest ; 1998 ; Journal of Molecular Medicine Volume 76 ; 76 >
-    au < manifest ; 1999 ; Journal of Molecular Medicine Volume 77 ; 77 >
-    au < manifest ; 2000 ; Journal of Molecular Medicine Volume 78 ; 78 >
-    au < manifest ; 2001 ; Journal of Molecular Medicine Volume 79 ; 79 >
-    au < manifest ; 2002 ; Journal of Molecular Medicine Volume 80 ; 80 >
-    au < manifest ; 2003 ; Journal of Molecular Medicine Volume 81 ; 81 >
-    au < manifest ; 2004 ; Journal of Molecular Medicine Volume 82 ; 82 >
-    au < manifest ; 2005 ; Journal of Molecular Medicine Volume 83 ; 83 >
-    au < manifest ; 2006 ; Journal of Molecular Medicine Volume 84 ; 84 >
-    au < manifest ; 2007 ; Journal of Molecular Medicine Volume 85 ; 85 >
-    au < manifest ; 2008 ; Journal of Molecular Medicine Volume 86 ; 86 >
-    au < manifest ; 2009 ; Journal of Molecular Medicine Volume 87 ; 87 >
-    au < manifest ; 2010 ; Journal of Molecular Medicine Volume 88 ; 88 >
+    au < testing ; 1922 ; Klinische Wochenschrift Volume 1 ; 1 >
+    au < testing ; 1923 ; Klinische Wochenschrift Volume 2 ; 2 >
+    au < testing ; 1924 ; Klinische Wochenschrift Volume 3 ; 3 >
+    au < testing ; 1925 ; Klinische Wochenschrift Volume 4 ; 4 >
+    au < testing ; 1926 ; Klinische Wochenschrift Volume 5 ; 5 >
+    au < testing ; 1927 ; Klinische Wochenschrift Volume 6 ; 6 >
+    au < testing ; 1928 ; Klinische Wochenschrift Volume 7 ; 7 >
+    au < testing ; 1929 ; Klinische Wochenschrift Volume 8 ; 8 >
+    au < testing ; 1930 ; Klinische Wochenschrift Volume 9 ; 9 >
+    au < testing ; 1931 ; Klinische Wochenschrift Volume 10 ; 10 >
+    au < testing ; 1932 ; Klinische Wochenschrift Volume 11 ; 11 >
+    au < testing ; 1932-1933 ; Klinische Wochenschrift Volume 12 ; 12 >
+    au < testing ; 1934 ; Klinische Wochenschrift Volume 13 ; 13 >
+    au < testing ; 1935 ; Klinische Wochenschrift Volume 14 ; 14 >
+    au < testing ; 1936 ; Klinische Wochenschrift Volume 15 ; 15 >
+    au < testing ; 1937 ; Klinische Wochenschrift Volume 16 ; 16 >
+    au < testing ; 1938 ; Klinische Wochenschrift Volume 17 ; 17 >
+    au < testing ; 1939 ; Klinische Wochenschrift Volume 18 ; 18 >
+    au < testing ; 1940 ; Klinische Wochenschrift Volume 19 ; 19 >
+    au < testing ; 1941 ; Klinische Wochenschrift Volume 20 ; 20 >
+    au < testing ; 1942 ; Klinische Wochenschrift Volume 21 ; 21 >
+    au < testing ; 1943 ; Klinische Wochenschrift Volume 22 ; 22 >
+    au < testing ; 1944 ; Klinische Wochenschrift Volume 23 ; 23 >
+    au < testing ; 1946 ; Klinische Wochenschrift Volume 24 ; 24 >
+    au < testing ; 1946-1947 ; Klinische Wochenschrift Volume 24-25 ; 24-25 >
+    au < testing ; 1948 ; Klinische Wochenschrift Volume 26 ; 26 >
+    au < testing ; 1949 ; Klinische Wochenschrift Volume 27 ; 27 >
+    au < testing ; 1950 ; Klinische Wochenschrift Volume 28 ; 28 >
+    au < testing ; 1951 ; Klinische Wochenschrift Volume 29 ; 29 >
+    au < testing ; 1952 ; Klinische Wochenschrift Volume 30 ; 30 >
+    au < testing ; 1953 ; Klinische Wochenschrift Volume 31 ; 31 >
+    au < testing ; 1954 ; Klinische Wochenschrift Volume 32 ; 32 >
+    au < testing ; 1955 ; Klinische Wochenschrift Volume 33 ; 33 >
+    au < testing ; 1956 ; Klinische Wochenschrift Volume 34 ; 34 >
+    au < testing ; 1957 ; Klinische Wochenschrift Volume 35 ; 35 >
+    au < testing ; 1958 ; Klinische Wochenschrift Volume 36 ; 36 >
+    au < testing ; 1959 ; Klinische Wochenschrift Volume 37 ; 37 >
+    au < testing ; 1960 ; Klinische Wochenschrift Volume 38 ; 38 >
+    au < testing ; 1961 ; Klinische Wochenschrift Volume 39 ; 39 >
+    au < testing ; 1962 ; Klinische Wochenschrift Volume 40 ; 40 >
+    au < testing ; 1963 ; Klinische Wochenschrift Volume 41 ; 41 >
+    au < testing ; 1964 ; Klinische Wochenschrift Volume 42 ; 42 >
+    au < testing ; 1965 ; Klinische Wochenschrift Volume 43 ; 43 >
+    au < testing ; 1966 ; Klinische Wochenschrift Volume 44 ; 44 >
+    au < testing ; 1967 ; Klinische Wochenschrift Volume 45 ; 45 >
+    au < testing ; 1968 ; Klinische Wochenschrift Volume 46 ; 46 >
+    au < testing ; 1969 ; Klinische Wochenschrift Volume 47 ; 47 >
+    au < testing ; 1970 ; Klinische Wochenschrift Volume 48 ; 48 >
+    au < testing ; 1971 ; Klinische Wochenschrift Volume 49 ; 49 >
+    au < testing ; 1972 ; Klinische Wochenschrift Volume 50 ; 50 >
+    au < testing ; 1973 ; Klinische Wochenschrift Volume 51 ; 51 >
+    au < testing ; 1974 ; Klinische Wochenschrift Volume 52 ; 52 >
+    au < testing ; 1975 ; Klinische Wochenschrift Volume 53 ; 53 >
+    au < testing ; 1976 ; Klinische Wochenschrift Volume 54 ; 54 >
+    au < testing ; 1977 ; Klinische Wochenschrift Volume 55 ; 55 >
+    au < testing ; 1978 ; Klinische Wochenschrift Volume 56 ; 56 >
+    au < testing ; 1979 ; Klinische Wochenschrift Volume 57 ; 57 >
+    au < testing ; 1980 ; Klinische Wochenschrift Volume 58 ; 58 >
+    au < testing ; 1981 ; Klinische Wochenschrift Volume 59 ; 59 >
+    au < testing ; 1982 ; Klinische Wochenschrift Volume 60 ; 60 >
+    au < testing ; 1983 ; Klinische Wochenschrift Volume 61 ; 61 >
+    au < testing ; 1984 ; Klinische Wochenschrift Volume 62 ; 62 >
+    au < testing ; 1985 ; Klinische Wochenschrift Volume 63 ; 63 >
+    au < testing ; 1986 ; Klinische Wochenschrift Volume 64 ; 64 >
+    au < testing ; 1987 ; Klinische Wochenschrift Volume 65 ; 65 >
+    au < testing ; 1988 ; Klinische Wochenschrift Volume 66 ; 66 >
+    au < testing ; 1989 ; Klinische Wochenschrift Volume 67 ; 67 >
+    au < testing ; 1990 ; Klinische Wochenschrift Volume 68 ; 68 >
+    au < testing ; 1991 ; Klinische Wochenschrift Volume 69 ; 69 >
+    au < testing ; 1992 ; The Clinical Investigator Volume 70 ; 70 >
+    au < testing ; 1993 ; The Clinical Investigator Volume 71 ; 71 >
+    au < testing ; 1993-1994 ; The Clinical Investigator Volume 72 ; 72 >
+    au < testing ; 1995 ; Journal of Molecular Medicine Volume 73 ; 73 >
+    au < testing ; 1996 ; Journal of Molecular Medicine Volume 74 ; 74 >
+    au < testing ; 1997 ; Journal of Molecular Medicine Volume 75 ; 75 >
+    au < testing ; 1998 ; Journal of Molecular Medicine Volume 76 ; 76 >
+    au < testing ; 1999 ; Journal of Molecular Medicine Volume 77 ; 77 >
+    au < testing ; 2000 ; Journal of Molecular Medicine Volume 78 ; 78 >
+    au < testing ; 2001 ; Journal of Molecular Medicine Volume 79 ; 79 >
+    au < testing ; 2002 ; Journal of Molecular Medicine Volume 80 ; 80 >
+    au < testing ; 2003 ; Journal of Molecular Medicine Volume 81 ; 81 >
+    au < testing ; 2004 ; Journal of Molecular Medicine Volume 82 ; 82 >
+    au < testing ; 2005 ; Journal of Molecular Medicine Volume 83 ; 83 >
+    au < testing ; 2006 ; Journal of Molecular Medicine Volume 84 ; 84 >
+    au < testing ; 2007 ; Journal of Molecular Medicine Volume 85 ; 85 >
+    au < testing ; 2008 ; Journal of Molecular Medicine Volume 86 ; 86 >
+    au < testing ; 2009 ; Journal of Molecular Medicine Volume 87 ; 87 >
+    au < testing ; 2010 ; Journal of Molecular Medicine Volume 88 ; 88 >
 
   }
 
@@ -26138,19 +26141,18 @@
     >
 
     param[journal_issn] = 1389-9155
-    attr[where] = content2a
 
-    au < testing ; 2000 ; Reviews in Endocrine & Metabolic Disorders Volume 1 ; 1 >
-    au < testing ; 2001 ; Reviews in Endocrine & Metabolic Disorders Volume 2 ; 2 >
-    au < testing ; 2002 ; Reviews in Endocrine & Metabolic Disorders Volume 3 ; 3 >
-    au < testing ; 2003 ; Reviews in Endocrine & Metabolic Disorders Volume 4 ; 4 >
-    au < testing ; 2004 ; Reviews in Endocrine & Metabolic Disorders Volume 5 ; 5 >
-    au < testing ; 2005 ; Reviews in Endocrine & Metabolic Disorders Volume 6 ; 6 >
-    au < testing ; 2006 ; Reviews in Endocrine & Metabolic Disorders Volume 7 ; 7 >
-    au < testing ; 2007 ; Reviews in Endocrine & Metabolic Disorders Volume 8 ; 8 >
-    au < testing ; 2008 ; Reviews in Endocrine & Metabolic Disorders Volume 9 ; 9 >
-    au < testing ; 2009 ; Reviews in Endocrine & Metabolic Disorders Volume 10 ; 10 >
-    au < testing ; 2010 ; Reviews in Endocrine & Metabolic Disorders Volume 11 ; 11 >
+    au < ready ; 2000 ; Reviews in Endocrine & Metabolic Disorders Volume 1 ; 1 >
+    au < ready ; 2001 ; Reviews in Endocrine & Metabolic Disorders Volume 2 ; 2 >
+    au < ready ; 2002 ; Reviews in Endocrine & Metabolic Disorders Volume 3 ; 3 >
+    au < ready ; 2003 ; Reviews in Endocrine & Metabolic Disorders Volume 4 ; 4 >
+    au < ready ; 2004 ; Reviews in Endocrine & Metabolic Disorders Volume 5 ; 5 >
+    au < ready ; 2005 ; Reviews in Endocrine & Metabolic Disorders Volume 6 ; 6 >
+    au < ready ; 2006 ; Reviews in Endocrine & Metabolic Disorders Volume 7 ; 7 >
+    au < ready ; 2007 ; Reviews in Endocrine & Metabolic Disorders Volume 8 ; 8 >
+    au < ready ; 2008 ; Reviews in Endocrine & Metabolic Disorders Volume 9 ; 9 >
+    au < ready ; 2009 ; Reviews in Endocrine & Metabolic Disorders Volume 10 ; 10 >
+    au < ready ; 2010 ; Reviews in Endocrine & Metabolic Disorders Volume 11 ; 11 >
 
   }
 
@@ -27982,6 +27984,8 @@
     comment[continued_by] = 1863-2297
     param[journal_issn] = 0344-4325
     attr[where] = content5a
+    
+    comment[18] = subscription problem
 
     au < testing ; 1978 ; Springer Seminars in Immunopathology Volume 1 ; 1 >
     au < testing ; 1979-1980 ; Springer Seminars in Immunopathology Volume 2 ; 2 >
@@ -28000,7 +28004,7 @@
     au < testing ; 1993-1994 ; Springer Seminars in Immunopathology Volume 15 ; 15 >
     au < testing ; 1994-1995 ; Springer Seminars in Immunopathology Volume 16 ; 16 >
     au < testing ; 1995-1996 ; Springer Seminars in Immunopathology Volume 17 ; 17 >
-    au < testing ; 1996-1997 ; Springer Seminars in Immunopathology Volume 18 ; 18 >
+    au < notReady ; 1996-1997 ; Springer Seminars in Immunopathology Volume 18 ; 18 >
     au < testing ; 1997 ; Springer Seminars in Immunopathology Volume 19 ; 19 >
     au < testing ; 1998 ; Springer Seminars in Immunopathology Volume 20 ; 20 >
     au < testing ; 1999 ; Springer Seminars in Immunopathology Volume 21 ; 21 >
