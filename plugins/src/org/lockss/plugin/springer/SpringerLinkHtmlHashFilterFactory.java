@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.5 2010-10-27 23:01:40 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.6 2010-11-02 23:12:10 thib_gc Exp $
  */
 
 /*
@@ -70,6 +70,10 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
         // Contains ASP state blob
         HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
+        // Contains ever-updated information e.g. most recent issue
+        HtmlNodeFilters.tagWithAttribute("div", "id", "AboutSection"),
+        // Contains ever-updated information e.g. list of all issues
+        HtmlNodeFilters.tagWithAttribute("div", "id", "Modes"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
