@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.82 2010-02-11 10:05:41 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.83 2010-11-03 06:08:12 tlipkis Exp $
  */
 
 /*
@@ -250,7 +250,7 @@ public class BaseUrlCacher implements UrlCacher {
       if (headers.get("Set-Cookie") != null) {
 	if (shouldRefetchOnCookies()) {
 	  logger.debug3("Found set-cookie header, refetching");
-	  input.close();
+	  IOUtil.safeClose(input);
 	  input = null; // ensure don't reclose in finally if next line throws
 	  releaseConnection();
 	  input = getUncachedInputStream(lastModified);
@@ -278,9 +278,7 @@ public class BaseUrlCacher implements UrlCacher {
       }
       return CACHE_RESULT_FETCHED;
     } finally {
-      if (input != null) {
-	input.close();
-      }
+      IOUtil.safeClose(input);
     }
   }
 
@@ -418,20 +416,44 @@ public class BaseUrlCacher implements UrlCacher {
       throws IOException {
     RepositoryNode leaf = null;
     try {
-      leaf = repository.createNewNode(url);
-      leaf.makeNewVersion();
+      try {
+	leaf = repository.createNewNode(url);
+	leaf.makeNewVersion();
 
-      OutputStream os = leaf.getNewOutputStream();
-      StreamUtil.copy(input, os, wdog);
-      if (!fetchFlags.get(DONT_CLOSE_INPUT_STREAM_FLAG)) {
-	input.close();
+	OutputStream os = leaf.getNewOutputStream();
+	StreamUtil.copy(input, os, -1, wdog, true);
+	if (!fetchFlags.get(DONT_CLOSE_INPUT_STREAM_FLAG)) {
+	  try {
+	    input.close();
+	  } catch (IOException ex) {
+	    CacheException closeEx =
+	      resultMap.mapException(au, conn, ex, null);
+	    if (!(closeEx instanceof CacheException.IgnoreCloseException)) {
+	      throw new StreamUtil.InputException(ex);
+	    }
+	  }
+	}
+	os.close();
+	headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
+	leaf.setNewProperties(headers);
+	leaf.sealNewVersion();
+      } catch (StreamUtil.InputException ex) {
+	throw resultMap.mapException(au, conn, ex.getIOCause(), null);
+      } catch (StreamUtil.OutputException ex) {
+	throw resultMap.getRepositoryException(ex.getIOCause());
       }
-      os.close();
-      headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
-      leaf.setNewProperties(headers);
-      leaf.sealNewVersion();
+    } catch (IOException ex) {
+      logger.debug("storeContentIn1", ex);
+      if (leaf != null) {
+	try {
+	  leaf.abandonNewVersion();
+	} catch (Exception e) {
+	  // just being paranoid
+	}
+      }
+      throw ex;
     } catch (Exception ex) {
-      logger.debug("storeContentIn", ex);
+      logger.debug("storeContentIn2", ex);
       if (leaf != null) {
 	try {
 	  leaf.abandonNewVersion();

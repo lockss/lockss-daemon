@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.45 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.46 2010-11-03 06:08:12 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.wrapper.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.crawler.*;
 import org.lockss.extractor.*;
 
@@ -966,6 +967,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     Plugin plug = pmgr.getPlugin(key);
     assertTrue(plug.toString() + " not a DefinablePlugin",
 	       plug instanceof DefinablePlugin);
+    MyDefinablePlugin defplug = (MyDefinablePlugin)plug;
 
     // Configure and create an AU
     Properties p = new Properties();
@@ -977,6 +979,8 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     p.put("num_issue_range", "3-7");
     Configuration auConfig = ConfigManager.fromProperties(p);
     DefinableArchivalUnit au = (DefinableArchivalUnit)plug.createAu(auConfig);
+
+    assertSame(plug, au.getPlugin());
 
     // Test that the AU does everything correctly
 
@@ -1009,9 +1013,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("Large Plugin AU, Base URL http://base.foo/base_path/, Resolver URL http://resolv.er/path/, Journal Code J47, Year 1984, Issues 1, 2, 3, 3a, Range 3-7",
 		 au.makeName());
 
-    assertEquals("application/pdf", au.getPlugin().getDefaultArticleMimeType());
+    assertEquals("application/pdf", plug.getDefaultArticleMimeType());
 
-    ArticleIteratorFactory afact = au.getPlugin().getArticleIteratorFactory();
+    ArticleIteratorFactory afact = plug.getArticleIteratorFactory();
     assertTrue(afact instanceof ArticleIteratorFactoryWrapper);
     assertTrue(""+WrapperUtil.unwrap(afact),
 	       WrapperUtil.unwrap(afact) instanceof MockFactories.ArtIterFact);
@@ -1022,8 +1026,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       au.getFileMetadataExtractor("text/xml");
     assertTrue(""+ext, ext instanceof MockFactories.XmlMetaExt);
 
-    MimeTypeInfo mti =
-      ((MyDefinablePlugin)au.getPlugin()).getMimeTypeInfo("text/xml");
+    MimeTypeInfo mti = defplug.getMimeTypeInfo("text/xml");
     FileMetadataExtractorFactory mfact = mti.getFileMetadataExtractorFactory();
     assertTrue(mfact instanceof FileMetadataExtractorFactoryWrapper);
     assertTrue(""+WrapperUtil.unwrap(mfact),
@@ -1050,6 +1053,26 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       }
       testTime += Constants.HOUR;
     }
+
+    CacheResultMap resultMap = defplug.getCacheResultMap();
+    assertClass(CacheException.NoRetryDeadLinkException.class,
+		getHttpResultMap(defplug).mapException(null, null, 404, null));
+    assertClass(CacheException.PermissionException.class,
+		getHttpResultMap(defplug).mapException(null, null, 300, null));
+    assertClass(CacheException.RetryableNetworkException_5_60S.class,
+		getHttpResultMap(defplug).mapException(null, null, 500, null));
+    assertClass(CacheException.RetryableNetworkException_5_30S.class,
+		getHttpResultMap(defplug).mapException(null, null,
+						       new IOException("foo"),
+						       null));
+    CacheException ex =
+      getHttpResultMap(defplug).mapException(null, null, 522, null);
+    assertClass(CacheException.RetryDeadLinkException.class, ex);
+    assertEquals("522 from handler", ex.getMessage());
+  }
+
+  HttpResultMap getHttpResultMap(DefinablePlugin plugin) {
+    return (HttpResultMap)plugin.getCacheResultMap();
   }
 
   public void testRateLimiterSourceDefault() throws Exception {
