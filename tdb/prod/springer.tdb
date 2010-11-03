@@ -341,128 +341,129 @@
     >
     
     param[journal_issn] = 0001-6322
-    attr[where] = sul-lockss30a
+    attr[where] = sul-lockss30a,sul-lockss30b
+    comment[105] = persistent 400 error, would be caught by global exclude pattern in GLN
 
-    au < manifest ; 1961-1962 ; Acta Neuropathologica Volume 1 ; 1 >
-    au < manifest ; 1962-1963 ; Acta Neuropathologica Volume 2 ; 2 >
-    au < manifest ; 1963-1964 ; Acta Neuropathologica Volume 3 ; 3 >
-    au < manifest ; 1964-1965 ; Acta Neuropathologica Volume 4 ; 4 >
-    au < manifest ; 1965 ; Acta Neuropathologica Volume 5 ; 5 >
-    au < manifest ; 1966 ; Acta Neuropathologica Volume 6 ; 6 >
-    au < manifest ; 1966-1967 ; Acta Neuropathologica Volume 7 ; 7 >
-    au < manifest ; 1967 ; Acta Neuropathologica Volume 8 ; 8 >
-    au < manifest ; 1967 ; Acta Neuropathologica Volume 9 ; 9 >
-    au < manifest ; 1968 ; Acta Neuropathologica Volume 10 ; 10 >
-    au < manifest ; 1968 ; Acta Neuropathologica Volume 11 ; 11 >
-    au < manifest ; 1969 ; Acta Neuropathologica Volume 12 ; 12 >
-    au < manifest ; 1969 ; Acta Neuropathologica Volume 13 ; 13 >
-    au < manifest ; 1969-1970 ; Acta Neuropathologica Volume 14 ; 14 >
-    au < manifest ; 1970 ; Acta Neuropathologica Volume 15 ; 15 >
-    au < manifest ; 1970 ; Acta Neuropathologica Volume 16 ; 16 >
-    au < manifest ; 1971 ; Acta Neuropathologica Volume 17 ; 17 >
-    au < manifest ; 1971 ; Acta Neuropathologica Volume 18 ; 18 >
-    au < manifest ; 1971 ; Acta Neuropathologica Volume 19 ; 19 >
-    au < manifest ; 1972 ; Acta Neuropathologica Volume 20 ; 20 >
-    au < manifest ; 1972 ; Acta Neuropathologica Volume 21 ; 21 >
-    au < manifest ; 1972 ; Acta Neuropathologica Volume 22 ; 22 >
-    au < manifest ; 1973 ; Acta Neuropathologica Volume 23 ; 23 >
-    au < manifest ; 1973 ; Acta Neuropathologica Volume 24 ; 24 >
-    au < manifest ; 1973 ; Acta Neuropathologica Volume 25 ; 25 >
-    au < manifest ; 1973 ; Acta Neuropathologica Volume 26 ; 26 >
-    au < manifest ; 1974 ; Acta Neuropathologica Volume 27 ; 27 >
-    au < manifest ; 1974 ; Acta Neuropathologica Volume 28 ; 28 >
-    au < manifest ; 1974 ; Acta Neuropathologica Volume 29 ; 29 >
-    au < manifest ; 1974 ; Acta Neuropathologica Volume 30 ; 30 >
-    au < manifest ; 1975 ; Acta Neuropathologica Volume 31 ; 31 >
-    au < manifest ; 1975 ; Acta Neuropathologica Volume 32 ; 32 >
-    au < manifest ; 1975 ; Acta Neuropathologica Volume 33 ; 33 >
-    au < manifest ; 1976 ; Acta Neuropathologica Volume 34 ; 34 >
-    au < manifest ; 1976 ; Acta Neuropathologica Volume 35 ; 35 >
-    au < manifest ; 1976 ; Acta Neuropathologica Volume 36 ; 36 >
-    au < manifest ; 1977 ; Acta Neuropathologica Volume 37 ; 37 >
-    au < manifest ; 1977 ; Acta Neuropathologica Volume 38 ; 38 >
-    au < manifest ; 1977 ; Acta Neuropathologica Volume 39 ; 39 >
-    au < manifest ; 1977 ; Acta Neuropathologica Volume 40 ; 40 >
-    au < manifest ; 1978 ; Acta Neuropathologica Volume 41 ; 41 >
-    au < manifest ; 1978 ; Acta Neuropathologica Volume 42 ; 42 >
-    au < manifest ; 1978 ; Acta Neuropathologica Volume 43 ; 43 >
-    au < manifest ; 1978 ; Acta Neuropathologica Volume 44 ; 44 >
-    au < manifest ; 1979 ; Acta Neuropathologica Volume 45 ; 45 >
-    au < manifest ; 1979 ; Acta Neuropathologica Volume 46 ; 46 >
-    au < manifest ; 1979 ; Acta Neuropathologica Volume 47 ; 47 >
-    au < manifest ; 1979 ; Acta Neuropathologica Volume 48 ; 48 >
-    au < manifest ; 1980 ; Acta Neuropathologica Volume 49 ; 49 >
-    au < manifest ; 1980 ; Acta Neuropathologica Volume 50 ; 50 >
-    au < manifest ; 1980 ; Acta Neuropathologica Volume 51 ; 51 >
-    au < manifest ; 1980 ; Acta Neuropathologica Volume 52 ; 52 >
-    au < manifest ; 1981 ; Acta Neuropathologica Volume 53 ; 53 >
-    au < manifest ; 1981 ; Acta Neuropathologica Volume 54 ; 54 >
-    au < manifest ; 1981 ; Acta Neuropathologica Volume 55 ; 55 >
-    au < manifest ; 1982 ; Acta Neuropathologica Volume 56 ; 56 >
-    au < manifest ; 1982 ; Acta Neuropathologica Volume 57 ; 57 >
-    au < manifest ; 1982 ; Acta Neuropathologica Volume 58 ; 58 >
-    au < manifest ; 1983 ; Acta Neuropathologica Volume 59 ; 59 >
-    au < manifest ; 1983 ; Acta Neuropathologica Volume 60 ; 60 >
-    au < manifest ; 1983 ; Acta Neuropathologica Volume 61 ; 61 >
-    au < manifest ; 1983-1984 ; Acta Neuropathologica Volume 62 ; 62 >
-    au < manifest ; 1984 ; Acta Neuropathologica Volume 63 ; 63 >
-    au < manifest ; 1984 ; Acta Neuropathologica Volume 64 ; 64 >
-    au < manifest ; 1984-1985 ; Acta Neuropathologica Volume 65 ; 65 >
-    au < manifest ; 1985 ; Acta Neuropathologica Volume 66 ; 66 >
-    au < manifest ; 1985 ; Acta Neuropathologica Volume 67 ; 67 >
-    au < manifest ; 1985 ; Acta Neuropathologica Volume 68 ; 68 >
-    au < manifest ; 1986 ; Acta Neuropathologica Volume 69 ; 69 >
-    au < manifest ; 1986 ; Acta Neuropathologica Volume 70 ; 70 >
-    au < manifest ; 1986 ; Acta Neuropathologica Volume 71 ; 71 >
-    au < manifest ; 1986-1987 ; Acta Neuropathologica Volume 72 ; 72 >
-    au < manifest ; 1987 ; Acta Neuropathologica Volume 73 ; 73 >
-    au < manifest ; 1987 ; Acta Neuropathologica Volume 74 ; 74 >
-    au < manifest ; 1987-1988 ; Acta Neuropathologica Volume 75 ; 75 >
-    au < manifest ; 1988 ; Acta Neuropathologica Volume 76 ; 76 >
-    au < manifest ; 1988-1989 ; Acta Neuropathologica Volume 77 ; 77 >
-    au < manifest ; 1989 ; Acta Neuropathologica Volume 78 ; 78 >
-    au < manifest ; 1989-1990 ; Acta Neuropathologica Volume 79 ; 79 >
-    au < manifest ; 1990 ; Acta Neuropathologica Volume 80 ; 80 >
-    au < manifest ; 1990-1991 ; Acta Neuropathologica Volume 81 ; 81 >
-    au < manifest ; 1991 ; Acta Neuropathologica Volume 82 ; 82 >
-    au < manifest ; 1991-1992 ; Acta Neuropathologica Volume 83 ; 83 >
-    au < manifest ; 1992 ; Acta Neuropathologica Volume 84 ; 84 >
-    au < manifest ; 1992-1993 ; Acta Neuropathologica Volume 85 ; 85 >
-    au < manifest ; 1993 ; Acta Neuropathologica Volume 86 ; 86 >
-    au < manifest ; 1994 ; Acta Neuropathologica Volume 87 ; 87 >
-    au < manifest ; 1994 ; Acta Neuropathologica Volume 88 ; 88 >
-    au < manifest ; 1995 ; Acta Neuropathologica Volume 89 ; 89 >
-    au < manifest ; 1995 ; Acta Neuropathologica Volume 90 ; 90 >
-    au < testing ; 1995-1996 ; Acta Neuropathologica Volume 91 ; 91 >
-    au < testing ; 1996 ; Acta Neuropathologica Volume 92 ; 92 >
-    au < testing ; 1996-1997 ; Acta Neuropathologica Volume 93 ; 93 >
-    au < testing ; 1997 ; Acta Neuropathologica Volume 94 ; 94 >
-    au < testing ; 1997 ; Acta Neuropathologica Volume 95 ; 95 >
-    au < testing ; 1998 ; Acta Neuropathologica Volume 96 ; 96 >
-    au < testing ; 1999 ; Acta Neuropathologica Volume 97 ; 97 >
-    au < testing ; 1999 ; Acta Neuropathologica Volume 98 ; 98 >
-    au < testing ; 2000 ; Acta Neuropathologica Volume 99 ; 99 >
-    au < testing ; 2000 ; Acta Neuropathologica Volume 100 ; 100 >
-    au < testing ; 2001 ; Acta Neuropathologica Volume 101 ; 101 >
-    au < testing ; 2001 ; Acta Neuropathologica Volume 102 ; 102 >
-    au < testing ; 2002 ; Acta Neuropathologica Volume 103 ; 103 >
-    au < testing ; 2002 ; Acta Neuropathologica Volume 104 ; 104 >
-    au < testing ; 2003 ; Acta Neuropathologica Volume 105 ; 105 >
-    au < testing ; 2003 ; Acta Neuropathologica Volume 106 ; 106 >
-    au < testing ; 2004 ; Acta Neuropathologica Volume 107 ; 107 >
-    au < testing ; 2004 ; Acta Neuropathologica Volume 108 ; 108 >
-    au < testing ; 2005 ; Acta Neuropathologica Volume 109 ; 109 >
-    au < testing ; 2005 ; Acta Neuropathologica Volume 110 ; 110 >
-    au < testing ; 2006 ; Acta Neuropathologica Volume 111 ; 111 >
-    au < testing ; 2006 ; Acta Neuropathologica Volume 112 ; 112 >
-    au < testing ; 2007 ; Acta Neuropathologica Volume 113 ; 113 >
-    au < testing ; 2007 ; Acta Neuropathologica Volume 114 ; 114 >
-    au < testing ; 2008 ; Acta Neuropathologica Volume 115 ; 115 >
-    au < testing ; 2008 ; Acta Neuropathologica Volume 116 ; 116 >
-    au < testing ; 2009 ; Acta Neuropathologica Volume 117 ; 117 >
-    au < testing ; 2009 ; Acta Neuropathologica Volume 118 ; 118 >
-    au < testing ; 2010 ; Acta Neuropathologica Volume 119 ; 119 >
-    au < testing ; 2010 ; Acta Neuropathologica Volume 120 ; 120 >
+    au < testing ; 1961-1962 ; Acta Neuropathologica Volume 1 ; 1 >
+    au < testing ; 1962-1963 ; Acta Neuropathologica Volume 2 ; 2 >
+    au < testing ; 1963-1964 ; Acta Neuropathologica Volume 3 ; 3 >
+    au < testing ; 1964-1965 ; Acta Neuropathologica Volume 4 ; 4 >
+    au < testing ; 1965 ; Acta Neuropathologica Volume 5 ; 5 >
+    au < testing ; 1966 ; Acta Neuropathologica Volume 6 ; 6 >
+    au < testing ; 1966-1967 ; Acta Neuropathologica Volume 7 ; 7 >
+    au < testing ; 1967 ; Acta Neuropathologica Volume 8 ; 8 >
+    au < testing ; 1967 ; Acta Neuropathologica Volume 9 ; 9 >
+    au < testing ; 1968 ; Acta Neuropathologica Volume 10 ; 10 >
+    au < testing ; 1968 ; Acta Neuropathologica Volume 11 ; 11 >
+    au < testing ; 1969 ; Acta Neuropathologica Volume 12 ; 12 >
+    au < testing ; 1969 ; Acta Neuropathologica Volume 13 ; 13 >
+    au < testing ; 1969-1970 ; Acta Neuropathologica Volume 14 ; 14 >
+    au < testing ; 1970 ; Acta Neuropathologica Volume 15 ; 15 >
+    au < testing ; 1970 ; Acta Neuropathologica Volume 16 ; 16 >
+    au < testing ; 1971 ; Acta Neuropathologica Volume 17 ; 17 >
+    au < testing ; 1971 ; Acta Neuropathologica Volume 18 ; 18 >
+    au < testing ; 1971 ; Acta Neuropathologica Volume 19 ; 19 >
+    au < testing ; 1972 ; Acta Neuropathologica Volume 20 ; 20 >
+    au < testing ; 1972 ; Acta Neuropathologica Volume 21 ; 21 >
+    au < testing ; 1972 ; Acta Neuropathologica Volume 22 ; 22 >
+    au < testing ; 1973 ; Acta Neuropathologica Volume 23 ; 23 >
+    au < testing ; 1973 ; Acta Neuropathologica Volume 24 ; 24 >
+    au < testing ; 1973 ; Acta Neuropathologica Volume 25 ; 25 >
+    au < testing ; 1973 ; Acta Neuropathologica Volume 26 ; 26 >
+    au < testing ; 1974 ; Acta Neuropathologica Volume 27 ; 27 >
+    au < testing ; 1974 ; Acta Neuropathologica Volume 28 ; 28 >
+    au < testing ; 1974 ; Acta Neuropathologica Volume 29 ; 29 >
+    au < testing ; 1974 ; Acta Neuropathologica Volume 30 ; 30 >
+    au < testing ; 1975 ; Acta Neuropathologica Volume 31 ; 31 >
+    au < testing ; 1975 ; Acta Neuropathologica Volume 32 ; 32 >
+    au < testing ; 1975 ; Acta Neuropathologica Volume 33 ; 33 >
+    au < testing ; 1976 ; Acta Neuropathologica Volume 34 ; 34 >
+    au < testing ; 1976 ; Acta Neuropathologica Volume 35 ; 35 >
+    au < testing ; 1976 ; Acta Neuropathologica Volume 36 ; 36 >
+    au < testing ; 1977 ; Acta Neuropathologica Volume 37 ; 37 >
+    au < testing ; 1977 ; Acta Neuropathologica Volume 38 ; 38 >
+    au < testing ; 1977 ; Acta Neuropathologica Volume 39 ; 39 >
+    au < testing ; 1977 ; Acta Neuropathologica Volume 40 ; 40 >
+    au < testing ; 1978 ; Acta Neuropathologica Volume 41 ; 41 >
+    au < testing ; 1978 ; Acta Neuropathologica Volume 42 ; 42 >
+    au < testing ; 1978 ; Acta Neuropathologica Volume 43 ; 43 >
+    au < testing ; 1978 ; Acta Neuropathologica Volume 44 ; 44 >
+    au < testing ; 1979 ; Acta Neuropathologica Volume 45 ; 45 >
+    au < testing ; 1979 ; Acta Neuropathologica Volume 46 ; 46 >
+    au < testing ; 1979 ; Acta Neuropathologica Volume 47 ; 47 >
+    au < testing ; 1979 ; Acta Neuropathologica Volume 48 ; 48 >
+    au < testing ; 1980 ; Acta Neuropathologica Volume 49 ; 49 >
+    au < testing ; 1980 ; Acta Neuropathologica Volume 50 ; 50 >
+    au < testing ; 1980 ; Acta Neuropathologica Volume 51 ; 51 >
+    au < testing ; 1980 ; Acta Neuropathologica Volume 52 ; 52 >
+    au < testing ; 1981 ; Acta Neuropathologica Volume 53 ; 53 >
+    au < testing ; 1981 ; Acta Neuropathologica Volume 54 ; 54 >
+    au < testing ; 1981 ; Acta Neuropathologica Volume 55 ; 55 >
+    au < testing ; 1982 ; Acta Neuropathologica Volume 56 ; 56 >
+    au < testing ; 1982 ; Acta Neuropathologica Volume 57 ; 57 >
+    au < testing ; 1982 ; Acta Neuropathologica Volume 58 ; 58 >
+    au < testing ; 1983 ; Acta Neuropathologica Volume 59 ; 59 >
+    au < testing ; 1983 ; Acta Neuropathologica Volume 60 ; 60 >
+    au < testing ; 1983 ; Acta Neuropathologica Volume 61 ; 61 >
+    au < testing ; 1983-1984 ; Acta Neuropathologica Volume 62 ; 62 >
+    au < testing ; 1984 ; Acta Neuropathologica Volume 63 ; 63 >
+    au < testing ; 1984 ; Acta Neuropathologica Volume 64 ; 64 >
+    au < testing ; 1984-1985 ; Acta Neuropathologica Volume 65 ; 65 >
+    au < testing ; 1985 ; Acta Neuropathologica Volume 66 ; 66 >
+    au < testing ; 1985 ; Acta Neuropathologica Volume 67 ; 67 >
+    au < testing ; 1985 ; Acta Neuropathologica Volume 68 ; 68 >
+    au < testing ; 1986 ; Acta Neuropathologica Volume 69 ; 69 >
+    au < testing ; 1986 ; Acta Neuropathologica Volume 70 ; 70 >
+    au < testing ; 1986 ; Acta Neuropathologica Volume 71 ; 71 >
+    au < testing ; 1986-1987 ; Acta Neuropathologica Volume 72 ; 72 >
+    au < testing ; 1987 ; Acta Neuropathologica Volume 73 ; 73 >
+    au < testing ; 1987 ; Acta Neuropathologica Volume 74 ; 74 >
+    au < testing ; 1987-1988 ; Acta Neuropathologica Volume 75 ; 75 >
+    au < testing ; 1988 ; Acta Neuropathologica Volume 76 ; 76 >
+    au < testing ; 1988-1989 ; Acta Neuropathologica Volume 77 ; 77 >
+    au < testing ; 1989 ; Acta Neuropathologica Volume 78 ; 78 >
+    au < testing ; 1989-1990 ; Acta Neuropathologica Volume 79 ; 79 >
+    au < testing ; 1990 ; Acta Neuropathologica Volume 80 ; 80 >
+    au < testing ; 1990-1991 ; Acta Neuropathologica Volume 81 ; 81 >
+    au < testing ; 1991 ; Acta Neuropathologica Volume 82 ; 82 >
+    au < testing ; 1991-1992 ; Acta Neuropathologica Volume 83 ; 83 >
+    au < testing ; 1992 ; Acta Neuropathologica Volume 84 ; 84 >
+    au < testing ; 1992-1993 ; Acta Neuropathologica Volume 85 ; 85 >
+    au < testing ; 1993 ; Acta Neuropathologica Volume 86 ; 86 >
+    au < testing ; 1994 ; Acta Neuropathologica Volume 87 ; 87 >
+    au < testing ; 1994 ; Acta Neuropathologica Volume 88 ; 88 >
+    au < testing ; 1995 ; Acta Neuropathologica Volume 89 ; 89 >
+    au < testing ; 1995 ; Acta Neuropathologica Volume 90 ; 90 >
+    au < ready ; 1995-1996 ; Acta Neuropathologica Volume 91 ; 91 >
+    au < ready ; 1996 ; Acta Neuropathologica Volume 92 ; 92 >
+    au < ready ; 1996-1997 ; Acta Neuropathologica Volume 93 ; 93 >
+    au < ready ; 1997 ; Acta Neuropathologica Volume 94 ; 94 >
+    au < ready ; 1997 ; Acta Neuropathologica Volume 95 ; 95 >
+    au < ready ; 1998 ; Acta Neuropathologica Volume 96 ; 96 >
+    au < ready ; 1999 ; Acta Neuropathologica Volume 97 ; 97 >
+    au < ready ; 1999 ; Acta Neuropathologica Volume 98 ; 98 >
+    au < ready ; 2000 ; Acta Neuropathologica Volume 99 ; 99 >
+    au < ready ; 2000 ; Acta Neuropathologica Volume 100 ; 100 >
+    au < ready ; 2001 ; Acta Neuropathologica Volume 101 ; 101 >
+    au < ready ; 2001 ; Acta Neuropathologica Volume 102 ; 102 >
+    au < ready ; 2002 ; Acta Neuropathologica Volume 103 ; 103 >
+    au < ready ; 2002 ; Acta Neuropathologica Volume 104 ; 104 >
+    au < notReady ; 2003 ; Acta Neuropathologica Volume 105 ; 105 >
+    au < ready ; 2003 ; Acta Neuropathologica Volume 106 ; 106 >
+    au < ready ; 2004 ; Acta Neuropathologica Volume 107 ; 107 >
+    au < ready ; 2004 ; Acta Neuropathologica Volume 108 ; 108 >
+    au < ready ; 2005 ; Acta Neuropathologica Volume 109 ; 109 >
+    au < ready ; 2005 ; Acta Neuropathologica Volume 110 ; 110 >
+    au < ready ; 2006 ; Acta Neuropathologica Volume 111 ; 111 >
+    au < ready ; 2006 ; Acta Neuropathologica Volume 112 ; 112 >
+    au < ready ; 2007 ; Acta Neuropathologica Volume 113 ; 113 >
+    au < ready ; 2007 ; Acta Neuropathologica Volume 114 ; 114 >
+    au < ready ; 2008 ; Acta Neuropathologica Volume 115 ; 115 >
+    au < ready ; 2008 ; Acta Neuropathologica Volume 116 ; 116 >
+    au < ready ; 2009 ; Acta Neuropathologica Volume 117 ; 117 >
+    au < ready ; 2009 ; Acta Neuropathologica Volume 118 ; 118 >
+    au < ready ; 2010 ; Acta Neuropathologica Volume 119 ; 119 >
+    au < ready ; 2010 ; Acta Neuropathologica Volume 120 ; 120 >
 
   }
 
@@ -5723,67 +5724,68 @@
     >
 
     param[journal_issn] = 0009-5915
+    attr[where] = content3a,content3b
 
-    au < manifest ; 1939 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section B: Chromosoma Volume 1 ; 1 >
-    au < manifest ; 1941 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section B: Chromosoma Volume 2 ; 2 >
-    au < manifest ; 1950 ; Chromosoma Volume 3 ; 3 >
-    au < manifest ; 1950 ; Chromosoma Volume 4 ; 4 >
-    au < manifest ; 1953 ; Chromosoma Volume 5 ; 5 >
-    au < manifest ; 1953 ; Chromosoma Volume 6 ; 6 >
-    au < manifest ; 1955 ; Chromosoma Volume 7 ; 7 >
-    au < manifest ; 1956 ; Chromosoma Volume 8 ; 8 >
-    au < manifest ; 1957 ; Chromosoma Volume 9 ; 9 >
-    au < manifest ; 1959 ; Chromosoma Volume 10 ; 10 >
-    au < manifest ; 1960 ; Chromosoma Volume 11 ; 11 >
-    au < manifest ; 1961 ; Chromosoma Volume 12 ; 12 >
-    au < manifest ; 1962-1963 ; Chromosoma Volume 13 ; 13 >
-    au < manifest ; 1963 ; Chromosoma Volume 14 ; 14 >
-    au < manifest ; 1964 ; Chromosoma Volume 15 ; 15 >
-    au < manifest ; 1965 ; Chromosoma Volume 16 ; 16 >
-    au < manifest ; 1965 ; Chromosoma Volume 17 ; 17 >
-    au < manifest ; 1966 ; Chromosoma Volume 18 ; 18 >
-    au < manifest ; 1966 ; Chromosoma Volume 19 ; 19 >
-    au < manifest ; 1966-1967 ; Chromosoma Volume 20 ; 20 >
-    au < manifest ; 1967 ; Chromosoma Volume 21 ; 21 >
-    au < manifest ; 1967 ; Chromosoma Volume 22 ; 22 >
-    au < manifest ; 1967-1968 ; Chromosoma Volume 23 ; 23 >
-    au < manifest ; 1968 ; Chromosoma Volume 24 ; 24 >
-    au < manifest ; 1968 ; Chromosoma Volume 25 ; 25 >
-    au < manifest ; 1969 ; Chromosoma Volume 26 ; 26 >
-    au < manifest ; 1969 ; Chromosoma Volume 27 ; 27 >
-    au < manifest ; 1969 ; Chromosoma Volume 28 ; 28 >
-    au < manifest ; 1970 ; Chromosoma Volume 29 ; 29 >
-    au < manifest ; 1970 ; Chromosoma Volume 30 ; 30 >
-    au < manifest ; 1970 ; Chromosoma Volume 31 ; 31 >
-    au < manifest ; 1970-1971 ; Chromosoma Volume 32 ; 32 >
-    au < manifest ; 1971 ; Chromosoma Volume 33 ; 33 >
-    au < manifest ; 1971 ; Chromosoma Volume 34 ; 34 >
-    au < manifest ; 1971 ; Chromosoma Volume 35 ; 35 >
-    au < manifest ; 1971-1972 ; Chromosoma Volume 36 ; 36 >
-    au < manifest ; 1972 ; Chromosoma Volume 37 ; 37 >
-    au < manifest ; 1972 ; Chromosoma Volume 38 ; 38 >
-    au < manifest ; 1972 ; Chromosoma Volume 39 ; 39 >
-    au < manifest ; 1973 ; Chromosoma Volume 40 ; 40 >
-    au < manifest ; 1973 ; Chromosoma Volume 41 ; 41 >
-    au < manifest ; 1973 ; Chromosoma Volume 42 ; 42 >
-    au < manifest ; 1973 ; Chromosoma Volume 43 ; 43 >
-    au < manifest ; 1973-1974 ; Chromosoma Volume 44 ; 44 >
-    au < manifest ; 1974 ; Chromosoma Volume 45 ; 45 >
-    au < manifest ; 1974 ; Chromosoma Volume 46 ; 46 >
-    au < manifest ; 1974 ; Chromosoma Volume 47 ; 47 >
-    au < manifest ; 1974 ; Chromosoma Volume 48 ; 48 >
-    au < manifest ; 1974-1975 ; Chromosoma Volume 49 ; 49 >
-    au < manifest ; 1975 ; Chromosoma Volume 50 ; 50 >
-    au < manifest ; 1975 ; Chromosoma Volume 51 ; 51 >
-    au < manifest ; 1975 ; Chromosoma Volume 52 ; 52 >
-    au < manifest ; 1975 ; Chromosoma Volume 53 ; 53 >
-    au < manifest ; 1976 ; Chromosoma Volume 54 ; 54 >
-    au < manifest ; 1976 ; Chromosoma Volume 55 ; 55 >
-    au < manifest ; 1976 ; Chromosoma Volume 56 ; 56 >
-    au < manifest ; 1976 ; Chromosoma Volume 57 ; 57 >
-    au < manifest ; 1976 ; Chromosoma Volume 58 ; 58 >
-    au < manifest ; 1976-1977 ; Chromosoma Volume 59 ; 59 >
-    au < manifest ; 1977 ; Chromosoma Volume 60 ; 60 >
+    au < testing ; 1939 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section B: Chromosoma Volume 1 ; 1 >
+    au < testing ; 1941 ; Zeitschrift für Zellforschung und mikroskopische Anatomie - Section B: Chromosoma Volume 2 ; 2 >
+    au < testing ; 1950 ; Chromosoma Volume 3 ; 3 >
+    au < testing ; 1950 ; Chromosoma Volume 4 ; 4 >
+    au < testing ; 1953 ; Chromosoma Volume 5 ; 5 >
+    au < testing ; 1953 ; Chromosoma Volume 6 ; 6 >
+    au < testing ; 1955 ; Chromosoma Volume 7 ; 7 >
+    au < testing ; 1956 ; Chromosoma Volume 8 ; 8 >
+    au < testing ; 1957 ; Chromosoma Volume 9 ; 9 >
+    au < testing ; 1959 ; Chromosoma Volume 10 ; 10 >
+    au < testing ; 1960 ; Chromosoma Volume 11 ; 11 >
+    au < testing ; 1961 ; Chromosoma Volume 12 ; 12 >
+    au < testing ; 1962-1963 ; Chromosoma Volume 13 ; 13 >
+    au < testing ; 1963 ; Chromosoma Volume 14 ; 14 >
+    au < testing ; 1964 ; Chromosoma Volume 15 ; 15 >
+    au < testing ; 1965 ; Chromosoma Volume 16 ; 16 >
+    au < testing ; 1965 ; Chromosoma Volume 17 ; 17 >
+    au < testing ; 1966 ; Chromosoma Volume 18 ; 18 >
+    au < testing ; 1966 ; Chromosoma Volume 19 ; 19 >
+    au < testing ; 1966-1967 ; Chromosoma Volume 20 ; 20 >
+    au < testing ; 1967 ; Chromosoma Volume 21 ; 21 >
+    au < testing ; 1967 ; Chromosoma Volume 22 ; 22 >
+    au < testing ; 1967-1968 ; Chromosoma Volume 23 ; 23 >
+    au < testing ; 1968 ; Chromosoma Volume 24 ; 24 >
+    au < testing ; 1968 ; Chromosoma Volume 25 ; 25 >
+    au < testing ; 1969 ; Chromosoma Volume 26 ; 26 >
+    au < testing ; 1969 ; Chromosoma Volume 27 ; 27 >
+    au < testing ; 1969 ; Chromosoma Volume 28 ; 28 >
+    au < testing ; 1970 ; Chromosoma Volume 29 ; 29 >
+    au < testing ; 1970 ; Chromosoma Volume 30 ; 30 >
+    au < testing ; 1970 ; Chromosoma Volume 31 ; 31 >
+    au < testing ; 1970-1971 ; Chromosoma Volume 32 ; 32 >
+    au < testing ; 1971 ; Chromosoma Volume 33 ; 33 >
+    au < testing ; 1971 ; Chromosoma Volume 34 ; 34 >
+    au < testing ; 1971 ; Chromosoma Volume 35 ; 35 >
+    au < testing ; 1971-1972 ; Chromosoma Volume 36 ; 36 >
+    au < testing ; 1972 ; Chromosoma Volume 37 ; 37 >
+    au < testing ; 1972 ; Chromosoma Volume 38 ; 38 >
+    au < testing ; 1972 ; Chromosoma Volume 39 ; 39 >
+    au < testing ; 1973 ; Chromosoma Volume 40 ; 40 >
+    au < testing ; 1973 ; Chromosoma Volume 41 ; 41 >
+    au < testing ; 1973 ; Chromosoma Volume 42 ; 42 >
+    au < testing ; 1973 ; Chromosoma Volume 43 ; 43 >
+    au < testing ; 1973-1974 ; Chromosoma Volume 44 ; 44 >
+    au < testing ; 1974 ; Chromosoma Volume 45 ; 45 >
+    au < testing ; 1974 ; Chromosoma Volume 46 ; 46 >
+    au < testing ; 1974 ; Chromosoma Volume 47 ; 47 >
+    au < testing ; 1974 ; Chromosoma Volume 48 ; 48 >
+    au < testing ; 1974-1975 ; Chromosoma Volume 49 ; 49 >
+    au < testing ; 1975 ; Chromosoma Volume 50 ; 50 >
+    au < testing ; 1975 ; Chromosoma Volume 51 ; 51 >
+    au < testing ; 1975 ; Chromosoma Volume 52 ; 52 >
+    au < testing ; 1975 ; Chromosoma Volume 53 ; 53 >
+    au < testing ; 1976 ; Chromosoma Volume 54 ; 54 >
+    au < testing ; 1976 ; Chromosoma Volume 55 ; 55 >
+    au < testing ; 1976 ; Chromosoma Volume 56 ; 56 >
+    au < testing ; 1976 ; Chromosoma Volume 57 ; 57 >
+    au < testing ; 1976 ; Chromosoma Volume 58 ; 58 >
+    au < testing ; 1976-1977 ; Chromosoma Volume 59 ; 59 >
+    au < testing ; 1977 ; Chromosoma Volume 60 ; 60 >
     au < manifest ; 1977 ; Chromosoma Volume 61 ; 61 >
     au < manifest ; 1977 ; Chromosoma Volume 62 ; 62 >
     au < manifest ; 1977 ; Chromosoma Volume 63 ; 63 >
@@ -7727,61 +7729,60 @@
     >
     
     param[journal_issn] = 0012-186X
-    attr[where] = sul-lockss30b
 
-    au < testing ; 1965-1966 ; Diabetologia Volume 1 ; 1 >
-    au < testing ; 1966 ; Diabetologia Volume 2 ; 2 >
-    au < testing ; 1967 ; Diabetologia Volume 3 ; 3 >
-    au < testing ; 1968 ; Diabetologia Volume 4 ; 4 >
-    au < testing ; 1969 ; Diabetologia Volume 5 ; 5 >
-    au < testing ; 1970 ; Diabetologia Volume 6 ; 6 >
-    au < testing ; 1971 ; Diabetologia Volume 7 ; 7 >
-    au < testing ; 1972 ; Diabetologia Volume 8 ; 8 >
-    au < testing ; 1973 ; Diabetologia Volume 9 ; 9 >
-    au < testing ; 1974 ; Diabetologia Volume 10 ; 10 >
-    au < testing ; 1975 ; Diabetologia Volume 11 ; 11 >
-    au < testing ; 1976 ; Diabetologia Volume 12 ; 12 >
-    au < testing ; 1977 ; Diabetologia Volume 13 ; 13 >
-    au < testing ; 1978 ; Diabetologia Volume 14 ; 14 >
-    au < testing ; 1978 ; Diabetologia Volume 15 ; 15 >
-    au < testing ; 1979 ; Diabetologia Volume 16 ; 16 >
-    au < testing ; 1979 ; Diabetologia Volume 17 ; 17 >
-    au < testing ; 1980 ; Diabetologia Volume 18 ; 18 >
-    au < testing ; 1980 ; Diabetologia Volume 19 ; 19 >
-    au < testing ; 1981 ; Diabetologia Volume 20 ; 20 >
-    au < testing ; 1981 ; Diabetologia Volume 21 ; 21 >
-    au < testing ; 1982 ; Diabetologia Volume 22 ; 22 >
-    au < testing ; 1982 ; Diabetologia Volume 23 ; 23 >
-    au < testing ; 1983 ; Diabetologia Volume 24 ; 24 >
-    au < testing ; 1983 ; Diabetologia Volume 25 ; 25 >
-    au < testing ; 1984 ; Diabetologia Volume 26 ; 26 >
-    au < testing ; 1984 ; Diabetologia Volume 27 ; 27 >
-    au < testing ; 1985 ; Diabetologia Volume 28 ; 28 >
-    au < testing ; 1986 ; Diabetologia Volume 29 ; 29 >
-    au < testing ; 1987 ; Diabetologia Volume 30 ; 30 >
-    au < testing ; 1988 ; Diabetologia Volume 31 ; 31 >
-    au < testing ; 1989 ; Diabetologia Volume 32 ; 32 >
-    au < testing ; 1990 ; Diabetologia Volume 33 ; 33 >
-    au < testing ; 1991 ; Diabetologia Volume 34 ; 34 >
-    au < testing ; 1992 ; Diabetologia Volume 35 ; 35 >
-    au < testing ; 1993 ; Diabetologia Volume 36 ; 36 >
-    au < testing ; 1994 ; Diabetologia Volume 37 ; 37 >
-    au < testing ; 1995 ; Diabetologia Volume 38 ; 38 >
-    au < testing ; 1996 ; Diabetologia Volume 39 ; 39 >
-    au < testing ; 1997 ; Diabetologia Volume 40 ; 40 >
-    au < testing ; 1998 ; Diabetologia Volume 41 ; 41 >
-    au < testing ; 1999 ; Diabetologia Volume 42 ; 42 >
-    au < testing ; 2000 ; Diabetologia Volume 43 ; 43 >
-    au < testing ; 2001 ; Diabetologia Volume 44 ; 44 >
-    au < testing ; 2002 ; Diabetologia Volume 45 ; 45 >
-    au < testing ; 2003 ; Diabetologia Volume 46 ; 46 >
-    au < testing ; 2004 ; Diabetologia Volume 47 ; 47 >
-    au < testing ; 2005 ; Diabetologia Volume 48 ; 48 >
-    au < testing ; 2006 ; Diabetologia Volume 49 ; 49 >
-    au < testing ; 2007 ; Diabetologia Volume 50 ; 50 >
-    au < testing ; 2008 ; Diabetologia Volume 51 ; 51 >
-    au < testing ; 2009 ; Diabetologia Volume 52 ; 52 >
-    au < testing ; 2010 ; Diabetologia Volume 53 ; 53 >
+    au < ready ; 1965-1966 ; Diabetologia Volume 1 ; 1 >
+    au < ready ; 1966 ; Diabetologia Volume 2 ; 2 >
+    au < ready ; 1967 ; Diabetologia Volume 3 ; 3 >
+    au < ready ; 1968 ; Diabetologia Volume 4 ; 4 >
+    au < ready ; 1969 ; Diabetologia Volume 5 ; 5 >
+    au < ready ; 1970 ; Diabetologia Volume 6 ; 6 >
+    au < ready ; 1971 ; Diabetologia Volume 7 ; 7 >
+    au < ready ; 1972 ; Diabetologia Volume 8 ; 8 >
+    au < ready ; 1973 ; Diabetologia Volume 9 ; 9 >
+    au < ready ; 1974 ; Diabetologia Volume 10 ; 10 >
+    au < ready ; 1975 ; Diabetologia Volume 11 ; 11 >
+    au < ready ; 1976 ; Diabetologia Volume 12 ; 12 >
+    au < ready ; 1977 ; Diabetologia Volume 13 ; 13 >
+    au < ready ; 1978 ; Diabetologia Volume 14 ; 14 >
+    au < ready ; 1978 ; Diabetologia Volume 15 ; 15 >
+    au < ready ; 1979 ; Diabetologia Volume 16 ; 16 >
+    au < ready ; 1979 ; Diabetologia Volume 17 ; 17 >
+    au < ready ; 1980 ; Diabetologia Volume 18 ; 18 >
+    au < ready ; 1980 ; Diabetologia Volume 19 ; 19 >
+    au < ready ; 1981 ; Diabetologia Volume 20 ; 20 >
+    au < ready ; 1981 ; Diabetologia Volume 21 ; 21 >
+    au < ready ; 1982 ; Diabetologia Volume 22 ; 22 >
+    au < ready ; 1982 ; Diabetologia Volume 23 ; 23 >
+    au < ready ; 1983 ; Diabetologia Volume 24 ; 24 >
+    au < ready ; 1983 ; Diabetologia Volume 25 ; 25 >
+    au < ready ; 1984 ; Diabetologia Volume 26 ; 26 >
+    au < ready ; 1984 ; Diabetologia Volume 27 ; 27 >
+    au < ready ; 1985 ; Diabetologia Volume 28 ; 28 >
+    au < ready ; 1986 ; Diabetologia Volume 29 ; 29 >
+    au < ready ; 1987 ; Diabetologia Volume 30 ; 30 >
+    au < ready ; 1988 ; Diabetologia Volume 31 ; 31 >
+    au < ready ; 1989 ; Diabetologia Volume 32 ; 32 >
+    au < ready ; 1990 ; Diabetologia Volume 33 ; 33 >
+    au < ready ; 1991 ; Diabetologia Volume 34 ; 34 >
+    au < ready ; 1992 ; Diabetologia Volume 35 ; 35 >
+    au < ready ; 1993 ; Diabetologia Volume 36 ; 36 >
+    au < ready ; 1994 ; Diabetologia Volume 37 ; 37 >
+    au < ready ; 1995 ; Diabetologia Volume 38 ; 38 >
+    au < ready ; 1996 ; Diabetologia Volume 39 ; 39 >
+    au < ready ; 1997 ; Diabetologia Volume 40 ; 40 >
+    au < ready ; 1998 ; Diabetologia Volume 41 ; 41 >
+    au < ready ; 1999 ; Diabetologia Volume 42 ; 42 >
+    au < ready ; 2000 ; Diabetologia Volume 43 ; 43 >
+    au < ready ; 2001 ; Diabetologia Volume 44 ; 44 >
+    au < ready ; 2002 ; Diabetologia Volume 45 ; 45 >
+    au < ready ; 2003 ; Diabetologia Volume 46 ; 46 >
+    au < ready ; 2004 ; Diabetologia Volume 47 ; 47 >
+    au < ready ; 2005 ; Diabetologia Volume 48 ; 48 >
+    au < ready ; 2006 ; Diabetologia Volume 49 ; 49 >
+    au < ready ; 2007 ; Diabetologia Volume 50 ; 50 >
+    au < ready ; 2008 ; Diabetologia Volume 51 ; 51 >
+    au < ready ; 2009 ; Diabetologia Volume 52 ; 52 >
+    au < ready ; 2010 ; Diabetologia Volume 53 ; 53 >
 
   }
 
@@ -9873,36 +9874,35 @@
     >
     
     param[journal_issn] = 0922-6435
-    attr[where] = content5b
 
-    au < testing ; 1989-1990 ; Experimental Astronomy Volume 1 ; 1 >
-    au < testing ; 1991-1992 ; Experimental Astronomy Volume 2 ; 2 >
-    au < testing ; 1994 ; Experimental Astronomy Volume 3 ; 3 >
-    au < testing ; 1993-1994 ; Experimental Astronomy Volume 4 ; 4 >
-    au < testing ; 1994 ; Experimental Astronomy Volume 5 ; 5 >
-    au < testing ; 1995 ; Experimental Astronomy Volume 6 ; 6 >
-    au < testing ; 1997 ; Experimental Astronomy Volume 7 ; 7 >
-    au < testing ; 1998 ; Experimental Astronomy Volume 8 ; 8 >
-    au < testing ; 1999 ; Experimental Astronomy Volume 9 ; 9 >
-    au < testing ; 2000 ; Experimental Astronomy Volume 10 ; 10 >
-    au < testing ; 2001 ; Experimental Astronomy Volume 11 ; 11 >
-    au < testing ; 2001 ; Experimental Astronomy Volume 12 ; 12 >
-    au < testing ; 2002 ; Experimental Astronomy Volume 13 ; 13 >
-    au < testing ; 2002 ; Experimental Astronomy Volume 14 ; 14 >
-    au < testing ; 2003 ; Experimental Astronomy Volume 15 ; 15 >
-    au < testing ; 2003 ; Experimental Astronomy Volume 16 ; 16 >
-    au < testing ; 2004 ; Experimental Astronomy Volume 17 ; 17 >
-    au < testing ; 2004 ; Experimental Astronomy Volume 18 ; 18 >
-    au < testing ; 2005 ; Experimental Astronomy Volume 19 ; 19 >
-    au < testing ; 2005 ; Experimental Astronomy Volume 20 ; 20 >
-    au < testing ; 2006 ; Experimental Astronomy Volume 21 ; 21 >
-    au < testing ; 2008 ; Experimental Astronomy Volume 22 ; 22 >
-    au < testing ; 2009 ; Experimental Astronomy Volume 23 ; 23 >
-    au < testing ; 2009 ; Experimental Astronomy Volume 24 ; 24 >
-    au < testing ; 2009 ; Experimental Astronomy Volume 25 ; 25 >
-    au < testing ; 2009 ; Experimental Astronomy Volume 26 ; 26 >
-    au < testing ; 2009 ; Experimental Astronomy Volume 27 ; 27 >
-    au < testing ; 2010 ; Experimental Astronomy Volume 28 ; 28 >
+    au < ready ; 1989-1990 ; Experimental Astronomy Volume 1 ; 1 >
+    au < ready ; 1991-1992 ; Experimental Astronomy Volume 2 ; 2 >
+    au < ready ; 1994 ; Experimental Astronomy Volume 3 ; 3 >
+    au < ready ; 1993-1994 ; Experimental Astronomy Volume 4 ; 4 >
+    au < ready ; 1994 ; Experimental Astronomy Volume 5 ; 5 >
+    au < ready ; 1995 ; Experimental Astronomy Volume 6 ; 6 >
+    au < ready ; 1997 ; Experimental Astronomy Volume 7 ; 7 >
+    au < ready ; 1998 ; Experimental Astronomy Volume 8 ; 8 >
+    au < ready ; 1999 ; Experimental Astronomy Volume 9 ; 9 >
+    au < ready ; 2000 ; Experimental Astronomy Volume 10 ; 10 >
+    au < ready ; 2001 ; Experimental Astronomy Volume 11 ; 11 >
+    au < ready ; 2001 ; Experimental Astronomy Volume 12 ; 12 >
+    au < ready ; 2002 ; Experimental Astronomy Volume 13 ; 13 >
+    au < ready ; 2002 ; Experimental Astronomy Volume 14 ; 14 >
+    au < ready ; 2003 ; Experimental Astronomy Volume 15 ; 15 >
+    au < ready ; 2003 ; Experimental Astronomy Volume 16 ; 16 >
+    au < ready ; 2004 ; Experimental Astronomy Volume 17 ; 17 >
+    au < ready ; 2004 ; Experimental Astronomy Volume 18 ; 18 >
+    au < ready ; 2005 ; Experimental Astronomy Volume 19 ; 19 >
+    au < ready ; 2005 ; Experimental Astronomy Volume 20 ; 20 >
+    au < ready ; 2006 ; Experimental Astronomy Volume 21 ; 21 >
+    au < ready ; 2008 ; Experimental Astronomy Volume 22 ; 22 >
+    au < ready ; 2009 ; Experimental Astronomy Volume 23 ; 23 >
+    au < ready ; 2009 ; Experimental Astronomy Volume 24 ; 24 >
+    au < ready ; 2009 ; Experimental Astronomy Volume 25 ; 25 >
+    au < ready ; 2009 ; Experimental Astronomy Volume 26 ; 26 >
+    au < ready ; 2009 ; Experimental Astronomy Volume 27 ; 27 >
+    au < ready ; 2010 ; Experimental Astronomy Volume 28 ; 28 >
 
   }
 
@@ -11799,23 +11799,23 @@
     >
     
     param[journal_issn] = 1382-4147
-    attr[where] = content4a
+    comment[1] = persistent permission error
 
-    au < testing ; 1996-1997 ; Heart Failure Reviews Volume 1 ; 1 >
-    au < testing ; 1997 ; Heart Failure Reviews Volume 2 ; 2 >
-    au < testing ; 1998 ; Heart Failure Reviews Volume 3 ; 3 >
-    au < testing ; 1999 ; Heart Failure Reviews Volume 4 ; 4 >
-    au < testing ; 2000 ; Heart Failure Reviews Volume 5 ; 5 >
-    au < testing ; 2001 ; Heart Failure Reviews Volume 6 ; 6 >
-    au < testing ; 2002 ; Heart Failure Reviews Volume 7 ; 7 >
-    au < testing ; 2003 ; Heart Failure Reviews Volume 8 ; 8 >
-    au < testing ; 2004 ; Heart Failure Reviews Volume 9 ; 9 >
-    au < testing ; 2005 ; Heart Failure Reviews Volume 10 ; 10 >
-    au < testing ; 2006 ; Heart Failure Reviews Volume 11 ; 11 >
-    au < testing ; 2007 ; Heart Failure Reviews Volume 12 ; 12 >
-    au < testing ; 2008 ; Heart Failure Reviews Volume 13 ; 13 >
-    au < testing ; 2009 ; Heart Failure Reviews Volume 14 ; 14 >
-    au < testing ; 2010 ; Heart Failure Reviews Volume 15 ; 15 >
+    au < notReady ; 1996-1997 ; Heart Failure Reviews Volume 1 ; 1 >
+    au < ready ; 1997 ; Heart Failure Reviews Volume 2 ; 2 >
+    au < ready ; 1998 ; Heart Failure Reviews Volume 3 ; 3 >
+    au < ready ; 1999 ; Heart Failure Reviews Volume 4 ; 4 >
+    au < ready ; 2000 ; Heart Failure Reviews Volume 5 ; 5 >
+    au < ready ; 2001 ; Heart Failure Reviews Volume 6 ; 6 >
+    au < ready ; 2002 ; Heart Failure Reviews Volume 7 ; 7 >
+    au < ready ; 2003 ; Heart Failure Reviews Volume 8 ; 8 >
+    au < ready ; 2004 ; Heart Failure Reviews Volume 9 ; 9 >
+    au < ready ; 2005 ; Heart Failure Reviews Volume 10 ; 10 >
+    au < ready ; 2006 ; Heart Failure Reviews Volume 11 ; 11 >
+    au < ready ; 2007 ; Heart Failure Reviews Volume 12 ; 12 >
+    au < ready ; 2008 ; Heart Failure Reviews Volume 13 ; 13 >
+    au < ready ; 2009 ; Heart Failure Reviews Volume 14 ; 14 >
+    au < ready ; 2010 ; Heart Failure Reviews Volume 15 ; 15 >
 
   }
 
@@ -17001,9 +17001,8 @@
     >
     
     param[journal_issn] = 1029-8479
-    attr[where] = content4a
 
-    au < testing ; 2010 ; Journal of High Energy Physics Volume 2010 ; 2010 >
+    au < ready ; 2010 ; Journal of High Energy Physics Volume 2010 ; 2010 >
 
   }
 
@@ -23502,7 +23501,6 @@
     >
 
     param[journal_issn] = 0937-941X
-    attr[where] = content6a
 
     au < testing ; 1990-1991 ; Osteoporosis International Volume 1 ; 1 >
     au < testing ; 1991-1992 ; Osteoporosis International Volume 2 ; 2 >
@@ -27078,12 +27076,11 @@
     
     comment[continued_from] = 0344-4325
     param[journal_issn] = 1863-2297
-    attr[where] = content5a
 
-    au < testing ; 2007 ; Seminars in Immunopathology Volume 29 ; 29 >
-    au < testing ; 2008 ; Seminars in Immunopathology Volume 30 ; 30 >
-    au < testing ; 2009 ; Seminars in Immunopathology Volume 31 ; 31 >
-    au < testing ; 2010 ; Seminars in Immunopathology Volume 32 ; 32 >
+    au < ready ; 2007 ; Seminars in Immunopathology Volume 29 ; 29 >
+    au < ready ; 2008 ; Seminars in Immunopathology Volume 30 ; 30 >
+    au < ready ; 2009 ; Seminars in Immunopathology Volume 31 ; 31 >
+    au < ready ; 2010 ; Seminars in Immunopathology Volume 32 ; 32 >
 
   }
 
@@ -27983,38 +27980,37 @@
     
     comment[continued_by] = 1863-2297
     param[journal_issn] = 0344-4325
-    attr[where] = content5a
     
-    comment[18] = subscription problem
+    comment[18] = persistent subscription problem
 
-    au < testing ; 1978 ; Springer Seminars in Immunopathology Volume 1 ; 1 >
-    au < testing ; 1979-1980 ; Springer Seminars in Immunopathology Volume 2 ; 2 >
-    au < testing ; 1980-1981 ; Springer Seminars in Immunopathology Volume 3 ; 3 >
-    au < testing ; 1981-1982 ; Springer Seminars in Immunopathology Volume 4 ; 4 >
-    au < testing ; 1982 ; Springer Seminars in Immunopathology Volume 5 ; 5 >
-    au < testing ; 1983 ; Springer Seminars in Immunopathology Volume 6 ; 6 >
-    au < testing ; 1984 ; Springer Seminars in Immunopathology Volume 7 ; 7 >
-    au < testing ; 1985 ; Springer Seminars in Immunopathology Volume 8 ; 8 >
-    au < testing ; 1986-1987 ; Springer Seminars in Immunopathology Volume 9 ; 9 >
-    au < testing ; 1988 ; Springer Seminars in Immunopathology Volume 10 ; 10 >
-    au < testing ; 1989 ; Springer Seminars in Immunopathology Volume 11 ; 11 >
-    au < testing ; 1990 ; Springer Seminars in Immunopathology Volume 12 ; 12 >
-    au < testing ; 1991-1992 ; Springer Seminars in Immunopathology Volume 13 ; 13 >
-    au < testing ; 1992-1993 ; Springer Seminars in Immunopathology Volume 14 ; 14 >
-    au < testing ; 1993-1994 ; Springer Seminars in Immunopathology Volume 15 ; 15 >
-    au < testing ; 1994-1995 ; Springer Seminars in Immunopathology Volume 16 ; 16 >
-    au < testing ; 1995-1996 ; Springer Seminars in Immunopathology Volume 17 ; 17 >
+    au < ready ; 1978 ; Springer Seminars in Immunopathology Volume 1 ; 1 >
+    au < ready ; 1979-1980 ; Springer Seminars in Immunopathology Volume 2 ; 2 >
+    au < ready ; 1980-1981 ; Springer Seminars in Immunopathology Volume 3 ; 3 >
+    au < ready ; 1981-1982 ; Springer Seminars in Immunopathology Volume 4 ; 4 >
+    au < ready ; 1982 ; Springer Seminars in Immunopathology Volume 5 ; 5 >
+    au < ready ; 1983 ; Springer Seminars in Immunopathology Volume 6 ; 6 >
+    au < ready ; 1984 ; Springer Seminars in Immunopathology Volume 7 ; 7 >
+    au < ready ; 1985 ; Springer Seminars in Immunopathology Volume 8 ; 8 >
+    au < ready ; 1986-1987 ; Springer Seminars in Immunopathology Volume 9 ; 9 >
+    au < ready ; 1988 ; Springer Seminars in Immunopathology Volume 10 ; 10 >
+    au < ready ; 1989 ; Springer Seminars in Immunopathology Volume 11 ; 11 >
+    au < ready ; 1990 ; Springer Seminars in Immunopathology Volume 12 ; 12 >
+    au < ready ; 1991-1992 ; Springer Seminars in Immunopathology Volume 13 ; 13 >
+    au < ready ; 1992-1993 ; Springer Seminars in Immunopathology Volume 14 ; 14 >
+    au < ready ; 1993-1994 ; Springer Seminars in Immunopathology Volume 15 ; 15 >
+    au < ready ; 1994-1995 ; Springer Seminars in Immunopathology Volume 16 ; 16 >
+    au < ready ; 1995-1996 ; Springer Seminars in Immunopathology Volume 17 ; 17 >
     au < notReady ; 1996-1997 ; Springer Seminars in Immunopathology Volume 18 ; 18 >
-    au < testing ; 1997 ; Springer Seminars in Immunopathology Volume 19 ; 19 >
-    au < testing ; 1998 ; Springer Seminars in Immunopathology Volume 20 ; 20 >
-    au < testing ; 1999 ; Springer Seminars in Immunopathology Volume 21 ; 21 >
-    au < testing ; 2000 ; Springer Seminars in Immunopathology Volume 22 ; 22 >
-    au < testing ; 2001 ; Springer Seminars in Immunopathology Volume 23 ; 23 >
-    au < testing ; 2002 ; Springer Seminars in Immunopathology Volume 24 ; 24 >
-    au < testing ; 2003 ; Springer Seminars in Immunopathology Volume 25 ; 25 >
-    au < testing ; 2004 ; Springer Seminars in Immunopathology Volume 26 ; 26 >
-    au < testing ; 2005 ; Springer Seminars in Immunopathology Volume 27 ; 27 >
-    au < testing ; 2006 ; Springer Seminars in Immunopathology Volume 28 ; 28 >
+    au < ready ; 1997 ; Springer Seminars in Immunopathology Volume 19 ; 19 >
+    au < ready ; 1998 ; Springer Seminars in Immunopathology Volume 20 ; 20 >
+    au < ready ; 1999 ; Springer Seminars in Immunopathology Volume 21 ; 21 >
+    au < ready ; 2000 ; Springer Seminars in Immunopathology Volume 22 ; 22 >
+    au < ready ; 2001 ; Springer Seminars in Immunopathology Volume 23 ; 23 >
+    au < ready ; 2002 ; Springer Seminars in Immunopathology Volume 24 ; 24 >
+    au < ready ; 2003 ; Springer Seminars in Immunopathology Volume 25 ; 25 >
+    au < ready ; 2004 ; Springer Seminars in Immunopathology Volume 26 ; 26 >
+    au < ready ; 2005 ; Springer Seminars in Immunopathology Volume 27 ; 27 >
+    au < ready ; 2006 ; Springer Seminars in Immunopathology Volume 28 ; 28 >
 
   }
 
