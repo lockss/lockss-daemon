@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.34 2010-10-21 03:21:10 thib_gc Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.35 2010-11-03 06:43:40 tlipkis Exp $
  */
 
 /*
@@ -164,6 +164,7 @@ public class TestEditableDefinablePlugin
   }
 
   String[] cenames = {
+    "IgnoreCloseException",
     "UnknownCodeException",
     "UnknownExceptionException",
     "RetryableException",
