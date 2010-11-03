@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.15 2009-12-09 00:58:45 tlipkis Exp $
+ * $Id: TestStreamUtil.java,v 1.16 2010-11-03 06:08:33 tlipkis Exp $
  */
 
 /*
@@ -151,6 +151,52 @@ public class TestStreamUtil extends LockssTestCase {
     assertEquals(2, wdog.times.size());
     is.close();
     os.close();
+  }
+
+  IOException e1 = new IOException("E1");
+  IOException e2 = new IOException("E2");
+
+  public void testCopyExceptionWrapping() throws IOException {
+    InputStream is;
+    OutputStream os;
+
+    is = new ThrowingInputStream(new StringInputStream("test string"),
+			      e1, null);
+    os = new NullOutputStream();
+    try {
+      StreamUtil.copy(is, os, -1, null, false);
+      fail("StreamUtil.copy(ThrowingInputStream) didn't throw on read");
+    } catch (StreamUtil.InputException e) {
+      fail("StreamUtil.copy(ThrowingInputStream) shouldn't have wrapped exception");
+    } catch (IOException e) {
+      assertSame(e1, e);
+    }
+    is = new ThrowingInputStream(new StringInputStream("test string"),
+				 e1, null);
+    try {
+      StreamUtil.copy(is, os, -1, null, true);
+      fail("StreamUtil.copy(ThrowingInputStream) didn't throw on read");
+    } catch (StreamUtil.InputException e) {
+      assertSame(e1, e.getCause());
+    }
+    is = new StringInputStream("test string");
+    os = new ThrowingOutputStream(new NullOutputStream(), e2, null);
+    try {
+      StreamUtil.copy(is, os, -1, null, false);
+      fail("StreamUtil.copy(ThrowingOutputStream) didn't throw on write");
+    } catch (StreamUtil.OutputException e) {
+      fail("StreamUtil.copy(ThrowingOutputStream) shouldn't have wrapped exception");
+    } catch (IOException e) {
+      assertSame(e2, e);
+    }
+    is = new StringInputStream("test string");
+    os = new ThrowingOutputStream(new NullOutputStream(), e2, null);
+    try {
+      StreamUtil.copy(is, os, -1, null, true);
+      fail("StreamUtil.copy(ThrowingOutputStream) didn't throw on write");
+    } catch (StreamUtil.OutputException e) {
+      assertSame(e2, e.getCause());
+    }
   }
 
   public void testCopyNullReader() throws IOException {

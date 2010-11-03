@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.16 2007-06-21 07:31:13 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.17 2010-11-03 06:08:33 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,29 @@ public class StreamUtil {
   public static long copy(InputStream is, OutputStream os, long len,
 			  LockssWatchdog wdog)
       throws IOException {
+    return copy(is, os, len, wdog, false);
+  }
+
+  /**
+   * Copy up to len bytes from InputStream to Outputstream, occasionally
+   * poking a watchdog.  The OutputStream is flushed, neither stream is
+   * closed.
+   * @param is input stream
+   * @param os output stream
+   * @param len number of bytes to copy; -1 means copy to EOF
+   * @param wdog if non-null, a LockssWatchdog that will be poked at
+   * approximately twice its required rate.
+   * @param wrapExceptions if true, exceptions that occur while reading
+   * from the input stream will be wrapped in a {@link
+   * StreamUtil#InputException} and exceptions that occur while writing to
+   * or closing the output stream will be wrapped in a {@link
+   * StreamUtil#OutputException}.
+   * @return number of bytes copied
+   * @throws IOException
+   */
+  public static long copy(InputStream is, OutputStream os, long len,
+			  LockssWatchdog wdog, boolean wrapExceptions)
+      throws IOException {
     if (is == null || os == null || len == 0) {
       return 0;
     }
@@ -118,11 +141,28 @@ public class StreamUtil {
     long rem = (len > 0) ? len : Long.MAX_VALUE;
     long ncopied = 0;
     int nread;
-    while (rem > 0 &&
-	   ((nread =
-	     is.read(buf, 0,
-		     rem > BUFFER_SIZE ? BUFFER_SIZE : (int)rem)) > 0)) {
-      os.write(buf, 0, nread);
+    while (rem > 0) {
+      try {
+	nread = is.read(buf, 0, rem > BUFFER_SIZE ? BUFFER_SIZE : (int)rem);
+      } catch (IOException e) {
+	if (wrapExceptions) {
+	  throw new InputException(e);
+	} else {
+	  throw e;
+	}
+      }
+      if (nread <= 0) {
+	break;
+      }
+      try {
+	os.write(buf, 0, nread);
+      } catch (IOException e) {
+	if (wrapExceptions) {
+	  throw new OutputException(e);
+	} else {
+	  throw e;
+	}
+      }
       ncopied += nread;
       rem -= nread;
       if (wdog != null) {
@@ -137,7 +177,15 @@ public class StreamUtil {
 	}
       }
     }
-    os.flush();
+    try {
+      os.flush();
+    } catch (IOException e) {
+      if (wrapExceptions) {
+	throw new OutputException(e);
+      } else {
+	throw e;
+      }
+    }
     return ncopied;
   }
 
@@ -162,6 +210,26 @@ public class StreamUtil {
     }
     writer.flush();
     return totalCharCount;
+  }
+
+  public static class InputException extends IOException {
+    public InputException(IOException cause) {
+      super(cause);
+    }
+
+    public IOException getIOCause() {
+      return (IOException)getCause();
+    }
+  }
+
+  public static class OutputException extends IOException {
+    public OutputException(IOException cause) {
+      super(cause);
+    }
+
+    public IOException getIOCause() {
+      return (IOException)getCause();
+    }
   }
 
   /** Read size bytes from stream into buf.  Keeps trying to read until
