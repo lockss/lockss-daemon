@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.209 2010-07-21 06:10:06 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.210 2010-11-03 06:06:50 tlipkis Exp $
  */
 
 /*
@@ -836,6 +836,14 @@ public class PluginManager
       // managers don't stop cleanly.
     }
     return true;
+  }
+
+  /** Return true iff the AU is currently active.  Ruturn false if the AU
+   * was deactivated or deleted and this isn't the current instance of the
+   * AU. */
+  public boolean isActiveAu(ArchivalUnit au) {
+    String auid = au.getAuId();
+    return auid != null && auMap.get(auid) == au;
   }
 
   static final int AU_CHANGE_CREATED = 1;
