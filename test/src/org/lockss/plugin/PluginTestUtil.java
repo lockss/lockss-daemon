@@ -1,5 +1,5 @@
 /*
- * $Id: PluginTestUtil.java,v 1.2 2010-06-22 09:01:16 tlipkis Exp $
+ * $Id: PluginTestUtil.java,v 1.3 2010-11-03 06:06:06 tlipkis Exp $
  *
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
@@ -137,6 +137,7 @@ public class PluginTestUtil {
       tp.unregisterArchivalUnit(au);
       aulist.remove(au);
     }
+    mgr.stopAu(au);
   }
 
   public static void unregisterAllArchivalUnits() {

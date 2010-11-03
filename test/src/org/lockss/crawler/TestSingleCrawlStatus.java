@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.12 2006-11-14 19:21:28 tlipkis Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.13 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -198,7 +198,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusFetchedUrls() throws Exception {
     MockArchivalUnit au = new MockArchivalUnit();
-    au.setName("Mock name");
 
     mcStatus.setStartTime(1);
     mcStatus.setEndTime(2);
@@ -213,7 +212,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsFetched, table.getColumnDescriptors());
-    assertEquals("URLs fetched during crawl of Mock name",
+    assertEquals("URLs fetched during crawl of MockAU",
 		 table.getTitle());
 
     List rows = table.getSortedRows();
@@ -235,7 +234,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusExcluded() throws Exception {
     MockArchivalUnit au = new MockArchivalUnit();
-    au.setName("Mock name");
 
     mcStatus.setStartTime(1);
     mcStatus.setEndTime(2);
@@ -250,7 +248,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsExcluded, table.getColumnDescriptors());
-    assertEquals("URLs excluded during crawl of Mock name",
+    assertEquals("URLs excluded during crawl of MockAU",
 		 table.getTitle());
 
     List rows = table.getSortedRows();
@@ -263,7 +261,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusParsedUrls() throws Exception {
     MockArchivalUnit au = new MockArchivalUnit();
-    au.setName("Mock name");
 
     mcStatus.setStartTime(1);
     mcStatus.setEndTime(2);
@@ -278,7 +275,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsParsed, table.getColumnDescriptors());
-    assertEquals("URLs parsed during crawl of Mock name",
+    assertEquals("URLs parsed during crawl of MockAU",
 		 table.getTitle());
 
     List rows = table.getSortedRows();
@@ -291,7 +288,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusNotModifiedUrls() throws Exception {
     MockArchivalUnit au = new MockArchivalUnit();
-    au.setName("Mock name");
 
     mcStatus.setStartTime(1);
     mcStatus.setEndTime(2);
@@ -306,7 +302,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsNotModified, table.getColumnDescriptors());
-    assertEquals("URLs not modified during crawl of Mock name",
+    assertEquals("URLs not modified during crawl of MockAU",
 		 table.getTitle());
 
     List rows = table.getSortedRows();
@@ -319,7 +315,6 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusErrorUrls() throws Exception {
     MockArchivalUnit au = new MockArchivalUnit();
-    au.setName("Mock name");
 
     Map errors = new LinkedMap();
     errors.put("http://www.example.com", "Generic error");
@@ -337,7 +332,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
     cStatus.populateTable(table);
     assertEquals(expectedColDescsError, table.getColumnDescriptors());
-    assertEquals("Errors during crawl of Mock name",
+    assertEquals("Errors during crawl of MockAU",
 		 table.getTitle());
 
     List rows = table.getSortedRows();

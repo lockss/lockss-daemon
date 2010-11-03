@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.130 2010-09-01 07:50:37 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.131 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -309,7 +309,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     // register our AU event handler
     auCreateDestroyHandler = new AuEventHandler.Base() {
 	public void auDeleted(ArchivalUnit au) {
-	  cancelAuCrawls(au);
+	  auEventDeleted(au);
 	}
 	public void auCreated(ArchivalUnit au) {
 	  rebuildQueueSoon();
@@ -588,7 +588,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  void cancelAuCrawls(ArchivalUnit au) {
+  void auEventDeleted(ArchivalUnit au) {
     removeAuFromQueues(au);
     synchronized(runningCrawls) {
       Collection<Crawler> crawls = (Collection) runningCrawls.get(au);
@@ -597,6 +597,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  crawler.abortCrawl();
 	}
       }
+    }
+    // Notify CrawlerStatus objects to discard any pointer to this AU
+    for (CrawlerStatus status : cmStatus.getCrawlerStatusList()) {
+      status.auDeleted(au);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionHelper.java,v 1.6 2007-10-04 09:43:40 tlipkis Exp $
+ * $Id: MockPermissionHelper.java,v 1.7 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class MockPermissionHelper implements PermissionHelper {
   }
 
   public CrawlerStatus getCrawlerStatus() {
-    return new CrawlerStatus(null, null, null);
+    return new CrawlerStatus(MockArchivalUnit.newInited(), null, null);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.17 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: MockCrawlStatus.java,v 1.18 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -31,10 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.test;
+
+import java.util.*;
 import org.lockss.daemon.Crawler;
+import org.lockss.util.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.ArchivalUnit;
-import java.util.*;
 
 public class MockCrawlStatus extends CrawlerStatus {
 
@@ -44,7 +46,7 @@ public class MockCrawlStatus extends CrawlerStatus {
 
 
   public MockCrawlStatus(String type) {
-    super(null, null, type);
+    super(MockArchivalUnit.newInited(), null, type);
   }
 
   public MockCrawlStatus() {
@@ -126,6 +128,7 @@ public class MockCrawlStatus extends CrawlerStatus {
 
   public void setAu(ArchivalUnit au) {
     this.au = au;
+    this.auid = au.getAuId();
   }
 
   public void signalCrawlEnded() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.87 2010-07-21 06:10:06 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.88 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -559,6 +559,7 @@ public class TestPluginManager extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
     ArchivalUnit au = mgr.createAu(mpi, config);
     assertNotNull(au);
+    assertTrue(mgr.isActiveAu(au));
     String auId = au.getAuId();
     mgr.configureAu(mpi, config, auId);
 
@@ -568,6 +569,7 @@ public class TestPluginManager extends LockssTestCase {
       mgr.registerAuEventHandler(new MyAuEventHandler());
       mgr.deactivateAu(au);
       assertTrue(mgr.getInactiveAuIds().contains(auId));
+      assertFalse(mgr.isActiveAu(au));
       // verify event handler run
       assertEmpty(createEvents);
       assertEquals(ListUtil.list(au), deleteEvents);
@@ -575,7 +577,11 @@ public class TestPluginManager extends LockssTestCase {
     } catch (Exception ex) {
       fail("Deactivating au should not have thrown", ex);
     }
-
+    // Recreate the AU, will get a new instance
+    ArchivalUnit au2 = mgr.createAu(mpi, config);
+    assertNotNull(au2);
+    assertFalse(mgr.isActiveAu(au));
+    assertTrue(mgr.isActiveAu(au2));
   }
 
   public void testCreateAndSaveAndDeleteAuConfiguration() throws Exception {

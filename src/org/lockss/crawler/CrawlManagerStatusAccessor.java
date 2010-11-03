@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatusAccessor.java,v 1.21 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: CrawlManagerStatusAccessor.java,v 1.22 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -34,13 +34,21 @@ package org.lockss.crawler;
 
 import java.util.*;
 
-import org.lockss.daemon.status.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
+import org.lockss.config.*;
 import org.lockss.plugin.*;
 import org.lockss.state.ArchivalUnitStatus;
 import org.lockss.util.*;
 
 public class CrawlManagerStatusAccessor implements StatusAccessor {
+
+  /** If true, crawl status of deleted AUs will be included in table. */
+  public static final String PARAM_INCLUDE_DELETED_AUS =
+    Configuration.PREFIX + "crawlStatus.includeDeletedAus";
+  public static final boolean DEFAULT_INCLUDE_DELETED_AUS = true;
+
 
   private static final String AU_COL_NAME = "au";
   private static final String CRAWL_TYPE = "crawl_type";
@@ -121,15 +129,25 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
 
   private CrawlManager.StatusSource statusSource;
+  private boolean includeDeletedAus = DEFAULT_INCLUDE_DELETED_AUS;
   private PluginManager pluginMgr;
 
   public CrawlManagerStatusAccessor(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
-    this.pluginMgr = statusSource.getDaemon().getPluginManager();
+    LockssDaemon daemon = statusSource.getDaemon();
+    this.pluginMgr = daemon.getPluginManager();
+    initConfig();
   }
 
   protected CrawlManagerStatusAccessor() {
     //for testing
+    initConfig();
+  }
+
+  private void initConfig() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    includeDeletedAus = config.getBoolean(PARAM_INCLUDE_DELETED_AUS,
+					  DEFAULT_INCLUDE_DELETED_AUS);
   }
 
   public String getDisplayName() {
@@ -189,10 +207,14 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
     if (allCrawls != null) {
       for (Iterator it = allCrawls.iterator(); it.hasNext();) {
 	CrawlerStatus crawlStat = (CrawlerStatus)it.next();
-	if (!includeInternalAus &&
-	    pluginMgr.isInternalAu(crawlStat.getAu())) {
+	if (key != null && !key.equals(crawlStat.getAuId())) {
 	  continue;
-	} else if (key != null && !key.equals(crawlStat.getAu().getAuId())) {
+	}
+	ArchivalUnit au = crawlStat.getAu();
+	if (!includeDeletedAus && au == null) {
+	  continue;
+	}
+	if (!includeInternalAus && au != null && pluginMgr.isInternalAu(au)) {
 	  continue;
 	}
 	rows.add(makeRow(crawlStat, ct, rowNum++));
@@ -232,11 +254,11 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 
     Map row = new HashMap();
     Object statusColRef = null;
-    ArchivalUnit au = status.getAu();
+    
     row.put(AU_COL_NAME,
-	    new StatusTable.Reference(au.getName(),
+	    new StatusTable.Reference(status.getAuName(),
 				      ArchivalUnitStatus.AU_STATUS_TABLE_NAME,
-				      au.getAuId()));
+				      status.getAuId()));
     row.put(CRAWL_TYPE, status.getType());
     if (status.getStartTime() > 0) {
       row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
@@ -291,10 +313,13 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
 // 	    (StringUtil.separatedString(status.getSources(), "\n")));
     if (statusColRef == null) {
       Object statusMsg = status.getCrawlStatusMsg();
-      if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
-	  AuUtil.getAuState(au).hasNoSubstance()) {
-	statusMsg =
-	  new StatusTable.DisplayedValue(statusMsg).setFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+      ArchivalUnit au = status.getAu();
+      if (au != null) {
+	if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
+	    AuUtil.getAuState(au).hasNoSubstance()) {
+	  statusMsg =
+	    new StatusTable.DisplayedValue(statusMsg).setFootnote(SingleCrawlStatusAccessor.FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+	}
       }
       statusColRef = makeRef(statusMsg,
 			     SINGLE_CRAWL_STATUS_ACCESSOR, key);
@@ -396,8 +421,8 @@ public class CrawlManagerStatusAccessor implements StatusAccessor {
       if (allCrawls != null) {
 	int active = 0;
 	for (CrawlerStatus crawlStat : allCrawls) {
-	  if (!includeInternalAus &&
-	      pluginMgr.isInternalAu(crawlStat.getAu())) {
+	  ArchivalUnit au = crawlStat.getAu();
+	  if (!includeInternalAus && au != null && pluginMgr.isInternalAu(au)) {
 	    continue;
 	  }
 	  if (crawlStat.isCrawlActive()) {

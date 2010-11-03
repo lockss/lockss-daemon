@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.12 2008-07-01 07:46:56 tlipkis Exp $
+ * $Id: TestPermissionMap.java,v 1.13 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -160,7 +160,8 @@ public class TestPermissionMap extends LockssTestCase {
 
   // XXX unfinished
   class MyMockPermissionHelper extends MockPermissionHelper {
-    CrawlerStatus cStatus = new CrawlerStatus(null, null, null);
+    CrawlerStatus cStatus = new CrawlerStatus(MockArchivalUnit.newInited(),
+					      null, null);
 
     public UrlCacher makeUrlCacher(String url) {
       MockUrlCacher muc =  new MockUrlCacher("foo", new MockArchivalUnit());

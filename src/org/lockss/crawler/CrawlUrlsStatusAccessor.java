@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlsStatusAccessor.java,v 1.7 2009-09-22 02:06:52 thib_gc Exp $
+ * $Id: CrawlUrlsStatusAccessor.java,v 1.8 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -115,21 +115,21 @@ public class CrawlUrlsStatusAccessor implements StatusAccessor {
   }
 
   private String getTableTitle(CrawlerStatus status, String tableStr) {
-    ArchivalUnit au = status.getAu();
+    String auName = status.getAuName();
     if (FETCHED_TABLE_NAME.equals(tableStr)) {
-      return "URLs fetched during crawl of "+au.getName();
+      return "URLs fetched during crawl of "+auName;
     } else if (ERROR_TABLE_NAME.equals(tableStr)) {
-      return "Errors during crawl of "+au.getName();
+      return "Errors during crawl of "+auName;
     } else if (NOT_MODIFIED_TABLE_NAME.equals(tableStr)) {
-      return "URLs not modified during crawl of "+au.getName();
+      return "URLs not modified during crawl of "+auName;
     } else if (PARSED_TABLE_NAME.equals(tableStr)) {
-      return "URLs parsed during crawl of "+au.getName();
+      return "URLs parsed during crawl of "+auName;
     } else if (PENDING_TABLE_NAME.equals(tableStr)) {
-      return "URLs pending during crawl of "+au.getName();
+      return "URLs pending during crawl of "+auName;
     } else if (EXCLUDED_TABLE_NAME.equals(tableStr)) {
-      return "URLs excluded during crawl of "+au.getName();
+      return "URLs excluded during crawl of "+auName;
     } else if (MIMETYPES_TABLE_NAME.equals(getMtTableStr(tableStr))) {
-      return "URLs found during crawl of "+au.getName();
+      return "URLs found during crawl of "+auName;
          //   + " with Mime type value: "+ getMimeTypeStr(tableStr) ;
     }
      return "";

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.80 2010-09-01 07:50:37 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.81 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -207,7 +207,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       waitForCrawlToFinish(sem);
       assertTrue("doCrawl() not called", crawler.doCrawlCalled());
 
-      crawlManager.cancelAuCrawls(mau);
+      crawlManager.auEventDeleted(mau);
 
       assertFalse(crawler.wasAborted());
     }
@@ -235,7 +235,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 		 sem1.take(TIMEOUT_SHOULDNT));
       //we know that doCrawl started
 
-      crawlManager.cancelAuCrawls(mau);
+      crawlManager.auEventDeleted(mau);
 
       assertTrue(crawler.wasAborted());
     }

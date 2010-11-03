@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.29 2008-09-09 07:53:53 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.30 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   }
 
   CrawlerStatus newCStat(String url) {
-    return new CrawlerStatus(new MockArchivalUnit(),
+    return new CrawlerStatus(MockArchivalUnit.newInited(),
 			      ListUtil.list(url), "new");
   }
 }

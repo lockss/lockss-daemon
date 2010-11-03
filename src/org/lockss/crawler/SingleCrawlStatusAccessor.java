@@ -1,5 +1,5 @@
 /*
- * $Id: SingleCrawlStatusAccessor.java,v 1.10 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: SingleCrawlStatusAccessor.java,v 1.11 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -87,8 +87,7 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
   }
 
   private String getTableTitle(CrawlerStatus status) {
-    ArchivalUnit au = status.getAu();
-    return "Status of crawl of " + au.getName();
+    return "Status of crawl of " + status.getAuName();
   }
 
   /**  iterate over the mime-types makeRow for each
@@ -152,10 +151,13 @@ public class SingleCrawlStatusAccessor implements StatusAccessor {
       new StatusTable.SummaryInfo("Status",
 				  ColumnDescriptor.TYPE_STRING,
 				  status.getCrawlStatusMsg());
-    AuState aus = AuUtil.getAuState(status.getAu());
-    if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
-	aus.hasNoSubstance()) {
-      statusSi.setValueFootnote(FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+    ArchivalUnit au = status.getAu();
+    if (au != null) {
+      AuState aus = AuUtil.getAuState(au);
+      if (status.getCrawlStatus() == Crawler.STATUS_SUCCESSFUL &&
+	  aus.hasNoSubstance()) {
+	statusSi.setValueFootnote(FOOT_NO_SUBSTANCE_CRAWL_STATUS);
+      }
     }
     res.add(statusSi);
     String sources = StringUtil.separatedString(status.getSources());

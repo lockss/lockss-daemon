@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerStatus.java,v 1.5 2008-09-09 07:52:07 tlipkis Exp $
+ * $Id: TestCrawlerStatus.java,v 1.6 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
@@ -59,7 +60,9 @@ public class TestCrawlerStatus extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    mau = new MockArchivalUnit();
+    MockLockssDaemon daemon = getMockLockssDaemon();
+    mau = MockArchivalUnit.newInited(daemon);
+    PluginTestUtil.registerArchivalUnit(mau.getPlugin(), mau);
     mau.setUrlStems(ListUtil.list("http://example.com/"));
     cs = new CrawlerStatus(mau, null, "a type");
   }
@@ -67,10 +70,24 @@ public class TestCrawlerStatus extends LockssTestCase {
   public void testAccessors() {
     CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 42");
     assertEquals(mau, c1.getAu());
+    assertEquals("MockAU0", c1.getAuId());
+    assertEquals("MockAU", c1.getAuName());
     assertEquals("Type 42", c1.getType());
 
     CrawlerStatus c2 = new CrawlerStatus(mau, null, null);
     assertNotEquals(c1.getKey(), c2.getKey());
+  }
+
+  public void testAuDeleted() throws IOException {
+    CrawlerStatus c1 = new CrawlerStatus(mau, null, "Type 43");
+    assertEquals(mau, c1.getAu());
+    c1.auDeleted(mau);
+    assertEquals(mau, c1.getAu());
+    assertTrue(c1.isOffHost("http://foo.bar/"));
+    PluginTestUtil.unregisterArchivalUnit(mau);
+    c1.auDeleted(mau);
+    // Shouldn't cause NPE, but now value should be default false
+    assertFalse(c1.isOffHost("http://foo.bar/"));
   }
 
   public void testGetDefaultMessage() {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.89 2010-09-01 07:54:31 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.90 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.apache.oro.text.regex.*;
 
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
@@ -87,6 +88,18 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Comparator<CrawlUrl> crawlUrlCmp;
 
   private static final Logger logger = Logger.getLogger("MockArchivalUnit");
+
+  public static MockArchivalUnit newInited() {
+    MockArchivalUnit mau = new MockArchivalUnit(new MockPlugin(),
+						StringUtil.gensym("MockAU"));
+    return mau;
+  }
+
+  public static MockArchivalUnit newInited(LockssDaemon daemon) {
+    MockArchivalUnit mau = new MockArchivalUnit(new MockPlugin(daemon),
+						StringUtil.gensym("MockAU"));
+    return mau;
+  }
 
   public MockArchivalUnit(){
   }

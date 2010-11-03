@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerStatus.java,v 1.8 2009-12-10 23:11:26 tlipkis Exp $
+ * $Id: CrawlerStatus.java,v 1.9 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.apache.commons.collections.set.ListOrderedSet;
 import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.config.*;
 import org.lockss.plugin.*;
@@ -102,13 +103,18 @@ public class CrawlerStatus {
 
   private static int ctr = 0;		// Instance counter (for getKey())
 
+  protected LockssDaemon daemon;
+
   private String key;
   protected long startTime = -1;
   protected long endTime = -1;
   protected String statusMessage = null;
   protected int status = Crawler.STATUS_QUEUED;
   protected Collection startUrls = null;
+  protected String auid = null;
+  protected String auName = null;
   protected ArchivalUnit au = null;
+
   protected String type;
   private long contentBytesFetched = 0;
   private String paramRecordUrls;
@@ -129,7 +135,10 @@ public class CrawlerStatus {
   protected Map mimeCounts = new HashMap(); 
     
   public CrawlerStatus(ArchivalUnit au, Collection startUrls, String type) {
-    this.au = au;
+    this.au = au;;
+    this.auid = au.getAuId();;
+    this.auName = au.getName();;
+    this.daemon = AuUtil.getDaemon(au);
     this.startUrls = startUrls;
     this.type = type;
     key = nextIdx();
@@ -240,7 +249,31 @@ public class CrawlerStatus {
     return type;
   }
 
+  /** Return the AU, looking it up again from the auid if necessary (e.g.,
+      after au delete event) */
+  public void auDeleted(ArchivalUnit deletedAu) {
+    if (au == deletedAu) {
+      au = null;
+    }
+  }
+
+  /** Return the AUID */
+  public String getAuId() {
+    return auid;
+  }
+
+  /** Return the AU's name */
+  public String getAuName() {
+    return auName;
+  }
+
+  /** Return the AU, looking it up again from the auid if necessary (e.g.,
+      after au delete event) */
   public ArchivalUnit getAu() {
+    if (au == null) {
+      PluginManager pmgr = daemon.getPluginManager();
+      au = pmgr.getAuFromId(auid);
+    }
     return au;
   }
 
@@ -417,17 +450,22 @@ public class CrawlerStatus {
     return excludedExcludes;
   }
 
-  private boolean isOffHost(String url) {
-    Collection<String> stems = au.getUrlStems();
-    if (stems == null) {
-      return false;
-    }
-    for (String stem : stems) {
-      if (StringUtil.startsWithIgnoreCase(url, stem)) {
+  boolean isOffHost(String url) {
+    try {
+      Collection<String> stems = getAu().getUrlStems();
+      if (stems == null) {
 	return false;
       }
+      for (String stem : stems) {
+	if (StringUtil.startsWithIgnoreCase(url, stem)) {
+	  return false;
+	}
+      }
+      return true;
+    } catch (NullPointerException e) {
+      // getAu() can return null if AU has been deleted
+      return false;
     }
-    return true;
   }
 
   public int getNumExcludedExcludes() {

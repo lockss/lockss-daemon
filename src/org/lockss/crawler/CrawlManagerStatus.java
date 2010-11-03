@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.38 2008-09-09 07:53:53 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.39 2010-11-03 06:06:06 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class CrawlManagerStatus {
   }
 
   /** Return a list of CrawlerStatus for each crawl in the history. */
-  public synchronized List getCrawlerStatusList() {
+  public synchronized List<CrawlerStatus> getCrawlerStatusList() {
     List res = new ArrayList(statusMap.size());
     for (OrderedMapIterator iter = statusMap.orderedMapIterator();
 	 iter.hasNext(); ) {
