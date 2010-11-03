@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.17 2010-10-21 05:57:12 thib_gc Exp $
+ * $Id: CacheException.java,v 1.18 2010-11-03 06:08:59 tlipkis Exp $
  */
 
 /*
@@ -153,6 +153,18 @@ public class CacheException
     }
   }
 
+  /** Ignore exception on close (return success) */
+  public static class IgnoreCloseException extends CacheException {
+
+    public IgnoreCloseException() {
+      super();
+    }
+
+    public IgnoreCloseException(String message) {
+      super(message);
+    }
+  }
+
   /** Unknown response code */
   public static class UnknownCodeException extends CacheException {
 
@@ -182,6 +194,11 @@ public class CacheException
 
     public UnknownExceptionException(Exception e) {
       super(e.toString());
+      initCause(e);
+    }
+
+    public UnknownExceptionException(String message, Exception e) {
+      super(message);
       initCause(e);
     }
 
