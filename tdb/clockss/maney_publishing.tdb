@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Maney Publishing
+  >
+
+  {
+
+    title <
+      name = Journal of Orthodontics ;
+      issn = 1465-3125 ;
+      eissn = 1465-3133
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
+    param[base_url] = http://jorthod.maneyjournals.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < released ; 2010 ; Journal of Orthodontics Volume 37 ; 37 >
+
+  }
+  
+  {
+  
+    comment = The rest is on Ingenta
+  
+  }
+
+}
+

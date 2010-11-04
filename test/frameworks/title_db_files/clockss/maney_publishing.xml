@@ -36,6 +36,36 @@
 
 <lockss-config>
 
+ <property name="org.lockss.titleSet">
+
+  <property name="Maney Publishing">
+   <property name="name" value="All Maney Publishing Titles" />
+   <property name="class" value="xpath" />
+   <property name="xpath" value="[attributes/publisher='Maney Publishing']" />
+  </property>
+  
+ </property>
+ 
+ <property name="org.lockss.title">
+
+  <property name="ClockssHighWirePluginJournalofOrthodontics37">
+   <property name="attributes.publisher" value="Maney Publishing" />
+   <property name="journalTitle" value="Journal of Orthodontics" />
+   <property name="issn" value="1465-3125" />
+   <property name="eissn" value="1465-3133" />
+   <property name="title" value="Journal of Orthodontics Volume 37" />
+   <property name="plugin" value="org.lockss.plugin.highwire.ClockssHighWirePlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://jorthod.maneyjournals.org/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume_name" />
+    <property name="value" value="37" />
+   </property>
+   <property name="attributes.year" value="2010" />
+  </property>
+
  </property>
 
 </lockss-config>

@@ -1527,6 +1527,17 @@
     implicit < status ; year ; name ; param[year] >
     param[base_url] = http://virtualmentor.ama-assn.org/
     
+    au < ready ; 1999 ; Virtual Mentor Volume 1 ; 1999 >
+    au < ready ; 2000 ; Virtual Mentor Volume 2 ; 2000 >
+    au < ready ; 2001 ; Virtual Mentor Volume 3 ; 2001 >
+    au < ready ; 2002 ; Virtual Mentor Volume 4 ; 2002 >
+    au < ready ; 2003 ; Virtual Mentor Volume 5 ; 2003 >
+    au < ready ; 2004 ; Virtual Mentor Volume 6 ; 2004 >
+    au < ready ; 2005 ; Virtual Mentor Volume 7 ; 2005 >
+    au < ready ; 2006 ; Virtual Mentor Volume 8 ; 2006 >
+    au < ready ; 2007 ; Virtual Mentor Volume 9 ; 2007 >
+    au < ready ; 2008 ; Virtual Mentor Volume 10 ; 2008 >
+    au < ready ; 2009 ; Virtual Mentor Volume 11 ; 2009 >
     au < ready ; 2010 ; Virtual Mentor Volume 12 ; 2010 >
 
   }

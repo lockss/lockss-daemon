@@ -48,57 +48,7 @@
  
  <property name="org.lockss.title">
 
-  <property name="ActaCrystallographicaSectionEStructureReportsOnline64">
-   <property name="attributes.publisher" value="International Union of Crystallography" />
-   <property name="journalTitle" value="Acta Crystallographica Section E: Structure Reports Online" />
-   <property name="issn" value="1600-5368" />
-   <property name="title" value="Acta Crystallographica Section E: Structure Reports Online Volume 64" />
-   <property name="plugin" value="org.lockss.plugin.internationalunionofcrystallography.ClockssInternationalUnionOfCrystallographyPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://journals.iucr.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="e" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="year" />
-    <property name="value" value="2008" />
-   </property>
-   <property name="param.4">
-    <property name="key" value="scripts_url" />
-    <property name="value" value="http://scripts.iucr.org/" />
-   </property>
-   <property name="attributes.year" value="2008" />
-  </property>
-
-  <property name="ActaCrystallographicaSectionEStructureReportsOnline65">
-   <property name="attributes.publisher" value="International Union of Crystallography" />
-   <property name="journalTitle" value="Acta Crystallographica Section E: Structure Reports Online" />
-   <property name="issn" value="1600-5368" />
-   <property name="title" value="Acta Crystallographica Section E: Structure Reports Online Volume 65" />
-   <property name="plugin" value="org.lockss.plugin.internationalunionofcrystallography.ClockssInternationalUnionOfCrystallographyPlugin" />
-   <property name="param.1">
-    <property name="key" value="base_url" />
-    <property name="value" value="http://journals.iucr.org/" />
-   </property>
-   <property name="param.2">
-    <property name="key" value="journal_id" />
-    <property name="value" value="e" />
-   </property>
-   <property name="param.3">
-    <property name="key" value="year" />
-    <property name="value" value="2009" />
-   </property>
-   <property name="param.4">
-    <property name="key" value="scripts_url" />
-    <property name="value" value="http://scripts.iucr.org/" />
-   </property>
-   <property name="attributes.year" value="2009" />
-  </property>
-
-  <property name="ActaCrystallographicaSectionEStructureReportsOnline66">
+  <property name="ClockssInternationalUnionOfCrystallographyPluginActaCrystallographicaSectionEStructureReportsOnline66">
    <property name="attributes.publisher" value="International Union of Crystallography" />
    <property name="journalTitle" value="Acta Crystallographica Section E: Structure Reports Online" />
    <property name="issn" value="1600-5368" />

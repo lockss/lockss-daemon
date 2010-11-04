@@ -1,0 +1,116 @@
+{
+  
+  publisher <
+    name = Pion
+  >
+  
+  {
+    
+    plugin = org.lockss.plugin.pion.ClockssPionPlugin
+    implicit < status ; year ; name ; param[volume_name] >
+  
+    {
+    
+      title <
+        name = Environment and Planning A ;
+        issn = 0308-518X ;
+        eissn = 1472-3409
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epa
+      param[short_journal_code] = A
+      
+      au < released ; 2010 ; Environment and Planning A Volume 42 ; 42 >
+    
+    }
+  
+    {
+    
+      title <
+        name = Environment and Planning B: Planning and Design ;
+        issn = 0265-8135 ;
+        eissn = 1472-3417
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epb
+      param[short_journal_code] = B
+      
+      au < released ; 2010 ; Environment and Planning B: Planning and Design Volume 37 ; 37 >
+  
+    }
+  
+    {
+    
+      title <
+        name = Environment and Planning C: Government and Policy ;
+        issn = 0263-774X ;
+        eissn = 1472-3425
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epc
+      param[short_journal_code] = C
+      
+      au < released ; 2010 ; Environment and Planning C: Government and Policy Volume 28 ; 28 >
+  
+    }
+  
+    {
+    
+      title <
+        name = Environment and Planning D: Society and Space ;
+        issn = 0263-7758 ;
+        eissn = 1472-3433
+      >
+      
+      param[base_url] = http://www.envplan.com/
+      param[journal_code] = epd
+      param[short_journal_code] = D
+      
+      au < released ; 2010 ; Environment and Planning D: Society and Space Volume 28 ; 28 >
+  
+    }
+  
+    {
+    
+      title <
+        name = High Temperatures - High Pressures ;
+        issn = 0018-1544 ;
+        eissn = 1472-3441
+      >
+      
+      param[base_url] = http://www.hthpweb.com/
+      param[journal_code] = hthp
+      param[short_journal_code] = H
+      
+  
+    }
+  
+    {
+    
+      title <
+        name = Perception ;
+        issn = 0301-0066 ;
+        eissn = 1468-4233
+      >
+      
+      param[base_url] = http://www.perceptionweb.com/
+      param[journal_code] = perception
+      param[short_journal_code] = P
+  
+      au < released ; 2010 ; Perception Volume 39 ; 39 >
+  
+    }
+  
+  }
+
+  {
+  
+    comment = another plugin for i-Perception
+  
+  }
+        
+}
+  

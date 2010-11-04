@@ -1,0 +1,74 @@
+{
+
+  publisher <
+    name = Rockefeller University Press
+  >
+
+  {
+
+    title <
+      name = The Journal of Cell Biology ;
+      issn = 0021-9525 ;
+      eissn = 1540-8140
+    >
+
+    {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jcb.rupress.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+        au < released ; 2008 ; The Journal of Cell Biology Volume 181 ; 181 >
+        au < released ; 2008 ; The Journal of Cell Biology Volume 182 ; 182 >
+        au < released ; 2008 ; The Journal of Cell Biology Volume 183 ; 183 >
+        au < released ; 2008 ; The Journal of Cell Biology Volume 184 ; 184 >
+        au < released ; 2009 ; The Journal of Cell Biology Volume 185 ; 185 >
+        au < released ; 2009 ; The Journal of Cell Biology Volume 186 ; 186 >
+        au < released ; 2009 ; The Journal of Cell Biology Volume 187 ; 187 >
+        au < released ; 2009 ; The Journal of Cell Biology Volume 188 ; 188 >
+
+    }
+
+  }
+
+ 
+  {
+    title <
+      name = The Journal of Experimental Medicine ;
+      issn = 0022-1007 ;
+      eissn = 1540-9538
+    >
+
+     {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jem.rupress.org/
+      implicit < status ; year ; name ; param[volume_name] >
+
+
+    }
+
+  }
+
+  {
+    title <
+      name = The Journal of General Physiology ;
+      issn = 0022-1295 ;
+      eissn = 1540-7748
+    >
+
+     {
+
+      plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+      param[base_url] = http://jgp.rupress.org/
+      implicit < status ; year ; name ; param[volume_name] >
+      
+        au < released ; 2008 ; The Journal of General Physiology Volume 132 ; 132 >
+        au < released ; 2009 ; The Journal of General Physiology Volume 133 ; 133 >
+      
+    }
+
+  }
+
+}
+
