@@ -35,7 +35,7 @@
 
     param[journal_dir] = geographical_analysis
 
-    au < manifest ; Geographical Analysis Volume 34 ; 34 >
+    au < ready ; Geographical Analysis Volume 34 ; 34 >
     au < released ; Geographical Analysis Volume 35 ; 35 >
     au < released ; Geographical Analysis Volume 36 ; 36 >
 
@@ -84,9 +84,9 @@
     au < released ; Narrative Volume 13 ; 13 >
     au < released ; Narrative Volume 14 ; 14 >
     au < released ; Narrative Volume 15 ; 15 >
-    au < manifest ; Narrative Volume 16 ; 16 >
-    au < manifest ; Narrative Volume 17 ; 17 >
-    au < manifest ; Narrative Volume 18 ; 18 >
+    au < ready ; Narrative Volume 16 ; 16 >
+    au < ready ; Narrative Volume 17 ; 17 >
+    au < ready ; Narrative Volume 18 ; 18 >
 
   }
 
@@ -105,9 +105,9 @@
     au < released ; The Journal of Higher Education Volume 76 ; 76 >
     au < released ; The Journal of Higher Education Volume 77 ; 77 >
     au < released ; The Journal of Higher Education Volume 78 ; 78 >
-    au < manifest ; The Journal of Higher Education Volume 79 ; 79 >
-    au < manifest ; The Journal of Higher Education Volume 80 ; 80 >
-    au < manifest ; The Journal of Higher Education Volume 81 ; 81 >
+    au < ready ; The Journal of Higher Education Volume 79 ; 79 >
+    au < ready ; The Journal of Higher Education Volume 80 ; 80 >
+    au < ready ; The Journal of Higher Education Volume 81 ; 81 >
 
   }
 
@@ -120,8 +120,8 @@
 
     param[journal_dir] = twentiethcentury_china
 
-    au < manifest ; Twentieth-Century China Volume 33 ; 33 >
-    au < manifest ; Twentieth-Century China Volume 34 ; 34 >
+    au < ready ; Twentieth-Century China Volume 33 ; 33 >
+    au < ready ; Twentieth-Century China Volume 34 ; 34 >
 
   }
 

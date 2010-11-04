@@ -16,8 +16,8 @@
 
     param[journal_dir] = journal_of_slavic_linguistics
 
-    au < manifest ; Journal of Slavic Linguistics Volume 16 ; 16 >
-    au < manifest ; Journal of Slavic Linguistics Volume 17 ; 17 >
+    au < ready ; Journal of Slavic Linguistics Volume 16 ; 16 >
+    au < ready ; Journal of Slavic Linguistics Volume 17 ; 17 >
 
   }
 
@@ -30,17 +30,17 @@
 
     param[journal_dir] = kritika
 
-    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 1 ; 1 >
-    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 2 ; 2 >
+    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 1 ; 1 >
+    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 2 ; 2 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 3 ; 3 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 4 ; 4 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 5 ; 5 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 6 ; 6 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 7 ; 7 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 8 ; 8 >
-    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 9 ; 9 >
-    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 10 ; 10 >
-    au < manifest ; Kritika: Explorations in Russian and Eurasian History Volume 11 ; 11 >
+    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 9 ; 9 >
+    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 10 ; 10 >
+    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 11 ; 11 >
 
   }
 
@@ -53,8 +53,8 @@
 
     param[journal_dir] = serbian_studies
 
-    au < manifest ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
-    au < manifest ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
+    au < testing ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
+    au < testing ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
 
   }
 

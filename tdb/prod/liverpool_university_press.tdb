@@ -16,7 +16,7 @@
 
     param[journal_dir] = journal_of_literary_and_cultural_disability_studies
 
-    au < manifest ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
+    au < ready ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
 
   }
 
@@ -29,9 +29,9 @@
 
     param[journal_dir] = music_sound_and_the_moving_image
 
-    au < manifest ; Music, Sound, and the Moving Image Volume 1 ; 1 >
-    au < manifest ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-    au < manifest ; Music, Sound, and the Moving Image Volume 3 ; 3 >
+    au < ready ; Music, Sound, and the Moving Image Volume 1 ; 1 >
+    au < ready ; Music, Sound, and the Moving Image Volume 2 ; 2 >
+    au < ready ; Music, Sound, and the Moving Image Volume 3 ; 3 >
 
   }
 
@@ -44,7 +44,7 @@
 
     param[journal_dir] = romani_studies
 
-    au < manifest ; Romani Studies Volume 19 ; 19 >
+    au < ready ; Romani Studies Volume 19 ; 19 >
 
   }
 
@@ -57,8 +57,8 @@
 
     param[journal_dir] = science_fiction_film_and_television
 
-    au < manifest ; Science Fiction Film and Television Volume 1 ; 1 >
-    au < manifest ; Science Fiction Film and Television Volume 2 ; 2 >
+    au < ready ; Science Fiction Film and Television Volume 1 ; 1 >
+    au < ready ; Science Fiction Film and Television Volume 2 ; 2 >
 
   }
 
@@ -72,7 +72,7 @@
     param[journal_dir] = bulletin_of_hispanic_studies
 
     au < ready ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
-    au < manifest ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
+    au < ready ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
 
   }
 

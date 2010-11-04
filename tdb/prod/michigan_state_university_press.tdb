@@ -22,9 +22,9 @@
     au < released ; CR: The New Centennial Review Volume 4 ; 4 >
     au < released ; CR: The New Centennial Review Volume 5 ; 5 >
     au < released ; CR: The New Centennial Review Volume 6 ; 6 >
-    au < manifest ; CR: The New Centennial Review Volume 7 ; 7 >
-    au < manifest ; CR: The New Centennial Review Volume 8 ; 8 >
-    au < manifest ; CR: The New Centennial Review Volume 9 ; 9 >
+    au < ready ; CR: The New Centennial Review Volume 7 ; 7 >
+    au < ready ; CR: The New Centennial Review Volume 8 ; 8 >
+    au < ready ; CR: The New Centennial Review Volume 9 ; 9 >
 
   }
 
@@ -37,9 +37,9 @@
 
     param[journal_dir] = contagion
 
-    au < manifest ; Contagion: Journal of Violence, Mimesis, and Culture Issue 12 ; 12 >
-    au < manifest ; Contagion: Journal of Violence, Mimesis, and Culture Issue 14 ; 14 >
-    au < manifest ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15 ; 15 >
+    au < ready ; Contagion: Journal of Violence, Mimesis, and Culture Issue 12 ; 12 >
+    au < ready ; Contagion: Journal of Violence, Mimesis, and Culture Issue 14 ; 14 >
+    au < ready ; Contagion: Journal of Violence, Mimesis, and Culture Volume 15 ; 15 >
 
   }
 
@@ -57,9 +57,9 @@
     au < released ; Fourth Genre: Explorations in Nonfiction Volume 7 ; 7 >
     au < released ; Fourth Genre: Explorations in Nonfiction Volume 8 ; 8 >
     au < released ; Fourth Genre: Explorations in Nonfiction Volume 9 ; 9 >
-    au < manifest ; Fourth Genre: Explorations in Nonfiction Volume 10 ; 10 >
-    au < manifest ; Fourth Genre: Explorations in Nonfiction Volume 11 ; 11 >
-    au < manifest ; Fourth Genre: Explorations in Nonfiction Volume 12 ; 12 >
+    au < ready ; Fourth Genre: Explorations in Nonfiction Volume 10 ; 10 >
+    au < ready ; Fourth Genre: Explorations in Nonfiction Volume 11 ; 11 >
+    au < ready ; Fourth Genre: Explorations in Nonfiction Volume 12 ; 12 >
 
   }
 
@@ -78,8 +78,8 @@
     au < released ; French Colonial History Volume 6 ; 6 >
     au < released ; French Colonial History Volume 7 ; 7 >
     au < released ; French Colonial History Volume 8 ; 8 >
-    au < manifest ; French Colonial History Volume 9 ; 9 >
-    au < manifest ; French Colonial History Volume 10 ; 10 >
+    au < ready ; French Colonial History Volume 9 ; 9 >
+    au < ready ; French Colonial History Volume 10 ; 10 >
 
   }
 
@@ -93,8 +93,8 @@
     param[journal_dir] = italian_culture
 
     au < released ; Italian Culture Volume 23 ; 23 >
-    au < manifest ; Italian Culture Volume 24 ; 24 >
-    au < manifest ; Italian Culture Volume 26 ; 26 >
+    au < ready ; Italian Culture Volume 24 ; 24 >
+    au < ready ; Italian Culture Volume 26 ; 26 >
 
   }
 
@@ -107,9 +107,9 @@
 
     param[journal_dir] = journal_for_the_study_of_radicalism
 
-    au < manifest ; Journal for the Study of Radicalism Volume 1 ; 1 >
-    au < manifest ; Journal for the Study of Radicalism Volume 2 ; 2 >
-    au < manifest ; Journal for the Study of Radicalism Volume 3 ; 3 >
+    au < ready ; Journal for the Study of Radicalism Volume 1 ; 1 >
+    au < ready ; Journal for the Study of Radicalism Volume 2 ; 2 >
+    au < ready ; Journal for the Study of Radicalism Volume 3 ; 3 >
 
   }
 
@@ -126,7 +126,7 @@
     au < released ; Northeast African Studies Volume 7 ; 7 >
     au < released ; Northeast African Studies Volume 8 ; 8 >
     au < released ; Northeast African Studies Volume 9 ; 9 >
-    au < manifest ; Northeast African Studies Volume 10 ; 10 >
+    au < ready ; Northeast African Studies Volume 10 ; 10 >
 
   }
 
@@ -141,9 +141,9 @@
 
     au < released ; Red Cedar Review Volume 40 ; 40 >
     au < released ; Red Cedar Review Volume 41 ; 41 >
-    au < manifest ; Red Cedar Review Volume 42 ; 42 >
-    au < manifest ; Red Cedar Review Volume 43 ; 43 >
-    au < manifest ; Red Cedar Review Volume 44 ; 44 >
+    au < ready ; Red Cedar Review Volume 42 ; 42 >
+    au < ready ; Red Cedar Review Volume 43 ; 43 >
+    au < ready ; Red Cedar Review Volume 44 ; 44 >
 
   }
 
@@ -164,9 +164,9 @@
     au < released ; Rhetoric & Public Affairs Volume 8 ; 8 >
     au < released ; Rhetoric & Public Affairs Volume 9 ; 9 >
     au < released ; Rhetoric & Public Affairs Volume 10 ; 10 >
-    au < manifest ; Rhetoric & Public Affairs Volume 11 ; 11 >
-    au < manifest ; Rhetoric & Public Affairs Volume 12 ; 12 >
-    au < manifest ; Rhetoric & Public Affairs Volume 13 ; 13 >
+    au < ready ; Rhetoric & Public Affairs Volume 11 ; 11 >
+    au < ready ; Rhetoric & Public Affairs Volume 12 ; 12 >
+    au < ready ; Rhetoric & Public Affairs Volume 13 ; 13 >
 
   }
 

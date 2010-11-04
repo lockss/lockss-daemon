@@ -198,9 +198,9 @@
 
     param[journal_dir] = bookbird
 
-    au < manifest ; Bookbird: A Journal of International Children's Literature Volume 46 ; 46 >
-    au < manifest ; Bookbird: A Journal of International Children's Literature Volume 47 ; 47 >
-    au < manifest ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
+    au < ready ; Bookbird: A Journal of International Children's Literature Volume 46 ; 46 >
+    au < ready ; Bookbird: A Journal of International Children's Literature Volume 47 ; 47 >
+    au < ready ; Bookbird: A Journal of International Children's Literature Volume 48 ; 48 >
 
   }
 
@@ -232,8 +232,8 @@
 
     au < released ; Bulletin of the Center for Children's Books Volume 59 ; 59 >
     au < released ; Bulletin of the Center for Children's Books Volume 60 ; 60 >
-    au < manifest ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
-    au < manifest ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
+    au < ready ; Bulletin of the Center for Children's Books Volume 61 ; 61 >
+    au < ready ; Bulletin of the Center for Children's Books Volume 62 ; 62 >
 
   }
 
@@ -383,16 +383,16 @@
 
     param[journal_dir] = configurations
 
-    au < manifest ; Configurations Volume 1 ; 1 >
-    au < manifest ; Configurations Volume 2 ; 2 >
-    au < manifest ; Configurations Volume 3 ; 3 >
-    au < manifest ; Configurations Volume 4 ; 4 >
-    au < manifest ; Configurations Volume 5 ; 5 >
-    au < manifest ; Configurations Volume 6 ; 6 >
-    au < manifest ; Configurations Volume 7 ; 7 >
-    au < manifest ; Configurations Volume 8 ; 8 >
-    au < manifest ; Configurations Volume 9 ; 9 >
-    au < manifest ; Configurations Volume 10 ; 10 >
+    au < ready ; Configurations Volume 1 ; 1 >
+    au < ready ; Configurations Volume 2 ; 2 >
+    au < ready ; Configurations Volume 3 ; 3 >
+    au < ready ; Configurations Volume 4 ; 4 >
+    au < ready ; Configurations Volume 5 ; 5 >
+    au < ready ; Configurations Volume 6 ; 6 >
+    au < ready ; Configurations Volume 7 ; 7 >
+    au < ready ; Configurations Volume 8 ; 8 >
+    au < ready ; Configurations Volume 9 ; 9 >
+    au < ready ; Configurations Volume 10 ; 10 >
     au < released ; Configurations Volume 11 ; 11 >
     au < released ; Configurations Volume 12 ; 12 >
     au < released ; Configurations Volume 13 ; 13 >
@@ -492,7 +492,7 @@
 
     param[journal_dir] = feminist_formations
     
-    au < manifest ; Feminist Formations Volume 22 ; 22 >
+    au < ready ; Feminist Formations Volume 22 ; 22 >
 
   }
 
@@ -618,8 +618,8 @@
 
     param[journal_dir] = journal_of_colonialism_and_colonial_history
 
-    au < manifest ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
-    au < manifest ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
+    au < ready ; Journal of Colonialism and Colonial History Volume 1 ; 1 >
+    au < ready ; Journal of Colonialism and Colonial History Volume 2 ; 2 >
     au < released ; Journal of Colonialism and Colonial History Volume 3 ; 3 >
     au < released ; Journal of Colonialism and Colonial History Volume 4 ; 4 >
     au < released ; Journal of Colonialism and Colonial History Volume 5 ; 5 >
@@ -914,7 +914,7 @@
 
     param[journal_dir] = modern_fiction_studies
 
-    au < testing ; MFS Modern Fiction Studies Volume 40 ; 40 >
+    au < ready ; MFS Modern Fiction Studies Volume 40 ; 40 >
     au < released ; MFS Modern Fiction Studies Volume 41 ; 41 >
     au < released ; MFS Modern Fiction Studies Volume 42 ; 42 >
     au < released ; MFS Modern Fiction Studies Volume 43 ; 43 >
@@ -928,7 +928,7 @@
     au < released ; MFS Modern Fiction Studies Volume 51 ; 51 >
     au < released ; MFS Modern Fiction Studies Volume 52 ; 52 >
     au < released ; MFS Modern Fiction Studies Volume 53 ; 53 >
-    au < testing ; MFS Modern Fiction Studies Volume 54 ; 54 >
+    au < ready ; MFS Modern Fiction Studies Volume 54 ; 54 >
 
   }
 
@@ -970,7 +970,7 @@
     au < released ; MLN Volume 120 ; 120 >
     au < released ; MLN Volume 121 ; 121 >
     au < released ; MLN Volume 122 ; 122 >
-    au < testing ; MLN Volume 123 ; 123 >
+    au < ready ; MLN Volume 123 ; 123 >
 
   }
 
@@ -997,8 +997,8 @@
     au < released ; Modernism/modernity Volume 12 ; 12 >
     au < released ; Modernism/modernity Volume 13 ; 13 >
     au < released ; Modernism/modernity Volume 14 ; 14 >
-    au < testing ; Modernism/modernity Volume 15 ; 15 >
-    au < testing ; Modernism/modernity Volume 16 ; 16 >
+    au < ready ; Modernism/modernity Volume 15 ; 15 >
+    au < ready ; Modernism/modernity Volume 16 ; 16 >
 
   }
 
@@ -1023,8 +1023,8 @@
     au < released ; New Literary History Volume 35 ; 35 >
     au < released ; New Literary History Volume 36 ; 36 >
     au < released ; New Literary History Volume 37 ; 37 >
-    au < testing ; New Literary History Volume 38 ; 38 >
-    au < testing ; New Literary History Volume 39 ; 39 >
+    au < ready ; New Literary History Volume 38 ; 38 >
+    au < ready ; New Literary History Volume 39 ; 39 >
 
   }
 
@@ -1048,8 +1048,8 @@
     au < released ; NWSA Journal Volume 17 ; 17 >
     au < released ; NWSA Journal Volume 18 ; 18 >
     au < released ; NWSA Journal Volume 19 ; 19 >
-    au < testing ; NWSA Journal Volume 20 ; 20 >
-    au < testing ; NWSA Journal Volume 21 ; 21 >
+    au < ready ; NWSA Journal Volume 20 ; 20 >
+    au < ready ; NWSA Journal Volume 21 ; 21 >
 
   }
   
@@ -1415,7 +1415,7 @@
     au < released ; Technology and Culture Volume 47 ; 47 >
     au < released ; Technology and Culture Volume 48 ; 48 >
     au < ready ; Technology and Culture Volume 49 ; 49 >
-    au < testing ; Technology and Culture Volume 50 ; 50 >
+    au < ready ; Technology and Culture Volume 50 ; 50 >
 
   }
 
@@ -1590,7 +1590,7 @@
     au < released ; Theatre Topics Volume 16 ; 16 >
     au < released ; Theatre Topics Volume 17 ; 17 >
     au < ready ; Theatre Topics Volume 18 ; 18 >
-    au < testing ; Theatre Topics Volume 19 ; 19 >
+    au < ready ; Theatre Topics Volume 19 ; 19 >
 
   }
 
@@ -1610,8 +1610,8 @@
     au < released ; Theory and Event Volume 7 ; 7 >
     au < released ; Theory and Event Volume 8 ; 8 >
     au < released ; Theory and Event Volume 9 ; 9 >
-    au < testing ; Theory and Event Volume 10 ; 10 >
-    au < testing ; Theory and Event Volume 11 ; 11 >
+    au < ready ; Theory and Event Volume 10 ; 10 >
+    au < ready ; Theory and Event Volume 11 ; 11 >
 
   }
 
@@ -1631,8 +1631,8 @@
     au < released ; Transactions of the American Philological Association Volume 134 ; 134 >
     au < released ; Transactions of the American Philological Association Volume 135 ; 135 >
     au < released ; Transactions of the American Philological Association Volume 136 ; 136 >
-    au < testing ; Transactions of the American Philological Association Volume 137 ; 137 >
-    au < testing ; Transactions of the American Philological Association Volume 138 ; 138 >
+    au < ready ; Transactions of the American Philological Association Volume 137 ; 137 >
+    au < ready ; Transactions of the American Philological Association Volume 138 ; 138 >
 
   }
   
@@ -1648,8 +1648,8 @@
     au < released ; Victorian Periodicals Review Volume 38 ; 38 >
     au < released ; Victorian Periodicals Review Volume 39 ; 39 >
     au < released ; Victorian Periodicals Review Volume 40 ; 40 >
-    au < testing ; Victorian Periodicals Review Volume 41 ; 41 >
-    au < testing ; Victorian Periodicals Review Volume 42 ; 42 >
+    au < ready ; Victorian Periodicals Review Volume 41 ; 41 >
+    au < ready ; Victorian Periodicals Review Volume 42 ; 42 >
 
   }
   
@@ -1662,10 +1662,10 @@
 
     param[journal_dir] = wide_angle
 
-    au < testing ; Wide Angle Volume 18 ; 18 >
-    au < testing ; Wide Angle Volume 19 ; 19 >
-    au < testing ; Wide Angle Volume 20 ; 20 >
-    au < testing ; Wide Angle Volume 21 ; 21 >
+    au < ready ; Wide Angle Volume 18 ; 18 >
+    au < ready ; Wide Angle Volume 19 ; 19 >
+    au < ready ; Wide Angle Volume 20 ; 20 >
+    au < ready ; Wide Angle Volume 21 ; 21 >
 
   }
 

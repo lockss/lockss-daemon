@@ -16,16 +16,16 @@
 
     param[journal_dir] = notes
 
-    au < manifest ; Notes Volume 57 ; 57 >
-    au < manifest ; Notes Volume 58 ; 58 >
-    au < manifest ; Notes Volume 59 ; 59 >
-    au < manifest ; Notes Volume 60 ; 60 >
-    au < manifest ; Notes Volume 61 ; 61 >
-    au < manifest ; Notes Volume 62 ; 62 >
-    au < manifest ; Notes Volume 63 ; 63 >
-    au < manifest ; Notes Volume 64 ; 64 >
-    au < manifest ; Notes Volume 65 ; 65 >
-    au < manifest ; Notes Volume 66 ; 66 >
+    au < ready ; Notes Volume 57 ; 57 >
+    au < ready ; Notes Volume 58 ; 58 >
+    au < testing ; Notes Volume 59 ; 59 >
+    au < ready ; Notes Volume 60 ; 60 >
+    au < ready ; Notes Volume 61 ; 61 >
+    au < ready ; Notes Volume 62 ; 62 >
+    au < ready ; Notes Volume 63 ; 63 >
+    au < ready ; Notes Volume 64 ; 64 >
+    au < ready ; Notes Volume 65 ; 65 >
+    au < ready ; Notes Volume 66 ; 66 >
 
   }
 
