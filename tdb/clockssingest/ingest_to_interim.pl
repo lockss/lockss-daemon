@@ -25,7 +25,7 @@ print "directory mode\n";
   
   foreach $fn (0..@files-1) {
   
-    if ($files[$fn] =~ m/^[a-z_]*\.tdb$/) {
+    if ($files[$fn] =~ m/^[-_a-z]*\.tdb$/) {
 
       my $source_location = $dir.$files[$fn];
       my $dest_location = $source_location;
