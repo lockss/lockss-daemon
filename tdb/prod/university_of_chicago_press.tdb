@@ -3,12 +3,26 @@
     name = University of Chicago Press
   >
 
-  implicit < status ; name ; param[volume_name] >
-
   plugin = org.lockss.plugin.universityofchicagopress.UniversityOfChicagoPressPlugin
   param[base_url] = http://www.journals.uchicago.edu/
+  implicit < status ; name ; param[volume_name] >
 
   {
+  
+    title <
+      name = Afterall: A Journal of Art, Context and Enquiry ;
+      issn = 1465-4253
+    >
+
+    param[journal_id] = aft
+
+    au < exists ; Afterall: A Journal of Art, Context and Enquiry Volume 24 ; 24 >
+    au < exists ; Afterall: A Journal of Art, Context and Enquiry Volume 25 ; 25 >
+
+  }
+  
+  {
+  
     title <
       name = American Art ;
       issn = 1073-9300 ;
@@ -490,58 +504,7 @@
   }
 
   {
-    title <
-      name = The Astronomical Journal ;
-      issn = 0004-6256 ;
-      eissn = 1538-3881 
-    >
 
-    param[journal_id] = aj
-    
-    comment = moved to IOP
-
-  }
-
-  {
-    title <
-      name = The Astrophysical Journal ;
-      issn = 0004-637X ;
-      eissn = 1538-4357
-    >
-
-    param[journal_id] = apj
-
-    comment = moved to IOP
-
-  }
-
-  {
-    title <
-      name = The Astrophysical Journal Letters ;
-      issn = 2041-8205 ;
-      eissn = 2041-8213
-    >
-
-    param[journal_id] = apjl
-
-    comment = moved to IOP
-
-  }
-
-  {
-    title <
-      name = The Astrophysical Journal Supplement Series ;
-      issn = 0067-0049 ;
-      eissn = 1538-4365
-    >
-
-    param[journal_id] = apjs
-
-    comment = moved to IOP
-
-  }
-
-  {
     title <
       name = Classical Philology ;
       issn = 0009-837X ;
@@ -1241,6 +1204,19 @@
   }
 
   {
+  
+    title <
+      name = HOPOS: The Journal of the International Society for the History of Philosophy of Science ;
+      issn = 2152-5188 ;
+      eissn = 2156-6240
+    >
+
+    param[journal_id] = hopos
+    comment[2011] = begins in 2011
+
+  }
+
+  {
     title <
       name = Infection Control and Hospital Epidemiology ;
       issn = 0899-823X ;
@@ -1261,6 +1237,21 @@ comment[iche27] = 500 internal server errors
     au < notReady ; Infection Control and Hospital Epidemiology Volume 27 ; 27 >
     au < manifest ; Infection Control and Hospital Epidemiology Volume 28 ; 28 >
     au < manifest ; Infection Control and Hospital Epidemiology Volume 29 ; 29 >
+
+  }
+
+  {
+  
+    title <
+      name = Innovation Policy and the Economy ;
+      issn = 1531-3468 ;
+      eissn = 1537-2618
+    >
+
+    param[journal_id] = ipe
+    
+    au < manifest ; Innovation Policy and the Economy Volume 9 ; 9 >
+    au < manifest ; Innovation Policy and the Economy Volume 10 ; 10 >
 
   }
 
@@ -2409,6 +2400,36 @@ comment[isis97] = 500 internal server errors
   }
 
   {
+
+    title <
+      name = NBER International Seminar on Macroeconomics ;
+      issn = 1932-8796 ;
+      eissn = 2150-8372
+    >
+
+    param[journal_id] = ism
+
+    au < doNotProcess ; NBER International Seminar on Macroeconomics Volume 5 ; 5 >
+    au < doNotProcess ; NBER International Seminar on Macroeconomics Volume 6 ; 6 >
+
+  }
+
+  {
+
+    title <
+      name = NBER Macroeconomics Annual ;
+      issn = 0889-3365 ;
+      eissn = 1537-2642
+    >
+
+    param[journal_id] = ma
+
+    au < doNotProcess ; NBER Macroeconomics Annual Volume 23 ; 23 >
+    au < doNotProcess ; NBER Macroeconomics Annual Volume 24 ; 24 >
+
+  }
+
+  {
     title <
       name = Osiris ;
       issn = 0369-7827
@@ -2663,6 +2684,46 @@ comment[isis97] = 500 internal server errors
   }
 
   {
+  
+    title <
+      name = Renaissance Quarterly ;
+      issn = 0034-4338 ;
+      eissn = 1935-0236
+    >
+
+    param[journal_id] = rq
+
+    au < doNotProcess ; Renaissance Quarterly Volume 58 ; 58 >
+    au < doNotProcess ; Renaissance Quarterly Volume 59 ; 59 >
+    au < doNotProcess ; Renaissance Quarterly Volume 60 ; 60 >
+    au < doNotProcess ; Renaissance Quarterly Volume 61 ; 61 >
+    au < doNotProcess ; Renaissance Quarterly Volume 62 ; 62 >
+    au < doNotProcess ; Renaissance Quarterly Volume 63 ; 63 >
+
+  }
+
+  {
+  
+    title <
+      name = Schools: Studies in Education ;
+      issn = 1550-1175 ;
+      eissn = 2153-0327
+    >
+
+    param[journal_id] = schools
+
+    au < doNotProcess ; Schools: Studies in Education Volume 1 ; 1 >
+    au < doNotProcess ; Schools: Studies in Education Volume 2 ; 2 >
+    au < doNotProcess ; Schools: Studies in Education Volume 3 ; 3 >
+    au < doNotProcess ; Schools: Studies in Education Volume 4 ; 4 >
+    au < doNotProcess ; Schools: Studies in Education Volume 5 ; 5 >
+    au < doNotProcess ; Schools: Studies in Education Volume 6 ; 6 >
+    au < doNotProcess ; Schools: Studies in Education Volume 7 ; 7 >
+
+  }
+  
+  {
+
     title <
       name = Signs: Journal of Women in Culture and Society ;
       issn = 0097-9740 ;
@@ -2726,6 +2787,73 @@ comment[isis97] = 500 internal server errors
     au < manifest ; Social Service Review Volume 79 ; 79 >
     au < ready ; Social Service Review Volume 80 ; 80 >
     au < manifest ; Social Service Review Volume 81 ; 81 >
+
+  }
+
+  {
+  
+    title <
+      name = Supreme Court Economic Review
+    >
+
+    param[journal_id] = scer
+
+    comment[odd] = different URL structure, seemingly no online content
+
+  }
+
+  {
+  
+    title <
+      name = The Supreme Court Review
+    >
+
+    param[journal_id] = scr
+
+    comment[odd] = different URL structure, seemingly no online content
+
+  }
+
+  {
+  
+    title <
+      name = Tax Policy and the Economy ;
+      issn = 0892-8649 ;
+      eissn = 1537-2650
+    >
+
+    param[journal_id] = tpe
+
+    au < doNotProcess ; Tax Policy and the Economy Volume 22 ; 22 >
+    au < doNotProcess ; Tax Policy and the Economy Volume 23 ; 23 >
+    au < doNotProcess ; Tax Policy and the Economy Volume 24 ; 24 >
+
+  }
+
+  {
+  
+    title <
+      name = West 86th: A Journal of Decorative Arts, Design History, and Material Culture ;
+      issn = 2153-5531 ;
+      eissn = 2153-5558
+    >
+
+    {
+    
+      param[journal_id] = sda
+      
+      au < exists ; Studies in the Decorative Arts Volume 14 ; 14 >
+      au < exists ; Studies in the Decorative Arts Volume 15 ; 15 >
+      au < exists ; Studies in the Decorative Arts Volume 16 ; 16 >
+      au < exists ; Studies in the Decorative Arts Volume 17 ; 17 >
+    
+    }
+
+    {
+    
+      param[journal_id] = wes
+    
+    }
 
   }
 
