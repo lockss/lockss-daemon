@@ -12,20 +12,16 @@
       eissn = 1083-351X
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.jbc.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://www.jbc.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < manifest ; Journal of Biological Chemistry Volume 280 ; 280 >
-      au < manifest ; Journal of Biological Chemistry Volume 281 ; 281 >
-      au < testing ; Journal of Biological Chemistry Volume 282 ; 282 >
-      au < ready ; Journal of Biological Chemistry Volume 283 ; 283 >
-      au < ready ; Journal of Biological Chemistry Volume 284 ; 284 >
-      au < ready ; Journal of Biological Chemistry Volume 285 ; 285 >
-
-    }
+    au < manifest ; Journal of Biological Chemistry Volume 280 ; 280 >
+    au < manifest ; Journal of Biological Chemistry Volume 281 ; 281 >
+    au < testing ; Journal of Biological Chemistry Volume 282 ; 282 >
+    au < ready ; Journal of Biological Chemistry Volume 283 ; 283 >
+    au < ready ; Journal of Biological Chemistry Volume 284 ; 284 >
+    au < ready ; Journal of Biological Chemistry Volume 285 ; 285 >
 
   }
 
@@ -37,65 +33,16 @@
       eissn = 1535-9484
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.jlr.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://www.jlr.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < exists ; The Journal of Lipid Research Volume 1 ; 1 >
-      au < exists ; The Journal of Lipid Research Volume 2 ; 2 >
-      au < exists ; The Journal of Lipid Research Volume 3 ; 3 >
-      au < exists ; The Journal of Lipid Research Volume 4 ; 4 >
-      au < exists ; The Journal of Lipid Research Volume 5 ; 5 >
-      au < exists ; The Journal of Lipid Research Volume 6 ; 6 >
-      au < exists ; The Journal of Lipid Research Volume 7 ; 7 >
-      au < exists ; The Journal of Lipid Research Volume 8 ; 8 >
-      au < exists ; The Journal of Lipid Research Volume 9 ; 9 >
-      au < exists ; The Journal of Lipid Research Volume 10 ; 10 >
-      au < exists ; The Journal of Lipid Research Volume 11 ; 11 >
-      au < exists ; The Journal of Lipid Research Volume 12 ; 12 >
-      au < exists ; The Journal of Lipid Research Volume 13 ; 13 >
-      au < exists ; The Journal of Lipid Research Volume 14 ; 14 >
-      au < exists ; The Journal of Lipid Research Volume 15 ; 15 >
-      au < exists ; The Journal of Lipid Research Volume 16 ; 16 >
-      au < exists ; The Journal of Lipid Research Volume 17 ; 17 >
-      au < exists ; The Journal of Lipid Research Volume 18 ; 18 >
-      au < exists ; The Journal of Lipid Research Volume 19 ; 19 >
-      au < exists ; The Journal of Lipid Research Volume 20 ; 20 >
-      au < exists ; The Journal of Lipid Research Volume 21 ; 21 >
-      au < exists ; The Journal of Lipid Research Volume 22 ; 22 >
-      au < exists ; The Journal of Lipid Research Volume 23 ; 23 >
-      au < exists ; The Journal of Lipid Research Volume 24 ; 24 >
-      au < exists ; The Journal of Lipid Research Volume 25 ; 25 >
-      au < exists ; The Journal of Lipid Research Volume 26 ; 26 >
-      au < exists ; The Journal of Lipid Research Volume 27 ; 27 >
-      au < exists ; The Journal of Lipid Research Volume 28 ; 28 >
-      au < exists ; The Journal of Lipid Research Volume 29 ; 29 >
-      au < exists ; The Journal of Lipid Research Volume 30 ; 30 >
-      au < exists ; The Journal of Lipid Research Volume 31 ; 31 >
-      au < exists ; The Journal of Lipid Research Volume 32 ; 32 >
-      au < exists ; The Journal of Lipid Research Volume 33 ; 33 >
-      au < exists ; The Journal of Lipid Research Volume 34 ; 34 >
-      au < exists ; The Journal of Lipid Research Volume 35 ; 35 >
-      au < exists ; The Journal of Lipid Research Volume 36 ; 36 >
-      au < exists ; The Journal of Lipid Research Volume 37 ; 37 >
-      au < exists ; The Journal of Lipid Research Volume 38 ; 38 >
-      au < exists ; The Journal of Lipid Research Volume 39 ; 39 >
-      au < exists ; The Journal of Lipid Research Volume 40 ; 40 >
-      au < exists ; The Journal of Lipid Research Volume 41 ; 41 >
-      au < exists ; The Journal of Lipid Research Volume 42 ; 42 >
-      au < exists ; The Journal of Lipid Research Volume 43 ; 43 >
-      au < exists ; The Journal of Lipid Research Volume 44 ; 44 >
-      au < exists ; The Journal of Lipid Research Volume 45 ; 45 >
-      au < ready ; The Journal of Lipid Research Volume 46 ; 46 >
-      au < ready ; The Journal of Lipid Research Volume 47 ; 47 >
-      au < ready ; The Journal of Lipid Research Volume 48 ; 48 >
-      au < ready ; The Journal of Lipid Research Volume 49 ; 49 >
-      au < ready ; The Journal of Lipid Research Volume 50 ; 50 >
-      au < ready ; The Journal of Lipid Research Volume 51 ; 51 >
-
-    }
+    au < released ; The Journal of Lipid Research Volume 46 ; 46 >
+    au < released ; The Journal of Lipid Research Volume 47 ; 47 >
+    au < released ; The Journal of Lipid Research Volume 48 ; 48 >
+    au < released ; The Journal of Lipid Research Volume 49 ; 49 >
+    au < released ; The Journal of Lipid Research Volume 50 ; 50 >
+    au < released ; The Journal of Lipid Research Volume 51 ; 51 >
 
   }
 

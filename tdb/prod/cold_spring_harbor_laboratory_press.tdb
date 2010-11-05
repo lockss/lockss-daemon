@@ -110,30 +110,12 @@
       param[base_url] = http://genesdev.cshlp.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < exists ; Genes & Development Volume 1 ; 1 >
-      au < exists ; Genes & Development Volume 2 ; 2 >
-      au < exists ; Genes & Development Volume 3 ; 3 >
-      au < exists ; Genes & Development Volume 4 ; 4 >
-      au < exists ; Genes & Development Volume 5 ; 5 >
-      au < exists ; Genes & Development Volume 6 ; 6 >
-      au < exists ; Genes & Development Volume 7 ; 7 >
-      au < exists ; Genes & Development Volume 8 ; 8 >
-      au < exists ; Genes & Development Volume 9 ; 9 >
-      au < exists ; Genes & Development Volume 10 ; 10 >
-      au < exists ; Genes & Development Volume 11 ; 11 >
-      au < exists ; Genes & Development Volume 12 ; 12 >
-      au < exists ; Genes & Development Volume 13 ; 13 >
-      au < exists ; Genes & Development Volume 14 ; 14 >
-      au < exists ; Genes & Development Volume 15 ; 15 >
-      au < exists ; Genes & Development Volume 16 ; 16 >
-      au < exists ; Genes & Development Volume 17 ; 17 >
-      au < exists ; Genes & Development Volume 18 ; 18 >
-      au < ready ; Genes & Development Volume 19 ; 19 >
-      au < ready ; Genes & Development Volume 20 ; 20 >
-      au < ready ; Genes & Development Volume 21 ; 21 >
-      au < ready ; Genes & Development Volume 22 ; 22 >
-      au < ready ; Genes & Development Volume 23 ; 23 >
-      au < ready ; Genes & Development Volume 24 ; 24 >
+      au < released ; Genes & Development Volume 19 ; 19 >
+      au < released ; Genes & Development Volume 20 ; 20 >
+      au < released ; Genes & Development Volume 21 ; 21 >
+      au < released ; Genes & Development Volume 22 ; 22 >
+      au < released ; Genes & Development Volume 23 ; 23 >
+      au < released ; Genes & Development Volume 24 ; 24 >
 
     }
 
@@ -194,23 +176,12 @@
       param[base_url] = http://learnmem.cshlp.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < exists ; Learning & Memory Volume 1 ; 1 >
-      au < exists ; Learning & Memory Volume 2 ; 2 >
-      au < exists ; Learning & Memory Volume 3 ; 3 >
-      au < exists ; Learning & Memory Volume 4 ; 4 >
-      au < exists ; Learning & Memory Volume 5 ; 5 >
-      au < exists ; Learning & Memory Volume 6 ; 6 >
-      au < exists ; Learning & Memory Volume 7 ; 7 >
-      au < exists ; Learning & Memory Volume 8 ; 8 >
-      au < exists ; Learning & Memory Volume 9 ; 9 >
-      au < exists ; Learning & Memory Volume 10 ; 10 >
-      au < exists ; Learning & Memory Volume 11 ; 11 >
-      au < ready ; Learning & Memory Volume 12 ; 12 >
-      au < ready ; Learning & Memory Volume 13 ; 13 >
-      au < ready ; Learning & Memory Volume 14 ; 14 >
-      au < ready ; Learning & Memory Volume 15 ; 15 >
-      au < ready ; Learning & Memory Volume 16 ; 16 >
-      au < ready ; Learning & Memory Volume 17 ; 17 >
+      au < released ; Learning & Memory Volume 12 ; 12 >
+      au < released ; Learning & Memory Volume 13 ; 13 >
+      au < released ; Learning & Memory Volume 14 ; 14 >
+      au < released ; Learning & Memory Volume 15 ; 15 >
+      au < released ; Learning & Memory Volume 16 ; 16 >
+      au < released ; Learning & Memory Volume 17 ; 17 >
 
     }
 

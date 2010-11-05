@@ -210,16 +210,12 @@
 
       param[base_url] = http://molinterv.aspetjournals.org/
 
-      au < HighWirePressH20Plugin ; exists ; Molecular Interventions Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Interventions Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Interventions Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Interventions Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Interventions Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Interventions Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Interventions Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Interventions Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Interventions Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Interventions Volume 10 ; 10 >
+      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 5 ; 5 >
+      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 6 ; 6 >
+      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 7 ; 7 >
+      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 8 ; 8 >
+      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 9 ; 9 >
+      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 10 ; 10 >
 
     }
 
@@ -236,83 +232,17 @@
 
       param[base_url] = http://molpharm.aspetjournals.org/
 
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 62 ; 62 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 63 ; 63 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 64 ; 64 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 65 ; 65 >
-      au < HighWirePressH20Plugin ; exists ; Molecular Pharmacology Volume 66 ; 66 >
       au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 67 ; 67 >
       au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 68 ; 68 >
       au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 69 ; 69 >
       au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 70 ; 70 >
       au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Pharmacology Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Pharmacology Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Pharmacology Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Pharmacology Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Pharmacology Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; ready ; Molecular Pharmacology Volume 77 ; 77 >
+      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 72 ; 72 >
+      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 73 ; 73 >
+      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 74 ; 74 >
+      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 75 ; 75 >
+      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 76 ; 76 >
+      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 77 ; 77 >
 
     }
 
