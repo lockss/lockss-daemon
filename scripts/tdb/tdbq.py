@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.9 2010-10-26 21:53:25 thib_gc Exp $
+# $Id: tdbq.py,v 1.10 2010-11-09 02:33:30 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -273,7 +273,7 @@ class TdbqScanner(object):
         if re.match(re.compile('|'.join([TdbqLiteral.EQUAL, TdbqLiteral.NOT_EQUAL, TdbqLiteral.MATCHES, TdbqLiteral.DOES_NOT_MATCH, '\\' + TdbqLiteral.PAREN_OPEN, '\\' + TdbqLiteral.PAREN_CLOSE])), self.__str):
             return self.__literal()
         # Keyword
-        if re.match(re.compile('(' + '|'.join([TdbqLiteral.AND, TdbqLiteral.OR, TdbqLiteral.IS, TdbqLiteral.NOT, TdbqLiteral.SET]) + ') '), self.__str):
+        if re.match(re.compile('(' + '|'.join([TdbqLiteral.AND, TdbqLiteral.OR, TdbqLiteral.IS, TdbqLiteral.NOT, TdbqLiteral.SET]) + ')([ )]|$)'), self.__str):
             return self.__keyword()
         # String
         if self.__str.startswith(TdbqLiteral.QUOTE_DOUBLE): return self.__dquote()
@@ -371,6 +371,10 @@ class TdbqScanner(object):
                (TdbqLiteral.NOT, TdbqToken.NOT),
                (TdbqLiteral.SET, TdbqToken.SET)]
         for lit, tok in lst:
+            if self.__str == lit or self.__str.startswith(lit + ')'):
+                self.__token(tok)
+                self.__move(len(lit))
+                return self.__cur
             if self.__str.startswith(lit + ' '):
                 self.__token(tok)
                 self.__move(len(lit) + 1)
@@ -498,7 +502,7 @@ class TdbqParser(object):
         elif opertyp in [TdbqToken.EQUAL, TdbqToken.NOT_EQUAL, TdbqToken.MATCHES, TdbqToken.DOES_NOT_MATCH]:
             self.__expect(opertyp, oper.index())
         else:
-            raise RuntimeError, 'expected "%s", "%s", "%s", "%s",or "%s" at index %d but got: %s' % (TdbqLiteral.IS, TdbqLiteral.EQUAL, TdbqLiteral.NOT_EQUAL, TdbqLiteral.MATCHES, TdbqLiteral.DOES_NOT_MATCH, oper.index(), oper.translate())
+            raise RuntimeError, 'expected "%s", "%s", "%s", "%s" or "%s" at index %d but got: %s' % (TdbqLiteral.IS, TdbqLiteral.EQUAL, TdbqLiteral.NOT_EQUAL, TdbqLiteral.MATCHES, TdbqLiteral.DOES_NOT_MATCH, oper.index(), oper.translate())
 
         # "set" or string
         value = self.__input[self.__ind]
@@ -609,6 +613,8 @@ def str_to_lambda_au(str):
                    ('year', lambda au: au.year()),
                    ('name', lambda au: au.name()),
                    ('plugin', lambda au: au.plugin()),
+                   ('pluginPrefix', lambda au: au.get(AU.PLUGIN_PREFIX)),
+                   ('pluginSuffix', lambda au: au.get(AU.PLUGIN_SUFFIX)),
                    ('rights', lambda au: au.rights()),
                    ('auid', lambda au: au.auid()),
                    ('title', lambda au: au.title().name()),
