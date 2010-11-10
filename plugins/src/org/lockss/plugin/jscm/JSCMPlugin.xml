@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -18,16 +18,25 @@
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%sjscm/v%dno1.html&quot;, base_url, volume</string>
-      <string>1,&quot;%sjscm/v%d/.*&quot;, base_url, volume</string>
-      <string>1,&quot;simages/.*&quot;, base_url</string>
-      <string>1,&quot;%s.*.gif&quot;, base_url</string>
+      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,&quot;^%s$&quot;, base_url</string>
+      <string>1,&quot;^%sv1no1\.html$&quot;, base_url</string>
+      <string>1,&quot;^%sv%dno[^/]+\.html$&quot;, base_url, volume</string>
+      <string>1,&quot;^%sv%d/&quot;, base_url, volume</string>
     </list>
   </entry>
   <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.jscm.JSCMHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
     <string>au_start_url</string>
-    <string>&quot;%sjscm/v%dno1.html&quot;, base_url, volume</string>
+    <string>&quot;%s&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%sv1no1.html&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>
