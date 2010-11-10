@@ -13272,46 +13272,45 @@
     >
 
     param[journal_issn] = 0342-4642
-    attr[where] = content2b
 
-    comment[29] = persistent 400 error, would be okay in the field with global exclude pattern
+    comment[29] = persistent 400 error
 
-    au < testing ; 1975 ; Intensive Care Medicine Volume 1 ; 1 >
-    au < testing ; 1976 ; Intensive Care Medicine Volume 2 ; 2 >
-    au < testing ; 1977 ; Intensive Care Medicine Volume 3 ; 3 >
-    au < testing ; 1978 ; Intensive Care Medicine Volume 4 ; 4 >
-    au < testing ; 1979 ; Intensive Care Medicine Volume 5 ; 5 >
-    au < testing ; 1980 ; Intensive Care Medicine Volume 6 ; 6 >
-    au < testing ; 1980-1981 ; Intensive Care Medicine Volume 7 ; 7 >
-    au < testing ; 1982 ; Intensive Care Medicine Volume 8 ; 8 >
-    au < testing ; 1983 ; Intensive Care Medicine Volume 9 ; 9 >
-    au < testing ; 1984 ; Intensive Care Medicine Volume 10 ; 10 >
-    au < testing ; 1985 ; Intensive Care Medicine Volume 11 ; 11 >
-    au < testing ; 1986 ; Intensive Care Medicine Volume 12 ; 12 >
-    au < testing ; 1987 ; Intensive Care Medicine Volume 13 ; 13 >
-    au < testing ; 1988 ; Intensive Care Medicine Volume 14 ; 14 >
-    au < testing ; 1989 ; Intensive Care Medicine Volume 15 ; 15 >
-    au < testing ; 1990 ; Intensive Care Medicine Volume 16 ; 16 >
-    au < testing ; 1991 ; Intensive Care Medicine Volume 17 ; 17 >
-    au < testing ; 1992 ; Intensive Care Medicine Volume 18 ; 18 >
-    au < testing ; 1993 ; Intensive Care Medicine Volume 19 ; 19 >
-    au < testing ; 1994 ; Intensive Care Medicine Volume 20 ; 20 >
-    au < testing ; 1995 ; Intensive Care Medicine Volume 21 ; 21 >
-    au < testing ; 1996 ; Intensive Care Medicine Volume 22 ; 22 >
-    au < testing ; 1997 ; Intensive Care Medicine Volume 23 ; 23 >
-    au < testing ; 1998 ; Intensive Care Medicine Volume 24 ; 24 >
-    au < testing ; 1999 ; Intensive Care Medicine Volume 25 ; 25 >
-    au < testing ; 2000 ; Intensive Care Medicine Volume 26 ; 26 >
-    au < testing ; 2001 ; Intensive Care Medicine Volume 27 ; 27 >
-    au < testing ; 2002 ; Intensive Care Medicine Volume 28 ; 28 >
+    au < ready ; 1975 ; Intensive Care Medicine Volume 1 ; 1 >
+    au < ready ; 1976 ; Intensive Care Medicine Volume 2 ; 2 >
+    au < ready ; 1977 ; Intensive Care Medicine Volume 3 ; 3 >
+    au < ready ; 1978 ; Intensive Care Medicine Volume 4 ; 4 >
+    au < ready ; 1979 ; Intensive Care Medicine Volume 5 ; 5 >
+    au < ready ; 1980 ; Intensive Care Medicine Volume 6 ; 6 >
+    au < ready ; 1980-1981 ; Intensive Care Medicine Volume 7 ; 7 >
+    au < ready ; 1982 ; Intensive Care Medicine Volume 8 ; 8 >
+    au < ready ; 1983 ; Intensive Care Medicine Volume 9 ; 9 >
+    au < ready ; 1984 ; Intensive Care Medicine Volume 10 ; 10 >
+    au < ready ; 1985 ; Intensive Care Medicine Volume 11 ; 11 >
+    au < ready ; 1986 ; Intensive Care Medicine Volume 12 ; 12 >
+    au < ready ; 1987 ; Intensive Care Medicine Volume 13 ; 13 >
+    au < ready ; 1988 ; Intensive Care Medicine Volume 14 ; 14 >
+    au < ready ; 1989 ; Intensive Care Medicine Volume 15 ; 15 >
+    au < ready ; 1990 ; Intensive Care Medicine Volume 16 ; 16 >
+    au < ready ; 1991 ; Intensive Care Medicine Volume 17 ; 17 >
+    au < ready ; 1992 ; Intensive Care Medicine Volume 18 ; 18 >
+    au < ready ; 1993 ; Intensive Care Medicine Volume 19 ; 19 >
+    au < ready ; 1994 ; Intensive Care Medicine Volume 20 ; 20 >
+    au < ready ; 1995 ; Intensive Care Medicine Volume 21 ; 21 >
+    au < ready ; 1996 ; Intensive Care Medicine Volume 22 ; 22 >
+    au < ready ; 1997 ; Intensive Care Medicine Volume 23 ; 23 >
+    au < ready ; 1998 ; Intensive Care Medicine Volume 24 ; 24 >
+    au < ready ; 1999 ; Intensive Care Medicine Volume 25 ; 25 >
+    au < ready ; 2000 ; Intensive Care Medicine Volume 26 ; 26 >
+    au < ready ; 2001 ; Intensive Care Medicine Volume 27 ; 27 >
+    au < ready ; 2002 ; Intensive Care Medicine Volume 28 ; 28 >
     au < notReady ; 2003 ; Intensive Care Medicine Volume 29 ; 29 >
-    au < testing ; 2004 ; Intensive Care Medicine Volume 30 ; 30 >
-    au < testing ; 2005 ; Intensive Care Medicine Volume 31 ; 31 >
-    au < testing ; 2006 ; Intensive Care Medicine Volume 32 ; 32 >
-    au < testing ; 2007 ; Intensive Care Medicine Volume 33 ; 33 >
-    au < testing ; 2008 ; Intensive Care Medicine Volume 34 ; 34 >
-    au < testing ; 2009 ; Intensive Care Medicine Volume 35 ; 35 >
-    au < testing ; 2010 ; Intensive Care Medicine Volume 36 ; 36 >
+    au < ready ; 2004 ; Intensive Care Medicine Volume 30 ; 30 >
+    au < ready ; 2005 ; Intensive Care Medicine Volume 31 ; 31 >
+    au < ready ; 2006 ; Intensive Care Medicine Volume 32 ; 32 >
+    au < ready ; 2007 ; Intensive Care Medicine Volume 33 ; 33 >
+    au < ready ; 2008 ; Intensive Care Medicine Volume 34 ; 34 >
+    au < ready ; 2009 ; Intensive Care Medicine Volume 35 ; 35 >
+    au < ready ; 2010 ; Intensive Care Medicine Volume 36 ; 36 >
 
   }
 
@@ -18017,9 +18016,10 @@
     >
 
     param[journal_issn] = 0946-2716
-    attr[where] = content2a,content4a,content4b
+    attr[where] = content2a,content4b
     
-    content[77] = persistent 400 error not avoided by global exclude pattern
+    comment[50] = accidentally botched on disk, redo later elsewhere 
+    comment[77] = persistent 400 error
 
     au < testing ; 1922 ; Klinische Wochenschrift Volume 1 ; 1 >
     au < testing ; 1923 ; Klinische Wochenschrift Volume 2 ; 2 >
@@ -18070,27 +18070,27 @@
     au < testing ; 1969 ; Klinische Wochenschrift Volume 47 ; 47 >
     au < testing ; 1970 ; Klinische Wochenschrift Volume 48 ; 48 >
     au < testing ; 1971 ; Klinische Wochenschrift Volume 49 ; 49 >
-    au < testing ; 1972 ; Klinische Wochenschrift Volume 50 ; 50 >
-    au < testing ; 1973 ; Klinische Wochenschrift Volume 51 ; 51 >
-    au < testing ; 1974 ; Klinische Wochenschrift Volume 52 ; 52 >
-    au < testing ; 1975 ; Klinische Wochenschrift Volume 53 ; 53 >
-    au < testing ; 1976 ; Klinische Wochenschrift Volume 54 ; 54 >
-    au < testing ; 1977 ; Klinische Wochenschrift Volume 55 ; 55 >
-    au < testing ; 1978 ; Klinische Wochenschrift Volume 56 ; 56 >
-    au < testing ; 1979 ; Klinische Wochenschrift Volume 57 ; 57 >
-    au < testing ; 1980 ; Klinische Wochenschrift Volume 58 ; 58 >
-    au < testing ; 1981 ; Klinische Wochenschrift Volume 59 ; 59 >
-    au < testing ; 1982 ; Klinische Wochenschrift Volume 60 ; 60 >
-    au < testing ; 1983 ; Klinische Wochenschrift Volume 61 ; 61 >
-    au < testing ; 1984 ; Klinische Wochenschrift Volume 62 ; 62 >
-    au < testing ; 1985 ; Klinische Wochenschrift Volume 63 ; 63 >
-    au < testing ; 1986 ; Klinische Wochenschrift Volume 64 ; 64 >
-    au < testing ; 1987 ; Klinische Wochenschrift Volume 65 ; 65 >
-    au < testing ; 1988 ; Klinische Wochenschrift Volume 66 ; 66 >
-    au < testing ; 1989 ; Klinische Wochenschrift Volume 67 ; 67 >
-    au < testing ; 1990 ; Klinische Wochenschrift Volume 68 ; 68 >
-    au < testing ; 1991 ; Klinische Wochenschrift Volume 69 ; 69 >
-    au < testing ; 1992 ; The Clinical Investigator Volume 70 ; 70 >
+    au < notReady ; 1972 ; Klinische Wochenschrift Volume 50 ; 50 >
+    au < ready ; 1973 ; Klinische Wochenschrift Volume 51 ; 51 >
+    au < ready ; 1974 ; Klinische Wochenschrift Volume 52 ; 52 >
+    au < ready ; 1975 ; Klinische Wochenschrift Volume 53 ; 53 >
+    au < ready ; 1976 ; Klinische Wochenschrift Volume 54 ; 54 >
+    au < ready ; 1977 ; Klinische Wochenschrift Volume 55 ; 55 >
+    au < ready ; 1978 ; Klinische Wochenschrift Volume 56 ; 56 >
+    au < ready ; 1979 ; Klinische Wochenschrift Volume 57 ; 57 >
+    au < ready ; 1980 ; Klinische Wochenschrift Volume 58 ; 58 >
+    au < ready ; 1981 ; Klinische Wochenschrift Volume 59 ; 59 >
+    au < ready ; 1982 ; Klinische Wochenschrift Volume 60 ; 60 >
+    au < ready ; 1983 ; Klinische Wochenschrift Volume 61 ; 61 >
+    au < ready ; 1984 ; Klinische Wochenschrift Volume 62 ; 62 >
+    au < ready ; 1985 ; Klinische Wochenschrift Volume 63 ; 63 >
+    au < ready ; 1986 ; Klinische Wochenschrift Volume 64 ; 64 >
+    au < ready ; 1987 ; Klinische Wochenschrift Volume 65 ; 65 >
+    au < ready ; 1988 ; Klinische Wochenschrift Volume 66 ; 66 >
+    au < ready ; 1989 ; Klinische Wochenschrift Volume 67 ; 67 >
+    au < ready ; 1990 ; Klinische Wochenschrift Volume 68 ; 68 >
+    au < ready ; 1991 ; Klinische Wochenschrift Volume 69 ; 69 >
+    au < ready ; 1992 ; The Clinical Investigator Volume 70 ; 70 >
     au < testing ; 1993 ; The Clinical Investigator Volume 71 ; 71 >
     au < testing ; 1993-1994 ; The Clinical Investigator Volume 72 ; 72 >
     au < testing ; 1995 ; Journal of Molecular Medicine Volume 73 ; 73 >
@@ -27869,87 +27869,87 @@
     >
 
     param[journal_issn] = 0038-6308
-    attr[where] = content5a,content5b
+    attr[where] = content5b
 
-    au < testing ; 1962-1963 ; Space Science Reviews Volume 1 ; 1 >
-    au < testing ; 1963 ; Space Science Reviews Volume 2 ; 2 >
-    au < testing ; 1964 ; Space Science Reviews Volume 3 ; 3 >
-    au < testing ; 1965 ; Space Science Reviews Volume 4 ; 4 >
-    au < testing ; 1966 ; Space Science Reviews Volume 5 ; 5 >
-    au < testing ; 1966-1967 ; Space Science Reviews Volume 6 ; 6 >
-    au < testing ; 1967 ; Space Science Reviews Volume 7 ; 7 >
-    au < testing ; 1968 ; Space Science Reviews Volume 8 ; 8 >
-    au < testing ; 1969 ; Space Science Reviews Volume 9 ; 9 >
-    au < testing ; 1969-1970 ; Space Science Reviews Volume 10 ; 10 >
-    au < testing ; 1970-1971 ; Space Science Reviews Volume 11 ; 11 >
-    au < testing ; 1971-1972 ; Space Science Reviews Volume 12 ; 12 >
-    au < testing ; 1972 ; Space Science Reviews Volume 13 ; 13 >
-    au < testing ; 1972-1973 ; Space Science Reviews Volume 14 ; 14 >
-    au < testing ; 1973-1974 ; Space Science Reviews Volume 15 ; 15 >
-    au < testing ; 1974 ; Space Science Reviews Volume 16 ; 16 >
-    au < testing ; 1975 ; Space Science Reviews Volume 17 ; 17 >
-    au < testing ; 1975-1976 ; Space Science Reviews Volume 18 ; 18 >
-    au < testing ; 1976 ; Space Science Reviews Volume 19 ; 19 >
-    au < testing ; 1977 ; Space Science Reviews Volume 20 ; 20 >
-    au < testing ; 1977-1978 ; Space Science Reviews Volume 21 ; 21 >
-    au < testing ; 1978 ; Space Science Reviews Volume 22 ; 22 >
-    au < testing ; 1979 ; Space Science Reviews Volume 23 ; 23 >
-    au < testing ; 1979 ; Space Science Reviews Volume 24 ; 24 >
-    au < testing ; 1980 ; Space Science Reviews Volume 25 ; 25 >
-    au < testing ; 1980 ; Space Science Reviews Volume 26 ; 26 >
-    au < testing ; 1980 ; Space Science Reviews Volume 27 ; 27 >
-    au < testing ; 1981 ; Space Science Reviews Volume 28 ; 28 >
-    au < testing ; 1981 ; Space Science Reviews Volume 29 ; 29 >
-    au < testing ; 1981 ; Space Science Reviews Volume 30 ; 30 >
-    au < testing ; 1982 ; Space Science Reviews Volume 31 ; 31 >
-    au < testing ; 1982 ; Space Science Reviews Volume 32 ; 32 >
-    au < testing ; 1982 ; Space Science Reviews Volume 33 ; 33 >
-    au < testing ; 1983 ; Space Science Reviews Volume 34 ; 34 >
-    au < testing ; 1983 ; Space Science Reviews Volume 35 ; 35 >
-    au < testing ; 1983 ; Space Science Reviews Volume 36 ; 36 >
-    au < testing ; 1984 ; Space Science Reviews Volume 37 ; 37 >
-    au < testing ; 1984 ; Space Science Reviews Volume 38 ; 38 >
-    au < testing ; 1984 ; Space Science Reviews Volume 39 ; 39 >
-    au < testing ; 1985 ; Space Science Reviews Volume 40 ; 40 >
-    au < testing ; 1985 ; Space Science Reviews Volume 41 ; 41 >
-    au < testing ; 1985 ; Space Science Reviews Volume 42 ; 42 >
-    au < testing ; 1986 ; Space Science Reviews Volume 43 ; 43 >
-    au < testing ; 1986 ; Space Science Reviews Volume 44 ; 44 >
-    au < testing ; 1987 ; Space Science Reviews Volume 45 ; 45 >
-    au < testing ; 1988 ; Space Science Reviews Volume 46 ; 46 >
-    au < testing ; 1988 ; Space Science Reviews Volume 47 ; 47 >
-    au < testing ; 1988 ; Space Science Reviews Volume 48 ; 48 >
-    au < testing ; 1989 ; Space Science Reviews Volume 49 ; 49 >
-    au < testing ; 1989 ; Space Science Reviews Volume 50 ; 50 >
-    au < testing ; 1989 ; Space Science Reviews Volume 51 ; 51 >
-    au < testing ; 1990 ; Space Science Reviews Volume 52 ; 52 >
-    au < testing ; 1990 ; Space Science Reviews Volume 53 ; 53 >
-    au < testing ; 1990 ; Space Science Reviews Volume 54 ; 54 >
-    au < testing ; 1991 ; Space Science Reviews Volume 55 ; 55 >
-    au < testing ; 1991 ; Space Science Reviews Volume 56 ; 56 >
-    au < testing ; 1991 ; Space Science Reviews Volume 57 ; 57 >
-    au < testing ; 1991 ; Space Science Reviews Volume 58 ; 58 >
-    au < testing ; 1992 ; Space Science Reviews Volume 59 ; 59 >
-    au < testing ; 1992 ; Space Science Reviews Volume 60 ; 60 >
-    au < testing ; 1992 ; Space Science Reviews Volume 61 ; 61 >
-    au < testing ; 1992-1993 ; Space Science Reviews Volume 62 ; 62 >
-    au < testing ; 1993 ; Space Science Reviews Volume 63 ; 63 >
-    au < testing ; 1993 ; Space Science Reviews Volume 64 ; 64 >
-    au < testing ; 1993 ; Space Science Reviews Volume 65 ; 65 >
-    au < testing ; 1993 ; Space Science Reviews Volume 66 ; 66 >
-    au < testing ; 1994 ; Space Science Reviews Volume 67 ; 67 >
-    au < testing ; 1994 ; Space Science Reviews Volume 68 ; 68 >
-    au < testing ; 1994 ; Space Science Reviews Volume 69 ; 69 >
-    au < testing ; 1994 ; Space Science Reviews Volume 70 ; 70 >
-    au < testing ; 1995 ; Space Science Reviews Volume 71 ; 71 >
-    au < testing ; 1995 ; Space Science Reviews Volume 72 ; 72 >
-    au < testing ; 1995 ; Space Science Reviews Volume 73 ; 73 >
-    au < testing ; 1995 ; Space Science Reviews Volume 74 ; 74 >
-    au < testing ; 1996 ; Space Science Reviews Volume 75 ; 75 >
-    au < testing ; 1996 ; Space Science Reviews Volume 76 ; 76 >
-    au < testing ; 1996 ; Space Science Reviews Volume 77 ; 77 >
-    au < testing ; 1996 ; Space Science Reviews Volume 78 ; 78 >
-    au < testing ; 1997 ; Space Science Reviews Volume 79 ; 79 >
+    au < ready ; 1962-1963 ; Space Science Reviews Volume 1 ; 1 >
+    au < ready ; 1963 ; Space Science Reviews Volume 2 ; 2 >
+    au < ready ; 1964 ; Space Science Reviews Volume 3 ; 3 >
+    au < ready ; 1965 ; Space Science Reviews Volume 4 ; 4 >
+    au < ready ; 1966 ; Space Science Reviews Volume 5 ; 5 >
+    au < ready ; 1966-1967 ; Space Science Reviews Volume 6 ; 6 >
+    au < ready ; 1967 ; Space Science Reviews Volume 7 ; 7 >
+    au < ready ; 1968 ; Space Science Reviews Volume 8 ; 8 >
+    au < ready ; 1969 ; Space Science Reviews Volume 9 ; 9 >
+    au < ready ; 1969-1970 ; Space Science Reviews Volume 10 ; 10 >
+    au < ready ; 1970-1971 ; Space Science Reviews Volume 11 ; 11 >
+    au < ready ; 1971-1972 ; Space Science Reviews Volume 12 ; 12 >
+    au < ready ; 1972 ; Space Science Reviews Volume 13 ; 13 >
+    au < ready ; 1972-1973 ; Space Science Reviews Volume 14 ; 14 >
+    au < ready ; 1973-1974 ; Space Science Reviews Volume 15 ; 15 >
+    au < ready ; 1974 ; Space Science Reviews Volume 16 ; 16 >
+    au < ready ; 1975 ; Space Science Reviews Volume 17 ; 17 >
+    au < ready ; 1975-1976 ; Space Science Reviews Volume 18 ; 18 >
+    au < ready ; 1976 ; Space Science Reviews Volume 19 ; 19 >
+    au < ready ; 1977 ; Space Science Reviews Volume 20 ; 20 >
+    au < ready ; 1977-1978 ; Space Science Reviews Volume 21 ; 21 >
+    au < ready ; 1978 ; Space Science Reviews Volume 22 ; 22 >
+    au < ready ; 1979 ; Space Science Reviews Volume 23 ; 23 >
+    au < ready ; 1979 ; Space Science Reviews Volume 24 ; 24 >
+    au < ready ; 1980 ; Space Science Reviews Volume 25 ; 25 >
+    au < ready ; 1980 ; Space Science Reviews Volume 26 ; 26 >
+    au < ready ; 1980 ; Space Science Reviews Volume 27 ; 27 >
+    au < ready ; 1981 ; Space Science Reviews Volume 28 ; 28 >
+    au < ready ; 1981 ; Space Science Reviews Volume 29 ; 29 >
+    au < ready ; 1981 ; Space Science Reviews Volume 30 ; 30 >
+    au < ready ; 1982 ; Space Science Reviews Volume 31 ; 31 >
+    au < ready ; 1982 ; Space Science Reviews Volume 32 ; 32 >
+    au < ready ; 1982 ; Space Science Reviews Volume 33 ; 33 >
+    au < ready ; 1983 ; Space Science Reviews Volume 34 ; 34 >
+    au < ready ; 1983 ; Space Science Reviews Volume 35 ; 35 >
+    au < ready ; 1983 ; Space Science Reviews Volume 36 ; 36 >
+    au < ready ; 1984 ; Space Science Reviews Volume 37 ; 37 >
+    au < ready ; 1984 ; Space Science Reviews Volume 38 ; 38 >
+    au < ready ; 1984 ; Space Science Reviews Volume 39 ; 39 >
+    au < ready ; 1985 ; Space Science Reviews Volume 40 ; 40 >
+    au < ready ; 1985 ; Space Science Reviews Volume 41 ; 41 >
+    au < ready ; 1985 ; Space Science Reviews Volume 42 ; 42 >
+    au < ready ; 1986 ; Space Science Reviews Volume 43 ; 43 >
+    au < ready ; 1986 ; Space Science Reviews Volume 44 ; 44 >
+    au < ready ; 1987 ; Space Science Reviews Volume 45 ; 45 >
+    au < ready ; 1988 ; Space Science Reviews Volume 46 ; 46 >
+    au < ready ; 1988 ; Space Science Reviews Volume 47 ; 47 >
+    au < ready ; 1988 ; Space Science Reviews Volume 48 ; 48 >
+    au < ready ; 1989 ; Space Science Reviews Volume 49 ; 49 >
+    au < ready ; 1989 ; Space Science Reviews Volume 50 ; 50 >
+    au < ready ; 1989 ; Space Science Reviews Volume 51 ; 51 >
+    au < ready ; 1990 ; Space Science Reviews Volume 52 ; 52 >
+    au < ready ; 1990 ; Space Science Reviews Volume 53 ; 53 >
+    au < ready ; 1990 ; Space Science Reviews Volume 54 ; 54 >
+    au < ready ; 1991 ; Space Science Reviews Volume 55 ; 55 >
+    au < ready ; 1991 ; Space Science Reviews Volume 56 ; 56 >
+    au < ready ; 1991 ; Space Science Reviews Volume 57 ; 57 >
+    au < ready ; 1991 ; Space Science Reviews Volume 58 ; 58 >
+    au < ready ; 1992 ; Space Science Reviews Volume 59 ; 59 >
+    au < ready ; 1992 ; Space Science Reviews Volume 60 ; 60 >
+    au < ready ; 1992 ; Space Science Reviews Volume 61 ; 61 >
+    au < ready ; 1992-1993 ; Space Science Reviews Volume 62 ; 62 >
+    au < ready ; 1993 ; Space Science Reviews Volume 63 ; 63 >
+    au < ready ; 1993 ; Space Science Reviews Volume 64 ; 64 >
+    au < ready ; 1993 ; Space Science Reviews Volume 65 ; 65 >
+    au < ready ; 1993 ; Space Science Reviews Volume 66 ; 66 >
+    au < ready ; 1994 ; Space Science Reviews Volume 67 ; 67 >
+    au < ready ; 1994 ; Space Science Reviews Volume 68 ; 68 >
+    au < ready ; 1994 ; Space Science Reviews Volume 69 ; 69 >
+    au < ready ; 1994 ; Space Science Reviews Volume 70 ; 70 >
+    au < ready ; 1995 ; Space Science Reviews Volume 71 ; 71 >
+    au < ready ; 1995 ; Space Science Reviews Volume 72 ; 72 >
+    au < ready ; 1995 ; Space Science Reviews Volume 73 ; 73 >
+    au < ready ; 1995 ; Space Science Reviews Volume 74 ; 74 >
+    au < ready ; 1996 ; Space Science Reviews Volume 75 ; 75 >
+    au < ready ; 1996 ; Space Science Reviews Volume 76 ; 76 >
+    au < ready ; 1996 ; Space Science Reviews Volume 77 ; 77 >
+    au < ready ; 1996 ; Space Science Reviews Volume 78 ; 78 >
+    au < ready ; 1997 ; Space Science Reviews Volume 79 ; 79 >
     au < testing ; 1997 ; Space Science Reviews Volume 80 ; 80 >
     au < testing ; 1997 ; Space Science Reviews Volume 81 ; 81 >
     au < testing ; 1997 ; Space Science Reviews Volume 82 ; 82 >
