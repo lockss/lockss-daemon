@@ -341,8 +341,7 @@
     >
     
     param[journal_issn] = 0001-6322
-    attr[where] = sul-lockss30a,sul-lockss30b
-    comment[105] = persistent 400 error, would be caught by global exclude pattern in GLN
+    comment[105] = persistent 400 error
 
     au < ready ; 1961-1962 ; Acta Neuropathologica Volume 1 ; 1 >
     au < ready ; 1962-1963 ; Acta Neuropathologica Volume 2 ; 2 >
@@ -1573,10 +1572,29 @@
     title <
       name = Annals of Surgical Oncology ;
       issn = 1068-9265 ;
-      placeholder = True
+      eissn = 1534-4681
     >
 
     param[journal_issn] = 1068-9265
+    attr[where] = sul-lockss30b
+
+    au < testing ; 1994 ; Annals of Surgical Oncology Volume 1 ; 1 >
+    au < testing ; 1995 ; Annals of Surgical Oncology Volume 2 ; 2 >
+    au < testing ; 1996 ; Annals of Surgical Oncology Volume 3 ; 3 >
+    au < testing ; 1997 ; Annals of Surgical Oncology Volume 4 ; 4 >
+    au < testing ; 1998 ; Annals of Surgical Oncology Volume 5 ; 5 >
+    au < testing ; 1999 ; Annals of Surgical Oncology Volume 6 ; 6 >
+    au < testing ; 2000 ; Annals of Surgical Oncology Volume 7 ; 7 >
+    au < testing ; 2001 ; Annals of Surgical Oncology Volume 8 ; 8 >
+    au < testing ; 2002 ; Annals of Surgical Oncology Volume 9 ; 9 >
+    au < testing ; 2003 ; Annals of Surgical Oncology Volume 10 ; 10 >
+    au < testing ; 2004 ; Annals of Surgical Oncology Volume 11 ; 11 >
+    au < testing ; 2005 ; Annals of Surgical Oncology Volume 12 ; 12 >
+    au < testing ; 2006 ; Annals of Surgical Oncology Volume 13 ; 13 >
+    au < testing ; 2007 ; Annals of Surgical Oncology Volume 14 ; 14 >
+    au < testing ; 2008 ; Annals of Surgical Oncology Volume 15 ; 15 >
+    au < testing ; 2009 ; Annals of Surgical Oncology Volume 16 ; 16 >
+    au < testing ; 2010 ; Annals of Surgical Oncology Volume 17 ; 17 >
 
   }
 
@@ -4220,10 +4238,23 @@
     title <
       name = Brain Structure and Function ;
       issn = 1863-2653 ;
-      placeholder = True
+      eissn = 1863-2661
     >
 
     param[journal_issn] = 1863-2653
+    attrp[where] = sul-lockss30a
+
+    au < testing ; 1997 ; Brain Structure and Function Volume 196 ; 196 >
+    au < testing ; 1997 ; Brain Structure and Function Volume 197 ; 197 >
+    au < testing ; 1999 ; Brain Structure and Function Volume 200 ; 200 >
+    au < testing ; 2000 ; Brain Structure and Function Volume 201 ; 201 >
+    au < testing ; 2000 ; Brain Structure and Function Volume 202 ; 202 >
+    au < testing ; 2001 ; Brain Structure and Function Volume 203 ; 203 >
+    au < testing ; 2001 ; Brain Structure and Function Volume 204 ; 204 >
+    au < testing ; 2007 ; Brain Structure and Function Volume 212 ; 212 >
+    au < testing ; 2008 ; Brain Structure and Function Volume 213 ; 213 >
+    au < testing ; 2009 ; Brain Structure and Function Volume 214 ; 214 >
+    au < testing ; 2010 ; Brain Structure and Function Volume 215 ; 215 >
 
   }
 
@@ -12159,10 +12190,140 @@
     title <
       name = Human Genetics ;
       issn = 0340-6717 ;
-      placeholder = True
+      eissn = 1432-1203
     >
 
     param[journal_issn] = 0340-6717
+    attr[where] = content6a
+
+    au < testing ; 1964-1966 ; Human Genetics Volume 1 ; 1 >
+    au < testing ; 1966 ; Human Genetics Volume 2 ; 2 >
+    au < testing ; 1966-1967 ; Human Genetics Volume 3 ; 3 >
+    au < testing ; 1967 ; Human Genetics Volume 4 ; 4 >
+    au < testing ; 1967-1968 ; Human Genetics Volume 5 ; 5 >
+    au < testing ; 1968 ; Human Genetics Volume 6 ; 6 >
+    au < testing ; 1969 ; Human Genetics Volume 7 ; 7 >
+    au < testing ; 1969-1970 ; Human Genetics Volume 8 ; 8 >
+    au < testing ; 1970 ; Human Genetics Volume 9 ; 9 >
+    au < testing ; 1970 ; Human Genetics Volume 10 ; 10 >
+    au < testing ; 1970-1971 ; Human Genetics Volume 11 ; 11 >
+    au < testing ; 1971 ; Human Genetics Volume 12 ; 12 >
+    au < testing ; 1971 ; Human Genetics Volume 13 ; 13 >
+    au < testing ; 1971-1972 ; Human Genetics Volume 14 ; 14 >
+    au < testing ; 1972 ; Human Genetics Volume 15 ; 15 >
+    au < testing ; 1972 ; Human Genetics Volume 16 ; 16 >
+    au < testing ; 1972-1973 ; Human Genetics Volume 17 ; 17 >
+    au < testing ; 1973 ; Human Genetics Volume 18 ; 18 >
+    au < testing ; 1973 ; Human Genetics Volume 19 ; 19 >
+    au < testing ; 1973 ; Human Genetics Volume 20 ; 20 >
+    au < testing ; 1974 ; Human Genetics Volume 21 ; 21 >
+    au < testing ; 1974 ; Human Genetics Volume 22 ; 22 >
+    au < testing ; 1974 ; Human Genetics Volume 23 ; 23 >
+    au < testing ; 1974 ; Human Genetics Volume 24 ; 24 >
+    au < testing ; 1974 ; Human Genetics Volume 25 ; 25 >
+    au < testing ; 1975 ; Human Genetics Volume 26 ; 26 >
+    au < testing ; 1975 ; Human Genetics Volume 27 ; 27 >
+    au < testing ; 1975 ; Human Genetics Volume 28 ; 28 >
+    au < testing ; 1975 ; Human Genetics Volume 29 ; 29 >
+    au < manifest ; 1975 ; Human Genetics Volume 30 ; 30 >
+    au < manifest ; 1976 ; Human Genetics Volume 31 ; 31 >
+    au < manifest ; 1976 ; Human Genetics Volume 32 ; 32 >
+    au < manifest ; 1976 ; Human Genetics Volume 33 ; 33 >
+    au < manifest ; 1976 ; Human Genetics Volume 34 ; 34 >
+    au < manifest ; 1976-1977 ; Human Genetics Volume 35 ; 35 >
+    au < manifest ; 1977 ; Human Genetics Volume 36 ; 36 >
+    au < manifest ; 1977 ; Human Genetics Volume 37 ; 37 >
+    au < manifest ; 1977 ; Human Genetics Volume 38 ; 38 >
+    au < manifest ; 1977 ; Human Genetics Volume 39 ; 39 >
+    au < manifest ; 1977-1978 ; Human Genetics Volume 40 ; 40 >
+    au < manifest ; 1978 ; Human Genetics Volume 41 ; 41 >
+    au < manifest ; 1978 ; Human Genetics Volume 42 ; 42 >
+    au < manifest ; 1978 ; Human Genetics Volume 43 ; 43 >
+    au < manifest ; 1978 ; Human Genetics Volume 44 ; 44 >
+    au < manifest ; 1978 ; Human Genetics Volume 45 ; 45 >
+    au < manifest ; 1979 ; Human Genetics Volume 46 ; 46 >
+    au < manifest ; 1979 ; Human Genetics Volume 47 ; 47 >
+    au < manifest ; 1979 ; Human Genetics Volume 48 ; 48 >
+    au < manifest ; 1979 ; Human Genetics Volume 49 ; 49 >
+    au < manifest ; 1979 ; Human Genetics Volume 50 ; 50 >
+    au < manifest ; 1979 ; Human Genetics Volume 51 ; 51 >
+    au < manifest ; 1979 ; Human Genetics Volume 52 ; 52 >
+    au < manifest ; 1979-1980 ; Human Genetics Volume 53 ; 53 >
+    au < manifest ; 1980 ; Human Genetics Volume 54 ; 54 >
+    au < manifest ; 1980 ; Human Genetics Volume 55 ; 55 >
+    au < manifest ; 1980-1981 ; Human Genetics Volume 56 ; 56 >
+    au < manifest ; 1981 ; Human Genetics Volume 57 ; 57 >
+    au < manifest ; 1981 ; Human Genetics Volume 58 ; 58 >
+    au < manifest ; 1981 ; Human Genetics Volume 59 ; 59 >
+    au < manifest ; 1982 ; Human Genetics Volume 60 ; 60 >
+    au < manifest ; 1982 ; Human Genetics Volume 61 ; 61 >
+    au < manifest ; 1982 ; Human Genetics Volume 62 ; 62 >
+    au < manifest ; 1983 ; Human Genetics Volume 63 ; 63 >
+    au < manifest ; 1983 ; Human Genetics Volume 64 ; 64 >
+    au < manifest ; 1983-1984 ; Human Genetics Volume 65 ; 65 >
+    au < manifest ; 1984 ; Human Genetics Volume 66 ; 66 >
+    au < manifest ; 1984 ; Human Genetics Volume 67 ; 67 >
+    au < manifest ; 1984 ; Human Genetics Volume 68 ; 68 >
+    au < manifest ; 1985 ; Human Genetics Volume 69 ; 69 >
+    au < manifest ; 1985 ; Human Genetics Volume 70 ; 70 >
+    au < manifest ; 1985 ; Human Genetics Volume 71 ; 71 >
+    au < manifest ; 1986 ; Human Genetics Volume 72 ; 72 >
+    au < manifest ; 1986 ; Human Genetics Volume 73 ; 73 >
+    au < manifest ; 1986 ; Human Genetics Volume 74 ; 74 >
+    au < manifest ; 1987 ; Human Genetics Volume 75 ; 75 >
+    au < manifest ; 1987 ; Human Genetics Volume 76 ; 76 >
+    au < manifest ; 1987 ; Human Genetics Volume 77 ; 77 >
+    au < manifest ; 1988 ; Human Genetics Volume 78 ; 78 >
+    au < manifest ; 1988 ; Human Genetics Volume 79 ; 79 >
+    au < manifest ; 1988 ; Human Genetics Volume 80 ; 80 >
+    au < manifest ; 1988-1989 ; Human Genetics Volume 81 ; 81 >
+    au < manifest ; 1989 ; Human Genetics Volume 82 ; 82 >
+    au < manifest ; 1989 ; Human Genetics Volume 83 ; 83 >
+    au < manifest ; 1989-1990 ; Human Genetics Volume 84 ; 84 >
+    au < manifest ; 1990 ; Human Genetics Volume 85 ; 85 >
+    au < manifest ; 1990-1991 ; Human Genetics Volume 86 ; 86 >
+    au < manifest ; 1991 ; Human Genetics Volume 87 ; 87 >
+    au < manifest ; 1991-1992 ; Human Genetics Volume 88 ; 88 >
+    au < manifest ; 1992 ; Human Genetics Volume 89 ; 89 >
+    au < manifest ; 1992-1993 ; Human Genetics Volume 90 ; 90 >
+    au < manifest ; 1993 ; Human Genetics Volume 91 ; 91 >
+    au < manifest ; 1993 ; Human Genetics Volume 92 ; 92 >
+    au < manifest ; 1994 ; Human Genetics Volume 93 ; 93 >
+    au < manifest ; 1994 ; Human Genetics Volume 94 ; 94 >
+    au < manifest ; 1995 ; Human Genetics Volume 95 ; 95 >
+    au < manifest ; 1995 ; Human Genetics Volume 96 ; 96 >
+    au < manifest ; 1996 ; Human Genetics Volume 97 ; 97 >
+    au < manifest ; 1996 ; Human Genetics Volume 98 ; 98 >
+    au < manifest ; 1996-1997 ; Human Genetics Volume 99 ; 99 >
+    au < manifest ; 1997 ; Human Genetics Volume 100 ; 100 >
+    au < manifest ; 1997 ; Human Genetics Volume 101 ; 101 >
+    au < manifest ; 1998 ; Human Genetics Volume 102 ; 102 >
+    au < manifest ; 1998 ; Human Genetics Volume 103 ; 103 >
+    au < manifest ; 1999 ; Human Genetics Volume 104 ; 104 >
+    au < manifest ; 1999 ; Human Genetics Volume 105 ; 105 >
+    au < manifest ; 2000 ; Human Genetics Volume 106 ; 106 >
+    au < manifest ; 2000 ; Human Genetics Volume 107 ; 107 >
+    au < manifest ; 2001 ; Human Genetics Volume 108 ; 108 >
+    au < manifest ; 2001 ; Human Genetics Volume 109 ; 109 >
+    au < manifest ; 2002 ; Human Genetics Volume 110 ; 110 >
+    au < manifest ; 2002 ; Human Genetics Volume 111 ; 111 >
+    au < manifest ; 2003 ; Human Genetics Volume 112 ; 112 >
+    au < manifest ; 2003 ; Human Genetics Volume 113 ; 113 >
+    au < manifest ; 2003 ; Human Genetics Volume 114 ; 114 >
+    au < manifest ; 2004 ; Human Genetics Volume 115 ; 115 >
+    au < manifest ; 2005 ; Human Genetics Volume 116 ; 116 >
+    au < manifest ; 2005 ; Human Genetics Volume 117 ; 117 >
+    au < manifest ; 2005 ; Human Genetics Volume 118 ; 118 >
+    au < manifest ; 2006 ; Human Genetics Volume 119 ; 119 >
+    au < manifest ; 2006 ; Human Genetics Volume 120 ; 120 >
+    au < manifest ; 2007 ; Human Genetics Volume 121 ; 121 >
+    au < manifest ; 2007 ; Human Genetics Volume 122 ; 122 >
+    au < manifest ; 2008 ; Human Genetics Volume 123 ; 123 >
+    au < manifest ; 2008 ; Human Genetics Volume 124 ; 124 >
+    au < manifest ; 2009 ; Human Genetics Volume 125 ; 125 >
+    au < manifest ; 2009 ; Human Genetics Volume 126 ; 126 >
+    au < manifest ; 2010 ; Human Genetics Volume 127 ; 127 >
+    au < manifest ; 2010 ; Human Genetics Volume 128 ; 128 >
 
   }
 
@@ -28731,10 +28892,31 @@
     title <
       name = The VLDB Journal ;
       issn = 1066-8888 ;
-      placeholder = True
+      eissn = 0949-877X
     >
 
     param[journal_issn] = 1066-8888
+    attr[where] = content6b
+
+    au < testing ; 1992 ; The VLDB Journal Volume 1 ; 1 >
+    au < testing ; 1993 ; The VLDB Journal Volume 2 ; 2 >
+    au < testing ; 1994 ; The VLDB Journal Volume 3 ; 3 >
+    au < testing ; 1995 ; The VLDB Journal Volume 4 ; 4 >
+    au < testing ; 1996 ; The VLDB Journal Volume 5 ; 5 >
+    au < testing ; 1997 ; The VLDB Journal Volume 6 ; 6 >
+    au < testing ; 1998 ; The VLDB Journal Volume 7 ; 7 >
+    au < testing ; 1999 ; The VLDB Journal Volume 8 ; 8 >
+    au < testing ; 2000 ; The VLDB Journal Volume 9 ; 9 >
+    au < testing ; 2001 ; The VLDB Journal Volume 10 ; 10 >
+    au < testing ; 2002 ; The VLDB Journal Volume 11 ; 11 >
+    au < testing ; 2003 ; The VLDB Journal Volume 12 ; 12 >
+    au < testing ; 2004 ; The VLDB Journal Volume 13 ; 13 >
+    au < testing ; 2005 ; The VLDB Journal Volume 14 ; 14 >
+    au < testing ; 2006 ; The VLDB Journal Volume 15 ; 15 >
+    au < testing ; 2007 ; The VLDB Journal Volume 16 ; 16 >
+    au < testing ; 2008 ; The VLDB Journal Volume 17 ; 17 >
+    au < testing ; 2009 ; The VLDB Journal Volume 18 ; 18 >
+    au < testing ; 2010 ; The VLDB Journal Volume 19 ; 19 >
 
   }
 
