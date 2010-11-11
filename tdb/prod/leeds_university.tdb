@@ -11,11 +11,12 @@
       issn = 1477-3643
     >  
 
-    comment[base_url] = The plugin is written such that the base URL has no trailing slash
-
     rights = openaccess
     plugin = edu.nyu.plugin.LeedsICSPlugin
+
+    comment[base_url] = The plugin is written such that the base URL has no trailing slash
     param[base_url] = http://www.leeds.ac.uk/classics/lics
+
     implicit < status ; name ; param[year] ; param[volume_str] >
   
     au < released ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
