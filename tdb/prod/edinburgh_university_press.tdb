@@ -20,8 +20,8 @@
     au < released ; Africa: The Journal of the International African Institute Volume 76 ; 76 >
     au < released ; Africa: The Journal of the International African Institute Volume 77 ; 77 >
     au < ready ; Africa: The Journal of the International African Institute Volume 78 ; 78 >
-    au < testing ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
-    au < testing ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
+    au < ready ; Africa: The Journal of the International African Institute Volume 79 ; 79 >
+    au < ready ; Africa: The Journal of the International African Institute Volume 80 ; 80 >
 
   }
 
@@ -37,8 +37,6 @@
     au < released ; Comparative Critical Studies Volume 3 ; 3 >
     au < ready ; Comparative Critical Studies Volume 4 ; 4 >
     au < ready ; Comparative Critical Studies Volume 5 ; 5 >
-    au < testing ; Comparative Critical Studies Volume 6 ; 6 >
-    au < testing ; Comparative Critical Studies Volume 7 ; 7 >
 
   }
 
@@ -54,8 +52,6 @@
     au < released ; Dance Research Volume 24 ; 24 >
     au < ready ; Dance Research Volume 25 ; 25 >
     au < ready ; Dance Research Volume 26 ; 26 >
-    au < testing ; Dance Research Volume 27 ; 27 >
-    au < testing ; Dance Research Volume 28 ; 28 >
 
   }
 
@@ -64,15 +60,12 @@
       name = Episteme: A Journal of Social Epistemology ;
       issn = 1742-3600 ;
       eissn = 1750-0117
-    >
 
     param[journal_dir] = episteme
 
     au < released ; Episteme: A Journal of Social Epistemology Volume 3 ; 3 >
     au < ready ; Episteme: A Journal of Social Epistemology Volume 4 ; 4 >
     au < ready ; Episteme: A Journal of Social Epistemology Volume 5 ; 5 >
-    au < testing ; Episteme: A Journal of Social Epistemology Volume 6 ; 6 >
-    au < testing ; Episteme: A Journal of Social Epistemology Volume 7 ; 7 >
 
   }
 
@@ -88,8 +81,6 @@
     au < released ; Holy Land Studies: A Multidisciplinary Journal Volume 5 ; 5 >
     au < ready ; Holy Land Studies: A Multidisciplinary Journal Volume 6 ; 6 >
     au < ready ; Holy Land Studies: A Multidisciplinary Journal Volume 7 ; 7 >
-    au < testing ; Holy Land Studies: A Multidisciplinary Journal Volume 8 ; 8 >
-    au < testing ; Holy Land Studies: A Multidisciplinary Journal Volume 9 ; 9 >
 
   }
 
@@ -104,8 +95,6 @@
 
     au < ready ; The Innes Review Volume 58 ; 58 >
     au < ready ; The Innes Review Volume 59 ; 59 >
-    au < testing ; The Innes Review Volume 60 ; 60 >
-    au < testing ; The Innes Review Volume 61 ; 61 >
 
   }
   
@@ -136,8 +125,6 @@
     au < released ; Paragraph Volume 29 ; 29 >
     au < released ; Paragraph Volume 30 ; 30 >
     au < ready ; Paragraph Volume 31 ; 31 >
-    au < testing ; Paragraph Volume 32 ; 32 >
-    au < testing ; Paragraph Volume 33 ; 33 >
 
   }
 
@@ -167,8 +154,6 @@
     au < released ; Romanticism Volume 12 ; 12 >
     au < released ; Romanticism Volume 13 ; 13 >
     au < ready ; Romanticism Volume 14 ; 14 >
-    au < testing ; Romanticism Volume 15 ; 15 >
-    au < testing ; Romanticism Volume 16 ; 16 >
 
   }
 
@@ -184,8 +169,6 @@
     au < released ; Studies in World Christianity Volume 12 ; 12 >
     au < released ; Studies in World Christianity Volume 13 ; 13 >
     au < ready ; Studies in World Christianity Volume 14 ; 14 >
-    au < testing ; Studies in World Christianity Volume 15 ; 15 >
-    au < testing ; Studies in World Christianity Volume 16 ; 16 >
 
   }
 
@@ -201,8 +184,6 @@
     au < released ; The Scottish Historical Review Volume 85 ; 85 >
     au < ready ; The Scottish Historical Review Volume 86 ; 86 >
     au < ready ; The Scottish Historical Review Volume 87 ; 87 >
-    au < testing ; The Scottish Historical Review Volume 88 ; 88 >
-    au < testing ; The Scottish Historical Review Volume 89 ; 89 >
 
   }
 
@@ -218,8 +199,6 @@
     au < released ; Translation and Literature Volume 15 ; 15 >
     au < released ; Translation and Literature Volume 16 ; 16 >
     au < ready ; Translation and Literature Volume 17 ; 17 >
-    au < testing ; Translation and Literature Volume 18 ; 18 >
-    au < testing ; Translation and Literature Volume 19 ; 19 >
 
   }
 
