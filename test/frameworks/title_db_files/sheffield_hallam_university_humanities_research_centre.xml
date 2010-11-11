@@ -48,9 +48,10 @@
  
  <property name="org.lockss.title">
 
-  <property name="EarlyModernLiteraryStudies1">
+  <property name="EmlsPluginEarlyModernLiteraryStudies1">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 1" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -65,9 +66,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies2">
+  <property name="EmlsPluginEarlyModernLiteraryStudies2">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 2" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -82,9 +84,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies3">
+  <property name="EmlsPluginEarlyModernLiteraryStudies3">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 3" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -99,9 +102,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies4">
+  <property name="EmlsPluginEarlyModernLiteraryStudies4">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 4" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -116,9 +120,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies5">
+  <property name="EmlsPluginEarlyModernLiteraryStudies5">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 5" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -133,9 +138,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies6">
+  <property name="EmlsPluginEarlyModernLiteraryStudies6">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 6" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -150,9 +156,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies7">
+  <property name="EmlsPluginEarlyModernLiteraryStudies7">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 7" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -167,9 +174,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies8">
+  <property name="EmlsPluginEarlyModernLiteraryStudies8">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 8" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -184,9 +192,32 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies9">
+  <property name="EmlsPluginEarlyModernLiteraryStudiesVolume9superseded">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
+   <property name="title" value="Early Modern Literary Studies Volume 9 [superseded]" />
+   <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://www.shu.ac.uk/emls/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="9" />
+   </property>
+   <property name="param.99">
+    <property name="key" value="pub_down" />
+    <property name="value" value="true" />
+   </property>
+   <property name="attributes.year" value="2003-2004" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="EmlsPluginEarlyModernLiteraryStudies9">
+   <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
+   <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 9" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -197,13 +228,18 @@
     <property name="key" value="volume" />
     <property name="value" value="9" />
    </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="si-13" />
+   </property>
    <property name="attributes.year" value="2003-2004" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies10">
+  <property name="EmlsPluginEarlyModernLiteraryStudies10">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 10" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -218,9 +254,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies11">
+  <property name="EmlsPluginEarlyModernLiteraryStudies11">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 11" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -235,9 +272,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies12">
+  <property name="EmlsPluginEarlyModernLiteraryStudies12">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 12" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -252,9 +290,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies13">
+  <property name="EmlsPluginEarlyModernLiteraryStudies13">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 13" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
@@ -269,9 +308,10 @@
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="EarlyModernLiteraryStudies14">
+  <property name="EmlsPluginEarlyModernLiteraryStudies14">
    <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
    <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
    <property name="title" value="Early Modern Literary Studies Volume 14" />
    <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
    <property name="param.1">
