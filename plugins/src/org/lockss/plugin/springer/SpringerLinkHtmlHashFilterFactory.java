@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.6 2010-11-02 23:12:10 thib_gc Exp $
+ * $Id: SpringerLinkHtmlHashFilterFactory.java,v 1.7 2010-11-11 10:06:07 thib_gc Exp $
  */
 
 /*
@@ -74,6 +74,8 @@ public class SpringerLinkHtmlHashFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "id", "AboutSection"),
         // Contains ever-updated information e.g. list of all issues
         HtmlNodeFilters.tagWithAttribute("div", "id", "Modes"),
+        // Text includes number of reverse citations
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "/referrers/$"),
     };
     return new HtmlFilterInputStream(in,
                                      encoding,
