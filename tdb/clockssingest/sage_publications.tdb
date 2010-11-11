@@ -803,6 +803,7 @@ comment[54] = volume does not exist yet
     param[base_url] = http://car.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2009 ; Cartilage Volume 1 ; 1 ; >
+    au < ClockssHighWireH20Plugin ; wanted ; 2010 ; Cartilage Volume 2 ; 2 ; >
 
   }
 
@@ -2613,7 +2614,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health Education & Behavior Volume 35 ; 35 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health Education & Behavior Volume 36 ; 36 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health Education & Behavior Volume 37 ; 37 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Health Education & Behavior Volume 37 ; 37 ; >
 
   }
 
@@ -2629,7 +2630,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health Education Journal Volume 67 ; 67 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health Education Journal Volume 68 ; 68 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health Education Journal Volume 69 ; 69 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Health Education Journal Volume 69 ; 69 ; >
 
   }
 
@@ -2645,7 +2646,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health Informatics Journal Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health Informatics Journal Volume 15 ; 15 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health Informatics Journal Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Health Informatics Journal Volume 16 ; 16 ; >
 
   }
 
@@ -2661,7 +2662,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health Promotion Practice Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health Promotion Practice Volume 10 ; 10 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health Promotion Practice Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Health Promotion Practice Volume 11 ; 11 ; >
 
   }
 
@@ -2677,7 +2678,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health: Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health: Volume 13 ; 13 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health: Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Health: Volume 14 ; 14 ; >
 
   }
 
@@ -2693,7 +2694,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; High Performance Polymers Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; High Performance Polymers Volume 21 ; 21 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; High Performance Polymers Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; High Performance Polymers Volume 22 ; 22 ; >
 
   }
 
@@ -2709,7 +2710,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Hispanic Journal of Behavioral Sciences Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Hispanic Journal of Behavioral Sciences Volume 31 ; 31 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Hispanic Journal of Behavioral Sciences Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Hispanic Journal of Behavioral Sciences Volume 32 ; 32 ; >
 
   }
 
@@ -2725,7 +2726,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; History of Psychiatry Volume 19 ; 19 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; History of Psychiatry Volume 20 ; 20 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; History of Psychiatry Volume 21 ; 21 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; History of Psychiatry Volume 21 ; 21 ; >
 
   }
 
@@ -2741,7 +2742,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; History of the Human Sciences Volume 21 ; 21 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; History of the Human Sciences Volume 22 ; 22 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; History of the Human Sciences Volume 23 ; 23 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; History of the Human Sciences Volume 23 ; 23 ; >
 
   }
 
@@ -2757,7 +2758,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Holocene Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The Holocene Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Holocene Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The Holocene Volume 20 ; 20 ; >
 
   }
 
@@ -2773,7 +2774,6 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Home Health Care Management & Practice Volume 21 ; 21 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Home Health Care Management & Practice Volume 22 ; 22 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Home Health Care Management & Practice Volume 23 ; 23 ; >
 
   }
 
@@ -2789,7 +2789,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Homicide Studies Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Homicide Studies Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Homicide Studies Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Homicide Studies Volume 14 ; 14 ; >
 
   }
 
@@ -2805,7 +2805,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human & Experimental Toxicology Volume 27 ; 27 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human & Experimental Toxicology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human & Experimental Toxicology Volume 29 ; 29 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Human & Experimental Toxicology Volume 29 ; 29 ; >
 
   }
 
@@ -2821,7 +2821,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 50 ; 50 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 51 ; 51 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 52 ; 52 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Human Factors: The Journal of the Human Factors and Ergonomics Society Volume 52 ; 52 ; >
 
   }
 
@@ -2837,7 +2837,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human Relations Volume 61 ; 61 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human Relations Volume 62 ; 62 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human Relations Volume 63 ; 63 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Human Relations Volume 63 ; 63 ; >
 
   }
 
@@ -2853,7 +2853,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human Resource Development Review Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human Resource Development Review Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human Resource Development Review Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Human Resource Development Review Volume 9 ; 9 ; >
 
   }
 
@@ -2868,7 +2868,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://can.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2009 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 1 ; 1 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; ICAN: Infant, Child, & Adolescent Nutrition Volume 2 ; 2 ; >
 
   }
 
@@ -2884,7 +2884,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; IFLA Journal Volume 34 ; 34 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; IFLA Journal Volume 35 ; 35 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; IFLA Journal Volume 36 ; 36 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; IFLA Journal Volume 36 ; 36 ; >
 
   }
 
@@ -2900,7 +2900,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Improving Schools Volume 11 ; 11 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Improving Schools Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Improving Schools Volume 13 ; 13 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Improving Schools Volume 13 ; 13 ; >
 
   }
 
@@ -2915,7 +2915,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://iqq.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2009 ; India Quarterly: A Journal of International Affairs Volume 65 ; 65 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; India Quarterly: A Journal of International Affairs Volume 66 ; 66 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; India Quarterly: A Journal of International Affairs Volume 66 ; 66 ; >
 
   }
 
@@ -2930,7 +2930,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Indian Economic & Social History Review Volume 45 ; 45 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Indian Economic & Social History Review Volume 46 ; 46 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Indian Economic & Social History Review Volume 47 ; 47 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Indian Economic & Social History Review Volume 47 ; 47 ; >
 
   }
 
@@ -2945,7 +2945,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Indian Journal of Gender Studies Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Indian Journal of Gender Studies Volume 16 ; 16 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Indian Journal of Gender Studies Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Indian Journal of Gender Studies Volume 17 ; 17 ; >
 
   }
 
@@ -2961,7 +2961,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Indoor and Built Environment Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Indoor and Built Environment Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Indoor and Built Environment Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Indoor and Built Environment Volume 19 ; 19 ; >
 
   }
 
@@ -2973,11 +2973,13 @@ comment[ext121] = no xml entry
       eissn = 1741-6469
     >
 
+comment[idv26] = SAGE database-caused disagreement.  pending fix of ingest poll process
+
     param[base_url] = http://idv.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Information Development Volume 24 ; 24 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Information Development Volume 25 ; 25 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Information Development Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; notReady ; 2010 ; Information Development Volume 26 ; 26 ; >
 
   }
 
@@ -2993,7 +2995,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Innate Immunity Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Innate Immunity Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Innate Immunity Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Innate Immunity Volume 16 ; 16 ; >
 
   }
 
@@ -3005,11 +3007,13 @@ comment[ext121] = no xml entry
       eissn = 1552-695X
     >
 
+comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll process
+
     param[base_url] = http://ict.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Integrative Cancer Therapies Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Integrative Cancer Therapies Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Integrative Cancer Therapies Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; notReady ; 2010 ; Integrative Cancer Therapies Volume 9 ; 9 ; >
 
   }
 
@@ -3025,7 +3029,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Communication Gazette Volume 70 ; 70 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Communication Gazette Volume 71 ; 71 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Communication Gazette Volume 72 ; 72 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Communication Gazette Volume 72 ; 72 ; >
 
   }
 
@@ -3041,7 +3045,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Criminal Justice Review Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Criminal Justice Review Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Criminal Justice Review Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Criminal Justice Review Volume 20 ; 20 ; >
 
   }
 
@@ -3057,7 +3061,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Behavioral Development Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Behavioral Development Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Behavioral Development Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Behavioral Development Volume 34 ; 34 ; >
 
   }
 
@@ -3073,7 +3077,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Bilingualism Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Bilingualism Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Bilingualism Volume 14 ; 14 ; >
 
   }
 
@@ -3089,7 +3093,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Comparative Sociology Volume 49 ; 49 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Comparative Sociology Volume 50 ; 50 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Comparative Sociology Volume 51 ; 51 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Comparative Sociology Volume 51 ; 51 ; >
 
   }
 
@@ -3105,7 +3109,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Cross Cultural Management Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Cross Cultural Management Volume 9 ; 9 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Cross Cultural Management Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Cross Cultural Management Volume 10 ; 10 ; >
 
   }
 
@@ -3121,7 +3125,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Cultural Studies Volume 11 ; 11 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Cultural Studies Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Cultural Studies Volume 13 ; 13 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Cultural Studies Volume 13 ; 13 ; >
 
   }
 
@@ -3137,7 +3141,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Damage Mechanics Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Damage Mechanics Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Damage Mechanics Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Damage Mechanics Volume 19 ; 19 ; >
 
   }
 
@@ -3153,7 +3157,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of High Performance Computing Applications Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of High Performance Computing Applications Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of High Performance Computing Applications Volume 24 ; 24 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of High Performance Computing Applications Volume 24 ; 24 ; >
 
   }
 
@@ -3169,7 +3173,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The International Journal of Lower Extremity Wounds Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The International Journal of Lower Extremity Wounds Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The International Journal of Lower Extremity Wounds Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The International Journal of Lower Extremity Wounds Volume 9 ; 9 ; >
 
   }
 
@@ -3185,7 +3189,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Music Education Volume 26 ; 26 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Music Education Volume 27 ; 27 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Music Education Volume 28 ; 28 ; >
 
   }
 
@@ -3201,7 +3205,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Offender Therapy and Comparative Criminology Volume 52 ; 52 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Offender Therapy and Comparative Criminology Volume 53 ; 53 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Offender Therapy and Comparative Criminology Volume 54 ; 54 ; >
 
   }
 
@@ -3217,7 +3221,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The International Journal of Press/Politics Volume 13 ; 13 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The International Journal of Press/Politics Volume 14 ; 14 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The International Journal of Press/Politics Volume 15 ; 15 ; >
 
   }
 
@@ -3246,11 +3250,11 @@ comment[ext121] = no xml entry
 
     param[base_url] = http://irm.sagepub.com/
 
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2005 ; International Journal of Rural Management Volume 1 ; 1 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2006 ; International Journal of Rural Management Volume 2 ; 2 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2007 ; International Journal of Rural Management Volume 3 ; 3 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; International Journal of Rural Management Volume 4 ; 4 ; >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; International Journal of Rural Management Volume 5 ; 5 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2005 ; International Journal of Rural Management Volume 1 ; 1 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2006 ; International Journal of Rural Management Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2007 ; International Journal of Rural Management Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2008 ; International Journal of Rural Management Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2009 ; International Journal of Rural Management Volume 5 ; 5 ; >
 
   }
 
@@ -3266,7 +3270,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Social Psychiatry Volume 54 ; 54 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Social Psychiatry Volume 55 ; 55 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Social Psychiatry Volume 56 ; 56 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Social Psychiatry Volume 56 ; 56 ; >
 
   }
 
@@ -3281,7 +3285,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Surgical Pathology Volume 16 ; 16 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Surgical Pathology Volume 17 ; 17 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Surgical Pathology Volume 18 ; 18 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Surgical Pathology Volume 18 ; 18 ; >
 
   }
 
@@ -3297,7 +3301,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Journal of Toxicology Volume 27 ; 27 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Journal of Toxicology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Journal of Toxicology Volume 29 ; 29 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Journal of Toxicology Volume 29 ; 29 ; >
 
   }
 
@@ -3313,7 +3317,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Political Science Abstracts Volume 58 ; 58 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Political Science Abstracts Volume 59 ; 59 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Political Science Abstracts Volume 60 ; 60 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Political Science Abstracts Volume 60 ; 60 ; >
 
   }
 
@@ -3329,7 +3333,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Political Science Review Volume 29 ; 29 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Political Science Review Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Political Science Review Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Political Science Review Volume 31 ; 31 ; >
 
   }
 
@@ -3345,7 +3349,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Regional Science Review Volume 31 ; 31 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Regional Science Review Volume 32 ; 32 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Regional Science Review Volume 33 ; 33 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Regional Science Review Volume 33 ; 33 ; >
 
   }
 
@@ -3361,7 +3365,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Relations Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Relations Volume 23 ; 23 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Relations Volume 24 ; 24 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Relations Volume 24 ; 24 ; >
 
   }
 
@@ -3377,7 +3381,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Review for the Sociology of Sport Volume 43 ; 43 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Review for the Sociology of Sport Volume 44 ; 44 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Review for the Sociology of Sport Volume 45 ; 45 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Review for the Sociology of Sport Volume 45 ; 45 ; >
 
   }
 
@@ -3409,7 +3413,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Small Business Journal Volume 26 ; 26 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Small Business Journal Volume 27 ; 27 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Small Business Journal Volume 28 ; 28 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Small Business Journal Volume 28 ; 28 ; >
 
   }
 
@@ -3425,7 +3429,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Social Work Volume 51 ; 51 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Social Work Volume 52 ; 52 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Social Work Volume 53 ; 53 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Social Work Volume 53 ; 53 ; >
 
   }
 
@@ -3441,7 +3445,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Sociology Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; International Sociology Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Sociology Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; International Sociology Volume 25 ; 25 ; >
 
   }
 
@@ -3455,8 +3459,7 @@ comment[ext121] = no xml entry
     param[base_url] = http://isq.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; International Studies Volume 45 ; 45 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; manifest ; 2010 ; International Studies Volume 46 ; 46 ; >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; International Studies Volume 47 ; 47 ; >
+    au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; International Studies Volume 46 ; 46 ; >
 
   }
 
@@ -3471,7 +3474,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Intervention in School and Clinic Volume 44 ; 44 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Intervention in School and Clinic Volume 45 ; 45 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Intervention in School and Clinic Volume 46 ; 46 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Intervention in School and Clinic Volume 46 ; 46 ; >
 
   }
 
@@ -3487,7 +3490,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Irish Theological Quarterly Volume 73 ; 73 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Irish Theological Quarterly Volume 74 ; 74 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Irish Theological Quarterly Volume 75 ; 75 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Irish Theological Quarterly Volume 75 ; 75 ; >
 
   }
 
@@ -3502,8 +3505,8 @@ comment[ext121] = no xml entry
     param[base_url] = http://jnt.sagepub.com/
 
     au < ClockssHighWirePlugin ; notReady ; 2008 ; Journal for the Study of the New Testament Volume 31 ; 31 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal for the Study of the New Testament Volume 32 ; 32 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal for the Study of the New Testament Volume 33 ; 33 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal for the Study of the New Testament Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal for the Study of the New Testament Volume 33 ; 33 ; >
 
   }
 
@@ -3518,8 +3521,8 @@ comment[ext121] = no xml entry
     param[base_url] = http://jot.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal for the Study of the Old Testament Volume 33 ; 33 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal for the Study of the Old Testament Volume 34 ; 34 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal for the Study of the Old Testament Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal for the Study of the Old Testament Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal for the Study of the Old Testament Volume 35 ; 35 ; >
 
   }
 
@@ -3534,8 +3537,8 @@ comment[ext121] = no xml entry
     param[base_url] = http://jsp.sagepub.com/
 
     au < ClockssHighWirePlugin ; notReady ; 2008 ; Journal for the Study of the Pseudepigrapha Volume 18 ; 18 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal for the Study of the Pseudepigrapha Volume 19 ; 19 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal for the Study of the Pseudepigrapha Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal for the Study of the Pseudepigrapha Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal for the Study of the Pseudepigrapha Volume 20 ; 20 ; >
 
   }
 
@@ -3551,7 +3554,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Adolescent Research Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Adolescent Research Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Adolescent Research Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Adolescent Research Volume 25 ; 25 ; >
 
   }
 
@@ -3567,7 +3570,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Aging and Health Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; notReady ; 2009 ; Journal of Aging and Health Volume 21 ; 21 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Aging and Health Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Aging and Health Volume 22 ; 22 ; >
 
   }
 
@@ -3583,7 +3586,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Journal of Applied Behavioral Science Volume 44 ; 44 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The Journal of Applied Behavioral Science Volume 45 ; 45 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Journal of Applied Behavioral Science Volume 46 ; 46 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The Journal of Applied Behavioral Science Volume 46 ; 46 ; >
 
   }
 
@@ -3599,7 +3602,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Applied Gerontology Volume 27 ; 27 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Applied Gerontology Volume 28 ; 28 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Applied Gerontology Volume 29 ; 29 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Applied Gerontology Volume 29 ; 29 ; >
 
   }
 
@@ -3615,7 +3618,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Asian and African Studies Volume 43 ; 43 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Asian and African Studies Volume 44 ; 44 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Asian and African Studies Volume 45 ; 45 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Asian and African Studies Volume 45 ; 45 ; >
 
   }
 
@@ -3631,7 +3634,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Attention Disorders Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Attention Disorders Volume 13 ; 13 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Attention Disorders Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Attention Disorders Volume 14 ; 14 ; >
 
   }
 
@@ -3647,7 +3650,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Bioactive and Compatible Polymers Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Bioactive and Compatible Polymers Volume 24 ; 24 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Bioactive and Compatible Polymers Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Bioactive and Compatible Polymers Volume 25 ; 25 ; >
 
   }
 
@@ -3663,7 +3666,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Biological Rhythms Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Biological Rhythms Volume 24 ; 24 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Biological Rhythms Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Biological Rhythms Volume 25 ; 25 ; >
 
   }
 
@@ -3679,7 +3682,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Biomaterials Applications Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; notReady ; 2009 ; Journal of Biomaterials Applications Volume 24 ; 24 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Biomaterials Applications Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Biomaterials Applications Volume 25 ; 25 ; >
 
   }
 
@@ -3695,7 +3698,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Biomolecular Screening Volume 13 ; 13 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Biomolecular Screening Volume 14 ; 14 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Biomolecular Screening Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Biomolecular Screening Volume 15 ; 15 ; >
 
   }
 
@@ -3711,7 +3714,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Black Psychology Volume 34 ; 34 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Black Psychology Volume 35 ; 35 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Black Psychology Volume 36 ; 36 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Black Psychology Volume 36 ; 36 ; >
 
   }
 
@@ -3727,7 +3730,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Black Studies Volume 39 ; 39 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Journal of Black Studies Volume 40 ; 40 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Black Studies Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Black Studies Volume 41 ; 41 ; >
 
   }
 
@@ -3743,7 +3746,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Journal of Building Physics Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Building Physics Volume 33 ; 33 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Building Physics Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Building Physics Volume 34 ; 34 ; >
 
   }
 
@@ -3759,7 +3762,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Business and Technical Communication Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Business and Technical Communication Volume 23 ; 23 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Business and Technical Communication Volume 24 ; 24 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Business and Technical Communication Volume 24 ; 24 ; >
 
   }
 
@@ -3775,7 +3778,7 @@ comment[ext121] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Business Communication Volume 45 ; 45 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Business Communication Volume 46 ; 46 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Business Communication Volume 47 ; 47 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Journal of Business Communication Volume 47 ; 47 ; >
 
   }
 
