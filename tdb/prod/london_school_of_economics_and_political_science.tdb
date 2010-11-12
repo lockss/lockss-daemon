@@ -18,6 +18,7 @@
     param[publisher_id] = lse
     param[journal_id] = jtep
     param[journal_issn] = 0022-5258
+    attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.LondonSchoolOfEconomicsPdfTransform
     implicit < status ; year; name ; param[volume_name] >
   
     au < manifest ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 >
