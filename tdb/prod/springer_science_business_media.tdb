@@ -4953,16 +4953,16 @@
     param[journal_issn] = 1567-8822
     comment[wanted] = True
 
-    au < wanted ; 2001 ; Cardiovascular Engineering Volume 1 ; 1 >
-    au < wanted ; 2002 ; Cardiovascular Engineering Volume 2 ; 2 >
-    au < wanted ; 2003 ; Cardiovascular Engineering Volume 3 ; 3 >
-    au < wanted ; 2004 ; Cardiovascular Engineering Volume 4 ; 4 >
-    au < wanted ; 2005 ; Cardiovascular Engineering Volume 5 ; 5 >
-    au < wanted ; 2006 ; Cardiovascular Engineering Volume 6 ; 6 >
-    au < wanted ; 2007 ; Cardiovascular Engineering Volume 7 ; 7 >
-    au < wanted ; 2008 ; Cardiovascular Engineering Volume 8 ; 8 >
-    au < wanted ; 2009 ; Cardiovascular Engineering Volume 9 ; 9 >
-    au < wanted ; 2010 ; Cardiovascular Engineering Volume 10 ; 10 >
+    au < testing ; 2001 ; Cardiovascular Engineering Volume 1 ; 1 >
+    au < testing ; 2002 ; Cardiovascular Engineering Volume 2 ; 2 >
+    au < testing ; 2003 ; Cardiovascular Engineering Volume 3 ; 3 >
+    au < testing ; 2004 ; Cardiovascular Engineering Volume 4 ; 4 >
+    au < testing ; 2005 ; Cardiovascular Engineering Volume 5 ; 5 >
+    au < testing ; 2006 ; Cardiovascular Engineering Volume 6 ; 6 >
+    au < testing ; 2007 ; Cardiovascular Engineering Volume 7 ; 7 >
+    au < testing ; 2008 ; Cardiovascular Engineering Volume 8 ; 8 >
+    au < testing ; 2009 ; Cardiovascular Engineering Volume 9 ; 9 >
+    au < testing ; 2010 ; Cardiovascular Engineering Volume 10 ; 10 >
 
   }
 
@@ -7840,8 +7840,8 @@
     param[journal_issn] = 2100-0719
     comment[wanted] = True
 
-    au < wanted ; 2009 ; Diabetologia Notes de lecture Volume 1 ; 1 >
-    au < wanted ; 2010 ; Diabetologia Notes de lecture Volume 2 ; 2 >
+    au < testing ; 2009 ; Diabetologia Notes de lecture Volume 1 ; 1 >
+    au < testing ; 2010 ; Diabetologia Notes de lecture Volume 2 ; 2 >
 
   }
 
@@ -15645,10 +15645,10 @@
     param[journal_issn] = 1864-0753
     comment[wanted] = True
 
-    au < wanted ; 2007 ; Journal of Business Market Management Volume 1 ; 1 >
-    au < wanted ; 2008 ; Journal of Business Market Management Volume 2 ; 2 >
-    au < wanted ; 2009 ; Journal of Business Market Management Volume 3 ; 3 >
-    au < wanted ; 2010 ; Journal of Business Market Management Volume 4 ; 4 >
+    au < testing ; 2007 ; Journal of Business Market Management Volume 1 ; 1 >
+    au < testing ; 2008 ; Journal of Business Market Management Volume 2 ; 2 >
+    au < testing ; 2009 ; Journal of Business Market Management Volume 3 ; 3 >
+    au < testing ; 2010 ; Journal of Business Market Management Volume 4 ; 4 >
 
   }
 
@@ -19981,9 +19981,9 @@
     param[journal_issn] = 0940-7936
     comment[wanted] = True
 
-    au < wanted ; 2008 ; Kidney Volume 17 ; 17 >
-    au < wanted ; 2009 ; Kidney Volume 18 ; 18 >
-    au < wanted ; 2010 ; Kidney Volume 19 ; 19 >
+    au < testing ; 2008 ; Kidney Volume 17 ; 17 >
+    au < testing ; 2009 ; Kidney Volume 18 ; 18 >
+    au < testing ; 2010 ; Kidney Volume 19 ; 19 >
 
   }
 
@@ -23334,9 +23334,9 @@
     param[journal_issn] = 1866-5861
     comment[wanted] = True
 
-    au < wanted ; 2008 ; Onkopipeline Volume 1 ; 1 >
-    au < wanted ; 2009 ; Onkopipeline Volume 2 ; 2 >
-    au < wanted ; 2010 ; Onkopipeline Volume 3 ; 3 >
+    au < testing ; 2008 ; Onkopipeline Volume 1 ; 1 >
+    au < testing ; 2009 ; Onkopipeline Volume 2 ; 2 >
+    au < testing ; 2010 ; Onkopipeline Volume 3 ; 3 >
 
   }
 
@@ -24765,17 +24765,17 @@
     param[journal_issn] = 0032-3470
     comment[wanted] = True
 
-    au < wanted ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
-    au < wanted ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
-    au < wanted ; 2002 ; Politische Vierteljahresschrift Volume 43 ; 43 >
-    au < wanted ; 2003 ; Politische Vierteljahresschrift Volume 44 ; 44 >
-    au < wanted ; 2004 ; Politische Vierteljahresschrift Volume 45 ; 45 >
-    au < wanted ; 2005 ; Politische Vierteljahresschrift Volume 46 ; 46 >
-    au < wanted ; 2006 ; Politische Vierteljahresschrift Volume 47 ; 47 >
-    au < wanted ; 2007 ; Politische Vierteljahresschrift Volume 48 ; 48 >
-    au < wanted ; 2008 ; Politische Vierteljahresschrift Volume 49 ; 49 >
-    au < wanted ; 2009 ; Politische Vierteljahresschrift Volume 50 ; 50 >
-    au < wanted ; 2010 ; Politische Vierteljahresschrift Volume 51 ; 51 >
+    au < testing ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
+    au < testing ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
+    au < testing ; 2002 ; Politische Vierteljahresschrift Volume 43 ; 43 >
+    au < testing ; 2003 ; Politische Vierteljahresschrift Volume 44 ; 44 >
+    au < testing ; 2004 ; Politische Vierteljahresschrift Volume 45 ; 45 >
+    au < testing ; 2005 ; Politische Vierteljahresschrift Volume 46 ; 46 >
+    au < testing ; 2006 ; Politische Vierteljahresschrift Volume 47 ; 47 >
+    au < testing ; 2007 ; Politische Vierteljahresschrift Volume 48 ; 48 >
+    au < testing ; 2008 ; Politische Vierteljahresschrift Volume 49 ; 49 >
+    au < testing ; 2009 ; Politische Vierteljahresschrift Volume 50 ; 50 >
+    au < testing ; 2010 ; Politische Vierteljahresschrift Volume 51 ; 51 >
 
   }
 
@@ -25452,13 +25452,13 @@
     param[journal_issn] = 0943-1950
     comment[wanted] = True
 
-    au < wanted ; 2004 ; Psychotherapie Forum Volume 12 ; 12 >
-    au < wanted ; 2005 ; Psychotherapie Forum Volume 13 ; 13 >
-    au < wanted ; 2006 ; Psychotherapie Forum Volume 14 ; 14 >
-    au < wanted ; 2007 ; Psychotherapie Forum Volume 15 ; 15 >
-    au < wanted ; 2008 ; Psychotherapie Forum Volume 16 ; 16 >
-    au < wanted ; 2009 ; Psychotherapie Forum Volume 17 ; 17 >
-    au < wanted ; 2010 ; Psychotherapie Forum Volume 18 ; 18 >
+    au < testing ; 2004 ; Psychotherapie Forum Volume 12 ; 12 >
+    au < testing ; 2005 ; Psychotherapie Forum Volume 13 ; 13 >
+    au < testing ; 2006 ; Psychotherapie Forum Volume 14 ; 14 >
+    au < testing ; 2007 ; Psychotherapie Forum Volume 15 ; 15 >
+    au < testing ; 2008 ; Psychotherapie Forum Volume 16 ; 16 >
+    au < testing ; 2009 ; Psychotherapie Forum Volume 17 ; 17 >
+    au < testing ; 2010 ; Psychotherapie Forum Volume 18 ; 18 >
 
   }
 
@@ -26133,13 +26133,13 @@
     param[journal_issn] = 1570-7075
     comment[wanted] = True
 
-    au < wanted ; 2003 ; Research on Language & Computation Volume 1 ; 1 >
-    au < wanted ; 2004 ; Research on Language & Computation Volume 2 ; 2 >
-    au < wanted ; 2005 ; Research on Language & Computation Volume 3 ; 3 >
-    au < wanted ; 2006 ; Research on Language & Computation Volume 4 ; 4 >
-    au < wanted ; 2007 ; Research on Language & Computation Volume 5 ; 5 >
-    au < wanted ; 2008 ; Research on Language & Computation Volume 6 ; 6 >
-    au < wanted ; 2009 ; Research on Language & Computation Volume 7 ; 7 >
+    au < testing ; 2003 ; Research on Language & Computation Volume 1 ; 1 >
+    au < testing ; 2004 ; Research on Language & Computation Volume 2 ; 2 >
+    au < testing ; 2005 ; Research on Language & Computation Volume 3 ; 3 >
+    au < testing ; 2006 ; Research on Language & Computation Volume 4 ; 4 >
+    au < testing ; 2007 ; Research on Language & Computation Volume 5 ; 5 >
+    au < testing ; 2008 ; Research on Language & Computation Volume 6 ; 6 >
+    au < testing ; 2009 ; Research on Language & Computation Volume 7 ; 7 >
 
   }
 
@@ -29224,26 +29224,26 @@
     param[journal_issn] = 0165-0874
     comment[wanted] = True
 
-    au < wanted ; 1990 ; Tijdschrift voor GezondheidsRecht Volume 14 ; 14 >
-    au < wanted ; 1991 ; Tijdschrift voor GezondheidsRecht Volume 15 ; 15 >
-    au < wanted ; 1992 ; Tijdschrift voor GezondheidsRecht Volume 16 ; 16 >
-    au < wanted ; 1993 ; Tijdschrift voor GezondheidsRecht Volume 17 ; 17 >
-    au < wanted ; 1994 ; Tijdschrift voor GezondheidsRecht Volume 18 ; 18 >
-    au < wanted ; 1995 ; Tijdschrift voor GezondheidsRecht Volume 19 ; 19 >
-    au < wanted ; 1996 ; Tijdschrift voor GezondheidsRecht Volume 20 ; 20 >
-    au < wanted ; 1997 ; Tijdschrift voor GezondheidsRecht Volume 21 ; 21 >
-    au < wanted ; 1998 ; Tijdschrift voor GezondheidsRecht Volume 22 ; 22 >
-    au < wanted ; 1999 ; Tijdschrift voor GezondheidsRecht Volume 23 ; 23 >
-    au < wanted ; 2000 ; Tijdschrift voor GezondheidsRecht Volume 24 ; 24 >
-    au < wanted ; 2001 ; Tijdschrift voor GezondheidsRecht Volume 25 ; 25 >
-    au < wanted ; 2002 ; Tijdschrift voor GezondheidsRecht Volume 26 ; 26 >
-    au < wanted ; 2003 ; Tijdschrift voor GezondheidsRecht Volume 27 ; 27 >
-    au < wanted ; 2004 ; Tijdschrift voor GezondheidsRecht Volume 28 ; 28 >
-    au < wanted ; 2005 ; Tijdschrift voor GezondheidsRecht Volume 29 ; 29 >
-    au < wanted ; 2006 ; Tijdschrift voor GezondheidsRecht Volume 30 ; 30 >
-    au < wanted ; 2007 ; Tijdschrift voor GezondheidsRecht Volume 31 ; 31 >
-    au < wanted ; 2008 ; Tijdschrift voor GezondheidsRecht Volume 32 ; 32 >
-    au < wanted ; 2009 ; Tijdschrift voor GezondheidsRecht Volume 33 ; 33 >
+    au < testing ; 1990 ; Tijdschrift voor GezondheidsRecht Volume 14 ; 14 >
+    au < testing ; 1991 ; Tijdschrift voor GezondheidsRecht Volume 15 ; 15 >
+    au < testing ; 1992 ; Tijdschrift voor GezondheidsRecht Volume 16 ; 16 >
+    au < testing ; 1993 ; Tijdschrift voor GezondheidsRecht Volume 17 ; 17 >
+    au < testing ; 1994 ; Tijdschrift voor GezondheidsRecht Volume 18 ; 18 >
+    au < testing ; 1995 ; Tijdschrift voor GezondheidsRecht Volume 19 ; 19 >
+    au < testing ; 1996 ; Tijdschrift voor GezondheidsRecht Volume 20 ; 20 >
+    au < testing ; 1997 ; Tijdschrift voor GezondheidsRecht Volume 21 ; 21 >
+    au < testing ; 1998 ; Tijdschrift voor GezondheidsRecht Volume 22 ; 22 >
+    au < testing ; 1999 ; Tijdschrift voor GezondheidsRecht Volume 23 ; 23 >
+    au < testing ; 2000 ; Tijdschrift voor GezondheidsRecht Volume 24 ; 24 >
+    au < testing ; 2001 ; Tijdschrift voor GezondheidsRecht Volume 25 ; 25 >
+    au < testing ; 2002 ; Tijdschrift voor GezondheidsRecht Volume 26 ; 26 >
+    au < testing ; 2003 ; Tijdschrift voor GezondheidsRecht Volume 27 ; 27 >
+    au < testing ; 2004 ; Tijdschrift voor GezondheidsRecht Volume 28 ; 28 >
+    au < testing ; 2005 ; Tijdschrift voor GezondheidsRecht Volume 29 ; 29 >
+    au < testing ; 2006 ; Tijdschrift voor GezondheidsRecht Volume 30 ; 30 >
+    au < testing ; 2007 ; Tijdschrift voor GezondheidsRecht Volume 31 ; 31 >
+    au < testing ; 2008 ; Tijdschrift voor GezondheidsRecht Volume 32 ; 32 >
+    au < testing ; 2009 ; Tijdschrift voor GezondheidsRecht Volume 33 ; 33 >
 
   }
 
@@ -30674,9 +30674,9 @@
     param[journal_issn] = 1865-4789
     comment[wanted] = True
 
-    au < wanted ; 2008 ; Zeitschrift für Politikberatung Volume 1 ; 1 >
-    au < wanted ; 2009 ; Zeitschrift für Politikberatung Volume 2 ; 2 >
-    au < wanted ; 2010 ; Zeitschrift für Politikberatung Volume 3 ; 3 >
+    au < testing ; 2008 ; Zeitschrift für Politikberatung Volume 1 ; 1 >
+    au < testing ; 2009 ; Zeitschrift für Politikberatung Volume 2 ; 2 >
+    au < testing ; 2010 ; Zeitschrift für Politikberatung Volume 3 ; 3 >
 
   }
 
