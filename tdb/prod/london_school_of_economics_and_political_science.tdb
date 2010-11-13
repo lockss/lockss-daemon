@@ -21,15 +21,15 @@
     attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.LondonSchoolOfEconomicsPdfTransform
     implicit < status ; year; name ; param[volume_name] >
   
-    au < testing ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 >
-    au < testing ; 2002 ; Journal of Transport Economics and Policy Volume 36 ; 36 >
-    au < testing ; 2003 ; Journal of Transport Economics and Policy Volume 37 ; 37 >
-    au < testing ; 2004 ; Journal of Transport Economics and Policy Volume 38 ; 38 >
-    au < testing ; 2005 ; Journal of Transport Economics and Policy Volume 39 ; 39 >
-    au < testing ; 2006 ; Journal of Transport Economics and Policy Volume 40 ; 40 >
-    au < testing ; 2007 ; Journal of Transport Economics and Policy Volume 41 ; 41 >
-    au < testing ; 2008 ; Journal of Transport Economics and Policy Volume 42 ; 42 >
-    au < testing ; 2009 ; Journal of Transport Economics and Policy Volume 43 ; 43 >
+    au < ready ; 2001 ; Journal of Transport Economics and Policy Volume 35 ; 35 >
+    au < ready ; 2002 ; Journal of Transport Economics and Policy Volume 36 ; 36 >
+    au < ready ; 2003 ; Journal of Transport Economics and Policy Volume 37 ; 37 >
+    au < ready ; 2004 ; Journal of Transport Economics and Policy Volume 38 ; 38 >
+    au < ready ; 2005 ; Journal of Transport Economics and Policy Volume 39 ; 39 >
+    au < ready ; 2006 ; Journal of Transport Economics and Policy Volume 40 ; 40 >
+    au < ready ; 2007 ; Journal of Transport Economics and Policy Volume 41 ; 41 >
+    au < ready ; 2008 ; Journal of Transport Economics and Policy Volume 42 ; 42 >
+    au < ready ; 2009 ; Journal of Transport Economics and Policy Volume 43 ; 43 >
     au < ready ; 2010 ; Journal of Transport Economics and Policy Volume 44 ; 44 >
 
   }
