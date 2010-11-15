@@ -10,6 +10,7 @@
   param[graphics_url] = http://graphics.ingentaconnect.com/    
   param[publisher_id] = minsoc
   comment[platform] = Ingenta
+  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.ingenta.ClayMineralsSocietyPdfTransform
   implicit < status ; year; name ; param[volume_name] >
  
   {
@@ -34,8 +35,8 @@
     au < manifest ; 2006 ; Clay Minerals Volume 41 ; 41 >
     au < manifest ; 2007 ; Clay Minerals Volume 42 ; 42 >
     au < manifest ; 2008 ; Clay Minerals Volume 43 ; 43 >
-    au < manifest ; 2009 ; Clay Minerals Volume 44 ; 44 >
-    au < testing ; 2010 ; Clay Minerals Volume 45 ; 45 >
+    au < testing ; 2009 ; Clay Minerals Volume 44 ; 44 >
+    au < ready ; 2010 ; Clay Minerals Volume 45 ; 45 >
     
   }
 
