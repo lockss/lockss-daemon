@@ -16,10 +16,10 @@
 
     param[journal_dir] = esc_english_studies_in_canada
 
-    au < ready ; ESC: English Studies in Canada Volume 31 ; 31 >
-    au < ready ; ESC: English Studies in Canada Volume 32 ; 32 >
-    au < ready ; ESC: English Studies in Canada Volume 33 ; 33 >
-    au < ready ; ESC: English Studies in Canada Volume 34 ; 34 >
+    au < released ; ESC: English Studies in Canada Volume 31 ; 31 >
+    au < released ; ESC: English Studies in Canada Volume 32 ; 32 >
+    au < released ; ESC: English Studies in Canada Volume 33 ; 33 >
+    au < released ; ESC: English Studies in Canada Volume 34 ; 34 >
 
   }
 
