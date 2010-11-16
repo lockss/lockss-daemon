@@ -17569,10 +17569,27 @@
     title <
       name = Journal of Mammary Gland Biology and Neoplasia ;
       issn = 1083-3021 ;
-      placeholder = True
+      eissn = 1573-7039
     >
 
     param[journal_issn] = 1083-3021
+    attr[where] = content1b
+
+    au < testing ; 1996 ; Journal of Mammary Gland Biology and Neoplasia Volume 1 ; 1 >
+    au < testing ; 1997 ; Journal of Mammary Gland Biology and Neoplasia Volume 2 ; 2 >
+    au < testing ; 1998 ; Journal of Mammary Gland Biology and Neoplasia Volume 3 ; 3 >
+    au < testing ; 1999 ; Journal of Mammary Gland Biology and Neoplasia Volume 4 ; 4 >
+    au < testing ; 2000 ; Journal of Mammary Gland Biology and Neoplasia Volume 5 ; 5 >
+    au < testing ; 2001 ; Journal of Mammary Gland Biology and Neoplasia Volume 6 ; 6 >
+    au < testing ; 2002 ; Journal of Mammary Gland Biology and Neoplasia Volume 7 ; 7 >
+    au < testing ; 2003 ; Journal of Mammary Gland Biology and Neoplasia Volume 8 ; 8 >
+    au < testing ; 2004 ; Journal of Mammary Gland Biology and Neoplasia Volume 9 ; 9 >
+    au < testing ; 2005 ; Journal of Mammary Gland Biology and Neoplasia Volume 10 ; 10 >
+    au < testing ; 2006 ; Journal of Mammary Gland Biology and Neoplasia Volume 11 ; 11 >
+    au < testing ; 2007 ; Journal of Mammary Gland Biology and Neoplasia Volume 12 ; 12 >
+    au < testing ; 2008 ; Journal of Mammary Gland Biology and Neoplasia Volume 13 ; 13 >
+    au < testing ; 2009 ; Journal of Mammary Gland Biology and Neoplasia Volume 14 ; 14 >
+    au < testing ; 2010 ; Journal of Mammary Gland Biology and Neoplasia Volume 15 ; 15 >
 
   }
 
@@ -25392,10 +25409,224 @@
     title <
       name = Psychopharmacology ;
       issn = 0033-3158 ;
-      placeholder = True
+      eissn = 1432-2072
     >
 
     param[journal_issn] = 0033-3158
+    attr[where] = content1a
+
+    au < manifest ; 1959-1960 ; Psychopharmacology Volume 1 ; 1 >
+    au < manifest ; 1961 ; Psychopharmacology Volume 2 ; 2 >
+    au < manifest ; 1962 ; Psychopharmacology Volume 3 ; 3 >
+    au < manifest ; 1963 ; Psychopharmacology Volume 4 ; 4 >
+    au < manifest ; 1963-1964 ; Psychopharmacology Volume 5 ; 5 >
+    au < manifest ; 1964 ; Psychopharmacology Volume 6 ; 6 >
+    au < manifest ; 1965 ; Psychopharmacology Volume 7 ; 7 >
+    au < manifest ; 1965-1966 ; Psychopharmacology Volume 8 ; 8 >
+    au < manifest ; 1966 ; Psychopharmacology Volume 9 ; 9 >
+    au < manifest ; 1966-1967 ; Psychopharmacology Volume 10 ; 10 >
+    au < manifest ; 1967 ; Psychopharmacology Volume 11 ; 11 >
+    au < manifest ; 1967-1968 ; Psychopharmacology Volume 12 ; 12 >
+    au < manifest ; 1968 ; Psychopharmacology Volume 13 ; 13 >
+    au < manifest ; 1969 ; Psychopharmacology Volume 14 ; 14 >
+    au < manifest ; 1969 ; Psychopharmacology Volume 15 ; 15 >
+    au < manifest ; 1969-1970 ; Psychopharmacology Volume 16 ; 16 >
+    au < manifest ; 1970 ; Psychopharmacology Volume 17 ; 17 >
+    au < manifest ; 1970 ; Psychopharmacology Volume 18 ; 18 >
+    au < manifest ; 1971 ; Psychopharmacology Volume 19 ; 19 >
+    au < manifest ; 1971 ; Psychopharmacology Volume 20 ; 20 >
+    au < manifest ; 1971 ; Psychopharmacology Volume 21 ; 21 >
+    au < manifest ; 1971 ; Psychopharmacology Volume 22 ; 22 >
+    au < manifest ; 1972 ; Psychopharmacology Volume 23 ; 23 >
+    au < manifest ; 1972 ; Psychopharmacology Volume 24 ; 24 >
+    au < manifest ; 1972 ; Psychopharmacology Volume 25 ; 25 >
+    au < manifest ; 1972 ; Psychopharmacology Volume 26 ; 26 >
+    au < manifest ; 1972 ; Psychopharmacology Volume 27 ; 27 >
+    au < manifest ; 1973 ; Psychopharmacology Volume 28 ; 28 >
+    au < manifest ; 1973 ; Psychopharmacology Volume 29 ; 29 >
+    au < manifest ; 1973 ; Psychopharmacology Volume 30 ; 30 >
+    au < manifest ; 1973 ; Psychopharmacology Volume 31 ; 31 >
+    au < manifest ; 1973 ; Psychopharmacology Volume 32 ; 32 >
+    au < manifest ; 1973 ; Psychopharmacology Volume 33 ; 33 >
+    au < manifest ; 1974 ; Psychopharmacology Volume 34 ; 34 >
+    au < manifest ; 1974 ; Psychopharmacology Volume 35 ; 35 >
+    au < manifest ; 1974 ; Psychopharmacology Volume 36 ; 36 >
+    au < manifest ; 1974 ; Psychopharmacology Volume 37 ; 37 >
+    au < manifest ; 1974 ; Psychopharmacology Volume 38 ; 38 >
+    au < manifest ; 1974 ; Psychopharmacology Volume 39 ; 39 >
+    au < manifest ; 1974-1975 ; Psychopharmacology Volume 40 ; 40 >
+    au < manifest ; 1975 ; Psychopharmacology Volume 41 ; 41 >
+    au < manifest ; 1975 ; Psychopharmacology Volume 42 ; 42 >
+    au < manifest ; 1975 ; Psychopharmacology Volume 43 ; 43 >
+    au < manifest ; 1975 ; Psychopharmacology Volume 44 ; 44 >
+    au < manifest ; 1975-1976 ; Psychopharmacology Volume 45 ; 45 >
+    au < manifest ; 1976 ; Psychopharmacology Volume 46 ; 46 >
+    au < manifest ; 1976 ; Psychopharmacology Volume 47 ; 47 >
+    au < manifest ; 1976 ; Psychopharmacology Volume 48 ; 48 >
+    au < manifest ; 1976 ; Psychopharmacology Volume 49 ; 49 >
+    au < manifest ; 1976 ; Psychopharmacology Volume 50 ; 50 >
+    au < manifest ; 1976-1977 ; Psychopharmacology Volume 51 ; 51 >
+    au < manifest ; 1977 ; Psychopharmacology Volume 52 ; 52 >
+    au < manifest ; 1977 ; Psychopharmacology Volume 53 ; 53 >
+    au < manifest ; 1977 ; Psychopharmacology Volume 54 ; 54 >
+    au < manifest ; 1977 ; Psychopharmacology Volume 55 ; 55 >
+    au < manifest ; 1978 ; Psychopharmacology Volume 56 ; 56 >
+    au < manifest ; 1978 ; Psychopharmacology Volume 57 ; 57 >
+    au < manifest ; 1978 ; Psychopharmacology Volume 58 ; 58 >
+    au < manifest ; 1978 ; Psychopharmacology Volume 59 ; 59 >
+    au < manifest ; 1978-1979 ; Psychopharmacology Volume 60 ; 60 >
+    au < manifest ; 1979 ; Psychopharmacology Volume 61 ; 61 >
+    au < manifest ; 1979 ; Psychopharmacology Volume 62 ; 62 >
+    au < manifest ; 1979 ; Psychopharmacology Volume 63 ; 63 >
+    au < manifest ; 1979 ; Psychopharmacology Volume 64 ; 64 >
+    au < manifest ; 1979 ; Psychopharmacology Volume 65 ; 65 >
+    au < manifest ; 1979 ; Psychopharmacology Volume 66 ; 66 >
+    au < manifest ; 1980 ; Psychopharmacology Volume 67 ; 67 >
+    au < manifest ; 1980 ; Psychopharmacology Volume 68 ; 68 >
+    au < manifest ; 1980 ; Psychopharmacology Volume 69 ; 69 >
+    au < manifest ; 1980 ; Psychopharmacology Volume 70 ; 70 >
+    au < manifest ; 1980 ; Psychopharmacology Volume 71 ; 71 >
+    au < manifest ; 1980-1981 ; Psychopharmacology Volume 72 ; 72 >
+    au < manifest ; 1981 ; Psychopharmacology Volume 73 ; 73 >
+    au < manifest ; 1981 ; Psychopharmacology Volume 74 ; 74 >
+    au < manifest ; 1981 ; Psychopharmacology Volume 75 ; 75 >
+    au < manifest ; 1982 ; Psychopharmacology Volume 76 ; 76 >
+    au < manifest ; 1982 ; Psychopharmacology Volume 77 ; 77 >
+    au < manifest ; 1982 ; Psychopharmacology Volume 78 ; 78 >
+    au < manifest ; 1983 ; Psychopharmacology Volume 79 ; 79 >
+    au < manifest ; 1983 ; Psychopharmacology Volume 80 ; 80 >
+    au < manifest ; 1983 ; Psychopharmacology Volume 81 ; 81 >
+    au < manifest ; 1983-1984 ; Psychopharmacology Volume 82 ; 82 >
+    au < manifest ; 1984 ; Psychopharmacology Volume 83 ; 83 >
+    au < manifest ; 1984 ; Psychopharmacology Volume 84 ; 84 >
+    au < manifest ; 1985 ; Psychopharmacology Volume 85 ; 85 >
+    au < manifest ; 1985 ; Psychopharmacology Volume 86 ; 86 >
+    au < manifest ; 1985 ; Psychopharmacology Volume 87 ; 87 >
+    au < manifest ; 1986 ; Psychopharmacology Volume 88 ; 88 >
+    au < manifest ; 1986 ; Psychopharmacology Volume 89 ; 89 >
+    au < manifest ; 1986 ; Psychopharmacology Volume 90 ; 90 >
+    au < manifest ; 1987 ; Psychopharmacology Volume 91 ; 91 >
+    au < manifest ; 1987 ; Psychopharmacology Volume 92 ; 92 >
+    au < manifest ; 1987 ; Psychopharmacology Volume 93 ; 93 >
+    au < manifest ; 1988 ; Psychopharmacology Volume 94 ; 94 >
+    au < manifest ; 1988 ; Psychopharmacology Volume 95 ; 95 >
+    au < manifest ; 1988 ; Psychopharmacology Volume 96 ; 96 >
+    au < manifest ; 1989 ; Psychopharmacology Volume 97 ; 97 >
+    au < manifest ; 1989 ; Psychopharmacology Volume 98 ; 98 >
+    au < manifest ; 1989 ; Psychopharmacology Volume 99 ; 99 >
+    au < manifest ; 1990 ; Psychopharmacology Volume 100 ; 100 >
+    au < manifest ; 1990 ; Psychopharmacology Volume 101 ; 101 >
+    au < manifest ; 1990 ; Psychopharmacology Volume 102 ; 102 >
+    au < manifest ; 1991 ; Psychopharmacology Volume 103 ; 103 >
+    au < manifest ; 1991 ; Psychopharmacology Volume 104 ; 104 >
+    au < manifest ; 1991 ; Psychopharmacology Volume 105 ; 105 >
+    au < manifest ; 1992 ; Psychopharmacology Volume 106 ; 106 >
+    au < manifest ; 1992 ; Psychopharmacology Volume 107 ; 107 >
+    au < manifest ; 1992 ; Psychopharmacology Volume 108 ; 108 >
+    au < manifest ; 1992 ; Psychopharmacology Volume 109 ; 109 >
+    au < manifest ; 1993 ; Psychopharmacology Volume 110 ; 110 >
+    au < manifest ; 1993 ; Psychopharmacology Volume 111 ; 111 >
+    au < manifest ; 1993 ; Psychopharmacology Volume 112 ; 112 >
+    au < manifest ; 1993-1994 ; Psychopharmacology Volume 113 ; 113 >
+    au < manifest ; 1994 ; Psychopharmacology Volume 114 ; 114 >
+    au < manifest ; 1994 ; Psychopharmacology Volume 115 ; 115 >
+    au < manifest ; 1994 ; Psychopharmacology Volume 116 ; 116 >
+    au < manifest ; 1995 ; Psychopharmacology Volume 117 ; 117 >
+    au < manifest ; 1995 ; Psychopharmacology Volume 118 ; 118 >
+    au < manifest ; 1995 ; Psychopharmacology Volume 119 ; 119 >
+    au < manifest ; 1995 ; Psychopharmacology Volume 120 ; 120 >
+    au < manifest ; 1995 ; Psychopharmacology Volume 121 ; 121 >
+    au < manifest ; 1995 ; Psychopharmacology Volume 122 ; 122 >
+    au < manifest ; 1996 ; Psychopharmacology Volume 123 ; 123 >
+    au < manifest ; 1996 ; Psychopharmacology Volume 124 ; 124 >
+    au < manifest ; 1996 ; Psychopharmacology Volume 125 ; 125 >
+    au < manifest ; 1996 ; Psychopharmacology Volume 126 ; 126 >
+    au < manifest ; 1996 ; Psychopharmacology Volume 127 ; 127 >
+    au < manifest ; 1996 ; Psychopharmacology Volume 128 ; 128 >
+    au < manifest ; 1997 ; Psychopharmacology Volume 129 ; 129 >
+    au < manifest ; 1997 ; Psychopharmacology Volume 130 ; 130 >
+    au < manifest ; 1997 ; Psychopharmacology Volume 131 ; 131 >
+    au < manifest ; 1997 ; Psychopharmacology Volume 132 ; 132 >
+    au < manifest ; 1997 ; Psychopharmacology Volume 133 ; 133 >
+    au < manifest ; 1997 ; Psychopharmacology Volume 134 ; 134 >
+    au < manifest ; 1998 ; Psychopharmacology Volume 135 ; 135 >
+    au < manifest ; 1998 ; Psychopharmacology Volume 136 ; 136 >
+    au < manifest ; 1998 ; Psychopharmacology Volume 137 ; 137 >
+    au < manifest ; 1998 ; Psychopharmacology Volume 138 ; 138 >
+    au < manifest ; 1998 ; Psychopharmacology Volume 139 ; 139 >
+    au < manifest ; 1998 ; Psychopharmacology Volume 140 ; 140 >
+    au < manifest ; 1999 ; Psychopharmacology Volume 141 ; 141 >
+    au < manifest ; 1999 ; Psychopharmacology Volume 142 ; 142 >
+    au < manifest ; 1999 ; Psychopharmacology Volume 143 ; 143 >
+    au < manifest ; 1999 ; Psychopharmacology Volume 144 ; 144 >
+    au < manifest ; 1999 ; Psychopharmacology Volume 145 ; 145 >
+    au < manifest ; 1999 ; Psychopharmacology Volume 146 ; 146 >
+    au < manifest ; 1999 ; Psychopharmacology Volume 147 ; 147 >
+    au < manifest ; 2000 ; Psychopharmacology Volume 148 ; 148 >
+    au < manifest ; 2000 ; Psychopharmacology Volume 149 ; 149 >
+    au < manifest ; 2000 ; Psychopharmacology Volume 150 ; 150 >
+    au < manifest ; 2000 ; Psychopharmacology Volume 151 ; 151 >
+    au < manifest ; 2000 ; Psychopharmacology Volume 152 ; 152 >
+    au < manifest ; 2000 ; Psychopharmacology Volume 153 ; 153 >
+    au < manifest ; 2001 ; Psychopharmacology Volume 154 ; 154 >
+    au < manifest ; 2001 ; Psychopharmacology Volume 155 ; 155 >
+    au < manifest ; 2001 ; Psychopharmacology Volume 156 ; 156 >
+    au < manifest ; 2001 ; Psychopharmacology Volume 157 ; 157 >
+    au < manifest ; 2001 ; Psychopharmacology Volume 158 ; 158 >
+    au < manifest ; 2001 ; Psychopharmacology Volume 159 ; 159 >
+    au < manifest ; 2002 ; Psychopharmacology Volume 160 ; 160 >
+    au < manifest ; 2002 ; Psychopharmacology Volume 161 ; 161 >
+    au < manifest ; 2002 ; Psychopharmacology Volume 162 ; 162 >
+    au < manifest ; 2002 ; Psychopharmacology Volume 163 ; 163 >
+    au < manifest ; 2002 ; Psychopharmacology Volume 164 ; 164 >
+    au < manifest ; 2002 ; Psychopharmacology Volume 165 ; 165 >
+    au < manifest ; 2003 ; Psychopharmacology Volume 166 ; 166 >
+    au < manifest ; 2003 ; Psychopharmacology Volume 167 ; 167 >
+    au < manifest ; 2003 ; Psychopharmacology Volume 168 ; 168 >
+    au < manifest ; 2003 ; Psychopharmacology Volume 169 ; 169 >
+    au < manifest ; 2003 ; Psychopharmacology Volume 170 ; 170 >
+    au < manifest ; 2003 ; Psychopharmacology Volume 171 ; 171 >
+    au < manifest ; 2004 ; Psychopharmacology Volume 172 ; 172 >
+    au < manifest ; 2004 ; Psychopharmacology Volume 173 ; 173 >
+    au < manifest ; 2004 ; Psychopharmacology Volume 174 ; 174 >
+    au < manifest ; 2004 ; Psychopharmacology Volume 175 ; 175 >
+    au < manifest ; 2004 ; Psychopharmacology Volume 176 ; 176 >
+    au < manifest ; 2004 ; Psychopharmacology Volume 177 ; 177 >
+    au < manifest ; 2005 ; Psychopharmacology Volume 178 ; 178 >
+    au < manifest ; 2005 ; Psychopharmacology Volume 179 ; 179 >
+    au < manifest ; 2005 ; Psychopharmacology Volume 180 ; 180 >
+    au < manifest ; 2005 ; Psychopharmacology Volume 181 ; 181 >
+    au < manifest ; 2005 ; Psychopharmacology Volume 182 ; 182 >
+    au < manifest ; 2005 ; Psychopharmacology Volume 183 ; 183 >
+    au < manifest ; 2006 ; Psychopharmacology Volume 184 ; 184 >
+    au < manifest ; 2006 ; Psychopharmacology Volume 185 ; 185 >
+    au < manifest ; 2006 ; Psychopharmacology Volume 186 ; 186 >
+    au < manifest ; 2006 ; Psychopharmacology Volume 187 ; 187 >
+    au < manifest ; 2006 ; Psychopharmacology Volume 188 ; 188 >
+    au < manifest ; 2006 ; Psychopharmacology Volume 189 ; 189 >
+    au < manifest ; 2007 ; Psychopharmacology Volume 190 ; 190 >
+    au < manifest ; 2007 ; Psychopharmacology Volume 191 ; 191 >
+    au < manifest ; 2007 ; Psychopharmacology Volume 192 ; 192 >
+    au < manifest ; 2007 ; Psychopharmacology Volume 193 ; 193 >
+    au < manifest ; 2007 ; Psychopharmacology Volume 194 ; 194 >
+    au < manifest ; 2007 ; Psychopharmacology Volume 195 ; 195 >
+    au < manifest ; 2008 ; Psychopharmacology Volume 196 ; 196 >
+    au < manifest ; 2008 ; Psychopharmacology Volume 197 ; 197 >
+    au < manifest ; 2008 ; Psychopharmacology Volume 198 ; 198 >
+    au < manifest ; 2008 ; Psychopharmacology Volume 199 ; 199 >
+    au < manifest ; 2008 ; Psychopharmacology Volume 200 ; 200 >
+    au < testing ; 2008 ; Psychopharmacology Volume 201 ; 201 >
+    au < testing ; 2009 ; Psychopharmacology Volume 202 ; 202 >
+    au < testing ; 2009 ; Psychopharmacology Volume 203 ; 203 >
+    au < testing ; 2009 ; Psychopharmacology Volume 204 ; 204 >
+    au < testing ; 2009 ; Psychopharmacology Volume 205 ; 205 >
+    au < testing ; 2009 ; Psychopharmacology Volume 206 ; 206 >
+    au < testing ; 2009 ; Psychopharmacology Volume 207 ; 207 >
+    au < testing ; 2010 ; Psychopharmacology Volume 208 ; 208 >
+    au < testing ; 2010 ; Psychopharmacology Volume 209 ; 209 >
+    au < testing ; 2010 ; Psychopharmacology Volume 210 ; 210 >
+    au < testing ; 2010 ; Psychopharmacology Volume 211 ; 211 >
+    au < testing ; 2010 ; Psychopharmacology Volume 212 ; 212 >
 
   }
 
