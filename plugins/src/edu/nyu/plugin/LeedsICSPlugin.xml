@@ -8,8 +8,12 @@
     <long>6000</long>
   </entry>
   <entry>
+    <string>plugin_version</string>
+    <string>2</string>
+  </entry>
+  <entry>
     <string>au_name</string>
-    <string>&quot;Leeds International Classical Studies %d&quot;, year</string>
+    <string>&quot;Leeds International Classical Studies Plugin, Base URL %s, Year %d, Volume %s&quot;, base_url, year, volume_str</string>
   </entry>
   <entry>
     <string>au_def_new_content_crawl</string>
@@ -17,19 +21,26 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Leeds International Classical Studies</string>
+    <string>Leeds International Classical Studies Plugin</string>
   </entry>
   <entry>
     <string>au_crawlrules</string>
     <list>
-      <string>4,&quot;^%s&quot;, base_url</string>
-      <string>1,&quot;%s/lockss-%d\.html&quot;, base_url, year</string>
-      <string>1,&quot;%s/%s/%s[0-9]+\.pdf&quot;, base_url, volume_str, volume_str</string>
+      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,&quot;^%s/volumes\.html$&quot;, base_url</string>
+      <string>1,&quot;^%s/lockss-2002\.html$&quot;, base_url</string>
+      <string>1,&quot;^%s/%s/&quot;, base_url, volume_str</string>
+      <string>1,&quot;^%s/discussion/%d&quot;, base_url, year</string>
     </list>
   </entry>
   <entry>
     <string>au_start_url</string>
-    <string>&quot;%s/lockss-%d.html&quot;, base_url, year</string>
+    <string>&quot;%s/volumes.html&quot;, base_url</string>
+  </entry>
+  <entry>
+    <string>au_manifest</string>
+    <string>&quot;%s/lockss-2002.html&quot;, base_url</string>
   </entry>
   <entry>
     <string>plugin_config_props</string>

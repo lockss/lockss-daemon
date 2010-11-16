@@ -17,16 +17,16 @@
     comment[base_url] = The plugin is written such that the base URL has no trailing slash
     param[base_url] = http://www.leeds.ac.uk/classics/lics
 
-    implicit < status ; name ; param[year] ; param[volume_str] >
+    implicit < status ; year ; name ; param[year] ; param[volume_str] >
   
-    au < released ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
-    au < released ; Leeds International Classical Studies 2003 ; 2003 ; 2003 >
-    au < released ; Leeds International Classical Studies 2004 ; 2004 ; 200304 >
-    au < manifest ; Leeds International Classical Studies 2005 ; 2005 ; 2005 >
-    au < manifest ; Leeds International Classical Studies 2006 ; 2006 ; 2006 >
-    au < manifest ; Leeds International Classical Studies 2007 ; 2007 ; 2007 >
-    au < manifest ; Leeds International Classical Studies 2008 ; 2008 ; 2008 >
-    au < manifest ; Leeds International Classical Studies 2009 ; 2009 ; 2009 >
+    au < released ; 2002 ; Leeds International Classical Studies 2002 ; 2002 ; 2002 >
+    au < released ; 2003 ; Leeds International Classical Studies 2003 ; 2003 ; 2003 >
+    au < released ; 2003-2004 ; Leeds International Classical Studies 2003-2004 ; 2004 ; 200304 >
+    au < ready ; 2005 ; Leeds International Classical Studies 2005 ; 2005 ; 2005 >
+    au < ready ; 2006 ; Leeds International Classical Studies 2006 ; 2006 ; 2006 >
+    au < ready ; 2007 ; Leeds International Classical Studies 2007 ; 2007 ; 2007 >
+    au < ready ; 2008 ; Leeds International Classical Studies 2008 ; 2008 ; 2008 >
+    au < ready ; 2009 ; Leeds International Classical Studies 2009 ; 2009 ; 2009 >
   
   }
   

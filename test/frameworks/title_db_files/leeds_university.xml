@@ -48,9 +48,10 @@
  
  <property name="org.lockss.title">
 
-  <property name="LeedsInternationalClassicalStudies2002">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies2002">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
+   <property name="issn" value="1477-3643" />
    <property name="title" value="Leeds International Classical Studies 2002" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
@@ -65,12 +66,14 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2002" />
    </property>
+   <property name="attributes.year" value="2002" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="LeedsInternationalClassicalStudies2003">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies2003">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
+   <property name="issn" value="1477-3643" />
    <property name="title" value="Leeds International Classical Studies 2003" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
@@ -85,13 +88,15 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2003" />
    </property>
+   <property name="attributes.year" value="2003" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="LeedsInternationalClassicalStudies2004">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies20032004">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
-   <property name="title" value="Leeds International Classical Studies 2004" />
+   <property name="issn" value="1477-3643" />
+   <property name="title" value="Leeds International Classical Studies 2003-2004" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
     <property name="key" value="base_url" />
@@ -105,12 +110,14 @@
     <property name="key" value="volume_str" />
     <property name="value" value="200304" />
    </property>
+   <property name="attributes.year" value="2003-2004" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="LeedsInternationalClassicalStudies2005">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies2005">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
+   <property name="issn" value="1477-3643" />
    <property name="title" value="Leeds International Classical Studies 2005" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
@@ -125,12 +132,14 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2005" />
    </property>
+   <property name="attributes.year" value="2005" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="LeedsInternationalClassicalStudies2006">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies2006">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
+   <property name="issn" value="1477-3643" />
    <property name="title" value="Leeds International Classical Studies 2006" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
@@ -145,12 +154,14 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2006" />
    </property>
+   <property name="attributes.year" value="2006" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="LeedsInternationalClassicalStudies2007">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies2007">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
+   <property name="issn" value="1477-3643" />
    <property name="title" value="Leeds International Classical Studies 2007" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
@@ -165,12 +176,14 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2007" />
    </property>
+   <property name="attributes.year" value="2007" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="LeedsInternationalClassicalStudies2008">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies2008">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
+   <property name="issn" value="1477-3643" />
    <property name="title" value="Leeds International Classical Studies 2008" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
@@ -185,12 +198,14 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2008" />
    </property>
+   <property name="attributes.year" value="2008" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
-  <property name="LeedsInternationalClassicalStudies2009">
+  <property name="LeedsICSPluginLeedsInternationalClassicalStudies2009">
    <property name="attributes.publisher" value="Leeds University" />
    <property name="journalTitle" value="Leeds International Classical Studies" />
+   <property name="issn" value="1477-3643" />
    <property name="title" value="Leeds International Classical Studies 2009" />
    <property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
    <property name="param.1">
@@ -205,6 +220,7 @@
     <property name="key" value="volume_str" />
     <property name="value" value="2009" />
    </property>
+   <property name="attributes.year" value="2009" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
