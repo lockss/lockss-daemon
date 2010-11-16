@@ -15,7 +15,7 @@
     plugin = org.lockss.plugin.emls.EmlsPlugin
     implicit < status ; year ; name ; param[base_url] ; param[volume] ; nondefparam[issues] >
     
-    comment[special_issues] = ""
+    comment[special_issues] = "Some special issues also have the volume name in the URL and don't require inclusion in the nondefparam. -- bhayes"
     au < ready ; 1995 ; Early Modern Literary Studies Volume 1 ; http://extra.shu.ac.uk/emls/ ; 1 ; >
     au < ready ; 1996 ; Early Modern Literary Studies Volume 2 ; http://extra.shu.ac.uk/emls/ ; 2 ; >
     au < ready ; 1997-1998 ; Early Modern Literary Studies Volume 3 ; http://extra.shu.ac.uk/emls/ ; 3 ; si-01,si-02 >
