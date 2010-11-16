@@ -4952,6 +4952,7 @@
 
     param[journal_issn] = 1567-8822
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2001 ; Cardiovascular Engineering Volume 1 ; 1 >
     au < testing ; 2002 ; Cardiovascular Engineering Volume 2 ; 2 >
@@ -7839,6 +7840,7 @@
 
     param[journal_issn] = 2100-0719
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2009 ; Diabetologia Notes de lecture Volume 1 ; 1 >
     au < testing ; 2010 ; Diabetologia Notes de lecture Volume 2 ; 2 >
@@ -15644,6 +15646,7 @@
 
     param[journal_issn] = 1864-0753
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2007 ; Journal of Business Market Management Volume 1 ; 1 >
     au < testing ; 2008 ; Journal of Business Market Management Volume 2 ; 2 >
@@ -19980,6 +19983,7 @@
 
     param[journal_issn] = 0940-7936
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2008 ; Kidney Volume 17 ; 17 >
     au < testing ; 2009 ; Kidney Volume 18 ; 18 >
@@ -23333,6 +23337,7 @@
 
     param[journal_issn] = 1866-5861
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2008 ; Onkopipeline Volume 1 ; 1 >
     au < testing ; 2009 ; Onkopipeline Volume 2 ; 2 >
@@ -24764,6 +24769,7 @@
 
     param[journal_issn] = 0032-3470
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
     au < testing ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
@@ -25451,6 +25457,7 @@
 
     param[journal_issn] = 0943-1950
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2004 ; Psychotherapie Forum Volume 12 ; 12 >
     au < testing ; 2005 ; Psychotherapie Forum Volume 13 ; 13 >
@@ -26132,6 +26139,7 @@
 
     param[journal_issn] = 1570-7075
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2003 ; Research on Language & Computation Volume 1 ; 1 >
     au < testing ; 2004 ; Research on Language & Computation Volume 2 ; 2 >
@@ -29223,6 +29231,7 @@
 
     param[journal_issn] = 0165-0874
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 1990 ; Tijdschrift voor GezondheidsRecht Volume 14 ; 14 >
     au < testing ; 1991 ; Tijdschrift voor GezondheidsRecht Volume 15 ; 15 >
@@ -30673,6 +30682,7 @@
 
     param[journal_issn] = 1865-4789
     comment[wanted] = True
+    attr[where] = content4a
 
     au < testing ; 2008 ; Zeitschrift für Politikberatung Volume 1 ; 1 >
     au < testing ; 2009 ; Zeitschrift für Politikberatung Volume 2 ; 2 >
