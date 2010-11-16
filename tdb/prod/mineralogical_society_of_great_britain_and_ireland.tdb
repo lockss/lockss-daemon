@@ -24,17 +24,17 @@
     param[journal_id] = cm
     param[journal_issn] = 0009-8558
  
-    au < testing ; 1998 ; Clay Minerals Volume 33 ; 33 >
-    au < testing ; 1999 ; Clay Minerals Volume 34 ; 34 >
-    au < testing ; 2000 ; Clay Minerals Volume 35 ; 35 >
-    au < testing ; 2001 ; Clay Minerals Volume 36 ; 36 >
-    au < testing ; 2002 ; Clay Minerals Volume 37 ; 37 >
-    au < testing ; 2003 ; Clay Minerals Volume 38 ; 38 >
-    au < testing ; 2004 ; Clay Minerals Volume 39 ; 39 >
-    au < testing ; 2005 ; Clay Minerals Volume 40 ; 40 >
-    au < testing ; 2006 ; Clay Minerals Volume 41 ; 41 >
-    au < testing ; 2007 ; Clay Minerals Volume 42 ; 42 >
-    au < testing ; 2008 ; Clay Minerals Volume 43 ; 43 >
+    au < ready ; 1998 ; Clay Minerals Volume 33 ; 33 >
+    au < ready ; 1999 ; Clay Minerals Volume 34 ; 34 >
+    au < ready ; 2000 ; Clay Minerals Volume 35 ; 35 >
+    au < ready ; 2001 ; Clay Minerals Volume 36 ; 36 >
+    au < ready ; 2002 ; Clay Minerals Volume 37 ; 37 >
+    au < ready ; 2003 ; Clay Minerals Volume 38 ; 38 >
+    au < ready ; 2004 ; Clay Minerals Volume 39 ; 39 >
+    au < ready ; 2005 ; Clay Minerals Volume 40 ; 40 >
+    au < ready ; 2006 ; Clay Minerals Volume 41 ; 41 >
+    au < ready ; 2007 ; Clay Minerals Volume 42 ; 42 >
+    au < ready ; 2008 ; Clay Minerals Volume 43 ; 43 >
     au < ready ; 2009 ; Clay Minerals Volume 44 ; 44 >
     au < ready ; 2010 ; Clay Minerals Volume 45 ; 45 >
     
@@ -62,7 +62,7 @@
     au < manifest ; 2007 ; Mineralogical Magazine 71 ; 71 >
     au < manifest ; 2008 ; Mineralogical Magazine 72 ; 72 >
     au < manifest ; 2009 ; Mineralogical Magazine 73 ; 73 >
-    au < manifest ; 2010 ; Mineralogical Magazine 74 ; 74 >
+    au < testing ; 2010 ; Mineralogical Magazine 74 ; 74 >
   }
 
 }
