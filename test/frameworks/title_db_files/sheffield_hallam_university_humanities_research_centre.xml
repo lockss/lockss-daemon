@@ -98,6 +98,10 @@
     <property name="key" value="volume" />
     <property name="value" value="3" />
    </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="si-01,si-02" />
+   </property>
    <property name="attributes.year" value="1997-1998" />
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -169,6 +173,10 @@
    <property name="param.2">
     <property name="key" value="volume" />
     <property name="value" value="7" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="si-07,si-09" />
    </property>
    <property name="attributes.year" value="2001-2002" />
    <property name="attributes.rights" value="openaccess" />
@@ -250,6 +258,10 @@
     <property name="key" value="volume" />
     <property name="value" value="10" />
    </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="si-14" />
+   </property>
    <property name="attributes.year" value="2004-2005" />
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -304,6 +316,10 @@
     <property name="key" value="volume" />
     <property name="value" value="13" />
    </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="si-15,si-16" />
+   </property>
    <property name="attributes.year" value="2007-2008" />
    <property name="attributes.rights" value="openaccess" />
   </property>
@@ -323,6 +339,28 @@
     <property name="value" value="14" />
    </property>
    <property name="attributes.year" value="2008-2009" />
+   <property name="attributes.rights" value="openaccess" />
+  </property>
+
+  <property name="EmlsPluginEarlyModernLiteraryStudies15">
+   <property name="attributes.publisher" value="Sheffield Hallam University Humanities Research Centre" />
+   <property name="journalTitle" value="Early Modern Literary Studies" />
+   <property name="issn" value="1201-2459" />
+   <property name="title" value="Early Modern Literary Studies Volume 15" />
+   <property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
+   <property name="param.1">
+    <property name="key" value="base_url" />
+    <property name="value" value="http://extra.shu.ac.uk/emls/" />
+   </property>
+   <property name="param.2">
+    <property name="key" value="volume" />
+    <property name="value" value="15" />
+   </property>
+   <property name="param.3">
+    <property name="key" value="issues" />
+    <property name="value" value="si-19" />
+   </property>
+   <property name="attributes.year" value="2009-2010" />
    <property name="attributes.rights" value="openaccess" />
   </property>
 
