@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = Yorkshire Geological Society
+  >
+
+  {
+  
+    title <
+      name = Proceedings of the Yorkshire Geological Society ;
+      issn = 0044-0604 ;
+      eissn = 2041-4811
+    >
+    
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://egsp.lyellcollection.org/
+    implicit < status ; year ; name ; param[volume_name] >
+    
+    comment[1] = volume 1 does not have a manifest page
+    comment[ellipsis] = fill in the rest between volume 2 and nowadays
+    
+    au < manifest ; 1842 ; Proceedings of the Yorkshire Geological Society Volume 2 ; 2 >
+    au < manifest ; 2010 ; Proceedings of the Yorkshire Geological Society Volume 58 ; 58 >
+    
+  }
+  
+}
