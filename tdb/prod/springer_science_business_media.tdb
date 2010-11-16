@@ -15478,10 +15478,54 @@
     title <
       name = Journal of Bioenergetics and Biomembranes ;
       issn = 0145-479X ;
-      placeholder = True
+      eissn = 1573-6881
     >
 
     param[journal_issn] = 0145-479X
+    attr[where] = content5a
+
+    au < ready ; 1970 ; Journal of Bioenergetics and Biomembranes Volume 1 ; 1 >
+    au < ready ; 1971 ; Journal of Bioenergetics and Biomembranes Volume 2 ; 2 >
+    au < ready ; 1972 ; Journal of Bioenergetics and Biomembranes Volume 3 ; 3 >
+    au < ready ; 1973 ; Journal of Bioenergetics and Biomembranes Volume 4 ; 4 >
+    au < ready ; 1973 ; Journal of Bioenergetics and Biomembranes Volume 5 ; 5 >
+    au < ready ; 1974-1975 ; Journal of Bioenergetics and Biomembranes Volume 6 ; 6 >
+    au < ready ; 1975 ; Journal of Bioenergetics and Biomembranes Volume 7 ; 7 >
+    au < ready ; 1976 ; Journal of Bioenergetics and Biomembranes Volume 8 ; 8 >
+    au < ready ; 1977 ; Journal of Bioenergetics and Biomembranes Volume 9 ; 9 >
+    au < ready ; 1978 ; Journal of Bioenergetics and Biomembranes Volume 10 ; 10 >
+    au < ready ; 1979 ; Journal of Bioenergetics and Biomembranes Volume 11 ; 11 >
+    au < ready ; 1980 ; Journal of Bioenergetics and Biomembranes Volume 12 ; 12 >
+    au < ready ; 1981 ; Journal of Bioenergetics and Biomembranes Volume 13 ; 13 >
+    au < ready ; 1982 ; Journal of Bioenergetics and Biomembranes Volume 14 ; 14 >
+    au < ready ; 1983 ; Journal of Bioenergetics and Biomembranes Volume 15 ; 15 >
+    au < ready ; 1984 ; Journal of Bioenergetics and Biomembranes Volume 16 ; 16 >
+    au < ready ; 1985 ; Journal of Bioenergetics and Biomembranes Volume 17 ; 17 >
+    au < ready ; 1986 ; Journal of Bioenergetics and Biomembranes Volume 18 ; 18 >
+    au < ready ; 1987 ; Journal of Bioenergetics and Biomembranes Volume 19 ; 19 >
+    au < ready ; 1988 ; Journal of Bioenergetics and Biomembranes Volume 20 ; 20 >
+    au < ready ; 1989 ; Journal of Bioenergetics and Biomembranes Volume 21 ; 21 >
+    au < ready ; 1990 ; Journal of Bioenergetics and Biomembranes Volume 22 ; 22 >
+    au < ready ; 1991 ; Journal of Bioenergetics and Biomembranes Volume 23 ; 23 >
+    au < ready ; 1992 ; Journal of Bioenergetics and Biomembranes Volume 24 ; 24 >
+    au < ready ; 1993 ; Journal of Bioenergetics and Biomembranes Volume 25 ; 25 >
+    au < ready ; 1994 ; Journal of Bioenergetics and Biomembranes Volume 26 ; 26 >
+    au < ready ; 1995 ; Journal of Bioenergetics and Biomembranes Volume 27 ; 27 >
+    au < ready ; 1996 ; Journal of Bioenergetics and Biomembranes Volume 28 ; 28 >
+    au < ready ; 1997 ; Journal of Bioenergetics and Biomembranes Volume 29 ; 29 >
+    au < ready ; 1998 ; Journal of Bioenergetics and Biomembranes Volume 30 ; 30 >
+    au < ready ; 1999 ; Journal of Bioenergetics and Biomembranes Volume 31 ; 31 >
+    au < ready ; 2000 ; Journal of Bioenergetics and Biomembranes Volume 32 ; 32 >
+    au < ready ; 2001 ; Journal of Bioenergetics and Biomembranes Volume 33 ; 33 >
+    au < ready ; 2002 ; Journal of Bioenergetics and Biomembranes Volume 34 ; 34 >
+    au < ready ; 2003 ; Journal of Bioenergetics and Biomembranes Volume 35 ; 35 >
+    au < ready ; 2004 ; Journal of Bioenergetics and Biomembranes Volume 36 ; 36 >
+    au < ready ; 2005 ; Journal of Bioenergetics and Biomembranes Volume 37 ; 37 >
+    au < ready ; 2006 ; Journal of Bioenergetics and Biomembranes Volume 38 ; 38 >
+    au < ready ; 2007 ; Journal of Bioenergetics and Biomembranes Volume 39 ; 39 >
+    au < ready ; 2008 ; Journal of Bioenergetics and Biomembranes Volume 40 ; 40 >
+    au < ready ; 2009 ; Journal of Bioenergetics and Biomembranes Volume 41 ; 41 >
+    au < ready ; 2010 ; Journal of Bioenergetics and Biomembranes Volume 42 ; 42 >
 
   }
 
@@ -24606,10 +24650,86 @@
     title <
       name = Plant Molecular Biology ;
       issn = 0167-4412 ;
-      placeholder = True
+      eissn = 1573-5028
     >
 
     param[journal_issn] = 0167-4412
+    attr[where] = content5b
+
+    au < manifest ; 1981-1982 ; Plant Molecular Biology Volume 1 ; 1 >
+    au < manifest ; 1983 ; Plant Molecular Biology Volume 2 ; 2 >
+    au < manifest ; 1984 ; Plant Molecular Biology Volume 3 ; 3 >
+    au < manifest ; 1985 ; Plant Molecular Biology Volume 4 ; 4 >
+    au < manifest ; 1985 ; Plant Molecular Biology Volume 5 ; 5 >
+    au < manifest ; 1986 ; Plant Molecular Biology Volume 6 ; 6 >
+    au < manifest ; 1986 ; Plant Molecular Biology Volume 7 ; 7 >
+    au < manifest ; 1987 ; Plant Molecular Biology Volume 8 ; 8 >
+    au < manifest ; 1987 ; Plant Molecular Biology Volume 9 ; 9 >
+    au < manifest ; 1987-1988 ; Plant Molecular Biology Volume 10 ; 10 >
+    au < manifest ; 1988 ; Plant Molecular Biology Volume 11 ; 11 >
+    au < manifest ; 1989 ; Plant Molecular Biology Volume 12 ; 12 >
+    au < manifest ; 1989 ; Plant Molecular Biology Volume 13 ; 13 >
+    au < manifest ; 1990 ; Plant Molecular Biology Volume 14 ; 14 >
+    au < manifest ; 1990 ; Plant Molecular Biology Volume 15 ; 15 >
+    au < manifest ; 1991 ; Plant Molecular Biology Volume 16 ; 16 >
+    au < manifest ; 1991 ; Plant Molecular Biology Volume 17 ; 17 >
+    au < manifest ; 1992 ; Plant Molecular Biology Volume 18 ; 18 >
+    au < manifest ; 1992 ; Plant Molecular Biology Volume 19 ; 19 >
+    au < manifest ; 1992 ; Plant Molecular Biology Volume 20 ; 20 >
+    au < manifest ; 1993 ; Plant Molecular Biology Volume 21 ; 21 >
+    au < manifest ; 1993 ; Plant Molecular Biology Volume 22 ; 22 >
+    au < manifest ; 1993 ; Plant Molecular Biology Volume 23 ; 23 >
+    au < manifest ; 1994 ; Plant Molecular Biology Volume 24 ; 24 >
+    au < manifest ; 1994 ; Plant Molecular Biology Volume 25 ; 25 >
+    au < manifest ; 1994 ; Plant Molecular Biology Volume 26 ; 26 >
+    au < manifest ; 1995 ; Plant Molecular Biology Volume 27 ; 27 >
+    au < manifest ; 1995 ; Plant Molecular Biology Volume 28 ; 28 >
+    au < manifest ; 1995 ; Plant Molecular Biology Volume 29 ; 29 >
+    au < manifest ; 1996 ; Plant Molecular Biology Volume 30 ; 30 >
+    au < manifest ; 1996 ; Plant Molecular Biology Volume 31 ; 31 >
+    au < manifest ; 1996 ; Plant Molecular Biology Volume 32 ; 32 >
+    au < manifest ; 1997 ; Plant Molecular Biology Volume 33 ; 33 >
+    au < manifest ; 1997 ; Plant Molecular Biology Volume 34 ; 34 >
+    au < manifest ; 1997 ; Plant Molecular Biology Volume 35 ; 35 >
+    au < manifest ; 1998 ; Plant Molecular Biology Volume 36 ; 36 >
+    au < manifest ; 1998 ; Plant Molecular Biology Volume 37 ; 37 >
+    au < manifest ; 1998 ; Plant Molecular Biology Volume 38 ; 38 >
+    au < manifest ; 1999 ; Plant Molecular Biology Volume 39 ; 39 >
+    au < testing ; 1999 ; Plant Molecular Biology Volume 40 ; 40 >
+    au < testing ; 1999 ; Plant Molecular Biology Volume 41 ; 41 >
+    au < testing ; 2000 ; Plant Molecular Biology Volume 42 ; 42 >
+    au < testing ; 2000 ; Plant Molecular Biology Volume 43 ; 43 >
+    au < testing ; 2000 ; Plant Molecular Biology Volume 44 ; 44 >
+    au < testing ; 2001 ; Plant Molecular Biology Volume 45 ; 45 >
+    au < testing ; 2001 ; Plant Molecular Biology Volume 46 ; 46 >
+    au < testing ; 2001 ; Plant Molecular Biology Volume 47 ; 47 >
+    au < testing ; 2002 ; Plant Molecular Biology Volume 48 ; 48 >
+    au < testing ; 2002 ; Plant Molecular Biology Volume 49 ; 49 >
+    au < testing ; 2002 ; Plant Molecular Biology Volume 50 ; 50 >
+    au < testing ; 2003 ; Plant Molecular Biology Volume 51 ; 51 >
+    au < testing ; 2003 ; Plant Molecular Biology Volume 52 ; 52 >
+    au < testing ; 2003 ; Plant Molecular Biology Volume 53 ; 53 >
+    au < testing ; 2004 ; Plant Molecular Biology Volume 54 ; 54 >
+    au < testing ; 2004 ; Plant Molecular Biology Volume 55 ; 55 >
+    au < testing ; 2004 ; Plant Molecular Biology Volume 56 ; 56 >
+    au < testing ; 2005 ; Plant Molecular Biology Volume 57 ; 57 >
+    au < testing ; 2005 ; Plant Molecular Biology Volume 58 ; 58 >
+    au < testing ; 2005 ; Plant Molecular Biology Volume 59 ; 59 >
+    au < testing ; 2006 ; Plant Molecular Biology Volume 60 ; 60 >
+    au < testing ; 2006 ; Plant Molecular Biology Volume 61 ; 61 >
+    au < testing ; 2006 ; Plant Molecular Biology Volume 62 ; 62 >
+    au < testing ; 2007 ; Plant Molecular Biology Volume 63 ; 63 >
+    au < testing ; 2007 ; Plant Molecular Biology Volume 64 ; 64 >
+    au < testing ; 2007 ; Plant Molecular Biology Volume 65 ; 65 >
+    au < testing ; 2008 ; Plant Molecular Biology Volume 66 ; 66 >
+    au < testing ; 2008 ; Plant Molecular Biology Volume 67 ; 67 >
+    au < testing ; 2008 ; Plant Molecular Biology Volume 68 ; 68 >
+    au < testing ; 2009 ; Plant Molecular Biology Volume 69 ; 69 >
+    au < testing ; 2009 ; Plant Molecular Biology Volume 70 ; 70 >
+    au < testing ; 2009 ; Plant Molecular Biology Volume 71 ; 71 >
+    au < testing ; 2010 ; Plant Molecular Biology Volume 72 ; 72 >
+    au < testing ; 2010 ; Plant Molecular Biology Volume 73 ; 73 >
+    au < testing ; 2010 ; Plant Molecular Biology Volume 74 ; 74 >
 
   }
 
@@ -28190,7 +28310,6 @@
     >
 
     param[journal_issn] = 0038-6308
-    attr[where] = content5b
 
     au < ready ; 1962-1963 ; Space Science Reviews Volume 1 ; 1 >
     au < ready ; 1963 ; Space Science Reviews Volume 2 ; 2 >
@@ -28271,80 +28390,80 @@
     au < ready ; 1996 ; Space Science Reviews Volume 77 ; 77 >
     au < ready ; 1996 ; Space Science Reviews Volume 78 ; 78 >
     au < ready ; 1997 ; Space Science Reviews Volume 79 ; 79 >
-    au < testing ; 1997 ; Space Science Reviews Volume 80 ; 80 >
-    au < testing ; 1997 ; Space Science Reviews Volume 81 ; 81 >
-    au < testing ; 1997 ; Space Science Reviews Volume 82 ; 82 >
-    au < testing ; 1998 ; Space Science Reviews Volume 83 ; 83 >
-    au < testing ; 1998 ; Space Science Reviews Volume 84 ; 84 >
-    au < testing ; 1998 ; Space Science Reviews Volume 85 ; 85 >
-    au < testing ; 1998 ; Space Science Reviews Volume 86 ; 86 >
-    au < testing ; 1999 ; Space Science Reviews Volume 87 ; 87 >
-    au < testing ; 1999 ; Space Science Reviews Volume 88 ; 88 >
-    au < testing ; 1999 ; Space Science Reviews Volume 89 ; 89 >
-    au < testing ; 1999 ; Space Science Reviews Volume 90 ; 90 >
-    au < testing ; 2000 ; Space Science Reviews Volume 91 ; 91 >
-    au < testing ; 2000 ; Space Science Reviews Volume 92 ; 92 >
-    au < testing ; 2000 ; Space Science Reviews Volume 93 ; 93 >
-    au < testing ; 2000 ; Space Science Reviews Volume 94 ; 94 >
-    au < testing ; 2001 ; Space Science Reviews Volume 95 ; 95 >
-    au < testing ; 2001 ; Space Science Reviews Volume 96 ; 96 >
-    au < testing ; 2001 ; Space Science Reviews Volume 97 ; 97 >
-    au < testing ; 2001 ; Space Science Reviews Volume 98 ; 98 >
-    au < testing ; 2001 ; Space Science Reviews Volume 99 ; 99 >
-    au < testing ; 2002 ; Space Science Reviews Volume 100 ; 100 >
-    au < testing ; 2002 ; Space Science Reviews Volume 101 ; 101 >
-    au < testing ; 2002 ; Space Science Reviews Volume 102 ; 102 >
-    au < testing ; 2002 ; Space Science Reviews Volume 103 ; 103 >
-    au < testing ; 2002 ; Space Science Reviews Volume 104 ; 104 >
-    au < testing ; 2003 ; Space Science Reviews Volume 105 ; 105 >
-    au < testing ; 2003 ; Space Science Reviews Volume 106 ; 106 >
-    au < testing ; 2003 ; Space Science Reviews Volume 107 ; 107 >
-    au < testing ; 2003 ; Space Science Reviews Volume 108 ; 108 >
-    au < testing ; 2003 ; Space Science Reviews Volume 109 ; 109 >
-    au < testing ; 2004 ; Space Science Reviews Volume 110 ; 110 >
-    au < testing ; 2004 ; Space Science Reviews Volume 111 ; 111 >
-    au < testing ; 2004 ; Space Science Reviews Volume 112 ; 112 >
-    au < testing ; 2004 ; Space Science Reviews Volume 113 ; 113 >
-    au < testing ; 2004 ; Space Science Reviews Volume 114 ; 114 >
-    au < testing ; 2004 ; Space Science Reviews Volume 115 ; 115 >
-    au < testing ; 2005 ; Space Science Reviews Volume 116 ; 116 >
-    au < testing ; 2005 ; Space Science Reviews Volume 117 ; 117 >
-    au < testing ; 2005 ; Space Science Reviews Volume 118 ; 118 >
-    au < testing ; 2005 ; Space Science Reviews Volume 119 ; 119 >
-    au < testing ; 2005 ; Space Science Reviews Volume 120 ; 120 >
-    au < testing ; 2005 ; Space Science Reviews Volume 121 ; 121 >
-    au < testing ; 2006 ; Space Science Reviews Volume 122 ; 122 >
-    au < testing ; 2006 ; Space Science Reviews Volume 123 ; 123 >
-    au < testing ; 2006 ; Space Science Reviews Volume 124 ; 124 >
-    au < testing ; 2006 ; Space Science Reviews Volume 125 ; 125 >
-    au < testing ; 2006 ; Space Science Reviews Volume 126 ; 126 >
-    au < testing ; 2006 ; Space Science Reviews Volume 127 ; 127 >
-    au < testing ; 2007 ; Space Science Reviews Volume 128 ; 128 >
-    au < testing ; 2007 ; Space Science Reviews Volume 129 ; 129 >
-    au < testing ; 2007 ; Space Science Reviews Volume 130 ; 130 >
-    au < testing ; 2007 ; Space Science Reviews Volume 131 ; 131 >
-    au < testing ; 2007 ; Space Science Reviews Volume 132 ; 132 >
-    au < testing ; 2007 ; Space Science Reviews Volume 133 ; 133 >
-    au < testing ; 2008 ; Space Science Reviews Volume 134 ; 134 >
-    au < testing ; 2008 ; Space Science Reviews Volume 135 ; 135 >
-    au < testing ; 2008 ; Space Science Reviews Volume 136 ; 136 >
-    au < testing ; 2008 ; Space Science Reviews Volume 137 ; 137 >
-    au < testing ; 2008 ; Space Science Reviews Volume 138 ; 138 >
-    au < testing ; 2008 ; Space Science Reviews Volume 139 ; 139 >
-    au < testing ; 2008 ; Space Science Reviews Volume 140 ; 140 >
-    au < testing ; 2008 ; Space Science Reviews Volume 141 ; 141 >
-    au < testing ; 2009 ; Space Science Reviews Volume 142 ; 142 >
-    au < testing ; 2009 ; Space Science Reviews Volume 143 ; 143 >
-    au < testing ; 2009 ; Space Science Reviews Volume 144 ; 144 >
-    au < testing ; 2009 ; Space Science Reviews Volume 145 ; 145 >
-    au < testing ; 2009 ; Space Science Reviews Volume 146 ; 146 >
-    au < testing ; 2009 ; Space Science Reviews Volume 147 ; 147 >
-    au < testing ; 2009 ; Space Science Reviews Volume 148 ; 148 >
-    au < testing ; 2009 ; Space Science Reviews Volume 149 ; 149 >
-    au < testing ; 2010 ; Space Science Reviews Volume 150 ; 150 >
-    au < testing ; 2010 ; Space Science Reviews Volume 151 ; 151 >
-    au < testing ; 2010 ; Space Science Reviews Volume 152 ; 152 >
-    au < testing ; 2010 ; Space Science Reviews Volume 153 ; 153 >
+    au < ready ; 1997 ; Space Science Reviews Volume 80 ; 80 >
+    au < ready ; 1997 ; Space Science Reviews Volume 81 ; 81 >
+    au < ready ; 1997 ; Space Science Reviews Volume 82 ; 82 >
+    au < ready ; 1998 ; Space Science Reviews Volume 83 ; 83 >
+    au < ready ; 1998 ; Space Science Reviews Volume 84 ; 84 >
+    au < ready ; 1998 ; Space Science Reviews Volume 85 ; 85 >
+    au < ready ; 1998 ; Space Science Reviews Volume 86 ; 86 >
+    au < ready ; 1999 ; Space Science Reviews Volume 87 ; 87 >
+    au < ready ; 1999 ; Space Science Reviews Volume 88 ; 88 >
+    au < ready ; 1999 ; Space Science Reviews Volume 89 ; 89 >
+    au < ready ; 1999 ; Space Science Reviews Volume 90 ; 90 >
+    au < ready ; 2000 ; Space Science Reviews Volume 91 ; 91 >
+    au < ready ; 2000 ; Space Science Reviews Volume 92 ; 92 >
+    au < ready ; 2000 ; Space Science Reviews Volume 93 ; 93 >
+    au < ready ; 2000 ; Space Science Reviews Volume 94 ; 94 >
+    au < ready ; 2001 ; Space Science Reviews Volume 95 ; 95 >
+    au < ready ; 2001 ; Space Science Reviews Volume 96 ; 96 >
+    au < ready ; 2001 ; Space Science Reviews Volume 97 ; 97 >
+    au < ready ; 2001 ; Space Science Reviews Volume 98 ; 98 >
+    au < ready ; 2001 ; Space Science Reviews Volume 99 ; 99 >
+    au < ready ; 2002 ; Space Science Reviews Volume 100 ; 100 >
+    au < ready ; 2002 ; Space Science Reviews Volume 101 ; 101 >
+    au < ready ; 2002 ; Space Science Reviews Volume 102 ; 102 >
+    au < ready ; 2002 ; Space Science Reviews Volume 103 ; 103 >
+    au < ready ; 2002 ; Space Science Reviews Volume 104 ; 104 >
+    au < ready ; 2003 ; Space Science Reviews Volume 105 ; 105 >
+    au < ready ; 2003 ; Space Science Reviews Volume 106 ; 106 >
+    au < ready ; 2003 ; Space Science Reviews Volume 107 ; 107 >
+    au < ready ; 2003 ; Space Science Reviews Volume 108 ; 108 >
+    au < ready ; 2003 ; Space Science Reviews Volume 109 ; 109 >
+    au < ready ; 2004 ; Space Science Reviews Volume 110 ; 110 >
+    au < ready ; 2004 ; Space Science Reviews Volume 111 ; 111 >
+    au < ready ; 2004 ; Space Science Reviews Volume 112 ; 112 >
+    au < ready ; 2004 ; Space Science Reviews Volume 113 ; 113 >
+    au < ready ; 2004 ; Space Science Reviews Volume 114 ; 114 >
+    au < ready ; 2004 ; Space Science Reviews Volume 115 ; 115 >
+    au < ready ; 2005 ; Space Science Reviews Volume 116 ; 116 >
+    au < ready ; 2005 ; Space Science Reviews Volume 117 ; 117 >
+    au < ready ; 2005 ; Space Science Reviews Volume 118 ; 118 >
+    au < ready ; 2005 ; Space Science Reviews Volume 119 ; 119 >
+    au < ready ; 2005 ; Space Science Reviews Volume 120 ; 120 >
+    au < ready ; 2005 ; Space Science Reviews Volume 121 ; 121 >
+    au < ready ; 2006 ; Space Science Reviews Volume 122 ; 122 >
+    au < ready ; 2006 ; Space Science Reviews Volume 123 ; 123 >
+    au < ready ; 2006 ; Space Science Reviews Volume 124 ; 124 >
+    au < ready ; 2006 ; Space Science Reviews Volume 125 ; 125 >
+    au < ready ; 2006 ; Space Science Reviews Volume 126 ; 126 >
+    au < ready ; 2006 ; Space Science Reviews Volume 127 ; 127 >
+    au < ready ; 2007 ; Space Science Reviews Volume 128 ; 128 >
+    au < ready ; 2007 ; Space Science Reviews Volume 129 ; 129 >
+    au < ready ; 2007 ; Space Science Reviews Volume 130 ; 130 >
+    au < ready ; 2007 ; Space Science Reviews Volume 131 ; 131 >
+    au < ready ; 2007 ; Space Science Reviews Volume 132 ; 132 >
+    au < ready ; 2007 ; Space Science Reviews Volume 133 ; 133 >
+    au < ready ; 2008 ; Space Science Reviews Volume 134 ; 134 >
+    au < ready ; 2008 ; Space Science Reviews Volume 135 ; 135 >
+    au < ready ; 2008 ; Space Science Reviews Volume 136 ; 136 >
+    au < ready ; 2008 ; Space Science Reviews Volume 137 ; 137 >
+    au < ready ; 2008 ; Space Science Reviews Volume 138 ; 138 >
+    au < ready ; 2008 ; Space Science Reviews Volume 139 ; 139 >
+    au < ready ; 2008 ; Space Science Reviews Volume 140 ; 140 >
+    au < ready ; 2008 ; Space Science Reviews Volume 141 ; 141 >
+    au < ready ; 2009 ; Space Science Reviews Volume 142 ; 142 >
+    au < ready ; 2009 ; Space Science Reviews Volume 143 ; 143 >
+    au < ready ; 2009 ; Space Science Reviews Volume 144 ; 144 >
+    au < ready ; 2009 ; Space Science Reviews Volume 145 ; 145 >
+    au < ready ; 2009 ; Space Science Reviews Volume 146 ; 146 >
+    au < ready ; 2009 ; Space Science Reviews Volume 147 ; 147 >
+    au < ready ; 2009 ; Space Science Reviews Volume 148 ; 148 >
+    au < ready ; 2009 ; Space Science Reviews Volume 149 ; 149 >
+    au < ready ; 2010 ; Space Science Reviews Volume 150 ; 150 >
+    au < ready ; 2010 ; Space Science Reviews Volume 151 ; 151 >
+    au < ready ; 2010 ; Space Science Reviews Volume 152 ; 152 >
+    au < ready ; 2010 ; Space Science Reviews Volume 153 ; 153 >
 
   }
 
