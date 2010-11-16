@@ -1675,10 +1675,27 @@
     title <
       name = Apoptosis ;
       issn = 1360-8185 ;
-      placeholder = True
+      eissn = 1573-675X
     >
 
     param[journal_issn] = 1360-8185
+    attr[where] = content2b
+
+    au < testing ; 1996 ; Apoptosis Volume 1 ; 1 >
+    au < testing ; 1997 ; Apoptosis Volume 2 ; 2 >
+    au < testing ; 1998 ; Apoptosis Volume 3 ; 3 >
+    au < testing ; 1999 ; Apoptosis Volume 4 ; 4 >
+    au < testing ; 2000 ; Apoptosis Volume 5 ; 5 >
+    au < testing ; 2001 ; Apoptosis Volume 6 ; 6 >
+    au < testing ; 2002 ; Apoptosis Volume 7 ; 7 >
+    au < testing ; 2003 ; Apoptosis Volume 8 ; 8 >
+    au < testing ; 2004 ; Apoptosis Volume 9 ; 9 >
+    au < testing ; 2005 ; Apoptosis Volume 10 ; 10 >
+    au < testing ; 2006 ; Apoptosis Volume 11 ; 11 >
+    au < testing ; 2007 ; Apoptosis Volume 12 ; 12 >
+    au < testing ; 2008 ; Apoptosis Volume 13 ; 13 >
+    au < testing ; 2009 ; Apoptosis Volume 14 ; 14 >
+    au < testing ; 2010 ; Apoptosis Volume 15 ; 15 >
 
   }
 
