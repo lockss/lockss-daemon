@@ -1,5 +1,5 @@
 /*
- * $Id: ClayMineralsSocietyPdfTransform.java,v 1.1 2010-09-01 21:14:46 pgust Exp $
+ * $Id: ClayMineralsSocietyPdfTransform.java,v 1.2 2010-11-16 19:51:29 pgust Exp $
  */ 
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.ingenta;
 import java.io.*;
 
 import org.lockss.filter.pdf.*;
+import org.lockss.filter.pdf.PageTransformUtil.ExtractStringsToOutputStream;
 import org.lockss.util.*;
 
 /**
@@ -50,7 +51,21 @@ public class ClayMineralsSocietyPdfTransform implements OutputDocumentTransform 
                            OutputStream outputStream) {
     
     try {
+      if ("RealPage PDF Generator 2.0".equals(pdfDocument.getCreator())) {
+        IngentaPdfFilterFactory.logger.debug2("RealPage");
+        
+        // Extract all text
+        return new TransformEachPage(new ExtractStringsToOutputStream(outputStream)).transform(pdfDocument);
+      }
+      else if ("iText 2.0.7 (by lowagie.com)".equals(pdfDocument.getProducer())) {
+        IngentaPdfFilterFactory.logger.debug2("iText");
         return IngentaPdfUtil.simpleTransform(pdfDocument, outputStream);
+      }
+      else {
+        IngentaPdfFilterFactory.logger.debug2("None");
+        pdfDocument.save(outputStream);
+        return true;
+      }
     }
     catch (IOException ioe) {
       IngentaPdfFilterFactory.logger.debug2("IOException in ClayMineralsSocietyPdfTransform", ioe);
