@@ -1,5 +1,5 @@
 /*
- * $Id: BioMedCentralHtmlFilterFactory.java,v 1.3 2009-04-07 20:29:41 thib_gc Exp $
+ * $Id: BioMedCentralHtmlFilterFactory.java,v 1.4 2010-11-17 19:59:27 thib_gc Exp $
  */
 
 /*
@@ -34,9 +34,8 @@ package org.lockss.plugin.bmc;
 
 import java.io.InputStream;
 
-import org.htmlparser.filters.TagNameFilter;
-import org.htmlparser.filters.AndFilter;
-import org.htmlparser.filters.HasAttributeFilter;
+import org.htmlparser.NodeFilter;
+import org.htmlparser.filters.*;
 import org.lockss.daemon.PluginException;
 import org.lockss.filter.html.*;
 import org.lockss.plugin.*;
@@ -47,32 +46,32 @@ public class BioMedCentralHtmlFilterFactory implements FilterFactory {
                                                InputStream in,
                                                String encoding)
       throws PluginException {
-    HtmlTransform[] transforms = new HtmlTransform[] {
-        // Filter out <script>...</script>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("script")),
-        // Filter out <noscript>...</noscript>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("noscript")),
-        // Filter out <iframe>...</iframe>
-        HtmlNodeFilterTransform.exclude(new TagNameFilter("iframe")),
-        // Filter out <a name="...">...</a>
-        HtmlNodeFilterTransform.exclude(new AndFilter(new TagNameFilter("a"),
-                                                      new HasAttributeFilter("name"))),
-        // Filter out <td class="topad">...</td>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
-                                                                         "class",
-                                                                         "topad")),
-        // Filter out <td class="topnav">...</td>
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttribute("td",
-                                                                         "class",
-                                                                         "topnav")),
-        // Filter out <a href="...">...</a> where the href value matches '^#'
-        HtmlNodeFilterTransform.exclude(HtmlNodeFilters.tagWithAttributeRegex("a",
-                                                                              "href",
-                                                                              "^#")),
+    NodeFilter[] filters = new NodeFilter[] {
+        // Contains variable code
+        new TagNameFilter("script"),
+        // Contains variable alternatives to the code
+        new TagNameFilter("noscript"),
+        // Contains ads
+        new TagNameFilter("iframe"),
+        // Contains ads
+        new TagNameFilter("object"),
+        // Contains one-time names inside the page
+        HtmlNodeFilters.tagWithAttribute("a", "name"),
+        // Links to one-time names inside the page
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^#"),
+        // Contains the institution name; once a 'class', now an 'id'
+        HtmlNodeFilters.tagWithAttribute("td", "class", "topnav"),
+        HtmlNodeFilters.tagWithAttribute("td", "id", "topnav"),
+        // Contains advertising
+        HtmlNodeFilters.tagWithAttribute("td", "class", "topad"),
+        // Contains advertising
+        HtmlNodeFilters.tagWithAttribute("div", "id", "newad"),
+        // Contains copyright year; also now references Springer 
+        HtmlNodeFilters.tagWithAttribute("table", "class", "footer2t"),
+        // Institution-dependent link resolvers
+        HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/sfx_links\\.asp"),
     };
-    return new HtmlFilterInputStream(in,
-                                     encoding,
-                                     new HtmlCompoundTransform(transforms));
+    return new HtmlFilterInputStream(in, encoding, HtmlNodeFilterTransform.exclude(new OrFilter(filters)));
   }
 
 }
