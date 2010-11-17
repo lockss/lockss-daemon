@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.7 2010-10-02 00:13:09 thib_gc Exp $
+# $Id: tdbxml.py,v 1.8 2010-11-17 17:58:17 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -82,7 +82,7 @@ def __preamble(tdb, options):
     print '''\
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE lockss-config [
-<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT lockss-config (if|property)*>
 <!ELEMENT property (property|list|value|if)*>
 <!ELEMENT list (value)+>
 <!ELEMENT value (#PCDATA)>
@@ -221,7 +221,7 @@ def __process(tdb, options):
         'inner': '\'' if current_pub.name().find('\'') < 0 else '"' }
         __process_au(au, options)
     else:
-        if options.style == TdbxmlConstants.OPTION_STYLE_PUBLISHER: print '''\
+        if options.style == TdbxmlConstants.OPTION_STYLE_PUBLISHER and current_pub is not None: print '''\
  </property>
 '''             
     if options.style == TdbxmlConstants.OPTION_STYLE_LEGACY:
