@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.80 2010-08-14 22:26:25 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.81 2010-11-17 11:28:13 neilmayo Exp $
  */
 
 /*
@@ -181,6 +181,15 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals(2, StringUtil.countOccurences("xxxxxy", "xx"));
   }
 
+  public void testGetTextBetween() {
+      // Check first match is found
+      assertEquals(" and ", StringUtil.getTextBetween("here and there", "here", "there"));
+      // Remember to use match text as specific as possible
+      assertEquals("Journal", StringUtil.getTextBetween("The <b>journal</b> has this name: <b>Journal</b>", "name: <b>", "</b>"));
+      // Check non-greediness
+      assertEquals("two", StringUtil.getTextBetween("One two three, One five three", "One ", " three"));
+  }
+  
   public void testReplaceStringNonExistingSubstring(){
     String testStr = "blahTestblah";
     // if no substitutions are made, original string should be returned

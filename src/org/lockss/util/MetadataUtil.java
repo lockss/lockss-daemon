@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.1 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: MetadataUtil.java,v 1.2 2010-11-17 11:28:13 neilmayo Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class MetadataUtil {
   /**
    * Check that DOI number is a valid DOI string. 
    * @param doi the DOI string
-   * @return true of DOI is a valid string, false otherwise
+   * @return true if DOI is a valid string, false otherwise
    */
   public static boolean isDOI(String doi) {    
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlUtil.java,v 1.5 2008-08-17 08:49:03 tlipkis Exp $
+ * $Id: HtmlUtil.java,v 1.6 2010-11-17 11:28:13 neilmayo Exp $
  */
 
 /*
@@ -142,6 +142,48 @@ public class HtmlUtil {
     return sb.toString();
   }
 
+  /** Pattern and substitution for HTML tag stripping. */
+  private static Substitution emptySubstitution = new StringSubstitution("");
+  private static Pattern htmlTagPattern = RegexpUtil.uncheckedCompile("<[^>]*>", Perl5Compiler.READ_ONLY_MASK);
+  
+  /**
+   * Strip out all the HTML tags from a line of text. If the input String is null, 
+   * return null straight back. The method works by substituting an empty string
+   * for any substring matching the htmlTagPattern.
+   * 
+   * @s the String to be processed
+   * @return a String with HTML tags removed, and outer whitespace trimmed
+   * @author Neil Mayo
+   */
+  public static String stripHtmlTags(String s) {
+      if (s==null) return null;
+      Perl5Matcher matcher = RegexpUtil.getMatcher();
+      String res = Util.substitute(matcher, htmlTagPattern, emptySubstitution, s, Util.SUBSTITUTE_ALL);
+      return res.trim();
+  }
+
+  /**
+   * Strip out all opening and closing HTML tags of the given name from a line of text, along with their content.
+   * If the input String is null, return null straight back. The method works by substituting an empty string
+   * for any substring matching &lt;tagName&gt;text and other tags&lt;/tagName&gt;. Note that the 
+   * pattern match is non-greedy, so text inbetween multiple open/close tag instances will survive. 
+   * Note this method does not look for empty and implicitly closed tags like &lt;tagName/&gt;.
+   * However it does allow opening tags to have attributes. 
+   * 
+   * @s the String to be processed
+   * @param tagName the name of the tag to be removed
+   * @return a String with the given HTML tags and their content removed, and outer whitespace trimmed
+   * @author Neil Mayo
+   */
+  public static String stripHtmlTagsWithTheirContent(String s, String tagName) {
+      if (s==null) return null;
+      Perl5Matcher matcher = RegexpUtil.getMatcher();
+      Pattern pattern = RegexpUtil.uncheckedCompile("<"+tagName+"[^>]*>.*?</"+tagName+">");
+      String res = Util.substitute(matcher, pattern, emptySubstitution, s, Util.SUBSTITUTE_ALL);
+      return res.trim();
+  }
+
+  
   private static Pattern metaRedirectUrlPat =
     RegexpUtil.uncheckedCompile(".*\\burl\\b\\s*=\\s*(.*)$",
 				(Perl5Compiler.CASE_INSENSITIVE_MASK +

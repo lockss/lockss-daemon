@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.4 2010-07-01 19:10:11 pgust Exp $
+ * $Id: ArticleMetadata.java,v 1.5 2010-11-17 11:28:12 neilmayo Exp $
  */
 
 /*
@@ -395,7 +395,7 @@ public class ArticleMetadata extends Properties {
   }
 
   /*
-   * Return the ISSN, if any.
+   * Return the ISBN, if any.
    */
   public static final String KEY_ISBN = "LOCKSS.isbn";
   public String getISBN() {
