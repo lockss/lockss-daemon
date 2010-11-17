@@ -1,5 +1,5 @@
 /*
- * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.7 2010-02-23 20:52:27 greya Exp $
+ * $Id: HindawiPublishingCorporationHtmlFilterFactory.java,v 1.8 2010-11-17 20:10:33 thib_gc Exp $
  */
 
 /*
@@ -52,10 +52,12 @@ public class HindawiPublishingCorporationHtmlFilterFactory implements FilterFact
         NodeFilter[] filters = new NodeFilter[] {
         // Filter out <div id="left_column">...</div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "left_column"),
-        // Filter out <input type="hidden" name="__VIEWSTATE" id="VIEWSTATE" 
+        // ASP cookies; once without '__', now with  
         HtmlNodeFilters.tagWithAttribute("input", "id", "VIEWSTATE"),
-        // Filter out <input type="hidden" name="__EVENTVALIDATION" id="EVENTVALIDATION"
+        HtmlNodeFilters.tagWithAttribute("input", "id", "__VIEWSTATE"),
+        // ASP cookies; once without '__', now with  
         HtmlNodeFilters.tagWithAttribute("input", "id", "EVENTVALIDATION"),
+        HtmlNodeFilters.tagWithAttribute("input", "id", "__EVENTVALIDATION"),
     };
 
 
