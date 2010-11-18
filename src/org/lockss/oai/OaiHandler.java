@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.14 2007-03-26 20:48:54 troberts Exp $
+ * $Id: OaiHandler.java,v 1.15 2010-11-18 07:15:07 tlipkis Exp $
  */
 
 /*
@@ -211,7 +211,34 @@ public class OaiHandler {
       NodeList metadataNodeList =
 	listRecords.getDocument().getElementsByTagName("metadata");
 
-      OaiMetadataHandler metadataHandler = new Oai_dcHandler();
+      String metadataPrefix = oaiData.getMetadataPrefix();
+      String oai_namespace  = oaiData.getMetadataNamespaceUrl();
+      String oai_tagname  = oaiData.getUrlContainerTagName();
+
+      // "Oai_dcHandler" has the DC format and "identifier" tag 
+      // hard-coded. Commented out, replaced with more generic 
+      // constructor call creating a new handler with the parameters
+      // supplied in the OaiRequestData object. -- L.A.
+
+//       OaiMetadataHandler metadataHandler = new Oai_dcHandler();
+
+      OaiMetadataHandler metadataHandler = null; 
+
+      // see if the oaiData object has its own metadataHandler 
+      // already (an extended metadata handler object could be
+      // defined by the plugin) -- L.A. 
+
+      metadataHandler = oaiData.getMetadataHandler();
+ 
+      // if not, we'll create a new one: -- L.A. 
+
+      if (metadataHandler == null ) {
+	  metadataHandler = new BaseOaiMetadataHandler ( 
+							metadataPrefix,
+							oai_namespace,
+							oai_tagname
+							); 
+      }
 
       //apart from collecting urls, more actions might be done in the
       //metadata handler w.r.t. different metadata

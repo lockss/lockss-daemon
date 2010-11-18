@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.18 2009-08-03 04:32:38 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.19 2010-11-18 07:15:07 tlipkis Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class TestOaiCrawler extends LockssTestCase {
     //System.out.println("last Crawl time = " + lastCrawlTime);
     String expected = iso8601DateFormatter.format(lastCrawlDate);
 
-    spec = new OaiCrawlSpec(handlerUrl, crawlRule);
+    spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, false);
     crawler = new OaiCrawler(mau, spec, aus);
     assertEquals(expected, ((OaiCrawler)crawler).getFromTime());
   }

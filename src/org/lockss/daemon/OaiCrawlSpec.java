@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.9 2005-10-20 21:46:34 troberts Exp $
+ * $Id: OaiCrawlSpec.java,v 1.10 2010-11-18 07:15:07 tlipkis Exp $
  */
 
 /*
@@ -44,15 +44,6 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 
   private boolean followLink;
   private OaiRequestData oaiRequestData;
-
-  //XXXOAI for testing purposes ------------------------
-  public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule) {
-    this(new OaiRequestData(oaiRequestHandlerUrl, "", new Oai_dcHandler()),
-	 ListUtil.list("http://171.66.236.27:8181/html/permission.html"),
-	 null,
- 	 rule,
- 	 false, null);
-  }
 
 //   public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule) {
 //     this(new OaiRequestData(oaiRequestHandlerUrl,
