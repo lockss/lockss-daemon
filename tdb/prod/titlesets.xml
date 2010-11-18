@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lockss-config [
+<!ELEMENT lockss-config (if|property)+>
+<!ELEMENT property (property|list|value|if)*>
+<!ELEMENT list (value)+>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT test EMPTY>
+<!ELEMENT and (and|or|not|test)*>
+<!ELEMENT or (and|or|not|test)*>
+<!ELEMENT not (and|or|not|test)*>
+<!ELEMENT if (and|or|not|then|else|test|property)*>
+<!ELEMENT then (if|property)*>
+<!ELEMENT else (if|property)*>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST test hostname CDATA #IMPLIED>
+<!ATTLIST test group CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST test daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST test daemonVersion CDATA #IMPLIED>
+<!ATTLIST test platformVersionMin CDATA #IMPLIED>
+<!ATTLIST test platformVersionMax CDATA #IMPLIED>
+<!ATTLIST test platformVersion CDATA #IMPLIED>
+<!ATTLIST test platformName CDATA #IMPLIED>
+<!ATTLIST if hostname CDATA #IMPLIED>
+<!ATTLIST if group CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMin CDATA #IMPLIED>
+<!ATTLIST if daemonVersionMax CDATA #IMPLIED>
+<!ATTLIST if daemonVersion CDATA #IMPLIED>
+<!ATTLIST if platformVersionMin CDATA #IMPLIED>
+<!ATTLIST if platformVersionMax CDATA #IMPLIED>
+<!ATTLIST if platformVersion CDATA #IMPLIED>
+<!ATTLIST if platformName CDATA #IMPLIED>
+<!ATTLIST list append CDATA #IMPLIED>
+]>
+
+<lockss-config>
+  <property name="org.lockss">
+
+    <!-- Title Sets -->
+    <property name="titleSet">
+      <property name="alltitles">
+	<property name="class" value="alltitles" />
+      </property>
+      <property name="activeaus">
+	<property name="class" value="activeaus" />
+      </property>
+      <property name="inactiveaus">
+	<property name="class" value="inactiveaus" />
+      </property>
+      <property name="attrtitleset">
+	<property name="name" value="Cool or Red Titles " />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/color='red' or attributes/temp='cool']" />
+      </property>
+      <property name="projmuse">
+	<property name="name" value="All Project Muse Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.projmuse.ProjectMusePlugin']" />
+      </property>
+      <property name="bmc">
+	<property name="name" value="All BioMed Central Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='BioMed Central']" />
+      </property>
+      <property name="bioone">
+	<property name="name" value="All BioOne Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.bioone.BioOnePlugin']" />
+      </property>
+      <property name="Berkeley Electronic Press">
+	<property name="name" value="All Berkeley Electronic Press Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='Berkeley Electronic Press']" />
+      </property>
+      <property name="ams">
+	<property name="name" value="All AMS Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.ams.AMSPlugin']" />
+      </property>
+      <property name="annualreviews">
+	<property name="name" value="All Annual Reviews Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='uk.org.lockss.plugin.annualreviews.AnnualReviewsPlugin']" />
+      </property>
+      <property name="iop">
+	<property name="name" value="All IOP Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.iop.IOPPlugin']" />
+      </property>
+      <property name="iop">
+        <property name="name" value="All IOP Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[pluginName='org.lockss.plugin.iop.IOPPlugin']" />
+      </property>
+      <property name="sage">
+        <property name="name" value="All SAGE Publications Titles" />
+        <property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='sage' or attributes/publisher='SAGE Publications']" />
+      </property>
+
+      <property name="oup">
+        <property name="name" value="All Oxford University Press Titles" />
+        <property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/publisher='Oxford University Press']" />
+      </property>
+
+      <property name="ucpress">
+        <property name="name" value="All University Of California Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='University of California Press']" />
+      </property>
+
+      <property name="uchicgopress">
+        <property name="name" value="All University of Chicago Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='University of Chicago Press']" />
+      </property>
+
+
+
+      <property name="AlphaMed Press">
+        <property name="name" value="All AlphaMed Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='AlphaMed Press']" />
+      </property>
+
+      <property name="American Academy of Pediatrics">
+        <property name="name" value="All American Academy of Pediatrics Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Academy of Pediatrics']" />
+      </property>
+
+      <property name="American Anthropological Association">
+        <property name="name" value="All American Anthropological Association Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Anthropological Association']" />
+      </property>
+
+      <property name="American Association for Clinical Chemistry">
+        <property name="name" value="All American Association for Clinical Chemistry Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Association for Clinical Chemistry']" />
+      </property>
+
+      <property name="American Association for the Advancement of Science">
+        <property name="name" value="All American Association for the Advancement of Science Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Association for the Advancement of Science']" />      </property>
+
+      <property name="American Association of Immunologists">
+        <property name="name" value="All American Association of Immunologists Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Association of Immunologists']" />
+      </property>
+
+      <property name="American Dental Association">
+        <property name="name" value="All American Dental Association Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Dental Association']" />
+      </property>
+
+      <property name="American Heart Association">
+        <property name="name" value="All American Heart Association Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Heart Association']" />
+      </property>
+
+      <property name="American Institute of Ultrasound in Medicine">
+        <property name="name" value="All American Institute of Ultrasound in Medicine Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Institute of Ultrasound in Medicine']" />
+      </property>
+
+      <property name="American Medical Association">
+        <property name="name" value="All American Medical Association Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Medical Association']" />
+      </property>
+
+      <property name="American Physiological Society">
+        <property name="name" value="All American Physiological Society Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Physiological Society']" />
+      </property>
+
+      <property name="American Psychiatric Publishing">
+        <property name="name" value="All American Psychiatric Publishing Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Psychiatric Publishing']" />
+      </property>
+
+      <property name="American Public Health Association">
+        <property name="name" value="All American Public Health Association Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Public Health Association']" />
+      </property>
+
+      <property name="American Society for Biochemistry and Molecular Biology">
+        <property name="name" value="All American Society for Biochemistry and Molecular Biology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society for Biochemistry and Molecular Biology']" />
+      </property>
+
+      <property name="American Society for Cell Biology">
+        <property name="name" value="All American Society for Cell Biology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society for Cell Biology']" />
+      </property>
+
+      <property name="American Society for Clinical Investigation">
+        <property name="name" value="All American Society for Clinical Investigation Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society for Clinical Investigation']" />
+      </property>
+
+      <property name="American Society for Nutrition">
+        <property name="name" value="All American Society for Nutrition Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society for Nutrition']" />
+      </property>
+
+      <property name="American Society for Investigative Pathology">
+        <property name="name" value="All American Society for Investigative Pathology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society for Investigative Pathology']" />
+      </property>
+
+      <property name="American Society for Microbiology">
+        <property name="name" value="All American Society for Microbiology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society for Microbiology']" />
+      </property>
+
+      <property name="American Society for Pharmacology and Experimental Therapeutics">
+        <property name="name" value="All American Society for Pharmacology and Experimental Therapeutics Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society for Pharmacology and Experimental Therapeutics']" />
+      </property>
+
+      <property name="ASA-CSSA-SSSA">
+        <property name="name" value="All American Society of Agronomy - Crop Science Society of America - Soil Science Society of America Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='ASA-CSSA-SSSA']" />
+      </property>
+
+      <property name="American Society of Animal Science">
+        <property name="name" value="All American Society of Animal Science Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society of Animal Science']" />
+      </property>
+
+      <property name="American Society of Hematology">
+        <property name="name" value="All American Society of Hematology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society of Hematology']" />
+      </property>
+
+      <property name="American Society of Neuroradiology">
+        <property name="name" value="All American Society of Neuroradiology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society of Neuroradiology']" />
+      </property>
+
+      <property name="American Society of Plant Biologists">
+        <property name="name" value="All American Society of Plant Biologists Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society of Plant Biologists']" />
+      </property>
+
+      <property name="American Society of Tropical Medicine and Hygiene">
+        <property name="name" value="All American Society of Tropical Medicine and Hygiene Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Society of Tropical Medicine and Hygiene']" />
+      </property>
+
+      <property name="American Thoracic Society">
+        <property name="name" value="All American Thoracic Society Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='American Thoracic Society']" />
+      </property>
+
+      <property name="Association for Research in Vision and Ophthalmology">
+        <property name="name" value="All Association for Research in Vision and Ophthalmology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Association for Research in Vision and Ophthalmology']" />
+      </property>
+
+      <property name="Biophysical Society">
+        <property name="name" value="All Biophysical Society Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Biophysical Society']" />
+      </property>
+
+      <property name="Botanical Society of America">
+        <property name="name" value="All Botanical Society of America Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Botanical Society of America']" />
+      </property>
+
+      <property name="British Editorial Society of Bone and Joint Surgery">
+        <property name="name" value="All British Editorial Society of Bone and Joint Surgery Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='British Editorial Society of Bone and Joint Surgery']" />      </property>
+
+      <property name="British Medical Journal Publishing Group">
+        <property name="name" value="All British Medical Journal Publishing Group Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='British Medical Journal Publishing Group']" />
+      </property>
+
+      <property name="Canadian Medical Association">
+        <property name="name" value="All Canadian Medical Association Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Canadian Medical Association']" />
+      </property>
+
+      <property name="Cold Spring Harbor Laboratory Press">
+        <property name="name" value="All Cold Spring Harbor Laboratory Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Cold Spring Harbor Laboratory Press']" />
+      </property>
+
+      <property name="Company of Biologists">
+        <property name="name" value="All Company of Biologists Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Company of Biologists']" />
+      </property>
+
+      <property name="Duke University Press">
+        <property name="name" value="All Duke University Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Duke University Press']" />
+      </property>
+
+      <property name="Endocrine Society">
+        <property name="name" value="All Endocrine Society Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Endocrine Society']" />
+      </property>
+
+      <property name="Federation of American Societies for Experimental Biology">
+        <property name="name" value="All Federation of American Societies for Experimental Biology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Federation of American Societies for Experimental Biology']" />
+      </property>
+
+      <property name="Genetics Society of America">
+        <property name="name" value="All Genetics Society of America Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Genetics Society of America']" />
+      </property>
+
+      <property name="Hindawi Publishing Corporation">
+        <property name="name" value="All Hindawi Publishing Corporation Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Hindawi Publishing Corporation']" />
+      </property>
+
+      <property name="Histochemical Society">
+        <property name="name" value="All Histochemical Society Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Histochemical Society']" />
+      </property>
+
+      <property name="Marine Biological Laboratory">
+        <property name="name" value="All Marine Biological Laboratory Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Marine Biological Laboratory']" />
+      </property>
+
+      <property name="Massachusetts Medical Society">
+        <property name="name" value="All Massachusetts Medical Society Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Massachusetts Medical Society']" />
+      </property>
+
+      <property name="National Academy of Sciences">
+        <property name="name" value="All National Academy of Sciences Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='National Academy of Sciences']" />
+      </property>
+
+      <property name="New York Academy of Sciences">
+        <property name="name" value="All New York Academy of Sciences Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='New York Academy of Sciences']" />
+      </property>
+
+      <property name="Project HOPE - The People-to-People Health Foundation, Inc.">
+        <property name="name" value="All Project HOPE - The People-to-People Health Foundation, Inc. Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Project HOPE - The People-to-People Health Foundation, Inc.']" />
+      </property>
+
+      <property name="Radiological Society of North America">
+        <property name="name" value="All Radiological Society of North America Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Radiological Society of North America']" />
+      </property>
+
+      <property name="Rockefeller University Press">
+        <property name="name" value="All Rockefeller University Press Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Rockefeller University Press']" />
+      </property>
+
+      <property name="Royal College of Psychiatrists">
+        <property name="name" value="All Royal College of Psychiatrists Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Royal College of Psychiatrists']" />
+      </property>
+
+      <property name="Royal Society of Chemistry">
+        <property name="name" value="All Royal Society of Chemistry Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Royal Society of Chemistry']" />
+      </property>
+
+      <property name="Society for General Microbiology">
+        <property name="name" value="All Society for General Microbiology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Society for General Microbiology']" />
+      </property>
+
+      <property name="Society for Leukocyte Biology">
+        <property name="name" value="All Society for Leukocyte Biology Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Society for Leukocyte Biology']" />
+      </property>
+
+      <property name="Society for Neuroscience">
+        <property name="name" value="All Society for Neuroscience Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Society for Neuroscience']" />
+      </property>
+
+      <property name="Society for the Study of Reproduction">
+        <property name="name" value="All Society for the Study of Reproduction Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Society for the Study of Reproduction']" />
+      </property>
+
+      <property name="Mars Informatics">
+        <property name="name" value="All Mars Informatics Titles" />
+        <property name="class" value="xpath" />
+        <property name="xpath" value="[attributes/publisher='Mars Informatics']" />
+      </property>
+
+      <property name="highwire">
+	<property name="name" value="All HighWire Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.highwire.HighWirePlugin']" />
+      </property>
+
+      <property name="Emerald Group Publishing">
+	<property name="name" value="All Emerald Group Publishing Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.emerald.EmeraldPlugin']" />
+      </property>
+
+      <property name="locksscard">
+	<property name="name" value="LOCKSS Card" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.locksscard.LockssCardPlugin']" />
+      </property>
+
+          <property name="Alaska State Documents">
+            <property name="name" value="All Alaska State Government Documents" />
+            <property name="class" value="xpath" />
+            <property name="xpath" value="[pluginName='us.ak.state.library.plugin.AlaskaStateDocsPlugin']" />
+          </property>
+
+      <property name="gpo">
+	<property name="name" value="All GPO Pilot Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath"
+	  value="[
+	  pluginName='gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.humanities.HumanitiesPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.surveyofcurrentbusiness.SurveyOfCurrentBusinessPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.monthlyenergyreview.MonthlyEnergyReviewPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.monthlylaborreview.MonthlyLaborReviewPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.amberwaves.Amber_WavesPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.fbilawenforcementbulletin.FBI_Law_Enforcement_BulletinPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.environmentalhealthperspectives.Environmental_Health_PerspectivesPlugin'
+	  ]"
+	  />
+      </property>
+      <property name="ETD">
+	<property name="name" value="All ETD Pilot Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath"
+	  value="[
+	  pluginName='org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin'
+	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDPlugin'
+	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETD97And98Plugin'
+	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin'
+	  or pluginName='org.lockss.plugin.etd.fsuplugin.FSUETDPlugin'
+	  or pluginName='org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin'
+	  or pluginName='org.lockss.plugin.etd.gatechplugin.GATechETDPlugin'
+	  or pluginName='org.lockss.plugin.etd.ukyplugin.UKYETDPlugin'
+	  ]"
+	  />
+      </property>
+      <property name="free">
+        <property name="name" value="All Open Access Titles" />
+        <property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/rights='openaccess']" />
+      </property>
+<!--
+      <property name="2">
+	<property name="name" value="All &quot;Journals&quot;" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[RE:isMatchRe(displayName, 'Journal')]" />
+      </property> -->
+    </property>
+  </property>
+</lockss-config>
+
