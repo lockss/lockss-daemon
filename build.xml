@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.262 2010-10-02 22:39:46 tlipkis Exp $
+ $Id: build.xml,v 1.263 2010-11-18 07:13:28 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -144,6 +144,11 @@ Args:
   <property name="plugins.test.src"  value="${plugins.test}/src"/>
   <property name="plugins.test.classes" value="${plugins.test}/classes"/>
   <property name="plugins.test.results" value="${plugins.test}/results"/>
+
+  <!--  Tdb source and .xml output dirs -->
+  <property name="tdb.src.dir" value="${basedir}/tdb" />
+  <property name="tdb.xml.dir"
+	    value="${basedir}/test/frameworks/tdbxml" />
 
   <!--  Loadable plugin jars created here -->
   <property name="plugins.dir" value="${basedir}/plugins/jars" />
@@ -610,6 +615,7 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
     <delete dir="${javadoc}" quiet="true"/>
     <delete dir="${test.javadoc}" quiet="true"/>
     <delete dir="${plugins.dir}" quiet="true"/>
+    <delete dir="${tdb.xml.dir}" quiet="true"/>
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.plugins.jar}" quiet="true"/>
@@ -921,6 +927,67 @@ The target you have selected requires compiling under JDK 1.6.  Use the rant -1.
     <jar jarfile="${lockss.plugins.test.jar}" basedir="${plugins.test.classes}" >
        <include name="**/" />
     </jar>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="tdb-pln-all" depends="check.contrib"
+	  description="Process .tdb files for all PLNs into .xml">
+    <pathconvert pathsep=":" property="plnnames">
+      <dirset dir="${tdb.src.dir}" includes="*/" />
+      <map from="${tdb.src.dir}/" to=""/>
+    </pathconvert>
+
+    <echo message="PLNs: ${plnnames}" />
+
+    <for list="${plnnames}" delimiter=":" param="plnname">
+      <sequential>
+	<antcall target="tdb-pln">
+	  <param name="plnname" value="@{plnname}"/>
+	</antcall>
+
+      </sequential>
+    </for>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="tdb-pln" depends="compile-plugins,check.contrib"
+	  description="Process .tdb files for -Dplnname=PLN into .xml">
+    <fail unless="plnname">
+Must specify pln with -Dplnname=name
+    </fail>
+
+    <property name="indir" value="${tdb.src.dir}/${plnname}"/>
+    <property name="outdir" value="${tdb.xml.dir}/${plnname}"/>
+    <mkdir dir="${outdir}" />
+
+    <apply executable="scripts/tdb/tdbxml" dir="${basedir}"
+	   addsourcefile="false"
+	   dest="${outdir}"
+           failonerror="true"
+           failifexecutionfails="true"
+           resultproperty="tdb.result"
+           relative="true"
+           parallel="false">
+
+      <fileset dir="${indir}" includes="**/*.tdb"/>
+      <arg value="-C"/>
+      <mapper type="glob" from="*.tdb" to="*.xml"/>
+      <redirector>
+        <!-- redirect STDIN; fileset collects relative to its dir, but we
+             need relative to basedir -->
+        <inputmapper type="glob" from="*" to="${indir}/*"/>
+        <!-- redirect STDOUT to file in outdir -->
+        <outputmapper id="out" type="glob" from="*.tdb" to="${outdir}/*.xml"/>
+      </redirector>
+    </apply>
+
+    <!-- Copy any .xml files (e.g., titleset definitions) -->
+    <copy todir="${outdir}" >
+      <fileset dir="${indir}" >
+        <include name="*.xml"/>
+      </fileset>
+    </copy>
+
   </target>
 
   <!-- ==================================================================== -->
@@ -1343,7 +1410,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   </target>
 
   <!-- ==================================================================== -->
-  <target name="prepare-javadoc"
+  <target name="prepare-javadoc" depends="-load-build-info"
 	  description="Prepare the javadoc directory and
 		       set the javadoc.header property.">
     <mkdir dir="${javadoc}"/>
@@ -1405,7 +1472,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
   </target>
 
   <!-- ==================================================================== -->
-  <target name="param-docs" depends="jar-tools,prepare-javadoc"
+  <target name="param-docs" depends="jar-tools,prepare-javadoc,-load-build-info"
    description="Generate an HTML summary of LOCKSS configuration parameters.">
     <!-- Write the HTML param doc into the doc tree -->
     <javadoc sourcepath="${src}"
@@ -1413,9 +1480,12 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 	     failonerror="true"
 	     doclet="org.lockss.doclet.ParamDoclet"
 	     docletpathref="tools.run.classpath"
-	     additionalparam="-d ${javadoc} -o paramdoc.html"
 	     classpathref="tools.run.classpath"
-	     access="private"/>
+	     access="private">
+      <arg value="-d"/> <arg value="${javadoc}"/>
+      <arg value="-o"/> <arg value="paramdoc.html"/>
+      <arg value="-h"/> <arg value="${javadoc.header}"/>
+    </javadoc>
   </target>
 
   <target name="states.dot" depends="jar-tools"
@@ -1881,7 +1951,6 @@ Test results in ${test.results}
    description="Load xml config files to ensure well-formed" >
     <fileset id="xml.files.filesetid" dir="${basedir}">
       <include name="test/frameworks/*.xml"/>
-      <include name="test/frameworks/title_db_files/**/*.xml"/>
     </fileset>
     <!-- convert the list of files to a string -->
     <pathconvert refid="xml.files.filesetid"
@@ -1952,8 +2021,6 @@ Test results in ${test.results}
            parallel="true">
       <arg value="--noout"/>
       <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
-      <fileset dir="${basedir}"
-               includes="test/frameworks/title_db_files/**/*.xml"/>
       <fileset dir="${basedir}" includes="src/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/src/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/*/src/**/*.xml"/>
@@ -1974,6 +2041,12 @@ Test results in ${test.results}
   <target name="rebuild-all-with-tools"
           depends="rebuild-all,rebuild-tools"
 	  description="Clean, build, test daemon and tools">
+  </target>
+
+  <!-- ==================================================================== -->
+
+  <target name="btf" depends="jar-all,tdb-pln-all"
+	  description="Build everything necessary to run testing frameworks">
   </target>
 
   <!-- ==================================================================== -->
@@ -2081,6 +2154,7 @@ Test results in ${test.results}
 	    <include name="doclet/"/>
 	    <include name="tools/"/>
 	    <include name="scripts/"/>
+	    <include name="tdb/"/>
 	    <exclude name="**/classes/**"/>
 	  </fileset>
 	</copy>
@@ -2304,7 +2378,7 @@ optionally -Dtests= for tests to be run.
   <!-- Additional targets for search -->
 
   <target name="javah" depends="jar-lockss">
-    <javah class="org.lockss.search.JavaUUID"
+    <javah class="org.lockss.search."
            outputFile="${tools.src}/JavaUUID.h">
       <classpath refid="test.run.classpath"/>
     </javah>
