@@ -5184,7 +5184,6 @@
 
     param[journal_issn] = 1567-8822
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2001 ; Cardiovascular Engineering Volume 1 ; 1 >
     au < ready ; 2002 ; Cardiovascular Engineering Volume 2 ; 2 >
@@ -8072,7 +8071,6 @@
 
     param[journal_issn] = 2100-0719
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2009 ; Diabetologia Notes de lecture Volume 1 ; 1 >
     au < ready ; 2010 ; Diabetologia Notes de lecture Volume 2 ; 2 >
@@ -12082,20 +12080,20 @@
     comment[1] = persistent permission error
 
     au < notReady ; 1996-1997 ; Heart Failure Reviews Volume 1 ; 1 >
-    au < ready ; 1997 ; Heart Failure Reviews Volume 2 ; 2 >
-    au < ready ; 1998 ; Heart Failure Reviews Volume 3 ; 3 >
-    au < ready ; 1999 ; Heart Failure Reviews Volume 4 ; 4 >
-    au < ready ; 2000 ; Heart Failure Reviews Volume 5 ; 5 >
-    au < ready ; 2001 ; Heart Failure Reviews Volume 6 ; 6 >
-    au < ready ; 2002 ; Heart Failure Reviews Volume 7 ; 7 >
-    au < ready ; 2003 ; Heart Failure Reviews Volume 8 ; 8 >
-    au < ready ; 2004 ; Heart Failure Reviews Volume 9 ; 9 >
-    au < ready ; 2005 ; Heart Failure Reviews Volume 10 ; 10 >
-    au < ready ; 2006 ; Heart Failure Reviews Volume 11 ; 11 >
-    au < ready ; 2007 ; Heart Failure Reviews Volume 12 ; 12 >
-    au < ready ; 2008 ; Heart Failure Reviews Volume 13 ; 13 >
-    au < ready ; 2009 ; Heart Failure Reviews Volume 14 ; 14 >
-    au < ready ; 2010 ; Heart Failure Reviews Volume 15 ; 15 >
+    au < released ; 1997 ; Heart Failure Reviews Volume 2 ; 2 >
+    au < released ; 1998 ; Heart Failure Reviews Volume 3 ; 3 >
+    au < released ; 1999 ; Heart Failure Reviews Volume 4 ; 4 >
+    au < released ; 2000 ; Heart Failure Reviews Volume 5 ; 5 >
+    au < released ; 2001 ; Heart Failure Reviews Volume 6 ; 6 >
+    au < released ; 2002 ; Heart Failure Reviews Volume 7 ; 7 >
+    au < released ; 2003 ; Heart Failure Reviews Volume 8 ; 8 >
+    au < released ; 2004 ; Heart Failure Reviews Volume 9 ; 9 >
+    au < released ; 2005 ; Heart Failure Reviews Volume 10 ; 10 >
+    au < released ; 2006 ; Heart Failure Reviews Volume 11 ; 11 >
+    au < released ; 2007 ; Heart Failure Reviews Volume 12 ; 12 >
+    au < released ; 2008 ; Heart Failure Reviews Volume 13 ; 13 >
+    au < released ; 2009 ; Heart Failure Reviews Volume 14 ; 14 >
+    au < released ; 2010 ; Heart Failure Reviews Volume 15 ; 15 >
 
   }
 
@@ -15922,7 +15920,6 @@
 
     param[journal_issn] = 1864-0753
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2007 ; Journal of Business Market Management Volume 1 ; 1 >
     au < ready ; 2008 ; Journal of Business Market Management Volume 2 ; 2 >
@@ -17464,7 +17461,7 @@
     
     param[journal_issn] = 1029-8479
 
-    au < ready ; 2010 ; Journal of High Energy Physics Volume 2010 ; 2010 >
+    au < released ; 2010 ; Journal of High Energy Physics Volume 2010 ; 2010 >
 
   }
 
@@ -20276,7 +20273,6 @@
 
     param[journal_issn] = 0940-7936
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2008 ; Kidney Volume 17 ; 17 >
     au < ready ; 2009 ; Kidney Volume 18 ; 18 >
@@ -23630,7 +23626,6 @@
 
     param[journal_issn] = 1866-5861
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2008 ; Onkopipeline Volume 1 ; 1 >
     au < ready ; 2009 ; Onkopipeline Volume 2 ; 2 >
@@ -25167,7 +25162,6 @@
 
     param[journal_issn] = 0032-3470
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
     au < ready ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
@@ -26069,7 +26063,6 @@
 
     param[journal_issn] = 0943-1950
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2004 ; Psychotherapie Forum Volume 12 ; 12 >
     au < ready ; 2005 ; Psychotherapie Forum Volume 13 ; 13 >
@@ -26751,7 +26744,6 @@
 
     param[journal_issn] = 1570-7075
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2003 ; Research on Language & Computation Volume 1 ; 1 >
     au < ready ; 2004 ; Research on Language & Computation Volume 2 ; 2 >
@@ -31292,7 +31284,6 @@
 
     param[journal_issn] = 1865-4789
     comment[wanted] = True
-    attr[where] = content4a
 
     au < ready ; 2008 ; Zeitschrift für Politikberatung Volume 1 ; 1 >
     au < ready ; 2009 ; Zeitschrift für Politikberatung Volume 2 ; 2 >

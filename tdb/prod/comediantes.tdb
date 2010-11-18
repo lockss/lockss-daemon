@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Comediantes
   >
@@ -17,7 +18,7 @@
 
     param[journal_dir] = bulletin_of_the_comediantes
 
-    au < ready ; Bulletin of the Comediantes Volume 61 ; 61 >
+    au < released ; Bulletin of the Comediantes Volume 61 ; 61 >
 
   }
   
