@@ -1,5 +1,5 @@
 /*
- * $Id: ExpertConfig.java,v 1.5 2010-04-05 16:22:55 pgust Exp $
+ * $Id: ExpertConfig.java,v 1.6 2010-11-18 07:15:44 tlipkis Exp $
  */
 
 /*
@@ -51,14 +51,18 @@ import org.lockss.account.*;
  */
 public class ExpertConfig extends LockssServlet {
 
-  public static final String PREFIX = Configuration.PREFIX + "ui.";
+  /** URL of parameter documentation page */
+  public static final String PARAM_PARAM_DOC_URL =
+    Configuration.PREFIX + "config.paramDocUrl";
+  public static final String DEFAULT_PARAM_DOC_URL =
+    "http://www.lockss.org/lockssdoc/gamma/daemon/paramdoc.html";
 
   private static final String KEY_TEXT = "expert_text";
 
   public static final String ACTION_UPDATE = "Update";
 
   private static final String foot1 =
-    "Enter parameters, one per line, in the form<pre>\n" +
+    "Enter <a href=\"@PARAMDOCURL@\">parameters</a>, one per line, in the form<pre>\n" +
     "org.lockss.foo.bar = value</pre>";
 
   static Logger log = Logger.getLogger("ExpertConfig");
@@ -151,7 +155,11 @@ public class ExpertConfig extends LockssServlet {
     Table table = new Table(0, "align=\"center\" cellspacing=\"2\"");
     table.newRow();
     table.newCell("align=center");
-    table.add(makeTextArea("Configuration Parameters" + addFootnote(foot1),
+    String ft =
+      StringUtil.replaceString(foot1, "@PARAMDOCURL@",
+			       CurrentConfig.getParam(PARAM_PARAM_DOC_URL,
+						      DEFAULT_PARAM_DOC_URL));
+    table.add(makeTextArea("Configuration Parameters" + addFootnote(ft),
 			   KEY_TEXT,
 			   etext));
     spaceRow(table);
