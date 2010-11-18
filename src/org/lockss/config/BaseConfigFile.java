@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.8 2010-05-04 03:36:51 tlipkis Exp $
+ * $Id: BaseConfigFile.java,v 1.9 2010-11-18 07:13:41 tlipkis Exp $
  */
 
 /*
@@ -214,7 +214,8 @@ public abstract class BaseConfigFile implements ConfigFile {
     } catch (IOException ex) {
       throw ex;
     } catch (Exception ex) {
-      log.debug("Unexpected non-IO error loading configuration", ex);
+      log.debug(getFileUrl() +
+		": Unexpected non-IO error loading configuration", ex);
       throw new IOException(ex.toString());
     }
   }
