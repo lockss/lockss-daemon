@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.10 2010-02-22 07:05:52 tlipkis Exp $
+ * $Id: ParamDoclet.java,v 1.11 2010-11-18 07:18:50 tlipkis Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class ParamDoclet {
 
   private static PrintStream out = null;
   private static boolean closeOut = false;
+  private static String releaseHeader = null;
 
   public static boolean start(RootDoc root) {
 
@@ -152,6 +153,11 @@ public class ParamDoclet {
     out.println("<body>");
     out.println("<div align=\"center\">");
     out.println("<h1>LOCKSS Configuration Parameters</h1>");
+    if (!StringUtil.isNullString(releaseHeader)) {
+      out.println("<h2>");
+      out.println(releaseHeader);
+      out.println("</h2>");
+    }
     out.println("<table>");
     out.flush();
   }
@@ -270,6 +276,8 @@ public class ParamDoclet {
       return 2;
     } else if (option.equals("-d")) {
       return 2;
+    } else if (option.equals("-h")) {
+      return 2;
     }
     return 0;
   }
@@ -280,6 +288,7 @@ public class ParamDoclet {
   }
 
   private static boolean handleOptions(RootDoc root) {
+    boolean ok = false;
     String outDir = null;
 
     String[][] options = root.options();
@@ -287,6 +296,8 @@ public class ParamDoclet {
     for (int i = 0 ; i < options.length; i++) {
       if (options[i][0].equals("-d")) {
 	outDir = options[i][1];
+      } else if (options[i][0].equals("-h")) {
+	releaseHeader = options[i][1];
       } else if (options[i][0].equals("-o")) {
 	String outFile = options[i][1];
 	try {
@@ -299,13 +310,13 @@ public class ParamDoclet {
 
 	  out = new PrintStream(new BufferedOutputStream(new FileOutputStream(f)));
 	  closeOut = true;
-	  return true;
+	  ok = true;
 	} catch (IOException ex) {
 	  root.printError("Unable to open output file: " + outFile);
 	}
       }
     }
-    return false;
+    return ok;
   }
 
   /**
