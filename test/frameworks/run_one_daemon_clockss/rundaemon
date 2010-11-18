@@ -1,6 +1,6 @@
 #! /bin/bash
 
-TITLE_DBS="../title_db_files/clockss/*.xml"
+TITLE_DBS="../tdbxml/clockss/*.xml"
 
 while true ; do
   case "$1" in
@@ -56,7 +56,7 @@ fi
 
 # NB leading space meaningful here
 PROP_URL_LIST=" ../common.xml ${TITLE_DBS} lockss.txt lockss.opt"
-PROP_ARGS=`echo $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
+PROP_ARGS=`echo " " $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib

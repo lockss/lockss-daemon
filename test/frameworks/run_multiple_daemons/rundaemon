@@ -59,7 +59,7 @@ done
 
 # "." here is the test<n> dir
 if [ -z "${TITLE_DBS}" ]; then
-  TITLE_DBS="../../title_db_files/*.xml"
+  TITLE_DBS="../../tdbxml/prod/*.xml"
 fi
 
 CLASSPATH=../lib/lockss.jar:../lib/lockss-test.jar:../lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
