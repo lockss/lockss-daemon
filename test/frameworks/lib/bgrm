@@ -1,0 +1,9 @@
+#!/bin/sh
+
+file=$1
+
+if [ -e $file ]; then
+   tmpfile=`mktemp -d delcache.XXXXX` || exit 1
+   mv $file $tmpfile
+   rm -rf $tmpfile &
+fi
