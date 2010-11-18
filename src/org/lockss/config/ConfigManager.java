@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.76 2010-10-02 22:24:38 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.77 2010-11-18 07:13:51 tlipkis Exp $
  */
 
 /*
@@ -686,7 +686,7 @@ public class ConfigManager implements LockssManager {
       sb.append("Error loading: ");
       sb.append(cf.getFileUrl());
       sb.append("<br>");
-      sb.append(cf.getLoadErrorMessage());
+      sb.append(HtmlUtil.htmlEncode(cf.getLoadErrorMessage()));
       sb.append("<br>Last attempt: ");
       sb.append(new Date(cf.getLastAttemptTime()));
       return sb.toString();
