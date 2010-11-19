@@ -5183,18 +5183,17 @@
     >
 
     param[journal_issn] = 1567-8822
-    comment[wanted] = True
 
-    au < ready ; 2001 ; Cardiovascular Engineering Volume 1 ; 1 >
-    au < ready ; 2002 ; Cardiovascular Engineering Volume 2 ; 2 >
-    au < ready ; 2003 ; Cardiovascular Engineering Volume 3 ; 3 >
-    au < ready ; 2004 ; Cardiovascular Engineering Volume 4 ; 4 >
-    au < ready ; 2005 ; Cardiovascular Engineering Volume 5 ; 5 >
-    au < ready ; 2006 ; Cardiovascular Engineering Volume 6 ; 6 >
-    au < ready ; 2007 ; Cardiovascular Engineering Volume 7 ; 7 >
-    au < ready ; 2008 ; Cardiovascular Engineering Volume 8 ; 8 >
-    au < ready ; 2009 ; Cardiovascular Engineering Volume 9 ; 9 >
-    au < ready ; 2010 ; Cardiovascular Engineering Volume 10 ; 10 >
+    au < released ; 2001 ; Cardiovascular Engineering Volume 1 ; 1 >
+    au < released ; 2002 ; Cardiovascular Engineering Volume 2 ; 2 >
+    au < released ; 2003 ; Cardiovascular Engineering Volume 3 ; 3 >
+    au < released ; 2004 ; Cardiovascular Engineering Volume 4 ; 4 >
+    au < released ; 2005 ; Cardiovascular Engineering Volume 5 ; 5 >
+    au < released ; 2006 ; Cardiovascular Engineering Volume 6 ; 6 >
+    au < released ; 2007 ; Cardiovascular Engineering Volume 7 ; 7 >
+    au < released ; 2008 ; Cardiovascular Engineering Volume 8 ; 8 >
+    au < released ; 2009 ; Cardiovascular Engineering Volume 9 ; 9 >
+    au < released ; 2010 ; Cardiovascular Engineering Volume 10 ; 10 >
 
   }
 
@@ -8069,10 +8068,9 @@
     >
 
     param[journal_issn] = 2100-0719
-    comment[wanted] = True
 
-    au < ready ; 2009 ; Diabetologia Notes de lecture Volume 1 ; 1 >
-    au < ready ; 2010 ; Diabetologia Notes de lecture Volume 2 ; 2 >
+    au < released ; 2009 ; Diabetologia Notes de lecture Volume 1 ; 1 >
+    au < released ; 2010 ; Diabetologia Notes de lecture Volume 2 ; 2 >
 
   }
 
@@ -8577,13 +8575,11 @@
     >
 
     param[journal_issn] = 1875-2160
-    comment[wanted] = True
-    attr[where] = content4a
 
-    au < testing ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
-    au < testing ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
-    au < testing ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
-    au < testing ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
+    au < released ; 2007 ; East Asian Science, Technology and Society: An International Journal Volume 1 ; 1 >
+    au < released ; 2008 ; East Asian Science, Technology and Society: An International Journal Volume 2 ; 2 >
+    au < released ; 2009 ; East Asian Science, Technology and Society: An International Journal Volume 3 ; 3 >
+    au < released ; 2010 ; East Asian Science, Technology and Society: An International Journal Volume 4 ; 4 >
 
   }
 
@@ -15925,12 +15921,11 @@
     >
 
     param[journal_issn] = 1864-0753
-    comment[wanted] = True
 
-    au < ready ; 2007 ; Journal of Business Market Management Volume 1 ; 1 >
-    au < ready ; 2008 ; Journal of Business Market Management Volume 2 ; 2 >
-    au < ready ; 2009 ; Journal of Business Market Management Volume 3 ; 3 >
-    au < ready ; 2010 ; Journal of Business Market Management Volume 4 ; 4 >
+    au < released ; 2007 ; Journal of Business Market Management Volume 1 ; 1 >
+    au < released ; 2008 ; Journal of Business Market Management Volume 2 ; 2 >
+    au < released ; 2009 ; Journal of Business Market Management Volume 3 ; 3 >
+    au < released ; 2010 ; Journal of Business Market Management Volume 4 ; 4 >
 
   }
 
@@ -20278,11 +20273,10 @@
     >
 
     param[journal_issn] = 0940-7936
-    comment[wanted] = True
 
-    au < ready ; 2008 ; Kidney Volume 17 ; 17 >
-    au < ready ; 2009 ; Kidney Volume 18 ; 18 >
-    au < ready ; 2010 ; Kidney Volume 19 ; 19 >
+    au < released ; 2008 ; Kidney Volume 17 ; 17 >
+    au < released ; 2009 ; Kidney Volume 18 ; 18 >
+    au < released ; 2010 ; Kidney Volume 19 ; 19 >
 
   }
 
@@ -23631,11 +23625,10 @@
     >
 
     param[journal_issn] = 1866-5861
-    comment[wanted] = True
 
-    au < ready ; 2008 ; Onkopipeline Volume 1 ; 1 >
-    au < ready ; 2009 ; Onkopipeline Volume 2 ; 2 >
-    au < ready ; 2010 ; Onkopipeline Volume 3 ; 3 >
+    au < released ; 2008 ; Onkopipeline Volume 1 ; 1 >
+    au < released ; 2009 ; Onkopipeline Volume 2 ; 2 >
+    au < released ; 2010 ; Onkopipeline Volume 3 ; 3 >
 
   }
 
@@ -25167,19 +25160,18 @@
     >
 
     param[journal_issn] = 0032-3470
-    comment[wanted] = True
 
-    au < ready ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
-    au < ready ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
-    au < ready ; 2002 ; Politische Vierteljahresschrift Volume 43 ; 43 >
-    au < ready ; 2003 ; Politische Vierteljahresschrift Volume 44 ; 44 >
-    au < ready ; 2004 ; Politische Vierteljahresschrift Volume 45 ; 45 >
-    au < ready ; 2005 ; Politische Vierteljahresschrift Volume 46 ; 46 >
-    au < ready ; 2006 ; Politische Vierteljahresschrift Volume 47 ; 47 >
-    au < ready ; 2007 ; Politische Vierteljahresschrift Volume 48 ; 48 >
-    au < ready ; 2008 ; Politische Vierteljahresschrift Volume 49 ; 49 >
-    au < ready ; 2009 ; Politische Vierteljahresschrift Volume 50 ; 50 >
-    au < ready ; 2010 ; Politische Vierteljahresschrift Volume 51 ; 51 >
+    au < released ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
+    au < released ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
+    au < released ; 2002 ; Politische Vierteljahresschrift Volume 43 ; 43 >
+    au < released ; 2003 ; Politische Vierteljahresschrift Volume 44 ; 44 >
+    au < released ; 2004 ; Politische Vierteljahresschrift Volume 45 ; 45 >
+    au < released ; 2005 ; Politische Vierteljahresschrift Volume 46 ; 46 >
+    au < released ; 2006 ; Politische Vierteljahresschrift Volume 47 ; 47 >
+    au < released ; 2007 ; Politische Vierteljahresschrift Volume 48 ; 48 >
+    au < released ; 2008 ; Politische Vierteljahresschrift Volume 49 ; 49 >
+    au < released ; 2009 ; Politische Vierteljahresschrift Volume 50 ; 50 >
+    au < released ; 2010 ; Politische Vierteljahresschrift Volume 51 ; 51 >
 
   }
 
@@ -26068,15 +26060,14 @@
     >
 
     param[journal_issn] = 0943-1950
-    comment[wanted] = True
 
-    au < ready ; 2004 ; Psychotherapie Forum Volume 12 ; 12 >
-    au < ready ; 2005 ; Psychotherapie Forum Volume 13 ; 13 >
-    au < ready ; 2006 ; Psychotherapie Forum Volume 14 ; 14 >
-    au < ready ; 2007 ; Psychotherapie Forum Volume 15 ; 15 >
-    au < ready ; 2008 ; Psychotherapie Forum Volume 16 ; 16 >
-    au < ready ; 2009 ; Psychotherapie Forum Volume 17 ; 17 >
-    au < ready ; 2010 ; Psychotherapie Forum Volume 18 ; 18 >
+    au < released ; 2004 ; Psychotherapie Forum Volume 12 ; 12 >
+    au < released ; 2005 ; Psychotherapie Forum Volume 13 ; 13 >
+    au < released ; 2006 ; Psychotherapie Forum Volume 14 ; 14 >
+    au < released ; 2007 ; Psychotherapie Forum Volume 15 ; 15 >
+    au < released ; 2008 ; Psychotherapie Forum Volume 16 ; 16 >
+    au < released ; 2009 ; Psychotherapie Forum Volume 17 ; 17 >
+    au < released ; 2010 ; Psychotherapie Forum Volume 18 ; 18 >
 
   }
 
@@ -26749,15 +26740,14 @@
     >
 
     param[journal_issn] = 1570-7075
-    comment[wanted] = True
 
-    au < ready ; 2003 ; Research on Language & Computation Volume 1 ; 1 >
-    au < ready ; 2004 ; Research on Language & Computation Volume 2 ; 2 >
-    au < ready ; 2005 ; Research on Language & Computation Volume 3 ; 3 >
-    au < ready ; 2006 ; Research on Language & Computation Volume 4 ; 4 >
-    au < ready ; 2007 ; Research on Language & Computation Volume 5 ; 5 >
-    au < ready ; 2008 ; Research on Language & Computation Volume 6 ; 6 >
-    au < ready ; 2009 ; Research on Language & Computation Volume 7 ; 7 >
+    au < released ; 2003 ; Research on Language & Computation Volume 1 ; 1 >
+    au < released ; 2004 ; Research on Language & Computation Volume 2 ; 2 >
+    au < released ; 2005 ; Research on Language & Computation Volume 3 ; 3 >
+    au < released ; 2006 ; Research on Language & Computation Volume 4 ; 4 >
+    au < released ; 2007 ; Research on Language & Computation Volume 5 ; 5 >
+    au < released ; 2008 ; Research on Language & Computation Volume 6 ; 6 >
+    au < released ; 2009 ; Research on Language & Computation Volume 7 ; 7 >
 
   }
 
@@ -29838,7 +29828,6 @@
     >
 
     param[journal_issn] = 0165-0874
-    comment[wanted] = True
     comment[notReady] = no subscription
 
     au < notReady ; 1990 ; Tijdschrift voor GezondheidsRecht Volume 14 ; 14 >
@@ -31289,11 +31278,10 @@
     >
 
     param[journal_issn] = 1865-4789
-    comment[wanted] = True
 
-    au < ready ; 2008 ; Zeitschrift für Politikberatung Volume 1 ; 1 >
-    au < ready ; 2009 ; Zeitschrift für Politikberatung Volume 2 ; 2 >
-    au < ready ; 2010 ; Zeitschrift für Politikberatung Volume 3 ; 3 >
+    au < released ; 2008 ; Zeitschrift für Politikberatung Volume 1 ; 1 >
+    au < released ; 2009 ; Zeitschrift für Politikberatung Volume 2 ; 2 >
+    au < released ; 2010 ; Zeitschrift für Politikberatung Volume 3 ; 3 >
 
   }
 
