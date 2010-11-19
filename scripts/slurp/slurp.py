@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurp.py,v 1.3 2010-10-05 01:00:08 thib_gc Exp $
+# $Id: slurp.py,v 1.4 2010-11-19 09:45:01 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -36,6 +36,7 @@ from urllib2 import URLError
 
 sys.path.append(os.path.realpath(os.path.join(os.path.dirname(sys.argv[0]), '../../test/frameworks/lib')))
 import lockss_daemon
+from lockss_util import LockssError
 
 class SlurpConstants:
 
