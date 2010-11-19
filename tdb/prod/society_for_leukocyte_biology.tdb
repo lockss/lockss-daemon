@@ -9,8 +9,6 @@
       issn = 0741-5400
     >
 
-    comment[h20] = HAS SWITCHED TO H20
-
     {
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
@@ -22,14 +20,26 @@
       au < down ; Journal of Leukocyte Biology Volume 79 ; 79 >
       au < down ; Journal of Leukocyte Biology Volume 80 ; 80 >
       au < down ; Journal of Leukocyte Biology Volume 81 ; 81 >
-      au < manifest ; Journal of Leukocyte Biology Volume 82 ; 82 >
-      au < manifest ; Journal of Leukocyte Biology Volume 83 ; 83 >
-      au < manifest ; Journal of Leukocyte Biology Volume 84 ; 84 >
-      au < manifest ; Journal of Leukocyte Biology Volume 85 ; 85 >
-      au < manifest ; Journal of Leukocyte Biology Volume 86 ; 86 >
+
 
     }
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://www.jleukbio.org/
+      implicit < status ; name ; param[volume_name] >      
 
+      au < testing ; Journal of Leukocyte Biology Volume 82 ; 82 >
+      au < testing ; Journal of Leukocyte Biology Volume 83 ; 83 >
+      au < testing ; Journal of Leukocyte Biology Volume 84 ; 84 >
+      au < testing ; Journal of Leukocyte Biology Volume 85 ; 85 >
+      au < testing ; Journal of Leukocyte Biology Volume 86 ; 86 >
+      au < testing ; Journal of Leukocyte Biology Volume 87 ; 87 >
+      au < testing ; Journal of Leukocyte Biology Volume 88 ; 88 >
+      
+    }
+    
   }
 
 }
