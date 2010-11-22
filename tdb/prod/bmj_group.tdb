@@ -17,7 +17,6 @@
     >
 
     param[base_url] = http://aim.bmj.com/
-    implicit < pluginSuffix ; status ; year ; name ; param[volume_name] >
 
     au < HighWirePressH20Plugin ; exists ; 1982-1983 ; Acupuncture in Medicine Volume 1 ; 1 >
     au < HighWirePressH20Plugin ; exists ; 1984 ; Acupuncture in Medicine Volume 2 ; 2 >
