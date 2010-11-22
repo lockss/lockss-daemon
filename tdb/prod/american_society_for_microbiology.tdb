@@ -35,9 +35,9 @@
   
       param[base_url] = http://aem.asm.org/
   
-      au < HighWireStrVolPlugin ; released ; Applied and Environmental Microbiology Volume 71 ; 71 >
-      au < HighWireStrVolPlugin ; released ; Applied and Environmental Microbiology Volume 72 ; 72 >
-      au < HighWireStrVolPlugin ; released ; Applied and Environmental Microbiology Volume 73 ; 73 >
+      au < HighWireStrVolPlugin ; down ; Applied and Environmental Microbiology Volume 71 ; 71 >
+      au < HighWireStrVolPlugin ; down ; Applied and Environmental Microbiology Volume 72 ; 72 >
+      au < HighWireStrVolPlugin ; down ; Applied and Environmental Microbiology Volume 73 ; 73 >
       au < HighWirePressH20Plugin ; released ; Applied and Environmental Microbiology Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; released ; Applied and Environmental Microbiology Volume 75 ; 75 >
   
@@ -53,7 +53,7 @@
       param[base_url] = http://cvi.asm.org/
   
       au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 12 ; 12 >
-      au < HighWireStrVolPlugin ; released ; Clinical and Vaccine Immunology Volume 13 ; 13 >
+      au < HighWireStrVolPlugin ; down ; Clinical and Vaccine Immunology Volume 13 ; 13 >
       au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 14 ; 14 >
       au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 15 ; 15 >
       au < HighWirePressH20Plugin ; released ; Clinical and Vaccine Immunology Volume 16 ; 16 >
@@ -70,7 +70,7 @@
       param[base_url] = http://cmr.asm.org/
   
       au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 18 ; 18 >
-      au < HighWireStrVolPlugin ; released ; Clinical Microbiology Reviews Volume 19 ; 19 >
+      au < HighWireStrVolPlugin ; down ; Clinical Microbiology Reviews Volume 19 ; 19 >
       au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 20 ; 20 >
       au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 21 ; 21 >
       au < HighWirePressH20Plugin ; released ; Clinical Microbiology Reviews Volume 22 ; 22 >
@@ -87,7 +87,7 @@
       param[base_url] = http://ec.asm.org/
   
       au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 4 ; 4 >
-      au < HighWireStrVolPlugin ; released ; Eukaryotic Cell Volume 5 ; 5 >
+      au < HighWireStrVolPlugin ; down ; Eukaryotic Cell Volume 5 ; 5 >
       au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 6 ; 6 >
       au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 7 ; 7 >
       au < HighWirePressH20Plugin ; released ; Eukaryotic Cell Volume 8 ; 8 >
@@ -106,7 +106,7 @@
       param[base_url] = http://iai.asm.org/
   
       au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 73 ; 73 >
-      au < HighWireStrVolPlugin ; released ; Infection and Immunity Volume 74 ; 74 >
+      au < HighWireStrVolPlugin ; down ; Infection and Immunity Volume 74 ; 74 >
       au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 75 ; 75 >
       au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 76 ; 76 >
       au < HighWirePressH20Plugin ; released ; Infection and Immunity Volume 77 ; 77 >
@@ -124,7 +124,7 @@
       param[base_url] = http://jb.asm.org/
   
       au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 187 ; 187 >
-      au < HighWireStrVolPlugin ; released ; Journal of Bacteriology Volume 188 ; 188 >
+      au < HighWireStrVolPlugin ; down ; Journal of Bacteriology Volume 188 ; 188 >
       au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 189 ; 189 >
       au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 190 ; 190 >
       au < HighWirePressH20Plugin ; ready ; Journal of Bacteriology Volume 191 ; 191 >
@@ -142,7 +142,7 @@
       param[base_url] = http://jcm.asm.org/
   
       au < HighWirePressH20Plugin ; ready ; Journal of Clinical Microbiology Volume 43 ; 43 >
-      au < HighWireStrVolPlugin ; released ; Journal of Clinical Microbiology Volume 44 ; 44 >
+      au < HighWireStrVolPlugin ; down ; Journal of Clinical Microbiology Volume 44 ; 44 >
       au < HighWirePressH20Plugin ; ready ; Journal of Clinical Microbiology Volume 45 ; 45 >
       au < HighWirePressH20Plugin ; ready ; Journal of Clinical Microbiology Volume 46 ; 46 >
       au < HighWirePressH20Plugin ; ready ; Journal of Clinical Microbiology Volume 47 ; 47 >
@@ -159,7 +159,7 @@
       param[base_url] = http://jvi.asm.org/
   
       au < HighWirePressH20Plugin ; ready ; Journal of Virology Volume 79 ; 79 >
-      au < HighWireStrVolPlugin ; released ; Journal of Virology Volume 80 ; 80 >
+      au < HighWireStrVolPlugin ; down ; Journal of Virology Volume 80 ; 80 >
       au < HighWirePressH20Plugin ; ready ; Journal of Virology Volume 81 ; 81 >
       au < HighWirePressH20Plugin ; ready ; Journal of Virology Volume 82 ; 82 >
       au < HighWirePressH20Plugin ; ready ; Journal of Virology Volume 83 ; 83 >
@@ -176,7 +176,7 @@
       param[base_url] = http://mmbr.asm.org/
   
       au < HighWirePressH20Plugin ; ready ; Microbiology and Molecular Biology Reviews Volume 69 ; 69 >
-      au < HighWireStrVolPlugin ; released ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
+      au < HighWireStrVolPlugin ; down ; Microbiology and Molecular Biology Reviews Volume 70 ; 70 >
       au < HighWirePressH20Plugin ; ready ; Microbiology and Molecular Biology Reviews Volume 71 ; 71 >
       au < HighWirePressH20Plugin ; ready ; Microbiology and Molecular Biology Reviews Volume 72 ; 72 >
       au < HighWirePressH20Plugin ; ready ; Microbiology and Molecular Biology Reviews Volume 73 ; 73 >
@@ -194,7 +194,7 @@
       param[base_url] = http://mcb.asm.org/
   
       au < HighWirePressH20Plugin ; ready ; Molecular and Cellular Biology Volume 25 ; 25 >
-      au < HighWireStrVolPlugin ; released ; Molecular and Cellular Biology Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; down ; Molecular and Cellular Biology Volume 26 ; 26 >
       au < HighWirePressH20Plugin ; ready ; Molecular and Cellular Biology Volume 27 ; 27 >
       au < HighWirePressH20Plugin ; ready ; Molecular and Cellular Biology Volume 28 ; 28 >
       au < HighWirePressH20Plugin ; ready ; Molecular and Cellular Biology Volume 29 ; 29 >
