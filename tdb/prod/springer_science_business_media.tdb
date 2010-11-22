@@ -788,38 +788,38 @@
     
     param[journal_issn] = 0161-9152
 
-    au < ready ; 1978 ; AGE Volume 1 ; 1 >
-    au < ready ; 1979 ; AGE Volume 2 ; 2 >
-    au < ready ; 1980 ; AGE Volume 3 ; 3 >
-    au < ready ; 1981 ; AGE Volume 4 ; 4 >
-    au < ready ; 1982 ; AGE Volume 5 ; 5 >
-    au < ready ; 1983 ; AGE Volume 6 ; 6 >
-    au < ready ; 1984 ; AGE Volume 7 ; 7 >
-    au < ready ; 1985 ; AGE Volume 8 ; 8 >
-    au < ready ; 1986 ; AGE Volume 9 ; 9 >
-    au < ready ; 1987 ; AGE Volume 10 ; 10 >
-    au < ready ; 1988 ; AGE Volume 11 ; 11 >
-    au < ready ; 1989 ; AGE Volume 12 ; 12 >
-    au < ready ; 1990 ; AGE Volume 13 ; 13 >
-    au < ready ; 1991 ; AGE Volume 14 ; 14 >
-    au < ready ; 1992 ; AGE Volume 15 ; 15 >
-    au < ready ; 1993 ; AGE Volume 16 ; 16 >
-    au < ready ; 1994 ; AGE Volume 17 ; 17 >
-    au < ready ; 1995 ; AGE Volume 18 ; 18 >
-    au < ready ; 1996 ; AGE Volume 19 ; 19 >
-    au < ready ; 1997 ; AGE Volume 20 ; 20 >
-    au < ready ; 1998 ; AGE Volume 21 ; 21 >
-    au < ready ; 1999 ; AGE Volume 22 ; 22 >
-    au < ready ; 2000 ; AGE Volume 23 ; 23 >
-    au < ready ; 2001 ; AGE Volume 24 ; 24 >
-    au < ready ; 2002 ; AGE Volume 25 ; 25 >
-    au < ready ; 2003 ; AGE Volume 26 ; 26 >
-    au < ready ; 2005 ; AGE Volume 27 ; 27 >
-    au < ready ; 2006 ; AGE Volume 28 ; 28 >
-    au < ready ; 2007 ; AGE Volume 29 ; 29 >
-    au < ready ; 2008 ; AGE Volume 30 ; 30 >
-    au < ready ; 2009 ; AGE Volume 31 ; 31 >
-    au < ready ; 2010 ; AGE Volume 32 ; 32 >
+    au < released ; 1978 ; AGE Volume 1 ; 1 >
+    au < released ; 1979 ; AGE Volume 2 ; 2 >
+    au < released ; 1980 ; AGE Volume 3 ; 3 >
+    au < released ; 1981 ; AGE Volume 4 ; 4 >
+    au < released ; 1982 ; AGE Volume 5 ; 5 >
+    au < released ; 1983 ; AGE Volume 6 ; 6 >
+    au < released ; 1984 ; AGE Volume 7 ; 7 >
+    au < released ; 1985 ; AGE Volume 8 ; 8 >
+    au < released ; 1986 ; AGE Volume 9 ; 9 >
+    au < released ; 1987 ; AGE Volume 10 ; 10 >
+    au < released ; 1988 ; AGE Volume 11 ; 11 >
+    au < released ; 1989 ; AGE Volume 12 ; 12 >
+    au < released ; 1990 ; AGE Volume 13 ; 13 >
+    au < released ; 1991 ; AGE Volume 14 ; 14 >
+    au < released ; 1992 ; AGE Volume 15 ; 15 >
+    au < released ; 1993 ; AGE Volume 16 ; 16 >
+    au < released ; 1994 ; AGE Volume 17 ; 17 >
+    au < released ; 1995 ; AGE Volume 18 ; 18 >
+    au < released ; 1996 ; AGE Volume 19 ; 19 >
+    au < released ; 1997 ; AGE Volume 20 ; 20 >
+    au < released ; 1998 ; AGE Volume 21 ; 21 >
+    au < released ; 1999 ; AGE Volume 22 ; 22 >
+    au < released ; 2000 ; AGE Volume 23 ; 23 >
+    au < released ; 2001 ; AGE Volume 24 ; 24 >
+    au < released ; 2002 ; AGE Volume 25 ; 25 >
+    au < released ; 2003 ; AGE Volume 26 ; 26 >
+    au < released ; 2005 ; AGE Volume 27 ; 27 >
+    au < released ; 2006 ; AGE Volume 28 ; 28 >
+    au < released ; 2007 ; AGE Volume 29 ; 29 >
+    au < released ; 2008 ; AGE Volume 30 ; 30 >
+    au < released ; 2009 ; AGE Volume 31 ; 31 >
+    au < released ; 2010 ; AGE Volume 32 ; 32 >
 
   }
 
@@ -27914,10 +27914,10 @@
     comment[continued_from] = 0344-4325
     param[journal_issn] = 1863-2297
 
-    au < ready ; 2007 ; Seminars in Immunopathology Volume 29 ; 29 >
-    au < ready ; 2008 ; Seminars in Immunopathology Volume 30 ; 30 >
-    au < ready ; 2009 ; Seminars in Immunopathology Volume 31 ; 31 >
-    au < ready ; 2010 ; Seminars in Immunopathology Volume 32 ; 32 >
+    au < released ; 2007 ; Seminars in Immunopathology Volume 29 ; 29 >
+    au < released ; 2008 ; Seminars in Immunopathology Volume 30 ; 30 >
+    au < released ; 2009 ; Seminars in Immunopathology Volume 31 ; 31 >
+    au < released ; 2010 ; Seminars in Immunopathology Volume 32 ; 32 >
 
   }
 
@@ -28820,34 +28820,34 @@
     
     comment[18] = persistent subscription problem
 
-    au < ready ; 1978 ; Springer Seminars in Immunopathology Volume 1 ; 1 >
-    au < ready ; 1979-1980 ; Springer Seminars in Immunopathology Volume 2 ; 2 >
-    au < ready ; 1980-1981 ; Springer Seminars in Immunopathology Volume 3 ; 3 >
-    au < ready ; 1981-1982 ; Springer Seminars in Immunopathology Volume 4 ; 4 >
-    au < ready ; 1982 ; Springer Seminars in Immunopathology Volume 5 ; 5 >
-    au < ready ; 1983 ; Springer Seminars in Immunopathology Volume 6 ; 6 >
-    au < ready ; 1984 ; Springer Seminars in Immunopathology Volume 7 ; 7 >
-    au < ready ; 1985 ; Springer Seminars in Immunopathology Volume 8 ; 8 >
-    au < ready ; 1986-1987 ; Springer Seminars in Immunopathology Volume 9 ; 9 >
-    au < ready ; 1988 ; Springer Seminars in Immunopathology Volume 10 ; 10 >
-    au < ready ; 1989 ; Springer Seminars in Immunopathology Volume 11 ; 11 >
-    au < ready ; 1990 ; Springer Seminars in Immunopathology Volume 12 ; 12 >
-    au < ready ; 1991-1992 ; Springer Seminars in Immunopathology Volume 13 ; 13 >
-    au < ready ; 1992-1993 ; Springer Seminars in Immunopathology Volume 14 ; 14 >
-    au < ready ; 1993-1994 ; Springer Seminars in Immunopathology Volume 15 ; 15 >
-    au < ready ; 1994-1995 ; Springer Seminars in Immunopathology Volume 16 ; 16 >
-    au < ready ; 1995-1996 ; Springer Seminars in Immunopathology Volume 17 ; 17 >
+    au < released ; 1978 ; Springer Seminars in Immunopathology Volume 1 ; 1 >
+    au < released ; 1979-1980 ; Springer Seminars in Immunopathology Volume 2 ; 2 >
+    au < released ; 1980-1981 ; Springer Seminars in Immunopathology Volume 3 ; 3 >
+    au < released ; 1981-1982 ; Springer Seminars in Immunopathology Volume 4 ; 4 >
+    au < released ; 1982 ; Springer Seminars in Immunopathology Volume 5 ; 5 >
+    au < released ; 1983 ; Springer Seminars in Immunopathology Volume 6 ; 6 >
+    au < released ; 1984 ; Springer Seminars in Immunopathology Volume 7 ; 7 >
+    au < released ; 1985 ; Springer Seminars in Immunopathology Volume 8 ; 8 >
+    au < released ; 1986-1987 ; Springer Seminars in Immunopathology Volume 9 ; 9 >
+    au < released ; 1988 ; Springer Seminars in Immunopathology Volume 10 ; 10 >
+    au < released ; 1989 ; Springer Seminars in Immunopathology Volume 11 ; 11 >
+    au < released ; 1990 ; Springer Seminars in Immunopathology Volume 12 ; 12 >
+    au < released ; 1991-1992 ; Springer Seminars in Immunopathology Volume 13 ; 13 >
+    au < released ; 1992-1993 ; Springer Seminars in Immunopathology Volume 14 ; 14 >
+    au < released ; 1993-1994 ; Springer Seminars in Immunopathology Volume 15 ; 15 >
+    au < released ; 1994-1995 ; Springer Seminars in Immunopathology Volume 16 ; 16 >
+    au < released ; 1995-1996 ; Springer Seminars in Immunopathology Volume 17 ; 17 >
     au < notReady ; 1996-1997 ; Springer Seminars in Immunopathology Volume 18 ; 18 >
-    au < ready ; 1997 ; Springer Seminars in Immunopathology Volume 19 ; 19 >
-    au < ready ; 1998 ; Springer Seminars in Immunopathology Volume 20 ; 20 >
-    au < ready ; 1999 ; Springer Seminars in Immunopathology Volume 21 ; 21 >
-    au < ready ; 2000 ; Springer Seminars in Immunopathology Volume 22 ; 22 >
-    au < ready ; 2001 ; Springer Seminars in Immunopathology Volume 23 ; 23 >
-    au < ready ; 2002 ; Springer Seminars in Immunopathology Volume 24 ; 24 >
-    au < ready ; 2003 ; Springer Seminars in Immunopathology Volume 25 ; 25 >
-    au < ready ; 2004 ; Springer Seminars in Immunopathology Volume 26 ; 26 >
-    au < ready ; 2005 ; Springer Seminars in Immunopathology Volume 27 ; 27 >
-    au < ready ; 2006 ; Springer Seminars in Immunopathology Volume 28 ; 28 >
+    au < released ; 1997 ; Springer Seminars in Immunopathology Volume 19 ; 19 >
+    au < released ; 1998 ; Springer Seminars in Immunopathology Volume 20 ; 20 >
+    au < released ; 1999 ; Springer Seminars in Immunopathology Volume 21 ; 21 >
+    au < released ; 2000 ; Springer Seminars in Immunopathology Volume 22 ; 22 >
+    au < released ; 2001 ; Springer Seminars in Immunopathology Volume 23 ; 23 >
+    au < released ; 2002 ; Springer Seminars in Immunopathology Volume 24 ; 24 >
+    au < released ; 2003 ; Springer Seminars in Immunopathology Volume 25 ; 25 >
+    au < released ; 2004 ; Springer Seminars in Immunopathology Volume 26 ; 26 >
+    au < released ; 2005 ; Springer Seminars in Immunopathology Volume 27 ; 27 >
+    au < released ; 2006 ; Springer Seminars in Immunopathology Volume 28 ; 28 >
 
   }
 

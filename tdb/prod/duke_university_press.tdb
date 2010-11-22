@@ -19,16 +19,16 @@
       param[journal_dir] = american_literary_scholarship
       implicit < status ; name ; param[volume] >
 
-      au < ready ; American Literary Scholarship 1998 ; 1998 >
+      au < released ; American Literary Scholarship 1998 ; 1998 >
       au < released ; American Literary Scholarship 1999 ; 1999 >
       au < released ; American Literary Scholarship 2000 ; 2000 >
       au < released ; American Literary Scholarship 2001 ; 2001 >
       au < released ; American Literary Scholarship 2002 ; 2002 >
       au < released ; American Literary Scholarship 2003 ; 2003 >
-      au < ready ; American Literary Scholarship 2004 ; 2004 >
-      au < ready ; American Literary Scholarship 2005 ; 2005 >
-      au < ready ; American Literary Scholarship 2006 ; 2006 >
-      au < ready ; American Literary Scholarship 2007 ; 2007 >
+      au < released ; American Literary Scholarship 2004 ; 2004 >
+      au < released ; American Literary Scholarship 2005 ; 2005 >
+      au < released ; American Literary Scholarship 2006 ; 2006 >
+      au < released ; American Literary Scholarship 2007 ; 2007 >
         
     }
 
@@ -136,11 +136,11 @@
       param[journal_dir] = boundary
       implicit < status ; name ; param[volume] >
 
-      au < ready ; boundary 2 Volume 26 ; 26 >
-      au < ready ; boundary 2 Volume 27 ; 27 >
-      au < ready ; boundary 2 Volume 28 ; 28 >
-      au < ready ; boundary 2 Volume 29 ; 29 >
-      au < ready ; boundary 2 Volume 30 ; 30 >
+      au < releasing ; boundary 2 Volume 26 ; 26 >
+      au < releasing ; boundary 2 Volume 27 ; 27 >
+      au < releasing ; boundary 2 Volume 28 ; 28 >
+      au < releasing ; boundary 2 Volume 29 ; 29 >
+      au < releasing ; boundary 2 Volume 30 ; 30 >
       au < released ; boundary 2 Volume 31 ; 31 >
       
     }
@@ -218,9 +218,9 @@
       au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 24 ; 24 >
       au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
       au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
-      au < ready ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
-      au < ready ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
-      au < ready ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < releasing ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
+      au < releasing ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+      au < releasing ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
 
     }
     
@@ -301,9 +301,9 @@
       au < released ; Eighteenth-Century Life Volume 29 ; 29 >
       au < released ; Eighteenth-Century Life Volume 30 ; 30 >
       au < released ; Eighteenth-Century Life Volume 31 ; 31 >
-      au < ready ; Eighteenth-Century Life Volume 32 ; 32 >
-      au < ready ; Eighteenth-Century Life Volume 33 ; 33 >
-      au < ready ; Eighteenth-Century Life Volume 34 ; 34 >
+      au < releasing ; Eighteenth-Century Life Volume 32 ; 32 >
+      au < releasing ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < releasing ; Eighteenth-Century Life Volume 34 ; 34 >
 
     }
 
@@ -419,9 +419,9 @@
       au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 11 ; 11 >
       au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
       au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
-      au < ready ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
-      au < ready ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
-      au < ready ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < releasing ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
+      au < releasing ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+      au < releasing ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
       
     }
 
@@ -563,7 +563,7 @@
       param[base_url] = http://muse.jhu.edu/
       param[journal_dir] = journal_of_medieval_and_early_modern_studies
 
-      au < ready ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
+      au < releasing ; Journal of Medieval and Early Modern Studies Volume 27 ; 27 >
       au < released ; Journal of Medieval and Early Modern Studies Volume 30 ; 30 >
       au < released ; Journal of Medieval and Early Modern Studies Volume 31 ; 31 >
       au < released ; Journal of Medieval and Early Modern Studies Volume 32 ; 32 >
@@ -631,8 +631,8 @@
       au < released ; Mediterranean Quarterly Volume 16 ; 16 >
       au < released ; Mediterranean Quarterly Volume 17 ; 17 >
       au < released ; Mediterranean Quarterly Volume 18 ; 18 >
-      au < ready ; Mediterranean Quarterly Volume 19 ; 19 >
-      au < ready ; Mediterranean Quarterly Volume 20 ; 20 >
+      au < releasing ; Mediterranean Quarterly Volume 19 ; 19 >
+      au < releasing ; Mediterranean Quarterly Volume 20 ; 20 >
 
     }
     
@@ -748,8 +748,8 @@
       au < released ; positions: east asia cultures critique Volume 13 ; 13 >
       au < released ; positions: east asia cultures critique Volume 14 ; 14 >
       au < released ; positions: east asia cultures critique Volume 15 ; 15 >
-      au < ready ; positions: east asia cultures critique Volume 16 ; 16 >
-      au < ready ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < releasing ; positions: east asia cultures critique Volume 16 ; 16 >
+      au < releasing ; positions: east asia cultures critique Volume 17 ; 17 >
 
     }
     
@@ -898,9 +898,9 @@
       au < released ; Social Science History Volume 29 ; 29 >
       au < released ; Social Science History Volume 30 ; 30 >
       au < released ; Social Science History Volume 31 ; 31 >
-      au < ready ; Social Science History Volume 32 ; 32 >
-      au < ready ; Social Science History Volume 33 ; 33 >
-      au < ready ; Social Science History Volume 34 ; 34 >
+      au < releasing ; Social Science History Volume 32 ; 32 >
+      au < releasing ; Social Science History Volume 33 ; 33 >
+      au < releasing ; Social Science History Volume 34 ; 34 >
       
     }
 
@@ -1049,9 +1049,9 @@
       au < released ; Common Knowledge Volume 11 ; 11 >
       au < released ; Common Knowledge Volume 12 ; 12 >
       au < released ; Common Knowledge Volume 13 ; 13 >
-      au < ready ; Common Knowledge Volume 14 ; 14 >
-      au < ready ; Common Knowledge Volume 15 ; 15 >
-      au < ready ; Common Knowledge Volume 16 ; 16 >
+      au < releasing ; Common Knowledge Volume 14 ; 14 >
+      au < releasing ; Common Knowledge Volume 15 ; 15 >
+      au < releasing ; Common Knowledge Volume 16 ; 16 >
 
     }
 
@@ -1101,9 +1101,9 @@
       au < released ; Pedagogy Volume 5 ; 5 >
       au < released ; Pedagogy Volume 6 ; 6 >
       au < released ; Pedagogy Volume 7 ; 7 >
-      au < ready ; Pedagogy Volume 8 ; 8 >
-      au < ready ; Pedagogy Volume 9 ; 9 >
-      au < ready ; Pedagogy Volume 10 ; 10 >
+      au < releasing ; Pedagogy Volume 8 ; 8 >
+      au < releasing ; Pedagogy Volume 9 ; 9 >
+      au < releasing ; Pedagogy Volume 10 ; 10 >
 
     }
 
@@ -1123,8 +1123,8 @@
       au < released ; Small Axe Volume 9 ; 9 >
       au < released ; Small Axe Volume 10 ; 10 >
       au < released ; Small Axe Volume 11 ; 11 >
-      au < ready ; Small Axe Volume 12 ; 12 >
-      au < ready ; Small Axe Volume 13 ; 13 >
+      au < releasing ; Small Axe Volume 12 ; 12 >
+      au < releasing ; Small Axe Volume 13 ; 13 >
 
     }
 
