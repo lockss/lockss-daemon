@@ -142,6 +142,21 @@
       
     }
 
+    {
+
+      title <
+        name = Demonstration Journal
+      >
+        
+      param[base_url] = http://pkp.sfu.ca/ojs/demo/present/
+      param[journal_id] = demojournal
+  
+      comment = requires subscription and has login pages
+  
+      au < released ; 2005 ; Demo Journal Volume 2005 ; 2005 >
+      
+    }
+
   }
   
   {
