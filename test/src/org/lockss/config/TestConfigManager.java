@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.39 2010-10-02 22:24:38 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.40 2010-11-29 07:24:33 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.config.Tdb;
 import org.lockss.config.TdbTitle;
 import org.lockss.plugin.*;
 import org.lockss.servlet.*;
+import static org.lockss.config.ConfigManager.*;
 
 /**
  * Test class for <code>org.lockss.config.ConfigManager</code>
@@ -192,6 +193,21 @@ public class TestConfigManager extends LockssTestCase {
 
   }
 
+  public void testShouldParamBeLogged() {
+    assertFalse(mgr.shouldParamBeLogged(PREFIX_TITLE_DB + "foo.xxx"));
+    assertFalse(mgr.shouldParamBeLogged("org.lockss.titleSet.foo.xxx"));
+    assertFalse(mgr.shouldParamBeLogged(PREFIX_TITLE_SETS_DOT + "foo.xxx"));
+    assertFalse(mgr.shouldParamBeLogged("org.lockss.titleSet.foo.xxx"));
+    assertFalse(mgr.shouldParamBeLogged("org.lockss.au.foo.xxx"));
+    assertFalse(mgr.shouldParamBeLogged("org.lockss.user.1.password"));
+    assertFalse(mgr.shouldParamBeLogged("org.lockss.keystore.1.keyPassword"));
+
+    assertTrue(mgr.shouldParamBeLogged("org.lockss.random.param"));
+    assertTrue(mgr.shouldParamBeLogged(PARAM_TITLE_DB_URLS));
+    assertTrue(mgr.shouldParamBeLogged("org.lockss.titleDbs"));
+    assertTrue(mgr.shouldParamBeLogged(PARAM_AUX_PROP_URLS));
+  }
+
   public void testListDiffs() throws IOException {
     String xml1 = "<lockss-config>\n" +
       "<property name=\"org.lockss\">\n" +
@@ -326,6 +342,34 @@ public class TestConfigManager extends LockssTestCase {
 		 config.get(ClockssParams.PARAM_INSTITUTION_SUBSCRIPTION_ADDR));
     assertEquals("2.2.2.2",
 		 config.get(ClockssParams.PARAM_CLOCKSS_SUBSCRIPTION_ADDR));
+  }
+
+  public void testInitSocketFactoryNoKeystore() throws Exception {
+    Configuration config = mgr.newConfiguration();
+    mgr.initSocketFactory(config);
+    assertNull(mgr.getSecureSocketFactory());
+  }
+
+  public void testInitSocketFactory() throws Exception {
+    Configuration config = mgr.newConfiguration();
+    config.put(PARAM_SERVER_AUTH_KEYSTORE_NAME, "a-keystore");
+    mgr.initSocketFactory(config);
+    LockssSecureSocketFactory fact = mgr.getSecureSocketFactory();
+    assertEquals("a-keystore", fact.getServerAuthKeystoreName());
+    assertNull(fact.getClientAuthKeystoreName());
+  }
+
+  public void testInitSocketFactoryInternalKeystore() throws Exception {
+    Configuration config = mgr.newConfiguration();
+    config.put(PARAM_SERVER_AUTH_KEYSTORE_NAME, "lockss-ca");
+    mgr.initSocketFactory(config);
+    String pref = "org.lockss.keyMgr.keystore.lockssca.";
+    assertEquals("lockss-ca", config.get(pref + "name"));
+    assertEquals("org/lockss/config/lockss-ca.keystore",
+		 config.get(pref + "resource"));
+    LockssSecureSocketFactory fact = mgr.getSecureSocketFactory();
+    assertEquals("lockss-ca", fact.getServerAuthKeystoreName());
+    assertNull(fact.getClientAuthKeystoreName());
   }
 
   public void testInitNewConfiguration() throws Exception {
@@ -545,22 +589,6 @@ public class TestConfigManager extends LockssTestCase {
   public void testConfigVersionProp() {
     assertEquals("org.lockss.config.fileVersion.foo",
 		 ConfigManager.configVersionProp("foo"));
-  }
-
-  public void testShouldParamBeLogged() {
-    assertTrue(mgr.shouldParamBeLogged("org.lockss.arbitrary.param"));
-    assertTrue(mgr.shouldParamBeLogged(ConfigManager.PARAM_TITLE_DB_URLS));
-    assertTrue(mgr.shouldParamBeLogged(ConfigManager.PARAM_USER_TITLE_DB_URLS));
-    assertFalse(mgr.shouldParamBeLogged(ConfigManager.PREFIX_TITLE_DB +
-					"foo.bar"));
-    // runon param name not a titleset def
-    assertTrue(mgr.shouldParamBeLogged(PluginManager.PARAM_TITLE_SETS +
-					"foo.bar"));
-    assertFalse(mgr.shouldParamBeLogged(PluginManager.PARAM_TITLE_SETS +
-					".foo.bar"));
-    assertFalse(mgr.shouldParamBeLogged(PluginManager.PARAM_AU_TREE +
-					".foo.bar"));
-    assertFalse(mgr.shouldParamBeLogged("org.lockss.user.password"));
   }
 
   public void testCompatibilityParams() {
@@ -945,6 +973,26 @@ public class TestConfigManager extends LockssTestCase {
     assertTrue(mgr.waitConfig(Deadline.EXPIRED));
     Configuration config = mgr.getCurrentConfig();
     assertEquals("42", config.get("org.lockss.foo.bar"));
+    assertEquals("1", config.get("a"));
+  }
+
+  public void testLoadAuxPropsRel() throws IOException {
+    String xml = "<lockss-config>\n" +
+      "<property name=\"org.lockss\">\n" +
+      " <property name=\"foo.bar\" value=\"43\"/>" +
+      "</property>" +
+      "</lockss-config>";
+
+    String u2 = FileTestUtil.urlOfString(xml, ".xml");
+    String u2rel = new File(new URL(u2).getPath()).getName();
+    assertTrue(StringUtil.startsWithIgnoreCase(u2, "file"));
+    assertFalse(StringUtil.startsWithIgnoreCase(u2rel, "file"));
+    String u1 = FileTestUtil.urlOfString("a=1\norg.lockss.auxPropUrls="+u2rel);
+    assertFalse(mgr.waitConfig(Deadline.EXPIRED));
+    assertTrue(mgr.updateConfig(ListUtil.list(u1)));
+    assertTrue(mgr.waitConfig(Deadline.EXPIRED));
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("43", config.get("org.lockss.foo.bar"));
     assertEquals("1", config.get("a"));
   }
 

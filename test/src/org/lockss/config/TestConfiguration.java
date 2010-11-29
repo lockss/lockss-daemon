@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.15 2010-06-14 11:55:37 pgust Exp $
+ * $Id: TestConfiguration.java,v 1.16 2010-11-29 07:24:33 tlipkis Exp $
  */
 
 /*
@@ -254,6 +254,36 @@ public class TestConfiguration extends LockssTestCase {
     assertFalse(tdb1 == tdb2);
   }
 
+  public void testCopyFromEvent() throws TdbException {
+    Configuration c1 = newConfiguration();
+    c1.put("a", "1");
+    c1.put("b", "2");
+    c1.put("b.x", "3");
+    Tdb tdb1 = newTdb();
+    c1.setTdb(tdb1);
+    c1.seal();
+    Configuration c2 = newConfiguration();
+    final Set evts = new HashSet();
+    c2.copyFrom(c1,
+		new Configuration.ParamCopyEvent() {
+		  public void paramCopied(String name, String val){
+		    evts.add(ListUtil.list(name, val));
+		  }
+		});
+    assertEquals(SetUtil.set(ListUtil.list("a", "1"),
+			     ListUtil.list("b", "2"),
+			     ListUtil.list("b.x", "3")), evts);
+    assertEquals(3, c2.keySet().size());
+    assertEquals("1", c2.get("a"));
+    assertEquals("2", c2.get("b"));
+    assertFalse(c2.isSealed());
+    c2.put("a", "cc");
+    assertEquals("cc", c2.get("a"));
+    Tdb tdb2 = c2.getTdb();
+    assertTrue(tdb1.getPluginIdsForDifferences(tdb2).isEmpty());
+    assertFalse(tdb1 == tdb2);
+  }
+
   public void testEquals() throws TdbException {
     // ensure configuration always equal to itself
     Configuration c1 = newConfiguration();
@@ -335,6 +365,15 @@ public class TestConfiguration extends LockssTestCase {
   }
 
   enum TestEnum {x, Y, zZ};
+
+  public void testGetNonEmpty() throws Exception {
+    Configuration config = newConfiguration();
+    config.put("foo", "x");
+    config.put("bar", "");
+    assertEquals("x", config.getNonEmpty("foo"));
+    assertNull("x", config.getNonEmpty("bar"));
+    assertNull("x", config.getNonEmpty("nokey"));
+  }
 
   public void testGetEnum() throws Exception {
     Configuration config = newConfiguration();

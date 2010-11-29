@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.10 2005-10-11 05:43:31 tlipkis Exp $
+ * $Id: ConfigCache.java,v 1.11 2010-11-29 07:24:33 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,12 @@ public class ConfigCache {
     Logger.getLoggerWithInitialLevel("ConfigCache",
 				     Logger.getInitialDefaultLevel());
 
+  private ConfigManager configMgr;
   private Map m_configMap = new HashMap();
+
+  public ConfigCache(ConfigManager configMgr) {
+    this.configMgr = configMgr;
+  }
 
   /**
    * Return the existing ConfigFile for the url or file, if any, else null
@@ -66,14 +71,17 @@ public class ConfigCache {
     if (cf == null) {
       // doesn't yet exist in the cache, add it.
       log.debug2("Adding " + url);
+      BaseConfigFile bcf;
       if (UrlUtil.isHttpUrl(url)) {
-	cf = new HTTPConfigFile(url);
+	bcf = new HTTPConfigFile(url);
       } else if (UrlUtil.isJarUrl(url)) {
-	cf = new JarConfigFile(url);
+	bcf = new JarConfigFile(url);
       } else {
-	cf = new FileConfigFile(url);
+	bcf = new FileConfigFile(url);
       }
-      m_configMap.put(url, cf);
+      bcf.setConfigManager(configMgr);
+      m_configMap.put(url, bcf);
+      cf = bcf;
     }
     return cf;
   }

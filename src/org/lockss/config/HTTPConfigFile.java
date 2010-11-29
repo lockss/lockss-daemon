@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.14 2010-10-02 22:24:57 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.15 2010-11-29 07:24:33 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class HTTPConfigFile extends BaseConfigFile {
   /** Amount of time the daemon will wait to receive data on an open
    * connection to the property server. */
   public static final long DEFAULT_CONNECT_TIMEOUT = 1 * Constants.MINUTE;
+
   public static final String PARAM_DATA_TIMEOUT = PREFIX + "timeout.data";
   public static final long DEFAULT_DATA_TIMEOUT = 10 * Constants.MINUTE;
 
@@ -88,7 +89,14 @@ public class HTTPConfigFile extends BaseConfigFile {
 						    DEFAULT_CONNECT_TIMEOUT));
     connPool.setDataTimeout(conf.getTimeInterval(PARAM_DATA_TIMEOUT,
 						 DEFAULT_DATA_TIMEOUT));
-    return UrlUtil.openConnection(url, connPool);
+    LockssUrlConnection conn = UrlUtil.openConnection(url, connPool);
+    if (m_cfgMgr != null) {
+      LockssSecureSocketFactory fact = m_cfgMgr.getSecureSocketFactory();
+      if (fact != null) {
+	conn.setSecureSocketFactory(fact);
+      }
+    }
+    return conn;
   }
 
   /** Don't check for new file on every load, only when asked.
@@ -102,6 +110,26 @@ public class HTTPConfigFile extends BaseConfigFile {
    * if-modified-since behavior.
    */
   private InputStream getUrlInputStream(String url)
+      throws IOException, MalformedURLException {
+    try {
+      return getUrlInputStream0(url);
+    } catch (javax.net.ssl.SSLHandshakeException e) {
+      m_loadError = "Could not authenticate server: " + e.getMessage();
+      throw new IOException(m_loadError, e);
+    } catch (javax.net.ssl.SSLKeyException e) {
+      m_loadError = "Could not authenticate; bad client or server key: "
+	+ e.getMessage();
+      throw new IOException(m_loadError, e);
+    } catch (javax.net.ssl.SSLPeerUnverifiedException e) {
+      m_loadError = "Could not verify server identity: " + e.getMessage();
+      throw new IOException(m_loadError, e);
+    } catch (javax.net.ssl.SSLException e) {
+      m_loadError = "Error negotiating SSL seccion: " + e.getMessage();
+      throw new IOException(m_loadError, e);
+    }
+  }
+
+  private InputStream getUrlInputStream0(String url)
       throws IOException, MalformedURLException {
     InputStream in = null;
     LockssUrlConnection conn = openUrlConnection(url);
