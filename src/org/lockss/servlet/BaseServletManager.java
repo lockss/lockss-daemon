@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.30 2010-07-21 06:09:23 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.30.2.1 2010-11-29 06:35:18 tlipkis Exp $
  */
 
 /*
@@ -199,7 +199,6 @@ public abstract class BaseServletManager
   protected String formLoginUrl = DEFAULT_FORM_LOGIN_URL;
   protected String formLoginErrorUrl = DEFAULT_FORM_LOGIN_ERROR_URL;
   protected Authenticator authenticator;
-  protected SecurityConstraint sslConstraint = null;
 
   private String _403Msg;
 
@@ -382,25 +381,17 @@ public abstract class BaseServletManager
 	listener = lsl;
 
 	if (sslRedirFromPort > 0) {
+	  // Setup redirect from insecure port
 	  log.debug("redir from: " + sslRedirFromPort);
 	  SocketListener redirListener =
 	    new SocketListener(new org.mortbay.util.InetAddrPort(sslRedirFromPort));
 	  redirListener.setIntegralPort(port);
 // 	  redirListener.setConfidentialPort(port);
 	  server.addListener(redirListener);
-
-	  SecurityConstraint sc = new SecurityConstraint();
-//  	  sc.setAuthenticate(true);
-	  sc.setDataConstraint(SecurityConstraint.DC_INTEGRAL);
-// 	  sc.setDataConstraint(SecurityConstraint.DC_CONFIDENTIAL);
-	  sc.setName("redir");
-	  sc.addRole("*");
-	  sslConstraint = sc;
 	}
       } else {
 	listener = new SocketListener(new org.mortbay.util.InetAddrPort(port));
       }
-//       listener.setHttpServer(server);
       server.addListener(listener);
 
       setupAuthRealm();
@@ -419,9 +410,6 @@ public abstract class BaseServletManager
   // doesn't add AuthHandler as not all contexts want it
   HttpContext makeContext(HttpServer server, String path) {
     HttpContext context = server.getContext(path);
-    if (sslConstraint != null) {
-      context.addSecurityConstraint("/", sslConstraint);
-    }
     context.setAttribute(HttpContext.__ErrorHandler,
 			 new LockssErrorHandler("daemon")); 
     context.setAttribute(CONTEXT_ATTR_LOCKSS_APP, theApp);
@@ -544,8 +532,8 @@ public abstract class BaseServletManager
 	context.setAuthenticator(new BasicAuthenticator());
 	context.addHandler(new SecurityHandler());
 	context.addSecurityConstraint("/",
-				      new SecurityConstraint(mi.serverName,
-							     "*"));
+				      newSecurityConstraint(mi.serverName,
+							    "*"));
 	break;
       case Form:
 	log.info(mi.serverName + ", " + context.getName() + ": Using form auth");
@@ -556,13 +544,22 @@ public abstract class BaseServletManager
 	  fa.setMaxInactivity(maxLoginInactivity);
 	}
 	context.addSecurityConstraint("/",
-				      new SecurityConstraint(mi.serverName,
-							     "*"));
+				      newSecurityConstraint(mi.serverName,
+							    "*"));
 	context.setAuthenticator(fa);
 	break;
       }
       authenticator = 	context.getAuthenticator();
     }
+  }
+
+  SecurityConstraint newSecurityConstraint(String name, String role) {
+    SecurityConstraint sc = new SecurityConstraint(name, role);
+    if (useSsl) {
+      // Ensure all contexts insist on appropriate security
+      sc.setDataConstraint(SecurityConstraint.DC_INTEGRAL);
+    }
+    return sc;
   }
 
   WebApplicationHandler makeWebAppHandler(HttpContext context) {
