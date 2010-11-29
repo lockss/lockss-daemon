@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.13 2010-03-14 08:09:03 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.13.8.1 2010-11-29 06:36:47 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     shutdownOutputSupported = false;
     setupKeyStore();
     MockLockssDaemon daemon = getMockLockssDaemon();
-    RandomManager rmgr = new MyRandomManager();
+    RandomManager rmgr = new TestingRandomManager();
     rmgr.initService(daemon);
     daemon.setRandomManager(rmgr);
     
@@ -437,27 +437,6 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 				      PARAM_SSL_KEYSTORE_NAME, "cks2");
     isCheckSocketType = false;
     testClientAuth(p1, p2, false);
-  }
-
-  // Set the seed of all SecureRandom instances.  These tests create lots
-  // of instances; if each one generates its own seed the kernel's entropy
-  // pool (/dev/random) gets exhausted and the tests block while more is
-  // collected.  This can take several minutes on an otherwise idle
-  // machine.
-  // Successive seeds are obtained from a regular LockssRandom.  Using a
-  // constant seed triggers an NPE in SSLSessionContextImpl; if every
-  // SecureRandom instance produces the same sequence of bytes, duplicate
-  // session keys result, causing collisions in the sessionCache.
-
-  class MyRandomManager extends RandomManager {
-    LockssRandom lrand = new LockssRandom();
-    byte[] rseed = new byte[4];
-
-    @Override
-    protected void initRandom(SecureRandom rng) {
-      lrand.nextBytes(rseed);
-      rng.setSeed(rseed);
-    }
   }
 
   // Run all tests in TestBlockingStreamComm, with SSL enabled

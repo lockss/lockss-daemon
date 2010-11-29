@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.98 2010-06-22 08:58:58 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.98.4.1 2010-11-29 06:36:46 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import java.security.SecureRandom;
 
 import junit.framework.*;
 
@@ -45,6 +46,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.*;
 import org.lockss.util.ArrayIterator;
+import org.lockss.daemon.RandomManager;
 
 
 public class LockssTestCase extends TestCase {
@@ -1769,4 +1771,27 @@ public class LockssTestCase extends TestCase {
       }
     }
   }
+
+  /** A RandomManager that doesn't consume kernel randomness.  Some tests
+   * create lots of instances; if each one generates its own seed the
+   * kernel's entropy pool (/dev/random) gets exhausted and the tests block
+   * while more is collected.  This can take several minutes on an
+   * otherwise idle machine. */
+
+  // Successive seeds are obtained from a regular LockssRandom.  Using a
+  // constant seed triggers an NPE in SSLSessionContextImpl; if every
+  // SecureRandom instance produces the same sequence of bytes, duplicate
+  // session keys result, causing collisions in the sessionCache.
+
+  public static class TestingRandomManager extends RandomManager {
+    LockssRandom lrand = new LockssRandom();
+    byte[] rseed = new byte[4];
+
+    @Override
+    protected void initRandom(SecureRandom rng) {
+      lrand.nextBytes(rseed);
+      rng.setSeed(rseed);
+    }
+  }
+
 }
