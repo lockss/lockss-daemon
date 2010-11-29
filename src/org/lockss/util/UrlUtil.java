@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.53 2010-05-04 23:34:40 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.54 2010-11-29 07:26:03 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -295,7 +295,7 @@ public class UrlUtil {
 
   /** Return the default port for the (already lowercase) protocol */
   // 1.3 URL doesn't expose this
-  static int getDefaultPort(String protocol) {
+  public static int getDefaultPort(String protocol) {
     if ("http".equals(protocol)) return 80;
     if ("https".equals(protocol)) return 443;
     if ("ftp".equals(protocol)) return 21;
@@ -1028,7 +1028,8 @@ public class UrlUtil {
 	} else {
 	  client = new HttpClient();
 	}
-	luc = new HttpClientUrlConnection(methodCode, urlString, client);
+	luc = new HttpClientUrlConnection(methodCode, urlString, client,
+					  connectionPool);
       } else {
 	luc = new JavaHttpUrlConnection(urlString);
       }

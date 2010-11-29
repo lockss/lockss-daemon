@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.12 2008-09-14 22:10:28 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.13 2010-11-29 07:26:03 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -88,6 +88,12 @@ public interface LockssUrlConnection {
    * @throws UnsupportedOperationException if canProxy() returns false
    */
   public void setProxy(String host, int port) throws CantProxyException ;
+
+  /** Set the ProtocolSocketFactory to be used with this connection */
+  public void setSecureSocketFactory(LockssSecureSocketFactory sockFact);
+
+  /** Return true iff the server is authenticated */
+  public boolean isAuthenticatedServer();
 
   /** Set the local address to be used when creating connections. */
   public void setLocalAddress(IPAddr localAddress);
