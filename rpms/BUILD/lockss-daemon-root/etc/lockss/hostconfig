@@ -381,6 +381,19 @@ build_config_file () {
         fi
         ask_for_input "Configuration URL" ${LOCKSS_PROPS_URL}
         LOCKSS_PROPS_URL="${ANS}"
+
+        if echo ${LOCKSS_PROPS_URL} | egrep -is "^https:" >/dev/null; then
+	    if [ "X${LOCKSS_PROPS_AUTHENTICATE_SERVER}" = X ]; then
+		LOCKSS_PROPS_AUTHENTICATE_SERVER="Y"
+            fi
+            ask_for_input "Verify configuration server authenticity?" ${LOCKSS_PROPS_AUTHENTICATE_SERVER}
+	    if is_yes "${ANS}" ; then
+		LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE="lockss-ca"
+	    else
+		unset LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE
+	    fi
+	fi
+
         if [ "X${LOCKSS_PROPS_PROXY}" = X ]; then
             LOCKSS_PROPS_PROXY="NONE"
         fi
@@ -448,6 +461,7 @@ LOCKSS_JAVA_CMD=${LOCKSS_JAVA_CMD}
 LOCKSS_JAVA_SWITCHES=${LOCKSS_JAVA_SWITCHES}
 LOCKSS_PROPS_URL="${LOCKSS_PROPS_URL}"
 LOCKSS_PROPS_PROXY="${LOCKSS_PROPS_PROXY}"
+LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE="${LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE}"
 LOCKSS_TEST_GROUP="${LOCKSS_TEST_GROUP}"
 LOCKSS_DISK_PATHS="${LOCKSS_DISK_PATHS}"
 LOCKSS_ADMIN_USER=${LOCKSS_ADMIN_USER}
