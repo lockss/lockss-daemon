@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStoreManager.java,v 1.4 2010-03-27 03:08:11 tlipkis Exp $
+ * $Id: TestLockssKeyStoreManager.java,v 1.5 2010-11-29 07:25:09 tlipkis Exp $
  */
 
 /*
@@ -171,7 +171,24 @@ public class TestLockssKeyStoreManager extends LockssTestCase {
     assertEquals(LocationType.File, lk4.getLocationType());
     assertEquals("filename4", lk4.getLocation());
     assertTrue(lk4.getMayCreate());
+  }
 
+  public void testMissingKeystore() throws Exception {
+    Properties p = new Properties();
+    addKsProp(p, "KS1", PASSWD1, KEY_PASSWD1);
+    p.put(ksprefix("KS1") + KEYSTORE_PARAM_FILE, "no-such-file.notakeystore");
+    p.put(PARAM_EXIT_IF_MISSING_KEYSTORE, "false");
+
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    LockssKeyStoreManager keystoreMgr =
+      getMockLockssDaemon().getKeystoreManager();
+    keystoreMgr.startService();
+    assertNull(keystoreMgr.getLockssKeyStore("KS1"));
+    try {
+      keystoreMgr.getLockssKeyStore("KS1", "CriticalServiceName");
+      fail("Getting non-existent criticl keystore shouldthrow");
+    } catch (IllegalArgumentException e) {
+    }
   }
 
   static class MyLockssKeyStoreManager extends LockssKeyStoreManager {

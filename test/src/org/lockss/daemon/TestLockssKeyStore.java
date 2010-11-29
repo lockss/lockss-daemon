@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssKeyStore.java,v 1.8 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestLockssKeyStore.java,v 1.9 2010-11-29 07:25:09 tlipkis Exp $
  */
 
 /*
@@ -347,4 +347,34 @@ public class TestLockssKeyStore extends LockssTestCase {
 		       aliases);
   }
 
+  public void testEquals() throws Exception {
+    LockssKeyStore lkp1 = createFromProp("lkone", "filename",
+					"pass", "pass42");
+    LockssKeyStore lkp1a = createFromProp("lkone", "filename",
+					  "pass", "pass42");
+    LockssKeyStore lkf1 = createFromFile("lkone", "filename",
+					 "pass", "pass42");
+    LockssKeyStore lkf1a = createFromFile("lkone", "filename",
+					 "pass", "pass42");
+    LockssKeyStore lkr1 = createFromResource("lkone", "filename",
+					     "pass", "pass42");
+    LockssKeyStore lkr1a = createFromResource("lkone", "filename",
+					      "pass", "pass42");
+    assertEquals(lkp1, lkp1a);
+    assertEquals(lkf1, lkf1a);
+    assertEquals(lkr1, lkr1a);
+    assertNotEquals(lkp1, lkf1);
+    assertNotEquals(lkp1, lkr1);
+    assertNotEquals(lkf1, lkr1);
+    lkp1a.setPassword("foo");
+    assertNotEquals(lkp1, lkp1a);
+    lkp1a.setPassword("pass");
+    assertEquals(lkp1, lkp1a);
+    lkp1a.setKeyPassword("foo");
+    assertNotEquals(lkp1, lkp1a);
+    lkp1a.setKeyPassword("pass42");
+    assertEquals(lkp1, lkp1a);
+    lkp1a.setLocation("newloc", lkp1a.getLocationType());
+    assertNotEquals(lkp1, lkp1a);
+  }
 }
