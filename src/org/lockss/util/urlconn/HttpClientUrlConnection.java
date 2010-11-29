@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.31 2010-02-22 07:04:27 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.31.8.1 2010-11-29 06:36:23 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.io.*;
+import java.net.URL;
 import java.util.Properties;
 
 import org.apache.commons.httpclient.*;
@@ -38,7 +39,7 @@ import org.apache.commons.httpclient.auth.*;
 import org.apache.commons.httpclient.cookie.CookiePolicy;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.params.*;
-import org.apache.commons.httpclient.protocol.Protocol;
+import org.apache.commons.httpclient.protocol.*;
 import org.apache.commons.httpclient.util.*;
 
 import org.lockss.config.*;
@@ -62,12 +63,18 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   static final String PARAM_USE_PREEMPTIVE_AUTH = PREFIX + "usePreemptiveAuth";
   static final boolean DEFAULT_USE_PREEMPTIVE_AUTH = true;
 
-  // Set up an SSL protocol factory that accepts self-signed certificates
+  // Set up a flexible SSL protocol factory.  It doesn't work to set the
+  // Protocol in the HostConfiguration - HttpClient.executeMethod()
+  // overwrites it.  So we must communicate the per-host policies to a
+  // global factory.
+  static DispatchingSSLProtocolSocketFactory DISP_FACT =
+    new DispatchingSSLProtocolSocketFactory();
   static {
-    Protocol easyhttps = new Protocol("https",
-				      new EasySSLProtocolSocketFactory(),
-				      443);
-    Protocol.registerProtocol("https", easyhttps);
+    Protocol proto = new Protocol("https", DISP_FACT, 443);
+    Protocol.registerProtocol("https", proto);
+
+    SecureProtocolSocketFactory easyFact = new EasySSLProtocolSocketFactory();
+    DISP_FACT.setDefaultFactory(easyFact);
   }
 
 
@@ -112,22 +119,25 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private HttpClient client;
   private HttpMethod method;
   private int methodCode;
+  private LockssUrlConnectionPool connectionPool;
   private int responseCode;
 
   /** Create a connection object, defaulting to GET method */
   public HttpClientUrlConnection(String urlString, HttpClient client)
       throws IOException {
-    this(LockssUrlConnection.METHOD_GET, urlString, client);
+    this(LockssUrlConnection.METHOD_GET, urlString, client, null);
   }
 
   /** Create a connection object, with specified method */
   public HttpClientUrlConnection(int methodCode, String urlString,
-				 HttpClient client)
+				 HttpClient client,
+				 LockssUrlConnectionPool connectionPool)
       throws IOException {
     this.urlString = urlString;
     this.client = client != null ? client : new HttpClient();
     this.methodCode = methodCode;
     method = createMethod(methodCode, urlString);
+    this.connectionPool = connectionPool;
   }
 
   private HttpMethod createMethod(int methodCode, String urlString)
@@ -186,6 +196,21 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
     if (localAddress != null) {
       hostConfig.setLocalAddress(localAddress.getInetAddr());
+    }
+    if (sockFact != null) {
+      SecureProtocolSocketFactory hcSockFact =
+	sockFact.getHttpClientSecureProtocolSocketFactory();
+      URL url = new URL(urlString);
+      String host = url.getHost();
+      int port = url.getPort();
+      if (port <= 0) {
+	port = UrlUtil.getDefaultPort(url.getProtocol().toLowerCase());
+      }
+      DISP_FACT.setFactory(host, port, hcSockFact);
+      // XXX Would like to check after connection is made that cert check
+      // was actually done, but there's no good way to get to the socket or
+      // SSLContect, etc.
+      isAuthenticatedServer = sockFact.requiresServerAuth();
     }
     isExecuted = true;
     responseCode = executeOnce(method);
@@ -257,6 +282,10 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       HttpClientParams params = client.getParams();
       params.setAuthenticationPreemptive(true);
     }
+  }
+
+  HttpClient getClient() {
+    return client;
   }
 
   public String getResponseHeaderFieldVal(int n) {

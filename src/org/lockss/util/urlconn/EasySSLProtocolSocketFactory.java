@@ -1,5 +1,5 @@
 /*
- * $Id: EasySSLProtocolSocketFactory.java,v 1.2 2009-09-03 00:53:39 tlipkis Exp $
+ * $Id: EasySSLProtocolSocketFactory.java,v 1.2.16.1 2010-11-29 06:36:23 tlipkis Exp $
  */
 /*
 
@@ -126,6 +126,9 @@ import org.lockss.daemon.*;
 
 public class EasySSLProtocolSocketFactory implements SecureProtocolSocketFactory {
 
+    public static EasySSLProtocolSocketFactory INSTANCE =
+      new EasySSLProtocolSocketFactory();
+
     /** Log object for this class. */
     private static final Log LOG = LogFactory.getLog(EasySSLProtocolSocketFactory.class);
 
@@ -139,20 +142,25 @@ public class EasySSLProtocolSocketFactory implements SecureProtocolSocketFactory
     }
 
     private static SSLContext createEasySSLContext() {
-        try {
-	    RandomManager rmgr =
-	      LockssDaemon.getLockssDaemon().getRandomManager();
-	    SecureRandom rng = rmgr.getSecureRandom();
-            SSLContext context = SSLContext.getInstance("SSL");
-            context.init(
-              null, 
-              new TrustManager[] {new EasyX509TrustManager(null)}, 
-              rng);
-            return context;
-        } catch (Exception e) {
-            LOG.error(e.getMessage(), e);
-            throw new HttpClientError(e.toString());
-        }
+      try {
+	LockssDaemon daemon = LockssDaemon.getLockssDaemon();
+	SecureRandom rng;
+	if (daemon.isDaemonRunning()) {
+	  RandomManager rmgr = daemon.getRandomManager();
+	  rng = rmgr.getSecureRandom();
+	} else {
+	  rng = SecureRandom.getInstance(RandomManager.DEFAULT_SECURE_RANDOM_ALGORITHM,
+					 RandomManager.DEFAULT_SECURE_RANDOM_PROVIDER);
+	}
+	SSLContext context = SSLContext.getInstance("SSL");
+	context.init(null, 
+		     new TrustManager[] {new EasyX509TrustManager(null)}, 
+		     rng);
+	return context;
+      } catch (Exception e) {
+	LOG.error(e.getMessage(), e);
+	throw new HttpClientError(e.toString());
+      }
     }
 
     private SSLContext getSSLContext() {

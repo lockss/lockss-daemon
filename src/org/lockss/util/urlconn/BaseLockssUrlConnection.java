@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.9 2008-09-14 22:10:28 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.9.30.1 2010-11-29 06:36:23 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -31,12 +31,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util.urlconn;
 
 import java.util.*;
-import java.io.*;
-import java.net.*;
 import java.text.*;
 import org.lockss.util.*;
-import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.methods.*;
 
 /** Common functionality for implementations of LockssUrlConnection */
 public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
@@ -47,6 +43,8 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
   protected String proxyHost = null;
   protected int proxyPort;
   protected IPAddr localAddress = null;
+  protected LockssSecureSocketFactory sockFact = null;
+  protected boolean isAuthenticatedServer = false;
 
   /** Return the URL
    * @return the URL
@@ -80,6 +78,15 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
     assertNotExecuted();
     proxyHost = host;
     proxyPort = port;
+  }
+
+  public void setSecureSocketFactory(LockssSecureSocketFactory sockFact) {
+    assertNotExecuted();
+    this.sockFact = sockFact;
+  }
+
+  public boolean isAuthenticatedServer() {
+    return isAuthenticatedServer;
   }
 
   public void setLocalAddress(IPAddr localAddress) {

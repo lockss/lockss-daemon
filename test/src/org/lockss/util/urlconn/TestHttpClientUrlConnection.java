@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.19 2010-02-22 07:04:26 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.19.8.1 2010-11-29 06:36:23 tlipkis Exp $
  */
 
 /*
@@ -184,6 +184,18 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     hdr = method.getRequestHeader("accept");
     assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
 
+  }
+
+  public void testProtocolSocketFactory() throws Exception {
+    client.setRes(201);
+    conn.execute();
+    assertTrue(conn.isExecuted());
+    assertEquals(201, conn.getResponseCode());
+    Header hdr;
+    hdr = method.getRequestHeader("connection");
+    assertEquals("keep-alive", hdr.getValue());
+    hdr = method.getRequestHeader("accept");
+    assertEquals(HttpClientUrlConnection.ACCEPT_STRING, hdr.getValue());
   }
 
   public void testResponseStream() throws Exception {
