@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.8 2010-05-04 03:36:51 tlipkis Exp $
+ * $Id: BaseConfigFile.java,v 1.8.6.1 2010-11-29 06:33:48 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.util.urlconn.*;
 public abstract class BaseConfigFile implements ConfigFile {
   protected static Logger log = Logger.getLogger("ConfigFile");
 
+  protected ConfigManager m_cfgMgr;
   protected int m_fileType;
   protected String m_lastModified;
   // FileConfigFile assumes the url doesn't change
@@ -71,6 +72,10 @@ public abstract class BaseConfigFile implements ConfigFile {
     }
     m_fileUrl = url;
     m_isPlatformFile = StringUtil.endsWithIgnoreCase(m_fileUrl, "local.txt");
+  }
+
+  void setConfigManager(ConfigManager configMgr) {
+    m_cfgMgr = configMgr;
   }
 
   public String getFileUrl() {
@@ -171,7 +176,7 @@ public abstract class BaseConfigFile implements ConfigFile {
       m_loadError = ex.toString();
       throw ex;
     } catch (IOException ex) {
-      log.warning("Unexpected exception loading " + m_fileUrl + ": " + ex);
+      log.warning("Exception loading " + m_fileUrl + ": " + ex);
       m_IOException = ex;
       if (m_loadError == null ||
 	  !StringUtil.equalStrings(ex.getMessage(), m_loadError)) {

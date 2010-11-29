@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigCache.java,v 1.6 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: TestConfigCache.java,v 1.6.92.1 2010-11-29 06:33:48 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestConfigCache extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    cache = new ConfigCache();
+    cache = new ConfigCache(null);
   }
 
   /*

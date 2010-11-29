@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.15 2010-03-25 07:35:29 tlipkis Exp $
+ * $Id: ConfigDump.java,v 1.15.6.1 2010-11-29 06:33:48 tlipkis Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class ConfigDump {
     if (quiet) {
       for (String url : configUrls) {
 	try {
-	  ConfigCache configCache = new ConfigCache();
+	  ConfigCache configCache = new ConfigCache(null);
 	  ConfigFile cf = configCache.find(url);
 	  log.debug(url);
 	  cf.getConfiguration();

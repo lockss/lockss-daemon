@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.11 2010-04-07 19:18:39 pgust Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.11.6.1 2010-11-29 06:33:48 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,17 @@ public class ConfigurationPropTreeImpl extends Configuration {
 
   public String get(String key) {
     return (String)props.get(key);
+  }
+
+  /** Return the config value associated with <code>key</code>, returning
+   * null in place of the empty string.
+   */
+  public String getNonEmpty(String key) {
+    String val = get(key);
+    if (StringUtil.isNullString(val)) {
+      val = null;
+    }
+    return val;
   }
 
   /**

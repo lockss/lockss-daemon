@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.75 2010-06-17 18:47:33 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.75.4.1 2010-11-29 06:33:48 tlipkis Exp $
  */
 
 /*
@@ -34,11 +34,12 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
-import java.net.URL;
+import java.net.*;
 
 import org.apache.commons.collections.Predicate;
 import org.apache.commons.lang.StringUtils;
 import org.apache.oro.text.regex.*;
+
 import org.lockss.app.*;
 import org.lockss.account.*;
 import org.lockss.clockss.*;
@@ -73,6 +74,31 @@ public class ConfigManager implements LockssManager {
   /** host:port of proxy to use to fetch props (config); not set for direct
    * connection.  */
   public static final String PARAM_PROPS_PROXY = PLATFORM + "propsProxy";
+
+  /** If set, the authenticity of the config server will be checked.  The
+   * value is the name of the keystore (defined by additional
+   * <tt>org.lockss.keyMgr.keystore.&lt;id&gt;.xxx</tt> parameters (see
+   * {@link org.lockss.daemon.LockssKeyStoreManager}), or
+   * <tt>&quot;lockss-ca&quot;</tt>, to use the builtin keystore containing
+   * the LOCKSS signing cert.  Can only be set in platform config. */
+  public static final String PARAM_SERVER_AUTH_KEYSTORE_NAME =
+    MYPREFIX + "serverAuthKeystore";
+
+  /** If set, the daemon will authenticate itself to the config server
+   * using this keystore.  The value is the name of the keystore (defined
+   * by additional <tt>org.lockss.keyMgr.keystore.&lt;id&gt;.xxx</tt>
+   * parameters (see {@link org.lockss.daemon.LockssKeyStoreManager}), or
+   * <tt>&quot;lockss-ca&quot;</tt>, to use the builtin keystore containing
+   * the LOCKSS signing cert.  Can only be set in platform config. */
+  public static final String PARAM_CLIENT_AUTH_KEYSTORE_NAME =
+    MYPREFIX + "clientAuthKeystore";
+
+  /** Resource name of default keystore to use to check authenticity of the
+   * config server */
+  static final String DEFAULT_SERVER_AUTH_KEYSTORE_RESOURCE =
+    "org/lockss/config/lockss-ca.keystore";
+
+  static final String INTERNAL_SERVER_AUTH_KEYSTORE_NAME = "lockss-ca";
 
   static final String PARAM_SEND_VERSION_EVERY = MYPREFIX + "sendVersionEvery";
   static final long DEFAULT_SEND_VERSION_EVERY = 1 * Constants.DAY;
@@ -114,6 +140,12 @@ public class ConfigManager implements LockssManager {
   /** List of URLs of auxilliary config files */
   public static final String PARAM_AUX_PROP_URLS =
     Configuration.PREFIX + "auxPropUrls";
+
+  /** Parameters whose values are more prop URLs */
+  static final Set URL_PARAMS =
+    SetUtil.set(PARAM_USER_TITLE_DB_URLS,
+		PARAM_TITLE_DB_URLS,
+		PARAM_AUX_PROP_URLS);
 
   /** Tmp dir appropriate for platform.  If set, replaces java.io.tmpdir
    * System property */
@@ -271,7 +303,8 @@ public class ConfigManager implements LockssManager {
 
   /** Allow only params below o.l.title and o.l.titleSet .  For use with
    * title DB files */
-  static final String PREFIX_TITLE_SETS_DOT = PluginManager.PARAM_TITLE_SETS + ".";
+  static final String PREFIX_TITLE_SETS_DOT =
+    PluginManager.PARAM_TITLE_SETS + ".";
 
   KeyPredicate titleDbOnlyPred = new KeyPredicate() {
       public boolean evaluate(Object obj) {
@@ -385,11 +418,17 @@ public class ConfigManager implements LockssManager {
   private List userTitledbUrlList;	// titledb urls added from UI
   private String groupNames;		// daemon group names
 
+  // Maps name of params holding included config URLs to the URL of the
+  // file in which it was set, to facilitate relative URL resolution
+  private Map<String,String> urlParamFile = new HashMap<String,String>();
+
   private String recentLoadError;
 
   // Platform config
   private static Configuration platformConfig =
     ConfigManager.EMPTY_CONFIGURATION;
+  // Config of keystore used for loading configs.
+  private Configuration platKeystoreConfig;
 
   // Current configuration instance.
   // Start with an empty one to avoid errors in the static accessors.
@@ -399,9 +438,10 @@ public class ConfigManager implements LockssManager {
 
   private HandlerThread handlerThread; // reload handler thread
 
-  private ConfigCache configCache = new ConfigCache();
+  private ConfigCache configCache;
   private volatile boolean needImmediateReload = false;
   private LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
+  private LockssSecureSocketFactory secureSockFact;
 
   private long reloadInterval = 10 * Constants.MINUTE;
   private long sendVersionEvery = DEFAULT_SEND_VERSION_EVERY;
@@ -423,6 +463,7 @@ public class ConfigManager implements LockssManager {
       configUrlList = new ArrayList(urls);
     }
     this.groupNames = groupNames;
+    configCache = new ConfigCache(this);
     registerConfigurationCallback(Logger.getConfigCallback());
     registerConfigurationCallback(MiscConfig.getConfigCallback());
   }
@@ -458,7 +499,7 @@ public class ConfigManager implements LockssManager {
     cacheConfigInited = false;
     cacheConfigDir = null;
     // Reset the config cache.
-    configCache = new ConfigCache();
+    configCache = null;
     stopHandler();
     haveConfig = new OneShotSemaphore();
   }
@@ -982,12 +1023,20 @@ public class ConfigManager implements LockssManager {
     return sb.toString();
   }
 
-
-  void loadList(Configuration intoConfig, Collection gens) {
-    for (Iterator iter = gens.iterator(); iter.hasNext(); ) {
-      ConfigFile.Generation gen = (ConfigFile.Generation)iter.next();
+  void loadList(Configuration intoConfig,
+		Collection<ConfigFile.Generation> gens) {
+    for (final ConfigFile.Generation gen : gens) {
       if (gen != null) {
-	intoConfig.copyFrom(gen.getConfig());
+	// Remember the URL of the file in which any parameter whose value
+	// might be a (list of) relative URL(s) is found
+	intoConfig.copyFrom(gen.getConfig(),
+			    new Configuration.ParamCopyEvent() {
+			      public void paramCopied(String name, String val){
+				if (URL_PARAMS.contains(name)) {
+				  urlParamFile.put(name, gen.getUrl());
+				}
+			      }
+			    });
       }
     }
   }
@@ -1004,6 +1053,9 @@ public class ConfigManager implements LockssManager {
       }
       if (cf.isPlatformFile()) {
 	try {
+	  if (log.isDebug3()) {
+	    log.debug3("Loading platform file: " + cf);
+	  }
 	  cf.setNeedsReload();
 	  platConfig.load(cf);
 	} catch (IOException e) {
@@ -1011,12 +1063,57 @@ public class ConfigManager implements LockssManager {
 	}
       }
     }
+    // init props keystore before sealing, as it may add to the config
+    initSocketFactory(platConfig);
+
     // do this even if no local.txt, to ensure platform-like params (e.g.,
     // group) in initial config get into platformConfig even during testing.
     platConfig.seal();
     platformConfig = platConfig;
   }
 
+  // If a keystore was specified for 
+  void initSocketFactory(Configuration platconf) {
+    String serverAuthKeystore =
+      platconf.getNonEmpty(PARAM_SERVER_AUTH_KEYSTORE_NAME);
+    if (serverAuthKeystore != null) {
+      if (INTERNAL_SERVER_AUTH_KEYSTORE_NAME.equals(serverAuthKeystore)) {
+	platKeystoreConfig = newConfiguration();
+	String pref =
+	  LockssKeyStoreManager.PARAM_KEYSTORE +
+	  "." + sanitizeName(serverAuthKeystore) + ".";
+	platKeystoreConfig.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_NAME,
+			       serverAuthKeystore);
+	platKeystoreConfig.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_RESOURCE,
+			       DEFAULT_SERVER_AUTH_KEYSTORE_RESOURCE);
+	platconf.copyFrom(platKeystoreConfig);
+      }
+    }
+    String clientAuthKeystore =
+      platconf.getNonEmpty(PARAM_CLIENT_AUTH_KEYSTORE_NAME);
+    if (serverAuthKeystore != null || clientAuthKeystore != null) {
+      log.debug("initSocketFactory: " + serverAuthKeystore +
+		", " + clientAuthKeystore);
+      secureSockFact = new LockssSecureSocketFactory(serverAuthKeystore,
+						     clientAuthKeystore);
+    }
+  }
+
+  LockssSecureSocketFactory getSecureSocketFactory() {
+    return secureSockFact;
+  }
+
+  String sanitizeName(String name) {
+    name = name.toLowerCase();
+    StringBuilder sb = new StringBuilder();
+    for (int ix = 0; ix < name.length(); ix++) {
+      char ch = name.charAt(ix);
+      if (Character.isJavaIdentifierPart(ch)) {
+	sb.append(ch);
+      }
+    }
+    return sb.toString();
+  }
 
   // used by testing utilities
   boolean installConfig(Configuration newConfig) {
@@ -1076,6 +1173,7 @@ public class ConfigManager implements LockssManager {
     if (changedKeys.contains(PARAM_PLATFORM_VERSION)) {
       platVer = null;
     }
+
     // check for presence of title db url keys on first load, as
     // changedKeys.containsKey() is true of all keys then and would lead to
     // always reloading the first time.
@@ -1086,14 +1184,42 @@ public class ConfigManager implements LockssManager {
 	: (changedKeys.contains(PARAM_USER_TITLE_DB_URLS)
 	   || changedKeys.contains(PARAM_TITLE_DB_URLS)
 	   || changedKeys.contains(PARAM_AUX_PROP_URLS))) {
-      userTitledbUrlList = config.getList(PARAM_USER_TITLE_DB_URLS);
-      titledbUrlList = config.getList(PARAM_TITLE_DB_URLS);
-      auxPropUrlList = config.getList(PARAM_AUX_PROP_URLS);
+      userTitledbUrlList =
+	resolveConfigUrls(config, PARAM_USER_TITLE_DB_URLS);
+      titledbUrlList = resolveConfigUrls(config, PARAM_TITLE_DB_URLS);
+      auxPropUrlList = resolveConfigUrls(config, PARAM_AUX_PROP_URLS);
       log.debug("titledbUrlList: " + titledbUrlList +
 		", userTitledbUrlList: " + userTitledbUrlList +
 		", auxPropUrlList: " + auxPropUrlList);
       // Currently this requires a(nother immediate) reload.
       needImmediateReload = true;
+    }
+  }
+
+  List<String> resolveConfigUrls(Configuration config, String param) {
+    List<String> urls = config.getList(param);
+    if (urls.isEmpty()) {
+      return urls;
+    }
+    String base = urlParamFile.get(param);
+    if (base != null) {
+      ArrayList res = new ArrayList(urls.size());
+      for (String url : urls) {
+	res.add(resolveConfigUrl(base, url));
+      }
+      return res;
+    } else {
+      log.error("URL param has no base URL: " + param);
+      return urls;
+    }
+  }
+
+  String resolveConfigUrl(String base, String configUrl) {
+    try {
+      return UrlUtil.resolveUri(base, configUrl);
+    } catch (MalformedURLException e) {
+      log.error("Malformed props base URL: " + base + ", rel: " + configUrl, e);
+      return configUrl;
     }
   }
 
@@ -1196,7 +1322,9 @@ public class ConfigManager implements LockssManager {
 
   private void copyPlatformParams(Configuration config) {
     copyPlatformVersionParams(config);
-
+    if (platKeystoreConfig != null) {
+      config.copyFrom(platKeystoreConfig);
+    }
     String logdir = config.get(PARAM_PLATFORM_LOG_DIR);
     String logfile = config.get(PARAM_PLATFORM_LOG_FILE);
     if (logdir != null && logfile != null) {
@@ -1302,9 +1430,7 @@ public class ConfigManager implements LockssManager {
     SortedSet<String> keys = new TreeSet<String>(diffSet);
     int numDiffs = keys.size();
     for (String key : keys) {
-      if (numDiffs <= 40 || log.isDebug3() ||
-	  (!key.startsWith(PARAM_TITLE_DB) &&
-	   !key.startsWith(PluginManager.PARAM_AU_TREE))) {
+      if (numDiffs <= 40 || log.isDebug3() || shouldParamBeLogged(key)) {
 	if (config.containsKey(key)) {
 	  String val = config.get(key);
 	  log.debug("  " +key + " = " + StringUtils.abbreviate(val, maxLogValLen));
@@ -1318,7 +1444,8 @@ public class ConfigManager implements LockssManager {
   }
 
   public static boolean shouldParamBeLogged(String key) {
-    return !(key.startsWith(ConfigManager.PARAM_TITLE_DB)
+    return !(key.startsWith(PREFIX_TITLE_DB)
+	     || key.startsWith(PREFIX_TITLE_SETS_DOT)
 	     || key.startsWith(PluginManager.PARAM_AU_TREE + ".")
 	     || StringUtils.endsWithIgnoreCase(key, "password"));
   }

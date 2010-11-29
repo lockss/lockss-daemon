@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.30 2010-06-14 11:21:09 pgust Exp $
+ * $Id: Configuration.java,v 1.30.4.1 2010-11-29 06:33:48 tlipkis Exp $
  */
 
 /*
@@ -194,14 +194,32 @@ public abstract class Configuration {
     return copy;
   }
 
+  interface ParamCopyEvent {
+    public void paramCopied(String name, String val);
+  }
+
   /** Copy contents of the argument into this config.  Duplicate
    *  keys will be overwritten.
+   * @other the config from which to copy
    */
   public void copyFrom(Configuration other) {
+    copyFrom(other, null);
+  }
+
+  /** Copy contents of the argument into this config.  Duplicate
+   *  keys will be overwritten.
+   * @other the config from which to copy
+   * @pse null, or an event to be called for every param copied
+   */
+  public void copyFrom(Configuration other, ParamCopyEvent pse) {
     // merge other config tree into this one
     for (Iterator iter = other.keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
-      put(key, other.get(key));
+      String val = other.get(key);
+      if (pse != null) {
+	pse.paramCopied(key, val);
+      }
+      put(key, val);
     }
     
     // merge other config Tdb into this one
@@ -324,6 +342,18 @@ public abstract class Configuration {
   public String get(String key, String dfault) {
     String val = get(key);
     if (val == null) {
+      val = dfault;
+    }
+    return val;
+  }
+
+  /** Return the config value associated with <code>key</code>.
+   * If the value is null or the empty string or the key is missing, return
+   * <code>dfault</code>.
+   */
+  public String getNonEmpty(String key, String dfault) {
+    String val = get(key);
+    if (StringUtil.isNullString(val)) {
       val = dfault;
     }
     return val;
@@ -752,6 +782,13 @@ public abstract class Configuration {
    * or its value is null.
    */
   public abstract String get(String key);
+
+  /** Return the config value associated with <code>key</code>, returning
+   * null in place of the empty string.
+   * @return the string, or null if the key is not present
+   * or its value is null or the empty string.
+   */
+  public abstract String getNonEmpty(String key);
 
   /** Set the config value associated with <code>key</code>.
    * @param key the config key
