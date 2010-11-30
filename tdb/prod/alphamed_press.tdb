@@ -14,7 +14,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://theoncologist.alphamedpress.org/
       implicit < status ; year ; name ; param[volume_name] >
 
