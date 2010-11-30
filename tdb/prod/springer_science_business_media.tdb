@@ -1116,10 +1116,51 @@
     title <
       name = Amino Acids ;
       issn = 0939-4451 ;
-      placeholder = True
+      eissn = 1438-2199
     >
 
     param[journal_issn] = 0939-4451
+    attr[where] = content3a
+
+    au < testing ; 1991 ; Amino Acids Volume 1 ; 1 >
+    au < testing ; 1992 ; Amino Acids Volume 2 ; 2 >
+    au < testing ; 1992 ; Amino Acids Volume 3 ; 3 >
+    au < testing ; 1993 ; Amino Acids Volume 4 ; 4 >
+    au < testing ; 1993 ; Amino Acids Volume 5 ; 5 >
+    au < testing ; 1994 ; Amino Acids Volume 6 ; 6 >
+    au < testing ; 1994 ; Amino Acids Volume 7 ; 7 >
+    au < testing ; 1995 ; Amino Acids Volume 8 ; 8 >
+    au < testing ; 1995 ; Amino Acids Volume 9 ; 9 >
+    au < testing ; 1996 ; Amino Acids Volume 10 ; 10 >
+    au < testing ; 1996 ; Amino Acids Volume 11 ; 11 >
+    au < testing ; 1997 ; Amino Acids Volume 12 ; 12 >
+    au < testing ; 1997 ; Amino Acids Volume 13 ; 13 >
+    au < testing ; 1998 ; Amino Acids Volume 14 ; 14 >
+    au < testing ; 1998 ; Amino Acids Volume 15 ; 15 >
+    au < testing ; 1999 ; Amino Acids Volume 16 ; 16 >
+    au < testing ; 1999 ; Amino Acids Volume 17 ; 17 >
+    au < testing ; 2000 ; Amino Acids Volume 18 ; 18 >
+    au < testing ; 2000 ; Amino Acids Volume 19 ; 19 >
+    au < testing ; 2001 ; Amino Acids Volume 20 ; 20 >
+    au < testing ; 2001 ; Amino Acids Volume 21 ; 21 >
+    au < testing ; 2002 ; Amino Acids Volume 22 ; 22 >
+    au < testing ; 2002 ; Amino Acids Volume 23 ; 23 >
+    au < testing ; 2003 ; Amino Acids Volume 24 ; 24 >
+    au < testing ; 2003 ; Amino Acids Volume 25 ; 25 >
+    au < testing ; 2004 ; Amino Acids Volume 26 ; 26 >
+    au < testing ; 2004 ; Amino Acids Volume 27 ; 27 >
+    au < testing ; 2005 ; Amino Acids Volume 28 ; 28 >
+    au < testing ; 2005 ; Amino Acids Volume 29 ; 29 >
+    au < testing ; 2006 ; Amino Acids Volume 30 ; 30 >
+    au < testing ; 2006 ; Amino Acids Volume 31 ; 31 >
+    au < testing ; 2007 ; Amino Acids Volume 32 ; 32 >
+    au < testing ; 2007 ; Amino Acids Volume 33 ; 33 >
+    au < testing ; 2008 ; Amino Acids Volume 34 ; 34 >
+    au < testing ; 2008 ; Amino Acids Volume 35 ; 35 >
+    au < testing ; 2009 ; Amino Acids Volume 36 ; 36 >
+    au < testing ; 2009 ; Amino Acids Volume 37 ; 37 >
+    au < testing ; 2010 ; Amino Acids Volume 38 ; 38 >
+    au < testing ; 2010 ; Amino Acids Volume 39 ; 39 >
 
   }
 
@@ -1203,8 +1244,8 @@
       eissn = 1432-0568
     >
 
-    comment[continued_by] = 1863-2653
     param[journal_issn] = 0340-2061
+    comment[continued_by] = 1863-2653
     attr[where] = sul-lockss30a
 
     au < manifest ; 1891-1892 ; Anatomy and Embryology Volume 1 ; 1 >
@@ -1892,23 +1933,22 @@
     >
 
     param[journal_issn] = 1360-8185
-    attr[where] = content2b
 
-    au < testing ; 1996 ; Apoptosis Volume 1 ; 1 >
-    au < testing ; 1997 ; Apoptosis Volume 2 ; 2 >
-    au < testing ; 1998 ; Apoptosis Volume 3 ; 3 >
-    au < testing ; 1999 ; Apoptosis Volume 4 ; 4 >
-    au < testing ; 2000 ; Apoptosis Volume 5 ; 5 >
-    au < testing ; 2001 ; Apoptosis Volume 6 ; 6 >
-    au < testing ; 2002 ; Apoptosis Volume 7 ; 7 >
-    au < testing ; 2003 ; Apoptosis Volume 8 ; 8 >
-    au < testing ; 2004 ; Apoptosis Volume 9 ; 9 >
-    au < testing ; 2005 ; Apoptosis Volume 10 ; 10 >
-    au < testing ; 2006 ; Apoptosis Volume 11 ; 11 >
-    au < testing ; 2007 ; Apoptosis Volume 12 ; 12 >
-    au < testing ; 2008 ; Apoptosis Volume 13 ; 13 >
-    au < testing ; 2009 ; Apoptosis Volume 14 ; 14 >
-    au < testing ; 2010 ; Apoptosis Volume 15 ; 15 >
+    au < ready ; 1996 ; Apoptosis Volume 1 ; 1 >
+    au < ready ; 1997 ; Apoptosis Volume 2 ; 2 >
+    au < ready ; 1998 ; Apoptosis Volume 3 ; 3 >
+    au < ready ; 1999 ; Apoptosis Volume 4 ; 4 >
+    au < ready ; 2000 ; Apoptosis Volume 5 ; 5 >
+    au < ready ; 2001 ; Apoptosis Volume 6 ; 6 >
+    au < ready ; 2002 ; Apoptosis Volume 7 ; 7 >
+    au < ready ; 2003 ; Apoptosis Volume 8 ; 8 >
+    au < ready ; 2004 ; Apoptosis Volume 9 ; 9 >
+    au < ready ; 2005 ; Apoptosis Volume 10 ; 10 >
+    au < ready ; 2006 ; Apoptosis Volume 11 ; 11 >
+    au < ready ; 2007 ; Apoptosis Volume 12 ; 12 >
+    au < ready ; 2008 ; Apoptosis Volume 13 ; 13 >
+    au < ready ; 2009 ; Apoptosis Volume 14 ; 14 >
+    au < ready ; 2010 ; Apoptosis Volume 15 ; 15 >
 
   }
 
@@ -11204,10 +11244,22 @@
     title <
       name = Functional & Integrative Genomics ;
       issn = 1438-793X ;
-      placeholder = True
+      eissn = 1438-7948
     >
 
     param[journal_issn] = 1438-793X
+    attr[where] = content5b
+
+    au < testing ; 2000 ; Functional & Integrative Genomics Volume 1 ; 1 >
+    au < testing ; 2002 ; Functional & Integrative Genomics Volume 2 ; 2 >
+    au < testing ; 2003 ; Functional & Integrative Genomics Volume 3 ; 3 >
+    au < testing ; 2004 ; Functional & Integrative Genomics Volume 4 ; 4 >
+    au < testing ; 2005 ; Functional & Integrative Genomics Volume 5 ; 5 >
+    au < testing ; 2006 ; Functional & Integrative Genomics Volume 6 ; 6 >
+    au < testing ; 2007 ; Functional & Integrative Genomics Volume 7 ; 7 >
+    au < testing ; 2008 ; Functional & Integrative Genomics Volume 8 ; 8 >
+    au < testing ; 2009 ; Functional & Integrative Genomics Volume 9 ; 9 >
+    au < testing ; 2010 ; Functional & Integrative Genomics Volume 10 ; 10 >
 
   }
 
@@ -15762,50 +15814,49 @@
     >
 
     param[journal_issn] = 0145-479X
-    attr[where] = content5a
 
-    au < testing ; 1970 ; Journal of Bioenergetics and Biomembranes Volume 1 ; 1 >
-    au < testing ; 1971 ; Journal of Bioenergetics and Biomembranes Volume 2 ; 2 >
-    au < testing ; 1972 ; Journal of Bioenergetics and Biomembranes Volume 3 ; 3 >
-    au < testing ; 1973 ; Journal of Bioenergetics and Biomembranes Volume 4 ; 4 >
-    au < testing ; 1973 ; Journal of Bioenergetics and Biomembranes Volume 5 ; 5 >
-    au < testing ; 1974-1975 ; Journal of Bioenergetics and Biomembranes Volume 6 ; 6 >
-    au < testing ; 1975 ; Journal of Bioenergetics and Biomembranes Volume 7 ; 7 >
-    au < testing ; 1976 ; Journal of Bioenergetics and Biomembranes Volume 8 ; 8 >
-    au < testing ; 1977 ; Journal of Bioenergetics and Biomembranes Volume 9 ; 9 >
-    au < testing ; 1978 ; Journal of Bioenergetics and Biomembranes Volume 10 ; 10 >
-    au < testing ; 1979 ; Journal of Bioenergetics and Biomembranes Volume 11 ; 11 >
-    au < testing ; 1980 ; Journal of Bioenergetics and Biomembranes Volume 12 ; 12 >
-    au < testing ; 1981 ; Journal of Bioenergetics and Biomembranes Volume 13 ; 13 >
-    au < testing ; 1982 ; Journal of Bioenergetics and Biomembranes Volume 14 ; 14 >
-    au < testing ; 1983 ; Journal of Bioenergetics and Biomembranes Volume 15 ; 15 >
-    au < testing ; 1984 ; Journal of Bioenergetics and Biomembranes Volume 16 ; 16 >
-    au < testing ; 1985 ; Journal of Bioenergetics and Biomembranes Volume 17 ; 17 >
-    au < testing ; 1986 ; Journal of Bioenergetics and Biomembranes Volume 18 ; 18 >
-    au < testing ; 1987 ; Journal of Bioenergetics and Biomembranes Volume 19 ; 19 >
-    au < testing ; 1988 ; Journal of Bioenergetics and Biomembranes Volume 20 ; 20 >
-    au < testing ; 1989 ; Journal of Bioenergetics and Biomembranes Volume 21 ; 21 >
-    au < testing ; 1990 ; Journal of Bioenergetics and Biomembranes Volume 22 ; 22 >
-    au < testing ; 1991 ; Journal of Bioenergetics and Biomembranes Volume 23 ; 23 >
-    au < testing ; 1992 ; Journal of Bioenergetics and Biomembranes Volume 24 ; 24 >
-    au < testing ; 1993 ; Journal of Bioenergetics and Biomembranes Volume 25 ; 25 >
-    au < testing ; 1994 ; Journal of Bioenergetics and Biomembranes Volume 26 ; 26 >
-    au < testing ; 1995 ; Journal of Bioenergetics and Biomembranes Volume 27 ; 27 >
-    au < testing ; 1996 ; Journal of Bioenergetics and Biomembranes Volume 28 ; 28 >
-    au < testing ; 1997 ; Journal of Bioenergetics and Biomembranes Volume 29 ; 29 >
-    au < testing ; 1998 ; Journal of Bioenergetics and Biomembranes Volume 30 ; 30 >
-    au < testing ; 1999 ; Journal of Bioenergetics and Biomembranes Volume 31 ; 31 >
-    au < testing ; 2000 ; Journal of Bioenergetics and Biomembranes Volume 32 ; 32 >
-    au < testing ; 2001 ; Journal of Bioenergetics and Biomembranes Volume 33 ; 33 >
-    au < testing ; 2002 ; Journal of Bioenergetics and Biomembranes Volume 34 ; 34 >
-    au < testing ; 2003 ; Journal of Bioenergetics and Biomembranes Volume 35 ; 35 >
-    au < testing ; 2004 ; Journal of Bioenergetics and Biomembranes Volume 36 ; 36 >
-    au < testing ; 2005 ; Journal of Bioenergetics and Biomembranes Volume 37 ; 37 >
-    au < testing ; 2006 ; Journal of Bioenergetics and Biomembranes Volume 38 ; 38 >
-    au < testing ; 2007 ; Journal of Bioenergetics and Biomembranes Volume 39 ; 39 >
-    au < testing ; 2008 ; Journal of Bioenergetics and Biomembranes Volume 40 ; 40 >
-    au < testing ; 2009 ; Journal of Bioenergetics and Biomembranes Volume 41 ; 41 >
-    au < testing ; 2010 ; Journal of Bioenergetics and Biomembranes Volume 42 ; 42 >
+    au < ready ; 1970 ; Journal of Bioenergetics and Biomembranes Volume 1 ; 1 >
+    au < ready ; 1971 ; Journal of Bioenergetics and Biomembranes Volume 2 ; 2 >
+    au < ready ; 1972 ; Journal of Bioenergetics and Biomembranes Volume 3 ; 3 >
+    au < ready ; 1973 ; Journal of Bioenergetics and Biomembranes Volume 4 ; 4 >
+    au < ready ; 1973 ; Journal of Bioenergetics and Biomembranes Volume 5 ; 5 >
+    au < ready ; 1974-1975 ; Journal of Bioenergetics and Biomembranes Volume 6 ; 6 >
+    au < ready ; 1975 ; Journal of Bioenergetics and Biomembranes Volume 7 ; 7 >
+    au < ready ; 1976 ; Journal of Bioenergetics and Biomembranes Volume 8 ; 8 >
+    au < ready ; 1977 ; Journal of Bioenergetics and Biomembranes Volume 9 ; 9 >
+    au < ready ; 1978 ; Journal of Bioenergetics and Biomembranes Volume 10 ; 10 >
+    au < ready ; 1979 ; Journal of Bioenergetics and Biomembranes Volume 11 ; 11 >
+    au < ready ; 1980 ; Journal of Bioenergetics and Biomembranes Volume 12 ; 12 >
+    au < ready ; 1981 ; Journal of Bioenergetics and Biomembranes Volume 13 ; 13 >
+    au < ready ; 1982 ; Journal of Bioenergetics and Biomembranes Volume 14 ; 14 >
+    au < ready ; 1983 ; Journal of Bioenergetics and Biomembranes Volume 15 ; 15 >
+    au < ready ; 1984 ; Journal of Bioenergetics and Biomembranes Volume 16 ; 16 >
+    au < ready ; 1985 ; Journal of Bioenergetics and Biomembranes Volume 17 ; 17 >
+    au < ready ; 1986 ; Journal of Bioenergetics and Biomembranes Volume 18 ; 18 >
+    au < ready ; 1987 ; Journal of Bioenergetics and Biomembranes Volume 19 ; 19 >
+    au < ready ; 1988 ; Journal of Bioenergetics and Biomembranes Volume 20 ; 20 >
+    au < ready ; 1989 ; Journal of Bioenergetics and Biomembranes Volume 21 ; 21 >
+    au < ready ; 1990 ; Journal of Bioenergetics and Biomembranes Volume 22 ; 22 >
+    au < ready ; 1991 ; Journal of Bioenergetics and Biomembranes Volume 23 ; 23 >
+    au < ready ; 1992 ; Journal of Bioenergetics and Biomembranes Volume 24 ; 24 >
+    au < ready ; 1993 ; Journal of Bioenergetics and Biomembranes Volume 25 ; 25 >
+    au < ready ; 1994 ; Journal of Bioenergetics and Biomembranes Volume 26 ; 26 >
+    au < ready ; 1995 ; Journal of Bioenergetics and Biomembranes Volume 27 ; 27 >
+    au < ready ; 1996 ; Journal of Bioenergetics and Biomembranes Volume 28 ; 28 >
+    au < ready ; 1997 ; Journal of Bioenergetics and Biomembranes Volume 29 ; 29 >
+    au < ready ; 1998 ; Journal of Bioenergetics and Biomembranes Volume 30 ; 30 >
+    au < ready ; 1999 ; Journal of Bioenergetics and Biomembranes Volume 31 ; 31 >
+    au < ready ; 2000 ; Journal of Bioenergetics and Biomembranes Volume 32 ; 32 >
+    au < ready ; 2001 ; Journal of Bioenergetics and Biomembranes Volume 33 ; 33 >
+    au < ready ; 2002 ; Journal of Bioenergetics and Biomembranes Volume 34 ; 34 >
+    au < ready ; 2003 ; Journal of Bioenergetics and Biomembranes Volume 35 ; 35 >
+    au < ready ; 2004 ; Journal of Bioenergetics and Biomembranes Volume 36 ; 36 >
+    au < ready ; 2005 ; Journal of Bioenergetics and Biomembranes Volume 37 ; 37 >
+    au < ready ; 2006 ; Journal of Bioenergetics and Biomembranes Volume 38 ; 38 >
+    au < ready ; 2007 ; Journal of Bioenergetics and Biomembranes Volume 39 ; 39 >
+    au < ready ; 2008 ; Journal of Bioenergetics and Biomembranes Volume 40 ; 40 >
+    au < ready ; 2009 ; Journal of Bioenergetics and Biomembranes Volume 41 ; 41 >
+    au < ready ; 2010 ; Journal of Bioenergetics and Biomembranes Volume 42 ; 42 >
 
   }
 
@@ -16527,10 +16578,37 @@
     title <
       name = Journal of Computer-Aided Molecular Design ;
       issn = 0920-654X ;
-      placeholder = True
+      eissn = 1573-4951
     >
 
     param[journal_issn] = 0920-654X
+    comment[merged_from] = 0928-2866
+    attr[where] = content4b
+
+    au < manifest ; 1987-1988 ; Journal of Computer-Aided Molecular Design Volume 1 ; 1 >
+    au < manifest ; 1988-1989 ; Journal of Computer-Aided Molecular Design Volume 2 ; 2 >
+    au < manifest ; 1989 ; Journal of Computer-Aided Molecular Design Volume 3 ; 3 >
+    au < manifest ; 1990 ; Journal of Computer-Aided Molecular Design Volume 4 ; 4 >
+    au < manifest ; 1991 ; Journal of Computer-Aided Molecular Design Volume 5 ; 5 >
+    au < manifest ; 1992 ; Journal of Computer-Aided Molecular Design Volume 6 ; 6 >
+    au < manifest ; 1993 ; Journal of Computer-Aided Molecular Design Volume 7 ; 7 >
+    au < manifest ; 1994 ; Journal of Computer-Aided Molecular Design Volume 8 ; 8 >
+    au < manifest ; 1995 ; Journal of Computer-Aided Molecular Design Volume 9 ; 9 >
+    au < manifest ; 1996 ; Journal of Computer-Aided Molecular Design Volume 10 ; 10 >
+    au < manifest ; 1997 ; Journal of Computer-Aided Molecular Design Volume 11 ; 11 >
+    au < manifest ; 1998 ; Journal of Computer-Aided Molecular Design Volume 12 ; 12 >
+    au < manifest ; 1999 ; Journal of Computer-Aided Molecular Design Volume 13 ; 13 >
+    au < manifest ; 2000 ; Journal of Computer-Aided Molecular Design Volume 14 ; 14 >
+    au < manifest ; 2001 ; Journal of Computer-Aided Molecular Design Volume 15 ; 15 >
+    au < manifest ; 2002 ; Journal of Computer-Aided Molecular Design Volume 16 ; 16 >
+    au < manifest ; 2003 ; Journal of Computer-Aided Molecular Design Volume 17 ; 17 >
+    au < manifest ; 2004 ; Journal of Computer-Aided Molecular Design Volume 18 ; 18 >
+    au < manifest ; 2005 ; Journal of Computer-Aided Molecular Design Volume 19 ; 19 >
+    au < manifest ; 2006 ; Journal of Computer-Aided Molecular Design Volume 20 ; 20 >
+    au < manifest ; 2007 ; Journal of Computer-Aided Molecular Design Volume 21 ; 21 >
+    au < manifest ; 2008 ; Journal of Computer-Aided Molecular Design Volume 22 ; 22 >
+    au < manifest ; 2009 ; Journal of Computer-Aided Molecular Design Volume 23 ; 23 >
+    au < manifest ; 2010 ; Journal of Computer-Aided Molecular Design Volume 24 ; 24 >
 
   }
 
@@ -17912,23 +17990,22 @@
     >
 
     param[journal_issn] = 1083-3021
-    attr[where] = content6a
 
-    au < testing ; 1996 ; Journal of Mammary Gland Biology and Neoplasia Volume 1 ; 1 >
-    au < testing ; 1997 ; Journal of Mammary Gland Biology and Neoplasia Volume 2 ; 2 >
-    au < testing ; 1998 ; Journal of Mammary Gland Biology and Neoplasia Volume 3 ; 3 >
-    au < testing ; 1999 ; Journal of Mammary Gland Biology and Neoplasia Volume 4 ; 4 >
-    au < testing ; 2000 ; Journal of Mammary Gland Biology and Neoplasia Volume 5 ; 5 >
-    au < testing ; 2001 ; Journal of Mammary Gland Biology and Neoplasia Volume 6 ; 6 >
-    au < testing ; 2002 ; Journal of Mammary Gland Biology and Neoplasia Volume 7 ; 7 >
-    au < testing ; 2003 ; Journal of Mammary Gland Biology and Neoplasia Volume 8 ; 8 >
-    au < testing ; 2004 ; Journal of Mammary Gland Biology and Neoplasia Volume 9 ; 9 >
-    au < testing ; 2005 ; Journal of Mammary Gland Biology and Neoplasia Volume 10 ; 10 >
-    au < testing ; 2006 ; Journal of Mammary Gland Biology and Neoplasia Volume 11 ; 11 >
-    au < testing ; 2007 ; Journal of Mammary Gland Biology and Neoplasia Volume 12 ; 12 >
-    au < testing ; 2008 ; Journal of Mammary Gland Biology and Neoplasia Volume 13 ; 13 >
-    au < testing ; 2009 ; Journal of Mammary Gland Biology and Neoplasia Volume 14 ; 14 >
-    au < testing ; 2010 ; Journal of Mammary Gland Biology and Neoplasia Volume 15 ; 15 >
+    au < ready ; 1996 ; Journal of Mammary Gland Biology and Neoplasia Volume 1 ; 1 >
+    au < ready ; 1997 ; Journal of Mammary Gland Biology and Neoplasia Volume 2 ; 2 >
+    au < ready ; 1998 ; Journal of Mammary Gland Biology and Neoplasia Volume 3 ; 3 >
+    au < ready ; 1999 ; Journal of Mammary Gland Biology and Neoplasia Volume 4 ; 4 >
+    au < ready ; 2000 ; Journal of Mammary Gland Biology and Neoplasia Volume 5 ; 5 >
+    au < ready ; 2001 ; Journal of Mammary Gland Biology and Neoplasia Volume 6 ; 6 >
+    au < ready ; 2002 ; Journal of Mammary Gland Biology and Neoplasia Volume 7 ; 7 >
+    au < ready ; 2003 ; Journal of Mammary Gland Biology and Neoplasia Volume 8 ; 8 >
+    au < ready ; 2004 ; Journal of Mammary Gland Biology and Neoplasia Volume 9 ; 9 >
+    au < ready ; 2005 ; Journal of Mammary Gland Biology and Neoplasia Volume 10 ; 10 >
+    au < ready ; 2006 ; Journal of Mammary Gland Biology and Neoplasia Volume 11 ; 11 >
+    au < ready ; 2007 ; Journal of Mammary Gland Biology and Neoplasia Volume 12 ; 12 >
+    au < ready ; 2008 ; Journal of Mammary Gland Biology and Neoplasia Volume 13 ; 13 >
+    au < ready ; 2009 ; Journal of Mammary Gland Biology and Neoplasia Volume 14 ; 14 >
+    au < ready ; 2010 ; Journal of Mammary Gland Biology and Neoplasia Volume 15 ; 15 >
 
   }
 
@@ -21790,10 +21867,18 @@
     title <
       name = Metabolomics ;
       issn = 1573-3882 ;
-      placeholder = True
+      eissn = 1573-3890
     >
 
     param[journal_issn] = 1573-3882
+    attr[where] = content3b
+
+    au < testing ; 2005 ; Metabolomics Volume 1 ; 1 >
+    au < testing ; 2006 ; Metabolomics Volume 2 ; 2 >
+    au < testing ; 2007 ; Metabolomics Volume 3 ; 3 >
+    au < testing ; 2008 ; Metabolomics Volume 4 ; 4 >
+    au < testing ; 2009 ; Metabolomics Volume 5 ; 5 >
+    au < testing ; 2010 ; Metabolomics Volume 6 ; 6 >
 
   }
 
@@ -24456,10 +24541,26 @@
     title <
       name = Perspectives in Drug Discovery and Design ;
       issn = 0928-2866 ;
-      placeholder = True
+      eissn = 1573-9023
     >
 
     param[journal_issn] = 0928-2866
+    comment[merged_into] = 0920-654X
+    attr[where] = content4b
+
+    au < testing ; 1993-1994 ; Perspectives in Drug Discovery and Design Volume 1 ; 1 >
+    au < testing ; 1994-1995 ; Perspectives in Drug Discovery and Design Volume 2 ; 2 >
+    au < testing ; 1995 ; Perspectives in Drug Discovery and Design Volume 3 ; 3 >
+    au < testing ; 1996 ; Perspectives in Drug Discovery and Design Volume 4 ; 4 >
+    au < testing ; 1996 ; Perspectives in Drug Discovery and Design Volume 5 ; 5 >
+    au < testing ; 1996 ; Perspectives in Drug Discovery and Design Volume 6 ; 6 >
+    au < testing ; 1998 ; Perspectives in Drug Discovery and Design Volume 9-11 ; 9-11 >
+    au < testing ; 1998 ; Perspectives in Drug Discovery and Design Volume 12-14 ; 12-14 >
+    au < testing ; 1999 ; Perspectives in Drug Discovery and Design Volume 15-16 ; 15-16 >
+    au < testing ; 1999 ; Perspectives in Drug Discovery and Design Volume 17 ; 17 >
+    au < testing ; 2000 ; Perspectives in Drug Discovery and Design Volume 18 ; 18 >
+    au < testing ; 2000 ; Perspectives in Drug Discovery and Design Volume 19 ; 19 >
+    au < testing ; 2000 ; Perspectives in Drug Discovery and Design Volume 20 ; 20 >
 
   }
 
