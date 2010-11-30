@@ -16,6 +16,7 @@ public class InformaworldCrawlHtmlFilterFactory implements FilterFactory {
       throws PluginException {
     NodeFilter[] filters = new NodeFilter[] {
         // Remove URLs to articles outwith current volume
+        HtmlNodeFilters.tagWithAttribute("div", "id", "ifirst"),
         HtmlNodeFilters.tagWithAttribute("div", "class", "sandbox"),
     };
     return new HtmlFilterInputStream(in,
