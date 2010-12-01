@@ -18,6 +18,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = aft
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content1a
 
       au < releasing ; 1999 ; Africa Today Volume 46 ; 46 >
       au < releasing ; 2000 ; Africa Today Volume 47 ; 47 >
@@ -71,6 +72,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = ale
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content1b
 
       au < releasing ; 2001-2008 ; Aleph: Historical Studies in Science and Judaism Volume 1-8 ; - >
       au < releasing ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
@@ -110,6 +112,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = blc
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content2a
 
       au < releasing ; 2009-2010 ; Black Camera Volume 1 ; 1 >
       au < releasing ; 2010-2011 ; Black Camera Volume 2 ; 2 >
@@ -143,6 +146,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = bri
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content2b
 
       au < releasing ; 2005 ; Bridges: A Jewish Feminist Journal Volume 10 ; 10 >
       au < releasing ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
@@ -183,6 +187,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = esj
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content3a
 
       au < releasing ; 2001-2002 ; e-Service Journal Volume 1 ; 1 >
       au < releasing ; 2002-2003 ; e-Service Journal Volume 2 ; 2 >
@@ -226,6 +231,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = ete
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content3b
 
       au < releasing ; 2001 ; Ethics & the Environment Volume 6 ; 6 >
       au < releasing ; 2002 ; Ethics & the Environment Volume 7 ; 7 >
@@ -275,6 +281,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = fil
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content4a
 
       au < releasing ; 2000 ; Film History: An International Journal Volume 12 ; 12 >
       au < releasing ; 2001 ; Film History: An International Journal Volume 13 ; 13 >
@@ -321,6 +328,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = gso
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content4b
 
       au < releasing ; 2007 ; The Global South Volume 1 ; 1 >
       au < releasing ; 2008 ; The Global South Volume 2 ; 2 >
@@ -357,6 +365,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = his
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content5a
 
       au < releasing ; 1997 ; History & Memory Volume 9 ; 9 >
       au < doesNotExist ; 1998 ; History & Memory Volume 10 ; 10 >
@@ -442,6 +451,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = gls
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content5b
 
       au < releasing ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
       au < releasing ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
@@ -487,6 +497,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = fab
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content6a
 
       au < releasing ; 2008 ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
       au < releasing ; 2009 ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
@@ -522,6 +533,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = isr
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content6b
 
       au < releasing ; 1996 ; Israel Studies Volume 1 ; 1 >
       au < releasing ; 1997 ; Israel Studies Volume 2 ; 2 >
@@ -582,6 +594,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = jss
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = sul-lockss30a
 
       au < releasing ; 1997-1998 ; Jewish Social Studies Volume 4 ; 4 >
       au < releasing ; 1998-1999 ; Jewish Social Studies Volume 5 ; 5 >
@@ -636,6 +649,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = jem
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = sul-lockss30b
 
       au < releasing ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
       au < releasing ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
