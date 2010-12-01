@@ -17,7 +17,7 @@
 
     param[base_url] = http://advances.nutrition.org/ 
 
-    au < HighWirePressH20Plugin ; manifest ; Advances in Nutrition Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; testing ; Advances in Nutrition Volume 1 ; 1 >
 
   }
   
@@ -36,13 +36,13 @@
     au < HighWireStrVolPlugin ; down ; American Journal of Clinical Nutrition Volume 83 ; 83 >
     au < HighWireStrVolPlugin ; down ; American Journal of Clinical Nutrition Volume 84 ; 84 >
     au < HighWireStrVolPlugin ; down ; American Journal of Clinical Nutrition Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; manifest ; American Journal of Clinical Nutrition Volume 86 ; 86 >
-    au < HighWirePressH20Plugin ; manifest ; American Journal of Clinical Nutrition Volume 87 ; 87 >
-    au < HighWirePressH20Plugin ; manifest ; American Journal of Clinical Nutrition Volume 88 ; 88 >
-    au < HighWirePressH20Plugin ; manifest ; American Journal of Clinical Nutrition Volume 89 ; 89 >
-    au < HighWirePressH20Plugin ; manifest ; American Journal of Clinical Nutrition Volume 90 ; 90 >
-    au < HighWirePressH20Plugin ; manifest ; American Journal of Clinical Nutrition Volume 91 ; 91 >
-    au < HighWirePressH20Plugin ; manifest ; American Journal of Clinical Nutrition Volume 92 ; 92 >
+    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 87 ; 87 >
+    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 88 ; 88 >
+    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 89 ; 89 >
+    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 90 ; 90 >
+    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 91 ; 91 >
+    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 92 ; 92 >
 
   }
 
@@ -59,9 +59,9 @@
     au < HighWireStrVolPlugin ; down ; The Journal of Nutrition Volume 135 ; 135 >
     au < HighWireStrVolPlugin ; down ; The Journal of Nutrition Volume 136 ; 136 >
     au < HighWireStrVolPlugin ; down ; The Journal of Nutrition Volume 137 ; 137 >
-    au < HighWirePressH20Plugin ; manifest ; The Journal of Nutrition Volume 138 ; 138 >
-    au < HighWirePressH20Plugin ; manifest ; The Journal of Nutrition Volume 139 ; 139 >
-    au < HighWirePressH20Plugin ; manifest ; The Journal of Nutrition Volume 140 ; 140 >
+    au < HighWirePressH20Plugin ; testing ; The Journal of Nutrition Volume 138 ; 138 >
+    au < HighWirePressH20Plugin ; testing ; The Journal of Nutrition Volume 139 ; 139 >
+    au < HighWirePressH20Plugin ; testing ; The Journal of Nutrition Volume 140 ; 140 >
 
   }
 
