@@ -678,14 +678,13 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = fsr
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content1a
 
-      au < releasing ; 2004 ; Journal of Feminist Studies in Religion Volume 20 ; 20 >
-      au < releasing ; 2005 ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
-      au < releasing ; 2006 ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
+      au < notReady ; 2004 ; Journal of Feminist Studies in Religion Volume 20 ; 20 >
+      au < notReady ; 2005 ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
+      au < notReady ; 2006 ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
       au < releasing ; 2007 ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
       au < releasing ; 2008 ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
-      au < releasing ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+      au < notReady ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
       au < releasing ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
 
     }
@@ -721,13 +720,12 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = jfr
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content1b
 
-      au < releasing ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
-      au < releasing ; 2003 ; Journal of Folklore Research Volume 40 ; 40 >
-      au < releasing ; 2004 ; Journal of Folklore Research Volume 41 ; 41 >
-      au < releasing ; 2005 ; Journal of Folklore Research Volume 42 ; 42 >
-      au < releasing ; 2006 ; Journal of Folklore Research Volume 43 ; 43 >
+      au < notReady ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
+      au < notReady ; 2003 ; Journal of Folklore Research Volume 40 ; 40 >
+      au < notReady ; 2004 ; Journal of Folklore Research Volume 41 ; 41 >
+      au < notReady ; 2005 ; Journal of Folklore Research Volume 42 ; 42 >
+      au < notReady ; 2006 ; Journal of Folklore Research Volume 43 ; 43 >
       au < releasing ; 2007 ; Journal of Folklore Research Volume 44 ; 44 >
       au < releasing ; 2008 ; Journal of Folklore Research Volume 45 ; 45 >
       au < releasing ; 2009 ; Journal of Folklore Research Volume 46 ; 46 >
@@ -768,11 +766,10 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = mew
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content2a
 
-      au < releasing ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 >
-      au < releasing ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 >
-      au < releasing ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 >
+      au < notReady ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 >
+      au < notReady ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 >
+      au < notReady ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 >
       au < releasing ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 >
       au < releasing ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 >
       au < releasing ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 >
@@ -810,16 +807,15 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = jml
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content2b
 
-      au < releasing ; 2001-2002 ; Journal of Modern Literature Volume 25 ; 25 >
-      au < releasing ; 2002-2003 ; Journal of Modern Literature Volume 26 ; 26 >
-      au < releasing ; 2003-2004 ; Journal of Modern Literature Volume 27 ; 27 >
-      au < releasing ; 2004-2005 ; Journal of Modern Literature Volume 28 ; 28 >
-      au < releasing ; 2005-2006 ; Journal of Modern Literature Volume 29 ; 29 >
-      au < releasing ; 2006-2007 ; Journal of Modern Literature Volume 30 ; 30 >
+      au < notReady ; 2001-2002 ; Journal of Modern Literature Volume 25 ; 25 >
+      au < notReady ; 2002-2003 ; Journal of Modern Literature Volume 26 ; 26 >
+      au < notReady ; 2003-2004 ; Journal of Modern Literature Volume 27 ; 27 >
+      au < notReady ; 2004-2005 ; Journal of Modern Literature Volume 28 ; 28 >
+      au < notReady ; 2005-2006 ; Journal of Modern Literature Volume 29 ; 29 >
+      au < notReady ; 2006-2007 ; Journal of Modern Literature Volume 30 ; 30 >
       au < releasing ; 2007-2008 ; Journal of Modern Literature Volume 31 ; 31 >
-      au < releasing ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
+      au < notReady ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
       au < releasing ; 2009-2010 ; Journal of Modern Literature Volume 33 ; 33 >
 
     }
@@ -864,12 +860,11 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = mer
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content3a
 
-      au < releasing ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
-      au < releasing ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
-      au < releasing ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
-      au < releasing ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
+      au < notReady ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
+      au < notReady ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
+      au < notReady ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
+      au < notReady ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
       au < releasing ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
       au < releasing ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
       au < releasing ; 2009 ; Meridians: feminism, race, transnationalism Volume 10 ; 10 >
@@ -910,7 +905,6 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = nas
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content3b
 
       au < releasing ; 2003-2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6-20 ; - >
 
@@ -959,15 +953,14 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = npj
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content4a
 
-      au < releasing ; 2004 ; Native Plants Journal Volume 5 ; 5 >
-      au < releasing ; 2005 ; Native Plants Journal Volume 6 ; 6 >
-      au < releasing ; 2006 ; Native Plants Journal Volume 7 ; 7 >
-      au < releasing ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < notReady ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < notReady ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < notReady ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < notReady ; 2007 ; Native Plants Journal Volume 8 ; 8 >
       au < releasing ; 2008 ; Native Plants Journal Volume 9 ; 9 >
       au < releasing ; 2009 ; Native Plants Journal Volume 10 ; 10 >
-      au < releasing ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+      au < notReady ; 2010 ; Native Plants Journal Volume 11 ; 11 >
 
     }
 
@@ -1003,13 +996,12 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = pme
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content4b
 
-      au < releasing ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
-      au < releasing ; 2003 ; Philosophy of Music Education Review Volume 11 ; 11 >
-      au < releasing ; 2004 ; Philosophy of Music Education Review Volume 12 ; 12 >
-      au < releasing ; 2005 ; Philosophy of Music Education Review Volume 13 ; 13 >
-      au < releasing ; 2006 ; Philosophy of Music Education Review Volume 14 ; 14 >
+      au < notReady ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
+      au < notReady ; 2003 ; Philosophy of Music Education Review Volume 11 ; 11 >
+      au < notReady ; 2004 ; Philosophy of Music Education Review Volume 12 ; 12 >
+      au < notReady ; 2005 ; Philosophy of Music Education Review Volume 13 ; 13 >
+      au < notReady ; 2006 ; Philosophy of Music Education Review Volume 14 ; 14 >
       au < releasing ; 2007 ; Philosophy of Music Education Review Volume 15 ; 15 >
       au < releasing ; 2008 ; Philosophy of Music Education Review Volume 16 ; 16 >
       au < releasing ; 2009 ; Philosophy of Music Education Review Volume 17 ; 17 >
@@ -1050,15 +1042,14 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = pft
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content5a
 
-      au < releasing ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
-      au < releasing ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
-      au < releasing ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
-      au < releasing ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
-      au < releasing ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
-      au < releasing ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
-      au < releasing ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
+      au < notReady ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
+      au < notReady ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
+      au < notReady ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
+      au < notReady ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
+      au < notReady ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
+      au < notReady ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
+      au < notReady ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
       au < releasing ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
       au < releasing ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
       au < releasing ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
@@ -1103,7 +1094,6 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = rac
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content5b
 
       au < releasing ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
       au < releasing ; 2008-2009 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
@@ -1139,19 +1129,18 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = ral
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content6a
 
-      au < releasing ; 1999 ; Research in African Literatures Volume 30 ; 30 >
-      au < releasing ; 2000 ; Research in African Literatures Volume 31 ; 31 >
-      au < releasing ; 2001 ; Research in African Literatures Volume 32 ; 32 >
-      au < releasing ; 2002 ; Research in African Literatures Volume 33 ; 33 >
-      au < releasing ; 2003 ; Research in African Literatures Volume 34 ; 34 >
-      au < releasing ; 2004 ; Research in African Literatures Volume 35 ; 35 >
-      au < releasing ; 2005 ; Research in African Literatures Volume 36 ; 36 >
-      au < releasing ; 2006 ; Research in African Literatures Volume 37 ; 37 >
-      au < releasing ; 2007 ; Research in African Literatures Volume 38 ; 38 >
+      au < notReady ; 1999 ; Research in African Literatures Volume 30 ; 30 >
+      au < notReady ; 2000 ; Research in African Literatures Volume 31 ; 31 >
+      au < notReady ; 2001 ; Research in African Literatures Volume 32 ; 32 >
+      au < notReady ; 2002 ; Research in African Literatures Volume 33 ; 33 >
+      au < notReady ; 2003 ; Research in African Literatures Volume 34 ; 34 >
+      au < notReady ; 2004 ; Research in African Literatures Volume 35 ; 35 >
+      au < notReady ; 2005 ; Research in African Literatures Volume 36 ; 36 >
+      au < notReady ; 2006 ; Research in African Literatures Volume 37 ; 37 >
+      au < notReady ; 2007 ; Research in African Literatures Volume 38 ; 38 >
       au < releasing ; 2008 ; Research in African Literatures Volume 39 ; 39 >
-      au < releasing ; 2009 ; Research in African Literatures Volume 40 ; 40 >
+      au < notReady ; 2009 ; Research in African Literatures Volume 40 ; 40 >
       au < releasing ; 2010 ; Research in African Literatures Volume 41 ; 41 >
 
     }
@@ -1196,9 +1185,8 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = tex
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = content6b
 
-      au < releasing ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
+      au < notReady ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
       au < releasing ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 ; 2 >
       au < releasing ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
       au < releasing ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
@@ -1236,14 +1224,13 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = tra
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = sul-lockss30a
 
-      au < releasing ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 ; 41 >
-      au < releasing ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
-      au < releasing ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
+      au < notReady ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 ; 41 >
+      au < notReady ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
+      au < notReady ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
       au < releasing ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
       au < releasing ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
-      au < releasing ; 2010-2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 ; 46 >
+      au < notReady ; 2010-2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 ; 46 >
 
     }
 
@@ -1277,9 +1264,8 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = tra
       implicit < status ; year ; name ; param[volume_name] >
-      attr[where] = sul-lockss30b
 
-      au < releasing ; 2002-2010 ; Transition: An International Review Volume 93-103 ; - >
+      au < notReady ; 2002-2010 ; Transition: An International Review Volume 93-103 ; - >
 
     }
     
@@ -1319,6 +1305,7 @@
       param[base_url] = http://inscribe.iupress.org/
       param[journal_id] = vic
       implicit < status ; year ; name ; param[volume_name] >
+      attr[where] = content4a
 
       au < releasing ; 1998-2000 ; Victorian Studies Volume 42 ; 42 >
       au < releasing ; 2000-2001 ; Victorian Studies Volume 43 ; 43 >
