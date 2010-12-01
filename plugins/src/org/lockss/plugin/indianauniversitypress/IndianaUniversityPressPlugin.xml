@@ -1,0 +1,89 @@
+<map>
+  <entry>
+    <string>plugin_version</string>
+    <string>1</string>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.28.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;Indiana University Press Plugin, Base URL %s, Journal ID %s, Volume %s&quot;, base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Indiana University Press Plugin</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,&quot;^https?://%s/&quot;, base_url_host</string>
+      <string>1,&quot;^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,&quot;^%slockss/%s/%s/index.html$&quot;, base_url, journal_id, volume_name</string>
+      <string>1,&quot;^%stoc/%s(\.[0-9]+)?/%s(/[^/]+)?$&quot;, base_url, journal_id, volume_name</string>
+      <string>2,&quot;^%sdoi/[^/]+/[.0-9]+/[-.9]+$&quot;, base_url</string>
+      <string>2,&quot;^%sdoi/(citedby)/[.0-9]+/[-.9]+$&quot;, base_url</string>
+      <string>1,&quot;^%sdoi/[^/]+/[.0-9]+/[A-Za-z]+\.[0-9]+\.%s\.&quot;, base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%slockss/%s/%s/index.html&quot;, base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.indianauniversitypress.IndianaUniversityPressUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.indianauniversitypress.IndianaUniversityPressHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_id</key>
+        <displayName>Journal Identifier</displayName>
+        <description>Identifier for journal (often used as part of file names)</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>&quot;Atypon Systems, who host this Indiana University Press archival unit (AU), require you to &lt;a href=&apos;http://inscribe.iupress.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional Indiana University Press account&lt;/a&gt; prior to allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the Indiana University Press site.&quot;</string>
+  </entry>
+</map>

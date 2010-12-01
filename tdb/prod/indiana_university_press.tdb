@@ -1,591 +1,1345 @@
 {
+
   publisher <
     name = Indiana University Press
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
-
   {
+
     title <
       name = Africa Today ;
-      issn = 1154-7311
+      issn = 0001-9887 ;
+      eissn = 1527-1978
     >
 
-    param[journal_dir] = africa_today
+    {
 
-    au < released ; Africa Today Volume 46 ; 46 >
-    au < released ; Africa Today Volume 47 ; 47 >
-    au < released ; Africa Today Volume 48 ; 48 >
-    au < released ; Africa Today Volume 49 ; 49 >
-    au < released ; Africa Today Volume 50 ; 50 >
-    au < released ; Africa Today Volume 51 ; 51 >
-    au < released ; Africa Today Volume 52 ; 52 >
-    au < released ; Africa Today Volume 53 ; 53 >
-    au < ready ; Africa Today Volume 54 ; 54 >
-    au < ready ; Africa Today Volume 55 ; 55 >
-    au < ready ; Africa Today Volume 56 ; 56 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = aft
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 1999 ; Africa Today Volume 46 ; 46 >
+      au < releasing ; 2000 ; Africa Today Volume 47 ; 47 >
+      au < releasing ; 2001 ; Africa Today Volume 48 ; 48 >
+      au < releasing ; 2002-2003 ; Africa Today Volume 49 ; 49 >
+      au < releasing ; 2003-2004 ; Africa Today Volume 50 ; 50 >
+      au < releasing ; 2004-2005 ; Africa Today Volume 51 ; 51 >
+      au < releasing ; 2005-2006 ; Africa Today Volume 52 ; 52 >
+      au < releasing ; 2006-2007 ; Africa Today Volume 53 ; 53 >
+      au < releasing ; 2007-2008 ; Africa Today Volume 54 ; 54 >
+      au < releasing ; 2008-2009 ; Africa Today Volume 55 ; 55 >
+      au < releasing ; 2009-2010 ; Africa Today Volume 56 ; 56 >
+      au < releasing ; 2010-2011 ; Africa Today Volume 57 ; 57 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = africa_today
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Africa Today Volume 46 ; 46 >
+      au < released ; Africa Today Volume 47 ; 47 >
+      au < released ; Africa Today Volume 48 ; 48 >
+      au < released ; Africa Today Volume 49 ; 49 >
+      au < released ; Africa Today Volume 50 ; 50 >
+      au < released ; Africa Today Volume 51 ; 51 >
+      au < released ; Africa Today Volume 52 ; 52 >
+      au < released ; Africa Today Volume 53 ; 53 >
+      au < ready ; Africa Today Volume 54 ; 54 >
+      au < ready ; Africa Today Volume 55 ; 55 >
+      au < ready ; Africa Today Volume 56 ; 56 >
+
+    }
 
   }
 
   {
+
     title <
       name = Aleph: Historical Studies in Science and Judaism ;
       issn = 1565-1525 ;
-      eissn = 1553-3956
+      eissn = 1565-5423
     >
 
-    param[journal_dir] = aleph_historical_studies_in_science_and_judaism
+    {
 
-    au < released ; Aleph: Historical Studies in Science and Judaism Volume 4 ; 4 >
-    au < released ; Aleph: Historical Studies in Science and Judaism Volume 5 ; 5 >
-    au < released ; Aleph: Historical Studies in Science and Judaism Volume 6 ; 6 >
-    au < ready ; Aleph: Historical Studies in Science and Judaism Volume 7 ; 7 >
-    au < ready ; Aleph: Historical Studies in Science and Judaism Volume 8 ; 8 >
-    au < ready ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = ale
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2001-2008 ; Aleph: Historical Studies in Science and Judaism Volume 1-8 ; - >
+      au < releasing ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
+      au < releasing ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = aleph_historical_studies_in_science_and_judaism
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Aleph: Historical Studies in Science and Judaism Volume 4 ; 4 >
+      au < released ; Aleph: Historical Studies in Science and Judaism Volume 5 ; 5 >
+      au < released ; Aleph: Historical Studies in Science and Judaism Volume 6 ; 6 >
+      au < ready ; Aleph: Historical Studies in Science and Judaism Volume 7 ; 7 >
+      au < ready ; Aleph: Historical Studies in Science and Judaism Volume 8 ; 8 >
+      au < ready ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
+
+    }
 
   }
 
   {
+
     title <
       name = Black Camera ;
-      issn = 1947-4237 ;
-      eissn = 1536-3155
+      issn = 1536-3155 ;
+      eissn = 1947-4237
     >
 
-    param[journal_dir] = black_camera
+    {
 
-    au < manifest ; Black Camera Volume 1 ; 1 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = blc
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2009-2010 ; Black Camera Volume 1 ; 1 >
+      au < releasing ; 2010-2011 ; Black Camera Volume 2 ; 2 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = black_camera
+      implicit < status ; name ; param[volume] >
+
+      au < manifest ; Black Camera Volume 1 ; 1 >
+
+    }
 
   }
 
   {
+
     title <
       name = Bridges: A Jewish Feminist Journal ;
       issn = 1046-8358 ;
       eissn = 1558-9552
     >
 
-    param[journal_dir] = bridges_a_jewish_feminists_journal
+    {
 
-    au < released ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
-    au < released ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
-    au < ready ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
-    au < ready ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = bri
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2005 ; Bridges: A Jewish Feminist Journal Volume 10 ; 10 >
+      au < releasing ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
+      au < releasing ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
+      au < releasing ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
+      au < releasing ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
+      au < releasing ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 ; 15 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = bridges_a_jewish_feminists_journal
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
+      au < released ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
+      au < ready ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
+      au < ready ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
+
+    }
 
   }
 
   {
+
     title <
       name = e-Service Journal ;
       issn = 1528-8226 ;
       eissn = 1528-8234
     >
 
-    param[journal_dir] = eservice_journal
+    {
 
-    au < released ; e-Service Journal Volume 1 ; 1 >
-    au < released ; e-Service Journal Volume 2 ; 2 >
-    au < released ; e-Service Journal Volume 3 ; 3 >
-    au < released ; e-Service Journal Volume 4 ; 4 >
-    au < ready ; e-Service Journal Volume 5 ; 5 >
-    au < ready ; e-Service Journal Volume 6 ; 6 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = esj
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2001-2002 ; e-Service Journal Volume 1 ; 1 >
+      au < releasing ; 2002-2003 ; e-Service Journal Volume 2 ; 2 >
+      au < releasing ; 2003-2005 ; e-Service Journal Volume 3 ; 3 >
+      au < releasing ; 2005-2006 ; e-Service Journal Volume 4 ; 4 >
+      au < releasing ; 2006-2007 ; e-Service Journal Volume 5 ; 5 >
+      au < releasing ; 2007-2009 ; e-Service Journal Volume 6 ; 6 >
+      au < releasing ; 2010 ; e-Service Journal Volume 7 ; 7 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = eservice_journal
+      implicit < status ; name ; param[volume] >
+
+      au < released ; e-Service Journal Volume 1 ; 1 >
+      au < released ; e-Service Journal Volume 2 ; 2 >
+      au < released ; e-Service Journal Volume 3 ; 3 >
+      au < released ; e-Service Journal Volume 4 ; 4 >
+      au < ready ; e-Service Journal Volume 5 ; 5 >
+      au < ready ; e-Service Journal Volume 6 ; 6 >
+
+    }
 
   }
   
   {
+
     title <
       name = Ethics & the Environment ;
       issn = 1085-6633 ;
       eissn = 1535-5306
     >
 
-    param[journal_dir] = ethics_and_the_environment
+    {
 
-    au < released ; Ethics & the Environment Volume 6 ; 6 >
-    au < released ; Ethics & the Environment Volume 7 ; 7 >
-    au < released ; Ethics & the Environment Volume 8 ; 8 >
-    au < released ; Ethics & the Environment Volume 9 ; 9 >
-    au < released ; Ethics & the Environment Volume 10 ; 10 >
-    au < released ; Ethics & the Environment Volume 11 ; 11 >
-    au < released ; Ethics & the Environment Volume 12 ; 12 >
-    au < ready ; Ethics & the Environment Volume 13 ; 13 >
-    au < ready ; Ethics & the Environment Volume 14 ; 14 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = ete
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2001 ; Ethics & the Environment Volume 6 ; 6 >
+      au < releasing ; 2002 ; Ethics & the Environment Volume 7 ; 7 >
+      au < releasing ; 2003 ; Ethics & the Environment Volume 8 ; 8 >
+      au < releasing ; 2004 ; Ethics & the Environment Volume 9 ; 9 >
+      au < releasing ; 2005 ; Ethics & the Environment Volume 10 ; 10 >
+      au < releasing ; 2006 ; Ethics & the Environment Volume 11 ; 11 >
+      au < releasing ; 2007 ; Ethics & the Environment Volume 12 ; 12 >
+      au < releasing ; 2008 ; Ethics & the Environment Volume 13 ; 13 >
+      au < releasing ; 2009 ; Ethics & the Environment Volume 14 ; 14 >
+      au < releasing ; 2010 ; Ethics & the Environment Volume 15 ; 15 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = ethics_and_the_environment
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Ethics & the Environment Volume 6 ; 6 >
+      au < released ; Ethics & the Environment Volume 7 ; 7 >
+      au < released ; Ethics & the Environment Volume 8 ; 8 >
+      au < released ; Ethics & the Environment Volume 9 ; 9 >
+      au < released ; Ethics & the Environment Volume 10 ; 10 >
+      au < released ; Ethics & the Environment Volume 11 ; 11 >
+      au < released ; Ethics & the Environment Volume 12 ; 12 >
+      au < ready ; Ethics & the Environment Volume 13 ; 13 >
+      au < ready ; Ethics & the Environment Volume 14 ; 14 >
+
+    }
 
   }
 
   {
+
     title <
       name = Film History: An International Journal ;
       issn = 0892-2160 ;
       eissn = 1553-3905
     >
 
-    param[journal_dir] = film_history
+    {
 
-    au < released ; Film History: An International Journal Volume 17 ; 17 >
-    au < released ; Film History: An International Journal Volume 18 ; 18 >
-    au < released ; Film History: An International Journal Volume 19 ; 19 >
-    au < ready ; Film History: An International Journal Volume 20 ; 20 >
-    au < ready ; Film History: An International Journal Volume 21 ; 21 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = fil
+      implicit < status ; year ; name ; param[volume_name] >
 
-  }
+      au < releasing ; 2000 ; Film History: An International Journal Volume 12 ; 12 >
+      au < releasing ; 2001 ; Film History: An International Journal Volume 13 ; 13 >
+      au < releasing ; 2002 ; Film History: An International Journal Volume 14 ; 14 >
+      au < releasing ; 2003 ; Film History: An International Journal Volume 15 ; 15 >
+      au < releasing ; 2004 ; Film History: An International Journal Volume 16 ; 16 >
+      au < releasing ; 2005 ; Film History: An International Journal Volume 17 ; 17 >
+      au < releasing ; 2006 ; Film History: An International Journal Volume 18 ; 18 >
+      au < releasing ; 2007 ; Film History: An International Journal Volume 19 ; 19 >
+      au < releasing ; 2008 ; Film History: An International Journal Volume 20 ; 20 >
+      au < releasing ; 2009 ; Film History: An International Journal Volume 21 ; 21 >
+      au < releasing ; 2010 ; Film History: An International Journal Volume 22 ; 22 >
 
-  {
-    title <
-      name = History & Memory
-    >
+    }
 
-    param[journal_dir] = history_and_memory
+    {
 
-    au < released ; History & Memory Volume 11 ; 11 >
-    au < released ; History & Memory Volume 12 ; 12 >
-    au < released ; History & Memory Volume 13 ; 13 >
-    au < released ; History & Memory Volume 14 ; 14 >
-    au < released ; History & Memory Volume 15 ; 15 >
-    au < released ; History & Memory Volume 16 ; 16 >
-    au < released ; History & Memory Volume 17 ; 17 >
-    au < released ; History & Memory Volume 18 ; 18 >
-    au < released ; History & Memory Volume 19 ; 19 >
-    au < ready ; History & Memory Volume 20 ; 20 >
-    au < ready ; History & Memory Volume 21 ; 21 >
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = film_history
+      implicit < status ; name ; param[volume] >
 
-  }
+      au < released ; Film History: An International Journal Volume 17 ; 17 >
+      au < released ; Film History: An International Journal Volume 18 ; 18 >
+      au < released ; Film History: An International Journal Volume 19 ; 19 >
+      au < ready ; Film History: An International Journal Volume 20 ; 20 >
+      au < ready ; Film History: An International Journal Volume 21 ; 21 >
 
-  {
-    title <
-      name = Hypatia ;
-      issn = 0887-5367 ;
-      eissn = 1527-2001
-    >
-
-    param[journal_dir] = hypatia
-
-    au < released ; Hypatia Volume 14 ; 14 >
-    au < released ; Hypatia Volume 15 ; 15 >
-    au < released ; Hypatia Volume 16 ; 16 >
-    au < released ; Hypatia Volume 17 ; 17 >
-    au < released ; Hypatia Volume 18 ; 18 >
-    au < released ; Hypatia Volume 19 ; 19 >
-    au < released ; Hypatia Volume 20 ; 20 >
-    au < released ; Hypatia Volume 21 ; 21 >
-    au < released ; Hypatia Volume 22 ; 22 >
-    au < ready ; Hypatia Volume 23 ; 23 >
+    }
 
   }
 
   {
-    title <
-      name = Indiana Journal of Global Legal Studies ;
-      issn = 1080-0727 ;
-      eissn = 1543-0367
-    >
 
-    param[journal_dir] = indiana_journal_of_global_legal_studies
-
-    au < released ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
-    au < released ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
-    au < released ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
-    au < released ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
-    au < ready ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
-    au < ready ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
-    au < ready ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
-
-  }
-
-  {
-    title <
-      name = International Journal of Feminist Approaches to Bioethics ;
-      issn = 1937-4577 ;
-      eissn = 1937-4585
-    >
-
-    param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
-
-    au < ready ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
-    au < ready ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
-
-  }
-
-  {
-    title <
-      name = Israel Studies ;
-      issn = 1084-9513 ;
-      eissn = 1527-201X
-    >
-
-    param[journal_dir] = israel_studies
-
-    au < released ; Israel Studies Volume 1 ; 1 >
-    au < released ; Israel Studies Volume 2 ; 2 >
-    au < released ; Israel Studies Volume 3 ; 3 >
-    au < released ; Israel Studies Volume 4 ; 4 >
-    au < released ; Israel Studies Volume 5 ; 5 >
-    au < released ; Israel Studies Volume 6 ; 6 >
-    au < released ; Israel Studies Volume 7 ; 7 >
-    au < released ; Israel Studies Volume 8 ; 8 >
-    au < released ; Israel Studies Volume 9 ; 9 >
-    au < released ; Israel Studies Volume 10 ; 10 >
-    au < released ; Israel Studies Volume 11 ; 11 >
-    au < released ; Israel Studies Volume 12 ; 12 >
-    au < ready ; Israel Studies Volume 13 ; 13 >
-    au < ready ; Israel Studies Volume 14 ; 14 >
-    au < ready ; Israel Studies Volume 15 ; 15 >
-
-  }
-
-  {
-    title <
-      name = Jewish Social Studies ;
-      issn = 0021-6704 ;
-      eissn = 1527-2028
-    >
-
-    param[journal_dir] = jewish_social_studies
-
-    au < released ; Jewish Social Studies Volume 5 ; 5 >
-    au < released ; Jewish Social Studies Volume 6 ; 6 >
-    au < released ; Jewish Social Studies Volume 7 ; 7 >
-    au < released ; Jewish Social Studies Volume 8 ; 8 >
-    au < released ; Jewish Social Studies Volume 9 ; 9 >
-    au < released ; Jewish Social Studies Volume 10 ; 10 >
-    au < released ; Jewish Social Studies Volume 11 ; 11 >
-    au < released ; Jewish Social Studies Volume 12 ; 12 >
-    au < released ; Jewish Social Studies Volume 13 ; 13 >
-    au < ready ; Jewish Social Studies Volume 14 ; 14 >
-    au < ready ; Jewish Social Studies Volume 15 ; 15 >
-
-  }
-
-  {
-    title <
-      name = Journal for Early Modern Cultural Studies ;
-      issn = 1531-0485 ;
-      eissn = 1553-3786
-    >
-
-    param[journal_dir] = journal_for_early_modern_cultural_studies
-
-    au < released ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
-    au < released ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
-    au < released ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
-    au < ready ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
-    au < ready ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
-
-  }
-
-  {
-    title <
-      name = Journal of Feminist Studies in Religion ;
-      issn = 8755-4178 ;
-      eissn = 1553-3913
-    >
-
-    param[journal_dir] = journal_of_feminist_studies_in_religion
-
-    au < released ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
-    au < released ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
-    au < ready ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
-    au < ready ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
-    au < ready ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
-
-  }
-
-  {
-    title <
-      name = Journal of Folklore Research ;
-      issn = 0737-7037 ;
-      eissn = 1543-0413
-    >
-
-    param[journal_dir] = journal_of_folklore_research
-
-    au < released ; Journal of Folklore Research Volume 40 ; 40 >
-    au < released ; Journal of Folklore Research Volume 41 ; 41 >
-    au < released ; Journal of Folklore Research Volume 42 ; 42 >
-    au < released ; Journal of Folklore Research Volume 43 ; 43 >
-    au < ready ; Journal of Folklore Research Volume 44 ; 44 >
-    au < ready ; Journal of Folklore Research Volume 45 ; 45 >
-    au < ready ; Journal of Folklore Research Volume 46 ; 46 >
-
-  }
-
-  {
-    title <
-      name = Journal of Middle East Women's Studies ;
-      issn = 1552-5864 ;
-      eissn = 1558-9579
-    >
-
-    param[journal_dir] = journal_of_middle_east_womens_studies
-
-    au < released ; Journal of Middle East Women's Studies Volume 2 ; 2 >
-    au < released ; Journal of Middle East Women's Studies Volume 3 ; 3 >
-    au < ready ; Journal of Middle East Women's Studies Volume 4 ; 4 >
-    au < ready ; Journal of Middle East Women's Studies Volume 5 ; 5 >
-    au < ready ; Journal of Middle East Women's Studies Volume 6 ; 6 >
-
-  }
-
-  {
-    title <
-      name = Journal of Modern Literature ;
-      issn = 1529-1464 ;
-      eissn = 0022-281X
-    >
-
-    param[journal_dir] = journal_of_modern_literature
-
-    comment[jml31_32] = 500 errors
-
-    au < released ; Journal of Modern Literature Volume 22 ; 22 >
-    au < released ; Journal of Modern Literature Volume 23 ; 23 >
-    au < released ; Journal of Modern Literature Volume 24 ; 24 >
-    au < released ; Journal of Modern Literature Volume 25 ; 25 >
-    au < released ; Journal of Modern Literature Volume 26 ; 26 >
-    au < released ; Journal of Modern Literature Volume 27 ; 27 >
-    au < released ; Journal of Modern Literature Volume 28 ; 28 >
-    au < released ; Journal of Modern Literature Volume 29 ; 29 >
-    au < released ; Journal of Modern Literature Volume 30 ; 30 >
-    au < notReady ; Journal of Modern Literature Volume 31 ; 31 >
-    au < notReady ; Journal of Modern Literature Volume 32 ; 32 >
-    au < ready ; Journal of Modern Literature Volume 33 ; 33 >
-
-  }
-
-  {
-    title <
-      name = Meridians: feminism, race, transnationalism ;
-      issn = 1536-6936 ;
-      eissn = 1547-8424
-    >
-
-    param[journal_dir] = meridians
-
-    comment[m8] = 500 errors
-
-    au < released ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
-    au < released ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
-    au < released ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
-    au < released ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
-    au < notReady ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
-    au < ready ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
-
-  }
-
-  {
-    title <
-      name = Nashim: A Journal of Jewish Women's Studies & Gender Issues ;
-      issn = 0793-8934 ;
-      eissn = 1565-5288
-    >
-
-    param[journal_dir] = nashim
-
-    comment[nm15_16] = 500 errors
-
-    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 ; 6 >
-    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 ; 7 >
-    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 ; 8 >
-    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 9 ; 9 >
-    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 ; 10 >
-    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 ; 11 >
-    au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 ; 12 >
-    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 ; 13 >
-    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 ; 14 >
-    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 ; 15 >
-    au < notReady ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
-    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
-    au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
-
-  }
-
-  {
-    title <
-      name = Native Plants Journal ;
-      issn = 1522-8339 ;
-      eissn = 1548-4785
-    >
-
-    param[journal_dir] = native_plants_journal
-
-    au < released ; Native Plants Journal Volume 5 ; 5 >
-    au < released ; Native Plants Journal Volume 6 ; 6 >
-    au < released ; Native Plants Journal Volume 7 ; 7 >
-    au < released ; Native Plants Journal Volume 8 ; 8 >
-    au < ready ; Native Plants Journal Volume 9 ; 9 >
-    au < ready ; Native Plants Journal Volume 10 ; 10 >
-
-  }
-
-  {
-    title <
-      name = Philosophy of Music Education Review ;
-      issn = 1063-5734 ;
-      eissn = 1543-3412
-    >
-
-    param[journal_dir] = philosophy_of_music_education_review
-
-    au < released ; Philosophy of Music Education Review Volume 11 ; 11 >
-    au < released ; Philosophy of Music Education Review Volume 12 ; 12 >
-    au < released ; Philosophy of Music Education Review Volume 13 ; 13 >
-    au < released ; Philosophy of Music Education Review Volume 14 ; 14 >
-    au < ready ; Philosophy of Music Education Review Volume 15 ; 15 >
-    au < ready ; Philosophy of Music Education Review Volume 16 ; 16 >
-    au < ready ; Philosophy of Music Education Review Volume 17 ; 17 >
-
-  }
-
-  {
-    title <
-      name = Prooftexts ;
-      issn = 1086-3311 ;
-      eissn = 0272-9601
-    >
-
-    param[journal_dir] = prooftexts
-    
-    comment[pt28] = 500 errors
-
-    au < released ; Prooftexts Volume 20 ; 20 >
-    au < released ; Prooftexts Volume 21 ; 21 >
-    au < released ; Prooftexts Volume 22 ; 22 >
-    au < released ; Prooftexts Volume 23 ; 23 >
-    au < released ; Prooftexts Volume 24 ; 24 >
-    au < released ; Prooftexts Volume 25 ; 25 >
-    au < released ; Prooftexts Volume 26 ; 26 >
-    au < ready ; Prooftexts Volume 27 ; 27 >
-    au < notReady ; Prooftexts Volume 28 ; 28 >
-    au < ready ; Prooftexts Volume 29 ; 29 >
-
-  }
-
-  {
-    title <
-      name = Race/Ethnicity:  Multidisciplinary Global Perspectives
-    >
-
-    param[journal_dir] = race_ethnicity
-
-    au < ready ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
-    au < ready ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
-
-  }
-
-  {
-    title <
-      name = Research in African Literatures ;
-      issn = 1527-2044 ;
-      eissn = 0034-5210
-    >
-
-    param[journal_dir] = research_in_african_literatures
-
-    comment[ral39_40] = 500 errors
-
-    au < released ; Research in African Literatures Volume 30 ; 30 >
-    au < released ; Research in African Literatures Volume 31 ; 31 >
-    au < released ; Research in African Literatures Volume 32 ; 32 >
-    au < released ; Research in African Literatures Volume 33 ; 33 >
-    au < released ; Research in African Literatures Volume 34 ; 34 >
-    au < released ; Research in African Literatures Volume 35 ; 35 >
-    au < released ; Research in African Literatures Volume 36 ; 36 >
-    au < released ; Research in African Literatures Volume 37 ; 37 >
-    au < released ; Research in African Literatures Volume 38 ; 38 >
-    au < notReady ; Research in African Literatures Volume 39 ; 39 >
-    au < notReady ; Research in African Literatures Volume 40 ; 40 >
-    au < ready ; Research in African Literatures Volume 41 ; 41 >
-
-  }
-
-  {
-    title <
-      name = Textual Cultures:  Texts, Contexts, Interpretation
-    >
-
-    param[journal_dir] = textual_cultures
-
-    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 1 ; 1 >
-    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 2 ; 2 >
-    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 3 ; 3 >
-    au < ready ; Textual Cultures:  Texts, Contexts, Interpretation Volume 4 ; 4 >
-
-  }
-
-  {
     title <
       name = The Global South ;
       issn = 1932-8648 ;
       eissn = 1932-8656
     >
 
-    param[journal_dir] = the_global_south
+    {
 
-    au < testing ; The Global South Volume 2 ; 2 >
-    au < ready ; The Global South Volume 3 ; 3 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = gso
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2007 ; The Global South Volume 1 ; 1 >
+      au < releasing ; 2008 ; The Global South Volume 2 ; 2 >
+      au < releasing ; 2009 ; The Global South Volume 3 ; 3 >
+      au < releasing ; 2010 ; The Global South Volume 4 ; 4 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = the_global_south
+      implicit < status ; name ; param[volume] >
+
+      au < testing ; The Global South Volume 2 ; 2 >
+      au < ready ; The Global South Volume 3 ; 3 >
+
+    }
 
   }
 
   {
+
+    title <
+      name = History & Memory ;
+      issn = 0935-560X ;
+      eissn = 1527-1994 
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = his
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 1997 ; History & Memory Volume 9 ; 9 >
+      au < doesNotExist ; 1998 ; History & Memory Volume 10 ; 10 >
+      au < releasing ; 1999 ; History & Memory Volume 11 ; 11 >
+      au < releasing ; 2000 ; History & Memory Volume 12 ; 12 >
+      au < releasing ; 2001 ; History & Memory Volume 13 ; 13 >
+      au < releasing ; 2002 ; History & Memory Volume 14 ; 14 >
+      au < releasing ; 2003 ; History & Memory Volume 15 ; 15 >
+      au < releasing ; 2004 ; History & Memory Volume 16 ; 16 >
+      au < releasing ; 2005 ; History & Memory Volume 17 ; 17 >
+      au < releasing ; 2006 ; History & Memory Volume 18 ; 18 >
+      au < releasing ; 2007 ; History & Memory Volume 19 ; 19 >
+      au < releasing ; 2008 ; History & Memory Volume 20 ; 20 >
+      au < releasing ; 2009 ; History & Memory Volume 21 ; 21 >
+      au < releasing ; 2010 ; History & Memory Volume 22 ; 22 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = history_and_memory
+      implicit < status ; name ; param[volume] >
+
+      au < released ; History & Memory Volume 11 ; 11 >
+      au < released ; History & Memory Volume 12 ; 12 >
+      au < released ; History & Memory Volume 13 ; 13 >
+      au < released ; History & Memory Volume 14 ; 14 >
+      au < released ; History & Memory Volume 15 ; 15 >
+      au < released ; History & Memory Volume 16 ; 16 >
+      au < released ; History & Memory Volume 17 ; 17 >
+      au < released ; History & Memory Volume 18 ; 18 >
+      au < released ; History & Memory Volume 19 ; 19 >
+      au < ready ; History & Memory Volume 20 ; 20 >
+      au < ready ; History & Memory Volume 21 ; 21 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Hypatia ;
+      issn = 0887-5367 ;
+      eissn = 1527-2001
+    >
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = hypatia
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Hypatia Volume 14 ; 14 >
+      au < released ; Hypatia Volume 15 ; 15 >
+      au < released ; Hypatia Volume 16 ; 16 >
+      au < released ; Hypatia Volume 17 ; 17 >
+      au < released ; Hypatia Volume 18 ; 18 >
+      au < released ; Hypatia Volume 19 ; 19 >
+      au < released ; Hypatia Volume 20 ; 20 >
+      au < released ; Hypatia Volume 21 ; 21 >
+      au < released ; Hypatia Volume 22 ; 22 >
+      au < ready ; Hypatia Volume 23 ; 23 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Indiana Journal of Global Legal Studies ;
+      issn = 1080-0727 ;
+      eissn = 1543-0367
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = gls
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
+      au < releasing ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
+      au < releasing ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
+      au < releasing ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
+      au < releasing ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
+      au < releasing ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
+      au < releasing ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
+      au < releasing ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = indiana_journal_of_global_legal_studies
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
+      au < released ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
+      au < released ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
+      au < released ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
+      au < ready ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
+      au < ready ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
+      au < ready ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = International Journal of Feminist Approaches to Bioethics ;
+      issn = 1937-4585 ;
+      eissn = 1937-4577
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = fab
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2008 ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
+      au < releasing ; 2009 ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+      au < releasing ; 2010 ; International Journal of Feminist Approaches to Bioethics Volume 3 ; 3 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = international_journal_of_feminist_approaches_to_bioethics
+      implicit < status ; name ; param[volume] >
+
+      au < ready ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
+      au < ready ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Israel Studies ;
+      issn = 1084-9513 ;
+      eissn = 1527-201X
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = isr
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 1996 ; Israel Studies Volume 1 ; 1 >
+      au < releasing ; 1997 ; Israel Studies Volume 2 ; 2 >
+      au < releasing ; 1998 ; Israel Studies Volume 3 ; 3 >
+      au < releasing ; 1999 ; Israel Studies Volume 4 ; 4 >
+      au < releasing ; 2000 ; Israel Studies Volume 5 ; 5 >
+      au < releasing ; 2001 ; Israel Studies Volume 6 ; 6 >
+      au < releasing ; 2002 ; Israel Studies Volume 7 ; 7 >
+      au < releasing ; 2003 ; Israel Studies Volume 8 ; 8 >
+      au < releasing ; 2004 ; Israel Studies Volume 9 ; 9 >
+      au < releasing ; 2005 ; Israel Studies Volume 10 ; 10 >
+      au < releasing ; 2006 ; Israel Studies Volume 11 ; 11 >
+      au < releasing ; 2007 ; Israel Studies Volume 12 ; 12 >
+      au < releasing ; 2008 ; Israel Studies Volume 13 ; 13 >
+      au < releasing ; 2009 ; Israel Studies Volume 14 ; 14 >
+      au < releasing ; 2010 ; Israel Studies Volume 15 ; 15 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = israel_studies
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Israel Studies Volume 1 ; 1 >
+      au < released ; Israel Studies Volume 2 ; 2 >
+      au < released ; Israel Studies Volume 3 ; 3 >
+      au < released ; Israel Studies Volume 4 ; 4 >
+      au < released ; Israel Studies Volume 5 ; 5 >
+      au < released ; Israel Studies Volume 6 ; 6 >
+      au < released ; Israel Studies Volume 7 ; 7 >
+      au < released ; Israel Studies Volume 8 ; 8 >
+      au < released ; Israel Studies Volume 9 ; 9 >
+      au < released ; Israel Studies Volume 10 ; 10 >
+      au < released ; Israel Studies Volume 11 ; 11 >
+      au < released ; Israel Studies Volume 12 ; 12 >
+      au < ready ; Israel Studies Volume 13 ; 13 >
+      au < ready ; Israel Studies Volume 14 ; 14 >
+      au < ready ; Israel Studies Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Jewish Social Studies ;
+      issn = 0021-6704 ;
+      eissn = 1527-2028
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = jss
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 1997-1998 ; Jewish Social Studies Volume 4 ; 4 >
+      au < releasing ; 1998-1999 ; Jewish Social Studies Volume 5 ; 5 >
+      au < releasing ; 1999-2000 ; Jewish Social Studies Volume 6 ; 6 >
+      au < releasing ; 2000-2001 ; Jewish Social Studies Volume 7 ; 7 >
+      au < releasing ; 2001-2002 ; Jewish Social Studies Volume 8 ; 8 >
+      au < releasing ; 2002-2003 ; Jewish Social Studies Volume 9 ; 9 >
+      au < releasing ; 2003-2004 ; Jewish Social Studies Volume 10 ; 10 >
+      au < releasing ; 2004-2005 ; Jewish Social Studies Volume 11 ; 11 >
+      au < releasing ; 2005-2006 ; Jewish Social Studies Volume 12 ; 12 >
+      au < releasing ; 2006-2007 ; Jewish Social Studies Volume 13 ; 13 >
+      au < releasing ; 2007-2008 ; Jewish Social Studies Volume 14 ; 14 >
+      au < releasing ; 2008-2009 ; Jewish Social Studies Volume 15 ; 15 >
+      au < releasing ; 2009-2010 ; Jewish Social Studies Volume 16 ; 16 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = jewish_social_studies
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Jewish Social Studies Volume 5 ; 5 >
+      au < released ; Jewish Social Studies Volume 6 ; 6 >
+      au < released ; Jewish Social Studies Volume 7 ; 7 >
+      au < released ; Jewish Social Studies Volume 8 ; 8 >
+      au < released ; Jewish Social Studies Volume 9 ; 9 >
+      au < released ; Jewish Social Studies Volume 10 ; 10 >
+      au < released ; Jewish Social Studies Volume 11 ; 11 >
+      au < released ; Jewish Social Studies Volume 12 ; 12 >
+      au < released ; Jewish Social Studies Volume 13 ; 13 >
+      au < ready ; Jewish Social Studies Volume 14 ; 14 >
+      au < ready ; Jewish Social Studies Volume 15 ; 15 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal for Early Modern Cultural Studies ;
+      issn = 1531-0485 ;
+      eissn = 1553-3786
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = jem
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
+      au < releasing ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
+      au < releasing ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
+      au < releasing ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
+      au < releasing ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+      au < releasing ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+      au < releasing ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_for_early_modern_cultural_studies
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
+      au < released ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
+      au < released ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
+      au < ready ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+      au < ready ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Feminist Studies in Religion ;
+      issn = 8755-4178 ;
+      eissn = 1553-3913
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = fsr
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2004 ; Journal of Feminist Studies in Religion Volume 20 ; 20 >
+      au < releasing ; 2005 ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
+      au < releasing ; 2006 ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
+      au < releasing ; 2007 ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
+      au < releasing ; 2008 ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
+      au < releasing ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+      au < releasing ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_feminist_studies_in_religion
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
+      au < released ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
+      au < ready ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
+      au < ready ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
+      au < ready ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Folklore Research ;
+      issn = 0737-7037 ;
+      eissn = 1543-0413
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = jfr
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
+      au < releasing ; 2003 ; Journal of Folklore Research Volume 40 ; 40 >
+      au < releasing ; 2004 ; Journal of Folklore Research Volume 41 ; 41 >
+      au < releasing ; 2005 ; Journal of Folklore Research Volume 42 ; 42 >
+      au < releasing ; 2006 ; Journal of Folklore Research Volume 43 ; 43 >
+      au < releasing ; 2007 ; Journal of Folklore Research Volume 44 ; 44 >
+      au < releasing ; 2008 ; Journal of Folklore Research Volume 45 ; 45 >
+      au < releasing ; 2009 ; Journal of Folklore Research Volume 46 ; 46 >
+      au < releasing ; 2010 ; Journal of Folklore Research Volume 47 ; 47 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_folklore_research
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Journal of Folklore Research Volume 40 ; 40 >
+      au < released ; Journal of Folklore Research Volume 41 ; 41 >
+      au < released ; Journal of Folklore Research Volume 42 ; 42 >
+      au < released ; Journal of Folklore Research Volume 43 ; 43 >
+      au < ready ; Journal of Folklore Research Volume 44 ; 44 >
+      au < ready ; Journal of Folklore Research Volume 45 ; 45 >
+      au < ready ; Journal of Folklore Research Volume 46 ; 46 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Middle East Women's Studies ;
+      issn = 1552-5864 ;
+      eissn = 1558-9579
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = mew
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 >
+      au < releasing ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 >
+      au < releasing ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 >
+      au < releasing ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 >
+      au < releasing ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 >
+      au < releasing ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_middle_east_womens_studies
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Journal of Middle East Women's Studies Volume 2 ; 2 >
+      au < released ; Journal of Middle East Women's Studies Volume 3 ; 3 >
+      au < ready ; Journal of Middle East Women's Studies Volume 4 ; 4 >
+      au < ready ; Journal of Middle East Women's Studies Volume 5 ; 5 >
+      au < ready ; Journal of Middle East Women's Studies Volume 6 ; 6 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Journal of Modern Literature ;
+      issn = 0022-281X ;
+      eissn = 1529-1464
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = jml
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2001-2002 ; Journal of Modern Literature Volume 25 ; 25 >
+      au < releasing ; 2002-2003 ; Journal of Modern Literature Volume 26 ; 26 >
+      au < releasing ; 2003-2004 ; Journal of Modern Literature Volume 27 ; 27 >
+      au < releasing ; 2004-2005 ; Journal of Modern Literature Volume 28 ; 28 >
+      au < releasing ; 2005-2006 ; Journal of Modern Literature Volume 29 ; 29 >
+      au < releasing ; 2006-2007 ; Journal of Modern Literature Volume 30 ; 30 >
+      au < releasing ; 2007-2008 ; Journal of Modern Literature Volume 31 ; 31 >
+      au < releasing ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
+      au < releasing ; 2009-2010 ; Journal of Modern Literature Volume 33 ; 33 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = journal_of_modern_literature
+      implicit < status ; name ; param[volume] >
+
+      comment[jml31_32] = 500 errors
+
+      au < released ; Journal of Modern Literature Volume 22 ; 22 >
+      au < released ; Journal of Modern Literature Volume 23 ; 23 >
+      au < released ; Journal of Modern Literature Volume 24 ; 24 >
+      au < released ; Journal of Modern Literature Volume 25 ; 25 >
+      au < released ; Journal of Modern Literature Volume 26 ; 26 >
+      au < released ; Journal of Modern Literature Volume 27 ; 27 >
+      au < released ; Journal of Modern Literature Volume 28 ; 28 >
+      au < released ; Journal of Modern Literature Volume 29 ; 29 >
+      au < released ; Journal of Modern Literature Volume 30 ; 30 >
+      au < notReady ; Journal of Modern Literature Volume 31 ; 31 >
+      au < notReady ; Journal of Modern Literature Volume 32 ; 32 >
+      au < ready ; Journal of Modern Literature Volume 33 ; 33 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Meridians: feminism, race, transnationalism ;
+      issn = 1536-6936 ;
+      eissn = 1547-8424
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = mer
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
+      au < releasing ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
+      au < releasing ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
+      au < releasing ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
+      au < releasing ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
+      au < releasing ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
+      au < releasing ; 2009 ; Meridians: feminism, race, transnationalism Volume 10 ; 10 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = meridians
+      implicit < status ; name ; param[volume] >
+
+      comment[m8] = 500 errors
+
+      au < released ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
+      au < released ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
+      au < released ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
+      au < released ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
+      au < notReady ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
+      au < ready ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Nashim: A Journal of Jewish Women's Studies & Gender Issues ;
+      issn = 0793-8934 ;
+      eissn = 1565-5288
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = nas
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2003-2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6-20 ; - >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = nashim
+      implicit < status ; name ; param[volume] >
+
+      comment[nm15_16] = 500 errors
+
+      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6 ; 6 >
+      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 7 ; 7 >
+      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 8 ; 8 >
+      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 9 ; 9 >
+      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 10 ; 10 >
+      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 11 ; 11 >
+      au < released ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 12 ; 12 >
+      au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 13 ; 13 >
+      au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 14 ; 14 >
+      au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 15 ; 15 >
+      au < notReady ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 16 ; 16 >
+      au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 17 ; 17 >
+      au < ready ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Number 18 ; 18 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Native Plants Journal ;
+      issn = 1522-8339 ;
+      eissn = 1548-4785
+    >
+
+    comment[publisher] = moving to University of Wisconsin Press
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = npj
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < releasing ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < releasing ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < releasing ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < releasing ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < releasing ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < releasing ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = native_plants_journal
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Native Plants Journal Volume 5 ; 5 >
+      au < released ; Native Plants Journal Volume 6 ; 6 >
+      au < released ; Native Plants Journal Volume 7 ; 7 >
+      au < released ; Native Plants Journal Volume 8 ; 8 >
+      au < ready ; Native Plants Journal Volume 9 ; 9 >
+      au < ready ; Native Plants Journal Volume 10 ; 10 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Philosophy of Music Education Review ;
+      issn = 1063-5734 ;
+      eissn = 1543-3412
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = pme
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
+      au < releasing ; 2003 ; Philosophy of Music Education Review Volume 11 ; 11 >
+      au < releasing ; 2004 ; Philosophy of Music Education Review Volume 12 ; 12 >
+      au < releasing ; 2005 ; Philosophy of Music Education Review Volume 13 ; 13 >
+      au < releasing ; 2006 ; Philosophy of Music Education Review Volume 14 ; 14 >
+      au < releasing ; 2007 ; Philosophy of Music Education Review Volume 15 ; 15 >
+      au < releasing ; 2008 ; Philosophy of Music Education Review Volume 16 ; 16 >
+      au < releasing ; 2009 ; Philosophy of Music Education Review Volume 17 ; 17 >
+      au < releasing ; 2010 ; Philosophy of Music Education Review Volume 18 ; 18 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = philosophy_of_music_education_review
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Philosophy of Music Education Review Volume 11 ; 11 >
+      au < released ; Philosophy of Music Education Review Volume 12 ; 12 >
+      au < released ; Philosophy of Music Education Review Volume 13 ; 13 >
+      au < released ; Philosophy of Music Education Review Volume 14 ; 14 >
+      au < ready ; Philosophy of Music Education Review Volume 15 ; 15 >
+      au < ready ; Philosophy of Music Education Review Volume 16 ; 16 >
+      au < ready ; Philosophy of Music Education Review Volume 17 ; 17 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Prooftexts: A Journal of Jewish Literary History ;
+      issn = 0272-9601 ;
+      eissn = 1086-3311
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = pft
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
+      au < releasing ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
+      au < releasing ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
+      au < releasing ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
+      au < releasing ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
+      au < releasing ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
+      au < releasing ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
+      au < releasing ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
+      au < releasing ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
+      au < releasing ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = prooftexts
+      implicit < status ; name ; param[volume] >
+    
+      comment[pt28] = 500 errors
+
+      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
+      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
+      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
+      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
+      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
+      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
+      au < released ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
+      au < ready ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
+      au < notReady ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
+      au < ready ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Race/Ethnicity:  Multidisciplinary Global Perspectives ;
+      issn = 1935-8644 ;
+      eissn = 1935-8562
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = rac
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
+      au < releasing ; 2008-2009 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
+      au < releasing ; 2009-2010 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = race_ethnicity
+      implicit < status ; name ; param[volume] >
+
+      au < ready ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
+      au < ready ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Research in African Literatures ;
+      issn = 0034-5210 ;
+      eissn = 1527-2044
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = ral
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 1999 ; Research in African Literatures Volume 30 ; 30 >
+      au < releasing ; 2000 ; Research in African Literatures Volume 31 ; 31 >
+      au < releasing ; 2001 ; Research in African Literatures Volume 32 ; 32 >
+      au < releasing ; 2002 ; Research in African Literatures Volume 33 ; 33 >
+      au < releasing ; 2003 ; Research in African Literatures Volume 34 ; 34 >
+      au < releasing ; 2004 ; Research in African Literatures Volume 35 ; 35 >
+      au < releasing ; 2005 ; Research in African Literatures Volume 36 ; 36 >
+      au < releasing ; 2006 ; Research in African Literatures Volume 37 ; 37 >
+      au < releasing ; 2007 ; Research in African Literatures Volume 38 ; 38 >
+      au < releasing ; 2008 ; Research in African Literatures Volume 39 ; 39 >
+      au < releasing ; 2009 ; Research in African Literatures Volume 40 ; 40 >
+      au < releasing ; 2010 ; Research in African Literatures Volume 41 ; 41 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = research_in_african_literatures
+      implicit < status ; name ; param[volume] >
+
+      comment[ral39_40] = 500 errors
+
+      au < released ; Research in African Literatures Volume 30 ; 30 >
+      au < released ; Research in African Literatures Volume 31 ; 31 >
+      au < released ; Research in African Literatures Volume 32 ; 32 >
+      au < released ; Research in African Literatures Volume 33 ; 33 >
+      au < released ; Research in African Literatures Volume 34 ; 34 >
+      au < released ; Research in African Literatures Volume 35 ; 35 >
+      au < released ; Research in African Literatures Volume 36 ; 36 >
+      au < released ; Research in African Literatures Volume 37 ; 37 >
+      au < released ; Research in African Literatures Volume 38 ; 38 >
+      au < notReady ; Research in African Literatures Volume 39 ; 39 >
+      au < notReady ; Research in African Literatures Volume 40 ; 40 >
+      au < ready ; Research in African Literatures Volume 41 ; 41 >
+
+    }
+
+  }
+
+  {
+
+    title <
+      name = Textual Cultures: Texts, Contexts, Interpretation ;
+      issn = 1559-2936 ;
+      eissn = 1933-7418 
+    >
+
+    {
+
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = tex
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
+      au < releasing ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 ; 2 >
+      au < releasing ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
+      au < releasing ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
+      au < releasing ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 ; 5 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = textual_cultures
+      implicit < status ; name ; param[volume] >
+
+      au < ready ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
+      au < ready ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 ; 2 >
+      au < ready ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
+      au < ready ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
+
+    }
+
+  }
+
+  {
+
     title <
       name = Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy ;
       issn = 0009-1774 ;
-      eissn = 1558-9587
+      eissn = 1558-9578
     >
 
-    param[journal_dir] = transactions_of_the_charles_s_peirce_society
+    {
 
-    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
-    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
-    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
-    au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = tra
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 ; 41 >
+      au < releasing ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
+      au < releasing ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
+      au < releasing ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
+      au < releasing ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+      au < releasing ; 2010-2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 ; 46 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = transactions_of_the_charles_s_peirce_society
+      implicit < status ; name ; param[volume] >
+
+      au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
+      au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
+      au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
+      au < ready ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+
+    }
 
   }
 
   {
+
     title <
-      name = Transition ;
-      issn = 1527-8042 ;
-      eissn = 0041-1191
+      name = Transition: An International Review ;
+      issn = 0041-1191 ;
+      eissn = 1527-8042
     >
 
-    param[journal_dir] = transition
+    {
 
-    au < released ; Transition Volume 9 ; 9 >
-    au < released ; Transition Volume 10 ; 10 >
-    au < manifest ; Transition Volume 11 ; 11 >
-    au < manifest ; Transition Volume 12 ; 12 >
-    au < manifest ; Transition Volume 13 ; 13 >
-    au < ready ; Transition Issue 98 ; 98 >
-    au < ready ; Transition Issue 99 ; 99 >
-    au < ready ; Transition Issue 100 ; 100 >
-    au < ready ; Transition Issue 101 ; 101 >
-    au < ready ; Transition Issue 102 ; 102 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = tra
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 2002-2010 ; Transition: An International Review Volume 93-103 ; - >
+
+    }
+    
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = transition
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Transition: An International Review Volume 9 ; 9 >
+      au < released ; Transition: An International Review Volume 10 ; 10 >
+      au < manifest ; Transition: An International Review Volume 11 ; 11 >
+      au < manifest ; Transition: An International Review Volume 12 ; 12 >
+      au < manifest ; Transition: An International Review Volume 13 ; 13 >
+      au < ready ; Transition: An International Review Issue 98 ; 98 >
+      au < ready ; Transition: An International Review Issue 99 ; 99 >
+      au < ready ; Transition: An International Review Issue 100 ; 100 >
+      au < ready ; Transition: An International Review Issue 101 ; 101 >
+      au < ready ; Transition: An International Review Issue 102 ; 102 >
+
+    }
 
   }
 
   {
+
     title <
       name = Victorian Studies ;
-      issn = 1527-2052 ;
-      eissn = 0042-5222
+      issn = 0042-5222 ;
+      eissn = 1527-2052
     >
 
-    param[journal_dir] = victorian_studies
+    {
 
-    au < released ; Victorian Studies Volume 42 ; 42 >
-    au < released ; Victorian Studies Volume 43 ; 43 >
-    au < released ; Victorian Studies Volume 44 ; 44 >
-    au < released ; Victorian Studies Volume 45 ; 45 >
-    au < released ; Victorian Studies Volume 46 ; 46 >
-    au < released ; Victorian Studies Volume 47 ; 47 >
-    au < released ; Victorian Studies Volume 48 ; 48 >
-    au < released ; Victorian Studies Volume 49 ; 49 >
-    au < ready ; Victorian Studies Volume 50 ; 50 >
-    au < ready ; Victorian Studies Volume 51 ; 51 >
-    au < ready ; Victorian Studies Volume 52 ; 52 >
+      plugin = org.lockss.plugin.indianauniversitypress.IndianaUniversityPressPlugin
+      param[base_url] = http://inscribe.iupress.org/
+      param[journal_id] = vic
+      implicit < status ; year ; name ; param[volume_name] >
+
+      au < releasing ; 1998-2000 ; Victorian Studies Volume 42 ; 42 >
+      au < releasing ; 2000-2001 ; Victorian Studies Volume 43 ; 43 >
+      au < releasing ; 2001-2002 ; Victorian Studies Volume 44 ; 44 >
+      au < releasing ; 2002-2003 ; Victorian Studies Volume 45 ; 45 >
+      au < releasing ; 2003-2004 ; Victorian Studies Volume 46 ; 46 >
+      au < releasing ; 2004-2005 ; Victorian Studies Volume 47 ; 47 >
+      au < releasing ; 2005-2006 ; Victorian Studies Volume 48 ; 48 >
+      au < releasing ; 2006-2007 ; Victorian Studies Volume 49 ; 49 >
+      au < releasing ; 2007-2008 ; Victorian Studies Volume 50 ; 50 >
+      au < releasing ; 2008-2009 ; Victorian Studies Volume 51 ; 51 >
+      au < releasing ; 2009-2010 ; Victorian Studies Volume 52 ; 52 >
+
+    }
+
+    {
+
+      plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+      param[base_url] = http://muse.jhu.edu/
+      param[journal_dir] = victorian_studies
+      implicit < status ; name ; param[volume] >
+
+      au < released ; Victorian Studies Volume 42 ; 42 >
+      au < released ; Victorian Studies Volume 43 ; 43 >
+      au < released ; Victorian Studies Volume 44 ; 44 >
+      au < released ; Victorian Studies Volume 45 ; 45 >
+      au < released ; Victorian Studies Volume 46 ; 46 >
+      au < released ; Victorian Studies Volume 47 ; 47 >
+      au < released ; Victorian Studies Volume 48 ; 48 >
+      au < released ; Victorian Studies Volume 49 ; 49 >
+      au < ready ; Victorian Studies Volume 50 ; 50 >
+      au < ready ; Victorian Studies Volume 51 ; 51 >
+      au < ready ; Victorian Studies Volume 52 ; 52 >
+
+    }
 
   }
 
