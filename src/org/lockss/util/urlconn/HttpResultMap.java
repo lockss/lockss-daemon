@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.13 2010-11-03 06:08:59 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.14 2010-12-01 01:43:16 tlipkis Exp $
  */
 
 /*
@@ -54,9 +54,9 @@ public class HttpResultMap implements CacheResultMap {
   int[] PermissionCodes = { 401, 403,  407};
   int[] ExpectedCodes = { 305, 402};
   int[] RetryDeadLinkCodes = {};
-  int[] NoRetryDeadLinkCodes= {204, 300, 404, 405, 406, 410};
+  int[] NoRetryDeadLinkCodes= {204, 300, 400, 404, 405, 406, 410};
   int[] UnexpectedFailCodes = {
-      201, 202, 205, 206, 306, 400,
+      201, 202, 205, 206, 306,
       411, 412, 416, 417, 501, 505};
   int[] UnexpectedNoFailCodes = { 414, 415 };
 

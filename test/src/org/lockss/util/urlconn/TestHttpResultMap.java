@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.11 2010-11-03 06:08:12 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.12 2010-12-01 01:43:16 tlipkis Exp $
  */
 
 /*
@@ -107,13 +107,21 @@ public class TestHttpResultMap extends LockssTestCase {
     assertX(403, CacheException.PermissionException.class);
     assertX(407, CacheException.PermissionException.class);
 
+    // test NoRetryDeadLinkException codes
+    assertX(204, CacheException.NoRetryDeadLinkException.class);
+    assertX(300, CacheException.NoRetryDeadLinkException.class);
+    assertX(400, CacheException.NoRetryDeadLinkException.class);
+    assertX(404, CacheException.NoRetryDeadLinkException.class);
+    assertX(405, CacheException.NoRetryDeadLinkException.class);
+    assertX(406, CacheException.NoRetryDeadLinkException.class);
+    assertX(410, CacheException.NoRetryDeadLinkException.class);
+
     // test the UnexpectedNoRetryException codes
     assertX(201, CacheException.UnexpectedNoRetryFailException.class);
     assertX(202, CacheException.UnexpectedNoRetryFailException.class);
     assertX(205, CacheException.UnexpectedNoRetryFailException.class);
     assertX(206, CacheException.UnexpectedNoRetryFailException.class);
     assertX(306, CacheException.UnexpectedNoRetryFailException.class);
-    assertX(400, CacheException.UnexpectedNoRetryFailException.class);
     assertX(411, CacheException.UnexpectedNoRetryFailException.class);
     assertX(412, CacheException.UnexpectedNoRetryFailException.class);
     assertX(416, CacheException.UnexpectedNoRetryFailException.class);
