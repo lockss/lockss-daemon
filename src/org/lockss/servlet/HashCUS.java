@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.46 2010-05-12 04:07:52 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.47 2010-12-01 01:43:00 tlipkis Exp $
  */
 
 /*
@@ -659,7 +659,7 @@ public class HashCUS extends LockssServlet {
 	  return;
 	}
 	if (isRecord) {
-	  recordFile = File.createTempFile("HashCUS", ".tmp");
+	  recordFile = FileUtil.createTempFile("HashCUS", ".tmp");
 	  recordStream =
 	    new BufferedOutputStream(new FileOutputStream(recordFile));
 	  long truncateTo =
