@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlUrlData.java,v 1.3 2009-08-09 07:38:50 tlipkis Exp $
+ * $Id: TestCrawlUrlData.java,v 1.4 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -60,30 +60,47 @@ public class TestCrawlUrlData extends LockssTestCase {
     assertFalse(curl.isFetched());
     assertFalse(curl.isFailedFetch());
     assertFalse(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
     curl.setFetched(true);
     assertTrue(curl.isFetched());
     assertFalse(curl.isFailedFetch());
     assertFalse(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
     curl.setFetched(false);
     assertFalse(curl.isFetched());
     assertFalse(curl.isFailedFetch());
     assertFalse(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
     curl.setFailedFetch(true);
     assertFalse(curl.isFetched());
     assertTrue(curl.isFailedFetch());
     assertFalse(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
     curl.setFailedFetch(false);
     assertFalse(curl.isFetched());
     assertFalse(curl.isFailedFetch());
     assertFalse(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
     curl.setFailedParse(true);
     assertFalse(curl.isFetched());
     assertFalse(curl.isFailedFetch());
     assertTrue(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
     curl.setFailedParse(false);
     assertFalse(curl.isFetched());
     assertFalse(curl.isFailedFetch());
     assertFalse(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
+    curl.setStartUrl(true);
+    assertFalse(curl.isFetched());
+    assertFalse(curl.isFailedFetch());
+    assertFalse(curl.isFailedParse());
+    assertTrue(curl.isStartUrl());
+    curl.setStartUrl(false);
+    assertFalse(curl.isFetched());
+    assertFalse(curl.isFailedFetch());
+    assertFalse(curl.isFailedParse());
+    assertFalse(curl.isStartUrl());
   }
 
   public void testChildren() {

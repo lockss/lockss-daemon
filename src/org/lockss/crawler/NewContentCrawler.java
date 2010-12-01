@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.58 2009-08-03 04:32:38 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.59 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -90,4 +90,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
     return true;
   }
 
+  protected boolean isFailOnStartUrlError() {
+    return true;
+  }
 }

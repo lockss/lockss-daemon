@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.34 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.35 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -534,7 +534,40 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     }
   }
 
+  public void testReturnsTrueWhenNoStartUrlError() {
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/other.html";
+    mau.addUrl(startUrl, false, true);
+    crawler.setUrlsToFollow(ListUtil.list(url1, url2));
+    mau.addUrl(url1, false, true);
+    mau.addUrl(url2, false, true);
+    assertTrue(doCrawl0(crawler));
+   }
 
+  public void testReturnsFalseWhenStartUrlError() {
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/other.html";
+    mau.addUrl(startUrl, false, true);
+    crawler.setUrlsToFollow(ListUtil.list(url1, url2));
+    mau.addUrl(url1, false, true);
+    mau.addUrl(url2,
+	       new CacheException.NoRetryDeadLinkException("err42"),
+	       1);
+    assertFalse(doCrawl0(crawler));
+   }
+
+  public void testReturnsTrueWhenStartUrlErrorButNoFailOnStartUrlError() {
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/other.html";
+    mau.addUrl(startUrl, false, true);
+    crawler.setUrlsToFollow(ListUtil.list(url1, url2));
+    mau.addUrl(url1, false, true);
+    mau.addUrl(url2,
+	       new CacheException.NoRetryDeadLinkException("err42"),
+	       1);
+    crawler.setFailOnStartUrlError(false);
+    assertTrue(doCrawl0(crawler));
+   }
 
   public void testReturnsFalseWhenFailingUnretryableExceptionThrown() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -564,14 +597,18 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   public void testReturnsTrueWhenNonFailingUnretryableExceptionThrown() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/blecch.html";
     mau.addUrl(startUrl, false, true);
-    crawler.setUrlsToFollow(ListUtil.list(url1));
+    crawler.setNonStartUrlsToFollow(ListUtil.list(url1, url2));
     MyMockCacheException exception =
       new MyMockCacheException("Test exception");
     mau.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
+    mau.addUrl(url2, false, true);
     crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
 
     assertTrue(doCrawl0(crawler));
+    assertEquals(SetUtil.set(startUrl, url2), cus.getCachedUrls());
   }
 
   public void testReturnsRetriesWhenRetryableExceptionThrown() {
@@ -801,16 +838,17 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     String url2="http://www.example.com/alpha.html";
     mau.addUrl(startUrl, false, true);
-    crawler.setUrlsToFollow(ListUtil.list(url1, url2));
-    mau.addUrl(url1,
+    crawler.setUrlsToFollow(ListUtil.list(url1));
+    crawler.setNonStartUrlsToFollow(ListUtil.list(url2));
+    mau.addUrl(url1);
+    mau.addUrl(url2,
 	       new CacheException.NoRetryDeadLinkException("Test exception"),
 	       1);
-    mau.addUrl(url2);
     crawlRule.addUrlToCrawl(url1);
     crawlRule.addUrlToCrawl(url2);
 
     assertTrue(crawler.doCrawl());
-    Set expected = SetUtil.set(startUrl, url2);
+    Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -1486,8 +1524,10 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
   private static class TestableFollowLinkCrawler extends FollowLinkCrawler {
 
-    Set urlsToFollow = new HashSet();
+    Set<String> urlsToFollow = new HashSet<String>();
+    Set<String> nonStartUrlsToFollow = new HashSet<String>();
     Set fetched = new HashSet();
+    boolean isFailOnStartUrlError = true;
 
     protected TestableFollowLinkCrawler(ArchivalUnit au,
 					CrawlSpec spec, AuState aus){
@@ -1529,6 +1569,23 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       urlsToFollow.addAll(urls);
     }
 
+    protected void setNonStartUrlsToFollow(List urls) {
+      nonStartUrlsToFollow = new ListOrderedSet();
+      nonStartUrlsToFollow.addAll(urls);
+    }
+
+    @Override
+    protected void enqueueStartUrls() {
+      super.enqueueStartUrls();
+      if (nonStartUrlsToFollow != null) {
+	for (String url : nonStartUrlsToFollow) {
+	  CrawlUrlData curl = newCrawlUrlData(url, 2);
+	  addToQueue(curl, fetchQueue, crawlStatus);
+	}
+      }
+    }
+
+    @Override
     protected Set getUrlsToFollow(){
       // assumed all the canCrawl return true in calling getUrlsToFollow;
       // thus when setting MyCrawlWindow, we can ignore the number of canCrawl()
@@ -1557,6 +1614,14 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       fetched.add(curl.getUrl());
       return super.fetchAndParse(curl, fetchQueue, processedUrls,
 				 maxDepthUrls, reparse);
+    }
+
+    void setFailOnStartUrlError(boolean isFailOnStartUrlError) {
+      this.isFailOnStartUrlError = isFailOnStartUrlError;
+    }
+
+    protected boolean isFailOnStartUrlError() {
+      return isFailOnStartUrlError;
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.20 2009-08-03 04:32:38 tlipkis Exp $
+ * $Id: OaiCrawler.java,v 1.21 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -185,5 +185,9 @@ public class OaiCrawler extends FollowLinkCrawler {
 
   protected boolean shouldFollowLink(){
     return spec.getFollowLinkFlag();
+  }
+
+  protected boolean isFailOnStartUrlError() {
+    return true;
   }
 }

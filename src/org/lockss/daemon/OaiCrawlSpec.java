@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.10 2010-11-18 07:15:07 tlipkis Exp $
+ * $Id: OaiCrawlSpec.java,v 1.11 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.oai.*;
 public class OaiCrawlSpec extends BaseCrawlSpec {
 
   private boolean followLink;
+  private boolean failOnStartUrlError = true;
   private OaiRequestData oaiRequestData;
 
 //   public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule) {
@@ -113,6 +114,14 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
    */
   public boolean getFollowLinkFlag(){
     return followLink;
+  }
+
+  public void setFailOnStartUrlError(boolean failOnStartUrlError) {
+    this.failOnStartUrlError = failOnStartUrlError;
+  }
+
+  public boolean isFailOnStartUrlError() {
+    return failOnStartUrlError;
   }
 
 //   public void setFollowLinkFlag(boolean follow){

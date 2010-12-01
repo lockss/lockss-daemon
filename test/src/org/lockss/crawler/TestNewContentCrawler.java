@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.74 2010-08-01 21:31:55 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.75 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -344,13 +344,13 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  public void testReturnsTrueWhenNonFailingUnretryableExceptionThrownOnStartUrl() {
+  public void testReturnsFalseWhenNonFailingUnretryableExceptionThrownOnStartUrl() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     MyMockCacheException exception =
       new MyMockCacheException("Test exception");
     mau.addUrl(startUrl, exception, DEFAULT_DEFAULT_RETRY_COUNT);
 
-    assertTrue(doCrawl0(crawler));
+    assertFalse(doCrawl0(crawler));
     Set expected = SetUtil.set(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -439,11 +439,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  public void testReturnsTrueWhenNonFailingExceptionThrownOnStartUrl() {
+  public void testReturnsFalseWhenNonFailingExceptionThrownOnStartUrl() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, new CacheException.NoRetryDeadLinkException("Test exception"), 1);
 
-    assertTrue(crawler.doCrawl());
+    assertFalse(crawler.doCrawl());
   }
 
   public void testPluginThrowsRuntimeException() {
@@ -1288,6 +1288,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     protected void doCrawlEndActions() {
     }
 
+    @Override
     protected void cacheWithRetries(UrlCacher uc)
 	throws IOException {
       fetchedUrls.add(uc.getUrl());
@@ -1298,6 +1299,7 @@ public class TestNewContentCrawler extends LockssTestCase {
       return fetchedUrls;
     }
 
+    @Override
     protected CrawlUrlData newCrawlUrlData(String url, int depth) {
       return new MyCrawlUrlData(url, depth);
     }

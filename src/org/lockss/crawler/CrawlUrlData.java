@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlUrlData.java,v 1.3 2009-08-09 07:38:50 tlipkis Exp $
+ * $Id: CrawlUrlData.java,v 1.4 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class CrawlUrlData implements CrawlUrl {
   public static final int IS_FETCHED = 1;
   public static final int IS_FAILED_FETCH = 2;
   public static final int IS_FAILED_PARSE = 4;
+  public static final int IS_START_URL = 8;
 
   private final String url;
   private int depth;
@@ -99,6 +100,18 @@ public class CrawlUrlData implements CrawlUrl {
       flags |= IS_FAILED_PARSE;
     } else {
       flags &= ~IS_FAILED_PARSE;
+    }
+  }
+
+  public boolean isStartUrl() {
+    return (flags & IS_START_URL) != 0;
+  }
+
+  public void setStartUrl(boolean val) {
+    if (val) {
+      flags |= IS_START_URL;
+    } else {
+      flags &= ~IS_START_URL;
     }
   }
 
@@ -170,7 +183,16 @@ public class CrawlUrlData implements CrawlUrl {
   }
 
   public String toString() {
-    return "[curl: " + getDepth() + ", " + getUrl() + "]";
+    StringBuilder sb = new StringBuilder();
+    sb.append(getDepth());
+    sb.append(", ");
+    sb.append(getUrl());
+    if (flags != 0) {
+      sb.append(", f=");
+      sb.append(flags);
+    }
+    sb.append("]");
+    return sb.toString();
   }
 
   public interface ReducedDepthHandler {

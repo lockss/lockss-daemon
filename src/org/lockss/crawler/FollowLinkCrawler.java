@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.79 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.80 2010-12-01 01:41:47 tlipkis Exp $
  */
 
 /*
@@ -165,7 +165,12 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
    */
   protected abstract Collection<String> getUrlsToFollow();
 
+  /** Return true if crawler should follow links from collected files */
   protected abstract boolean shouldFollowLink();
+
+  /** Return true if crawler should fail if any start URL(s) can't be
+   * fetched */
+  protected abstract boolean isFailOnStartUrlError();
 
   protected abstract int getRefetchDepth();
 
@@ -260,10 +265,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     // get the Urls to follow from either NewContentCrawler or OaiCrawler
     try {
       fetchQueue = new CrawlQueue(urlOrderComparator);
-      for (String url : getUrlsToFollow()) {
-	CrawlUrlData curl = newCrawlUrlData(url, 1);
-	addToQueue(curl, fetchQueue, crawlStatus);
-      }
+      enqueueStartUrls();
     } catch (RuntimeException e) {
       logger.warning("Unexpected exception, should have been caught lower", e);
       if (!crawlStatus.isCrawlError()) {
@@ -372,6 +374,16 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 
     doCrawlEndActions();
     return (!crawlStatus.isCrawlError());
+  }
+
+  // Overridable for testing
+  protected void enqueueStartUrls() {
+    for (String url : getUrlsToFollow()) {
+      CrawlUrlData curl = newCrawlUrlData(url, 1);
+      curl.setStartUrl(true);
+      logger.info("setStartUrl(" + curl + ")");
+      addToQueue(curl, fetchQueue, crawlStatus);
+    }
   }
 
   // Overridable for testing
@@ -504,6 +516,14 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  crawlStatus.setCrawlStatus(Crawler.STATUS_FETCH_ERROR);
 	} else {
 	  logger.warning(uc+" not found on publisher's site", ex);
+
+	  if (curl.isStartUrl() && isFailOnStartUrlError()) {
+	    // fail if cannot fetch a StartUrl
+	    String msg = "Failed to cache start url: "+ uc.getUrl();
+	    logger.error(msg);
+	    crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR, msg);
+	  }
+
 	}
 	if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
 	  logger.error("Found a fatal error with "+uc+". Aborting crawl");
@@ -670,16 +690,8 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	  uc = makeUrlCacher(uc.getUrl());
 
 	} else {
-	  if (cachingStartUrls) { //if cannot fetch anyone of StartUrls
-	    logger.error("Failed to cache (" + totalRetries + ") start url: "
+	  logger.warning("Failed to cache (" + totalRetries + "), skipping: "
 			 + uc.getUrl());
-	    crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR,
-				       "Failed to cache start url: "+
-				       uc.getUrl() );
-	  } else {
-	    logger.warning("Failed to cache (" + totalRetries + "), skipping: "
-			 + uc.getUrl());
-	  }
 	  throw e;
 	}
       }
