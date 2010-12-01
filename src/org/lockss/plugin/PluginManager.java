@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.210 2010-11-03 06:06:50 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.211 2010-12-01 01:42:50 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class PluginManager
     Configuration.PLATFORM + "pluginDir";
   static final String DEFAULT_PLUGIN_LOCATION = "plugins";
 
-  /** A list of plugins to load at startup. */
+  /** List of plugins to load at startup. */
   static final String PARAM_PLUGIN_REGISTRY = PREFIX + "registry";
 
   /** List of plugins not to load, or to remove if already loaded. */
@@ -278,9 +278,13 @@ public class PluginManager
 
   private Map titleMap = null;
   private List allTitles = null;
+  // lock for above
+  Object titleMonitor = new Object();
   private List allTitleConfigs = null;
   private Map<String,TitleSet> titleSetMap;
   private TreeSet<TitleSet> titleSets;
+  // lock for AU additions/deletions
+  Object auAddDelLock = new Object();
 
   private static Map<String,String> configurablePluginNameMap = new HashMap();
   static {
@@ -997,9 +1001,11 @@ public class PluginManager
   public void setAndSaveAuConfiguration(ArchivalUnit au,
 					Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
-    log.debug("Reconfiguring AU " + au);
-    au.setConfiguration(auConf);
-    updateAuConfigFile(au, auConf);
+    synchronized (auAddDelLock) {
+      log.debug("Reconfiguring AU " + au);
+      au.setConfiguration(auConf);
+      updateAuConfigFile(au, auConf);
+    }
   }
 
   private void updateAuConfigFile(ArchivalUnit au, Configuration auConf)
@@ -1019,7 +1025,9 @@ public class PluginManager
       throws IOException {
     String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
     Configuration fqConfig = auConf.addPrefix(prefix);
-    configMgr.updateAuConfigFile(fqConfig, prefix);
+    synchronized (auAddDelLock) {
+      configMgr.updateAuConfigFile(fqConfig, prefix);
+    }
   }
 
 
@@ -1053,10 +1061,12 @@ public class PluginManager
   public ArchivalUnit createAndSaveAuConfiguration(Plugin plugin,
 						   Configuration auConf)
       throws ArchivalUnit.ConfigurationException, IOException {
-    auConf.put(AU_PARAM_DISABLED, "false");
-    ArchivalUnit au = createAu(plugin, auConf);
-    updateAuConfigFile(au, auConf);
-    return au;
+    synchronized (auAddDelLock) {
+      auConf.put(AU_PARAM_DISABLED, "false");
+      ArchivalUnit au = createAu(plugin, auConf);
+      updateAuConfigFile(au, auConf);
+      return au;
+    }
   }
 
   /**
@@ -1066,8 +1076,10 @@ public class PluginManager
    * @throws IOException
    */
   public void deleteAuConfiguration(ArchivalUnit au) throws IOException {
-    log.debug("Deleting AU config: " + au);
-    updateAuConfigFile(au, ConfigManager.EMPTY_CONFIGURATION);
+    synchronized (auAddDelLock) {
+      log.debug("Deleting AU config: " + au);
+      updateAuConfigFile(au, ConfigManager.EMPTY_CONFIGURATION);
+    }
   }
 
   /**
@@ -1077,10 +1089,12 @@ public class PluginManager
    * @throws IOException
    */
   public void deleteAuConfiguration(String auid) throws IOException {
-    log.debug("Deleting AU config: " + auid);
-    updateAuConfigFile(auid, ConfigManager.EMPTY_CONFIGURATION);
-    // might be deleting an inactive au
-    inactiveAuIds.remove(auid);
+    synchronized (auAddDelLock) {
+      log.debug("Deleting AU config: " + auid);
+      updateAuConfigFile(auid, ConfigManager.EMPTY_CONFIGURATION);
+      // might be deleting an inactive au
+      inactiveAuIds.remove(auid);
+    }
   }
 
   /**
@@ -1089,13 +1103,15 @@ public class PluginManager
    * @throws IOException
    */
   public void deactivateAuConfiguration(ArchivalUnit au) throws IOException {
-    log.debug("Deactivating AU: " + au);
-    Configuration config = getStoredAuConfiguration(au);
-    if (config.isSealed()) {
-      config = config.copy();
+    synchronized (auAddDelLock) {
+      log.debug("Deactivating AU: " + au);
+      Configuration config = getStoredAuConfiguration(au);
+      if (config.isSealed()) {
+	config = config.copy();
+      }
+      config.put(AU_PARAM_DISABLED, "true");
+      updateAuConfigFile(au, config);
     }
-    config.put(AU_PARAM_DISABLED, "true");
-    updateAuConfigFile(au, config);
   }
 
   /**
@@ -1104,9 +1120,11 @@ public class PluginManager
    * @throws IOException
    */
   public void deleteAu(ArchivalUnit au) throws IOException {
-    deleteAuConfiguration(au);
-    if (isRemoveStoppedAus()) {
-      stopAu(au);
+    synchronized (auAddDelLock) {
+      deleteAuConfiguration(au);
+      if (isRemoveStoppedAus()) {
+	stopAu(au);
+      }
     }
   }
 
@@ -1116,11 +1134,13 @@ public class PluginManager
    * @throws IOException
    */
   public void deactivateAu(ArchivalUnit au) throws IOException {
-    deactivateAuConfiguration(au);
-    if (isRemoveStoppedAus()) {
-      String auid = au.getAuId();
-      stopAu(au);
-      inactiveAuIds.add(auid);
+    synchronized (auAddDelLock) {
+      deactivateAuConfiguration(au);
+      if (isRemoveStoppedAus()) {
+	String auid = au.getAuId();
+	stopAu(au);
+	inactiveAuIds.add(auid);
+      }
     }
   }
 
@@ -1786,8 +1806,6 @@ public class PluginManager
     return getRegistryPlugin().getAllAus();
   }
 
-  Object titleMonitor = new Object();
-
   /** Return all the known titles from the title db, sorted by title */
   public List findAllTitles() {
     synchronized (titleMonitor) {
@@ -1987,12 +2005,10 @@ public class PluginManager
   // Synch the plugin registry with the plugins listed in names
   void synchStaticPluginList(Configuration config) {
     List nameList = config.getList(PARAM_PLUGIN_REGISTRY);
-    Collection newKeys = new HashSet();
     for (Iterator iter = nameList.iterator(); iter.hasNext(); ) {
       String name = (String)iter.next();
       String key = pluginKeyFromName(name);
       ensurePluginLoaded(key);
-      newKeys.add(key);
     }
 
     // remove plugins on retract list, unless they have one or more
