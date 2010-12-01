@@ -60,15 +60,14 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
-if [ -z "${TITLE_DBS}" ]; then
-  TITLE_DBS="../tdbxml/prod/*.xml"
+TDB_DIR=../tdbxml/prod
+if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
+  TITLE_DBS="`find ${TDB_DIR} -maxdepth 1 -name \*.xml | sort`"
 fi
 
 
-
-# NB leading space meaningful here
-echo TITLE_DBS = "${TITLE_DBS}"
 PROP_URL_LIST="../common.xml ${TITLE_DBS} lockss.txt lockss.opt ${EXTRA_PROP_URLS}"
+# NB leading space meaningful here
 PROP_ARGS=`echo " " $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
 
 # local copy of lockss jars allows recompile while we're running

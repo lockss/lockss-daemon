@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo args="$@"
-
 TITLE_DBS=""
 
 if [ "X${PROJECT_DIR}" = "X" ]
@@ -58,9 +56,11 @@ while true ; do
 done
 
 # "." here is the test<n> dir
-if [ -z "${TITLE_DBS}" ]; then
-  TITLE_DBS="../../tdbxml/prod/*.xml"
+TDB_DIR=../../tdbxml/prod
+if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
+  TITLE_DBS="`find ${TDB_DIR} -name \*.xml | sort`"
 fi
+
 
 CLASSPATH=../lib/lockss.jar:../lib/lockss-test.jar:../lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
 export CLASSPATH

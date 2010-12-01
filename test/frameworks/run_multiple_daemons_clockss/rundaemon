@@ -1,7 +1,6 @@
-#! /bin/sh
+#!/bin/sh
 
-# "." here is the test<n> dir
-PROP_URL_LIST="../../common.xml ../../tdbxml/clockss/*.xml ../lockss.txt ../lockss.opt local.txt local.opt"
+TITLE_DBS=""
 
 if [ "X${PROJECT_DIR}" = "X" ]
 then
@@ -9,13 +8,72 @@ then
 	exit
 fi
 
+while true ; do
+  case "$1" in
+    "-classpath" )
+      if [ -z "$CLASSPATH" ] ; then
+	CLASSPATH="$2"
+      else
+	CLASSPATH="$CLASSPATH":"$2"
+      fi
+      echo "CLASSPATH=$CLASSPATH"
+      shift; shift; continue;;
+    "-debug" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG"
+      shift; continue;;
+    "-debug2" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG2"
+      shift; continue;;
+    "-debug3" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG3"
+      shift; continue;;
+    "-notitle" )
+      TITLE_DBS=" "
+      shift; continue;;
+    "-titlepat" )
+      TITLE_DBS="${TITLE_DBS} $2"
+      shift; shift; continue;;
+    "-g" )
+      group="$2"
+      echo "group=$group"
+      shift; shift; continue;;
+    "-1.5" )
+      if [ -z "$JAVA_15_HOME" ] ; then
+	echo "-1.5 option requires JAVA_15_HOME to point to 1.5 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_15_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    -Xmx* )
+      arg_mem="$1"
+      shift; continue;;
+  esac
+  break;
+done
+
+# "." here is the test<n> dir
+TDB_DIR=../../tdbxml/clockss
+if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
+  TITLE_DBS="`find ${TDB_DIR} -name \*.xml | sort`"
+fi
+
 CLASSPATH=../lib/lockss.jar:../lib/lockss-test.jar:../lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
 export CLASSPATH
 
+PROP_URL_LIST="../../common.xml ${TITLE_DBS} ../lockss.txt ../lockss.opt local.txt local.opt"
+
 echo running in `pwd` at `date`
 #echo CLASSPATH=$CLASSPATH
-# for large caches, need to pass "-ms4m -mx64m" to java
-java -mx128m -Dorg.lockss.defaultLogLevel=DEBUG org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+if [ -z "$*" ]; then
+  JAVA_ARGS="-server -Xmx512m -Dorg.lockss.defaultLogLevel=DEBUG"
+ else
+  JAVA_ARGS="$@"
+fi
+java $JAVA_ARGS org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
 wait `cat dpid`
 echo stopped with status $? in `pwd` at `date`

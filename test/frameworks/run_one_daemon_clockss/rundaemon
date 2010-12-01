@@ -1,6 +1,6 @@
-#! /bin/bash
+#!/bin/sh
 
-TITLE_DBS="../tdbxml/clockss/*.xml"
+TITLE_DBS=""
 
 while true ; do
   case "$1" in
@@ -19,8 +19,14 @@ while true ; do
       jdb=1
       shift; continue;;
     "-notitle" )
-      TITLE_DBS=""
+      TITLE_DBS=" "
       shift; continue;;
+    "-titlepat" )
+      TITLE_DBS="${TITLE_DBS} $2"
+      shift; shift; continue;;
+    "-p" )
+      EXTRA_PROP_URLS="${EXTRA_PROP_URLS} $2"
+      shift; shift; continue;;
     "-1.4" )
       if [ -z "$JAVA_14_HOME" ] ; then
 	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
@@ -54,8 +60,13 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
+TDB_DIR=../tdbxml/clockss
+if [ -z "${TITLE_DBS}" -a -d ${TDB_DIR} ]; then
+  TITLE_DBS="`find ${TDB_DIR} -name \*.xml | sort`"
+fi
+
+PROP_URL_LIST="../common.xml ${TITLE_DBS} lockss.txt lockss.opt ${EXTRA_PROP_URLS}"
 # NB leading space meaningful here
-PROP_URL_LIST=" ../common.xml ${TITLE_DBS} lockss.txt lockss.opt"
 PROP_ARGS=`echo " " $PROP_URL_LIST | sed 's/ [ ]*/ -p /g'`
 
 # local copy of lockss jars allows recompile while we're running
@@ -64,6 +75,10 @@ cp "${PROJECT_DIR}/lib/lockss.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-test.jar" lib
 cp "${PROJECT_DIR}/lib/lockss-plugins.jar" lib
 CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:lib/lockss-plugins.jar:`cat "${PROJECT_DIR}/test/test-classpath"`
+# Transform paths when running under cygwin
+if [ "$TERM" = "cygwin" ]; then
+  CLASSPATH=`cygpath -w -p $CLASSPATH`
+fi
 export CLASSPATH
 
 echo running at `date`
