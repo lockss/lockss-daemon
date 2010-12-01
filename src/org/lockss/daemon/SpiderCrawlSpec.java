@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.7 2007-09-24 18:37:11 dshr Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.8 2010-12-01 01:42:11 tlipkis Exp $
  */
 
 /*
@@ -235,6 +235,18 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
     exploderHelper = eh;
   }
 
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("[SpiderCrawl: start=");
+    sb.append(startList);
+    if (refetchDepth != 1) {
+      sb.append(", redepth=");
+      sb.append(refetchDepth);
+    }
+    sb.append(commonToString());
+    sb.append("]");
+    return sb.toString();
+  }
 
 }
 

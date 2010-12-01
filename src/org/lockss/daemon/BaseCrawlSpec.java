@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.12 2010-10-02 22:25:22 tlipkis Exp $
+ * $Id: BaseCrawlSpec.java,v 1.13 2010-12-01 01:42:11 tlipkis Exp $
  */
 
 /*
@@ -148,6 +148,29 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
 
   // XXX temporary
   public void setExploderHelper(ExploderHelper eh) {
+  }
+
+  protected String commonToString() {
+    StringBuilder sb = new StringBuilder();
+    if (permissionList != null && !permissionList.isEmpty()) {
+      sb.append(", perms=");
+      sb.append(permissionList);
+    }
+    if (permissionChecker != null) {
+      sb.append(", permissionchecker=");
+      sb.append(permissionChecker);
+    }
+    if (loginPageChecker != null) {
+      sb.append(", loginchecker=");
+      sb.append(loginPageChecker);
+    }
+    if (window != null) {
+      sb.append(", window=");
+      sb.append(window);
+    }
+    sb.append(", rule=");
+    sb.append(rule);
+    return sb.toString();
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.92 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.93 2010-12-01 01:42:11 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public class ArchivalUnitStatus
   public static final String PEERS_VOTE_TABLE_NAME = "PeerVoteSummary";
   public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
   public static final String FILE_VERSIONS_TABLE_NAME = "FileVersions";
+  public static final String AU_DEFINITION_TABLE_NAME = "AuConfiguration";
 
 
   static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
@@ -121,6 +122,8 @@ public class ArchivalUnitStatus
                                       new PeerRepair(theDaemon));
     statusServ.registerStatusAccessor(FILE_VERSIONS_TABLE_NAME,
                                       new FileVersions(theDaemon));
+    statusServ.registerStatusAccessor(AU_DEFINITION_TABLE_NAME,
+                                      new AuConfiguration(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
@@ -780,21 +783,15 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getName()));
+      TitleConfig tc = au.getTitleConfig();
+      if (tc != null) {
+	addStringIfNotNull(res, tc.getJournalTitle(), "Journal Title");
+      }
       res.add(new StatusTable.SummaryInfo("Plugin",
 					  ColumnDescriptor.TYPE_STRING,
 					  au.getPlugin().getPluginName()));
-      String yearStr = AuUtil.getTitleAttribute(au, "year");
-      if (yearStr != null) {
-        res.add(new StatusTable.SummaryInfo("Year",
-                                            ColumnDescriptor.TYPE_STRING,
-                                            yearStr));
-      }
-      AuState.AccessType atype = state.getAccessType();
-      if (atype != null) {
-	res.add(new StatusTable.SummaryInfo("Access Type",
-					    ColumnDescriptor.TYPE_STRING,
-					    atype.toString()));
-      }
+      addStringIfNotNull(res, AuUtil.getTitleAttribute(au, "year"), "Year");
+      addStringIfNotNull(res, state.getAccessType(), "Access Type");
       if (contentSize != -1) {
 	res.add(new StatusTable.SummaryInfo("Content Size",
 					    ColumnDescriptor.TYPE_INT,
@@ -823,23 +820,11 @@ public class ArchivalUnitStatus
       res.add(new StatusTable.SummaryInfo("Status",
 					  ColumnDescriptor.TYPE_STRING,
 					  stat));
-      if (recentPollStat != null) {
-	res.add(new StatusTable.SummaryInfo("Most recent poll",
-					    ColumnDescriptor.TYPE_STRING,
-					    recentPollStat));
-      }
-      String plat = au.getPlugin().getPublishingPlatform();
-      if (plat != null) {
-	res.add(new StatusTable.SummaryInfo("Publishing Platform",
-					    ColumnDescriptor.TYPE_STRING,
-					    plat));
-      }
-      String pub = AuUtil.getTitleAttribute(au, "publisher");
-      if (pub != null) {
-	res.add(new StatusTable.SummaryInfo("Publisher",
-					    ColumnDescriptor.TYPE_STRING,
-					    pub));
-      }
+      addStringIfNotNull(res, recentPollStat, "Most recent poll");
+      addStringIfNotNull(res, au.getPlugin().getPublishingPlatform(),
+			 "Publishing Platform");
+      addStringIfNotNull(res, AuUtil.getTitleAttribute(au, "publisher"),
+			 "Publisher");
       res.add(new StatusTable.SummaryInfo("Available From Publisher",
 					  ColumnDescriptor.TYPE_STRING,
 					  (AuUtil.isPubDown(au)
@@ -953,6 +938,13 @@ public class ArchivalUnitStatus
 					    ColumnDescriptor.TYPE_STRING,
 					    subStatus));
       }
+      Object audef = AuConfiguration.makeAuRef("AU configuration",
+					       au.getAuId());
+      res.add(new StatusTable.SummaryInfo(null,
+					  ColumnDescriptor.TYPE_STRING,
+					  audef));
+
+
       Object peers = PeerRepair.makeAuRef("Repair candidates",
 					      au.getAuId());
       res.add(new StatusTable.SummaryInfo(null,
@@ -976,12 +968,121 @@ public class ArchivalUnitStatus
       return res;
     }
 
+    void addStringIfNotNull(List lst, String val, String heading) {
+      if (val != null) {
+        lst.add(new StatusTable.SummaryInfo(heading,
+                                            ColumnDescriptor.TYPE_STRING,
+                                            val));
+      }
+    }
+
+    void addStringIfNotNull(List lst, Object val, String heading) {
+      if (val != null) {
+        lst.add(new StatusTable.SummaryInfo(heading,
+                                            ColumnDescriptor.TYPE_STRING,
+                                            val.toString()));
+      }
+    }
+
     // utility method for making a Reference
     public static StatusTable.Reference makeAuRef(Object value,
                                                   String key) {
       StatusTable.Reference ref =
 	new StatusTable.Reference(value, AU_STATUS_TABLE_NAME, key);
 //       ref.setProperty("numrows", Integer.toString(defaultNumRows));
+      return ref;
+    }
+  }
+
+  static class AuConfiguration
+    extends PerAuTable
+    implements StatusAccessor.DebugOnly {
+
+    static final String FOOT_PARAM_TYPE = "Def: definitional config params, determine identity of AU.  NonDef: other config params, may affect AU behavior.  Attr: values and objects computed from plugin definition and AU configuration.";
+
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("sort", true),
+		    new StatusTable.SortRule("key", true));
+
+    private final List colDescs =
+      ListUtil.list(
+		    new ColumnDescriptor("type", "Type",
+					 ColumnDescriptor.TYPE_STRING,
+					 FOOT_PARAM_TYPE),
+		    new ColumnDescriptor("key", "Key",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor("val", "Val",
+					 ColumnDescriptor.TYPE_STRING)
+		    );
+
+    AuConfiguration(LockssDaemon daemon) {
+      super(daemon);
+    }
+
+    public String getDisplayName() {
+      return "AU Configuration";
+    }
+
+    protected String getTitle(ArchivalUnit au) {
+      return "Configuration of " + au.getName();
+    }
+
+    public boolean requiresKey() {
+      return true;
+    }
+
+    protected void populateTable(StatusTable table, ArchivalUnit au) {
+      table.setTitle(getTitle(au));
+      table.setDefaultSortRules(sortRules);
+      TypedEntryMap paramMap = null;
+      paramMap = au.getProperties();
+      table.setColumnDescriptors(colDescs);
+      table.setRows(getRows(au, paramMap));
+//       table.setSummaryInfo(getSummaryInfo(au, paramMap));
+    }
+
+    public List getRows(ArchivalUnit au, TypedEntryMap paramMap) {
+      List rows = new ArrayList();
+      Plugin plug = au.getPlugin();
+      Set<String> def = new TreeSet<String>();
+      Set<String> nondef = new TreeSet<String>();
+      Set<String> other = new TreeSet<String>();
+      for (Map.Entry entry : paramMap.entrySet()) {
+	String key = (String)entry.getKey();
+	String val = entry.getValue().toString();
+	Map row = new HashMap();
+	row.put("key", key);
+	row.put("val", HtmlUtil.htmlEncode(val));
+	putTypeSort(row, key, plug);
+	rows.add(row);
+      }
+      return rows;
+    }
+
+    void putTypeSort(Map row, String key, Plugin plug) {
+      ConfigParamDescr descr = plug.findAuConfigDescr(key);
+
+      if (descr == null) {
+	row.put("type", "Attr");
+	row.put("sort", 3);
+      } else if (descr.isDefinitional()) {
+	row.put("type", "Def");
+	row.put("sort", 1);
+      } else {
+	row.put("type", "NonDef");
+	row.put("sort", 2);
+      }
+    }
+
+//     private List getSummaryInfo(ArchivalUnit au, TypedEntryMap paramMap) {
+//       List res = new ArrayList();
+//       return res;
+//     }
+
+    public static StatusTable.Reference makeAuRef(Object value,
+                                                  String key) {
+      StatusTable.Reference ref =
+	new StatusTable.Reference(value, AU_DEFINITION_TABLE_NAME, key);
       return ref;
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.12 2010-08-01 21:32:13 tlipkis Exp $
+ * $Id: CrawlRules.java,v 1.13 2010-12-01 01:42:11 tlipkis Exp $
  */
 
 /*
@@ -63,6 +63,15 @@ public class CrawlRules {
     public static final int MATCH_INCLUDE_ELSE_EXCLUDE = 5;
     /** Exclude if match, else include */
     public static final int MATCH_EXCLUDE_ELSE_INCLUDE = 6;
+
+    String actionNames[] = {
+      "match_incl",
+      "match_excl",
+      "no_match_incl",
+      "no_match_excl",
+      "match_incl_else_excl",
+      "match_excl_else_incl",
+    };
 
     /**
      * Create a rule matching the given RE
@@ -172,8 +181,16 @@ public class CrawlRules {
     }
 
     public String toString() {
-      return "[" + StringUtil.shortName(getClass()) + ": '"
-	+ regexp.getPattern() + "', " + action + "]";
+      return "[" + StringUtil.shortName(getClass()) + ": " +
+	actionString() + ", '" + regexp.getPattern() + "']";
+    }
+
+    private String actionString() {
+      if (action <= actionNames.length) {
+	return actionNames[action - 1];
+      } else {
+	return Integer.toString(action);
+      }
     }
   }
 
@@ -467,7 +484,7 @@ public class CrawlRules {
     }
 
     public String toString() {
-      return "[CrawlRule.FirstMatch: " + rules + "]";
+      return "[CrawlRules.FirstMatch: " + rules + "]";
     }
   }
 
