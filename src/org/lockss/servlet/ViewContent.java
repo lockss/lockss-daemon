@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.16 2010-08-01 21:32:32 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.17 2010-12-02 10:06:02 tlipkis Exp $
  */
 
 /*
@@ -223,7 +223,23 @@ public class ViewContent extends LockssServlet {
 	       props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
     addPropRow(tbl, "Length", clen);
     try {
-      addPropRow(tbl, "Version #", cu.getVersion());
+      String versionStr = Integer.toString(cu.getVersion());
+      CachedUrl[] cuVersions = cu.getCuVersions(2);
+      if (cuVersions.length > 1) {
+	// If multiple versions, include link to version table
+	Properties args =
+	  PropUtil.fromArgs("table",
+			    ArchivalUnitStatus.FILE_VERSIONS_TABLE_NAME,
+			    "key", au.getAuId());
+	args.setProperty("url", url);
+	StringBuilder sb = new StringBuilder(versionStr);
+	sb.append("&nbsp;&nbsp;");
+	sb.append(srvLink(AdminServletManager.SERVLET_DAEMON_STATUS,
+			  "Other versions",
+			  args));
+	versionStr = sb.toString();
+      }
+      addPropRow(tbl, "Version #", versionStr);
     } catch (RuntimeException e) {
       log.warning("Can't get cu version: " + cu.getUrl(), e);
     }
