@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_version</string>
-    <string>2</string>
+    <string>3</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -84,7 +84,7 @@
   </entry>
   <entry>
     <string>plugin_au_config_user_msg</string>
-    <string>&quot;Atypon Systems, who host this Indiana University Press archival unit (AU), require you to &lt;a href=&apos;http://inscribe.iupress.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional Indiana University Press account&lt;/a&gt; prior to allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the Indiana University Press site.&quot;</string>
+    <string>&quot;Atypon Systems host this Indiana University Press archival unit (AU) and require that you &lt;a href=&apos;http://inscribe.iupress.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional Indiana University Press account&lt;/a&gt; before allowing your LOCKSS box to harvest the AU. Failure to comply with this publisher requirement may trigger crawler traps, and your LOCKSS box or your entire institution may be temporarily banned from accessing the Indiana University Press site. You only need to register the IP address of your LOCKSS box once for all Indiana University Press AUs.&quot;</string>
   </entry>
   <entry>
     <string>au_login_page_checker</string>
