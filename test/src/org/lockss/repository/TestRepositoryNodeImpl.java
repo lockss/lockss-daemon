@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.61 2010-02-23 04:58:15 pgust Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.61.10.1 2010-12-02 22:22:30 dshr Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.protocol.*;
  * This is the test class for org.lockss.repository.RepositoryNodeImpl
  */
 public class TestRepositoryNodeImpl extends LockssTestCase {
+  private static Logger logger = Logger.getLogger("LockssRepository");
   static final String TREE_SIZE_PROPERTY =
     RepositoryNodeImpl.TREE_SIZE_PROPERTY;
   static final String CHILD_COUNT_PROPERTY =
@@ -959,6 +960,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     File testFileDir = new File(tempDirPath + "/#content");
     File[] files = testFileDir.listFiles();
+    for (int i = 0; i < files.length; i++) {
+      logger.debug3(files[i].getPath());
+    }
     assertEquals(3, files.length);
     File testFile = new File(testFileDir, "current");
     assertTrue(testFile.exists());
@@ -1933,7 +1937,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository);
     }
 
-    File getDatedVersionedPropsFile(int version, long date) {
+    protected File getDatedVersionedPropsFile(int version, long date) {
       StringBuffer buffer = new StringBuffer();
       buffer.append(version);
       buffer.append(PROPS_EXTENSION);

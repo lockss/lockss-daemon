@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86 2010-03-25 07:34:58 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.1 2010-12-02 22:22:29 dshr Exp $
  */
 
 /*
@@ -160,17 +160,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected int currentVersion = -1;
 
   // convenience file handles
-  protected File contentDir = null;
+  protected File contentDir = null; // Used LockssRepositoryImpl
 
-  protected File nodeRootFile = null;
-  protected File nodePropsFile = null;
-  protected File agreementFile = null;
-  protected File tempAgreementFile = null;
+  protected File nodeRootFile = null; // Used AuNodeImpl
+  protected File nodePropsFile = null; // Used TestLockssRepositoryImpl
+  private File agreementFile = null;
+  private File tempAgreementFile = null;
 //  protected File ppisAgreementFile = null;
-  protected File currentCacheFile;
-  protected File currentPropsFile;
-  File tempCacheFile;
-  File tempPropsFile;
+  protected File currentCacheFile; // Used TestLockssRepositoryImpl
+  protected File currentPropsFile; // Used TestLockssRepositoryImpl
+  protected File tempCacheFile; // Used TestLockssRepositoryImpl
+  protected File tempPropsFile; // Used TestLockssRepositoryImpl
 
   // identity url and location
   protected String url;
@@ -360,7 +360,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     RegexpUtil.uncheckedCompile(".*%([a-z]|.[a-z]).*",
 				Perl5Compiler.READ_ONLY_MASK);
 
-  File normalize(File file) {
+  protected File normalize(File file) { // Used TestRepositoryNodeImpl
     String name = file.getName();
     String normName = normalizeUrlEncodingCase(name);
     normName = normalizeTrailingQuestion(normName);
@@ -390,7 +390,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
-  File checkUnnormalized(File file, File[] all, int ix) {
+  private File checkUnnormalized(File file, File[] all, int ix) {
     File norm = normalize(file);
     if (norm == file) {
       return file;
@@ -1541,15 +1541,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
     nodeRootFile = new File(nodeLocation);
   }
 
-  File getInactiveCacheFile() {
+  protected File getInactiveCacheFile() { // UsedTestRepositoryNodeImpl
     return new File(getContentDir(), INACTIVE_FILENAME);
   }
 
-  File getInactivePropsFile() {
+  protected File getInactivePropsFile() { // UsedTestRepositoryNodeImpl
     return new File(getContentDir(), INACTIVE_PROPS_FILENAME);
   }
 
-  File getContentDir() {
+  protected File getContentDir() { // Used TestRepositoryNodeImpl
     if (contentDir == null) {
       contentDir = new File(nodeLocation, CONTENT_DIR);
     }
@@ -1598,18 +1598,18 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // functions to get a 'versioned' content or props file, such as
   // '1', '1.props', or '1.props-123135131' (the dated props)
 
-  File getVersionedCacheFile(int version) {
+  protected File getVersionedCacheFile(int version) { // Used TestRepositoryNodeImpl
     return new File(getContentDir(), Integer.toString(version));
   }
 
-  File getVersionedPropsFile(int version) {
+  protected File getVersionedPropsFile(int version) { // Used TestRepositoryNodeImpl
     StringBuffer buffer = new StringBuffer();
     buffer.append(version);
     buffer.append(PROPS_EXTENSION);
     return new File(getContentDir(), buffer.toString());
   }
 
-  File getDatedVersionedPropsFile(int version, long date) {
+  protected File getDatedVersionedPropsFile(int version, long date) { // Used TestRepositoryNodeImpl
     StringBuffer buffer = new StringBuffer();
     buffer.append(version);
     buffer.append(PROPS_EXTENSION);
