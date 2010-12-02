@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.93 2010-12-01 01:42:11 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.94 2010-12-02 10:06:18 tlipkis Exp $
  */
 
 /*
@@ -1052,17 +1052,18 @@ public class ArchivalUnitStatus
 	String val = entry.getValue().toString();
 	Map row = new HashMap();
 	row.put("key", key);
-	row.put("val", HtmlUtil.htmlEncode(val));
-	putTypeSort(row, key, plug);
+	row.put("val", val);
+	putTypeSort(row, key, au, plug);
 	rows.add(row);
       }
       return rows;
     }
 
-    void putTypeSort(Map row, String key, Plugin plug) {
+    void putTypeSort(Map row, String key, ArchivalUnit au, Plugin plug) {
       ConfigParamDescr descr = plug.findAuConfigDescr(key);
-
-      if (descr == null) {
+      // keys not in au config are computed, others are definitional or not
+      // according to their ConfigParamDescr.
+      if (descr == null || !au.getConfiguration().containsKey(key)) {
 	row.put("type", "Attr");
 	row.put("sort", 3);
       } else if (descr.isDefinitional()) {
@@ -1580,14 +1581,19 @@ public class ArchivalUnitStatus
 	  }
 	}
 	total++;
-	AuState aus = AuUtil.getAuState(au);
-	if (AuUtil.isPubDown(au)) {
-	} else {
-	  if (aus.getLastCrawlTime() <= 0) {
-	    neverCrawled++;
-	  } else if (au.shouldCrawlForNewContent(aus)) {
-	    needsRecrawl++;
+	try {
+	  AuState aus = AuUtil.getAuState(au);
+	  if (AuUtil.isPubDown(au)) {
+	  } else {
+	    if (aus.getLastCrawlTime() <= 0) {
+	      neverCrawled++;
+	    } else if (au.shouldCrawlForNewContent(aus)) {
+	      needsRecrawl++;
+	    }
 	  }
+	} catch (RuntimeException e) {
+	  // Guard against AUs in a transient state being deleted.
+	  logger.warning("AU in bad state: " + au, e);
 	}
       }
       StringBuilder sb = new StringBuilder();
