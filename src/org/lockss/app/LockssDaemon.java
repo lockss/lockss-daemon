@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.101 2009-12-10 23:14:21 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.102 2010-12-02 10:04:54 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,9 @@ public class LockssDaemon extends LockssApp {
  * shall inure to the benefit of Stanford University.
  */
 private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
+
+  public final static String PARAM_TESTING_MODE =
+    Configuration.PREFIX + "daemon.testingMode";
 
   static final String PARAM_DAEMON_DEADLINE_REASONABLE =
     Configuration.PREFIX + "daemon.deadline.reasonable.";
@@ -223,6 +226,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   private static LockssDaemon theDaemon;
   private boolean isClockss;
+  private String testingMode;
 
   protected LockssDaemon(List propUrls) {
     super(propUrls);
@@ -265,6 +269,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return the LOCKSS user-agent string. */
   public static String getUserAgent() {
     return LOCKSS_USER_AGENT;
+  }
+
+  /** Return the current testing mode. */
+  public String getTestingMode() {
+    return testingMode;
   }
 
   /**
@@ -840,6 +849,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 			       DEFAULT_DAEMON_DEADLINE_REASONABLE_FUTURE);
       Deadline.setReasonableDeadlineRange(maxInPast, maxInFuture);
     }
+    testingMode = config.get(PARAM_TESTING_MODE);
     String proj = ConfigManager.getPlatformProject();
     isClockss = "clockss".equalsIgnoreCase(proj);
 

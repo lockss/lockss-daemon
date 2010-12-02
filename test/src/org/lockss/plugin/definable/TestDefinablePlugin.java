@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.35 2010-06-29 20:12:09 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.36 2010-12-02 10:04:54 tlipkis Exp $
  */
 
 /*
@@ -291,6 +291,49 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   }
 
+  public void testGoodPlugin() throws Exception {
+    String prefix = "org.lockss.plugin.definable.";
+    LockssDaemon daemon = getMockLockssDaemon();
+    String extMapName = prefix + "GoodPlugin";
+    definablePlugin.initPlugin(daemon, extMapName);
+    assertEquals(prefix + "GoodPlugin", definablePlugin.getPluginId());
+    List<String> urls = definablePlugin.getLoadedFromUrls();
+    assertMatchesRE("/org/lockss/plugin/definable/GoodPlugin.xml$",
+		    urls.get(0));
+    assertEquals(1, urls.size());
+
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
+    assertEquals(prefix + "GoodPlugin", map.getString("plugin_identifier"));
+    assertEquals("Good Plugin", map.getString("plugin_name"));
+    assertEquals("\"Good Plugin AU %s\", base_url", map.getString("au_name"));
+    assertIsomorphic(ListUtil.list("\"%s\", base_url"),
+		     map.getCollection("au_start_url"));
+    assertEquals(6000, map.getLong("au_def_pause_time"));
+  }
+
+  public void testGoodPluginWithOverrise() throws Exception {
+    ConfigurationUtil.addFromArgs("org.lockss.daemon.testingMode",
+				  "content-testing");
+    String prefix = "org.lockss.plugin.definable.";
+    LockssDaemon daemon = getMockLockssDaemon();
+    String extMapName = prefix + "GoodPlugin";
+    definablePlugin.initPlugin(daemon, extMapName);
+    assertEquals(prefix + "GoodPlugin", definablePlugin.getPluginId());
+    List<String> urls = definablePlugin.getLoadedFromUrls();
+    assertMatchesRE("/org/lockss/plugin/definable/GoodPlugin.xml$",
+		    urls.get(0));
+    assertEquals(1, urls.size());
+
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
+    assertEquals(prefix + "GoodPlugin", map.getString("plugin_identifier"));
+    assertEquals("Good Plugin", map.getString("plugin_name"));
+    assertEquals("\"Good Plugin AU %s\", base_url", map.getString("au_name"));
+    assertIsomorphic(ListUtil.list("\"%s\", base_url"),
+		     map.getCollection("au_start_url"));
+    assertEquals(3000, map.getLong("au_def_pause_time"));
+    assertEquals("pval", map.getString("parent_only"));
+  }
+
   public void testInherit() throws Exception {
     String prefix = "org.lockss.plugin.definable.";
     LockssDaemon daemon = getMockLockssDaemon();
@@ -311,7 +354,36 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertEquals("\"Good Plugin AU %s\", base_url", map.getString("au_name"));
     assertIsomorphic(ListUtil.list("\"%s\", base_url"),
 		     map.getCollection("au_start_url"));
+    assertEquals(6000, map.getLong("au_def_pause_time"));
+    assertFalse(map.containsKey("parent_only"));
     assertEquals("bar", map.getString("foo"));
+  }
+
+  public void testInheritWithOverride() throws Exception {
+    ConfigurationUtil.addFromArgs("org.lockss.daemon.testingMode",
+				  "content-testing");
+    String prefix = "org.lockss.plugin.definable.";
+    LockssDaemon daemon = getMockLockssDaemon();
+    String extMapName = prefix + "ChildPlugin";
+    definablePlugin.initPlugin(daemon, extMapName);
+    assertEquals(prefix + "ChildPlugin", definablePlugin.getPluginId());
+    List<String> urls = definablePlugin.getLoadedFromUrls();
+    assertMatchesRE("/org/lockss/plugin/definable/ChildPlugin.xml$",
+		    urls.get(0));
+    assertMatchesRE("/org/lockss/plugin/definable/GoodPlugin.xml$",
+		    urls.get(1));
+    assertEquals(2, urls.size());
+
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
+    assertEquals(prefix + "ChildPlugin", map.getString("plugin_identifier"));
+    assertEquals(prefix + "GoodPlugin", map.getString("plugin_parent"));
+    assertEquals("Child Plugin(test)", map.getString("plugin_name"));
+    assertEquals("\"Good Plugin AU %s\", base_url", map.getString("au_name"));
+    assertIsomorphic(ListUtil.list("\"%s\", base_url"),
+		     map.getCollection("au_start_url"));
+    assertEquals(3000, map.getLong("au_def_pause_time"));
+    assertEquals("pval", map.getString("parent_only"));
+    assertEquals("barprime", map.getString("foo"));
   }
 
   public void testIllInherit() throws Exception {

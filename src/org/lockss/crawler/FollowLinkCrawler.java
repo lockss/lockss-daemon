@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.80 2010-12-01 01:41:47 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.81 2010-12-02 10:04:54 tlipkis Exp $
  */
 
 /*
@@ -272,6 +272,14 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
       }
       abortCrawl();
+    } catch (OutOfMemoryError e) {
+      // daemon may keep running after this, so make sure crawl doesn't
+      // appear to be successful
+//       logger.error("Crawl aborted", e);
+      if (!crawlStatus.isCrawlError()) {
+	crawlStatus.setCrawlStatus(Crawler.STATUS_ERROR);
+      }
+      throw e;
     }
 
     if (logger.isDebug3()) logger.debug3("Start URLs: " + fetchQueue );

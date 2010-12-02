@@ -5,7 +5,7 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>GoodPlugin</string>
+    <string>Good Plugin</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -56,5 +56,22 @@
         <defaultOnly>false</defaultOnly>
       </org.lockss.daemon.ConfigParamDescr>
     </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>content-testing_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+	<long>3000</long>
+      </entry>
+      <entry>
+        <string>parent_only</string>
+	<string>pval</string>
+      </entry>
+    </map>
   </entry>
 </map>

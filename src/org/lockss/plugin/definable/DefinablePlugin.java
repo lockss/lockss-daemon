@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.52 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.53 2010-12-02 10:04:54 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.lockss.plugin.wrapper.*;
 
 /**
  * <p>DefinablePlugin: a plugin which uses the data stored in an
-*  ExternalizableMap to configure it self.</p>
+*  ExternalizableMap to configure itself.</p>
  * @author Claire Griffin
  * @version 1.0
  */
@@ -143,7 +143,6 @@ public class DefinablePlugin extends BasePlugin {
     mapName = extMapName;
     this.classLoader = loader;
     this.definitionMap = defMap;
-    // then call the overridden initializaton.
     super.initPlugin(daemon);
     initMimeMap();
     checkParamAgreement();
@@ -167,6 +166,8 @@ public class DefinablePlugin extends BasePlugin {
       ExternalizableMap oneMap = new ExternalizableMap();
       oneMap.loadMapFromResource(mapFile, loader);
       urls.add(url.toString());
+      // apply overrides one plugin at a time in inheritance chain
+      processOverrides(oneMap);
       if (res == null) {
 	res = oneMap;
       } else {
@@ -186,6 +187,34 @@ public class DefinablePlugin extends BasePlugin {
     }
     loadedFromUrls = urls;
     return res;
+  }
+
+  /** If in testing mode FOO, copy values from FOO_override map, if any, to
+   * main map */
+  void processOverrides(TypedEntryMap map) {
+    String testMode = getTestingMode();
+    if (StringUtil.isNullString(testMode)) {
+      return;
+    }
+    Object o =
+      map.getMapElement(testMode + DefinableArchivalUnit.SUFFIX_OVERRIDE);
+    if (o == null) {
+      return;
+    }
+    if (o instanceof Map) {
+      Map overrideMap = (Map)o;
+      for (Map.Entry entry : (Set<Map.Entry>)overrideMap.entrySet()) {
+	String key = (String)entry.getKey();
+	Object val = entry.getValue();
+	log.debug(getDefaultPluginName() + ": Overriding "
+		  + key + " with " + val);
+	map.setMapElement(key, val);
+      }
+    }
+  }
+
+  String getTestingMode() {
+    return theDaemon == null ? null : theDaemon.getTestingMode();
   }
 
   // Used by tests

@@ -15,4 +15,17 @@
     <string>foo</string>
     <string>bar</string>
   </entry>
+  <entry>
+    <string>content-testing_override</string>
+    <map>
+      <entry>
+        <string>foo</string>
+	<string>barprime</string>
+      </entry>
+      <entry>
+	<string>plugin_name</string>
+	<string>Child Plugin(test)</string>
+      </entry>
+    </map>
+  </entry>
 </map>
