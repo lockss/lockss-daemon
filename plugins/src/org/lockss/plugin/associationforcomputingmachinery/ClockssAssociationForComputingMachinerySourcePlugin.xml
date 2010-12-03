@@ -1,7 +1,7 @@
 <map>
   <entry>
     <string>plugin_identifier</string>
-    <string>org.lockss.plugin.associationforcomputermachinery.ClockssAssociationForComputerMachinerySourcePlugin</string>
+    <string>org.lockss.plugin.associationforcomputingmachinery.ClockssAssociationForComputingMachinerySourcePlugin</string>
   </entry>
   <entry>
     <string>plugin_version</string>
@@ -21,10 +21,10 @@
   </entry>
   <entry>
     <string>plugin_name</string>
-    <string>Association for Computer Machinery Source Plugin (CLOCKSS)</string>
+    <string>Association for Computing Machinery Source Plugin (CLOCKSS)</string>
   </entry>
   <entry>
     <string>au_name</string>
-    <string>&quot;Association for Computer Machinery Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
+    <string>&quot;Association for Computing Machinery Source Plugin (CLOCKSS), Base URL %s, Year %d&quot;, base_url, year</string>
   </entry>
 </map>
