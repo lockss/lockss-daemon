@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = Casa Editrice Clueb
+  >
+  
+  {
+  
+    title <
+      name = Casa Editrice Clueb Source Content
+    >
+    
+    plugin = org.lockss.plugin.casaeditriceclueb.ClockssCasaEditriceCluebSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/clueb-released/
+    proxy = DIRECT
+    implicit < status ; year ; name ; param[year] >
+    
+  }
+
+}

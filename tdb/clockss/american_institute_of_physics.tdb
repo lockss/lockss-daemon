@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = American Institute of Physics
+  >
+  
+  {
+  
+    title <
+      name = American Institute of Physics Source Content
+    >
+    
+    plugin = org.lockss.plugin.americaninstituteofphysics.ClockssAmericanInstituteOfPhysicsSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/aip-released/
+    proxy = DIRECT
+    implicit < status ; year ; name ; param[year] >
+    
+  }
+
+}

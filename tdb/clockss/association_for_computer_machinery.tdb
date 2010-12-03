@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = Association for Computer Machinery
+  >
+  
+  {
+  
+    title <
+      name = Association for Computer Machinery Source Content
+    >
+    
+    plugin = org.lockss.plugin.associationforcomputermachinery.ClockssAssociationForComputerMachinerySourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/acm-released/
+    proxy = DIRECT
+    implicit < status ; year ; name ; param[year] >
+    
+  }
+
+}

@@ -1,0 +1,20 @@
+{
+
+  publisher <
+    name = American Society of Civil Engineers
+  >
+  
+  {
+  
+    title <
+      name = American Society of Civil Engineers Source Content
+    >
+    
+    plugin = org.lockss.plugin.americansocietyofcivilengineers.ClockssAmericanSocietyOfCivilEngineersSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/asce-released/
+    proxy = DIRECT
+    implicit < status ; year ; name ; param[year] >
+    
+  }
+
+}
