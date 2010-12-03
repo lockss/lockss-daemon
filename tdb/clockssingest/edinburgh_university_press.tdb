@@ -45,8 +45,9 @@
     au < manifest ; 2004 ; Africa Bibliography Volume 2004 ; 2004 >
     au < manifest ; 2005 ; Africa Bibliography Volume 2005 ; 2005 >
     au < manifest ; 2006 ; Africa Bibliography Volume 2006 ; 2006 >
-    au < manifest ; 2008 ; Africa Bibliography Volume 2007 ; 2007 >
-    au < manifest ; 2009 ; Africa Bibliography Volume 2008 ; 2008 >
+    au < manifest ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 >
+    au < manifest ; 2009 ; Africa Bibliography Volume 2008 (2009) ; 2008 >
+    au < wanted ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 >
 
   }
 
@@ -137,6 +138,8 @@
 
     param[journal_id] = brw
 
+    au < wanted ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
+    au < wanted ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
 
   }
 
@@ -174,6 +177,7 @@
     au < manifest ; 2007 ; Corpora Volume 2 ; 2 >
     au < manifest ; 2008 ; Corpora Volume 3 ; 3 >
     au < released ; 2009 ; Corpora Volume 4 ; 4 >
+    au < wanted ; 2010 ; Corpora Volume 5 ; 5 >
 
   }
 
@@ -310,6 +314,7 @@
     au < manifest ; 2007 ; Innes Review Volume 58 ; 58 >
     au < manifest ; 2008 ; Innes Review Volume 59 ; 59 >
     au < manifest ; 2009 ; Innes Review Volume 60 ; 60 >
+    au < wanted ; 2010 ; Innes Review Volume 61 ; 61 >
 
   }
 
@@ -323,11 +328,18 @@
 
     param[journal_id] = ijhac
 
-    au < manifest ; 2001 ; International Journal of Humanities and Arts Computing Volume 13 ; 13 >
-    au < manifest ; 2002 ; International Journal of Humanities and Arts Computing Volume 14 ; 14 >
-    au < manifest ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 ; 1 >
-    au < manifest ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 ; 2 >
-    au < manifest ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 ; 3 >
+    au < manifest ; 1994 ; International Journal of Humanities and Arts Computing Volume 6 (1994) ; 6 >
+    au < manifest ; 1995 ; International Journal of Humanities and Arts Computing Volume 7 (1995) ; 7 >
+    au < manifest ; 1996 ; International Journal of Humanities and Arts Computing Volume 8 (1996) ; 8 >
+    au < manifest ; 1997 ; International Journal of Humanities and Arts Computing Volume 9 (1997) ; 9 >
+    au < manifest ; 1998 ; International Journal of Humanities and Arts Computing Volume 10 (1998) ; 10 >
+    au < manifest ; 1999 ; International Journal of Humanities and Arts Computing Volume 11 (1999) ; 11 >
+    au < manifest ; 2000 ; International Journal of Humanities and Arts Computing Volume 12 (2000) ; 12 >
+    au < manifest ; 2001 ; International Journal of Humanities and Arts Computing Volume 13 (2001) ; 13 >
+    au < manifest ; 2002 ; International Journal of Humanities and Arts Computing Volume 14 (2002) ; 14 >
+    au < manifest ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
+    au < manifest ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
+    au < manifest ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
 
   }
 
@@ -475,6 +487,7 @@
     param[journal_id] = kms
 
     au < manifest ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
+    au < wanted ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
 
   }
 
@@ -616,6 +629,7 @@
     au < manifest ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
     au < manifest ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
     au < manifest ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
+    au < manifest ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
 
   }
 
