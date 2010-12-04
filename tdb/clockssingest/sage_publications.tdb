@@ -3793,7 +3793,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 13 ; 13 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 14 ; 14 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Cardiovascular Pharmacology and Therapeutics Volume 15 ; 15 ; >
 
   }
 
@@ -3809,7 +3809,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Career Assessment Volume 16 ; 16 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Career Assessment Volume 17 ; 17 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Career Assessment Volume 18 ; 18 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Career Assessment Volume 18 ; 18 ; >
 
   }
 
@@ -3825,7 +3825,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Career Development Volume 35 ; 35 ; >
     au < ClockssHighWirePlugin ; notReady ; 2009 ; Journal of Career Development Volume 36 ; 36 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Career Development Volume 37 ; 37 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Career Development Volume 37 ; 37 ; >
 
   }
 
@@ -3839,8 +3839,8 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
     param[base_url] = http://jel.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Cases in Educational Leadership Volume 11 ; 11 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Cases in Educational Leadership Volume 12 ; 12 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Cases in Educational Leadership Volume 13 ; 13 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Cases in Educational Leadership Volume 12 ; 12 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Cases in Educational Leadership Volume 13 ; 13 ; >
 
   }
 
@@ -3856,7 +3856,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Cellular Plastics Volume 44 ; 44 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Cellular Plastics Volume 45 ; 45 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Cellular Plastics Volume 46 ; 46 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Cellular Plastics Volume 46 ; 46 ; >
 
   }
 
@@ -3872,7 +3872,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Child Health Care Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Child Health Care Volume 13 ; 13 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Child Health Care Volume 14 ; 14 ; >
 
   }
 
@@ -3888,7 +3888,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Child Neurology Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Child Neurology Volume 24 ; 24 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Child Neurology Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Child Neurology Volume 25 ; 25 ; >
 
   }
 
@@ -3904,7 +3904,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Classical Sociology Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Classical Sociology Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Classical Sociology Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Classical Sociology Volume 10 ; 10 ; >
 
   }
 
@@ -3920,7 +3920,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Journal of Clinical Pharmacology Volume 48 ; 48 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; The Journal of Clinical Pharmacology Volume 49 ; 49 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Journal of Clinical Pharmacology Volume 50 ; 50 ; >
 
   }
 
@@ -3936,7 +3936,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; The Journal of Commonwealth Literature Volume 43 ; 43 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; The Journal of Commonwealth Literature Volume 44 ; 44 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Journal of Commonwealth Literature Volume 45 ; 45 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Journal of Commonwealth Literature Volume 45 ; 45 ; >
 
   }
 
@@ -3952,7 +3952,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Journal of Communication Inquiry Volume 32 ; 32 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Journal of Communication Inquiry Volume 33 ; 33 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Communication Inquiry Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Communication Inquiry Volume 34 ; 34 ; >
 
   }
 
@@ -3968,7 +3968,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Composite Materials Volume 42 ; 42 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Composite Materials Volume 43 ; 43 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Composite Materials Volume 44 ; 44 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Composite Materials Volume 44 ; 44 ; >
 
   }
 
@@ -3984,7 +3984,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Conflict Resolution Volume 52 ; 52 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Conflict Resolution Volume 53 ; 53 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Conflict Resolution Volume 54 ; 54 ; >
 
   }
 
@@ -4000,7 +4000,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Consumer Culture Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Consumer Culture Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Consumer Culture Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Consumer Culture Volume 10 ; 10 ; >
 
   }
 
@@ -4016,7 +4016,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Contemporary Criminal Justice Volume 24 ; 24 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Contemporary Criminal Justice Volume 25 ; 25 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Contemporary Criminal Justice Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Contemporary Criminal Justice Volume 26 ; 26 ; >
 
   }
 
@@ -4032,7 +4032,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Contemporary Ethnography Volume 37 ; 37 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Contemporary Ethnography Volume 38 ; 38 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Contemporary Ethnography Volume 39 ; 39 ; >
 
   }
 
@@ -4048,7 +4048,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Contemporary History Volume 43 ; 43 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Contemporary History Volume 44 ; 44 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Contemporary History Volume 45 ; 45 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Contemporary History Volume 45 ; 45 ; >
 
   }
 
@@ -4064,7 +4064,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Correctional Health Care Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Correctional Health Care Volume 15 ; 15 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Correctional Health Care Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Correctional Health Care Volume 16 ; 16 ; >
 
   }
 
@@ -4080,7 +4080,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Creative Communications Volume 3 ; 3 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Journal of Creative Communications Volume 4 ; 4 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Creative Communications Volume 5 ; 5 ; >
 
   }
 
@@ -4096,7 +4096,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Cross-Cultural Psychology Volume 39 ; 39 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Cross-Cultural Psychology Volume 40 ; 40 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Cross-Cultural Psychology Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Cross-Cultural Psychology Volume 41 ; 41 ; >
 
   }
 
@@ -4112,7 +4112,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 5 ; 5 ; >
     au < ClockssHighWirePressH20Plugin ; wanted ; 2009 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 6 ; 6 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 7 ; 7 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Journal of Defense Modeling and Simulation: Applications, Methodology, Technology Volume 7 ; 7 ; >
 
   }
 
@@ -4128,7 +4128,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Dental Research Volume 87 ; 87 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Dental Research Volume 88 ; 88 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Dental Research Volume 89 ; 89 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Dental Research Volume 89 ; 89 ; >
 
   }
 
@@ -4144,7 +4144,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Journal of Developing Societies Volume 24 ; 24 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Journal of Developing Societies Volume 25 ; 25 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Developing Societies Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Journal of Developing Societies Volume 26 ; 26 ; >
 
   }
 
@@ -6835,7 +6835,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Public Understanding of Science Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Public Understanding of Science Volume 18 ; 18 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Public Understanding of Science Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Public Understanding of Science Volume 19 ; 19 ; >
 
   }
 
@@ -6851,7 +6851,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Public Works Management & Policy Volume 13 ; 13 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Public Works Management & Policy Volume 14 ; 14 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Public Works Management & Policy Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Public Works Management & Policy Volume 15 ; 15 ; >
 
   }
 
@@ -6867,7 +6867,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Punishment & Society Volume 10 ; 10 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Punishment & Society Volume 11 ; 11 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Punishment & Society Volume 12 ; 12 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Punishment & Society Volume 12 ; 12 ; >
 
   }
 
@@ -6883,7 +6883,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Qualitative Health Research Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Qualitative Health Research Volume 19 ; 19 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Qualitative Health Research Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Qualitative Health Research Volume 20 ; 20 ; >
 
   }
 
@@ -6899,7 +6899,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Qualitative Inquiry Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Qualitative Inquiry Volume 15 ; 15 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Qualitative Inquiry Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Qualitative Inquiry Volume 16 ; 16 ; >
 
   }
 
@@ -6915,7 +6915,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Qualitative Research Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Qualitative Research Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Qualitative Research Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Qualitative Research Volume 10 ; 10 ; >
 
   }
 
@@ -6931,7 +6931,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Qualitative Social Work Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Qualitative Social Work Volume 8 ; 8 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Qualitative Social Work Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Qualitative Social Work Volume 9 ; 9 ; >
 
   }
 
@@ -6947,7 +6947,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Race & Class Volume 50 ; 50 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Race & Class Volume 51 ; 51 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Race & Class Volume 52 ; 52 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Race & Class Volume 52 ; 52 ; >
 
   }
 
@@ -6963,7 +6963,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Rationality and Society Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Rationality and Society Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Rationality and Society Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Rationality and Society Volume 22 ; 22 ; >
 
   }
 
@@ -6978,7 +6978,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Rehabilitation Counseling Bulletin Volume 52 ; 52 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Rehabilitation Counseling Bulletin Volume 53 ; 53 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Rehabilitation Counseling Bulletin Volume 54 ; 54 ; >
 
   }
 
@@ -6994,7 +6994,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; RELC Journal Volume 39 ; 39 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; RELC Journal Volume 40 ; 40 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; RELC Journal Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; RELC Journal Volume 41 ; 41 ; >
 
   }
 
@@ -7009,7 +7009,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Remedial and Special Education Volume 29 ; 29 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Remedial and Special Education Volume 30 ; 30 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Remedial and Special Education Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Remedial and Special Education Volume 31 ; 31 ; >
 
   }
 
@@ -7025,7 +7025,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Reproductive Sciences Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Reproductive Sciences Volume 16 ; 16 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Reproductive Sciences Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Reproductive Sciences Volume 17 ; 17 ; >
 
   }
 
@@ -7041,7 +7041,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Research on Aging Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Research on Aging Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Research on Aging Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Research on Aging Volume 32 ; 32 ; >
 
   }
 
@@ -7057,7 +7057,7 @@ comment[ict9] = SAGE database-caused disagreement.  pending fix of ingest poll p
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Research on Social Work Practice Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Research on Social Work Practice Volume 19 ; 19 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Research on Social Work Practice Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Research on Social Work Practice Volume 20 ; 20 ; >
 
   }
 
@@ -7075,7 +7075,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; notReady ; 2008 ; Research Studies in Music Education Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Research Studies in Music Education Volume 31 ; 31 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Research Studies in Music Education Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Research Studies in Music Education Volume 32 ; 32 ; >
 
   }
 
@@ -7107,7 +7107,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Review of Educational Research Volume 78 ; 78 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Review of Educational Research Volume 79 ; 79 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Review of Educational Research Volume 80 ; 80 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Review of Educational Research Volume 80 ; 80 ; >
 
   }
 
@@ -7123,7 +7123,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Review of Public Personnel Administration Volume 28 ; 28 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Review of Public Personnel Administration Volume 29 ; 29 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Review of Public Personnel Administration Volume 30 ; 30 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Review of Public Personnel Administration Volume 30 ; 30 ; >
 
   }
 
@@ -7139,7 +7139,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Review of Radical Political Economics Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Review of Radical Political Economics Volume 41 ; 41 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Review of Radical Political Economics Volume 42 ; 42 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Review of Radical Political Economics Volume 42 ; 42 ; >
 
   }
 
@@ -7155,7 +7155,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Review of Research in Education Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Review of Research in Education Volume 33 ; 33 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Review of Research in Education Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Review of Research in Education Volume 34 ; 34 ; >
 
   }
 
@@ -7171,7 +7171,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Scandinavian Journal of Public Health Volume 36 ; 36 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Scandinavian Journal of Public Health Volume 37 ; 37 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Scandinavian Journal of Public Health Volume 38 ; 38 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Scandinavian Journal of Public Health Volume 38 ; 38 ; >
 
   }
 
@@ -7187,7 +7187,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; School Psychology International Volume 29 ; 29 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; School Psychology International Volume 30 ; 30 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; School Psychology International Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; School Psychology International Volume 31 ; 31 ; >
 
   }
 
@@ -7218,7 +7218,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Science Technology & Society Volume 13 ; 13 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Science Technology & Society Volume 14 ; 14 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Science Technology & Society Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Science Technology & Society Volume 15 ; 15 ; >
 
   }
 
@@ -7234,7 +7234,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Science, Technology & Human Values Volume 33 ; 33 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Science, Technology & Human Values Volume 34 ; 34 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Science, Technology & Human Values Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Science, Technology & Human Values Volume 35 ; 35 ; >
 
   }
 
@@ -7250,7 +7250,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Second Language Research Volume 24 ; 24 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Second Language Research Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Second Language Research Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Second Language Research Volume 26 ; 26 ; >
 
   }
 
@@ -7266,7 +7266,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Security Dialogue Volume 39 ; 39 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Security Dialogue Volume 40 ; 40 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Security Dialogue Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Security Dialogue Volume 41 ; 41 ; >
 
   }
 
@@ -7281,7 +7281,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Seminars in Cardiothoracic and Vascular Anesthesia Volume 14 ; 14 ; >
 
   }
 
@@ -7297,7 +7297,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Sexual Abuse: A Journal of Research and Treatment Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Sexual Abuse: A Journal of Research and Treatment Volume 21 ; 21 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Sexual Abuse: A Journal of Research and Treatment Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Sexual Abuse: A Journal of Research and Treatment Volume 22 ; 22 ; >
 
   }
 
@@ -7313,7 +7313,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Sexualities Volume 11 ; 11 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Sexualities Volume 12 ; 12 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Sexualities Volume 13 ; 13 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Sexualities Volume 13 ; 13 ; >
 
   }
 
@@ -7329,7 +7329,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; SIMULATION Volume 84 ; 84 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; SIMULATION Volume 85 ; 85 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; SIMULATION Volume 86 ; 86 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; SIMULATION Volume 86 ; 86 ; >
 
   }
 
@@ -7345,7 +7345,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Simulation & Gaming Volume 39 ; 39 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Simulation & Gaming Volume 40 ; 40 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Simulation & Gaming Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Simulation & Gaming Volume 41 ; 41 ; >
 
   }
 
@@ -7361,7 +7361,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Small Group Research Volume 39 ; 39 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Small Group Research Volume 40 ; 40 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Small Group Research Volume 41 ; 41 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Small Group Research Volume 41 ; 41 ; >
 
   }
 
@@ -7377,7 +7377,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Social & Legal Studies Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Social & Legal Studies Volume 18 ; 18 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Social & Legal Studies Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Social & Legal Studies Volume 19 ; 19 ; >
 
   }
 
@@ -7393,7 +7393,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Social Compass Volume 55 ; 55 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Social Compass Volume 56 ; 56 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Social Compass Volume 57 ; 57 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Social Compass Volume 57 ; 57 ; >
 
   }
 
@@ -7409,7 +7409,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Social Science Computer Review Volume 26 ; 26 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Social Science Computer Review Volume 27 ; 27 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Social Science Computer Review Volume 28 ; 28 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Social Science Computer Review Volume 28 ; 28 ; >
 
   }
 
@@ -7425,7 +7425,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Social Science Information Volume 47 ; 47 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Social Science Information Volume 48 ; 48 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Social Science Information Volume 49 ; 49 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Social Science Information Volume 49 ; 49 ; >
 
   }
 
@@ -7441,7 +7441,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Social Studies of Science Volume 38 ; 38 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Social Studies of Science Volume 39 ; 39 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Social Studies of Science Volume 40 ; 40 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Social Studies of Science Volume 40 ; 40 ; >
 
   }
 
@@ -7457,7 +7457,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Sociological Methods & Research Volume 37 ; 37 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Sociological Methods & Research Volume 38 ; 38 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Sociological Methods & Research Volume 39 ; 39 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Sociological Methods & Research Volume 39 ; 39 ; >
 
   }
 
@@ -7473,7 +7473,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Sociology Volume 42 ; 42 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Sociology Volume 43 ; 43 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Sociology Volume 44 ; 44 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Sociology Volume 44 ; 44 ; >
 
   }
 
@@ -7488,7 +7488,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; South Asia Economic Journal Volume 9 ; 9 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; South Asia Economic Journal Volume 10 ; 10 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; South Asia Economic Journal Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; South Asia Economic Journal Volume 11 ; 11 ; >
 
   }
 
@@ -7504,7 +7504,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; South Asia Research Volume 28 ; 28 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; South Asia Research Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; South Asia Research Volume 30 ; 30 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; South Asia Research Volume 30 ; 30 ; >
 
   }
 
@@ -7519,7 +7519,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; South Asian Survey Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; South Asian Survey Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; South Asian Survey Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; South Asian Survey Volume 17 ; 17 ; >
 
   }
 
@@ -7535,7 +7535,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Space and Culture Volume 11 ; 11 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Space and Culture Volume 12 ; 12 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Space and Culture Volume 13 ; 13 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Space and Culture Volume 13 ; 13 ; >
 
   }
 
@@ -7564,7 +7564,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Statistical Methods in Medical Research Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Statistical Methods in Medical Research Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Statistical Methods in Medical Research Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Statistical Methods in Medical Research Volume 19 ; 19 ; >
 
   }
 
@@ -7580,7 +7580,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Statistical Modelling Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Statistical Modelling Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Statistical Modelling Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Statistical Modelling Volume 10 ; 10 ; >
 
   }
 
@@ -7596,7 +7596,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Strategic Organization Volume 6 ; 6 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Strategic Organization Volume 7 ; 7 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Strategic Organization Volume 8 ; 8 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Strategic Organization Volume 8 ; 8 ; >
 
   }
 
@@ -7612,7 +7612,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Structural Health Monitoring Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Structural Health Monitoring Volume 8 ; 8 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Structural Health Monitoring Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Structural Health Monitoring Volume 9 ; 9 ; >
 
   }
 
@@ -7628,7 +7628,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Studies in Christian Ethics Volume 21 ; 21 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Studies in Christian Ethics Volume 22 ; 22 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Studies in Christian Ethics Volume 23 ; 23 ; >
 
   }
 
@@ -7643,7 +7643,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Studies in History Volume 24 ; 24 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Studies in History Volume 25 ; 25 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Studies in History Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Studies in History Volume 26 ; 26 ; >
 
   }
 
@@ -7658,7 +7658,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Surgical Innovation Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Surgical Innovation Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Surgical Innovation Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Surgical Innovation Volume 17 ; 17 ; >
 
   }
 
@@ -7674,7 +7674,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 31 ; 31 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 32 ; 32 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 33 ; 33 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Teacher Education and Special Education: The Journal of the Teacher Education Division of the Council for Exceptional Children Volume 33 ; 33 ; >
 
   }
 
@@ -7690,7 +7690,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Television & New Media Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Television & New Media Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Television & New Media Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Television & New Media Volume 11 ; 11 ; >
 
   }
 
@@ -7706,7 +7706,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Textile Research Journal Volume 78 ; 78 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Textile Research Journal Volume 79 ; 79 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Textile Research Journal Volume 80 ; 80 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Textile Research Journal Volume 80 ; 80 ; >
 
   }
 
@@ -7735,7 +7735,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Theoretical Criminology Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Theoretical Criminology Volume 13 ; 13 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Theoretical Criminology Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Theoretical Criminology Volume 14 ; 14 ; >
 
   }
 
@@ -7751,7 +7751,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Theory & Psychology Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Theory & Psychology Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Theory & Psychology Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Theory & Psychology Volume 20 ; 20 ; >
 
   }
 
@@ -7767,7 +7767,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Theory and Research in Education Volume 6 ; 6 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Theory and Research in Education Volume 7 ; 7 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Theory and Research in Education Volume 8 ; 8 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Theory and Research in Education Volume 8 ; 8 ; >
 
   }
 
@@ -7783,7 +7783,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Theory, Culture & Society Volume 25 ; 25 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Theory, Culture & Society Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Theory, Culture & Society Volume 27 ; 27 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Theory, Culture & Society Volume 27 ; 27 ; >
 
   }
 
@@ -7799,7 +7799,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Therapeutic Advances in Cardiovascular Disease Volume 2 ; 2 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Therapeutic Advances in Cardiovascular Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Therapeutic Advances in Cardiovascular Disease Volume 4 ; 4 ; >
 
   }
 
@@ -7815,7 +7815,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Therapeutic Advances in Gastroenterology Volume 1 ; 1 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Therapeutic Advances in Gastroenterology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Therapeutic Advances in Gastroenterology Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Therapeutic Advances in Gastroenterology Volume 3 ; 3 ; >
 
   }
 
@@ -7830,7 +7830,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
     param[base_url] = http://tam.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2009 ; Therapeutic Advances in Medical Oncology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Therapeutic Advances in Medical Oncology Volume 2 ; 2 ; >
 
   }
 
@@ -7846,7 +7846,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Therapeutic Advances in Neurological Disorders Volume 1 ; 1 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Therapeutic Advances in Neurological Disorders Volume 2 ; 2 ; >
 
   }
 
@@ -7862,7 +7862,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Therapeutic Advances in Respiratory Disease Volume 2 ; 2 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Therapeutic Advances in Respiratory Disease Volume 3 ; 3 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Therapeutic Advances in Respiratory Disease Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Therapeutic Advances in Respiratory Disease Volume 4 ; 4 ; >
 
   }
 
@@ -7877,7 +7877,7 @@ comment[rsm30] = mismatching pdfs, send email to Thib
     param[base_url] = http://tau.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2009 ; Therapeutic Advances in Urology Volume 1 ; 1 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Therapeutic Advances in Urology Volume 2 ; 2 ; >
 
   }
 
@@ -7901,9 +7901,9 @@ comment[the99] = no xml entry
     au < ClockssHighWirePlugin ; down ; 2009 ; Thesis Eleven Volume 97 ; 97 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePlugin ; down ; 2009 ; Thesis Eleven Volume 98 ; 98 ; reingest2.clockss.org:8085 >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Thesis Eleven Volume 99 ; 99 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Thesis Eleven Volume 100 ; 100 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Thesis Eleven Volume 101 ; 101 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Thesis Eleven Volume 102 ; 102 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Thesis Eleven Volume 100 ; 100 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Thesis Eleven Volume 101 ; 101 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Thesis Eleven Volume 102 ; 102 ; >
 
   }
 
@@ -7919,7 +7919,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Time & Society Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Time & Society Volume 18 ; 18 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Time & Society Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Time & Society Volume 19 ; 19 ; >
 
   }
 
@@ -7934,7 +7934,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Topics in Early Childhood Special Education Volume 28 ; 28 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Topics in Early Childhood Special Education Volume 29 ; 29 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Topics in Early Childhood Special Education Volume 30 ; 30 ; >
 
   }
 
@@ -7950,7 +7950,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Tourist Studies Volume 8 ; 8 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Tourist Studies Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Tourist Studies Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Tourist Studies Volume 10 ; 10 ; >
 
   }
 
@@ -7966,7 +7966,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Toxicologic Pathology Volume 36 ; 36 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Toxicologic Pathology Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Toxicologic Pathology Volume 38 ; 38 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Toxicologic Pathology Volume 38 ; 38 ; >
 
   }
 
@@ -7982,7 +7982,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Toxicology and Industrial Health Volume 24 ; 24 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Toxicology and Industrial Health Volume 25 ; 25 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Toxicology and Industrial Health Volume 26 ; 26 ; >
 
   }
 
@@ -7998,7 +7998,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Transactions of the Institute of Measurement and Control Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Transactions of the Institute of Measurement and Control Volume 31 ; 31 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Transactions of the Institute of Measurement and Control Volume 32 ; 32 ; >
 
   }
 
@@ -8014,7 +8014,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Transcultural Psychiatry Volume 45 ; 45 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Transcultural Psychiatry Volume 46 ; 46 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Transcultural Psychiatry Volume 47 ; 47 ; >
 
   }
 
@@ -8028,7 +8028,7 @@ comment[the99] = no xml entry
     param[base_url] = http://trn.sagepub.com/
 
     au < ClockssHighWirePlugin ; down ; 2009 ; Transformation: An International Journal of Holistic Mission Studies Volume 26 ; 26 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Transformation: An International Journal of Holistic Mission Studies Volume 27 ; 27 ; >
 
   }
 
@@ -8044,7 +8044,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Trauma Volume 10 ; 10 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Trauma Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Trauma Volume 12 ; 12 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Trauma Volume 12 ; 12 ; >
 
   }
 
@@ -8060,7 +8060,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Trauma, Violence, & Abuse Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Trauma, Violence, & Abuse Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Trauma, Violence, & Abuse Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Trauma, Violence, & Abuse Volume 11 ; 11 ; >
 
   }
 
@@ -8076,7 +8076,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Traumatology Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Traumatology Volume 15 ; 15 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Traumatology Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Traumatology Volume 16 ; 16 ; >
 
   }
 
@@ -8091,7 +8091,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Trends in Amplification Volume 12 ; 12 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Trends in Amplification Volume 13 ; 13 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Trends in Amplification Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Trends in Amplification Volume 14 ; 14 ; >
 
   }
 
@@ -8107,7 +8107,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Update: Applications of Research in Music Education Volume 27 ; 27 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Update: Applications of Research in Music Education Volume 28 ; 28 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Update: Applications of Research in Music Education Volume 29 ; 29 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Update: Applications of Research in Music Education Volume 29 ; 29 ; >
 
   }
 
@@ -8123,7 +8123,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Urban Affairs Review Volume 44 ; 44 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Urban Affairs Review Volume 45 ; 45 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Urban Affairs Review Volume 46 ; 46 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Urban Affairs Review Volume 46 ; 46 ; >
 
   }
 
@@ -8139,7 +8139,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Urban Education Volume 43 ; 43 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Urban Education Volume 44 ; 44 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Urban Education Volume 45 ; 45 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Urban Education Volume 45 ; 45 ; >
 
   }
 
@@ -8155,7 +8155,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Urban Studies Volume 45 ; 45 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Urban Studies Volume 46 ; 46 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Urban Studies Volume 47 ; 47 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Urban Studies Volume 47 ; 47 ; >
 
   }
 
@@ -8170,7 +8170,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Vascular and Endovascular Surgery Volume 42 ; 42 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Vascular and Endovascular Surgery Volume 43 ; 43 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Vascular and Endovascular Surgery Volume 44 ; 44 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Vascular and Endovascular Surgery Volume 44 ; 44 ; >
 
   }
 
@@ -8186,7 +8186,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Vascular Medicine Volume 13 ; 13 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Vascular Medicine Volume 14 ; 14 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Vascular Medicine Volume 15 ; 15 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Vascular Medicine Volume 15 ; 15 ; >
 
   }
 
@@ -8202,7 +8202,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Violence Against Women Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Violence Against Women Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Violence Against Women Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Violence Against Women Volume 16 ; 16 ; >
 
   }
 
@@ -8218,7 +8218,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Visual Communication Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Visual Communication Volume 8 ; 8 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Visual Communication Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Visual Communication Volume 9 ; 9 ; >
 
   }
 
@@ -8234,7 +8234,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; War in History Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; War in History Volume 16 ; 16 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; War in History Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; War in History Volume 17 ; 17 ; >
 
   }
 
@@ -8250,7 +8250,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Waste Management & Research Volume 26 ; 26 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Waste Management & Research Volume 27 ; 27 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Waste Management & Research Volume 28 ; 28 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Waste Management & Research Volume 28 ; 28 ; >
 
   }
 
@@ -8266,7 +8266,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Western Journal of Nursing Research Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Western Journal of Nursing Research Volume 31 ; 31 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Western Journal of Nursing Research Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Western Journal of Nursing Research Volume 32 ; 32 ; >
 
   }
 
@@ -8281,7 +8281,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Word of Mouth Volume 20 ; 20 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Word of Mouth Volume 21 ; 21 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Word of Mouth Volume 22 ; 22 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Word of Mouth Volume 22 ; 22 ; >
 
   }
 
@@ -8297,7 +8297,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Work and Occupations Volume 35 ; 35 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Work and Occupations Volume 36 ; 36 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Work and Occupations Volume 37 ; 37 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Work and Occupations Volume 37 ; 37 ; >
 
   }
 
@@ -8313,7 +8313,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Work, Employment & Society Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Work, Employment & Society Volume 23 ; 23 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Work, Employment & Society Volume 24 ; 24 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Work, Employment & Society Volume 24 ; 24 ; >
 
   }
 
@@ -8329,7 +8329,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Written Communication Volume 25 ; 25 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Written Communication Volume 26 ; 26 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Written Communication Volume 27 ; 27 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Written Communication Volume 27 ; 27 ; >
 
   }
 
@@ -8345,7 +8345,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Young Volume 16 ; 16 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Young Volume 17 ; 17 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Young Volume 18 ; 18 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Young Volume 18 ; 18 ; >
 
   }
 
@@ -8360,7 +8360,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Young Exceptional Children Volume 12 ; 12 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Young Exceptional Children Volume 13 ; 13 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Young Exceptional Children Volume 14 ; 14 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Young Exceptional Children Volume 14 ; 14 ; >
 
   }
 
@@ -8376,7 +8376,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Youth & Society Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Youth & Society Volume 41 ; 41 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Youth & Society Volume 42 ; 42 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Youth & Society Volume 42 ; 42 ; >
 
   }
 
@@ -8392,7 +8392,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Youth Justice Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Youth Justice Volume 9 ; 9 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Youth Justice Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Youth Justice Volume 10 ; 10 ; >
 
   }
 
@@ -8408,7 +8408,7 @@ comment[the99] = no xml entry
 
     au < ClockssHighWirePressH20Plugin ; manifest ; 2008 ; Youth Violence and Juvenile Justice Volume 6 ; 6 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Youth Violence and Juvenile Justice Volume 7 ; 7 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Youth Violence and Juvenile Justice Volume 8 ; 8 ; >
 
   }
 
