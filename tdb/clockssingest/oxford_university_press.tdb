@@ -19,7 +19,7 @@ comment[abbs40] = manifest page 404
 
     au < ClockssHighWirePlugin ; notReady ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
 
   }
 
@@ -33,7 +33,7 @@ comment[abbs40] = manifest page 404
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Adaptation Volume 1 ; 1 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Adaptation Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Adaptation Volume 3 ; 3 ; >
 
   }
 
@@ -49,7 +49,7 @@ comment[abbs40] = manifest page 404
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Age and Ageing Volume 39 ; 39 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Age and Ageing Volume 39 ; 39 ; >
 
   }
 
@@ -67,7 +67,7 @@ comment[alcalc44] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
     au < ClockssHighWirePlugin ; notReady ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
 
   }
 
@@ -84,9 +84,9 @@ comment[alcalc44] = fetch error
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
     au < ClockssHighWirePlugin ; down ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Epidemiology Volume 169 ; 169 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Epidemiology Volume 169 ; 169 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
 
   }
 
@@ -101,8 +101,8 @@ comment[alcalc44] = fetch error
     param[base_url] = http://aler.oxfordjournals.org/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Law and Economics Review Volume 12 ; 12 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Law and Economics Review Volume 12 ; 12 ; >
 
   }
 
@@ -116,8 +116,8 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://alh.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; testing ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; American Literary History Volume 22 ; 22 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; American Literary History Volume 21 ; 21 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; American Literary History Volume 22 ; 22 ; >
 
   }
 
@@ -131,9 +131,9 @@ comment[analysis68] = no manifest page
 
     param[base_url] = http://analysis.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; retesting ; 2008 ; Analysis Volume 68 ; 68 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Analysis Volume 70 ; 70 ; >
+    au < ClockssHighWirePlugin ; reready ; 2008 ; Analysis Volume 68 ; 68 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; Analysis Volume 69 ; 69 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Analysis Volume 70 ; 70 ; >
 
   }
 
@@ -150,12 +150,12 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://aob.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; retesting ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
-    au < ClockssHighWirePlugin ; retesting ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
+    au < ClockssHighWirePlugin ; reready ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
+    au < ClockssHighWirePlugin ; reready ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
     au < ClockssHighWirePlugin ; notReady ; 2009 ; Annals of Botany Volume 103 ; 103 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Annals of Botany Volume 103 ; 103 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Annals of Botany Volume 103 ; 103 ; >
     au < ClockssHighWirePlugin ; notReady ; 2009 ; Annals of Botany Volume 104 ; 104 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
 
   }
 
@@ -169,9 +169,9 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://annhyg.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; retesting ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 ; >
+    au < ClockssHighWirePlugin ; reready ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 ; >
 
   }
 
@@ -185,9 +185,9 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://annonc.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; retesting ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
+    au < ClockssHighWirePlugin ; reready ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; Annals of Oncology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
 
   }
 
@@ -201,9 +201,9 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://applij.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; retesting ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Applied Linguistics Volume 31 ; 31 ; >
+    au < ClockssHighWirePlugin ; reready ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; Applied Linguistics Volume 30 ; 30 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Applied Linguistics Volume 31 ; 31 ; >
 
   }
 
@@ -215,9 +215,9 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://acn.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; retesting ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
+    au < ClockssHighWirePlugin ; reready ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
 
   }
 
@@ -232,8 +232,8 @@ comment[aob103_104] = fetch error
     param[base_url] = http://beheco.oxfordjournals.org/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
 
   }
 
@@ -248,8 +248,8 @@ comment[aob103_104] = fetch error
     param[base_url] = http://bioinformatics.oxfordjournals.org/
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
-    au < ClockssHighWirePlugin ; testing ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Bioinformatics Volume 26 ; 26 ; >
+    au < ClockssHighWirePlugin ; ready ; 2009 ; Bioinformatics Volume 25 ; 25 ; reingest3.clockss.org:8083 >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Bioinformatics Volume 26 ; 26 ; >
 
   }
 
@@ -265,7 +265,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Biometrika Volume 95 ; 95 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Biometrika Volume 97 ; 97 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Biometrika Volume 97 ; 97 ; >
 
   }
 
@@ -279,7 +279,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 ; >
 
   }
 
@@ -295,7 +295,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Biostatistics Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Biostatistics Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Biostatistics Volume 11 ; 11 ; >
 
   }
 
@@ -310,9 +310,9 @@ comment[aob103_104] = fetch error
     au < ClockssHighWirePlugin ; down ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
     au < ClockssHighWirePlugin ; down ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; BJA: British Journal of Anaesthesia Volume 104 ; 104 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; BJA: British Journal of Anaesthesia Volume 104 ; 104 ; >
 
   }
 
@@ -328,7 +328,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Brain Volume 131 ; 131 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Brain Volume 133 ; 133 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Brain Volume 133 ; 133 ; >
 
   }
 
@@ -344,7 +344,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 ; >
 
   }
 
@@ -360,7 +360,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
 
   }
 
@@ -376,7 +376,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
 
   }
 
@@ -390,7 +390,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The British Journal of Criminology Volume 50 ; 50 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The British Journal of Criminology Volume 50 ; 50 ; >
 
   }
 
@@ -406,7 +406,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
 
   }
 
@@ -422,7 +422,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; retesting ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The British Journal of Social Work Volume 40 ; 40 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The British Journal of Social Work Volume 40 ; 40 ; >
 
   }
 
@@ -441,11 +441,11 @@ comment[aob103_104] = fetch error
     au < ClockssHighWirePlugin ; retesting ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
     au < ClockssHighWirePlugin ; retesting ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; British Medical Bulletin Volume 89 ; 89 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; British Medical Bulletin Volume 89 ; 89 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; British Medical Bulletin Volume 90 ; 90 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; British Medical Bulletin Volume 90 ; 90 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; British Medical Bulletin Volume 92 ; 92 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; British Medical Bulletin Volume 92 ; 92 ; >
 
   }
 
@@ -461,7 +461,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; retesting ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
 
   }
 
@@ -477,7 +477,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
 
   }
 
@@ -491,7 +491,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Cambridge Journal of Regions, Economy and Society Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Cambridge Journal of Regions, Economy and Society Volume 3 ; 3 ; >
 
   }
 
@@ -507,7 +507,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Cambridge Quarterly Volume 39 ; 39 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; The Cambridge Quarterly Volume 39 ; 39 ; >
 
   }
 
@@ -523,7 +523,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 ; >
 
   }
 
@@ -539,7 +539,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Carcinogenesis Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Carcinogenesis Volume 31 ; 31 ; >
 
   }
 
@@ -556,13 +556,13 @@ comment[aob103_104] = fetch error
     au < ClockssHighWirePlugin ; down ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
     au < ClockssHighWirePlugin ; down ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Cardiovascular Research Volume 81 ; 81 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Cardiovascular Research Volume 81 ; 81 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Cardiovascular Research Volume 82 ; 82 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Cardiovascular Research Volume 82 ; 82 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Cardiovascular Research Volume 83 ; 83 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Cardiovascular Research Volume 83 ; 83 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
+    au < ClockssHighWirePressH20Plugin ; ready ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
 
   }
 
@@ -578,7 +578,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Cerebral Cortex Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Cerebral Cortex Volume 20 ; 20 ; >
 
   }
 
@@ -594,7 +594,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; CESifo Economic Studies Volume 56 ; 56 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; CESifo Economic Studies Volume 56 ; 56 ; >
 
   }
 
@@ -610,7 +610,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; testing ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Chemical Senses Volume 35 ; 35 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Chemical Senses Volume 35 ; 35 ; >
 
   }
 
@@ -626,7 +626,7 @@ comment[aob103_104] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
     au < ClockssHighWirePlugin ; testing ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Chinese Journal of International Law Volume 9 ; 9 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Chinese Journal of International Law Volume 9 ; 9 ; >
 
   }
 
@@ -643,7 +643,7 @@ comment[cjip] = no subscription
     param[base_url] = http://cjip.oxfordjournals.org/
 
     au < ClockssHighWirePlugin ; notReady ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
 
   }
 
@@ -657,7 +657,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 16 ; 16 ; >
 
   }
 
@@ -673,7 +673,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Community Development Journal Volume 45 ; 45 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Community Development Journal Volume 45 ; 45 ; >
 
   }
 
@@ -689,7 +689,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Computer Journal Volume 53 ; 53 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Computer Journal Volume 53 ; 53 ; >
 
   }
 
@@ -703,7 +703,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
 
   }
 
@@ -717,7 +717,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 ; >
 
   }
 
@@ -733,7 +733,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Contributions to Political Economy Volume 29 ; 29 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Contributions to Political Economy Volume 29 ; 29 ; >
 
   }
 
@@ -748,7 +748,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; DNA Research Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; DNA Research Volume 16 ; 16 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; DNA Research Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; DNA Research Volume 17 ; 17 ; >
 
   }
 
@@ -764,7 +764,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Early Music Volume 36 ; 36 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Early Music Volume 37 ; 37 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Early Music Volume 38 ; 38 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Early Music Volume 38 ; 38 ; >
 
   }
 
@@ -780,7 +780,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; ELT Journal Volume 62 ; 62 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; ELT Journal Volume 63 ; 63 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; ELT Journal Volume 64 ; 64 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; ELT Journal Volume 64 ; 64 ; >
 
   }
 
@@ -794,7 +794,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Enterprise & Society: The International Journal of Business History Volume 10 ; 10 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Enterprise & Society: The International Journal of Business History Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Enterprise & Society: The International Journal of Business History Volume 11 ; 11 ; >
 
   }
 
@@ -808,7 +808,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; EP Europace Volume 10 ; 10 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; EP Europace Volume 11 ; 11 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; EP Europace Volume 12 ; 12 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; EP Europace Volume 12 ; 12 ; >
 
   }
 
@@ -824,7 +824,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
     au < ClockssHighWirePressH20Plugin ; manifest ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 ; >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 ; >
 
   }
 
@@ -854,7 +854,7 @@ comment[cjip] = no subscription
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Essays in Criticism Volume 59 ; 59 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Essays in Criticism Volume 60 ; 60 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Essays in Criticism Volume 60 ; 60 ; >
 
   }
 
@@ -872,7 +872,7 @@ comment[eurh30] = crawl failed because of a fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
 
   }
 
@@ -886,7 +886,7 @@ comment[eurh30] = crawl failed because of a fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
 
   }
 
@@ -902,7 +902,7 @@ comment[eurh30] = crawl failed because of a fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; European Journal of International Law Volume 21 ; 21 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; European Journal of International Law Volume 21 ; 21 ; >
 
   }
 
@@ -918,7 +918,7 @@ comment[eurjhf10] = manifest page not found (404)
 
     au < ClockssHighWirePlugin ; notReady ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
 
   }
 
@@ -934,7 +934,7 @@ comment[eurjhf10] = manifest page not found (404)
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The European Journal of Orthodontics Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The European Journal of Orthodontics Volume 31 ; 31 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The European Journal of Orthodontics Volume 32 ; 32 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The European Journal of Orthodontics Volume 32 ; 32 ; >
 
   }
 
@@ -952,7 +952,7 @@ comment[eurpub19] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; The European Journal of Public Health Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; The European Journal of Public Health Volume 19 ; 19 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The European Journal of Public Health Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The European Journal of Public Health Volume 20 ; 20 ; >
 
   }
 
@@ -968,7 +968,7 @@ comment[eurpub19] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
 
   }
 
@@ -984,7 +984,7 @@ comment[eurpub19] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; European Sociological Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
 
   }
 
@@ -1000,7 +1000,7 @@ comment[eurpub19] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 ; 7 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 ; 7 ; >
 
   }
 
@@ -1018,7 +1018,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Family Practice Volume 25 ; 25 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Family Practice Volume 27 ; 27 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Family Practice Volume 27 ; 27 ; >
 
   }
 
@@ -1032,7 +1032,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
 
   }
 
@@ -1048,7 +1048,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
 
   }
 
@@ -1064,7 +1064,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; French History Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; French History Volume 23 ; 23 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; French History Volume 24 ; 24 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; French History Volume 24 ; 24 ; >
 
   }
 
@@ -1080,7 +1080,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; French Studies Volume 62 ; 62 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; French Studies Volume 63 ; 63 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; French Studies Volume 64 ; 64 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; French Studies Volume 64 ; 64 ; >
 
   }
 
@@ -1096,7 +1096,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; German History Volume 26 ; 26 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; German History Volume 27 ; 27 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; German History Volume 28 ; 28 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; German History Volume 28 ; 28 ; >
 
   }
 
@@ -1109,7 +1109,7 @@ comment[fampra26] = fetch error
     param[base_url] = http://gerontologist.oxfordjournals.org/
 
     au < ClockssHighWirePlugin ; down ; 2009 ; The Gerontologist Volume 49 ; 49 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
 
   }
 
@@ -1125,7 +1125,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Glycobiology Volume 18 ; 18 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Glycobiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Glycobiology Volume 20 ; 20 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Glycobiology Volume 20 ; 20 ; >
 
   }
 
@@ -1141,7 +1141,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health Education Research Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health Education Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Health Education Research Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health Education Research Volume 25 ; 25 ; >
 
   }
 
@@ -1157,7 +1157,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
 
   }
 
@@ -1173,7 +1173,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
 
   }
 
@@ -1190,9 +1190,9 @@ comment[fampra26] = fetch error
     au < ClockssHighWirePlugin ; down ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
     au < ClockssHighWirePlugin ; down ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
 
   }
 
@@ -1208,7 +1208,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
 
   }
 
@@ -1224,7 +1224,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
 
   }
 
@@ -1240,7 +1240,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
 
   }
 
@@ -1256,7 +1256,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
 
   }
 
@@ -1272,7 +1272,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
 
   }
 
@@ -1286,7 +1286,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; ICES Journal of Marine Science: Journal du Conseil Volume 67 ; 67 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; ICES Journal of Marine Science: Journal du Conseil Volume 67 ; 67 ; >
 
   }
 
@@ -1350,7 +1350,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 ; >
 
   }
 
@@ -1366,7 +1366,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 ; >
 
   }
 
@@ -1382,7 +1382,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; reingest3.clockss.org:8083 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 ; >
 
   }
 
@@ -1398,7 +1398,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
 
   }
 
@@ -1414,7 +1414,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 ; >
 
   }
 
@@ -1430,7 +1430,7 @@ comment[fampra26] = fetch error
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Industrial Law Journal Volume 39 ; 39 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Industrial Law Journal Volume 39 ; 39 ; >
 
   }
 
@@ -1446,7 +1446,7 @@ comment[in1] = 500 errors
 
     au < ClockssHighWirePlugin ; notReady ; 2008 ; InnovAiT Volume 1 ; 1 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; InnovAiT Volume 3 ; 3 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; InnovAiT Volume 3 ; 3 ; >
 
   }
 
@@ -1462,7 +1462,7 @@ comment[in1] = 500 errors
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
 
   }
 
@@ -1476,7 +1476,7 @@ comment[in1] = 500 errors
 
     au < ClockssHighWirePlugin ; down ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; reingest2.clockss.org:8085 >
-    au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
+    au < ClockssHighWirePressH20Plugin ; testing ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
 
   }
 
@@ -2333,7 +2333,7 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
 
-    au < ClockssHighWirePlugin ; testing ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
+    au < ClockssHighWirePlugin ; manifest ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
     au < ClockssHighWirePlugin ; down ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
     au < ClockssHighWirePressH20Plugin ; wanted ; 2010 ; Journal of Public Health Volume 32 ; 32 ; >
 
