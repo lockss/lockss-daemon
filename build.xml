@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.263 2010-11-18 07:13:28 tlipkis Exp $
+ $Id: build.xml,v 1.263.2.1 2010-12-06 22:06:40 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -216,6 +216,8 @@ Args:
 	        value="${lib}/commons-io-1.4.jar" />
   <property name="commons.jxpath.jar"
 				  value="${lib}/commons-jxpath-1.3.jar"/>
+  <property name="commons.vfs.jar"
+				  value="${lib}/commons-vfs-1.0.jar"/>
   <property name="javatar.jar"    value="${lib}/tar-2.3.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
@@ -305,6 +307,7 @@ Args:
     <pathelement path="${commons.httpclient.jar}" />
     <pathelement path="${commons.io.jar}" />
     <pathelement path="${commons.jxpath.jar}" />
+    <pathelement path="${commons.vfs.jar}" />
     <pathelement path="${javatar.jar}" />
     <pathelement path="${log4j.jar}" />
     <pathelement path="${concurrent.jar}" />
