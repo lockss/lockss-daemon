@@ -17966,10 +17966,45 @@
     title <
       name = Journal of Inherited Metabolic Disease ;
       issn = 0141-8955 ;
-      placeholder = True
+      eissn = 1573-2665
     >
 
     param[journal_issn] = 0141-8955
+    attr[where] = content5b
+
+    au < testing ; 1978 ; Journal of Inherited Metabolic Disease Volume 1 ; 1 >
+    au < testing ; 1979 ; Journal of Inherited Metabolic Disease Volume 2 ; 2 >
+    au < testing ; 1980 ; Journal of Inherited Metabolic Disease Volume 3 ; 3 >
+    au < testing ; 1981 ; Journal of Inherited Metabolic Disease Volume 4 ; 4 >
+    au < testing ; 1982 ; Journal of Inherited Metabolic Disease Volume 5 ; 5 >
+    au < testing ; 1983 ; Journal of Inherited Metabolic Disease Volume 6 ; 6 >
+    au < testing ; 1984 ; Journal of Inherited Metabolic Disease Volume 7 ; 7 >
+    au < testing ; 1985 ; Journal of Inherited Metabolic Disease Volume 8 ; 8 >
+    au < testing ; 1986 ; Journal of Inherited Metabolic Disease Volume 9 ; 9 >
+    au < testing ; 1987 ; Journal of Inherited Metabolic Disease Volume 10 ; 10 >
+    au < testing ; 1988 ; Journal of Inherited Metabolic Disease Volume 11 ; 11 >
+    au < testing ; 1989 ; Journal of Inherited Metabolic Disease Volume 12 ; 12 >
+    au < testing ; 1990 ; Journal of Inherited Metabolic Disease Volume 13 ; 13 >
+    au < testing ; 1991 ; Journal of Inherited Metabolic Disease Volume 14 ; 14 >
+    au < testing ; 1992 ; Journal of Inherited Metabolic Disease Volume 15 ; 15 >
+    au < testing ; 1993 ; Journal of Inherited Metabolic Disease Volume 16 ; 16 >
+    au < testing ; 1994 ; Journal of Inherited Metabolic Disease Volume 17 ; 17 >
+    au < testing ; 1995 ; Journal of Inherited Metabolic Disease Volume 18 ; 18 >
+    au < testing ; 1996 ; Journal of Inherited Metabolic Disease Volume 19 ; 19 >
+    au < testing ; 1997 ; Journal of Inherited Metabolic Disease Volume 20 ; 20 >
+    au < testing ; 1998 ; Journal of Inherited Metabolic Disease Volume 21 ; 21 >
+    au < testing ; 1999 ; Journal of Inherited Metabolic Disease Volume 22 ; 22 >
+    au < testing ; 2000 ; Journal of Inherited Metabolic Disease Volume 23 ; 23 >
+    au < testing ; 2001 ; Journal of Inherited Metabolic Disease Volume 24 ; 24 >
+    au < testing ; 2002 ; Journal of Inherited Metabolic Disease Volume 25 ; 25 >
+    au < testing ; 2003 ; Journal of Inherited Metabolic Disease Volume 26 ; 26 >
+    au < testing ; 2004 ; Journal of Inherited Metabolic Disease Volume 27 ; 27 >
+    au < testing ; 2005 ; Journal of Inherited Metabolic Disease Volume 28 ; 28 >
+    au < testing ; 2006 ; Journal of Inherited Metabolic Disease Volume 29 ; 29 >
+    au < testing ; 2007 ; Journal of Inherited Metabolic Disease Volume 30 ; 30 >
+    au < testing ; 2008 ; Journal of Inherited Metabolic Disease Volume 31 ; 31 >
+    au < testing ; 2009 ; Journal of Inherited Metabolic Disease Volume 32 ; 32 >
+    au < testing ; 2010 ; Journal of Inherited Metabolic Disease Volume 33 ; 33 >
 
   }
 
@@ -29412,10 +29447,279 @@
     title <
       name = Solar Physics ;
       issn = 0038-0938 ;
-      placeholder = True
+      eissn = 1573-093X
     >
 
     param[journal_issn] = 0038-0938
+    attr[where] = content5a
+
+    au < manifest ; 1967 ; Solar Physics Volume 1 ; 1 >
+    au < manifest ; 1967 ; Solar Physics Volume 2 ; 2 >
+    au < manifest ; 1968 ; Solar Physics Volume 3 ; 3 >
+    au < manifest ; 1968 ; Solar Physics Volume 4 ; 4 >
+    au < manifest ; 1968 ; Solar Physics Volume 5 ; 5 >
+    au < manifest ; 1969 ; Solar Physics Volume 6 ; 6 >
+    au < manifest ; 1969 ; Solar Physics Volume 7 ; 7 >
+    au < manifest ; 1969 ; Solar Physics Volume 8 ; 8 >
+    au < manifest ; 1969 ; Solar Physics Volume 9 ; 9 >
+    au < manifest ; 1969 ; Solar Physics Volume 10 ; 10 >
+    au < manifest ; 1970 ; Solar Physics Volume 11 ; 11 >
+    au < manifest ; 1970 ; Solar Physics Volume 12 ; 12 >
+    au < manifest ; 1970 ; Solar Physics Volume 13 ; 13 >
+    au < manifest ; 1970 ; Solar Physics Volume 14 ; 14 >
+    au < manifest ; 1970 ; Solar Physics Volume 15 ; 15 >
+    au < manifest ; 1971 ; Solar Physics Volume 16 ; 16 >
+    au < manifest ; 1971 ; Solar Physics Volume 17 ; 17 >
+    au < manifest ; 1971 ; Solar Physics Volume 18 ; 18 >
+    au < manifest ; 1971 ; Solar Physics Volume 19 ; 19 >
+    au < manifest ; 1971 ; Solar Physics Volume 20 ; 20 >
+    au < manifest ; 1971 ; Solar Physics Volume 21 ; 21 >
+    au < manifest ; 1972 ; Solar Physics Volume 22 ; 22 >
+    au < manifest ; 1972 ; Solar Physics Volume 23 ; 23 >
+    au < manifest ; 1972 ; Solar Physics Volume 24 ; 24 >
+    au < manifest ; 1972 ; Solar Physics Volume 25 ; 25 >
+    au < manifest ; 1972 ; Solar Physics Volume 26 ; 26 >
+    au < manifest ; 1972 ; Solar Physics Volume 27 ; 27 >
+    au < manifest ; 1973 ; Solar Physics Volume 28 ; 28 >
+    au < manifest ; 1973 ; Solar Physics Volume 29 ; 29 >
+    au < manifest ; 1973 ; Solar Physics Volume 30 ; 30 >
+    au < manifest ; 1973 ; Solar Physics Volume 31 ; 31 >
+    au < manifest ; 1973 ; Solar Physics Volume 32 ; 32 >
+    au < manifest ; 1973 ; Solar Physics Volume 33 ; 33 >
+    au < manifest ; 1974 ; Solar Physics Volume 34 ; 34 >
+    au < manifest ; 1974 ; Solar Physics Volume 35 ; 35 >
+    au < manifest ; 1974 ; Solar Physics Volume 36 ; 36 >
+    au < manifest ; 1974 ; Solar Physics Volume 37 ; 37 >
+    au < manifest ; 1974 ; Solar Physics Volume 38 ; 38 >
+    au < manifest ; 1974 ; Solar Physics Volume 39 ; 39 >
+    au < manifest ; 1975 ; Solar Physics Volume 40 ; 40 >
+    au < manifest ; 1975 ; Solar Physics Volume 41 ; 41 >
+    au < manifest ; 1975 ; Solar Physics Volume 42 ; 42 >
+    au < manifest ; 1975 ; Solar Physics Volume 43 ; 43 >
+    au < manifest ; 1975 ; Solar Physics Volume 44 ; 44 >
+    au < manifest ; 1975 ; Solar Physics Volume 45 ; 45 >
+    au < manifest ; 1976 ; Solar Physics Volume 46 ; 46 >
+    au < manifest ; 1976 ; Solar Physics Volume 47 ; 47 >
+    au < manifest ; 1976 ; Solar Physics Volume 48 ; 48 >
+    au < manifest ; 1976 ; Solar Physics Volume 49 ; 49 >
+    au < manifest ; 1976 ; Solar Physics Volume 50 ; 50 >
+    au < manifest ; 1977 ; Solar Physics Volume 51 ; 51 >
+    au < manifest ; 1977 ; Solar Physics Volume 52 ; 52 >
+    au < manifest ; 1977 ; Solar Physics Volume 53 ; 53 >
+    au < manifest ; 1977 ; Solar Physics Volume 54 ; 54 >
+    au < manifest ; 1977 ; Solar Physics Volume 55 ; 55 >
+    au < manifest ; 1978 ; Solar Physics Volume 56 ; 56 >
+    au < manifest ; 1978 ; Solar Physics Volume 57 ; 57 >
+    au < manifest ; 1978 ; Solar Physics Volume 58 ; 58 >
+    au < manifest ; 1978 ; Solar Physics Volume 59 ; 59 >
+    au < manifest ; 1978 ; Solar Physics Volume 60 ; 60 >
+    au < manifest ; 1979 ; Solar Physics Volume 61 ; 61 >
+    au < manifest ; 1979 ; Solar Physics Volume 62 ; 62 >
+    au < manifest ; 1979 ; Solar Physics Volume 63 ; 63 >
+    au < manifest ; 1979 ; Solar Physics Volume 64 ; 64 >
+    au < manifest ; 1980 ; Solar Physics Volume 65 ; 65 >
+    au < manifest ; 1980 ; Solar Physics Volume 66 ; 66 >
+    au < manifest ; 1980 ; Solar Physics Volume 67 ; 67 >
+    au < manifest ; 1980 ; Solar Physics Volume 68 ; 68 >
+    au < manifest ; 1981 ; Solar Physics Volume 69 ; 69 >
+    au < manifest ; 1981 ; Solar Physics Volume 70 ; 70 >
+    au < manifest ; 1981 ; Solar Physics Volume 71 ; 71 >
+    au < manifest ; 1981 ; Solar Physics Volume 72 ; 72 >
+    au < manifest ; 1981 ; Solar Physics Volume 73 ; 73 >
+    au < manifest ; 1981 ; Solar Physics Volume 74 ; 74 >
+    au < manifest ; 1982 ; Solar Physics Volume 75 ; 75 >
+    au < manifest ; 1982 ; Solar Physics Volume 76 ; 76 >
+    au < manifest ; 1982 ; Solar Physics Volume 77 ; 77 >
+    au < manifest ; 1982 ; Solar Physics Volume 78 ; 78 >
+    au < manifest ; 1982 ; Solar Physics Volume 79 ; 79 >
+    au < manifest ; 1982 ; Solar Physics Volume 80 ; 80 >
+    au < manifest ; 1982 ; Solar Physics Volume 81 ; 81 >
+    au < manifest ; 1983 ; Solar Physics Volume 82 ; 82 >
+    au < manifest ; 1983 ; Solar Physics Volume 83 ; 83 >
+    au < manifest ; 1983 ; Solar Physics Volume 84 ; 84 >
+    au < manifest ; 1983 ; Solar Physics Volume 85 ; 85 >
+    au < manifest ; 1983 ; Solar Physics Volume 86 ; 86 >
+    au < manifest ; 1983 ; Solar Physics Volume 87 ; 87 >
+    au < manifest ; 1983 ; Solar Physics Volume 88 ; 88 >
+    au < manifest ; 1983 ; Solar Physics Volume 89 ; 89 >
+    au < manifest ; 1984 ; Solar Physics Volume 90 ; 90 >
+    au < manifest ; 1984 ; Solar Physics Volume 91 ; 91 >
+    au < manifest ; 1984 ; Solar Physics Volume 92 ; 92 >
+    au < manifest ; 1984 ; Solar Physics Volume 93 ; 93 >
+    au < manifest ; 1984 ; Solar Physics Volume 94 ; 94 >
+    au < manifest ; 1985 ; Solar Physics Volume 95 ; 95 >
+    au < manifest ; 1985 ; Solar Physics Volume 96 ; 96 >
+    au < manifest ; 1985 ; Solar Physics Volume 97 ; 97 >
+    au < manifest ; 1985 ; Solar Physics Volume 98 ; 98 >
+    au < manifest ; 1985 ; Solar Physics Volume 99 ; 99 >
+    au < manifest ; 1985 ; Solar Physics Volume 100 ; 100 >
+    au < manifest ; 1985 ; Solar Physics Volume 101 ; 101 >
+    au < manifest ; 1985 ; Solar Physics Volume 102 ; 102 >
+    au < manifest ; 1986 ; Solar Physics Volume 103 ; 103 >
+    au < manifest ; 1986 ; Solar Physics Volume 104 ; 104 >
+    au < manifest ; 1986 ; Solar Physics Volume 105 ; 105 >
+    au < manifest ; 1986 ; Solar Physics Volume 106 ; 106 >
+    au < manifest ; 1986-1987 ; Solar Physics Volume 107 ; 107 >
+    au < manifest ; 1987 ; Solar Physics Volume 108 ; 108 >
+    au < manifest ; 1987 ; Solar Physics Volume 109 ; 109 >
+    au < manifest ; 1987 ; Solar Physics Volume 110 ; 110 >
+    au < manifest ; 1987 ; Solar Physics Volume 111 ; 111 >
+    au < manifest ; 1987 ; Solar Physics Volume 112 ; 112 >
+    au < manifest ; 1982 ; Solar Physics Volume 113 ; 113 >
+    au < manifest ; 1988 ; Solar Physics Volume 114 ; 114 >
+    au < manifest ; 1988 ; Solar Physics Volume 115 ; 115 >
+    au < manifest ; 1988 ; Solar Physics Volume 116 ; 116 >
+    au < manifest ; 1988 ; Solar Physics Volume 117 ; 117 >
+    au < manifest ; 1988 ; Solar Physics Volume 118 ; 118 >
+    au < manifest ; 1989 ; Solar Physics Volume 119 ; 119 >
+    au < manifest ; 1989 ; Solar Physics Volume 120 ; 120 >
+    au < manifest ; 1989 ; Solar Physics Volume 121 ; 121 >
+    au < manifest ; 1989 ; Solar Physics Volume 122 ; 122 >
+    au < manifest ; 1989 ; Solar Physics Volume 123 ; 123 >
+    au < manifest ; 1989 ; Solar Physics Volume 124 ; 124 >
+    au < manifest ; 1990 ; Solar Physics Volume 125 ; 125 >
+    au < manifest ; 1990 ; Solar Physics Volume 126 ; 126 >
+    au < manifest ; 1990 ; Solar Physics Volume 127 ; 127 >
+    au < manifest ; 1990 ; Solar Physics Volume 128 ; 128 >
+    au < manifest ; 1990 ; Solar Physics Volume 129 ; 129 >
+    au < manifest ; 1990 ; Solar Physics Volume 130 ; 130 >
+    au < manifest ; 1991 ; Solar Physics Volume 131 ; 131 >
+    au < manifest ; 1991 ; Solar Physics Volume 132 ; 132 >
+    au < manifest ; 1991 ; Solar Physics Volume 133 ; 133 >
+    au < manifest ; 1991 ; Solar Physics Volume 134 ; 134 >
+    au < manifest ; 1991 ; Solar Physics Volume 135 ; 135 >
+    au < manifest ; 1991 ; Solar Physics Volume 136 ; 136 >
+    au < manifest ; 1992 ; Solar Physics Volume 137 ; 137 >
+    au < manifest ; 1992 ; Solar Physics Volume 138 ; 138 >
+    au < manifest ; 1992 ; Solar Physics Volume 139 ; 139 >
+    au < manifest ; 1992 ; Solar Physics Volume 140 ; 140 >
+    au < manifest ; 1992 ; Solar Physics Volume 141 ; 141 >
+    au < manifest ; 1992 ; Solar Physics Volume 142 ; 142 >
+    au < manifest ; 1993 ; Solar Physics Volume 143 ; 143 >
+    au < manifest ; 1993 ; Solar Physics Volume 144 ; 144 >
+    au < manifest ; 1993 ; Solar Physics Volume 145 ; 145 >
+    au < manifest ; 1993 ; Solar Physics Volume 146 ; 146 >
+    au < manifest ; 1993 ; Solar Physics Volume 147 ; 147 >
+    au < manifest ; 1993 ; Solar Physics Volume 148 ; 148 >
+    au < manifest ; 1994 ; Solar Physics Volume 149 ; 149 >
+    au < manifest ; 1994 ; Solar Physics Volume 150 ; 150 >
+    au < manifest ; 1994 ; Solar Physics Volume 151 ; 151 >
+    au < manifest ; 1994 ; Solar Physics Volume 152 ; 152 >
+    au < manifest ; 1994 ; Solar Physics Volume 153 ; 153 >
+    au < manifest ; 1994 ; Solar Physics Volume 154 ; 154 >
+    au < manifest ; 1994 ; Solar Physics Volume 155 ; 155 >
+    au < manifest ; 1995 ; Solar Physics Volume 156 ; 156 >
+    au < manifest ; 1995 ; Solar Physics Volume 157 ; 157 >
+    au < manifest ; 1995 ; Solar Physics Volume 158 ; 158 >
+    au < manifest ; 1995 ; Solar Physics Volume 159 ; 159 >
+    au < manifest ; 1995 ; Solar Physics Volume 160 ; 160 >
+    au < manifest ; 1995 ; Solar Physics Volume 161 ; 161 >
+    au < manifest ; 1995 ; Solar Physics Volume 162 ; 162 >
+    au < manifest ; 1996 ; Solar Physics Volume 163 ; 163 >
+    au < manifest ; 1996 ; Solar Physics Volume 164 ; 164 >
+    au < manifest ; 1996 ; Solar Physics Volume 165 ; 165 >
+    au < manifest ; 1996 ; Solar Physics Volume 166 ; 166 >
+    au < manifest ; 1996 ; Solar Physics Volume 167 ; 167 >
+    au < manifest ; 1996 ; Solar Physics Volume 168 ; 168 >
+    au < manifest ; 1996 ; Solar Physics Volume 169 ; 169 >
+    au < manifest ; 1997 ; Solar Physics Volume 170 ; 170 >
+    au < manifest ; 1997 ; Solar Physics Volume 171 ; 171 >
+    au < manifest ; 1997 ; Solar Physics Volume 172 ; 172 >
+    au < manifest ; 1997 ; Solar Physics Volume 173 ; 173 >
+    au < manifest ; 1997 ; Solar Physics Volume 174 ; 174 >
+    au < manifest ; 1997 ; Solar Physics Volume 175 ; 175 >
+    au < manifest ; 1997 ; Solar Physics Volume 176 ; 176 >
+    au < manifest ; 1998 ; Solar Physics Volume 177 ; 177 >
+    au < manifest ; 1998 ; Solar Physics Volume 178 ; 178 >
+    au < manifest ; 1998 ; Solar Physics Volume 179 ; 179 >
+    au < manifest ; 1998 ; Solar Physics Volume 180 ; 180 >
+    au < manifest ; 1998 ; Solar Physics Volume 181 ; 181 >
+    au < manifest ; 1998 ; Solar Physics Volume 182 ; 182 >
+    au < manifest ; 1998 ; Solar Physics Volume 183 ; 183 >
+    au < manifest ; 1999 ; Solar Physics Volume 184 ; 184 >
+    au < manifest ; 1999 ; Solar Physics Volume 185 ; 185 >
+    au < manifest ; 1999 ; Solar Physics Volume 186 ; 186 >
+    au < manifest ; 1999 ; Solar Physics Volume 187 ; 187 >
+    au < manifest ; 1999 ; Solar Physics Volume 188 ; 188 >
+    au < manifest ; 1999 ; Solar Physics Volume 189 ; 189 >
+    au < manifest ; 1999 ; Solar Physics Volume 190 ; 190 >
+    au < testing ; 2000 ; Solar Physics Volume 191 ; 191 >
+    au < testing ; 2000 ; Solar Physics Volume 192 ; 192 >
+    au < testing ; 2000 ; Solar Physics Volume 193 ; 193 >
+    au < testing ; 2000 ; Solar Physics Volume 194 ; 194 >
+    au < testing ; 2000 ; Solar Physics Volume 195 ; 195 >
+    au < testing ; 2000 ; Solar Physics Volume 196 ; 196 >
+    au < testing ; 2000 ; Solar Physics Volume 197 ; 197 >
+    au < testing ; 2001 ; Solar Physics Volume 198 ; 198 >
+    au < testing ; 2001 ; Solar Physics Volume 199 ; 199 >
+    au < testing ; 2001 ; Solar Physics Volume 200 ; 200 >
+    au < testing ; 2001 ; Solar Physics Volume 201 ; 201 >
+    au < testing ; 2001 ; Solar Physics Volume 202 ; 202 >
+    au < testing ; 2001 ; Solar Physics Volume 203 ; 203 >
+    au < testing ; 2001 ; Solar Physics Volume 204 ; 204 >
+    au < testing ; 2002 ; Solar Physics Volume 205 ; 205 >
+    au < testing ; 2002 ; Solar Physics Volume 206 ; 206 >
+    au < testing ; 2002 ; Solar Physics Volume 207 ; 207 >
+    au < testing ; 2002 ; Solar Physics Volume 208 ; 208 >
+    au < testing ; 2002 ; Solar Physics Volume 209 ; 209 >
+    au < testing ; 2002 ; Solar Physics Volume 210 ; 210 >
+    au < testing ; 2002 ; Solar Physics Volume 211 ; 211 >
+    au < testing ; 2003 ; Solar Physics Volume 212 ; 212 >
+    au < testing ; 2003 ; Solar Physics Volume 213 ; 213 >
+    au < testing ; 2003 ; Solar Physics Volume 214 ; 214 >
+    au < testing ; 2003 ; Solar Physics Volume 215 ; 215 >
+    au < testing ; 2003 ; Solar Physics Volume 216 ; 216 >
+    au < testing ; 2003 ; Solar Physics Volume 217 ; 217 >
+    au < testing ; 2003 ; Solar Physics Volume 218 ; 218 >
+    au < testing ; 2004 ; Solar Physics Volume 219 ; 219 >
+    au < testing ; 2004 ; Solar Physics Volume 220 ; 220 >
+    au < testing ; 2004 ; Solar Physics Volume 221 ; 221 >
+    au < testing ; 2004 ; Solar Physics Volume 222 ; 222 >
+    au < testing ; 2004 ; Solar Physics Volume 223 ; 223 >
+    au < testing ; 2004 ; Solar Physics Volume 224 ; 224 >
+    au < testing ; 2004 ; Solar Physics Volume 225 ; 225 >
+    au < testing ; 2005 ; Solar Physics Volume 226 ; 226 >
+    au < testing ; 2005 ; Solar Physics Volume 227 ; 227 >
+    au < testing ; 2005 ; Solar Physics Volume 228 ; 228 >
+    au < testing ; 2005 ; Solar Physics Volume 229 ; 229 >
+    au < testing ; 2005 ; Solar Physics Volume 230 ; 230 >
+    au < testing ; 2005 ; Solar Physics Volume 231 ; 231 >
+    au < testing ; 2005 ; Solar Physics Volume 232 ; 232 >
+    au < testing ; 2006 ; Solar Physics Volume 233 ; 233 >
+    au < testing ; 2006 ; Solar Physics Volume 234 ; 234 >
+    au < testing ; 2006 ; Solar Physics Volume 235 ; 235 >
+    au < testing ; 2006 ; Solar Physics Volume 236 ; 236 >
+    au < testing ; 2006 ; Solar Physics Volume 237 ; 237 >
+    au < testing ; 2006 ; Solar Physics Volume 238 ; 238 >
+    au < testing ; 2006 ; Solar Physics Volume 239 ; 239 >
+    au < testing ; 2007 ; Solar Physics Volume 240 ; 240 >
+    au < testing ; 2007 ; Solar Physics Volume 241 ; 241 >
+    au < testing ; 2007 ; Solar Physics Volume 242 ; 242 >
+    au < testing ; 2007 ; Solar Physics Volume 243 ; 243 >
+    au < testing ; 2007 ; Solar Physics Volume 244 ; 244 >
+    au < testing ; 2007 ; Solar Physics Volume 245 ; 245 >
+    au < testing ; 2007 ; Solar Physics Volume 246 ; 246 >
+    au < testing ; 2008 ; Solar Physics Volume 247 ; 247 >
+    au < testing ; 2008 ; Solar Physics Volume 248 ; 248 >
+    au < testing ; 2008 ; Solar Physics Volume 249 ; 249 >
+    au < testing ; 2008 ; Solar Physics Volume 250 ; 250 >
+    au < testing ; 2008 ; Solar Physics Volume 251 ; 251 >
+    au < testing ; 2008 ; Solar Physics Volume 252 ; 252 >
+    au < testing ; 2008 ; Solar Physics Volume 253 ; 253 >
+    au < testing ; 2009 ; Solar Physics Volume 254 ; 254 >
+    au < testing ; 2009 ; Solar Physics Volume 255 ; 255 >
+    au < testing ; 2009 ; Solar Physics Volume 256 ; 256 >
+    au < testing ; 2009 ; Solar Physics Volume 257 ; 257 >
+    au < testing ; 2009 ; Solar Physics Volume 258 ; 258 >
+    au < testing ; 2009 ; Solar Physics Volume 259 ; 259 >
+    au < testing ; 2009 ; Solar Physics Volume 260 ; 260 >
+    au < testing ; 2010 ; Solar Physics Volume 261 ; 261 >
+    au < testing ; 2010 ; Solar Physics Volume 262 ; 262 >
+    au < testing ; 2010 ; Solar Physics Volume 263 ; 263 >
+    au < testing ; 2010 ; Solar Physics Volume 264 ; 264 >
+    au < testing ; 2010 ; Solar Physics Volume 265 ; 265 >
+    au < testing ; 2010 ; Solar Physics Volume 266 ; 266 >
+    au < testing ; 2010 ; Solar Physics Volume 267 ; 267 >
 
   }
 
