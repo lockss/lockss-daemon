@@ -1120,47 +1120,46 @@
     >
 
     param[journal_issn] = 0939-4451
-    attr[where] = content3a
 
-    au < testing ; 1991 ; Amino Acids Volume 1 ; 1 >
-    au < testing ; 1992 ; Amino Acids Volume 2 ; 2 >
-    au < testing ; 1992 ; Amino Acids Volume 3 ; 3 >
-    au < testing ; 1993 ; Amino Acids Volume 4 ; 4 >
-    au < testing ; 1993 ; Amino Acids Volume 5 ; 5 >
-    au < testing ; 1994 ; Amino Acids Volume 6 ; 6 >
-    au < testing ; 1994 ; Amino Acids Volume 7 ; 7 >
-    au < testing ; 1995 ; Amino Acids Volume 8 ; 8 >
-    au < testing ; 1995 ; Amino Acids Volume 9 ; 9 >
-    au < testing ; 1996 ; Amino Acids Volume 10 ; 10 >
-    au < testing ; 1996 ; Amino Acids Volume 11 ; 11 >
-    au < testing ; 1997 ; Amino Acids Volume 12 ; 12 >
-    au < testing ; 1997 ; Amino Acids Volume 13 ; 13 >
-    au < testing ; 1998 ; Amino Acids Volume 14 ; 14 >
-    au < testing ; 1998 ; Amino Acids Volume 15 ; 15 >
-    au < testing ; 1999 ; Amino Acids Volume 16 ; 16 >
-    au < testing ; 1999 ; Amino Acids Volume 17 ; 17 >
-    au < testing ; 2000 ; Amino Acids Volume 18 ; 18 >
-    au < testing ; 2000 ; Amino Acids Volume 19 ; 19 >
-    au < testing ; 2001 ; Amino Acids Volume 20 ; 20 >
-    au < testing ; 2001 ; Amino Acids Volume 21 ; 21 >
-    au < testing ; 2002 ; Amino Acids Volume 22 ; 22 >
-    au < testing ; 2002 ; Amino Acids Volume 23 ; 23 >
-    au < testing ; 2003 ; Amino Acids Volume 24 ; 24 >
-    au < testing ; 2003 ; Amino Acids Volume 25 ; 25 >
-    au < testing ; 2004 ; Amino Acids Volume 26 ; 26 >
-    au < testing ; 2004 ; Amino Acids Volume 27 ; 27 >
-    au < testing ; 2005 ; Amino Acids Volume 28 ; 28 >
-    au < testing ; 2005 ; Amino Acids Volume 29 ; 29 >
-    au < testing ; 2006 ; Amino Acids Volume 30 ; 30 >
-    au < testing ; 2006 ; Amino Acids Volume 31 ; 31 >
-    au < testing ; 2007 ; Amino Acids Volume 32 ; 32 >
-    au < testing ; 2007 ; Amino Acids Volume 33 ; 33 >
-    au < testing ; 2008 ; Amino Acids Volume 34 ; 34 >
-    au < testing ; 2008 ; Amino Acids Volume 35 ; 35 >
-    au < testing ; 2009 ; Amino Acids Volume 36 ; 36 >
-    au < testing ; 2009 ; Amino Acids Volume 37 ; 37 >
-    au < testing ; 2010 ; Amino Acids Volume 38 ; 38 >
-    au < testing ; 2010 ; Amino Acids Volume 39 ; 39 >
+    au < ready ; 1991 ; Amino Acids Volume 1 ; 1 >
+    au < ready ; 1992 ; Amino Acids Volume 2 ; 2 >
+    au < ready ; 1992 ; Amino Acids Volume 3 ; 3 >
+    au < ready ; 1993 ; Amino Acids Volume 4 ; 4 >
+    au < ready ; 1993 ; Amino Acids Volume 5 ; 5 >
+    au < ready ; 1994 ; Amino Acids Volume 6 ; 6 >
+    au < ready ; 1994 ; Amino Acids Volume 7 ; 7 >
+    au < ready ; 1995 ; Amino Acids Volume 8 ; 8 >
+    au < ready ; 1995 ; Amino Acids Volume 9 ; 9 >
+    au < ready ; 1996 ; Amino Acids Volume 10 ; 10 >
+    au < ready ; 1996 ; Amino Acids Volume 11 ; 11 >
+    au < ready ; 1997 ; Amino Acids Volume 12 ; 12 >
+    au < ready ; 1997 ; Amino Acids Volume 13 ; 13 >
+    au < ready ; 1998 ; Amino Acids Volume 14 ; 14 >
+    au < ready ; 1998 ; Amino Acids Volume 15 ; 15 >
+    au < ready ; 1999 ; Amino Acids Volume 16 ; 16 >
+    au < ready ; 1999 ; Amino Acids Volume 17 ; 17 >
+    au < ready ; 2000 ; Amino Acids Volume 18 ; 18 >
+    au < ready ; 2000 ; Amino Acids Volume 19 ; 19 >
+    au < ready ; 2001 ; Amino Acids Volume 20 ; 20 >
+    au < ready ; 2001 ; Amino Acids Volume 21 ; 21 >
+    au < ready ; 2002 ; Amino Acids Volume 22 ; 22 >
+    au < ready ; 2002 ; Amino Acids Volume 23 ; 23 >
+    au < ready ; 2003 ; Amino Acids Volume 24 ; 24 >
+    au < ready ; 2003 ; Amino Acids Volume 25 ; 25 >
+    au < ready ; 2004 ; Amino Acids Volume 26 ; 26 >
+    au < ready ; 2004 ; Amino Acids Volume 27 ; 27 >
+    au < ready ; 2005 ; Amino Acids Volume 28 ; 28 >
+    au < ready ; 2005 ; Amino Acids Volume 29 ; 29 >
+    au < ready ; 2006 ; Amino Acids Volume 30 ; 30 >
+    au < ready ; 2006 ; Amino Acids Volume 31 ; 31 >
+    au < ready ; 2007 ; Amino Acids Volume 32 ; 32 >
+    au < ready ; 2007 ; Amino Acids Volume 33 ; 33 >
+    au < ready ; 2008 ; Amino Acids Volume 34 ; 34 >
+    au < ready ; 2008 ; Amino Acids Volume 35 ; 35 >
+    au < ready ; 2009 ; Amino Acids Volume 36 ; 36 >
+    au < ready ; 2009 ; Amino Acids Volume 37 ; 37 >
+    au < ready ; 2010 ; Amino Acids Volume 38 ; 38 >
+    au < ready ; 2010 ; Amino Acids Volume 39 ; 39 >
 
   }
 
@@ -5122,10 +5121,71 @@
     title <
       name = Cancer Immunology, Immunotherapy ;
       issn = 0340-7004 ;
-      placeholder = True
+      eissn = 1432-0851
     >
 
     param[journal_issn] = 0340-7004
+    attr[where] = content1b
+
+    au < manifest ; 1976 ; Cancer Immunology, Immunotherapy Volume 1 ; 1 >
+    au < manifest ; 1977 ; Cancer Immunology, Immunotherapy Volume 2 ; 2 >
+    au < manifest ; 1977-1978 ; Cancer Immunology, Immunotherapy Volume 3 ; 3 >
+    au < manifest ; 1978 ; Cancer Immunology, Immunotherapy Volume 4 ; 4 >
+    au < manifest ; 1978-1979 ; Cancer Immunology, Immunotherapy Volume 5 ; 5 >
+    au < manifest ; 1979 ; Cancer Immunology, Immunotherapy Volume 6 ; 6 >
+    au < manifest ; 1979-1980 ; Cancer Immunology, Immunotherapy Volume 7 ; 7 >
+    au < manifest ; 1980 ; Cancer Immunology, Immunotherapy Volume 8 ; 8 >
+    au < manifest ; 1980 ; Cancer Immunology, Immunotherapy Volume 9 ; 9 >
+    au < manifest ; 1980-1981 ; Cancer Immunology, Immunotherapy Volume 10 ; 10 >
+    au < manifest ; 1981 ; Cancer Immunology, Immunotherapy Volume 11 ; 11 >
+    au < manifest ; 1995 ; Cancer Immunology, Immunotherapy Volume 12 ; 12 >
+    au < manifest ; 1982 ; Cancer Immunology, Immunotherapy Volume 13 ; 13 >
+    au < manifest ; 1982-1983 ; Cancer Immunology, Immunotherapy Volume 14 ; 14 >
+    au < manifest ; 1983-1998 ; Cancer Immunology, Immunotherapy Volume 15 ; 15 >
+    au < manifest ; 1983-1999 ; Cancer Immunology, Immunotherapy Volume 16 ; 16 >
+    au < manifest ; 1984 ; Cancer Immunology, Immunotherapy Volume 17 ; 17 >
+    au < manifest ; 1984 ; Cancer Immunology, Immunotherapy Volume 18 ; 18 >
+    au < manifest ; 1985 ; Cancer Immunology, Immunotherapy Volume 19 ; 19 >
+    au < manifest ; 1985 ; Cancer Immunology, Immunotherapy Volume 20 ; 20 >
+    au < manifest ; 1986 ; Cancer Immunology, Immunotherapy Volume 21 ; 21 >
+    au < manifest ; 1986 ; Cancer Immunology, Immunotherapy Volume 22 ; 22 >
+    au < manifest ; 1986 ; Cancer Immunology, Immunotherapy Volume 23 ; 23 >
+    au < manifest ; 1987 ; Cancer Immunology, Immunotherapy Volume 24 ; 24 >
+    au < manifest ; 1987 ; Cancer Immunology, Immunotherapy Volume 25 ; 25 >
+    au < manifest ; 1988 ; Cancer Immunology, Immunotherapy Volume 26 ; 26 >
+    au < manifest ; 1988 ; Cancer Immunology, Immunotherapy Volume 27 ; 27 >
+    au < manifest ; 1989 ; Cancer Immunology, Immunotherapy Volume 28 ; 28 >
+    au < manifest ; 1989 ; Cancer Immunology, Immunotherapy Volume 29 ; 29 >
+    au < manifest ; 1989-1990 ; Cancer Immunology, Immunotherapy Volume 30 ; 30 >
+    au < testing ; 1990 ; Cancer Immunology, Immunotherapy Volume 31 ; 31 >
+    au < testing ; 1990-1991 ; Cancer Immunology, Immunotherapy Volume 32 ; 32 >
+    au < testing ; 1991 ; Cancer Immunology, Immunotherapy Volume 33 ; 33 >
+    au < testing ; 1991-1992 ; Cancer Immunology, Immunotherapy Volume 34 ; 34 >
+    au < testing ; 1992 ; Cancer Immunology, Immunotherapy Volume 35 ; 35 >
+    au < testing ; 1993 ; Cancer Immunology, Immunotherapy Volume 36 ; 36 >
+    au < testing ; 1993 ; Cancer Immunology, Immunotherapy Volume 37 ; 37 >
+    au < testing ; 1994 ; Cancer Immunology, Immunotherapy Volume 38 ; 38 >
+    au < testing ; 1994 ; Cancer Immunology, Immunotherapy Volume 39 ; 39 >
+    au < testing ; 1995 ; Cancer Immunology, Immunotherapy Volume 40 ; 40 >
+    au < testing ; 1995-1996 ; Cancer Immunology, Immunotherapy Volume 41 ; 41 >
+    au < testing ; 1996 ; Cancer Immunology, Immunotherapy Volume 42 ; 42 >
+    au < testing ; 1996-1997 ; Cancer Immunology, Immunotherapy Volume 43 ; 43 >
+    au < testing ; 1997 ; Cancer Immunology, Immunotherapy Volume 44 ; 44 >
+    au < testing ; 1997 ; Cancer Immunology, Immunotherapy Volume 45 ; 45 >
+    au < testing ; 1998 ; Cancer Immunology, Immunotherapy Volume 46 ; 46 >
+    au < testing ; 1998 ; Cancer Immunology, Immunotherapy Volume 47 ; 47 >
+    au < testing ; 1999 ; Cancer Immunology, Immunotherapy Volume 48 ; 48 >
+    au < testing ; 2000 ; Cancer Immunology, Immunotherapy Volume 49 ; 49 >
+    au < testing ; 2001 ; Cancer Immunology, Immunotherapy Volume 50 ; 50 >
+    au < testing ; 2002 ; Cancer Immunology, Immunotherapy Volume 51 ; 51 >
+    au < testing ; 2003 ; Cancer Immunology, Immunotherapy Volume 52 ; 52 >
+    au < testing ; 2004 ; Cancer Immunology, Immunotherapy Volume 53 ; 53 >
+    au < testing ; 2005 ; Cancer Immunology, Immunotherapy Volume 54 ; 54 >
+    au < testing ; 2006 ; Cancer Immunology, Immunotherapy Volume 55 ; 55 >
+    au < testing ; 2007 ; Cancer Immunology, Immunotherapy Volume 56 ; 56 >
+    au < testing ; 2008 ; Cancer Immunology, Immunotherapy Volume 57 ; 57 >
+    au < testing ; 2009 ; Cancer Immunology, Immunotherapy Volume 58 ; 58 >
+    au < testing ; 2010 ; Cancer Immunology, Immunotherapy Volume 59 ; 59 >
 
   }
 
@@ -6217,43 +6277,42 @@
     >
 
     param[journal_issn] = 0930-7575
-    attr[where] = content1a
 
-    au < testing ; 1986-1987 ; Climate Dynamics Volume 1 ; 1 >
-    au < testing ; 1987-1988 ; Climate Dynamics Volume 2 ; 2 >
-    au < testing ; 1988-1989 ; Climate Dynamics Volume 3 ; 3 >
-    au < testing ; 1989-1990 ; Climate Dynamics Volume 4 ; 4 >
-    au < testing ; 1990-1991 ; Climate Dynamics Volume 5 ; 5 >
-    au < testing ; 1991-1992 ; Climate Dynamics Volume 6 ; 6 >
-    au < testing ; 1992 ; Climate Dynamics Volume 7 ; 7 >
-    au < testing ; 1992-1993 ; Climate Dynamics Volume 8 ; 8 >
-    au < testing ; 1993-1994 ; Climate Dynamics Volume 9 ; 9 >
-    au < testing ; 1994 ; Climate Dynamics Volume 10 ; 10 >
-    au < testing ; 1995 ; Climate Dynamics Volume 11 ; 11 >
-    au < testing ; 1995-1996 ; Climate Dynamics Volume 12 ; 12 >
-    au < testing ; 1996-1997 ; Climate Dynamics Volume 13 ; 13 >
-    au < testing ; 1997 ; Climate Dynamics Volume 14 ; 14 >
-    au < testing ; 1999 ; Climate Dynamics Volume 15 ; 15 >
-    au < testing ; 2000 ; Climate Dynamics Volume 16 ; 16 >
-    au < testing ; 2001 ; Climate Dynamics Volume 17 ; 17 >
-    au < testing ; 2001 ; Climate Dynamics Volume 18 ; 18 >
-    au < testing ; 2002 ; Climate Dynamics Volume 19 ; 19 >
-    au < testing ; 2002 ; Climate Dynamics Volume 20 ; 20 >
-    au < testing ; 2003 ; Climate Dynamics Volume 21 ; 21 >
-    au < testing ; 2004 ; Climate Dynamics Volume 22 ; 22 >
-    au < testing ; 2004 ; Climate Dynamics Volume 23 ; 23 >
-    au < testing ; 2005 ; Climate Dynamics Volume 24 ; 24 >
-    au < testing ; 2005 ; Climate Dynamics Volume 25 ; 25 >
-    au < testing ; 2006 ; Climate Dynamics Volume 26 ; 26 >
-    au < testing ; 2006 ; Climate Dynamics Volume 27 ; 27 >
-    au < testing ; 2007 ; Climate Dynamics Volume 28 ; 28 >
-    au < testing ; 2007 ; Climate Dynamics Volume 29 ; 29 >
-    au < testing ; 2008 ; Climate Dynamics Volume 30 ; 30 >
-    au < testing ; 2008 ; Climate Dynamics Volume 31 ; 31 >
-    au < testing ; 2009 ; Climate Dynamics Volume 32 ; 32 >
-    au < testing ; 2009 ; Climate Dynamics Volume 33 ; 33 >
-    au < testing ; 2010 ; Climate Dynamics Volume 34 ; 34 >
-    au < testing ; 2010 ; Climate Dynamics Volume 35 ; 35 >
+    au < ready ; 1986-1987 ; Climate Dynamics Volume 1 ; 1 >
+    au < ready ; 1987-1988 ; Climate Dynamics Volume 2 ; 2 >
+    au < ready ; 1988-1989 ; Climate Dynamics Volume 3 ; 3 >
+    au < ready ; 1989-1990 ; Climate Dynamics Volume 4 ; 4 >
+    au < ready ; 1990-1991 ; Climate Dynamics Volume 5 ; 5 >
+    au < ready ; 1991-1992 ; Climate Dynamics Volume 6 ; 6 >
+    au < ready ; 1992 ; Climate Dynamics Volume 7 ; 7 >
+    au < ready ; 1992-1993 ; Climate Dynamics Volume 8 ; 8 >
+    au < ready ; 1993-1994 ; Climate Dynamics Volume 9 ; 9 >
+    au < ready ; 1994 ; Climate Dynamics Volume 10 ; 10 >
+    au < ready ; 1995 ; Climate Dynamics Volume 11 ; 11 >
+    au < ready ; 1995-1996 ; Climate Dynamics Volume 12 ; 12 >
+    au < ready ; 1996-1997 ; Climate Dynamics Volume 13 ; 13 >
+    au < ready ; 1997 ; Climate Dynamics Volume 14 ; 14 >
+    au < ready ; 1999 ; Climate Dynamics Volume 15 ; 15 >
+    au < ready ; 2000 ; Climate Dynamics Volume 16 ; 16 >
+    au < ready ; 2001 ; Climate Dynamics Volume 17 ; 17 >
+    au < ready ; 2001 ; Climate Dynamics Volume 18 ; 18 >
+    au < ready ; 2002 ; Climate Dynamics Volume 19 ; 19 >
+    au < ready ; 2002 ; Climate Dynamics Volume 20 ; 20 >
+    au < ready ; 2003 ; Climate Dynamics Volume 21 ; 21 >
+    au < ready ; 2004 ; Climate Dynamics Volume 22 ; 22 >
+    au < ready ; 2004 ; Climate Dynamics Volume 23 ; 23 >
+    au < ready ; 2005 ; Climate Dynamics Volume 24 ; 24 >
+    au < ready ; 2005 ; Climate Dynamics Volume 25 ; 25 >
+    au < ready ; 2006 ; Climate Dynamics Volume 26 ; 26 >
+    au < ready ; 2006 ; Climate Dynamics Volume 27 ; 27 >
+    au < ready ; 2007 ; Climate Dynamics Volume 28 ; 28 >
+    au < ready ; 2007 ; Climate Dynamics Volume 29 ; 29 >
+    au < ready ; 2008 ; Climate Dynamics Volume 30 ; 30 >
+    au < ready ; 2008 ; Climate Dynamics Volume 31 ; 31 >
+    au < ready ; 2009 ; Climate Dynamics Volume 32 ; 32 >
+    au < ready ; 2009 ; Climate Dynamics Volume 33 ; 33 >
+    au < ready ; 2010 ; Climate Dynamics Volume 34 ; 34 >
+    au < ready ; 2010 ; Climate Dynamics Volume 35 ; 35 >
 
   }
 
@@ -6262,10 +6321,115 @@
     title <
       name = Climatic Change ;
       issn = 0165-0009 ;
-      placeholder = True
+      eissn = 1573-1480
     >
 
     param[journal_issn] = 0165-0009
+    attr[where] = content6b
+
+    au < manifest ; 1977-1978 ; Climatic Change Volume 1 ; 1 >
+    au < manifest ; 1979-1980 ; Climatic Change Volume 2 ; 2 >
+    au < manifest ; 1980-1981 ; Climatic Change Volume 3 ; 3 >
+    au < manifest ; 1982 ; Climatic Change Volume 4 ; 4 >
+    au < manifest ; 1983 ; Climatic Change Volume 5 ; 5 >
+    au < manifest ; 1984 ; Climatic Change Volume 6 ; 6 >
+    au < manifest ; 1985 ; Climatic Change Volume 7 ; 7 >
+    au < manifest ; 1986 ; Climatic Change Volume 8 ; 8 >
+    au < manifest ; 1986 ; Climatic Change Volume 9 ; 9 >
+    au < manifest ; 1987 ; Climatic Change Volume 10 ; 10 >
+    au < manifest ; 1987 ; Climatic Change Volume 11 ; 11 >
+    au < manifest ; 1988 ; Climatic Change Volume 12 ; 12 >
+    au < manifest ; 1988 ; Climatic Change Volume 13 ; 13 >
+    au < manifest ; 1989 ; Climatic Change Volume 14 ; 14 >
+    au < manifest ; 1989 ; Climatic Change Volume 15 ; 15 >
+    au < manifest ; 1990 ; Climatic Change Volume 16 ; 16 >
+    au < manifest ; 1990 ; Climatic Change Volume 17 ; 17 >
+    au < manifest ; 1991 ; Climatic Change Volume 18 ; 18 >
+    au < manifest ; 1991 ; Climatic Change Volume 19 ; 19 >
+    au < manifest ; 1992 ; Climatic Change Volume 20 ; 20 >
+    au < manifest ; 1992 ; Climatic Change Volume 21 ; 21 >
+    au < manifest ; 1992 ; Climatic Change Volume 22 ; 22 >
+    au < manifest ; 1993 ; Climatic Change Volume 23 ; 23 >
+    au < manifest ; 1993 ; Climatic Change Volume 24 ; 24 >
+    au < manifest ; 1993 ; Climatic Change Volume 25 ; 25 >
+    au < manifest ; 1994 ; Climatic Change Volume 26 ; 26 >
+    au < manifest ; 1994 ; Climatic Change Volume 27 ; 27 >
+    au < manifest ; 1994 ; Climatic Change Volume 28 ; 28 >
+    au < manifest ; 1995 ; Climatic Change Volume 29 ; 29 >
+    au < manifest ; 1995 ; Climatic Change Volume 30 ; 30 >
+    au < manifest ; 1995 ; Climatic Change Volume 31 ; 31 >
+    au < manifest ; 1996 ; Climatic Change Volume 32 ; 32 >
+    au < manifest ; 1996 ; Climatic Change Volume 33 ; 33 >
+    au < manifest ; 1996 ; Climatic Change Volume 34 ; 34 >
+    au < manifest ; 1997 ; Climatic Change Volume 35 ; 35 >
+    au < manifest ; 1997 ; Climatic Change Volume 36 ; 36 >
+    au < manifest ; 1997 ; Climatic Change Volume 37 ; 37 >
+    au < manifest ; 1998 ; Climatic Change Volume 38 ; 38 >
+    au < manifest ; 1998 ; Climatic Change Volume 39 ; 39 >
+    au < manifest ; 1998 ; Climatic Change Volume 40 ; 40 >
+    au < manifest ; 1999 ; Climatic Change Volume 41 ; 41 >
+    au < manifest ; 1999 ; Climatic Change Volume 42 ; 42 >
+    au < manifest ; 1999 ; Climatic Change Volume 43 ; 43 >
+    au < manifest ; 2000 ; Climatic Change Volume 44 ; 44 >
+    au < manifest ; 2000 ; Climatic Change Volume 45 ; 45 >
+    au < manifest ; 2000 ; Climatic Change Volume 46 ; 46 >
+    au < manifest ; 2000 ; Climatic Change Volume 47 ; 47 >
+    au < manifest ; 2001 ; Climatic Change Volume 48 ; 48 >
+    au < manifest ; 2001 ; Climatic Change Volume 49 ; 49 >
+    au < manifest ; 2001 ; Climatic Change Volume 50 ; 50 >
+    au < testing ; 2001 ; Climatic Change Volume 51 ; 51 >
+    au < testing ; 2002 ; Climatic Change Volume 52 ; 52 >
+    au < testing ; 2002 ; Climatic Change Volume 53 ; 53 >
+    au < testing ; 2002 ; Climatic Change Volume 54 ; 54 >
+    au < testing ; 2002 ; Climatic Change Volume 55 ; 55 >
+    au < testing ; 2003 ; Climatic Change Volume 56 ; 56 >
+    au < testing ; 2003 ; Climatic Change Volume 57 ; 57 >
+    au < testing ; 2003 ; Climatic Change Volume 58 ; 58 >
+    au < testing ; 2003 ; Climatic Change Volume 59 ; 59 >
+    au < testing ; 2003 ; Climatic Change Volume 60 ; 60 >
+    au < testing ; 2003 ; Climatic Change Volume 61 ; 61 >
+    au < testing ; 2004 ; Climatic Change Volume 62 ; 62 >
+    au < testing ; 2004 ; Climatic Change Volume 63 ; 63 >
+    au < testing ; 2004 ; Climatic Change Volume 64 ; 64 >
+    au < testing ; 2004 ; Climatic Change Volume 65 ; 65 >
+    au < testing ; 2004 ; Climatic Change Volume 66 ; 66 >
+    au < testing ; 2004 ; Climatic Change Volume 67 ; 67 >
+    au < testing ; 2005 ; Climatic Change Volume 68 ; 68 >
+    au < testing ; 2005 ; Climatic Change Volume 69 ; 69 >
+    au < testing ; 2005 ; Climatic Change Volume 70 ; 70 >
+    au < testing ; 2005 ; Climatic Change Volume 71 ; 71 >
+    au < testing ; 2005 ; Climatic Change Volume 72 ; 72 >
+    au < testing ; 2005 ; Climatic Change Volume 73 ; 73 >
+    au < testing ; 2006 ; Climatic Change Volume 74 ; 74 >
+    au < testing ; 2006 ; Climatic Change Volume 75 ; 75 >
+    au < testing ; 2006 ; Climatic Change Volume 76 ; 76 >
+    au < testing ; 2006 ; Climatic Change Volume 77 ; 77 >
+    au < testing ; 2006 ; Climatic Change Volume 78 ; 78 >
+    au < testing ; 2006 ; Climatic Change Volume 79 ; 79 >
+    au < testing ; 2007 ; Climatic Change Volume 80 ; 80 >
+    au < testing ; 2007 ; Climatic Change Volume 81 ; 81 >
+    au < testing ; 2007 ; Climatic Change Volume 82 ; 82 >
+    au < testing ; 2007 ; Climatic Change Volume 83 ; 83 >
+    au < testing ; 2007 ; Climatic Change Volume 84 ; 84 >
+    au < testing ; 2007 ; Climatic Change Volume 85 ; 85 >
+    au < testing ; 2008 ; Climatic Change Volume 86 ; 86 >
+    au < testing ; 2008 ; Climatic Change Volume 87 ; 87 >
+    au < testing ; 2008 ; Climatic Change Volume 88 ; 88 >
+    au < testing ; 2008 ; Climatic Change Volume 89 ; 89 >
+    au < testing ; 2008 ; Climatic Change Volume 90 ; 90 >
+    au < testing ; 2008 ; Climatic Change Volume 91 ; 91 >
+    au < testing ; 2009 ; Climatic Change Volume 92 ; 92 >
+    au < testing ; 2009 ; Climatic Change Volume 93 ; 93 >
+    au < testing ; 2009 ; Climatic Change Volume 94 ; 94 >
+    au < testing ; 2009 ; Climatic Change Volume 95 ; 95 >
+    au < testing ; 2009 ; Climatic Change Volume 96 ; 96 >
+    au < testing ; 2009 ; Climatic Change Volume 97 ; 97 >
+    au < testing ; 2010 ; Climatic Change Volume 98 ; 98 >
+    au < testing ; 2010 ; Climatic Change Volume 99 ; 99 >
+    au < testing ; 2010 ; Climatic Change Volume 100 ; 100 >
+    au < testing ; 2010 ; Climatic Change Volume 101 ; 101 >
+    au < testing ; 2010 ; Climatic Change Volume 102 ; 102 >
+    au < testing ; 2010 ; Climatic Change Volume 103 ; 103 >
 
   }
 
@@ -6290,35 +6454,34 @@
     >
 
     param[journal_issn] = 0262-0898
-    attr[where] = content1b
 
-    au < testing ; 1983 ; Clinical and Experimental Metastasis Volume 1 ; 1 >
-    au < testing ; 1984 ; Clinical and Experimental Metastasis Volume 2 ; 2 >
-    au < testing ; 1985 ; Clinical and Experimental Metastasis Volume 3 ; 3 >
-    au < testing ; 1986 ; Clinical and Experimental Metastasis Volume 4 ; 4 >
-    au < testing ; 1987 ; Clinical and Experimental Metastasis Volume 5 ; 5 >
-    au < testing ; 1988 ; Clinical and Experimental Metastasis Volume 6 ; 6 >
-    au < testing ; 1989 ; Clinical and Experimental Metastasis Volume 7 ; 7 >
-    au < testing ; 1990 ; Clinical and Experimental Metastasis Volume 8 ; 8 >
-    au < testing ; 1991 ; Clinical and Experimental Metastasis Volume 9 ; 9 >
-    au < testing ; 1992 ; Clinical and Experimental Metastasis Volume 10 ; 10 >
-    au < testing ; 1993 ; Clinical and Experimental Metastasis Volume 11 ; 11 >
-    au < testing ; 1994 ; Clinical and Experimental Metastasis Volume 12 ; 12 >
-    au < testing ; 1995 ; Clinical and Experimental Metastasis Volume 13 ; 13 >
-    au < testing ; 1996 ; Clinical and Experimental Metastasis Volume 14 ; 14 >
-    au < testing ; 1997 ; Clinical and Experimental Metastasis Volume 15 ; 15 >
-    au < testing ; 1998 ; Clinical and Experimental Metastasis Volume 16 ; 16 >
-    au < testing ; 1999 ; Clinical and Experimental Metastasis Volume 17 ; 17 >
-    au < testing ; 2000 ; Clinical and Experimental Metastasis Volume 18 ; 18 >
-    au < testing ; 2002 ; Clinical and Experimental Metastasis Volume 19 ; 19 >
-    au < testing ; 2003 ; Clinical and Experimental Metastasis Volume 20 ; 20 >
-    au < testing ; 2004 ; Clinical and Experimental Metastasis Volume 21 ; 21 >
-    au < testing ; 2005 ; Clinical and Experimental Metastasis Volume 22 ; 22 >
-    au < testing ; 2006 ; Clinical and Experimental Metastasis Volume 23 ; 23 >
-    au < testing ; 2007 ; Clinical and Experimental Metastasis Volume 24 ; 24 >
-    au < testing ; 2008 ; Clinical and Experimental Metastasis Volume 25 ; 25 >
-    au < testing ; 2009 ; Clinical and Experimental Metastasis Volume 26 ; 26 >
-    au < testing ; 2010 ; Clinical and Experimental Metastasis Volume 27 ; 27 >
+    au < ready ; 1983 ; Clinical and Experimental Metastasis Volume 1 ; 1 >
+    au < ready ; 1984 ; Clinical and Experimental Metastasis Volume 2 ; 2 >
+    au < ready ; 1985 ; Clinical and Experimental Metastasis Volume 3 ; 3 >
+    au < ready ; 1986 ; Clinical and Experimental Metastasis Volume 4 ; 4 >
+    au < ready ; 1987 ; Clinical and Experimental Metastasis Volume 5 ; 5 >
+    au < ready ; 1988 ; Clinical and Experimental Metastasis Volume 6 ; 6 >
+    au < ready ; 1989 ; Clinical and Experimental Metastasis Volume 7 ; 7 >
+    au < ready ; 1990 ; Clinical and Experimental Metastasis Volume 8 ; 8 >
+    au < ready ; 1991 ; Clinical and Experimental Metastasis Volume 9 ; 9 >
+    au < ready ; 1992 ; Clinical and Experimental Metastasis Volume 10 ; 10 >
+    au < ready ; 1993 ; Clinical and Experimental Metastasis Volume 11 ; 11 >
+    au < ready ; 1994 ; Clinical and Experimental Metastasis Volume 12 ; 12 >
+    au < ready ; 1995 ; Clinical and Experimental Metastasis Volume 13 ; 13 >
+    au < ready ; 1996 ; Clinical and Experimental Metastasis Volume 14 ; 14 >
+    au < ready ; 1997 ; Clinical and Experimental Metastasis Volume 15 ; 15 >
+    au < ready ; 1998 ; Clinical and Experimental Metastasis Volume 16 ; 16 >
+    au < ready ; 1999 ; Clinical and Experimental Metastasis Volume 17 ; 17 >
+    au < ready ; 2000 ; Clinical and Experimental Metastasis Volume 18 ; 18 >
+    au < ready ; 2002 ; Clinical and Experimental Metastasis Volume 19 ; 19 >
+    au < ready ; 2003 ; Clinical and Experimental Metastasis Volume 20 ; 20 >
+    au < ready ; 2004 ; Clinical and Experimental Metastasis Volume 21 ; 21 >
+    au < ready ; 2005 ; Clinical and Experimental Metastasis Volume 22 ; 22 >
+    au < ready ; 2006 ; Clinical and Experimental Metastasis Volume 23 ; 23 >
+    au < ready ; 2007 ; Clinical and Experimental Metastasis Volume 24 ; 24 >
+    au < ready ; 2008 ; Clinical and Experimental Metastasis Volume 25 ; 25 >
+    au < ready ; 2009 ; Clinical and Experimental Metastasis Volume 26 ; 26 >
+    au < ready ; 2010 ; Clinical and Experimental Metastasis Volume 27 ; 27 >
 
   }
 
@@ -9713,10 +9876,37 @@
     title <
       name = European Journal of Epidemiology ;
       issn = 0393-2990 ;
-      placeholder = True
+      eissn = 1573-7284
     >
 
     param[journal_issn] = 0393-2990
+    attr[where] = content4b
+
+    au < testing ; 1985 ; European Journal of Epidemiology Volume 1 ; 1 >
+    au < testing ; 1986 ; European Journal of Epidemiology Volume 2 ; 2 >
+    au < testing ; 1987 ; European Journal of Epidemiology Volume 3 ; 3 >
+    au < testing ; 1988 ; European Journal of Epidemiology Volume 4 ; 4 >
+    au < testing ; 1989 ; European Journal of Epidemiology Volume 5 ; 5 >
+    au < testing ; 1990 ; European Journal of Epidemiology Volume 6 ; 6 >
+    au < testing ; 1991 ; European Journal of Epidemiology Volume 7 ; 7 >
+    au < testing ; 1992 ; European Journal of Epidemiology Volume 8 ; 8 >
+    au < testing ; 1993 ; European Journal of Epidemiology Volume 9 ; 9 >
+    au < testing ; 1994 ; European Journal of Epidemiology Volume 10 ; 10 >
+    au < testing ; 1995 ; European Journal of Epidemiology Volume 11 ; 11 >
+    au < testing ; 1996 ; European Journal of Epidemiology Volume 12 ; 12 >
+    au < testing ; 1997 ; European Journal of Epidemiology Volume 13 ; 13 >
+    au < testing ; 1998 ; European Journal of Epidemiology Volume 14 ; 14 >
+    au < testing ; 1999 ; European Journal of Epidemiology Volume 15 ; 15 >
+    au < testing ; 2000 ; European Journal of Epidemiology Volume 16 ; 16 >
+    au < testing ; 2001 ; European Journal of Epidemiology Volume 17 ; 17 >
+    au < testing ; 2003 ; European Journal of Epidemiology Volume 18 ; 18 >
+    au < testing ; 2004 ; European Journal of Epidemiology Volume 19 ; 19 >
+    au < testing ; 2005 ; European Journal of Epidemiology Volume 20 ; 20 >
+    au < testing ; 2006 ; European Journal of Epidemiology Volume 21 ; 21 >
+    au < testing ; 2007 ; European Journal of Epidemiology Volume 22 ; 22 >
+    au < testing ; 2008 ; European Journal of Epidemiology Volume 23 ; 23 >
+    au < testing ; 2009 ; European Journal of Epidemiology Volume 24 ; 24 >
+    au < testing ; 2010 ; European Journal of Epidemiology Volume 25 ; 25 >
 
   }
 
@@ -11248,18 +11438,17 @@
     >
 
     param[journal_issn] = 1438-793X
-    attr[where] = content5b
 
-    au < testing ; 2000 ; Functional & Integrative Genomics Volume 1 ; 1 >
-    au < testing ; 2002 ; Functional & Integrative Genomics Volume 2 ; 2 >
-    au < testing ; 2003 ; Functional & Integrative Genomics Volume 3 ; 3 >
-    au < testing ; 2004 ; Functional & Integrative Genomics Volume 4 ; 4 >
-    au < testing ; 2005 ; Functional & Integrative Genomics Volume 5 ; 5 >
-    au < testing ; 2006 ; Functional & Integrative Genomics Volume 6 ; 6 >
-    au < testing ; 2007 ; Functional & Integrative Genomics Volume 7 ; 7 >
-    au < testing ; 2008 ; Functional & Integrative Genomics Volume 8 ; 8 >
-    au < testing ; 2009 ; Functional & Integrative Genomics Volume 9 ; 9 >
-    au < testing ; 2010 ; Functional & Integrative Genomics Volume 10 ; 10 >
+    au < ready ; 2000 ; Functional & Integrative Genomics Volume 1 ; 1 >
+    au < ready ; 2002 ; Functional & Integrative Genomics Volume 2 ; 2 >
+    au < ready ; 2003 ; Functional & Integrative Genomics Volume 3 ; 3 >
+    au < ready ; 2004 ; Functional & Integrative Genomics Volume 4 ; 4 >
+    au < ready ; 2005 ; Functional & Integrative Genomics Volume 5 ; 5 >
+    au < ready ; 2006 ; Functional & Integrative Genomics Volume 6 ; 6 >
+    au < ready ; 2007 ; Functional & Integrative Genomics Volume 7 ; 7 >
+    au < ready ; 2008 ; Functional & Integrative Genomics Volume 8 ; 8 >
+    au < ready ; 2009 ; Functional & Integrative Genomics Volume 9 ; 9 >
+    au < ready ; 2010 ; Functional & Integrative Genomics Volume 10 ; 10 >
 
   }
 
@@ -11292,10 +11481,18 @@
     title <
       name = Fungal Diversity ;
       issn = 1560-2745 ;
-      placeholder = True
+      eissn = 1878-9129
     >
 
     param[journal_issn] = 1560-2745
+    attr[where] = content1a
+
+    au < testing ; 2010 ; Fungal Diversity Volume 40 ; 40 >
+    au < testing ; 2010 ; Fungal Diversity Volume 41 ; 41 >
+    au < testing ; 2010 ; Fungal Diversity Volume 42 ; 42 >
+    au < testing ; 2010 ; Fungal Diversity Volume 43 ; 43 >
+    au < testing ; 2010 ; Fungal Diversity Volume 44 ; 44 >
+    au < testing ; 2010 ; Fungal Diversity Volume 45 ; 45 >
 
   }
 
@@ -12592,36 +12789,36 @@
     au < ready ; 1975 ; Human Genetics Volume 27 ; 27 >
     au < ready ; 1975 ; Human Genetics Volume 28 ; 28 >
     au < ready ; 1975 ; Human Genetics Volume 29 ; 29 >
-    au < testing ; 1975 ; Human Genetics Volume 30 ; 30 >
-    au < testing ; 1976 ; Human Genetics Volume 31 ; 31 >
-    au < testing ; 1976 ; Human Genetics Volume 32 ; 32 >
-    au < testing ; 1976 ; Human Genetics Volume 33 ; 33 >
-    au < testing ; 1976 ; Human Genetics Volume 34 ; 34 >
-    au < testing ; 1976-1977 ; Human Genetics Volume 35 ; 35 >
-    au < testing ; 1977 ; Human Genetics Volume 36 ; 36 >
-    au < testing ; 1977 ; Human Genetics Volume 37 ; 37 >
-    au < testing ; 1977 ; Human Genetics Volume 38 ; 38 >
-    au < testing ; 1977 ; Human Genetics Volume 39 ; 39 >
-    au < testing ; 1977-1978 ; Human Genetics Volume 40 ; 40 >
-    au < testing ; 1978 ; Human Genetics Volume 41 ; 41 >
-    au < testing ; 1978 ; Human Genetics Volume 42 ; 42 >
-    au < testing ; 1978 ; Human Genetics Volume 43 ; 43 >
-    au < testing ; 1978 ; Human Genetics Volume 44 ; 44 >
-    au < testing ; 1978 ; Human Genetics Volume 45 ; 45 >
-    au < testing ; 1979 ; Human Genetics Volume 46 ; 46 >
-    au < testing ; 1979 ; Human Genetics Volume 47 ; 47 >
-    au < testing ; 1979 ; Human Genetics Volume 48 ; 48 >
-    au < testing ; 1979 ; Human Genetics Volume 49 ; 49 >
-    au < testing ; 1979 ; Human Genetics Volume 50 ; 50 >
-    au < testing ; 1979 ; Human Genetics Volume 51 ; 51 >
-    au < testing ; 1979 ; Human Genetics Volume 52 ; 52 >
-    au < testing ; 1979-1980 ; Human Genetics Volume 53 ; 53 >
-    au < testing ; 1980 ; Human Genetics Volume 54 ; 54 >
-    au < testing ; 1980 ; Human Genetics Volume 55 ; 55 >
-    au < testing ; 1980-1981 ; Human Genetics Volume 56 ; 56 >
-    au < testing ; 1981 ; Human Genetics Volume 57 ; 57 >
-    au < testing ; 1981 ; Human Genetics Volume 58 ; 58 >
-    au < testing ; 1981 ; Human Genetics Volume 59 ; 59 >
+    au < ready ; 1975 ; Human Genetics Volume 30 ; 30 >
+    au < ready ; 1976 ; Human Genetics Volume 31 ; 31 >
+    au < ready ; 1976 ; Human Genetics Volume 32 ; 32 >
+    au < ready ; 1976 ; Human Genetics Volume 33 ; 33 >
+    au < ready ; 1976 ; Human Genetics Volume 34 ; 34 >
+    au < ready ; 1976-1977 ; Human Genetics Volume 35 ; 35 >
+    au < ready ; 1977 ; Human Genetics Volume 36 ; 36 >
+    au < ready ; 1977 ; Human Genetics Volume 37 ; 37 >
+    au < ready ; 1977 ; Human Genetics Volume 38 ; 38 >
+    au < ready ; 1977 ; Human Genetics Volume 39 ; 39 >
+    au < ready ; 1977-1978 ; Human Genetics Volume 40 ; 40 >
+    au < ready ; 1978 ; Human Genetics Volume 41 ; 41 >
+    au < ready ; 1978 ; Human Genetics Volume 42 ; 42 >
+    au < ready ; 1978 ; Human Genetics Volume 43 ; 43 >
+    au < ready ; 1978 ; Human Genetics Volume 44 ; 44 >
+    au < ready ; 1978 ; Human Genetics Volume 45 ; 45 >
+    au < ready ; 1979 ; Human Genetics Volume 46 ; 46 >
+    au < ready ; 1979 ; Human Genetics Volume 47 ; 47 >
+    au < ready ; 1979 ; Human Genetics Volume 48 ; 48 >
+    au < ready ; 1979 ; Human Genetics Volume 49 ; 49 >
+    au < ready ; 1979 ; Human Genetics Volume 50 ; 50 >
+    au < ready ; 1979 ; Human Genetics Volume 51 ; 51 >
+    au < ready ; 1979 ; Human Genetics Volume 52 ; 52 >
+    au < ready ; 1979-1980 ; Human Genetics Volume 53 ; 53 >
+    au < ready ; 1980 ; Human Genetics Volume 54 ; 54 >
+    au < ready ; 1980 ; Human Genetics Volume 55 ; 55 >
+    au < ready ; 1980-1981 ; Human Genetics Volume 56 ; 56 >
+    au < ready ; 1981 ; Human Genetics Volume 57 ; 57 >
+    au < ready ; 1981 ; Human Genetics Volume 58 ; 58 >
+    au < ready ; 1981 ; Human Genetics Volume 59 ; 59 >
     au < manifest ; 1982 ; Human Genetics Volume 60 ; 60 >
     au < manifest ; 1982 ; Human Genetics Volume 61 ; 61 >
     au < manifest ; 1982 ; Human Genetics Volume 62 ; 62 >
@@ -16583,32 +16780,31 @@
 
     param[journal_issn] = 0920-654X
     comment[merged_from] = 0928-2866
-    attr[where] = content4b
 
-    au < testing ; 1987-1988 ; Journal of Computer-Aided Molecular Design Volume 1 ; 1 >
-    au < testing ; 1988-1989 ; Journal of Computer-Aided Molecular Design Volume 2 ; 2 >
-    au < testing ; 1989 ; Journal of Computer-Aided Molecular Design Volume 3 ; 3 >
-    au < testing ; 1990 ; Journal of Computer-Aided Molecular Design Volume 4 ; 4 >
-    au < testing ; 1991 ; Journal of Computer-Aided Molecular Design Volume 5 ; 5 >
-    au < testing ; 1992 ; Journal of Computer-Aided Molecular Design Volume 6 ; 6 >
-    au < testing ; 1993 ; Journal of Computer-Aided Molecular Design Volume 7 ; 7 >
-    au < testing ; 1994 ; Journal of Computer-Aided Molecular Design Volume 8 ; 8 >
-    au < testing ; 1995 ; Journal of Computer-Aided Molecular Design Volume 9 ; 9 >
-    au < testing ; 1996 ; Journal of Computer-Aided Molecular Design Volume 10 ; 10 >
-    au < testing ; 1997 ; Journal of Computer-Aided Molecular Design Volume 11 ; 11 >
-    au < testing ; 1998 ; Journal of Computer-Aided Molecular Design Volume 12 ; 12 >
-    au < testing ; 1999 ; Journal of Computer-Aided Molecular Design Volume 13 ; 13 >
-    au < testing ; 2000 ; Journal of Computer-Aided Molecular Design Volume 14 ; 14 >
-    au < testing ; 2001 ; Journal of Computer-Aided Molecular Design Volume 15 ; 15 >
-    au < testing ; 2002 ; Journal of Computer-Aided Molecular Design Volume 16 ; 16 >
-    au < testing ; 2003 ; Journal of Computer-Aided Molecular Design Volume 17 ; 17 >
-    au < testing ; 2004 ; Journal of Computer-Aided Molecular Design Volume 18 ; 18 >
-    au < testing ; 2005 ; Journal of Computer-Aided Molecular Design Volume 19 ; 19 >
-    au < testing ; 2006 ; Journal of Computer-Aided Molecular Design Volume 20 ; 20 >
-    au < testing ; 2007 ; Journal of Computer-Aided Molecular Design Volume 21 ; 21 >
-    au < testing ; 2008 ; Journal of Computer-Aided Molecular Design Volume 22 ; 22 >
-    au < testing ; 2009 ; Journal of Computer-Aided Molecular Design Volume 23 ; 23 >
-    au < testing ; 2010 ; Journal of Computer-Aided Molecular Design Volume 24 ; 24 >
+    au < ready ; 1987-1988 ; Journal of Computer-Aided Molecular Design Volume 1 ; 1 >
+    au < ready ; 1988-1989 ; Journal of Computer-Aided Molecular Design Volume 2 ; 2 >
+    au < ready ; 1989 ; Journal of Computer-Aided Molecular Design Volume 3 ; 3 >
+    au < ready ; 1990 ; Journal of Computer-Aided Molecular Design Volume 4 ; 4 >
+    au < ready ; 1991 ; Journal of Computer-Aided Molecular Design Volume 5 ; 5 >
+    au < ready ; 1992 ; Journal of Computer-Aided Molecular Design Volume 6 ; 6 >
+    au < ready ; 1993 ; Journal of Computer-Aided Molecular Design Volume 7 ; 7 >
+    au < ready ; 1994 ; Journal of Computer-Aided Molecular Design Volume 8 ; 8 >
+    au < ready ; 1995 ; Journal of Computer-Aided Molecular Design Volume 9 ; 9 >
+    au < ready ; 1996 ; Journal of Computer-Aided Molecular Design Volume 10 ; 10 >
+    au < ready ; 1997 ; Journal of Computer-Aided Molecular Design Volume 11 ; 11 >
+    au < ready ; 1998 ; Journal of Computer-Aided Molecular Design Volume 12 ; 12 >
+    au < ready ; 1999 ; Journal of Computer-Aided Molecular Design Volume 13 ; 13 >
+    au < ready ; 2000 ; Journal of Computer-Aided Molecular Design Volume 14 ; 14 >
+    au < ready ; 2001 ; Journal of Computer-Aided Molecular Design Volume 15 ; 15 >
+    au < ready ; 2002 ; Journal of Computer-Aided Molecular Design Volume 16 ; 16 >
+    au < ready ; 2003 ; Journal of Computer-Aided Molecular Design Volume 17 ; 17 >
+    au < ready ; 2004 ; Journal of Computer-Aided Molecular Design Volume 18 ; 18 >
+    au < ready ; 2005 ; Journal of Computer-Aided Molecular Design Volume 19 ; 19 >
+    au < ready ; 2006 ; Journal of Computer-Aided Molecular Design Volume 20 ; 20 >
+    au < ready ; 2007 ; Journal of Computer-Aided Molecular Design Volume 21 ; 21 >
+    au < ready ; 2008 ; Journal of Computer-Aided Molecular Design Volume 22 ; 22 >
+    au < ready ; 2009 ; Journal of Computer-Aided Molecular Design Volume 23 ; 23 >
+    au < ready ; 2010 ; Journal of Computer-Aided Molecular Design Volume 24 ; 24 >
 
   }
 
@@ -21663,10 +21859,211 @@
     title <
       name = Medical Microbiology and Immunology ;
       issn = 0300-8584 ;
-      placeholder = True
+      eissn = 1432-1831
     >
 
     param[journal_issn] = 0300-8584
+    attr[where] = content2b
+
+    au < manifest ; 1886 ; Medical Microbiology and Immunology Volume 1 ; 1 >
+    au < manifest ; 1887 ; Medical Microbiology and Immunology Volume 2 ; 2 >
+    au < manifest ; 1888 ; Medical Microbiology and Immunology Volume 3 ; 3 >
+    au < manifest ; 1888 ; Medical Microbiology and Immunology Volume 4 ; 4 >
+    au < manifest ; 1889 ; Medical Microbiology and Immunology Volume 5 ; 5 >
+    au < manifest ; 1889 ; Medical Microbiology and Immunology Volume 6 ; 6 >
+    au < manifest ; 1889 ; Medical Microbiology and Immunology Volume 7 ; 7 >
+    au < manifest ; 1890 ; Medical Microbiology and Immunology Volume 8 ; 8 >
+    au < manifest ; 1890 ; Medical Microbiology and Immunology Volume 9 ; 9 >
+    au < manifest ; 1891 ; Medical Microbiology and Immunology Volume 10 ; 10 >
+    au < manifest ; 1892 ; Medical Microbiology and Immunology Volume 11 ; 11 >
+    au < manifest ; 1892 ; Medical Microbiology and Immunology Volume 12 ; 12 >
+    au < manifest ; 1893 ; Medical Microbiology and Immunology Volume 13 ; 13 >
+    au < manifest ; 1893 ; Medical Microbiology and Immunology Volume 14 ; 14 >
+    au < manifest ; 1893 ; Medical Microbiology and Immunology Volume 15 ; 15 >
+    au < manifest ; 1894 ; Medical Microbiology and Immunology Volume 16 ; 16 >
+    au < manifest ; 1894 ; Medical Microbiology and Immunology Volume 17 ; 17 >
+    au < manifest ; 1894 ; Medical Microbiology and Immunology Volume 18 ; 18 >
+    au < manifest ; 1895 ; Medical Microbiology and Immunology Volume 19 ; 19 >
+    au < manifest ; 1895 ; Medical Microbiology and Immunology Volume 20 ; 20 >
+    au < manifest ; 1896 ; Medical Microbiology and Immunology Volume 21 ; 21 >
+    au < manifest ; 1896 ; Medical Microbiology and Immunology Volume 22 ; 22 >
+    au < manifest ; 1896 ; Medical Microbiology and Immunology Volume 23 ; 23 >
+    au < manifest ; 1897 ; Medical Microbiology and Immunology Volume 24 ; 24 >
+    au < manifest ; 1897 ; Medical Microbiology and Immunology Volume 25 ; 25 >
+    au < manifest ; 1897 ; Medical Microbiology and Immunology Volume 26 ; 26 >
+    au < manifest ; 1898 ; Medical Microbiology and Immunology Volume 27 ; 27 >
+    au < manifest ; 1898 ; Medical Microbiology and Immunology Volume 28 ; 28 >
+    au < manifest ; 1898 ; Medical Microbiology and Immunology Volume 29 ; 29 >
+    au < manifest ; 1899 ; Medical Microbiology and Immunology Volume 30 ; 30 >
+    au < manifest ; 1899 ; Medical Microbiology and Immunology Volume 31 ; 31 >
+    au < manifest ; 1899 ; Medical Microbiology and Immunology Volume 32 ; 32 >
+    au < manifest ; 1900 ; Medical Microbiology and Immunology Volume 33 ; 33 >
+    au < manifest ; 1900 ; Medical Microbiology and Immunology Volume 34 ; 34 >
+    au < manifest ; 1900 ; Medical Microbiology and Immunology Volume 35 ; 35 >
+    au < manifest ; 1901 ; Medical Microbiology and Immunology Volume 36 ; 36 >
+    au < manifest ; 1901 ; Medical Microbiology and Immunology Volume 37 ; 37 >
+    au < manifest ; 1901 ; Medical Microbiology and Immunology Volume 38 ; 38 >
+    au < manifest ; 1902 ; Medical Microbiology and Immunology Volume 39 ; 39 >
+    au < manifest ; 1902 ; Medical Microbiology and Immunology Volume 40 ; 40 >
+    au < manifest ; 1902 ; Medical Microbiology and Immunology Volume 41 ; 41 >
+    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 42 ; 42 >
+    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 43 ; 43 >
+    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 44 ; 44 >
+    au < manifest ; 1903 ; Medical Microbiology and Immunology Volume 45 ; 45 >
+    au < manifest ; 1904 ; Medical Microbiology and Immunology Volume 46 ; 46 >
+    au < manifest ; 1904 ; Medical Microbiology and Immunology Volume 47 ; 47 >
+    au < manifest ; 1904 ; Medical Microbiology and Immunology Volume 48 ; 48 >
+    au < manifest ; 1905 ; Medical Microbiology and Immunology Volume 49 ; 49 >
+    au < manifest ; 1905 ; Medical Microbiology and Immunology Volume 50 ; 50 >
+    au < manifest ; 1905 ; Medical Microbiology and Immunology Volume 51 ; 51 >
+    au < manifest ; 1906 ; Medical Microbiology and Immunology Volume 52 ; 52 >
+    au < manifest ; 1906 ; Medical Microbiology and Immunology Volume 53 ; 53 >
+    au < manifest ; 1906 ; Medical Microbiology and Immunology Volume 54 ; 54 >
+    au < manifest ; 1906 ; Medical Microbiology and Immunology Volume 55 ; 55 >
+    au < manifest ; 1907 ; Medical Microbiology and Immunology Volume 56 ; 56 >
+    au < manifest ; 1907 ; Medical Microbiology and Immunology Volume 57 ; 57 >
+    au < manifest ; 1908 ; Medical Microbiology and Immunology Volume 58 ; 58 >
+    au < manifest ; 1908 ; Medical Microbiology and Immunology Volume 59 ; 59 >
+    au < manifest ; 1908 ; Medical Microbiology and Immunology Volume 60 ; 60 >
+    au < manifest ; 1908 ; Medical Microbiology and Immunology Volume 61 ; 61 >
+    au < manifest ; 1909 ; Medical Microbiology and Immunology Volume 62 ; 62 >
+    au < manifest ; 1909 ; Medical Microbiology and Immunology Volume 63 ; 63 >
+    au < manifest ; 1909 ; Medical Microbiology and Immunology Volume 64 ; 64 >
+    au < manifest ; 1910 ; Medical Microbiology and Immunology Volume 65 ; 65 >
+    au < manifest ; 1910 ; Medical Microbiology and Immunology Volume 66 ; 66 >
+    au < manifest ; 1910 ; Medical Microbiology and Immunology Volume 67 ; 67 >
+    au < manifest ; 1911 ; Medical Microbiology and Immunology Volume 68 ; 68 >
+    au < manifest ; 1911 ; Medical Microbiology and Immunology Volume 69 ; 69 >
+    au < manifest ; 1912 ; Medical Microbiology and Immunology Volume 70 ; 70 >
+    au < manifest ; 1912 ; Medical Microbiology and Immunology Volume 71 ; 71 >
+    au < manifest ; 1912 ; Medical Microbiology and Immunology Volume 72 ; 72 >
+    au < manifest ; 1912 ; Medical Microbiology and Immunology Volume 73 ; 73 >
+    au < manifest ; 1913 ; Medical Microbiology and Immunology Volume 74 ; 74 >
+    au < manifest ; 1913 ; Medical Microbiology and Immunology Volume 75 ; 75 >
+    au < manifest ; 1914 ; Medical Microbiology and Immunology Volume 76 ; 76 >
+    au < manifest ; 1914 ; Medical Microbiology and Immunology Volume 77 ; 77 >
+    au < manifest ; 1914 ; Medical Microbiology and Immunology Volume 78 ; 78 >
+    au < manifest ; 1914-1915 ; Medical Microbiology and Immunology Volume 79 ; 79 >
+    au < manifest ; 1915 ; Medical Microbiology and Immunology Volume 80 ; 80 >
+    au < manifest ; 1916 ; Medical Microbiology and Immunology Volume 81 ; 81 >
+    au < manifest ; 1916 ; Medical Microbiology and Immunology Volume 82 ; 82 >
+    au < manifest ; 1917 ; Medical Microbiology and Immunology Volume 83 ; 83 >
+    au < manifest ; 1917 ; Medical Microbiology and Immunology Volume 84 ; 84 >
+    au < manifest ; 1918 ; Medical Microbiology and Immunology Volume 85 ; 85 >
+    au < manifest ; 1918 ; Medical Microbiology and Immunology Volume 86 ; 86 >
+    au < manifest ; 1918 ; Medical Microbiology and Immunology Volume 87 ; 87 >
+    au < manifest ; 1919 ; Medical Microbiology and Immunology Volume 88 ; 88 >
+    au < manifest ; 1919 ; Medical Microbiology and Immunology Volume 89 ; 89 >
+    au < manifest ; 1920 ; Medical Microbiology and Immunology Volume 90 ; 90 >
+    au < manifest ; 1920-1921 ; Medical Microbiology and Immunology Volume 91 ; 91 >
+    au < manifest ; 1921 ; Medical Microbiology and Immunology Volume 92 ; 92 >
+    au < manifest ; 1921 ; Medical Microbiology and Immunology Volume 93 ; 93 >
+    au < manifest ; 1921 ; Medical Microbiology and Immunology Volume 94 ; 94 >
+    au < manifest ; 1922 ; Medical Microbiology and Immunology Volume 95 ; 95 >
+    au < manifest ; 1922 ; Medical Microbiology and Immunology Volume 96 ; 96 >
+    au < manifest ; 1922-1923 ; Medical Microbiology and Immunology Volume 97 ; 97 >
+    au < manifest ; 1922 ; Medical Microbiology and Immunology Volume 98 ; 98 >
+    au < manifest ; 1923 ; Medical Microbiology and Immunology Volume 99 ; 99 >
+    au < manifest ; 1923 ; Medical Microbiology and Immunology Volume 100 ; 100 >
+    au < manifest ; 1923-1924 ; Medical Microbiology and Immunology Volume 101 ; 101 >
+    au < manifest ; 1924 ; Medical Microbiology and Immunology Volume 102 ; 102 >
+    au < manifest ; 1924 ; Medical Microbiology and Immunology Volume 103 ; 103 >
+    au < manifest ; 1925 ; Medical Microbiology and Immunology Volume 104 ; 104 >
+    au < manifest ; 1925-1926 ; Medical Microbiology and Immunology Volume 105 ; 105 >
+    au < manifest ; 1926 ; Medical Microbiology and Immunology Volume 106 ; 106 >
+    au < manifest ; 1927 ; Medical Microbiology and Immunology Volume 107 ; 107 >
+    au < manifest ; 1927-1928 ; Medical Microbiology and Immunology Volume 108 ; 108 >
+    au < manifest ; 1928-1929 ; Medical Microbiology and Immunology Volume 109 ; 109 >
+    au < manifest ; 1929 ; Medical Microbiology and Immunology Volume 110 ; 110 >
+    au < manifest ; 1930 ; Medical Microbiology and Immunology Volume 111 ; 111 >
+    au < manifest ; 1931 ; Medical Microbiology and Immunology Volume 112 ; 112 >
+    au < manifest ; 1931-1932 ; Medical Microbiology and Immunology Volume 113 ; 113 >
+    au < manifest ; 1932-1933 ; Medical Microbiology and Immunology Volume 114 ; 114 >
+    au < manifest ; 1933 ; Medical Microbiology and Immunology Volume 115 ; 115 >
+    au < manifest ; 1934-1935 ; Medical Microbiology and Immunology Volume 116 ; 116 >
+    au < manifest ; 1935-1936 ; Medical Microbiology and Immunology Volume 117 ; 117 >
+    au < manifest ; 1936 ; Medical Microbiology and Immunology Volume 118 ; 118 >
+    au < manifest ; 1936-1937 ; Medical Microbiology and Immunology Volume 119 ; 119 >
+    au < manifest ; 1937-1938 ; Medical Microbiology and Immunology Volume 120 ; 120 >
+    au < manifest ; 1938-1939 ; Medical Microbiology and Immunology Volume 121 ; 121 >
+    au < manifest ; 1939-1940 ; Medical Microbiology and Immunology Volume 122 ; 122 >
+    au < manifest ; 1940-1942 ; Medical Microbiology and Immunology Volume 123 ; 123 >
+    au < manifest ; 1942-1943 ; Medical Microbiology and Immunology Volume 124 ; 124 >
+    au < manifest ; 1943-1944 ; Medical Microbiology and Immunology Volume 125 ; 125 >
+    au < manifest ; 1944 ; Medical Microbiology and Immunology Volume 126 ; 126 >
+    au < manifest ; 1947-1948 ; Medical Microbiology and Immunology Volume 127 ; 127 >
+    au < manifest ; 1948 ; Medical Microbiology and Immunology Volume 128 ; 128 >
+    au < manifest ; 1949 ; Medical Microbiology and Immunology Volume 129 ; 129 >
+    au < manifest ; 1949-1950 ; Medical Microbiology and Immunology Volume 130 ; 130 >
+    au < manifest ; 1950 ; Medical Microbiology and Immunology Volume 131 ; 131 >
+    au < manifest ; 1950-1951 ; Medical Microbiology and Immunology Volume 132 ; 132 >
+    au < manifest ; 1951-1952 ; Medical Microbiology and Immunology Volume 133 ; 133 >
+    au < manifest ; 1952 ; Medical Microbiology and Immunology Volume 134 ; 134 >
+    au < manifest ; 1952 ; Medical Microbiology and Immunology Volume 135 ; 135 >
+    au < manifest ; 1952-1953 ; Medical Microbiology and Immunology Volume 136 ; 136 >
+    au < manifest ; 1953 ; Medical Microbiology and Immunology Volume 137 ; 137 >
+    au < manifest ; 1953-1954 ; Medical Microbiology and Immunology Volume 138 ; 138 >
+    au < manifest ; 1954 ; Medical Microbiology and Immunology Volume 139 ; 139 >
+    au < manifest ; 1954-1955 ; Medical Microbiology and Immunology Volume 140 ; 140 >
+    au < manifest ; 1955 ; Medical Microbiology and Immunology Volume 141 ; 141 >
+    au < manifest ; 1955-1956 ; Medical Microbiology and Immunology Volume 142 ; 142 >
+    au < manifest ; 1956-1957 ; Medical Microbiology and Immunology Volume 143 ; 143 >
+    au < manifest ; 1957-1958 ; Medical Microbiology and Immunology Volume 144 ; 144 >
+    au < manifest ; 1958-1959 ; Medical Microbiology and Immunology Volume 145 ; 145 >
+    au < manifest ; 1959-1960 ; Medical Microbiology and Immunology Volume 146 ; 146 >
+    au < manifest ; 1960-1961 ; Medical Microbiology and Immunology Volume 147 ; 147 >
+    au < manifest ; 1961-1962 ; Medical Microbiology and Immunology Volume 148 ; 148 >
+    au < manifest ; 1962-1964 ; Medical Microbiology and Immunology Volume 149 ; 149 >
+    au < manifest ; 1964-1965 ; Medical Microbiology and Immunology Volume 150 ; 150 >
+    au < testing ; 1965 ; Medical Microbiology and Immunology Volume 151 ; 151 >
+    au < testing ; 1966 ; Medical Microbiology and Immunology Volume 152 ; 152 >
+    au < testing ; 1966-1967 ; Medical Microbiology and Immunology Volume 153 ; 153 >
+    au < testing ; 1968-1969 ; Medical Microbiology and Immunology Volume 154 ; 154 >
+    au < testing ; 1969-1970 ; Medical Microbiology and Immunology Volume 155 ; 155 >
+    au < testing ; 1970-1971 ; Medical Microbiology and Immunology Volume 156 ; 156 >
+    au < testing ; 1971-1972 ; Medical Microbiology and Immunology Volume 157 ; 157 >
+    au < testing ; 1972-1973 ; Medical Microbiology and Immunology Volume 158 ; 158 >
+    au < testing ; 1973-1974 ; Medical Microbiology and Immunology Volume 159 ; 159 >
+    au < testing ; 1974 ; Medical Microbiology and Immunology Volume 160 ; 160 >
+    au < testing ; 1975 ; Medical Microbiology and Immunology Volume 161 ; 161 >
+    au < testing ; 1975-1976 ; Medical Microbiology and Immunology Volume 162 ; 162 >
+    au < testing ; 1977 ; Medical Microbiology and Immunology Volume 163 ; 163 >
+    au < testing ; 1977-1978 ; Medical Microbiology and Immunology Volume 164 ; 164 >
+    au < testing ; 1978-1979 ; Medical Microbiology and Immunology Volume 165 ; 165 >
+    au < testing ; 1978 ; Medical Microbiology and Immunology Volume 166 ; 166 >
+    au < testing ; 1979 ; Medical Microbiology and Immunology Volume 167 ; 167 >
+    au < testing ; 1980 ; Medical Microbiology and Immunology Volume 168 ; 168 >
+    au < testing ; 1980-1981 ; Medical Microbiology and Immunology Volume 169 ; 169 >
+    au < testing ; 1981-1982 ; Medical Microbiology and Immunology Volume 170 ; 170 >
+    au < testing ; 1982-1983 ; Medical Microbiology and Immunology Volume 171 ; 171 >
+    au < testing ; 1983-1984 ; Medical Microbiology and Immunology Volume 172 ; 172 >
+    au < testing ; 1984-1985 ; Medical Microbiology and Immunology Volume 173 ; 173 >
+    au < testing ; 1985-1986 ; Medical Microbiology and Immunology Volume 174 ; 174 >
+    au < testing ; 1986 ; Medical Microbiology and Immunology Volume 175 ; 175 >
+    au < testing ; 1987 ; Medical Microbiology and Immunology Volume 176 ; 176 >
+    au < testing ; 1987-1988 ; Medical Microbiology and Immunology Volume 177 ; 177 >
+    au < testing ; 1989 ; Medical Microbiology and Immunology Volume 178 ; 178 >
+    au < testing ; 1990 ; Medical Microbiology and Immunology Volume 179 ; 179 >
+    au < testing ; 1991-1992 ; Medical Microbiology and Immunology Volume 180 ; 180 >
+    au < testing ; 1992 ; Medical Microbiology and Immunology Volume 181 ; 181 >
+    au < testing ; 1993 ; Medical Microbiology and Immunology Volume 182 ; 182 >
+    au < testing ; 1994 ; Medical Microbiology and Immunology Volume 183 ; 183 >
+    au < testing ; 1995-1996 ; Medical Microbiology and Immunology Volume 184 ; 184 >
+    au < testing ; 1996-1997 ; Medical Microbiology and Immunology Volume 185 ; 185 >
+    au < testing ; 1997 ; Medical Microbiology and Immunology Volume 186 ; 186 >
+    au < testing ; 1998 ; Medical Microbiology and Immunology Volume 187 ; 187 >
+    au < testing ; 1999 ; Medical Microbiology and Immunology Volume 188 ; 188 >
+    au < testing ; 2000 ; Medical Microbiology and Immunology Volume 189 ; 189 >
+    au < testing ; 2001 ; Medical Microbiology and Immunology Volume 190 ; 190 >
+    au < testing ; 2002 ; Medical Microbiology and Immunology Volume 191 ; 191 >
+    au < testing ; 2003 ; Medical Microbiology and Immunology Volume 192 ; 192 >
+    au < testing ; 2004 ; Medical Microbiology and Immunology Volume 193 ; 193 >
+    au < testing ; 2005 ; Medical Microbiology and Immunology Volume 194 ; 194 >
+    au < testing ; 2006 ; Medical Microbiology and Immunology Volume 195 ; 195 >
+    au < testing ; 2007 ; Medical Microbiology and Immunology Volume 196 ; 196 >
+    au < testing ; 2008 ; Medical Microbiology and Immunology Volume 197 ; 197 >
+    au < testing ; 2009 ; Medical Microbiology and Immunology Volume 198 ; 198 >
+    au < testing ; 2010 ; Medical Microbiology and Immunology Volume 199 ; 199 >
 
   }
 
@@ -24546,21 +24943,20 @@
 
     param[journal_issn] = 0928-2866
     comment[merged_into] = 0920-654X
-    attr[where] = content4b
 
-    au < testing ; 1993-1994 ; Perspectives in Drug Discovery and Design Volume 1 ; 1 >
-    au < testing ; 1994-1995 ; Perspectives in Drug Discovery and Design Volume 2 ; 2 >
-    au < testing ; 1995 ; Perspectives in Drug Discovery and Design Volume 3 ; 3 >
-    au < testing ; 1996 ; Perspectives in Drug Discovery and Design Volume 4 ; 4 >
-    au < testing ; 1996 ; Perspectives in Drug Discovery and Design Volume 5 ; 5 >
-    au < testing ; 1996 ; Perspectives in Drug Discovery and Design Volume 6 ; 6 >
-    au < testing ; 1998 ; Perspectives in Drug Discovery and Design Volume 9-11 ; 9-11 >
-    au < testing ; 1998 ; Perspectives in Drug Discovery and Design Volume 12-14 ; 12-14 >
-    au < testing ; 1999 ; Perspectives in Drug Discovery and Design Volume 15-16 ; 15-16 >
-    au < testing ; 1999 ; Perspectives in Drug Discovery and Design Volume 17 ; 17 >
-    au < testing ; 2000 ; Perspectives in Drug Discovery and Design Volume 18 ; 18 >
-    au < testing ; 2000 ; Perspectives in Drug Discovery and Design Volume 19 ; 19 >
-    au < testing ; 2000 ; Perspectives in Drug Discovery and Design Volume 20 ; 20 >
+    au < ready ; 1993-1994 ; Perspectives in Drug Discovery and Design Volume 1 ; 1 >
+    au < ready ; 1994-1995 ; Perspectives in Drug Discovery and Design Volume 2 ; 2 >
+    au < ready ; 1995 ; Perspectives in Drug Discovery and Design Volume 3 ; 3 >
+    au < ready ; 1996 ; Perspectives in Drug Discovery and Design Volume 4 ; 4 >
+    au < ready ; 1996 ; Perspectives in Drug Discovery and Design Volume 5 ; 5 >
+    au < ready ; 1996 ; Perspectives in Drug Discovery and Design Volume 6 ; 6 >
+    au < ready ; 1998 ; Perspectives in Drug Discovery and Design Volume 9-11 ; 9-11 >
+    au < ready ; 1998 ; Perspectives in Drug Discovery and Design Volume 12-14 ; 12-14 >
+    au < ready ; 1999 ; Perspectives in Drug Discovery and Design Volume 15-16 ; 15-16 >
+    au < ready ; 1999 ; Perspectives in Drug Discovery and Design Volume 17 ; 17 >
+    au < ready ; 2000 ; Perspectives in Drug Discovery and Design Volume 18 ; 18 >
+    au < ready ; 2000 ; Perspectives in Drug Discovery and Design Volume 19 ; 19 >
+    au < ready ; 2000 ; Perspectives in Drug Discovery and Design Volume 20 ; 20 >
 
   }
 
@@ -24605,13 +25001,475 @@
     title <
       name = Pflügers Archiv European Journal of Physiology ;
       issn = 0031-6768 ;
-      placeholder = True
+      eissn = 1432-2013
     >
 
     param[journal_issn] = 0031-6768
+    attr[where] = content6a
+
+    au < manifest ; 1868 ; Pflügers Archiv European Journal of Physiology Volume 1 ; 1 >
+    au < manifest ; 1869 ; Pflügers Archiv European Journal of Physiology Volume 2 ; 2 >
+    au < manifest ; 1870 ; Pflügers Archiv European Journal of Physiology Volume 3 ; 3 >
+    au < manifest ; 1871 ; Pflügers Archiv European Journal of Physiology Volume 4 ; 4 >
+    au < manifest ; 1872 ; Pflügers Archiv European Journal of Physiology Volume 5 ; 5 >
+    au < manifest ; 1872 ; Pflügers Archiv European Journal of Physiology Volume 6 ; 6 >
+    au < manifest ; 1873 ; Pflügers Archiv European Journal of Physiology Volume 7 ; 7 >
+    au < manifest ; 1874 ; Pflügers Archiv European Journal of Physiology Volume 8 ; 8 >
+    au < manifest ; 1874 ; Pflügers Archiv European Journal of Physiology Volume 9 ; 9 >
+    au < manifest ; 1875 ; Pflügers Archiv European Journal of Physiology Volume 10 ; 10 >
+    au < manifest ; 1875 ; Pflügers Archiv European Journal of Physiology Volume 11 ; 11 >
+    au < manifest ; 1876 ; Pflügers Archiv European Journal of Physiology Volume 12 ; 12 >
+    au < manifest ; 1876 ; Pflügers Archiv European Journal of Physiology Volume 13 ; 13 >
+    au < manifest ; 1877 ; Pflügers Archiv European Journal of Physiology Volume 14 ; 14 >
+    au < manifest ; 1877 ; Pflügers Archiv European Journal of Physiology Volume 15 ; 15 >
+    au < manifest ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 16 ; 16 >
+    au < manifest ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 17 ; 17 >
+    au < manifest ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 18 ; 18 >
+    au < manifest ; 1879 ; Pflügers Archiv European Journal of Physiology Volume 19 ; 19 >
+    au < manifest ; 1879 ; Pflügers Archiv European Journal of Physiology Volume 20 ; 20 >
+    au < manifest ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 21 ; 21 >
+    au < manifest ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 22 ; 22 >
+    au < manifest ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 23 ; 23 >
+    au < manifest ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 24 ; 24 >
+    au < manifest ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 25 ; 25 >
+    au < manifest ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 26 ; 26 >
+    au < manifest ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 27 ; 27 >
+    au < manifest ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 28 ; 28 >
+    au < manifest ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 29 ; 29 >
+    au < manifest ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 30 ; 30 >
+    au < manifest ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 31 ; 31 >
+    au < manifest ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 32 ; 32 >
+    au < manifest ; 1884 ; Pflügers Archiv European Journal of Physiology Volume 33 ; 33 >
+    au < manifest ; 1884 ; Pflügers Archiv European Journal of Physiology Volume 34 ; 34 >
+    au < manifest ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 35 ; 35 >
+    au < manifest ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 36 ; 36 >
+    au < manifest ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 37 ; 37 >
+    au < manifest ; 1886 ; Pflügers Archiv European Journal of Physiology Volume 38 ; 38 >
+    au < manifest ; 1886 ; Pflügers Archiv European Journal of Physiology Volume 39 ; 39 >
+    au < manifest ; 1887 ; Pflügers Archiv European Journal of Physiology Volume 40 ; 40 >
+    au < manifest ; 1887 ; Pflügers Archiv European Journal of Physiology Volume 41 ; 41 >
+    au < manifest ; 1888 ; Pflügers Archiv European Journal of Physiology Volume 42 ; 42 >
+    au < manifest ; 1888 ; Pflügers Archiv European Journal of Physiology Volume 43 ; 43 >
+    au < manifest ; 1889 ; Pflügers Archiv European Journal of Physiology Volume 44 ; 44 >
+    au < manifest ; 1889 ; Pflügers Archiv European Journal of Physiology Volume 45 ; 45 >
+    au < manifest ; 1890 ; Pflügers Archiv European Journal of Physiology Volume 46 ; 46 >
+    au < manifest ; 1890 ; Pflügers Archiv European Journal of Physiology Volume 47 ; 47 >
+    au < manifest ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 48 ; 48 >
+    au < manifest ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 49 ; 49 >
+    au < manifest ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 50 ; 50 >
+    au < manifest ; 1892 ; Pflügers Archiv European Journal of Physiology Volume 51 ; 51 >
+    au < manifest ; 1892 ; Pflügers Archiv European Journal of Physiology Volume 52 ; 52 >
+    au < manifest ; 1893 ; Pflügers Archiv European Journal of Physiology Volume 53 ; 53 >
+    au < manifest ; 1893 ; Pflügers Archiv European Journal of Physiology Volume 54 ; 54 >
+    au < manifest ; 1893-1894 ; Pflügers Archiv European Journal of Physiology Volume 55 ; 55 >
+    au < manifest ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 56 ; 56 >
+    au < manifest ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 57 ; 57 >
+    au < manifest ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 58 ; 58 >
+    au < manifest ; 1894-1895 ; Pflügers Archiv European Journal of Physiology Volume 59 ; 59 >
+    au < manifest ; 1895 ; Pflügers Archiv European Journal of Physiology Volume 60 ; 60 >
+    au < manifest ; 1895 ; Pflügers Archiv European Journal of Physiology Volume 61 ; 61 >
+    au < manifest ; 1895-1896 ; Pflügers Archiv European Journal of Physiology Volume 62 ; 62 >
+    au < manifest ; 1896 ; Pflügers Archiv European Journal of Physiology Volume 63 ; 63 >
+    au < manifest ; 1896 ; Pflügers Archiv European Journal of Physiology Volume 64 ; 64 >
+    au < manifest ; 1896-1897 ; Pflügers Archiv European Journal of Physiology Volume 65 ; 65 >
+    au < manifest ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 66 ; 66 >
+    au < manifest ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 67 ; 67 >
+    au < manifest ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 68 ; 68 >
+    au < manifest ; 1897-1898 ; Pflügers Archiv European Journal of Physiology Volume 69 ; 69 >
+    au < manifest ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 70 ; 70 >
+    au < manifest ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 71 ; 71 >
+    au < manifest ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 72 ; 72 >
+    au < manifest ; 1898-1899 ; Pflügers Archiv European Journal of Physiology Volume 73 ; 73 >
+    au < manifest ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 74 ; 74 >
+    au < manifest ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 75 ; 75 >
+    au < manifest ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 76 ; 76 >
+    au < manifest ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 77 ; 77 >
+    au < manifest ; 1899-1900 ; Pflügers Archiv European Journal of Physiology Volume 78 ; 78 >
+    au < manifest ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 79 ; 79 >
+    au < manifest ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 80 ; 80 >
+    au < manifest ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 81 ; 81 >
+    au < manifest ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 82 ; 82 >
+    au < manifest ; 1900-1901 ; Pflügers Archiv European Journal of Physiology Volume 83 ; 83 >
+    au < manifest ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 84 ; 84 >
+    au < manifest ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 85 ; 85 >
+    au < manifest ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 86 ; 86 >
+    au < manifest ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 87 ; 87 >
+    au < manifest ; 1901-1902 ; Pflügers Archiv European Journal of Physiology Volume 88 ; 88 >
+    au < manifest ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 89 ; 89 >
+    au < manifest ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 90 ; 90 >
+    au < manifest ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 91 ; 91 >
+    au < manifest ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 92 ; 92 >
+    au < manifest ; 1902-1903 ; Pflügers Archiv European Journal of Physiology Volume 93 ; 93 >
+    au < manifest ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 94 ; 94 >
+    au < manifest ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 95 ; 95 >
+    au < manifest ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 96 ; 96 >
+    au < manifest ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 97 ; 97 >
+    au < manifest ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 98 ; 98 >
+    au < manifest ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 99 ; 99 >
+    au < manifest ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 100 ; 100 >
+    au < manifest ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 101 ; 101 >
+    au < manifest ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 102 ; 102 >
+    au < manifest ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 103 ; 103 >
+    au < manifest ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 104 ; 104 >
+    au < manifest ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 105 ; 105 >
+    au < manifest ; 1904-1905 ; Pflügers Archiv European Journal of Physiology Volume 106 ; 106 >
+    au < manifest ; 1905 ; Pflügers Archiv European Journal of Physiology Volume 107 ; 107 >
+    au < manifest ; 1905 ; Pflügers Archiv European Journal of Physiology Volume 108 ; 108 >
+    au < manifest ; 1905 ; Pflügers Archiv European Journal of Physiology Volume 109 ; 109 >
+    au < manifest ; 1905 ; Pflügers Archiv European Journal of Physiology Volume 110 ; 110 >
+    au < manifest ; 1906 ; Pflügers Archiv European Journal of Physiology Volume 111 ; 111 >
+    au < manifest ; 1906 ; Pflügers Archiv European Journal of Physiology Volume 112 ; 112 >
+    au < manifest ; 1906 ; Pflügers Archiv European Journal of Physiology Volume 113 ; 113 >
+    au < manifest ; 1906 ; Pflügers Archiv European Journal of Physiology Volume 114 ; 114 >
+    au < manifest ; 1906 ; Pflügers Archiv European Journal of Physiology Volume 115 ; 115 >
+    au < manifest ; 1907 ; Pflügers Archiv European Journal of Physiology Volume 116 ; 116 >
+    au < manifest ; 1907 ; Pflügers Archiv European Journal of Physiology Volume 117 ; 117 >
+    au < manifest ; 1907 ; Pflügers Archiv European Journal of Physiology Volume 118 ; 118 >
+    au < manifest ; 1907 ; Pflügers Archiv European Journal of Physiology Volume 119 ; 119 >
+    au < manifest ; 1907 ; Pflügers Archiv European Journal of Physiology Volume 120 ; 120 >
+    au < manifest ; 1907-1908 ; Pflügers Archiv European Journal of Physiology Volume 121 ; 121 >
+    au < manifest ; 1908 ; Pflügers Archiv European Journal of Physiology Volume 122 ; 122 >
+    au < manifest ; 1908 ; Pflügers Archiv European Journal of Physiology Volume 123 ; 123 >
+    au < manifest ; 1908 ; Pflügers Archiv European Journal of Physiology Volume 124 ; 124 >
+    au < manifest ; 1908 ; Pflügers Archiv European Journal of Physiology Volume 125 ; 125 >
+    au < manifest ; 1909 ; Pflügers Archiv European Journal of Physiology Volume 126 ; 126 >
+    au < manifest ; 1909 ; Pflügers Archiv European Journal of Physiology Volume 127 ; 127 >
+    au < manifest ; 1909 ; Pflügers Archiv European Journal of Physiology Volume 128 ; 128 >
+    au < manifest ; 1909 ; Pflügers Archiv European Journal of Physiology Volume 129 ; 129 >
+    au < manifest ; 1909 ; Pflügers Archiv European Journal of Physiology Volume 130 ; 130 >
+    au < manifest ; 1910 ; Pflügers Archiv European Journal of Physiology Volume 131 ; 131 >
+    au < manifest ; 1910 ; Pflügers Archiv European Journal of Physiology Volume 132 ; 132 >
+    au < manifest ; 1910 ; Pflügers Archiv European Journal of Physiology Volume 133 ; 133 >
+    au < manifest ; 1910 ; Pflügers Archiv European Journal of Physiology Volume 134 ; 134 >
+    au < manifest ; 1910-1911 ; Pflügers Archiv European Journal of Physiology Volume 135 ; 135 >
+    au < manifest ; 1910 ; Pflügers Archiv European Journal of Physiology Volume 136 ; 136 >
+    au < manifest ; 1910-1911 ; Pflügers Archiv European Journal of Physiology Volume 137 ; 137 >
+    au < manifest ; 1911 ; Pflügers Archiv European Journal of Physiology Volume 138 ; 138 >
+    au < manifest ; 1911 ; Pflügers Archiv European Journal of Physiology Volume 139 ; 139 >
+    au < manifest ; 1911 ; Pflügers Archiv European Journal of Physiology Volume 140 ; 140 >
+    au < manifest ; 1911 ; Pflügers Archiv European Journal of Physiology Volume 141 ; 141 >
+    au < manifest ; 1911 ; Pflügers Archiv European Journal of Physiology Volume 142 ; 142 >
+    au < manifest ; 1911-1912 ; Pflügers Archiv European Journal of Physiology Volume 143 ; 143 >
+    au < manifest ; 1912 ; Pflügers Archiv European Journal of Physiology Volume 144 ; 144 >
+    au < manifest ; 1912 ; Pflügers Archiv European Journal of Physiology Volume 145 ; 145 >
+    au < manifest ; 1912 ; Pflügers Archiv European Journal of Physiology Volume 146 ; 146 >
+    au < manifest ; 1912 ; Pflügers Archiv European Journal of Physiology Volume 147 ; 147 >
+    au < manifest ; 1912 ; Pflügers Archiv European Journal of Physiology Volume 148 ; 148 >
+    au < manifest ; 1912-1913 ; Pflügers Archiv European Journal of Physiology Volume 149 ; 149 >
+    au < manifest ; 1913 ; Pflügers Archiv European Journal of Physiology Volume 150 ; 150 >
+    au < manifest ; 1913 ; Pflügers Archiv European Journal of Physiology Volume 151 ; 151 >
+    au < manifest ; 1913 ; Pflügers Archiv European Journal of Physiology Volume 152 ; 152 >
+    au < manifest ; 1913 ; Pflügers Archiv European Journal of Physiology Volume 153 ; 153 >
+    au < manifest ; 1913 ; Pflügers Archiv European Journal of Physiology Volume 154 ; 154 >
+    au < manifest ; 1913-1914 ; Pflügers Archiv European Journal of Physiology Volume 155 ; 155 >
+    au < manifest ; 1914 ; Pflügers Archiv European Journal of Physiology Volume 156 ; 156 >
+    au < manifest ; 1914 ; Pflügers Archiv European Journal of Physiology Volume 157 ; 157 >
+    au < manifest ; 1914 ; Pflügers Archiv European Journal of Physiology Volume 158 ; 158 >
+    au < manifest ; 1914 ; Pflügers Archiv European Journal of Physiology Volume 159 ; 159 >
+    au < manifest ; 1914-1915 ; Pflügers Archiv European Journal of Physiology Volume 160 ; 160 >
+    au < manifest ; 1915 ; Pflügers Archiv European Journal of Physiology Volume 161 ; 161 >
+    au < manifest ; 1915 ; Pflügers Archiv European Journal of Physiology Volume 162 ; 162 >
+    au < manifest ; 1915-1916 ; Pflügers Archiv European Journal of Physiology Volume 163 ; 163 >
+    au < manifest ; 1916 ; Pflügers Archiv European Journal of Physiology Volume 164 ; 164 >
+    au < manifest ; 1916 ; Pflügers Archiv European Journal of Physiology Volume 165 ; 165 >
+    au < manifest ; 1916-1917 ; Pflügers Archiv European Journal of Physiology Volume 166 ; 166 >
+    au < manifest ; 1917 ; Pflügers Archiv European Journal of Physiology Volume 167 ; 167 >
+    au < manifest ; 1917 ; Pflügers Archiv European Journal of Physiology Volume 168 ; 168 >
+    au < manifest ; 1917 ; Pflügers Archiv European Journal of Physiology Volume 169 ; 169 >
+    au < manifest ; 1918 ; Pflügers Archiv European Journal of Physiology Volume 170 ; 170 >
+    au < manifest ; 1918 ; Pflügers Archiv European Journal of Physiology Volume 171 ; 171 >
+    au < manifest ; 1918 ; Pflügers Archiv European Journal of Physiology Volume 172 ; 172 >
+    au < manifest ; 1919 ; Pflügers Archiv European Journal of Physiology Volume 173 ; 173 >
+    au < manifest ; 1919 ; Pflügers Archiv European Journal of Physiology Volume 174 ; 174 >
+    au < manifest ; 1919 ; Pflügers Archiv European Journal of Physiology Volume 175 ; 175 >
+    au < manifest ; 1919 ; Pflügers Archiv European Journal of Physiology Volume 176 ; 176 >
+    au < manifest ; 1919 ; Pflügers Archiv European Journal of Physiology Volume 177 ; 177 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 178 ; 178 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 179 ; 179 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 180 ; 180 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 181 ; 181 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 182 ; 182 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 183 ; 183 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 184 ; 184 >
+    au < manifest ; 1920 ; Pflügers Archiv European Journal of Physiology Volume 185 ; 185 >
+    au < manifest ; 1921 ; Pflügers Archiv European Journal of Physiology Volume 186 ; 186 >
+    au < manifest ; 1921 ; Pflügers Archiv European Journal of Physiology Volume 187 ; 187 >
+    au < manifest ; 1921 ; Pflügers Archiv European Journal of Physiology Volume 188 ; 188 >
+    au < manifest ; 1921 ; Pflügers Archiv European Journal of Physiology Volume 189 ; 189 >
+    au < manifest ; 1921 ; Pflügers Archiv European Journal of Physiology Volume 190 ; 190 >
+    au < manifest ; 1921 ; Pflügers Archiv European Journal of Physiology Volume 191 ; 191 >
+    au < manifest ; 1921 ; Pflügers Archiv European Journal of Physiology Volume 192 ; 192 >
+    au < manifest ; 1922 ; Pflügers Archiv European Journal of Physiology Volume 193 ; 193 >
+    au < manifest ; 1922 ; Pflügers Archiv European Journal of Physiology Volume 194 ; 194 >
+    au < manifest ; 1922 ; Pflügers Archiv European Journal of Physiology Volume 195 ; 195 >
+    au < manifest ; 1922 ; Pflügers Archiv European Journal of Physiology Volume 196 ; 196 >
+    au < manifest ; 1922 ; Pflügers Archiv European Journal of Physiology Volume 197 ; 197 >
+    au < manifest ; 1923 ; Pflügers Archiv European Journal of Physiology Volume 198 ; 198 >
+    au < manifest ; 1923 ; Pflügers Archiv European Journal of Physiology Volume 199 ; 199 >
+    au < manifest ; 1923 ; Pflügers Archiv European Journal of Physiology Volume 200 ; 200 >
+    au < manifest ; 1923 ; Pflügers Archiv European Journal of Physiology Volume 201 ; 201 >
+    au < manifest ; 1924 ; Pflügers Archiv European Journal of Physiology Volume 202 ; 202 >
+    au < manifest ; 1924 ; Pflügers Archiv European Journal of Physiology Volume 203 ; 203 >
+    au < manifest ; 1924 ; Pflügers Archiv European Journal of Physiology Volume 204 ; 204 >
+    au < manifest ; 1924 ; Pflügers Archiv European Journal of Physiology Volume 205 ; 205 >
+    au < manifest ; 1924 ; Pflügers Archiv European Journal of Physiology Volume 206 ; 206 >
+    au < manifest ; 1925 ; Pflügers Archiv European Journal of Physiology Volume 207 ; 207 >
+    au < manifest ; 1925 ; Pflügers Archiv European Journal of Physiology Volume 208 ; 208 >
+    au < manifest ; 1925 ; Pflügers Archiv European Journal of Physiology Volume 209 ; 209 >
+    au < manifest ; 1925 ; Pflügers Archiv European Journal of Physiology Volume 210 ; 210 >
+    au < manifest ; 1926 ; Pflügers Archiv European Journal of Physiology Volume 211 ; 211 >
+    au < manifest ; 1926 ; Pflügers Archiv European Journal of Physiology Volume 212 ; 212 >
+    au < manifest ; 1926 ; Pflügers Archiv European Journal of Physiology Volume 213 ; 213 >
+    au < manifest ; 1926 ; Pflügers Archiv European Journal of Physiology Volume 214 ; 214 >
+    au < manifest ; 1927 ; Pflügers Archiv European Journal of Physiology Volume 215 ; 215 >
+    au < manifest ; 1927 ; Pflügers Archiv European Journal of Physiology Volume 216 ; 216 >
+    au < manifest ; 1927 ; Pflügers Archiv European Journal of Physiology Volume 217 ; 217 >
+    au < manifest ; 1928 ; Pflügers Archiv European Journal of Physiology Volume 218 ; 218 >
+    au < manifest ; 1928 ; Pflügers Archiv European Journal of Physiology Volume 219 ; 219 >
+    au < manifest ; 1928 ; Pflügers Archiv European Journal of Physiology Volume 220 ; 220 >
+    au < manifest ; 1929 ; Pflügers Archiv European Journal of Physiology Volume 221 ; 221 >
+    au < manifest ; 1929 ; Pflügers Archiv European Journal of Physiology Volume 222 ; 222 >
+    au < manifest ; 1930 ; Pflügers Archiv European Journal of Physiology Volume 223 ; 223 >
+    au < manifest ; 1930 ; Pflügers Archiv European Journal of Physiology Volume 224 ; 224 >
+    au < manifest ; 1930 ; Pflügers Archiv European Journal of Physiology Volume 225 ; 225 >
+    au < manifest ; 1931 ; Pflügers Archiv European Journal of Physiology Volume 226 ; 226 >
+    au < manifest ; 1931 ; Pflügers Archiv European Journal of Physiology Volume 227 ; 227 >
+    au < manifest ; 1931 ; Pflügers Archiv European Journal of Physiology Volume 228 ; 228 >
+    au < manifest ; 1932 ; Pflügers Archiv European Journal of Physiology Volume 229 ; 229 >
+    au < manifest ; 1932 ; Pflügers Archiv European Journal of Physiology Volume 230 ; 230 >
+    au < manifest ; 1933 ; Pflügers Archiv European Journal of Physiology Volume 231 ; 231 >
+    au < manifest ; 1933 ; Pflügers Archiv European Journal of Physiology Volume 232 ; 232 >
+    au < manifest ; 1934 ; Pflügers Archiv European Journal of Physiology Volume 233 ; 233 >
+    au < manifest ; 1934 ; Pflügers Archiv European Journal of Physiology Volume 234 ; 234 >
+    au < manifest ; 1935 ; Pflügers Archiv European Journal of Physiology Volume 235 ; 235 >
+    au < manifest ; 1935 ; Pflügers Archiv European Journal of Physiology Volume 236 ; 236 >
+    au < manifest ; 1936 ; Pflügers Archiv European Journal of Physiology Volume 237 ; 237 >
+    au < manifest ; 1937 ; Pflügers Archiv European Journal of Physiology Volume 238 ; 238 >
+    au < manifest ; 1938 ; Pflügers Archiv European Journal of Physiology Volume 239 ; 239 >
+    au < manifest ; 1938 ; Pflügers Archiv European Journal of Physiology Volume 240 ; 240 >
+    au < manifest ; 1939 ; Pflügers Archiv European Journal of Physiology Volume 241 ; 241 >
+    au < manifest ; 1939 ; Pflügers Archiv European Journal of Physiology Volume 242 ; 242 >
+    au < manifest ; 1939-1940 ; Pflügers Archiv European Journal of Physiology Volume 243 ; 243 >
+    au < manifest ; 1940-1941 ; Pflügers Archiv European Journal of Physiology Volume 244 ; 244 >
+    au < manifest ; 1942 ; Pflügers Archiv European Journal of Physiology Volume 245 ; 245 >
+    au < manifest ; 1943 ; Pflügers Archiv European Journal of Physiology Volume 246 ; 246 >
+    au < manifest ; 1943-1944 ; Pflügers Archiv European Journal of Physiology Volume 247 ; 247 >
+    au < manifest ; 1944 ; Pflügers Archiv European Journal of Physiology Volume 248 ; 248 >
+    au < manifest ; 1947-1948 ; Pflügers Archiv European Journal of Physiology Volume 249 ; 249 >
+    au < manifest ; 1948 ; Pflügers Archiv European Journal of Physiology Volume 250 ; 250 >
+    au < manifest ; 1949 ; Pflügers Archiv European Journal of Physiology Volume 251 ; 251 >
+    au < manifest ; 1949-1950 ; Pflügers Archiv European Journal of Physiology Volume 252 ; 252 >
+    au < manifest ; 1950-1951 ; Pflügers Archiv European Journal of Physiology Volume 253 ; 253 >
+    au < manifest ; 1951-1952 ; Pflügers Archiv European Journal of Physiology Volume 254 ; 254 >
+    au < manifest ; 1952 ; Pflügers Archiv European Journal of Physiology Volume 255 ; 255 >
+    au < manifest ; 1952-1953 ; Pflügers Archiv European Journal of Physiology Volume 256 ; 256 >
+    au < manifest ; 1953 ; Pflügers Archiv European Journal of Physiology Volume 257 ; 257 >
+    au < manifest ; 1953-1954 ; Pflügers Archiv European Journal of Physiology Volume 258 ; 258 >
+    au < manifest ; 1954 ; Pflügers Archiv European Journal of Physiology Volume 259 ; 259 >
+    au < manifest ; 1954-1955 ; Pflügers Archiv European Journal of Physiology Volume 260 ; 260 >
+    au < manifest ; 1955 ; Pflügers Archiv European Journal of Physiology Volume 261 ; 261 >
+    au < manifest ; 1955-1956 ; Pflügers Archiv European Journal of Physiology Volume 262 ; 262 >
+    au < manifest ; 1956-1957 ; Pflügers Archiv European Journal of Physiology Volume 263 ; 263 >
+    au < manifest ; 1957 ; Pflügers Archiv European Journal of Physiology Volume 264 ; 264 >
+    au < manifest ; 1957-1958 ; Pflügers Archiv European Journal of Physiology Volume 265 ; 265 >
+    au < manifest ; 1957-1958 ; Pflügers Archiv European Journal of Physiology Volume 266 ; 266 >
+    au < manifest ; 1958 ; Pflügers Archiv European Journal of Physiology Volume 267 ; 267 >
+    au < manifest ; 1958-1959 ; Pflügers Archiv European Journal of Physiology Volume 268 ; 268 >
+    au < manifest ; 1959 ; Pflügers Archiv European Journal of Physiology Volume 269 ; 269 >
+    au < manifest ; 1959-1960 ; Pflügers Archiv European Journal of Physiology Volume 270 ; 270 >
+    au < manifest ; 1960 ; Pflügers Archiv European Journal of Physiology Volume 271 ; 271 >
+    au < manifest ; 1960-1961 ; Pflügers Archiv European Journal of Physiology Volume 272 ; 272 >
+    au < manifest ; 1961 ; Pflügers Archiv European Journal of Physiology Volume 273 ; 273 >
+    au < manifest ; 1961-1962 ; Pflügers Archiv European Journal of Physiology Volume 274 ; 274 >
+    au < manifest ; 1962 ; Pflügers Archiv European Journal of Physiology Volume 275 ; 275 >
+    au < manifest ; 1962-1963 ; Pflügers Archiv European Journal of Physiology Volume 276 ; 276 >
+    au < manifest ; 1963 ; Pflügers Archiv European Journal of Physiology Volume 277 ; 277 >
+    au < manifest ; 1963-1964 ; Pflügers Archiv European Journal of Physiology Volume 278 ; 278 >
+    au < manifest ; 1964 ; Pflügers Archiv European Journal of Physiology Volume 279 ; 279 >
+    au < manifest ; 1964 ; Pflügers Archiv European Journal of Physiology Volume 280 ; 280 >
+    au < manifest ; 1964 ; Pflügers Archiv European Journal of Physiology Volume 281 ; 281 >
+    au < manifest ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 282 ; 282 >
+    au < manifest ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 283 ; 283 >
+    au < manifest ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 284 ; 284 >
+    au < manifest ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 285 ; 285 >
+    au < manifest ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 286 ; 286 >
+    au < manifest ; 1966 ; Pflügers Archiv European Journal of Physiology Volume 287 ; 287 >
+    au < manifest ; 1966 ; Pflügers Archiv European Journal of Physiology Volume 288 ; 288 >
+    au < manifest ; 1966 ; Pflügers Archiv European Journal of Physiology Volume 289 ; 289 >
+    au < manifest ; 1966 ; Pflügers Archiv European Journal of Physiology Volume 290 ; 290 >
+    au < manifest ; 1966 ; Pflügers Archiv European Journal of Physiology Volume 291 ; 291 >
+    au < manifest ; 1966 ; Pflügers Archiv European Journal of Physiology Volume 292 ; 292 >
+    au < manifest ; 1967 ; Pflügers Archiv European Journal of Physiology Volume 293 ; 293 >
+    au < manifest ; 1967 ; Pflügers Archiv European Journal of Physiology Volume 294 ; 294 >
+    au < manifest ; 1967 ; Pflügers Archiv European Journal of Physiology Volume 295 ; 295 >
+    au < manifest ; 1967 ; Pflügers Archiv European Journal of Physiology Volume 296 ; 296 >
+    au < manifest ; 1967 ; Pflügers Archiv European Journal of Physiology Volume 297 ; 297 >
+    au < manifest ; 1967-1968 ; Pflügers Archiv European Journal of Physiology Volume 298 ; 298 >
+    au < manifest ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 299 ; 299 >
+    au < manifest ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 300 ; 300 >
+    au < manifest ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 301 ; 301 >
+    au < manifest ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 302 ; 302 >
+    au < manifest ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 303 ; 303 >
+    au < manifest ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 304 ; 304 >
+    au < manifest ; 1968-1969 ; Pflügers Archiv European Journal of Physiology Volume 305 ; 305 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 306 ; 306 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 307 ; 307 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 308 ; 308 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 309 ; 309 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 310 ; 310 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 311 ; 311 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 312 ; 312 >
+    au < manifest ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 313 ; 313 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 314 ; 314 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 315 ; 315 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 316 ; 316 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 317 ; 317 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 318 ; 318 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 319 ; 319 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 320 ; 320 >
+    au < manifest ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 321 ; 321 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 322 ; 322 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 323 ; 323 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 324 ; 324 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 325 ; 325 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 326 ; 326 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 327 ; 327 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 328 ; 328 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 329 ; 329 >
+    au < manifest ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 330 ; 330 >
+    au < manifest ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 331 ; 331 >
+    au < manifest ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 332 ; 332 >
+    au < manifest ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 333 ; 333 >
+    au < manifest ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 334 ; 334 >
+    au < manifest ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 335 ; 335 >
+    au < manifest ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 336 ; 336 >
+    au < manifest ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 337 ; 337 >
+    au < manifest ; 1972-1973 ; Pflügers Archiv European Journal of Physiology Volume 338 ; 338 >
+    au < manifest ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 339 ; 339 >
+    au < manifest ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 340 ; 340 >
+    au < manifest ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 341 ; 341 >
+    au < manifest ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 342 ; 342 >
+    au < manifest ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 343 ; 343 >
+    au < manifest ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 344 ; 344 >
+    au < manifest ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 345 ; 345 >
+    au < manifest ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 346 ; 346 >
+    au < manifest ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 347 ; 347 >
+    au < manifest ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 348 ; 348 >
+    au < manifest ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 349 ; 349 >
+    au < manifest ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 350 ; 350 >
+    au < manifest ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 351 ; 351 >
+    au < manifest ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 352 ; 352 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 353 ; 353 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 354 ; 354 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 355 ; 355 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 356 ; 356 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 357 ; 357 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 358 ; 358 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 359 ; 359 >
+    au < manifest ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 360 ; 360 >
+    au < manifest ; 1975-1976 ; Pflügers Archiv European Journal of Physiology Volume 361 ; 361 >
+    au < manifest ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 362 ; 362 >
+    au < manifest ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 363 ; 363 >
+    au < manifest ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 364 ; 364 >
+    au < manifest ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 365 ; 365 >
+    au < manifest ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 366 ; 366 >
+    au < manifest ; 1976-1977 ; Pflügers Archiv European Journal of Physiology Volume 367 ; 367 >
+    au < manifest ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 368 ; 368 >
+    au < manifest ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 369 ; 369 >
+    au < manifest ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 370 ; 370 >
+    au < manifest ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 371 ; 371 >
+    au < manifest ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 372 ; 372 >
+    au < manifest ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 373 ; 373 >
+    au < manifest ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 374 ; 374 >
+    au < manifest ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 375 ; 375 >
+    au < manifest ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 376 ; 376 >
+    au < manifest ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 377 ; 377 >
+    au < manifest ; 1978-1979 ; Pflügers Archiv European Journal of Physiology Volume 378 ; 378 >
+    au < manifest ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 379 ; 379 >
+    au < manifest ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 380 ; 380 >
+    au < manifest ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 381 ; 381 >
+    au < manifest ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 382 ; 382 >
+    au < manifest ; 1979-1980 ; Pflügers Archiv European Journal of Physiology Volume 383 ; 383 >
+    au < manifest ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 384 ; 384 >
+    au < manifest ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 385 ; 385 >
+    au < manifest ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 386 ; 386 >
+    au < manifest ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 387 ; 387 >
+    au < manifest ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 388 ; 388 >
+    au < manifest ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 389 ; 389 >
+    au < manifest ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 390 ; 390 >
+    au < manifest ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 391 ; 391 >
+    au < manifest ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 392 ; 392 >
+    au < manifest ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 393 ; 393 >
+    au < manifest ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 394 ; 394 >
+    au < manifest ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 395 ; 395 >
+    au < manifest ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 396 ; 396 >
+    au < manifest ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 397 ; 397 >
+    au < manifest ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 398 ; 398 >
+    au < manifest ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 399 ; 399 >
+    au < manifest ; 1984 ; Pflügers Archiv European Journal of Physiology Volume 400 ; 400 >
+    au < manifest ; 1984 ; Pflügers Archiv European Journal of Physiology Volume 401 ; 401 >
+    au < manifest ; 1984 ; Pflügers Archiv European Journal of Physiology Volume 402 ; 402 >
+    au < manifest ; 1985 ; Pflügers Archiv European Journal of Physiology Volume 403 ; 403 >
+    au < manifest ; 1985 ; Pflügers Archiv European Journal of Physiology Volume 404 ; 404 >
+    au < manifest ; 1985 ; Pflügers Archiv European Journal of Physiology Volume 405 ; 405 >
+    au < manifest ; 1986 ; Pflügers Archiv European Journal of Physiology Volume 406 ; 406 >
+    au < manifest ; 1986 ; Pflügers Archiv European Journal of Physiology Volume 407 ; 407 >
+    au < manifest ; 1987 ; Pflügers Archiv European Journal of Physiology Volume 408 ; 408 >
+    au < manifest ; 1987 ; Pflügers Archiv European Journal of Physiology Volume 409 ; 409 >
+    au < manifest ; 1987 ; Pflügers Archiv European Journal of Physiology Volume 410 ; 410 >
+    au < manifest ; 1988 ; Pflügers Archiv European Journal of Physiology Volume 411 ; 411 >
+    au < manifest ; 1988 ; Pflügers Archiv European Journal of Physiology Volume 412 ; 412 >
+    au < manifest ; 1988-1989 ; Pflügers Archiv European Journal of Physiology Volume 413 ; 413 >
+    au < manifest ; 1989 ; Pflügers Archiv European Journal of Physiology Volume 414 ; 414 >
+    au < manifest ; 1990 ; Pflügers Archiv European Journal of Physiology Volume 415 ; 415 >
+    au < manifest ; 1990 ; Pflügers Archiv European Journal of Physiology Volume 416 ; 416 >
+    au < manifest ; 1990-1991 ; Pflügers Archiv European Journal of Physiology Volume 417 ; 417 >
+    au < manifest ; 1991 ; Pflügers Archiv European Journal of Physiology Volume 418 ; 418 >
+    au < manifest ; 1991 ; Pflügers Archiv European Journal of Physiology Volume 419 ; 419 >
+    au < manifest ; 1992 ; Pflügers Archiv European Journal of Physiology Volume 420 ; 420 >
+    au < manifest ; 1992 ; Pflügers Archiv European Journal of Physiology Volume 421 ; 421 >
+    au < manifest ; 1993 ; Pflügers Archiv European Journal of Physiology Volume 422 ; 422 >
+    au < manifest ; 1993 ; Pflügers Archiv European Journal of Physiology Volume 423 ; 423 >
+    au < manifest ; 1993 ; Pflügers Archiv European Journal of Physiology Volume 424 ; 424 >
+    au < manifest ; 1993 ; Pflügers Archiv European Journal of Physiology Volume 425 ; 425 >
+    au < manifest ; 1994 ; Pflügers Archiv European Journal of Physiology Volume 426 ; 426 >
+    au < manifest ; 1994 ; Pflügers Archiv European Journal of Physiology Volume 427 ; 427 >
+    au < manifest ; 1994 ; Pflügers Archiv European Journal of Physiology Volume 428 ; 428 >
+    au < manifest ; 1995 ; Pflügers Archiv European Journal of Physiology Volume 429 ; 429 >
+    au < manifest ; 1995 ; Pflügers Archiv European Journal of Physiology Volume 430 ; 430 >
+    au < manifest ; 1996 ; Pflügers Archiv European Journal of Physiology Volume 431 ; 431 >
+    au < manifest ; 1996 ; Pflügers Archiv European Journal of Physiology Volume 432 ; 432 >
+    au < manifest ; 1996-1997 ; Pflügers Archiv European Journal of Physiology Volume 433 ; 433 >
+    au < manifest ; 1997 ; Pflügers Archiv European Journal of Physiology Volume 434 ; 434 >
+    au < manifest ; 1997 ; Pflügers Archiv European Journal of Physiology Volume 435 ; 435 >
+    au < manifest ; 1998 ; Pflügers Archiv European Journal of Physiology Volume 436 ; 436 >
+    au < manifest ; 1998 ; Pflügers Archiv European Journal of Physiology Volume 437 ; 437 >
+    au < manifest ; 1999 ; Pflügers Archiv European Journal of Physiology Volume 438 ; 438 >
+    au < manifest ; 1999 ; Pflügers Archiv European Journal of Physiology Volume 439 ; 439 >
+    au < testing ; 2000 ; Pflügers Archiv European Journal of Physiology Volume 440 ; 440 >
+    au < testing ; 2000 ; Pflügers Archiv European Journal of Physiology Volume 441 ; 441 >
+    au < testing ; 2001 ; Pflügers Archiv European Journal of Physiology Volume 442 ; 442 >
+    au < testing ; 2001 ; Pflügers Archiv European Journal of Physiology Volume 443 ; 443 >
+    au < testing ; 2002 ; Pflügers Archiv European Journal of Physiology Volume 444 ; 444 >
+    au < testing ; 2003 ; Pflügers Archiv European Journal of Physiology Volume 445 ; 445 >
+    au < testing ; 2003 ; Pflügers Archiv European Journal of Physiology Volume 446 ; 446 >
+    au < testing ; 2004 ; Pflügers Archiv European Journal of Physiology Volume 447 ; 447 >
+    au < testing ; 2004 ; Pflügers Archiv European Journal of Physiology Volume 448 ; 448 >
+    au < testing ; 2005 ; Pflügers Archiv European Journal of Physiology Volume 449 ; 449 >
+    au < testing ; 2005 ; Pflügers Archiv European Journal of Physiology Volume 450 ; 450 >
+    au < testing ; 2005 ; Pflügers Archiv European Journal of Physiology Volume 451 ; 451 >
+    au < testing ; 2006 ; Pflügers Archiv European Journal of Physiology Volume 452 ; 452 >
+    au < testing ; 2006 ; Pflügers Archiv European Journal of Physiology Volume 453 ; 453 >
+    au < testing ; 2007 ; Pflügers Archiv European Journal of Physiology Volume 454 ; 454 >
+    au < testing ; 2007 ; Pflügers Archiv European Journal of Physiology Volume 455 ; 455 >
+    au < testing ; 2008 ; Pflügers Archiv European Journal of Physiology Volume 456 ; 456 >
+    au < testing ; 2008 ; Pflügers Archiv European Journal of Physiology Volume 457 ; 457 >
+    au < testing ; 2009 ; Pflügers Archiv European Journal of Physiology Volume 458 ; 458 >
+    au < testing ; 2009 ; Pflügers Archiv European Journal of Physiology Volume 459 ; 459 >
+    au < testing ; 2010 ; Pflügers Archiv European Journal of Physiology Volume 460 ; 460 >
 
   }
-
+  
   {
 
     title <
@@ -24633,35 +25491,34 @@
     >
 
     param[journal_issn] = 0724-8741
-    attr[where] = content6b
 
-    au < testing ; 1984 ; Pharmaceutical Research Volume 1 ; 1 >
-    au < testing ; 1985 ; Pharmaceutical Research Volume 2 ; 2 >
-    au < testing ; 1986 ; Pharmaceutical Research Volume 3 ; 3 >
-    au < testing ; 1987 ; Pharmaceutical Research Volume 4 ; 4 >
-    au < testing ; 1988 ; Pharmaceutical Research Volume 5 ; 5 >
-    au < testing ; 1989 ; Pharmaceutical Research Volume 6 ; 6 >
-    au < testing ; 1990 ; Pharmaceutical Research Volume 7 ; 7 >
-    au < testing ; 1991 ; Pharmaceutical Research Volume 8 ; 8 >
-    au < testing ; 1992 ; Pharmaceutical Research Volume 9 ; 9 >
-    au < testing ; 1993 ; Pharmaceutical Research Volume 10 ; 10 >
-    au < testing ; 1994 ; Pharmaceutical Research Volume 11 ; 11 >
-    au < testing ; 1995 ; Pharmaceutical Research Volume 12 ; 12 >
-    au < testing ; 1996 ; Pharmaceutical Research Volume 13 ; 13 >
-    au < testing ; 1997 ; Pharmaceutical Research Volume 14 ; 14 >
-    au < testing ; 1998 ; Pharmaceutical Research Volume 15 ; 15 >
-    au < testing ; 1999 ; Pharmaceutical Research Volume 16 ; 16 >
-    au < testing ; 2000 ; Pharmaceutical Research Volume 17 ; 17 >
-    au < testing ; 2001 ; Pharmaceutical Research Volume 18 ; 18 >
-    au < testing ; 2002 ; Pharmaceutical Research Volume 19 ; 19 >
-    au < testing ; 2003 ; Pharmaceutical Research Volume 20 ; 20 >
-    au < testing ; 2004 ; Pharmaceutical Research Volume 21 ; 21 >
-    au < testing ; 2005 ; Pharmaceutical Research Volume 22 ; 22 >
-    au < testing ; 2006 ; Pharmaceutical Research Volume 23 ; 23 >
-    au < testing ; 2007 ; Pharmaceutical Research Volume 24 ; 24 >
-    au < testing ; 2008 ; Pharmaceutical Research Volume 25 ; 25 >
-    au < testing ; 2009 ; Pharmaceutical Research Volume 26 ; 26 >
-    au < testing ; 2010 ; Pharmaceutical Research Volume 27 ; 27 >
+    au < ready ; 1984 ; Pharmaceutical Research Volume 1 ; 1 >
+    au < ready ; 1985 ; Pharmaceutical Research Volume 2 ; 2 >
+    au < ready ; 1986 ; Pharmaceutical Research Volume 3 ; 3 >
+    au < ready ; 1987 ; Pharmaceutical Research Volume 4 ; 4 >
+    au < ready ; 1988 ; Pharmaceutical Research Volume 5 ; 5 >
+    au < ready ; 1989 ; Pharmaceutical Research Volume 6 ; 6 >
+    au < ready ; 1990 ; Pharmaceutical Research Volume 7 ; 7 >
+    au < ready ; 1991 ; Pharmaceutical Research Volume 8 ; 8 >
+    au < ready ; 1992 ; Pharmaceutical Research Volume 9 ; 9 >
+    au < ready ; 1993 ; Pharmaceutical Research Volume 10 ; 10 >
+    au < ready ; 1994 ; Pharmaceutical Research Volume 11 ; 11 >
+    au < ready ; 1995 ; Pharmaceutical Research Volume 12 ; 12 >
+    au < ready ; 1996 ; Pharmaceutical Research Volume 13 ; 13 >
+    au < ready ; 1997 ; Pharmaceutical Research Volume 14 ; 14 >
+    au < ready ; 1998 ; Pharmaceutical Research Volume 15 ; 15 >
+    au < ready ; 1999 ; Pharmaceutical Research Volume 16 ; 16 >
+    au < ready ; 2000 ; Pharmaceutical Research Volume 17 ; 17 >
+    au < ready ; 2001 ; Pharmaceutical Research Volume 18 ; 18 >
+    au < ready ; 2002 ; Pharmaceutical Research Volume 19 ; 19 >
+    au < ready ; 2003 ; Pharmaceutical Research Volume 20 ; 20 >
+    au < ready ; 2004 ; Pharmaceutical Research Volume 21 ; 21 >
+    au < ready ; 2005 ; Pharmaceutical Research Volume 22 ; 22 >
+    au < ready ; 2006 ; Pharmaceutical Research Volume 23 ; 23 >
+    au < ready ; 2007 ; Pharmaceutical Research Volume 24 ; 24 >
+    au < ready ; 2008 ; Pharmaceutical Research Volume 25 ; 25 >
+    au < ready ; 2009 ; Pharmaceutical Research Volume 26 ; 26 >
+    au < ready ; 2010 ; Pharmaceutical Research Volume 27 ; 27 >
 
   }
 
@@ -25099,41 +25956,41 @@
     au < manifest ; 1998 ; Plant Molecular Biology Volume 37 ; 37 >
     au < manifest ; 1998 ; Plant Molecular Biology Volume 38 ; 38 >
     au < manifest ; 1999 ; Plant Molecular Biology Volume 39 ; 39 >
-    au < testing ; 1999 ; Plant Molecular Biology Volume 40 ; 40 >
-    au < testing ; 1999 ; Plant Molecular Biology Volume 41 ; 41 >
-    au < testing ; 2000 ; Plant Molecular Biology Volume 42 ; 42 >
-    au < testing ; 2000 ; Plant Molecular Biology Volume 43 ; 43 >
-    au < testing ; 2000 ; Plant Molecular Biology Volume 44 ; 44 >
-    au < testing ; 2001 ; Plant Molecular Biology Volume 45 ; 45 >
-    au < testing ; 2001 ; Plant Molecular Biology Volume 46 ; 46 >
-    au < testing ; 2001 ; Plant Molecular Biology Volume 47 ; 47 >
-    au < testing ; 2002 ; Plant Molecular Biology Volume 48 ; 48 >
-    au < testing ; 2002 ; Plant Molecular Biology Volume 49 ; 49 >
-    au < testing ; 2002 ; Plant Molecular Biology Volume 50 ; 50 >
-    au < testing ; 2003 ; Plant Molecular Biology Volume 51 ; 51 >
-    au < testing ; 2003 ; Plant Molecular Biology Volume 52 ; 52 >
-    au < testing ; 2003 ; Plant Molecular Biology Volume 53 ; 53 >
-    au < testing ; 2004 ; Plant Molecular Biology Volume 54 ; 54 >
-    au < testing ; 2004 ; Plant Molecular Biology Volume 55 ; 55 >
-    au < testing ; 2004 ; Plant Molecular Biology Volume 56 ; 56 >
-    au < testing ; 2005 ; Plant Molecular Biology Volume 57 ; 57 >
-    au < testing ; 2005 ; Plant Molecular Biology Volume 58 ; 58 >
-    au < testing ; 2005 ; Plant Molecular Biology Volume 59 ; 59 >
-    au < testing ; 2006 ; Plant Molecular Biology Volume 60 ; 60 >
-    au < testing ; 2006 ; Plant Molecular Biology Volume 61 ; 61 >
-    au < testing ; 2006 ; Plant Molecular Biology Volume 62 ; 62 >
-    au < testing ; 2007 ; Plant Molecular Biology Volume 63 ; 63 >
-    au < testing ; 2007 ; Plant Molecular Biology Volume 64 ; 64 >
-    au < testing ; 2007 ; Plant Molecular Biology Volume 65 ; 65 >
-    au < testing ; 2008 ; Plant Molecular Biology Volume 66 ; 66 >
-    au < testing ; 2008 ; Plant Molecular Biology Volume 67 ; 67 >
-    au < testing ; 2008 ; Plant Molecular Biology Volume 68 ; 68 >
-    au < testing ; 2009 ; Plant Molecular Biology Volume 69 ; 69 >
-    au < testing ; 2009 ; Plant Molecular Biology Volume 70 ; 70 >
-    au < testing ; 2009 ; Plant Molecular Biology Volume 71 ; 71 >
-    au < testing ; 2010 ; Plant Molecular Biology Volume 72 ; 72 >
-    au < testing ; 2010 ; Plant Molecular Biology Volume 73 ; 73 >
-    au < testing ; 2010 ; Plant Molecular Biology Volume 74 ; 74 >
+    au < ready ; 1999 ; Plant Molecular Biology Volume 40 ; 40 >
+    au < ready ; 1999 ; Plant Molecular Biology Volume 41 ; 41 >
+    au < ready ; 2000 ; Plant Molecular Biology Volume 42 ; 42 >
+    au < ready ; 2000 ; Plant Molecular Biology Volume 43 ; 43 >
+    au < ready ; 2000 ; Plant Molecular Biology Volume 44 ; 44 >
+    au < ready ; 2001 ; Plant Molecular Biology Volume 45 ; 45 >
+    au < ready ; 2001 ; Plant Molecular Biology Volume 46 ; 46 >
+    au < ready ; 2001 ; Plant Molecular Biology Volume 47 ; 47 >
+    au < ready ; 2002 ; Plant Molecular Biology Volume 48 ; 48 >
+    au < ready ; 2002 ; Plant Molecular Biology Volume 49 ; 49 >
+    au < ready ; 2002 ; Plant Molecular Biology Volume 50 ; 50 >
+    au < ready ; 2003 ; Plant Molecular Biology Volume 51 ; 51 >
+    au < ready ; 2003 ; Plant Molecular Biology Volume 52 ; 52 >
+    au < ready ; 2003 ; Plant Molecular Biology Volume 53 ; 53 >
+    au < ready ; 2004 ; Plant Molecular Biology Volume 54 ; 54 >
+    au < ready ; 2004 ; Plant Molecular Biology Volume 55 ; 55 >
+    au < ready ; 2004 ; Plant Molecular Biology Volume 56 ; 56 >
+    au < ready ; 2005 ; Plant Molecular Biology Volume 57 ; 57 >
+    au < ready ; 2005 ; Plant Molecular Biology Volume 58 ; 58 >
+    au < ready ; 2005 ; Plant Molecular Biology Volume 59 ; 59 >
+    au < ready ; 2006 ; Plant Molecular Biology Volume 60 ; 60 >
+    au < ready ; 2006 ; Plant Molecular Biology Volume 61 ; 61 >
+    au < ready ; 2006 ; Plant Molecular Biology Volume 62 ; 62 >
+    au < ready ; 2007 ; Plant Molecular Biology Volume 63 ; 63 >
+    au < ready ; 2007 ; Plant Molecular Biology Volume 64 ; 64 >
+    au < ready ; 2007 ; Plant Molecular Biology Volume 65 ; 65 >
+    au < ready ; 2008 ; Plant Molecular Biology Volume 66 ; 66 >
+    au < ready ; 2008 ; Plant Molecular Biology Volume 67 ; 67 >
+    au < ready ; 2008 ; Plant Molecular Biology Volume 68 ; 68 >
+    au < ready ; 2009 ; Plant Molecular Biology Volume 69 ; 69 >
+    au < ready ; 2009 ; Plant Molecular Biology Volume 70 ; 70 >
+    au < ready ; 2009 ; Plant Molecular Biology Volume 71 ; 71 >
+    au < ready ; 2010 ; Plant Molecular Biology Volume 72 ; 72 >
+    au < ready ; 2010 ; Plant Molecular Biology Volume 73 ; 73 >
+    au < ready ; 2010 ; Plant Molecular Biology Volume 74 ; 74 >
 
   }
 
@@ -25214,10 +26071,17 @@
     title <
       name = Plasmonics ;
       issn = 1557-1955 ;
-      placeholder = True
+      eissn = 1557-1963
     >
 
     param[journal_issn] = 1557-1955
+    attr[where] = content4a
+
+    au < testing ; 2006 ; Plasmonics Volume 1 ; 1 >
+    au < testing ; 2007 ; Plasmonics Volume 2 ; 2 >
+    au < testing ; 2008 ; Plasmonics Volume 3 ; 3 >
+    au < testing ; 2009 ; Plasmonics Volume 4 ; 4 >
+    au < testing ; 2010 ; Plasmonics Volume 5 ; 5 >
 
   }
 
