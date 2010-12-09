@@ -2205,86 +2205,90 @@
   }
 
   {
+  
     title <
       name = International Journal of Accounting and Information Management;
       issn = 1834-7649
     >
 
     param[journal_issn] = 1834-7649
-
+    attr[where] = content1a
     
-    au < manifest ; 2007 ; International Journal of Accounting and Information Management Volume 15 ; 15 >
-    au < manifest ; 2008 ; International Journal of Accounting and Information Management Volume 16 ; 16 >
-    au < manifest ; 2009 ; International Journal of Accounting and Information Management Volume 17 ; 17 >
-    au < manifest ; 2010 ; International Journal of Accounting and Information Management Volume 18 ; 18 >
+    au < testing ; 2007 ; International Journal of Accounting and Information Management Volume 15 ; 15 >
+    au < testing ; 2008 ; International Journal of Accounting and Information Management Volume 16 ; 16 >
+    au < testing ; 2009 ; International Journal of Accounting and Information Management Volume 17 ; 17 >
+    au < testing ; 2010 ; International Journal of Accounting and Information Management Volume 18 ; 18 >
 
   }
 
   {
+
     title <
       name = International Journal of Agile Management Systems;
       issn = 1465-4652
     >
 
     param[journal_issn] = 1465-4652
+    attr[where] = content1a
 
-    
-    au < manifest ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
-    au < manifest ; 2000 ; International Journal of Agile Management Systems Volume 2 ; 2 >
+    au < testing ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
+    au < testing ; 2000 ; International Journal of Agile Management Systems Volume 2 ; 2 >
 
   }
 
   {
+
     title <
       name = International Journal of Bank Marketing;
       issn = 0265-2323
     >
 
     param[journal_issn] = 0265-2323
-
+    attr[where] = content1b
     
-    au < manifest ; 1983 ; International Journal of Bank Marketing Volume 1 ; 1 >
-    au < manifest ; 1984 ; International Journal of Bank Marketing Volume 2 ; 2 >
-    au < manifest ; 1985 ; International Journal of Bank Marketing Volume 3 ; 3 >
-    au < manifest ; 1986 ; International Journal of Bank Marketing Volume 4 ; 4 >
-    au < manifest ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 >
-    au < manifest ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 >
-    au < manifest ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 >
-    au < manifest ; 1990 ; International Journal of Bank Marketing Volume 8 ; 8 >
-    au < manifest ; 1991 ; International Journal of Bank Marketing Volume 9 ; 9 >
-    au < manifest ; 1992 ; International Journal of Bank Marketing Volume 10 ; 10 >
-    au < manifest ; 1993 ; International Journal of Bank Marketing Volume 11 ; 11 >
-    au < manifest ; 1994 ; International Journal of Bank Marketing Volume 12 ; 12 >
-    au < manifest ; 1995 ; International Journal of Bank Marketing Volume 13 ; 13 >
-    au < manifest ; 1996 ; International Journal of Bank Marketing Volume 14 ; 14 >
-    au < manifest ; 1997 ; International Journal of Bank Marketing Volume 15 ; 15 >
-    au < manifest ; 1998 ; International Journal of Bank Marketing Volume 16 ; 16 >
-    au < manifest ; 1999 ; International Journal of Bank Marketing Volume 17 ; 17 >
-    au < manifest ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 >
-    au < manifest ; 2001 ; International Journal of Bank Marketing Volume 19 ; 19 >
-    au < manifest ; 2002 ; International Journal of Bank Marketing Volume 20 ; 20 >
-    au < manifest ; 2003 ; International Journal of Bank Marketing Volume 21 ; 21 >
-    au < manifest ; 2004 ; International Journal of Bank Marketing Volume 22 ; 22 >
-    au < manifest ; 2005 ; International Journal of Bank Marketing Volume 23 ; 23 >
-    au < manifest ; 2006 ; International Journal of Bank Marketing Volume 24 ; 24 >
-    au < manifest ; 2007 ; International Journal of Bank Marketing Volume 25 ; 25 >
-    au < manifest ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 >
-    au < manifest ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 >
-    au < manifest ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 >
+    au < testing ; 1983 ; International Journal of Bank Marketing Volume 1 ; 1 >
+    au < testing ; 1984 ; International Journal of Bank Marketing Volume 2 ; 2 >
+    au < testing ; 1985 ; International Journal of Bank Marketing Volume 3 ; 3 >
+    au < testing ; 1986 ; International Journal of Bank Marketing Volume 4 ; 4 >
+    au < testing ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 >
+    au < testing ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 >
+    au < testing ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 >
+    au < testing ; 1990 ; International Journal of Bank Marketing Volume 8 ; 8 >
+    au < testing ; 1991 ; International Journal of Bank Marketing Volume 9 ; 9 >
+    au < testing ; 1992 ; International Journal of Bank Marketing Volume 10 ; 10 >
+    au < testing ; 1993 ; International Journal of Bank Marketing Volume 11 ; 11 >
+    au < testing ; 1994 ; International Journal of Bank Marketing Volume 12 ; 12 >
+    au < testing ; 1995 ; International Journal of Bank Marketing Volume 13 ; 13 >
+    au < testing ; 1996 ; International Journal of Bank Marketing Volume 14 ; 14 >
+    au < testing ; 1997 ; International Journal of Bank Marketing Volume 15 ; 15 >
+    au < testing ; 1998 ; International Journal of Bank Marketing Volume 16 ; 16 >
+    au < testing ; 1999 ; International Journal of Bank Marketing Volume 17 ; 17 >
+    au < testing ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 >
+    au < testing ; 2001 ; International Journal of Bank Marketing Volume 19 ; 19 >
+    au < testing ; 2002 ; International Journal of Bank Marketing Volume 20 ; 20 >
+    au < testing ; 2003 ; International Journal of Bank Marketing Volume 21 ; 21 >
+    au < testing ; 2004 ; International Journal of Bank Marketing Volume 22 ; 22 >
+    au < testing ; 2005 ; International Journal of Bank Marketing Volume 23 ; 23 >
+    au < testing ; 2006 ; International Journal of Bank Marketing Volume 24 ; 24 >
+    au < testing ; 2007 ; International Journal of Bank Marketing Volume 25 ; 25 >
+    au < testing ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 >
+    au < testing ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 >
+    au < testing ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 >
 
   }
 
   {
+
     title <
       name = International Journal of Career Management;
       issn = 0955-6214
     >
 
     param[journal_issn] = 0955-6214
-
+    attr[where] = content2a
     
-    au < manifest ; 1994 ; International Journal of Career Management Volume 6 ; 6 >
-    au < manifest ; 1995 ; International Journal of Career Management Volume 7 ; 7 >
+    au < testing ; 1994 ; International Journal of Career Management Volume 6 ; 6 >
+    au < testing ; 1995 ; International Journal of Career Management Volume 7 ; 7 >
 
   }
 
@@ -2295,8 +2299,9 @@
     >
 
     param[journal_issn] = 1756-8692 
+    attr[where] = content2a
 
-    au < manifest ; 2010 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
+    au < testing ; 2010 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
 
   }
 
@@ -2307,268 +2312,280 @@
     >
 
     param[journal_issn] = 0955-6222
+    attr[where] = content2a
     
-    au < manifest ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 >
-    au < manifest ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 >
-    au < manifest ; 1991 ; International Journal of Clothing Science and Technology Volume 3 ; 3 >
-    au < manifest ; 1992 ; International Journal of Clothing Science and Technology Volume 4 ; 4 >
-    au < manifest ; 1993 ; International Journal of Clothing Science and Technology Volume 5 ; 5 >
-    au < manifest ; 1994 ; International Journal of Clothing Science and Technology Volume 6 ; 6 >
-    au < manifest ; 1995 ; International Journal of Clothing Science and Technology Volume 7 ; 7 >
-    au < manifest ; 1996 ; International Journal of Clothing Science and Technology Volume 8 ; 8 >
-    au < manifest ; 1997 ; International Journal of Clothing Science and Technology Volume 9 ; 9 >
-    au < manifest ; 1998 ; International Journal of Clothing Science and Technology Volume 10 ; 10 >
-    au < manifest ; 1999 ; International Journal of Clothing Science and Technology Volume 11 ; 11 >
-    au < manifest ; 2000 ; International Journal of Clothing Science and Technology Volume 12 ; 12 >
-    au < manifest ; 2001 ; International Journal of Clothing Science and Technology Volume 13 ; 13 >
-    au < manifest ; 2002 ; International Journal of Clothing Science and Technology Volume 14 ; 14 >
-    au < manifest ; 2003 ; International Journal of Clothing Science and Technology Volume 15 ; 15 >
-    au < manifest ; 2004 ; International Journal of Clothing Science and Technology Volume 16 ; 16 >
-    au < manifest ; 2005 ; International Journal of Clothing Science and Technology Volume 17 ; 17 >
-    au < manifest ; 2006 ; International Journal of Clothing Science and Technology Volume 18 ; 18 >
-    au < manifest ; 2007 ; International Journal of Clothing Science and Technology Volume 19 ; 19 >
-    au < manifest ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 >
-    au < manifest ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 >
-    au < manifest ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 >
+    au < testing ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 >
+    au < testing ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 >
+    au < testing ; 1991 ; International Journal of Clothing Science and Technology Volume 3 ; 3 >
+    au < testing ; 1992 ; International Journal of Clothing Science and Technology Volume 4 ; 4 >
+    au < testing ; 1993 ; International Journal of Clothing Science and Technology Volume 5 ; 5 >
+    au < testing ; 1994 ; International Journal of Clothing Science and Technology Volume 6 ; 6 >
+    au < testing ; 1995 ; International Journal of Clothing Science and Technology Volume 7 ; 7 >
+    au < testing ; 1996 ; International Journal of Clothing Science and Technology Volume 8 ; 8 >
+    au < testing ; 1997 ; International Journal of Clothing Science and Technology Volume 9 ; 9 >
+    au < testing ; 1998 ; International Journal of Clothing Science and Technology Volume 10 ; 10 >
+    au < testing ; 1999 ; International Journal of Clothing Science and Technology Volume 11 ; 11 >
+    au < testing ; 2000 ; International Journal of Clothing Science and Technology Volume 12 ; 12 >
+    au < testing ; 2001 ; International Journal of Clothing Science and Technology Volume 13 ; 13 >
+    au < testing ; 2002 ; International Journal of Clothing Science and Technology Volume 14 ; 14 >
+    au < testing ; 2003 ; International Journal of Clothing Science and Technology Volume 15 ; 15 >
+    au < testing ; 2004 ; International Journal of Clothing Science and Technology Volume 16 ; 16 >
+    au < testing ; 2005 ; International Journal of Clothing Science and Technology Volume 17 ; 17 >
+    au < testing ; 2006 ; International Journal of Clothing Science and Technology Volume 18 ; 18 >
+    au < testing ; 2007 ; International Journal of Clothing Science and Technology Volume 19 ; 19 >
+    au < testing ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 >
+    au < testing ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 >
+    au < testing ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 >
 
   }
 
   {
+
     title <
       name = International Journal of Commerce and Management;
       issn = 1056-9219
     >
 
     param[journal_issn] = 1056-9219
-
+    attr[where] = content2b
     
-    au < manifest ; 1991 ; International Journal of Commerce and Management Volume 1 ; 1 >
-    au < manifest ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 >
-    au < manifest ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 >
-    au < manifest ; 1994 ; International Journal of Commerce and Management Volume 4 ; 4 >
-    au < manifest ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 >
-    au < manifest ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 >
-    au < manifest ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 >
-    au < manifest ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 >
-    au < manifest ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 >
-    au < manifest ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 >
-    au < manifest ; 2001 ; International Journal of Commerce and Management Volume 11 ; 11 >
-    au < manifest ; 2002 ; International Journal of Commerce and Management Volume 12 ; 12 >
-    au < manifest ; 2003 ; International Journal of Commerce and Management Volume 13 ; 13 >
-    au < manifest ; 2004 ; International Journal of Commerce and Management Volume 14 ; 14 >
-    au < manifest ; 2005 ; International Journal of Commerce and Management Volume 15 ; 15 >
-    au < manifest ; 2006 ; International Journal of Commerce and Management Volume 16 ; 16 >
-    au < manifest ; 2007 ; International Journal of Commerce and Management Volume 17 ; 17 >
-    au < manifest ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 >
-    au < manifest ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 >
-    au < manifest ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 >
+    au < testing ; 1991 ; International Journal of Commerce and Management Volume 1 ; 1 >
+    au < testing ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 >
+    au < testing ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 >
+    au < testing ; 1994 ; International Journal of Commerce and Management Volume 4 ; 4 >
+    au < testing ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 >
+    au < testing ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 >
+    au < testing ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 >
+    au < testing ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 >
+    au < testing ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 >
+    au < testing ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 >
+    au < testing ; 2001 ; International Journal of Commerce and Management Volume 11 ; 11 >
+    au < testing ; 2002 ; International Journal of Commerce and Management Volume 12 ; 12 >
+    au < testing ; 2003 ; International Journal of Commerce and Management Volume 13 ; 13 >
+    au < testing ; 2004 ; International Journal of Commerce and Management Volume 14 ; 14 >
+    au < testing ; 2005 ; International Journal of Commerce and Management Volume 15 ; 15 >
+    au < testing ; 2006 ; International Journal of Commerce and Management Volume 16 ; 16 >
+    au < testing ; 2007 ; International Journal of Commerce and Management Volume 17 ; 17 >
+    au < testing ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 >
+    au < testing ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 >
+    au < testing ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 >
 
   }
 
   {
+
     title <
       name = International Journal of Conflict Management;
       issn = 1044-4068
     >
 
     param[journal_issn] = 1044-4068
-
+    attr[where] = content3a
     
-    au < manifest ; 1990 ; International Journal of Conflict Management Volume 1 ; 1 >
-    au < manifest ; 1991 ; International Journal of Conflict Management Volume 2 ; 2 >
-    au < manifest ; 1992 ; International Journal of Conflict Management Volume 3 ; 3 >
-    au < manifest ; 1993 ; International Journal of Conflict Management Volume 4 ; 4 >
-    au < manifest ; 1994 ; International Journal of Conflict Management Volume 5 ; 5 >
-    au < manifest ; 1995 ; International Journal of Conflict Management Volume 6 ; 6 >
-    au < manifest ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 >
-    au < manifest ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 >
-    au < manifest ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 >
-    au < manifest ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 >
-    au < manifest ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 >
-    au < manifest ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 >
-    au < manifest ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 >
-    au < manifest ; 2003 ; International Journal of Conflict Management Volume 14 ; 14 >
-    au < manifest ; 2004 ; International Journal of Conflict Management Volume 15 ; 15 >
-    au < manifest ; 2005 ; International Journal of Conflict Management Volume 16 ; 16 >
-    au < manifest ; 2006 ; International Journal of Conflict Management Volume 17 ; 17 >
-    au < manifest ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 >
-    au < manifest ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 >
-    au < manifest ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 >
-    au < manifest ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 >
+    au < testing ; 1990 ; International Journal of Conflict Management Volume 1 ; 1 >
+    au < testing ; 1991 ; International Journal of Conflict Management Volume 2 ; 2 >
+    au < testing ; 1992 ; International Journal of Conflict Management Volume 3 ; 3 >
+    au < testing ; 1993 ; International Journal of Conflict Management Volume 4 ; 4 >
+    au < testing ; 1994 ; International Journal of Conflict Management Volume 5 ; 5 >
+    au < testing ; 1995 ; International Journal of Conflict Management Volume 6 ; 6 >
+    au < testing ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 >
+    au < testing ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 >
+    au < testing ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 >
+    au < testing ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 >
+    au < testing ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 >
+    au < testing ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 >
+    au < testing ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 >
+    au < testing ; 2003 ; International Journal of Conflict Management Volume 14 ; 14 >
+    au < testing ; 2004 ; International Journal of Conflict Management Volume 15 ; 15 >
+    au < testing ; 2005 ; International Journal of Conflict Management Volume 16 ; 16 >
+    au < testing ; 2006 ; International Journal of Conflict Management Volume 17 ; 17 >
+    au < testing ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 >
+    au < testing ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 >
+    au < testing ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 >
+    au < testing ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 >
 
   }
 
   {
+
     title <
       name = International Journal of Contemporary Hospitality Management;
       issn = 0959-6119
     >
 
     param[journal_issn] = 0959-6119
-
+    attr[where] = content3b
     
-    au < manifest ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 >
-    au < manifest ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 >
-    au < manifest ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 >
-    au < manifest ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 >
-    au < manifest ; 1993 ; International Journal of Contemporary Hospitality Management Volume 5 ; 5 >
-    au < manifest ; 1994 ; International Journal of Contemporary Hospitality Management Volume 6 ; 6 >
-    au < manifest ; 1995 ; International Journal of Contemporary Hospitality Management Volume 7 ; 7 >
-    au < manifest ; 1996 ; International Journal of Contemporary Hospitality Management Volume 8 ; 8 >
-    au < manifest ; 1997 ; International Journal of Contemporary Hospitality Management Volume 9 ; 9 >
-    au < manifest ; 1998 ; International Journal of Contemporary Hospitality Management Volume 10 ; 10 >
-    au < manifest ; 1999 ; International Journal of Contemporary Hospitality Management Volume 11 ; 11 >
-    au < manifest ; 2000 ; International Journal of Contemporary Hospitality Management Volume 12 ; 12 >
-    au < manifest ; 2001 ; International Journal of Contemporary Hospitality Management Volume 13 ; 13 >
-    au < manifest ; 2002 ; International Journal of Contemporary Hospitality Management Volume 14 ; 14 >
-    au < manifest ; 2003 ; International Journal of Contemporary Hospitality Management Volume 15 ; 15 >
-    au < manifest ; 2004 ; International Journal of Contemporary Hospitality Management Volume 16 ; 16 >
-    au < manifest ; 2005 ; International Journal of Contemporary Hospitality Management Volume 17 ; 17 >
-    au < manifest ; 2006 ; International Journal of Contemporary Hospitality Management Volume 18 ; 18 >
-    au < manifest ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 >
-    au < manifest ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 >
-    au < manifest ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
-    au < manifest ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
+    au < testing ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 >
+    au < testing ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 >
+    au < testing ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 >
+    au < testing ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 >
+    au < testing ; 1993 ; International Journal of Contemporary Hospitality Management Volume 5 ; 5 >
+    au < testing ; 1994 ; International Journal of Contemporary Hospitality Management Volume 6 ; 6 >
+    au < testing ; 1995 ; International Journal of Contemporary Hospitality Management Volume 7 ; 7 >
+    au < testing ; 1996 ; International Journal of Contemporary Hospitality Management Volume 8 ; 8 >
+    au < testing ; 1997 ; International Journal of Contemporary Hospitality Management Volume 9 ; 9 >
+    au < testing ; 1998 ; International Journal of Contemporary Hospitality Management Volume 10 ; 10 >
+    au < testing ; 1999 ; International Journal of Contemporary Hospitality Management Volume 11 ; 11 >
+    au < testing ; 2000 ; International Journal of Contemporary Hospitality Management Volume 12 ; 12 >
+    au < testing ; 2001 ; International Journal of Contemporary Hospitality Management Volume 13 ; 13 >
+    au < testing ; 2002 ; International Journal of Contemporary Hospitality Management Volume 14 ; 14 >
+    au < testing ; 2003 ; International Journal of Contemporary Hospitality Management Volume 15 ; 15 >
+    au < testing ; 2004 ; International Journal of Contemporary Hospitality Management Volume 16 ; 16 >
+    au < testing ; 2005 ; International Journal of Contemporary Hospitality Management Volume 17 ; 17 >
+    au < testing ; 2006 ; International Journal of Contemporary Hospitality Management Volume 18 ; 18 >
+    au < testing ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 >
+    au < testing ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 >
+    au < testing ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
+    au < testing ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
 
   }
 
   {
+  
     title <
       name = International Journal of Culture, Tourism and Hospitality Research;
       issn = 1750-6182
     >
 
     param[journal_issn] = 1750-6182
-
+    attr[where] = content4a
     
-    au < manifest ; 2007 ; International Journal of Culture, Tourism and Hospitality Research Volume 1 ; 1 >
-    au < manifest ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 >
-    au < manifest ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 >
-    au < manifest ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 >
+    au < testing ; 2007 ; International Journal of Culture, Tourism and Hospitality Research Volume 1 ; 1 >
+    au < testing ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 >
+    au < testing ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 >
+    au < testing ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 >
 
   }
 
   {
+  
     title <
       name = International Journal of Development Issues;
       issn = 1446-8956
     >
 
     param[journal_issn] = 1446-8956
-
+    attr[where] = content4a
     
-    au < manifest ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
-    au < manifest ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
-    au < manifest ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
-    au < manifest ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
+    au < testing ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
+    au < testing ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
+    au < testing ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
+    au < testing ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
 
   }
 
   {
+  
     title <
       name = International Journal of Disaster Resilience in the Built Environment ;
       issn = 1759-5908
     >
 
     param[journal_issn] = 1759-5908
-
+    attr[where] = content4a
     
-    au < manifest ; 2010 ; International Journal of Disaster Resilience in the Built Environment  Volume 1 ; 1 >
+    au < testing ; 2010 ; International Journal of Disaster Resilience in the Built Environment  Volume 1 ; 1 >
 
   }
 
   {
+  
     title <
       name = International Journal of Educational Management;
       issn = 0951-354X
     >
 
     param[journal_issn] = 0951-354X
-
+    attr[where] = content4b
     
-    au < manifest ; 1987 ; International Journal of Educational Management Volume 1 ; 1 >
-    au < manifest ; 1988 ; International Journal of Educational Management Volume 2 ; 2 >
-    au < manifest ; 1989 ; International Journal of Educational Management Volume 3 ; 3 >
-    au < manifest ; 1990 ; International Journal of Educational Management Volume 4 ; 4 >
-    au < manifest ; 1991 ; International Journal of Educational Management Volume 5 ; 5 >
-    au < manifest ; 1992 ; International Journal of Educational Management Volume 6 ; 6 >
-    au < manifest ; 1993 ; International Journal of Educational Management Volume 7 ; 7 >
-    au < manifest ; 1994 ; International Journal of Educational Management Volume 8 ; 8 >
-    au < manifest ; 1995 ; International Journal of Educational Management Volume 9 ; 9 >
-    au < manifest ; 1996 ; International Journal of Educational Management Volume 10 ; 10 >
-    au < manifest ; 1997 ; International Journal of Educational Management Volume 11 ; 11 >
-    au < manifest ; 1998 ; International Journal of Educational Management Volume 12 ; 12 >
-    au < manifest ; 1999 ; International Journal of Educational Management Volume 13 ; 13 >
-    au < manifest ; 2000 ; International Journal of Educational Management Volume 14 ; 14 >
-    au < manifest ; 2001 ; International Journal of Educational Management Volume 15 ; 15 >
-    au < manifest ; 2002 ; International Journal of Educational Management Volume 16 ; 16 >
-    au < manifest ; 2003 ; International Journal of Educational Management Volume 17 ; 17 >
-    au < manifest ; 2004 ; International Journal of Educational Management Volume 18 ; 18 >
-    au < manifest ; 2005 ; International Journal of Educational Management Volume 19 ; 19 >
-    au < manifest ; 2006 ; International Journal of Educational Management Volume 20 ; 20 >
-    au < manifest ; 2007 ; International Journal of Educational Management Volume 21 ; 21 >
-    au < manifest ; 2008 ; International Journal of Educational Management Volume 22 ; 22 >
-    au < manifest ; 2009 ; International Journal of Educational Management Volume 23 ; 23 >
-    au < manifest ; 2010 ; International Journal of Educational Management Volume 24 ; 24 >
+    au < testing ; 1987 ; International Journal of Educational Management Volume 1 ; 1 >
+    au < testing ; 1988 ; International Journal of Educational Management Volume 2 ; 2 >
+    au < testing ; 1989 ; International Journal of Educational Management Volume 3 ; 3 >
+    au < testing ; 1990 ; International Journal of Educational Management Volume 4 ; 4 >
+    au < testing ; 1991 ; International Journal of Educational Management Volume 5 ; 5 >
+    au < testing ; 1992 ; International Journal of Educational Management Volume 6 ; 6 >
+    au < testing ; 1993 ; International Journal of Educational Management Volume 7 ; 7 >
+    au < testing ; 1994 ; International Journal of Educational Management Volume 8 ; 8 >
+    au < testing ; 1995 ; International Journal of Educational Management Volume 9 ; 9 >
+    au < testing ; 1996 ; International Journal of Educational Management Volume 10 ; 10 >
+    au < testing ; 1997 ; International Journal of Educational Management Volume 11 ; 11 >
+    au < testing ; 1998 ; International Journal of Educational Management Volume 12 ; 12 >
+    au < testing ; 1999 ; International Journal of Educational Management Volume 13 ; 13 >
+    au < testing ; 2000 ; International Journal of Educational Management Volume 14 ; 14 >
+    au < testing ; 2001 ; International Journal of Educational Management Volume 15 ; 15 >
+    au < testing ; 2002 ; International Journal of Educational Management Volume 16 ; 16 >
+    au < testing ; 2003 ; International Journal of Educational Management Volume 17 ; 17 >
+    au < testing ; 2004 ; International Journal of Educational Management Volume 18 ; 18 >
+    au < testing ; 2005 ; International Journal of Educational Management Volume 19 ; 19 >
+    au < testing ; 2006 ; International Journal of Educational Management Volume 20 ; 20 >
+    au < testing ; 2007 ; International Journal of Educational Management Volume 21 ; 21 >
+    au < testing ; 2008 ; International Journal of Educational Management Volume 22 ; 22 >
+    au < testing ; 2009 ; International Journal of Educational Management Volume 23 ; 23 >
+    au < testing ; 2010 ; International Journal of Educational Management Volume 24 ; 24 >
 
   }
 
   {
+
     title <
       name = International Journal of Emerging Markets;
       issn = 1746-8809
     >
 
     param[journal_issn] = 1746-8809
-
+    attr[where] = content5a
     
-    au < manifest ; 2006 ; International Journal of Emerging Markets Volume 1 ; 1 >
-    au < manifest ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 >
-    au < manifest ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 >
-    au < manifest ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 >
-    au < manifest ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 >
+    au < testing ; 2006 ; International Journal of Emerging Markets Volume 1 ; 1 >
+    au < testing ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 >
+    au < testing ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 >
+    au < testing ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 >
+    au < testing ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 >
 
   }
 
   {
+
     title <
       name = International Journal of Energy Sector Management;
       issn = 1750-6220
     >
 
     param[journal_issn] = 1750-6220
-
+    attr[where] = content5a
     
-    au < manifest ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 >
-    au < manifest ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 >
-    au < manifest ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 >
-    au < manifest ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 >
+    au < testing ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 >
+    au < testing ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 >
+    au < testing ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 >
+    au < testing ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 >
 
   }
 
   {
+
     title <
       name = International Journal of Entrepreneurial Behaviour & Research;
       issn = 1355-2554
     >
 
     param[journal_issn] = 1355-2554
-
+    attr[where] = content5a
     
-    au < manifest ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
-    au < manifest ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
-    au < manifest ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 >
-    au < manifest ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 >
-    au < manifest ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 >
-    au < manifest ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 >
-    au < manifest ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 >
-    au < manifest ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
-    au < manifest ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
-    au < manifest ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
+    au < testing ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
+    au < testing ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
+    au < testing ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 >
+    au < testing ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 >
+    au < testing ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 >
+    au < testing ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 >
+    au < testing ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 >
+    au < testing ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
+    au < testing ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
+    au < testing ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
 
   }
 
   {
+  
     title <
       name = International Journal of Event and Festival Management;
       issn = 1785-2954
@@ -2576,119 +2593,124 @@
 
     param[journal_issn] = 1785-2954
 
-    
-
   }
 
   {
+
     title <
       name = International Journal of Gender and Entrepreneurship;
       issn = 1756-6266
     >
 
     param[journal_issn] = 1756-6266
-
+    attr[where] = content5a
     
-    au < manifest ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 >
-    au < manifest ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 >
+    au < testing ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 >
+    au < testing ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 >
 
   }
 
   {
+
     title <
       name = International Journal of Health Care Quality Assurance;
       issn = 0952-6862
     >
 
     param[journal_issn] = 0952-6862
-
+    attr[where] = content5b
     
-    au < manifest ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 >
-    au < manifest ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 >
-    au < manifest ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 >
-    au < manifest ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 >
-    au < manifest ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 >
-    au < manifest ; 1993 ; International Journal of Health Care Quality Assurance Volume 6 ; 6 >
-    au < manifest ; 1994 ; International Journal of Health Care Quality Assurance Volume 7 ; 7 >
-    au < manifest ; 1995 ; International Journal of Health Care Quality Assurance Volume 8 ; 8 >
-    au < manifest ; 1996 ; International Journal of Health Care Quality Assurance Volume 9 ; 9 >
-    au < manifest ; 1997 ; International Journal of Health Care Quality Assurance Volume 10 ; 10 >
-    au < manifest ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 >
-    au < manifest ; 1999 ; International Journal of Health Care Quality Assurance Volume 12 ; 12 >
-    au < manifest ; 2000 ; International Journal of Health Care Quality Assurance Volume 13 ; 13 >
-    au < manifest ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 >
-    au < manifest ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 >
-    au < manifest ; 2003 ; International Journal of Health Care Quality Assurance Volume 16 ; 16 >
-    au < manifest ; 2004 ; International Journal of Health Care Quality Assurance Volume 17 ; 17 >
-    au < manifest ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 >
-    au < manifest ; 2006 ; International Journal of Health Care Quality Assurance Volume 19 ; 19 >
-    au < manifest ; 2007 ; International Journal of Health Care Quality Assurance Volume 20 ; 20 >
-    au < manifest ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 >
-    au < manifest ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 >
-    au < manifest ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 >
+    au < testing ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 >
+    au < testing ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 >
+    au < testing ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 >
+    au < testing ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 >
+    au < testing ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 >
+    au < testing ; 1993 ; International Journal of Health Care Quality Assurance Volume 6 ; 6 >
+    au < testing ; 1994 ; International Journal of Health Care Quality Assurance Volume 7 ; 7 >
+    au < testing ; 1995 ; International Journal of Health Care Quality Assurance Volume 8 ; 8 >
+    au < testing ; 1996 ; International Journal of Health Care Quality Assurance Volume 9 ; 9 >
+    au < testing ; 1997 ; International Journal of Health Care Quality Assurance Volume 10 ; 10 >
+    au < testing ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 >
+    au < testing ; 1999 ; International Journal of Health Care Quality Assurance Volume 12 ; 12 >
+    au < testing ; 2000 ; International Journal of Health Care Quality Assurance Volume 13 ; 13 >
+    au < testing ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 >
+    au < testing ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 >
+    au < testing ; 2003 ; International Journal of Health Care Quality Assurance Volume 16 ; 16 >
+    au < testing ; 2004 ; International Journal of Health Care Quality Assurance Volume 17 ; 17 >
+    au < testing ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 >
+    au < testing ; 2006 ; International Journal of Health Care Quality Assurance Volume 19 ; 19 >
+    au < testing ; 2007 ; International Journal of Health Care Quality Assurance Volume 20 ; 20 >
+    au < testing ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 >
+    au < testing ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 >
+    au < testing ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 >
 
   }
 
   {
+
     title <
       name = International Journal of Housing Markets and Analysis;
       issn = 1753-8270
     >
 
     param[journal_issn] = 1753-8270
-
+    attr[where] = content6a
     
-    au < manifest ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 >
-    au < manifest ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 >
-    au < manifest ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 >
+    au < testing ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 >
+    au < testing ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 >
+    au < testing ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 >
 
   }
 
   {
+
     title <
       name = International Journal of Islamic and Middle Eastern Finance and Management;
       issn = 1753-8394
     >
 
     param[journal_issn] = 1753-8394
-
+    attr[where] = content6a
     
-    au < manifest ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
-    au < manifest ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
-    au < manifest ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 >
+    au < testing ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
+    au < testing ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
+    au < testing ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 >
 
   }
 
   {
+  
     title <
       name = International Journal of Law and Management;
       issn = 1754-243X
     >
 
     param[journal_issn] = 1754-243X
-
+    attr[where] = content6a
     
-    au < manifest ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
-    au < manifest ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
-    au < manifest ; 2010 ; International Journal of Law and Management Volume 52 ; 52 >
+    au < testing ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
+    au < testing ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
+    au < testing ; 2010 ; International Journal of Law and Management Volume 52 ; 52 >
 
   }
 
   {
+  
     title <
       name = International Journal of Law in the Built Environment;
       issn = 1756-1450
     >
 
     param[journal_issn] = 1756-1450
-
+    attr[where] = content6a
     
-    au < manifest ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
-    au < manifest ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
+    au < testing ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
+    au < testing ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
 
   }
 
   {
+  
     title <
       name = International Journal of Lean Six Sigma ;
       issn = 2040-1466
@@ -2696,158 +2718,161 @@
 
     param[journal_issn] = 2040-1466
 
-    
-
   }
 
   {
+
     title <
       name = International Journal of Managerial Finance;
       issn = 1743-9132
     >
 
     param[journal_issn] = 1743-9132
-
+    attr[where] = content6a
     
-    au < manifest ; 2005 ; International Journal of Managerial Finance Volume 1 ; 1 >
-    au < manifest ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 >
-    au < manifest ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 >
-    au < manifest ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 >
-    au < manifest ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 >
-    au < manifest ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 >
+    au < testing ; 2005 ; International Journal of Managerial Finance Volume 1 ; 1 >
+    au < testing ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 >
+    au < testing ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 >
+    au < testing ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 >
+    au < testing ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 >
+    au < testing ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 >
 
   }
 
   {
+
     title <
       name = International Journal of Managing Projects in Business;
       issn = 1753-8378
     >
 
     param[journal_issn] = 1753-8378
-
+    attr[where] = content6a
     
-    au < manifest ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 >
-    au < manifest ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 >
-    au < manifest ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 >
+    au < testing ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 >
+    au < testing ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 >
+    au < testing ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 >
 
   }
 
   {
+
     title <
       name = International Journal of Manpower;
       issn = 0143-7720
     >
 
     param[journal_issn] = 0143-7720
-
+    attr[where] = content6b
     
-    au < manifest ; 1980 ; International Journal of Manpower Volume 1 ; 1 >
-    au < manifest ; 1981 ; International Journal of Manpower Volume 2 ; 2 >
-    au < manifest ; 1982 ; International Journal of Manpower Volume 3 ; 3 >
-    au < manifest ; 1983 ; International Journal of Manpower Volume 4 ; 4 >
-    au < manifest ; 1984 ; International Journal of Manpower Volume 5 ; 5 >
-    au < manifest ; 1985 ; International Journal of Manpower Volume 6 ; 6 >
-    au < manifest ; 1986 ; International Journal of Manpower Volume 7 ; 7 >
-    au < manifest ; 1987 ; International Journal of Manpower Volume 8 ; 8 >
-    au < manifest ; 1988 ; International Journal of Manpower Volume 9 ; 9 >
-    au < manifest ; 1989 ; International Journal of Manpower Volume 10 ; 10 >
-    au < manifest ; 1990 ; International Journal of Manpower Volume 11 ; 11 >
-    au < manifest ; 1991 ; International Journal of Manpower Volume 12 ; 12 >
-    au < manifest ; 1992 ; International Journal of Manpower Volume 13 ; 13 >
-    au < manifest ; 1993 ; International Journal of Manpower Volume 14 ; 14 >
-    au < manifest ; 1994 ; International Journal of Manpower Volume 15 ; 15 >
-    au < manifest ; 1995 ; International Journal of Manpower Volume 16 ; 16 >
-    au < manifest ; 1996 ; International Journal of Manpower Volume 17 ; 17 >
-    au < manifest ; 1997 ; International Journal of Manpower Volume 18 ; 18 >
-    au < manifest ; 1998 ; International Journal of Manpower Volume 19 ; 19 >
-    au < manifest ; 1999 ; International Journal of Manpower Volume 20 ; 20 >
-    au < manifest ; 2000 ; International Journal of Manpower Volume 21 ; 21 >
-    au < manifest ; 2001 ; International Journal of Manpower Volume 22 ; 22 >
-    au < manifest ; 2002 ; International Journal of Manpower Volume 23 ; 23 >
-    au < manifest ; 2003 ; International Journal of Manpower Volume 24 ; 24 >
-    au < manifest ; 2004 ; International Journal of Manpower Volume 25 ; 25 >
-    au < manifest ; 2005 ; International Journal of Manpower Volume 26 ; 26 >
-    au < manifest ; 2006 ; International Journal of Manpower Volume 27 ; 27 >
-    au < manifest ; 2007 ; International Journal of Manpower Volume 28 ; 28 >
-    au < manifest ; 2008 ; International Journal of Manpower Volume 29 ; 29 >
-    au < manifest ; 2009 ; International Journal of Manpower Volume 30 ; 30 >
-    au < manifest ; 2010 ; International Journal of Manpower Volume 31 ; 31 >
+    au < testing ; 1980 ; International Journal of Manpower Volume 1 ; 1 >
+    au < testing ; 1981 ; International Journal of Manpower Volume 2 ; 2 >
+    au < testing ; 1982 ; International Journal of Manpower Volume 3 ; 3 >
+    au < testing ; 1983 ; International Journal of Manpower Volume 4 ; 4 >
+    au < testing ; 1984 ; International Journal of Manpower Volume 5 ; 5 >
+    au < testing ; 1985 ; International Journal of Manpower Volume 6 ; 6 >
+    au < testing ; 1986 ; International Journal of Manpower Volume 7 ; 7 >
+    au < testing ; 1987 ; International Journal of Manpower Volume 8 ; 8 >
+    au < testing ; 1988 ; International Journal of Manpower Volume 9 ; 9 >
+    au < testing ; 1989 ; International Journal of Manpower Volume 10 ; 10 >
+    au < testing ; 1990 ; International Journal of Manpower Volume 11 ; 11 >
+    au < testing ; 1991 ; International Journal of Manpower Volume 12 ; 12 >
+    au < testing ; 1992 ; International Journal of Manpower Volume 13 ; 13 >
+    au < testing ; 1993 ; International Journal of Manpower Volume 14 ; 14 >
+    au < testing ; 1994 ; International Journal of Manpower Volume 15 ; 15 >
+    au < testing ; 1995 ; International Journal of Manpower Volume 16 ; 16 >
+    au < testing ; 1996 ; International Journal of Manpower Volume 17 ; 17 >
+    au < testing ; 1997 ; International Journal of Manpower Volume 18 ; 18 >
+    au < testing ; 1998 ; International Journal of Manpower Volume 19 ; 19 >
+    au < testing ; 1999 ; International Journal of Manpower Volume 20 ; 20 >
+    au < testing ; 2000 ; International Journal of Manpower Volume 21 ; 21 >
+    au < testing ; 2001 ; International Journal of Manpower Volume 22 ; 22 >
+    au < testing ; 2002 ; International Journal of Manpower Volume 23 ; 23 >
+    au < testing ; 2003 ; International Journal of Manpower Volume 24 ; 24 >
+    au < testing ; 2004 ; International Journal of Manpower Volume 25 ; 25 >
+    au < testing ; 2005 ; International Journal of Manpower Volume 26 ; 26 >
+    au < testing ; 2006 ; International Journal of Manpower Volume 27 ; 27 >
+    au < testing ; 2007 ; International Journal of Manpower Volume 28 ; 28 >
+    au < testing ; 2008 ; International Journal of Manpower Volume 29 ; 29 >
+    au < testing ; 2009 ; International Journal of Manpower Volume 30 ; 30 >
+    au < testing ; 2010 ; International Journal of Manpower Volume 31 ; 31 >
 
   }
 
   {
+
     title <
       name = International Journal of Numerical Methods for Heat & Fluid Flow;
       issn = 0961-5539
     >
 
     param[journal_issn] = 0961-5539
-
+    attr[where] = sul-lockss30a
     
-    au < manifest ; 1991 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 1 ; 1 >
-    au < manifest ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 >
-    au < manifest ; 1993 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 3 ; 3 >
-    au < manifest ; 1994 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 >
-    au < manifest ; 1995 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 >
-    au < manifest ; 1996 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 6 ; 6 >
-    au < manifest ; 1997 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 7 ; 7 >
-    au < manifest ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 >
-    au < manifest ; 1999 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 9 ; 9 >
-    au < manifest ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 >
-    au < manifest ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 >
-    au < manifest ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 >
-    au < manifest ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 >
-    au < manifest ; 2004 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 14 ; 14 >
-    au < manifest ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 >
-    au < manifest ; 2006 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 16 ; 16 >
-    au < manifest ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 >
-    au < manifest ; 2008 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 18 ; 18 >
-    au < manifest ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 >
-    au < manifest ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 >
-    au < manifest ; 2011 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 21 ; 21 >
+    au < testing ; 1991 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 1 ; 1 >
+    au < testing ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 >
+    au < testing ; 1993 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 3 ; 3 >
+    au < testing ; 1994 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 >
+    au < testing ; 1995 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 >
+    au < testing ; 1996 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 6 ; 6 >
+    au < testing ; 1997 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 7 ; 7 >
+    au < testing ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 >
+    au < testing ; 1999 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 9 ; 9 >
+    au < testing ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 >
+    au < testing ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 >
+    au < testing ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 >
+    au < testing ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 >
+    au < testing ; 2004 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 14 ; 14 >
+    au < testing ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 >
+    au < testing ; 2006 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 16 ; 16 >
+    au < testing ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 >
+    au < testing ; 2008 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 18 ; 18 >
+    au < testing ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 >
+    au < testing ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 >
+    au < testing ; 2011 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 21 ; 21 >
 
   }
 
   {
+  
     title <
       name = International Journal of Operations & Production Management;
       issn = 0144-3577
     >
 
     param[journal_issn] = 0144-3577
-
+    attr[where] = sul-lockss30b
     
-    au < manifest ; 1981 ; International Journal of Operations & Production Management Volume 1 ; 1 >
-    au < manifest ; 1982 ; International Journal of Operations & Production Management Volume 2 ; 2 >
-    au < manifest ; 1983 ; International Journal of Operations & Production Management Volume 3 ; 3 >
-    au < manifest ; 1984 ; International Journal of Operations & Production Management Volume 4 ; 4 >
-    au < manifest ; 1985 ; International Journal of Operations & Production Management Volume 5 ; 5 >
-    au < manifest ; 1986 ; International Journal of Operations & Production Management Volume 6 ; 6 >
-    au < manifest ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 >
-    au < manifest ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 >
-    au < manifest ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 >
-    au < manifest ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 >
-    au < manifest ; 1991 ; International Journal of Operations & Production Management Volume 11 ; 11 >
-    au < manifest ; 1992 ; International Journal of Operations & Production Management Volume 12 ; 12 >
-    au < manifest ; 1993 ; International Journal of Operations & Production Management Volume 13 ; 13 >
-    au < manifest ; 1994 ; International Journal of Operations & Production Management Volume 14 ; 14 >
-    au < manifest ; 1995 ; International Journal of Operations & Production Management Volume 15 ; 15 >
-    au < manifest ; 1996 ; International Journal of Operations & Production Management Volume 16 ; 16 >
-    au < manifest ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 >
-    au < manifest ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 >
-    au < manifest ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 >
-    au < manifest ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 >
-    au < manifest ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 >
-    au < manifest ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 >
-    au < manifest ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 >
-    au < manifest ; 2004 ; International Journal of Operations & Production Management Volume 24 ; 24 >
-    au < manifest ; 2005 ; International Journal of Operations & Production Management Volume 25 ; 25 >
-    au < manifest ; 2006 ; International Journal of Operations & Production Management Volume 26 ; 26 >
-    au < manifest ; 2007 ; International Journal of Operations & Production Management Volume 27 ; 27 >
-    au < manifest ; 2008 ; International Journal of Operations & Production Management Volume 28 ; 28 >
-    au < manifest ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 >
-    au < manifest ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 >
+    au < testing ; 1981 ; International Journal of Operations & Production Management Volume 1 ; 1 >
+    au < testing ; 1982 ; International Journal of Operations & Production Management Volume 2 ; 2 >
+    au < testing ; 1983 ; International Journal of Operations & Production Management Volume 3 ; 3 >
+    au < testing ; 1984 ; International Journal of Operations & Production Management Volume 4 ; 4 >
+    au < testing ; 1985 ; International Journal of Operations & Production Management Volume 5 ; 5 >
+    au < testing ; 1986 ; International Journal of Operations & Production Management Volume 6 ; 6 >
+    au < testing ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 >
+    au < testing ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 >
+    au < testing ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 >
+    au < testing ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 >
+    au < testing ; 1991 ; International Journal of Operations & Production Management Volume 11 ; 11 >
+    au < testing ; 1992 ; International Journal of Operations & Production Management Volume 12 ; 12 >
+    au < testing ; 1993 ; International Journal of Operations & Production Management Volume 13 ; 13 >
+    au < testing ; 1994 ; International Journal of Operations & Production Management Volume 14 ; 14 >
+    au < testing ; 1995 ; International Journal of Operations & Production Management Volume 15 ; 15 >
+    au < testing ; 1996 ; International Journal of Operations & Production Management Volume 16 ; 16 >
+    au < testing ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 >
+    au < testing ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 >
+    au < testing ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 >
+    au < testing ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 >
+    au < testing ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 >
+    au < testing ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 >
+    au < testing ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 >
+    au < testing ; 2004 ; International Journal of Operations & Production Management Volume 24 ; 24 >
+    au < testing ; 2005 ; International Journal of Operations & Production Management Volume 25 ; 25 >
+    au < testing ; 2006 ; International Journal of Operations & Production Management Volume 26 ; 26 >
+    au < testing ; 2007 ; International Journal of Operations & Production Management Volume 27 ; 27 >
+    au < testing ; 2008 ; International Journal of Operations & Production Management Volume 28 ; 28 >
+    au < testing ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 >
+    au < testing ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 >
 
   }
 
