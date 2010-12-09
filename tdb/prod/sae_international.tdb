@@ -1,0 +1,134 @@
+{
+
+  publisher <
+    name = SAE International
+  >
+
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+  
+    title <
+      name =  ;
+      issn =  ;
+      eissn = 
+    >
+    
+    param[base_url] = 
+    
+    au < manifest ; 2009 ;  ;  >
+  
+  }
+
+  {
+  
+    title <
+      name = SAE International Journal of Aerospace ;
+      issn = 1946-3855 ;
+      eissn = 1946-3901
+    >
+    
+    param[base_url] = http://saeaero.saejournals.org/
+    
+    au < manifest ; 2009 ; SAE International Journal of Aerospace Volume 1 ; 1 >
+    au < manifest ; 2010 ; SAE International Journal of Aerospace Volume 2 ; 2 >
+  
+  }
+
+  {
+  
+    title <
+      name = SAE International Journal of Commercial Vehicles ;
+      issn = 1946-391X ;
+      eissn = 1946-3928
+    >
+    
+    param[base_url] = http://saecomveh.saejournals.org/
+    
+    au < manifest ; 2009 ; SAE International Journal of Commercial Vehicles Volume 1 ; 1 >
+    au < manifest ; 2009-2010 ; SAE International Journal of Commercial Vehicles Volume 2 ; 2 >
+  
+  }
+
+  {
+  
+    title <
+      name = SAE International Journal of Engines ;
+      issn = 1946-3936 ;
+      eissn = 1946-3944
+    >
+    
+    param[base_url] = http://saeeng.saejournals.org/
+    
+    au < manifest ; 2009 ; SAE International Journal of Engines Volume 1 ; 1 >
+    au < manifest ; 2009-2010 ; SAE International Journal of Engines Volume 2 ; 2 >
+    au < manifest ; 2010-2011 ; SAE International Journal of Engines Volume 3 ; 3 >
+  
+  }
+
+  {
+  
+    title <
+      name = SAE International Journal of Fuels and Lubricants ;
+      issn = 1946-3952 ;
+      eissn = 1946-3960
+    >
+    
+    param[base_url] = http://saefuel.saejournals.org/
+    
+    au < manifest ; 2009 ; SAE International Journal of Fuels and Lubricants Volume 1 ; 1 >
+    au < manifest ; 2009-2010 ; SAE International Journal of Fuels and Lubricants Volume 2 ; 2 >
+    au < manifest ; 2010-2011 ; SAE International Journal of Fuels and Lubricants Volume 3 ; 3 >
+  
+  }
+
+  {
+  
+    title <
+      name = SAE International Journal of Materials and Manufacturing ;
+      issn = 1946-3979 ;
+      eissn = 1946-3987
+    >
+    
+    param[base_url] = http://saematman.saejournals.org/
+    
+    au < manifest ; 2009 ; SAE International Journal of Materials and Manufacturing Volume 1 ; 1 >
+    au < manifest ; 2009-2010 ; SAE International Journal of Materials and Manufacturing Volume 2 ; 2 >
+    au < manifest ; 2010-2011 ; SAE International Journal of Materials and Manufacturing Volume 3 ; 3 >
+  
+  }
+
+  {
+  
+    title <
+      name = SAE International Journal of Passenger Cars- Electronic and Electrical Systems ;
+      issn = 1946-4614 ;
+      eissn = 1946-4622
+    >
+    
+    param[base_url] = http://saepcelec.saejournals.org/
+    
+    au < manifest ; 2009 ; SAE International Journal of Passenger Cars- Electronic and Electrical Systems Volume 1 ; 1 >
+    au < manifest ; 2009 ; SAE International Journal of Passenger Cars- Electronic and Electrical Systems Volume 2 ; 2 >
+    au < manifest ; 2010 ; SAE International Journal of Passenger Cars- Electronic and Electrical Systems Volume 3 ; 3 >
+  
+  }
+
+  {
+  
+    title <
+      name = SAE International Journal of Passenger Cars- Mechanical Systems ;
+      issn = 1946-3995 ;
+      eissn = 1946-4002
+    >
+    
+    param[base_url] = http://saepcmech.saejournals.org/
+    
+    au < manifest ; 2009 ; SAE International Journal of Passenger Cars- Mechanical Systems Volume 1 ; 1 >
+    au < manifest ; 2009-2010 ; SAE International Journal of Passenger Cars- Mechanical Systems Volume 2 ; 2 >
+    au < manifest ; 2010-2011 ; SAE International Journal of Passenger Cars- Mechanical Systems Volume 3 ; 3 >
+  
+  }
+
+}
