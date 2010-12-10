@@ -18,9 +18,9 @@
 
     param[journal_dir] = goethe_yearbook
 
-    au < ready ; Goethe Yearbook Volume 15 ; 15 >
-    au < ready ; Goethe Yearbook Volume 16 ; 16 >
-    au < ready ; Goethe Yearbook Volume 17 ; 17 >
+    au < released ; Goethe Yearbook Volume 15 ; 15 >
+    au < released ; Goethe Yearbook Volume 16 ; 16 >
+    au < released ; Goethe Yearbook Volume 17 ; 17 >
 
   }
 
