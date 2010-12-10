@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.14 2010-09-01 07:51:29 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.15 2010-12-10 08:03:12 tlipkis Exp $
  */
 
 /*
@@ -49,9 +49,14 @@ public class XmlStatusTable {
 
   StatusTable statusTable = null;
   Document tableDocument = null;
+  int outputVersion = 1;
 
   public XmlStatusTable(StatusTable statusTable) {
     this.statusTable = statusTable;
+  }
+
+  public void setOutputVersion(int ver) {
+    outputVersion = ver;
   }
 
   /**
@@ -292,8 +297,17 @@ public class XmlStatusTable {
     return element;
   }
 
-  static String formatByType(Object object, int type) {
-    String str = DaemonStatus.convertDisplayString(object, type);
+  String formatByType(Object object, int type) {
+    String str;
+    switch (outputVersion) {
+    case 1:
+    default:
+      str = DaemonStatus.convertDisplayString(object, type);
+      break;
+    case 2:
+      str = object.toString();
+      break;
+    }
 //     if (type == ColumnDescriptor.TYPE_STRING) {
 //       str = StringEscapeUtils.escapeXml(str); 
 //     }

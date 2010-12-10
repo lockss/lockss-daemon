@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.80 2010-09-01 07:51:28 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.81 2010-12-10 08:03:11 tlipkis Exp $
  */
 
 /*
@@ -255,6 +255,15 @@ public class DaemonStatus extends LockssServlet {
     try {
       StatusTable statTable = makeTable();
       XmlStatusTable xmlTable = new XmlStatusTable(statTable);
+      String over = req.getParameter("outputVersion");
+      if (over != null) {
+	try {
+	  int ver = Integer.parseInt(over);
+	  xmlTable.setOutputVersion(ver);
+	} catch (NumberFormatException e) {
+	  log.warning("Illegal outputVersion: " + over + ": " + e.toString());
+	}
+      }
       Document xmlTableDoc = xmlTable.getTableDocument();
       XmlDomBuilder.serialize(xmlTableDoc, wrtr);
     } catch (Exception e) {
