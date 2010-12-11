@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.2 2010-07-06 07:23:45 thib_gc Exp $
+ * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.3 2010-12-11 00:59:15 thib_gc Exp $
  */
 
 /*
@@ -90,10 +90,10 @@ public class EdinburghUniversityPressArticleIteratorFactory
       af.setFullTextCu(pdfCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
 
-      CachedUrl absCu = au.makeCachedUrl(pdfMat.replaceFirst("/abs/$1"));
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      }
+//      CachedUrl absCu = au.makeCachedUrl(pdfMat.replaceFirst("/abs/$1"));
+//      if (absCu != null && absCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+//      }
 
       return af;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.3 2010-09-08 09:41:09 thib_gc Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.4 2010-12-11 00:59:15 thib_gc Exp $
  */
 
 /*
@@ -135,8 +135,8 @@ public class HighWirePressArticleIteratorFactory
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, htmlCu);
-      guessFullTextPdf(af, htmlMat);
-      guessOtherParts(af, htmlMat);
+//      guessFullTextPdf(af, htmlMat);
+//      guessOtherParts(af, htmlMat);
       return af;
     }
     
@@ -154,102 +154,102 @@ public class HighWirePressArticleIteratorFactory
 
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      guessPdfLandingPage(af, pdfMat);
+//      guessPdfLandingPage(af, pdfMat);
       af.setFullTextCu(af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE) != null
                        ? af.getRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE)
                        : pdfCu);
-      guessOtherParts(af, pdfMat);
+//      guessOtherParts(af, pdfMat);
       return af;
     }
     
-    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
-      guessAbstract(af, mat);
-      guessReferences(af, mat);
-      guessSupplementaryMaterials(af, mat);
-    }
-    
-    protected void guessFullTextPdf(ArticleFiles af, Matcher htmlMat) {
-      CachedUrl cu = guess(htmlMat,
-                           "/cgi/reprint/$1$2.pdf",
-                           "/cgi/reprint/$2.pdf");
-      if (cu != null) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
-        guessPdfLandingPage(af, htmlMat);
-      }
-    }
-    
-    protected void guessPdfLandingPage(ArticleFiles af, Matcher mat) {
-      CachedUrl pdfLandCu = guess(mat,
-                                  "/cgi/reprint/$1$2",
-                                  "/cgi/reprint/$2",
-                                  "/cgi/reprintframed/$1$2",
-                                  "/cgi/reprintframed/$2",
-                                  "/cgi/framedreprint/$1$2",
-                                  "/cgi/framedreprint/$2");
-      if (pdfLandCu != null) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-      }
-    }
-
-    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = guess(mat,
-                              "/cgi/content/abstract/$1$2",
-                              "/cgi/content/abstract/$2");
-      if (absCu != null) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
-          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
-        }
-      }
-    }
-    
-    protected void guessReferences(ArticleFiles af, Matcher mat) {
-      CachedUrl refsCu = guess(mat,
-                               "/cgi/content/refs/$1$2",
-                               "/cgi/content/refs/$2");
-      if (refsCu != null) {
-        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refsCu);
-      }
-    }
-    
-    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-      CachedUrl suppCu = guess(mat,
-                               "/cgi/content/full/$1$2/DC1",
-                               "/cgi/content/full/$2/DC1");
-      if (suppCu != null) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
-      }
-    }
-    
-    /**
-     * <p>Tries various URLs in this AU similar to the one in the
-     * given matcher, using each one of the given matcher replacement
-     * patterns in turn, until one is found that exists and has
-     * content.</p>
-     * <p>The replacement patterns are applied to the matcher using
-     * {@link Matcher#replaceFirst(String)}.</p>
-     * <p>This method is a candidate to be refactored into a utility
-     * framework for article iterators.</p>
-     * @param mat      A matcher encapsulating a previously-matched
-     *                 URL in this AU.
-     * @param replPats Any number of replacement patterns consistent
-     *                 with the matcher, to try in sequence.
-     * @return A {@link CachedUrl} if one of the replacement patterns
-     *         produces a URL in this AU that exists and has content,
-     *         or <code>null</code> otherwise.
-     * @see Matcher#replaceFirst(String)
-     * @see CachedUrl#hasContent()
-     */
-    protected CachedUrl guess(Matcher mat,
-                              String... replPats) {
-      for (String replPat : replPats) {
-        CachedUrl guessCu = au.makeCachedUrl(mat.replaceFirst(replPat));
-        if (guessCu != null && guessCu.hasContent()) {
-          return guessCu;
-        }
-      }
-      return null;
-    }
+//    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
+//      guessAbstract(af, mat);
+//      guessReferences(af, mat);
+//      guessSupplementaryMaterials(af, mat);
+//    }
+//    
+//    protected void guessFullTextPdf(ArticleFiles af, Matcher htmlMat) {
+//      CachedUrl cu = guess(htmlMat,
+//                           "/cgi/reprint/$1$2.pdf",
+//                           "/cgi/reprint/$2.pdf");
+//      if (cu != null) {
+//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, cu);
+//        guessPdfLandingPage(af, htmlMat);
+//      }
+//    }
+//    
+//    protected void guessPdfLandingPage(ArticleFiles af, Matcher mat) {
+//      CachedUrl pdfLandCu = guess(mat,
+//                                  "/cgi/reprint/$1$2",
+//                                  "/cgi/reprint/$2",
+//                                  "/cgi/reprintframed/$1$2",
+//                                  "/cgi/reprintframed/$2",
+//                                  "/cgi/framedreprint/$1$2",
+//                                  "/cgi/framedreprint/$2");
+//      if (pdfLandCu != null) {
+//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
+//      }
+//    }
+//
+//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+//      CachedUrl absCu = guess(mat,
+//                              "/cgi/content/abstract/$1$2",
+//                              "/cgi/content/abstract/$2");
+//      if (absCu != null) {
+//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+//        if (af.getRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA) == null) {
+//          af.setRoleCu(ArticleFiles.ROLE_ARTICLE_METADATA, absCu);
+//        }
+//      }
+//    }
+//    
+//    protected void guessReferences(ArticleFiles af, Matcher mat) {
+//      CachedUrl refsCu = guess(mat,
+//                               "/cgi/content/refs/$1$2",
+//                               "/cgi/content/refs/$2");
+//      if (refsCu != null) {
+//        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refsCu);
+//      }
+//    }
+//    
+//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
+//      CachedUrl suppCu = guess(mat,
+//                               "/cgi/content/full/$1$2/DC1",
+//                               "/cgi/content/full/$2/DC1");
+//      if (suppCu != null) {
+//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
+//      }
+//    }
+//    
+//    /**
+//     * <p>Tries various URLs in this AU similar to the one in the
+//     * given matcher, using each one of the given matcher replacement
+//     * patterns in turn, until one is found that exists and has
+//     * content.</p>
+//     * <p>The replacement patterns are applied to the matcher using
+//     * {@link Matcher#replaceFirst(String)}.</p>
+//     * <p>This method is a candidate to be refactored into a utility
+//     * framework for article iterators.</p>
+//     * @param mat      A matcher encapsulating a previously-matched
+//     *                 URL in this AU.
+//     * @param replPats Any number of replacement patterns consistent
+//     *                 with the matcher, to try in sequence.
+//     * @return A {@link CachedUrl} if one of the replacement patterns
+//     *         produces a URL in this AU that exists and has content,
+//     *         or <code>null</code> otherwise.
+//     * @see Matcher#replaceFirst(String)
+//     * @see CachedUrl#hasContent()
+//     */
+//    protected CachedUrl guess(Matcher mat,
+//                              String... replPats) {
+//      for (String replPat : replPats) {
+//        CachedUrl guessCu = au.makeCachedUrl(mat.replaceFirst(replPat));
+//        if (guessCu != null && guessCu.hasContent()) {
+//          return guessCu;
+//        }
+//      }
+//      return null;
+//    }
     
     /**
      * <p>Does the same thing as

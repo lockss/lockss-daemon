@@ -1,5 +1,5 @@
 /*
- * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.1 2010-10-06 22:51:48 thib_gc Exp $
+ * $Id: InternationalUnionOfCrystallographyArticleIteratorFactory.java,v 1.2 2010-12-11 00:59:15 thib_gc Exp $
  */
 
 /*
@@ -82,32 +82,32 @@ public class InternationalUnionOfCrystallographyArticleIteratorFactory implement
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      guessFullTextPdf(af, htmlMat);
-      guessAbstract(af, htmlMat);
-      guessSupplementaryMaterials(af, htmlMat);
+//      guessFullTextPdf(af, htmlMat);
+//      guessAbstract(af, htmlMat);
+//      guessSupplementaryMaterials(af, htmlMat);
       return af;
     }
 
-    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1.pdf"));
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
-    }
-    
-    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1abs.html"));
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      }
-    }
-    
-    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1sup0.html"));
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, absCu);
-      }
-    }
+//    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
+//      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1.pdf"));
+//      if (pdfCu != null && pdfCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+//      }
+//    }
+//    
+//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1abs.html"));
+//      if (absCu != null && absCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+//      }
+//    }
+//    
+//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
+//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1/$1sup0.html"));
+//      if (absCu != null && absCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, absCu);
+//      }
+//    }
     
   }
 

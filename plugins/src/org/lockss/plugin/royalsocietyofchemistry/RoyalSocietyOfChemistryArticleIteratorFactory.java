@@ -1,5 +1,5 @@
 /*
- * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.2 2010-08-03 15:45:20 dsferopoulos Exp $
+ * $Id: RoyalSocietyOfChemistryArticleIteratorFactory.java,v 1.3 2010-12-11 00:59:15 thib_gc Exp $
  */
 
 /*
@@ -100,9 +100,9 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
     protected ArticleFiles processUrl(CachedUrl xlinkCu, Matcher xlinkMat) {
       ArticleFiles af = new ArticleFiles();
       af.setRoleString(ROLE_ARTICLE_CODE, xlinkMat.group(1));
-      guessAbstract(af, xlinkMat);
-      guessFullTextPdf(af, xlinkMat);
-      guessOtherParts(af, xlinkMat);
+//      guessAbstract(af, xlinkMat);
+//      guessFullTextPdf(af, xlinkMat);
+//      guessOtherParts(af, xlinkMat);
       chooseFullTextCu(af);
       return af;
     }
@@ -122,51 +122,51 @@ public class RoyalSocietyOfChemistryArticleIteratorFactory
       log.warning("No full text CU for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
     }    
     
-    protected void guessAbstract(ArticleFiles af, Matcher xlinkMat) {
-      CachedUrl absCu = au.makeCachedUrl(String.format("%spublishing/journals/%s/article.asp?doi=%s", baseUrl, journalCode.toUpperCase(), xlinkMat.group(1)));
-      // If more than one variant, add nested if's here; see guessFullTextPdf()
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      }
-      else {
-        log.warning("Could not infer abstract URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
-      }
-    }
-
-    protected void guessFullTextPdf(ArticleFiles af, Matcher xlinkMat) {
-      CachedUrl pdfCu = au.makeCachedUrl(String.format("%sej/%s/%s/%s.pdf", baseUrl, journalCode.toUpperCase(), year, xlinkMat.group(1)));
-      if (pdfCu == null || !pdfCu.hasContent()) {
-        pdfCu = au.makeCachedUrl(String.format("%sdelivery/_ArticleLinking/DisplayArticleForFree.cfm?doi=%s&JournalCode=%s", baseUrl, xlinkMat.group(1), journalCode.toUpperCase()));
-        // Add more similar nested if's for other variants
-      }
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
-      else {
-        log.warning("Could not infer full text PDF URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
-      }
-    }
-
-    protected void guessOtherParts(ArticleFiles af, Matcher xlinkMat) {
-      guessReferences(af, xlinkMat);
-      guessSupplementaryMaterials(af, xlinkMat);
-    }
-    
-    protected void guessReferences(ArticleFiles af, Matcher xlinkMat) {
-      CachedUrl refCu = au.makeCachedUrl(String.format("%s_ArticleLinking/ArticleLinking.cfm?JournalCode=%s&Year=%s&ManuscriptID=%s&type=citonly", baseUrl, journalCode.toUpperCase(), year, xlinkMat.group(1)));
-      // If more than one variant, add nested if's here; see guessFullTextPdf()
-      if (refCu != null && refCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refCu);
-      }
-    }
-    
-    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher xlinkMat) {
-      // http://www.rsc.org/suppdata/LC/b7/b703810k/index.sht
-      CachedUrl suppCu = au.makeCachedUrl(String.format("%ssuppdata/%s/%s/%s/index.sht", baseUrl, journalCode.toUpperCase(), xlinkMat.group(1).substring(0,2), xlinkMat.group(1)));
-      if (suppCu != null && suppCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
-      }
-    }
+//    protected void guessAbstract(ArticleFiles af, Matcher xlinkMat) {
+//      CachedUrl absCu = au.makeCachedUrl(String.format("%spublishing/journals/%s/article.asp?doi=%s", baseUrl, journalCode.toUpperCase(), xlinkMat.group(1)));
+//      // If more than one variant, add nested if's here; see guessFullTextPdf()
+//      if (absCu != null && absCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+//      }
+//      else {
+//        log.warning("Could not infer abstract URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
+//      }
+//    }
+//
+//    protected void guessFullTextPdf(ArticleFiles af, Matcher xlinkMat) {
+//      CachedUrl pdfCu = au.makeCachedUrl(String.format("%sej/%s/%s/%s.pdf", baseUrl, journalCode.toUpperCase(), year, xlinkMat.group(1)));
+//      if (pdfCu == null || !pdfCu.hasContent()) {
+//        pdfCu = au.makeCachedUrl(String.format("%sdelivery/_ArticleLinking/DisplayArticleForFree.cfm?doi=%s&JournalCode=%s", baseUrl, xlinkMat.group(1), journalCode.toUpperCase()));
+//        // Add more similar nested if's for other variants
+//      }
+//      if (pdfCu != null && pdfCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+//      }
+//      else {
+//        log.warning("Could not infer full text PDF URL for article code " + af.getRoleString(ROLE_ARTICLE_CODE));
+//      }
+//    }
+//
+//    protected void guessOtherParts(ArticleFiles af, Matcher xlinkMat) {
+//      guessReferences(af, xlinkMat);
+//      guessSupplementaryMaterials(af, xlinkMat);
+//    }
+//    
+//    protected void guessReferences(ArticleFiles af, Matcher xlinkMat) {
+//      CachedUrl refCu = au.makeCachedUrl(String.format("%s_ArticleLinking/ArticleLinking.cfm?JournalCode=%s&Year=%s&ManuscriptID=%s&type=citonly", baseUrl, journalCode.toUpperCase(), year, xlinkMat.group(1)));
+//      // If more than one variant, add nested if's here; see guessFullTextPdf()
+//      if (refCu != null && refCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_REFERENCES, refCu);
+//      }
+//    }
+//    
+//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher xlinkMat) {
+//      // http://www.rsc.org/suppdata/LC/b7/b703810k/index.sht
+//      CachedUrl suppCu = au.makeCachedUrl(String.format("%ssuppdata/%s/%s/%s/index.sht", baseUrl, journalCode.toUpperCase(), xlinkMat.group(1).substring(0,2), xlinkMat.group(1)));
+//      if (suppCu != null && suppCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppCu);
+//      }
+//    }
 
   }
   

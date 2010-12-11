@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.1 2010-07-06 08:48:09 thib_gc Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.2 2010-12-11 00:59:15 thib_gc Exp $
  */
 
 /*
@@ -99,8 +99,8 @@ public class HighWirePressH20ArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      guessFullTextPdf(af, htmlMat);
-      guessOtherParts(af, htmlMat);
+//      guessFullTextPdf(af, htmlMat);
+//      guessOtherParts(af, htmlMat);
       return af;
     }
     
@@ -112,56 +112,56 @@ public class HighWirePressH20ArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
 
-      CachedUrl pdfLandCu = au.makeCachedUrl(pdfMat.replaceFirst("/$1.full.pdf+html"));
-      if (pdfLandCu != null && pdfLandCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-        af.setFullTextCu(pdfLandCu);
-      }
-      else {
-        af.setFullTextCu(pdfCu);
-      }
-      guessOtherParts(af, pdfMat);
+//      CachedUrl pdfLandCu = au.makeCachedUrl(pdfMat.replaceFirst("/$1.full.pdf+html"));
+//      if (pdfLandCu != null && pdfLandCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
+//        af.setFullTextCu(pdfLandCu);
+//      }
+//      else {
+//        af.setFullTextCu(pdfCu);
+//      }
+//      guessOtherParts(af, pdfMat);
       return af;
     }
     
-    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
-      guessAbstract(af, mat);
-      guessFigures(af, mat);
-      guessSupplementaryMaterials(af, mat);
-    }
-    
-    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1.pdf"));
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-        CachedUrl pdfLandCu = au.makeCachedUrl(mat.replaceFirst("/$1.full.pdf+html"));
-        if (pdfLandCu != null && pdfLandCu.hasContent()) {
-          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
-        }
-      }
-    }
-
-    protected void guessAbstract(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1.abstract"));
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
-      }
-    }
-    
-    protected void guessFigures(ArticleFiles af, Matcher mat) {
-      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1.figures-only"));
-      if (absCu != null && absCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
-      }
-    }
-    
-    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
-      CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/$1/suppl/DCSupplemental"));
-      if (suppinfoCu != null && suppinfoCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
-      }
-    }
-    
+//    protected void guessOtherParts(ArticleFiles af, Matcher mat) {
+//      guessAbstract(af, mat);
+//      guessFigures(af, mat);
+//      guessSupplementaryMaterials(af, mat);
+//    }
+//    
+//    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
+//      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1.pdf"));
+//      if (pdfCu != null && pdfCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+//        CachedUrl pdfLandCu = au.makeCachedUrl(mat.replaceFirst("/$1.full.pdf+html"));
+//        if (pdfLandCu != null && pdfLandCu.hasContent()) {
+//          af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF_LANDING_PAGE, pdfLandCu);
+//        }
+//      }
+//    }
+//
+//    protected void guessAbstract(ArticleFiles af, Matcher mat) {
+//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1.abstract"));
+//      if (absCu != null && absCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_ABSTRACT, absCu);
+//      }
+//    }
+//    
+//    protected void guessFigures(ArticleFiles af, Matcher mat) {
+//      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/$1.figures-only"));
+//      if (absCu != null && absCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_FIGURES_TABLES, absCu);
+//      }
+//    }
+//    
+//    protected void guessSupplementaryMaterials(ArticleFiles af, Matcher mat) {
+//      CachedUrl suppinfoCu = au.makeCachedUrl(mat.replaceFirst("/$1/suppl/DCSupplemental"));
+//      if (suppinfoCu != null && suppinfoCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_SUPPLEMENTARY_MATERIALS, suppinfoCu);
+//      }
+//    }
+//    
   }
   
   protected static class HighWirePressH20ArticleMetadataExtractor implements ArticleMetadataExtractor {

@@ -1,5 +1,5 @@
 /*
- * $Id: AMAVirtualMentorArticleIteratorFactory.java,v 1.1 2010-09-16 01:03:37 thib_gc Exp $
+ * $Id: AMAVirtualMentorArticleIteratorFactory.java,v 1.2 2010-12-11 00:59:15 thib_gc Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class AMAVirtualMentorArticleIteratorFactory implements ArticleIteratorFa
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-      guessFullTextPdf(af, htmlMat);
+//      guessFullTextPdf(af, htmlMat);
       return af;
     }
     
@@ -113,12 +113,12 @@ public class AMAVirtualMentorArticleIteratorFactory implements ArticleIteratorFa
       return af;
     }
     
-    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/pdf/$2.pdf"));
-      if (pdfCu != null && pdfCu.hasContent()) {
-        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-      }
-    }
+//    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
+//      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/$1/pdf/$2.pdf"));
+//      if (pdfCu != null && pdfCu.hasContent()) {
+//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+//      }
+//    }
     
   }
   
