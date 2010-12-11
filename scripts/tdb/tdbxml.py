@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.11 2010-11-30 18:21:41 thib_gc Exp $
+# $Id: tdbxml.py,v 1.12 2010-12-11 01:09:26 barry409 Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -40,6 +40,10 @@ class TdbxmlConstants:
     OPTION_NO_PUB_DOWN = 'nopubdown'
     OPTION_NO_PUB_DOWN_SHORT = 'd'
     OPTION_NO_PUB_DOWN_HELP = 'do not include pub_down markers'
+
+    OPTION_OUTPUT_FILE = 'output'
+    OPTION_OUTPUT_FILE_SHORT = 'o'
+    OPTION_OUTPUT_FILE_HELP = 'write output to a file'
 
     OPTION_STYLE = 'style'
     OPTION_STYLE_SHORT = 's'
@@ -250,6 +254,11 @@ def __option_parser__(parser=None):
                             '--' + TdbxmlConstants.OPTION_NO_PUB_DOWN,
                             action='store_true',
                             help=TdbxmlConstants.OPTION_NO_PUB_DOWN_HELP)
+    tdbxml_group.add_option('-' + TdbxmlConstants.OPTION_OUTPUT_FILE_SHORT,
+                            '--' + TdbxmlConstants.OPTION_OUTPUT_FILE,
+                            action='store',
+                            dest='output_file'
+                            )
     parser.add_option_group(tdbxml_group)
     return parser
 
@@ -267,5 +276,11 @@ if __name__ == '__main__':
     parser = __option_parser__()
     (options, args) = parser.parse_args(values=parser.get_default_values())
     __reprocess_options__(parser, options)
-    tdb = tdbparse.tdbparse(sys.stdin, options) 
-    tdb_to_xml(tdb, options)
+    tdb = tdbparse.tdbparse(sys.stdin, options)
+    saveout = sys.stdout
+    try:
+        if options.output_file:
+            sys.stdout = open(options.output_file, 'w')
+        tdb_to_xml(tdb, options)
+    finally:
+        sys.stdout = saveout
