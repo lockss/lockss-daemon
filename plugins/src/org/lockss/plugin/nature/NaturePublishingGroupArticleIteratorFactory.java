@@ -1,5 +1,5 @@
 /*
- * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.7 2010-12-11 00:59:15 thib_gc Exp $
+ * $Id: NaturePublishingGroupArticleIteratorFactory.java,v 1.8 2010-12-11 08:14:44 thib_gc Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class NaturePublishingGroupArticleIteratorFactory
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(htmlCu);
       af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_HTML, htmlCu);
-//      guessFullTextPdf(af, htmlMat);
+      guessFullTextPdf(af, htmlMat);
 //      guessOtherParts(af, htmlMat);
       return af;
     }
@@ -131,14 +131,14 @@ public class NaturePublishingGroupArticleIteratorFactory
 //      guessSupplementaryMaterials(af, mat);
 //      guessRisCitation(af, mat);
 //    }
-//    
-//    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
-//      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/pdf/$1.pdf"));
-//      if (pdfCu != null && pdfCu.hasContent()) {
-//        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
-//      }
-//    }
-//    
+    
+    protected void guessFullTextPdf(ArticleFiles af, Matcher mat) {
+      CachedUrl pdfCu = au.makeCachedUrl(mat.replaceFirst("/pdf/$1.pdf"));
+      if (pdfCu != null && pdfCu.hasContent()) {
+        af.setRoleCu(ArticleFiles.ROLE_FULL_TEXT_PDF, pdfCu);
+      }
+    }
+    
 //    protected void guessAbstract(ArticleFiles af, Matcher mat) {
 //      CachedUrl absCu = au.makeCachedUrl(mat.replaceFirst("/abs/$1.html"));
 //      if (absCu != null && absCu.hasContent()) {
