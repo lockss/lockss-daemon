@@ -11,14 +11,14 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.radiologictechnology.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; Radiologic Technology Volume 77 ; 77 >
-      au < manifest ; Radiologic Technology Volume 78 ; 78 >
-      au < manifest ; Radiologic Technology Volume 79 ; 79 >
-      au < manifest ; Radiologic Technology Volume 80 ; 80 >
+      au < testing ; Radiologic Technology Volume 77 ; 77 >
+      au < testing ; Radiologic Technology Volume 78 ; 78 >
+      au < testing ; Radiologic Technology Volume 79 ; 79 >
+      au < testing ; Radiologic Technology Volume 80 ; 80 >
 
     }
 

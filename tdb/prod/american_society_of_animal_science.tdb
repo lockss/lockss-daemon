@@ -12,97 +12,110 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
       param[base_url] = http://jas.fass.org/
-      implicit < status ; name ; param[volume_name] >
 
-      au < ready ; Journal of Animal Science Volume 1 ; 1 >
-      au < ready ; Journal of Animal Science Volume 2 ; 2 >
-      au < ready ; Journal of Animal Science Volume 3 ; 3 >
-      au < ready ; Journal of Animal Science Volume 4 ; 4 >
-      au < ready ; Journal of Animal Science Volume 5 ; 5 >
-      au < ready ; Journal of Animal Science Volume 6 ; 6 >
-      au < ready ; Journal of Animal Science Volume 7 ; 7 >
-      au < ready ; Journal of Animal Science Volume 8 ; 8 >
-      au < ready ; Journal of Animal Science Volume 9 ; 9 >
-      au < ready ; Journal of Animal Science Volume 10 ; 10 >
-      au < ready ; Journal of Animal Science Volume 11 ; 11 >
-      au < ready ; Journal of Animal Science Volume 12 ; 12 >
-      au < ready ; Journal of Animal Science Volume 13 ; 13 >
-      au < ready ; Journal of Animal Science Volume 14 ; 14 >
-      au < ready ; Journal of Animal Science Volume 15 ; 15 >
-      au < ready ; Journal of Animal Science Volume 16 ; 16 >
-      au < ready ; Journal of Animal Science Volume 17 ; 17 >
-      au < ready ; Journal of Animal Science Volume 18 ; 18 >
-      au < ready ; Journal of Animal Science Volume 19 ; 19 >
-      au < ready ; Journal of Animal Science Volume 20 ; 20 >
-      au < ready ; Journal of Animal Science Volume 21 ; 21 >
-      au < ready ; Journal of Animal Science Volume 22 ; 22 >
-      au < ready ; Journal of Animal Science Volume 23 ; 23 >
-      au < ready ; Journal of Animal Science Volume 24 ; 24 >
-      au < ready ; Journal of Animal Science Volume 25 ; 25 >
-      au < ready ; Journal of Animal Science Volume 26 ; 26 >
-      au < ready ; Journal of Animal Science Volume 27 ; 27 >
-      au < ready ; Journal of Animal Science Volume 28 ; 28 >
-      au < ready ; Journal of Animal Science Volume 29 ; 29 >
-      au < ready ; Journal of Animal Science Volume 30 ; 30 >
-      au < ready ; Journal of Animal Science Volume 31 ; 31 >
-      au < ready ; Journal of Animal Science Volume 32 ; 32 >
-      au < ready ; Journal of Animal Science Volume 33 ; 33 >
-      au < ready ; Journal of Animal Science Volume 34 ; 34 >
-      au < ready ; Journal of Animal Science Volume 35 ; 35 >
-      au < ready ; Journal of Animal Science Volume 36 ; 36 >
-      au < ready ; Journal of Animal Science Volume 37 ; 37 >
-      au < ready ; Journal of Animal Science Volume 38 ; 38 >
-      au < ready ; Journal of Animal Science Volume 39 ; 39 >
-      au < ready ; Journal of Animal Science Volume 40 ; 40 >
-      au < ready ; Journal of Animal Science Volume 41 ; 41 >
-      au < ready ; Journal of Animal Science Volume 42 ; 42 >
-      au < ready ; Journal of Animal Science Volume 43 ; 43 >
-      au < ready ; Journal of Animal Science Volume 44 ; 44 >
-      au < ready ; Journal of Animal Science Volume 45 ; 45 >
-      au < ready ; Journal of Animal Science Volume 46 ; 46 >
-      au < ready ; Journal of Animal Science Volume 47 ; 47 >
-      au < ready ; Journal of Animal Science Volume 48 ; 48 >
-      au < ready ; Journal of Animal Science Volume 49 ; 49 >
-      au < ready ; Journal of Animal Science Volume 50 ; 50 >
-      au < ready ; Journal of Animal Science Volume 51 ; 51 >
-      au < ready ; Journal of Animal Science Volume 52 ; 52 >
-      au < ready ; Journal of Animal Science Volume 53 ; 53 >
-      au < ready ; Journal of Animal Science Volume 54 ; 54 >
-      au < ready ; Journal of Animal Science Volume 55 ; 55 >
-      au < ready ; Journal of Animal Science Volume 56 ; 56 >
-      au < ready ; Journal of Animal Science Volume 57 ; 57 >
-      au < ready ; Journal of Animal Science Volume 58 ; 58 >
-      au < ready ; Journal of Animal Science Volume 59 ; 59 >
-      au < ready ; Journal of Animal Science Volume 60 ; 60 >
-      au < ready ; Journal of Animal Science Volume 61 ; 61 >
-      au < ready ; Journal of Animal Science Volume 62 ; 62 >
-      au < ready ; Journal of Animal Science Volume 63 ; 63 >
-      au < ready ; Journal of Animal Science Volume 64 ; 64 >
-      au < ready ; Journal of Animal Science Volume 65 ; 65 >
-      au < ready ; Journal of Animal Science Volume 66 ; 66 >
-      au < ready ; Journal of Animal Science Volume 67 ; 67 >
-      au < released ; Journal of Animal Science Volume 68 ; 68 >
-      au < released ; Journal of Animal Science Volume 69 ; 69 >
-      au < released ; Journal of Animal Science Volume 70 ; 70 >
-      au < released ; Journal of Animal Science Volume 71 ; 71 >
-      au < released ; Journal of Animal Science Volume 72 ; 72 >
-      au < released ; Journal of Animal Science Volume 73 ; 73 >
-      au < released ; Journal of Animal Science Volume 74 ; 74 >
-      au < released ; Journal of Animal Science Volume 75 ; 75 >
-      au < released ; Journal of Animal Science Volume 76 ; 76 >
-      au < released ; Journal of Animal Science Volume 77 ; 77 >
-      au < released ; Journal of Animal Science Volume 78 ; 78 >
-      au < released ; Journal of Animal Science Volume 79 ; 79 >
-      au < released ; Journal of Animal Science Volume 80 ; 80 >
-      au < released ; Journal of Animal Science Volume 81 ; 81 >
-      au < released ; Journal of Animal Science Volume 82 ; 82 >
-      au < released ; Journal of Animal Science Volume 83 ; 83 >
-      au < released ; Journal of Animal Science Volume 84 ; 84 >
-      au < ready ; Journal of Animal Science Volume 85 ; 85 >
-      au < ready ; Journal of Animal Science Volume 86 ; 86 >
-      au < ready ; Journal of Animal Science Volume 87 ; 87 >
+      {
+
+        plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+        implicit < status ; name ; param[volume_name] >
+
+        au < released ; Journal of Animal Science Volume 68 ; 68 >
+        au < released ; Journal of Animal Science Volume 69 ; 69 >
+        au < released ; Journal of Animal Science Volume 70 ; 70 >
+        au < released ; Journal of Animal Science Volume 71 ; 71 >
+        au < released ; Journal of Animal Science Volume 72 ; 72 >
+        au < released ; Journal of Animal Science Volume 73 ; 73 >
+        au < released ; Journal of Animal Science Volume 74 ; 74 >
+        au < released ; Journal of Animal Science Volume 75 ; 75 >
+        au < released ; Journal of Animal Science Volume 76 ; 76 >
+        au < released ; Journal of Animal Science Volume 77 ; 77 >
+        au < released ; Journal of Animal Science Volume 78 ; 78 >
+        au < released ; Journal of Animal Science Volume 79 ; 79 >
+        au < released ; Journal of Animal Science Volume 80 ; 80 >
+        au < released ; Journal of Animal Science Volume 81 ; 81 >
+        au < released ; Journal of Animal Science Volume 82 ; 82 >
+        au < released ; Journal of Animal Science Volume 83 ; 83 >
+        au < released ; Journal of Animal Science Volume 84 ; 84 >
+
+      }
+      
+      {
+  
+        plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+        implicit < status ; name ; param[volume_name] >
+        
+        au < testing ; Journal of Animal Science Volume 1 ; 1 >
+        au < testing ; Journal of Animal Science Volume 2 ; 2 >
+        au < testing ; Journal of Animal Science Volume 3 ; 3 >
+        au < testing ; Journal of Animal Science Volume 4 ; 4 >
+        au < testing ; Journal of Animal Science Volume 5 ; 5 >
+        au < testing ; Journal of Animal Science Volume 6 ; 6 >
+        au < testing ; Journal of Animal Science Volume 7 ; 7 >
+        au < testing ; Journal of Animal Science Volume 8 ; 8 >
+        au < testing ; Journal of Animal Science Volume 9 ; 9 >
+        au < testing ; Journal of Animal Science Volume 10 ; 10 >
+        au < testing ; Journal of Animal Science Volume 11 ; 11 >
+        au < testing ; Journal of Animal Science Volume 12 ; 12 >
+        au < testing ; Journal of Animal Science Volume 13 ; 13 >
+        au < testing ; Journal of Animal Science Volume 14 ; 14 >
+        au < testing ; Journal of Animal Science Volume 15 ; 15 >
+        au < testing ; Journal of Animal Science Volume 16 ; 16 >
+        au < testing ; Journal of Animal Science Volume 17 ; 17 >
+        au < testing ; Journal of Animal Science Volume 18 ; 18 >
+        au < testing ; Journal of Animal Science Volume 19 ; 19 >
+        au < testing ; Journal of Animal Science Volume 20 ; 20 >
+        au < testing ; Journal of Animal Science Volume 21 ; 21 >
+        au < testing ; Journal of Animal Science Volume 22 ; 22 >
+        au < testing ; Journal of Animal Science Volume 23 ; 23 >
+        au < testing ; Journal of Animal Science Volume 24 ; 24 >
+        au < testing ; Journal of Animal Science Volume 25 ; 25 >
+        au < testing ; Journal of Animal Science Volume 26 ; 26 >
+        au < testing ; Journal of Animal Science Volume 27 ; 27 >
+        au < testing ; Journal of Animal Science Volume 28 ; 28 >
+        au < testing ; Journal of Animal Science Volume 29 ; 29 >
+        au < testing ; Journal of Animal Science Volume 30 ; 30 >
+        au < testing ; Journal of Animal Science Volume 31 ; 31 >
+        au < testing ; Journal of Animal Science Volume 32 ; 32 >
+        au < testing ; Journal of Animal Science Volume 33 ; 33 >
+        au < testing ; Journal of Animal Science Volume 34 ; 34 >
+        au < testing ; Journal of Animal Science Volume 35 ; 35 >
+        au < testing ; Journal of Animal Science Volume 36 ; 36 >
+        au < testing ; Journal of Animal Science Volume 37 ; 37 >
+        au < testing ; Journal of Animal Science Volume 38 ; 38 >
+        au < testing ; Journal of Animal Science Volume 39 ; 39 >
+        au < testing ; Journal of Animal Science Volume 40 ; 40 >
+        au < testing ; Journal of Animal Science Volume 41 ; 41 >
+        au < testing ; Journal of Animal Science Volume 42 ; 42 >
+        au < testing ; Journal of Animal Science Volume 43 ; 43 >
+        au < testing ; Journal of Animal Science Volume 44 ; 44 >
+        au < testing ; Journal of Animal Science Volume 45 ; 45 >
+        au < testing ; Journal of Animal Science Volume 46 ; 46 >
+        au < testing ; Journal of Animal Science Volume 47 ; 47 >
+        au < testing ; Journal of Animal Science Volume 48 ; 48 >
+        au < testing ; Journal of Animal Science Volume 49 ; 49 >
+        au < testing ; Journal of Animal Science Volume 50 ; 50 >
+        au < testing ; Journal of Animal Science Volume 51 ; 51 >
+        au < testing ; Journal of Animal Science Volume 52 ; 52 >
+        au < testing ; Journal of Animal Science Volume 53 ; 53 >
+        au < testing ; Journal of Animal Science Volume 54 ; 54 >
+        au < testing ; Journal of Animal Science Volume 55 ; 55 >
+        au < testing ; Journal of Animal Science Volume 56 ; 56 >
+        au < testing ; Journal of Animal Science Volume 57 ; 57 >
+        au < testing ; Journal of Animal Science Volume 58 ; 58 >
+        au < testing ; Journal of Animal Science Volume 59 ; 59 >
+        au < testing ; Journal of Animal Science Volume 60 ; 60 >
+        au < testing ; Journal of Animal Science Volume 61 ; 61 >
+        au < testing ; Journal of Animal Science Volume 62 ; 62 >
+        au < testing ; Journal of Animal Science Volume 63 ; 63 >
+        au < testing ; Journal of Animal Science Volume 64 ; 64 >
+        au < testing ; Journal of Animal Science Volume 65 ; 65 >
+        au < testing ; Journal of Animal Science Volume 66 ; 66 >
+        au < testing ; Journal of Animal Science Volume 67 ; 67 >      
+        au < testing ; Journal of Animal Science Volume 85 ; 85 >
+        au < testing ; Journal of Animal Science Volume 86 ; 86 >
+        au < testing ; Journal of Animal Science Volume 87 ; 87 >
+      
+      }
 
     }
 

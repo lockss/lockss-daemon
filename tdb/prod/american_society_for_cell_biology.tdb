@@ -11,7 +11,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.lifescied.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -37,7 +37,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.molbiolcell.org/
       implicit < status ; name ; param[volume_name] >
 
