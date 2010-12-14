@@ -18,11 +18,11 @@
       param[base_url] = http://www.biophysj.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < released ; Biophysical Journal Volume 88 ; 88 >
-      au < released ; Biophysical Journal Volume 89 ; 89 >
-      au < released ; Biophysical Journal Volume 90 ; 90 >
-      au < released ; Biophysical Journal Volume 91 ; 91 >
-      au < released ; Biophysical Journal Volume 92 ; 92 >
+      au < down ; Biophysical Journal Volume 88 ; 88 >
+      au < down ; Biophysical Journal Volume 89 ; 89 >
+      au < down ; Biophysical Journal Volume 90 ; 90 >
+      au < down ; Biophysical Journal Volume 91 ; 91 >
+      au < down ; Biophysical Journal Volume 92 ; 92 >
 
     }
 
