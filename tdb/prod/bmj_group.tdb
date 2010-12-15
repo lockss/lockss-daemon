@@ -254,11 +254,11 @@
 
     param[base_url] = http://www.bmj.com/
 
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; BMJ Volume 330 ; 330 >
-    au < HighWirePressH20Plugin ; manifest ; 2005 ; BMJ Volume 331 ; 331 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; BMJ Volume 332 ; 332 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; BMJ Volume 333 ; 333 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; BMJ Volume 334 ; 334 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; BMJ Volume 330 ; 330 >
+    au < HighWirePressH20Plugin ; testing ; 2005 ; BMJ Volume 331 ; 331 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; BMJ Volume 332 ; 332 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; BMJ Volume 333 ; 333 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; BMJ Volume 334 ; 334 >
     au < HighWirePressH20Plugin ; testing ; 2007 ; BMJ Volume 335 ; 335 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; BMJ Volume 336 ; 336 >
     au < HighWirePressH20Plugin ; testing ; 2008 ; BMJ Volume 337 ; 337 >
@@ -541,10 +541,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; exists ; 2003 ; Evidence-Based Mental Health Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Evidence-Based Mental Health Volume 7 ; 7 >
     au < HighWirePressH20Plugin ; ready ; 2005 ; Evidence-Based Mental Health Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Evidence-Based Mental Health Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Evidence-Based Mental Health Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Evidence-Based Mental Health Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Evidence-Based Mental Health Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Evidence-Based Mental Health Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Evidence-Based Mental Health Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Evidence-Based Mental Health Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Evidence-Based Mental Health Volume 12 ; 12 >
 
   }
 
@@ -565,10 +565,10 @@ comment[ebm13] = Site depth exceeds max crawl depth (1000)
     au < HighWirePressH20Plugin ; exists ; 2003 ; Evidence-Based Nursing Volume 6 ; 6 >
     au < HighWirePressH20Plugin ; exists ; 2004 ; Evidence-Based Nursing Volume 7 ; 7 >
     au < HighWireStrVolPlugin ; down ; 2005 ; Evidence-Based Nursing Volume 8 ; 8 >
-    au < HighWirePressH20Plugin ; manifest ; 2006 ; Evidence-Based Nursing Volume 9 ; 9 >
-    au < HighWirePressH20Plugin ; manifest ; 2007 ; Evidence-Based Nursing Volume 10 ; 10 >
-    au < HighWirePressH20Plugin ; manifest ; 2008 ; Evidence-Based Nursing Volume 11 ; 11 >
-    au < HighWirePressH20Plugin ; manifest ; 2009 ; Evidence-Based Nursing Volume 12 ; 12 >
+    au < HighWirePressH20Plugin ; testing ; 2006 ; Evidence-Based Nursing Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; testing ; 2007 ; Evidence-Based Nursing Volume 10 ; 10 >
+    au < HighWirePressH20Plugin ; testing ; 2008 ; Evidence-Based Nursing Volume 11 ; 11 >
+    au < HighWirePressH20Plugin ; testing ; 2009 ; Evidence-Based Nursing Volume 12 ; 12 >
 
   }
 

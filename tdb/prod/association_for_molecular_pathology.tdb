@@ -11,21 +11,21 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jmd.amjpathol.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Journal of Molecular Diagnostics Volume 1 ; 1 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 2 ; 2 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 3 ; 3 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 4 ; 4 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 5 ; 5 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 6 ; 6 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 7 ; 7 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 8 ; 8 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 9 ; 9 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 10 ; 10 >
-      au < wanted ; Journal of Molecular Diagnostics Volume 11 ; 11 >
+      au < testing ; Journal of Molecular Diagnostics Volume 1 ; 1 >
+      au < testing ; Journal of Molecular Diagnostics Volume 2 ; 2 >
+      au < testing ; Journal of Molecular Diagnostics Volume 3 ; 3 >
+      au < testing ; Journal of Molecular Diagnostics Volume 4 ; 4 >
+      au < testing ; Journal of Molecular Diagnostics Volume 5 ; 5 >
+      au < testing ; Journal of Molecular Diagnostics Volume 6 ; 6 >
+      au < testing ; Journal of Molecular Diagnostics Volume 7 ; 7 >
+      au < testing ; Journal of Molecular Diagnostics Volume 8 ; 8 >
+      au < testing ; Journal of Molecular Diagnostics Volume 9 ; 9 >
+      au < testing ; Journal of Molecular Diagnostics Volume 10 ; 10 >
+      au < testing ; Journal of Molecular Diagnostics Volume 11 ; 11 >
 
     }
 
