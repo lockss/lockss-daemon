@@ -36,11 +36,24 @@
 
     title <
       name = The AAPS Journal ;
-      issn = 1550-7416 ;
-      placeholder = True
+      issn = 1550-7416
     >
 
     param[journal_issn] = 1550-7416
+    attr[where] = content3b
+
+    au < testing ; 1999 ; The AAPS Journal Volume 1 ; 1 >
+    au < testing ; 2000 ; The AAPS Journal Volume 2 ; 2 >
+    au < testing ; 2001 ; The AAPS Journal Volume 3 ; 3 >
+    au < testing ; 2002 ; The AAPS Journal Volume 4 ; 4 >
+    au < testing ; 2003 ; The AAPS Journal Volume 5 ; 5 >
+    au < testing ; 2004 ; The AAPS Journal Volume 6 ; 6 >
+    au < testing ; 2005 ; The AAPS Journal Volume 7 ; 7 >
+    au < testing ; 2006 ; The AAPS Journal Volume 8 ; 8 >
+    au < testing ; 2007 ; The AAPS Journal Volume 9 ; 9 >
+    au < testing ; 2008 ; The AAPS Journal Volume 10 ; 10 >
+    au < testing ; 2009 ; The AAPS Journal Volume 11 ; 11 >
+    au < testing ; 2010 ; The AAPS Journal Volume 12 ; 12 >
 
   }
 
@@ -8976,10 +8989,25 @@
     title <
       name = Ecosystems ;
       issn = 1432-9840 ;
-      placeholder = True
+      eissn = 1435-0629
     >
 
     param[journal_issn] = 1432-9840
+    attr[where] = content3a
+
+    au < testing ; 1998 ; Ecosystems Volume 1 ; 1 >
+    au < testing ; 1999 ; Ecosystems Volume 2 ; 2 >
+    au < testing ; 2000 ; Ecosystems Volume 3 ; 3 >
+    au < testing ; 2001 ; Ecosystems Volume 4 ; 4 >
+    au < testing ; 2002 ; Ecosystems Volume 5 ; 5 >
+    au < testing ; 2003 ; Ecosystems Volume 6 ; 6 >
+    au < testing ; 2004 ; Ecosystems Volume 7 ; 7 >
+    au < testing ; 2005 ; Ecosystems Volume 8 ; 8 >
+    au < testing ; 2006 ; Ecosystems Volume 9 ; 9 >
+    au < testing ; 2007 ; Ecosystems Volume 10 ; 10 >
+    au < testing ; 2008 ; Ecosystems Volume 11 ; 11 >
+    au < testing ; 2009 ; Ecosystems Volume 12 ; 12 >
+    au < testing ; 2010 ; Ecosystems Volume 13 ; 13 >
 
   }
 
@@ -10241,10 +10269,33 @@
     title <
       name = European Radiology ;
       issn = 0938-7994 ;
-      placeholder = True
+      eissn = 1432-1084
     >
 
     param[journal_issn] = 0938-7994
+    attr[where] = content1a
+
+    au < testing ; 1991 ; European Radiology Volume 1 ; 1 >
+    au < testing ; 1992 ; European Radiology Volume 2 ; 2 >
+    au < testing ; 1993 ; European Radiology Volume 3 ; 3 >
+    au < testing ; 1994 ; European Radiology Volume 4 ; 4 >
+    au < testing ; 1995 ; European Radiology Volume 5 ; 5 >
+    au < testing ; 1996 ; European Radiology Volume 6 ; 6 >
+    au < testing ; 1997 ; European Radiology Volume 7 ; 7 >
+    au < testing ; 1998 ; European Radiology Volume 8 ; 8 >
+    au < testing ; 1999 ; European Radiology Volume 9 ; 9 >
+    au < testing ; 2000 ; European Radiology Volume 10 ; 10 >
+    au < testing ; 2001 ; European Radiology Volume 11 ; 11 >
+    au < testing ; 2002 ; European Radiology Volume 12 ; 12 >
+    au < testing ; 2003 ; European Radiology Volume 13 ; 13 >
+    au < testing ; 2004 ; European Radiology Volume 14 ; 14 >
+    au < testing ; 2005 ; European Radiology Volume 15 ; 15 >
+    au < testing ; 2006 ; European Radiology Volume 16 ; 16 >
+    au < testing ; 2007 ; European Radiology Volume 17 ; 17 >
+    au < testing ; 2008 ; European Radiology Volume 18 ; 18 >
+    au < testing ; 2009 ; European Radiology Volume 19 ; 19 >
+    au < testing ; 2010 ; European Radiology Volume 20 ; 20 >
+    au < testing ; 2011 ; European Radiology Volume 21 ; 21 >
 
   }
 
@@ -11485,14 +11536,13 @@
     >
 
     param[journal_issn] = 1560-2745
-    attr[where] = content1a
 
-    au < testing ; 2010 ; Fungal Diversity Volume 40 ; 40 >
-    au < testing ; 2010 ; Fungal Diversity Volume 41 ; 41 >
-    au < testing ; 2010 ; Fungal Diversity Volume 42 ; 42 >
-    au < testing ; 2010 ; Fungal Diversity Volume 43 ; 43 >
-    au < testing ; 2010 ; Fungal Diversity Volume 44 ; 44 >
-    au < testing ; 2010 ; Fungal Diversity Volume 45 ; 45 >
+    au < ready ; 2010 ; Fungal Diversity Volume 40 ; 40 >
+    au < ready ; 2010 ; Fungal Diversity Volume 41 ; 41 >
+    au < ready ; 2010 ; Fungal Diversity Volume 42 ; 42 >
+    au < ready ; 2010 ; Fungal Diversity Volume 43 ; 43 >
+    au < ready ; 2010 ; Fungal Diversity Volume 44 ; 44 >
+    au < ready ; 2010 ; Fungal Diversity Volume 45 ; 45 >
 
   }
 
@@ -16511,10 +16561,42 @@
     title <
       name = Journal of Clinical Immunology ;
       issn = 0271-9142 ;
-      placeholder = True
+      eissn = 1573-2592
     >
 
     param[journal_issn] = 0271-9142
+    attr[where] = content4a
+
+    au < manifest ; 1981 ; Journal of Clinical Immunology Volume 1 ; 1 >
+    au < manifest ; 1982 ; Journal of Clinical Immunology Volume 2 ; 2 >
+    au < manifest ; 1983 ; Journal of Clinical Immunology Volume 3 ; 3 >
+    au < manifest ; 1984 ; Journal of Clinical Immunology Volume 4 ; 4 >
+    au < manifest ; 1985 ; Journal of Clinical Immunology Volume 5 ; 5 >
+    au < manifest ; 1986 ; Journal of Clinical Immunology Volume 6 ; 6 >
+    au < manifest ; 1987 ; Journal of Clinical Immunology Volume 7 ; 7 >
+    au < manifest ; 1988 ; Journal of Clinical Immunology Volume 8 ; 8 >
+    au < manifest ; 1989 ; Journal of Clinical Immunology Volume 9 ; 9 >
+    au < manifest ; 1990 ; Journal of Clinical Immunology Volume 10 ; 10 >
+    au < manifest ; 1991 ; Journal of Clinical Immunology Volume 11 ; 11 >
+    au < manifest ; 1992 ; Journal of Clinical Immunology Volume 12 ; 12 >
+    au < manifest ; 1993 ; Journal of Clinical Immunology Volume 13 ; 13 >
+    au < manifest ; 1994 ; Journal of Clinical Immunology Volume 14 ; 14 >
+    au < manifest ; 1995 ; Journal of Clinical Immunology Volume 15 ; 15 >
+    au < manifest ; 1996 ; Journal of Clinical Immunology Volume 16 ; 16 >
+    au < manifest ; 1997 ; Journal of Clinical Immunology Volume 17 ; 17 >
+    au < manifest ; 1998 ; Journal of Clinical Immunology Volume 18 ; 18 >
+    au < manifest ; 1999 ; Journal of Clinical Immunology Volume 19 ; 19 >
+    au < manifest ; 2000 ; Journal of Clinical Immunology Volume 20 ; 20 >
+    au < manifest ; 2001 ; Journal of Clinical Immunology Volume 21 ; 21 >
+    au < manifest ; 2002 ; Journal of Clinical Immunology Volume 22 ; 22 >
+    au < manifest ; 2003 ; Journal of Clinical Immunology Volume 23 ; 23 >
+    au < manifest ; 2004 ; Journal of Clinical Immunology Volume 24 ; 24 >
+    au < manifest ; 2005 ; Journal of Clinical Immunology Volume 25 ; 25 >
+    au < manifest ; 2006 ; Journal of Clinical Immunology Volume 26 ; 26 >
+    au < manifest ; 2007 ; Journal of Clinical Immunology Volume 27 ; 27 >
+    au < manifest ; 2008 ; Journal of Clinical Immunology Volume 28 ; 28 >
+    au < manifest ; 2009 ; Journal of Clinical Immunology Volume 29 ; 29 >
+    au < manifest ; 2010 ; Journal of Clinical Immunology Volume 30 ; 30 >
 
   }
 
@@ -22303,14 +22385,13 @@
     >
 
     param[journal_issn] = 1573-3882
-    attr[where] = content3b
 
-    au < testing ; 2005 ; Metabolomics Volume 1 ; 1 >
-    au < testing ; 2006 ; Metabolomics Volume 2 ; 2 >
-    au < testing ; 2007 ; Metabolomics Volume 3 ; 3 >
-    au < testing ; 2008 ; Metabolomics Volume 4 ; 4 >
-    au < testing ; 2009 ; Metabolomics Volume 5 ; 5 >
-    au < testing ; 2010 ; Metabolomics Volume 6 ; 6 >
+    au < ready ; 2005 ; Metabolomics Volume 1 ; 1 >
+    au < ready ; 2006 ; Metabolomics Volume 2 ; 2 >
+    au < ready ; 2007 ; Metabolomics Volume 3 ; 3 >
+    au < ready ; 2008 ; Metabolomics Volume 4 ; 4 >
+    au < ready ; 2009 ; Metabolomics Volume 5 ; 5 >
+    au < ready ; 2010 ; Metabolomics Volume 6 ; 6 >
 
   }
 
@@ -25952,45 +26033,45 @@
     param[journal_issn] = 0167-4412
     attr[where] = content4a
 
-    au < manifest ; 1981-1982 ; Plant Molecular Biology Volume 1 ; 1 >
-    au < manifest ; 1983 ; Plant Molecular Biology Volume 2 ; 2 >
-    au < manifest ; 1984 ; Plant Molecular Biology Volume 3 ; 3 >
-    au < manifest ; 1985 ; Plant Molecular Biology Volume 4 ; 4 >
-    au < manifest ; 1985 ; Plant Molecular Biology Volume 5 ; 5 >
-    au < manifest ; 1986 ; Plant Molecular Biology Volume 6 ; 6 >
-    au < manifest ; 1986 ; Plant Molecular Biology Volume 7 ; 7 >
-    au < manifest ; 1987 ; Plant Molecular Biology Volume 8 ; 8 >
-    au < manifest ; 1987 ; Plant Molecular Biology Volume 9 ; 9 >
-    au < manifest ; 1987-1988 ; Plant Molecular Biology Volume 10 ; 10 >
-    au < manifest ; 1988 ; Plant Molecular Biology Volume 11 ; 11 >
-    au < manifest ; 1989 ; Plant Molecular Biology Volume 12 ; 12 >
-    au < manifest ; 1989 ; Plant Molecular Biology Volume 13 ; 13 >
-    au < manifest ; 1990 ; Plant Molecular Biology Volume 14 ; 14 >
-    au < manifest ; 1990 ; Plant Molecular Biology Volume 15 ; 15 >
-    au < manifest ; 1991 ; Plant Molecular Biology Volume 16 ; 16 >
-    au < manifest ; 1991 ; Plant Molecular Biology Volume 17 ; 17 >
-    au < manifest ; 1992 ; Plant Molecular Biology Volume 18 ; 18 >
-    au < manifest ; 1992 ; Plant Molecular Biology Volume 19 ; 19 >
-    au < manifest ; 1992 ; Plant Molecular Biology Volume 20 ; 20 >
-    au < manifest ; 1993 ; Plant Molecular Biology Volume 21 ; 21 >
-    au < manifest ; 1993 ; Plant Molecular Biology Volume 22 ; 22 >
-    au < manifest ; 1993 ; Plant Molecular Biology Volume 23 ; 23 >
-    au < manifest ; 1994 ; Plant Molecular Biology Volume 24 ; 24 >
-    au < manifest ; 1994 ; Plant Molecular Biology Volume 25 ; 25 >
-    au < manifest ; 1994 ; Plant Molecular Biology Volume 26 ; 26 >
-    au < manifest ; 1995 ; Plant Molecular Biology Volume 27 ; 27 >
-    au < manifest ; 1995 ; Plant Molecular Biology Volume 28 ; 28 >
-    au < manifest ; 1995 ; Plant Molecular Biology Volume 29 ; 29 >
-    au < manifest ; 1996 ; Plant Molecular Biology Volume 30 ; 30 >
-    au < manifest ; 1996 ; Plant Molecular Biology Volume 31 ; 31 >
-    au < manifest ; 1996 ; Plant Molecular Biology Volume 32 ; 32 >
-    au < manifest ; 1997 ; Plant Molecular Biology Volume 33 ; 33 >
-    au < manifest ; 1997 ; Plant Molecular Biology Volume 34 ; 34 >
-    au < manifest ; 1997 ; Plant Molecular Biology Volume 35 ; 35 >
-    au < manifest ; 1998 ; Plant Molecular Biology Volume 36 ; 36 >
-    au < manifest ; 1998 ; Plant Molecular Biology Volume 37 ; 37 >
-    au < manifest ; 1998 ; Plant Molecular Biology Volume 38 ; 38 >
-    au < manifest ; 1999 ; Plant Molecular Biology Volume 39 ; 39 >
+    au < testing ; 1981-1982 ; Plant Molecular Biology Volume 1 ; 1 >
+    au < testing ; 1983 ; Plant Molecular Biology Volume 2 ; 2 >
+    au < testing ; 1984 ; Plant Molecular Biology Volume 3 ; 3 >
+    au < testing ; 1985 ; Plant Molecular Biology Volume 4 ; 4 >
+    au < testing ; 1985 ; Plant Molecular Biology Volume 5 ; 5 >
+    au < testing ; 1986 ; Plant Molecular Biology Volume 6 ; 6 >
+    au < testing ; 1986 ; Plant Molecular Biology Volume 7 ; 7 >
+    au < testing ; 1987 ; Plant Molecular Biology Volume 8 ; 8 >
+    au < testing ; 1987 ; Plant Molecular Biology Volume 9 ; 9 >
+    au < testing ; 1987-1988 ; Plant Molecular Biology Volume 10 ; 10 >
+    au < testing ; 1988 ; Plant Molecular Biology Volume 11 ; 11 >
+    au < testing ; 1989 ; Plant Molecular Biology Volume 12 ; 12 >
+    au < testing ; 1989 ; Plant Molecular Biology Volume 13 ; 13 >
+    au < testing ; 1990 ; Plant Molecular Biology Volume 14 ; 14 >
+    au < testing ; 1990 ; Plant Molecular Biology Volume 15 ; 15 >
+    au < testing ; 1991 ; Plant Molecular Biology Volume 16 ; 16 >
+    au < testing ; 1991 ; Plant Molecular Biology Volume 17 ; 17 >
+    au < testing ; 1992 ; Plant Molecular Biology Volume 18 ; 18 >
+    au < testing ; 1992 ; Plant Molecular Biology Volume 19 ; 19 >
+    au < testing ; 1992 ; Plant Molecular Biology Volume 20 ; 20 >
+    au < testing ; 1993 ; Plant Molecular Biology Volume 21 ; 21 >
+    au < testing ; 1993 ; Plant Molecular Biology Volume 22 ; 22 >
+    au < testing ; 1993 ; Plant Molecular Biology Volume 23 ; 23 >
+    au < testing ; 1994 ; Plant Molecular Biology Volume 24 ; 24 >
+    au < testing ; 1994 ; Plant Molecular Biology Volume 25 ; 25 >
+    au < testing ; 1994 ; Plant Molecular Biology Volume 26 ; 26 >
+    au < testing ; 1995 ; Plant Molecular Biology Volume 27 ; 27 >
+    au < testing ; 1995 ; Plant Molecular Biology Volume 28 ; 28 >
+    au < testing ; 1995 ; Plant Molecular Biology Volume 29 ; 29 >
+    au < testing ; 1996 ; Plant Molecular Biology Volume 30 ; 30 >
+    au < testing ; 1996 ; Plant Molecular Biology Volume 31 ; 31 >
+    au < testing ; 1996 ; Plant Molecular Biology Volume 32 ; 32 >
+    au < testing ; 1997 ; Plant Molecular Biology Volume 33 ; 33 >
+    au < testing ; 1997 ; Plant Molecular Biology Volume 34 ; 34 >
+    au < testing ; 1997 ; Plant Molecular Biology Volume 35 ; 35 >
+    au < testing ; 1998 ; Plant Molecular Biology Volume 36 ; 36 >
+    au < testing ; 1998 ; Plant Molecular Biology Volume 37 ; 37 >
+    au < testing ; 1998 ; Plant Molecular Biology Volume 38 ; 38 >
+    au < testing ; 1999 ; Plant Molecular Biology Volume 39 ; 39 >
     au < ready ; 1999 ; Plant Molecular Biology Volume 40 ; 40 >
     au < ready ; 1999 ; Plant Molecular Biology Volume 41 ; 41 >
     au < ready ; 2000 ; Plant Molecular Biology Volume 42 ; 42 >
@@ -27003,68 +27084,68 @@
     au < manifest ; 2000 ; Psychopharmacology Volume 148 ; 148 >
     au < manifest ; 2000 ; Psychopharmacology Volume 149 ; 149 >
     au < manifest ; 2000 ; Psychopharmacology Volume 150 ; 150 >
-    au < manifest ; 2000 ; Psychopharmacology Volume 151 ; 151 >
-    au < manifest ; 2000 ; Psychopharmacology Volume 152 ; 152 >
-    au < manifest ; 2000 ; Psychopharmacology Volume 153 ; 153 >
-    au < manifest ; 2001 ; Psychopharmacology Volume 154 ; 154 >
-    au < manifest ; 2001 ; Psychopharmacology Volume 155 ; 155 >
-    au < manifest ; 2001 ; Psychopharmacology Volume 156 ; 156 >
-    au < manifest ; 2001 ; Psychopharmacology Volume 157 ; 157 >
-    au < manifest ; 2001 ; Psychopharmacology Volume 158 ; 158 >
-    au < manifest ; 2001 ; Psychopharmacology Volume 159 ; 159 >
-    au < manifest ; 2002 ; Psychopharmacology Volume 160 ; 160 >
-    au < manifest ; 2002 ; Psychopharmacology Volume 161 ; 161 >
-    au < manifest ; 2002 ; Psychopharmacology Volume 162 ; 162 >
-    au < manifest ; 2002 ; Psychopharmacology Volume 163 ; 163 >
-    au < manifest ; 2002 ; Psychopharmacology Volume 164 ; 164 >
-    au < manifest ; 2002 ; Psychopharmacology Volume 165 ; 165 >
-    au < manifest ; 2003 ; Psychopharmacology Volume 166 ; 166 >
-    au < manifest ; 2003 ; Psychopharmacology Volume 167 ; 167 >
-    au < manifest ; 2003 ; Psychopharmacology Volume 168 ; 168 >
-    au < manifest ; 2003 ; Psychopharmacology Volume 169 ; 169 >
-    au < manifest ; 2003 ; Psychopharmacology Volume 170 ; 170 >
-    au < manifest ; 2003 ; Psychopharmacology Volume 171 ; 171 >
-    au < manifest ; 2004 ; Psychopharmacology Volume 172 ; 172 >
-    au < manifest ; 2004 ; Psychopharmacology Volume 173 ; 173 >
-    au < manifest ; 2004 ; Psychopharmacology Volume 174 ; 174 >
-    au < manifest ; 2004 ; Psychopharmacology Volume 175 ; 175 >
-    au < manifest ; 2004 ; Psychopharmacology Volume 176 ; 176 >
-    au < manifest ; 2004 ; Psychopharmacology Volume 177 ; 177 >
-    au < manifest ; 2005 ; Psychopharmacology Volume 178 ; 178 >
-    au < manifest ; 2005 ; Psychopharmacology Volume 179 ; 179 >
-    au < manifest ; 2005 ; Psychopharmacology Volume 180 ; 180 >
-    au < manifest ; 2005 ; Psychopharmacology Volume 181 ; 181 >
-    au < manifest ; 2005 ; Psychopharmacology Volume 182 ; 182 >
-    au < manifest ; 2005 ; Psychopharmacology Volume 183 ; 183 >
-    au < manifest ; 2006 ; Psychopharmacology Volume 184 ; 184 >
-    au < testing ; 2006 ; Psychopharmacology Volume 185 ; 185 >
-    au < testing ; 2006 ; Psychopharmacology Volume 186 ; 186 >
-    au < testing ; 2006 ; Psychopharmacology Volume 187 ; 187 >
-    au < testing ; 2006 ; Psychopharmacology Volume 188 ; 188 >
-    au < testing ; 2006 ; Psychopharmacology Volume 189 ; 189 >
-    au < testing ; 2007 ; Psychopharmacology Volume 190 ; 190 >
-    au < testing ; 2007 ; Psychopharmacology Volume 191 ; 191 >
-    au < testing ; 2007 ; Psychopharmacology Volume 192 ; 192 >
-    au < testing ; 2007 ; Psychopharmacology Volume 193 ; 193 >
-    au < testing ; 2007 ; Psychopharmacology Volume 194 ; 194 >
-    au < testing ; 2007 ; Psychopharmacology Volume 195 ; 195 >
-    au < testing ; 2008 ; Psychopharmacology Volume 196 ; 196 >
-    au < testing ; 2008 ; Psychopharmacology Volume 197 ; 197 >
-    au < testing ; 2008 ; Psychopharmacology Volume 198 ; 198 >
-    au < testing ; 2008 ; Psychopharmacology Volume 199 ; 199 >
-    au < testing ; 2008 ; Psychopharmacology Volume 200 ; 200 >
-    au < testing ; 2008 ; Psychopharmacology Volume 201 ; 201 >
-    au < testing ; 2009 ; Psychopharmacology Volume 202 ; 202 >
-    au < testing ; 2009 ; Psychopharmacology Volume 203 ; 203 >
-    au < testing ; 2009 ; Psychopharmacology Volume 204 ; 204 >
-    au < testing ; 2009 ; Psychopharmacology Volume 205 ; 205 >
-    au < testing ; 2009 ; Psychopharmacology Volume 206 ; 206 >
-    au < testing ; 2009 ; Psychopharmacology Volume 207 ; 207 >
-    au < testing ; 2010 ; Psychopharmacology Volume 208 ; 208 >
-    au < testing ; 2010 ; Psychopharmacology Volume 209 ; 209 >
-    au < testing ; 2010 ; Psychopharmacology Volume 210 ; 210 >
-    au < testing ; 2010 ; Psychopharmacology Volume 211 ; 211 >
-    au < testing ; 2010 ; Psychopharmacology Volume 212 ; 212 >
+    au < testing ; 2000 ; Psychopharmacology Volume 151 ; 151 >
+    au < testing ; 2000 ; Psychopharmacology Volume 152 ; 152 >
+    au < testing ; 2000 ; Psychopharmacology Volume 153 ; 153 >
+    au < testing ; 2001 ; Psychopharmacology Volume 154 ; 154 >
+    au < testing ; 2001 ; Psychopharmacology Volume 155 ; 155 >
+    au < testing ; 2001 ; Psychopharmacology Volume 156 ; 156 >
+    au < testing ; 2001 ; Psychopharmacology Volume 157 ; 157 >
+    au < testing ; 2001 ; Psychopharmacology Volume 158 ; 158 >
+    au < testing ; 2001 ; Psychopharmacology Volume 159 ; 159 >
+    au < testing ; 2002 ; Psychopharmacology Volume 160 ; 160 >
+    au < testing ; 2002 ; Psychopharmacology Volume 161 ; 161 >
+    au < testing ; 2002 ; Psychopharmacology Volume 162 ; 162 >
+    au < testing ; 2002 ; Psychopharmacology Volume 163 ; 163 >
+    au < testing ; 2002 ; Psychopharmacology Volume 164 ; 164 >
+    au < testing ; 2002 ; Psychopharmacology Volume 165 ; 165 >
+    au < testing ; 2003 ; Psychopharmacology Volume 166 ; 166 >
+    au < testing ; 2003 ; Psychopharmacology Volume 167 ; 167 >
+    au < testing ; 2003 ; Psychopharmacology Volume 168 ; 168 >
+    au < testing ; 2003 ; Psychopharmacology Volume 169 ; 169 >
+    au < testing ; 2003 ; Psychopharmacology Volume 170 ; 170 >
+    au < testing ; 2003 ; Psychopharmacology Volume 171 ; 171 >
+    au < testing ; 2004 ; Psychopharmacology Volume 172 ; 172 >
+    au < testing ; 2004 ; Psychopharmacology Volume 173 ; 173 >
+    au < testing ; 2004 ; Psychopharmacology Volume 174 ; 174 >
+    au < testing ; 2004 ; Psychopharmacology Volume 175 ; 175 >
+    au < testing ; 2004 ; Psychopharmacology Volume 176 ; 176 >
+    au < testing ; 2004 ; Psychopharmacology Volume 177 ; 177 >
+    au < testing ; 2005 ; Psychopharmacology Volume 178 ; 178 >
+    au < testing ; 2005 ; Psychopharmacology Volume 179 ; 179 >
+    au < testing ; 2005 ; Psychopharmacology Volume 180 ; 180 >
+    au < testing ; 2005 ; Psychopharmacology Volume 181 ; 181 >
+    au < testing ; 2005 ; Psychopharmacology Volume 182 ; 182 >
+    au < testing ; 2005 ; Psychopharmacology Volume 183 ; 183 >
+    au < testing ; 2006 ; Psychopharmacology Volume 184 ; 184 >
+    au < ready ; 2006 ; Psychopharmacology Volume 185 ; 185 >
+    au < ready ; 2006 ; Psychopharmacology Volume 186 ; 186 >
+    au < ready ; 2006 ; Psychopharmacology Volume 187 ; 187 >
+    au < ready ; 2006 ; Psychopharmacology Volume 188 ; 188 >
+    au < ready ; 2006 ; Psychopharmacology Volume 189 ; 189 >
+    au < ready ; 2007 ; Psychopharmacology Volume 190 ; 190 >
+    au < ready ; 2007 ; Psychopharmacology Volume 191 ; 191 >
+    au < ready ; 2007 ; Psychopharmacology Volume 192 ; 192 >
+    au < ready ; 2007 ; Psychopharmacology Volume 193 ; 193 >
+    au < ready ; 2007 ; Psychopharmacology Volume 194 ; 194 >
+    au < ready ; 2007 ; Psychopharmacology Volume 195 ; 195 >
+    au < ready ; 2008 ; Psychopharmacology Volume 196 ; 196 >
+    au < ready ; 2008 ; Psychopharmacology Volume 197 ; 197 >
+    au < ready ; 2008 ; Psychopharmacology Volume 198 ; 198 >
+    au < ready ; 2008 ; Psychopharmacology Volume 199 ; 199 >
+    au < ready ; 2008 ; Psychopharmacology Volume 200 ; 200 >
+    au < ready ; 2008 ; Psychopharmacology Volume 201 ; 201 >
+    au < ready ; 2009 ; Psychopharmacology Volume 202 ; 202 >
+    au < ready ; 2009 ; Psychopharmacology Volume 203 ; 203 >
+    au < ready ; 2009 ; Psychopharmacology Volume 204 ; 204 >
+    au < ready ; 2009 ; Psychopharmacology Volume 205 ; 205 >
+    au < ready ; 2009 ; Psychopharmacology Volume 206 ; 206 >
+    au < ready ; 2009 ; Psychopharmacology Volume 207 ; 207 >
+    au < ready ; 2010 ; Psychopharmacology Volume 208 ; 208 >
+    au < ready ; 2010 ; Psychopharmacology Volume 209 ; 209 >
+    au < ready ; 2010 ; Psychopharmacology Volume 210 ; 210 >
+    au < ready ; 2010 ; Psychopharmacology Volume 211 ; 211 >
+    au < ready ; 2010 ; Psychopharmacology Volume 212 ; 212 >
 
   }
 
