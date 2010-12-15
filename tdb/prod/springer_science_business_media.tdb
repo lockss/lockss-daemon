@@ -18710,18 +18710,18 @@
     comment[50] = accidentally botched on disk, redo later elsewhere 
     comment[77] = persistent 400 error
 
-    au < testing ; 1922 ; Klinische Wochenschrift Volume 1 ; 1 >
+    au < ready ; 1922 ; Klinische Wochenschrift Volume 1 ; 1 >
     au < testing ; 1923 ; Klinische Wochenschrift Volume 2 ; 2 >
     au < testing ; 1924 ; Klinische Wochenschrift Volume 3 ; 3 >
     au < testing ; 1925 ; Klinische Wochenschrift Volume 4 ; 4 >
-    au < testing ; 1926 ; Klinische Wochenschrift Volume 5 ; 5 >
-    au < testing ; 1927 ; Klinische Wochenschrift Volume 6 ; 6 >
+    au < ready ; 1926 ; Klinische Wochenschrift Volume 5 ; 5 >
+    au < ready ; 1927 ; Klinische Wochenschrift Volume 6 ; 6 >
     au < testing ; 1928 ; Klinische Wochenschrift Volume 7 ; 7 >
-    au < testing ; 1929 ; Klinische Wochenschrift Volume 8 ; 8 >
+    au < ready ; 1929 ; Klinische Wochenschrift Volume 8 ; 8 >
     au < testing ; 1930 ; Klinische Wochenschrift Volume 9 ; 9 >
     au < testing ; 1931 ; Klinische Wochenschrift Volume 10 ; 10 >
-    au < testing ; 1932 ; Klinische Wochenschrift Volume 11 ; 11 >
-    au < testing ; 1932-1933 ; Klinische Wochenschrift Volume 12 ; 12 >
+    au < ready ; 1932 ; Klinische Wochenschrift Volume 11 ; 11 >
+    au < ready ; 1932-1933 ; Klinische Wochenschrift Volume 12 ; 12 >
     au < testing ; 1934 ; Klinische Wochenschrift Volume 13 ; 13 >
     au < testing ; 1935 ; Klinische Wochenschrift Volume 14 ; 14 >
     au < testing ; 1936 ; Klinische Wochenschrift Volume 15 ; 15 >
@@ -18729,37 +18729,37 @@
     au < testing ; 1938 ; Klinische Wochenschrift Volume 17 ; 17 >
     au < testing ; 1939 ; Klinische Wochenschrift Volume 18 ; 18 >
     au < testing ; 1940 ; Klinische Wochenschrift Volume 19 ; 19 >
-    au < testing ; 1941 ; Klinische Wochenschrift Volume 20 ; 20 >
+    au < ready ; 1941 ; Klinische Wochenschrift Volume 20 ; 20 >
     au < testing ; 1942 ; Klinische Wochenschrift Volume 21 ; 21 >
     au < testing ; 1943 ; Klinische Wochenschrift Volume 22 ; 22 >
     au < testing ; 1944 ; Klinische Wochenschrift Volume 23 ; 23 >
     au < testing ; 1946 ; Klinische Wochenschrift Volume 24 ; 24 >
     au < testing ; 1946-1947 ; Klinische Wochenschrift Volume 24-25 ; 24-25 >
-    au < testing ; 1948 ; Klinische Wochenschrift Volume 26 ; 26 >
+    au < ready ; 1948 ; Klinische Wochenschrift Volume 26 ; 26 >
     au < testing ; 1949 ; Klinische Wochenschrift Volume 27 ; 27 >
-    au < testing ; 1950 ; Klinische Wochenschrift Volume 28 ; 28 >
-    au < testing ; 1951 ; Klinische Wochenschrift Volume 29 ; 29 >
+    au < ready ; 1950 ; Klinische Wochenschrift Volume 28 ; 28 >
+    au < ready ; 1951 ; Klinische Wochenschrift Volume 29 ; 29 >
     au < testing ; 1952 ; Klinische Wochenschrift Volume 30 ; 30 >
     au < testing ; 1953 ; Klinische Wochenschrift Volume 31 ; 31 >
     au < testing ; 1954 ; Klinische Wochenschrift Volume 32 ; 32 >
     au < testing ; 1955 ; Klinische Wochenschrift Volume 33 ; 33 >
     au < testing ; 1956 ; Klinische Wochenschrift Volume 34 ; 34 >
-    au < testing ; 1957 ; Klinische Wochenschrift Volume 35 ; 35 >
+    au < ready ; 1957 ; Klinische Wochenschrift Volume 35 ; 35 >
     au < testing ; 1958 ; Klinische Wochenschrift Volume 36 ; 36 >
-    au < testing ; 1959 ; Klinische Wochenschrift Volume 37 ; 37 >
+    au < ready ; 1959 ; Klinische Wochenschrift Volume 37 ; 37 >
     au < testing ; 1960 ; Klinische Wochenschrift Volume 38 ; 38 >
-    au < testing ; 1961 ; Klinische Wochenschrift Volume 39 ; 39 >
+    au < ready ; 1961 ; Klinische Wochenschrift Volume 39 ; 39 >
     au < testing ; 1962 ; Klinische Wochenschrift Volume 40 ; 40 >
-    au < testing ; 1963 ; Klinische Wochenschrift Volume 41 ; 41 >
+    au < ready ; 1963 ; Klinische Wochenschrift Volume 41 ; 41 >
     au < testing ; 1964 ; Klinische Wochenschrift Volume 42 ; 42 >
-    au < testing ; 1965 ; Klinische Wochenschrift Volume 43 ; 43 >
+    au < ready ; 1965 ; Klinische Wochenschrift Volume 43 ; 43 >
     au < testing ; 1966 ; Klinische Wochenschrift Volume 44 ; 44 >
     au < testing ; 1967 ; Klinische Wochenschrift Volume 45 ; 45 >
     au < testing ; 1968 ; Klinische Wochenschrift Volume 46 ; 46 >
     au < testing ; 1969 ; Klinische Wochenschrift Volume 47 ; 47 >
     au < testing ; 1970 ; Klinische Wochenschrift Volume 48 ; 48 >
     au < testing ; 1971 ; Klinische Wochenschrift Volume 49 ; 49 >
-    au < notReady ; 1972 ; Klinische Wochenschrift Volume 50 ; 50 >
+    au < testing ; 1972 ; Klinische Wochenschrift Volume 50 ; 50 >
     au < ready ; 1973 ; Klinische Wochenschrift Volume 51 ; 51 >
     au < ready ; 1974 ; Klinische Wochenschrift Volume 52 ; 52 >
     au < ready ; 1975 ; Klinische Wochenschrift Volume 53 ; 53 >
@@ -18786,7 +18786,7 @@
     au < ready ; 1996 ; Journal of Molecular Medicine Volume 74 ; 74 >
     au < ready ; 1997 ; Journal of Molecular Medicine Volume 75 ; 75 >
     au < ready ; 1998 ; Journal of Molecular Medicine Volume 76 ; 76 >
-    au < notReady ; 1999 ; Journal of Molecular Medicine Volume 77 ; 77 >
+    au < testing ; 1999 ; Journal of Molecular Medicine Volume 77 ; 77 >
     au < ready ; 2000 ; Journal of Molecular Medicine Volume 78 ; 78 >
     au < ready ; 2001 ; Journal of Molecular Medicine Volume 79 ; 79 >
     au < ready ; 2002 ; Journal of Molecular Medicine Volume 80 ; 80 >
