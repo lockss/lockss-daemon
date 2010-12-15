@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = Institute of Southeast Asian Studies
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+
     title <
       name = ASEAN Economic Bulletin ;
       issn = 0217-4472 ;
@@ -16,14 +18,15 @@
 
     param[journal_dir] = asean_economic_bulletin
 
-    au < ready ; ASEAN Economic Bulletin Volume 23 ; 23 >
-    au < ready ; ASEAN Economic Bulletin Volume 24 ; 24 >
-    au < ready ; ASEAN Economic Bulletin Volume 25 ; 25 >
-    au < ready ; ASEAN Economic Bulletin Volume 26 ; 26 >
+    au < released ; ASEAN Economic Bulletin Volume 23 ; 23 >
+    au < released ; ASEAN Economic Bulletin Volume 24 ; 24 >
+    au < released ; ASEAN Economic Bulletin Volume 25 ; 25 >
+    au < released ; ASEAN Economic Bulletin Volume 26 ; 26 >
 
   }
 
   {
+
     title <
       name = Contemporary Southeast Asia: A Journal of International and Strategic Affairs ;
       issn = 0129-797X ;
@@ -32,14 +35,15 @@
 
     param[journal_dir] = contemporary_southeast_asia_a_journal_of_international_and_strategic_affairs
 
-    au < ready ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
-    au < ready ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
-    au < ready ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
-    au < ready ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
+    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 28 ; 28 >
+    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 29 ; 29 >
+    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 30 ; 30 >
+    au < released ; Contemporary Southeast Asia: A Journal of International and Strategic Affairs Volume 31 ; 31 >
 
   }
 
   {
+
     title <
       name = Sojourn: Journal of Social Issues in Southeast Asia ;
       issn = 0217-9520 ;
@@ -56,6 +60,7 @@
   }
 
   {
+
     title <
       name = Southeast Asian Affairs ;
       issn = 0377-5437 ;
@@ -64,8 +69,8 @@
 
     param[journal_dir] = southeast_asian_affairs
 
-    au < ready ; Southeast Asian Affairs Volume 2008 ; 2008 >
-    au < ready ; Southeast Asian Affairs Volume 2009 ; 2009 >
+    au < released ; Southeast Asian Affairs Volume 2008 ; 2008 >
+    au < released ; Southeast Asian Affairs Volume 2009 ; 2009 >
 
   }
 

@@ -4,20 +4,19 @@
     name = Institut national d'études démographiques
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
-
   {
   
     title <
       name = Population, English Edition
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = population
+    implicit < status ; name ; param[volume] >
 
-    au < ready ; Population, English Edition Volume 63 ; 63 >
-    au < ready ; Population, English Edition Volume 64 ; 64 >
+    au < released ; Population, English Edition Volume 63 ; 63 >
+    au < released ; Population, English Edition Volume 64 ; 64 >
 
   }
 

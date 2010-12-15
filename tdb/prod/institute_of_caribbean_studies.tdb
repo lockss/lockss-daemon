@@ -1,22 +1,23 @@
 {
+
   publisher <
     name = Institute of Caribbean Studies
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
-
   {
+
     title <
       name = Caribbean Studies ;
       issn = 0008-6533
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = caribbean_studies
+    implicit < status ; name ; param[volume] >
 
-    au < ready ; Caribbean Studies Volume 36 ; 36 >
-    au < ready ; Caribbean Studies Volume 37 ; 37 >
+    au < released ; Caribbean Studies Volume 36 ; 36 >
+    au < released ; Caribbean Studies Volume 37 ; 37 >
 
   }
 
