@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdbgln.py,v 1.1 2010-10-01 22:35:35 thib_gc Exp $
+# $Id: tdbgln.py,v 1.2 2010-12-15 00:09:22 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -35,7 +35,7 @@ import sys
 class TdbglnConstants:
     '''Constants associated with the tdbgln module.'''
     
-    VERSION = '''0.1.0'''
+    VERSION = '''0.1.1'''
     
     DESCRIPTION = '''Invokes the tdbout or tdbxml module with
 extensions and functionality specific to the Global LOCKSS Network
@@ -51,11 +51,9 @@ features and options.'''
     OPTION_NON_ALLIANCE_HELP = 'keep GLN AUs not earmarked for the LOCKSS Alliance'
 
     OPTION_TDBOUT = 'tdbout'
-    OPTION_TDBOUT_SHORT = 'o'
     OPTION_TDBOUT_HELP = 'invoke the tdbout module with GLN extensions (must be placed first)'
     
     OPTION_TDBXML = 'tdbxml'
-    OPTION_TDBXML_SHORT = 'x'
     OPTION_TDBXML_HELP = 'invoke the tdbxml module with GLN extensions (must be placed first)'
     
     MODES = [OPTION_TDBOUT,
@@ -73,13 +71,11 @@ def __option_parser__(parser=None, prelim_opt=None):
         elif prelim_opt.tdbxml: parser = tdbxml.__option_parser__(parser)
         else: parser.error('internal error')
     tdbgln_group = OptionGroup(parser, 'tdbgln module (%s)' % (TdbglnConstants.VERSION,))
-    tdbgln_group.add_option('-' + TdbglnConstants.OPTION_TDBOUT_SHORT,
-                            '--' + TdbglnConstants.OPTION_TDBOUT,
+    tdbgln_group.add_option('--' + TdbglnConstants.OPTION_TDBOUT,
                             action='store_true',
                             default=False,
                             help=TdbglnConstants.OPTION_TDBOUT_HELP)
-    tdbgln_group.add_option('-' + TdbglnConstants.OPTION_TDBXML_SHORT,
-                            '--' + TdbglnConstants.OPTION_TDBXML,
+    tdbgln_group.add_option('--' + TdbglnConstants.OPTION_TDBXML,
                             action='store_true',
                             default=False,
                             help=TdbglnConstants.OPTION_TDBXML_HELP)
