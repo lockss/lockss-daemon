@@ -16565,7 +16565,6 @@
     >
 
     param[journal_issn] = 0271-9142
-    attr[where] = content4a
 
     au < manifest ; 1981 ; Journal of Clinical Immunology Volume 1 ; 1 >
     au < manifest ; 1982 ; Journal of Clinical Immunology Volume 2 ; 2 >
@@ -26191,13 +26190,12 @@
     >
 
     param[journal_issn] = 1557-1955
-    attr[where] = content4a
 
-    au < testing ; 2006 ; Plasmonics Volume 1 ; 1 >
-    au < testing ; 2007 ; Plasmonics Volume 2 ; 2 >
-    au < testing ; 2008 ; Plasmonics Volume 3 ; 3 >
-    au < testing ; 2009 ; Plasmonics Volume 4 ; 4 >
-    au < testing ; 2010 ; Plasmonics Volume 5 ; 5 >
+    au < manifest ; 2006 ; Plasmonics Volume 1 ; 1 >
+    au < manifest ; 2007 ; Plasmonics Volume 2 ; 2 >
+    au < manifest ; 2008 ; Plasmonics Volume 3 ; 3 >
+    au < manifest ; 2009 ; Plasmonics Volume 4 ; 4 >
+    au < manifest ; 2010 ; Plasmonics Volume 5 ; 5 >
 
   }
 
