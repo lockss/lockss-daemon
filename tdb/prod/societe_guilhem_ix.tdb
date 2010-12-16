@@ -18,8 +18,8 @@
 
     param[journal_dir] = tenso
 
-    au < manifest ; Tenso Volume 24 ; 24 >
-    au < manifest ; Tenso Volume 25 ; 25 >
+    au < ready ; Tenso Volume 24 ; 24 >
+    au < ready ; Tenso Volume 25 ; 25 >
 
   }
 

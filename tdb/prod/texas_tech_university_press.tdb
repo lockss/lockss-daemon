@@ -18,8 +18,8 @@
 
     param[journal_dir] = conradiana
 
-    au < manifest ; Conradiana Volume 39 ; 39 >
-    au < manifest ; Conradiana Volume 40 ; 40 >
+    au < ready ; Conradiana Volume 39 ; 39 >
+    au < ready ; Conradiana Volume 40 ; 40 >
 
   }
 
@@ -33,9 +33,9 @@
 
     param[journal_dir] = helios
 
-    au < manifest ; Helios Volume 34 ; 34 >
-    au < manifest ; Helios Volume 35 ; 35 >
-    au < manifest ; Helios Volume 36 ; 36 >
+    au < ready ; Helios Volume 34 ; 34 >
+    au < ready ; Helios Volume 35 ; 35 >
+    au < ready ; Helios Volume 36 ; 36 >
 
   }
 
@@ -49,8 +49,8 @@
 
     param[journal_dir] = william_carlos_williams_review
 
-    au < manifest ; William Carlos Williams Review Volume 26 ; 26 >
-    au < manifest ; William Carlos Williams Review Volume 27 ; 27 >
+    au < ready ; William Carlos Williams Review Volume 26 ; 26 >
+    au < ready ; William Carlos Williams Review Volume 27 ; 27 >
 
   }
 
