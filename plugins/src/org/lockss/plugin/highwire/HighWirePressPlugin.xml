@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>56</string>
+    <string>57</string>
   </entry>
   <entry>
     <string>required_daemon_version</string>
@@ -74,7 +74,7 @@
   </entry>
   <entry>
     <string>au_def_pause_time</string>
-    <long>6000</long>
+    <long>4000</long>
   </entry>
   <entry>
     <string>au_crawlwindow</string>
