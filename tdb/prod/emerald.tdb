@@ -3984,42 +3984,41 @@
     >
 
     param[journal_issn] = 0309-0590
-    attr[where] = content1a
     
-    au < testing ; 1977 ; Journal of European Industrial Training Volume 1 ; 1 >
-    au < testing ; 1978 ; Journal of European Industrial Training Volume 2 ; 2 >
-    au < testing ; 1979 ; Journal of European Industrial Training Volume 3 ; 3 >
-    au < testing ; 1980 ; Journal of European Industrial Training Volume 4 ; 4 >
-    au < testing ; 1981 ; Journal of European Industrial Training Volume 5 ; 5 >
-    au < testing ; 1982 ; Journal of European Industrial Training Volume 6 ; 6 >
-    au < testing ; 1983 ; Journal of European Industrial Training Volume 7 ; 7 >
-    au < testing ; 1984 ; Journal of European Industrial Training Volume 8 ; 8 >
-    au < testing ; 1985 ; Journal of European Industrial Training Volume 9 ; 9 >
-    au < testing ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 >
-    au < testing ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 >
-    au < testing ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 >
-    au < testing ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 >
-    au < testing ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 >
-    au < testing ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 >
-    au < testing ; 1992 ; Journal of European Industrial Training Volume 16 ; 16 >
-    au < testing ; 1993 ; Journal of European Industrial Training Volume 17 ; 17 >
-    au < testing ; 1994 ; Journal of European Industrial Training Volume 18 ; 18 >
-    au < testing ; 1995 ; Journal of European Industrial Training Volume 19 ; 19 >
-    au < testing ; 1996 ; Journal of European Industrial Training Volume 20 ; 20 >
-    au < testing ; 1997 ; Journal of European Industrial Training Volume 21 ; 21 >
-    au < testing ; 1998 ; Journal of European Industrial Training Volume 22 ; 22 >
-    au < testing ; 1999 ; Journal of European Industrial Training Volume 23 ; 23 >
-    au < testing ; 2000 ; Journal of European Industrial Training Volume 24 ; 24 >
-    au < testing ; 2001 ; Journal of European Industrial Training Volume 25 ; 25 >
-    au < testing ; 2002 ; Journal of European Industrial Training Volume 26 ; 26 >
-    au < testing ; 2003 ; Journal of European Industrial Training Volume 27 ; 27 >
-    au < testing ; 2004 ; Journal of European Industrial Training Volume 28 ; 28 >
-    au < testing ; 2005 ; Journal of European Industrial Training Volume 29 ; 29 >
-    au < testing ; 2006 ; Journal of European Industrial Training Volume 30 ; 30 >
-    au < testing ; 2007 ; Journal of European Industrial Training Volume 31 ; 31 >
-    au < testing ; 2008 ; Journal of European Industrial Training Volume 32 ; 32 >
-    au < testing ; 2009 ; Journal of European Industrial Training Volume 33 ; 33 >
-    au < testing ; 2010 ; Journal of European Industrial Training Volume 34 ; 34 >
+    au < ready ; 1977 ; Journal of European Industrial Training Volume 1 ; 1 >
+    au < ready ; 1978 ; Journal of European Industrial Training Volume 2 ; 2 >
+    au < ready ; 1979 ; Journal of European Industrial Training Volume 3 ; 3 >
+    au < ready ; 1980 ; Journal of European Industrial Training Volume 4 ; 4 >
+    au < ready ; 1981 ; Journal of European Industrial Training Volume 5 ; 5 >
+    au < ready ; 1982 ; Journal of European Industrial Training Volume 6 ; 6 >
+    au < ready ; 1983 ; Journal of European Industrial Training Volume 7 ; 7 >
+    au < ready ; 1984 ; Journal of European Industrial Training Volume 8 ; 8 >
+    au < ready ; 1985 ; Journal of European Industrial Training Volume 9 ; 9 >
+    au < ready ; 1986 ; Journal of European Industrial Training Volume 10 ; 10 >
+    au < ready ; 1987 ; Journal of European Industrial Training Volume 11 ; 11 >
+    au < ready ; 1988 ; Journal of European Industrial Training Volume 12 ; 12 >
+    au < ready ; 1989 ; Journal of European Industrial Training Volume 13 ; 13 >
+    au < ready ; 1990 ; Journal of European Industrial Training Volume 14 ; 14 >
+    au < ready ; 1991 ; Journal of European Industrial Training Volume 15 ; 15 >
+    au < ready ; 1992 ; Journal of European Industrial Training Volume 16 ; 16 >
+    au < ready ; 1993 ; Journal of European Industrial Training Volume 17 ; 17 >
+    au < notReady ; 1994 ; Journal of European Industrial Training Volume 18 ; 18 >
+    au < ready ; 1995 ; Journal of European Industrial Training Volume 19 ; 19 >
+    au < ready ; 1996 ; Journal of European Industrial Training Volume 20 ; 20 >
+    au < ready ; 1997 ; Journal of European Industrial Training Volume 21 ; 21 >
+    au < ready ; 1998 ; Journal of European Industrial Training Volume 22 ; 22 >
+    au < ready ; 1999 ; Journal of European Industrial Training Volume 23 ; 23 >
+    au < ready ; 2000 ; Journal of European Industrial Training Volume 24 ; 24 >
+    au < ready ; 2001 ; Journal of European Industrial Training Volume 25 ; 25 >
+    au < ready ; 2002 ; Journal of European Industrial Training Volume 26 ; 26 >
+    au < ready ; 2003 ; Journal of European Industrial Training Volume 27 ; 27 >
+    au < ready ; 2004 ; Journal of European Industrial Training Volume 28 ; 28 >
+    au < ready ; 2005 ; Journal of European Industrial Training Volume 29 ; 29 >
+    au < ready ; 2006 ; Journal of European Industrial Training Volume 30 ; 30 >
+    au < ready ; 2007 ; Journal of European Industrial Training Volume 31 ; 31 >
+    au < ready ; 2008 ; Journal of European Industrial Training Volume 32 ; 32 >
+    au < ready ; 2009 ; Journal of European Industrial Training Volume 33 ; 33 >
+    au < ready ; 2010 ; Journal of European Industrial Training Volume 34 ; 34 >
 
   }
 
@@ -4031,11 +4030,10 @@
     >
 
     param[journal_issn] = 1753-9269
-    attr[where] = content1b
     
-    au < testing ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 >
-    au < testing ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 >
-    au < testing ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 >
+    au < ready ; 2008 ; Journal of European Real Estate Research Volume 1 ; 1 >
+    au < ready ; 2009 ; Journal of European Real Estate Research Volume 2 ; 2 >
+    au < ready ; 2010 ; Journal of European Real Estate Research Volume 3 ; 3 >
 
   }
 
@@ -4046,16 +4044,15 @@
     >
 
     param[journal_issn] = 1472-5967
-    attr[where] = content1b
     
-    au < testing ; 2003 ; Journal of Facilities Management Volume 1 ; 1 >
-    au < testing ; 2004 ; Journal of Facilities Management Volume 2 ; 2 >
-    au < testing ; 2005 ; Journal of Facilities Management Volume 3 ; 3 >
-    au < testing ; 2006 ; Journal of Facilities Management Volume 4 ; 4 >
-    au < testing ; 2007 ; Journal of Facilities Management Volume 5 ; 5 >
-    au < testing ; 2008 ; Journal of Facilities Management Volume 6 ; 6 >
-    au < testing ; 2009 ; Journal of Facilities Management Volume 7 ; 7 >
-    au < testing ; 2010 ; Journal of Facilities Management Volume 8 ; 8 >
+    au < ready ; 2003 ; Journal of Facilities Management Volume 1 ; 1 >
+    au < ready ; 2004 ; Journal of Facilities Management Volume 2 ; 2 >
+    au < ready ; 2005 ; Journal of Facilities Management Volume 3 ; 3 >
+    au < ready ; 2006 ; Journal of Facilities Management Volume 4 ; 4 >
+    au < ready ; 2007 ; Journal of Facilities Management Volume 5 ; 5 >
+    au < ready ; 2008 ; Journal of Facilities Management Volume 6 ; 6 >
+    au < ready ; 2009 ; Journal of Facilities Management Volume 7 ; 7 >
+    au < ready ; 2010 ; Journal of Facilities Management Volume 8 ; 8 >
 
   }
 
@@ -4066,7 +4063,6 @@
     >
 
     param[journal_issn] = 1361-2026
-    attr[where] = content1b
     
     au < ready ; 1997 ; Journal of Fashion Marketing and Management Volume 1 ; 1 >
     au < ready ; 1998 ; Journal of Fashion Marketing and Management Volume 2 ; 2 >
@@ -4081,7 +4077,7 @@
     au < ready ; 2007 ; Journal of Fashion Marketing and Management Volume 11 ; 11 >
     au < ready ; 2008 ; Journal of Fashion Marketing and Management Volume 12 ; 12 >
     au < ready ; 2009 ; Journal of Fashion Marketing and Management Volume 13 ; 13 >
-    au < testing ; 2010 ; Journal of Fashion Marketing and Management Volume 14 ; 14 >
+    au < ready ; 2010 ; Journal of Fashion Marketing and Management Volume 14 ; 14 >
 
   }
 
@@ -4093,25 +4089,24 @@
     >
 
     param[journal_issn] = 1359-0790
-    attr[where] = content2a
     
-    au < testing ; 1994 ; Journal of Financial Crime Volume 1 ; 1 >
-    au < testing ; 1995 ; Journal of Financial Crime Volume 2 ; 2 >
-    au < testing ; 1996 ; Journal of Financial Crime Volume 3 ; 3 >
-    au < testing ; 1997 ; Journal of Financial Crime Volume 4 ; 4 >
-    au < testing ; 1998 ; Journal of Financial Crime Volume 5 ; 5 >
-    au < testing ; 1999 ; Journal of Financial Crime Volume 6 ; 6 >
-    au < testing ; 2000 ; Journal of Financial Crime Volume 7 ; 7 >
-    au < testing ; 2001 ; Journal of Financial Crime Volume 8 ; 8 >
-    au < testing ; 2002 ; Journal of Financial Crime Volume 9 ; 9 >
-    au < testing ; 2003 ; Journal of Financial Crime Volume 10 ; 10 >
-    au < testing ; 2004 ; Journal of Financial Crime Volume 11 ; 11 >
-    au < testing ; 2005 ; Journal of Financial Crime Volume 12 ; 12 >
-    au < testing ; 2006 ; Journal of Financial Crime Volume 13 ; 13 >
-    au < testing ; 2007 ; Journal of Financial Crime Volume 14 ; 14 >
-    au < testing ; 2008 ; Journal of Financial Crime Volume 15 ; 15 >
-    au < testing ; 2009 ; Journal of Financial Crime Volume 16 ; 16 >
-    au < testing ; 2010 ; Journal of Financial Crime Volume 17 ; 17 >
+    au < ready ; 1994 ; Journal of Financial Crime Volume 1 ; 1 >
+    au < ready ; 1995 ; Journal of Financial Crime Volume 2 ; 2 >
+    au < ready ; 1996 ; Journal of Financial Crime Volume 3 ; 3 >
+    au < ready ; 1997 ; Journal of Financial Crime Volume 4 ; 4 >
+    au < ready ; 1998 ; Journal of Financial Crime Volume 5 ; 5 >
+    au < ready ; 1999 ; Journal of Financial Crime Volume 6 ; 6 >
+    au < ready ; 2000 ; Journal of Financial Crime Volume 7 ; 7 >
+    au < ready ; 2001 ; Journal of Financial Crime Volume 8 ; 8 >
+    au < ready ; 2002 ; Journal of Financial Crime Volume 9 ; 9 >
+    au < ready ; 2003 ; Journal of Financial Crime Volume 10 ; 10 >
+    au < ready ; 2004 ; Journal of Financial Crime Volume 11 ; 11 >
+    au < ready ; 2005 ; Journal of Financial Crime Volume 12 ; 12 >
+    au < ready ; 2006 ; Journal of Financial Crime Volume 13 ; 13 >
+    au < ready ; 2007 ; Journal of Financial Crime Volume 14 ; 14 >
+    au < ready ; 2008 ; Journal of Financial Crime Volume 15 ; 15 >
+    au < ready ; 2009 ; Journal of Financial Crime Volume 16 ; 16 >
+    au < ready ; 2010 ; Journal of Financial Crime Volume 17 ; 17 >
 
   }
 
@@ -4123,10 +4118,9 @@
     >
 
     param[journal_issn] = 1757-6385
-    attr[where] = content2b
     
-    au < testing ; 2009 ; Journal of Financial Economic Policy Volume 1 ; 1 >
-    au < testing ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 >
+    au < ready ; 2009 ; Journal of Financial Economic Policy Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Financial Economic Policy Volume 2 ; 2 >
 
   }
 
@@ -4138,14 +4132,13 @@
     >
 
     param[journal_issn] = 1366-4387
-    attr[where] = content2b
     
-    au < testing ; 2005 ; Journal of Financial Management of Property and Construction Volume 10 ; 10 >
-    au < testing ; 2006 ; Journal of Financial Management of Property and Construction Volume 11 ; 11 >
-    au < testing ; 2007 ; Journal of Financial Management of Property and Construction Volume 12 ; 12 >
-    au < testing ; 2008 ; Journal of Financial Management of Property and Construction Volume 13 ; 13 >
-    au < testing ; 2009 ; Journal of Financial Management of Property and Construction Volume 14 ; 14 >
-    au < testing ; 2010 ; Journal of Financial Management of Property and Construction Volume 15 ; 15 >
+    au < ready ; 2005 ; Journal of Financial Management of Property and Construction Volume 10 ; 10 >
+    au < ready ; 2006 ; Journal of Financial Management of Property and Construction Volume 11 ; 11 >
+    au < ready ; 2007 ; Journal of Financial Management of Property and Construction Volume 12 ; 12 >
+    au < ready ; 2008 ; Journal of Financial Management of Property and Construction Volume 13 ; 13 >
+    au < ready ; 2009 ; Journal of Financial Management of Property and Construction Volume 14 ; 14 >
+    au < ready ; 2010 ; Journal of Financial Management of Property and Construction Volume 15 ; 15 >
 
   }
 
@@ -4157,26 +4150,25 @@
     >
 
     param[journal_issn] = 1358-1988
-    attr[where] = content3a
     
-    au < testing ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 >
-    au < testing ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 >
-    au < testing ; 1995 ; Journal of Financial Regulation and Compliance Volume 3 ; 3 >
-    au < testing ; 1996 ; Journal of Financial Regulation and Compliance Volume 4 ; 4 >
-    au < testing ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 >
-    au < testing ; 1998 ; Journal of Financial Regulation and Compliance Volume 6 ; 6 >
-    au < testing ; 1999 ; Journal of Financial Regulation and Compliance Volume 7 ; 7 >
-    au < testing ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 >
-    au < testing ; 2001 ; Journal of Financial Regulation and Compliance Volume 9 ; 9 >
-    au < testing ; 2002 ; Journal of Financial Regulation and Compliance Volume 10 ; 10 >
-    au < testing ; 2003 ; Journal of Financial Regulation and Compliance Volume 11 ; 11 >
-    au < testing ; 2004 ; Journal of Financial Regulation and Compliance Volume 12 ; 12 >
-    au < testing ; 2005 ; Journal of Financial Regulation and Compliance Volume 13 ; 13 >
-    au < testing ; 2006 ; Journal of Financial Regulation and Compliance Volume 14 ; 14 >
-    au < testing ; 2007 ; Journal of Financial Regulation and Compliance Volume 15 ; 15 >
-    au < testing ; 2008 ; Journal of Financial Regulation and Compliance Volume 16 ; 16 >
-    au < testing ; 2009 ; Journal of Financial Regulation and Compliance Volume 17 ; 17 >
-    au < testing ; 2010 ; Journal of Financial Regulation and Compliance Volume 18 ; 18 >
+    au < ready ; 1993 ; Journal of Financial Regulation and Compliance Volume 1 ; 1 >
+    au < ready ; 1994 ; Journal of Financial Regulation and Compliance Volume 2 ; 2 >
+    au < ready ; 1995 ; Journal of Financial Regulation and Compliance Volume 3 ; 3 >
+    au < ready ; 1996 ; Journal of Financial Regulation and Compliance Volume 4 ; 4 >
+    au < ready ; 1997 ; Journal of Financial Regulation and Compliance Volume 5 ; 5 >
+    au < ready ; 1998 ; Journal of Financial Regulation and Compliance Volume 6 ; 6 >
+    au < ready ; 1999 ; Journal of Financial Regulation and Compliance Volume 7 ; 7 >
+    au < ready ; 2000 ; Journal of Financial Regulation and Compliance Volume 8 ; 8 >
+    au < notReady ; 2001 ; Journal of Financial Regulation and Compliance Volume 9 ; 9 >
+    au < ready ; 2002 ; Journal of Financial Regulation and Compliance Volume 10 ; 10 >
+    au < ready ; 2003 ; Journal of Financial Regulation and Compliance Volume 11 ; 11 >
+    au < ready ; 2004 ; Journal of Financial Regulation and Compliance Volume 12 ; 12 >
+    au < ready ; 2005 ; Journal of Financial Regulation and Compliance Volume 13 ; 13 >
+    au < ready ; 2006 ; Journal of Financial Regulation and Compliance Volume 14 ; 14 >
+    au < ready ; 2007 ; Journal of Financial Regulation and Compliance Volume 15 ; 15 >
+    au < ready ; 2008 ; Journal of Financial Regulation and Compliance Volume 16 ; 16 >
+    au < ready ; 2009 ; Journal of Financial Regulation and Compliance Volume 17 ; 17 >
+    au < ready ; 2010 ; Journal of Financial Regulation and Compliance Volume 18 ; 18 >
 
   }
 
@@ -4188,16 +4180,15 @@
     >
 
     param[journal_issn] = 1985-2517
-    attr[where] = content3b
     
-    au < testing ; 2003 ; Journal of Financial Reporting and Accounting Volume 1 ; 1 >
-    au < testing ; 2004 ; Journal of Financial Reporting and Accounting Volume 2 ; 2 >
-    au < testing ; 2005 ; Journal of Financial Reporting and Accounting Volume 3 ; 3 >
-    au < testing ; 2006 ; Journal of Financial Reporting and Accounting Volume 4 ; 4 >
-    au < testing ; 2007 ; Journal of Financial Reporting and Accounting Volume 5 ; 5 >
-    au < testing ; 2008 ; Journal of Financial Reporting and Accounting Volume 6 ; 6 >
-    au < testing ; 2009 ; Journal of Financial Reporting and Accounting Volume 7 ; 7 >
-    au < testing ; 2010 ; Journal of Financial Reporting and Accounting Volume 8 ; 8 >
+    au < ready ; 2003 ; Journal of Financial Reporting and Accounting Volume 1 ; 1 >
+    au < ready ; 2004 ; Journal of Financial Reporting and Accounting Volume 2 ; 2 >
+    au < ready ; 2005 ; Journal of Financial Reporting and Accounting Volume 3 ; 3 >
+    au < ready ; 2006 ; Journal of Financial Reporting and Accounting Volume 4 ; 4 >
+    au < ready ; 2007 ; Journal of Financial Reporting and Accounting Volume 5 ; 5 >
+    au < ready ; 2008 ; Journal of Financial Reporting and Accounting Volume 6 ; 6 >
+    au < ready ; 2009 ; Journal of Financial Reporting and Accounting Volume 7 ; 7 >
+    au < ready ; 2010 ; Journal of Financial Reporting and Accounting Volume 8 ; 8 >
 
   }
 
@@ -4209,9 +4200,8 @@
     >
 
     param[journal_issn] = 2041-2568
-    attr[where] = content3b
     
-    au < testing ; 2010 ; Journal of Global Responsibility  Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Global Responsibility  Volume 1 ; 1 >
 
   }
 
@@ -4223,16 +4213,15 @@
     >
 
     param[journal_issn] = 1477-7266
-    attr[where] = content4a
     
-    au < testing ; 2003 ; Journal of Health Organisation and Management Volume 17 ; 17 >
-    au < testing ; 2004 ; Journal of Health Organisation and Management Volume 18 ; 18 >
-    au < testing ; 2005 ; Journal of Health Organisation and Management Volume 19 ; 19 >
-    au < testing ; 2006 ; Journal of Health Organisation and Management Volume 20 ; 20 >
-    au < testing ; 2007 ; Journal of Health Organisation and Management Volume 21 ; 21 >
-    au < testing ; 2008 ; Journal of Health Organisation and Management Volume 22 ; 22 >
-    au < testing ; 2009 ; Journal of Health Organisation and Management Volume 23 ; 23 >
-    au < testing ; 2010 ; Journal of Health Organisation and Management Volume 24 ; 24 >
+    au < ready ; 2003 ; Journal of Health Organisation and Management Volume 17 ; 17 >
+    au < ready ; 2004 ; Journal of Health Organisation and Management Volume 18 ; 18 >
+    au < ready ; 2005 ; Journal of Health Organisation and Management Volume 19 ; 19 >
+    au < ready ; 2006 ; Journal of Health Organisation and Management Volume 20 ; 20 >
+    au < ready ; 2007 ; Journal of Health Organisation and Management Volume 21 ; 21 >
+    au < ready ; 2008 ; Journal of Health Organisation and Management Volume 22 ; 22 >
+    au < ready ; 2009 ; Journal of Health Organisation and Management Volume 23 ; 23 >
+    au < ready ; 2010 ; Journal of Health Organisation and Management Volume 24 ; 24 >
 
   }
 
@@ -4244,10 +4233,9 @@
     >
 
     param[journal_issn] = 1755-750X
-    attr[where] = content4a
     
-    au < testing ; 2009 ; Journal of Historical Research in Marketing Volume 1 ; 1 >
-    au < testing ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 >
+    au < ready ; 2009 ; Journal of Historical Research in Marketing Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Historical Research in Marketing Volume 2 ; 2 >
 
   }
 
@@ -4259,9 +4247,8 @@
     >
 
     param[journal_issn] = 1757-9880
-    attr[where] = content4a
     
-    au < testing ; 2010 ; Journal of Hospitality and Tourism Technology Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Hospitality and Tourism Technology Volume 1 ; 1 >
 
   }
 
@@ -4273,22 +4260,21 @@
     >
 
     param[journal_issn] = 1401-338X
-    attr[where] = content4b
     
-    au < testing ; 1996 ; Journal of Human Resource Costing & Accounting Volume 1 ; 1 >
-    au < testing ; 1997 ; Journal of Human Resource Costing & Accounting Volume 2 ; 2 >
-    au < testing ; 1998 ; Journal of Human Resource Costing & Accounting Volume 3 ; 3 >
-    au < testing ; 1999 ; Journal of Human Resource Costing & Accounting Volume 4 ; 4 >
-    au < testing ; 2000 ; Journal of Human Resource Costing & Accounting Volume 5 ; 5 >
-    au < testing ; 2001 ; Journal of Human Resource Costing & Accounting Volume 6 ; 6 >
-    au < testing ; 2003 ; Journal of Human Resource Costing & Accounting Volume 7 ; 7 >
-    au < testing ; 2004 ; Journal of Human Resource Costing & Accounting Volume 8 ; 8 >
-    au < testing ; 2005 ; Journal of Human Resource Costing & Accounting Volume 9 ; 9 >
-    au < testing ; 2006 ; Journal of Human Resource Costing & Accounting Volume 10 ; 10 >
-    au < testing ; 2007 ; Journal of Human Resource Costing & Accounting Volume 11 ; 11 >
-    au < testing ; 2008 ; Journal of Human Resource Costing & Accounting Volume 12 ; 12 >
-    au < testing ; 2009 ; Journal of Human Resource Costing & Accounting Volume 13 ; 13 >
-    au < testing ; 2010 ; Journal of Human Resource Costing & Accounting Volume 14 ; 14 >
+    au < ready ; 1996 ; Journal of Human Resource Costing & Accounting Volume 1 ; 1 >
+    au < ready ; 1997 ; Journal of Human Resource Costing & Accounting Volume 2 ; 2 >
+    au < ready ; 1998 ; Journal of Human Resource Costing & Accounting Volume 3 ; 3 >
+    au < ready ; 1999 ; Journal of Human Resource Costing & Accounting Volume 4 ; 4 >
+    au < ready ; 2000 ; Journal of Human Resource Costing & Accounting Volume 5 ; 5 >
+    au < ready ; 2001 ; Journal of Human Resource Costing & Accounting Volume 6 ; 6 >
+    au < ready ; 2003 ; Journal of Human Resource Costing & Accounting Volume 7 ; 7 >
+    au < ready ; 2004 ; Journal of Human Resource Costing & Accounting Volume 8 ; 8 >
+    au < ready ; 2005 ; Journal of Human Resource Costing & Accounting Volume 9 ; 9 >
+    au < ready ; 2006 ; Journal of Human Resource Costing & Accounting Volume 10 ; 10 >
+    au < ready ; 2007 ; Journal of Human Resource Costing & Accounting Volume 11 ; 11 >
+    au < ready ; 2008 ; Journal of Human Resource Costing & Accounting Volume 12 ; 12 >
+    au < ready ; 2009 ; Journal of Human Resource Costing & Accounting Volume 13 ; 13 >
+    au < ready ; 2010 ; Journal of Human Resource Costing & Accounting Volume 14 ; 14 >
 
   }
 
@@ -4300,10 +4286,9 @@
     >
 
     param[journal_issn] = 1755-4195
-    attr[where] = content5a
     
-    au < testing ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 >
-    au < testing ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 >
+    au < ready ; 2009 ; Journal of Indian Business Research Volume 1 ; 1 >
+    au < notReady ; 2010 ; Journal of Indian Business Research Volume 2 ; 2 >
 
   }
 
@@ -4315,16 +4300,15 @@
     >
 
     param[journal_issn] = 1477-996X
-    attr[where] = content5a
     
-    au < testing ; 2003 ; Journal of Information, Communication and Ethics in Society Volume 1 ; 1 >
-    au < testing ; 2004 ; Journal of Information, Communication and Ethics in Society Volume 2 ; 2 >
-    au < testing ; 2005 ; Journal of Information, Communication and Ethics in Society Volume 3 ; 3 >
-    au < testing ; 2006 ; Journal of Information, Communication and Ethics in Society Volume 4 ; 4 >
-    au < testing ; 2007 ; Journal of Information, Communication and Ethics in Society Volume 5 ; 5 >
-    au < testing ; 2008 ; Journal of Information, Communication and Ethics in Society Volume 6 ; 6 >
-    au < testing ; 2009 ; Journal of Information, Communication and Ethics in Society Volume 7 ; 7 >
-    au < testing ; 2010 ; Journal of Information, Communication and Ethics in Society Volume 8 ; 8 >
+    au < ready ; 2003 ; Journal of Information, Communication and Ethics in Society Volume 1 ; 1 >
+    au < ready ; 2004 ; Journal of Information, Communication and Ethics in Society Volume 2 ; 2 >
+    au < ready ; 2005 ; Journal of Information, Communication and Ethics in Society Volume 3 ; 3 >
+    au < ready ; 2006 ; Journal of Information, Communication and Ethics in Society Volume 4 ; 4 >
+    au < ready ; 2007 ; Journal of Information, Communication and Ethics in Society Volume 5 ; 5 >
+    au < ready ; 2008 ; Journal of Information, Communication and Ethics in Society Volume 6 ; 6 >
+    au < ready ; 2009 ; Journal of Information, Communication and Ethics in Society Volume 7 ; 7 >
+    au < ready ; 2010 ; Journal of Information, Communication and Ethics in Society Volume 8 ; 8 >
 
   }
 
@@ -4336,19 +4320,18 @@
     >
 
     param[journal_issn] = 1469-1930
-    attr[where] = content5b
     
-    au < testing ; 2000 ; Journal of Intellectual Capital Volume 1 ; 1 >
-    au < testing ; 2001 ; Journal of Intellectual Capital Volume 2 ; 2 >
-    au < testing ; 2002 ; Journal of Intellectual Capital Volume 3 ; 3 >
-    au < testing ; 2003 ; Journal of Intellectual Capital Volume 4 ; 4 >
-    au < testing ; 2004 ; Journal of Intellectual Capital Volume 5 ; 5 >
-    au < testing ; 2005 ; Journal of Intellectual Capital Volume 6 ; 6 >
-    au < testing ; 2006 ; Journal of Intellectual Capital Volume 7 ; 7 >
-    au < testing ; 2007 ; Journal of Intellectual Capital Volume 8 ; 8 >
-    au < testing ; 2008 ; Journal of Intellectual Capital Volume 9 ; 9 >
-    au < testing ; 2009 ; Journal of Intellectual Capital Volume 10 ; 10 >
-    au < testing ; 2010 ; Journal of Intellectual Capital Volume 11 ; 11 >
+    au < ready ; 2000 ; Journal of Intellectual Capital Volume 1 ; 1 >
+    au < ready ; 2001 ; Journal of Intellectual Capital Volume 2 ; 2 >
+    au < ready ; 2002 ; Journal of Intellectual Capital Volume 3 ; 3 >
+    au < ready ; 2003 ; Journal of Intellectual Capital Volume 4 ; 4 >
+    au < ready ; 2004 ; Journal of Intellectual Capital Volume 5 ; 5 >
+    au < ready ; 2005 ; Journal of Intellectual Capital Volume 6 ; 6 >
+    au < ready ; 2006 ; Journal of Intellectual Capital Volume 7 ; 7 >
+    au < ready ; 2007 ; Journal of Intellectual Capital Volume 8 ; 8 >
+    au < ready ; 2008 ; Journal of Intellectual Capital Volume 9 ; 9 >
+    au < ready ; 2009 ; Journal of Intellectual Capital Volume 10 ; 10 >
+    au < ready ; 2010 ; Journal of Intellectual Capital Volume 11 ; 11 >
 
   }
 
@@ -4360,17 +4343,16 @@
     >
 
     param[journal_issn] = 1477-0024
-    attr[where] = content5b
     
-    au < testing ; 2002 ; Journal of International Trade Law and Policy Volume 1 ; 1 >
-    au < testing ; 2003 ; Journal of International Trade Law and Policy Volume 2 ; 2 >
-    au < testing ; 2004 ; Journal of International Trade Law and Policy Volume 3 ; 3 >
-    au < testing ; 2005 ; Journal of International Trade Law and Policy Volume 4 ; 4 >
-    au < testing ; 2006 ; Journal of International Trade Law and Policy Volume 5 ; 5 >
-    au < testing ; 2007 ; Journal of International Trade Law and Policy Volume 6 ; 6 >
-    au < testing ; 2008 ; Journal of International Trade Law and Policy Volume 7 ; 7 >
-    au < testing ; 2009 ; Journal of International Trade Law and Policy Volume 8 ; 8 >
-    au < testing ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 >
+    au < notReady ; 2002 ; Journal of International Trade Law and Policy Volume 1 ; 1 >
+    au < ready ; 2003 ; Journal of International Trade Law and Policy Volume 2 ; 2 >
+    au < notReady ; 2004 ; Journal of International Trade Law and Policy Volume 3 ; 3 >
+    au < ready ; 2005 ; Journal of International Trade Law and Policy Volume 4 ; 4 >
+    au < ready ; 2006 ; Journal of International Trade Law and Policy Volume 5 ; 5 >
+    au < ready ; 2007 ; Journal of International Trade Law and Policy Volume 6 ; 6 >
+    au < ready ; 2008 ; Journal of International Trade Law and Policy Volume 7 ; 7 >
+    au < ready ; 2009 ; Journal of International Trade Law and Policy Volume 8 ; 8 >
+    au < ready ; 2010 ; Journal of International Trade Law and Policy Volume 9 ; 9 >
 
   }
 
@@ -4382,19 +4364,18 @@
     >
 
     param[journal_issn] = 1528-5812
-    attr[where] = content6a
     
-    au < testing ; 2001 ; Journal of Investment Compliance Volume 1 ; 1 >
-    au < testing ; 2002 ; Journal of Investment Compliance Volume 2 ; 2 >
-    au < testing ; 2003 ; Journal of Investment Compliance Volume 3 ; 3 >
-    au < testing ; 2004 ; Journal of Investment Compliance Volume 4 ; 4 >
-    au < testing ; 2005 ; Journal of Investment Compliance Volume 5 ; 5 >
-    au < testing ; 2005 ; Journal of Investment Compliance Volume 6 ; 6 >
-    au < testing ; 2006 ; Journal of Investment Compliance Volume 7 ; 7 >
-    au < testing ; 2007 ; Journal of Investment Compliance Volume 8 ; 8 >
-    au < testing ; 2008 ; Journal of Investment Compliance Volume 9 ; 9 >
-    au < testing ; 2009 ; Journal of Investment Compliance Volume 10 ; 10 >
-    au < testing ; 2010 ; Journal of Investment Compliance Volume 11 ; 11 >
+    au < ready ; 2001 ; Journal of Investment Compliance Volume 1 ; 1 >
+    au < ready ; 2002 ; Journal of Investment Compliance Volume 2 ; 2 >
+    au < notReady ; 2003 ; Journal of Investment Compliance Volume 3 ; 3 >
+    au < ready ; 2004 ; Journal of Investment Compliance Volume 4 ; 4 >
+    au < ready ; 2005 ; Journal of Investment Compliance Volume 5 ; 5 >
+    au < ready ; 2005 ; Journal of Investment Compliance Volume 6 ; 6 >
+    au < ready ; 2006 ; Journal of Investment Compliance Volume 7 ; 7 >
+    au < ready ; 2007 ; Journal of Investment Compliance Volume 8 ; 8 >
+    au < ready ; 2008 ; Journal of Investment Compliance Volume 9 ; 9 >
+    au < ready ; 2009 ; Journal of Investment Compliance Volume 10 ; 10 >
+    au < notReady ; 2010 ; Journal of Investment Compliance Volume 11 ; 11 >
 
   }
 
@@ -4406,9 +4387,8 @@
     >
 
     param[journal_issn] = 1759-0817
-    attr[where] = content6a
     
-    au < testing ; 2010 ; Journal of Islamic Accounting and Business Research Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Islamic Accounting and Business Research Volume 1 ; 1 >
 
   }
 
@@ -4420,9 +4400,8 @@
     >
 
     param[journal_issn] = 1759-0833
-    attr[where] = content6a
     
-    au < testing ; 2010 ; Journal of Islamic Marketing Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Islamic Marketing Volume 1 ; 1 >
 
   }
 
@@ -4434,22 +4413,21 @@
     >
 
     param[journal_issn] = 1367-3270
-    attr[where] = content6b
     
-    au < testing ; 1997 ; Journal of Knowledge Management Volume 1 ; 1 >
-    au < testing ; 1998 ; Journal of Knowledge Management Volume 2 ; 2 >
-    au < testing ; 1999 ; Journal of Knowledge Management Volume 3 ; 3 >
-    au < testing ; 2000 ; Journal of Knowledge Management Volume 4 ; 4 >
-    au < testing ; 2001 ; Journal of Knowledge Management Volume 5 ; 5 >
-    au < testing ; 2002 ; Journal of Knowledge Management Volume 6 ; 6 >
-    au < testing ; 2003 ; Journal of Knowledge Management Volume 7 ; 7 >
-    au < testing ; 2004 ; Journal of Knowledge Management Volume 8 ; 8 >
-    au < testing ; 2005 ; Journal of Knowledge Management Volume 9 ; 9 >
-    au < testing ; 2006 ; Journal of Knowledge Management Volume 10 ; 10 >
-    au < testing ; 2007 ; Journal of Knowledge Management Volume 11 ; 11 >
-    au < testing ; 2008 ; Journal of Knowledge Management Volume 12 ; 12 >
-    au < testing ; 2009 ; Journal of Knowledge Management Volume 13 ; 13 >
-    au < testing ; 2010 ; Journal of Knowledge Management Volume 14 ; 14 >
+    au < ready ; 1997 ; Journal of Knowledge Management Volume 1 ; 1 >
+    au < ready ; 1998 ; Journal of Knowledge Management Volume 2 ; 2 >
+    au < ready ; 1999 ; Journal of Knowledge Management Volume 3 ; 3 >
+    au < ready ; 2000 ; Journal of Knowledge Management Volume 4 ; 4 >
+    au < ready ; 2001 ; Journal of Knowledge Management Volume 5 ; 5 >
+    au < ready ; 2002 ; Journal of Knowledge Management Volume 6 ; 6 >
+    au < ready ; 2003 ; Journal of Knowledge Management Volume 7 ; 7 >
+    au < ready ; 2004 ; Journal of Knowledge Management Volume 8 ; 8 >
+    au < ready ; 2005 ; Journal of Knowledge Management Volume 9 ; 9 >
+    au < ready ; 2006 ; Journal of Knowledge Management Volume 10 ; 10 >
+    au < ready ; 2007 ; Journal of Knowledge Management Volume 11 ; 11 >
+    au < ready ; 2008 ; Journal of Knowledge Management Volume 12 ; 12 >
+    au < ready ; 2009 ; Journal of Knowledge Management Volume 13 ; 13 >
+    au < ready ; 2010 ; Journal of Knowledge Management Volume 14 ; 14 >
 
   }
 
@@ -4461,10 +4439,9 @@
     >
 
     param[journal_issn] = 1756-1418
-    attr[where] = sul-lockss30a
     
-    au < testing ; 2009 ; Journal of Knowledge-based Innovation in China Volume 1 ; 1 >
-    au < testing ; 2010 ; Journal of Knowledge-based Innovation in China Volume 2 ; 2 >
+    au < ready ; 2009 ; Journal of Knowledge-based Innovation in China Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Knowledge-based Innovation in China Volume 2 ; 2 >
 
   }
 
@@ -4476,37 +4453,36 @@
     >
 
     param[journal_issn] = 0262-1711
-    attr[where] = sul-lockss30a
     
-    au < testing ; 1982 ; Journal of Management Development Volume 1 ; 1 >
-    au < testing ; 1983 ; Journal of Management Development Volume 2 ; 2 >
-    au < testing ; 1984 ; Journal of Management Development Volume 3 ; 3 >
-    au < testing ; 1985 ; Journal of Management Development Volume 4 ; 4 >
-    au < testing ; 1986 ; Journal of Management Development Volume 5 ; 5 >
-    au < testing ; 1987 ; Journal of Management Development Volume 6 ; 6 >
-    au < testing ; 1988 ; Journal of Management Development Volume 7 ; 7 >
-    au < testing ; 1989 ; Journal of Management Development Volume 8 ; 8 >
-    au < testing ; 1990 ; Journal of Management Development Volume 9 ; 9 >
-    au < testing ; 1991 ; Journal of Management Development Volume 10 ; 10 >
-    au < testing ; 1992 ; Journal of Management Development Volume 11 ; 11 >
-    au < testing ; 1993 ; Journal of Management Development Volume 12 ; 12 >
-    au < testing ; 1994 ; Journal of Management Development Volume 13 ; 13 >
-    au < testing ; 1995 ; Journal of Management Development Volume 14 ; 14 >
-    au < testing ; 1996 ; Journal of Management Development Volume 15 ; 15 >
-    au < testing ; 1997 ; Journal of Management Development Volume 16 ; 16 >
-    au < testing ; 1998 ; Journal of Management Development Volume 17 ; 17 >
-    au < testing ; 1999 ; Journal of Management Development Volume 18 ; 18 >
-    au < testing ; 2000 ; Journal of Management Development Volume 19 ; 19 >
-    au < testing ; 2001 ; Journal of Management Development Volume 20 ; 20 >
-    au < testing ; 2002 ; Journal of Management Development Volume 21 ; 21 >
-    au < testing ; 2003 ; Journal of Management Development Volume 22 ; 22 >
-    au < testing ; 2004 ; Journal of Management Development Volume 23 ; 23 >
-    au < testing ; 2005 ; Journal of Management Development Volume 24 ; 24 >
-    au < testing ; 2006 ; Journal of Management Development Volume 25 ; 25 >
-    au < testing ; 2007 ; Journal of Management Development Volume 26 ; 26 >
-    au < testing ; 2008 ; Journal of Management Development Volume 27 ; 27 >
-    au < testing ; 2009 ; Journal of Management Development Volume 28 ; 28 >
-    au < testing ; 2010 ; Journal of Management Development Volume 29 ; 29 >
+    au < ready ; 1982 ; Journal of Management Development Volume 1 ; 1 >
+    au < ready ; 1983 ; Journal of Management Development Volume 2 ; 2 >
+    au < ready ; 1984 ; Journal of Management Development Volume 3 ; 3 >
+    au < ready ; 1985 ; Journal of Management Development Volume 4 ; 4 >
+    au < ready ; 1986 ; Journal of Management Development Volume 5 ; 5 >
+    au < notReady ; 1987 ; Journal of Management Development Volume 6 ; 6 >
+    au < ready ; 1988 ; Journal of Management Development Volume 7 ; 7 >
+    au < ready ; 1989 ; Journal of Management Development Volume 8 ; 8 >
+    au < ready ; 1990 ; Journal of Management Development Volume 9 ; 9 >
+    au < notReady ; 1991 ; Journal of Management Development Volume 10 ; 10 >
+    au < ready ; 1992 ; Journal of Management Development Volume 11 ; 11 >
+    au < ready ; 1993 ; Journal of Management Development Volume 12 ; 12 >
+    au < ready ; 1994 ; Journal of Management Development Volume 13 ; 13 >
+    au < ready ; 1995 ; Journal of Management Development Volume 14 ; 14 >
+    au < ready ; 1996 ; Journal of Management Development Volume 15 ; 15 >
+    au < ready ; 1997 ; Journal of Management Development Volume 16 ; 16 >
+    au < ready ; 1998 ; Journal of Management Development Volume 17 ; 17 >
+    au < ready ; 1999 ; Journal of Management Development Volume 18 ; 18 >
+    au < ready ; 2000 ; Journal of Management Development Volume 19 ; 19 >
+    au < ready ; 2001 ; Journal of Management Development Volume 20 ; 20 >
+    au < ready ; 2002 ; Journal of Management Development Volume 21 ; 21 >
+    au < ready ; 2003 ; Journal of Management Development Volume 22 ; 22 >
+    au < ready ; 2004 ; Journal of Management Development Volume 23 ; 23 >
+    au < ready ; 2005 ; Journal of Management Development Volume 24 ; 24 >
+    au < ready ; 2006 ; Journal of Management Development Volume 25 ; 25 >
+    au < ready ; 2007 ; Journal of Management Development Volume 26 ; 26 >
+    au < ready ; 2008 ; Journal of Management Development Volume 27 ; 27 >
+    au < ready ; 2009 ; Journal of Management Development Volume 28 ; 28 >
+    au < ready ; 2010 ; Journal of Management Development Volume 29 ; 29 >
 
   }
 
@@ -4529,14 +4505,13 @@
     >
 
     param[journal_issn] = 1355-252X
-    attr[where] = sul-lockss30b
     
-    au < testing ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 >
-    au < testing ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 >
-    au < testing ; 1997 ; Journal of Management History (Archive) Volume 3 ; 3 >
-    au < testing ; 1998 ; Journal of Management History (Archive) Volume 4 ; 4 >
-    au < testing ; 1999 ; Journal of Management History (Archive) Volume 5 ; 5 >
-    au < testing ; 2000 ; Journal of Management History (Archive) Volume 6 ; 6 >
+    au < ready ; 1995 ; Journal of Management History (Archive) Volume 1 ; 1 >
+    au < ready ; 1996 ; Journal of Management History (Archive) Volume 2 ; 2 >
+    au < ready ; 1997 ; Journal of Management History (Archive) Volume 3 ; 3 >
+    au < ready ; 1998 ; Journal of Management History (Archive) Volume 4 ; 4 >
+    au < ready ; 1999 ; Journal of Management History (Archive) Volume 5 ; 5 >
+    au < ready ; 2000 ; Journal of Management History (Archive) Volume 6 ; 6 >
 
   }
 
@@ -4548,492 +4523,512 @@
     >
 
     param[journal_issn] = 0268-9235
-    attr[where] = sul-lockss30b
     
-    au < testing ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 >
-    au < testing ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 >
-    au < testing ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 >
-    au < testing ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 >
-    au < testing ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 >
-    au < testing ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 >
-    au < testing ; 1993 ; Journal of Management in Medicine Volume 7 ; 7 >
-    au < testing ; 1994 ; Journal of Management in Medicine Volume 8 ; 8 >
-    au < testing ; 1995 ; Journal of Management in Medicine Volume 9 ; 9 >
-    au < testing ; 1996 ; Journal of Management in Medicine Volume 10 ; 10 >
-    au < testing ; 1997 ; Journal of Management in Medicine Volume 11 ; 11 >
-    au < testing ; 1998 ; Journal of Management in Medicine Volume 12 ; 12 >
-    au < testing ; 1999 ; Journal of Management in Medicine Volume 13 ; 13 >
-    au < testing ; 2000 ; Journal of Management in Medicine Volume 14 ; 14 >
-    au < testing ; 2001 ; Journal of Management in Medicine Volume 15 ; 15 >
-    au < testing ; 2002 ; Journal of Management in Medicine Volume 16 ; 16 >
+    au < ready ; 1986 ; Journal of Management in Medicine Volume 1 ; 1 >
+    au < ready ; 1987 ; Journal of Management in Medicine Volume 2 ; 2 >
+    au < ready ; 1988 ; Journal of Management in Medicine Volume 3 ; 3 >
+    au < ready ; 1990 ; Journal of Management in Medicine Volume 4 ; 4 >
+    au < ready ; 1991 ; Journal of Management in Medicine Volume 5 ; 5 >
+    au < ready ; 1992 ; Journal of Management in Medicine Volume 6 ; 6 >
+    au < ready ; 1993 ; Journal of Management in Medicine Volume 7 ; 7 >
+    au < notReady ; 1994 ; Journal of Management in Medicine Volume 8 ; 8 >
+    au < ready ; 1995 ; Journal of Management in Medicine Volume 9 ; 9 >
+    au < ready ; 1996 ; Journal of Management in Medicine Volume 10 ; 10 >
+    au < ready ; 1997 ; Journal of Management in Medicine Volume 11 ; 11 >
+    au < ready ; 1998 ; Journal of Management in Medicine Volume 12 ; 12 >
+    au < ready ; 1999 ; Journal of Management in Medicine Volume 13 ; 13 >
+    au < ready ; 2000 ; Journal of Management in Medicine Volume 14 ; 14 >
+    au < ready ; 2001 ; Journal of Management in Medicine Volume 15 ; 15 >
+    au < ready ; 2002 ; Journal of Management in Medicine Volume 16 ; 16 >
 
   }
 
   {
+
     title <
       name = Journal of Managerial Psychology;
       issn = 0268-3946
     >
 
     param[journal_issn] = 0268-3946
-
+    attr[where] = content1a
     
-    au < manifest ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 >
-    au < manifest ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 >
-    au < manifest ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 >
-    au < manifest ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 >
-    au < manifest ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 >
-    au < manifest ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 >
-    au < manifest ; 1992 ; Journal of Managerial Psychology Volume 7 ; 7 >
-    au < manifest ; 1993 ; Journal of Managerial Psychology Volume 8 ; 8 >
-    au < manifest ; 1994 ; Journal of Managerial Psychology Volume 9 ; 9 >
-    au < manifest ; 1995 ; Journal of Managerial Psychology Volume 10 ; 10 >
-    au < manifest ; 1996 ; Journal of Managerial Psychology Volume 11 ; 11 >
-    au < manifest ; 1997 ; Journal of Managerial Psychology Volume 12 ; 12 >
-    au < manifest ; 1998 ; Journal of Managerial Psychology Volume 13 ; 13 >
-    au < manifest ; 1999 ; Journal of Managerial Psychology Volume 14 ; 14 >
-    au < manifest ; 2000 ; Journal of Managerial Psychology Volume 15 ; 15 >
-    au < manifest ; 2001 ; Journal of Managerial Psychology Volume 16 ; 16 >
-    au < manifest ; 2002 ; Journal of Managerial Psychology Volume 17 ; 17 >
-    au < manifest ; 2003 ; Journal of Managerial Psychology Volume 18 ; 18 >
-    au < manifest ; 2004 ; Journal of Managerial Psychology Volume 19 ; 19 >
-    au < manifest ; 2005 ; Journal of Managerial Psychology Volume 20 ; 20 >
-    au < manifest ; 2006 ; Journal of Managerial Psychology Volume 21 ; 21 >
-    au < manifest ; 2007 ; Journal of Managerial Psychology Volume 22 ; 22 >
-    au < manifest ; 2008 ; Journal of Managerial Psychology Volume 23 ; 23 >
-    au < manifest ; 2009 ; Journal of Managerial Psychology Volume 24 ; 24 >
-    au < manifest ; 2010 ; Journal of Managerial Psychology Volume 25 ; 25 >
+    au < testing ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 >
+    au < testing ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 >
+    au < testing ; 1988 ; Journal of Managerial Psychology Volume 3 ; 3 >
+    au < testing ; 1989 ; Journal of Managerial Psychology Volume 4 ; 4 >
+    au < testing ; 1990 ; Journal of Managerial Psychology Volume 5 ; 5 >
+    au < testing ; 1991 ; Journal of Managerial Psychology Volume 6 ; 6 >
+    au < testing ; 1992 ; Journal of Managerial Psychology Volume 7 ; 7 >
+    au < testing ; 1993 ; Journal of Managerial Psychology Volume 8 ; 8 >
+    au < testing ; 1994 ; Journal of Managerial Psychology Volume 9 ; 9 >
+    au < testing ; 1995 ; Journal of Managerial Psychology Volume 10 ; 10 >
+    au < testing ; 1996 ; Journal of Managerial Psychology Volume 11 ; 11 >
+    au < testing ; 1997 ; Journal of Managerial Psychology Volume 12 ; 12 >
+    au < testing ; 1998 ; Journal of Managerial Psychology Volume 13 ; 13 >
+    au < testing ; 1999 ; Journal of Managerial Psychology Volume 14 ; 14 >
+    au < testing ; 2000 ; Journal of Managerial Psychology Volume 15 ; 15 >
+    au < testing ; 2001 ; Journal of Managerial Psychology Volume 16 ; 16 >
+    au < testing ; 2002 ; Journal of Managerial Psychology Volume 17 ; 17 >
+    au < testing ; 2003 ; Journal of Managerial Psychology Volume 18 ; 18 >
+    au < testing ; 2004 ; Journal of Managerial Psychology Volume 19 ; 19 >
+    au < testing ; 2005 ; Journal of Managerial Psychology Volume 20 ; 20 >
+    au < testing ; 2006 ; Journal of Managerial Psychology Volume 21 ; 21 >
+    au < testing ; 2007 ; Journal of Managerial Psychology Volume 22 ; 22 >
+    au < testing ; 2008 ; Journal of Managerial Psychology Volume 23 ; 23 >
+    au < testing ; 2009 ; Journal of Managerial Psychology Volume 24 ; 24 >
+    au < testing ; 2010 ; Journal of Managerial Psychology Volume 25 ; 25 >
 
   }
 
   {
+
     title <
       name = Journal of Manufacturing Technology Management;
       issn = 1741-038X
     >
 
     param[journal_issn] = 1741-038X
-
+    attr[where] = content1b
     
-    au < manifest ; 2004 ; Journal of Manufacturing Technology Management Volume 15 ; 15 >
-    au < manifest ; 2005 ; Journal of Manufacturing Technology Management Volume 16 ; 16 >
-    au < manifest ; 2006 ; Journal of Manufacturing Technology Management Volume 17 ; 17 >
-    au < manifest ; 2007 ; Journal of Manufacturing Technology Management Volume 18 ; 18 >
-    au < manifest ; 2008 ; Journal of Manufacturing Technology Management Volume 19 ; 19 >
-    au < manifest ; 2009 ; Journal of Manufacturing Technology Management Volume 20 ; 20 >
-    au < manifest ; 2010 ; Journal of Manufacturing Technology Management Volume 21 ; 21 >
+    au < testing ; 2004 ; Journal of Manufacturing Technology Management Volume 15 ; 15 >
+    au < testing ; 2005 ; Journal of Manufacturing Technology Management Volume 16 ; 16 >
+    au < testing ; 2006 ; Journal of Manufacturing Technology Management Volume 17 ; 17 >
+    au < testing ; 2007 ; Journal of Manufacturing Technology Management Volume 18 ; 18 >
+    au < testing ; 2008 ; Journal of Manufacturing Technology Management Volume 19 ; 19 >
+    au < testing ; 2009 ; Journal of Manufacturing Technology Management Volume 20 ; 20 >
+    au < testing ; 2010 ; Journal of Manufacturing Technology Management Volume 21 ; 21 >
 
   }
 
   {
+
     title <
       name = Journal of Marketing Practice: Applied Marketing Science;
       issn = 1355-2538
     >
 
     param[journal_issn] = 1355-2538
-
+    attr[where] = content1b
     
-    au < manifest ; 1995 ; Journal of Marketing Practice: Applied Marketing Science Volume 1 ; 1 >
-    au < manifest ; 1996 ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 >
-    au < manifest ; 1997 ; Journal of Marketing Practice: Applied Marketing Science Volume 3 ; 3 >
-    au < manifest ; 1998 ; Journal of Marketing Practice: Applied Marketing Science Volume 4 ; 4 >
-    au < manifest ; 1999 ; Journal of Marketing Practice: Applied Marketing Science Volume 5 ; 5 >
+    au < testing ; 1995 ; Journal of Marketing Practice: Applied Marketing Science Volume 1 ; 1 >
+    au < testing ; 1996 ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 >
+    au < testing ; 1997 ; Journal of Marketing Practice: Applied Marketing Science Volume 3 ; 3 >
+    au < testing ; 1998 ; Journal of Marketing Practice: Applied Marketing Science Volume 4 ; 4 >
+    au < testing ; 1999 ; Journal of Marketing Practice: Applied Marketing Science Volume 5 ; 5 >
 
   }
 
   {
+
     title <
       name = Journal of Modelling in Management;
       issn = 1746-5664
     >
 
     param[journal_issn] = 1746-5664
-
+    attr[where] = content1b
     
-    au < manifest ; 2006 ; Journal of Modelling in Management Volume 1 ; 1 >
-    au < manifest ; 2007 ; Journal of Modelling in Management Volume 2 ; 2 >
-    au < manifest ; 2008 ; Journal of Modelling in Management Volume 3 ; 3 >
-    au < manifest ; 2009 ; Journal of Modelling in Management Volume 4 ; 4 >
-    au < manifest ; 2010 ; Journal of Modelling in Management Volume 5 ; 5 >
+    au < testing ; 2006 ; Journal of Modelling in Management Volume 1 ; 1 >
+    au < testing ; 2007 ; Journal of Modelling in Management Volume 2 ; 2 >
+    au < testing ; 2008 ; Journal of Modelling in Management Volume 3 ; 3 >
+    au < testing ; 2009 ; Journal of Modelling in Management Volume 4 ; 4 >
+    au < testing ; 2010 ; Journal of Modelling in Management Volume 5 ; 5 >
 
   }
 
   {
+
     title <
       name = Journal of Money Laundering Control;
       issn = 1368-5201
     >
 
     param[journal_issn] = 1368-5201
-
+    attr[where] = content2a
     
-    au < manifest ; 1998 ; Journal of Money Laundering Control Volume 1 ; 1 >
-    au < manifest ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 >
-    au < manifest ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 >
-    au < manifest ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 >
-    au < manifest ; 2002 ; Journal of Money Laundering Control Volume 5 ; 5 >
-    au < manifest ; 2003 ; Journal of Money Laundering Control Volume 6 ; 6 >
-    au < manifest ; 2004 ; Journal of Money Laundering Control Volume 7 ; 7 >
-    au < manifest ; 2005 ; Journal of Money Laundering Control Volume 8 ; 8 >
-    au < manifest ; 2006 ; Journal of Money Laundering Control Volume 9 ; 9 >
-    au < manifest ; 2007 ; Journal of Money Laundering Control Volume 10 ; 10 >
-    au < manifest ; 2008 ; Journal of Money Laundering Control Volume 11 ; 11 >
-    au < manifest ; 2009 ; Journal of Money Laundering Control Volume 12 ; 12 >
-    au < manifest ; 2010 ; Journal of Money Laundering Control Volume 13 ; 13 >
+    au < testing ; 1998 ; Journal of Money Laundering Control Volume 1 ; 1 >
+    au < testing ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 >
+    au < testing ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 >
+    au < testing ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 >
+    au < testing ; 2002 ; Journal of Money Laundering Control Volume 5 ; 5 >
+    au < testing ; 2003 ; Journal of Money Laundering Control Volume 6 ; 6 >
+    au < testing ; 2004 ; Journal of Money Laundering Control Volume 7 ; 7 >
+    au < testing ; 2005 ; Journal of Money Laundering Control Volume 8 ; 8 >
+    au < testing ; 2006 ; Journal of Money Laundering Control Volume 9 ; 9 >
+    au < testing ; 2007 ; Journal of Money Laundering Control Volume 10 ; 10 >
+    au < testing ; 2008 ; Journal of Money Laundering Control Volume 11 ; 11 >
+    au < testing ; 2009 ; Journal of Money Laundering Control Volume 12 ; 12 >
+    au < testing ; 2010 ; Journal of Money Laundering Control Volume 13 ; 13 >
 
   }
 
   {
+
     title <
       name = Journal of Organizational Change Management;
       issn = 0953-4814
     >
 
     param[journal_issn] = 0953-4814
-
+    attr[where] = content2b
     
-    au < manifest ; 1988 ; Journal of Organizational Change Management Volume 1 ; 1 >
-    au < manifest ; 1989 ; Journal of Organizational Change Management Volume 2 ; 2 >
-    au < manifest ; 1990 ; Journal of Organizational Change Management Volume 3 ; 3 >
-    au < manifest ; 1991 ; Journal of Organizational Change Management Volume 4 ; 4 >
-    au < manifest ; 1992 ; Journal of Organizational Change Management Volume 5 ; 5 >
-    au < manifest ; 1993 ; Journal of Organizational Change Management Volume 6 ; 6 >
-    au < manifest ; 1994 ; Journal of Organizational Change Management Volume 7 ; 7 >
-    au < manifest ; 1995 ; Journal of Organizational Change Management Volume 8 ; 8 >
-    au < manifest ; 1996 ; Journal of Organizational Change Management Volume 9 ; 9 >
-    au < manifest ; 1997 ; Journal of Organizational Change Management Volume 10 ; 10 >
-    au < manifest ; 1998 ; Journal of Organizational Change Management Volume 11 ; 11 >
-    au < manifest ; 1999 ; Journal of Organizational Change Management Volume 12 ; 12 >
-    au < manifest ; 2000 ; Journal of Organizational Change Management Volume 13 ; 13 >
-    au < manifest ; 2001 ; Journal of Organizational Change Management Volume 14 ; 14 >
-    au < manifest ; 2002 ; Journal of Organizational Change Management Volume 15 ; 15 >
-    au < manifest ; 2003 ; Journal of Organizational Change Management Volume 16 ; 16 >
-    au < manifest ; 2004 ; Journal of Organizational Change Management Volume 17 ; 17 >
-    au < manifest ; 2005 ; Journal of Organizational Change Management Volume 18 ; 18 >
-    au < manifest ; 2006 ; Journal of Organizational Change Management Volume 19 ; 19 >
-    au < manifest ; 2007 ; Journal of Organizational Change Management Volume 20 ; 20 >
-    au < manifest ; 2008 ; Journal of Organizational Change Management Volume 21 ; 21 >
-    au < manifest ; 2009 ; Journal of Organizational Change Management Volume 22 ; 22 >
-    au < manifest ; 2010 ; Journal of Organizational Change Management Volume 23 ; 23 >
+    au < testing ; 1988 ; Journal of Organizational Change Management Volume 1 ; 1 >
+    au < testing ; 1989 ; Journal of Organizational Change Management Volume 2 ; 2 >
+    au < testing ; 1990 ; Journal of Organizational Change Management Volume 3 ; 3 >
+    au < testing ; 1991 ; Journal of Organizational Change Management Volume 4 ; 4 >
+    au < testing ; 1992 ; Journal of Organizational Change Management Volume 5 ; 5 >
+    au < testing ; 1993 ; Journal of Organizational Change Management Volume 6 ; 6 >
+    au < testing ; 1994 ; Journal of Organizational Change Management Volume 7 ; 7 >
+    au < testing ; 1995 ; Journal of Organizational Change Management Volume 8 ; 8 >
+    au < testing ; 1996 ; Journal of Organizational Change Management Volume 9 ; 9 >
+    au < testing ; 1997 ; Journal of Organizational Change Management Volume 10 ; 10 >
+    au < testing ; 1998 ; Journal of Organizational Change Management Volume 11 ; 11 >
+    au < testing ; 1999 ; Journal of Organizational Change Management Volume 12 ; 12 >
+    au < testing ; 2000 ; Journal of Organizational Change Management Volume 13 ; 13 >
+    au < testing ; 2001 ; Journal of Organizational Change Management Volume 14 ; 14 >
+    au < testing ; 2002 ; Journal of Organizational Change Management Volume 15 ; 15 >
+    au < testing ; 2003 ; Journal of Organizational Change Management Volume 16 ; 16 >
+    au < testing ; 2004 ; Journal of Organizational Change Management Volume 17 ; 17 >
+    au < testing ; 2005 ; Journal of Organizational Change Management Volume 18 ; 18 >
+    au < testing ; 2006 ; Journal of Organizational Change Management Volume 19 ; 19 >
+    au < testing ; 2007 ; Journal of Organizational Change Management Volume 20 ; 20 >
+    au < testing ; 2008 ; Journal of Organizational Change Management Volume 21 ; 21 >
+    au < testing ; 2009 ; Journal of Organizational Change Management Volume 22 ; 22 >
+    au < testing ; 2010 ; Journal of Organizational Change Management Volume 23 ; 23 >
 
   }
 
   {
+
     title <
       name = Journal of Place Management and Development;
       issn = 1753-8335
     >
 
     param[journal_issn] = 1753-8335
-
+    attr[where] = content3a
     
-    au < manifest ; 2008 ; Journal of Place Management and Development Volume 1 ; 1 >
-    au < manifest ; 2009 ; Journal of Place Management and Development Volume 2 ; 2 >
-    au < manifest ; 2010 ; Journal of Place Management and Development Volume 3 ; 3 >
+    au < testing ; 2008 ; Journal of Place Management and Development Volume 1 ; 1 >
+    au < testing ; 2009 ; Journal of Place Management and Development Volume 2 ; 2 >
+    au < testing ; 2010 ; Journal of Place Management and Development Volume 3 ; 3 >
 
   }
 
   {
+
     title <
       name = Journal of Product & Brand Management;
       issn = 1061-0421
     >
 
     param[journal_issn] = 1061-0421
-
+    attr[where] = content3a
     
-    au < manifest ; 1992 ; Journal of Product & Brand Management Volume 1 ; 1 >
-    au < manifest ; 1993 ; Journal of Product & Brand Management Volume 2 ; 2 >
-    au < manifest ; 1994 ; Journal of Product & Brand Management Volume 3 ; 3 >
-    au < manifest ; 1995 ; Journal of Product & Brand Management Volume 4 ; 4 >
-    au < manifest ; 1996 ; Journal of Product & Brand Management Volume 5 ; 5 >
-    au < manifest ; 1997 ; Journal of Product & Brand Management Volume 6 ; 6 >
-    au < manifest ; 1998 ; Journal of Product & Brand Management Volume 7 ; 7 >
-    au < manifest ; 1999 ; Journal of Product & Brand Management Volume 8 ; 8 >
-    au < manifest ; 2000 ; Journal of Product & Brand Management Volume 9 ; 9 >
-    au < manifest ; 2001 ; Journal of Product & Brand Management Volume 10 ; 10 >
-    au < manifest ; 2002 ; Journal of Product & Brand Management Volume 11 ; 11 >
-    au < manifest ; 2003 ; Journal of Product & Brand Management Volume 12 ; 12 >
-    au < manifest ; 2004 ; Journal of Product & Brand Management Volume 13 ; 13 >
-    au < manifest ; 2005 ; Journal of Product & Brand Management Volume 14 ; 14 >
-    au < manifest ; 2006 ; Journal of Product & Brand Management Volume 15 ; 15 >
-    au < manifest ; 2007 ; Journal of Product & Brand Management Volume 16 ; 16 >
-    au < manifest ; 2008 ; Journal of Product & Brand Management Volume 17 ; 17 >
-    au < manifest ; 2009 ; Journal of Product & Brand Management Volume 18 ; 18 >
-    au < manifest ; 2010 ; Journal of Product & Brand Management Volume 19 ; 19 >
+    au < testing ; 1992 ; Journal of Product & Brand Management Volume 1 ; 1 >
+    au < testing ; 1993 ; Journal of Product & Brand Management Volume 2 ; 2 >
+    au < testing ; 1994 ; Journal of Product & Brand Management Volume 3 ; 3 >
+    au < testing ; 1995 ; Journal of Product & Brand Management Volume 4 ; 4 >
+    au < testing ; 1996 ; Journal of Product & Brand Management Volume 5 ; 5 >
+    au < testing ; 1997 ; Journal of Product & Brand Management Volume 6 ; 6 >
+    au < testing ; 1998 ; Journal of Product & Brand Management Volume 7 ; 7 >
+    au < testing ; 1999 ; Journal of Product & Brand Management Volume 8 ; 8 >
+    au < testing ; 2000 ; Journal of Product & Brand Management Volume 9 ; 9 >
+    au < testing ; 2001 ; Journal of Product & Brand Management Volume 10 ; 10 >
+    au < testing ; 2002 ; Journal of Product & Brand Management Volume 11 ; 11 >
+    au < testing ; 2003 ; Journal of Product & Brand Management Volume 12 ; 12 >
+    au < testing ; 2004 ; Journal of Product & Brand Management Volume 13 ; 13 >
+    au < testing ; 2005 ; Journal of Product & Brand Management Volume 14 ; 14 >
+    au < testing ; 2006 ; Journal of Product & Brand Management Volume 15 ; 15 >
+    au < testing ; 2007 ; Journal of Product & Brand Management Volume 16 ; 16 >
+    au < testing ; 2008 ; Journal of Product & Brand Management Volume 17 ; 17 >
+    au < testing ; 2009 ; Journal of Product & Brand Management Volume 18 ; 18 >
+    au < testing ; 2010 ; Journal of Product & Brand Management Volume 19 ; 19 >
 
   }
 
   {
+
     title <
       name = Journal of Property Finance;
       issn = 0958-868X
     >
 
     param[journal_issn] = 0958-868X
-
+    attr[where] = content3b
     
-    au < manifest ; 1990 ; Journal of Property Finance Volume 1 ; 1 >
-    au < manifest ; 1991 ; Journal of Property Finance Volume 2 ; 2 >
-    au < manifest ; 1992 ; Journal of Property Finance Volume 3 ; 3 >
-    au < manifest ; 1993 ; Journal of Property Finance Volume 4 ; 4 >
-    au < manifest ; 1994 ; Journal of Property Finance Volume 5 ; 5 >
-    au < manifest ; 1995 ; Journal of Property Finance Volume 6 ; 6 >
-    au < manifest ; 1996 ; Journal of Property Finance Volume 7 ; 7 >
-    au < manifest ; 1997 ; Journal of Property Finance Volume 8 ; 8 >
+    au < testing ; 1990 ; Journal of Property Finance Volume 1 ; 1 >
+    au < testing ; 1991 ; Journal of Property Finance Volume 2 ; 2 >
+    au < testing ; 1992 ; Journal of Property Finance Volume 3 ; 3 >
+    au < testing ; 1993 ; Journal of Property Finance Volume 4 ; 4 >
+    au < testing ; 1994 ; Journal of Property Finance Volume 5 ; 5 >
+    au < testing ; 1995 ; Journal of Property Finance Volume 6 ; 6 >
+    au < testing ; 1996 ; Journal of Property Finance Volume 7 ; 7 >
+    au < testing ; 1997 ; Journal of Property Finance Volume 8 ; 8 >
 
   }
 
   {
+
     title <
       name = Journal of Property Investment & Finance;
       issn = 1463-578X
     >
 
     param[journal_issn] = 1463-578X
-
+    attr[where] = content3b
     
-    au < manifest ; 1999 ; Journal of Property Investment & Finance Volume 17 ; 17 >
-    au < manifest ; 2000 ; Journal of Property Investment & Finance Volume 18 ; 18 >
-    au < manifest ; 2001 ; Journal of Property Investment & Finance Volume 19 ; 19 >
-    au < manifest ; 2002 ; Journal of Property Investment & Finance Volume 20 ; 20 >
-    au < manifest ; 2003 ; Journal of Property Investment & Finance Volume 21 ; 21 >
-    au < manifest ; 2004 ; Journal of Property Investment & Finance Volume 22 ; 22 >
-    au < manifest ; 2005 ; Journal of Property Investment & Finance Volume 23 ; 23 >
-    au < manifest ; 2006 ; Journal of Property Investment & Finance Volume 24 ; 24 >
-    au < manifest ; 2007 ; Journal of Property Investment & Finance Volume 25 ; 25 >
-    au < manifest ; 2008 ; Journal of Property Investment & Finance Volume 26 ; 26 >
-    au < manifest ; 2009 ; Journal of Property Investment & Finance Volume 27 ; 27 >
-    au < manifest ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 >
+    au < testing ; 1999 ; Journal of Property Investment & Finance Volume 17 ; 17 >
+    au < testing ; 2000 ; Journal of Property Investment & Finance Volume 18 ; 18 >
+    au < testing ; 2001 ; Journal of Property Investment & Finance Volume 19 ; 19 >
+    au < testing ; 2002 ; Journal of Property Investment & Finance Volume 20 ; 20 >
+    au < testing ; 2003 ; Journal of Property Investment & Finance Volume 21 ; 21 >
+    au < testing ; 2004 ; Journal of Property Investment & Finance Volume 22 ; 22 >
+    au < testing ; 2005 ; Journal of Property Investment & Finance Volume 23 ; 23 >
+    au < testing ; 2006 ; Journal of Property Investment & Finance Volume 24 ; 24 >
+    au < testing ; 2007 ; Journal of Property Investment & Finance Volume 25 ; 25 >
+    au < testing ; 2008 ; Journal of Property Investment & Finance Volume 26 ; 26 >
+    au < testing ; 2009 ; Journal of Property Investment & Finance Volume 27 ; 27 >
+    au < testing ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 >
 
   }
 
   {
+
     title <
       name = Journal of Property Valuation and Investment;
       issn = 0960-2712
     >
 
     param[journal_issn] = 0960-2712
-
+    attr[where] = content4a
     
-    au < manifest ; 1983 ; Journal of Property Valuation and Investment Volume 1 ; 1 >
-    au < manifest ; 1984 ; Journal of Property Valuation and Investment Volume 2 ; 2 >
-    au < manifest ; 1985 ; Journal of Property Valuation and Investment Volume 3 ; 3 >
-    au < manifest ; 1986 ; Journal of Property Valuation and Investment Volume 4 ; 4 >
-    au < manifest ; 1987 ; Journal of Property Valuation and Investment Volume 5 ; 5 >
-    au < manifest ; 1988 ; Journal of Property Valuation and Investment Volume 6 ; 6 >
-    au < manifest ; 1989 ; Journal of Property Valuation and Investment Volume 7 ; 7 >
-    au < manifest ; 1990 ; Journal of Property Valuation and Investment Volume 8 ; 8 >
-    au < manifest ; 1991 ; Journal of Property Valuation and Investment Volume 9 ; 9 >
-    au < manifest ; 1992 ; Journal of Property Valuation and Investment Volume 10 ; 10 >
-    au < manifest ; 1993 ; Journal of Property Valuation and Investment Volume 11 ; 11 >
-    au < manifest ; 1994 ; Journal of Property Valuation and Investment Volume 12 ; 12 >
-    au < manifest ; 1995 ; Journal of Property Valuation and Investment Volume 13 ; 13 >
-    au < manifest ; 1996 ; Journal of Property Valuation and Investment Volume 14 ; 14 >
-    au < manifest ; 1997 ; Journal of Property Valuation and Investment Volume 15 ; 15 >
-    au < manifest ; 1998 ; Journal of Property Valuation and Investment Volume 16 ; 16 >
+    au < testing ; 1983 ; Journal of Property Valuation and Investment Volume 1 ; 1 >
+    au < testing ; 1984 ; Journal of Property Valuation and Investment Volume 2 ; 2 >
+    au < testing ; 1985 ; Journal of Property Valuation and Investment Volume 3 ; 3 >
+    au < testing ; 1986 ; Journal of Property Valuation and Investment Volume 4 ; 4 >
+    au < testing ; 1987 ; Journal of Property Valuation and Investment Volume 5 ; 5 >
+    au < testing ; 1988 ; Journal of Property Valuation and Investment Volume 6 ; 6 >
+    au < testing ; 1989 ; Journal of Property Valuation and Investment Volume 7 ; 7 >
+    au < testing ; 1990 ; Journal of Property Valuation and Investment Volume 8 ; 8 >
+    au < testing ; 1991 ; Journal of Property Valuation and Investment Volume 9 ; 9 >
+    au < testing ; 1992 ; Journal of Property Valuation and Investment Volume 10 ; 10 >
+    au < testing ; 1993 ; Journal of Property Valuation and Investment Volume 11 ; 11 >
+    au < testing ; 1994 ; Journal of Property Valuation and Investment Volume 12 ; 12 >
+    au < testing ; 1995 ; Journal of Property Valuation and Investment Volume 13 ; 13 >
+    au < testing ; 1996 ; Journal of Property Valuation and Investment Volume 14 ; 14 >
+    au < testing ; 1997 ; Journal of Property Valuation and Investment Volume 15 ; 15 >
+    au < testing ; 1998 ; Journal of Property Valuation and Investment Volume 16 ; 16 >
 
   }
 
   {
+
     title <
       name = Journal of Quality in Maintenance Engineering;
       issn = 1355-2511
     >
 
     param[journal_issn] = 1355-2511
-
+    attr[where] = content4b
     
-    au < manifest ; 1995 ; Journal of Quality in Maintenance Engineering Volume 1 ; 1 >
-    au < manifest ; 1996 ; Journal of Quality in Maintenance Engineering Volume 2 ; 2 >
-    au < manifest ; 1997 ; Journal of Quality in Maintenance Engineering Volume 3 ; 3 >
-    au < manifest ; 1998 ; Journal of Quality in Maintenance Engineering Volume 4 ; 4 >
-    au < manifest ; 1999 ; Journal of Quality in Maintenance Engineering Volume 5 ; 5 >
-    au < manifest ; 2000 ; Journal of Quality in Maintenance Engineering Volume 6 ; 6 >
-    au < manifest ; 2001 ; Journal of Quality in Maintenance Engineering Volume 7 ; 7 >
-    au < manifest ; 2002 ; Journal of Quality in Maintenance Engineering Volume 8 ; 8 >
-    au < manifest ; 2003 ; Journal of Quality in Maintenance Engineering Volume 9 ; 9 >
-    au < manifest ; 2004 ; Journal of Quality in Maintenance Engineering Volume 10 ; 10 >
-    au < manifest ; 2005 ; Journal of Quality in Maintenance Engineering Volume 11 ; 11 >
-    au < manifest ; 2006 ; Journal of Quality in Maintenance Engineering Volume 12 ; 12 >
-    au < manifest ; 2007 ; Journal of Quality in Maintenance Engineering Volume 13 ; 13 >
-    au < manifest ; 2008 ; Journal of Quality in Maintenance Engineering Volume 14 ; 14 >
-    au < manifest ; 2009 ; Journal of Quality in Maintenance Engineering Volume 15 ; 15 >
-    au < manifest ; 2010 ; Journal of Quality in Maintenance Engineering Volume 16 ; 16 >
+    au < testing ; 1995 ; Journal of Quality in Maintenance Engineering Volume 1 ; 1 >
+    au < testing ; 1996 ; Journal of Quality in Maintenance Engineering Volume 2 ; 2 >
+    au < testing ; 1997 ; Journal of Quality in Maintenance Engineering Volume 3 ; 3 >
+    au < testing ; 1998 ; Journal of Quality in Maintenance Engineering Volume 4 ; 4 >
+    au < testing ; 1999 ; Journal of Quality in Maintenance Engineering Volume 5 ; 5 >
+    au < testing ; 2000 ; Journal of Quality in Maintenance Engineering Volume 6 ; 6 >
+    au < testing ; 2001 ; Journal of Quality in Maintenance Engineering Volume 7 ; 7 >
+    au < testing ; 2002 ; Journal of Quality in Maintenance Engineering Volume 8 ; 8 >
+    au < testing ; 2003 ; Journal of Quality in Maintenance Engineering Volume 9 ; 9 >
+    au < testing ; 2004 ; Journal of Quality in Maintenance Engineering Volume 10 ; 10 >
+    au < testing ; 2005 ; Journal of Quality in Maintenance Engineering Volume 11 ; 11 >
+    au < testing ; 2006 ; Journal of Quality in Maintenance Engineering Volume 12 ; 12 >
+    au < testing ; 2007 ; Journal of Quality in Maintenance Engineering Volume 13 ; 13 >
+    au < testing ; 2008 ; Journal of Quality in Maintenance Engineering Volume 14 ; 14 >
+    au < testing ; 2009 ; Journal of Quality in Maintenance Engineering Volume 15 ; 15 >
+    au < testing ; 2010 ; Journal of Quality in Maintenance Engineering Volume 16 ; 16 >
 
   }
 
   {
+
     title <
       name = Journal of Research in Interactive Marketing ;
       issn = 2040-7122
     >
 
     param[journal_issn] = 2040-7122
-
+    attr[where] = content5a
     
-    au < manifest ; 2010 ; Journal of Research in Interactive Marketing  Volume 4 ; 4 >
+    au < testing ; 2010 ; Journal of Research in Interactive Marketing  Volume 4 ; 4 >
 
   }
 
   {
+
     title <
       name = Journal of Research in Marketing and Entrepreneurship;
       issn = 1471-5201
     >
 
     param[journal_issn] = 1471-5201
-
+    attr[where] = content5a
     
-    au < manifest ; 1999 ; Journal of Research in Marketing and Entrepreneurship Volume 1 ; 1 >
-    au < manifest ; 2000 ; Journal of Research in Marketing and Entrepreneurship Volume 2 ; 2 >
-    au < manifest ; 2001 ; Journal of Research in Marketing and Entrepreneurship Volume 3 ; 3 >
-    au < manifest ; 2002 ; Journal of Research in Marketing and Entrepreneurship Volume 4 ; 4 >
-    au < manifest ; 2003 ; Journal of Research in Marketing and Entrepreneurship Volume 5 ; 5 >
-    au < manifest ; 2004 ; Journal of Research in Marketing and Entrepreneurship Volume 6 ; 6 >
-    au < manifest ; 2005 ; Journal of Research in Marketing and Entrepreneurship Volume 7 ; 7 >
-    au < manifest ; 2006 ; Journal of Research in Marketing and Entrepreneurship Volume 8 ; 8 >
-    au < manifest ; 2007 ; Journal of Research in Marketing and Entrepreneurship Volume 9 ; 9 >
-    au < manifest ; 2008 ; Journal of Research in Marketing and Entrepreneurship Volume 10 ; 10 >
-    au < manifest ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 >
-    au < manifest ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 >
+    au < testing ; 1999 ; Journal of Research in Marketing and Entrepreneurship Volume 1 ; 1 >
+    au < testing ; 2000 ; Journal of Research in Marketing and Entrepreneurship Volume 2 ; 2 >
+    au < testing ; 2001 ; Journal of Research in Marketing and Entrepreneurship Volume 3 ; 3 >
+    au < testing ; 2002 ; Journal of Research in Marketing and Entrepreneurship Volume 4 ; 4 >
+    au < testing ; 2003 ; Journal of Research in Marketing and Entrepreneurship Volume 5 ; 5 >
+    au < testing ; 2004 ; Journal of Research in Marketing and Entrepreneurship Volume 6 ; 6 >
+    au < testing ; 2005 ; Journal of Research in Marketing and Entrepreneurship Volume 7 ; 7 >
+    au < testing ; 2006 ; Journal of Research in Marketing and Entrepreneurship Volume 8 ; 8 >
+    au < testing ; 2007 ; Journal of Research in Marketing and Entrepreneurship Volume 9 ; 9 >
+    au < testing ; 2008 ; Journal of Research in Marketing and Entrepreneurship Volume 10 ; 10 >
+    au < testing ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 >
+    au < testing ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 >
 
   }
 
   {
+
     title <
       name = Journal of Science and Technology Policy in China ;
       issn = 1758-552X
     >
 
     param[journal_issn] = 1758-552X
-
+    attr[where] = content5a
     
-    au < manifest ; 2010 ; Journal of Science and Technology Policy in China  Volume 1 ; 1 >
+    au < testing ; 2010 ; Journal of Science and Technology Policy in China  Volume 1 ; 1 >
 
   }
 
   {
+
     title <
       name = Journal of Service Management;
       issn = 1757-5818
     >
 
     param[journal_issn] = 1757-5818
-
+    attr[where] = content5b
     
-    au < manifest ; 2009 ; Journal of Service Management Volume 20 ; 20 >
-    au < manifest ; 2010 ; Journal of Service Management Volume 21 ; 21 >
+    au < testing ; 2009 ; Journal of Service Management Volume 20 ; 20 >
+    au < testing ; 2010 ; Journal of Service Management Volume 21 ; 21 >
 
   }
 
   {
+
     title <
       name = Journal of Services Marketing;
       issn = 0887-6045
     >
 
     param[journal_issn] = 0887-6045
-
+    attr[where] = content5b
     
-    au < manifest ; 1987 ; Journal of Services Marketing Volume 1 ; 1 >
-    au < manifest ; 1988 ; Journal of Services Marketing Volume 2 ; 2 >
-    au < manifest ; 1989 ; Journal of Services Marketing Volume 3 ; 3 >
-    au < manifest ; 1990 ; Journal of Services Marketing Volume 4 ; 4 >
-    au < manifest ; 1991 ; Journal of Services Marketing Volume 5 ; 5 >
-    au < manifest ; 1992 ; Journal of Services Marketing Volume 6 ; 6 >
-    au < manifest ; 1993 ; Journal of Services Marketing Volume 7 ; 7 >
-    au < manifest ; 1994 ; Journal of Services Marketing Volume 8 ; 8 >
-    au < manifest ; 1995 ; Journal of Services Marketing Volume 9 ; 9 >
-    au < manifest ; 1996 ; Journal of Services Marketing Volume 10 ; 10 >
-    au < manifest ; 1997 ; Journal of Services Marketing Volume 11 ; 11 >
-    au < manifest ; 1998 ; Journal of Services Marketing Volume 12 ; 12 >
-    au < manifest ; 1999 ; Journal of Services Marketing Volume 13 ; 13 >
-    au < manifest ; 2000 ; Journal of Services Marketing Volume 14 ; 14 >
-    au < manifest ; 2001 ; Journal of Services Marketing Volume 15 ; 15 >
-    au < manifest ; 2002 ; Journal of Services Marketing Volume 16 ; 16 >
-    au < manifest ; 2003 ; Journal of Services Marketing Volume 17 ; 17 >
-    au < manifest ; 2004 ; Journal of Services Marketing Volume 18 ; 18 >
-    au < manifest ; 2005 ; Journal of Services Marketing Volume 19 ; 19 >
-    au < manifest ; 2006 ; Journal of Services Marketing Volume 20 ; 20 >
-    au < manifest ; 2007 ; Journal of Services Marketing Volume 21 ; 21 >
-    au < manifest ; 2008 ; Journal of Services Marketing Volume 22 ; 22 >
-    au < manifest ; 2009 ; Journal of Services Marketing Volume 23 ; 23 >
-    au < manifest ; 2010 ; Journal of Services Marketing Volume 24 ; 24 >
+    au < testing ; 1987 ; Journal of Services Marketing Volume 1 ; 1 >
+    au < testing ; 1988 ; Journal of Services Marketing Volume 2 ; 2 >
+    au < testing ; 1989 ; Journal of Services Marketing Volume 3 ; 3 >
+    au < testing ; 1990 ; Journal of Services Marketing Volume 4 ; 4 >
+    au < testing ; 1991 ; Journal of Services Marketing Volume 5 ; 5 >
+    au < testing ; 1992 ; Journal of Services Marketing Volume 6 ; 6 >
+    au < testing ; 1993 ; Journal of Services Marketing Volume 7 ; 7 >
+    au < testing ; 1994 ; Journal of Services Marketing Volume 8 ; 8 >
+    au < testing ; 1995 ; Journal of Services Marketing Volume 9 ; 9 >
+    au < testing ; 1996 ; Journal of Services Marketing Volume 10 ; 10 >
+    au < testing ; 1997 ; Journal of Services Marketing Volume 11 ; 11 >
+    au < testing ; 1998 ; Journal of Services Marketing Volume 12 ; 12 >
+    au < testing ; 1999 ; Journal of Services Marketing Volume 13 ; 13 >
+    au < testing ; 2000 ; Journal of Services Marketing Volume 14 ; 14 >
+    au < testing ; 2001 ; Journal of Services Marketing Volume 15 ; 15 >
+    au < testing ; 2002 ; Journal of Services Marketing Volume 16 ; 16 >
+    au < testing ; 2003 ; Journal of Services Marketing Volume 17 ; 17 >
+    au < testing ; 2004 ; Journal of Services Marketing Volume 18 ; 18 >
+    au < testing ; 2005 ; Journal of Services Marketing Volume 19 ; 19 >
+    au < testing ; 2006 ; Journal of Services Marketing Volume 20 ; 20 >
+    au < testing ; 2007 ; Journal of Services Marketing Volume 21 ; 21 >
+    au < testing ; 2008 ; Journal of Services Marketing Volume 22 ; 22 >
+    au < testing ; 2009 ; Journal of Services Marketing Volume 23 ; 23 >
+    au < testing ; 2010 ; Journal of Services Marketing Volume 24 ; 24 >
 
   }
 
   {
+
     title <
       name = Journal of Small Business and Enterprise Development;
       issn = 1462-6004
     >
 
     param[journal_issn] = 1462-6004
-
+    attr[where] = content6a
     
-    au < manifest ; 1994 ; Journal of Small Business and Enterprise Development Volume 1 ; 1 >
-    au < manifest ; 1995 ; Journal of Small Business and Enterprise Development Volume 2 ; 2 >
-    au < manifest ; 1996 ; Journal of Small Business and Enterprise Development Volume 3 ; 3 >
-    au < manifest ; 1997 ; Journal of Small Business and Enterprise Development Volume 4 ; 4 >
-    au < manifest ; 1998 ; Journal of Small Business and Enterprise Development Volume 5 ; 5 >
-    au < manifest ; 1999 ; Journal of Small Business and Enterprise Development Volume 6 ; 6 >
-    au < manifest ; 2000 ; Journal of Small Business and Enterprise Development Volume 7 ; 7 >
-    au < manifest ; 2001 ; Journal of Small Business and Enterprise Development Volume 8 ; 8 >
-    au < manifest ; 2002 ; Journal of Small Business and Enterprise Development Volume 9 ; 9 >
-    au < manifest ; 2003 ; Journal of Small Business and Enterprise Development Volume 10 ; 10 >
-    au < manifest ; 2004 ; Journal of Small Business and Enterprise Development Volume 11 ; 11 >
-    au < manifest ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 >
-    au < manifest ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 >
-    au < manifest ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 >
-    au < manifest ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 >
-    au < manifest ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 >
-    au < manifest ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 >
+    au < testing ; 1994 ; Journal of Small Business and Enterprise Development Volume 1 ; 1 >
+    au < testing ; 1995 ; Journal of Small Business and Enterprise Development Volume 2 ; 2 >
+    au < testing ; 1996 ; Journal of Small Business and Enterprise Development Volume 3 ; 3 >
+    au < testing ; 1997 ; Journal of Small Business and Enterprise Development Volume 4 ; 4 >
+    au < testing ; 1998 ; Journal of Small Business and Enterprise Development Volume 5 ; 5 >
+    au < testing ; 1999 ; Journal of Small Business and Enterprise Development Volume 6 ; 6 >
+    au < testing ; 2000 ; Journal of Small Business and Enterprise Development Volume 7 ; 7 >
+    au < testing ; 2001 ; Journal of Small Business and Enterprise Development Volume 8 ; 8 >
+    au < testing ; 2002 ; Journal of Small Business and Enterprise Development Volume 9 ; 9 >
+    au < testing ; 2003 ; Journal of Small Business and Enterprise Development Volume 10 ; 10 >
+    au < testing ; 2004 ; Journal of Small Business and Enterprise Development Volume 11 ; 11 >
+    au < testing ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 >
+    au < testing ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 >
+    au < testing ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 >
+    au < testing ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 >
+    au < testing ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 >
+    au < testing ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 >
 
   }
 
   {
+
     title <
       name = Journal of Strategy and Management;
       issn = 1755-425X
     >
 
     param[journal_issn] = 1755-425X
-
+    attr[where] = content6b
     
-    au < manifest ; 2008 ; Journal of Strategy and Management Volume 1 ; 1 >
-    au < manifest ; 2009 ; Journal of Strategy and Management Volume 2 ; 2 >
-    au < manifest ; 2010 ; Journal of Strategy and Management Volume 3 ; 3 >
+    au < testing ; 2008 ; Journal of Strategy and Management Volume 1 ; 1 >
+    au < testing ; 2009 ; Journal of Strategy and Management Volume 2 ; 2 >
+    au < testing ; 2010 ; Journal of Strategy and Management Volume 3 ; 3 >
 
   }
 
   {
+
     title <
       name = Journal of Systems and Information Technology;
       issn = 1328-7265
     >
 
     param[journal_issn] = 1328-7265
-
+    attr[where] = content6b
     
-    au < manifest ; 1997 ; Journal of Systems and Information Technology Volume 1 ; 1 >
-    au < manifest ; 1998 ; Journal of Systems and Information Technology Volume 2 ; 2 >
-    au < manifest ; 1999 ; Journal of Systems and Information Technology Volume 3 ; 3 >
-    au < manifest ; 2000 ; Journal of Systems and Information Technology Volume 4 ; 4 >
-    au < manifest ; 2001 ; Journal of Systems and Information Technology Volume 5 ; 5 >
-    au < manifest ; 2002 ; Journal of Systems and Information Technology Volume 6 ; 6 >
-    au < manifest ; 2003 ; Journal of Systems and Information Technology Volume 7 ; 7 >
-    au < manifest ; 2004 ; Journal of Systems and Information Technology Volume 8 ; 8 >
-    au < manifest ; 2007 ; Journal of Systems and Information Technology Volume 9 ; 9 >
-    au < manifest ; 2008 ; Journal of Systems and Information Technology Volume 10 ; 10 >
-    au < manifest ; 2009 ; Journal of Systems and Information Technology Volume 11 ; 11 >
-    au < manifest ; 2010 ; Journal of Systems and Information Technology Volume 12 ; 12 >
+    au < testing ; 1997 ; Journal of Systems and Information Technology Volume 1 ; 1 >
+    au < testing ; 1998 ; Journal of Systems and Information Technology Volume 2 ; 2 >
+    au < testing ; 1999 ; Journal of Systems and Information Technology Volume 3 ; 3 >
+    au < testing ; 2000 ; Journal of Systems and Information Technology Volume 4 ; 4 >
+    au < testing ; 2001 ; Journal of Systems and Information Technology Volume 5 ; 5 >
+    au < testing ; 2002 ; Journal of Systems and Information Technology Volume 6 ; 6 >
+    au < testing ; 2003 ; Journal of Systems and Information Technology Volume 7 ; 7 >
+    au < testing ; 2004 ; Journal of Systems and Information Technology Volume 8 ; 8 >
+    au < testing ; 2007 ; Journal of Systems and Information Technology Volume 9 ; 9 >
+    au < testing ; 2008 ; Journal of Systems and Information Technology Volume 10 ; 10 >
+    au < testing ; 2009 ; Journal of Systems and Information Technology Volume 11 ; 11 >
+    au < testing ; 2010 ; Journal of Systems and Information Technology Volume 12 ; 12 >
 
   }
 
   {
+
     title <
       name = Journal of Technology Management and Strategy in China;
       issn = 1756 4425
@@ -5041,109 +5036,110 @@
 
     param[journal_issn] = 1756 4425
 
-    
-
   }
 
   {
+
     title <
       name = Journal of Technology Management in China;
       issn = 1746-8779
     >
 
     param[journal_issn] = 1746-8779
-
+    attr[where] = sul-lockss30a
     
-    au < manifest ; 2006 ; Journal of Technology Management in China Volume 1 ; 1 >
-    au < manifest ; 2007 ; Journal of Technology Management in China Volume 2 ; 2 >
-    au < manifest ; 2008 ; Journal of Technology Management in China Volume 3 ; 3 >
-    au < manifest ; 2009 ; Journal of Technology Management in China Volume 4 ; 4 >
-    au < manifest ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 >
+    au < testing ; 2006 ; Journal of Technology Management in China Volume 1 ; 1 >
+    au < testing ; 2007 ; Journal of Technology Management in China Volume 2 ; 2 >
+    au < testing ; 2008 ; Journal of Technology Management in China Volume 3 ; 3 >
+    au < testing ; 2009 ; Journal of Technology Management in China Volume 4 ; 4 >
+    au < testing ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 >
 
   }
 
   {
+
     title <
       name = Journal of Workplace Learning;
       issn = 1366-5626
     >
 
     param[journal_issn] = 1366-5626
-
+    attr[where] = sul-lockss30a
     
-    au < manifest ; 1989 ; Journal of Workplace Learning Volume 1 ; 1 >
-    au < manifest ; 1990 ; Journal of Workplace Learning Volume 2 ; 2 >
-    au < manifest ; 1991 ; Journal of Workplace Learning Volume 3 ; 3 >
-    au < manifest ; 1992 ; Journal of Workplace Learning Volume 4 ; 4 >
-    au < manifest ; 1993 ; Journal of Workplace Learning Volume 5 ; 5 >
-    au < manifest ; 1994 ; Journal of Workplace Learning Volume 6 ; 6 >
-    au < manifest ; 1995 ; Journal of Workplace Learning Volume 7 ; 7 >
-    au < manifest ; 1996 ; Journal of Workplace Learning Volume 8 ; 8 >
-    au < manifest ; 1997 ; Journal of Workplace Learning Volume 9 ; 9 >
-    au < manifest ; 1998 ; Journal of Workplace Learning Volume 10 ; 10 >
-    au < manifest ; 1999 ; Journal of Workplace Learning Volume 11 ; 11 >
-    au < manifest ; 2000 ; Journal of Workplace Learning Volume 12 ; 12 >
-    au < manifest ; 2001 ; Journal of Workplace Learning Volume 13 ; 13 >
-    au < manifest ; 2002 ; Journal of Workplace Learning Volume 14 ; 14 >
-    au < manifest ; 2003 ; Journal of Workplace Learning Volume 15 ; 15 >
-    au < manifest ; 2004 ; Journal of Workplace Learning Volume 16 ; 16 >
-    au < manifest ; 2005 ; Journal of Workplace Learning Volume 17 ; 17 >
-    au < manifest ; 2006 ; Journal of Workplace Learning Volume 18 ; 18 >
-    au < manifest ; 2007 ; Journal of Workplace Learning Volume 19 ; 19 >
-    au < manifest ; 2008 ; Journal of Workplace Learning Volume 20 ; 20 >
-    au < manifest ; 2009 ; Journal of Workplace Learning Volume 21 ; 21 >
-    au < manifest ; 2010 ; Journal of Workplace Learning Volume 22 ; 22 >
+    au < testing ; 1989 ; Journal of Workplace Learning Volume 1 ; 1 >
+    au < testing ; 1990 ; Journal of Workplace Learning Volume 2 ; 2 >
+    au < testing ; 1991 ; Journal of Workplace Learning Volume 3 ; 3 >
+    au < testing ; 1992 ; Journal of Workplace Learning Volume 4 ; 4 >
+    au < testing ; 1993 ; Journal of Workplace Learning Volume 5 ; 5 >
+    au < testing ; 1994 ; Journal of Workplace Learning Volume 6 ; 6 >
+    au < testing ; 1995 ; Journal of Workplace Learning Volume 7 ; 7 >
+    au < testing ; 1996 ; Journal of Workplace Learning Volume 8 ; 8 >
+    au < testing ; 1997 ; Journal of Workplace Learning Volume 9 ; 9 >
+    au < testing ; 1998 ; Journal of Workplace Learning Volume 10 ; 10 >
+    au < testing ; 1999 ; Journal of Workplace Learning Volume 11 ; 11 >
+    au < testing ; 2000 ; Journal of Workplace Learning Volume 12 ; 12 >
+    au < testing ; 2001 ; Journal of Workplace Learning Volume 13 ; 13 >
+    au < testing ; 2002 ; Journal of Workplace Learning Volume 14 ; 14 >
+    au < testing ; 2003 ; Journal of Workplace Learning Volume 15 ; 15 >
+    au < testing ; 2004 ; Journal of Workplace Learning Volume 16 ; 16 >
+    au < testing ; 2005 ; Journal of Workplace Learning Volume 17 ; 17 >
+    au < testing ; 2006 ; Journal of Workplace Learning Volume 18 ; 18 >
+    au < testing ; 2007 ; Journal of Workplace Learning Volume 19 ; 19 >
+    au < testing ; 2008 ; Journal of Workplace Learning Volume 20 ; 20 >
+    au < testing ; 2009 ; Journal of Workplace Learning Volume 21 ; 21 >
+    au < testing ; 2010 ; Journal of Workplace Learning Volume 22 ; 22 >
 
   }
 
   {
+
     title <
       name = Kybernetes;
       issn = 0368-492X
     >
 
     param[journal_issn] = 0368-492X
-
+    attr[where] = sul-lockss30b
     
-    au < manifest ; 1972 ; Kybernetes Volume 1 ; 1 >
-    au < manifest ; 1973 ; Kybernetes Volume 2 ; 2 >
-    au < manifest ; 1974 ; Kybernetes Volume 3 ; 3 >
-    au < manifest ; 1975 ; Kybernetes Volume 4 ; 4 >
-    au < manifest ; 1976 ; Kybernetes Volume 5 ; 5 >
-    au < manifest ; 1977 ; Kybernetes Volume 6 ; 6 >
-    au < manifest ; 1978 ; Kybernetes Volume 7 ; 7 >
-    au < manifest ; 1979 ; Kybernetes Volume 8 ; 8 >
-    au < manifest ; 1980 ; Kybernetes Volume 9 ; 9 >
-    au < manifest ; 1981 ; Kybernetes Volume 10 ; 10 >
-    au < manifest ; 1982 ; Kybernetes Volume 11 ; 11 >
-    au < manifest ; 1983 ; Kybernetes Volume 12 ; 12 >
-    au < manifest ; 1984 ; Kybernetes Volume 13 ; 13 >
-    au < manifest ; 1985 ; Kybernetes Volume 14 ; 14 >
-    au < manifest ; 1986 ; Kybernetes Volume 15 ; 15 >
-    au < manifest ; 1987 ; Kybernetes Volume 16 ; 16 >
-    au < manifest ; 1988 ; Kybernetes Volume 17 ; 17 >
-    au < manifest ; 1989 ; Kybernetes Volume 18 ; 18 >
-    au < manifest ; 1990 ; Kybernetes Volume 19 ; 19 >
-    au < manifest ; 1991 ; Kybernetes Volume 20 ; 20 >
-    au < manifest ; 1992 ; Kybernetes Volume 21 ; 21 >
-    au < manifest ; 1993 ; Kybernetes Volume 22 ; 22 >
-    au < manifest ; 1994 ; Kybernetes Volume 23 ; 23 >
-    au < manifest ; 1995 ; Kybernetes Volume 24 ; 24 >
-    au < manifest ; 1996 ; Kybernetes Volume 25 ; 25 >
-    au < manifest ; 1997 ; Kybernetes Volume 26 ; 26 >
-    au < manifest ; 1998 ; Kybernetes Volume 27 ; 27 >
-    au < manifest ; 1999 ; Kybernetes Volume 28 ; 28 >
-    au < manifest ; 2000 ; Kybernetes Volume 29 ; 29 >
-    au < manifest ; 2001 ; Kybernetes Volume 30 ; 30 >
-    au < manifest ; 2002 ; Kybernetes Volume 31 ; 31 >
-    au < manifest ; 2003 ; Kybernetes Volume 32 ; 32 >
-    au < manifest ; 2004 ; Kybernetes Volume 33 ; 33 >
-    au < manifest ; 2005 ; Kybernetes Volume 34 ; 34 >
-    au < manifest ; 2006 ; Kybernetes Volume 35 ; 35 >
-    au < manifest ; 2007 ; Kybernetes Volume 36 ; 36 >
-    au < manifest ; 2008 ; Kybernetes Volume 37 ; 37 >
-    au < manifest ; 2009 ; Kybernetes Volume 38 ; 38 >
-    au < manifest ; 2010 ; Kybernetes Volume 39 ; 39 >
+    au < testing ; 1972 ; Kybernetes Volume 1 ; 1 >
+    au < testing ; 1973 ; Kybernetes Volume 2 ; 2 >
+    au < testing ; 1974 ; Kybernetes Volume 3 ; 3 >
+    au < testing ; 1975 ; Kybernetes Volume 4 ; 4 >
+    au < testing ; 1976 ; Kybernetes Volume 5 ; 5 >
+    au < testing ; 1977 ; Kybernetes Volume 6 ; 6 >
+    au < testing ; 1978 ; Kybernetes Volume 7 ; 7 >
+    au < testing ; 1979 ; Kybernetes Volume 8 ; 8 >
+    au < testing ; 1980 ; Kybernetes Volume 9 ; 9 >
+    au < testing ; 1981 ; Kybernetes Volume 10 ; 10 >
+    au < testing ; 1982 ; Kybernetes Volume 11 ; 11 >
+    au < testing ; 1983 ; Kybernetes Volume 12 ; 12 >
+    au < testing ; 1984 ; Kybernetes Volume 13 ; 13 >
+    au < testing ; 1985 ; Kybernetes Volume 14 ; 14 >
+    au < testing ; 1986 ; Kybernetes Volume 15 ; 15 >
+    au < testing ; 1987 ; Kybernetes Volume 16 ; 16 >
+    au < testing ; 1988 ; Kybernetes Volume 17 ; 17 >
+    au < testing ; 1989 ; Kybernetes Volume 18 ; 18 >
+    au < testing ; 1990 ; Kybernetes Volume 19 ; 19 >
+    au < testing ; 1991 ; Kybernetes Volume 20 ; 20 >
+    au < testing ; 1992 ; Kybernetes Volume 21 ; 21 >
+    au < testing ; 1993 ; Kybernetes Volume 22 ; 22 >
+    au < testing ; 1994 ; Kybernetes Volume 23 ; 23 >
+    au < testing ; 1995 ; Kybernetes Volume 24 ; 24 >
+    au < testing ; 1996 ; Kybernetes Volume 25 ; 25 >
+    au < testing ; 1997 ; Kybernetes Volume 26 ; 26 >
+    au < testing ; 1998 ; Kybernetes Volume 27 ; 27 >
+    au < testing ; 1999 ; Kybernetes Volume 28 ; 28 >
+    au < testing ; 2000 ; Kybernetes Volume 29 ; 29 >
+    au < testing ; 2001 ; Kybernetes Volume 30 ; 30 >
+    au < testing ; 2002 ; Kybernetes Volume 31 ; 31 >
+    au < testing ; 2003 ; Kybernetes Volume 32 ; 32 >
+    au < testing ; 2004 ; Kybernetes Volume 33 ; 33 >
+    au < testing ; 2005 ; Kybernetes Volume 34 ; 34 >
+    au < testing ; 2006 ; Kybernetes Volume 35 ; 35 >
+    au < testing ; 2007 ; Kybernetes Volume 36 ; 36 >
+    au < testing ; 2008 ; Kybernetes Volume 37 ; 37 >
+    au < testing ; 2009 ; Kybernetes Volume 38 ; 38 >
+    au < testing ; 2010 ; Kybernetes Volume 39 ; 39 >
 
   }
 
