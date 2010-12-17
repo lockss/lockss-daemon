@@ -2213,10 +2213,10 @@
 
     param[journal_issn] = 1834-7649
     
-    au < ready ; 2007 ; International Journal of Accounting and Information Management Volume 15 ; 15 >
-    au < ready ; 2008 ; International Journal of Accounting and Information Management Volume 16 ; 16 >
-    au < ready ; 2009 ; International Journal of Accounting and Information Management Volume 17 ; 17 >
-    au < ready ; 2010 ; International Journal of Accounting and Information Management Volume 18 ; 18 >
+    au < released ; 2007 ; International Journal of Accounting and Information Management Volume 15 ; 15 >
+    au < released ; 2008 ; International Journal of Accounting and Information Management Volume 16 ; 16 >
+    au < released ; 2009 ; International Journal of Accounting and Information Management Volume 17 ; 17 >
+    au < released ; 2010 ; International Journal of Accounting and Information Management Volume 18 ; 18 >
 
   }
 
@@ -2229,8 +2229,8 @@
 
     param[journal_issn] = 1465-4652
 
-    au < ready ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
-    au < ready ; 2000 ; International Journal of Agile Management Systems Volume 2 ; 2 >
+    au < released ; 1999 ; International Journal of Agile Management Systems Volume 1 ; 1 >
+    au < released ; 2000 ; International Journal of Agile Management Systems Volume 2 ; 2 >
 
   }
 
@@ -2243,34 +2243,34 @@
 
     param[journal_issn] = 0265-2323
     
-    au < ready ; 1983 ; International Journal of Bank Marketing Volume 1 ; 1 >
-    au < ready ; 1984 ; International Journal of Bank Marketing Volume 2 ; 2 >
-    au < ready ; 1985 ; International Journal of Bank Marketing Volume 3 ; 3 >
-    au < ready ; 1986 ; International Journal of Bank Marketing Volume 4 ; 4 >
-    au < ready ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 >
-    au < ready ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 >
-    au < ready ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 >
-    au < ready ; 1990 ; International Journal of Bank Marketing Volume 8 ; 8 >
-    au < ready ; 1991 ; International Journal of Bank Marketing Volume 9 ; 9 >
+    au < released ; 1983 ; International Journal of Bank Marketing Volume 1 ; 1 >
+    au < released ; 1984 ; International Journal of Bank Marketing Volume 2 ; 2 >
+    au < released ; 1985 ; International Journal of Bank Marketing Volume 3 ; 3 >
+    au < released ; 1986 ; International Journal of Bank Marketing Volume 4 ; 4 >
+    au < released ; 1987 ; International Journal of Bank Marketing Volume 5 ; 5 >
+    au < released ; 1988 ; International Journal of Bank Marketing Volume 6 ; 6 >
+    au < released ; 1989 ; International Journal of Bank Marketing Volume 7 ; 7 >
+    au < released ; 1990 ; International Journal of Bank Marketing Volume 8 ; 8 >
+    au < released ; 1991 ; International Journal of Bank Marketing Volume 9 ; 9 >
     au < notReady ; 1992 ; International Journal of Bank Marketing Volume 10 ; 10 >
-    au < ready ; 1993 ; International Journal of Bank Marketing Volume 11 ; 11 >
-    au < ready ; 1994 ; International Journal of Bank Marketing Volume 12 ; 12 >
-    au < ready ; 1995 ; International Journal of Bank Marketing Volume 13 ; 13 >
-    au < ready ; 1996 ; International Journal of Bank Marketing Volume 14 ; 14 >
-    au < ready ; 1997 ; International Journal of Bank Marketing Volume 15 ; 15 >
-    au < ready ; 1998 ; International Journal of Bank Marketing Volume 16 ; 16 >
-    au < ready ; 1999 ; International Journal of Bank Marketing Volume 17 ; 17 >
-    au < ready ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 >
-    au < ready ; 2001 ; International Journal of Bank Marketing Volume 19 ; 19 >
-    au < ready ; 2002 ; International Journal of Bank Marketing Volume 20 ; 20 >
-    au < ready ; 2003 ; International Journal of Bank Marketing Volume 21 ; 21 >
-    au < ready ; 2004 ; International Journal of Bank Marketing Volume 22 ; 22 >
-    au < ready ; 2005 ; International Journal of Bank Marketing Volume 23 ; 23 >
-    au < ready ; 2006 ; International Journal of Bank Marketing Volume 24 ; 24 >
-    au < ready ; 2007 ; International Journal of Bank Marketing Volume 25 ; 25 >
-    au < ready ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 >
-    au < ready ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 >
-    au < ready ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 >
+    au < released ; 1993 ; International Journal of Bank Marketing Volume 11 ; 11 >
+    au < released ; 1994 ; International Journal of Bank Marketing Volume 12 ; 12 >
+    au < released ; 1995 ; International Journal of Bank Marketing Volume 13 ; 13 >
+    au < released ; 1996 ; International Journal of Bank Marketing Volume 14 ; 14 >
+    au < released ; 1997 ; International Journal of Bank Marketing Volume 15 ; 15 >
+    au < released ; 1998 ; International Journal of Bank Marketing Volume 16 ; 16 >
+    au < released ; 1999 ; International Journal of Bank Marketing Volume 17 ; 17 >
+    au < released ; 2000 ; International Journal of Bank Marketing Volume 18 ; 18 >
+    au < released ; 2001 ; International Journal of Bank Marketing Volume 19 ; 19 >
+    au < released ; 2002 ; International Journal of Bank Marketing Volume 20 ; 20 >
+    au < released ; 2003 ; International Journal of Bank Marketing Volume 21 ; 21 >
+    au < released ; 2004 ; International Journal of Bank Marketing Volume 22 ; 22 >
+    au < released ; 2005 ; International Journal of Bank Marketing Volume 23 ; 23 >
+    au < released ; 2006 ; International Journal of Bank Marketing Volume 24 ; 24 >
+    au < released ; 2007 ; International Journal of Bank Marketing Volume 25 ; 25 >
+    au < released ; 2008 ; International Journal of Bank Marketing Volume 26 ; 26 >
+    au < released ; 2009 ; International Journal of Bank Marketing Volume 27 ; 27 >
+    au < released ; 2010 ; International Journal of Bank Marketing Volume 28 ; 28 >
 
   }
 
@@ -2283,8 +2283,8 @@
 
     param[journal_issn] = 0955-6214
     
-    au < ready ; 1994 ; International Journal of Career Management Volume 6 ; 6 >
-    au < ready ; 1995 ; International Journal of Career Management Volume 7 ; 7 >
+    au < released ; 1994 ; International Journal of Career Management Volume 6 ; 6 >
+    au < released ; 1995 ; International Journal of Career Management Volume 7 ; 7 >
 
   }
 
@@ -2296,7 +2296,7 @@
 
     param[journal_issn] = 1756-8692 
 
-    au < ready ; 2010 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
+    au < released ; 2010 ; International Journal of Climate Change Strategies and Management Volume 1 ; 1 >
 
   }
 
@@ -2308,28 +2308,28 @@
 
     param[journal_issn] = 0955-6222
     
-    au < ready ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 >
-    au < ready ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 >
-    au < ready ; 1991 ; International Journal of Clothing Science and Technology Volume 3 ; 3 >
-    au < ready ; 1992 ; International Journal of Clothing Science and Technology Volume 4 ; 4 >
-    au < ready ; 1993 ; International Journal of Clothing Science and Technology Volume 5 ; 5 >
-    au < ready ; 1994 ; International Journal of Clothing Science and Technology Volume 6 ; 6 >
-    au < ready ; 1995 ; International Journal of Clothing Science and Technology Volume 7 ; 7 >
-    au < ready ; 1996 ; International Journal of Clothing Science and Technology Volume 8 ; 8 >
-    au < ready ; 1997 ; International Journal of Clothing Science and Technology Volume 9 ; 9 >
-    au < ready ; 1998 ; International Journal of Clothing Science and Technology Volume 10 ; 10 >
-    au < ready ; 1999 ; International Journal of Clothing Science and Technology Volume 11 ; 11 >
-    au < ready ; 2000 ; International Journal of Clothing Science and Technology Volume 12 ; 12 >
-    au < ready ; 2001 ; International Journal of Clothing Science and Technology Volume 13 ; 13 >
-    au < ready ; 2002 ; International Journal of Clothing Science and Technology Volume 14 ; 14 >
-    au < ready ; 2003 ; International Journal of Clothing Science and Technology Volume 15 ; 15 >
-    au < ready ; 2004 ; International Journal of Clothing Science and Technology Volume 16 ; 16 >
-    au < ready ; 2005 ; International Journal of Clothing Science and Technology Volume 17 ; 17 >
-    au < ready ; 2006 ; International Journal of Clothing Science and Technology Volume 18 ; 18 >
-    au < ready ; 2007 ; International Journal of Clothing Science and Technology Volume 19 ; 19 >
-    au < ready ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 >
-    au < ready ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 >
-    au < ready ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 >
+    au < released ; 1989 ; International Journal of Clothing Science and Technology Volume 1 ; 1 >
+    au < released ; 1990 ; International Journal of Clothing Science and Technology Volume 2 ; 2 >
+    au < released ; 1991 ; International Journal of Clothing Science and Technology Volume 3 ; 3 >
+    au < released ; 1992 ; International Journal of Clothing Science and Technology Volume 4 ; 4 >
+    au < released ; 1993 ; International Journal of Clothing Science and Technology Volume 5 ; 5 >
+    au < released ; 1994 ; International Journal of Clothing Science and Technology Volume 6 ; 6 >
+    au < released ; 1995 ; International Journal of Clothing Science and Technology Volume 7 ; 7 >
+    au < released ; 1996 ; International Journal of Clothing Science and Technology Volume 8 ; 8 >
+    au < released ; 1997 ; International Journal of Clothing Science and Technology Volume 9 ; 9 >
+    au < released ; 1998 ; International Journal of Clothing Science and Technology Volume 10 ; 10 >
+    au < released ; 1999 ; International Journal of Clothing Science and Technology Volume 11 ; 11 >
+    au < released ; 2000 ; International Journal of Clothing Science and Technology Volume 12 ; 12 >
+    au < released ; 2001 ; International Journal of Clothing Science and Technology Volume 13 ; 13 >
+    au < released ; 2002 ; International Journal of Clothing Science and Technology Volume 14 ; 14 >
+    au < released ; 2003 ; International Journal of Clothing Science and Technology Volume 15 ; 15 >
+    au < released ; 2004 ; International Journal of Clothing Science and Technology Volume 16 ; 16 >
+    au < released ; 2005 ; International Journal of Clothing Science and Technology Volume 17 ; 17 >
+    au < released ; 2006 ; International Journal of Clothing Science and Technology Volume 18 ; 18 >
+    au < released ; 2007 ; International Journal of Clothing Science and Technology Volume 19 ; 19 >
+    au < released ; 2008 ; International Journal of Clothing Science and Technology Volume 20 ; 20 >
+    au < released ; 2009 ; International Journal of Clothing Science and Technology Volume 21 ; 21 >
+    au < released ; 2010 ; International Journal of Clothing Science and Technology Volume 22 ; 22 >
 
   }
 
@@ -2342,26 +2342,26 @@
 
     param[journal_issn] = 1056-9219
     
-    au < ready ; 1991 ; International Journal of Commerce and Management Volume 1 ; 1 >
-    au < ready ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 >
-    au < ready ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 >
-    au < ready ; 1994 ; International Journal of Commerce and Management Volume 4 ; 4 >
-    au < ready ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 >
-    au < ready ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 >
-    au < ready ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 >
-    au < ready ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 >
-    au < ready ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 >
-    au < ready ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 >
-    au < ready ; 2001 ; International Journal of Commerce and Management Volume 11 ; 11 >
-    au < ready ; 2002 ; International Journal of Commerce and Management Volume 12 ; 12 >
-    au < ready ; 2003 ; International Journal of Commerce and Management Volume 13 ; 13 >
-    au < ready ; 2004 ; International Journal of Commerce and Management Volume 14 ; 14 >
-    au < ready ; 2005 ; International Journal of Commerce and Management Volume 15 ; 15 >
-    au < ready ; 2006 ; International Journal of Commerce and Management Volume 16 ; 16 >
-    au < ready ; 2007 ; International Journal of Commerce and Management Volume 17 ; 17 >
-    au < ready ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 >
-    au < ready ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 >
-    au < ready ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 >
+    au < released ; 1991 ; International Journal of Commerce and Management Volume 1 ; 1 >
+    au < released ; 1992 ; International Journal of Commerce and Management Volume 2 ; 2 >
+    au < released ; 1993 ; International Journal of Commerce and Management Volume 3 ; 3 >
+    au < released ; 1994 ; International Journal of Commerce and Management Volume 4 ; 4 >
+    au < released ; 1995 ; International Journal of Commerce and Management Volume 5 ; 5 >
+    au < released ; 1996 ; International Journal of Commerce and Management Volume 6 ; 6 >
+    au < released ; 1997 ; International Journal of Commerce and Management Volume 7 ; 7 >
+    au < released ; 1998 ; International Journal of Commerce and Management Volume 8 ; 8 >
+    au < released ; 1999 ; International Journal of Commerce and Management Volume 9 ; 9 >
+    au < released ; 2000 ; International Journal of Commerce and Management Volume 10 ; 10 >
+    au < released ; 2001 ; International Journal of Commerce and Management Volume 11 ; 11 >
+    au < released ; 2002 ; International Journal of Commerce and Management Volume 12 ; 12 >
+    au < released ; 2003 ; International Journal of Commerce and Management Volume 13 ; 13 >
+    au < released ; 2004 ; International Journal of Commerce and Management Volume 14 ; 14 >
+    au < released ; 2005 ; International Journal of Commerce and Management Volume 15 ; 15 >
+    au < released ; 2006 ; International Journal of Commerce and Management Volume 16 ; 16 >
+    au < released ; 2007 ; International Journal of Commerce and Management Volume 17 ; 17 >
+    au < released ; 2008 ; International Journal of Commerce and Management Volume 18 ; 18 >
+    au < released ; 2009 ; International Journal of Commerce and Management Volume 19 ; 19 >
+    au < released ; 2010 ; International Journal of Commerce and Management Volume 20 ; 20 >
 
   }
 
@@ -2374,27 +2374,27 @@
 
     param[journal_issn] = 1044-4068
     
-    au < ready ; 1990 ; International Journal of Conflict Management Volume 1 ; 1 >
-    au < ready ; 1991 ; International Journal of Conflict Management Volume 2 ; 2 >
-    au < ready ; 1992 ; International Journal of Conflict Management Volume 3 ; 3 >
-    au < ready ; 1993 ; International Journal of Conflict Management Volume 4 ; 4 >
-    au < ready ; 1994 ; International Journal of Conflict Management Volume 5 ; 5 >
-    au < ready ; 1995 ; International Journal of Conflict Management Volume 6 ; 6 >
-    au < ready ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 >
-    au < ready ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 >
-    au < ready ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 >
-    au < ready ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 >
-    au < ready ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 >
-    au < ready ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 >
-    au < ready ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 >
-    au < ready ; 2003 ; International Journal of Conflict Management Volume 14 ; 14 >
-    au < ready ; 2004 ; International Journal of Conflict Management Volume 15 ; 15 >
-    au < ready ; 2005 ; International Journal of Conflict Management Volume 16 ; 16 >
-    au < ready ; 2006 ; International Journal of Conflict Management Volume 17 ; 17 >
-    au < ready ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 >
-    au < ready ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 >
-    au < ready ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 >
-    au < ready ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 >
+    au < released ; 1990 ; International Journal of Conflict Management Volume 1 ; 1 >
+    au < released ; 1991 ; International Journal of Conflict Management Volume 2 ; 2 >
+    au < released ; 1992 ; International Journal of Conflict Management Volume 3 ; 3 >
+    au < released ; 1993 ; International Journal of Conflict Management Volume 4 ; 4 >
+    au < released ; 1994 ; International Journal of Conflict Management Volume 5 ; 5 >
+    au < released ; 1995 ; International Journal of Conflict Management Volume 6 ; 6 >
+    au < released ; 1996 ; International Journal of Conflict Management Volume 7 ; 7 >
+    au < released ; 1997 ; International Journal of Conflict Management Volume 8 ; 8 >
+    au < released ; 1998 ; International Journal of Conflict Management Volume 9 ; 9 >
+    au < released ; 1999 ; International Journal of Conflict Management Volume 10 ; 10 >
+    au < released ; 2000 ; International Journal of Conflict Management Volume 11 ; 11 >
+    au < released ; 2001 ; International Journal of Conflict Management Volume 12 ; 12 >
+    au < released ; 2002 ; International Journal of Conflict Management Volume 13 ; 13 >
+    au < released ; 2003 ; International Journal of Conflict Management Volume 14 ; 14 >
+    au < released ; 2004 ; International Journal of Conflict Management Volume 15 ; 15 >
+    au < released ; 2005 ; International Journal of Conflict Management Volume 16 ; 16 >
+    au < released ; 2006 ; International Journal of Conflict Management Volume 17 ; 17 >
+    au < released ; 2007 ; International Journal of Conflict Management Volume 18 ; 18 >
+    au < released ; 2008 ; International Journal of Conflict Management Volume 19 ; 19 >
+    au < released ; 2009 ; International Journal of Conflict Management Volume 20 ; 20 >
+    au < released ; 2010 ; International Journal of Conflict Management Volume 21 ; 21 >
 
   }
 
@@ -2407,28 +2407,28 @@
 
     param[journal_issn] = 0959-6119
     
-    au < ready ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 >
-    au < ready ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 >
-    au < ready ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 >
-    au < ready ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 >
-    au < ready ; 1993 ; International Journal of Contemporary Hospitality Management Volume 5 ; 5 >
-    au < ready ; 1994 ; International Journal of Contemporary Hospitality Management Volume 6 ; 6 >
-    au < ready ; 1995 ; International Journal of Contemporary Hospitality Management Volume 7 ; 7 >
-    au < ready ; 1996 ; International Journal of Contemporary Hospitality Management Volume 8 ; 8 >
-    au < ready ; 1997 ; International Journal of Contemporary Hospitality Management Volume 9 ; 9 >
-    au < ready ; 1998 ; International Journal of Contemporary Hospitality Management Volume 10 ; 10 >
-    au < ready ; 1999 ; International Journal of Contemporary Hospitality Management Volume 11 ; 11 >
-    au < ready ; 2000 ; International Journal of Contemporary Hospitality Management Volume 12 ; 12 >
-    au < ready ; 2001 ; International Journal of Contemporary Hospitality Management Volume 13 ; 13 >
-    au < ready ; 2002 ; International Journal of Contemporary Hospitality Management Volume 14 ; 14 >
-    au < ready ; 2003 ; International Journal of Contemporary Hospitality Management Volume 15 ; 15 >
-    au < ready ; 2004 ; International Journal of Contemporary Hospitality Management Volume 16 ; 16 >
-    au < ready ; 2005 ; International Journal of Contemporary Hospitality Management Volume 17 ; 17 >
-    au < ready ; 2006 ; International Journal of Contemporary Hospitality Management Volume 18 ; 18 >
-    au < ready ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 >
-    au < ready ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 >
-    au < ready ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
-    au < ready ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
+    au < released ; 1989 ; International Journal of Contemporary Hospitality Management Volume 1 ; 1 >
+    au < released ; 1990 ; International Journal of Contemporary Hospitality Management Volume 2 ; 2 >
+    au < released ; 1991 ; International Journal of Contemporary Hospitality Management Volume 3 ; 3 >
+    au < released ; 1992 ; International Journal of Contemporary Hospitality Management Volume 4 ; 4 >
+    au < released ; 1993 ; International Journal of Contemporary Hospitality Management Volume 5 ; 5 >
+    au < released ; 1994 ; International Journal of Contemporary Hospitality Management Volume 6 ; 6 >
+    au < released ; 1995 ; International Journal of Contemporary Hospitality Management Volume 7 ; 7 >
+    au < released ; 1996 ; International Journal of Contemporary Hospitality Management Volume 8 ; 8 >
+    au < released ; 1997 ; International Journal of Contemporary Hospitality Management Volume 9 ; 9 >
+    au < released ; 1998 ; International Journal of Contemporary Hospitality Management Volume 10 ; 10 >
+    au < released ; 1999 ; International Journal of Contemporary Hospitality Management Volume 11 ; 11 >
+    au < released ; 2000 ; International Journal of Contemporary Hospitality Management Volume 12 ; 12 >
+    au < released ; 2001 ; International Journal of Contemporary Hospitality Management Volume 13 ; 13 >
+    au < released ; 2002 ; International Journal of Contemporary Hospitality Management Volume 14 ; 14 >
+    au < released ; 2003 ; International Journal of Contemporary Hospitality Management Volume 15 ; 15 >
+    au < released ; 2004 ; International Journal of Contemporary Hospitality Management Volume 16 ; 16 >
+    au < released ; 2005 ; International Journal of Contemporary Hospitality Management Volume 17 ; 17 >
+    au < released ; 2006 ; International Journal of Contemporary Hospitality Management Volume 18 ; 18 >
+    au < released ; 2007 ; International Journal of Contemporary Hospitality Management Volume 19 ; 19 >
+    au < released ; 2008 ; International Journal of Contemporary Hospitality Management Volume 20 ; 20 >
+    au < released ; 2009 ; International Journal of Contemporary Hospitality Management Volume 21 ; 21 >
+    au < released ; 2010 ; International Journal of Contemporary Hospitality Management Volume 22 ; 22 >
 
   }
 
@@ -2441,10 +2441,10 @@
 
     param[journal_issn] = 1750-6182
     
-    au < ready ; 2007 ; International Journal of Culture, Tourism and Hospitality Research Volume 1 ; 1 >
-    au < ready ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 >
-    au < ready ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 >
-    au < ready ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 >
+    au < released ; 2007 ; International Journal of Culture, Tourism and Hospitality Research Volume 1 ; 1 >
+    au < released ; 2008 ; International Journal of Culture, Tourism and Hospitality Research Volume 2 ; 2 >
+    au < released ; 2009 ; International Journal of Culture, Tourism and Hospitality Research Volume 3 ; 3 >
+    au < released ; 2010 ; International Journal of Culture, Tourism and Hospitality Research Volume 4 ; 4 >
 
   }
 
@@ -2458,9 +2458,9 @@
     param[journal_issn] = 1446-8956
     
     au < notReady ; 2007 ; International Journal of Development Issues Volume 6 ; 6 >
-    au < ready ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
-    au < ready ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
-    au < ready ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
+    au < released ; 2008 ; International Journal of Development Issues Volume 7 ; 7 >
+    au < released ; 2009 ; International Journal of Development Issues Volume 8 ; 8 >
+    au < released ; 2010 ; International Journal of Development Issues Volume 9 ; 9 >
 
   }
 
@@ -2486,30 +2486,30 @@
 
     param[journal_issn] = 0951-354X
     
-    au < ready ; 1987 ; International Journal of Educational Management Volume 1 ; 1 >
-    au < ready ; 1988 ; International Journal of Educational Management Volume 2 ; 2 >
-    au < ready ; 1989 ; International Journal of Educational Management Volume 3 ; 3 >
-    au < ready ; 1990 ; International Journal of Educational Management Volume 4 ; 4 >
+    au < released ; 1987 ; International Journal of Educational Management Volume 1 ; 1 >
+    au < released ; 1988 ; International Journal of Educational Management Volume 2 ; 2 >
+    au < released ; 1989 ; International Journal of Educational Management Volume 3 ; 3 >
+    au < released ; 1990 ; International Journal of Educational Management Volume 4 ; 4 >
     au < notReady ; 1991 ; International Journal of Educational Management Volume 5 ; 5 >
-    au < ready ; 1992 ; International Journal of Educational Management Volume 6 ; 6 >
-    au < ready ; 1993 ; International Journal of Educational Management Volume 7 ; 7 >
-    au < ready ; 1994 ; International Journal of Educational Management Volume 8 ; 8 >
-    au < ready ; 1995 ; International Journal of Educational Management Volume 9 ; 9 >
-    au < ready ; 1996 ; International Journal of Educational Management Volume 10 ; 10 >
-    au < ready ; 1997 ; International Journal of Educational Management Volume 11 ; 11 >
-    au < ready ; 1998 ; International Journal of Educational Management Volume 12 ; 12 >
-    au < ready ; 1999 ; International Journal of Educational Management Volume 13 ; 13 >
-    au < ready ; 2000 ; International Journal of Educational Management Volume 14 ; 14 >
-    au < ready ; 2001 ; International Journal of Educational Management Volume 15 ; 15 >
-    au < ready ; 2002 ; International Journal of Educational Management Volume 16 ; 16 >
-    au < ready ; 2003 ; International Journal of Educational Management Volume 17 ; 17 >
-    au < ready ; 2004 ; International Journal of Educational Management Volume 18 ; 18 >
-    au < ready ; 2005 ; International Journal of Educational Management Volume 19 ; 19 >
-    au < ready ; 2006 ; International Journal of Educational Management Volume 20 ; 20 >
-    au < ready ; 2007 ; International Journal of Educational Management Volume 21 ; 21 >
-    au < ready ; 2008 ; International Journal of Educational Management Volume 22 ; 22 >
-    au < ready ; 2009 ; International Journal of Educational Management Volume 23 ; 23 >
-    au < ready ; 2010 ; International Journal of Educational Management Volume 24 ; 24 >
+    au < released ; 1992 ; International Journal of Educational Management Volume 6 ; 6 >
+    au < released ; 1993 ; International Journal of Educational Management Volume 7 ; 7 >
+    au < released ; 1994 ; International Journal of Educational Management Volume 8 ; 8 >
+    au < released ; 1995 ; International Journal of Educational Management Volume 9 ; 9 >
+    au < released ; 1996 ; International Journal of Educational Management Volume 10 ; 10 >
+    au < released ; 1997 ; International Journal of Educational Management Volume 11 ; 11 >
+    au < released ; 1998 ; International Journal of Educational Management Volume 12 ; 12 >
+    au < released ; 1999 ; International Journal of Educational Management Volume 13 ; 13 >
+    au < released ; 2000 ; International Journal of Educational Management Volume 14 ; 14 >
+    au < released ; 2001 ; International Journal of Educational Management Volume 15 ; 15 >
+    au < released ; 2002 ; International Journal of Educational Management Volume 16 ; 16 >
+    au < released ; 2003 ; International Journal of Educational Management Volume 17 ; 17 >
+    au < released ; 2004 ; International Journal of Educational Management Volume 18 ; 18 >
+    au < released ; 2005 ; International Journal of Educational Management Volume 19 ; 19 >
+    au < released ; 2006 ; International Journal of Educational Management Volume 20 ; 20 >
+    au < released ; 2007 ; International Journal of Educational Management Volume 21 ; 21 >
+    au < released ; 2008 ; International Journal of Educational Management Volume 22 ; 22 >
+    au < released ; 2009 ; International Journal of Educational Management Volume 23 ; 23 >
+    au < released ; 2010 ; International Journal of Educational Management Volume 24 ; 24 >
 
   }
 
@@ -2522,11 +2522,11 @@
 
     param[journal_issn] = 1746-8809
     
-    au < ready ; 2006 ; International Journal of Emerging Markets Volume 1 ; 1 >
-    au < ready ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 >
-    au < ready ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 >
-    au < ready ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 >
-    au < ready ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 >
+    au < released ; 2006 ; International Journal of Emerging Markets Volume 1 ; 1 >
+    au < released ; 2007 ; International Journal of Emerging Markets Volume 2 ; 2 >
+    au < released ; 2008 ; International Journal of Emerging Markets Volume 3 ; 3 >
+    au < released ; 2009 ; International Journal of Emerging Markets Volume 4 ; 4 >
+    au < released ; 2010 ; International Journal of Emerging Markets Volume 5 ; 5 >
 
   }
 
@@ -2539,10 +2539,10 @@
 
     param[journal_issn] = 1750-6220
     
-    au < ready ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 >
+    au < released ; 2007 ; International Journal of Energy Sector Management Volume 1 ; 1 >
     au < notReady ; 2008 ; International Journal of Energy Sector Management Volume 2 ; 2 >
-    au < ready ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 >
-    au < ready ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 >
+    au < released ; 2009 ; International Journal of Energy Sector Management Volume 3 ; 3 >
+    au < released ; 2010 ; International Journal of Energy Sector Management Volume 4 ; 4 >
 
   }
 
@@ -2555,16 +2555,16 @@
 
     param[journal_issn] = 1355-2554
     
-    au < ready ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
-    au < ready ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
-    au < ready ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 >
-    au < ready ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 >
-    au < ready ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 >
-    au < ready ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 >
-    au < ready ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 >
-    au < ready ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
-    au < ready ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
-    au < ready ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
+    au < released ; 1995 ; International Journal of Entrepreneurial Behaviour & Research Volume 1 ; 1 >
+    au < released ; 1996 ; International Journal of Entrepreneurial Behaviour & Research Volume 2 ; 2 >
+    au < released ; 1997 ; International Journal of Entrepreneurial Behaviour & Research Volume 3 ; 3 >
+    au < released ; 1998 ; International Journal of Entrepreneurial Behaviour & Research Volume 4 ; 4 >
+    au < released ; 1999 ; International Journal of Entrepreneurial Behaviour & Research Volume 5 ; 5 >
+    au < released ; 2000 ; International Journal of Entrepreneurial Behaviour & Research Volume 6 ; 6 >
+    au < released ; 2001 ; International Journal of Entrepreneurial Behaviour & Research Volume 7 ; 7 >
+    au < released ; 2002 ; International Journal of Entrepreneurial Behaviour & Research Volume 8 ; 8 >
+    au < released ; 2003 ; International Journal of Entrepreneurial Behaviour & Research Volume 9 ; 9 >
+    au < released ; 2004 ; International Journal of Entrepreneurial Behaviour & Research Volume 10 ; 10 >
 
   }
 
@@ -2588,8 +2588,8 @@
 
     param[journal_issn] = 1756-6266
     
-    au < ready ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 >
+    au < released ; 2009 ; International Journal of Gender and Entrepreneurship Volume 1 ; 1 >
+    au < released ; 2010 ; International Journal of Gender and Entrepreneurship Volume 2 ; 2 >
 
   }
 
@@ -2602,29 +2602,29 @@
 
     param[journal_issn] = 0952-6862
     
-    au < ready ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 >
-    au < ready ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 >
-    au < ready ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 >
-    au < ready ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 >
-    au < ready ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 >
-    au < ready ; 1993 ; International Journal of Health Care Quality Assurance Volume 6 ; 6 >
-    au < ready ; 1994 ; International Journal of Health Care Quality Assurance Volume 7 ; 7 >
-    au < ready ; 1995 ; International Journal of Health Care Quality Assurance Volume 8 ; 8 >
+    au < released ; 1988 ; International Journal of Health Care Quality Assurance Volume 1 ; 1 >
+    au < released ; 1989 ; International Journal of Health Care Quality Assurance Volume 2 ; 2 >
+    au < released ; 1990 ; International Journal of Health Care Quality Assurance Volume 3 ; 3 >
+    au < released ; 1991 ; International Journal of Health Care Quality Assurance Volume 4 ; 4 >
+    au < released ; 1992 ; International Journal of Health Care Quality Assurance Volume 5 ; 5 >
+    au < released ; 1993 ; International Journal of Health Care Quality Assurance Volume 6 ; 6 >
+    au < released ; 1994 ; International Journal of Health Care Quality Assurance Volume 7 ; 7 >
+    au < released ; 1995 ; International Journal of Health Care Quality Assurance Volume 8 ; 8 >
     au < notReady ; 1996 ; International Journal of Health Care Quality Assurance Volume 9 ; 9 >
-    au < ready ; 1997 ; International Journal of Health Care Quality Assurance Volume 10 ; 10 >
-    au < ready ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 >
-    au < ready ; 1999 ; International Journal of Health Care Quality Assurance Volume 12 ; 12 >
-    au < ready ; 2000 ; International Journal of Health Care Quality Assurance Volume 13 ; 13 >
+    au < released ; 1997 ; International Journal of Health Care Quality Assurance Volume 10 ; 10 >
+    au < released ; 1998 ; International Journal of Health Care Quality Assurance Volume 11 ; 11 >
+    au < released ; 1999 ; International Journal of Health Care Quality Assurance Volume 12 ; 12 >
+    au < released ; 2000 ; International Journal of Health Care Quality Assurance Volume 13 ; 13 >
     au < notReady ; 2001 ; International Journal of Health Care Quality Assurance Volume 14 ; 14 >
-    au < ready ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 >
+    au < released ; 2002 ; International Journal of Health Care Quality Assurance Volume 15 ; 15 >
     au < notReady ; 2003 ; International Journal of Health Care Quality Assurance Volume 16 ; 16 >
     au < notReady ; 2004 ; International Journal of Health Care Quality Assurance Volume 17 ; 17 >
-    au < ready ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 >
-    au < ready ; 2006 ; International Journal of Health Care Quality Assurance Volume 19 ; 19 >
-    au < ready ; 2007 ; International Journal of Health Care Quality Assurance Volume 20 ; 20 >
-    au < ready ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 >
-    au < ready ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 >
-    au < ready ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 >
+    au < released ; 2005 ; International Journal of Health Care Quality Assurance Volume 18 ; 18 >
+    au < released ; 2006 ; International Journal of Health Care Quality Assurance Volume 19 ; 19 >
+    au < released ; 2007 ; International Journal of Health Care Quality Assurance Volume 20 ; 20 >
+    au < released ; 2008 ; International Journal of Health Care Quality Assurance Volume 21 ; 21 >
+    au < released ; 2009 ; International Journal of Health Care Quality Assurance Volume 22 ; 22 >
+    au < released ; 2010 ; International Journal of Health Care Quality Assurance Volume 23 ; 23 >
 
   }
 
@@ -2637,9 +2637,9 @@
 
     param[journal_issn] = 1753-8270
     
-    au < ready ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 >
-    au < ready ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 >
-    au < ready ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Housing Markets and Analysis Volume 1 ; 1 >
+    au < released ; 2009 ; International Journal of Housing Markets and Analysis Volume 2 ; 2 >
+    au < released ; 2010 ; International Journal of Housing Markets and Analysis Volume 3 ; 3 >
 
   }
 
@@ -2652,9 +2652,9 @@
 
     param[journal_issn] = 1753-8394
     
-    au < ready ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
-    au < ready ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
-    au < ready ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 1 ; 1 >
+    au < released ; 2009 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 2 ; 2 >
+    au < released ; 2010 ; International Journal of Islamic and Middle Eastern Finance and Management Volume 3 ; 3 >
 
   }
 
@@ -2667,9 +2667,9 @@
 
     param[journal_issn] = 1754-243X
     
-    au < ready ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
-    au < ready ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
-    au < ready ; 2010 ; International Journal of Law and Management Volume 52 ; 52 >
+    au < released ; 2008 ; International Journal of Law and Management Volume 50 ; 50 >
+    au < released ; 2009 ; International Journal of Law and Management Volume 51 ; 51 >
+    au < released ; 2010 ; International Journal of Law and Management Volume 52 ; 52 >
 
   }
 
@@ -2682,8 +2682,8 @@
 
     param[journal_issn] = 1756-1450
     
-    au < ready ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
+    au < released ; 2009 ; International Journal of Law in the Built Environment Volume 1 ; 1 >
+    au < released ; 2010 ; International Journal of Law in the Built Environment Volume 2 ; 2 >
 
   }
 
@@ -2707,12 +2707,12 @@
 
     param[journal_issn] = 1743-9132
     
-    au < ready ; 2005 ; International Journal of Managerial Finance Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 >
+    au < released ; 2005 ; International Journal of Managerial Finance Volume 1 ; 1 >
+    au < released ; 2006 ; International Journal of Managerial Finance Volume 2 ; 2 >
+    au < released ; 2007 ; International Journal of Managerial Finance Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Managerial Finance Volume 4 ; 4 >
+    au < released ; 2009 ; International Journal of Managerial Finance Volume 5 ; 5 >
+    au < released ; 2010 ; International Journal of Managerial Finance Volume 6 ; 6 >
 
   }
 
@@ -2725,9 +2725,9 @@
 
     param[journal_issn] = 1753-8378
     
-    au < ready ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 >
-    au < ready ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 >
-    au < ready ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Managing Projects in Business Volume 1 ; 1 >
+    au < released ; 2009 ; International Journal of Managing Projects in Business Volume 2 ; 2 >
+    au < released ; 2010 ; International Journal of Managing Projects in Business Volume 3 ; 3 >
 
   }
 
@@ -2740,37 +2740,37 @@
 
     param[journal_issn] = 0143-7720
     
-    au < ready ; 1980 ; International Journal of Manpower Volume 1 ; 1 >
-    au < ready ; 1981 ; International Journal of Manpower Volume 2 ; 2 >
-    au < ready ; 1982 ; International Journal of Manpower Volume 3 ; 3 >
-    au < ready ; 1983 ; International Journal of Manpower Volume 4 ; 4 >
-    au < ready ; 1984 ; International Journal of Manpower Volume 5 ; 5 >
-    au < ready ; 1985 ; International Journal of Manpower Volume 6 ; 6 >
-    au < ready ; 1986 ; International Journal of Manpower Volume 7 ; 7 >
-    au < ready ; 1987 ; International Journal of Manpower Volume 8 ; 8 >
-    au < ready ; 1988 ; International Journal of Manpower Volume 9 ; 9 >
-    au < ready ; 1989 ; International Journal of Manpower Volume 10 ; 10 >
-    au < ready ; 1990 ; International Journal of Manpower Volume 11 ; 11 >
-    au < ready ; 1991 ; International Journal of Manpower Volume 12 ; 12 >
-    au < ready ; 1992 ; International Journal of Manpower Volume 13 ; 13 >
-    au < ready ; 1993 ; International Journal of Manpower Volume 14 ; 14 >
-    au < ready ; 1994 ; International Journal of Manpower Volume 15 ; 15 >
-    au < ready ; 1995 ; International Journal of Manpower Volume 16 ; 16 >
-    au < ready ; 1996 ; International Journal of Manpower Volume 17 ; 17 >
-    au < ready ; 1997 ; International Journal of Manpower Volume 18 ; 18 >
-    au < ready ; 1998 ; International Journal of Manpower Volume 19 ; 19 >
-    au < ready ; 1999 ; International Journal of Manpower Volume 20 ; 20 >
-    au < ready ; 2000 ; International Journal of Manpower Volume 21 ; 21 >
-    au < ready ; 2001 ; International Journal of Manpower Volume 22 ; 22 >
-    au < ready ; 2002 ; International Journal of Manpower Volume 23 ; 23 >
-    au < ready ; 2003 ; International Journal of Manpower Volume 24 ; 24 >
-    au < ready ; 2004 ; International Journal of Manpower Volume 25 ; 25 >
-    au < ready ; 2005 ; International Journal of Manpower Volume 26 ; 26 >
-    au < ready ; 2006 ; International Journal of Manpower Volume 27 ; 27 >
-    au < ready ; 2007 ; International Journal of Manpower Volume 28 ; 28 >
-    au < ready ; 2008 ; International Journal of Manpower Volume 29 ; 29 >
-    au < ready ; 2009 ; International Journal of Manpower Volume 30 ; 30 >
-    au < ready ; 2010 ; International Journal of Manpower Volume 31 ; 31 >
+    au < released ; 1980 ; International Journal of Manpower Volume 1 ; 1 >
+    au < released ; 1981 ; International Journal of Manpower Volume 2 ; 2 >
+    au < released ; 1982 ; International Journal of Manpower Volume 3 ; 3 >
+    au < released ; 1983 ; International Journal of Manpower Volume 4 ; 4 >
+    au < released ; 1984 ; International Journal of Manpower Volume 5 ; 5 >
+    au < released ; 1985 ; International Journal of Manpower Volume 6 ; 6 >
+    au < released ; 1986 ; International Journal of Manpower Volume 7 ; 7 >
+    au < released ; 1987 ; International Journal of Manpower Volume 8 ; 8 >
+    au < released ; 1988 ; International Journal of Manpower Volume 9 ; 9 >
+    au < released ; 1989 ; International Journal of Manpower Volume 10 ; 10 >
+    au < released ; 1990 ; International Journal of Manpower Volume 11 ; 11 >
+    au < released ; 1991 ; International Journal of Manpower Volume 12 ; 12 >
+    au < released ; 1992 ; International Journal of Manpower Volume 13 ; 13 >
+    au < released ; 1993 ; International Journal of Manpower Volume 14 ; 14 >
+    au < released ; 1994 ; International Journal of Manpower Volume 15 ; 15 >
+    au < released ; 1995 ; International Journal of Manpower Volume 16 ; 16 >
+    au < released ; 1996 ; International Journal of Manpower Volume 17 ; 17 >
+    au < released ; 1997 ; International Journal of Manpower Volume 18 ; 18 >
+    au < released ; 1998 ; International Journal of Manpower Volume 19 ; 19 >
+    au < released ; 1999 ; International Journal of Manpower Volume 20 ; 20 >
+    au < released ; 2000 ; International Journal of Manpower Volume 21 ; 21 >
+    au < released ; 2001 ; International Journal of Manpower Volume 22 ; 22 >
+    au < released ; 2002 ; International Journal of Manpower Volume 23 ; 23 >
+    au < released ; 2003 ; International Journal of Manpower Volume 24 ; 24 >
+    au < released ; 2004 ; International Journal of Manpower Volume 25 ; 25 >
+    au < released ; 2005 ; International Journal of Manpower Volume 26 ; 26 >
+    au < released ; 2006 ; International Journal of Manpower Volume 27 ; 27 >
+    au < released ; 2007 ; International Journal of Manpower Volume 28 ; 28 >
+    au < released ; 2008 ; International Journal of Manpower Volume 29 ; 29 >
+    au < released ; 2009 ; International Journal of Manpower Volume 30 ; 30 >
+    au < released ; 2010 ; International Journal of Manpower Volume 31 ; 31 >
 
   }
 
@@ -2783,27 +2783,27 @@
 
     param[journal_issn] = 0961-5539
     
-    au < ready ; 1991 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 1 ; 1 >
-    au < ready ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 >
-    au < ready ; 1993 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 3 ; 3 >
-    au < ready ; 1994 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 >
-    au < ready ; 1995 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 >
-    au < ready ; 1996 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 6 ; 6 >
-    au < ready ; 1997 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 7 ; 7 >
-    au < ready ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 >
-    au < ready ; 1999 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 9 ; 9 >
-    au < ready ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 >
-    au < ready ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 >
-    au < ready ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 >
-    au < ready ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 >
-    au < ready ; 2004 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 14 ; 14 >
-    au < ready ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 >
-    au < ready ; 2006 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 16 ; 16 >
-    au < ready ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 >
-    au < ready ; 2008 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 18 ; 18 >
-    au < ready ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 >
-    au < ready ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 >
-    au < ready ; 2011 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 21 ; 21 >
+    au < released ; 1991 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 1 ; 1 >
+    au < released ; 1992 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 2 ; 2 >
+    au < released ; 1993 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 3 ; 3 >
+    au < released ; 1994 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 4 ; 4 >
+    au < released ; 1995 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 5 ; 5 >
+    au < released ; 1996 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 6 ; 6 >
+    au < released ; 1997 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 7 ; 7 >
+    au < released ; 1998 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 8 ; 8 >
+    au < released ; 1999 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 9 ; 9 >
+    au < released ; 2000 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 10 ; 10 >
+    au < released ; 2001 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 11 ; 11 >
+    au < released ; 2002 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 12 ; 12 >
+    au < released ; 2003 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 13 ; 13 >
+    au < released ; 2004 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 14 ; 14 >
+    au < released ; 2005 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 15 ; 15 >
+    au < released ; 2006 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 16 ; 16 >
+    au < released ; 2007 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 17 ; 17 >
+    au < released ; 2008 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 18 ; 18 >
+    au < released ; 2009 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 19 ; 19 >
+    au < released ; 2010 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 20 ; 20 >
+    au < released ; 2011 ; International Journal of Numerical Methods for Heat & Fluid Flow Volume 21 ; 21 >
 
   }
 
@@ -2816,36 +2816,36 @@
 
     param[journal_issn] = 0144-3577
     
-    au < ready ; 1981 ; International Journal of Operations & Production Management Volume 1 ; 1 >
-    au < ready ; 1982 ; International Journal of Operations & Production Management Volume 2 ; 2 >
-    au < ready ; 1983 ; International Journal of Operations & Production Management Volume 3 ; 3 >
-    au < ready ; 1984 ; International Journal of Operations & Production Management Volume 4 ; 4 >
-    au < ready ; 1985 ; International Journal of Operations & Production Management Volume 5 ; 5 >
-    au < ready ; 1986 ; International Journal of Operations & Production Management Volume 6 ; 6 >
-    au < ready ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 >
-    au < ready ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 >
-    au < ready ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 >
-    au < ready ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 >
-    au < ready ; 1991 ; International Journal of Operations & Production Management Volume 11 ; 11 >
-    au < ready ; 1992 ; International Journal of Operations & Production Management Volume 12 ; 12 >
-    au < ready ; 1993 ; International Journal of Operations & Production Management Volume 13 ; 13 >
-    au < ready ; 1994 ; International Journal of Operations & Production Management Volume 14 ; 14 >
-    au < ready ; 1995 ; International Journal of Operations & Production Management Volume 15 ; 15 >
-    au < ready ; 1996 ; International Journal of Operations & Production Management Volume 16 ; 16 >
-    au < ready ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 >
-    au < ready ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 >
-    au < ready ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 >
-    au < ready ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 >
-    au < ready ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 >
-    au < ready ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 >
-    au < ready ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 >
-    au < ready ; 2004 ; International Journal of Operations & Production Management Volume 24 ; 24 >
-    au < ready ; 2005 ; International Journal of Operations & Production Management Volume 25 ; 25 >
-    au < ready ; 2006 ; International Journal of Operations & Production Management Volume 26 ; 26 >
-    au < ready ; 2007 ; International Journal of Operations & Production Management Volume 27 ; 27 >
-    au < ready ; 2008 ; International Journal of Operations & Production Management Volume 28 ; 28 >
-    au < ready ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 >
-    au < ready ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 >
+    au < released ; 1981 ; International Journal of Operations & Production Management Volume 1 ; 1 >
+    au < released ; 1982 ; International Journal of Operations & Production Management Volume 2 ; 2 >
+    au < released ; 1983 ; International Journal of Operations & Production Management Volume 3 ; 3 >
+    au < released ; 1984 ; International Journal of Operations & Production Management Volume 4 ; 4 >
+    au < released ; 1985 ; International Journal of Operations & Production Management Volume 5 ; 5 >
+    au < released ; 1986 ; International Journal of Operations & Production Management Volume 6 ; 6 >
+    au < released ; 1987 ; International Journal of Operations & Production Management Volume 7 ; 7 >
+    au < released ; 1988 ; International Journal of Operations & Production Management Volume 8 ; 8 >
+    au < released ; 1989 ; International Journal of Operations & Production Management Volume 9 ; 9 >
+    au < released ; 1990 ; International Journal of Operations & Production Management Volume 10 ; 10 >
+    au < released ; 1991 ; International Journal of Operations & Production Management Volume 11 ; 11 >
+    au < released ; 1992 ; International Journal of Operations & Production Management Volume 12 ; 12 >
+    au < released ; 1993 ; International Journal of Operations & Production Management Volume 13 ; 13 >
+    au < released ; 1994 ; International Journal of Operations & Production Management Volume 14 ; 14 >
+    au < released ; 1995 ; International Journal of Operations & Production Management Volume 15 ; 15 >
+    au < released ; 1996 ; International Journal of Operations & Production Management Volume 16 ; 16 >
+    au < released ; 1997 ; International Journal of Operations & Production Management Volume 17 ; 17 >
+    au < released ; 1998 ; International Journal of Operations & Production Management Volume 18 ; 18 >
+    au < released ; 1999 ; International Journal of Operations & Production Management Volume 19 ; 19 >
+    au < released ; 2000 ; International Journal of Operations & Production Management Volume 20 ; 20 >
+    au < released ; 2001 ; International Journal of Operations & Production Management Volume 21 ; 21 >
+    au < released ; 2002 ; International Journal of Operations & Production Management Volume 22 ; 22 >
+    au < released ; 2003 ; International Journal of Operations & Production Management Volume 23 ; 23 >
+    au < released ; 2004 ; International Journal of Operations & Production Management Volume 24 ; 24 >
+    au < released ; 2005 ; International Journal of Operations & Production Management Volume 25 ; 25 >
+    au < released ; 2006 ; International Journal of Operations & Production Management Volume 26 ; 26 >
+    au < released ; 2007 ; International Journal of Operations & Production Management Volume 27 ; 27 >
+    au < released ; 2008 ; International Journal of Operations & Production Management Volume 28 ; 28 >
+    au < released ; 2009 ; International Journal of Operations & Production Management Volume 29 ; 29 >
+    au < released ; 2010 ; International Journal of Operations & Production Management Volume 30 ; 30 >
 
   }
 
@@ -2858,24 +2858,24 @@
 
     param[journal_issn] = 1934-8835
     
-    au < ready ; 1993 ; International Journal of Organizational Analysis Volume 1 ; 1 >
-    au < ready ; 1994 ; International Journal of Organizational Analysis Volume 2 ; 2 >
-    au < ready ; 1995 ; International Journal of Organizational Analysis Volume 3 ; 3 >
-    au < ready ; 1996 ; International Journal of Organizational Analysis Volume 4 ; 4 >
-    au < ready ; 1997 ; International Journal of Organizational Analysis Volume 5 ; 5 >
-    au < ready ; 1998 ; International Journal of Organizational Analysis Volume 6 ; 6 >
-    au < ready ; 1999 ; International Journal of Organizational Analysis Volume 7 ; 7 >
-    au < ready ; 2000 ; International Journal of Organizational Analysis Volume 8 ; 8 >
-    au < ready ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 >
-    au < ready ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 >
-    au < ready ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 >
-    au < ready ; 2004 ; International Journal of Organizational Analysis Volume 12 ; 12 >
-    au < ready ; 2005 ; International Journal of Organizational Analysis Volume 13 ; 13 >
-    au < ready ; 2006 ; International Journal of Organizational Analysis Volume 14 ; 14 >
-    au < ready ; 2007 ; International Journal of Organizational Analysis Volume 15 ; 15 >
-    au < ready ; 2008 ; International Journal of Organizational Analysis Volume 16 ; 16 >
-    au < ready ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 >
-    au < ready ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 >
+    au < released ; 1993 ; International Journal of Organizational Analysis Volume 1 ; 1 >
+    au < released ; 1994 ; International Journal of Organizational Analysis Volume 2 ; 2 >
+    au < released ; 1995 ; International Journal of Organizational Analysis Volume 3 ; 3 >
+    au < released ; 1996 ; International Journal of Organizational Analysis Volume 4 ; 4 >
+    au < released ; 1997 ; International Journal of Organizational Analysis Volume 5 ; 5 >
+    au < released ; 1998 ; International Journal of Organizational Analysis Volume 6 ; 6 >
+    au < released ; 1999 ; International Journal of Organizational Analysis Volume 7 ; 7 >
+    au < released ; 2000 ; International Journal of Organizational Analysis Volume 8 ; 8 >
+    au < released ; 2001 ; International Journal of Organizational Analysis Volume 9 ; 9 >
+    au < released ; 2002 ; International Journal of Organizational Analysis Volume 10 ; 10 >
+    au < released ; 2003 ; International Journal of Organizational Analysis Volume 11 ; 11 >
+    au < released ; 2004 ; International Journal of Organizational Analysis Volume 12 ; 12 >
+    au < released ; 2005 ; International Journal of Organizational Analysis Volume 13 ; 13 >
+    au < released ; 2006 ; International Journal of Organizational Analysis Volume 14 ; 14 >
+    au < released ; 2007 ; International Journal of Organizational Analysis Volume 15 ; 15 >
+    au < released ; 2008 ; International Journal of Organizational Analysis Volume 16 ; 16 >
+    au < released ; 2009 ; International Journal of Organizational Analysis Volume 17 ; 17 >
+    au < released ; 2010 ; International Journal of Organizational Analysis Volume 18 ; 18 >
 
   }
 
@@ -2888,12 +2888,12 @@
 
     param[journal_issn] = 1742-7371
     
-    au < ready ; 2005 ; International Journal of Pervasive Computing and Communications Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Pervasive Computing and Communications Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Pervasive Computing and Communications Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 >
+    au < released ; 2005 ; International Journal of Pervasive Computing and Communications Volume 1 ; 1 >
+    au < released ; 2006 ; International Journal of Pervasive Computing and Communications Volume 2 ; 2 >
+    au < released ; 2007 ; International Journal of Pervasive Computing and Communications Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Pervasive Computing and Communications Volume 4 ; 4 >
+    au < released ; 2009 ; International Journal of Pervasive Computing and Communications Volume 5 ; 5 >
+    au < released ; 2010 ; International Journal of Pervasive Computing and Communications Volume 6 ; 6 >
 
   }
 
@@ -2906,10 +2906,10 @@
 
     param[journal_issn] = 1750-6123
     
-    au < ready ; 2007 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 1 ; 1 >
-    au < ready ; 2008 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 2 ; 2 >
-    au < ready ; 2009 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 3 ; 3 >
-    au < ready ; 2010 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 4 ; 4 >
+    au < released ; 2007 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 1 ; 1 >
+    au < released ; 2008 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 2 ; 2 >
+    au < released ; 2009 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 3 ; 3 >
+    au < released ; 2010 ; International Journal of Pharmaceutical and Healthcare Marketing Volume 4 ; 4 >
 
   }
 
@@ -2922,46 +2922,46 @@
 
     param[journal_issn] = 0960-0035
     
-    au < ready ; 1971 ; International Journal of Physical Distribution & Logistics Management Volume 1 ; 1 >
-    au < ready ; 1972 ; International Journal of Physical Distribution & Logistics Management Volume 2 ; 2 >
-    au < ready ; 1973 ; International Journal of Physical Distribution & Logistics Management Volume 3 ; 3 >
-    au < ready ; 1974 ; International Journal of Physical Distribution & Logistics Management Volume 4 ; 4 >
-    au < ready ; 1975 ; International Journal of Physical Distribution & Logistics Management Volume 5 ; 5 >
-    au < ready ; 1976 ; International Journal of Physical Distribution & Logistics Management Volume 6 ; 6 >
-    au < ready ; 1977 ; International Journal of Physical Distribution & Logistics Management Volume 7 ; 7 >
-    au < ready ; 1978 ; International Journal of Physical Distribution & Logistics Management Volume 8 ; 8 >
-    au < ready ; 1979 ; International Journal of Physical Distribution & Logistics Management Volume 9 ; 9 >
-    au < ready ; 1980 ; International Journal of Physical Distribution & Logistics Management Volume 10 ; 10 >
-    au < ready ; 1981 ; International Journal of Physical Distribution & Logistics Management Volume 11 ; 11 >
-    au < ready ; 1982 ; International Journal of Physical Distribution & Logistics Management Volume 12 ; 12 >
-    au < ready ; 1983 ; International Journal of Physical Distribution & Logistics Management Volume 13 ; 13 >
-    au < ready ; 1984 ; International Journal of Physical Distribution & Logistics Management Volume 14 ; 14 >
-    au < ready ; 1985 ; International Journal of Physical Distribution & Logistics Management Volume 15 ; 15 >
-    au < ready ; 1986 ; International Journal of Physical Distribution & Logistics Management Volume 16 ; 16 >
-    au < ready ; 1987 ; International Journal of Physical Distribution & Logistics Management Volume 17 ; 17 >
-    au < ready ; 1988 ; International Journal of Physical Distribution & Logistics Management Volume 18 ; 18 >
-    au < ready ; 1989 ; International Journal of Physical Distribution & Logistics Management Volume 19 ; 19 >
-    au < ready ; 1990 ; International Journal of Physical Distribution & Logistics Management Volume 20 ; 20 >
-    au < ready ; 1991 ; International Journal of Physical Distribution & Logistics Management Volume 21 ; 21 >
-    au < ready ; 1992 ; International Journal of Physical Distribution & Logistics Management Volume 22 ; 22 >
-    au < ready ; 1993 ; International Journal of Physical Distribution & Logistics Management Volume 23 ; 23 >
-    au < ready ; 1994 ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 >
-    au < ready ; 1995 ; International Journal of Physical Distribution & Logistics Management Volume 25 ; 25 >
-    au < ready ; 1996 ; International Journal of Physical Distribution & Logistics Management Volume 26 ; 26 >
-    au < ready ; 1997 ; International Journal of Physical Distribution & Logistics Management Volume 27 ; 27 >
-    au < ready ; 1998 ; International Journal of Physical Distribution & Logistics Management Volume 28 ; 28 >
-    au < ready ; 1999 ; International Journal of Physical Distribution & Logistics Management Volume 29 ; 29 >
-    au < ready ; 2000 ; International Journal of Physical Distribution & Logistics Management Volume 30 ; 30 >
-    au < ready ; 2001 ; International Journal of Physical Distribution & Logistics Management Volume 31 ; 31 >
-    au < ready ; 2002 ; International Journal of Physical Distribution & Logistics Management Volume 32 ; 32 >
-    au < ready ; 2003 ; International Journal of Physical Distribution & Logistics Management Volume 33 ; 33 >
-    au < ready ; 2004 ; International Journal of Physical Distribution & Logistics Management Volume 34 ; 34 >
-    au < ready ; 2005 ; International Journal of Physical Distribution & Logistics Management Volume 35 ; 35 >
-    au < ready ; 2006 ; International Journal of Physical Distribution & Logistics Management Volume 36 ; 36 >
-    au < ready ; 2007 ; International Journal of Physical Distribution & Logistics Management Volume 37 ; 37 >
-    au < ready ; 2008 ; International Journal of Physical Distribution & Logistics Management Volume 38 ; 38 >
-    au < ready ; 2009 ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 >
-    au < ready ; 2010 ; International Journal of Physical Distribution & Logistics Management Volume 40 ; 40 >
+    au < released ; 1971 ; International Journal of Physical Distribution & Logistics Management Volume 1 ; 1 >
+    au < released ; 1972 ; International Journal of Physical Distribution & Logistics Management Volume 2 ; 2 >
+    au < released ; 1973 ; International Journal of Physical Distribution & Logistics Management Volume 3 ; 3 >
+    au < released ; 1974 ; International Journal of Physical Distribution & Logistics Management Volume 4 ; 4 >
+    au < released ; 1975 ; International Journal of Physical Distribution & Logistics Management Volume 5 ; 5 >
+    au < released ; 1976 ; International Journal of Physical Distribution & Logistics Management Volume 6 ; 6 >
+    au < released ; 1977 ; International Journal of Physical Distribution & Logistics Management Volume 7 ; 7 >
+    au < released ; 1978 ; International Journal of Physical Distribution & Logistics Management Volume 8 ; 8 >
+    au < released ; 1979 ; International Journal of Physical Distribution & Logistics Management Volume 9 ; 9 >
+    au < released ; 1980 ; International Journal of Physical Distribution & Logistics Management Volume 10 ; 10 >
+    au < released ; 1981 ; International Journal of Physical Distribution & Logistics Management Volume 11 ; 11 >
+    au < released ; 1982 ; International Journal of Physical Distribution & Logistics Management Volume 12 ; 12 >
+    au < released ; 1983 ; International Journal of Physical Distribution & Logistics Management Volume 13 ; 13 >
+    au < released ; 1984 ; International Journal of Physical Distribution & Logistics Management Volume 14 ; 14 >
+    au < released ; 1985 ; International Journal of Physical Distribution & Logistics Management Volume 15 ; 15 >
+    au < released ; 1986 ; International Journal of Physical Distribution & Logistics Management Volume 16 ; 16 >
+    au < released ; 1987 ; International Journal of Physical Distribution & Logistics Management Volume 17 ; 17 >
+    au < released ; 1988 ; International Journal of Physical Distribution & Logistics Management Volume 18 ; 18 >
+    au < released ; 1989 ; International Journal of Physical Distribution & Logistics Management Volume 19 ; 19 >
+    au < released ; 1990 ; International Journal of Physical Distribution & Logistics Management Volume 20 ; 20 >
+    au < released ; 1991 ; International Journal of Physical Distribution & Logistics Management Volume 21 ; 21 >
+    au < released ; 1992 ; International Journal of Physical Distribution & Logistics Management Volume 22 ; 22 >
+    au < released ; 1993 ; International Journal of Physical Distribution & Logistics Management Volume 23 ; 23 >
+    au < released ; 1994 ; International Journal of Physical Distribution & Logistics Management Volume 24 ; 24 >
+    au < released ; 1995 ; International Journal of Physical Distribution & Logistics Management Volume 25 ; 25 >
+    au < released ; 1996 ; International Journal of Physical Distribution & Logistics Management Volume 26 ; 26 >
+    au < released ; 1997 ; International Journal of Physical Distribution & Logistics Management Volume 27 ; 27 >
+    au < released ; 1998 ; International Journal of Physical Distribution & Logistics Management Volume 28 ; 28 >
+    au < released ; 1999 ; International Journal of Physical Distribution & Logistics Management Volume 29 ; 29 >
+    au < released ; 2000 ; International Journal of Physical Distribution & Logistics Management Volume 30 ; 30 >
+    au < released ; 2001 ; International Journal of Physical Distribution & Logistics Management Volume 31 ; 31 >
+    au < released ; 2002 ; International Journal of Physical Distribution & Logistics Management Volume 32 ; 32 >
+    au < released ; 2003 ; International Journal of Physical Distribution & Logistics Management Volume 33 ; 33 >
+    au < released ; 2004 ; International Journal of Physical Distribution & Logistics Management Volume 34 ; 34 >
+    au < released ; 2005 ; International Journal of Physical Distribution & Logistics Management Volume 35 ; 35 >
+    au < released ; 2006 ; International Journal of Physical Distribution & Logistics Management Volume 36 ; 36 >
+    au < released ; 2007 ; International Journal of Physical Distribution & Logistics Management Volume 37 ; 37 >
+    au < released ; 2008 ; International Journal of Physical Distribution & Logistics Management Volume 38 ; 38 >
+    au < released ; 2009 ; International Journal of Physical Distribution & Logistics Management Volume 39 ; 39 >
+    au < released ; 2010 ; International Journal of Physical Distribution & Logistics Management Volume 40 ; 40 >
 
   }
 
@@ -2974,13 +2974,13 @@
 
     param[journal_issn] = 1741-0401
     
-    au < ready ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 >
-    au < ready ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 >
-    au < ready ; 2006 ; International Journal of Productivity and Performance Management Volume 55 ; 55 >
-    au < ready ; 2007 ; International Journal of Productivity and Performance Management Volume 56 ; 56 >
-    au < ready ; 2008 ; International Journal of Productivity and Performance Management Volume 57 ; 57 >
-    au < ready ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 >
-    au < ready ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 >
+    au < released ; 2004 ; International Journal of Productivity and Performance Management Volume 53 ; 53 >
+    au < released ; 2005 ; International Journal of Productivity and Performance Management Volume 54 ; 54 >
+    au < released ; 2006 ; International Journal of Productivity and Performance Management Volume 55 ; 55 >
+    au < released ; 2007 ; International Journal of Productivity and Performance Management Volume 56 ; 56 >
+    au < released ; 2008 ; International Journal of Productivity and Performance Management Volume 57 ; 57 >
+    au < released ; 2009 ; International Journal of Productivity and Performance Management Volume 58 ; 58 >
+    au < released ; 2010 ; International Journal of Productivity and Performance Management Volume 59 ; 59 >
 
   }
 
@@ -2993,29 +2993,29 @@
 
     param[journal_issn] = 0951-3558
     
-    au < ready ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 >
-    au < ready ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 >
-    au < ready ; 1990 ; International Journal of Public Sector Management Volume 3 ; 3 >
-    au < ready ; 1991 ; International Journal of Public Sector Management Volume 4 ; 4 >
-    au < ready ; 1992 ; International Journal of Public Sector Management Volume 5 ; 5 >
-    au < ready ; 1993 ; International Journal of Public Sector Management Volume 6 ; 6 >
-    au < ready ; 1994 ; International Journal of Public Sector Management Volume 7 ; 7 >
-    au < ready ; 1995 ; International Journal of Public Sector Management Volume 8 ; 8 >
-    au < ready ; 1996 ; International Journal of Public Sector Management Volume 9 ; 9 >
-    au < ready ; 1997 ; International Journal of Public Sector Management Volume 10 ; 10 >
-    au < ready ; 1998 ; International Journal of Public Sector Management Volume 11 ; 11 >
-    au < ready ; 1999 ; International Journal of Public Sector Management Volume 12 ; 12 >
-    au < ready ; 2000 ; International Journal of Public Sector Management Volume 13 ; 13 >
-    au < ready ; 2001 ; International Journal of Public Sector Management Volume 14 ; 14 >
-    au < ready ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 >
-    au < ready ; 2003 ; International Journal of Public Sector Management Volume 16 ; 16 >
-    au < ready ; 2004 ; International Journal of Public Sector Management Volume 17 ; 17 >
-    au < ready ; 2005 ; International Journal of Public Sector Management Volume 18 ; 18 >
-    au < ready ; 2006 ; International Journal of Public Sector Management Volume 19 ; 19 >
-    au < ready ; 2007 ; International Journal of Public Sector Management Volume 20 ; 20 >
-    au < ready ; 2008 ; International Journal of Public Sector Management Volume 21 ; 21 >
-    au < ready ; 2009 ; International Journal of Public Sector Management Volume 22 ; 22 >
-    au < ready ; 2010 ; International Journal of Public Sector Management Volume 23 ; 23 >
+    au < released ; 1988 ; International Journal of Public Sector Management Volume 1 ; 1 >
+    au < released ; 1989 ; International Journal of Public Sector Management Volume 2 ; 2 >
+    au < released ; 1990 ; International Journal of Public Sector Management Volume 3 ; 3 >
+    au < released ; 1991 ; International Journal of Public Sector Management Volume 4 ; 4 >
+    au < released ; 1992 ; International Journal of Public Sector Management Volume 5 ; 5 >
+    au < released ; 1993 ; International Journal of Public Sector Management Volume 6 ; 6 >
+    au < released ; 1994 ; International Journal of Public Sector Management Volume 7 ; 7 >
+    au < released ; 1995 ; International Journal of Public Sector Management Volume 8 ; 8 >
+    au < released ; 1996 ; International Journal of Public Sector Management Volume 9 ; 9 >
+    au < released ; 1997 ; International Journal of Public Sector Management Volume 10 ; 10 >
+    au < released ; 1998 ; International Journal of Public Sector Management Volume 11 ; 11 >
+    au < released ; 1999 ; International Journal of Public Sector Management Volume 12 ; 12 >
+    au < released ; 2000 ; International Journal of Public Sector Management Volume 13 ; 13 >
+    au < released ; 2001 ; International Journal of Public Sector Management Volume 14 ; 14 >
+    au < released ; 2002 ; International Journal of Public Sector Management Volume 15 ; 15 >
+    au < released ; 2003 ; International Journal of Public Sector Management Volume 16 ; 16 >
+    au < released ; 2004 ; International Journal of Public Sector Management Volume 17 ; 17 >
+    au < released ; 2005 ; International Journal of Public Sector Management Volume 18 ; 18 >
+    au < released ; 2006 ; International Journal of Public Sector Management Volume 19 ; 19 >
+    au < released ; 2007 ; International Journal of Public Sector Management Volume 20 ; 20 >
+    au < released ; 2008 ; International Journal of Public Sector Management Volume 21 ; 21 >
+    au < released ; 2009 ; International Journal of Public Sector Management Volume 22 ; 22 >
+    au < released ; 2010 ; International Journal of Public Sector Management Volume 23 ; 23 >
 
   }
 
@@ -3028,33 +3028,33 @@
 
     param[journal_issn] = 0265-671X
     
-    au < ready ; 1984 ; International Journal of Quality & Reliability Management Volume 1 ; 1 >
-    au < ready ; 1985 ; International Journal of Quality & Reliability Management Volume 2 ; 2 >
-    au < ready ; 1986 ; International Journal of Quality & Reliability Management Volume 3 ; 3 >
-    au < ready ; 1987 ; International Journal of Quality & Reliability Management Volume 4 ; 4 >
-    au < ready ; 1988 ; International Journal of Quality & Reliability Management Volume 5 ; 5 >
-    au < ready ; 1989 ; International Journal of Quality & Reliability Management Volume 6 ; 6 >
-    au < ready ; 1990 ; International Journal of Quality & Reliability Management Volume 7 ; 7 >
-    au < ready ; 1991 ; International Journal of Quality & Reliability Management Volume 8 ; 8 >
-    au < ready ; 1992 ; International Journal of Quality & Reliability Management Volume 9 ; 9 >
-    au < ready ; 1993 ; International Journal of Quality & Reliability Management Volume 10 ; 10 >
-    au < ready ; 1994 ; International Journal of Quality & Reliability Management Volume 11 ; 11 >
-    au < ready ; 1995 ; International Journal of Quality & Reliability Management Volume 12 ; 12 >
-    au < ready ; 1996 ; International Journal of Quality & Reliability Management Volume 13 ; 13 >
-    au < ready ; 1997 ; International Journal of Quality & Reliability Management Volume 14 ; 14 >
-    au < ready ; 1998 ; International Journal of Quality & Reliability Management Volume 15 ; 15 >
-    au < ready ; 1999 ; International Journal of Quality & Reliability Management Volume 16 ; 16 >
-    au < ready ; 2000 ; International Journal of Quality & Reliability Management Volume 17 ; 17 >
-    au < ready ; 2001 ; International Journal of Quality & Reliability Management Volume 18 ; 18 >
-    au < ready ; 2002 ; International Journal of Quality & Reliability Management Volume 19 ; 19 >
-    au < ready ; 2003 ; International Journal of Quality & Reliability Management Volume 20 ; 20 >
-    au < ready ; 2004 ; International Journal of Quality & Reliability Management Volume 21 ; 21 >
-    au < ready ; 2005 ; International Journal of Quality & Reliability Management Volume 22 ; 22 >
-    au < ready ; 2006 ; International Journal of Quality & Reliability Management Volume 23 ; 23 >
-    au < ready ; 2007 ; International Journal of Quality & Reliability Management Volume 24 ; 24 >
-    au < ready ; 2008 ; International Journal of Quality & Reliability Management Volume 25 ; 25 >
-    au < ready ; 2009 ; International Journal of Quality & Reliability Management Volume 26 ; 26 >
-    au < ready ; 2010 ; International Journal of Quality & Reliability Management Volume 27 ; 27 >
+    au < released ; 1984 ; International Journal of Quality & Reliability Management Volume 1 ; 1 >
+    au < released ; 1985 ; International Journal of Quality & Reliability Management Volume 2 ; 2 >
+    au < released ; 1986 ; International Journal of Quality & Reliability Management Volume 3 ; 3 >
+    au < released ; 1987 ; International Journal of Quality & Reliability Management Volume 4 ; 4 >
+    au < released ; 1988 ; International Journal of Quality & Reliability Management Volume 5 ; 5 >
+    au < released ; 1989 ; International Journal of Quality & Reliability Management Volume 6 ; 6 >
+    au < released ; 1990 ; International Journal of Quality & Reliability Management Volume 7 ; 7 >
+    au < released ; 1991 ; International Journal of Quality & Reliability Management Volume 8 ; 8 >
+    au < released ; 1992 ; International Journal of Quality & Reliability Management Volume 9 ; 9 >
+    au < released ; 1993 ; International Journal of Quality & Reliability Management Volume 10 ; 10 >
+    au < released ; 1994 ; International Journal of Quality & Reliability Management Volume 11 ; 11 >
+    au < released ; 1995 ; International Journal of Quality & Reliability Management Volume 12 ; 12 >
+    au < released ; 1996 ; International Journal of Quality & Reliability Management Volume 13 ; 13 >
+    au < released ; 1997 ; International Journal of Quality & Reliability Management Volume 14 ; 14 >
+    au < released ; 1998 ; International Journal of Quality & Reliability Management Volume 15 ; 15 >
+    au < released ; 1999 ; International Journal of Quality & Reliability Management Volume 16 ; 16 >
+    au < released ; 2000 ; International Journal of Quality & Reliability Management Volume 17 ; 17 >
+    au < released ; 2001 ; International Journal of Quality & Reliability Management Volume 18 ; 18 >
+    au < released ; 2002 ; International Journal of Quality & Reliability Management Volume 19 ; 19 >
+    au < released ; 2003 ; International Journal of Quality & Reliability Management Volume 20 ; 20 >
+    au < released ; 2004 ; International Journal of Quality & Reliability Management Volume 21 ; 21 >
+    au < released ; 2005 ; International Journal of Quality & Reliability Management Volume 22 ; 22 >
+    au < released ; 2006 ; International Journal of Quality & Reliability Management Volume 23 ; 23 >
+    au < released ; 2007 ; International Journal of Quality & Reliability Management Volume 24 ; 24 >
+    au < released ; 2008 ; International Journal of Quality & Reliability Management Volume 25 ; 25 >
+    au < released ; 2009 ; International Journal of Quality & Reliability Management Volume 26 ; 26 >
+    au < released ; 2010 ; International Journal of Quality & Reliability Management Volume 27 ; 27 >
 
   }
 
@@ -3067,9 +3067,9 @@
 
     param[journal_issn] = 1359-8538
     
-    au < ready ; 1996 ; International Journal of Quality Science Volume 1 ; 1 >
-    au < ready ; 1997 ; International Journal of Quality Science Volume 2 ; 2 >
-    au < ready ; 1998 ; International Journal of Quality Science Volume 3 ; 3 >
+    au < released ; 1996 ; International Journal of Quality Science Volume 1 ; 1 >
+    au < released ; 1997 ; International Journal of Quality Science Volume 2 ; 2 >
+    au < released ; 1998 ; International Journal of Quality Science Volume 3 ; 3 >
 
   }
 
@@ -3082,8 +3082,8 @@
 
     param[journal_issn] = 1756-669X
     
-    au < ready ; 2009 ; International Journal of Quality Service Sciences Volume 1 ; 1 >
-    au < ready ; 2010 ; International Journal of Quality Service Sciences Volume 2 ; 2 >
+    au < released ; 2009 ; International Journal of Quality Service Sciences Volume 1 ; 1 >
+    au < released ; 2010 ; International Journal of Quality Service Sciences Volume 2 ; 2 >
 
   }
 
@@ -3096,44 +3096,44 @@
 
     param[journal_issn] = 0959-0552
     
-    au < ready ; 1973 ; International Journal of Retail & Distribution Management Volume 1 ; 1 >
-    au < ready ; 1974 ; International Journal of Retail & Distribution Management Volume 2 ; 2 >
-    au < ready ; 1975 ; International Journal of Retail & Distribution Management Volume 3 ; 3 >
-    au < ready ; 1976 ; International Journal of Retail & Distribution Management Volume 4 ; 4 >
-    au < ready ; 1977 ; International Journal of Retail & Distribution Management Volume 5 ; 5 >
-    au < ready ; 1978 ; International Journal of Retail & Distribution Management Volume 6 ; 6 >
-    au < ready ; 1979 ; International Journal of Retail & Distribution Management Volume 7 ; 7 >
-    au < ready ; 1980 ; International Journal of Retail & Distribution Management Volume 8 ; 8 >
-    au < ready ; 1981 ; International Journal of Retail & Distribution Management Volume 9 ; 9 >
-    au < ready ; 1982 ; International Journal of Retail & Distribution Management Volume 10 ; 10 >
-    au < ready ; 1983 ; International Journal of Retail & Distribution Management Volume 11 ; 11 >
-    au < ready ; 1984 ; International Journal of Retail & Distribution Management Volume 12 ; 12 >
-    au < ready ; 1985 ; International Journal of Retail & Distribution Management Volume 13 ; 13 >
-    au < ready ; 1986 ; International Journal of Retail & Distribution Management Volume 14 ; 14 >
-    au < ready ; 1987 ; International Journal of Retail & Distribution Management Volume 15 ; 15 >
-    au < ready ; 1988 ; International Journal of Retail & Distribution Management Volume 16 ; 16 >
-    au < ready ; 1989 ; International Journal of Retail & Distribution Management Volume 17 ; 17 >
-    au < ready ; 1990 ; International Journal of Retail & Distribution Management Volume 18 ; 18 >
-    au < ready ; 1991 ; International Journal of Retail & Distribution Management Volume 19 ; 19 >
-    au < ready ; 1992 ; International Journal of Retail & Distribution Management Volume 20 ; 20 >
-    au < ready ; 1993 ; International Journal of Retail & Distribution Management Volume 21 ; 21 >
-    au < ready ; 1994 ; International Journal of Retail & Distribution Management Volume 22 ; 22 >
-    au < ready ; 1995 ; International Journal of Retail & Distribution Management Volume 23 ; 23 >
-    au < ready ; 1996 ; International Journal of Retail & Distribution Management Volume 24 ; 24 >
-    au < ready ; 1997 ; International Journal of Retail & Distribution Management Volume 25 ; 25 >
-    au < ready ; 1998 ; International Journal of Retail & Distribution Management Volume 26 ; 26 >
-    au < ready ; 1999 ; International Journal of Retail & Distribution Management Volume 27 ; 27 >
-    au < ready ; 2000 ; International Journal of Retail & Distribution Management Volume 28 ; 28 >
-    au < ready ; 2001 ; International Journal of Retail & Distribution Management Volume 29 ; 29 >
-    au < ready ; 2002 ; International Journal of Retail & Distribution Management Volume 30 ; 30 >
-    au < ready ; 2003 ; International Journal of Retail & Distribution Management Volume 31 ; 31 >
-    au < ready ; 2004 ; International Journal of Retail & Distribution Management Volume 32 ; 32 >
-    au < ready ; 2005 ; International Journal of Retail & Distribution Management Volume 33 ; 33 >
-    au < ready ; 2006 ; International Journal of Retail & Distribution Management Volume 34 ; 34 >
-    au < ready ; 2007 ; International Journal of Retail & Distribution Management Volume 35 ; 35 >
-    au < ready ; 2008 ; International Journal of Retail & Distribution Management Volume 36 ; 36 >
-    au < ready ; 2009 ; International Journal of Retail & Distribution Management Volume 37 ; 37 >
-    au < ready ; 2010 ; International Journal of Retail & Distribution Management Volume 38 ; 38 >
+    au < released ; 1973 ; International Journal of Retail & Distribution Management Volume 1 ; 1 >
+    au < released ; 1974 ; International Journal of Retail & Distribution Management Volume 2 ; 2 >
+    au < released ; 1975 ; International Journal of Retail & Distribution Management Volume 3 ; 3 >
+    au < released ; 1976 ; International Journal of Retail & Distribution Management Volume 4 ; 4 >
+    au < released ; 1977 ; International Journal of Retail & Distribution Management Volume 5 ; 5 >
+    au < released ; 1978 ; International Journal of Retail & Distribution Management Volume 6 ; 6 >
+    au < released ; 1979 ; International Journal of Retail & Distribution Management Volume 7 ; 7 >
+    au < released ; 1980 ; International Journal of Retail & Distribution Management Volume 8 ; 8 >
+    au < released ; 1981 ; International Journal of Retail & Distribution Management Volume 9 ; 9 >
+    au < released ; 1982 ; International Journal of Retail & Distribution Management Volume 10 ; 10 >
+    au < released ; 1983 ; International Journal of Retail & Distribution Management Volume 11 ; 11 >
+    au < released ; 1984 ; International Journal of Retail & Distribution Management Volume 12 ; 12 >
+    au < released ; 1985 ; International Journal of Retail & Distribution Management Volume 13 ; 13 >
+    au < released ; 1986 ; International Journal of Retail & Distribution Management Volume 14 ; 14 >
+    au < released ; 1987 ; International Journal of Retail & Distribution Management Volume 15 ; 15 >
+    au < released ; 1988 ; International Journal of Retail & Distribution Management Volume 16 ; 16 >
+    au < released ; 1989 ; International Journal of Retail & Distribution Management Volume 17 ; 17 >
+    au < released ; 1990 ; International Journal of Retail & Distribution Management Volume 18 ; 18 >
+    au < released ; 1991 ; International Journal of Retail & Distribution Management Volume 19 ; 19 >
+    au < released ; 1992 ; International Journal of Retail & Distribution Management Volume 20 ; 20 >
+    au < released ; 1993 ; International Journal of Retail & Distribution Management Volume 21 ; 21 >
+    au < released ; 1994 ; International Journal of Retail & Distribution Management Volume 22 ; 22 >
+    au < released ; 1995 ; International Journal of Retail & Distribution Management Volume 23 ; 23 >
+    au < released ; 1996 ; International Journal of Retail & Distribution Management Volume 24 ; 24 >
+    au < released ; 1997 ; International Journal of Retail & Distribution Management Volume 25 ; 25 >
+    au < released ; 1998 ; International Journal of Retail & Distribution Management Volume 26 ; 26 >
+    au < released ; 1999 ; International Journal of Retail & Distribution Management Volume 27 ; 27 >
+    au < released ; 2000 ; International Journal of Retail & Distribution Management Volume 28 ; 28 >
+    au < released ; 2001 ; International Journal of Retail & Distribution Management Volume 29 ; 29 >
+    au < released ; 2002 ; International Journal of Retail & Distribution Management Volume 30 ; 30 >
+    au < released ; 2003 ; International Journal of Retail & Distribution Management Volume 31 ; 31 >
+    au < released ; 2004 ; International Journal of Retail & Distribution Management Volume 32 ; 32 >
+    au < released ; 2005 ; International Journal of Retail & Distribution Management Volume 33 ; 33 >
+    au < released ; 2006 ; International Journal of Retail & Distribution Management Volume 34 ; 34 >
+    au < released ; 2007 ; International Journal of Retail & Distribution Management Volume 35 ; 35 >
+    au < released ; 2008 ; International Journal of Retail & Distribution Management Volume 36 ; 36 >
+    au < released ; 2009 ; International Journal of Retail & Distribution Management Volume 37 ; 37 >
+    au < released ; 2010 ; International Journal of Retail & Distribution Management Volume 38 ; 38 >
 
   }
 
@@ -3146,25 +3146,25 @@
 
     param[journal_issn] = 0956-4233
     
-    au < ready ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 >
-    au < ready ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 >
-    au < ready ; 1992 ; International Journal of Service Industry Management Volume 3 ; 3 >
-    au < ready ; 1993 ; International Journal of Service Industry Management Volume 4 ; 4 >
-    au < ready ; 1994 ; International Journal of Service Industry Management Volume 5 ; 5 >
-    au < ready ; 1995 ; International Journal of Service Industry Management Volume 6 ; 6 >
-    au < ready ; 1996 ; International Journal of Service Industry Management Volume 7 ; 7 >
-    au < ready ; 1997 ; International Journal of Service Industry Management Volume 8 ; 8 >
-    au < ready ; 1998 ; International Journal of Service Industry Management Volume 9 ; 9 >
-    au < ready ; 1999 ; International Journal of Service Industry Management Volume 10 ; 10 >
-    au < ready ; 2000 ; International Journal of Service Industry Management Volume 11 ; 11 >
-    au < ready ; 2001 ; International Journal of Service Industry Management Volume 12 ; 12 >
-    au < ready ; 2002 ; International Journal of Service Industry Management Volume 13 ; 13 >
-    au < ready ; 2003 ; International Journal of Service Industry Management Volume 14 ; 14 >
-    au < ready ; 2004 ; International Journal of Service Industry Management Volume 15 ; 15 >
-    au < ready ; 2005 ; International Journal of Service Industry Management Volume 16 ; 16 >
-    au < ready ; 2006 ; International Journal of Service Industry Management Volume 17 ; 17 >
-    au < ready ; 2007 ; International Journal of Service Industry Management Volume 18 ; 18 >
-    au < ready ; 2008 ; International Journal of Service Industry Management Volume 19 ; 19 >
+    au < released ; 1990 ; International Journal of Service Industry Management Volume 1 ; 1 >
+    au < released ; 1991 ; International Journal of Service Industry Management Volume 2 ; 2 >
+    au < released ; 1992 ; International Journal of Service Industry Management Volume 3 ; 3 >
+    au < released ; 1993 ; International Journal of Service Industry Management Volume 4 ; 4 >
+    au < released ; 1994 ; International Journal of Service Industry Management Volume 5 ; 5 >
+    au < released ; 1995 ; International Journal of Service Industry Management Volume 6 ; 6 >
+    au < released ; 1996 ; International Journal of Service Industry Management Volume 7 ; 7 >
+    au < released ; 1997 ; International Journal of Service Industry Management Volume 8 ; 8 >
+    au < released ; 1998 ; International Journal of Service Industry Management Volume 9 ; 9 >
+    au < released ; 1999 ; International Journal of Service Industry Management Volume 10 ; 10 >
+    au < released ; 2000 ; International Journal of Service Industry Management Volume 11 ; 11 >
+    au < released ; 2001 ; International Journal of Service Industry Management Volume 12 ; 12 >
+    au < released ; 2002 ; International Journal of Service Industry Management Volume 13 ; 13 >
+    au < released ; 2003 ; International Journal of Service Industry Management Volume 14 ; 14 >
+    au < released ; 2004 ; International Journal of Service Industry Management Volume 15 ; 15 >
+    au < released ; 2005 ; International Journal of Service Industry Management Volume 16 ; 16 >
+    au < released ; 2006 ; International Journal of Service Industry Management Volume 17 ; 17 >
+    au < released ; 2007 ; International Journal of Service Industry Management Volume 18 ; 18 >
+    au < released ; 2008 ; International Journal of Service Industry Management Volume 19 ; 19 >
 
   }
 
@@ -3177,43 +3177,43 @@
 
     param[journal_issn] = 0306-8293
     
-    au < ready ; 1974 ; International Journal of Social Economics Volume 1 ; 1 >
-    au < ready ; 1975 ; International Journal of Social Economics Volume 2 ; 2 >
-    au < ready ; 1976 ; International Journal of Social Economics Volume 3 ; 3 >
-    au < ready ; 1977 ; International Journal of Social Economics Volume 4 ; 4 >
-    au < ready ; 1978 ; International Journal of Social Economics Volume 5 ; 5 >
-    au < ready ; 1979 ; International Journal of Social Economics Volume 6 ; 6 >
-    au < ready ; 1980 ; International Journal of Social Economics Volume 7 ; 7 >
-    au < ready ; 1981 ; International Journal of Social Economics Volume 8 ; 8 >
-    au < ready ; 1982 ; International Journal of Social Economics Volume 9 ; 9 >
-    au < ready ; 1983 ; International Journal of Social Economics Volume 10 ; 10 >
-    au < ready ; 1984 ; International Journal of Social Economics Volume 11 ; 11 >
-    au < ready ; 1985 ; International Journal of Social Economics Volume 12 ; 12 >
-    au < ready ; 1986 ; International Journal of Social Economics Volume 13 ; 13 >
-    au < ready ; 1987 ; International Journal of Social Economics Volume 14 ; 14 >
-    au < ready ; 1988 ; International Journal of Social Economics Volume 15 ; 15 >
-    au < ready ; 1989 ; International Journal of Social Economics Volume 16 ; 16 >
-    au < ready ; 1990 ; International Journal of Social Economics Volume 17 ; 17 >
-    au < ready ; 1991 ; International Journal of Social Economics Volume 18 ; 18 >
-    au < ready ; 1992 ; International Journal of Social Economics Volume 19 ; 19 >
-    au < ready ; 1993 ; International Journal of Social Economics Volume 20 ; 20 >
-    au < ready ; 1994 ; International Journal of Social Economics Volume 21 ; 21 >
-    au < ready ; 1995 ; International Journal of Social Economics Volume 22 ; 22 >
-    au < ready ; 1996 ; International Journal of Social Economics Volume 23 ; 23 >
-    au < ready ; 1997 ; International Journal of Social Economics Volume 24 ; 24 >
-    au < ready ; 1998 ; International Journal of Social Economics Volume 25 ; 25 >
-    au < ready ; 1999 ; International Journal of Social Economics Volume 26 ; 26 >
-    au < ready ; 2000 ; International Journal of Social Economics Volume 27 ; 27 >
-    au < ready ; 2001 ; International Journal of Social Economics Volume 28 ; 28 >
-    au < ready ; 2002 ; International Journal of Social Economics Volume 29 ; 29 >
-    au < ready ; 2003 ; International Journal of Social Economics Volume 30 ; 30 >
-    au < ready ; 2004 ; International Journal of Social Economics Volume 31 ; 31 >
-    au < ready ; 2005 ; International Journal of Social Economics Volume 32 ; 32 >
-    au < ready ; 2006 ; International Journal of Social Economics Volume 33 ; 33 >
-    au < ready ; 2007 ; International Journal of Social Economics Volume 34 ; 34 >
-    au < ready ; 2008 ; International Journal of Social Economics Volume 35 ; 35 >
-    au < ready ; 2009 ; International Journal of Social Economics Volume 36 ; 36 >
-    au < ready ; 2010 ; International Journal of Social Economics Volume 37 ; 37 >
+    au < released ; 1974 ; International Journal of Social Economics Volume 1 ; 1 >
+    au < released ; 1975 ; International Journal of Social Economics Volume 2 ; 2 >
+    au < released ; 1976 ; International Journal of Social Economics Volume 3 ; 3 >
+    au < released ; 1977 ; International Journal of Social Economics Volume 4 ; 4 >
+    au < released ; 1978 ; International Journal of Social Economics Volume 5 ; 5 >
+    au < released ; 1979 ; International Journal of Social Economics Volume 6 ; 6 >
+    au < released ; 1980 ; International Journal of Social Economics Volume 7 ; 7 >
+    au < released ; 1981 ; International Journal of Social Economics Volume 8 ; 8 >
+    au < released ; 1982 ; International Journal of Social Economics Volume 9 ; 9 >
+    au < released ; 1983 ; International Journal of Social Economics Volume 10 ; 10 >
+    au < released ; 1984 ; International Journal of Social Economics Volume 11 ; 11 >
+    au < released ; 1985 ; International Journal of Social Economics Volume 12 ; 12 >
+    au < released ; 1986 ; International Journal of Social Economics Volume 13 ; 13 >
+    au < released ; 1987 ; International Journal of Social Economics Volume 14 ; 14 >
+    au < released ; 1988 ; International Journal of Social Economics Volume 15 ; 15 >
+    au < released ; 1989 ; International Journal of Social Economics Volume 16 ; 16 >
+    au < released ; 1990 ; International Journal of Social Economics Volume 17 ; 17 >
+    au < released ; 1991 ; International Journal of Social Economics Volume 18 ; 18 >
+    au < released ; 1992 ; International Journal of Social Economics Volume 19 ; 19 >
+    au < released ; 1993 ; International Journal of Social Economics Volume 20 ; 20 >
+    au < released ; 1994 ; International Journal of Social Economics Volume 21 ; 21 >
+    au < released ; 1995 ; International Journal of Social Economics Volume 22 ; 22 >
+    au < released ; 1996 ; International Journal of Social Economics Volume 23 ; 23 >
+    au < released ; 1997 ; International Journal of Social Economics Volume 24 ; 24 >
+    au < released ; 1998 ; International Journal of Social Economics Volume 25 ; 25 >
+    au < released ; 1999 ; International Journal of Social Economics Volume 26 ; 26 >
+    au < released ; 2000 ; International Journal of Social Economics Volume 27 ; 27 >
+    au < released ; 2001 ; International Journal of Social Economics Volume 28 ; 28 >
+    au < released ; 2002 ; International Journal of Social Economics Volume 29 ; 29 >
+    au < released ; 2003 ; International Journal of Social Economics Volume 30 ; 30 >
+    au < released ; 2004 ; International Journal of Social Economics Volume 31 ; 31 >
+    au < released ; 2005 ; International Journal of Social Economics Volume 32 ; 32 >
+    au < released ; 2006 ; International Journal of Social Economics Volume 33 ; 33 >
+    au < released ; 2007 ; International Journal of Social Economics Volume 34 ; 34 >
+    au < released ; 2008 ; International Journal of Social Economics Volume 35 ; 35 >
+    au < released ; 2009 ; International Journal of Social Economics Volume 36 ; 36 >
+    au < released ; 2010 ; International Journal of Social Economics Volume 37 ; 37 >
 
   }
 
@@ -3226,36 +3226,36 @@
 
     param[journal_issn] = 0144-333X
     
-    au < ready ; 1981 ; International Journal of Sociology and Social Policy Volume 1 ; 1 >
-    au < ready ; 1982 ; International Journal of Sociology and Social Policy Volume 2 ; 2 >
-    au < ready ; 1983 ; International Journal of Sociology and Social Policy Volume 3 ; 3 >
-    au < ready ; 1984 ; International Journal of Sociology and Social Policy Volume 4 ; 4 >
-    au < ready ; 1985 ; International Journal of Sociology and Social Policy Volume 5 ; 5 >
-    au < ready ; 1986 ; International Journal of Sociology and Social Policy Volume 6 ; 6 >
-    au < ready ; 1987 ; International Journal of Sociology and Social Policy Volume 7 ; 7 >
-    au < ready ; 1989 ; International Journal of Sociology and Social Policy Volume 8 ; 8 >
-    au < ready ; 1989 ; International Journal of Sociology and Social Policy Volume 9 ; 9 >
-    au < ready ; 1990 ; International Journal of Sociology and Social Policy Volume 10 ; 10 >
-    au < ready ; 1991 ; International Journal of Sociology and Social Policy Volume 11 ; 11 >
-    au < ready ; 1992 ; International Journal of Sociology and Social Policy Volume 12 ; 12 >
-    au < ready ; 1993 ; International Journal of Sociology and Social Policy Volume 13 ; 13 >
-    au < ready ; 1994 ; International Journal of Sociology and Social Policy Volume 14 ; 14 >
-    au < ready ; 1995 ; International Journal of Sociology and Social Policy Volume 15 ; 15 >
-    au < ready ; 1996 ; International Journal of Sociology and Social Policy Volume 16 ; 16 >
-    au < ready ; 1997 ; International Journal of Sociology and Social Policy Volume 17 ; 17 >
-    au < ready ; 1998 ; International Journal of Sociology and Social Policy Volume 18 ; 18 >
-    au < ready ; 1999 ; International Journal of Sociology and Social Policy Volume 19 ; 19 >
-    au < ready ; 2000 ; International Journal of Sociology and Social Policy Volume 20 ; 20 >
-    au < ready ; 2001 ; International Journal of Sociology and Social Policy Volume 21 ; 21 >
-    au < ready ; 2002 ; International Journal of Sociology and Social Policy Volume 22 ; 22 >
-    au < ready ; 2003 ; International Journal of Sociology and Social Policy Volume 23 ; 23 >
-    au < ready ; 2004 ; International Journal of Sociology and Social Policy Volume 24 ; 24 >
-    au < ready ; 2005 ; International Journal of Sociology and Social Policy Volume 25 ; 25 >
-    au < ready ; 2006 ; International Journal of Sociology and Social Policy Volume 26 ; 26 >
-    au < ready ; 2007 ; International Journal of Sociology and Social Policy Volume 27 ; 27 >
-    au < ready ; 2008 ; International Journal of Sociology and Social Policy Volume 28 ; 28 >
-    au < ready ; 2009 ; International Journal of Sociology and Social Policy Volume 29 ; 29 >
-    au < ready ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 >
+    au < released ; 1981 ; International Journal of Sociology and Social Policy Volume 1 ; 1 >
+    au < released ; 1982 ; International Journal of Sociology and Social Policy Volume 2 ; 2 >
+    au < released ; 1983 ; International Journal of Sociology and Social Policy Volume 3 ; 3 >
+    au < released ; 1984 ; International Journal of Sociology and Social Policy Volume 4 ; 4 >
+    au < released ; 1985 ; International Journal of Sociology and Social Policy Volume 5 ; 5 >
+    au < released ; 1986 ; International Journal of Sociology and Social Policy Volume 6 ; 6 >
+    au < released ; 1987 ; International Journal of Sociology and Social Policy Volume 7 ; 7 >
+    au < released ; 1989 ; International Journal of Sociology and Social Policy Volume 8 ; 8 >
+    au < released ; 1989 ; International Journal of Sociology and Social Policy Volume 9 ; 9 >
+    au < released ; 1990 ; International Journal of Sociology and Social Policy Volume 10 ; 10 >
+    au < released ; 1991 ; International Journal of Sociology and Social Policy Volume 11 ; 11 >
+    au < released ; 1992 ; International Journal of Sociology and Social Policy Volume 12 ; 12 >
+    au < released ; 1993 ; International Journal of Sociology and Social Policy Volume 13 ; 13 >
+    au < released ; 1994 ; International Journal of Sociology and Social Policy Volume 14 ; 14 >
+    au < released ; 1995 ; International Journal of Sociology and Social Policy Volume 15 ; 15 >
+    au < released ; 1996 ; International Journal of Sociology and Social Policy Volume 16 ; 16 >
+    au < released ; 1997 ; International Journal of Sociology and Social Policy Volume 17 ; 17 >
+    au < released ; 1998 ; International Journal of Sociology and Social Policy Volume 18 ; 18 >
+    au < released ; 1999 ; International Journal of Sociology and Social Policy Volume 19 ; 19 >
+    au < released ; 2000 ; International Journal of Sociology and Social Policy Volume 20 ; 20 >
+    au < released ; 2001 ; International Journal of Sociology and Social Policy Volume 21 ; 21 >
+    au < released ; 2002 ; International Journal of Sociology and Social Policy Volume 22 ; 22 >
+    au < released ; 2003 ; International Journal of Sociology and Social Policy Volume 23 ; 23 >
+    au < released ; 2004 ; International Journal of Sociology and Social Policy Volume 24 ; 24 >
+    au < released ; 2005 ; International Journal of Sociology and Social Policy Volume 25 ; 25 >
+    au < released ; 2006 ; International Journal of Sociology and Social Policy Volume 26 ; 26 >
+    au < released ; 2007 ; International Journal of Sociology and Social Policy Volume 27 ; 27 >
+    au < released ; 2008 ; International Journal of Sociology and Social Policy Volume 28 ; 28 >
+    au < released ; 2009 ; International Journal of Sociology and Social Policy Volume 29 ; 29 >
+    au < released ; 2010 ; International Journal of Sociology and Social Policy Volume 30 ; 30 >
 
   }
 
@@ -3268,7 +3268,7 @@
 
     param[journal_issn] = 1757-9864
    
-    au < ready ; 2010 ; International Journal of Structural Integrity  Volume 1 ; 1 >
+    au < released ; 2010 ; International Journal of Structural Integrity  Volume 1 ; 1 >
 
   }
 
@@ -3281,17 +3281,17 @@
 
     param[journal_issn] = 1467-6370
     
-    au < ready ; 2000 ; International Journal of Sustainability in Higher Education Volume 1 ; 1 >
-    au < ready ; 2001 ; International Journal of Sustainability in Higher Education Volume 2 ; 2 >
-    au < ready ; 2002 ; International Journal of Sustainability in Higher Education Volume 3 ; 3 >
-    au < ready ; 2003 ; International Journal of Sustainability in Higher Education Volume 4 ; 4 >
-    au < ready ; 2004 ; International Journal of Sustainability in Higher Education Volume 5 ; 5 >
-    au < ready ; 2005 ; International Journal of Sustainability in Higher Education Volume 6 ; 6 >
-    au < ready ; 2006 ; International Journal of Sustainability in Higher Education Volume 7 ; 7 >
-    au < ready ; 2007 ; International Journal of Sustainability in Higher Education Volume 8 ; 8 >
-    au < ready ; 2008 ; International Journal of Sustainability in Higher Education Volume 9 ; 9 >
-    au < ready ; 2009 ; International Journal of Sustainability in Higher Education Volume 10 ; 10 >
-    au < ready ; 2010 ; International Journal of Sustainability in Higher Education Volume 11 ; 11 >
+    au < released ; 2000 ; International Journal of Sustainability in Higher Education Volume 1 ; 1 >
+    au < released ; 2001 ; International Journal of Sustainability in Higher Education Volume 2 ; 2 >
+    au < released ; 2002 ; International Journal of Sustainability in Higher Education Volume 3 ; 3 >
+    au < released ; 2003 ; International Journal of Sustainability in Higher Education Volume 4 ; 4 >
+    au < released ; 2004 ; International Journal of Sustainability in Higher Education Volume 5 ; 5 >
+    au < released ; 2005 ; International Journal of Sustainability in Higher Education Volume 6 ; 6 >
+    au < released ; 2006 ; International Journal of Sustainability in Higher Education Volume 7 ; 7 >
+    au < released ; 2007 ; International Journal of Sustainability in Higher Education Volume 8 ; 8 >
+    au < released ; 2008 ; International Journal of Sustainability in Higher Education Volume 9 ; 9 >
+    au < released ; 2009 ; International Journal of Sustainability in Higher Education Volume 10 ; 10 >
+    au < released ; 2010 ; International Journal of Sustainability in Higher Education Volume 11 ; 11 >
 
   }
 
@@ -3304,12 +3304,12 @@
 
     param[journal_issn] = 1744-0084
     
-    au < ready ; 2005 ; International Journal of Web Information Systems Volume 1 ; 1 >
-    au < ready ; 2006 ; International Journal of Web Information Systems Volume 2 ; 2 >
-    au < ready ; 2007 ; International Journal of Web Information Systems Volume 3 ; 3 >
-    au < ready ; 2008 ; International Journal of Web Information Systems Volume 4 ; 4 >
-    au < ready ; 2009 ; International Journal of Web Information Systems Volume 5 ; 5 >
-    au < ready ; 2010 ; International Journal of Web Information Systems Volume 6 ; 6 >
+    au < released ; 2005 ; International Journal of Web Information Systems Volume 1 ; 1 >
+    au < released ; 2006 ; International Journal of Web Information Systems Volume 2 ; 2 >
+    au < released ; 2007 ; International Journal of Web Information Systems Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Web Information Systems Volume 4 ; 4 >
+    au < released ; 2009 ; International Journal of Web Information Systems Volume 5 ; 5 >
+    au < released ; 2010 ; International Journal of Web Information Systems Volume 6 ; 6 >
 
   }
 
@@ -3322,9 +3322,9 @@
 
     param[journal_issn] = 1751-1062
     
-    au < ready ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 >
-    au < ready ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 >
-    au < ready ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 >
+    au < released ; 2007 ; International Journal of Wine Business Research Volume 19 ; 19 >
+    au < released ; 2008 ; International Journal of Wine Business Research Volume 20 ; 20 >
+    au < released ; 2009 ; International Journal of Wine Business Research Volume 21 ; 21 >
 
   }
 
@@ -3337,24 +3337,24 @@
 
     param[journal_issn] = 0954-7541
     
-    au < ready ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 >
-    au < ready ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 >
-    au < ready ; 1991 ; International Journal of Wine Marketing Volume 3 ; 3 >
-    au < ready ; 1992 ; International Journal of Wine Marketing Volume 4 ; 4 >
-    au < ready ; 1993 ; International Journal of Wine Marketing Volume 5 ; 5 >
-    au < ready ; 1994 ; International Journal of Wine Marketing Volume 6 ; 6 >
-    au < ready ; 1995 ; International Journal of Wine Marketing Volume 7 ; 7 >
-    au < ready ; 1996 ; International Journal of Wine Marketing Volume 8 ; 8 >
-    au < ready ; 1997 ; International Journal of Wine Marketing Volume 9 ; 9 >
-    au < ready ; 1998 ; International Journal of Wine Marketing Volume 10 ; 10 >
-    au < ready ; 1999 ; International Journal of Wine Marketing Volume 11 ; 11 >
-    au < ready ; 2000 ; International Journal of Wine Marketing Volume 12 ; 12 >
-    au < ready ; 2001 ; International Journal of Wine Marketing Volume 13 ; 13 >
-    au < ready ; 2002 ; International Journal of Wine Marketing Volume 14 ; 14 >
-    au < ready ; 2003 ; International Journal of Wine Marketing Volume 15 ; 15 >
-    au < ready ; 2004 ; International Journal of Wine Marketing Volume 16 ; 16 >
-    au < ready ; 2005 ; International Journal of Wine Marketing Volume 17 ; 17 >
-    au < ready ; 2006 ; International Journal of Wine Marketing Volume 18 ; 18 >
+    au < released ; 1989 ; International Journal of Wine Marketing Volume 1 ; 1 >
+    au < released ; 1990 ; International Journal of Wine Marketing Volume 2 ; 2 >
+    au < released ; 1991 ; International Journal of Wine Marketing Volume 3 ; 3 >
+    au < released ; 1992 ; International Journal of Wine Marketing Volume 4 ; 4 >
+    au < released ; 1993 ; International Journal of Wine Marketing Volume 5 ; 5 >
+    au < released ; 1994 ; International Journal of Wine Marketing Volume 6 ; 6 >
+    au < released ; 1995 ; International Journal of Wine Marketing Volume 7 ; 7 >
+    au < released ; 1996 ; International Journal of Wine Marketing Volume 8 ; 8 >
+    au < released ; 1997 ; International Journal of Wine Marketing Volume 9 ; 9 >
+    au < released ; 1998 ; International Journal of Wine Marketing Volume 10 ; 10 >
+    au < released ; 1999 ; International Journal of Wine Marketing Volume 11 ; 11 >
+    au < released ; 2000 ; International Journal of Wine Marketing Volume 12 ; 12 >
+    au < released ; 2001 ; International Journal of Wine Marketing Volume 13 ; 13 >
+    au < released ; 2002 ; International Journal of Wine Marketing Volume 14 ; 14 >
+    au < released ; 2003 ; International Journal of Wine Marketing Volume 15 ; 15 >
+    au < released ; 2004 ; International Journal of Wine Marketing Volume 16 ; 16 >
+    au < released ; 2005 ; International Journal of Wine Marketing Volume 17 ; 17 >
+    au < released ; 2006 ; International Journal of Wine Marketing Volume 18 ; 18 >
 
   }
 
@@ -3367,9 +3367,9 @@
 
     param[journal_issn] = 1753-8351
     
-    au < ready ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 >
-    au < ready ; 2009 ; International Journal of Workplace Health Management Volume 2 ; 2 >
-    au < ready ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 >
+    au < released ; 2008 ; International Journal of Workplace Health Management Volume 1 ; 1 >
+    au < released ; 2009 ; International Journal of Workplace Health Management Volume 2 ; 2 >
+    au < released ; 2010 ; International Journal of Workplace Health Management Volume 3 ; 3 >
 
   }
 
@@ -3382,7 +3382,7 @@
 
     param[journal_issn] = 1466-6189
     
-    au < ready ; 2000 ; International Journal on Grey Literature Volume 1 ; 1 >
+    au < released ; 2000 ; International Journal on Grey Literature Volume 1 ; 1 >
 
   }
 
@@ -4551,7 +4551,7 @@
     >
 
     param[journal_issn] = 0268-3946
-    attr[where] = content1a
+    attr[where] = content1b
     
     au < testing ; 1986 ; Journal of Managerial Psychology Volume 1 ; 1 >
     au < testing ; 1987 ; Journal of Managerial Psychology Volume 2 ; 2 >
@@ -4589,7 +4589,7 @@
     >
 
     param[journal_issn] = 1741-038X
-    attr[where] = content1b
+    attr[where] = content1a
     
     au < testing ; 2004 ; Journal of Manufacturing Technology Management Volume 15 ; 15 >
     au < testing ; 2005 ; Journal of Manufacturing Technology Management Volume 16 ; 16 >
@@ -4609,7 +4609,7 @@
     >
 
     param[journal_issn] = 1355-2538
-    attr[where] = content1b
+    attr[where] = content1a
     
     au < testing ; 1995 ; Journal of Marketing Practice: Applied Marketing Science Volume 1 ; 1 >
     au < testing ; 1996 ; Journal of Marketing Practice: Applied Marketing Science Volume 2 ; 2 >
@@ -4627,7 +4627,7 @@
     >
 
     param[journal_issn] = 1746-5664
-    attr[where] = content1b
+    attr[where] = content1a
     
     au < testing ; 2006 ; Journal of Modelling in Management Volume 1 ; 1 >
     au < testing ; 2007 ; Journal of Modelling in Management Volume 2 ; 2 >
@@ -4645,21 +4645,20 @@
     >
 
     param[journal_issn] = 1368-5201
-    attr[where] = content2a
     
-    au < testing ; 1998 ; Journal of Money Laundering Control Volume 1 ; 1 >
-    au < testing ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 >
-    au < testing ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 >
-    au < testing ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 >
-    au < testing ; 2002 ; Journal of Money Laundering Control Volume 5 ; 5 >
-    au < testing ; 2003 ; Journal of Money Laundering Control Volume 6 ; 6 >
-    au < testing ; 2004 ; Journal of Money Laundering Control Volume 7 ; 7 >
-    au < testing ; 2005 ; Journal of Money Laundering Control Volume 8 ; 8 >
-    au < testing ; 2006 ; Journal of Money Laundering Control Volume 9 ; 9 >
-    au < testing ; 2007 ; Journal of Money Laundering Control Volume 10 ; 10 >
-    au < testing ; 2008 ; Journal of Money Laundering Control Volume 11 ; 11 >
-    au < testing ; 2009 ; Journal of Money Laundering Control Volume 12 ; 12 >
-    au < testing ; 2010 ; Journal of Money Laundering Control Volume 13 ; 13 >
+    au < ready ; 1998 ; Journal of Money Laundering Control Volume 1 ; 1 >
+    au < ready ; 1999 ; Journal of Money Laundering Control Volume 2 ; 2 >
+    au < ready ; 2000 ; Journal of Money Laundering Control Volume 3 ; 3 >
+    au < ready ; 2001 ; Journal of Money Laundering Control Volume 4 ; 4 >
+    au < ready ; 2002 ; Journal of Money Laundering Control Volume 5 ; 5 >
+    au < ready ; 2003 ; Journal of Money Laundering Control Volume 6 ; 6 >
+    au < ready ; 2004 ; Journal of Money Laundering Control Volume 7 ; 7 >
+    au < ready ; 2005 ; Journal of Money Laundering Control Volume 8 ; 8 >
+    au < ready ; 2006 ; Journal of Money Laundering Control Volume 9 ; 9 >
+    au < ready ; 2007 ; Journal of Money Laundering Control Volume 10 ; 10 >
+    au < ready ; 2008 ; Journal of Money Laundering Control Volume 11 ; 11 >
+    au < ready ; 2009 ; Journal of Money Laundering Control Volume 12 ; 12 >
+    au < ready ; 2010 ; Journal of Money Laundering Control Volume 13 ; 13 >
 
   }
 
@@ -4671,7 +4670,7 @@
     >
 
     param[journal_issn] = 0953-4814
-    attr[where] = content2b
+    attr[where] = content4b
     
     au < testing ; 1988 ; Journal of Organizational Change Management Volume 1 ; 1 >
     au < testing ; 1989 ; Journal of Organizational Change Management Volume 2 ; 2 >
@@ -4707,11 +4706,10 @@
     >
 
     param[journal_issn] = 1753-8335
-    attr[where] = content3a
     
-    au < testing ; 2008 ; Journal of Place Management and Development Volume 1 ; 1 >
-    au < testing ; 2009 ; Journal of Place Management and Development Volume 2 ; 2 >
-    au < testing ; 2010 ; Journal of Place Management and Development Volume 3 ; 3 >
+    au < ready ; 2008 ; Journal of Place Management and Development Volume 1 ; 1 >
+    au < ready ; 2009 ; Journal of Place Management and Development Volume 2 ; 2 >
+    au < ready ; 2010 ; Journal of Place Management and Development Volume 3 ; 3 >
 
   }
 
@@ -4723,27 +4721,26 @@
     >
 
     param[journal_issn] = 1061-0421
-    attr[where] = content3a
     
-    au < testing ; 1992 ; Journal of Product & Brand Management Volume 1 ; 1 >
-    au < testing ; 1993 ; Journal of Product & Brand Management Volume 2 ; 2 >
-    au < testing ; 1994 ; Journal of Product & Brand Management Volume 3 ; 3 >
-    au < testing ; 1995 ; Journal of Product & Brand Management Volume 4 ; 4 >
-    au < testing ; 1996 ; Journal of Product & Brand Management Volume 5 ; 5 >
-    au < testing ; 1997 ; Journal of Product & Brand Management Volume 6 ; 6 >
-    au < testing ; 1998 ; Journal of Product & Brand Management Volume 7 ; 7 >
-    au < testing ; 1999 ; Journal of Product & Brand Management Volume 8 ; 8 >
-    au < testing ; 2000 ; Journal of Product & Brand Management Volume 9 ; 9 >
-    au < testing ; 2001 ; Journal of Product & Brand Management Volume 10 ; 10 >
-    au < testing ; 2002 ; Journal of Product & Brand Management Volume 11 ; 11 >
-    au < testing ; 2003 ; Journal of Product & Brand Management Volume 12 ; 12 >
-    au < testing ; 2004 ; Journal of Product & Brand Management Volume 13 ; 13 >
-    au < testing ; 2005 ; Journal of Product & Brand Management Volume 14 ; 14 >
-    au < testing ; 2006 ; Journal of Product & Brand Management Volume 15 ; 15 >
-    au < testing ; 2007 ; Journal of Product & Brand Management Volume 16 ; 16 >
-    au < testing ; 2008 ; Journal of Product & Brand Management Volume 17 ; 17 >
-    au < testing ; 2009 ; Journal of Product & Brand Management Volume 18 ; 18 >
-    au < testing ; 2010 ; Journal of Product & Brand Management Volume 19 ; 19 >
+    au < ready ; 1992 ; Journal of Product & Brand Management Volume 1 ; 1 >
+    au < ready ; 1993 ; Journal of Product & Brand Management Volume 2 ; 2 >
+    au < ready ; 1994 ; Journal of Product & Brand Management Volume 3 ; 3 >
+    au < ready ; 1995 ; Journal of Product & Brand Management Volume 4 ; 4 >
+    au < ready ; 1996 ; Journal of Product & Brand Management Volume 5 ; 5 >
+    au < ready ; 1997 ; Journal of Product & Brand Management Volume 6 ; 6 >
+    au < ready ; 1998 ; Journal of Product & Brand Management Volume 7 ; 7 >
+    au < ready ; 1999 ; Journal of Product & Brand Management Volume 8 ; 8 >
+    au < ready ; 2000 ; Journal of Product & Brand Management Volume 9 ; 9 >
+    au < ready ; 2001 ; Journal of Product & Brand Management Volume 10 ; 10 >
+    au < ready ; 2002 ; Journal of Product & Brand Management Volume 11 ; 11 >
+    au < ready ; 2003 ; Journal of Product & Brand Management Volume 12 ; 12 >
+    au < ready ; 2004 ; Journal of Product & Brand Management Volume 13 ; 13 >
+    au < ready ; 2005 ; Journal of Product & Brand Management Volume 14 ; 14 >
+    au < ready ; 2006 ; Journal of Product & Brand Management Volume 15 ; 15 >
+    au < ready ; 2007 ; Journal of Product & Brand Management Volume 16 ; 16 >
+    au < ready ; 2008 ; Journal of Product & Brand Management Volume 17 ; 17 >
+    au < ready ; 2009 ; Journal of Product & Brand Management Volume 18 ; 18 >
+    au < ready ; 2010 ; Journal of Product & Brand Management Volume 19 ; 19 >
 
   }
 
@@ -4755,16 +4752,15 @@
     >
 
     param[journal_issn] = 0958-868X
-    attr[where] = content3b
     
-    au < testing ; 1990 ; Journal of Property Finance Volume 1 ; 1 >
-    au < testing ; 1991 ; Journal of Property Finance Volume 2 ; 2 >
-    au < testing ; 1992 ; Journal of Property Finance Volume 3 ; 3 >
-    au < testing ; 1993 ; Journal of Property Finance Volume 4 ; 4 >
-    au < testing ; 1994 ; Journal of Property Finance Volume 5 ; 5 >
-    au < testing ; 1995 ; Journal of Property Finance Volume 6 ; 6 >
-    au < testing ; 1996 ; Journal of Property Finance Volume 7 ; 7 >
-    au < testing ; 1997 ; Journal of Property Finance Volume 8 ; 8 >
+    au < ready ; 1990 ; Journal of Property Finance Volume 1 ; 1 >
+    au < ready ; 1991 ; Journal of Property Finance Volume 2 ; 2 >
+    au < ready ; 1992 ; Journal of Property Finance Volume 3 ; 3 >
+    au < ready ; 1993 ; Journal of Property Finance Volume 4 ; 4 >
+    au < ready ; 1994 ; Journal of Property Finance Volume 5 ; 5 >
+    au < ready ; 1995 ; Journal of Property Finance Volume 6 ; 6 >
+    au < ready ; 1996 ; Journal of Property Finance Volume 7 ; 7 >
+    au < ready ; 1997 ; Journal of Property Finance Volume 8 ; 8 >
 
   }
 
@@ -4776,20 +4772,19 @@
     >
 
     param[journal_issn] = 1463-578X
-    attr[where] = content3b
     
-    au < testing ; 1999 ; Journal of Property Investment & Finance Volume 17 ; 17 >
-    au < testing ; 2000 ; Journal of Property Investment & Finance Volume 18 ; 18 >
-    au < testing ; 2001 ; Journal of Property Investment & Finance Volume 19 ; 19 >
-    au < testing ; 2002 ; Journal of Property Investment & Finance Volume 20 ; 20 >
-    au < testing ; 2003 ; Journal of Property Investment & Finance Volume 21 ; 21 >
-    au < testing ; 2004 ; Journal of Property Investment & Finance Volume 22 ; 22 >
-    au < testing ; 2005 ; Journal of Property Investment & Finance Volume 23 ; 23 >
-    au < testing ; 2006 ; Journal of Property Investment & Finance Volume 24 ; 24 >
-    au < testing ; 2007 ; Journal of Property Investment & Finance Volume 25 ; 25 >
-    au < testing ; 2008 ; Journal of Property Investment & Finance Volume 26 ; 26 >
-    au < testing ; 2009 ; Journal of Property Investment & Finance Volume 27 ; 27 >
-    au < testing ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 >
+    au < ready ; 1999 ; Journal of Property Investment & Finance Volume 17 ; 17 >
+    au < ready ; 2000 ; Journal of Property Investment & Finance Volume 18 ; 18 >
+    au < ready ; 2001 ; Journal of Property Investment & Finance Volume 19 ; 19 >
+    au < ready ; 2002 ; Journal of Property Investment & Finance Volume 20 ; 20 >
+    au < ready ; 2003 ; Journal of Property Investment & Finance Volume 21 ; 21 >
+    au < ready ; 2004 ; Journal of Property Investment & Finance Volume 22 ; 22 >
+    au < ready ; 2005 ; Journal of Property Investment & Finance Volume 23 ; 23 >
+    au < ready ; 2006 ; Journal of Property Investment & Finance Volume 24 ; 24 >
+    au < ready ; 2007 ; Journal of Property Investment & Finance Volume 25 ; 25 >
+    au < ready ; 2008 ; Journal of Property Investment & Finance Volume 26 ; 26 >
+    au < ready ; 2009 ; Journal of Property Investment & Finance Volume 27 ; 27 >
+    au < ready ; 2010 ; Journal of Property Investment & Finance Volume 28 ; 28 >
 
   }
 
@@ -4801,24 +4796,23 @@
     >
 
     param[journal_issn] = 0960-2712
-    attr[where] = content4a
     
-    au < testing ; 1983 ; Journal of Property Valuation and Investment Volume 1 ; 1 >
-    au < testing ; 1984 ; Journal of Property Valuation and Investment Volume 2 ; 2 >
-    au < testing ; 1985 ; Journal of Property Valuation and Investment Volume 3 ; 3 >
-    au < testing ; 1986 ; Journal of Property Valuation and Investment Volume 4 ; 4 >
-    au < testing ; 1987 ; Journal of Property Valuation and Investment Volume 5 ; 5 >
-    au < testing ; 1988 ; Journal of Property Valuation and Investment Volume 6 ; 6 >
-    au < testing ; 1989 ; Journal of Property Valuation and Investment Volume 7 ; 7 >
-    au < testing ; 1990 ; Journal of Property Valuation and Investment Volume 8 ; 8 >
-    au < testing ; 1991 ; Journal of Property Valuation and Investment Volume 9 ; 9 >
-    au < testing ; 1992 ; Journal of Property Valuation and Investment Volume 10 ; 10 >
-    au < testing ; 1993 ; Journal of Property Valuation and Investment Volume 11 ; 11 >
-    au < testing ; 1994 ; Journal of Property Valuation and Investment Volume 12 ; 12 >
-    au < testing ; 1995 ; Journal of Property Valuation and Investment Volume 13 ; 13 >
-    au < testing ; 1996 ; Journal of Property Valuation and Investment Volume 14 ; 14 >
-    au < testing ; 1997 ; Journal of Property Valuation and Investment Volume 15 ; 15 >
-    au < testing ; 1998 ; Journal of Property Valuation and Investment Volume 16 ; 16 >
+    au < ready ; 1983 ; Journal of Property Valuation and Investment Volume 1 ; 1 >
+    au < ready ; 1984 ; Journal of Property Valuation and Investment Volume 2 ; 2 >
+    au < ready ; 1985 ; Journal of Property Valuation and Investment Volume 3 ; 3 >
+    au < ready ; 1986 ; Journal of Property Valuation and Investment Volume 4 ; 4 >
+    au < ready ; 1987 ; Journal of Property Valuation and Investment Volume 5 ; 5 >
+    au < ready ; 1988 ; Journal of Property Valuation and Investment Volume 6 ; 6 >
+    au < ready ; 1989 ; Journal of Property Valuation and Investment Volume 7 ; 7 >
+    au < ready ; 1990 ; Journal of Property Valuation and Investment Volume 8 ; 8 >
+    au < notReady ; 1991 ; Journal of Property Valuation and Investment Volume 9 ; 9 >
+    au < ready ; 1992 ; Journal of Property Valuation and Investment Volume 10 ; 10 >
+    au < notReady ; 1993 ; Journal of Property Valuation and Investment Volume 11 ; 11 >
+    au < ready ; 1994 ; Journal of Property Valuation and Investment Volume 12 ; 12 >
+    au < ready ; 1995 ; Journal of Property Valuation and Investment Volume 13 ; 13 >
+    au < ready ; 1996 ; Journal of Property Valuation and Investment Volume 14 ; 14 >
+    au < ready ; 1997 ; Journal of Property Valuation and Investment Volume 15 ; 15 >
+    au < ready ; 1998 ; Journal of Property Valuation and Investment Volume 16 ; 16 >
 
   }
 
@@ -4830,7 +4824,7 @@
     >
 
     param[journal_issn] = 1355-2511
-    attr[where] = content4b
+    attr[where] = content2b
     
     au < testing ; 1995 ; Journal of Quality in Maintenance Engineering Volume 1 ; 1 >
     au < testing ; 1996 ; Journal of Quality in Maintenance Engineering Volume 2 ; 2 >
@@ -4859,9 +4853,8 @@
     >
 
     param[journal_issn] = 2040-7122
-    attr[where] = content5a
     
-    au < testing ; 2010 ; Journal of Research in Interactive Marketing  Volume 4 ; 4 >
+    au < ready ; 2010 ; Journal of Research in Interactive Marketing  Volume 4 ; 4 >
 
   }
 
@@ -4873,20 +4866,19 @@
     >
 
     param[journal_issn] = 1471-5201
-    attr[where] = content5a
     
-    au < testing ; 1999 ; Journal of Research in Marketing and Entrepreneurship Volume 1 ; 1 >
-    au < testing ; 2000 ; Journal of Research in Marketing and Entrepreneurship Volume 2 ; 2 >
-    au < testing ; 2001 ; Journal of Research in Marketing and Entrepreneurship Volume 3 ; 3 >
-    au < testing ; 2002 ; Journal of Research in Marketing and Entrepreneurship Volume 4 ; 4 >
-    au < testing ; 2003 ; Journal of Research in Marketing and Entrepreneurship Volume 5 ; 5 >
-    au < testing ; 2004 ; Journal of Research in Marketing and Entrepreneurship Volume 6 ; 6 >
-    au < testing ; 2005 ; Journal of Research in Marketing and Entrepreneurship Volume 7 ; 7 >
-    au < testing ; 2006 ; Journal of Research in Marketing and Entrepreneurship Volume 8 ; 8 >
-    au < testing ; 2007 ; Journal of Research in Marketing and Entrepreneurship Volume 9 ; 9 >
-    au < testing ; 2008 ; Journal of Research in Marketing and Entrepreneurship Volume 10 ; 10 >
-    au < testing ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 >
-    au < testing ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 >
+    au < ready ; 1999 ; Journal of Research in Marketing and Entrepreneurship Volume 1 ; 1 >
+    au < ready ; 2000 ; Journal of Research in Marketing and Entrepreneurship Volume 2 ; 2 >
+    au < ready ; 2001 ; Journal of Research in Marketing and Entrepreneurship Volume 3 ; 3 >
+    au < ready ; 2002 ; Journal of Research in Marketing and Entrepreneurship Volume 4 ; 4 >
+    au < ready ; 2003 ; Journal of Research in Marketing and Entrepreneurship Volume 5 ; 5 >
+    au < ready ; 2004 ; Journal of Research in Marketing and Entrepreneurship Volume 6 ; 6 >
+    au < ready ; 2005 ; Journal of Research in Marketing and Entrepreneurship Volume 7 ; 7 >
+    au < ready ; 2006 ; Journal of Research in Marketing and Entrepreneurship Volume 8 ; 8 >
+    au < ready ; 2007 ; Journal of Research in Marketing and Entrepreneurship Volume 9 ; 9 >
+    au < ready ; 2008 ; Journal of Research in Marketing and Entrepreneurship Volume 10 ; 10 >
+    au < ready ; 2009 ; Journal of Research in Marketing and Entrepreneurship Volume 11 ; 11 >
+    au < ready ; 2010 ; Journal of Research in Marketing and Entrepreneurship Volume 12 ; 12 >
 
   }
 
@@ -4898,9 +4890,8 @@
     >
 
     param[journal_issn] = 1758-552X
-    attr[where] = content5a
     
-    au < testing ; 2010 ; Journal of Science and Technology Policy in China  Volume 1 ; 1 >
+    au < ready ; 2010 ; Journal of Science and Technology Policy in China  Volume 1 ; 1 >
 
   }
 
@@ -4912,7 +4903,7 @@
     >
 
     param[journal_issn] = 1757-5818
-    attr[where] = content5b
+    attr[where] = content6a
     
     au < testing ; 2009 ; Journal of Service Management Volume 20 ; 20 >
     au < testing ; 2010 ; Journal of Service Management Volume 21 ; 21 >
@@ -4927,7 +4918,7 @@
     >
 
     param[journal_issn] = 0887-6045
-    attr[where] = content5b
+    attr[where] = content6a
     
     au < testing ; 1987 ; Journal of Services Marketing Volume 1 ; 1 >
     au < testing ; 1988 ; Journal of Services Marketing Volume 2 ; 2 >
@@ -4964,7 +4955,7 @@
     >
 
     param[journal_issn] = 1462-6004
-    attr[where] = content6a
+    attr[where] = content5b
     
     au < testing ; 1994 ; Journal of Small Business and Enterprise Development Volume 1 ; 1 >
     au < testing ; 1995 ; Journal of Small Business and Enterprise Development Volume 2 ; 2 >
@@ -5046,13 +5037,12 @@
     >
 
     param[journal_issn] = 1746-8779
-    attr[where] = sul-lockss30a
     
-    au < testing ; 2006 ; Journal of Technology Management in China Volume 1 ; 1 >
-    au < testing ; 2007 ; Journal of Technology Management in China Volume 2 ; 2 >
-    au < testing ; 2008 ; Journal of Technology Management in China Volume 3 ; 3 >
-    au < testing ; 2009 ; Journal of Technology Management in China Volume 4 ; 4 >
-    au < testing ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 >
+    au < ready ; 2006 ; Journal of Technology Management in China Volume 1 ; 1 >
+    au < ready ; 2007 ; Journal of Technology Management in China Volume 2 ; 2 >
+    au < ready ; 2008 ; Journal of Technology Management in China Volume 3 ; 3 >
+    au < ready ; 2009 ; Journal of Technology Management in China Volume 4 ; 4 >
+    au < ready ; 2010 ; Journal of Technology Management in China Volume 5 ; 5 >
 
   }
 
@@ -5064,30 +5054,29 @@
     >
 
     param[journal_issn] = 1366-5626
-    attr[where] = sul-lockss30a
     
-    au < testing ; 1989 ; Journal of Workplace Learning Volume 1 ; 1 >
-    au < testing ; 1990 ; Journal of Workplace Learning Volume 2 ; 2 >
-    au < testing ; 1991 ; Journal of Workplace Learning Volume 3 ; 3 >
-    au < testing ; 1992 ; Journal of Workplace Learning Volume 4 ; 4 >
-    au < testing ; 1993 ; Journal of Workplace Learning Volume 5 ; 5 >
-    au < testing ; 1994 ; Journal of Workplace Learning Volume 6 ; 6 >
-    au < testing ; 1995 ; Journal of Workplace Learning Volume 7 ; 7 >
-    au < testing ; 1996 ; Journal of Workplace Learning Volume 8 ; 8 >
-    au < testing ; 1997 ; Journal of Workplace Learning Volume 9 ; 9 >
-    au < testing ; 1998 ; Journal of Workplace Learning Volume 10 ; 10 >
-    au < testing ; 1999 ; Journal of Workplace Learning Volume 11 ; 11 >
-    au < testing ; 2000 ; Journal of Workplace Learning Volume 12 ; 12 >
-    au < testing ; 2001 ; Journal of Workplace Learning Volume 13 ; 13 >
-    au < testing ; 2002 ; Journal of Workplace Learning Volume 14 ; 14 >
-    au < testing ; 2003 ; Journal of Workplace Learning Volume 15 ; 15 >
-    au < testing ; 2004 ; Journal of Workplace Learning Volume 16 ; 16 >
-    au < testing ; 2005 ; Journal of Workplace Learning Volume 17 ; 17 >
-    au < testing ; 2006 ; Journal of Workplace Learning Volume 18 ; 18 >
-    au < testing ; 2007 ; Journal of Workplace Learning Volume 19 ; 19 >
-    au < testing ; 2008 ; Journal of Workplace Learning Volume 20 ; 20 >
-    au < testing ; 2009 ; Journal of Workplace Learning Volume 21 ; 21 >
-    au < testing ; 2010 ; Journal of Workplace Learning Volume 22 ; 22 >
+    au < ready ; 1989 ; Journal of Workplace Learning Volume 1 ; 1 >
+    au < ready ; 1990 ; Journal of Workplace Learning Volume 2 ; 2 >
+    au < ready ; 1991 ; Journal of Workplace Learning Volume 3 ; 3 >
+    au < ready ; 1992 ; Journal of Workplace Learning Volume 4 ; 4 >
+    au < ready ; 1993 ; Journal of Workplace Learning Volume 5 ; 5 >
+    au < ready ; 1994 ; Journal of Workplace Learning Volume 6 ; 6 >
+    au < ready ; 1995 ; Journal of Workplace Learning Volume 7 ; 7 >
+    au < ready ; 1996 ; Journal of Workplace Learning Volume 8 ; 8 >
+    au < notReady ; 1997 ; Journal of Workplace Learning Volume 9 ; 9 >
+    au < ready ; 1998 ; Journal of Workplace Learning Volume 10 ; 10 >
+    au < ready ; 1999 ; Journal of Workplace Learning Volume 11 ; 11 >
+    au < ready ; 2000 ; Journal of Workplace Learning Volume 12 ; 12 >
+    au < ready ; 2001 ; Journal of Workplace Learning Volume 13 ; 13 >
+    au < ready ; 2002 ; Journal of Workplace Learning Volume 14 ; 14 >
+    au < ready ; 2003 ; Journal of Workplace Learning Volume 15 ; 15 >
+    au < ready ; 2004 ; Journal of Workplace Learning Volume 16 ; 16 >
+    au < ready ; 2005 ; Journal of Workplace Learning Volume 17 ; 17 >
+    au < notReady ; 2006 ; Journal of Workplace Learning Volume 18 ; 18 >
+    au < ready ; 2007 ; Journal of Workplace Learning Volume 19 ; 19 >
+    au < ready ; 2008 ; Journal of Workplace Learning Volume 20 ; 20 >
+    au < notReady ; 2009 ; Journal of Workplace Learning Volume 21 ; 21 >
+    au < ready ; 2010 ; Journal of Workplace Learning Volume 22 ; 22 >
 
   }
 
