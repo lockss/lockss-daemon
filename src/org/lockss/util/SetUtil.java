@@ -1,5 +1,5 @@
 /*
- * $Id: SetUtil.java,v 1.6 2003-11-11 20:26:05 tlipkis Exp $
+ * $Id: SetUtil.java,v 1.7 2010-12-20 23:45:41 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -45,6 +45,17 @@ public class SetUtil {
     return new HashSet();
   }
 
+  /**
+   * Create a list from any number of arguments. */
+  public static Set set(Object... elements) {
+    Set l = new HashSet();
+    if (elements == null) { return l; }
+    for (Object arg : elements) {
+      l.add(arg);
+    }
+    return l;
+  }
+  
   /**
    * Create set from arg list. */
   public static Set set(Object object1) {
