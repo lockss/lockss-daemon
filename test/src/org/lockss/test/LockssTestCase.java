@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.99 2010-11-29 07:26:27 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.100 2010-12-20 23:46:06 tlipkis Exp $
  */
 
 /*
@@ -1050,6 +1050,22 @@ public class LockssTestCase extends TestCase {
       }
       sb.append("Expected empty Map, but contained ");
       sb.append(map);
+      fail(sb.toString());
+    }
+  }
+
+  public static void assertNotEmpty(Collection coll) {
+    assertNotEmpty(null, coll);
+  }
+
+  public static void assertNotEmpty(String message, Collection coll) {
+    if (coll.size() == 0) {
+      StringBuffer sb = new StringBuffer();
+      if (message != null) {
+	sb.append(message);
+	sb.append(" ");
+      }
+      sb.append("Expected non-empty Collection, but was empty");
       fail(sb.toString());
     }
   }
