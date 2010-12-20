@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigFile.java,v 1.11 2010-04-03 17:06:50 pgust Exp $
+ * $Id: TestConfigFile.java,v 1.12 2010-12-20 23:44:39 tlipkis Exp $
  */
 
 /*
@@ -562,7 +562,7 @@ public abstract class TestConfigFile extends LockssTestCase {
 				 "locksshint: this is a hint endhint");
       hcf.setResponseCode(403);
       hcf.setResponseMessage("Forbidden");
-      testCantRead(hcf, "403: Forbidden<br>this is a hint$");
+      testCantRead(hcf, "403: Forbidden\nthis is a hint$");
     }
 
     public void testXLockssInfo() throws IOException {
