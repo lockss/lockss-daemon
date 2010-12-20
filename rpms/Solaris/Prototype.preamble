@@ -1,0 +1,20 @@
+i pkginfo
+i preinstall
+i postinstall
+i preremove
+d none /etc 0755 root sys
+d none /etc/init.d 0755 root sys
+f none /etc/init.d/lockss 0744 root sys
+d none /opt 0755 root sys
+d none /opt/lockss 0755 root sys
+d none /opt/lockss/etc 0755 root sys
+d none /opt/lockss/etc/lockss 0755 root sys
+f none /opt/lockss/etc/lockss/README 0644 root sys
+f none /opt/lockss/etc/lockss/functions 0755 root sys
+f none /opt/lockss/etc/lockss/hostconfig 0744 root sys
+f none /opt/lockss/etc/lockss/rundaemon 0755 root sys
+f none /opt/lockss/etc/lockss/runssl 0744 root sys
+f none /opt/lockss/etc/lockss/startdaemon 0744 root sys
+d none /opt/lockss/usr 0755 root sys
+d none /opt/lockss/usr/share 0755 root sys
+d none /opt/lockss/usr/share/lockss 0755 root sys
