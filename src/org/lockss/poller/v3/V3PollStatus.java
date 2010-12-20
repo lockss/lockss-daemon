@@ -1,5 +1,5 @@
 /*
-* $Id: V3PollStatus.java,v 1.33 2009-12-22 02:19:43 tlipkis Exp $
+* $Id: V3PollStatus.java,v 1.34 2010-12-20 23:45:14 tlipkis Exp $
  */
 
 /*
@@ -617,6 +617,12 @@ public class V3PollStatus {
         summary.add(new SummaryInfo("Error",
                                     ColumnDescriptor.TYPE_STRING,
                                     pollerState.getErrorDetail()));
+      }
+      if (poll.getStatus() == STATUS_COMPLETE) {
+	String agreePercent = doubleToPercent(poll.getPercentAgreement());
+	summary.add(new SummaryInfo("Agreement",
+				    ColumnDescriptor.TYPE_STRING,
+				    agreePercent));
       }
       if (isDebug && pollerState.getAdditionalInfo() != null) {
         summary.add(new SummaryInfo("Info",
