@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.10 2010-11-29 07:26:03 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.11 2010-12-20 23:44:59 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -30,8 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util.urlconn;
 
+import java.io.*;
 import java.util.*;
+import java.util.zip.*;
 import java.text.*;
+
 import org.lockss.util.*;
 
 /** Common functionality for implementations of LockssUrlConnection */
@@ -136,6 +139,21 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
 
   public void addRequestProperty(String key, String value) {
     throw new UnsupportedOperationException();
+  }
+
+  public InputStream getUncompressedResponseInputStream()
+      throws IOException {
+    InputStream res = getResponseInputStream();
+    String encoding = getResponseContentEncoding();
+    if ("gzip".equalsIgnoreCase(encoding) ||
+	"x-gzip".equalsIgnoreCase(encoding)) {
+      log.debug3("Wrapping in GZIPInputStream");
+      res = new GZIPInputStream(res);
+    } else if ("deflate".equalsIgnoreCase(encoding)) {
+      log.debug3("Wrapping in InflaterInputStream");
+      res = new InflaterInputStream(res);
+    }
+    return res;
   }
 
   public String getActualUrl() {

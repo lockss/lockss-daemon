@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.13 2010-11-29 07:26:03 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.14 2010-12-20 23:44:59 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -167,6 +167,10 @@ public interface LockssUrlConnection {
 
   /** Return an input stream open on the response content */
   public InputStream getResponseInputStream() throws IOException;
+
+  /** Return an input stream open on the response content, uncompressed if
+   * necessary */
+  public InputStream getUncompressedResponseInputStream() throws IOException;
 
   /** Store all the response headers into the supplied properties.
    * @param props the Properties to store into
