@@ -2,11 +2,11 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.263 2010-11-18 07:13:28 tlipkis Exp $
+ $Id: build.xml,v 1.264 2010-12-20 23:43:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
-Copyright (c) 2000-20010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -966,18 +966,18 @@ Must specify pln with -Dplnname=name
            failonerror="true"
            failifexecutionfails="true"
            resultproperty="tdb.result"
-           relative="true"
+           relative="false"
            parallel="false">
 
       <fileset dir="${indir}" includes="**/*.tdb"/>
       <arg value="-C"/>
+      <arg value="-o"/>
+      <targetfile/>
       <mapper type="glob" from="*.tdb" to="*.xml"/>
       <redirector>
         <!-- redirect STDIN; fileset collects relative to its dir, but we
              need relative to basedir -->
         <inputmapper type="glob" from="*" to="${indir}/*"/>
-        <!-- redirect STDOUT to file in outdir -->
-        <outputmapper id="out" type="glob" from="*.tdb" to="${outdir}/*.xml"/>
       </redirector>
     </apply>
 
@@ -1204,16 +1204,18 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 
     <property name="protosolaris.top" value="${basedir}/rpms" />
     <property name="solaris.top" value="${temp.solaris.dir}" />
+    <property name="solaris.prototype.file" value="${solaris.top}/Prototype" />
     <property name="solaris.build" value="${solaris.top}/BUILD" />
     <property name="solaris.root" value="${solaris.build}/lockss-daemon-root" />
-    <property name="solaris.jardir" value="${solaris.root}/opt/lockss/usr/share/lockss" />
+    <property name="target.jardir" value="/opt/lockss/usr/share/lockss" />
+    <property name="solaris.jardir" value="${solaris.root}${target.jardir}" />
     <property name="solaris.lockss.etc" value="${solaris.root}/opt/lockss/etc/lockss" />
     <property name="protosolaris.source" value="${protosolaris.top}/Solaris" />
 
     <!-- make classpath to substitute into start script -->
     <pathconvert refid="prod.run.classpath" property="solaris.clspth"
        targetos="unix">
-      <map from="${basedir}/lib" to="/opt/lockss/usr/share/lockss" />
+      <map from="${basedir}/lib" to="${target.jardir}" />
     </pathconvert>
     <!-- copy prototype rpm tree to tmp dir -->
     <copy todir="${solaris.top}" >
@@ -1229,8 +1231,25 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     </copy>
     <!-- copy Solaris build stuff to top of build tree -->
     <copy todir="${solaris.build}" >
-      <fileset dir="${solaris.top}/Solaris"/>
+      <fileset dir="${solaris.top}/Solaris">
+	<exclude name="Solaris/Prototype.*"/>
+      </fileset>
     </copy>
+
+    <!-- assemble the Solaris Prototype file from its preamble and list of
+         jars to be included -->
+    <pathconvert refid="prod.run.classpath" property="solaris.jar.names">
+      <map from="${basedir}/lib/" to=""/>
+    </pathconvert>
+    <copy file="${solaris.top}/Solaris/Prototype.preamble"
+	  tofile="${solaris.prototype.file}" />
+    <for list="${solaris.jar.names}" delimiter=":" param="solaris.jarfile">
+      <sequential>
+	<echo file="${solaris.prototype.file}" append="true">f none ${target.jardir}/@{solaris.jarfile} 0644 root sys
+</echo>
+      </sequential>
+    </for>
+
     <!-- copy /etc/lockss to /opt/lockss/etc/lockss -->
     <copy todir="${solaris.lockss.etc}" >
       <fileset dir="${solaris.root}/etc/lockss"/>
@@ -1458,7 +1477,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
              verbose="false"
              overview="${src}/overview.html"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2009 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
 <!-- disabled until javadoc back online -->
 <!--        <link href="${ext.javadoc}/commons-collections-3.2/docs/apidocs" /> -->
@@ -1558,7 +1577,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
              windowtitle="LOCKSS test classes API"
              doctitle="LOCKSS test"
              header="${javadoc.header}"
-             bottom="Copyright &amp;copy; 2000-2006 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+             bottom="Copyright &amp;copy; 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
 <!--         <fileset dir="${test.src}" includes="**/*.java"/> -->
 <!--        <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/> -->
        <classpath refid="test.compile.classpath" />
