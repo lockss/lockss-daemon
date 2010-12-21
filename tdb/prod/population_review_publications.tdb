@@ -14,6 +14,8 @@
       eissn = 1549-0955
     >
 
+comment[pr48] = http://muse.jhu.edu/journals/population_review/v048/48.2.haller01_supp01.pdf 500 Internal Server Error
+
     param[journal_dir] = population_review
 
     au < ready ; Population Review Volume 42 ; 42 >
@@ -22,7 +24,7 @@
     au < ready ; Population Review Volume 45 ; 45 >
     au < ready ; Population Review Volume 46 ; 46 >
     au < ready ; Population Review Volume 47 ; 47 >
-    au < testing ; Population Review Volume 48 ; 48 >
+    au < notReady ; Population Review Volume 48 ; 48 >
     au < ready ; Population Review Volume 49 ; 49 >
 
   }

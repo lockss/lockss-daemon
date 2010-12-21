@@ -51,10 +51,12 @@
       eissn = 0742-3330
     >
 
+comment[ss] = Can't fetch permission page
+
     param[journal_dir] = serbian_studies
 
-    au < testing ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
-    au < testing ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
+    au < notReady ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 20 ; 20 >
+    au < notReady ; Serbian Studies: Journal of the North American Society for Serbian Studies Volume 21 ; 21 >
 
   }
 

@@ -14,6 +14,8 @@
       eissn = 1535-0665
     >
 
+comment[lang85] = 500 Internal Server Error http://muse.jhu.edu/journals/language/v085/85.1.levinson.pdf
+
     param[journal_dir] = language
 
     au < released ; Language Volume 77 ; 77 >
@@ -24,7 +26,7 @@
     au < released ; Language Volume 82 ; 82 >
     au < released ; Language Volume 83 ; 83 >
     au < ready ; Language Volume 84 ; 84 >
-    au < testing ; Language Volume 85 ; 85 >
+    au < notReady ; Language Volume 85 ; 85 >
 
   }
 
