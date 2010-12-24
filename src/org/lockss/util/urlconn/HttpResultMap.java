@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.12 2010-02-22 07:05:37 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.12.8.1 2010-12-24 21:12:57 tlipkis Exp $
  */
 
 /*
@@ -419,13 +419,15 @@ public class HttpResultMap implements CacheResultMap {
     if (ei == null) {
       if (message != null) {
 	return
-	  new CacheException.UnknownExceptionException("Unmapped exception: "
-						       + fetchException + ": "
-						       + message);
+	  new CacheException.UnknownExceptionException(("Unmapped exception: "
+							+ fetchException + ": "
+							+ message),
+						       fetchException);
       } else {
 	return
-	  new CacheException.UnknownExceptionException("Unmapped exception: "
-						       + fetchException);
+	  new CacheException.UnknownExceptionException(("Unmapped exception: "
+							+ fetchException),
+						       fetchException);
       }
     }
 

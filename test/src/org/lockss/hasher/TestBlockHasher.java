@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.14 2010-02-22 07:02:39 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.14.8.1 2010-12-24 21:12:57 tlipkis Exp $
  */
 
 /*
@@ -944,51 +944,12 @@ public class TestBlockHasher extends LockssTestCase {
       Integer rver = (Integer)throwOnRead.get(cu.getUrl());
       return new ThrowingInputStream(super.getInputStream(cu),
 				     (rver != null &&
-				      (rver == -1 || rver == cu.getVersion())),
-				     false);
+				      (rver == -1 || rver == cu.getVersion()))
+				     ? new IOException("Reading from hash input stream") : null,
+				     null);
     }
   }
   
-  // An input stream that can throw an exception on demand.
-  class ThrowingInputStream extends FilterInputStream {
-    public boolean doIOException = false;
-    public boolean doRuntimeException = false;
- 
-    public ThrowingInputStream(InputStream in,
-			       boolean doIOException,
-			       boolean doRuntimeException) {
-      super(in);
-      this.doRuntimeException = doRuntimeException;
-      this.doIOException = doIOException;
-    }
-
-    public int read() throws IOException {
-      if (doIOException) {
-        throw new IOException("Reading from hash input stream");
-      } else {
-	return in.read();
-      }
-    }
-
-    public int read(byte[] b, int off, int len) throws IOException {
-      int ret = in.read(b, off, len);
-      if (doIOException) {
-        throw new IOException("Reading from hash input stream");
-      } else {
-	return ret;
-      }
-    }
-
-    public int read(byte[] b) throws IOException {
-      int ret = in.read(b);
-      if (doIOException) {
-        throw new IOException("Reading from hash input stream");
-      } else {
-	return ret;
-      }
-    }
-  }
-
   public class SimpleFilterFactory implements FilterFactory {
     public InputStream createFilteredInputStream(ArchivalUnit au,
 						 InputStream in,

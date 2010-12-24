@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.10 2010-02-22 07:05:37 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.10.8.1 2010-12-24 21:12:57 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util.urlconn;
 
+import java.io.*;
 import java.net.*;
 import java.util.*;
 
@@ -164,6 +165,19 @@ public class TestHttpResultMap extends LockssTestCase {
 
     exception = resultMap.mapException(null, null,
 				       new LockssUrlConnection.ConnectionTimeoutException("msg"),
+				       "foo");
+    assertTrue(exception instanceof
+	       CacheException.RetryableNetworkException_3_30S);
+
+    exception = resultMap.mapException(null, null,
+				       new java.io.IOException("CRLF expected at end of chunk: -1/-1"),
+				       "foo");
+    assertTrue(exception instanceof CacheException.UnknownExceptionException);
+    resultMap.storeMapEntry(IOException.class,
+			    CacheException.RetryableNetworkException_3_30S.class);
+
+    exception = resultMap.mapException(null, null,
+				       new java.io.IOException("CRLF expected at end of chunk: -1/-1"),
 				       "foo");
     assertTrue(exception instanceof
 	       CacheException.RetryableNetworkException_3_30S);

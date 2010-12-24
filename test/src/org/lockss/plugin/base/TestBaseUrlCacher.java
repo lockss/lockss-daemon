@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.62 2009-04-07 04:52:29 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.62.22.1 2010-12-24 21:12:57 tlipkis Exp $
  */
 
 /*
@@ -330,11 +330,18 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
                                      String redirectTo) {
-    return makeConn(respCode, respMessage, redirectTo, null);
+    return makeConn(respCode, respMessage, redirectTo, (String)null);
   }
 
   MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
-                                     String redirectTo, String inputStream) {
+                                     String redirectTo, String input) {
+    return makeConn(respCode, respMessage, redirectTo,
+		    input != null ? new StringInputStream(input) : null);
+  }
+
+  MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
+                                     String redirectTo,
+				     InputStream inputStream) {
     MyMockLockssUrlConnection mconn = new MyMockLockssUrlConnection();
     mconn.setResponseCode(respCode);
     mconn.setResponseMessage(respMessage);
@@ -345,7 +352,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mconn.setResponseContentEncoding("");
     mconn.setResponseDate(0);
     if (inputStream != null) {
-      mconn.setResponseInputStream(new StringInputStream(inputStream));
+      mconn.setResponseInputStream(inputStream);
     }
     return mconn;
   }
@@ -563,6 +570,68 @@ public class TestBaseUrlCacher extends LockssTestCase {
     } catch (CacheException.ExpectedNoRetryException e) {
       assertEquals("404 Not fond", e.getMessage());
     }
+  }
+
+  // Should throw exception derived from IOException thrown by InputStream
+  // in copy()
+  public void testCopyInputError() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockLockssUrlConnection mconn =
+      makeConn(200, "", null,
+	       new ThrowingInputStream(new StringInputStream("will throw"),
+				       new IOException("Malformed chunk"),
+				       null));
+    muc.addConnection(mconn);
+    try {
+      muc.cache();
+      fail("Copy should have thrown");
+    } catch (CacheException.ExpectedNoRetryException e) {
+      assertEquals("404 Not fond", e.getMessage());
+    } catch (CacheException.UnknownExceptionException e) {
+      Throwable t = e.getCause();
+      assertClass(IOException.class, t);
+      assertEquals("Malformed chunk", t.getMessage());
+    }
+  }
+
+  // Should throw exception derived from IOException thrown by InputStream
+  // in close()
+  public void testCopyInputErrorOnClose() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockLockssUrlConnection mconn =
+      makeConn(200, "", null,
+	       new ThrowingInputStream(new StringInputStream("will throw"),
+				       null, new IOException("CRLF expected at end of chunk: -1/-1")));
+    muc.addConnection(mconn);
+    try {
+      muc.cache();
+      fail("Copy should have thrown");
+    } catch (CacheException.ExpectedNoRetryException e) {
+      assertEquals("404 Not fond", e.getMessage());
+    } catch (CacheException.UnknownExceptionException e) {
+      Throwable t = e.getCause();
+      assertClass(IOException.class, t);
+      assertEquals("CRLF expected at end of chunk: -1/-1", t.getMessage());
+    }
+  }
+
+  // Should throw exception derived from IOException thrown by InputStream
+  // in close()
+  public void testIgnoreCloseException() throws Exception {
+    HttpResultMap resultMap = (HttpResultMap)plugin.getCacheResultMap();
+    resultMap.storeMapEntry(IOException.class,
+			    CacheException.IgnoreCloseException.class);
+
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockLockssUrlConnection mconn =
+      makeConn(200, "", null,
+	       new ThrowingInputStream(new StringInputStream("will throw"),
+				       null, new IOException("Exception should be ignored on close()")));
+    muc.addConnection(mconn);
+    muc.cache();
   }
 
   // Shouldn't follow redirect because told not to.
