@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Histochemical Society
   >
@@ -11,84 +12,49 @@
     >
 
     pluginPrefix = org.lockss.plugin.highwire.
-    param[base_url] = http://www.jhc.org/
 
     {
 
       pluginSuffix = HighWirePlugin
+      param[base_url] = http://www.jhc.org/
       implicit < status ; name ; param[volume] >
       
-      au < released ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-      au < released ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+      au < down ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < down ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
 
     }
 
     {
 
+      param[base_url] = http://www.jhc.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 1 ; 1 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 2 ; 2 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 3 ; 3 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 4 ; 4 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 5 ; 5 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 6 ; 6 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 7 ; 7 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 8 ; 8 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 9 ; 9 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 10 ; 10 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 11 ; 11 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 12 ; 12 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 13 ; 13 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 14 ; 14 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 15 ; 15 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 16 ; 16 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 17 ; 17 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 18 ; 18 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 19 ; 19 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 20 ; 20 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 21 ; 21 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 22 ; 22 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 23 ; 23 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 24 ; 24 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 25 ; 25 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 26 ; 26 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 27 ; 27 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 28 ; 28 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 29 ; 29 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 30 ; 30 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 31 ; 31 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 32 ; 32 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 33 ; 33 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 34 ; 34 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 35 ; 35 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 36 ; 36 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 37 ; 37 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 38 ; 38 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 39 ; 39 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 40 ; 40 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 41 ; 41 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 42 ; 42 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 43 ; 43 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 44 ; 44 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 45 ; 45 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 46 ; 46 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 47 ; 47 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 48 ; 48 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 49 ; 49 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 50 ; 50 >
-      au < HighWirePressPlugin ; exists ; Journal of Histochemistry and Cytochemistry Volume 51 ; 51 >
       au < HighWirePressPlugin ; doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
-      au < HighWireStrVolPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
+      au < HighWireStrVolPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
       au < HighWirePressPlugin ; doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
-      au < HighWireStrVolPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
-      au < HighWirePressPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
-      au < HighWirePressPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
-      au < HighWirePressPlugin ; released ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
+      au < HighWireStrVolPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
+      au < HighWirePressPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+      au < HighWirePressPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+      au < HighWirePressPlugin ; down ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
+
+    }
+
+    {
+    
+      pluginSuffix = HighWirePressH20Plugin
+      param[base_url] = http://jhc.sagepub.com/
+      implicit < status ; name ; param[volume_name] >
+
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 52 ; 52 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 53 ; 53 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 54 ; 54 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 55 ; 55 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 56 ; 56 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 57 ; 57 >
+      au < doNotProcess ; Journal of Histochemistry and Cytochemistry Volume 58 ; 58 >
 
     }
 
   }
 
 }
-

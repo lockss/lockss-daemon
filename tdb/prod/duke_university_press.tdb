@@ -651,6 +651,31 @@
   }
 
   {
+  
+    title <
+      name = The Minnesota Review ;
+      issn = 0026-5667 ;
+      eissn = 2157-4189
+    >
+    
+    {
+    
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+      param[base_url] = http://minnesotareview.dukejournals.org/
+      implicit < status ; name ; param[volume_name] >  
+      
+      au < exists ; The Minnesota Review Volume 2005 ; 2005 >
+      au < exists ; The Minnesota Review Volume 2006 ; 2006 >
+      au < exists ; The Minnesota Review Volume 2007 ; 2007 >
+      au < exists ; The Minnesota Review Volume 2008 ; 2008 >
+      au < exists ; The Minnesota Review Volume 2009 ; 2009 >
+      au < exists ; The Minnesota Review Volume 2010 ; 2010 >
+      
+    }
+    
+  }
+
+  {
     title <
       name = MLQ: Modern Language Quarterly ;
       issn = 0026-7929 ;
