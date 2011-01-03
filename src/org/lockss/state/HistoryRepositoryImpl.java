@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.88 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.88.2.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import org.lockss.protocol.DatedPeerIdSetImpl;
 import org.lockss.protocol.IdentityAgreementList;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.RepositoryNode;
 import org.lockss.repository.LockssRepository.RepositoryStateException;
 import org.lockss.util.*;
 
@@ -177,6 +178,7 @@ public class HistoryRepositoryImpl
   }
 
   private String rootLocation;
+  private RepositoryNode rootNode;
 
   private ArchivalUnit storedAu;
 
@@ -190,6 +192,7 @@ public class HistoryRepositoryImpl
       // this shouldn't happen
       rootLocation += File.separator;
     }
+    rootNode = null; // XXX should be at rootLocation
   }
 
   public File getIdentityAgreementFile() {
@@ -215,7 +218,6 @@ public class HistoryRepositoryImpl
     IdentityManager idman;
     
     if (m_noAuDpis == null) {
-      File fileDpis = new File(rootLocation, NO_AU_PEER_ID_SET_FILE_NAME);
       LockssDaemon ld = getDaemon();
       if (ld != null) {
         idman = ld.getIdentityManager();
@@ -224,7 +226,8 @@ public class HistoryRepositoryImpl
         throw new NullPointerException();
       }
       
-      m_noAuDpis = new DatedPeerIdSetImpl(fileDpis, idman);
+      m_noAuDpis = new DatedPeerIdSetImpl(rootNode,
+					  NO_AU_PEER_ID_SET_FILE_NAME, idman);
     }
     
     return m_noAuDpis;

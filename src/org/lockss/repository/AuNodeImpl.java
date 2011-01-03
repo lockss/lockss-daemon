@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.14 2007-05-29 01:05:45 tlipkis Exp $
+ * $Id: AuNodeImpl.java,v 1.14.52.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -32,9 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 
-import java.io.File;
 import java.net.*;
 import java.util.*;
+//import org.apache.commons.vfs.FileContent;
+//import org.apache.commons.vfs.FileName;
+import org.apache.commons.vfs.FileObject;
+//import org.apache.commons.vfs.FileSystem;
+import org.apache.commons.vfs.FileSystemException;
+import org.apache.commons.vfs.FileType;
 
 import org.lockss.config.*;
 import org.lockss.daemon.CachedUrlSetSpec;
@@ -93,28 +98,54 @@ public class AuNodeImpl extends RepositoryNodeImpl {
    */
   protected List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
     if (nodeRootFile==null) initNodeRoot();
+    try {
     if (!nodeRootFile.exists()) {
+      logger.error("No cache directory located for: "+url);
+      throw new LockssRepository.RepositoryStateException("No cache directory located.");
+    }
+    } catch (FileSystemException e) {
       logger.error("No cache directory located for: "+url);
       throw new LockssRepository.RepositoryStateException("No cache directory located.");
     }
     TreeMap childM = new TreeMap();
     // for all directories beneath Au level
-    File[] urlDirs = nodeRootFile.listFiles();
+    FileObject[] urlDirs = null;
+    try {
+      urlDirs = nodeRootFile.getChildren();
+    } catch (FileSystemException e) {
+      logger.error("getChildren() threw " + e.toString());
+    }
     if (urlDirs == null) {
       return Collections.EMPTY_LIST;
     }
     for (int ii=0; ii<urlDirs.length; ii++) {
-      File urlDir = urlDirs[ii];
-      if (!urlDir.isDirectory()) continue;
+      FileObject urlDir = urlDirs[ii];
+      try {
+	if (urlDir.getType() != FileType.FOLDER) continue;
+      } catch (FileSystemException e) {
+	logger.error("getType() threw " + e.toString());
+	continue;
+      }
       // get URL name
-      String urlStr = urlDir.getName();
-      File[] protocolDirs = urlDir.listFiles();
+      String urlStr = urlDir.getName().getBaseName();
+      FileObject[] protocolDirs = null;
+      try {
+	protocolDirs = urlDir.getChildren();
+      } catch (FileSystemException e) {
+	logger.error("getChildren() threw " + e.toString());
+	protocolDirs = new FileObject[0];
+      }
       // for all subdirectores beneath URL
       for (int jj=0; jj<protocolDirs.length; jj++) {
-        File protocolDir = protocolDirs[jj];
-        if (!protocolDir.isDirectory()) continue;
+        FileObject protocolDir = protocolDirs[jj];
+	try {
+	  if (protocolDir.getType() != FileType.FOLDER) continue;
+	} catch (FileSystemException e) {
+	  logger.error("getType() threw " + e.toString());
+	  continue;
+	}
         // get protocol name
-        String protocolStr = protocolDir.getName();
+        String protocolStr = protocolDir.getName().getBaseName();
         // use as top-level, with protocol-URL as url
         try {
           String dirName = protocolStr + "://" + urlStr;

@@ -7,6 +7,7 @@ import java.io.*;
 import java.util.HashSet;
 
 import org.lockss.util.IOUtil;
+import org.lockss.repository.RepositoryNode;
 
 /**
  * @author edwardsb
@@ -23,8 +24,10 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
    * @param filePeerId
    * @param identityManager
    */
-  public DatedPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {
-    super(filePeerId, identityManager);
+  public DatedPeerIdSetImpl(RepositoryNode node,
+			    String fileName,
+			    IdentityManager identityManager) {
+    super(node, fileName, identityManager);
 
     m_date = k_dateDefault;
   }

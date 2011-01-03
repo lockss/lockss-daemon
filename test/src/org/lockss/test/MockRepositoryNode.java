@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.15 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: MockRepositoryNode.java,v 1.15.56.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -175,6 +175,18 @@ public class MockRepositoryNode implements RepositoryNode {
   }
 
   public RepositoryNodeVersion getNodeVersion(int version) {
+    throw new UnsupportedOperationException("Not supported.");
+  }
+
+  public InputStream getPeerIdInputStream(String fileName) {
+    throw new UnsupportedOperationException("Not supported.");
+  }
+
+  public OutputStream getPeerIdOutputStream(String fileName) {
+    throw new UnsupportedOperationException("Not supported.");
+  }
+
+  public boolean updatePeerIdFile(String fileName) {
     throw new UnsupportedOperationException("Not supported.");
   }
 

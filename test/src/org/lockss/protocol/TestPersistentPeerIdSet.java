@@ -34,9 +34,12 @@ import java.io.*;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import org.apache.commons.vfs.FileSystemException;
+import org.apache.commons.vfs.FileObject;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.repository.RepositoryNode;
 
 /**
  * @author edwardsb
@@ -52,14 +55,20 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
 
   // Variables used throughout the program...
   private MockIdentityManager m_idman;
-  
-  private File m_fileEmpty;
-  private File m_fileMany;
-  private File m_fileCantBeCreated;
-  private File m_fileOne;
-  private File m_fileTest;
-  private File m_fileNotExist;
-  
+  private MockRepositoryNode m_node;
+
+  /*
+  public PersistentPeerIdSetImpl(RepositoryNode node,
+				 String fileName,
+				 IdentityManager identityManager) {
+  */
+  private static final String k_fileEmpty = "empty-ppis";
+  private static final String k_fileMany = "many-ppis";
+  private static final String k_fileCantBeCreated = "/impossible/file/path";
+  private static final String k_fileOne = "one-ppis";
+  private static final String k_fileTest = "test-ppis";
+  private static final String k_fileNotExist = "not-exist-ppis";
+
   /* (non-Javadoc)
    * @see org.lockss.test.LockssTestCase#setUp()
    */
@@ -67,16 +76,11 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     super.setUp();
 
     m_idman = new MockIdentityManager();
-    m_idman.addPeerIdentity(k_strPeerIdentityOne, new MockPeerIdentity(k_strPeerIdentityOne));
-    m_idman.addPeerIdentity(k_strPeerIdentityTwo, new MockPeerIdentity(k_strPeerIdentityTwo));
-
-    m_fileEmpty = FileTestUtil.tempFile("ppis");
-    m_fileMany = FileTestUtil.tempFile("ppis");
-    m_fileCantBeCreated = new File(k_filenameCantBeCreated);
-    m_fileOne = FileTestUtil.tempFile("ppis");
-    m_fileTest = FileTestUtil.tempFile("ppis");
-    m_fileNotExist = FileTestUtil.tempFile("ppis");
-    m_fileNotExist.delete();
+    m_idman.addPeerIdentity(k_strPeerIdentityOne,
+			    new MockPeerIdentity(k_strPeerIdentityOne));
+    m_idman.addPeerIdentity(k_strPeerIdentityTwo,
+			    new MockPeerIdentity(k_strPeerIdentityTwo));
+    m_node = new MockRepositoryNode();
   }
 
   /* (non-Javadoc)
@@ -99,7 +103,8 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     Set<PeerIdentity> setStore;
     
     // TEST: Return an empty set if we load from a non-existent file.
-    ppisLoad = new MyPersistentPeerIdSetImpl(m_fileCantBeCreated, m_idman);
+    ppisLoad = new MyPersistentPeerIdSetImpl(m_node, k_fileCantBeCreated,
+					     m_idman);
 
     ppisLoad.load();
     assertTrue(ppisLoad.isEmpty());
@@ -116,27 +121,27 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     
     
     // TEST: Save and load an empty set.
-    ppisStore = new MyPersistentPeerIdSetImpl(m_fileEmpty, m_idman);
+    ppisStore = new MyPersistentPeerIdSetImpl(m_node, k_fileEmpty, m_idman);
     ppisStore.store();
     
     // Load the empty set.
-    ppisLoad = new MyPersistentPeerIdSetImpl(m_fileEmpty, m_idman);
+    ppisLoad = new MyPersistentPeerIdSetImpl(m_node, k_fileEmpty, m_idman);
     ppisLoad.load();
     
     // Verify that the loaded set is empty.
     assertTrue(ppisLoad.isEmpty());
     
-    m_fileEmpty.delete();
+    ppisLoad.deletePeerIdFile(k_fileEmpty);
     
     
     // TEST: Save a set with one element.
-    ppisStore = new MyPersistentPeerIdSetImpl(m_fileOne, m_idman);
+    ppisStore = new MyPersistentPeerIdSetImpl(m_node, k_fileOne, m_idman);
     
     ppisStore.add(peeridentityOne);
     ppisStore.store();
        
     // Load the one-element set.
-    ppisLoad = new MyPersistentPeerIdSetImpl(m_fileOne, m_idman);
+    ppisLoad = new MyPersistentPeerIdSetImpl(m_node, k_fileOne, m_idman);
     ppisLoad.load();
     
     // Verify that the loaded set has the correct element.
@@ -144,16 +149,16 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertEquals(1, ppisLoad.size());
     assertTrue(ppisLoad.contains(peeridentityOne));
     
-    m_fileOne.delete();
+    ppisLoad.deletePeerIdFile(k_fileOne);
 
     
     // TEST: Save a set with many elements.
-    ppisStore = new MyPersistentPeerIdSetImpl(m_fileMany, m_idman);
+    ppisStore = new MyPersistentPeerIdSetImpl(m_node, k_fileMany, m_idman);
     setStore = createSetPeerIdentities();
     ppisStore.addAll(setStore);
 
     // Load the many-elements set.
-    ppisLoad = new MyPersistentPeerIdSetImpl(m_fileMany, m_idman);
+    ppisLoad = new MyPersistentPeerIdSetImpl(m_node, k_fileMany, m_idman);
     ppisLoad.load();
     
     // Verify that the loaded set has the correct elements.
@@ -161,7 +166,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertEquals(k_countPeerIdentities, ppisLoad.size());
     assertTrue(ppisLoad.containsAll(setStore));
     
-    m_fileMany.delete();
+    ppisLoad.deletePeerIdFile(k_fileMany);
   }
 
   public void testLoadNonExistentFile() throws IOException {
@@ -172,18 +177,18 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     Set<PeerIdentity> setStore;
     
     // TEST: Return an empty set if we load from a non-existent file.
-    ppisOne = new MyPersistentPeerIdSetImpl(m_fileNotExist, m_idman);
-    assertFalse(m_fileNotExist.exists());
+    ppisOne = new MyPersistentPeerIdSetImpl(m_node, k_fileNotExist, m_idman);
+    assertFalse(ppisOne.existsPeerIdFile(k_fileNotExist));
 
     ppisOne.load();
-    assertFalse(m_fileNotExist.exists());
+    assertFalse(ppisOne.existsPeerIdFile(k_fileNotExist));
     assertTrue(ppisOne.isEmpty());
     ppisOne.add(peeridentityOne);
     ppisOne.store();
-    assertTrue(m_fileNotExist.exists());
+    assertTrue(ppisOne.existsPeerIdFile(k_fileNotExist));
     
     // Load the one-element set.
-    ppisTwo = new MyPersistentPeerIdSetImpl(m_fileNotExist, m_idman);
+    ppisTwo = new MyPersistentPeerIdSetImpl(m_node, k_fileNotExist, m_idman);
     ppisTwo.load();
     
     // Verify that the loaded set has the correct element.
@@ -204,7 +209,8 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   public void testDoubleLoad() throws IOException
   {
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
-    MyPersistentPeerIdSetImpl ppisTest = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    MyPersistentPeerIdSetImpl ppisTest =
+      new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     
     ppisTest.load();  // This should be empty.   
     ppisTest.add(piOne);
@@ -212,7 +218,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
       
     assertEquals(1, ppisTest.size());
     
-    m_fileTest.delete();
+    ppisTest.deletePeerIdFile(k_fileTest);
   }
   
   
@@ -226,17 +232,20 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   {
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
-    MyPersistentPeerIdSetImpl ppisTest = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    MyPersistentPeerIdSetImpl ppisTest =
+      new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisTest.add(piOne);
     ppisTest.store();
     
-    MyPersistentPeerIdSetImpl ppisTest2 = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    MyPersistentPeerIdSetImpl ppisTest2 =
+      new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisTest2.clear();
     ppisTest2.store();
-    assertTrue(m_fileTest.exists());
+    assertTrue(ppisTest2.existsPeerIdFile(k_fileTest));
     
     // Verify that loading will give the empty file.
-    MyPersistentPeerIdSetImpl ppisTest3 = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    MyPersistentPeerIdSetImpl ppisTest3 =
+      new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisTest3.load();
     assertEquals(0, ppisTest3.size());
   }
@@ -257,7 +266,8 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   public void testStore() throws IOException {
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     PeerIdentity piTwo = m_idman.findPeerIdentity(k_strPeerIdentityTwo);
-    MyPersistentPeerIdSetImpl ppisTest = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    MyPersistentPeerIdSetImpl ppisTest =
+      new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     
     // Test multiple stores.
     ppisTest.load();  // This should be empty.
@@ -285,17 +295,17 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertTrue(ppisTest.didStore());
     assertFalse(ppisTest.isInMemory());
 
-    m_fileTest.delete();
+    ppisTest.deletePeerIdFile(k_fileTest);
     
     // Test store without calling "load" first.
     
-    ppisTest = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisTest = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     
     ppisTest.add(piOne);
     ppisTest.store();
     assertEquals(1, ppisTest.size());
     
-    m_fileTest.delete();
+    ppisTest.deletePeerIdFile(k_fileTest);
   }
 
   /* The following tests all do things twice:
@@ -313,16 +323,16 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     // Test add() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
     assertFalse(ppisAdd.isEmpty());
     assertEquals(1, ppisAdd.size());
     assertTrue(ppisAdd.contains(piOne));
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
     
     // Test add() WITH load() and store().
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
@@ -330,7 +340,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertEquals(1, ppisAdd.size());
     assertTrue(ppisAdd.contains(piOne));
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -345,16 +355,16 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     sepiAdd = createSetPeerIdentities();
     
     // Test add() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.addAll(sepiAdd);
     assertFalse(ppisAdd.isEmpty());
     assertEquals(k_countPeerIdentities, ppisAdd.size());
     assertTrue(ppisAdd.containsAll(sepiAdd));
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
     
     // Test add() WITH load() and store().
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.addAll(sepiAdd);
@@ -362,7 +372,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertEquals(k_countPeerIdentities, ppisAdd.size());
     assertTrue(ppisAdd.containsAll(sepiAdd));
     ppisAdd.store();
-    m_fileTest.delete();  
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -374,7 +384,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     // Test add() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
     assertFalse(ppisAdd.isEmpty());
@@ -382,10 +392,10 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     ppisAdd.clear();
     assertTrue(ppisAdd.isEmpty());
     assertEquals(0, ppisAdd.size());
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
      
     // Test clear() with load() and store()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
@@ -395,7 +405,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertTrue(ppisAdd.isEmpty());
     assertEquals(0, ppisAdd.size());
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
   }
 
@@ -413,17 +423,17 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     PeerIdentity piTwo = m_idman.findPeerIdentity(k_strPeerIdentityTwo);
     
     // Test add() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
     assertFalse(ppisAdd.isEmpty());
     assertEquals(1, ppisAdd.size());
     assertTrue(ppisAdd.contains(piOne));
     assertFalse(ppisAdd.contains(piTwo));
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
     
     // Test add() WITH load() and store().
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
@@ -432,7 +442,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertTrue(ppisAdd.contains(piOne));
     assertFalse(ppisAdd.contains(piTwo));
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -450,16 +460,16 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     sepiAdd = createSetPeerIdentities();
     
     // Test add() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.addAll(sepiAdd);
     assertFalse(ppisAdd.isEmpty());
     assertEquals(k_countPeerIdentities, ppisAdd.size());
     assertTrue(ppisAdd.containsAll(sepiAdd));
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
     
     // Test add() WITH load() and store().
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.addAll(sepiAdd);
@@ -467,7 +477,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertEquals(k_countPeerIdentities, ppisAdd.size());
     assertTrue(ppisAdd.containsAll(sepiAdd));
     ppisAdd.store();
-    m_fileTest.delete();  
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -478,18 +488,18 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   public void testEquals() throws IOException {
     // Note: equals doesn't examine the disk, so I'm not writing both 'load'/'store' and no-
     // 'load'/'store' values.
-    File fileTest1 = FileTestUtil.tempFile("ppis");
-    File fileTest2 = fileTest1;
-    File fileTest3 = FileTestUtil.tempFile("ppis");
+    String k_fileTest1 = "test1-ppis";
+    String k_fileTest2 = k_fileTest1;
+    String k_fileTest3 = "test3-ppis";
     MyPersistentPeerIdSetImpl ppisEquals1;
     MyPersistentPeerIdSetImpl ppisEquals1b;
     MyPersistentPeerIdSetImpl ppisEquals2;
     MyPersistentPeerIdSetImpl ppisEquals3;
-    
-    ppisEquals1 = new MyPersistentPeerIdSetImpl(fileTest1, m_idman);
-    ppisEquals1b = new MyPersistentPeerIdSetImpl(fileTest1, m_idman);    
-    ppisEquals2 = new MyPersistentPeerIdSetImpl(fileTest2, m_idman);
-    ppisEquals3 = new MyPersistentPeerIdSetImpl(fileTest3, m_idman);
+
+    ppisEquals1 = new MyPersistentPeerIdSetImpl(m_node, k_fileTest1, m_idman);
+    ppisEquals1b = new MyPersistentPeerIdSetImpl(m_node, k_fileTest1, m_idman);    
+    ppisEquals2 = new MyPersistentPeerIdSetImpl(m_node, k_fileTest2, m_idman);
+    ppisEquals3 = new MyPersistentPeerIdSetImpl(m_node, k_fileTest3, m_idman);
     
     // Here come 16 tests: the product of the two sets of PPIS.
     assertTrue(ppisEquals1.equals(ppisEquals1));
@@ -525,20 +535,21 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
    * @throws IOException
    */
   public void testHashCode() throws IOException {
-    File fileTest1 = FileTestUtil.tempFile("ppis");
-    File fileTest2 = fileTest1;
+    String k_fileTest1 = "test1-ppis";
+    String k_fileTest2 = k_fileTest1;
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
-    MyPersistentPeerIdSetImpl ppisEquals1 = new MyPersistentPeerIdSetImpl(fileTest1, m_idman);
+    MyPersistentPeerIdSetImpl ppisEquals1 =
+      new MyPersistentPeerIdSetImpl(m_node, k_fileTest1, m_idman);
     ppisEquals1.add(piOne);
     
-    MyPersistentPeerIdSetImpl ppisEquals2 = new MyPersistentPeerIdSetImpl(fileTest2, m_idman);;
+    MyPersistentPeerIdSetImpl ppisEquals2 =
+      new MyPersistentPeerIdSetImpl(m_node, k_fileTest2, m_idman);;
     ppisEquals2.add(piOne);
     
     assertEquals(ppisEquals1.hashCode(), ppisEquals2.hashCode());
   }
 
-  
   /**
    * Test method for {@link org.lockss.protocol.PersistentPeerIdSet#isEmpty()}.
    * 
@@ -549,20 +560,20 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     PeerIdentity piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     // Test add() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
     assertFalse(ppisAdd.isEmpty());
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
     
     // Test add() WITH load() and store().
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     assertTrue(ppisAdd.isEmpty());
     ppisAdd.add(piOne);
     assertFalse(ppisAdd.isEmpty());
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -581,7 +592,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     
     // Verify that if it's not in memory, it's an UnsupportedOperationException.
     sepiAdd = createSetPeerIdentities();
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     try {
       ppisAdd.addAll(sepiAdd);
       iterAdd = ppisAdd.iterator();
@@ -589,16 +600,16 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     } catch (UnsupportedOperationException e1) {
       /* Passes the test. */
     }
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
     // Verify that if it is in memory, the iterator exists and works
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     ppisAdd.addAll(sepiAdd);
     iterAdd = ppisAdd.iterator();
     assertSameElements(sepiAdd, SetUtil.fromIterator(iterAdd));
       
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
     
   }
 
@@ -616,7 +627,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     // Test remove() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     
     ppisAdd.add(piOne);
@@ -626,10 +637,10 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     
     ppisAdd.remove(piOne);
     assertFalse(ppisAdd.contains(piOne));
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
     // Test remove() with load() and store()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     
     assertTrue(ppisAdd.isEmpty());
@@ -643,7 +654,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertFalse(ppisAdd.contains(piOne));
     
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -660,7 +671,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     // Test remove() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     
     ppisAdd.add(piOne);
@@ -670,10 +681,10 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     
     ppisAdd.removeAll(sepiAdd);
     assertFalse(ppisAdd.containsAll(sepiAdd));
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
     // Test remove() with load() and store()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     
     assertTrue(ppisAdd.isEmpty());
@@ -687,7 +698,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertFalse(ppisAdd.containsAll(sepiAdd));
     
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
   }
 
@@ -705,7 +716,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     // Test retainAll() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertTrue(ppisAdd.isEmpty());
     
     ppisAdd.add(piOne);
@@ -715,10 +726,10 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     
     ppisAdd.retainAll(sepiAdd);
     assertTrue(ppisAdd.containsAll(sepiAdd));
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
     // Test retainAll() with load() and store()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     
     assertTrue(ppisAdd.isEmpty());
@@ -732,7 +743,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertTrue(ppisAdd.containsAll(sepiAdd));
     
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -749,7 +760,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     piOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
     // Test testSize() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     assertEquals(0, ppisAdd.size());
     
     ppisAdd.add(piOne);
@@ -757,10 +768,10 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     
     ppisAdd.addAll(sepiAdd);
     assertEquals(1 + k_countPeerIdentities, ppisAdd.size());
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
     // Test retainAll() with load() and store()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     
     assertEquals(0, ppisAdd.size());
@@ -772,7 +783,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     assertEquals(1 + k_countPeerIdentities, ppisAdd.size());
     
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -789,17 +800,17 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     sepiAdd = createSetPeerIdentities();
     
     // Test toArray() without load() and save()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.addAll(sepiAdd);
     arpeerid = ppisAdd.toArray();
     
     for (index = 0; index < arpeerid.length; index++) {
       assertTrue(ppisAdd.contains(arpeerid[index]));
     }
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
 
     // Test toArray() with load() and store()
-    ppisAdd = new MyPersistentPeerIdSetImpl(m_fileTest, m_idman);
+    ppisAdd = new MyPersistentPeerIdSetImpl(m_node, k_fileTest, m_idman);
     ppisAdd.load();
     
     ppisAdd.addAll(sepiAdd);
@@ -810,7 +821,7 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     }
     
     ppisAdd.store();
-    m_fileTest.delete();
+    ppisAdd.deletePeerIdFile(k_fileTest);
   }
 
   /**
@@ -867,9 +878,10 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
 
   static class MyPersistentPeerIdSetImpl extends PersistentPeerIdSetImpl {
     boolean didStore = false;
-    public MyPersistentPeerIdSetImpl(File filePeerId,
-				     IdentityManager identityManager) {
-      super(filePeerId, identityManager);
+    public MyPersistentPeerIdSetImpl(RepositoryNode node,
+				 String fileName,
+				 IdentityManager identityManager) {
+      super(node, fileName, identityManager);
     }
 
     @Override
@@ -882,6 +894,18 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     }
     boolean isInMemory() {
       return m_isInMemory;
+    }
+    public boolean deletePeerIdFile(String fileName) {
+      boolean ret = false;
+      if (true)
+	throw new UnsupportedOperationException("XXX implement me");
+      return ret;
+    }
+    public boolean existsPeerIdFile(String filename) {
+      boolean ret = false;
+      if (true)
+	throw new UnsupportedOperationException("XXX implement me");
+      return ret;
     }
   }
 }

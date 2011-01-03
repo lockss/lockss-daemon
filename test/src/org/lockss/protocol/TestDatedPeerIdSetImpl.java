@@ -1,9 +1,12 @@
 package org.lockss.protocol;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import org.apache.commons.vfs.FileSystemException;
+import org.apache.commons.vfs.FileObject;
+
 
 import org.lockss.test.*;
+import org.lockss.repository.*;
 
 public class TestDatedPeerIdSetImpl extends LockssTestCase {
   // Constants 
@@ -12,26 +15,27 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
 
   // Member Variables
   private MockIdentityManager m_idman;
+  private MockRepositoryNode m_node;
 
-  private File m_fileOne;
-  private File m_fileTest;
-  private File m_fileTest2;
-  private File m_fileTest3;
-  private File m_fileNotExist;
+  private final static String k_fileOne = "fileOne.ppis";
+  private final static String k_fileTest = "fileTest.ppis";
+  private final static String k_fileTest2 = "fileTest2.ppis";
+  private final static String k_fileTest3 = "fileTest3.ppis";
+  private final static String k_fileNotExist = "fileNotExist.ppis";
 
+  /*
+   * XXX implement me based on new interface
+  public DatedPeerIdSetImpl(RepositoryNode node,
+			    String fileName,
+			    IdentityManager identityManager) {
+  */
   protected void setUp() throws Exception {
     super.setUp();
     
     m_idman = new MockIdentityManager();
     m_idman.addPeerIdentity(k_strPeerIdentityOne, new MockPeerIdentity(k_strPeerIdentityOne));
     m_idman.addPeerIdentity(k_strPeerIdentityTwo, new MockPeerIdentity(k_strPeerIdentityTwo));
-
-    m_fileOne = FileTestUtil.tempFile("ppis");
-    m_fileTest = FileTestUtil.tempFile("ppis");
-    m_fileTest2 = FileTestUtil.tempFile("ppis");
-    m_fileTest3 = FileTestUtil.tempFile("ppis");
-    m_fileNotExist = FileTestUtil.tempFile("ppis");
-    m_fileNotExist.delete();
+    m_node = new MockRepositoryNode();
   }
 
   protected void tearDown() throws Exception {
@@ -39,37 +43,42 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
   }
 
   public void testLoadAndStore() throws IOException {
-    DatedPeerIdSet dpisStore;
-    DatedPeerIdSet dpisLoad;
+    MyDatedPeerIdSetImpl dpisStore;
+    MyDatedPeerIdSetImpl dpisLoad;
     long dateRandom;
     PeerIdentity peeridentityOne;
         
     // Create a DatedPeerIdSet with a random date.  Verify that it stores and retrieves without exception,
     // and that the dpis2 has the right number of elements.
     dateRandom = (long) (Math.random() * Long.MAX_VALUE);
-    
-    assertFalse(m_fileNotExist.exists());
-    dpisStore = new DatedPeerIdSetImpl(m_fileNotExist, m_idman);
-    assertFalse(m_fileNotExist.exists());
+
+    // assertFalse(m_fileNotExist.exists());
+    dpisStore = new MyDatedPeerIdSetImpl(m_node, k_fileNotExist, m_idman);
+    dpisStore.deletePeerIdFile(k_fileNotExist);
+    assertFalse(dpisStore.existsPeerIdFile(k_fileNotExist));
     dpisStore.setDate(dateRandom);
     dpisStore.store();
     
-    dpisLoad = new DatedPeerIdSetImpl(m_fileNotExist, m_idman);
+    dpisLoad = new MyDatedPeerIdSetImpl(m_node, k_fileNotExist, m_idman);
     dpisLoad.load();
     assertEquals(dateRandom, dpisLoad.getDate());
     assertEquals(0, dpisLoad.size());
+    dpisLoad.deletePeerIdFile(k_fileNotExist);
+    dpisStore.deletePeerIdFile(k_fileNotExist);
     
     
     // Create a DatedPeerIdSet without a date.  Verify that it stores and retrieves without exception, and
     // that the retrieved date is the default (-1).
-    dpisStore = new DatedPeerIdSetImpl(m_fileTest2, m_idman);
+    dpisStore = new MyDatedPeerIdSetImpl(m_node, k_fileTest2, m_idman);
     dpisStore.clear();
     dpisStore.store();
     
-    dpisLoad = new DatedPeerIdSetImpl(m_fileTest2, m_idman);
+    dpisLoad = new MyDatedPeerIdSetImpl(m_node, k_fileTest2, m_idman);
     dpisLoad.load();
     assertEquals(DatedPeerIdSetImpl.k_dateDefault, dpisLoad.getDate());
     assertEquals(0, dpisLoad.size());
+    dpisStore.deletePeerIdFile(k_fileTest2);
+    dpisLoad.deletePeerIdFile(k_fileTest2);
     
     
     // Create a DatedPeerIdSet with a random date and a PeerId.  Verify that the stored peer id and
@@ -77,13 +86,13 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
     dateRandom = (long) (Math.random() * Long.MAX_VALUE); // Just in case I had a bad choice last time.
     peeridentityOne = m_idman.findPeerIdentity(k_strPeerIdentityOne);
     
-    dpisStore = new DatedPeerIdSetImpl(m_fileTest3, m_idman);
+    dpisStore = new MyDatedPeerIdSetImpl(m_node, k_fileTest3, m_idman);
     dpisStore.add(peeridentityOne);
     dpisStore.setDate(dateRandom);
     dpisStore.store();
        
     // Load the one-element set.
-    dpisLoad = new DatedPeerIdSetImpl(m_fileTest3, m_idman);
+    dpisLoad = new MyDatedPeerIdSetImpl(m_node, k_fileTest3, m_idman);
     dpisLoad.load();
     
     // Verify that the loaded set has the correct element.
@@ -91,17 +100,19 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
     assertEquals(1, dpisLoad.size());
     assertTrue(dpisLoad.contains(peeridentityOne));
     assertEquals(dateRandom, dpisLoad.getDate());
+    dpisStore.deletePeerIdFile(k_fileTest3);
+    dpisLoad.deletePeerIdFile(k_fileTest3);
   }
 
   
   final static int k_numRepeat = 1000;
   
   public void testGetAndSetDate() throws IOException {
-    DatedPeerIdSet dpisTest;
+    MyDatedPeerIdSetImpl dpisTest;
     int i;
     long dateRandom;
     
-    dpisTest = new DatedPeerIdSetImpl(m_fileTest, m_idman);
+    dpisTest = new MyDatedPeerIdSetImpl(m_node, k_fileTest, m_idman);
     
     for (i=0; i<k_numRepeat; i++) {
       dateRandom = (long) (Math.random() * Long.MAX_VALUE);
@@ -109,6 +120,40 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
       dpisTest.setDate(dateRandom);
       assertEquals(dateRandom, dpisTest.getDate());
     }
+    dpisTest.deletePeerIdFile(k_fileTest);
   }
 
+  static class MyDatedPeerIdSetImpl extends DatedPeerIdSetImpl {
+    boolean didStore = false;
+    public MyDatedPeerIdSetImpl(RepositoryNode node,
+				String fileName,
+				IdentityManager identityManager) {
+      super(node, fileName, identityManager);
+    }
+
+    @Override
+    protected void encode(DataOutputStream dos) throws IOException {
+      didStore = true;
+      super.encode(dos);
+    }
+    boolean didStore() {
+      return didStore;
+    }
+    boolean isInMemory() {
+      return m_isInMemory;
+    }
+    public boolean deletePeerIdFile(String fileName) {
+      boolean ret = false;
+      if (true)
+	throw new UnsupportedOperationException("XXX implement me");
+      return ret;
+    }
+    public boolean existsPeerIdFile(String filename) {
+      boolean ret = false;
+      if (true)
+	throw new UnsupportedOperationException("XXX implement me");
+      return ret;
+    }
+  }
 }
+

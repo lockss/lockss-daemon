@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.12 2010-02-23 05:04:40 pgust Exp $
+ * $Id: TestFileUtil.java,v 1.12.10.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class TestFileUtil extends LockssTestCase {
 
     assertFalse(FileUtil.isContentEqual(file1, null));
     assertFalse(FileUtil.isContentEqual(null, file1));
-    assertFalse(FileUtil.isContentEqual(null, null));
+    assertFalse(FileUtil.isContentEqual((File)null, (File)null));
     assertFalse(FileUtil.isContentEqual(file1, file2));
     assertFalse(FileUtil.isContentEqual(file1, file4));
 

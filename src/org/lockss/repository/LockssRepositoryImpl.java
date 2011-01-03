@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82 2010-10-07 01:37:25 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -35,6 +35,12 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+//import org.apache.commons.vfs.FileContent;
+//import org.apache.commons.vfs.FileName;
+import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.FileSystem;
+//import org.apache.commons.vfs.FileSystemException;
+//import org.apache.commons.vfs.FileType;
 
 import org.apache.commons.lang.SystemUtils;
 import org.lockss.app.*;
@@ -94,6 +100,7 @@ public class LockssRepositoryImpl
   UniqueRefLruCache nodeCache;
   private boolean isGlobalNodeCache =
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
+  private FileSystem fileSystem;
 
   LockssRepositoryImpl(String rootPath) {
     if (rootPath.endsWith(File.separator)) {
@@ -122,6 +129,7 @@ public class LockssRepositoryImpl
 // 	new UniqueRefLruCache(repoMgr.paramNodeCacheSize);
       setNodeCacheSize(repoMgr.paramNodeCacheSize);
     }
+    fileSystem = null; // XXX - implement me
   }
 
   public void stopService() {
@@ -281,7 +289,7 @@ public class LockssRepositoryImpl
    */
   void deactivateInconsistentNode(RepositoryNodeImpl node) {
     logger.warning("Deactivating inconsistent node.");
-    FileUtil.ensureDirExists(node.contentDir);
+    RepositoryNodeImpl.ensureDirExists(node.getContentDir());
     // manually deactivate
     node.deactivateContent();
   }
@@ -304,6 +312,15 @@ public class LockssRepositoryImpl
     }
 
     return canonUrl;
+  }
+
+  /**
+   * Return the Commons VFS file system, if any, used for this
+   * repository.
+   * @return FileSystem the COmmons VFS file system for this repository
+   */
+  public FileSystem getFileSystem() {
+    return fileSystem;
   }
 
   // static calls

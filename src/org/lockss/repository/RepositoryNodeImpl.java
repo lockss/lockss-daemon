@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.1 2010-12-02 22:22:29 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.2 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -36,6 +36,12 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.util.*;
 import org.apache.oro.text.regex.*;
+import org.apache.commons.vfs.FileContent;
+import org.apache.commons.vfs.FileName;
+import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.FileSystem;
+import org.apache.commons.vfs.FileSystemException;
+import org.apache.commons.vfs.FileType;
 
 import org.lockss.config.*;
 import org.lockss.protocol.*;
@@ -153,24 +159,24 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // used to cache outputstream for automatic closing
   private OutputStream curOutputStream = null;
   // current info
-  private File curInputFile;
+  private FileObject curInputFile;
   protected Properties curProps;
   protected Properties nodeProps = new Properties();
   private boolean nodePropsLoaded = false;
   protected int currentVersion = -1;
 
   // convenience file handles
-  protected File contentDir = null; // Used LockssRepositoryImpl
+  protected FileObject contentDir = null; // Used LockssRepositoryImpl
 
-  protected File nodeRootFile = null; // Used AuNodeImpl
-  protected File nodePropsFile = null; // Used TestLockssRepositoryImpl
-  private File agreementFile = null;
-  private File tempAgreementFile = null;
-//  protected File ppisAgreementFile = null;
-  protected File currentCacheFile; // Used TestLockssRepositoryImpl
-  protected File currentPropsFile; // Used TestLockssRepositoryImpl
-  protected File tempCacheFile; // Used TestLockssRepositoryImpl
-  protected File tempPropsFile; // Used TestLockssRepositoryImpl
+  protected FileObject nodeRootFile = null; // Used AuNodeImpl
+  protected FileObject nodePropsFile = null; // Used TestLockssRepositoryImpl
+  private FileObject agreementFile = null;
+  private FileObject tempAgreementFile = null;
+//  protected FileObject ppisAgreementFile = null;
+  protected FileObject currentCacheFile; // Used TestLockssRepositoryImpl
+  protected FileObject currentPropsFile; // Used TestLockssRepositoryImpl
+  protected FileObject tempCacheFile; // Used TestLockssRepositoryImpl
+  protected FileObject tempPropsFile; // Used TestLockssRepositoryImpl
 
   // identity url and location
   protected String url;
@@ -211,7 +217,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
       logger.error("Cannot get size if no content: "+url);
       throw new UnsupportedOperationException("No content to get size from.");
     }
-    return currentCacheFile.length();
+    try {
+      return currentCacheFile.getContent().getSize();
+    } catch (FileSystemException e) {
+      throw new UnsupportedOperationException("getContentSize() threw: " + e);
+    }
   }
 
   public long getTreeContentSize(CachedUrlSetSpec filter,
@@ -235,7 +245,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     long totalSize = 0;
     if (hasContent()) {
-      totalSize = currentCacheFile.length();
+      try {
+	totalSize = currentCacheFile.getContent().getSize();
+      } catch (FileSystemException e) {
+	logger.error("getTreeContentSize() threw: " + e);
+      }
     }
 
     // since RepositoryNodes update and cache tree size, efficient to use them
@@ -266,16 +280,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     // No child count available.  Don't call getChildCount ...xxx
     // It's a leaf if no subdirs (excluding content dir)
-    File[] children = nodeRootFile.listFiles();
+    FileObject[] children = null;
+    try {
+      children = nodeRootFile.getChildren();
+    } catch (FileSystemException e) {
+      logger.error("isLeaf() threw: " + e);
+    }
     if (children == null) {
       String msg = "No cache directory located for: " + url;
       logger.error(msg);
       throw new LockssRepository.RepositoryStateException(msg);
     }
     for (int ii=0; ii<children.length; ii++) {
-      File child = children[ii];
+      FileObject child = children[ii];
       if (child.getName().equals(contentDir.getName())) continue;
-      if (!child.isDirectory()) continue;
+      if (isFolder(child)) continue;
       return false;
     }
     return true;
@@ -295,14 +314,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected List getNodeList(CachedUrlSetSpec filter, boolean includeInactive) {
     if (nodeRootFile==null) initNodeRoot();
     if (contentDir==null) getContentDir();
-    File[] children = nodeRootFile.listFiles();
+    FileObject[] children = null;
+    try {
+      children = nodeRootFile.getChildren();
+    } catch (FileSystemException e) {
+      logger.error("getNodeList() threw: " + e);
+    }
     if (children == null) {
       String msg = "No cache directory located for: " + url;
       logger.error(msg);
       throw new LockssRepository.RepositoryStateException(msg);
     }
     // sorts alphabetically relying on File.compareTo()
-    Arrays.sort(children, new FileComparator());
+    Arrays.sort(children, new FileObjectComparator());
     int listSize;
     if (filter==null) {
       listSize = children.length;
@@ -319,8 +343,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     ArrayList childL = new ArrayList(listSize);
     for (int ii=0; ii<children.length; ii++) {
-      File child = children[ii];
-      if ((child.getName().equals(CONTENT_DIR)) || (!child.isDirectory())) {
+      FileObject child = children[ii];
+      if ((child.getName().equals(CONTENT_DIR)) || !isFolder(child)) {
         // all children are in their own directories, and the content dir
         // must be ignored
         continue;
@@ -331,7 +355,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (child == null) {
 	continue;
       }
-      String childUrl = constructChildUrl(url, child.getName());
+      String childUrl = constructChildUrl(url, child.getName().getPath());
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
           RepositoryNode node = repository.getNode(childUrl);
@@ -360,14 +384,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
     RegexpUtil.uncheckedCompile(".*%([a-z]|.[a-z]).*",
 				Perl5Compiler.READ_ONLY_MASK);
 
-  protected File normalize(File file) { // Used TestRepositoryNodeImpl
-    String name = file.getName();
+  protected FileObject normalize(FileObject file) { // Used TestRepositoryNodeImpl
+    String name = file.getName().getPath();
     String normName = normalizeUrlEncodingCase(name);
     normName = normalizeTrailingQuestion(normName);
     if (normName.equals(name)) {
       return file;
     }
-    return new File(file.getParent(), normName);
+    try {
+      FileObject parent = file.getParent();
+      return parent.resolveFile(normName);
+    } catch (FileSystemException e) {
+      logger.error("normalize() threw: " + e);
+    }
+    return file;
   }
 
   String normalizeUrlEncodingCase(String name) {
@@ -390,33 +420,39 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
-  private File checkUnnormalized(File file, File[] all, int ix) {
-    File norm = normalize(file);
+  private FileObject checkUnnormalized(FileObject file, FileObject[] all, int ix) {
+    FileObject norm = normalize(file);
     if (norm == file) {
       return file;
     }
     synchronized (this) {
-      if (file.exists()) {
-	if (norm.exists()) {
-	  if (FileUtil.delTree(file)) {
-	    logger.debug("Deleted redundant unnormalized: " + file);
-	  } else {
-	    logger.error("Couldn't delete unnormalized: " + file);
-	  }
-	  all[ix] = null;
-	} else {
-	  if (file.renameTo(norm)) {
-	    logger.debug("Renamed unnormalized: " + file + " to " + norm);
-	    all[ix] = norm;
-	  } else {
-	    logger.error("Couldn't rename unnormalized: " + file +
-			 " to " + norm);
+      try {
+	if (file.exists()) {
+	  if (norm.exists()) {
+	    if (file.delete()) {
+	      logger.debug("Deleted redundant unnormalized: " + file.getURL());
+	    } else {
+	      logger.error("Couldn't delete unnormalized: " + file.getURL());
+	    }
 	    all[ix] = null;
+	  } else {
+	    if (file.canRenameTo(norm)) {
+	      file.moveTo(norm);
+	      logger.debug("Renamed unnormalized: " + file.getURL() + " to " +
+			   norm.getURL());
+	      all[ix] = norm;
+	    } else {
+	      logger.error("Couldn't rename unnormalized: " + file.getURL() +
+			   " to " + norm.getURL());
+	      all[ix] = null;
+	    }
 	  }
 	}
+      } catch (FileSystemException e) {
+	logger.error("checkUnnormalized() threw: " + e);
       }
+      return all[ix];
     }
-    return all[ix];
   }
 
   public int getChildCount() {
@@ -443,6 +479,28 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /** return true if value is INVALID token */
   static boolean isPropInvalid(String val) {
     return val != null && val.equals(INVALID);
+  }
+
+  /** return true if FileObject is folder */
+  private static boolean isFolder(FileObject f) {
+    boolean ret = false;
+    try {
+      ret = f.getType() == FileType.FOLDER;
+    } catch (FileSystemException e) {
+      logger.debug2("isFolder() threw: " + e);
+    }
+    return ret;
+  }
+
+  /** return true if FileObject is file */
+  private static boolean isFile(FileObject f) {
+    boolean ret = false;
+    try {
+      ret = f.getType() == FileType.FILE;
+    } catch (FileSystemException e) {
+      logger.debug2("isFile() threw: " + e);
+    }
+    return ret;
   }
 
   /**
@@ -546,15 +604,22 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   public void createNodeLocation() {
     ensureCurrentInfoLoaded();
-    if (!nodeRootFile.exists()) {
-      logger.debug3("Creating root directory for CUS '"+url+"'");
-      if (!nodeRootFile.mkdirs()) {
-	throw new LockssRepository.RepositoryStateException("mkdirs(" +
-							    nodeRootFile +
-							    ") failed for "
-							    + nodeRootFile);
+    String nodeUrl = "BAD url";
+    try {
+      nodeUrl =  nodeRootFile.getURL().toString();
+      if (!nodeRootFile.exists()) {
+	logger.debug3("Creating root directory for CUS '"+url+"'");
+	nodeRootFile.createFolder();
       }
+      if (nodeRootFile.exists() && !isFolder(nodeRootFile)) {
+	return;
+      }
+    } catch (FileSystemException e) {
+      logger.error("createNodeLocation() threw: " + e);
     }
+    throw new LockssRepository.RepositoryStateException("mkdirs(" +
+							nodeUrl +
+							") failed");
   }
 
   public synchronized void makeNewVersion() {
@@ -572,7 +637,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     // Needs to be done unconditionally in case node or content dir has
     // disappeared.  (Was:   if ( currentVersion == 0) {  )
-    if (!FileUtil.ensureDirExists(contentDir)) {
+    if (!ensureDirExists(contentDir)) {
       logger.error("Couldn't create cache directory: " +contentDir);
       throw new LockssRepository.RepositoryStateException("mkdirs(" +
 							  contentDir +
@@ -613,17 +678,22 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // if the node was inactive, we need to copy the inactive files to
       // 'current' so they can join the standard versioning
       if (wasInactive) {
-        File inactiveCacheFile = getInactiveCacheFile();
-        File inactivePropsFile = getInactivePropsFile();
+        FileObject inactiveCacheFile = getInactiveCacheFile();
+        FileObject inactivePropsFile = getInactivePropsFile();
 
         // if the files exist but there's a problem renaming them, throw
-        if ((inactiveCacheFile.exists() &&
-             !PlatformUtil.updateAtomically(inactiveCacheFile,
-                                            currentCacheFile))
-            ||
-            (inactivePropsFile.exists() &&
-             !PlatformUtil.updateAtomically(inactivePropsFile,
-                                            currentPropsFile))) {
+	boolean ok = false;
+	try {
+	  ok = (inactiveCacheFile.exists() &&
+		updateAtomically(inactiveCacheFile, currentCacheFile));
+	  if (ok) {
+	    ok = (inactivePropsFile.exists() &&
+		  updateAtomically(inactivePropsFile, currentPropsFile));
+	  }
+	} catch (FileSystemException e) {
+	  logger.error("sealNewVersion() threw: " + e);
+	}
+	if (!ok) {
           logger.error("Couldn't rename inactive versions: " + url);
           throw new LockssRepository.RepositoryStateException(
               "Couldn't rename inactive versions.");
@@ -634,7 +704,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
           Properties myProps = loadProps(currentPropsFile);
           myProps.setProperty(NODE_WAS_INACTIVE_PROPERTY, "true");
           OutputStream os =
-              new BufferedOutputStream(new FileOutputStream(currentPropsFile));
+	    new BufferedOutputStream(currentPropsFile.getContent().getOutputStream());
           myProps.store(os, "HTTP headers for " + url);
           os.close();
         } catch (IOException e) {
@@ -643,7 +713,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
         } catch (LockssRepository.RepositoryStateException e) {
           logger.error("Couldn't set 'was inactive' property for last version of: "+url,
 		       e);
-        }
+	}	  
 
 
         // remove any deletion values
@@ -654,40 +724,47 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // check temp vs. last version, so as not to duplicate identical versions
-      if (currentCacheFile.exists()) {
-        try {
+      try {
+	if (currentCacheFile.exists()) {
           // if identical, don't rename
-          if (FileUtil.isContentEqual(currentCacheFile, tempCacheFile)) {
+          if (isContentEqual(currentCacheFile, tempCacheFile)) {
             // don't rename
 	    if (logger.isDebug2()) {
 	      logger.debug2("New version identical to old: " +
 			    currentCacheFile);
 	    }
             identicalVersion = true;
-          } else if (!PlatformUtil.updateAtomically(currentCacheFile,
-                                                    getVersionedCacheFile(currentVersion))) {
+          } else if (!updateAtomically(currentCacheFile,
+				       getVersionedCacheFile(currentVersion))) {
             String err = "Couldn't rename current content file: " + url;
             logger.error(err);
             throw new LockssRepository.RepositoryStateException(err);
           }
-        } catch (IOException ioe) {
-          String err = "Error comparing files: "+ url;
-          logger.error(err);
-          throw new LockssRepository.RepositoryStateException(err);
-        }
+	}
+      } catch (IOException ioe) {
+	String err = "Error comparing files: "+ url;
+	logger.error(err);
+	throw new LockssRepository.RepositoryStateException(err);
       }
 
       // get versioned props file
-      File verPropsFile;
+      FileObject verPropsFile;
       // name 'identical version' props differently
       if (identicalVersion) {
-        // rename to dated property version, using 'File.lastModified()'
-        long date = currentPropsFile.lastModified();
-        verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
-        while (verPropsFile.exists()) {
-          date++;
-          verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
-        }
+	try {
+	  // rename to dated property version, using 'File.lastModified()'
+	  long date = currentPropsFile.getContent().getLastModifiedTime();
+	  verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
+	  while (verPropsFile.exists()) {
+	    date++;
+	    verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
+	  }
+	} catch (FileSystemException e) {
+	  String err = "Couldn't rename to dated property file: " + url + " " +
+	    e;
+	  logger.error(err);
+	  throw new LockssRepository.RepositoryStateException(err);
+	}
       } else {
         // rename to standard property version
         verPropsFile = getVersionedPropsFile(currentVersion);
@@ -696,10 +773,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (CurrentConfig.getBooleanParam(PARAM_KEEP_ALL_PROPS_FOR_DUPE_FILE,
                                         DEFAULT_KEEP_ALL_PROPS_FOR_DUPE_FILE)
                                         || !identicalVersion) {
-	// rename current properties to chosen file name
-	if (currentPropsFile.exists() &&
-	    !PlatformUtil.updateAtomically(currentPropsFile,
-	                                   verPropsFile)) {
+	try {
+	  // rename current properties to chosen file name
+	  if (currentPropsFile.exists() &&
+	      !updateAtomically(currentPropsFile, verPropsFile)) {
+	    String err = "Couldn't rename current property file: " + url;
+	    logger.error(err);
+	    throw new LockssRepository.RepositoryStateException(err);
+	  }
+	} catch (FileSystemException e) {
 	  String err = "Couldn't rename current property file: " + url;
 	  logger.error(err);
 	  throw new LockssRepository.RepositoryStateException(err);
@@ -709,8 +791,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // if not identical, rename content from 'temp' to 'current'
       if (!identicalVersion) {
         // rename new content file (if non-identical)
-        if (!PlatformUtil.updateAtomically(tempCacheFile,
-                                           currentCacheFile)) {
+        if (!updateAtomically(tempCacheFile, currentCacheFile)) {
           String err = "Couldn't rename temp content version: " + url;
           logger.error(err);
           throw new LockssRepository.RepositoryStateException(err);
@@ -719,7 +800,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
         currentVersion++;
       } else {
         // remove temp content file, since identical
-        tempCacheFile.delete();
+	try {
+	  tempCacheFile.delete();
+	} catch (FileSystemException e) {
+          String err = "Couldn't reset property version number: " + url +
+	    e;
+          logger.error(err);
+          throw new LockssRepository.RepositoryStateException(err);
+	}
 
         // check for erroneous version
         if (currentVersion<=0) {
@@ -736,20 +824,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
           Properties myProps = loadProps(tempPropsFile);
           myProps.setProperty(LOCKSS_VERSION_NUMBER,
                               Integer.toString(currentVersion));
-          OutputStream os = new BufferedOutputStream(new FileOutputStream(
-              tempPropsFile));
+          OutputStream os =
+	    new BufferedOutputStream(tempPropsFile.getContent().getOutputStream());
           myProps.store(os, "HTTP headers for " + url);
           os.close();
         } catch (IOException ioe) {
           String err = "Couldn't reset property version number: " + url;
           logger.error(err);
           throw new LockssRepository.RepositoryStateException(err);
-        }
+	}
       }
 
       // rename new properties
-      if (!PlatformUtil.updateAtomically(tempPropsFile,
-                                         currentPropsFile)) {
+      if (!updateAtomically(tempPropsFile, currentPropsFile)) {
         String err = "Couldn't rename temp property version: " + url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
@@ -776,8 +863,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
       // clear temp files
       // unimportant if this isn't done, as they're overwritten
-      tempCacheFile.delete();
-      tempPropsFile.delete();
+      try {
+	tempCacheFile.delete();
+	tempPropsFile.delete();
+      } catch (FileSystemException e) {
+	logger.warning("abandonNewVersion() threw: " + e);
+      }
 
       if (wasInactive) {
         // set to reinitialize to force proper state restore
@@ -811,22 +902,28 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     // copy 'current' files to 'inactive'
-    if (hasContent()) {
-      if ((currentCacheFile.exists() &&
-          !PlatformUtil.updateAtomically(currentCacheFile,
-                                         getInactiveCacheFile()))
-          ||
-          (currentPropsFile.exists() &&
-          !PlatformUtil.updateAtomically(currentPropsFile,
-                                         getInactivePropsFile()))) {
-        logger.error("Couldn't deactivate: " + url);
-        throw new LockssRepository.RepositoryStateException(
-            "Couldn't deactivate.");
+    boolean ok = false;
+    try {
+      if (hasContent()) {
+	ok = (currentCacheFile.exists() &&
+	      updateAtomically(currentCacheFile, getInactiveCacheFile()));
+	if (ok) {
+          ok = (currentPropsFile.exists() &&
+		updateAtomically(currentPropsFile, getInactivePropsFile()));
+	}
+      } else {
+	if (!contentDir.exists()) {
+	  contentDir.createFolder();
+	  ok = true;
+	}
       }
-    } else {
-      if (!contentDir.exists()) {
-        contentDir.mkdirs();
-      }
+    } catch (FileSystemException e) {
+      logger.error("deactivateContent() threw: " + e);
+    }
+    if (!ok) {
+      logger.error("Couldn't deactivate: " + url);
+      throw new LockssRepository.RepositoryStateException(
+							  "Couldn't deactivate.");
     }
 
     // store the inactive value
@@ -876,13 +973,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (isContentInactive()) {
       int lastVersion = determineLastActiveVersion();
       if (lastVersion > 0) {
-        File inactiveCacheFile = getInactiveCacheFile();
-        File inactivePropsFile = getInactivePropsFile();
+        FileObject inactiveCacheFile = getInactiveCacheFile();
+        FileObject inactivePropsFile = getInactivePropsFile();
 
-        if (!PlatformUtil.updateAtomically(inactiveCacheFile,
-                                           currentCacheFile) ||
-            !PlatformUtil.updateAtomically(inactivePropsFile,
-                                           currentPropsFile)) {
+        if (!updateAtomically(inactiveCacheFile, currentCacheFile) ||
+            !updateAtomically(inactivePropsFile, currentPropsFile)) {
           logger.error("Couldn't rename inactive versions: "+url);
           throw new LockssRepository.RepositoryStateException("Couldn't rename inactive versions.");
         }
@@ -901,19 +996,22 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     int lastVersion = getCurrentVersion() - 1;
-    File lastContentFile = getVersionedCacheFile(lastVersion);
-    File lastPropsFile = getVersionedPropsFile(lastVersion);
+    FileObject lastContentFile = getVersionedCacheFile(lastVersion);
+    FileObject lastPropsFile = getVersionedPropsFile(lastVersion);
 
-    // delete current version
-    // XXX probably should rename these instead
-    currentCacheFile.delete();
-    currentPropsFile.delete();
+    try {
+      // delete current version
+      // XXX probably should rename these instead
+      currentCacheFile.delete();
+      currentPropsFile.delete();
+    } catch (FileSystemException e) {
+      logger.error("Couldn't delete current versions: "+url);
+      throw new LockssRepository.RepositoryStateException("Couldn't rename old versions.");
+    }
 
     // rename old version to current
-    if (!PlatformUtil.updateAtomically(lastContentFile,
-                                       currentCacheFile) ||
-        !PlatformUtil.updateAtomically(lastPropsFile,
-                                       currentPropsFile)) {
+    if (!updateAtomically(lastContentFile, currentCacheFile) ||
+        !updateAtomically(lastPropsFile, currentPropsFile)) {
       logger.error("Couldn't rename old versions: "+url);
       throw new LockssRepository.RepositoryStateException("Couldn't rename old versions.");
     }
@@ -937,14 +1035,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (curOutputStream!=null) {
       throw new UnsupportedOperationException("getNewOutputStream() called twice.");
     }
+    String tempUrl = "BAD";
     try {
-      curOutputStream = new BufferedOutputStream(
-          new FileOutputStream(tempCacheFile));
+      tempUrl = tempCacheFile.getURL().toString();
+      curOutputStream = new BufferedOutputStream(tempCacheFile.getContent().getOutputStream());
       return curOutputStream;
-    } catch (FileNotFoundException fnfe) {
+    } catch (FileSystemException e) {
       try {
-        logger.error("No new version file for "+tempCacheFile.getPath()+".",
-		     fnfe);
+        logger.error("No new version file for "+tempUrl+".", e);
         throw new LockssRepository.RepositoryStateException("Couldn't load new outputstream.");
       } finally {
         abandonNewVersion();
@@ -952,16 +1050,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
-  SortedProperties loadProps(File propsFile)
+  SortedProperties loadProps(FileObject propsFile)
       throws FileNotFoundException, IOException {
     SortedProperties props = new SortedProperties();
     loadPropsInto(propsFile, props);
     return props;
   }
 
-  void loadPropsInto(File propsFile, Properties props)
+  void loadPropsInto(FileObject propsFile, Properties props)
       throws FileNotFoundException, IOException {
-    InputStream is = new BufferedInputStream(new FileInputStream(propsFile));
+    InputStream is = new BufferedInputStream(propsFile.getContent().getInputStream());
     try {
       props.load(is);
     } catch (IllegalArgumentException e) {
@@ -1012,7 +1110,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // copy the props and sort
       Properties myProps = SortedProperties.fromProperties(newProps);
       try {
-        OutputStream os = new BufferedOutputStream(new FileOutputStream(tempPropsFile));
+        OutputStream os = new BufferedOutputStream(tempPropsFile.getContent().getOutputStream());
         int versionToWrite = currentVersion + 1;
         if (versionToWrite <= 0) {
           // this is an error condition which shouldn't occur
@@ -1026,9 +1124,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
       } catch (IOException ioe) {
         try {
           logger.error("Couldn't write properties for " +
-                       tempPropsFile.getPath()+".");
+                       tempPropsFile.getURL().toString() + ".");
           throw new LockssRepository.RepositoryStateException("Couldn't write properties file.");
-        } finally {
+        } catch (FileSystemException e) {
+          logger.error("Couldn't getURL() " + url);
+	} finally {
           abandonNewVersion();
         }
       }
@@ -1056,20 +1156,31 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	} catch (LockssRepositoryImpl.RepositoryStateException rse) {
 	  currentVersion = DELETED_VERSION;
 	  logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
-	  if (!PlatformUtil.updateAtomically(nodePropsFile,
-					     new File(nodePropsFile.getAbsolutePath()
-						      + FAULTY_FILE_EXTENSION))) {
+	  String errFilePath = nodePropsFile.getName().getPath() + "." +
+	    FAULTY_FILE_EXTENSION;
+	  try {
+	  FileObject errFile =
+	    repository.getFileSystem().resolveFile(errFilePath);
+	  if (!updateAtomically(nodePropsFile, errFile)) {
 	    logger.error("Error renaming nodeProps file");
+	  }
+	  } catch (FileSystemException e) {
+	    logger.error("ensureCurrentInfoLoaded() threw: " + e);
 	  }
 	}
       }
 
       // no content, so version 0
-      if (!contentDir.exists()) {
+      try {
         currentVersion = 0;
         curInputFile = null;
         curProps = null;
-        return;
+	if (!contentDir.exists()) {
+	  return;
+	}
+      } catch (FileSystemException e) {
+	logger.error("ensureCurrentInfoLoaded() threw: " + e);
+	return;
       }
 
       // determine if deleted or inactive
@@ -1102,19 +1213,29 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Load the node properties.
    */
   void loadNodeProps(boolean okIfNotThere) {
+    String nodeUrl = "BAD";
     try {
       // check properties to see if deleted
       loadPropsInto(nodePropsFile, nodeProps);
       nodePropsLoaded = true;
     } catch (FileNotFoundException e) {
       if (!okIfNotThere) {
-	String msg = "No node props file: " + nodePropsFile.getPath();
+	try {
+	  nodeUrl = nodePropsFile.getURL().toString();
+	} catch (FileSystemException ex) {
+	  // No action intended
+	}
+	String msg = "No node props file: " + nodeUrl;
 	logger.error(msg);
 	throw new LockssRepository.RepositoryStateException(msg);
       }
     } catch (Exception e) {
-      logger.error("Error loading node props from " + nodePropsFile.getPath(),
-		   e);
+      try {
+	logger.error("Error loading node props from " + nodePropsFile.getURL(),
+		     e);
+      } catch (FileSystemException ex) {
+	logger.error("Can't getUrl(): " + url);
+      }
       throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
     }
   }
@@ -1134,8 +1255,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     
     DataInputStream is = null;
     try {
-//      ppisReturn = new PersistentPeerIdSetImpl(ppisAgreementFile, repository.getDaemon().getIdentityManager());
-      ppisReturn = new PersistentPeerIdSetImpl(agreementFile, repository.getDaemon().getIdentityManager());
+      IdentityManager im = repository.getDaemon().getIdentityManager();
+//      ppisReturn = new PersistentPeerIdSetImpl(ppisAgreementFile, im);
+      ppisReturn = new PersistentPeerIdSetImpl(this, AGREEMENT_FILENAME, im);
       ppisReturn.load();
       
     } catch (Exception e) {
@@ -1171,15 +1293,36 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /* Rename a potentially corrupt agreement history file */
   void backupAgreementHistoryFile() {
     try {
-      PlatformUtil.updateAtomically(agreementFile,
-                                    new File(agreementFile.getCanonicalFile() + ".old"));
+      String oldPath = agreementFile.getName().getPath() + ".old";
+      FileObject oldFile = repository.getFileSystem().resolveFile(oldPath);
+      updateAtomically(agreementFile, oldFile);
     } catch (IOException ex) {
       // This would only be caused by getCanonicalFile() throwing IOException.
       // Worthy of a stack trace.
       logger.error("Unable to back-up suspect agreement history file:", ex);
     }
   }
-  
+
+  public InputStream getPeerIdInputStream(String fileName) {
+    InputStream is = null;
+    if (true)
+      throw new UnsupportedOperationException("XXX implement me");
+    return is;
+  }
+
+  public OutputStream getPeerIdOutputStream(String fileName) {
+    OutputStream os = null;
+    if (true)
+      throw new UnsupportedOperationException("XXX implement me");
+    return os;
+  }
+
+  public boolean updatePeerIdFile(String fileName) {
+    boolean ret = false;
+    if (true)
+      throw new UnsupportedOperationException("XXX implement me");
+    return ret;
+  }
 
   /**
    * Load the current input file and properties, if needed.  Extract current
@@ -1249,11 +1392,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // XXX This happens a lot.  Does it maybe need to check files only if
     // props aren't loaded, not if neither value is true?
     if (!nodePropsLoaded) {
-      if ((getInactiveCacheFile().exists()) && (!currentCacheFile.exists())) {
-	currentVersion = INACTIVE_VERSION;
-	curInputFile = null;
-	curProps = null;
-	return true;
+      try {
+	if ((getInactiveCacheFile().exists()) && (!currentCacheFile.exists())) {
+	  currentVersion = INACTIVE_VERSION;
+	  curInputFile = null;
+	  curProps = null;
+	  return true;
+	}
+      } catch (FileSystemException e) {
+	logger.error("Error loading props from " + currentPropsFile, e);
+	throw new LockssRepository.RepositoryStateException("exists() threw: ",
+			    e);
       }
     }
     return false;
@@ -1264,20 +1413,25 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * @return int the last version, or '-1' if unable to determine
    */
   private int determineLastActiveVersion() {
-    File inactivePropFile = getInactivePropsFile();
-    if (inactivePropFile.exists()) {
-      Properties oldProps = new Properties();
-      try {
+    FileObject inactivePropFile = getInactivePropsFile();
+    try {
+      if (inactivePropFile.exists()) {
+	Properties oldProps = new Properties();
 	loadPropsInto(inactivePropFile, oldProps);
-      } catch (Exception e) {
-        logger.error("Error loading last active version from "+
-                      inactivePropFile.getPath()+".");
-        throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
+	if (oldProps!=null) {
+	  return Integer.parseInt(oldProps.getProperty(LOCKSS_VERSION_NUMBER,
+						       "-1"));
+	}
       }
-      if (oldProps!=null) {
-         return Integer.parseInt(oldProps.getProperty(LOCKSS_VERSION_NUMBER,
-             "-1"));
-       }
+    } catch (Exception e) {
+      String inactiveUrl = "BAD";
+      try {
+	inactiveUrl = inactivePropFile.getURL().toString();
+      } catch (FileSystemException ex) {
+	// No action intended
+      }
+      logger.error("Error loading last active version from "+inactiveUrl+".");
+      throw new LockssRepository.RepositoryStateException("Couldn't load version from properties file.");
     }
     return -1;
   }
@@ -1312,9 +1466,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
     } else {
       // check if version inaccurate (0, but content present)
       if (currentVersion==0) {
-        if (getContentDir().exists()) {
-          logger.debug("Content dir exists, though no content expected.");
-        }
+	try {
+	  if (getContentDir().exists()) {
+	    logger.debug("Content dir exists, though no content expected.");
+	  }
+	} catch (FileSystemException e) {
+	  logger.error("checkNodeConsistency() threw: " + e);
+	}
       }
     }
 
@@ -1340,19 +1498,32 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return false;
     }
 
+    try {
+      if (!nodePropsFile.exists()) {
+	return true;
+      }
+    } catch (FileSystemException e) {
+      logger.error("checkNodeRootConsistency() threw:" + e);
+    }
     // -if node properties exists, check that it's readable
-    if (nodePropsFile.exists()) {
-      try {
+    try {
         loadNodeProps(false);
-      } catch (LockssRepositoryImpl.RepositoryStateException rse) {
-        logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
-        // as long as the rename goes correctly, we can proceed
-        if (!PlatformUtil.updateAtomically(nodePropsFile,
-                                           new File(nodePropsFile.getAbsolutePath()
-                                                    + FAULTY_FILE_EXTENSION))) {
-          logger.error("Error renaming nodeProps file");
-          return false;
-        }
+    } catch (LockssRepositoryImpl.RepositoryStateException rse) {
+      logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
+      // as long as the rename goes correctly, we can proceed
+      String errFilePath = nodePropsFile.getName().getPath() +
+	FAULTY_FILE_EXTENSION;
+      FileObject errFile = null;
+      try {
+	errFile = repository.getFileSystem().resolveFile(errFilePath);
+      } catch (FileSystemException e) {
+	logger.error("checkNodeRootConsistency(" + errFilePath +
+		     ") threw: " + e);
+	return false;
+      }	  
+      if (!updateAtomically(nodePropsFile, errFile)) {
+	logger.error("Error renaming nodeProps file:" + errFilePath);
+	return false;
       }
     }
     return true;
@@ -1390,6 +1561,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     // check if child count accurate in cache
     checkChildCountCacheAccuracy();
 
+    try {
     // remove any residual files
     // -check temp cache and prop files
     if (tempCacheFile.exists()) {
@@ -1399,6 +1571,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (tempPropsFile.exists()) {
       logger.debug("Deleting temp props file...");
       tempPropsFile.delete();
+    }
+    } catch (FileSystemException e) {
+      logger.error("Deleting temp files threw: " + e);
     }
     return true;
   }
@@ -1411,49 +1586,61 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * @param dirFile the directory
    * @return boolean false iff the dir couldn't be created
    */
-  boolean ensureDirExists(File dirFile) {
+  protected static boolean ensureDirExists(FileObject dirFile) {
+    try {
     // --rename if a file at that position
-    if (dirFile.isFile()) {
-      logger.error("Exists but as a file: " + dirFile.getAbsolutePath());
+    if (isFile(dirFile)) {
+      logger.error("Exists but as a file: " + dirFile.getURL());
       logger.error("Renaming file to 'xxx.ERROR'...");
-      if (!PlatformUtil.updateAtomically(dirFile,
-                                         new File(dirFile.getAbsolutePath()
-                                                  + FAULTY_FILE_EXTENSION))) {
-        logger.error("Error renaming file");
+      String errFilePath = dirFile.getName().getPath() + FAULTY_FILE_EXTENSION;
+      FileObject errFile = dirFile.getFileSystem().resolveFile(errFilePath);
+      if (!updateAtomically(dirFile, errFile)) {
+        logger.error("Error renaming file:" + errFilePath);
         return false;
       }
     }
 
     // create the dir if absent
     if (!dirFile.exists()) {
-      logger.warning("Directory missing: " + dirFile.getAbsolutePath());
+      logger.warning("Directory missing: " + dirFile.getURL());
       logger.warning("Creating directory...");
-      dirFile.mkdirs();
+      dirFile.createFolder();
     }
     // make sure no problems
-    return (dirFile.exists() && dirFile.isDirectory());
+    return (dirFile.exists() && isFolder(dirFile));
+    } catch (FileSystemException e) {
+      logger.error("ensureDirExists() threw: " + e);
+      return false;
+    }
   }
 
   /**
    * Checks to see if the file exists.  Returns false if it doesn't, or if
    * it's a directory.  Renames the directory to 'dir.ERROR' before returning,
    * so that the node can be fixed later.
-   * @param testFile File to test
+   * @param testFile FileObject to test
    * @param desc the file description, used for logging
    * @return boolean true iff the file exists
    */
-  static boolean checkFileExists(File testFile, String desc) {
-    if (!testFile.exists()) {
-      logger.warning(desc+" not found.");
-      return false;
-    } else if (testFile.isDirectory()) {
-      logger.error(desc+" a directory.");
-      PlatformUtil.updateAtomically(testFile,
-                                    new File(testFile.getAbsolutePath()
-                                             + FAULTY_FILE_EXTENSION));
+  protected boolean checkFileExists(FileObject testFile, String desc) {
+    try {
+      if (!testFile.exists()) {
+	logger.warning(desc+" not found.");
+	return false;
+      } else if (isFolder(testFile)) {
+	logger.error(desc+" a directory.");
+	String errFilePath = testFile.getName().getPath() +
+	  FAULTY_FILE_EXTENSION;
+	FileObject errFile =
+	  repository.getFileSystem().resolveFile(errFilePath);
+	updateAtomically(testFile, errFile);
+	return false;
+      }
+      return true;
+    } catch (FileSystemException e) {
+      logger.error(desc + " threw: " + e);
       return false;
     }
-    return true;
   }
 
   /**
@@ -1462,15 +1649,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   void checkChildCountCacheAccuracy() {
     int count = 0;
-    File[] children = nodeRootFile.listFiles();
+    FileObject[] children = null;
+    try {
+      children = nodeRootFile.getChildren();
+    } catch (FileSystemException e) {
+      logger.error("checkchildCountCacheAccuracy() threw: " + e);
+    }
     if (children == null) {
       String msg = "No cache directory located for: " + url;
       logger.error(msg);
       throw new LockssRepository.RepositoryStateException(msg);
     }
     for (int ii=0; ii<children.length; ii++) {
-      File child = children[ii];
-      if (!child.isDirectory()) continue;
+      FileObject child = children[ii];
+      if (!isFolder(child)) continue;
       if (child.getName().equals(contentDir.getName())) continue;
       count++;
     }
@@ -1496,12 +1688,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   protected void writeNodeProperties() {
     try {
-      OutputStream os = new BufferedOutputStream(new FileOutputStream(nodePropsFile));
+      OutputStream os = new BufferedOutputStream(nodePropsFile.getContent().getOutputStream());
       nodeProps.store(os, "Node properties");
       os.close();
     } catch (IOException ioe) {
-      logger.error("Couldn't write node properties for " +
-                   nodePropsFile.getPath()+".");
+      String nodeUrl = "BAD";
+      try {
+	nodeUrl = nodePropsFile.getURL().toString();
+      } catch (FileSystemException e) {
+	// No action intended
+      }
+      logger.error("Couldn't write node properties for " + nodeUrl+".");
       throw new LockssRepository.RepositoryStateException("Couldn't write node properties file.");
     }
   }
@@ -1509,64 +1706,148 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // functions to initialize the file handles
 
   private void initCurrentCacheFile() {
-    currentCacheFile = new File(getContentDir(), CURRENT_FILENAME);
+    try {
+      currentCacheFile = getContentDir().resolveFile(CURRENT_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(CURRENT_FILENAME + " threw: " + e);
+      currentCacheFile = null;
+    }
   }
 
   private void initCurrentPropsFile() {
-    currentPropsFile = new File(getContentDir(), CURRENT_PROPS_FILENAME);
+    try {
+      currentPropsFile = getContentDir().resolveFile(CURRENT_PROPS_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(CURRENT_PROPS_FILENAME + " threw: " + e);
+      currentPropsFile = null;
+    }
   }
 
   private void initTempCacheFile() {
-    tempCacheFile = new File(getContentDir(), TEMP_FILENAME);
+    try {
+      tempCacheFile = getContentDir().resolveFile(TEMP_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(TEMP_FILENAME + " threw: " + e);
+      tempCacheFile = null;
+    }
   }
 
   private void initTempPropsFile() {
-    tempPropsFile = new File(getContentDir(), TEMP_PROPS_FILENAME);
+    try {
+      tempPropsFile = getContentDir().resolveFile(TEMP_PROPS_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(TEMP_PROPS_FILENAME + " threw: " + e);
+      tempPropsFile = null;
+    }
   }
   
   private void initAgreementFile() {
-    agreementFile = new File(nodeLocation, AGREEMENT_FILENAME);
+    try {
+      agreementFile = getContentDir().resolveFile(AGREEMENT_FILENAME);
 //    ppisAgreementFile = new File(nodeLocation, AGREEMENT_FILENAME + ".ppis");
+    } catch (FileSystemException e) {
+      logger.error(AGREEMENT_FILENAME + " threw: " + e);
+      agreementFile = null;
+    }
   }
   
   private void initTempAgreementFile() {
-    tempAgreementFile = new File(nodeLocation, TEMP_AGREEMENT_FILENAME);
+    try {
+      tempAgreementFile = getContentDir().resolveFile(TEMP_AGREEMENT_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(TEMP_AGREEMENT_FILENAME + " threw: " + e);
+      tempAgreementFile = null;
+    }
   }
 
   private void initNodePropsFile() {
-    nodePropsFile = new File(nodeLocation, NODE_PROPS_FILENAME);
+    try {
+      nodePropsFile = getContentDir().resolveFile(NODE_PROPS_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(NODE_PROPS_FILENAME + " threw: " + e);
+      nodePropsFile = null;
+    }
   }
 
   protected void initNodeRoot() {
-    nodeRootFile = new File(nodeLocation);
+    try {
+      nodeRootFile = repository.getFileSystem().resolveFile(nodeLocation);
+    } catch (FileSystemException e) {
+      logger.error(nodeLocation + " threw: " + e);
+      nodeRootFile = null;
+    }
   }
 
-  protected File getInactiveCacheFile() { // UsedTestRepositoryNodeImpl
-    return new File(getContentDir(), INACTIVE_FILENAME);
+  protected FileObject getInactiveCacheFile() { // Used TestRepositoryNodeImpl
+    try {
+      return getContentDir().resolveFile(INACTIVE_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(nodeLocation + " threw: " + e);
+      return null;
+    }
   }
 
-  protected File getInactivePropsFile() { // UsedTestRepositoryNodeImpl
-    return new File(getContentDir(), INACTIVE_PROPS_FILENAME);
+  protected FileObject getInactivePropsFile() { // Used TestRepositoryNodeImpl
+    try {
+      return getContentDir().resolveFile(INACTIVE_PROPS_FILENAME);
+    } catch (FileSystemException e) {
+      logger.error(INACTIVE_PROPS_FILENAME + " threw: " + e);
+      return null;
+    }
   }
 
-  protected File getContentDir() { // Used TestRepositoryNodeImpl
+  protected FileObject getContentDir() { // Used TestRepositoryNodeImpl
     if (contentDir == null) {
-      contentDir = new File(nodeLocation, CONTENT_DIR);
+      try {
+	contentDir = repository.getFileSystem().resolveFile(nodeLocation +
+							    "/" + CONTENT_DIR);
+      } catch (FileSystemException e) {
+	logger.error(nodeLocation + "/" + CONTENT_DIR + " threw: " + e);
+	return null;
+      }
     }
     return contentDir;
   }
 
+  protected FileObject getFileObject(String name) { // Used TestRepositoryNodeImpl
+    try {
+      if (contentDir == null) {
+	contentDir = repository.getFileSystem().resolveFile(nodeLocation +
+							    "/" + CONTENT_DIR);
+      }
+      return contentDir.resolveFile(name);
+    } catch (FileSystemException e) {
+      logger.error(nodeLocation + "/" + name + " threw: " + e);
+      return null;
+    }
+  }
+
   // return array of version numbers of all present previous versions
   int[] getVersionNumbers() {
-    String[] names = getContentDir().list(NumericFilenameFilter.INSTANCE);
-    int[] res = new int[names.length];
-    for (int ix = names.length - 1; ix >= 0; ix--) {
+    FileObject[] files = null;
+    try {
+      files = getContentDir().getChildren();
+    } catch (FileSystemException e) {
+      logger.error("getVersionNumbers() threw: " + e);
+    }
+    if (files == null) {
+      return new int[0];
+    }
+    int[] temp = new int[files.length];
+    int count = 0;
+    for (int ix = 0; ix < files.length; ix++) {
       try {
-	res[ix] = Integer.parseInt(names[ix]);
+	FileName fn = files[ix].getName();
+	logger.debug3("Index: " + ix + " = " + fn.getPath() + " " + fn.getBaseName());
+	temp[count] = Integer.parseInt(fn.getBaseName());
       } catch (NumberFormatException e) {
-	logger.warning("Non-numeric numeric filename: " +
-		       names[ix] + ": " + e.getMessage());
+	continue;
       }
+      count++;
+    }
+    int[] res = new int[count];
+    for (int ix = 0; ix < count; ix++) {
+      res[ix] = temp[ix];
     }
     return res;
   }
@@ -1598,26 +1879,98 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // functions to get a 'versioned' content or props file, such as
   // '1', '1.props', or '1.props-123135131' (the dated props)
 
-  protected File getVersionedCacheFile(int version) { // Used TestRepositoryNodeImpl
-    return new File(getContentDir(), Integer.toString(version));
+  protected FileObject getVersionedCacheFile(int version) { // Used TestRepositoryNodeImpl
+    try {
+      return getContentDir().resolveFile(Integer.toString(version));
+    } catch (FileSystemException e) {
+      logger.error(url + " v " + version + " threw: " + e);
+      return null;
+    }
   }
 
-  protected File getVersionedPropsFile(int version) { // Used TestRepositoryNodeImpl
+  protected FileObject getVersionedPropsFile(int version) { // Used TestRepositoryNodeImpl
     StringBuffer buffer = new StringBuffer();
     buffer.append(version);
     buffer.append(PROPS_EXTENSION);
-    return new File(getContentDir(), buffer.toString());
+    try {
+      return getContentDir().resolveFile(buffer.toString());
+    } catch (FileSystemException e) {
+      logger.error(buffer + " threw: " + e);
+      return null;
+    }
   }
 
-  protected File getDatedVersionedPropsFile(int version, long date) { // Used TestRepositoryNodeImpl
+  protected FileObject getDatedVersionedPropsFile(int version, long date) { // Used TestRepositoryNodeImpl
     StringBuffer buffer = new StringBuffer();
     buffer.append(version);
     buffer.append(PROPS_EXTENSION);
     buffer.append("-");
     buffer.append(date);
-    return new File(getContentDir(), buffer.toString());
+    try {
+      return getContentDir().resolveFile(buffer.toString());
+    } catch (FileSystemException e) {
+      logger.error(buffer + " threw: " + e);
+      return null;
+    }
   }
-  
+
+  /*
+   * Version of FileUtil.updateAtomically for FileObject
+   */
+  protected static boolean updateAtomically(FileObject f1, FileObject f2) {
+    boolean res = false;
+    if (true)
+      throw new UnsupportedOperationException("XXX implement me");
+    return res;
+  }
+
+  /*
+   * Version of FileUtil.isContentEqual() for FileObject
+   */
+  public static boolean isContentEqual(FileObject file1, FileObject file2)
+      throws IOException {
+    if ((file1==null) || (file2==null)) {
+      // null is never equal
+      return false;
+    }
+
+    if (!isFile(file1) || !isFile(file2)) {
+      // don't compare directories
+      return false;
+    }
+
+    // compare both streams
+    InputStream is1 = null;
+    InputStream is2 = null;
+
+    try {
+      FileContent fc1 = file1.getContent();
+      FileContent fc2 = file2.getContent();
+      if (fc1.getSize() != fc2.getSize()) {
+	// easy length check
+	return false;
+      }
+
+      is1 = fc1.getInputStream();
+      is2 = fc2.getInputStream();
+
+      return FileUtil.isContentEqual(is1, is2);
+    } catch (FileSystemException e) {
+      // if the file is absent, no comparison
+      logger.error("isContentEqual() threw: " + e);
+      return false;
+    } finally {
+      // make sure to close open input streams
+      if (is1!=null) {
+        is1.close();
+      }
+      if (is2!=null) {
+        is2.close();
+      }
+    }
+  }
+
+
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[reponode: (");
@@ -1638,17 +1991,23 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public class RepositoryNodeVersionImpl implements RepositoryNodeVersion {
     private int version;
-    private File contentFile = null;
+    private FileObject contentFile = null;
 
     RepositoryNodeVersionImpl(int version) {
       this.version = version;
     }
 
     public boolean hasContent() {
-      return getContentFile().exists();
+      boolean ret = false;
+      try {
+	ret = getContentFile().exists();
+      } catch (FileSystemException e) {
+	// no action intended
+      }
+      return ret;
     }
 
-    private File getContentFile() {
+    private FileObject getContentFile() {
       if (contentFile == null) {
 	contentFile = getVersionedCacheFile(version);
       }
@@ -1659,7 +2018,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (!hasContent()) {
 	throw new UnsupportedOperationException("Version has no content");
       }
-      return getContentFile().length();
+      try {
+	return getContentFile().getContent().getSize();
+      } catch (FileSystemException e) {
+	throw new UnsupportedOperationException("GetContentSize: " +
+						e.toString());
+      }
     }
 
     public int getVersion() {
@@ -1682,13 +2046,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	this.version = version;
       }
 
-      protected File getContentFile() {
+      protected FileObject getContentFile() {
 	return RepositoryNodeVersionImpl.this.getContentFile();
       }
 
       protected Properties getProps() {
 	if (props == null) {
-	  File propsFile = getVersionedPropsFile(version);
+	  FileObject propsFile = getVersionedPropsFile(version);
 	  try {
 	    props = loadProps(propsFile);
 	  } catch (IOException e) {
@@ -1754,7 +2118,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
 
-    protected File getContentFile() {
+    protected FileObject getContentFile() {
       return curInputFile;
     }
 
@@ -1771,16 +2135,22 @@ public class RepositoryNodeImpl implements RepositoryNode {
     private void ensureInputStream() {
       if (is == null) {
 	assertContent();
+	FileObject f = getContentFile();
+	String url = "Bad URL";
 	try {
-	  is = new BufferedInputStream(new FileInputStream(getContentFile()));
+	  url = f.getURL().toString();
+	} catch (FileSystemException e) {
+	  // no action intended
+	}
+	try {
+	  is = new BufferedInputStream(f.getContent().getInputStream());
 	  if (CurrentConfig.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
 	                                    DEFAULT_MONITOR_INPUT_STREAMS)) {
-	    is = new MonitoringInputStream(is, getContentFile().toString());
+	    is = new MonitoringInputStream(is, url);
 	  }
 	  props = getProps();
 	} catch (IOException e) {
-	  logger.error("Couldn't get inputstream for '" +
-		       getContentFile().getPath() + "'");
+	  logger.error("Couldn't get inputstream for '" + url + "'");
 	  handleOpenError(e);
 	  throw new LockssRepository.RepositoryStateException ("Couldn't open InputStream: " + e.toString());
 	}
@@ -1792,10 +2162,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Simple comparator which uses File.compareTo() for sorting.
    */
-  private static class FileComparator implements Comparator {
+  private static class FileObjectComparator implements Comparator {
     public int compare(Object o1, Object o2) {
       // compares file pathnames
-      return ((File)o1).getName().compareTo(((File)o2).getName());
+      return ((FileObject)o1).getName().compareTo(((FileObject)o2).getName());
     }
   }
 }

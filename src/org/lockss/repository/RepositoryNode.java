@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.21 2007-03-17 04:19:30 smorabito Exp $
+ * $Id: RepositoryNode.java,v 1.21.56.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -244,6 +244,22 @@ public interface RepositoryNode extends RepositoryNodeVersion {
    * @param peer The peer to check for agreement with this node.
    */
   public boolean hasAgreement(PeerIdentity peer);
+
+  /**
+   * Returns an InputStream for the PersistentPeerIdSet file
+   */
+  public InputStream getPeerIdInputStream(String fileName);
+
+  /**
+   * Returns an OutputStream for a temporary PersistentPeerIdSet file
+   */
+  public OutputStream getPeerIdOutputStream(String fileName);
+
+  /**
+   * Returns true if the permanent PersistentPeerIdSet set
+   * has successfully been atomically updated from the temporary.
+   */
+  public boolean updatePeerIdFile(String fileName);
 
   /**
    * RepositoryNodeContents is used to obtain Properties and InputStream.

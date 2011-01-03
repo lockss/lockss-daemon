@@ -1,5 +1,5 @@
 /*
- * $Id: FileTestUtil.java,v 1.8 2010-04-05 17:22:57 pgust Exp $
+ * $Id: FileTestUtil.java,v 1.8.8.1 2011-01-03 18:30:06 dshr Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,7 +36,14 @@ import java.net.*;
 import java.security.*;
 import org.lockss.util.*;
 
-/** Utilities for Files involved in the test hierarchy
+import org.apache.commons.vfs.FileContent;
+import org.apache.commons.vfs.FileName;
+import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.FileSystem;
+import org.apache.commons.vfs.FileSystemException;
+import org.apache.commons.vfs.FileType;
+
+/** Utilities for Files and FileObjects involved in the test hierarchy
  */
 public class FileTestUtil {
   /** Create and return the name of a temp file that will be deleted
@@ -62,6 +69,32 @@ public class FileTestUtil {
     File f = File.createTempFile(prefix, suffix, dir);
     if (!LockssTestCase.isKeepTempFiles()) {
       f.deleteOnExit();
+    }
+    return f;
+  }
+
+  public static FileObject tempFileObject(String prefix)
+      throws IOException {
+    return tempFileObject(prefix, null, null);
+  }
+
+  public static FileObject tempFileObject(String prefix, FileObject dir)
+      throws IOException {
+    return tempFileObject(prefix, null, dir);
+  }
+
+  public static FileObject tempFileObject(String prefix, String suffix)
+      throws IOException {
+    return tempFileObject(prefix, suffix, null);
+  }
+
+  public static FileObject tempFileObject(String prefix, String suffix, FileObject dir)
+      throws IOException {
+    if (true) throw new UnsupportedOperationException("XXX implement me");
+    FileObject f = null;  // XXX
+    // FileObject f = FileObject.createTempFileObject(prefix, suffix, dir);
+    if (!LockssTestCase.isKeepTempFiles()) {
+      // f.deleteOnExit();
     }
     return f;
   }
@@ -138,4 +171,14 @@ public class FileTestUtil {
     }
     return null;
   }
+
+  /**
+   * Return a FileObject that is guaranteed to throw if created.
+   */
+  public static FileObject impossibleFileObject()
+      throws IOException {
+    if (true) throw new UnsupportedOperationException("XXX implement me");
+    return null;
+  }
+
 }

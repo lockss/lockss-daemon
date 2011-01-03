@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.101 2010-08-12 07:30:16 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.101.2.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.poller;
 import java.io.*;
 import java.security.*;
 import java.util.*;
+import org.apache.commons.vfs.FileObject;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -577,7 +578,8 @@ public class TestPollManager extends LockssTestCase {
 
   class MyMockHistoryRepository extends MockHistoryRepository {
     public DatedPeerIdSet getNoAuPeerSet() {
-      return new DatedPeerIdSetImpl(new File("foo.bar"), idmanager);
+      RepositoryNode node = new MockRepositoryNode();
+      return new DatedPeerIdSetImpl(node, "foo.bar", idmanager);
     }
   }
 
@@ -599,8 +601,8 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.setNodeManager(nodeMgr, mau);
     MockAuState maus = new MockAuState();
     nodeMgr.setAuState(maus);
-    File file = FileTestUtil.tempFile("noau");
-    DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(file, idmanager);
+    RepositoryNode node = new MockRepositoryNode();
+    DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(node, "noau", idmanager);
     assertTrue(noAuSet.isEmpty());
     assertTrue(noAuSet.getDate() < 0);
     pollmanager.ageNoAuSet(mau, noAuSet);

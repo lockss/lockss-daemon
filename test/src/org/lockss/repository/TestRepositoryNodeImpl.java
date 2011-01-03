@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.61.10.1 2010-12-02 22:22:30 dshr Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.61.10.2 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -35,6 +35,10 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.FileType;
+import org.apache.commons.vfs.FileSystemException;
+
 import org.lockss.test.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -389,8 +393,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
+  FileObject normalizeFile(RepositoryNodeImpl node, String name) {
+    FileObject file = node.getFileObject(name);
+    return node.normalize(file);
+  }
+
   String normalizeName(RepositoryNodeImpl node, String name) {
-    return node.normalize(new File(name)).getPath();
+      return node.normalize(node.getFileObject(name)).getName().getPath();
   }
 
   public void testNormalizeUrlEncodingCase() throws Exception {
@@ -400,15 +409,19 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 	}
     RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
     // nothing to normalize
-    File file = new File("foo/bar/baz");
-    assertSame(file, node.normalize(file));
-    file = new File("foo/bar/ba%ABz");
-    assertSame(file, node.normalize(file));
+    String fileName = "foo/bar/baz";
+    FileObject file = node.getFileObject(fileName);
+    assertSame(file, node.normalize(node.getFileObject(fileName)));
+    fileName = "foo/bar/ba%ABz";
+    file = node.getFileObject(fileName);
+    assertSame(file, node.normalize(node.getFileObject(fileName)));
     // unnormalized in parent dir name is left alone
-    file = new File("ba%abz/bar");
-    assertSame(file, node.normalize(file));
-    file = new File("foo/ba%abz/bar");
-    assertSame(file, node.normalize(file));
+    fileName = "ba%abz/bar";
+    file = node.getFileObject(fileName);
+    assertSame(file, node.normalize(node.getFileObject(fileName)));
+    fileName = "foo/ba%abz/bar";
+    file = node.getFileObject(fileName);
+    assertSame(file, node.normalize(node.getFileObject(fileName)));
     // should be normalized
     assertEquals("ba%ABz", normalizeName(node, "ba%aBz"));
     assertEquals("/ba%ABz", normalizeName(node, "/ba%aBz"));
@@ -421,19 +434,30 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testNormalizeTrailingQuestion() throws Exception {
     RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
     // nothing to normalize
-    File file = new File("foo/bar/baz");
-    assertSame(file, node.normalize(file));
-    file = new File("foo/bar/ba?z");
-    assertSame(file, node.normalize(file));
+    String fileName = "foo/bar/baz";
+    FileObject file = node.getFileObject(fileName);
+    assertSame(file, normalizeFile(node, fileName));
+    fileName = "foo/bar/ba?z";
+    file = node.getFileObject(fileName);
+    assertSame(file, normalizeFile(node, fileName));
     // unnormalized in parent dir name is left alone
-    file = new File("ba?/bar");
-    assertSame(file, node.normalize(file));
+    fileName = "ba?/bar";
+    file = node.getFileObject(fileName);
+    assertSame(file, normalizeFile(node, fileName));
     // should be normalized
     assertEquals("baz", normalizeName(node, "baz?"));
-    assertEquals(new File("/ba").getPath(), normalizeName(node, "/ba?"));
-    assertEquals(new File("foo/bar/bar").getPath(), normalizeName(node, "foo/bar/bar?"));
-    assertEquals(new File("foo/ba?r/bar").getPath(), normalizeName(node, "foo/ba?r/bar?"));
-    assertEquals(new File("foo/bar?/bar").getPath(), normalizeName(node, "foo/bar?/bar?"));
+    fileName = "/ba";
+    file = node.getFileObject(fileName);
+    assertEquals(file.getName().getPath(), normalizeName(node, fileName + "?"));
+    fileName = "foo/bar/bar";
+    file = node.getFileObject(fileName);
+    assertEquals(file.getName().getPath(), normalizeName(node, fileName + "?"));
+    fileName = "foo/ba?r/bar";
+    file = node.getFileObject(fileName);
+    assertEquals(file.getName().getPath(), normalizeName(node, fileName + "?"));
+    fileName = "foo/bar?/bar";
+    file = node.getFileObject(fileName);
+    assertEquals(file.getName().getPath(), normalizeName(node, fileName + "?"));
 
     // disable trailing ? normalization
     ConfigurationUtil.addFromArgs(UrlUtil.PARAM_NORMALIZE_EMPTY_QUERY,
@@ -1095,12 +1119,12 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf = createLeaf(url, "test stream", props);
 
     RepositoryNodeImpl leafImpl = (RepositoryNodeImpl)leaf;
-    File propsFile = new File(leafImpl.getContentDir(),
-			      RepositoryNodeImpl.CURRENT_PROPS_FILENAME);
+    FileObject propFile =
+      leafImpl.getFileObject(RepositoryNodeImpl.CURRENT_PROPS_FILENAME);
+    OutputStream os =
+      new BufferedOutputStream(propFile.getContent().getOutputStream());
     // Write a Malformed unicode escape that will cause Properties.load()
     // to throw
-    OutputStream os =
-      new BufferedOutputStream(new FileOutputStream(propsFile, true));
     os.write("\\uxxxxfoo=bar".getBytes());
     os.close();
     return leaf;
@@ -1522,10 +1546,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
 
-    File lastProps = new File(leaf.contentDir, "1.props");
+    FileObject lastProps = leaf.getFileObject("1.props");
     assertTrue(lastProps.exists());
     InputStream is =
-        new BufferedInputStream(new FileInputStream(lastProps));
+      new BufferedInputStream(lastProps.getContent().getInputStream());
     props.load(is);
     is.close();
     // make sure the 'was inactive' property hasn't been lost
@@ -1644,14 +1668,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     contentStr = contentStr + File.separator;
     String expectedStr = contentStr + "123";
     assertEquals(expectedStr,
-                 node.getVersionedCacheFile(123).getAbsolutePath());
+                 node.getVersionedCacheFile(123).getName().getPath());
     expectedStr = contentStr + "123.props";
     assertEquals(expectedStr,
-                 node.getVersionedPropsFile(123).getAbsolutePath());
+                 node.getVersionedPropsFile(123).getName().getPath());
     expectedStr = contentStr + "inactive";
-    assertEquals(expectedStr, node.getInactiveCacheFile().getAbsolutePath());
+    assertEquals(expectedStr, node.getInactiveCacheFile().getName().getPath());
     expectedStr = contentStr + "inactive.props";
-    assertEquals(expectedStr, node.getInactivePropsFile().getAbsolutePath());
+    assertEquals(expectedStr, node.getInactivePropsFile().getName().getPath());
   }
 
   public void testCheckNodeConsistency() throws Exception {
@@ -1699,13 +1723,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // creates dir, returns true when missing
     assertTrue(leaf.checkNodeRootConsistency());
     assertTrue(leaf.nodeRootFile.exists());
-    assertTrue(leaf.nodeRootFile.isDirectory());
+    assertEquals(FileType.FOLDER, leaf.getFileObject("").getType());
 
     // fail node props load
     leaf.getChildCount();
     assertTrue(leaf.nodePropsFile.exists());
-    File renameFile = new File(leaf.nodePropsFile.getAbsolutePath()+
-                               RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
+    FileObject renameFile =
+      leaf.getFileObject(RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
     assertFalse(renameFile.exists());
     leaf.failPropsLoad = true;
     assertTrue(leaf.checkNodeRootConsistency());
@@ -1726,42 +1750,42 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(leaf.checkContentConsistency());
 
     // should return false if content file absent
-    File renameFile =
-        new File(leaf.currentCacheFile.getAbsolutePath()+"RENAME");
-    assertTrue(PlatformUtil.updateAtomically(leaf.currentCacheFile, renameFile));
+    FileObject renameFile = leaf.getFileObject("RENAME");
+    FileObject leafFile = leaf.getFileObject("");
+    assertTrue(RepositoryNodeImpl.updateAtomically(leafFile, renameFile));
     assertFalse(leaf.checkContentConsistency());
-    PlatformUtil.updateAtomically(renameFile, leaf.currentCacheFile);
+    RepositoryNodeImpl.updateAtomically(renameFile, leafFile);
     assertTrue(leaf.checkContentConsistency());
 
     // should return false if content props absent
-    PlatformUtil.updateAtomically(leaf.currentPropsFile, renameFile);
+    RepositoryNodeImpl.updateAtomically(leafFile, renameFile);
     assertFalse(leaf.checkContentConsistency());
-    PlatformUtil.updateAtomically(renameFile, leaf.currentPropsFile);
+    RepositoryNodeImpl.updateAtomically(renameFile, leafFile);
     assertTrue(leaf.checkContentConsistency());
 
     // should return false if inactive and files missing
     leaf.currentVersion = RepositoryNodeImpl.INACTIVE_VERSION;
     assertFalse(leaf.checkContentConsistency());
-    PlatformUtil.updateAtomically(leaf.currentPropsFile, leaf.getInactivePropsFile());
+    RepositoryNodeImpl.updateAtomically(leafFile, leaf.getInactivePropsFile());
     assertFalse(leaf.checkContentConsistency());
-    PlatformUtil.updateAtomically(leaf.currentCacheFile, leaf.getInactiveCacheFile());
+    RepositoryNodeImpl.updateAtomically(leafFile, leaf.getInactiveCacheFile());
     assertTrue(leaf.checkContentConsistency());
-    PlatformUtil.updateAtomically(leaf.getInactivePropsFile(), leaf.currentPropsFile);
+    RepositoryNodeImpl.updateAtomically(leaf.getInactivePropsFile(), leafFile);
     assertFalse(leaf.checkContentConsistency());
     // finish restoring
-    PlatformUtil.updateAtomically(leaf.getInactiveCacheFile(), leaf.currentCacheFile);
+    RepositoryNodeImpl.updateAtomically(leaf.getInactiveCacheFile(), leafFile);
     leaf.currentVersion = 1;
     assertTrue(leaf.checkContentConsistency());
 
     // remove residual files
     // - create files
-    FileOutputStream fos = new FileOutputStream(leaf.tempCacheFile);
+    OutputStream fos = leaf.tempCacheFile.getContent().getOutputStream();
     StringInputStream sis = new StringInputStream("test stream");
     StreamUtil.copy(sis, fos);
     fos.close();
     sis.close();
 
-    fos = new FileOutputStream(leaf.tempPropsFile);
+    fos = leaf.tempPropsFile.getContent().getOutputStream();
     sis = new StringInputStream("test stream");
     StreamUtil.copy(sis, fos);
     fos.close();
@@ -1776,71 +1800,89 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 }
 
 
+  static final String testPath = "testDir";
   public void testEnsureDirExists() throws Exception {
     RepositoryNodeImpl leaf =
         (RepositoryNodeImpl)createLeaf("http://www.example.com", null, null);
-    File testDir = new File(tempDirPath, "testDir");
-    // should return true if dir exists
-    testDir.mkdir();
-    assertTrue(testDir.exists());
-    assertTrue(testDir.isDirectory());
-    assertTrue(leaf.ensureDirExists(testDir));
-
-    // should create dir, return true if not exists
-    testDir.delete();
+    FileObject testDir = leaf.getFileObject(testPath);
     assertFalse(testDir.exists());
+    // should create dir, return true since it doesn't exist
     assertTrue(leaf.ensureDirExists(testDir));
+    testDir = leaf.getFileObject(testPath);
     assertTrue(testDir.exists());
-    assertTrue(testDir.isDirectory());
-
-    // should rename file, create dir, return true if file exists
-    // -create file
-    testDir.delete();
-    FileOutputStream fos = new FileOutputStream(testDir);
+    assertEquals(FileType.FOLDER, testDir.getType());
+    // should return true now that dir exists
+    assertTrue(leaf.ensureDirExists(testDir));
+    testDir = leaf.getFileObject(testPath);
+    assertTrue(testDir.exists());
+    assertEquals(FileType.FOLDER, testDir.getType());
+    // delete the dir, replace with a file
+    assertTrue(testDir.delete());
+    testDir = leaf.getFileObject(testPath);
+    assertFalse(testDir.exists());
+    OutputStream fos = testDir.getContent().getOutputStream();
+    assertNotNull(fos);
     StringInputStream sis = new StringInputStream("test stream");
     StreamUtil.copy(sis, fos);
     fos.close();
     sis.close();
     assertTrue(testDir.exists());
-    assertTrue(testDir.isFile());
-
-    // rename via 'ensureDirExists()'
-    File renameFile = new File(tempDirPath, "testDir"+
-        RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
+    assertEquals(FileType.FILE, testDir.getType());
+    FileObject renameFile =
+      leaf.getFileObject(testPath + RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
     assertFalse(renameFile.exists());
+    // Should rename file, create dir, return true
     assertTrue(leaf.ensureDirExists(testDir));
-    assertTrue(testDir.isDirectory());
-    assertEquals("test stream", StringUtil.fromFile(renameFile));
+    testDir = leaf.getFileObject(testPath);
+    assertTrue(testDir.exists());
+    assertEquals(FileType.FOLDER, testDir.getType());
+    renameFile =
+      leaf.getFileObject(testPath + RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
+    assertTrue(renameFile.exists());
+    assertEquals(FileType.FILE, renameFile.getType());
+    assertEquals("test stream",
+		 StringUtil.fromInputStream(renameFile.getContent().getInputStream()));
+    assertTrue(renameFile.delete());
+    assertTrue(testDir.delete());
   }
 
   public void testCheckFileExists() throws Exception {
-    // return false if doesn't exist
-    File testFile = new File(tempDirPath, "testFile");
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com", null, null);
+    FileObject testFile = leaf.getFileObject(testPath);
     assertFalse(testFile.exists());
-    assertFalse(RepositoryNodeImpl.checkFileExists(testFile, "test file"));
-
-    // rename if dir (to make room for file creation), then return false
-    testFile.mkdir();
-    File renameDir = new File(tempDirPath, "testFile"+
-        RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
-    assertTrue(testFile.exists());
-    assertTrue(testFile.isDirectory());
-    assertFalse(renameDir.exists());
-    assertFalse(RepositoryNodeImpl.checkFileExists(testFile, "test file"));
-    assertFalse(testFile.exists());
-    assertTrue(renameDir.exists());
-    assertTrue(renameDir.isDirectory());
-
-    // return true if exists
-    FileOutputStream fos = new FileOutputStream(testFile);
+    OutputStream fos = testFile.getContent().getOutputStream();
+    assertNotNull(fos);
     StringInputStream sis = new StringInputStream("test stream");
     StreamUtil.copy(sis, fos);
     fos.close();
     sis.close();
     assertTrue(testFile.exists());
-    assertTrue(testFile.isFile());
-    assertTrue(RepositoryNodeImpl.checkFileExists(testFile, "test file"));
-    assertEquals("test stream", StringUtil.fromFile(testFile));
+    assertEquals(FileType.FILE, testFile.getType());
+    // Return true if file exists
+    assertTrue(leaf.checkFileExists(testFile, "test file"));
+    testFile = leaf.getFileObject(testPath);
+    assertTrue(testFile.exists());
+    assertEquals(FileType.FILE, testFile.getType());
+    assertTrue(testFile.delete());
+    assertFalse(testFile.exists());
+    // Return false if file does not exist
+    assertFalse(leaf.checkFileExists(testFile, "test file"));
+    testFile = leaf.getFileObject(testPath);
+    assertFalse(testFile.exists());
+    assertTrue(leaf.ensureDirExists(testFile));
+    testFile = leaf.getFileObject(testPath);
+    assertTrue(testFile.exists());
+    assertEquals(FileType.FOLDER, testFile.getType());
+    // Return false and rename if dir exists
+    assertFalse(leaf.checkFileExists(testFile, "test file"));
+    testFile = leaf.getFileObject(testPath);
+    assertFalse(testFile.exists());
+    testFile = leaf.getFileObject(testPath +
+				  RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
+    assertTrue(testFile.exists());
+    assertEquals(FileType.FOLDER, testFile.getType());
+    assertTrue(testFile.delete());
   }
 
   public void testCheckChildCountCacheAccuracy() throws Exception {
@@ -1937,13 +1979,17 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository);
     }
 
-    protected File getDatedVersionedPropsFile(int version, long date) {
+    protected FileObject getDatedVersionedPropsFile(int version, long date) {
       StringBuffer buffer = new StringBuffer();
       buffer.append(version);
       buffer.append(PROPS_EXTENSION);
       buffer.append("-");
       buffer.append(dateValue);
-      return new File(getContentDir(), buffer.toString());
+      try {
+	return getContentDir().resolveFile(buffer.toString());
+      } catch (FileSystemException e) {
+	return null;
+      }
     }
 
     void loadNodeProps(boolean okIfNotThere) {
@@ -1978,11 +2024,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       }
     }
 
-    boolean ensureDirExists(File dirFile) {
+    protected static boolean ensureDirExists(FileObject dirFile) {
       if (failEnsureDirExists) {
         return false;
       } else {
-        return super.ensureDirExists(dirFile);
+        return RepositoryNodeImpl.ensureDirExists(dirFile);
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8 2008-11-26 01:10:53 edwardsb1 Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.1 2011-01-03 18:30:06 dshr Exp $
  */
 
 /*
@@ -53,13 +53,15 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.util.*;
+import org.lockss.repository.RepositoryNode;
 
 public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   // Static constants 
   protected static final String TEMP_EXTENSION = ".temp";
 
   // Internal variables
-  protected File m_filePeerId;
+  protected RepositoryNode m_node;
+  protected String m_fileName;
   private IdentityManager m_identityManager;
   protected boolean m_isInMemory;
   private static Logger m_logger = Logger.getLogger("PersistentPeerIdSet");
@@ -67,8 +69,11 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   protected boolean m_changed = false;
 
 
-  public PersistentPeerIdSetImpl(File filePeerId, IdentityManager identityManager) {
-    m_filePeerId = filePeerId;
+  public PersistentPeerIdSetImpl(RepositoryNode node,
+				 String fileName,
+				 IdentityManager identityManager) {
+    m_node = node;
+    m_fileName = fileName;
     m_identityManager = identityManager;
     m_isInMemory = false;
     m_setPeerId = null;
@@ -176,7 +181,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     if (o instanceof PersistentPeerIdSetImpl) {
       PersistentPeerIdSetImpl ppis = (PersistentPeerIdSetImpl) o;
 
-      return m_filePeerId.equals(ppis.m_filePeerId);
+      return m_node.equals(ppis.m_node);
     } else {
       return false;
     }
@@ -293,13 +298,13 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
 //  }
 
   
-  // The following method is used to sequence the persistent peer ID set.
+//   // The following method is used to sequence the persistent peer ID set.
   
-  public File getFilePeerId() throws IOException {
-    storeIfNecessary();
+//   protected File getFilePeerId() throws IOException {
+//     storeIfNecessary();
     
-    return m_filePeerId;
-  }
+//     return m_filePeerId;
+//   }
       
 
   // ---- Internal methods
@@ -310,15 +315,16 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   protected void internalLoad() throws IOException {
     DataInputStream is = null;
     try {
-      if (m_filePeerId.exists()) {
-        is = new DataInputStream(new FileInputStream(m_filePeerId));
+      is = new DataInputStream(m_node.getPeerIdInputStream(m_fileName +
+							   TEMP_EXTENSION));
+      if (is != null) {
 	readData(is);
 	m_changed = false;
       } else {
 	newData();
       } 
     } catch (IOException e) {
-      m_logger.error("Load faild", e);
+      m_logger.error("Load failed", e);
       m_setPeerId = new HashSet<PeerIdentity>();
     } finally { 
       IOUtil.safeClose(is); 
@@ -355,26 +361,41 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
       return;
     }
     DataOutputStream dos = null;
-    File filePeerIdTemp =
-      FileUtil.createTempFile(m_filePeerId.getName(), TEMP_EXTENSION,
-			      m_filePeerId.getParentFile());
-    try {
-      // Loop until there are no IdentityParseExceptions
-      OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
-      dos = new DataOutputStream(new BufferedOutputStream(fileOs));
+    OutputStream os = m_node.getPeerIdOutputStream(m_fileName + TEMP_EXTENSION);
+    if (os != null) try {
+      dos = new DataOutputStream(new BufferedOutputStream(os));
       writeData(dos);
       dos.close();
-
-      if (PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
+      if (m_node.updatePeerIdFile(m_fileName + TEMP_EXTENSION)) {
 	m_changed = false;
       } else {
         m_logger.error("Unable to rename temporary agreement history file " +
-		       filePeerIdTemp);
+		       m_node.toString());
       }
     } finally {
       IOUtil.safeClose(dos);
-      filePeerIdTemp.delete();
     }
+	
+//     File filePeerIdTemp =
+//       FileUtil.createTempFile(m_filePeerId.getName(), TEMP_EXTENSION,
+// 			      m_filePeerId.getParentFile());
+//     try {
+//       // Loop until there are no IdentityParseExceptions
+//       OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
+//       dos = new DataOutputStream(new BufferedOutputStream(fileOs));
+//       writeData(dos);
+//       dos.close();
+
+//       if (PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
+// 	m_changed = false;
+//       } else {
+//         m_logger.error("Unable to rename temporary agreement history file " +
+// 		       filePeerIdTemp);
+//       }
+//     } finally {
+//       IOUtil.safeClose(dos);
+//       filePeerIdTemp.delete();
+//     }
   }
 
   protected void writeData(DataOutputStream dos) throws IOException {
@@ -457,7 +478,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
       // do here is log the fact that there was an error, and try
       // again.
       m_logger.error("Parse error while trying to decode agreement " +
-                   "history file " + m_filePeerId + ": " + ex);
+		     "history file " + m_node.toString() + ": " + ex);
     }
     return history;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.13 2010-06-17 18:48:25 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.13.6.1 2011-01-03 18:30:06 dshr Exp $
  *
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
@@ -146,25 +146,7 @@ public class FileUtil {
       fis1 = new FileInputStream(file1);
       fis2 = new FileInputStream(file2);
 
-      byte[] bytes1 = new byte[FILE_CHUNK_SIZE];
-      byte[] bytes2 = new byte[FILE_CHUNK_SIZE];
-      while (true) {
-        int bytesRead1 = fis1.read(bytes1);
-        int bytesRead2 = fis2.read(bytes2);
-
-        if (bytesRead1 != bytesRead2) {
-          // shouldn't really happen, since lengths are equal
-          return false;
-        } else if (bytesRead1==-1) {
-          // EOF reached, exit
-          break;
-        }
-
-        if (!Arrays.equals(bytes1, bytes2)) {
-          return false;
-        }
-      }
-      return true;
+      return isContentEqual(fis1, fis2);
     } catch (FileNotFoundException fnfe) {
       // if the file is absent, no comparison
       return false;
@@ -177,6 +159,41 @@ public class FileUtil {
         fis2.close();
       }
     }
+  }
+
+  /**
+   * Compares the content of two InputStreams and returns true if they are
+   * the same. If either stream is null returns false.
+   * @param file1 the first file
+   * @param file2 the second file
+   * @return true iff content is identical
+   * @throws IOException
+   */
+  public static boolean isContentEqual(InputStream fis1, InputStream fis2)
+      throws IOException {
+    if ((fis1==null) || (fis2==null)) {
+      // null is never equal
+      return false;
+    }
+
+    byte[] bytes1 = new byte[FILE_CHUNK_SIZE];
+    byte[] bytes2 = new byte[FILE_CHUNK_SIZE];
+    while (true) {
+      int bytesRead1 = fis1.read(bytes1);
+      int bytesRead2 = fis2.read(bytes2);
+
+      if (bytesRead1 != bytesRead2) {
+	return false;
+      } else if (bytesRead1==-1) {
+	// EOF reached, exit
+	break;
+      }
+
+      if (!Arrays.equals(bytes1, bytes2)) {
+	return false;
+      }
+    }
+    return true;
   }
 
   /**
