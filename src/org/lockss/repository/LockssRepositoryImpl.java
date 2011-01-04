@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.1 2011-01-03 18:30:06 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.2 2011-01-04 04:52:09 dshr Exp $
  */
 
 /*
@@ -129,7 +129,9 @@ public class LockssRepositoryImpl
 // 	new UniqueRefLruCache(repoMgr.paramNodeCacheSize);
       setNodeCacheSize(repoMgr.paramNodeCacheSize);
     }
-    fileSystem = null; // XXX - implement me
+    if (true)
+      throw new UnsupportedOperationException("XXX implement me");
+    fileSystem = null;
   }
 
   public void stopService() {

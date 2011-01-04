@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.1 2011-01-03 18:30:06 dshr Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.2 2011-01-04 04:52:08 dshr Exp $
  */
 
 /*
@@ -375,27 +375,6 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     } finally {
       IOUtil.safeClose(dos);
     }
-	
-//     File filePeerIdTemp =
-//       FileUtil.createTempFile(m_filePeerId.getName(), TEMP_EXTENSION,
-// 			      m_filePeerId.getParentFile());
-//     try {
-//       // Loop until there are no IdentityParseExceptions
-//       OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
-//       dos = new DataOutputStream(new BufferedOutputStream(fileOs));
-//       writeData(dos);
-//       dos.close();
-
-//       if (PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
-// 	m_changed = false;
-//       } else {
-//         m_logger.error("Unable to rename temporary agreement history file " +
-// 		       filePeerIdTemp);
-//       }
-//     } finally {
-//       IOUtil.safeClose(dos);
-//       filePeerIdTemp.delete();
-//     }
   }
 
   protected void writeData(DataOutputStream dos) throws IOException {

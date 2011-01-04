@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.21.56.1 2011-01-03 18:30:06 dshr Exp $
+ * $Id: RepositoryNode.java,v 1.21.56.2 2011-01-04 04:52:09 dshr Exp $
  */
 
 /*
@@ -247,17 +247,21 @@ public interface RepositoryNode extends RepositoryNodeVersion {
 
   /**
    * Returns an InputStream for the PersistentPeerIdSet file
+   * @param the filename within the node
    */
   public InputStream getPeerIdInputStream(String fileName);
 
   /**
    * Returns an OutputStream for a temporary PersistentPeerIdSet file
+   * @param the filename within the node
    */
   public OutputStream getPeerIdOutputStream(String fileName);
 
   /**
    * Returns true if the permanent PersistentPeerIdSet set
    * has successfully been atomically updated from the temporary.
+   * If it cannot be updated the temporary file will be deleted.
+   * @param the filename within the node
    */
   public boolean updatePeerIdFile(String fileName);
 

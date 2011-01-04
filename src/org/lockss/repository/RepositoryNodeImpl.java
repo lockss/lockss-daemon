@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.2 2011-01-03 18:30:06 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.3 2011-01-04 04:52:09 dshr Exp $
  */
 
 /*
@@ -172,7 +172,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected FileObject nodePropsFile = null; // Used TestLockssRepositoryImpl
   private FileObject agreementFile = null;
   private FileObject tempAgreementFile = null;
-//  protected FileObject ppisAgreementFile = null;
   protected FileObject currentCacheFile; // Used TestLockssRepositoryImpl
   protected FileObject currentPropsFile; // Used TestLockssRepositoryImpl
   protected FileObject tempCacheFile; // Used TestLockssRepositoryImpl
@@ -1256,7 +1255,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
     DataInputStream is = null;
     try {
       IdentityManager im = repository.getDaemon().getIdentityManager();
-//      ppisReturn = new PersistentPeerIdSetImpl(ppisAgreementFile, im);
       ppisReturn = new PersistentPeerIdSetImpl(this, AGREEMENT_FILENAME, im);
       ppisReturn.load();
       
@@ -1305,22 +1303,58 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public InputStream getPeerIdInputStream(String fileName) {
     InputStream is = null;
-    if (true)
-      throw new UnsupportedOperationException("XXX implement me");
+    if (agreementFile == null) {
+      initAgreementFile();
+    }
+    if (agreementFile != null) try {
+	is = agreementFile.getContent().getInputStream();
+      } catch (FileSystemException ex) {
+	logger.error(TEMP_AGREEMENT_FILENAME + " getContent() threw: " + ex);
+      }
     return is;
   }
 
   public OutputStream getPeerIdOutputStream(String fileName) {
     OutputStream os = null;
-    if (true)
-      throw new UnsupportedOperationException("XXX implement me");
+    if (tempAgreementFile == null) {
+      initTempAgreementFile();
+    }
+    if (tempAgreementFile != null) try {
+	os = tempAgreementFile.getContent().getOutputStream();
+      } catch (FileSystemException ex) {
+	logger.error(TEMP_AGREEMENT_FILENAME + " getContent() threw: " + ex);
+      }
     return os;
   }
 
   public boolean updatePeerIdFile(String fileName) {
     boolean ret = false;
-    if (true)
-      throw new UnsupportedOperationException("XXX implement me");
+    if (agreementFile == null) {
+      initAgreementFile();
+    }
+    if (tempAgreementFile == null) {
+      initTempAgreementFile();
+    }
+    if (tempAgreementFile != null && agreementFile != null) {
+      // XXX we should create a temporary copy of agreementFile so that
+      // XXX if the move fails and in the process deletes it,  we can
+      // XXX put it back
+      try {
+	if (tempAgreementFile.canRenameTo(agreementFile)) {
+	  tempAgreementFile.moveTo(agreementFile);
+	  ret = true;
+	}
+      } catch (FileSystemException ex) {
+	logger.error(TEMP_AGREEMENT_FILENAME + " threw: " + ex);
+      } finally {
+	try {
+	  tempAgreementFile.delete();
+	} catch (FileSystemException ex) {
+	  logger.error(TEMP_AGREEMENT_FILENAME + " delete() threw: " + ex);
+	}
+	tempAgreementFile = null;
+      }
+    }
     return ret;
   }
 
@@ -1744,7 +1778,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private void initAgreementFile() {
     try {
       agreementFile = getContentDir().resolveFile(AGREEMENT_FILENAME);
-//    ppisAgreementFile = new File(nodeLocation, AGREEMENT_FILENAME + ".ppis");
     } catch (FileSystemException e) {
       logger.error(AGREEMENT_FILENAME + " threw: " + e);
       agreementFile = null;
@@ -1915,12 +1948,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   /*
-   * Version of FileUtil.updateAtomically for FileObject
+   * Version of PlatformUtil.updateAtomically for FileObject
    */
   protected static boolean updateAtomically(FileObject f1, FileObject f2) {
     boolean res = false;
-    if (true)
-      throw new UnsupportedOperationException("XXX implement me");
+    if (f1.canRenameTo(f2)) {
+      String f1Name = "BAD";
+      try {
+	f1Name = f1.getURL().toString();
+	f1.moveTo(f2);
+	res = true;
+      } catch (FileSystemException ex) {
+	logger.error(f1Name + " moveTo threw: " + ex);
+      }
+    }
     return res;
   }
 
