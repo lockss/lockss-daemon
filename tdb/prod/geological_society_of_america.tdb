@@ -1,28 +1,91 @@
 {
+
   publisher <
     name = Geological Society of America
   >
 
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  implicit < status ; year ; name ; param[volume_name] >
+
   {
+  
+    comment[1] = Field Guides
+    comment[2] = not in usual HighWire shape
+    comment[3] = http://fieldguides.gsapubs.org/
+  
+  }
+
+  {
+
+    title <
+      name = Geological Society of America Bulletin ;
+      issn = 0016-7606 ;
+      eissn = 1943-2674
+    >
+
+    param[base_url] = http://gsabulletin.gsapubs.org/
+
+    au < manifest ; 2008 ; Geological Society of America Bulletin Volume 120 ; 120 >
+    au < manifest ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 >
+    au < manifest ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
+    au < manifest ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
+
+  }
+
+  {
+  
+    comment[1] = Geological Society of America Memoirs
+    comment[2] = not in usual HighWire shape
+    comment[3] = http://memoirs.gsapubs.org/
+  
+  }
+
+  {
+  
+    comment[1] = Geological Society of America Special Papers
+    comment[2] = not in usual HighWire shape
+    comment[3] = http://specialpapers.gsapubs.org/
+  
+  }
+
+  {
+
+    title <
+      name = Geology ;
+      issn = 0091-7613 ;
+      eissn = 1943-2682
+    >
+
+    param[base_url] = http://geology.gsapubs.org/
+
+    au < manifest ; 2008 ; Geological Society of America Bulletin Volume 36 ; 36 >
+    au < manifest ; 2009 ; Geological Society of America Bulletin Volume 37 ; 37 >
+    au < manifest ; 2010 ; Geological Society of America Bulletin Volume 38 ; 38 >
+    au < manifest ; 2011 ; Geological Society of America Bulletin Volume 39 ; 39 >
+
+  }
+
+  {
+
     title <
       name = Lithosphere ;
       issn = 1941-8264 ;
       eissn = 1947-4253
     >
 
-    comment[h20] = H20 title
+    param[base_url] = http://lithosphere.gsapubs.org/
 
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
-      param[base_url] = http://lithosphere.gsapubs.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < manifest ; Lithosphere Volume 1 ; 1 >
-
-    }
+    au < manifest ; 2009 ; Lithosphere Volume 1 ; 1 >
+    au < manifest ; 2010 ; Lithosphere Volume 2 ; 2 >
 
   }
 
-}
+  {
+  
+    comment[1] = Reviews in Engineering Geology
+    comment[2] = not in usual HighWire shape
+    comment[3] = http://reg.gsapubs.org/
+  
+  }
 
+}
