@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.15.56.1 2011-01-03 18:30:06 dshr Exp $
+ * $Id: MockRepositoryNode.java,v 1.15.56.2 2011-01-05 18:54:23 dshr Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.vfs.FileObject;
+
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.protocol.PeerIdentity;
 import org.lockss.repository.*;
@@ -183,6 +185,10 @@ public class MockRepositoryNode implements RepositoryNode {
   }
 
   public OutputStream getPeerIdOutputStream(String fileName) {
+    throw new UnsupportedOperationException("Not supported.");
+  }
+
+  public FileObject getPeerIdFileObject(String fileName) {
     throw new UnsupportedOperationException("Not supported.");
   }
 

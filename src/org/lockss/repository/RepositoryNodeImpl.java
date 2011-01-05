@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.3 2011-01-04 04:52:09 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.4 2011-01-05 18:54:22 dshr Exp $
  */
 
 /*
@@ -1249,7 +1249,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     PersistentPeerIdSet ppisReturn;
  
      if (agreementFile == null) {
-      initAgreementFile();
+      initAgreementFile(AGREEMENT_FILENAME);
     }
     
     DataInputStream is = null;
@@ -1304,12 +1304,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public InputStream getPeerIdInputStream(String fileName) {
     InputStream is = null;
     if (agreementFile == null) {
-      initAgreementFile();
+      initAgreementFile(fileName);
     }
     if (agreementFile != null) try {
 	is = agreementFile.getContent().getInputStream();
       } catch (FileSystemException ex) {
-	logger.error(TEMP_AGREEMENT_FILENAME + " getContent() threw: " + ex);
+	logger.error(fileName + " getContent() threw: " + ex);
       }
     return is;
   }
@@ -1317,23 +1317,28 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public OutputStream getPeerIdOutputStream(String fileName) {
     OutputStream os = null;
     if (tempAgreementFile == null) {
-      initTempAgreementFile();
+      initTempAgreementFile(fileName);
     }
     if (tempAgreementFile != null) try {
 	os = tempAgreementFile.getContent().getOutputStream();
       } catch (FileSystemException ex) {
-	logger.error(TEMP_AGREEMENT_FILENAME + " getContent() threw: " + ex);
+	logger.error(fileName + " getContent() threw: " + ex);
       }
     return os;
+  }
+
+  public FileObject getPeerIdFileObject(String fileName) {
+    return (AGREEMENT_FILENAME.equals(fileName) ?
+	    agreementFile : tempAgreementFile);
   }
 
   public boolean updatePeerIdFile(String fileName) {
     boolean ret = false;
     if (agreementFile == null) {
-      initAgreementFile();
+      initAgreementFile(AGREEMENT_FILENAME);
     }
     if (tempAgreementFile == null) {
-      initTempAgreementFile();
+      initTempAgreementFile(fileName);
     }
     if (tempAgreementFile != null && agreementFile != null) {
       // XXX we should create a temporary copy of agreementFile so that
@@ -1345,7 +1350,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	  ret = true;
 	}
       } catch (FileSystemException ex) {
-	logger.error(TEMP_AGREEMENT_FILENAME + " threw: " + ex);
+	logger.error(fileName + " threw: " + ex);
       } finally {
 	try {
 	  tempAgreementFile.delete();
@@ -1775,20 +1780,20 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
   
-  private void initAgreementFile() {
+  private void initAgreementFile(String fileName) {
     try {
-      agreementFile = getContentDir().resolveFile(AGREEMENT_FILENAME);
+      agreementFile = getContentDir().resolveFile(fileName);
     } catch (FileSystemException e) {
-      logger.error(AGREEMENT_FILENAME + " threw: " + e);
+      logger.error(fileName + " threw: " + e);
       agreementFile = null;
     }
   }
   
-  private void initTempAgreementFile() {
+  private void initTempAgreementFile(String fileName) {
     try {
-      tempAgreementFile = getContentDir().resolveFile(TEMP_AGREEMENT_FILENAME);
+      tempAgreementFile = getContentDir().resolveFile(fileName);
     } catch (FileSystemException e) {
-      logger.error(TEMP_AGREEMENT_FILENAME + " threw: " + e);
+      logger.error(fileName + " threw: " + e);
       tempAgreementFile = null;
     }
   }

@@ -23,12 +23,6 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
   private final static String k_fileTest3 = "fileTest3.ppis";
   private final static String k_fileNotExist = "fileNotExist.ppis";
 
-  /*
-   * XXX implement me based on new interface
-  public DatedPeerIdSetImpl(RepositoryNode node,
-			    String fileName,
-			    IdentityManager identityManager) {
-  */
   protected void setUp() throws Exception {
     super.setUp();
     
@@ -144,14 +138,21 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
     }
     public boolean deletePeerIdFile(String fileName) {
       boolean ret = false;
-      if (true)
-	throw new UnsupportedOperationException("XXX implement me");
+      try {
+	m_node.getPeerIdFileObject(fileName).delete();
+	ret = true;
+      } catch (FileSystemException ex) {
+	// No action intended
+      }
       return ret;
     }
-    public boolean existsPeerIdFile(String filename) {
+    public boolean existsPeerIdFile(String fileName) {
       boolean ret = false;
-      if (true)
-	throw new UnsupportedOperationException("XXX implement me");
+      try {
+	ret = m_node.getPeerIdFileObject(fileName).exists();
+      } catch (FileSystemException ex) {
+	// No action intended
+      }
       return ret;
     }
   }

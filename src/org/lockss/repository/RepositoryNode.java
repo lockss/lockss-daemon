@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.21.56.2 2011-01-04 04:52:09 dshr Exp $
+ * $Id: RepositoryNode.java,v 1.21.56.3 2011-01-05 18:54:22 dshr Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.repository;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.vfs.FileObject;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.protocol.PeerIdentity;
 
@@ -264,6 +265,12 @@ public interface RepositoryNode extends RepositoryNodeVersion {
    * @param the filename within the node
    */
   public boolean updatePeerIdFile(String fileName);
+
+  /**
+   * Returns a FileObject for the PeerID file. For testing only.
+   * @param the filename within the node
+   */
+  public FileObject getPeerIdFileObject(String fileName);
 
   /**
    * RepositoryNodeContents is used to obtain Properties and InputStream.

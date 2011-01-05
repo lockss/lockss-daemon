@@ -897,14 +897,21 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
     }
     public boolean deletePeerIdFile(String fileName) {
       boolean ret = false;
-      if (true)
-	throw new UnsupportedOperationException("XXX implement me");
+      try {
+	m_node.getPeerIdFileObject(fileName).delete();
+	ret = true;
+      } catch (FileSystemException ex) {
+	// No action intended
+      }
       return ret;
     }
-    public boolean existsPeerIdFile(String filename) {
+    public boolean existsPeerIdFile(String fileName) {
       boolean ret = false;
-      if (true)
-	throw new UnsupportedOperationException("XXX implement me");
+      try {
+	ret = m_node.getPeerIdFileObject(fileName).exists();
+      } catch (FileSystemException ex) {
+	// No action intended
+      }
       return ret;
     }
   }
