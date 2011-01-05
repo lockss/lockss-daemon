@@ -659,7 +659,9 @@ comment[ajs] = this journal has been moved to H20 platform
     {
 
       title <
-        name = The Annals of the American Academy of Political and Social Science
+        name = The Annals of the American Academy of Political and Social Science ;
+        issn = 0002-7162 ;
+        eissn = 1552-3349
       >
 
       {
@@ -1175,7 +1177,9 @@ comment[ajs] = this journal has been moved to H20 platform
     {
 
       title <
-        name = Building Service Engineering Research and Technology
+        name = Building Service Engineering Research and Technology ;
+        issn = 0143-6244 ;
+        eissn = 1477-0849
       >
 
       {
@@ -2014,7 +2018,9 @@ comment[ajs] = this journal has been moved to H20 platform
     {
 
       title <
-        name = Cornell Hotel and Restaurant Administration Quarterly
+        name = Cornell Hotel and Restaurant Administration Quarterly ;
+        issn = 1938-9655 ;
+        eissn = 1938-9663
       >
 
       {
@@ -3555,7 +3561,8 @@ comment[ebd] = now published by Taylor & Francis
     {
 
       title <
-        name = Experimental Mechanics
+        name = Experimental Mechanics ;
+        issn = 0014-4851
       >
 
       {
@@ -4226,7 +4233,9 @@ comment[exm] = now published by Springer
     {
 
       title <
-        name = The Harvard International Journal of Press/Politics
+        name = The Harvard International Journal of Press/Politics ;
+        issn = 1940-1612 ;
+        eissn = 1940-1620
       >
 
       {
@@ -7101,7 +7110,9 @@ comment[jcp] = some sort of custom layout
     {
 
       title <
-        name = Journal of Endotoxin Research
+        name = Journal of Endotoxin Research ;
+        issn = 0968-0519 ;
+        eissn = 1743-2839
       >
 
       {
@@ -8791,7 +8802,8 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = Journal of the International Association of Physicians in AIDS Care
+        name = Journal of the International Association of Physicians in AIDS Care ;
+        issn = 1545-1097
       >
 
       {
@@ -12341,7 +12353,9 @@ comment[mpj] = now published by Brill
     {
 
       title <
-        name = The Harvard International Journal of Press/Politics
+        name = The Harvard International Journal of Press/Politics ;
+        issn = 1940-1612 ;
+        eissn = 1940-1620
       >
   
       param[journal_dir] = harvard_international_journal_of_press_politics

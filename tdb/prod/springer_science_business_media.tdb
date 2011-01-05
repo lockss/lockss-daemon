@@ -1562,8 +1562,8 @@
 
     title <
       name = Annali di Matematica Pura ed Applicata ;
-      issn = 108198 ;
-      placeholder = True
+      issn = 0373-3114 ;
+      eissn = 1618-1891
     >
 
     param[journal_issn] = 108198
@@ -1941,7 +1941,7 @@
     title <
       name = Apoptosis ;
       issn = 1360-8185 ;
-      eissn = 1573-675X
+      eissn = 1360-8185
     >
 
     param[journal_issn] = 1360-8185
@@ -4779,8 +4779,7 @@
 
     title <
       name = Bulletin Géodésique (1922 - 1941) ;
-      issn = 121068 ;
-      placeholder = True
+      issn = 0007-4632
     >
 
     param[journal_issn] = 121068
@@ -8683,8 +8682,7 @@
 
     title <
       name = Dublin Journal of Medical Science (1836-1845) ;
-      issn = 121233 ;
-      placeholder = True
+      issn = 0790-2336
     >
 
     param[journal_issn] = 121233
@@ -15227,8 +15225,7 @@
 
     title <
       name = Irish Journal of Medical Science ;
-      issn = 120514 ;
-      placeholder = True
+      issn = 1863-4362
     >
 
     param[journal_issn] = 120514
@@ -20917,8 +20914,7 @@
 
     title <
       name = La Rivista del Nuovo Cimento (1969-1970) ;
-      issn = 120866 ;
-      placeholder = True
+      issn = 0393-697X
     >
 
     param[journal_issn] = 120866
@@ -21133,8 +21129,7 @@
 
     title <
       name = Lettere Al Nuovo Cimento (1969 - 1970) ;
-      issn = 121108 ;
-      placeholder = True
+      issn = 0375-930X
     >
 
     param[journal_issn] = 121108
@@ -21144,7 +21139,7 @@
   {
 
     title <
-      name = Lettere Al Nuovo Cimento (1971 – 1985) ;
+      name = Lettere Al Nuovo Cimento (1971 √¢‚Ç¨‚Äú 1985) ;
       issn = 120865 ;
       placeholder = True
     >

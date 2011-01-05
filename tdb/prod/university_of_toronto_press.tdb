@@ -162,7 +162,8 @@
 
   {
     title <
-      name = Histoire sociale/Social history
+      name = Histoire sociale/Social history ;
+      issn = 0018-2257
     >
 
     param[journal_dir] = histoire_sociale_social_history
@@ -244,7 +245,9 @@
 
   {
     title <
-      name = The Canadian Historical Review
+      name = The Canadian Historical Review ;
+      issn = 0008-3755 ;
+      eissn = 1710-1093
     >
 
     param[journal_dir] = canadian_historical_review

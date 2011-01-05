@@ -8,7 +8,9 @@
   
   {
     title <
-      name = Biochemical Journal
+      name = Biochemical Journal ;
+      issn = 1815-9923 ;
+      eissn = 1815-9931
     >
 
     param[base_url] = http://www.biochemj.org/

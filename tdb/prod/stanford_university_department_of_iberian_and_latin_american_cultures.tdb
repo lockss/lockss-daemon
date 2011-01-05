@@ -11,7 +11,9 @@
   {
   
     title <
-      name = Nuevo Texto Crítico
+      name = Nuevo Texto Crítico ;
+      issn = 1048-6380 ;
+      eissn = 1940-9079
     >
 
     param[journal_dir] = nuevo_texto_critico

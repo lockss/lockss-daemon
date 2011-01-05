@@ -7,7 +7,8 @@
   {
   
     title <
-      name = Population, English Edition
+      name = Population, English Edition ;
+      issn = 1958-9190
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin

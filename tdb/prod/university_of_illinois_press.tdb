@@ -81,7 +81,9 @@
 
     {
       title <
-        name = JEGP, Journal of English and Germanic Philology
+        name = JEGP, Journal of English and Germanic Philology ;
+        issn = 0363-6941 ;
+        eissn = 1945-662X
       >
 
       param[journal_dir] = journal_of_english_and_germanic_philology

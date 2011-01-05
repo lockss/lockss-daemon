@@ -10,14 +10,16 @@
 
   {
     title <
-      name = Imagine
-    >
+      name = Imagine ;
+      issn = 1071-605X ;
+      eissn = 1086-3230
+      >
+    
+      param[journal_dir] = imagine 
 
-    param[journal_dir] = imagine
-
-    au < released ; Imagine Volume 4 ; 4 >
-    au < released ; Imagine Volume 5 ; 5 >
-    au < released ; Imagine Volume 6 ; 6 >
+      au < released ; Imagine Volume 4 ; 4 >
+      au < released ; Imagine Volume 5 ; 5 >
+      au < released ; Imagine Volume 6 ; 6 >
 
   }
 

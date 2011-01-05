@@ -1766,7 +1766,9 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Law and Economics
+      name = The Journal of Law and Economics ;
+      issn = 0022-2186 ;
+      eissn = 1537-5285
     >
 
     param[journal_id] = jle
@@ -1826,7 +1828,8 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = The Journal of Legal Studies
+      name = The Journal of Legal Studies ;
+      issn = 1973-2937
     >
 
     param[journal_id] = jls
@@ -2793,7 +2796,8 @@ comment[isis97] = 500 internal server errors
   {
   
     title <
-      name = Supreme Court Economic Review
+      name = Supreme Court Economic Review ;
+      issn = 0736-9921
     >
 
     param[journal_id] = scer
@@ -2805,7 +2809,8 @@ comment[isis97] = 500 internal server errors
   {
   
     title <
-      name = The Supreme Court Review
+      name = The Supreme Court Review ;
+      issn = 2158-2459
     >
 
     param[journal_id] = scr
@@ -2859,7 +2864,8 @@ comment[isis97] = 500 internal server errors
 
   {
     title <
-      name = Winterthur Portfolio
+      name = Winterthur Portfolio ;
+      issn = 0084-0416
     >
 
     param[journal_id] = wp

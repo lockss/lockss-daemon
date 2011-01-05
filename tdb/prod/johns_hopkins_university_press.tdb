@@ -744,7 +744,8 @@
   {
 
     title <
-      name = The Journal of the History of Childhood and Youth
+      name = The Journal of the History of Childhood and Youth ;
+      issn = 1939-6724
     >
 
     param[journal_dir] = journal_of_the_history_of_youth_and_childhood
@@ -1117,7 +1118,9 @@
 
   {
     title <
-      name = Philosophy, Psychiatry, & Psychology
+      name = Philosophy, Psychiatry, & Psychology ;
+      issn = 1071-6076 ;
+      eissn = 1086-3303
     >
 
     param[journal_dir] = philosophy_psychiatry_and_psychology
@@ -1596,7 +1599,8 @@
 
   {
     title <
-      name = Theory and Event
+      name = Theory and Event ;
+      issn = 1092-311X
     >
 
     param[journal_dir] = theory_and_event

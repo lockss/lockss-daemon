@@ -56,7 +56,9 @@
   {
 
     title <
-      name = The Auk: A Quarterly Journal of Ornithology
+      name = The Auk: A Quarterly Journal of Ornithology ;
+      issn = 0004-8038 ;
+      eissn = 1938-4254
     >
 
     param[journal_id] = auk
@@ -93,7 +95,8 @@
   {
   
     title <
-      name = The Condor: An International Journal of Avian Biology
+      name = The Condor: An International Journal of Avian Biology ;
+      issn = 0010-5422
     >
 
     param[journal_id] = cond
@@ -346,7 +349,8 @@
   {
   
     title <
-      name = Jung Journal: Culture and Psyche
+      name = Jung Journal: Culture and Psyche ;
+      issn = 1934-2039
     >
 
     param[journal_id] = jung
@@ -503,7 +507,8 @@
   {
   
     title <
-      name = Nova Religioi
+      name = Nova Religioi ;
+      issn = 0891-9356
     >
 
     param[journal_id] = nr

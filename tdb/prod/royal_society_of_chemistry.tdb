@@ -357,7 +357,8 @@
   {
 
     title <
-      name = Journal of Chemical Research, Synopses
+      name = Journal of Chemical Research, Synopses ;
+      issn = 0308-2342
     >
 
     param[journal_code] = jc
@@ -527,7 +528,8 @@
   {
   
     title <
-      name = Nanoscale
+      name = Nanoscale ;
+      issn = 0306-0012
     >
     
     param[journal_code] = nr

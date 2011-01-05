@@ -88,7 +88,9 @@
   {
   
     title <
-      name = SHAW The Annual of Bernard Shaw Studies
+      name = SHAW The Annual of Bernard Shaw Studies ;
+      issn = 0741-5842 ;
+      eissn = 1529-1480
     >
 
     param[journal_dir] = annual_of_bernard_shaw_studies
@@ -109,7 +111,9 @@
   {
   
     title <
-      name = The Chaucer Review
+      name = The Chaucer Review ;
+      issn = 0009-2002 ;
+      eissn = 1528-4204
     >
 
     param[journal_dir] = chaucer_review
@@ -176,7 +180,9 @@
   {
   
     title <
-      name = The Journal of Nietzsche Studies
+      name = The Journal of Nietzsche Studies ;
+      issn = 1538-4594 ;
+      eissn = 0968-8005
     >
 
     param[journal_dir] = journal_of_nietzsche_studies
