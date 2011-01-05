@@ -19,18 +19,18 @@
       param[journal_id] = aft
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1999 ; Africa Today Volume 46 ; 46 >
-      au < released ; 2000 ; Africa Today Volume 47 ; 47 >
-      au < released ; 2001 ; Africa Today Volume 48 ; 48 >
-      au < released ; 2002-2003 ; Africa Today Volume 49 ; 49 >
-      au < released ; 2003-2004 ; Africa Today Volume 50 ; 50 >
-      au < released ; 2004-2005 ; Africa Today Volume 51 ; 51 >
-      au < released ; 2005-2006 ; Africa Today Volume 52 ; 52 >
-      au < released ; 2006-2007 ; Africa Today Volume 53 ; 53 >
-      au < released ; 2007-2008 ; Africa Today Volume 54 ; 54 >
-      au < released ; 2008-2009 ; Africa Today Volume 55 ; 55 >
-      au < released ; 2009-2010 ; Africa Today Volume 56 ; 56 >
-      au < released ; 2010-2011 ; Africa Today Volume 57 ; 57 >
+      au < down ; 1999 ; Africa Today Volume 46 ; 46 >
+      au < down ; 2000 ; Africa Today Volume 47 ; 47 >
+      au < down ; 2001 ; Africa Today Volume 48 ; 48 >
+      au < down ; 2002-2003 ; Africa Today Volume 49 ; 49 >
+      au < down ; 2003-2004 ; Africa Today Volume 50 ; 50 >
+      au < down ; 2004-2005 ; Africa Today Volume 51 ; 51 >
+      au < down ; 2005-2006 ; Africa Today Volume 52 ; 52 >
+      au < down ; 2006-2007 ; Africa Today Volume 53 ; 53 >
+      au < down ; 2007-2008 ; Africa Today Volume 54 ; 54 >
+      au < down ; 2008-2009 ; Africa Today Volume 55 ; 55 >
+      au < down ; 2009-2010 ; Africa Today Volume 56 ; 56 >
+      au < down ; 2010-2011 ; Africa Today Volume 57 ; 57 >
 
     }
 
@@ -72,9 +72,9 @@
       param[journal_id] = ale
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2001-2008 ; Aleph: Historical Studies in Science and Judaism Volume 1-8 ; - >
-      au < released ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
-      au < released ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
+      au < down ; 2001-2008 ; Aleph: Historical Studies in Science and Judaism Volume 1-8 ; - >
+      au < down ; 2009 ; Aleph: Historical Studies in Science and Judaism Volume 9 ; 9 >
+      au < down ; 2010 ; Aleph: Historical Studies in Science and Judaism Volume 10 ; 10 >
 
     }
 
@@ -111,8 +111,8 @@
       param[journal_id] = blc
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2009-2010 ; Black Camera Volume 1 ; 1 >
-      au < released ; 2010-2011 ; Black Camera Volume 2 ; 2 >
+      au < down ; 2009-2010 ; Black Camera Volume 1 ; 1 >
+      au < down ; 2010-2011 ; Black Camera Volume 2 ; 2 >
 
     }
 
@@ -144,12 +144,12 @@
       param[journal_id] = bri
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2005 ; Bridges: A Jewish Feminist Journal Volume 10 ; 10 >
-      au < released ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
-      au < released ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
-      au < released ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
-      au < released ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
-      au < released ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 ; 15 >
+      au < down ; 2005 ; Bridges: A Jewish Feminist Journal Volume 10 ; 10 >
+      au < down ; 2006 ; Bridges: A Jewish Feminist Journal Volume 11 ; 11 >
+      au < down ; 2007 ; Bridges: A Jewish Feminist Journal Volume 12 ; 12 >
+      au < down ; 2008 ; Bridges: A Jewish Feminist Journal Volume 13 ; 13 >
+      au < down ; 2009 ; Bridges: A Jewish Feminist Journal Volume 14 ; 14 >
+      au < down ; 2010 ; Bridges: A Jewish Feminist Journal Volume 15 ; 15 >
 
     }
 
@@ -184,13 +184,13 @@
       param[journal_id] = esj
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2001-2002 ; e-Service Journal Volume 1 ; 1 >
-      au < released ; 2002-2003 ; e-Service Journal Volume 2 ; 2 >
-      au < released ; 2003-2005 ; e-Service Journal Volume 3 ; 3 >
-      au < released ; 2005-2006 ; e-Service Journal Volume 4 ; 4 >
-      au < released ; 2006-2007 ; e-Service Journal Volume 5 ; 5 >
-      au < released ; 2007-2009 ; e-Service Journal Volume 6 ; 6 >
-      au < released ; 2010 ; e-Service Journal Volume 7 ; 7 >
+      au < down ; 2001-2002 ; e-Service Journal Volume 1 ; 1 >
+      au < down ; 2002-2003 ; e-Service Journal Volume 2 ; 2 >
+      au < down ; 2003-2005 ; e-Service Journal Volume 3 ; 3 >
+      au < down ; 2005-2006 ; e-Service Journal Volume 4 ; 4 >
+      au < down ; 2006-2007 ; e-Service Journal Volume 5 ; 5 >
+      au < down ; 2007-2009 ; e-Service Journal Volume 6 ; 6 >
+      au < down ; 2010 ; e-Service Journal Volume 7 ; 7 >
 
     }
 
@@ -227,16 +227,16 @@
       param[journal_id] = ete
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2001 ; Ethics & the Environment Volume 6 ; 6 >
-      au < released ; 2002 ; Ethics & the Environment Volume 7 ; 7 >
-      au < released ; 2003 ; Ethics & the Environment Volume 8 ; 8 >
-      au < released ; 2004 ; Ethics & the Environment Volume 9 ; 9 >
-      au < released ; 2005 ; Ethics & the Environment Volume 10 ; 10 >
-      au < released ; 2006 ; Ethics & the Environment Volume 11 ; 11 >
-      au < released ; 2007 ; Ethics & the Environment Volume 12 ; 12 >
-      au < released ; 2008 ; Ethics & the Environment Volume 13 ; 13 >
-      au < released ; 2009 ; Ethics & the Environment Volume 14 ; 14 >
-      au < released ; 2010 ; Ethics & the Environment Volume 15 ; 15 >
+      au < down ; 2001 ; Ethics & the Environment Volume 6 ; 6 >
+      au < down ; 2002 ; Ethics & the Environment Volume 7 ; 7 >
+      au < down ; 2003 ; Ethics & the Environment Volume 8 ; 8 >
+      au < down ; 2004 ; Ethics & the Environment Volume 9 ; 9 >
+      au < down ; 2005 ; Ethics & the Environment Volume 10 ; 10 >
+      au < down ; 2006 ; Ethics & the Environment Volume 11 ; 11 >
+      au < down ; 2007 ; Ethics & the Environment Volume 12 ; 12 >
+      au < down ; 2008 ; Ethics & the Environment Volume 13 ; 13 >
+      au < down ; 2009 ; Ethics & the Environment Volume 14 ; 14 >
+      au < down ; 2010 ; Ethics & the Environment Volume 15 ; 15 >
 
     }
 
@@ -276,17 +276,17 @@
       param[journal_id] = fil
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2000 ; Film History: An International Journal Volume 12 ; 12 >
-      au < released ; 2001 ; Film History: An International Journal Volume 13 ; 13 >
-      au < released ; 2002 ; Film History: An International Journal Volume 14 ; 14 >
-      au < released ; 2003 ; Film History: An International Journal Volume 15 ; 15 >
-      au < released ; 2004 ; Film History: An International Journal Volume 16 ; 16 >
-      au < released ; 2005 ; Film History: An International Journal Volume 17 ; 17 >
-      au < released ; 2006 ; Film History: An International Journal Volume 18 ; 18 >
-      au < released ; 2007 ; Film History: An International Journal Volume 19 ; 19 >
-      au < released ; 2008 ; Film History: An International Journal Volume 20 ; 20 >
-      au < released ; 2009 ; Film History: An International Journal Volume 21 ; 21 >
-      au < released ; 2010 ; Film History: An International Journal Volume 22 ; 22 >
+      au < down ; 2000 ; Film History: An International Journal Volume 12 ; 12 >
+      au < down ; 2001 ; Film History: An International Journal Volume 13 ; 13 >
+      au < down ; 2002 ; Film History: An International Journal Volume 14 ; 14 >
+      au < down ; 2003 ; Film History: An International Journal Volume 15 ; 15 >
+      au < down ; 2004 ; Film History: An International Journal Volume 16 ; 16 >
+      au < down ; 2005 ; Film History: An International Journal Volume 17 ; 17 >
+      au < down ; 2006 ; Film History: An International Journal Volume 18 ; 18 >
+      au < down ; 2007 ; Film History: An International Journal Volume 19 ; 19 >
+      au < down ; 2008 ; Film History: An International Journal Volume 20 ; 20 >
+      au < down ; 2009 ; Film History: An International Journal Volume 21 ; 21 >
+      au < down ; 2010 ; Film History: An International Journal Volume 22 ; 22 >
 
     }
 
@@ -322,10 +322,10 @@
       param[journal_id] = gso
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2007 ; The Global South Volume 1 ; 1 >
-      au < released ; 2008 ; The Global South Volume 2 ; 2 >
-      au < released ; 2009 ; The Global South Volume 3 ; 3 >
-      au < released ; 2010 ; The Global South Volume 4 ; 4 >
+      au < down ; 2007 ; The Global South Volume 1 ; 1 >
+      au < down ; 2008 ; The Global South Volume 2 ; 2 >
+      au < down ; 2009 ; The Global South Volume 3 ; 3 >
+      au < down ; 2010 ; The Global South Volume 4 ; 4 >
 
     }
 
@@ -358,20 +358,20 @@
       param[journal_id] = his
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1997 ; History & Memory Volume 9 ; 9 >
+      au < down ; 1997 ; History & Memory Volume 9 ; 9 >
       au < doesNotExist ; 1998 ; History & Memory Volume 10 ; 10 >
-      au < released ; 1999 ; History & Memory Volume 11 ; 11 >
-      au < released ; 2000 ; History & Memory Volume 12 ; 12 >
-      au < released ; 2001 ; History & Memory Volume 13 ; 13 >
-      au < released ; 2002 ; History & Memory Volume 14 ; 14 >
-      au < released ; 2003 ; History & Memory Volume 15 ; 15 >
-      au < released ; 2004 ; History & Memory Volume 16 ; 16 >
-      au < released ; 2005 ; History & Memory Volume 17 ; 17 >
-      au < released ; 2006 ; History & Memory Volume 18 ; 18 >
-      au < released ; 2007 ; History & Memory Volume 19 ; 19 >
-      au < released ; 2008 ; History & Memory Volume 20 ; 20 >
-      au < released ; 2009 ; History & Memory Volume 21 ; 21 >
-      au < released ; 2010 ; History & Memory Volume 22 ; 22 >
+      au < down ; 1999 ; History & Memory Volume 11 ; 11 >
+      au < down ; 2000 ; History & Memory Volume 12 ; 12 >
+      au < down ; 2001 ; History & Memory Volume 13 ; 13 >
+      au < down ; 2002 ; History & Memory Volume 14 ; 14 >
+      au < down ; 2003 ; History & Memory Volume 15 ; 15 >
+      au < down ; 2004 ; History & Memory Volume 16 ; 16 >
+      au < down ; 2005 ; History & Memory Volume 17 ; 17 >
+      au < down ; 2006 ; History & Memory Volume 18 ; 18 >
+      au < down ; 2007 ; History & Memory Volume 19 ; 19 >
+      au < down ; 2008 ; History & Memory Volume 20 ; 20 >
+      au < down ; 2009 ; History & Memory Volume 21 ; 21 >
+      au < down ; 2010 ; History & Memory Volume 22 ; 22 >
 
     }
 
@@ -443,14 +443,14 @@
       param[journal_id] = gls
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
-      au < released ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
-      au < released ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
-      au < released ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
-      au < released ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
-      au < released ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
-      au < released ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
-      au < released ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
+      au < down ; 2003 ; Indiana Journal of Global Legal Studies Volume 10 ; 10 >
+      au < down ; 2004 ; Indiana Journal of Global Legal Studies Volume 11 ; 11 >
+      au < down ; 2005 ; Indiana Journal of Global Legal Studies Volume 12 ; 12 >
+      au < down ; 2006 ; Indiana Journal of Global Legal Studies Volume 13 ; 13 >
+      au < down ; 2007 ; Indiana Journal of Global Legal Studies Volume 14 ; 14 >
+      au < down ; 2008 ; Indiana Journal of Global Legal Studies Volume 15 ; 15 >
+      au < down ; 2009 ; Indiana Journal of Global Legal Studies Volume 16 ; 16 >
+      au < down ; 2010 ; Indiana Journal of Global Legal Studies Volume 17 ; 17 >
 
     }
 
@@ -488,9 +488,9 @@
       param[journal_id] = fab
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2008 ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
-      au < released ; 2009 ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
-      au < released ; 2010 ; International Journal of Feminist Approaches to Bioethics Volume 3 ; 3 >
+      au < down ; 2008 ; International Journal of Feminist Approaches to Bioethics Volume 1 ; 1 >
+      au < down ; 2009 ; International Journal of Feminist Approaches to Bioethics Volume 2 ; 2 >
+      au < down ; 2010 ; International Journal of Feminist Approaches to Bioethics Volume 3 ; 3 >
 
     }
 
@@ -523,21 +523,21 @@
       param[journal_id] = isr
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1996 ; Israel Studies Volume 1 ; 1 >
-      au < released ; 1997 ; Israel Studies Volume 2 ; 2 >
-      au < released ; 1998 ; Israel Studies Volume 3 ; 3 >
-      au < released ; 1999 ; Israel Studies Volume 4 ; 4 >
-      au < released ; 2000 ; Israel Studies Volume 5 ; 5 >
-      au < released ; 2001 ; Israel Studies Volume 6 ; 6 >
-      au < released ; 2002 ; Israel Studies Volume 7 ; 7 >
-      au < released ; 2003 ; Israel Studies Volume 8 ; 8 >
-      au < released ; 2004 ; Israel Studies Volume 9 ; 9 >
-      au < released ; 2005 ; Israel Studies Volume 10 ; 10 >
-      au < released ; 2006 ; Israel Studies Volume 11 ; 11 >
-      au < released ; 2007 ; Israel Studies Volume 12 ; 12 >
-      au < released ; 2008 ; Israel Studies Volume 13 ; 13 >
-      au < released ; 2009 ; Israel Studies Volume 14 ; 14 >
-      au < released ; 2010 ; Israel Studies Volume 15 ; 15 >
+      au < down ; 1996 ; Israel Studies Volume 1 ; 1 >
+      au < down ; 1997 ; Israel Studies Volume 2 ; 2 >
+      au < down ; 1998 ; Israel Studies Volume 3 ; 3 >
+      au < down ; 1999 ; Israel Studies Volume 4 ; 4 >
+      au < down ; 2000 ; Israel Studies Volume 5 ; 5 >
+      au < down ; 2001 ; Israel Studies Volume 6 ; 6 >
+      au < down ; 2002 ; Israel Studies Volume 7 ; 7 >
+      au < down ; 2003 ; Israel Studies Volume 8 ; 8 >
+      au < down ; 2004 ; Israel Studies Volume 9 ; 9 >
+      au < down ; 2005 ; Israel Studies Volume 10 ; 10 >
+      au < down ; 2006 ; Israel Studies Volume 11 ; 11 >
+      au < down ; 2007 ; Israel Studies Volume 12 ; 12 >
+      au < down ; 2008 ; Israel Studies Volume 13 ; 13 >
+      au < down ; 2009 ; Israel Studies Volume 14 ; 14 >
+      au < down ; 2010 ; Israel Studies Volume 15 ; 15 >
 
     }
 
@@ -583,19 +583,19 @@
       param[journal_id] = jss
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1997-1998 ; Jewish Social Studies Volume 4 ; 4 >
-      au < released ; 1998-1999 ; Jewish Social Studies Volume 5 ; 5 >
-      au < released ; 1999-2000 ; Jewish Social Studies Volume 6 ; 6 >
-      au < released ; 2000-2001 ; Jewish Social Studies Volume 7 ; 7 >
-      au < released ; 2001-2002 ; Jewish Social Studies Volume 8 ; 8 >
-      au < released ; 2002-2003 ; Jewish Social Studies Volume 9 ; 9 >
-      au < released ; 2003-2004 ; Jewish Social Studies Volume 10 ; 10 >
-      au < released ; 2004-2005 ; Jewish Social Studies Volume 11 ; 11 >
-      au < released ; 2005-2006 ; Jewish Social Studies Volume 12 ; 12 >
-      au < released ; 2006-2007 ; Jewish Social Studies Volume 13 ; 13 >
-      au < released ; 2007-2008 ; Jewish Social Studies Volume 14 ; 14 >
-      au < released ; 2008-2009 ; Jewish Social Studies Volume 15 ; 15 >
-      au < released ; 2009-2010 ; Jewish Social Studies Volume 16 ; 16 >
+      au < down ; 1997-1998 ; Jewish Social Studies Volume 4 ; 4 >
+      au < down ; 1998-1999 ; Jewish Social Studies Volume 5 ; 5 >
+      au < down ; 1999-2000 ; Jewish Social Studies Volume 6 ; 6 >
+      au < down ; 2000-2001 ; Jewish Social Studies Volume 7 ; 7 >
+      au < down ; 2001-2002 ; Jewish Social Studies Volume 8 ; 8 >
+      au < down ; 2002-2003 ; Jewish Social Studies Volume 9 ; 9 >
+      au < down ; 2003-2004 ; Jewish Social Studies Volume 10 ; 10 >
+      au < down ; 2004-2005 ; Jewish Social Studies Volume 11 ; 11 >
+      au < down ; 2005-2006 ; Jewish Social Studies Volume 12 ; 12 >
+      au < down ; 2006-2007 ; Jewish Social Studies Volume 13 ; 13 >
+      au < down ; 2007-2008 ; Jewish Social Studies Volume 14 ; 14 >
+      au < down ; 2008-2009 ; Jewish Social Studies Volume 15 ; 15 >
+      au < down ; 2009-2010 ; Jewish Social Studies Volume 16 ; 16 >
 
     }
 
@@ -637,13 +637,13 @@
       param[journal_id] = jem
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
-      au < released ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
-      au < released ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
-      au < released ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
-      au < released ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
-      au < released ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
-      au < released ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
+      au < down ; 2004 ; Journal for Early Modern Cultural Studies Volume 4 ; 4 >
+      au < down ; 2005 ; Journal for Early Modern Cultural Studies Volume 5 ; 5 >
+      au < down ; 2006 ; Journal for Early Modern Cultural Studies Volume 6 ; 6 >
+      au < down ; 2007 ; Journal for Early Modern Cultural Studies Volume 7 ; 7 >
+      au < down ; 2008 ; Journal for Early Modern Cultural Studies Volume 8 ; 8 >
+      au < down ; 2009 ; Journal for Early Modern Cultural Studies Volume 9 ; 9 >
+      au < down ; 2010 ; Journal for Early Modern Cultural Studies Volume 10 ; 10 >
 
     }
 
@@ -679,13 +679,13 @@
       param[journal_id] = fsr
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2004 ; Journal of Feminist Studies in Religion Volume 20 ; 20 >
-      au < released ; 2005 ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
-      au < released ; 2006 ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
-      au < released ; 2007 ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
-      au < released ; 2008 ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
-      au < released ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
-      au < released ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
+      au < down ; 2004 ; Journal of Feminist Studies in Religion Volume 20 ; 20 >
+      au < down ; 2005 ; Journal of Feminist Studies in Religion Volume 21 ; 21 >
+      au < down ; 2006 ; Journal of Feminist Studies in Religion Volume 22 ; 22 >
+      au < down ; 2007 ; Journal of Feminist Studies in Religion Volume 23 ; 23 >
+      au < down ; 2008 ; Journal of Feminist Studies in Religion Volume 24 ; 24 >
+      au < down ; 2009 ; Journal of Feminist Studies in Religion Volume 25 ; 25 >
+      au < down ; 2010 ; Journal of Feminist Studies in Religion Volume 26 ; 26 >
 
     }
 
@@ -721,15 +721,15 @@
       param[journal_id] = jfr
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
-      au < released ; 2003 ; Journal of Folklore Research Volume 40 ; 40 >
-      au < released ; 2004 ; Journal of Folklore Research Volume 41 ; 41 >
-      au < released ; 2005 ; Journal of Folklore Research Volume 42 ; 42 >
-      au < released ; 2006 ; Journal of Folklore Research Volume 43 ; 43 >
-      au < released ; 2007 ; Journal of Folklore Research Volume 44 ; 44 >
-      au < released ; 2008 ; Journal of Folklore Research Volume 45 ; 45 >
-      au < released ; 2009 ; Journal of Folklore Research Volume 46 ; 46 >
-      au < released ; 2010 ; Journal of Folklore Research Volume 47 ; 47 >
+      au < down ; 2002 ; Journal of Folklore Research Volume 39 ; 39 >
+      au < down ; 2003 ; Journal of Folklore Research Volume 40 ; 40 >
+      au < down ; 2004 ; Journal of Folklore Research Volume 41 ; 41 >
+      au < down ; 2005 ; Journal of Folklore Research Volume 42 ; 42 >
+      au < down ; 2006 ; Journal of Folklore Research Volume 43 ; 43 >
+      au < down ; 2007 ; Journal of Folklore Research Volume 44 ; 44 >
+      au < down ; 2008 ; Journal of Folklore Research Volume 45 ; 45 >
+      au < down ; 2009 ; Journal of Folklore Research Volume 46 ; 46 >
+      au < down ; 2010 ; Journal of Folklore Research Volume 47 ; 47 >
 
     }
 
@@ -767,12 +767,12 @@
       param[journal_id] = mew
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 >
-      au < released ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 >
-      au < released ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 >
-      au < released ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 >
-      au < released ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 >
-      au < released ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 >
+      au < down ; 2005 ; Journal of Middle East Women's Studies Volume 1 ; 1 >
+      au < down ; 2006 ; Journal of Middle East Women's Studies Volume 2 ; 2 >
+      au < down ; 2007 ; Journal of Middle East Women's Studies Volume 3 ; 3 >
+      au < down ; 2008 ; Journal of Middle East Women's Studies Volume 4 ; 4 >
+      au < down ; 2009 ; Journal of Middle East Women's Studies Volume 5 ; 5 >
+      au < down ; 2010 ; Journal of Middle East Women's Studies Volume 6 ; 6 >
 
     }
 
@@ -808,15 +808,15 @@
       param[journal_id] = jml
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2001-2002 ; Journal of Modern Literature Volume 25 ; 25 >
-      au < released ; 2002-2003 ; Journal of Modern Literature Volume 26 ; 26 >
-      au < released ; 2003-2004 ; Journal of Modern Literature Volume 27 ; 27 >
-      au < released ; 2004-2005 ; Journal of Modern Literature Volume 28 ; 28 >
-      au < released ; 2005-2006 ; Journal of Modern Literature Volume 29 ; 29 >
-      au < released ; 2006-2007 ; Journal of Modern Literature Volume 30 ; 30 >
-      au < released ; 2007-2008 ; Journal of Modern Literature Volume 31 ; 31 >
-      au < released ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
-      au < released ; 2009-2010 ; Journal of Modern Literature Volume 33 ; 33 >
+      au < down ; 2001-2002 ; Journal of Modern Literature Volume 25 ; 25 >
+      au < down ; 2002-2003 ; Journal of Modern Literature Volume 26 ; 26 >
+      au < down ; 2003-2004 ; Journal of Modern Literature Volume 27 ; 27 >
+      au < down ; 2004-2005 ; Journal of Modern Literature Volume 28 ; 28 >
+      au < down ; 2005-2006 ; Journal of Modern Literature Volume 29 ; 29 >
+      au < down ; 2006-2007 ; Journal of Modern Literature Volume 30 ; 30 >
+      au < down ; 2007-2008 ; Journal of Modern Literature Volume 31 ; 31 >
+      au < down ; 2008-2009 ; Journal of Modern Literature Volume 32 ; 32 >
+      au < down ; 2009-2010 ; Journal of Modern Literature Volume 33 ; 33 >
 
     }
 
@@ -861,13 +861,13 @@
       param[journal_id] = mer
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
-      au < released ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
-      au < released ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
-      au < released ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
-      au < released ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
-      au < released ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
-      au < released ; 2009 ; Meridians: feminism, race, transnationalism Volume 10 ; 10 >
+      au < down ; 2003-2004 ; Meridians: feminism, race, transnationalism Volume 4 ; 4 >
+      au < down ; 2004-2005 ; Meridians: feminism, race, transnationalism Volume 5 ; 5 >
+      au < down ; 2005-2006 ; Meridians: feminism, race, transnationalism Volume 6 ; 6 >
+      au < down ; 2006-2007 ; Meridians: feminism, race, transnationalism Volume 7 ; 7 >
+      au < down ; 2007-2008 ; Meridians: feminism, race, transnationalism Volume 8 ; 8 >
+      au < down ; 2008-2009 ; Meridians: feminism, race, transnationalism Volume 9 ; 9 >
+      au < down ; 2009 ; Meridians: feminism, race, transnationalism Volume 10 ; 10 >
 
     }
 
@@ -906,7 +906,7 @@
       param[journal_id] = nas
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2003-2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6-20 ; - >
+      au < down ; 2003-2010 ; Nashim: A Journal of Jewish Women's Studies & Gender Issues Volume 6-20 ; - >
 
     }
 
@@ -954,13 +954,13 @@
       param[journal_id] = npj
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2004 ; Native Plants Journal Volume 5 ; 5 >
-      au < released ; 2005 ; Native Plants Journal Volume 6 ; 6 >
-      au < released ; 2006 ; Native Plants Journal Volume 7 ; 7 >
-      au < released ; 2007 ; Native Plants Journal Volume 8 ; 8 >
-      au < released ; 2008 ; Native Plants Journal Volume 9 ; 9 >
-      au < released ; 2009 ; Native Plants Journal Volume 10 ; 10 >
-      au < released ; 2010 ; Native Plants Journal Volume 11 ; 11 >
+      au < down ; 2004 ; Native Plants Journal Volume 5 ; 5 >
+      au < down ; 2005 ; Native Plants Journal Volume 6 ; 6 >
+      au < down ; 2006 ; Native Plants Journal Volume 7 ; 7 >
+      au < down ; 2007 ; Native Plants Journal Volume 8 ; 8 >
+      au < down ; 2008 ; Native Plants Journal Volume 9 ; 9 >
+      au < down ; 2009 ; Native Plants Journal Volume 10 ; 10 >
+      au < down ; 2010 ; Native Plants Journal Volume 11 ; 11 >
 
     }
 
@@ -997,15 +997,15 @@
       param[journal_id] = pme
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
-      au < released ; 2003 ; Philosophy of Music Education Review Volume 11 ; 11 >
-      au < released ; 2004 ; Philosophy of Music Education Review Volume 12 ; 12 >
-      au < released ; 2005 ; Philosophy of Music Education Review Volume 13 ; 13 >
-      au < released ; 2006 ; Philosophy of Music Education Review Volume 14 ; 14 >
-      au < released ; 2007 ; Philosophy of Music Education Review Volume 15 ; 15 >
-      au < released ; 2008 ; Philosophy of Music Education Review Volume 16 ; 16 >
-      au < released ; 2009 ; Philosophy of Music Education Review Volume 17 ; 17 >
-      au < released ; 2010 ; Philosophy of Music Education Review Volume 18 ; 18 >
+      au < down ; 2002 ; Philosophy of Music Education Review Volume 10 ; 10 >
+      au < down ; 2003 ; Philosophy of Music Education Review Volume 11 ; 11 >
+      au < down ; 2004 ; Philosophy of Music Education Review Volume 12 ; 12 >
+      au < down ; 2005 ; Philosophy of Music Education Review Volume 13 ; 13 >
+      au < down ; 2006 ; Philosophy of Music Education Review Volume 14 ; 14 >
+      au < down ; 2007 ; Philosophy of Music Education Review Volume 15 ; 15 >
+      au < down ; 2008 ; Philosophy of Music Education Review Volume 16 ; 16 >
+      au < down ; 2009 ; Philosophy of Music Education Review Volume 17 ; 17 >
+      au < down ; 2010 ; Philosophy of Music Education Review Volume 18 ; 18 >
 
     }
 
@@ -1043,16 +1043,16 @@
       param[journal_id] = pft
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
-      au < released ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
-      au < released ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
-      au < released ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
-      au < released ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
-      au < released ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
-      au < released ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
-      au < released ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
-      au < released ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
-      au < released ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
+      au < down ; 2000 ; Prooftexts: A Journal of Jewish Literary History Volume 20 ; 20 >
+      au < down ; 2001 ; Prooftexts: A Journal of Jewish Literary History Volume 21 ; 21 >
+      au < down ; 2002 ; Prooftexts: A Journal of Jewish Literary History Volume 22 ; 22 >
+      au < down ; 2003 ; Prooftexts: A Journal of Jewish Literary History Volume 23 ; 23 >
+      au < down ; 2004 ; Prooftexts: A Journal of Jewish Literary History Volume 24 ; 24 >
+      au < down ; 2005 ; Prooftexts: A Journal of Jewish Literary History Volume 25 ; 25 >
+      au < down ; 2006 ; Prooftexts: A Journal of Jewish Literary History Volume 26 ; 26 >
+      au < down ; 2007 ; Prooftexts: A Journal of Jewish Literary History Volume 27 ; 27 >
+      au < down ; 2008 ; Prooftexts: A Journal of Jewish Literary History Volume 28 ; 28 >
+      au < down ; 2009 ; Prooftexts: A Journal of Jewish Literary History Volume 29 ; 29 >
 
     }
 
@@ -1095,9 +1095,9 @@
       param[journal_id] = rac
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
-      au < released ; 2008-2009 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
-      au < released ; 2009-2010 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
+      au < down ; 2007-2008 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 1 ; 1 >
+      au < down ; 2008-2009 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 2 ; 2 >
+      au < down ; 2009-2010 ; Race/Ethnicity:  Multidisciplinary Global Perspectives Volume 3 ; 3 >
 
     }
 
@@ -1130,18 +1130,18 @@
       param[journal_id] = ral
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1999 ; Research in African Literatures Volume 30 ; 30 >
-      au < released ; 2000 ; Research in African Literatures Volume 31 ; 31 >
-      au < released ; 2001 ; Research in African Literatures Volume 32 ; 32 >
-      au < released ; 2002 ; Research in African Literatures Volume 33 ; 33 >
-      au < released ; 2003 ; Research in African Literatures Volume 34 ; 34 >
-      au < released ; 2004 ; Research in African Literatures Volume 35 ; 35 >
-      au < released ; 2005 ; Research in African Literatures Volume 36 ; 36 >
-      au < released ; 2006 ; Research in African Literatures Volume 37 ; 37 >
-      au < released ; 2007 ; Research in African Literatures Volume 38 ; 38 >
-      au < released ; 2008 ; Research in African Literatures Volume 39 ; 39 >
-      au < released ; 2009 ; Research in African Literatures Volume 40 ; 40 >
-      au < released ; 2010 ; Research in African Literatures Volume 41 ; 41 >
+      au < down ; 1999 ; Research in African Literatures Volume 30 ; 30 >
+      au < down ; 2000 ; Research in African Literatures Volume 31 ; 31 >
+      au < down ; 2001 ; Research in African Literatures Volume 32 ; 32 >
+      au < down ; 2002 ; Research in African Literatures Volume 33 ; 33 >
+      au < down ; 2003 ; Research in African Literatures Volume 34 ; 34 >
+      au < down ; 2004 ; Research in African Literatures Volume 35 ; 35 >
+      au < down ; 2005 ; Research in African Literatures Volume 36 ; 36 >
+      au < down ; 2006 ; Research in African Literatures Volume 37 ; 37 >
+      au < down ; 2007 ; Research in African Literatures Volume 38 ; 38 >
+      au < down ; 2008 ; Research in African Literatures Volume 39 ; 39 >
+      au < down ; 2009 ; Research in African Literatures Volume 40 ; 40 >
+      au < down ; 2010 ; Research in African Literatures Volume 41 ; 41 >
 
     }
 
@@ -1186,11 +1186,11 @@
       param[journal_id] = tex
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
-      au < released ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 ; 2 >
-      au < released ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
-      au < released ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
-      au < released ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 ; 5 >
+      au < down ; 2006 ; Textual Cultures: Texts, Contexts, Interpretation Volume 1 ; 1 >
+      au < down ; 2007 ; Textual Cultures: Texts, Contexts, Interpretation Volume 2 ; 2 >
+      au < down ; 2008 ; Textual Cultures: Texts, Contexts, Interpretation Volume 3 ; 3 >
+      au < down ; 2009 ; Textual Cultures: Texts, Contexts, Interpretation Volume 4 ; 4 >
+      au < down ; 2010 ; Textual Cultures: Texts, Contexts, Interpretation Volume 5 ; 5 >
 
     }
 
@@ -1225,12 +1225,12 @@
       param[journal_id] = tra
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 ; 41 >
-      au < released ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
-      au < released ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
-      au < released ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
-      au < released ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
-      au < released ; 2010-2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 ; 46 >
+      au < down ; 2005 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 41 ; 41 >
+      au < down ; 2006 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 42 ; 42 >
+      au < down ; 2007 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 43 ; 43 >
+      au < down ; 2008 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 44 ; 44 >
+      au < down ; 2009 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 45 ; 45 >
+      au < down ; 2010-2011 ; Transactions of the Charles S. Peirce Society: A Quarterly Journal in American Philosophy Volume 46 ; 46 >
 
     }
 
@@ -1265,7 +1265,7 @@
       param[journal_id] = trs
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 2002-2010 ; Transition: An International Review Volume 93-103 ; - >
+      au < down ; 2002-2010 ; Transition: An International Review Volume 93-103 ; - >
 
     }
     
@@ -1306,17 +1306,17 @@
       param[journal_id] = vic
       implicit < status ; year ; name ; param[volume_name] >
 
-      au < released ; 1998-2000 ; Victorian Studies Volume 42 ; 42 >
-      au < released ; 2000-2001 ; Victorian Studies Volume 43 ; 43 >
-      au < released ; 2001-2002 ; Victorian Studies Volume 44 ; 44 >
-      au < released ; 2002-2003 ; Victorian Studies Volume 45 ; 45 >
-      au < released ; 2003-2004 ; Victorian Studies Volume 46 ; 46 >
-      au < released ; 2004-2005 ; Victorian Studies Volume 47 ; 47 >
-      au < released ; 2005-2006 ; Victorian Studies Volume 48 ; 48 >
-      au < released ; 2006-2007 ; Victorian Studies Volume 49 ; 49 >
-      au < released ; 2007-2008 ; Victorian Studies Volume 50 ; 50 >
-      au < released ; 2008-2009 ; Victorian Studies Volume 51 ; 51 >
-      au < released ; 2009-2010 ; Victorian Studies Volume 52 ; 52 >
+      au < down ; 1998-2000 ; Victorian Studies Volume 42 ; 42 >
+      au < down ; 2000-2001 ; Victorian Studies Volume 43 ; 43 >
+      au < down ; 2001-2002 ; Victorian Studies Volume 44 ; 44 >
+      au < down ; 2002-2003 ; Victorian Studies Volume 45 ; 45 >
+      au < down ; 2003-2004 ; Victorian Studies Volume 46 ; 46 >
+      au < down ; 2004-2005 ; Victorian Studies Volume 47 ; 47 >
+      au < down ; 2005-2006 ; Victorian Studies Volume 48 ; 48 >
+      au < down ; 2006-2007 ; Victorian Studies Volume 49 ; 49 >
+      au < down ; 2007-2008 ; Victorian Studies Volume 50 ; 50 >
+      au < down ; 2008-2009 ; Victorian Studies Volume 51 ; 51 >
+      au < down ; 2009-2010 ; Victorian Studies Volume 52 ; 52 >
 
     }
 
