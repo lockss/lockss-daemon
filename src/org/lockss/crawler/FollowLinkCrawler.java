@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.78.8.2 2011-01-06 03:25:08 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.78.8.3 2011-01-06 09:45:41 tlipkis Exp $
  */
 
 /*
@@ -616,7 +616,7 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
 	subChecker.checkSubstance(cu);
       }
     } finally {
-      cu.release();
+      AuUtil.safeRelease(cu);
     }
   }
 
