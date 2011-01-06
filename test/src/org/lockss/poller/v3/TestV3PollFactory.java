@@ -170,6 +170,33 @@ public class TestV3PollFactory extends LockssTestCase {
     assertNull(p);
   }
    
+  public void testPluginVersionMismatch() throws Exception {
+    // makePollMsg() puts plugin version 3 in message.  MockPlugin has
+    // version "MockVersion"
+    testMsg = makePollMsg(V3LcapMessage.MSG_POLL);
+
+    PollSpec pspec = new PollSpec(testMsg);
+    Poll p = thePollFactory.createPoll(pspec, theDaemon, testId, 1000,
+                                       "SHA1", testMsg);
+    assertNull(p);
+    assertEquals(ListUtil.list(ListUtil.list(PollNak.NAK_PLUGIN_VERSION_MISMATCH,
+					     testAu.getAuId())),
+		 thePollFactory.naks);
+  }
+   
+  // Same mismatch as above, but in a Nak message.  Ensure that receiving a
+  // Nak doesn't cause a Nak to be sent.
+  public void testNoResponseToPluginVersionMismatchNak() throws Exception {
+    testMsg = makePollMsg(V3LcapMessage.MSG_POLL_ACK);
+    testMsg.setNak(PollNak.NAK_NO_AU);
+
+    PollSpec pspec = new PollSpec(testMsg);
+    Poll p = thePollFactory.createPoll(pspec, theDaemon, testId, 1000,
+                                       "SHA1", testMsg);
+    assertNull(p);
+    assertEmpty("Nak was sent is response to Nak. ", thePollFactory.naks);
+  }
+   
   public void testNoVoteIfNoCrawl() throws Exception {
     aus.setLastCrawlTime(-1);
 
@@ -362,7 +389,7 @@ public class TestV3PollFactory extends LockssTestCase {
 
     @Override
     protected void sendNak(LockssDaemon daemon, PollNak nak,
-			   String auid, V3LcapMessage msg) {
+			   String auid, V3LcapMessage msg, String plugVer) {
       naks.add(ListUtil.list(nak, auid));
     }
 

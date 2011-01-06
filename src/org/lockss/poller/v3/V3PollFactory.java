@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.29.24.1 2010-09-01 08:04:12 tlipkis Exp $
+ * $Id: V3PollFactory.java,v 1.29.24.2 2011-01-06 03:25:26 tlipkis Exp $
  */
 
 /*
@@ -108,11 +108,16 @@ public class V3PollFactory extends BasePollFactory {
 
   protected void sendNak(LockssDaemon daemon, PollNak nak,
 			 String auid, V3LcapMessage msg) {
+    sendNak(daemon, nak, auid, msg, msg.getPluginVersion());
+  }
+
+  protected void sendNak(LockssDaemon daemon, PollNak nak,
+			 String auid, V3LcapMessage msg, String plugVer) {
     IdentityManager idMgr = daemon.getIdentityManager();
 
     V3LcapMessage response =
       new V3LcapMessage(auid, msg.getKey(),
-			msg.getPluginVersion(), null, null,
+			plugVer, null, null,
 			V3LcapMessage.MSG_POLL_ACK,
 			TimeBase.nowMs() + msg.getDuration(),
 			idMgr.getLocalPeerIdentity(Poll.V3_PROTOCOL),
@@ -139,61 +144,62 @@ public class V3PollFactory extends BasePollFactory {
     if (idMgr == null) {
       idMgr = daemon.getIdentityManager();
     }
-
-    BasePoll retPoll = null;
-
-    CachedUrlSet cus = pollspec.getCachedUrlSet();
-    // check for presence of item in the cache
-    if (cus == null) {
-      log.debug("Ignoring poll request, don't have AU: " + pollspec.getAuId());
-      
-      PollNak reason =
-	daemon.areAusStarted() ? PollNak.NAK_NO_AU : PollNak.NAK_NOT_READY;
-      sendNak(daemon, reason, pollspec.getAuId(), (V3LcapMessage)msg);
-      return null;
-    }
-    ArchivalUnit au = cus.getArchivalUnit();
-    if (!pollspec.getPluginVersion().equals(au.getPlugin().getVersion())) {
-      log.debug("Ignoring poll request for " + au.getName() +
-                   ", plugin version mismatch; have: " +
-                   au.getPlugin().getVersion() +
-                   ", need: " + pollspec.getPluginVersion());
-      sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
-	      pollspec.getAuId(), (V3LcapMessage)msg);
-      return null;
-    }
-    log.debug("Making poll from: " + pollspec);
     if (pollspec.getProtocolVersion() != Poll.V3_PROTOCOL) {
       throw new ProtocolException("bad version " +
-                                  pollspec.getProtocolVersion());
-    }
-    if (duration <= 0) {
-      throw new ProtocolException("bad duration " + duration);
+				  pollspec.getProtocolVersion());
     }
     if (pollspec.getPollType() != Poll.V3_POLL) {
       throw new ProtocolException("Unexpected poll type:" +
-                                  pollspec.getPollType());
+				  pollspec.getPollType());
     }
-    
-    try {
-      if (msg == null) {
-        // If there's no message, we're making a poller
-        retPoll = makeV3Poller(daemon, pollspec, orig, duration, hashAlg);
-      } else {
-        // If there's a message, we're making a voter
-	if (msg.getOpcode() != V3LcapMessage.MSG_POLL) {
-	  log.warning("Received msg for nonexistent poll: " + msg);
-	  return null;
-	}
+    if (msg == null) {
+      // If there's no message, we're making a poller
+      try {
+	return makeV3Poller(daemon, pollspec, orig, duration, hashAlg);
+      } catch (V3Serializer.PollSerializerException ex) {
+	log.error("Serialization exception creating new V3Poller: ", ex);
+	return null;
+      }
+    } else {
+      // This is an incoming message for which we have no current poll
+      // Ignore if not poll request
+      if (msg.getOpcode() != V3LcapMessage.MSG_POLL) {
+	log.warning("Received msg for nonexistent poll: " + msg);
+	return null;
+      }
+      CachedUrlSet cus = pollspec.getCachedUrlSet();
+      // Do we have the AU?
+      if (cus == null) {
+	log.debug2("Ignoring poll request from " + orig + " don't have AU: "
+		   + pollspec.getAuId());
+	PollNak reason =
+	  daemon.areAusStarted() ? PollNak.NAK_NO_AU : PollNak.NAK_NOT_READY;
+	sendNak(daemon, reason, pollspec.getAuId(), (V3LcapMessage)msg);
+	return null;
+      }
+      ArchivalUnit au = cus.getArchivalUnit();
+      if (!pollspec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+	log.debug("Ignoring poll request from " + orig + " for " + au.getName()
+		  + ", plugin version mismatch; have: " +
+		  au.getPlugin().getVersion() +
+		  ", need: " + pollspec.getPluginVersion());
+	sendNak(daemon, PollNak.NAK_PLUGIN_VERSION_MISMATCH,
+		pollspec.getAuId(), (V3LcapMessage)msg,
+		au.getPlugin().getVersion());
+	return null;
+      }
+      if (duration <= 0) {
+	throw new ProtocolException("bad duration " + duration);
+      }
+      try {
 	// Remove any record that this peer doesn't have the AU
 	deleteFromNoAuPeers(au, orig);
-        retPoll = makeV3Voter(daemon, msg, pollspec, orig);
+        return makeV3Voter(daemon, msg, pollspec, orig);
+      } catch (V3Serializer.PollSerializerException ex) {
+	log.error("Serialization exception creating new V3Voter: ", ex);
+	return null;
       }
-    } catch (V3Serializer.PollSerializerException ex) {
-      log.error("Serialization exception creating new V3Poller: ", ex);
-      return null;
     }
-    return retPoll;
   }
   
   void deleteFromNoAuPeers(ArchivalUnit au, PeerIdentity peer) {
@@ -223,7 +229,7 @@ public class V3PollFactory extends BasePollFactory {
                                 PeerIdentity orig, long duration,
                                 String hashAlg)
       throws V3Serializer.PollSerializerException {
-    log.debug("Creating V3Poller to call a new poll...");
+    log.debug("Creating V3Poller for: " + pollspec);
     String key =
       String.valueOf(B64Code.encode(ByteArray.makeRandomBytes(20)));
     return new V3Poller(pollspec, daemon, orig, key, duration, hashAlg);
@@ -242,6 +248,7 @@ public class V3PollFactory extends BasePollFactory {
   private V3Voter makeV3Voter(LockssDaemon daemon, LcapMessage msg,
 			      PollSpec pollspec, PeerIdentity orig)
       throws V3Serializer.PollSerializerException {
+    log.debug2("Creating V3Voter for " + orig + "'s poll: " + pollspec);
     IdentityManager idMgr = daemon.getIdentityManager();
     V3LcapMessage m = (V3LcapMessage)msg;
 
