@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.2 2011-01-04 04:52:09 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.3 2011-01-06 04:06:53 dshr Exp $
  */
 
 /*
@@ -37,9 +37,11 @@ import java.net.*;
 import java.util.*;
 //import org.apache.commons.vfs.FileContent;
 //import org.apache.commons.vfs.FileName;
+import org.apache.commons.vfs.FileSystemManager;
+import org.apache.commons.vfs.VFS;
 import org.apache.commons.vfs.FileObject;
 import org.apache.commons.vfs.FileSystem;
-//import org.apache.commons.vfs.FileSystemException;
+import org.apache.commons.vfs.FileSystemException;
 //import org.apache.commons.vfs.FileType;
 
 import org.apache.commons.lang.SystemUtils;
@@ -100,7 +102,7 @@ public class LockssRepositoryImpl
   UniqueRefLruCache nodeCache;
   private boolean isGlobalNodeCache =
     RepositoryManager.DEFAULT_GLOBAL_CACHE_ENABLED;
-  private FileSystem fileSystem;
+  private FileSystemManager fileSystemManager = null;
 
   LockssRepositoryImpl(String rootPath) {
     if (rootPath.endsWith(File.separator)) {
@@ -129,9 +131,11 @@ public class LockssRepositoryImpl
 // 	new UniqueRefLruCache(repoMgr.paramNodeCacheSize);
       setNodeCacheSize(repoMgr.paramNodeCacheSize);
     }
-    if (true)
-      throw new UnsupportedOperationException("XXX implement me");
-    fileSystem = null;
+    try {
+      fileSystemManager = VFS.getManager(); // XXX
+    } catch (FileSystemException e) {
+      logger.error("VFS.getManager() threw: " + e);
+    }
   }
 
   public void stopService() {
@@ -139,6 +143,7 @@ public class LockssRepositoryImpl
     lastPluginDir = INITIAL_PLUGIN_DIR;
     localRepositories = new HashMap();
     super.stopService();
+    // XXX close down file system
   }
 
   public void setNodeCacheSize(int size) {
@@ -322,7 +327,13 @@ public class LockssRepositoryImpl
    * @return FileSystem the COmmons VFS file system for this repository
    */
   public FileSystem getFileSystem() {
-    return fileSystem;
+    FileSystem ret = null;
+    try {
+      ret = fileSystemManager.resolveFile("/").getFileSystem(); // XXX
+    } catch (FileSystemException e) {
+      logger.error("resolveFile(\"/\").getFileSystem() threw: " + e);
+    }
+    return ret;
   }
 
   // static calls

@@ -1,5 +1,5 @@
 /*
- * $Id: FileTestUtil.java,v 1.8.8.2 2011-01-04 04:52:09 dshr Exp $
+ * $Id: FileTestUtil.java,v 1.8.8.3 2011-01-06 04:06:54 dshr Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,6 +36,8 @@ import java.net.*;
 import java.security.*;
 import org.lockss.util.*;
 
+import org.apache.commons.vfs.FileSystemManager;
+import org.apache.commons.vfs.VFS;
 import org.apache.commons.vfs.FileContent;
 import org.apache.commons.vfs.FileName;
 import org.apache.commons.vfs.FileObject;
@@ -196,7 +198,11 @@ public class FileTestUtil {
    * Initialize a RAM file system
    */
    private static void initRamFs() {
-     if (true) throw new UnsupportedOperationException("XXX implement me");
+     try {
+       ramfs = VFS.getManager().resolveFile("ram://").getFileSystem();
+     } catch (FileSystemException e) {
+       // No action intended
+     }
    }
 
   /**
