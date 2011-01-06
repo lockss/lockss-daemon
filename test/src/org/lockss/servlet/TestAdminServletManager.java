@@ -1,5 +1,5 @@
 /*
- * $Id: TestAdminServletManager.java,v 1.5 2010-02-22 07:03:26 tlipkis Exp $
+ * $Id: TestAdminServletManager.java,v 1.6 2011-01-06 18:32:53 neilmayo Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public class TestAdminServletManager extends LockssTestCase {
     SERVLET_SERVE_CONTENT,
     SERVLET_LIST_OBJECTS,
     SERVLET_HASH_CUS,
+    SERVLET_LIST_HOLDINGS,   
     LINK_LOGS,
     SERVLET_THREAD_DUMP,
     LINK_CONTACT,
@@ -101,11 +102,11 @@ public class TestAdminServletManager extends LockssTestCase {
   // Ensure only the expected servlets are available to non-admin users
   public void testAdminOnlyDescrs() throws Exception {
 
-    Set userAdminOnly = new HashSet();
-    Set auAdminOnly = new HashSet();
-    Set contentAdminOnly = new HashSet();
-    Set readOnly = new HashSet();
-    Set debugOnly = new HashSet();
+    Set<ServletDescr> userAdminOnly = new HashSet<ServletDescr>();
+    Set<ServletDescr> auAdminOnly = new HashSet<ServletDescr>();
+    Set<ServletDescr> contentAdminOnly = new HashSet<ServletDescr>();
+    Set<ServletDescr> readOnly = new HashSet<ServletDescr>();
+    Set<ServletDescr> debugOnly = new HashSet<ServletDescr>();
     for (ServletDescr descr : mgr.getServletDescrs()) {
       if (descr.needsUserAdminRole()) {
 	userAdminOnly.add(descr);

@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.15 2010-02-23 06:25:53 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.16 2011-01-06 18:32:53 neilmayo Exp $
  */
 
 /*
@@ -268,7 +268,7 @@ public class AdminServletManager extends BaseServletManager {
                      "Content Access Options",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME
 		      | ServletDescr.NEED_ROLE_CONTENT_ADMIN),
-                     "Configure the audit proxy and the ICP server.");
+                     "Configure the audit proxy and the ICP server");
   protected static final ServletDescr SERVLET_PROXY_INFO =
     new ServletDescr("ProxyConfig",
 		     ProxyConfig.class,
@@ -332,6 +332,16 @@ public class AdminServletManager extends BaseServletManager {
 		     HashCUS.class,
                      "Hash CUS",
                      ServletDescr.NEED_ROLE_DEBUG);
+  
+  protected static final ServletDescr SERVLET_LIST_HOLDINGS =
+    new ServletDescr("ListHoldings",
+         ListHoldings.class,
+                     "Holdings List",
+                     "holdings",
+                     (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
+                     "List holdings metadata"
+    );
+  
   protected static final ServletDescr LINK_LOGS =
     new ServletDescr(null,
 		     null,
@@ -389,8 +399,8 @@ public class AdminServletManager extends BaseServletManager {
                      "Help", DEFAULT_HELP_URL,
                      ServletDescr.PATH_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Online help, FAQs, credits");
-
-  protected static final ServletDescr LINK_LOGOUT =
+  
+    protected static final ServletDescr LINK_LOGOUT =
     new ServletDescr("LoginForm",
 		     null,
                      "Logout",
@@ -437,6 +447,7 @@ public class AdminServletManager extends BaseServletManager {
      SERVLET_LIST_OBJECTS,
      SERVLET_DEBUG_PANEL,
      SERVLET_EXPERT_CONFIG,
+     SERVLET_LIST_HOLDINGS,
      LINK_LOGS,
      LINK_ISOS,
      LINK_EXPORTS,
@@ -454,7 +465,6 @@ public class AdminServletManager extends BaseServletManager {
   public ServletDescr[] getServletDescrs() {
     return servletDescrs;
   }
-
 
   private String logdir;
   private File exportdir;

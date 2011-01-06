@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.17 2008-10-25 01:23:22 tlipkis Exp $
+ * $Id: CollectionUtil.java,v 1.18 2011-01-06 18:32:53 neilmayo Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class CollectionUtil {
    * Randomly select one item from a list.
    *
    * @param c The list from which to select an item.
-   * @return An item randomly selcted from the list.
+   * @return An item randomly selected from the list.
    */
   public static Object randomSelection(List c) {
     return c.get(random.nextInt(c.size()));
@@ -196,7 +196,7 @@ public class CollectionUtil {
    * use {@link #randomSelection(List)} instead.
    *
    * @param c The collection from which to select an item.
-   * @return An item randomly selcted from the collection.
+   * @return An item randomly selected from the collection.
    */
   public static Object randomSelection(Collection c) {
     int idx = random.nextInt(c.size());

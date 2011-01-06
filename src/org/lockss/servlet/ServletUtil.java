@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.64 2010-05-04 23:34:40 tlipkis Exp $
+ * $Id: ServletUtil.java,v 1.65 2011-01-06 18:32:53 neilmayo Exp $
  */
 
 /*
@@ -1357,6 +1357,7 @@ public class ServletUtil {
   }
 
   /** Return a (possibly labelled) checkbox.
+   * @param servlet The servlet associated with the checkbox.
    * @param key     Form key to which result set is assigned
    * @param value   Value included in result set if box checked
    * @param text    Appears to right of checkbox if non null
