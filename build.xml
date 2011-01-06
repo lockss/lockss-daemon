@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.264 2010-12-20 23:43:47 tlipkis Exp $
+ $Id: build.xml,v 1.265 2011-01-06 18:54:49 neilmayo Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -219,6 +219,7 @@ Args:
   <property name="javatar.jar"    value="${lib}/tar-2.3.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar" value="${lib}/htmlparser-1.6p.jar"/>
+  <property name="apiviz.jar"     value="${lib}/apiviz-1.3.1.jar"/>
   <!-- W3C RDF Parser -->
   <property name="rdf.jar"        value="${lib}/rdf-api-2001-01-19.jar" />
   <property name="xstream.jar"    value="${lib}/xstream-1.1.3.jar" />
@@ -2412,5 +2413,35 @@ optionally -Dtests= for tests to be run.
       <arg value="JavaUUID.cc"/>
     </exec>
   </target>
+
+  <target name="javadoc-apiviz" depends="jar-tests,prepare-javadoc,-load-build-info,param-docs"
+          description="Make the javadocs along with apiviz UML graphs.">
+    <!-- Write the text param doc into the doc tree -->
+    <java classname="ParamDoc" fork="true">
+       <classpath refid="test.run.classpath" />
+       <arg line="-o ${javadoc}/paramdoc.txt lockss.jar" />
+    </java>
+    <javadoc
+        doclet="org.jboss.apiviz.APIviz"
+        docletpath="${apiviz.jar}"
+        
+        failonerror="true"
+             packagenames="org.lockss.*"
+             sourcepath="${src}"
+             destdir="${javadoc}"
+             use="${use}"
+             author="${author}"
+             version="${version}"
+	     access="private"
+             windowtitle="LOCKSS API"
+             doctitle="LOCKSS"
+             verbose="false"
+             overview="${src}/overview.html"
+             header="${javadoc.header}"
+             bottom="Copyright &amp;copy; 2000-2010 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+       <classpath refid="compile.classpath" />
+    </javadoc>
+  </target>
+
 
 </project>
