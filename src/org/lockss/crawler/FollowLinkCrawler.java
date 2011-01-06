@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.78.8.1 2010-09-01 08:04:13 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.78.8.2 2011-01-06 03:25:08 tlipkis Exp $
  */
 
 /*
@@ -609,9 +609,14 @@ public abstract class FollowLinkCrawler extends BaseCrawler {
     return (!crawlStatus.isCrawlError());
   }
 
-  void checkSubstanceCollected(CachedUrl cu) {
-    if (subChecker != null) {
-      subChecker.checkSubstance(cu);
+  // Callers are all local, know that we release the CU
+  private void checkSubstanceCollected(CachedUrl cu) {
+    try {
+      if (subChecker != null) {
+	subChecker.checkSubstance(cu);
+      }
+    } finally {
+      cu.release();
     }
   }
 
