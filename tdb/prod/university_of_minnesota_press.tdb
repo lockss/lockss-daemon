@@ -50,14 +50,14 @@
     au < released ; Cultural Critique Volume 63 ; 63 >
     au < released ; Cultural Critique Volume 64 ; 64 >
     au < released ; Cultural Critique Volume 65 ; 65 >
-    au < manifest ; Cultural Critique Volume 66 ; 66 >
-    au < manifest ; Cultural Critique Volume 67 ; 67 >
-    au < manifest ; Cultural Critique Volume 68 ; 68 >
-    au < manifest ; Cultural Critique Volume 69 ; 69 >
-    au < manifest ; Cultural Critique Volume 70 ; 70 >
-    au < manifest ; Cultural Critique Volume 71 ; 71 >
-    au < manifest ; Cultural Critique  72 ; 72 >
-    au < manifest ; Cultural Critique Number 73 ; 73 >
+    au < ready ; Cultural Critique Volume 66 ; 66 >
+    au < ready ; Cultural Critique Volume 67 ; 67 >
+    au < ready ; Cultural Critique Volume 68 ; 68 >
+    au < ready ; Cultural Critique Volume 69 ; 69 >
+    au < ready ; Cultural Critique Volume 70 ; 70 >
+    au < ready ; Cultural Critique Volume 71 ; 71 >
+    au < ready ; Cultural Critique  72 ; 72 >
+    au < ready ; Cultural Critique Number 73 ; 73 >
 
   }
 
@@ -70,8 +70,8 @@
 
     param[journal_dir] = future_anterior
 
-    au < manifest ; Future Anterior Volume 5 ; 5 >
-    au < manifest ; Future Anterior Volume 6 ; 6 >
+    au < ready ; Future Anterior Volume 5 ; 5 >
+    au < ready ; Future Anterior Volume 6 ; 6 >
 
   }
 
@@ -84,10 +84,10 @@
 
     param[journal_dir] = mechademia
 
-    au < manifest ; Mechademia Volume 1 ; 1 >
-    au < manifest ; Mechademia Volume 2 ; 2 >
-    au < manifest ; Mechademia Volume 3 ; 3 >
-    au < manifest ; Mechademia Volume 4 ; 4 >
+    au < ready ; Mechademia Volume 1 ; 1 >
+    au < ready ; Mechademia Volume 2 ; 2 >
+    au < ready ; Mechademia Volume 3 ; 3 >
+    au < ready ; Mechademia Volume 4 ; 4 >
 
   }
 
@@ -104,9 +104,9 @@
     au < released ; The Moving Image Volume 4 ; 4 >
     au < released ; The Moving Image Volume 5 ; 5 >
     au < released ; The Moving Image Volume 6 ; 6 >
-    au < manifest ; The Moving Image Volume 7 ; 7 >
-    au < manifest ; The Moving Image Volume 8 ; 8 >
-    au < manifest ; The Moving Image Volume 9 ; 9 >
+    au < ready ; The Moving Image Volume 7 ; 7 >
+    au < ready ; The Moving Image Volume 8 ; 8 >
+    au < ready ; The Moving Image Volume 9 ; 9 >
 
   }
 
@@ -127,8 +127,8 @@
     au < released ; Wicazo Sa Review Volume 20 ; 20 >
     au < released ; Wicazo Sa Review Volume 21 ; 21 >
     au < released ; Wicazo Sa Review Volume 22 ; 22 >
-    au < manifest ; Wicazo Sa Review Volume 23 ; 23 >
-    au < manifest ; Wicazo Sa Review Volume 24 ; 24 >
+    au < ready ; Wicazo Sa Review Volume 23 ; 23 >
+    au < ready ; Wicazo Sa Review Volume 24 ; 24 >
 
   }
 

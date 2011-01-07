@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://www.cmaj.ca/
       implicit < status ; name ; param[volume_name] >
 
@@ -98,12 +98,12 @@
       au < released ; Canadian Medical Association Journal Volume 173 ; 173 >
       au < released ; Canadian Medical Association Journal Volume 174 ; 174 >
       au < released ; Canadian Medical Association Journal Volume 175 ; 175 >
-      au < manifest ; Canadian Medical Association Journal Volume 176 ; 176 >
-      au < manifest ; Canadian Medical Association Journal Volume 177 ; 177 >
-      au < manifest ; Canadian Medical Association Journal Volume 178 ; 178 >
-      au < manifest ; Canadian Medical Association Journal Volume 179 ; 179 >
-      au < manifest ; Canadian Medical Association Journal Volume 180 ; 180 >
-      au < manifest ; Canadian Medical Association Journal Volume 181 ; 181 >
+      au < testing ; Canadian Medical Association Journal Volume 176 ; 176 >
+      au < testing ; Canadian Medical Association Journal Volume 177 ; 177 >
+      au < testing ; Canadian Medical Association Journal Volume 178 ; 178 >
+      au < testing ; Canadian Medical Association Journal Volume 179 ; 179 >
+      au < testing ; Canadian Medical Association Journal Volume 180 ; 180 >
+      au < testing ; Canadian Medical Association Journal Volume 181 ; 181 >
 
     }
 

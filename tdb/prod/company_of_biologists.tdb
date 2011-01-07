@@ -90,134 +90,134 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jcs.biologists.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
       comment[legacy] = 1853-1965 under a different name, with three series of synthetic volume names
 
-      au < manifest ; Journal of Cell Science Volume 1 ; 1 >
-      au < manifest ; Journal of Cell Science Volume 2 ; 2 >
-      au < manifest ; Journal of Cell Science Volume 3 ; 3 >
-      au < manifest ; Journal of Cell Science Volume 4 ; 4 >
-      au < manifest ; Journal of Cell Science Volume 5 ; 5 >
-      au < manifest ; Journal of Cell Science Volume 6 ; 6 >
-      au < manifest ; Journal of Cell Science Volume 7 ; 7 >
-      au < manifest ; Journal of Cell Science Volume 8 ; 8 >
-      au < manifest ; Journal of Cell Science Volume 9 ; 9 >
-      au < manifest ; Journal of Cell Science Volume 10 ; 10 >
-      au < manifest ; Journal of Cell Science Volume 11 ; 11 >
-      au < manifest ; Journal of Cell Science Volume 12 ; 12 >
-      au < manifest ; Journal of Cell Science Volume 13 ; 13 >
-      au < manifest ; Journal of Cell Science Volume 14 ; 14 >
-      au < manifest ; Journal of Cell Science Volume 15 ; 15 >
-      au < manifest ; Journal of Cell Science Volume 16 ; 16 >
-      au < manifest ; Journal of Cell Science Volume 17 ; 17 >
-      au < manifest ; Journal of Cell Science Volume 18 ; 18 >
-      au < manifest ; Journal of Cell Science Volume 19 ; 19 >
-      au < manifest ; Journal of Cell Science Volume 20 ; 20 >
-      au < manifest ; Journal of Cell Science Volume 21 ; 21 >
-      au < manifest ; Journal of Cell Science Volume 22 ; 22 >
-      au < manifest ; Journal of Cell Science Volume 23 ; 23 >
-      au < manifest ; Journal of Cell Science Volume 24 ; 24 >
-      au < manifest ; Journal of Cell Science Volume 25 ; 25 >
-      au < manifest ; Journal of Cell Science Volume 26 ; 26 >
-      au < manifest ; Journal of Cell Science Volume 27 ; 27 >
-      au < manifest ; Journal of Cell Science Volume 28 ; 28 >
-      au < manifest ; Journal of Cell Science Volume 29 ; 29 >
-      au < manifest ; Journal of Cell Science Volume 30 ; 30 >
-      au < manifest ; Journal of Cell Science Volume 31 ; 31 >
-      au < manifest ; Journal of Cell Science Volume 32 ; 32 >
-      au < manifest ; Journal of Cell Science Volume 33 ; 33 >
-      au < manifest ; Journal of Cell Science Volume 34 ; 34 >
-      au < manifest ; Journal of Cell Science Volume 35 ; 35 >
-      au < manifest ; Journal of Cell Science Volume 36 ; 36 >
-      au < manifest ; Journal of Cell Science Volume 37 ; 37 >
-      au < manifest ; Journal of Cell Science Volume 38 ; 38 >
-      au < manifest ; Journal of Cell Science Volume 39 ; 39 >
-      au < manifest ; Journal of Cell Science Volume 40 ; 40 >
-      au < manifest ; Journal of Cell Science Volume 41 ; 41 >
-      au < manifest ; Journal of Cell Science Volume 42 ; 42 >
-      au < manifest ; Journal of Cell Science Volume 43 ; 43 >
-      au < manifest ; Journal of Cell Science Volume 44 ; 44 >
-      au < manifest ; Journal of Cell Science Volume 45 ; 45 >
-      au < manifest ; Journal of Cell Science Volume 46 ; 46 >
-      au < manifest ; Journal of Cell Science Volume 47 ; 47 >
-      au < manifest ; Journal of Cell Science Volume 48 ; 48 >
-      au < manifest ; Journal of Cell Science Volume 49 ; 49 >
-      au < manifest ; Journal of Cell Science Volume 50 ; 50 >
-      au < manifest ; Journal of Cell Science Volume 51 ; 51 >
-      au < manifest ; Journal of Cell Science Volume 52 ; 52 >
-      au < manifest ; Journal of Cell Science Volume 53 ; 53 >
-      au < manifest ; Journal of Cell Science Volume 54 ; 54 >
-      au < manifest ; Journal of Cell Science Volume 55 ; 55 >
-      au < manifest ; Journal of Cell Science Volume 56 ; 56 >
-      au < manifest ; Journal of Cell Science Volume 57 ; 57 >
-      au < manifest ; Journal of Cell Science Volume 58 ; 58 >
-      au < manifest ; Journal of Cell Science Volume 59 ; 59 >
-      au < manifest ; Journal of Cell Science Volume 60 ; 60 >
-      au < manifest ; Journal of Cell Science Volume 61 ; 61 >
-      au < manifest ; Journal of Cell Science Volume 62 ; 62 >
-      au < manifest ; Journal of Cell Science Volume 63 ; 63 >
-      au < manifest ; Journal of Cell Science Volume 64 ; 64 >
-      au < manifest ; Journal of Cell Science Volume 65 ; 65 >
-      au < manifest ; Journal of Cell Science Volume 66 ; 66 >
-      au < manifest ; Journal of Cell Science Volume 67 ; 67 >
-      au < manifest ; Journal of Cell Science Volume 68 ; 68 >
-      au < manifest ; Journal of Cell Science Volume 69 ; 69 >
-      au < manifest ; Journal of Cell Science Volume 70 ; 70 >
-      au < manifest ; Journal of Cell Science Volume 71 ; 71 >
-      au < manifest ; Journal of Cell Science Volume 72 ; 72 >
-      au < manifest ; Journal of Cell Science Volume 73 ; 73 >
-      au < manifest ; Journal of Cell Science Volume 74 ; 74 >
-      au < manifest ; Journal of Cell Science Volume 75 ; 75 >
-      au < manifest ; Journal of Cell Science Volume 76 ; 76 >
-      au < manifest ; Journal of Cell Science Volume 77 ; 77 >
-      au < manifest ; Journal of Cell Science Volume 78 ; 78 >
-      au < manifest ; Journal of Cell Science Volume 79 ; 79 >
-      au < manifest ; Journal of Cell Science Volume 80 ; 80 >
-      au < manifest ; Journal of Cell Science Volume 81 ; 81 >
-      au < manifest ; Journal of Cell Science Volume 82 ; 82 >
-      au < manifest ; Journal of Cell Science Volume 83 ; 83 >
-      au < manifest ; Journal of Cell Science Volume 84 ; 84 >
-      au < manifest ; Journal of Cell Science Volume 85 ; 85 >
-      au < manifest ; Journal of Cell Science Volume 86 ; 86 >
-      au < manifest ; Journal of Cell Science Volume 87 ; 87 >
-      au < manifest ; Journal of Cell Science Volume 88 ; 88 >
-      au < manifest ; Journal of Cell Science Volume 89 ; 89 >
-      au < manifest ; Journal of Cell Science Volume 90 ; 90 >
-      au < manifest ; Journal of Cell Science Volume 91 ; 91 >
-      au < manifest ; Journal of Cell Science Volume 92 ; 92 >
-      au < manifest ; Journal of Cell Science Volume 93 ; 93 >
-      au < manifest ; Journal of Cell Science Volume 94 ; 94 >
-      au < manifest ; Journal of Cell Science Volume 95 ; 95 >
-      au < manifest ; Journal of Cell Science Volume 96 ; 96 >
-      au < manifest ; Journal of Cell Science Volume 97 ; 97 >
-      au < manifest ; Journal of Cell Science Volume 98 ; 98 >
-      au < manifest ; Journal of Cell Science Volume 99 ; 99 >
-      au < manifest ; Journal of Cell Science Volume 100 ; 100 >
-      au < manifest ; Journal of Cell Science Volume 101 ; 101 >
-      au < manifest ; Journal of Cell Science Volume 102 ; 102 >
-      au < manifest ; Journal of Cell Science Volume 103 ; 103 >
-      au < manifest ; Journal of Cell Science Volume 104 ; 104 >
-      au < manifest ; Journal of Cell Science Volume 105 ; 105 >
-      au < manifest ; Journal of Cell Science Volume 106 ; 106 >
-      au < manifest ; Journal of Cell Science Volume 107 ; 107 >
-      au < manifest ; Journal of Cell Science Volume 108 ; 108 >
-      au < manifest ; Journal of Cell Science Volume 109 ; 109 >
-      au < manifest ; Journal of Cell Science Volume 110 ; 110 >
-      au < manifest ; Journal of Cell Science Volume 111 ; 111 >
-      au < manifest ; Journal of Cell Science Volume 112 ; 112 >
-      au < manifest ; Journal of Cell Science Volume 113 ; 113 >
-      au < manifest ; Journal of Cell Science Volume 114 ; 114 >
-      au < manifest ; Journal of Cell Science Volume 115 ; 115 >
-      au < manifest ; Journal of Cell Science Volume 116 ; 116 >
-      au < manifest ; Journal of Cell Science Volume 117 ; 117 >
-      au < released ; Journal of Cell Science Volume 118 ; 118 >
-      au < released ; Journal of Cell Science Volume 119 ; 119 >
-      au < manifest ; Journal of Cell Science Volume 120 ; 120 >
-      au < manifest ; Journal of Cell Science Volume 121 ; 121 >
-      au < manifest ; Journal of Cell Science Volume 122 ; 122 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 1 ; 1 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 2 ; 2 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 3 ; 3 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 4 ; 4 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 5 ; 5 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 6 ; 6 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 7 ; 7 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 8 ; 8 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 9 ; 9 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 10 ; 10 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 11 ; 11 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 12 ; 12 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 13 ; 13 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 14 ; 14 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 15 ; 15 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 16 ; 16 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 17 ; 17 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 18 ; 18 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 19 ; 19 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 20 ; 20 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 21 ; 21 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 22 ; 22 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 23 ; 23 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 24 ; 24 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 25 ; 25 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 26 ; 26 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 27 ; 27 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 28 ; 28 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 29 ; 29 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 30 ; 30 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 31 ; 31 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 32 ; 32 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 33 ; 33 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 34 ; 34 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 35 ; 35 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 36 ; 36 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 37 ; 37 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 38 ; 38 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 39 ; 39 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 40 ; 40 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 41 ; 41 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 42 ; 42 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 43 ; 43 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 44 ; 44 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 45 ; 45 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 46 ; 46 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 47 ; 47 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 48 ; 48 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 49 ; 49 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 50 ; 50 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 51 ; 51 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 52 ; 52 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 53 ; 53 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 54 ; 54 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 55 ; 55 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 56 ; 56 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 57 ; 57 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 58 ; 58 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 59 ; 59 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 60 ; 60 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 61 ; 61 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 62 ; 62 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 63 ; 63 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 64 ; 64 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 65 ; 65 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 66 ; 66 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 67 ; 67 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 68 ; 68 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 69 ; 69 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 70 ; 70 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 71 ; 71 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 72 ; 72 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 73 ; 73 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 74 ; 74 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 75 ; 75 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 76 ; 76 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 77 ; 77 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 78 ; 78 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 79 ; 79 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 80 ; 80 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 81 ; 81 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 82 ; 82 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 83 ; 83 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 84 ; 84 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 85 ; 85 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 86 ; 86 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 87 ; 87 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 88 ; 88 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 89 ; 89 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 90 ; 90 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 91 ; 91 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 92 ; 92 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 93 ; 93 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 94 ; 94 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 95 ; 95 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 96 ; 96 >
+      au < HighWirePressPlugin ; ready ; Journal of Cell Science Volume 97 ; 97 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 98 ; 98 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 99 ; 99 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 100 ; 100 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 101 ; 101 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 102 ; 102 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 103 ; 103 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 104 ; 104 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 105 ; 105 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 106 ; 106 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 107 ; 107 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 108 ; 108 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 109 ; 109 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 110 ; 110 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 111 ; 111 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 112 ; 112 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 113 ; 113 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 114 ; 114 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 115 ; 115 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 116 ; 116 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 117 ; 117 >
+      au < HighWireStrVolPlugin ; released ; Journal of Cell Science Volume 118 ; 118 >
+      au < HighWireStrVolPlugin ; released ; Journal of Cell Science Volume 119 ; 119 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 120 ; 120 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 121 ; 121 >
+      au < HighWirePressPlugin ; manifest ; Journal of Cell Science Volume 122 ; 122 >
 
     }
 
@@ -232,222 +232,222 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jeb.biologists.org/
-      implicit < status ; name ; param[volume_name] >
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-      au < manifest ; Journal of Experimental Biology Volume 1 ; 1 >
-      au < manifest ; Journal of Experimental Biology Volume 2 ; 2 >
-      au < manifest ; Journal of Experimental Biology Volume 3 ; 3 >
-      au < manifest ; Journal of Experimental Biology Volume 4 ; 4 >
-      au < manifest ; Journal of Experimental Biology Volume 5 ; 5 >
-      au < manifest ; Journal of Experimental Biology Volume 6 ; 6 >
-      au < manifest ; Journal of Experimental Biology Volume 7 ; 7 >
-      au < manifest ; Journal of Experimental Biology Volume 8 ; 8 >
-      au < manifest ; Journal of Experimental Biology Volume 9 ; 9 >
-      au < manifest ; Journal of Experimental Biology Volume 10 ; 10 >
-      au < manifest ; Journal of Experimental Biology Volume 11 ; 11 >
-      au < manifest ; Journal of Experimental Biology Volume 12 ; 12 >
-      au < manifest ; Journal of Experimental Biology Volume 13 ; 13 >
-      au < manifest ; Journal of Experimental Biology Volume 14 ; 14 >
-      au < manifest ; Journal of Experimental Biology Volume 15 ; 15 >
-      au < manifest ; Journal of Experimental Biology Volume 16 ; 16 >
-      au < manifest ; Journal of Experimental Biology Volume 17 ; 17 >
-      au < manifest ; Journal of Experimental Biology Volume 18 ; 18 >
-      au < manifest ; Journal of Experimental Biology Volume 19 ; 19 >
-      au < manifest ; Journal of Experimental Biology Volume 20 ; 20 >
-      au < manifest ; Journal of Experimental Biology Volume 21 ; 21 >
-      au < manifest ; Journal of Experimental Biology Volume 22 ; 22 >
-      au < manifest ; Journal of Experimental Biology Volume 23 ; 23 >
-      au < manifest ; Journal of Experimental Biology Volume 24 ; 24 >
-      au < manifest ; Journal of Experimental Biology Volume 25 ; 25 >
-      au < manifest ; Journal of Experimental Biology Volume 26 ; 26 >
-      au < manifest ; Journal of Experimental Biology Volume 27 ; 27 >
-      au < manifest ; Journal of Experimental Biology Volume 28 ; 28 >
-      au < manifest ; Journal of Experimental Biology Volume 29 ; 29 >
-      au < manifest ; Journal of Experimental Biology Volume 30 ; 30 >
-      au < manifest ; Journal of Experimental Biology Volume 31 ; 31 >
-      au < manifest ; Journal of Experimental Biology Volume 32 ; 32 >
-      au < manifest ; Journal of Experimental Biology Volume 33 ; 33 >
-      au < manifest ; Journal of Experimental Biology Volume 34 ; 34 >
-      au < manifest ; Journal of Experimental Biology Volume 35 ; 35 >
-      au < manifest ; Journal of Experimental Biology Volume 36 ; 36 >
-      au < manifest ; Journal of Experimental Biology Volume 37 ; 37 >
-      au < manifest ; Journal of Experimental Biology Volume 38 ; 38 >
-      au < manifest ; Journal of Experimental Biology Volume 39 ; 39 >
-      au < manifest ; Journal of Experimental Biology Volume 40 ; 40 >
-      au < manifest ; Journal of Experimental Biology Volume 41 ; 41 >
-      au < manifest ; Journal of Experimental Biology Volume 42 ; 42 >
-      au < manifest ; Journal of Experimental Biology Volume 43 ; 43 >
-      au < manifest ; Journal of Experimental Biology Volume 44 ; 44 >
-      au < manifest ; Journal of Experimental Biology Volume 45 ; 45 >
-      au < manifest ; Journal of Experimental Biology Volume 46 ; 46 >
-      au < manifest ; Journal of Experimental Biology Volume 47 ; 47 >
-      au < manifest ; Journal of Experimental Biology Volume 48 ; 48 >
-      au < manifest ; Journal of Experimental Biology Volume 49 ; 49 >
-      au < manifest ; Journal of Experimental Biology Volume 50 ; 50 >
-      au < manifest ; Journal of Experimental Biology Volume 51 ; 51 >
-      au < manifest ; Journal of Experimental Biology Volume 52 ; 52 >
-      au < manifest ; Journal of Experimental Biology Volume 53 ; 53 >
-      au < manifest ; Journal of Experimental Biology Volume 54 ; 54 >
-      au < manifest ; Journal of Experimental Biology Volume 55 ; 55 >
-      au < manifest ; Journal of Experimental Biology Volume 56 ; 56 >
-      au < manifest ; Journal of Experimental Biology Volume 57 ; 57 >
-      au < manifest ; Journal of Experimental Biology Volume 58 ; 58 >
-      au < manifest ; Journal of Experimental Biology Volume 59 ; 59 >
-      au < manifest ; Journal of Experimental Biology Volume 60 ; 60 >
-      au < manifest ; Journal of Experimental Biology Volume 61 ; 61 >
-      au < manifest ; Journal of Experimental Biology Volume 62 ; 62 >
-      au < manifest ; Journal of Experimental Biology Volume 63 ; 63 >
-      au < manifest ; Journal of Experimental Biology Volume 64 ; 64 >
-      au < manifest ; Journal of Experimental Biology Volume 65 ; 65 >
-      au < manifest ; Journal of Experimental Biology Volume 66 ; 66 >
-      au < manifest ; Journal of Experimental Biology Volume 67 ; 67 >
-      au < manifest ; Journal of Experimental Biology Volume 68 ; 68 >
-      au < manifest ; Journal of Experimental Biology Volume 69 ; 69 >
-      au < manifest ; Journal of Experimental Biology Volume 70 ; 70 >
-      au < manifest ; Journal of Experimental Biology Volume 71 ; 71 >
-      au < manifest ; Journal of Experimental Biology Volume 72 ; 72 >
-      au < manifest ; Journal of Experimental Biology Volume 73 ; 73 >
-      au < manifest ; Journal of Experimental Biology Volume 74 ; 74 >
-      au < manifest ; Journal of Experimental Biology Volume 75 ; 75 >
-      au < manifest ; Journal of Experimental Biology Volume 76 ; 76 >
-      au < manifest ; Journal of Experimental Biology Volume 77 ; 77 >
-      au < manifest ; Journal of Experimental Biology Volume 78 ; 78 >
-      au < manifest ; Journal of Experimental Biology Volume 79 ; 79 >
-      au < manifest ; Journal of Experimental Biology Volume 80 ; 80 >
-      au < manifest ; Journal of Experimental Biology Volume 81 ; 81 >
-      au < manifest ; Journal of Experimental Biology Volume 82 ; 82 >
-      au < manifest ; Journal of Experimental Biology Volume 83 ; 83 >
-      au < manifest ; Journal of Experimental Biology Volume 84 ; 84 >
-      au < manifest ; Journal of Experimental Biology Volume 85 ; 85 >
-      au < manifest ; Journal of Experimental Biology Volume 86 ; 86 >
-      au < manifest ; Journal of Experimental Biology Volume 87 ; 87 >
-      au < manifest ; Journal of Experimental Biology Volume 88 ; 88 >
-      au < manifest ; Journal of Experimental Biology Volume 89 ; 89 >
-      au < manifest ; Journal of Experimental Biology Volume 90 ; 90 >
-      au < manifest ; Journal of Experimental Biology Volume 91 ; 91 >
-      au < manifest ; Journal of Experimental Biology Volume 92 ; 92 >
-      au < manifest ; Journal of Experimental Biology Volume 93 ; 93 >
-      au < manifest ; Journal of Experimental Biology Volume 94 ; 94 >
-      au < manifest ; Journal of Experimental Biology Volume 95 ; 95 >
-      au < manifest ; Journal of Experimental Biology Volume 96 ; 96 >
-      au < manifest ; Journal of Experimental Biology Volume 97 ; 97 >
-      au < manifest ; Journal of Experimental Biology Volume 98 ; 98 >
-      au < manifest ; Journal of Experimental Biology Volume 99 ; 99 >
-      au < manifest ; Journal of Experimental Biology Volume 100 ; 100 >
-      au < manifest ; Journal of Experimental Biology Volume 101 ; 101 >
-      au < manifest ; Journal of Experimental Biology Volume 102 ; 102 >
-      au < manifest ; Journal of Experimental Biology Volume 103 ; 103 >
-      au < manifest ; Journal of Experimental Biology Volume 104 ; 104 >
-      au < manifest ; Journal of Experimental Biology Volume 105 ; 105 >
-      au < manifest ; Journal of Experimental Biology Volume 106 ; 106 >
-      au < manifest ; Journal of Experimental Biology Volume 107 ; 107 >
-      au < manifest ; Journal of Experimental Biology Volume 108 ; 108 >
-      au < manifest ; Journal of Experimental Biology Volume 109 ; 109 >
-      au < manifest ; Journal of Experimental Biology Volume 110 ; 110 >
-      au < manifest ; Journal of Experimental Biology Volume 111 ; 111 >
-      au < manifest ; Journal of Experimental Biology Volume 112 ; 112 >
-      au < manifest ; Journal of Experimental Biology Volume 113 ; 113 >
-      au < manifest ; Journal of Experimental Biology Volume 114 ; 114 >
-      au < manifest ; Journal of Experimental Biology Volume 115 ; 115 >
-      au < manifest ; Journal of Experimental Biology Volume 116 ; 116 >
-      au < manifest ; Journal of Experimental Biology Volume 117 ; 117 >
-      au < manifest ; Journal of Experimental Biology Volume 118 ; 118 >
-      au < manifest ; Journal of Experimental Biology Volume 119 ; 119 >
-      au < manifest ; Journal of Experimental Biology Volume 120 ; 120 >
-      au < manifest ; Journal of Experimental Biology Volume 121 ; 121 >
-      au < manifest ; Journal of Experimental Biology Volume 122 ; 122 >
-      au < manifest ; Journal of Experimental Biology Volume 123 ; 123 >
-      au < manifest ; Journal of Experimental Biology Volume 124 ; 124 >
-      au < manifest ; Journal of Experimental Biology Volume 125 ; 125 >
-      au < manifest ; Journal of Experimental Biology Volume 126 ; 126 >
-      au < manifest ; Journal of Experimental Biology Volume 127 ; 127 >
-      au < manifest ; Journal of Experimental Biology Volume 128 ; 128 >
-      au < manifest ; Journal of Experimental Biology Volume 129 ; 129 >
-      au < manifest ; Journal of Experimental Biology Volume 130 ; 130 >
-      au < manifest ; Journal of Experimental Biology Volume 131 ; 131 >
-      au < manifest ; Journal of Experimental Biology Volume 132 ; 132 >
-      au < manifest ; Journal of Experimental Biology Volume 133 ; 133 >
-      au < manifest ; Journal of Experimental Biology Volume 134 ; 134 >
-      au < manifest ; Journal of Experimental Biology Volume 135 ; 135 >
-      au < manifest ; Journal of Experimental Biology Volume 136 ; 136 >
-      au < manifest ; Journal of Experimental Biology Volume 137 ; 137 >
-      au < manifest ; Journal of Experimental Biology Volume 138 ; 138 >
-      au < manifest ; Journal of Experimental Biology Volume 139 ; 139 >
-      au < manifest ; Journal of Experimental Biology Volume 140 ; 140 >
-      au < manifest ; Journal of Experimental Biology Volume 141 ; 141 >
-      au < manifest ; Journal of Experimental Biology Volume 142 ; 142 >
-      au < manifest ; Journal of Experimental Biology Volume 143 ; 143 >
-      au < manifest ; Journal of Experimental Biology Volume 144 ; 144 >
-      au < manifest ; Journal of Experimental Biology Volume 145 ; 145 >
-      au < manifest ; Journal of Experimental Biology Volume 146 ; 146 >
-      au < manifest ; Journal of Experimental Biology Volume 147 ; 147 >
-      au < manifest ; Journal of Experimental Biology Volume 148 ; 148 >
-      au < manifest ; Journal of Experimental Biology Volume 149 ; 149 >
-      au < manifest ; Journal of Experimental Biology Volume 150 ; 150 >
-      au < manifest ; Journal of Experimental Biology Volume 151 ; 151 >
-      au < manifest ; Journal of Experimental Biology Volume 152 ; 152 >
-      au < manifest ; Journal of Experimental Biology Volume 153 ; 153 >
-      au < manifest ; Journal of Experimental Biology Volume 154 ; 154 >
-      au < manifest ; Journal of Experimental Biology Volume 155 ; 155 >
-      au < manifest ; Journal of Experimental Biology Volume 156 ; 156 >
-      au < manifest ; Journal of Experimental Biology Volume 157 ; 157 >
-      au < manifest ; Journal of Experimental Biology Volume 158 ; 158 >
-      au < manifest ; Journal of Experimental Biology Volume 159 ; 159 >
-      au < manifest ; Journal of Experimental Biology Volume 160 ; 160 >
-      au < manifest ; Journal of Experimental Biology Volume 161 ; 161 >
-      au < manifest ; Journal of Experimental Biology Volume 162 ; 162 >
-      au < manifest ; Journal of Experimental Biology Volume 163 ; 163 >
-      au < manifest ; Journal of Experimental Biology Volume 164 ; 164 >
-      au < manifest ; Journal of Experimental Biology Volume 165 ; 165 >
-      au < manifest ; Journal of Experimental Biology Volume 166 ; 166 >
-      au < manifest ; Journal of Experimental Biology Volume 167 ; 167 >
-      au < manifest ; Journal of Experimental Biology Volume 168 ; 168 >
-      au < manifest ; Journal of Experimental Biology Volume 169 ; 169 >
-      au < manifest ; Journal of Experimental Biology Volume 170 ; 170 >
-      au < manifest ; Journal of Experimental Biology Volume 171 ; 171 >
-      au < manifest ; Journal of Experimental Biology Volume 172 ; 172 >
-      au < manifest ; Journal of Experimental Biology Volume 173 ; 173 >
-      au < manifest ; Journal of Experimental Biology Volume 174 ; 174 >
-      au < manifest ; Journal of Experimental Biology Volume 175 ; 175 >
-      au < manifest ; Journal of Experimental Biology Volume 176 ; 176 >
-      au < manifest ; Journal of Experimental Biology Volume 177 ; 177 >
-      au < manifest ; Journal of Experimental Biology Volume 178 ; 178 >
-      au < manifest ; Journal of Experimental Biology Volume 179 ; 179 >
-      au < manifest ; Journal of Experimental Biology Volume 180 ; 180 >
-      au < manifest ; Journal of Experimental Biology Volume 181 ; 181 >
-      au < manifest ; Journal of Experimental Biology Volume 182 ; 182 >
-      au < manifest ; Journal of Experimental Biology Volume 183 ; 183 >
-      au < manifest ; Journal of Experimental Biology Volume 184 ; 184 >
-      au < manifest ; Journal of Experimental Biology Volume 185 ; 185 >
-      au < manifest ; Journal of Experimental Biology Volume 186 ; 186 >
-      au < manifest ; Journal of Experimental Biology Volume 187 ; 187 >
-      au < manifest ; Journal of Experimental Biology Volume 188 ; 188 >
-      au < manifest ; Journal of Experimental Biology Volume 189 ; 189 >
-      au < manifest ; Journal of Experimental Biology Volume 190 ; 190 >
-      au < manifest ; Journal of Experimental Biology Volume 191 ; 191 >
-      au < manifest ; Journal of Experimental Biology Volume 192 ; 192 >
-      au < manifest ; Journal of Experimental Biology Volume 193 ; 193 >
-      au < manifest ; Journal of Experimental Biology Volume 194 ; 194 >
-      au < manifest ; Journal of Experimental Biology Volume 195 ; 195 >
-      au < manifest ; Journal of Experimental Biology Volume 196 ; 196 >
-      au < manifest ; Journal of Experimental Biology Volume 197 ; 197 >
-      au < manifest ; Journal of Experimental Biology Volume 198 ; 198 >
-      au < manifest ; Journal of Experimental Biology Volume 199 ; 199 >
-      au < manifest ; Journal of Experimental Biology Volume 200 ; 200 >
-      au < manifest ; Journal of Experimental Biology Volume 201 ; 201 >
-      au < manifest ; Journal of Experimental Biology Volume 202 ; 202 >
-      au < manifest ; Journal of Experimental Biology Volume 203 ; 203 >
-      au < manifest ; Journal of Experimental Biology Volume 204 ; 204 >
-      au < manifest ; Journal of Experimental Biology Volume 205 ; 205 >
-      au < manifest ; Journal of Experimental Biology Volume 206 ; 206 >
-      au < manifest ; Journal of Experimental Biology Volume 207 ; 207 >
-      au < released ; Journal of Experimental Biology Volume 208 ; 208 >
-      au < released ; Journal of Experimental Biology Volume 209 ; 209 >
-      au < manifest ; Journal of Experimental Biology Volume 210 ; 210 >
-      au < manifest ; Journal of Experimental Biology Volume 211 ; 211 >
-      au < manifest ; Journal of Experimental Biology Volume 212 ; 212 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 1 ; 1 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 2 ; 2 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 3 ; 3 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 4 ; 4 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 5 ; 5 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 6 ; 6 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 7 ; 7 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 8 ; 8 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 9 ; 9 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 10 ; 10 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 11 ; 11 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 12 ; 12 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 13 ; 13 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 14 ; 14 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 15 ; 15 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 16 ; 16 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 17 ; 17 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 18 ; 18 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 19 ; 19 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 20 ; 20 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 21 ; 21 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 22 ; 22 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 23 ; 23 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 24 ; 24 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 25 ; 25 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 26 ; 26 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 27 ; 27 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 28 ; 28 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 29 ; 29 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 30 ; 30 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 31 ; 31 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 32 ; 32 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 33 ; 33 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 34 ; 34 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 35 ; 35 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 36 ; 36 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 37 ; 37 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 38 ; 38 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 39 ; 39 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 40 ; 40 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 41 ; 41 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 42 ; 42 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 43 ; 43 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 44 ; 44 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 45 ; 45 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 46 ; 46 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 47 ; 47 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 48 ; 48 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 49 ; 49 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 50 ; 50 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 51 ; 51 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 52 ; 52 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 53 ; 53 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 54 ; 54 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 55 ; 55 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 56 ; 56 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 57 ; 57 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 58 ; 58 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 59 ; 59 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 60 ; 60 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 61 ; 61 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 62 ; 62 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 63 ; 63 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 64 ; 64 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 65 ; 65 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 66 ; 66 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 67 ; 67 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 68 ; 68 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 69 ; 69 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 70 ; 70 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 71 ; 71 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 72 ; 72 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 73 ; 73 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 74 ; 74 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 75 ; 75 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 76 ; 76 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 77 ; 77 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 78 ; 78 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 79 ; 79 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 80 ; 80 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 81 ; 81 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 82 ; 82 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 83 ; 83 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 84 ; 84 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 85 ; 85 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 86 ; 86 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 87 ; 87 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 88 ; 88 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 89 ; 89 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 90 ; 90 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 91 ; 91 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 92 ; 92 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 93 ; 93 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 94 ; 94 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 95 ; 95 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 96 ; 96 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 97 ; 97 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 98 ; 98 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 99 ; 99 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 100 ; 100 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 101 ; 101 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 102 ; 102 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 103 ; 103 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 104 ; 104 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 105 ; 105 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 106 ; 106 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 107 ; 107 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 108 ; 108 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 109 ; 109 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 110 ; 110 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 111 ; 111 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 112 ; 112 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 113 ; 113 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 114 ; 114 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 115 ; 115 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 116 ; 116 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 117 ; 117 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 118 ; 118 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 119 ; 119 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 120 ; 120 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 121 ; 121 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 122 ; 122 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 123 ; 123 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 124 ; 124 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 125 ; 125 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 126 ; 126 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 127 ; 127 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 128 ; 128 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 129 ; 129 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 130 ; 130 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 131 ; 131 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 132 ; 132 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 133 ; 133 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 134 ; 134 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 135 ; 135 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 136 ; 136 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 137 ; 137 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 138 ; 138 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 139 ; 139 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 140 ; 140 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 141 ; 141 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 142 ; 142 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 143 ; 143 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 144 ; 144 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 145 ; 145 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 146 ; 146 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 147 ; 147 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 148 ; 148 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 149 ; 149 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 150 ; 150 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 151 ; 151 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 152 ; 152 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 153 ; 153 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 154 ; 154 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 155 ; 155 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 156 ; 156 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 157 ; 157 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 158 ; 158 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 159 ; 159 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 160 ; 160 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 161 ; 161 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 162 ; 162 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 163 ; 163 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 164 ; 164 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 165 ; 165 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 166 ; 166 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 167 ; 167 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 168 ; 168 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 169 ; 169 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 170 ; 170 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 171 ; 171 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 172 ; 172 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 173 ; 173 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 174 ; 174 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 175 ; 175 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 176 ; 176 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 177 ; 177 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 178 ; 178 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 179 ; 179 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 180 ; 180 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 181 ; 181 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 182 ; 182 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 183 ; 183 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 184 ; 184 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 185 ; 185 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 186 ; 186 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 187 ; 187 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 188 ; 188 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 189 ; 189 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 190 ; 190 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 191 ; 191 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 192 ; 192 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 193 ; 193 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 194 ; 194 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 195 ; 195 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 196 ; 196 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 197 ; 197 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 198 ; 198 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 199 ; 199 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 200 ; 200 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 201 ; 201 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 202 ; 202 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 203 ; 203 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 204 ; 204 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 205 ; 205 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 206 ; 206 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 207 ; 207 >
+      au < HighWireStrVolPlugin ; released ; Journal of Experimental Biology Volume 208 ; 208 >
+      au < HighWireStrVolPlugin ; released ; Journal of Experimental Biology Volume 209 ; 209 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 210 ; 210 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 211 ; 211 >
+      au < HighWirePressPlugin ; manifest ; Journal of Experimental Biology Volume 212 ; 212 >
 
     }
 
