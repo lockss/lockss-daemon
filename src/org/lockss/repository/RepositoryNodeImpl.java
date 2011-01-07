@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.4 2011-01-05 18:54:22 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.5 2011-01-07 00:33:03 dshr Exp $
  */
 
 /*
@@ -343,7 +343,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     ArrayList childL = new ArrayList(listSize);
     for (int ii=0; ii<children.length; ii++) {
       FileObject child = children[ii];
-      if ((child.getName().equals(CONTENT_DIR)) || !isFolder(child)) {
+      String baseName = child.getName().getBaseName();
+      logger.debug3("Child base name is: " + baseName);
+      if (CONTENT_DIR.equals(baseName) || !isFolder(child)) {
         // all children are in their own directories, and the content dir
         // must be ignored
         continue;
@@ -354,7 +356,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (child == null) {
 	continue;
       }
-      String childUrl = constructChildUrl(url, child.getName().getPath());
+      String childUrl = constructChildUrl(url, child.getName().getBaseName());
       if ((filter==null) || (filter.matches(childUrl))) {
         try {
           RepositoryNode node = repository.getNode(childUrl);
@@ -384,7 +386,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 				Perl5Compiler.READ_ONLY_MASK);
 
   protected FileObject normalize(FileObject file) { // Used TestRepositoryNodeImpl
-    String name = file.getName().getPath();
+    String name = file.getName().getBaseName();
     String normName = normalizeUrlEncodingCase(name);
     normName = normalizeTrailingQuestion(normName);
     if (normName.equals(name)) {
@@ -392,7 +394,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     try {
       FileObject parent = file.getParent();
-      return parent.resolveFile(normName);
+      file = parent.resolveFile(normName);
+      file.createFile();
     } catch (FileSystemException e) {
       logger.error("normalize() threw: " + e);
     }
@@ -1746,7 +1749,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initCurrentCacheFile() {
     try {
-      currentCacheFile = getContentDir().resolveFile(CURRENT_FILENAME);
+      currentCacheFile = getContentDir().resolveFile(nodeLocation +
+						     File.separator +
+						     CURRENT_FILENAME);
+      if (!currentCacheFile.exists()) {
+	currentCacheFile.createFile();
+      }
     } catch (FileSystemException e) {
       logger.error(CURRENT_FILENAME + " threw: " + e);
       currentCacheFile = null;
@@ -1755,7 +1763,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initCurrentPropsFile() {
     try {
-      currentPropsFile = getContentDir().resolveFile(CURRENT_PROPS_FILENAME);
+      currentPropsFile = getContentDir().resolveFile(nodeLocation +
+						     File.separator +
+						     CURRENT_PROPS_FILENAME);
+      if (!currentPropsFile.exists()) {
+	currentPropsFile.createFile();
+      }
     } catch (FileSystemException e) {
       logger.error(CURRENT_PROPS_FILENAME + " threw: " + e);
       currentPropsFile = null;
@@ -1764,7 +1777,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initTempCacheFile() {
     try {
-      tempCacheFile = getContentDir().resolveFile(TEMP_FILENAME);
+      tempCacheFile = getContentDir().resolveFile(nodeLocation +
+						  File.separator +
+						  TEMP_FILENAME);
+      if (!tempCacheFile.exists()) {
+	tempCacheFile.createFile();
+      }
     } catch (FileSystemException e) {
       logger.error(TEMP_FILENAME + " threw: " + e);
       tempCacheFile = null;
@@ -1773,7 +1791,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initTempPropsFile() {
     try {
-      tempPropsFile = getContentDir().resolveFile(TEMP_PROPS_FILENAME);
+      tempPropsFile = getContentDir().resolveFile(nodeLocation +
+						  File.separator +
+						  TEMP_PROPS_FILENAME);
+      if (!tempPropsFile.exists()) {
+	tempPropsFile.createFile();
+      }
     } catch (FileSystemException e) {
       logger.error(TEMP_PROPS_FILENAME + " threw: " + e);
       tempPropsFile = null;
@@ -1783,6 +1806,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private void initAgreementFile(String fileName) {
     try {
       agreementFile = getContentDir().resolveFile(fileName);
+      if (!agreementFile.exists()) {
+	agreementFile.createFile();
+      }
     } catch (FileSystemException e) {
       logger.error(fileName + " threw: " + e);
       agreementFile = null;
@@ -1792,6 +1818,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private void initTempAgreementFile(String fileName) {
     try {
       tempAgreementFile = getContentDir().resolveFile(fileName);
+      if (!tempAgreementFile.exists()) {
+	tempAgreementFile.createFile();
+      }
     } catch (FileSystemException e) {
       logger.error(fileName + " threw: " + e);
       tempAgreementFile = null;
@@ -1799,10 +1828,15 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   private void initNodePropsFile() {
+    String propsLocation = nodeLocation + File.separator + NODE_PROPS_FILENAME;
     try {
-      nodePropsFile = getContentDir().resolveFile(NODE_PROPS_FILENAME);
+      nodePropsFile = getContentDir().resolveFile(propsLocation);
+      if (!nodePropsFile.exists()) {
+	nodePropsFile.createFile();
+      }
+      logger.debug3(propsLocation + " props initialized");
     } catch (FileSystemException e) {
-      logger.error(NODE_PROPS_FILENAME + " threw: " + e);
+      logger.error(propsLocation + " threw: " + e);
       nodePropsFile = null;
     }
   }
@@ -1810,6 +1844,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected void initNodeRoot() {
     try {
       nodeRootFile = repository.getFileSystem().resolveFile(nodeLocation);
+      if (!nodeRootFile.exists()) {
+	nodeRootFile.createFolder();
+      }
+      logger.debug3(nodeLocation + " node root location");
     } catch (FileSystemException e) {
       logger.error(nodeLocation + " threw: " + e);
       nodeRootFile = null;
@@ -1818,18 +1856,21 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   protected FileObject getInactiveCacheFile() { // Used TestRepositoryNodeImpl
     try {
-      return getContentDir().resolveFile(INACTIVE_FILENAME);
+      return getContentDir().resolveFile(nodeLocation + File.separator +
+					 INACTIVE_FILENAME);
     } catch (FileSystemException e) {
-      logger.error(nodeLocation + " threw: " + e);
+      logger.error(nodeLocation + INACTIVE_FILENAME + " threw: " + e);
       return null;
     }
   }
 
   protected FileObject getInactivePropsFile() { // Used TestRepositoryNodeImpl
     try {
-      return getContentDir().resolveFile(INACTIVE_PROPS_FILENAME);
+      return getContentDir().resolveFile(nodeLocation + File.separator +
+					 INACTIVE_PROPS_FILENAME);
     } catch (FileSystemException e) {
-      logger.error(INACTIVE_PROPS_FILENAME + " threw: " + e);
+      logger.error(nodeLocation + File.separator +
+		   INACTIVE_PROPS_FILENAME + " threw: " + e);
       return null;
     }
   }
@@ -1838,9 +1879,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (contentDir == null) {
       try {
 	contentDir = repository.getFileSystem().resolveFile(nodeLocation +
-							    "/" + CONTENT_DIR);
+							    File.separator +
+							    CONTENT_DIR);
       } catch (FileSystemException e) {
-	logger.error(nodeLocation + "/" + CONTENT_DIR + " threw: " + e);
+	logger.error(nodeLocation + File.separator + CONTENT_DIR + " threw: " +
+		     e);
 	return null;
       }
     }
@@ -1851,11 +1894,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
     try {
       if (contentDir == null) {
 	contentDir = repository.getFileSystem().resolveFile(nodeLocation +
-							    "/" + CONTENT_DIR);
+							    File.separator +
+							    CONTENT_DIR);
       }
       return contentDir.resolveFile(name);
     } catch (FileSystemException e) {
-      logger.error(nodeLocation + "/" + name + " threw: " + e);
+      logger.error(nodeLocation + File.separator + name + " threw: " + e);
       return null;
     }
   }

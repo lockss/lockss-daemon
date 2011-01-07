@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.3 2011-01-06 04:06:53 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.4 2011-01-07 00:33:03 dshr Exp $
  */
 
 /*
@@ -35,14 +35,7 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-//import org.apache.commons.vfs.FileContent;
-//import org.apache.commons.vfs.FileName;
-import org.apache.commons.vfs.FileSystemManager;
-import org.apache.commons.vfs.VFS;
-import org.apache.commons.vfs.FileObject;
-import org.apache.commons.vfs.FileSystem;
-import org.apache.commons.vfs.FileSystemException;
-//import org.apache.commons.vfs.FileType;
+import org.apache.commons.vfs.*;
 
 import org.apache.commons.lang.SystemUtils;
 import org.lockss.app.*;
@@ -226,15 +219,20 @@ public class LockssRepositoryImpl
 
     if (!create) {
       // if not creating, check for existence
-      File nodeDir = new File(nodeLocation);
-      if (!nodeDir.exists()) {
-        // return null if the node doesn't exist and shouldn't be created
-        return null;
-      }
-      if (!nodeDir.isDirectory()) {
-        logger.error("Cache file not a directory: "+nodeLocation);
-        throw new LockssRepository.RepositoryStateException("Invalid cache file.");
-      }
+      try {
+	FileObject nodeDir = fileSystemManager.resolveFile(nodeLocation);
+	if (!nodeDir.exists()) {
+	  // return null if the node doesn't exist and shouldn't be created
+	  return null;
+	}
+	if (nodeDir.getType() != FileType.FOLDER) {
+	  logger.error("Cache file not a directory: "+nodeLocation);
+	  throw new LockssRepository.RepositoryStateException("Invalid cache file.");
+	}
+      } catch (FileSystemException e) {
+	logger.error("Cache file: " + nodeLocation + " threw " + e);
+	throw new LockssRepository.RepositoryStateException("Invalid cache file.");
+      }	
     }
 
     // add to node cache
@@ -538,34 +536,37 @@ public class LockssRepositoryImpl
       if (!create) {
 	return null;
       }
-      logger.debug3("Creating new au directory for '" + auid + "'.");
       String auDir = localRepo.getPrevAuDir();
       for (int cnt = RepositoryManager.getMaxUnusedDirSearch();
 	   cnt > 0; cnt--) {
 	// loop through looking for an available dir
 	auDir = getNextDirName(auDir);
-	File testDir = new File(repoCachePath, auDir);
-	if (logger.isDebug3()) logger.debug3("Probe for unused: " + testDir);
-	if (!testDir.exists()) {
-	  if (RepositoryManager.isStatefulUnusedDirSearch()) {
-	    localRepo.setPrevAuDir(auDir);
+	try {
+	  FileObject testDir = VFS.getManager().resolveFile(repoCachePath +
+							    auDir);
+	  if (logger.isDebug3()) logger.debug3("Probe for unused: " + testDir);
+	  if (!testDir.exists()) {
+	    if (RepositoryManager.isStatefulUnusedDirSearch()) {
+	      localRepo.setPrevAuDir(auDir);
+	    }
+	    String auPath = repoCachePath + auDir;
+	    auPathSlash = auPath + File.separator;
+	    // write the new au property file to the new dir
+	    // XXX this data should be backed up elsewhere to avoid single-point
+	    // corruption
+	    Properties idProps = new Properties();
+	    idProps.setProperty(AU_ID_PROP, auid);
+	    saveAuIdProperties(auPath, idProps);
+	    aumap.put(auid, auPathSlash);
+	    return auPathSlash;
+	  } else {
+	    if (logger.isDebug3()) {
+	      logger.debug3("Existing directory found at '"+auDir+
+			    "'.  Checking next...");
+	    }
 	  }
-	  String auPath = testDir.toString();
-	  logger.debug3("New au directory: "+auPath);
-	  auPathSlash = auPath + File.separator;
-	  // write the new au property file to the new dir
-	  // XXX this data should be backed up elsewhere to avoid single-point
-	  // corruption
-	  Properties idProps = new Properties();
-	  idProps.setProperty(AU_ID_PROP, auid);
-	  saveAuIdProperties(auPath, idProps);
-	  aumap.put(auid, auPathSlash);
-	  return auPathSlash;
-	} else {
-	  if (logger.isDebug3()) {
-	    logger.debug3("Existing directory found at '"+auDir+
-			  "'.  Checking next...");
-	  }
+	} catch (FileSystemException e) {
+	  logger.error(repoCachePath + auDir + " threw " + e);
 	}
       }
     }
@@ -609,20 +610,30 @@ public class LockssRepositoryImpl
     return sb.toString();
   }
 
-  public static File getAuIdFile(String location) {
-    return new File(location + File.separator + AU_ID_FILE);
+  static Properties getAuIdProperties(String location) {
+    Properties ret = null;
+    try {
+      FileObject propFile = VFS.getManager().resolveFile(location +
+							 File.separator +
+							 AU_ID_FILE);
+
+      ret = getAuIdProperties(propFile);
+    } catch (FileSystemException e) {
+      logger.error(location + File.separator + AU_ID_FILE + " threw " + e);
+    }
+    return ret;
   }
 
-  static Properties getAuIdProperties(String location) {
-    File propFile = new File(location + File.separator + AU_ID_FILE);
+  static Properties getAuIdProperties(FileObject propFile) {
     try {
-      InputStream is = new BufferedInputStream(new FileInputStream(propFile));
+      InputStream is = new BufferedInputStream(propFile.getContent().getInputStream());
       Properties idProps = new Properties();
       idProps.load(is);
       is.close();
       return idProps;
     } catch (Exception e) {
-      logger.warning("Error loading au id from " + propFile.getPath() + ".");
+      logger.warning("Error loading au id from " +
+		     propFile.getName().getPath() + ".");
       return null;
     }
   }
@@ -630,21 +641,30 @@ public class LockssRepositoryImpl
   static void saveAuIdProperties(String location, Properties props) {
     //XXX these AU_ID_FILE entries need to be backed up elsewhere to avoid
     // single-point corruption
-    File propDir = new File(location);
-    if (!propDir.exists()) {
-      logger.debug("Creating directory '"+propDir.getAbsolutePath()+"'");
-      propDir.mkdirs();
-    }
-    File propFile = new File(propDir, AU_ID_FILE);
+    FileObject propFile = null;
+    FileObject propDir = null;
     try {
-      logger.debug3("Saving au id properties at '" + location + "'.");
-      OutputStream os = new BufferedOutputStream(new FileOutputStream(propFile));
+      propDir = VFS.getManager().resolveFile(location);
+      if (!propDir.exists()) {
+	logger.debug("Creating directory '"+location+"'");
+	propDir.createFolder();
+      }
+      propFile = propDir.resolveFile(AU_ID_FILE);
+      propFile.createFile();
+    } catch (FileSystemException e) {
+      logger.error("Can't create directory " + location);
+      throw new LockssRepository.RepositoryStateException(
+	  "Couldn't create au id properties file.");
+    }
+    try {
+      OutputStream os =
+	new BufferedOutputStream(propFile.getContent().getOutputStream());
       props.store(os, "ArchivalUnit id info");
       os.close();
-      propFile.setReadOnly();
+      // XXX propFile.setReadOnly();
     } catch (IOException ioe) {
-      logger.error("Couldn't write properties for " + propFile.getPath() + ".",
-                   ioe);
+      logger.error("Couldn't write properties for " +
+		   propFile.getName().getPath() + ".", ioe);
       throw new LockssRepository.RepositoryStateException(
           "Couldn't write au id properties file.");
     }
@@ -733,13 +753,19 @@ public class LockssRepositoryImpl
    * each au subdir).  */
   static class LocalRepository {
     String repoPath;
-    File repoCacheFile;
+    FileObject repoCacheFile;
     Map auMap;
     String prevAuDir;
 
     LocalRepository(String repoPath) {
       this.repoPath = repoPath;
-      repoCacheFile = new File(repoPath, CACHE_ROOT_NAME);
+      try {
+	repoCacheFile =
+	  VFS.getManager().resolveFile(repoPath + CACHE_ROOT_NAME);
+      } catch (FileSystemException e) {
+	logger.error("Can't get root for repo: " + e);
+	repoCacheFile = null;
+      }
     }
 
     public String getRepositoryPath() {
@@ -763,39 +789,39 @@ public class LockssRepositoryImpl
       if (auMap == null) {
 	logger.debug3("Loading name map for '" + repoCacheFile + "'.");
 	auMap = new HashMap();
-	if (!repoCacheFile.exists()) {
-	  logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
-	  if (!repoCacheFile.mkdirs()) {
-	    logger.critical("Couldn't create directory, check owner/permissions: "
-			    + repoCacheFile);
-	    // return empty map
-	    return auMap;
-	  }
-	} else {
-	  // read each dir's property file and store mapping auid -> dir
-	  File[] auDirs = repoCacheFile.listFiles();
-	  for (int ii = 0; ii < auDirs.length; ii++) {
-	    String dirName = auDirs[ii].getName();
-	    //       if (dirName.compareTo(lastPluginDir) == 1) {
-	    //         // adjust the 'lastPluginDir' upwards if necessary
-	    //         lastPluginDir = dirName;
-	    //       }
-
-	    String path = auDirs[ii].getAbsolutePath();
-	    Properties idProps = getAuIdProperties(path);
-	    if (idProps != null) {
-	      String auid = idProps.getProperty(AU_ID_PROP);
-	      StringBuffer sb = new StringBuffer(path.length() +
-						 File.separator.length());
-	      sb.append(path);
-	      sb.append(File.separator);
-	      auMap.put(auid, sb.toString());
-	      logger.debug3("Mapping to: " + auMap.get(auid) + ": " + auid);
-	    } else {
-	      logger.debug3("Not mapping " + path + ", no auid file.");
+	try {
+	  if (!repoCacheFile.exists()) {
+	    logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
+	    repoCacheFile.createFolder();
+	  } else {
+	    // read each dir's property file and store mapping auid -> dir
+	    FileObject[] auDirs = repoCacheFile.findFiles(new AllFileSelector());
+	    for (int ii = 0; ii < auDirs.length; ii++) {
+	      // String dirName = auDirs[ii].getName();
+	      //       if (dirName.compareTo(lastPluginDir) == 1) {
+	      //         // adjust the 'lastPluginDir' upwards if necessary
+	      //         lastPluginDir = dirName;
+	      //       }
+	      String path = auDirs[ii].getName().getPath();
+	      Properties idProps = getAuIdProperties(auDirs[ii]);
+	      if (idProps != null) {
+		String auid = idProps.getProperty(AU_ID_PROP);
+		StringBuffer sb = new StringBuffer(path.length() +
+						   File.separator.length());
+		sb.append(path);
+		sb.append(File.separator);
+		auMap.put(auid, sb.toString());
+		logger.debug3("Mapping to: " + auMap.get(auid) + ": " + auid);
+	      } else {
+		logger.debug3("Not mapping " + path + ", no auid file.");
+	      }
 	    }
 	  }
-
+	} catch (FileSystemException e) {
+	  logger.critical("Couldn't create directory, check owner/permissions: "
+			  + repoCacheFile);
+	  // return empty map
+	  auMap = new HashMap();
 	}
       }
       return auMap;
