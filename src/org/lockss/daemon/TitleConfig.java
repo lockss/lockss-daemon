@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.15 2010-04-02 23:17:00 pgust Exp $
+ * $Id: TitleConfig.java,v 1.16 2011-01-07 21:10:40 pgust Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
+import org.lockss.config.TdbAu;
 import org.lockss.plugin.*;
 
 /**
@@ -44,6 +45,8 @@ import org.lockss.plugin.*;
  * of {@link ConfigParamAssignment}s.
  */
 public class TitleConfig {
+  static Logger log = Logger.getLogger("TitleConfig");
+
   private String displayName;
   private String journalTitle;
   private String pluginName;
@@ -51,14 +54,24 @@ public class TitleConfig {
   private long estSize = 0;
   
   /**
-   * TitleConfig params
+   * TitleConfig params, corresponding to params in the TdbAu
    */
   private List<ConfigParamAssignment> params = null;
   
   /**
-   * TitleConfig attributes
+   * TitleConfig properties.  These correspond to properties in the TdbAu
+   */
+  private Map<String,String> props = null;
+  
+  /**
+   * TitleConfig attributes, corresponding to properties in the TdbAu
    */
   private Map<String,String> attrs = null;
+  
+  /**
+   * The TdbAu used to construct the TitleConfig
+   */
+  private TdbAu tdbAu = null;
 
   /**
    * Create a TitleConfig associating a title with a plugin.
@@ -77,6 +90,71 @@ public class TitleConfig {
   public TitleConfig(String displayName, String pluginName) {
     this.pluginName = pluginName;
     this.displayName = displayName;
+  }
+  
+
+  /**
+   * Create a TitleConfig associating a TdbAu and plugin.
+   * @param tdbAu the TdbAu
+   * @param plugin the plugin
+   */
+  public TitleConfig(TdbAu tdbAu, Plugin plugin) {
+    this(plugin.getPluginName(), tdbAu.getName());
+    
+    // save the underlying TdbAu
+    this.tdbAu = tdbAu;
+    
+    setJournalTitle(tdbAu.getTdbTitle().getName());
+
+    long estSize = tdbAu.getEstimatedSize();
+    if (estSize > 0) {
+      setEstimatedSize(estSize);
+    }
+    
+    String pluginVersion = tdbAu.getPluginVersion();
+    if (pluginVersion != null) {
+      setPluginVersion(pluginVersion);
+    }
+    
+    // set attributes -- OK to have TdbAu share attributes?
+    Map<String,String> attrMap = tdbAu.getAttrs();
+    if (!attrMap.isEmpty()) {
+      setAttributes(attrMap);
+    }
+
+    // set properties -- OK to have TdbAu share properties?
+    Map<String,String> propMap = tdbAu.getProperties();
+    if (!propMap.isEmpty()) {
+      setProperties(propMap);
+    }
+    
+    // set params
+    ArrayList<ConfigParamAssignment> params = new ArrayList<ConfigParamAssignment>();
+    for (Map.Entry<String,String> param : tdbAu.getParams().entrySet()) {
+      String key = param.getKey();
+      String val = param.getValue();
+      ConfigParamDescr descr = plugin.findAuConfigDescr(key);
+      if (descr != null) {
+        ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
+        params.add(cpa);
+      } else {
+        log.warning("Unknown parameter key: " + key + " in title: " + displayName);
+        log.debug("   au: " + tdbAu.getName());
+      }
+    }
+    // This list is kept permanently, so trim array to size
+    if (!params.isEmpty()) {
+      params.trimToSize();
+      setParams(params);
+    }
+  }
+  
+  /**
+   * Returns the TdbAu on which this TitleConfig was based
+   * @return the TdbAu or <code>null</code> if not created from a TdbAu
+   */
+  public TdbAu getTdbAu() {
+    return tdbAu;
   }
 
   /**
@@ -97,10 +175,26 @@ public class TitleConfig {
   }
 
   /**
+   * Set the property list.
+   * @param props the map of property names and values.
+   */
+  public void setProperties(Map<String,String> props) {
+    this.props = props;
+  }
+  
+  /**
+   * Return the property map assignment.
+   * @return
+   */
+  public Map<String,String>getProperties() {
+    return (props == null) ? Collections.<String,String>emptyMap() : props;
+  }
+  
+  /**
    * Set the parameter value list
    * @param params List of {@link ConfigParamAssignment}s
    */
-  public void setParams(List params) {
+  public void setParams(List<ConfigParamAssignment> params) {
     this.params = params;
   }
 
@@ -108,7 +202,7 @@ public class TitleConfig {
    * @return the parameter assignments
    */
   public List<ConfigParamAssignment> getParams() {
-    return params;
+    return (params == null) ? Collections.<ConfigParamAssignment>emptyList() : params;
   }
 
   /**
@@ -122,7 +216,7 @@ public class TitleConfig {
    * @return the attributes
    */
   public Map<String,String> getAttributes() {
-    return attrs;
+    return (attrs == null) ? Collections.<String,String>emptyMap() : attrs;
   }
 
   /**
@@ -196,8 +290,7 @@ public class TitleConfig {
       return ConfigManager.EMPTY_CONFIGURATION;
     }
     Configuration config = ConfigManager.newConfiguration();
-    for (Iterator iter = params.iterator(); iter.hasNext(); ) {
-      ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
+    for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (!cpd.isDefaultOnly()) {
 	config.put(cpd.getKey(), cpa.getValue());
@@ -209,13 +302,12 @@ public class TitleConfig {
   // AuConfig hasn't been fully converted to use TitleConfig.  These
   // methods provide the info it needs to do things mostly the old way
 
-  public Collection getUnEditableKeys() {
+  public Collection<String> getUnEditableKeys() {
     if (params == null) {
-      return Collections.EMPTY_LIST;
+      return Collections.<String>emptyList();
     }
-    List res = new ArrayList();
-    for (Iterator iter = params.iterator(); iter.hasNext(); ) {
-      ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
+    List<String> res = new ArrayList<String>();
+    for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (!cpa.isEditable()) {
 	res.add(cpd.getKey());
@@ -232,8 +324,7 @@ public class TitleConfig {
     if (params == null || config == null) {
       return false;
     }
-    for (Iterator iter = params.iterator(); iter.hasNext(); ) {
-      ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
+    for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (cpd.isDefinitional()) {
 	if (cpa.isEditable() ||
@@ -254,9 +345,7 @@ public class TitleConfig {
     if (params == null) {
       return false;
     }
-    for (Iterator iter = plugin.getAuConfigDescrs().iterator();
-	 iter.hasNext(); ) {
-      ConfigParamDescr reqd = (ConfigParamDescr)iter.next();
+    for (ConfigParamDescr reqd : plugin.getAuConfigDescrs()) {
       if (reqd.isDefinitional()) {
 	if (!assignsDescr(reqd)) {
 	  return false;
@@ -267,8 +356,7 @@ public class TitleConfig {
   }
 
   public ConfigParamAssignment findCpa(ConfigParamDescr descr) {
-    for (Iterator iter = params.iterator(); iter.hasNext(); ) {
-      ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
+    for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (descr.equals(cpd)) {
 	return cpa;
@@ -335,10 +423,9 @@ public class TitleConfig {
     hash += getEstimatedSize();
     // params is order-independent, can't call List.hashCode()
     if (params != null) {
-      for (Iterator iter = params.iterator(); iter.hasNext(); ) {
-	Object obj = iter.next();
-	if (obj != null)
-	  hash += obj.hashCode();
+      for (ConfigParamAssignment cpa : params) {
+	if (cpa != null)
+	  hash += cpa.hashCode();
       }
     }
     return hash;
