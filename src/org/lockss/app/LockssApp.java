@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.19 2009-12-09 00:06:51 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.20 2011-01-07 20:04:21 pgust Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public abstract class LockssApp {
     }
   }
 
-  protected List propUrls = null;
+  protected List<String> propUrls = null;
   protected String groupNames = null;
 
   protected boolean appInited = false;	// true after all managers inited
@@ -137,12 +137,12 @@ public abstract class LockssApp {
     theApp = this;
   }
 
-  protected LockssApp(List propUrls) {
+  protected LockssApp(List<String> propUrls) {
     this.propUrls = propUrls;
     theApp = this;
   }
 
-  protected LockssApp(List propUrls, String groupNames) {
+  protected LockssApp(List<String> propUrls, String groupNames) {
     this.propUrls = propUrls;
     this.groupNames = groupNames;
     theApp = this;
@@ -343,7 +343,7 @@ public abstract class LockssApp {
       throws ClassNotFoundException, InstantiationException,
 	     IllegalAccessException {
     log.debug2("Instantiating manager class " + managerClassName);
-    Class mgrClass = Class.forName(managerClassName);
+    Class<?> mgrClass = Class.forName(managerClassName);
     return mgrClass.newInstance();
   }
 
