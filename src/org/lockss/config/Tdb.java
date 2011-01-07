@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.11 2010-08-15 13:23:40 pgust Exp $
+ * $Id: Tdb.java,v 1.12 2011-01-07 19:53:06 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.11 2010-08-15 13:23:40 pgust Exp $
+ * @version $Id: Tdb.java,v 1.12 2011-01-07 19:53:06 pgust Exp $
  */
 public class Tdb {
   /**
@@ -57,7 +57,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.11 2010-08-15 13:23:40 pgust Exp $
+   * @version $Id: Tdb.java,v 1.12 2011-01-07 19:53:06 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
