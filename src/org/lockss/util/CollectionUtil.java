@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.18 2011-01-06 18:32:53 neilmayo Exp $
+ * $Id: CollectionUtil.java,v 1.19 2011-01-08 15:38:57 pgust Exp $
  */
 
 /*
@@ -40,8 +40,17 @@ public class CollectionUtil {
    * NoSuchElementException, remove() throws
    * UnsupportedOperationException */
   // Somewhat convoluted way to achieve the above behavior.
+  @SuppressWarnings({ "rawtypes", "unchecked" })
   public static final Iterator EMPTY_ITERATOR =
-    Collections.unmodifiableList(Collections.EMPTY_LIST).iterator();
+    Collections.unmodifiableCollection(Collections.EMPTY_LIST).iterator();
+
+  /** An immutable empty iterator.  Calling next() throws
+   * NoSuchElementException, remove() throws
+   * UnsupportedOperationException */
+  // Somewhat convoluted way to achieve the above behavior.
+  public static final <T> Iterator<T> emptyIterator() {
+    return Collections.unmodifiableCollection(Collections.<T>emptyList()).iterator();
+  }
 
   /** Return true iff the two Collections are disjoint */
   public static boolean isDisjoint(Collection a, Collection b) {
@@ -52,7 +61,7 @@ public class CollectionUtil {
    * size, whose elements are pairwise equal.  The collections need not be of
    * the same type.
    */
-  public static boolean isIsomorphic(Iterator a, Iterator b) {
+  public static boolean isIsomorphic(Iterator<?> a, Iterator<?> b) {
     while (a.hasNext()) {
       if (!b.hasNext()) {
 	return false;
