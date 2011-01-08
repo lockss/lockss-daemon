@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.97 2010-11-18 07:15:55 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.98 2011-01-08 15:39:37 pgust Exp $
  */
 
 /*
@@ -286,11 +286,11 @@ public class StringUtil {
    * included in the result.
    * @param trimEachString is true, each string in the result will be trim()ed
    */
-  public static Vector breakAt(String s, char sep,
+  public static Vector<String> breakAt(String s, char sep,
 			       int maxItems,
 			       boolean discardEmptyStrings,
 			       boolean trimEachString) {
-    Vector res = new Vector();
+    Vector<String> res = new Vector<String>();
     int len;
     if (s == null || (len = s.length()) == 0) {
       return res;
