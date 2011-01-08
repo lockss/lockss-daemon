@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.16 2011-01-07 21:10:40 pgust Exp $
+ * $Id: TitleConfig.java,v 1.17 2011-01-08 15:38:16 pgust Exp $
  */
 
 /*
@@ -88,8 +88,8 @@ public class TitleConfig {
    * @param pluginName the name of the plugin that handles the title
    */
   public TitleConfig(String displayName, String pluginName) {
-    this.pluginName = pluginName;
     this.displayName = displayName;
+    this.pluginName = pluginName;
   }
   
 
@@ -99,7 +99,7 @@ public class TitleConfig {
    * @param plugin the plugin
    */
   public TitleConfig(TdbAu tdbAu, Plugin plugin) {
-    this(plugin.getPluginName(), tdbAu.getName());
+    this(tdbAu.getName(), tdbAu.getPluginId());
     
     // save the underlying TdbAu
     this.tdbAu = tdbAu;
@@ -262,7 +262,7 @@ public class TitleConfig {
   public String getAuId(PluginManager pluginMgr, Plugin plugin) {
     if (auid == null) {
       if (plugin == null) {
-	throw new RuntimeException("No such plugin " + getPluginName());
+        throw new RuntimeException("No such plugin " + getPluginName());
       }
       auid = PluginManager.generateAuId(plugin, getConfig());
     }
@@ -293,7 +293,7 @@ public class TitleConfig {
     for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (!cpd.isDefaultOnly()) {
-	config.put(cpd.getKey(), cpa.getValue());
+        config.put(cpd.getKey(), cpa.getValue());
       }
     }
     return config;
@@ -310,7 +310,7 @@ public class TitleConfig {
     for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (!cpa.isEditable()) {
-	res.add(cpd.getKey());
+        res.add(cpd.getKey());
       }
     }
     return res;
@@ -327,11 +327,11 @@ public class TitleConfig {
     for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (cpd.isDefinitional()) {
-	if (cpa.isEditable() ||
-	    !StringUtil.equalStrings(cpa.getValue(),
-				     config.get(cpd.getKey()))) {
-	  return false;
-	}
+        if (cpa.isEditable() ||
+            !StringUtil.equalStrings(cpa.getValue(),
+                                     config.get(cpd.getKey()))) {
+          return false;
+        }
       }
     }
     return true;
@@ -347,9 +347,9 @@ public class TitleConfig {
     }
     for (ConfigParamDescr reqd : plugin.getAuConfigDescrs()) {
       if (reqd.isDefinitional()) {
-	if (!assignsDescr(reqd)) {
-	  return false;
-	}
+        if (!assignsDescr(reqd)) {
+          return false;
+        }
       }
     }
     return true;
@@ -359,7 +359,7 @@ public class TitleConfig {
     for (ConfigParamAssignment cpa : params) {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (descr.equals(cpd)) {
-	return cpa;
+        return cpa;
       }
     }
     return null;
@@ -388,10 +388,10 @@ public class TitleConfig {
     }
     if (params != null) {
       for (int ix = 0; ix < params.size(); ix++) {
-	ConfigParamAssignment cpa = (ConfigParamAssignment)params.get(ix);
-	String ppre = pre + "param." + (ix+1) + ".";
-	p.put(ppre + "key", cpa.getParamDescr().getKey());
-	p.put(ppre + "value", cpa.getValue());
+        ConfigParamAssignment cpa = (ConfigParamAssignment)params.get(ix);
+        String ppre = pre + "param." + (ix+1) + ".";
+        p.put(ppre + "key", cpa.getParamDescr().getKey());
+        p.put(ppre + "value", cpa.getValue());
       }
     }
     return p;
@@ -410,7 +410,7 @@ public class TitleConfig {
       estSize == o.getEstimatedSize() &&
       // params is order-independent, can't call List.equals()
       (params == null ?
-       o.getParams() == null : (params.size() == o.getParams().size() &&
+       o.getParams().isEmpty() : (params.size() == o.getParams().size() &&
                               params.containsAll(o.getParams())));
   }
 
@@ -424,8 +424,8 @@ public class TitleConfig {
     // params is order-independent, can't call List.hashCode()
     if (params != null) {
       for (ConfigParamAssignment cpa : params) {
-	if (cpa != null)
-	  hash += cpa.hashCode();
+        if (cpa != null)
+          hash += cpa.hashCode();
       }
     }
     return hash;
