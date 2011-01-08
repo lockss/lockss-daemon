@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.11 2010-04-02 23:38:11 pgust Exp $
+ * $Id: TestTitleConfig.java,v 1.12 2011-01-08 15:41:06 pgust Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestTitleConfig extends LockssTestCase {
     tc1.setParams(foo);
     assertSame(foo, tc1.getParams());
 
-    assertNull(tc1.getAttributes());
+    assertEmpty(tc1.getAttributes());
     Map map = MapUtil.map("key1", "val2", "k0", "1");
     tc1.setAttributes(map);
     assertSame(map, tc1.getAttributes());

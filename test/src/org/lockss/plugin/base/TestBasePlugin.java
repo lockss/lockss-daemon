@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.24 2010-06-29 20:12:09 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.25 2011-01-08 15:41:06 pgust Exp $
  */
 
 /*
@@ -198,7 +198,7 @@ public class TestBasePlugin extends LockssTestCase {
     ConfigParamAssignment epa2 = new ConfigParamAssignment(PD_VOL, "vol_1");
     List<ConfigParamAssignment> tcParams = tc.getParams(); 
     assertEquals(SetUtil.set(epa1, epa2), SetUtil.theSet(tcParams));
-    assertNull(tc.getAttributes());
+    assertEmpty(tc.getAttributes());
 
     tc = mbp.getTitleConfig(new String("Howl"));
     assertEquals("av111", tc.getAttributes().get("attr1"));
