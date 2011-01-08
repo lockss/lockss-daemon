@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.12 2010-08-11 03:06:50 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.13 2011-01-08 15:42:39 pgust Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.util.*;
-import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.crawler.*;
@@ -172,7 +171,7 @@ public class TestAuUtil extends LockssTestCase {
     assertNull(AuUtil.getTitleAttribute(mau, "foo"));
     assertEquals("7", AuUtil.getTitleAttribute(mau, null, "7"));
     assertEquals("7", AuUtil.getTitleAttribute(mau, "foo", "7"));
-    Map attrs = new HashMap();
+    Map<String,String> attrs = new HashMap<String,String>();
     tc.setAttributes(attrs);
     assertNull(AuUtil.getTitleAttribute(mau, null));
     assertNull(AuUtil.getTitleAttribute(mau, "foo"));
@@ -264,7 +263,6 @@ public class TestAuUtil extends LockssTestCase {
   }
 
   public void testIsConfigCompatibleWithPlugin() {
-    String plugName = "org.lockss.plugin.base.TestAuUtil$MyMockBasePlugin";
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR, PD_OPT));
     Configuration auconf;
     Properties p = new Properties();
@@ -330,7 +328,7 @@ public class TestAuUtil extends LockssTestCase {
   private static class LocalMockPlugin extends BasePlugin {
     String name;
     String version;
-    List configDescrs;
+    List<ConfigParamDescr> configDescrs;
 
     public LocalMockPlugin() {
       super();
@@ -344,7 +342,7 @@ public class TestAuUtil extends LockssTestCase {
       this.version = version;
     }
 
-    public void setConfigDescrs(List configDescrs) {
+    public void setConfigDescrs(List<ConfigParamDescr> configDescrs) {
       this.configDescrs = configDescrs;
     }
 
@@ -363,7 +361,7 @@ public class TestAuUtil extends LockssTestCase {
       return name;
     }
 
-    public List getLocalAuConfigDescrs() {
+    public List<ConfigParamDescr> getLocalAuConfigDescrs() {
       return configDescrs;
     }
   }
