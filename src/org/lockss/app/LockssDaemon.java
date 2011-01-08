@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.102 2010-12-02 10:04:54 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.103 2011-01-08 15:37:32 pgust Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ import org.apache.commons.collections.map.LinkedMap;
 public class LockssDaemon extends LockssApp {
   private static Logger log = Logger.getLogger("LockssDaemon");
 
-  private static final String PREFIX = Configuration.PREFIX + "daemon.";
+//  private static final String PREFIX = Configuration.PREFIX + "daemon.";
 
   public static final float MIN_JAVA_VERSION = 1.5f;
 
@@ -110,6 +110,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String IDENTITY_MANAGER = "IdentityManager";
   public static final String CRAWL_MANAGER = "CrawlManager";
   public static final String PLUGIN_MANAGER = "PluginManager";
+  public static final String METADATA_MANAGER = "MetadataManager";
   public static final String POLL_MANAGER = "PollManager";
   public static final String PSM_MANAGER = "PsmManager";
   public static final String REPOSITORY_MANAGER = "RepositoryManager";
@@ -160,6 +161,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 		    "org.lockss.repository.RepositoryManager"),
     // start plugin manager after generic services
     new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
+    // start metadata manager after pluggin manager
+    new ManagerDesc(METADATA_MANAGER, "org.lockss.daemon.MetadataManager"),
     // start proxy and servlets after plugin manager
     new ManagerDesc(REMOTE_API, "org.lockss.remote.RemoteApi"),
     new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.AdminServletManager"),
@@ -219,21 +222,23 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   };
 
   // Maps au to sequenced map of managerKey -> manager instance
-  protected HashMap auManagerMaps = new HashMap();
+  protected HashMap<ArchivalUnit,Map<String,LockssAuManager>> auManagerMaps = 
+      new HashMap<ArchivalUnit,Map<String,LockssAuManager>>();
 
   // Maps managerKey -> LockssAuManager.Factory instance
-  protected HashMap auManagerFactoryMap = new HashMap();
+  protected HashMap<String,LockssAuManager.Factory> auManagerFactoryMap = 
+      new HashMap<String,LockssAuManager.Factory>();
 
   private static LockssDaemon theDaemon;
   private boolean isClockss;
   private String testingMode;
 
-  protected LockssDaemon(List propUrls) {
+  protected LockssDaemon(List<String> propUrls) {
     super(propUrls);
     theDaemon = this;
   }
 
-  protected LockssDaemon(List propUrls, String groupNames) {
+  protected LockssDaemon(List<String> propUrls, String groupNames) {
     super(propUrls, groupNames);
     theDaemon = this;
   }
@@ -425,6 +430,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
+   * return the metadata manager instance
+   * @return the MetadataManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public MetadataManager getMetadataManager() {
+    return (MetadataManager) getManager(METADATA_MANAGER);
+  }
+
+  /**
    * return the Account Manager
    * @return AccountManager
    * @throws IllegalArgumentException if the manager is not available.
@@ -590,7 +604,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Return all ActivityRegulators.
    * @return a list of all ActivityRegulators for all AUs
    */
-  public List getAllActivityRegulators() {
+  public List<ActivityRegulator> getAllActivityRegulators() {
     return getAuManagersOfType(ACTIVITY_REGULATOR);
   }
 
@@ -598,7 +612,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Return all LockssRepositories.
    * @return a list of all LockssRepositories for all AUs
    */
-  public List getAllLockssRepositories() {
+  public List<LockssRepository> getAllLockssRepositories() {
     return getAuManagersOfType(LOCKSS_REPOSITORY);
   }
 
@@ -606,7 +620,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Return all NodeManagers.
    * @return a list of all NodeManagers for all AUs
    */
-  public List getAllNodeManagers() {
+  public List<NodeManager> getAllNodeManagers() {
     return getAuManagersOfType(NODE_MANAGER);
   }
 
@@ -617,6 +631,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @param au the ArchivalUnit
    * @param auConfig the AU's confignuration
    */
+  @SuppressWarnings("unchecked")
   public void startOrReconfigureAuManagers(ArchivalUnit au,
 					   Configuration auConfig)
       throws Exception {
@@ -647,9 +662,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     LinkedMap auMgrMap =
       (LinkedMap)auManagerMaps.get(au);
     if (auMgrMap != null) {
-      List rkeys = ListUtil.reverseCopy(auMgrMap.asList());
-      for (Iterator iter = rkeys.iterator(); iter.hasNext(); ) {
-	String key = (String)iter.next();
+      @SuppressWarnings("unchecked")
+      List<String> rkeys = ListUtil.reverseCopy(auMgrMap.asList());
+      for (String key : rkeys) {
 	LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
 	try {
 	  mgr.stopService();
@@ -698,11 +713,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /** Start the managers for the AU in the order in which they appear in
    * the map.  protected so MockLockssDaemon can override to suppress
    * startService() */
-  protected void startAuManagers(ArchivalUnit au, LinkedMap auMgrMap)
+  protected void startAuManagers(ArchivalUnit au, Map<String,? extends LockssAuManager> auMgrMap)
       throws Exception {
-    for (Iterator iter = auMgrMap.entrySet().iterator(); iter.hasNext(); ) {
-      Map.Entry entry = (Map.Entry)iter.next();
-      LockssAuManager mgr = (LockssAuManager)entry.getValue();
+    for (LockssAuManager mgr : auMgrMap.values()) {
       try {
 	mgr.startService();
       } catch (Exception e) {
@@ -716,10 +729,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   /** (re)configure the au managers */
   private void configAuManagers(ArchivalUnit au, Configuration auConfig,
-				LinkedMap auMgrMap) {
-    for (Iterator iter = auMgrMap.entrySet().iterator(); iter.hasNext(); ) {
-      Map.Entry entry = (Map.Entry)iter.next();
-      LockssAuManager mgr = (LockssAuManager)entry.getValue();
+                                Map<String,? extends LockssAuManager> auMgrMap) {
+    for (LockssAuManager mgr : auMgrMap.values()) {
       try {
 	mgr.setAuConfig(auConfig);
       } catch (Exception e) {
@@ -770,9 +781,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Calls 'stopService()' on all AU managers for all AUs,
    */
   public void stopAllAuManagers() {
-    for (Iterator iter = auManagerMaps.keySet().iterator();
-	 iter.hasNext(); ) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
+    for (ArchivalUnit au : auManagerMaps.keySet()) {
       log.debug2("Stopping all managers for " + au);
       stopAuManagers(au);
     }
@@ -784,14 +793,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @param managerKey the manager type
    * @return a list of LockssAuManagers
    */
-  List getAuManagersOfType(String managerKey) {
-    List res = new ArrayList(auManagerMaps.size());
-    for (Iterator iter = auManagerMaps.values().iterator();
-	 iter.hasNext(); ) {
-      LinkedMap auMgrMap = (LinkedMap)iter.next();
+  @SuppressWarnings("unchecked")
+  <T extends LockssAuManager> List<T> getAuManagersOfType(String managerKey) {
+    List<T> res = new ArrayList<T>(auManagerMaps.size());
+    for (Map<String,LockssAuManager> auMgrMap : auManagerMaps.values()) {
       Object auMgr = auMgrMap.get(managerKey);
       if (auMgr != null) {
-	res.add(auMgr);
+	res.add((T)auMgr);
       }
     }
     return res;
@@ -860,7 +868,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * Parse and handle command line arguments.
    */
   protected static StartupOptions getStartupOptions(String[] args) {
-    List propUrls = new ArrayList();
+    List<String> propUrls = new ArrayList<String>();
     String groupNames = null;
 
     // True if named command line arguments are being passed to
@@ -878,7 +886,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 	// TODO: If not available, keep selecting prop files to load
 	// until one is loaded, or the list is exhausted.
 	// For now, just select one at random.
-	Vector v = StringUtil.breakAt(args[++i], ';', -1, true, true);
+	Vector<String> v = StringUtil.breakAt(args[++i], ';', -1, true, true);
 	int idx = (int)(Math.random() * v.size());
 	propUrls.add(v.get(idx));
 	useNewSyntax = true;
@@ -886,7 +894,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     }
 
     if (!useNewSyntax) {
-      propUrls = ListUtil.fromArray(args);
+      propUrls = Arrays.asList(args);
     }
 
     return new StartupOptions(propUrls, groupNames);
@@ -954,14 +962,14 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     public static final String OPTION_GROUP = "-g";
 
     private String groupNames;
-    private List propUrls;
+    private List<String> propUrls;
 
-    public StartupOptions(List propUrls, String groupNames) {
+    public StartupOptions(List<String> propUrls, String groupNames) {
       this.propUrls = propUrls;
       this.groupNames = groupNames;
     }
 
-    public List getPropUrls() {
+    public List<String> getPropUrls() {
       return propUrls;
     }
 

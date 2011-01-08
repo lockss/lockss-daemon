@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.54 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: ArchivalUnit.java,v 1.55 2011-01-08 15:37:31 pgust Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ public interface ArchivalUnit {
    * it's okay for there to be matching URLs that aren't in the AU.
    * @return a Collection of URL stems
    */
-  public Collection getUrlStems();
+  public Collection<String> getUrlStems();
 
   /**
    * Returns the plugin to which this AU belongs
@@ -348,6 +348,7 @@ public interface ArchivalUnit {
    */
   public TitleConfig getTitleConfig();
 
+  @SuppressWarnings("serial")
   public class ConfigurationException extends Exception {
 
     public ConfigurationException(String msg) {

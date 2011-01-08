@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.71 2010-07-21 06:10:30 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.72 2011-01-08 15:37:32 pgust Exp $
  */
 
 /*
@@ -63,12 +63,12 @@ public abstract class BasePlugin
 
   protected LockssDaemon theDaemon;
   protected PluginManager pluginMgr;
-  protected Collection<ArchivalUnit> aus = new ArrayList();
+  protected Collection<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
   protected Map<String, TitleConfig> titleConfigMap;
   // XXX need to generalize this
   protected CacheResultMap resultMap;
   protected MimeTypeMap mimeMap;
-  protected HashMap filterMap = new HashMap(4);
+  protected HashMap<String,FilterRule> filterMap = new HashMap<String,FilterRule>(4);
   // ClassLoader used to load plugin.  null if not loadable plugin
   protected ClassLoader classLoader;
   protected List<ConfigParamDescr> allParamDescrs;
@@ -149,11 +149,11 @@ public abstract class BasePlugin
    * Default implementation collects keys from titleConfigMap.
    * @return a List
    */
-  public List getSupportedTitles() {
+  public List<String> getSupportedTitles() {
     if (titleConfigMap == null) {
-      return Collections.EMPTY_LIST;
+      return Collections.<String>emptyList();
     }
-    return new ArrayList(titleConfigMap.keySet());
+    return new ArrayList<String>(titleConfigMap.keySet());
   }
 
   /**
@@ -196,15 +196,15 @@ public abstract class BasePlugin
    */
   private void setTitleConfigs(Tdb tdb) {
     String myId = getPluginId();
-    Map<String, TitleConfig> titleMap = new HashMap();
-    for (TdbAu au : tdb.getTdbAus(myId)) {
-      String pluginId = au.getPluginId();
+    Map<String, TitleConfig> titleMap = new HashMap<String,TitleConfig>();
+    for (TdbAu tdbAu : tdb.getTdbAus(myId)) {
+      String pluginId = tdbAu.getPluginId();
       if (myId.equals(pluginId)) {
         if (log.isDebug2()) {
-          log.debug2("my titleConfig: " + au);
+          log.debug2("my titleConfig: " + tdbAu);
         }
-        String title = au.getName();
-        TitleConfig tc = titleConfigFromTdbAu(au);
+        String title = tdbAu.getName();
+        TitleConfig tc = new TitleConfig(tdbAu, this);
         if (titleMap.containsKey(title)) {
           log.warning("Duplicate title: " + tc);
           log.warning("Previous def   : " + tc);
@@ -212,7 +212,7 @@ public abstract class BasePlugin
         titleMap.put(title, tc);
       } else {
         if (log.isDebug3()) {
-          log.debug3("titleConfig: " + au.getName());
+          log.debug3("titleConfig: " + tdbAu.getName());
         }
       }
     }
@@ -223,64 +223,13 @@ public abstract class BasePlugin
     }
   }
 
-  /**
-   * Create a TitleConfig from the information in a TdbAu.
-   * 
-   * @param tdbAu the TdbAu
-   * @return a TitleConfig
-   */
-  TitleConfig titleConfigFromTdbAu(TdbAu tdbAu) {
-    String title = tdbAu.getName();
-    TitleConfig tc = new TitleConfig(title, this);
-    tc.setJournalTitle(tdbAu.getTdbTitle().getName());
-    
-    long estSize = tdbAu.getEstimatedSize();
-    if (estSize > 0) {
-      tc.setEstimatedSize(estSize);
-    }
-    
-    String pluginVersion = tdbAu.getPluginVersion();
-    if (pluginVersion != null) {
-      tc.setPluginVersion(pluginVersion);
-    }
-    
-    // set attributes -- OK to have TdbAu share attributes?
-    Map<String,String> attrMap =tdbAu.getAttrs();
-    if (!attrMap.isEmpty()) {
-      tc.setAttributes(attrMap);
-    }
-    
-    // set params
-    ArrayList<ConfigParamAssignment> params = new ArrayList<ConfigParamAssignment>();
-    for (Map.Entry<String,String> param : tdbAu.getParams().entrySet()) {
-      String key = param.getKey();
-      String val = param.getValue();
-      ConfigParamDescr descr = findAuConfigDescr(key);
-      if (descr != null) {
-        ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
-        params.add(cpa);
-      } else {
-        log.warning("Unknown parameter key: " + key + " in title: " + title);
-        log.debug("   au: " + tdbAu.getName());
-      }
-    }
-    // This list is kept permanently, so trim array to size
-    if (!params.isEmpty()) {
-      params.trimToSize();
-      tc.setParams(params);
-    }
-    
-    return tc;
-
-  }
-
   protected void setTitleConfigMap(Map<String, TitleConfig> titleConfigMap) {
     this.titleConfigMap = titleConfigMap;
     pluginMgr.resetTitles();
   }
 
   protected void notifyAusTitleDbChanged() {
-    for (Iterator iter = getAllAus().iterator(); iter.hasNext(); ) {
+    for (Iterator<ArchivalUnit> iter = getAllAus().iterator(); iter.hasNext(); ) {
       //  They should all be BaseArchivalUnits, but just in case...
       try {
 	BaseArchivalUnit au = (BaseArchivalUnit)iter.next();
@@ -294,7 +243,7 @@ public abstract class BasePlugin
   public List<ConfigParamDescr> getAuConfigDescrs() {
     if (allParamDescrs == null) {
       List<ConfigParamDescr> local = getLocalAuConfigDescrs();
-      ArrayList<ConfigParamDescr> res = new ArrayList(local);
+      ArrayList<ConfigParamDescr> res = new ArrayList<ConfigParamDescr>(local);
       for (ConfigParamDescr descr : local) {
 	switch (descr.getType()) {
 	case ConfigParamDescr.TYPE_YEAR:
@@ -324,7 +273,7 @@ public abstract class BasePlugin
  	res.add(ConfigParamDescr.CRAWL_PROXY);
       }
       res.trimToSize();
-      Map<String,ConfigParamDescr> map = new HashMap();
+      Map<String,ConfigParamDescr> map = new HashMap<String,ConfigParamDescr>();
       for (ConfigParamDescr descr : res) {
 	map.put(descr.getKey(), descr);
       }
@@ -353,10 +302,10 @@ public abstract class BasePlugin
     return this.getClass().getName();
   }
 
-  public Collection getAllAus() {
+  public Collection<ArchivalUnit> getAllAus() {
     if (log.isDebug2()) log.debug2("getAllAus: aus: " + aus);
     synchronized (aus) {
-      return new ArrayList(aus);
+      return new ArrayList<ArchivalUnit>(aus);
     }
   }
 
@@ -662,7 +611,7 @@ public abstract class BasePlugin
    * @param className the name of the auxilliary class
    * @param expectedType Type (class or interface) of expected rexult
    */
-  public Object newAuxClass(String className, Class expectedType) {
+  public Object newAuxClass(String className, Class<?> expectedType) {
     return newAuxClass(className, expectedType, expectedType);
   }
 
@@ -672,8 +621,8 @@ public abstract class BasePlugin
    * @param wrapperType class to lookup wrapper, or null to not wrap the
    * result
    */
-  public Object newAuxClass(String className, Class expectedType,
-			    Class wrapperType) {
+  public Object newAuxClass(String className, Class<?> expectedType,
+			    Class<?> wrapperType) {
     Object obj = null;
     try {
       if (classLoader != null) {

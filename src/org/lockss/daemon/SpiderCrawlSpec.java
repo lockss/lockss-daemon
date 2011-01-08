@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.8 2010-12-01 01:42:11 tlipkis Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.9 2011-01-08 15:37:32 pgust Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  */
 public final class SpiderCrawlSpec extends BaseCrawlSpec {
 
-  private List startList;
+  private List<String> startList;
   private int refetchDepth = -1;
   private String exploderPattern = null;
   private ExploderHelper exploderHelper = null;
@@ -58,8 +58,8 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public SpiderCrawlSpec(List startUrls,
-		       List permissionUrls,
+  public SpiderCrawlSpec(List<String> startUrls,
+		       List<String> permissionUrls,
 		       CrawlRule rule,
 		       int refetchDepth)
       throws ClassCastException {
@@ -80,8 +80,8 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public SpiderCrawlSpec(List startUrls,
-			 List permissionUrls,
+  public SpiderCrawlSpec(List<String> startUrls,
+			 List<String> permissionUrls,
 			 CrawlRule rule,
 			 int refetchDepth,
 			 PermissionChecker permissionChecker,
@@ -105,8 +105,8 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public SpiderCrawlSpec(List startUrls,
-			 List permissionUrls,
+  public SpiderCrawlSpec(List<String> startUrls,
+			 List<String> permissionUrls,
 			 CrawlRule rule,
 			 int refetchDepth,
 			 PermissionChecker permissionChecker,
@@ -133,8 +133,8 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public SpiderCrawlSpec(List startUrls,
-			 List permissionUrls,
+  public SpiderCrawlSpec(List<String> startUrls,
+			 List<String> permissionUrls,
 			 CrawlRule rule,
 			 int refetchDepth,
 			 PermissionChecker permissionChecker,
@@ -200,7 +200,7 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * Get the starting point list.
    * @return an immutable list of URLs, as Strings
    */
-  public List getStartingUrls() {
+  public List<String> getStartingUrls() {
     return startList;
   }
 

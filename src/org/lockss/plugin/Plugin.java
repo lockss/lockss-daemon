@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.31 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: Plugin.java,v 1.32 2011-01-08 15:37:31 pgust Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public interface Plugin {
    * supported by this plugin.
    * @return a List of Strings
    */
-  public List getSupportedTitles();
+  public List<String> getSupportedTitles();
 
   /**
    * Return the (possibly incomplete) parameter assignments
@@ -116,7 +116,7 @@ public interface Plugin {
    * @return a List of {@link ConfigParamDescr}s, in the order the plugin
    * would like them presented to the user.
    */
-  public List getAuConfigDescrs();
+  public List<ConfigParamDescr> getAuConfigDescrs();
 
   /**
    * Return the ConfigParamDescr for the named param, or null if none.
@@ -150,7 +150,7 @@ public interface Plugin {
    * plugin.
    * @return a {@link Collection} of AUs
    */
-  public Collection getAllAus();
+  public Collection<ArchivalUnit> getAllAus();
 
   /**
    * Return the LockssDaemon instance
@@ -162,7 +162,7 @@ public interface Plugin {
    * @param className the name of the auxilliary class
    * @param expectedType Type (class or interface) of expected rexult
    */
-  public Object newAuxClass(String className, Class expectedType);
+  public Object newAuxClass(String className, Class<?> expectedType);
 
   /**
    * Return an {@link ArticleMetadataExtractor} that knows how to interpret

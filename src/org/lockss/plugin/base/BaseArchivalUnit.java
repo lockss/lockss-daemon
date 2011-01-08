@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.145 2010-10-02 22:24:21 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.146 2011-01-08 15:37:33 pgust Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.net.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import org.apache.commons.collections.map.LRUMap;
 import org.apache.oro.text.regex.*;
 
 import org.lockss.config.*;
@@ -175,9 +174,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   private void checkLegalConfigChange(Configuration newConfig)
       throws ArchivalUnit.ConfigurationException {
-    for (Iterator iter = plugin.getAuConfigDescrs().iterator();
-	 iter.hasNext();) {
-      ConfigParamDescr descr = (ConfigParamDescr)iter.next();
+    for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       if (descr.isDefinitional()) {
 	String key = descr.getKey();
 	String newVal = newConfig.get(key);
@@ -200,8 +197,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
-    for (Iterator it = plugin.getAuConfigDescrs().iterator(); it.hasNext() ;) {
-      ConfigParamDescr descr = (ConfigParamDescr) it.next();
+    for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
       if (config.containsKey(key)) {
 	try {
@@ -277,9 +273,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   protected void addImpliedConfigParams()
       throws ArchivalUnit.ConfigurationException {
-    for (Iterator it = plugin.getAuConfigDescrs().iterator();
-	 it.hasNext() ; ) {
-      ConfigParamDescr descr = (ConfigParamDescr)it.next();
+    for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
       try {
 	if (auConfig.containsKey(key)) {
@@ -392,12 +386,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * this AU
    * @return a List of Urls
    */
-  public Collection getUrlStems() {
+  public Collection<String> getUrlStems() {
     try {
-      List perms = getPermissionPages();
-      ArrayList res = new ArrayList(perms.size());
-      for (Iterator it = perms.iterator(); it.hasNext();) {
-	String url = (String)it.next();
+      List<String> perms = getPermissionPages();
+      ArrayList<String> res = new ArrayList<String>(perms.size());
+      for (String url : perms) {
 	String stem = UrlUtil.getUrlPrefix(url);
 	res.add(stem);
       }
@@ -406,7 +399,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } catch (Exception e) {
       // TODO: This should throw an exception. ProxyInfo assumes that a
       // collection will be returned and makes no attempt to catch exceptions
-      return Collections.EMPTY_LIST;
+      return Collections.<String>emptyList();
     }
   }
 
@@ -623,7 +616,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the list of URLs from which a crawl of this au should start
    */
   protected List<String> makeStartUrls() throws ConfigurationException {
-    ArrayList res = new ArrayList(1);
+    ArrayList<String> res = new ArrayList<String>(1);
     res.add(makeStartUrl());
     res.trimToSize();
     return res;
@@ -727,7 +720,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return an Iterator over the AU's ArticleFiles.
    */
   public Iterator<ArticleFiles> getArticleIterator(MetadataTarget target) {
-    Iterator ret = CollectionUtil.EMPTY_ITERATOR;
+    Iterator<ArticleFiles> ret = CollectionUtil.emptyIterator();
     ArticleIteratorFactory aif = plugin.getArticleIteratorFactory();
     if (aif != null) try {
       Iterator<ArticleFiles> it = aif.createArticleIterator(this, target);
@@ -798,9 +791,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } catch (MalformedURLException murle) {
       throw new ConfigurationException("Bad URL for " + paramString(descr), murle);
     }
-    if (url == null) {
-      throw new ConfigurationException("Null url for " + paramString(descr));
-    }
     // TODO: We need to come up with a way to handle expected path
 
     return url;
@@ -853,7 +843,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   protected static class ParamHandlerMap extends TypedEntryMap {
-    HashMap handlerMap = new HashMap();
+    HashMap<String,ParamHandler> handlerMap = new HashMap<String,ParamHandler>();
 
     protected ParamHandlerMap() {
       super();
