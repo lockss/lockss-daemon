@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: ArticleMetadataListExtractor.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -33,23 +33,31 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.extractor;
 
 import java.io.*;
+import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-/** Content parser that extracts metadata from CachedUrl objects */
-public interface FileMetadataExtractor {
-  /**
-   * Parse content on CachedUrl, Emit zero or more Metadata objects
-   * describing the content.
-   * @param cu the CachedUrl to extract from
-   * @param emitter
-   */
-  public void extract(CachedUrl cu, Emitter emitter)
-    throws IOException, PluginException;
+/** Base class for metadata extractors that return a single ArticleMetadata
+ * or null.  This was the previous ArticleMetadataExtractor interface. */
+public class ArticleMetadataListExtractor {
+  private ArticleMetadataExtractor me;
 
-  /** Functor to emit ArticleMetadata object(s) created by extractor */
-  public interface Emitter {
-    public void emitMetadata(CachedUrl cu, ArticleMetadata metadata);
+  public ArticleMetadataListExtractor(ArticleMetadataExtractor me) {
+    this.me = me;
+  }
+
+  public List<ArticleMetadata> extract(ArticleFiles af)
+      throws IOException, PluginException {
+    final List res = new ArrayList();
+    ArticleMetadataExtractor.Emitter emitter =
+      new ArticleMetadataExtractor.Emitter() {
+	public void emitMetadata(ArticleFiles af,
+				 ArticleMetadata md) {
+	  res.add(md);
+	}
+      };
+    me.extract(af, emitter);
+    return res;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.5 2010-11-17 11:28:12 neilmayo Exp $
+ * $Id: ArticleMetadata.java,v 1.6 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -35,533 +35,429 @@ package org.lockss.plugin;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.collections .*;
+import org.apache.commons.collections .map.*;
+
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import static org.lockss.extractor.MetadataField.*;
+
 
 /**
- * Collect and search metadata, supporting metadata-based access to content.
+ * Collection of metadata about a single article or other feature.
+ * Consists of two maps that associate one or more string values with a
+ * string key.  The raw map should hold the raw keys and values extracted
+ * from one or more (html, xml, etc.) files; the cooked map holds standard
+ * metadata (DOI, ISSN, etc.) associated with well-known keys.
  */
-@SuppressWarnings("serial")
-public class ArticleMetadata extends Properties {
+public class ArticleMetadata {
   private static Logger log = Logger.getLogger("Metadata");
 
-  public static final String PARAM_DOIMAP =
-    Configuration.PREFIX + "metadata.doimap";
-  public static final String DEFAULT_DOIMAP = "doi";
-  public static final String PARAM_DOI_ENABLE =
-    Configuration.PREFIX + "metadata.doi_enable";
-  public static final Boolean DEFAULT_DOI_ENABLE = false;
-  public static final String PARAM_OPENURLMAP =
-    Configuration.PREFIX + "metadata.openurlmap";
-  public static final String DEFAULT_OPENURLMAP = "openurl";
-  public static final String PARAM_OPENURL_ENABLE =
-    Configuration.PREFIX + "metadata.openurl_enable";
-  public static final Boolean DEFAULT_OPENURL_ENABLE = false;
-
-  // XXX maps should persist across daemon restart
-  // XXX should lookup DOI prefix to get map in which to look up suffix
-  private static CIProperties doiMap = null;
-  // XXX should lookup ISSN to get map in which to look up rest of
-  // XXX OpenURL metadata
-  private static CIProperties openUrlMap = null;
-
-  private static void initDoiMap() {
-    Configuration config = CurrentConfig.getCurrentConfig();
-    if (!config.getBoolean(PARAM_DOI_ENABLE, DEFAULT_DOI_ENABLE)) {
-      return;
-    }
-    if (doiMap == null) {
-      String doiFileName = config.get(PARAM_DOIMAP, DEFAULT_DOIMAP);
-      log.debug("initDoiMap(" + doiFileName + ")");
-      File doiFile = new File(doiFileName);
-      if (doiFile.exists()) {
-	FileInputStream fis = null;
-	try {
-	  fis = new FileInputStream(doiFile);
-	  if (fis != null) {
-	    doiMap = new CIProperties();
-	    doiMap.load(fis);
-	  }
-	} catch (IOException ex) {
-	  log.error(doiFile + " threw " + ex);
-	}
-      } else {
-	// There isn't a cached DOI map - create one
-	// XXX this isn't feasible in production because it
-	// XXX would take too long and the map would be way
-	// XXX too big, but it is OK for a demo.
-	doiMap = createDoiMap();
-	if (doiMap != null) {
-	  FileOutputStream fos = null;
-	  try {
-	    fos = new FileOutputStream(new File(doiFileName));
-	    if (fos != null) {
-	      doiMap.store(fos, "Doi Map");
-	    }
-	  } catch (IOException ex) {
-	    log.error(doiFileName + " threw " + ex);
-	  } finally {
-	    IOUtil.safeClose(fos);
-	  }
-	}
-      }
-    }
-  }
-
-  protected static CIProperties createDoiMap() {
-    PluginManager pluginMgr = LockssDaemon.getLockssDaemon().getPluginManager();
-
-    CIProperties ret = new CIProperties();
-    for (ArchivalUnit au : pluginMgr.getAllAus()) {
-      if (pluginMgr.isInternalAu(au)) {
-	continue;
-      }
-      ArticleMetadataExtractor mdExtractor =
-	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au);
-      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
-	   iter.hasNext(); ) {
-	ArticleFiles af = iter.next();
-	CachedUrl cu = af.getFullTextCu();
-	try {
-	  if (cu.hasContent()) {
-	    ArticleMetadata md = mdExtractor.extract(af);
-	    if (md != null) {
-	      String doi = md.getDOI();
-	      if (doi != null) {
-		ret.put(doi, cu.getUrl());
-	      } else {
-		log.warning(cu.getUrl() + " has no DOI ");
-	      }
-	    }      
-	  }
-	} catch (IOException e) {
-	  log.warning("createDoiMap() threw " + e);
-	} catch (PluginException e) {
-	  log.warning("createDoiMap() threw " + e);
-	} finally {
-	  AuUtil.safeRelease(cu);
-	}
-      }
-    }
-    return ret;
-  }
-
-  private static void initOpenUrlMap() {
-    Configuration config = CurrentConfig.getCurrentConfig();
-    if (!config.getBoolean(PARAM_OPENURL_ENABLE, DEFAULT_OPENURL_ENABLE)) {
-      return;
-    }
-    if (openUrlMap == null) {
-      String openUrlFileName = config.get(PARAM_OPENURLMAP, DEFAULT_OPENURLMAP);
-      log.debug("initOpenUrlMap(" + openUrlFileName + ")");
-      File openUrlFile = new File(openUrlFileName);
-      if (openUrlFile.exists()) {
-	FileInputStream fis = null;
-	try {
-	  fis = new FileInputStream(openUrlFile);
-	  if (fis != null) {
-	    // There is a cached OpenURL map
-	    openUrlMap = new CIProperties();
-	    openUrlMap.load(fis);
-	  }
-	} catch (IOException ex) {
-	  log.error(openUrlFileName + " threw " + ex);
-	} finally {
-	  IOUtil.safeClose(fis);
-	}
-      } else {
-	// There isn't a cached OpenURL map - create one
-	// XXX this isn't feasible in production because it
-	// XXX would take too long and the map would be way
-	// XXX too big, but it is OK for a demo.
-	openUrlMap = createOpenUrlMap();
-	if (openUrlMap != null) {
-	  FileOutputStream fos = null;
-	  try {
-	    fos = new FileOutputStream(new File(openUrlFileName));
-	    if (fos != null) {
-	      openUrlMap.store(fos, "OpenURL Map");
-	    }
-	  } catch (IOException ex) {
-	    log.error(openUrlFileName + " threw " + ex);
-	  } finally {
-	    IOUtil.safeClose(fos);
-	  }
-	}
-      }
-    }
-  }
-
-  protected static CIProperties createOpenUrlMap() {
-    PluginManager pluginMgr = LockssDaemon.getLockssDaemon().getPluginManager();
-
-    CIProperties ret = new CIProperties();
-    for (ArchivalUnit au : pluginMgr.getAllAus()) {
-      if (pluginMgr.isInternalAu(au)) {
-	continue;
-      }
-      ArticleMetadataExtractor mdExtractor =
-	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.OpenURL, au);
-      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
-	   iter.hasNext(); ) {
-	ArticleFiles af = iter.next();
-	CachedUrl cu = af.getFullTextCu();
-	try {
-	  if (cu.hasContent()) {
-	    ArticleMetadata md = mdExtractor.extract(af);
-	    if (md != null) {
-	      // Key for OpenURL map is
-	      // issn + "/" + volume + "/" + issue + "/" + spage
-	      String issn = md.getISSN();
-	      String volume = md.getVolume();
-	      String issue = md.getIssue();
-	      String spage = md.getStartPage();
-	      if (issn != null && volume != null &&
-		  issue != null && spage != null) {
-		String key = issn + "/" + volume + "/" + issue + "/" + spage;
-		ret.put(key, cu.getUrl());
-	      } else {
-		log.warning(cu.getUrl() + " has content but bad metadata " +
-			    (issn == null ? "null" : issn) + "/" +
-			    (volume == null ? "null" : volume) + "/" +
-			    (issue == null ? "null" : issue) + "/" +
-			    (spage == null ? "null" : spage));
-	      }
-	    }      
-	  }
-	} catch (IOException e) {
-	  log.warning("createOpenUrlMap() threw " + e);
-	} catch (PluginException e) {
-	  log.warning("createOpenUrlMap() threw " + e);
-	} finally {
-	  AuUtil.safeRelease(cu);
-	}
-      }
-    }
-    return ret;
-  }
-
-  public static String doiToUrl(String doi) {
-    String ret = null;
-    if (doiMap == null) {
-      initDoiMap();
-    }
-    if (doiMap != null) {
-      ret = doiMap.getProperty(doi);
-    }
-    log.debug2("doiToUrl(" + doi + ") = " + (ret == null ? "null" : ret));
-    return ret;
-  }
-
-  public static String openUrlToUrl(String openUrl) {
-    String ret = null;
-    if (openUrlMap == null) {
-      initOpenUrlMap();
-    }
-    if (openUrlMap != null) {
-      ret = openUrlMap.getProperty(openUrl);
-    }
-    return ret;
-  }
-
-  protected static void doiForUrl(String doi, String url) {
-    if (doiMap == null) {
-      initDoiMap();
-    }
-    if (doiMap != null) {
-      doiMap.setProperty(doi, url);
-    }
-  }
-
-  protected static void openUrlForUrl(String openUrl, String url) {
-    if (openUrlMap == null) {
-      initOpenUrlMap();
-    }
-    if (openUrlMap != null) {
-      openUrlMap.setProperty(openUrl, url);
-    }
-  }
-
-  private static String[] doiResolvers = {
-    "http://dx.doi.org/",
-  };
-  private static String[] openUrlResolvers = {
-    "http://www.crossref.org/openurl?",
-  };
-  // If the URL specifies a publisher's DOI or OpenURL resolver,
-  // strip the stuff before the ?, reformat the rest and hand it
-  // to the Metadata resolver to get the URL for the content in
-  // the cache.
-  public static String proxyResolver(String url) {
-    String ret = null;
-    if (StringUtil.isNullString(url)) {
-      return ret;
-    }
-    log.debug2("proxyResolver(" + url + ")");
-    boolean found = false;
-    // Is it a DOI resolver URL?
-    // XXX should use host part to find plugin, then ask plugin if
-    // XXX URL specifies resolver, and if so get it to reformat
-    // XXX resolver query and feed to Metadata.
-    for (int i = 0; i < doiResolvers.length; i++) {
-      if (url.startsWith(doiResolvers[i])) {
-	String param = url.substring(doiResolvers[i].length());
-	log.debug3("doiResolver: " + url + " doi " + param);
-	String newUrl =
-	  ArticleMetadata.doiToUrl(param);
-	if (newUrl != null) {
-	  ret = newUrl;
-	  found = true;
-	}
-      }
-    }
-    if (!found) {
-      for (int i = 0; i < openUrlResolvers.length; i++) {
-	if (url.startsWith(openUrlResolvers[i])) {
-	  // issn/volume/issue/spage
-	  String query = url.substring(openUrlResolvers[i].length());
-	  log.debug3("openUrlResolver: " + url + " openUrl " + query);
-	  if (!StringUtil.isNullString(query)) {
-	    String[] params = query.split("&");
-	    String issn = null;
-	    String volume = null;
-	    String issue = null;
-	    String spage = null;
-	    for (int j = 0; j < params.length; j++) {
-	      if (params[j].startsWith("issn=")) {
-		issn = params[j].substring(5);
-	      }
-	      if (params[j].startsWith("volume=")) {
-		volume = params[j].substring(7);
-	      }
-	      if (params[j].startsWith("issue=")) {
-		issue = params[j].substring(6);
-	      }
-	      if (params[j].startsWith("spage=")) {
-		spage = params[j].substring(6);
-	      }
-	    }
-	    if (issn != null &&
-		volume != null &&
-		issue != null &&
-		spage != null) {
-	      String openUrl = issn + "/" + volume + "/" +
-		issue + "/" + spage;
-	      log.debug3("openUrl: " + openUrl);
-	      String newUrl =
-		ArticleMetadata.openUrlToUrl(openUrl);
-	      if (newUrl != null) {
-		ret = newUrl;
-		found = true;
-	      }
-	    }
-	  }
-	}
-      }
-    }
-    log.debug2("proxyResolver returns " + ret);
-    return ret;
-  }
+  private MultiValueMap rawMap = new MultiValueMap();
+  private MultiValueMap cookedmap = new MultiValueMap();
 
   public ArticleMetadata() {
   }
 
-  public ArticleMetadata(Properties props) {
-    super(props);
+  /*
+   * Accessors ensure that metadata keys are case-insensitive strings
+   * (lowercased).
+   */
+
+  // Raw map
+
+  /** Set or add to the value associated with the key in the raw metadata
+   * map. */
+  public void putRaw(String key, String value) {
+    rawMap.put(key.toLowerCase(), value);
   }
 
-  /*
-   * The canonical representation of a DOI has key "dc.identifier"
-   * and starts with doi:
-   */
-  public static final String KEY_DOI = "LOCKSS.doi";
-  public static final String PROTOCOL_DOI = "doi:";
-  public String getDOI() {
-    String ret = getProperty(KEY_DOI);
-    if (ret != null && StringUtil.startsWithIgnoreCase(ret, PROTOCOL_DOI)) {
-      return ret.substring(PROTOCOL_DOI.length());
+  /** Return a non-empty list of raw values associated with a key, else
+   * null if none. */
+  public List<String> getRawList(String key) {
+    return getRawCollection(key);
+  }
+
+  /** Return the first or only raw value associated with a key, else null if
+   * none. */
+  public String getRaw(String key) {
+    List<String> lst = getRawCollection(key);
+    if (lst == null) {
+      return null;
     } else {
+      return lst.get(0);
+    }
+  }
+
+  /** Return true if the key has an associated value in the raw map */
+  public boolean containsRawKey(String key) {
+    return rawMap.containsKey(key.toLowerCase());
+  }
+
+  /** Return the set of keys in the raw map */
+  public Set<String> rawKeySet() {
+    return rawMap.keySet();
+  }
+
+  /** Return the raw Entry set */
+  public Set<Map.Entry<String,List<String>>> rawEntrySet() {
+    return rawMap.entrySet();
+  }
+
+  /** Return the size of the raw map */
+  public int rawSize() {
+    return rawMap.size();
+  }
+
+  private List<String> getRawCollection(String key) {
+    List<String> res = (List)rawMap.getCollection(key.toLowerCase());
+    if (res == null || res.isEmpty()) {
       return null;
     }
+    return res;
   }
-  public void putDOI(String doi) {
-    if (!StringUtil.startsWithIgnoreCase(doi, PROTOCOL_DOI)) {
-      doi = PROTOCOL_DOI + doi;
+
+  // Cooked map
+
+  /** Set or add to the value associated with the key.  If the field has a
+   * validator/normalizer it will be applied to the value first.  Returns
+   * true iff the value validates and is stored successfully.
+   *
+   * <h4>Single-valued fields</h4>A valid value will be stored if either no
+   * value is already present or the new value is equal to the current
+   * value.  If a different value is present nothing is stored.  <br>A raw
+   * value that doesn't validate will be stored as an {@link InvalidValue}
+   * along with the validation exception, iff no valid value is already
+   * present.  (See {@link #hasValidValue(MetadataField)}, {@link
+   * #hasInvalidValue(MetadataField)} and {@link #get(MetadataField)}.)
+   *
+   * <h4>Multi-valued fields</h4>A valid value will be added and true
+   * returned; an invalid valid will not be stored, and false returned
+   */
+  /** Set or add to the value associated with the key. Returns true iff the
+   * value was stored without error */
+  public boolean put(MetadataField field, String value) {
+    MetadataException ex = put0(field, value);
+    return ex == null;
+  }
+
+  /** Set or add to the value associated with the key.  If the field has a
+   * validator/normalizer it will be applied to the value first.  Throws
+   * MetadataException if the value does not validate or is not stored
+   * successfully
+   *
+   * <h4>Single-valued fields</h4>A valid value will be stored if either no
+   * value is already present or the new value is equal to the current
+   * value.  If a different value is present nothing is stored and a
+   * MetadataException.CardinalityException is thrown.  <br>A raw value
+   * that doesn't validate will cause a
+   * MetadataException.CardinalityException to be thrown.  If no valid
+   * value is already present. the invalid raw value will be stored as an
+   * {@link InvalidValue} along with the validation exception.  (See {@link
+   * #hasValidValue(MetadataField)}, {@link
+   * #hasInvalidValue(MetadataField)} and {@link #get(MetadataField)}.)
+   *
+   * <h4>Multi-valued fields</h4>A valid value will be added.  An invalid
+   * valid will not be added, and a validation exception will be thrown.
+   */
+  public void putValid(MetadataField field, String value)
+      throws MetadataException {
+    MetadataException ex = put0(field, value);
+    if (ex != null) {
+      throw ex;
     }
-    setProperty(KEY_DOI, doi);
   }
 
-  /*
-   * Return the ISBN, if any.
+  private MetadataException put0(MetadataField field, String value) {
+    switch (field.getCardinality()) {
+    case Single:
+      return putSingle(field, value);
+    case Multi:
+      return putMulti(field, value);
+    }
+    return new MetadataException("Unknown field type: " +
+				 field.getCardinality()).setField(field);
+  }
+
+  private String getKey(MetadataField field) {
+    return field.getKey().toLowerCase();
+  }
+
+  private MetadataException putSingle(MetadataField field, String value) {
+    String key = getKey(field);
+    MetadataException valEx = null;
+    String normVal;
+    try {
+      normVal = field.validate(value);
+      List curval = getCollection(key);
+      if (curval == null) {
+	cookedmap.put(key, normVal);
+	return null;
+      } else if (isInvalid(curval.get(0))) {
+	cookedmap.remove(key);
+	cookedmap.put(key, normVal);
+	return null;
+      } else if (value.equals(curval.get(0))) {
+	return null;
+      }
+      MetadataException ex =
+	new MetadataException.CardinalityException("Attempt to reset single-valued key: " + key + " to " + value);
+      ex.setField(field);
+      ex.setNormalizedValue(normVal);
+      ex.setRawValue(value);
+      return ex;
+    } catch (MetadataException ex) {
+      if (getCollection(key) == null) {
+	InvalidValue ival = new InvalidValue(value, null, ex);
+	cookedmap.put(key, ival);
+      }
+      ex.setField(field);
+      ex.setRawValue(value);
+      return ex;
+    }
+  }
+
+  private MetadataException putMulti(MetadataField field, String value) {
+    String key = getKey(field);
+    MetadataException valEx = null;
+    String normVal;
+    try {
+      normVal = field.validate(value);
+      cookedmap.put(key, normVal);
+      return null;
+    } catch (MetadataException ex) {
+      ex.setRawValue(value);
+      return ex;
+    }
+  }
+
+  /** Return true iff the field has either a valid value or an invalid
+   * value */
+  public boolean hasValue(MetadataField field) {
+    List curval = getCollection(getKey(field));
+    return curval != null;
+  }
+
+  /** Return true iff the field has a valid value */
+  public boolean hasValidValue(MetadataField field) {
+    List curval = getCollection(getKey(field));
+    return curval != null && !isInvalid(curval.get(0));
+  }
+
+  /** Return true iff the field has a value, which is invalid */
+  public boolean hasInvalidValue(MetadataField field) {
+    List curval = getCollection(getKey(field));
+    return curval != null && isInvalid(curval.get(0));
+  }
+
+  private boolean isValid(Object obj) {
+    return !(obj instanceof InvalidValue);
+  }
+
+  private boolean isInvalid(Object obj) {
+    return obj instanceof InvalidValue;
+  }
+
+  /** Return the value associated with a key, else null if no valid value */
+  private String get(String key) {
+    return get(key, null);
+  }
+
+  /** Return the value associated with a key, else dfault if no valid
+   * value */
+  private String get(String key, String dfault) {
+    List lst = getCollection(key);
+    if (lst == null) {
+      return dfault;
+    }
+    Object res = lst.get(0);
+    if (res instanceof String) {
+      return (String)res;
+    }
+    if (res instanceof InvalidValue) {
+      return null;
+    }
+    return null;
+  }
+
+  /** If the field has an invalid value, return the {@link InvalidValue}
+   * describing it, else null */
+  public InvalidValue getInvalid(MetadataField field) {
+    return getInvalid(field.getKey());
+  }
+
+  /** If the key has an invalid value, return the {@link InvalidValue}
+   * describing it, else null */
+  public InvalidValue getInvalid(String key) {
+    List lst = getCollection(key);
+    if (lst == null) {
+      return null;
+    }
+    Object res = lst.get(0);
+    if (res instanceof InvalidValue) {
+      return (InvalidValue)res;
+    }
+    return null;
+  }
+
+
+//   /** Return the value associated with a key */
+//   public String get(String key) {
+//     return get(key, null);
+//   }
+
+//   /** Return the value associated with a key */
+//   public String get(String key, String def) {
+//     List lst = getCollection(key);
+//     if (lst == null) {
+//       return def;
+//     }
+//     if (lst.size() > 1) {
+//       return StringUtil.separatedString(lst, ";");
+//     } else {
+//       return (String)lst.get(0);
+//     }
+//   }
+
+  /** Return the value associated with a key */
+  public String get(MetadataField field) {
+    return get(field.getKey());
+  }
+
+  /** Return the list of values associated with a key */
+  public List<String> getList(String key) {
+    List lst = getCollection(key);
+    if (lst == null || lst.get(0) instanceof InvalidValue) {
+      return null;
+    }
+    return lst;
+  }
+
+  /** Return the list of values associated with a key */
+  public List<String> getList(MetadataField field) {
+    return getList(field.getKey());
+  }
+
+  /** Return the keyset of the cooked map */
+  public Set<String> keySet() {
+    return cookedmap.keySet();
+  }
+
+//  Simple entrySet would return keys of invalid values, not clear that's good.
+//   public Set<Map.Entry<String,List<String>>> entrySet() {
+//     return cookedmap.entrySet();
+//   }
+
+  /** Return the size of the cooked map */
+  public int size() {
+    return cookedmap.size();
+  }
+
+  /** Return true if the cooked map is empty */
+  public boolean isEmpty() {
+    return cookedmap.isEmpty();
+  }
+
+  /** Copies values from the raw metadata map to the cooked map according
+   * to the supplied map.  Validation errors are ignored
+   * @param rawToCooked maps raw key -> cooked MatadataField.
    */
-  public static final String KEY_ISBN = "LOCKSS.isbn";
-  public String getISBN() {
-    String ret = getProperty(KEY_ISBN);
-    // XXX
-    return ret;
-  }
-  public void putISBN(String isbn) {
-    // XXX protocol?
-    setProperty(KEY_ISBN, isbn);
-  }
-
-  /*
-   * Return the ISSN, if any.
-   */
-  public static final String KEY_ISSN = "LOCKSS.issn";
-  public String getISSN() {
-    String ret = getProperty(KEY_ISSN);
-    // XXX
-    return ret;
-  }
-  public void putISSN(String issn) {
-    // XXX protocol?
-    setProperty(KEY_ISSN, issn);
+  public void cook(Map<String,Object> rawToCooked) {
+    for (Map.Entry ent : rawToCooked.entrySet()) {
+      String rawKey = (String)ent.getKey();
+      Object val = ent.getValue();
+      if (val instanceof Collection) {
+	for (MetadataField field : (Collection<MetadataField>)val) {
+	  cookField(rawKey, field);
+	}
+      } else if (val instanceof MetadataField) {
+	cookField(rawKey, (MetadataField)val);
+      }
+    }
   }
 
-  /*
-   * Return the volume, if any.
-   */
-  public static final String KEY_VOLUME = "LOCKSS.volume";
-  public String getVolume() {
-    String ret = getProperty(KEY_VOLUME);
-    // XXX
-    return ret;
-  }
-  public void putVolume(String volume) {
-    // XXX protocol?
-    setProperty(KEY_VOLUME, volume);
+  private void cookField(String rawKey, MetadataField field) {
+    List<String> rawlst = getRawCollection(rawKey);
+    if (rawlst != null) {
+      for (String rawval : rawlst) {
+	put(field, rawval);
+      }
+    }
   }
 
-  /*
-   * Return the issue, if any.
-   */
-  public static final String KEY_ISSUE = "LOCKSS.issue";
-  public String getIssue() {
-    String ret = getProperty(KEY_ISSUE);
-    // XXX
-    return ret;
-  }
-  public void putIssue(String issue) {
-    // XXX protocol?
-    setProperty(KEY_ISSUE, issue);
+  private MetadataField findField(String key) {
+    key = key.toLowerCase();
+    MetadataField res = MetadataField.findField(key);
+    return (res != null) ? res : new MetadataField.Default(key);
   }
 
-  /*
-   * Return the start page, if any.
-   */
-  public static final String KEY_START_PAGE = "LOCKSS.startpage";
-  public String getStartPage() {
-    String ret = getProperty(KEY_START_PAGE);
-    // XXX
-    return ret;
-  }
-  public void putStartPage(String spage) {
-    // XXX protocol?
-    setProperty(KEY_START_PAGE, spage);
+  private List getCollection(String key) {
+    List res = (List)cookedmap.getCollection(key.toLowerCase());
+    if (res == null || res.isEmpty()) {
+      return null;
+    }
+    return res;
   }
 
-  /*
-   * Return the date, if any.  A date can be just a year,
-   * a month and year, or a specific issue date.
-   */
-  public static final String KEY_DATE = "LOCKSS.date";
-  public String getDate() {
-    String ret = getProperty(KEY_DATE);
-    // XXX
-    return ret;
-  }
-  public void putDate(String date) {
-    // XXX protocol?
-    setProperty(KEY_DATE, date);
-  }
-
-  /*
-   * Return the title, if any.
-   */
-  public static final String KEY_ARTICLE_TITLE = "LOCKSS.article.title";
-  public String getArticleTitle() {
-    String ret = getProperty(KEY_ARTICLE_TITLE);
-    // XXX
-    return ret;
-  }
-  public void putArticleTitle(String title) {
-    // XXX protocol?
-    setProperty(KEY_ARTICLE_TITLE, title);
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("[md:");
+    for (String key : keySet()) {
+      sb.append(" [");
+      sb.append(key);
+      sb.append(", ");
+      List lst = getCollection(key);
+      if (lst == null) {
+	sb.append("(null)");
+      } else if (lst.get(0) instanceof InvalidValue) {
+	sb.append(lst.get(0));
+      } else {
+	sb.append(lst);
+      }
+      sb.append("]");
+    }
+    return sb.toString();
   }
 
-  /**
-   * Return the title, if any
-   */
-  public static final String KEY_JOURNAL_TITLE = "LOCKSS.journal.title";
-  public String getJournalTitle(){
-    String ret = getProperty(KEY_JOURNAL_TITLE);
-    // XXX
-    return ret;
-  }
-  public void putJournalTitle(String title){
-    // XXX protocol?
-    setProperty(KEY_JOURNAL_TITLE, title);
-  }
+  /** Record of a failed attempt to store a value in the cooked map, either
+   * because the value didn't validate or a second store isn't allowed in a
+   * Single cardinality field */
+  public static class InvalidValue {
+    private String rawValue;
+    private String invValue;
+    private MetadataException ex;
 
+    public InvalidValue(String rawValue, String invalidValue,
+			MetadataException ex) {
+      this.rawValue = rawValue;
+      this.invValue = invalidValue;
+      this.ex = ex;
+    }
 
-  /*
-   * Return the author(s), if any. Authors are a 
-   * delimited list of one or more authors.
-   */
-  public static final String KEY_AUTHOR = "LOCKSS.author";
-  public String getAuthor() {
-    String ret = getProperty(KEY_AUTHOR);
-    // XXX
-    return ret;
-  }
-  public void putAuthor(String author) {
-    // XXX protocol?
-    setProperty(KEY_AUTHOR, author);
-  }
+    /** Return the raw value that was attempted to be stored. */
+    public String getRawValue() {
+      return rawValue;
+    }
+//     public String getInvalidValue() {
+//       return invValue;
+//     }
 
-  /*
-   * Return the article access URL.
-   */
-  public static final String KEY_ACCESS_URL = "LOCKSS.access.url";
-  public String getAccessUrl() {
-    String ret = getProperty(KEY_ACCESS_URL);
-    // XXX
-    return ret;
-  }
-  public void putAccessUrl(String articleUrl) {
-    // XXX protocol?
-    setProperty(KEY_ACCESS_URL, articleUrl);
-  }
+    /** Return the exception thrown by the validator. */
+    public MetadataException getException() {
+      return ex;
+    }
 
-  /*
-   * Return the article keywords
-   */
-  public static final String KEY_KEYWORDS = "LOCKSS.keywords";
-  public String getKeywords() {
-    String ret = getProperty(KEY_KEYWORDS);
-    // XXX
-    return ret;
-  }
-  public void putKeywords(String keywords) {
-    // XXX protocol?
-    setProperty(KEY_KEYWORDS, keywords);
-  }
-
-  /*
-   * Ensure that metadata keys are case-insensitive strings
-   * and the values are strings.
-   */
-  public String getProperty(String key) {
-    return super.getProperty(key.toLowerCase());
-  }
-  public String getProperty(String key, String def) {
-    return super.getProperty(key.toLowerCase(), def);
-  }
-  public Object setProperty(String key, String value) {
-    return super.setProperty(key.toLowerCase(), value);
+    public String toString() {
+      StringBuilder sb = new StringBuilder();
+      sb.append("[inv: ");
+      sb.append(rawValue);
+      sb.append(", ");
+      sb.append(ex.toString());
+      sb.append("]");
+      return sb.toString();
+    }
   }
 }

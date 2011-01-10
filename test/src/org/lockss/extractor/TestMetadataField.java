@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: TestMetadataField.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -33,23 +33,36 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.extractor;
 
 import java.io.*;
+import java.net.*;
+import java.util.*;
 
+import org.lockss.test.*;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
+import static org.lockss.extractor.MetadataField.*;
 
-/** Content parser that extracts metadata from CachedUrl objects */
-public interface FileMetadataExtractor {
-  /**
-   * Parse content on CachedUrl, Emit zero or more Metadata objects
-   * describing the content.
-   * @param cu the CachedUrl to extract from
-   * @param emitter
-   */
-  public void extract(CachedUrl cu, Emitter emitter)
-    throws IOException, PluginException;
+public class TestMetadataField extends LockssTestCase {
 
-  /** Functor to emit ArticleMetadata object(s) created by extractor */
-  public interface Emitter {
-    public void emitMetadata(CachedUrl cu, ArticleMetadata metadata);
+  public void setUp() throws Exception {
+    super.setUp();
+  }
+
+  void assertField(String expKey, Cardinality expCard, MetadataField field) {
+    assertEquals(expKey, field.getKey());
+    assertEquals(expCard, field.getCardinality());
+  }
+
+  public void testPredefined() {
+    assertField(KEY_VOLUME, Cardinality.Single, FIELD_VOLUME);
+  }
+
+  public void testFindField() {
+    assertSame(FIELD_VOLUME, MetadataField.findField(KEY_VOLUME));
+    assertNull(MetadataField.findField("nosuchfield"));
+  }
+
+  public void testPutMulti() {
+    assertSame(FIELD_VOLUME, MetadataField.findField(KEY_VOLUME));
+    assertNull(MetadataField.findField("nosuchfield"));
   }
 }

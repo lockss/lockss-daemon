@@ -1,5 +1,5 @@
 /*
- * $Id: TestSubTreeArticleIterator.java,v 1.6 2010-08-11 02:58:57 tlipkis Exp $
+ * $Id: TestSubTreeArticleIterator.java,v 1.7 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -107,6 +107,7 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     uc.storeContent(new StringInputStream("child content"), props);
   }
 
+  // Multiple tests combined just to avoid recreating simulated content
   public void testOne() throws Exception {
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
     crawlSimAu(sau);
@@ -178,6 +179,68 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 			     a+"branch2/branch2/"+b);
 
     assertEquals(exp,  getFullTextUrls(getArticles(s3)));
+
+    // Test overriding createArticleFiles() to return a non-default
+    // ArticleFiles
+    List l2 = getArticles(new SubTreeArticleIterator(sau, s3) {
+	protected ArticleFiles createArticleFiles(CachedUrl cu) {
+	  ArticleFiles res = new ArticleFiles();
+	  res.setFullTextCu(cu);
+	  res.setRoleString("akey", cu.getUrl() + "arole");
+	  return res;
+	}
+      });
+    assertEquals(concatEach(exp, "arole"), getRoleStrings(l2, "akey"));
+
+    // Test overriding visitArticleCu() to emit zero, one, two or three
+    // ArticleFiles per CU
+    List exp3 =
+      ListUtil.list(a+"branch1/branch2/002file.html",
+		    a+"branch1/branch2/branch2/002file.html",
+		    a+"branch2/002file.html",
+		    a+"branch2/branch1/branch2/002file.html",
+		    a+"branch2/branch1/branch2/002file.html/v2",
+		    a+"branch2/branch2/002file.html",
+		    a+"branch2/branch2/002file.html/v2",
+		    a+"branch2/branch2/002file.html/v3",
+		    a+"branch2/branch2/branch2/002file.html",
+		    a+"branch2/branch2/branch2/002file.html/v2",
+		    a+"branch2/branch2/branch2/002file.html/v3");
+
+    List l3 = getArticles(new SubTreeArticleIterator(sau, s3) {
+	protected void visitArticleCu(CachedUrl cu) {
+	  String url = cu.getUrl();
+	  ArchivalUnit au = cu.getArchivalUnit();
+	  ArticleFiles af = new ArticleFiles();
+	  af.setFullTextCu(cu);
+	  if (url.matches(".*bat/branch1/branch1.*")) {
+	    // generate nothing for branch1/branch1
+	    return;
+	  } else if (url.matches(".*bat/branch1/branch2.*")) {
+	    // generate one ArticleFiles for branch1/branch2
+	    emitArticleFiles(af);
+	  } else if (url.matches(".*bat/branch2/branch1.*")) {
+	    // generate two ArticleFiles for branch2/branch1
+	    emitArticleFiles(af);
+	    ArticleFiles af2 = new ArticleFiles();
+	    af2.setFullTextCu(au.makeCachedUrl(url + "/v2"));
+	    emitArticleFiles(af2);
+	  } else if (url.matches(".*bat/branch2/branch2.*")) {
+	    // generate three ArticleFiles for branch2/branch2
+	    emitArticleFiles(af);
+	    ArticleFiles af2 = new ArticleFiles();
+	    af2.setFullTextCu(au.makeCachedUrl(url + "/v2"));
+	    emitArticleFiles(af2);
+	    ArticleFiles af3 = new ArticleFiles();
+	    af3.setFullTextCu(au.makeCachedUrl(url + "/v3"));
+	    emitArticleFiles(af3);
+	  } else {
+	    // generate one ArticleFiles for everything else
+	    emitArticleFiles(af);
+	  }
+	}
+      });
+    assertEquals(exp3, getFullTextUrls(l3));
   }
 
   public void testFlags() throws Exception {
@@ -209,34 +272,6 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
 						   Pattern.CASE_INSENSITIVE)));
   }
 
-  int countArticles(Spec spec) {
-    return getArticles(spec).size();
-  }
-
-  List<ArticleFiles> getArticles(Spec spec) {
-    return getArticles(new SubTreeArticleIterator(sau, spec));
-  }
-
-  List<String> getFullTextUrls(List<ArticleFiles> aflist) {
-    List<String> res = new ArrayList<String>();
-    for (ArticleFiles af : aflist) {
-      res.add(af.getFullTextUrl());
-    }
-    return res;
-  }
-
-  List<ArticleFiles> getArticles(SubTreeArticleIterator it) {
-    List<ArticleFiles> res = new ArrayList<ArticleFiles>();
-    while (it.hasNext()) {
-      ArticleFiles af = it.next();
-      log.debug2("iter af: " + af);
-      CachedUrl cu = af.getFullTextCu();
-      assertNotNull(cu);
-      res.add(af);
-    }
-    return res;
-  }
-
   public void testException() throws Exception {
     sau = PluginTestUtil.createAndStartSimAu(simAuConfig(tempDirPath + "1/"));
     crawlSimAu(sau);
@@ -260,6 +295,50 @@ public class TestSubTreeArticleIterator extends LockssTestCase {
     assertEquals(60 - testExceptions, count);
   }
 
+  int countArticles(Spec spec) {
+    return getArticles(spec).size();
+  }
+
+  List<ArticleFiles> getArticles(Spec spec) {
+    return getArticles(new SubTreeArticleIterator(sau, spec));
+  }
+
+  List<String> getFullTextUrls(List<ArticleFiles> aflist) {
+    List<String> res = new ArrayList<String>();
+    for (ArticleFiles af : aflist) {
+      res.add(af.getFullTextUrl());
+    }
+    return res;
+  }
+
+  List<String> getRoleStrings(List<ArticleFiles> aflist, String role) {
+    List<String> res = new ArrayList<String>();
+    for (ArticleFiles af : aflist) {
+      res.add(af.getRoleString(role));
+    }
+    return res;
+  }
+
+  List<ArticleFiles> getArticles(SubTreeArticleIterator it) {
+    List<ArticleFiles> res = new ArrayList<ArticleFiles>();
+    while (it.hasNext()) {
+      ArticleFiles af = it.next();
+      log.debug2("iter af: " + af);
+      CachedUrl cu = af.getFullTextCu();
+      assertNotNull(cu);
+      res.add(af);
+    }
+    return res;
+  }
+
+  List<String> concatEach(List<String> lst, String suffix) {
+    List<String> res = new ArrayList<String>();
+    for (String str : lst) {
+      res.add(str + suffix);
+    }
+    return res;
+  }
+      
   public static class MySubTreeArticleIterator extends SubTreeArticleIterator {
     int exceptionCount;
     MySubTreeArticleIterator(ArchivalUnit au, Spec spec, int exceptionCount) {

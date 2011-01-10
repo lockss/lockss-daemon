@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: MetadataException.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -32,24 +32,67 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
-import java.io.*;
+public class MetadataException extends /*Runtime*/Exception {
+  String rawVal;
+  String normVal;
+  MetadataField field;
 
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
+  public MetadataException() {
+    super();
+  }
 
-/** Content parser that extracts metadata from CachedUrl objects */
-public interface FileMetadataExtractor {
-  /**
-   * Parse content on CachedUrl, Emit zero or more Metadata objects
-   * describing the content.
-   * @param cu the CachedUrl to extract from
-   * @param emitter
-   */
-  public void extract(CachedUrl cu, Emitter emitter)
-    throws IOException, PluginException;
+  public MetadataException(String message) {
+    super(message);
+  }
 
-  /** Functor to emit ArticleMetadata object(s) created by extractor */
-  public interface Emitter {
-    public void emitMetadata(CachedUrl cu, ArticleMetadata metadata);
+  public MetadataException(String message, Throwable cause) {
+    super(message, cause);
+  }
+
+  public MetadataException setField(MetadataField field) {
+    this.field = field;
+    return this;
+  }
+
+  public MetadataException setRawValue(String rawValue) {
+    rawVal = rawValue;
+    return this;
+  }
+
+  public MetadataException setNormalizedValue(String normValue) {
+    normVal = normValue;
+    return this;
+  }
+
+  public MetadataField getField() {
+    return field;
+  }
+
+  public String getRawValue() {
+    return rawVal;
+  }
+
+  public String getNormalizedValue() {
+    return normVal;
+  }
+
+  public static class CardinalityException extends MetadataException {
+    public CardinalityException() {
+      super();
+    }
+
+    public CardinalityException(String message) {
+      super(message);
+    }
+  }
+
+  public static class ValidationException extends MetadataException {
+    public ValidationException() {
+      super();
+    }
+
+    public ValidationException(String message) {
+      super(message);
+    }
   }
 }

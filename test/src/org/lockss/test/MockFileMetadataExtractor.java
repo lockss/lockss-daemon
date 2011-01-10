@@ -1,5 +1,5 @@
 /*
- * $Id: MockFileMetadataExtractor.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: MockFileMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -44,8 +44,8 @@ public class MockFileMetadataExtractor implements FileMetadataExtractor {
   public MockFileMetadataExtractor() {
   }
 
-  public ArticleMetadata extract(CachedUrl cu) {
-    return metadata;
+  public void extract(CachedUrl cu, Emitter emitter) {
+    emitter.emitMetadata(cu, metadata);
   }
 
   public void setMetadataToReturn(ArticleMetadata metadata) {

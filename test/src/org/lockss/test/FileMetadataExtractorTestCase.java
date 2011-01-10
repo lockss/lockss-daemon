@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   public static String MIME_TYPE_XML = "application/xml";
   public static String MIME_TYPE_RAM = "audio/x-pn-realaudio";
 
-  protected FileMetadataExtractor extractor = null;
+  protected FileMetadataListExtractor extractor = null;
   protected String encoding;
   protected MockArchivalUnit mau;
   protected MockCachedUrl cu;
@@ -58,7 +58,9 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
     super.setUp();
     mau = new MockArchivalUnit();
     cu = new MockCachedUrl(getUrl(), mau);
-    extractor = getFactory().createFileMetadataExtractor(getMimeType());
+    FileMetadataExtractor fme =
+      getFactory().createFileMetadataExtractor(getMimeType());
+    extractor = new FileMetadataListExtractor(fme);
     encoding = getEncoding();
   }
 
@@ -73,8 +75,46 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
     return URL;
   }
 
-  public void testEmptyFileReturnsNoMetadata() throws Exception {
-      assertTrue(extractor.extract(cu).isEmpty());
+  protected void assertMdEmpty(String text) {
+    assertEquals(0, extractFrom(text).rawSize());
+  }
+
+  protected void assertMdEquals(String expkey1, String expval1,
+				String text) {
+    ArticleMetadata md = extractFrom(text);
+    assertEquals(expval1, md.getRaw(expkey1));
+    assertEquals(1, extractFrom(text).rawSize());
+  }
+
+  protected void assertMdEquals(String expkey1, String expval1,
+				String expkey2, String expval2,
+				String text) {
+    ArticleMetadata md = extractFrom(text);
+    assertEquals(expval1, md.getRaw(expkey1));
+    assertEquals(expval2, md.getRaw(expkey2));
+    assertEquals(2, extractFrom(text).rawSize());
+  }
+
+  protected void assertMdEquals(List<String> keyvaluepairs,
+				String text) {
+    assertEquals("Invalid call to assertMdEquals: odd length key/value list",
+		 0, keyvaluepairs.size() % 1);
+
+    ArticleMetadata md = extractFrom(text);
+    Iterator<String> iter = keyvaluepairs.iterator();
+    while (iter.hasNext()) {
+      String key = iter.next();
+      String val = iter.next();
+      assertEquals(val, md.getRaw(key));
+    }
+    assertEquals(keyvaluepairs.size() / 2, md.rawSize());
+  }
+
+  public void testEmptyFileReturnsEmptyMetadata() throws Exception {
+    List<ArticleMetadata> lst = extractor.extract(cu);
+    assertEquals(1, lst.size());
+    ArticleMetadata md = lst.get(0);
+    assertEquals(0, md.rawSize());
   }
 
   public void testThrows() throws IOException, PluginException {
@@ -86,13 +126,13 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   }
 
   protected ArticleMetadata extractFrom(String content) {
-    ArticleMetadata ret = null;
     try {
-      ret = extractor.extract(cu.addVersion(content));
+      List<ArticleMetadata> lst = extractor.extract(cu.addVersion(content));
+      return lst.get(0);
     } catch (Exception e) {
       fail("extract threw " + e);
     }
-    return ret;
+    return null;			// impossible
   }
       
 }

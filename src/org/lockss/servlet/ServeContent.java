@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.24 2010-06-25 07:42:16 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.25 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -360,7 +360,7 @@ public class ServeContent extends LockssServlet {
   protected void handleDoiRequest() throws IOException {
     log.debug("doi " + doi);
     // find the URL for the DOI
-    url = ArticleMetadata.doiToUrl(doi);
+    url = MetadataUtil.doiToUrl(doi);
     log.debug(doi + " = " + (url == null ? "null" : url));
     if (url == null) {
       handleMissingUrlRequest(DOI_LOOKUP_URL + doi);
@@ -373,7 +373,7 @@ public class ServeContent extends LockssServlet {
     String openUrl = issn + "/" + volume + "/" + issue + "/" + spage;
     log.debug("OpenUrl " + openUrl);
     // find the URL for the OpenURL
-    url = ArticleMetadata.openUrlToUrl(openUrl);
+    url = MetadataUtil.openUrlToUrl(openUrl);
     log.debug(openUrl + " = " + (url == null ? "null" : url));
     if (url == null) {
       handleMissingUrlRequest(OPENURL_LOOKUP_URL + openUrl);

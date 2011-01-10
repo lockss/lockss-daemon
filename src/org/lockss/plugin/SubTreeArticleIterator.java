@@ -1,5 +1,5 @@
 /*
- * $Id: SubTreeArticleIterator.java,v 1.10 2010-08-11 02:58:58 tlipkis Exp $
+ * $Id: SubTreeArticleIterator.java,v 1.11 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.extractor.*;
  * CachedUrls of the AU, or through specific subtrees, visiting those that
  * match a MIME type and/or regular expression, or a subclass-specified
  * condition.  For each node visited, an ArticleFiles may (or, by a
- * sobclass, may not) be generated.
+ * subclass, may not) be generated.
  */
 public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   
@@ -233,10 +233,15 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   /** Iterator over subtree roots */
   protected Iterator<CachedUrlSet> rootIter = null;
 
-  
   // if null, we have to look for nextElement
   private ArticleFiles nextElement = null;
 
+  // if any call to visitArticleCu() emits more than one ArticleFiles they
+  // are accumulated in this list and moved into nextElement one at a time.
+  // This simplifies the hasNext() and next() logic and avoids the overhead
+  // of the intermediate list in the common case of zero or one
+  // ArticleFiles per CU
+  private LinkedList<ArticleFiles> nextElements;
 
   public SubTreeArticleIterator(ArchivalUnit au, Spec spec) {
     this.au = au;
@@ -245,8 +250,8 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
     Collection<CachedUrlSet> roots = makeRoots();
     this.pat = makePattern();
     rootIter = roots.iterator();
-    log.debug("Create: AU: " + au.getName() + ", Mime: " + this.mimeType
-	      + ", roots: " + roots + ", pat: " + pat);
+    log.debug2("Create: AU: " + au.getName() + ", Mime: " + this.mimeType
+	       + ", roots: " + roots + ", pat: " + pat);
   }
 
   // XXX fix when work out how target is used
@@ -320,39 +325,73 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
       return nextElement;
     }
     while (true) {
-      CachedUrl cu = null;
-      try {
-	if (cusIter == null || !cusIter.hasNext()) {
-	  if (!rootIter.hasNext()) {
-	    return null;
+      if (nextElements != null && !nextElements.isEmpty()) {
+	nextElement = nextElements.remove();
+	return nextElement;
+      } else {
+	CachedUrl cu = null;
+	try {
+	  if (cusIter == null || !cusIter.hasNext()) {
+	    if (!rootIter.hasNext()) {
+	      return null;
+	    } else {
+	      CachedUrlSet root = rootIter.next();
+	      cusIter = root.contentHashIterator();
+	      continue;
+	    }
 	  } else {
-	    CachedUrlSet root = rootIter.next();
-	    cusIter = root.contentHashIterator();
-	    continue;
-	  }
-	} else {
-	  CachedUrlSetNode node = (CachedUrlSetNode)cusIter.next();
-	  cu = AuUtil.getCu(node);
-	  if (cu != null && cu.hasContent()) {
-	    if (isArticleCu(cu)) {
-	      nextElement = createArticleFiles(cu);
-	      if (nextElement == null) {
-		continue;
+	    CachedUrlSetNode node = (CachedUrlSetNode)cusIter.next();
+	    cu = AuUtil.getCu(node);
+	    if (cu != null && cu.hasContent()) {
+	      if (isArticleCu(cu)) {
+		visitArticleCu(cu);
+		if (nextElement == null) {
+		  continue;
+		}
+		return nextElement;
 	      }
-	      return nextElement;
 	    }
 	  }
+	} catch (Exception ex) {
+	  // No action intended - iterator should ignore this cu.
+	  if (cu == null) {
+	    log.error("Error", ex);
+	  } else {
+	    log.error("Error processing " + cu.getUrl(), ex);
+	  }
+	} finally {
+	  AuUtil.safeRelease(cu);
 	}
-      } catch (Exception ex) {
-	// No action intended - iterator should ignore this cu.
-	if (cu == null) {
-	  log.error("Error", ex);
-	} else {
-	  log.error("Error processing " + cu.getUrl(), ex);
-	}
-      } finally {
-	AuUtil.safeRelease(cu);
       }
+    }
+  }
+
+  /** Emit an ArticleFiles from the iterator.  Should be called by
+   * visitArticleCu() once for each ArticleFiles it wants to generate from
+   * the CU */
+  protected final void emitArticleFiles(ArticleFiles af) {
+    if (log.isDebug3()) log.debug3("Emit: " + af);
+    if (nextElement == null) {
+      nextElement = af;
+    } else {
+      if (nextElements == null) {
+	nextElements = new LinkedList();
+      }
+      nextElements.add(af);
+    }
+  }
+
+  /** Invoked on each CachedUrl for which isArticleCu returns true, should
+   * call emitArticleFiles() for each ArticleFiles to be generated for
+   * the CachedUrl. Default implementation calls createArticleFiles() and
+   * emits the single ArticleFiles it returns, if any.  Primarily for
+   * compatibility with old subclasses prior to the introduction of this
+   * method. */
+  protected void visitArticleCu(CachedUrl cu) {
+    if (log.isDebug3()) log.debug3("Visit: " + cu);
+    ArticleFiles res = createArticleFiles(cu);
+    if (res != null) {
+      emitArticleFiles(res);
     }
   }
 
@@ -414,5 +453,4 @@ public class SubTreeArticleIterator implements Iterator<ArticleFiles> {
   public void remove() {
     throw new UnsupportedOperationException("Not implemented");
   }
-  
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.14 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: FuncZipExploder2.java,v 1.15 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -273,7 +273,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 	ArticleMetadataExtractor me =
 	  plugin.getArticleMetadataExtractor(null, au);
 	assertNotNull(me);
-	assertTrue(me instanceof SpringerArticleIteratorFactory.SpringerArticleMetadataExtractor);
+	ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
 	int count = 0;
 	Set foundDoiSet = new HashSet();
 	for (Iterator<ArticleFiles> it = au.getArticleIterator(); it.hasNext(); ) {
@@ -286,14 +286,13 @@ public class FuncZipExploder2 extends LockssTestCase {
 	  log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
 	  count++;
 	  try {
-	    ArticleMetadata md = me.extract(af);
+	    List<ArticleMetadata> mdlist = mle.extract(af);
+	    assertNotEmpty(mdlist);
+	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);
-	    String doi = md.getDOI();
-	    assertNotNull(doi);
+	    String doi = md.get(MetadataField.FIELD_DOI);
 	    log.debug(cu.getUrl() + " doi " + doi);
-	    String doi2 = md.getProperty(ArticleMetadata.KEY_DOI);
-	    assertTrue(doi2.startsWith(ArticleMetadata.PROTOCOL_DOI));
-	    assertEquals(doi, doi2.substring(ArticleMetadata.PROTOCOL_DOI.length()));
+	    assertTrue(MetadataUtil.isDOI(doi));
 	    foundDoiSet.add(doi);
 	  } catch (Exception ex) {
 	    fail(ex.toString());

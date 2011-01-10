@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleMetaTagMetadataExtractor.java,v 1.5 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: SimpleMetaTagMetadataExtractor.java,v 1.6 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -31,11 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.extractor;
+
 import java.io.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
-public class SimpleMetaTagMetadataExtractor implements FileMetadataExtractor {
+public class SimpleMetaTagMetadataExtractor
+  extends SimpleFileMetadataExtractor {
+
   static Logger log = Logger.getLogger("SimpleMetaTagMetadataExtractor");
 
   public SimpleMetaTagMetadataExtractor() {
@@ -101,11 +104,7 @@ public class SimpleMetaTagMetadataExtractor implements FileMetadataExtractor {
     }
       
     String content = line.substring(contentBegin, contentEnd);
-    if (ret.contains(name)) {
-      String oldContent = ret.getProperty(name);
-      content = oldContent + ";" + content;
-    }
     if (log.isDebug3()) log.debug3("Add: " + name + " = " + content);
-    ret.setProperty(name, content);
+    ret.putRaw(name, content);
   }
 }

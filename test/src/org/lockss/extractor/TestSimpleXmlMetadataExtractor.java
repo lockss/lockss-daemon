@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleXmlMetadataExtractor.java,v 1.2 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: TestSimpleXmlMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -55,49 +55,32 @@ public class TestSimpleXmlMetadataExtractor
   }
 
   public void testSingleTag() throws Exception {
-    String text = "<FirstTag>FirstValue</FirstTag>";
-    assertEquals(SetUtil.set("firstname"),
-		 extractFrom(text).keySet());
-    assertEquals(SetUtil.set("FirstValue"),
-		 SetUtil.theSet(extractFrom(text).values()));
+    assertMdEquals("FirstTag", "FirstValue",
+		   "<FirstTag>FirstValue</FirstTag>");
+    assertMdEquals("firsttag", "FirstValue",
+		   "<FirstTag>FirstValue</FirstTag>");
   }
 
   public void testSingleTagNoContent() throws Exception {
-    String text = "<FirstTag></FirstTag>";
-    assertEquals(SetUtil.set(),
-		 extractFrom(text).keySet());
+    assertMdEmpty("<FirstTag></FirstTag>");
   }
 
   public void testSingleTagUnmatched() throws Exception {
-    String text = "<FirstTag>FirstValue";
-    assertEquals(SetUtil.set(),
-		 extractFrom(text).keySet());
-    text = "FirstValue</FirstTag>";
-    assertEquals(SetUtil.set(),
-		 extractFrom(text).keySet());
+    assertMdEmpty("<FirstTag>FirstValue");
+    assertMdEmpty("FirstValue</FirstTag>");
   }
 
   public void testSingleTagMalformed() throws Exception {
-    String text = "<FirstTag FirstValue</FirstTag>";
-    assertEquals(SetUtil.set(),
-		 extractFrom(text).keySet());
-    text = "<FirstTag >FirstValue</FirstTag>";
-    assertEquals(SetUtil.set(),
-		 extractFrom(text).keySet());
-    text = "<FirstTag>FirstValue</FirstTag";
-    assertEquals(SetUtil.set(),
-		 extractFrom(text).keySet());
-    text = "<FirstTag>FirstValue</FirstTag >";
-    assertEquals(SetUtil.set(),
-		 extractFrom(text).keySet());
+    assertMdEmpty("<FirstTag>FirstValue");
+    assertMdEmpty("<FirstTag FirstValue</FirstTag>");
+    assertMdEmpty("<FirstTag >FirstValue</FirstTag>");
+    assertMdEmpty("<FirstTag>FirstValue</FirstTag");
+    assertMdEmpty("<FirstTag>FirstValue</FirstTag >");
   }
 
   public void testSingleTagIgnoreCase() throws Exception {
-    String text = "<fIRSTtAG>FirstValue</fIRSTtAG>";
-    assertEquals(SetUtil.set("firstname"),
-		 extractFrom(text).keySet());
-    assertEquals(SetUtil.set("FirstValue"),
-		 SetUtil.theSet(extractFrom(text).values()));
+    assertMdEquals("firsttag", "FirstValue",
+		   "<fIRSTtAG>FirstValue</fIRSTtAG>");
   }
 
   public void testMultipleTag() throws Exception {
@@ -107,12 +90,12 @@ public class TestSimpleXmlMetadataExtractor
 	"<ThirdTag>ThirdValue</ThirdTag>" +
 	"<FourthTag>FourthValue</FourthTag>" +
       "<FifthTag>FifthValue</FifthTag>";
-    assertEquals(SetUtil.set("firstname", "secondname", "thirdname",
-			     "fourthname", "fifthname"),
-		 extractFrom(text).keySet());
-    assertEquals(SetUtil.set("FirstValue", "SecondValue", "ThirdValue",
-			     "FourthValue", "FifthValue"),
-		 SetUtil.theSet(extractFrom(text).values()));
+    assertMdEquals(ListUtil.list("firsttag", "FirstValue",
+				 "secondtag", "SecondValue",
+				 "thirdtag", "ThirdValue",
+				 "fourthtag", "FourthValue",
+				 "fifthtag", "FifthValue"),
+		   text);
   }
 
   public void testMultipleTagWithNoise() throws Exception {
@@ -131,27 +114,20 @@ public class TestSimpleXmlMetadataExtractor
       "<OtherTag>OtherValue</OtherTag>" +
       "<ThirdTag>ThirdValue</ThirdTag>";
       
-    assertEquals(SetUtil.set("firstname", "secondname", "thirdname",
-			     "fourthname", "fifthname"),
-		 extractFrom(text).keySet());
-    assertEquals(SetUtil.set("FirstValue", "SecondValue", "ThirdValue",
-			     "FourthValue", "FifthValue"),
-		 SetUtil.theSet(extractFrom(text).values()));
+    assertMdEquals(ListUtil.list("firsttag", "FirstValue",
+				 "secondtag", "SecondValue",
+				 "thirdtag", "ThirdValue",
+				 "fourthtag", "FourthValue",
+				 "fifthtag", "FifthValue"),
+		   text);
   }
 
-  static final String[] tags = {
+  static final String[] TEST_TAGS = {
     "FirstTag",
     "SecondTag",
     "ThirdTag",
     "FourthTag",
     "FifthTag",
-  };
-  static final String[] names = {
-    "FirstName",
-    "SecondName",
-    "ThirdName",
-    "FourthName",
-    "FifthName",
   };
 
   private class MyFileMetadataExtractorFactory
@@ -160,11 +136,7 @@ public class TestSimpleXmlMetadataExtractor
     }
     public FileMetadataExtractor createFileMetadataExtractor(String mimeType)
         throws PluginException {
-      Map tagMap = new HashMap();
-      for (int i = 0; i < tags.length; i++) {
-	tagMap.put(tags[i], names[i]);
-      }
-      return new SimpleXmlMetadataExtractor(tagMap);
+      return new SimpleXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
     }
   }
 }

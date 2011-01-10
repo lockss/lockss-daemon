@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleXmlMetadataExtractor.java,v 1.4 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: SimpleXmlMetadataExtractor.java,v 1.5 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -36,16 +36,27 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
-public class SimpleXmlMetadataExtractor implements FileMetadataExtractor {
+public class SimpleXmlMetadataExtractor extends SimpleFileMetadataExtractor {
   static Logger log = Logger.getLogger("SimpleXmlMetadataExtractor");
-  private Map<String, String> tagMap;
+  private Collection<String> tags;
 
   /**
-   * @param tagMap a map from XML tags to the property name in the
-   * extracted Metadata object
+   * Create an extractor what will extract the value(s) of the xml tags in
+   * <code>tags</code>
+   * @param tags the list of XML tags whose value to extract
    */
-  public SimpleXmlMetadataExtractor(Map<String, String> tagMap) {
-    this.tagMap = tagMap;
+  public SimpleXmlMetadataExtractor(Collection<String> tags) {
+    this.tags = tags;
+  }
+
+  /**
+   * Create an extractor that will extract the value(s) of the xml tags in
+   * <code>tagMap.keySet()</code>
+   * @param tagMap a map from XML tags to cooked keys.  (Only the set of
+   * tags is used by this object.)
+   */
+  public SimpleXmlMetadataExtractor(Map tagMap) {
+    this.tags = tagMap.keySet();
   }
 
   /*
@@ -58,17 +69,21 @@ public class SimpleXmlMetadataExtractor implements FileMetadataExtractor {
     ArticleMetadata ret = new ArticleMetadata();
     BufferedReader bReader =
 	new BufferedReader(cu.openForReading());
-    for (String line = bReader.readLine();
-	 line != null;
-	 line = bReader.readLine()) {
-      line = line.trim();
-      log.debug2("Line: " + line);
-      for (Iterator it = tagMap.keySet().iterator(); it.hasNext(); ) {
-	String tag = (String)it.next();
-	scanForTag(line, tag, ret);
+    try {
+      for (String line = bReader.readLine();
+	   line != null;
+	   line = bReader.readLine()) {
+	line = line.trim();
+	if (log.isDebug3()) {
+	  log.debug3("Line: " + line);
+	}
+	for (String tag : tags) {
+	  scanForTag(line, tag, ret);
+	}
       }
+    } finally {
+      IOUtil.safeClose(bReader);
     }
-    IOUtil.safeClose(bReader);
     return ret;
   }
 
@@ -83,7 +98,7 @@ public class SimpleXmlMetadataExtractor implements FileMetadataExtractor {
       if (j > i) {
 	String value = line.substring(i, j);
 	log.debug2(tag + " = " + value);
-	ret.setProperty((String)tagMap.get(tag), value);
+	ret.putRaw(tag, value);
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArticleMetadataExtractor.java,v 1.2 2010-06-18 21:15:30 thib_gc Exp $
+ * $Id: MockArticleMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -44,9 +44,9 @@ public class MockArticleMetadataExtractor implements ArticleMetadataExtractor {
   public MockArticleMetadataExtractor() {
   }
 
-  public ArticleMetadata extract(ArticleFiles af) {
+  public void extract(ArticleFiles af,
+		      ArticleMetadataExtractor.Emitter emitter) {
 //     CachedUrl cu = af.getFullTextCu();
-    return metadata;
   }
 
   public void setMetadataToReturn(ArticleMetadata metadata) {

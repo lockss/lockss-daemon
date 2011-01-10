@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.13 2010-09-01 07:58:47 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.14 2011-01-10 09:12:40 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import javax.servlet.*;
 import java.io.*;
 import java.util.*;
 
+import org.apache.commons.lang.mutable.*;
 import org.mortbay.html.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -136,24 +137,31 @@ public class ListObjects extends LockssServlet {
   }
 
   void listDOIs() throws IOException {
-    PrintWriter wrtr = resp.getWriter();
+    final PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/plain");
     wrtr.println("# DOIs in " + au.getName());
     wrtr.println();
+    ArticleMetadataExtractor.Emitter emitter =
+      new ArticleMetadataExtractor.Emitter() {
+	public void emitMetadata(ArticleFiles af,
+				 ArticleMetadata md) {
+          if (md != null) {
+            String doi = md.get(MetadataField.FIELD_DOI);
+            if (doi != null) {
+              wrtr.println(doi);
+            }
+          }          
+	}
+      };
+    ArticleMetadataExtractor mdExtractor =
+      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au);
     for (Iterator<ArticleFiles> iter = au.getArticleIterator();
 	 iter.hasNext(); ) {
       ArticleFiles af = iter.next();
       CachedUrl cu = af.getFullTextCu();
       try {
         if (cu.hasContent()) {
-          ArticleMetadata md =
-	    au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au).extract(af);
-          if (md != null) {
-            String doi = md.getDOI();
-            if (doi != null) {
-              wrtr.println(doi);
-            }
-          }          
+	  mdExtractor.extract(af, emitter);
         }
       } catch (IOException e) {
         log.warning("listDOIs() threw " + e);
@@ -192,44 +200,59 @@ public class ListObjects extends LockssServlet {
 
   void listArticles() throws IOException {
     boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
-    PrintWriter wrtr = resp.getWriter();
+
+    final PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/plain");
     wrtr.println("# Articles in " + au.getName());
     wrtr.println();
+
+    ArticleMetadataExtractor mdExtractor =
+      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
+    ArticleMetadataExtractor.Emitter emitter = null;
+    final MutableObject lastEmittedAf = new MutableObject();
+    if (mdExtractor != null) {
+      emitter =
+	new ArticleMetadataExtractor.Emitter() {
+	  public void emitMetadata(ArticleFiles af,
+				   ArticleMetadata md) {
+	    String url = md.get(MetadataField.FIELD_ACCESS_URL);
+	    String doi = null;
+	    if (md != null) {
+	      doi = md.get(MetadataField.FIELD_DOI);
+	    }
+	    if (doi != null) {
+	      wrtr.println(url + "\t" + doi);
+	    } else {
+	      wrtr.println(url);
+	    }
+	    lastEmittedAf.setValue(af);
+	  }
+	};
+    }
     for (Iterator<ArticleFiles> iter = au.getArticleIterator();
 	 iter.hasNext(); ) {
       ArticleFiles af = iter.next();
       CachedUrl cu = af.getFullTextCu();
       String url = cu.getUrl();
       String doi = null;
-      if (isDoi) {
-	log.debug2("isDoi");
-	try {
-	  if (cu.hasContent()) {
-	    ArticleMetadataExtractor me =
-	      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article,
-							 au);
-	    log.debug2("me: " + me);
-	    if (me != null) {
-	      ArticleMetadata md = me.extract(af);
-	      log.debug2("md: " + md);
-	      if (md != null) {
-		doi = md.getDOI();
-	      }
-	    }
+      try {
+	if (cu.hasContent()) {
+	  if (isDoi && mdExtractor != null) {
+	    // extract metadata iff DOIs were requested
+	    mdExtractor.extract(af, emitter);
 	  }
-	} catch (IOException e) {
-	  log.warning("listArticles() threw " + e);
-	} catch (PluginException e) {
-	  log.warning("listArticles() threw " + e);
-	} finally {
-	  AuUtil.safeRelease(cu);       
+	  if (mdExtractor == null || af != lastEmittedAf.getValue()) {
+	    // if we didn't extract metadata, or the metadata extractor
+	    // didn't emit any metadata records, print the article URL here
+	    wrtr.println(url);
+	  }
 	}
-      }
-      if (doi != null) {
-	wrtr.println(url + "\t" + doi);
-      } else {
-	wrtr.println(url);
+      } catch (IOException e) {
+	log.warning("listArticles() threw " + e);
+      } catch (PluginException e) {
+	log.warning("listArticles() threw " + e);
+      } finally {
+	AuUtil.safeRelease(cu);       
       }
     }
     wrtr.println("# end");
