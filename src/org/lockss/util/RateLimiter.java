@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.16 2007-10-04 04:06:16 tlipkis Exp $
+ * $Id: RateLimiter.java,v 1.17 2011-01-10 09:15:12 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.util.*;
 
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 
 /**
  * RateLimiter is used to limit the rate at which some class of events
@@ -80,7 +80,7 @@ public class RateLimiter {
 			     String intervalParam, long intervalDefault) {
     int events = config.getInt(maxEventsParam, maxEvantDefault);
     long interval = config.getTimeInterval(intervalParam, intervalDefault);
-    if (currentLimiter == null) {
+    if (currentLimiter == null || !currentLimiter.isModifiable()) {
       return new RateLimiter(events, interval);
     }
     if (!currentLimiter.isRate(events, interval)) {
@@ -120,7 +120,7 @@ public class RateLimiter {
    */
   public static RateLimiter
     getRateLimiter(RateLimiter currentLimiter, String rate, String dfault) {
-    if (currentLimiter == null) {
+    if (currentLimiter == null || !currentLimiter.isModifiable()) {
       return makeRateLimiter(rate, dfault);
     }
     if (!currentLimiter.isRate(rate)) {
@@ -381,6 +381,10 @@ public class RateLimiter {
     }
   }
 
+  public boolean isModifiable() {
+    return true;
+  }
+
   public String rateString() {
     if (isUnlimited()) {
       return "unlimited";
@@ -412,6 +416,10 @@ public class RateLimiter {
 
     public void setRate(int newEvents, long newInterval) {
       ill();
+    }
+
+    public boolean isModifiable() {
+      return false;
     }
 
     private void ill() {
@@ -489,6 +497,64 @@ public class RateLimiter {
 	limiter.setRate(events, interval);
       }
       return limiter;
+    }
+  }
+
+  /** A Map associating Objects with RateLimiters configured or
+   * reconfigured by config params */
+  public static class LimiterMap extends HashMap<Object,RateLimiter> {
+    private String paramName;
+    private String dfault;
+
+    /** Create a LimiterMap whose RateLimiters will be configured according
+     * to the specified config param name and default */
+    public LimiterMap(String paramName, String dfault) {
+      this.paramName = paramName;
+      this.dfault = dfault;
+    }
+
+    /** Return the rate limiter associated with the key, creating one if it
+     * doesn't exist. */
+    public RateLimiter getRateLimiter(Object key) {
+      return getRateLimiter(key, ConfigManager.getCurrentConfig());
+    }
+
+    /** Return the rate limiter associated with the key, creating one if it
+     *  doesn't exist. */
+    public RateLimiter getRateLimiter(Object key, Configuration config) {
+      RateLimiter limiter;
+      synchronized (this) {
+	limiter = this.get(key);
+	if (limiter == null) {
+	  limiter =
+	    RateLimiter.getConfiguredRateLimiter(config, null,
+						 paramName, dfault);
+	  this.put(key, limiter);
+	}
+      }
+      return limiter;
+    }
+
+    /** Reset the parameters of all the rate limiters in the map according
+     * to values in the current configuration. */
+    public void resetRateLimiters() {
+      resetRateLimiters(ConfigManager.getCurrentConfig());
+    }
+
+    /** Reset the parameters of all the rate limiters in the map according
+     * to values in the supplied configuration. */
+    public void resetRateLimiters(Configuration config) {
+      synchronized (this) {
+	for (Map.Entry<Object,RateLimiter> entry : this.entrySet()) {
+	  RateLimiter limiter = entry.getValue();
+	  RateLimiter newLimiter =
+	    RateLimiter.getConfiguredRateLimiter(config, limiter,
+						 paramName, dfault);
+	  if (newLimiter != limiter) {
+	    entry.setValue(newLimiter);
+	  }
+	}
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiter.java,v 1.12 2006-09-17 07:24:11 tlipkis Exp $
+ * $Id: TestRateLimiter.java,v 1.13 2011-01-10 09:15:12 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class TestRateLimiter extends LockssTestCase {
     assertTrue(lim.isRate("10/100ms"));
     assertFalse(lim.isRate("10/100"));
     assertFalse(lim.isUnlimited());
+    assertTrue(lim.isModifiable());
   }
 
   public void testAccessors2() {
@@ -104,11 +105,31 @@ public class TestRateLimiter extends LockssTestCase {
     assertTrue(lim.isRate("10/100"));
     assertFalse(lim.isRate("10/100ms"));
     assertFalse(lim.isUnlimited());
+    assertTrue(lim.isModifiable());
   }
 
   public void testUnlimited() throws InterruptedException {
-    RateLimiter lim = new RateLimiter("Unlimited");;
+    RateLimiter lim = new RateLimiter("Unlimited");
     assertTrue(lim.isUnlimited());
+    assertTrue(lim.isModifiable());
+    assertEquals(0, lim.getLimit());
+    assertEquals(0, lim.getInterval());
+
+    assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
+    assertTrue(lim.waitUntilEventOk());
+    lim.event();
+    assertTrue(lim.isEventOk());
+    lim.event();
+    assertTrue(lim.isEventOk());
+    lim.unevent();
+    assertTrue(lim.isEventOk());
+  }
+
+  public void testConstant() throws InterruptedException {
+    RateLimiter lim = RateLimiter.UNLIMITED;
+    assertTrue(lim.isUnlimited());
+    assertFalse(lim.isModifiable());
     assertEquals(0, lim.getLimit());
     assertEquals(0, lim.getInterval());
 
@@ -417,9 +438,15 @@ public class TestRateLimiter extends LockssTestCase {
 
   public void testGetFromConfigUnlimited() {
     Configuration config = ConfigurationUtil.fromArgs("rate1", "Unlimited");
-    RateLimiter lim = RateLimiter.getConfiguredRateLimiter(config, null,
-					       "rate1", "3/200");
-    assertTrue(lim.isUnlimited());
+    RateLimiter lim1 = RateLimiter.getConfiguredRateLimiter(config, null,
+							    "rate1", "3/200");
+    assertTrue(lim1.isUnlimited());
+    config = ConfigurationUtil.fromArgs("rate1", "1/2");
+    RateLimiter lim2 = RateLimiter.getConfiguredRateLimiter(config, lim1,
+							    "rate1", "3/200");
+//     assertNotSame(lim2, lim1);
+    assertFalse(lim2.isUnlimited());
+    assertTrue(lim2.isModifiable());
   }
 
   public void testRateString() {
@@ -507,5 +534,42 @@ public class TestRateLimiter extends LockssTestCase {
     assertNotSame(lb, l4);
     assertNotSame(lc, l4);
     assertEquals(r1, l4.getRate());
+  }
+
+  public void testLimiterMap() {
+    String par = "par.am";
+    String def = "4/3000";
+
+    String key1 = "keyone";
+    MockArchivalUnit key2 = new MockArchivalUnit();
+    MockArchivalUnit key3 = new MockArchivalUnit();
+
+    RateLimiter.LimiterMap map = new RateLimiter.LimiterMap(par, def);
+    RateLimiter lim1 = map.getRateLimiter(key1);
+    assertEquals("4/3000", lim1.getRate());
+    RateLimiter lim2 = map.getRateLimiter(key2);
+    RateLimiter lim3 = map.getRateLimiter(key3);
+    assertEquals(4, lim2.getLimit());
+    assertEquals(3000, lim2.getInterval());
+    assertNotSame(lim1, lim2);
+    assertNotSame(lim1, lim3);
+    assertNotSame(lim2, lim3);
+    assertSame(lim1, map.getRateLimiter(key1));
+    assertSame(lim2, map.getRateLimiter(key2));
+    assertSame(lim3, map.getRateLimiter(key3));
+
+    map.resetRateLimiters(ConfigurationUtil.fromArgs("foo", "bar"));
+    assertSame(lim1, map.getRateLimiter(key1));
+    assertSame(lim2, map.getRateLimiter(key2));
+    assertSame(lim3, map.getRateLimiter(key3));
+    assertEquals("4/3000", lim1.getRate());
+
+    map.resetRateLimiters(ConfigurationUtil.fromArgs(par, "3/4000"));
+    assertSame(lim1, map.getRateLimiter(key1));
+    assertSame(lim2, map.getRateLimiter(key2));
+    assertSame(lim3, map.getRateLimiter(key3));
+    assertEquals("3/4000", lim1.getRate());
+    assertEquals("3/4000", lim2.getRate());
+    assertEquals("3/4000", lim3.getRate());
   }
 }
