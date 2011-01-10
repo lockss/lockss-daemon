@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.54 2010-11-29 07:26:03 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.55 2011-01-10 09:15:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2007 Board of Trustees of Leland Stanford Jr. University,
@@ -428,6 +428,19 @@ public class UrlUtil {
       StringUtil.equalStringsIgnoreCase(u1.getHost(), u2.getHost()) &&
       StringUtil.equalStrings(u1.getFile(), u2.getFile()) &&
       StringUtil.equalStrings(u1.getRef(), u2.getRef());
+  }
+
+  private static Pattern URL_PAT =
+    RegexpUtil.uncheckedCompile("^[a-zA-Z]+:/",
+				(Perl5Compiler.READ_ONLY_MASK
+				 + Perl5Compiler.CASE_INSENSITIVE_MASK));
+
+  /** Return true if the string is a url.  Very basic, just checks that the
+   * string starts with &quot;scheme:/&quot;.  (So returns false for,
+   * <i>eg</i>, <tt>jar:file:...</tt>)*/
+  public static boolean isUrl(String str) {
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
+    return matcher.contains(str, URL_PAT);
   }
 
   /** Return true if an http: or https: url */

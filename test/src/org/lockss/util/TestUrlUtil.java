@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.37 2010-05-04 23:34:40 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.38 2011-01-10 09:15:28 tlipkis Exp $
  */
 
 /*
@@ -855,6 +855,14 @@ public class TestUrlUtil extends LockssTestCase {
     assertFalse(UrlUtil.isFileUrl("http://foo.bar/"));
     assertFalse(UrlUtil.isFileUrl("jar:/foo.bar"));
     assertFalse(UrlUtil.isFileUrl("jar:file:/foo.bar!x.y"));
+  }
+
+  public void testIsUrl() {
+    assertTrue(UrlUtil.isUrl("http://foo.bar/"));
+    assertTrue(UrlUtil.isUrl("file:/foo.bar"));
+    assertFalse(UrlUtil.isUrl("/path/foo.bar"));
+    assertFalse(UrlUtil.isUrl("path/foo.bar"));
+    assertFalse(UrlUtil.isUrl("jar:file:/foo.bar!x.y"));
   }
 
   public void testIsJarUrl() {
