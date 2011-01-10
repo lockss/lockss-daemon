@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.34 2010-06-22 09:01:43 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.35 2011-01-10 09:15:44 tlipkis Exp $
  */
 
 /*
@@ -99,8 +99,8 @@ public class SimulatedContentGenerator {
     "<entry><key>depth</key><value>%2</value></entry>" +
     "<entry><key>branch</key><value>%3</value></entry>" +
     "</map>" +
-    "<ce:doi>%1.%2/%3</ce:doi>" +  // Elsevier DOI
-    "<ArticleDOI>%1.%2/%3</ArticleDOI>" + // Springer DOI
+    "<ce:doi>%4</ce:doi>" +  // Elsevier DOI
+    "<ArticleDOI>%4</ArticleDOI>" + // Springer DOI
     "<foo>bar</foo>";
   /**
    * Name of top directory in which the content is generated.
@@ -761,8 +761,19 @@ public class SimulatedContentGenerator {
     file_content = StringUtil.replaceString(file_content, "%1", ""+fileNum);
     file_content = StringUtil.replaceString(file_content, "%2", ""+depth);
     file_content = StringUtil.replaceString(file_content, "%3", ""+branchNum);
+    file_content = StringUtil.replaceString(file_content, "%4",
+					    makeDoi(fileNum, depth, branchNum));
     return file_content;
   }
+
+  String makeDoi(int fileNum, int depth, int branchNum) {
+    PrintfFormat pf = new PrintfFormat("10.%04d/%d-%d");
+    Integer[] args = new Integer[] {fileNum, depth, branchNum};
+    return pf.sprintf(args);
+
+//     return PrintfUtil.sprintf("//%1.%2/%3", fileNum, depth, branchNum);
+  }
+
 
   /**
    * Generates index file for a directory, in html form with each sibling
