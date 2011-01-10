@@ -1,5 +1,5 @@
 /*
- * $Id: BlockHasher.java,v 1.17 2010-09-01 07:54:33 tlipkis Exp $
+ * $Id: BlockHasher.java,v 1.18 2011-01-10 09:19:58 tlipkis Exp $
  */
 
 /*
@@ -186,7 +186,11 @@ public class BlockHasher extends GenericHasher {
     if (isTrace) log.debug3("isIncluded(" + url + "): " + res);
     if (res && subChecker != null) {
       CachedUrl cu = AuUtil.getCu(node);
-      subChecker.checkSubstance(cu);
+      try {
+	subChecker.checkSubstance(cu);
+      } finally {
+	AuUtil.safeRelease(cu);
+      }
     }
     return res;
   }

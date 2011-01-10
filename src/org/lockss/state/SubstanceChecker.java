@@ -1,5 +1,5 @@
 /*
- * $Id: SubstanceChecker.java,v 1.1 2010-09-01 07:54:32 tlipkis Exp $
+ * $Id: SubstanceChecker.java,v 1.2 2011-01-10 09:19:58 tlipkis Exp $
  */
 
 /*
@@ -198,7 +198,8 @@ public class SubstanceChecker {
   }
 
   /** If substance not detected yet, check whether this CachedUrl contains
-   * substance */
+   * substance.  Releasing the CachedUrl is the responsibility of the
+   * caller. */
   public void checkSubstance(CachedUrl cu) {
     if (hasSubstance == State.Yes) {
       // no need to check if already established has substance.
