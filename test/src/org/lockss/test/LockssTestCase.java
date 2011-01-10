@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.100 2010-12-20 23:46:06 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.101 2011-01-10 09:15:56 tlipkis Exp $
  */
 
 /*
@@ -1126,6 +1126,24 @@ public class LockssTestCase extends TestCase {
       }
       sb.append(obj);
       sb.append(" is not of class ");
+      sb.append(expClass);
+      fail(sb.toString());
+    }
+  }
+
+  public static void assertNotClass(Class expClass, Object obj) {
+    assertNotClass(null, expClass, obj);
+  }
+
+  public static void assertNotClass(String msg, Class expClass, Object obj) {
+    if (expClass.isInstance(obj)) {
+      StringBuffer sb = new StringBuffer();
+      if (msg != null) {
+	sb.append(msg);
+	sb.append(" ");
+      }
+      sb.append(obj);
+      sb.append(" is of class ");
       sb.append(expClass);
       fail(sb.toString());
     }
