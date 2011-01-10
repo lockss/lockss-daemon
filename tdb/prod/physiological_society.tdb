@@ -8,116 +8,6 @@
   implicit < status ; year ; name ; param[volume_name] >
 
   {
-  
-    title <
-      name = Quarterly Journal of Experimental Physiology ;
-      issn = 0370-2901
-    >
-    
-    param[base_url] = http://ep.physoc.org/
-  
-    au < releasing ; 1908 ; Quarterly Journal of Experimental Physiology Volume 1 ; 1  >
-    au < releasing ; 1909 ; Quarterly Journal of Experimental Physiology Volume 2 ; 2  >
-    au < releasing ; 1910 ; Quarterly Journal of Experimental Physiology Volume 3 ; 3  >
-    au < releasing ; 1911 ; Quarterly Journal of Experimental Physiology Volume 4 ; 4  >
-    au < releasing ; 1912 ; Quarterly Journal of Experimental Physiology Volume 5 ; 5  >
-    au < releasing ; 1913 ; Quarterly Journal of Experimental Physiology Volume 6 ; 6  >
-    au < releasing ; 1913-1914 ; Quarterly Journal of Experimental Physiology Volume 7 ; 7  >
-    au < releasing ; 1914-1915 ; Quarterly Journal of Experimental Physiology Volume 8 ; 8  >
-    au < releasing ; 1915-1916 ; Quarterly Journal of Experimental Physiology Volume 9 ; 9  >
-    au < releasing ; 1916-1917 ; Quarterly Journal of Experimental Physiology Volume 10 ; 10  >
-    au < releasing ; 1917 ; Quarterly Journal of Experimental Physiology Volume 11 ; 11  >
-    au < releasing ; 1918-1920 ; Quarterly Journal of Experimental Physiology Volume 12 ; 12  >
-    au < releasing ; 1922-1923 ; Quarterly Journal of Experimental Physiology Volume 13 ; 13  >
-    au < releasing ; 1924 ; Quarterly Journal of Experimental Physiology Volume 14 ; 14  >
-    au < releasing ; 1925 ; Quarterly Journal of Experimental Physiology Volume 15 ; 15  >
-    au < releasing ; 1926-1927 ; Quarterly Journal of Experimental Physiology Volume 16 ; 16  >
-    au < releasing ; 1927 ; Quarterly Journal of Experimental Physiology Volume 17 ; 17  >
-    au < releasing ; 1927-1928 ; Quarterly Journal of Experimental Physiology Volume 18 ; 18  >
-    au < releasing ; 1928-1929 ; Quarterly Journal of Experimental Physiology Volume 19 ; 19  >
-    au < releasing ; 1930 ; Quarterly Journal of Experimental Physiology Volume 20 ; 20  >
-    au < releasing ; 1931-1932 ; Quarterly Journal of Experimental Physiology Volume 21 ; 21  >
-    au < releasing ; 1932-1933 ; Quarterly Journal of Experimental Physiology Volume 22 ; 22  >
-    au < releasing ; 1933 ; Quarterly Journal of Experimental Physiology Volume 23 ; 23  >
-    au < releasing ; 1934-1935 ; Quarterly Journal of Experimental Physiology Volume 24 ; 24  >
-    au < releasing ; 1935 ; Quarterly Journal of Experimental Physiology Volume 25 ; 25  >
-    au < releasing ; 1936-1937 ; Quarterly Journal of Experimental Physiology Volume 26 ; 26  >
-    au < releasing ; 1937-1938 ; Quarterly Journal of Experimental Physiology Volume 27 ; 27  >
-    
-  }
-
-  {
-  
-    title <
-      name = Quarterly Journal of Experimental Physiology and Cognate Medical Sciences ;
-      issn = 0033-5541
-    >
-  
-    param[base_url] = http://ep.physoc.org/
-  
-    au < releasing ; 1938 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 28 ; 28  >
-    au < releasing ; 1939 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 29 ; 29  >
-    au < releasing ; 1940-1941 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 30 ; 30  >
-    au < releasing ; 1941-1942 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 31 ; 31  >
-    au < releasing ; 1943-1944 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 32 ; 32  >
-    au < releasing ; 1944-1946 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 33 ; 33  >
-    au < releasing ; 1947-1948 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 34 ; 34  >
-    au < releasing ; 1949-1950 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 35 ; 35  >
-    au < releasing ; 1950-1951 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 36 ; 36  >
-    au < releasing ; 1952 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 37 ; 37  >
-    au < releasing ; 1953 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 38 ; 38  >
-    au < releasing ; 1954 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 39 ; 39  >
-    au < releasing ; 1955 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 40 ; 40  >
-    au < releasing ; 1956 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 41 ; 41  >
-    au < releasing ; 1957 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 42 ; 42  >
-    au < releasing ; 1958 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 43 ; 43  >
-    au < releasing ; 1959 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 44 ; 44  >
-    au < releasing ; 1960 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 45 ; 45  >
-    au < releasing ; 1961 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 46 ; 46  >
-    au < releasing ; 1962 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 47 ; 47  >
-    au < releasing ; 1963 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 48 ; 48  >
-    au < releasing ; 1964 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 49 ; 49  >
-    au < releasing ; 1965 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 50 ; 50  >
-    au < releasing ; 1966 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 51 ; 51  >
-    au < releasing ; 1967 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 52 ; 52  >
-    au < releasing ; 1968 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 53 ; 53  >
-    au < releasing ; 1969 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 54 ; 54  >
-    au < releasing ; 1970 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 55 ; 55  >
-    au < releasing ; 1971 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 56 ; 56  >
-    au < releasing ; 1972 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 57 ; 57  >
-    au < releasing ; 1973 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 58 ; 58  >
-    au < releasing ; 1974 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 59 ; 59  >
-    au < releasing ; 1975 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 60 ; 60  >
-    au < releasing ; 1976 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 61 ; 61  >
-    au < releasing ; 1977 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 62 ; 62  >
-    au < releasing ; 1978 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 63 ; 63  >
-    au < releasing ; 1979 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 64 ; 64  >
-    au < releasing ; 1980 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 65 ; 65  >
-
-  }
-
-  {
-  
-    title <
-      name = Quarterly Journal of Experimental Physiology ;
-      issn = 0144-8757
-    >
-  
-    param[base_url] = http://ep.physoc.org/
-  
-    au < releasing ; 1981 ; Quarterly Journal of Experimental Physiology Volume 66 ; 66  >
-    au < releasing ; 1982 ; Quarterly Journal of Experimental Physiology Volume 67 ; 67  >
-    au < releasing ; 1983 ; Quarterly Journal of Experimental Physiology Volume 68 ; 68  >
-    au < releasing ; 1984 ; Quarterly Journal of Experimental Physiology Volume 69 ; 69  >
-    au < releasing ; 1985 ; Quarterly Journal of Experimental Physiology Volume 70 ; 70  >
-    au < releasing ; 1986 ; Quarterly Journal of Experimental Physiology Volume 71 ; 71  >
-    au < releasing ; 1987 ; Quarterly Journal of Experimental Physiology Volume 72 ; 72  >
-    au < releasing ; 1988 ; Quarterly Journal of Experimental Physiology Volume 73 ; 73  >
-    au < releasing ; 1989 ; Quarterly Journal of Experimental Physiology Volume 74 ; 74  >
-
-  }
-  
-  {
 
     title <
       name = Experimental Physiology ;
@@ -125,6 +15,7 @@
       eissn = 1469-445X
     >
     
+    comment[continued_from] = 0144-8757
     param[base_url] = http://ep.physoc.org/
 
     au < released ; 1990 ; Experimental Physiology Volume 75 ; 75  >
@@ -749,6 +640,121 @@
     au < released ; 2008 ; Journal of Physiology Volume 586 ; 586  >
     au < released ; 2009 ; Journal of Physiology Volume 587 ; 587  >
     au < released ; 2010 ; Journal of Physiology Volume 588 ; 588  >
+
+  }
+
+  {
+  
+    title <
+      name = Quarterly Journal of Experimental Physiology ;
+      issn = 0370-2901
+    >
+    
+    comment[continued_by] = 0033-5541
+    param[base_url] = http://ep.physoc.org/
+  
+    au < releasing ; 1908 ; Quarterly Journal of Experimental Physiology Volume 1 ; 1  >
+    au < releasing ; 1909 ; Quarterly Journal of Experimental Physiology Volume 2 ; 2  >
+    au < releasing ; 1910 ; Quarterly Journal of Experimental Physiology Volume 3 ; 3  >
+    au < releasing ; 1911 ; Quarterly Journal of Experimental Physiology Volume 4 ; 4  >
+    au < releasing ; 1912 ; Quarterly Journal of Experimental Physiology Volume 5 ; 5  >
+    au < releasing ; 1913 ; Quarterly Journal of Experimental Physiology Volume 6 ; 6  >
+    au < releasing ; 1913-1914 ; Quarterly Journal of Experimental Physiology Volume 7 ; 7  >
+    au < releasing ; 1914-1915 ; Quarterly Journal of Experimental Physiology Volume 8 ; 8  >
+    au < releasing ; 1915-1916 ; Quarterly Journal of Experimental Physiology Volume 9 ; 9  >
+    au < releasing ; 1916-1917 ; Quarterly Journal of Experimental Physiology Volume 10 ; 10  >
+    au < releasing ; 1917 ; Quarterly Journal of Experimental Physiology Volume 11 ; 11  >
+    au < releasing ; 1918-1920 ; Quarterly Journal of Experimental Physiology Volume 12 ; 12  >
+    au < releasing ; 1922-1923 ; Quarterly Journal of Experimental Physiology Volume 13 ; 13  >
+    au < releasing ; 1924 ; Quarterly Journal of Experimental Physiology Volume 14 ; 14  >
+    au < releasing ; 1925 ; Quarterly Journal of Experimental Physiology Volume 15 ; 15  >
+    au < releasing ; 1926-1927 ; Quarterly Journal of Experimental Physiology Volume 16 ; 16  >
+    au < releasing ; 1927 ; Quarterly Journal of Experimental Physiology Volume 17 ; 17  >
+    au < releasing ; 1927-1928 ; Quarterly Journal of Experimental Physiology Volume 18 ; 18  >
+    au < releasing ; 1928-1929 ; Quarterly Journal of Experimental Physiology Volume 19 ; 19  >
+    au < releasing ; 1930 ; Quarterly Journal of Experimental Physiology Volume 20 ; 20  >
+    au < releasing ; 1931-1932 ; Quarterly Journal of Experimental Physiology Volume 21 ; 21  >
+    au < releasing ; 1932-1933 ; Quarterly Journal of Experimental Physiology Volume 22 ; 22  >
+    au < releasing ; 1933 ; Quarterly Journal of Experimental Physiology Volume 23 ; 23  >
+    au < releasing ; 1934-1935 ; Quarterly Journal of Experimental Physiology Volume 24 ; 24  >
+    au < releasing ; 1935 ; Quarterly Journal of Experimental Physiology Volume 25 ; 25  >
+    au < releasing ; 1936-1937 ; Quarterly Journal of Experimental Physiology Volume 26 ; 26  >
+    au < releasing ; 1937-1938 ; Quarterly Journal of Experimental Physiology Volume 27 ; 27  >
+    
+  }
+
+  {
+  
+    title <
+      name = Quarterly Journal of Experimental Physiology ;
+      issn = 0144-8757
+    >
+  
+    comment[continued_from] = 0033-5541
+    comment[continued_by] = 0958-0670
+    param[base_url] = http://ep.physoc.org/
+  
+    au < releasing ; 1981 ; Quarterly Journal of Experimental Physiology Volume 66 ; 66  >
+    au < releasing ; 1982 ; Quarterly Journal of Experimental Physiology Volume 67 ; 67  >
+    au < releasing ; 1983 ; Quarterly Journal of Experimental Physiology Volume 68 ; 68  >
+    au < releasing ; 1984 ; Quarterly Journal of Experimental Physiology Volume 69 ; 69  >
+    au < releasing ; 1985 ; Quarterly Journal of Experimental Physiology Volume 70 ; 70  >
+    au < releasing ; 1986 ; Quarterly Journal of Experimental Physiology Volume 71 ; 71  >
+    au < releasing ; 1987 ; Quarterly Journal of Experimental Physiology Volume 72 ; 72  >
+    au < releasing ; 1988 ; Quarterly Journal of Experimental Physiology Volume 73 ; 73  >
+    au < releasing ; 1989 ; Quarterly Journal of Experimental Physiology Volume 74 ; 74  >
+
+  }
+  
+  {
+  
+    title <
+      name = Quarterly Journal of Experimental Physiology and Cognate Medical Sciences ;
+      issn = 0033-5541
+    >
+  
+    comment[continued_from] = 0370-2901  
+    comment[continued_by] = 0144-8757
+    param[base_url] = http://ep.physoc.org/
+  
+    au < releasing ; 1938 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 28 ; 28  >
+    au < releasing ; 1939 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 29 ; 29  >
+    au < releasing ; 1940-1941 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 30 ; 30  >
+    au < releasing ; 1941-1942 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 31 ; 31  >
+    au < releasing ; 1943-1944 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 32 ; 32  >
+    au < releasing ; 1944-1946 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 33 ; 33  >
+    au < releasing ; 1947-1948 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 34 ; 34  >
+    au < releasing ; 1949-1950 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 35 ; 35  >
+    au < releasing ; 1950-1951 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 36 ; 36  >
+    au < releasing ; 1952 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 37 ; 37  >
+    au < releasing ; 1953 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 38 ; 38  >
+    au < releasing ; 1954 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 39 ; 39  >
+    au < releasing ; 1955 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 40 ; 40  >
+    au < releasing ; 1956 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 41 ; 41  >
+    au < releasing ; 1957 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 42 ; 42  >
+    au < releasing ; 1958 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 43 ; 43  >
+    au < releasing ; 1959 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 44 ; 44  >
+    au < releasing ; 1960 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 45 ; 45  >
+    au < releasing ; 1961 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 46 ; 46  >
+    au < releasing ; 1962 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 47 ; 47  >
+    au < releasing ; 1963 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 48 ; 48  >
+    au < releasing ; 1964 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 49 ; 49  >
+    au < releasing ; 1965 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 50 ; 50  >
+    au < releasing ; 1966 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 51 ; 51  >
+    au < releasing ; 1967 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 52 ; 52  >
+    au < releasing ; 1968 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 53 ; 53  >
+    au < releasing ; 1969 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 54 ; 54  >
+    au < releasing ; 1970 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 55 ; 55  >
+    au < releasing ; 1971 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 56 ; 56  >
+    au < releasing ; 1972 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 57 ; 57  >
+    au < releasing ; 1973 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 58 ; 58  >
+    au < releasing ; 1974 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 59 ; 59  >
+    au < releasing ; 1975 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 60 ; 60  >
+    au < releasing ; 1976 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 61 ; 61  >
+    au < releasing ; 1977 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 62 ; 62  >
+    au < releasing ; 1978 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 63 ; 63  >
+    au < releasing ; 1979 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 64 ; 64  >
+    au < releasing ; 1980 ; Quarterly Journal of Experimental Physiology and Cognate Medical Sciences Volume 65 ; 65  >
 
   }
 
