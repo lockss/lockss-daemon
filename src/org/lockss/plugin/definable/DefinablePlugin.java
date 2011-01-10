@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.53 2010-12-02 10:04:54 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.54 2011-01-10 09:13:56 tlipkis Exp $
  */
 
 /*
@@ -424,9 +424,9 @@ public class DefinablePlugin extends BasePlugin {
 	    (FilterFactory)newAuxClass(factName, FilterFactory.class);
 	  mti.setHashFilterFactory(fact);
 	}
-      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER)) {
+      } else if (key.endsWith(DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMIT)) {
 	String mime =
-	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER);
+	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMIT);
 	if (val instanceof String) {
 	  String rate = (String)val;
 	  log.debug(mime + " fetch rate: " + rate);
@@ -452,12 +452,13 @@ public class DefinablePlugin extends BasePlugin {
 	String mime =
 	  stripSuffix(key, DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP);
 	Map factNameMap = (Map)val;
-	log.debug3(mime + " metadata extractor map: ");
 	Map factClassMap = new HashMap();
 	MimeTypeInfo.Mutable mti = mimeMap.modifyMimeTypeInfo(mime);
 	for (Iterator it = factNameMap.keySet().iterator(); it.hasNext(); ) {
           String mdTypes = (String)it.next();
 	  String factName = (String)factNameMap.get(mdTypes);
+	  log.debug(mime + " (" + mdTypes + ") metadata extractor: " +
+		    factName);
 	  for (String mdType : (List<String>)StringUtil.breakAt(mdTypes, ";")) {
 	    setMdTypeFact(factClassMap, mdType, factName);
 	  }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.36 2010-12-02 10:04:54 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.37 2011-01-10 09:13:56 tlipkis Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 		     + DefinableArchivalUnit.SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP),
                   factMap);
     defMap.putString(  ("application/pdf"
-			+ DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMITER),
+			+ DefinableArchivalUnit.SUFFIX_FETCH_RATE_LIMIT),
 		     "1/30s");
     definablePlugin.initPlugin(getMockLockssDaemon(), defMap);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.83 2010-12-02 10:04:54 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.84 2011-01-10 09:13:56 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     "au_substance_url_pattern";
   public static final String KEY_AU_NON_SUBSTANCE_URL_PATTERN =
     "au_non_substance_url_pattern";
+  public static final String KEY_AU_CRAWL_COOKIE_POLICY =
+    "au_crawl_cookie_policy";
 
   /** Suffix for testing override submaps.  Values in a XXX_override map
    * will be copied to the main map when in testing mode XXX.  In the
@@ -116,7 +118,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   public static final String SUFFIX_METADATA_EXTRACTOR_FACTORY_MAP =
     "_metadata_extractor_factory_map"; 
 
- public static final String SUFFIX_FETCH_RATE_LIMITER = "_fetch_rate_limiter";
+ public static final String SUFFIX_FETCH_RATE_LIMIT = "_fetch_rate_limit";
 
   public static final String KEY_AU_PERMISSION_CHECKER_FACTORY =
     "au_permission_checker_factory";
@@ -425,7 +427,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
-
+    CrawlSpec res;
     CrawlRule rule = makeRules();
     String crawl_type = definitionMap.getString(DefinablePlugin.KEY_CRAWL_TYPE,
                                                 DefinablePlugin.DEFAULT_CRAWL_TYPE);
@@ -434,20 +436,27 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     if(crawl_type.equals(DefinablePlugin.CRAWL_TYPE_OAI)) {
       boolean follow_links =
           definitionMap.getBoolean(DefinablePlugin.KEY_FOLLOW_LINKS, true);
-      return new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
-                              null, rule, follow_links,
-                              makeLoginPageChecker());
+      res = new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
+			     null, rule, follow_links,
+			     makeLoginPageChecker());
     } else { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(KEY_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
       String exploderPattern = definitionMap.getString(KEY_AU_EXPLODER_PATTERN,
 						  DEFAULT_AU_EXPLODER_PATTERN);
       ExploderHelper eh = getDefinablePlugin().getExploderHelper();
 
-      return new SpiderCrawlSpec(getNewContentCrawlUrls(),
-				 getPermissionPages(), rule, depth,
-				 makePermissionChecker(),
-				 makeLoginPageChecker(), exploderPattern, eh);
+      res = new SpiderCrawlSpec(getNewContentCrawlUrls(),
+				getPermissionPages(), rule, depth,
+				makePermissionChecker(),
+				makeLoginPageChecker(), exploderPattern, eh);
+      String cookiePolicy =
+          definitionMap.getString(KEY_AU_CRAWL_COOKIE_POLICY, null);
+      if (cookiePolicy != null) {
+	res.setCookiePolicy(cookiePolicy);
+      }
     }
+    
+    return res;
   }
 
   protected LoginPageChecker makeLoginPageChecker() {
