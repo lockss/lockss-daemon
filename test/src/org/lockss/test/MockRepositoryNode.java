@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.15.56.2 2011-01-05 18:54:23 dshr Exp $
+ * $Id: MockRepositoryNode.java,v 1.15.56.3 2011-01-10 05:29:10 dshr Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
-import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.*;
 
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.protocol.PeerIdentity;
@@ -60,12 +60,20 @@ public class MockRepositoryNode implements RepositoryNode {
   public String url;
   public String nodeLocation;
 
+  public FileObject nodeDir;
+  protected static Logger logger = Logger.getLogger("MockRepositoryNode");
+
   public MockRepositoryNode() {
   }
 
-  MockRepositoryNode(String url, String nodeLocation) {
+  public MockRepositoryNode(String url, String nodeLocation) {
     this.url = url;
     this.nodeLocation = nodeLocation;
+    try {
+      nodeDir = VFS.getManager().resolveFile(nodeLocation);
+    } catch (FileSystemException e) {
+      throw new UnsupportedOperationException(nodeLocation + " bad");
+    }
   }
 
   public String getNodeUrl() {
@@ -181,19 +189,89 @@ public class MockRepositoryNode implements RepositoryNode {
   }
 
   public InputStream getPeerIdInputStream(String fileName) {
-    throw new UnsupportedOperationException("Not supported.");
+    logger.debug3("getPeerIdInputStream " + fileName);
+    InputStream ret = null;
+    try {
+      if (nodeDir != null) {
+	FileObject fo = nodeDir.resolveFile(fileName);
+	if (fo.isReadable()) {
+	  return fo.getContent().getInputStream();
+	} else {
+	  return null;
+	}
+      }
+      throw new
+	UnsupportedOperationException("MockRepositoryNode needs nodeLocation" +
+				      " to use " + fileName);
+    } catch (FileSystemException ex) {
+      throw new UnsupportedOperationException(nodeLocation + File.separator +
+					      fileName + " threw " + ex);
+    }
+    
   }
 
-  public OutputStream getPeerIdOutputStream(String fileName) {
-    throw new UnsupportedOperationException("Not supported.");
+  public OutputStream getPeerIdOutputStream(String fileName)
+    throws IOException {
+    logger.debug3("getPeerIdOutputStream " + fileName);
+    OutputStream ret = null;
+    try {
+      if (nodeDir != null) {
+	FileObject fo = nodeDir.resolveFile(fileName);
+	if (fo.isWriteable()) {
+	  return fo.getContent().getOutputStream();
+	} else {
+	  throw new IOException("not writable");
+	}
+      }
+      throw new
+	UnsupportedOperationException("MockRepositoryNode needs nodeLocation" +
+				      " to use " + fileName);
+    } catch (FileSystemException ex) {
+      throw new UnsupportedOperationException(nodeLocation + File.separator +
+					      fileName + " threw " + ex);
+    }
   }
 
   public FileObject getPeerIdFileObject(String fileName) {
-    throw new UnsupportedOperationException("Not supported.");
+    logger.debug3("getPeerIdFileObject " + fileName);
+    if (logger.isDebug3()) {
+      (new Throwable()).printStackTrace();
+    }
+    FileObject ret = null;
+    try {
+      if (nodeDir != null) {
+	return nodeDir.resolveFile(fileName);
+      }
+      throw new
+	UnsupportedOperationException("MockRepositoryNode needs nodeLocation" +
+				      " to use " + fileName);
+    } catch (FileSystemException ex) {
+      throw new UnsupportedOperationException(nodeLocation + File.separator +
+					      fileName + " threw " + ex);
+    }
   }
 
   public boolean updatePeerIdFile(String fileName) {
-    throw new UnsupportedOperationException("Not supported.");
+    logger.debug3("updatePeerIdFile " + fileName);
+    if (logger.isDebug3()) {
+      (new Throwable()).printStackTrace();
+    }
+    boolean ret = false;
+    if (fileName.endsWith(".temp")) {
+      FileObject fo = getPeerIdFileObject(fileName);
+      FileObject fn =
+	getPeerIdFileObject(fileName.substring(0,fileName.length()-5));
+      try {
+	if (fo.canRenameTo(fn)) {
+	  fo.moveTo(fn);
+	  ret = true;
+	}
+      } catch (FileSystemException ex) {
+	throw new UnsupportedOperationException(fileName + " threw " + ex);
+      }
+      return ret;
+    }
+    throw new UnsupportedOperationException("Not supported." + fileName);
   }
 
   public synchronized RepositoryNode.RepositoryNodeContents getNodeContents() {

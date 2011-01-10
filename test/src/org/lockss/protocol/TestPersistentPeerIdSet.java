@@ -34,8 +34,7 @@ import java.io.*;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import org.apache.commons.vfs.FileSystemException;
-import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.*;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -68,6 +67,8 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
   private static final String k_fileOne = "one-ppis";
   private static final String k_fileTest = "test-ppis";
   private static final String k_fileNotExist = "not-exist-ppis";
+  private static String tempDirPath;
+  private static String url = "http://www.example.com/";
 
   /* (non-Javadoc)
    * @see org.lockss.test.LockssTestCase#setUp()
@@ -80,7 +81,8 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
 			    new MockPeerIdentity(k_strPeerIdentityOne));
     m_idman.addPeerIdentity(k_strPeerIdentityTwo,
 			    new MockPeerIdentity(k_strPeerIdentityTwo));
-    m_node = new MockRepositoryNode();
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    m_node = new MockRepositoryNode(url, tempDirPath);
   }
 
   /* (non-Javadoc)
@@ -896,23 +898,20 @@ public class TestPersistentPeerIdSet extends LockssTestCase {
       return m_isInMemory;
     }
     public boolean deletePeerIdFile(String fileName) {
-      boolean ret = false;
       try {
-	m_node.getPeerIdFileObject(fileName).delete();
-	ret = true;
+        return m_node.getPeerIdFileObject(fileName).delete();
       } catch (FileSystemException ex) {
-	// No action intended
+	fail(ex.toString());
       }
-      return ret;
+      return false;
     }
     public boolean existsPeerIdFile(String fileName) {
-      boolean ret = false;
       try {
-	ret = m_node.getPeerIdFileObject(fileName).exists();
+	return m_node.getPeerIdFileObject(fileName).exists();
       } catch (FileSystemException ex) {
-	// No action intended
+	fail(ex.toString());
       }
-      return ret;
+      return false;
     }
   }
 }

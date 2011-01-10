@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.86.8.5 2011-01-07 00:33:03 dshr Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.86.8.6 2011-01-10 05:29:10 dshr Exp $
  */
 
 /*
@@ -190,6 +190,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     this.url = url;
     this.nodeLocation = nodeLocation;
     this.repository = repository;
+    logger.debug3("new node url " + url + " location " + nodeLocation);
   }
 
   public String getNodeUrl() {
@@ -395,7 +396,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
     try {
       FileObject parent = file.getParent();
       file = parent.resolveFile(normName);
-      file.createFile();
     } catch (FileSystemException e) {
       logger.error("normalize() threw: " + e);
     }
@@ -613,9 +613,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	logger.debug3("Creating root directory for CUS '"+url+"'");
 	nodeRootFile.createFolder();
       }
-      if (nodeRootFile.exists() && !isFolder(nodeRootFile)) {
+      if (nodeRootFile.exists() && isFolder(nodeRootFile)) {
 	return;
       }
+      logger.error(nodeUrl + " is not a folder");
     } catch (FileSystemException e) {
       logger.error("createNodeLocation() threw: " + e);
     }
@@ -625,6 +626,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public synchronized void makeNewVersion() {
+    logger.debug3("makeNewVersion: " + nodeLocation + " ver " + currentVersion);
     if (newVersionOpen) {
       // check if time since new version exceeds timeout
       if (versionTimeout.expired()) {
@@ -660,6 +662,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   public synchronized void sealNewVersion() {
     boolean identicalVersion = false;
+    logger.debug3("sealNewVersion: " + nodeLocation + " ver " + currentVersion);
     try {
       if (curOutputStream==null) {
          throw new UnsupportedOperationException("getNewOutputStream() not called.");
@@ -909,15 +912,19 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (hasContent()) {
 	ok = (currentCacheFile.exists() &&
 	      updateAtomically(currentCacheFile, getInactiveCacheFile()));
+	logger.debug3("content file updated " + ok);
 	if (ok) {
           ok = (currentPropsFile.exists() &&
 		updateAtomically(currentPropsFile, getInactivePropsFile()));
+	  logger.debug3("content file props updated " + ok);
 	}
       } else {
 	if (!contentDir.exists()) {
 	  contentDir.createFolder();
 	  ok = true;
+	  logger.debug3("create content dir" + ok);
 	}
+	logger.debug3("content empty" + ok);
       }
     } catch (FileSystemException e) {
       logger.error("deactivateContent() threw: " + e);
@@ -1061,6 +1068,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   void loadPropsInto(FileObject propsFile, Properties props)
       throws FileNotFoundException, IOException {
+    if (!propsFile.exists()) {
+      logger.debug3(nodeLocation + "props file not exist");
+      throw new FileNotFoundException(nodeLocation + ": props file");
+    }
+    if (!propsFile.isReadable()) {
+      logger.debug3(nodeLocation + "props file not readable");
+      throw new IOException(nodeLocation + ": node props unreadable");
+    }
     InputStream is = new BufferedInputStream(propsFile.getContent().getInputStream());
     try {
       props.load(is);
@@ -1145,6 +1160,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
         (currentVersion==DELETED_VERSION)) {
       // node already initialized and has no active content,
       // so exit early
+      logger.debug3("ensureCurrentInfoLoaded: already inited");
       return;
     } else if (currentVersion==-1) {
       // XXX happens multiple times for dir nodes with no content, as
@@ -1202,6 +1218,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    * Initializes the file handles.
    */
   void initFiles() {
+    logger.debug3("initFiles");
     initNodeRoot();
     initCurrentCacheFile();
     initCurrentPropsFile();
@@ -1305,6 +1322,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public InputStream getPeerIdInputStream(String fileName) {
+    logger.debug3("getPeerIdInputStream " + fileName);
     InputStream is = null;
     if (agreementFile == null) {
       initAgreementFile(fileName);
@@ -1317,7 +1335,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return is;
   }
 
-  public OutputStream getPeerIdOutputStream(String fileName) {
+  public OutputStream getPeerIdOutputStream(String fileName)
+    throws IOException {
+    logger.debug3("getPeerIdOutputStream " + fileName);
     OutputStream os = null;
     if (tempAgreementFile == null) {
       initTempAgreementFile(fileName);
@@ -1331,11 +1351,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public FileObject getPeerIdFileObject(String fileName) {
+    logger.debug3("getPeerIdFileObject " + fileName);
     return (AGREEMENT_FILENAME.equals(fileName) ?
 	    agreementFile : tempAgreementFile);
   }
 
   public boolean updatePeerIdFile(String fileName) {
+    logger.debug3("updatePeerIdFile " + fileName);
     boolean ret = false;
     if (agreementFile == null) {
       initAgreementFile(AGREEMENT_FILENAME);
@@ -1730,6 +1752,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
    */
   protected void writeNodeProperties() {
     try {
+      logger.debug3("Writing node properties: " + nodePropsFile.getName().getPath());
       OutputStream os = new BufferedOutputStream(nodePropsFile.getContent().getOutputStream());
       nodeProps.store(os, "Node properties");
       os.close();
@@ -1748,13 +1771,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
   // functions to initialize the file handles
 
   private void initCurrentCacheFile() {
-    try {
-      currentCacheFile = getContentDir().resolveFile(nodeLocation +
+    logger.debug3("initCurrentCacheFile: " +
+		  getContentDir().getName().getPath() +
 						     File.separator +
 						     CURRENT_FILENAME);
-      if (!currentCacheFile.exists()) {
-	currentCacheFile.createFile();
-      }
+    try {
+      currentCacheFile = getContentDir().resolveFile(CURRENT_FILENAME);
     } catch (FileSystemException e) {
       logger.error(CURRENT_FILENAME + " threw: " + e);
       currentCacheFile = null;
@@ -1762,13 +1784,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   private void initCurrentPropsFile() {
-    try {
-      currentPropsFile = getContentDir().resolveFile(nodeLocation +
+    logger.debug3("initCurrentPropsFile: " +
+		  getContentDir().getName().getPath() +
 						     File.separator +
 						     CURRENT_PROPS_FILENAME);
-      if (!currentPropsFile.exists()) {
-	currentPropsFile.createFile();
-      }
+    try {
+      currentPropsFile = getContentDir().resolveFile(CURRENT_PROPS_FILENAME);
     } catch (FileSystemException e) {
       logger.error(CURRENT_PROPS_FILENAME + " threw: " + e);
       currentPropsFile = null;
@@ -1777,12 +1798,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initTempCacheFile() {
     try {
-      tempCacheFile = getContentDir().resolveFile(nodeLocation +
-						  File.separator +
-						  TEMP_FILENAME);
-      if (!tempCacheFile.exists()) {
-	tempCacheFile.createFile();
-      }
+      tempCacheFile = getContentDir().resolveFile(TEMP_FILENAME);
     } catch (FileSystemException e) {
       logger.error(TEMP_FILENAME + " threw: " + e);
       tempCacheFile = null;
@@ -1791,12 +1807,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   private void initTempPropsFile() {
     try {
-      tempPropsFile = getContentDir().resolveFile(nodeLocation +
-						  File.separator +
-						  TEMP_PROPS_FILENAME);
-      if (!tempPropsFile.exists()) {
-	tempPropsFile.createFile();
-      }
+      tempPropsFile = getContentDir().resolveFile(TEMP_PROPS_FILENAME);
     } catch (FileSystemException e) {
       logger.error(TEMP_PROPS_FILENAME + " threw: " + e);
       tempPropsFile = null;
@@ -1805,10 +1816,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   
   private void initAgreementFile(String fileName) {
     try {
-      agreementFile = getContentDir().resolveFile(fileName);
-      if (!agreementFile.exists()) {
-	agreementFile.createFile();
-      }
+      agreementFile = nodeRootFile.resolveFile(fileName);
     } catch (FileSystemException e) {
       logger.error(fileName + " threw: " + e);
       agreementFile = null;
@@ -1817,10 +1825,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   
   private void initTempAgreementFile(String fileName) {
     try {
-      tempAgreementFile = getContentDir().resolveFile(fileName);
-      if (!tempAgreementFile.exists()) {
-	tempAgreementFile.createFile();
-      }
+      tempAgreementFile = nodeRootFile.resolveFile(fileName);
     } catch (FileSystemException e) {
       logger.error(fileName + " threw: " + e);
       tempAgreementFile = null;
@@ -1830,10 +1835,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private void initNodePropsFile() {
     String propsLocation = nodeLocation + File.separator + NODE_PROPS_FILENAME;
     try {
-      nodePropsFile = getContentDir().resolveFile(propsLocation);
-      if (!nodePropsFile.exists()) {
-	nodePropsFile.createFile();
-      }
+      nodePropsFile = nodeRootFile.resolveFile(NODE_PROPS_FILENAME);
       logger.debug3(propsLocation + " props initialized");
     } catch (FileSystemException e) {
       logger.error(propsLocation + " threw: " + e);
@@ -1842,12 +1844,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   protected void initNodeRoot() {
+    logger.debug3(nodeLocation + " node root location");
     try {
       nodeRootFile = repository.getFileSystem().resolveFile(nodeLocation);
-      if (!nodeRootFile.exists()) {
-	nodeRootFile.createFolder();
-      }
-      logger.debug3(nodeLocation + " node root location");
     } catch (FileSystemException e) {
       logger.error(nodeLocation + " threw: " + e);
       nodeRootFile = null;
@@ -1856,8 +1855,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   protected FileObject getInactiveCacheFile() { // Used TestRepositoryNodeImpl
     try {
-      return getContentDir().resolveFile(nodeLocation + File.separator +
-					 INACTIVE_FILENAME);
+      return getContentDir().resolveFile(INACTIVE_FILENAME);
     } catch (FileSystemException e) {
       logger.error(nodeLocation + INACTIVE_FILENAME + " threw: " + e);
       return null;
@@ -1866,8 +1864,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   protected FileObject getInactivePropsFile() { // Used TestRepositoryNodeImpl
     try {
-      return getContentDir().resolveFile(nodeLocation + File.separator +
-					 INACTIVE_PROPS_FILENAME);
+      return getContentDir().resolveFile(INACTIVE_PROPS_FILENAME);
     } catch (FileSystemException e) {
       logger.error(nodeLocation + File.separator +
 		   INACTIVE_PROPS_FILENAME + " threw: " + e);
@@ -2009,6 +2006,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	res = true;
       } catch (FileSystemException ex) {
 	logger.error(f1Name + " moveTo threw: " + ex);
+      }
+    } else {
+      try {
+	String n1 = f1.getURL().toString();
+	String n2 = f2.getURL().toString();
+	logger.debug3("Can't rename " + n1 + " to " + n2);
+      } catch (FileSystemException ex) {
+	logger.error("updateAtomically can't rename threw " + ex);
       }
     }
     return res;

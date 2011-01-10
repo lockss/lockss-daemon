@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.2 2011-01-04 04:52:08 dshr Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.3 2011-01-10 05:29:09 dshr Exp $
  */
 
 /*
@@ -51,6 +51,9 @@ package org.lockss.protocol;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.vfs.FileObject;
+import org.apache.commons.vfs.FileContent;
+
 
 import org.lockss.util.*;
 import org.lockss.repository.RepositoryNode;
@@ -181,7 +184,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     if (o instanceof PersistentPeerIdSetImpl) {
       PersistentPeerIdSetImpl ppis = (PersistentPeerIdSetImpl) o;
 
-      return m_node.equals(ppis.m_node);
+      return m_node.equals(ppis.m_node) && m_fileName.equals(ppis.m_fileName);
     } else {
       return false;
     }
@@ -315,14 +318,14 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   protected void internalLoad() throws IOException {
     DataInputStream is = null;
     try {
-      is = new DataInputStream(m_node.getPeerIdInputStream(m_fileName +
-							   TEMP_EXTENSION));
-      if (is != null) {
+      FileObject ppisFile = m_node.getPeerIdFileObject(m_fileName);
+      if (ppisFile != null && ppisFile.exists()) {
+	is = new DataInputStream(ppisFile.getContent().getInputStream());
 	readData(is);
 	m_changed = false;
       } else {
 	newData();
-      } 
+      }
     } catch (IOException e) {
       m_logger.error("Load failed", e);
       m_setPeerId = new HashSet<PeerIdentity>();

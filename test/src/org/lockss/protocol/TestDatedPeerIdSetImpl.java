@@ -22,6 +22,8 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
   private final static String k_fileTest2 = "fileTest2.ppis";
   private final static String k_fileTest3 = "fileTest3.ppis";
   private final static String k_fileNotExist = "fileNotExist.ppis";
+  private static String tempDirPath;
+  private static String url = "http://www.example.com/";
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -29,7 +31,8 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
     m_idman = new MockIdentityManager();
     m_idman.addPeerIdentity(k_strPeerIdentityOne, new MockPeerIdentity(k_strPeerIdentityOne));
     m_idman.addPeerIdentity(k_strPeerIdentityTwo, new MockPeerIdentity(k_strPeerIdentityTwo));
-    m_node = new MockRepositoryNode();
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    m_node = new MockRepositoryNode(url, tempDirPath);
   }
 
   protected void tearDown() throws Exception {
@@ -137,23 +140,20 @@ public class TestDatedPeerIdSetImpl extends LockssTestCase {
       return m_isInMemory;
     }
     public boolean deletePeerIdFile(String fileName) {
-      boolean ret = false;
       try {
-	m_node.getPeerIdFileObject(fileName).delete();
-	ret = true;
+        return m_node.getPeerIdFileObject(fileName).delete();
       } catch (FileSystemException ex) {
-	// No action intended
+	fail(ex.toString());
       }
-      return ret;
+      return false;
     }
     public boolean existsPeerIdFile(String fileName) {
-      boolean ret = false;
       try {
-	ret = m_node.getPeerIdFileObject(fileName).exists();
+	return m_node.getPeerIdFileObject(fileName).exists();
       } catch (FileSystemException ex) {
-	// No action intended
+	fail(ex.toString());
       }
-      return ret;
+      return false;
     }
   }
 }

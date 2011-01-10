@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.61.10.2 2011-01-03 18:30:06 dshr Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.61.10.3 2011-01-10 05:29:10 dshr Exp $
  */
 
 /*
@@ -111,9 +111,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testGetNodeUrl() {
-    RepositoryNode node = new RepositoryNodeImpl("testUrl", "testDir", null);
+    RepositoryNode node = new RepositoryNodeImpl("testUrl", "testDir", repo);
     assertEquals("testUrl", node.getNodeUrl());
-    node = new RepositoryNodeImpl("testUrl/test.txt", "testUrl/test.txt", null);
+    node = new RepositoryNodeImpl("testUrl/test.txt", "testUrl/test.txt", repo);
     assertEquals("testUrl/test.txt", node.getNodeUrl());
   }
 
@@ -125,14 +125,19 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath);
+    logger.debug3("FileLocation: " + tempDirPath);
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#content/current");
+    logger.debug3("FileLocation: " + tempDirPath + "/#content/current");
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#content/current.props");
+    logger.debug3("FileLocation: " + tempDirPath + "/#content/current.props");
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#node_props");
+    logger.debug3("FileLocation: " + tempDirPath + "/#node_props");
     assertFalse(testFile.exists());
     testFile = new File(tempDirPath + "/#agreement");
+    logger.debug3("FileLocation: " + tempDirPath + "/#agreement");
     assertFalse(testFile.exists());
   }
   
@@ -320,7 +325,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
   public void testListEntriesNonexistentDir() throws Exception {
     RepositoryNode node = new RepositoryNodeImpl("foo-no-url", "foo-no-dir",
-						 null);
+						 repo);
     try {
       node.listChildren(null, false);
       fail("listChildren() is nonexistent dir should throw");
@@ -399,7 +404,11 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   String normalizeName(RepositoryNodeImpl node, String name) {
-      return node.normalize(node.getFileObject(name)).getName().getPath();
+    String norm =
+      node.normalize(node.getFileObject(name)).getName().getPath();
+    String ret = UrlUtil.encodeUrl(norm);
+    logger.debug3("normalize(" + name + ") = " + ret + " - " + norm);
+    return ret;
   }
 
   public void testNormalizeUrlEncodingCase() throws Exception {
@@ -407,7 +416,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 	    log.debug("Skipping testNormalizeUrlEncodingCase: file system is not case sensitive.");
 	    return;
 	}
-    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
+    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", repo);
     // nothing to normalize
     String fileName = "foo/bar/baz";
     FileObject file = node.getFileObject(fileName);
@@ -432,7 +441,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testNormalizeTrailingQuestion() throws Exception {
-    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", null);
+    RepositoryNodeImpl node = new RepositoryNodeImpl("foo", "bar", repo);
     // nothing to normalize
     String fileName = "foo/bar/baz";
     FileObject file = node.getFileObject(fileName);
@@ -1914,6 +1923,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
   public static RepositoryNode createLeaf(LockssRepository repo, String url,
       String content, Properties props) throws Exception {
+    logger.debug3("createLeaf: " + url);
     RepositoryNode leaf = repo.createNewNode(url);
     createContentVersion(leaf, content, props);
     return leaf;

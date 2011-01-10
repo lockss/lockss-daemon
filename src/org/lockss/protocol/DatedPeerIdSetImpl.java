@@ -6,7 +6,7 @@ package org.lockss.protocol;
 import java.io.*;
 import java.util.HashSet;
 
-import org.lockss.util.IOUtil;
+import org.lockss.util.*;
 import org.lockss.repository.RepositoryNode;
 
 /**
@@ -16,6 +16,7 @@ import org.lockss.repository.RepositoryNode;
 public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
     DatedPeerIdSet {
 
+  private static Logger logger = Logger.getLogger("DatedPeerIdSet");
   public static final long k_dateDefault = -1;
   
   private long m_date;
@@ -37,6 +38,7 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
    */
   public long getDate() throws IOException {
     loadIfNecessary();
+    logger.debug3("getDate(): " + m_date);
     return m_date;
   }
 
@@ -48,6 +50,7 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
     if (m_date != l) {
       m_date = l;
       m_changed = true;
+      logger.debug3("setDate(): " + m_date);
       storeIfNecessary();
     }
   }
@@ -61,12 +64,14 @@ public class DatedPeerIdSetImpl extends PersistentPeerIdSetImpl implements
   @Override
   protected void newData() throws IOException {
     m_date = k_dateDefault;
+    logger.debug3("newData(): " + m_date);
     super.newData();
   }
 
   @Override
   protected void writeData(DataOutputStream dos) throws IOException {
     dos.writeLong(m_date);
+    logger.debug3("writeData(): " + m_date);
     super.writeData(dos);
   }
 }

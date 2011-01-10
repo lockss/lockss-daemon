@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.4 2011-01-07 00:33:03 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.5 2011-01-10 05:29:10 dshr Exp $
  */
 
 /*
@@ -216,7 +216,16 @@ public class LockssRepositoryImpl
           canonUrl);
       node = new RepositoryNodeImpl(canonUrl, nodeLocation, this);
     }
-
+    logger.debug3("getNode(" + url + " -> " + canonUrl + ") = " + nodeLocation);
+    if (fileSystemManager == null) {
+      // Happens in test because startService() not called
+      logger.warning("fileSystemManager null, startService?");
+      try {
+	fileSystemManager = VFS.getManager(); // XXX
+      } catch (FileSystemException e) {
+	logger.error("VFS.getManager() threw: " + e);
+      }
+    }
     if (!create) {
       // if not creating, check for existence
       try {
@@ -322,11 +331,14 @@ public class LockssRepositoryImpl
   /**
    * Return the Commons VFS file system, if any, used for this
    * repository.
-   * @return FileSystem the COmmons VFS file system for this repository
+   * @return FileSystem the Commons VFS file system for this repository
    */
   public FileSystem getFileSystem() {
     FileSystem ret = null;
     try {
+      if (fileSystemManager == null) {
+	fileSystemManager = VFS.getManager();
+      }
       ret = fileSystemManager.resolveFile("/").getFileSystem(); // XXX
     } catch (FileSystemException e) {
       logger.error("resolveFile(\"/\").getFileSystem() threw: " + e);
@@ -526,6 +538,7 @@ public class LockssRepositoryImpl
    */
   static String getAuDir(String auid, String repoRoot, boolean create) {
     String repoCachePath = extendCacheLocation(repoRoot);
+    logger.debug3("getAuDir(" + auid + ", " + repoCachePath + ", " + create);
     LocalRepository localRepo = getLocalRepository(repoRoot);
     synchronized (localRepo) {
       Map aumap = localRepo.getAuMap();
@@ -536,6 +549,7 @@ public class LockssRepositoryImpl
       if (!create) {
 	return null;
       }
+      logger.debug3("Creating new au directory for '" + auid + "'.");
       String auDir = localRepo.getPrevAuDir();
       for (int cnt = RepositoryManager.getMaxUnusedDirSearch();
 	   cnt > 0; cnt--) {
@@ -613,27 +627,27 @@ public class LockssRepositoryImpl
   static Properties getAuIdProperties(String location) {
     Properties ret = null;
     try {
-      FileObject propFile = VFS.getManager().resolveFile(location +
-							 File.separator +
-							 AU_ID_FILE);
+      FileObject propDir = VFS.getManager().resolveFile(location);
 
-      ret = getAuIdProperties(propFile);
+      ret = getAuIdProperties(propDir);
     } catch (FileSystemException e) {
-      logger.error(location + File.separator + AU_ID_FILE + " threw " + e);
+      logger.error(location + " threw " + e);
     }
     return ret;
   }
 
-  static Properties getAuIdProperties(FileObject propFile) {
+  static Properties getAuIdProperties(FileObject propDir) {
     try {
-      InputStream is = new BufferedInputStream(propFile.getContent().getInputStream());
+      FileContent propFileCont = propDir.resolveFile(AU_ID_FILE).getContent();
+      InputStream is = new BufferedInputStream(propFileCont.getInputStream());
       Properties idProps = new Properties();
       idProps.load(is);
       is.close();
       return idProps;
     } catch (Exception e) {
       logger.warning("Error loading au id from " +
-		     propFile.getName().getPath() + ".");
+		     propDir.getName().getPath() + File.separator +
+		     AU_ID_FILE + ".");
       return null;
     }
   }
@@ -657,6 +671,7 @@ public class LockssRepositoryImpl
 	  "Couldn't create au id properties file.");
     }
     try {
+      logger.debug3("Saving au id properties at '" + location + "'.");
       OutputStream os =
 	new BufferedOutputStream(propFile.getContent().getOutputStream());
       props.store(os, "ArchivalUnit id info");
@@ -795,7 +810,7 @@ public class LockssRepositoryImpl
 	    repoCacheFile.createFolder();
 	  } else {
 	    // read each dir's property file and store mapping auid -> dir
-	    FileObject[] auDirs = repoCacheFile.findFiles(new AllFileSelector());
+	    FileObject[] auDirs = repoCacheFile.getChildren();
 	    for (int ii = 0; ii < auDirs.length; ii++) {
 	      // String dirName = auDirs[ii].getName();
 	      //       if (dirName.compareTo(lastPluginDir) == 1) {
@@ -803,6 +818,7 @@ public class LockssRepositoryImpl
 	      //         lastPluginDir = dirName;
 	      //       }
 	      String path = auDirs[ii].getName().getPath();
+	      logger.debug3("Index: " + ii + " path " + path);
 	      Properties idProps = getAuIdProperties(auDirs[ii]);
 	      if (idProps != null) {
 		String auid = idProps.getProperty(AU_ID_PROP);
