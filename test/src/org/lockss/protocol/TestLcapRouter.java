@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.26 2008-11-02 21:13:48 tlipkis Exp $
+ * $Id: TestLcapRouter.java,v 1.27 2011-01-10 09:14:39 tlipkis Exp $
  */
 
 /*
@@ -55,8 +55,10 @@ public class TestLcapRouter extends LockssTestCase {
 
   private MockLockssDaemon daemon;
   MyLcapRouter rtr;
+  MyBlockingStreamComm scomm;
 
   PeerIdentity pid1;
+  PeerIdentity pid2;
   File tempDir;
 
   public void setUp() throws Exception {
@@ -66,8 +68,15 @@ public class TestLcapRouter extends LockssTestCase {
     daemon = getMockLockssDaemon();
     // V3LcapMessage.decode needs idmgr
     daemon.getIdentityManager().startService();
+    scomm = new MyBlockingStreamComm();
+    scomm.initService(daemon);
+    daemon.setStreamCommManager(scomm);
     rtr = new MyLcapRouter();
+    rtr.initService(daemon);
+    daemon.setRouterManager(rtr);
+    rtr.startService();
     pid1 = newPI(IDUtil.ipAddrToKey("129.3.3.3", "4321"));
+    pid2 = newPI(IDUtil.ipAddrToKey("129.3.3.33", "1234"));
   }
 
   public void tearDown() throws Exception {
@@ -82,13 +91,25 @@ public class TestLcapRouter extends LockssTestCase {
 
   public void testMakePeerMessage() throws Exception {
     V3LcapMessage lmsg =
-      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir,
-                                              getMockLockssDaemon());
+      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir, daemon);
     PeerMessage pmsg = rtr.makePeerMessage(lmsg);
     assertNull(pmsg.getSender());
     pmsg.setSender(pid1);
     V3LcapMessage msg2 = rtr.makeV3LcapMessage(pmsg);
     assertEqualMessages(lmsg, msg2);
+  }
+
+  public void testNoRateLimiter() throws Exception {
+    TimeBase.setSimulated(1000);
+    V3LcapMessage lmsg =
+      LcapMessageTestUtil.makeTestVoteMessage(pid1, tempDir, daemon);
+
+    rtr.sendTo(lmsg, pid1);
+    assertEquals(1, scomm.sentMsgs.size());
+    for (int ix = 0; ix < 100; ix++) {
+      rtr.sendTo(lmsg, pid1);
+    }
+    assertEquals(101, scomm.sentMsgs.size());
   }
 
   private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b)
@@ -121,5 +142,22 @@ public class TestLcapRouter extends LockssTestCase {
     PeerMessage newPeerMessage(long estSize) {
       return new MemoryPeerMessage();
     }
+  }
+  static class MyBlockingStreamComm extends BlockingStreamComm {
+
+    List <PeerMessage>sentMsgs = new ArrayList <PeerMessage>();
+
+    @Override
+    protected boolean isRunning() {
+      return true;
+    }
+
+    @Override
+      protected void sendToChannel(PeerMessage msg, PeerIdentity id)
+	throws IOException {
+      sentMsgs.add(msg);
+    }
+
+
   }
 }

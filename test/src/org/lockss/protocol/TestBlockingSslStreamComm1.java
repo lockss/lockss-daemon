@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingSslStreamComm1.java,v 1.14 2010-11-29 07:26:27 tlipkis Exp $
+ * $Id: TestBlockingSslStreamComm1.java,v 1.15 2011-01-10 09:14:39 tlipkis Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
     comm1.setAssocQueue(assocQ);
     // delay comm2's accept()
     comm2.setAcceptSem(sem2);
-    comm1.sendTo(msg1, pid2, null);
+    comm1.sendTo(msg1, pid2);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
     // Timeout might happen before channel reads 1st message (or even
     // before it reads the peerid).  If this happens no message will be
@@ -244,7 +244,7 @@ public class TestBlockingSslStreamComm1 extends TestBlockingStreamComm {
 
     PeerMessage msgIn;
     msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 10);
-    comm1.sendTo(msg1, pid2, null);
+    comm1.sendTo(msg1, pid2);
     if (comm1.isSsl()) {
       if (comm1.isClientAuth()) {
 	Object hs = hsq1.get(TIMEOUT_SHOULDNT);

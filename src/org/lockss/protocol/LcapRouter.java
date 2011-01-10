@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.52 2009-01-21 04:07:01 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.53 2011-01-10 09:14:39 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class LcapRouter
 
   private static final String PREFIX =
     Configuration.PREFIX + "comm.";
+  /** Path to directory to store temporary files holding V3 LCAP message
+   * data */
   private static final String PARAM_V3_LCAP_MESSAGE_DATA_DIR =
     PREFIX + "v3LcapMessageDataDir";
   private static final String DEFAULT_V3_LCAP_MESSAGE_DATA_DIR =
@@ -110,16 +112,16 @@ public class LcapRouter
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     if (changedKeys.contains(PARAM_V3_LCAP_MESSAGE_DATA_DIR)) {
-        String paramDataDir = config.get(PARAM_V3_LCAP_MESSAGE_DATA_DIR,
-                                         PlatformUtil.getSystemTempDir());
-        File dir = new File(paramDataDir);
-        if (FileUtil.ensureDirExists(dir)) {
-          dataDir = dir;
-          log.debug2("V3LcapMessage data dir: " + dataDir);
-        } else {
-          log.warning("No V3LcapMessage data dir: " + dir);
-          dataDir = null;
-        }
+      String paramDataDir = config.get(PARAM_V3_LCAP_MESSAGE_DATA_DIR,
+				       PlatformUtil.getSystemTempDir());
+      File dir = new File(paramDataDir);
+      if (FileUtil.ensureDirExists(dir)) {
+	dataDir = dir;
+	log.debug2("V3LcapMessage data dir: " + dataDir);
+      } else {
+	log.warning("No V3LcapMessage data dir: " + dir);
+	dataDir = null;
+      }
     }
   }
 
@@ -152,7 +154,7 @@ public class LcapRouter
   public void sendTo(V3LcapMessage msg, PeerIdentity id)
       throws IOException {
     PeerMessage pm = makePeerMessage(msg);
-    scomm.sendTo(pm, id, null);
+    scomm.sendTo(pm, id);
   }
 
   /** Encode a V3LcapMessage into a PeerMessage */

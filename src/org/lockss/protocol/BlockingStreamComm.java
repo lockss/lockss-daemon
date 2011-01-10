@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.52 2010-07-21 06:09:23 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.53 2011-01-10 09:14:39 tlipkis Exp $
  */
 
 /*
@@ -187,6 +187,20 @@ public class BlockingStreamComm
     PREFIX + "maxMessageSize";
   public static final long DEFAULT_MAX_MESSAGE_SIZE = 1024 * 1024 * 1024;
 
+  /** Per-peer message send rate limit.  Messages queued for send in excess
+   * of this rate will be discarded and counted */
+  public static final String PARAM_PEER_SEND_MESSAGE_RATE_LIMIT =
+    PREFIX + "peerSendMessageRateLimit";
+  public static final String DEFAULT_PEER_SEND_MESSAGE_RATE_LIMIT =
+    "unlimited";
+
+  /** Per-peer message receive rate limit.  Messages received in excess of
+   * this rate will be discarded and counted */
+  public static final String PARAM_PEER_RECEIVE_MESSAGE_RATE_LIMIT =
+    PREFIX + "peerReceiveMessageRateLimit";
+  public static final String DEFAULT_PEER_RECEIVE_MESSAGE_RATE_LIMIT =
+    "unlimited";
+
   /** Rough transmission speed will be measured for messages at least this
    * large, reported at debug level */
   public static final String PARAM_MIN_MEASURED_MESSAGE_SIZE =
@@ -316,6 +330,14 @@ public class BlockingStreamComm
 
   private Vector messageHandlers = new Vector(); // Vector is synchronized
 
+  private boolean anyRateLimited;
+  private RateLimiter.LimiterMap sendRateLimiters =
+    new RateLimiter.LimiterMap(PARAM_PEER_SEND_MESSAGE_RATE_LIMIT,
+			       DEFAULT_PEER_SEND_MESSAGE_RATE_LIMIT);
+  private RateLimiter.LimiterMap receiveRateLimiters =
+    new RateLimiter.LimiterMap(PARAM_PEER_RECEIVE_MESSAGE_RATE_LIMIT,
+			       DEFAULT_PEER_RECEIVE_MESSAGE_RATE_LIMIT);
+
   int nPrimary = 0;
   int nSecondary = 0;
   int maxPrimary = 0;
@@ -351,7 +373,8 @@ public class BlockingStreamComm
     private int acceptCnt = 0;		// Number of incoming connections
     
     int msgsSent = 0;
-    int msgsDiscarded = 0;
+    int sendRateLimited = 0;
+    int rcvRateLimited = 0;
     int msgsRcvd = 0;
     int lastSendRpt = 0;
 
@@ -411,8 +434,17 @@ public class BlockingStreamComm
       return msgsSent;
     }
     
-    int getMsgsDiscarded() {
-      return msgsDiscarded;
+    int getSendRateLimited() {
+      return sendRateLimited;
+    }
+    
+    int getRcvRateLimited() {
+      return rcvRateLimited;
+    }
+    
+    void rcvRateLimited() {
+      rcvRateLimited++;
+      anyRateLimited = true;
     }
     
     int getMsgsRcvd() {
@@ -500,6 +532,17 @@ public class BlockingStreamComm
     }
 
     synchronized void send(PeerMessage msg) throws IOException {
+      RateLimiter limiter = getSendRateLimiter(pid);
+      if (limiter != null) {
+	if (!limiter.isEventOk()) {
+	  sendRateLimited++;
+	  anyRateLimited = true;
+	  log.debug2("Pkt rate limited");
+	  return;
+	} else {
+	  limiter.event();
+	}
+      }
       if (sendQueue != null) {
 	// If queue exists, we're already waiting for connection retry.
 	if (primary != null) {
@@ -642,7 +685,7 @@ public class BlockingStreamComm
 				 Queue queue,
 				 boolean shouldRetry) {
       // Don't cause trouble if shutting down (happens in unit tests).
-      if (!running || queue == null || queue.isEmpty()) {
+      if (!isRunning() || queue == null || queue.isEmpty()) {
 	return;
       }
       failCnt++;
@@ -796,6 +839,7 @@ public class BlockingStreamComm
     idMgr = daemon.getIdentityManager();
     keystoreMgr = daemon.getKeystoreManager();
     resetConfig();
+    anyRateLimited = false;
     try {
       myPeerId = getLocalPeerIdentity();
     } catch (Exception e) {
@@ -833,7 +877,7 @@ public class BlockingStreamComm
     StatusService statSvc = getDaemon().getStatusService();
     statSvc.unregisterStatusAccessor(getStatusAccessorName("SCommChans"));
     statSvc.unregisterStatusAccessor(getStatusAccessorName("SCommPeers"));
-    if (running) {
+    if (isRunning()) {
       stop();
     }
     super.stopService();
@@ -842,7 +886,7 @@ public class BlockingStreamComm
 
   /**
    * Set communication parameters from configuration, once only.
-   * This service currently cannot be reconfigured.
+   * Some aspects of this service currently cannot be reconfigured.
    * @param config the Configuration
    */
   public void setConfig(Configuration config,
@@ -857,6 +901,11 @@ public class BlockingStreamComm
       }
       // the following params can be changed on the fly
       if (changedKeys.contains(PREFIX)) {
+	if (enabled && isRunning() &&
+	    !config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
+	  stopService();
+	}
+
 	paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
 						DEFAULT_MIN_FILE_MESSAGE_SIZE);
 	paramMaxMessageSize = config.getLong(PARAM_MAX_MESSAGE_SIZE,
@@ -921,6 +970,12 @@ public class BlockingStreamComm
 
 	paramAbortOnUnknownOp = config.getBoolean(PARAM_ABORT_ON_UNKNOWN_OP,
 						  DEFAULT_ABORT_ON_UNKNOWN_OP);
+	if (changedKeys.contains(PARAM_PEER_SEND_MESSAGE_RATE_LIMIT)) {
+	  sendRateLimiters.resetRateLimiters(config);
+	}
+	if (changedKeys.contains(PARAM_PEER_RECEIVE_MESSAGE_RATE_LIMIT)) {
+	  receiveRateLimiters.resetRateLimiters(config);
+	}
       }
     }
   }
@@ -1202,29 +1257,40 @@ public class BlockingStreamComm
     }
   }
 
+  void rcvRateLimited(PeerIdentity pid) {
+    PeerData pdata = getPeerData(pid);
+    if (pdata != null) {
+      pdata.rcvRateLimited();
+    }    
+  }
+
+
   /** Send a message to a peer.
    * @param msg the message to send
    * @param id the identity of the peer to which to send the message
    * @throws IOException if message couldn't be queued
    */
-  public void sendTo(PeerMessage msg, PeerIdentity id, RateLimiter limiter)
+  public void sendTo(PeerMessage msg, PeerIdentity id)
       throws IOException {
-    if (!running) throw new IllegalStateException("SComm not running");
+    if (!isRunning()) throw new IllegalStateException("SComm not running");
     if (msg == null) throw new NullPointerException("Null message");
     if (id == null) throw new NullPointerException("Null peer");
     if (log.isDebug3()) log.debug3("sending "+ msg +" to "+ id);
-    if (limiter == null || limiter.isEventOk()) {
-      sendToChannel(msg, id);
-      if (limiter != null) limiter.event();
-    } else {
-      log.debug2("Pkt rate limited");
-    }
+    sendToChannel(msg, id);
   }
 
-  private void sendToChannel(PeerMessage msg, PeerIdentity id)
+  protected void sendToChannel(PeerMessage msg, PeerIdentity id)
       throws IOException {
     PeerData pdata = findPeerData(id);
     pdata.send(msg);
+  }
+
+  RateLimiter getSendRateLimiter(PeerIdentity id) {
+    return sendRateLimiters.getRateLimiter(id);
+  }
+
+  RateLimiter getReceiveRateLimiter(PeerIdentity id) {
+    return receiveRateLimiters.getRateLimiter(id);
   }
 
   BlockingPeerChannel findOrMakeChannel(PeerIdentity id) throws IOException {
@@ -1270,6 +1336,10 @@ public class BlockingStreamComm
     ensureRetryThread();
     ensureListener();
     running = true;
+  }
+
+  protected boolean isRunning() {
+    return running;
   }
 
   // stop all threads and channels
@@ -2012,6 +2082,10 @@ public class BlockingStreamComm
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("Accept", "Accept",
 				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("Sent", "Msgs Sent",
+				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("Rcvd", "Msgs Rcvd",
+				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("Chan", "Chan",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("SendQ", "Send Q",
@@ -2020,6 +2094,14 @@ public class BlockingStreamComm
 				       ColumnDescriptor.TYPE_DATE),
 		  new ColumnDescriptor("NextRetry", "Next Retry",
 				       ColumnDescriptor.TYPE_DATE)
+		  );
+
+  private static final List rateLimitColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("SendLimited", "Send Discard",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("RcvLimited", "Rcv Discard",
+				       ColumnDescriptor.TYPE_STRING)
 		  );
 
   private static final List peerStatusSortRules =
@@ -2039,7 +2121,12 @@ public class BlockingStreamComm
 
     public void populateTable(StatusTable table) {
       String key = table.getKey();
-      table.setColumnDescriptors(peerStatusColDescs);
+      if (anyRateLimited) {
+	table.setColumnDescriptors(ListUtil.append(peerStatusColDescs,
+						   rateLimitColDescs));
+      } else {
+	table.setColumnDescriptors(peerStatusColDescs);
+      }
       table.setDefaultSortRules(peerStatusSortRules);
       table.setRows(getRows(key));
       table.setSummaryInfo(getSummaryInfo(key));
@@ -2060,6 +2147,12 @@ public class BlockingStreamComm
       row.put("Orig", pdata.getOrigCnt());
       row.put("Fail", pdata.getFailCnt());
       row.put("Accept", pdata.getAcceptCnt());
+      row.put("Sent", pdata.getMsgsSent());
+      row.put("Rcvd", pdata.getMsgsRcvd());
+      if (anyRateLimited) {
+	row.put("SendLimited", pdata.getSendRateLimited());
+	row.put("RcvLimited", pdata.getRcvRateLimited());
+      }
       StringBuilder sb = new StringBuilder(2);
       if (pdata.getPrimaryChannel() != null) {
 	sb.append("P");

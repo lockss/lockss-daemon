@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.29 2009-11-03 05:56:06 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.30 2011-01-10 09:14:39 tlipkis Exp $
  */
 
 /*
@@ -740,8 +740,17 @@ class BlockingPeerChannel implements PeerChannel {
       // update lastActiveTime *before* queuing message; produces more
       // predictable behavior when running in simulated time in unit tests
       lastRcvTime = lastActiveTime = TimeBase.nowMs();
-      rcvQueue.put(msg);
-      stats.rcvdMsg();
+      RateLimiter limiter = scomm.getReceiveRateLimiter(peer);
+      if (limiter == null || limiter.isEventOk()) {
+	if (limiter != null) {
+	  limiter.event();
+	}
+	rcvQueue.put(msg);
+	stats.rcvdMsg();
+      } else {
+	scomm.rcvRateLimited(peer);
+	log.debug3("rcv rate limited");
+      }
     } catch (IOException e) {
       msg.delete();
       throw e;

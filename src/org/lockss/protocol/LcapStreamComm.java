@@ -1,5 +1,5 @@
 /*
- * $Id: LcapStreamComm.java,v 1.3 2009-07-22 06:40:21 tlipkis Exp $
+ * $Id: LcapStreamComm.java,v 1.4 2011-01-10 09:14:39 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,10 @@ import org.lockss.plugin.*;
  */
 public interface LcapStreamComm extends PeerMessage.Factory {
   static final String PREFIX = Configuration.PREFIX + "scomm.";
+
+  /** If true at startup, V3 LCAP communication will be started.  If set
+   * false while running comm will be stopped cannot be restarted without
+   * restarting the daemon */
   static final String PARAM_ENABLED = PREFIX + "enabled";
   static final boolean DEFAULT_ENABLED = true;
 
@@ -80,7 +84,7 @@ public interface LcapStreamComm extends PeerMessage.Factory {
    * @param id the identity of the peer to which to send the message
    * @throws IOException
    */
-  public void sendTo(PeerMessage msg, PeerIdentity id, RateLimiter limiter)
+  public void sendTo(PeerMessage msg, PeerIdentity id)
       throws IOException;
 
   /** Return true iff all connections are authenticated; <i>ie</i>, we only
