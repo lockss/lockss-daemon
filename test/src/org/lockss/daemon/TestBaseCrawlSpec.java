@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawlSpec.java,v 1.7 2007-09-24 18:37:13 dshr Exp $
+ * $Id: TestBaseCrawlSpec.java,v 1.8 2011-01-10 09:09:01 tlipkis Exp $
  */
 
 /*
@@ -145,6 +145,17 @@ public class TestBaseCrawlSpec extends LockssTestCase {
     assertTrue(cs1.inCrawlWindow());
     window.setAllowCrawl(false);
     assertFalse(cs1.inCrawlWindow());
+  }
+
+  public void testCookiePolicy() throws LockssRegexpException {
+    BaseCrawlSpec cs1 =
+      new TestableBaseCrawlSpec(ListUtil.list("foo"),
+				new CrawlRules.RE("foo[12]*",
+						  CrawlRules.RE.MATCH_INCLUDE),
+				null, null);
+    assertNull(cs1.getCookiePolicy());
+    cs1.setCookiePolicy("compatibility");
+    assertEquals("compatibility", cs1.getCookiePolicy());
   }
 
   public void testArcFilePattern() {

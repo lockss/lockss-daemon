@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.23 2011-01-08 15:37:32 pgust Exp $
+ * $Id: CrawlSpec.java,v 1.24 2011-01-10 09:09:01 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,18 @@ public interface CrawlSpec {
    * @return pattern to recognize archive files to be exploded
    */
   public String getExploderPattern();
+
+  /**
+   * Return the cookie policy specified by the plugin, if any.
+   * @see org.lockss.util.urlconn.LockssUrlConnection#setCookiePolicy(String)
+   */
+  public String getCookiePolicy();
+
+  /**
+   * Set the cookie policy that should be used when crawling.
+   * @see org.lockss.util.urlconn.LockssUrlConnection#setCookiePolicy(String)
+   */
+  public void setCookiePolicy(String policy);
 
   // XXX temporary
   public void setExploderPattern(String pat);
