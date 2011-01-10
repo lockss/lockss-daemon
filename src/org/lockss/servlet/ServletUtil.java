@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.65 2011-01-06 18:32:53 neilmayo Exp $
+ * $Id: ServletUtil.java,v 1.66 2011-01-10 09:14:57 tlipkis Exp $
  */
 
 /*
@@ -787,7 +787,6 @@ public class ServletUtil {
                                   String heading,
                                   boolean isLargeLogo,
                                   String machineName,
-                                  String machineNameClientAddr,
                                   Date startDate,
                                   Iterator descrIterator) {
     Composite comp = new Composite();
@@ -835,7 +834,7 @@ public class ServletUtil {
     table.add(since);
 
     table.newCell("valign=\"center\" align=\"center\" width=\"20%\"");
-    layoutNavTable(servlet, table, descrIterator, machineNameClientAddr);
+    layoutNavTable(servlet, table, descrIterator);
     comp.add(table);
     comp.add("<br>");
     page.add(comp);
@@ -1534,8 +1533,7 @@ public class ServletUtil {
   // Build servlet navigation table
   private static void layoutNavTable(LockssServlet servlet,
                                      Table outerTable,
-                                     Iterator descrIterator,
-                                     String machineNameClientAddr) {
+                                     Iterator descrIterator) {
     final String NAVTABLE_CELL_WIDTH = "width=\"15\"";
 
     Table navTable = new Table(NAVTABLE_TABLE_BORDER, NAVTABLE_ATTRIBUTES);

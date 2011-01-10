@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.116 2010-02-24 03:29:33 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.117 2011-01-10 09:14:57 tlipkis Exp $
  */
 
 /*
@@ -397,34 +397,42 @@ public abstract class LockssServlet extends HttpServlet
     return ip;
   }
 
-  String getMachineName() {
-    if (myName == null) {
-      // Return the canonical name of the interface the request was aimed
-      // at.  (localIPAddress prop isn't necessarily right here, as it
-      // might be the address of a NAT that we're behind.)
-      String host = reqURL.getHost();
-      try {
-	IPAddr localHost = IPAddr.getByName(host);
-	String ip = localHost.getHostAddress();
-	myName = getMachineName(ip);
-      } catch (UnknownHostException e) {
-	// shouldn't happen
-	log.error("getMachineName", e);
-	return host;
-      }
-    }
-    return myName;
+  String getRequestHost() {
+    return reqURL.getHost();
   }
 
-  String getMachineName(String ip) {
-    try {
-      IPAddr inet = IPAddr.getByName(ip);
-      return inet.getHostName();
-    } catch (UnknownHostException e) {
-      log.warning("getMachineName", e);
-    }
-    return ip;
+  String getMachineName() {
+    return PlatformUtil.getLocalHostname();
   }
+
+//   String getMachineName0() {
+//     if (myName == null) {
+//       // Return the canonical name of the interface the request was aimed
+//       // at.  (localIPAddress prop isn't necessarily right here, as it
+//       // might be the address of a NAT that we're behind.)
+//       String host = reqURL.getHost();
+//       try {
+// 	IPAddr localHost = IPAddr.getByName(host);
+// 	String ip = localHost.getHostAddress();
+// 	myName = getMachineName(ip);
+//       } catch (UnknownHostException e) {
+// 	// shouldn't happen
+// 	log.error("getMachineName", e);
+// 	return host;
+//       }
+//     }
+//     return myName;
+//   }
+
+//   String getMachineName(String ip) {
+//     try {
+//       IPAddr inet = IPAddr.getByName(ip);
+//       return inet.getHostName();
+//     } catch (UnknownHostException e) {
+//       log.warning("getMachineName", e);
+//     }
+//     return ip;
+//   }
 
   // return IP given name or IP
   String getMachineIP(String name) {
@@ -563,7 +571,7 @@ public abstract class LockssServlet extends HttpServlet
   /** Construct servlet absolute URL, with params as necessary.
    */
   String srvAbsURL(ServletDescr d, String params) {
-    return srvURL(getMachineName(), d, params);
+    return srvURL(getRequestHost(), d, params);
   }
 
   /** Construct servlet URL, with params as necessary.  Avoid generating a
@@ -754,7 +762,6 @@ public abstract class LockssServlet extends HttpServlet
                              heading,
                              isLargeLogo(),
                              getMachineName(),
-                             getMachineName(clientAddr),
                              getLockssApp().getStartDate(),
                              inNavIterator);
     String warnMsg = CurrentConfig.getParam(PARAM_UI_WARNING);
