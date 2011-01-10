@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.104 2011-01-08 16:09:17 pgust Exp $
+ * $Id: LockssDaemon.java,v 1.105 2011-01-10 09:07:59 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ import org.apache.commons.collections.map.LinkedMap;
 public class LockssDaemon extends LockssApp {
   private static Logger log = Logger.getLogger("LockssDaemon");
 
-//  private static final String PREFIX = Configuration.PREFIX + "daemon.";
+  private static final String PREFIX = Configuration.PREFIX + "daemon.";
 
   public static final float MIN_JAVA_VERSION = 1.5f;
 
@@ -81,11 +81,10 @@ public class LockssDaemon extends LockssApp {
  */
 private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
-  public final static String PARAM_TESTING_MODE =
-    Configuration.PREFIX + "daemon.testingMode";
+  public final static String PARAM_TESTING_MODE = PREFIX + "testingMode";
 
   static final String PARAM_DAEMON_DEADLINE_REASONABLE =
-    Configuration.PREFIX + "daemon.deadline.reasonable.";
+    PREFIX + "deadline.reasonable.";
   static final String PARAM_DAEMON_DEADLINE_REASONABLE_PAST =
     PARAM_DAEMON_DEADLINE_REASONABLE + "past";
   static final long DEFAULT_DAEMON_DEADLINE_REASONABLE_PAST = Constants.SECOND;

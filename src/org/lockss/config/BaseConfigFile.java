@@ -1,5 +1,5 @@
 /*
- * $Id: BaseConfigFile.java,v 1.10 2010-11-29 07:24:33 tlipkis Exp $
+ * $Id: BaseConfigFile.java,v 1.11 2011-01-10 09:07:58 tlipkis Exp $
  */
 
 /*
@@ -299,7 +299,7 @@ public abstract class BaseConfigFile implements ConfigFile {
   protected abstract InputStream openInputStream() throws IOException;
 
   /**
-   * Return the new las-modified time
+   * Return the new last-modified time
    */
   protected abstract String calcNewLastModified();
 
