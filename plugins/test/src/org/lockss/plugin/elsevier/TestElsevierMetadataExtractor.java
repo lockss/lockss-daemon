@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierMetadataExtractor.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: TestElsevierMetadataExtractor.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -111,9 +111,10 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
     Plugin plugin = eau.getPlugin();
     String articleMimeType = "application/pdf";
     ArticleMetadataExtractor me = plugin.getArticleMetadataExtractor(null, eau);
-    assertTrue(""+me,
-	       me instanceof ElsevierArticleIteratorFactory.ElsevierArticleMetadataExtractor);
+    ArticleMetadataListExtractor mle =
+      new ArticleMetadataListExtractor(me);
     int count = 0;
+    Set foundDoiSet = new HashSet();
     for (Iterator<ArticleFiles> it = eau.getArticleIterator(); it.hasNext(); ) {
       ArticleFiles af = it.next();
       assertNotNull(af);
@@ -128,17 +129,28 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
       assertTrue("XML cu is " + contentType + " (" + xcu + ")",
 		 contentType.toLowerCase().startsWith("text/xml"));
       count++;
-      ArticleMetadata md = me.extract(af);
+      List<ArticleMetadata> mdlist = mle.extract(af);
+      assertNotEmpty(mdlist);
+      ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
-      String doi = md.getDOI();
-      assertNotNull(doi);
+      String doi = md.get(MetadataField.FIELD_DOI);
       log.debug(fcu.getUrl() + " doi " + doi);
-      String doi2 = md.getProperty(ArticleMetadata.KEY_DOI);
-      assertTrue(doi2.startsWith(ArticleMetadata.PROTOCOL_DOI));
-      assertEquals(doi, doi2.substring(ArticleMetadata.PROTOCOL_DOI.length()));
+      assertTrue(MetadataUtil.isDOI(doi));
+      foundDoiSet.add(doi);
     }
     log.debug("Article count is " + count);
     assertEquals(28, count);
+    assertEquals(SetUtil.set("10.0001/1-3", "10.0004/1-2", "10.0004/1-3",
+			     "10.0001/1-2", "10.0004/1-1", "10.0001/1-1",
+			     "10.0001/0-0", "10.0006/1-3", "10.0006/1-2",
+			     "10.0003/1-3", "10.0003/1-2", "10.0003/1-1",
+			     "10.0006/1-1", "10.0003/0-0", "10.0005/1-3",
+			     "10.0007/0-0", "10.0002/0-0", "10.0005/1-2",
+			     "10.0005/1-1", "10.0005/0-0", "10.0007/1-1",
+			     "10.0007/1-2", "10.0007/1-3", "10.0006/0-0",
+			     "10.0002/1-1", "10.0002/1-3", "10.0002/1-2",
+			     "10.0004/0-0"),
+		 foundDoiSet);
   }
 
 }

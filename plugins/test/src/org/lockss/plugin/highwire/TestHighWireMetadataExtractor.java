@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.11 2010-08-23 16:38:47 dsferopoulos Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.12 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -225,22 +225,26 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       new HighWireHtmlMetadataExtractorFactory.HighWireHtmlMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
-    ArticleMetadata md = me.extract(cu);
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertEquals(goodDOI, md.getDOI());
-    assertEquals(goodVolume, md.getVolume());
-    assertEquals(goodIssue, md.getIssue());
-    assertEquals(goodStartPage, md.getStartPage());
-    assertEquals(goodISSN, md.getISSN());
+    assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
     goodAuthor = goodAuthor.replaceAll(", ", " ");
     goodAuthor = goodAuthor.replaceAll(";", ",");
-    assertEquals(goodAuthor, md.getAuthor());
-    assertEquals(goodArticleTitle, md.getArticleTitle());
-    assertEquals(goodJournalTitle, md.getJournalTitle());    
+    assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     
-    assertEquals(goodDate, md.getDate());
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
     for (int i = 1; i < dublinCoreField.length; i++) {
-      assertEquals(dublinCoreValue[i], md.getProperty(dublinCoreField[i]));
+      assertEquals(dublinCoreValue[i], md.getRaw(dublinCoreField[i]));
     }
   }
 
@@ -260,21 +264,25 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       new HighWireHtmlMetadataExtractorFactory.HighWireHtmlMetadataExtractor();
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
-    ArticleMetadata md = me.extract(cu);
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
-    assertNull(md.getDOI());
-    assertNull(md.getVolume());
-    assertNull(md.getIssue());
-    assertNull(md.getStartPage());
-    assertNull(md.getISSN());
-    assertNull(md.getAuthor());
-    assertNull(md.getArticleTitle());
-    assertNull(md.getDate());
+    assertNull(md.get(MetadataField.FIELD_DOI));
+    assertNull(md.get(MetadataField.FIELD_VOLUME));
+    assertNull(md.get(MetadataField.FIELD_ISSUE));
+    assertNull(md.get(MetadataField.FIELD_START_PAGE));
+    assertNull(md.get(MetadataField.FIELD_ISSN));
+    assertNull(md.get(MetadataField.FIELD_AUTHOR));
+    assertNull(md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertNull(md.get(MetadataField.FIELD_DATE));
     for (int i = 1; i < dublinCoreField.length; i++) {
-      assertNull(md.getProperty(dublinCoreField[i]));
+      assertNull(md.getRaw(dublinCoreField[i]));
     }
-    assertEquals(1, md.size());
-    assertEquals("bar", md.getProperty("foo"));
+    assertEquals(1, md.rawSize());
+    assertEquals("bar", md.getRaw("foo"));
   }
 
 
@@ -288,14 +296,14 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
 
   public void checkMetadata(ArticleMetadata md) {
     String temp = null;
-    temp = (String) md.get("lockss.filenum");
+    temp = (String) md.getRaw("lockss.filenum");
     int fileNum = -1;
     try {
       fileNum = Integer.parseInt(temp);
     } catch (NumberFormatException ex) {
       fail(temp + " caused " + ex);
     }
-    temp = (String) md.get("lockss.depth");
+    temp = (String) md.getRaw("lockss.depth");
     int depth = -1;
     try {
       depth = Integer.parseInt(temp);
@@ -303,7 +311,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
       log.error(temp + " caused " + ex);
       fail();
     }
-    temp = (String) md.get("lockss.branchnum");
+    temp = (String) md.getRaw("lockss.branchnum");
     int branchNum = -1;
     try {
       branchNum = Integer.parseInt(temp);
@@ -321,22 +329,27 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
 						fileNum, depth, branchNum);
       assertNotNull(expected_content);
       log.debug("key: " + expected_name + " value: " + expected_content);
-      String actual_content = (String)md.get(expected_name.toLowerCase());
+      String actual_content = (String)md.getRaw(expected_name.toLowerCase());
       assertNotNull(actual_content);
       log.debug("expected: " + expected_content + " actual: " + actual_content);
       assertEquals(expected_content, actual_content);
     }
     // Do the accessors return the expected values?
     assertEquals(getFieldContent(tagMap.get("citation_issn"), fileNum,
-				 depth, branchNum), md.getISSN());
+				 depth, branchNum),
+		 md.get(MetadataField.FIELD_ISSN));
     assertEquals(getFieldContent(tagMap.get("citation_volume"), fileNum,
-				 depth, branchNum), md.getVolume());
+				 depth, branchNum),
+		 md.get(MetadataField.FIELD_VOLUME));
     assertEquals(getFieldContent(tagMap.get("citation_issue"), fileNum,
-				 depth, branchNum), md.getIssue());
+				 depth, branchNum),
+		 md.get(MetadataField.FIELD_ISSUE));
     assertEquals(getFieldContent(tagMap.get("citation_firstpage"), fileNum,
-				 depth, branchNum), md.getStartPage());
+				 depth, branchNum),
+		 md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(getFieldContent(tagMap.get("dc.Identifier"), fileNum,
-				 depth, branchNum), md.getDOI());
+				 depth, branchNum),
+		 md.get(MetadataField.FIELD_DOI));
   }
 
   public static class MySimulatedPlugin extends SimulatedPlugin {

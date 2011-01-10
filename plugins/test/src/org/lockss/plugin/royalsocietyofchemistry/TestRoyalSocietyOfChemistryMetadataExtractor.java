@@ -3,8 +3,7 @@ package org.lockss.plugin.royalsocietyofchemistry;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.extractor.ArticleMetadataExtractor;
-import org.lockss.extractor.FileMetadataExtractor;
+import org.lockss.extractor.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
@@ -23,9 +22,7 @@ import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import java.io.File;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Two of the articles used to get the html source for this plugin is:
@@ -151,19 +148,27 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    cu.setContentSize(goodContent.length());
 	    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
 	    FileMetadataExtractor me = new RoyalSocietyOfChemistryHtmlMetadataExtractorFactory.RoyalSocietyOfChemistryHtmlExtractor(); 
-	    ArticleMetadata md = me.extract(cu);
+	    FileMetadataListExtractor mle =
+	      new FileMetadataListExtractor(me);
+	    List<ArticleMetadata> mdlist = mle.extract(cu);
+	    assertNotEmpty(mdlist);
+	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);	    
 	    
-	    assertEquals(goodDoiPrefix+"/"+goodDoiSuffix, md.getDOI());
-	    assertEquals(goodDate, md.getVolume()); // year is the volume where volume is not present.
-	    //assertEquals(goodIssue, md.getIssue());
-	    assertEquals(goodStartPage, md.getStartPage());
-	    //assertEquals(goodISSN, md.getISSN());    	    
+	    assertEquals(goodDoiPrefix+"/"+goodDoiSuffix,
+			 md.get(MetadataField.FIELD_DOI));
+	    assertEquals(goodDate, md.get(MetadataField.FIELD_VOLUME)); // year is the volume where volume is not present.
+	    //assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
+	    assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+	    //assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));    	    
 	    
-	    assertEquals(goodAuthors.replaceAll(" and", ","), md.getAuthor());    
-	    assertEquals(goodArticleTitle, md.getArticleTitle());
-	    assertEquals(goodJournalTitle, md.getJournalTitle());
-	    assertEquals(goodDate, md.getDate());    
+	    assertEquals(goodAuthors.replaceAll(" and", ","),
+			 md.get(MetadataField.FIELD_AUTHOR));    
+	    assertEquals(goodArticleTitle,
+			 md.get(MetadataField.FIELD_ARTICLE_TITLE));
+	    assertEquals(goodJournalTitle,
+			 md.get(MetadataField.FIELD_JOURNAL_TITLE));
+	    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));    
 	  }
 
 	  String badContent =
@@ -180,15 +185,19 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    cu.setContentSize(badContent.length());
 	    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
 	    FileMetadataExtractor me = new RoyalSocietyOfChemistryHtmlMetadataExtractorFactory.RoyalSocietyOfChemistryHtmlExtractor();	     
-	    ArticleMetadata md = me.extract(cu);
+	    FileMetadataListExtractor mle =
+	      new FileMetadataListExtractor(me);
+	    List<ArticleMetadata> mdlist = mle.extract(cu);
+	    assertNotEmpty(mdlist);
+	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);
-	    assertNull(md.getDOI());
-	    assertNull(md.getVolume());
-	    assertNull(md.getIssue());
-	    assertNull(md.getStartPage());
-	    assertNull(md.getISSN());	    
-	    assertEquals(1, md.size());
-	    assertEquals("bar", md.getProperty("foo"));
+	    assertNull(md.get(MetadataField.FIELD_DOI));
+	    assertNull(md.get(MetadataField.FIELD_VOLUME));
+	    assertNull(md.get(MetadataField.FIELD_ISSUE));
+	    assertNull(md.get(MetadataField.FIELD_START_PAGE));
+	    assertNull(md.get(MetadataField.FIELD_ISSN));	    
+	    assertEquals(1, md.rawSize());
+	    assertEquals("bar", md.getRaw("foo"));
 	  }	 	 
 
 	  public static class MySimulatedPlugin extends SimulatedPlugin {

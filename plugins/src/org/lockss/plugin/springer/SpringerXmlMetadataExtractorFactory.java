@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -47,79 +47,76 @@ public class SpringerXmlMetadataExtractorFactory
     return new SpringerXmlMetadataExtractor();
   }
 
-  private static final String VOLUME_START = "LOCKSS.Springer.VolumeStart";
-  private static final String VOLUME_END = "LOCKSS.Springer.VolumeEnd";
-  private static final String ISSUE_START = "LOCKSS.Springer.IssueStart";
-  private static final String ISSUE_END = "LOCKSS.Springer.IssueEnd";
-  private static final Map<String, String> tagMap =
-    new HashMap<String, String>();
+  private static final String VOLUME_START = "VolumeIDStart";
+  private static final String VOLUME_END = "VolumeIDEnd";
+  private static final String ISSUE_START = "IssueIDStart";
+  private static final String ISSUE_END = "IssueIDEnd";
+
+  private static final Map tagMap = new HashMap();
   static {
-    tagMap.put("articledoi", "dc.Identifier");
-    tagMap.put("JournalPrintISSN", ArticleMetadata.KEY_ISSN);
-    tagMap.put("VolumeIDStart", VOLUME_START);
-    tagMap.put("VolumeIDEnd", VOLUME_END);
-    tagMap.put("IssueIDStart", ISSUE_START);
-    tagMap.put("IssueIDEnd", ISSUE_END);
-    tagMap.put("ArticleFirstPage", ArticleMetadata.KEY_START_PAGE);
+    tagMap.put("articledoi", ListUtil.list(MetadataField.DC_FIELD_IDENTIFIER,
+					   MetadataField.FIELD_DOI));
+    tagMap.put("JournalPrintISSN", MetadataField.KEY_ISSN);
+    tagMap.put("ArticleFirstPage", MetadataField.KEY_START_PAGE);
   };
 
+  static List tags = ListUtil.list(VOLUME_START, VOLUME_END,
+				   ISSUE_START, ISSUE_END);
+  static {
+    tags.addAll(tagMap.keySet());
+  }
 
   public static class SpringerXmlMetadataExtractor
     extends SimpleXmlMetadataExtractor {
 
     public SpringerXmlMetadataExtractor() {
-      super(tagMap);
+      super(tags);
     }
 
     public ArticleMetadata extract(CachedUrl xmlCu) throws IOException {
-      ArticleMetadata ret = super.extract(xmlCu);
+      ArticleMetadata am = super.extract(xmlCu);
+      am.cook(tagMap);
       // Springer doesn't prefix the DOI in dc.Identifier with doi:
-      String doi = ret.getProperty("dc.Identifier");
-      if (doi != null) {
-	log.debug3(xmlCu.getUrl() + " DOI " + doi);
-	ret.putDOI(doi);
-      } else {
-	log.debug3(xmlCu.getUrl() + " no DOI");
-      }
-      String start = ret.getProperty(VOLUME_START);
-      String end = ret.getProperty(VOLUME_END);
+
+      String start = am.getRaw(VOLUME_START);
+      String end = am.getRaw(VOLUME_END);
       if (start != null) {
 	if (end != null) {
 	  if (end.equals(start)) {
 	    log.debug3(xmlCu.getUrl() + " " + VOLUME_START + "=" + start);
-	    ret.putVolume(start);
+	    am.put(MetadataField.FIELD_VOLUME, start);
 	  } else {
 	    log.debug3(xmlCu.getUrl() + " " + VOLUME_START + " " + start +
 		       " " + VOLUME_END + end);
-	    ret.putVolume(start + "-" + end);
+	    am.put(MetadataField.FIELD_VOLUME, start + "-" + end);
 	  }
 	} else {
 	  log.debug3(xmlCu.getUrl() + " " + VOLUME_START + " " + start);
-	  ret.putVolume(start);
+	  am.put(MetadataField.FIELD_VOLUME, start);
 	}
       } else {
 	log.debug3(xmlCu.getUrl() + " no " + VOLUME_START);
       }
-      start = ret.getProperty(ISSUE_START);
-      end = ret.getProperty(ISSUE_END);
+      start = am.getRaw(ISSUE_START);
+      end = am.getRaw(ISSUE_END);
       if (start != null) {
 	if (end != null) {
 	  if (end.equals(start)) {
 	    log.debug3(xmlCu.getUrl() + " " + ISSUE_START + "=" + start);
-	    ret.putIssue(start);
+	    am.put(MetadataField.FIELD_ISSUE, start);
 	  } else {
 	    log.debug3(xmlCu.getUrl() + " " + ISSUE_START + " " + start +
 		       " " + ISSUE_END + end);
-	    ret.putIssue(start + "-" + end);
+	    am.put(MetadataField.FIELD_ISSUE, start + "-" + end);
 	  }
 	} else {
 	  log.debug3(xmlCu.getUrl() + " " + ISSUE_START + " " + start);
-	  ret.putIssue(start);
+	  am.put(MetadataField.FIELD_ISSUE, start);
 	}
       } else {
 	log.debug3(xmlCu.getUrl() + " no " + ISSUE_START);
       }
-      return ret;
+      return am;
     }
   }
 }

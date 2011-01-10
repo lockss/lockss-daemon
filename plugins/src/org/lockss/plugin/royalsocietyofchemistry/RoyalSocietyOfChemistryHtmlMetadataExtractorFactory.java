@@ -8,9 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
-import org.lockss.extractor.FileMetadataExtractor;
-import org.lockss.extractor.FileMetadataExtractorFactory;
-import org.lockss.extractor.SimpleMetaTagMetadataExtractor;
+import org.lockss.extractor.*;
 import org.lockss.plugin.ArticleMetadata;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.IOUtil;
@@ -74,7 +72,7 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 					
 					// title is of form: <title>MyJournalTitle articles</title>
 					if(StringUtil.startsWithIgnoreCase(line, "<title>")){
-						ret.putJournalTitle(line.substring(7, line.length()-17)); // take out the 'articles' word at the end of the title						
+						ret.put(MetadataField.FIELD_JOURNAL_TITLE, line.substring(7, line.length()-17)); // take out the 'articles' word at the end of the title						
 					}
 					
 					// It's possible that the chunk of html code is splitted in various lines. Regex cannot match multi line text so constract one string
@@ -99,22 +97,22 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 				// In that case the year represents the volume
 				if (matcherWithoutVol.find()) {
 					year = matcherWithoutVol.group(1).trim(); 
-					ret.putDate(year);
-					ret.putVolume(year); // where volume is not present, the year represents it.
-					ret.putStartPage(matcherWithoutVol.group(2).trim());
-					ret.putArticleTitle(matcherWithoutVol.group(4).trim());
-					ret.putAuthor(matcherWithoutVol.group(5).trim().replaceAll(" and", ",")); // replace all ands with commas
+					ret.put(MetadataField.FIELD_DATE, year);
+					ret.put(MetadataField.FIELD_VOLUME, year); // where volume is not present, the year represents it.
+					ret.put(MetadataField.FIELD_START_PAGE, matcherWithoutVol.group(2).trim());
+					ret.put(MetadataField.FIELD_ARTICLE_TITLE, matcherWithoutVol.group(4).trim());
+					ret.put(MetadataField.FIELD_AUTHOR, matcherWithoutVol.group(5).trim().replaceAll(" and", ",")); // replace all ands with commas
 				}else{ // if the above does not match then the volume is probably present so attempt to extract it along with the rest of the metadata
 					Pattern patternWithVol = Pattern.compile("(\\d{4}),.*<strong>(\\d*)</strong>,\\s*(\\d*)\\s*-\\s*(\\d*),.*<font color=\"#9C0000\">(.*)</font>.*</span><p><strong>(.*)</strong>");
 					Matcher matcherWithVol = patternWithVol.matcher("");
 					matcherWithVol.reset(metaContent);
 					
 					if(matcherWithVol.find()){
-						ret.putDate(matcherWithVol.group(1).trim());														
-						ret.putVolume(matcherWithVol.group(2).trim());
-						ret.putStartPage(matcherWithVol.group(3).trim());
-						ret.putArticleTitle(matcherWithVol.group(5).trim());
-						ret.putAuthor(matcherWithVol.group(6).trim().replaceAll(" and", ",")); // replace all ands with commas
+						ret.put(MetadataField.FIELD_DATE, matcherWithVol.group(1).trim());														
+						ret.put(MetadataField.FIELD_VOLUME, matcherWithVol.group(2).trim());
+						ret.put(MetadataField.FIELD_START_PAGE, matcherWithVol.group(3).trim());
+						ret.put(MetadataField.FIELD_ARTICLE_TITLE, matcherWithVol.group(5).trim());
+						ret.put(MetadataField.FIELD_AUTHOR, matcherWithVol.group(6).trim().replaceAll(" and", ",")); // replace all ands with commas
 					}
 				}
 				
@@ -136,7 +134,7 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 				URL bioUrl = new URL(url);
 				String doi = bioUrl.getQuery().split("=")[1];
 				// only the DOI suffix is at the URL so we need to concatenate the prefix which is the same in all RSC articles.
-				ret.putDOI(doiPrefix+"/"+doi);				
+				ret.put(MetadataField.FIELD_DOI, doiPrefix+"/"+doi);				
 			} catch (MalformedURLException e) {
 				log.debug(url + " : Malformed URL");
 			} catch (NullPointerException npe){

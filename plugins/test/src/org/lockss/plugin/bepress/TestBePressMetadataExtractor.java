@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.13 2010-08-23 16:38:47 dsferopoulos Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.14 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -54,200 +54,208 @@ import org.lockss.plugin.simulated.*;
  */
 public class TestBePressMetadataExtractor extends LockssTestCase {
 
-	static Logger log = Logger.getLogger("TestBePressMetadataExtractor");
+  static Logger log = Logger.getLogger("TestBePressMetadataExtractor");
 
-	private MockLockssDaemon theDaemon;
-	private SimulatedArchivalUnit sau; // Simulated AU to generate content
-	private ArchivalUnit bau; // BePress AU
-	private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";	
+  private MockLockssDaemon theDaemon;
+  private SimulatedArchivalUnit sau; // Simulated AU to generate content
+  private ArchivalUnit bau; // BePress AU
+  private static final String issnTemplate = "%1%2%3%1-%3%1%2%3";	
 
-	private static String PLUGIN_NAME = "org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin"; // XML file in org.lockss.plugin.bepress package
+  private static String PLUGIN_NAME = "org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin"; // XML file in org.lockss.plugin.bepress package
 
-	private static String BASE_URL = "http://www.bepress.com/";
-	private static String SIM_ROOT = BASE_URL + "xyzjn/";
+  private static String BASE_URL = "http://www.bepress.com/";
+  private static String SIM_ROOT = BASE_URL + "xyzjn/";
 
-	public void setUp() throws Exception {
-		super.setUp();
-		String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-		ConfigurationUtil.setFromArgs(
-				LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    ConfigurationUtil.setFromArgs(
+				  LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
 
-		theDaemon = getMockLockssDaemon();
-		theDaemon.getAlertManager();
-		theDaemon.getPluginManager().setLoadablePluginsReady(true);
-		theDaemon.setDaemonInited(true);
-		theDaemon.getPluginManager().startService();
-		theDaemon.getCrawlManager();
+    theDaemon = getMockLockssDaemon();
+    theDaemon.getAlertManager();
+    theDaemon.getPluginManager().setLoadablePluginsReady(true);
+    theDaemon.setDaemonInited(true);
+    theDaemon.getPluginManager().startService();
+    theDaemon.getCrawlManager();
 
-		sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,	simAuConfig(tempDirPath));
-		bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, bePressAuConfig());
-	}
+    sau = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin.class,	simAuConfig(tempDirPath));
+    bau = PluginTestUtil.createAndStartAu(PLUGIN_NAME, bePressAuConfig());
+  }
 
-	public void tearDown() throws Exception {
-		sau.deleteContentTree();
-		theDaemon.stopDaemon();
-		super.tearDown();
-	}
+  public void tearDown() throws Exception {
+    sau.deleteContentTree();
+    theDaemon.stopDaemon();
+    super.tearDown();
+  }
 
-	Configuration simAuConfig(String rootPath) {
-		Configuration conf = ConfigManager.newConfiguration();
-		conf.put("root", rootPath);
-		conf.put("base_url", SIM_ROOT);
-		conf.put("depth", "2");
-		conf.put("branch", "3");
-		conf.put("numFiles", "7");
-		conf.put("fileTypes",""	+ (SimulatedContentGenerator.FILE_TYPE_PDF + SimulatedContentGenerator.FILE_TYPE_HTML));
-		conf.put("default_article_mime_type", "application/html");
-		return conf;
-	}
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("base_url", SIM_ROOT);
+    conf.put("depth", "2");
+    conf.put("branch", "3");
+    conf.put("numFiles", "7");
+    conf.put("fileTypes",""	+ (SimulatedContentGenerator.FILE_TYPE_PDF + SimulatedContentGenerator.FILE_TYPE_HTML));
+    conf.put("default_article_mime_type", "application/html");
+    return conf;
+  }
 
-	/**
-	 * Configuration method. 
-	 * @return
-	 */
-	Configuration bePressAuConfig() {
-		Configuration conf = ConfigManager.newConfiguration();
-		conf.put("base_url", BASE_URL);
-		conf.put("volume", "1");
-		conf.put("journal_abbr", "xyzjn");
-		return conf;
-	}
+  /**
+   * Configuration method. 
+   * @return
+   */
+  Configuration bePressAuConfig() {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("base_url", BASE_URL);
+    conf.put("volume", "1");
+    conf.put("journal_abbr", "xyzjn");
+    return conf;
+  }
 
-	// the metadata that should be extracted
-	String goodDOI = "10.2202/2153-3792.1037";
-	String goodVolume = "13";
-	String goodIssue = "4";
-	String goodStartPage = "123";
-	String goodISSN = "1234-5678";
-	String goodDate = "4/1/2000";
-	String goodAuthor = "Gandhi, Pankaj J.; Talia, Yogen H.; Murthy, Z.V.P.";
-	String goodArticleTitle = "Spurious Results";
-	String goodJournalTitle = "Chemical Product and Process Modeling";
-	String goodAbsUrl = "http://www.example.com/bogus/vol13/iss4/art123/abs";
-	String goodPdfUrl = "http://www.example.com/bogus/vol13/iss4/art123/pdf";
-	String goodHtmUrl = "http://www.example.com/bogus/vol13/iss4/art123/full";
+  // the metadata that should be extracted
+  String goodDOI = "10.2202/2153-3792.1037";
+  String goodVolume = "13";
+  String goodIssue = "4";
+  String goodStartPage = "123";
+  String goodISSN = "1234-5678";
+  String goodDate = "4/1/2000";
+  String goodAuthor = "Gandhi, Pankaj J.; Talia, Yogen H.; Murthy, Z.V.P.";
+  String goodArticleTitle = "Spurious Results";
+  String goodJournalTitle = "Chemical Product and Process Modeling";
+  String goodAbsUrl = "http://www.example.com/bogus/vol13/iss4/art123/abs";
+  String goodPdfUrl = "http://www.example.com/bogus/vol13/iss4/art123/pdf";
+  String goodHtmUrl = "http://www.example.com/bogus/vol13/iss4/art123/full";
 
-	// a chunk of html source code from the publisher's site from where the metadata should be extracted
-	String goodContent = "<HTML><HEAD><TITLE>"+ goodArticleTitle+ "</TITLE></HEAD><BODY>\n"
-			+ "<meta name=\"bepress_citation_journal_title\" content=\""+ goodJournalTitle+ "\">\n"
-			+ "<meta name=\"bepress_citation_authors\" content=\""+ goodAuthor+ "\">\n"
-			+ "<meta name=\"bepress_citation_title\" content=\""+ goodArticleTitle+ "\">\n"
-			+ "<meta name=\"bepress_citation_date\" content=\""+ goodDate+ "\">\n"
-			+ "<meta name=\"bepress_citation_volume\""+ " content=\""+ goodVolume+ "\">\n"
-			+ "<meta name=\"bepress_citation_issue\" content=\""+ goodIssue	+ "\">\n"
-			+ "<meta name=\"bepress_citation_firstpage\""+ " content=\""+ goodStartPage	+ "\">\n"
-			+ "<meta name=\"bepress_citation_pdf_url\""	+ " content=\""	+ goodPdfUrl + "\">\n"
-			+ "<meta name=\"bepress_citation_abstract_html_url\"" + " content=\"" + goodAbsUrl + "\">\n"
-			+ "<meta name=\"bepress_citation_doi\"" + " content=\""	+ goodDOI + "\">\n"
-			+"<div id=\"issn\">\n" +
-            "<p>ISSN: "+goodISSN+"</p>\n" +
-            "</div>";
+  // a chunk of html source code from the publisher's site from where the metadata should be extracted
+  String goodContent = "<HTML><HEAD><TITLE>"+ goodArticleTitle+ "</TITLE></HEAD><BODY>\n"
+    + "<meta name=\"bepress_citation_journal_title\" content=\""+ goodJournalTitle+ "\">\n"
+    + "<meta name=\"bepress_citation_authors\" content=\""+ goodAuthor+ "\">\n"
+    + "<meta name=\"bepress_citation_title\" content=\""+ goodArticleTitle+ "\">\n"
+    + "<meta name=\"bepress_citation_date\" content=\""+ goodDate+ "\">\n"
+    + "<meta name=\"bepress_citation_volume\""+ " content=\""+ goodVolume+ "\">\n"
+    + "<meta name=\"bepress_citation_issue\" content=\""+ goodIssue	+ "\">\n"
+    + "<meta name=\"bepress_citation_firstpage\""+ " content=\""+ goodStartPage	+ "\">\n"
+    + "<meta name=\"bepress_citation_pdf_url\""	+ " content=\""	+ goodPdfUrl + "\">\n"
+    + "<meta name=\"bepress_citation_abstract_html_url\"" + " content=\"" + goodAbsUrl + "\">\n"
+    + "<meta name=\"bepress_citation_doi\"" + " content=\""	+ goodDOI + "\">\n"
+    +"<div id=\"issn\">\n" +
+    "<p>ISSN: "+goodISSN+"</p>\n" +
+    "</div>";
 	
 		
-	/**
-	 * Method that creates a simulated Cached URL from the source code provided by the goodContent String. It then asserts that the metadata extracted, by using
-	 * the BePressHtmlMetadataExtractorFactory, match the metadata in the source code. 
-	 * @throws Exception
-	 */
-	public void testExtractFromGoodContent() throws Exception {
-		String url = "http://www.example.com/vol1/issue2/art3/";
-		MockCachedUrl cu = new MockCachedUrl(url, bau);
-		cu.setContent(goodContent);
-		cu.setContentSize(goodContent.length());
-		cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-		FileMetadataExtractor me = new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
-		ArticleMetadata md = me.extract(cu);
-		assertNotNull(md);
-		assertEquals(goodDOI, md.getDOI());
-		assertEquals(goodVolume, md.getVolume());
-		assertEquals(goodIssue, md.getIssue());
-		assertEquals(goodStartPage, md.getStartPage());
-		assertEquals(goodISSN, md.getISSN());
+  /**
+   * Method that creates a simulated Cached URL from the source code provided by the goodContent String. It then asserts that the metadata extracted, by using
+   * the BePressHtmlMetadataExtractorFactory, match the metadata in the source code. 
+   * @throws Exception
+   */
+  public void testExtractFromGoodContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
+    cu.setContent(goodContent);
+    cu.setContentSize(goodContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me = new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertEquals(goodDOI, md.get(MetadataField.FIELD_DOI));
+    assertEquals(goodVolume, md.get(MetadataField.FIELD_VOLUME));
+    assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
+    assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
+    assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
 
-		goodAuthor = goodAuthor.replaceAll(",", "");
-		goodAuthor = goodAuthor.replaceAll(";", ",");
+    goodAuthor = goodAuthor.replaceAll(",", "");
+    goodAuthor = goodAuthor.replaceAll(";", ",");
 
-		assertEquals(goodAuthor, md.getAuthor());
-		assertEquals(goodArticleTitle, md.getArticleTitle());
-		assertEquals(goodJournalTitle, md.getJournalTitle());
-		assertEquals(goodDate, md.getDate());
-	}
+    assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
+    assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
+    assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
+  }
 
-	// a chunk of html source code from where the BePressHtmlMetadataExtractorFactory should NOT be able to extract metadata
-	String badContent = "<HTML><HEAD><TITLE>"
-			+ goodArticleTitle
-			+ "</TITLE></HEAD><BODY>\n"
-			+ "<meta name=\"foo\""
-			+ " content=\"bar\">\n"
-			+ "  <div id=\"issn\">"
-			+ "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: "
-			+ goodISSN + " </div>\n";
+  // a chunk of html source code from where the BePressHtmlMetadataExtractorFactory should NOT be able to extract metadata
+  String badContent = "<HTML><HEAD><TITLE>"
+    + goodArticleTitle
+    + "</TITLE></HEAD><BODY>\n"
+    + "<meta name=\"foo\""
+    + " content=\"bar\">\n"
+    + "  <div id=\"issn\">"
+    + "<!-- FILE: /data/templates/www.example.com/bogus/issn.inc -->MUMBLE: "
+    + goodISSN + " </div>\n";
 
-	/**
-	 * Method that creates a simulated Cached URL from the source code provided by the badContent Sring. It then asserts that NO metadata is extracted by using 
-	 * the BePressHtmlMetadataExtractorFactory as the source code is broken.
-	 * @throws Exception
-	 */
-	public void testExtractFromBadContent() throws Exception {
-		String url = "http://www.example.com/vol1/issue2/art3/";
-		MockCachedUrl cu = new MockCachedUrl(url, bau);
-		cu.setContent(badContent);
-		cu.setContentSize(badContent.length());
-		cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-		FileMetadataExtractor me = new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
-		ArticleMetadata md = me.extract(cu);
-		assertNotNull(md);
-		assertNull(md.getDOI());
-		assertNull(md.getVolume());
-		assertNull(md.getIssue());
-		assertNull(md.getStartPage());
-		assertNull(md.getISSN());
+  /**
+   * Method that creates a simulated Cached URL from the source code provided by the badContent Sring. It then asserts that NO metadata is extracted by using 
+   * the BePressHtmlMetadataExtractorFactory as the source code is broken.
+   * @throws Exception
+   */
+  public void testExtractFromBadContent() throws Exception {
+    String url = "http://www.example.com/vol1/issue2/art3/";
+    MockCachedUrl cu = new MockCachedUrl(url, bau);
+    cu.setContent(badContent);
+    cu.setContentSize(badContent.length());
+    cu.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    FileMetadataExtractor me = new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
+    FileMetadataListExtractor mle =
+      new FileMetadataListExtractor(me);
+    List<ArticleMetadata> mdlist = mle.extract(cu);
+    assertNotEmpty(mdlist);
+    ArticleMetadata md = mdlist.get(0);
+    assertNotNull(md);
+    assertNull(md.get(MetadataField.FIELD_DOI));
+    assertNull(md.get(MetadataField.FIELD_VOLUME));
+    assertNull(md.get(MetadataField.FIELD_ISSUE));
+    assertNull(md.get(MetadataField.FIELD_START_PAGE));
+    assertNull(md.get(MetadataField.FIELD_ISSN));
 
-		assertEquals(1, md.size());
-		assertEquals("bar", md.getProperty("foo"));
-	}	
+    assertEquals(1, md.rawSize());
+    assertEquals("bar", md.getRaw("foo"));
+  }	
 
-	/**
-	 * Inner class that where a number of Archival Units can be created
-	 *
-	 */
-	public static class MySimulatedPlugin extends SimulatedPlugin {
-		public ArchivalUnit createAu0(Configuration auConfig)
-				throws ArchivalUnit.ConfigurationException {
-			ArchivalUnit au = new SimulatedArchivalUnit(this);
-			au.setConfiguration(auConfig);
-			return au;
-		}
+  /**
+   * Inner class that where a number of Archival Units can be created
+   *
+   */
+  public static class MySimulatedPlugin extends SimulatedPlugin {
+    public ArchivalUnit createAu0(Configuration auConfig)
+	throws ArchivalUnit.ConfigurationException {
+      ArchivalUnit au = new SimulatedArchivalUnit(this);
+      au.setConfiguration(auConfig);
+      return au;
+    }
 
-		public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
-			return new MySimulatedContentGenerator(fileRoot);
-		}
+    public SimulatedContentGenerator getContentGenerator(Configuration cf, String fileRoot) {
+      return new MySimulatedContentGenerator(fileRoot);
+    }
 
-	}
+  }
 
-	/**
-	 * Inner class to create a html source code simulated content
-	 *
-	 */
-	public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
-		protected MySimulatedContentGenerator(String fileRoot) {
-			super(fileRoot);
-		}
+  /**
+   * Inner class to create a html source code simulated content
+   *
+   */
+  public static class MySimulatedContentGenerator extends	SimulatedContentGenerator {
+    protected MySimulatedContentGenerator(String fileRoot) {
+      super(fileRoot);
+    }
 
-		public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+    public String getHtmlFileContent(String filename, int fileNum, int depth, int branchNum, boolean isAbnormal) {
 			
-			String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
+      String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
 			
-			file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
-			file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
-			file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
+      file_content += "  <meta name=\"lockss.filenum\" content=\""+ fileNum + "\">\n";
+      file_content += "  <meta name=\"lockss.depth\" content=\"" + depth + "\">\n";
+      file_content += "  <meta name=\"lockss.branchnum\" content=\"" + branchNum + "\">\n";			
 
-			file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
-			file_content += "\n</BODY></HTML>";
-			logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
-					+ file_content);
+      file_content += getHtmlContent(fileNum, depth, branchNum,	isAbnormal);
+      file_content += "\n</BODY></HTML>";
+      logger.debug2("MySimulatedContentGenerator.getHtmlFileContent: "
+		    + file_content);
 
-			return file_content;
-		}
-	}
+      return file_content;
+    }
+  }
 }

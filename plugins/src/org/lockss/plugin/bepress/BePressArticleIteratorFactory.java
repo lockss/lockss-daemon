@@ -1,5 +1,5 @@
 /*
- * $Id: BePressArticleIteratorFactory.java,v 1.8 2010-07-06 23:03:21 thib_gc Exp $
+ * $Id: BePressArticleIteratorFactory.java,v 1.9 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -96,26 +96,6 @@ public class BePressArticleIteratorFactory
   
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BePressArticleMetadataExtractor();
+    return new BaseArticleMetadataExtractor(null);
   }
-
-  public class BePressArticleMetadataExtractor implements ArticleMetadataExtractor {
-
-    public ArticleMetadata extract(ArticleFiles af) throws IOException, PluginException {
-      ArticleMetadata am = null;
-      CachedUrl cu = af.getFullTextCu();
-      if (cu != null) {
-        FileMetadataExtractor me = cu.getFileMetadataExtractor();
-        if (me != null) {
-          am = me.extract(cu);
-        }
-      }
-      if (am == null) {
-        am = new ArticleMetadata();
-      }
-      am.put(ArticleMetadata.KEY_ACCESS_URL, cu.getUrl());
-      return am;
-    }
-  }
-
 }

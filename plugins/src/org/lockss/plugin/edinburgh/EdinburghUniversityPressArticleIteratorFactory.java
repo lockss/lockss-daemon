@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.3 2010-12-11 00:59:15 thib_gc Exp $
+ * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.4 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class EdinburghUniversityPressArticleIteratorFactory
     
   }
   
-  protected static class EdinburghUniversityPressArticleMetadataExtractor implements ArticleMetadataExtractor {
+  protected static class EdinburghUniversityPressArticleMetadataExtractor extends SingleArticleMetadataExtractor {
 
     public ArticleMetadata extract(ArticleFiles af) throws IOException, PluginException {
       String url = af.getFullTextUrl();
@@ -112,8 +112,8 @@ public class EdinburghUniversityPressArticleIteratorFactory
       String doi = mat.group(1);
       
       ArticleMetadata am = new ArticleMetadata();
-      am.put(ArticleMetadata.KEY_ACCESS_URL, url);
-      am.putDOI(doi);
+      am.put(MetadataField.FIELD_ACCESS_URL, url);
+      am.put(MetadataField.FIELD_DOI, doi);
       return am;
     }
 

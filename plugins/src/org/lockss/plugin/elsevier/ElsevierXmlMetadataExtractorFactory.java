@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -42,8 +42,8 @@ import org.lockss.plugin.*;
 
 public class ElsevierXmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
-  public FileMetadataExtractor
-    createFileMetadataExtractor(String contentType)
+
+  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
       throws PluginException {
     return new ElsevierXmlMetadataExtractor();
   }
@@ -52,10 +52,11 @@ public class ElsevierXmlMetadataExtractorFactory
     extends SimpleXmlMetadataExtractor {
     static Logger log = Logger.getLogger("ElsevierXmlMetadataExtractor");
 
-    private static final Map<String, String> tagMap =
-      new HashMap<String, String>();
+    private static final Map tagMap = new HashMap();
     static {
-      tagMap.put("ce:doi", "dc.Identifier");
+      // Elsevier doesn't prefix the DOI in dc.Identifier with doi:
+      tagMap.put("ce:doi", ListUtil.list(MetadataField.DC_FIELD_IDENTIFIER,
+					 MetadataField.FIELD_DOI));
     };
 
     public ElsevierXmlMetadataExtractor() {
@@ -63,17 +64,10 @@ public class ElsevierXmlMetadataExtractorFactory
     }
 
     public ArticleMetadata extract(CachedUrl cu) throws IOException {
-      try {
-	ArticleMetadata ret = super.extract(cu);
-	// Elsevier doesn't prefix the DOI in dc.Identifier with doi:
-	String content = ret.getProperty("dc.Identifier");
-	if (content != null) {
-	  ret.putDOI(content);
-	}
-	return ret;
-      } finally {
-	AuUtil.safeRelease(cu);
-      }	
+      ArticleMetadata am = super.extract(cu);
+      // extract metadata from BePress specific metadata tags
+      am.cook(tagMap);
+      return am;
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneArticleIteratorFactory.java,v 1.2 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: BioOneArticleIteratorFactory.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -67,22 +67,6 @@ public class BioOneArticleIteratorFactory
   public ArticleMetadataExtractor
     createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new BioOneArticleMetadataExtractor();
-  }
-
-  public static class BioOneArticleMetadataExtractor
-    implements ArticleMetadataExtractor {
-
-    public ArticleMetadata extract(ArticleFiles af)
-	throws IOException, PluginException {
-      CachedUrl cu = af.getFullTextCu();
-      if (cu != null) {
-	FileMetadataExtractor me = cu.getFileMetadataExtractor();
-	if (me != null) {
-	  return me.extract(cu);
-	}
-      }
-      return null;
-    }
+    return new BaseArticleMetadataExtractor(null);
   }
 }

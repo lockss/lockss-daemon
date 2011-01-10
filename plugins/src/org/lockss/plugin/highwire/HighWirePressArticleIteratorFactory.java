@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.4 2010-12-11 00:59:15 thib_gc Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.5 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -283,12 +283,13 @@ public class HighWirePressArticleIteratorFactory
    
   }
 
-  protected static class HighWirePressArticleMetadataExtractor implements ArticleMetadataExtractor {
+  protected static class HighWirePressArticleMetadataExtractor
+    extends SingleArticleMetadataExtractor {
 
     public ArticleMetadata extract(ArticleFiles af) throws IOException, PluginException {
       String url = af.getFullTextUrl();
       ArticleMetadata am = new ArticleMetadata();
-      am.put(ArticleMetadata.KEY_ACCESS_URL, url);
+      am.put(MetadataField.FIELD_ACCESS_URL, url);
       return am;
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerArticleIteratorFactory.java,v 1.3 2010-06-18 21:15:31 thib_gc Exp $
+ * $Id: SpringerArticleIteratorFactory.java,v 1.4 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -123,22 +123,7 @@ public class SpringerArticleIteratorFactory
   public ArticleMetadataExtractor
     createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new SpringerArticleMetadataExtractor();
+    return new BaseArticleMetadataExtractor("xml");
   }
 
-  public class SpringerArticleMetadataExtractor
-    implements ArticleMetadataExtractor {
-
-    public ArticleMetadata extract(ArticleFiles af)
-	throws IOException, PluginException {
-      CachedUrl cu = af.getRoleCu("xml");
-      if (cu != null) {
-	FileMetadataExtractor me = cu.getFileMetadataExtractor();
-	if (me != null) {
-	  return me.extract(cu);
-	}
-      }
-      return null;
-    }
-  }
 }

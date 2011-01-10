@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.4 2010-08-23 16:38:47 dsferopoulos Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.5 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.*;
+import java.util.*;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -55,61 +56,37 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
   public static class HighWireHtmlMetadataExtractor
     extends SimpleMetaTagMetadataExtractor {
 
-    public ArticleMetadata extract(CachedUrl cu) throws IOException {
-      ArticleMetadata ret = null;
-      try {
-        if (cu != null && cu.hasContent()) {
-          ret = super.extract(cu);
-          // HighWire doesn't prefix the DOI in dc.Identifier with doi:
+    // Map HighWire-specific HTML meta tag names to cooked metadata fields
+    private static Map tagMap = new HashMap();
+    static {
+      // HighWire doesn't prefix the DOI in dc.Identifier with doi:
+      tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
+      tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      // Many HighWire journals either omit citation_issn
+      // or have an empty citation_issn
+      tagMap.put("citation_issn", MetadataField.FIELD_ISSN);
+      tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
+      tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
+      tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
+      tagMap.put("citation_authors",
+		 new MetadataField(MetadataField.FIELD_AUTHOR) {
+		   // XXX Change to handle lists properly
+		   @Override
+		   public String validate(String value) {
+		     if (value.contains(";")) {
+		       value = value.replaceAll(",", "");
+		       value = value.replaceAll(";", ",");
+		     }
+		     return value;
+		   }});;
+      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
+    }
 
-          String content = ret.getProperty("dc.Identifier");
-          if (content != null && !"".equals(content)) {
-            ret.putDOI(content);
-          }
-          // Many HighWire journals either omit citation_issn
-          // or have an empty citation_issn
-          content = ret.getProperty("citation_issn");
-          if (content != null && !"".equals(content)) {
-            ret.putISSN(content);
-          }
-          content = ret.getProperty("citation_volume");
-          if (content != null && !"".equals(content)) {
-            ret.putVolume(content);
-          }
-          content = ret.getProperty("citation_issue");
-          if (content != null && !"".equals(content)) {
-            ret.putIssue(content);
-          }
-          content = ret.getProperty("citation_firstpage");
-          if (content != null && !"".equals(content)) {
-            ret.putStartPage(content);
-          }
-          content = ret.getProperty("citation_authors");
-          if (content != null && !"".equals(content)) {
-            if (content.contains(";")) { // if there is more than one authors then add them in a comma delimited list
-              content = content.replaceAll(", ", " ");
-              content = content.replaceAll(";", ",");
-            }
-            ret.putAuthor(content);
-          }
-          content = ret.getProperty("citation_title");
-          if (content != null && !"".equals(content)) {
-            ret.putArticleTitle(content);
-          }
-          content = ret.getProperty("citation_journal_title");
-          if(content !=null && !"".equals(content)){
-        	  ret.putJournalTitle(content);
-          }          
-          content = ret.getProperty("citation_date");
-          if (content != null && !"".equals(content)) {
-            ret.putDate(content);
-          }
-        }
-      }
-      finally {
-        AuUtil.safeRelease(cu);
-      }
-      return ret;
+    public ArticleMetadata extract(CachedUrl cu) throws IOException {
+      ArticleMetadata am = super.extract(cu);
+      am.cook(tagMap);
+      return am;
     }
   }
 

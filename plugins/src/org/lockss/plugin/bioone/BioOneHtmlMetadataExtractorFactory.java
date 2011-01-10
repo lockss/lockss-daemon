@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.6 2010-11-17 11:28:12 neilmayo Exp $
+ * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.7 2011-01-10 09:18:09 tlipkis Exp $
  */
 
 /*
@@ -144,7 +144,7 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
                         // Process the DOI to extract other available metadata; also checks the format 
                         if (processDOI(doi, metadata)) {
                             // Trim space before adding the DOI
-                            metadata.putDOI(doi.trim());
+                            metadata.put(MetadataField.FIELD_DOI, doi.trim());
                         }
 					}
 					
@@ -156,7 +156,7 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
                             MatchResult matches = matcher.getMatch();
                             int sp = Integer.parseInt(matches.group(1));
                             int ep = Integer.parseInt(matches.group(2));
-                            metadata.putStartPage(""+sp);
+                            metadata.put(MetadataField.FIELD_START_PAGE, ""+sp);
                             //metadata.putEndPage(""+ep);
                         }
 					}
@@ -181,10 +181,10 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
 							    int issue2 = Integer.parseInt(matches.group(5));
 							    String date = matches.group(6);
 							    
-                                metadata.putISSN(issn);
-                                metadata.putVolume(""+volume);
-                                metadata.putIssue(""+issue);
-                                metadata.putDate(date);
+                                metadata.put(MetadataField.FIELD_ISSN, issn);
+                                metadata.put(MetadataField.FIELD_VOLUME, ""+volume);
+                                metadata.put(MetadataField.FIELD_ISSUE, ""+issue);
+                                metadata.put(MetadataField.FIELD_DATE, date);
 							}
 							
 							// The preceding process assumes the name=value pairs always come in the same order; 
@@ -196,7 +196,7 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
 					
 					// Get journal title from h2 tag (only use of h2)
 					if (StringUtil.startsWithIgnoreCase(line, jTitleBeginFlag)) {
-						metadata.putJournalTitle(StringUtil.getTextBetween(line, jTitleBeginFlag, jTitleEndFlag).trim());
+						metadata.put(MetadataField.FIELD_JOURNAL_TITLE, StringUtil.getTextBetween(line, jTitleBeginFlag, jTitleEndFlag).trim());
 					}
 					
 					// Get the article title from h1 tag (but not the Full Text View heading)
@@ -210,7 +210,7 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
 						}
 	                    section = StringUtil.getTextBetween(section, aTitleBeginFlag, aTitleEndFlag).trim();
                         section = HtmlUtil.stripHtmlTags(section);
-						metadata.putArticleTitle(section.trim());
+						metadata.put(MetadataField.FIELD_ARTICLE_TITLE, section.trim());
 					}					
 					
 					// Get the authors from a single line starting with an "authors" paragraph tag
@@ -222,7 +222,7 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
 						// Make comma-separated list of authors by replacing authorSplitPattern with authorCommaSubstitution
 						Perl5Matcher matcher = RegexpUtil.getMatcher();
 	                    myLine = Util.substitute(matcher, authorSplitPattern, authorCommaSubstitution, myLine, Util.SUBSTITUTE_ALL);
-	                    metadata.putAuthor(myLine);
+	                    metadata.put(MetadataField.FIELD_AUTHOR, myLine);
 					}
 
 				}
@@ -254,9 +254,9 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
 		        int volume = Integer.parseInt(matches.group(3));
 		        int startPage = Integer.parseInt(matches.group(4));
 		        // Add the metadata (the year is not used as there is a more precise date of issue available)
-		        metadata.putISSN(issn);
-		        metadata.putVolume(""+volume);
-		        metadata.putStartPage(""+startPage);
+		        metadata.put(MetadataField.FIELD_ISSN, issn);
+		        metadata.put(MetadataField.FIELD_VOLUME, ""+volume);
+		        metadata.put(MetadataField.FIELD_START_PAGE, ""+startPage);
 		        return true;
 		    }
 		    return false;
