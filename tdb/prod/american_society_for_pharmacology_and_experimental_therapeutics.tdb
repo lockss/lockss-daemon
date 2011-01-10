@@ -7,324 +7,119 @@
   implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
   {
+
     title <
       name = Drug Metabolism and Disposition ;
       issn = 0090-9556 ;
       eissn = 1521-009X
     >
 
-    {
+    param[base_url] = http://dmd.aspetjournals.org/
 
-      param[base_url] = http://dmd.aspetjournals.org/
-
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; exists ; Drug Metabolism and Disposition Volume 32 ; 32 >
-      au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 33 ; 33 >
-      au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 34 ; 34 >
-      au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; ready ; Drug Metabolism and Disposition Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; ready ; Drug Metabolism and Disposition Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; ready ; Drug Metabolism and Disposition Volume 38 ; 38 >
-
-    }
+    au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 33 ; 33 >
+    au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 34 ; 34 >
+    au < HighWireStrVolPlugin ; released ; Drug Metabolism and Disposition Volume 35 ; 35 >
+    au < HighWirePressH20Plugin ; ready ; Drug Metabolism and Disposition Volume 36 ; 36 >
+    au < HighWirePressH20Plugin ; ready ; Drug Metabolism and Disposition Volume 37 ; 37 >
+    au < HighWirePressH20Plugin ; ready ; Drug Metabolism and Disposition Volume 38 ; 38 >
 
   }
 
   {
+
     title <
       name = Journal of Pharmacology and Experimental Therapeutics ;
       issn = 0022-3565 ;
       eissn = 1521-0103
     >
 
-    {
+    param[base_url] = http://jpet.aspetjournals.org/
 
-      param[base_url] = http://jpet.aspetjournals.org/
-
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 211 ; 211 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 212 ; 212 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 213 ; 213 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 214 ; 214 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 215 ; 215 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 216 ; 216 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 217 ; 217 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 218 ; 218 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 219 ; 219 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 220 ; 220 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 221 ; 221 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 222 ; 222 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 223 ; 223 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 224 ; 224 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 225 ; 225 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 226 ; 226 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 227 ; 227 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 228 ; 228 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 229 ; 229 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 230 ; 230 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 231 ; 231 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 232 ; 232 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 233 ; 233 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 234 ; 234 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 235 ; 235 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 236 ; 236 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 237 ; 237 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 238 ; 238 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 239 ; 239 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 240 ; 240 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 241 ; 241 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 242 ; 242 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 243 ; 243 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 244 ; 244 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 245 ; 245 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 246 ; 246 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 247 ; 247 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 248 ; 248 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 249 ; 249 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 250 ; 250 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 251 ; 251 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 252 ; 252 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 253 ; 253 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 254 ; 254 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 255 ; 255 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 256 ; 256 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 257 ; 257 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 258 ; 258 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 259 ; 259 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 260 ; 260 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 261 ; 261 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 262 ; 262 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 263 ; 263 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 264 ; 264 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 265 ; 265 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 266 ; 266 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 267 ; 267 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 268 ; 268 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 269 ; 269 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 270 ; 270 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 271 ; 271 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 272 ; 272 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 273 ; 273 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 274 ; 274 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 275 ; 275 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 276 ; 276 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 277 ; 277 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 278 ; 278 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 279 ; 279 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 280 ; 280 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 281 ; 281 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 282 ; 282 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 283 ; 283 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 284 ; 284 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 285 ; 285 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 286 ; 286 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 287 ; 287 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 288 ; 288 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 289 ; 289 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 290 ; 290 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 291 ; 291 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 292 ; 292 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 293 ; 293 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 294 ; 294 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 295 ; 295 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 296 ; 296 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 297 ; 297 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 298 ; 298 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 299 ; 299 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 300 ; 300 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 301 ; 301 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 302 ; 302 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 303 ; 303 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 304 ; 304 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 305 ; 305 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 306 ; 306 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 307 ; 307 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 308 ; 308 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 309 ; 309 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 310 ; 310 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 311 ; 311 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 312 ; 312 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 313 ; 313 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 314 ; 314 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 315 ; 315 >
-      au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 316 ; 316 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 317 ; 317 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 318 ; 318 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 319 ; 319 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 320 ; 320 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 321 ; 321 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 322 ; 322 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 323 ; 323 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 324 ; 324 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 325 ; 325 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 326 ; 326 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 327 ; 327 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 328 ; 328 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 329 ; 329 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 330 ; 330 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 331 ; 331 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 332 ; 332 >
-      au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 333 ; 333 >
-
-    }
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 312 ; 312 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 313 ; 313 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 314 ; 314 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 315 ; 315 >
+    au < HighWirePressH20Plugin ; exists ; Journal of Pharmacology and Experimental Therapeutics Volume 316 ; 316 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 317 ; 317 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 318 ; 318 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 319 ; 319 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 320 ; 320 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 321 ; 321 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 322 ; 322 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 323 ; 323 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 324 ; 324 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 325 ; 325 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 326 ; 326 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 327 ; 327 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 328 ; 328 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 329 ; 329 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 330 ; 330 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 331 ; 331 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 332 ; 332 >
+    au < HighWirePressH20Plugin ; ready ; Journal of Pharmacology and Experimental Therapeutics Volume 333 ; 333 >
 
   }
 
   {
+  
     title <
       name = Molecular Interventions ;
       issn = 1534-0384 ;
       eissn = 1543-2548
     >
 
-    {
+    param[base_url] = http://molinterv.aspetjournals.org/
 
-      param[base_url] = http://molinterv.aspetjournals.org/
-
-      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 10 ; 10 >
-
-    }
+    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 5 ; 5 >
+    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 6 ; 6 >
+    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 7 ; 7 >
+    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 8 ; 8 >
+    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 9 ; 9 >
+    au < HighWirePressH20Plugin ; released ; Molecular Interventions Volume 10 ; 10 >
 
   }
 
   {
+  
     title <
       name = Molecular Pharmacology ;
       issn = 0026-895X ;
       eissn = 1521-0111
     >
 
-    {
+    param[base_url] = http://molpharm.aspetjournals.org/
 
-      param[base_url] = http://molpharm.aspetjournals.org/
-
-      au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 67 ; 67 >
-      au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 68 ; 68 >
-      au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 69 ; 69 >
-      au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 70 ; 70 >
-      au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 71 ; 71 >
-      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 72 ; 72 >
-      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 73 ; 73 >
-      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 74 ; 74 >
-      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 75 ; 75 >
-      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 76 ; 76 >
-      au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 77 ; 77 >
-
-    }
+    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 67 ; 67 >
+    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 68 ; 68 >
+    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 69 ; 69 >
+    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 70 ; 70 >
+    au < HighWireStrVolPlugin ; released ; Molecular Pharmacology Volume 71 ; 71 >
+    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 72 ; 72 >
+    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 73 ; 73 >
+    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 74 ; 74 >
+    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 75 ; 75 >
+    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 76 ; 76 >
+    au < HighWirePressH20Plugin ; released ; Molecular Pharmacology Volume 77 ; 77 >
 
   }
 
   {
+  
     title <
       name = Pharmacological Reviews ;
       issn = 0031-6997 ;
       eissn = 1521-0081
     >
 
-    {
+    param[base_url] = http://pharmrev.aspetjournals.org/
 
-      param[base_url] = http://pharmrev.aspetjournals.org/
-
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 1 ; 1 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 2 ; 2 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 3 ; 3 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 4 ; 4 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 5 ; 5 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 6 ; 6 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 7 ; 7 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 8 ; 8 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 9 ; 9 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 10 ; 10 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 11 ; 11 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 12 ; 12 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 13 ; 13 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 14 ; 14 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 15 ; 15 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 16 ; 16 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 17 ; 17 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 18 ; 18 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 19 ; 19 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 20 ; 20 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 21 ; 21 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 22 ; 22 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 23 ; 23 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 24 ; 24 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 25 ; 25 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 26 ; 26 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 27 ; 27 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 28 ; 28 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 29 ; 29 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 30 ; 30 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 31 ; 31 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 32 ; 32 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 33 ; 33 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 34 ; 34 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 35 ; 35 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 36 ; 36 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 37 ; 37 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 38 ; 38 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 39 ; 39 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 40 ; 40 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 41 ; 41 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 42 ; 42 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 43 ; 43 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 44 ; 44 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 45 ; 45 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 46 ; 46 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 47 ; 47 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 48 ; 48 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 49 ; 49 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 50 ; 50 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 51 ; 51 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 52 ; 52 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 53 ; 53 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 54 ; 54 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 55 ; 55 >
-      au < HighWirePressH20Plugin ; exists ; Pharmacological Reviews Volume 56 ; 56 >
-      au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 57 ; 57 >
-      au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 58 ; 58 >
-      au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 59 ; 59 >
-      au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 60 ; 60 >
-      au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 61 ; 61 >
-      au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 62 ; 62 >
-
-    }
+    au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 57 ; 57 >
+    au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 58 ; 58 >
+    au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 59 ; 59 >
+    au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 60 ; 60 >
+    au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 61 ; 61 >
+    au < HighWirePressH20Plugin ; ready ; Pharmacological Reviews Volume 62 ; 62 >
 
   }
 
 }
-
