@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.81 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.82 2011-01-10 09:08:34 tlipkis Exp $
  */
 
 /*
@@ -1177,6 +1177,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       p.put(CrawlManagerImpl.PARAM_UNSHARED_QUEUE_MAX, "3");
       p.put(CrawlManagerImpl.PARAM_CRAWLER_THREAD_POOL_MAX, "3"); 
       p.put(CrawlManagerImpl.PARAM_FAVOR_UNSHARED_RATE_THREADS, "1"); 
+      p.put(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP, "auNever,-10000");
       theDaemon.setAusStarted(true);
       ConfigurationUtil.addFromProps(p);
       crawlManager.startService();
@@ -1185,7 +1186,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       registerAus(aus);
       MockArchivalUnit auPri = newMockArchivalUnit("auPri");
       setAu(auPri, 0, 9999, 9999);
-
+      MockArchivalUnit auNever = newMockArchivalUnit("auNever");
+      setAu(auNever, 0, 1, 2);
+      registerAus(new MockArchivalUnit[] { auNever });
       setAu(aus[0], Crawler.STATUS_WINDOW_CLOSED, -1, 2000);
       setAu(aus[1], Crawler.STATUS_WINDOW_CLOSED, 1000, 1000);
       setAu(aus[2], 0, -1, 1000);
@@ -1240,6 +1243,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       crawlManager.delFromRunningRateKeys(aus[12]);
       crawlManager.delFromRunningRateKeys(aus[6]);
       PluginTestUtil.registerArchivalUnit(plugin, auPri);
+      PluginTestUtil.registerArchivalUnit(plugin, auNever);
       assertEquals(aus[7], crawlManager.nextReq().au);
       crawlManager.addToRunningRateKeys(aus[7]);
       aus[12].setShouldCrawlForNewContent(false);
@@ -1266,7 +1270,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     public void testCrawlPriorityPatterns() {
       ConfigurationUtil.addFromArgs(CrawlManagerImpl.PARAM_CRAWL_PRIORITY_AUID_MAP,
-				    "foo(4|5),3;bar,5");
+				    "foo(4|5),3;bar,5;baz,-1");
       MockArchivalUnit mau1 = new MockArchivalUnit(new MockPlugin(theDaemon));
       mau1.setAuId("other");
       CrawlReq req = new CrawlReq(mau1);
@@ -1281,6 +1285,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       mau1.setAuId("x~ybar~z");
       crawlManager.setReqPriority(req);
       assertEquals(5, req.getPriority());
+      mau1.setAuId("bazab");
+      crawlManager.setReqPriority(req);
+      assertEquals(-1, req.getPriority());
     }
 
     public void testOdcCrawlStarter() {
@@ -1553,7 +1560,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       if (ausStartedSem != null) {
 	return ausStartedSem.isFull();
       } else {
-	return super.areAusStarted();
+	try {
+	  return super.areAusStarted();
+	} catch (NullPointerException e) {
+	  return false;
+	}
       }
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.131 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.132 2011-01-10 09:08:34 tlipkis Exp $
  */
 
 /*
@@ -218,10 +218,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   static final int DEFAULT_HISTORY_MAX = 500;
 
   /** Map of regexp to priority.  If set, AUIDs are assigned the
-   * corresponding crawl priority of the first regexp they match. */
+   * corresponding crawl priority of the first regexp they match.  Priority
+   * must be an integer greater than -10000.  A priority &lt;= 10000
+   * disables matching AUs from crawling at all.  */
   static final String PARAM_CRAWL_PRIORITY_AUID_MAP =
     PREFIX + "crawlPriorityAuidMap";
   static final List DEFAULT_CRAWL_PRIORITY_AUID_MAP = null;
+
+  static final int MIN_CRAWL_PRIORITY = -10000;
 
   /** Regexp matching URLs we never want to collect.  Intended to stop
    * runaway crawls by catching recursive URLS */
@@ -273,9 +277,15 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   private int histSize = DEFAULT_HISTORY_MAX;
 
-  private Map repairRateLimiters = new HashMap();
-  private Map newContentRateLimiters = new HashMap();
-  private Map pluginRegistryNewContentRateLimiters = new HashMap();
+  private RateLimiter.LimiterMap repairRateLimiters =
+    new RateLimiter.LimiterMap(PARAM_MAX_REPAIR_RATE,
+			       DEFAULT_MAX_REPAIR_RATE);
+  private RateLimiter.LimiterMap newContentRateLimiters =
+    new RateLimiter.LimiterMap(PARAM_MAX_NEW_CONTENT_RATE,
+			       DEFAULT_MAX_NEW_CONTENT_RATE);
+  private RateLimiter.LimiterMap pluginRegistryNewContentRateLimiters =
+    new RateLimiter.LimiterMap(PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE,
+			       DEFAULT_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE);
   private RateLimiter newContentStartRateLimiter;
 
   private AuEventHandler auCreateDestroyHandler;
@@ -442,6 +452,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	crawlPriorityAuidMap =
 	  makeCrawlPriorityAuidMap(config.getList(PARAM_CRAWL_PRIORITY_AUID_MAP,
 						  DEFAULT_CRAWL_PRIORITY_AUID_MAP));
+	if (areAusStarted()) {
+	  rebuildQueueSoon();
+	}
       }
       if (changedKeys.contains(PARAM_START_CRAWLS_INTERVAL)) {
 	paramStartCrawlsInterval =
@@ -463,19 +476,13 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       }
 
       if (changedKeys.contains(PARAM_MAX_REPAIR_RATE)) {
-	resetRateLimiters(config, repairRateLimiters,
-			  PARAM_MAX_REPAIR_RATE,
-			  DEFAULT_MAX_REPAIR_RATE);
+	repairRateLimiters.resetRateLimiters(config);
       }
       if (changedKeys.contains(PARAM_MAX_NEW_CONTENT_RATE)) {
-	resetRateLimiters(config, newContentRateLimiters,
-			  PARAM_MAX_NEW_CONTENT_RATE,
-			  DEFAULT_MAX_NEW_CONTENT_RATE);
+	newContentRateLimiters.resetRateLimiters(config);
       }
       if (changedKeys.contains(PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE)) {
-	resetRateLimiters(config, pluginRegistryNewContentRateLimiters,
-			  PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE,
-			  DEFAULT_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE);
+	pluginRegistryNewContentRateLimiters.resetRateLimiters(config);
       }
       if (changedKeys.contains(PARAM_NEW_CONTENT_START_RATE)) {
 	newContentStartRateLimiter =
@@ -604,26 +611,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  /** Return the rate limiter for the au in the rateLimiterMap, creating it
-   * with appropriate parameters if it does not exist. */
-  private RateLimiter getRateLimiter(ArchivalUnit au,
-				     Map rateLimiterMap,
-				     String paramName,
-				     String dfault) {
-    RateLimiter limiter;
-    synchronized (rateLimiterMap) {
-      limiter = (RateLimiter)rateLimiterMap.get(au);
-      if (limiter == null) {
-	limiter =
-	  RateLimiter.getConfiguredRateLimiter(ConfigManager.getCurrentConfig(),
-					       null,
-					       paramName, dfault);
-	rateLimiterMap.put(au, limiter);
-      }
-    }
-    return limiter;
-  }
-
   // Overridable for testing
   protected boolean isInternalAu(ArchivalUnit au) {
     return pluginMgr.isInternalAu(au);
@@ -631,30 +618,9 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   public RateLimiter getNewContentRateLimiter(ArchivalUnit au) {
     if (isInternalAu(au)) {
-      return getRateLimiter(au, pluginRegistryNewContentRateLimiters,
-			    PARAM_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE,
-			    DEFAULT_MAX_PLUGIN_REGISTRY_NEW_CONTENT_RATE);
-    }
-    return getRateLimiter(au, newContentRateLimiters,
-			  PARAM_MAX_NEW_CONTENT_RATE,
-			  DEFAULT_MAX_NEW_CONTENT_RATE);
-  }
-
-  /** Reset the parameters of all the rate limiters in the map. */
-  private void resetRateLimiters(Configuration config,
-				 Map rateLimiterMap,
-				 String paramName,
-				 String dfault) {
-    synchronized (rateLimiterMap) {
-      for (Iterator iter = rateLimiterMap.entrySet().iterator();
-	   iter.hasNext(); ) {
-	Map.Entry entry = (Map.Entry)iter.next();
-	RateLimiter limiter = (RateLimiter)entry.getValue();
-	RateLimiter newLimiter =
-	  RateLimiter.getConfiguredRateLimiter(config, limiter,
-					       paramName, dfault);
-	entry.setValue(newLimiter);
-      }
+      return pluginRegistryNewContentRateLimiters.getRateLimiter(au);
+    } else {
+      return newContentRateLimiters.getRateLimiter(au);
     }
   }
 
@@ -700,9 +666,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       throw new IllegalArgumentException("Called with null URL");
     }
     // check rate limiter before obtaining locks
-    RateLimiter limiter = getRateLimiter(au, repairRateLimiters,
-					 PARAM_MAX_REPAIR_RATE,
-					 DEFAULT_MAX_REPAIR_RATE);
+    RateLimiter limiter = repairRateLimiters.getRateLimiter(au);
     if (!limiter.isEventOk()) {
       logger.debug("Repair aborted due to rate limiter.");
       callCallback(cb, cookie, false, null);
@@ -1438,16 +1402,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	  if ((req != null || shouldCrawlForNewContent(au))) {
 	    ausWantCrawl++;
 	    if (isEligibleForNewContentCrawl(au)) {
-	      ausEligibleCrawl++;
 	      if (req == null) {
 		req = new CrawlReq(au);
 		setReqPriority(req);
 	      }
-	      Object rateKey = au.getFetchRateLimiterKey();
-	      if (rateKey == null) {
-		unsharedRateReqs.add(req);
-	      } else {
-		sharedRateReqs.put(rateKey, req);
+	      if (req.priority > MIN_CRAWL_PRIORITY) {
+		ausEligibleCrawl++;
+		Object rateKey = au.getFetchRateLimiterKey();
+		if (rateKey == null) {
+		  unsharedRateReqs.add(req);
+		} else {
+		  sharedRateReqs.put(rateKey, req);
+		}
 	      }
 	    }
 	  }
@@ -1474,6 +1440,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       for (Map.Entry<Pattern,Integer> ent : crawlPriorityAuidMap.entrySet()) {
 	if (matcher.contains(auid, ent.getKey())) {
 	  req.setPriority(ent.getValue());
+	  logger.debug("setPriority(" + req + ", " + ent.getValue() + ")");
 	  return;
 	}
       }
