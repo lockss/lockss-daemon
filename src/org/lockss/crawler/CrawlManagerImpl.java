@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.132 2011-01-10 09:08:34 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.133 2011-01-10 09:46:00 tlipkis Exp $
  */
 
 /*
@@ -1440,7 +1440,6 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       for (Map.Entry<Pattern,Integer> ent : crawlPriorityAuidMap.entrySet()) {
 	if (matcher.contains(auid, ent.getKey())) {
 	  req.setPriority(ent.getValue());
-	  logger.debug("setPriority(" + req + ", " + ent.getValue() + ")");
 	  return;
 	}
       }
