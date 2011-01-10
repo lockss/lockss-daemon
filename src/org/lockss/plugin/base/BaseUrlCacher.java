@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.83 2010-11-03 06:08:12 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.84 2011-01-10 09:13:21 tlipkis Exp $
  */
 
 /*
@@ -386,27 +386,31 @@ public class BaseUrlCacher implements UrlCacher {
 	if (logger.isDebug2())
 	  logger.debug2("Storing in redirected-to url: " + name);
 	InputStream is = cu.getUnfilteredInputStream();
-	if (ix < last) {
-	  // this one was redirected, set its redirected-to prop to the
-	  // next in the list.
-	  headerCopy.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO,
-				 (String)otherNames.get(ix + 1));
-	} else if (!name.equals(fetchUrl)) {
-	  // Last in list.  If not same as fetchUrl, means the final
-	  // redirection was a directory(slash) redirection, which we don't
-	  // store as a different name or put on otherNames.  Indicate the
-	  // redirection to the slashed version.  The proxy must be aware
-	  // of this.  (It can't rely on this property being present,
-	  // becuase foo/ might later be fetched, not due to a redirect
-	  // from foo.)
-	  headerCopy.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, fetchUrl);
-	} else {
-	  // This is the name that finally got fetched, don't store
-	  // redirect prop or content-url
-	  headerCopy.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
-	  headerCopy.remove(CachedUrl.PROPERTY_CONTENT_URL);
+	try {
+	  if (ix < last) {
+	    // this one was redirected, set its redirected-to prop to the
+	    // next in the list.
+	    headerCopy.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO,
+				   (String)otherNames.get(ix + 1));
+	  } else if (!name.equals(fetchUrl)) {
+	    // Last in list.  If not same as fetchUrl, means the final
+	    // redirection was a directory(slash) redirection, which we don't
+	    // store as a different name or put on otherNames.  Indicate the
+	    // redirection to the slashed version.  The proxy must be aware
+	    // of this.  (It can't rely on this property being present,
+	    // becuase foo/ might later be fetched, not due to a redirect
+	    // from foo.)
+	    headerCopy.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, fetchUrl);
+	  } else {
+	    // This is the name that finally got fetched, don't store
+	    // redirect prop or content-url
+	    headerCopy.remove(CachedUrl.PROPERTY_REDIRECTED_TO);
+	    headerCopy.remove(CachedUrl.PROPERTY_CONTENT_URL);
+	  }
+	  storeContentIn(name, is, headerCopy);
+	} finally {
+	  IOUtil.safeClose(is);
 	}
-	storeContentIn(name, is, headerCopy);
       }
     }
   }
@@ -415,12 +419,13 @@ public class BaseUrlCacher implements UrlCacher {
 			     CIProperties headers)
       throws IOException {
     RepositoryNode leaf = null;
+    OutputStream os = null;
     try {
       try {
 	leaf = repository.createNewNode(url);
 	leaf.makeNewVersion();
 
-	OutputStream os = leaf.getNewOutputStream();
+	os = leaf.getNewOutputStream();
 	StreamUtil.copy(input, os, -1, wdog, true);
 	if (!fetchFlags.get(DONT_CLOSE_INPUT_STREAM_FLAG)) {
 	  try {
@@ -462,6 +467,8 @@ public class BaseUrlCacher implements UrlCacher {
 	}
       }
       throw resultMap.getRepositoryException(ex);
+    } finally {
+      IOUtil.safeClose(os);
     }
   }
 
@@ -613,9 +620,20 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
-  /** Overridable so testing code can return a MockLockssUrlConnection */
   protected LockssUrlConnection makeConnection(String url,
 					       LockssUrlConnectionPool pool)
+      throws IOException {
+    LockssUrlConnection res = makeConnection0(url, pool);
+    String cookiePolicy = au.getCrawlSpec().getCookiePolicy();
+    if (cookiePolicy != null) {
+      res.setCookiePolicy(cookiePolicy);
+    }
+    return res;
+  }
+
+  /** Overridable so testing code can return a MockLockssUrlConnection */
+  protected LockssUrlConnection makeConnection0(String url,
+						LockssUrlConnectionPool pool)
       throws IOException {
     return UrlUtil.openConnection(url, pool);
   }
