@@ -7,7 +7,6 @@ import org.lockss.extractor.*;
 
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.ArticleMetadata;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginTestUtil;

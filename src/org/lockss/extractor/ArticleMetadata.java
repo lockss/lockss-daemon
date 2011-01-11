@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.6 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: ArticleMetadata.java,v 1.1 2011-01-11 05:39:08 tlipkis Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin;
+package org.lockss.extractor;
 
 import java.io.*;
 import java.util.*;
@@ -42,7 +42,6 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.extractor.*;
 import static org.lockss.extractor.MetadataField.*;
 
 

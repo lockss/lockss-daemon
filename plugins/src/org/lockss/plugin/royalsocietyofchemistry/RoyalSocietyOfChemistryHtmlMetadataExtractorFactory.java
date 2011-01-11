@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
-import org.lockss.plugin.ArticleMetadata;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.util.IOUtil;
 import org.lockss.util.Logger;

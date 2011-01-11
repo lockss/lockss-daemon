@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadata.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: TestArticleMetadata.java,v 1.2 2011-01-11 05:39:07 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import static org.lockss.extractor.MetadataField.*;
 import static org.lockss.extractor.MetadataException.*;
-import static org.lockss.plugin.ArticleMetadata.InvalidValue;
+import static org.lockss.extractor.ArticleMetadata.InvalidValue;
 import static java.util.AbstractMap.SimpleEntry;
 
 public class TestArticleMetadata extends LockssTestCase {
