@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.16 2011-01-06 18:32:53 neilmayo Exp $
+ * $Id: AdminServletManager.java,v 1.17 2011-01-12 15:36:27 neilmayo Exp $
  */
 
 /*
@@ -333,9 +333,11 @@ public class AdminServletManager extends BaseServletManager {
                      "Hash CUS",
                      ServletDescr.NEED_ROLE_DEBUG);
   
+  // Note that if there is a config option saying not to show the servlet, we give it the "unavailable servlet" 
+  // class; otherwise the servlet is created and shown in the menu. 
   protected static final ServletDescr SERVLET_LIST_HOLDINGS =
     new ServletDescr("ListHoldings",
-         ListHoldings.class,
+                     showHoldingsServlet() ? ListHoldings.class : ServletDescr.UNAVAILABLE_SERVLET_MARKER,
                      "Holdings List",
                      "holdings",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
@@ -419,6 +421,19 @@ public class AdminServletManager extends BaseServletManager {
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
+  }
+
+  /**
+   * Indicates whether to show the ListHoldings servlet. If the lockss.opt file
+   * contains the appropriate parameter with the value "false", the servlet is 
+   * neither created or shown as an option. If the parameter does not exist or 
+   * is set to something other than false, the servlet will be made available.   
+   * 
+   * @return whether to create and show the servlet 
+   */
+  private static boolean showHoldingsServlet() {
+    String s = CurrentConfig.getCurrentConfig().get(ConfigManager.PARAM_UI_SHOW_HOLDINGS_SERVLET);
+    return !"false".equalsIgnoreCase(s);
   }
 
   static void setContactAddr(String addr) {
