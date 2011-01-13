@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.12 2011-01-07 19:53:06 pgust Exp $
+ * $Id: Tdb.java,v 1.13 2011-01-13 06:25:36 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.12 2011-01-07 19:53:06 pgust Exp $
+ * @version $Id: Tdb.java,v 1.13 2011-01-13 06:25:36 pgust Exp $
  */
 public class Tdb {
   /**
@@ -57,7 +57,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.12 2011-01-07 19:53:06 pgust Exp $
+   * @version $Id: Tdb.java,v 1.13 2011-01-13 06:25:36 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -916,9 +916,13 @@ public class Tdb {
     if (titleName == null) {
       String issue = au.getParam("issue");
       String year = au.getParam("year");
+      // *sigh*
       String volume = au.getParam("volume");
       if (volume == null) {
         volume = au.getParam("volume_str");
+      }
+      if (volume == null) {
+        volume = au.getParam("volume_name");
       }
       String auName = au.getName();
       String auNameLC = auName.toLowerCase();
