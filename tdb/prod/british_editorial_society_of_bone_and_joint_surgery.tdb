@@ -14,7 +14,7 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWirePressPlugin
-      param[base_url] = http://www.jbjs.org.uk/
+      param[base_url] = http://web.jbjs.org.uk/
       implicit < status ; name ; param[volume_name] >
 
       au < testing ; Journal of Bone & Joint Surgery, British Volume Volume 30 ; 30 >

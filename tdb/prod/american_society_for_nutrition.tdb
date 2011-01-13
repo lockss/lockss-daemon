@@ -17,7 +17,7 @@
 
     param[base_url] = http://advances.nutrition.org/ 
 
-    au < HighWirePressH20Plugin ; testing ; Advances in Nutrition Volume 1 ; 1 >
+    au < HighWirePressH20Plugin ; ready ; Advances in Nutrition Volume 1 ; 1 >
 
   }
   
@@ -36,7 +36,7 @@
     au < HighWireStrVolPlugin ; down ; American Journal of Clinical Nutrition Volume 83 ; 83 >
     au < HighWireStrVolPlugin ; down ; American Journal of Clinical Nutrition Volume 84 ; 84 >
     au < HighWireStrVolPlugin ; down ; American Journal of Clinical Nutrition Volume 85 ; 85 >
-    au < HighWirePressH20Plugin ; testing ; American Journal of Clinical Nutrition Volume 86 ; 86 >
+    au < HighWirePressH20Plugin ; ready ; American Journal of Clinical Nutrition Volume 86 ; 86 >
     au < HighWirePressH20Plugin ; ready ; American Journal of Clinical Nutrition Volume 87 ; 87 >
     au < HighWirePressH20Plugin ; ready ; American Journal of Clinical Nutrition Volume 88 ; 88 >
     au < HighWirePressH20Plugin ; ready ; American Journal of Clinical Nutrition Volume 89 ; 89 >

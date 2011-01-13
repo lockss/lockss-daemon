@@ -14,11 +14,13 @@
       eissn = 1935-021X
     >
 
+comment[esq54] = 500 error on a page
+
     param[journal_dir] = esq
 
-    au < manifest ; ESQ: A Journal of the American Renaissance Volume 53 ; 53 >
-    au < manifest ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
-    au < manifest ; ESQ: A Journal of the American Renaissance Volume 55 ; 55 >
+    au < ready ; ESQ: A Journal of the American Renaissance Volume 53 ; 53 >
+    au < notReady ; ESQ: A Journal of the American Renaissance Volume 54 ; 54 >
+    au < ready ; ESQ: A Journal of the American Renaissance Volume 55 ; 55 >
 
   }
 

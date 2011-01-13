@@ -98,7 +98,7 @@
 
     param[journal_dir] = canadian_theatre_review
 
-    au < manifest ; Canadian Theatre Review Issue 141 ; 141 >
+    au < ready ; Canadian Theatre Review Issue 141 ; 141 >
 
   }
 
@@ -112,7 +112,7 @@
     param[journal_dir] = diaspora_a_journal_of_transnational_studies
 
     au < released ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
-    au < manifest ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
+    au < ready ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
 
   }
 
@@ -127,9 +127,9 @@
 
     au < released ; Eighteenth Century Fiction Volume 18 ; 18 >
     au < released ; Eighteenth Century Fiction Volume 19 ; 19 >
-    au < manifest ; Eighteenth Century Fiction Volume 20 ; 20 >
-    au < manifest ; Eighteenth Century Fiction Volume 21 ; 21 >
-    au < manifest ; Eighteenth Century Fiction Volume 22 ; 22 >
+    au < ready ; Eighteenth Century Fiction Volume 20 ; 20 >
+    au < ready ; Eighteenth Century Fiction Volume 21 ; 21 >
+    au < ready ; Eighteenth Century Fiction Volume 22 ; 22 >
 
   }
 
@@ -156,7 +156,7 @@
 
     param[journal_dir] = genocide_studies_and_prevention
 
-    au < manifest ; Genocide Studies and Prevention Volume 4 ; 4 >
+    au < ready ; Genocide Studies and Prevention Volume 4 ; 4 >
 
   }
 
@@ -168,8 +168,8 @@
 
     param[journal_dir] = histoire_sociale_social_history
 
-    au < manifest ; Histoire sociale/Social history Volume 41 ; 41 >
-    au < manifest ; Histoire sociale/Social history Volume 42 ; 42 >
+    au < ready ; Histoire sociale/Social history Volume 41 ; 41 >
+    au < ready ; Histoire sociale/Social history Volume 42 ; 42 >
 
   }
 
@@ -184,9 +184,9 @@
 
     au < released ; Journal of Canadian Studies Volume 39 ; 39 >
     au < released ; Journal of Canadian Studies Volume 40 ; 40 >
-    au < manifest ; Journal of Canadian Studies Volume 41 ; 41 >
-    au < manifest ; Journal of Canadian Studies Volume 42 ; 42 >
-    au < manifest ; Journal of Canadian Studies Volume 43 ; 43 >
+    au < ready ; Journal of Canadian Studies Volume 41 ; 41 >
+    au < ready ; Journal of Canadian Studies Volume 42 ; 42 >
+    au < ready ; Journal of Canadian Studies Volume 43 ; 43 >
 
   }
 
@@ -203,9 +203,9 @@
     au < released ; Journal of Scholarly Publishing Volume 36 ; 36 >
     au < released ; Journal of Scholarly Publishing Volume 37 ; 37 >
     au < released ; Journal of Scholarly Publishing Volume 38 ; 38 >
-    au < manifest ; Journal of Scholarly Publishing Volume 39 ; 39 >
-    au < manifest ; Journal of Scholarly Publishing Volume 40 ; 40 >
-    au < manifest ; Journal of Scholarly Publishing Volume 41 ; 41 >
+    au < ready ; Journal of Scholarly Publishing Volume 39 ; 39 >
+    au < ready ; Journal of Scholarly Publishing Volume 40 ; 40 >
+    au < ready ; Journal of Scholarly Publishing Volume 41 ; 41 >
 
   }
 
@@ -221,8 +221,8 @@
     au < released ; Modern Drama Volume 48 ; 48 >
     au < released ; Modern Drama Volume 49 ; 49 >
     au < released ; Modern Drama Volume 50 ; 50 >
-    au < manifest ; Modern Drama Volume 51 ; 51 >
-    au < manifest ; Modern Drama Volume 52 ; 52 >
+    au < ready ; Modern Drama Volume 51 ; 51 >
+    au < ready ; Modern Drama Volume 52 ; 52 >
 
   }
 
@@ -237,9 +237,9 @@
 
     au < released ; Seminar: A Journal of Germanic Studies Volume 42 ; 42 >
     au < released ; Seminar: A Journal of Germanic Studies Volume 43 ; 43 >
-    au < manifest ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
-    au < manifest ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
-    au < manifest ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
+    au < ready ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
+    au < ready ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
+    au < ready ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
 
   }
 
@@ -258,7 +258,7 @@
     au < released ; The Canadian Historical Review Volume 88 ; 88 >
     au < ready ; The Canadian Historical Review Volume 89 ; 89 >
     au < ready ; The Canadian Historical Review Volume 90 ; 90 >
-    au < manifest ; The Canadian Historical Review Volume 91 ; 91 >
+    au < ready ; The Canadian Historical Review Volume 91 ; 91 >
 
   }
 
@@ -324,7 +324,7 @@
 
     param[journal_dir] = tocqueville_reviewla_revue_tocqueville
 
-    au < manifest ; The Tocqueville Review/La revue Tocqueville Volume 30 ; 30 >
+    au < ready ; The Tocqueville Review/La revue Tocqueville Volume 30 ; 30 >
 
   }
 
@@ -342,8 +342,8 @@
     au < manifest ; University of Toronto Law Journal Volume 56 ; 56 >
     au < manifest ; University of Toronto Law Journal Volume 57 ; 57 >
     au < manifest ; University of Toronto Law Journal Volume 58 ; 58 >
-    au < manifest ; University of Toronto Law Journal Volume 59 ; 59 >
-    au < manifest ; University of Toronto Law Journal Volume 60 ; 60 >
+    au < ready ; University of Toronto Law Journal Volume 59 ; 59 >
+    au < ready ; University of Toronto Law Journal Volume 60 ; 60 >
 
   }
 
@@ -359,8 +359,8 @@
     au < released ; University of Toronto Quarterly Volume 74 ; 74 >
     au < released ; University of Toronto Quarterly Volume 75 ; 75 >
     au < released ; University of Toronto Quarterly Volume 76 ; 76 >
-    au < manifest ; University of Toronto Quarterly Volume 77 ; 77 >
-    au < manifest ; University of Toronto Quarterly Volume 78 ; 78 >
+    au < ready ; University of Toronto Quarterly Volume 77 ; 77 >
+    au < ready ; University of Toronto Quarterly Volume 78 ; 78 >
 
   }
 
