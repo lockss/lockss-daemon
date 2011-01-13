@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfConverter.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: PrintfConverter.java,v 1.2 2011-01-13 19:52:46 pgust Exp $
  */
 
 /*
@@ -235,14 +235,14 @@ public abstract class PrintfConverter {
       }
     }
 
-    public List getUrlList(String printfString) {
+    public List<String> getUrlList(String printfString) {
       convert(printfString);
       if (missingArgs) {
 	log.warning("Missing variable arguments: " + p_data);
 	return null;
       }
       if (!substitute_args.isEmpty() && haveSets) {
-	ArrayList res = new ArrayList();
+	ArrayList<String> res = new ArrayList<String>();
 	for (CartesianProductIterator iter =
 	       new CartesianProductIterator(substitute_args);
 	     iter.hasNext(); ) {
