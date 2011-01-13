@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.8 2006-11-02 04:19:38 tlipkis Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.9 2011-01-13 20:08:50 pgust Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
       "a Volume 10 of the World 1 History 532",
       "the Volume 11 of the World 1 History 532"
      };
-    List tl = ListUtil.fromArray(titles);
+    List<String> tl = ListUtil.fromArray(titles);
     Collections.reverse(tl);
     assertFalse(CollectionUtil.isIsomorphic(titles, tl));
     assertIsomorphic(titles, sort(tl));
@@ -203,7 +203,7 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
       "IBM Tech Journam",
       "Journal of I B M 2004"
     };
-    List tl = ListUtil.fromArray(titles);
+    List<String> tl = ListUtil.fromArray(titles);
     Collections.reverse(tl);
     assertFalse(CollectionUtil.isIsomorphic(titles, tl));
     assertIsomorphic(titles, sort(tl));
@@ -214,15 +214,15 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
   public void testIllType() {
     try {
       sort(ListUtil.list("foo", new Integer(1)));
-      fail("Should have thrown IllegalArgumentException");
-    } catch (IllegalArgumentException e) {
+      fail("Should have thrown ClassCastException");
+    } catch (ClassCastException e) {
     }
   }
 
   public void testCache() {
     CountingCOC ccoc = new CountingCOC();
 
-    List lst = ListUtil.list("1",
+    List<String> lst = ListUtil.list("1",
 			     "2",
 			     "the 3",
 			     "a 4",
@@ -240,7 +240,7 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
     assertEquals(lst.size(), ccoc.xlateCnt);
   }
 
-  List sort(List l) {
+  List<String> sort(List<String> l) {
     Collections.sort(l, new CatalogueOrderComparator());
     return l;
   }
