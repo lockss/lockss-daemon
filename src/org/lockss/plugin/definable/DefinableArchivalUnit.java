@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.84 2011-01-10 09:13:56 tlipkis Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.85 2011-01-13 19:57:17 pgust Exp $
  */
 
 /*
@@ -196,7 +196,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   @Override
   protected List<String> makeStartUrls() throws ConfigurationException {
-    List res = convertUrlListList(KEY_AU_START_URL);
+    List<String> res = convertUrlListList(KEY_AU_START_URL);
     if (res == null) {
       String msg = "Bad start url pattern: "
 	+ getElementList(KEY_AU_START_URL);
@@ -525,12 +525,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return new PrintfConverter.NameConverter(plugin, paramMap).getName(printfString);
   }
 
-  protected List convertUrlList(List<String> printfStrings, String key) {
+  protected List<String> convertUrlList(List<String> printfStrings, String key) {
     if (printfStrings == null) {
       return null;
     }
     // Just a guess; each printf may generate more than one URL
-    ArrayList<String> res = new ArrayList(printfStrings.size());
+    ArrayList<String> res = new ArrayList<String>(printfStrings.size());
     for (String pattern : printfStrings) {
       if (StringUtil.isNullString(pattern)) {
 	log.warning("Null pattern string in " + key);
