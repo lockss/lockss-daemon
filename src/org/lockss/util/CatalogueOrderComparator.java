@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.9 2006-11-02 04:19:38 tlipkis Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.10 2011-01-13 20:03:03 pgust Exp $
  */
 
 /*
@@ -44,33 +44,22 @@ import org.apache.commons.lang.StringUtils;
  * purpose.
  */
 
-public class CatalogueOrderComparator implements Comparator {
+public class CatalogueOrderComparator implements Comparator<String> {
   static final String PUNCTUATION = ".,-:;\"\'/?()[]{}<>!#";
   static final int PADLEN = 9;
   /** An instance of the comparator. */
   public static final CatalogueOrderComparator SINGLETON =
     new CatalogueOrderComparator();
 
-  Map keyMap = new HashMap();
-
-  public int compare(Object o1, Object o2) {
-    // Don't allow null to cause NPE
-    if (o1 == null) {
-      return (o2 == null ? 0 : -1);
-    } else if (o2 == null) {
-      return 1;
-    }
-    if (!((o1 instanceof String)
-	  && (o2 instanceof String))) {
-
-      throw new IllegalArgumentException("CatalogueOrderComparator(" +
-					 o1.getClass().getName() + "," +
-					 o2.getClass().getName() + ")");
-    }
-    return compare((String)o1, (String)o2);
-  }
+  Map<String,String> keyMap = new HashMap<String,String>();
 
   public int compare(String s1, String s2) {
+    // Don't allow null to cause NPE
+    if (s1 == null) {
+      return (s2 == null ? 0 : -1);
+    } else if (s2 == null) {
+      return 1;
+    }
     return getSortKey(s1).compareToIgnoreCase(getSortKey(s2));
   }
 
