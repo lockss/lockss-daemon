@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.10 2011-01-13 20:03:03 pgust Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.11 2011-01-13 20:11:10 pgust Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
-import org.apache.commons.lang.StringUtils;
 
 
 /**
