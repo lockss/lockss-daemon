@@ -21,8 +21,8 @@
     au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 15 ; 15 >
     au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 16 ; 16 >
     au < released ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 17 ; 17 >
-    au < ready ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 18 ; 18 >
-    au < ready ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 19 ; 19 >
+    au < releasing ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 18 ; 18 >
+    au < releasing ; American Periodicals: A Journal of History, Criticism, and Bibliography Volume 19 ; 19 >
 
   }
 
@@ -35,7 +35,7 @@
 
     param[journal_dir] = geographical_analysis
 
-    au < ready ; Geographical Analysis Volume 34 ; 34 >
+    au < releasing ; Geographical Analysis Volume 34 ; 34 >
     au < released ; Geographical Analysis Volume 35 ; 35 >
     au < released ; Geographical Analysis Volume 36 ; 36 >
 
@@ -85,9 +85,9 @@
     au < released ; Narrative Volume 13 ; 13 >
     au < released ; Narrative Volume 14 ; 14 >
     au < released ; Narrative Volume 15 ; 15 >
-    au < ready ; Narrative Volume 16 ; 16 >
-    au < ready ; Narrative Volume 17 ; 17 >
-    au < ready ; Narrative Volume 18 ; 18 >
+    au < releasing ; Narrative Volume 16 ; 16 >
+    au < releasing ; Narrative Volume 17 ; 17 >
+    au < releasing ; Narrative Volume 18 ; 18 >
 
   }
 
@@ -106,9 +106,9 @@
     au < released ; The Journal of Higher Education Volume 76 ; 76 >
     au < released ; The Journal of Higher Education Volume 77 ; 77 >
     au < released ; The Journal of Higher Education Volume 78 ; 78 >
-    au < ready ; The Journal of Higher Education Volume 79 ; 79 >
-    au < ready ; The Journal of Higher Education Volume 80 ; 80 >
-    au < ready ; The Journal of Higher Education Volume 81 ; 81 >
+    au < releasing ; The Journal of Higher Education Volume 79 ; 79 >
+    au < releasing ; The Journal of Higher Education Volume 80 ; 80 >
+    au < releasing ; The Journal of Higher Education Volume 81 ; 81 >
 
   }
 
@@ -121,8 +121,8 @@
 
     param[journal_dir] = twentiethcentury_china
 
-    au < ready ; Twentieth-Century China Volume 33 ; 33 >
-    au < ready ; Twentieth-Century China Volume 34 ; 34 >
+    au < releasing ; Twentieth-Century China Volume 33 ; 33 >
+    au < releasing ; Twentieth-Century China Volume 34 ; 34 >
 
   }
 
