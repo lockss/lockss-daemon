@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.82.2.5 2011-01-10 05:29:10 dshr Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.82.2.6 2011-01-14 19:23:16 dshr Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ public class LockssRepositoryImpl
    */
   void deactivateInconsistentNode(RepositoryNodeImpl node) {
     logger.warning("Deactivating inconsistent node.");
-    RepositoryNodeImpl.ensureDirExists(node.getContentDir());
+    node.ensureDirExists(node.getContentDir());
     // manually deactivate
     node.deactivateContent();
   }

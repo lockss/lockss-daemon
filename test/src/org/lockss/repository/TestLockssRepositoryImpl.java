@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.64 2010-10-07 01:37:24 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.64.2.1 2011-01-14 19:23:16 dshr Exp $
  */
 
 /*
@@ -340,9 +340,11 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     RepositoryNodeImpl leaf = (RepositoryNodeImpl)
         repo.getNode("http://www.example.com/testDir/leaf1");
     assertTrue(leaf.hasContent());
+    assertTrue(leaf.contentDir.exists());
 
     // delete content directory
     leaf.currentCacheFile.delete();
+    assertTrue(leaf.contentDir.exists());
     // version still indicates content
     assertEquals(1, leaf.getCurrentVersion());
 
@@ -426,7 +428,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void testGetAuDirNoCreate() {
     mau.setAuId("foobar23");
-    assertNull(LockssRepositoryImpl.getAuDir(mau, "", false));
+    assertNull(LockssRepositoryImpl.getAuDir(mau, "/tmp", false));
   }
 
   public void testSaveAndLoadNames() {
