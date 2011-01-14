@@ -11,6 +11,30 @@
   {
   
     title <
+      name = The Chaucer Review ;
+      issn = 0009-2002 ;
+      eissn = 1528-4204
+    >
+
+    param[journal_dir] = chaucer_review
+
+    au < released ; The Chaucer Review Volume 34 ; 34 >
+    au < released ; The Chaucer Review Volume 35 ; 35 >
+    au < released ; The Chaucer Review Volume 36 ; 36 >
+    au < released ; The Chaucer Review Volume 37 ; 37 >
+    au < released ; The Chaucer Review Volume 38 ; 38 >
+    au < released ; The Chaucer Review Volume 39 ; 39 >
+    au < released ; The Chaucer Review Volume 40 ; 40 >
+    au < released ; The Chaucer Review Volume 41 ; 41 >
+    au < testing ; The Chaucer Review Volume 42 ; 42 >
+    au < testing ; The Chaucer Review Volume 43 ; 43 >
+    au < testing ; The Chaucer Review Volume 44 ; 44 >
+
+  }
+
+  {
+  
+    title <
       name = Comparative Literature Studies ;
       issn = 0010-4132 ;
       eissn = 1528-4212
@@ -26,9 +50,106 @@
     au < released ; Comparative Literature Studies Volume 41 ; 41 >
     au < released ; Comparative Literature Studies Volume 42 ; 42 >
     au < released ; Comparative Literature Studies Volume 43 ; 43 >
-    au < releasing ; Comparative Literature Studies Volume 44 ; 44 >
-    au < releasing ; Comparative Literature Studies Volume 45 ; 45 >
-    au < releasing ; Comparative Literature Studies Volume 46 ; 46 >
+    au < released ; Comparative Literature Studies Volume 44 ; 44 >
+    au < released ; Comparative Literature Studies Volume 45 ; 45 >
+    au < released ; Comparative Literature Studies Volume 46 ; 46 >
+
+  }
+
+  {
+  
+    title <
+      name = The Good Society ;
+      issn = 1089-0017 ;
+      eissn = 1538-9731
+    >
+
+    param[journal_dir] = good_society
+
+    au < released ; The Good Society Volume 11 ; 11 >
+    au < released ; The Good Society Volume 12 ; 12 >
+    au < released ; The Good Society Volume 13 ; 13 >
+    au < released ; The Good Society Volume 14 ; 14 >
+    au < released ; The Good Society Volume 15 ; 15 >
+    au < released ; The Good Society Volume 16 ; 16 >
+    au < released ; The Good Society Volume 17 ; 17 >
+    au < released ; The Good Society Volume 18 ; 18 >
+
+  }
+
+  {
+  
+    title <
+      name = The Journal of General Education ;
+      issn = 0021-3667 ;
+      eissn = 1527-2060
+    >
+
+    param[journal_dir] = journal_of_general_education
+
+    au < released ; The Journal of General Education Volume 48 ; 48 >
+    au < released ; The Journal of General Education Volume 49 ; 49 >
+    au < released ; The Journal of General Education Volume 50 ; 50 >
+    au < released ; The Journal of General Education Volume 51 ; 51 >
+    au < released ; The Journal of General Education Volume 52 ; 52 >
+    au < released ; The Journal of General Education Volume 53 ; 53 >
+    au < released ; The Journal of General Education Volume 54 ; 54 >
+    au < released ; The Journal of General Education Volume 55 ; 55 >
+    au < released ; The Journal of General Education Volume 56 ; 56 >
+    au < released ; The Journal of General Education Volume 57 ; 57 >
+    au < released ; The Journal of General Education Volume 58 ; 58 >
+
+  }
+
+  {
+  
+    title <
+      name = The Journal of Nietzsche Studies ;
+      issn = 1538-4594 ;
+      eissn = 0968-8005
+    >
+
+    param[journal_dir] = journal_of_nietzsche_studies
+
+    au < released ; The Journal of Nietzsche Studies Volume 23 ; 23 >
+    au < released ; The Journal of Nietzsche Studies Volume 24 ; 24 >
+    au < released ; The Journal of Nietzsche Studies Volume 25 ; 25 >
+    au < released ; The Journal of Nietzsche Studies Volume 26 ; 26 >
+    au < released ; The Journal of Nietzsche Studies Volume 27 ; 27 >
+    au < released ; The Journal of Nietzsche Studies Volume 28 ; 28 >
+    au < released ; The Journal of Nietzsche Studies Volume 29 ; 29 >
+    au < released ; The Journal of Nietzsche Studies Volume 30 ; 30 >
+    au < released ; The Journal of Nietzsche Studies Volume 31 ; 31 >
+    au < released ; The Journal of Nietzsche Studies Volume 32 ; 32 >
+    au < released ; The Journal of Nietzsche Studies Volume 33 ; 33 >
+    au < released ; The Journal of Nietzsche Studies Volume 34 ; 34 >
+    au < released ; The Journal of Nietzsche Studies Volume 35/36 ; 35 >
+    au < released ; The Journal of Nietzsche Studies Issue 37 ; 37 >
+    au < released ; The Journal of Nietzsche Studies Issue 38 ; 38 >
+    
+  }
+
+  {
+  
+    title <
+      name = The Journal of Speculative Philosophy ;
+      issn = 0891-625X ;
+      eissn = 1527-9383
+    >
+
+    param[journal_dir] = journal_of_speculative_philosophy
+
+    au < released ; The Journal of Speculative Philosophy Volume 13 ; 13 >
+    au < released ; The Journal of Speculative Philosophy Volume 14 ; 14 >
+    au < released ; The Journal of Speculative Philosophy Volume 15 ; 15 >
+    au < released ; The Journal of Speculative Philosophy Volume 16 ; 16 >
+    au < released ; The Journal of Speculative Philosophy Volume 17 ; 17 >
+    au < released ; The Journal of Speculative Philosophy Volume 18 ; 18 >
+    au < released ; The Journal of Speculative Philosophy Volume 19 ; 19 >
+    au < released ; The Journal of Speculative Philosophy Volume 20 ; 20 >
+    au < released ; The Journal of Speculative Philosophy Volume 21 ; 21 >
+    au < released ; The Journal of Speculative Philosophy Volume 22 ; 22 >
+    au < released ; The Journal of Speculative Philosophy Volume 23 ; 23 >
 
   }
 
@@ -41,7 +162,7 @@
 
     param[journal_dir] = pennsylvania_history
 
-    au < releasing ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
+    au < released ; Pennsylvania History: A Journal of Mid-Atlantic Studies Volume 77 ; 77 >
 
   }
 
@@ -64,8 +185,8 @@
     au < released ; Philosophy and Rhetoric Volume 38 ; 38 >
     au < released ; Philosophy and Rhetoric Volume 39 ; 39 >
     au < released ; Philosophy and Rhetoric Volume 40 ; 40 >
-    au < releasing ; Philosophy and Rhetoric Volume 41 ; 41 >
-    au < releasing ; Philosophy and Rhetoric Volume 42 ; 42 >
+    au < released ; Philosophy and Rhetoric Volume 41 ; 41 >
+    au < released ; Philosophy and Rhetoric Volume 42 ; 42 >
 
   }
 
@@ -102,130 +223,9 @@
     au < released ; SHAW The Annual of Bernard Shaw Studies Volume 24 ; 24 >
     au < released ; SHAW The Annual of Bernard Shaw Studies Volume 25 ; 25 >
     au < released ; SHAW The Annual of Bernard Shaw Studies Volume 26 ; 26 >
-    au < releasing ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
-    au < releasing ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
-    au < releasing ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
-
-  }
-
-  {
-  
-    title <
-      name = The Chaucer Review ;
-      issn = 0009-2002 ;
-      eissn = 1528-4204
-    >
-
-    param[journal_dir] = chaucer_review
-
-    au < released ; The Chaucer Review Volume 34 ; 34 >
-    au < released ; The Chaucer Review Volume 35 ; 35 >
-    au < released ; The Chaucer Review Volume 36 ; 36 >
-    au < released ; The Chaucer Review Volume 37 ; 37 >
-    au < released ; The Chaucer Review Volume 38 ; 38 >
-    au < released ; The Chaucer Review Volume 39 ; 39 >
-    au < released ; The Chaucer Review Volume 40 ; 40 >
-    au < released ; The Chaucer Review Volume 41 ; 41 >
-    au < testing ; The Chaucer Review Volume 42 ; 42 >
-    au < testing ; The Chaucer Review Volume 43 ; 43 >
-    au < testing ; The Chaucer Review Volume 44 ; 44 >
-
-  }
-
-  {
-  
-    title <
-      name = The Good Society ;
-      issn = 1089-0017 ;
-      eissn = 1538-9731
-    >
-
-    param[journal_dir] = good_society
-
-    au < released ; The Good Society Volume 11 ; 11 >
-    au < released ; The Good Society Volume 12 ; 12 >
-    au < released ; The Good Society Volume 13 ; 13 >
-    au < released ; The Good Society Volume 14 ; 14 >
-    au < released ; The Good Society Volume 15 ; 15 >
-    au < releasing ; The Good Society Volume 16 ; 16 >
-    au < releasing ; The Good Society Volume 17 ; 17 >
-    au < releasing ; The Good Society Volume 18 ; 18 >
-
-  }
-
-  {
-  
-    title <
-      name = The Journal of General Education ;
-      issn = 0021-3667 ;
-      eissn = 1527-2060
-    >
-
-    param[journal_dir] = journal_of_general_education
-
-    au < released ; The Journal of General Education Volume 48 ; 48 >
-    au < released ; The Journal of General Education Volume 49 ; 49 >
-    au < released ; The Journal of General Education Volume 50 ; 50 >
-    au < released ; The Journal of General Education Volume 51 ; 51 >
-    au < released ; The Journal of General Education Volume 52 ; 52 >
-    au < released ; The Journal of General Education Volume 53 ; 53 >
-    au < released ; The Journal of General Education Volume 54 ; 54 >
-    au < released ; The Journal of General Education Volume 55 ; 55 >
-    au < releasing ; The Journal of General Education Volume 56 ; 56 >
-    au < releasing ; The Journal of General Education Volume 57 ; 57 >
-    au < releasing ; The Journal of General Education Volume 58 ; 58 >
-
-  }
-
-  {
-  
-    title <
-      name = The Journal of Nietzsche Studies ;
-      issn = 1538-4594 ;
-      eissn = 0968-8005
-    >
-
-    param[journal_dir] = journal_of_nietzsche_studies
-
-    au < released ; The Journal of Nietzsche Studies Volume 23 ; 23 >
-    au < released ; The Journal of Nietzsche Studies Volume 24 ; 24 >
-    au < released ; The Journal of Nietzsche Studies Volume 25 ; 25 >
-    au < released ; The Journal of Nietzsche Studies Volume 26 ; 26 >
-    au < released ; The Journal of Nietzsche Studies Volume 27 ; 27 >
-    au < released ; The Journal of Nietzsche Studies Volume 28 ; 28 >
-    au < released ; The Journal of Nietzsche Studies Volume 29 ; 29 >
-    au < released ; The Journal of Nietzsche Studies Volume 30 ; 30 >
-    au < released ; The Journal of Nietzsche Studies Volume 31 ; 31 >
-    au < released ; The Journal of Nietzsche Studies Volume 32 ; 32 >
-    au < releasing ; The Journal of Nietzsche Studies Volume 33 ; 33 >
-    au < releasing ; The Journal of Nietzsche Studies Volume 34 ; 34 >
-    au < releasing ; The Journal of Nietzsche Studies Volume 35/36 ; 35 >
-    au < releasing ; The Journal of Nietzsche Studies Issue 37 ; 37 >
-    au < releasing ; The Journal of Nietzsche Studies Issue 38 ; 38 >
-    
-  }
-
-  {
-  
-    title <
-      name = The Journal of Speculative Philosophy ;
-      issn = 0891-625X ;
-      eissn = 1527-9383
-    >
-
-    param[journal_dir] = journal_of_speculative_philosophy
-
-    au < released ; The Journal of Speculative Philosophy Volume 13 ; 13 >
-    au < released ; The Journal of Speculative Philosophy Volume 14 ; 14 >
-    au < released ; The Journal of Speculative Philosophy Volume 15 ; 15 >
-    au < released ; The Journal of Speculative Philosophy Volume 16 ; 16 >
-    au < released ; The Journal of Speculative Philosophy Volume 17 ; 17 >
-    au < released ; The Journal of Speculative Philosophy Volume 18 ; 18 >
-    au < released ; The Journal of Speculative Philosophy Volume 19 ; 19 >
-    au < released ; The Journal of Speculative Philosophy Volume 20 ; 20 >
-    au < releasing ; The Journal of Speculative Philosophy Volume 21 ; 21 >
-    au < releasing ; The Journal of Speculative Philosophy Volume 22 ; 22 >
-    au < releasing ; The Journal of Speculative Philosophy Volume 23 ; 23 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 27 ; 27 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 28 ; 28 >
+    au < released ; SHAW The Annual of Bernard Shaw Studies Volume 29 ; 29 >
 
   }
 
