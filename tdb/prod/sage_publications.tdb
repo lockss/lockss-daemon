@@ -4233,22 +4233,10 @@ comment[exm] = now published by Springer
     {
 
       title <
-        name = The Harvard International Journal of Press/Politics ;
+        name = The International Journal of Press/Politics ;
         issn = 1940-1612 ;
         eissn = 1940-1620
       >
-
-      {
-
-        plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-        implicit < status ; name ; param[volume] >
-        param[base_url] = http://muse.jhu.edu/
-        
-        param[journal_dir] = harvard_international_journal_of_press_politics
-
-        au < manifest ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
-
-      }
 
       {
 
@@ -4256,7 +4244,7 @@ comment[exm] = now published by Springer
         param[base_url] = http://hij.sagepub.com/
         implicit < status ; name ; param[volume] >
 
-        au < down ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
+        au < down ; The International Journal of Press/Politics Volume 11 ; 11 >
 
       }
 
@@ -4265,11 +4253,11 @@ comment[exm] = now published by Springer
         param[base_url] = http://hij.sagepub.com/
         implicit < pluginSuffix ; status ; name ; param[volume_name] >
 
-        au < HighWireStrVolPlugin ; down ; The Harvard International Journal of Press/Politics Volume 10 ; 10 >
-        au < HighWireStrVolPlugin ; doNotProcess ; The Harvard International Journal of Press/Politics Volume 11 ; 11 >
-        au < HighWireStrVolPlugin ; down ; The Harvard International Journal of Press/Politics Volume 12 ; 12 >
-        au < HighWirePressPlugin ; down ; The Harvard International Journal of Press/Politics Volume 13 ; 13 >
-        au < HighWireStrVolPlugin ; down ; The Harvard International Journal of Press/Politics Volume 14 ; 14 >
+        au < HighWireStrVolPlugin ; down ; The International Journal of Press/Politics Volume 10 ; 10 >
+        au < HighWireStrVolPlugin ; doNotProcess ; The International Journal of Press/Politics Volume 11 ; 11 >
+        au < HighWireStrVolPlugin ; down ; The International Journal of Press/Politics Volume 12 ; 12 >
+        au < HighWirePressPlugin ; down ; The International Journal of Press/Politics Volume 13 ; 13 >
+        au < HighWireStrVolPlugin ; down ; The International Journal of Press/Politics Volume 14 ; 14 >
 
       }
 
@@ -12340,29 +12328,6 @@ comment[mpj] = now published by Brill
 
       }
 
-    }
-
-  }
-
-  {
-
-    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-    param[base_url] = http://muse.jhu.edu/
-    implicit < status ; name ; param[volume] >
-
-    {
-
-      title <
-        name = The Harvard International Journal of Press/Politics ;
-        issn = 1940-1612 ;
-        eissn = 1940-1620
-      >
-  
-      param[journal_dir] = harvard_international_journal_of_press_politics
-  
-      au < manifest ; The Harvard International Journal of Press/Politics Volume 4 ; 4 >
-      au < manifest ; The Harvard International Journal of Press/Politics Volume 5 ; 5 >
-  
     }
 
   }
