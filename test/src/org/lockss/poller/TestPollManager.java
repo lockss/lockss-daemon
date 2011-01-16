@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.101.2.1 2011-01-03 18:30:06 dshr Exp $
+ * $Id: TestPollManager.java,v 1.101.2.2 2011-01-16 00:23:26 dshr Exp $
  */
 
 /*
@@ -601,7 +601,9 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.setNodeManager(nodeMgr, mau);
     MockAuState maus = new MockAuState();
     nodeMgr.setAuState(maus);
-    RepositoryNode node = new MockRepositoryNode();
+    RepositoryNode node =
+      new MockRepositoryNode("http://www.example.com",
+			     getTempDir().getAbsolutePath());
     DatedPeerIdSet noAuSet = new DatedPeerIdSetImpl(node, "noau", idmanager);
     assertTrue(noAuSet.isEmpty());
     assertTrue(noAuSet.getDate() < 0);

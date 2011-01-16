@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.3 2011-01-10 05:29:09 dshr Exp $
+ * $Id: PersistentPeerIdSetImpl.java,v 1.8.28.4 2011-01-16 00:23:26 dshr Exp $
  */
 
 /*
@@ -139,6 +139,7 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
     boolean result;
 
     loadIfNecessary();
+    m_logger.debug3("addAll: " + cpi.size());
     result = m_setPeerId.addAll(cpi);
     m_changed |= result;
     storeIfNecessary();
@@ -318,7 +319,10 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
   protected void internalLoad() throws IOException {
     DataInputStream is = null;
     try {
-      FileObject ppisFile = m_node.getPeerIdFileObject(m_fileName);
+      FileObject ppisFile = null;
+      if (m_node != null) {
+	ppisFile = m_node.getPeerIdFileObject(m_fileName);
+      }
       if (ppisFile != null && ppisFile.exists()) {
 	is = new DataInputStream(ppisFile.getContent().getInputStream());
 	readData(is);
@@ -360,12 +364,48 @@ public class PersistentPeerIdSetImpl implements PersistentPeerIdSet {
    */
 
   protected void internalStore() throws IOException {
+    if (m_node != null) {
+      m_logger.debug3("m_node: " + m_fileName + " changed " + m_changed);
+    } else {
+      m_logger.debug3("m_node: null");
+    }
+    {
+      (new Throwable()).printStackTrace();
+    }
     if (!m_changed) {
       return;
     }
+
+//     DataOutputStream dos = null;
+//     String filePeerIdTempName = m_fileName
+//     try {
+//       FileObject filePeerIdTemp = VFS.getManager().resolveFile
+//     File filePeerIdTemp =
+//       FileUtil.createTempFile(m_filePeerId.getName(), TEMP_EXTENSION,
+//                               m_filePeerId.getParentFile());
+//     try {
+//       // Loop until there are no IdentityParseExceptions
+//       OutputStream fileOs = new FileOutputStream(filePeerIdTemp);
+//       dos = new DataOutputStream(new BufferedOutputStream(fileOs));
+//       writeData(dos);
+//       dos.close();
+
+//       if (PlatformUtil.updateAtomically(filePeerIdTemp, m_filePeerId)) {
+//         m_changed = false;
+//       } else {
+//         m_logger.error("Unable to rename temporary agreement history file " +
+//                        filePeerIdTemp);
+//       }
+//     } finally {
+//       IOUtil.safeClose(dos);
+//       filePeerIdTemp.delete();
+//     }
+
     DataOutputStream dos = null;
-    OutputStream os = m_node.getPeerIdOutputStream(m_fileName + TEMP_EXTENSION);
+    OutputStream os = os = m_node.getPeerIdOutputStream(m_fileName + TEMP_EXTENSION);
+    // XXX this is totally bogus
     if (os != null) try {
+	
       dos = new DataOutputStream(new BufferedOutputStream(os));
       writeData(dos);
       dos.close();

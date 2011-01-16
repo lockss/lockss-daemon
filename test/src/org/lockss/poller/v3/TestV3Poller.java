@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.33 2010-05-18 06:15:37 tlipkis Exp $
+ * $Id: TestV3Poller.java,v 1.33.6.1 2011-01-16 00:23:26 dshr Exp $
  */
 
 /*
@@ -966,6 +966,17 @@ public class TestV3Poller extends LockssTestCase {
     theDaemon.getSystemMetrics().startService();
     theDaemon.getActivityRegulator(testau).startService();
     theDaemon.setNodeManager(new MockNodeManager(), testau);
+    MockLockssRepository lr =
+      new MockLockssRepository(tempDirPath, testau);
+    theDaemon.setLockssRepository(lr, testau);
+    MockHistoryRepository hr =
+      new MockHistoryRepository();
+    hr.setIdentityManager(idMgr);
+    hr.setFileName(tempDir + File.separator + "dpis");
+    hr.setRepositoryNode(new MockRepositoryNode(BASE_URL,
+						tempDirPath));
+    theDaemon.setHistoryRepository(hr, testau);
+
     pollmanager.startService();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.20 2008-11-08 08:15:46 tlipkis Exp $
+ * $Id: MockHistoryRepository.java,v 1.20.30.1 2011-01-16 00:23:26 dshr Exp $
  */
 
 /*
@@ -38,8 +38,11 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.protocol.DatedPeerIdSet;
+import org.lockss.protocol.*;
+import org.lockss.protocol.IdentityManager;
 import org.lockss.config.Configuration;
+import org.lockss.poller.*;
+import org.lockss.repository.*;
 
 /**
  * MockHistoryRepository is a mock implementation of the HistoryRepository.
@@ -55,6 +58,11 @@ public class MockHistoryRepository implements HistoryRepository {
   private List loadedIdentityAgreement = null;
 
   private int timesStoreDamagedNodeSetCalled = 0;
+
+  private IdentityManager identityManager = null;
+  private String fileName = null;
+  private RepositoryNode repositoryNode = null;
+  private DatedPeerIdSet noAuPeerSet = null;
 
   public MockHistoryRepository() { }
 
@@ -159,8 +167,26 @@ public class MockHistoryRepository implements HistoryRepository {
    *    Therefore, it's an unsupported operation for now.
    * @see org.lockss.state.HistoryRepository#getDatedPeerIdSet()
    */
+  public void setIdentityManager(IdentityManager im) {
+    identityManager = im;
+  }
+  public void setRepositoryNode(RepositoryNode rn) {
+    repositoryNode = rn;
+  }
+  public void setFileName(String fn) {
+    fileName = fn;
+  }
+  public void setNoAuPeerSet(DatedPeerIdSet dpis) {
+    noAuPeerSet = dpis;
+  }
   public DatedPeerIdSet getNoAuPeerSet() {
-    throw new UnsupportedOperationException("Not implemented");
+    if (noAuPeerSet != null) {
+      return noAuPeerSet;
+    }
+    if (identityManager != null && fileName != null && repositoryNode != null) {
+      return new DatedPeerIdSetImpl(repositoryNode, fileName, identityManager);
+    }
+    throw new UnsupportedOperationException("Must set DatedPeerIdSet params.");
   }
 
 }
