@@ -248,7 +248,9 @@
   {
 
     title <
-      name = The EMBO Journal
+      name = The EMBO Journal ;
+      issn = 0261-4189 ;
+      eissn = 1460-2075
     >
 
     param[journal_id] = emboj
@@ -273,7 +275,9 @@
   {
 
     title <
-      name = EMBO Reports
+      name = EMBO Reports ;
+      issn = 1469-221X ;
+      eissn = 1469-3178
     >
 
     param[journal_id] = embor
@@ -912,7 +916,8 @@
   {
 
     title <
-      name = Molecular Systems Biology
+      name = Molecular Systems Biology ;
+      eissn = 1744-4292
     >
 
     param[journal_id] = msb
@@ -1215,7 +1220,9 @@
   {
 
     title <
-      name = Nature Protocols
+      name = Nature Protocols ;
+      issn = 1754-2189 ;
+      eissn = 1750-2799
     >
 
     param[journal_id] = nprot
@@ -1589,7 +1596,8 @@ comment[nprot4] = poll mismatch
   {
 
     title <
-      name = SciBX: Science-Business eXchange
+      name = SciBX: Science-Business eXchange ;
+      eissn = 1945-3477
     >
 
     param[journal_id] = scibx
