@@ -9,7 +9,7 @@
   </entry>
   <entry>
     <string>plugin_version</string>
-    <string>3</string>
+    <string>4</string>
   </entry>
   <entry>
     <string>au_name</string>
@@ -73,6 +73,10 @@
   </entry>
   <entry>
     <string>application/xml_link_extractor_factory</string>
+    <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/xml_link_extractor_factory</string>
     <string>org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsLinkExtractorFactory</string>
   </entry>
 </map>
