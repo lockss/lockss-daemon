@@ -4947,25 +4947,24 @@
     >
 
     param[journal_issn] = 1462-6004
-    attr[where] = content5b
     
-    au < testing ; 1994 ; Journal of Small Business and Enterprise Development Volume 1 ; 1 >
-    au < testing ; 1995 ; Journal of Small Business and Enterprise Development Volume 2 ; 2 >
-    au < testing ; 1996 ; Journal of Small Business and Enterprise Development Volume 3 ; 3 >
-    au < testing ; 1997 ; Journal of Small Business and Enterprise Development Volume 4 ; 4 >
-    au < testing ; 1998 ; Journal of Small Business and Enterprise Development Volume 5 ; 5 >
-    au < testing ; 1999 ; Journal of Small Business and Enterprise Development Volume 6 ; 6 >
-    au < testing ; 2000 ; Journal of Small Business and Enterprise Development Volume 7 ; 7 >
-    au < testing ; 2001 ; Journal of Small Business and Enterprise Development Volume 8 ; 8 >
-    au < testing ; 2002 ; Journal of Small Business and Enterprise Development Volume 9 ; 9 >
-    au < testing ; 2003 ; Journal of Small Business and Enterprise Development Volume 10 ; 10 >
-    au < testing ; 2004 ; Journal of Small Business and Enterprise Development Volume 11 ; 11 >
-    au < testing ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 >
-    au < testing ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 >
-    au < testing ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 >
-    au < testing ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 >
-    au < testing ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 >
-    au < testing ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 >
+    au < ready ; 1994 ; Journal of Small Business and Enterprise Development Volume 1 ; 1 >
+    au < ready ; 1995 ; Journal of Small Business and Enterprise Development Volume 2 ; 2 >
+    au < ready ; 1996 ; Journal of Small Business and Enterprise Development Volume 3 ; 3 >
+    au < ready ; 1997 ; Journal of Small Business and Enterprise Development Volume 4 ; 4 >
+    au < ready ; 1998 ; Journal of Small Business and Enterprise Development Volume 5 ; 5 >
+    au < ready ; 1999 ; Journal of Small Business and Enterprise Development Volume 6 ; 6 >
+    au < ready ; 2000 ; Journal of Small Business and Enterprise Development Volume 7 ; 7 >
+    au < ready ; 2001 ; Journal of Small Business and Enterprise Development Volume 8 ; 8 >
+    au < ready ; 2002 ; Journal of Small Business and Enterprise Development Volume 9 ; 9 >
+    au < ready ; 2003 ; Journal of Small Business and Enterprise Development Volume 10 ; 10 >
+    au < ready ; 2004 ; Journal of Small Business and Enterprise Development Volume 11 ; 11 >
+    au < ready ; 2005 ; Journal of Small Business and Enterprise Development Volume 12 ; 12 >
+    au < ready ; 2006 ; Journal of Small Business and Enterprise Development Volume 13 ; 13 >
+    au < ready ; 2007 ; Journal of Small Business and Enterprise Development Volume 14 ; 14 >
+    au < ready ; 2008 ; Journal of Small Business and Enterprise Development Volume 15 ; 15 >
+    au < ready ; 2009 ; Journal of Small Business and Enterprise Development Volume 16 ; 16 >
+    au < ready ; 2010 ; Journal of Small Business and Enterprise Development Volume 17 ; 17 >
 
   }
 
@@ -5574,6 +5573,7 @@
   }
 
   {
+  
     title <
       name = Managerial Auditing Journal;
       issn = 0268-6902
@@ -5611,50 +5611,51 @@
   }
 
   {
+
     title <
       name = Managerial Finance;
       issn = 0307-4358
     >
 
     param[journal_issn] = 0307-4358
-
+    attr[where] = content5b
     
-    au < manifest ; 1975 ; Managerial Finance Volume 1 ; 1 >
-    au < manifest ; 1976 ; Managerial Finance Volume 2 ; 2 >
-    au < manifest ; 1977 ; Managerial Finance Volume 3 ; 3 >
-    au < manifest ; 1978 ; Managerial Finance Volume 4 ; 4 >
-    au < manifest ; 1980 ; Managerial Finance Volume 5 ; 5 >
-    au < manifest ; 1980 ; Managerial Finance Volume 6 ; 6 >
-    au < manifest ; 1981 ; Managerial Finance Volume 7 ; 7 >
-    au < manifest ; 1982 ; Managerial Finance Volume 8 ; 8 >
-    au < manifest ; 1983 ; Managerial Finance Volume 9 ; 9 >
-    au < manifest ; 1984 ; Managerial Finance Volume 10 ; 10 >
-    au < manifest ; 1985 ; Managerial Finance Volume 11 ; 11 >
-    au < manifest ; 1986 ; Managerial Finance Volume 12 ; 12 >
-    au < manifest ; 1987 ; Managerial Finance Volume 13 ; 13 >
-    au < manifest ; 1988 ; Managerial Finance Volume 14 ; 14 >
-    au < manifest ; 1989 ; Managerial Finance Volume 15 ; 15 >
-    au < manifest ; 1990 ; Managerial Finance Volume 16 ; 16 >
-    au < manifest ; 1991 ; Managerial Finance Volume 17 ; 17 >
-    au < manifest ; 1992 ; Managerial Finance Volume 18 ; 18 >
-    au < manifest ; 1993 ; Managerial Finance Volume 19 ; 19 >
-    au < manifest ; 1994 ; Managerial Finance Volume 20 ; 20 >
-    au < manifest ; 1995 ; Managerial Finance Volume 21 ; 21 >
-    au < manifest ; 1996 ; Managerial Finance Volume 22 ; 22 >
-    au < manifest ; 1997 ; Managerial Finance Volume 23 ; 23 >
-    au < manifest ; 1998 ; Managerial Finance Volume 24 ; 24 >
-    au < manifest ; 1999 ; Managerial Finance Volume 25 ; 25 >
-    au < manifest ; 2000 ; Managerial Finance Volume 26 ; 26 >
-    au < manifest ; 2001 ; Managerial Finance Volume 27 ; 27 >
-    au < manifest ; 2002 ; Managerial Finance Volume 28 ; 28 >
-    au < manifest ; 2003 ; Managerial Finance Volume 29 ; 29 >
-    au < manifest ; 2004 ; Managerial Finance Volume 30 ; 30 >
-    au < manifest ; 2005 ; Managerial Finance Volume 31 ; 31 >
-    au < manifest ; 2006 ; Managerial Finance Volume 32 ; 32 >
-    au < manifest ; 2007 ; Managerial Finance Volume 33 ; 33 >
-    au < manifest ; 2008 ; Managerial Finance Volume 34 ; 34 >
-    au < manifest ; 2010 ; Managerial Finance Volume 35 ; 35 >
-    au < manifest ; 2010 ; Managerial Finance Volume 36 ; 36 >
+    au < testing ; 1975 ; Managerial Finance Volume 1 ; 1 >
+    au < testing ; 1976 ; Managerial Finance Volume 2 ; 2 >
+    au < testing ; 1977 ; Managerial Finance Volume 3 ; 3 >
+    au < testing ; 1978 ; Managerial Finance Volume 4 ; 4 >
+    au < testing ; 1980 ; Managerial Finance Volume 5 ; 5 >
+    au < testing ; 1980 ; Managerial Finance Volume 6 ; 6 >
+    au < testing ; 1981 ; Managerial Finance Volume 7 ; 7 >
+    au < testing ; 1982 ; Managerial Finance Volume 8 ; 8 >
+    au < testing ; 1983 ; Managerial Finance Volume 9 ; 9 >
+    au < testing ; 1984 ; Managerial Finance Volume 10 ; 10 >
+    au < testing ; 1985 ; Managerial Finance Volume 11 ; 11 >
+    au < testing ; 1986 ; Managerial Finance Volume 12 ; 12 >
+    au < testing ; 1987 ; Managerial Finance Volume 13 ; 13 >
+    au < testing ; 1988 ; Managerial Finance Volume 14 ; 14 >
+    au < testing ; 1989 ; Managerial Finance Volume 15 ; 15 >
+    au < testing ; 1990 ; Managerial Finance Volume 16 ; 16 >
+    au < testing ; 1991 ; Managerial Finance Volume 17 ; 17 >
+    au < testing ; 1992 ; Managerial Finance Volume 18 ; 18 >
+    au < testing ; 1993 ; Managerial Finance Volume 19 ; 19 >
+    au < testing ; 1994 ; Managerial Finance Volume 20 ; 20 >
+    au < testing ; 1995 ; Managerial Finance Volume 21 ; 21 >
+    au < testing ; 1996 ; Managerial Finance Volume 22 ; 22 >
+    au < testing ; 1997 ; Managerial Finance Volume 23 ; 23 >
+    au < testing ; 1998 ; Managerial Finance Volume 24 ; 24 >
+    au < testing ; 1999 ; Managerial Finance Volume 25 ; 25 >
+    au < testing ; 2000 ; Managerial Finance Volume 26 ; 26 >
+    au < testing ; 2001 ; Managerial Finance Volume 27 ; 27 >
+    au < testing ; 2002 ; Managerial Finance Volume 28 ; 28 >
+    au < testing ; 2003 ; Managerial Finance Volume 29 ; 29 >
+    au < testing ; 2004 ; Managerial Finance Volume 30 ; 30 >
+    au < testing ; 2005 ; Managerial Finance Volume 31 ; 31 >
+    au < testing ; 2006 ; Managerial Finance Volume 32 ; 32 >
+    au < testing ; 2007 ; Managerial Finance Volume 33 ; 33 >
+    au < testing ; 2008 ; Managerial Finance Volume 34 ; 34 >
+    au < testing ; 2010 ; Managerial Finance Volume 35 ; 35 >
+    au < testing ; 2010 ; Managerial Finance Volume 36 ; 36 >
 
   }
 
