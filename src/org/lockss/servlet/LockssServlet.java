@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.117 2011-01-10 09:14:57 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.118 2011-01-18 17:11:15 neilmayo Exp $
  */
 
 /*
@@ -916,7 +916,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   /** Store a footnote, assign it a number, return html for footnote
-   * reference.  If footnote in null or empty, no footnote is added and am
+   * reference.  If footnote in null or empty, no footnote is added and an
    * empty string is returned.  Footnote numbers get turned into links;
    * <b>Do not put the result of addFootnote inside a link!</b>.  */
   protected String addFootnote(String s) {
