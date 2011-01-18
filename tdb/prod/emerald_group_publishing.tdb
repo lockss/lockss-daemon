@@ -4819,23 +4819,22 @@
     >
 
     param[journal_issn] = 1355-2511
-    attr[where] = content2b
     
     au < ready ; 1995 ; Journal of Quality in Maintenance Engineering Volume 1 ; 1 >
     au < ready ; 1996 ; Journal of Quality in Maintenance Engineering Volume 2 ; 2 >
-    au < testing ; 1997 ; Journal of Quality in Maintenance Engineering Volume 3 ; 3 >
+    au < ready ; 1997 ; Journal of Quality in Maintenance Engineering Volume 3 ; 3 >
     au < ready ; 1998 ; Journal of Quality in Maintenance Engineering Volume 4 ; 4 >
     au < ready ; 1999 ; Journal of Quality in Maintenance Engineering Volume 5 ; 5 >
     au < ready ; 2000 ; Journal of Quality in Maintenance Engineering Volume 6 ; 6 >
-    au < testing ; 2001 ; Journal of Quality in Maintenance Engineering Volume 7 ; 7 >
-    au < testing ; 2002 ; Journal of Quality in Maintenance Engineering Volume 8 ; 8 >
+    au < ready ; 2001 ; Journal of Quality in Maintenance Engineering Volume 7 ; 7 >
+    au < ready ; 2002 ; Journal of Quality in Maintenance Engineering Volume 8 ; 8 >
     au < ready ; 2003 ; Journal of Quality in Maintenance Engineering Volume 9 ; 9 >
     au < ready ; 2004 ; Journal of Quality in Maintenance Engineering Volume 10 ; 10 >
     au < ready ; 2005 ; Journal of Quality in Maintenance Engineering Volume 11 ; 11 >
-    au < testing ; 2006 ; Journal of Quality in Maintenance Engineering Volume 12 ; 12 >
+    au < ready ; 2006 ; Journal of Quality in Maintenance Engineering Volume 12 ; 12 >
     au < ready ; 2007 ; Journal of Quality in Maintenance Engineering Volume 13 ; 13 >
-    au < testing ; 2008 ; Journal of Quality in Maintenance Engineering Volume 14 ; 14 >
-    au < testing ; 2009 ; Journal of Quality in Maintenance Engineering Volume 15 ; 15 >
+    au < ready ; 2008 ; Journal of Quality in Maintenance Engineering Volume 14 ; 14 >
+    au < ready ; 2009 ; Journal of Quality in Maintenance Engineering Volume 15 ; 15 >
     au < ready ; 2010 ; Journal of Quality in Maintenance Engineering Volume 16 ; 16 >
 
   }
@@ -5125,439 +5124,454 @@
   }
 
   {
+
     title <
       name = Leadership & Organization Development Journal;
       issn = 0143-7739
     >
 
     param[journal_issn] = 0143-7739
-
+    attr[where] = content1a
     
-    au < manifest ; 1980 ; Leadership & Organization Development Journal Volume 1 ; 1 >
-    au < manifest ; 1981 ; Leadership & Organization Development Journal Volume 2 ; 2 >
-    au < manifest ; 1982 ; Leadership & Organization Development Journal Volume 3 ; 3 >
-    au < manifest ; 1983 ; Leadership & Organization Development Journal Volume 4 ; 4 >
-    au < manifest ; 1984 ; Leadership & Organization Development Journal Volume 5 ; 5 >
-    au < manifest ; 1985 ; Leadership & Organization Development Journal Volume 6 ; 6 >
-    au < manifest ; 1986 ; Leadership & Organization Development Journal Volume 7 ; 7 >
-    au < manifest ; 1987 ; Leadership & Organization Development Journal Volume 8 ; 8 >
-    au < manifest ; 1988 ; Leadership & Organization Development Journal Volume 9 ; 9 >
-    au < manifest ; 1989 ; Leadership & Organization Development Journal Volume 10 ; 10 >
-    au < manifest ; 1990 ; Leadership & Organization Development Journal Volume 11 ; 11 >
-    au < manifest ; 1991 ; Leadership & Organization Development Journal Volume 12 ; 12 >
-    au < manifest ; 1992 ; Leadership & Organization Development Journal Volume 13 ; 13 >
-    au < manifest ; 1993 ; Leadership & Organization Development Journal Volume 14 ; 14 >
-    au < manifest ; 1994 ; Leadership & Organization Development Journal Volume 15 ; 15 >
-    au < manifest ; 1995 ; Leadership & Organization Development Journal Volume 16 ; 16 >
-    au < manifest ; 1996 ; Leadership & Organization Development Journal Volume 17 ; 17 >
-    au < manifest ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 >
-    au < manifest ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 >
-    au < manifest ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 >
-    au < manifest ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 >
-    au < manifest ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 >
-    au < manifest ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 >
-    au < manifest ; 2003 ; Leadership & Organization Development Journal Volume 24 ; 24 >
-    au < manifest ; 2004 ; Leadership & Organization Development Journal Volume 25 ; 25 >
-    au < manifest ; 2005 ; Leadership & Organization Development Journal Volume 26 ; 26 >
-    au < manifest ; 2006 ; Leadership & Organization Development Journal Volume 27 ; 27 >
-    au < manifest ; 2007 ; Leadership & Organization Development Journal Volume 28 ; 28 >
-    au < manifest ; 2008 ; Leadership & Organization Development Journal Volume 29 ; 29 >
-    au < manifest ; 2009 ; Leadership & Organization Development Journal Volume 30 ; 30 >
-    au < manifest ; 2010 ; Leadership & Organization Development Journal Volume 31 ; 31 >
+    au < testing ; 1980 ; Leadership & Organization Development Journal Volume 1 ; 1 >
+    au < testing ; 1981 ; Leadership & Organization Development Journal Volume 2 ; 2 >
+    au < testing ; 1982 ; Leadership & Organization Development Journal Volume 3 ; 3 >
+    au < testing ; 1983 ; Leadership & Organization Development Journal Volume 4 ; 4 >
+    au < testing ; 1984 ; Leadership & Organization Development Journal Volume 5 ; 5 >
+    au < testing ; 1985 ; Leadership & Organization Development Journal Volume 6 ; 6 >
+    au < testing ; 1986 ; Leadership & Organization Development Journal Volume 7 ; 7 >
+    au < testing ; 1987 ; Leadership & Organization Development Journal Volume 8 ; 8 >
+    au < testing ; 1988 ; Leadership & Organization Development Journal Volume 9 ; 9 >
+    au < testing ; 1989 ; Leadership & Organization Development Journal Volume 10 ; 10 >
+    au < testing ; 1990 ; Leadership & Organization Development Journal Volume 11 ; 11 >
+    au < testing ; 1991 ; Leadership & Organization Development Journal Volume 12 ; 12 >
+    au < testing ; 1992 ; Leadership & Organization Development Journal Volume 13 ; 13 >
+    au < testing ; 1993 ; Leadership & Organization Development Journal Volume 14 ; 14 >
+    au < testing ; 1994 ; Leadership & Organization Development Journal Volume 15 ; 15 >
+    au < testing ; 1995 ; Leadership & Organization Development Journal Volume 16 ; 16 >
+    au < testing ; 1996 ; Leadership & Organization Development Journal Volume 17 ; 17 >
+    au < testing ; 1997 ; Leadership & Organization Development Journal Volume 18 ; 18 >
+    au < testing ; 1998 ; Leadership & Organization Development Journal Volume 19 ; 19 >
+    au < testing ; 1999 ; Leadership & Organization Development Journal Volume 20 ; 20 >
+    au < testing ; 2000 ; Leadership & Organization Development Journal Volume 21 ; 21 >
+    au < testing ; 2001 ; Leadership & Organization Development Journal Volume 22 ; 22 >
+    au < testing ; 2002 ; Leadership & Organization Development Journal Volume 23 ; 23 >
+    au < testing ; 2003 ; Leadership & Organization Development Journal Volume 24 ; 24 >
+    au < testing ; 2004 ; Leadership & Organization Development Journal Volume 25 ; 25 >
+    au < testing ; 2005 ; Leadership & Organization Development Journal Volume 26 ; 26 >
+    au < testing ; 2006 ; Leadership & Organization Development Journal Volume 27 ; 27 >
+    au < testing ; 2007 ; Leadership & Organization Development Journal Volume 28 ; 28 >
+    au < testing ; 2008 ; Leadership & Organization Development Journal Volume 29 ; 29 >
+    au < testing ; 2009 ; Leadership & Organization Development Journal Volume 30 ; 30 >
+    au < testing ; 2010 ; Leadership & Organization Development Journal Volume 31 ; 31 >
 
   }
 
   {
+  
     title <
       name = Leadership in Health Services;
       issn = 1751-1879
     >
 
     param[journal_issn] = 1751-1879
-
+    attr[where] = content1b
     
-    au < manifest ; 1997 ; Leadership in Health Services Volume 10 ; 10 >
-    au < manifest ; 1998 ; Leadership in Health Services Volume 11 ; 11 >
-    au < manifest ; 1999 ; Leadership in Health Services Volume 12 ; 12 >
-    au < manifest ; 2000 ; Leadership in Health Services Volume 13 ; 13 >
-    au < manifest ; 2001 ; Leadership in Health Services Volume 14 ; 14 >
-    au < manifest ; 2002 ; Leadership in Health Services Volume 15 ; 15 >
-    au < manifest ; 2003 ; Leadership in Health Services Volume 16 ; 16 >
-    au < manifest ; 2004 ; Leadership in Health Services Volume 17 ; 17 >
-    au < manifest ; 2005 ; Leadership in Health Services Volume 18 ; 18 >
-    au < manifest ; 2006 ; Leadership in Health Services Volume 19 ; 19 >
-    au < manifest ; 2007 ; Leadership in Health Services Volume 20 ; 20 >
-    au < manifest ; 2008 ; Leadership in Health Services Volume 21 ; 21 >
-    au < manifest ; 2009 ; Leadership in Health Services Volume 22 ; 22 >
-    au < manifest ; 2010 ; Leadership in Health Services Volume 23 ; 23 >
+    au < testing ; 1997 ; Leadership in Health Services Volume 10 ; 10 >
+    au < testing ; 1998 ; Leadership in Health Services Volume 11 ; 11 >
+    au < testing ; 1999 ; Leadership in Health Services Volume 12 ; 12 >
+    au < testing ; 2000 ; Leadership in Health Services Volume 13 ; 13 >
+    au < testing ; 2001 ; Leadership in Health Services Volume 14 ; 14 >
+    au < testing ; 2002 ; Leadership in Health Services Volume 15 ; 15 >
+    au < testing ; 2003 ; Leadership in Health Services Volume 16 ; 16 >
+    au < testing ; 2004 ; Leadership in Health Services Volume 17 ; 17 >
+    au < testing ; 2005 ; Leadership in Health Services Volume 18 ; 18 >
+    au < testing ; 2006 ; Leadership in Health Services Volume 19 ; 19 >
+    au < testing ; 2007 ; Leadership in Health Services Volume 20 ; 20 >
+    au < testing ; 2008 ; Leadership in Health Services Volume 21 ; 21 >
+    au < testing ; 2009 ; Leadership in Health Services Volume 22 ; 22 >
+    au < testing ; 2010 ; Leadership in Health Services Volume 23 ; 23 >
 
   }
 
   {
+
     title <
       name = Librarian Career Development;
       issn = 0968-0810
     >
 
     param[journal_issn] = 0968-0810
-
+    attr[where] = content2a
     
-    au < manifest ; 1993 ; Librarian Career Development Volume 1 ; 1 >
-    au < manifest ; 1994 ; Librarian Career Development Volume 2 ; 2 >
-    au < manifest ; 1995 ; Librarian Career Development Volume 3 ; 3 >
-    au < manifest ; 1996 ; Librarian Career Development Volume 4 ; 4 >
-    au < manifest ; 1997 ; Librarian Career Development Volume 5 ; 5 >
-    au < manifest ; 1998 ; Librarian Career Development Volume 6 ; 6 >
-    au < manifest ; 1999 ; Librarian Career Development Volume 7 ; 7 >
+    au < testing ; 1993 ; Librarian Career Development Volume 1 ; 1 >
+    au < testing ; 1994 ; Librarian Career Development Volume 2 ; 2 >
+    au < testing ; 1995 ; Librarian Career Development Volume 3 ; 3 >
+    au < testing ; 1996 ; Librarian Career Development Volume 4 ; 4 >
+    au < testing ; 1997 ; Librarian Career Development Volume 5 ; 5 >
+    au < testing ; 1998 ; Librarian Career Development Volume 6 ; 6 >
+    au < testing ; 1999 ; Librarian Career Development Volume 7 ; 7 >
 
   }
 
   {
+  
     title <
       name = Library Consortium Management: An International Journal;
       issn = 1466-2760
     >
 
     param[journal_issn] = 1466-2760
-
+    attr[where] = content2a
     
-    au < manifest ; 1999 ; Library Consortium Management: An International Journal Volume 1 ; 1 >
-    au < manifest ; 2000 ; Library Consortium Management: An International Journal Volume 2 ; 2 >
+    au < testing ; 1999 ; Library Consortium Management: An International Journal Volume 1 ; 1 >
+    au < testing ; 2000 ; Library Consortium Management: An International Journal Volume 2 ; 2 >
 
   }
 
   {
+  
     title <
       name = Library Hi Tech;
       issn = 0737-8831
     >
 
     param[journal_issn] = 0737-8831
-
+    attr[where] = content3a
     
-    au < manifest ; 1984 ; Library Hi Tech Volume 1 ; 1 >
-    au < manifest ; 1984 ; Library Hi Tech Volume 2 ; 2 >
-    au < manifest ; 1985 ; Library Hi Tech Volume 3 ; 3 >
-    au < manifest ; 1986 ; Library Hi Tech Volume 4 ; 4 >
-    au < manifest ; 1987 ; Library Hi Tech Volume 5 ; 5 >
-    au < manifest ; 1988 ; Library Hi Tech Volume 6 ; 6 >
-    au < manifest ; 1989 ; Library Hi Tech Volume 7 ; 7 >
-    au < manifest ; 1990 ; Library Hi Tech Volume 8 ; 8 >
-    au < manifest ; 1991 ; Library Hi Tech Volume 9 ; 9 >
-    au < manifest ; 1992 ; Library Hi Tech Volume 10 ; 10 >
-    au < manifest ; 1993 ; Library Hi Tech Volume 11 ; 11 >
-    au < manifest ; 1994 ; Library Hi Tech Volume 12 ; 12 >
-    au < manifest ; 1995 ; Library Hi Tech Volume 13 ; 13 >
-    au < manifest ; 1996 ; Library Hi Tech Volume 14 ; 14 >
-    au < manifest ; 1997 ; Library Hi Tech Volume 15 ; 15 >
-    au < manifest ; 1998 ; Library Hi Tech Volume 16 ; 16 >
-    au < manifest ; 1999 ; Library Hi Tech Volume 17 ; 17 >
-    au < manifest ; 2000 ; Library Hi Tech Volume 18 ; 18 >
-    au < manifest ; 2001 ; Library Hi Tech Volume 19 ; 19 >
-    au < manifest ; 2002 ; Library Hi Tech Volume 20 ; 20 >
-    au < manifest ; 2003 ; Library Hi Tech Volume 21 ; 21 >
-    au < manifest ; 2004 ; Library Hi Tech Volume 22 ; 22 >
-    au < manifest ; 2005 ; Library Hi Tech Volume 23 ; 23 >
-    au < manifest ; 2006 ; Library Hi Tech Volume 24 ; 24 >
-    au < manifest ; 2007 ; Library Hi Tech Volume 25 ; 25 >
-    au < manifest ; 2008 ; Library Hi Tech Volume 26 ; 26 >
-    au < manifest ; 2009 ; Library Hi Tech Volume 27 ; 27 >
-    au < manifest ; 2010 ; Library Hi Tech Volume 28 ; 28 >
+    au < testing ; 1984 ; Library Hi Tech Volume 1 ; 1 >
+    au < testing ; 1984 ; Library Hi Tech Volume 2 ; 2 >
+    au < testing ; 1985 ; Library Hi Tech Volume 3 ; 3 >
+    au < testing ; 1986 ; Library Hi Tech Volume 4 ; 4 >
+    au < testing ; 1987 ; Library Hi Tech Volume 5 ; 5 >
+    au < testing ; 1988 ; Library Hi Tech Volume 6 ; 6 >
+    au < testing ; 1989 ; Library Hi Tech Volume 7 ; 7 >
+    au < testing ; 1990 ; Library Hi Tech Volume 8 ; 8 >
+    au < testing ; 1991 ; Library Hi Tech Volume 9 ; 9 >
+    au < testing ; 1992 ; Library Hi Tech Volume 10 ; 10 >
+    au < testing ; 1993 ; Library Hi Tech Volume 11 ; 11 >
+    au < testing ; 1994 ; Library Hi Tech Volume 12 ; 12 >
+    au < testing ; 1995 ; Library Hi Tech Volume 13 ; 13 >
+    au < testing ; 1996 ; Library Hi Tech Volume 14 ; 14 >
+    au < testing ; 1997 ; Library Hi Tech Volume 15 ; 15 >
+    au < testing ; 1998 ; Library Hi Tech Volume 16 ; 16 >
+    au < testing ; 1999 ; Library Hi Tech Volume 17 ; 17 >
+    au < testing ; 2000 ; Library Hi Tech Volume 18 ; 18 >
+    au < testing ; 2001 ; Library Hi Tech Volume 19 ; 19 >
+    au < testing ; 2002 ; Library Hi Tech Volume 20 ; 20 >
+    au < testing ; 2003 ; Library Hi Tech Volume 21 ; 21 >
+    au < testing ; 2004 ; Library Hi Tech Volume 22 ; 22 >
+    au < testing ; 2005 ; Library Hi Tech Volume 23 ; 23 >
+    au < testing ; 2006 ; Library Hi Tech Volume 24 ; 24 >
+    au < testing ; 2007 ; Library Hi Tech Volume 25 ; 25 >
+    au < testing ; 2008 ; Library Hi Tech Volume 26 ; 26 >
+    au < testing ; 2009 ; Library Hi Tech Volume 27 ; 27 >
+    au < testing ; 2010 ; Library Hi Tech Volume 28 ; 28 >
 
   }
 
   {
+  
     title <
       name = Library Hi Tech News;
       issn = 0741-9058
     >
 
     param[journal_issn] = 0741-9058
-
+    attr[where] = content3b
     
-    au < manifest ; 1999 ; Library Hi Tech News Volume 16 ; 16 >
-    au < manifest ; 2000 ; Library Hi Tech News Volume 17 ; 17 >
-    au < manifest ; 2001 ; Library Hi Tech News Volume 18 ; 18 >
-    au < manifest ; 2002 ; Library Hi Tech News Volume 19 ; 19 >
-    au < manifest ; 2003 ; Library Hi Tech News Volume 20 ; 20 >
-    au < manifest ; 2004 ; Library Hi Tech News Volume 21 ; 21 >
-    au < manifest ; 2005 ; Library Hi Tech News Volume 22 ; 22 >
-    au < manifest ; 2006 ; Library Hi Tech News Volume 23 ; 23 >
-    au < manifest ; 2007 ; Library Hi Tech News Volume 24 ; 24 >
-    au < manifest ; 2008 ; Library Hi Tech News Volume 25 ; 25 >
-    au < manifest ; 2009 ; Library Hi Tech News Volume 26 ; 26 >
-    au < manifest ; 2010 ; Library Hi Tech News Volume 27 ; 27 >
+    au < testing ; 1999 ; Library Hi Tech News Volume 16 ; 16 >
+    au < testing ; 2000 ; Library Hi Tech News Volume 17 ; 17 >
+    au < testing ; 2001 ; Library Hi Tech News Volume 18 ; 18 >
+    au < testing ; 2002 ; Library Hi Tech News Volume 19 ; 19 >
+    au < testing ; 2003 ; Library Hi Tech News Volume 20 ; 20 >
+    au < testing ; 2004 ; Library Hi Tech News Volume 21 ; 21 >
+    au < testing ; 2005 ; Library Hi Tech News Volume 22 ; 22 >
+    au < testing ; 2006 ; Library Hi Tech News Volume 23 ; 23 >
+    au < testing ; 2007 ; Library Hi Tech News Volume 24 ; 24 >
+    au < testing ; 2008 ; Library Hi Tech News Volume 25 ; 25 >
+    au < testing ; 2009 ; Library Hi Tech News Volume 26 ; 26 >
+    au < testing ; 2010 ; Library Hi Tech News Volume 27 ; 27 >
 
   }
 
   {
+  
     title <
       name = Library Management;
       issn = 0143-5124
     >
 
     param[journal_issn] = 0143-5124
-
+    attr[where] = content4a
     
-    au < manifest ; 1980 ; Library Management Volume 1 ; 1 >
-    au < manifest ; 1981 ; Library Management Volume 2 ; 2 >
-    au < manifest ; 1982 ; Library Management Volume 3 ; 3 >
-    au < manifest ; 1983 ; Library Management Volume 4 ; 4 >
-    au < manifest ; 1984 ; Library Management Volume 5 ; 5 >
-    au < manifest ; 1985 ; Library Management Volume 6 ; 6 >
-    au < manifest ; 1986 ; Library Management Volume 7 ; 7 >
-    au < manifest ; 1987 ; Library Management Volume 8 ; 8 >
-    au < manifest ; 1988 ; Library Management Volume 9 ; 9 >
-    au < manifest ; 1989 ; Library Management Volume 10 ; 10 >
-    au < manifest ; 1990 ; Library Management Volume 11 ; 11 >
-    au < manifest ; 1991 ; Library Management Volume 12 ; 12 >
-    au < manifest ; 1992 ; Library Management Volume 13 ; 13 >
-    au < manifest ; 1993 ; Library Management Volume 14 ; 14 >
-    au < manifest ; 1994 ; Library Management Volume 15 ; 15 >
-    au < manifest ; 1995 ; Library Management Volume 16 ; 16 >
-    au < manifest ; 1996 ; Library Management Volume 17 ; 17 >
-    au < manifest ; 1997 ; Library Management Volume 18 ; 18 >
-    au < manifest ; 1998 ; Library Management Volume 19 ; 19 >
-    au < manifest ; 1999 ; Library Management Volume 20 ; 20 >
-    au < manifest ; 2000 ; Library Management Volume 21 ; 21 >
-    au < manifest ; 2001 ; Library Management Volume 22 ; 22 >
-    au < manifest ; 2002 ; Library Management Volume 23 ; 23 >
-    au < manifest ; 2003 ; Library Management Volume 24 ; 24 >
-    au < manifest ; 2004 ; Library Management Volume 25 ; 25 >
-    au < manifest ; 2005 ; Library Management Volume 26 ; 26 >
-    au < manifest ; 2006 ; Library Management Volume 27 ; 27 >
-    au < manifest ; 2007 ; Library Management Volume 28 ; 28 >
-    au < manifest ; 2008 ; Library Management Volume 29 ; 29 >
-    au < manifest ; 2009 ; Library Management Volume 30 ; 30 >
-    au < manifest ; 2010 ; Library Management Volume 31 ; 31 >
+    au < testing ; 1980 ; Library Management Volume 1 ; 1 >
+    au < testing ; 1981 ; Library Management Volume 2 ; 2 >
+    au < testing ; 1982 ; Library Management Volume 3 ; 3 >
+    au < testing ; 1983 ; Library Management Volume 4 ; 4 >
+    au < testing ; 1984 ; Library Management Volume 5 ; 5 >
+    au < testing ; 1985 ; Library Management Volume 6 ; 6 >
+    au < testing ; 1986 ; Library Management Volume 7 ; 7 >
+    au < testing ; 1987 ; Library Management Volume 8 ; 8 >
+    au < testing ; 1988 ; Library Management Volume 9 ; 9 >
+    au < testing ; 1989 ; Library Management Volume 10 ; 10 >
+    au < testing ; 1990 ; Library Management Volume 11 ; 11 >
+    au < testing ; 1991 ; Library Management Volume 12 ; 12 >
+    au < testing ; 1992 ; Library Management Volume 13 ; 13 >
+    au < testing ; 1993 ; Library Management Volume 14 ; 14 >
+    au < testing ; 1994 ; Library Management Volume 15 ; 15 >
+    au < testing ; 1995 ; Library Management Volume 16 ; 16 >
+    au < testing ; 1996 ; Library Management Volume 17 ; 17 >
+    au < testing ; 1997 ; Library Management Volume 18 ; 18 >
+    au < testing ; 1998 ; Library Management Volume 19 ; 19 >
+    au < testing ; 1999 ; Library Management Volume 20 ; 20 >
+    au < testing ; 2000 ; Library Management Volume 21 ; 21 >
+    au < testing ; 2001 ; Library Management Volume 22 ; 22 >
+    au < testing ; 2002 ; Library Management Volume 23 ; 23 >
+    au < testing ; 2003 ; Library Management Volume 24 ; 24 >
+    au < testing ; 2004 ; Library Management Volume 25 ; 25 >
+    au < testing ; 2005 ; Library Management Volume 26 ; 26 >
+    au < testing ; 2006 ; Library Management Volume 27 ; 27 >
+    au < testing ; 2007 ; Library Management Volume 28 ; 28 >
+    au < testing ; 2008 ; Library Management Volume 29 ; 29 >
+    au < testing ; 2009 ; Library Management Volume 30 ; 30 >
+    au < testing ; 2010 ; Library Management Volume 31 ; 31 >
 
   }
 
   {
+  
     title <
       name = Library Review;
       issn = 0024-2535
     >
 
     param[journal_issn] = 0024-2535
-
+    attr[where] = content4b
     
-    au < manifest ; 1928 ; Library Review Volume 1 ; 1 >
-    au < manifest ; 1930 ; Library Review Volume 2 ; 2 >
-    au < manifest ; 1932 ; Library Review Volume 3 ; 3 >
-    au < manifest ; 1934 ; Library Review Volume 4 ; 4 >
-    au < manifest ; 1936 ; Library Review Volume 5 ; 5 >
-    au < manifest ; 1938 ; Library Review Volume 6 ; 6 >
-    au < manifest ; 1940 ; Library Review Volume 7 ; 7 >
-    au < manifest ; 1942 ; Library Review Volume 8 ; 8 >
-    au < manifest ; 1944 ; Library Review Volume 9 ; 9 >
-    au < manifest ; 1946 ; Library Review Volume 10 ; 10 >
-    au < manifest ; 1948 ; Library Review Volume 11 ; 11 >
-    au < manifest ; 1950 ; Library Review Volume 12 ; 12 >
-    au < manifest ; 1952 ; Library Review Volume 13 ; 13 >
-    au < manifest ; 1954 ; Library Review Volume 14 ; 14 >
-    au < manifest ; 1956 ; Library Review Volume 15 ; 15 >
-    au < manifest ; 1958 ; Library Review Volume 16 ; 16 >
-    au < manifest ; 1960 ; Library Review Volume 17 ; 17 >
-    au < manifest ; 1962 ; Library Review Volume 18 ; 18 >
-    au < manifest ; 1964 ; Library Review Volume 19 ; 19 >
-    au < manifest ; 1966 ; Library Review Volume 20 ; 20 >
-    au < manifest ; 1968 ; Library Review Volume 21 ; 21 >
-    au < manifest ; 1970 ; Library Review Volume 22 ; 22 >
-    au < manifest ; 1972 ; Library Review Volume 23 ; 23 >
-    au < manifest ; 1974 ; Library Review Volume 24 ; 24 >
-    au < manifest ; 1976 ; Library Review Volume 25 ; 25 >
-    au < manifest ; 1977 ; Library Review Volume 26 ; 26 >
-    au < manifest ; 1978 ; Library Review Volume 27 ; 27 >
-    au < manifest ; 1979 ; Library Review Volume 28 ; 28 >
-    au < manifest ; 1980 ; Library Review Volume 29 ; 29 >
-    au < manifest ; 1981 ; Library Review Volume 30 ; 30 >
-    au < manifest ; 1982 ; Library Review Volume 31 ; 31 >
-    au < manifest ; 1983 ; Library Review Volume 32 ; 32 >
-    au < manifest ; 1984 ; Library Review Volume 33 ; 33 >
-    au < manifest ; 1985 ; Library Review Volume 34 ; 34 >
-    au < manifest ; 1986 ; Library Review Volume 35 ; 35 >
-    au < manifest ; 1987 ; Library Review Volume 36 ; 36 >
-    au < manifest ; 1988 ; Library Review Volume 37 ; 37 >
-    au < manifest ; 1989 ; Library Review Volume 38 ; 38 >
-    au < manifest ; 1990 ; Library Review Volume 39 ; 39 >
-    au < manifest ; 1991 ; Library Review Volume 40 ; 40 >
-    au < manifest ; 1992 ; Library Review Volume 41 ; 41 >
-    au < manifest ; 1993 ; Library Review Volume 42 ; 42 >
-    au < manifest ; 1994 ; Library Review Volume 43 ; 43 >
-    au < manifest ; 1995 ; Library Review Volume 44 ; 44 >
-    au < manifest ; 1996 ; Library Review Volume 45 ; 45 >
-    au < manifest ; 1997 ; Library Review Volume 46 ; 46 >
-    au < manifest ; 1998 ; Library Review Volume 47 ; 47 >
-    au < manifest ; 1999 ; Library Review Volume 48 ; 48 >
-    au < manifest ; 2000 ; Library Review Volume 49 ; 49 >
-    au < manifest ; 2001 ; Library Review Volume 50 ; 50 >
-    au < manifest ; 2002 ; Library Review Volume 51 ; 51 >
-    au < manifest ; 2003 ; Library Review Volume 52 ; 52 >
-    au < manifest ; 2004 ; Library Review Volume 53 ; 53 >
-    au < manifest ; 2005 ; Library Review Volume 54 ; 54 >
-    au < manifest ; 2006 ; Library Review Volume 55 ; 55 >
-    au < manifest ; 2007 ; Library Review Volume 56 ; 56 >
-    au < manifest ; 2008 ; Library Review Volume 57 ; 57 >
-    au < manifest ; 2009 ; Library Review Volume 58 ; 58 >
-    au < manifest ; 2010 ; Library Review Volume 59 ; 59 >
+    au < testing ; 1928 ; Library Review Volume 1 ; 1 >
+    au < testing ; 1930 ; Library Review Volume 2 ; 2 >
+    au < testing ; 1932 ; Library Review Volume 3 ; 3 >
+    au < testing ; 1934 ; Library Review Volume 4 ; 4 >
+    au < testing ; 1936 ; Library Review Volume 5 ; 5 >
+    au < testing ; 1938 ; Library Review Volume 6 ; 6 >
+    au < testing ; 1940 ; Library Review Volume 7 ; 7 >
+    au < testing ; 1942 ; Library Review Volume 8 ; 8 >
+    au < testing ; 1944 ; Library Review Volume 9 ; 9 >
+    au < testing ; 1946 ; Library Review Volume 10 ; 10 >
+    au < testing ; 1948 ; Library Review Volume 11 ; 11 >
+    au < testing ; 1950 ; Library Review Volume 12 ; 12 >
+    au < testing ; 1952 ; Library Review Volume 13 ; 13 >
+    au < testing ; 1954 ; Library Review Volume 14 ; 14 >
+    au < testing ; 1956 ; Library Review Volume 15 ; 15 >
+    au < testing ; 1958 ; Library Review Volume 16 ; 16 >
+    au < testing ; 1960 ; Library Review Volume 17 ; 17 >
+    au < testing ; 1962 ; Library Review Volume 18 ; 18 >
+    au < testing ; 1964 ; Library Review Volume 19 ; 19 >
+    au < testing ; 1966 ; Library Review Volume 20 ; 20 >
+    au < testing ; 1968 ; Library Review Volume 21 ; 21 >
+    au < testing ; 1970 ; Library Review Volume 22 ; 22 >
+    au < testing ; 1972 ; Library Review Volume 23 ; 23 >
+    au < testing ; 1974 ; Library Review Volume 24 ; 24 >
+    au < testing ; 1976 ; Library Review Volume 25 ; 25 >
+    au < testing ; 1977 ; Library Review Volume 26 ; 26 >
+    au < testing ; 1978 ; Library Review Volume 27 ; 27 >
+    au < testing ; 1979 ; Library Review Volume 28 ; 28 >
+    au < testing ; 1980 ; Library Review Volume 29 ; 29 >
+    au < testing ; 1981 ; Library Review Volume 30 ; 30 >
+    au < testing ; 1982 ; Library Review Volume 31 ; 31 >
+    au < testing ; 1983 ; Library Review Volume 32 ; 32 >
+    au < testing ; 1984 ; Library Review Volume 33 ; 33 >
+    au < testing ; 1985 ; Library Review Volume 34 ; 34 >
+    au < testing ; 1986 ; Library Review Volume 35 ; 35 >
+    au < testing ; 1987 ; Library Review Volume 36 ; 36 >
+    au < testing ; 1988 ; Library Review Volume 37 ; 37 >
+    au < testing ; 1989 ; Library Review Volume 38 ; 38 >
+    au < testing ; 1990 ; Library Review Volume 39 ; 39 >
+    au < testing ; 1991 ; Library Review Volume 40 ; 40 >
+    au < testing ; 1992 ; Library Review Volume 41 ; 41 >
+    au < testing ; 1993 ; Library Review Volume 42 ; 42 >
+    au < testing ; 1994 ; Library Review Volume 43 ; 43 >
+    au < testing ; 1995 ; Library Review Volume 44 ; 44 >
+    au < testing ; 1996 ; Library Review Volume 45 ; 45 >
+    au < testing ; 1997 ; Library Review Volume 46 ; 46 >
+    au < testing ; 1998 ; Library Review Volume 47 ; 47 >
+    au < testing ; 1999 ; Library Review Volume 48 ; 48 >
+    au < testing ; 2000 ; Library Review Volume 49 ; 49 >
+    au < testing ; 2001 ; Library Review Volume 50 ; 50 >
+    au < testing ; 2002 ; Library Review Volume 51 ; 51 >
+    au < testing ; 2003 ; Library Review Volume 52 ; 52 >
+    au < testing ; 2004 ; Library Review Volume 53 ; 53 >
+    au < testing ; 2005 ; Library Review Volume 54 ; 54 >
+    au < testing ; 2006 ; Library Review Volume 55 ; 55 >
+    au < testing ; 2007 ; Library Review Volume 56 ; 56 >
+    au < testing ; 2008 ; Library Review Volume 57 ; 57 >
+    au < testing ; 2009 ; Library Review Volume 58 ; 58 >
+    au < testing ; 2010 ; Library Review Volume 59 ; 59 >
 
   }
 
   {
+  
     title <
       name = Logistics Information Management;
       issn = 0957-6053
     >
 
     param[journal_issn] = 0957-6053
-
+    attr[where] = content5a
     
-    au < manifest ; 1988 ; Logistics Information Management Volume 1 ; 1 >
-    au < manifest ; 1989 ; Logistics Information Management Volume 2 ; 2 >
-    au < manifest ; 1990 ; Logistics Information Management Volume 3 ; 3 >
-    au < manifest ; 1991 ; Logistics Information Management Volume 4 ; 4 >
-    au < manifest ; 1992 ; Logistics Information Management Volume 5 ; 5 >
-    au < manifest ; 1993 ; Logistics Information Management Volume 6 ; 6 >
-    au < manifest ; 1994 ; Logistics Information Management Volume 7 ; 7 >
-    au < manifest ; 1995 ; Logistics Information Management Volume 8 ; 8 >
-    au < manifest ; 1996 ; Logistics Information Management Volume 9 ; 9 >
-    au < manifest ; 1997 ; Logistics Information Management Volume 10 ; 10 >
-    au < manifest ; 1998 ; Logistics Information Management Volume 11 ; 11 >
-    au < manifest ; 1999 ; Logistics Information Management Volume 12 ; 12 >
-    au < manifest ; 2000 ; Logistics Information Management Volume 13 ; 13 >
-    au < manifest ; 2001 ; Logistics Information Management Volume 14 ; 14 >
-    au < manifest ; 2002 ; Logistics Information Management Volume 15 ; 15 >
-    au < manifest ; 2003 ; Logistics Information Management Volume 16 ; 16 >
+    au < testing ; 1988 ; Logistics Information Management Volume 1 ; 1 >
+    au < testing ; 1989 ; Logistics Information Management Volume 2 ; 2 >
+    au < testing ; 1990 ; Logistics Information Management Volume 3 ; 3 >
+    au < testing ; 1991 ; Logistics Information Management Volume 4 ; 4 >
+    au < testing ; 1992 ; Logistics Information Management Volume 5 ; 5 >
+    au < testing ; 1993 ; Logistics Information Management Volume 6 ; 6 >
+    au < testing ; 1994 ; Logistics Information Management Volume 7 ; 7 >
+    au < testing ; 1995 ; Logistics Information Management Volume 8 ; 8 >
+    au < testing ; 1996 ; Logistics Information Management Volume 9 ; 9 >
+    au < testing ; 1997 ; Logistics Information Management Volume 10 ; 10 >
+    au < testing ; 1998 ; Logistics Information Management Volume 11 ; 11 >
+    au < testing ; 1999 ; Logistics Information Management Volume 12 ; 12 >
+    au < testing ; 2000 ; Logistics Information Management Volume 13 ; 13 >
+    au < testing ; 2001 ; Logistics Information Management Volume 14 ; 14 >
+    au < testing ; 2002 ; Logistics Information Management Volume 15 ; 15 >
+    au < testing ; 2003 ; Logistics Information Management Volume 16 ; 16 >
 
   }
 
   {
+  
     title <
       name = Management Decision;
       issn = 0025-1747
     >
 
     param[journal_issn] = 0025-1747
-
+    attr[where] = content6a
     
-    au < manifest ; 1967 ; Management Decision Volume 1 ; 1 >
-    au < manifest ; 1968 ; Management Decision Volume 2 ; 2 >
-    au < manifest ; 1969 ; Management Decision Volume 3 ; 3 >
-    au < manifest ; 1970 ; Management Decision Volume 4 ; 4 >
+    au < testing ; 1967 ; Management Decision Volume 1 ; 1 >
+    au < testing ; 1968 ; Management Decision Volume 2 ; 2 >
+    au < testing ; 1969 ; Management Decision Volume 3 ; 3 >
+    au < testing ; 1970 ; Management Decision Volume 4 ; 4 >
 
   }
 
   {
+  
     title <
       name = Management Development Review;
       issn = 0962-2519
     >
 
     param[journal_issn] = 0962-2519
-
+    attr[where] = content6a
     
-    au < manifest ; 1994 ; Management Development Review Volume 7 ; 7 >
-    au < manifest ; 1995 ; Management Development Review Volume 8 ; 8 >
-    au < manifest ; 1996 ; Management Development Review Volume 9 ; 9 >
-    au < manifest ; 1997 ; Management Development Review Volume 10 ; 10 >
+    au < testing ; 1994 ; Management Development Review Volume 7 ; 7 >
+    au < testing ; 1995 ; Management Development Review Volume 8 ; 8 >
+    au < testing ; 1996 ; Management Development Review Volume 9 ; 9 >
+    au < testing ; 1997 ; Management Development Review Volume 10 ; 10 >
 
   }
 
   {
+  
     title <
       name = Management of Environmental Quality: An International Journal;
       issn = 1477-7835
     >
 
     param[journal_issn] = 1477-7835
-
+    attr[where] = sul-lockss30a
     
-    au < manifest ; 2003 ; Management of Environmental Quality: An International Journal Volume 14 ; 14 >
-    au < manifest ; 2004 ; Management of Environmental Quality: An International Journal Volume 15 ; 15 >
-    au < manifest ; 2005 ; Management of Environmental Quality: An International Journal Volume 16 ; 16 >
-    au < manifest ; 2006 ; Management of Environmental Quality: An International Journal Volume 17 ; 17 >
-    au < manifest ; 2007 ; Management of Environmental Quality: An International Journal Volume 18 ; 18 >
-    au < manifest ; 2008 ; Management of Environmental Quality: An International Journal Volume 19 ; 19 >
-    au < manifest ; 2009 ; Management of Environmental Quality: An International Journal Volume 20 ; 20 >
-    au < manifest ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 >
+    au < testing ; 2003 ; Management of Environmental Quality: An International Journal Volume 14 ; 14 >
+    au < testing ; 2004 ; Management of Environmental Quality: An International Journal Volume 15 ; 15 >
+    au < testing ; 2005 ; Management of Environmental Quality: An International Journal Volume 16 ; 16 >
+    au < testing ; 2006 ; Management of Environmental Quality: An International Journal Volume 17 ; 17 >
+    au < testing ; 2007 ; Management of Environmental Quality: An International Journal Volume 18 ; 18 >
+    au < testing ; 2008 ; Management of Environmental Quality: An International Journal Volume 19 ; 19 >
+    au < testing ; 2009 ; Management of Environmental Quality: An International Journal Volume 20 ; 20 >
+    au < testing ; 2010 ; Management of Environmental Quality: An International Journal Volume 21 ; 21 >
 
   }
 
   {
+  
     title <
       name = Management Research News;
       issn = 0140-9174
     >
 
     param[journal_issn] = 0140-9174
-
+    attr[where] = sul-lockss30b
     
-    au < manifest ; 1978 ; Management Research News Volume 1 ; 1 >
-    au < manifest ; 1979 ; Management Research News Volume 2 ; 2 >
-    au < manifest ; 1980 ; Management Research News Volume 3 ; 3 >
-    au < manifest ; 1982 ; Management Research News Volume 4 ; 4 >
-    au < manifest ; 1982 ; Management Research News Volume 5 ; 5 >
-    au < manifest ; 1983 ; Management Research News Volume 6 ; 6 >
-    au < manifest ; 1984 ; Management Research News Volume 7 ; 7 >
-    au < manifest ; 1985 ; Management Research News Volume 8 ; 8 >
-    au < manifest ; 1986 ; Management Research News Volume 9 ; 9 >
-    au < manifest ; 1987 ; Management Research News Volume 10 ; 10 >
-    au < manifest ; 1988 ; Management Research News Volume 11 ; 11 >
-    au < manifest ; 1989 ; Management Research News Volume 12 ; 12 >
-    au < manifest ; 1990 ; Management Research News Volume 13 ; 13 >
-    au < manifest ; 1991 ; Management Research News Volume 14 ; 14 >
-    au < manifest ; 1992 ; Management Research News Volume 15 ; 15 >
-    au < manifest ; 1993 ; Management Research News Volume 16 ; 16 >
-    au < manifest ; 1994 ; Management Research News Volume 17 ; 17 >
-    au < manifest ; 1995 ; Management Research News Volume 18 ; 18 >
-    au < manifest ; 1996 ; Management Research News Volume 19 ; 19 >
-    au < manifest ; 1997 ; Management Research News Volume 20 ; 20 >
-    au < manifest ; 1998 ; Management Research News Volume 21 ; 21 >
-    au < manifest ; 1999 ; Management Research News Volume 22 ; 22 >
-    au < manifest ; 2000 ; Management Research News Volume 23 ; 23 >
-    au < manifest ; 2001 ; Management Research News Volume 24 ; 24 >
-    au < manifest ; 2002 ; Management Research News Volume 25 ; 25 >
-    au < manifest ; 2003 ; Management Research News Volume 26 ; 26 >
-    au < manifest ; 2004 ; Management Research News Volume 27 ; 27 >
-    au < manifest ; 2005 ; Management Research News Volume 28 ; 28 >
-    au < manifest ; 2006 ; Management Research News Volume 29 ; 29 >
-    au < manifest ; 2007 ; Management Research News Volume 30 ; 30 >
-    au < manifest ; 2008 ; Management Research News Volume 31 ; 31 >
-    au < manifest ; 2009 ; Management Research News Volume 32 ; 32 >
+    au < testing ; 1978 ; Management Research News Volume 1 ; 1 >
+    au < testing ; 1979 ; Management Research News Volume 2 ; 2 >
+    au < testing ; 1980 ; Management Research News Volume 3 ; 3 >
+    au < testing ; 1982 ; Management Research News Volume 4 ; 4 >
+    au < testing ; 1982 ; Management Research News Volume 5 ; 5 >
+    au < testing ; 1983 ; Management Research News Volume 6 ; 6 >
+    au < testing ; 1984 ; Management Research News Volume 7 ; 7 >
+    au < testing ; 1985 ; Management Research News Volume 8 ; 8 >
+    au < testing ; 1986 ; Management Research News Volume 9 ; 9 >
+    au < testing ; 1987 ; Management Research News Volume 10 ; 10 >
+    au < testing ; 1988 ; Management Research News Volume 11 ; 11 >
+    au < testing ; 1989 ; Management Research News Volume 12 ; 12 >
+    au < testing ; 1990 ; Management Research News Volume 13 ; 13 >
+    au < testing ; 1991 ; Management Research News Volume 14 ; 14 >
+    au < testing ; 1992 ; Management Research News Volume 15 ; 15 >
+    au < testing ; 1993 ; Management Research News Volume 16 ; 16 >
+    au < testing ; 1994 ; Management Research News Volume 17 ; 17 >
+    au < testing ; 1995 ; Management Research News Volume 18 ; 18 >
+    au < testing ; 1996 ; Management Research News Volume 19 ; 19 >
+    au < testing ; 1997 ; Management Research News Volume 20 ; 20 >
+    au < testing ; 1998 ; Management Research News Volume 21 ; 21 >
+    au < testing ; 1999 ; Management Research News Volume 22 ; 22 >
+    au < testing ; 2000 ; Management Research News Volume 23 ; 23 >
+    au < testing ; 2001 ; Management Research News Volume 24 ; 24 >
+    au < testing ; 2002 ; Management Research News Volume 25 ; 25 >
+    au < testing ; 2003 ; Management Research News Volume 26 ; 26 >
+    au < testing ; 2004 ; Management Research News Volume 27 ; 27 >
+    au < testing ; 2005 ; Management Research News Volume 28 ; 28 >
+    au < testing ; 2006 ; Management Research News Volume 29 ; 29 >
+    au < testing ; 2007 ; Management Research News Volume 30 ; 30 >
+    au < testing ; 2008 ; Management Research News Volume 31 ; 31 >
+    au < testing ; 2009 ; Management Research News Volume 32 ; 32 >
 
   }
 
   {
+  
     title <
       name = Management Research Review;
       issn = 2040-8269
     >
 
     param[journal_issn] = 2040-8269
-
+    attr[where] = content2b
     
-    au < manifest ; 2010 ; Management Research Review Volume 33 ; 33 >
+    au < testing ; 2010 ; Management Research Review Volume 33 ; 33 >
 
   }
 
   {
+
     title <
       name = Management Research: The Journal of the Iberoamerican Academy of Management;
       issn = 1536-5433
     >
 
     param[journal_issn] = 1536-5433
-
+    attr[where] = content2b
     
-    au < manifest ; 2003 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 1 ; 1 >
-    au < manifest ; 2004 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 2 ; 2 >
-    au < manifest ; 2005 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 3 ; 3 >
-    au < manifest ; 2006 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 4 ; 4 >
-    au < manifest ; 2007 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 5 ; 5 >
-    au < manifest ; 2008 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 6 ; 6 >
-    au < manifest ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 >
-    au < manifest ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 >
+    au < testing ; 2003 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 1 ; 1 >
+    au < testing ; 2004 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 2 ; 2 >
+    au < testing ; 2005 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 3 ; 3 >
+    au < testing ; 2006 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 4 ; 4 >
+    au < testing ; 2007 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 5 ; 5 >
+    au < testing ; 2008 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 6 ; 6 >
+    au < testing ; 2009 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 7 ; 7 >
+    au < testing ; 2010 ; Management Research: The Journal of the Iberoamerican Academy of Management Volume 8 ; 8 >
 
   }
 
