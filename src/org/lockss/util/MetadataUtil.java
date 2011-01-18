@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: MetadataUtil.java,v 1.4 2011-01-18 15:39:37 neilmayo Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
+import org.lockss.extractor.ArticleMetadata;
 import org.lockss.plugin.*;
 import static org.lockss.extractor.MetadataField.*;
 
@@ -65,7 +66,7 @@ public class MetadataUtil {
 
   /**
    * Check that ISSN is valid. Method checks that ISSN number is correctly
-   * balanced (4 digits on either side of a hyphen) and that the ckeck
+   * balanced (4 digits on either side of a hyphen) and that the check
    * digit (rightmost digit) is valid.
    * @param issn the issn string
    * @return true if issn is valid, false otherwise
