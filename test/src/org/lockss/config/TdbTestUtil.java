@@ -1,5 +1,6 @@
 package org.lockss.config;
 
+import java.util.Calendar;
 import java.util.Properties;
 
 import org.lockss.config.Tdb.TdbException;
@@ -36,6 +37,10 @@ public class TdbTestUtil {
   public static String DEFAULT_ISSN_4 = "1000-0003";
   public static String DEFAULT_EISSN_4 = "2000-0006";
 
+  public static String ISSN_INVALID_FORMAT_1 = "001-006";
+  public static String ISSN_INVALID_FORMAT_2 = "0001=0006";
+  public static String ISSN_INVALID_CHECK_DIGIT = "0001-0005";
+  
   public static String DEFAULT_VOLUME_KEY = "volume";
   public static String DEFAULT_VOLUME_NAME_KEY = "volume_name";
 
@@ -50,6 +55,14 @@ public class TdbTestUtil {
   public static String RANGE_2_END = "2006";
   public static String RANGE_2_START_VOL = "6";
   public static String RANGE_2_END_VOL = "7";
+
+  // Parameters for a journal which runs up to now and must therefore produce empty "last*" fields
+  // Note that the current date is assigned to a static variable; this should be fine unless the tests
+  // are somehow run on a system that has been up for a while. Or over new year..
+  public static String RANGE_TO_NOW_START = ""+(Calendar.getInstance().get(Calendar.YEAR) - 1);
+  public static String RANGE_TO_NOW_END = ""+Calendar.getInstance().get(Calendar.YEAR);
+  public static String RANGE_TO_NOW_START_VOL = "1";
+  public static String RANGE_TO_NOW_END_VOL = "171";
 
 
   /**
@@ -115,6 +128,25 @@ public class TdbTestUtil {
     rangeTitleAu2b.setAttr("year", RANGE_2_END);
     rangeTitleAu2b.setAttr(DEFAULT_VOLUME_KEY, RANGE_2_END_VOL);
     rangeTitle.addTdbAu(rangeTitleAu2b); 
+
+    return rangeTitle; 
+  }
+  
+  
+  public static TdbTitle makeRangeToNowTestTitle() throws TdbException {
+    TdbTitle rangeTitle = new TdbTitle("rangeToNowTitle", DEFAULT_TITLE_ID_RANGE);
+    rangeTitle.setTdbPublisher(new TdbPublisher(DEFAULT_PUBLISHER));
+
+    // AU range (last year - this year, vol 1-171) 
+    TdbAu rangeTitleAu3a = createBasicAu("rangeTitleAu3a", DEFAULT_PLUGIN+"3a", DEFAULT_ISSN_3, DEFAULT_EISSN_3);
+    rangeTitleAu3a.setAttr("year", RANGE_TO_NOW_START);
+    rangeTitleAu3a.setAttr(DEFAULT_VOLUME_KEY, RANGE_TO_NOW_START_VOL);
+    rangeTitle.addTdbAu(rangeTitleAu3a);
+
+    TdbAu rangeTitleAu3b = createBasicAu("rangeTitleAu3b", DEFAULT_PLUGIN+"3b", DEFAULT_ISSN_3, DEFAULT_EISSN_3);
+    rangeTitleAu3b.setAttr("year", RANGE_TO_NOW_END);
+    rangeTitleAu3b.setAttr(DEFAULT_VOLUME_KEY, RANGE_TO_NOW_END_VOL);
+    rangeTitle.addTdbAu(rangeTitleAu3b); 
     
     return rangeTitle;
   }
@@ -195,7 +227,8 @@ public class TdbTestUtil {
   public static TdbAu createBasicAu(String name, String plugin, String issn, String eissn) throws TdbException {
     TdbAu au = new TdbAu(name, plugin);
     au.setPropertyByName("issn", issn);
-    au.setAttr("eissn", eissn);
+    //au.setAttr("eissn", eissn);
+    au.setPropertyByName("eissn", eissn);
     return au;   
   }
   

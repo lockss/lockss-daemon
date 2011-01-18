@@ -18,7 +18,9 @@ public class TestKbartTitle extends LockssTestCase {
   private static final String DEFAULT_TITLE = "KBART KSIMPSON"; 
   private static final String DEFAULT_TITLE_LESS = "JBART"; 
   private static final String DEFAULT_TITLE_GREATER = "LBART"; 
-  	 
+  private static final String TAB = "	";
+  private static final String SPACE = " ";
+  
   private KbartTitle testTitle;
   
   protected void setUp() throws Exception {
@@ -87,6 +89,21 @@ public class TestKbartTitle extends LockssTestCase {
     assertEquals(testTitle.getField(null), "");
   }
 
+  
+  /**
+   * Check the field values.
+   */
+  public final void testNormalise() {
+    String s = "%s These days a browser has tabs. So %s does this sentence. %s";
+    String test1 = formatTestString(s, TAB, TAB, TAB);
+    String test2 = formatTestString(s, SPACE, SPACE, SPACE);
+    assertEquals(KbartTitle.normalise(test1), test2);
+  }
+  
+  private final String formatTestString(String s, String... strings) {
+   return String.format(s, strings); 
+  }
+  
   /**
    * Check the field values.
    */

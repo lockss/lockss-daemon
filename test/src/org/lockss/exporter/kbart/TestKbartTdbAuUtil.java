@@ -112,6 +112,7 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
   
   /**
    * Test on AUs which have an ISSN, which fall back to the title id, or which are empty.
+   * AUs should now have nothing recorded if they lack a specified ISSN (NM 17-01-11).
    */
   public void testFindIssn() {
     TdbTitle title = tdb.getTdbTitleById(TdbTestUtil.DEFAULT_TITLE_ID);
@@ -122,19 +123,20 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
     au = title.getTdbAusByName("basicTitleEmptyAu").iterator().next();
     String foundIssn = KbartTdbAuUtil.findIssn(au);
     assertNotNull(foundIssn);
-    assertFalse(foundIssn.equals(""));
-    assertTrue(foundIssn.equals(au.getTdbTitle().getId()));
+    //assertFalse(foundIssn.equals(""));
+    //assertTrue(foundIssn.equals(au.getTdbTitle().getId()));
 
     // test basic AU, which should have DEFAULT_ISSN_1
     au = title.getTdbAusByName("basicTitleAu").iterator().next();
     foundIssn = KbartTdbAuUtil.findIssn(au);
     assertNotNull(foundIssn);
-    assertFalse(foundIssn.equals(""));
+    //assertFalse(foundIssn.equals(""));
     assertTrue(foundIssn.equals(TdbTestUtil.DEFAULT_ISSN_1));
   }
 
   /**
    * Test on AUs which have an EISSN, which fall back to the title id, or which are empty.
+   * AUs should now have nothing recorded if they lack a specified ISSN (NM 17-01-11).
    */
   public void testFindEissn() {
     TdbTitle title = tdb.getTdbTitleById(TdbTestUtil.DEFAULT_TITLE_ID);
@@ -145,14 +147,14 @@ public class TestKbartTdbAuUtil extends LockssTestCase {
     au = title.getTdbAusByName("basicTitleEmptyAu").iterator().next();
     String foundEissn = KbartTdbAuUtil.findEissn(au);
     assertNotNull(foundEissn);
-    assertFalse(foundEissn.equals(""));
-    assertTrue(foundEissn.equals(au.getTdbTitle().getId()));
+    //assertFalse(foundEissn.equals(""));
+    //assertTrue(foundEissn.equals(au.getTdbTitle().getId()));
 
     // test basic AU, which should have DEFAULT_ISSN_1
     au = title.getTdbAusByName("basicTitleAu").iterator().next();
     foundEissn = KbartTdbAuUtil.findEissn(au);
     assertNotNull(foundEissn);
-    assertFalse(foundEissn.equals(""));
+    //assertFalse(foundEissn.equals(""));
     assertTrue(foundEissn.equals(TdbTestUtil.DEFAULT_EISSN_1));
   }
 

@@ -2,11 +2,15 @@ package org.lockss.exporter.kbart;
 
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.EnumSet;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.io.OutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.StringUtil;
 import org.lockss.util.Logger;
 
@@ -30,6 +34,13 @@ public class HtmlKbartExporter extends KbartExporter {
   private String header;
   /** Summary of the export for display. */
   private String summary;
+
+  // TODO Eventually it will be useful to have the option to customise the HTML output in a few ways: 
+  // - allow fields to be specified for omission
+  // - allow user to specify which fields and in what order
+  //private Set<Field> omitFields = EnumSet.of(Field.TITLE_ID, Field.TITLE_URL);
+  // base this on which field columns are entirely empty
+  
   
   /**
    * Default constructor takes a list of KbartTitles to be exported.
@@ -50,7 +61,7 @@ public class HtmlKbartExporter extends KbartExporter {
     }
     //printWriter.println( "<tr><td>" + StringUtil.separatedString(title.fieldValues(), SEPARATOR) + "</td></tr>" );
     printWriter.println("<tr class=\"" + (odd?"odd":"even") + "\">");
-    for (KbartTitle.Field fld : KbartTitle.Field.values()) {
+    for (Field fld : Field.values()) {
       String s = title.getField(fld);
       if (s==null || s.equals("")) s = "&nbsp;";
       printWriter.printf("<td>%s</td>", s);
@@ -69,7 +80,7 @@ public class HtmlKbartExporter extends KbartExporter {
 	new Date(), getHostName(), titles.size(), tdbTitleTotal);
     printWriter.printf("<title>%s</title>", this.summary);
     printWriter.printf("%s</head><table>", css);
-    this.header = String.format("<tr><th>%s</th></tr>", StringUtil.separatedString(KbartTitle.Field.getLabels(), "</th><th>"));
+    this.header = String.format("<tr><th>%s</th></tr>", StringUtil.separatedString(Field.getLabels(), "</th><th>"));
     printWriter.printf(this.header);
   }
 

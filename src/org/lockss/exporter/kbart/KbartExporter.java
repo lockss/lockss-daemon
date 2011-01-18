@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.1 2011-01-06 18:32:53 neilmayo Exp $
+ * $Id: KbartExporter.java,v 1.2 2011-01-18 17:15:32 neilmayo Exp $
  */
 
 /*
@@ -69,6 +69,13 @@ public abstract class KbartExporter {
 
   private static Logger log = Logger.getLogger("KbartExporter");
 
+  // Footnotes for the interface options
+  private static String TSV_NOTE = "Please note that the TSV format adheres to the KBART recommendations "+
+  "and should be used for updating your knowledge bases.";
+  private static String HTML_NOTE =  "The HTML version is for manual inspection of our holdings and is less "+
+  "strict than KBART. For example the HTML version reorders some fields and omits empty columns.";
+
+  
   /** Record of errors for the caller. */
   List<String> errors = new ArrayList<String>();
 
@@ -339,8 +346,9 @@ public abstract class KbartExporter {
    * Enumeration of <code>KbartExporter</code> types and factories for their creation. 
    */
   public static enum OutputFormat implements Factory {
-    
-    KBART_TSV("KBART TSV (tab-separated values)", "text/tab-separated-values", "tsv", true, true) {
+        
+    // Don't compress the TSV output
+    KBART_TSV("KBART TSV (tab-separated values)", "text/tab-separated-values", "tsv", true, false, TSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles) {
 	return new SeparatedValuesKbartExporter(titles, this);
@@ -354,17 +362,24 @@ public abstract class KbartExporter {
       }
     },*/
     
-    KBART_HTML("HTML (on-screen)", "text/html", "html", false, false) {
+    KBART_HTML("HTML (on-screen)", "text/html", "html", false, false, HTML_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles) {
 	return new HtmlKbartExporter(titles, this);
       }
     };
-
+    
+    /** An optional footnote elaborating the export format. */ 
+    private final String footnote;
+    /** The displayed label for the output. */ 
     private final String label;
+    /** The MIME type of the output. */ 
     private final String mimeType;
+    /** The extension for file output. */ 
     private final String fileExtension;
+    /** Is the export produced as a file. */ 
     private final boolean asFile;
+    /** Whether the file is compressible. */ 
     private boolean isCompressible;
     
     /**
@@ -376,13 +391,19 @@ public abstract class KbartExporter {
      * @param fileExtension a file extension for the file (no period) 
      * @param asFile whether this output format should be supplied as a file
      * @param isCompressible whether this output format may be compressed
+     * @param footnote an optional footnote describing the option in more detail 
      */
-    OutputFormat(String label, String mimeType, String fileExtension, boolean asFile, boolean isCompressible) {
+    OutputFormat(String label, String mimeType, String fileExtension, boolean asFile, boolean isCompressible, String footnote) {
+      this.footnote = footnote;
       this.label = label;
       this.mimeType = mimeType;
       this.fileExtension = fileExtension;
       this.asFile = asFile;
       this.isCompressible = isCompressible;
+    }
+    
+    OutputFormat(String label, String mimeType, String fileExtension, boolean asFile, boolean isCompressible) {
+      this(label, mimeType, fileExtension, asFile, isCompressible, "");
     }
 
     /**
@@ -421,6 +442,13 @@ public abstract class KbartExporter {
      * @return the label
      */
     public String getLabel() { return label; }
+
+    /**
+     * Get the footnote of the format.
+     * 
+     * @return the footnote
+     */
+    public String getFootnote() { return footnote; }
 
     /**
      * Whether the format is compressible. Caller should not compress formats that return false here.

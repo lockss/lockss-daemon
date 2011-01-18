@@ -15,15 +15,16 @@ import java.util.TreeMap;
  * For that reason they are stored as a SortedMap with a value for every field.
  * Null values are not allowed; an unused field returns the empty string as its value.
  * <p>
- * Future enhancements might include format checking and normalisation, and defaults 
- * for field values. In particular, here are some of the more pressing recommendations taken from 
+ * Future enhancements might include format checking (currently performed externally) 
+ * and normalisation, and defaults for field values. In particular, here are some of the 
+ * more pressing recommendations taken from 
  * <emph>KBART Phase I Recommended Practice</emph> document NISO-RP-9-2010
  * ({@link http://www.uksg.org/kbart/s1/summary})
  * along with their section references:
  * <ul> 
- *  <li>values should not contain tab characters (5.3.1.1) or markup (5.3.1.5)</li>
+ *  <li><del>values should not contain tab characters (5.3.1.1) or markup (5.3.1.5)</del></li>
  *  <li>text should be encoded as UTF-8 (5.3.1.6)</li>
- *  <li>ISSN should match the 9-digit hyphenated format (5.3.2.3)</li>
+ *  <li><del>ISSN should match the 9-digit hyphenated format (5.3.2.3)</del></li>
  *  <li>Date formats should be ISO 8601, using as much of the YYYY-MM-DD format as necessary (5.3.2.5)</li>
  * </ul>
  * <p>
@@ -72,7 +73,8 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     
   /**
    * Set the value of a field. If the field is null, nothing is added. If the value is null, 
-   * an empty value is added for the field.
+   * an empty value is added for the field. Some normalisation is performed; tabs are converted 
+   * to spaces and the string is made conformant to UTF-8.
    * 
    * @param field the Field to set
    * @param value the string value to give the field
@@ -80,7 +82,7 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
   public void setField(Field field, String value) {
     if (field==null) return;
     if (value==null) value = "";
-    fields.put(field, value);
+    fields.put(field, normalise(value));
   }
 
   /**
@@ -95,6 +97,27 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     String value = fields.get(field);
     return value==null ? "" : value;
   }
+
+  /**
+   * Normalise the string by removing tabs and converting characters to fit UTF-8.
+   * 
+   * @param s the string to normalise
+   * @return the string without tabs, and in UTF-8
+   */
+  protected static String normalise(String s) {
+    s = s.replaceAll("\\t", " ");
+    return s;
+  }
+  
+  /**
+   * A concession to US sensibilities :).
+   * @param s the string to normalise
+   * @return the string without tabs, and in UTF-8
+   */
+  private static String normalize(String s) {
+    return normalise(s);
+  }
+  
   
   /**
    * Returns the field values as a collection whose iterator will return

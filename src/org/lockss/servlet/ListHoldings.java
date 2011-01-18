@@ -46,6 +46,7 @@ import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.mortbay.html.Form;
 import org.mortbay.html.Input;
+import org.mortbay.html.Link;
 import org.mortbay.html.Page;
 import org.mortbay.html.Table;
 
@@ -65,7 +66,7 @@ public class ListHoldings extends LockssServlet {
   static final OutputFormat OUTPUT_DEFAULT = OutputFormat.KBART_TSV;
   /** Selected output format. */
   private OutputFormat outputFormat = OUTPUT_DEFAULT;
-   
+
   public static final String ACTION_EXPORT = "Export";
   public static final String PARAM_FORMAT = "format";
   public static final String PARAM_COMPRESS = "compress";
@@ -88,22 +89,20 @@ public class ListHoldings extends LockssServlet {
     errMsg = null;
     statusMsg = null; 
 
-    // Set outputFormat
-    outputFormat = OutputFormat.byName(req.getParameter(PARAM_FORMAT));
+    // Set outputFormat from the URL param 
+    String formatParam = req.getParameter(PARAM_FORMAT);
+    outputFormat = OutputFormat.byName(formatParam);
     if (outputFormat==null) outputFormat = OUTPUT_DEFAULT;
     
     // Set compression
     isCompress = outputFormat.isCompressible();
     
     // Show page or perform action
-    String action = req.getParameter(ACTION_TAG);
-    if (StringUtil.isNullString(action)) {
+    if (StringUtil.isNullString(formatParam)) {
       displayPage();
-    } else if (action.equals(ACTION_EXPORT)) {
+    } else {
       log.info("Exporting metadata as "+outputFormat.getLabel());
       doExport();
-    } else {	
-      displayPage();
     }
   }
 
@@ -173,6 +172,9 @@ public class ListHoldings extends LockssServlet {
    * @return a Jetty table with all the page's options
    */
   protected Table getTableOfOptions() {
+    // Get the path to this servlet so we can postfix output format path
+    String thisPath = myServletDescr().path;
+    
     Table tab = new Table(0, "align=\"center\" width=\"80%\"");
 
     tab.newRow();
@@ -189,7 +191,6 @@ public class ListHoldings extends LockssServlet {
     }
     
     tab.add("There are "+tdb.getTdbTitleCount()+" titles to export, from "+tdb.getTdbPublisherCount()+" publishers.");
-    
     addBlankLine(tab);
     
     tab.newRow();
@@ -207,10 +208,8 @@ public class ListHoldings extends LockssServlet {
     for (OutputFormat fmt : OutputFormat.values()) {
       tab.newRow();
       tab.newCell("align=\"center\"");
-      tab.add(ServletUtil.radioButton(this, PARAM_FORMAT, 
-	  fmt.name(), 
-	  fmt.getLabel(),
-	  fmt==outputFormat));
+      tab.add( new Link(String.format("%s?%s=%s", thisPath, PARAM_FORMAT, fmt.name()), "Export as "+fmt.getLabel()) );
+      tab.add(addFootnote(fmt.getFootnote()));
     }
     // Add some space
     addBlankLine(tab);
@@ -228,13 +227,9 @@ public class ListHoldings extends LockssServlet {
   private void displayPage() throws IOException {
     Page page = newPage();
     layoutErrorBlock(page);
-    Form form = ServletUtil.newForm(srvURL(myServletDescr()));
-    form.add(getTableOfOptions());
-    form.add(new Input(Input.Hidden, "isForm", "true"));
     if (tdb!=null && !tdb.isEmpty()) {
-      ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_EXPORT);
+      page.add(getTableOfOptions());
     }
-    page.add(form);   
     layoutFooter(page);
     ServletUtil.writePage(resp, page);
   }

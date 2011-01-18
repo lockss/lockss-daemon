@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.1 2011-01-06 18:32:53 neilmayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.2 2011-01-18 17:15:32 neilmayo Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.Perl5Matcher;
 import org.lockss.config.TdbAu;
 import org.lockss.util.Logger;
+import org.lockss.util.MetadataUtil;
 import org.lockss.util.RegexpUtil;
 
 /**
@@ -53,6 +54,9 @@ public class KbartTdbAuUtil {
 
   private static Logger log = Logger.getLogger("KbartTdbAuUtil");
 
+  // TODO Impose an order of preference on e.g. the possible volume keys, for use
+  // with findAuInfoType() and findVolume().  
+  
   // Default attribute keys
   static final String DEFAULT_YEAR_ATTR = "year";
   static final String DEFAULT_VOLUME_ATTR = "volume";
@@ -132,26 +136,46 @@ public class KbartTdbAuUtil {
 
   /**
    * Attempts to find the ISSN for an AU. Looks in the AU's properties, and if nothing is 
-   * found returns the result of the AU's title's <code>getId()</code> method. 
+   * found <del>returns the result of the AU's title's <code>getId()</code> method</del>.
+   * <p>
+   * Note: This method now only returns values from the AU's properties and does not substitute 
+   * the result of getId(). It also validates the purported ISSN.
    * 
    * @param au the TdbAu whose properties to search for an attribute
-   * @return the value of an existing key, or the id of the AU
+   * @return a valid ISSN from the value of an existing key, or the empty String
    */
   static String findIssn(TdbAu au) {
     String s = findAuInfo(au, DEFAULT_ISSN_PROP, AuInfoType.PROP);
-    return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
+    //return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
+    if (StringUtils.isEmpty(s) || MetadataUtil.isISSN(s)) {
+      return s;
+    } else {
+      log.warning(String.format("AU %s yielded an invalid non-empty ISSN: %s", au, s));
+      return "";
+    }
   }
 
   /**
    * Attempts to find the EISSN for an AU. Looks in the AU's properties, and if nothing is 
-   * found returns the result of the AU's title's <code>getId()</code> method. 
+   * found <del>returns the result of the AU's title's <code>getId()</code> method</del>.
+   * <p> 
+   * This method now only returns values from the AU's properties and does not substitute 
+   * the result of getId(). It also validates the purported ISSN.
    * 
    * @param au the TdbAu whose properties to search for an attribute
-   * @return the value of an existing key, or the id of the AU
+   * @return a valid ISSN from the value of an existing key, or the empty String
    */
   static String findEissn(TdbAu au) {
-    String s = findAuInfo(au, DEFAULT_EISSN_PROP, AuInfoType.ATTR);
-    return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
+    String s = findAuInfo(au, DEFAULT_EISSN_PROP, AuInfoType.PROP);
+    //AuInfoType type = findAuInfoType(au, DEFAULT_EISSN_PROP);
+    //String s = findAuInfo(au, DEFAULT_EISSN_PROP, type);
+    //return StringUtils.isEmpty(s) ? au.getTdbTitle().getId() : s;
+    if (StringUtils.isEmpty(s) || MetadataUtil.isISSN(s)) {
+      return s;
+    } else {
+      log.warning(String.format("AU %s yielded an invalid non-empty eISSN: %s", au, s));      
+      return "";
+    }
   }
   
 
@@ -165,6 +189,7 @@ public class KbartTdbAuUtil {
    * @return the value of an existing key, or an empty string
    */
   static String findAuInfo(TdbAu au, String key, AuInfoType type) {
+    if (key==null ||type==null) return "";
     return type.findAuInfo(au, key);
   }
 
@@ -207,7 +232,8 @@ public class KbartTdbAuUtil {
    * @param defaultKeyList an array of possible key names, in descending order of importance
    * @return an existing key name, or null
    */
-  private static String findMapKey(TdbAu au, List<String> defaultKeyList, AuInfoType type) {
+  protected static String findMapKey(TdbAu au, String[] defaultKeyList, AuInfoType type) {
+    if (type==null || au==null) return null;
     for (String key: defaultKeyList) {
       String s = findAuInfo(au, key, type);
       if (!StringUtils.isEmpty(s)) return key;
@@ -227,6 +253,24 @@ public class KbartTdbAuUtil {
     for (AuInfoType type: AuInfoType.values()) {
       String s = findAuInfo(au, key, type);
       if (!StringUtils.isEmpty(s)) return type;
+    }
+    return null;
+  }
+  
+  /**
+   * Attempts to find a map key by searching for each of a selection of keys in turn,
+   * in each AuInfoType's map, in the order the AuInfoTypes are enumerated.
+   * 
+   * @param au the TdbAu to search for an attribute
+   * @param keys an array of key names
+   * @return an AuInfoType, or null
+   */
+  static AuInfoType findAuInfoType(TdbAu au, String[] keys) {
+    for (String key: keys) {
+      for (AuInfoType type: AuInfoType.values()) {
+	String s = findAuInfo(au, key, type);
+	if (!StringUtils.isEmpty(s)) return type;
+      }
     }
     return null;
   }

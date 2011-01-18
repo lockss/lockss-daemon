@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.1 2011-01-06 18:32:53 neilmayo Exp $
+ * $Id: KbartConverter.java,v 1.2 2011-01-18 17:15:32 neilmayo Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
+import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Collections;
 import java.util.List;
@@ -73,6 +74,10 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * <p>
  * Note that if the underlying <code>Tdb</code> objects are changed during iteration the resulting 
  * output is undefined.
+ * <p>
+ * <emph>Note that the <code>title_id</code> and <code>title_url</code> fields are currently left 
+ * empty as the data we have for these is incomplete or inappropriate.</emph>
+ * 
  * 
  * @author Neil Mayo
  */
@@ -82,6 +87,13 @@ public class KbartConverter {
 
   /** The Tdb data structure from which KBART information will be selectively extracted. */
   private final Tdb tdb;
+
+  /** An instance variable used to record the current year. */
+  private final int thisYear; 
+
+  /** The minimum number that will be considered a date of publication. */
+  public static final int MIN_PUB_DATE = 1600;
+
   
   /**
    * Creates a KbartConverter which will extract information from the given TDB 
@@ -91,6 +103,7 @@ public class KbartConverter {
    */
   public KbartConverter(Tdb tdb) {
     this.tdb = tdb;
+    this.thisYear = Calendar.getInstance().get(Calendar.YEAR);
   }
  
   /**
@@ -127,6 +140,42 @@ public class KbartConverter {
     // TODO First, order by date if possible (currently done within the comparator)
     Collections.sort(aus, new TdbAuAlphanumericComparator());
   }
+
+  /**
+   * Check whether a string appears to represent a publication date.
+   * This is taken to be a 4-digit number within a specific range,
+   * namely <code>MIN_PUB_DATE</code> to the current year.
+   * <p>
+   * Note this is used for both validation (checking a value does not 
+   * contravene the expected format or content for a year), and 
+   * recognition (being able to say that a string looks like it might 
+   * be a year).
+   *  
+   * @param s the string to validate
+   * @return whether the string appears to represent a 4-digit publication year
+   */
+  protected static boolean isPublicationDate(String s) {
+    int year;
+    try {
+      year = Integer.parseInt(s);
+    } catch (NumberFormatException e) {
+      return false;
+    }
+    return isPublicationDate(year);
+  }
+
+  /**
+   * Check whether an integer appears to represent a publication date.
+   * This is taken to be a number within a specific range,
+   * namely <code>MIN_PUB_DATE</code> to the current year.
+   *  
+   * @param s the string to validate
+   * @return whether the string appears to represent a 4-digit publication year
+   */
+  private static boolean isPublicationDate(int year) {
+    return (year >= MIN_PUB_DATE && year <= Calendar.getInstance().get(Calendar.YEAR));
+  }
+
   
  /**
   * Convert a TdbTitle into one or more KbartTitles using as much information as 
@@ -147,13 +196,13 @@ public class KbartConverter {
   *   <li>num_last_issue_online</li>
   *   <li>num_first_vol_online</li>
   *   <li>num_last_vol_online</li>
-  *   <li>title_url</li>
-  *   <li>title_id</li>
+  *   <li><del>title_url<del> (disabled until we have more than a base URL)</li>
+  *   <li><del>title_id<del> (temporarily disabled)</li>
   *   <li>publisher_name</li>
   * </ul>
   * The following fields currently have no analog in the TDB data:
   * <ul>
-  *   <li>first_author</li>
+  *   <li><del>first_author</del> (not relevant to journals)</li>
   *   <li>embargo_info</li>
   *   <li>coverage_depth</li>
   *   <li>coverage_notes</li>
@@ -165,7 +214,7 @@ public class KbartConverter {
   * @param tdbt a TdbTitle from which to create the KbartTitle
   * @return a list of KbartTitle objects
   */
-  public static List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
+  public List<KbartTitle> createKbartTitles(TdbTitle tdbt) {
 
     List<KbartTitle> kbtList = new Vector<KbartTitle>();
     // Create a list of AUs from the collection returned by the TdbTitle getter,
@@ -182,7 +231,8 @@ public class KbartConverter {
     // Add publisher and title and title identifier
     baseKbt.setField(PUBLISHER_NAME, tdbt.getTdbPublisher().getName());
     baseKbt.setField(PUBLICATION_TITLE, tdbt.getName());
-    baseKbt.setField(TITLE_ID, tdbt.getId());
+    // XXX Disabled title_id temporarily
+    //baseKbt.setField(TITLE_ID, tdbt.getId());
     
     // If there are no aus, we have nothing more to add
     if (aus.size()==0) {
@@ -198,14 +248,20 @@ public class KbartConverter {
     // Identify the issue format
     IssueFormat issueFormat = identifyIssueFormat(firstAu);
     
+    // Reporting:
+    if (issueFormat!=null) {
+      log.debug( String.format("AU %s uses issue format: param[%s] = %s", 
+	  firstAu, issueFormat.getKey(), issueFormat.getIssueString(firstAu)) );      
+    }
+    
     // Add ISSN and EISSN if available in properties. If not, the title's unique id is used. 
     // According to TdbTitle, "The ID is guaranteed to be globally unique".
     baseKbt.setField(PRINT_IDENTIFIER, findIssn(firstAu)); 
     baseKbt.setField(ONLINE_IDENTIFIER, findEissn(firstAu)); 
 
-    // Title URL
+    // Title URL // XXX Disabled until we have more than a base_url
     // URL is not available directly but param[base_url] is sometimes available
-    baseKbt.setField(TITLE_URL, findAuInfo(firstAu, DEFAULT_TITLE_URL_ATTR, AuInfoType.PARAM));
+    //baseKbt.setField(TITLE_URL, findAuInfo(firstAu, DEFAULT_TITLE_URL_ATTR, AuInfoType.PARAM));
    
     // ---------------------------------------------------------
     // Attempt to create ranges for titles with a coverage gap.
@@ -236,9 +292,15 @@ public class KbartConverter {
       }
 
       // Issue years (will be zero if years could not be found)
-      if (range.firstYear!=0 && range.lastYear!=0) {
+      if (isPublicationDate(range.firstYear) && isPublicationDate(range.lastYear)) {
 	kbt.setField(DATE_FIRST_ISSUE_ONLINE, Integer.toString(range.firstYear));
 	kbt.setField(DATE_LAST_ISSUE_ONLINE, Integer.toString(range.lastYear));
+	// If the final year in the range is this year or later, leave empty the last issue/volume/date fields 
+	if (range.lastYear>=thisYear) {
+	  kbt.setField(DATE_LAST_ISSUE_ONLINE, "");
+	  kbt.setField(NUM_LAST_ISSUE_ONLINE, "");
+	  kbt.setField(NUM_LAST_VOL_ONLINE, "");
+	}
       }
       
       // Add the title to the list
@@ -279,8 +341,12 @@ public class KbartConverter {
    * the correct format; additionally, the year attribute, if available, 
    * does not have a standard key name.
    * <p>
-   * Each AU in a TdbTitle should contain the same attributes.
-   * If no appropriate key is found in the first AU, null is returned.
+   * Each AU in a TdbTitle should contain the same attributes, so we just check 
+   * the first AU. If no appropriate key is found in the first AU, we see if the volume
+   * looks like a publication year, as several publishers use the year as a 
+   * volume id. If so, we parse this field as the year.
+   * <p>
+   * If neither year nor volume appears to contain a year, null is returned.
    * Otherwise a list is constructed with values for the key in each AU 
    * being parsed into Integers on the assumption that they contain a year 
    * in digit format. If any year cannot be parsed, null is returned.
@@ -295,13 +361,29 @@ public class KbartConverter {
   private static List<Integer> getAuYears(List<TdbAu> aus) {
     if (aus.isEmpty()) return null;
     List<Integer> years = new ArrayList<Integer>();
+    
     // Find the year key (the 2 possible keys, matching year field in either attr or param, 
     // are the same at the moment, so we just match one directly).
     String yearKey = DEFAULT_YEAR_ATTR;
+
     // Find the year attribute if it exists
     TdbAu first = aus.get(0);
     AuInfoType type = findAuInfoType(first, yearKey);
+
+    // If no type found for year, see if the volume field appears to contain a year 
+    if (type==null) {
+      String[] possKeys = new String[] {DEFAULT_VOLUME_ATTR, DEFAULT_VOLUME_PARAM, DEFAULT_VOLUME_PARAM_NAME};
+      // Find the type, then the key to that type
+      type = findAuInfoType(first, possKeys);
+      yearKey = findMapKey(first, possKeys, type);
+      // If the value does not appear to be a date, reset the type.
+      if (!isPublicationDate( findAuInfo(first, yearKey, type) )) type = null;
+    }
+    // If neither year nor volume appears to contain a year, return null
     if (type==null) return null;
+    
+    // Otherwise continue to parse the appointed field:
+    
     // Get a year for each AU
     try {
       for (TdbAu au : aus) {
@@ -334,7 +416,15 @@ public class KbartConverter {
   /**
    * Get a list of years for the AUs, and figure out where the titles need to be split into ranges.
    * If no years could be established, the single full range of the list is returned. 
-   *  
+   * <p>
+   * If the first and last years are not available, we look at each volume field to see if its
+   * value looks like a publication year, as several publishers use the year as a volume id.
+   * If it meets the criteria we use it in the date field.
+   * <p>
+   * Finally, if the last range in a title spans to the current year, we leave the last year, volume 
+   * and issue fields empty as suggested by KBART 5.3.2.8 - 5.3.2.10.
+   * 
+   * 
    * @param aus ordered list of AUs
    * @return a similarly-ordered list of TitleRange objects 
    */
