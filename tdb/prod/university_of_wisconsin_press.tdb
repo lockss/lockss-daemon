@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = University of Wisconsin Press
   >
 
   {
+
     title <
       name = American Orthoptic Journal ;
       issn = 0065-955X ;
@@ -30,6 +32,7 @@
   }
 
   {
+
     title <
       name = Arctic Anthropology ;
       issn = 0066-6939 ;
@@ -58,14 +61,15 @@
       param[journal_dir] = arctic_anthropology
       implicit < status ; name ; param[volume] >
 
-      au < ready ; Arctic Anthropology Volume 45 ; 45 >
-      au < ready ; Arctic Anthropology Volume 46 ; 46 >
+      au < released ; Arctic Anthropology Volume 45 ; 45 >
+      au < released ; Arctic Anthropology Volume 46 ; 46 >
 
     }
     
   }
 
   {
+
     title <
       name = Contemporary Literature ;
       issn = 0010-7484 ;
@@ -98,13 +102,14 @@
       au < released ; Contemporary Literature Volume 46 ; 46 >
       au < released ; Contemporary Literature Volume 47 ; 47 >
       au < released ; Contemporary Literature Volume 48 ; 48 >
-      au < ready ; Contemporary Literature Volume 49 ; 49 >
-      au < ready ; Contemporary Literature Volume 50 ; 50 >
+      au < released ; Contemporary Literature Volume 49 ; 49 >
+      au < released ; Contemporary Literature Volume 50 ; 50 >
     }
 
   }
 
   {
+
     title <
       name = Ecological Restoration ;
       issn = 1543-4060 ;
@@ -131,6 +136,7 @@
   }
 
   {
+ 
     title <
       name = Ecquid Novi: African Journalism Studies ;
       issn = 0256-0054 ;
@@ -150,6 +156,7 @@
   }
 
   {
+ 
     title <
       name = Journal of Human Resources ;
       issn = 0022-166X ;
@@ -170,6 +177,7 @@
   }
 
   {
+ 
     title <
       name = Land Economics ;
       issn = 0023-7639 ;
@@ -197,6 +205,7 @@
   }
 
   {
+ 
     title <
       name = Landscape Journal ;
       issn = 0277-2426 ;
@@ -223,6 +232,7 @@
   }
 
   {
+ 
     title <
       name = Luso-Brazilian Review ;
       issn = 0024-7413 ;
@@ -254,14 +264,15 @@
       au < released ; Luso-Brazilian Review Volume 41 ; 41 >
       au < released ; Luso-Brazilian Review Volume 42 ; 42 >
       au < released ; Luso-Brazilian Review Volume 43 ; 43 >
-      au < ready ; Luso-Brazilian Review Volume 44 ; 44 >
-      au < ready ; Luso-Brazilian Review Volume 45 ; 45 >
-      au < ready ; Luso-Brazilian Review Volume 46 ; 46 >
+      au < released ; Luso-Brazilian Review Volume 44 ; 44 >
+      au < released ; Luso-Brazilian Review Volume 45 ; 45 >
+      au < released ; Luso-Brazilian Review Volume 46 ; 46 >
     }
 
   }
 
   {
+  
     title <
       name = Monatshefte ;
       issn = 0026-9271 ;
@@ -287,15 +298,16 @@
       implicit < status ; name ; param[volume] >
 
       au < released ; Monatshefte Volume 99 ; 99 >
-      au < ready ; Monatshefte Volume 100 ; 100 >
-      au < ready ; Monatshefte Volume 101 ; 101 >
-      au < ready ; Monatshefte Volume 102 ; 102 >
+      au < released ; Monatshefte Volume 100 ; 100 >
+      au < released ; Monatshefte Volume 101 ; 101 >
+      au < released ; Monatshefte Volume 102 ; 102 >
 
     }
 
   }
 
   {
+  
     title <
       name = SubStance ;
       issn = 1527-2095 ;
@@ -334,8 +346,8 @@
       au < released ; SubStance Volume 34 ; 34 >
       au < released ; SubStance Volume 35 ; 35 >
       au < released ; SubStance Volume 36 ; 36 >
-      au < ready ; SubStance Volume 37 ; 37 >
-      au < ready ; SubStance Volume 38 ; 38 >
+      au < released ; SubStance Volume 37 ; 37 >
+      au < released ; SubStance Volume 38 ; 38 >
 
     }
 

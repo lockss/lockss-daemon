@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = Wayne State University Press
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+
     title <
       name = Criticism ;
       issn = 0011-1589 ;
@@ -21,14 +23,15 @@
     au < released ; Criticism Volume 45 ; 45 >
     au < released ; Criticism Volume 46 ; 46 >
     au < released ; Criticism Volume 47 ; 47 >
-    au < ready ; Criticism Volume 48 ; 48 >
-    au < ready ; Criticism Volume 49 ; 49 >
-    au < ready ; Criticism Volume 50 ; 50 >
-    au < ready ; Criticism Volume 51 ; 51 >
+    au < released ; Criticism Volume 48 ; 48 >
+    au < released ; Criticism Volume 49 ; 49 >
+    au < released ; Criticism Volume 50 ; 50 >
+    au < released ; Criticism Volume 51 ; 51 >
 
   }
 
   {
+
     title <
       name = Discourse ;
       issn = 1522-5321 ;
@@ -43,13 +46,14 @@
     au < released ; Discourse Volume 25 ; 25 >
     au < released ; Discourse Volume 26 ; 26 >
     au < released ; Discourse Volume 27 ; 27 >
-    au < ready ; Discourse Volume 28 ; 28 >
-    au < ready ; Discourse Volume 29 ; 29 >
-    au < ready ; Discourse Volume 30 ; 30 >
+    au < released ; Discourse Volume 28 ; 28 >
+    au < released ; Discourse Volume 29 ; 29 >
+    au < released ; Discourse Volume 30 ; 30 >
 
   }
 
   {
+
     title <
       name = Framework: The Journal of Cinema and Media ;
       issn = 0306-7661 ;
@@ -60,12 +64,13 @@
 
     au < released ; Framework: The Journal of Cinema and Media Volume 47 ; 47 >
     au < released ; Framework: The Journal of Cinema and Media Volume 48 ; 48 >
-    au < ready ; Framework: The Journal of Cinema and Media Volume 49 ; 49 >
-    au < ready ; Framework: The Journal of Cinema and Media Volume 50 ; 50 >
+    au < released ; Framework: The Journal of Cinema and Media Volume 49 ; 49 >
+    au < released ; Framework: The Journal of Cinema and Media Volume 50 ; 50 >
 
   }
 
   {
+
     title <
       name = Human Biology ;
       issn = 0018-7143 ;
@@ -80,13 +85,14 @@
     au < released ; Human Biology Volume 76 ; 76 >
     au < released ; Human Biology Volume 77 ; 77 >
     au < released ; Human Biology Volume 78 ; 78 >
-    au < ready ; Human Biology Volume 79 ; 79 >
-    au < ready ; Human Biology Volume 80 ; 80 >
-    au < ready ; Human Biology Volume 81 ; 81 >
+    au < released ; Human Biology Volume 79 ; 79 >
+    au < released ; Human Biology Volume 80 ; 80 >
+    au < released ; Human Biology Volume 81 ; 81 >
 
   }
 
   {
+
     title <
       name = Marvels & Tales ;
       issn = 1521-4281 ;
@@ -101,13 +107,14 @@
     au < released ; Marvels & Tales Volume 18 ; 18 >
     au < released ; Marvels & Tales Volume 19 ; 19 >
     au < released ; Marvels & Tales Volume 20 ; 20 >
-    au < ready ; Marvels & Tales Volume 21 ; 21 >
-    au < ready ; Marvels & Tales Volume 22 ; 22 >
-    au < ready ; Marvels & Tales Volume 23 ; 23 >
+    au < released ; Marvels & Tales Volume 21 ; 21 >
+    au < released ; Marvels & Tales Volume 22 ; 22 >
+    au < released ; Marvels & Tales Volume 23 ; 23 >
 
   }
 
   {
+
     title <
       name = Merrill-Palmer Quarterly ;
       issn = 0272-930X ;
@@ -123,9 +130,9 @@
     au < released ; Merrill-Palmer Quarterly Volume 51 ; 51 >
     au < released ; Merrill-Palmer Quarterly Volume 52 ; 52 >
     au < released ; Merrill-Palmer Quarterly Volume 53 ; 53 >
-    au < ready ; Merrill-Palmer Quarterly Volume 54 ; 54 >
-    au < ready ; Merrill-Palmer Quarterly Volume 55 ; 55 >
-    au < ready ; Merrill-Palmer Quarterly Volume 56 ; 56 >
+    au < released ; Merrill-Palmer Quarterly Volume 54 ; 54 >
+    au < released ; Merrill-Palmer Quarterly Volume 55 ; 55 >
+    au < released ; Merrill-Palmer Quarterly Volume 56 ; 56 >
 
   }
 

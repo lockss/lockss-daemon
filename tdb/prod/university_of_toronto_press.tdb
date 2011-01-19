@@ -1,11 +1,12 @@
 {
+
   publisher <
     name = University of Toronto Press
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
     title <
@@ -18,9 +19,9 @@
 
     au < released ; Canadian Journal of Criminology and Criminal Justice Volume 48 ; 48 >
     au < released ; Canadian Journal of Criminology and Criminal Justice Volume 49 ; 49 >
-    au < ready ; Canadian Journal of Criminology and Criminal Justice Volume 50 ; 50 >
-    au < ready ; Canadian Journal of Criminology and Criminal Justice Volume 51 ; 51 >
-    au < ready ; Canadian Journal of Criminology and Criminal Justice Volume 52 ; 52 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 50 ; 50 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 51 ; 51 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 52 ; 52 >
 
   }
 
@@ -35,9 +36,9 @@
 
     au < released ; Canadian Journal of Law and Society Volume 20 ; 20 >
     au < released ; Canadian Journal of Law and Society Volume 21 ; 21 >
-    au < ready ; Canadian Journal of Law and Society Volume 22 ; 22 >
-    au < ready ; Canadian Journal of Law and Society Volume 23 ; 23 >
-    au < ready ; Canadian Journal of Law and Society Volume 24 ; 24 >
+    au < released ; Canadian Journal of Law and Society Volume 22 ; 22 >
+    au < released ; Canadian Journal of Law and Society Volume 23 ; 23 >
+    au < released ; Canadian Journal of Law and Society Volume 24 ; 24 >
 
   }
 
@@ -51,10 +52,10 @@
     param[journal_dir] = canadian_journal_of_women_and_the_law
 
     au < released ; Canadian Journal of Women and the Law Volume 17 ; 17 >
-    au < ready ; Canadian Journal of Women and the Law Volume 18 ; 18 >
-    au < ready ; Canadian Journal of Women and the Law Volume 19 ; 19 >
-    au < ready ; Canadian Journal of Women and the Law Volume 20 ; 20 >
-    au < ready ; Canadian Journal of Women and the Law Volume 21 ; 21 >
+    au < released ; Canadian Journal of Women and the Law Volume 18 ; 18 >
+    au < released ; Canadian Journal of Women and the Law Volume 19 ; 19 >
+    au < released ; Canadian Journal of Women and the Law Volume 20 ; 20 >
+    au < released ; Canadian Journal of Women and the Law Volume 21 ; 21 >
 
   }
 
@@ -67,7 +68,7 @@
 
     param[journal_dir] = canadian_public_policy
 
-    au < ready ; Canadian Public Policy Volume 35 ; 35 >
+    au < released ; Canadian Public Policy Volume 35 ; 35 >
 
   }
 
@@ -84,8 +85,8 @@
     au < released ; Canadian Review of American Studies Volume 35 ; 35 >
     au < released ; Canadian Review of American Studies Volume 36 ; 36 >
     au < released ; Canadian Review of American Studies Volume 37 ; 37 >
-    au < ready ; Canadian Review of American Studies Volume 38 ; 38 >
-    au < ready ; Canadian Review of American Studies Volume 39 ; 39 >
+    au < released ; Canadian Review of American Studies Volume 38 ; 38 >
+    au < released ; Canadian Review of American Studies Volume 39 ; 39 >
 
   }
 
@@ -98,7 +99,7 @@
 
     param[journal_dir] = canadian_theatre_review
 
-    au < ready ; Canadian Theatre Review Issue 141 ; 141 >
+    au < released ; Canadian Theatre Review Issue 141 ; 141 >
 
   }
 
@@ -112,7 +113,7 @@
     param[journal_dir] = diaspora_a_journal_of_transnational_studies
 
     au < released ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
-    au < ready ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
+    au < released ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
 
   }
 
@@ -127,9 +128,9 @@
 
     au < released ; Eighteenth Century Fiction Volume 18 ; 18 >
     au < released ; Eighteenth Century Fiction Volume 19 ; 19 >
-    au < ready ; Eighteenth Century Fiction Volume 20 ; 20 >
-    au < ready ; Eighteenth Century Fiction Volume 21 ; 21 >
-    au < ready ; Eighteenth Century Fiction Volume 22 ; 22 >
+    au < released ; Eighteenth Century Fiction Volume 20 ; 20 >
+    au < released ; Eighteenth Century Fiction Volume 21 ; 21 >
+    au < released ; Eighteenth Century Fiction Volume 22 ; 22 >
 
   }
 
@@ -156,7 +157,7 @@
 
     param[journal_dir] = genocide_studies_and_prevention
 
-    au < ready ; Genocide Studies and Prevention Volume 4 ; 4 >
+    au < released ; Genocide Studies and Prevention Volume 4 ; 4 >
 
   }
 
@@ -168,8 +169,8 @@
 
     param[journal_dir] = histoire_sociale_social_history
 
-    au < ready ; Histoire sociale/Social history Volume 41 ; 41 >
-    au < ready ; Histoire sociale/Social history Volume 42 ; 42 >
+    au < released ; Histoire sociale/Social history Volume 41 ; 41 >
+    au < released ; Histoire sociale/Social history Volume 42 ; 42 >
 
   }
 
@@ -184,9 +185,9 @@
 
     au < released ; Journal of Canadian Studies Volume 39 ; 39 >
     au < released ; Journal of Canadian Studies Volume 40 ; 40 >
-    au < ready ; Journal of Canadian Studies Volume 41 ; 41 >
-    au < ready ; Journal of Canadian Studies Volume 42 ; 42 >
-    au < ready ; Journal of Canadian Studies Volume 43 ; 43 >
+    au < released ; Journal of Canadian Studies Volume 41 ; 41 >
+    au < released ; Journal of Canadian Studies Volume 42 ; 42 >
+    au < released ; Journal of Canadian Studies Volume 43 ; 43 >
 
   }
 
@@ -203,9 +204,9 @@
     au < released ; Journal of Scholarly Publishing Volume 36 ; 36 >
     au < released ; Journal of Scholarly Publishing Volume 37 ; 37 >
     au < released ; Journal of Scholarly Publishing Volume 38 ; 38 >
-    au < ready ; Journal of Scholarly Publishing Volume 39 ; 39 >
-    au < ready ; Journal of Scholarly Publishing Volume 40 ; 40 >
-    au < ready ; Journal of Scholarly Publishing Volume 41 ; 41 >
+    au < released ; Journal of Scholarly Publishing Volume 39 ; 39 >
+    au < released ; Journal of Scholarly Publishing Volume 40 ; 40 >
+    au < released ; Journal of Scholarly Publishing Volume 41 ; 41 >
 
   }
 
@@ -221,8 +222,8 @@
     au < released ; Modern Drama Volume 48 ; 48 >
     au < released ; Modern Drama Volume 49 ; 49 >
     au < released ; Modern Drama Volume 50 ; 50 >
-    au < ready ; Modern Drama Volume 51 ; 51 >
-    au < ready ; Modern Drama Volume 52 ; 52 >
+    au < released ; Modern Drama Volume 51 ; 51 >
+    au < released ; Modern Drama Volume 52 ; 52 >
 
   }
 
@@ -237,9 +238,9 @@
 
     au < released ; Seminar: A Journal of Germanic Studies Volume 42 ; 42 >
     au < released ; Seminar: A Journal of Germanic Studies Volume 43 ; 43 >
-    au < ready ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
-    au < ready ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
-    au < ready ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
 
   }
 
@@ -256,9 +257,9 @@
     au < released ; The Canadian Historical Review Volume 86 ; 86 >
     au < released ; The Canadian Historical Review Volume 87 ; 87 >
     au < released ; The Canadian Historical Review Volume 88 ; 88 >
-    au < ready ; The Canadian Historical Review Volume 89 ; 89 >
-    au < ready ; The Canadian Historical Review Volume 90 ; 90 >
-    au < ready ; The Canadian Historical Review Volume 91 ; 91 >
+    au < released ; The Canadian Historical Review Volume 89 ; 89 >
+    au < released ; The Canadian Historical Review Volume 90 ; 90 >
+    au < released ; The Canadian Historical Review Volume 91 ; 91 >
 
   }
 
@@ -275,9 +276,9 @@
     au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 49 ; 49 >
     au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 50 ; 50 >
     au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 51 ; 51 >
-    au < ready ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 52 ; 52 >
-    au < ready ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 53 ; 53 >
-    au < ready ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 54 ; 54 >
+    au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 52 ; 52 >
+    au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 53 ; 53 >
+    au < released ; The Canadian Journal of Linguistics / La revue canadienne de linguistique Volume 54 ; 54 >
 
   }
 
@@ -309,9 +310,9 @@
     au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 61 ; 61 >
     au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 62 ; 62 >
     au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 63 ; 63 >
-    au < ready ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 64 ; 64 >
-    au < ready ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 65 ; 65 >
-    au < ready ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 66 ; 66 >
+    au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 64 ; 64 >
+    au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 65 ; 65 >
+    au < released ; The Canadian Modern Language Review / La revue canadienne des langues vivantes Volume 66 ; 66 >
 
   }
 
@@ -324,7 +325,7 @@
 
     param[journal_dir] = tocqueville_reviewla_revue_tocqueville
 
-    au < ready ; The Tocqueville Review/La revue Tocqueville Volume 30 ; 30 >
+    au < released ; The Tocqueville Review/La revue Tocqueville Volume 30 ; 30 >
 
   }
 
@@ -342,8 +343,8 @@
     au < manifest ; University of Toronto Law Journal Volume 56 ; 56 >
     au < manifest ; University of Toronto Law Journal Volume 57 ; 57 >
     au < manifest ; University of Toronto Law Journal Volume 58 ; 58 >
-    au < ready ; University of Toronto Law Journal Volume 59 ; 59 >
-    au < ready ; University of Toronto Law Journal Volume 60 ; 60 >
+    au < released ; University of Toronto Law Journal Volume 59 ; 59 >
+    au < released ; University of Toronto Law Journal Volume 60 ; 60 >
 
   }
 
@@ -359,8 +360,8 @@
     au < released ; University of Toronto Quarterly Volume 74 ; 74 >
     au < released ; University of Toronto Quarterly Volume 75 ; 75 >
     au < released ; University of Toronto Quarterly Volume 76 ; 76 >
-    au < ready ; University of Toronto Quarterly Volume 77 ; 77 >
-    au < ready ; University of Toronto Quarterly Volume 78 ; 78 >
+    au < released ; University of Toronto Quarterly Volume 77 ; 77 >
+    au < released ; University of Toronto Quarterly Volume 78 ; 78 >
 
   }
 

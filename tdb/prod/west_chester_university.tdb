@@ -1,29 +1,30 @@
 {
+
   publisher <
     name = West Chester University
   >
 
-  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
-  param[base_url] = http://muse.jhu.edu/
-
   {
+
     title <
       name = College Literature ;
       issn = 0093-3139 ;
       eissn = 1542-4286
     >
 
+    plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+    param[base_url] = http://muse.jhu.edu/
     param[journal_dir] = college_literature
+    implicit < status ; name ; param[volume] >
 
     au < released ; College Literature Volume 30 ; 30 >
     au < released ; College Literature Volume 31 ; 31 >
     au < released ; College Literature Volume 32 ; 32 >
     au < released ; College Literature Volume 33 ; 33 >
     au < released ; College Literature Volume 34 ; 34 >
-    au < ready ; College Literature Volume 35 ; 35 >
-    au < ready ; College Literature Volume 36 ; 36 >
-    au < ready ; College Literature  37 ; 37 >
+    au < released ; College Literature Volume 35 ; 35 >
+    au < released ; College Literature Volume 36 ; 36 >
+    au < released ; College Literature Volume 37 ; 37 >
 
   }
 
