@@ -9,242 +9,7 @@
   implicit < status ; name ; param[volume] >
 
   {
-    title <
-      name = Canadian Journal of Criminology and Criminal Justice ;
-      issn = 1707-7753 ;
-      eissn = 1911-0219
-    >
-
-    param[journal_dir] = canadian_journal_of_criminology_and_criminal_justice
-
-    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 48 ; 48 >
-    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 49 ; 49 >
-    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 50 ; 50 >
-    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 51 ; 51 >
-    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 52 ; 52 >
-
-  }
-
-  {
-    title <
-      name = Canadian Journal of Law and Society ;
-      issn = 0829-3201 ;
-      eissn = 1911-0227
-    >
-
-    param[journal_dir] = canadian_journal_of_law_and_society
-
-    au < released ; Canadian Journal of Law and Society Volume 20 ; 20 >
-    au < released ; Canadian Journal of Law and Society Volume 21 ; 21 >
-    au < released ; Canadian Journal of Law and Society Volume 22 ; 22 >
-    au < released ; Canadian Journal of Law and Society Volume 23 ; 23 >
-    au < released ; Canadian Journal of Law and Society Volume 24 ; 24 >
-
-  }
-
-  {
-    title <
-      name = Canadian Journal of Women and the Law ;
-      issn = 0832-8781 ;
-      eissn = 1911-0235
-    >
-
-    param[journal_dir] = canadian_journal_of_women_and_the_law
-
-    au < released ; Canadian Journal of Women and the Law Volume 17 ; 17 >
-    au < released ; Canadian Journal of Women and the Law Volume 18 ; 18 >
-    au < released ; Canadian Journal of Women and the Law Volume 19 ; 19 >
-    au < released ; Canadian Journal of Women and the Law Volume 20 ; 20 >
-    au < released ; Canadian Journal of Women and the Law Volume 21 ; 21 >
-
-  }
-
-  {
-    title <
-      name = Canadian Public Policy ;
-      issn = 1911-9917 ;
-      eissn = 0317-0861
-    >
-
-    param[journal_dir] = canadian_public_policy
-
-    au < released ; Canadian Public Policy Volume 35 ; 35 >
-
-  }
-
-  {
-    title <
-      name = Canadian Review of American Studies ;
-      issn = 0007-7720 ;
-      eissn = 1710-114X
-    >
-
-    param[journal_dir] = canadian_review_of_american_studies
-
-    au < released ; Canadian Review of American Studies Volume 34 ; 34 >
-    au < released ; Canadian Review of American Studies Volume 35 ; 35 >
-    au < released ; Canadian Review of American Studies Volume 36 ; 36 >
-    au < released ; Canadian Review of American Studies Volume 37 ; 37 >
-    au < released ; Canadian Review of American Studies Volume 38 ; 38 >
-    au < released ; Canadian Review of American Studies Volume 39 ; 39 >
-
-  }
-
-  {
-    title <
-      name = Canadian Theatre Review ;
-      issn = 1920-941X ;
-      eissn = 0315-0836
-    >
-
-    param[journal_dir] = canadian_theatre_review
-
-    au < released ; Canadian Theatre Review Issue 141 ; 141 >
-
-  }
-
-  {
-    title <
-      name = Diaspora: A Journal of Transnational Studies ;
-      issn = 1044-2057 ;
-      eissn = 1911-1568
-    >
-
-    param[journal_dir] = diaspora_a_journal_of_transnational_studies
-
-    au < released ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
-    au < released ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
-
-  }
-
-  {
-    title <
-      name = Eighteenth Century Fiction ;
-      issn = 0840-6286 ;
-      eissn = 1911-0243
-    >
-
-    param[journal_dir] = eighteenth_century_fiction
-
-    au < released ; Eighteenth Century Fiction Volume 18 ; 18 >
-    au < released ; Eighteenth Century Fiction Volume 19 ; 19 >
-    au < released ; Eighteenth Century Fiction Volume 20 ; 20 >
-    au < released ; Eighteenth Century Fiction Volume 21 ; 21 >
-    au < released ; Eighteenth Century Fiction Volume 22 ; 22 >
-
-  }
-
-  {
-    title <
-      name = Francophonies d'Amérique ;
-      issn = 1183-2487 ;
-      eissn = 1710-1158
-    >
-
-    param[journal_dir] = francophonies_damerique
-
-    au < released ; Francophonies d'Amérique Volume 17 ; 17 >
-    au < released ; Francophonies d'Amérique Volume 18 ; 18 >
-
-  }
-
-  {
-    title <
-      name = Genocide Studies and Prevention ;
-      issn = 1911-0359 ;
-      eissn = 1911-9933
-    >
-
-    param[journal_dir] = genocide_studies_and_prevention
-
-    au < released ; Genocide Studies and Prevention Volume 4 ; 4 >
-
-  }
-
-  {
-    title <
-      name = Histoire sociale/Social history ;
-      issn = 0018-2257
-    >
-
-    param[journal_dir] = histoire_sociale_social_history
-
-    au < released ; Histoire sociale/Social history Volume 41 ; 41 >
-    au < released ; Histoire sociale/Social history Volume 42 ; 42 >
-
-  }
-
-  {
-    title <
-      name = Journal of Canadian Studies ;
-      issn = 0021-9495 ;
-      eissn = 1911-0251
-    >
-
-    param[journal_dir] = journal_of_canadian_studies
-
-    au < released ; Journal of Canadian Studies Volume 39 ; 39 >
-    au < released ; Journal of Canadian Studies Volume 40 ; 40 >
-    au < released ; Journal of Canadian Studies Volume 41 ; 41 >
-    au < released ; Journal of Canadian Studies Volume 42 ; 42 >
-    au < released ; Journal of Canadian Studies Volume 43 ; 43 >
-
-  }
-
-  {
-    title <
-      name = Journal of Scholarly Publishing ;
-      issn = 1198-9742 ;
-      eissn = 1710-1166
-    >
-
-    param[journal_dir] = journal_of_scholarly_publishing
-
-    au < released ; Journal of Scholarly Publishing Volume 35 ; 35 >
-    au < released ; Journal of Scholarly Publishing Volume 36 ; 36 >
-    au < released ; Journal of Scholarly Publishing Volume 37 ; 37 >
-    au < released ; Journal of Scholarly Publishing Volume 38 ; 38 >
-    au < released ; Journal of Scholarly Publishing Volume 39 ; 39 >
-    au < released ; Journal of Scholarly Publishing Volume 40 ; 40 >
-    au < released ; Journal of Scholarly Publishing Volume 41 ; 41 >
-
-  }
-
-  {
-    title <
-      name = Modern Drama ;
-      issn = 0026-7694 ;
-      eissn = 1712-5286
-    >
-
-    param[journal_dir] = modern_drama
-
-    au < released ; Modern Drama Volume 48 ; 48 >
-    au < released ; Modern Drama Volume 49 ; 49 >
-    au < released ; Modern Drama Volume 50 ; 50 >
-    au < released ; Modern Drama Volume 51 ; 51 >
-    au < released ; Modern Drama Volume 52 ; 52 >
-
-  }
-
-  {
-    title <
-      name = Seminar: A Journal of Germanic Studies ;
-      issn = 0037-1939 ;
-      eissn = 1911-026X
-    >
-
-    param[journal_dir] = seminar_a_journal_of_germanic_studies
-
-    au < released ; Seminar: A Journal of Germanic Studies Volume 42 ; 42 >
-    au < released ; Seminar: A Journal of Germanic Studies Volume 43 ; 43 >
-    au < released ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
-    au < released ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
-    au < released ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
-
-  }
-
-  {
+  
     title <
       name = The Canadian Historical Review ;
       issn = 0008-3755 ;
@@ -264,6 +29,43 @@
   }
 
   {
+  
+    title <
+      name = Canadian Journal of Criminology and Criminal Justice ;
+      issn = 1707-7753 ;
+      eissn = 1911-0219
+    >
+
+    param[journal_dir] = canadian_journal_of_criminology_and_criminal_justice
+
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 48 ; 48 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 49 ; 49 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 50 ; 50 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 51 ; 51 >
+    au < released ; Canadian Journal of Criminology and Criminal Justice Volume 52 ; 52 >
+
+  }
+
+  {
+  
+    title <
+      name = Canadian Journal of Law and Society ;
+      issn = 0829-3201 ;
+      eissn = 1911-0227
+    >
+
+    param[journal_dir] = canadian_journal_of_law_and_society
+
+    au < released ; Canadian Journal of Law and Society Volume 20 ; 20 >
+    au < released ; Canadian Journal of Law and Society Volume 21 ; 21 >
+    au < released ; Canadian Journal of Law and Society Volume 22 ; 22 >
+    au < released ; Canadian Journal of Law and Society Volume 23 ; 23 >
+    au < released ; Canadian Journal of Law and Society Volume 24 ; 24 >
+
+  }
+
+  {
+  
     title <
       name = The Canadian Journal of Linguistics / La revue canadienne de linguistique ;
       issn = 0008-4131 ;
@@ -283,6 +85,7 @@
   }
 
   {
+  
     title <
       name = The Canadian Journal of Sociology ;
       issn = 0318-6431 ;
@@ -299,6 +102,25 @@
   }
 
   {
+  
+    title <
+      name = Canadian Journal of Women and the Law ;
+      issn = 0832-8781 ;
+      eissn = 1911-0235
+    >
+
+    param[journal_dir] = canadian_journal_of_women_and_the_law
+
+    au < released ; Canadian Journal of Women and the Law Volume 17 ; 17 >
+    au < released ; Canadian Journal of Women and the Law Volume 18 ; 18 >
+    au < released ; Canadian Journal of Women and the Law Volume 19 ; 19 >
+    au < released ; Canadian Journal of Women and the Law Volume 20 ; 20 >
+    au < released ; Canadian Journal of Women and the Law Volume 21 ; 21 >
+
+  }
+
+  {
+  
     title <
       name = The Canadian Modern Language Review / La revue canadienne des langues vivantes ;
       issn = 0008-4506 ;
@@ -317,6 +139,204 @@
   }
 
   {
+  
+    title <
+      name = Canadian Public Policy ;
+      issn = 1911-9917 ;
+      eissn = 0317-0861
+    >
+
+    param[journal_dir] = canadian_public_policy
+
+    au < released ; Canadian Public Policy Volume 35 ; 35 >
+
+  }
+
+  {
+  
+    title <
+      name = Canadian Review of American Studies ;
+      issn = 0007-7720 ;
+      eissn = 1710-114X
+    >
+
+    param[journal_dir] = canadian_review_of_american_studies
+
+    au < released ; Canadian Review of American Studies Volume 34 ; 34 >
+    au < released ; Canadian Review of American Studies Volume 35 ; 35 >
+    au < released ; Canadian Review of American Studies Volume 36 ; 36 >
+    au < released ; Canadian Review of American Studies Volume 37 ; 37 >
+    au < released ; Canadian Review of American Studies Volume 38 ; 38 >
+    au < released ; Canadian Review of American Studies Volume 39 ; 39 >
+
+  }
+
+  {
+  
+    title <
+      name = Canadian Theatre Review ;
+      issn = 1920-941X ;
+      eissn = 0315-0836
+    >
+
+    param[journal_dir] = canadian_theatre_review
+
+    au < released ; Canadian Theatre Review Issue 141 ; 141 >
+
+  }
+
+  {
+  
+    title <
+      name = Diaspora: A Journal of Transnational Studies ;
+      issn = 1044-2057 ;
+      eissn = 1911-1568
+    >
+
+    param[journal_dir] = diaspora_a_journal_of_transnational_studies
+
+    au < released ; Diaspora: A Journal of Transnational Studies Volume 13 ; 13 >
+    au < released ; Diaspora: A Journal of Transnational Studies Volume 14 ; 14 >
+
+  }
+
+  {
+  
+    title <
+      name = Eighteenth Century Fiction ;
+      issn = 0840-6286 ;
+      eissn = 1911-0243
+    >
+
+    param[journal_dir] = eighteenth_century_fiction
+
+    au < released ; Eighteenth Century Fiction Volume 18 ; 18 >
+    au < released ; Eighteenth Century Fiction Volume 19 ; 19 >
+    au < released ; Eighteenth Century Fiction Volume 20 ; 20 >
+    au < released ; Eighteenth Century Fiction Volume 21 ; 21 >
+    au < released ; Eighteenth Century Fiction Volume 22 ; 22 >
+
+  }
+
+  {
+  
+    title <
+      name = Francophonies d'Amérique ;
+      issn = 1183-2487 ;
+      eissn = 1710-1158
+    >
+
+    param[journal_dir] = francophonies_damerique
+
+    au < released ; Francophonies d'Amérique Volume 17 ; 17 >
+    au < released ; Francophonies d'Amérique Volume 18 ; 18 >
+
+  }
+
+  {
+  
+    title <
+      name = Genocide Studies and Prevention ;
+      issn = 1911-0359 ;
+      eissn = 1911-9933
+    >
+
+    param[journal_dir] = genocide_studies_and_prevention
+
+    au < released ; Genocide Studies and Prevention Volume 4 ; 4 >
+
+  }
+
+  {
+  
+    title <
+      name = Histoire sociale/Social history ;
+      issn = 0018-2257
+    >
+
+    param[journal_dir] = histoire_sociale_social_history
+
+    au < released ; Histoire sociale/Social history Volume 41 ; 41 >
+    au < released ; Histoire sociale/Social history Volume 42 ; 42 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Canadian Studies ;
+      issn = 0021-9495 ;
+      eissn = 1911-0251
+    >
+
+    param[journal_dir] = journal_of_canadian_studies
+
+    au < released ; Journal of Canadian Studies Volume 39 ; 39 >
+    au < released ; Journal of Canadian Studies Volume 40 ; 40 >
+    au < released ; Journal of Canadian Studies Volume 41 ; 41 >
+    au < released ; Journal of Canadian Studies Volume 42 ; 42 >
+    au < released ; Journal of Canadian Studies Volume 43 ; 43 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Scholarly Publishing ;
+      issn = 1198-9742 ;
+      eissn = 1710-1166
+    >
+
+    param[journal_dir] = journal_of_scholarly_publishing
+
+    au < released ; Journal of Scholarly Publishing Volume 35 ; 35 >
+    au < released ; Journal of Scholarly Publishing Volume 36 ; 36 >
+    au < released ; Journal of Scholarly Publishing Volume 37 ; 37 >
+    au < released ; Journal of Scholarly Publishing Volume 38 ; 38 >
+    au < released ; Journal of Scholarly Publishing Volume 39 ; 39 >
+    au < released ; Journal of Scholarly Publishing Volume 40 ; 40 >
+    au < released ; Journal of Scholarly Publishing Volume 41 ; 41 >
+
+  }
+
+  {
+  
+    title <
+      name = Modern Drama ;
+      issn = 0026-7694 ;
+      eissn = 1712-5286
+    >
+
+    param[journal_dir] = modern_drama
+
+    au < released ; Modern Drama Volume 48 ; 48 >
+    au < released ; Modern Drama Volume 49 ; 49 >
+    au < released ; Modern Drama Volume 50 ; 50 >
+    au < released ; Modern Drama Volume 51 ; 51 >
+    au < released ; Modern Drama Volume 52 ; 52 >
+
+  }
+
+  {
+  
+    title <
+      name = Seminar: A Journal of Germanic Studies ;
+      issn = 0037-1939 ;
+      eissn = 1911-026X
+    >
+
+    param[journal_dir] = seminar_a_journal_of_germanic_studies
+
+    au < released ; Seminar: A Journal of Germanic Studies Volume 42 ; 42 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 43 ; 43 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 44 ; 44 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 45 ; 45 >
+    au < released ; Seminar: A Journal of Germanic Studies Volume 46 ; 46 >
+
+  }
+
+  {
+  
     title <
       name = The Tocqueville Review/La revue Tocqueville ;
       issn = 0730-479X ;
@@ -330,6 +350,7 @@
   }
 
   {
+  
     title <
       name = University of Toronto Law Journal ;
       issn = 0042-0220 ;
@@ -349,6 +370,7 @@
   }
 
   {
+  
     title <
       name = University of Toronto Quarterly ;
       issn = 0042-0247 ;
