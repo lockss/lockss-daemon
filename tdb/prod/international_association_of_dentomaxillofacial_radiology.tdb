@@ -1,0 +1,49 @@
+
+
+
+{
+
+  publisher <
+    name = British Institute of Radiology
+  >
+
+  plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+  implicit < status ; name ; param[volume_name] >
+    
+  {
+
+    title <
+      name = Dentomaxillofacial Radiology ;
+      issn = 0007-1285 ;
+      eissn = 1748-880X
+    >
+
+    param[base_url] = http://dmfr.birjournals.org/
+   
+    au < exists ; Dentomaxillofacial Radiology Volume 18 ; 18 >
+    au < exists ; Dentomaxillofacial Radiology Volume 19 ; 19 >
+    au < exists ; Dentomaxillofacial Radiology Volume 20 ; 20 >
+    au < exists ; Dentomaxillofacial Radiology Volume 21 ; 21 >
+    au < exists ; Dentomaxillofacial Radiology Volume 22 ; 22 >
+    au < exists ; Dentomaxillofacial Radiology Volume 23 ; 23 >
+    au < exists ; Dentomaxillofacial Radiology Volume 24 ; 24 >
+    au < exists ; Dentomaxillofacial Radiology Volume 25 ; 25 >
+    au < exists ; Dentomaxillofacial Radiology Volume 26 ; 26 >
+    au < exists ; Dentomaxillofacial Radiology Volume 27 ; 27 >
+    au < exists ; Dentomaxillofacial Radiology Volume 28 ; 28 >
+    au < exists ; Dentomaxillofacial Radiology Volume 29 ; 29 >
+    au < exists ; Dentomaxillofacial Radiology Volume 30 ; 30 >
+    au < exists ; Dentomaxillofacial Radiology Volume 31 ; 31 >
+    au < exists ; Dentomaxillofacial Radiology Volume 32 ; 32 >
+    au < exists ; Dentomaxillofacial Radiology Volume 33 ; 33 >
+    au < exists ; Dentomaxillofacial Radiology Volume 34 ; 34 >
+    au < exists ; Dentomaxillofacial Radiology Volume 35 ; 35 >
+    au < exists ; Dentomaxillofacial Radiology Volume 36 ; 36 >
+    au < exists ; Dentomaxillofacial Radiology Volume 37 ; 37 >
+    au < exists ; Dentomaxillofacial Radiology Volume 38 ; 38 >
+    au < exists ; Dentomaxillofacial Radiology Volume 39 ; 39 >
+    au < exists ; Dentomaxillofacial Radiology Volume 40 ; 40 >
+    
+  }
+    
+}

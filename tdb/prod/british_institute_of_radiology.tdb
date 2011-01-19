@@ -1,0 +1,129 @@
+{
+
+  publisher <
+    name = British Institute of Radiology
+  >
+
+  plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+  implicit < status ; name ; param[volume_name] >
+  
+  {
+
+    title <
+      name = The British Journal of Radiology ;
+      issn = 0007-1285 ;
+      eissn = 1748-880X
+    >
+
+    param[base_url] = http://bjr.birjournals.org/
+   
+    au < exists ; The British Journal of Radiology Volume 1 ; 1 >
+    au < exists ; The British Journal of Radiology Volume 2 ; 2 >
+    au < exists ; The British Journal of Radiology Volume 3 ; 3 >
+    au < exists ; The British Journal of Radiology Volume 4 ; 4 >
+    au < exists ; The British Journal of Radiology Volume 5 ; 5 >
+    au < exists ; The British Journal of Radiology Volume 6 ; 6 >
+    au < exists ; The British Journal of Radiology Volume 7 ; 7 >
+    au < exists ; The British Journal of Radiology Volume 8 ; 8 >
+    au < exists ; The British Journal of Radiology Volume 9 ; 9 >
+    au < exists ; The British Journal of Radiology Volume 10 ; 10 >
+    au < exists ; The British Journal of Radiology Volume 11 ; 11 >
+    au < exists ; The British Journal of Radiology Volume 12 ; 12 >
+    au < exists ; The British Journal of Radiology Volume 13 ; 13 >
+    au < exists ; The British Journal of Radiology Volume 14 ; 14 >
+    au < exists ; The British Journal of Radiology Volume 15 ; 15 >
+    au < exists ; The British Journal of Radiology Volume 16 ; 16 >
+    au < exists ; The British Journal of Radiology Volume 17 ; 17 >
+    au < exists ; The British Journal of Radiology Volume 18 ; 18 >
+    au < exists ; The British Journal of Radiology Volume 19 ; 19 >
+    au < exists ; The British Journal of Radiology Volume 20 ; 20 >
+    au < exists ; The British Journal of Radiology Volume 21 ; 21 >
+    au < exists ; The British Journal of Radiology Volume 22 ; 22 >
+    au < exists ; The British Journal of Radiology Volume 23 ; 23 >
+    au < exists ; The British Journal of Radiology Volume 24 ; 24 >
+    au < exists ; The British Journal of Radiology Volume 25 ; 25 >
+    au < exists ; The British Journal of Radiology Volume 26 ; 26 >
+    au < exists ; The British Journal of Radiology Volume 27 ; 27 >
+    au < exists ; The British Journal of Radiology Volume 28 ; 28 >
+    au < exists ; The British Journal of Radiology Volume 29 ; 29 >
+    au < exists ; The British Journal of Radiology Volume 30 ; 30 >
+    au < exists ; The British Journal of Radiology Volume 31 ; 31 >
+    au < exists ; The British Journal of Radiology Volume 32 ; 32 >
+    au < exists ; The British Journal of Radiology Volume 33 ; 33 >
+    au < exists ; The British Journal of Radiology Volume 34 ; 34 >
+    au < exists ; The British Journal of Radiology Volume 35 ; 35 >
+    au < exists ; The British Journal of Radiology Volume 36 ; 36 >
+    au < exists ; The British Journal of Radiology Volume 37 ; 37 >
+    au < exists ; The British Journal of Radiology Volume 38 ; 38 >
+    au < exists ; The British Journal of Radiology Volume 39 ; 39 >
+    au < exists ; The British Journal of Radiology Volume 40 ; 40 >
+    au < exists ; The British Journal of Radiology Volume 41 ; 41 >
+    au < exists ; The British Journal of Radiology Volume 42 ; 42 >
+    au < exists ; The British Journal of Radiology Volume 43 ; 43 >
+    au < exists ; The British Journal of Radiology Volume 44 ; 44 >
+    au < exists ; The British Journal of Radiology Volume 45 ; 45 >
+    au < exists ; The British Journal of Radiology Volume 46 ; 46 >
+    au < exists ; The British Journal of Radiology Volume 47 ; 47 >
+    au < exists ; The British Journal of Radiology Volume 48 ; 48 >
+    au < exists ; The British Journal of Radiology Volume 49 ; 49 >
+    au < exists ; The British Journal of Radiology Volume 50 ; 50 >
+    au < exists ; The British Journal of Radiology Volume 51 ; 51 >
+    au < exists ; The British Journal of Radiology Volume 52 ; 52 >
+    au < exists ; The British Journal of Radiology Volume 53 ; 53 >
+    au < exists ; The British Journal of Radiology Volume 54 ; 54 >
+    au < exists ; The British Journal of Radiology Volume 55 ; 55 >
+    au < exists ; The British Journal of Radiology Volume 56 ; 56 >
+    au < exists ; The British Journal of Radiology Volume 57 ; 57 >
+    au < exists ; The British Journal of Radiology Volume 58 ; 58 >
+    au < exists ; The British Journal of Radiology Volume 59 ; 59 >
+    au < exists ; The British Journal of Radiology Volume 60 ; 60 >
+    au < exists ; The British Journal of Radiology Volume 61 ; 61 >
+    au < exists ; The British Journal of Radiology Volume 62 ; 62 >
+    au < exists ; The British Journal of Radiology Volume 63 ; 63 >
+    au < exists ; The British Journal of Radiology Volume 64 ; 64 >
+    au < exists ; The British Journal of Radiology Volume 65 ; 65 >
+    au < exists ; The British Journal of Radiology Volume 66 ; 66 >
+    au < exists ; The British Journal of Radiology Volume 67 ; 67 >
+    au < exists ; The British Journal of Radiology Volume 68 ; 68 >
+    au < exists ; The British Journal of Radiology Volume 69 ; 69 >
+    au < exists ; The British Journal of Radiology Volume 70 ; 70 >
+    au < exists ; The British Journal of Radiology Volume 71 ; 71 >
+    au < exists ; The British Journal of Radiology Volume 72 ; 72 >
+    au < exists ; The British Journal of Radiology Volume 73 ; 73 >
+    au < exists ; The British Journal of Radiology Volume 74 ; 74 >
+    au < exists ; The British Journal of Radiology Volume 75 ; 75 >
+    au < exists ; The British Journal of Radiology Volume 76 ; 76 >
+    au < exists ; The British Journal of Radiology Volume 77 ; 77 >
+    au < exists ; The British Journal of Radiology Volume 78 ; 78 >
+    au < exists ; The British Journal of Radiology Volume 79 ; 79 >
+    au < exists ; The British Journal of Radiology Volume 80 ; 80 >
+    au < exists ; The British Journal of Radiology Volume 81 ; 81 >
+    au < exists ; The British Journal of Radiology Volume 82 ; 82 >
+    au < exists ; The British Journal of Radiology Volume 83 ; 83 >
+    au < exists ; The British Journal of Radiology Volume 84 ; 84 >
+    
+  }
+
+  {
+
+    title <
+      name = Imaging ;
+      issn = 0965-6812 ;
+      eissn = 1748-8818
+    >
+
+    param[base_url] = http://imaging.birjournals.org/
+   
+    au < exists ; Imaging Volume 11 ; 11 >
+    au < exists ; Imaging Volume 12 ; 12 >
+    au < exists ; Imaging Volume 13 ; 13 >
+    au < exists ; Imaging Volume 14 ; 14 >
+    au < exists ; Imaging Volume 15 ; 15 >
+    au < exists ; Imaging Volume 16 ; 16 >
+    au < exists ; Imaging Volume 17 ; 17 >
+    au < exists ; Imaging Volume 18 ; 18 >
+    au < exists ; Imaging Volume 19 ; 19 >
+    au < exists ; Imaging Volume 20 ; 20 >
+    au < exists ; Imaging Volume 21 ; 21 >    
+    
+  } 
