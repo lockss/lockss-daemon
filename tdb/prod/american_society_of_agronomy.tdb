@@ -1,60 +1,54 @@
 {
+
   publisher <
     name = American Society of Agronomy
   >
 
   {
+
     title <
       name = Agronomy Journal ;
       issn = 0002-1962 ;
       eissn = 1435-0645
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+    param[base_url] = http://agron.scijournals.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://agron.scijournals.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < down ; Agronomy Journal Volume 90 ; 90 >
-      au < down ; Agronomy Journal Volume 91 ; 91 >
-      au < down ; Agronomy Journal Volume 92 ; 92 >
-      au < down ; Agronomy Journal Volume 93 ; 93 >
-      au < down ; Agronomy Journal Volume 94 ; 94 >
-      au < down ; Agronomy Journal Volume 95 ; 95 >
-      au < down ; Agronomy Journal Volume 96 ; 96 >
-      au < down ; Agronomy Journal Volume 97 ; 97 >
-      au < down ; Agronomy Journal Volume 98 ; 98 >
-      au < down ; Agronomy Journal Volume 99 ; 99 >
-
-    }
+    au < down ; Agronomy Journal Volume 90 ; 90 >
+    au < down ; Agronomy Journal Volume 91 ; 91 >
+    au < down ; Agronomy Journal Volume 92 ; 92 >
+    au < down ; Agronomy Journal Volume 93 ; 93 >
+    au < down ; Agronomy Journal Volume 94 ; 94 >
+    au < down ; Agronomy Journal Volume 95 ; 95 >
+    au < down ; Agronomy Journal Volume 96 ; 96 >
+    au < down ; Agronomy Journal Volume 97 ; 97 >
+    au < down ; Agronomy Journal Volume 98 ; 98 >
+    au < down ; Agronomy Journal Volume 99 ; 99 >
 
   }
 
   {
+
     title <
       name = Journal of Environmental Quality ;
       issn = 0047-2425 ;
       eissn = 1537-2537
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+    param[base_url] = http://jeq.scijournals.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://jeq.scijournals.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < down ; Journal of Environmental Quality Volume 30 ; 30 >
-      au < down ; Journal of Environmental Quality Volume 31 ; 31 >
-      au < down ; Journal of Environmental Quality Volume 32 ; 32 >
-      au < down ; Journal of Environmental Quality Volume 33 ; 33 >
-      au < down ; Journal of Environmental Quality Volume 34 ; 34 >
-      au < down ; Journal of Environmental Quality Volume 35 ; 35 >
-      au < down ; Journal of Environmental Quality Volume 36 ; 36 >
-
-    }
+    au < down ; Journal of Environmental Quality Volume 30 ; 30 >
+    au < down ; Journal of Environmental Quality Volume 31 ; 31 >
+    au < down ; Journal of Environmental Quality Volume 32 ; 32 >
+    au < down ; Journal of Environmental Quality Volume 33 ; 33 >
+    au < down ; Journal of Environmental Quality Volume 34 ; 34 >
+    au < down ; Journal of Environmental Quality Volume 35 ; 35 >
+    au < down ; Journal of Environmental Quality Volume 36 ; 36 >
 
   }
 
 }
-
