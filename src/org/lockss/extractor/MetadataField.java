@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: MetadataField.java,v 1.2 2011-01-20 08:37:43 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.extractor;
 import java.util.*;
 
 import org.lockss.util.*;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * Describes a field (key-value pair) in metadata: key name, required
@@ -51,13 +52,11 @@ public class MetadataField {
   public static final String KEY_DOI = "doi";
   public static final MetadataField FIELD_DOI =
     new MetadataField(KEY_DOI, Cardinality.Single) {
-      public String validate(String val)
+      @Override
+      public String validate(ArticleMetadata am, String val)
 	  throws MetadataException.ValidationException {
-	String doi = val;
 	// normalize away leading "doi:" before checking validity
-	if (StringUtil.startsWithIgnoreCase(val, PROTOCOL_DOI)) {
-	  doi = val.substring(PROTOCOL_DOI.length());
-	}
+	String doi = StringUtils.removeStartIgnoreCase(val, PROTOCOL_DOI);
 	if (!MetadataUtil.isDOI(doi)) {
 	  throw new MetadataException.ValidationException("Illegal DOI: "
 							  + val);
@@ -66,26 +65,36 @@ public class MetadataField {
       }};	
 
 
+  public static final String PROTOCOL_ISSN = "issn:";
   public static final String KEY_ISSN = "issn";
   public static final MetadataField FIELD_ISSN =
     new MetadataField(KEY_ISSN, Cardinality.Single) {
-      public String validate(String val) {
-// 	if (!MetadataUtil.isISSN(val)) {
-// 	  throw new MetadataException.ValidationException("Illegal ISSN: "
-// 							  + val);
-// 	}
-	return val;
+      @Override
+      public String validate(ArticleMetadata am, String val)
+	  throws MetadataException.ValidationException {
+	// normalize away leading "issn:" before checking validity
+	String issn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_ISSN);
+	if (!MetadataUtil.isISSN(issn)) {
+	  throw new MetadataException.ValidationException("Illegal ISSN: "
+							  + val);
+	}
+	return issn;
       }};
 
+  public static final String PROTOCOL_EISSN = "eissn:";
   public static final String KEY_EISSN = "eissn";
   public static final MetadataField FIELD_EISSN =
     new MetadataField(KEY_EISSN, Cardinality.Single) {
-      public String validate(String val) {
-// 	if (!MetadataUtil.isISSN(val)) {
-// 	  throw new MetadataException.ValidationException("Illegal EISSN: "
-// 							  + val);
-// 	}
-	return val;
+      @Override
+      public String validate(ArticleMetadata am, String val)
+	  throws MetadataException.ValidationException {
+	// normalize away leading "eissn:" before checking validity
+	String issn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_EISSN);
+	if (!MetadataUtil.isISSN(issn)) {
+	  throw new MetadataException.ValidationException("Illegal EISSN: "
+							  + val);
+	}
+	return issn;
       }};
 
   public static final String KEY_ISBN = "isbn";
@@ -170,20 +179,23 @@ public class MetadataField {
     }
   }
 
+  /** Return the predefined MetadataField with the given key, or null if
+   * none */
   public static MetadataField findField(String key) {
     return fieldMap.get(key.toLowerCase());
   }
 
 
-  private final String key;
-  private final Cardinality cardinality;
-  private final Validator validator;
+  protected final String key;
+  protected final Cardinality cardinality;
+  protected final Validator validator;
+  protected final Splitter splitter;
 
   /** Create a metadata field descriptor with Cardinality.Single
    * @param key the map key
    */
   public MetadataField(String key) {
-    this(key, Cardinality.Single);
+    this(key, Cardinality.Single, null, null);
   }
 
   /** Create a metadata field descriptor
@@ -191,7 +203,7 @@ public class MetadataField {
    * @param cardinality
    */
   public MetadataField(String key, Cardinality cardinality) {
-    this(key, cardinality, null);
+    this(key, cardinality, null, null);
   }
 
   /** Create a metadata field descriptor
@@ -201,56 +213,193 @@ public class MetadataField {
    */
   public MetadataField(String key, Cardinality cardinality,
 		       Validator validator) {
+    this(key, cardinality, validator, null);
+  }
+
+  /** Create a metadata field descriptor
+   * @param key the map key
+   * @param cardinality
+   * @param splitter
+   */
+  public MetadataField(String key, Cardinality cardinality,
+		       Splitter splitter) {
+    this(key, cardinality, null, splitter);
+  }
+
+  /** Create a metadata field descriptor
+   * @param key the map key
+   * @param cardinality
+   * @param validator
+   */
+  public MetadataField(String key, Cardinality cardinality,
+		       Validator validator, Splitter splitter) {
     this.key = key;
     this.cardinality = cardinality;
     this.validator = validator;
+    if (cardinality != Cardinality.Multi && splitter != null) {
+      throw new IllegalArgumentException("Splitter legal only with Cardinality.Multi");
+    }
+    this.splitter = splitter;
   }
 
   /** Create a MetadataField that's a copy of another one
    * @param field the MetadataField to copy
+   * @param splitter
    */
   public MetadataField(MetadataField field) {
     this(field.getKey(), field.getCardinality(), field.getValidator());
   }
 
+  /** Create a MetadataField that's a copy of another one
+   * @param field the MetadataField to copy
+   */
+  public MetadataField(MetadataField field, Splitter splitter) {
+    this(field.getKey(), field.getCardinality(),
+	 field.getValidator(), splitter);
+  }
+
+  /** Return the field's key. */
   public String getKey() {
     return key;
   }
 
+  /** Return the field's cardinality. */
   public Cardinality getCardinality() {
     return cardinality;
   }
 
-  public Validator getValidator() {
+  private Validator getValidator() {
     return validator;
   }
 
-  public String validate(String value)
+  /** If a validator is present, apply it to the argument.  If valid,
+   * return the argument or a normalized value.  If invalid, throw
+   * MetadataException.ValidationException */
+  public String validate(ArticleMetadata am, String value)
       throws MetadataException.ValidationException {
     if (validator != null) {
-      return validator.validate(this, value);
+      return validator.validate(am, this, value);
     }
     return value;
   }
 
+  /** If a splitter is present, apply it to the argument return a list of
+   * strings.  If no splitter is present, return a singleton list of the
+   * argument */
+  public List<String> split(ArticleMetadata am, String value) {
+    if (splitter != null) {
+      return splitter.split(am, this, value);
+    }
+    return ListUtil.list(value);
+  }
 
-  public static class Default extends MetadataField {
+  public boolean hasSplitter() {
+    return splitter != null;
+  }
+
+
+  /** Cardinality of a MetadataField: single-valued or multi-valued */
+  public static enum Cardinality {Single, Multi};
+
+  static class Default extends MetadataField {
     public Default(String key) {
       super(key, Cardinality.Single);
     }
   }
 
-  public static enum Cardinality {Single, Multi};
-
+  /** Validator can be associated with a MetadataField to check and/or
+   * normalize values when stored. */
   public interface Validator {
     /** Validate and/or normalize value.
+     * @param am the ArticleMeta being stored into (source of Locale, if
+     * necessary)
      * @param field the field being stored
-     * @param value the value being stor
-     * @return Original value or a normalized value to store
+     * @param value the value being stored
+     * @return original value or a normalized value to store
      * @throws MetadataField.ValidationException if the value is illegal
      * for the field
      */
-    public String validate(MetadataField field, String value)
+    public String validate(ArticleMetadata am,
+			   MetadataField field,
+			   String value)
 	throws MetadataException.ValidationException;
+  }
+
+  /** Splitter can be associated with a MetadataField to split value
+   * strings into substring to be stored into a multi-valued field. */
+  public interface Splitter {
+    /** Split a value into a list of values
+     * @param am the ArticleMeta being stored into (source of Locale, if
+     * necessary)
+     * @param field the field being stored
+     * @param value the value being stored
+     * @return list of values
+     */
+    public List<String> split(ArticleMetadata am,
+			      MetadataField field,
+			      String value);
+  }
+
+  /** Return a Splitter that splits substrings separated by the separator
+   * string.
+   * @param separator the separator string
+   */
+  public static Splitter splitAt(String separator) {
+    return new SplitAt(separator, null, null);
+  }
+
+  /** Return a Splitter that first removes the delimiter string from the
+   * ends of the input, then splits substrings separated by the separator
+   * string. 
+   * @param separator the separator string
+   * @param delimiter the delimiter string removed from both ends of the input
+   */
+  public static Splitter splitAt(String separator, String delimiter) {
+    return new SplitAt(separator, delimiter, delimiter);
+  }
+
+  /** Return a Splitter that first removes the two delimiter strings from
+   * the front and end of the input, respectively, then splits substrings
+   * separated by the separator string.
+   * @param separator the separator string
+   * @param delimiter1 the delimiter string removed from the beginning of
+   * the input
+   * @param delimiter2 the delimiter string removed from the end of the
+   * input
+   */
+  public static Splitter splitAt(String separator,
+				 String delimiter1,
+				 String delimiter2) {
+    return new SplitAt(separator, delimiter1, delimiter2);
+  }
+
+  /** A Splitter that splits substrings separated by a separator string,
+   * optionally after removing delimiters from the beginning and end of the
+   * string.  Blanks are trimmed from the ends of the input string and from
+   * each substring, and empty substrings are discarded. */
+  public static class SplitAt implements Splitter {
+    protected String splitSep;
+    protected String splitDelim1;
+    protected String splitDelim2;
+
+    public SplitAt(String separator, String delimiter1, String delimiter2) {
+      splitSep = separator;
+      splitDelim1 = delimiter1;
+      splitDelim2 = delimiter2;
+    }
+
+    public List<String> split(ArticleMetadata am,
+			      MetadataField field,
+			      String value) {
+      value = value.trim();
+      if (splitDelim1 != null) {
+	if (splitDelim2 == null) {
+	  splitDelim2 = splitDelim1;
+	}
+	value = StringUtils.removeStartIgnoreCase(value, splitDelim1);
+	value = StringUtils.removeEndIgnoreCase(value, splitDelim2);
+      }
+      return StringUtil.breakAt(value, splitSep, -1, true, true);
+    }
   }
 }

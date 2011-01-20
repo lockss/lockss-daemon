@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataException.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: MetadataException.java,v 1.2 2011-01-20 08:37:43 tlipkis Exp $
  */
 
 /*
@@ -77,12 +77,20 @@ public class MetadataException extends /*Runtime*/Exception {
   }
 
   public static class CardinalityException extends MetadataException {
-    public CardinalityException() {
+    private String cookedValue;
+
+    public CardinalityException(String cookedValue) {
       super();
+      this.cookedValue = cookedValue;
     }
 
-    public CardinalityException(String message) {
+    public CardinalityException(String cookedValue, String message) {
       super(message);
+      this.cookedValue = cookedValue;
+    }
+
+    public String getValue() {
+      return cookedValue;
     }
   }
 

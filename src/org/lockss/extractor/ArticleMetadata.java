@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.1 2011-01-11 05:39:08 tlipkis Exp $
+ * $Id: ArticleMetadata.java,v 1.2 2011-01-20 08:37:43 tlipkis Exp $
  */
 
 /*
@@ -35,8 +35,8 @@ package org.lockss.extractor;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.collections .*;
-import org.apache.commons.collections .map.*;
+import org.apache.commons.collections.*;
+import org.apache.commons.collections.map.*;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
@@ -57,8 +57,34 @@ public class ArticleMetadata {
 
   private MultiValueMap rawMap = new MultiValueMap();
   private MultiValueMap cookedmap = new MultiValueMap();
+  private Locale locale;
 
   public ArticleMetadata() {
+  }
+
+  /** Set the Locale in which Locale-dependent values (e.g., dates) in this
+   * metadata should be interpreted.  Plugin metadata extractors must set
+   * this to the appropriate Locale if, e.g., the values stored in the
+   * metadata are in a language other than the default.  If used, must be
+   * called before any cooked data is stored (because validators and
+   * splitters may refer to the Locale).
+   * @throws IllegalStateException if any cooked data has already been stored
+   * @see MetadataUtil#getDefaultLocale()
+   */
+  public void setLocale(Locale locale) {
+    if (cookedmap.isEmpty()) {
+      this.locale = locale;
+    } else {
+      throw new IllegalStateException("Cannot set locale after storing any cooked metadata");
+    }
+  }
+
+  /** Return the Locale in which values (e.g., dates) in this metadata
+   * should be interpreted.  Returns the systemwide default from (@link
+   * MetadataUtil#getDefaultLocale()} if no Locale has't been explicitly
+   * set with {@link #setLocale(Locale)}. */
+  public Locale getLocale() {
+    return locale != null ? locale : MetadataUtil.getDefaultLocale();
   }
 
   /*
@@ -74,8 +100,8 @@ public class ArticleMetadata {
     rawMap.put(key.toLowerCase(), value);
   }
 
-  /** Return a non-empty list of raw values associated with a key, else
-   * null if none. */
+  /** Return the list of raw values associated with a key, or an empty
+   * list. */
   public List<String> getRawList(String key) {
     return getRawCollection(key);
   }
@@ -84,7 +110,7 @@ public class ArticleMetadata {
    * none. */
   public String getRaw(String key) {
     List<String> lst = getRawCollection(key);
-    if (lst == null) {
+    if (lst.isEmpty()) {
       return null;
     } else {
       return lst.get(0);
@@ -114,7 +140,7 @@ public class ArticleMetadata {
   private List<String> getRawCollection(String key) {
     List<String> res = (List)rawMap.getCollection(key.toLowerCase());
     if (res == null || res.isEmpty()) {
-      return null;
+      return Collections.<String>emptyList();
     }
     return res;
   }
@@ -134,10 +160,12 @@ public class ArticleMetadata {
    * #hasInvalidValue(MetadataField)} and {@link #get(MetadataField)}.)
    *
    * <h4>Multi-valued fields</h4>A valid value will be added and true
-   * returned; an invalid valid will not be stored, and false returned
+   * returned; an invalid valid will not be stored, and false returned.  If
+   * the field has a splitter it will be invoked to convert the value into
+   * a list of values.  If there is also a validator/normalizer, it will be
+   * invoked on each split value.  If any of them fails to validate the
+   * behavior is undefined.
    */
-  /** Set or add to the value associated with the key. Returns true iff the
-   * value was stored without error */
   public boolean put(MetadataField field, String value) {
     MetadataException ex = put0(field, value);
     return ex == null;
@@ -153,7 +181,7 @@ public class ArticleMetadata {
    * value.  If a different value is present nothing is stored and a
    * MetadataException.CardinalityException is thrown.  <br>A raw value
    * that doesn't validate will cause a
-   * MetadataException.CardinalityException to be thrown.  If no valid
+   * MetadataException.ValidationException to be thrown.  If no valid
    * value is already present. the invalid raw value will be stored as an
    * {@link InvalidValue} along with the validation exception.  (See {@link
    * #hasValidValue(MetadataField)}, {@link
@@ -161,6 +189,10 @@ public class ArticleMetadata {
    *
    * <h4>Multi-valued fields</h4>A valid value will be added.  An invalid
    * valid will not be added, and a validation exception will be thrown.
+   * If the field has a splitter it will be invoked to convert the value
+   * into a list of values.  If there is also a validator/normalizer, it
+   * will be invoked on each split value.  If any of them fails to
+   * validate the behavior is undefined.
    */
   public void putValid(MetadataField field, String value)
       throws MetadataException {
@@ -190,9 +222,9 @@ public class ArticleMetadata {
     MetadataException valEx = null;
     String normVal;
     try {
-      normVal = field.validate(value);
+      normVal = field.validate(this, value);
       List curval = getCollection(key);
-      if (curval == null) {
+      if (curval.isEmpty()) {
 	cookedmap.put(key, normVal);
 	return null;
       } else if (isInvalid(curval.get(0))) {
@@ -203,14 +235,15 @@ public class ArticleMetadata {
 	return null;
       }
       MetadataException ex =
-	new MetadataException.CardinalityException("Attempt to reset single-valued key: " + key + " to " + value);
+	new MetadataException.CardinalityException(value,
+						   "Attempt to reset single-valued key: " + key + " to " + value);
       ex.setField(field);
       ex.setNormalizedValue(normVal);
       ex.setRawValue(value);
       return ex;
     } catch (MetadataException ex) {
-      if (getCollection(key) == null) {
-	InvalidValue ival = new InvalidValue(value, null, ex);
+      if (getCollection(key).isEmpty()) {
+	InvalidValue ival = new InvalidValue(value, ex);
 	cookedmap.put(key, ival);
       }
       ex.setField(field);
@@ -223,12 +256,27 @@ public class ArticleMetadata {
     String key = getKey(field);
     MetadataException valEx = null;
     String normVal;
+    if (field.hasSplitter()) {
+      MetadataException elemEx = null;
+      for (String elem : field.split(this, value)) {
+	try {
+	  String normElem = field.validate(this, elem);
+	  cookedmap.put(key, normElem);
+	} catch (MetadataException.ValidationException ex) {
+	  if (elemEx == null) {
+	    elemEx = ex;
+	  }
+	}
+      }
+      return elemEx;
+    }
     try {
-      normVal = field.validate(value);
+      normVal = field.validate(this, value);
       cookedmap.put(key, normVal);
       return null;
-    } catch (MetadataException ex) {
+    } catch (MetadataException.ValidationException ex) {
       ex.setRawValue(value);
+      ex.setField(field);
       return ex;
     }
   }
@@ -237,19 +285,19 @@ public class ArticleMetadata {
    * value */
   public boolean hasValue(MetadataField field) {
     List curval = getCollection(getKey(field));
-    return curval != null;
+    return !curval.isEmpty();
   }
 
   /** Return true iff the field has a valid value */
   public boolean hasValidValue(MetadataField field) {
     List curval = getCollection(getKey(field));
-    return curval != null && !isInvalid(curval.get(0));
+    return !curval.isEmpty() && !isInvalid(curval.get(0));
   }
 
   /** Return true iff the field has a value, which is invalid */
   public boolean hasInvalidValue(MetadataField field) {
     List curval = getCollection(getKey(field));
-    return curval != null && isInvalid(curval.get(0));
+    return !curval.isEmpty() && isInvalid(curval.get(0));
   }
 
   private boolean isValid(Object obj) {
@@ -258,6 +306,47 @@ public class ArticleMetadata {
 
   private boolean isInvalid(Object obj) {
     return obj instanceof InvalidValue;
+  }
+
+  /** If the field has an invalid value, return the {@link InvalidValue}
+   * describing it, else null */
+  public InvalidValue getInvalid(MetadataField field) {
+    return getInvalid(field.getKey());
+  }
+
+  /** If the key has an invalid value, return the {@link InvalidValue}
+   * describing it, else null */
+  private InvalidValue getInvalid(String key) {
+    List lst = getCollection(key);
+    if (lst.isEmpty()) {
+      return null;
+    }
+    Object res = lst.get(0);
+    if (res instanceof InvalidValue) {
+      return (InvalidValue)res;
+    }
+    return null;
+  }
+
+  /** Return the value associated with a key, else null if no valid value */
+  public String get(MetadataField field) {
+    return get(field.getKey());
+  }
+
+  /** Return the list of values associated with a key,or an empty list if
+   * none */
+  private List<String> getList(String key) {
+    List lst = getCollection(key);
+    if (lst.isEmpty() || lst.get(0) instanceof InvalidValue) {
+      return Collections.<String>emptyList();
+    }
+    return lst;
+  }
+
+  /** Return the list of values associated with a key,or an empty list if
+   * none */
+  public List<String> getList(MetadataField field) {
+    return getList(field.getKey());
   }
 
   /** Return the value associated with a key, else null if no valid value */
@@ -269,7 +358,7 @@ public class ArticleMetadata {
    * value */
   private String get(String key, String dfault) {
     List lst = getCollection(key);
-    if (lst == null) {
+    if (lst.isEmpty()) {
       return dfault;
     }
     Object res = lst.get(0);
@@ -280,64 +369,6 @@ public class ArticleMetadata {
       return null;
     }
     return null;
-  }
-
-  /** If the field has an invalid value, return the {@link InvalidValue}
-   * describing it, else null */
-  public InvalidValue getInvalid(MetadataField field) {
-    return getInvalid(field.getKey());
-  }
-
-  /** If the key has an invalid value, return the {@link InvalidValue}
-   * describing it, else null */
-  public InvalidValue getInvalid(String key) {
-    List lst = getCollection(key);
-    if (lst == null) {
-      return null;
-    }
-    Object res = lst.get(0);
-    if (res instanceof InvalidValue) {
-      return (InvalidValue)res;
-    }
-    return null;
-  }
-
-
-//   /** Return the value associated with a key */
-//   public String get(String key) {
-//     return get(key, null);
-//   }
-
-//   /** Return the value associated with a key */
-//   public String get(String key, String def) {
-//     List lst = getCollection(key);
-//     if (lst == null) {
-//       return def;
-//     }
-//     if (lst.size() > 1) {
-//       return StringUtil.separatedString(lst, ";");
-//     } else {
-//       return (String)lst.get(0);
-//     }
-//   }
-
-  /** Return the value associated with a key */
-  public String get(MetadataField field) {
-    return get(field.getKey());
-  }
-
-  /** Return the list of values associated with a key */
-  public List<String> getList(String key) {
-    List lst = getCollection(key);
-    if (lst == null || lst.get(0) instanceof InvalidValue) {
-      return null;
-    }
-    return lst;
-  }
-
-  /** Return the list of values associated with a key */
-  public List<String> getList(MetadataField field) {
-    return getList(field.getKey());
   }
 
   /** Return the keyset of the cooked map */
@@ -361,28 +392,33 @@ public class ArticleMetadata {
   }
 
   /** Copies values from the raw metadata map to the cooked map according
-   * to the supplied map.  Validation errors are ignored
+   * to the supplied map.  Any MetadataExceptions thrown while storing into
+   * the cooked map are returned in a List.
    * @param rawToCooked maps raw key -> cooked MatadataField.
    */
-  public void cook(Map<String,Object> rawToCooked) {
-    for (Map.Entry ent : rawToCooked.entrySet()) {
+  public List<MetadataException> cook(MultiMap rawToCooked) {
+    List<MetadataException> errors = new ArrayList<MetadataException>();
+    for (Map.Entry ent :
+	   (Collection<Map.Entry<String,Collection<MetadataField>>>)(rawToCooked.entrySet())) {
       String rawKey = (String)ent.getKey();
-      Object val = ent.getValue();
-      if (val instanceof Collection) {
-	for (MetadataField field : (Collection<MetadataField>)val) {
-	  cookField(rawKey, field);
-	}
-      } else if (val instanceof MetadataField) {
-	cookField(rawKey, (MetadataField)val);
+      Collection<MetadataField> fields = (Collection)ent.getValue();
+      for (MetadataField field : fields) {
+	cookField(rawKey, field, errors);
       }
     }
+    return errors;
   }
 
-  private void cookField(String rawKey, MetadataField field) {
+  private void cookField(String rawKey, MetadataField field,
+			 List<MetadataException> errors) {
     List<String> rawlst = getRawCollection(rawKey);
-    if (rawlst != null) {
+    if (!rawlst.isEmpty()) {
       for (String rawval : rawlst) {
-	put(field, rawval);
+	try {
+	  putValid(field, rawval);
+	} catch (MetadataException ex) {
+	  errors.add(ex);
+	}
       }
     }
   }
@@ -396,7 +432,7 @@ public class ArticleMetadata {
   private List getCollection(String key) {
     List res = (List)cookedmap.getCollection(key.toLowerCase());
     if (res == null || res.isEmpty()) {
-      return null;
+      return Collections.EMPTY_LIST;
     }
     return res;
   }
@@ -409,7 +445,7 @@ public class ArticleMetadata {
       sb.append(key);
       sb.append(", ");
       List lst = getCollection(key);
-      if (lst == null) {
+      if (lst.isEmpty()) {
 	sb.append("(null)");
       } else if (lst.get(0) instanceof InvalidValue) {
 	sb.append(lst.get(0));
@@ -426,13 +462,10 @@ public class ArticleMetadata {
    * Single cardinality field */
   public static class InvalidValue {
     private String rawValue;
-    private String invValue;
     private MetadataException ex;
 
-    public InvalidValue(String rawValue, String invalidValue,
-			MetadataException ex) {
+    public InvalidValue(String rawValue, MetadataException ex) {
       this.rawValue = rawValue;
-      this.invValue = invalidValue;
       this.ex = ex;
     }
 
@@ -440,9 +473,6 @@ public class ArticleMetadata {
     public String getRawValue() {
       return rawValue;
     }
-//     public String getInvalidValue() {
-//       return invValue;
-//     }
 
     /** Return the exception thrown by the validator. */
     public MetadataException getException() {
