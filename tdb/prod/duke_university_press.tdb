@@ -4,6 +4,8 @@
     name = Duke University Press
   >
 
+comment[duke] = HW content is migrating to H20 July 2011, so should be tested after that
+
   {
     
     title <
@@ -34,15 +36,21 @@
 
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://als.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; American Literary Scholarship 2003 ; 2003 >
-      au < released ; American Literary Scholarship 2004 ; 2004 >
-    
+      au < HighWireStrVolPlugin ; released ; American Literary Scholarship 2003 ; 2003 >
+      au < HighWireStrVolPlugin ; released ; American Literary Scholarship 2004 ; 2004 >
+      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2005 ; 2005 >
+      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2006 ; 2006 >
+      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2007 ; 2007 >
+      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2008 ; 2008 >
+      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2009 ; 2009 >
+      au < HighWirePressPlugin ; wanted ; American Literary Scholarship 2010 ; 2010 >      
+      
     }
-
+    
   }
 
   {
@@ -71,16 +79,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanliterature.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-     au < released ; American Literature Volume 77 ; 77 >
-     au < released ; American Literature Volume 78 ; 78 >
-     au < released ; American Literature Volume 79 ; 79 >
+      au < released ; American Literature Volume 77 ; 77 >
+      au < released ; American Literature Volume 78 ; 78 >
+      au < released ; American Literature Volume 79 ; 79 >      
+      au < wanted ; American Literature Volume 80 ; 80 >
+      au < wanted ; American Literature Volume 81 ; 81 >
+      au < wanted ; American Literature Volume 82 ; 82 >
     
     }
-
+    
   }
   
   {
@@ -109,16 +120,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://americanspeech.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-     au < released ; American Speech Volume 80 ; 80 >
-     au < released ; American Speech Volume 81 ; 81 >
-     au < released ; American Speech Volume 82 ; 82 >
+      au < HighWireStrVolPlugin ; released ; American Speech Volume 80 ; 80 >
+      au < HighWireStrVolPlugin ; released ; American Speech Volume 81 ; 81 >
+      au < HighWireStrVolPlugin ; released ; American Speech Volume 82 ; 82 >
+      au < HighWirePressPlugin ; wanted ; American Speech Volume 83 ; 83 >
+      au < HighWirePressPlugin ; wanted ; American Speech Volume 84 ; 84 >
+      au < HighWirePressPlugin ; wanted ; American Speech Volume 85 ; 85 >
     
     }
-
+    
   }
   
   {
@@ -147,16 +161,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://boundary2.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; boundary 2 Volume 32 ; 32 >
-      au < released ; boundary 2 Volume 33 ; 33 >
-      au < released ; boundary 2 Volume 34 ; 34 >
+      au < HighWireStrVolPlugin ; released ; boundary 2 Volume 32 ; 32 >
+      au < HighWireStrVolPlugin ; released ; boundary 2 Volume 33 ; 33 >
+      au < HighWireStrVolPlugin ; released ; boundary 2 Volume 34 ; 34 >      
+      au < HighWirePressPlugin ; wanted ; boundary 2 Volume 35 ; 35 >
+      au < HighWirePressPlugin ; wanted ; boundary 2 Volume 36 ; 36 >
+      au < HighWirePressPlugin ; wanted ; boundary 2 Volume 37 ; 37 >
       
     }
-
+    
   }
 
   {
@@ -184,16 +201,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cameraobscura.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
-      au < released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >
+      au < HighWireStrVolPlugin ; released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 20 ; 20 >
+      au < HighWireStrVolPlugin ; released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 21 ; 21 >
+      au < HighWireStrVolPlugin ; released ; Camera Obscura: Feminism, Culture, and Media Studies Volume 22 ; 22 >      
+      au < HighWirePressPlugin ; wanted ; Camera Obscura: Feminism, Culture, and Media Studies Volume 23 ; 23 >
+      au < HighWirePressPlugin ; wanted ; Camera Obscura: Feminism, Culture, and Media Studies Volume 24 ; 24 >
+      au < HighWirePressPlugin ; wanted ; Camera Obscura: Feminism, Culture, and Media Studies Volume 25 ; 25 >
       
     }
-
+    
   }
 
   {
@@ -226,16 +246,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://cssaame.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
-      au < released ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >
+      au < HighWireStrVolPlugin ; released ; Comparative Studies of South Asia, Africa and the Middle East Volume 25 ; 25 >
+      au < HighWireStrVolPlugin ; released ; Comparative Studies of South Asia, Africa and the Middle East Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; released ; Comparative Studies of South Asia, Africa and the Middle East Volume 27 ; 27 >      
+      au < HighWirePressPlugin ; wanted ; Comparative Studies of South Asia, Africa and the Middle East Volume 28 ; 28 >
+      au < HighWirePressPlugin ; wanted ; Comparative Studies of South Asia, Africa and the Middle East Volume 29 ; 29 >
+      au < HighWirePressPlugin ; wanted ; Comparative Studies of South Asia, Africa and the Middle East Volume 30 ; 30 >
       
     }
-
+    
   }
 
   {
@@ -263,15 +286,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://differences.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
-      au < released ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; released ; differences: A Journal of Feminist Cultural Studies Volume 16 ; 16 >
+      au < HighWireStrVolPlugin ; released ; differences: A Journal of Feminist Cultural Studies Volume 17 ; 17 >      
+      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 18 ; 18 >
+      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 19 ; 19 >
+      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 20 ; 20 >
+      au < HighWirePressPlugin ; wanted ; differences: A Journal of Feminist Cultural Studies Volume 21 ; 21 >
       
     }
-
+    
   }
  
   {
@@ -309,16 +336,19 @@
 
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ecl.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Eighteenth-Century Life Volume 29 ; 29 >
-      au < released ; Eighteenth-Century Life Volume 30 ; 30 >
-      au < released ; Eighteenth-Century Life Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; released ; Eighteenth-Century Life Volume 29 ; 29 >
+      au < HighWireStrVolPlugin ; released ; Eighteenth-Century Life Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; released ; Eighteenth-Century Life Volume 31 ; 31 >      
+      au < HighWirePressPlugin ; wanted ; Eighteenth-Century Life Volume 32 ; 32 >
+      au < HighWirePressPlugin ; wanted ; Eighteenth-Century Life Volume 33 ; 33 >
+      au < HighWirePressPlugin ; wanted ; Eighteenth-Century Life Volume 34 ; 34 >
 
     }
-
+    
   }
 
   {
@@ -346,16 +376,20 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ethnohistory.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
      au < released ; Ethnohistory Volume 52 ; 52 >
      au < released ; Ethnohistory Volume 53 ; 53 >
-     au < released ; Ethnohistory Volume 54 ; 54 >
+     au < released ; Ethnohistory Volume 54 ; 54 >      
+     au < wanted ; Ethnohistory Volume 55 ; 55 >
+     au < wanted ; Ethnohistory Volume 56 ; 56 >
+     au < wanted ; Ethnohistory Volume 57 ; 57 >
+     au < wanted ; Ethnohistory Volume 58 ; 58 >
     
     }
-
+    
   }
 
   {
@@ -383,16 +417,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://fhs.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
      au < released ; French Historical Studies Volume 28 ; 28 >
      au < released ; French Historical Studies Volume 29 ; 29 >
-     au < released ; French Historical Studies Volume 30 ; 30 >
+     au < released ; French Historical Studies Volume 30 ; 30 >      
+     au < wanted ; French Historical Studies Volume 31 ; 31 >
+     au < wanted ; French Historical Studies Volume 32 ; 32 >
+     au < wanted ; French Historical Studies Volume 33 ; 33 >
     
     }
-
+    
   }
 
   {
@@ -427,15 +464,19 @@
 
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://glq.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
-      au < released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >
+      au < HighWireStrVolPlugin ; released ; GLQ: A Journal of Lesbian and Gay Studies Volume 12 ; 12 >
+      au < HighWireStrVolPlugin ; released ; GLQ: A Journal of Lesbian and Gay Studies Volume 13 ; 13 >      
+      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 14 ; 14 >
+      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 15 ; 15 >
+      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 16 ; 16 >
+      au < HighWirePressPlugin ; wanted ; GLQ: A Journal of Lesbian and Gay Studies Volume 17 ; 17 >
 
     }
-
+    
   }
 
   {
@@ -463,16 +504,20 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hahr.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
      au < released ; Hispanic American Historical Review Volume 85 ; 85 >
      au < released ; Hispanic American Historical Review Volume 86 ; 86 >
-     au < released ; Hispanic American Historical Review Volume 87 ; 87 >
+     au < released ; Hispanic American Historical Review Volume 87 ; 87 >      
+     au < wanted ; Hispanic American Historical Review Volume 88 ; 88 >
+     au < wanted ; Hispanic American Historical Review Volume 89 ; 89 >
+     au < wanted ; Hispanic American Historical Review Volume 90 ; 90 >
+     au < wanted ; Hispanic American Historical Review Volume 91 ; 91 >
     
     }
-
+    
   }
 
   {
@@ -500,16 +545,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://hope.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
      au < released ; History of Political Economy Volume 37 ; 37 >
      au < released ; History of Political Economy Volume 38 ; 38 >
-     au < released ; History of Political Economy Volume 39 ; 39 >
+     au < released ; History of Political Economy Volume 39 ; 39 >      
+     au < wanted ; History of Political Economy Volume 40 ; 40 >
+     au < wanted ; History of Political Economy Volume 41 ; 41 >
+     au < wanted ; History of Political Economy Volume 42 ; 42 >
     
     }
-
+    
   }
 
   {
@@ -537,16 +585,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jhppl.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
-      au < released ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
-      au < released ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >
+      au < HighWireStrVolPlugin ; released ; Journal of Health Politics, Policy and Law Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; released ; Journal of Health Politics, Policy and Law Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; released ; Journal of Health Politics, Policy and Law Volume 32 ; 32 >      
+      au < HighWirePressPlugin ; wanted ; Journal of Health Politics, Policy and Law Volume 33 ; 33 >
+      au < HighWirePressPlugin ; wanted ; Journal of Health Politics, Policy and Law Volume 34 ; 34 >
+      au < HighWirePressPlugin ; wanted ; Journal of Health Politics, Policy and Law Volume 35 ; 35 >
     
     }
-
+    
   }
 
   {
@@ -574,16 +625,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://jmems.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
-      au < released ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
-      au < released ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >
+      au < HighWireStrVolPlugin ; released ; Journal of Medieval and Early Modern Studies Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; released ; Journal of Medieval and Early Modern Studies Volume 36 ; 36 >
+      au < HighWireStrVolPlugin ; released ; Journal of Medieval and Early Modern Studies Volume 37 ; 37 >      
+      au < HighWirePressPlugin ; wanted ; Journal of Medieval and Early Modern Studies Volume 38 ; 38 >
+      au < HighWirePressPlugin ; wanted ; Journal of Medieval and Early Modern Studies Volume 39 ; 39 >
+      au < HighWirePressPlugin ; wanted ; Journal of Medieval and Early Modern Studies Volume 40 ; 40 >
     
     }
-
+    
   }
 
   {
@@ -595,16 +649,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://labor.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
-      au < released ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
-      au < released ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
+      au < HighWireStrVolPlugin ; released ; Labor: Studies in Working-Class History of the Americas Volume 2 ; 2 >
+      au < HighWireStrVolPlugin ; released ; Labor: Studies in Working-Class History of the Americas Volume 3 ; 3 >
+      au < HighWireStrVolPlugin ; released ; Labor: Studies in Working-Class History of the Americas Volume 4 ; 4 >
+      au < HighWirePressPlugin ; wanted ; Labor: Studies in Working-Class History of the Americas Volume 5 ; 5 >
+      au < HighWirePressPlugin ; wanted ; Labor: Studies in Working-Class History of the Americas Volume 6 ; 6 >
+      au < HighWirePressPlugin ; wanted ; Labor: Studies in Working-Class History of the Americas Volume 7 ; 7 >
     
     }
-
+    
   }
 
   {
@@ -638,13 +695,16 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mq.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Mediterranean Quarterly Volume 16 ; 16 >
-      au < released ; Mediterranean Quarterly Volume 17 ; 17 >
-      au < released ; Mediterranean Quarterly Volume 18 ; 18 >
+      au < HighWireStrVolPlugin ; released ; Mediterranean Quarterly Volume 16 ; 16 >
+      au < HighWireStrVolPlugin ; released ; Mediterranean Quarterly Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; released ; Mediterranean Quarterly Volume 18 ; 18 >      
+      au < HighWirePressPlugin ; wanted ; Mediterranean Quarterly Volume 19 ; 19 >
+      au < HighWirePressPlugin ; wanted ; Mediterranean Quarterly Volume 20 ; 20 >
+      au < HighWirePressPlugin ; wanted ; Mediterranean Quarterly Volume 21 ; 21 >
 
     }
     
@@ -662,7 +722,7 @@
     
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://minnesotareview.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
       au < exists ; The Minnesota Review Volume 2005 ; 2005 >
       au < exists ; The Minnesota Review Volume 2006 ; 2006 >
@@ -700,16 +760,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://mlq.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
-      au < released ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
-      au < released ; MLQ: Modern Language Quarterly Volume 68 ; 68 >
+      au < HighWireStrVolPlugin ; released ; MLQ: Modern Language Quarterly Volume 66 ; 66 >
+      au < HighWireStrVolPlugin ; released ; MLQ: Modern Language Quarterly Volume 67 ; 67 >
+      au < HighWireStrVolPlugin ; released ; MLQ: Modern Language Quarterly Volume 68 ; 68 >      
+      au < HighWirePressPlugin ; wanted ; MLQ: Modern Language Quarterly Volume 69 ; 69 >
+      au < HighWirePressPlugin ; wanted ; MLQ: Modern Language Quarterly Volume 70 ; 70 >
+      au < HighWirePressPlugin ; wanted ; MLQ: Modern Language Quarterly Volume 71 ; 71 >
     
     }
-
+    
   }
 
   {
@@ -737,16 +800,19 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://poeticstoday.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Poetics Today Volume 26 ; 26 >
-      au < released ; Poetics Today Volume 27 ; 27 >
-      au < released ; Poetics Today Volume 28 ; 28 >
+      au < HighWireStrVolPlugin ; released ; Poetics Today Volume 26 ; 26 >
+      au < HighWireStrVolPlugin ; released ; Poetics Today Volume 27 ; 27 >
+      au < HighWireStrVolPlugin ; released ; Poetics Today Volume 28 ; 28 >      
+      au < HighWirePressPlugin ; wanted ; Poetics Today Volume 29 ; 29 >
+      au < HighWirePressPlugin ; wanted ; Poetics Today Volume 30 ; 30 >
+      au < HighWirePressPlugin ; wanted ; Poetics Today Volume 31 ; 31 >
     
     }
-
+    
   }
 
   {
@@ -780,13 +846,16 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://positions.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; positions: east asia cultures critique Volume 13 ; 13 >
-      au < released ; positions: east asia cultures critique Volume 14 ; 14 >
-      au < released ; positions: east asia cultures critique Volume 15 ; 15 >
+      au < HighWireStrVolPlugin ; released ; positions: east asia cultures critique Volume 13 ; 13 >
+      au < HighWireStrVolPlugin ; released ; positions: east asia cultures critique Volume 14 ; 14 >
+      au < HighWireStrVolPlugin ; released ; positions: east asia cultures critique Volume 15 ; 15 >
+      au < HighWirePressPlugin ; wanted ; positions: east asia cultures critique Volume 16 ; 16 >
+      au < HighWirePressPlugin ; wanted ; positions: east asia cultures critique Volume 17 ; 17 >
+      au < HighWirePressPlugin ; wanted ; positions: east asia cultures critique Volume 18 ; 18 >
 
     }
     
@@ -799,21 +868,21 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://pads.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < manifest ; Publication of the American Dialect Society Volume 84 ; 84 >
-      au < manifest ; Publication of the American Dialect Society Volume 85 ; 85 >
-      au < manifest ; Publication of the American Dialect Society Volume 86 ; 86 >
-      au < manifest ; Publication of the American Dialect Society Volume 87 ; 87 >
-      au < manifest ; Publication of the American Dialect Society Volume 88 ; 88 >
-      au < manifest ; Publication of the American Dialect Society Volume 89 ; 89 >
-      au < manifest ; Publication of the American Dialect Society Volume 90 ; 90 >
-      au < manifest ; Publication of the American Dialect Society Volume 91 ; 91 >
-      au < manifest ; Publication of the American Dialect Society Volume 92 ; 92 >
-      au < manifest ; Publication of the American Dialect Society Volume 93 ; 93 >
-      au < manifest ; Publication of the American Dialect Society Volume 94 ; 94 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 84 ; 84 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 85 ; 85 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 86 ; 86 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 87 ; 87 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 88 ; 88 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 89 ; 89 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 90 ; 90 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 91 ; 91 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 92 ; 92 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 93 ; 93 >
+      au < HighWirePressPlugin ; manifest ; Publication of the American Dialect Society Volume 94 ; 94 >
 
     }
   
@@ -844,13 +913,16 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://publicculture.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Public Culture Volume 17 ; 17 >
-      au < released ; Public Culture Volume 18 ; 18 >
-      au < released ; Public Culture Volume 19 ; 19 >
+      au < HighWireStrVolPlugin ; released ; Public Culture Volume 17 ; 17 >
+      au < HighWireStrVolPlugin ; released ; Public Culture Volume 18 ; 18 >
+      au < HighWireStrVolPlugin ; released ; Public Culture Volume 19 ; 19 >
+      au < HighWirePressPlugin ; wanted ; Public Culture Volume 20 ; 20 >
+      au < HighWirePressPlugin ; wanted ; Public Culture Volume 21 ; 21 >
+      au < HighWirePressPlugin ; wanted ; Public Culture Volume 22 ; 22 >
     
     }
   
@@ -887,13 +959,17 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://rhr.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Radical History Review 2005 ; 2005 >
-      au < released ; Radical History Review 2006 ; 2006 >
-      au < released ; Radical History Review 2007 ; 2007 >
+      au < HighWireStrVolPlugin ; released ; Radical History Review 2005 ; 2005 >
+      au < HighWireStrVolPlugin ; released ; Radical History Review 2006 ; 2006 >
+      au < HighWireStrVolPlugin ; released ; Radical History Review 2007 ; 2007 >
+      au < HighWirePressPlugin ; manifest ; Radical History Review 2007 ; 2008 >
+      au < HighWirePressPlugin ; manifest ; Radical History Review 2009 ; 2009 >
+      au < HighWirePressPlugin ; manifest ; Radical History Review 2010 ; 2010 >
+      au < HighWirePressPlugin ; manifest ; Radical History Review 2011 ; 2011 >
     
     }
   
@@ -931,13 +1007,16 @@
 
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://ssh.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Social Science History Volume 29 ; 29 >
-      au < released ; Social Science History Volume 30 ; 30 >
-      au < released ; Social Science History Volume 31 ; 31 >
+      au < HighWireStrVolPlugin ; released ; Social Science History Volume 29 ; 29 >
+      au < HighWireStrVolPlugin ; released ; Social Science History Volume 30 ; 30 >
+      au < HighWireStrVolPlugin ; released ; Social Science History Volume 31 ; 31 >
+      au < HighWirePressPlugin ; manifest ; Social Science History Volume 32 ; 32 >
+      au < HighWirePressPlugin ; manifest ; Social Science History Volume 33 ; 33 >
+      au < HighWirePressPlugin ; manifest ; Social Science History Volume 34 ; 34 >
     
     }
   
@@ -968,12 +1047,16 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://socialtext.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Social Text Volume 23 ; 23 >
-      au < released ; Social Text Volume 24 ; 24 >
+      au < HighWireStrVolPlugin ; released ; Social Text Volume 23 ; 23 >
+      au < HighWireStrVolPlugin ; released ; Social Text Volume 24 ; 24 >
+      au < HighWirePressPlugin ; manifest ; Social Text Volume 25 ; 25 >
+      au < HighWirePressPlugin ; manifest ; Social Text Volume 26 ; 26 >
+      au < HighWirePressPlugin ; manifest ; Social Text Volume 27 ; 27 >
+      au < HighWirePressPlugin ; manifest ; Social Text Volume 28 ; 28 >
     
     }
   
@@ -1004,13 +1087,17 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://saq.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; The South Atlantic Quarterly Volume 104 ; 104 >
-      au < released ; The South Atlantic Quarterly Volume 105 ; 105 >
-      au < released ; The South Atlantic Quarterly Volume 106 ; 106 >
+      au < HighWireStrVolPlugin ; released ; The South Atlantic Quarterly Volume 104 ; 104 >
+      au < HighWireStrVolPlugin ; released ; The South Atlantic Quarterly Volume 105 ; 105 >
+      au < HighWireStrVolPlugin ; released ; The South Atlantic Quarterly Volume 106 ; 106 >
+      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 107 ; 107 >
+      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 108 ; 108 >
+      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 109 ; 109 >
+      au < HighWirePressPlugin ; manifest ; The South Atlantic Quarterly Volume 110 ; 110 >
     
     }
   
@@ -1041,13 +1128,16 @@
     
     {
     
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      pluginPrefix = org.lockss.plugin.highwire.
       param[base_url] = http://theater.dukejournals.org/
-      implicit < status ; name ; param[volume_name] >  
+      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; Theater Volume 35 ; 35 >
-      au < released ; Theater Volume 36 ; 36 >
-      au < released ; Theater Volume 37 ; 37 >
+      au < HighWireStrVolPlugin ; released ; Theater Volume 35 ; 35 >
+      au < HighWireStrVolPlugin ; released ; Theater Volume 36 ; 36 >
+      au < HighWireStrVolPlugin ; released ; Theater Volume 37 ; 37 >
+      au < HighWirePressPlugin ; manifest ; Theater Volume 38 ; 38 >
+      au < HighWirePressPlugin ; manifest ; Theater Volume 39 ; 39 >
+      au < HighWirePressPlugin ; manifest ; Theater Volume 40 ; 40 >
     
     }
   
