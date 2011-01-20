@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.265 2011-01-06 18:54:49 neilmayo Exp $
+ $Id: build.xml,v 1.266 2011-01-20 08:35:18 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -109,6 +109,9 @@ Args:
   <property name="author" value="false" />
   <property name="use" value="true" />
   <property name="version" value="false" />
+  <property name="noqualifier" value="java.*" />
+<!--   <property name="noqualifier" -->
+<!-- 	    value="java.lang:java.io:java.net:java.util:java.text" /> -->
 
   <!--  Options for jikes, have no effect otherwise -->
   <property name="build.compiler.emacs" value="true" />
@@ -1473,6 +1476,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
              author="${author}"
              version="${version}"
 	     access="protected"
+             noqualifier="${noqualifier}"
              windowtitle="LOCKSS API"
              doctitle="LOCKSS"
              verbose="false"
@@ -1971,6 +1975,7 @@ Test results in ${test.results}
    description="Load xml config files to ensure well-formed" >
     <fileset id="xml.files.filesetid" dir="${basedir}">
       <include name="test/frameworks/*.xml"/>
+      <include name="test/frameworks/tdbxml/**/*.xml"/>
     </fileset>
     <!-- convert the list of files to a string -->
     <pathconvert refid="xml.files.filesetid"
