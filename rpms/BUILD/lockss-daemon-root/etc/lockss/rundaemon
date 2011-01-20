@@ -19,8 +19,96 @@ fi
 if [ "X$1" = Xwait ]; then
     WAIT=Y
 fi
+if [ "X${2}" != X ]; then
+    FLAG_FILE=${2}
+fi
 set_lockss_user ${USER}
 set_variables ${USER}
+# XXX watchdog monitoring disabled for 1.48
+#if [ "${WATCHDOG}X" = X ]
+#then
+#    WATCHDOG=/tmp/lockss.${USER}.watchdog
+#fi
+#if [ "${WATCHDOG_SECS}X" = X ]
+#then
+#    WATCHDOG_SECS=60
+#fi
+# Is a daemon running as ${USER}?
+if [ "${WATCHDOG}X" != X -a -f "${WATCHDOG}" ]
+then
+    # A watchdog file exists - is it being updated?
+    WATCHTIMER=`mktemp /tmp/watchtimer.${USER}.XXXXXX`
+    touch ${WATCHTIMER}
+    COUNT=2
+    while [ ${WATCHDOG} -ot ${WATCHTIMER} ]
+    do
+        if [ ${COUNT} -le 0 ]
+        then
+            # No watchdog updates - kill any daemons
+	    if [ -f ${PID_FILE} ]
+            then
+                echo "Kill from ${PID_FILE}" >>${LOG_FILE}
+                kill -9 `cat ${PID_FILE}`
+            fi
+            sleep 3
+            PS=`ps -u ${USER} | grep java | sed 's/^ *\([0-9][0-9]*\)[ 	]*.*/\1/'`
+            for PID in ${PS}
+            do
+                echo "Kill ${PID} from ps" >>${LOG_FILE}
+                kill -9 ${PID}
+            done
+            rm -f ${WATCHDOG} ${WATCHTIMER}
+            echo "Exiting rundaemon" >>${LOG_FILE}
+            exit
+        fi
+        COUNT=`expr ${COUNT} - 1`
+        sleep `expr ${WATCHDOG_SECS} + 10`
+    done
+    rm -f ${WATCHTIMER}
+    # Daemon is updating ${WATCHDOG}
+    if [ "${FLAG_FILE}X" != X ]
+    then
+        touch ${FLAG_FILE} # signal startdaemon to die
+        echo "Touched ${FLAG_FILE} - exiting" >>${LOG_FILE}
+    else
+        echo "No FLAG_FILE" >>${LOG_FILE}
+    fi
+    exit
+else
+    # No watchdog file - is there a daemon?
+    if [ -f ${PID_FILE} ]
+    then
+        # There is a PID file - if its daemon is running that's OK
+        DPID=`cat ${PID_FILE}`
+        echo "Daemon at ${DPID}" >>${LOG_FILE}
+    fi
+    PS=`ps -u ${USER} | grep java | sed 's/^ *\([0-9][0-9]*\)[    ]*.*/\1/'`
+    if [ "${DPID}X" != X ]
+    then
+        PS2=`echo ${PS} | sed "s/${DPID}//"`
+    fi
+    for PID in ${PS2}
+    do
+        # ${PID} is a daemon but it isn't in the PID file
+        echo "Killing ${PID} from PS2" >>${LOG_FILE}
+        kill -9 ${PID}
+    done
+    if [ "X${DPID}" != X ]
+    then
+        if echo ${PS} | grep ${DPID} >/dev/null 2>&1
+        then
+            # ${DPID} is a daemon, so don't start another
+            echo "Touching ${FLAG_FILE} and exiting" >>${LOG_FILE}
+            if [ "${FLAG_FILE}X" != X ]
+            then
+                touch ${FLAG_FILE} # signal startdaemon to die
+            else
+                echo "No FLAG_FILE" >>${LOG_FILE}
+            fi
+            exit
+        fi
+    fi
+fi
 DAEMON_COUNT=0
 for A in ${LOCKSS_USER}
 do
@@ -127,6 +215,8 @@ org.lockss.platform.ui.username=${LOCKSS_ADMIN_USER}
 org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
 org.lockss.proxy.port=${LOCKSS_PROXY_PORT}
 org.lockss.ui.port=${LOCKSS_UI_PORT}
+org.lockss.platform.watchdog.file=${WATCHDOG}
+org.lockss.platform.watchdog.interval=${WATCHDOG_SECS}s
 org.lockss.platform.propsProxy=${LOCKSS_PROPS_PROXY}
 org.lockss.config.serverAuthKeystore=${LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE}
 EOF
@@ -136,4 +226,8 @@ ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLAS
 echo $! >${PID_FILE}
 if [ X${WAIT} != X ]; then
     wait `cat ${PID_FILE}`
+fi
+if [ "${WATCHDOG}X" != X ]
+then
+    rm -f ${WATCHDOG}
 fi

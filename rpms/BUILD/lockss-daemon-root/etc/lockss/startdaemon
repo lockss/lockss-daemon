@@ -2,7 +2,7 @@
 # Script run as root from /etc/init.d/lockss to start the daemon
 # as the specific user provided as the argument. Although this
 # script is common to Linux and Solaris it runs under bash on both.
-# After any change the this file it must be tested on both Linux
+# After any change to this file it must be tested on both Linux
 # and Solaris.
 
 is_secure() {
@@ -63,6 +63,12 @@ if [ "X${LOG_FILE}" = X -o ! -f ${LOG_FILE} ]; then
     echo "No log file - can't start $1"
     exit 1
 fi
+# XXX for 1.48, disable updatedb
+ed /etc/cron.daily/mlocate.cron >/dev/null 2>&1 <<Funky-EOF
+g/^\([^#]\)/s//#\1/
+w
+q
+Funky-EOF
 touch ${KEEP_GOING}
 chown $1 ${KEEP_GOING}
 if [ -x ${LOCKSS_HOME}/etc/lockss/runssl.$1 ]; then
@@ -90,8 +96,10 @@ while [ -f ${KEEP_GOING} ]; do
         fi
     fi
     FLAG_FILE=`mktemp /tmp/lockss.flag.XXXXX`
+    chown $1 ${FLAG_FILE}
+    export FLAG_FILE
     sleep 60 && rm -f ${FLAG_FILE} &
-    COMMAND="ulimit -S -c 0 >/dev/null 2>&1 ; ${LOCKSS_HOME}/etc/lockss/rundaemon wait"
+    COMMAND="ulimit -S -c 0 >/dev/null 2>&1 ; ${LOCKSS_HOME}/etc/lockss/rundaemon wait ${FLAG_FILE}"
     case `uname -s` in
     Linux)
         runuser -s /bin/bash - $1 -c "${COMMAND}"
@@ -102,7 +110,8 @@ while [ -f ${KEEP_GOING} ]; do
     esac
     EXIT_CODE=$?
     echo "stopped with status ${EXIT_CODE} at `date`." >>${LOG_FILE}
-    if [ -s ${FLAG_FILE} ]; then
+    if [ -e ${FLAG_FILE} ]; then
+	rm -f ${FLAG_FILE}
         exit 1
     fi
     if [ -f ${KEEP_GOING} ]; then
