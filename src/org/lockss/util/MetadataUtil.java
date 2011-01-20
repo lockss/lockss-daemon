@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.4 2011-01-18 15:39:37 neilmayo Exp $
+ * $Id: MetadataUtil.java,v 1.5 2011-01-20 08:38:40 tlipkis Exp $
  */
 
 /*
@@ -39,12 +39,13 @@ import java.net.URLDecoder;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.LocaleUtils;
 
 import org.lockss.config.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
-import org.lockss.extractor.ArticleMetadata;
 import org.lockss.plugin.*;
 import static org.lockss.extractor.MetadataField.*;
 
@@ -170,18 +171,111 @@ public class MetadataUtil {
   //
   /////////////////////////////////////////////////////////////////
 
-  public static final String PARAM_DOIMAP =
-    Configuration.PREFIX + "metadata.doimap";
+  public static final String PREFIX = Configuration.PREFIX + "metadata.";
+
+
+  /** The default Locale in which dates, etc. in metadata should be
+   * interpreted, if the plugin doesn't otherwise specify one.  Value is
+   * string of the form <tt><i>ll_CC_VVV</i></tt>, where <tt><i>ll</i></tt>
+   * is the two letter langueage, <tt><i>CC</i></tt> is the optional two
+   * letter country and <tt><i>VVV</i></tt> is the option variant. */
+  public static final String PARAM_DEFAULT_LOCALE = PREFIX + "defaultLocale";
+  public static final Locale DEFAULT_DEFAULT_LOCALE = Locale.US;
+
+  public static final String PARAM_DOIMAP = PREFIX + "doimap";
   public static final String DEFAULT_DOIMAP = "doi";
-  public static final String PARAM_DOI_ENABLE =
-    Configuration.PREFIX + "metadata.doi_enable";
+  public static final String PARAM_DOI_ENABLE = PREFIX + "doi_enable";
   public static final Boolean DEFAULT_DOI_ENABLE = false;
-  public static final String PARAM_OPENURLMAP =
-    Configuration.PREFIX + "metadata.openurlmap";
+  public static final String PARAM_OPENURLMAP = PREFIX + "openurlmap";
   public static final String DEFAULT_OPENURLMAP = "openurl";
-  public static final String PARAM_OPENURL_ENABLE =
-    Configuration.PREFIX + "metadata.openurl_enable";
+  public static final String PARAM_OPENURL_ENABLE = PREFIX + "openurl_enable";
   public static final Boolean DEFAULT_OPENURL_ENABLE = false;
+
+  private static Locale defaultLocale = DEFAULT_DEFAULT_LOCALE;
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      setDefaultMetadataLocale(config);
+    }
+  }
+
+  static void setDefaultMetadataLocale(Configuration config) {
+    String lstr = config.get(PARAM_DEFAULT_LOCALE, "");
+    lstr = lstr.trim();
+    if (StringUtil.isNullString(lstr)) {
+      defaultLocale = DEFAULT_DEFAULT_LOCALE;
+    }
+    try {
+      Locale loc = LocaleUtils.toLocale(lstr);
+      Locale goodLoc = findClosestAvailableLocale(loc);
+      if (goodLoc != null) {
+	if (goodLoc.equals(loc)) {
+	  log.debug("Requested Locale: " + loc +
+		    " not found, using closest match: " + goodLoc);
+	}
+	defaultLocale = goodLoc;
+      } else {
+	log.error("Unknown Locale: " + loc +
+		  ", using default locale: " + DEFAULT_DEFAULT_LOCALE);
+	defaultLocale = DEFAULT_DEFAULT_LOCALE;
+      }
+    } catch (IllegalArgumentException e) {
+      log.error("Illegal Locale spec: " + lstr + ", " + e.getMessage());
+      defaultLocale = DEFAULT_DEFAULT_LOCALE;
+    }
+  }
+
+  /** Return the closest matching available Locale, or null if none.
+   * (Returns the first match on all three components, else the first match
+   * or two, else the first match on one, else null.)
+   * @param targetLocale the target Locale
+   * @return the closest matching Locale or null
+   */
+  public static Locale findClosestAvailableLocale(Locale targetLocale) {
+    return findClosestLocale(targetLocale,
+			     (List<Locale>)LocaleUtils.availableLocaleList());
+  }
+
+  /** Return the closest matching Locale from the list, or null if none.
+   * (Returns the first match on all three components, else the first match
+   * or two, else the first match on one, else null.)
+   * @param targetLocale the target Locale
+   * @param locales the list of Locales in which to search
+   * @return the closest matching Locale or null
+   */
+  public static Locale findClosestLocale(Locale targetLocale,
+					 List<Locale> locales) {
+    Locale match2 = null;
+    Locale match1 = null;
+
+    for (Locale locale : locales) {
+      // Exact match?
+      if (targetLocale.equals(locale)) {
+	return locale;
+      }
+      // Save the first match on 2 components
+      if (match2 == null &&
+	  targetLocale.getLanguage().equals(locale.getLanguage()) &&
+	  targetLocale.getCountry().equals(locale.getCountry())) {
+	match2 = locale;
+      }
+      // Save the first match on 1 component
+      if (match2 == null && match1 == null &&
+	  targetLocale.getLanguage().equals(locale.getLanguage())) {
+	match1 = locale;
+      }
+    }
+    return (match2 != null) ? match2 : ((match1 != null) ? match1 : null);
+  }
+
+  /** Return the default Locale to use when interpreting metadata fields */
+  public static Locale getDefaultLocale() {
+    return defaultLocale;
+  }
 
   // XXX maps should persist across daemon restart
   // XXX should lookup DOI prefix to get map in which to look up suffix

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.2 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: TestMetadataUtil.java,v 1.3 2011-01-20 08:38:40 tlipkis Exp $
  */
 
 /*
@@ -32,10 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import java.util.*;
 import java.net.URLDecoder;
+import org.apache.commons.lang.LocaleUtils;
 
-import org.lockss.test.LockssTestCase;
-
+import org.lockss.test.*;
 
 
 /**
@@ -46,6 +47,72 @@ import org.lockss.test.LockssTestCase;
  * To change this template use File | Settings | File Templates.
  */
 public class TestMetadataUtil extends LockssTestCase {
+
+  void assertLocale(String lang, Locale l) {
+    assertEquals("Language", lang, l.getLanguage());
+  }
+
+  void assertLocale(String lang, String country, Locale l) {
+    assertEquals("Language", lang, l.getLanguage());
+    assertEquals("Country", country, l.getCountry());
+  }
+
+  void assertLocale(String lang, String country, String variant, Locale l) {
+    assertEquals("Language", lang, l.getLanguage());
+    assertEquals("Country", country, l.getCountry());
+    assertEquals("Variant", variant, l.getVariant());
+  }
+
+  static List<Locale> testLocales =
+    ListUtil.list(new Locale("bb"),
+		  new Locale("aa"),
+		  new Locale("aa", "DD", "Var2"),
+		  new Locale("aa", "DD"),
+		  new Locale("aa", "DD", "Var1"));
+		  
+
+  String findClosestLocale(String str) {
+    Locale l =  MetadataUtil.findClosestLocale(LocaleUtils.toLocale(str),
+					       testLocales);
+    return l != null ? l.toString() : null;
+  }
+
+  String findClosestAvailableLocale(String str) {
+    Locale l =
+      MetadataUtil.findClosestAvailableLocale(LocaleUtils.toLocale(str));
+    return l != null ? l.toString() : null;
+  }
+
+  public void testFindClosestLocale() {
+    assertEquals("aa_DD_Var2", findClosestLocale("aa_DD_Var2"));
+    assertEquals("aa_DD", findClosestLocale("aa_DD"));
+    assertEquals("aa", findClosestLocale("aa"));
+    assertEquals(null, findClosestLocale("xx"));
+    assertEquals(null, findClosestLocale("xx_DD"));
+    assertEquals("bb", findClosestLocale("bb_DD"));
+    assertEquals("bb", findClosestLocale("bb_DD_vvv"));
+    assertEquals("aa_DD_Var2", findClosestLocale("aa_DD_Var3"));
+    assertEquals("aa", findClosestLocale("aa_EE_Var3"));
+  }
+
+  // Java spec says Locale.US must exist; still not sure this will succeed
+  // in all environments
+  public void testFindClosestAvailableLocale() {
+    assertEquals("en", findClosestAvailableLocale("en"));
+    assertEquals("en", findClosestAvailableLocale("en_ZF"));
+    assertEquals("en_US", findClosestAvailableLocale("en_US"));
+  }
+
+  static Locale DEF_LOC = MetadataUtil.DEFAULT_DEFAULT_LOCALE;
+
+  public void testConfigDefaultLocale() {
+    assertEquals(DEF_LOC, MetadataUtil.getDefaultLocale());
+    ConfigurationUtil.setFromArgs(MetadataUtil.PARAM_DEFAULT_LOCALE, "fr_CA");
+    assertLocale("fr", "CA", MetadataUtil.getDefaultLocale());
+    ConfigurationUtil.setFromArgs(MetadataUtil.PARAM_DEFAULT_LOCALE, "");
+    assertEquals(DEF_LOC, MetadataUtil.getDefaultLocale());
+  }
+
 
   private String validISSNS [] = {
           "1144-875X",
@@ -117,9 +184,10 @@ public class TestMetadataUtil extends LockssTestCase {
     }
   }
 
-  public static void main(String[] args) {
-    TestMetadataUtil t = new TestMetadataUtil();
-    t.testISSN();
-    t.testDOI();
+  public void testFoo() {
+    for (Locale l : Locale.getAvailableLocales()) {
+      log.info("l: " + l);
+    }
   }
+
 }
