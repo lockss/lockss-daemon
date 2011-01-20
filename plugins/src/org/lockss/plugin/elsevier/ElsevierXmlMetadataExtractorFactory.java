@@ -1,5 +1,5 @@
 /*
- * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: ElsevierXmlMetadataExtractorFactory.java,v 1.4 2011-01-20 08:36:06 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.elsevier;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -52,11 +54,11 @@ public class ElsevierXmlMetadataExtractorFactory
     extends SimpleXmlMetadataExtractor {
     static Logger log = Logger.getLogger("ElsevierXmlMetadataExtractor");
 
-    private static final Map tagMap = new HashMap();
+    private static MultiMap tagMap = new MultiValueMap();
     static {
       // Elsevier doesn't prefix the DOI in dc.Identifier with doi:
-      tagMap.put("ce:doi", ListUtil.list(MetadataField.DC_FIELD_IDENTIFIER,
-					 MetadataField.FIELD_DOI));
+      tagMap.put("ce:doi", MetadataField.DC_FIELD_IDENTIFIER);
+      tagMap.put("ce:doi", MetadataField.FIELD_DOI);
     };
 
     public ElsevierXmlMetadataExtractor() {

@@ -1,5 +1,5 @@
 /*
- * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: SpringerXmlMetadataExtractorFactory.java,v 1.4 2011-01-20 08:36:05 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.springer;
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
+
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.extractor.*;
@@ -52,12 +55,12 @@ public class SpringerXmlMetadataExtractorFactory
   private static final String ISSUE_START = "IssueIDStart";
   private static final String ISSUE_END = "IssueIDEnd";
 
-  private static final Map tagMap = new HashMap();
+  private static MultiMap tagMap = new MultiValueMap();
   static {
-    tagMap.put("articledoi", ListUtil.list(MetadataField.DC_FIELD_IDENTIFIER,
-					   MetadataField.FIELD_DOI));
-    tagMap.put("JournalPrintISSN", MetadataField.KEY_ISSN);
-    tagMap.put("ArticleFirstPage", MetadataField.KEY_START_PAGE);
+    tagMap.put("articledoi", MetadataField.DC_FIELD_IDENTIFIER);
+    tagMap.put("articledoi", MetadataField.FIELD_DOI);
+    tagMap.put("JournalPrintISSN", MetadataField.FIELD_ISSN);
+    tagMap.put("ArticleFirstPage", MetadataField.FIELD_START_PAGE);
   };
 
   static List tags = ListUtil.list(VOLUME_START, VOLUME_END,

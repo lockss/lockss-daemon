@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.5 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.6 2011-01-20 08:36:05 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.highwire;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -54,10 +56,10 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
   }
 
   public static class HighWireHtmlMetadataExtractor
-    extends SimpleMetaTagMetadataExtractor {
+    extends SimpleHtmlMetaTagMetadataExtractor {
 
     // Map HighWire-specific HTML meta tag names to cooked metadata fields
-    private static Map tagMap = new HashMap();
+    private static MultiMap tagMap = new MultiValueMap();
     static {
       // HighWire doesn't prefix the DOI in dc.Identifier with doi:
       tagMap.put("dc.Identifier", MetadataField.FIELD_DOI);
@@ -72,7 +74,7 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
 		 new MetadataField(MetadataField.FIELD_AUTHOR) {
 		   // XXX Change to handle lists properly
 		   @Override
-		   public String validate(String value) {
+		   public String validate(ArticleMetadata am, String value) {
 		     if (value.contains(";")) {
 		       value = value.replaceAll(",", "");
 		       value = value.replaceAll(";", ",");

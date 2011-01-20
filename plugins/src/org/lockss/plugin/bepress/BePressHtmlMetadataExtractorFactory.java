@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.7 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.8 2011-01-20 08:36:06 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.bepress;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -55,17 +57,15 @@ public class BePressHtmlMetadataExtractorFactory
   }
 
   public static class BePressHtmlMetadataExtractor
-    extends SimpleMetaTagMetadataExtractor {
+    extends SimpleHtmlMetaTagMetadataExtractor {
 
     // Map BePress-specific HTML meta tag names to cooked metadata fields
-    private static Map tagMap = new HashMap();
+    private static MultiMap tagMap = new MultiValueMap();
     static {
-      tagMap.put("bepress_citation_doi",
-		 ListUtil.list(MetadataField.DC_FIELD_IDENTIFIER,
-			       MetadataField.FIELD_DOI));
-      tagMap.put("bepress_citation_date",
-		 ListUtil.list(MetadataField.DC_FIELD_DATE,
-			       MetadataField.FIELD_DATE));
+      tagMap.put("bepress_citation_doi", MetadataField.DC_FIELD_IDENTIFIER);
+      tagMap.put("bepress_citation_doi", MetadataField.FIELD_DOI);
+      tagMap.put("bepress_citation_date", MetadataField.DC_FIELD_DATE);
+      tagMap.put("bepress_citation_date", MetadataField.FIELD_DATE);
       tagMap.put("bepress_citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("bepress_citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("bepress_citation_firstpage", MetadataField.FIELD_START_PAGE);
@@ -73,7 +73,7 @@ public class BePressHtmlMetadataExtractorFactory
 		 new MetadataField(MetadataField.FIELD_AUTHOR) {
 		   // XXX Change to handle lists properly
 		   @Override
-		   public String validate(String value) {
+		   public String validate(ArticleMetadata am, String value) {
 		     if (value.contains(";")) {
 		       value = value.replaceAll(",", "");
 		       value = value.replaceAll(";", ",");
@@ -85,8 +85,8 @@ public class BePressHtmlMetadataExtractorFactory
     }
 
     /**
-     * Use SimpleMetaTagMetadataExtractor to extract raw metadata, map to
-     * cooked fields, then extract the ISSN by reading the file.
+     * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
+     * to cooked fields, then extract the ISSN by reading the file.
      */
     public ArticleMetadata extract(CachedUrl cu) throws IOException {
       ArticleMetadata am = super.extract(cu);

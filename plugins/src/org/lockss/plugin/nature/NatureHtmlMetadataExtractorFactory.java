@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.4 2011-01-20 08:36:05 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.plugin.nature;
 
 import java.io.*;
 import java.util.*;
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.map.MultiValueMap;
 
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -50,10 +52,10 @@ public class NatureHtmlMetadataExtractorFactory
   }
 
   public static class NatureHtmlMetadataExtractor
-    extends SimpleMetaTagMetadataExtractor {
+    extends SimpleHtmlMetaTagMetadataExtractor {
 
     // Map BePress-specific HTML meta tag names to cooked metadata fields
-    private static Map tagMap = new HashMap();
+    private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("dc.creator", MetadataField.DC_FIELD_CONTRIBUTOR);
       // <meta name="citation_volume" content="19" />

@@ -39,7 +39,7 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 		return new RoyalSocietyOfChemistryHtmlExtractor();
 	}	
 	
-	public static class RoyalSocietyOfChemistryHtmlExtractor extends SimpleMetaTagMetadataExtractor {		
+	public static class RoyalSocietyOfChemistryHtmlExtractor extends SimpleHtmlMetaTagMetadataExtractor {		
 		
 		private final String doiPrefix = "10.1039"; 
 		private String metaContent="";
