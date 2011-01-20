@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.6 2010-05-27 07:00:01 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.7 2011-01-20 08:36:42 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class MiscConfig {
 	  PluginUtil.setConfig(config, oldConfig, diffs);
 	  ServletUtil.setConfig(config, oldConfig, diffs);
 	  MimeTypeMap.setConfig(config, oldConfig, diffs);
+	  MetadataUtil.setConfig(config, oldConfig, diffs);
 	}
       };
   }
