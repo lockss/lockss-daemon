@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.14 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.15 2011-01-20 08:36:29 tlipkis Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
   String goodVolume = "13";
   String goodIssue = "4";
   String goodStartPage = "123";
-  String goodISSN = "1234-5678";
+  String goodISSN = "1234-5679";
   String goodDate = "4/1/2000";
   String goodAuthor = "Gandhi, Pankaj J.; Talia, Yogen H.; Murthy, Z.V.P.";
   String goodArticleTitle = "Spurious Results";

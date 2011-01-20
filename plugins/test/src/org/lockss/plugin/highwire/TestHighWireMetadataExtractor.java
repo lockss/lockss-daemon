@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.12 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.13 2011-01-20 08:36:29 tlipkis Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
   String goodVolume = "13";
   String goodIssue = "4";
   String goodStartPage = "123";
-  String goodISSN = "1234-5678";
+  String goodISSN = "1234-5679";
   String goodDate = "4/1/2000";
   String goodAuthor = "Regnard, Claud; Leslie, Paula; Crawford, Hannah; Matthews, Dorothy; Gibson, Lynn";
   String goodArticleTitle = "Spurious Results";
