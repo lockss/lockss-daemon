@@ -101,7 +101,7 @@ public class TestKbartTitle extends LockssTestCase {
   }
   
   private final String formatTestString(String s, String... strings) {
-   return String.format(s, strings); 
+    return String.format(s, (Object[])strings); 
   }
   
   /**
