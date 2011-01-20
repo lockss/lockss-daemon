@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleMetaTagMetadataExtractorFactory.java,v 1.3 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractorFactory.java,v 1.1 2011-01-20 08:38:16 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import org.lockss.daemon.*;
 import org.lockss.extractor.*;
 import org.lockss.plugin.*;
 
-public class SimpleMetaTagMetadataExtractorFactory
+public class SimpleHtmlMetaTagMetadataExtractorFactory
     implements FileMetadataExtractorFactory {
   /**
    * Create a MetadataExtractor
@@ -46,7 +46,7 @@ public class SimpleMetaTagMetadataExtractorFactory
       throws PluginException {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {
-      return new SimpleMetaTagMetadataExtractor();
+      return new SimpleHtmlMetaTagMetadataExtractor();
     }
     return null;
   }

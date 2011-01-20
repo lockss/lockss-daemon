@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleMetaTagMetadataExtractor.java,v 1.4 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.1 2011-01-20 08:38:16 tlipkis Exp $
  */
 
 /*
@@ -40,10 +40,10 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 
-public class TestSimpleMetaTagMetadataExtractor
+public class TestSimpleHtmlMetaTagMetadataExtractor
     extends FileMetadataExtractorTestCase {
 
-  public TestSimpleMetaTagMetadataExtractor() {
+  public TestSimpleHtmlMetaTagMetadataExtractor() {
   }
 
   public FileMetadataExtractorFactory getFactory() {
@@ -145,7 +145,7 @@ public class TestSimpleMetaTagMetadataExtractor
     }
     public FileMetadataExtractor createFileMetadataExtractor(String mimeType)
         throws PluginException {
-      return new SimpleMetaTagMetadataExtractor();
+      return new SimpleHtmlMetaTagMetadataExtractor();
     }
   }
 }

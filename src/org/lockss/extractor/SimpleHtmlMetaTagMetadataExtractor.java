@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleMetaTagMetadataExtractor.java,v 1.6 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.1 2011-01-20 08:38:16 tlipkis Exp $
  */
 
 /*
@@ -36,12 +36,12 @@ import java.io.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
-public class SimpleMetaTagMetadataExtractor
+public class SimpleHtmlMetaTagMetadataExtractor
   extends SimpleFileMetadataExtractor {
 
-  static Logger log = Logger.getLogger("SimpleMetaTagMetadataExtractor");
+  static Logger log = Logger.getLogger("SimpleHtmlMetaTagMetadataExtractor");
 
-  public SimpleMetaTagMetadataExtractor() {
+  public SimpleHtmlMetaTagMetadataExtractor() {
   }
 
   public ArticleMetadata extract(CachedUrl cu) throws IOException {
