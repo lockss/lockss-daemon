@@ -10270,29 +10270,28 @@
     >
 
     param[journal_issn] = 0938-7994
-    attr[where] = content1a
 
-    au < testing ; 1991 ; European Radiology Volume 1 ; 1 >
-    au < testing ; 1992 ; European Radiology Volume 2 ; 2 >
-    au < testing ; 1993 ; European Radiology Volume 3 ; 3 >
-    au < testing ; 1994 ; European Radiology Volume 4 ; 4 >
-    au < testing ; 1995 ; European Radiology Volume 5 ; 5 >
-    au < testing ; 1996 ; European Radiology Volume 6 ; 6 >
-    au < testing ; 1997 ; European Radiology Volume 7 ; 7 >
-    au < testing ; 1998 ; European Radiology Volume 8 ; 8 >
-    au < testing ; 1999 ; European Radiology Volume 9 ; 9 >
-    au < testing ; 2000 ; European Radiology Volume 10 ; 10 >
-    au < testing ; 2001 ; European Radiology Volume 11 ; 11 >
-    au < testing ; 2002 ; European Radiology Volume 12 ; 12 >
-    au < testing ; 2003 ; European Radiology Volume 13 ; 13 >
-    au < testing ; 2004 ; European Radiology Volume 14 ; 14 >
-    au < testing ; 2005 ; European Radiology Volume 15 ; 15 >
-    au < testing ; 2006 ; European Radiology Volume 16 ; 16 >
-    au < testing ; 2007 ; European Radiology Volume 17 ; 17 >
-    au < testing ; 2008 ; European Radiology Volume 18 ; 18 >
-    au < testing ; 2009 ; European Radiology Volume 19 ; 19 >
-    au < testing ; 2010 ; European Radiology Volume 20 ; 20 >
-    au < testing ; 2011 ; European Radiology Volume 21 ; 21 >
+    au < ready ; 1991 ; European Radiology Volume 1 ; 1 >
+    au < ready ; 1992 ; European Radiology Volume 2 ; 2 >
+    au < ready ; 1993 ; European Radiology Volume 3 ; 3 >
+    au < ready ; 1994 ; European Radiology Volume 4 ; 4 >
+    au < ready ; 1995 ; European Radiology Volume 5 ; 5 >
+    au < ready ; 1996 ; European Radiology Volume 6 ; 6 >
+    au < ready ; 1997 ; European Radiology Volume 7 ; 7 >
+    au < ready ; 1998 ; European Radiology Volume 8 ; 8 >
+    au < ready ; 1999 ; European Radiology Volume 9 ; 9 >
+    au < ready ; 2000 ; European Radiology Volume 10 ; 10 >
+    au < ready ; 2001 ; European Radiology Volume 11 ; 11 >
+    au < ready ; 2002 ; European Radiology Volume 12 ; 12 >
+    au < ready ; 2003 ; European Radiology Volume 13 ; 13 >
+    au < ready ; 2004 ; European Radiology Volume 14 ; 14 >
+    au < ready ; 2005 ; European Radiology Volume 15 ; 15 >
+    au < ready ; 2006 ; European Radiology Volume 16 ; 16 >
+    au < ready ; 2007 ; European Radiology Volume 17 ; 17 >
+    au < ready ; 2008 ; European Radiology Volume 18 ; 18 >
+    au < ready ; 2009 ; European Radiology Volume 19 ; 19 >
+    au < ready ; 2010 ; European Radiology Volume 20 ; 20 >
+    au < ready ; 2011 ; European Radiology Volume 21 ; 21 >
 
   }
 
@@ -26025,44 +26024,44 @@
     param[journal_issn] = 0167-4412
     attr[where] = content4a
 
-    au < testing ; 1981-1982 ; Plant Molecular Biology Volume 1 ; 1 >
+    au < ready ; 1981-1982 ; Plant Molecular Biology Volume 1 ; 1 >
     au < ready ; 1983 ; Plant Molecular Biology Volume 2 ; 2 >
     au < ready ; 1984 ; Plant Molecular Biology Volume 3 ; 3 >
     au < testing ; 1985 ; Plant Molecular Biology Volume 4 ; 4 >
-    au < testing ; 1985 ; Plant Molecular Biology Volume 5 ; 5 >
+    au < ready ; 1985 ; Plant Molecular Biology Volume 5 ; 5 >
     au < ready ; 1986 ; Plant Molecular Biology Volume 6 ; 6 >
-    au < testing ; 1986 ; Plant Molecular Biology Volume 7 ; 7 >
+    au < ready ; 1986 ; Plant Molecular Biology Volume 7 ; 7 >
     au < ready ; 1987 ; Plant Molecular Biology Volume 8 ; 8 >
     au < ready ; 1987 ; Plant Molecular Biology Volume 9 ; 9 >
     au < ready ; 1987-1988 ; Plant Molecular Biology Volume 10 ; 10 >
     au < ready ; 1988 ; Plant Molecular Biology Volume 11 ; 11 >
     au < ready ; 1989 ; Plant Molecular Biology Volume 12 ; 12 >
-    au < testing ; 1989 ; Plant Molecular Biology Volume 13 ; 13 >
+    au < ready ; 1989 ; Plant Molecular Biology Volume 13 ; 13 >
     au < ready ; 1990 ; Plant Molecular Biology Volume 14 ; 14 >
-    au < testing ; 1990 ; Plant Molecular Biology Volume 15 ; 15 >
+    au < ready ; 1990 ; Plant Molecular Biology Volume 15 ; 15 >
     au < testing ; 1991 ; Plant Molecular Biology Volume 16 ; 16 >
-    au < testing ; 1991 ; Plant Molecular Biology Volume 17 ; 17 >
+    au < ready ; 1991 ; Plant Molecular Biology Volume 17 ; 17 >
     au < testing ; 1992 ; Plant Molecular Biology Volume 18 ; 18 >
     au < testing ; 1992 ; Plant Molecular Biology Volume 19 ; 19 >
-    au < testing ; 1992 ; Plant Molecular Biology Volume 20 ; 20 >
+    au < ready ; 1992 ; Plant Molecular Biology Volume 20 ; 20 >
     au < testing ; 1993 ; Plant Molecular Biology Volume 21 ; 21 >
-    au < testing ; 1993 ; Plant Molecular Biology Volume 22 ; 22 >
+    au < ready ; 1993 ; Plant Molecular Biology Volume 22 ; 22 >
     au < testing ; 1993 ; Plant Molecular Biology Volume 23 ; 23 >
-    au < testing ; 1994 ; Plant Molecular Biology Volume 24 ; 24 >
+    au < ready ; 1994 ; Plant Molecular Biology Volume 24 ; 24 >
     au < testing ; 1994 ; Plant Molecular Biology Volume 25 ; 25 >
     au < testing ; 1994 ; Plant Molecular Biology Volume 26 ; 26 >
-    au < testing ; 1995 ; Plant Molecular Biology Volume 27 ; 27 >
+    au < ready ; 1995 ; Plant Molecular Biology Volume 27 ; 27 >
     au < testing ; 1995 ; Plant Molecular Biology Volume 28 ; 28 >
-    au < testing ; 1995 ; Plant Molecular Biology Volume 29 ; 29 >
+    au < ready ; 1995 ; Plant Molecular Biology Volume 29 ; 29 >
     au < testing ; 1996 ; Plant Molecular Biology Volume 30 ; 30 >
     au < testing ; 1996 ; Plant Molecular Biology Volume 31 ; 31 >
-    au < testing ; 1996 ; Plant Molecular Biology Volume 32 ; 32 >
+    au < ready ; 1996 ; Plant Molecular Biology Volume 32 ; 32 >
     au < ready ; 1997 ; Plant Molecular Biology Volume 33 ; 33 >
     au < ready ; 1997 ; Plant Molecular Biology Volume 34 ; 34 >
     au < ready ; 1997 ; Plant Molecular Biology Volume 35 ; 35 >
     au < ready ; 1998 ; Plant Molecular Biology Volume 36 ; 36 >
     au < ready ; 1998 ; Plant Molecular Biology Volume 37 ; 37 >
-    au < testing ; 1998 ; Plant Molecular Biology Volume 38 ; 38 >
+    au < ready ; 1998 ; Plant Molecular Biology Volume 38 ; 38 >
     au < ready ; 1999 ; Plant Molecular Biology Volume 39 ; 39 >
     au < ready ; 1999 ; Plant Molecular Biology Volume 40 ; 40 >
     au < ready ; 1999 ; Plant Molecular Biology Volume 41 ; 41 >
@@ -26298,17 +26297,17 @@
 
     param[journal_issn] = 0032-3470
 
-    au < released ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
-    au < released ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
-    au < released ; 2002 ; Politische Vierteljahresschrift Volume 43 ; 43 >
-    au < released ; 2003 ; Politische Vierteljahresschrift Volume 44 ; 44 >
-    au < released ; 2004 ; Politische Vierteljahresschrift Volume 45 ; 45 >
-    au < released ; 2005 ; Politische Vierteljahresschrift Volume 46 ; 46 >
-    au < released ; 2006 ; Politische Vierteljahresschrift Volume 47 ; 47 >
-    au < released ; 2007 ; Politische Vierteljahresschrift Volume 48 ; 48 >
-    au < released ; 2008 ; Politische Vierteljahresschrift Volume 49 ; 49 >
-    au < released ; 2009 ; Politische Vierteljahresschrift Volume 50 ; 50 >
-    au < released ; 2010 ; Politische Vierteljahresschrift Volume 51 ; 51 >
+    au < down ; 2000 ; Politische Vierteljahresschrift Volume 41 ; 41 >
+    au < down ; 2001 ; Politische Vierteljahresschrift Volume 42 ; 42 >
+    au < down ; 2002 ; Politische Vierteljahresschrift Volume 43 ; 43 >
+    au < down ; 2003 ; Politische Vierteljahresschrift Volume 44 ; 44 >
+    au < down ; 2004 ; Politische Vierteljahresschrift Volume 45 ; 45 >
+    au < down ; 2005 ; Politische Vierteljahresschrift Volume 46 ; 46 >
+    au < down ; 2006 ; Politische Vierteljahresschrift Volume 47 ; 47 >
+    au < down ; 2007 ; Politische Vierteljahresschrift Volume 48 ; 48 >
+    au < down ; 2008 ; Politische Vierteljahresschrift Volume 49 ; 49 >
+    au < down ; 2009 ; Politische Vierteljahresschrift Volume 50 ; 50 >
+    au < down ; 2010 ; Politische Vierteljahresschrift Volume 51 ; 51 >
 
   }
 
