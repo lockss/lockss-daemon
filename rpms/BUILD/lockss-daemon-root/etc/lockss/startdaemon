@@ -63,12 +63,14 @@ if [ "X${LOG_FILE}" = X -o ! -f ${LOG_FILE} ]; then
     echo "No log file - can't start $1"
     exit 1
 fi
-# XXX for 1.48, disable updatedb
-ed /etc/cron.daily/mlocate.cron >/dev/null 2>&1 <<Funky-EOF
+if [ -f /etc/cron.daily/mlocate.cron ]; then
+    # XXX for 1.48, disable updatedb
+    ed /etc/cron.daily/mlocate.cron >/dev/null 2>&1 <<Funky-EOF
 g/^\([^#]\)/s//#\1/
 w
 q
 Funky-EOF
+fi
 touch ${KEEP_GOING}
 chown $1 ${KEEP_GOING}
 if [ -x ${LOCKSS_HOME}/etc/lockss/runssl.$1 ]; then
