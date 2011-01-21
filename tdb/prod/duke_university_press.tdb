@@ -83,12 +83,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://americanliterature.dukejournals.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-      au < released ; American Literature Volume 77 ; 77 >
-      au < released ; American Literature Volume 78 ; 78 >
-      au < released ; American Literature Volume 79 ; 79 >      
-      au < wanted ; American Literature Volume 80 ; 80 >
-      au < wanted ; American Literature Volume 81 ; 81 >
-      au < wanted ; American Literature Volume 82 ; 82 >
+      au < HighWireStrVolPlugin ; released ; American Literature Volume 77 ; 77 >
+      au < HighWireStrVolPlugin ; released ; American Literature Volume 78 ; 78 >
+      au < HighWireStrVolPlugin ; released ; American Literature Volume 79 ; 79 >      
+      au < HighWirePressPlugin ; wanted ; American Literature Volume 80 ; 80 >
+      au < HighWirePressPlugin ; wanted ; American Literature Volume 81 ; 81 >
+      au < HighWirePressPlugin ; wanted ; American Literature Volume 82 ; 82 >
     
     }
     
@@ -380,13 +380,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://ethnohistory.dukejournals.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-     au < released ; Ethnohistory Volume 52 ; 52 >
-     au < released ; Ethnohistory Volume 53 ; 53 >
-     au < released ; Ethnohistory Volume 54 ; 54 >      
-     au < wanted ; Ethnohistory Volume 55 ; 55 >
-     au < wanted ; Ethnohistory Volume 56 ; 56 >
-     au < wanted ; Ethnohistory Volume 57 ; 57 >
-     au < wanted ; Ethnohistory Volume 58 ; 58 >
+     au < HighWireStrVolPlugin ; released ; Ethnohistory Volume 52 ; 52 >
+     au < HighWireStrVolPlugin ; released ; Ethnohistory Volume 53 ; 53 >
+     au < HighWireStrVolPlugin ; released ; Ethnohistory Volume 54 ; 54 >      
+     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 55 ; 55 >
+     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 56 ; 56 >
+     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 57 ; 57 >
+     au < HighWirePressPlugin ; wanted ; Ethnohistory Volume 58 ; 58 >
     
     }
     
@@ -421,12 +421,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://fhs.dukejournals.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-     au < released ; French Historical Studies Volume 28 ; 28 >
-     au < released ; French Historical Studies Volume 29 ; 29 >
-     au < released ; French Historical Studies Volume 30 ; 30 >      
-     au < wanted ; French Historical Studies Volume 31 ; 31 >
-     au < wanted ; French Historical Studies Volume 32 ; 32 >
-     au < wanted ; French Historical Studies Volume 33 ; 33 >
+     au < HighWireStrVolPlugin ; released ; French Historical Studies Volume 28 ; 28 >
+     au < HighWireStrVolPlugin ; released ; French Historical Studies Volume 29 ; 29 >
+     au < HighWireStrVolPlugin ; released ; French Historical Studies Volume 30 ; 30 >      
+     au < HighWirePressPlugin ; wanted ; French Historical Studies Volume 31 ; 31 >
+     au < HighWirePressPlugin ; wanted ; French Historical Studies Volume 32 ; 32 >
+     au < HighWirePressPlugin ; wanted ; French Historical Studies Volume 33 ; 33 >
     
     }
     
@@ -508,13 +508,13 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://hahr.dukejournals.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-     au < released ; Hispanic American Historical Review Volume 85 ; 85 >
-     au < released ; Hispanic American Historical Review Volume 86 ; 86 >
-     au < released ; Hispanic American Historical Review Volume 87 ; 87 >      
-     au < wanted ; Hispanic American Historical Review Volume 88 ; 88 >
-     au < wanted ; Hispanic American Historical Review Volume 89 ; 89 >
-     au < wanted ; Hispanic American Historical Review Volume 90 ; 90 >
-     au < wanted ; Hispanic American Historical Review Volume 91 ; 91 >
+     au < HighWireStrVolPlugin ; released ; Hispanic American Historical Review Volume 85 ; 85 >
+     au < HighWireStrVolPlugin ; released ; Hispanic American Historical Review Volume 86 ; 86 >
+     au < HighWireStrVolPlugin ; released ; Hispanic American Historical Review Volume 87 ; 87 >      
+     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 88 ; 88 >
+     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 89 ; 89 >
+     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 90 ; 90 >
+     au < HighWirePressPlugin ; wanted ; Hispanic American Historical Review Volume 91 ; 91 >
     
     }
     
@@ -549,12 +549,12 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
       param[base_url] = http://hope.dukejournals.org/
       implicit < pluginSuffix ; status ; name ; param[volume_name] >  
       
-     au < released ; History of Political Economy Volume 37 ; 37 >
-     au < released ; History of Political Economy Volume 38 ; 38 >
-     au < released ; History of Political Economy Volume 39 ; 39 >      
-     au < wanted ; History of Political Economy Volume 40 ; 40 >
-     au < wanted ; History of Political Economy Volume 41 ; 41 >
-     au < wanted ; History of Political Economy Volume 42 ; 42 >
+     au < HighWireStrVolPlugin ; released ; History of Political Economy Volume 37 ; 37 >
+     au < HighWireStrVolPlugin ; released ; History of Political Economy Volume 38 ; 38 >
+     au < HighWireStrVolPlugin ; released ; History of Political Economy Volume 39 ; 39 >      
+     au < HighWirePressPlugin ; wanted ; History of Political Economy Volume 40 ; 40 >
+     au < HighWirePressPlugin ; wanted ; History of Political Economy Volume 41 ; 41 >
+     au < HighWirePressPlugin ; wanted ; History of Political Economy Volume 42 ; 42 >
     
     }
     
@@ -722,7 +722,7 @@ comment[duke] = HW content is migrating to H20 July 2011, so should be tested af
     
       plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://minnesotareview.dukejournals.org/
-      implicit < pluginSuffix ; status ; name ; param[volume_name] >  
+      implicit < status ; name ; param[volume_name] >  
       
       au < exists ; The Minnesota Review Volume 2005 ; 2005 >
       au < exists ; The Minnesota Review Volume 2006 ; 2006 >
