@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.5 2011-01-20 08:38:40 tlipkis Exp $
+ * $Id: MetadataUtil.java,v 1.6 2011-01-22 08:19:16 tlipkis Exp $
  */
 
 /*
@@ -229,47 +229,33 @@ public class MetadataUtil {
     }
   }
 
-  /** Return the closest matching available Locale, or null if none.
-   * (Returns the first match on all three components, else the first match
-   * or two, else the first match on one, else null.)
+  /** Return the closest matching available Locale, or null if none.  Looks
+   * for an exact match, then an exact match after dropping the variant (if
+   * any), then after dropping the country (if any).
    * @param targetLocale the target Locale
    * @return the closest matching Locale or null
    */
   public static Locale findClosestAvailableLocale(Locale targetLocale) {
     return findClosestLocale(targetLocale,
-			     (List<Locale>)LocaleUtils.availableLocaleList());
+			     (Set<Locale>)LocaleUtils.availableLocaleSet());
   }
 
-  /** Return the closest matching Locale from the list, or null if none.
-   * (Returns the first match on all three components, else the first match
-   * or two, else the first match on one, else null.)
+  /** Return the closest matching Locale in the set, or null if none. Looks
+   * for an exact match, then an exact match after dropping the variant (if
+   * any), then after dropping the country (if any).
    * @param targetLocale the target Locale
    * @param locales the list of Locales in which to search
    * @return the closest matching Locale or null
    */
   public static Locale findClosestLocale(Locale targetLocale,
-					 List<Locale> locales) {
-    Locale match2 = null;
-    Locale match1 = null;
-
-    for (Locale locale : locales) {
-      // Exact match?
-      if (targetLocale.equals(locale)) {
+					 Set<Locale> locales) {
+    List<Locale> search = LocaleUtils.localeLookupList(targetLocale);
+    for (Locale locale : search) {
+      if (locales.contains(locale)) {
 	return locale;
       }
-      // Save the first match on 2 components
-      if (match2 == null &&
-	  targetLocale.getLanguage().equals(locale.getLanguage()) &&
-	  targetLocale.getCountry().equals(locale.getCountry())) {
-	match2 = locale;
-      }
-      // Save the first match on 1 component
-      if (match2 == null && match1 == null &&
-	  targetLocale.getLanguage().equals(locale.getLanguage())) {
-	match1 = locale;
-      }
     }
-    return (match2 != null) ? match2 : ((match1 != null) ? match1 : null);
+    return null;
   }
 
   /** Return the default Locale to use when interpreting metadata fields */
@@ -360,7 +346,7 @@ public class MetadataUtil {
 	CachedUrl cu = af.getFullTextCu();
 	try {
 	  if (cu.hasContent()) {
-	    mdExtractor.extract(af, emitter);
+	    mdExtractor.extract(MetadataTarget.DOI, af, emitter);
 	  }
 	} catch (IOException e) {
 	  log.warning("createDoiMap() threw " + e);
@@ -462,7 +448,7 @@ public class MetadataUtil {
 	CachedUrl cu = af.getFullTextCu();
 	try {
 	  if (cu.hasContent()) {
-	    mdExtractor.extract(af, emitter);
+	    mdExtractor.extract(MetadataTarget.OpenURL, af, emitter);
 	  }
 	} catch (IOException e) {
 	  log.warning("createOpenUrlMap() threw " + e);

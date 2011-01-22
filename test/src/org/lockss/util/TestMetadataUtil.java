@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.3 2011-01-20 08:38:40 tlipkis Exp $
+ * $Id: TestMetadataUtil.java,v 1.4 2011-01-22 08:19:16 tlipkis Exp $
  */
 
 /*
@@ -63,12 +63,18 @@ public class TestMetadataUtil extends LockssTestCase {
     assertEquals("Variant", variant, l.getVariant());
   }
 
-  static List<Locale> testLocales =
-    ListUtil.list(new Locale("bb"),
-		  new Locale("aa"),
-		  new Locale("aa", "DD", "Var2"),
-		  new Locale("aa", "DD"),
-		  new Locale("aa", "DD", "Var1"));
+  static Set<Locale> testLocales =
+    SetUtil.set(new Locale("aa"),
+		new Locale("bb"),
+		new Locale("bb", "XX"),
+		new Locale("cc"),
+		new Locale("cc", "XX"),
+		new Locale("cc", "YY"),
+		new Locale("cc", "XX", "V1"),
+
+		new Locale("dd", "WW"),
+		new Locale("ee", "WW", "V3")
+		);
 		  
 
   String findClosestLocale(String str) {
@@ -84,15 +90,36 @@ public class TestMetadataUtil extends LockssTestCase {
   }
 
   public void testFindClosestLocale() {
-    assertEquals("aa_DD_Var2", findClosestLocale("aa_DD_Var2"));
-    assertEquals("aa_DD", findClosestLocale("aa_DD"));
     assertEquals("aa", findClosestLocale("aa"));
+    assertEquals("aa", findClosestLocale("aa_XX"));
+    assertEquals("aa", findClosestLocale("aa_XX_V1"));
+
+    assertEquals("bb", findClosestLocale("bb"));
+    assertEquals("bb_XX", findClosestLocale("bb_XX"));
+    assertEquals("bb_XX", findClosestLocale("bb_XX_V1"));
+    assertEquals("bb", findClosestLocale("bb_YY"));
+    assertEquals("bb", findClosestLocale("bb_YY_V1"));
+
+    assertEquals("cc", findClosestLocale("cc"));
+    assertEquals("cc_XX", findClosestLocale("cc_XX"));
+    assertEquals("cc_XX_V1", findClosestLocale("cc_XX_V1"));
+    assertEquals("cc_XX", findClosestLocale("cc_XX_V2"));
+    assertEquals("cc", findClosestLocale("cc_ZZ"));
+
+    assertEquals("cc_YY", findClosestLocale("cc_YY"));
+    assertEquals("cc_YY", findClosestLocale("cc_YY_V1"));
+    assertEquals("cc_YY", findClosestLocale("cc_YY_V2"));
+
     assertEquals(null, findClosestLocale("xx"));
-    assertEquals(null, findClosestLocale("xx_DD"));
-    assertEquals("bb", findClosestLocale("bb_DD"));
-    assertEquals("bb", findClosestLocale("bb_DD_vvv"));
-    assertEquals("aa_DD_Var2", findClosestLocale("aa_DD_Var3"));
-    assertEquals("aa", findClosestLocale("aa_EE_Var3"));
+    assertEquals(null, findClosestLocale("xx_XX"));
+    assertEquals(null, findClosestLocale("xx_XX_V1"));
+
+    assertEquals("dd_WW", findClosestLocale("dd_WW"));
+    assertEquals(null, findClosestLocale("dd_VV"));
+
+    assertEquals("ee_WW_V3", findClosestLocale("ee_WW_V3"));
+    assertEquals(null, findClosestLocale("ee_WW_V4"));
+    assertEquals(null, findClosestLocale("ee_VV"));
   }
 
   // Java spec says Locale.US must exist; still not sure this will succeed
