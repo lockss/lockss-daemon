@@ -22,6 +22,10 @@ fi
 if [ "X${2}" != X ]; then
     FLAG_FILE=${2}
 fi
+if [ "X${USER}" = X ]; then
+    echo "USER not set" >>${LOG_FILE}
+    exit 1
+fi
 set_lockss_user ${USER}
 set_variables ${USER}
 # XXX watchdog monitoring disabled for 1.48

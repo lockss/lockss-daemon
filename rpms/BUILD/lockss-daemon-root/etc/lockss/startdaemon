@@ -107,6 +107,7 @@ while [ -f ${KEEP_GOING} ]; do
         runuser -s /bin/bash - $1 -c "${COMMAND}"
         ;;
     SunOS)
+        export USER=$1
         su $1 -c "${COMMAND}"
         ;;
     esac
