@@ -62,14 +62,21 @@ public class ListHoldings extends LockssServlet {
   
   protected static Logger log = Logger.getLogger("ListHoldings");    
   
+  static final String PREFIX = Configuration.PREFIX + "listHoldings.";
+
+  /** Enable ListHoldings in UI.  Daemon restart required when set to true,
+   * not when set false */
+  public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";
+  public static final boolean DEFAULT_ENABLE_HOLDINGS = false;
+
   /** Default output format is TSV. */
   static final OutputFormat OUTPUT_DEFAULT = OutputFormat.KBART_TSV;
   /** Selected output format. */
   private OutputFormat outputFormat = OUTPUT_DEFAULT;
 
   public static final String ACTION_EXPORT = "Export";
-  public static final String PARAM_FORMAT = "format";
-  public static final String PARAM_COMPRESS = "compress";
+  public static final String KEY_FORMAT = "format";
+  public static final String KEY_COMPRESS = "compress";
   
   private Configuration sysConfig;
   
@@ -90,7 +97,7 @@ public class ListHoldings extends LockssServlet {
     statusMsg = null; 
 
     // Set outputFormat from the URL param 
-    String formatParam = req.getParameter(PARAM_FORMAT);
+    String formatParam = req.getParameter(KEY_FORMAT);
     outputFormat = OutputFormat.byName(formatParam);
     if (outputFormat==null) outputFormat = OUTPUT_DEFAULT;
     
@@ -202,13 +209,13 @@ public class ListHoldings extends LockssServlet {
     // Add compress option
     //tab.newRow();
     //tab.newCell("align=\"center\"");
-    //tab.add(ServletUtil.checkbox(this, PARAM_COMPRESS, PARAM_COMPRESS, "Compress the output", false));
+    //tab.add(ServletUtil.checkbox(this, KEY_COMPRESS, KEY_COMPRESS, "Compress the output", false));
     
     // Add format radio buttons
     for (OutputFormat fmt : OutputFormat.values()) {
       tab.newRow();
       tab.newCell("align=\"center\"");
-      tab.add( new Link(String.format("%s?%s=%s", thisPath, PARAM_FORMAT, fmt.name()), "Export as "+fmt.getLabel()) );
+      tab.add( new Link(String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name()), "Export as "+fmt.getLabel()) );
       tab.add(addFootnote(fmt.getFootnote()));
     }
     // Add some space

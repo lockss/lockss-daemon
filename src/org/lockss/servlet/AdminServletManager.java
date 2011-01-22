@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.17 2011-01-12 15:36:27 neilmayo Exp $
+ * $Id: AdminServletManager.java,v 1.18 2011-01-22 08:23:32 tlipkis Exp $
  */
 
 /*
@@ -333,16 +333,19 @@ public class AdminServletManager extends BaseServletManager {
                      "Hash CUS",
                      ServletDescr.NEED_ROLE_DEBUG);
   
-  // Note that if there is a config option saying not to show the servlet, we give it the "unavailable servlet" 
+  // Conditional on PARAM_UI_SHOW_HOLDINGS_SERVLET
   // class; otherwise the servlet is created and shown in the menu. 
   protected static final ServletDescr SERVLET_LIST_HOLDINGS =
     new ServletDescr("ListHoldings",
-                     showHoldingsServlet() ? ListHoldings.class : ServletDescr.UNAVAILABLE_SERVLET_MARKER,
+                     ListHoldings.class,
                      "Holdings List",
-                     "holdings",
+                     "Holdings",
                      (ServletDescr.IN_NAV | ServletDescr.IN_UIHOME),
-                     "List holdings metadata"
-    );
+                     "List holdings metadata") {
+      public boolean isEnabled(LockssDaemon daemon) {
+	return CurrentConfig.getBooleanParam(ListHoldings.PARAM_ENABLE_HOLDINGS,
+					     ListHoldings.DEFAULT_ENABLE_HOLDINGS);
+      }};
   
   protected static final ServletDescr LINK_LOGS =
     new ServletDescr(null,
@@ -421,19 +424,6 @@ public class AdminServletManager extends BaseServletManager {
 
   static void setHelpUrl(String url) {
     LINK_HELP.path = url;
-  }
-
-  /**
-   * Indicates whether to show the ListHoldings servlet. If the lockss.opt file
-   * contains the appropriate parameter with the value "false", the servlet is 
-   * neither created or shown as an option. If the parameter does not exist or 
-   * is set to something other than false, the servlet will be made available.   
-   * 
-   * @return whether to create and show the servlet 
-   */
-  private static boolean showHoldingsServlet() {
-    String s = CurrentConfig.getCurrentConfig().get(ConfigManager.PARAM_UI_SHOW_HOLDINGS_SERVLET);
-    return !"false".equalsIgnoreCase(s);
   }
 
   static void setContactAddr(String addr) {
