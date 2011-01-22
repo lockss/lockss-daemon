@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.15 2010-06-27 07:50:25 thib_gc Exp $
+ * $Id: TestHighWirePlugin.java,v 1.16 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -150,11 +150,11 @@ public class TestHighWirePlugin extends LockssTestCase {
 //    }
 //    catch (ConfigurationException ex) {
 //    }
-//    assertTrue(""+plugin.getArticleMetadataExtractor(null, au),
+//    assertTrue(""+plugin.getArticleMetadataExtractor(MetadataTarget.Any, au),
 //	       plugin.getArticleMetadataExtractor(null, au) instanceof
 //	       HighWireArticleIteratorFactory.HighWireArticleMetadataExtractor);
-//    assertTrue(""+plugin.getFileMetadataExtractor("text/html", au),
-//	       plugin.getFileMetadataExtractor("text/html", au) instanceof
+//    assertTrue(""+plugin.getFileMetadataExtractor(MetadataTarget.Any, "text/html", au),
+//	       plugin.getFileMetadataExtractor(MetadataTarget.Any, "text/html", au) instanceof
 //	       org.lockss.extractor.SimpleMetaTagMetadataExtractor);
   }
   public void testGetHashFilterFactory() {

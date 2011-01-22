@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataListExtractor.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: ArticleMetadataListExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class ArticleMetadataListExtractor {
     this.me = me;
   }
 
-  public List<ArticleMetadata> extract(ArticleFiles af)
+  public List<ArticleMetadata> extract(MetadataTarget target, ArticleFiles af)
       throws IOException, PluginException {
     final List res = new ArrayList();
     ArticleMetadataExtractor.Emitter emitter =
@@ -57,7 +57,7 @@ public class ArticleMetadataListExtractor {
 	  res.add(md);
 	}
       };
-    me.extract(af, emitter);
+    me.extract(target, af, emitter);
     return res;
   }
 }

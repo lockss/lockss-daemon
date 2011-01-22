@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: ArticleMetadataExtractor.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -42,11 +42,12 @@ public interface ArticleMetadataExtractor {
   /**
    * Emit zero or more ArticleMetadata containing metadata extracted from
    * files comprising article (feature)
-   * @param af the files making up the article
+   * @param target the purpose for which metadata is being extracted
+   * @param af describes the files making up the article
    * @param emitter
    */
-  public void extract(ArticleFiles af,
-		      /*MetadataTarget target,*/
+  public void extract(MetadataTarget target,
+		      ArticleFiles af,
 		      Emitter emitter)
       throws IOException, PluginException;
 

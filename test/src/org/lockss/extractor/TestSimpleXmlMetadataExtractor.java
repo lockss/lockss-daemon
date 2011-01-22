@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleXmlMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: TestSimpleXmlMetadataExtractor.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -134,7 +134,8 @@ public class TestSimpleXmlMetadataExtractor
       implements FileMetadataExtractorFactory {
     MyFileMetadataExtractorFactory() {
     }
-    public FileMetadataExtractor createFileMetadataExtractor(String mimeType)
+    public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							     String mimeType)
         throws PluginException {
       return new SimpleXmlMetadataExtractor(Arrays.asList(TEST_TAGS));
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpringerMetadataExtractorFactory.java,v 1.4 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: TestSpringerMetadataExtractorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
     Plugin plugin = spau.getPlugin();
     String articleMimeType = "application/pdf";
     ArticleMetadataExtractor me =
-      plugin.getArticleMetadataExtractor(null, spau);
+      plugin.getArticleMetadataExtractor(MetadataTarget.Any, spau);
     assertNotNull(me);
 
     ArticleMetadataListExtractor mle =
@@ -133,7 +133,7 @@ public class TestSpringerMetadataExtractorFactory extends LockssTestCase {
 		 contentType.toLowerCase().startsWith(articleMimeType));
       log.debug("count " + count + " url " + fcu.getUrl() + " " + contentType);
       count++;
-      List<ArticleMetadata> mdlist = mle.extract(af);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, af);
       assertNotEmpty(mdlist);
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);

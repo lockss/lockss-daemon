@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.13 2011-01-20 08:36:29 tlipkis Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.14 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -144,7 +144,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
 //
 //    Plugin plugin = hau.getPlugin();
 //
-//    ArticleMetadataExtractor me = plugin.getArticleMetadataExtractor(null, hau);
+//    ArticleMetadataExtractor me = plugin.getArticleMetadataExtractor(MetadataTarget.Any, hau);
 //    assertTrue(""+me,
 //	       me instanceof HighWirePressArticleIteratorFactory.HighWirePressArticleMetadataExtractor);
 //    int count = 0;
@@ -227,7 +227,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -266,7 +266,7 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     log.debug3("Extractor: " + me.toString());
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);

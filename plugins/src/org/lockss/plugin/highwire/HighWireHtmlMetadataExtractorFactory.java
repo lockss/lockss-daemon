@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.6 2011-01-20 08:36:05 tlipkis Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.7 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,8 @@ import org.lockss.plugin.*;
 public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("HighWireHtmlMetadataExtractorFactory");
 
-  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							   String contentType)
       throws PluginException {
     return new HighWireHtmlMetadataExtractor();
   }
@@ -85,8 +86,10 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
     }
 
-    public ArticleMetadata extract(CachedUrl cu) throws IOException {
-      ArticleMetadata am = super.extract(cu);
+    @Override
+    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+	throws IOException {
+      ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       return am;
     }

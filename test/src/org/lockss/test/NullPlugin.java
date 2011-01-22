@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.103 2010-09-01 07:54:29 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.104 2011-01-22 08:22:29 tlipkis Exp $
  */
 
 /*
@@ -147,7 +147,8 @@ public class NullPlugin {
     }
 
     public FileMetadataExtractor
-      getFileMetadataExtractor(String contentType,
+      getFileMetadataExtractor(MetadataTarget target,
+			       String contentType,
 			       org.lockss.plugin.ArchivalUnit au) {
       return null;
     }
@@ -230,7 +231,7 @@ public class NullPlugin {
       return null;
     }
 
-    public FileMetadataExtractor getFileMetadataExtractor() {
+    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
       return null;
     }
 
@@ -544,7 +545,8 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public FileMetadataExtractor getFileMetadataExtractor(String contentType) {
+    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target,
+							  String contentType) {
       return null;
     }
 

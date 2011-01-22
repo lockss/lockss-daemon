@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.41 2010-08-06 06:08:29 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.42 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -216,10 +216,11 @@ public class BaseCachedUrl implements CachedUrl {
   /**
    * Return a FileMetadataExtractor for the CachedUrl's content type, or
    * null if the plugin has no FileMetadataExtractor for that MIME type
+   * @param target the purpose for which metadata is being extracted
    */
-  public FileMetadataExtractor getFileMetadataExtractor() {
+  public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
     String ct = getContentType();
-    FileMetadataExtractor ret = au.getFileMetadataExtractor(ct);
+    FileMetadataExtractor ret = au.getFileMetadataExtractor(target, ct);
     return ret;
   }
 

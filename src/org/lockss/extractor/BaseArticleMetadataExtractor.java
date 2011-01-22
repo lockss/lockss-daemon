@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArticleMetadataExtractor.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: BaseArticleMetadataExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -97,15 +97,17 @@ public class BaseArticleMetadataExtractor
     }
   }
 
-  public void extract(ArticleFiles af, ArticleMetadataExtractor.Emitter emitter)
+  public void extract(MetadataTarget target,
+		      ArticleFiles af,
+		      ArticleMetadataExtractor.Emitter emitter)
       throws IOException, PluginException {
     MyEmitter myEmitter = new MyEmitter(af, emitter);
     ArticleMetadata am = null;
     CachedUrl cu = getCuToExtract(af);
     if (cu != null) {
-      FileMetadataExtractor me = cu.getFileMetadataExtractor();
+      FileMetadataExtractor me = cu.getFileMetadataExtractor(target);
       if (me != null) {
-	me.extract(cu, myEmitter);
+	me.extract(target, cu, myEmitter);
       }
       myEmitter.finishArticle();
     }

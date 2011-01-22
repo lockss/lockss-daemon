@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.55 2011-01-08 15:37:31 pgust Exp $
+ * $Id: ArchivalUnit.java,v 1.56 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -262,10 +262,12 @@ public interface ArchivalUnit {
   /**
    * Return a {@link FileMetadataExtractor} that knows how to extract URLs
    * from content of the given MIME type
+   * @param target the purpose for which metadata is being extracted
    * @param contentType content type to get a content parser for
    * @return A FileMetadataExtractor or null
    */
-  public FileMetadataExtractor getFileMetadataExtractor(String contentType);
+  public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target,
+							String contentType);
 
   /**
    * Return the {@link FilterRule} for the given contentType or null if there
@@ -313,7 +315,7 @@ public interface ArchivalUnit {
   /**
    * Returns an Iterator for articles from the AU's plugin. If there isn't
    * one, an empty iterator will be returned.
-   * @param contentType the content type of the articles
+   * @param target the purpose for which metadata is being extracted
    * @return the ArticleIterator
    */
   public Iterator<ArticleFiles> getArticleIterator(MetadataTarget target);

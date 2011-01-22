@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.15 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: FuncTarExploder2.java,v 1.16 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -286,7 +286,8 @@ public class FuncTarExploder2 extends LockssTestCase {
 	mep.setArticleIteratorFactory(new ElsevierArticleIteratorFactory());
 	mep.setArticleMetadataExtractorFactory(new ElsevierArticleIteratorFactory());
 	mep.setFileMetadataExtractorFactory(new ElsevierXmlMetadataExtractorFactory());
-	ArticleMetadataExtractor me = plugin.getArticleMetadataExtractor(null, au);
+	ArticleMetadataExtractor me =
+	  plugin.getArticleMetadataExtractor(MetadataTarget.Any, au);
 	assertNotNull(me);
 	assertTrue(""+me.getClass(),
 		   me instanceof ElsevierXmlMetadataExtractorFactory.ElsevierXmlMetadataExtractor);
@@ -304,7 +305,7 @@ public class FuncTarExploder2 extends LockssTestCase {
 	  log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
 	  count++;
 	  try {
-	    List<ArticleMetadata> mdlist = mle.extract(af);
+	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, af);
 	    assertNotEmpty(mdlist);
 	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);

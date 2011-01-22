@@ -1,5 +1,5 @@
 /*
- * $Id: MockExplodedPlugin.java,v 1.3 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: MockExplodedPlugin.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -88,12 +88,14 @@ public class MockExplodedPlugin extends ExplodedPlugin {
     articleMetadataExtractorFactory = mef;
   }
 
-  public FileMetadataExtractor getFileMetadataExtractor(String contentType,
+  public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target,
+							String contentType,
 							ArchivalUnit au) {
     if (fileMetadataExtractorFactory != null) {
       try {
 	return
-	  fileMetadataExtractorFactory.createFileMetadataExtractor(contentType);
+	  fileMetadataExtractorFactory.createFileMetadataExtractor(target,
+								   contentType);
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }

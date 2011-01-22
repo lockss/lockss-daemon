@@ -1,5 +1,5 @@
 /*
- * $Id: MockFactories.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: MockFactories.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class MockFactories {
   public static class XmlMetaExtFact implements FileMetadataExtractorFactory {
 
     public FileMetadataExtractor
-      createFileMetadataExtractor(String contentType) {
+      createFileMetadataExtractor(MetadataTarget target, String contentType) {
       return new XmlMetaExt();
     }
   }
@@ -80,19 +80,23 @@ public class MockFactories {
     implements FileMetadataExtractorFactory {
 
     public FileMetadataExtractor
-      createFileMetadataExtractor(String contentType) {
+      createFileMetadataExtractor(MetadataTarget target, String contentType) {
       return new XmlMetaExt();
     }
   }
 
   public static class MetaExt implements ArticleMetadataExtractor {
-    public void extract(ArticleFiles af,
+    @Override
+    public void extract(MetadataTarget target,
+			ArticleFiles af,
 			ArticleMetadataExtractor.Emitter emitter) {
     }
   }
 
   public static class XmlMetaExt implements FileMetadataExtractor {
-    public void extract(CachedUrl cu,
+    @Override
+    public void extract(MetadataTarget target,
+			CachedUrl cu,
 			FileMetadataExtractor.Emitter emitter) {
     }
   }

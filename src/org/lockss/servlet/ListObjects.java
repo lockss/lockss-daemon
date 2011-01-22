@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.14 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.15 2011-01-22 08:22:58 tlipkis Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class ListObjects extends LockssServlet {
       CachedUrl cu = af.getFullTextCu();
       try {
         if (cu.hasContent()) {
-	  mdExtractor.extract(af, emitter);
+	  mdExtractor.extract(MetadataTarget.DOI, af, emitter);
         }
       } catch (IOException e) {
         log.warning("listDOIs() threw " + e);
@@ -239,7 +239,7 @@ public class ListObjects extends LockssServlet {
 	if (cu.hasContent()) {
 	  if (isDoi && mdExtractor != null) {
 	    // extract metadata iff DOIs were requested
-	    mdExtractor.extract(af, emitter);
+	    mdExtractor.extract(MetadataTarget.Article, af, emitter);
 	  }
 	  if (mdExtractor == null || af != lastEmittedAf.getValue()) {
 	    // if we didn't extract metadata, or the metadata extractor

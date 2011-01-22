@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.1 2011-01-20 08:38:16 tlipkis Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -44,9 +44,10 @@ public class SimpleHtmlMetaTagMetadataExtractor
   public SimpleHtmlMetaTagMetadataExtractor() {
   }
 
-  public ArticleMetadata extract(CachedUrl cu) throws IOException {
+  public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+      throws IOException {
     if (cu == null) {
-      throw new IllegalArgumentException("extract(null)");
+      throw new IllegalArgumentException("extract() called with null CachedUrl");
     }
     ArticleMetadata ret = new ArticleMetadata();
     BufferedReader bReader =

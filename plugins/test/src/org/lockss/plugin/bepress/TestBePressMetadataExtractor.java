@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.15 2011-01-20 08:36:29 tlipkis Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.16 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
     FileMetadataExtractor me = new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);
@@ -201,7 +201,7 @@ public class TestBePressMetadataExtractor extends LockssTestCase {
     FileMetadataExtractor me = new BePressHtmlMetadataExtractorFactory.BePressHtmlMetadataExtractor();
     FileMetadataListExtractor mle =
       new FileMetadataListExtractor(me);
-    List<ArticleMetadata> mdlist = mle.extract(cu);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);

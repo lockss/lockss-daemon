@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataListExtractor.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: FileMetadataListExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class FileMetadataListExtractor {
     this.me = me;
   }
 
-  public List<ArticleMetadata> extract(CachedUrl cu)
+  public List<ArticleMetadata> extract(MetadataTarget target, CachedUrl cu)
       throws IOException, PluginException {
     final List res = new ArrayList();
     FileMetadataExtractor.Emitter emitter =
@@ -56,7 +56,7 @@ public class FileMetadataListExtractor {
 	  res.add(md);
 	}
       };
-    me.extract(cu, emitter);
+    me.extract(target, cu, emitter);
     return res;
   }
 }

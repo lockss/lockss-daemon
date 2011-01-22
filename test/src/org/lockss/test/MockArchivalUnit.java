@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.90 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.91 2011-01-22 08:22:29 tlipkis Exp $
  */
 
 /*
@@ -530,7 +530,8 @@ public class MockArchivalUnit implements ArchivalUnit {
     this.articleIterator = iter;
   }
 
-  public FileMetadataExtractor getFileMetadataExtractor(String contentType) {
+  public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target,
+							String contentType) {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     FileMetadataExtractor res = (FileMetadataExtractor)fileMetadataExtractors.get(mimeType);
     if (res == null) {

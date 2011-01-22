@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorFactoryWrapper.java,v 1.2 2010-07-21 06:12:02 tlipkis Exp $
+ * $Id: FileMetadataExtractorFactoryWrapper.java,v 1.3 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -51,10 +51,10 @@ public class FileMetadataExtractorFactoryWrapper
   }
 
   public FileMetadataExtractor
-    createFileMetadataExtractor(String contentType)
+    createFileMetadataExtractor(MetadataTarget target, String contentType)
       throws PluginException {
     try {
-      return inst.createFileMetadataExtractor(contentType);
+      return inst.createFileMetadataExtractor(target, contentType);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }

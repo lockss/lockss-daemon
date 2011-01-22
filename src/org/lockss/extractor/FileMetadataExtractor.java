@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractor.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: FileMetadataExtractor.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -42,10 +42,11 @@ public interface FileMetadataExtractor {
   /**
    * Parse content on CachedUrl, Emit zero or more Metadata objects
    * describing the content.
+   * @param target the purpose for which metadata is being extracted
    * @param cu the CachedUrl to extract from
    * @param emitter
    */
-  public void extract(CachedUrl cu, Emitter emitter)
+  public void extract(MetadataTarget target, CachedUrl cu, Emitter emitter)
     throws IOException, PluginException;
 
   /** Functor to emit ArticleMetadata object(s) created by extractor */

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.1 2011-01-20 08:38:16 tlipkis Exp $
+ * $Id: TestSimpleHtmlMetaTagMetadataExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -143,7 +143,8 @@ public class TestSimpleHtmlMetaTagMetadataExtractor
       implements FileMetadataExtractorFactory {
     MyFileMetadataExtractorFactory() {
     }
-    public FileMetadataExtractor createFileMetadataExtractor(String mimeType)
+    public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							     String mimeType)
         throws PluginException {
       return new SimpleHtmlMetaTagMetadataExtractor();
     }

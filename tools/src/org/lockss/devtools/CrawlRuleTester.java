@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTester.java,v 1.29 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: CrawlRuleTester.java,v 1.30 2011-01-22 08:22:29 tlipkis Exp $
  */
 
 /*
@@ -568,7 +568,8 @@ public class CrawlRuleTester extends Thread {
       sb.append("]");
       return sb.toString();
     }
-    public FileMetadataExtractor getFileMetadataExtractor() {
+    @Override
+    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
       return null;
     }
   }

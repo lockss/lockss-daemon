@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadataExtractorFactory.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: ArticleMetadataExtractorFactory.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.daemon.*;
 public interface ArticleMetadataExtractorFactory {
   /**
    * Create a ArticleMetadataExtractor
-   * @param target the purpose for which the iterator will be run
+   * @param target the purpose for which metadata is being extracted
    */
   public ArticleMetadataExtractor
     createArticleMetadataExtractor(MetadataTarget target)

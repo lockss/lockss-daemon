@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorFactory.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: FileMetadataExtractorFactory.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -38,9 +38,10 @@ import org.lockss.daemon.*;
 public interface FileMetadataExtractorFactory {
   /**
    * Create a FileMetadataExtractor
+   * @param target the purpose for which metadata is being extracted
    * @param contentType the MIME type from which to extract URLs
    */
   public FileMetadataExtractor
-    createFileMetadataExtractor(String contentType)
+    createFileMetadataExtractor(MetadataTarget target, String contentType)
       throws PluginException;
 }

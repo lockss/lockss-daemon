@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.8 2011-01-20 08:36:06 tlipkis Exp $
+ * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.9 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -61,8 +61,10 @@ import java.util.HashMap;
 public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractorFactory {
     static Logger log = Logger.getLogger("BioOneHtmlMetadataExtractorFactory");
     
-    public FileMetadataExtractor createFileMetadataExtractor(String contentType) throws PluginException {
-        return new BioOneHtmlMetadataExtractor();
+    public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							     String contentType)
+	throws PluginException {
+      return new BioOneHtmlMetadataExtractor();
     }
     
     public static class BioOneHtmlMetadataExtractor
@@ -122,12 +124,15 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
 		 * Extract metadata from the cached URL
 		 * @param cu The cached URL to extract the metadata from
 		 */
-		public ArticleMetadata extract(CachedUrl cu) throws IOException {
+		@Override
+		public ArticleMetadata extract(MetadataTarget target,
+					       CachedUrl cu)
+		    throws IOException {
 			if (cu == null) {
 				throw new IllegalArgumentException("extract(null)");
 			}
 						
-			ArticleMetadata metadata = super.extract(cu);						
+			ArticleMetadata metadata = super.extract(target, cu);						
 			
 			// Note: Volume and Start Page can alternatively be extracted from URL before reading the content
 

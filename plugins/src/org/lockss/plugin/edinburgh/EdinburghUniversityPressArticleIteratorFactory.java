@@ -1,5 +1,5 @@
 /*
- * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.4 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: EdinburghUniversityPressArticleIteratorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,9 @@ public class EdinburghUniversityPressArticleIteratorFactory
   
   protected static class EdinburghUniversityPressArticleMetadataExtractor extends SingleArticleMetadataExtractor {
 
-    public ArticleMetadata extract(ArticleFiles af) throws IOException, PluginException {
+    @Override
+    public ArticleMetadata extract(MetadataTarget target, ArticleFiles af)
+	throws IOException, PluginException {
       String url = af.getFullTextUrl();
       Matcher mat = EdinburghUniversityPressArticleIterator.PDF_PATTERN.matcher(url);
       if (!mat.find()) {

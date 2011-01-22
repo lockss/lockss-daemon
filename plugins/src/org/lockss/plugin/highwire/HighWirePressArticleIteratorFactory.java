@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.5 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.6 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -286,7 +286,9 @@ public class HighWirePressArticleIteratorFactory
   protected static class HighWirePressArticleMetadataExtractor
     extends SingleArticleMetadataExtractor {
 
-    public ArticleMetadata extract(ArticleFiles af) throws IOException, PluginException {
+    @Override
+    public ArticleMetadata extract(MetadataTarget target, ArticleFiles af)
+	throws IOException, PluginException {
       String url = af.getFullTextUrl();
       ArticleMetadata am = new ArticleMetadata();
       am.put(MetadataField.FIELD_ACCESS_URL, url);

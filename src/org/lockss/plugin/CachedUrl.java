@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.25 2010-08-01 21:32:32 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.26 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -195,7 +195,8 @@ public interface CachedUrl extends CachedUrlSetNode {
   /**
    * Return a FileMetadataExtractor for the CachedUrl's content type. If
    * there isn't one, a null extractor will be returned.
+   * @param target the purpose for which metadata is being extracted
    */
-  public FileMetadataExtractor getFileMetadataExtractor();
+  public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target);
 
 }

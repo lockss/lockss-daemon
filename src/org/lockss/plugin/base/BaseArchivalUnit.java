@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.146 2011-01-08 15:37:33 pgust Exp $
+ * $Id: BaseArchivalUnit.java,v 1.147 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -736,11 +736,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Return a {@link FileMetadataExtractor} that knows how to extract URLs
    * from content of the given MIME type
+   * @param target the purpose for which metadata is being extracted
    * @param contentType content type to get a content parser for
    * @return A FileMetadataExtractor or null
    */
-  public FileMetadataExtractor getFileMetadataExtractor(String contentType) {
-    return plugin.getFileMetadataExtractor(contentType, this);
+  public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target,
+							String contentType) {
+    return plugin.getFileMetadataExtractor(target, contentType, this);
   }
 
   /**

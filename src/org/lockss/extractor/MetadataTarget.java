@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataTarget.java,v 1.1 2010-06-17 18:47:19 tlipkis Exp $
+ * $Id: MetadataTarget.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,8 @@ package org.lockss.extractor;
  */
 public class MetadataTarget {
 
+  /** Use when no knowledge of the particular type of metadata needed. */
+  public static MetadataTarget Any = new MetadataTarget("Any");
   public static MetadataTarget DOI = new MetadataTarget("DOI");
   public static MetadataTarget OpenURL = new MetadataTarget("OpenURL");
   public static MetadataTarget Article = new MetadataTarget("Article");

@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.32 2011-01-08 15:37:31 pgust Exp $
+ * $Id: Plugin.java,v 1.33 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -178,12 +178,15 @@ public interface Plugin {
   /**
    * Return a {@link FileMetadataExtractor} that knows how to extract
    * metadata from content of the given content type
+   * @param target the purpose for which metadata is being extracted
    * @param contentType content type to get a metadata extractor for
    * @param au the AU in question
    * @return A FileMetadataExtractor or null
    */
     public FileMetadataExtractor
-      getFileMetadataExtractor(String contentType, ArchivalUnit au);
+      getFileMetadataExtractor(MetadataTarget target,
+			       String contentType,
+			       ArchivalUnit au);
 
   /**
    * Returns the article iterator factory for the mime type, if any

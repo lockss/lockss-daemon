@@ -35,7 +35,8 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 
 	static Logger log = Logger.getLogger("RoyalSocietyOfChemistryHtmlMetadataExtractorFactory");
 	
-	public FileMetadataExtractor createFileMetadataExtractor(String contentType) throws PluginException {
+	public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+								 String contentType) throws PluginException {
 		return new RoyalSocietyOfChemistryHtmlExtractor();
 	}	
 	
@@ -48,12 +49,14 @@ public class RoyalSocietyOfChemistryHtmlMetadataExtractorFactory implements File
 		 * Extract metadata from the cached URL
 		 * @param cu The cached URL to extract the metadata from
 		 */
-		public ArticleMetadata extract(CachedUrl cu) throws IOException {
+		@Override
+		public ArticleMetadata extract(MetadataTarget target,
+					       CachedUrl cu) throws IOException {
 			if (cu == null) {
 				throw new IllegalArgumentException("extract(null)");
 			}
 						
-			ArticleMetadata ret = super.extract(cu);						
+			ArticleMetadata ret = super.extract(target, cu);						
 			
 			// extract DOI from URL
 			addDOI(cu.getUrl(), ret);

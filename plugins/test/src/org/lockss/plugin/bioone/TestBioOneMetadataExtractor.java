@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneMetadataExtractor.java,v 1.8 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: TestBioOneMetadataExtractor.java,v 1.9 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -150,12 +150,12 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
       assertNotNull(cu);
       log.debug3("count " + count + " url " + cu.getUrl());
       ArticleMetadataExtractor me =
-	bau.getPlugin().getArticleMetadataExtractor(null, bau);
+	bau.getPlugin().getArticleMetadataExtractor(MetadataTarget.Any, bau);
       log.debug3("Extractor: " + me.toString());
       ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
       ArticleFiles af = new ArticleFiles();
       af.setFullTextCu(cu);
-      List<ArticleMetadata> mdlist = mle.extract(af);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, af);
       assertNotEmpty(mdlist);
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);
@@ -297,13 +297,13 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     cu.setFileMetadataExtractor(new BioOneHtmlMetadataExtractorFactory.BioOneHtmlMetadataExtractor());
     ArticleMetadataExtractorFactory mef = new BioOneArticleIteratorFactory();
     ArticleMetadataExtractor me =
-      mef.createArticleMetadataExtractor(null);
+      mef.createArticleMetadataExtractor(MetadataTarget.Any);
     assertNotNull(me);
     log.debug3("Extractor: " + me.toString());
     ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
     ArticleFiles af = new ArticleFiles();
     af.setFullTextCu(cu);
-    List<ArticleMetadata> mdlist = mle.extract(af);
+    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, af);
     assertNotEmpty(mdlist);
     ArticleMetadata md = mdlist.get(0);
     assertNotNull(md);

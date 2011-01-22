@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.29 2010-06-17 18:47:18 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.30 2011-01-22 08:22:29 tlipkis Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class PTestPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public FileMetadataExtractor getFileMetadataExtractor() {
+    public FileMetadataExtractor getFileMetadataExtractor(MetadataTarget target) {
       throw new UnsupportedOperationException("Not implemented");
     }
 

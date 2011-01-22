@@ -1,5 +1,5 @@
 /*
- * $Id: SingleArticleMetadataExtractor.java,v 1.1 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: SingleArticleMetadataExtractor.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -42,11 +42,11 @@ import org.lockss.plugin.*;
 public abstract class SingleArticleMetadataExtractor
   implements ArticleMetadataExtractor {
 
-  public void extract(ArticleFiles af,
-		      /*MetadataTarget target,*/
+  public void extract(MetadataTarget target,
+		      ArticleFiles af,
 		      ArticleMetadataExtractor.Emitter emitter)
       throws IOException, PluginException {
-    ArticleMetadata md = extract(af);
+    ArticleMetadata md = extract(target, af);
     if (md != null) {
       emitter.emitMetadata(af, md);
     }
@@ -56,6 +56,7 @@ public abstract class SingleArticleMetadataExtractor
    * Parse content on CachedUrl,  Return a Metadata object describing it
    * @param cu the CachedUrl to extract from
    */
-  public abstract ArticleMetadata extract(ArticleFiles af)
+  public abstract ArticleMetadata extract(MetadataTarget target,
+					  ArticleFiles af)
       throws IOException, PluginException;
 }

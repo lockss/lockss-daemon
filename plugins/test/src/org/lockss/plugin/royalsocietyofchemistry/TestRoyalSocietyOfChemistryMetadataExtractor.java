@@ -149,7 +149,7 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    FileMetadataExtractor me = new RoyalSocietyOfChemistryHtmlMetadataExtractorFactory.RoyalSocietyOfChemistryHtmlExtractor(); 
 	    FileMetadataListExtractor mle =
 	      new FileMetadataListExtractor(me);
-	    List<ArticleMetadata> mdlist = mle.extract(cu);
+	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
 	    assertNotEmpty(mdlist);
 	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);	    
@@ -186,7 +186,7 @@ public class TestRoyalSocietyOfChemistryMetadataExtractor extends LockssTestCase
 	    FileMetadataExtractor me = new RoyalSocietyOfChemistryHtmlMetadataExtractorFactory.RoyalSocietyOfChemistryHtmlExtractor();	     
 	    FileMetadataListExtractor mle =
 	      new FileMetadataListExtractor(me);
-	    List<ArticleMetadata> mdlist = mle.extract(cu);
+	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, cu);
 	    assertNotEmpty(mdlist);
 	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);

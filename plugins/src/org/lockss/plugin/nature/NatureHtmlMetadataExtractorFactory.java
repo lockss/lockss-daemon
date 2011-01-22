@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.4 2011-01-20 08:36:05 tlipkis Exp $
+ * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,8 @@ public class NatureHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("NatureMetadataExtractorFactory");
  
-  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							   String contentType)
       throws PluginException {
     return new NatureHtmlMetadataExtractor();
   }
@@ -71,8 +72,10 @@ public class NatureHtmlMetadataExtractorFactory
       tagMap.put("prism.eIssn", MetadataField.FIELD_EISSN);
     }
 
-    public ArticleMetadata extract(CachedUrl cu) throws IOException {
-      ArticleMetadata am = super.extract(cu);
+    @Override
+    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+	throws IOException {
+      ArticleMetadata am = super.extract(target, cu);
       am.cook(tagMap);
       return am;
     }

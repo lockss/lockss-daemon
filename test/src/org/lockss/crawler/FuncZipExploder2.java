@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.15 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: FuncZipExploder2.java,v 1.16 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -271,7 +271,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 	mep.setArticleIteratorFactory(new SpringerArticleIteratorFactory());
 	mep.setArticleMetadataExtractorFactory(new SpringerArticleIteratorFactory());
 	ArticleMetadataExtractor me =
-	  plugin.getArticleMetadataExtractor(null, au);
+	  plugin.getArticleMetadataExtractor(MetadataTarget.Any, au);
 	assertNotNull(me);
 	ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
 	int count = 0;
@@ -286,7 +286,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 	  log.debug("count " + count + " url " + cu.getUrl() + " " + contentType);
 	  count++;
 	  try {
-	    List<ArticleMetadata> mdlist = mle.extract(af);
+	    List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, af);
 	    assertNotEmpty(mdlist);
 	    ArticleMetadata md = mdlist.get(0);
 	    assertNotNull(md);

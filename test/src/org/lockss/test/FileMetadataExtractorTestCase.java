@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorTestCase.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: FileMetadataExtractorTestCase.java,v 1.4 2011-01-22 08:22:29 tlipkis Exp $
  */
 
 /*
@@ -59,13 +59,17 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
     mau = new MockArchivalUnit();
     cu = new MockCachedUrl(getUrl(), mau);
     FileMetadataExtractor fme =
-      getFactory().createFileMetadataExtractor(getMimeType());
+      getFactory().createFileMetadataExtractor(getTarget(), getMimeType());
     extractor = new FileMetadataListExtractor(fme);
     encoding = getEncoding();
   }
 
   public abstract String getMimeType();
   public abstract FileMetadataExtractorFactory getFactory();
+
+  public MetadataTarget getTarget() {
+    return MetadataTarget.Any;
+  }
 
   public String getEncoding() {
     return Constants.DEFAULT_ENCODING;
@@ -111,7 +115,7 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
   }
 
   public void testEmptyFileReturnsEmptyMetadata() throws Exception {
-    List<ArticleMetadata> lst = extractor.extract(cu);
+    List<ArticleMetadata> lst = extractor.extract(MetadataTarget.Any, cu);
     assertEquals(1, lst.size());
     ArticleMetadata md = lst.get(0);
     assertEquals(0, md.rawSize());
@@ -119,7 +123,7 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
 
   public void testThrows() throws IOException, PluginException {
     try {
-      extractor.extract(null);
+      extractor.extract(MetadataTarget.Any, null);
       fail("Calling extract with a null InputStream should have thrown");
     } catch (IllegalArgumentException e) {
     }
@@ -127,7 +131,8 @@ public abstract class FileMetadataExtractorTestCase extends LockssTestCase {
 
   protected ArticleMetadata extractFrom(String content) {
     try {
-      List<ArticleMetadata> lst = extractor.extract(cu.addVersion(content));
+      List<ArticleMetadata> lst = extractor.extract(getTarget(),
+						    cu.addVersion(content));
       return lst.get(0);
     } catch (Exception e) {
       fail("extract threw " + e);

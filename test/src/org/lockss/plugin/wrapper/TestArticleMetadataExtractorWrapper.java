@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleMetadataExtractorWrapper.java,v 1.3 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: TestArticleMetadataExtractorWrapper.java,v 1.4 2011-01-22 08:22:29 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestArticleMetadataExtractorWrapper extends LockssTestCase {
 
     CachedUrl cu = new MockCachedUrl(url);
     ArticleFiles af = new ArticleFiles();
-    wrapper.extract(af, null);
+    wrapper.extract(MetadataTarget.Any, af, null);
     MyArticleMetadataExtractor mn = (MyArticleMetadataExtractor)obj;
     assertEquals(ListUtil.list(af), mn.args);
   }
@@ -70,7 +70,7 @@ public class TestArticleMetadataExtractorWrapper extends LockssTestCase {
     ArticleFiles af = new ArticleFiles();
     CachedUrl cu = new MockCachedUrl(url);
     try {
-      wrapper.extract(af, null);
+      wrapper.extract(MetadataTarget.Any, af, null);
       fail("Should have thrown PluginException");
     } catch (PluginException e) {
       assertTrue(e instanceof PluginException.LinkageError);
@@ -86,7 +86,9 @@ public class TestArticleMetadataExtractorWrapper extends LockssTestCase {
       this.error = error;
     }
 
-    public void extract(ArticleFiles af,
+    @Override
+    public void extract(MetadataTarget target,
+			ArticleFiles af,
 			ArticleMetadataExtractor.Emitter emitter)
 	throws IOException {
       args = ListUtil.list(af);

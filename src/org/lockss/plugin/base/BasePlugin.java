@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.72 2011-01-08 15:37:32 pgust Exp $
+ * $Id: BasePlugin.java,v 1.73 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -559,12 +559,15 @@ public abstract class BasePlugin
   /**
    * Return a {@link FileMetadataExtractor} that knows how to extract
    * metadata from content of the given content type
+   * @param target the purpose for which metadata is being extracted
    * @param contentType content type to get a metadata extractor for
    * @param au the AU in question
    * @return A FileMetadataExtractor or null
    */
   public FileMetadataExtractor
-    getFileMetadataExtractor(String contentType, ArchivalUnit au) {
+    getFileMetadataExtractor(MetadataTarget target,
+			     String contentType,
+			     ArchivalUnit au) {
     if (contentType == null) {
       return null;
     }
@@ -578,7 +581,7 @@ public abstract class BasePlugin
     FileMetadataExtractorFactory fact = mti.getFileMetadataExtractorFactory();
     if (fact != null) {
       try {
-	return fact.createFileMetadataExtractor(contentType);
+	return fact.createFileMetadataExtractor(target, contentType);
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleHtmlMetaTagMetadataExtractorFactory.java,v 1.1 2011-01-20 08:38:16 tlipkis Exp $
+ * $Id: SimpleHtmlMetaTagMetadataExtractorFactory.java,v 1.2 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -40,9 +40,11 @@ public class SimpleHtmlMetaTagMetadataExtractorFactory
     implements FileMetadataExtractorFactory {
   /**
    * Create a MetadataExtractor
+   * @param target the purpose for which metadata is being extracted
    * @param contentType the content type type from which to extract URLs
    */
-  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							   String contentType)
       throws PluginException {
     String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
     if ("text/html".equalsIgnoreCase(mimeType)) {

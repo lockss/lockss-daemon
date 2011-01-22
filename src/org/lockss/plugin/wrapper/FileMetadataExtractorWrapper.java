@@ -1,5 +1,5 @@
 /*
- * $Id: FileMetadataExtractorWrapper.java,v 1.4 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: FileMetadataExtractorWrapper.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -50,10 +50,12 @@ public class FileMetadataExtractorWrapper
     return inst;
   }
 
-  public void extract(CachedUrl cu, FileMetadataExtractor.Emitter emitter)
+  public void extract(MetadataTarget target,
+		      CachedUrl cu,
+		      FileMetadataExtractor.Emitter emitter)
       throws IOException, PluginException {
     try {
-      inst.extract(cu, emitter);
+      inst.extract(target, cu, emitter);
     } catch (LinkageError e) {
       throw new PluginException.LinkageError(e);
     }

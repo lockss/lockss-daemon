@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleXmlMetadataExtractor.java,v 1.5 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: SimpleXmlMetadataExtractor.java,v 1.6 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -62,9 +62,10 @@ public class SimpleXmlMetadataExtractor extends SimpleFileMetadataExtractor {
   /*
    * XXX this should really do an XML parse and get all the metadata
    */
-  public ArticleMetadata extract(CachedUrl cu) throws IOException {
+  public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+      throws IOException {
     if (cu == null) {
-      throw new IllegalArgumentException("extract(null)");
+      throw new IllegalArgumentException("extract() called with null CachedUrl");
     }
     ArticleMetadata ret = new ArticleMetadata();
     BufferedReader bReader =

@@ -1,5 +1,5 @@
 /*
- * $Id: TestElsevierMetadataExtractor.java,v 1.3 2011-01-10 09:18:09 tlipkis Exp $
+ * $Id: TestElsevierMetadataExtractor.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -110,7 +110,8 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
 
     Plugin plugin = eau.getPlugin();
     String articleMimeType = "application/pdf";
-    ArticleMetadataExtractor me = plugin.getArticleMetadataExtractor(null, eau);
+    ArticleMetadataExtractor me =
+      plugin.getArticleMetadataExtractor(MetadataTarget.Any, eau);
     ArticleMetadataListExtractor mle =
       new ArticleMetadataListExtractor(me);
     int count = 0;
@@ -129,7 +130,7 @@ public class TestElsevierMetadataExtractor extends LockssTestCase {
       assertTrue("XML cu is " + contentType + " (" + xcu + ")",
 		 contentType.toLowerCase().startsWith("text/xml"));
       count++;
-      List<ArticleMetadata> mdlist = mle.extract(af);
+      List<ArticleMetadata> mdlist = mle.extract(MetadataTarget.Any, af);
       assertNotEmpty(mdlist);
       ArticleMetadata md = mdlist.get(0);
       assertNotNull(md);

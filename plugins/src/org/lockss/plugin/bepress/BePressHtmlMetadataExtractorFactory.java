@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.8 2011-01-20 08:36:06 tlipkis Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.9 2011-01-22 08:22:30 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,8 @@ public class BePressHtmlMetadataExtractorFactory
   implements FileMetadataExtractorFactory {
   static Logger log = Logger.getLogger("BePressHtmlMetadataExtractorFactory");
 
-  public FileMetadataExtractor createFileMetadataExtractor(String contentType)
+  public FileMetadataExtractor createFileMetadataExtractor(MetadataTarget target,
+							   String contentType)
       throws PluginException {
     return new BePressHtmlMetadataExtractor();
   }
@@ -88,8 +89,10 @@ public class BePressHtmlMetadataExtractorFactory
      * Use SimpleHtmlMetaTagMetadataExtractor to extract raw metadata, map
      * to cooked fields, then extract the ISSN by reading the file.
      */
-    public ArticleMetadata extract(CachedUrl cu) throws IOException {
-      ArticleMetadata am = super.extract(cu);
+    @Override
+    public ArticleMetadata extract(MetadataTarget target, CachedUrl cu)
+	throws IOException {
+      ArticleMetadata am = super.extract(target, cu);
 
       // extract metadata from BePress specific metadata tags
       am.cook(tagMap);
