@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.267 2011-01-23 01:12:45 dshr Exp $
+ $Id: build.xml,v 1.268 2011-01-23 01:18:19 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1209,8 +1209,8 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
 
     <property name="protosolaris.top" value="${basedir}/rpms" />
     <property name="solaris.top" value="${temp.solaris.dir}" />
-    <property name="solaris.prototype.file" value="${solaris.top}/Prototype" />
     <property name="solaris.build" value="${solaris.top}/BUILD" />
+    <property name="solaris.prototype.file" value="${solaris.build}/Prototype" />
     <property name="solaris.root" value="${solaris.build}/lockss-daemon-root" />
     <property name="target.jardir" value="/opt/lockss/usr/share/lockss" />
     <property name="solaris.jardir" value="${solaris.root}${target.jardir}" />
