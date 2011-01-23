@@ -108,6 +108,7 @@ while [ -f ${KEEP_GOING} ]; do
         ;;
     SunOS)
         export USER=$1
+        cd /tmp
         su $1 -c "${COMMAND}"
         ;;
     esac
