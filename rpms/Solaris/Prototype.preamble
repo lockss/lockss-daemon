@@ -14,6 +14,7 @@ f none /opt/lockss/etc/lockss/functions 0755 root sys
 f none /opt/lockss/etc/lockss/hostconfig 0744 root sys
 f none /opt/lockss/etc/lockss/rundaemon 0755 root sys
 f none /opt/lockss/etc/lockss/runssl 0744 root sys
+f none /opt/lockss/etc/lockss/upgrade-solaris 0744 root sys
 f none /opt/lockss/etc/lockss/startdaemon 0744 root sys
 d none /opt/lockss/usr 0755 root sys
 d none /opt/lockss/usr/share 0755 root sys

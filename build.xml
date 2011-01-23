@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.266 2011-01-20 08:35:18 tlipkis Exp $
+ $Id: build.xml,v 1.267 2011-01-23 01:12:45 dshr Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -1179,6 +1179,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
      <fileset refid="rpm.jars.set" />
     </copy>
     <delete file="${rpm.root}/etc/init.d/lockss.solaris" quiet="true" />
+    <delete file="${rpm.root}/etc/lockss/upgrade-solaris" quiet="true" />
     <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}" />
     <!-- rpmbuild failure doesn't necessarily cause rpm task to fail, so
          check whether any rpms were built  -->

@@ -1,0 +1,35 @@
+#!/bin/sh
+if [ "X${1}" = X ]; then
+    echo "Usage: upgrade-daemon pkg-file"
+    exit 1
+fi
+if [ ! -f ${1} ]; then
+    echo "Usage: upgrade-daemon pkg-file"
+    exit 1
+fi
+case ${1} in
+*.Solaris.10.pkg.tgz)
+    break
+    ;;
+*)
+    echo "Usage: upgrade-daemon pkg-file"
+    exit 1
+    ;;
+esac
+/etc/init.d/lockss stop
+sleep 3
+if pkgrm -A LOCKSS
+then
+    TMPPKGPATH=`mktemp -d /tmp/locksspkg.XXXX`
+    gunzip -c ${1} | ( cd ${TMPPKGPATH} ; tar xf - )
+    if pkgadd -d ${TMPPKGPATH} LOCKSS
+    then
+        rm -rf ${TMPPKGPATH}
+        echo "Upgrade from ${1} successful - restarting LOCKSS."
+        /etc/init.d/lockss start 
+    else
+        echo "Upgrade from ${1} failed - please reinstall previous."
+    fi
+else
+    echo "Failed to remove previous daemon package."
+fi
