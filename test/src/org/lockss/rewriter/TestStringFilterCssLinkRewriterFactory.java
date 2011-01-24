@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.3 2010-06-25 07:42:15 tlipkis Exp $
+ * $Id: TestStringFilterCssLinkRewriterFactory.java,v 1.4 2011-01-24 23:55:33 pgust Exp $
  */
 
 /*
@@ -118,23 +118,7 @@ public class TestStringFilterCssLinkRewriterFactory extends LockssTestCase {
     }
   }
 
-  public void testThrowsIfNoPort() {
-    in = new StringInputStream(page);
-    setupConfig(false);
-    try {
-      sfclrf.createLinkRewriter("text/css", au, in,
-				encoding, url, xform);
-      fail("createLinkRewriter should have thrown if no port");
-    } catch (Exception ex) {
-      if (ex instanceof PluginException) {
-	return;
-      }
-      fail("createLinkRewriter should have thrown PluginException but threw " +
-	   ex.toString());
-    }
-  }
-
-  public void testAbsRewriting() throws Exception {
+   public void testAbsRewriting() throws Exception {
     in = new StringInputStream(absImportBefore);
     log.debug3("page is " + absImportBefore);
     setupConfig(true);
