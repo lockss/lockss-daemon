@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilterCssLinkRewriterFactory.java,v 1.3 2010-06-25 07:42:16 tlipkis Exp $
+ * $Id: StringFilterCssLinkRewriterFactory.java,v 1.4 2011-01-24 23:43:26 pgust Exp $
  */
 
 /*
@@ -62,13 +62,14 @@ public class StringFilterCssLinkRewriterFactory implements LinkRewriterFactory {
       throws PluginException {
     if ("text/css".equalsIgnoreCase(mimeType)) {
       logger.debug("Rewriting " + url + " in AU " + au);
-
+/** PJG -- port never used and its absence causes method to fail
       int port = 0;
       try {
 	  port = CurrentConfig.getIntParam(ContentServletManager.PARAM_PORT);
       } catch (org.lockss.config.Configuration.InvalidParam ex) {
 	  throw new PluginException("No port available: " + ex);
       }
+*/      
       // urlPrefix is http://host:port/ServeContent?url=
       String urlPrefix = xform.rewrite("");
       // urlBase is url made absolute up to but excluding the last /
