@@ -1,5 +1,5 @@
 /*
- * $Id: JavaUrlConnection.java,v 1.6 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: JavaUrlConnection.java,v 1.7 2011-01-24 23:32:03 pgust Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -35,7 +35,7 @@ import java.io.*;
 import java.net.*;
 import org.lockss.util.*;
 
-/** Encapsulates Java's native URLConnection impelementation as a
+/** Encapsulates Java's native URLConnection implementation as a
  * LockssUrlConnection.  Used for all non-http(s) connections.
  */
 public class JavaUrlConnection extends BaseLockssUrlConnection {
@@ -124,6 +124,15 @@ public class JavaUrlConnection extends BaseLockssUrlConnection {
   public String getResponseContentType() {
     assertExecuted();
     return urlConn.getContentType();
+  }
+  
+  /** 
+   * Return the last-modified: from the response header.
+   * @return the last-modified header response
+   */
+  public long getResponseLastModified() {
+    assertExecuted();
+    return urlConn.getLastModified();
   }
 
   /**

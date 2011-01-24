@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.32 2010-11-29 07:26:03 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.33 2011-01-24 23:32:03 pgust Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -271,6 +271,33 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 			getCookiePolicy(policy));
   }
 
+  /**
+   * Add a cookie to the client state.
+   * @param cookie the cookie
+   */
+  public void addCookie(Cookie cookie) {
+    assertNotExecuted();
+    client.getState().addCookie(cookie);
+  }
+  
+  /**
+   * Add cookies to the client state.
+   * @param cookies the cookies
+   */
+  public void addCookies(Cookie[] cookies) {
+    assertNotExecuted();
+    client.getState().addCookies(cookies);
+  }
+  
+  /**
+   * Get cookies from client state.
+   * @return the cookies
+   */
+  public Cookie[] getCookies() {
+    assertExecuted();
+    return client.getState().getCookies();
+  }
+
   public void setCredentials(String username, String password) {
     assertNotExecuted();
     Credentials credentials = new UsernamePasswordCredentials(username,
@@ -330,6 +357,18 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
   }
 
+  public long getResponseLastModified() {
+    String datestr = getResponseHeaderValue("last-modified");
+    if (datestr == null) {
+      return -1;
+    }
+    try {
+      return DateUtil.parseDate(datestr).getTime();
+    } catch (DateParseException e) {
+      log.error("Error parsing response last-modified: header: " + datestr, e);
+      return -1;
+    }
+  }
   public long getResponseContentLength() {
     assertExecuted();
     if (method instanceof LockssGetMethod) {

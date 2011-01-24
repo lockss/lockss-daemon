@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.14 2010-12-20 23:44:59 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.15 2011-01-24 23:32:03 pgust Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -139,6 +139,9 @@ public interface LockssUrlConnection {
 
   /** Return the Date: from the response header */
   public long getResponseDate();
+
+  /** Return the last-modified: from the response header */
+  public long getResponseLastModified();
 
   /** Return the value of the content-length response header, as an int.
    * @return  the content length, or -1 if not known.
