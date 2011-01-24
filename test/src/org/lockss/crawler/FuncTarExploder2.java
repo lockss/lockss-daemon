@@ -1,5 +1,5 @@
 /*
- * $Id: FuncTarExploder2.java,v 1.16 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: FuncTarExploder2.java,v 1.17 2011-01-24 23:52:58 pgust Exp $
  */
 
 /*
@@ -293,7 +293,7 @@ public class FuncTarExploder2 extends LockssTestCase {
 		   me instanceof ElsevierXmlMetadataExtractorFactory.ElsevierXmlMetadataExtractor);
 	ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
 	int count = 0;
-	Set foundDoiSet = new HashSet();
+	Set<String> foundDoiSet = new HashSet<String>();
 	for (Iterator<ArticleFiles> it = au.getArticleIterator();
 	     it.hasNext(); ) {
 	  ArticleFiles af = it.next();

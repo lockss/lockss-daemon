@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExploder2.java,v 1.16 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: FuncZipExploder2.java,v 1.17 2011-01-24 23:53:38 pgust Exp $
  */
 
 /*
@@ -275,7 +275,7 @@ public class FuncZipExploder2 extends LockssTestCase {
 	assertNotNull(me);
 	ArticleMetadataListExtractor mle = new ArticleMetadataListExtractor(me);
 	int count = 0;
-	Set foundDoiSet = new HashSet();
+	Set<String> foundDoiSet = new HashSet<String>();
 	for (Iterator<ArticleFiles> it = au.getArticleIterator(); it.hasNext(); ) {
 	  ArticleFiles af = it.next();
 	  CachedUrl cu = af.getFullTextCu();
