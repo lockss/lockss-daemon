@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.13 2011-01-13 06:25:36 pgust Exp $
+ * $Id: Tdb.java,v 1.14 2011-01-25 00:17:14 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.13 2011-01-13 06:25:36 pgust Exp $
+ * @version $Id: Tdb.java,v 1.14 2011-01-25 00:17:14 pgust Exp $
  */
 public class Tdb {
   /**
@@ -57,7 +57,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.13 2011-01-13 06:25:36 pgust Exp $
+   * @version $Id: Tdb.java,v 1.14 2011-01-25 00:17:14 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -109,6 +109,9 @@ public class Tdb {
         super(cause);
     }
   }
+  
+  /** A map of ISSN &lt;-&gt; EISSN */
+  Map<String,String> issnMap = new HashMap<String,String>();
   
   /**
    * Register the au with this Tdb for its plugin.
@@ -385,6 +388,9 @@ public class Tdb {
     if (isSealed()) {
       throw new TdbException("Cannot add otherTdb AUs to sealed Tdb");
     }
+    
+    // merge non-duplicate ISSN map entries
+    issnMap.putAll(otherTdb.issnMap);
 
     // merge non-duplicate publishers of otherTdb
     boolean tdbIsNew = tdbPublisherMap.isEmpty();
@@ -775,12 +781,7 @@ public class Tdb {
    */
   private String getTdbTitleId(Properties props, TdbAu au) {
     // get the title ID from one of several props
-    String titleId = props.getProperty("journal.id");  // proposed new property
-    if (titleId == null) {
-      // use "journal_id" param as title Id if not already set
-      // proposed to replace with "journal.id" property
-      titleId = au.getParam("journal_id");
-    }
+    String titleId = null;
 
     // use isbn property as title id if not already set
     if (titleId == null) {
@@ -796,6 +797,7 @@ public class Tdb {
     if (titleId == null) {
       titleId = props.getProperty("issn");
     }
+    
     return titleId;
   }
   
@@ -861,6 +863,14 @@ public class Tdb {
       logger.warning("Title ID missing for au \"" + au.getName() + "\" -- using " + titleId);
     }
 
+    // update ISSN to EISSN map
+    String issn = props.getProperty("issn");
+    String eissn = props.getProperty("eissn");
+    if ((issn != null) && (eissn != null)) {
+      issnMap.put(issn, eissn);
+      issnMap.put(eissn, issn);
+    }
+    
     // create title and add to publisher
     title = new TdbTitle(titleNameFromProps, titleId);
     try {
@@ -872,7 +882,7 @@ public class Tdb {
     
     return title;
   }
-
+  
   /**
    * Get publisher name from properties and TdbAu. Creates a name 
    * based on title name if not specified.
@@ -898,6 +908,22 @@ public class Tdb {
     return publisherName;
   }
 
+  
+  /**
+   * Get TdbTitle name from properties alone.
+   *
+   * @param props a group of properties
+   * @return
+   */
+  private String getTdbTitleName(Properties props) {
+    // from auName and one of several properties 
+    String titleName = props.getProperty("journalTitle");
+    if (titleName == null) {
+      titleName = props.getProperty("journal.title");  // proposed to replace journalTitle
+    }
+    return titleName;
+  }
+  
   /**
    * Get the TdbTitle name from the properties.  Fall back to a name
    * derived from the TdbAU name if not specified.
@@ -909,10 +935,7 @@ public class Tdb {
   private String getTdbTitleName(Properties props, TdbAu au) {
     // use "journalTitle" prop if specified, or synthesize it 
     // from auName and one of several properties 
-    String titleName = props.getProperty("journalTitle");
-    if (titleName == null) {
-      titleName = props.getProperty("journal.title");  // proposed to replace journalTitle
-    }
+    String titleName = getTdbTitleName(props);
     if (titleName == null) {
       String issue = au.getParam("issue");
       String year = au.getParam("year");
@@ -981,12 +1004,27 @@ public class Tdb {
     if (titleId == null) {
       throw new IllegalArgumentException("titleId cannot be null");
     }
-    
+
     TdbTitle title = null;
     for (TdbPublisher publisher : tdbPublisherMap.values()) {
       title = publisher.getTdbTitleById(titleId);
       if (title != null) {
         break;
+      }
+    }
+
+    if (title == null) {
+      // if the titleId is an ISSN, try the "other" ISSN
+      // note: this is a bit inefficient, and the ISSN to EISSN
+      // mapping should be reworked eventually
+      String otherId = issnMap.get(titleId);
+      if (otherId != null) {
+        for (TdbPublisher publisher : tdbPublisherMap.values()) {
+          title = publisher.getTdbTitleById(otherId);
+          if (title != null) {
+            break;
+          }
+        }
       }
     }
     return title;
