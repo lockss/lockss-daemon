@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.11 2010-11-18 07:18:50 tlipkis Exp $
+ * $Id: ParamDoclet.java,v 1.12 2011-01-25 18:37:49 tlipkis Exp $
  */
 
 /*
@@ -234,7 +234,7 @@ public class ParamDoclet {
     try {
       ClassDoc classDoc = field.containingClass();
 
-      Class c = Class.forName(classDoc.qualifiedName());
+      Class c = Class.forName(getClassName(classDoc));
       Field fld = c.getDeclaredField(field.name());
       fld.setAccessible(true);
       Class cls = fld.getType();
@@ -266,6 +266,19 @@ public class ParamDoclet {
     }
 
     return defaultVal;
+  }
+
+  /** Convert the package-qualified name of a (possibly) nested class into
+   * the actual class name.  I.e., replace dots separating a nested class
+   * from its parent with $ */
+  static String getClassName(ClassDoc classDoc) {
+    String cname = classDoc.qualifiedName();
+    ClassDoc parentDoc;
+    while ((parentDoc = classDoc.containingClass()) != null) {
+      cname = StringUtil.replaceLast(cname, ".", "$");
+      classDoc = parentDoc;
+    }
+    return cname;
   }
 
   /**
