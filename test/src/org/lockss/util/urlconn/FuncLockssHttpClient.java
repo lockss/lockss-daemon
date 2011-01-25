@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.15 2009-02-26 05:15:23 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.16 2011-01-25 07:15:17 tlipkis Exp $
  */
 
 /*
@@ -607,7 +607,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
       throws Exception {
     Properties p = new Properties();
     if ("default".equals(policy)) {
-      policy = "rfc2109";
+      policy = "compatibility";
       singleHeader = true;
     } else {
       p.put(LockssUrlConnection.PARAM_COOKIE_POLICY, policy);
