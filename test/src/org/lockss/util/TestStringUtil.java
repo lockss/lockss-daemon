@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.81 2010-11-17 11:28:13 neilmayo Exp $
+ * $Id: TestStringUtil.java,v 1.82 2011-01-25 18:37:30 tlipkis Exp $
  */
 
 /*
@@ -240,6 +240,18 @@ public class TestStringUtil extends LockssTestCase {
     String s = "foo";
     assertSame(s, StringUtil.replaceFirst(s, "123", "123"));
     assertSame(s, StringUtil.replaceFirst(s, "", "123"));
+  }
+
+  public void testReplaceLast() {
+    assertEquals("aabbcc", StringUtil.replaceLast("aaddcc", "dd", "bb"));
+    assertEquals("aabb", StringUtil.replaceLast("aadd", "dd", "bb"));
+    assertEquals("aaddccbb", StringUtil.replaceLast("aaddccdd", "dd", "bb"));
+    assertEquals("aaddbbcc", StringUtil.replaceLast("aaddddcc", "dd", "bb"));
+    assertSame("aabbcc", StringUtil.replaceLast("aabbcc", "dd", "bb"));
+
+    String s = "foo";
+    assertSame(s, StringUtil.replaceLast(s, "123", "123"));
+    assertSame(s, StringUtil.replaceLast(s, "", "123"));
   }
 
   public void testOverlap(){

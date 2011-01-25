@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.98 2011-01-08 15:39:37 pgust Exp $
+ * $Id: StringUtil.java,v 1.99 2011-01-25 18:37:30 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,27 @@ public class StringUtil {
       return source;
     }
     int index = source.indexOf(oldstr);
+    if (index < 0) {
+      return source;
+    } else {
+      int sourceLen = source.length();
+      StringBuilder sb = new StringBuilder(sourceLen);
+      sb.append(source.substring(0, index));
+      sb.append(newstr);
+      if (index + oldLen < sourceLen) {
+	sb.append(source.substring(index + oldLen));
+      }
+      return sb.toString();
+    }
+  }
+
+  public static String replaceLast(String source,
+				   String oldstr, String newstr) {
+    int oldLen = oldstr.length();
+    if (oldLen == 0 || oldstr.equals(newstr)) {
+      return source;
+    }
+    int index = source.lastIndexOf(oldstr);
     if (index < 0) {
       return source;
     } else {
