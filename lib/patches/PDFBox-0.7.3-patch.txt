@@ -1,6 +1,6 @@
-diff -aur ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java ./org/pdfbox/filter/FlateFilter.java
---- ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java	2007-11-05 00:47:10.000000000 -0800
-+++ ./org/pdfbox/filter/FlateFilter.java	2007-11-05 00:55:19.000000000 -0800
+diff -aur ../PDFBox-0.7.3.0/src/org/pdfbox/filter/FlateFilter.java src/org/pdfbox/filter/FlateFilter.java
+--- ../PDFBox-0.7.3.0/src/org/pdfbox/filter/FlateFilter.java	2006-09-26 21:18:54.000000000 -0700
++++ src/org/pdfbox/filter/FlateFilter.java	2011-01-25 02:25:45.106423006 -0800
 @@ -91,7 +91,7 @@
              int amountRead;
  
@@ -10,20 +10,131 @@ diff -aur ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/filter/FlateFilter.java
              {
                  // decoding not needed
                  while ((amountRead = decompressor.read(buffer, 0, BUFFER_SIZE)) != -1)
-diff -aur ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.java ./org/pdfbox/util/PDFStreamEngine.java
---- ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.java	2007-11-05 00:47:10.000000000 -0800
-+++ ./org/pdfbox/util/PDFStreamEngine.java	2007-11-08 10:33:36.000000000 -0800
-@@ -100,17 +100,17 @@
-     {
-         //default constructor
+@@ -300,4 +300,4 @@
+         out.close();
+         result.flush();
      }
-     
+-}
+\ No newline at end of file
++}
+diff -aur ../PDFBox-0.7.3.0/src/org/pdfbox/pdfparser/PDFStreamParser.java src/org/pdfbox/pdfparser/PDFStreamParser.java
+--- ../PDFBox-0.7.3.0/src/org/pdfbox/pdfparser/PDFStreamParser.java	2006-09-26 21:18:54.000000000 -0700
++++ src/org/pdfbox/pdfparser/PDFStreamParser.java	2011-01-25 02:37:26.930423005 -0800
+@@ -31,11 +31,12 @@
+ package org.pdfbox.pdfparser;
+ 
+ import java.io.ByteArrayOutputStream;
+-import java.io.InputStream;
+ import java.io.IOException;
+-
++import java.io.InputStream;
+ import java.util.ArrayList;
++import java.util.Iterator;
+ import java.util.List;
++import java.util.NoSuchElementException;
+ 
+ import org.pdfbox.cos.COSBase;
+ import org.pdfbox.cos.COSBoolean;
+@@ -46,10 +47,9 @@
+ import org.pdfbox.cos.COSObject;
+ import org.pdfbox.cos.COSStream;
+ import org.pdfbox.io.RandomAccess;
+-
+ import org.pdfbox.pdmodel.common.PDStream;
+-import org.pdfbox.util.PDFOperator;
+ import org.pdfbox.util.ImageParameters;
++import org.pdfbox.util.PDFOperator;
+ 
+ /**
+  * This will parse a PDF byte stream and extract operands and such.
+@@ -133,6 +133,68 @@
+         return streamObjects;
+     }
+ 
++    public void close() throws IOException
++    {
++    	pdfSource.close();
++    }
++
++    /**
++     * This will get an iterator which can be used to parse the stream
++     * one token after the other.
++     * 
++     * @return an iterator to get one token after the other
++     */
++    public Iterator<Object> getTokenIterator()
++    {
++        return new Iterator<Object>()
++        {
++			private Object	token;
++
++			private void tryNext()
++			{
++				try {
++					if(token == null)
++					{
++						token = parseNextToken();
++					}
++				} catch (IOException e) {
++					throw new RuntimeException(e);
++				}
++			}
++
++		    /**
++		     * {@inheritDoc}
++		     */
++			public boolean hasNext() 
++			{
++				tryNext();
++				return token != null;
++			}
++
++		    /**
++		     * {@inheritDoc}
++		     */
++			public Object next() {
++				tryNext();
++				Object tmp = token;
++				if(tmp == null)
++				{
++					throw new NoSuchElementException();
++				}
++				token = null;
++				return tmp;
++			}
++
++		    /**
++		     * {@inheritDoc}
++		     */
++			public void remove() 
++			{
++				throw new UnsupportedOperationException();
++			}
++        };
++    }
++
      /**
-      * Constructor with engine properties.  The property keys are all
-      * PDF operators, the values are class names used to execute those
-      * operators.
-      * 
-      * @param properties The engine properties.
+      * This will parse the next token in the stream.
+      *
+@@ -394,4 +456,4 @@
+         }
+         return buffer.toString();
+     }
+-}
+\ No newline at end of file
++}
+diff -aur ../PDFBox-0.7.3.0/src/org/pdfbox/util/PDFStreamEngine.java src/org/pdfbox/util/PDFStreamEngine.java
+--- ../PDFBox-0.7.3.0/src/org/pdfbox/util/PDFStreamEngine.java	2006-09-30 18:55:14.000000000 -0700
++++ src/org/pdfbox/util/PDFStreamEngine.java	2011-01-25 03:01:55.658423000 -0800
+@@ -44,6 +44,7 @@
+ import org.pdfbox.cos.COSStream;
+ import org.pdfbox.exceptions.WrappedIOException;
+ 
++import org.pdfbox.pdfparser.PDFStreamParser;
+ import org.pdfbox.pdmodel.PDPage;
+ import org.pdfbox.pdmodel.PDResources;
+ 
+@@ -110,7 +111,7 @@
       * 
       * @throws IOException If there is an error setting the engine properties.
       */
@@ -32,7 +143,7 @@ diff -aur ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.ja
      {
          try
          {
-@@ -119,19 +119,32 @@
+@@ -119,16 +120,29 @@
              {
                  String operator = (String)keys.next();
                  String operatorClass = properties.getProperty( operator );
@@ -64,15 +175,70 @@ diff -aur ../../../pdfbox073/PDFBox-0.7.3/src/org/pdfbox/util/PDFStreamEngine.ja
      /**
       * Register a custom operator processor with the engine.
       * 
-      * @param operator The operator as a string.
-      * @param op Processor instance.
-      */
-@@ -213,7 +226,7 @@
-                     else if( next instanceof PDFOperator )
-                     {
-                         processOperator( (PDFOperator)next, arguments );
+@@ -186,6 +200,7 @@
+     public void processSubStream( PDPage aPage, PDResources resources, COSStream cosStream ) throws IOException
+     {
+         page = aPage;
++        PDFStreamParser parser = null;
+         if( resources != null )
+         {
+             StreamResources sr = new StreamResources();
+@@ -199,31 +214,33 @@
+         try
+         {
+             List arguments = new ArrayList();
+-            List tokens = cosStream.getStreamTokens();
+-            if( tokens != null )
++
++            parser = new PDFStreamParser( cosStream );
++            Iterator<Object> iter = parser.getTokenIterator();
++
++            while( iter.hasNext() )
+             {
+-                Iterator iter = tokens.iterator();
+-                while( iter.hasNext() )
++                Object next = iter.next();
++                if( next instanceof COSObject )
+                 {
+-                    Object next = iter.next();
+-                    if( next instanceof COSObject )
+-                    {
+-                        arguments.add( ((COSObject)next).getObject() );
+-                    }
+-                    else if( next instanceof PDFOperator )
+-                    {
+-                        processOperator( (PDFOperator)next, arguments );
 -                        arguments = new ArrayList();
-+                        arguments.clear();
-                     }
-                     else
-                     {
+-                    }
+-                    else
+-                    {
+-                        arguments.add( next );
+-                    }
++                    arguments.add( ((COSObject)next).getObject() );
++                }
++                else if( next instanceof PDFOperator )
++                {
++                    processOperator( (PDFOperator)next, arguments );
++                    arguments.clear();
++                }
++                else
++                {
++                    arguments.add( next );
+                 }
+             }
+         }
+         finally
+         {
++            if (parser != null) {
++                parser.close();
++            }
+             if( resources != null )
+             {
+                 streamResourcesStack.pop();
+@@ -577,4 +594,4 @@
+     {
+         return page;
+     }
+-}
+\ No newline at end of file
++}
