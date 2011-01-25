@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.1 2011-01-24 23:50:50 pgust Exp $
+ * $Id: MetadataManager.java,v 1.2 2011-01-25 17:55:25 pgust Exp $
  */
 
 /*
@@ -187,6 +187,20 @@ public class MetadataManager
   static private final int MAX_PLUGIN_ID_FIELD = 96;
   
   /**
+   * Get the root directory for creating the database files.
+   * @return the root directory
+   */
+  protected String getDbRootDirectory() {
+    String rootDir = System.getProperty("user.dir");
+    @SuppressWarnings("unchecked")
+    List<String> dSpaceList = ConfigManager.getCurrentConfig().getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+    if (dSpaceList != null && !dSpaceList.isEmpty()) {
+      rootDir = dSpaceList.get(0);
+    }
+    return rootDir;
+  }
+  
+  /**
    * Initialize the manager from the current configuration.
    */
   protected void initializeManager(Configuration config) {
@@ -207,14 +221,7 @@ public class MetadataManager
       // class name not really part of data source definition.
       datasourceConfig.remove("className");
     } else {
-      // set default datasource properties
-      String databaseName = "db/MetadataManager";
-      @SuppressWarnings("unchecked")
-      List<String> dSpaceList = config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-      if (dSpaceList != null && !dSpaceList.isEmpty()) {
-        // make databaseName absolute to first path in list
-        databaseName = new File(dSpaceList.get(0), databaseName).getAbsolutePath();
-      }
+      String databaseName = new File(getDbRootDirectory(), "db/MetadataManager").getAbsolutePath();
       // use derby embedded datasource by default
       dataSourceClassName = "org.apache.derby.jdbc.EmbeddedDataSource";
       datasourceConfig.put("databaseName", databaseName);

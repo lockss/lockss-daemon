@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.1 2011-01-25 00:49:30 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.2 2011-01-25 17:55:25 pgust Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
   
   public void setUp(int max) throws Exception {
 
-    String tempDirPath = getTempDir().getAbsolutePath();
+    final String tempDirPath = getTempDir().getAbsolutePath();
     String auId0 = "org|lockss|daemon|TestOpenUrlResolver$MySimulatedPlugin0.root~" +
       PropKeyEncoder.encode(tempDirPath);
     String auId1 = "org|lockss|daemon|TestOpenUrlResolver$MySimulatedPlugin1.root~" +
@@ -155,7 +155,19 @@ public class TestOpenUrlResolver extends LockssTestCase {
     pluginManager.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     pluginManager.startService();
+    
+    // set derby database log 
+    System.setProperty("derby.stream.error.file", new File(tempDirPath,"derby.log").getAbsolutePath());
+    
     metadataManager = new MetadataManager() {
+      /**
+       * Get the db root directory for testing.
+       * @return the db root directory
+       */
+      protected String getDbRootDirectory() {
+        return tempDirPath;
+      }
+      
       /**
        * Notify listeners that an AU is being reindexed.
        * 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.1 2011-01-24 23:50:50 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.2 2011-01-25 17:55:25 pgust Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class TestMetadataManager extends LockssTestCase {
   
   public void setUp(int max) throws Exception {
 
-    String tempDirPath = getTempDir().getAbsolutePath();
+    final String tempDirPath = getTempDir().getAbsolutePath();
     String auId0 = "org|lockss|daemon|TestMetadataManager$MySimulatedPlugin0.root~" +
       PropKeyEncoder.encode(tempDirPath);
     String auId1 = "org|lockss|daemon|TestMetadataManager$MySimulatedPlugin1.root~" +
@@ -151,7 +151,19 @@ public class TestMetadataManager extends LockssTestCase {
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
+
+    // set derby database log 
+    System.setProperty("derby.stream.error.file", new File(tempDirPath,"derby.log").getAbsolutePath());
+    
     metadataManager = new MetadataManager() {
+      /**
+       * Get the db root directory for testing.
+       * @return the db root directory
+       */
+      protected String getDbRootDirectory() {
+        return tempDirPath;
+      }
+      
       /**
        * Notify listeners that an AU is being reindexed.
        * 
