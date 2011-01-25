@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.82 2011-01-10 09:08:34 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.83 2011-01-25 07:14:00 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.test.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
+import org.lockss.alert.*;
 
 /**
  * Test class for CrawlManagerImpl.
@@ -194,7 +195,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       //we know that doCrawl started
 
       // stopping AU should run AuEventHandler, which should cancel crawl
-      pluginMgr.stopAu(mau);
+      pluginMgr.stopAu(mau, PluginManager.AuEvent.Delete);
 
       assertTrue(crawler.wasAborted());
     }
@@ -1453,6 +1454,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 	registryAus = new ArrayList();
       }
       registryAus.add(au);
+    }
+
+    @Override
+    protected void raiseAlert(Alert alert, String msg) {
     }
   }
 

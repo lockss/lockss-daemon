@@ -1,5 +1,5 @@
 /*
- * $Id: PluginTestUtil.java,v 1.3 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: PluginTestUtil.java,v 1.4 2011-01-25 07:14:00 tlipkis Exp $
  *
 
 Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
@@ -137,7 +137,7 @@ public class PluginTestUtil {
       tp.unregisterArchivalUnit(au);
       aulist.remove(au);
     }
-    mgr.stopAu(au);
+    mgr.stopAu(au, PluginManager.AuEvent.Delete);
   }
 
   public static void unregisterAllArchivalUnits() {
@@ -162,13 +162,15 @@ public class PluginTestUtil {
   public static ArchivalUnit createAu(Plugin plugin,
 				      Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    return getPluginManager().createAu(plugin, auConfig);
+    return getPluginManager().createAu(plugin, auConfig,
+				       PluginManager.AuEvent.Create);
   }
 
   public static ArchivalUnit createAndStartAu(Plugin plugin,
 					      Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = getPluginManager().createAu(plugin, auConfig);
+    ArchivalUnit au = getPluginManager().createAu(plugin, auConfig,
+						  PluginManager.AuEvent.Create);
     LockssDaemon daemon = plugin.getDaemon();
     daemon.getHistoryRepository(au).startService();
     daemon.getLockssRepository(au).startService();

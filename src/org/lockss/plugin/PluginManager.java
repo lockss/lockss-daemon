@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.211 2010-12-01 01:42:50 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.212 2011-01-25 07:14:00 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.apache.commons.collections.map.LRUMap;
 
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.alert.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.definable.DefinablePlugin;
@@ -214,6 +215,7 @@ public class PluginManager
     DEFAULT_USE_DEFAULT_PLUGIN_REGISTRIES;
 
   private ConfigManager configMgr;
+  private AlertManager alertMgr;
 
   private File pluginDir = null;
   private AuOrderComparator auComparator = new AuOrderComparator();
@@ -305,6 +307,7 @@ public class PluginManager
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
+    alertMgr = getDaemon().getAlertManager();
     // Initialize the plugin directory.
     initPluginDir();
     PluginStatus.register(getDaemon(), this);
@@ -747,11 +750,11 @@ public class PluginManager
       }
       if (oldAu != null) {
 	log.debug("Reconfigured AU " + au);
-	signalAuEvent(au, AU_CHANGE_RECONFIG, oldConfig);
+	signalAuEvent(au, AuEvent.Reconfig, oldConfig);
       } else {
 	log.debug("Configured AU " + au);
 	putAuInMap(au);
-	signalAuEvent(au, AU_CHANGE_CREATED, null);
+	signalAuEvent(au, AuEvent.StartupCreate, null);
       }
     } catch (ArchivalUnit.ConfigurationException e) {
       throw e;
@@ -762,7 +765,7 @@ public class PluginManager
     }
   }
 
-  ArchivalUnit createAu(Plugin plugin, Configuration auConf)
+  ArchivalUnit createAu(Plugin plugin, Configuration auConf, AuEvent event)
       throws ArchivalUnit.ConfigurationException {
     String auid = null;
     ArchivalUnit oldAu = null;
@@ -791,7 +794,7 @@ public class PluginManager
 					      e);
       }
       putAuInMap(au);
-      signalAuEvent(au, AU_CHANGE_CREATED, null);
+      signalAuEvent(au, event, null);
       return au;
     } catch (ArchivalUnit.ConfigurationException e) {
       throw e;
@@ -806,7 +809,7 @@ public class PluginManager
    * configured.  Does not affect the AU's current repository contents.
    * @return true if the AU was removed, false if it didn't exist or is
    * stale. */
-  public boolean stopAu(ArchivalUnit au) {
+  public boolean stopAu(ArchivalUnit au, AuEvent event) {
     String auid = au.getAuId();
     ArchivalUnit mapAu = (ArchivalUnit)auMap.get(auid);
     if (mapAu == null) {
@@ -827,7 +830,7 @@ public class PluginManager
     }
     delHostAus(au);
 
-    signalAuEvent(au, AU_CHANGE_DELETED, null);
+    signalAuEvent(au, AuEvent.Delete, null);
 
     try {
       Plugin plugin = au.getPlugin();
@@ -850,9 +853,8 @@ public class PluginManager
     return auid != null && auMap.get(auid) == au;
   }
 
-  static final int AU_CHANGE_CREATED = 1;
-  static final int AU_CHANGE_DELETED = 2;
-  static final int AU_CHANGE_RECONFIG = 3;
+  public enum AuEvent {Create, Delete, Reconfig,
+      RestartCreate, RestartDelete, StartupCreate};
 
   /**
    * Register a handler for AU events: create, delete, reconfigure.  May be
@@ -875,29 +877,56 @@ public class PluginManager
     auEventHandlers.remove(aueh);
   }
 
+  protected void raiseAlert(Alert alert, String msg) {
+    if (alertMgr != null) {
+      alertMgr.raiseAlert(alert, msg);
+    }
+  }
+
   void signalAuEvent(final ArchivalUnit au,
-		     final int how,
+		     final AuEvent how,
 		     final Configuration oldAuConfig) {
     if (log.isDebug2()) log.debug2("AuEvent " + how + ": " + au);
-    applyAuEvent(new AuEventClosure() {
-	public void execute(AuEventHandler hand) {
-	  try {
-	    switch (how) {
-	    case AU_CHANGE_CREATED:
+
+    switch (how) {
+    case Create:
+      raiseAlert(Alert.auAlert(Alert.AU_CREATED, au), "AU created");
+      // falls through
+    case RestartCreate:
+    case StartupCreate:
+      applyAuEvent(new AuEventClosure() {
+	  public void execute(AuEventHandler hand) {
+	    try {
 	      hand.auCreated(au);
-	      break;
-	    case AU_CHANGE_DELETED:
-	      hand.auDeleted(au);
-	      break;
-	    case AU_CHANGE_RECONFIG:
-	      hand.auReconfigured(au, oldAuConfig);
-	      break;
+	    } catch (Exception e) {
+	      log.error("AuEventHandler threw", e);
 	    }
-	  } catch (Exception e) {
-	    log.error("AuEventHandler threw", e);
-	  }
-	}
-      });
+	  }});
+      break;
+    case Delete:
+      raiseAlert(Alert.auAlert(Alert.AU_DELETED, au), "AU deleted");
+      // falls through
+    case RestartDelete:
+      applyAuEvent(new AuEventClosure() {
+	  public void execute(AuEventHandler hand) {
+	    try {
+	      hand.auDeleted(au);
+	    } catch (Exception e) {
+	      log.error("AuEventHandler threw", e);
+	    }
+	  }});
+      break;
+    case Reconfig:
+      applyAuEvent(new AuEventClosure() {
+	  public void execute(AuEventHandler hand) {
+	    try {
+	      hand.auReconfigured(au, oldAuConfig);
+	    } catch (Exception e) {
+	      log.error("AuEventHandler threw", e);
+	    }
+	  }});
+      break;
+    }
   }
       
   /** Closure applied to each AuEventHandler by {@link
@@ -1063,7 +1092,7 @@ public class PluginManager
       throws ArchivalUnit.ConfigurationException, IOException {
     synchronized (auAddDelLock) {
       auConf.put(AU_PARAM_DISABLED, "false");
-      ArchivalUnit au = createAu(plugin, auConf);
+      ArchivalUnit au = createAu(plugin, auConf, AuEvent.Create);
       updateAuConfigFile(au, auConf);
       return au;
     }
@@ -1123,7 +1152,7 @@ public class PluginManager
     synchronized (auAddDelLock) {
       deleteAuConfiguration(au);
       if (isRemoveStoppedAus()) {
-	stopAu(au);
+	stopAu(au, AuEvent.Delete);
       }
     }
   }
@@ -1138,7 +1167,7 @@ public class PluginManager
       deactivateAuConfiguration(au);
       if (isRemoveStoppedAus()) {
 	String auid = au.getAuId();
-	stopAu(au);
+	stopAu(au, AuEvent.Delete);
 	inactiveAuIds.add(auid);
       }
     }
@@ -1162,7 +1191,7 @@ public class PluginManager
 	Configuration auConf = au.getConfiguration();
 	configMap.put(auid, auConf);
 	numAusRestarting++;
-	stopAu(au);
+	stopAu(au, AuEvent.RestartDelete);
       }
       try {
 	Deadline.in(auRestartSleep(aus.size())).sleep();
@@ -1175,7 +1204,7 @@ public class PluginManager
 	String pkey = pluginKeyFromId(pluginIdFromAuId(auid));
 	Plugin plug = getPlugin(pkey);
 	try {
-	  ArchivalUnit newAu = createAu(plug, auConf);
+	  ArchivalUnit newAu = createAu(plug, auConf, AuEvent.RestartCreate);
 	  numAusRestarting--;
 	} catch (ArchivalUnit.ConfigurationException e) {
 	  log.error("Failed to restart: " + auid);

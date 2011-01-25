@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.88 2010-11-03 06:06:06 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.89 2011-01-25 07:14:00 tlipkis Exp $
  */
 
 /*
@@ -439,7 +439,7 @@ public class TestPluginManager extends LockssTestCase {
     assertNotNull(mpi);
     mgr.registerAuEventHandler(new MyAuEventHandler());
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config);
+    ArchivalUnit au = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
 
     // verify put in PluginManager map
     String auid = au.getAuId();
@@ -460,14 +460,16 @@ public class TestPluginManager extends LockssTestCase {
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
     mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
     try {
-      ArchivalUnit au2 = mgr.createAu(mpi, config);
+      ArchivalUnit au2 = mgr.createAu(mpi, config,
+				      PluginManager.AuEvent.Create);
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
     mpi.setRtEx(new ExpectedRuntimeException("Ok if in log"));
     try {
-      ArchivalUnit au2 = mgr.createAu(mpi, config);
+      ArchivalUnit au2 = mgr.createAu(mpi, config,
+				      PluginManager.AuEvent.Create);
       fail("createAU should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
@@ -487,7 +489,7 @@ public class TestPluginManager extends LockssTestCase {
     assertNotNull(mpi);
     mgr.registerAuEventHandler(new MyAuEventHandler());
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config);
+    ArchivalUnit au = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
 
     String auid = au.getAuId();
     ArchivalUnit aux = mgr.getAuFromId(auid);
@@ -557,7 +559,7 @@ public class TestPluginManager extends LockssTestCase {
     ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
     assertNotNull(mpi);
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config);
+    ArchivalUnit au = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
     assertNotNull(au);
     assertTrue(mgr.isActiveAu(au));
     String auId = au.getAuId();
@@ -578,7 +580,7 @@ public class TestPluginManager extends LockssTestCase {
       fail("Deactivating au should not have thrown", ex);
     }
     // Recreate the AU, will get a new instance
-    ArchivalUnit au2 = mgr.createAu(mpi, config);
+    ArchivalUnit au2 = mgr.createAu(mpi, config, PluginManager.AuEvent.Create);
     assertNotNull(au2);
     assertFalse(mgr.isActiveAu(au));
     assertTrue(mgr.isActiveAu(au2));
@@ -617,7 +619,8 @@ public class TestPluginManager extends LockssTestCase {
 
     // Test setAndSaveAuConfiguration
     ArchivalUnit au3 = mgr.createAu(mpi,
-				    ConfigurationUtil.fromArgs("foo", "bar"));
+				    ConfigurationUtil.fromArgs("foo", "bar"),
+				    PluginManager.AuEvent.Create);
     try {
       mgr.setAndSaveAuConfiguration(au3, props);
 
@@ -1385,7 +1388,8 @@ public class TestPluginManager extends LockssTestCase {
     Configuration config = ConfigurationUtil.fromArgs("base_url",
 						      "http://example.com/a/"
 						      ,"year", "1942");
-    ArchivalUnit au1 = mgr.createAu(plugin1, config);
+    ArchivalUnit au1 = mgr.createAu(plugin1, config,
+				    PluginManager.AuEvent.Create);
     String auid = au1.getAuId();
     assertNotNull(au1);
     assertSame(plugin1, au1.getPlugin());
