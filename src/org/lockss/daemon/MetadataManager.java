@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.2 2011-01-25 17:55:25 pgust Exp $
+ * $Id: MetadataManager.java,v 1.3 2011-01-25 19:19:09 pgust Exp $
  */
 
 /*
@@ -787,7 +787,7 @@ public class MetadataManager
     ArticleMetadataExtractor  ae;
     Iterator<ArticleFiles> articleIterator = null;
     Connection conn;
-    static final int DEFAULT_STEPS = 10;
+    static final int default_steps = 10;
 
     /**
      * Create a reindexing task for the AU
@@ -886,7 +886,7 @@ public class MetadataManager
      */
     public int step(int n) {
       final int[] extracted = new int[1];
-      int steps = (n <= 0) ? DEFAULT_STEPS : n;
+      int steps = (n <= 0) ? default_steps : n;
       log.debug("step: " + steps + ", has articles: " + articleIterator.hasNext());
 
       while (   !isFinished() 
