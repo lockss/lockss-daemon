@@ -1,5 +1,5 @@
 /*
- * $Id: ServeContent.java,v 1.25 2011-01-10 09:12:40 tlipkis Exp $
+ * $Id: ServeContent.java,v 1.26 2011-01-25 00:50:11 pgust Exp $
  */
 
 /*
@@ -37,26 +37,26 @@ import javax.servlet.*;
 import java.io.*;
 import java.util.*;
 import java.util.List;
-import java.net.*;
-import java.text.*;
 import org.apache.commons.collections.*;
+import org.apache.commons.httpclient.util.DateParseException;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
-import org.mortbay.servlet.MultiPartRequest;
-import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.LockssUrlConnection;
+import org.lockss.util.urlconn.LockssUrlConnectionPool;
+import org.lockss.app.LockssDaemon;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.jetty.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import org.lockss.filter.*;
+import org.lockss.proxy.ProxyManager;
 import org.lockss.state.*;
 import org.lockss.rewriter.*;
 
 /** ServeContent servlet displays cached content with links
  *  rewritten.
  */
+@SuppressWarnings("serial")
 public class ServeContent extends LockssServlet {
   static final Logger log = Logger.getLogger("ServeContent");
 
@@ -82,6 +82,13 @@ public class ServeContent extends LockssServlet {
       HostAuIndex,
       AuIndex,
       ForwardRequest}
+  
+  /** Timeout parameter for connecting to publisher */
+  public static final String PARAM_PUBLISHER_TIMEOUT = PREFIX + "publisherConnectionTimeout";
+  
+  /** Default timeout value for connecting to publisher (milliseconds) */
+  public static final int DEFAULT_PUBLISHER_TIMEOUT = 500; // milliseconds
+
 
   /** If true, rewritten links will be absolute
    * (http:/host:port/ServeContent?url=...).  If false, relative
@@ -102,14 +109,14 @@ public class ServeContent extends LockssServlet {
   public static final String PARAM_INCLUDE_PLUGINS =
     PREFIX + "includePlugins";
 
-  public static final List DEFAULT_INCLUDE_PLUGINS = Collections.EMPTY_LIST;
+  public static final List<String> DEFAULT_INCLUDE_PLUGINS = Collections.emptyList();
 
   /** Exclude from index AUs in listed plugins.  Set only one of
    * PARAM_INCLUDE_PLUGINS or PARAM_EXCLUDE_PLUGINS */
   public static final String PARAM_EXCLUDE_PLUGINS =
     PREFIX + "excludePlugins";
 
-  public static final List DEFAULT_EXCLUDE_PLUGINS = Collections.EMPTY_LIST;
+  public static final List<String> DEFAULT_EXCLUDE_PLUGINS = Collections.emptyList();
 
   /** If true, Include internal AUs (plugin registries) in index */
   public static final String PARAM_INCLUDE_INTERNAL_AUS =
@@ -121,48 +128,36 @@ public class ServeContent extends LockssServlet {
     DEFAULT_MISSING_FILE_ACTION;
   private static boolean absoluteLinks = DEFAULT_ABSOLUTE_LINKS;
   private static boolean normalizeUrl = DEFAULT_NORMALIZE_URL_ARG;
-  private static List excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
-  private static List includePlugins = DEFAULT_INCLUDE_PLUGINS;
+  private static List<String> excludePlugins = DEFAULT_EXCLUDE_PLUGINS;
+  private static List<String> includePlugins = DEFAULT_INCLUDE_PLUGINS;
   private static boolean includeInternalAus = DEFAULT_INCLUDE_INTERNAL_AUS;
 
-  private String action;
   private String verbose;
   private ArchivalUnit au;
   private String url;
-  private String doi;
-  private String issn;
-  private String volume;
-  private String issue;
-  private String spage;
   private String ctype;
   private CachedUrl cu;
   private boolean enabledPluginsOnly;
 
   private PluginManager pluginMgr;
-
-  // If we can't resolve a DOI, here is where to send it
-  private static final String DOI_LOOKUP_URL = "http://dx.doi.org/";
-  // If we can't resolve an OpenURL, here is where to send it
-  // XXX find the place to send it
-  private static final String OPENURL_LOOKUP_URL = "http://www.lockss.org/";
+  private ProxyManager proxyMgr;
+  private OpenUrlResolver openUrlResolver;
 
   // don't hold onto objects after request finished
   protected void resetLocals() {
     cu = null;
     url = null;
     au = null;
-    doi = null;
-    issn = null;
-    volume = null;
-    issue = null;
-    spage = null;
     ctype = null;
     super.resetLocals();
   }
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
-    pluginMgr = getLockssDaemon().getPluginManager();
+    LockssDaemon daemon = getLockssDaemon();
+    pluginMgr = daemon.getPluginManager();
+    proxyMgr = daemon.getProxyManager();
+    openUrlResolver = new OpenUrlResolver(daemon);
   }
 
   /** Called by ServletUtil.setConfig() */
@@ -203,6 +198,8 @@ public class ServeContent extends LockssServlet {
   protected boolean mayPageBeCached() {
     return true;
   }
+//PJG  
+//boolean fromOpenUrl = false;
 
   /**
    * Handle a request
@@ -215,6 +212,8 @@ public class ServeContent extends LockssServlet {
     }
     enabledPluginsOnly =
       !"no".equalsIgnoreCase(req.getParameter("filterPlugins"));
+//PJG
+//fromOpenUrl = false;
 
     verbose = getParameter("verbose");
     url = getParameter("url");
@@ -223,6 +222,10 @@ public class ServeContent extends LockssServlet {
       if (!StringUtil.isNullString(auid)) {
 	au = pluginMgr.getAuFromId(auid);
       }
+      // handle html-encoded URLs with characters like &amp;
+      // that can appear as links embedded in HTML pages
+      url = StringEscapeUtils.unescapeHtml(url);
+      
       if (normalizeUrl) {
 	String normUrl;
 	if (au != null) {
@@ -243,26 +246,53 @@ public class ServeContent extends LockssServlet {
       handleUrlRequest();
       return;
     }
-    doi = getParameter("doi");
-    if (!StringUtil.isNullString(doi)) {
-      handleDoiRequest();
-      return;
+    
+//PJG
+//fromOpenUrl = true;
+
+    // perform special handling for an OpenUrl
+    try {
+      // copy request parameters to parameter map
+      Map<String,String> params = new HashMap<String,String>();
+      if (req.getParameter("doi") != null) {
+        // transform convenience representation of doi to OpenURL form
+        // (ignore other parameters)
+        url = openUrlResolver.resolveFromDOI(req.getParameter("doi"));
+      } else {
+        // create parameter map for OpenUrl resolver
+        @SuppressWarnings("unchecked")
+        Iterator<Map.Entry<String,String[]>> itr = req.getParameterMap().entrySet().iterator();
+        while (itr.hasNext()) {
+          Map.Entry<String,String[]> entry = itr.next();
+          String key = entry.getKey();
+          String[] values = entry.getValue();
+          if ((values != null) && (values.length >= 1)) {
+            params.put(key, values[0]);
+          }
+        }
+        url = openUrlResolver.resolveOpenUrl(params);
+      }
+      if (!StringUtil.isNullString(url)) {
+        log.debug("Resolved OpenUrl to: " + url);
+        handleUrlRequest();
+        return;
+      }
+      log.debug("Request is not an OpenUrl");
+    } catch (Throwable ex) {
+      log.warning("Couldn't handle OpenUrl", ex);
     }
-    issn = getParameter("issn");
-    volume = getParameter("volume");
-    issue = getParameter("issue");
-    spage = getParameter("spage");
-    log.debug("issn " + issn + " volume " + volume + " issue " + issue + " spage " + spage);
-    if (!StringUtil.isNullString(issn) &&
-	!StringUtil.isNullString(volume) &&
-	!StringUtil.isNullString(issue) &&
-	!StringUtil.isNullString(spage)) {
-      handleOpenUrlRequest();
-      return;
-    }
+    
     displayIndexPage();
   }
 
+  /**
+   * Handle request for specified publisher URL.  If content
+   * is in cache, use it's AU and CU in case content is not
+   * available from the publisher.  Otherwise, redirect to the
+   * publisher URL without rewriting the content.
+   * 
+   * @throws IOException if cannot handle URL request.
+   */
   protected void handleUrlRequest() throws IOException {
     log.debug("url " + url);
     try {
@@ -271,16 +301,25 @@ public class ServeContent extends LockssServlet {
 	cu = au.makeCachedUrl(url);
       } else {
 	cu = pluginMgr.findCachedUrl(url, true);
+	if (cu != null) {
+	  au = cu.getArchivalUnit();
+	  if (!cu.hasContent()) {
+	    cu.release();
+	    cu = null;
+	  }
+	}
       }
-      if (cu != null && cu.hasContent()) {
-	handleCuRequest();
+//PJG
+//if (au != null || fromOpenUrl) {
+      if (au != null) {
+        handleAuRequest();
       } else {
-	log.debug(url + " not found"
-		  + ((au != null) ? " in AU: " + au.getName() : ""));
-	handleMissingUrlRequest(url);
+        log.debug("Content not cached: redirecting to " + url);
+        resp.sendRedirect(url);
       }
     } catch (IOException e) {
       log.warning("Handling " + url + " throws ", e);
+      throw e;
     } finally {
       if (cu != null) {
 	cu.release();
@@ -288,97 +327,341 @@ public class ServeContent extends LockssServlet {
     }
   }
 
-  // CU is known to exist and have content
-  protected void handleCuRequest() throws IOException {
-    CIProperties props = cu.getProperties();
-    String cuLastModified = props.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+  /** 
+   * Connection pool used by {@link #handleAuRequest()} for
+   *  quick connection to publisher content.
+   */
+  private LockssUrlConnectionPool quickConnPool = null;
+  
+  /** 
+   * Connection pool used by {@link #handleAuRequest()} for
+   *  normal connection to publisher content.
+   */
+  private LockssUrlConnectionPool connPool = null;
 
-    String ifModifiedSince = req.getHeader(HttpFields.__IfModifiedSince);
-    if (ifModifiedSince != null) {
-      try {
-	if (!HeaderUtil.isEarlier(ifModifiedSince, cuLastModified)) {
-	  resp.setStatus(HttpResponse.__304_Not_Modified);
-	  return;
-	}
-      } catch (org.apache.commons.httpclient.util.DateParseException e) {
-	// ignore error, serve file
+
+  /**
+   * Ensure that the connection pool for handling AU requests is initialized.
+   */
+  protected void ensureConnectionPool() {
+    if (quickConnPool == null) {
+      LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
+      LockssUrlConnectionPool quickConnPool = new LockssUrlConnectionPool();
+      Configuration conf = ConfigManager.getCurrentConfig();
+
+      int tot = conf.getInt(ProxyManager.PARAM_PROXY_MAX_TOTAL_CONN,
+                            ProxyManager.DEFAULT_PROXY_MAX_TOTAL_CONN);
+      int perHost = conf.getInt(ProxyManager.PARAM_PROXY_MAX_CONN_PER_HOST,
+                                ProxyManager.DEFAULT_PROXY_MAX_CONN_PER_HOST);
+
+      connPool.setMultiThreaded(tot, perHost);
+      quickConnPool.setMultiThreaded(tot, perHost);
+      connPool.setConnectTimeout
+        (conf.getTimeInterval(ProxyManager.PARAM_PROXY_CONNECT_TIMEOUT,
+                              ProxyManager.DEFAULT_PROXY_CONNECT_TIMEOUT));
+      connPool.setDataTimeout
+        (conf.getTimeInterval(ProxyManager.PARAM_PROXY_DATA_TIMEOUT,
+                              ProxyManager.DEFAULT_PROXY_DATA_TIMEOUT));
+      quickConnPool.setConnectTimeout
+        (conf.getTimeInterval(ProxyManager.PARAM_PROXY_QUICK_CONNECT_TIMEOUT,
+                              ProxyManager.DEFAULT_PROXY_QUICK_CONNECT_TIMEOUT));
+      quickConnPool.setDataTimeout
+        (conf.getTimeInterval(ProxyManager.PARAM_PROXY_QUICK_DATA_TIMEOUT,
+                              ProxyManager.DEFAULT_PROXY_QUICK_DATA_TIMEOUT));
+    }
+  }
+
+  protected boolean isInCache() {
+    return (cu != null) && cu.hasContent();
+  }
+  protected LockssUrlConnection openLockssUrlConnection(LockssUrlConnectionPool pool)
+    throws IOException {
+
+    boolean isInCache = isInCache();
+    String ifModified = null;
+    
+    LockssUrlConnection conn = UrlUtil.openConnection(url, pool);
+
+    // check connection header
+    String connectionHdr = req.getHeader(HttpFields.__Connection);
+    if (connectionHdr!=null &&
+        (connectionHdr.equalsIgnoreCase(HttpFields.__KeepAlive)||
+         connectionHdr.equalsIgnoreCase(HttpFields.__Close)))
+      connectionHdr=null;
+
+    // copy request headers into new request
+    for (Enumeration en = req.getHeaderNames();
+         en.hasMoreElements(); ) {
+      String hdr=(String)en.nextElement();
+
+      if (connectionHdr!=null && connectionHdr.indexOf(hdr)>=0) continue;
+
+      if (isInCache) {
+        if (HttpFields.__IfModifiedSince.equalsIgnoreCase(hdr)) {
+          ifModified = req.getHeader(hdr);
+          continue;
+        }
+      }
+
+      // copy request headers to connection
+      Enumeration vals = req.getHeaders(hdr);
+      while (vals.hasMoreElements()) {
+        String val = (String)vals.nextElement();
+        if (val!=null) {
+          conn.addRequestProperty(hdr, val);
+        }
       }
     }
 
+    /* PJG: Comment out this block to always fetch newer cached content from publisher */
+    // If the user sent an if-modified-since header, use it unless the
+    // cache file has a later last-modified
+    if (isInCache) {
+      CIProperties cuprops = cu.getProperties();
+      String cuLast = cuprops.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+      if (log.isDebug3()) {
+        log.debug3("ifModified: " + ifModified);
+        log.debug3("cuLast: " + cuLast);
+      }
+      if (cuLast != null) {
+        if (ifModified == null) {
+          ifModified = cuLast;
+        } else {
+          try {
+            if (HeaderUtil.isEarlier(ifModified, cuLast)) {
+              ifModified = cuLast;
+            }
+          } catch (DateParseException e) {
+            // preserve user's header if parse failure
+          }
+        }
+      }
+    }
+    /* PJG */
+
+    if (ifModified != null) {
+      conn.setRequestProperty(HttpFields.__IfModifiedSince, ifModified);
+    }
+
+    // send address or original requester
+    conn.addRequestProperty(HttpFields.__XForwardedFor,
+                            req.getRemoteAddr());
+
+    // copy cookies
+    String cookiePolicy = proxyMgr.getCookiePolicy();
+    String COOKIE_POLICY_DEFAULT = "default";
+    if (cookiePolicy != null &&
+        !cookiePolicy.equalsIgnoreCase(COOKIE_POLICY_DEFAULT)) {
+      conn.setCookiePolicy(cookiePolicy);
+    }
+    
+    return conn;
+  }
+  
+  /**
+   * Handle request for AU, where either CU is unknown or CU exists and has content.
+   * Instance values {@link #url} and {@link #au} must be specified. If {@link #cu} is
+   * specified, it will be used to fetch the cached content if it is not available 
+   * from the publisher. 
+   * 
+   * @throws IOException for IO errors
+   */
+  protected void handleAuRequest() throws IOException {
+    boolean isInCache = isInCache();
+    String host = UrlUtil.getHost(url);
+    LockssUrlConnection conn = null;
+    try {
+      // get connection to content from the publisher
+      ensureConnectionPool();
+      boolean useQuick =
+        (isInCache ||
+            (proxyMgr.isHostDown(host) &&
+             (proxyMgr.getHostDownAction() ==
+              ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK)));
+      conn = openLockssUrlConnection(useQuick ? quickConnPool : connPool);
+      conn.execute();
+    } catch (IOException ex) {
+      if (log.isDebug3()) log.debug3("conn.execute", ex);
+
+      // mark host down if connection timed out
+      if (ex instanceof LockssUrlConnection.ConnectionTimeoutException) {
+        proxyMgr.setHostDown(host, isInCache);
+      }
+      
+      // tear down connection
+      safeClose(conn);
+      conn = null;
+    }
+    
+    int response = HttpResponse.__404_Not_Found;
+    try {
+      if (conn != null) {
+        response = conn.getResponseCode();
+        if (log.isDebug3()) log.debug3("response: " + response + " " + conn.getResponseMessage());
+        if (response == HttpResponse.__200_OK) {  
+          // get content from publisher through connection
+          serveFromPublisher(conn);
+          return;
+        }
+      }
+    } finally {
+      // ensure connection is closed
+      safeClose(conn);
+    }
+    
+    if (isInCache) {
+      // serve content from cache if not available from publisher
+      proxyMgr.setRecentlyAccessedUrl(url);
+      serveFromCache();
+    } else {
+      // report not found if not in cache
+      log.debug("Not serving cached content: response=" + response + " " + conn.getResponseMessage());
+      resp.setStatus(response);
+    }
+  }
+  
+  /**
+   * Serve the content for the specified CU from the cache.
+   * 
+   * @throws IOException if cannot read content
+   */
+  protected void serveFromCache() throws IOException {
+    CIProperties props = cu.getProperties();
+    String cuLastModified = props.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+    String ifModifiedSince = req.getHeader(HttpFields.__IfModifiedSince);
+
+    if (ifModifiedSince != null) {
+      try {
+        if (!HeaderUtil.isEarlier(ifModifiedSince, cuLastModified)) {
+          ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
+          String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
+          log.debug(  "Cached content not modified for: " + url
+                      + " mime type=" + mimeType
+                      + " size=" + cu.getContentSize()
+                      + " cu=" + cu);
+          resp.setStatus(HttpResponse.__304_Not_Modified);
+          return;
+        }
+      } catch (org.apache.commons.httpclient.util.DateParseException e) {
+        // ignore error, serve file
+      }
+    }
+
+    String encoding = cu.getEncoding();
     ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
     String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
-    log.debug2(url + " type " + ctype + " size " + cu.getContentSize());
+    log.debug(  "Serving cached content for: " + url
+              + " mime type=" + mimeType
+              + " size=" + cu.getContentSize()
+              + " cu=" + cu);
+
     resp.setContentType(ctype);
     resp.setHeader(HttpFields.__LastModified, cuLastModified);
-    AuState aus = AuUtil.getAuState(cu.getArchivalUnit());
+    
+    // get content from repository if not available from publisher
+    InputStream original = cu.getUnfilteredInputStream();
+
+    AuState aus = AuUtil.getAuState(au);
     if (!aus.isOpenAccess()) {
       resp.setHeader(HttpFields.__CacheControl, "private");
-    }    
-    OutputStream outStr = null;
-    InputStream original = cu.getUnfilteredInputStream();
+    }   
+    
+    // Add a header to the response to identify content from LOCKSS cache
+    resp.setHeader(Constants.X_LOCKSS, Constants.X_LOCKSS_FROM_CACHE);
+
+    // rewrite original input stream from publisher or cache
+    handleRewriteInputStream(original, mimeType, encoding);
+  }
+  
+  /**
+   * Serve content from publisher for connection.
+   * 
+   * @param conn the connection
+   * @throws IOException if cannot read content
+   */
+  protected void serveFromPublisher(LockssUrlConnection conn) throws IOException {
+    // get content from publisher
+    ctype = conn.getResponseContentType();
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(ctype);
+    log.debug2(  "Serving publisher content for: " + url
+               + " mime type=" + mimeType + " size=" + conn.getResponseContentLength());
+    resp.setContentType(ctype);
+    
+    // copy connection response headers to servlet response
+    int h = 0;
+    String hdr = conn.getResponseHeaderFieldKey(h);
+    String val = conn.getResponseHeaderFieldVal(h);
+    while ((hdr != null) || (val != null)) {
+      if (  (hdr!=null) && (val!=null) 
+         && !HttpFields.__KeepAlive.equalsIgnoreCase(hdr)
+         && !HttpFields.__Connection.equalsIgnoreCase(hdr)) {
+        resp.addHeader(hdr, val);
+      }
+      h++;
+      hdr=conn.getResponseHeaderFieldKey(h);
+      val=conn.getResponseHeaderFieldVal(h);
+    }
+    
+    long lastModified = conn.getResponseLastModified();
+    resp.setHeader(HttpFields.__LastModified, ""+lastModified);
+    
+    // get input stream and encoding
+    InputStream original = conn.getResponseInputStream();
+    String encoding = conn.getResponseContentEncoding();
+
+    // rewrite original input stream from publisher or cache
+    handleRewriteInputStream(original, mimeType, encoding);
+  }
+
+  protected void safeClose(LockssUrlConnection conn) {
+    // close connection once done
+    if (conn != null) {
+      try {
+        conn.release();
+      } catch (Exception e) {}
+    }
+    
+  }
+  protected void handleRewriteInputStream(InputStream original, String mimeType, String encoding)  throws IOException {
     InputStream rewritten = original;
+    OutputStream outStr = null;
     try {
       LinkRewriterFactory lrf = null;
-      if (StringUtil.isNullString(getParameter("norewrite"))) {
-	lrf = cu.getLinkRewriterFactory();
+      if ((cu != null) && StringUtil.isNullString(getParameter("norewrite"))) {
+        lrf = cu.getLinkRewriterFactory();
       }
       if (lrf != null) {
-	try {
-	  rewritten =
-	    lrf.createLinkRewriter(mimeType,
-				   cu.getArchivalUnit(),
-				   original,
-				   cu.getEncoding(),
-				   url,
-				   new ServletUtil.LinkTransform() {
-				     public String rewrite(String url) {
-				       if (absoluteLinks) {
-					 return srvAbsURL(myServletDescr(),
-							  "url=" + url);
-				       } else {
-					 return srvURL(myServletDescr(),
-						       "url=" + url);
-				       }
-				     }});
-	} catch (PluginException e) {
-	  log.error("Can't create link rewriter, not rewriting", e);
-	}
+        try {
+          rewritten =
+            lrf.createLinkRewriter(mimeType,
+                                   au,
+                                   original,
+                                   encoding,
+                                   url,
+                                   new ServletUtil.LinkTransform() {
+                                     public String rewrite(String url) {
+                                       if (absoluteLinks) {
+                                         return srvAbsURL(myServletDescr(),
+                                                          "url=" + url);
+                                       } else {
+                                         return srvURL(myServletDescr(),
+                                                       "url=" + url);
+                                       }
+                                     }});
+        } catch (PluginException e) {
+          log.error("Can't create link rewriter, not rewriting", e);
+        }
       }
       outStr = resp.getOutputStream();
 
       long bytes = StreamUtil.copy(rewritten, outStr);
       if (bytes <= Integer.MAX_VALUE) {
-	  resp.setContentLength((int)bytes);
+          resp.setContentLength((int)bytes);
       }
     } finally {
       IOUtil.safeClose(outStr);
       IOUtil.safeClose(original);
       IOUtil.safeClose(rewritten);
-    }
-  }
-
-  protected void handleDoiRequest() throws IOException {
-    log.debug("doi " + doi);
-    // find the URL for the DOI
-    url = MetadataUtil.doiToUrl(doi);
-    log.debug(doi + " = " + (url == null ? "null" : url));
-    if (url == null) {
-      handleMissingUrlRequest(DOI_LOOKUP_URL + doi);
-    } else {
-      handleUrlRequest();
-    }
-  }
-
-  protected void handleOpenUrlRequest() throws IOException {
-    String openUrl = issn + "/" + volume + "/" + issue + "/" + spage;
-    log.debug("OpenUrl " + openUrl);
-    // find the URL for the OpenURL
-    url = MetadataUtil.openUrlToUrl(openUrl);
-    log.debug(openUrl + " = " + (url == null ? "null" : url));
-    if (url == null) {
-      handleMissingUrlRequest(OPENURL_LOOKUP_URL + openUrl);
-    } else {
-      handleUrlRequest();
     }
   }
 
