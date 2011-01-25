@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawler.java,v 1.37 2010-10-02 22:24:57 tlipkis Exp $
+ * $Id: BaseCrawler.java,v 1.38 2011-01-25 07:14:23 tlipkis Exp $
  */
 
 /*
@@ -306,6 +306,14 @@ public abstract class BaseCrawler
       alertMgr.raiseAlert(Alert.auAlert(Alert.CRAWL_FAILED, au),
 			  "Crawl of " + au.getName() +
 			  " threw " + e.getMessage());
+      if (isWholeAU()) {
+	NodeManager nodeManager = getDaemon().getNodeManager(au);
+	nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
+					    e.getMessage());
+      }
+      throw e;
+    } catch (OutOfMemoryError e) {
+      logger.error("doCrawl0()", e);
       if (isWholeAU()) {
 	NodeManager nodeManager = getDaemon().getNodeManager(au);
 	nodeManager.newContentCrawlFinished(Crawler.STATUS_ABORTED,
