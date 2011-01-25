@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.66 2009-12-09 00:06:51 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.67 2011-01-25 00:51:50 pgust Exp $
  */
 
 /*
@@ -84,6 +84,7 @@ public class MockLockssDaemon extends LockssDaemon {
   RepositoryManager repositoryManager = null;
   NodeManagerManager nodeManagerManager = null;
   PluginManager pluginManager = null;
+  MetadataManager metadataManager = null;
   IdentityManager identityManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
@@ -134,6 +135,7 @@ public class MockLockssDaemon extends LockssDaemon {
     proxyManager = null;
     crawlManager = null;
     pluginManager = null;
+    metadataManager = null;
     identityManager = null;
     statusService = null;
     icpManager = null;
@@ -449,6 +451,18 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * return the metadata manager instance
+   * @return the MetadataManager
+   */
+  public MetadataManager getMetadataManager() {
+    if (metadataManager == null) {
+      metadataManager = (MetadataManager)newManager(LockssDaemon.METADATA_MANAGER);
+      managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
+    }
+    return metadataManager;
+  }
+
+  /**
    * return the Identity Manager
    * @return IdentityManager
    */
@@ -646,6 +660,15 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setIdentityManager(IdentityManager idMan) {
     identityManager = idMan;
     managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
+  }
+
+  /**
+   * Set the MetadataManager
+   * @param metadataMan the new manager
+   */
+  public void setMetadataManager(MetadataManager metadataMan) {
+    metadataManager = metadataMan;
+    managerMap.put(LockssDaemon.METADATA_MANAGER, metadataManager);
   }
 
   /**
