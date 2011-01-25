@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.33 2011-01-24 23:32:03 pgust Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.34 2011-01-25 00:10:41 pgust Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -269,33 +269,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     HttpParams params = method.getParams();
     params.setParameter(HttpMethodParams.COOKIE_POLICY,
 			getCookiePolicy(policy));
-  }
-
-  /**
-   * Add a cookie to the client state.
-   * @param cookie the cookie
-   */
-  public void addCookie(Cookie cookie) {
-    assertNotExecuted();
-    client.getState().addCookie(cookie);
-  }
-  
-  /**
-   * Add cookies to the client state.
-   * @param cookies the cookies
-   */
-  public void addCookies(Cookie[] cookies) {
-    assertNotExecuted();
-    client.getState().addCookies(cookies);
-  }
-  
-  /**
-   * Get cookies from client state.
-   * @return the cookies
-   */
-  public Cookie[] getCookies() {
-    assertExecuted();
-    return client.getState().getCookies();
   }
 
   public void setCredentials(String username, String password) {
