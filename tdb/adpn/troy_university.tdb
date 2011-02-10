@@ -5,8 +5,8 @@
   >
 
   plugin = edu.troy.adpn.postcards.PostcardsPlugin
-  param[base_url] = http://spectrum.troy.edu/~troyadpnet/    
-  implicit < status ; name ; param[volume_name] >  
+  param[base_url] = http://spectrum.troy.edu/~troyadpnet/
+  implicit < status ; name ; param[volume_name] >
 
   {
 
