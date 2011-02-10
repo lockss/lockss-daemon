@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbq.py,v 1.10 2010-11-09 02:33:30 thib_gc Exp $
+# $Id: tdbq.py,v 1.11 2011-02-10 23:24:12 thib_gc Exp $
 
-# Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '''0.3.3'''
+__version__ = '''0.3.4'''
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -36,19 +36,34 @@ from tdb import AU, Tdb
 class TdbqConstants:
     '''Constants associated with the tdbq module.'''
 
-    OPTION_DOWN = 'down-aus'
+    OPTION_CRAWLING = 'crawling'
+    OPTION_CRAWLING_SHORT = 'C'
+    OPTION_CRAWLING_HELP = 'keep AUs whose status is "%s"' % (AU.Status.CRAWLING,)
+    
+    OPTION_DOWN = 'down'
     OPTION_DOWN_SHORT = 'D'
     OPTION_DOWN_HELP = 'keep AUs whose status is "%s"' % (AU.Status.DOWN,)
     
-    OPTION_MANIFEST = 'manifest-aus'
+    OPTION_EXISTS = 'exists'
+    OPTION_EXISTS_SHORT = 'E'
+    OPTION_EXISTS_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXISTS,)
+    
+    OPTION_EXPUNGED = 'expunged'
+    OPTION_EXPUNGED_SHORT = 'X'
+    OPTION_EXPUNGED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.EXPUNGED,)
+    
+    OPTION_MANIFEST = 'manifest'
     OPTION_MANIFEST_SHORT = 'M'
     OPTION_MANIFEST_HELP = 'keep AUs whose status is "%s"' % (AU.Status.MANIFEST,)
     
+    OPTION_NOT_READY = 'notReady'
+    OPTION_NOT_READY_SHORT = 'N'
+    OPTION_NOT_READY_HELP = 'keep AUs whose status is "%s"' % (AU.Status.NOT_READY,)
+    
     PRODUCTION_STATUSES = [AU.Status.RELEASED,
                            AU.Status.DOWN,
-                           AU.Status.SUPERSEDED,
-                           AU.Status.RETRACTED]
-    OPTION_PRODUCTION = 'production-aus'
+                           AU.Status.SUPERSEDED]
+    OPTION_PRODUCTION = 'production'
     OPTION_PRODUCTION_SHORT = 'P'
     OPTION_PRODUCTION_HELP = 'keep AUs in production, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in PRODUCTION_STATUSES]))
     
@@ -56,23 +71,19 @@ class TdbqConstants:
     OPTION_QUERY_SHORT = 'Q'
     OPTION_QUERY_HELP = 'principal query expression'
     
-    OPTION_READY = 'ready-aus'
+    OPTION_READY = 'ready'
     OPTION_READY_SHORT = 'Y'
     OPTION_READY_HELP = 'keep AUs whose status is "%s"' % (AU.Status.READY,)
     
-    OPTION_RELEASED = 'released-aus'
+    OPTION_RELEASED = 'released'
     OPTION_RELEASED_SHORT = 'R'
     OPTION_RELEASED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RELEASED,)
     
-    OPTION_RELEASING = 'releasing-aus'
+    OPTION_RELEASING = 'releasing'
     OPTION_RELEASING_SHORT = 'G'
     OPTION_RELEASING_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RELEASING,)
     
-    OPTION_RETRACTED = 'retracted-aus'
-    OPTION_RETRACTED_SHORT = 'E'
-    OPTION_RETRACTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.RETRACTED,)
-    
-    OPTION_SUPERSEDED = 'superseded-aus'
+    OPTION_SUPERSEDED = 'superseded'
     OPTION_SUPERSEDED_SHORT = 'S'
     OPTION_SUPERSEDED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.SUPERSEDED,)
     
@@ -82,46 +93,48 @@ class TdbqConstants:
     OPTION_TDBQ_ECHO_TOKENS = 'tdbq-echo-tokens'
     OPTION_TDBQ_ECHO_TOKENS_HELP = 'echo each token built by tdbq to stderr'
     
-    OPTION_TESTING = 'testing-aus'
+    OPTION_TESTING = 'testing'
     OPTION_TESTING_SHORT = 'T'
     OPTION_TESTING_HELP = 'keep AUs whose status is "%s"' % (AU.Status.TESTING,)
     
     UNRELEASED_STATUSES = [AU.Status.MANIFEST,
                            AU.Status.WANTED,
+                           AU.Status.CRAWLING,
                            AU.Status.TESTING,
-                           AU.Status.RETESTING,
                            AU.Status.NOT_READY,
-                           AU.Status.TESTED,
                            AU.Status.READY,
                            AU.Status.PRE_RELEASING,
                            AU.Status.PRE_RELEASED,
                            AU.Status.RELEASING]
-    OPTION_UNRELEASED = 'unreleased-aus'
+    OPTION_UNRELEASED = 'unreleased'
     OPTION_UNRELEASED_SHORT = 'U'
     OPTION_UNRELEASED_HELP = 'keep unreleased AUs, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in UNRELEASED_STATUSES]))
     
-    OPTION_WANTED = 'wanted-aus'
+    OPTION_WANTED = 'wanted'
     OPTION_WANTED_SHORT = 'W'
     OPTION_WANTED_HELP = 'keep AUs whose status is "%s"' % (AU.Status.WANTED,)
     
     OPTION_STATUSES = 'statuses'
     
-    CONTENT_TESTING_STATUSES = UNRELEASED_STATUSES + PRODUCTION_STATUSES 
-    OPTION_CONTENT_TESTING = 'content-testing-aus'
-    OPTION_CONTENT_TESTING_SHORT = 'C'
-    OPTION_CONTENT_TESTING_HELP = 'keep testable AUs, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in CONTENT_TESTING_STATUSES]))
+    ALL_TESTABLE_STATUSES = UNRELEASED_STATUSES + PRODUCTION_STATUSES 
+    OPTION_ALL = 'all'
+    OPTION_ALL_SHORT = 'A'
+    OPTION_ALL_HELP = 'keep all testable AUs, whose status is one of %s' % (', '.join(['"%s"' % (st,) for st in ALL_TESTABLE_STATUSES]))
         
-    STATUS_SWITCHES = [OPTION_CONTENT_TESTING,
+    STATUS_SWITCHES = [OPTION_ALL_SHORT,
+                       OPTION_CRAWLING_SHORT,
                        OPTION_DOWN_SHORT,
-                       OPTION_RETRACTED_SHORT,
+                       OPTION_EXISTS_SHORT,
                        OPTION_RELEASING_SHORT,
                        OPTION_MANIFEST_SHORT,
+                       OPTION_NOT_READY_SHORT,
                        OPTION_PRODUCTION,
                        OPTION_RELEASED_SHORT,
                        OPTION_SUPERSEDED_SHORT,
                        OPTION_TESTING_SHORT,
                        OPTION_UNRELEASED,
                        OPTION_WANTED_SHORT,
+                       OPTION_EXPUNGED_SHORT,
                        OPTION_READY_SHORT]
 
 class TdbqLiteral:
@@ -544,18 +557,21 @@ def __option_parser__(parser=None):
     if parser is None: parser = OptionParser(version=__version__)
     tdbq_group = OptionGroup(parser, 'tdbq module (%s)' % (__version__,))
     
-    for sho, lon, hel, con in [(TdbqConstants.OPTION_MANIFEST_SHORT, TdbqConstants.OPTION_MANIFEST, TdbqConstants.OPTION_MANIFEST_HELP, AU.Status.MANIFEST),
+    for sho, lon, hel, con in [(TdbqConstants.OPTION_EXISTS_SHORT, TdbqConstants.OPTION_EXISTS, TdbqConstants.OPTION_EXISTS_HELP, AU.Status.EXISTS),
+                               (TdbqConstants.OPTION_MANIFEST_SHORT, TdbqConstants.OPTION_MANIFEST, TdbqConstants.OPTION_MANIFEST_HELP, AU.Status.MANIFEST),
                                (TdbqConstants.OPTION_WANTED_SHORT, TdbqConstants.OPTION_WANTED, TdbqConstants.OPTION_WANTED_HELP, AU.Status.WANTED),
+                               (TdbqConstants.OPTION_CRAWLING_SHORT, TdbqConstants.OPTION_CRAWLING, TdbqConstants.OPTION_CRAWLING_HELP, AU.Status.CRAWLING),
                                (TdbqConstants.OPTION_TESTING_SHORT, TdbqConstants.OPTION_TESTING, TdbqConstants.OPTION_TESTING_HELP, AU.Status.TESTING),
+                               (TdbqConstants.OPTION_NOT_READY_SHORT, TdbqConstants.OPTION_NOT_READY, TdbqConstants.OPTION_NOT_READY_HELP, AU.Status.NOT_READY),
                                (TdbqConstants.OPTION_READY_SHORT, TdbqConstants.OPTION_READY, TdbqConstants.OPTION_READY_HELP, AU.Status.READY),
                                (TdbqConstants.OPTION_RELEASING_SHORT, TdbqConstants.OPTION_RELEASING, TdbqConstants.OPTION_RELEASING_HELP, AU.Status.RELEASING),
                                (TdbqConstants.OPTION_RELEASED_SHORT, TdbqConstants.OPTION_RELEASED, TdbqConstants.OPTION_RELEASED_HELP, AU.Status.RELEASED),
                                (TdbqConstants.OPTION_DOWN_SHORT, TdbqConstants.OPTION_DOWN, TdbqConstants.OPTION_DOWN_HELP, AU.Status.DOWN),
                                (TdbqConstants.OPTION_SUPERSEDED_SHORT, TdbqConstants.OPTION_SUPERSEDED, TdbqConstants.OPTION_SUPERSEDED_HELP, AU.Status.SUPERSEDED),
-                               (TdbqConstants.OPTION_RETRACTED_SHORT, TdbqConstants.OPTION_RETRACTED, TdbqConstants.OPTION_RETRACTED_HELP, AU.Status.RETRACTED),
+                               (TdbqConstants.OPTION_EXPUNGED_SHORT, TdbqConstants.OPTION_EXPUNGED, TdbqConstants.OPTION_EXPUNGED_HELP, AU.Status.EXPUNGED),
                                (TdbqConstants.OPTION_UNRELEASED_SHORT, TdbqConstants.OPTION_UNRELEASED, TdbqConstants.OPTION_UNRELEASED_HELP, TdbqConstants.UNRELEASED_STATUSES),
                                (TdbqConstants.OPTION_PRODUCTION_SHORT, TdbqConstants.OPTION_PRODUCTION, TdbqConstants.OPTION_PRODUCTION_HELP, TdbqConstants.PRODUCTION_STATUSES),
-                               (TdbqConstants.OPTION_CONTENT_TESTING_SHORT, TdbqConstants.OPTION_CONTENT_TESTING, TdbqConstants.OPTION_CONTENT_TESTING_HELP, TdbqConstants.CONTENT_TESTING_STATUSES)]:
+                               (TdbqConstants.OPTION_ALL_SHORT, TdbqConstants.OPTION_ALL, TdbqConstants.OPTION_ALL_HELP, TdbqConstants.ALL_TESTABLE_STATUSES)]:
         tdbq_group.add_option('-' + sho,
                               '--' + lon,
                               help=hel,
@@ -610,11 +626,14 @@ def str_to_lambda_au(str):
     
     Returns None if the keyword is not recognized.'''
     for id, fn in [('status', lambda au: au.status()),
+                   ('status1', lambda au: au.get('status1')),
+                   ('status2', lambda au: au.get('status2')),
                    ('year', lambda au: au.year()),
                    ('name', lambda au: au.name()),
                    ('plugin', lambda au: au.plugin()),
                    ('pluginPrefix', lambda au: au.get(AU.PLUGIN_PREFIX)),
                    ('pluginSuffix', lambda au: au.get(AU.PLUGIN_SUFFIX)),
+                   ('proxy', lambda au: au.proxy()),
                    ('rights', lambda au: au.rights()),
                    ('auid', lambda au: au.auid()),
                    ('title', lambda au: au.title().name()),

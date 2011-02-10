@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-# $Id: tdbgln.py,v 1.2 2010-12-15 00:09:22 thib_gc Exp $
+# $Id: tdbgln.py,v 1.3 2011-02-10 23:24:12 thib_gc Exp $
 
-# Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+# Copyright (c) 2000-2011 Bsoard of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,7 @@ import sys
 class TdbglnConstants:
     '''Constants associated with the tdbgln module.'''
     
-    VERSION = '''0.1.1'''
+    VERSION = '''0.1.2'''
     
     DESCRIPTION = '''Invokes the tdbout or tdbxml module with
 extensions and functionality specific to the Global LOCKSS Network
@@ -43,11 +43,9 @@ extensions and functionality specific to the Global LOCKSS Network
 features and options.'''
 
     OPTION_ALLIANCE = 'alliance'
-    OPTION_ALLIANCE_SHORT = 'A'
     OPTION_ALLIANCE_HELP = 'keep GLN AUs earmarked for the LOCKSS Alliance'
 
     OPTION_NON_ALLIANCE = 'non-alliance'
-    OPTION_NON_ALLIANCE_SHORT = 'N'
     OPTION_NON_ALLIANCE_HELP = 'keep GLN AUs not earmarked for the LOCKSS Alliance'
 
     OPTION_TDBOUT = 'tdbout'
@@ -79,13 +77,11 @@ def __option_parser__(parser=None, prelim_opt=None):
                             action='store_true',
                             default=False,
                             help=TdbglnConstants.OPTION_TDBXML_HELP)
-    tdbgln_group.add_option('-' + TdbglnConstants.OPTION_ALLIANCE_SHORT,
-                            '--' + TdbglnConstants.OPTION_ALLIANCE,
+    tdbgln_group.add_option('--' + TdbglnConstants.OPTION_ALLIANCE,
                             action='store_true',
                             default=False,
                             help=TdbglnConstants.OPTION_ALLIANCE_HELP)
-    tdbgln_group.add_option('-' + TdbglnConstants.OPTION_NON_ALLIANCE_SHORT,
-                            '--' + TdbglnConstants.OPTION_NON_ALLIANCE,
+    tdbgln_group.add_option('--' + TdbglnConstants.OPTION_NON_ALLIANCE,
                             action='store_true',
                             default=False,
                             help=TdbglnConstants.OPTION_NON_ALLIANCE_HELP)
