@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Geological Society of London
   >
@@ -15,26 +16,26 @@
       param[base_url] = http://egsp.lyellcollection.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < released ; Engineering Geology Special Publications Volume 2 ; 2 >
-      au < released ; Engineering Geology Special Publications Volume 3 ; 3 >
-      au < released ; Engineering Geology Special Publications Volume 4 ; 4 >
-      au < released ; Engineering Geology Special Publications Volume 5 ; 5 >
-      au < released ; Engineering Geology Special Publications Volume 6 ; 6 >
-      au < released ; Engineering Geology Special Publications Volume 7 ; 7 >
+      au < down ; Engineering Geology Special Publications Volume 2 ; 2 >
+      au < down ; Engineering Geology Special Publications Volume 3 ; 3 >
+      au < down ; Engineering Geology Special Publications Volume 4 ; 4 >
+      au < down ; Engineering Geology Special Publications Volume 5 ; 5 >
+      au < down ; Engineering Geology Special Publications Volume 6 ; 6 >
+      au < down ; Engineering Geology Special Publications Volume 7 ; 7 >
       au < doesNotExist ; Engineering Geology Special Publications Volume 8 ; 8 >
       au < doesNotExist ; Engineering Geology Special Publications Volume 9 ; 9 >
-      au < released ; Engineering Geology Special Publications Volume 10 ; 10 >
-      au < released ; Engineering Geology Special Publications Volume 11 ; 11 >
-      au < released ; Engineering Geology Special Publications Volume 12 ; 12 >
-      au < released ; Engineering Geology Special Publications Volume 13 ; 13 >
-      au < released ; Engineering Geology Special Publications Volume 14 ; 14 >
-      au < released ; Engineering Geology Special Publications Volume 15 ; 15 >
-      au < released ; Engineering Geology Special Publications Volume 16 ; 16 >
-      au < released ; Engineering Geology Special Publications Volume 17 ; 17 >
-      au < released ; Engineering Geology Special Publications Volume 18 ; 18 >
-      au < released ; Engineering Geology Special Publications Volume 19 ; 19 >
-      au < released ; Engineering Geology Special Publications Volume 20 ; 20 >
-      au < released ; Engineering Geology Special Publications Volume 21 ; 21 >
+      au < down ; Engineering Geology Special Publications Volume 10 ; 10 >
+      au < down ; Engineering Geology Special Publications Volume 11 ; 11 >
+      au < down ; Engineering Geology Special Publications Volume 12 ; 12 >
+      au < down ; Engineering Geology Special Publications Volume 13 ; 13 >
+      au < down ; Engineering Geology Special Publications Volume 14 ; 14 >
+      au < down ; Engineering Geology Special Publications Volume 15 ; 15 >
+      au < down ; Engineering Geology Special Publications Volume 16 ; 16 >
+      au < down ; Engineering Geology Special Publications Volume 17 ; 17 >
+      au < down ; Engineering Geology Special Publications Volume 18 ; 18 >
+      au < down ; Engineering Geology Special Publications Volume 19 ; 19 >
+      au < down ; Engineering Geology Special Publications Volume 20 ; 20 >
+      au < down ; Engineering Geology Special Publications Volume 21 ; 21 >
 
     }
 
@@ -48,7 +49,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
       param[base_url] = http://geea.lyellcollection.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -79,38 +80,38 @@
       implicit < status ; name ; param[volume_name] >
 
       au < exists ; Geological Society of London Memoirs Volume 1 ; 1 >
-      au < released ; Geological Society of London Memoirs Volume 2 ; 2 >
-      au < released ; Geological Society of London Memoirs Volume 3 ; 3 >
-      au < released ; Geological Society of London Memoirs Volume 4 ; 4 >
-      au < released ; Geological Society of London Memoirs Volume 5 ; 5 >
-      au < released ; Geological Society of London Memoirs Volume 6 ; 6 >
-      au < released ; Geological Society of London Memoirs Volume 7 ; 7 >
-      au < released ; Geological Society of London Memoirs Volume 8 ; 8 >
-      au < released ; Geological Society of London Memoirs Volume 9 ; 9 >
-      au < released ; Geological Society of London Memoirs Volume 10 ; 10 >
-      au < released ; Geological Society of London Memoirs Volume 11 ; 11 >
-      au < released ; Geological Society of London Memoirs Volume 12 ; 12 >
-      au < released ; Geological Society of London Memoirs Volume 13 ; 13 >
-      au < released ; Geological Society of London Memoirs Volume 14 ; 14 >
-      au < released ; Geological Society of London Memoirs Volume 15 ; 15 >
-      au < released ; Geological Society of London Memoirs Volume 16 ; 16 >
-      au < released ; Geological Society of London Memoirs Volume 17 ; 17 >
-      au < released ; Geological Society of London Memoirs Volume 18 ; 18 >
-      au < released ; Geological Society of London Memoirs Volume 19 ; 19 >
-      au < released ; Geological Society of London Memoirs Volume 20 ; 20 >
-      au < released ; Geological Society of London Memoirs Volume 21 ; 21 >
-      au < released ; Geological Society of London Memoirs Volume 22 ; 22 >
-      au < released ; Geological Society of London Memoirs Volume 23 ; 23 >
-      au < released ; Geological Society of London Memoirs Volume 24 ; 24 >
-      au < released ; Geological Society of London Memoirs Volume 25 ; 25 >
-      au < released ; Geological Society of London Memoirs Volume 26 ; 26 >
-      au < released ; Geological Society of London Memoirs Volume 27 ; 27 >
-      au < released ; Geological Society of London Memoirs Volume 28 ; 28 >
-      au < released ; Geological Society of London Memoirs Volume 29 ; 29 >
-      au < released ; Geological Society of London Memoirs Volume 30 ; 30 >
-      au < released ; Geological Society of London Memoirs Volume 31 ; 31 >
-      au < released ; Geological Society of London Memoirs Volume 32 ; 32 >
-      au < released ; Geological Society of London Memoirs Volume 33 ; 33 >
+      au < down ; Geological Society of London Memoirs Volume 2 ; 2 >
+      au < down ; Geological Society of London Memoirs Volume 3 ; 3 >
+      au < down ; Geological Society of London Memoirs Volume 4 ; 4 >
+      au < down ; Geological Society of London Memoirs Volume 5 ; 5 >
+      au < down ; Geological Society of London Memoirs Volume 6 ; 6 >
+      au < down ; Geological Society of London Memoirs Volume 7 ; 7 >
+      au < down ; Geological Society of London Memoirs Volume 8 ; 8 >
+      au < down ; Geological Society of London Memoirs Volume 9 ; 9 >
+      au < down ; Geological Society of London Memoirs Volume 10 ; 10 >
+      au < down ; Geological Society of London Memoirs Volume 11 ; 11 >
+      au < down ; Geological Society of London Memoirs Volume 12 ; 12 >
+      au < down ; Geological Society of London Memoirs Volume 13 ; 13 >
+      au < down ; Geological Society of London Memoirs Volume 14 ; 14 >
+      au < down ; Geological Society of London Memoirs Volume 15 ; 15 >
+      au < down ; Geological Society of London Memoirs Volume 16 ; 16 >
+      au < down ; Geological Society of London Memoirs Volume 17 ; 17 >
+      au < down ; Geological Society of London Memoirs Volume 18 ; 18 >
+      au < down ; Geological Society of London Memoirs Volume 19 ; 19 >
+      au < down ; Geological Society of London Memoirs Volume 20 ; 20 >
+      au < down ; Geological Society of London Memoirs Volume 21 ; 21 >
+      au < down ; Geological Society of London Memoirs Volume 22 ; 22 >
+      au < down ; Geological Society of London Memoirs Volume 23 ; 23 >
+      au < down ; Geological Society of London Memoirs Volume 24 ; 24 >
+      au < down ; Geological Society of London Memoirs Volume 25 ; 25 >
+      au < down ; Geological Society of London Memoirs Volume 26 ; 26 >
+      au < down ; Geological Society of London Memoirs Volume 27 ; 27 >
+      au < down ; Geological Society of London Memoirs Volume 28 ; 28 >
+      au < down ; Geological Society of London Memoirs Volume 29 ; 29 >
+      au < down ; Geological Society of London Memoirs Volume 30 ; 30 >
+      au < down ; Geological Society of London Memoirs Volume 31 ; 31 >
+      au < down ; Geological Society of London Memoirs Volume 32 ; 32 >
+      au < down ; Geological Society of London Memoirs Volume 33 ; 33 >
 
     }
 
@@ -128,126 +129,126 @@
       param[base_url] = http://sp.lyellcollection.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < released ; Geological Society of London Special Publications Volume 197 ; 197 >
-      au < released ; Geological Society of London Special Publications Volume 198 ; 198 >
-      au < released ; Geological Society of London Special Publications Volume 199 ; 199 >
-      au < released ; Geological Society of London Special Publications Volume 200 ; 200 >
-      au < released ; Geological Society of London Special Publications Volume 201 ; 201 >
-      au < released ; Geological Society of London Special Publications Volume 202 ; 202 >
-      au < released ; Geological Society of London Special Publications Volume 203 ; 203 >
-      au < released ; Geological Society of London Special Publications Volume 204 ; 204 >
-      au < released ; Geological Society of London Special Publications Volume 205 ; 205 >
-      au < released ; Geological Society of London Special Publications Volume 206 ; 206 >
-      au < released ; Geological Society of London Special Publications Volume 207 ; 207 >
-      au < released ; Geological Society of London Special Publications Volume 208 ; 208 >
-      au < released ; Geological Society of London Special Publications Volume 209 ; 209 >
-      au < released ; Geological Society of London Special Publications Volume 210 ; 210 >
-      au < released ; Geological Society of London Special Publications Volume 211 ; 211 >
-      au < released ; Geological Society of London Special Publications Volume 212 ; 212 >
-      au < released ; Geological Society of London Special Publications Volume 213 ; 213 >
-      au < released ; Geological Society of London Special Publications Volume 214 ; 214 >
-      au < released ; Geological Society of London Special Publications Volume 215 ; 215 >
-      au < released ; Geological Society of London Special Publications Volume 216 ; 216 >
-      au < released ; Geological Society of London Special Publications Volume 217 ; 217 >
-      au < released ; Geological Society of London Special Publications Volume 218 ; 218 >
-      au < released ; Geological Society of London Special Publications Volume 219 ; 219 >
-      au < released ; Geological Society of London Special Publications Volume 220 ; 220 >
-      au < released ; Geological Society of London Special Publications Volume 221 ; 221 >
-      au < released ; Geological Society of London Special Publications Volume 222 ; 222 >
-      au < released ; Geological Society of London Special Publications Volume 223 ; 223 >
-      au < released ; Geological Society of London Special Publications Volume 224 ; 224 >
-      au < released ; Geological Society of London Special Publications Volume 225 ; 225 >
-      au < released ; Geological Society of London Special Publications Volume 226 ; 226 >
-      au < released ; Geological Society of London Special Publications Volume 227 ; 227 >
-      au < released ; Geological Society of London Special Publications Volume 228 ; 228 >
-      au < released ; Geological Society of London Special Publications Volume 229 ; 229 >
-      au < released ; Geological Society of London Special Publications Volume 230 ; 230 >
-      au < released ; Geological Society of London Special Publications Volume 231 ; 231 >
-      au < released ; Geological Society of London Special Publications Volume 232 ; 232 >
-      au < released ; Geological Society of London Special Publications Volume 233 ; 233 >
-      au < released ; Geological Society of London Special Publications Volume 234 ; 234 >
-      au < released ; Geological Society of London Special Publications Volume 235 ; 235 >
-      au < released ; Geological Society of London Special Publications Volume 236 ; 236 >
-      au < released ; Geological Society of London Special Publications Volume 237 ; 237 >
-      au < released ; Geological Society of London Special Publications Volume 238 ; 238 >
-      au < released ; Geological Society of London Special Publications Volume 239 ; 239 >
-      au < released ; Geological Society of London Special Publications Volume 240 ; 240 >
-      au < released ; Geological Society of London Special Publications Volume 241 ; 241 >
-      au < released ; Geological Society of London Special Publications Volume 242 ; 242 >
-      au < released ; Geological Society of London Special Publications Volume 243 ; 243 >
-      au < released ; Geological Society of London Special Publications Volume 244 ; 244 >
-      au < released ; Geological Society of London Special Publications Volume 245 ; 245 >
-      au < released ; Geological Society of London Special Publications Volume 246 ; 246 >
-      au < released ; Geological Society of London Special Publications Volume 247 ; 247 >
-      au < released ; Geological Society of London Special Publications Volume 248 ; 248 >
-      au < released ; Geological Society of London Special Publications Volume 249 ; 249 >
-      au < released ; Geological Society of London Special Publications Volume 250 ; 250 >
-      au < released ; Geological Society of London Special Publications Volume 251 ; 251 >
-      au < released ; Geological Society of London Special Publications Volume 252 ; 252 >
-      au < released ; Geological Society of London Special Publications Volume 253 ; 253 >
-      au < released ; Geological Society of London Special Publications Volume 254 ; 254 >
-      au < released ; Geological Society of London Special Publications Volume 255 ; 255 >
-      au < released ; Geological Society of London Special Publications Volume 256 ; 256 >
-      au < released ; Geological Society of London Special Publications Volume 257 ; 257 >
-      au < released ; Geological Society of London Special Publications Volume 258 ; 258 >
-      au < released ; Geological Society of London Special Publications Volume 259 ; 259 >
-      au < released ; Geological Society of London Special Publications Volume 260 ; 260 >
-      au < released ; Geological Society of London Special Publications Volume 261 ; 261 >
-      au < released ; Geological Society of London Special Publications Volume 262 ; 262 >
-      au < released ; Geological Society of London Special Publications Volume 263 ; 263 >
-      au < released ; Geological Society of London Special Publications Volume 264 ; 264 >
-      au < released ; Geological Society of London Special Publications Volume 265 ; 265 >
-      au < released ; Geological Society of London Special Publications Volume 266 ; 266 >
-      au < released ; Geological Society of London Special Publications Volume 267 ; 267 >
-      au < released ; Geological Society of London Special Publications Volume 268 ; 268 >
-      au < released ; Geological Society of London Special Publications Volume 269 ; 269 >
-      au < released ; Geological Society of London Special Publications Volume 270 ; 270 >
-      au < released ; Geological Society of London Special Publications Volume 271 ; 271 >
-      au < released ; Geological Society of London Special Publications Volume 272 ; 272 >
-      au < released ; Geological Society of London Special Publications Volume 273 ; 273 >
-      au < released ; Geological Society of London Special Publications Volume 274 ; 274 >
-      au < released ; Geological Society of London Special Publications Volume 275 ; 275 >
-      au < released ; Geological Society of London Special Publications Volume 276 ; 276 >
-      au < released ; Geological Society of London Special Publications Volume 277 ; 277 >
-      au < released ; Geological Society of London Special Publications Volume 278 ; 278 >
-      au < released ; Geological Society of London Special Publications Volume 279 ; 279 >
-      au < released ; Geological Society of London Special Publications Volume 280 ; 280 >
-      au < released ; Geological Society of London Special Publications Volume 281 ; 281 >
-      au < released ; Geological Society of London Special Publications Volume 282 ; 282 >
-      au < released ; Geological Society of London Special Publications Volume 283 ; 283 >
-      au < released ; Geological Society of London Special Publications Volume 284 ; 284 >
-      au < released ; Geological Society of London Special Publications Volume 285 ; 285 >
-      au < released ; Geological Society of London Special Publications Volume 286 ; 286 >
-      au < released ; Geological Society of London Special Publications Volume 287 ; 287 >
-      au < released ; Geological Society of London Special Publications Volume 288 ; 288 >
-      au < released ; Geological Society of London Special Publications Volume 289 ; 289 >
-      au < released ; Geological Society of London Special Publications Volume 290 ; 290 >
-      au < released ; Geological Society of London Special Publications Volume 291 ; 291 >
-      au < released ; Geological Society of London Special Publications Volume 292 ; 292 >
-      au < released ; Geological Society of London Special Publications Volume 293 ; 293 >
-      au < released ; Geological Society of London Special Publications Volume 294 ; 294 >
-      au < released ; Geological Society of London Special Publications Volume 295 ; 295 >
-      au < released ; Geological Society of London Special Publications Volume 296 ; 296 >
-      au < released ; Geological Society of London Special Publications Volume 297 ; 297 >
-      au < released ; Geological Society of London Special Publications Volume 298 ; 298 >
-      au < released ; Geological Society of London Special Publications Volume 299 ; 299 >
-      au < released ; Geological Society of London Special Publications Volume 300 ; 300 >
-      au < released ; Geological Society of London Special Publications Volume 301 ; 301 >
-      au < released ; Geological Society of London Special Publications Volume 302 ; 302 >
-      au < released ; Geological Society of London Special Publications Volume 303 ; 303 >
-      au < released ; Geological Society of London Special Publications Volume 304 ; 304 >
-      au < released ; Geological Society of London Special Publications Volume 305 ; 305 >
-      au < released ; Geological Society of London Special Publications Volume 306 ; 306 >
-      au < released ; Geological Society of London Special Publications Volume 307 ; 307 >
-      au < released ; Geological Society of London Special Publications Volume 308 ; 308 >
-      au < released ; Geological Society of London Special Publications Volume 309 ; 309 >
-      au < released ; Geological Society of London Special Publications Volume 310 ; 310 >
-      au < released ; Geological Society of London Special Publications Volume 311 ; 311 >
-      au < released ; Geological Society of London Special Publications Volume 312 ; 312 >
-      au < released ; Geological Society of London Special Publications Volume 313 ; 313 >
-      au < released ; Geological Society of London Special Publications Volume 314 ; 314 >
-      au < released ; Geological Society of London Special Publications Volume 315 ; 315 >
-      au < released ; Geological Society of London Special Publications Volume 316 ; 316 >
+      au < down ; Geological Society of London Special Publications Volume 197 ; 197 >
+      au < down ; Geological Society of London Special Publications Volume 198 ; 198 >
+      au < down ; Geological Society of London Special Publications Volume 199 ; 199 >
+      au < down ; Geological Society of London Special Publications Volume 200 ; 200 >
+      au < down ; Geological Society of London Special Publications Volume 201 ; 201 >
+      au < down ; Geological Society of London Special Publications Volume 202 ; 202 >
+      au < down ; Geological Society of London Special Publications Volume 203 ; 203 >
+      au < down ; Geological Society of London Special Publications Volume 204 ; 204 >
+      au < down ; Geological Society of London Special Publications Volume 205 ; 205 >
+      au < down ; Geological Society of London Special Publications Volume 206 ; 206 >
+      au < down ; Geological Society of London Special Publications Volume 207 ; 207 >
+      au < down ; Geological Society of London Special Publications Volume 208 ; 208 >
+      au < down ; Geological Society of London Special Publications Volume 209 ; 209 >
+      au < down ; Geological Society of London Special Publications Volume 210 ; 210 >
+      au < down ; Geological Society of London Special Publications Volume 211 ; 211 >
+      au < down ; Geological Society of London Special Publications Volume 212 ; 212 >
+      au < down ; Geological Society of London Special Publications Volume 213 ; 213 >
+      au < down ; Geological Society of London Special Publications Volume 214 ; 214 >
+      au < down ; Geological Society of London Special Publications Volume 215 ; 215 >
+      au < down ; Geological Society of London Special Publications Volume 216 ; 216 >
+      au < down ; Geological Society of London Special Publications Volume 217 ; 217 >
+      au < down ; Geological Society of London Special Publications Volume 218 ; 218 >
+      au < down ; Geological Society of London Special Publications Volume 219 ; 219 >
+      au < down ; Geological Society of London Special Publications Volume 220 ; 220 >
+      au < down ; Geological Society of London Special Publications Volume 221 ; 221 >
+      au < down ; Geological Society of London Special Publications Volume 222 ; 222 >
+      au < down ; Geological Society of London Special Publications Volume 223 ; 223 >
+      au < down ; Geological Society of London Special Publications Volume 224 ; 224 >
+      au < down ; Geological Society of London Special Publications Volume 225 ; 225 >
+      au < down ; Geological Society of London Special Publications Volume 226 ; 226 >
+      au < down ; Geological Society of London Special Publications Volume 227 ; 227 >
+      au < down ; Geological Society of London Special Publications Volume 228 ; 228 >
+      au < down ; Geological Society of London Special Publications Volume 229 ; 229 >
+      au < down ; Geological Society of London Special Publications Volume 230 ; 230 >
+      au < down ; Geological Society of London Special Publications Volume 231 ; 231 >
+      au < down ; Geological Society of London Special Publications Volume 232 ; 232 >
+      au < down ; Geological Society of London Special Publications Volume 233 ; 233 >
+      au < down ; Geological Society of London Special Publications Volume 234 ; 234 >
+      au < down ; Geological Society of London Special Publications Volume 235 ; 235 >
+      au < down ; Geological Society of London Special Publications Volume 236 ; 236 >
+      au < down ; Geological Society of London Special Publications Volume 237 ; 237 >
+      au < down ; Geological Society of London Special Publications Volume 238 ; 238 >
+      au < down ; Geological Society of London Special Publications Volume 239 ; 239 >
+      au < down ; Geological Society of London Special Publications Volume 240 ; 240 >
+      au < down ; Geological Society of London Special Publications Volume 241 ; 241 >
+      au < down ; Geological Society of London Special Publications Volume 242 ; 242 >
+      au < down ; Geological Society of London Special Publications Volume 243 ; 243 >
+      au < down ; Geological Society of London Special Publications Volume 244 ; 244 >
+      au < down ; Geological Society of London Special Publications Volume 245 ; 245 >
+      au < down ; Geological Society of London Special Publications Volume 246 ; 246 >
+      au < down ; Geological Society of London Special Publications Volume 247 ; 247 >
+      au < down ; Geological Society of London Special Publications Volume 248 ; 248 >
+      au < down ; Geological Society of London Special Publications Volume 249 ; 249 >
+      au < down ; Geological Society of London Special Publications Volume 250 ; 250 >
+      au < down ; Geological Society of London Special Publications Volume 251 ; 251 >
+      au < down ; Geological Society of London Special Publications Volume 252 ; 252 >
+      au < down ; Geological Society of London Special Publications Volume 253 ; 253 >
+      au < down ; Geological Society of London Special Publications Volume 254 ; 254 >
+      au < down ; Geological Society of London Special Publications Volume 255 ; 255 >
+      au < down ; Geological Society of London Special Publications Volume 256 ; 256 >
+      au < down ; Geological Society of London Special Publications Volume 257 ; 257 >
+      au < down ; Geological Society of London Special Publications Volume 258 ; 258 >
+      au < down ; Geological Society of London Special Publications Volume 259 ; 259 >
+      au < down ; Geological Society of London Special Publications Volume 260 ; 260 >
+      au < down ; Geological Society of London Special Publications Volume 261 ; 261 >
+      au < down ; Geological Society of London Special Publications Volume 262 ; 262 >
+      au < down ; Geological Society of London Special Publications Volume 263 ; 263 >
+      au < down ; Geological Society of London Special Publications Volume 264 ; 264 >
+      au < down ; Geological Society of London Special Publications Volume 265 ; 265 >
+      au < down ; Geological Society of London Special Publications Volume 266 ; 266 >
+      au < down ; Geological Society of London Special Publications Volume 267 ; 267 >
+      au < down ; Geological Society of London Special Publications Volume 268 ; 268 >
+      au < down ; Geological Society of London Special Publications Volume 269 ; 269 >
+      au < down ; Geological Society of London Special Publications Volume 270 ; 270 >
+      au < down ; Geological Society of London Special Publications Volume 271 ; 271 >
+      au < down ; Geological Society of London Special Publications Volume 272 ; 272 >
+      au < down ; Geological Society of London Special Publications Volume 273 ; 273 >
+      au < down ; Geological Society of London Special Publications Volume 274 ; 274 >
+      au < down ; Geological Society of London Special Publications Volume 275 ; 275 >
+      au < down ; Geological Society of London Special Publications Volume 276 ; 276 >
+      au < down ; Geological Society of London Special Publications Volume 277 ; 277 >
+      au < down ; Geological Society of London Special Publications Volume 278 ; 278 >
+      au < down ; Geological Society of London Special Publications Volume 279 ; 279 >
+      au < down ; Geological Society of London Special Publications Volume 280 ; 280 >
+      au < down ; Geological Society of London Special Publications Volume 281 ; 281 >
+      au < down ; Geological Society of London Special Publications Volume 282 ; 282 >
+      au < down ; Geological Society of London Special Publications Volume 283 ; 283 >
+      au < down ; Geological Society of London Special Publications Volume 284 ; 284 >
+      au < down ; Geological Society of London Special Publications Volume 285 ; 285 >
+      au < down ; Geological Society of London Special Publications Volume 286 ; 286 >
+      au < down ; Geological Society of London Special Publications Volume 287 ; 287 >
+      au < down ; Geological Society of London Special Publications Volume 288 ; 288 >
+      au < down ; Geological Society of London Special Publications Volume 289 ; 289 >
+      au < down ; Geological Society of London Special Publications Volume 290 ; 290 >
+      au < down ; Geological Society of London Special Publications Volume 291 ; 291 >
+      au < down ; Geological Society of London Special Publications Volume 292 ; 292 >
+      au < down ; Geological Society of London Special Publications Volume 293 ; 293 >
+      au < down ; Geological Society of London Special Publications Volume 294 ; 294 >
+      au < down ; Geological Society of London Special Publications Volume 295 ; 295 >
+      au < down ; Geological Society of London Special Publications Volume 296 ; 296 >
+      au < down ; Geological Society of London Special Publications Volume 297 ; 297 >
+      au < down ; Geological Society of London Special Publications Volume 298 ; 298 >
+      au < down ; Geological Society of London Special Publications Volume 299 ; 299 >
+      au < down ; Geological Society of London Special Publications Volume 300 ; 300 >
+      au < down ; Geological Society of London Special Publications Volume 301 ; 301 >
+      au < down ; Geological Society of London Special Publications Volume 302 ; 302 >
+      au < down ; Geological Society of London Special Publications Volume 303 ; 303 >
+      au < down ; Geological Society of London Special Publications Volume 304 ; 304 >
+      au < down ; Geological Society of London Special Publications Volume 305 ; 305 >
+      au < down ; Geological Society of London Special Publications Volume 306 ; 306 >
+      au < down ; Geological Society of London Special Publications Volume 307 ; 307 >
+      au < down ; Geological Society of London Special Publications Volume 308 ; 308 >
+      au < down ; Geological Society of London Special Publications Volume 309 ; 309 >
+      au < down ; Geological Society of London Special Publications Volume 310 ; 310 >
+      au < down ; Geological Society of London Special Publications Volume 311 ; 311 >
+      au < down ; Geological Society of London Special Publications Volume 312 ; 312 >
+      au < down ; Geological Society of London Special Publications Volume 313 ; 313 >
+      au < down ; Geological Society of London Special Publications Volume 314 ; 314 >
+      au < down ; Geological Society of London Special Publications Volume 315 ; 315 >
+      au < down ; Geological Society of London Special Publications Volume 316 ; 316 >
 
     }
 
@@ -265,46 +266,46 @@
       param[base_url] = http://jgs.lyellcollection.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < released ; Journal of the Geological Society of London Volume 127 ; 127 >
-      au < released ; Journal of the Geological Society of London Volume 128 ; 128 >
-      au < released ; Journal of the Geological Society of London Volume 129 ; 129 >
-      au < released ; Journal of the Geological Society of London Volume 130 ; 130 >
-      au < released ; Journal of the Geological Society of London Volume 131 ; 131 >
-      au < released ; Journal of the Geological Society of London Volume 132 ; 132 >
-      au < released ; Journal of the Geological Society of London Volume 133 ; 133 >
-      au < released ; Journal of the Geological Society of London Volume 134 ; 134 >
-      au < released ; Journal of the Geological Society of London Volume 135 ; 135 >
-      au < released ; Journal of the Geological Society of London Volume 136 ; 136 >
-      au < released ; Journal of the Geological Society of London Volume 137 ; 137 >
-      au < released ; Journal of the Geological Society of London Volume 138 ; 138 >
-      au < released ; Journal of the Geological Society of London Volume 139 ; 139 >
-      au < released ; Journal of the Geological Society of London Volume 140 ; 140 >
-      au < released ; Journal of the Geological Society of London Volume 141 ; 141 >
-      au < released ; Journal of the Geological Society of London Volume 142 ; 142 >
-      au < released ; Journal of the Geological Society of London Volume 143 ; 143 >
-      au < released ; Journal of the Geological Society of London Volume 144 ; 144 >
-      au < released ; Journal of the Geological Society of London Volume 145 ; 145 >
-      au < released ; Journal of the Geological Society of London Volume 146 ; 146 >
-      au < released ; Journal of the Geological Society of London Volume 147 ; 147 >
-      au < released ; Journal of the Geological Society of London Volume 148 ; 148 >
-      au < released ; Journal of the Geological Society of London Volume 149 ; 149 >
-      au < released ; Journal of the Geological Society of London Volume 150 ; 150 >
-      au < released ; Journal of the Geological Society of London Volume 151 ; 151 >
-      au < released ; Journal of the Geological Society of London Volume 152 ; 152 >
-      au < released ; Journal of the Geological Society of London Volume 153 ; 153 >
-      au < released ; Journal of the Geological Society of London Volume 154 ; 154 >
-      au < released ; Journal of the Geological Society of London Volume 155 ; 155 >
-      au < released ; Journal of the Geological Society of London Volume 156 ; 156 >
-      au < released ; Journal of the Geological Society of London Volume 157 ; 157 >
-      au < released ; Journal of the Geological Society of London Volume 158 ; 158 >
-      au < released ; Journal of the Geological Society of London Volume 159 ; 159 >
-      au < released ; Journal of the Geological Society of London Volume 160 ; 160 >
-      au < released ; Journal of the Geological Society of London Volume 161 ; 161 >
-      au < released ; Journal of the Geological Society of London Volume 162 ; 162 >
-      au < released ; Journal of the Geological Society of London Volume 163 ; 163 >
-      au < released ; Journal of the Geological Society of London Volume 164 ; 164 >
-      au < released ; Journal of the Geological Society of London Volume 165 ; 165 >
-      au < released ; Journal of the Geological Society of London Volume 166 ; 166 >
+      au < down ; Journal of the Geological Society of London Volume 127 ; 127 >
+      au < down ; Journal of the Geological Society of London Volume 128 ; 128 >
+      au < down ; Journal of the Geological Society of London Volume 129 ; 129 >
+      au < down ; Journal of the Geological Society of London Volume 130 ; 130 >
+      au < down ; Journal of the Geological Society of London Volume 131 ; 131 >
+      au < down ; Journal of the Geological Society of London Volume 132 ; 132 >
+      au < down ; Journal of the Geological Society of London Volume 133 ; 133 >
+      au < down ; Journal of the Geological Society of London Volume 134 ; 134 >
+      au < down ; Journal of the Geological Society of London Volume 135 ; 135 >
+      au < down ; Journal of the Geological Society of London Volume 136 ; 136 >
+      au < down ; Journal of the Geological Society of London Volume 137 ; 137 >
+      au < down ; Journal of the Geological Society of London Volume 138 ; 138 >
+      au < down ; Journal of the Geological Society of London Volume 139 ; 139 >
+      au < down ; Journal of the Geological Society of London Volume 140 ; 140 >
+      au < down ; Journal of the Geological Society of London Volume 141 ; 141 >
+      au < down ; Journal of the Geological Society of London Volume 142 ; 142 >
+      au < down ; Journal of the Geological Society of London Volume 143 ; 143 >
+      au < down ; Journal of the Geological Society of London Volume 144 ; 144 >
+      au < down ; Journal of the Geological Society of London Volume 145 ; 145 >
+      au < down ; Journal of the Geological Society of London Volume 146 ; 146 >
+      au < down ; Journal of the Geological Society of London Volume 147 ; 147 >
+      au < down ; Journal of the Geological Society of London Volume 148 ; 148 >
+      au < down ; Journal of the Geological Society of London Volume 149 ; 149 >
+      au < down ; Journal of the Geological Society of London Volume 150 ; 150 >
+      au < down ; Journal of the Geological Society of London Volume 151 ; 151 >
+      au < down ; Journal of the Geological Society of London Volume 152 ; 152 >
+      au < down ; Journal of the Geological Society of London Volume 153 ; 153 >
+      au < down ; Journal of the Geological Society of London Volume 154 ; 154 >
+      au < down ; Journal of the Geological Society of London Volume 155 ; 155 >
+      au < down ; Journal of the Geological Society of London Volume 156 ; 156 >
+      au < down ; Journal of the Geological Society of London Volume 157 ; 157 >
+      au < down ; Journal of the Geological Society of London Volume 158 ; 158 >
+      au < down ; Journal of the Geological Society of London Volume 159 ; 159 >
+      au < down ; Journal of the Geological Society of London Volume 160 ; 160 >
+      au < down ; Journal of the Geological Society of London Volume 161 ; 161 >
+      au < down ; Journal of the Geological Society of London Volume 162 ; 162 >
+      au < down ; Journal of the Geological Society of London Volume 163 ; 163 >
+      au < down ; Journal of the Geological Society of London Volume 164 ; 164 >
+      au < down ; Journal of the Geological Society of London Volume 165 ; 165 >
+      au < down ; Journal of the Geological Society of London Volume 166 ; 166 >
 
     }
 
@@ -322,48 +323,48 @@
       param[base_url] = http://qjegh.lyellcollection.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 1 ; 1 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 2 ; 2 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 3 ; 3 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 4 ; 4 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 5 ; 5 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 6 ; 6 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 7 ; 7 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 8 ; 8 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 9 ; 9 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 10 ; 10 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 11 ; 11 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 12 ; 12 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 13 ; 13 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 14 ; 14 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 15 ; 15 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 16 ; 16 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 17 ; 17 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 18 ; 18 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 19 ; 19 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 20 ; 20 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 21 ; 21 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 22 ; 22 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 23 ; 23 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 24 ; 24 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 25 ; 25 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 26 ; 26 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 27 ; 27 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 28 ; 28 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 29 ; 29 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 30 ; 30 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 31 ; 31 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 32 ; 32 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 33 ; 33 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 34 ; 34 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 35 ; 35 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 36 ; 36 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 37 ; 37 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 38 ; 38 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 39 ; 39 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 40 ; 40 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 41 ; 41 >
-      au < released ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 42 ; 42 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 1 ; 1 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 2 ; 2 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 3 ; 3 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 4 ; 4 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 5 ; 5 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 6 ; 6 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 7 ; 7 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 8 ; 8 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 9 ; 9 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 10 ; 10 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 11 ; 11 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 12 ; 12 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 13 ; 13 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 14 ; 14 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 15 ; 15 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 16 ; 16 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 17 ; 17 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 18 ; 18 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 19 ; 19 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 20 ; 20 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 21 ; 21 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 22 ; 22 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 23 ; 23 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 24 ; 24 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 25 ; 25 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 26 ; 26 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 27 ; 27 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 28 ; 28 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 29 ; 29 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 30 ; 30 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 31 ; 31 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 32 ; 32 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 33 ; 33 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 34 ; 34 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 35 ; 35 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 36 ; 36 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 37 ; 37 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 38 ; 38 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 39 ; 39 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 40 ; 40 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 41 ; 41 >
+      au < down ; Quarterly Journal of Engineering Geology and Hydrogeology Volume 42 ; 42 >
 
     }
 
