@@ -1,10 +1,10 @@
 /*
- * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.4 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: HighWirePressH20ArticleIteratorFactory.java,v 1.4.2.1 2011-02-11 00:06:30 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -118,7 +118,7 @@ public class HighWirePressH20ArticleIteratorFactory
 //        af.setFullTextCu(pdfLandCu);
 //      }
 //      else {
-//        af.setFullTextCu(pdfCu);
+        af.setFullTextCu(pdfCu);
 //      }
 //      guessOtherParts(af, pdfMat);
       return af;
