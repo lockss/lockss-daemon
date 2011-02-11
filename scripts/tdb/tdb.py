@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: tdb.py,v 1.5 2011-02-10 23:24:12 thib_gc Exp $
+# $Id: tdb.py,v 1.6 2011-02-11 18:48:36 barry409 Exp $
 
 # Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -30,30 +30,56 @@ __version__ = '''0.3.2'''
 
 import re
 
-class Map(object):
-    
+class MapError(Exception):
+    pass
+
+class _Map(object):
+    '''A map from tuples to values.  In addition, when a tuple
+    provided to 'get' is a prefix of a set of tuples previously
+    provided to 'set', the returned value is a dictionary representing
+    all of the mapped pairs previously provided. The prefix is
+    stripped off.  There is no delete operation.
+    '''
     def __init__(self, dic={}):
         '''Constructor.'''
         object.__init__(self)
         self._dictionary = dic.copy()
 
     def get(self, key):
+        if key == ():
+            raise MapError('Null tuple not allowed as key.')
         if type(key) is not tuple: key = ( key, )
         return self._get(key, self._dictionary)
     
     def _get(self, key, rec):
         if len(key) == 0: return rec
+        if type(rec) is not dict:
+            raise MapError('Trying to get deeper level than was set.')
         newrec = rec.get(key[0])
         if newrec: return self._get(key[1:], newrec)
         return None
     
     def set(self, key, val):
+        if key == ():
+            raise MapError('Null tuple not allowed as key.')
+        if val == None:
+            raise MapError('None value not allowed as key.')
         if type(key) is not tuple: key = ( key, )
+        # reserve dict values for internal use
+        if type(val) is dict:
+            raise MapError('dictionary not allowed as value.')
         self._set(key, val, self._dictionary)
     
     def _set(self, key, val, rec):
+        assert len(key) > 0
         k0 = key[0]
         if len(key) == 1:
+            if type(rec) is not dict:
+                raise MapError('Trying to set a deeper level than before.')
+            if type(rec.get(k0)) is dict:
+                raise MapError('Trying to set a shallower level than before.')
+            if k0 in rec:
+                raise MapError("Attempt to redefine %s" % (k0))
             rec[k0] = val
             return
         if k0 not in rec:
@@ -61,41 +87,75 @@ class Map(object):
         newrec = rec.get(k0)
         self._set(key[1:], val, newrec)
     
-class ChainedMap(Map):
-    
+class _ChainedMap(_Map):
+    '''A map from tuples to values, including nested scopes.
+    '''
     def __init__(self, next=None):
-        Map.__init__(self)
+        _Map.__init__(self)
         self._next = next
 
     def get(self, key):
-        myval = super(ChainedMap,self).get(key)
+        myval = super(_ChainedMap,self).get(key)
         if self._next is None: return myval
         nextval = self._next.get(key)
+        # myval in the recursive calls will never be None, so it is
+        # checked here explicitly.
         if myval is None: return nextval
-        if nextval is None or type(myval) is not dict: return myval
-        nextval = nextval.copy()
-        self._recursive_update(nextval, myval)
-        return nextval
         
-    def _recursive_update(self, map1, map2):
-        for (k2,v2) in map2.items():
-            if type(v2) is dict:
-                if k2 not in map1: map1[k2] = dict()
-                self._recursive_update(map1[k2], v2)
-            else: map1[k2] = v2
+        return self._combine_thing(myval, nextval)
+        
+    def _combine_dicts(self, myval, result):
+        '''Combine two trees of dictionaries, destructively altering
+        'result'.  Any path present in either is present in 'result'.
+        myval is not altered.
+        '''
+        assert type(myval) is dict
+        assert type(result) is dict
 
-class Publisher(Map):
+        for (k, v) in myval.items():
+            result[k] = self._combine_thing(v, result.get(k))
+        return result
+    
+    def _combine_thing(self, myval, nextval):
+        '''Combines either two dictionaries or two values.  myval may
+        not be None, but nextval may be.  If both are dictionaries,
+        the returned value combines the trees at all levels.  If both
+        are values, then myval is returned.  Raises MapError if one is
+        a dictionary and the other isn't.
+        '''
+        # The above should be detected at "set", but isn't; see comment at set
+        assert myval != None
+        if type(myval) is dict:
+            if nextval == None:
+                return self._combine_dicts(myval, dict())
+            if type(nextval) is not dict:
+                raise MapError('Conflict on depth of array at different scopes')
+            return self._combine_dicts(myval, nextval.copy())
+        else:
+            if type(nextval) is dict:
+                raise MapError('Conflict on depth of array at different scopes')
+            return myval
+    
+    def set(self, key, val):
+        if self._next and type(self._next.get(key)) is dict:
+            raise MapError('Conflict on depth of array at different scopes')
+        # bug: lacking backpointers, this can't check for children having
+        # a dictionary for this value. That case will raise MapError when
+        # the child's get is called.
+        return super(_ChainedMap, self).set(key, val)
 
+class Publisher(_Map):
+    '''A tdb Publisher object.'''
     NAME = 'name'
-
+    
     def __init__(self):
         '''Constructor.'''
-        Map.__init__(self)
-
+        super(Publisher, self).__init__()
+    
     def name(self): return self.get(Publisher.NAME)
 
-class Title(Map):
-
+class Title(_Map):
+    '''A tdb Title object.'''
     NAME = 'name'
     EISBN = 'eisbn'
     EISSN = 'eissn'
@@ -103,7 +163,6 @@ class Title(Map):
     ISSN = 'issn'
     PUBLISHER = 'publisher'
     TYPE = 'type'
-
     class Type:
         BOOK = 'book'
         JOURNAL = 'journal'
@@ -111,8 +170,8 @@ class Title(Map):
 
     def __init__(self):
         '''Constructor.'''
-        Map.__init__(self)
-
+        super(Title, self).__init__()
+    
     def set_publisher(self, publisher): self.set(Title.PUBLISHER, publisher)
 
     def name(self): return self.get(Title.NAME)
@@ -123,8 +182,8 @@ class Title(Map):
     def publisher(self): return self.get(Title.PUBLISHER)
     def type(self): return self.get(Title.TYPE) or Title.Type.DEFAULT
 
-class AU(ChainedMap):
-
+class AU(_ChainedMap):
+    '''Adds convenience getters to a _ChainedMap.'''
     class Status:
         DOES_NOT_EXIST = 'doesNotExist'
         EXISTS = 'exists'
@@ -155,11 +214,11 @@ class AU(ChainedMap):
     STATUS = 'status'
     TITLE = 'title'
     YEAR = 'year'
-
+    
     def __init__(self, next=None):
         '''Constructor.'''
-        ChainedMap.__init__(self, next)
-
+        super(AU, self).__init__(next)
+    
     def set_title(self, title): self.set(AU.TITLE, title)
 
     def attr(self, attr): return self.get( (AU.ATTR, attr) )
@@ -217,6 +276,156 @@ class Tdb(object):
 ###
 
 import unittest
+
+class TestMap(unittest.TestCase):
+    
+    def testSimple(self):
+        """Test simple put/get"""
+        m = _Map()
+        # What goes in is what comes out.
+        m.set('key', 'value')
+        self.assertEquals(m.get('key'), 'value')
+        # Singletons and atoms work as keys.
+        self.assertEquals(m.get(('key')), 'value')
+        self.assertEquals(m.get('foo'), None)
+        # Values are write-once
+        self.assertRaises(MapError, m.set, 'key', 'value')
+    
+    def testParams(self):
+        """Test multiple-level put/get"""
+        m = _Map()
+        m.set(('param', 'foo'), 'bar')
+        self.assertEquals(m.get('param'), {'foo': 'bar'})
+        self.assertEquals(m.get(('param', 'foo')), 'bar')
+        m.set(('param', 'fee', 'baz'), 'bar')
+        m.set(('param', 'yab', 'dab'), 'doo')
+        self.assertEquals(m.get('param'), {'fee': {'baz': 'bar'}, 'foo': 'bar', 'yab': {'dab': 'doo'}})
+    
+    def testArgs(self):
+        """Test that correct exceptions happen when top-level args are not valid"""
+        m = _Map()
+        self.assertRaises(MapError, m.set, (), 'yab')
+        self.assertRaises(MapError, m.get, ())
+        self.assertRaises(MapError, m.set, 'foo', {'yab': 'dab'})
+        self.assertRaises(MapError, m.set, 'foo', None)
+        
+    def testMismatch(self):
+        '''shouldn't be able to set a value and try to access it as an array, or
+        the reverse.'''
+        m = _Map()
+        m.set('foo', 'bar')
+        self.assertRaises(MapError, m.get, ('foo', 'foo'))
+        # having both param['foo'] and param['foo']['bar'] isn't permitted
+        m.set(('param', 'foo', 'baz'), 'bar')
+        self.assertRaises(MapError, m.set, ('param', 'foo'), 'yab')
+        m.set(('param', 'doo'), 'yab')
+        self.assertRaises(MapError, m.set, ('param', 'doo', 'baz'), 'bar')
+
+class TestChainedMap(unittest.TestCase):
+    
+    def testShadowing(self):
+        '''Test that shadowing works correctly'''
+        outer = _ChainedMap()
+        outer.set('foo', 'bar')
+        self.assertEquals(outer.get('foo'), 'bar')
+        inner = _ChainedMap(outer)
+        # Before inner overrides, it inherits
+        self.assertEquals(inner.get('foo'), 'bar')
+        # Now it's overridden
+        inner.set('foo', 'baz')
+        self.assertEquals(outer.get('foo'), 'bar')
+        self.assertEquals(inner.get('foo'), 'baz')
+        # Likewise a tree.
+        m3 = _ChainedMap(outer)
+        m3.set('foo', 'yab')
+        self.assertEquals(outer.get('foo'), 'bar')
+        self.assertEquals(inner.get('foo'), 'baz')
+        self.assertEquals(m3.get('foo'), 'yab')
+    
+    def testShadowingArray(self):
+        outer = _ChainedMap()
+        inner = _ChainedMap(outer)
+        outer.set(('params', 'foo'), 'bar')
+        inner.set(('params', 'foo'), 'baz')
+        self.assertEquals(inner.get(('params', 'foo')), 'baz')
+        self.assertEquals(outer.get(('params', 'foo')), 'bar')
+        # Setting in outer is visible to inner
+        outer.set(('params', 'yab'), 'dab')
+        self.assertEquals(inner.get('params'), {'foo': 'baz', 'yab': 'dab'})
+        
+    def testShadowing3(self):
+        outer = _ChainedMap()
+        inner = _ChainedMap(outer)
+        outer.set(('params', 'doo', 'foo'), 'bar')
+        inner.set(('params', 'doo', 'foo'), 'baz')
+        self.assertEquals(inner.get(('params', 'doo')), {'foo': 'baz'})
+        self.assertEquals(outer.get(('params', 'doo')), {'foo': 'bar'})
+        self.assertEquals(inner.get('params'), {'doo': {'foo': 'baz'}})
+        # Setting in outer is visible to inner
+        outer.set(('params', 'doo', 'yab'), 'dab')
+        self.assertEquals(inner.get(('params', 'doo')), {'foo': 'baz', 'yab': 'dab'})
+        self.assertEquals(inner.get(('params')), {'doo': {'foo': 'baz', 'yab': 'dab'}})
+        
+    def testMismatchedChild(self):
+        '''Test that any setting of an inner scope's value checks the outer
+        scope to make sure it's a leaf.'''
+        outer = _ChainedMap()
+        inner = _ChainedMap(outer)
+        outer.set(('params', 'foo'), 'bar')
+        self.assertRaises(MapError, inner.set, 'params', 'baz')
+        outer.set('xparams', 'bar')
+        self.assertRaises(MapError, inner.set, ('xparams', 'foo'), 'baz')
+        outer.set(('foo', 'bar', 'baz'), 'foo')
+        self.assertRaises(MapError, inner.set, ('foo', 'bar'), 'baz')
+        outer.set(('fee', 'bar'), 'foo')
+        self.assertRaises(MapError, inner.set, ('fee', 'bar', 'baz'), 'baz')
+
+    '''
+    There are no backpointers from the outer scope to all the inner scopes it contains.
+    When an outer scope's value is set, an inner scope might already have it defined as
+    a non-leaf, but we can't check.
+
+    def testMismatchedParent(self):
+        # Test that any setting of an outer scope's value checks the inner
+        # scopes to make sure it's a leaf.
+        outer = _ChainedMap()
+        inner = _ChainedMap(outer)
+        inner.set(('params', 'foo'), 'bar')
+        self.assertRaises(MapError, outer.set, 'params', 'baz')
+        inner.set('xparams', 'bar')
+        self.assertRaises(MapError, outer.set, ('xparams', 'foo'), 'baz')
+    '''
+    
+    def testMismatchedParent2(self):
+        outer = _ChainedMap()
+        inner = _ChainedMap(outer)
+        inner.set(('xparams', 'foo'), 'bar')
+        outer.set('xparams', 'baz')
+        # see testMismatchedParent: it's a bug that this doesn't
+        # raise MapError. But the 'get' does raise it.
+        self.assertRaises(MapError, inner.get, 'xparams')
+        inner.set(('yparams', 'foo', 'bar', 'baz'), 'foo')
+        outer.set(('yparams', 'foo', 'bar'), 'foo')
+        self.assertRaises(MapError, inner.get, 'yparams')
+        inner.set(('zparams', 'foo', 'bar'), 'foo')
+        outer.set(('zparams', 'foo', 'bar', 'baz'), 'foo')
+        self.assertRaises(MapError, inner.get, 'zparams')
+   
+    def testCombine(self):
+        outer = _ChainedMap()
+        inner = _ChainedMap(outer)
+        inner.set(('params', 'doo', 'foo'), 'baz')
+        inner.set(('params', 'doo', 'dum'), 'foo')
+        inner.set(('params', 'dee'), 'bax')
+        outer.set(('params', 'fip'), 'foo')
+        self.assertEquals(inner.get('params'), {'fip': 'foo',
+                                                'doo': {'foo': 'baz', 'dum': 'foo'},
+                                                'dee': 'bax'})
+        outer.set(('params', 'doo', 'foo'), 'bar') # shadowed
+        outer.set(('params', 'doo', 'fee'), 'bar') # new
+        self.assertEquals(inner.get('params'), {'fip': 'foo',
+                                                'doo': {'fee': 'bar', 'foo': 'baz', 'dum': 'foo'},
+                                                'dee': 'bax'})
 
 class TestAU(unittest.TestCase):
 
