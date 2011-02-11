@@ -79,7 +79,6 @@ elif [ -x ${LOCKSS_HOME}/etc/lockss/runssl ]; then
     RUN_SSL="${LOCKSS_HOME}/etc/lockss/runssl"
 fi
 while [ -f ${KEEP_GOING} ]; do
-    rm -f ${LOCAL_TXT}
     # If optional SSL setup script exists and is executable, run it.
     # It will have the environment variables set by set_variables()
     # in ${LOCKSS_HOME}/etc/lockss/functions and by ${CFG_FILE}
