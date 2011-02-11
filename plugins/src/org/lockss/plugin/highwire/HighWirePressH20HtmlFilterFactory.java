@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.24 2010-10-05 19:51:22 pgust Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.25 2011-02-11 00:05:52 thib_gc Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttribute("div", "class", "leaderboard-ads"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "sidebar-current-issue"),
         HtmlNodeFilters.tagWithAttribute("p", "class", "copyright"),
+        HtmlNodeFilters.tagWithAttribute("div", "class", "copyright"),
         HtmlNodeFilters.tagWithAttribute("div", "id", "cited-by"),
         // e.g. PNAS
         HtmlNodeFilters.tagWithAttribute("div", "class", "science-jobs"),
