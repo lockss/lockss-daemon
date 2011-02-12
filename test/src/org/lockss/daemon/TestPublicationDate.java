@@ -1,5 +1,5 @@
 /*
- * $Id: TestPublicationDate.java,v 1.2 2011-02-12 06:37:01 pgust Exp $
+ * $Id: TestPublicationDate.java,v 1.3 2011-02-12 07:36:47 pgust Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestPublicationDate extends LockssTestCase {
     assertEquals("2010-03-13", PublicationDate.parse("2010/3/13",Locale.US).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010/3/13",Locale.UK).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010/March/13",Locale.US).toString()); 
-    //assertEquals("2010-03-13", PublicationDate.parse("2010/MŠrz/13",Locale.GERMANY).toString()); 
+    assertEquals("2010-03-13", PublicationDate.parse("2010/MÃ¤rz/13",Locale.GERMANY).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010/Mar./13",Locale.US).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010/Mar./13",Locale.US).toString()); 
     assertEquals("2010-03", PublicationDate.parse("2010/3",Locale.US).toString()); 
@@ -80,7 +80,7 @@ public class TestPublicationDate extends LockssTestCase {
     assertEquals("2010-S2", PublicationDate.parse("Summer Quarter, 2010",Locale.US).toString());
     assertEquals("2010-S2", PublicationDate.parse("Summer 2010",Locale.US).toString());
     assertEquals("2010-S2", PublicationDate.parse("Summer, 2010",Locale.US).toString());
-    //assertEquals("2010-Q2", PublicationDate.parse("2 ¼ trimestre, 2010",Locale.ITALY).toString());
+    assertEquals("2010-Q2", PublicationDate.parse("2 Âº trimestre, 2010",Locale.ITALY).toString());
 //    "Summer-Fall 2010", //    2010 2X  (non-standard)  ??
 //    "Summer/Fall 2010", //    2010 2X  (non-standard)  ??
     assertEquals("2010-Q1", PublicationDate.parse("First Quarter 2010",Locale.US).toString());
