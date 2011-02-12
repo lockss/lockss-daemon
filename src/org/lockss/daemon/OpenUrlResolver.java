@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.1 2011-01-25 00:49:30 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.2 2011-02-12 00:38:57 pgust Exp $
  */
 
 /*
@@ -158,6 +158,8 @@ public class OpenUrlResolver {
    * 
    * @param params the parameters
    * @return a normalized date string of the form YYYY{-MM{-DD}}
+   *   or YYYY-nQ for nth quarter, or YYYY-nX for nth season for
+   *   n between 1 and 4.
    */
   private String getRftDate(Map<String,String> params) {
     String ssn = getRftParam(params, "ssn"); // spring, summer, fall, winter
@@ -169,28 +171,28 @@ public class OpenUrlResolver {
       if (quarter != null) {
         // fill in month based on quarter
         if (quarter.equals("1")) {
-          date += "-01";
+          date += "-Q1";
         } else if (quarter.equals("2")) {
-          date += "-04";
+          date += "-Q2";
         } else if (quarter.equals("3")) {
-          date += "-07";
+          date += "-Q3";
         } else if (quarter.equals("4")) {
-          date += "-10";
+          date += "-Q4";
         } else {
-          log.debug("Invalid quarter: " + quarter);
+          log.warning("Invalid quarter: " + quarter);
         }
       } else if (ssn != null) {
         // fill in month based on season
-        if (ssn.equals("spring")) {
-          date += "-01";
-        } else if (ssn.equals("summer")) {
-          date += "-04";
-        } else if (ssn.equals("fall")) {
-          date += "-07";
-        } else if (ssn.equals("winter")) {
-          date += "-10";
+        if (ssn.equalsIgnoreCase("spring") || ssn.equals(1)) {
+          date += "-S1";
+        } else if (ssn.equalsIgnoreCase("summer") || ssn.equals(2)) {
+          date += "-S2";
+        } else if (ssn.equalsIgnoreCase("fall") || ssn.equals("3")) {
+          date += "-S3";
+        } else if (ssn.equalsIgnoreCase("winter") || ssn.equals("4")) {
+          date += "-S4";
         }
-        log.debug("Invalid ssn: " + ssn);
+        log.warning("Invalid ssn: " + ssn);
       }
     }
     return date;
@@ -724,7 +726,7 @@ public class OpenUrlResolver {
     } catch (IllegalArgumentException ex) {
       return null;
     }
-    
+
     // strip punctuation
     issn = issn.replaceAll("-", "");
     
@@ -740,7 +742,8 @@ public class OpenUrlResolver {
       + " where " + ITN + ".md_id = " + MTN + ".md_id"
       + " and issn = '" + issn + "'";
       if (date != null) {
-        query+= " and date='" + date + "'";
+        // enables query "2009" to match "2009-05-10" in database
+        query+= " and date like '" + date + "%'";
       }
       if (volume != null) {
         query+= " and volume='" + volume + "'";
@@ -1123,7 +1126,16 @@ public class OpenUrlResolver {
       if (spage != null) {
         query+= " and start_page='" + spage + "'";
       } else if (author != null) {
-        query+= " and author like '" + author + "%'";
+        query+= " and (";
+        // match single author
+        query+= " author = '" + author + "'";
+        // match first author
+        query+= " or author like '" + author + ";%'";
+        // match last author
+        query+= " or author like '%;" + author + "'";
+        // match any middle author
+        query+= " or author like '%;" + author + ";%'";
+        query+= ")";
       } else if (atitle != null) {
         query+= " and article_title like '" + atitle + "%'";
       }
