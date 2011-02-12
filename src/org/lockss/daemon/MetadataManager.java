@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.3 2011-01-25 19:19:09 pgust Exp $
+ * $Id: MetadataManager.java,v 1.4 2011-02-12 00:25:14 pgust Exp $
  */
 
 /*
@@ -1014,6 +1014,69 @@ public class MetadataManager
   }
 
   /**
+   * Return the author field to store in database. The field is comprised of
+   * a semicolon separated list of as many authors as will fit in the database
+   * author field.
+   * @param md the ArticleMetadata
+   * @return the author or <code>null</code> if none specified
+   */
+  private static String getAuthorField(ArticleMetadata md) {
+    String author = null;
+    List<String> authors = md.getList(MetadataField.FIELD_AUTHOR);
+    // create author field as semicolon-separated list of authors from metadata
+    if (authors != null) {
+      for (String a : authors) {
+        if (author == null) {
+          author = a;
+        } else {
+          // include as many authors as will fit in the field
+          if (author.length()+a.length()+1 > MAX_AUTHOR_FIELD) {
+            break;
+          }
+          author += ";" + a; 
+        }
+      }
+    }
+    return author;
+  }
+  
+  /**
+   * Return the article title field to store in the database. The field
+   * is truncated to the size of the article title field.
+   * @param md the ArticleMetadata
+   * @return the articleTitleField or <code>null</code> if none specified
+   */
+  private static String getArticleTitleField(ArticleMetadata md) {
+    // elide title field
+    String articleTitle = md.get(MetadataField.FIELD_ARTICLE_TITLE);
+    if ((articleTitle != null) && (articleTitle.length() > MAX_TITLE_FIELD)) {
+      articleTitle = articleTitle.substring(0, MAX_TITLE_FIELD);
+    }
+    return articleTitle;
+  }
+  
+  /**
+   * Return the date field to store in the database. The date field
+   * can be nearly anything a MetaData extractor chooses to provide,
+   * making it a near certainty that this method will be unable to
+   * parse it, even with the help of locale information.
+   * @param md the ArticleMetadata
+   * @return the date field or <code>null</code> if non specified or
+   *   one cannot be parsed from the metadata information
+   */
+  private static String getDateField(ArticleMetadata md) {
+    String dateStr = md.get(MetadataField.FIELD_DATE);
+    if (dateStr != null) {
+      Locale locale = md.getLocale();
+      if (locale == null) {
+        locale = Locale.getDefault();
+      }
+      dateStr = new PublicationDate(dateStr, locale).toString();
+    }
+    return dateStr;
+  }
+  
+  /**
    * Add metadata for this archival unit.
    * 
    * @param conn the connection
@@ -1034,57 +1097,9 @@ public class MetadataManager
     String startPage = md.get(MetadataField.FIELD_START_PAGE);
 
     // normalize date according to ISO 8601 required for metadata
-    String dateStr = md.get(MetadataField.FIELD_DATE);
-    if (dateStr != null) {
-      String dateFormatStr = "MM/dd/yyyy"; // md.getDateFormat();
-      String localeStr = "en"; // md.getLocaleStr();
-      Locale locale = new java.util.Locale((localeStr == null) ? "en" : localeStr);
-      
-      SimpleDateFormat dateFormat;
-      dateFormat = new SimpleDateFormat(dateFormatStr, locale);
-      try {
-        Date date = dateFormat.parse(dateStr);
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(date);
-        int year = cal.get(Calendar.YEAR);
-        int month = cal.get(Calendar.MONTH);
-        int day = cal.get(Calendar.DATE);
-        dateStr = ""+year;
-        if (month >= 0) {
-          dateStr += "-" + (month+1); // months are 0-based
-          if (day > 0) {
-            dateStr += "-" + day;
-          }
-        }
-      } catch (ParseException ex) {
-        log.warning("Unable to normalize date: " + dateStr);
-        dateStr = null;
-      }
-    }
-    
-    // elide title field
-    String articleTitle = md.get(MetadataField.FIELD_ARTICLE_TITLE);
-    if (articleTitle.length() > MAX_TITLE_FIELD) {
-      articleTitle = articleTitle.substring(0, MAX_TITLE_FIELD-3) + "...";
-    }
-//    String journalTitle = au.getTitleConfig().getJournalTitle();
-
-    String author = null;
-    List<String> authors = md.getList(MetadataField.FIELD_AUTHOR);
-    // create author field as semicolon-separated list of authors from metadata
-    if (authors != null) {
-      for (String a : authors) {
-        if (author == null) {
-          author = a;
-        } else {
-          // include as many authors as will fit in the field
-          if (author.length()+a.length()+1 > MAX_AUTHOR_FIELD) {
-            break;
-          }
-          author += ";" + a; 
-        }
-      }
-    }
+    String dateStr = getDateField(md);
+    String articleTitle = getArticleTitleField(md);
+    String author = getAuthorField(md);
 
     String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
     
