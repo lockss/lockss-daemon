@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://edrv.endojournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -41,11 +41,11 @@
       au < exists ; Endocrine Reviews Volume 23 ; 23 >
       au < exists ; Endocrine Reviews Volume 24 ; 24 >
       au < exists ; Endocrine Reviews Volume 25 ; 25 >
-      au < manifest ; Endocrine Reviews Volume 26 ; 26 >
-      au < manifest ; Endocrine Reviews Volume 27 ; 27 >
-      au < manifest ; Endocrine Reviews Volume 28 ; 28 >
-      au < manifest ; Endocrine Reviews Volume 29 ; 29 >
-      au < manifest ; Endocrine Reviews Volume 30 ; 30 >
+      au < wanted ; Endocrine Reviews Volume 26 ; 26 >
+      au < wanted ; Endocrine Reviews Volume 27 ; 27 >
+      au < wanted ; Endocrine Reviews Volume 28 ; 28 >
+      au < wanted ; Endocrine Reviews Volume 29 ; 29 >
+      au < wanted ; Endocrine Reviews Volume 30 ; 30 >
 
     }
 
@@ -60,7 +60,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://endo.endojournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -178,11 +178,11 @@
       au < exists ; Endocrinology Volume 143 ; 143 >
       au < exists ; Endocrinology Volume 144 ; 144 >
       au < exists ; Endocrinology Volume 145 ; 145 >
-      au < manifest ; Endocrinology Volume 146 ; 146 >
-      au < manifest ; Endocrinology Volume 147 ; 147 >
-      au < manifest ; Endocrinology Volume 148 ; 148 >
-      au < manifest ; Endocrinology Volume 149 ; 149 >
-      au < manifest ; Endocrinology Volume 150 ; 150 >
+      au < wanted ; Endocrinology Volume 146 ; 146 >
+      au < wanted ; Endocrinology Volume 147 ; 147 >
+      au < wanted ; Endocrinology Volume 148 ; 148 >
+      au < wanted ; Endocrinology Volume 149 ; 149 >
+      au < wanted ; Endocrinology Volume 150 ; 150 >
 
     }
 
@@ -197,7 +197,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://jcem.endojournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -290,11 +290,11 @@
       au < exists ; Journal of Clinical Endocrinology & Metabolism Volume 87 ; 87 >
       au < exists ; Journal of Clinical Endocrinology & Metabolism Volume 88 ; 88 >
       au < exists ; Journal of Clinical Endocrinology & Metabolism Volume 89 ; 89 >
-      au < manifest ; Journal of Clinical Endocrinology & Metabolism Volume 90 ; 90 >
-      au < manifest ; Journal of Clinical Endocrinology & Metabolism Volume 91 ; 91 >
-      au < manifest ; Journal of Clinical Endocrinology & Metabolism Volume 92 ; 92 >
-      au < manifest ; Journal of Clinical Endocrinology & Metabolism Volume 93 ; 93 >
-      au < manifest ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 >
+      au < wanted ; Journal of Clinical Endocrinology & Metabolism Volume 90 ; 90 >
+      au < wanted ; Journal of Clinical Endocrinology & Metabolism Volume 91 ; 91 >
+      au < wanted ; Journal of Clinical Endocrinology & Metabolism Volume 92 ; 92 >
+      au < wanted ; Journal of Clinical Endocrinology & Metabolism Volume 93 ; 93 >
+      au < wanted ; Journal of Clinical Endocrinology & Metabolism Volume 94 ; 94 >
 
     }
 
@@ -309,7 +309,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://mend.endojournals.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -331,11 +331,11 @@
       au < exists ; Molecular Endocrinology Volume 16 ; 16 >
       au < exists ; Molecular Endocrinology Volume 17 ; 17 >
       au < exists ; Molecular Endocrinology Volume 18 ; 18 >
-      au < manifest ; Molecular Endocrinology Volume 19 ; 19 >
-      au < manifest ; Molecular Endocrinology Volume 20 ; 20 >
-      au < manifest ; Molecular Endocrinology Volume 21 ; 21 >
-      au < manifest ; Molecular Endocrinology Volume 22 ; 22 >
-      au < manifest ; Molecular Endocrinology Volume 23 ; 23 >
+      au < wanted ; Molecular Endocrinology Volume 19 ; 19 >
+      au < wanted ; Molecular Endocrinology Volume 20 ; 20 >
+      au < wanted ; Molecular Endocrinology Volume 21 ; 21 >
+      au < wanted ; Molecular Endocrinology Volume 22 ; 22 >
+      au < wanted ; Molecular Endocrinology Volume 23 ; 23 >
 
     }
 
@@ -349,14 +349,14 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://rphr.endojournals.org/
       implicit < status ; name ; param[volume_name] >
 
       au < exists ; Recent Progress in Hormone Research Volume 56 ; 56 >
       au < exists ; Recent Progress in Hormone Research Volume 57 ; 57 >
       au < exists ; Recent Progress in Hormone Research Volume 58 ; 58 >
-      au < manifest ; Recent Progress in Hormone Research Volume 59 ; 59 >
+      au < wanted ; Recent Progress in Hormone Research Volume 59 ; 59 >
 
     }
 

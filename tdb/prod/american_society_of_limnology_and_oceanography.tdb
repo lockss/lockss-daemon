@@ -1,0 +1,92 @@
+{
+  publisher <
+    name = American Society of Limnology and Oceanography
+  >
+
+comment[aslo] = we're not preserving the last ~4 volumes of the run due to a moving paywall
+
+  param[base_url] = http://www.aslo.org/
+
+  {
+    title <
+      name = Limnology and Oceanography ;
+      issn = 1079-2082
+    >
+    
+    plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin
+    param[journal_id] = lo
+    implicit < status ; name ; param[volume_name] >
+    
+    au < ready ; Limnology and Oceanography Volume 1 ; 1 >
+    au < ready ; Limnology and Oceanography Volume 2 ; 2 >
+    au < ready ; Limnology and Oceanography Volume 3 ; 3 >
+    au < ready ; Limnology and Oceanography Volume 4 ; 4 >
+    au < ready ; Limnology and Oceanography Volume 5 ; 5 >
+    au < ready ; Limnology and Oceanography Volume 6 ; 6 >
+    au < ready ; Limnology and Oceanography Volume 7 ; 7 >
+    au < ready ; Limnology and Oceanography Volume 8 ; 8 >
+    au < ready ; Limnology and Oceanography Volume 9 ; 9 >
+    au < ready ; Limnology and Oceanography Volume 10 ; 10 >
+    au < ready ; Limnology and Oceanography Volume 11 ; 11 >
+    au < ready ; Limnology and Oceanography Volume 12 ; 12 >
+    au < ready ; Limnology and Oceanography Volume 13 ; 13 >
+    au < ready ; Limnology and Oceanography Volume 14 ; 14 >
+    au < ready ; Limnology and Oceanography Volume 15 ; 15 >
+    au < ready ; Limnology and Oceanography Volume 16 ; 16 >
+    au < ready ; Limnology and Oceanography Volume 17 ; 17 >
+    au < ready ; Limnology and Oceanography Volume 18 ; 18 >
+    au < ready ; Limnology and Oceanography Volume 19 ; 19 >
+    au < ready ; Limnology and Oceanography Volume 20 ; 20 >
+    au < ready ; Limnology and Oceanography Volume 21 ; 21 >
+    au < ready ; Limnology and Oceanography Volume 22 ; 22 >
+    au < ready ; Limnology and Oceanography Volume 23 ; 23 >
+    au < ready ; Limnology and Oceanography Volume 24 ; 24 >
+    au < ready ; Limnology and Oceanography Volume 25 ; 25 >
+    au < ready ; Limnology and Oceanography Volume 26 ; 26 >
+    au < ready ; Limnology and Oceanography Volume 27 ; 27 >
+    au < ready ; Limnology and Oceanography Volume 28 ; 28 >
+    au < ready ; Limnology and Oceanography Volume 29 ; 29 >
+    au < ready ; Limnology and Oceanography Volume 30 ; 30 >
+    au < ready ; Limnology and Oceanography Volume 31 ; 31 >
+    au < ready ; Limnology and Oceanography Volume 32 ; 32 >
+    au < ready ; Limnology and Oceanography Volume 33 ; 33 >
+    au < ready ; Limnology and Oceanography Volume 34 ; 34 >
+    au < ready ; Limnology and Oceanography Volume 35 ; 35 >
+    au < ready ; Limnology and Oceanography Volume 36 ; 36 >
+    au < ready ; Limnology and Oceanography Volume 37 ; 37 >
+    au < ready ; Limnology and Oceanography Volume 38 ; 38 >
+    au < ready ; Limnology and Oceanography Volume 39 ; 39 >
+    au < ready ; Limnology and Oceanography Volume 40 ; 40 >
+    au < ready ; Limnology and Oceanography Volume 41 ; 41 >
+    au < ready ; Limnology and Oceanography Volume 42 ; 42 >
+    au < ready ; Limnology and Oceanography Volume 43 ; 43 >
+    au < ready ; Limnology and Oceanography Volume 44 ; 44 >
+    au < ready ; Limnology and Oceanography Volume 45 ; 45 >
+    au < ready ; Limnology and Oceanography Volume 46 ; 46 >
+    au < ready ; Limnology and Oceanography Volume 47 ; 47 >
+    au < ready ; Limnology and Oceanography Volume 48 ; 48 >
+    au < ready ; Limnology and Oceanography Volume 49 ; 49 >
+    au < ready ; Limnology and Oceanography Volume 50 ; 50 >
+    au < ready ; Limnology and Oceanography Volume 51 ; 51 >
+    au < ready ; Limnology and Oceanography Volume 52 ; 52 >
+
+  }
+  
+  {
+    title <
+      name = Limnology and Oceanography: Methods ;
+      issn = 1079-2082
+    >
+    
+    plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyMethodsPlugin
+    param[journal_id] = lomethods
+    implicit < status ; name ; param[year] >
+    
+    au < ready ; Limnology and Oceanography: Methods Volume 1 ; 2003 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 2 ; 2004 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 3 ; 2005 >   
+    au < ready ; Limnology and Oceanography: Methods Volume 4 ; 2006 >   
+        
+  }
+  
+}

@@ -17,9 +17,9 @@
     param[journal_dir] = education_and_treatment_of_children
 
     au < released ; Education and Treatment of Children Volume 30 ; 30 >
-    au < manifest ; Education and Treatment of Children Volume 31 ; 31 >
-    au < manifest ; Education and Treatment of Children Volume 32 ; 32 >
-    au < manifest ; Education and Treatment of Children Volume 33 ; 33 >
+    au < ready ; Education and Treatment of Children Volume 31 ; 31 >
+    au < ready ; Education and Treatment of Children Volume 32 ; 32 >
+    au < ready ; Education and Treatment of Children Volume 33 ; 33 >
 
   }
 
@@ -38,8 +38,8 @@
     au < released ; Essays in Medieval Studies Volume 21 ; 21 >
     au < released ; Essays in Medieval Studies Volume 22 ; 22 >
     au < released ; Essays in Medieval Studies Volume 23 ; 23 >
-    au < manifest ; Essays in Medieval Studies Volume 24 ; 24 >
-    au < manifest ; Essays in Medieval Studies Volume 25 ; 25 >
+    au < ready ; Essays in Medieval Studies Volume 24 ; 24 >
+    au < ready ; Essays in Medieval Studies Volume 25 ; 25 >
 
   }
 
@@ -73,8 +73,8 @@
     au < released ; Tolkien Studies Volume 2 ; 2 >
     au < released ; Tolkien Studies Volume 3 ; 3 >
     au < released ; Tolkien Studies Volume 4 ; 4 >
-    au < manifest ; Tolkien Studies Volume 5 ; 5 >
-    au < manifest ; Tolkien Studies Volume 6 ; 6 >
+    au < ready ; Tolkien Studies Volume 5 ; 5 >
+    au < ready ; Tolkien Studies Volume 6 ; 6 >
 
   }
 
@@ -95,8 +95,8 @@
     au < released ; Victorian Poetry Volume 43 ; 43 >
     au < released ; Victorian Poetry Volume 44 ; 44 >
     au < released ; Victorian Poetry Volume 45 ; 45 >
-    au < manifest ; Victorian Poetry Volume 46 ; 46 >
-    au < manifest ; Victorian Poetry Volume 47 ; 47 >
+    au < ready ; Victorian Poetry Volume 46 ; 46 >
+    au < ready ; Victorian Poetry Volume 47 ; 47 >
 
   }
 
@@ -109,9 +109,9 @@
 
     param[journal_dir] = west_virginia_history
 
-    au < manifest ; West Virginia History:  A Journal of Regional Studies New Series, Volume 1 ; 1 >
-    au < manifest ; West Virginia History:  A Journal of Regional Studies New Series, Volume 2 ; 2 >
-    au < manifest ; West Virginia History:  A Journal of Regional Studies New Series, Volume 3 ; 3 >
+    au < ready ; West Virginia History:  A Journal of Regional Studies New Series, Volume 1 ; 1 >
+    au < ready ; West Virginia History:  A Journal of Regional Studies New Series, Volume 2 ; 2 >
+    au < ready ; West Virginia History:  A Journal of Regional Studies New Series, Volume 3 ; 3 >
 
   }
 

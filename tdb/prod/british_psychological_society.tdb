@@ -1,0 +1,261 @@
+{
+
+  publisher <
+    name = British Psychological Society
+  >
+  
+  plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin
+  param[base_url] = http://www.ingentaconnect.com/
+  param[api_url] = http://api.ingentaconnect.com/
+  param[graphics_url] = http://graphics.ingentaconnect.com/
+  param[publisher_id] = bpsoc
+  implicit < status ; year; name ; param[volume_name] >
+
+  {
+    title <
+      name = British Journal of Clinical Psychology ;
+      issn = 0144-6657
+    >
+    
+    param[journal_id] = bjcp
+    param[journal_issn] = 0144-6657 
+
+    au < ready ; 1999 ; British Journal of Clinical Psychology Volume 38 ; 38 >
+    au < ready ; 2000 ; British Journal of Clinical Psychology Volume 39 ; 39 >
+    au < ready ; 2001 ; British Journal of Clinical Psychology Volume 40 ; 40 >
+    au < ready ; 2002 ; British Journal of Clinical Psychology Volume 41 ; 41 >
+    au < ready ; 2003 ; British Journal of Clinical Psychology Volume 42 ; 42 >
+    au < ready ; 2004 ; British Journal of Clinical Psychology Volume 43 ; 43 >
+    au < ready ; 2005 ; British Journal of Clinical Psychology Volume 44 ; 44 >
+    au < ready ; 2006 ; British Journal of Clinical Psychology Volume 45 ; 45 >
+    au < ready ; 2007 ; British Journal of Clinical Psychology Volume 46 ; 46 >
+    au < ready ; 2008 ; British Journal of Clinical Psychology Volume 47 ; 47 >
+    au < ready ; 2009 ; British Journal of Clinical Psychology Volume 48 ; 48 >
+    au < ready ; 2010 ; British Journal of Clinical Psychology Volume 49 ; 49 >
+
+  }
+
+  {
+    title <
+      name = British Journal of Developmental Psychology ;
+      issn = 0261-510X
+    >
+    
+    param[journal_id] = bjdp
+    param[journal_issn] = 0261-510X  
+
+    au < ready ; 1999 ; British Journal of Developmental Psychology Volume 17 ; 17 >
+    au < ready ; 2000 ; British Journal of Developmental Psychology Volume 18 ; 18 >
+    au < ready ; 2001 ; British Journal of Developmental Psychology Volume 19 ; 19 >
+    au < ready ; 2002 ; British Journal of Developmental Psychology Volume 20 ; 20 >
+    au < ready ; 2003 ; British Journal of Developmental Psychology Volume 21 ; 21 >
+    au < ready ; 2004 ; British Journal of Developmental Psychology Volume 22 ; 22 >
+    au < ready ; 2005 ; British Journal of Developmental Psychology Volume 23 ; 23 >
+    au < ready ; 2006 ; British Journal of Developmental Psychology Volume 24 ; 24 >
+    au < ready ; 2007 ; British Journal of Developmental Psychology Volume 25 ; 25 >
+    au < ready ; 2008 ; British Journal of Developmental Psychology Volume 26 ; 26 >
+    au < ready ; 2009 ; British Journal of Developmental Psychology Volume 27 ; 27 >
+    au < testing ; 2010 ; British Journal of Developmental Psychology Volume 28 ; 28 >
+    
+  }
+
+  {
+    title <
+      name = British Journal of Educational Psychology ;
+      issn = 0007-0998
+    >
+    
+    param[journal_id] = bjep
+    param[journal_issn] = 0007-0998  
+
+    au < ready ; 1999 ; British Journal of Educational Psychology Volume 69 ; 69 >
+    au < ready ; 2000 ; British Journal of Educational Psychology Volume 70 ; 70 >
+    au < ready ; 2001 ; British Journal of Educational Psychology Volume 71 ; 71 >
+    au < ready ; 2002 ; British Journal of Educational Psychology Volume 72 ; 72 >
+    au < ready ; 2003 ; British Journal of Educational Psychology Volume 73 ; 73 >
+    au < ready ; 2004 ; British Journal of Educational Psychology Volume 74 ; 74 >
+    au < ready ; 2005 ; British Journal of Educational Psychology Volume 75 ; 75 >
+    au < ready ; 2006 ; British Journal of Educational Psychology Volume 76 ; 76 >
+    au < ready ; 2007 ; British Journal of Educational Psychology Volume 77 ; 77 >
+    au < ready ; 2008 ; British Journal of Educational Psychology Volume 78 ; 78 >
+    au < ready ; 2009 ; British Journal of Educational Psychology Volume 79 ; 79 >
+    au < exists ; 2010 ; British Journal of Educational Psychology Volume 80 ; 80 >
+    
+  }
+
+  {
+    title <
+      name = British Journal of Health Psychology ;
+      issn = 1359-107X
+    >
+    
+    param[journal_id] = bjhp
+    param[journal_issn] = 1359-107X  
+
+    au < ready ; 1999 ; British Journal of Health Psychology Volume 4 ; 4 >
+    au < ready ; 2000 ; British Journal of Health Psychology Volume 5 ; 5 >
+    au < ready ; 2001 ; British Journal of Health Psychology Volume 6 ; 6 >
+    au < ready ; 2002 ; British Journal of Health Psychology Volume 7 ; 7 >
+    au < ready ; 2003 ; British Journal of Health Psychology Volume 8 ; 8 >
+    au < ready ; 2004 ; British Journal of Health Psychology Volume 9 ; 9 >
+    au < ready ; 2005 ; British Journal of Health Psychology Volume 10 ; 10 >
+    au < ready ; 2006 ; British Journal of Health Psychology Volume 11 ; 11 >
+    au < ready ; 2007 ; British Journal of Health Psychology Volume 12 ; 12 >
+    au < ready ; 2008 ; British Journal of Health Psychology Volume 13 ; 13 >
+    au < ready ; 2009 ; British Journal of Health Psychology Volume 14 ; 14 >
+    au < exists ; 2010 ; British Journal of Health Psychology Volume 15 ; 15 >
+    
+  }
+  
+  {
+    title <
+      name = British Journal of Mathematical and Statistical Psychology ;
+      issn = 0007-1102
+    >
+    
+    param[journal_id] = bjmsp
+    param[journal_issn] = 0007-1102  
+
+    au < ready ; 1999 ; British Journal of Mathematical and Statistical Psychology Volume 52 ; 52 >
+    au < ready ; 2000 ; British Journal of Mathematical and Statistical Psychology Volume 53 ; 53 >
+    au < ready ; 2001 ; British Journal of Mathematical and Statistical Psychology Volume 54 ; 54 >
+    au < ready ; 2002 ; British Journal of Mathematical and Statistical Psychology Volume 55 ; 55 >
+    au < ready ; 2003 ; British Journal of Mathematical and Statistical Psychology Volume 56 ; 56 >
+    au < ready ; 2004 ; British Journal of Mathematical and Statistical Psychology Volume 57 ; 57 >
+    au < ready ; 2005 ; British Journal of Mathematical and Statistical Psychology Volume 58 ; 58 >
+    au < ready ; 2006 ; British Journal of Mathematical and Statistical Psychology Volume 59 ; 59 >
+    au < ready ; 2007 ; British Journal of Mathematical and Statistical Psychology Volume 60 ; 60 >
+    au < ready ; 2008 ; British Journal of Mathematical and Statistical Psychology Volume 61 ; 61 >
+    au < ready ; 2009 ; British Journal of Mathematical and Statistical Psychology Volume 62 ; 62 >
+    au < exists ; 2010 ; British Journal of Mathematical and Statistical Psychology Volume 63 ; 63 >
+    
+  }
+
+  {
+    title <
+      name = British Journal of Medical Psychology ;
+      issn = 0007-1129
+    >
+    
+    param[journal_id] = bjmp
+    param[journal_issn] = 0007-1129  
+
+    au < ready ; 1999 ; British Journal of Medical Psychology Volume 72 ; 72 >
+    au < ready ; 2000 ; British Journal of Medical Psychology Volume 73 ; 73 >
+    au < ready ; 2001 ; British Journal of Medical Psychology Volume 74 ; 74 >
+    
+  }
+  
+  {
+    title <
+      name = British Journal of Psychology ;
+      issn = 0007-1269
+    >
+    
+    param[journal_id] = bjp
+    param[journal_issn] = 0007-1269   
+
+    au < ready ; 1999 ; British Journal of Psychology Volume 90 ; 90 >
+    au < ready ; 2000 ; British Journal of Psychology Volume 91 ; 91 >
+    au < ready ; 2001 ; British Journal of Psychology Volume 92 ; 92 >
+    au < ready ; 2002 ; British Journal of Psychology Volume 93 ; 93 >
+    au < ready ; 2003 ; British Journal of Psychology Volume 94 ; 94 >
+    au < ready ; 2004 ; British Journal of Psychology Volume 95 ; 95 >
+    au < ready ; 2005 ; British Journal of Psychology Volume 96 ; 96 >
+    au < ready ; 2006 ; British Journal of Psychology Volume 97 ; 97 >
+    au < ready ; 2007 ; British Journal of Psychology Volume 98 ; 98 >
+    au < ready ; 2008 ; British Journal of Psychology Volume 99 ; 99 >
+    au < ready ; 2009 ; British Journal of Psychology Volume 100 ; 100 >
+    au < exists ; 2010 ; British Journal of Psychology Volume 101 ; 101 >
+    
+  }
+  
+  {
+    title <
+      name = British Journal of Social Psychology ;
+      issn = 0144-6665
+    >
+    
+    param[journal_id] = bjsp
+    param[journal_issn] = 0144-6665  
+
+    au < ready ; 1999 ; British Journal of Social Psychology Volume 38 ; 38 >
+    au < ready ; 2000 ; British Journal of Social Psychology Volume 39 ; 39 >
+    au < ready ; 2001 ; British Journal of Social Psychology Volume 40 ; 40 >
+    au < ready ; 2002 ; British Journal of Social Psychology Volume 41 ; 41 >
+    au < ready ; 2003 ; British Journal of Social Psychology Volume 42 ; 42 >
+    au < ready ; 2004 ; British Journal of Social Psychology Volume 43 ; 43 >
+    au < ready ; 2005 ; British Journal of Social Psychology Volume 44 ; 44 >
+    au < ready ; 2006 ; British Journal of Social Psychology Volume 45 ; 45 >
+    au < ready ; 2007 ; British Journal of Social Psychology Volume 46 ; 46 >
+    au < ready ; 2008 ; British Journal of Social Psychology Volume 47 ; 47 >
+    au < ready ; 2009 ; British Journal of Social Psychology Volume 48 ; 48 >
+    au < exists ; 2010 ; British Journal of Social Psychology Volume 49 ; 49 >
+    
+  }
+  
+  {
+    title <
+      name = Journal of Occupational and Organizational Psychology ;
+      issn = 0963-1798
+    >
+    
+    param[journal_id] = joop
+    param[journal_issn] = 0963-1798  
+
+    au < ready ; 2007 ; Journal of Occupational and Organizational Psychology Volume 80 ; 80 >   
+    au < exists ; 2008 ; Journal of Occupational and Organizational Psychology Volume 81 ; 81 >   
+    au < exists ; 2009 ; Journal of Occupational and Organizational Psychology Volume 82 ; 82 >   
+    au < exists ; 2010 ; Journal of Occupational and Organizational Psychology Volume 83 ; 83 >   
+    
+  }
+  
+  {
+    title <
+      name = Legal and Criminological Psychology ;
+      issn = 1355-3259
+    >
+    
+    param[journal_id] = lcp
+    param[journal_issn] = 1355-3259  
+
+    au < ready ; 2007 ; Legal and Criminological Psychology Volume 12 ; 12 >   
+    au < exists ; 2008 ; Legal and Criminological Psychology Volume 13 ; 13 >   
+    au < exists ; 2009 ; Legal and Criminological Psychology Volume 14 ; 14 >   
+    au < exists ; 2010 ; Legal and Criminological Psychology Volume 15 ; 15 >   
+    
+  }
+  
+  {
+    title <
+      name = Psychology and Psychotherapy: Theory, Research and Practice ;
+      issn = 1476-0835
+    >
+    
+    param[journal_id] = paptrap
+    param[journal_issn] = 1476-0835  
+
+    au < ready ; 2007 ; Psychology and Psychotherapy: Theory, Research and Practice Volume 80 ; 80 >   
+    au < exists ; 2008 ; Psychology and Psychotherapy: Theory, Research and Practice Volume 81 ; 81 >   
+    au < exists ; 2009 ; Psychology and Psychotherapy: Theory, Research and Practice Volume 82 ; 82 >   
+    au < exists ; 2010 ; Psychology and Psychotherapy: Theory, Research and Practice Volume 83 ; 83 >   
+    
+  }
+  
+  {
+    title <
+      name = Journal of Neuropsychology ;
+      issn = 1476-0835
+    >
+    
+    param[journal_id] = jnp
+    param[journal_issn] = 1748-6645  
+
+    au < exists ; 2007 ; Journal of Neuropsychology 1 ; 1 >   
+    au < exists ; 2008 ; Journal of Neuropsychology 2 ; 2 >   
+    au < exists ; 2009 ; Journal of Neuropsychology 3 ; 3 >   
+    au < exists ; 2010 ; Journal of Neuropsychology 4 ; 4 >   
+    
+  }
+
+}
