@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.133 2011-01-10 09:46:00 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.133.2.1 2011-02-14 00:20:39 tlipkis Exp $
  */
 
 /*
@@ -1210,7 +1210,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
   // Separate so can override for testing
   boolean areAusStarted() {
-    return pluginMgr.areAusStarted();
+    // may be called before service is started (from setConfig())
+    return pluginMgr != null && pluginMgr.areAusStarted();
   }
 
   static Object UNSHARED_RATE_KEY = new Object();
