@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.67 2010-11-18 07:15:33 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.67.4.1 2011-02-14 00:20:18 tlipkis Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class AuConfig extends LockssServlet {
     formConfig = null;
     titleConfig = null;
 
-    action = req.getParameter(ACTION_TAG);
+    action = getParameter(ACTION_TAG);
     if (StringUtil.isNullString(action)) {
       try {
 	getMultiPartRequest();
@@ -140,7 +140,7 @@ public class AuConfig extends LockssServlet {
       }
     }
 
-    String auid = req.getParameter("auid");
+    String auid = getParameter("auid");
 
     if (StringUtil.isNullString(action)) displayAuSummary();
     else if (action.equals(ACTION_ADD)) displayAddAu();
@@ -298,7 +298,7 @@ public class AuConfig extends LockssServlet {
 
   /** Display form to add a new AU */
   private void displayEditNew() throws IOException {
-    String title = req.getParameter("Title");
+    String title = getParameter("Title");
     if (!StringUtil.isNullString(title)) {
       // tk - need to deal with > 1 plugin for title
       plugin = getTitlePlugin(title);
@@ -314,10 +314,10 @@ public class AuConfig extends LockssServlet {
 	}
       }
     } else {
-      String pid = req.getParameter("PluginId");
+      String pid = getParameter("PluginId");
       if (StringUtil.isNullString(pid)) {
-	pid = req.getParameter("PluginClass");
-//	String pclass = req.getParameter("PluginClass");
+	pid = getParameter("PluginClass");
+//	String pclass = getParameter("PluginClass");
 //	if (!StringUtil.isNullString(pclass)) {
 //	  pid = remoteApi.pluginIdFromName(pclass);
 //	}
@@ -571,14 +571,14 @@ public class AuConfig extends LockssServlet {
 
   /** Process the Create button */
   private void createAu() throws IOException {
-    String pid = req.getParameter("PluginId");
+    String pid = getParameter("PluginId");
     plugin = getPluginProxy(pid);
     if (plugin == null) {
       errMsg = "Can't find plugin: " + pid;
       displayAddAu();
       return;
     }
-    String repo = req.getParameter(REPO_TAG);
+    String repo = getParameter(REPO_TAG);
     if (!StringUtil.isNullString(repo)) {
       java.util.List repos = remoteApi.getRepositoryList();
       if (!repos.contains(repo)) {
@@ -610,7 +610,7 @@ public class AuConfig extends LockssServlet {
       throws IOException {
     formConfig = getAuConfigFromForm(isNew);
     if (isNew) {
-      String repo = req.getParameter(REPO_TAG);
+      String repo = getParameter(REPO_TAG);
       if (!StringUtil.isNullString(repo)) {
 	if (!remoteApi.getRepositoryList().contains(repo)) {
 	  errMsg = "Nonexistent repository: " + repo;
@@ -759,7 +759,7 @@ public class AuConfig extends LockssServlet {
   /** Put a value from the config form into the properties, iff it is set
    * in the form */
   private void putFormVal(Properties p, String key) {
-    String val = req.getParameter(formKeyFromKey(key));
+    String val = getParameter(formKeyFromKey(key));
     // Must treat empty string as unset param.
     if (!StringUtil.isNullString(val)) {
       p.put(key, val);
