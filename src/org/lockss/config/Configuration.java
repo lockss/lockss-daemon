@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.31 2010-11-29 07:24:33 tlipkis Exp $
+ * $Id: Configuration.java,v 1.31.2.1 2011-02-14 00:19:14 tlipkis Exp $
  */
 
 /*
@@ -646,9 +646,9 @@ public abstract class Configuration {
   public double getDouble(String key) throws InvalidParam {
     String val = get(key);
     try {
-      return Double.parseDouble(val);
+      return PlatformUtil.parseDouble(val);
     } catch (NumberFormatException e) {
-      throw newInvalid("Not a float value: ", key, val);
+      throw newInvalid("Not a double value: ", key, val);
     }
   }
 
@@ -663,9 +663,10 @@ public abstract class Configuration {
       return dfault;
     }
     try {
-      return Double.parseDouble(val);
+      return PlatformUtil.parseDouble(val);
     } catch (NumberFormatException e) {
-      log.warning("getInt(\'" + key + "\") = \"" + val + "\"");
+      log.warning("getDouble(\'" + key + "\") = \"" + val + "\": " +
+		  e.toString());
       return dfault;
     }
   }

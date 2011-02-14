@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.7 2008-07-11 08:22:00 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.7.40.1 2011-02-14 00:19:14 tlipkis Exp $
  */
 
 /*
@@ -173,4 +173,51 @@ public class TestPlatformUtil extends LockssTestCase {
     info.threadDump(true);
   }
 
+  boolean isBuggy(String str) {
+    return PlatformUtil.isBuggyDoubleString(str);
+  }
+
+  double parseDouble(String str) {
+    return PlatformUtil.parseDouble(str);
+  }
+
+  public void testIsBuggyDoubleString() {
+    assertTrue(isBuggy("2.2250738585072012e-308"));
+    assertTrue(isBuggy("0.00022250738585072012E-304"));
+    assertTrue(isBuggy("0.0000000022250738585072012E-299"));
+    assertTrue(isBuggy("0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000022250738585072012"));
+    assertTrue(isBuggy("0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002225073858507201212345"));
+    assertTrue(isBuggy("22.250738585072012e-309"));
+    assertTrue(isBuggy("22.250738585072012e-0309"));
+    assertTrue(isBuggy("00000000002.2250738585072012e-308"));
+    assertTrue(isBuggy("2.225073858507201200000e-308"));
+    assertTrue(isBuggy("2.2250738585072012e-00308"));
+    assertTrue(isBuggy("2.2250738585072012997800001e-308"));
+
+    assertFalse(isBuggy("0"));
+    assertFalse(isBuggy("4.5"));
+    assertFalse(isBuggy("2.2e-308"));
+    assertFalse(isBuggy("2.2E-308"));
+    assertFalse(isBuggy("2.2250738585072011e-308"));
+
+    // BaseServletManager.CompressingFilterWrapper checks the
+    // Accept-Encoding: header without parsing out the qvalue
+    assertTrue(isBuggy("gzip;q=1.0, identity; q=2.2250738585072012997800001e-308, *;q=0"));
+    assertFalse(isBuggy("gzip;q=1.0, identity; q=2.2, *;q=0"));
+  }
+
+  public void testParseDouble() {
+    assertEquals(0.0, parseDouble("0"));
+    assertEquals(4.5, parseDouble("4.5"));
+    try {
+      parseDouble("2.2250738585072012e-308");
+      fail("should throw");
+    } catch (NumberFormatException e) {
+    }
+    try {
+      parseDouble("0.00022250738585072012E-304");
+      fail("should throw");
+    } catch (NumberFormatException e) {
+    }
+  }
 }

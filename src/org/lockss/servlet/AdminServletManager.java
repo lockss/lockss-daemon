@@ -1,5 +1,5 @@
 /*
- * $Id: AdminServletManager.java,v 1.18 2011-01-22 08:23:32 tlipkis Exp $
+ * $Id: AdminServletManager.java,v 1.18.2.1 2011-02-14 00:19:14 tlipkis Exp $
  */
 
 /*
@@ -660,6 +660,12 @@ public class AdminServletManager extends BaseServletManager {
 	String val = compressorConfig.get(key);
 	holder.put(key, val);
       }
+      // Workaround for parseDouble() bug
+      handler.defineFilter("BuggyDoubleFilter",
+			   CompressingFilterWrapper.class.getName());
+      handler.addFilterPathMapping("/*", "BuggyDoubleFilter",
+				   Dispatcher.__DEFAULT);
+
       handler.addFilterPathMapping("/*", filterName, Dispatcher.__DEFAULT);
     }
   }

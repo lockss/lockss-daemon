@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.15 2010-06-21 23:54:13 pgust Exp $
+ * $Id: PlatformUtil.java,v 1.15.8.1 2011-02-14 00:19:14 tlipkis Exp $
  */
 
 /*
@@ -33,9 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import java.net.*;
 import java.text.*;
 import java.util.*;
-import java.net.*;
+import java.util.regex.*;
 
 import org.apache.commons.lang.SystemUtils;
 import org.lockss.config.*;
@@ -361,6 +362,45 @@ public class PlatformUtil {
     }
     return host;
   }
+
+  public static double parseDouble(String str) {
+    if (isBuggyDoubleString(str)) {
+      throw new NumberFormatException("Buggy double string");
+    }
+    return Double.parseDouble(str);
+  }
+
+  // Double.parseDouble("2.2250738585072012e-308") loops.  Disallow it and
+  // variants, such as:
+  //
+  //   0.00022250738585072012e-304 (decimal point placement) (and similar
+  //   strings with the decimal point shifted farther to the left,
+  //   including far enough that the exponent goes to zero)
+  //   22.250738585072012e-309 (decimal point placement)
+  //   00000000002.2250738585072012e-308 (leading zeros)
+  //   2.225073858507201200000e-308 (trailing zeros)
+  //   2.2250738585072012e-00308 (leading zeros in the exponent)
+  //   2.2250738585072012997800001e-308 (superfluous digits beyond digit
+  //   17)
+
+  // Match the bad sequence of digits, allowing for an embedded decimal
+  // point, followed by a large negative three digit exponent
+  private static Pattern BUGGY_DOUBLE_PAT1 =
+    Pattern.compile("2\\.?2\\.?2\\.?5\\.?0\\.?7\\.?3\\.?8\\.?5\\.?8\\.?5\\.?0\\.?7\\.?2\\.?0\\.?1\\.?2\\d*[eE]-0*[23]\\d\\d");
+
+  // Match the bad sequence of digits preceded by a decimal point and at
+  // least 100 zeroes.
+  private static Pattern BUGGY_DOUBLE_PAT2 =
+    Pattern.compile("\\.0{100,}22250738585072012");
+
+  public static boolean isBuggyDoubleString(String str) {
+    Matcher m1 = BUGGY_DOUBLE_PAT1.matcher(str);
+    if (m1.find()) {
+      return true;
+    }
+    Matcher m2 = BUGGY_DOUBLE_PAT2.matcher(str);
+    return m2.find();
+ }
 
   /** Linux implementation of platform-specific code */
   public static class Linux extends PlatformUtil {

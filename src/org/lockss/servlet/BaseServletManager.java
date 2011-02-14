@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.31 2010-11-29 07:25:26 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.31.2.1 2011-02-14 00:19:14 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,9 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import javax.net.ssl.KeyManagerFactory;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
 
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
@@ -672,6 +675,30 @@ public abstract class BaseServletManager
     boolean defaultLogForbidden;
     boolean defaultResolveRemoteHost;
     String debugUserFile;
+  }
+
+  public static class CompressingFilterWrapper implements Filter {
+    public void init(final FilterConfig config) throws ServletException {
+    }
+    public void doFilter(ServletRequest request,
+			 ServletResponse response,
+			 FilterChain chain)
+	throws IOException, ServletException {
+
+      // Guard against Double.parseDouble() bug.  See
+      // PlatformUtil.isBuggyDoubleString()
+      HttpServletRequest httpRequest = (HttpServletRequest) request;
+      String acceptEncoding = httpRequest.getHeader("accept-encoding");
+      if (acceptEncoding != null &&
+	  PlatformUtil.isBuggyDoubleString(acceptEncoding)) {
+	HttpServletResponse httpResponse = (HttpServletResponse) response;
+	httpResponse.sendError(503, "Illegal number");
+	return;
+      }
+      chain.doFilter(request, response);
+    }
+    public void destroy() {
+    }
   }
 
 }
