@@ -1,5 +1,5 @@
 /*
- * $Id: LinkRewriterFactoryWrapper.java,v 1.6 2010-07-21 06:12:02 tlipkis Exp $
+ * $Id: LinkRewriterFactoryWrapper.java,v 1.7 2011-02-14 00:06:09 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class LinkRewriterFactoryWrapper
 					String encoding,
 					String url,
 					ServletUtil.LinkTransform xform)
-      throws PluginException {
+      throws PluginException, IOException {
     try {
       return inst.createLinkRewriter(mimeType, au, is, encoding,
 					   url, xform);
