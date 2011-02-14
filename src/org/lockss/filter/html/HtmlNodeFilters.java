@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlNodeFilters.java,v 1.16 2009-08-27 01:59:44 tlipkis Exp $
+ * $Id: HtmlNodeFilters.java,v 1.17 2011-02-14 00:04:43 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.filter.html;
 
-import org.apache.oro.text.regex.*;
+import java.util.regex.*;
+
 import org.htmlparser.*;
 import org.htmlparser.nodes.*;
 import org.htmlparser.tags.*;
@@ -214,8 +215,8 @@ public class HtmlNodeFilters {
 					      String[] attrs) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
-      filters[i] = new LinkRegexYesXform(regex[i], ignoreCase[i],
-					 target[i], replace[i], attrs);
+      filters[i] = new LinkRegexXform(regex[i], ignoreCase[i],
+				      target[i], replace[i], attrs);
     }
     return new OrFilter(filters);
   }
@@ -229,8 +230,9 @@ public class HtmlNodeFilters {
 					     String[] attrs) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
-      filters[i] = new LinkRegexNoXform(regex[i], ignoreCase[i],
-					target[i], replace[i], attrs);
+      filters[i] = new LinkRegexXform(regex[i], ignoreCase[i],
+				      target[i], replace[i], attrs)
+	.setNegateFilter(true);
     }
     return new OrFilter(filters);
   }
@@ -243,8 +245,8 @@ public class HtmlNodeFilters {
 					       String[] replace) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
-      filters[i] = new StyleRegexYesXform(regex[i], ignoreCase[i],
-					  target[i], replace[i]);
+      filters[i] = new StyleRegexXform(regex[i], ignoreCase[i],
+				       target[i], replace[i]);
     }
     return new OrFilter(filters);
   }
@@ -257,8 +259,9 @@ public class HtmlNodeFilters {
 					      String[] replace) {
     NodeFilter[] filters = new NodeFilter[regex.length];
     for (int i = 0; i < regex.length; i++) {
-      filters[i] = new StyleRegexNoXform(regex[i], ignoreCase[i],
-					 target[i], replace[i]);
+      filters[i] = new StyleRegexXform(regex[i], ignoreCase[i],
+				       target[i], replace[i])
+	.setNegateFilter(true);
     }
     return new OrFilter(filters);
   }
@@ -275,7 +278,7 @@ public class HtmlNodeFilters {
 	log.debug3("Build meta yes" + regex[i] + " targ " + target[i] +
 		   " repl " + replace[i]);
       }
-      filters[i] = new RefreshRegexYesXform(regex[i], ignoreCase[i],
+      filters[i] = new RefreshRegexXform(regex[i], ignoreCase[i],
 					 target[i], replace[i]);
     }
     return new OrFilter(filters);
@@ -293,8 +296,9 @@ public class HtmlNodeFilters {
 	log.debug3("Build meta no" + regex[i] + " targ " + target[i] +
 		   " repl " + replace[i]);
       }
-      filters[i] = new RefreshRegexNoXform(regex[i], ignoreCase[i],
-					target[i], replace[i]);
+      filters[i] = new RefreshRegexXform(regex[i], ignoreCase[i],
+					target[i], replace[i])
+	.setNegateFilter(true);
     }
     return new OrFilter(filters);
   }
@@ -388,9 +392,8 @@ public class HtmlNodeFilters {
    * Abstract class for regex filters
    */
   public abstract static class BaseRegexFilter implements NodeFilter {
-    protected String regex;
-    protected Pattern pat;
-    protected Perl5Matcher matcher;
+    protected CachedPattern pat;
+    protected boolean negateFilter = false;
 
     /**
      * Creates a BaseRegexFilter that performs a case sensitive match for
@@ -408,17 +411,21 @@ public class HtmlNodeFilters {
      * @param ignoreCase If true, match is case insensitive
      */
     public BaseRegexFilter(String regex, boolean ignoreCase) {
-      this.regex = regex;
-      int flags = 0;
+      this.pat = new CachedPattern(regex);
       if (ignoreCase) {
-	flags |= Perl5Compiler.CASE_INSENSITIVE_MASK;
+	pat.setIgnoreCase(true);
       }
-      try {
-	pat = RegexpUtil.getCompiler().compile(regex, flags);
-	matcher = RegexpUtil.getMatcher();
-      } catch (MalformedPatternException e) {
-	throw new RuntimeException(e);
-      }
+//       pat.getPattern();
+    }
+
+    public BaseRegexFilter setNegateFilter(boolean val) {
+      negateFilter = val;
+      return this;
+    }
+
+    protected boolean isFilterMatch(String str, CachedPattern pat) {
+      boolean isMatch = pat.getMatcher(str).find();
+      return negateFilter ? !isMatch : isMatch;
     }
 
     public abstract boolean accept(Node node);
@@ -440,7 +447,7 @@ public class HtmlNodeFilters {
     protected String urlEncode(String url, boolean isCss) {
       int startIx = url.indexOf(tag);
       if (startIx < 0) {
-	log.error("urlEncode: no tag (" + tag + ") in " + url);
+	log.warning("urlEncode: no tag (" + tag + ") in " + url);
 	return url;
       }
       startIx += tag.length();
@@ -464,10 +471,26 @@ public class HtmlNodeFilters {
 	// Normal tag attribute
 	endIx = -1;
       }
+      int hashpos = oldUrl.indexOf('#');
+      String hashref = null;
+      if (hashpos >= 0) {
+	hashref = oldUrl.substring(hashpos);
+	oldUrl = oldUrl.substring(0, hashpos);
+      }
       String newUrl = UrlUtil.encodeUrl(oldUrl);
-      log.debug3("urlEncode: " + oldUrl + " -> " + newUrl);
-      return url.substring(0, startIx) + newUrl +
-	(endIx < 0 ? "" : url.substring(endIx));
+      if (log.isDebug3()) log.debug3("urlEncode: " + oldUrl + " -> " + newUrl);
+      StringBuilder sb = new StringBuilder();
+      sb.append(url, 0, startIx);
+      sb.append(newUrl);
+      if (hashref != null) {
+	sb.append(hashref);
+      }
+      if (endIx >= 0) {
+	sb.append(url.substring(endIx, url.length()));
+      }
+      return sb.toString();
+//       return url.substring(0, startIx) + newUrl +
+// 	(endIx < 0 ? "" : url.substring(endIx));
     }
   }
 
@@ -498,9 +521,37 @@ public class HtmlNodeFilters {
     public boolean accept(Node node) {
       if (node instanceof Remark) {
 	String nodestr = ((Remark)node).getText();
-	return matcher.contains(nodestr, pat);
+	return isFilterMatch(nodestr, pat);
       }
       return false;
+    }
+  }
+
+  /** A regex filter than performs a regex replacement on matching nodes. */
+  public interface RegexXform {
+    void setReplace(String replace);
+  }
+
+  abstract static class BaseRegexXform
+    extends BaseRegexFilter
+    implements RegexXform {
+
+    protected CachedPattern targetPat;
+    protected String replace;
+
+    public BaseRegexXform(String regex, String target, String replace) {
+      this(regex, false, target, replace);
+    }
+
+    public BaseRegexXform(String regex, boolean ignoreCase,
+			  String target, String replace) {
+      super(regex, ignoreCase);
+      this.targetPat = new CachedPattern(target);
+      this.replace = replace;
+    }
+
+    public void setReplace(String replace) {
+      this.replace = replace;
     }
   }
 
@@ -508,99 +559,40 @@ public class HtmlNodeFilters {
    * This class accepts everything but applies a transform to
    * links that match the regex.
    */
-  public static class LinkRegexYesXform extends BaseRegexFilter {
+  public static class LinkRegexXform extends BaseRegexXform {
     /**
-     * Creates a LinkRegexYesXform that rejects everything but applies
+     * Creates a LinkRegexXform that rejects everything but applies
      * a transform to nodes whose text
      * contains a match for the regex.
      * @param regex The pattern to match.
      * @param ignoreCase If true, match is case insensitive
      * @param target Regex to replace
      * @param replace Text to replace it with
-     */
-    private String target;
-    private String replace;
-    private String[] attrs;
-    public LinkRegexYesXform(String regex, boolean ignoreCase,
-			  String target, String replace, String[] attrs) {
-      super(regex, ignoreCase);
-      this.target = target;
-      this.replace = replace;
-      this.attrs = attrs;
-    }
-
-    public boolean accept(Node node) {
-      if (node instanceof TagNode &&
-	  !(node instanceof MetaTag || node instanceof StyleTag)) {
-	Attribute attribute = null;
-	for (int i = 0; i < attrs.length; i++) {
-	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
-	  if (attribute != null) {
-	    // Rewrite this attribute
-	    String url = attribute.getValue();
-	    if (matcher.contains(url, pat)) {
-	      if (log.isDebug3()) {
-		log.debug3("Attribute " + attribute.getName() + " old " + url +
-			   " target " + target + " replace " + replace);
-	      }
-	      String newUrl = url.replaceFirst(target, replace);
-	      if (!newUrl.equals(target)) {
-		String encoded = urlEncode(newUrl);
-		attribute.setValue(encoded);
-		((TagNode)node).setAttributeEx(attribute);
-		if (log.isDebug3()) log.debug3("new " + encoded);
-	      }
-	    }
-// 	    return false;
-	  }
-	}
-      }
-      return false;
-    }
-  }
-
-  /**
-   * This class rejects everything but applies a transform to
-   * links that don't match the regex.
-   */
-  public static class LinkRegexNoXform extends BaseRegexFilter {
-    /**
-     * Creates a LinkRegexNoXform that rejects everything but applies
-     * a transform to attributes whose text does not
-     * contain a match for the regex.
-     * @param regex The pattern to match.
-     * @param ignoreCase If true, match is case insensitive
-     * @param target Regex to replace
-     * @param replace Text to replace it with
      * @param attrs Attributes to process
      */
-    private String target;
-    private String replace;
     private String[] attrs;
-    public LinkRegexNoXform(String regex, boolean ignoreCase,
-			    String target, String replace, String[] attrs) {
-      super(regex, ignoreCase);
-      this.target = target;
-      this.replace = replace;
+    public LinkRegexXform(String regex, boolean ignoreCase,
+			  String target, String replace, String[] attrs) {
+      super(regex, ignoreCase, target, replace);
       this.attrs = attrs;
     }
 
     public boolean accept(Node node) {
       if (node instanceof TagNode &&
 	  !(node instanceof MetaTag || node instanceof StyleTag)) {
-	Attribute attribute = null;
 	for (int i = 0; i < attrs.length; i++) {
-	  attribute = ((TagNode)node).getAttributeEx(attrs[i]);
+	  Attribute attribute = ((TagNode)node).getAttributeEx(attrs[i]);
 	  if (attribute != null) {
 	    // Rewrite this attribute
 	    String url = attribute.getValue();
-	    if (!matcher.contains(url, pat)) {
+ 	    if (isFilterMatch(url, pat)) {
 	      if (log.isDebug3()) {
-		log.debug3("Attribute " + attribute.getName() + " old " + url);
-		log.debug3("target: " + target + ", replace: " + replace);
+		log.debug3("Attribute " + attribute.getName() + " old " + url +
+			   " target " + targetPat.getPattern() +
+			   " replace " + replace);
 	      }
-	      String newUrl = url.replaceFirst(target, replace);
-	      if (!newUrl.equals(target)) {
+	      String newUrl = targetPat.getMatcher(url).replaceFirst(replace);
+	      if (!newUrl.equals(url)) {
 		String encoded = urlEncode(newUrl);
 		attribute.setValue(encoded);
 		((TagNode)node).setAttributeEx(attribute);
@@ -621,9 +613,9 @@ public class HtmlNodeFilters {
    * This class rejects everything but applies a transform to
    * links is Style tags that match the regex.
    */
-  public static class StyleRegexYesXform extends BaseRegexFilter {
+  public static class StyleRegexXform extends BaseRegexXform {
     /**
-     * Creates a StyleRegexYesXform that rejects everything but applies
+     * Creates a StyleRegexXform that rejects everything but applies
      * a transform to style nodes whose child text
      * contains a match for the regex.
      * @param regex The pattern to match.
@@ -631,13 +623,9 @@ public class HtmlNodeFilters {
      * @param target Regex to replace
      * @param replace Text to replace it with
      */
-    private String target;
-    private String replace;
-    public StyleRegexYesXform(String regex, boolean ignoreCase,
-			    String target, String replace) {
-      super(regex, ignoreCase);
-      this.target = target;
-      this.replace = replace;
+    public StyleRegexXform(String regex, boolean ignoreCase,
+			   String target, String replace) {
+      super(regex, ignoreCase, target, replace);
     }
 
     public boolean accept(Node node) {
@@ -660,75 +648,8 @@ public class HtmlNodeFilters {
 // 		  return false;
 		}
 		String oldImport = text.substring(startIx, endIx + 1);
-		if (matcher.contains(oldImport, pat)) {
-		  String newImport = oldImport.replaceFirst(target, replace);
-		  if (!newImport.equals(oldImport)) {
-		    String encoded = cssEncode(newImport);
-		    delta = encoded.length() - oldImport.length();
-		    String newText = text.substring(0, startIx) + 
-		      encoded + text.substring(endIx + 1);
-		    if (log.isDebug3())
-		      log.debug3("Import rewritten " + newText);
-		    text = newText;
-		    ((TextNode)child).setText(text);
-		  }
-		}
-		startIx = endIx + 1 + delta;
-	      }
-	    }
-	  }
-	} catch (ParserException ex) {
-	  log.error("Node " + node.toString() + " threw " + ex);
-	}
-      }
-      return false;
-    }
-  }
-
-  /**
-   * This class rejects everything but applies a transform to
-   * links is Style tags that don't match the regex.
-   */
-  public static class StyleRegexNoXform extends BaseRegexFilter {
-    /**
-     * Creates a StyleRegexNoXform that rejects everything but applies
-     * a transform to style nodes whose child text does not
-     * contain a match for the regex.
-     * @param regex The pattern to match.
-     * @param ignoreCase If true, match is case insensitive
-     * @param target Regex to replace
-     * @param replace Text to replace it with
-     */
-    private String target;
-    private String replace;
-    public StyleRegexNoXform(String regex, boolean ignoreCase,
-			    String target, String replace) {
-      super(regex, ignoreCase);
-      this.target = target;
-      this.replace = replace;
-    }
-
-    public boolean accept(Node node) {
-      if (node instanceof StyleTag) {
-	try {
-	  NodeIterator it;
-	  for (it = ((StyleTag)node).children(); it.hasMoreNodes(); ) {
-	    Node child = it.nextNode();
-	    if (child instanceof TextNode) {
-	      // Find each instance of @import.*)
-	      String text = ((TextNode)child).getText();
-	      int startIx = 0;
-	      while ((startIx = text.indexOf(importTag, startIx)) >= 0) {
-		int endIx = text.indexOf(')', startIx);
-		int delta = 0;
-		if (endIx < 0) {
-		  log.error("Can't find close paren in " + text);
-		  break;
-// 		  return false;
-		}
-		String oldImport = text.substring(startIx, endIx + 1);
-		if (!matcher.contains(oldImport, pat)) {
-		  String newImport = oldImport.replaceFirst(target, replace);
+		if (isFilterMatch(oldImport, pat)) {
+		  String newImport = targetPat.getMatcher(oldImport).replaceFirst(replace);
 		  if (!newImport.equals(oldImport)) {
 		    String encoded = cssEncode(newImport);
 		    delta = encoded.length() - oldImport.length();
@@ -756,9 +677,9 @@ public class HtmlNodeFilters {
    * This class rejects everything but applies a transform to
    * meta refresh tags that match the regex.
    */
-  public static class RefreshRegexYesXform extends BaseRegexFilter {
+  public static class RefreshRegexXform extends BaseRegexXform {
     /**
-     * Creates a RefreshRegexYesXform that rejects everything but applies
+     * Creates a RefreshRegexXform that rejects everything but applies
      * a transform to nodes whose text
      * contains a match for the regex.
      * @param regex The pattern to match.
@@ -766,13 +687,9 @@ public class HtmlNodeFilters {
      * @param target Regex to replace
      * @param replace Text to replace it with
      */
-    private String target;
-    private String replace;
-    public RefreshRegexYesXform(String regex, boolean ignoreCase,
-			  String target, String replace) {
-      super(regex, ignoreCase);
-      this.target = target;
-      this.replace = replace;
+    public RefreshRegexXform(String regex, boolean ignoreCase,
+			     String target, String replace) {
+      super(regex, ignoreCase, target, replace);
     }
 
     public boolean accept(Node node) {
@@ -780,60 +697,20 @@ public class HtmlNodeFilters {
 	String equiv = ((MetaTag)node).getAttribute("http-equiv");
 	if ("refresh".equalsIgnoreCase(equiv)) {
 	  String contentVal = ((MetaTag)node).getAttribute("content");
-	  if (log.isDebug3()) log.debug3("RefreshRegexYesXform: " + contentVal);
-	  if (contentVal != null && matcher.contains(contentVal, pat)) {
+	  if (log.isDebug3()) log.debug3("RefreshRegexXform: " + contentVal);
+	  if (contentVal != null && isFilterMatch(contentVal, pat)) {
 	    // Rewrite the attribute
 	    if (log.isDebug3()) {
 	      log.debug3("Refresh old " + contentVal +
-			 " target " + target + " replace " + replace);
+			 " target " + targetPat.getPattern() +
+			 " replace " + replace);
 	    }
-	    String newVal = urlEncode(contentVal.replaceFirst(target, replace));
-	    ((MetaTag)node).setAttribute("content", newVal);
-	  }
-	}
-      }
-      return false;
-    }
-  }
-
-  /**
-   * This class rejects everything but applies a transform to
-   * meta refresh tags that don't match the regex.
-   */
-  public static class RefreshRegexNoXform extends BaseRegexFilter {
-    /**
-     * Creates a RefreshRegexNoXform that rejects everything but applies
-     * a transform to attributes whose text does not
-     * contain a match for the regex.
-     * @param regex The pattern to match.
-     * @param ignoreCase If true, match is case insensitive
-     * @param target Regex to replace
-     * @param replace Text to replace it with
-     * @param attrs Attributes to process
-     */
-    private String target;
-    private String replace;
-    public RefreshRegexNoXform(String regex, boolean ignoreCase,
-			    String target, String replace) {
-      super(regex, ignoreCase);
-      this.target = target;
-      this.replace = replace;
-    }
-
-    public boolean accept(Node node) {
-      if (node instanceof MetaTag) {
-	String equiv = ((MetaTag)node).getAttribute("http-equiv");
-	if ("refresh".equalsIgnoreCase(equiv)) {
-	  String contentVal = ((MetaTag)node).getAttribute("content");
-	  if (log.isDebug3()) log.debug3("RefreshRegexNoXform: " + contentVal);
-	  if (contentVal != null && !matcher.contains(contentVal, pat)) {
-	    // Rewrite the attribute
-	    if (log.isDebug3()) {
-	      log.debug3("Refresh old " + contentVal +
-			 " target " + target + " replace " + replace);
+	    String newVal = targetPat.getMatcher(contentVal).replaceFirst(replace);
+	    if (!newVal.equals(contentVal)) {
+	      String encoded = urlEncode(newVal);
+	      ((MetaTag)node).setAttribute("content", encoded);
+	      if (log.isDebug3()) log.debug3("new " + encoded);
 	    }
-	    String newVal = urlEncode(contentVal.replaceFirst(target, replace));
-	    ((MetaTag)node).setAttribute("content", newVal);
 	  }
 	}
       }
@@ -868,7 +745,7 @@ public class HtmlNodeFilters {
     public boolean accept(Node node) {
       if (node instanceof CompositeTag) {
 	String nodestr = getCompositeStringText((CompositeTag)node);
-	return matcher.contains(nodestr, pat);
+	return isFilterMatch(nodestr, pat);
       }
       return false;
     }
@@ -910,7 +787,7 @@ public class HtmlNodeFilters {
 	Tag tag = (Tag)node;
 	String attribute = tag.getAttribute(attr);
 	if (attribute != null) {
-	  return matcher.contains(attribute, pat);
+	  return isFilterMatch(attribute, pat);
 	}
       }
       return false;
