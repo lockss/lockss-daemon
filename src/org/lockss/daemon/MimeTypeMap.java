@@ -1,5 +1,5 @@
 /*
- * $Id: MimeTypeMap.java,v 1.10 2010-10-02 22:23:37 tlipkis Exp $
+ * $Id: MimeTypeMap.java,v 1.10.4.1 2011-02-14 00:17:31 tlipkis Exp $
  */
 
 /*
@@ -49,6 +49,11 @@ public class MimeTypeMap {
   public static final String DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY =
     "org.lockss.extractor.RegexpCssLinkExtractor$Factory";
 
+  public static final String PARAM_DEFAULT_CSS_REWRITER_FACTORY =
+    PREFIX + "defaultCssRewriterFactory";
+  public static final String DEFAULT_DEFAULT_CSS_REWRITER_FACTORY =
+    "org.lockss.rewriter.RegexpCssLinkRewriterFactory";
+
   private static MimeTypeInfo.Mutable HTML = new MimeTypeInfo.Impl();
   private static MimeTypeInfo.Mutable CSS = new MimeTypeInfo.Impl();
 
@@ -61,9 +66,9 @@ public class MimeTypeMap {
     DEFAULT.putMimeTypeInfo("application/xhtml+xml", HTML);
     setLinkExtractorFactory(CSS,
 			    DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY);
-    // XXX
-    CSS.setLinkRewriterFactory(new StringFilterCssLinkRewriterFactory());
-    DEFAULT.putMimeTypeInfo("text/css", CSS);
+    setLinkRewriterFactory(CSS,
+			    DEFAULT_DEFAULT_CSS_REWRITER_FACTORY);
+   DEFAULT.putMimeTypeInfo("text/css", CSS);
   }
 
   /** Called by org.lockss.config.MiscConfig
@@ -76,6 +81,11 @@ public class MimeTypeMap {
 			      config.get(PARAM_DEFAULT_CSS_EXTRACTOR_FACTORY,
 					 DEFAULT_DEFAULT_CSS_EXTRACTOR_FACTORY));
     }
+    if (diffs.contains(PARAM_DEFAULT_CSS_REWRITER_FACTORY)) {
+      setLinkRewriterFactory(CSS,
+			      config.get(PARAM_DEFAULT_CSS_REWRITER_FACTORY,
+					 DEFAULT_DEFAULT_CSS_REWRITER_FACTORY));
+    }
   }
 					  
   private static void setLinkExtractorFactory(MimeTypeInfo.Mutable mti,
@@ -85,6 +95,15 @@ public class MimeTypeMap {
 				    LinkExtractorFactory.class,
 				    new RegexpCssLinkExtractor.Factory());
     mti.setLinkExtractorFactory(fact);
+  }
+
+  private static void setLinkRewriterFactory(MimeTypeInfo.Mutable mti,
+					      String className) {
+    LinkRewriterFactory fact =
+      (LinkRewriterFactory)newFact(className,
+				    LinkRewriterFactory.class,
+				    new RegexpCssLinkRewriterFactory());
+    mti.setLinkRewriterFactory(fact);
   }
 
   private Map map = new HashMap();

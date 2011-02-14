@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.37 2011-01-10 09:13:56 tlipkis Exp $
+ * $Id: TestDefinablePlugin.java,v 1.37.2.1 2011-02-14 00:17:31 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof RegexpCssLinkExtractor.Factory);
     assertTrue(mti.getLinkRewriterFactory()
-	       instanceof StringFilterCssLinkRewriterFactory);
+	       instanceof RegexpCssLinkRewriterFactory);
     mti = definablePlugin.getMimeTypeInfo("application/pdf");
     assertNull(mti.getHashFilterFactory());
     assertNull(mti.getCrawlFilterFactory());
@@ -162,7 +162,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertTrue(mti.getLinkExtractorFactory()
 	       instanceof RegexpCssLinkExtractor.Factory);
     assertTrue(mti.getLinkRewriterFactory()
-	       instanceof StringFilterCssLinkRewriterFactory);
+	       instanceof RegexpCssLinkRewriterFactory);
 
     mti = p2.getMimeTypeInfo("application/pdf");
     assertNull(mti.getHashFilterFactory());
