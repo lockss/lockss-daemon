@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.118 2011-01-18 17:11:15 neilmayo Exp $
+ * $Id: LockssServlet.java,v 1.118.2.1 2011-02-14 00:20:05 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.security.Principal;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.bidimap.*;
 import org.apache.commons.collections.iterators.*;
@@ -1048,7 +1049,12 @@ public abstract class LockssServlet extends HttpServlet
     if (val == null && multiReq != null) {
       val = multiReq.getString(name);
     }
-    if (StringUtil.isNullString(val)) {
+    if (val == null) {
+      return null;
+    }
+    val = StringUtils.strip(val, " \t");
+//     if (StringUtil.isNullString(val)) {
+    if ("".equals(val)) {
       return null;
     }
     return val;

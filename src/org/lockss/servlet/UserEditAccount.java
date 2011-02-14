@@ -1,5 +1,5 @@
 /*
- * $Id: UserEditAccount.java,v 1.2 2009-06-01 23:38:10 tlipkis Exp $
+ * $Id: UserEditAccount.java,v 1.2.26.1 2011-02-14 00:20:05 tlipkis Exp $
  */
 
 /*
@@ -105,10 +105,10 @@ public class UserEditAccount extends EditAccountBase {
       return;
     }
 
-    String oldPwd = req.getParameter(KEY_OLD_PASSWD);
-    String pwd1 = req.getParameter(KEY_NEW_PASSWD);
-    String pwd2 = req.getParameter(KEY_NEW_PASSWD_2);
-    String email = req.getParameter(KEY_EMAIL);
+    String oldPwd = getParameter(KEY_OLD_PASSWD);
+    String pwd1 = getParameter(KEY_NEW_PASSWD);
+    String pwd2 = getParameter(KEY_NEW_PASSWD_2);
+    String email = getParameter(KEY_EMAIL);
 
     if (StringUtil.isNullString(pwd1)
 	&& StringUtil.isNullString(pwd2)
