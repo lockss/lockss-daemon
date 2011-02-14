@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpCssLinkExtractor.java,v 1.4 2010-07-01 04:04:58 tlipkis Exp $
+ * $Id: RegexpCssLinkExtractor.java,v 1.4.6.1 2011-02-14 00:21:00 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class RegexpCssLinkExtractor implements LinkExtractor {
   private static final int MAX_URL_LENGTH = 2100;
   // Amount of CSS input to buffer up for matcher
   private static final int DEFAULT_MAX_BUF = 32 * 1024;
-  // Amount and end of buffer to rescan at beginning of next bufferfull
+  // Amount at end of buffer to rescan at beginning of next bufferfull
   private static final int DEFAULT_OVERLAP = 2 * 1024;
 
   // Adapted from Heritrix's ExtractorCSS
