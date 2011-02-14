@@ -1,5 +1,5 @@
 /*
- * $Id: AdminEditAccounts.java,v 1.6 2010-05-27 06:58:49 tlipkis Exp $
+ * $Id: AdminEditAccounts.java,v 1.7 2011-02-14 00:12:28 tlipkis Exp $
  */
 
 /*
@@ -61,16 +61,16 @@ public class AdminEditAccounts extends EditAccountBase {
       return;
     }
     if (StringUtil.isNullString(action)) {
-      String user = req.getParameter(KEY_USER);
+      String user = getParameter(KEY_USER);
       if (StringUtil.isNullString(user)) {
 	displayAdminSummary();
       } else {
 	displayEditUser(user);
       }
     } else if (action.equals(ACTION_ADMIN_ADD)) {
-      String form = req.getParameter(KEY_FORM);
+      String form = getParameter(KEY_FORM);
       if (FORM_SUMMARY.equals(form)) {
-	displayAddUser(req.getParameter(KEY_USER));
+	displayAddUser(getParameter(KEY_USER));
       } else if (FORM_ADD_USER.equals(form)) {
 	doAdminUpdate();
       } else {
@@ -79,7 +79,7 @@ public class AdminEditAccounts extends EditAccountBase {
     } else if (action.equals(ACTION_ADMIN_UPDATE)) {
       doAdminUpdate();
     } else if (action.equals(ACTION_ADMIN_DELETE)) {
-      displayEditUser(req.getParameter(KEY_USER));
+      displayEditUser(getParameter(KEY_USER));
     } else if (action.equals(ACTION_ADMIN_CONFIRM_DELETE)) {
       doAdminDelete();
     } else if (action.equals(ACTION_ADMIN_CANCEL)) {
@@ -92,7 +92,7 @@ public class AdminEditAccounts extends EditAccountBase {
 
   protected void doAdminDelete() throws IOException {
     HttpSession session = getSession();
-    String name = req.getParameter(KEY_USER);
+    String name = getParameter(KEY_USER);
     if (action == null || name == null
 	|| !name.equals(session.getAttribute(SESSION_KEY_USER))) {
       errMsg = FORM_TAMPERED_ERROR;
@@ -119,16 +119,16 @@ public class AdminEditAccounts extends EditAccountBase {
   protected void doAdminUpdate() throws IOException {
     HttpSession session = getSession();
 
-    String name = req.getParameter(KEY_USER);
+    String name = getParameter(KEY_USER);
     if (action == null || name == null
 	|| !name.equals(session.getAttribute(SESSION_KEY_USER))) {
       errMsg = FORM_TAMPERED_ERROR;
       displayAdminSummary();
       return;
     }
-    String pwd1 = req.getParameter(KEY_NEW_PASSWD);
-    String pwd2 = req.getParameter(KEY_NEW_PASSWD_2);
-    String email = req.getParameter(KEY_EMAIL);
+    String pwd1 = getParameter(KEY_NEW_PASSWD);
+    String pwd2 = getParameter(KEY_NEW_PASSWD_2);
+    String email = getParameter(KEY_EMAIL);
 
     String roles = getRolesFromForm();
 
@@ -392,7 +392,7 @@ public class AdminEditAccounts extends EditAccountBase {
     List lst = new ArrayList();
     for (RoleDesc rd : roleDescs) {
       String role = rd.name;
-      if (!StringUtil.isNullString(req.getParameter(ROLE_PREFIX + role))) {
+      if (!StringUtil.isNullString(getParameter(ROLE_PREFIX + role))) {
 	lst.add(role);
       }
     }
@@ -504,7 +504,7 @@ public class AdminEditAccounts extends EditAccountBase {
   // make me a link in nav table if not on summary page
   protected boolean linkMeInNav() {
     return action != null
-      || !StringUtil.isNullString(req.getParameter(KEY_USER));
+      || !StringUtil.isNullString(getParameter(KEY_USER));
   }
 
 }
