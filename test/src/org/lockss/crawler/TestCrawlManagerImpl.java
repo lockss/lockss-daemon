@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.83 2011-01-25 07:14:00 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.84 2011-02-14 00:10:45 tlipkis Exp $
  */
 
 /*
@@ -1565,11 +1565,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       if (ausStartedSem != null) {
 	return ausStartedSem.isFull();
       } else {
-	try {
-	  return super.areAusStarted();
-	} catch (NullPointerException e) {
-	  return false;
-	}
+	return super.areAusStarted();
       }
     }
 
