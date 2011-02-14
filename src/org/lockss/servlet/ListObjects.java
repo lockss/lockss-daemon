@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.15 2011-01-22 08:22:58 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.16 2011-02-14 00:12:42 tlipkis Exp $
  */
 
 /*
@@ -155,10 +155,18 @@ public class ListObjects extends LockssServlet {
       };
     ArticleMetadataExtractor mdExtractor =
       au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au);
+    int logMissing = 3;
     for (Iterator<ArticleFiles> iter = au.getArticleIterator();
 	 iter.hasNext(); ) {
       ArticleFiles af = iter.next();
       CachedUrl cu = af.getFullTextCu();
+      if (cu == null) {
+	// shouldn't happen, but if it does it likely will many times.
+	if (logMissing-- > 0) {
+	  log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	}
+	continue;
+      }
       try {
         if (cu.hasContent()) {
 	  mdExtractor.extract(MetadataTarget.DOI, af, emitter);
@@ -229,14 +237,23 @@ public class ListObjects extends LockssServlet {
 	  }
 	};
     }
+
+    int logMissing = 3;
     for (Iterator<ArticleFiles> iter = au.getArticleIterator();
 	 iter.hasNext(); ) {
       ArticleFiles af = iter.next();
       CachedUrl cu = af.getFullTextCu();
-      String url = cu.getUrl();
+      if (cu == null) {
+	// shouldn't happen, but if it does it likely will many times.
+	if (logMissing-- > 0) {
+	  log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	}
+	continue;
+      }
       String doi = null;
       try {
 	if (cu.hasContent()) {
+	  String url = cu.getUrl();
 	  if (isDoi && mdExtractor != null) {
 	    // extract metadata iff DOIs were requested
 	    mdExtractor.extract(MetadataTarget.Article, af, emitter);
