@@ -1,5 +1,5 @@
 /*
- * $Id: ContentServletManager.java,v 1.4 2009-06-01 07:53:32 tlipkis Exp $
+ * $Id: ContentServletManager.java,v 1.5 2011-02-14 00:09:56 tlipkis Exp $
  */
 
 /*
@@ -259,6 +259,12 @@ public class ContentServletManager
 	String val = compressorConfig.get(key);
 	holder.put(key, val);
       }
+      // Workaround for parseDouble() bug
+      handler.defineFilter("BuggyDoubleFilter",
+			   CompressingFilterWrapper.class.getName());
+      handler.addFilterPathMapping("/*", "BuggyDoubleFilter",
+				   Dispatcher.__DEFAULT);
+
       handler.addFilterPathMapping("/*", filterName, Dispatcher.__DEFAULT);
     }
   }

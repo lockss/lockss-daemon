@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.11 2006-03-01 02:50:13 smorabito Exp $
+ * $Id: EncodedProperty.java,v 1.12 2011-02-14 00:09:56 tlipkis Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class EncodedProperty extends Properties {
     try {
       String value = getProperty(key);
       if(value != null) {
-	ret = Double.parseDouble(value);
+	ret = PlatformUtil.parseDouble(value);
       }
     }
     catch (NumberFormatException ex) {

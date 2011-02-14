@@ -1,5 +1,5 @@
 /*
- * $Id: ExportContent.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
+ * $Id: ExportContent.java,v 1.5 2011-02-14 00:09:56 tlipkis Exp $
  */
 
 /*
@@ -232,7 +232,7 @@ public class ExportContent extends LockssServlet {
       size = -1;
     } else {
       try {
-	Double fsize = Double.parseDouble(maxSize);
+	Double fsize = PlatformUtil.parseDouble(maxSize);
 	size = (long)(fsize * 1024 * 1024);
 	if (size == 0) {
 	  size = -1;
