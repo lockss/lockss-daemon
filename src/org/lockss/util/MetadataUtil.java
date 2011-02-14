@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.6 2011-01-22 08:19:16 tlipkis Exp $
+ * $Id: MetadataUtil.java,v 1.6.2.1 2011-02-14 00:22:12 tlipkis Exp $
  */
 
 /*
@@ -208,6 +208,7 @@ public class MetadataUtil {
     lstr = lstr.trim();
     if (StringUtil.isNullString(lstr)) {
       defaultLocale = DEFAULT_DEFAULT_LOCALE;
+      return;
     }
     try {
       Locale loc = LocaleUtils.toLocale(lstr);
