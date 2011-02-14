@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.14 2010-12-02 10:04:54 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.14.2.1 2011-02-14 00:21:35 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.definable.DefinablePlugin;
 
 /** Base class for plugin status accessors, and static register/unregister
  */
-class PluginStatus {
+public class PluginStatus {
   static Logger log = Logger.getLogger("PluginStatus");
   final static String PLUGIN_TABLE = "Plugins";
   final static String PLUGIN_DETAIL = "PluginDetail";
@@ -79,6 +79,12 @@ class PluginStatus {
     this.mgr = mgr;
   }
 
+  // utility method for making a Reference
+  public static StatusTable.Reference makePlugRef(Object value,
+						  Plugin plug) {
+    String key = PluginManager.pluginKeyFromId(plug.getPluginId());
+    return new StatusTable.Reference(value, PLUGIN_DETAIL, key);
+  }
 }
 
 /**
@@ -136,8 +142,7 @@ class Plugins extends PluginStatus implements StatusAccessor {
 	  continue;
 	}
 	Map row = new HashMap();
-	row.put("plugin", PluginDetail.makePlugRef(plugin.getPluginName(),
-						   plugin));
+	row.put("plugin", makePlugRef(plugin.getPluginName(), plugin));
 	row.put("version", plugin.getVersion());
 	row.put("id", plugin.getPluginId());
 	row.put("type", mgr.getPluginType(plugin));
@@ -294,12 +299,6 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     return res;
   }
 
-  // utility method for making a Reference
-  public static StatusTable.Reference makePlugRef(Object value,
-						  Plugin plug) {
-    String key = PluginManager.pluginKeyFromId(plug.getPluginId());
-    return new StatusTable.Reference(value, PLUGIN_DETAIL, key);
-  }
 }
 
 /**

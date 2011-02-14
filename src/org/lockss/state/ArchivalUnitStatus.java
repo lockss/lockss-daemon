@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.94 2010-12-02 10:06:18 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.94.2.1 2011-02-14 00:21:35 tlipkis Exp $
  */
 
 /*
@@ -787,9 +787,11 @@ public class ArchivalUnitStatus
       if (tc != null) {
 	addStringIfNotNull(res, tc.getJournalTitle(), "Journal Title");
       }
+      Plugin plugin = au.getPlugin();
       res.add(new StatusTable.SummaryInfo("Plugin",
 					  ColumnDescriptor.TYPE_STRING,
-					  au.getPlugin().getPluginName()));
+					  PluginStatus.makePlugRef(plugin.getPluginName(),
+								   plugin)));
       addStringIfNotNull(res, AuUtil.getTitleAttribute(au, "year"), "Year");
       addStringIfNotNull(res, state.getAccessType(), "Access Type");
       if (contentSize != -1) {
