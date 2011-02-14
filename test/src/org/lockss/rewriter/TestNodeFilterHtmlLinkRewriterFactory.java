@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.16 2010-06-25 07:42:15 tlipkis Exp $
+ * $Id: TestNodeFilterHtmlLinkRewriterFactory.java,v 1.17 2011-02-14 00:05:06 tlipkis Exp $
  */
 
 /*
@@ -66,10 +66,73 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "content=\"1;url=page5.html\">\n" +
     "<meta http-equiv=\"refresh\" " +
     "content=\"1;url=../page6.html\">\n" +
+    "<meta http-equiv=\"refresh\" " +
+    "content=\"1;url=http://www.content.org/page2.html\">\n" +
     "</head>\n" +
     "<body>\n" +
     "<h1 align=\"center\">example.com website</h1>\n" +
     "<br>\n" +
+    "<a href=\"http://www.example.com/content/index.html\">abs link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://www.example.com/content/index.html#ref1\">abs link with ref</a>\n" +
+    "<br>\n" +
+    "<a href=\"path/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"path/index.html#ref2\">rel link with ref</a>\n" +
+    "<br>\n" +
+    "<a href=\"4path/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"%2fpath/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"(content)/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"/more/path/index.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<A HREF=\"../more/path/index.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<A HREF=\"./more/path/index.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<a href=\"?issn=123456789X\">rel query</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://www.content.org/index.html\">abs link no rewrite</a>\n" +
+    "<br>\n" +
+    "Rel script" +
+    "<script type=\"text/javascript\" src=\"/javascript/ajax/utility.js\"></script>\n" +
+    "<br>\n" +
+    "Abs script" +
+    "<script type=\"text/javascript\" src=\"http://www.example.com/javascript/utility.js\"></script>\n" +
+    "<br>\n" +
+    "Rel stylesheet" +
+    "<link rel=\"stylesheet\" href=\"/css/basic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel stylesheet" +
+    "<link rel=\"stylesheet\" href=\"Basic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Abs stylesheet" +
+    "<link rel=\"stylesheet\" href=\"http://www.example.com/css/extra.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel img" +
+    "<img src=\"/icons/logo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
+    "<br>\n" +
+    "Abs img" +
+    "<img src=\"http://www.example.com/icons/logo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "<br>\n" +
+    "Rel path CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(css/common.css) @import url(common2.css);</style>\n" +
+    "<br>\n" +
+    "Rel CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(/css/common.css) @import url(/css/common2.css);</style>\n" +
+    "<br>\n" +
+    "Abs CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra.css) @import url(http://www.example.com/css/extra2.css);</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import" +
+    "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
+    "<br>\n" +
+
+    // repeat above after changing the base URL
+
+    "<base href=\"http://www.example.com/otherdir/\" />\n" +
     "<a href=\"http://www.example.com/content/index.html\">abs link</a>\n" +
     "<br>\n" +
     "<a href=\"path/index.html\">rel link</a>\n" +
@@ -123,6 +186,7 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "Mixed CSS import" +
     "<style type=\"text/css\" media=\"screen,print\">@import url(http://www.example.com/css/extra3.css) @import url(EXTRA4.css) @import url(../extra5.css);</style>\n" +
     "<br>\n" +
+
     "</body>\n" +
     "</HTML>\n";
 
@@ -137,13 +201,19 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<meta http-equiv=\"refresh\" content=\"1; 	url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fpage4.html\">\n" +
     "<meta http-equiv=\"refresh\" content=\"1;url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fpage5.html\">\n" +
     "<meta http-equiv=\"refresh\" content=\"1;url=http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F..%2Fpage6.html\">\n" +
+    "<meta http-equiv=\"refresh\" " +
+    "content=\"1;url=http://www.content.org/page2.html\">\n" +
     "</head>\n" +
     "<body>\n" +
     "<h1 align=\"center\">example.com website</h1>\n" +
     "<br>\n" +
     "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Findex.html\">abs link</a>\n" +
     "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Findex.html#ref1\">abs link with ref</a>\n" +
+    "<br>\n" +
     "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Fpath%2Findex.html#ref2\">rel link with ref</a>\n" +
     "<br>\n" +
     "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F4path%2Findex.html\">rel link</a>\n" +
     "<br>\n" +
@@ -183,6 +253,52 @@ public class TestNodeFilterHtmlLinkRewriterFactory extends LockssTestCase {
     "<br>\n" +
     "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra3.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2FEXTRA4.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2F..%2Fextra5.css);</style>\n" +
     "<br>\n" +
+
+    // Base URL change
+    "<base href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F\" />\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcontent%2Findex.html\">abs link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F4path%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F%252fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F%28content%29%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fmore%2Fpath%2Findex.html\">rel link</a>\n" +
+    "<br>\n" +
+    "<A HREF=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F..%2Fmore%2Fpath%2Findex.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<A HREF=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F.%2Fmore%2Fpath%2Findex.html\">rel link</A>\n" +
+    "<br>\n" +
+    "<a href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F%3Fissn%3D123456789X\">rel query</a>\n" +
+    "<br>\n" +
+    "<a href=\"http://www.content.org/index.html\">abs link no rewrite</a>\n" +
+    "<br>\n" +
+    "Rel script<script type=\"text/javascript\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fjavascript%2Fajax%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Abs script<script type=\"text/javascript\" src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fjavascript%2Futility.js\"></script>\n" +
+    "<br>\n" +
+    "Rel stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fbasic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2FBasic.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Abs stylesheet<link rel=\"stylesheet\" href=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css\" type=\"text/css\" media=\"all\">\n" +
+    "<br>\n" +
+    "Rel img<img src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Ficons%2Flogo.gif\" alt=\"BMJ 1\" title=\"BMJ 1\" />\n" +
+    "<br>\n" +
+    "Abs img<img src=\"http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Ficons%2Flogo2.gif\" alt=\"BMJ 2\" title=\"BMJ 2\" />\n" +
+    "<br>\n" +
+    "Rel path CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2Fcommon2.css);</style>\n" +
+    "<br>\n" +
+    "Rel CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fcommon2.css);</style>\n" +
+    "<br>\n" +
+    "Abs CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra2.css);</style>\n" +
+    "<br>\n" +
+    "Mixed CSS import<style type=\"text/css\" media=\"screen,print\">@import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fcss%2Fextra3.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2FEXTRA4.css) @import url(http://lockss.box:9524/ServeContent?url=http%3A%2F%2Fwww.example.com%2Fotherdir%2F..%2Fextra5.css);</style>\n" +
+    "<br>\n" +
+
     "</body>\n" +
     "</HTML>\n";
 
