@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlNodeFilters.java,v 1.6 2009-08-27 01:59:44 tlipkis Exp $
+ * $Id: TestHtmlNodeFilters.java,v 1.6.20.1 2011-02-14 00:15:26 tlipkis Exp $
  */
 
 /*
@@ -226,6 +226,25 @@ public class TestHtmlNodeFilters extends LockssTestCase {
     assertTrue(""+node.getClass(),
 	       node instanceof org.htmlparser.nodes.RemarkNode);
     assertEquals(" Begin ad 3 foo ", node.getText());
+  }
+
+  // Transforms
+
+  public void testUrlEncode() throws Exception {
+    HtmlNodeFilters.RefreshRegexXform xf =
+      new HtmlNodeFilters.RefreshRegexXform("^http://", true, "^/", "foo");
+    assertEquals("", xf.urlEncode(""));
+    assertEquals("no url arg", xf.urlEncode("no url arg"));
+    assertEquals("?url=http%3A%2F%2Ffoo.bar%2Fpath%2Ffile.html",
+		 xf.urlEncode("?url=http://foo.bar/path/file.html"));
+    assertEquals("?url=http%3A%2F%2Ffoo.bar%2Fpath%2Ffile.html#ref",
+		 xf.urlEncode("?url=http://foo.bar/path/file.html#ref"));
+    // end of a quoted url
+    assertEquals("?url=http%3A%2F%2Ffoo.bar%2F\")oth/er",
+		 xf.urlEncode("?url=http://foo.bar/\")oth/er"));
+    // end of a css url expr
+    assertEquals("?url=http%3A%2F%2Ffoo.bar%2F)oth/er",
+		 xf.urlEncode("?url=http://foo.bar/)oth/er", true));
   }
 
   private static final String page =
