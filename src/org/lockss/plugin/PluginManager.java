@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.212 2011-01-25 07:14:00 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.212.2.1 2011-02-15 09:02:48 tlipkis Exp $
  */
 
 /*
@@ -830,7 +830,7 @@ public class PluginManager
     }
     delHostAus(au);
 
-    signalAuEvent(au, AuEvent.Delete, null);
+    signalAuEvent(au, event, null);
 
     try {
       Plugin plugin = au.getPlugin();
