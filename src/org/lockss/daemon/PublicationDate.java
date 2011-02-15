@@ -1,5 +1,5 @@
 /*
- * $Id: PublicationDate.java,v 1.2 2011-02-15 22:07:44 pgust Exp $
+ * $Id: PublicationDate.java,v 1.3 2011-02-15 22:10:58 pgust Exp $
  */
 
 /*
@@ -92,8 +92,8 @@ public class PublicationDate {
     fr_seasons.put("d'été", 2);                 // summer season
     fr_seasons.put("été", 2);                   // summer
     fr_seasons.put("d'automne", 3);             // autumn quarter
-    fr_seasons.put("automne", 3);               // autumn season
     fr_seasons.put("l'automne", 3);             // autumn 
+    fr_seasons.put("automne", 3);               // autumn season
     fr_seasons.put("d'hiver", 4);               // winter season
     fr_seasons.put("hiver", 4);                 // winter
   }
