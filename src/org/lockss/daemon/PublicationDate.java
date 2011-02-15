@@ -1,5 +1,5 @@
 /*
- * $Id: PublicationDate.java,v 1.1 2011-02-12 00:23:26 pgust Exp $
+ * $Id: PublicationDate.java,v 1.2 2011-02-15 22:07:44 pgust Exp $
  */
 
 /*
@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
+import java.text.Normalizer;
+import java.text.Normalizer.Form;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedHashMap;
@@ -66,8 +68,8 @@ public class PublicationDate {
   /** the year (1000 - current year+1) */
   private int year = 0;
   
-  // english
-  private final Map<String,Integer> en_seasons = new LinkedHashMap<String,Integer>();
+  /** english seasons */
+  static private final Map<String,Integer> en_seasons = new LinkedHashMap<String,Integer>();
   {
     en_seasons.put("spring", 1);
     en_seasons.put("1S", 1);
@@ -83,8 +85,8 @@ public class PublicationDate {
     en_seasons.put("S4", 4);
   }
 
-  // french seasons
-  private final  Map<String,Integer> fr_seasons = new LinkedHashMap<String,Integer>();
+  /** french seasons */
+  static private final  Map<String,Integer> fr_seasons = new LinkedHashMap<String,Integer>();
   {
     fr_seasons.put("printemps", 1);             // spring
     fr_seasons.put("d'été", 2);                 // summer season
@@ -96,8 +98,8 @@ public class PublicationDate {
     fr_seasons.put("hiver", 4);                 // winter
   }
 
-  // german seasons
-  private final  Map<String,Integer> de_seasons = new LinkedHashMap<String,Integer>();
+  /** german seasons */
+  static private final  Map<String,Integer> de_seasons = new LinkedHashMap<String,Integer>();
   {
     de_seasons.put("Frühling", 1);              // spring season 
     de_seasons.put("Frühjahr", 1);              // spring
@@ -111,8 +113,8 @@ public class PublicationDate {
     de_seasons.put("Winter", 4);                // winter
   }
   
-  // italian seasons
-  private final  Map<String,Integer> it_seasons = new LinkedHashMap<String,Integer>();
+  /** italian seasons */
+  static private final  Map<String,Integer> it_seasons = new LinkedHashMap<String,Integer>();
   {
     it_seasons.put("primavera", 1);             // spring
     it_seasons.put("estiva", 2);                // summer season
@@ -122,8 +124,8 @@ public class PublicationDate {
     it_seasons.put("inverno", 4);               // winter
   }
   
-  // portuguese seasons
-  private final  Map<String,Integer> pt_seasons = new LinkedHashMap<String,Integer>();
+  /** portuguese seasons */
+  static private final  Map<String,Integer> pt_seasons = new LinkedHashMap<String,Integer>();
   {
     pt_seasons.put("primavera", 1);             // spring
     pt_seasons.put("verão", 2);                 // summer
@@ -131,8 +133,8 @@ public class PublicationDate {
     pt_seasons.put("inverno", 4);               // winter
   }
   
-  // russian
-  private final  Map<String,Integer> ru_seasons = new LinkedHashMap<String,Integer>();
+  /** russian */
+  static private final  Map<String,Integer> ru_seasons = new LinkedHashMap<String,Integer>();
   {
     ru_seasons.put("весенний", 1);              // spring season
     ru_seasons.put("весной", 1);                // spring
@@ -145,8 +147,8 @@ public class PublicationDate {
     ru_seasons.put("зима", 4);                  // winter
   }
   
-  // spanish
-  private final  Map<String,Integer> es_seasons = new LinkedHashMap<String,Integer>();
+  /** spanish */
+  static private final Map<String,Integer> es_seasons = new LinkedHashMap<String,Integer>();
   {
     es_seasons.put("primavera", 1);             // spring
     es_seasons.put("verano", 2);                // summer
@@ -154,8 +156,8 @@ public class PublicationDate {
     es_seasons.put("invierno", 4);              // winter
   }
   
-  // seasons
-  private final  Map<String,Map<String,Integer>> seasons = new LinkedHashMap<String,Map<String,Integer>>();
+  /** seasons */
+  static private final  Map<String,Map<String,Integer>> seasons = new LinkedHashMap<String,Map<String,Integer>>();
   {
     seasons.put("de", de_seasons);
     seasons.put("en", en_seasons);
@@ -166,8 +168,8 @@ public class PublicationDate {
     seasons.put("ru", ru_seasons);
   }
   
-  // english quarters
-  private final  Map<String,Integer> en_quarters = new LinkedHashMap<String,Integer>();
+  /** english quarters */
+  static private final  Map<String,Integer> en_quarters = new LinkedHashMap<String,Integer>();
   {
     en_quarters.put("first quarter", 1);
     en_quarters.put("1st quarter", 1);
@@ -195,8 +197,8 @@ public class PublicationDate {
     en_quarters.put("Q4", 4);
   }
   
-  // french quarters
-  private final Map<String,Integer> fr_quarters = new LinkedHashMap<String,Integer>();
+  /** french quarters */
+  static private final Map<String,Integer> fr_quarters = new LinkedHashMap<String,Integer>();
   {
     fr_quarters.put("premier trimestre",1);     // first quarter
     fr_quarters.put("1er trimestre",1);         // 1st quarter
@@ -219,8 +221,8 @@ public class PublicationDate {
     fr_quarters.put("quatre trimestres",4);     // quarter four
   }
   
-  // german quarters
-  private final Map<String,Integer> de_quarters = new LinkedHashMap<String,Integer>();
+  /** german quarters */
+  static private final Map<String,Integer> de_quarters = new LinkedHashMap<String,Integer>();
   {
     de_quarters.put("ersten Quartal",1);        // first quarter
     de_quarters.put("1. Quartal",1);            // 1st quarter
@@ -243,8 +245,8 @@ public class PublicationDate {
     de_quarters.put("vierte Quartal",4);        // quarter four
   }
   
-  // italian quarters
-  private final Map<String,Integer> it_quarters = new LinkedHashMap<String,Integer>();
+  /** italian quarters */
+  static private final Map<String,Integer> it_quarters = new LinkedHashMap<String,Integer>();
   {
     it_quarters.put("primer trimestre",1);      // first quarter
     it_quarters.put("1 º trimestre",1);         // 1st quarter
@@ -266,8 +268,8 @@ public class PublicationDate {
     it_quarters.put("trimestre quattro",4);     // quarter four
   }
   
-  // portuguese quarters
-  private final Map<String,Integer> pt_quarters = new LinkedHashMap<String,Integer>();
+  /** portuguese quarters */
+  static private final Map<String,Integer> pt_quarters = new LinkedHashMap<String,Integer>();
   {
     pt_quarters.put("primeiro trimestre",1);    // first quarter
     pt_quarters.put("1 º trimestre",1);         // 1st quarter
@@ -290,8 +292,8 @@ public class PublicationDate {
     pt_quarters.put("trimestre quatro",4);      // quarter four
   }
   
-  // russian quarters
-  private final Map<String,Integer> ru_quarters = new LinkedHashMap<String,Integer>();
+  /** russian quarters */
+  static private final Map<String,Integer> ru_quarters = new LinkedHashMap<String,Integer>();
   {
     ru_quarters.put("первом квартале",1);       // first quarter
     ru_quarters.put("1-й квартал",1);           // 1st quarter
@@ -314,8 +316,8 @@ public class PublicationDate {
     ru_quarters.put("четвертом квартале",4);    // quarter four
   }
   
-  // spanish quarters
-  private final Map<String,Integer> es_quarters = new LinkedHashMap<String,Integer>();
+  /** spanish quarters */
+  static private final Map<String,Integer> es_quarters = new LinkedHashMap<String,Integer>();
   {
     es_quarters.put("primer trimestre",1);      // first quarter
     es_quarters.put("1 º trimestre",1);         // 1st quarter
@@ -338,8 +340,8 @@ public class PublicationDate {
     es_quarters.put("cuatro trimestres",4);     // quarter four
   }
 
-  // quarters
-  private final Map<String,Map<String,Integer>> quarters = new LinkedHashMap<String,Map<String,Integer>>();
+  /** quarters */
+  static private final Map<String,Map<String,Integer>> quarters = new LinkedHashMap<String,Map<String,Integer>>();
   {
     quarters.put("de", de_quarters);
     quarters.put("en", en_quarters);
@@ -369,73 +371,74 @@ public class PublicationDate {
    */
   public PublicationDate(String dateStr, Locale locale) {
     
-    dateStr = dateStr.toLowerCase();
-    Calendar c = Calendar.getInstance(locale);
+    // normalize by stripping accents and lower-casing
+    dateStr = toUnaccented(dateStr).toLowerCase(locale);
 
-    Map<String, Integer> months = c.getDisplayNames(Calendar.MONTH, Calendar.ALL_STYLES, locale);
-    
     // get season
     Map<String,Integer> myseasons = seasons.get(locale.getLanguage());
-    if (myseasons == null) {
-      myseasons = seasons.get("en");
-    }
-    // match season phrases as whole words.
-    for (Map.Entry<String,Integer> entry : myseasons.entrySet()) {
-      String key = entry.getKey().toLowerCase();
-      String match = key + " ";
-      if (!dateStr.startsWith(match)) {
-        match = key + ",";
+    if (myseasons != null) {
+      // match season phrases as whole words.
+      for (Map.Entry<String,Integer> entry : myseasons.entrySet()) {
+        String key = toUnaccented(entry.getKey()).toLowerCase(locale);
+        String match = key + " ";
         if (!dateStr.startsWith(match)) {
-          match = " " + key;
-          if (!dateStr.endsWith(match)) {
-            match = " " + key + " ";
-            if (!dateStr.contains(match)) {
-              match = " " + key + ",";
+          match = key + ",";
+          if (!dateStr.startsWith(match)) {
+            match = " " + key;
+            if (!dateStr.endsWith(match)) {
+              match = " " + key + " ";
               if (!dateStr.contains(match)) {
-                continue;
+                match = " " + key + ",";
+                if (!dateStr.contains(match)) {
+                  continue;
+                }
               }
             }
           }
         }
+        dateStr = dateStr.replace(match," ");
+        season = entry.getValue();
+        break;
       }
-      dateStr = dateStr.replace(match," ");
-      season = entry.getValue();
-      break;
     }
     
     // get quarter
     Map<String,Integer> myquarters = quarters.get(locale.getLanguage());
-    if (myquarters == null) {
-      myquarters= quarters.get("en");
-    }
-    // match quarter phrases as whole words.
-    for (Map.Entry<String,Integer> entry : myquarters.entrySet()) {
-      String key = entry.getKey().toLowerCase();
-      String match = key + " ";
-      if (!dateStr.startsWith(match)) {
-        match = key + ",";
+    if (myquarters != null) {
+      // match quarter phrases as whole words.
+      for (Map.Entry<String,Integer> entry : myquarters.entrySet()) {
+        String key = toUnaccented(entry.getKey()).toLowerCase(locale);
+        String match = key + " ";
         if (!dateStr.startsWith(match)) {
-          match = " " + key;
-          if (!dateStr.endsWith(match)) {
-            match = " " + key + " ";
-            if (!dateStr.contains(match)) {
-              match = " " + key + ",";
+          match = key + ",";
+          if (!dateStr.startsWith(match)) {
+            match = " " + key;
+            if (!dateStr.endsWith(match)) {
+              match = " " + key + " ";
               if (!dateStr.contains(match)) {
-                continue;
+                match = " " + key + ",";
+                if (!dateStr.contains(match)) {
+                  continue;
+                }
               }
             }
           }
         }
+        dateStr = dateStr.replace(match," ");
+        quarter = entry.getValue();
+        break;
       }
-      dateStr = dateStr.replace(match," ");
-      quarter = entry.getValue();
-      break;
     }
+    
+    Calendar c = Calendar.getInstance(locale);
 
     // earliest and latest recognizable years
     int firstYear = 1000;                       // first year; limits to 4-digit years
-    int lastYear = new Date().getYear()+1901;   // year after current year
+    int lastYear = c.get(Calendar.YEAR)+1;      // year after current year (some pubs come out in advance)
 
+    // get month names
+    Map<String, Integer> months = c.getDisplayNames(Calendar.MONTH, Calendar.ALL_STYLES, locale);
+    
     // process words from date string after removing quarter or season
     for (StringTokenizer tok = new StringTokenizer(dateStr); tok.hasMoreElements(); ) {
       // remove extraneous trailing punctuation
@@ -447,7 +450,7 @@ public class PublicationDate {
         for (Map.Entry<String,Integer> entry : months.entrySet()) {
           // strip punctuation because keys for a few locales 
           // include trailing punctuation with their abbreviations
-          if (entry.getKey().replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(w)) {
+          if (toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(w)) {
             month = entry.getValue()+1;
             break;
           }
@@ -465,7 +468,7 @@ public class PublicationDate {
         try {
           // crude trick to strip ordinal indicators from numbers
           // by removing all non-digit characters before parsing
-          int num = Integer.parseInt(word.replaceAll("[^0-9]", ""));
+          int num = Integer.parseInt(word.replaceAll("[^\\p{Digit}]", ""));
           
           if (year == 0) {
             if ((num >= firstYear) && (num <= lastYear)) {
@@ -492,7 +495,7 @@ public class PublicationDate {
       for (int i = 0; i < len; i++) {
         Integer n = null;
         for (Map.Entry<String, Integer> entry : months.entrySet()) {
-          if (entry.getKey().replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(wds[i])) {
+          if (toUnaccented(entry.getKey()).replaceAll("\\p{Punct}+$", "").equalsIgnoreCase(wds[i])) {
             n = entry.getValue();
             break;
           }
@@ -504,7 +507,7 @@ public class PublicationDate {
           try {
             // crude trick to strip ordinal indicators from numbers
             // by removing all non-digit characters before parsing
-            w[i] = Integer.parseInt(wds[i].replaceAll("[^0-9]", ""));
+            w[i] = Integer.parseInt(wds[i].replaceAll("[^\\p{Digit}]", ""));
           } catch (NumberFormatException ex) {
           }
         }
@@ -616,6 +619,15 @@ public class PublicationDate {
   static public PublicationDate parse(String pubDateStr, Locale locale) {
     return new PublicationDate(pubDateStr, locale);
   }
+  
+  /**
+   * Normalize string by removing diacriticle marks.
+   * @param s the string
+   * @return the string with diacritical marks removed
+   */
+  static private String toUnaccented(String s) {
+    return Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+  }
 
   /**
    * Return string representation of the publication date in extended
@@ -671,4 +683,14 @@ public class PublicationDate {
   public int getSeason() {
     return season;
   }
+  
+  public static void main(String[] args) {
+    Locale locale = Locale.KOREA;
+    Map<String,Integer> months = Calendar.getInstance(locale).getDisplayNames(Calendar.MONTH, Calendar.ALL_STYLES, locale);
+    for (String s : months.keySet()) {
+      String sn = Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+      System.out.println(s + " " + sn);
+    }
+  }
+  
 }
