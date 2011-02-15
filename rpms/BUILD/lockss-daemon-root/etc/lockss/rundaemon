@@ -127,7 +127,7 @@ fi
 # Set LOCKSS_JAVA_HEAP to override.
 #LOCKSS_JAVA_HEAP=500m
 MIN_JAVA_HEAP_IN_MB=200
-MAX_JAVA_HEAP_IN_MB=1024
+MAX_JAVA_HEAP_IN_MB=1536
 OS_TYPE=`uname -s`
 case ${OS_TYPE} in
 Linux)          
