@@ -1,0 +1,6 @@
+#!/bin/bash
+
+DIRECTORY=$(cd `dirname $0` && pwd)
+export PYTHONPATH=$PYTHONPATH:$DIRECTORY/../../lib
+
+python $DIRECTORY/../clean_cache.py $@
