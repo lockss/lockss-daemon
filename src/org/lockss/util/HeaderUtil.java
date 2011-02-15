@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.6 2009-02-26 05:14:17 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.7 2011-02-15 09:01:27 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class HeaderUtil {
     if (contentType == null) {
       return null;
     }
-    int idx = contentType.indexOf(";");
+    int idx = contentType.indexOf(';');
     String res;
     if (idx < 0) {
       res = contentType.trim();
@@ -65,20 +65,24 @@ public class HeaderUtil {
   /** Extract the MIME type, if any, from a Content-Type header. The result
    * is cached. */
   public static String getMimeTypeFromContentType(String contentType) {
-    String mime = (String)mimeTypeMap.get(contentType);
-    if (mime == null) {
-      mime = extractMimeTypeFromContentType(contentType);
-      mimeTypeMap.put(contentType, mime);
+    synchronized (mimeTypeMap) {
+      String mime = (String)mimeTypeMap.get(contentType);
+      if (mime == null) {
+	mime = extractMimeTypeFromContentType(contentType);
+	if (isCachableContentType(contentType)) {
+	  mimeTypeMap.put(contentType, mime);
+	}
+      }
+      return mime;
     }
-    return mime;
   }
 
   static String extractCharsetFromContentType(String contentType) {
     int start, end;
     if (contentType != null &&
-	(start = contentType.indexOf("charset=")) != -1) {
+	(start = StringUtil.indexOfIgnoreCase(contentType, "charset=")) != -1) {
       String res = contentType.substring(start + 8);
-      if ((end = res.indexOf(";")) > -1) {
+      if ((end = res.indexOf(';')) > -1) {
 	res = res.substring(0, end);
       }
       return QuotedStringTokenizer.unquote(res).toLowerCase();
@@ -90,12 +94,64 @@ public class HeaderUtil {
    * e.g.<code>text/html;charset=utf-8</code> ,
    * <code>text/html;charset="utf-8"</code> .  The result is cached. */
   public static String getCharsetFromContentType(String contentType) {
-    String charset = (String)charsetMap.get(contentType);
-    if (charset == null) {
-      charset = extractCharsetFromContentType(contentType);
-      charsetMap.put(contentType, charset);
+    synchronized (charsetMap) {
+      String charset = (String)charsetMap.get(contentType);
+      if (charset == null) {
+	charset = extractCharsetFromContentType(contentType);
+	if (isCachableContentType(contentType)) {
+	  charsetMap.put(contentType, charset);
+	}
+      }
+      return charset;
     }
-    return charset;
+  }
+
+  static final String CHARSET = "charset";
+  static final int CLEN = CHARSET.length();
+
+  // Return true iff the contentType contains no attributes other than
+  // charset.  Some sites put highly variable strings into attributes (such
+  // as the url).  These should not be cached.
+  static boolean isCachableContentType(String contentType) {
+    if (contentType == null) {
+      return false;
+    }
+    int pos = -1;
+    while ((pos = contentType.indexOf('=', pos + 1)) >= 0) {
+      if (pos - CLEN < 0 ||
+	  !contentType.regionMatches(true, pos-CLEN, "charset", 0, CLEN)) {
+	return false;
+      }
+      if ((pos - CLEN >= 1) &&
+	  isTokenChar(contentType.charAt(pos - CLEN - 1))) {
+	return false;
+      }
+    }
+    return true;
+  }
+
+  static String SEPARATOR_CHARS = "()<>@,;:\\\"/[]?={} \t";
+
+  static boolean TOKEN_CHARS[] = initTokenChars();
+  static boolean[] initTokenChars() {
+    boolean[] res = new boolean[128];
+    for (int ch = 0; ch < 128; ch++) {
+      if (ch <= 31 || ch == 127) {
+	res[ch] = false;
+      } else {
+	res[ch] = true;
+      }
+    }
+    for (int ix = SEPARATOR_CHARS.length() - 1; ix >= 0; ix--) {
+      res[SEPARATOR_CHARS.charAt(ix)] = false;
+    }
+    return res;
+  }
+    
+
+  static boolean isTokenChar(char ch) {
+    System.out.println("foo: " + ch);
+    return TOKEN_CHARS[ch];
   }
 
   public static boolean isEarlier(String datestr1, String datestr2)
