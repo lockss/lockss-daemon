@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.4 2009-02-26 05:14:16 tlipkis Exp $
+ * $Id: TestHeaderUtil.java,v 1.4.28.1 2011-02-15 09:03:06 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,8 @@ public class TestHeaderUtil extends LockssTestCase {
     assertNull(HeaderUtil.getCharsetFromContentType("text/html;charset"));
     assertEquals("utf-8",
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=UTF-8"));
+    assertEquals("utf-8",
+		 HeaderUtil.getCharsetFromContentType("text/html;CHARSET=UTF-8"));
     assertEquals("iso8859-1",
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
     assertEquals("foo-1",
@@ -67,6 +69,51 @@ public class TestHeaderUtil extends LockssTestCase {
 		 HeaderUtil.getCharsetFromContentType("text/html;charset=foo-1;other=stuff"));
     assertSame(HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""),
 	       HeaderUtil.getCharsetFromContentType("text/html;charset=\"iso8859-1\""));
+  }
+
+  public void testIsTokenChar() {
+    assertTrue(HeaderUtil.isTokenChar('a'));
+    assertTrue(HeaderUtil.isTokenChar('z'));
+    assertTrue(HeaderUtil.isTokenChar('A'));
+    assertTrue(HeaderUtil.isTokenChar('Z'));
+    assertTrue(HeaderUtil.isTokenChar('0'));
+    assertTrue(HeaderUtil.isTokenChar('9'));
+    assertTrue(HeaderUtil.isTokenChar('_'));
+    assertTrue(HeaderUtil.isTokenChar('.'));
+    assertTrue(HeaderUtil.isTokenChar('$'));
+    assertTrue(HeaderUtil.isTokenChar('&'));
+    assertTrue(HeaderUtil.isTokenChar('*'));
+    assertFalse(HeaderUtil.isTokenChar('('));
+    assertFalse(HeaderUtil.isTokenChar(')'));
+    assertFalse(HeaderUtil.isTokenChar('<'));
+    assertFalse(HeaderUtil.isTokenChar('>'));
+    assertFalse(HeaderUtil.isTokenChar('@'));
+    assertFalse(HeaderUtil.isTokenChar(','));
+    assertFalse(HeaderUtil.isTokenChar(';'));
+    assertFalse(HeaderUtil.isTokenChar(':'));
+    assertFalse(HeaderUtil.isTokenChar('\\'));
+    assertFalse(HeaderUtil.isTokenChar('\"'));
+    assertFalse(HeaderUtil.isTokenChar('/'));
+    assertFalse(HeaderUtil.isTokenChar('['));
+    assertFalse(HeaderUtil.isTokenChar(']'));
+    assertFalse(HeaderUtil.isTokenChar('?'));
+    assertFalse(HeaderUtil.isTokenChar('='));
+    assertFalse(HeaderUtil.isTokenChar('{'));
+    assertFalse(HeaderUtil.isTokenChar('}'));
+    assertFalse(HeaderUtil.isTokenChar(' '));
+    assertFalse(HeaderUtil.isTokenChar('\t'));
+  }
+
+  public void testIsCachableContentType() {
+    assertFalse(HeaderUtil.isCachableContentType(null));
+    assertFalse(HeaderUtil.isCachableContentType("foo=bar"));
+    assertTrue(HeaderUtil.isCachableContentType("text/html"));
+    assertTrue(HeaderUtil.isCachableContentType("text/html;charset"));
+    assertTrue(HeaderUtil.isCachableContentType("text/html;charset=utf-8"));
+    assertTrue(HeaderUtil.isCachableContentType("text/html;CHARSET=utf-16"));
+    assertFalse(HeaderUtil.isCachableContentType("text/html;xcharset=utf-8"));
+    assertFalse(HeaderUtil.isCachableContentType("text/html;charsety=utf-8"));
+    assertFalse(HeaderUtil.isCachableContentType("text/html;charset=utf-8;name=foo"));
   }
 
   public void testIsEarlier() throws Exception {
