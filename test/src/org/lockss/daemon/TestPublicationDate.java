@@ -1,5 +1,5 @@
 /*
- * $Id: TestPublicationDate.java,v 1.5 2011-02-15 22:13:51 pgust Exp $
+ * $Id: TestPublicationDate.java,v 1.6 2011-02-16 00:20:48 pgust Exp $
  */
 
 /*
@@ -57,14 +57,13 @@ public class TestPublicationDate extends LockssTestCase {
     assertEquals("2010-03-13", PublicationDate.parse("2010/3/13",Locale.US).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010/3/13",Locale.UK).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010/March/13",Locale.US).toString()); 
-    assertEquals("2010-03-13", PublicationDate.parse("2010/März/13",Locale.GERMANY).toString()); 
+    assertEquals("2010-03-13", PublicationDate.parse("2010/M\u00e4rz/13",Locale.GERMANY).toString());  // a-umlaut 
     assertEquals("2010-03-13", PublicationDate.parse("2010/Mar./13",Locale.US).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010/Mar./13",Locale.US).toString()); 
     assertEquals("2010-03", PublicationDate.parse("2010/3",Locale.US).toString()); 
     assertEquals("2010-03", PublicationDate.parse("2010/Mar",Locale.US).toString()); 
     assertEquals("2010-03-13", PublicationDate.parse("2010-Mar-13, Sunday",Locale.US).toString()); 
     assertEquals("2010-Q1", PublicationDate.parse("2010-Q1",Locale.US).toString());
-
   }
   
   /**
@@ -79,7 +78,7 @@ public class TestPublicationDate extends LockssTestCase {
     assertEquals("2010-03-13", PublicationDate.parse("13th March 2010",Locale.US).toString());
     assertEquals("2010-S2", PublicationDate.parse("Summer Quarter, 2010",Locale.US).toString());
     assertEquals("2010-S2", PublicationDate.parse("Summer 2010",Locale.US).toString());
-    assertEquals("2010-S2", PublicationDate.parse("Summer, 2010",Locale.US).toString());
+    assertEquals("2010-S1", PublicationDate.parse("Frühling, 2010",Locale.GERMANY).toString());
     assertEquals("2010-Q2", PublicationDate.parse("2 º trimestre, 2010",Locale.ITALY).toString());
 //    "Summer-Fall 2010", //    2010 2X  (non-standard)  ??
 //    "Summer/Fall 2010", //    2010 2X  (non-standard)  ??
