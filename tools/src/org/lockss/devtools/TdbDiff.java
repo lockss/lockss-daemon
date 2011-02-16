@@ -1,5 +1,5 @@
 /*
- * $Id: TdbDiff.java,v 1.9 2010-08-14 22:27:01 tlipkis Exp $
+ * $Id: TdbDiff.java,v 1.10 2011-02-16 21:51:44 thib_gc Exp $
  */
 
 /*
@@ -31,21 +31,13 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.devtools;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.util.*;
 
 import org.lockss.app.LockssDaemon;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.config.Tdb;
-import org.lockss.config.TdbAu;
-import org.lockss.config.TdbPublisher;
-import org.lockss.config.TdbTitle;
+import org.lockss.config.*;
 import org.lockss.daemon.ConfigParamDescr;
-import org.lockss.plugin.Plugin;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.test.MockLockssDaemon;
 import org.lockss.util.Logger;
 
@@ -249,7 +241,7 @@ public class TdbDiff {
 
   Map<String,String> allTopLevelProps(TdbAu au) {
     Map<String,String> props = new HashMap<String,String>(au.getProperties());
-    props.put("journaltitle", au.getJournalTitle());
+    props.put("journalTitle", au.getJournalTitle());
     props.put("title", au.getName());
     return props;
   }
