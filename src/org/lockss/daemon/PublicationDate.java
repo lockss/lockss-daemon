@@ -1,5 +1,5 @@
 /*
- * $Id: PublicationDate.java,v 1.3 2011-02-15 22:10:58 pgust Exp $
+ * $Id: PublicationDate.java,v 1.4 2011-02-16 00:27:48 pgust Exp $
  */
 
 /*
@@ -683,14 +683,4 @@ public class PublicationDate {
   public int getSeason() {
     return season;
   }
-  
-  public static void main(String[] args) {
-    Locale locale = Locale.KOREA;
-    Map<String,Integer> months = Calendar.getInstance(locale).getDisplayNames(Calendar.MONTH, Calendar.ALL_STYLES, locale);
-    for (String s : months.keySet()) {
-      String sn = Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
-      System.out.println(s + " " + sn);
-    }
-  }
-  
 }
