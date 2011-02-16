@@ -1,0 +1,23 @@
+{
+
+  publisher <
+    name = National Academy of Sciences
+  >
+
+  {
+  
+    title <
+      name = Proceedings of the National Academy of Sciences ;
+      issn = 0027-8424 ;
+      eissn = 1091-6490
+    >
+
+    plugin = org.lockss.plugin.highwire.ClockssHighWirePressH20Plugin
+    param[base_url] = http://www.pnas.org/
+    implicit < status ; year ; name ; param[volume_name] >
+
+    au < testing ; 2011 ; Proceedings of the National Academy of Sciences Volume 108 ; 108 >
+
+  }
+
+}

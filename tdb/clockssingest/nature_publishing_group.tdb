@@ -269,6 +269,7 @@
     au < released  ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
     au < released ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
     au < ready ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
+    au < testing ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
 
   }
 
@@ -976,6 +977,7 @@
     au < ready ; 2010 ; Nature Volume 466 ; 2010 ; 466 >
     au < ready ; 2010 ; Nature Volume 467 ; 2010 ; 467 >
     au < ready ; 2010 ; Nature Volume 468 ; 2010 ; 468 >
+    au < testing ; 2011 ; Nature Volume 469 ; 2011 ; 469 >
 
   }
 
@@ -1150,6 +1152,7 @@
     au < released ; 2008 ; Nature Methods Volume 5 ; 2008 ; 5 >
     au < released ; 2009 ; Nature Methods Volume 6 ; 2009 ; 6 >
     au < testing ; 2010 ; Nature Methods Volume 7 ; 2010 ; 7 >
+    au < testing ; 2011 ; Nature Methods Volume 8 ; 2011 ; 8 >
 
   }
 
@@ -1541,6 +1544,7 @@ comment[nprot4] = poll mismatch
     au < released ; 2008 ; Oncogene Volume 27 ; 2008 ; 27 >
     au < notReady ; 2009 ; Oncogene Volume 28 ; 2009 ; 28 >
     au < testing ; 2010 ; Oncogene Volume 29 ; 2010 ; 29 >
+    au < testing ; 2011 ; Oncogene Volume 30 ; 2011 ; 30 >
 
   }
 
