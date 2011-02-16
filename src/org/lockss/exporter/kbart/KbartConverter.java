@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.2 2011-01-18 17:15:32 neilmayo Exp $
+ * $Id: KbartConverter.java,v 1.3 2011-02-16 23:41:48 easyonthemayo Exp $
  */
 
 /*
@@ -72,6 +72,11 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * thread-safe lazy loading approach could be implemented. On the other hand, if instantiation seems 
  * like too much work, the whole class could be made static and each method could take a TDB argument. 
  * <p>
+ * There is some justification for recording summary statistics about the KbartTitles as they are 
+ * created, for example, what the longest field value is, or which fields are universally empty.
+ * This can be used to inform layout in outputs that wish to customise the KBART representation.
+ * To do this we could pass all field-setting calls through an exporter-specific summariser. 
+ * <p>
  * Note that if the underlying <code>Tdb</code> objects are changed during iteration the resulting 
  * output is undefined.
  * <p>
@@ -123,7 +128,7 @@ public class KbartConverter {
   }
 
   /**
-   * Sort a set of <code>TdbAu</code> objects into ascending alphabetic name order.
+   * Sort a set of <code>TdbAu</code> objects for a title into ascending alphabetic name order.
    * By convention of TDB AU naming, this should also be chronological order.
    * There is no guaranteed way to order chronologically due to the dearth of date 
    * metadata included in AUs at the time of writing; however the naming convention
@@ -137,8 +142,7 @@ public class KbartConverter {
    * @param aus a list of TdbAu objects
    */
   private static void sortAus(List<TdbAu> aus) {
-    // TODO First, order by date if possible (currently done within the comparator)
-    Collections.sort(aus, new TdbAuAlphanumericComparator());
+    Collections.sort(aus, new TdbAuDateFirstAlphanumericComparator());
   }
 
   /**
@@ -196,8 +200,8 @@ public class KbartConverter {
   *   <li>num_last_issue_online</li>
   *   <li>num_first_vol_online</li>
   *   <li>num_last_vol_online</li>
-  *   <li><del>title_url<del> (disabled until we have more than a base URL)</li>
-  *   <li><del>title_id<del> (temporarily disabled)</li>
+  *   <li><del>title_url</del> (disabled until we have more than a base URL)</li>
+  *   <li><del>title_id</del> (temporarily disabled)</li>
   *   <li>publisher_name</li>
   * </ul>
   * The following fields currently have no analog in the TDB data:
@@ -479,11 +483,12 @@ public class KbartConverter {
 	ranges.add(new TitleRange(firstAu, currentAu, firstIssueYear, currentIssueYear));
       }
     }
-
     return ranges;
   }
 
- 
+
+  
+  
   /**
    * Sort a set of <code>TdbAu</code> objects into ascending alphabetic name order.
    * By convention of TDB AU naming, this should also be chronological order.
@@ -501,6 +506,7 @@ public class KbartConverter {
    * contravened, rather than trying to order with arbitrary names. 
    *  	
    * @author neil
+   * @deprecated
    */
   public static class TdbAuComparator implements Comparator<TdbAu> {
     public int compare(TdbAu au1, TdbAu au2) {

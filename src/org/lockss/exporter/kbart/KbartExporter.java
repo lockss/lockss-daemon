@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.2 2011-01-18 17:15:32 neilmayo Exp $
+ * $Id: KbartExporter.java,v 1.3 2011-02-16 23:41:48 easyonthemayo Exp $
  */
 
 /*
@@ -40,13 +40,20 @@ import java.net.UnknownHostException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Date;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import org.lockss.config.ConfigManager;
+import org.lockss.exporter.kbart.KbartExportFilter.FieldOrdering;
+import org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
+import org.lockss.exporter.kbart.KbartTitle.Field;
+
+import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -70,12 +77,11 @@ public abstract class KbartExporter {
   private static Logger log = Logger.getLogger("KbartExporter");
 
   // Footnotes for the interface options
-  private static String TSV_NOTE = "Please note that the TSV format adheres to the KBART recommendations "+
+  private static final String TSV_NOTE = "Please note that the TSV format adheres to the KBART recommendations "+
   "and should be used for updating your knowledge bases.";
-  private static String HTML_NOTE =  "The HTML version is for manual inspection of our holdings and is less "+
-  "strict than KBART. For example the HTML version reorders some fields and omits empty columns.";
-
-  
+  private static final String HTML_NOTE =  "The HTML version is for manual inspection of our holdings and is less "+
+  "strict than KBART. For example the HTML version is capable of reordering fields and omitting empty columns.";
+    
   /** Record of errors for the caller. */
   List<String> errors = new ArrayList<String>();
 
@@ -86,6 +92,9 @@ public abstract class KbartExporter {
   /** The list of KBART format titles to export. */
   protected final List<KbartTitle> titles;
 
+  /** An export filter for the exporter. */
+  protected KbartExportFilter filter;
+  
   /** Whether to compress the output. */
   private boolean compress = false;
   
@@ -102,7 +111,11 @@ public abstract class KbartExporter {
   private String filename;
   
   /** A count of how many records have been exported. */
-  private int expCount;
+  protected int exportCount = 0;
+  
+  /** By default, we don't want to exclude empty fields as it will contravene KBART. */
+  public static final boolean omitEmptyFieldsByDefault = false;
+  
   
   /**
    * Default constructor takes a list of KbartTitle objects to be exported.
@@ -113,11 +126,32 @@ public abstract class KbartExporter {
   public KbartExporter(List<KbartTitle> titles, OutputFormat format) {
     this.titles = titles;
     this.outputFormat = format;
+    // Create an identity filter by default
+    this.filter = KbartExportFilter.identityFilter(titles);
     // KBART info should be ordered alphabetically by title by default
-    Collections.sort(titles);
+    Collections.sort(titles, new KbartTitleAlphanumericComparator());
   }
  
-    
+  
+  /**
+   * Set the filter to be used on this exporter.
+   * 
+   * @param filter an export filter
+   */
+  public void setFilter(KbartExportFilter filter) {
+    this.filter = filter;
+  }
+  
+  /**
+   * Return a list of field labels post-filtering. This will not include
+   * the labels of omitted fields.
+   * @return a list of field labels
+   */
+  protected List<String> getFieldLabels() {
+    return Field.getLabels(filter.getVisibleFieldOrder());
+  }
+
+  
   /**
    * Setup output <code>PrintWriter</code> before <code>doExport()</code> is called.
    * 
@@ -143,7 +177,7 @@ public abstract class KbartExporter {
     if (zip!=null) {
       StringBuffer sb = new StringBuffer();
       sb.append("Export created on " + new Date() + " by " + getHostName());
-      sb.append("\nExported " + expCount + " KBART titles from " + tdbTitleTotal + " TDB titles.");
+      sb.append("\nExported " + exportCount + " KBART titles from " + tdbTitleTotal + " TDB titles.");
       zip.closeEntry();
       zip.setComment(sb.toString());
       zip.finish();
@@ -158,13 +192,16 @@ public abstract class KbartExporter {
    * The <code>setup()</code> and <code>clearup()</code> methods provide default setup and
    * tear down functions but may also be overridden by subclasses to
    * customise other aspects.
+   * <p>
+   * The exporter first checks with the filter whether this title should be in the output.
    * 
    * @param out an OutputStream for the exported data
    */
   private void doExport(OutputStream os) throws IOException {
     for (KbartTitle title : titles) {
-      emitRecord(title);
-      expCount++;
+      if (!filter.isTitleForOutput(title)) return;
+      exportCount++;
+      emitRecord(filter.getVisibleFieldValues(title));
     } 
     // flush writer and all its underlying streams
     printWriter.flush();
@@ -173,9 +210,9 @@ public abstract class KbartExporter {
   /**
    * Format a single title and write it to the output.
    *  
-   * @param title the KbartTitle record to format and write to output
+   * @param values the KbartTitle record to format and write to output
    */
-  protected abstract void emitRecord(KbartTitle title) throws IOException;
+  protected abstract void emitRecord(List<String> values) throws IOException;
 
   
   /**
@@ -322,7 +359,7 @@ public abstract class KbartExporter {
   public boolean getCompress() {
     return compress;
   }
-
+  
   protected void recordError(String msg, Throwable t) {
     log.error(msg, t);
     errors.add(msg + ": " + t.toString());
@@ -332,40 +369,63 @@ public abstract class KbartExporter {
     return errors;
   }
 
-
   /**
-   * A factory interface for making <code>KbartExporter</code> instances.
+   * Provide a user-friendly summary of which fields were omitted from the output
+   * of this filter due to not appearing in the ordering.
    * 
-   * @author neil
+   * @return a printable string
    */
-  public interface Factory {
-    public KbartExporter makeExporter(List<KbartTitle> titles);
+  public String getOmittedSummary() {
+    return filter.omittedFieldsManually() ?
+	String.format("Manually omitted columns: (%s)", 
+	    StringUtil.separatedString(EnumSet.complementOf(filter.getFieldOrdering().getFields()), ", ")
+	) : "";
   }
+  
+  /**
+   * Provide a user-friendly summary of which fields were omitted from the output
+   * of this filter because they are empty.
+   * 
+   * @return a printable string
+   */
+  public String getEmptySummary() {
+    return filter.omittedEmptyFields() ? 
+	String.format("Empty columns omitted: (%s)", StringUtil.separatedString(filter.getEmptyFields(), ", "))
+	: "";
+  } 
+
+  
 
   /** 
    * Enumeration of <code>KbartExporter</code> types and factories for their creation. 
    */
-  public static enum OutputFormat implements Factory {
+  public static enum OutputFormat {
         
     // Don't compress the TSV output
     KBART_TSV("KBART TSV (tab-separated values)", "text/tab-separated-values", "tsv", true, false, TSV_NOTE) {
       @Override     
-      public KbartExporter makeExporter(List<KbartTitle> titles) {
-	return new SeparatedValuesKbartExporter(titles, this);
+      public KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter) {
+	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this);
+	kbe.setFilter(filter);
+	return kbe;
       }
     },
     
     /*KBART_CSV("KBART CSV (comma-separated values)", "text/plain", "csv", true, true) {
       @Override     
-      public KbartExporter makeExporter(List<KbartTitle> titles) {
-      return new SeparatedValuesKbartExporter(titles, this, SeparatedValuesKbartExporter.COMMA);
+      public KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter) {
+	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, SeparatedValuesKbartExporter.COMMA);
+	kbe.setFilter(filter);
+	return kbe;
       }
     },*/
     
     KBART_HTML("HTML (on-screen)", "text/html", "html", false, false, HTML_NOTE) {
       @Override     
-      public KbartExporter makeExporter(List<KbartTitle> titles) {
-	return new HtmlKbartExporter(titles, this);
+      public KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter) {
+	KbartExporter kbe = new HtmlKbartExporter(titles, this);
+	kbe.setFilter(filter);
+	return kbe;
       }
     };
     
@@ -411,7 +471,7 @@ public abstract class KbartExporter {
      * 
      * @param titles a list of <code>KbartTitle</code> objects
      */
-    public abstract KbartExporter makeExporter(List<KbartTitle> titles);
+    public abstract KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter);
    
     /**
      * Indicates whether the format should be supplied as a file.
@@ -464,6 +524,7 @@ public abstract class KbartExporter {
      * @return an OutputFormat with the specified name, or null if none was found
      */
     public static OutputFormat byName(String name) {
+      if (name==null) return null;
       for (OutputFormat of : values()) {
         if (of.name().equals(name)) return of;
       }

@@ -12,7 +12,6 @@ import junit.framework.TestCase;
 
 public class TestTdbAuAlphanumericComparator extends LockssTestCase {
 
-  private final List<TdbAu> ausWithYears = new Vector<TdbAu>();
   private final List<TdbAu> ausWithYearsReverseOrder = new Vector<TdbAu>();
   private final List<TdbAu> ausWithNames = new Vector<TdbAu>();
 
@@ -36,15 +35,6 @@ public class TestTdbAuAlphanumericComparator extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
   
-    // These should be ordered by year, regardless of name
-    ausWithYears.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_7, "2006") );
-    ausWithYears.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_6, "2005") );
-    ausWithYears.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_5, "2004") );
-    ausWithYears.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_4, "2003") );
-    ausWithYears.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_3, "2002") );
-    ausWithYears.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_2, "2001") );
-    ausWithYears.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_1, "2000") );
-    
     // These should be ordered by name, taking account of numerical tokens
     ausWithNames.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_7, null) );
     ausWithNames.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_6, null) );
@@ -54,14 +44,14 @@ public class TestTdbAuAlphanumericComparator extends LockssTestCase {
     ausWithNames.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_2, null) );
     ausWithNames.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_1, null) );
     
-    // These should be ordered by year; if ordered by name the ordering failed 
-    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_1, "2006") );
-    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_2, "2005") );
-    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_3, "2004") );
-    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_4, "2003") );
-    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_5, "2002") );
-    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_6, "2001") );
-    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_7, "2000") );
+    // These should be ordered by name, regardless of year
+    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_7, "2001") );
+    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_6, "2002") );
+    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_5, "2003") );
+    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_4, "2004") );
+    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_3, "2005") );
+    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_2, "2006") );
+    ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_1, "2007") );
 
   }
 
@@ -70,27 +60,23 @@ public class TestTdbAuAlphanumericComparator extends LockssTestCase {
   }
 
   /**
-   * Order the list.
+   * The alphanumeric comparator orders purely on names.
    */
   public final void testCompare() {
     TdbAuAlphanumericComparator comp = new TdbAuAlphanumericComparator();
-    // Sort the two arrays, which should sort on year if available, or name
-    // The result should be the same
-    Collections.sort(ausWithYears, comp);
-    Collections.sort(ausWithNames, comp);
 
+    // Shuffle and sort names
+    Collections.shuffle(ausWithNames);
+    Collections.sort(ausWithNames, comp);
     // Check the titles one by one 
-    for (int i = 0; i < ausWithYears.size(); i++) {
-      String name = orderedTitles[i];
-      assertEquals(name, ausWithYears.get(i).getName());
-      assertEquals(name, ausWithNames.get(i).getName());
+    for (int i = 0; i < ausWithNames.size(); i++) {
+      assertEquals(orderedTitles[i], ausWithNames.get(i).getName());
     }
 
-    // Sort the other array - the result should yield the names in reverse order
+    // Sort names with years
     Collections.sort(ausWithYearsReverseOrder, comp);
-    int n = orderedTitles.length-1; // last index
     for (int i = 0; i < ausWithYearsReverseOrder.size(); i++) {
-      assertEquals(orderedTitles[n-i], ausWithYearsReverseOrder.get(i).getName());
+      assertEquals(orderedTitles[i], ausWithYearsReverseOrder.get(i).getName());
     }
   }
 

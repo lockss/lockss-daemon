@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.2 2011-01-18 17:15:32 neilmayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.3 2011-02-16 23:41:48 easyonthemayo Exp $
  */
 
 /*
@@ -54,9 +54,6 @@ public class KbartTdbAuUtil {
 
   private static Logger log = Logger.getLogger("KbartTdbAuUtil");
 
-  // TODO Impose an order of preference on e.g. the possible volume keys, for use
-  // with findAuInfoType() and findVolume().  
-  
   // Default attribute keys
   static final String DEFAULT_YEAR_ATTR = "year";
   static final String DEFAULT_VOLUME_ATTR = "volume";
