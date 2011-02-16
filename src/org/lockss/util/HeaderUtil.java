@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.6.28.1 2011-02-15 09:03:06 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.6.28.2 2011-02-16 01:27:35 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,6 @@ public class HeaderUtil {
     
 
   static boolean isTokenChar(char ch) {
-    System.out.println("foo: " + ch);
     return TOKEN_CHARS[ch];
   }
 
