@@ -18,9 +18,10 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
 
   private static Logger log = Logger.getLogger("SeparatedValuesKbartExporter");
 
-  private static final String SEPARATOR_TAB = "\t";
-  private static final String SEPARATOR_COMMA = ",";
-  
+  protected static final String SEPARATOR_TAB = "\t";
+  protected static final String SEPARATOR_COMMA = ",";
+
+  /** The separator that will be used to separate fields in the output. */
   private final String SEPARATOR;
 
   /**
@@ -50,8 +51,8 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
   }
 
   @Override
-  protected void emitRecord(KbartTitle title) {
-    printWriter.println( StringUtil.separatedString(title.fieldValues(), SEPARATOR));
+  protected void emitRecord(List<String> values) throws IOException {
+    printWriter.println( StringUtil.separatedString(values, SEPARATOR));
     printWriter.flush();
   }
 

@@ -1,5 +1,6 @@
 package org.lockss.exporter.kbart;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.EnumSet;
 import java.util.HashMap;
@@ -9,7 +10,7 @@ import java.util.Map;
 import java.util.Vector;
 
 import org.lockss.config.TdbTestUtil;
-import org.lockss.exporter.kbart.KbartTitle.Field;
+import static org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.test.LockssTestCase;
 
 public class TestKbartTitle extends LockssTestCase {
@@ -18,6 +19,7 @@ public class TestKbartTitle extends LockssTestCase {
   private static final String DEFAULT_TITLE = "KBART KSIMPSON"; 
   private static final String DEFAULT_TITLE_LESS = "JBART"; 
   private static final String DEFAULT_TITLE_GREATER = "LBART"; 
+  private static final Field EMPTY_FIELD = Field.COVERAGE_DEPTH; 
   private static final String TAB = "	";
   private static final String SPACE = " ";
   
@@ -25,20 +27,20 @@ public class TestKbartTitle extends LockssTestCase {
   
   protected void setUp() throws Exception {
     super.setUp();
-    this.testTitle = createKbartTitle(new HashMap<KbartTitle.Field, String>() {{
-      put(KbartTitle.Field.TITLE_ID, TdbTestUtil.DEFAULT_TITLE_ID);
-      put(KbartTitle.Field.PRINT_IDENTIFIER, TdbTestUtil.DEFAULT_ISSN_1);
-      put(KbartTitle.Field.ONLINE_IDENTIFIER, TdbTestUtil.DEFAULT_EISSN_1);
-      put(KbartTitle.Field.PUBLICATION_TITLE, DEFAULT_TITLE);
-      put(KbartTitle.Field.PUBLISHER_NAME, TdbTestUtil.DEFAULT_PUBLISHER);
-      put(KbartTitle.Field.TITLE_URL, TdbTestUtil.DEFAULT_URL);
+    this.testTitle = createKbartTitle(new HashMap<Field, String>() {{
+      put(Field.TITLE_ID, TdbTestUtil.DEFAULT_TITLE_ID);
+      put(Field.PRINT_IDENTIFIER, TdbTestUtil.DEFAULT_ISSN_1);
+      put(Field.ONLINE_IDENTIFIER, TdbTestUtil.DEFAULT_EISSN_1);
+      put(Field.PUBLICATION_TITLE, DEFAULT_TITLE);
+      put(Field.PUBLISHER_NAME, TdbTestUtil.DEFAULT_PUBLISHER);
+      put(Field.TITLE_URL, TdbTestUtil.DEFAULT_URL);
 
-      put(KbartTitle.Field.DATE_FIRST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_START);
-      put(KbartTitle.Field.DATE_LAST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_END);
-      put(KbartTitle.Field.NUM_FIRST_VOL_ONLINE, TdbTestUtil.RANGE_1_START_VOL);
-      put(KbartTitle.Field.NUM_LAST_VOL_ONLINE, TdbTestUtil.RANGE_1_END_VOL);
-      //put(KbartTitle.Field.NUM_FIRST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_START);
-      //put(KbartTitle.Field.NUM_LAST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_END);
+      put(Field.DATE_FIRST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_START);
+      put(Field.DATE_LAST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_END);
+      put(Field.NUM_FIRST_VOL_ONLINE, TdbTestUtil.RANGE_1_START_VOL);
+      put(Field.NUM_LAST_VOL_ONLINE, TdbTestUtil.RANGE_1_END_VOL);
+      //put(Field.NUM_FIRST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_START);
+      //put(Field.NUM_LAST_ISSUE_ONLINE, TdbTestUtil.RANGE_1_END);
     }});
   }
 
@@ -55,7 +57,7 @@ public class TestKbartTitle extends LockssTestCase {
     // The clone should have all the same values but be a different object
     assertNotEquals(testTitle, clone);
     assertNotSame(testTitle, clone);
-    for (Field f : KbartTitle.Field.values()) {
+    for (Field f : Field.values()) {
       assertEquals("Clone differs on "+f.getLabel(), testTitle.getField(f), clone.getField(f)); 
     }
   }
@@ -112,7 +114,7 @@ public class TestKbartTitle extends LockssTestCase {
     List<String> vals = new Vector<String>(testTitle.fieldValues());
     Collection<String> labs = KbartTitle.Field.getLabels();
     // The full range of KbartTitle fields:
-    EnumSet<KbartTitle.Field> fields = EnumSet.allOf(KbartTitle.Field.class);
+    EnumSet<Field> fields = EnumSet.allOf(Field.class);
     // Check every field has a value
     assertEquals(fields.size(), vals.size());
     
@@ -128,6 +130,41 @@ public class TestKbartTitle extends LockssTestCase {
   }
 
   /**
+   * Check the field values.
+   * Return the values of the fields listed in the argument, in the same order.
+   */
+  public final void testFieldValuesList() {
+    List<Field> fields = new ArrayList<Field>() {{
+      add(EMPTY_FIELD);
+      add(Field.PUBLICATION_TITLE);
+      add(Field.TITLE_ID);
+    }};
+    List<String> expectedValues = new ArrayList<String>() {{
+      add("");
+      add(DEFAULT_TITLE);
+      add(TdbTestUtil.DEFAULT_TITLE_ID);
+    }};
+    
+    List<String> vals = new Vector<String>(testTitle.fieldValues(fields));
+    // Check size first
+    assertEquals(vals.size(), expectedValues.size());
+    for (int i=0; i<expectedValues.size(); i++) {
+    	assertEquals(expectedValues.get(i), vals.get(i));
+    }
+  }
+  
+  /**
+   * Check whether the title has a value for the given field.
+   * @param f the Field to check
+   * @return whether the field has a non-empty value
+   */
+  public final void testHasFieldValue() {
+    assertTrue(testTitle.hasFieldValue(Field.PUBLICATION_TITLE));
+    assertTrue(testTitle.hasFieldValue(Field.PRINT_IDENTIFIER));
+    assertFalse(testTitle.hasFieldValue(EMPTY_FIELD));
+  }
+  
+  /**
    * The KbartTitles are compared based on their publication titles; test titles that are equal, less and greater.
    */
   public final void testCompareTo() {
@@ -135,10 +172,10 @@ public class TestKbartTitle extends LockssTestCase {
     KbartTitle testTitle2 = testTitle.clone();
     assertTrue(testTitle.compareTo(testTitle2)==0);
     // Change title to a lesser one 
-    testTitle2.setField(KbartTitle.Field.PUBLICATION_TITLE, DEFAULT_TITLE_LESS);
+    testTitle2.setField(Field.PUBLICATION_TITLE, DEFAULT_TITLE_LESS);
     assertTrue(testTitle.compareTo(testTitle2)>0);
     // Change title to a greater one
-    testTitle2.setField(KbartTitle.Field.PUBLICATION_TITLE, DEFAULT_TITLE_GREATER);
+    testTitle2.setField(Field.PUBLICATION_TITLE, DEFAULT_TITLE_GREATER);
     assertTrue(testTitle.compareTo(testTitle2)<0);
   }
 
