@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.268 2011-01-23 01:18:19 dshr Exp $
+ $Id: build.xml,v 1.269 2011-02-17 22:29:59 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -974,7 +974,7 @@ Must specify pln with -Dplnname=name
            parallel="false">
 
       <fileset dir="${indir}" includes="**/*.tdb"/>
-      <arg value="-C"/>
+      <arg value="-A"/>
       <arg value="-o"/>
       <targetfile/>
       <mapper type="glob" from="*.tdb" to="*.xml"/>
