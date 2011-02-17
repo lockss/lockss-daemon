@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.2 2011-01-25 17:55:25 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.2.2.1 2011-02-17 02:55:18 pgust Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     tdb.addTdbAuFromProperties(tdbProps);
     
     tdbProps = new Properties();
-    tdbProps.setProperty("issn", "2468-1357");
+    tdbProps.setProperty("issn", "1144-875X");
     tdbProps.setProperty("title", "Title[10.2468/24681357.2010-06.1]");
     tdbProps.setProperty("journalTitle", "Journal[10.2468/24681357.2010-06.1]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.2468/24681357.2010-06.1]");
@@ -218,7 +218,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     tdb.addTdbAuFromProperties(tdbProps);
 
     tdbProps = new Properties();
-    tdbProps.setProperty("issn", "1234-5678");
+    tdbProps.setProperty("issn", "0740-2783");
     tdbProps.setProperty("title", "Title[10.1234/12345678.2010-01.1]");
     tdbProps.setProperty("journalTitle", "Journal[10.1234/12345678.2010-01..1]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.1234/12345678.2010-01..1]");
@@ -372,7 +372,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
           ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
           md.put(MetadataField.FIELD_DOI,"10.1234/12345678.2010-01." +  articleNumber);
-          md.put(MetadataField.FIELD_ISSN,"1234-5678");
+          md.put(MetadataField.FIELD_ISSN,"0740-2783");
           md.put(MetadataField.FIELD_VOLUME,"XI");
           md.put(MetadataField.FIELD_ISSUE,"1st Quarter");
           md.put(MetadataField.FIELD_DATE,"2010-01");
@@ -395,14 +395,14 @@ public class TestOpenUrlResolver extends LockssTestCase {
           articleNumber++;
           ArticleMetadata md = new ArticleMetadata();
           md.put(MetadataField.FIELD_DOI,"10.2468/28681357.2010-06."+ articleNumber);
-          md.put(MetadataField.FIELD_ISSN,"2468-1357");
+          md.put(MetadataField.FIELD_ISSN,"1144-875X");
           md.put(MetadataField.FIELD_VOLUME,"42");
           md.put(MetadataField.FIELD_ISSUE,"Summer 2010");
           md.put(MetadataField.FIELD_DATE,"2010-06");
           md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
           md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + md.get(MetadataField.FIELD_DOI) + "]");
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + md.get(MetadataField.FIELD_DOI) + "]");
-          md.put(MetadataField.FIELD_AUTHOR,"Author[" + md.get(MetadataField.FIELD_DOI) + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author1[" + md.get(MetadataField.FIELD_DOI) + "]");
           emitter.emitMetadata(af, md);
         }
       };
@@ -424,7 +424,9 @@ public class TestOpenUrlResolver extends LockssTestCase {
           md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
           md.put(MetadataField.FIELD_JOURNAL_TITLE,"Manual of Clinical Psychopharmacology");
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
-          md.put(MetadataField.FIELD_AUTHOR,"Author[" + doi + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author2[" + doi + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author3[" + doi + "]");
           emitter.emitMetadata(af, md);
         }
       };
@@ -504,7 +506,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     params.clear();
     params.put("rft.isbn", "978-1-58562-317-4");
-    params.put("rft.au", "Author[10.13579/9781585623174.1]");
+    params.put("rft.au", "Author2[10.13579/9781585623174.1]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
@@ -545,31 +547,31 @@ public class TestOpenUrlResolver extends LockssTestCase {
    * the page, the article number, the author, or the article title.
    */
   public void testResolveFromIssn() {
-if (true) return;  // temporary
     String url;
     
+    log.critical("&&& isIssn(1144-875X): " + MetadataUtil.isISSN("1144-875X")); // PJG
     // from SimulatedPlugin1
     Map<String,String> params = new HashMap<String,String>();
 
-    params.put("rft.issn", "2468-1357");
-    params.put("rft.spage", "1");
+    params.put("rft.issn", "1144-875X");
+//    params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
     params.clear();
-    params.put("rft.issn", "2468-1357");
+    params.put("rft.issn", "1144-875X");
     params.put("rft.artnum", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
     params.clear();
-    params.put("rft.issn", "2468-1357");
+    params.put("rft.issn", "1144-875X");
     params.put("rft.title", "Title[10.2468/24681357.2010-06.1]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
     params.clear();
-    params.put("rft.issn", "2468-1357");
+    params.put("rft.issn", "1144-875X");
     params.put("rft.title", "Author[10.2468/24681357.2010-06.1]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
@@ -579,7 +581,6 @@ if (true) return;  // temporary
    * Test resolving a book chapter using the publisher and book title.
    */
   public void testResolveFromJournalTitle() {
-if (true) return; // temporary
     String url;
     
     // from SimulatedPlugin1
