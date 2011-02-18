@@ -23,7 +23,7 @@
     au < manifest ; exists ; 2007 ; Acta Pharmacologica Sinica Volume 28 ; 2007 ; 28 >
     au < released ; crawling ; 2008 ; Acta Pharmacologica Sinica Volume 29 ; 2008 ; 29 >
     au < released ; crawling ; 2009 ; Acta Pharmacologica Sinica Volume 30 ; 2009 ; 30 >
-    au < released ; wanted ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
+    au < released ; crawling ; 2010 ; Acta Pharmacologica Sinica Volume 31 ; 2010 ; 31 >
 
   }
 
@@ -66,7 +66,7 @@
     au < manifest ; exists ; 2007 ; Asian Journal of Andrology Volume 9 ; 2007 ; 9 >
     au < released ; crawling ; 2008 ; Asian Journal of Andrology Volume 10 ; 2008 ; 10 >
     au < released ; crawling ; 2009 ; Asian Journal of Andrology Volume 11 ; 2009 ; 11 >
-    au < released ; wanted ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
+    au < released ; crawling ; 2010 ; Asian Journal of Andrology Volume 12 ; 2010 ; 12 >
 
   }
 
@@ -106,8 +106,8 @@
     au < released ; crawling ; 2008 ; Bone Marrow Transplantation Volume 42 ; 2008 ; 42 >
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 43 ; 2009 ; 43 >
     au < released ; crawling ; 2009 ; Bone Marrow Transplantation Volume 44 ; 2009 ; 44 >
-    au < released ; wanted ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
-    au < released ; wanted ; 2010 ; Bone Marrow Transplantation Volume 46 ; 2010 ; 46 >
+    au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 45 ; 2010 ; 45 >
+    au < released ; crawling ; 2010 ; Bone Marrow Transplantation Volume 46 ; 2010 ; 46 >
 
   }
 
@@ -155,12 +155,12 @@
     au < manifest ; exists ; 2006 ; British Journal of Cancer Volume 95 ; 2006 ; 95 >
     au < manifest ; exists ; 2007 ; British Journal of Cancer Volume 96 ; 2007 ; 96 >
     au < manifest ; exists ; 2007 ; British Journal of Cancer Volume 97 ; 2007 ; 97 >
-    au < released ; wanted ; 2008 ; British Journal of Cancer Volume 98 ; 2008 ; 98 >
+    au < released ; crawling ; 2008 ; British Journal of Cancer Volume 98 ; 2008 ; 98 >
     au < released ; crawling ; 2008 ; British Journal of Cancer Volume 99 ; 2008 ; 99 >
     au < released ; crawling ; 2009 ; British Journal of Cancer Volume 100 ; 2009 ; 100 >
     au < released ; crawling ; 2009 ; British Journal of Cancer Volume 101 ; 2009 ; 101 >
     au < testing ; exists ; 2010 ; British Journal of Cancer Volume 102 ; 2010 ; 102 >
-    au < released ; wanted ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
+    au < released ; crawling ; 2010 ; British Journal of Cancer Volume 103 ; 2010 ; 103 >
 
   }
 
@@ -185,7 +185,7 @@
     au < manifest ; exists ; 2007 ; Cancer Gene Therapy Volume 14 ; 2007 ; 14 >
     au < released ; crawling ; 2008 ; Cancer Gene Therapy Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Cancer Gene Therapy Volume 16 ; 2009 ; 16 >
-    au < released ; wanted ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
+    au < released ; crawling ; 2010 ; Cancer Gene Therapy Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -212,7 +212,7 @@
     au < manifest ; exists ; 2007 ; Cell Death and Differentiation Volume 14 ; 2007 ; 14 >
     au < released ; crawling ; 2008 ; Cell Death and Differentiation Volume 15 ; 2008 ; 15 >
     au < released ; crawling ; 2009 ; Cell Death and Differentiation Volume 16 ; 2009 ; 16 >
-    au < released ; wanted ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
+    au < released ; crawling ; 2010 ; Cell Death and Differentiation Volume 17 ; 2010 ; 17 >
 
   }
 
@@ -242,7 +242,7 @@
 
     param[journal_id] = clpt
 
-    au < released ; wanted ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
+    au < released ; crawling ; 2010 ; Clinical Pharmacology & Therapeutics Volume 87 ; 2010 ; 87 >
   }
 
   {
@@ -268,7 +268,7 @@
     au < manifest ; exists ; 2007 ; The EMBO Journal Volume 26 ; 2007 ; 26 >
     au < released ; crawling ; 2008 ; The EMBO Journal Volume 27 ; 2008 ; 27 >
     au < released ; crawling ; 2009 ; The EMBO Journal Volume 28 ; 2009 ; 28 >
-    au < released ; wanted ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
+    au < released ; crawling ; 2010 ; The EMBO Journal Volume 29 ; 2010 ; 29 >
     au < testing ; exists ; 2011 ; The EMBO Journal Volume 30 ; 2011 ; 30 >
 
   }
@@ -449,7 +449,7 @@
     au < released ; crawling ; 2009 ; Heredity Volume 102 ; 2009 ; 102 >
     au < released ; crawling ; 2009 ; Heredity Volume 103 ; 2009 ; 103 >
     au < testing ; exists ; 2010 ; Heredity Volume 104 ; 2010 ; 104 >
-    au < released ; wanted ; 2010 ; Heredity Volume 105 ; 2010 ; 105 >
+    au < released ; crawling ; 2010 ; Heredity Volume 105 ; 2010 ; 105 >
 
   }
 
@@ -972,11 +972,11 @@
     au < released ; crawling ; 2009 ; Nature Volume 461 ; 2009 ; 461 >
     au < released ; crawling ; 2009 ; Nature Volume 462 ; 2009 ; 462 >
     au < testing ; exists ; 2010 ; Nature Volume 463 ; 2010 ; 463 >
-    au < released ; wanted ; 2010 ; Nature Volume 464 ; 2010 ; 464 >
-    au < released ; wanted ; 2010 ; Nature Volume 465 ; 2010 ; 465 >
-    au < released ; wanted ; 2010 ; Nature Volume 466 ; 2010 ; 466 >
-    au < released ; wanted ; 2010 ; Nature Volume 467 ; 2010 ; 467 >
-    au < released ; wanted ; 2010 ; Nature Volume 468 ; 2010 ; 468 >
+    au < released ; crawling ; 2010 ; Nature Volume 464 ; 2010 ; 464 >
+    au < released ; crawling ; 2010 ; Nature Volume 465 ; 2010 ; 465 >
+    au < released ; crawling ; 2010 ; Nature Volume 466 ; 2010 ; 466 >
+    au < released ; crawling ; 2010 ; Nature Volume 467 ; 2010 ; 467 >
+    au < released ; crawling ; 2010 ; Nature Volume 468 ; 2010 ; 468 >
     au < testing ; exists ; 2011 ; Nature Volume 469 ; 2011 ; 469 >
 
   }
