@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.6.2.1 2011-02-14 00:22:12 tlipkis Exp $
+ * $Id: MetadataUtil.java,v 1.6.2.2 2011-02-18 18:15:09 pgust Exp $
  */
 
 /*
@@ -130,6 +130,51 @@ public class MetadataUtil {
 
 
     return true;
+  }
+  
+  /**
+   * Check that the ISBN is a valid. The method validates both ISBN-10 and ISBN-13,
+   * with or without punctuation. Uses techniques described in ISBN Wikipedia article.
+   * <p>
+   * <strong>Note:</strong> Due to errors at a publishing house that go undetected,
+   * books have been issued with invalid ISBNs. (e.g. 0-85883-554-4).
+   * @param isbn the ISBN string
+   * @return true if ISBN is valid, false otherwise
+   */
+  public static boolean isISBN(String isbn) {
+    if (isbn == null) {
+      return false;
+    }
+    
+    String checkISBN = isbn.replaceAll("-", "");
+    if (checkISBN.length() == 10) {
+      int a = 0, b=0;
+      for (int i = 0; i < 10; i++) {
+        // ISBN-10 uses modulus 11 arithmetic for check digit, 
+        // with 'X' representing 10
+        int digit = "0123456789X".indexOf(checkISBN.charAt(i));
+        if (digit < 0) {
+          return false;
+        }
+        a += digit;
+        b += a;
+      }
+      return (b % 11 == 0);
+
+    } else if (checkISBN.length() == 13) {
+      int a = 0, b = 1;
+      for (int i = 0; i < 13; i++, b = 4-b) {
+        // ISBN-13 uses modulus 10 arithmetic for check digit
+        int digit = "0123456789".indexOf(checkISBN.charAt(i));
+        if (digit < 0) {
+          return false;
+        }
+        a += digit * b;
+      }
+      return (a % 10) == 0;
+    }
+    
+    return false;
   }
 
   private static Pattern DOI_PAT = Pattern.compile("10\\.\\d{4}/.*");
