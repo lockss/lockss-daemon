@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.4 2011-01-22 08:19:16 tlipkis Exp $
+ * $Id: TestMetadataUtil.java,v 1.5 2011-02-18 17:53:28 pgust Exp $
  */
 
 /*
@@ -141,6 +141,54 @@ public class TestMetadataUtil extends LockssTestCase {
   }
 
 
+  private String validISBN10s [] = {
+      "99921-58-10-7",
+      "9971-5-0210-0",
+      "80-902734-1-6",
+      "85-359-0277-5",
+      "1-84356-028-3",
+      "0-684-84328-5",
+      "0-8044-2957-X",
+      "0-85131-041-9",
+      "0-943396-04-2"
+  };
+  
+  private String invalidISBN10s[] = {
+      "99921-48-10-7",
+      "9971-5-0110-0",
+      "80-902735-1-6",
+      "85-359-0278-5",
+      "1-84356-028-2",
+      "0-684-83328-5",
+      "0-8044-2757-X",
+      "0-85131-042-9",
+      "0-943396-14-2"
+  };
+  
+  private String validISBN13s [] = {
+      "978-99921-58-10-4",
+      "978-9971-5-0210-2",
+      "978-80-902734-1-2",
+      "978-85-359-0277-8",
+      "978-1-84356-028-9",
+      "978-0-684-84328-5",
+      "978-0-8044-2957-3",
+      "978-0-85131-041-1",
+      "978-0-943396-04-0"
+  };
+
+  private String invalidISBN13s[] = {
+      "978-99931-58-10-4",
+      "978-9971-5-0200-2",
+      "978-80-901734-1-2",
+      "978-85-359-1277-8",
+      "978-1-84356-128-9",
+      "978-0-682-84328-5",
+      "978-0-8043-2957-3",
+      "978-0-85130-041-1",
+      "978-0-942396-04-0"
+  };
+  
   private String validISSNS [] = {
           "1144-875X",
           "1543-8120",
@@ -190,6 +238,24 @@ public class TestMetadataUtil extends LockssTestCase {
           "10.1640/0002-8444/99.2.61",
 	  null
   };
+
+  public void testISBN() {
+    for(int i=0; i<validISBN10s.length;i++){
+      assertTrue(MetadataUtil.isISBN(validISBN10s[i]));
+    }
+
+    for(int i=0; i<invalidISBN10s.length;i++){
+      assertFalse(MetadataUtil.isISSN(invalidISBN10s[i]));
+    }
+
+    for(int i=0; i<validISBN13s.length;i++){
+      assertTrue(MetadataUtil.isISBN(validISBN13s[i]));
+    }
+
+    for(int i=0; i<invalidISBN13s.length;i++){
+      assertFalse(MetadataUtil.isISBN(invalidISBN13s[i]));
+    }
+  }
 
   public void testISSN() {
     for(int i=0; i<validISSNS.length;i++){
