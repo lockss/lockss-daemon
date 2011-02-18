@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.2 2011-01-20 08:37:43 tlipkis Exp $
+ * $Id: TestMetadataField.java,v 1.3 2011-02-18 17:56:59 pgust Exp $
  */
 
 /*
@@ -32,13 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.extractor;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
 import static org.lockss.extractor.MetadataField.*;
 
 public class TestMetadataField extends LockssTestCase {
@@ -107,6 +102,23 @@ public class TestMetadataField extends LockssTestCase {
     }
   }
 
+  public void testIsbn() throws MetadataException.ValidationException {
+    MetadataField f1 = FIELD_ISBN;
+    assertEquals("978-1-58562-317-4", f1.validate(am, "978-1-58562-317-4"));
+    assertEquals("978-1-58562-317-4", f1.validate(am, "isbn:978-1-58562-317-4"));
+    assertEquals("978-1-58562-317-4", f1.validate(am, "ISBN:978-1-58562-317-4"));
+    try {
+      f1.validate(am, "not.a.isbn.1234");
+      fail("Should throw ValidationException");
+    } catch (MetadataException.ValidationException e) {
+    }
+    try {
+      f1.validate(am, "isbn:978-1-58562-317-3");
+      fail("Should throw ValidationException");
+    } catch (MetadataException.ValidationException e) {
+    }
+  }
+  
   public void testIssn() throws MetadataException.ValidationException {
     MetadataField f1 = FIELD_ISSN;
     assertEquals("1234-5679", f1.validate(am, "1234-5679"));

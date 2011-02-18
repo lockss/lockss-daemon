@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.2 2011-01-20 08:37:43 tlipkis Exp $
+ * $Id: MetadataField.java,v 1.3 2011-02-18 17:56:59 pgust Exp $
  */
 
 /*
@@ -96,10 +96,22 @@ public class MetadataField {
 	}
 	return issn;
       }};
-
+      
+  public static final String PROTOCOL_ISBN = "isbn:";
   public static final String KEY_ISBN = "isbn";
   public static final MetadataField FIELD_ISBN =
-    new MetadataField(KEY_ISBN, Cardinality.Single);
+    new MetadataField(KEY_ISBN, Cardinality.Single) {
+    @Override
+    public String validate(ArticleMetadata am, String val)
+        throws MetadataException.ValidationException {
+      // normalize away leading "isbn:" before checking validity
+      String isbn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_ISBN);
+      if (!MetadataUtil.isISBN(isbn)) {
+        throw new MetadataException.ValidationException("Illegal ISBN: "
+                                                        + val);
+      }
+      return isbn;
+    }};
 
   public static final String KEY_VOLUME = "volume";
   public static final MetadataField FIELD_VOLUME =
