@@ -338,15 +338,15 @@ public class ListHoldings extends LockssServlet {
     
     Table tab = new Table(0, "align=\"center\" width=\"80%\"");
 
-    tab.newRow();
-    tab.newCell("align=\"center\"");
-    tab.add("This is the KBART Metadata Exporter for ");
-    tab.add("<b>"+getMachineName()+"</b>.");
-
-    tab.newRow();
-    tab.newCell("align=\"center\"");
-    tab.add("The permanent TSV output URL for this server is:<br/><b><font color=\"navy\">"+getTsvUpdateUrl()+"</font></b>");
-    addBlankRow(tab);
+//    tab.newRow();
+//    tab.newCell("align=\"center\"");
+//    tab.add("This is the KBART Metadata Exporter for ");
+//    tab.add("<b>"+getMachineName()+"</b>.");
+//
+//    tab.newRow();
+//    tab.newCell("align=\"center\"");
+//    tab.add("The permanent TSV output URL for this server is:<br/><b><font color=\"navy\">"+getTsvUpdateUrl()+"</font></b>");
+//    addBlankRow(tab);
     
     tab.newRow();
     tab.newCell("align=\"center\"");
@@ -355,7 +355,7 @@ public class ListHoldings extends LockssServlet {
       addBlankRow(tab);
       return tab;
     }
-    tab.add("There are "+tdb.getTdbTitleCount()+" titles to export, from "+tdb.getTdbPublisherCount()+" publishers.");
+    tab.add("There are "+tdb.getTdbTitleCount()+" titles available for preservation, from "+tdb.getTdbPublisherCount()+" publishers.");
     //addBlankRow(tab);
     
     tab.newRow();

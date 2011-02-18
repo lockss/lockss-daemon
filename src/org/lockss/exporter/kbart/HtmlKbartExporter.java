@@ -93,7 +93,7 @@ public class HtmlKbartExporter extends KbartExporter {
     // Write html and head tags, including a metatag declaring the content type UTF-8
     printWriter.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>");
     printWriter.printf("<title>%s</title>", this.exportSummary);
-    printWriter.printf("%s</head>", css);
+    printWriter.printf("%s</head><body>", css);
     // Initial attempt to get a static header on the page:
     //printWriter.printf("<div class=\"header\"><table>%s</table></div>", this.header);
     printWriter.println("<table>");
@@ -109,7 +109,7 @@ public class HtmlKbartExporter extends KbartExporter {
 	this.getOmittedSummary(), 
 	this.getEmptySummary()
     );
-    printWriter.println("</html>");
+    printWriter.println("</body></html>");
     printWriter.flush();
     printWriter.close();
   }
