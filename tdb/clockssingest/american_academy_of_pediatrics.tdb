@@ -6,8 +6,7 @@
   
   comment[h20] = switching to H20 2011Q1
   
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
-  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+  pluginPrefix = org.lockss.plugin.highwire.
   implicit < status ; year ; name ; param[volume_name] >
   
   {
@@ -19,13 +18,26 @@
     
     param[base_url] = http://aapgrandrounds.aappublications.org/
     
-    au < released ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
-    au < released ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
-    au < released ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
-    au < released ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
-    au < released ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
-    au < ready ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
-    au < manifest ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
+    {
+    
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+    
+      au < released ; 2008 ; AAP Grand Rounds Volume 19 ; 19 >
+      au < released ; 2008 ; AAP Grand Rounds Volume 20 ; 20 >
+      au < released ; 2009 ; AAP Grand Rounds Volume 21 ; 21 >
+      au < released ; 2009 ; AAP Grand Rounds Volume 22 ; 22 >
+      au < released ; 2010 ; AAP Grand Rounds Volume 23 ; 23 >
+      au < ready ; 2010 ; AAP Grand Rounds Volume 24 ; 24 >
+      au < manifest ; 2011 ; AAP Grand Rounds Volume 25 ; 25 >
+
+    }
+    
+    {
+    
+      pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    }
   
   }
 
@@ -39,11 +51,24 @@
     
     param[base_url] = http://aapnews.aappublications.org/
     
-    au < released ; 2008 ; AAP News Volume 29 ; 29 >
-    au < released ; 2009 ; AAP News Volume 30 ; 30 >
-    au < released ; 2010 ; AAP News Volume 31 ; 31 >
-    au < manifest ; 2011 ; AAP News Volume 32 ; 32 >
+    {
     
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+    
+      au < released ; 2008 ; AAP News Volume 29 ; 29 >
+      au < released ; 2009 ; AAP News Volume 30 ; 30 >
+      au < released ; 2010 ; AAP News Volume 31 ; 31 >
+      au < manifest ; 2011 ; AAP News Volume 32 ; 32 >
+      
+    }
+    
+    {
+    
+      pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    }
+  
   }
 
   {
@@ -55,10 +80,23 @@
     
     param[base_url] = http://neoreviews.aappublications.org/
 
-    au < released ; 2008 ; NeoReviews Volume 9 ; 9 >
-    au < released ; 2009 ; NeoReviews Volume 10 ; 10 >
-    au < released ; 2010 ; NeoReviews Volume 11 ; 11 >
-    au < manifest ; 2011 ; NeoReviews Volume 12 ; 12 >
+    {
+    
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+    
+      au < released ; 2008 ; NeoReviews Volume 9 ; 9 >
+      au < released ; 2009 ; NeoReviews Volume 10 ; 10 >
+      au < released ; 2010 ; NeoReviews Volume 11 ; 11 >
+      au < manifest ; 2011 ; NeoReviews Volume 12 ; 12 >
+  
+    }
+    
+    {
+    
+      pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    }
   
   }
 
@@ -72,13 +110,26 @@
 
     param[base_url] = http://pediatrics.aappublications.org/
     
-    au < released ; 2008 ; Pediatrics Volume 121 ; 121 >
-    au < released ; 2008 ; Pediatrics Volume 122 ; 122 >
-    au < released ; 2009 ; Pediatrics Volume 123 ; 123 >
-    au < released ; 2009 ; Pediatrics Volume 124 ; 124 >
-    au < released ; 2010 ; Pediatrics Volume 125 ; 125 >
-    au < ready ; 2010 ; Pediatrics Volume 126 ; 126 >
-    au < manifest ; 2011 ; Pediatrics Volume 127 ; 127 >
+    {
+    
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+    
+      au < released ; 2008 ; Pediatrics Volume 121 ; 121 >
+      au < released ; 2008 ; Pediatrics Volume 122 ; 122 >
+      au < released ; 2009 ; Pediatrics Volume 123 ; 123 >
+      au < released ; 2009 ; Pediatrics Volume 124 ; 124 >
+      au < released ; 2010 ; Pediatrics Volume 125 ; 125 >
+      au < ready ; 2010 ; Pediatrics Volume 126 ; 126 >
+      au < manifest ; 2011 ; Pediatrics Volume 127 ; 127 >
+  
+    }
+    
+    {
+    
+      pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    }
   
   }
 
@@ -92,10 +143,23 @@
     
     param[base_url] = http://pedsinreview.aappublications.org/
     
-    au < released ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
-    au < released ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
-    au < released ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
-    au < manifest ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
+    {
+    
+      pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanAcademyOfPediatricsPdfTransform$Simplified
+    
+      au < released ; 2008 ; Pediatrics in Review Volume 29 ; 29 >
+      au < released ; 2009 ; Pediatrics in Review Volume 30 ; 30 >
+      au < released ; 2010 ; Pediatrics in Review Volume 31 ; 31 >
+      au < manifest ; 2011 ; Pediatrics in Review Volume 32 ; 32 >
+
+    }
+
+    {
+    
+      pluginSuffix = ClockssHighWirePressH20Plugin
+    
+    }
   
   }
 

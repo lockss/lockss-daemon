@@ -5,7 +5,6 @@
   >
   
   pluginPrefix = org.lockss.plugin.highwire.
-  attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
   implicit < status ; year ; name ; param[volume_name] ; comment[proxy] >
   
   {
@@ -21,6 +20,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1989 ; Advances in Physiology Education Volume 256 (1989) ; 256 ; reingest2.clockss.org:8082 >
       au < down ; 1989 ; Advances in Physiology Education Volume 257 (1989) ; 257 ; reingest2.clockss.org:8082 >
@@ -59,6 +59,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -73,6 +79,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1898 ; American Journal of Physiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >                                                         
       au < down ; 1898-1899 ; American Journal of Physiology Volume 2 ; 2 ; reingest3.clockss.org:8083 >                                                    
@@ -323,6 +330,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
       au < down ; 1977 ; American Journal of Physiology - Cell Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
@@ -395,6 +403,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -410,6 +424,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 232 ; 232 ; reingest2.clockss.org:8085 >
       au < down ; 1977 ; American Journal of Physiology - Endocrinology and Metabolism Volume 233 ; 233 ; reingest2.clockss.org:8085 >
@@ -482,6 +497,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -497,6 +518,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
       au < down ; 1977 ; American Journal of Physiology - Gastrointestinal and Liver Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
@@ -569,6 +591,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -584,6 +612,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
       au < down ; 1977 ; American Journal of Physiology - Heart and Circulatory Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
@@ -656,6 +685,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -671,6 +706,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < notReady ; 1984 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 246 ; 246 ; reingest1.clockss.org:8082 >
       au < notReady ; 1984 ; American Journal of Physiology - Lung Cellular and Molecular Physiology Volume 247 ; 247 ; reingest1.clockss.org:8082 >
@@ -729,6 +765,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -744,6 +786,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
       au < down ; 1977 ; American Journal of Physiology - Regulatory, Integrative and Comparative Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
@@ -816,6 +859,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -831,6 +880,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1977 ; American Journal of Physiology - Renal Physiology Volume 232 ; 232 ; reingest2.clockss.org:8085 >
       au < down ; 1977 ; American Journal of Physiology - Renal Physiology Volume 233 ; 233 ; reingest2.clockss.org:8085 >
@@ -903,6 +953,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -918,6 +974,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1948-1949 ; Journal of Applied Physiology Volume 1 ; 1 ; reingest1.clockss.org:8082 >
       au < down ; 1949-1950 ; Journal of Applied Physiology Volume 2 ; 2 ; reingest2.clockss.org:8085 >
@@ -1031,6 +1088,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -1046,6 +1109,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1938 ; Journal of Neurophysiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >                                                                         
       au < down ; 1939 ; Journal of Neurophysiology Volume 2 ; 2 ; reingest4.clockss.org:8082 >                                                                         
@@ -1154,6 +1218,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -1169,6 +1239,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1999 ; Physiological Genomics Volume 1 ; 1 ; reingest4.clockss.org:8082 >
       au < down ; 2000 ; Physiological Genomics Volume 2 ; 2 ; reingest1.clockss.org:8082 >
@@ -1216,6 +1287,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -1231,6 +1308,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1921 ; Physiological Reviews Volume 1 ; 1 ; reingest2.clockss.org:8085 >                                                                              
       au < down ; 1922 ; Physiological Reviews Volume 2 ; 2 ; reingest3.clockss.org:8083 >                                                                              
@@ -1325,6 +1403,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
   {
@@ -1340,6 +1424,7 @@
     {
     
       pluginSuffix = ClockssHighWirePlugin
+      attr[hint_application/pdf_filter_factory] = org.lockss.plugin.highwire.AmericanPhysiologicalSocietyPdfTransform
     
       au < down ; 1986 ; Physiology Volume 1 ; 1 ; reingest3.clockss.org:8083 >
       au < down ; 1987 ; Physiology Volume 2 ; 2 ; reingest4.clockss.org:8082 >
@@ -1369,6 +1454,12 @@
 
     }
   
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+      
+    }
+    
   }
 
 }
