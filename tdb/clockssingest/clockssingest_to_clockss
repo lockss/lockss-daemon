@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for f in *.tdb ; do
+  cat $f | sed -e 's@status ; status2@status1 ; status@' -e 's@comment\[proxy\]@proxy@' > ../clockss/$f
+done

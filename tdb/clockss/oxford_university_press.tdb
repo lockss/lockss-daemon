@@ -4,38 +4,65 @@
     name = Oxford University Press
   >
 
-  plugin = org.lockss.plugin.highwire.ClockssHighWirePlugin
-  implicit < status ; year ; name ; param[volume_name] ; proxy >
+  pluginPrefix = org.lockss.plugin.highwire.
+  implicit < status1 ; status ; year ; name ; param[volume_name] ; proxy >
 
   {
-
+  
     title <
       name = Acta Biochimica et Biophysica Sinica
     >
 
-comment[abbs40] = manifest page 404
-
     param[base_url] = http://abbs.oxfordjournals.org/
 
-    au < released ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; reingest4.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2008 ; Acta Biochimica et Biophysica Sinica Volume 40 ; 40 ; >
+      au < down ; crawling ; 2009 ; Acta Biochimica et Biophysica Sinica Volume 41 ; 41 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Acta Biochimica et Biophysica Sinica Volume 42 ; 42 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Adaptation
     >
 
     param[base_url] = http://adaptation.oxfordjournals.org/
 
-    au < released ; 2008 ; Adaptation Volume 1 ; 1 ; >
-    au < released ; 2009 ; Adaptation Volume 2 ; 2 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Adaptation Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; Adaptation Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Adaptation Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Age and Ageing ;
       issn = 0002-0729 ;
@@ -44,29 +71,56 @@ comment[abbs40] = manifest page 404
 
     param[base_url] = http://ageing.oxfordjournals.org/
 
-    au < released ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
-    au < released ; 2009 ; Age and Ageing Volume 38 ; 38 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Age and Ageing Volume 37 ; 37 ; >
+      au < down ; crawling ; 2009 ; Age and Ageing Volume 38 ; 38 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Age and Ageing Volume 39 ; 39 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Alcohol and Alcoholism ;
       issn = 0735-0414 ;
       eissn = 1464-3502
     >
 
-comment[alcalc44] = fetch error
-
     param[base_url] = http://alcalc.oxfordjournals.org/
 
-    au < released ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Alcohol and Alcoholism Volume 43 ; 43 ; >
+      au < notReady ; exists ; 2009 ; Alcohol and Alcoholism Volume 44 ; 44 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Alcohol and Alcoholism Volume 45 ; 45 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = American Journal of Epidemiology ;
       issn = 0002-9262 ;
@@ -75,15 +129,30 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://aje.oxfordjournals.org/
 
-    au < released ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
-    au < released ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
-    au < released ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; reingest3.clockss.org:8083 >
-    au < released ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; American Journal of Epidemiology Volume 167 ; 167 ; >
+      au < down ; crawling ; 2008 ; American Journal of Epidemiology Volume 168 ; 168 ; >
+      au < down ; crawling ; 2009 ; American Journal of Epidemiology Volume 169 ; 169 ; >
+      au < down ; crawling ; 2009 ; American Journal of Epidemiology Volume 170 ; 170 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; American Journal of Epidemiology Volume 169 ; 169 ; >
+      au < released ; manifest ; 2010 ; American Journal of Epidemiology Volume 171 ; 171 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = American Law and Economics Review ;
       issn = 1465-7252 ;
@@ -92,12 +161,27 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://aler.oxfordjournals.org/
 
-    au < released ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; American Law and Economics Review Volume 10 ; 10 ; >
+      au < released ; manifest ; 2009 ; American Law and Economics Review Volume 11 ; 11 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; American Law and Economics Review Volume 12 ; 12 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = American Literary History ;
       issn = 0896-7148 ;
@@ -106,40 +190,85 @@ comment[alcalc44] = fetch error
 
     param[base_url] = http://alh.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < released ; manifest ; 2009 ; American Literary History Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; American Literary History Volume 22 ; 22 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Analysis
     >
 
-comment[analysis68] = no manifest page
-
     param[base_url] = http://analysis.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < released ; manifest ; 2008 ; Analysis Volume 68 ; 68 ; >
+      au < released ; manifest ; 2009 ; Analysis Volume 69 ; 69 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Analysis Volume 70 ; 70 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Annals of Botany ;
       issn = 0305-7364 ;
       eissn = 1095-8290
     >
 
-comment[aob102] = 500 errors, content3
-comment[aob103_104] = fetch error
-
     param[base_url] = http://aob.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < released ; manifest ; 2008 ; Annals of Botany Volume 101 ; 101 ; >
+      au < released ; manifest ; 2008 ; Annals of Botany Volume 102 ; 102 ; >
+      au < notReady ; exists ; 2009 ; Annals of Botany Volume 103 ; 103 ; >
+      au < notReady ; exists ; 2009 ; Annals of Botany Volume 104 ; 104 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Annals of Botany Volume 103 ; 103 ; >
+      au < released ; manifest ; 2010 ; Annals of Botany Volume 105 ; 105 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Annals of Occupational Hygiene ;
       issn = 0003-4878 ;
@@ -148,11 +277,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://annhyg.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < released ; manifest ; 2008 ; The Annals of Occupational Hygiene Volume 52 ; 52 ; >
+      au < released ; manifest ; 2009 ; The Annals of Occupational Hygiene Volume 53 ; 53 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; The Annals of Occupational Hygiene Volume 54 ; 54 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Annals of Oncology ;
       issn = 0923-7534 ;
@@ -161,11 +306,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://annonc.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < released ; manifest ; 2008 ; Annals of Oncology Volume 19 ; 19 ; >
+      au < released ; manifest ; 2009 ; Annals of Oncology Volume 20 ; 20 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Annals of Oncology Volume 21 ; 21 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Applied Linguistics ;
       issn = 0142-6001 ;
@@ -174,22 +335,54 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://applij.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < released ; manifest ; 2008 ; Applied Linguistics Volume 29 ; 29 ; >
+      au < released ; manifest ; 2009 ; Applied Linguistics Volume 30 ; 30 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Applied Linguistics Volume 31 ; 31 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Archives of Clinical Neuropsychology
     >
 
     param[base_url] = http://acn.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < released ; manifest ; 2008 ; Archives of Clinical Neuropsychology Volume 23 ; 23 ; >
+      au < released ; manifest ; 2009 ; Archives of Clinical Neuropsychology Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Archives of Clinical Neuropsychology Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Behavioral Ecology ;
       issn = 1045-2249 ;
@@ -198,12 +391,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://beheco.oxfordjournals.org/
 
-    au < released ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Behavioral Ecology Volume 19 ; 19 ; >
+      au < released ; manifest ; 2009 ; Behavioral Ecology Volume 20 ; 20 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Behavioral Ecology Volume 21 ; 21 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Bioinformatics ;
       issn = 1367-4803 ;
@@ -212,12 +420,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bioinformatics.oxfordjournals.org/
 
-    au < released ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Bioinformatics Volume 24 ; 24 ; >
+      au < released ; manifest ; 2009 ; Bioinformatics Volume 25 ; 25 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Bioinformatics Volume 26 ; 26 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Biometrika ;
       issn = 0006-3444 ;
@@ -226,26 +449,54 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://biomet.oxfordjournals.org/
 
-    au < released ; 2008 ; Biometrika Volume 95 ; 95 ; >
-    au < released ; 2009 ; Biometrika Volume 96 ; 96 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Biometrika Volume 95 ; 95 ; >
+      au < down ; crawling ; 2009 ; Biometrika Volume 96 ; 96 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Biometrika Volume 97 ; 97 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Bioscience Horizons: The National Undergraduate Research Journal
     >
 
     param[base_url] = http://biohorizons.oxfordjournals.org/
 
-    au < released ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
-    au < released ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Bioscience Horizons: The National Undergraduate Research Journal Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Biostatistics ;
       issn = 1465-4644 ;
@@ -254,28 +505,57 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://biostatistics.oxfordjournals.org/
 
-    au < released ; 2008 ; Biostatistics Volume 9 ; 9 ; >
-    au < released ; 2009 ; Biostatistics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Biostatistics Volume 9 ; 9 ; >
+      au < down ; crawling ; 2009 ; Biostatistics Volume 10 ; 10 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Biostatistics Volume 11 ; 11 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = BJA: British Journal of Anaesthesia
     >
 
     param[base_url] = http://bja.oxfordjournals.org/
 
-    au < released ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
-    au < released ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; >
-    au < released ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; reingest2.clockss.org:8085 >
-    au < released ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; BJA: British Journal of Anaesthesia Volume 100 ; 100 ; >
+      au < down ; crawling ; 2008 ; BJA: British Journal of Anaesthesia Volume 101 ; 101 ; >
+      au < down ; crawling ; 2009 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; >
+      au < down ; crawling ; 2009 ; BJA: British Journal of Anaesthesia Volume 103 ; 103 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; BJA: British Journal of Anaesthesia Volume 102 ; 102 ; >
+      au < released ; manifest ; 2010 ; BJA: British Journal of Anaesthesia Volume 104 ; 104 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Brain ;
       issn = 0006-8950 ;
@@ -284,13 +564,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://brain.oxfordjournals.org/
 
-    au < released ; 2008 ; Brain Volume 131 ; 131 ; >
-    au < released ; 2009 ; Brain Volume 132 ; 132 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Brain Volume 131 ; 131 ; >
+      au < down ; crawling ; 2009 ; Brain Volume 132 ; 132 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Brain Volume 133 ; 133 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Briefings in Bioinformatics ;
       issn = 1467-5463 ;
@@ -299,13 +593,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bib.oxfordjournals.org/
 
-    au < released ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
-    au < released ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Briefings in Bioinformatics Volume 9 ; 9 ; >
+      au < down ; crawling ; 2009 ; Briefings in Bioinformatics Volume 10 ; 10 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Briefings in Bioinformatics Volume 11 ; 11 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Briefings in Functional Genomics and Proteomics ;
       issn = 1473-9550 ;
@@ -314,13 +622,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bfgp.oxfordjournals.org/
 
-    au < released ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
-    au < released ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Briefings in Functional Genomics and Proteomics Volume 7 ; 7 ; >
+      au < down ; crawling ; 2009 ; Briefings in Functional Genomics and Proteomics Volume 8 ; 8 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Briefings in Functional Genomics and Proteomics Volume 9 ; 9 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The British Journal of Aesthetics ;
       issn = 0007-0904 ;
@@ -329,26 +651,54 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bjaesthetics.oxfordjournals.org/
 
-    au < released ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
-    au < released ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The British Journal of Aesthetics Volume 48 ; 48 ; >
+      au < down ; crawling ; 2009 ; The British Journal of Aesthetics Volume 49 ; 49 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; The British Journal of Aesthetics Volume 50 ; 50 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The British Journal of Criminology
     >
 
     param[base_url] = http://bjc.oxfordjournals.org/
 
-    au < released ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
-    au < released ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The British Journal of Criminology Volume 48 ; 48 ; >
+      au < down ; crawling ; 2009 ; The British Journal of Criminology Volume 49 ; 49 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; The British Journal of Criminology Volume 50 ; 50 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The British Journal for the Philosophy of Science ;
       issn = 0007-0882 ;
@@ -357,13 +707,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bjps.oxfordjournals.org/
 
-    au < released ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
-    au < released ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The British Journal for the Philosophy of Science Volume 59 ; 59 ; >
+      au < down ; crawling ; 2009 ; The British Journal for the Philosophy of Science Volume 60 ; 60 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; The British Journal for the Philosophy of Science Volume 61 ; 61 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The British Journal of Social Work ;
       issn = 0045-3102 ;
@@ -372,12 +736,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bjsw.oxfordjournals.org/
 
-    au < released ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < testing ; exists ; 2008 ; The British Journal of Social Work Volume 38 ; 38 ; >
+      au < down ; crawling ; 2009 ; The British Journal of Social Work Volume 39 ; 39 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; The British Journal of Social Work Volume 40 ; 40 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = British Medical Bulletin ;
       issn = 0007-1420 ;
@@ -386,14 +765,34 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://bmb.oxfordjournals.org/
 
-    au < released ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; reingest2.clockss.org:8085 >
-    au < released ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; reingest2.clockss.org:8085 >
-    au < released ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < testing ; exists ; 2008 ; British Medical Bulletin Volume 85 ; 85 ; >
+      au < testing ; exists ; 2008 ; British Medical Bulletin Volume 86 ; 86 ; >
+      au < testing ; exists ; 2008 ; British Medical Bulletin Volume 87 ; 87 ; >
+      au < testing ; exists ; 2008 ; British Medical Bulletin Volume 88 ; 88 ; >
+      au < down ; crawling ; 2009 ; British Medical Bulletin Volume 89 ; 89 ; >
+      au < down ; crawling ; 2009 ; British Medical Bulletin Volume 90 ; 90 ; >
+      au < down ; crawling ; 2009 ; British Medical Bulletin Volume 91 ; 91 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; British Medical Bulletin Volume 89 ; 89 ; >
+      au < released ; manifest ; 2010 ; British Medical Bulletin Volume 90 ; 90 ; >
+      au < released ; manifest ; 2010 ; British Medical Bulletin Volume 92 ; 92 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Bulletin of the London Mathematical Society ;
       issn = 0024-6093 ;
@@ -402,12 +801,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://blms.oxfordjournals.org/
 
-    au < released ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < testing ; exists ; 2008 ; Bulletin of the London Mathematical Society Volume 40 ; 40 ; >
+      au < down ; crawling ; 2009 ; Bulletin of the London Mathematical Society Volume 41 ; 41 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Bulletin of the London Mathematical Society Volume 42 ; 42 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Cambridge Journal of Economics ;
       issn = 0309-166X ;
@@ -416,26 +830,54 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://cje.oxfordjournals.org/
 
-    au < released ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
-    au < released ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Cambridge Journal of Economics Volume 32 ; 32 ; >
+      au < down ; crawling ; 2009 ; Cambridge Journal of Economics Volume 33 ; 33 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Cambridge Journal of Economics Volume 34 ; 34 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Cambridge Journal of Regions, Economy and Society
     >
 
     param[base_url] = http://cjres.oxfordjournals.org/
 
-    au < released ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
-    au < released ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Cambridge Journal of Regions, Economy and Society Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; Cambridge Journal of Regions, Economy and Society Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Cambridge Journal of Regions, Economy and Society Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Cambridge Quarterly ;
       issn = 0008-199X ;
@@ -444,13 +886,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://camqtly.oxfordjournals.org/
 
-    au < released ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
-    au < released ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Cambridge Quarterly Volume 37 ; 37 ; >
+      au < down ; crawling ; 2009 ; The Cambridge Quarterly Volume 38 ; 38 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; The Cambridge Quarterly Volume 39 ; 39 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Capital Markets Law Journal ;
       issn = 1750-7219 ;
@@ -459,13 +915,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://cmlj.oxfordjournals.org/
 
-    au < released ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
-    au < released ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Capital Markets Law Journal Volume 3 ; 3 ; >
+      au < down ; crawling ; 2009 ; Capital Markets Law Journal Volume 4 ; 4 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Capital Markets Law Journal Volume 5 ; 5 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Carcinogenesis ;
       issn = 0143-3334 ;
@@ -474,32 +944,63 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://carcin.oxfordjournals.org/
 
-    au < released ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
-    au < released ; 2009 ; Carcinogenesis Volume 30 ; 30 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Carcinogenesis Volume 29 ; 29 ; >
+      au < down ; crawling ; 2009 ; Carcinogenesis Volume 30 ; 30 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Carcinogenesis Volume 31 ; 31 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Cardiovascular Research
     >
 
     param[base_url] = http://cardiovascres.oxfordjournals.org/
 
-    au < released ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
-    au < released ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
-    au < released ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
-    au < released ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
-    au < released ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; reingest1.clockss.org:8082 >
-    au < released ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; reingest1.clockss.org:8082 >
-    au < released ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; reingest1.clockss.org:8082 >
-    au < released ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Cardiovascular Research Volume 77 ; 77 ; >
+      au < down ; crawling ; 2008 ; Cardiovascular Research Volume 78 ; 78 ; >
+      au < down ; crawling ; 2008 ; Cardiovascular Research Volume 79 ; 79 ; >
+      au < down ; crawling ; 2008 ; Cardiovascular Research Volume 80 ; 80 ; >
+      au < down ; crawling ; 2009 ; Cardiovascular Research Volume 81 ; 81 ; >
+      au < down ; crawling ; 2009 ; Cardiovascular Research Volume 82 ; 82 ; >
+      au < down ; crawling ; 2009 ; Cardiovascular Research Volume 83 ; 83 ; >
+      au < down ; crawling ; 2009 ; Cardiovascular Research Volume 84 ; 84 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < released ; manifest ; 2010 ; Cardiovascular Research Volume 81 ; 81 ; >
+      au < released ; manifest ; 2010 ; Cardiovascular Research Volume 82 ; 82 ; >
+      au < released ; manifest ; 2010 ; Cardiovascular Research Volume 83 ; 83 ; >
+      au < released ; manifest ; 2010 ; Cardiovascular Research Volume 85 ; 85 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Cerebral Cortex ;
       issn = 1047-3211 ;
@@ -508,13 +1009,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://cercor.oxfordjournals.org/
 
-    au < released ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
-    au < released ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Cerebral Cortex Volume 18 ; 18 ; >
+      au < down ; crawling ; 2009 ; Cerebral Cortex Volume 19 ; 19 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Cerebral Cortex Volume 20 ; 20 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = CESifo Economic Studies ;
       issn = 1610-241X ;
@@ -523,13 +1038,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://cesifo.oxfordjournals.org/
 
-    au < released ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
-    au < released ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; CESifo Economic Studies Volume 54 ; 54 ; >
+      au < down ; crawling ; 2009 ; CESifo Economic Studies Volume 55 ; 55 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; CESifo Economic Studies Volume 56 ; 56 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Chemical Senses ;
       issn = 0379-864X ;
@@ -538,12 +1067,27 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://chemse.oxfordjournals.org/
 
-    au < released ; 2009 ; Chemical Senses Volume 34 ; 34 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < testing ; exists ; 2008 ; Chemical Senses Volume 33 ; 33 ; >
+      au < down ; crawling ; 2009 ; Chemical Senses Volume 34 ; 34 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Chemical Senses Volume 35 ; 35 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Chinese Journal of International Law ;
       issn = 1540-1650 ;
@@ -552,40 +1096,82 @@ comment[aob103_104] = fetch error
 
     param[base_url] = http://chinesejil.oxfordjournals.org/
 
-    au < released ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Chinese Journal of International Law Volume 7 ; 7 ; >
+      au < testing ; exists ; 2009 ; Chinese Journal of International Law Volume 8 ; 8 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Chinese Journal of International Law Volume 9 ; 9 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Chinese Journal of International Politics ;
       issn = 1750-8916 ;
       eissn = 1750-8924
     >
 
-comment[cjip] = no subscription
-
     param[base_url] = http://cjip.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2008-2009 ; The Chinese Journal of International Politics Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010-2011 ; The Chinese Journal of International Politics Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Christian bioethics: Non-Ecumenical Studies in Medical Morality
     >
 
     param[base_url] = http://cb.oxfordjournals.org/
 
-    au < released ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
-    au < released ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 14 ; 14 ; >
+      au < down ; crawling ; 2009 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 15 ; 15 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Christian bioethics: Non-Ecumenical Studies in Medical Morality Volume 16 ; 16 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Community Development Journal ;
       issn = 0010-3802 ;
@@ -594,13 +1180,27 @@ comment[cjip] = no subscription
 
     param[base_url] = http://cdj.oxfordjournals.org/
 
-    au < released ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
-    au < released ; 2009 ; Community Development Journal Volume 44 ; 44 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Community Development Journal Volume 43 ; 43 ; >
+      au < down ; crawling ; 2009 ; Community Development Journal Volume 44 ; 44 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Community Development Journal Volume 45 ; 45 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Computer Journal ;
       issn = 0010-4620 ;
@@ -609,39 +1209,81 @@ comment[cjip] = no subscription
 
     param[base_url] = http://comjnl.oxfordjournals.org/
 
-    au < released ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
-    au < released ; 2009 ; The Computer Journal Volume 52 ; 52 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Computer Journal Volume 51 ; 51 ; >
+      au < down ; crawling ; 2009 ; The Computer Journal Volume 52 ; 52 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; The Computer Journal Volume 53 ; 53 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Contemporary Women's Writing
     >
 
     param[base_url] = http://cww.oxfordjournals.org/
 
-    au < released ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
-    au < released ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Contemporary Women's Writing Volume 2 ; 2 ; >
+      au < down ; crawling ; 2009 ; Contemporary Women's Writing Volume 3 ; 3 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Contemporary Women's Writing Volume 4 ; 4 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Continuing Education in Anaesthesia, Critical Care & Pain
     >
 
     param[base_url] = http://ceaccp.oxfordjournals.org/
 
-    au < released ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
-    au < released ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 8 ; 8 ; >
+      au < down ; crawling ; 2009 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 9 ; 9 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Continuing Education in Anaesthesia, Critical Care & Pain Volume 10 ; 10 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Contributions to Political Economy ;
       issn = 0277-5921 ;
@@ -650,13 +1292,27 @@ comment[cjip] = no subscription
 
     param[base_url] = http://cpe.oxfordjournals.org/
 
-    au < released ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
-    au < released ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Contributions to Political Economy Volume 27 ; 27 ; >
+      au < down ; crawling ; 2009 ; Contributions to Political Economy Volume 28 ; 28 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Contributions to Political Economy Volume 29 ; 29 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = DNA Research ;
       issn = 1340-2838
@@ -664,13 +1320,27 @@ comment[cjip] = no subscription
 
     param[base_url] = http://dnaresearch.oxfordjournals.org/
 
-    au < released ; 2008 ; DNA Research Volume 15 ; 15 ; >
-    au < released ; 2009 ; DNA Research Volume 16 ; 16 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; DNA Research Volume 15 ; 15 ; >
+      au < down ; crawling ; 2009 ; DNA Research Volume 16 ; 16 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; DNA Research Volume 17 ; 17 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Early Music ;
       issn = 0306-1078 ;
@@ -679,13 +1349,27 @@ comment[cjip] = no subscription
 
     param[base_url] = http://em.oxfordjournals.org/
 
-    au < released ; 2008 ; Early Music Volume 36 ; 36 ; >
-    au < released ; 2009 ; Early Music Volume 37 ; 37 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Early Music Volume 36 ; 36 ; >
+      au < down ; crawling ; 2009 ; Early Music Volume 37 ; 37 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Early Music Volume 38 ; 38 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = ELT Journal ;
       issn = 0951-0893 ;
@@ -694,39 +1378,81 @@ comment[cjip] = no subscription
 
     param[base_url] = http://eltj.oxfordjournals.org/
 
-    au < released ; 2008 ; ELT Journal Volume 62 ; 62 ; >
-    au < released ; 2009 ; ELT Journal Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; ELT Journal Volume 62 ; 62 ; >
+      au < down ; crawling ; 2009 ; ELT Journal Volume 63 ; 63 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; ELT Journal Volume 64 ; 64 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Enterprise & Society: The International Journal of Business History
     >
 
     param[base_url] = http://es.oxfordjournals.org/
 
-    au < released ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
-    au < released ; 2009 ; Enterprise & Society: The International Journal of Business History Volume 10 ; 10 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Enterprise & Society: The International Journal of Business History Volume 9 ; 9 ; >
+      au < down ; crawling ; 2009 ; Enterprise & Society: The International Journal of Business History Volume 10 ; 10 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Enterprise & Society: The International Journal of Business History Volume 11 ; 11 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = EP Europace
     >
 
     param[base_url] = http://europace.oxfordjournals.org/
 
-    au < released ; 2008 ; EP Europace Volume 10 ; 10 ; >
-    au < released ; 2009 ; EP Europace Volume 11 ; 11 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; EP Europace Volume 10 ; 10 ; >
+      au < down ; crawling ; 2009 ; EP Europace Volume 11 ; 11 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; EP Europace Volume 12 ; 12 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Epidemiologic Reviews ;
       issn = 0193-936X ;
@@ -735,12 +1461,27 @@ comment[cjip] = no subscription
 
     param[base_url] = http://epirev.oxfordjournals.org/
 
-    au < released ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Epidemiologic Reviews Volume 30 ; 30 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2009 ; Epidemiologic Reviews Volume 31 ; 31 ; >
+      au < testing ; exists ; 2010 ; Epidemiologic Reviews Volume 32 ; 32 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = ESHRE Monographs ;
       issn = 1477-741X ;
@@ -749,12 +1490,18 @@ comment[cjip] = no subscription
 
     param[base_url] = http://eshremonographs.oxfordjournals.org/
 
-    au < released ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; ESHRE Monographs Volume 2008 ; 2008 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Essays in Criticism ;
       issn = 0014-0856 ;
@@ -763,13 +1510,27 @@ comment[cjip] = no subscription
 
     param[base_url] = http://eic.oxfordjournals.org/
 
-    au < released ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
-    au < released ; 2009 ; Essays in Criticism Volume 59 ; 59 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Essays in Criticism Volume 58 ; 58 ; >
+      au < down ; crawling ; 2009 ; Essays in Criticism Volume 59 ; 59 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Essays in Criticism Volume 60 ; 60 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = European Heart Journal ;
       issn = 0195-668X ;
@@ -778,28 +1539,54 @@ comment[cjip] = no subscription
 
     param[base_url] = http://eurheartj.oxfordjournals.org/
 
-comment[eurh30] = crawl failed because of a fetch error
+    {
 
-    au < released ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
-    au < released ; 2009 ; European Heart Journal Volume 30 ; 30 ; reingest2.clockss.org:8085 >
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; European Heart Journal Volume 29 ; 29 ; >
+      au < down ; crawling ; 2009 ; European Heart Journal Volume 30 ; 30 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; European Heart Journal Volume 31 ; 31 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = European Journal of Echocardiography
     >
 
     param[base_url] = http://ejechocard.oxfordjournals.org/
 
-    au < released ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
-    au < released ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; European Journal of Echocardiography Volume 9 ; 9 ; >
+      au < down ; crawling ; 2009 ; European Journal of Echocardiography Volume 10 ; 10 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; European Journal of Echocardiography Volume 11 ; 11 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = European Journal of International Law ;
       issn = 0938-5428 ;
@@ -808,27 +1595,54 @@ comment[eurh30] = crawl failed because of a fetch error
 
     param[base_url] = http://ejil.oxfordjournals.org/
 
-    au < released ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
-    au < released ; 2009 ; European Journal of International Law Volume 20 ; 20 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; European Journal of International Law Volume 19 ; 19 ; >
+      au < down ; crawling ; 2009 ; European Journal of International Law Volume 20 ; 20 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; European Journal of International Law Volume 21 ; 21 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = European Journal of Heart Failure
     >
 
     param[base_url] = http://eurjhf.oxfordjournals.org/
 
-comment[eurjhf10] = manifest page not found (404)
+    {
 
-    au < released ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; reingest2.clockss.org:8085 >
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2008 ; European Journal of Heart Failure Volume 10 ; 10 ; >
+      au < down ; crawling ; 2009 ; European Journal of Heart Failure Volume 11 ; 11 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; European Journal of Heart Failure Volume 12 ; 12 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The European Journal of Orthodontics ;
       issn = 0141-5387 ;
@@ -837,30 +1651,56 @@ comment[eurjhf10] = manifest page not found (404)
 
     param[base_url] = http://ejo.oxfordjournals.org/
 
-    au < released ; 2008 ; The European Journal of Orthodontics Volume 30 ; 30 ; >
-    au < released ; 2009 ; The European Journal of Orthodontics Volume 31 ; 31 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The European Journal of Orthodontics Volume 30 ; 30 ; >
+      au < down ; crawling ; 2009 ; The European Journal of Orthodontics Volume 31 ; 31 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; The European Journal of Orthodontics Volume 32 ; 32 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The European Journal of Public Health ;
       issn = 1101-1262 ;
       eissn = 1464-360X
     >
 
-comment[eurpub19] = fetch error
-
     param[base_url] = http://eurpub.oxfordjournals.org/
 
-    au < released ; 2008 ; The European Journal of Public Health Volume 18 ; 18 ; >
-    au < released ; 2009 ; The European Journal of Public Health Volume 19 ; 19 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The European Journal of Public Health Volume 18 ; 18 ; >
+      au < down ; crawling ; 2009 ; The European Journal of Public Health Volume 19 ; 19 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; The European Journal of Public Health Volume 20 ; 20 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = European Review of Agricultural Economics ;
       issn = 0165-1587 ;
@@ -869,13 +1709,27 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://erae.oxfordjournals.org/
 
-    au < released ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
-    au < released ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; European Review of Agricultural Economics Volume 35 ; 35 ; >
+      au < down ; crawling ; 2009 ; European Review of Agricultural Economics Volume 36 ; 36 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; European Review of Agricultural Economics Volume 37 ; 37 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = European Sociological Review ;
       issn = 0266-7215 ;
@@ -884,13 +1738,27 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://esr.oxfordjournals.org/
 
-    au < released ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
-    au < released ; 2009 ; European Sociological Review Volume 25 ; 25 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; European Sociological Review Volume 24 ; 24 ; >
+      au < down ; crawling ; 2009 ; European Sociological Review Volume 25 ; 25 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; European Sociological Review Volume 26 ; 26 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Evidence-based Complementary and Alternative Medicine ;
       issn = 1741-427X ;
@@ -899,43 +1767,83 @@ comment[eurpub19] = fetch error
 
     param[base_url] = http://ecam.oxfordjournals.org/
 
-    au < released ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
-    au < released ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Evidence-based Complementary and Alternative Medicine Volume 5 ; 5 ; >
+      au < down ; crawling ; 2009 ; Evidence-based Complementary and Alternative Medicine Volume 6 ; 6 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Evidence-based Complementary and Alternative Medicine Volume 7 ; 7 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Family Practice ;
       issn = 0263-2136 ;
       eissn = 1460-2229
     >
 
-comment[fampra26] = fetch error
-
     param[base_url] = http://fampra.oxfordjournals.org/
 
-    au < released ; 2008 ; Family Practice Volume 25 ; 25 ; >
-    au < released ; 2009 ; Family Practice Volume 26 ; 26 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Family Practice Volume 25 ; 25 ; >
+      au < down ; crawling ; 2009 ; Family Practice Volume 26 ; 26 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Family Practice Volume 27 ; 27 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Forestry: An International Journal of Forest Research
     >
 
     param[base_url] = http://forestry.oxfordjournals.org/
 
-    au < released ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
-    au < released ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Forestry: An International Journal of Forest Research Volume 81 ; 81 ; >
+      au < down ; crawling ; 2009 ; Forestry: An International Journal of Forest Research Volume 82 ; 82 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Forestry: An International Journal of Forest Research Volume 83 ; 83 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Forum for Modern Language Studies ;
       issn = 0015-8518 ;
@@ -944,13 +1852,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fmls.oxfordjournals.org/
 
-    au < released ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
-    au < released ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Forum for Modern Language Studies Volume 44 ; 44 ; >
+      au < down ; crawling ; 2009 ; Forum for Modern Language Studies Volume 45 ; 45 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Forum for Modern Language Studies Volume 46 ; 46 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = French History ;
       issn = 0269-1191 ;
@@ -959,13 +1881,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fh.oxfordjournals.org/
 
-    au < released ; 2008 ; French History Volume 22 ; 22 ; >
-    au < released ; 2009 ; French History Volume 23 ; 23 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; French History Volume 22 ; 22 ; >
+      au < down ; crawling ; 2009 ; French History Volume 23 ; 23 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; French History Volume 24 ; 24 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = French Studies ;
       issn = 0016-1128 ;
@@ -974,13 +1910,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://fs.oxfordjournals.org/
 
-    au < released ; 2008 ; French Studies Volume 62 ; 62 ; >
-    au < released ; 2009 ; French Studies Volume 63 ; 63 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; French Studies Volume 62 ; 62 ; >
+      au < down ; crawling ; 2009 ; French Studies Volume 63 ; 63 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; French Studies Volume 64 ; 64 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = German History ;
       issn = 0266-3554 ;
@@ -989,25 +1939,53 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://gh.oxfordjournals.org/
 
-    au < released ; 2008 ; German History Volume 26 ; 26 ; >
-    au < released ; 2009 ; German History Volume 27 ; 27 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; German History Volume 26 ; 26 ; >
+      au < down ; crawling ; 2009 ; German History Volume 27 ; 27 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; German History Volume 28 ; 28 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Gerontologist
     >
 
     param[base_url] = http://gerontologist.oxfordjournals.org/
 
-    au < released ; 2009 ; The Gerontologist Volume 49 ; 49 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2009 ; The Gerontologist Volume 49 ; 49 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; The Gerontologist Volume 50 ; 50 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Glycobiology ;
       issn = 0959-6658 ;
@@ -1016,13 +1994,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://glycob.oxfordjournals.org/
 
-    au < released ; 2008 ; Glycobiology Volume 18 ; 18 ; >
-    au < released ; 2009 ; Glycobiology Volume 19 ; 19 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Glycobiology Volume 18 ; 18 ; >
+      au < down ; crawling ; 2009 ; Glycobiology Volume 19 ; 19 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Glycobiology Volume 20 ; 20 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Health Education Research ;
       issn = 0268-1153 ;
@@ -1031,13 +2023,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://her.oxfordjournals.org/
 
-    au < released ; 2008 ; Health Education Research Volume 23 ; 23 ; >
-    au < released ; 2009 ; Health Education Research Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Health Education Research Volume 23 ; 23 ; >
+      au < down ; crawling ; 2009 ; Health Education Research Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Health Education Research Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Health Policy and Planning ;
       issn = 0268-1080 ;
@@ -1046,13 +2052,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://heapol.oxfordjournals.org/
 
-    au < released ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
-    au < released ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Health Policy and Planning Volume 23 ; 23 ; >
+      au < down ; crawling ; 2009 ; Health Policy and Planning Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Health Policy and Planning Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Health Promotion International ;
       issn = 0957-4824 ;
@@ -1061,13 +2081,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://heapro.oxfordjournals.org/
 
-    au < released ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
-    au < released ; 2009 ; Health Promotion International Volume 24 ; 24 ; reingest4.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Health Promotion International Volume 23 ; 23 ; >
+      au < down ; crawling ; 2009 ; Health Promotion International Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Health Promotion International Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = History Workshop Journal ;
       issn = 1363-3554 ;
@@ -1076,15 +2110,30 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hwj.oxfordjournals.org/
 
-    au < released ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
-    au < released ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
-    au < released ; 2009 ; History Workshop Journal Volume 67 ; 67 ; reingest3.clockss.org:8083 >
-    au < released ; 2009 ; History Workshop Journal Volume 68 ; 68 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; History Workshop Journal Volume 65 ; 65 ; >
+      au < down ; crawling ; 2008 ; History Workshop Journal Volume 66 ; 66 ; >
+      au < down ; crawling ; 2009 ; History Workshop Journal Volume 67 ; 67 ; >
+      au < down ; crawling ; 2009 ; History Workshop Journal Volume 68 ; 68 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; History Workshop Journal Volume 67 ; 67 ; >
+      au < testing ; exists ; 2010 ; History Workshop Journal Volume 69 ; 69 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Holocaust and Genocide Studies ;
       issn = 8756-6583 ;
@@ -1093,13 +2142,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hgs.oxfordjournals.org/
 
-    au < released ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
-    au < released ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Holocaust and Genocide Studies Volume 22 ; 22 ; >
+      au < down ; crawling ; 2009 ; Holocaust and Genocide Studies Volume 23 ; 23 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Holocaust and Genocide Studies Volume 24 ; 24 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Human Molecular Genetics ;
       issn = 0964-6906 ;
@@ -1108,13 +2171,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hmg.oxfordjournals.org/
 
-    au < released ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
-    au < released ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Human Molecular Genetics Volume 17 ; 17 ; >
+      au < down ; crawling ; 2009 ; Human Molecular Genetics Volume 18 ; 18 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Human Molecular Genetics Volume 19 ; 19 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Human Reproduction ;
       issn = 0268-1161 ;
@@ -1123,13 +2200,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://humrep.oxfordjournals.org/
 
-    au < released ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
-    au < released ; 2009 ; Human Reproduction Volume 24 ; 24 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Human Reproduction Volume 23 ; 23 ; >
+      au < down ; crawling ; 2009 ; Human Reproduction Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Human Reproduction Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Human Reproduction Update ;
       issn = 1355-4786 ;
@@ -1138,13 +2229,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://humupd.oxfordjournals.org/
 
-    au < released ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
-    au < released ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Human Reproduction Update Volume 14 ; 14 ; >
+      au < down ; crawling ; 2009 ; Human Reproduction Update Volume 15 ; 15 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Human Reproduction Update Volume 16 ; 16 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Human Rights Law Review ;
       issn = 1461-7781 ;
@@ -1153,74 +2258,126 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://hrlr.oxfordjournals.org/
 
-    au < released ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
-    au < released ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Human Rights Law Review Volume 8 ; 8 ; >
+      au < down ; crawling ; 2009 ; Human Rights Law Review Volume 9 ; 9 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Human Rights Law Review Volume 10 ; 10 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = ICES Journal of Marine Science: Journal du Conseil
     >
 
     param[base_url] = http://icesjms.oxfordjournals.org/
 
-    au < released ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
-    au < released ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; ICES Journal of Marine Science: Journal du Conseil Volume 65 ; 65 ; >
+      au < down ; crawling ; 2009 ; ICES Journal of Marine Science: Journal du Conseil Volume 66 ; 66 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; ICES Journal of Marine Science: Journal du Conseil Volume 67 ; 67 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IEICE - Transactions on Communications
     >
 
     param[base_url] = http://ietcom.oxfordjournals.org/
 
-    au < released ; 2008 ; IEICE - Transactions on Communications Volume E91-B ; E91-B ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IEICE - Transactions on Communications Volume E91-B ; E91-B ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IEICE - Transactions on Electronics
     >
 
     param[base_url] = http://ietele.oxfordjournals.org/
 
-    au < released ; 2008 ; IEICE - Transactions on Electronics Volume E91-C ; E91-C ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IEICE - Transactions on Electronics Volume E91-C ; E91-C ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IEICE - Transactions on Fundamentals of Electronics, Communications and Computer Sciences
     >
 
     param[base_url] = http://ietfec.oxfordjournals.org/
 
-    au < released ; 2008 ; IEICE - Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A ; E91-A ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IEICE - Transactions on Fundamentals of Electronics, Communications and Computer Sciences Volume E91-A ; E91-A ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IEICE - Transactions on Information and Systems
     >
 
     param[base_url] = http://ietisy.oxfordjournals.org/
 
-    au < released ; 2008 ; IEICE - Transactions on Information and Systems Volume E91-D ; E91-D ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IEICE - Transactions on Information and Systems Volume E91-D ; E91-D ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IMA Journal of Applied Mathematics ;
       issn = 0272-4960 ;
@@ -1229,13 +2386,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imamat.oxfordjournals.org/
 
-    au < released ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
-    au < released ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IMA Journal of Applied Mathematics Volume 73 ; 73 ; >
+      au < down ; crawling ; 2009 ; IMA Journal of Applied Mathematics Volume 74 ; 74 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; IMA Journal of Applied Mathematics Volume 75 ; 75 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IMA Journal of Management Mathematics ;
       issn = 1471-678X ;
@@ -1244,13 +2415,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imaman.oxfordjournals.org/
 
-    au < released ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
-    au < released ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IMA Journal of Management Mathematics Volume 19 ; 19 ; >
+      au < down ; crawling ; 2009 ; IMA Journal of Management Mathematics Volume 20 ; 20 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; IMA Journal of Management Mathematics Volume 21 ; 21 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IMA Journal of Mathematical Control and Information ;
       issn = 0265-0754 ;
@@ -1259,13 +2444,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imamci.oxfordjournals.org/
 
-    au < released ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
-    au < released ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; reingest3.clockss.org:8083 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IMA Journal of Mathematical Control and Information Volume 25 ; 25 ; >
+      au < down ; crawling ; 2009 ; IMA Journal of Mathematical Control and Information Volume 26 ; 26 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; IMA Journal of Mathematical Control and Information Volume 27 ; 27 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = IMA Journal of Numerical Analysis ;
       issn = 0272-4979 ;
@@ -1274,13 +2473,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://imajna.oxfordjournals.org/
 
-    au < released ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
-    au < released ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; IMA Journal of Numerical Analysis Volume 28 ; 28 ; >
+      au < down ; crawling ; 2009 ; IMA Journal of Numerical Analysis Volume 29 ; 29 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; IMA Journal of Numerical Analysis Volume 30 ; 30 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Industrial and Corporate Change ;
       issn = 0960-6491 ;
@@ -1289,13 +2502,27 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://icc.oxfordjournals.org/
 
-    au < released ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
-    au < released ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Industrial and Corporate Change Volume 17 ; 17 ; >
+      au < down ; crawling ; 2009 ; Industrial and Corporate Change Volume 18 ; 18 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Industrial and Corporate Change Volume 19 ; 19 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Industrial Law Journal ;
       issn = 0305-9332 ;
@@ -1304,27 +2531,54 @@ comment[fampra26] = fetch error
 
     param[base_url] = http://ilj.oxfordjournals.org/
 
-    au < released ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
-    au < released ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Industrial Law Journal Volume 37 ; 37 ; >
+      au < down ; crawling ; 2009 ; Industrial Law Journal Volume 38 ; 38 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Industrial Law Journal Volume 39 ; 39 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = InnovAiT
     >
 
     param[base_url] = http://rcgp-innovait.oxfordjournals.org/
 
-comment[in1] = 500 errors
+    {
 
-    au < released ; 2009 ; InnovAiT Volume 2 ; 2 ; reingest2.clockss.org:8085 >
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2008 ; InnovAiT Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; InnovAiT Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; InnovAiT Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Integrative and Comparative Biology ;
       issn = 1540-7063 ;
@@ -1333,26 +2587,54 @@ comment[in1] = 500 errors
 
     param[base_url] = http://icb.oxfordjournals.org/
 
-    au < released ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
-    au < released ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Integrative and Comparative Biology Volume 48 ; 48 ; >
+      au < down ; crawling ; 2009 ; Integrative and Comparative Biology Volume 49 ; 49 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Integrative and Comparative Biology Volume 50 ; 50 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Interdisciplinary Studies in Literature and Environment
     >
 
     param[base_url] = http://isle.oxfordjournals.org/
 
-    au < released ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
-    au < released ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Interdisciplinary Studies in Literature and Environment Volume 15 ; 15 ; >
+      au < down ; crawling ; 2009 ; Interdisciplinary Studies in Literature and Environment Volume 16 ; 16 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < testing ; exists ; 2010 ; Interdisciplinary Studies in Literature and Environment Volume 17 ; 17 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Immunology ;
       issn = 0953-8178 ;
@@ -1361,13 +2643,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://intimm.oxfordjournals.org/
 
-    au < released ; 2008 ; International Immunology Volume 20 ; 20 ; >
-    au < released ; 2009 ; International Immunology Volume 21 ; 21 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Immunology Volume 20 ; 20 ; >
+      au < down ; crawling ; 2009 ; International Immunology Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Immunology Volume 22 ; 22 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Constitutional Law ;
       issn = 1474-2640 ;
@@ -1376,13 +2672,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://icon.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
-    au < released ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Constitutional Law Volume 6 ; 6 ; >
+      au < down ; crawling ; 2009 ; International Journal of Constitutional Law Volume 7 ; 7 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Constitutional Law Volume 8 ; 8 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Epidemiology ;
       issn = 0300-5771 ;
@@ -1391,13 +2701,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ije.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
-    au < released ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Epidemiology Volume 37 ; 37 ; >
+      au < down ; crawling ; 2009 ; International Journal of Epidemiology Volume 38 ; 38 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Epidemiology Volume 39 ; 39 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Law and Information Technology ;
       issn = 0967-0769 ;
@@ -1406,13 +2730,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijlit.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
-    au < released ; 2009 ; International Journal of Law and Information Technology Volume 17 ; 17 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Law and Information Technology Volume 16 ; 16 ; >
+      au < down ; crawling ; 2009 ; International Journal of Law and Information Technology Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Law and Information Technology Volume 18 ; 18 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Law, Policy and the Family ;
       issn = 1360-9939 ;
@@ -1421,13 +2759,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://lawfam.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
-    au < released ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Law, Policy and the Family Volume 22 ; 22 ; >
+      au < down ; crawling ; 2009 ; International Journal of Law, Policy and the Family Volume 23 ; 23 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Law, Policy and the Family Volume 24 ; 24 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Lexicography ;
       issn = 0950-3846 ;
@@ -1436,26 +2788,54 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijl.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
-    au < released ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Lexicography Volume 21 ; 21 ; >
+      au < down ; crawling ; 2009 ; International Journal of Lexicography Volume 22 ; 22 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Lexicography Volume 23 ; 23 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Low-Carbon Technologies
     >
 
     param[base_url] = http://ijlct.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
-    au < released ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Low-Carbon Technologies Volume 3 ; 3 ; >
+      au < down ; crawling ; 2009 ; International Journal of Low-Carbon Technologies Volume 4 ; 4 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Low-Carbon Technologies Volume 5 ; 5 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Public Opinion Research ;
       issn = 0954-2892 ;
@@ -1464,13 +2844,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijpor.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
-    au < released ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Public Opinion Research Volume 20 ; 20 ; >
+      au < down ; crawling ; 2009 ; International Journal of Public Opinion Research Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Public Opinion Research Volume 22 ; 22 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal for Quality in Health Care ;
       issn = 1353-4505 ;
@@ -1479,13 +2873,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://intqhc.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
-    au < released ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal for Quality in Health Care Volume 20 ; 20 ; >
+      au < down ; crawling ; 2009 ; International Journal for Quality in Health Care Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal for Quality in Health Care Volume 22 ; 22 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Refugee Law ;
       issn = 0953-8186 ;
@@ -1494,13 +2902,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijrl.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
-    au < released ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Refugee Law Volume 20 ; 20 ; >
+      au < down ; crawling ; 2009 ; International Journal of Refugee Law Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Refugee Law Volume 22 ; 22 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Journal of Transitional Justice ;
       issn = 1752-7716 ;
@@ -1509,25 +2931,53 @@ comment[in1] = 500 errors
 
     param[base_url] = http://ijtj.oxfordjournals.org/
 
-    au < released ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
-    au < released ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Journal of Transitional Justice Volume 2 ; 2 ; >
+      au < down ; crawling ; 2009 ; International Journal of Transitional Justice Volume 3 ; 3 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Journal of Transitional Justice Volume 4 ; 4 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Mathematics Research Notices
     >
 
     param[base_url] = http://imrn.oxfordjournals.org/
 
-    au < released ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2009 ; International Mathematics Research Notices Volume 2009 ; 2009 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Mathematics Research Notices Volume 2010 ; 2010 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = International Relations of the Asia-Pacific ;
       issn = 1470-482X ;
@@ -1536,13 +2986,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://irap.oxfordjournals.org/
 
-    au < released ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
-    au < released ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; International Relations of the Asia-Pacific Volume 8 ; 8 ; >
+      au < down ; crawling ; 2009 ; International Relations of the Asia-Pacific Volume 9 ; 9 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; International Relations of the Asia-Pacific Volume 10 ; 10 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = ITNOW ;
       issn = 1746-5702 ;
@@ -1551,13 +3015,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://itnow.oxfordjournals.org/
 
-    au < released ; 2008 ; ITNOW Volume 50 ; 50 ; >
-    au < released ; 2009 ; ITNOW Volume 51 ; 51 ; reingest1.clockss.org:8082 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; ITNOW Volume 50 ; 50 ; >
+      au < down ; crawling ; 2009 ; ITNOW Volume 51 ; 51 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; ITNOW Volume 52 ; 52 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Japanese Journal of Clinical Oncology ;
       issn = 0368-2811 ;
@@ -1566,13 +3044,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jjco.oxfordjournals.org/
 
-    au < released ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
-    au < released ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Japanese Journal of Clinical Oncology Volume 38 ; 38 ; >
+      au < down ; crawling ; 2009 ; Japanese Journal of Clinical Oncology Volume 39 ; 39 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; Japanese Journal of Clinical Oncology Volume 40 ; 40 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of African Economies ;
       issn = 0963-8024 ;
@@ -1581,13 +3073,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jae.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
-    au < released ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of African Economies Volume 17 ; 17 ; >
+      au < down ; crawling ; 2009 ; Journal of African Economies Volume 18 ; 18 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; Journal of African Economies Volume 19 ; 19 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of the American Academy of Religion ;
       issn = 0002-7189 ;
@@ -1596,13 +3102,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jaar.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
-    au < released ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of the American Academy of Religion Volume 76 ; 76 ; >
+      au < down ; crawling ; 2009 ; Journal of the American Academy of Religion Volume 77 ; 77 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < crawling ; exists ; 2010 ; Journal of the American Academy of Religion Volume 78 ; 78 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Antimicrobial Chemotherapy ;
       issn = 0305-7453 ;
@@ -1611,15 +3131,30 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jac.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
-    au < released ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
-    au < released ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
-    au < released ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 61 ; 61 ; >
+      au < down ; crawling ; 2008 ; Journal of Antimicrobial Chemotherapy Volume 62 ; 62 ; >
+      au < down ; crawling ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 63 ; 63 ; >
+      au < down ; crawling ; 2009 ; Journal of Antimicrobial Chemotherapy Volume 64 ; 64 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 65 ; 65 ; >
+      au < wanted ; exists ; 2010 ; Journal of Antimicrobial Chemotherapy Volume 66 ; 66 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journal of Biochemistry ;
       issn = 0021-924X
@@ -1627,40 +3162,84 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jb.oxfordjournals.org/
 
-    au < released ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
-    au < released ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
-    au < released ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
-    au < released ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Journal of Biochemistry Volume 143 ; 143 ; >
+      au < down ; crawling ; 2008 ; The Journal of Biochemistry Volume 144 ; 144 ; >
+      au < down ; crawling ; 2009 ; The Journal of Biochemistry Volume 145 ; 145 ; >
+      au < down ; crawling ; 2009 ; The Journal of Biochemistry Volume 146 ; 146 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Journal of Biochemistry Volume 147 ; 147 ; >
+      au < wanted ; exists ; 2010 ; The Journal of Biochemistry Volume 148 ; 148 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Church and State
     >
 
     param[base_url] = http://jcs.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Church and State Volume 50 ; 50 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2009 ; Journal of Church and State Volume 51 ; 51 ; >
+      au < wanted ; exists ; 2010 ; Journal of Church and State Volume 52 ; 52 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Competition Law & Economics
     >
 
     param[base_url] = http://jcle.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
-    au < released ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Competition Law & Economics Volume 4 ; 4 ; >
+      au < down ; crawling ; 2009 ; Journal of Competition Law & Economics Volume 5 ; 5 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Competition Law & Economics Volume 6 ; 6 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Conflict and Security Law ;
       issn = 1467-7954 ;
@@ -1669,13 +3248,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jcsl.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
-    au < released ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Conflict and Security Law Volume 13 ; 13 ; >
+      au < down ; crawling ; 2009 ; Journal of Conflict and Security Law Volume 14 ; 14 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Conflict and Security Law Volume 15 ; 15 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journal of Deaf Studies and Deaf Education ;
       issn = 1081-4159 ;
@@ -1684,13 +3277,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jdsde.oxfordjournals.org/
 
-    au < released ; 2008 ; The Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
-    au < released ; 2009 ; The Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Journal of Deaf Studies and Deaf Education Volume 13 ; 13 ; >
+      au < down ; crawling ; 2009 ; The Journal of Deaf Studies and Deaf Education Volume 14 ; 14 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Journal of Deaf Studies and Deaf Education Volume 15 ; 15 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Design History ;
       issn = 0952-4649 ;
@@ -1699,13 +3306,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jdh.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
-    au < released ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Design History Volume 21 ; 21 ; >
+      au < down ; crawling ; 2009 ; Journal of Design History Volume 22 ; 22 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Design History Volume 23 ; 23 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Economic Geography ;
       issn = 1468-2702 ;
@@ -1714,13 +3335,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://joeg.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
-    au < released ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Economic Geography Volume 8 ; 8 ; >
+      au < down ; crawling ; 2009 ; Journal of Economic Geography Volume 9 ; 9 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Economic Geography Volume 10 ; 10 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Electron Microscopy ;
       issn = 0022-0744 ;
@@ -1729,13 +3364,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jmicro.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
-    au < released ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Electron Microscopy Volume 57 ; 57 ; >
+      au < down ; crawling ; 2009 ; Journal of Electron Microscopy Volume 58 ; 58 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Electron Microscopy Volume 59 ; 59 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Environmental Law ;
       issn = 0952-8873 ;
@@ -1744,13 +3393,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jel.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
-    au < released ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Environmental Law Volume 20 ; 20 ; >
+      au < down ; crawling ; 2009 ; Journal of Environmental Law Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Environmental Law Volume 22 ; 22 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Experimental Botany ;
       issn = 0022-0957 ;
@@ -1759,12 +3422,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jxb.oxfordjournals.org/
 
-    au < released ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2008 ; Journal of Experimental Botany Volume 59 ; 59 ; >
+      au < down ; crawling ; 2009 ; Journal of Experimental Botany Volume 60 ; 60 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Experimental Botany Volume 61 ; 61 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Financial Econometrics ;
       issn = 1479-8409 ;
@@ -1773,36 +3451,79 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jfec.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
-    au < released ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Financial Econometrics Volume 6 ; 6 ; >
+      au < down ; crawling ; 2009 ; Journal of Financial Econometrics Volume 7 ; 7 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Financial Econometrics Volume 8 ; 8 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journals of Gerontology: Series A
     >
 
     param[base_url] = http://biomedgerontology.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2009 ; The Journals of Gerontology: Series A Volume 64A ; 64A ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; The Journals of Gerontology: Series A Volume 65A ; 65A ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journals of Gerontology: Series B
     >
 
     param[base_url] = http://psychsocgerontology.oxfordjournals.org/
 
-    au < released ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2009 ; The Journals of Gerontology: Series B Volume 64B ; 64B ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2010 ; The Journals of Gerontology: Series B Volume 65B ; 65B ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Heredity ;
       issn = 0022-1503 ;
@@ -1811,25 +3532,53 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jhered.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
-    au < released ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Heredity Volume 99 ; 99 ; >
+      au < down ; crawling ; 2009 ; Journal of Heredity Volume 100 ; 100 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Heredity Volume 101 ; 101 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journal of Hindu Studies
     >
 
     param[base_url] = http://jhs.oxfordjournals.org/
 
-    au < released ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2009 ; The Journal of Hindu Studies Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Journal of Hindu Studies Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of the History of Collections ;
       issn = 0954-6650 ;
@@ -1838,13 +3587,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jhc.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
-    au < released ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of the History of Collections Volume 20 ; 20 ; >
+      au < down ; crawling ; 2009 ; Journal of the History of Collections Volume 21 ; 21 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of the History of Collections Volume 22 ; 22 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of the History of Medicine and Allied Sciences ;
       issn = 0022-5045 ;
@@ -1853,13 +3616,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jhmas.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
-    au < released ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of the History of Medicine and Allied Sciences Volume 63 ; 63 ; >
+      au < down ; crawling ; 2009 ; Journal of the History of Medicine and Allied Sciences Volume 64 ; 64 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of the History of Medicine and Allied Sciences Volume 65 ; 65 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Human Rights Practice ;
       issn = 1757-9619 ;
@@ -1868,12 +3645,26 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jhrp.oxfordjournals.org/
 
-    au < released ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2009 ; Journal of Human Rights Practice Volume 1 ; 1 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Human Rights Practice Volume 2 ; 2 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Intellectual Property Law & Practice ;
       issn = 1747-1532 ;
@@ -1882,13 +3673,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jiplp.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
-    au < released ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Intellectual Property Law & Practice Volume 3 ; 3 ; >
+      au < down ; crawling ; 2009 ; Journal of Intellectual Property Law & Practice Volume 4 ; 4 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Intellectual Property Law & Practice Volume 5 ; 5 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of International Criminal Justice ;
       issn = 1478-1387 ;
@@ -1897,13 +3702,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jicj.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
-    au < released ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of International Criminal Justice Volume 6 ; 6 ; >
+      au < down ; crawling ; 2009 ; Journal of International Criminal Justice Volume 7 ; 7 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of International Criminal Justice Volume 8 ; 8 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of International Economic Law ;
       issn = 1369-3034 ;
@@ -1912,13 +3731,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jiel.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
-    au < released ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of International Economic Law Volume 11 ; 11 ; >
+      au < down ; crawling ; 2009 ; Journal of International Economic Law Volume 12 ; 12 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of International Economic Law Volume 13 ; 13 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Islamic Studies ;
       issn = 0955-2340 ;
@@ -1927,13 +3760,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jis.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
-    au < released ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Islamic Studies Volume 19 ; 19 ; >
+      au < down ; crawling ; 2009 ; Journal of Islamic Studies Volume 20 ; 20 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Islamic Studies Volume 21 ; 21 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journal of Law, Economics, and Organization ;
       issn = 8756-6222 ;
@@ -1942,13 +3789,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jleo.oxfordjournals.org/
 
-    au < released ; 2008 ; The Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
-    au < released ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Journal of Law, Economics, and Organization Volume 24 ; 24 ; >
+      au < down ; crawling ; 2009 ; The Journal of Law, Economics, and Organization Volume 25 ; 25 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Journal of Law, Economics, and Organization Volume 26 ; 26 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Logic and Computation ;
       issn = 0955-792X ;
@@ -1957,13 +3818,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://logcom.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
-    au < released ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Logic and Computation Volume 18 ; 18 ; >
+      au < down ; crawling ; 2009 ; Journal of Logic and Computation Volume 19 ; 19 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Logic and Computation Volume 20 ; 20 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of the London Mathematical Society ;
       issn = 0024-6107 ;
@@ -1972,28 +3847,57 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jlms.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
-    au < released ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
-    au < released ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
-    au < released ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of the London Mathematical Society Volume 77 ; 77 ; >
+      au < down ; crawling ; 2008 ; Journal of the London Mathematical Society Volume 78 ; 78 ; >
+      au < down ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
+      au < down ; crawling ; 2009 ; Journal of the London Mathematical Society Volume 80 ; 80 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of the London Mathematical Society Volume 79 ; 79 ; >
+      au < wanted ; exists ; 2010 ; Journal of the London Mathematical Society Volume 81 ; 81 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine
     >
 
     param[base_url] = http://jmp.oxfordjournals.org/
 
-    au < released ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
-    au < released ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 33 ; 33 ; >
+      au < down ; crawling ; 2009 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 34 ; 34 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Journal of Medicine and Philosophy: A Forum for Bioethics and Philosophy of Medicine Volume 35 ; 35 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Molecular Cell Biology ;
       issn = 1674-2788
@@ -2001,12 +3905,26 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jmcb.oxfordjournals.org/
 
-    au < released ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2009 ; Journal of Molecular Cell Biology Volume 1 ; 1 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Molecular Cell Biology Volume 2 ; 2 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Molluscan Studies ;
       issn = 0260-1230 ;
@@ -2015,52 +3933,108 @@ comment[in1] = 500 errors
 
     param[base_url] = http://mollus.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
-    au < released ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Molluscan Studies Volume 74 ; 74 ; >
+      au < down ; crawling ; 2009 ; Journal of Molluscan Studies Volume 75 ; 75 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Molluscan Studies Volume 76 ; 76 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = JNCI: Journal of the National Cancer Institute
     >
 
     param[base_url] = http://jnci.oxfordjournals.org/
 
-    au < released ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 ; >
-    au < released ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; JNCI: Journal of the National Cancer Institute Volume 100 ; 100 ; >
+      au < down ; crawling ; 2009 ; JNCI: Journal of the National Cancer Institute Volume 101 ; 101 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; JNCI: Journal of the National Cancer Institute Volume 102 ; 102 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of the International Commission on Radiation Units and Measurements
     >
 
     param[base_url] = http://jicru.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
-    au < released ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of the International Commission on Radiation Units and Measurements Volume 8 ; 8 ; >
+      au < down ; crawling ; 2009 ; Journal of the International Commission on Radiation Units and Measurements Volume 9 ; 9 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of the International Commission on Radiation Units and Measurements Volume 10 ; 10 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journal of World Energy Law & Business
     >
 
     param[base_url] = http://jwelb.oxfordjournals.org/
 
-    au < released ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
-    au < released ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Journal of World Energy Law & Business Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; The Journal of World Energy Law & Business Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Journal of World Energy Law & Business Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Pediatric Psychology ;
       issn = 0146-8693 ;
@@ -2069,13 +4043,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://jpepsy.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
-    au < released ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Pediatric Psychology Volume 33 ; 33 ; >
+      au < down ; crawling ; 2009 ; Journal of Pediatric Psychology Volume 34 ; 34 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Pediatric Psychology Volume 35 ; 35 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Petrology ;
       issn = 0022-3530 ;
@@ -2084,13 +4072,27 @@ comment[in1] = 500 errors
 
     param[base_url] = http://petrology.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
-    au < released ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Petrology Volume 49 ; 49 ; >
+      au < down ; crawling ; 2009 ; Journal of Petrology Volume 50 ; 50 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Petrology Volume 51 ; 51 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Plankton Research ;
       issn = 0142-7873 ;
@@ -2099,26 +4101,54 @@ comment[in1] = 500 errors
 
     param[base_url] = http://plankt.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
-    au < released ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Plankton Research Volume 30 ; 30 ; >
+      au < down ; crawling ; 2009 ; Journal of Plankton Research Volume 31 ; 31 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Plankton Research Volume 32 ; 32 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Plant Ecology
     >
 
-comment[jpe12] = no manifest
-
     param[base_url] = http://jpe.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < exists ; exists ; 2008 ; Journal of Plant Ecology Volume 1 ; 1 ; >
+      au < exists ; exists ; 2009 ; Journal of Plant Ecology Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Plant Ecology Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Public Administration Research and Theory ;
       issn = 1053-1858 ;
@@ -2127,13 +4157,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jpart.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
-    au < released ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Public Administration Research and Theory Volume 18 ; 18 ; >
+      au < down ; crawling ; 2009 ; Journal of Public Administration Research and Theory Volume 19 ; 19 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Public Administration Research and Theory Volume 20 ; 20 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Public Health ;
       issn = 1741-3842 ;
@@ -2142,12 +4186,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jpubhealth.oxfordjournals.org/
 
-    au < released ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < manifest ; exists ; 2008 ; Journal of Public Health Volume 30 ; 30 ; >
+      au < down ; crawling ; 2009 ; Journal of Public Health Volume 31 ; 31 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Public Health Volume 32 ; 32 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Refugee Studies ;
       issn = 0951-6328 ;
@@ -2156,13 +4215,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jrs.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
-    au < released ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Refugee Studies Volume 21 ; 21 ; >
+      au < down ; crawling ; 2009 ; Journal of Refugee Studies Volume 22 ; 22 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Refugee Studies Volume 23 ; 23 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Semantics ;
       issn = 0167-5133 ;
@@ -2171,13 +4244,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jos.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
-    au < released ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Semantics Volume 25 ; 25 ; >
+      au < down ; crawling ; 2009 ; Journal of Semantics Volume 26 ; 26 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Semantics Volume 27 ; 27 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Semitic Studies ;
       issn = 0167-5133 ;
@@ -2186,13 +4273,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jss.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
-    au < released ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Semitic Studies Volume 53 ; 53 ; >
+      au < down ; crawling ; 2009 ; Journal of Semitic Studies Volume 54 ; 54 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Semitic Studies Volume 55 ; 55 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Journal of Theological Studies ;
       issn = 0022-5185 ;
@@ -2201,13 +4302,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jts.oxfordjournals.org/
 
-    au < released ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
-    au < released ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Journal of Theological Studies Volume 59 ; 59 ; >
+      au < down ; crawling ; 2009 ; The Journal of Theological Studies Volume 60 ; 60 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Journal of Theological Studies Volume 61 ; 61 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Topology ;
       issn = 1753-8416 ;
@@ -2216,13 +4331,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://jtopol.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
-    au < released ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Topology Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; Journal of Topology Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Topology Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Journal of Tropical Pediatrics ;
       issn = 0142-6338 ;
@@ -2231,13 +4360,27 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://tropej.oxfordjournals.org/
 
-    au < released ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
-    au < released ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Journal of Tropical Pediatrics Volume 54 ; 54 ; >
+      au < down ; crawling ; 2009 ; Journal of Tropical Pediatrics Volume 55 ; 55 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Journal of Tropical Pediatrics Volume 56 ; 56 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Law, Probability and Risk ;
       issn = 1470-8396 ;
@@ -2246,27 +4389,54 @@ comment[jpe12] = no manifest
 
     param[base_url] = http://lpr.oxfordjournals.org/
 
-    au < released ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
-    au < released ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Law, Probability and Risk Volume 7 ; 7 ; >
+      au < down ; crawling ; 2009 ; Law, Probability and Risk Volume 8 ; 8 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Law, Probability and Risk Volume 9 ; 9 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Leo Baeck Institute Yearbook
     >
 
-comment[leobaeck2] = no manifest
-
     param[base_url] = http://leobaeck.oxfordjournals.org/
 
-    au < released ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2008 ; The Leo Baeck Institute Yearbook Volume 53 ; 53 ; >
+      au < down ; crawling ; 2009 ; The Leo Baeck Institute Yearbook Volume 54 ; 54 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Leo Baeck Institute Yearbook Volume 55 ; 55 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Library ;
       issn = 0024-2160 ;
@@ -2275,13 +4445,27 @@ comment[leobaeck2] = no manifest
 
     param[base_url] = http://library.oxfordjournals.org/
 
-    au < released ; 2008 ; The Library Volume 9 ; 9 ; >
-    au < released ; 2009 ; The Library Volume 10 ; 10 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Library Volume 9 ; 9 ; >
+      au < down ; crawling ; 2009 ; The Library Volume 10 ; 10 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Library Volume 11 ; 11 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Literary Imagination ;
       issn = 1523-9012 ;
@@ -2290,13 +4474,27 @@ comment[leobaeck2] = no manifest
 
     param[base_url] = http://litimag.oxfordjournals.org/
 
-    au < released ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
-    au < released ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Literary Imagination Volume 10 ; 10 ; >
+      au < down ; crawling ; 2009 ; Literary Imagination Volume 11 ; 11 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Literary Imagination Volume 12 ; 12 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Literary and Linguistic Computing ;
       issn = 0268-1145 ;
@@ -2305,13 +4503,27 @@ comment[leobaeck2] = no manifest
 
     param[base_url] = http://llc.oxfordjournals.org/
 
-    au < released ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
-    au < released ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Literary and Linguistic Computing Volume 23 ; 23 ; >
+      au < down ; crawling ; 2009 ; Literary and Linguistic Computing Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Literary and Linguistic Computing Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Literature and Theology ;
       issn = 0269-1205 ;
@@ -2320,39 +4532,81 @@ comment[leobaeck2] = no manifest
 
     param[base_url] = http://litthe.oxfordjournals.org/
 
-    au < released ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
-    au < released ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Literature and Theology Volume 22 ; 22 ; >
+      au < down ; crawling ; 2009 ; Literature and Theology Volume 23 ; 23 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Literature and Theology Volume 24 ; 24 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Logic Journal of the IGPL
     >
 
-comment[j17] = no subscription
-
     param[base_url] = http://jigpal.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < notReady ; exists ; 2008 ; Logic Journal of the IGPL Volume 16 ; 16 ; >
+      au < notReady ; exists ; 2009 ; Logic Journal of the IGPL Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Logic Journal of the IGPL Volume 18 ; 18 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Mathematical Medicine and Biology: A Journal of the IMA
     >
 
     param[base_url] = http://imammb.oxfordjournals.org/
 
-    au < released ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
-    au < released ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 25 ; 25 ; >
+      au < down ; crawling ; 2009 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 26 ; 26 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Mathematical Medicine and Biology: A Journal of the IMA Volume 27 ; 27 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Medical Law Review ;
       issn = 0967-0742 ;
@@ -2361,39 +4615,81 @@ comment[j17] = no subscription
 
     param[base_url] = http://medlaw.oxfordjournals.org/
 
-    au < released ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
-    au < released ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Medical Law Review Volume 16 ; 16 ; >
+      au < down ; crawling ; 2009 ; Medical Law Review Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Medical Law Review Volume 18 ; 18 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = MHR: Basic science of reproductive medicine
     >
 
     param[base_url] = http://molehr.oxfordjournals.org/
 
-    au < released ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
-    au < released ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; MHR: Basic science of reproductive medicine Volume 14 ; 14 ; >
+      au < down ; crawling ; 2009 ; MHR: Basic science of reproductive medicine Volume 15 ; 15 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; MHR: Basic science of reproductive medicine Volume 16 ; 16 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Modern Judaism - A Journal of Jewish Ideas and Experience
     >
 
     param[base_url] = http://mj.oxfordjournals.org/
 
-    au < released ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 ; >
-    au < released ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 28 ; 28 ; >
+      au < down ; crawling ; 2009 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 29 ; 29 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Modern Judaism - A Journal of Jewish Ideas and Experience Volume 30 ; 30 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Molecular Biology and Evolution ;
       issn = 0737-4038 ;
@@ -2402,13 +4698,27 @@ comment[j17] = no subscription
 
     param[base_url] = http://mbe.oxfordjournals.org/
 
-    au < released ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
-    au < released ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Molecular Biology and Evolution Volume 25 ; 25 ; >
+      au < down ; crawling ; 2009 ; Molecular Biology and Evolution Volume 26 ; 26 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Molecular Biology and Evolution Volume 27 ; 27 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Molecular Plant ;
       issn = 1674-2052 ;
@@ -2417,13 +4727,27 @@ comment[j17] = no subscription
 
     param[base_url] = http://mplant.oxfordjournals.org/
 
-comment[mplant] = no manifest page
+    {
 
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < exists ; exists ; 2008 ; Molecular Plant Volume 1 ; 1 ; >
+      au < exists ; exists ; 2009 ; Molecular Plant Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Molecular Plant Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Music and Letters ;
       issn = 0027-4224 ;
@@ -2432,13 +4756,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ml.oxfordjournals.org/
 
-    au < released ; 2008 ; Music and Letters Volume 89 ; 89 ; >
-    au < released ; 2009 ; Music and Letters Volume 90 ; 90 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Music and Letters Volume 89 ; 89 ; >
+      au < down ; crawling ; 2009 ; Music and Letters Volume 90 ; 90 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Music and Letters Volume 91 ; 91 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Mutagenesis ;
       issn = 0267-8357 ;
@@ -2447,13 +4785,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://mutage.oxfordjournals.org/
 
-    au < released ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
-    au < released ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Mutagenesis Volume 23 ; 23 ; >
+      au < down ; crawling ; 2009 ; Mutagenesis Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Mutagenesis Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = NDT Plus ;
       issn = 0931-0509 ;
@@ -2462,13 +4814,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ndtplus.oxfordjournals.org/
 
-    au < released ; 2008 ; NDT Plus Volume 1 ; 1 ; >
-    au < released ; 2009 ; NDT Plus Volume 2 ; 2 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; NDT Plus Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; NDT Plus Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; NDT Plus Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Nephrology Dialysis Transplantation ;
       issn = 0931-0509 ;
@@ -2477,26 +4843,54 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ndt.oxfordjournals.org/
 
-    au < released ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
-    au < released ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Nephrology Dialysis Transplantation Volume 23 ; 23 ; >
+      au < down ; crawling ; 2009 ; Nephrology Dialysis Transplantation Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Nephrology Dialysis Transplantation Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Nicotine and Tobacco Research
     >
 
     param[base_url] = http://ntr.oxfordjournals.org/
 
-    au < released ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 ; >
-    au < released ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Nicotine and Tobacco Research Volume 10 ; 10 ; >
+      au < down ; crawling ; 2009 ; Nicotine and Tobacco Research Volume 11 ; 11 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Nicotine and Tobacco Research Volume 12 ; 12 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Notes and Queries ;
       issn = 0029-3970 ;
@@ -2505,13 +4899,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://nq.oxfordjournals.org/
 
-    au < released ; 2008 ; Notes and Queries Volume 55 ; 55 ; >
-    au < released ; 2009 ; Notes and Queries Volume 56 ; 56 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Notes and Queries Volume 55 ; 55 ; >
+      au < down ; crawling ; 2009 ; Notes and Queries Volume 56 ; 56 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Notes and Queries Volume 57 ; 57 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Nucleic Acids Research ;
       issn = 0305-1048 ;
@@ -2520,13 +4928,28 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://nar.oxfordjournals.org/
 
-    au < released ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
-    au < released ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Nucleic Acids Research Volume 36 ; 36 ; >
+      au < down ; crawling ; 2009 ; Nucleic Acids Research Volume 37 ; 37 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Nucleic Acids Research Volume 38 ; 38 ; >
+      au < testing ; exists ; 2011 ; Nucleic Acids Research Volume 39 ; 39 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Nucleic Acids Symposium Series ;
       issn = 0261-3166 ;
@@ -2535,13 +4958,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://nass.oxfordjournals.org/
 
-    au < released ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 ; >
-    au < released ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Nucleic Acids Symposium Series Volume 52 ; 52 ; >
+      au < down ; crawling ; 2009 ; Nucleic Acids Symposium Series Volume 53 ; 53 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Nucleic Acids Symposium Series Volume 54 ; 54 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Occupational Medicine ;
       issn = 0962-7480 ;
@@ -2550,13 +4987,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://occmed.oxfordjournals.org/
 
-    au < released ; 2008 ; Occupational Medicine Volume 58 ; 58 ; >
-    au < released ; 2009 ; Occupational Medicine Volume 59 ; 59 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Occupational Medicine Volume 58 ; 58 ; >
+      au < down ; crawling ; 2009 ; Occupational Medicine Volume 59 ; 59 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Occupational Medicine Volume 60 ; 60 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Oral History Review ;
       issn = 0094-0798 ;
@@ -2565,13 +5016,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ohr.oxfordjournals.org/
 
-    au < released ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
-    au < released ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Oral History Review Volume 35 ; 35 ; >
+      au < down ; crawling ; 2009 ; The Oral History Review Volume 36 ; 36 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Oral History Review Volume 37 ; 37 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Oxford Art Journal ;
       issn = 0142-6540 ;
@@ -2580,13 +5045,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://oaj.oxfordjournals.org/
 
-    au < released ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
-    au < released ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Oxford Art Journal Volume 31 ; 31 ; >
+      au < down ; crawling ; 2009 ; Oxford Art Journal Volume 32 ; 32 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Oxford Art Journal Volume 33 ; 33 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Oxford Economic Papers ;
       issn = 0030-7653 ;
@@ -2595,13 +5074,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://oep.oxfordjournals.org/
 
-    au < released ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
-    au < released ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Oxford Economic Papers Volume 60 ; 60 ; >
+      au < down ; crawling ; 2009 ; Oxford Economic Papers Volume 61 ; 61 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Oxford Economic Papers Volume 62 ; 62 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Oxford Journal of Legal Studies ;
       issn = 0143-6503 ;
@@ -2610,13 +5103,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ojls.oxfordjournals.org/
 
-    au < released ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
-    au < released ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Oxford Journal of Legal Studies Volume 28 ; 28 ; >
+      au < down ; crawling ; 2009 ; Oxford Journal of Legal Studies Volume 29 ; 29 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Oxford Journal of Legal Studies Volume 30 ; 30 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Oxford Review of Economic Policy ;
       issn = 0266-903X ;
@@ -2625,13 +5132,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://oxrep.oxfordjournals.org/
 
-    au < released ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
-    au < released ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Oxford Review of Economic Policy Volume 24 ; 24 ; >
+      au < down ; crawling ; 2009 ; Oxford Review of Economic Policy Volume 25 ; 25 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Oxford Review of Economic Policy Volume 26 ; 26 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Parliamentary Affairs ;
       issn = 0031-2290 ;
@@ -2640,13 +5161,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://pa.oxfordjournals.org/
 
-    au < released ; 2008 ; Parliamentary Affairs Volume 61 ; 61 ; >
-    au < released ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Parliamentary Affairs Volume 61 ; 61 ; >
+      au < down ; crawling ; 2009 ; Parliamentary Affairs Volume 62 ; 62 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Parliamentary Affairs Volume 63 ; 63 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Past & Present ;
       issn = 0031-2746 ;
@@ -2655,17 +5190,32 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://past.oxfordjournals.org/
 
-    au < released ; 2008 ; Past & Present Volume 198 ; 198 ; >
-    au < released ; 2008 ; Past & Present Volume 199 ; 199 ; >
-    au < released ; 2008 ; Past & Present Volume 200 ; 200 ; >
-    au < released ; 2008 ; Past & Present Volume 201 ; 201 ; >
-    au < released ; 2009 ; Past & Present Volume 202 ; 202 ; >
-    au < released ; 2009 ; Past & Present Volume 203 ; 203 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Past & Present Volume 198 ; 198 ; >
+      au < down ; crawling ; 2008 ; Past & Present Volume 199 ; 199 ; >
+      au < down ; crawling ; 2008 ; Past & Present Volume 200 ; 200 ; >
+      au < down ; crawling ; 2008 ; Past & Present Volume 201 ; 201 ; >
+      au < down ; crawling ; 2009 ; Past & Present Volume 202 ; 202 ; >
+      au < down ; crawling ; 2009 ; Past & Present Volume 203 ; 203 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Past & Present Volume 202 ; 202 ; >
+      au < wanted ; exists ; 2010 ; Past & Present Volume 204 ; 204 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Philosophia Mathematica ;
       issn = 0031-8019 ;
@@ -2674,13 +5224,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://philmat.oxfordjournals.org/
 
-    au < released ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
-    au < released ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Philosophia Mathematica Volume 16 ; 16 ; >
+      au < down ; crawling ; 2009 ; Philosophia Mathematica Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Philosophia Mathematica Volume 18 ; 18 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Plant and Cell Physiology ;
       issn = 0032-0781 ;
@@ -2689,26 +5253,54 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://pcp.oxfordjournals.org/
 
-    au < released ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
-    au < released ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Plant and Cell Physiology Volume 49 ; 49 ; >
+      au < down ; crawling ; 2009 ; Plant and Cell Physiology Volume 50 ; 50 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Plant and Cell Physiology Volume 51 ; 51 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Policing: A Journal of Policy and Practice
     >
 
     param[base_url] = http://policing.oxfordjournals.org/
 
-    au < released ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
-    au < released ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Policing: A Journal of Policy and Practice Volume 2 ; 2 ; >
+      au < down ; crawling ; 2009 ; Policing: A Journal of Policy and Practice Volume 3 ; 3 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Policing: A Journal of Policy and Practice Volume 4 ; 4 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Political Analysis ;
       issn = 1047-1987 ;
@@ -2717,13 +5309,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://pan.oxfordjournals.org/
 
-    au < released ; 2008 ; Political Analysis Volume 16 ; 16 ; >
-    au < released ; 2009 ; Political Analysis Volume 17 ; 17 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Political Analysis Volume 16 ; 16 ; >
+      au < down ; crawling ; 2009 ; Political Analysis Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Political Analysis Volume 18 ; 18 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Proceedings of the London Mathematical Society ;
       issn = 0024-6115 ;
@@ -2732,28 +5338,57 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://plms.oxfordjournals.org/
 
-    au < released ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
-    au < released ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
-    au < released ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
-    au < released ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Proceedings of the London Mathematical Society Volume 96 ; 96 ; >
+      au < down ; crawling ; 2008 ; Proceedings of the London Mathematical Society Volume 97 ; 97 ; >
+      au < down ; crawling ; 2009 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
+      au < down ; crawling ; 2009 ; Proceedings of the London Mathematical Society Volume 99 ; 99 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Proceedings of the London Mathematical Society Volume 98 ; 98 ; >
+      au < wanted ; exists ; 2010 ; Proceedings of the London Mathematical Society Volume 100 ; 100 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Protein Engineering, Design and Selection
     >
 
     param[base_url] = http://peds.oxfordjournals.org/
 
-    au < released ; 2008 ; Protein Engineering, Design and Selection Volume 21 ; 21 ; >
-    au < released ; 2009 ; Protein Engineering, Design and Selection Volume 22 ; 22 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Protein Engineering, Design and Selection Volume 21 ; 21 ; >
+      au < down ; crawling ; 2009 ; Protein Engineering, Design and Selection Volume 22 ; 22 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Protein Engineering, Design and Selection Volume 23 ; 23 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Public Health Ethics ;
       issn = 1072-7928 ;
@@ -2762,13 +5397,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://phe.oxfordjournals.org/
 
-    au < released ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
-    au < released ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Public Health Ethics Volume 1 ; 1 ; >
+      au < down ; crawling ; 2009 ; Public Health Ethics Volume 2 ; 2 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Public Health Ethics Volume 3 ; 3 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Public Opinion Quarterly ;
       issn = 0033-362X ;
@@ -2777,13 +5426,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://poq.oxfordjournals.org/
 
-    au < released ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
-    au < released ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Public Opinion Quarterly Volume 72 ; 72 ; >
+      au < down ; crawling ; 2009 ; Public Opinion Quarterly Volume 73 ; 73 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Public Opinion Quarterly Volume 74 ; 74 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Publius: The Journal of Federalism ;
       issn = 0048-5950 ;
@@ -2792,25 +5455,54 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://publius.oxfordjournals.org/
 
-    au < released ; 2008 ; Publius: The Journal of Federalism Volume 38 ; 38 ; >
-    au < released ; 2009 ; Publius: The Journal of Federalism Volume 39 ; 39 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Publius: The Journal of Federalism Volume 38 ; 38 ; >
+      au < down ; crawling ; 2009 ; Publius: The Journal of Federalism Volume 39 ; 39 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Publius: The Journal of Federalism Volume 40 ; 40 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = QJM: An International Journal of Medicine
     >
 
     param[base_url] = http://qjmed.oxfordjournals.org/
 
-    au < released ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; QJM: An International Journal of Medicine Volume 101 ; 101 ; >
+      au < testing ; exists ; 2009 ; QJM: An International Journal of Medicine Volume 102 ; 102 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; QJM: An International Journal of Medicine Volume 103 ; 103 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Quarterly Journal of Mathematics ;
       issn = 0033-5606 ;
@@ -2819,12 +5511,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://qjmath.oxfordjournals.org/
 
-    au < released ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Quarterly Journal of Mathematics Volume 59 ; 59 ; >
+      au < testing ; exists ; 2009 ; The Quarterly Journal of Mathematics Volume 60 ; 60 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Quarterly Journal of Mathematics Volume 61 ; 61 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Quarterly Journal of Mechanics and Applied Mathematics ;
       issn = 0033-5614 ;
@@ -2833,12 +5540,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://qjmam.oxfordjournals.org/
 
-    au < released ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 61 ; 61 ; >
+      au < testing ; exists ; 2009 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 62 ; 62 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Quarterly Journal of Mechanics and Applied Mathematics Volume 63 ; 63 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Radiation Protection Dosimetry ;
       issn = 0144-8420 ;
@@ -2847,19 +5569,36 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rpd.oxfordjournals.org/
 
-    au < released ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
-    au < released ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
-    au < released ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
-    au < released ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
-    au < released ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
-    au < released ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
-    au < released ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; reingest2.clockss.org:8085 >
-    au < released ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 128 ; 128 ; >
+      au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 130 ; 130 ; >
+      au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 131 ; 131 ; >
+      au < down ; crawling ; 2008 ; Radiation Protection Dosimetry Volume 132 ; 132 ; >
+      au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
+      au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
+      au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
+      au < down ; crawling ; 2009 ; Radiation Protection Dosimetry Volume 136 ; 136 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Radiation Protection Dosimetry Volume 133 ; 133 ; >
+      au < wanted ; exists ; 2010 ; Radiation Protection Dosimetry Volume 134 ; 134 ; >
+      au < wanted ; exists ; 2010 ; Radiation Protection Dosimetry Volume 135 ; 135 ; >
+      au < wanted ; exists ; 2010 ; Radiation Protection Dosimetry Volume 137 ; 137 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Refugee Survey Quarterly ;
       issn = 1020-4067 ;
@@ -2868,26 +5607,54 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rsq.oxfordjournals.org/
 
-    au < released ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
-    au < released ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Refugee Survey Quarterly Volume 27 ; 27 ; >
+      au < down ; crawling ; 2009 ; Refugee Survey Quarterly Volume 28 ; 28 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Refugee Survey Quarterly Volume 29 ; 29 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Reports of Patent, Design and Trade Mark Cases
     >
 
     param[base_url] = http://rpc.oxfordjournals.org/
 
-    au < released ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
-    au < released ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Reports of Patent, Design and Trade Mark Cases Volume 125 ; 125 ; >
+      au < down ; crawling ; 2009 ; Reports of Patent, Design and Trade Mark Cases Volume 126 ; 126 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Reports of Patent, Design and Trade Mark Cases Volume 127 ; 127 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Review of Environmental Economics and Policy ;
       issn = 0034-6551 ;
@@ -2896,13 +5663,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://reep.oxfordjournals.org/
 
-    au < released ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
-    au < released ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Review of Environmental Economics and Policy Volume 2 ; 2 ; >
+      au < down ; crawling ; 2009 ; Review of Environmental Economics and Policy Volume 3 ; 3 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Review of Environmental Economics and Policy Volume 4 ; 4 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Review of Finance ;
       issn = 1572-3097 ;
@@ -2911,13 +5692,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rof.oxfordjournals.org/
 
-    au < released ; 2008 ; Review of Finance Volume 12 ; 12 ; >
-    au < released ; 2009 ; Review of Finance Volume 13 ; 13 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Review of Finance Volume 12 ; 12 ; >
+      au < down ; crawling ; 2009 ; Review of Finance Volume 13 ; 13 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Review of Finance Volume 14 ; 14 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Review of Financial Studies ;
       issn = 0893-9454 ;
@@ -2926,13 +5721,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rfs.oxfordjournals.org/
 
-    au < released ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
-    au < released ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Review of Financial Studies Volume 21 ; 21 ; >
+      au < down ; crawling ; 2009 ; The Review of Financial Studies Volume 22 ; 22 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Review of Financial Studies Volume 23 ; 23 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Rheumatology ;
       issn = 1462-0324 ;
@@ -2941,13 +5750,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://rheumatology.oxfordjournals.org/
 
-    au < released ; 2008 ; Rheumatology Volume 47 ; 47 ; >
-    au < released ; 2009 ; Rheumatology Volume 48 ; 48 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Rheumatology Volume 47 ; 47 ; >
+      au < down ; crawling ; 2009 ; Rheumatology Volume 48 ; 48 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Rheumatology Volume 49 ; 49 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Schizophrenia Bulletin ;
       issn = 0586-7614 ;
@@ -2956,13 +5779,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://schizophreniabulletin.oxfordjournals.org/
 
-    au < released ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
-    au < released ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Schizophrenia Bulletin Volume 34 ; 34 ; >
+      au < down ; crawling ; 2009 ; Schizophrenia Bulletin Volume 35 ; 35 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Schizophrenia Bulletin Volume 36 ; 36 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Screen ;
       issn = 0036-9543 ;
@@ -2971,13 +5808,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://screen.oxfordjournals.org/
 
-    au < released ; 2008 ; Screen Volume 49 ; 49 ; >
-    au < released ; 2009 ; Screen Volume 50 ; 50 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Screen Volume 49 ; 49 ; >
+      au < down ; crawling ; 2009 ; Screen Volume 50 ; 50 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Screen Volume 51 ; 51 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Social Cognitive and Affective Neuroscience ;
       issn = 1749-5016 ;
@@ -2986,13 +5837,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://scan.oxfordjournals.org/
 
-    au < released ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
-    au < released ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Social Cognitive and Affective Neuroscience Volume 3 ; 3 ; >
+      au < down ; crawling ; 2009 ; Social Cognitive and Affective Neuroscience Volume 4 ; 4 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Social Cognitive and Affective Neuroscience Volume 5 ; 5 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Social History of Medicine ;
       issn = 0951-631X ;
@@ -3001,13 +5866,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://shm.oxfordjournals.org/
 
-    au < released ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
-    au < released ; 2009 ; Social History of Medicine Volume 22 ; 22 ; reingest2.clockss.org:8085 >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Social History of Medicine Volume 21 ; 21 ; >
+      au < down ; crawling ; 2009 ; Social History of Medicine Volume 22 ; 22 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Social History of Medicine Volume 23 ; 23 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Social Politics: International Studies in Gender, State & Society ;
       issn = 1072-4745 ;
@@ -3016,12 +5895,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://sp.oxfordjournals.org/
 
-    au < released ; 2008 ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Social Politics: International Studies in Gender, State & Society Volume 15 ; 15 ; >
+      au < testing ; exists ; 2009 ; Social Politics: International Studies in Gender, State & Society Volume 16 ; 16 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Social Politics: International Studies in Gender, State & Society Volume 17 ; 17 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Social Science Japan Journal ;
       issn = 1369-1465 ;
@@ -3030,12 +5924,27 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ssjj.oxfordjournals.org/
 
-    au < released ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Social Science Japan Journal Volume 11 ; 11 ; >
+      au < testing ; exists ; 2009 ; Social Science Japan Journal Volume 12 ; 12 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Social Science Japan Journal Volume 13 ; 13 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Socio-Economic Review ;
       issn = 1475-1461 ;
@@ -3044,23 +5953,53 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://ser.oxfordjournals.org/
 
-    au < released ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Socio-Economic Review Volume 6 ; 6 ; >
+      au < testing ; exists ; 2009 ; Socio-Economic Review Volume 7 ; 7 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Socio-Economic Review Volume 8 ; 8 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Sociology of Religion
     >
 
     param[base_url] = http://socrel.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < testing ; exists ; 2009 ; Sociology of Religion Volume 70 ; 70 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Sociology of Religion Volume 71 ; 71 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Statute Law Review ;
       issn = 0144-3593 ;
@@ -3069,36 +6008,81 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://slr.oxfordjournals.org/
 
-    au < released ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Statute Law Review Volume 29 ; 29 ; >
+      au < testing ; exists ; 2009 ; Statute Law Review Volume 30 ; 30 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Statute Law Review Volume 31 ; 31 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Systematic Biology
     >
 
     param[base_url] = http://sysbio.oxfordjournals.org/
 
-    au < released ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Systematic Biology Volume 57 ; 57 ; >
+      au < testing ; exists ; 2009 ; Systematic Biology Volume 58 ; 58 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Systematic Biology Volume 59 ; 59 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Teaching Mathematics and its Applications: An International Journal of the IMA
     >
 
     param[base_url] = http://teamat.oxfordjournals.org/
 
-    au < released ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 27 ; 27 ; >
+      au < testing ; exists ; 2009 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 28 ; 28 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Teaching Mathematics and its Applications: An International Journal of the IMA Volume 29 ; 29 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Toxicological Sciences ;
       issn = 1096-6080 ;
@@ -3107,33 +6091,70 @@ comment[mplant] = no manifest page
 
     param[base_url] = http://toxsci.oxfordjournals.org/
 
-    au < released ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
-    au < released ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
-    au < released ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
-    au < released ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
-    au < released ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
-    au < released ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
-    au < released ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Toxicological Sciences Volume 101 ; 101 ; >
+      au < down ; crawling ; 2008 ; Toxicological Sciences Volume 102 ; 102 ; >
+      au < down ; crawling ; 2008 ; Toxicological Sciences Volume 103 ; 103 ; >
+      au < down ; crawling ; 2008 ; Toxicological Sciences Volume 104 ; 104 ; >
+      au < down ; crawling ; 2008 ; Toxicological Sciences Volume 105 ; 105 ; >
+      au < down ; crawling ; 2008 ; Toxicological Sciences Volume 106 ; 106 ; >
+      au < down ; crawling ; 2009 ; Toxicological Sciences Volume 107 ; 107 ; >
+      au < down ; crawling ; 2009 ; Toxicological Sciences Volume 108 ; 108 ; >
+      au < down ; crawling ; 2009 ; Toxicological Sciences Volume 109 ; 109 ; >
+      au < down ; crawling ; 2009 ; Toxicological Sciences Volume 110 ; 110 ; >
+      au < down ; crawling ; 2009 ; Toxicological Sciences Volume 111 ; 111 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2009 ; Toxicological Sciences Volume 112 ; 112 ; >
+      au < wanted ; exists ; 2010 ; Toxicological Sciences Volume 113 ; 113 ; >
+      au < wanted ; exists ; 2010 ; Toxicological Sciences Volume 114 ; 114 ; >
+      au < wanted ; exists ; 2010 ; Toxicological Sciences Volume 115 ; 115 ; >
+      au < wanted ; exists ; 2010 ; Toxicological Sciences Volume 116 ; 116 ; >
+      au < wanted ; exists ; 2010 ; Toxicological Sciences Volume 117 ; 117 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Tree Physiology ;
       issn = 0829-318X ;
       eissn = 1758-4469
     >
 
-comment[tre28] = no manifest
-
     param[base_url] = http://treephys.oxfordjournals.org/
 
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < exists ; exists ; 2008 ; Tree Physiology Volume 28 ; 28 ; >
+      au < testing ; exists ; 2009 ; Tree Physiology Volume 29 ; 29 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Tree Physiology Volume 30 ; 30 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Trusts & Trustees ;
       issn = 1363-1780
@@ -3141,12 +6162,27 @@ comment[tre28] = no manifest
 
     param[base_url] = http://tandt.oxfordjournals.org/
 
-    au < released ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Trusts & Trustees Volume 14 ; 14 ; >
+      au < testing ; exists ; 2009 ; Trusts & Trustees Volume 15 ; 15 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Trusts & Trustees Volume 16 ; 16 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = Twentieth Century British History ;
       issn = 0955-2359 ;
@@ -3155,12 +6191,27 @@ comment[tre28] = no manifest
 
     param[base_url] = http://tcbh.oxfordjournals.org/
 
-    au < released ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; Twentieth Century British History Volume 19 ; 19 ; >
+      au < testing ; exists ; 2009 ; Twentieth Century British History Volume 20 ; 20 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; Twentieth Century British History Volume 21 ; 21 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The World Bank Economic Review ;
       issn = 0258-6770 ;
@@ -3169,12 +6220,27 @@ comment[tre28] = no manifest
 
     param[base_url] = http://wber.oxfordjournals.org/
 
-    au < released ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The World Bank Economic Review Volume 22 ; 22 ; >
+      au < testing ; exists ; 2009 ; The World Bank Economic Review Volume 23 ; 23 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The World Bank Economic Review Volume 24 ; 24 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The World Bank Research Observer ;
       issn = 0257-3032 ;
@@ -3183,12 +6249,27 @@ comment[tre28] = no manifest
 
     param[base_url] = http://wbro.oxfordjournals.org/
 
-    au < released ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The World Bank Research Observer Volume 23 ; 23 ; >
+      au < testing ; exists ; 2009 ; The World Bank Research Observer Volume 24 ; 24 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The World Bank Research Observer Volume 25 ; 25 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Year's Work in Critical and Cultural Theory ;
       issn = 1077-4254 ;
@@ -3197,12 +6278,27 @@ comment[tre28] = no manifest
 
     param[base_url] = http://ywcct.oxfordjournals.org/
 
-    au < released ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Year's Work in Critical and Cultural Theory Volume 16 ; 16 ; >
+      au < testing ; exists ; 2009 ; The Year's Work in Critical and Cultural Theory Volume 17 ; 17 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < wanted ; exists ; 2010 ; The Year's Work in Critical and Cultural Theory Volume 18 ; 18 ; >
+
+    }
 
   }
 
   {
-
+  
     title <
       name = The Year's Work in English Studies ;
       issn = 0084-4144 ;
@@ -3211,9 +6307,23 @@ comment[tre28] = no manifest
 
     param[base_url] = http://ywes.oxfordjournals.org/
 
-    au < released ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
+    {
+
+      pluginSuffix = ClockssHighWirePlugin
+
+      au < down ; crawling ; 2008 ; The Year's Work in English Studies Volume 87 ; 87 ; >
+
+    }
+
+    {
+
+      pluginSuffix = ClockssHighWirePressH20Plugin
+
+      au < manifest ; exists ; 2009 ; The Year's Work in English Studies Volume 88 ; 88 ; >
+      au < wanted ; exists ; 2010 ; The Year's Work in English Studies Volume 89 ; 89 ; >
+
+    }
 
   }
 
 }
-

@@ -5,7 +5,7 @@
   >
 
   plugin = org.lockss.plugin.coactionpublishing.ClockssCoActionPublishingPlugin
-  implicit < status ; year ; name ; param[year] >
+  implicit < status ; status2 ; year ; name ; param[year] >
 
   {
 
@@ -17,7 +17,7 @@
     param[base_url] = http://www.innovationandentrepreneurship.net/
     param[journal_id] = aie
 
-    au < released ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 2010 >
+    au < released ; crawling ; 2010 ; Annals of Innovation & Entrepreneurship Volume 1 ; 2010 >
 
   }
     
@@ -31,7 +31,7 @@
     param[base_url] = http://www.childlitaesthetics.net/
     param[journal_id] = blft
 
-    au < ready ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 2010 >
+    au < released ; manifest ; 2010 ; BLFT: Barnelitterært forskningstidsskrift / Nordic Journal of ChildLit Aesthetics Volume 1 ; 2010 >
 
   }
     
@@ -45,7 +45,7 @@
     param[base_url] = http://www.diabeticfootandankle.net/
     param[journal_id] = dfa
 
-    au < released ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 2010 >
+    au < released ; crawling ; 2010 ; Diabetic Foot & Ankle Volume 1 ; 2010 >
 
   }
     
@@ -60,9 +60,9 @@
     param[base_url] = http://www.ethicsandglobalpolitics.net/
     param[journal_id] = egp
 
-    au < manifest ; 2008 ; Ethics & Global Politics Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Ethics & Global Politics Volume 2 ; 2009 >
-    au < released ; 2010 ; Ethics & Global Politics Volume 3 ; 2010 >
+    au < manifest ; exists ; 2008 ; Ethics & Global Politics Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Ethics & Global Politics Volume 2 ; 2009 >
+    au < released ; crawling ; 2010 ; Ethics & Global Politics Volume 3 ; 2010 >
 
   }
     
@@ -77,15 +77,15 @@
     param[base_url] = http://www.foodandnutritionresearch.net/
     param[journal_id] = fnr
 
-    au < manifest ; 2002 ; Food & Nutrition Research Volume 46 ; 2002 >
-    au < manifest ; 2003 ; Food & Nutrition Research Volume 47 ; 2003 >
-    au < manifest ; 2004 ; Food & Nutrition Research Volume 48 ; 2004 >
-    au < manifest ; 2005 ; Food & Nutrition Research Volume 49 ; 2005 >
-    au < manifest ; 2006 ; Food & Nutrition Research Volume 50 ; 2006 >
-    au < manifest ; 2007 ; Food & Nutrition Research Volume 51 ; 2007 >
-    au < manifest ; 2008 ; Food & Nutrition Research Volume 52 ; 2008 >
-    au < manifest ; 2009 ; Food & Nutrition Research Volume 53 ; 2009 >
-    au < released ; 2010 ; Food & Nutrition Research Volume 54 ; 2010 >
+    au < manifest ; exists ; 2002 ; Food & Nutrition Research Volume 46 ; 2002 >
+    au < manifest ; exists ; 2003 ; Food & Nutrition Research Volume 47 ; 2003 >
+    au < manifest ; exists ; 2004 ; Food & Nutrition Research Volume 48 ; 2004 >
+    au < manifest ; exists ; 2005 ; Food & Nutrition Research Volume 49 ; 2005 >
+    au < manifest ; exists ; 2006 ; Food & Nutrition Research Volume 50 ; 2006 >
+    au < manifest ; exists ; 2007 ; Food & Nutrition Research Volume 51 ; 2007 >
+    au < manifest ; exists ; 2008 ; Food & Nutrition Research Volume 52 ; 2008 >
+    au < manifest ; exists ; 2009 ; Food & Nutrition Research Volume 53 ; 2009 >
+    au < released ; crawling ; 2010 ; Food & Nutrition Research Volume 54 ; 2010 >
 
   }
 
@@ -99,9 +99,9 @@
     param[base_url] = http://www.globalhealthaction.net/
     param[journal_id] = gha
 
-    au < manifest ; 2008 ; Global Health Action Volume 1 ; 2008 >
-    au < manifest ; 2009 ; Global Health Action Volume 2 ; 2009 >
-    au < released ; 2010 ; Global Health Action Volume 3 ; 2010 >
+    au < manifest ; exists ; 2008 ; Global Health Action Volume 1 ; 2008 >
+    au < manifest ; exists ; 2009 ; Global Health Action Volume 2 ; 2009 >
+    au < released ; crawling ; 2010 ; Global Health Action Volume 3 ; 2010 >
 
   }
 
@@ -116,11 +116,11 @@
     param[base_url] = http://www.ijqhw.net/
     param[journal_id] = qhw
 
-    au < manifest ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 2006 >
-    au < manifest ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2007 >
-    au < manifest ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 2008 >
-    au < manifest ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 2009 >
-    au < released ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 2010 >
+    au < manifest ; exists ; 2006 ; International Journal of Qualitative Studies on Health and Well-being Volume 1 ; 2006 >
+    au < manifest ; exists ; 2007 ; International Journal of Qualitative Studies on Health and Well-being Volume 2 ; 2007 >
+    au < manifest ; exists ; 2008 ; International Journal of Qualitative Studies on Health and Well-being Volume 3 ; 2008 >
+    au < manifest ; exists ; 2009 ; International Journal of Qualitative Studies on Health and Well-being Volume 4 ; 2009 >
+    au < released ; crawling ; 2010 ; International Journal of Qualitative Studies on Health and Well-being Volume 5 ; 2010 >
 
   }
 
@@ -134,8 +134,8 @@
     param[base_url] = http://www.aestheticsandculture.net/
     param[journal_id] = jac
 
-    au < manifest ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 2009 >
-    au < released ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2010 >
+    au < manifest ; exists ; 2009 ; Journal of Aesthetics & Culture Volume 1 ; 2009 >
+    au < released ; crawling ; 2010 ; Journal of Aesthetics & Culture Volume 2 ; 2010 >
 
   }
 
@@ -149,8 +149,8 @@
     param[base_url] = http://www.journaloforalmicrobiology.net/
     param[journal_id] = jom
 
-    au < manifest ; 2009 ; Journal of Oral Microbiology Volume 1 ; 2009 >
-    au < released ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2010 >
+    au < manifest ; exists ; 2009 ; Journal of Oral Microbiology Volume 1 ; 2009 >
+    au < released ; crawling ; 2010 ; Journal of Oral Microbiology Volume 2 ; 2010 >
 
   }
 
@@ -165,11 +165,11 @@
     param[base_url] = http://www.libyanjournalofmedicine.net/
     param[journal_id] = ljm
 
-    au < manifest ; 2006 ; Libyan Journal of Medicine Volume 1 ; 2006 >
-    au < manifest ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2007 >
-    au < manifest ; 2008 ; Libyan Journal of Medicine Volume 3 ; 2008 >
-    au < manifest ; 2009 ; Libyan Journal of Medicine Volume 4 ; 2009 >
-    au < released ; 2010 ; Libyan Journal of Medicine Volume 5 ; 2010 >
+    au < manifest ; exists ; 2006 ; Libyan Journal of Medicine Volume 1 ; 2006 >
+    au < manifest ; exists ; 2007 ; Libyan Journal of Medicine Volume 2 ; 2007 >
+    au < manifest ; exists ; 2008 ; Libyan Journal of Medicine Volume 3 ; 2008 >
+    au < manifest ; exists ; 2009 ; Libyan Journal of Medicine Volume 4 ; 2009 >
+    au < released ; crawling ; 2010 ; Libyan Journal of Medicine Volume 5 ; 2010 >
 
   }
 
@@ -183,7 +183,7 @@
     param[base_url] = http://www.mechanicalcirculatorysupport.net/
     param[journal_id] = mcs
 
-    au < released ; 2010 ; Mechanical Circulatory Support Volume 1 ; 2010 >
+    au < released ; crawling ; 2010 ; Mechanical Circulatory Support Volume 1 ; 2010 >
 
   }
 
@@ -197,21 +197,21 @@
     param[base_url] = http://www.med-ed-online.net/
     param[journal_id] = meo
 
-    au < manifest ; 1996 ; Medical Education Online Volume 1 ; 1996 >
-    au < manifest ; 1997 ; Medical Education Online Volume 2 ; 1997 >
-    au < manifest ; 1998 ; Medical Education Online Volume 3 ; 1998 >
-    au < manifest ; 1999 ; Medical Education Online Volume 4 ; 1999 >
-    au < manifest ; 2000 ; Medical Education Online Volume 5 ; 2000 >
-    au < manifest ; 2001 ; Medical Education Online Volume 6 ; 2001 >
-    au < manifest ; 2002 ; Medical Education Online Volume 7 ; 2002 >
-    au < manifest ; 2003 ; Medical Education Online Volume 8 ; 2003 >
-    au < manifest ; 2004 ; Medical Education Online Volume 9 ; 2004 >
-    au < manifest ; 2005 ; Medical Education Online Volume 10 ; 2005 >
-    au < manifest ; 2006 ; Medical Education Online Volume 11 ; 2006 >
-    au < manifest ; 2007 ; Medical Education Online Volume 12 ; 2007 >
-    au < manifest ; 2008 ; Medical Education Online Volume 13 ; 2008 >
-    au < manifest ; 2009 ; Medical Education Online Volume 14 ; 2009 >
-    au < released ; 2010 ; Medical Education Online Volume 15 ; 2010 >
+    au < manifest ; exists ; 1996 ; Medical Education Online Volume 1 ; 1996 >
+    au < manifest ; exists ; 1997 ; Medical Education Online Volume 2 ; 1997 >
+    au < manifest ; exists ; 1998 ; Medical Education Online Volume 3 ; 1998 >
+    au < manifest ; exists ; 1999 ; Medical Education Online Volume 4 ; 1999 >
+    au < manifest ; exists ; 2000 ; Medical Education Online Volume 5 ; 2000 >
+    au < manifest ; exists ; 2001 ; Medical Education Online Volume 6 ; 2001 >
+    au < manifest ; exists ; 2002 ; Medical Education Online Volume 7 ; 2002 >
+    au < manifest ; exists ; 2003 ; Medical Education Online Volume 8 ; 2003 >
+    au < manifest ; exists ; 2004 ; Medical Education Online Volume 9 ; 2004 >
+    au < manifest ; exists ; 2005 ; Medical Education Online Volume 10 ; 2005 >
+    au < manifest ; exists ; 2006 ; Medical Education Online Volume 11 ; 2006 >
+    au < manifest ; exists ; 2007 ; Medical Education Online Volume 12 ; 2007 >
+    au < manifest ; exists ; 2008 ; Medical Education Online Volume 13 ; 2008 >
+    au < manifest ; exists ; 2009 ; Medical Education Online Volume 14 ; 2009 >
+    au < released ; crawling ; 2010 ; Medical Education Online Volume 15 ; 2010 >
     
   }
 
@@ -225,7 +225,7 @@
     param[base_url] = http://www.nano-reviews.net/
     param[journal_id] = nano
 
-    au < released ; 2010 ; Nano Reviews Volume 1 ; 2010 >
+    au < released ; crawling ; 2010 ; Nano Reviews Volume 1 ; 2010 >
 
   }
 

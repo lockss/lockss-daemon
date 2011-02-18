@@ -6,7 +6,7 @@
 
   plugin = org.lockss.plugin.edinburgh.ClockssEdinburghUniversityPressPlugin
   param[base_url] = http://www.euppublishing.com/
-  implicit < status ; year ; name ; param[volume_name] >
+  implicit < status ; status2 ; year ; name ; param[volume_name] >
 
   {
 
@@ -18,17 +18,17 @@
 
     param[journal_id] = afr
 
-    au < manifest ; 2000 ; Africa Volume 70 ; 70 >
-    au < manifest ; 2001 ; Africa Volume 71 ; 71 >
-    au < manifest ; 2002 ; Africa Volume 72 ; 72 >
-    au < manifest ; 2003 ; Africa Volume 73 ; 73 >
-    au < manifest ; 2004 ; Africa Volume 74 ; 74 >
-    au < manifest ; 2005 ; Africa Volume 75 ; 75 >
-    au < manifest ; 2006 ; Africa Volume 76 ; 76 >
-    au < manifest ; 2007 ; Africa Volume 77 ; 77 >
-    au < manifest ; 2008 ; Africa Volume 78 ; 78 >
-    au < manifest ; 2009 ; Africa Volume 79 ; 79 >
-    au < released ; 2010 ; Africa Volume 80 ; 80 >
+    au < manifest ; exists ; 2000 ; Africa Volume 70 ; 70 >
+    au < manifest ; exists ; 2001 ; Africa Volume 71 ; 71 >
+    au < manifest ; exists ; 2002 ; Africa Volume 72 ; 72 >
+    au < manifest ; exists ; 2003 ; Africa Volume 73 ; 73 >
+    au < manifest ; exists ; 2004 ; Africa Volume 74 ; 74 >
+    au < manifest ; exists ; 2005 ; Africa Volume 75 ; 75 >
+    au < manifest ; exists ; 2006 ; Africa Volume 76 ; 76 >
+    au < manifest ; exists ; 2007 ; Africa Volume 77 ; 77 >
+    au < manifest ; exists ; 2008 ; Africa Volume 78 ; 78 >
+    au < manifest ; exists ; 2009 ; Africa Volume 79 ; 79 >
+    au < released ; crawling ; 2010 ; Africa Volume 80 ; 80 >
 
   }
 
@@ -42,12 +42,12 @@
 
     param[journal_id] = abib
 
-    au < manifest ; 2004 ; Africa Bibliography Volume 2004 ; 2004 >
-    au < manifest ; 2005 ; Africa Bibliography Volume 2005 ; 2005 >
-    au < manifest ; 2006 ; Africa Bibliography Volume 2006 ; 2006 >
-    au < manifest ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 >
-    au < manifest ; 2009 ; Africa Bibliography Volume 2008 (2009) ; 2008 >
-    au < ready ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 >
+    au < manifest ; exists ; 2004 ; Africa Bibliography Volume 2004 ; 2004 >
+    au < manifest ; exists ; 2005 ; Africa Bibliography Volume 2005 ; 2005 >
+    au < manifest ; exists ; 2006 ; Africa Bibliography Volume 2006 ; 2006 >
+    au < manifest ; exists ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 >
+    au < manifest ; exists ; 2009 ; Africa Bibliography Volume 2008 (2009) ; 2008 >
+    au < released ; manifest ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 >
 
   }
 
@@ -61,12 +61,12 @@
 
     param[journal_id] = ajicl
 
-    au < manifest ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
-    au < manifest ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
-    au < manifest ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
-    au < manifest ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
-    au < manifest ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
-    au < released ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
+    au < manifest ; exists ; 2005 ; African Journal of International and Comparative Law Volume 13 ; 13 >
+    au < manifest ; exists ; 2006 ; African Journal of International and Comparative Law Volume 14 ; 14 >
+    au < manifest ; exists ; 2007 ; African Journal of International and Comparative Law Volume 15 ; 15 >
+    au < manifest ; exists ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
+    au < manifest ; exists ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
+    au < released ; crawling ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
 
   }
 
@@ -80,13 +80,13 @@
 
     param[journal_id] = arch
 
-    au < manifest ; 2003 ; Architectural Heritage Volume 14 ; 14 >
-    au < manifest ; 2004 ; Architectural Heritage Volume 15 ; 15 >
-    au < manifest ; 2005 ; Architectural Heritage Volume 16 ; 16 >
-    au < manifest ; 2006 ; Architectural Heritage Volume 17 ; 17 >
-    au < manifest ; 2007 ; Architectural Heritage Volume 18 ; 18 >
-    au < manifest ; 2008 ; Architectural Heritage Volume 19 ; 19 >
-    au < manifest ; 2009 ; Architectural Heritage Volume 20 ; 20 >
+    au < manifest ; exists ; 2003 ; Architectural Heritage Volume 14 ; 14 >
+    au < manifest ; exists ; 2004 ; Architectural Heritage Volume 15 ; 15 >
+    au < manifest ; exists ; 2005 ; Architectural Heritage Volume 16 ; 16 >
+    au < manifest ; exists ; 2006 ; Architectural Heritage Volume 17 ; 17 >
+    au < manifest ; exists ; 2007 ; Architectural Heritage Volume 18 ; 18 >
+    au < manifest ; exists ; 2008 ; Architectural Heritage Volume 19 ; 19 >
+    au < manifest ; exists ; 2009 ; Architectural Heritage Volume 20 ; 20 >
 
   }
 
@@ -100,14 +100,14 @@
 
     param[journal_id] = anh
 
-    au < manifest ; 2003 ; Archives of Natural History Volume 30 ; 30 >
-    au < manifest ; 2004 ; Archives of Natural History Volume 31 ; 31 >
-    au < manifest ; 2005 ; Archives of Natural History Volume 32 ; 32 >
-    au < manifest ; 2006 ; Archives of Natural History Volume 33 ; 33 >
-    au < manifest ; 2007 ; Archives of Natural History Volume 34 ; 34 >
-    au < manifest ; 2008 ; Archives of Natural History Volume 35 ; 35 >
-    au < manifest ; 2009 ; Archives of Natural History Volume 36 ; 36 >
-    au < released ; 2010 ; Archives of Natural History Volume 37 ; 37 >
+    au < manifest ; exists ; 2003 ; Archives of Natural History Volume 30 ; 30 >
+    au < manifest ; exists ; 2004 ; Archives of Natural History Volume 31 ; 31 >
+    au < manifest ; exists ; 2005 ; Archives of Natural History Volume 32 ; 32 >
+    au < manifest ; exists ; 2006 ; Archives of Natural History Volume 33 ; 33 >
+    au < manifest ; exists ; 2007 ; Archives of Natural History Volume 34 ; 34 >
+    au < manifest ; exists ; 2008 ; Archives of Natural History Volume 35 ; 35 >
+    au < manifest ; exists ; 2009 ; Archives of Natural History Volume 36 ; 36 >
+    au < released ; crawling ; 2010 ; Archives of Natural History Volume 37 ; 37 >
 
   }
 
@@ -121,10 +121,10 @@
 
     param[journal_id] = bjj
 
-    au < manifest ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
-    au < manifest ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
-    au < manifest ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
-    au < released ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
+    au < manifest ; exists ; 2007 ; Ben Jonson Journal Volume 14 ; 14 >
+    au < manifest ; exists ; 2008 ; Ben Jonson Journal Volume 15 ; 15 >
+    au < manifest ; exists ; 2009 ; Ben Jonson Journal Volume 16 ; 16 >
+    au < released ; crawling ; 2010 ; Ben Jonson Journal Volume 17 ; 17 >
 
   }
 
@@ -138,8 +138,8 @@
 
     param[journal_id] = brw
 
-    au < ready ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
-    au < ready ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
+    au < released ; manifest ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
+    au < released ; manifest ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
 
   }
 
@@ -153,13 +153,13 @@
 
     param[journal_id] = ccs
 
-    au < manifest ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
-    au < manifest ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
-    au < manifest ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
-    au < manifest ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
-    au < manifest ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
-    au < manifest ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
-    au < released ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
+    au < manifest ; exists ; 2004 ; Comparative Critical Studies Volume 1 ; 1 >
+    au < manifest ; exists ; 2005 ; Comparative Critical Studies Volume 2 ; 2 >
+    au < manifest ; exists ; 2006 ; Comparative Critical Studies Volume 3 ; 3 >
+    au < manifest ; exists ; 2007 ; Comparative Critical Studies Volume 4 ; 4 >
+    au < manifest ; exists ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
+    au < manifest ; exists ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
+    au < released ; crawling ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
 
   }
 
@@ -173,11 +173,11 @@
 
     param[journal_id] = cor
 
-    au < manifest ; 2006 ; Corpora Volume 1 ; 1 >
-    au < manifest ; 2007 ; Corpora Volume 2 ; 2 >
-    au < manifest ; 2008 ; Corpora Volume 3 ; 3 >
-    au < released ; 2009 ; Corpora Volume 4 ; 4 >
-    au < ready ; 2010 ; Corpora Volume 5 ; 5 >
+    au < manifest ; exists ; 2006 ; Corpora Volume 1 ; 1 >
+    au < manifest ; exists ; 2007 ; Corpora Volume 2 ; 2 >
+    au < manifest ; exists ; 2008 ; Corpora Volume 3 ; 3 >
+    au < released ; crawling ; 2009 ; Corpora Volume 4 ; 4 >
+    au < released ; manifest ; 2010 ; Corpora Volume 5 ; 5 >
 
   }
 
@@ -191,17 +191,17 @@
 
     param[journal_id] = drs
 
-    au < manifest ; 2000 ; Dance Research Volume 18 ; 18 >
-    au < manifest ; 2001 ; Dance Research Volume 19 ; 19 >
-    au < manifest ; 2002 ; Dance Research Volume 20 ; 20 >
-    au < manifest ; 2003 ; Dance Research Volume 21 ; 21 >
-    au < manifest ; 2004 ; Dance Research Volume 22 ; 22 >
-    au < manifest ; 2005 ; Dance Research Volume 23 ; 23 >
-    au < manifest ; 2006 ; Dance Research Volume 24 ; 24 >
-    au < manifest ; 2007 ; Dance Research Volume 25 ; 25 >
-    au < manifest ; 2008 ; Dance Research Volume 26 ; 26 >
-    au < manifest ; 2009 ; Dance Research Volume 27 ; 27 >
-    au < released ; 2010 ; Dance Research Volume 28 ; 28 >
+    au < manifest ; exists ; 2000 ; Dance Research Volume 18 ; 18 >
+    au < manifest ; exists ; 2001 ; Dance Research Volume 19 ; 19 >
+    au < manifest ; exists ; 2002 ; Dance Research Volume 20 ; 20 >
+    au < manifest ; exists ; 2003 ; Dance Research Volume 21 ; 21 >
+    au < manifest ; exists ; 2004 ; Dance Research Volume 22 ; 22 >
+    au < manifest ; exists ; 2005 ; Dance Research Volume 23 ; 23 >
+    au < manifest ; exists ; 2006 ; Dance Research Volume 24 ; 24 >
+    au < manifest ; exists ; 2007 ; Dance Research Volume 25 ; 25 >
+    au < manifest ; exists ; 2008 ; Dance Research Volume 26 ; 26 >
+    au < manifest ; exists ; 2009 ; Dance Research Volume 27 ; 27 >
+    au < released ; crawling ; 2010 ; Dance Research Volume 28 ; 28 >
 
   }
 
@@ -215,10 +215,10 @@
 
     param[journal_id] = dls
 
-    au < manifest ; 2007 ; Deleuze Studies Volume 1 ; 1 >
-    au < manifest ; 2008 ; Deleuze Studies Volume 2 ; 2 >
-    au < manifest ; 2009 ; Deleuze Studies Volume 3 ; 3 >
-    au < released ; 2010 ; Deleuze Studies Volume 4 ; 4 >
+    au < manifest ; exists ; 2007 ; Deleuze Studies Volume 1 ; 1 >
+    au < manifest ; exists ; 2008 ; Deleuze Studies Volume 2 ; 2 >
+    au < manifest ; exists ; 2009 ; Deleuze Studies Volume 3 ; 3 >
+    au < released ; crawling ; 2010 ; Deleuze Studies Volume 4 ; 4 >
 
   }
 
@@ -232,9 +232,9 @@
 
     param[journal_id] = drt
 
-    au < manifest ; 2008 ; Derrida Today Volume 1 ; 1 >
-    au < manifest ; 2009 ; Derrida Today Volume 2 ; 2 >
-    au < released ; 2010 ; Derrida Today Volume 3 ; 3 >
+    au < manifest ; exists ; 2008 ; Derrida Today Volume 1 ; 1 >
+    au < manifest ; exists ; 2009 ; Derrida Today Volume 2 ; 2 >
+    au < released ; crawling ; 2010 ; Derrida Today Volume 3 ; 3 >
 
   }
 
@@ -248,13 +248,13 @@
 
     param[journal_id] = elr
 
-    au < manifest ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
-    au < manifest ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
-    au < manifest ; 2006 ; Edinburgh Law Review Volume 10 ; 10 >
-    au < manifest ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
-    au < manifest ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
-    au < manifest ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
-    au < released ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
+    au < manifest ; exists ; 2004 ; Edinburgh Law Review Volume 8 ; 8 >
+    au < manifest ; exists ; 2005 ; Edinburgh Law Review Volume 9 ; 9 >
+    au < manifest ; exists ; 2006 ; Edinburgh Law Review Volume 10 ; 10 >
+    au < manifest ; exists ; 2007 ; Edinburgh Law Review Volume 11 ; 11 >
+    au < manifest ; exists ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
+    au < manifest ; exists ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
+    au < released ; crawling ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
 
   }
 
@@ -268,13 +268,13 @@
 
     param[journal_id] = epi
 
-    au < manifest ; 2004 ; Episteme Volume 1 ; 1 >
-    au < manifest ; 2005 ; Episteme Volume 2 ; 2 >
-    au < manifest ; 2006 ; Episteme Volume 3 ; 3 >
-    au < manifest ; 2007 ; Episteme Volume 4 ; 4 >
-    au < manifest ; 2008 ; Episteme Volume 5 ; 5 >
-    au < manifest ; 2009 ; Episteme Volume 6 ; 6 >
-    au < released ; 2010 ; Episteme Volume 7 ; 7 >
+    au < manifest ; exists ; 2004 ; Episteme Volume 1 ; 1 >
+    au < manifest ; exists ; 2005 ; Episteme Volume 2 ; 2 >
+    au < manifest ; exists ; 2006 ; Episteme Volume 3 ; 3 >
+    au < manifest ; exists ; 2007 ; Episteme Volume 4 ; 4 >
+    au < manifest ; exists ; 2008 ; Episteme Volume 5 ; 5 >
+    au < manifest ; exists ; 2009 ; Episteme Volume 6 ; 6 >
+    au < released ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
 
   }
 
@@ -288,13 +288,13 @@
 
     param[journal_id] = hls
 
-    au < manifest ; 2004 ; Holy Land Studies Volume 3 ; 3 >
-    au < manifest ; 2005 ; Holy Land Studies Volume 4 ; 4 >
-    au < manifest ; 2006 ; Holy Land Studies Volume 5 ; 5 >
-    au < manifest ; 2007 ; Holy Land Studies Volume 6 ; 6 >
-    au < manifest ; 2008 ; Holy Land Studies Volume 7 ; 7 >
-    au < manifest ; 2009 ; Holy Land Studies Volume 8 ; 8 >
-    au < released ; 2010 ; Holy Land Studies Volume 9 ; 9 >
+    au < manifest ; exists ; 2004 ; Holy Land Studies Volume 3 ; 3 >
+    au < manifest ; exists ; 2005 ; Holy Land Studies Volume 4 ; 4 >
+    au < manifest ; exists ; 2006 ; Holy Land Studies Volume 5 ; 5 >
+    au < manifest ; exists ; 2007 ; Holy Land Studies Volume 6 ; 6 >
+    au < manifest ; exists ; 2008 ; Holy Land Studies Volume 7 ; 7 >
+    au < manifest ; exists ; 2009 ; Holy Land Studies Volume 8 ; 8 >
+    au < released ; crawling ; 2010 ; Holy Land Studies Volume 9 ; 9 >
 
   }
 
@@ -308,13 +308,13 @@
 
     param[journal_id] = inr
 
-    au < manifest ; 2004 ; Innes Review Volume 55 ; 55 >
-    au < manifest ; 2005 ; Innes Review Volume 56 ; 56 >
-    au < manifest ; 2006 ; Innes Review Volume 57 ; 57 >
-    au < manifest ; 2007 ; Innes Review Volume 58 ; 58 >
-    au < manifest ; 2008 ; Innes Review Volume 59 ; 59 >
-    au < manifest ; 2009 ; Innes Review Volume 60 ; 60 >
-    au < ready ; 2010 ; Innes Review Volume 61 ; 61 >
+    au < manifest ; exists ; 2004 ; Innes Review Volume 55 ; 55 >
+    au < manifest ; exists ; 2005 ; Innes Review Volume 56 ; 56 >
+    au < manifest ; exists ; 2006 ; Innes Review Volume 57 ; 57 >
+    au < manifest ; exists ; 2007 ; Innes Review Volume 58 ; 58 >
+    au < manifest ; exists ; 2008 ; Innes Review Volume 59 ; 59 >
+    au < manifest ; exists ; 2009 ; Innes Review Volume 60 ; 60 >
+    au < released ; manifest ; 2010 ; Innes Review Volume 61 ; 61 >
 
   }
 
@@ -328,18 +328,18 @@
 
     param[journal_id] = ijhac
 
-    au < manifest ; 1994 ; International Journal of Humanities and Arts Computing Volume 6 (1994) ; 6 >
-    au < manifest ; 1995 ; International Journal of Humanities and Arts Computing Volume 7 (1995) ; 7 >
-    au < manifest ; 1996 ; International Journal of Humanities and Arts Computing Volume 8 (1996) ; 8 >
-    au < manifest ; 1997 ; International Journal of Humanities and Arts Computing Volume 9 (1997) ; 9 >
-    au < manifest ; 1998 ; International Journal of Humanities and Arts Computing Volume 10 (1998) ; 10 >
-    au < manifest ; 1999 ; International Journal of Humanities and Arts Computing Volume 11 (1999) ; 11 >
-    au < manifest ; 2000 ; International Journal of Humanities and Arts Computing Volume 12 (2000) ; 12 >
-    au < manifest ; 2001 ; International Journal of Humanities and Arts Computing Volume 13 (2001) ; 13 >
-    au < manifest ; 2002 ; International Journal of Humanities and Arts Computing Volume 14 (2002) ; 14 >
-    au < manifest ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
-    au < manifest ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
-    au < manifest ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
+    au < manifest ; exists ; 1994 ; International Journal of Humanities and Arts Computing Volume 6 (1994) ; 6 >
+    au < manifest ; exists ; 1995 ; International Journal of Humanities and Arts Computing Volume 7 (1995) ; 7 >
+    au < manifest ; exists ; 1996 ; International Journal of Humanities and Arts Computing Volume 8 (1996) ; 8 >
+    au < manifest ; exists ; 1997 ; International Journal of Humanities and Arts Computing Volume 9 (1997) ; 9 >
+    au < manifest ; exists ; 1998 ; International Journal of Humanities and Arts Computing Volume 10 (1998) ; 10 >
+    au < manifest ; exists ; 1999 ; International Journal of Humanities and Arts Computing Volume 11 (1999) ; 11 >
+    au < manifest ; exists ; 2000 ; International Journal of Humanities and Arts Computing Volume 12 (2000) ; 12 >
+    au < manifest ; exists ; 2001 ; International Journal of Humanities and Arts Computing Volume 13 (2001) ; 13 >
+    au < manifest ; exists ; 2002 ; International Journal of Humanities and Arts Computing Volume 14 (2002) ; 14 >
+    au < manifest ; exists ; 2007 ; International Journal of Humanities and Arts Computing Volume 1 (2007) ; 1 >
+    au < manifest ; exists ; 2008 ; International Journal of Humanities and Arts Computing Volume 2 (2008) ; 2 >
+    au < manifest ; exists ; 2009 ; International Journal of Humanities and Arts Computing Volume 3 (2009) ; 3 >
 
   }
 
@@ -353,9 +353,9 @@
 
     param[journal_id] = ircl
 
-    au < manifest ; 2008 ; International Research in Children's Literature Volume 1 ; 1 >
-    au < manifest ; 2009 ; International Research in Children's Literature Volume 2 ; 2 >
-    au < released ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
+    au < manifest ; exists ; 2008 ; International Research in Children's Literature Volume 1 ; 1 >
+    au < manifest ; exists ; 2009 ; International Research in Children's Literature Volume 2 ; 2 >
+    au < released ; crawling ; 2010 ; International Research in Children's Literature Volume 3 ; 3 >
 
   }
 
@@ -369,9 +369,9 @@
 
     param[journal_id] = jobs
 
-    au < manifest ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 >
-    au < manifest ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
-    au < released ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
+    au < manifest ; exists ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 >
+    au < manifest ; exists ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
+    au < released ; crawling ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
 
   }
 
@@ -385,13 +385,13 @@
 
     param[journal_id] = jbctv
 
-    au < manifest ; 2004 ; Journal of British Cinema and Television Volume 1 ; 1 >
-    au < manifest ; 2005 ; Journal of British Cinema and Television Volume 2 ; 2 >
-    au < manifest ; 2006 ; Journal of British Cinema and Television Volume 3 ; 3 >
-    au < manifest ; 2007 ; Journal of British Cinema and Television Volume 4 ; 4 >
-    au < manifest ; 2008 ; Journal of British Cinema and Television Volume 5 ; 5 >
-    au < manifest ; 2009 ; Journal of British Cinema and Television Volume 6 ; 6 >
-    au < released ; 2010 ; Journal of British Cinema and Television Volume 7 ; 7 >
+    au < manifest ; exists ; 2004 ; Journal of British Cinema and Television Volume 1 ; 1 >
+    au < manifest ; exists ; 2005 ; Journal of British Cinema and Television Volume 2 ; 2 >
+    au < manifest ; exists ; 2006 ; Journal of British Cinema and Television Volume 3 ; 3 >
+    au < manifest ; exists ; 2007 ; Journal of British Cinema and Television Volume 4 ; 4 >
+    au < manifest ; exists ; 2008 ; Journal of British Cinema and Television Volume 5 ; 5 >
+    au < manifest ; exists ; 2009 ; Journal of British Cinema and Television Volume 6 ; 6 >
+    au < released ; crawling ; 2010 ; Journal of British Cinema and Television Volume 7 ; 7 >
 
   }
 
@@ -405,12 +405,12 @@
 
     param[journal_id] = jipt
 
-    au < manifest ; 2005 ; Journal of International Political Theory Volume 1 ; 1 >
-    au < manifest ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
-    au < manifest ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
-    au < manifest ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
-    au < manifest ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
-    au < released ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
+    au < manifest ; exists ; 2005 ; Journal of International Political Theory Volume 1 ; 1 >
+    au < manifest ; exists ; 2006 ; Journal of International Political Theory Volume 2 ; 2 >
+    au < manifest ; exists ; 2007 ; Journal of International Political Theory Volume 3 ; 3 >
+    au < manifest ; exists ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
+    au < manifest ; exists ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
+    au < released ; crawling ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
 
   }
 
@@ -424,11 +424,11 @@
 
     param[journal_id] = jqs
 
-    au < manifest ; 2005 ; Journal of Qur'anic Studies Volume 7 ; 7 >
-    au < manifest ; 2006 ; Journal of Qur'anic Studies Volume 8 ; 8 >
-    au < manifest ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 >
-    au < manifest ; 2008 ; Journal of Qur'anic Studies Volume 10 ; 10 >
-    au < manifest ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 >
+    au < manifest ; exists ; 2005 ; Journal of Qur'anic Studies Volume 7 ; 7 >
+    au < manifest ; exists ; 2006 ; Journal of Qur'anic Studies Volume 8 ; 8 >
+    au < manifest ; exists ; 2007 ; Journal of Qur'anic Studies Volume 9 ; 9 >
+    au < manifest ; exists ; 2008 ; Journal of Qur'anic Studies Volume 10 ; 10 >
+    au < manifest ; exists ; 2009 ; Journal of Qur'anic Studies Volume 11 ; 11 >
 
   }
 
@@ -442,16 +442,16 @@
 
     param[journal_id] = jshs
 
-    au < manifest ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
-    au < manifest ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
-    au < manifest ; 2003 ; Journal of Scottish Historical Studies Volume 23 ; 23 >
-    au < manifest ; 2004 ; Journal of Scottish Historical Studies Volume 24 ; 24 >
-    au < manifest ; 2005 ; Journal of Scottish Historical Studies Volume 25 ; 25 >
-    au < manifest ; 2006 ; Journal of Scottish Historical Studies Volume 26 ; 26 >
-    au < manifest ; 2007 ; Journal of Scottish Historical Studies Volume 27 ; 27 >
-    au < manifest ; 2008 ; Journal of Scottish Historical Studies Volume 28 ; 28 >
-    au < manifest ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
-    au < released ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
+    au < manifest ; exists ; 2001 ; Journal of Scottish Historical Studies Volume 21 ; 21 >
+    au < manifest ; exists ; 2002 ; Journal of Scottish Historical Studies Volume 22 ; 22 >
+    au < manifest ; exists ; 2003 ; Journal of Scottish Historical Studies Volume 23 ; 23 >
+    au < manifest ; exists ; 2004 ; Journal of Scottish Historical Studies Volume 24 ; 24 >
+    au < manifest ; exists ; 2005 ; Journal of Scottish Historical Studies Volume 25 ; 25 >
+    au < manifest ; exists ; 2006 ; Journal of Scottish Historical Studies Volume 26 ; 26 >
+    au < manifest ; exists ; 2007 ; Journal of Scottish Historical Studies Volume 27 ; 27 >
+    au < manifest ; exists ; 2008 ; Journal of Scottish Historical Studies Volume 28 ; 28 >
+    au < manifest ; exists ; 2009 ; Journal of Scottish Historical Studies Volume 29 ; 29 >
+    au < released ; crawling ; 2010 ; Journal of Scottish Historical Studies Volume 30 ; 30 >
 
   }
 
@@ -465,14 +465,14 @@
 
     param[journal_id] = jsp
 
-    au < manifest ; 2003 ; Journal of Scottish Philosophy Volume 1 ; 1 >
-    au < manifest ; 2004 ; Journal of Scottish Philosophy Volume 2 ; 2 >
-    au < manifest ; 2005 ; Journal of Scottish Philosophy Volume 3 ; 3 >
-    au < manifest ; 2006 ; Journal of Scottish Philosophy Volume 4 ; 4 >
-    au < manifest ; 2007 ; Journal of Scottish Philosophy Volume 5 ; 5 >
-    au < manifest ; 2008 ; Journal of Scottish Philosophy Volume 6 ; 6 >
-    au < manifest ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
-    au < released ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
+    au < manifest ; exists ; 2003 ; Journal of Scottish Philosophy Volume 1 ; 1 >
+    au < manifest ; exists ; 2004 ; Journal of Scottish Philosophy Volume 2 ; 2 >
+    au < manifest ; exists ; 2005 ; Journal of Scottish Philosophy Volume 3 ; 3 >
+    au < manifest ; exists ; 2006 ; Journal of Scottish Philosophy Volume 4 ; 4 >
+    au < manifest ; exists ; 2007 ; Journal of Scottish Philosophy Volume 5 ; 5 >
+    au < manifest ; exists ; 2008 ; Journal of Scottish Philosophy Volume 6 ; 6 >
+    au < manifest ; exists ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
+    au < released ; crawling ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
 
   }
 
@@ -486,8 +486,8 @@
 
     param[journal_id] = kms
 
-    au < manifest ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
-    au < ready ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
+    au < manifest ; exists ; 2009 ; Katherine Mansfield Studies Volume 1 ; 1 >
+    au < released ; manifest ; 2010 ; Katherine Mansfield Studies Volume 2 ; 2 >
 
   }
 
@@ -501,11 +501,11 @@
 
     param[journal_id] = mod
 
-    au < manifest ; 2010 ; Modernist Cultures Volume 1 ; 1 >
-    au < manifest ; 2010 ; Modernist Cultures Volume 2 ; 2 >
-    au < manifest ; 2010 ; Modernist Cultures Volume 3 ; 3 >
-    au < manifest ; 2010 ; Modernist Cultures Volume 4 ; 4 >
-    au < released ; 2010 ; Modernist Cultures Volume 5 ; 5 >
+    au < manifest ; exists ; 2010 ; Modernist Cultures Volume 1 ; 1 >
+    au < manifest ; exists ; 2010 ; Modernist Cultures Volume 2 ; 2 >
+    au < manifest ; exists ; 2010 ; Modernist Cultures Volume 3 ; 3 >
+    au < manifest ; exists ; 2010 ; Modernist Cultures Volume 4 ; 4 >
+    au < released ; crawling ; 2010 ; Modernist Cultures Volume 5 ; 5 >
 
 
   }
@@ -520,7 +520,7 @@
 
     param[journal_id] = nor
 
-    au < released ; 2010 ; Northern Scotland Volume 1 ; 1 >
+    au < released ; crawling ; 2010 ; Northern Scotland Volume 1 ; 1 >
 
 
   }
@@ -535,10 +535,10 @@
 
     param[journal_id] = olr
 
-    au < manifest ; 2007 ; Oxford Literary Review Volume 29 ; 29 >
-    au < manifest ; 2008 ; Oxford Literary Review Volume 30 ; 30 >
-    au < manifest ; 2009 ; Oxford Literary Review Volume 31 ; 31 >
-    au < released ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
+    au < manifest ; exists ; 2007 ; Oxford Literary Review Volume 29 ; 29 >
+    au < manifest ; exists ; 2008 ; Oxford Literary Review Volume 30 ; 30 >
+    au < manifest ; exists ; 2009 ; Oxford Literary Review Volume 31 ; 31 >
+    au < released ; crawling ; 2010 ; Oxford Literary Review Volume 32 ; 32 >
 
   }
 
@@ -552,16 +552,16 @@
 
     param[journal_id] = para
 
-    au < manifest ; 2001 ; Paragraph Volume 24 ; 24 >
-    au < manifest ; 2002 ; Paragraph Volume 25 ; 25 >
-    au < manifest ; 2003 ; Paragraph Volume 26 ; 26 >
-    au < manifest ; 2004 ; Paragraph Volume 27 ; 27 >
-    au < manifest ; 2005 ; Paragraph Volume 28 ; 28 >
-    au < manifest ; 2006 ; Paragraph Volume 29 ; 29 >
-    au < manifest ; 2007 ; Paragraph Volume 30 ; 30 >
-    au < manifest ; 2008 ; Paragraph Volume 31 ; 31 >
-    au < manifest ; 2009 ; Paragraph Volume 32 ; 32 >
-    au < released ; 2010 ; Paragraph Volume 33 ; 33 >
+    au < manifest ; exists ; 2001 ; Paragraph Volume 24 ; 24 >
+    au < manifest ; exists ; 2002 ; Paragraph Volume 25 ; 25 >
+    au < manifest ; exists ; 2003 ; Paragraph Volume 26 ; 26 >
+    au < manifest ; exists ; 2004 ; Paragraph Volume 27 ; 27 >
+    au < manifest ; exists ; 2005 ; Paragraph Volume 28 ; 28 >
+    au < manifest ; exists ; 2006 ; Paragraph Volume 29 ; 29 >
+    au < manifest ; exists ; 2007 ; Paragraph Volume 30 ; 30 >
+    au < manifest ; exists ; 2008 ; Paragraph Volume 31 ; 31 >
+    au < manifest ; exists ; 2009 ; Paragraph Volume 32 ; 32 >
+    au < released ; crawling ; 2010 ; Paragraph Volume 33 ; 33 >
 
   }
 
@@ -575,18 +575,18 @@
 
     param[journal_id] = pah
 
-    au < manifest ; 1999 ; Psychoanalysis and History Volume 1 ; 1 >
-    au < manifest ; 2000 ; Psychoanalysis and History Volume 2 ; 2 >
-    au < manifest ; 2001 ; Psychoanalysis and History Volume 3 ; 3 >
-    au < manifest ; 2002 ; Psychoanalysis and History Volume 4 ; 4 >
-    au < manifest ; 2003 ; Psychoanalysis and History Volume 5 ; 5 >
-    au < manifest ; 2004 ; Psychoanalysis and History Volume 6 ; 6 >
-    au < manifest ; 2005 ; Psychoanalysis and History Volume 7 ; 7 >
-    au < manifest ; 2006 ; Psychoanalysis and History Volume 8 ; 8 >
-    au < manifest ; 2007 ; Psychoanalysis and History Volume 9 ; 9 >
-    au < manifest ; 2008 ; Psychoanalysis and History Volume 10 ; 10 >
-    au < manifest ; 2009 ; Psychoanalysis and History Volume 11 ; 11 >
-    au < released ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
+    au < manifest ; exists ; 1999 ; Psychoanalysis and History Volume 1 ; 1 >
+    au < manifest ; exists ; 2000 ; Psychoanalysis and History Volume 2 ; 2 >
+    au < manifest ; exists ; 2001 ; Psychoanalysis and History Volume 3 ; 3 >
+    au < manifest ; exists ; 2002 ; Psychoanalysis and History Volume 4 ; 4 >
+    au < manifest ; exists ; 2003 ; Psychoanalysis and History Volume 5 ; 5 >
+    au < manifest ; exists ; 2004 ; Psychoanalysis and History Volume 6 ; 6 >
+    au < manifest ; exists ; 2005 ; Psychoanalysis and History Volume 7 ; 7 >
+    au < manifest ; exists ; 2006 ; Psychoanalysis and History Volume 8 ; 8 >
+    au < manifest ; exists ; 2007 ; Psychoanalysis and History Volume 9 ; 9 >
+    au < manifest ; exists ; 2008 ; Psychoanalysis and History Volume 10 ; 10 >
+    au < manifest ; exists ; 2009 ; Psychoanalysis and History Volume 11 ; 11 >
+    au < released ; crawling ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
 
   }
 
@@ -600,16 +600,16 @@
 
     param[journal_id] = rom
 
-    au < manifest ; 2001 ; Romanticism Volume 7 ; 7 >
-    au < manifest ; 2002 ; Romanticism Volume 8 ; 8 >
-    au < manifest ; 2003 ; Romanticism Volume 9 ; 9 >
-    au < manifest ; 2004 ; Romanticism Volume 10 ; 10 >
-    au < manifest ; 2005 ; Romanticism Volume 11 ; 11 >
-    au < manifest ; 2006 ; Romanticism Volume 12 ; 12 >
-    au < manifest ; 2007 ; Romanticism Volume 13 ; 13 >
-    au < manifest ; 2008 ; Romanticism Volume 14 ; 14 >
-    au < manifest ; 2009 ; Romanticism Volume 15 ; 15 >
-    au < released ; 2010 ; Romanticism Volume 16 ; 16 >
+    au < manifest ; exists ; 2001 ; Romanticism Volume 7 ; 7 >
+    au < manifest ; exists ; 2002 ; Romanticism Volume 8 ; 8 >
+    au < manifest ; exists ; 2003 ; Romanticism Volume 9 ; 9 >
+    au < manifest ; exists ; 2004 ; Romanticism Volume 10 ; 10 >
+    au < manifest ; exists ; 2005 ; Romanticism Volume 11 ; 11 >
+    au < manifest ; exists ; 2006 ; Romanticism Volume 12 ; 12 >
+    au < manifest ; exists ; 2007 ; Romanticism Volume 13 ; 13 >
+    au < manifest ; exists ; 2008 ; Romanticism Volume 14 ; 14 >
+    au < manifest ; exists ; 2009 ; Romanticism Volume 15 ; 15 >
+    au < released ; crawling ; 2010 ; Romanticism Volume 16 ; 16 >
 
   }
 
@@ -623,13 +623,13 @@
 
     param[journal_id] = saj
 
-    au < manifest ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
-    au < manifest ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
-    au < manifest ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
-    au < manifest ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
-    au < manifest ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
-    au < manifest ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
-    au < manifest ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
+    au < manifest ; exists ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
+    au < manifest ; exists ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
+    au < manifest ; exists ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
+    au < manifest ; exists ; 2006 ; Scottish Archaeological Journal Volume 28 ; 28 >
+    au < manifest ; exists ; 2007 ; Scottish Archaeological Journal Volume 29 ; 29 >
+    au < manifest ; exists ; 2008 ; Scottish Archaeological Journal Volume 30 ; 30 >
+    au < manifest ; exists ; 2009 ; Scottish Archaeological Journal Volume 31 ; 31 >
 
   }
 
@@ -645,17 +645,17 @@ comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010
 
     param[journal_id] = shr
 
-    au < manifest ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
-    au < manifest ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
-    au < manifest ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
-    au < manifest ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
-    au < manifest ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
-    au < manifest ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
-    au < manifest ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
-    au < manifest ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
-    au < manifest ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
-    au < manifest ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
-    au < notReady ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
+    au < manifest ; exists ; 2000 ; Scottish Historical Review Volume 79 ; 79 >
+    au < manifest ; exists ; 2001 ; Scottish Historical Review Volume 80 ; 80 >
+    au < manifest ; exists ; 2002 ; Scottish Historical Review Volume 81 ; 81 >
+    au < manifest ; exists ; 2003 ; Scottish Historical Review Volume 82 ; 82 >
+    au < manifest ; exists ; 2004 ; Scottish Historical Review Volume 83 ; 83 >
+    au < manifest ; exists ; 2005 ; Scottish Historical Review Volume 84 ; 84 >
+    au < manifest ; exists ; 2006 ; Scottish Historical Review Volume 85 ; 85 >
+    au < manifest ; exists ; 2007 ; Scottish Historical Review Volume 86 ; 86 >
+    au < manifest ; exists ; 2008 ; Scottish Historical Review Volume 87 ; 87 >
+    au < manifest ; exists ; 2009 ; Scottish Historical Review Volume 88 ; 88 >
+    au < notReady ; exists ; 2010 ; Scottish Historical Review Volume 89 ; 89 >
 
   }
 
@@ -669,16 +669,16 @@ comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010
 
     param[journal_id] = swc
 
-    au < manifest ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
-    au < manifest ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
-    au < manifest ; 2003 ; Studies in World Christianity Volume 9 ; 9 >
-    au < manifest ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
-    au < manifest ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
-    au < manifest ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
-    au < manifest ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
-    au < manifest ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
-    au < manifest ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
-    au < released ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
+    au < manifest ; exists ; 2001 ; Studies in World Christianity Volume 7 ; 7 >
+    au < manifest ; exists ; 2002 ; Studies in World Christianity Volume 8 ; 8 >
+    au < manifest ; exists ; 2003 ; Studies in World Christianity Volume 9 ; 9 >
+    au < manifest ; exists ; 2004 ; Studies in World Christianity Volume 10 ; 10 >
+    au < manifest ; exists ; 2005 ; Studies in World Christianity Volume 11 ; 11 >
+    au < manifest ; exists ; 2006 ; Studies in World Christianity Volume 12 ; 12 >
+    au < manifest ; exists ; 2007 ; Studies in World Christianity Volume 13 ; 13 >
+    au < manifest ; exists ; 2008 ; Studies in World Christianity Volume 14 ; 14 >
+    au < manifest ; exists ; 2009 ; Studies in World Christianity Volume 15 ; 15 >
+    au < released ; crawling ; 2010 ; Studies in World Christianity Volume 16 ; 16 >
 
   }
 
@@ -705,15 +705,15 @@ comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010
 
     param[journal_id] = tal
 
-    au < manifest ; 2002 ; Translation and Literature Volume 11 ; 11 >
-    au < manifest ; 2003 ; Translation and Literature Volume 12 ; 12 >
-    au < manifest ; 2004 ; Translation and Literature Volume 13 ; 13 >
-    au < manifest ; 2005 ; Translation and Literature Volume 14 ; 14 >
-    au < manifest ; 2006 ; Translation and Literature Volume 15 ; 15 >
-    au < manifest ; 2007 ; Translation and Literature Volume 16 ; 16 >
-    au < manifest ; 2008 ; Translation and Literature Volume 17 ; 17 >
-    au < manifest ; 2009 ; Translation and Literature Volume 18 ; 18 >
-    au < released ; 2010 ; Translation and Literature Volume 19 ; 19 >
+    au < manifest ; exists ; 2002 ; Translation and Literature Volume 11 ; 11 >
+    au < manifest ; exists ; 2003 ; Translation and Literature Volume 12 ; 12 >
+    au < manifest ; exists ; 2004 ; Translation and Literature Volume 13 ; 13 >
+    au < manifest ; exists ; 2005 ; Translation and Literature Volume 14 ; 14 >
+    au < manifest ; exists ; 2006 ; Translation and Literature Volume 15 ; 15 >
+    au < manifest ; exists ; 2007 ; Translation and Literature Volume 16 ; 16 >
+    au < manifest ; exists ; 2008 ; Translation and Literature Volume 17 ; 17 >
+    au < manifest ; exists ; 2009 ; Translation and Literature Volume 18 ; 18 >
+    au < released ; crawling ; 2010 ; Translation and Literature Volume 19 ; 19 >
 
   }
 
@@ -727,9 +727,9 @@ comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010
 
     param[journal_id] = word
 
-    au < manifest ; 2008 ; Word Structure Volume 1 ; 1 >
-    au < manifest ; 2009 ; Word Structure Volume 2 ; 2 >
-    au < released ; 2010 ; Word Structure Volume 3 ; 3 >
+    au < manifest ; exists ; 2008 ; Word Structure Volume 1 ; 1 >
+    au < manifest ; exists ; 2009 ; Word Structure Volume 2 ; 2 >
+    au < released ; crawling ; 2010 ; Word Structure Volume 3 ; 3 >
 
   }
 
