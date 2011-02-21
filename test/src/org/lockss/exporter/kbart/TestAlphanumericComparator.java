@@ -24,6 +24,11 @@ public class TestAlphanumericComparator extends LockssTestCase {
   private static final String nameNumOnly = "0123456789";
   private static final String nameEmpty = "";
 
+  // Accented characters are sorted last by default - the accented name here should come first
+  // if the accents are properly stripped.
+  private static final String accentedName = "Sémiotique Appliquée 1";
+  private static final String unaccentedName = "Semiotique Appliquee 2";
+  
   // Unordered names
   List<String> names = new ArrayList<String>() {{
     add(name0);
@@ -38,6 +43,8 @@ public class TestAlphanumericComparator extends LockssTestCase {
     add(nameTextOnly);
     add(nameNumOnly);
     add(nameEmpty);
+    add(accentedName);
+    add(unaccentedName);
   }};
   // Should be ordered case-insensitively in natural alphabetical order, and by magnitude for number tokens
   final List<String> namesOrdered = new ArrayList<String>() {{
@@ -52,8 +59,11 @@ public class TestAlphanumericComparator extends LockssTestCase {
     add(name2);
     add(name3);
     add(name1);
+    add(accentedName);
+    add(unaccentedName);
     add(nameTextOnly);
   }};  
+  // Should be ordered with capitals before lower case, 
   final List<String> namesOrderedCaseSensitive = new ArrayList<String>() {{
     add(nameEmpty);
     add(name4);
@@ -63,6 +73,8 @@ public class TestAlphanumericComparator extends LockssTestCase {
     add(name2);
     add(name3);
     add(name1);
+    add(accentedName);
+    add(unaccentedName);
     add(nameTextOnly);
     add(name7b);
     add(name7a);
@@ -73,7 +85,9 @@ public class TestAlphanumericComparator extends LockssTestCase {
     // Sort case-insensitively
     Collections.sort(names, new AlphanumericComparator<String>(false));
     for (int i = 0; i < names.size(); i++) {
-      //System.out.println(names.get(i));
+      System.out.println(names.get(i));
+    }
+    for (int i = 0; i < names.size(); i++) {
       assertEquals("Sorting case-insensitively", namesOrdered.get(i), names.get(i));
     }
     

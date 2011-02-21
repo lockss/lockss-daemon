@@ -1,3 +1,35 @@
+/*
+ * $Id: AlphanumericComparator.java,v 1.1.2.4 2011-02-21 19:11:40 easyonthemayo Exp $
+ */
+
+/*
+
+Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.exporter.kbart;
 
 import java.text.Normalizer;
@@ -10,6 +42,7 @@ import java.util.Vector;
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.PatternMatcherInput;
 import org.apache.oro.text.regex.Perl5Matcher;
+import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.Logger;
 import org.lockss.util.RegexpUtil;
 import org.lockss.util.StringUtil;
@@ -46,6 +79,8 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
 
   /** Default case-sensitivity for instances of this comparator. May be overridden in the constructor. */
   private static final boolean CASE_SENSITIVE_DEFAULT = true;
+  /** Whether string comparison ignores accents by default. */
+  private static final boolean UNACCENTED_COMPARISON_DEFAULT = true;
 
   /** Whether this comparator compares case-sensitively. */
   private boolean caseSensitive;
@@ -88,10 +123,21 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
    * @param s the string
    * @return the string with diacritical marks removed
    */
-  private static String toUnaccented(String s) {
+  static String toUnaccented(String s) {
     return Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
   }
  
+  /**
+   * Perform any string normalisation required for comparison. Currently this involves 
+   * removing accents and/or lower casing, based on the flags defined in this class.
+   * @param s the string to normalise
+   * @return the normalised string
+   */
+  private String normalise(String s) {
+    if (UNACCENTED_COMPARISON_DEFAULT) s = toUnaccented(s);
+    return caseSensitive ? s : s.toLowerCase();
+  }
+    
   /**
    * Compare using natural string ordering. This method encapsulates the case-sensitivity aspect of the comparison.
    * 
@@ -100,7 +146,7 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
    * @return
    */
   private int compareStrings(String str1, String str2) {
-    int res = caseSensitive ? str1.compareTo(str2) : str1.toLowerCase().compareTo(str2.toLowerCase()); 
+    int res = normalise(str1).compareTo(normalise(str2)); 
     //log.debug(String.format("[%b] %s %s %s\n", caseSensitive, str1, (res>0?">":res<0?"<":"="), str2));
     //return res > 0 ? 1 : res < 0 ? -1 : 0; 
     return res;
@@ -204,6 +250,9 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
       tok1 = tok1.toLowerCase();
       tok2 = tok2.toLowerCase(); 
     }
+    // Remove accents for comparison
+    tok1 = toUnaccented(tok1);
+    tok2 = toUnaccented(tok2);
 
     // -------------------------------------------------------------------------------------------
     // NOTE

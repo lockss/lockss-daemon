@@ -68,7 +68,7 @@ import org.mortbay.html.TextArea;
 /** 
  * This servlet provides access to holdings metadata, transforming the TDB data 
  * into KBART format data which can be imported into a spreadsheet. There are several 
- * output options - predefined outputs for strict KBART TSV and an HTML version 
+ * output options - predefined outputs for strict KBART CSV, TSV and an HTML version 
  * of the same; and also the option to view customised HTML output of the same data. 
  * The main default formats are represented as links, while the HTML customisation
  * is achieved via a form submission.
@@ -92,12 +92,14 @@ public class ListHoldings extends LockssServlet {
   public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";
   public static final boolean DEFAULT_ENABLE_HOLDINGS = true;
 
-  /** Default output format is TSV. */
-  static final OutputFormat OUTPUT_DEFAULT = OutputFormat.KBART_TSV;
+  /** Default output format is CSV. */
+  static final OutputFormat OUTPUT_DEFAULT = OutputFormat.KBART_CSV;
   /** Default field selection and ordering is KBART. */
   static final PredefinedFieldOrdering FIELD_ORDERING_DEFAULT = PredefinedFieldOrdering.KBART;
   /** Default approach to omitting empty fields - inherited from the exporter base class. */
   static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = KbartExporter.omitEmptyFieldsByDefault;
+
+  private final String ENCODING = KbartExporter.DEFAULT_ENCODING;
   
   // Form parameters and options
   public static final String ACTION_EXPORT = "Export";
@@ -293,7 +295,8 @@ public class ListHoldings extends LockssServlet {
       }
       
       // Set content headers based on the output format
-      resp.setContentType( (isCompress ? "application/zip" : outputFormat.getMimeType()) + ";charset=UTF-8");
+      resp.setContentType( (isCompress ? "application/zip" : outputFormat.getMimeType()) + ";charset="+ENCODING);
+      resp.setCharacterEncoding(ENCODING);
       //resp.setContentLength(  );
 
       // Export to the response OutputStream
@@ -319,11 +322,11 @@ public class ListHoldings extends LockssServlet {
   }
 
   /**
-   * Constructs a string representing the direct update URL of the TSV output.
+   * Constructs a string representing the direct update URL of the default output.
    * 
-   * @return a string URL indicating the direct address for TSV output
+   * @return a string URL indicating the direct address for default output
    */
-  public String getTsvUpdateUrl() {
+  public String getDefaultUpdateUrl() {
     return srvAbsURL(myServletDescr(), "format="+OUTPUT_DEFAULT.name() );
   }
   
@@ -345,7 +348,7 @@ public class ListHoldings extends LockssServlet {
 //
 //    tab.newRow();
 //    tab.newCell("align=\"center\"");
-//    tab.add("The permanent TSV output URL for this server is:<br/><b><font color=\"navy\">"+getTsvUpdateUrl()+"</font></b>");
+//    tab.add("The permanent KBART output URL for this server is:<br/><b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
 //    addBlankRow(tab);
     
     tab.newRow();

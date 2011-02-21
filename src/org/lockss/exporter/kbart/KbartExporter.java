@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.2.2.2 2011-02-21 13:12:11 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.2.2.3 2011-02-21 19:11:40 easyonthemayo Exp $
  */
 
 /*
@@ -32,8 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -50,10 +52,8 @@ import java.util.zip.ZipOutputStream;
 
 import org.lockss.config.ConfigManager;
 import org.lockss.exporter.kbart.KbartExportFilter.FieldOrdering;
-import org.lockss.exporter.kbart.KbartExportFilter.PredefinedFieldOrdering;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 
-import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 
@@ -65,7 +65,9 @@ import org.lockss.util.StringUtil;
  * <p>
  * This class handles the plumbing of output streams, and any 
  * required compression, while formatting of the exported records is performed by 
- * the implementation subclass.
+ * the implementation subclass. A PrintWriter is used for output and is set to automatically 
+ * flush the streams after a <code>println()</code> call is made. Additionally some methods
+ * explicitly call flush(), particularly at the end of the export. 
  * <p>
  * Instances of this class are intended to be used once, for a single export,
  * and only by a single thread.
@@ -77,6 +79,9 @@ public abstract class KbartExporter {
   private static Logger log = Logger.getLogger("KbartExporter");
 
   // Footnotes for the interface options
+  private static final String CSV_NOTE = "Please note that the CSV format adheres to the KBART recommendations "+
+  "and should be used for updating your knowledge bases. Values are quoted where necessary, and quotes within "+
+  "values are escaped.";
   private static final String TSV_NOTE = "Please note that the TSV format adheres to the KBART recommendations "+
   "and should be used for updating your knowledge bases.";
   private static final String HTML_NOTE =  "The HTML version is for manual inspection of our holdings and is less "+
@@ -115,6 +120,11 @@ public abstract class KbartExporter {
   
   /** By default, we don't want to exclude empty fields as it will contravene KBART. */
   public static final boolean omitEmptyFieldsByDefault = false;
+
+  /** Default encoding for output. */
+  public static final String DEFAULT_ENCODING = "UTF-8";
+  /** Default encoding for output. */
+  protected static final boolean AUTO_FLUSH = true;
   
   
   /**
@@ -158,14 +168,15 @@ public abstract class KbartExporter {
    * @param os an OutputStream for the exported data
    */
   protected void setup(OutputStream os) throws IOException {
+    OutputStreamWriter osw = new OutputStreamWriter(os, DEFAULT_ENCODING);
+    // If compression is enabled, wrap the stream in a zip stream before the os writer
     if (compress && outputFormat.asFile()) {
       zip = new ZipOutputStream(os);
       zip.setLevel(9);
       zip.putNextEntry(new ZipEntry(getFilename()));
-      printWriter = new PrintWriter(zip, true);
-    } else {
-      printWriter = new PrintWriter(os, true);
-    } 
+      osw = new OutputStreamWriter(zip, DEFAULT_ENCODING);
+    }
+    printWriter = new PrintWriter(new BufferedWriter(osw), AUTO_FLUSH); 
   }
   
   /**
@@ -195,9 +206,8 @@ public abstract class KbartExporter {
    * <p>
    * The exporter first checks with the filter whether this title should be in the output.
    * 
-   * @param out an OutputStream for the exported data
    */
-  private void doExport(OutputStream os) throws IOException {
+  private void doExport() throws IOException {
     for (KbartTitle title : titles) {
       if (!filter.isTitleForOutput(title)) return;
       exportCount++;
@@ -225,7 +235,7 @@ public abstract class KbartExporter {
     // Setup and perform the export
     try {
       setup(os);
-      doExport(os);
+      doExport();
     } catch (IOException e) {
       recordError("Problem exporting to " + outputFormat.getLabel(), e);
     }
@@ -402,23 +412,23 @@ public abstract class KbartExporter {
   public static enum OutputFormat {
         
     // Don't compress the TSV output
-    KBART_TSV("KBART TSV (tab-separated values)", "text/tab-separated-values", "tsv", true, false, TSV_NOTE) {
+    /*KBART_TSV("KBART TSV (tab-separated values)", "text/tab-separated-values", "tsv", true, false, TSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter) {
 	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this);
 	kbe.setFilter(filter);
 	return kbe;
       }
-    },
+    },*/
     
-    /*KBART_CSV("KBART CSV (comma-separated values)", "text/plain", "csv", true, true) {
+    KBART_CSV("KBART CSV (comma-separated values)", "text/plain", "csv", true, false, CSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter) {
-	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, SeparatedValuesKbartExporter.COMMA);
+	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, SeparatedValuesKbartExporter.SEPARATOR_COMMA);
 	kbe.setFilter(filter);
 	return kbe;
       }
-    },*/
+    },
     
     KBART_HTML("HTML (on-screen)", "text/html", "html", false, false, HTML_NOTE) {
       @Override     
