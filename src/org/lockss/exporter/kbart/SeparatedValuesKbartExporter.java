@@ -1,3 +1,35 @@
+/*
+ * $Id: SeparatedValuesKbartExporter.java,v 1.3 2011-02-21 18:57:04 easyonthemayo Exp $
+ */
+
+/*
+
+Copyright (c) 2010 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.exporter.kbart;
 
 import java.io.IOException;
@@ -10,6 +42,8 @@ import org.lockss.util.StringUtil;
 
 /**
  * Exports records as fields separated by a separator character. By default this is a tab.
+ * When emitting records using a comma separator, fields are quoted if necessary, 
+ * and quotes are escaped.
  * 
  * @author Neil Mayo
  *
@@ -46,14 +80,45 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
   @Override
   protected void setup(OutputStream os) throws IOException {
     // allow the default setup, but write a header line
-    super.setup(os); 
-    printWriter.println(StringUtil.separatedString(KbartTitle.Field.getLabels(), SEPARATOR));
+    super.setup(os);
+    // Write a byte-order mark (BOM) for excel 
+    writeBOM(os);
+    printWriter.println( constructRecord(KbartTitle.Field.getLabels()) );
   }
 
   @Override
-  protected void emitRecord(List<String> values) throws IOException {
-    printWriter.println( StringUtil.separatedString(values, SEPARATOR));
-    printWriter.flush();
+  protected void emitRecord(List<String> values) throws IOException { 
+    printWriter.println( constructRecord(values) );
+  }
+  
+  protected String constructRecord(List<String> values) {
+    // If using a comma, encode as CSV with appropriate quoting and escaping
+    if (SEPARATOR == SEPARATOR_COMMA) {
+      StringBuilder sb = new StringBuilder();
+      // Build the string for those values which need the separator appended
+      for (int i=0; i<values.size()-1; i++) {
+	sb.append(StringUtil.csvEncode(values.get(i)) + SEPARATOR);
+      }
+      // Add the last item
+      sb.append(StringUtil.csvEncode(values.get(values.size()-1)));
+      return sb.toString();
+    }
+    
+    // By default, just join the fields together
+    return StringUtil.separatedString(values, SEPARATOR);
   }
 
+  /**
+   * Write a byte-order mark (BOM) for excel, helping it to recognise UTF-8.
+   * @param os the output stream to write to
+   * @throws IOException
+   */
+  protected void writeBOM(OutputStream os) throws IOException {
+    os.write(0xEF);   // 1st byte of BOM
+    os.write(0xBB);
+    os.write(0xBF);   // last byte of BOM
+  }
+  
+  
 }
+

@@ -113,10 +113,8 @@ public class TestKbartExporter extends LockssTestCase {
 
   /**
    * A callback for the exporter instance. The testing is done here. We
-   * check that the list of values is valid - 
-   * 
-   * not null, and with some sensible 
-   * values for essential fields title id, issn, eissn. The rest of the 
+   * check that the list of values is valid - not null, and with some sensible 
+   * values for essential fields title id, issn, eissn. 
    * Then we check that none of the other fields are null.
    * 
    * @param vals list of values from the title for the exporter's fields
