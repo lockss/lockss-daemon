@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.2.2.1 2011-02-16 23:46:08 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.2.2.2 2011-02-21 13:12:11 easyonthemayo Exp $
  */
 
 /*
