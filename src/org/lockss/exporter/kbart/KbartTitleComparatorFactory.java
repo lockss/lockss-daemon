@@ -51,7 +51,7 @@ public class KbartTitleComparatorFactory {
    */
   private static int compareStrings(String str1, String str2, boolean caseSensitive) {
     int res = caseSensitive ? str1.compareTo(str2) : str1.toLowerCase().compareTo(str2.toLowerCase()); 
-    //System.out.printf("[%b] %s %s %s\n", caseSensitive, str1, (res>0?">":res<0?"<":"="), str2);
+    //log.debug(String.format("[%b] %s %s %s\n", caseSensitive, str1, (res>0?">":res<0?"<":"="), str2));
     //return res > 0 ? 1 : res < 0 ? -1 : 0; 
     return res;
   }

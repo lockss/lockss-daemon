@@ -82,7 +82,7 @@ public class TestKbartExportFilter extends LockssTestCase {
     this.customOrder = getRandomFieldOrder();
     // Random choice of omit empty fields
     this.omitEmptyFields = rand.nextBoolean();
-    System.out.printf("Randomised setup:\n ordering: %s \n omitEmptyFields: %s\n", customOrder, omitEmptyFields);
+    log.info(String.format("Randomised setup:\n ordering: %s \n omitEmptyFields: %s\n", customOrder, omitEmptyFields));
     // Setup filters
     this.identityFilter = KbartExportFilter.identityFilter(titles);
     this.filterIssnOnly = new KbartExportFilter(titles, PredefinedFieldOrdering.ISSN_ONLY, omitEmptyFields);
@@ -185,17 +185,38 @@ public class TestKbartExportFilter extends LockssTestCase {
    */
   public void testIsTitleForOutput() {
     for (KbartExportFilter filter: testFilters) {
-      // Does this filter include a field which differs between the titles?
-      boolean titlesDiffer = !CollectionUtil.isDisjoint(differingFields, filter.getVisibleFieldOrder());
       for (KbartTitle title : titles) {
-	// Should output if it is first title or they differ under this filter
-	boolean shouldOutput = title==title1 || titlesDiffer;
+	boolean shouldOutput = shouldOutputTitle(title, filter);
 	String msg = "Title "+title+" should "+(shouldOutput?"":"not ")+"be output with the filter "+filter;
   	assertEquals(msg, shouldOutput, filter.isTitleForOutput(title));
       }
     }
   }
 
+  /**
+   * Decide if the title should be shown under this filter. The title is shown if:
+   * <ul>
+   *   <li>It is the first title.</li>
+   *   <li>The filter includes range fields.</li>
+   *   <li>The filter includes neither range nor id fields (meaning we can't decide if titles differ).</li>
+   *   <li>The filter includes a field which differs between titles.</li>
+   * </ul>
+   * 
+   * @param title the title under consideration for output
+   * @param filter the output filter in effect
+   * @return
+   */
+  private boolean shouldOutputTitle(KbartTitle title, KbartExportFilter filter) {
+    // Does this filter include a field which differs between the titles?
+    boolean titlesDiffer = !CollectionUtil.isDisjoint(differingFields, filter.getVisibleFieldOrder());
+    // Are range field included in the output?
+    boolean rangeFieldsIncluded = !CollectionUtil.isDisjoint(Field.rangeFields, filter.getVisibleFieldOrder());
+    // Are id field included in the output?
+    boolean idFieldsIncluded= !CollectionUtil.isDisjoint(Field.idFields, filter.getVisibleFieldOrder());
+    return title==title1  || titlesDiffer || rangeFieldsIncluded || (!rangeFieldsIncluded && !idFieldsIncluded);
+  }
+  
+  
   /**
    * Generate a list containing a random ordering of fields.
    * The number of entries in the list will be between 0

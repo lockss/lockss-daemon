@@ -266,10 +266,12 @@ public class KbartExportFilter {
     if (!rangeFieldsIncludedInDisplay && !idFieldsIncludedInDisplay) {
       isOutput = true;      
     }
+
     // Show the title if it is the first or the output includes range fields
     if (lastOutputTitle==null || rangeFieldsIncludedInDisplay) {
       isOutput = true;
     } else if (!isOutput) { // don't do this check if we've already trueified the var
+      // At this point there are no range fields and this is not the first title
       // Show the title if any visible idField differs between titles  
       for (Field f : idFields) {
 	if (visibleFieldOrder.contains(f) && 

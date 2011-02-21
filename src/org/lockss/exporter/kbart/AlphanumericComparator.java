@@ -1,5 +1,7 @@
 package org.lockss.exporter.kbart;
 
+import java.text.Normalizer;
+import java.text.Normalizer.Form;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -82,6 +84,15 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
   }
   
   /**
+   * Normalize string by removing diacritical marks.
+   * @param s the string
+   * @return the string with diacritical marks removed
+   */
+  private static String toUnaccented(String s) {
+    return Normalizer.normalize(s, Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+  }
+ 
+  /**
    * Compare using natural string ordering. This method encapsulates the case-sensitivity aspect of the comparison.
    * 
    * @param str1
@@ -90,7 +101,7 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
    */
   private int compareStrings(String str1, String str2) {
     int res = caseSensitive ? str1.compareTo(str2) : str1.toLowerCase().compareTo(str2.toLowerCase()); 
-    //System.out.printf("[%b] %s %s %s\n", caseSensitive, str1, (res>0?">":res<0?"<":"="), str2);
+    //log.debug(String.format("[%b] %s %s %s\n", caseSensitive, str1, (res>0?">":res<0?"<":"="), str2));
     //return res > 0 ? 1 : res < 0 ? -1 : 0; 
     return res;
   }
@@ -208,10 +219,10 @@ public class AlphanumericComparator<T> implements Comparator<T>  {
     // -------------------------------------------------------------------------------------------
     if (tok1.length()!=tok2.length()) {
       if (tok1.startsWith(tok2+" ") && strTok2.numTokens()-1 > tokIndex) {
-	//System.out.printf("Putting token '%s' before '%s'\n", tok1, tok2);
+	//log.debug(String.format("Putting token '%s' before '%s'\n", tok1, tok2));
 	return -1;
       } else if (tok2.startsWith(tok1+" ") && strTok1.numTokens()-1 > tokIndex) {
-	//System.out.printf("Putting token '%s' before '%s'\n", tok2, tok1);
+	//log.debug(String.format("Putting token '%s' before '%s'\n", tok2, tok1));
 	return 1;
       }
     }
