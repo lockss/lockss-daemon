@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.1.2.4 2011-02-21 19:11:40 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.1.2.5 2011-02-22 18:49:47 easyonthemayo Exp $
  */
 
 /*
@@ -234,10 +234,20 @@ public class KbartExportFilter {
   
   /**
    * Get the set of fields from the filter's field ordering which are empty.
-   * @return the set of empty fields form the ordering
+   * @return the set of empty fields from the ordering
    */
   public Set<Field> getEmptyFields() {
     return emptyFields; 
+  }
+  
+  /**
+   * Get the set of fields from the filter's field ordering which were omitted due to being empty.
+   * @return the set of empty fields which were omitted from the ordering
+   */
+  public Set<Field> getOmittedEmptyFields() {
+    Set<Field> empties = EnumSet.copyOf(fieldOrdering.getFields());
+    empties.retainAll(emptyFields);
+    return empties;
   }
   
   /**
@@ -256,8 +266,7 @@ public class KbartExportFilter {
    */
   public boolean omittedEmptyFields() {
     if (!omitEmptyFields) return false;
-    EnumSet<Field> omittableFields = EnumSet.copyOf(fieldOrdering.getFields());
-    omittableFields.retainAll(emptyFields);
+    Set<Field> omittableFields = getOmittedEmptyFields();
     return omitEmptyFields && omittableFields.size() > 0; 
   }
   
@@ -335,6 +344,7 @@ public class KbartExportFilter {
     public abstract EnumSet<Field> getFields();
     public abstract List<Field> getOrdering();
     //public abstract FieldOrdering getDefaultOrdering();
+    public abstract List<String> getOrderedLabels();
   }
   
   /**
@@ -343,8 +353,19 @@ public class KbartExportFilter {
    * @author Neil Mayo
    */
   public static class CustomFieldOrdering implements FieldOrdering {
+    /** A set of fields included in this ordering. */
     public final EnumSet<Field> fields;
+    /** An ordered list of fields in this ordering. */
     public final List<Field> ordering;
+    /** An ordered list of labels for the fields. */ 
+    public final List<String> orderedLabels;
+    
+    /** The standard KBART field ordering. */
+    private static final FieldOrdering KBART_ORDERING = new CustomFieldOrdering(new ArrayList<Field>(Field.getFieldSet())); 
+    
+    /** A separator used to separate field names in the specification of a custom ordering. This may be any combination of whitespace. */
+    public static final String CUSTOM_ORDERING_FIELD_SEPARATOR = "\n";
+    
     //private static final CustomFieldOrdering defaultOrdering = new CustomFieldOrdering(Arrays.asList(Field.values()));
     
     //public static final CustomFieldOrdering getDefaultOrdering() {
@@ -355,26 +376,33 @@ public class KbartExportFilter {
       for (Field f : Field.values()) put(f.getLabel(), f);
     }};
     
+    public static FieldOrdering getDefaultOrdering() {
+      return KBART_ORDERING;
+    }
     
     /**
      * Create a custom field ordering from a list of fields. 
      * @param ordering the ordering which will be used
      */
-    public CustomFieldOrdering(List<Field> ordering) {
+    public CustomFieldOrdering(final List<Field> ordering) {
       this.ordering = ordering;
       this.fields = EnumSet.copyOf(ordering);
+      this.orderedLabels = new ArrayList<String>() {{
+	for (Field f : ordering) add(f.getLabel());
+      }};
     }
     /**
      * Create a custom field ordering from a string containing a list of field labels
-     * separated by whitespace. 
-     * @param orderStr a string of field labels separated by white space
+     * separated by whitespace (specifically the <code>CUSTOM_ORDERING_FIELD_SEPARATOR</code>). 
+     * @param orderStr a string of field labels separated by whitespace
      */
     public CustomFieldOrdering(String orderStr) throws CustomFieldOrderingException {
-      String[] labs = StringUtils.split(orderStr);
-      this.ordering = new ArrayList<Field>(); 
-      for (String s : labs) {
+      this.orderedLabels = Arrays.asList(StringUtils.split(orderStr, CUSTOM_ORDERING_FIELD_SEPARATOR));
+      this.ordering = new ArrayList<Field>();
+      for (String s : orderedLabels) {
+	s = s.trim();
 	// Ignore white space lines
-	if (s.trim().isEmpty()) continue;
+	if (s.isEmpty()) continue;
 	Field f = labelFields.get(s);
 	// Throw exception if the label is not valid
 	if (f==null) throw new CustomFieldOrderingException(s, "String '"+s+"' does not refer to a valid field.");
@@ -389,13 +417,17 @@ public class KbartExportFilter {
       }
       this.fields = EnumSet.copyOf(this.ordering);
     }
+    
     public EnumSet<Field> getFields() {
       return this.fields;
     }
     public List<Field> getOrdering() {
       return this.ordering;
     }
-    
+    public List<String> getOrderedLabels() {
+      return orderedLabels;
+    }
+ 
     /** 
      * A custom exception caused when an invalid custom ordering string is passed to the constructor 
      * of the CustomFieldOrdering.
@@ -476,19 +508,25 @@ public class KbartExportFilter {
     public final String description;
     /** A set of fields included in this ordering. */
     public final EnumSet<Field> fields;
-    /** A ordered list of fields in this ordering. */
+    /** An ordered list of fields in this ordering. */
     public final List<Field> ordering;
-     
+    /** An ordered list of labels for the fields. */ 
+    public final List<String> orderedLabels;
+
     public EnumSet<Field> getFields() { return this.fields; }
     public List<Field> getOrdering() { return this.ordering; }
+    public List<String> getOrderedLabels() { return this.orderedLabels; }
 
     PredefinedFieldOrdering(String displayName, String description, Field[] fieldOrder) {
       this.displayName = displayName;      
       this.description = description;      
       ordering = Arrays.asList(fieldOrder);
       fields = EnumSet.copyOf(ordering);
+      this.orderedLabels = new ArrayList<String>() {{
+	for (Field f : ordering) add(f.getLabel());
+      }};
     }
-    
+
   }
 
 

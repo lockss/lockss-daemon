@@ -31,9 +31,7 @@ package org.lockss.servlet;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
@@ -41,7 +39,6 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 
 import org.apache.commons.lang.StringUtils;
-import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.CurrentConfig;
 import org.lockss.config.Tdb;
@@ -57,6 +54,7 @@ import org.lockss.exporter.kbart.KbartExportFilter.CustomFieldOrdering.CustomFie
 import org.lockss.exporter.kbart.KbartTitle.Field;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.mortbay.html.Composite;
 import org.mortbay.html.Form;
 import org.mortbay.html.Heading;
 import org.mortbay.html.Input;
@@ -98,12 +96,17 @@ public class ListHoldings extends LockssServlet {
   static final PredefinedFieldOrdering FIELD_ORDERING_DEFAULT = PredefinedFieldOrdering.KBART;
   /** Default approach to omitting empty fields - inherited from the exporter base class. */
   static final Boolean OMIT_EMPTY_COLUMNS_BY_DEFAULT = KbartExporter.omitEmptyFieldsByDefault;
-
+  
   private final String ENCODING = KbartExporter.DEFAULT_ENCODING;
+  /** A comma used for separating list elements. */
+  private static final String LIST_COMMA = ", "; 
   
   // Form parameters and options
   public static final String ACTION_EXPORT = "Export";
-  public static final String ACTION_CUSTOM_EXPORT = "Custom Export";
+  public static final String ACTION_CUSTOM_EXPORT = "Customise Output";
+  public static final String ACTION_CUSTOM_OK = "Apply";
+  public static final String ACTION_CUSTOM_RESET = "Reset";
+  public static final String ACTION_CUSTOM_CANCEL = "Cancel";
   public static final String KEY_FORMAT = "format";
   public static final String KEY_COMPRESS = "compress";
   public static final String KEY_OMIT_EMPTY_COLS = "omitEmptyCols";
@@ -122,13 +125,13 @@ public class ListHoldings extends LockssServlet {
   /** Whether to omit empty field columns in this instance. */
   private boolean omitEmptyColumns = OMIT_EMPTY_COLUMNS_BY_DEFAULT;
   
-  /** Selected output format. */
+  /** The output format submitted in this action - triggers an export. */
   private OutputFormat outputFormat = OUTPUT_DEFAULT;
   /** Selected custom field list. */
   PredefinedFieldOrdering predefinedFieldOrdering = FIELD_ORDERING_DEFAULT;
   /** Manually specified custom field list. */
-  CustomFieldOrdering customFieldOrdering = new CustomFieldOrdering(new ArrayList<Field>(Field.getFieldSet()));
-  /** What type of export is represented by the form options. */
+  FieldOrdering customFieldOrdering = new CustomFieldOrdering(new ArrayList<Field>(Field.getFieldSet()));
+  /** What type of export is currently represented by the form options. */
   ExportType exportType = ExportType.DEFAULT;
 
   protected enum ExportType { DEFAULT, PREDEFINED, CUSTOM } 
@@ -157,66 +160,90 @@ public class ListHoldings extends LockssServlet {
   /** 
    * Handle a request - if there is a format URL param, show the appropriate default format; 
    * otherwise if it is a form submission show custom format; otherwise show the page.
+   * The main page is shown if the params indicate so or errors occur. Otherwise the relevant
+   * values are set and the code falls through to the end of the method where the export is performed.
+   * 
    */
   public void lockssHandleRequest() throws IOException {
     errMsg = null;
     statusMsg = null; 
-
-    // Get parameters
+    
+    // ---------- Get parameters ----------
     Properties params = getParamsAsProps();
     // Output format parameters (from URL)
     this.outputFormat = OutputFormat.byName(params.getProperty(KEY_FORMAT));
+    // Set compression from the output format
+    if (outputFormat!=null) this.isCompress = outputFormat.isCompressible();
     // Omit empty columns - use the option supplied from the form, or the default if one of the other outputs was chosen
     this.omitEmptyColumns = Boolean.valueOf( 
 	params.getProperty(KEY_OMIT_EMPTY_COLS, OMIT_EMPTY_COLUMNS_BY_DEFAULT.toString()) 
     );
-    //TODO: ? this.omitEmptyColumns = this.sysConfig.getBooleanParam(KEY_OMIT_EMPTY_COLS, OMIT_EMPTY_COLUMNS_BY_DEFAULT);
+    //this.omitEmptyColumns = this.sysConfig.getBooleanParam(KEY_OMIT_EMPTY_COLS, OMIT_EMPTY_COLUMNS_BY_DEFAULT);
+    
     // Custom HTML parameters (from form)
-    String action = params.getProperty(ACTION_TAG, "");
+    String customAction = params.getProperty(ACTION_TAG, "");
     // Predefined ordering
     String orderParam = params.getProperty(KEY_CUSTOM_ORDERING, FIELD_ORDERING_DEFAULT.name());
     // Manual custom ordering
     String manualOrdering = params.getProperty(KEY_CUSTOM_ORDERING_LIST);
 
-    // Is this a custom HTML output?
-    boolean isCustom = !StringUtil.isNullString(action) && action.equals(ACTION_CUSTOM_EXPORT);
 
-    // If there is a manual ordering specified, try and parse it into a list of valid field names
-    if (isCustom && manualOrdering!=null) {
-      try {
-      	this.customFieldOrdering = new CustomFieldOrdering(manualOrdering);
-      	this.exportType = ExportType.CUSTOM;
-      } catch (CustomFieldOrderingException e) {
-	errMsg = e.getLocalizedMessage();
-	displayPage();
-	return;
-      }
-    }
+    // ---------- Interpret parameters ----------
+    // Is this a custom output? The custom action is not null.
+    boolean isCustom = !StringUtil.isNullString(customAction);
+    // Is this a custom HTML output? The custom action is not null and is one of the options leading to export
+    //boolean doCustomHtmlOutput = isCustom && actionIsShowCustomHtml(customAction);
+
     
-    // Just display the page if there is no action and no output format
-    if (!isCustom && outputFormat==null) {
+    // ---------- Process parameters and show page ----------
+    if (isCustom) this.exportType = ExportType.CUSTOM;
+    
+    // Just display the page if there is no output format
+    if (outputFormat==null) {
       displayPage();
       return;
     }
 
+    // Reset the manual ordering and show the custom page again
+    if (customAction.equals(ACTION_CUSTOM_RESET)) {
+	this.customFieldOrdering = CustomFieldOrdering.getDefaultOrdering();
+	displayPage();
+	return;
+    }
+
+    // Redisplay the export with or without changing the manual ordering
+    // Change the manual ordering if necessary and fall through to the export
+    //if (doCustomHtmlOutput) {
+    if (isCustom && customAction.equals(ACTION_CUSTOM_OK)) {
+      // Set a new ordering if the custom action was okayed
+      //if (customAction.equals(ACTION_CUSTOM_OK)) {
+	// Try and parse the manual ordering into a list of valid field names
+	try {
+	  this.customFieldOrdering = new CustomFieldOrdering(manualOrdering);
+	} catch (CustomFieldOrderingException e) {
+	  errMsg = e.getLocalizedMessage();
+	  displayPage();
+	  return;
+	}
+      //}
+    } 
+    
     // Setup ordering parameter for predefined custom output
     // DISABLED - if predefined options re-enabled, update the conditional here
     // to distinguish between manual and predefined custom orderings.  
-    /*if (isCustom) {
-      try {
-	this.fieldOrdering = PredefinedFieldOrdering.valueOf(orderParam);
-        this.exportType = ExportType.PREDEFINED;
-      } catch (Exception e) {
-	this.fieldOrdering = FIELD_ORDERING_DEFAULT;
-	errMsg = "Unknown field ordering specified: "+orderParam+".";
-	log.warning(errMsg, e);
-	displayPage();
-	return;
-      }
-    }*/
+//    if (isCustom) {
+//      try {
+//	this.fieldOrdering = PredefinedFieldOrdering.valueOf(orderParam);
+//        this.exportType = ExportType.PREDEFINED;
+//      } catch (Exception e) {
+//	this.fieldOrdering = FIELD_ORDERING_DEFAULT;
+//	errMsg = "Unknown field ordering specified: "+orderParam+".";
+//	log.warning(errMsg, e);
+//	displayPage();
+//	return;
+//      }
+//    }
     
-    // Set compression from the output format
-    this.isCompress = outputFormat.isCompressible();
     
     // Create the exporter
     KbartExporter kexp = createExporter(this.tdb);
@@ -226,14 +253,23 @@ public class ListHoldings extends LockssServlet {
     }
 
     // Write to log before starting export
-    /*log.info("Exporting metadata " + 
-	(isCustom ? "using custom HTML view '"+this.fieldOrdering.displayName+"'" : "as "+outputFormat.getLabel())
-    );*/
+//    log.info("Exporting metadata " + 
+//	(isCustom ? "using custom HTML view '"+this.fieldOrdering.displayName+"'" : "as "+outputFormat.getLabel())
+//    );
     
     // Do the export
     doExport(kexp);
   }
   
+  /**
+   * Decide whether the HTML export should be shown based on the specified custom action.
+   * @param customAction the action parameter to check
+   * @return whether the action requires display of the HTML export
+   */
+  private boolean actionIsShowCustomHtml(String customAction) {
+    return customAction.equals(ACTION_CUSTOM_OK) || customAction.equals(ACTION_CUSTOM_CANCEL);
+  }
+
   /**
    * Make an exporter to be used in an export; this involves extracting and
    * converting titles from the TDB and passing to the exporter's constructor.
@@ -255,7 +291,19 @@ public class ListHoldings extends LockssServlet {
     KbartExporter kexp = outputFormat.makeExporter(titles, filter);
     kexp.setTdbTitleTotal(tdb.getTdbTitleCount());
     kexp.setCompress(isCompress);
+    // Set an HTML form for the HTML output
+    assignHtmlCustomForm(kexp);
     return kexp;    
+  }
+  
+  /**
+   * Assign an HTML form of custom options to the exporter if necessary.
+   * @param kexp the exporter 
+   */
+  private void assignHtmlCustomForm(KbartExporter kexp) {
+    if (kexp.getOutputFormat().isHtml()) {
+      kexp.setHtmlCustomForm(makeHtmlCustomForm());
+    }
   }
   
   // TODO move extraction to KbartExporter?
@@ -338,19 +386,9 @@ public class ListHoldings extends LockssServlet {
   protected Table layoutTableOfOptions() {
     // Get the path to this servlet so we can postfix output format path
     String thisPath = myServletDescr().path;
-    
     Table tab = new Table(0, "align=\"center\" width=\"80%\"");
+    //addBoxSummary(tab);
 
-//    tab.newRow();
-//    tab.newCell("align=\"center\"");
-//    tab.add("This is the KBART Metadata Exporter for ");
-//    tab.add("<b>"+getMachineName()+"</b>.");
-//
-//    tab.newRow();
-//    tab.newCell("align=\"center\"");
-//    tab.add("The permanent KBART output URL for this server is:<br/><b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
-//    addBlankRow(tab);
-    
     tab.newRow();
     tab.newCell("align=\"center\"");
     if (tdb==null || tdb.isEmpty()) {
@@ -359,36 +397,36 @@ public class ListHoldings extends LockssServlet {
       return tab;
     }
     tab.add("There are "+tdb.getTdbTitleCount()+" titles available for preservation, from "+tdb.getTdbPublisherCount()+" publishers.");
-    //addBlankRow(tab);
-    
-    tab.newRow();
-    tab.newCell("align=\"center\"");
-    tab.add("Please choose from an export format below.");
-    
-    addBlankRow(tab);
-    
-    // Add compress option
+       
+    // Add compress option (disabled as the CSV output is not very large
     //tab.newRow();
     //tab.newCell("align=\"center\"");
     //tab.add(ServletUtil.checkbox(this, KEY_COMPRESS, KEY_COMPRESS, "Compress the output", false));
     
-    // Add format links
-    for (OutputFormat fmt : OutputFormat.values()) {
+    if (this.exportType == ExportType.CUSTOM) {
+      // Add HTML customisation options
+      addBlankRow(tab);
       tab.newRow();
       tab.newCell("align=\"center\"");
-      tab.add( new Link(String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name()), "Export as "+fmt.getLabel()) );
-      tab.add(addFootnote(fmt.getFootnote()));
+      tab.add(new Heading(3, "Customise HTML output"));
+      tab.add(layoutFormCustomHtmlOpts());
+      addBlankRow(tab);
+    } else {
+      // Add default output formats
+      tab.newRow();
+      tab.newCell("align=\"center\"");
+      tab.add("Please choose from an export format below.");
+      addBlankRow(tab);
+      // Add format links
+      for (OutputFormat fmt : OutputFormat.values()) {
+	tab.newRow();
+	tab.newCell("align=\"center\"");
+	tab.add( new Link(String.format("%s?%s=%s", thisPath, KEY_FORMAT, fmt.name()), "Export as "+fmt.getLabel()) );
+	tab.add(addFootnote(fmt.getFootnote()));
+      }
+      addBlankRow(tab);
     }
-    addBlankRow(tab);
     
-    // Add a form for HTML options
-    tab.newRow();
-    tab.newCell("align=\"center\"");
-    tab.add("<hr width=\"80%\"/>");
-    tab.add(new Heading(3, "Alternatively, customise HTML output:"));
-    tab.add(layoutFormCustomHtmlOpts());
-    addBlankRow(tab);
-
     // Add some space
     addBlankRow(tab);
     
@@ -402,6 +440,48 @@ public class ListHoldings extends LockssServlet {
     tab.add("&nbsp;");
   }
 
+  /**
+   * Add a summary of the LOCKSS box providing the data, to an HTML table.
+   * @param tab the table to which to add the summary
+   */
+  private void addBoxSummary(Table tab) {
+    tab.newRow();
+    tab.newCell("align=\"center\"");
+    tab.add("This is the KBART Metadata Exporter for ");
+    tab.add("<b>"+getMachineName()+"</b>.");
+
+    tab.newRow();
+    tab.newCell("align=\"center\"");
+    tab.add("The permanent KBART output URL for this server is:<br/><b><font color=\"navy\">"+getDefaultUpdateUrl()+"</font></b>");
+    addBlankRow(tab);
+  }
+
+  /**
+   * Create a table listing KBART field labels and descriptions.
+   */
+  private Table getKbartFieldLegend() {
+    Table tab = new Table();
+    //tab.style("border: 1px solid black;");
+    for (Field f: Field.values()) {
+      tab.newRow();
+      tab.newCell("align=\"center\"");
+      //if (Field.idFields.contains(f)) tab.add(smallFont("ID"));
+      String lab = f.getLabel();
+      if (Field.idFields.contains(f)) lab = "<b>"+lab+"</b>";
+      tab.addCell(smallFont(lab));
+      tab.addCell(smallFont(f.getDescription()));
+    }
+    return tab;
+  }
+  
+  /**
+   * Surround a string with small font tags.
+   * @param s
+   * @return
+   */
+  private String smallFont(String s) {
+   return String.format("<font size=\"-1\">%s</font>", s); 
+  }
 
   /** Display top level batch config choices */
   private void displayPage() throws IOException {
@@ -438,26 +518,86 @@ public class ListHoldings extends LockssServlet {
     }
      */
     
-    form.add("<br/>Please provide a custom ordering for the fields - one field per line. Omit any fields you don't want, " +
-    		"but include an identifying field (" +
-    		StringUtils.join(Field.getLabels(Field.idFields), ", ") +
-    		") for sensible results.<br/>");
+    form.add(
+	"<br/>Use the box below to provide a custom ordering for the fields - one field per line."+
+	"<br/>Omit any fields you don't want, but include an identifying field for sensible results."+
+	//"<br/>(" + StringUtils.join(Field.getLabels(Field.idFields), LIST_COMMA) + ")"+
+	"<br/>There is a description of the KBART fields below the box; identifying fields are shown in bold."+
+	"<br/><br/>"
+	);
+    
+    Table tab = new Table();
+    tab.newRow();
+    tab.newCell("align=\"center\" valign=\"middle\"");
     
     // Add a text area of an appropriate size
     int taCols = 25; // this should be the longest field width
     int taLines = Field.values().length+1;
-    String fieldList = StringUtils.join(Field.getLabels(), "\n");
-    form.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, fieldList).setSize(taCols, taLines));
-
-    // TODO : add a list of available fields
-
+    tab.add("Field ordering<br/>");
+    tab.add(new TextArea(KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList()).setSize(taCols, taLines));
     // Omit empty columns option
-    form.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS, Boolean.TRUE.toString(), "Omit empty columns<br/>", true));
+    tab.add("<br/>");
+    tab.add(ServletUtil.checkbox(this, KEY_OMIT_EMPTY_COLS, Boolean.TRUE.toString(), "Omit empty columns<br/>", omitEmptyColumns));
+    // Add buttons
+    tab.add("<br/><center>");
+    layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_OK);
+    layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_RESET);
+    layoutSubmitButton(this, tab, ACTION_TAG, ACTION_CUSTOM_CANCEL);
+    tab.add("</center>");
+    
+    // Add a legend for the fields
+    tab.newCell("align=\"left\" padding=\"10\" valign=\"middle\"");
+    tab.add("<br/>"+getKbartFieldLegend());
+    
+    form.add(tab);
 
-    if (tdb!=null && !tdb.isEmpty()) {
-      ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM_EXPORT);
-    }
     return form;
   }
 
+  /**
+   * Turn the selected ordering into a string containing ad separated list of fields. 
+   * @return
+   */
+  private String getOrderingAsCustomFieldList() {
+    return StringUtils.join(getSelectedOrdering().getOrderedLabels(), CustomFieldOrdering.CUSTOM_ORDERING_FIELD_SEPARATOR); 
+  }
+  
+  /**
+   * Construct an HTML form providing a link to customisation options for HTML output.
+   * This consists of a hidden list of ordered output fields, and a submit button,
+   * and will appear on the output page.
+   * 
+   * @return a Jetty form
+   */
+  private Form makeHtmlCustomForm() {
+    Form form = ServletUtil.newForm(srvURL(myServletDescr()));
+    form.add(new Input(Input.Hidden, KEY_CUSTOM_ORDERING_LIST, getOrderingAsCustomFieldList()));
+    form.add(new Input(Input.Hidden, KEY_OMIT_EMPTY_COLS, htmlInputTruthValue(omitEmptyColumns)));
+    ServletUtil.layoutSubmitButton(this, form, ACTION_TAG, ACTION_CUSTOM_EXPORT);
+    return form;  
+  }  
+  
+  /**
+   * An alternative to <code>ServletUtil.layoutSubmitButton</code> which doesn't assume 
+   * that every submit should be on a new line.
+   * @param servlet the servlet containing the button
+   * @param composite the object to add the button to
+   * @param key the name of the button
+   * @param value the value of the button
+   */
+  private static void layoutSubmitButton(LockssServlet servlet, Composite composite, String key, String value) {
+    Input submit = new Input(Input.Submit, key, value);
+    servlet.setTabOrder(submit);
+    composite.add(submit);
+  }
+
+  /**
+   * Get the string representation of a boolean value, appropriate for use as the value of a form input.
+   * @param b a boolean value
+   * @return a string which will yield the same value when interpreted as the value of a form input
+   */
+  private static String htmlInputTruthValue(boolean b) {
+    return b ? "true" : "false"; 
+  }
+  
 }
