@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.4 2011-02-21 18:57:04 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.5 2011-02-22 18:47:20 easyonthemayo Exp $
  */
 
 /*
@@ -51,11 +51,12 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import org.lockss.config.ConfigManager;
-import org.lockss.exporter.kbart.KbartExportFilter.FieldOrdering;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 
+import org.lockss.servlet.LockssServlet;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.mortbay.html.Form;
 
 /**
  * Export the metadata from the LOCKSS holdings according to
@@ -115,6 +116,9 @@ public abstract class KbartExporter {
   /** A filename for output. This is generated when needed, which may be never. */
   private String filename;
   
+  /** An optional HTML form containing customisation options. This option is meaningless to non-HTML outputs. */
+  private Form customForm;
+
   /** A count of how many records have been exported. */
   protected int exportCount = 0;
   
@@ -363,6 +367,14 @@ public abstract class KbartExporter {
   }
 
   /**
+   * Provide a reference to the OutputFormat of the exporter.
+   * @return the output format of this exporter
+   */
+  public OutputFormat getOutputFormat() {
+    return outputFormat; 
+  }
+  
+  /**
    * Get the value of the compression option.
    * @return whether to compress the data
    */
@@ -400,12 +412,27 @@ public abstract class KbartExporter {
    */
   public String getEmptySummary() {
     return filter.omittedEmptyFields() ? 
-	String.format("Empty columns omitted: (%s)", StringUtil.separatedString(filter.getEmptyFields(), ", "))
+	String.format("Empty columns omitted: (%s)", StringUtil.separatedString(filter.getOmittedEmptyFields(), ", "))
 	: "";
   } 
 
+  /**
+   * Return the custom form for HTML output. It may not be set.
+   * @return a form containing customisation options; may be null
+   */
+  public Form getHtmlCustomForm() { 
+    return customForm; 
+  }
   
-
+  /**
+   * Set the HTML form which represents customisable options.
+   * @param form a fully-defined Jetty form
+   */
+  public void setHtmlCustomForm(Form form) {
+    //if (!isHtml) throw new UnsupportedOperationException();
+    if (this.outputFormat.isHtml) this.customForm = form;
+  }
+  
   /** 
    * Enumeration of <code>KbartExporter</code> types and factories for their creation. 
    */
@@ -421,7 +448,7 @@ public abstract class KbartExporter {
       }
     },*/
     
-    KBART_CSV("KBART CSV (comma-separated values)", "text/plain", "csv", true, false, CSV_NOTE) {
+    KBART_CSV("KBART CSV (comma-separated values)", "text/plain", "csv", true, false, false, CSV_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter) {
 	KbartExporter kbe = new SeparatedValuesKbartExporter(titles, this, SeparatedValuesKbartExporter.SEPARATOR_COMMA);
@@ -430,7 +457,7 @@ public abstract class KbartExporter {
       }
     },
     
-    KBART_HTML("HTML (on-screen)", "text/html", "html", false, false, HTML_NOTE) {
+    KBART_HTML("HTML (on-screen)", "text/html", "html", false, false, true, HTML_NOTE) {
       @Override     
       public KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter) {
 	KbartExporter kbe = new HtmlKbartExporter(titles, this);
@@ -451,6 +478,8 @@ public abstract class KbartExporter {
     private final boolean asFile;
     /** Whether the file is compressible. */ 
     private boolean isCompressible;
+    /** Whether the output is HTML. */
+    private boolean isHtml;
     
     /**
      * Construct an OutputFormat with the given label, MIME type and
@@ -461,19 +490,21 @@ public abstract class KbartExporter {
      * @param fileExtension a file extension for the file (no period) 
      * @param asFile whether this output format should be supplied as a file
      * @param isCompressible whether this output format may be compressed
+     * @param isHtml whether this output format is HTML-based
      * @param footnote an optional footnote describing the option in more detail 
      */
-    OutputFormat(String label, String mimeType, String fileExtension, boolean asFile, boolean isCompressible, String footnote) {
-      this.footnote = footnote;
+    OutputFormat(String label, String mimeType, String fileExtension, boolean asFile, boolean isCompressible, boolean isHtml, String footnote) {
       this.label = label;
       this.mimeType = mimeType;
       this.fileExtension = fileExtension;
       this.asFile = asFile;
       this.isCompressible = isCompressible;
+      this.isHtml = isHtml;
+      this.footnote = footnote;
     }
     
-    OutputFormat(String label, String mimeType, String fileExtension, boolean asFile, boolean isCompressible) {
-      this(label, mimeType, fileExtension, asFile, isCompressible, "");
+    OutputFormat(String label, String mimeType, String fileExtension, boolean asFile, boolean isCompressible, boolean isHtml) {
+      this(label, mimeType, fileExtension, asFile, isCompressible, isHtml, "");
     }
 
     /**
@@ -482,7 +513,7 @@ public abstract class KbartExporter {
      * @param titles a list of <code>KbartTitle</code> objects
      */
     public abstract KbartExporter makeExporter(List<KbartTitle> titles, KbartExportFilter filter);
-   
+    
     /**
      * Indicates whether the format should be supplied as a file.
      * Some formats target a file (for writing or download) while others 
@@ -528,19 +559,24 @@ public abstract class KbartExporter {
     public boolean isCompressible() { return isCompressible; }
 
     /**
+     * Whether the format is HTML based.
+     *  
+     * @return whether the format is HTML based
+     */
+    public boolean isHtml() { return isHtml; }
+
+    /**
      * Get an OutputFormat by name.
      * 
      * @param name a string representing the name of the format
      * @return an OutputFormat with the specified name, or null if none was found
-     */
+    */
     public static OutputFormat byName(String name) {
       if (name==null) return null;
-      for (OutputFormat of : values()) {
-        if (of.name().equals(name)) return of;
-      }
-      return null;
+      return valueOf(name);
     }
-
+    
+    
   };
 
   

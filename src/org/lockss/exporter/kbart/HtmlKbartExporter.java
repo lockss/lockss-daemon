@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.5 2011-02-21 18:57:04 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.6 2011-02-22 18:47:20 easyonthemayo Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import java.io.IOException;
 import org.lockss.util.StringUtil;
 import org.lockss.util.Logger;
 
-
 /**
  * An exporter that simply writes the records to an HTML table.
  * 
@@ -60,7 +59,10 @@ public class HtmlKbartExporter extends KbartExporter {
   private String header;
   /** Summary of the export for display. */
   private String exportSummary;
-
+  /** A form to be incorporated into the page which provides a link to customisable display options. */
+  //private Form customForm;
+  
+  
   /**
    * Default constructor takes a list of KbartTitles to be exported.
    * The exporter then does some reasonably costly processing, iterating 
@@ -86,8 +88,15 @@ public class HtmlKbartExporter extends KbartExporter {
   public HtmlKbartExporter(List<KbartTitle> titles, OutputFormat format, boolean omitEmptyFields) {
     super(titles, format);
   } 
+
+  /*
+  public HtmlKbartExporter(List<KbartTitle> titles, OutputFormat format, boolean omitEmptyFields, Form customForm) {
+    super(titles, format);
+    this.customForm = customForm;
+  } 
+  */
   
-    
+
   @Override
   protected void emitRecord(List<String> values) {
     odd = !odd;
@@ -121,6 +130,7 @@ public class HtmlKbartExporter extends KbartExporter {
     printWriter.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
     printWriter.printf("<title>%s</title>", this.exportSummary);
     printWriter.printf("%s</head><body>", css);
+    if (getHtmlCustomForm()!=null) printWriter.println(getHtmlCustomForm());
     // Initial attempt to get a static header on the page:
     //printWriter.printf("<div class=\"header\"><table>%s</table></div>", this.header);
     printWriter.println("<table>");
