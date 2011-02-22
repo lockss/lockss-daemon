@@ -11,7 +11,6 @@
     plugin = org.lockss.plugin.bmc.BMCPlugin
     param[base_url] = http://www.biomedcentral.com/    
 
-
     {
       title <
         name = BMC Anesthesiology ;
@@ -1470,6 +1469,14 @@
 
     {
       title <
+        name = Biological Procedures Online ;
+        eissn = 1480-9222
+      >
+
+    }
+
+    {
+      title <
         name = Biology Direct ;
         eissn = 1745-6150
       >
@@ -2134,23 +2141,6 @@ comment[bmr] = journal archive available, but no new volumes
 
     {
       title <
-        name = Immunome Research ;
-        eissn = 1745-7580
-      >
-
-      param[base_url] = http://www.immunome-research.com/
-      param[journal_issn] = 1745-7580
-
-      au < released ; Immunome Research Volume 1 ; 1 >
-      au < released ; Immunome Research Volume 2 ; 2 >
-      au < released ; Immunome Research Volume 3 ; 3 >
-      au < released ; Immunome Research Volume 4 ; 4 >
-      au < ready ; Immunome Research Volume 5 ; 5 >
-      au < ready ; Immunome Research Volume 6 ; 6 >
-    }
-
-    {
-      title <
         name = Implementation Science ;
         eissn = 1748-5908
       >
@@ -2282,6 +2272,14 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; International Seminars in Surgical Oncology Volume 3 ; 3 >
       au < released ; International Seminars in Surgical Oncology Volume 4 ; 4 >
       au < released ; International Seminars in Surgical Oncology Volume 5 ; 5 >
+    }
+
+    {
+      title <
+        name = Irish Veterinary Journal ;
+        eissn = 0368-0762
+      >
+
     }
 
     {
@@ -3198,6 +3196,14 @@ comment[bmr] = journal archive available, but no new volumes
       au < released ; Trials Volume 9 ; 9 >
       au < released ; Trials Volume 10 ; 10 >
       au < released ; Trials Volume 11 ; 11 >
+    }
+
+    {
+      title <
+        name = Veterinary Research ;
+        eissn = 1297-9716
+      >
+
     }
 
     {

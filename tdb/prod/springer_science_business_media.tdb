@@ -3480,18 +3480,6 @@
   {
 
     title <
-      name = Biological Procedures Online ;
-      issn = 1480-9222 ;
-      placeholder = True
-    >
-
-    param[journal_issn] = 1480-9222
-
-  }
-
-  {
-
-    title <
       name = Biological Trace Element Research ;
       issn = 0163-4984 ;
       placeholder = True
@@ -26988,6 +26976,8 @@
       issn = 0032-3470 ;
       eissn = 1862-2860
     >
+
+Commet [pv] = now offline
 
     param[journal_issn] = 0032-3470
 
