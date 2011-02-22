@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# $Id: tdbxml.py,v 1.12 2010-12-11 01:09:26 barry409 Exp $
+# $Id: tdbxml.py,v 1.13 2011-02-22 06:40:31 thib_gc Exp $
 #
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -27,7 +27,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-__version__ = '0.3.3'
+__version__ = '0.3.4'
 
 from optparse import OptionGroup, OptionParser
 import re
@@ -74,11 +74,13 @@ def __short_au_name(au):
     str = re.sub(r'\s+', '', str)
     str = re.sub(r'Á|À|Â|Ä|̣Ā', 'A', str)
     str = re.sub(r'á|à|â|ä|ā', 'a', str)
+    str = re.sub(r'æ', 'ae', str)
     str = re.sub(r'É|È|Ê|Ë|Ē', 'E', str)
     str = re.sub(r'é|è|ê|ë|ē', 'e', str)
     str = re.sub(r'Í|Ì|Î|Ï|Ī', 'I', str)
     str = re.sub(r'í|ì|î|ï|ī', 'i', str)
-    str = re.sub(r'æ', 'ae', str)
+    str = re.sub(r'Ž', 'Z', str)
+    str = re.sub(r'ž', 'z', str)
     str = re.sub(r'\W+', '', str)
     return au.plugin().split('.')[-1] + __escape(str)
 
