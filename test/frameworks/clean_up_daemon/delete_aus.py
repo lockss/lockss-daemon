@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: delete_aus.py,v 1.1 2011-02-15 20:23:52 barry409 Exp $
+# $Id: delete_aus.py,v 1.2 2011-02-22 21:24:36 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-import argparse
+import optparse
 import os
 import sys
 import urllib2
@@ -36,49 +36,63 @@ import fix_auth_failure
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 def _parser():
     """Make a parser for the arguments."""
-    parser = argparse.ArgumentParser(
-        description='Delete AUs on a LOCKSS daemon')
-    parser.add_argument('-u', '--user', default='lockss-u')
-    parser.add_argument('-p', '--password', default='lockss-p')
-    parser.add_argument('-v', '--verbose', dest='verbose', action='store_true',
+    #usage = "usage: %prog [options]"
+    parser = optparse.OptionParser(
+        usage='%prog [options] host port [filename ...]',
+        description='Delete AUs on a LOCKSS daemon. Each line in each file should have an'
+                    'AUID. The filename \'-\' or an empty list will read from stdin.'
+        )
+    parser.add_option('-u', '--user', default='lockss-u')
+    parser.add_option('-p', '--password', default='lockss-p')
+    parser.add_option('-v', '--verbose', dest='verbose', action='store_true',
                         default=False)
-    parser.add_argument('-q', '--quiet', dest='verbose', action='store_false')
-    parser.add_argument('-f', '--force', dest='verify', action='store_false',
+    parser.add_option('-q', '--quiet', dest='verbose', action='store_false')
+    parser.add_option('-f', '--force', dest='verify', action='store_false',
                         help='ignore auids not present on the daemon, \
                               never prompt')
-    parser.add_argument('-i', '--verify', dest='verify', action='store_true',
+    parser.add_option('-i', '--verify', dest='verify', action='store_true',
                         default=False, help='prompt before each delete')
-    parser.add_argument('host', default='127.0.0.1')
-    parser.add_argument('port', type=int)
-    parser.add_argument('auid_files', metavar='auid-file',
-                        type=argparse.FileType(), nargs='*',
-                        default=[sys.stdin],
-                        help='A file containing auids (one per line), or \'-\'')
     return parser
+
+
+def _process_args():
+    parser = _parser()
+    (options, arguments) = parser.parse_args()
+    try:
+        host = arguments[0]
+        port = arguments[1]
+        auid_files = arguments[2:]
+        if auid_files == []:
+            auid_files.append('-')
+    except IndexError:
+        parser.error('host and port are required. Try --help')
+    return (options, host, port, auid_files)
 
 
 def _aus(auid_files):
     """Read each line of each file and make a list of lockss_daemon.AUs"""
     aus = list()
     for auid_file in auid_files:
-        for auid in auid_file.readlines():
+        if auid_file == '-':
+            f = sys.stdin
+        else:
+            f = open(auid_file)
+        for auid in f.readlines():
             aus.append(lockss_daemon.AU(auid))
     return aus
 
 
 def main():
-    parser = _parser()
-    arguments = parser.parse_args()
-
+    (options, host, port, auid_files) = _process_args()
     fix_auth_failure.fix_auth_failure()
-    client = lockss_daemon.Client(arguments.host, arguments.port,
-                                  arguments.user, arguments.password)
-    aus = _aus(arguments.auid_files)
+    client = lockss_daemon.Client(host, port,
+                                  options.user, options.password)
+    aus = _aus(auid_files)
     has = list()
     missing = list()
     for au in aus:
@@ -87,7 +101,7 @@ def main():
         else:
             missing.append(au)
     
-    if arguments.verbose:
+    if options.verbose:
         print "Daemon %s" % client
         if missing:
             print "does not have"
@@ -99,8 +113,8 @@ def main():
                 print au.auId
 
     for au in has:
-        if not arguments.verify or \
-                arguments.verify and \
+        if not options.verify or \
+                options.verify and \
                 raw_input('delete %s [n]? ' % au.title).startswith('y'):
             client.deleteAu(au)
 

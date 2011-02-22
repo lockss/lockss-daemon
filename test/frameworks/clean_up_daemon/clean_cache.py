@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: clean_cache.py,v 1.1 2011-02-15 20:23:52 barry409 Exp $
+# $Id: clean_cache.py,v 1.2 2011-02-22 21:24:36 barry409 Exp $
 
 # Copyright (c) 2011 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -26,7 +26,7 @@
 # be used in advertising or otherwise to promote the sale, use or other dealings
 # in this Software without prior written authorization from Stanford University.
 
-import argparse
+import optparse
 import ConfigParser
 import os
 import sys
@@ -36,7 +36,7 @@ import lockss_daemon
 
 __author__ = "Barry Hayes"
 __maintainer__ = "Barry Hayes"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 class _SectionAdder(object):
@@ -57,34 +57,40 @@ class _SectionAdder(object):
 
 def _parser():
     """Make a parser for the arguments."""
-    parser = argparse.ArgumentParser(
+    parser = optparse.OptionParser(
         description='Move cache directories on a LOCKSS daemon')
-    parser.add_argument('-u', '--user', default='lockss-u')
-    parser.add_argument('-p', '--password', default='lockss-p')
-    parser.add_argument('-v', '--verbose', dest='verbose', action='store_true',
+    parser.add_option('-u', '--user', default='lockss-u')
+    parser.add_option('-p', '--password', default='lockss-p')
+    parser.add_option('-v', '--verbose', dest='verbose', action='store_true',
                         default=False)
-    parser.add_argument('-q', '--quiet', dest='verbose', action='store_false')
-    parser.add_argument('-f', '--force', dest='verify', action='store_false',
+    parser.add_option('-q', '--quiet', dest='verbose', action='store_false')
+    parser.add_option('-f', '--force', dest='verify', action='store_false',
                         help='ignore auids not present on the daemon, '
                         'never prompt')
-    parser.add_argument('-i', '--verify', dest='verify', action='store_true',
+    parser.add_option('-i', '--verify', dest='verify', action='store_true',
                         default=False, help='prompt before each move')
-    parser.add_argument('--commands', action='store_true', default=False,
+    parser.add_option('--commands', action='store_true', default=False,
                         help='print mv commands, but do not move files')
-    parser.add_argument('-d', '--directory', default='.',
+    parser.add_option('-d', '--directory', default='.',
                         help='the daemon directory where ./cache is '
                         '(default: \'.\')')
-    parser.add_argument('--dest', default='deleted',
+    parser.add_option('--dest', default='deleted',
                         help='where under the daemon directory the cache '
                         'entries are moved to (default: \'deleted\')')
     return parser
 
 
-def main():
+def _process_args():
     parser = _parser()
-    arguments = parser.parse_args()
+    (options, arguments) = parser.parse_args()
+    if arguments != []:
+        parser.error('There should be no arguments. Try --help')
+    return options
 
-    src = arguments.directory
+
+def main():
+    options = _process_args()
+    src = options.directory
     local_txt = os.path.join(src, 'local.txt')
     if (not os.path.isdir(os.path.join(src, 'cache'))
         or not os.path.isfile(local_txt)):
@@ -98,11 +104,11 @@ def main():
 
     fix_auth_failure.fix_auth_failure()
     client = lockss_daemon.Client('127.0.0.1', port,
-                                  arguments.user, arguments.password)
+                                  options.user, options.password)
     repos = client._getStatusTable( 'RepositoryTable' )[ 1 ]
     deleted = [r for r in repos if r['status'] == 'Deleted']
 
-    if arguments.verbose:
+    if options.verbose:
         if deleted:
             print 'These AUs have been deleted on the daemon:'
             for r in deleted:
@@ -110,15 +116,15 @@ def main():
         else:
             print 'No deleted AUs.'
 
-    dst = os.path.join(arguments.directory, arguments.dest)
+    dst = os.path.join(options.directory, options.dest)
     for r in deleted:
         r = r['dir']
-        if not arguments.verify or \
-                arguments.verify and \
+        if not options.verify or \
+                options.verify and \
                 raw_input('move %s [n]? ' % r).startswith('y'):
             src_r = os.path.join(src, r)
             dst_r = os.path.join(dst, r)
-            if arguments.commands:
+            if options.commands:
                 print "mv %s %s" % (src_r, dst_r)
             else:
                 os.renames(src_r, dst_r)
