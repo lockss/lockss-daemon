@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSet.java,v 1.3 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestTitleSet.java,v 1.4 2011-02-23 08:41:04 tlipkis Exp $
  */
 
 /*
@@ -73,13 +73,16 @@ public class TestTitleSet extends LockssTestCase {
   public void testSort() throws Exception {
     TitleSet tsAll1 = new TitleSetAllTitles(daemon);
     TitleSet tsAll2 = new TitleSetActiveAus(daemon);
-    TitleSet ts1 = new TitleSetXpath(daemon, "Title 1", "[foo]");
-    TitleSet ts2 = new TitleSetXpath(daemon, "Title 2", "[foo]");
+    TitleSet ts1 = new TitleSetXpath(daemon, "Title a", "[foo]");
+    TitleSet ts2 = new TitleSetXpath(daemon, "Title B", "[foo]");
+    TitleSet ts3 = new TitleSetXpath(daemon, "Title c", "[foo]");
     assertCompareIsGreaterThan(ts1, tsAll1);
     assertCompareIsGreaterThan(ts1, tsAll2);
     assertCompareIsGreaterThan(ts2, ts1);
-    List lst = ListUtil.list(ts2, ts1, tsAll2, tsAll1);
+    assertCompareIsGreaterThan(ts3, ts2);
+    assertCompareIsGreaterThan(ts3, ts1);
+    List lst = ListUtil.list(ts2, ts1, ts3, tsAll2, tsAll1);
     Collections.sort(lst);
-    assertEquals(ListUtil.list(tsAll1, tsAll2, ts1, ts2), lst);
+    assertEquals(ListUtil.list(tsAll1, tsAll2, ts1, ts2, ts3), lst);
   }
 }

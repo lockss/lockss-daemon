@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.7 2005-10-11 05:44:15 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.8 2011-02-23 08:41:04 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public abstract class BaseTitleSet implements TitleSet {
     if (getMajorOrder() != oset.getMajorOrder()) {
       return getMajorOrder() - oset.getMajorOrder();
     }
-    return getName().compareTo(oset.getName());
+    return getName().compareToIgnoreCase(oset.getName());
   }
 
 }
