@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.95 2011-02-14 00:11:37 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.96 2011-02-23 08:41:47 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.AdminServletManager;
+import org.lockss.servlet.ListObjects;
 
 /**
  * Collect and report the status of the ArchivalUnits
@@ -755,30 +756,6 @@ public class ArchivalUnitStatus
       long contentSize = AuUtil.getAuContentSize(au, false);
       long du = AuUtil.getAuDiskUsage(au, false);
 
-      StatusTable.SrvLink urlListLink =
-	new StatusTable.SrvLink("URL list",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "urls",
-						  "auid", au.getAuId()));
-
-      StatusTable.SrvLink doiListLink =
-	new StatusTable.SrvLink("DOI list",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "dois",
-						  "auid", au.getAuId()));
-
-      StatusTable.SrvLink articleListLink =
-	new StatusTable.SrvLink("Article list",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "articles",
-						  "auid", au.getAuId()));
-
-      StatusTable.SrvLink fileListLink =
-	new StatusTable.SrvLink("File list",
-				AdminServletManager.SERVLET_LIST_OBJECTS,
-				PropUtil.fromArgs("type", "files",
-						  "auid", au.getAuId()));
-
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Volume",
 					  ColumnDescriptor.TYPE_STRING,
@@ -953,20 +930,42 @@ public class ArchivalUnitStatus
 					  ColumnDescriptor.TYPE_STRING,
 					  peers));
 
+
+
+      StatusTable.SrvLink urlListLink =
+	new StatusTable.SrvLink("URL list",
+				AdminServletManager.SERVLET_LIST_OBJECTS,
+				PropUtil.fromArgs("type", "urls",
+						  "auid", au.getAuId()));
+
+      StatusTable.SrvLink fileListLink =
+	new StatusTable.SrvLink("File list",
+				AdminServletManager.SERVLET_LIST_OBJECTS,
+				PropUtil.fromArgs("type", "files",
+						  "auid", au.getAuId()));
       res.add(new StatusTable.SummaryInfo(null,
 					  ColumnDescriptor.TYPE_STRING,
-					  urlListLink));
-      if (!(au.getArticleIterator() == CollectionUtil.EMPTY_ITERATOR)) {
+					  ListUtil.list(urlListLink,
+							", ",
+							fileListLink)));
+
+      if (ListObjects.hasArticleList(au)) {
+	StatusTable.SrvLink doiListLink =
+	  new StatusTable.SrvLink("DOI list",
+				  AdminServletManager.SERVLET_LIST_OBJECTS,
+				  PropUtil.fromArgs("type", "dois",
+						    "auid", au.getAuId()));
+	StatusTable.SrvLink articleListLink =
+	  new StatusTable.SrvLink("Article list",
+				  AdminServletManager.SERVLET_LIST_OBJECTS,
+				  PropUtil.fromArgs("type", "articles",
+						    "auid", au.getAuId()));
         res.add(new StatusTable.SummaryInfo(null,
 					    ColumnDescriptor.TYPE_STRING,
-					    doiListLink));
-        res.add(new StatusTable.SummaryInfo(null,
-					    ColumnDescriptor.TYPE_STRING,
-					    articleListLink));
+					    ListUtil.list(articleListLink,
+							  ", ",
+							  doiListLink)));
       }
-      res.add(new StatusTable.SummaryInfo(null,
-					  ColumnDescriptor.TYPE_STRING,
-					  fileListLink));
       return res;
     }
 
