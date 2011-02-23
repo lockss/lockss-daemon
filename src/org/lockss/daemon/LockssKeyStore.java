@@ -1,5 +1,5 @@
 /*
- * $Id: LockssKeyStore.java,v 1.11 2010-11-29 07:25:09 tlipkis Exp $
+ * $Id: LockssKeyStore.java,v 1.12 2011-02-23 08:41:22 tlipkis Exp $
  */
 
 /*
@@ -185,6 +185,9 @@ public class LockssKeyStore {
       createTrustManagerFactory();
       loaded = true;
       log.info("Loaded keystore: " + name);
+      // Useful for debugging but can leave private keystore data in the
+      // log.
+//       if (log.isDebug3()) logKeyStore(keystore, null);
     } catch (Exception e) {
       // logged at higher level
       throw new UnavailableKeyStoreException(e);
