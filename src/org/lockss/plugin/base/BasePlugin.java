@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.73 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.73.2.1 2011-02-23 08:33:28 tlipkis Exp $
  */
 
 /*
@@ -548,7 +548,9 @@ public abstract class BasePlugin
       getArticleMetadataExtractorFactory(target);
     if (fact != null) {
       try {
-	return fact.createArticleMetadataExtractor(target);
+	return (ArticleMetadataExtractor)
+	  WrapperUtil.wrap(fact.createArticleMetadataExtractor(target),
+			   ArticleMetadataExtractor.class);
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }
@@ -581,7 +583,9 @@ public abstract class BasePlugin
     FileMetadataExtractorFactory fact = mti.getFileMetadataExtractorFactory();
     if (fact != null) {
       try {
-	return fact.createFileMetadataExtractor(target, contentType);
+	return (FileMetadataExtractor)
+	  WrapperUtil.wrap(fact.createFileMetadataExtractor(target, contentType),
+			   FileMetadataExtractor.class);
       } catch (PluginException e) {
 	throw new RuntimeException(e);
       }
