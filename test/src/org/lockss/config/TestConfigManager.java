@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.40 2010-11-29 07:24:33 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.41 2011-02-23 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -350,12 +350,15 @@ public class TestConfigManager extends LockssTestCase {
     assertNull(mgr.getSecureSocketFactory());
   }
 
-  public void testInitSocketFactory() throws Exception {
+  public void testInitSocketFactoryFilename() throws Exception {
     Configuration config = mgr.newConfiguration();
-    config.put(PARAM_SERVER_AUTH_KEYSTORE_NAME, "a-keystore");
+    config.put(PARAM_SERVER_AUTH_KEYSTORE_NAME, "/path/to/keystore");
     mgr.initSocketFactory(config);
+    String pref = "org.lockss.keyMgr.keystore.propserver.";
+    assertEquals("propserver", config.get(pref + "name"));
+    assertEquals("/path/to/keystore", config.get(pref + "file"));
     LockssSecureSocketFactory fact = mgr.getSecureSocketFactory();
-    assertEquals("a-keystore", fact.getServerAuthKeystoreName());
+    assertEquals("propserver", fact.getServerAuthKeystoreName());
     assertNull(fact.getClientAuthKeystoreName());
   }
 

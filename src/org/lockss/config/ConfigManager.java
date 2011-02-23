@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.81 2011-01-12 15:36:27 neilmayo Exp $
+ * $Id: ConfigManager.java,v 1.82 2011-02-23 08:40:30 tlipkis Exp $
  */
 
 /*
@@ -75,12 +75,12 @@ public class ConfigManager implements LockssManager {
    * connection.  */
   public static final String PARAM_PROPS_PROXY = PLATFORM + "propsProxy";
 
-  /** If set, the authenticity of the config server will be checked.  The
-   * value is the name of the keystore (defined by additional
-   * <tt>org.lockss.keyMgr.keystore.&lt;id&gt;.xxx</tt> parameters (see
-   * {@link org.lockss.daemon.LockssKeyStoreManager}), or
-   * <tt>&quot;lockss-ca&quot;</tt>, to use the builtin keystore containing
-   * the LOCKSS signing cert.  Can only be set in platform config. */
+  /** If set, the authenticity of the config server will be checked using
+   * this keystore.  The value is either an internal name designating a
+   * resource (e.g. <tt>&quot;lockss-ca&quot;</tt>, to use the builtin
+   * keystore containing the LOCKSS signing cert (see {@link
+   * #builtinServerAuthKeystores}), or the filename of a keystore Can only
+   * be set in platform config. */
   public static final String PARAM_SERVER_AUTH_KEYSTORE_NAME =
     MYPREFIX + "serverAuthKeystore";
 
@@ -93,12 +93,10 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_CLIENT_AUTH_KEYSTORE_NAME =
     MYPREFIX + "clientAuthKeystore";
 
-  /** Resource name of default keystore to use to check authenticity of the
-   * config server */
-  static final String DEFAULT_SERVER_AUTH_KEYSTORE_RESOURCE =
-    "org/lockss/config/lockss-ca.keystore";
-
-  static final String INTERNAL_SERVER_AUTH_KEYSTORE_NAME = "lockss-ca";
+  /** Map of internal name to resource location of keystore to use to check
+   * authenticity of the config server */
+  static Map<String,String> builtinServerAuthKeystores =
+    MapUtil.map("lockss-ca", "org/lockss/config/lockss-ca.keystore");
 
   static final String PARAM_SEND_VERSION_EVERY = MYPREFIX + "sendVersionEvery";
   static final long DEFAULT_SEND_VERSION_EVERY = 1 * Constants.DAY;
@@ -1085,17 +1083,27 @@ public class ConfigManager implements LockssManager {
     String serverAuthKeystore =
       platconf.getNonEmpty(PARAM_SERVER_AUTH_KEYSTORE_NAME);
     if (serverAuthKeystore != null) {
-      if (INTERNAL_SERVER_AUTH_KEYSTORE_NAME.equals(serverAuthKeystore)) {
-	platKeystoreConfig = newConfiguration();
-	String pref =
-	  LockssKeyStoreManager.PARAM_KEYSTORE +
-	  "." + sanitizeName(serverAuthKeystore) + ".";
+      platKeystoreConfig = newConfiguration();
+      String resource = builtinServerAuthKeystores.get(serverAuthKeystore);
+      if (resource != null) {
+	// Set up keystore params to point to internal keystore resource.
+	String pref = keystorePref(serverAuthKeystore);
 	platKeystoreConfig.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_NAME,
 			       serverAuthKeystore);
 	platKeystoreConfig.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_RESOURCE,
-			       DEFAULT_SERVER_AUTH_KEYSTORE_RESOURCE);
-	platconf.copyFrom(platKeystoreConfig);
+			       resource);
+      } else {
+	// if props keystore name isn't builtin, it's a filename.  Set up
+	// keystore params to point to it.
+	String ksname = "propserver";
+	String pref = keystorePref(ksname);
+	platKeystoreConfig.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_NAME,
+			       ksname);
+	platKeystoreConfig.put(pref + LockssKeyStoreManager.KEYSTORE_PARAM_FILE,
+			       serverAuthKeystore);
+	serverAuthKeystore = ksname;
       }
+      platconf.copyFrom(platKeystoreConfig);
     }
     String clientAuthKeystore =
       platconf.getNonEmpty(PARAM_CLIENT_AUTH_KEYSTORE_NAME);
@@ -1109,6 +1117,11 @@ public class ConfigManager implements LockssManager {
 
   LockssSecureSocketFactory getSecureSocketFactory() {
     return secureSockFact;
+  }
+
+  String keystorePref(String name) {
+    return LockssKeyStoreManager.PARAM_KEYSTORE
+      + "." + sanitizeName(name) + ".";
   }
 
   String sanitizeName(String name) {

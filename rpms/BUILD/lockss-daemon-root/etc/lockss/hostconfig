@@ -388,7 +388,11 @@ build_config_file () {
             fi
             ask_for_input "Verify configuration server authenticity?" ${LOCKSS_PROPS_AUTHENTICATE_SERVER}
 	    if is_yes "${ANS}" ; then
-		LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE="lockss-ca"
+		if [ "X${LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE}" = X ]; then
+		    LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE="lockss-ca"
+		fi
+		ask_for_input "Server certificate keystore" ${LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE}
+		LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE="${ANS}"
 	    else
 		unset LOCKSS_PROPS_SERVER_AUTHENTICATE_KEYSTORE
 	    fi
