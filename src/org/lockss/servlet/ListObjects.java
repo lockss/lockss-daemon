@@ -1,5 +1,5 @@
 /*
- * $Id: ListObjects.java,v 1.15.2.1 2011-02-14 00:21:53 tlipkis Exp $
+ * $Id: ListObjects.java,v 1.15.2.2 2011-02-23 08:32:42 tlipkis Exp $
  */
 
 /*
@@ -141,45 +141,51 @@ public class ListObjects extends LockssServlet {
     resp.setContentType("text/plain");
     wrtr.println("# DOIs in " + au.getName());
     wrtr.println();
-    ArticleMetadataExtractor.Emitter emitter =
-      new ArticleMetadataExtractor.Emitter() {
-	public void emitMetadata(ArticleFiles af,
-				 ArticleMetadata md) {
-          if (md != null) {
-            String doi = md.get(MetadataField.FIELD_DOI);
-            if (doi != null) {
-              wrtr.println(doi);
-            }
-          }          
+    try {
+      ArticleMetadataExtractor.Emitter emitter =
+	new ArticleMetadataExtractor.Emitter() {
+	  public void emitMetadata(ArticleFiles af,
+				   ArticleMetadata md) {
+	    if (md != null) {
+	      String doi = md.get(MetadataField.FIELD_DOI);
+	      if (doi != null) {
+		wrtr.println(doi);
+	      }
+	    }          
+	  }
+	};
+      ArticleMetadataExtractor mdExtractor =
+	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au);
+      int logMissing = 3;
+      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
+	   iter.hasNext(); ) {
+	ArticleFiles af = iter.next();
+	CachedUrl cu = af.getFullTextCu();
+	if (cu == null) {
+	  // shouldn't happen, but if it does it likely will many times.
+	  if (logMissing-- > 0) {
+	    log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	  }
+	  continue;
 	}
-      };
-    ArticleMetadataExtractor mdExtractor =
-      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.DOI, au);
-    int logMissing = 3;
-    for (Iterator<ArticleFiles> iter = au.getArticleIterator();
-	 iter.hasNext(); ) {
-      ArticleFiles af = iter.next();
-      CachedUrl cu = af.getFullTextCu();
-      if (cu == null) {
-	// shouldn't happen, but if it does it likely will many times.
-	if (logMissing-- > 0) {
-	  log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	try {
+	  if (cu.hasContent()) {
+	    mdExtractor.extract(MetadataTarget.DOI, af, emitter);
+	  }
+	} catch (IOException e) {
+	  log.warning("listDOIs() threw " + e);
+	} catch (PluginException.LinkageError e) {
+	  throw e;
+	} catch (PluginException e) {
+	  log.warning("listDOIs() threw " + e);
+	} finally {
+	  AuUtil.safeRelease(cu);
 	}
-	continue;
       }
-      try {
-        if (cu.hasContent()) {
-	  mdExtractor.extract(MetadataTarget.DOI, af, emitter);
-        }
-      } catch (IOException e) {
-        log.warning("listDOIs() threw " + e);
-      } catch (PluginException e) {
-        log.warning("listDOIs() threw " + e);
-      } finally {
-        AuUtil.safeRelease(cu);
-      }
+      wrtr.println("# end");
+    } catch (PluginException.LinkageError e) {
+      wrtr.println("Incompatible plugin metadata extractor: " + e.getMessage());
     }
-    wrtr.println("# end");
   }
 
   void listFiles() throws IOException {
@@ -206,6 +212,19 @@ public class ListObjects extends LockssServlet {
     wrtr.println("# end");
   }
 
+  public static boolean hasDoiList(ArchivalUnit au) {
+    return null !=
+      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
+
+      // No need to invoke factory, but this method isn't in interface
+//     return null !=
+//       au.getPlugin().getArticleMetadataExtractorFactory(MetadataTarget.Article);
+  }
+
+  public static boolean hasArticleList(ArchivalUnit au) {
+    return hasDoiList(au);
+  }
+
   void listArticles() throws IOException {
     boolean isDoi = !StringUtil.isNullString(getParameter("doi"));
 
@@ -214,65 +233,71 @@ public class ListObjects extends LockssServlet {
     wrtr.println("# Articles in " + au.getName());
     wrtr.println();
 
-    ArticleMetadataExtractor mdExtractor =
-      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
-    ArticleMetadataExtractor.Emitter emitter = null;
-    final MutableObject lastEmittedAf = new MutableObject();
-    if (mdExtractor != null) {
-      emitter =
-	new ArticleMetadataExtractor.Emitter() {
-	  public void emitMetadata(ArticleFiles af,
-				   ArticleMetadata md) {
-	    String url = md.get(MetadataField.FIELD_ACCESS_URL);
-	    String doi = null;
-	    if (md != null) {
-	      doi = md.get(MetadataField.FIELD_DOI);
+    try {
+      ArticleMetadataExtractor mdExtractor =
+	au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
+      ArticleMetadataExtractor.Emitter emitter = null;
+      final MutableObject lastEmittedAf = new MutableObject();
+      if (mdExtractor != null) {
+	emitter =
+	  new ArticleMetadataExtractor.Emitter() {
+	    public void emitMetadata(ArticleFiles af,
+				     ArticleMetadata md) {
+	      String url = md.get(MetadataField.FIELD_ACCESS_URL);
+	      String doi = null;
+	      if (md != null) {
+		doi = md.get(MetadataField.FIELD_DOI);
+	      }
+	      if (doi != null) {
+		wrtr.println(url + "\t" + doi);
+	      } else {
+		wrtr.println(url);
+	      }
+	      lastEmittedAf.setValue(af);
 	    }
-	    if (doi != null) {
-	      wrtr.println(url + "\t" + doi);
-	    } else {
+	  };
+      }
+
+      int logMissing = 3;
+      for (Iterator<ArticleFiles> iter = au.getArticleIterator();
+	   iter.hasNext(); ) {
+	ArticleFiles af = iter.next();
+	CachedUrl cu = af.getFullTextCu();
+	if (cu == null) {
+	  // shouldn't happen, but if it does it likely will many times.
+	  if (logMissing-- > 0) {
+	    log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	  }
+	  continue;
+	}
+	String doi = null;
+	try {
+	  if (cu.hasContent()) {
+	    String url = cu.getUrl();
+	    if (isDoi && mdExtractor != null) {
+	      // extract metadata iff DOIs were requested
+	      mdExtractor.extract(MetadataTarget.Article, af, emitter);
+	    }
+	    if (mdExtractor == null || af != lastEmittedAf.getValue()) {
+	      // if we didn't extract metadata, or the metadata extractor
+	      // didn't emit any metadata records, print the article URL here
 	      wrtr.println(url);
 	    }
-	    lastEmittedAf.setValue(af);
 	  }
-	};
-    }
-
-    int logMissing = 3;
-    for (Iterator<ArticleFiles> iter = au.getArticleIterator();
-	 iter.hasNext(); ) {
-      ArticleFiles af = iter.next();
-      CachedUrl cu = af.getFullTextCu();
-      if (cu == null) {
-	// shouldn't happen, but if it does it likely will many times.
-	if (logMissing-- > 0) {
-	  log.error("ArticleIterator generated ArticleFiles with no full text CU: " + af);
+	} catch (IOException e) {
+	  log.warning("listArticles() threw " + e);
+	} catch (PluginException.LinkageError e) {
+	  throw e;
+	} catch (PluginException e) {
+	  log.warning("listArticles() threw " + e);
+	} finally {
+	  AuUtil.safeRelease(cu);       
 	}
-	continue;
       }
-      String doi = null;
-      try {
-	if (cu.hasContent()) {
-	  String url = cu.getUrl();
-	  if (isDoi && mdExtractor != null) {
-	    // extract metadata iff DOIs were requested
-	    mdExtractor.extract(MetadataTarget.Article, af, emitter);
-	  }
-	  if (mdExtractor == null || af != lastEmittedAf.getValue()) {
-	    // if we didn't extract metadata, or the metadata extractor
-	    // didn't emit any metadata records, print the article URL here
-	    wrtr.println(url);
-	  }
-	}
-      } catch (IOException e) {
-	log.warning("listArticles() threw " + e);
-      } catch (PluginException e) {
-	log.warning("listArticles() threw " + e);
-      } finally {
-	AuUtil.safeRelease(cu);       
-      }
+      wrtr.println("# end");
+    } catch (PluginException.LinkageError e) {
+      wrtr.println("Incompatible plugin metadata extractor: " + e.getMessage());
     }
-    wrtr.println("# end");
   }
 
   void listAUs() throws IOException {
