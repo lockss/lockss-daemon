@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.48 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.49 2011-02-23 08:42:11 tlipkis Exp $
  */
 
 /*
@@ -1026,7 +1026,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 					   "application/pdf"));
     FileMetadataExtractor ext =
       au.getFileMetadataExtractor(MetadataTarget.Any, "text/xml");
-    assertTrue(""+ext, ext instanceof MockFactories.XmlMetaExt);
+    assertTrue(ext instanceof FileMetadataExtractorWrapper);
+    assertTrue(""+WrapperUtil.unwrap(ext),
+	       WrapperUtil.unwrap(ext) instanceof MockFactories.XmlMetaExt);
 
     MimeTypeInfo mti = defplug.getMimeTypeInfo("text/xml");
     FileMetadataExtractorFactory mfact = mti.getFileMetadataExtractorFactory();
