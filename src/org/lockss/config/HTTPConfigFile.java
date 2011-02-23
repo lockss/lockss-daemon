@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.16 2010-12-20 23:44:40 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.16.2.1 2011-02-23 21:29:15 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class HTTPConfigFile extends BaseConfigFile {
   private String m_httpLastModifiedString = null;
 
   private LockssUrlConnectionPool m_connPool;
+  private boolean checkAuth = false;
 
   public HTTPConfigFile(String url) {
     super(url);
@@ -92,6 +93,7 @@ public class HTTPConfigFile extends BaseConfigFile {
     if (m_cfgMgr != null) {
       LockssSecureSocketFactory fact = m_cfgMgr.getSecureSocketFactory();
       if (fact != null) {
+	checkAuth = true;
 	conn.setSecureSocketFactory(fact);
       }
     }
@@ -163,6 +165,10 @@ public class HTTPConfigFile extends BaseConfigFile {
       }
     }
     conn.execute();
+    if (checkAuth && !conn.isAuthenticatedServer()) {
+      IOUtil.safeRelease(conn);
+      throw new IOException("Config server not authenticated");
+    }
 
     int resp = conn.getResponseCode();
     String respMsg = conn.getResponseMessage();
