@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.89 2011-01-25 07:14:00 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.89.2.1 2011-02-23 08:32:07 tlipkis Exp $
  */
 
 /*
@@ -688,6 +688,33 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(2, map.size());
     assertEquals(new TitleSetXpath(theDaemon, title1, path1), map.get(title1));
     assertEquals(new TitleSetXpath(theDaemon, title2, path2), map.get(title2));
+  }
+
+  public void testTitleSetOrder() throws Exception {
+    mgr.startService();
+    String ts1p = PluginManager.PARAM_TITLE_SETS + ".s1.";
+    String ts2p = PluginManager.PARAM_TITLE_SETS + ".s2.";
+    String ts3p = PluginManager.PARAM_TITLE_SETS + ".s3.";
+    String title1 = "All Royal Society Publishing Titles";
+    String title2 = "All Royal Society of Chemistry Titles";
+    String title3 = "All Royal pains in the ass";
+    String path1 = "[journalTitle='Dog Journal']";
+    Properties p = new Properties();
+    p.setProperty(ts1p+"class", "xpath");
+    p.setProperty(ts1p+"name", title1);
+    p.setProperty(ts1p+"xpath", path1);
+    p.setProperty(ts2p+"class", "xpath");
+    p.setProperty(ts2p+"name", title2);
+    p.setProperty(ts2p+"xpath", path1);
+    p.setProperty(ts3p+"class", "xpath");
+    p.setProperty(ts3p+"name", title3);
+    p.setProperty(ts3p+"xpath", path1);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    List<TitleSet> tsets = new ArrayList<TitleSet>(mgr.getTitleSets());
+    assertEquals(3, tsets.size());
+    assertEquals(title3, tsets.get(0).getName());
+    assertEquals(title2, tsets.get(1).getName());
+    assertEquals(title1, tsets.get(2).getName());
   }
 
   public void testIllTitleSets() throws Exception {
