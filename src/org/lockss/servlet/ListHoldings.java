@@ -88,7 +88,7 @@ public class ListHoldings extends LockssServlet {
   /** Enable ListHoldings in UI.  Daemon restart required when set to true,
    * not when set false */
   public static final String PARAM_ENABLE_HOLDINGS = PREFIX + "enabled";
-  public static final boolean DEFAULT_ENABLE_HOLDINGS = true;
+  public static final boolean DEFAULT_ENABLE_HOLDINGS = false;
 
   /** Default output format is CSV. */
   static final OutputFormat OUTPUT_DEFAULT = OutputFormat.KBART_CSV;
