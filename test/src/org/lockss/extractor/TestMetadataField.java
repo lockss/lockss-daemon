@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataField.java,v 1.2.2.1 2011-02-18 18:14:08 pgust Exp $
+ * $Id: TestMetadataField.java,v 1.2.2.2 2011-02-24 13:22:04 pgust Exp $
  */
 
 /*
@@ -113,9 +113,9 @@ public class TestMetadataField extends LockssTestCase {
     } catch (MetadataException.ValidationException e) {
     }
     try {
-      f1.validate(am, "isbn:978-1-58562-317-3");
-      fail("Should throw ValidationException");
+      f1.validate(am, "isbn:978-1-58562-317-3"); // checksum error
     } catch (MetadataException.ValidationException e) {
+        fail("Should not throw ValidationException");
     }
   }
   
