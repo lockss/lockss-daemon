@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataField.java,v 1.2.2.1 2011-02-18 18:14:08 pgust Exp $
+ * $Id: MetadataField.java,v 1.2.2.2 2011-02-24 00:28:01 pgust Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class MetadataField {
         throws MetadataException.ValidationException {
       // normalize away leading "isbn:" before checking validity
       String isbn = StringUtils.removeStartIgnoreCase(val, PROTOCOL_ISBN);
-      if (!MetadataUtil.isISBN(isbn)) {
+      if (!MetadataUtil.isISBN(isbn, false)) {  // ignore publisher malformed ISBNs
         throw new MetadataException.ValidationException("Illegal ISBN: "
                                                         + val);
       }
