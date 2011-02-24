@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.8 2011-02-18 17:53:29 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.9 2011-02-24 00:24:28 pgust Exp $
  */
 
 /*
@@ -137,11 +137,13 @@ public class MetadataUtil {
    * with or without punctuation. Uses techniques described in ISBN Wikipedia article.
    * <p>
    * <strong>Note:</strong> Due to errors at a publishing house that go undetected,
-   * books have been issued with invalid ISBNs. (e.g. 0-85883-554-4).
+   * books have been issued with invalid ISBNs. (e.g. 0-85883-554-4). If the strict
+   * flag is true, verifies checksum, otherwise just verifies form.
    * @param isbn the ISBN string
+   * @param strict if true, also verify checksum, otherwise just check form
    * @return true if ISBN is valid, false otherwise
    */
-  public static boolean isISBN(String isbn) {
+  public static boolean isISBN(String isbn, boolean strict) {
     if (isbn == null) {
       return false;
     }
@@ -152,14 +154,14 @@ public class MetadataUtil {
       for (int i = 0; i < 10; i++) {
         // ISBN-10 uses modulus 11 arithmetic for check digit, 
         // with 'X' representing 10
-        int digit = "0123456789X".indexOf(checkISBN.charAt(i));
+        int digit = ((i < 9) ? "0123456789" : "0123456789X").indexOf(checkISBN.charAt(i));
         if (digit < 0) {
           return false;
         }
         a += digit;
         b += a;
       }
-      return (b % 11 == 0);
+      return strict ? (b % 11 == 0) : true;
 
     } else if (checkISBN.length() == 13) {
       int a = 0, b = 1;
@@ -171,7 +173,7 @@ public class MetadataUtil {
         }
         a += digit * b;
       }
-      return (a % 10) == 0;
+      return strict ? (a % 10) == 0 : true;
     }
     
     return false;

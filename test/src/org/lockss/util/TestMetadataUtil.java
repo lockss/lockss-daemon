@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.5 2011-02-18 17:53:28 pgust Exp $
+ * $Id: TestMetadataUtil.java,v 1.6 2011-02-24 00:24:28 pgust Exp $
  */
 
 /*
@@ -188,6 +188,14 @@ public class TestMetadataUtil extends LockssTestCase {
       "978-0-85130-041-1",
       "978-0-942396-04-0"
   };
+
+  private String malformedISBNs[] = {
+      "X78-99931-58-10-4",
+      "X9921-48-10-7",
+      "0-8044-2957-Z",
+      "1234-5678",
+      
+  };
   
   private String validISSNS [] = {
           "1144-875X",
@@ -217,9 +225,18 @@ public class TestMetadataUtil extends LockssTestCase {
           "1402",
           "1402-",
           "-4246",
-	  null
   };
 
+  private String malformedISSNS [] = {
+      "140-42001",
+      "15236-430",
+      "1402-200",
+      "1938/4246",
+      "1402",
+      "1402-",
+      "-4246",
+  };
+  
   private String validDOIS [] = {
           "10.1095/biolreprod.106.054056",
           "10.2992/007.078.0301",
@@ -240,26 +257,49 @@ public class TestMetadataUtil extends LockssTestCase {
   };
 
   public void testISBN() {
+    // valid with checksum calculations
     for(int i=0; i<validISBN10s.length;i++){
-      assertTrue(MetadataUtil.isISBN(validISBN10s[i]));
+      assertTrue(MetadataUtil.isISBN(validISBN10s[i], true));
     }
 
+    // malformed ISBN
+    for(int i=0; i<malformedISBNs.length;i++){
+      assertFalse(MetadataUtil.isISBN(malformedISBNs[i], false));
+    }
+
+    // invalid with checksum calculations
     for(int i=0; i<invalidISBN10s.length;i++){
-      assertFalse(MetadataUtil.isISSN(invalidISBN10s[i]));
+      assertFalse(MetadataUtil.isISBN(invalidISBN10s[i], true));
     }
 
+    // valid ignoring checksum calculations
+    for(int i=0; i<invalidISBN10s.length;i++){
+      assertTrue(MetadataUtil.isISBN(invalidISBN10s[i], false));
+    }
+
+    // valid with checksum calculations
     for(int i=0; i<validISBN13s.length;i++){
-      assertTrue(MetadataUtil.isISBN(validISBN13s[i]));
+      assertTrue(MetadataUtil.isISBN(validISBN13s[i], true));
     }
 
+    // invalid with checksum calculations
     for(int i=0; i<invalidISBN13s.length;i++){
-      assertFalse(MetadataUtil.isISBN(invalidISBN13s[i]));
+      assertFalse(MetadataUtil.isISBN(invalidISBN13s[i], true));
+    }
+
+    // valid ignoring checksum calculation
+    for(int i=0; i<invalidISBN13s.length;i++){
+      assertTrue(MetadataUtil.isISBN(invalidISBN13s[i], false));
     }
   }
 
   public void testISSN() {
     for(int i=0; i<validISSNS.length;i++){
       assertTrue(MetadataUtil.isISSN(validISSNS[i]));
+    }
+
+    for(int j=0; j<malformedISSNS.length;j++){
+      assertFalse(MetadataUtil.isISSN(malformedISSNS[j]));
     }
 
     for(int j=0; j<invalidISSNS.length;j++){
