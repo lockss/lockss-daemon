@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.5 2011-02-22 18:47:20 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.6 2011-02-26 21:40:30 easyonthemayo Exp $
  */
 
 /*
@@ -53,7 +53,6 @@ import java.util.zip.ZipOutputStream;
 import org.lockss.config.ConfigManager;
 import org.lockss.exporter.kbart.KbartTitle.Field;
 
-import org.lockss.servlet.LockssServlet;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.mortbay.html.Form;
@@ -87,7 +86,10 @@ public abstract class KbartExporter {
   "and should be used for updating your knowledge bases.";
   private static final String HTML_NOTE =  "The HTML version is for manual inspection of our holdings and is less "+
   "strict than KBART. For example the HTML version is capable of reordering fields and omitting empty columns.";
-    
+
+  /** Explanation of why some KBART records become duplicates with custom field orderings, and thus get omitted. */
+  protected static final String duplicatesExplanation = "The chosen combination of fields does not result in a unique tuple for every record.";
+
   /** Record of errors for the caller. */
   List<String> errors = new ArrayList<String>();
 
@@ -121,6 +123,11 @@ public abstract class KbartExporter {
 
   /** A count of how many records have been exported. */
   protected int exportCount = 0;
+  /** 
+   * A record of how many records were excluded because they were duplicates under the 
+   * combination of fields specified in the filter's ordering. 
+   */
+  protected int duplicateCount = 0;
   
   /** By default, we don't want to exclude empty fields as it will contravene KBART. */
   public static final boolean omitEmptyFieldsByDefault = false;
@@ -133,6 +140,7 @@ public abstract class KbartExporter {
   
   /**
    * Default constructor takes a list of KbartTitle objects to be exported.
+   * Creates an export filter and sorts the titles.
    * 
    * @param titles the list of titles which are to be exported
    * @param format the OutputFormat
@@ -140,12 +148,20 @@ public abstract class KbartExporter {
   public KbartExporter(List<KbartTitle> titles, OutputFormat format) {
     this.titles = titles;
     this.outputFormat = format;
+    this.initExporter();
     // Create an identity filter by default
     this.filter = KbartExportFilter.identityFilter(titles);
     // KBART info should be ordered alphabetically by title by default
     Collections.sort(titles, new KbartTitleAlphanumericComparator());
   }
- 
+
+  /**
+   * Initialise the exporter with properties it inherits from the output format.
+   */
+  private void initExporter() {
+    this.setCompress(outputFormat.isCompressible());
+  }
+
   
   /**
    * Set the filter to be used on this exporter.
@@ -213,7 +229,11 @@ public abstract class KbartExporter {
    */
   private void doExport() throws IOException {
     for (KbartTitle title : titles) {
-      if (!filter.isTitleForOutput(title)) return;
+      // Don't output some titles
+      if (!filter.isTitleForOutput(title)) {
+	duplicateCount++;
+	continue;
+      }
       exportCount++;
       emitRecord(filter.getVisibleFieldValues(title));
     } 
@@ -378,7 +398,7 @@ public abstract class KbartExporter {
    * Get the value of the compression option.
    * @return whether to compress the data
    */
-  public boolean getCompress() {
+  public boolean isCompress() {
     return compress;
   }
   
@@ -397,10 +417,25 @@ public abstract class KbartExporter {
    * 
    * @return a printable string
    */
-  public String getOmittedSummary() {
+  public String getOmittedFieldsSummary() {
     return filter.omittedFieldsManually() ?
 	String.format("Manually omitted columns: (%s)", 
 	    StringUtil.separatedString(EnumSet.complementOf(filter.getFieldOrdering().getFields()), ", ")
+	) : "";
+  }
+  
+  /**
+   * Provide a user-friendly summary of how many KBART records were omitted from the output
+   * of this filter due to duplicate output tuples. This depends upon which fields are 
+   * included in the visible output, and whether they constitute a unique tuple for each record. 
+   * 
+   * @return a printable string
+   */
+  public String getOmittedTitlesSummary() {
+    return duplicateCount > 0 ?
+	String.format("Duplicate records omitted: %s (%s)",
+	    duplicateCount,
+	    duplicatesExplanation
 	) : "";
   }
   
@@ -465,7 +500,7 @@ public abstract class KbartExporter {
 	return kbe;
       }
     };
-    
+  
     /** An optional footnote elaborating the export format. */ 
     private final String footnote;
     /** The displayed label for the output. */ 
@@ -570,14 +605,15 @@ public abstract class KbartExporter {
      * 
      * @param name a string representing the name of the format
      * @return an OutputFormat with the specified name, or null if none was found
-    */
+     */
     public static OutputFormat byName(String name) {
-      if (name==null) return null;
-      return valueOf(name);
-    }
-    
-    
-  };
+      try {
+	return valueOf(name);
+      } catch (Exception e) {
+	return null;
+      }
+    } 
 
+  };
   
 }

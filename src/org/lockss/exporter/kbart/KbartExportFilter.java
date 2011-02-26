@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExportFilter.java,v 1.4 2011-02-22 18:47:20 easyonthemayo Exp $
+ * $Id: KbartExportFilter.java,v 1.5 2011-02-26 21:40:30 easyonthemayo Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.exporter.kbart;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.List;
@@ -46,8 +48,8 @@ import org.lockss.exporter.kbart.KbartTitle.Field;
 import static org.lockss.exporter.kbart.KbartTitle.Field.*;
 
 import org.lockss.util.CollectionUtil;
-import org.lockss.util.StringUtil;
 import org.lockss.util.Logger;
+import org.lockss.util.StringUtil;
 
 
 /**
@@ -180,6 +182,33 @@ public class KbartExportFilter {
     this.rangeFieldsIncludedInDisplay = !CollectionUtil.isDisjoint(visibleFieldOrder, rangeFields);
     this.idFieldsIncludedInDisplay = !CollectionUtil.isDisjoint(visibleFieldOrder, idFields);
   } 
+  
+
+  public void sortTitlesByFirstTwoFields() {
+    // Sort on just the first 2 columns (max):
+    log.debug(String.format("Sort by %s | %s", visibleFieldOrder.get(0), visibleFieldOrder.get(1)));
+    sortTitlesByFields( visibleFieldOrder.subList(0, Math.min(2, visibleFieldOrder.size())) );
+  }
+
+  /**
+   * Sort the titles by each of the fields specified; the first field is the primary
+   * sort field, then subsequent fields are consulted if the previous does not result 
+   * in an absolute ordering. This method creates a <code>CompositeComparator</code>
+   * for the sorting.
+   * 
+   * @param fields a list of fields to sort on
+   * @see org.lockss.exporter.kbart.CompositeComparator
+   */
+  private void sortTitlesByFields(List<Field> fields) {
+    if (fields==null || fields.size()==0) return;
+    CompositeComparator<KbartTitle> cc = new CompositeComparator<KbartTitle>();
+    for (Field f : fields) {
+      Comparator<KbartTitle> minor = KbartTitleComparatorFactory.getComparator(f);
+      cc = cc.compose(minor);
+    }
+    log.debug("Sorting titles by "+cc);
+    Collections.sort(this.titles, cc);
+  }
   
   /**
    * Calculate which fields have no values across the whole range of titles. Iterates through all the 
@@ -428,6 +457,10 @@ public class KbartExportFilter {
       return orderedLabels;
     }
  
+    public String toString() {
+      return "" + StringUtil.separatedString(orderedLabels, "CustomFieldOrdering(", " | ", ")");
+    }
+    
     /** 
      * A custom exception caused when an invalid custom ordering string is passed to the constructor 
      * of the CustomFieldOrdering.
@@ -525,6 +558,10 @@ public class KbartExportFilter {
       this.orderedLabels = new ArrayList<String>() {{
 	for (Field f : ordering) add(f.getLabel());
       }};
+    }
+
+    public String toString() {
+      return "" + StringUtil.separatedString(orderedLabels, "PredefinedFieldOrdering(", " | ", ")");
     }
 
   }

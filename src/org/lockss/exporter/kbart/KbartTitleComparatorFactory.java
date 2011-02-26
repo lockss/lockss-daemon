@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitleComparatorFactory.java,v 1.3 2011-02-21 18:57:04 easyonthemayo Exp $
+ * $Id: KbartTitleComparatorFactory.java,v 1.4 2011-02-26 21:40:30 easyonthemayo Exp $
  */
 
 /*
@@ -122,6 +122,10 @@ public class KbartTitleComparatorFactory {
 	  String s2 = f2.getField(field);
 	  return compareStrings(s1, s2, caseSensitive);
       }
+      @Override
+      public String toString() {
+	return field.getLabel();
+      }
     };
   }
 
@@ -159,6 +163,10 @@ public class KbartTitleComparatorFactory {
 	  // Compare as text
 	  return compareStrings(tok1, tok1, false);
 	}
+      }
+      @Override
+      public String toString() {
+	return field.getLabel()+" (numeric)";
       }
     };
   }
@@ -205,6 +213,12 @@ public class KbartTitleComparatorFactory {
     protected String getComparisonString(KbartTitle title) {
       return title.getField(sortField);
     }
+ 
+    @Override
+    public String toString() {
+	return sortField.getLabel() + " (alphanumeric)";
+    }
+
   }
   
 }

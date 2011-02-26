@@ -1,5 +1,5 @@
 /*
- * $Id: SeparatedValuesKbartExporter.java,v 1.3 2011-02-21 18:57:04 easyonthemayo Exp $
+ * $Id: SeparatedValuesKbartExporter.java,v 1.4 2011-02-26 21:40:30 easyonthemayo Exp $
  */
 
 /*
@@ -91,6 +91,11 @@ public class SeparatedValuesKbartExporter extends KbartExporter {
     printWriter.println( constructRecord(values) );
   }
   
+  /**
+   * Construct a CSV-formatted record from a list of values.
+   * @param values list of field values
+   * @return a properly formatted CSV row representing the data
+   */
   protected String constructRecord(List<String> values) {
     // If using a comma, encode as CSV with appropriate quoting and escaping
     if (SEPARATOR == SEPARATOR_COMMA) {
