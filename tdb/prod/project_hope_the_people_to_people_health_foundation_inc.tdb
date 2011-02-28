@@ -16,11 +16,13 @@
       param[base_url] = http://content.healthaffairs.org/
       implicit < status ; name ; param[volume_name] >
 
-      au < manifest ; Health Affairs Volume 24 ; 24 >
-      au < manifest ; Health Affairs Volume 25 ; 25 >
-      au < manifest ; Health Affairs Volume 26 ; 26 >
-      au < manifest ; Health Affairs Volume 27 ; 27 >
-      au < manifest ; Health Affairs Volume 28 ; 28 >
+      au < wanted ; Health Affairs Volume 24 ; 24 >
+      au < wanted ; Health Affairs Volume 25 ; 25 >
+      au < wanted ; Health Affairs Volume 26 ; 26 >
+      au < wanted ; Health Affairs Volume 27 ; 27 >
+      au < wanted ; Health Affairs Volume 28 ; 28 >
+      au < wanted ; Health Affairs Volume 29 ; 29 >
+      au < wanted ; Health Affairs Volume 30 ; 30 >
 
     }
 

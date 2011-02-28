@@ -12,7 +12,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://apt.rcpsych.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -26,11 +26,13 @@
       au < exists ; Advances in Psychiatric Treatment Volume 8 ; 8 >
       au < exists ; Advances in Psychiatric Treatment Volume 9 ; 9 >
       au < exists ; Advances in Psychiatric Treatment Volume 10 ; 10 >
-      au < manifest ; Advances in Psychiatric Treatment Volume 11 ; 11 >
-      au < manifest ; Advances in Psychiatric Treatment Volume 12 ; 12 >
-      au < manifest ; Advances in Psychiatric Treatment Volume 13 ; 13 >
-      au < manifest ; Advances in Psychiatric Treatment Volume 14 ; 14 >
-      au < manifest ; Advances in Psychiatric Treatment Volume 15 ; 15 >
+      au < wanted ; Advances in Psychiatric Treatment Volume 11 ; 11 >
+      au < wanted ; Advances in Psychiatric Treatment Volume 12 ; 12 >
+      au < wanted ; Advances in Psychiatric Treatment Volume 13 ; 13 >
+      au < wanted ; Advances in Psychiatric Treatment Volume 14 ; 14 >
+      au < wanted ; Advances in Psychiatric Treatment Volume 15 ; 15 >
+      au < wanted ; Advances in Psychiatric Treatment Volume 16 ; 16 >
+      au < wanted ; Advances in Psychiatric Treatment Volume 17 ; 17 >
 
     }
 
@@ -46,6 +48,20 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://bjp.rcpsych.org/
+      implicit < status ; name ; param[volume_name] >
+     
+      au < released ; The British Journal of Psychiatry Volume 186 ; 186 >
+      au < released ; The British Journal of Psychiatry Volume 187 ; 187 >
+      au < released ; The British Journal of Psychiatry Volume 188 ; 188 >
+      au < released ; The British Journal of Psychiatry Volume 189 ; 189 >
+      au < released ; The British Journal of Psychiatry Volume 190 ; 190 >     
+      
+    }
+      
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://bjp.rcpsych.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -109,46 +125,14 @@
       au < exists ; The British Journal of Psychiatry Volume 183 ; 183 >
       au < exists ; The British Journal of Psychiatry Volume 184 ; 184 >
       au < exists ; The British Journal of Psychiatry Volume 185 ; 185 >
-      au < released ; The British Journal of Psychiatry Volume 186 ; 186 >
-      au < released ; The British Journal of Psychiatry Volume 187 ; 187 >
-      au < released ; The British Journal of Psychiatry Volume 188 ; 188 >
-      au < released ; The British Journal of Psychiatry Volume 189 ; 189 >
-      au < released ; The British Journal of Psychiatry Volume 190 ; 190 >
-      au < manifest ; The British Journal of Psychiatry Volume 191 ; 191 >
-      au < manifest ; The British Journal of Psychiatry Volume 192 ; 192 >
-      au < manifest ; The British Journal of Psychiatry Volume 193 ; 193 >
-      au < manifest ; The British Journal of Psychiatry Volume 194 ; 194 >
-      au < manifest ; The British Journal of Psychiatry Volume 195 ; 195 >
-
-    }
-
-  }
-
-  {
-    title <
-      name = Evidence-Based Mental Health ;
-      issn = 1362-0347 ;
-      eissn = 1468-960X
-    >
-
-    {
-
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
-      param[base_url] = http://ebmh.bmj.com/
-      implicit < status ; name ; param[volume_name] >
-
-      au < exists ; Evidence-Based Mental Health Volume 1 ; 1 >
-      au < exists ; Evidence-Based Mental Health Volume 2 ; 2 >
-      au < exists ; Evidence-Based Mental Health Volume 3 ; 3 >
-      au < exists ; Evidence-Based Mental Health Volume 4 ; 4 >
-      au < exists ; Evidence-Based Mental Health Volume 5 ; 5 >
-      au < exists ; Evidence-Based Mental Health Volume 6 ; 6 >
-      au < exists ; Evidence-Based Mental Health Volume 7 ; 7 >
-      au < manifest ; Evidence-Based Mental Health Volume 8 ; 8 >
-      au < manifest ; Evidence-Based Mental Health Volume 9 ; 9 >
-      au < manifest ; Evidence-Based Mental Health Volume 10 ; 10 >
-      au < manifest ; Evidence-Based Mental Health Volume 11 ; 11 >
-      au < manifest ; Evidence-Based Mental Health Volume 12 ; 12 >
+      au < wanted ; The British Journal of Psychiatry Volume 191 ; 191 >
+      au < wanted ; The British Journal of Psychiatry Volume 192 ; 192 >
+      au < wanted ; The British Journal of Psychiatry Volume 193 ; 193 >
+      au < wanted ; The British Journal of Psychiatry Volume 194 ; 194 >
+      au < wanted ; The British Journal of Psychiatry Volume 195 ; 195 >
+      au < wanted ; The British Journal of Psychiatry Volume 196 ; 196 >
+      au < wanted ; The British Journal of Psychiatry Volume 197 ; 197 >
+      au < wanted ; The British Journal of Psychiatry Volume 198 ; 198 >
 
     }
 
@@ -164,6 +148,16 @@
     {
 
       plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      param[base_url] = http://pb.rcpsych.org/
+      implicit < status ; name ; param[volume_name] >
+      
+      au < released ; Psychiatric Bulletin Volume 29 ; 29 >      
+      
+    }
+      
+    {
+
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://pb.rcpsych.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -194,11 +188,12 @@
       au < exists ; Psychiatric Bulletin Volume 26 ; 26 >
       au < exists ; Psychiatric Bulletin Volume 27 ; 27 >
       au < exists ; Psychiatric Bulletin Volume 28 ; 28 >
-      au < released ; Psychiatric Bulletin Volume 29 ; 29 >
-      au < manifest ; Psychiatric Bulletin Volume 30 ; 30 >
-      au < manifest ; Psychiatric Bulletin Volume 31 ; 31 >
-      au < manifest ; Psychiatric Bulletin Volume 32 ; 32 >
-      au < manifest ; Psychiatric Bulletin Volume 33 ; 33 >
+      au < wanted ; Psychiatric Bulletin Volume 30 ; 30 >
+      au < wanted ; Psychiatric Bulletin Volume 31 ; 31 >
+      au < wanted ; Psychiatric Bulletin Volume 32 ; 32 >
+      au < wanted ; Psychiatric Bulletin Volume 33 ; 33 >
+      au < wanted ; Psychiatric Bulletin Volume 34 ; 34 >
+      au < wanted ; Psychiatric Bulletin Volume 35 ; 35 >
 
     }
 

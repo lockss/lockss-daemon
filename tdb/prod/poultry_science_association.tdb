@@ -12,17 +12,17 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://japr.fass.org/
       implicit < status ; name ; param[volume_name] >
 
       au < released ; The Journal of Applied Poultry Research Volume 1 ; 1 >
       au < released ; The Journal of Applied Poultry Research Volume 2 ; 2 >
       au < released ; The Journal of Applied Poultry Research Volume 3 ; 3 >
-      au < manifest ; The Journal of Applied Poultry Research Volume 4 ; 4 >
+      au < wanted ; The Journal of Applied Poultry Research Volume 4 ; 4 >
       au < released ; The Journal of Applied Poultry Research Volume 5 ; 5 >
       au < released ; The Journal of Applied Poultry Research Volume 6 ; 6 >
-      au < manifest ; The Journal of Applied Poultry Research Volume 7 ; 7 >
+      au < wanted ; The Journal of Applied Poultry Research Volume 7 ; 7 >
       au < released ; The Journal of Applied Poultry Research Volume 8 ; 8 >
       au < released ; The Journal of Applied Poultry Research Volume 9 ; 9 >
       au < released ; The Journal of Applied Poultry Research Volume 10 ; 10 >
@@ -31,9 +31,11 @@
       au < released ; The Journal of Applied Poultry Research Volume 13 ; 13 >
       au < released ; The Journal of Applied Poultry Research Volume 14 ; 14 >
       au < released ; The Journal of Applied Poultry Research Volume 15 ; 15 >
-      au < manifest ; The Journal of Applied Poultry Research Volume 16 ; 16 >
-      au < manifest ; The Journal of Applied Poultry Research Volume 17 ; 17 >
-      au < manifest ; The Journal of Applied Poultry Research Volume 18 ; 18 >
+      au < wanted ; The Journal of Applied Poultry Research Volume 16 ; 16 >
+      au < wanted ; The Journal of Applied Poultry Research Volume 17 ; 17 >
+      au < wanted ; The Journal of Applied Poultry Research Volume 18 ; 18 >
+      au < wanted ; The Journal of Applied Poultry Research Volume 19 ; 19 >
+      au < wanted ; The Journal of Applied Poultry Research Volume 20 ; 20 >
 
     }
 
@@ -48,7 +50,7 @@
 
     {
 
-      plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
+      plugin = org.lockss.plugin.highwire.HighWirePressPlugin
       param[base_url] = http://ps.fass.org/
       implicit < status ; name ; param[volume_name] >
 
@@ -61,10 +63,12 @@
       au < released ; Poultry Science Volume 82 ; 82 >
       au < released ; Poultry Science Volume 83 ; 83 >
       au < released ; Poultry Science Volume 84 ; 84 >
-      au < manifest ; Poultry Science Volume 85 ; 85 >
-      au < manifest ; Poultry Science Volume 86 ; 86 >
-      au < manifest ; Poultry Science Volume 87 ; 87 >
-      au < manifest ; Poultry Science Volume 88 ; 88 >
+      au < wanted ; Poultry Science Volume 85 ; 85 >
+      au < wanted ; Poultry Science Volume 86 ; 86 >
+      au < wanted ; Poultry Science Volume 87 ; 87 >
+      au < wanted ; Poultry Science Volume 88 ; 88 >
+      au < wanted ; Poultry Science Volume 89 ; 89 >
+      au < wanted ; Poultry Science Volume 89 ; 90 >
 
     }
 
