@@ -3305,11 +3305,14 @@
   {
   
     title <
-      name = Beitrge zur Algebra und Geometrie / Contributions to Algebra and Geometry ;
+      name = Beiträge zur Algebra und Geometrie / Contributions to Algebra and Geometry ;
       issn = 0138-4821 ;
-      eissn = 2191-0383
+      eissn = 2191-0383 ;
+      placeholder = True
     >
     
+    param[journal_issn] = 0138-4821
+
   }
 
   {
@@ -28685,12 +28688,16 @@ Commet [pv] = now offline
   {
   
     title <
-      name = Recherche Transports Scurit ;
+      name = Recherche Transports Sécurité ;
       issn = 0761-8980 ;
-      eissn = 1951-6614
+      eissn = 1951-6614 ;
+      placeholder = True
     >
     
+    param[journal_issn] = 0761-8980
+
   }
+  
   {
 
     title <
@@ -29218,7 +29225,7 @@ Commet [pv] = now offline
   {
 
     title <
-      name = Revista de la Real Academia de Ciencias Exactas, Fisicas y Naturales. Serie A. Matematicas ;
+      name = Revista de la Real Academia de Ciencias Exactas, Físicas y Naturales - Serie A - Matemáticas ;
       issn = 1578-7303 ;
       eissn = 1579-1505 ;
       placeholder = True
@@ -29711,11 +29718,14 @@ Commet [pv] = now offline
   {
   
     title <
-      name = Ranimation ;
+      name = Réanimation ;
       issn = 1624-0693 ;
-      eissn = 1951-6959
+      eissn = 1951-6959 ;
+      placeholder = True
     >
     
+    param[journal_issn] = 1624-0693
+
   }
   
   {
