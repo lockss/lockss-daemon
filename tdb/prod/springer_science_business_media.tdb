@@ -5267,7 +5267,9 @@
     >
 
     param[journal_issn] = 0340-7004
-    attr[where] = content1a
+
+    comment[15] = no permission statement on manifest page
+    comment[16] = no permission statement on manifest page
 
     au < ready ; 1976 ; Cancer Immunology, Immunotherapy Volume 1 ; 1 >
     au < ready ; 1977 ; Cancer Immunology, Immunotherapy Volume 2 ; 2 >
@@ -5283,8 +5285,8 @@
     au < ready ; 1995 ; Cancer Immunology, Immunotherapy Volume 12 ; 12 >
     au < ready ; 1982 ; Cancer Immunology, Immunotherapy Volume 13 ; 13 >
     au < ready ; 1982-1983 ; Cancer Immunology, Immunotherapy Volume 14 ; 14 >
-    au < testing ; 1983-1998 ; Cancer Immunology, Immunotherapy Volume 15 ; 15 >
-    au < testing ; 1983-1999 ; Cancer Immunology, Immunotherapy Volume 16 ; 16 >
+    au < notReady ; 1983-1998 ; Cancer Immunology, Immunotherapy Volume 15 ; 15 >
+    au < notReady ; 1983-1999 ; Cancer Immunology, Immunotherapy Volume 16 ; 16 >
     au < ready ; 1984 ; Cancer Immunology, Immunotherapy Volume 17 ; 17 >
     au < ready ; 1984 ; Cancer Immunology, Immunotherapy Volume 18 ; 18 >
     au < ready ; 1985 ; Cancer Immunology, Immunotherapy Volume 19 ; 19 >
@@ -9369,28 +9371,27 @@
     >
 
     param[journal_issn] = 0963-9292
-    attr[where] = content5a
 
-    au < testing ; 1992 ; Ecotoxicology Volume 1 ; 1 >
-    au < testing ; 1993 ; Ecotoxicology Volume 2 ; 2 >
-    au < testing ; 1994 ; Ecotoxicology Volume 3 ; 3 >
-    au < testing ; 1995 ; Ecotoxicology Volume 4 ; 4 >
-    au < testing ; 1996 ; Ecotoxicology Volume 5 ; 5 >
-    au < testing ; 1997 ; Ecotoxicology Volume 6 ; 6 >
-    au < testing ; 1998 ; Ecotoxicology Volume 7 ; 7 >
-    au < testing ; 1999 ; Ecotoxicology Volume 8 ; 8 >
-    au < testing ; 2000 ; Ecotoxicology Volume 9 ; 9 >
-    au < testing ; 2001 ; Ecotoxicology Volume 10 ; 10 >
-    au < testing ; 2001 ; Ecotoxicology Volume 11 ; 11 >
-    au < testing ; 2003 ; Ecotoxicology Volume 12 ; 12 >
-    au < testing ; 2004 ; Ecotoxicology Volume 13 ; 13 >
-    au < testing ; 2005 ; Ecotoxicology Volume 14 ; 14 >
-    au < testing ; 2006 ; Ecotoxicology Volume 15 ; 15 >
-    au < testing ; 2007 ; Ecotoxicology Volume 16 ; 16 >
-    au < testing ; 2008 ; Ecotoxicology Volume 17 ; 17 >
-    au < testing ; 2009 ; Ecotoxicology Volume 18 ; 18 >
-    au < testing ; 2010 ; Ecotoxicology Volume 19 ; 19 >
-    au < testing ; 2011 ; Ecotoxicology Volume 20 ; 20 >
+    au < ready ; 1992 ; Ecotoxicology Volume 1 ; 1 >
+    au < ready ; 1993 ; Ecotoxicology Volume 2 ; 2 >
+    au < ready ; 1994 ; Ecotoxicology Volume 3 ; 3 >
+    au < ready ; 1995 ; Ecotoxicology Volume 4 ; 4 >
+    au < ready ; 1996 ; Ecotoxicology Volume 5 ; 5 >
+    au < ready ; 1997 ; Ecotoxicology Volume 6 ; 6 >
+    au < ready ; 1998 ; Ecotoxicology Volume 7 ; 7 >
+    au < ready ; 1999 ; Ecotoxicology Volume 8 ; 8 >
+    au < ready ; 2000 ; Ecotoxicology Volume 9 ; 9 >
+    au < ready ; 2001 ; Ecotoxicology Volume 10 ; 10 >
+    au < ready ; 2001 ; Ecotoxicology Volume 11 ; 11 >
+    au < ready ; 2003 ; Ecotoxicology Volume 12 ; 12 >
+    au < ready ; 2004 ; Ecotoxicology Volume 13 ; 13 >
+    au < ready ; 2005 ; Ecotoxicology Volume 14 ; 14 >
+    au < ready ; 2006 ; Ecotoxicology Volume 15 ; 15 >
+    au < ready ; 2007 ; Ecotoxicology Volume 16 ; 16 >
+    au < ready ; 2008 ; Ecotoxicology Volume 17 ; 17 >
+    au < ready ; 2009 ; Ecotoxicology Volume 18 ; 18 >
+    au < ready ; 2010 ; Ecotoxicology Volume 19 ; 19 >
+    au < ready ; 2011 ; Ecotoxicology Volume 20 ; 20 >
 
   }
 
@@ -13618,7 +13619,6 @@
     >
 
     param[journal_issn] = 0340-6717
-    attr[where] = content5b
 
     au < ready ; 1964-1966 ; Human Genetics Volume 1 ; 1 >
     au < ready ; 1966 ; Human Genetics Volume 2 ; 2 >
@@ -15204,99 +15204,98 @@
     >
 
     param[journal_issn] = 0920-5691
-    attr[where] = content3a
 
-    au < testing ; 1987-1988 ; International Journal of Computer Vision Volume 1 ; 1 >
-    au < testing ; 1988-1989 ; International Journal of Computer Vision Volume 2 ; 2 >
-    au < testing ; 1989 ; International Journal of Computer Vision Volume 3 ; 3 >
-    au < testing ; 1990 ; International Journal of Computer Vision Volume 4 ; 4 >
-    au < testing ; 1990 ; International Journal of Computer Vision Volume 5 ; 5 >
-    au < testing ; 1991 ; International Journal of Computer Vision Volume 6 ; 6 >
-    au < testing ; 1991-1992 ; International Journal of Computer Vision Volume 7 ; 7 >
-    au < testing ; 1992 ; International Journal of Computer Vision Volume 8 ; 8 >
-    au < testing ; 1992 ; International Journal of Computer Vision Volume 9 ; 9 >
-    au < testing ; 1993 ; International Journal of Computer Vision Volume 10 ; 10 >
-    au < testing ; 1993 ; International Journal of Computer Vision Volume 11 ; 11 >
-    au < testing ; 1994 ; International Journal of Computer Vision Volume 12 ; 12 >
-    au < testing ; 1994 ; International Journal of Computer Vision Volume 13 ; 13 >
-    au < testing ; 1995 ; International Journal of Computer Vision Volume 14 ; 14 >
-    au < testing ; 1995 ; International Journal of Computer Vision Volume 15 ; 15 >
-    au < testing ; 1995 ; International Journal of Computer Vision Volume 16 ; 16 >
-    au < testing ; 1996 ; International Journal of Computer Vision Volume 17 ; 17 >
-    au < testing ; 1996 ; International Journal of Computer Vision Volume 18 ; 18 >
-    au < testing ; 1996 ; International Journal of Computer Vision Volume 19 ; 19 >
-    au < testing ; 1996 ; International Journal of Computer Vision Volume 20 ; 20 >
-    au < testing ; 1997 ; International Journal of Computer Vision Volume 21 ; 21 >
-    au < testing ; 1997 ; International Journal of Computer Vision Volume 22 ; 22 >
-    au < testing ; 1997 ; International Journal of Computer Vision Volume 23 ; 23 >
-    au < testing ; 1997 ; International Journal of Computer Vision Volume 24 ; 24 >
-    au < testing ; 1997 ; International Journal of Computer Vision Volume 25 ; 25 >
-    au < testing ; 1998 ; International Journal of Computer Vision Volume 26 ; 26 >
-    au < testing ; 1998 ; International Journal of Computer Vision Volume 27 ; 27 >
-    au < testing ; 1998 ; International Journal of Computer Vision Volume 28 ; 28 >
-    au < testing ; 1998 ; International Journal of Computer Vision Volume 29 ; 29 >
-    au < testing ; 1998 ; International Journal of Computer Vision Volume 30 ; 30 >
-    au < testing ; 1999 ; International Journal of Computer Vision Volume 31 ; 31 >
-    au < testing ; 1999 ; International Journal of Computer Vision Volume 32 ; 32 >
-    au < testing ; 1999 ; International Journal of Computer Vision Volume 33 ; 33 >
-    au < testing ; 1999 ; International Journal of Computer Vision Volume 34 ; 34 >
-    au < testing ; 1999 ; International Journal of Computer Vision Volume 35 ; 35 >
-    au < testing ; 2000 ; International Journal of Computer Vision Volume 36 ; 36 >
-    au < testing ; 2000 ; International Journal of Computer Vision Volume 37 ; 37 >
-    au < testing ; 2000 ; International Journal of Computer Vision Volume 38 ; 38 >
-    au < testing ; 2000 ; International Journal of Computer Vision Volume 39 ; 39 >
-    au < testing ; 2000 ; International Journal of Computer Vision Volume 40 ; 40 >
-    au < testing ; 2001 ; International Journal of Computer Vision Volume 41 ; 41 >
-    au < testing ; 2001 ; International Journal of Computer Vision Volume 42 ; 42 >
-    au < testing ; 2001 ; International Journal of Computer Vision Volume 43 ; 43 >
-    au < testing ; 2001 ; International Journal of Computer Vision Volume 44 ; 44 >
-    au < testing ; 2001 ; International Journal of Computer Vision Volume 45 ; 45 >
-    au < testing ; 2002 ; International Journal of Computer Vision Volume 46 ; 46 >
-    au < testing ; 2002 ; International Journal of Computer Vision Volume 47 ; 47 >
-    au < testing ; 2002 ; International Journal of Computer Vision Volume 48 ; 48 >
-    au < testing ; 2002 ; International Journal of Computer Vision Volume 49 ; 49 >
-    au < testing ; 2002 ; International Journal of Computer Vision Volume 50 ; 50 >
-    au < testing ; 2003 ; International Journal of Computer Vision Volume 51 ; 51 >
-    au < testing ; 2003 ; International Journal of Computer Vision Volume 52 ; 52 >
-    au < testing ; 2003 ; International Journal of Computer Vision Volume 53 ; 53 >
-    au < testing ; 2003 ; International Journal of Computer Vision Volume 54 ; 54 >
-    au < testing ; 2003 ; International Journal of Computer Vision Volume 55 ; 55 >
-    au < testing ; 2004 ; International Journal of Computer Vision Volume 56 ; 56 >
-    au < testing ; 2004 ; International Journal of Computer Vision Volume 57 ; 57 >
-    au < testing ; 2004 ; International Journal of Computer Vision Volume 58 ; 58 >
-    au < testing ; 2004 ; International Journal of Computer Vision Volume 59 ; 59 >
-    au < testing ; 2004 ; International Journal of Computer Vision Volume 60 ; 60 >
-    au < testing ; 2005 ; International Journal of Computer Vision Volume 61 ; 61 >
-    au < testing ; 2005 ; International Journal of Computer Vision Volume 62 ; 62 >
-    au < testing ; 2005 ; International Journal of Computer Vision Volume 63 ; 63 >
-    au < testing ; 2005 ; International Journal of Computer Vision Volume 64 ; 64 >
-    au < testing ; 2005 ; International Journal of Computer Vision Volume 65 ; 65 >
-    au < testing ; 2006 ; International Journal of Computer Vision Volume 66 ; 66 >
-    au < testing ; 2006 ; International Journal of Computer Vision Volume 67 ; 67 >
-    au < testing ; 2006 ; International Journal of Computer Vision Volume 68 ; 68 >
-    au < testing ; 2006 ; International Journal of Computer Vision Volume 69 ; 69 >
-    au < testing ; 2006 ; International Journal of Computer Vision Volume 70 ; 70 >
-    au < testing ; 2007 ; International Journal of Computer Vision Volume 71 ; 71 >
-    au < testing ; 2007 ; International Journal of Computer Vision Volume 72 ; 72 >
-    au < testing ; 2007 ; International Journal of Computer Vision Volume 73 ; 73 >
-    au < testing ; 2007 ; International Journal of Computer Vision Volume 74 ; 74 >
-    au < testing ; 2007 ; International Journal of Computer Vision Volume 75 ; 75 >
-    au < testing ; 2008 ; International Journal of Computer Vision Volume 76 ; 76 >
-    au < testing ; 2008 ; International Journal of Computer Vision Volume 77 ; 77 >
-    au < testing ; 2008 ; International Journal of Computer Vision Volume 78 ; 78 >
-    au < testing ; 2008 ; International Journal of Computer Vision Volume 79 ; 79 >
-    au < testing ; 2008 ; International Journal of Computer Vision Volume 80 ; 80 >
-    au < testing ; 2009 ; International Journal of Computer Vision Volume 81 ; 81 >
-    au < testing ; 2009 ; International Journal of Computer Vision Volume 82 ; 82 >
-    au < testing ; 2009 ; International Journal of Computer Vision Volume 83 ; 83 >
-    au < testing ; 2009 ; International Journal of Computer Vision Volume 84 ; 84 >
-    au < testing ; 2009 ; International Journal of Computer Vision Volume 85 ; 85 >
-    au < testing ; 2010 ; International Journal of Computer Vision Volume 86 ; 86 >
-    au < testing ; 2010 ; International Journal of Computer Vision Volume 87 ; 87 >
-    au < testing ; 2010 ; International Journal of Computer Vision Volume 88 ; 88 >
-    au < testing ; 2010 ; International Journal of Computer Vision Volume 89 ; 89 >
-    au < testing ; 2010 ; International Journal of Computer Vision Volume 90 ; 90 >
-    au < testing ; 2011 ; International Journal of Computer Vision Volume 91 ; 91 >
+    au < ready ; 1987-1988 ; International Journal of Computer Vision Volume 1 ; 1 >
+    au < ready ; 1988-1989 ; International Journal of Computer Vision Volume 2 ; 2 >
+    au < ready ; 1989 ; International Journal of Computer Vision Volume 3 ; 3 >
+    au < ready ; 1990 ; International Journal of Computer Vision Volume 4 ; 4 >
+    au < ready ; 1990 ; International Journal of Computer Vision Volume 5 ; 5 >
+    au < ready ; 1991 ; International Journal of Computer Vision Volume 6 ; 6 >
+    au < ready ; 1991-1992 ; International Journal of Computer Vision Volume 7 ; 7 >
+    au < ready ; 1992 ; International Journal of Computer Vision Volume 8 ; 8 >
+    au < ready ; 1992 ; International Journal of Computer Vision Volume 9 ; 9 >
+    au < ready ; 1993 ; International Journal of Computer Vision Volume 10 ; 10 >
+    au < ready ; 1993 ; International Journal of Computer Vision Volume 11 ; 11 >
+    au < ready ; 1994 ; International Journal of Computer Vision Volume 12 ; 12 >
+    au < ready ; 1994 ; International Journal of Computer Vision Volume 13 ; 13 >
+    au < ready ; 1995 ; International Journal of Computer Vision Volume 14 ; 14 >
+    au < ready ; 1995 ; International Journal of Computer Vision Volume 15 ; 15 >
+    au < ready ; 1995 ; International Journal of Computer Vision Volume 16 ; 16 >
+    au < ready ; 1996 ; International Journal of Computer Vision Volume 17 ; 17 >
+    au < ready ; 1996 ; International Journal of Computer Vision Volume 18 ; 18 >
+    au < ready ; 1996 ; International Journal of Computer Vision Volume 19 ; 19 >
+    au < ready ; 1996 ; International Journal of Computer Vision Volume 20 ; 20 >
+    au < ready ; 1997 ; International Journal of Computer Vision Volume 21 ; 21 >
+    au < ready ; 1997 ; International Journal of Computer Vision Volume 22 ; 22 >
+    au < ready ; 1997 ; International Journal of Computer Vision Volume 23 ; 23 >
+    au < ready ; 1997 ; International Journal of Computer Vision Volume 24 ; 24 >
+    au < ready ; 1997 ; International Journal of Computer Vision Volume 25 ; 25 >
+    au < ready ; 1998 ; International Journal of Computer Vision Volume 26 ; 26 >
+    au < ready ; 1998 ; International Journal of Computer Vision Volume 27 ; 27 >
+    au < ready ; 1998 ; International Journal of Computer Vision Volume 28 ; 28 >
+    au < ready ; 1998 ; International Journal of Computer Vision Volume 29 ; 29 >
+    au < ready ; 1998 ; International Journal of Computer Vision Volume 30 ; 30 >
+    au < ready ; 1999 ; International Journal of Computer Vision Volume 31 ; 31 >
+    au < ready ; 1999 ; International Journal of Computer Vision Volume 32 ; 32 >
+    au < ready ; 1999 ; International Journal of Computer Vision Volume 33 ; 33 >
+    au < ready ; 1999 ; International Journal of Computer Vision Volume 34 ; 34 >
+    au < ready ; 1999 ; International Journal of Computer Vision Volume 35 ; 35 >
+    au < ready ; 2000 ; International Journal of Computer Vision Volume 36 ; 36 >
+    au < ready ; 2000 ; International Journal of Computer Vision Volume 37 ; 37 >
+    au < ready ; 2000 ; International Journal of Computer Vision Volume 38 ; 38 >
+    au < ready ; 2000 ; International Journal of Computer Vision Volume 39 ; 39 >
+    au < ready ; 2000 ; International Journal of Computer Vision Volume 40 ; 40 >
+    au < ready ; 2001 ; International Journal of Computer Vision Volume 41 ; 41 >
+    au < ready ; 2001 ; International Journal of Computer Vision Volume 42 ; 42 >
+    au < ready ; 2001 ; International Journal of Computer Vision Volume 43 ; 43 >
+    au < ready ; 2001 ; International Journal of Computer Vision Volume 44 ; 44 >
+    au < ready ; 2001 ; International Journal of Computer Vision Volume 45 ; 45 >
+    au < ready ; 2002 ; International Journal of Computer Vision Volume 46 ; 46 >
+    au < ready ; 2002 ; International Journal of Computer Vision Volume 47 ; 47 >
+    au < ready ; 2002 ; International Journal of Computer Vision Volume 48 ; 48 >
+    au < ready ; 2002 ; International Journal of Computer Vision Volume 49 ; 49 >
+    au < ready ; 2002 ; International Journal of Computer Vision Volume 50 ; 50 >
+    au < ready ; 2003 ; International Journal of Computer Vision Volume 51 ; 51 >
+    au < ready ; 2003 ; International Journal of Computer Vision Volume 52 ; 52 >
+    au < ready ; 2003 ; International Journal of Computer Vision Volume 53 ; 53 >
+    au < ready ; 2003 ; International Journal of Computer Vision Volume 54 ; 54 >
+    au < ready ; 2003 ; International Journal of Computer Vision Volume 55 ; 55 >
+    au < ready ; 2004 ; International Journal of Computer Vision Volume 56 ; 56 >
+    au < ready ; 2004 ; International Journal of Computer Vision Volume 57 ; 57 >
+    au < ready ; 2004 ; International Journal of Computer Vision Volume 58 ; 58 >
+    au < ready ; 2004 ; International Journal of Computer Vision Volume 59 ; 59 >
+    au < ready ; 2004 ; International Journal of Computer Vision Volume 60 ; 60 >
+    au < ready ; 2005 ; International Journal of Computer Vision Volume 61 ; 61 >
+    au < ready ; 2005 ; International Journal of Computer Vision Volume 62 ; 62 >
+    au < ready ; 2005 ; International Journal of Computer Vision Volume 63 ; 63 >
+    au < ready ; 2005 ; International Journal of Computer Vision Volume 64 ; 64 >
+    au < ready ; 2005 ; International Journal of Computer Vision Volume 65 ; 65 >
+    au < ready ; 2006 ; International Journal of Computer Vision Volume 66 ; 66 >
+    au < ready ; 2006 ; International Journal of Computer Vision Volume 67 ; 67 >
+    au < ready ; 2006 ; International Journal of Computer Vision Volume 68 ; 68 >
+    au < ready ; 2006 ; International Journal of Computer Vision Volume 69 ; 69 >
+    au < ready ; 2006 ; International Journal of Computer Vision Volume 70 ; 70 >
+    au < ready ; 2007 ; International Journal of Computer Vision Volume 71 ; 71 >
+    au < ready ; 2007 ; International Journal of Computer Vision Volume 72 ; 72 >
+    au < ready ; 2007 ; International Journal of Computer Vision Volume 73 ; 73 >
+    au < ready ; 2007 ; International Journal of Computer Vision Volume 74 ; 74 >
+    au < ready ; 2007 ; International Journal of Computer Vision Volume 75 ; 75 >
+    au < ready ; 2008 ; International Journal of Computer Vision Volume 76 ; 76 >
+    au < ready ; 2008 ; International Journal of Computer Vision Volume 77 ; 77 >
+    au < ready ; 2008 ; International Journal of Computer Vision Volume 78 ; 78 >
+    au < ready ; 2008 ; International Journal of Computer Vision Volume 79 ; 79 >
+    au < ready ; 2008 ; International Journal of Computer Vision Volume 80 ; 80 >
+    au < ready ; 2009 ; International Journal of Computer Vision Volume 81 ; 81 >
+    au < ready ; 2009 ; International Journal of Computer Vision Volume 82 ; 82 >
+    au < ready ; 2009 ; International Journal of Computer Vision Volume 83 ; 83 >
+    au < ready ; 2009 ; International Journal of Computer Vision Volume 84 ; 84 >
+    au < ready ; 2009 ; International Journal of Computer Vision Volume 85 ; 85 >
+    au < ready ; 2010 ; International Journal of Computer Vision Volume 86 ; 86 >
+    au < ready ; 2010 ; International Journal of Computer Vision Volume 87 ; 87 >
+    au < ready ; 2010 ; International Journal of Computer Vision Volume 88 ; 88 >
+    au < ready ; 2010 ; International Journal of Computer Vision Volume 89 ; 89 >
+    au < ready ; 2010 ; International Journal of Computer Vision Volume 90 ; 90 >
+    au < ready ; 2011 ; International Journal of Computer Vision Volume 91 ; 91 >
 
   }
 
@@ -26470,105 +26469,105 @@
     au < testing ; 1967-1968 ; Pflügers Archiv European Journal of Physiology Volume 298 ; 298 >
     au < testing ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 299 ; 299 >
     au < testing ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 300 ; 300 >
-    au < testing ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 301 ; 301 >
+    au < ready ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 301 ; 301 >
     au < testing ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 302 ; 302 >
     au < testing ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 303 ; 303 >
-    au < testing ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 304 ; 304 >
-    au < testing ; 1968-1969 ; Pflügers Archiv European Journal of Physiology Volume 305 ; 305 >
+    au < ready ; 1968 ; Pflügers Archiv European Journal of Physiology Volume 304 ; 304 >
+    au < ready ; 1968-1969 ; Pflügers Archiv European Journal of Physiology Volume 305 ; 305 >
     au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 306 ; 306 >
-    au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 307 ; 307 >
-    au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 308 ; 308 >
+    au < ready ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 307 ; 307 >
+    au < ready ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 308 ; 308 >
     au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 309 ; 309 >
-    au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 310 ; 310 >
-    au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 311 ; 311 >
-    au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 312 ; 312 >
-    au < testing ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 313 ; 313 >
-    au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 314 ; 314 >
-    au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 315 ; 315 >
-    au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 316 ; 316 >
+    au < ready ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 310 ; 310 >
+    au < ready ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 311 ; 311 >
+    au < ready ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 312 ; 312 >
+    au < ready ; 1969 ; Pflügers Archiv European Journal of Physiology Volume 313 ; 313 >
+    au < ready ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 314 ; 314 >
+    au < ready ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 315 ; 315 >
+    au < ready ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 316 ; 316 >
     au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 317 ; 317 >
-    au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 318 ; 318 >
-    au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 319 ; 319 >
+    au < ready ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 318 ; 318 >
+    au < ready ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 319 ; 319 >
     au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 320 ; 320 >
-    au < testing ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 321 ; 321 >
-    au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 322 ; 322 >
-    au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 323 ; 323 >
+    au < ready ; 1970 ; Pflügers Archiv European Journal of Physiology Volume 321 ; 321 >
+    au < ready ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 322 ; 322 >
+    au < ready ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 323 ; 323 >
     au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 324 ; 324 >
-    au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 325 ; 325 >
+    au < ready ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 325 ; 325 >
     au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 326 ; 326 >
-    au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 327 ; 327 >
+    au < ready ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 327 ; 327 >
     au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 328 ; 328 >
     au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 329 ; 329 >
-    au < testing ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 330 ; 330 >
-    au < testing ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 331 ; 331 >
+    au < ready ; 1971 ; Pflügers Archiv European Journal of Physiology Volume 330 ; 330 >
+    au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 331 ; 331 >
     au < testing ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 332 ; 332 >
-    au < testing ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 333 ; 333 >
-    au < testing ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 334 ; 334 >
+    au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 333 ; 333 >
+    au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 334 ; 334 >
     au < testing ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 335 ; 335 >
     au < testing ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 336 ; 336 >
     au < testing ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 337 ; 337 >
-    au < testing ; 1972-1973 ; Pflügers Archiv European Journal of Physiology Volume 338 ; 338 >
-    au < testing ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 339 ; 339 >
-    au < testing ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 340 ; 340 >
-    au < testing ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 341 ; 341 >
+    au < ready ; 1972-1973 ; Pflügers Archiv European Journal of Physiology Volume 338 ; 338 >
+    au < ready ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 339 ; 339 >
+    au < ready ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 340 ; 340 >
+    au < ready ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 341 ; 341 >
     au < testing ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 342 ; 342 >
-    au < testing ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 343 ; 343 >
+    au < ready ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 343 ; 343 >
     au < testing ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 344 ; 344 >
-    au < testing ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 345 ; 345 >
+    au < ready ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 345 ; 345 >
     au < testing ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 346 ; 346 >
     au < testing ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 347 ; 347 >
-    au < testing ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 348 ; 348 >
-    au < testing ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 349 ; 349 >
-    au < testing ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 350 ; 350 >
+    au < ready ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 348 ; 348 >
+    au < ready ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 349 ; 349 >
+    au < ready ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 350 ; 350 >
     au < testing ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 351 ; 351 >
-    au < testing ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 352 ; 352 >
+    au < ready ; 1974 ; Pflügers Archiv European Journal of Physiology Volume 352 ; 352 >
     au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 353 ; 353 >
-    au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 354 ; 354 >
-    au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 355 ; 355 >
-    au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 356 ; 356 >
-    au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 357 ; 357 >
-    au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 358 ; 358 >
-    au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 359 ; 359 >
-    au < testing ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 360 ; 360 >
+    au < ready ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 354 ; 354 >
+    au < ready ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 355 ; 355 >
+    au < ready ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 356 ; 356 >
+    au < ready ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 357 ; 357 >
+    au < ready ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 358 ; 358 >
+    au < ready ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 359 ; 359 >
+    au < ready ; 1975 ; Pflügers Archiv European Journal of Physiology Volume 360 ; 360 >
     au < testing ; 1975-1976 ; Pflügers Archiv European Journal of Physiology Volume 361 ; 361 >
-    au < testing ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 362 ; 362 >
-    au < testing ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 363 ; 363 >
-    au < testing ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 364 ; 364 >
-    au < testing ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 365 ; 365 >
-    au < testing ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 366 ; 366 >
-    au < testing ; 1976-1977 ; Pflügers Archiv European Journal of Physiology Volume 367 ; 367 >
-    au < testing ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 368 ; 368 >
-    au < testing ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 369 ; 369 >
-    au < testing ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 370 ; 370 >
-    au < testing ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 371 ; 371 >
-    au < testing ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 372 ; 372 >
+    au < ready ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 362 ; 362 >
+    au < ready ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 363 ; 363 >
+    au < ready ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 364 ; 364 >
+    au < ready ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 365 ; 365 >
+    au < ready ; 1976 ; Pflügers Archiv European Journal of Physiology Volume 366 ; 366 >
+    au < ready ; 1976-1977 ; Pflügers Archiv European Journal of Physiology Volume 367 ; 367 >
+    au < ready ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 368 ; 368 >
+    au < ready ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 369 ; 369 >
+    au < ready ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 370 ; 370 >
+    au < ready ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 371 ; 371 >
+    au < ready ; 1977 ; Pflügers Archiv European Journal of Physiology Volume 372 ; 372 >
     au < testing ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 373 ; 373 >
-    au < testing ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 374 ; 374 >
-    au < testing ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 375 ; 375 >
-    au < testing ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 376 ; 376 >
-    au < testing ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 377 ; 377 >
-    au < testing ; 1978-1979 ; Pflügers Archiv European Journal of Physiology Volume 378 ; 378 >
-    au < testing ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 379 ; 379 >
+    au < ready ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 374 ; 374 >
+    au < ready ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 375 ; 375 >
+    au < ready ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 376 ; 376 >
+    au < ready ; 1978 ; Pflügers Archiv European Journal of Physiology Volume 377 ; 377 >
+    au < ready ; 1978-1979 ; Pflügers Archiv European Journal of Physiology Volume 378 ; 378 >
+    au < ready ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 379 ; 379 >
     au < testing ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 380 ; 380 >
     au < testing ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 381 ; 381 >
-    au < testing ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 382 ; 382 >
-    au < testing ; 1979-1980 ; Pflügers Archiv European Journal of Physiology Volume 383 ; 383 >
+    au < ready ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 382 ; 382 >
+    au < ready ; 1979-1980 ; Pflügers Archiv European Journal of Physiology Volume 383 ; 383 >
     au < testing ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 384 ; 384 >
-    au < testing ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 385 ; 385 >
-    au < testing ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 386 ; 386 >
+    au < ready ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 385 ; 385 >
+    au < ready ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 386 ; 386 >
     au < testing ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 387 ; 387 >
-    au < testing ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 388 ; 388 >
+    au < ready ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 388 ; 388 >
     au < testing ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 389 ; 389 >
-    au < testing ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 390 ; 390 >
-    au < testing ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 391 ; 391 >
-    au < testing ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 392 ; 392 >
+    au < ready ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 390 ; 390 >
+    au < ready ; 1981 ; Pflügers Archiv European Journal of Physiology Volume 391 ; 391 >
+    au < ready ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 392 ; 392 >
     au < testing ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 393 ; 393 >
-    au < testing ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 394 ; 394 >
+    au < ready ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 394 ; 394 >
     au < testing ; 1982 ; Pflügers Archiv European Journal of Physiology Volume 395 ; 395 >
-    au < testing ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 396 ; 396 >
-    au < testing ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 397 ; 397 >
-    au < testing ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 398 ; 398 >
-    au < testing ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 399 ; 399 >
+    au < ready ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 396 ; 396 >
+    au < ready ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 397 ; 397 >
+    au < ready ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 398 ; 398 >
+    au < ready ; 1983 ; Pflügers Archiv European Journal of Physiology Volume 399 ; 399 >
     au < testing ; 1984 ; Pflügers Archiv European Journal of Physiology Volume 400 ; 400 >
     au < ready ; 1984 ; Pflügers Archiv European Journal of Physiology Volume 401 ; 401 >
     au < ready ; 1984 ; Pflügers Archiv European Journal of Physiology Volume 402 ; 402 >
