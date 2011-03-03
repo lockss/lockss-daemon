@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.119 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.120 2011-03-03 18:57:32 tlipkis Exp $
  */
 
 /*
@@ -715,6 +715,8 @@ public abstract class LockssServlet extends HttpServlet
     return concatParams(props);
   }
 
+  /** Return the request parameters as a Properties.  Only the first value
+   * of multivalued parameters is included. */
   Properties getParamsAsProps() {
     Properties props = new Properties();
     for (Enumeration en = req.getParameterNames(); en.hasMoreElements(); ) {
@@ -722,6 +724,17 @@ public abstract class LockssServlet extends HttpServlet
       props.setProperty(name, req.getParameter(name));
     }
     return props;
+  }
+
+  /** Return the request parameters as a Map<String,String>.  Only the
+   * first value of multivalued parameters is included. */
+  Map<String,String> getParamsAsMap() {
+    Map<String,String> map = new HashMap<String,String>();
+    for (Enumeration en = req.getParameterNames(); en.hasMoreElements(); ) {
+      String name = (String)en.nextElement();
+      map.put(name, req.getParameter(name));
+    }
+    return map;
   }
 
   protected String urlEncode(String param) {
