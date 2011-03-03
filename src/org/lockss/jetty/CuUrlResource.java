@@ -1,5 +1,5 @@
 /*
- * $Id: CuUrlResource.java,v 1.5 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: CuUrlResource.java,v 1.6 2011-03-03 18:56:42 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.jetty;
 import java.io.*;
 import java.net.*;
 
+import org.mortbay.http.*;
 import org.mortbay.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -102,6 +103,16 @@ public class CuUrlResource extends URLResource {
   public boolean equals( Object o) {
     return (o instanceof CuUrlResource) &&
       UrlUtil.equalUrls(_url,((CuUrlResource)o)._url);
+  }
+
+  // Inherited method returns count from URLConnection, which (incorrently)
+  // is an int.  This version handles cached files larger than 2GB
+  public long length() {
+    try {
+      return Long.parseLong(getProperty(HttpFields.__ContentLength));
+    } catch (Exception e) {
+      return -1;
+    }
   }
 
   public String getProperty(String name) {
