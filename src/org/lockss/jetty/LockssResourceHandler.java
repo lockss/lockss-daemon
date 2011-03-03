@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.16 2007-02-06 00:48:24 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.16.58.1 2011-03-03 18:46:29 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.16 2007-02-06 00:48:24 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.16.58.1 2011-03-03 18:46:29 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -681,11 +681,17 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         response.setContentType(ctype);
         if (count != -1)
         {
-            if (count==resource.length())
-                response.setField(HttpFields.__ContentLength,metaData.getLength());
-            else
-                response.setContentLength((int)count);
-        }
+	  if (count==resource.length()) {
+	    response.setField(HttpFields.__ContentLength,metaData.getLength());
+	  } else {
+	    if (count < Integer.MAX_VALUE) {
+	      response.setContentLength((int)count);
+	    } else {
+	      response.setField(HttpFields.__ContentLength,
+				Long.toString(count));
+	    }
+	  }
+	}
 
         response.setField(HttpFields.__LastModified,metaData.getLastModified());
 

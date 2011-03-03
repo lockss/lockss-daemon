@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.17 2010-12-02 10:06:02 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.17.2.1 2011-03-03 18:46:29 tlipkis Exp $
  */
 
 /*
@@ -299,6 +299,8 @@ public class ViewContent extends LockssServlet {
     resp.setContentType(ctype);
     if (clen <= Integer.MAX_VALUE) {
       resp.setContentLength((int)clen);
+    } else {
+      resp.setHeader(HttpFields.__ContentLength, Long.toString(clen));
     }
     OutputStream out = null;
     InputStream in = null;
