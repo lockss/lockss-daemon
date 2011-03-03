@@ -1,5 +1,5 @@
 /*
- * $Id: TestHeaderUtil.java,v 1.4.28.1 2011-02-15 09:03:06 tlipkis Exp $
+ * $Id: TestHeaderUtil.java,v 1.4.28.2 2011-03-03 18:48:18 tlipkis Exp $
  */
 
 /*
@@ -123,5 +123,35 @@ public class TestHeaderUtil extends LockssTestCase {
     assertFalse(HeaderUtil.isEarlier(t1, new String(t1)));
     assertTrue(HeaderUtil.isEarlier(t1, t2));
     assertFalse(HeaderUtil.isEarlier(t2, t1));
+  }
+
+  public void testEarlierLater() throws Exception {
+    String t1 = "Wed, 17 Sep 2008 18:24:58 GMT";
+    String t2 = "Thu, 18 Sep 2008 18:24:58 GMT";
+
+    assertSame(t1, HeaderUtil.earlier(t1, t1));
+    assertSame(t1, HeaderUtil.earlier(t1, t2));
+    assertSame(t1, HeaderUtil.earlier(t2, t1));
+
+    assertSame(t1, HeaderUtil.earlier(t1, null));
+    assertSame(t2, HeaderUtil.earlier(null, t2));
+    assertSame(null, HeaderUtil.earlier(null, null));
+
+    assertSame(t1, HeaderUtil.earlier(t1, ""));
+    assertSame(t2, HeaderUtil.earlier("", t2));
+    assertSame(null, HeaderUtil.earlier("", ""));
+
+    assertSame(t1, HeaderUtil.later(t1, t1));
+    assertSame(t2, HeaderUtil.later(t1, t2));
+    assertSame(t2, HeaderUtil.later(t2, t1));
+
+    assertSame(t1, HeaderUtil.later(t1, null));
+    assertSame(t2, HeaderUtil.later(null, t2));
+    assertSame(null, HeaderUtil.later(null, null));
+
+    assertSame(t1, HeaderUtil.later(t1, ""));
+    assertSame(t2, HeaderUtil.later("", t2));
+    assertSame(null, HeaderUtil.later("", ""));
+
   }
 }
