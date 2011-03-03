@@ -74,22 +74,17 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
   
   {
     title <
-      name = Limnology and Oceanography Bulletin ;
-      eissn = 1539-6088
-    >
-
-  }
-  
-  {
-    title <
-      name = Limnology and Oceanography: Fuilds and Environments ;
+      name = Limnology and Oceanography: Fluids & Environment ;
       eissn = 2157-3698
-    >   
-
+    >  
+    
+    comment[fe] = H20, published by Duke University Press
+    
   }
-
+    
   {
     title <
+
       name = Limnology and Oceanography: Methods ;
       issn = 1079-2082
     >

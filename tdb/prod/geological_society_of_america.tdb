@@ -25,10 +25,10 @@
 
     param[base_url] = http://gsabulletin.gsapubs.org/
 
-    au < wanted ; 2008 ; Geological Society of America Bulletin Volume 120 ; 120 >
-    au < wanted ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 >
-    au < wanted ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
-    au < wanted ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
+    au < ready ; 2008 ; Geological Society of America Bulletin Volume 120 ; 120 >
+    au < ready ; 2009 ; Geological Society of America Bulletin Volume 121 ; 121 >
+    au < ready ; 2010 ; Geological Society of America Bulletin Volume 122 ; 122 >
+    au < ready ; 2011 ; Geological Society of America Bulletin Volume 123 ; 123 >
 
   }
 
@@ -58,10 +58,10 @@
 
     param[base_url] = http://geology.gsapubs.org/
 
-    au < wanted ; 2008 ; Geological Society of America Bulletin Volume 36 ; 36 >
-    au < wanted ; 2009 ; Geological Society of America Bulletin Volume 37 ; 37 >
-    au < wanted ; 2010 ; Geological Society of America Bulletin Volume 38 ; 38 >
-    au < wanted ; 2011 ; Geological Society of America Bulletin Volume 39 ; 39 >
+    au < ready ; 2008 ; Geological Society of America Bulletin Volume 36 ; 36 >
+    au < ready ; 2009 ; Geological Society of America Bulletin Volume 37 ; 37 >
+    au < ready ; 2010 ; Geological Society of America Bulletin Volume 38 ; 38 >
+    au < ready ; 2011 ; Geological Society of America Bulletin Volume 39 ; 39 >
 
   }
 
@@ -75,8 +75,8 @@
 
     param[base_url] = http://lithosphere.gsapubs.org/
 
-    au < wanted ; 2009 ; Lithosphere Volume 1 ; 1 >
-    au < wanted ; 2010 ; Lithosphere Volume 2 ; 2 >
+    au < ready ; 2009 ; Lithosphere Volume 1 ; 1 >
+    au < ready ; 2010 ; Lithosphere Volume 2 ; 2 >
 
   }
 
