@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.213 2011-02-15 09:01:11 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.214 2011-03-03 18:56:56 tlipkis Exp $
  */
 
 /*
@@ -160,7 +160,7 @@ public class PluginManager
    * AUs will be restarted. */
   public static final String PARAM_RESTART_AUS_WITH_NEW_PLUGIN =
     PREFIX + "restartAusWithNewPlugin";
-  public static final boolean DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN = false;
+  public static final boolean DEFAULT_RESTART_AUS_WITH_NEW_PLUGIN = true;
 
   /** The max amount of time to wait after stopping a set of AUs whose
    * plugin has been replaced by a new version, before restarting them. */
