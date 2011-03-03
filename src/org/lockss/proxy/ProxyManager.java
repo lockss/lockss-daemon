@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.44 2007-08-10 07:12:35 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.44.52.1 2011-03-03 18:47:01 tlipkis Exp $
  */
 
 /*
@@ -184,7 +184,8 @@ public class ProxyManager extends BaseProxyManager {
   private Set noManifestIndexResponses = new HashSet();
   private Set disallowedMethods = new HashSet();
   private TimerQueue.Request closeTimer;
-
+  private LockssUrlConnectionPool connPool = null;
+  private LockssUrlConnectionPool quickConnPool = null;
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -343,8 +344,14 @@ public class ProxyManager extends BaseProxyManager {
   // and one with short timeouts for checking with publisher before serving
   // content from cache.
   protected org.lockss.proxy.ProxyHandler makeProxyHandler() {
-    LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
-    LockssUrlConnectionPool quickConnPool = new LockssUrlConnectionPool();
+    setupConnectionPools();
+    return new org.lockss.proxy.ProxyHandler(getDaemon(),
+					     connPool, quickConnPool);
+  }
+
+  private void setupConnectionPools() {
+    LockssUrlConnectionPool norm = new LockssUrlConnectionPool();
+    LockssUrlConnectionPool quick = new LockssUrlConnectionPool();
     Configuration conf = ConfigManager.getCurrentConfig();
 
     int tot = conf.getInt(PARAM_PROXY_MAX_TOTAL_CONN,
@@ -352,23 +359,38 @@ public class ProxyManager extends BaseProxyManager {
     int perHost = conf.getInt(PARAM_PROXY_MAX_CONN_PER_HOST,
 			      DEFAULT_PROXY_MAX_CONN_PER_HOST);
 
-    connPool.setMultiThreaded(tot, perHost);
-    quickConnPool.setMultiThreaded(tot, perHost);
-    connPool.setConnectTimeout
+    norm.setMultiThreaded(tot, perHost);
+    quick.setMultiThreaded(tot, perHost);
+    norm.setConnectTimeout
       (conf.getTimeInterval(PARAM_PROXY_CONNECT_TIMEOUT,
 			    DEFAULT_PROXY_CONNECT_TIMEOUT));
-    connPool.setDataTimeout
+    norm.setDataTimeout
       (conf.getTimeInterval(PARAM_PROXY_DATA_TIMEOUT,
 			    DEFAULT_PROXY_DATA_TIMEOUT));
-    quickConnPool.setConnectTimeout
+    quick.setConnectTimeout
       (conf.getTimeInterval(PARAM_PROXY_QUICK_CONNECT_TIMEOUT,
 			    DEFAULT_PROXY_QUICK_CONNECT_TIMEOUT));
-    quickConnPool.setDataTimeout
+    quick.setDataTimeout
       (conf.getTimeInterval(PARAM_PROXY_QUICK_DATA_TIMEOUT,
 			    DEFAULT_PROXY_QUICK_DATA_TIMEOUT));
-    return new org.lockss.proxy.ProxyHandler(getDaemon(),
-					     connPool, quickConnPool);
+    connPool = norm;
+    quickConnPool = quick;
   }
+
+  public LockssUrlConnectionPool getNormalConnectionPool() {
+    if (connPool == null) {
+      setupConnectionPools();
+    }
+    return connPool;
+  }
+
+  public LockssUrlConnectionPool getQuickConnectionPool() {
+    if (quickConnPool == null) {
+      setupConnectionPools();
+    }
+    return quickConnPool;
+  }
+
 
   /** Determine whether the request is from another LOCKSS cache asking for
    * a repair.  This is indicated by the including the string "Repair" as
