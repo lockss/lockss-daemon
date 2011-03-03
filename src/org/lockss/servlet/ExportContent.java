@@ -1,5 +1,5 @@
 /*
- * $Id: ExportContent.java,v 1.5 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: ExportContent.java,v 1.6 2011-03-03 18:57:18 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class ExportContent extends LockssServlet {
 
   /** Default export file max size */
   static final String PARAM_MAX_SIZE = PREFIX + "defaultMaxSize";
-  static final String DEFAULT_MAX_SIZE = "100";
+  static final String DEFAULT_MAX_SIZE = "";
 
   /** Default max number of versions of each content file to export */
   static final String PARAM_MAX_VERSIONS = PREFIX + "defaultMaxVersions";
@@ -127,8 +127,6 @@ public class ExportContent extends LockssServlet {
   File exportDir;
 
   String auid;
-  String name;
-  String text;
   Type eType;
   boolean isCompress;
   FilenameTranslation xlateFilenames;
@@ -145,6 +143,8 @@ public class ExportContent extends LockssServlet {
     errMsg = null;
     statusMsg = null;
     auid = null;
+    filePrefix = null;
+    maxVersions = null;
 
   }
 
