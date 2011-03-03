@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.268 2011-01-23 01:18:19 dshr Exp $
+ $Id: build.xml,v 1.268.2.1 2011-03-03 18:46:10 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -196,7 +196,7 @@ Args:
   <property name="xerces.jar"     value="${lib}/xercesImpl-2.7.1.jar"/>
   <property name="xml-apis.jar"   value="${lib}/xml-apis.jar"/>
   <property name="jimi.jar"       value="${lib}/JimiProClasses.jar"/>
-  <property name="jetty.jar"      value="${lib}/jetty-5.1.5.jar"/>
+  <property name="jetty.jar"      value="${lib}/jetty-5.1.5L.jar"/>
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
   <property name="pjl-comp-filter.jar"
                                   value="${lib}/pjl-comp-filter-1.6.5.jar"/>
