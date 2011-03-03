@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.8 2011-02-16 01:27:41 tlipkis Exp $
+ * $Id: HeaderUtil.java,v 1.9 2011-03-03 18:58:06 tlipkis Exp $
  */
 
 /*
@@ -153,6 +153,40 @@ public class HeaderUtil {
     return TOKEN_CHARS[ch];
   }
 
+  /** Return the earlier of two date strings.  Non-null date is preferred
+   * over null date. */
+  public static String earlier(String datestr1, String datestr2)
+      throws org.apache.commons.httpclient.util.DateParseException {
+    return dateMinMax(datestr1, datestr2, true);
+  }
+
+  /** Return the later of two date strings.  Non-null date is preferred
+   * over null date. */
+  public static String later(String datestr1, String datestr2)
+      throws org.apache.commons.httpclient.util.DateParseException {
+    return dateMinMax(datestr1, datestr2, false);
+  }
+
+  private static String dateMinMax(String datestr1, String datestr2,
+				   boolean earlier)
+      throws org.apache.commons.httpclient.util.DateParseException {
+    if (StringUtil.isNullString(datestr1)) datestr1 = null;
+    if (StringUtil.isNullString(datestr2)) datestr2 = null;
+    if (datestr1 == null) {
+      return datestr2;
+    }
+    if (datestr2 == null) {
+      return datestr1;
+    }
+    if (earlier ^ HeaderUtil.isEarlier(datestr1, datestr2)) {
+      return datestr2;
+    } else {
+      return datestr1;
+    }
+  }
+
+  /** Return true iff the first date string is strictly earlier than the
+   * second */
   public static boolean isEarlier(String datestr1, String datestr2)
       throws org.apache.commons.httpclient.util.DateParseException {
     // common case, no conversion necessary
