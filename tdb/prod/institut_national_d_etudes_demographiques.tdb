@@ -8,7 +8,8 @@
   
     title <
       name = Population, English Edition ;
-      issn = 1958-9190
+      issn = 1958-9190 ;
+      issnl = 1634-2941
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin

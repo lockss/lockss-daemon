@@ -15,7 +15,8 @@
   
       title <
         name = Cosmos and History ;
-        issn = 1832-9101
+        issn = 1832-9101 ;
+        issnl = 1832-9101
       >
     
       param[base_url] = http://www.cosmosandhistory.org/
@@ -33,7 +34,8 @@
   
       title <
         name = Culture Machine ;
-        issn = 1465-4121
+        issn = 1465-4121 ;
+        issnl = 1465-4121
       >
     
       param[base_url] = http://www.culturemachine.net/
@@ -58,7 +60,8 @@
   
       title <
         name = Film-Philosophy ;
-        issn = 1466-4615
+        issn = 1466-4615 ;
+        issnl = 1466-4615
       >
     
       param[base_url] = http://www.film-philosophy.com/
@@ -84,7 +87,9 @@
   
       title <
         name = Filozofski Vestnik ;
-        issn = 0353-4510
+        issn = 0353-4510 ;
+        eissn = 1581-1239 ;
+        issnl = 0353-4510
       >
     
       param[base_url] = http://www.filozofskivestnikonline.com/

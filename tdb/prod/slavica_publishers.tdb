@@ -11,7 +11,8 @@
     title <
       name = Journal of Slavic Linguistics ;
       issn = 1543-0391 ;
-      eissn = 1068-2090
+      eissn = 1068-2090 ;
+      issnl = 1068-2090
     >
 
     param[journal_dir] = journal_of_slavic_linguistics
@@ -25,7 +26,8 @@
     title <
       name = Kritika: Explorations in Russian and Eurasian History ;
       issn = 1531-023X ;
-      eissn = 1538-5000
+      eissn = 1538-5000 ;
+      issnl = 1531-023X
     >
 
     param[journal_dir] = kritika
@@ -48,7 +50,8 @@
     title <
       name = Serbian Studies: Journal of the North American Society for Serbian Studies ;
       issn = 1941-9511 ;
-      eissn = 0742-3330
+      eissn = 0742-3330 ;
+      issnl = 0742-3330
     >
 
 comment[ss] = Can't fetch permission page

@@ -14,7 +14,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = AIAA Journal ;
       issn = 0001-1452 ;
-      eissn = 1533-385X
+      eissn = 1533-385X ;
+      issnl = 0001-1452
     >
     
   } 
@@ -23,7 +24,8 @@ comment[aiaa] = plugin is incomplete, pending testing
 
     title <
       name = Journal of Aerospace Computing, Information, and Communication ;
-      issn = 1542-9423
+      issn = 1542-9423 ;
+      issnl = 1542-9423
     >
     
   }
@@ -33,7 +35,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = Journal of Aircraft ;
       issn = 0021-8669 ;
-      eissn = 1533-3868
+      eissn = 1533-3868 ;
+      issnl = 0021-8669
     >
     
   }
@@ -43,7 +46,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = Journal of Energy ;
       issn = 0146-0412 ;
-      eissn = 1555-5917
+      eissn = 1555-5917 ;
+      issnl = 0146-0412
     >
     
   } 
@@ -53,7 +57,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = Journal of Guidance, Control, and Dynamics ;
       issn = 0731-5090 ;
-      eissn = 1533-3884
+      eissn = 1533-3884 ;
+      issnl = 0731-5090
     >
     
   } 
@@ -63,7 +68,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = Journal of Hydronautics ;
       issn = 0022-1716 ;
-      eissn = 1555-5909
+      eissn = 1555-5909 ;
+      issnl = 0022-1716
     >
     
   } 
@@ -73,7 +79,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = Journal of Propulsion and Power ;
       issn = 0748-4658 ;
-      eissn = 1533-3876
+      eissn = 1533-3876 ;
+      issnl = 0748-4658
     >
     
   } 
@@ -83,7 +90,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = Journal of Spacecraft and Rockets ;
       issn = 0022-4650 ;
-      eissn = 1533-6794
+      eissn = 1533-6794 ;
+      issnl = 0022-4650
     >
     
   } 
@@ -93,7 +101,8 @@ comment[aiaa] = plugin is incomplete, pending testing
     title <
       name = Journal of Thermophysics and Heat Transfer ;
       issn = 0887-8722 ;
-      eissn = 1533-6808
+      eissn = 1533-6808 ;
+      issnl = 0887-8722
     >
     
   } 

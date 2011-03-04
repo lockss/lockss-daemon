@@ -12,7 +12,8 @@
     title <
       name = Experimental Physiology ;
       issn = 0958-0670 ;
-      eissn = 1469-445X
+      eissn = 1469-445X ;
+      issnl = 0958-0670
     >
     
     comment[continued_from] = 0144-8757
@@ -47,7 +48,8 @@
     title <
       name = Journal of Physiology ;
       issn = 0022-3751 ;
-      eissn = 1469-7793
+      eissn = 1469-7793 ;
+      issnl = 0022-3751
     >
     
     param[base_url] = http://jp.physoc.org/
@@ -647,7 +649,8 @@
   
     title <
       name = Quarterly Journal of Experimental Physiology ;
-      issn = 0370-2901
+      issn = 0370-2901 ;
+      issnl = 0370-2901
     >
     
     comment[continued_by] = 0033-5541
@@ -687,7 +690,8 @@
   
     title <
       name = Quarterly Journal of Experimental Physiology ;
-      issn = 0144-8757
+      issn = 0144-8757 ;
+      issnl = 0144-8757
     >
   
     comment[continued_from] = 0033-5541
@@ -710,7 +714,8 @@
   
     title <
       name = Quarterly Journal of Experimental Physiology and Cognate Medical Sciences ;
-      issn = 0033-5541
+      issn = 0033-5541 ;
+      issnl = 0033-5541
     >
   
     comment[continued_from] = 0370-2901  

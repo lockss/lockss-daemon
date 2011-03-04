@@ -9,7 +9,8 @@
     title <
       name = Chest ;
       issn = 0012-3692 ;
-      eissn = 1931-3543
+      eissn = 1931-3543 ;
+      issnl = 0012-3692
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

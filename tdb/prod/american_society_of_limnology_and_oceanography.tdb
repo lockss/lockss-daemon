@@ -10,7 +10,7 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
   {
     title <
       name = Limnology and Oceanography ;
-      issn = 1079-2082
+      issn = 0024-3590
     >
     
     plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyPlugin
@@ -84,9 +84,8 @@ comment[aslo] = we're not preserving the last ~4 volumes of the run due to a mov
     
   {
     title <
-
       name = Limnology and Oceanography: Methods ;
-      issn = 1079-2082
+      issn = 1541-5856
     >
     
     plugin = org.lockss.plugin.aslo.LimnologyAndOceanographyMethodsPlugin

@@ -8,7 +8,9 @@
   
     title <
       name = Clays and Clay Minerals;
-      issn = 0009-8604
+      issn = 0009-8604 ;
+      eissn = 1552-8367 ;
+      issnl = 0009-8604
     >
     
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin

@@ -13,7 +13,8 @@
     title <
       name = China: An International Journal ;
       issn = 0219-7472 ;
-      eissn = 0219-8614
+      eissn = 0219-8614 ;
+      issnl = 0219-7472
     >
 
     param[journal_dir] = china
@@ -33,7 +34,8 @@
     title <
       name = Journal of Chinese Overseas ;
       issn = 1793-0391 ;
-      eissn = 1793-2548
+      eissn = 1793-2548 ;
+      issnl = 1793-0391
     >
 
     param[journal_dir] = journal_of_chinese_overseas

@@ -8,7 +8,9 @@
 
     title <
       name = Caribbean Studies ;
-      issn = 0008-6533
+      issn = 0008-6533 ;
+      eissn = 1940-9095 ;
+      issnl = 0008-6533
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin

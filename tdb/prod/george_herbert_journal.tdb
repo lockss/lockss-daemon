@@ -11,7 +11,8 @@
     title <
       name = George Herbert Journal ;
       issn = 0161-7435 ;
-      eissn = 1931-1192
+      eissn = 1931-1192 ;
+      issnl = 0161-7435
     >
 
     param[journal_dir] = george_herbert_journal

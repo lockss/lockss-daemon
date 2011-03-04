@@ -8,7 +8,9 @@
 
     title <
       name = Journal of Leukocyte Biology ;
-      issn = 0741-5400
+      issn = 0741-5400 ;
+      eissn = 1938-3673 ;
+      issnl = 0741-5400
     >
 
     pluginPrefix = org.lockss.plugin.highwire.

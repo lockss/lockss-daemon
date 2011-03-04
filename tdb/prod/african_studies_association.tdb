@@ -12,7 +12,8 @@
     title <
       name = African Studies Review ;
       issn = 0002-0206 ;
-      eissn = 1555-2462
+      eissn = 1555-2462 ;
+      issnl = 0002-0206
     >
 
     param[journal_dir] = african_studies_review
@@ -28,7 +29,8 @@
     title <
       name = History in Africa ;
       issn = 0361-5413 ;
-      eissn = 1558-2744
+      eissn = 1558-2744 ;
+      issnl = 0361-5413
     >
 
     param[journal_dir] = history_in_africa

@@ -18,7 +18,8 @@
     title <
       name = Clay Minerals ;
       issn = 0009-8558 ;
-      eissn = 1471-8030
+      eissn = 1471-8030 ;
+      issnl = 0009-8558
     >
     
     param[journal_id] = cm
@@ -45,7 +46,8 @@
     title <
       name = Mineralogical Magazine ;
       issn = 0026-461X ;
-      eissn = 1471-8022
+      eissn = 1471-8022 ;
+      issnl = 0026-461X
     >
     param[journal_id] = mag
     param[journal_issn] = 0026-461X

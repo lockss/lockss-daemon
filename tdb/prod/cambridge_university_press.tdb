@@ -11,7 +11,8 @@
     title <
       name = Canadian Journal on Aging / La Revue canadienne du vieillissement ;
       issn = 0714-9808 ;
-      eissn = 1710-1107
+      eissn = 1710-1107 ;
+      issnl = 0714-9808
     >
 
     param[journal_dir] = canadian_journal_on_aging
@@ -29,7 +30,8 @@
     title <
       name = Journal of Policy History ;
       issn = 0898-0306 ;
-      eissn = 1528-4190
+      eissn = 1528-4190 ;
+      issnl = 0898-0306
     >
 
     param[journal_dir] = journal_of_policy_history
@@ -53,7 +55,8 @@
     title <
       name = World Politics ;
       issn = 0043-8871 ;
-      eissn = 1086-3338
+      eissn = 1086-3338 ;
+      issnl = 0043-8871
     >
 
     param[journal_dir] = world_politics

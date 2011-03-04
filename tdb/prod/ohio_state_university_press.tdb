@@ -11,7 +11,8 @@
     title <
       name = American Periodicals: A Journal of History, Criticism, and Bibliography ;
       issn = 1054-7479 ;
-      eissn = 1548-4238
+      eissn = 1548-4238 ;
+      issnl = 1054-7479
     >
 
     param[journal_dir] = american_periodicals
@@ -30,7 +31,8 @@
     title <
       name = Geographical Analysis ;
       issn = 0016-7363 ;
-      eissn = 1538-4632
+      eissn = 1538-4632 ;
+      issnl = 0016-7363
     >
 
     param[journal_dir] = geographical_analysis
@@ -45,7 +47,8 @@
     title <
       name = Journal for the Psychoanalysis of Culture and Society ;
       issn = 1088-0763 ;
-      eissn = 1543-3390
+      eissn = 1543-3390 ;
+      issnl = 1088-0763
     >
 
     param[journal_dir] = journal_for_the_psychoanalysis_of_culture_and_society
@@ -74,7 +77,8 @@
     title <
       name = Narrative ;
       issn = 1063-3685 ;
-      eissn = 1538-974X
+      eissn = 1538-974X ;
+      issnl = 1063-3685
     >
 
     param[journal_dir] = narrative
@@ -95,7 +99,8 @@
     title <
       name = The Journal of Higher Education ;
       issn = 0022-1546 ;
-      eissn = 1538-4640
+      eissn = 1538-4640 ;
+      issnl = 0022-1546
     >
 
     param[journal_dir] = journal_of_higher_education
@@ -116,7 +121,8 @@
     title <
       name = Twentieth-Century China ;
       issn = 1521-5385 ;
-      eissn = 1940-5065
+      eissn = 1940-5065 ;
+      issnl = 1521-5385
     >
 
     param[journal_dir] = twentiethcentury_china

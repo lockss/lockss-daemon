@@ -9,7 +9,8 @@
     title <
       name = Annals of Internal Medicine ;
       issn = 0003-4819 ;
-      eissn = 1539-3704
+      eissn = 1539-3704 ;
+      issnl = 0003-4819
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

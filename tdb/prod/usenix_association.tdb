@@ -8,7 +8,8 @@
   
     title <
       name = ";login:" ;
-      issn = 1044-6397
+      issn = 1044-6397 ;
+      issnl = 1044-6397
     >
 
     plugin = org.lockss.plugin.usenix.login.UsenixLoginPlugin

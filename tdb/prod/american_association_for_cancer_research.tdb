@@ -8,6 +8,7 @@
 
     title <
       name = Cancer Discovery
+
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
@@ -21,7 +22,8 @@
     title <
       name = Cancer Epidemiology Biomarkers & Prevention ;
       issn = 1055-9965 ;
-      eissn = 1538-7755
+      eissn = 1538-7755 ;
+      issnl = 1055-9965
     >
 
     {
@@ -59,7 +61,8 @@
     title <
       name = Cancer Prevention Research ;
       issn = 1940-6207 ;
-      eissn = 1940-6215
+      eissn = 1940-6215 ;
+      issnl = 1940-6215
     >
 
     {
@@ -81,7 +84,8 @@
     title <
       name = Cancer Research ;
       issn = 0008-5472 ;
-      eissn = 1538-7445
+      eissn = 1538-7445 ;
+      issnl = 0008-5472
     >
 
     {
@@ -170,7 +174,8 @@
     title <
       name = Clinical Cancer Research ;
       issn = 1078-0432 ;
-      eissn = 1557-3265
+      eissn = 1557-3265 ;
+      issnl = 1078-0432
     >
 
     {
@@ -205,7 +210,8 @@
     title <
       name = Molecular Cancer Research ;
       issn = 1541-7786 ;
-      eissn = 1557-3125
+      eissn = 1557-3125 ;
+      issnl = 1541-7786
     >
 
     {
@@ -231,7 +237,8 @@
     title <
       name = Molecular Cancer Therapeutics ;
       issn = 1535-7163 ;
-      eissn = 1538-8514
+      eissn = 1538-8514 ;
+      issnl = 1535-7163
     >
 
     {

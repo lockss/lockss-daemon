@@ -11,7 +11,8 @@
     title <
       name = James Joyce Quarterly ;
       issn = 0021-4183 ;
-      eissn = 1938-6036
+      eissn = 1938-6036 ;
+      issnl = 0021-4183
     >
 
     param[journal_dir] = james_joyce_quarterly
@@ -26,7 +27,8 @@
     title <
       name = Tulsa Studies in Women's Literature ;
       issn = 0732-7730 ;
-      eissn = 1936-1645
+      eissn = 1936-1645 ;
+      issnl = 0732-7730
     >
 
     param[journal_dir] = tulsa_studies_in_womens_literature

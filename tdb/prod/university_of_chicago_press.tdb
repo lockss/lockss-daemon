@@ -11,7 +11,8 @@
   
     title <
       name = Afterall: A Journal of Art, Context and Enquiry ;
-      issn = 1465-4253
+      issn = 1465-4253 ;
+      issnl = 1465-4253
     >
 
     param[journal_id] = aft
@@ -26,7 +27,8 @@
     title <
       name = American Art ;
       issn = 1073-9300 ;
-      eissn = 1549-6503
+      eissn = 1549-6503 ;
+      issnl = 1073-9300
     >
 
     param[journal_id] = amart
@@ -58,7 +60,8 @@
   {
     title <
       name = The American Historical Review ;
-      issn = 0002-8762
+      issn = 0002-8762 ;
+      issnl = 0002-8762
     >
 
     param[journal_id] = ahr
@@ -73,7 +76,8 @@
     title <
       name = American Journal of Education ;
       issn = 0195-6744 ;
-      eissn = 1549-6511
+      eissn = 1549-6511 ;
+      issnl = 0195-6744
     >
 
     param[journal_id] = aje
@@ -199,7 +203,8 @@
     title <
       name = American Journal of Sociology ;
       issn = 0002-9602 ;
-      eissn = 1537-5390
+      eissn = 1537-5390 ;
+      issnl = 0002-9602
     >
 
     param[journal_id] = ajs
@@ -324,7 +329,8 @@
     title <
       name = The American Naturalist ;
       issn = 0003-0147 ;
-      eissn = 1537-5323
+      eissn = 1537-5323 ;
+      issnl = 0003-0147
     >
 
     param[journal_id] = an
@@ -508,7 +514,8 @@
     title <
       name = Classical Philology ;
       issn = 0009-837X ;
-      eissn = 1546-072X
+      eissn = 1546-072X ;
+      issnl = 0009-837X
     >
 
     param[journal_id] = cp
@@ -639,7 +646,8 @@
     title <
       name = Clinical Infectious Diseases ;
       issn = 1058-4838 ;
-      eissn = 1537-6591
+      eissn = 1537-6591 ;
+      issnl = 1058-4838
     >
 
     param[journal_id] = cid
@@ -674,7 +682,8 @@
     title <
       name = Comparative Education Review ;
       issn = 0010-4086 ;
-      eissn = 1545-701X
+      eissn = 1545-701X ;
+      issnl = 0010-4086
     >
 
     param[journal_id] = cer
@@ -738,7 +747,8 @@
     title <
       name = Critical Inquiry ;
       issn = 0093-1896 ;
-      eissn = 1539-7858
+      eissn = 1539-7858 ;
+      issnl = 0093-1896
     >
 
     param[journal_id] = ci
@@ -784,7 +794,8 @@
     title <
       name = Current Anthropology ;
       issn = 0011-3204 ;
-      eissn = 1537-5382
+      eissn = 1537-5382 ;
+      issnl = 0011-3204
     >
 
     param[journal_id] = ca
@@ -844,7 +855,8 @@
     title <
       name = Economic Development and Cultural Change ;
       issn = 0013-0079 ;
-      eissn = 1539-2988
+      eissn = 1539-2988 ;
+      issnl = 0013-0079
     >
 
     param[journal_id] = edcc
@@ -912,7 +924,8 @@
     title <
       name = The Elementary School Journal ;
       issn = 0013-5984 ;
-      eissn = 1554-8279
+      eissn = 1554-8279 ;
+      issnl = 0013-5984
     >
 
     param[journal_id] = esj
@@ -1018,7 +1031,8 @@
     title <
       name = Ethics ;
       issn = 0014-1704 ;
-      eissn = 1539-297X
+      eissn = 1539-297X ;
+      issnl = 0014-1704
     >
 
     param[journal_id] = et
@@ -1148,7 +1162,8 @@
     title <
       name = History of Religions ;
       issn = 0018-2710 ;
-      eissn = 1545-6935
+      eissn = 1545-6935 ;
+      issnl = 0018-2710
     >
 
     param[journal_id] = hr
@@ -1220,7 +1235,8 @@
     title <
       name = Infection Control and Hospital Epidemiology ;
       issn = 0899-823X ;
-      eissn = 1559-6834
+      eissn = 1559-6834 ;
+      issnl = 0899-823X
     >
 
 comment[iche27] = 500 internal server errors
@@ -1245,7 +1261,8 @@ comment[iche27] = 500 internal server errors
     title <
       name = Innovation Policy and the Economy ;
       issn = 1531-3468 ;
-      eissn = 1537-2618
+      eissn = 1537-2618 ;
+      issnl = 1531-3468
     >
 
     param[journal_id] = ipe
@@ -1259,7 +1276,8 @@ comment[iche27] = 500 internal server errors
     title <
       name = International Journal of American Linguistics ;
       issn = 0020-7071 ;
-      eissn = 1545-7001
+      eissn = 1545-7001 ;
+      issnl = 0020-7071
     >
 
     param[journal_id] = ijal
@@ -1345,7 +1363,8 @@ comment[iche27] = 500 internal server errors
     title <
       name = International Journal of Plant Sciences ;
       issn = 1058-5893 ;
-      eissn = 1537-5315
+      eissn = 1537-5315 ;
+      issnl = 1058-5893
     >
 
     param[journal_id] = ijps
@@ -1376,7 +1395,8 @@ comment[ijps167] = 500 internal server errors
     title <
       name = Isis ;
       issn = 0021-1753 ;
-      eissn = 1545-6994
+      eissn = 1545-6994 ;
+      issnl = 0021-1753
     >
 
     param[journal_id] = isis
@@ -1488,7 +1508,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Journal of British Studies ;
       issn = 0021-9371 ;
-      eissn = 1545-6986
+      eissn = 1545-6986 ;
+      issnl = 0021-9371
     >
 
     param[journal_id] = jbs
@@ -1612,7 +1633,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Journal of Consumer Research ;
       issn = 0093-5301 ;
-      eissn = 1537-5277
+      eissn = 1537-5277 ;
+      issnl = 0093-5301
     >
 
     param[journal_id] = jcr
@@ -1682,7 +1704,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Journal of Human Capital ;
       issn = 1932-8575 ;
-      eissn = 1932-8664
+      eissn = 1932-8664 ;
+      issnl = 1932-8575
     >
 
     param[journal_id] = jhc
@@ -1695,7 +1718,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = The Journal of Infectious Diseases ;
       issn = 0022-1899 ;
-      eissn = 1537-6613
+      eissn = 1537-6613 ;
+      issnl = 0022-1899
     >
 
     param[journal_id] = jid
@@ -1730,7 +1754,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Journal of Labor Economics ;
       issn = 0734-306X ;
-      eissn = 1537-5307
+      eissn = 1537-5307 ;
+      issnl = 0734-306X
     >
 
     param[journal_id] = jole
@@ -1768,7 +1793,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = The Journal of Law and Economics ;
       issn = 0022-2186 ;
-      eissn = 1537-5285
+      eissn = 1537-5285 ;
+      issnl = 0022-2186
     >
 
     param[journal_id] = jle
@@ -1829,7 +1855,8 @@ comment[isis97] = 500 internal server errors
   {
     title <
       name = The Journal of Legal Studies ;
-      issn = 1973-2937
+      issn = 1973-2937 ;
+      issnl = 1973-2937
     >
 
     param[journal_id] = jls
@@ -1877,7 +1904,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = The Journal of Modern History ;
       issn = 0022-2801 ;
-      eissn = 1537-5358
+      eissn = 1537-5358 ;
+      issnl = 0022-2801
     >
 
     param[journal_id] = jmh
@@ -1968,7 +1996,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Journal of Near Eastern Studies ;
       issn = 0022-2968 ;
-      eissn = 1545-6978
+      eissn = 1545-6978 ;
+      issnl = 0022-2968
     >
 
     param[journal_id] = jnes
@@ -2046,7 +2075,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Journal of Political Economy ;
       issn = 0022-3808 ;
-      eissn = 1537-534X
+      eissn = 1537-534X ;
+      issnl = 0022-3808
     >
 
     param[journal_id] = jpe
@@ -2173,7 +2203,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = The Journal of Religion ;
       issn = 0022-4189 ;
-      eissn = 1549-6538
+      eissn = 1549-6538 ;
+      issnl = 0022-4189
     >
 
     param[journal_id] = jr
@@ -2273,7 +2304,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = The Library Quarterly ;
       issn = 0024-2519 ;
-      eissn = 1549-652X
+      eissn = 1549-652X ;
+      issnl = 0024-2519
     >
 
     param[journal_id] = lq
@@ -2290,7 +2322,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Modern Philology ;
       issn = 0026-8232 ;
-      eissn = 1545-6951
+      eissn = 1545-6951 ;
+      issnl = 0026-8232
     >
 
     param[journal_id] = mp
@@ -2407,7 +2440,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = NBER International Seminar on Macroeconomics ;
       issn = 1932-8796 ;
-      eissn = 2150-8372
+      eissn = 2150-8372 ;
+      issnl = 1932-8796
     >
 
     param[journal_id] = ism
@@ -2422,7 +2456,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = NBER Macroeconomics Annual ;
       issn = 0889-3365 ;
-      eissn = 1537-2642
+      eissn = 1537-2642 ;
+      issnl = 0889-3365
     >
 
     param[journal_id] = ma
@@ -2435,7 +2470,9 @@ comment[isis97] = 500 internal server errors
   {
     title <
       name = Osiris ;
-      issn = 0369-7827
+      issn = 0369-7827 ;
+      eissn = 1933-8287 ;
+      issnl = 0369-7827
     >
 
     param[journal_id] = osiris
@@ -2464,7 +2501,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Philosophy of Science ;
       issn = 0031-8248 ;
-      eissn = 1539-767X
+      eissn = 1539-767X ;
+      issnl = 0031-8248
     >
 
     param[journal_id] = phos
@@ -2550,7 +2588,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Physiological and Biochemical Zoology ;
       issn = 1522-2152 ;
-      eissn = 1537-5293
+      eissn = 1537-5293 ;
+      issnl = 1522-2152
     >
 
     param[journal_id] = pbz
@@ -2574,7 +2613,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Publications of the Astronomical Society of the Pacific ;
       issn = 0004-6280 ;
-      eissn = 1538-3873
+      eissn = 1538-3873 ;
+      issnl = 0004-6280
     >
 
     param[journal_id] = pasp
@@ -2596,7 +2636,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = The Quarterly Review of Biology ;
       issn = 0033-5770 ;
-      eissn = 1539-7718
+      eissn = 1539-7718 ;
+      issnl = 0033-5770
     >
 
     param[journal_id] = qrb
@@ -2691,7 +2732,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Renaissance Quarterly ;
       issn = 0034-4338 ;
-      eissn = 1935-0236
+      eissn = 1935-0236 ;
+      issnl = 0034-4338
     >
 
     param[journal_id] = rq
@@ -2710,7 +2752,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Schools: Studies in Education ;
       issn = 1550-1175 ;
-      eissn = 2153-0327
+      eissn = 2153-0327 ;
+      issnl = 1550-1175
     >
 
     param[journal_id] = schools
@@ -2730,7 +2773,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Signs: Journal of Women in Culture and Society ;
       issn = 0097-9740 ;
-      eissn = 1545-6943
+      eissn = 1545-6943 ;
+      issnl = 0097-9740
     >
 
     param[journal_id] = signs
@@ -2775,7 +2819,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Social Service Review ;
       issn = 0037-7961 ;
-      eissn = 1537-5404
+      eissn = 1537-5404 ;
+      issnl = 0037-7961
     >
 
     param[journal_id] = ssr
@@ -2797,7 +2842,8 @@ comment[isis97] = 500 internal server errors
   
     title <
       name = Supreme Court Economic Review ;
-      issn = 0736-9921
+      issn = 0736-9921 ;
+      issnl = 0736-9921
     >
 
     param[journal_id] = scer
@@ -2810,7 +2856,8 @@ comment[isis97] = 500 internal server errors
   
     title <
       name = The Supreme Court Review ;
-      issn = 2158-2459
+      issn = 2158-2459 ;
+      issnl = 0081-9557
     >
 
     param[journal_id] = scr
@@ -2824,7 +2871,8 @@ comment[isis97] = 500 internal server errors
     title <
       name = Tax Policy and the Economy ;
       issn = 0892-8649 ;
-      eissn = 1537-2650
+      eissn = 1537-2650 ;
+      issnl = 0892-8649
     >
 
     param[journal_id] = tpe
@@ -2865,7 +2913,9 @@ comment[isis97] = 500 internal server errors
   {
     title <
       name = Winterthur Portfolio ;
-      issn = 0084-0416
+      issn = 0084-0416 ;
+      eissn = 1545-6927 ;
+      issnl = 0084-0416
     >
 
     param[journal_id] = wp

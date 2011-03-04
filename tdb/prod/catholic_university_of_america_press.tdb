@@ -11,7 +11,8 @@
     title <
       name = The Catholic Historical Review ;
       issn = 0008-8080 ;
-      eissn = 1534-0708
+      eissn = 1534-0708 ;
+      issnl = 0008-8080
     >
 
     param[journal_dir] = catholic_historical_review
@@ -34,7 +35,8 @@
     title <
       name = U.S. Catholic Historian ;
       issn = 0735-8318 ;
-      eissn = 1947-8224
+      eissn = 1947-8224 ;
+      issnl = 0735-8318
     >
 
     param[journal_dir] = us_catholic_historian

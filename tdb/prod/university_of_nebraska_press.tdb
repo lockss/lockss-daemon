@@ -11,7 +11,8 @@
     title <
       name = An Sionnach: A Journal of Literature, Culture, and the Arts ;
       issn = 1554-8953 ;
-      eissn = 1944-6535
+      eissn = 1944-6535 ;
+      issnl = 1554-8953
     >
 
     param[journal_dir] = an_sionnach
@@ -24,7 +25,8 @@
     title <
       name = Anthropological Linguistics ;
       issn = 1944-6527 ;
-      eissn = 0003-5483
+      eissn = 0003-5483 ;
+      issnl = 0003-5483
     >
 
     param[journal_dir] = anthropological_linguistics
@@ -37,7 +39,8 @@
     title <
       name = Collaborative Anthropologies ;
       issn = 2152-4009 ;
-      eissn = 1943-2550
+      eissn = 1943-2550 ;
+      issnl = 1943-2550
     >
 
     param[journal_dir] = collaborative_anthropologies
@@ -51,7 +54,8 @@
     title <
       name = French Forum ;
       issn = 0098-9355 ;
-      eissn = 1534-1836
+      eissn = 1534-1836 ;
+      issnl = 0098-9355
     >
 
     param[journal_dir] = french_forum
@@ -72,7 +76,8 @@
     title <
       name = Frontiers: A Journal of Women Studies ;
       issn = 0160-9009 ;
-      eissn = 1536-0334
+      eissn = 1536-0334 ;
+      issnl = 0160-9009
     >
 
     param[journal_dir] = frontiers
@@ -93,7 +98,8 @@
     title <
       name = Histories of Anthropology Annual ;
       issn = 1940-5138 ;
-      eissn = 1557-637X
+      eissn = 1557-637X ;
+      issnl = 1557-637X
     >
 
     param[journal_dir] = histories_of_anthropology_annual
@@ -110,7 +116,8 @@
     title <
       name = Journal of Sports Media ;
       issn = 1558-4313 ;
-      eissn = 1940-5073
+      eissn = 1940-5073 ;
+      issnl = 1558-4313
     >
 
     param[journal_dir] = journal_of_sports_media
@@ -127,7 +134,8 @@
     title <
       name = Legacy: A Journal of American Women Writers ;
       issn = 1534-0643 ;
-      eissn = 0748-4321
+      eissn = 0748-4321 ;
+      issnl = 0748-4321
     >
 
     param[journal_dir] = legacy
@@ -149,7 +157,8 @@
     title <
       name = NINE: A Journal of Baseball History and Culture ;
       issn = 1188-9330 ;
-      eissn = 1534-1844
+      eissn = 1534-1844 ;
+      issnl = 1188-9330
     >
 
     param[journal_dir] = nine
@@ -171,7 +180,8 @@
     title <
       name = Native South ;
       issn = 2152-4025 ;
-      eissn = 1943-2569
+      eissn = 1943-2569 ;
+      issnl = 1943-2569
     >
 
     param[journal_dir] = native_south
@@ -184,7 +194,9 @@
   {
     title <
       name = Nineteenth-Century French Studies ;
-      issn = 0146-7891
+      issn = 0146-7891 ;
+      eissn = 1536-0172 ;
+      issnl = 0146-7891
     >
 
     param[journal_dir] = nineteenth_century_french_studies
@@ -206,7 +218,8 @@
     title <
       name = Prairie Schooner ;
       issn = 0032-6682 ;
-      eissn = 1542-426X
+      eissn = 1542-426X ;
+      issnl = 0032-6682
     >
 
     param[journal_dir] = prairie_schooner
@@ -225,7 +238,8 @@
     title <
       name = Qui Parle: Critical Humanities and Social Sciences ;
       issn = 1938-8020 ;
-      eissn = 1041-8385
+      eissn = 1041-8385 ;
+      issnl = 1041-8385
     >
 
     param[journal_dir] = qui_parle
@@ -238,7 +252,8 @@
     title <
       name = Studies in American Indian Literatures ;
       issn = 0730-3238 ;
-      eissn = 1548-9590
+      eissn = 1548-9590 ;
+      issnl = 0730-3238
     >
 
     param[journal_dir] = studies_in_american_indian_literatures
@@ -256,7 +271,8 @@
     title <
       name = Studies in American Naturalism ;
       issn = 1944-6519 ;
-      eissn = 1931-2555
+      eissn = 1931-2555 ;
+      issnl = 1931-2555
     >
 
     param[journal_dir] = studies_in_american_naturalism
@@ -269,7 +285,8 @@
     title <
       name = The American Indian Quarterly ;
       issn = 0095-182X ;
-      eissn = 1534-1828
+      eissn = 1534-1828 ;
+      issnl = 0095-182X
     >
 
     param[journal_dir] = american_indian_quarterly
@@ -292,7 +309,8 @@
     title <
       name = Women and Music: A Journal of Gender and Culture ;
       issn = 1553-0612 ;
-      eissn = 1090-7505
+      eissn = 1090-7505 ;
+      issnl = 1090-7505
     >
 
     param[journal_dir] = women_and_music
@@ -310,7 +328,8 @@
     title <
       name = Women in German Yearbook: Feminist Studies in German Literature & Culture ;
       issn = 1058-7446 ;
-      eissn = 1940-512X
+      eissn = 1940-512X ;
+      issnl = 1058-7446
     >
 
     param[journal_dir] = women_in_german_yearbook
@@ -325,7 +344,8 @@
     title <
       name = symploke ;
       issn = 1069-0697 ;
-      eissn = 1534-0627
+      eissn = 1534-0627 ;
+      issnl = 1069-0697
     >
 
     param[journal_dir] = symploke

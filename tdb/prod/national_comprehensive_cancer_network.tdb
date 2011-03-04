@@ -8,8 +8,9 @@
   
     title <
       name = Journal of the National Comprehensive Cancer Network ;
-      issn = 1540-1405 ; 
-      eissn = 1540-1413
+      issn = 1540-1405 ;
+      eissn = 1540-1413 ;
+      issnl = 1540-1405
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

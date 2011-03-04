@@ -8,7 +8,9 @@
   
     title <
       name = The American Journal of Tropical Medicine and Hygiene ;
-      issn = 0002-9637
+      issn = 0002-9637 ;
+      eissn = 1476-1645 ;
+      issnl = 0002-9637
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin

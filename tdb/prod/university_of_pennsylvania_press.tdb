@@ -11,7 +11,8 @@
     title <
       name = Dissent ;
       issn = 0012-3846 ;
-      eissn = 1946-0910
+      eissn = 1946-0910 ;
+      issnl = 0012-3846
     >
 
     param[journal_dir] = dissent
@@ -25,7 +26,8 @@
     title <
       name = Early American Studies: An Interdisciplinary Journal ;
       issn = 1543-4273 ;
-      eissn = 1559-0895
+      eissn = 1559-0895 ;
+      issnl = 1543-4273
     >
 
     param[journal_dir] = early_american_studies_an_interdisciplinary_journal
@@ -45,7 +47,8 @@
     title <
       name = Hispanic Review ;
       issn = 0018-2176 ;
-      eissn = 1553-0639
+      eissn = 1553-0639 ;
+      issnl = 0018-2176
     >
 
     param[journal_dir] = hispanic_review
@@ -63,7 +66,8 @@
     title <
       name = Jewish Quarterly Review ;
       issn = 0021-6682 ;
-      eissn = 1553-0604
+      eissn = 1553-0604 ;
+      issnl = 0021-6682
     >
 
     param[journal_dir] = jewish_quarterly_review
@@ -81,7 +85,8 @@
     title <
       name = Journal of the Early Republic ;
       issn = 0275-1275 ;
-      eissn = 1553-0620
+      eissn = 1553-0620 ;
+      issnl = 0275-1275
     >
 
     param[journal_dir] = journal_of_the_early_republic
@@ -99,7 +104,8 @@
     title <
       name = Journal of the History of Ideas ;
       issn = 1086-3222 ;
-      eissn = 0022-5037
+      eissn = 0022-5037 ;
+      issnl = 0022-5037
     >
 
     param[journal_dir] = journal_of_the_history_of_ideas
@@ -126,7 +132,8 @@
     title <
       name = Magic, Ritual, and Witchcraft ;
       issn = 1556-8547 ;
-      eissn = 1940-5111
+      eissn = 1940-5111 ;
+      issnl = 1556-8547
     >
 
     param[journal_dir] = magic_ritual_and_witchcraft
@@ -142,7 +149,8 @@
     title <
       name = Revista Hispánica Moderna ;
       issn = 0034-9593 ;
-      eissn = 1944-6446
+      eissn = 1944-6446 ;
+      issnl = 0034-9593
     >
 
     param[journal_dir] = revista_hispanica_moderna
@@ -155,7 +163,8 @@
     title <
       name = The Eighteenth Century ;
       issn = 0193-5380 ;
-      eissn = 1935-0201
+      eissn = 1935-0201 ;
+      issnl = 0193-5380
     >
 
     param[journal_dir] = the_eighteenth_century

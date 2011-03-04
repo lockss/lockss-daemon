@@ -9,7 +9,8 @@
     title <
       name = Proceedings of the National Academy of Sciences ;
       issn = 0027-8424 ;
-      eissn = 1091-6490
+      eissn = 1091-6490 ;
+      issnl = 0027-8424
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

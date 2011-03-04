@@ -8,7 +8,9 @@
   
     title <
       name = Journal of Transport Economics and Policy ;
-      issn = 0022-5258
+      issn = 0022-5258 ;
+      eissn = 1754-5951 ;
+      issnl = 0022-5258
     >
     
     plugin = org.lockss.plugin.ingenta.IngentaJournalPlugin

@@ -9,7 +9,8 @@
     title <
       name = The Plant Cell ;
       issn = 1040-4651 ;
-      eissn = 1532-298X
+      eissn = 1532-298X ;
+      issnl = 1040-4651
     >
 
     {
@@ -43,7 +44,8 @@
     title <
       name = Plant Physiology ;
       issn = 0032-0889 ;
-      eissn = 1532-2548
+      eissn = 1532-2548 ;
+      issnl = 0032-0889
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin

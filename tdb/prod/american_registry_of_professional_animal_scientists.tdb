@@ -9,7 +9,8 @@
     title <
       name = The Professional Animal Scientist ;
       issn = 1525-318X ;
-      eissn = 1525-318X
+      eissn = 1525-318X ;
+      issnl = 1080-7446
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin

@@ -11,7 +11,8 @@
     title <
       name = PLoS Genetics ;
       issn = 1553-7390 ;
-      eissn = 1553-7404
+      eissn = 1553-7404 ;
+      issnl = 1553-7390
     >
     
     param[base_url] = http://www.plosgenetics.org/    
@@ -28,7 +29,8 @@
     title <
       name = PLoS Computational Biology ;
       issn = 1553-734X ;
-      eissn = 1553-7358
+      eissn = 1553-7358 ;
+      issnl = 1553-734X
     >
     
     param[base_url] = http://www.ploscompbiol.org/    
@@ -45,7 +47,8 @@
   {
     title <
       name = PLoS One ;
-      issn = 1932-6203
+      issn = 1932-6203 ;
+      issnl = 1932-6203
     >
     
     comment[0] = repository error, too many files
@@ -63,7 +66,8 @@
   {
     title <
       name = PLoS Neglected Tropical Diseases ;
-      issn = 1935-2735
+      issn = 1935-2735 ;
+      issnl = 1935-2727
     >
     
     param[base_url] = http://www.plosntds.org/    
@@ -79,7 +83,8 @@
     title <
       name = PLoS Pathogens ;
       issn = 1553-7366 ;
-      eissn = 1553-7374
+      eissn = 1553-7374 ;
+      issnl = 1553-7366
     >
     
     param[base_url] = http://www.plospathogens.org/    
@@ -97,6 +102,7 @@
   {
     title <
       name = PLoS Hub Clinical Trials
+
     >
 
     comment[plos0] = no manifest
@@ -114,7 +120,8 @@
     title <
       name = PLoS Medicine ;
       issn = 1549-1277 ;
-      eissn = 1549-1676
+      eissn = 1549-1676 ;
+      issnl = 1549-1277
     >
 
     param[base_url] = http://www.plosmedicine.org/   

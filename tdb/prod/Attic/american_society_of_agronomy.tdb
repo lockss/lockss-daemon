@@ -9,7 +9,8 @@
     title <
       name = Agronomy Journal ;
       issn = 0002-1962 ;
-      eissn = 1435-0645
+      eissn = 1435-0645 ;
+      issnl = 0002-1962
     >
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
@@ -34,7 +35,8 @@
     title <
       name = Journal of Environmental Quality ;
       issn = 0047-2425 ;
-      eissn = 1537-2537
+      eissn = 1537-2537 ;
+      issnl = 0047-2425
     >
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin

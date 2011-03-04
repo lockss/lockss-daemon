@@ -9,7 +9,8 @@
     title <
       name = Soil Science Society of America Journal ;
       issn = 0361-5995 ;
-      eissn = 1435-0661
+      eissn = 1435-0661 ;
+      issnl = 0361-5995
     >
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin
@@ -33,7 +34,8 @@
 
     title <
       name = Vadose Zone Journal ;
-      issn = 1539-1663
+      issn = 1539-1663 ;
+      issnl = 1539-1663
     >
 
     plugin = org.lockss.plugin.highwire.HighWireStrVolPlugin

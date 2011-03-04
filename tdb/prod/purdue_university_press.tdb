@@ -15,7 +15,8 @@
       title <
         name = Education and Culture ;
         issn = 1085-4908 ;
-        eissn = 1559-1786
+        eissn = 1559-1786 ;
+        issnl = 1085-4908
       >
 
       param[journal_dir] = education_and_culture
@@ -32,7 +33,8 @@
       title <
         name = Shofar: An Interdisciplinary Journal of Jewish Studies ;
         issn = 0882-8539 ;
-        eissn = 1534-5165
+        eissn = 1534-5165 ;
+        issnl = 0882-8539
       >
 
       param[journal_dir] = shofar
@@ -54,7 +56,8 @@
       title <
         name = Studies in American Jewish Literature ;
         issn = 0271-9274 ;
-        eissn = 1948-5077
+        eissn = 1948-5077 ;
+        issnl = 0271-9274
       >
 
       param[journal_dir] = studies_in_american_jewish_literature
@@ -70,7 +73,8 @@
   
     title <
       name = CLCWeb: Comparative Literature and Culture ;
-      issn = 1481-4374
+      issn = 1481-4374 ;
+      issnl = 1481-4374
     >
     
     rights = openaccess

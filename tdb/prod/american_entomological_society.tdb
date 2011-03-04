@@ -11,7 +11,8 @@
   {
     title <
       name = Entomological News ;
-      issn = 0013-872X
+      issn = 0013-872X ;
+      issnl = 0013-872X
     >
     
     param[journal_code] = entn
@@ -26,7 +27,8 @@
   {
     title <
       name = Transactions of the American Entomological Society ;
-      issn = 0002-8320
+      issn = 0002-8320 ;
+      issnl = 0002-8320
     >
     
     param[journal_code] = taes

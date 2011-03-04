@@ -12,7 +12,8 @@
     title <
       name = American Journal of Pathology ;
       issn = 0002-9440 ;
-      eissn = 1525-2191
+      eissn = 1525-2191 ;
+      issnl = 0002-9440
     >
 
     param[base_url] = http://ajp.amjpathol.org/
@@ -155,7 +156,8 @@
 
     title <
       name = Journal of Molecular Diagnostics ;
-      issn = 1525-1578
+      issn = 1525-1578 ;
+      issnl = 1525-1578
     >
 
     param[base_url] = http://jmd.amjpathol.org/

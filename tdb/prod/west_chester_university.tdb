@@ -9,7 +9,8 @@
     title <
       name = College Literature ;
       issn = 0093-3139 ;
-      eissn = 1542-4286
+      eissn = 1542-4286 ;
+      issnl = 0093-3139
     >
 
     plugin = org.lockss.plugin.projmuse.ProjectMusePlugin

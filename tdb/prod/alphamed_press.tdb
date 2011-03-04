@@ -9,7 +9,8 @@
     title <
       name = The Oncologist ;
       issn = 1083-7159 ;
-      eissn = 1549-490X
+      eissn = 1549-490X ;
+      issnl = 1083-7159
     >
 
     plugin = org.lockss.plugin.highwire.HighWirePressPlugin

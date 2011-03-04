@@ -14,7 +14,8 @@
     title <
       name = Ethics & Global Politics ;
       issn = 1654-4951 ;
-      eissn = 1654-6369
+      eissn = 1654-6369 ;
+      issnl = 1654-6369
     >
 
     param[base_url] = http://www.ethicsandglobalpolitics.net/
@@ -40,7 +41,8 @@
     title <
       name = Food & Nutrition Research ;
       issn = 1654-6628 ;
-      eissn = 1654-661X
+      eissn = 1654-661X ;
+      issnl = 1654-661X
     >
 
     param[base_url] = http://www.foodandnutritionresearch.net/
@@ -65,7 +67,8 @@ comment[fnr2008] = 502 Proxy Error
     title <
       name = Global Health Action ;
       issn = 1654-9716 ;
-      eissn = 1654-9880
+      eissn = 1654-9880 ;
+      issnl = 1654-9880
     >
 
     param[base_url] = http://www.globalhealthaction.net/
@@ -82,7 +85,8 @@ comment[fnr2008] = 502 Proxy Error
     title <
       name = International Journal of Qualitative Studies on Health and Well-being ;
       issn = 1748-2623 ;
-      eissn = 1748-2631
+      eissn = 1748-2631 ;
+      issnl = 1748-2623
     >
 
     param[base_url] = http://www.ijqhw.net/
@@ -100,7 +104,8 @@ comment[fnr2008] = 502 Proxy Error
 
     title <
       name = Journal of Aesthetics & Culture ;
-      issn = 2000-4214
+      issn = 2000-4214 ;
+      issnl = 2000-4214
     >
 
     param[base_url] = http://www.aestheticsandculture.net/
@@ -131,7 +136,8 @@ comment[fnr2008] = 502 Proxy Error
     title <
       name = Libyan Journal of Medicine ;
       issn = 1993-2820 ;
-      eissn = 1819-6357
+      eissn = 1819-6357 ;
+      issnl = 1819-6357
     >
 
     param[base_url] = http://www.libyanjournalofmedicine.net/
@@ -149,7 +155,8 @@ comment[fnr2008] = 502 Proxy Error
 
     title <
       name = Medical Education Online ;
-      issn = 1087-2981
+      issn = 1087-2981 ;
+      issnl = 1087-2981
     >
 
     param[base_url] = http://www.med-ed-online.net/
@@ -177,7 +184,8 @@ comment[fnr2008] = 502 Proxy Error
 
     title <
       name = Nano Reviews ;
-      issn = 2000-5121
+      issn = 2000-5121 ;
+      issnl = 2000-5121
     >
 
     param[base_url] = http://www.nano-reviews.net/
@@ -193,7 +201,6 @@ comment[fnr2008] = 502 Proxy Error
       name = Polar Research ;
       issn = 0800-0395 ;
       eissn = 1751-8369
-
     >
 
   }

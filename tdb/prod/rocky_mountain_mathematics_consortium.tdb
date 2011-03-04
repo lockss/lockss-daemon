@@ -12,7 +12,9 @@
   
     title <
       name = Rocky Mountain Journal of Mathematics ;
-      issn = 0035-7596
+      issn = 0035-7596 ;
+      eissn = 1945-3795 ;
+      issnl = 0035-7596
     >
     
     param[journal_id] = rmj
@@ -64,7 +66,9 @@
   
     title <
       name = Journal of Integral Equations and Applications ;
-      issn = 0897-3962
+      issn = 0897-3962 ;
+      eissn = 1938-2626 ;
+      issnl = 0897-3962
     >
     
     param[journal_id] = jie
@@ -98,7 +102,9 @@
   
     title <
       name = Journal of Commutative Algebra ;
-      issn = 1939-0807
+      issn = 1939-0807 ;
+      eissn = 1939-2346 ;
+      issnl = 1939-2346
     >
     
     param[journal_id] = jca

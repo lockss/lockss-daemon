@@ -13,7 +13,8 @@
     title <
       name = Conradiana ;
       issn = 0010-6356 ;
-      eissn = 1935-0252
+      eissn = 1935-0252 ;
+      issnl = 0010-6356
     >
 
     param[journal_dir] = conradiana
@@ -28,7 +29,8 @@
     title <
       name = Helios ;
       issn = 0160-0923 ;
-      eissn = 1935-0228
+      eissn = 1935-0228 ;
+      issnl = 0160-0923
     >
 
     param[journal_dir] = helios
@@ -44,7 +46,8 @@
     title <
       name = William Carlos Williams Review ;
       issn = 0196-6286 ;
-      eissn = 1935-0244
+      eissn = 1935-0244 ;
+      issnl = 0196-6286
     >
 
     param[journal_dir] = william_carlos_williams_review

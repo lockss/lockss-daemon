@@ -12,7 +12,8 @@
   
     title <
       name = Chemistry Central Journal ;
-      issn = 1752-153X
+      issn = 1752-153X ;
+      issnl = 1752-153X
     >
 
     param[base_url] = http://www.journal.chemistrycentral.com/
@@ -29,7 +30,8 @@
   
     title <
       name = Journal of Cheminformatics ;
-      issn = 1758-2946
+      issn = 1758-2946 ;
+      issnl = 1758-2946
     >
 
     param[base_url] = http://www.jcheminf.com/
@@ -44,7 +46,8 @@
   
     title <
       name = Journal of Systems Chemistry ;
-      issn = 1759-2208
+      issn = 1759-2208 ;
+      issnl = 1759-2208
     >
     
     param[base_url] = http://www.jsystchem.com/

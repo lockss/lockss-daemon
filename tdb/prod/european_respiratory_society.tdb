@@ -11,7 +11,8 @@
     title <
       name = European Respiratory Journal ;
       issn = 0903-1936 ;
-      eissn = 1399-3003
+      eissn = 1399-3003 ;
+      issnl = 0903-1936
     >
 
     param[base_url] = http://erj.ersjournals.com/
@@ -25,7 +26,8 @@
     title <
       name = European Respiratory Review ;
       issn = 0905-9180 ;
-      eissn = 1600-0617
+      eissn = 1600-0617 ;
+      issnl = 0905-9180
     >
 
     param[base_url] = http://err.ersjournals.com/
