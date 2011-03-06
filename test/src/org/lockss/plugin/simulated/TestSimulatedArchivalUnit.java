@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedArchivalUnit.java,v 1.9 2010-06-17 18:49:23 tlipkis Exp $
+ * $Id: TestSimulatedArchivalUnit.java,v 1.9.8.1 2011-03-06 00:08:58 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
+import java.io.*;
+
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -43,6 +45,13 @@ import org.lockss.config.*;
  * @version 0.0
  */
 public class TestSimulatedArchivalUnit extends LockssTestCase {
+
+  String tempDirPath;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+  }
 
   public void testResetContentTree() {
 //    SimulatedArchivalUnit au = new SimulatedArchivalUnit("");
@@ -58,7 +67,7 @@ public class TestSimulatedArchivalUnit extends LockssTestCase {
 
   public void testMapUrlToContentFileName(String base) throws Exception {
     SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
-    Configuration config = ConfigurationUtil.fromArgs("root", "foo");
+    Configuration config = ConfigurationUtil.fromArgs("root", tempDirPath);
     if (base != null) {
       config.put("base_url", base);
     }
@@ -94,7 +103,7 @@ public class TestSimulatedArchivalUnit extends LockssTestCase {
 
   public void testMapContentFileNameToUrl(String base) throws Exception {
     SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
-    Configuration config = ConfigurationUtil.fromArgs("root", "foo");
+    Configuration config = ConfigurationUtil.fromArgs("root", tempDirPath);
     if (base != null) {
       config.put("base_url", base);
     }
