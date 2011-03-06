@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.16 2010-11-03 06:08:33 tlipkis Exp $
+ * $Id: TestStreamUtil.java,v 1.16.4.1 2011-03-06 00:08:32 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
+import java.util.zip.*;
 import java.io.*;
 import java.nio.charset.*;
 import junit.framework.TestCase;
@@ -372,6 +373,46 @@ public class TestStreamUtil extends LockssTestCase {
 				   new StringInputStream(s1)));
     assertFalse(StreamUtil.compare(new StringInputStream("foo"),
 				   new StringInputStream("bar")));
+  }
+
+  public void testGetUncompressedInputStreamGzip() throws IOException {
+    // GZIPInputStream constructor throws if not passed a valid gzip stream
+    InputStream gzin;
+    gzin = new GZIPpedInputStream("foo");
+    assertClass(GZIPInputStream.class,
+		StreamUtil.getUncompressedInputStream(gzin, "gzip"));
+    gzin = new GZIPpedInputStream("foo");
+    assertClass(GZIPInputStream.class,
+		StreamUtil.getUncompressedInputStream(gzin, "GZIP"));
+    gzin = new GZIPpedInputStream("foo");
+    assertClass(GZIPInputStream.class,
+		StreamUtil.getUncompressedInputStream(gzin, "x-gzip"));
+  }
+
+  public void testGetUncompressedInputStreamDeflate() throws IOException {
+    // Currently InflaterInputStream constructor doesn't care what it gets.
+    // If that changes this will have to create a deflated stream.
+    InputStream dfin = new StringInputStream("foo");
+    assertClass(InflaterInputStream.class,
+		StreamUtil.getUncompressedInputStream(dfin, "deflate"));
+    assertClass(InflaterInputStream.class,
+		StreamUtil.getUncompressedInputStream(dfin, "Deflate"));
+  }
+
+  public void testGetUncompressedInputStreamIdentity() throws IOException {
+    InputStream in = new StringInputStream("foo");
+    assertSame(in, StreamUtil.getUncompressedInputStream(in, "identity"));
+    assertSame(in, StreamUtil.getUncompressedInputStream(in, "IDENTITY"));
+    assertSame(in, StreamUtil.getUncompressedInputStream(in, null));
+  }
+
+  public void testGetUncompressedInputStreamIll() throws IOException {
+    InputStream gzin = new GZIPpedInputStream("foo");
+    try {
+      StreamUtil.getUncompressedInputStream(gzin, "unknown-transcoding");
+      fail("Should throw UnsupportedEncodingException");
+    } catch (UnsupportedEncodingException e) {
+    }
   }
 
   public void testGetReader() {

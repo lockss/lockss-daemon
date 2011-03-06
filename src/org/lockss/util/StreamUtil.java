@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.17 2010-11-03 06:08:33 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.17.4.1 2011-03-06 00:08:32 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import java.util.zip.*;
+
 import org.lockss.daemon.LockssWatchdog;
 
 /**
@@ -297,6 +299,34 @@ public class StreamUtil {
 	if (b1[ix] != b2[ix]) return false;
       }
     }
+  }
+
+  /** Return an InputStream that uncompresses the data on the input
+   * stream (normally an HTTP response stream)
+   * @param instr raw InputStream
+   * @param contentEncoding value of HTTP Content-Encoding: header
+   * @return The wrapped stream, or the original stream if contentEncoding
+   * is null or "identity"
+   * @throws UnsupportedEncodingException
+   */
+  public static InputStream getUncompressedInputStream(InputStream instr,
+						       String contentEncoding)
+      throws IOException, UnsupportedEncodingException {
+    InputStream res;
+    if (contentEncoding == null ||
+	contentEncoding.equalsIgnoreCase("identity")) {
+      res = instr;
+    } else if (contentEncoding.equalsIgnoreCase("gzip") ||
+	contentEncoding.equalsIgnoreCase("x-gzip")) {
+      log.debug3("Wrapping in GZIPInputStream");
+      res = new GZIPInputStream(instr);
+    } else if (contentEncoding.equalsIgnoreCase("deflate")) {
+      log.debug3("Wrapping in InflaterInputStream");
+      res = new InflaterInputStream(instr);
+    } else {
+      throw new UnsupportedEncodingException(contentEncoding);
+    }
+    return res;
   }
 
   /** Return a Reader that reads from the InputStream.  If the specified

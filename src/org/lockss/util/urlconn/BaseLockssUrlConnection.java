@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.11 2010-12-20 23:44:59 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.11.2.1 2011-03-06 00:08:32 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -32,7 +32,6 @@ package org.lockss.util.urlconn;
 
 import java.io.*;
 import java.util.*;
-import java.util.zip.*;
 import java.text.*;
 
 import org.lockss.util.*;
@@ -141,19 +140,18 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
     throw new UnsupportedOperationException();
   }
 
+  /** Return the uncompressed input (undoing any Content-Encoding:).  If
+   * the encoding is unsupported, returns the unmodified stream */
   public InputStream getUncompressedResponseInputStream()
       throws IOException {
-    InputStream res = getResponseInputStream();
-    String encoding = getResponseContentEncoding();
-    if ("gzip".equalsIgnoreCase(encoding) ||
-	"x-gzip".equalsIgnoreCase(encoding)) {
-      log.debug3("Wrapping in GZIPInputStream");
-      res = new GZIPInputStream(res);
-    } else if ("deflate".equalsIgnoreCase(encoding)) {
-      log.debug3("Wrapping in InflaterInputStream");
-      res = new InflaterInputStream(res);
+    InputStream in = getResponseInputStream();
+    String contentEncoding = getResponseContentEncoding();
+    try {
+      return StreamUtil.getUncompressedInputStream(in, contentEncoding);
+    } catch (UnsupportedEncodingException e) {
+      log.warning("Unsupported Content-Encoding: " + contentEncoding);
+      return in;
     }
-    return res;
   }
 
   public String getActualUrl() {
