@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.3 2011-02-16 23:41:48 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.4 2011-03-06 00:05:37 easyonthemayo Exp $
  */
 
 /*
@@ -80,8 +80,8 @@ import static org.lockss.exporter.kbart.KbartTitle.Field.*;
  * Note that if the underlying <code>Tdb</code> objects are changed during iteration the resulting 
  * output is undefined.
  * <p>
- * <emph>Note that the <code>title_id</code> and <code>title_url</code> fields are currently left 
- * empty as the data we have for these is incomplete or inappropriate.</emph>
+ * <emph>Note that the <code>title_id</code> field is currently left 
+ * empty as the data we have for this is incomplete or inappropriate.</emph>
  * 
  * 
  * @author Neil Mayo
@@ -90,6 +90,12 @@ public class KbartConverter {
 
   private static Logger log = Logger.getLogger("KbartConverter");
 
+  /** 
+   * The string used as a substitution parameter in the output. Occurrences of this string
+   * will be replaced in local LOCKSS boxes with the protocol, host and port of ServeContent.
+    */
+  public static final String LABEL_PARAM_LOCKSS_RESOLVER = "LOCKSS_RESOLVER";
+  
   /** The Tdb data structure from which KBART information will be selectively extracted. */
   private final Tdb tdb;
 
@@ -186,7 +192,9 @@ public class KbartConverter {
   * possible. A TdbTitle will yield multiple KbartTitles if it has gaps in its 
   * coverage of greater than a year, in accordance with KBART 5.3.1.9.
   * Each KbartTitle is created with a publication title and an identifier which
-  * may be the ISSN. An attempt is made to fill the first/last issue/volume fields.
+  * is a valid ISSN. An attempt is made to fill the first/last issue/volume fields.
+  * The title URL is set to a substitution parameter and issn argument. The parameter
+  * can be substituted during URL resolution to the local URL to ServeContent. 
   * There are several other KBART fields for which the information is not available.
   * <p>
   * An attempt is made to fill the following KBART fields:
@@ -200,7 +208,7 @@ public class KbartConverter {
   *   <li>num_last_issue_online</li>
   *   <li>num_first_vol_online</li>
   *   <li>num_last_vol_online</li>
-  *   <li><del>title_url</del> (disabled until we have more than a base URL)</li>
+  *   <li>title_url</li>
   *   <li><del>title_id</del> (temporarily disabled)</li>
   *   <li>publisher_name</li>
   * </ul>
@@ -263,10 +271,11 @@ public class KbartConverter {
     baseKbt.setField(PRINT_IDENTIFIER, findIssn(firstAu)); 
     baseKbt.setField(ONLINE_IDENTIFIER, findEissn(firstAu)); 
 
-    // Title URL // XXX Disabled until we have more than a base_url
-    // URL is not available directly but param[base_url] is sometimes available
+    // Title URL
+    // Set using a substitution parameter e.g. LOCKSS_RESOLVER?issn=1234-5678 (issn or eissn or issn-l)
     //baseKbt.setField(TITLE_URL, findAuInfo(firstAu, DEFAULT_TITLE_URL_ATTR, AuInfoType.PARAM));
-   
+    baseKbt.setField(TITLE_URL, LABEL_PARAM_LOCKSS_RESOLVER+"?issn="+baseKbt.getValidIssnIdentifier()); 
+	
     // ---------------------------------------------------------
     // Attempt to create ranges for titles with a coverage gap.
     // Depends on the availability of years in AUs.
