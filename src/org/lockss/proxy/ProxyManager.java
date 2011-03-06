@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.44.52.1 2011-03-03 18:47:01 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.44.52.2 2011-03-06 00:08:12 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class ProxyManager extends BaseProxyManager {
   /** Set {@see #PARAM_COOKIE_POLICY} to this to have proxy use daemon's
    * default cookie policy, {@see
    * HttpClientUrlConnection#PARAM_COOKIE_POLICY}. */
-  static final String COOKIE_POLICY_DEFAULT = "default";
+  public static final String COOKIE_POLICY_DEFAULT = "default";
 
   public static final int HOST_DOWN_NO_CACHE_ACTION_504 = 1;
   public static final int HOST_DOWN_NO_CACHE_ACTION_QUICK = 2;
