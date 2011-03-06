@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.18 2011-03-03 18:56:42 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.19 2011-03-06 00:53:47 tlipkis Exp $
  */
 
 /*
@@ -296,17 +296,25 @@ public class ViewContent extends LockssServlet {
       log.debug3("ctype: " + ctype);
       log.debug3("clen: " + clen);
     }
+    boolean isFilter = getParameter("filter") != null;
     resp.setContentType(ctype);
-    if (clen <= Integer.MAX_VALUE) {
-      resp.setContentLength((int)clen);
-    } else {
-      resp.setHeader(HttpFields.__ContentLength, Long.toString(clen));
+    // if filtering, don't know content length
+    if (!isFilter) {
+      if (clen <= Integer.MAX_VALUE) {
+	resp.setContentLength((int)clen);
+      } else {
+	resp.setHeader(HttpFields.__ContentLength, Long.toString(clen));
+      }
     }
     OutputStream out = null;
     InputStream in = null;
     try {
       out = resp.getOutputStream();
-      in = cu.getUnfilteredInputStream();
+      if (isFilter) {
+	in = cu.openForHashing();
+      } else {
+	in = cu.getUnfilteredInputStream();
+      }
       StreamUtil.copy(in, out);
     } catch (IOException e) {
       log.warning("Copying CU to HTTP stream", e);
