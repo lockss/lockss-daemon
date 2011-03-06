@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.2.2.3 2011-02-26 22:08:27 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.2.2.4 2011-03-06 00:16:50 easyonthemayo Exp $
  */
 
 /*
@@ -147,6 +147,16 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
    */
   public boolean hasFieldValue(Field f) {
     return !StringUtil.isNullString(fields.get(f)); 
+  }
+  
+  /**
+   * Attempts to return a valid ISSN from the title's fields. If no ISSN, an eISSN is returned. 
+   * If neither is set, an empty string is returned.
+   * @return a valid issn, eissn, or the empty string
+   */
+  public String getValidIssnIdentifier() {
+    return hasFieldValue(Field.PRINT_IDENTIFIER) ? getField(Field.PRINT_IDENTIFIER) : 
+      getField(Field.ONLINE_IDENTIFIER);
   }
   
   /**
