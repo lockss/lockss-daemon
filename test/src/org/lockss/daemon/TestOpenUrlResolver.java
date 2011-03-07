@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.2.2.1 2011-02-17 02:55:18 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.2.2.2 2011-03-07 21:14:18 pgust Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ import org.lockss.test.*;
 public class TestOpenUrlResolver extends LockssTestCase {
   static Logger log = Logger.getLogger("TestOpenUrlResolver");
 
-  private SimulatedArchivalUnit sau0, sau1, sau2;
+  private SimulatedArchivalUnit sau0, sau1, sau2, sau3;
   private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
   private PluginManager pluginManager;
@@ -93,6 +93,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     String auId1 = "org|lockss|daemon|TestOpenUrlResolver$MySimulatedPlugin1.root~" +
       PropKeyEncoder.encode(tempDirPath);
     String auId2 = "org|lockss|daemon|TestOpenUrlResolver$MySimulatedPlugin2.root~" +
+      PropKeyEncoder.encode(tempDirPath);
+    String auId3 = "org|lockss|daemon|TestOpenUrlResolver$MySimulatedPlugin3.root~" +
       PropKeyEncoder.encode(tempDirPath);
     
     Properties props = new Properties();
@@ -149,6 +151,22 @@ public class TestOpenUrlResolver extends LockssTestCase {
     props.setProperty("org.lockss.au." + auId2 + "." +
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
 
+    props.setProperty("org.lockss.au." + auId3 + "." +
+                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
+    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
+    props.setProperty("org.lockss.au." + auId3 + "." +
+                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
+    props.setProperty("org.lockss.au." + auId3 + "." +
+                      SimulatedPlugin.AU_PARAM_BRANCH, "3");
+    props.setProperty("org.lockss.au." + auId3 + "." +
+                      SimulatedPlugin.AU_PARAM_NUM_FILES, "7");
+    props.setProperty("org.lockss.au." + auId3 + "." +
+                      SimulatedPlugin.AU_PARAM_FILE_TYPES, "" +
+                      (SimulatedContentGenerator.FILE_TYPE_PDF +
+                       SimulatedContentGenerator.FILE_TYPE_HTML));
+    props.setProperty("org.lockss.au." + auId3 + "." +
+                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
+
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     pluginManager = theDaemon.getPluginManager();
@@ -202,6 +220,15 @@ public class TestOpenUrlResolver extends LockssTestCase {
     
     // create Tdb for testing purposes
     Properties tdbProps = new Properties();
+    tdbProps = new Properties();
+    tdbProps.setProperty("title", "Title[10.01357/12345678.2009-11.12]");
+    tdbProps.setProperty("journalTitle", "Journal[10.01357/12345678.2009-11.12]");
+    tdbProps.setProperty("attributes.publisher", "Publisher[10.01357/12345678.2009-11.12]");
+    tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin3");
+    tdbProps.setProperty("param.1.key", "base_url");
+    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin3.com/journals/Journal[10.01357/12345678.2009-11.12]");
+    tdb.addTdbAuFromProperties(tdbProps);
+
     tdbProps.setProperty("isbn", "978-1-58562-317-4");
     tdbProps.setProperty("title", "Title[10.13579/9781585623174.1]");
     tdbProps.setProperty("journalTitle", "Journal[10.13579/9781585623174.1]");
@@ -220,8 +247,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     tdbProps = new Properties();
     tdbProps.setProperty("issn", "0740-2783");
     tdbProps.setProperty("title", "Title[10.1234/12345678.2010-01.1]");
-    tdbProps.setProperty("journalTitle", "Journal[10.1234/12345678.2010-01..1]");
-    tdbProps.setProperty("attributes.publisher", "Publisher[10.1234/12345678.2010-01..1]");
+    tdbProps.setProperty("journalTitle", "Journal[10.1234/12345678.2010-01.1]");
+    tdbProps.setProperty("attributes.publisher", "Publisher[10.1234/12345678.2010-01.1]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin0");
     tdb.addTdbAuFromProperties(tdbProps);
 
@@ -243,6 +270,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
       (SimulatedArchivalUnit)pluginManager.getAllAus().get(2);
     theDaemon.getLockssRepository(sau2).startService();
     theDaemon.setNodeManager(new MockNodeManager(), sau2);
+
+    sau3 =
+      (SimulatedArchivalUnit)pluginManager.getAllAus().get(3);
+    theDaemon.getLockssRepository(sau3).startService();
+    theDaemon.setNodeManager(new MockNodeManager(), sau3);
 
     crawlContent();
     createMetadata();
@@ -266,7 +298,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     DataSource ds = metadataManager.getDataSource();
     assertNotNull(ds);
     
-    int expectedAuCount = 3;
+    int expectedAuCount = 4;
     assertEquals(expectedAuCount, pluginManager.getAllAus().size());
     
     Connection con = ds.getConnection();
@@ -427,6 +459,28 @@ public class TestOpenUrlResolver extends LockssTestCase {
           md.put(MetadataField.FIELD_AUTHOR,"Author1[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author2[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author3[" + doi + "]");
+          emitter.emitMetadata(af, md);
+        }
+      };
+    }
+  }
+  
+  public static class MySimulatedPlugin3 extends MySimulatedPlugin {
+    public MySimulatedPlugin3() {
+      simulatedArticleMetadataExtractor = new ArticleMetadataExtractor() {
+        int articleNumber = 0;
+        public void extract(MetadataTarget target, ArticleFiles af, Emitter emitter)
+          throws IOException, PluginException {
+          org.lockss.extractor.ArticleMetadata md = new ArticleMetadata();
+          articleNumber++;
+          String doi = "10.01357/12345678.2009-11.12." + articleNumber; 
+          md.put(MetadataField.FIELD_DOI,doi);
+          md.put(MetadataField.FIELD_ISSN,"976-1-58562-317-7");
+          md.put(MetadataField.FIELD_DATE,"1999");
+          md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
+          md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + md.get(MetadataField.FIELD_DOI) + "]");
+          md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + md.get(MetadataField.FIELD_DOI) + "]");
+          md.put(MetadataField.FIELD_AUTHOR,"Author1[" + md.get(MetadataField.FIELD_DOI) + "]");
           emitter.emitMetadata(af, md);
         }
       };
@@ -597,6 +651,14 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // journal title only, without publisher
     params.clear();
     params.put("rft.jtitle", "Journal[10.2468/24681357.2010-06.1]");
+    params.put("rft.spage", "1");
+    url = openUrlResolver.resolveOpenUrl(params);
+    assertNotNull(url);
+
+    // from SimulatedPlugin3
+    // journal title only, without publisher
+    params.clear();
+    params.put("rft.jtitle", "Journal[10.01357/12345678.2009-11.12]");
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
