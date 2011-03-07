@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.4 2011-02-12 00:25:14 pgust Exp $
+ * $Id: MetadataManager.java,v 1.5 2011-03-07 21:10:14 pgust Exp $
  */
 
 /*
@@ -45,13 +45,9 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -61,12 +57,14 @@ import java.util.Map;
 import javax.sql.DataSource;
 
 import org.apache.commons.lang.ClassUtils;
+import org.apache.derby.jdbc.ClientDataSource;
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
+import org.lockss.config.TdbAu;
 import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.ArticleMetadataExtractor.Emitter;
@@ -157,16 +155,21 @@ public class MetadataManager
 
   static public final String PREFIX = "org.lockss.daemon.metadataManager.";
   
-  /** Property name of MetadataManager indexing enabled configuration parameter */
+  /** 
+   * Property name of MetadataManager indexing enabled configuration parameter 
+   */
   static public final String PARAM_INDEXING_ENABLED = PREFIX+"indexing_enabled";
-  /** Default value of MetadataManager indexing enabled configuration parameter */
+  /** 
+   * Default value of MetadataManager indexing enabled configuration parameter 
+   */
   static public final boolean DEFAULT_INDEXING_ENABLED = false;
   
   /** Property tree root for datasource properties */
   static public final String PARAM_DATASOURCE_ROOT = PREFIX+"datasource";
   
   /** Property name of maximum concurrent reindexing tasks */
-  static public final String PARAM_MAX_REINDEXING_TASKS = PREFIX+"maxReindexingTasks";
+  static public final String PARAM_MAX_REINDEXING_TASKS = 
+    PREFIX+"maxReindexingTasks";
 
   /** Default maximum concurrent reindexing tasks */
   static public final int DEFAULT_MAX_REINDEXING_TASKS = 1;
@@ -192,8 +195,10 @@ public class MetadataManager
    */
   protected String getDbRootDirectory() {
     String rootDir = System.getProperty("user.dir");
+    Configuration config = ConfigManager.getCurrentConfig();
     @SuppressWarnings("unchecked")
-    List<String> dSpaceList = ConfigManager.getCurrentConfig().getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+    List<String> dSpaceList = 
+      config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
     if (dSpaceList != null && !dSpaceList.isEmpty()) {
       rootDir = dSpaceList.get(0);
     }
@@ -209,8 +214,11 @@ public class MetadataManager
       return;
     }
 
-    // determine maximum number of concurrent reindexing tasks (0 disables reindexing)
-    maxReindexingTasks = Math.max(0, config.getInt(PARAM_MAX_REINDEXING_TASKS, DEFAULT_MAX_REINDEXING_TASKS));
+    // determine maximum number of concurrent reindexing tasks 
+    // (0 disables reindexing)
+    maxReindexingTasks = config.getInt(PARAM_MAX_REINDEXING_TASKS, 
+                                       DEFAULT_MAX_REINDEXING_TASKS);
+    maxReindexingTasks = Math.max(0, maxReindexingTasks);
 
     // get datasource class and properties
     Configuration datasourceConfig = ConfigManager.newConfiguration();
@@ -221,7 +229,8 @@ public class MetadataManager
       // class name not really part of data source definition.
       datasourceConfig.remove("className");
     } else {
-      String databaseName = new File(getDbRootDirectory(), "db/MetadataManager").getAbsolutePath();
+      File databaseFile = new File(getDbRootDirectory(),"db/MetadataManager"); 
+      String databaseName = databaseFile.getAbsolutePath();
       // use derby embedded datasource by default
       dataSourceClassName = "org.apache.derby.jdbc.EmbeddedDataSource";
       datasourceConfig.put("databaseName", databaseName);
@@ -234,7 +243,8 @@ public class MetadataManager
     try {
         cls = Class.forName(dataSourceClassName);
     } catch (Throwable ex) {
-      log.error("Cannot locate datasource class \"" + dataSourceClassName + "\"", ex);
+      log.error(  "Cannot locate datasource class \"" 
+                + dataSourceClassName + "\"", ex);
       return;
     }
     
@@ -245,7 +255,8 @@ public class MetadataManager
       log.error("Class not a DataSource \"" + dataSourceClassName + "\"");
       return;
     } catch (Throwable ex) {
-      log.error("Cannot create instance of datasource class \"" + dataSourceClassName + "\"", ex);
+      log.error(  "Cannot create instance of datasource class \"" 
+                + dataSourceClassName + "\"", ex);
       return;
     }
     boolean errors = false;
@@ -256,16 +267,19 @@ public class MetadataManager
         setPropertyByName(dataSource, key, value);
       } catch (Throwable ex) {
         errors = true;
-        log.error("Cannot set property \"" + key + "\" for instance of datasource class \"" + dataSourceClassName + "\"", ex);
+        log.error(  "Cannot set property \"" + key 
+                  + "\" for instance of datasource class \"" 
+                  + dataSourceClassName + "\"", ex);
       }
     }
     if (errors) {
-      log.error("Cannot initialize instance of datasource class \"" + dataSourceClassName + "\"");
+      log.error(  "Cannot initialize instance of datasource class \"" 
+                + dataSourceClassName + "\"");
       dataSource = null;
     } else {
       try {
         // if dataSource is a Derby ClientDataSource, enable remote access
-        org.apache.derby.jdbc.ClientDataSource cds = (org.apache.derby.jdbc.ClientDataSource)dataSource;
+        ClientDataSource cds = (ClientDataSource)dataSource;
         InetAddress inetAddr = InetAddress.getByName(cds.getServerName());
         int jdbcPort = cds.getPortNumber();
         org.apache.derby.drda.NetworkServerControl networkServerControl =
@@ -288,8 +302,11 @@ public class MetadataManager
    * @param propValue the property value
    * @throws Throwable if an error occurred.
    */
-  private void setPropertyByName(Object obj, String propName, String propValue) throws Throwable {
-    String setterName = "set" + propName.substring(0,1).toUpperCase() + propName.substring(1);
+  private void setPropertyByName(Object obj, String propName, String propValue) 
+    throws Throwable {
+    
+    String setterName =   "set" + propName.substring(0,1).toUpperCase() 
+                        + propName.substring(1);
     for (Method m : obj.getClass().getMethods()) {
       // find matching setter method
       if (m.getName().equals(setterName)) {
@@ -308,12 +325,13 @@ public class MetadataManager
             return;
           } catch (Throwable ex) {
             // ignore
-            log.debug(setterName, ex);
+            log.debug2(setterName, ex);
           }
         }
       }
     }
-    throw new NoSuchMethodException(obj.getClass().getName() + "." + setterName + "()");
+    throw new NoSuchMethodException(  obj.getClass().getName() + "." 
+                                    + setterName + "()");
   }
   
   /**
@@ -389,25 +407,28 @@ public class MetadataManager
       "issue VARCHAR(32)," + 
       "start_page VARCHAR(16)," + 
       "article_title VARCHAR(" + MAX_TITLE_FIELD + ")," + 
-      "author VARCHAR(" + MAX_AUTHOR_FIELD + ")," +             // semicolon-separated list 
-      "plugin_id VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL," +   // partition by 
+      "author VARCHAR(" + MAX_AUTHOR_FIELD + ")," +  // semicolon-separated list 
+      "plugin_id VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL," + // partition by 
       "au_key VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL," + 
       "access_url VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" + 
     ")",
     
     "create table " + DOI_TABLE_NAME + " (" +
-      "doi VARCHAR(256) NOT NULL," + 
-      "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME + "(md_id) on delete cascade" + 
+      "doi VARCHAR(256) NOT NULL," +
+      "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME + 
+      "(md_id) on delete cascade" + 
     ")",
 
     "create table " + ISBN_TABLE_NAME + " (" +
       "isbn VARCHAR(13) NOT NULL," + 
-      "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME + "(md_id) on delete cascade" + 
+      "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME + 
+      "(md_id) on delete cascade" + 
     ")",
 
     "create table " + ISSN_TABLE_NAME + " (" +
       "issn VARCHAR(8) NOT NULL," + 
-      "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME + "(md_id) on delete cascade" + 
+      "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME + 
+      "(md_id) on delete cascade" + 
     ")",
   };
   
@@ -450,7 +471,8 @@ public class MetadataManager
   }
   
   /**
-   * Create a new database connection using the datasource, Autocommit is disabled.
+   * Create a new database connection using the datasource. 
+   * Autocommit is disabled.
    * 
    * @return the new connection
    * @throws SQLException if an error occurred while connecting
@@ -497,7 +519,8 @@ public class MetadataManager
       //handle batch update exception
       int[] counts = ex.getUpdateCounts();
       for (int i=0; i < counts.length; i++) {
-        log.error("Error in statement "+ i +"(" + counts[i] + "): " + createSchema[i]);
+        log.error(  "Error in statement "+ i +"(" + counts[i] + "): " 
+                  + createSchema[i]);
       }
       log.error("Cannot drop existing schema -- service not started", ex);
       safeClose(conn);
@@ -511,7 +534,7 @@ public class MetadataManager
     // start the service
     startService();
   }
-  
+
   /**
    * Ensure as many reindexing tasks as possible are running
    * if manager is enabled.
@@ -533,14 +556,16 @@ public class MetadataManager
     
     synchronized (reindexingTasks) {
       // get list of pending aus to reindex
-      List<ArchivalUnit> aus = getAusToReindex(conn, maxReindexingTasks - reindexingTasks.size());
+      List<ArchivalUnit> aus = 
+        getAusToReindex(conn, maxReindexingTasks - reindexingTasks.size());
       log.debug("number of au reindexing tasks being started: " + aus.size());
       
       // schedule pending aus
       for (ArchivalUnit au : aus) {
         ArticleMetadataExtractor ae = getArticleMetadataExtractor(au);
         if (ae == null) {
-          log.debug("not running reindexing task for au because it nas no metadata extractor: " + au.getName());
+          log.debug(  "not running reindexing task for au" 
+                    + " because it nas no metadata extractor: " + au.getName());
         } else {
           log.debug("running reindexing task for au: " + au.getName());
           ReindexingTask task = new ReindexingTask(au, ae);
@@ -578,7 +603,8 @@ public class MetadataManager
    */
   private void stopReindexing()
   {
-    log.debug("number of reindexing tasks being stopped: " + reindexingTasks.size());
+    log.debug(  "number of reindexing tasks being stopped: " 
+              + reindexingTasks.size());
     
     // quit any running reindexing tasks
     synchronized (reindexingTasks) {
@@ -614,7 +640,8 @@ public class MetadataManager
         //handle batch update exception
         int[] counts = ex.getUpdateCounts();
         for (int i=0; i < counts.length; i++) {
-          log.error("Error in schemea statement "+ i +"(" + counts[i] + "): " + createSchema[i]);
+          log.error(  "Error in schemea statement "+ i +"(" + counts[i] + "): " 
+                    + createSchema[i]);
         }
         log.error("Cannot initialize schema -- service not started", ex);
         safeClose(conn);
@@ -641,11 +668,12 @@ public class MetadataManager
         if (info.isComplete()) {
           Connection conn = null;
           try {
-            log.debug("Adding changed au to reindex: " + au.getName());
+            log.debug2("Adding changed au to reindex: " + au.getName());
             // add pending AU
             conn = newConnection();
             if (conn == null) {
-              log.error("Cannot connect to database -- cannot add changed aus to pending aus");
+              log.error("Cannot connect to database" 
+                        + " -- cannot add changed aus to pending aus");
               return;
             }
 
@@ -656,10 +684,11 @@ public class MetadataManager
               ReindexingTask task = reindexingTasks.get(au);
               if (task != null) {
                 // task cancellation will remove task and schedule next one
-                log.debug("Canceling pending reindexing task for au " + au.getName());
+                log.debug2(  "Canceling pending reindexing task for au " 
+                          + au.getName());
                 task.cancel();
               } else {
-                log.debug("Scheduling reindexing tasks");
+                log.debug2("Scheduling reindexing tasks");
                 startReindexing(conn);
               }
             }
@@ -702,7 +731,8 @@ public class MetadataManager
   @Override
   public void setConfig(Configuration config, Configuration prevConfig,
                         Differences changedKeys) {
-    boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED, DEFAULT_INDEXING_ENABLED);
+    boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED, 
+                                         DEFAULT_INDEXING_ENABLED);
     setEnabled(doEnable);
 
   }
@@ -745,7 +775,8 @@ public class MetadataManager
           safeCommit(conn);
           dbIsNew = false;
         } catch (SQLException ex) {
-          log.error("Cannot add pending AUs table \"" + PENDINGAUS_TABLE_NAME + "\"", ex);
+          log.error(  "Cannot add pending AUs table \"" 
+                    + PENDINGAUS_TABLE_NAME + "\"", ex);
           safeClose(conn);
           return;
         }
@@ -761,7 +792,8 @@ public class MetadataManager
   static long totalClockTime = 0;
   static ThreadMXBean tmxb = ManagementFactory.getThreadMXBean();
   static {
-    log.debug("current thread CPU time supported? " + tmxb.isCurrentThreadCpuTimeSupported());
+    log.debug3(  "current thread CPU time supported? " 
+              + tmxb.isCurrentThreadCpuTimeSupported());
     if (tmxb.isCurrentThreadCpuTimeSupported()) {
       tmxb.setThreadCpuTimeEnabled(true);
     }
@@ -773,8 +805,49 @@ public class MetadataManager
    * @param au the au
    * @return the article metadata extractor
    */
-  private ArticleMetadataExtractor getArticleMetadataExtractor(ArchivalUnit au) {
-    ArticleMetadataExtractor ae = au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
+  private ArticleMetadataExtractor 
+    getArticleMetadataExtractor(final ArchivalUnit au) {
+    ArticleMetadataExtractor ae = 
+      au.getPlugin().getArticleMetadataExtractor(MetadataTarget.Article, au);
+    if (ae == null) {
+      TitleConfig tc = au.getTitleConfig();
+      final String journalTitle = tc.getJournalTitle();
+      TdbAu tdbau = tc.getTdbAu();
+      String auVolume = tdbau.getParam("volume_name");
+      if (auVolume == null) {
+        auVolume = tdbau.getParam("volume");
+      }
+      if (auVolume == null) {
+        auVolume = tdbau.getParam("volume_str");
+      }
+      final String volume = auVolume;
+      final String year = tdbau.getParam("year");  // what about year range?
+      final String issn = tdbau.getParam("issn");
+      final String eissn = tdbau.getParam("eissn");
+      final String isbn = tdbau.getParam("isbn");
+      
+      ae = new ArticleMetadataExtractor() {
+        @Override
+        public void extract(MetadataTarget target, 
+                            ArticleFiles af, Emitter emitter)
+        throws IOException, PluginException {
+          // must have a URL to be useful in the database
+          String url = af.getFullTextUrl();
+          if (url != null) {
+            ArticleMetadata md = new ArticleMetadata();
+            md.put(MetadataField.FIELD_ACCESS_URL, url);
+            if (isbn != null) md.put(MetadataField.FIELD_ISBN, isbn);
+            if (issn != null) md.put(MetadataField.FIELD_ISSN, issn);
+            if (eissn != null) md.put(MetadataField.FIELD_EISSN, eissn);
+            if (volume != null) md.put(MetadataField.FIELD_VOLUME,volume);
+            if (year != null) md.put(MetadataField.FIELD_DATE, year);
+            if (journalTitle != null) md.put(MetadataField.FIELD_JOURNAL_TITLE, 
+                                             journalTitle);
+            emitter.emitMetadata(af, md);
+          }
+        }
+      };
+    }
     return ae;
   }
   
@@ -797,7 +870,7 @@ public class MetadataManager
      */
     public ReindexingTask(ArchivalUnit theAu, ArticleMetadataExtractor theAe) { 
       super(new TimeInterval(System.currentTimeMillis(),
-                             System.currentTimeMillis() + Constants.HOUR),       /* TimeInterval */
+                             System.currentTimeMillis() + Constants.HOUR),
             0,          /* long estimatedDuration */
             null,       /* TaskCallback */
             null);      /* Object cookie */
@@ -824,14 +897,15 @@ public class MetadataManager
             startCpuTime = threadCpuTime;
             startUserTime = threadUserTime;
             startClockTime = currentClockTime;
-            log.debug("Reindexing task starting for au: " + au.getName());
+            log.debug2("Reindexing task starting for au: " + au.getName());
             articleIterator = au.getArticleIterator(MetadataTarget.Article);
             try {
               conn = newConnection();
               removeMetadataForAu(conn, au);
               notifyStartReindexingAu(au);
             } catch (SQLException ex) {
-              log.error("Failed to set up to reindex pending au: " + au.getName(), ex);
+              log.error(  "Failed to set up to reindex pending au: " 
+                        + au.getName(), ex);
               cancel();  // cancel task
             }
           } else if (type == Schedule.EventType.FINISH) {
@@ -843,18 +917,27 @@ public class MetadataManager
                 // if reindexing not complete at this point,
                 // roll back current transaction, and try later
                 if (articleIterator.hasNext()) {
-                  log.debug("Reindexing task did not finished for au " + au.getName());
+                  log.debug2(  "Reindexing task did not finished for au " 
+                            + au.getName());
                   conn.rollback();
                   addToPendingAus(conn, Collections.singleton(au));
                 } else {
                   success = true;
-                  long elapsedCpuTime = threadCpuTime = startCpuTime;
+                  if (log.isDebug2()) {
+                    long elapsedCpuTime = threadCpuTime = startCpuTime;
                   long elapsedUserTime = threadUserTime - startUserTime;
                   long elapsedClockTime = currentClockTime - startClockTime;
                   totalCpuTime += elapsedCpuTime;
                   totalUserTime += elapsedUserTime;
                   totalClockTime += elapsedClockTime;
-                  log.debug("Reindexing task finished for au: " + au.getName() + " CPU time: " + elapsedCpuTime/1.0e9 + " (" + totalCpuTime/1.0e9 + "), UserTime: " + elapsedUserTime/1.0e9 + " (" + totalUserTime/1.0e9 + ") Clock time: " + elapsedClockTime/1.0e3 + " (" + totalClockTime/1.0e3 + ")");
+                  log.debug2(  "Reindexing task finished for au: " + au.getName() 
+                            + " CPU time: " + elapsedCpuTime/1.0e9 + " (" 
+                            + totalCpuTime/1.0e9 + "), UserTime: " 
+                            + elapsedUserTime/1.0e9 
+                            + " (" + totalUserTime/1.0e9 + ") Clock time: " 
+                            + elapsedClockTime/1.0e3 
+                            + " (" + totalClockTime/1.0e3 + ")");
+                  }
                 }
                 conn.commit();
               } catch (SQLException ex) {
@@ -887,7 +970,8 @@ public class MetadataManager
     public int step(int n) {
       final int[] extracted = new int[1];
       int steps = (n <= 0) ? default_steps : n;
-      log.debug("step: " + steps + ", has articles: " + articleIterator.hasNext());
+      log.debug3(  "step: " + steps + ", has articles: " 
+                + articleIterator.hasNext());
 
       while (   !isFinished() 
           && (extracted[0] <= steps)  
@@ -906,16 +990,19 @@ public class MetadataManager
                   extracted[0]++;
                 } catch (SQLException ex) {
                   // TODO: should extraction be canceled at this point?
-                  log.error("Failed to index metadata for CachedURL: " + af.getFullTextUrl(), ex);
+                  log.error(  "Failed to index metadata for CachedURL: " 
+                            + af.getFullTextUrl(), ex);
                 }
               }
             }
           };
           ae.extract(MetadataTarget.OpenURL, af, emitter);
         } catch (IOException ex) {
-          log.error("Failed to index metadata for CachedURL: " + af.getFullTextUrl(), ex);
+          log.error(  "Failed to index metadata for CachedURL: " 
+                    + af.getFullTextUrl(), ex);
         } catch (PluginException ex) {
-          log.error("Failed to index metadata for CachedURL: " + af.getFullTextUrl(), ex);
+          log.error(  "Failed to index metadata for CachedURL: " 
+                    + af.getFullTextUrl(), ex);
         }
       }
       
@@ -963,7 +1050,8 @@ public class MetadataManager
     if (pluginMgr != null) {
       try {
         Statement selectPendingAus = conn.createStatement();
-        ResultSet results = selectPendingAus.executeQuery("select * from PendingAus");
+        ResultSet results = 
+          selectPendingAus.executeQuery("select * from PendingAus");
   
         for (int i = 0; (i < maxAus) && results.next(); i++) {
           String pluginId = results.getString(1);
@@ -1000,7 +1088,8 @@ public class MetadataManager
     /* KLUDGE: temporarily running task in its own thread
      * rather than using SchedService
      */
-    LockssRunnable runnable = new LockssRunnable("Reindexing: " + task.au.getName()) {
+    LockssRunnable runnable = 
+      new LockssRunnable("Reindexing: " + task.au.getName()) {
       public void lockssRun() {
         task.callCallback(Schedule.EventType.START);
         while (!task.isFinished()) {
@@ -1083,7 +1172,9 @@ public class MetadataManager
    * @param md the metadata
    * @throws SQLException if failed to add rows for metadata
    */
-  private static void addMetadata(Connection conn, ArchivalUnit au, ArticleMetadata md) 
+  private static void addMetadata(Connection conn, 
+                                  ArchivalUnit au, 
+                                  ArticleMetadata md) 
     throws SQLException {
     String auid = au.getAuId();
     String pluginId = PluginManager.pluginIdFromAuId(auid);
@@ -1126,8 +1217,12 @@ public class MetadataManager
       return;
     }
     int mdid = resultSet.getInt(1);
-    log.debug("added [accessURL:" + accessUrl + ", md_id: " + mdid + ", date: " + dateStr + ", vol: " + volume + ", issue: " + issue + ", page: " + startPage + ", pluginId:" + pluginId + "]");
-    
+    if (log.isDebug3()) { 
+      log.debug(  "added [accessURL:" + accessUrl + ", md_id: " + mdid 
+              + ", date: " + dateStr + ", vol: " + volume 
+              + ", issue: " + issue + ", page: " + startPage 
+              + ", pluginId:" + pluginId + "]");
+    }
     // insert row for DOI
     if (doi != null) {
       if (doi.toLowerCase().startsWith("doi:")) {
@@ -1144,7 +1239,8 @@ public class MetadataManager
       insertDOI.setString(1, doi);
       insertDOI.setInt(2, mdid);
       insertDOI.execute();
-      log.debug("added [doi:" + doi + ", md_id: " + mdid + ", pluginId:" + pluginId + "]");
+      log.debug3(  "added [doi:" + doi + ", md_id: " + mdid 
+                + ", pluginId:" + pluginId + "]");
     }
     
     // insert row for ISBN
@@ -1156,7 +1252,8 @@ public class MetadataManager
       insertISBN.setString(1, isbn);
       insertISBN.setInt(2, mdid);
       insertISBN.execute();
-      log.debug("added [isbn:" + isbn + ", md_id: " + mdid + ", pluginId:" + pluginId + "]");
+      log.debug3(  "added [isbn:" + isbn + ", md_id: " + mdid 
+                + ", pluginId:" + pluginId + "]");
     }
 
     // insert row for ISSN
@@ -1168,7 +1265,8 @@ public class MetadataManager
       insertISSN.setString(1, issn);
       insertISSN.setInt(2, mdid);
       insertISSN.execute();
-      log.debug("added [issn:" + issn + ", md_id: " + mdid + ", pluginId:" + pluginId + "]");
+      log.debug3(  "added [issn:" + issn + ", md_id: " + mdid 
+                + ", pluginId:" + pluginId + "]");
     }
   }
    
@@ -1226,17 +1324,20 @@ public class MetadataManager
     // prepare statement for inserting multiple AUs
     // (should this be saved forever?)
     PreparedStatement insertPendingAu = 
-      conn.prepareStatement("insert into " + PENDINGAUS_TABLE_NAME + " values (?,?)");
+      conn.prepareStatement("insert into " + PENDINGAUS_TABLE_NAME 
+                            + " values (?,?)");
     PreparedStatement selectPendingAu = 
-      conn.prepareStatement("select * from PendingAus where plugin_id=? and au_key=?");
+      conn.prepareStatement(  "select * from PendingAus"
+                            + " where plugin_id=? and au_key=?");
 
-    log.debug("number of pending aus to add: " + aus.size());
+    log.debug3("number of pending aus to add: " + aus.size());
     
     // add an AU to the list of pending AUs
     for (ArchivalUnit au : aus) {
       // only add for extraction of there is a 
       if (getArticleMetadataExtractor(au) == null) {
-        log.debug("not adding au to pending because it has no metadata extractor: " + au.getName());
+        log.debug3(  "not adding au to pending because"
+                  + " it has no metadata extractor: " + au.getName());
       } else {
         String auid = au.getAuId();
         String pluginId = PluginManager.pluginIdFromAuId(auid);
@@ -1246,12 +1347,12 @@ public class MetadataManager
         selectPendingAu.setString(1, pluginId);
         selectPendingAu.setString(2, auKey);
         if (!selectPendingAu.executeQuery().next()) {
-          log.debug("adding au to pending: " + pluginId + "?" + auKey);
+          log.debug3("adding au to pending: " + pluginId + "?" + auKey);
           insertPendingAu.setString(1, pluginId);
           insertPendingAu.setString(2, auKey);
           insertPendingAu.addBatch();
         } else {
-          log.debug("au already pending: " + pluginId + "?" + auKey);
+          log.debug3("au already pending: " + pluginId + "?" + auKey);
         }
       }
     }
@@ -1268,7 +1369,8 @@ public class MetadataManager
   private void removeFromPendingAus(Connection conn, ArchivalUnit au) 
       throws SQLException {
     PreparedStatement deletePendingAu = 
-      conn.prepareStatement("delete from " + PENDINGAUS_TABLE_NAME + " where plugin_id=? and au_key=?");
+      conn.prepareStatement(  "delete from " + PENDINGAUS_TABLE_NAME 
+                            + " where plugin_id=? and au_key=?");
     String auid = au.getAuId();
     String pluginId = PluginManager.pluginIdFromAuId(auid);
     String auKey = PluginManager.auKeyFromAuId(auid);
@@ -1288,7 +1390,8 @@ public class MetadataManager
   private void removeMetadataForAu(Connection conn, ArchivalUnit au) 
       throws SQLException {
     PreparedStatement deletePendingAu = 
-      conn.prepareStatement("delete from " + METADATA_TABLE_NAME + " where plugin_id=? and au_key=?");
+      conn.prepareStatement(  "delete from " + METADATA_TABLE_NAME 
+                            + " where plugin_id=? and au_key=?");
     String auid = au.getAuId();
     String pluginId = PluginManager.pluginIdFromAuId(auid);
     String auKey = PluginManager.auKeyFromAuId(auid);
