@@ -1,69 +1,68 @@
 {
+
   publisher <
     name = American Society of Health-System Pharmacists
   >
 
   {
+
     title <
       name = American Journal of Health-System Pharmacy ;
       issn = 1079-2082 ;
+      eissn = 1535-2900 ;
       issnl = 1079-2082
     >
 
-    {
+    plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+    param[base_url] = http://www.ajhp.org/
+    implicit < status ; name ; param[volume_name] >
 
-      plugin = org.lockss.plugin.highwire.HighWireH20Plugin
-      param[base_url] = http://www.ajhp.org/
-      implicit < status ; name ; param[volume_name] >
-
-      au < manifest ; American Journal of Health-System Pharmacy Volume 23 ; 23 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 24 ; 24 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 25 ; 25 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 26 ; 26 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 27 ; 27 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 28 ; 28 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 29 ; 29 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 30 ; 30 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 31 ; 31 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 32 ; 32 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 33 ; 33 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 34 ; 34 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 35 ; 35 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 36 ; 36 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 37 ; 37 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 38 ; 38 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 39 ; 39 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 40 ; 40 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 41 ; 41 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 42 ; 42 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 43 ; 43 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 44 ; 44 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 45 ; 45 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 46 ; 46 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 47 ; 47 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 48 ; 48 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 49 ; 49 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 50 ; 50 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 51 ; 51 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 52 ; 52 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 53 ; 53 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
-      au < manifest ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
-
-    }
+    au < manifest ; American Journal of Health-System Pharmacy Volume 22 (tables of contents only) ; 22 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 23 (tables of contents only) ; 23 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 24 (tables of contents only) ; 24 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 25 (tables of contents only) ; 25 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 26 (tables of contents only) ; 26 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 27 (tables of contents only) ; 27 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 28 (tables of contents only) ; 28 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 29 (tables of contents only) ; 29 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 30 (tables of contents only) ; 30 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 31 (tables of contents only) ; 31 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 32 (abstracts only) ; 32 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 33 (abstracts only) ; 33 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 34 (abstracts only) ; 34 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 35 (abstracts only) ; 35 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 36 (abstracts only) ; 36 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 37 (abstracts only) ; 37 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 38 (abstracts only) ; 38 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 39 (abstracts only) ; 39 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 40 (abstracts only) ; 40 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 41 (abstracts only) ; 41 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 42 (abstracts only) ; 42 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 43 (abstracts only) ; 43 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 44 (abstracts only) ; 44 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 45 (abstracts only) ; 45 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 46 (abstracts only) ; 46 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 47 (abstracts only) ; 47 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 48 (abstracts only) ; 48 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 49 (abstracts only) ; 49 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 50 (abstracts only) ; 50 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 51 (abstracts only) ; 51 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 52 (abstracts only) ; 52 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 53 ; 53 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 54 ; 54 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 55 ; 55 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 56 ; 56 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 57 ; 57 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 58 ; 58 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 59 ; 59 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 60 ; 60 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 61 ; 61 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 62 ; 62 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 63 ; 63 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 64 ; 64 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 65 ; 65 >
+    au < manifest ; American Journal of Health-System Pharmacy Volume 66 ; 66 >
 
   }
 
 }
-
