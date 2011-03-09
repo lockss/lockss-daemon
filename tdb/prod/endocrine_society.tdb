@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = Endocrine Society
   >
 
   {
+
     title <
       name = Endocrine Reviews ;
       issn = 0163-769X ;
@@ -53,6 +55,7 @@
   }
 
   {
+
     title <
       name = Endocrinology ;
       issn = 0013-7227 ;
@@ -191,6 +194,7 @@
   }
 
   {
+
     title <
       name = Journal of Clinical Endocrinology & Metabolism ;
       issn = 0021-972X ;
@@ -304,6 +308,7 @@
   }
 
   {
+
     title <
       name = Molecular Endocrinology ;
       issn = 0888-8809 ;
@@ -336,16 +341,17 @@
       au < exists ; Molecular Endocrinology Volume 17 ; 17 >
       au < exists ; Molecular Endocrinology Volume 18 ; 18 >
       au < ready ; Molecular Endocrinology Volume 19 ; 19 >
-      au < ready ; Molecular Endocrinology Volume 20 ; 20 >
-      au < ready ; Molecular Endocrinology Volume 21 ; 21 >
-      au < ready ; Molecular Endocrinology Volume 22 ; 22 >
-      au < ready ; Molecular Endocrinology Volume 23 ; 23 >
+      au < released ; Molecular Endocrinology Volume 20 ; 20 >
+      au < released ; Molecular Endocrinology Volume 21 ; 21 >
+      au < released ; Molecular Endocrinology Volume 22 ; 22 >
+      au < released ; Molecular Endocrinology Volume 23 ; 23 >
 
     }
 
   }
 
   {
+
     title <
       name = Recent Progress in Hormone Research ;
       issn = 0079-9963 ;
@@ -361,11 +367,10 @@
       au < exists ; Recent Progress in Hormone Research Volume 56 ; 56 >
       au < exists ; Recent Progress in Hormone Research Volume 57 ; 57 >
       au < exists ; Recent Progress in Hormone Research Volume 58 ; 58 >
-      au < ready ; Recent Progress in Hormone Research Volume 59 ; 59 >
+      au < released ; Recent Progress in Hormone Research Volume 59 ; 59 >
 
     }
 
   }
 
 }
-

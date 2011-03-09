@@ -1,9 +1,11 @@
 {
+
   publisher <
     name = Marine Biological Laboratory
   >
 
   {
+
     title <
       name = The Biological Bulletin ;
       issn = 0006-3185 ;
@@ -131,10 +133,10 @@
       au < HighWireStrVolPlugin ; released ; The Biological Bulletin Volume 210 ; 210 >
       au < HighWireStrVolPlugin ; released ; The Biological Bulletin Volume 211 ; 211 >
       au < HighWireStrVolPlugin ; released ; The Biological Bulletin Volume 212 ; 212 >
-      au < HighWirePressPlugin ; ready ; The Biological Bulletin Volume 213 ; 213 >
-      au < HighWirePressPlugin ; ready ; The Biological Bulletin Volume 214 ; 214 >
-      au < HighWirePressPlugin ; ready ; The Biological Bulletin Volume 215 ; 215 >
-      au < HighWirePressPlugin ; ready ; The Biological Bulletin Volume 216 ; 216 >
+      au < HighWirePressPlugin ; released ; The Biological Bulletin Volume 213 ; 213 >
+      au < HighWirePressPlugin ; released ; The Biological Bulletin Volume 214 ; 214 >
+      au < HighWirePressPlugin ; released ; The Biological Bulletin Volume 215 ; 215 >
+      au < HighWirePressPlugin ; released ; The Biological Bulletin Volume 216 ; 216 >
 
     }
 
