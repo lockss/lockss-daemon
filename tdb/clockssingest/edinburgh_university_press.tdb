@@ -17,6 +17,7 @@
     >
 
     param[journal_id] = afr
+    comment[2011] = from 2011 published by Cambridge University Press
 
     au < crawling ; exists ; 2000 ; Africa Volume 70 ; 70 >
     au < crawling ; exists ; 2001 ; Africa Volume 71 ; 71 >
@@ -29,6 +30,7 @@
     au < crawling ; exists ; 2008 ; Africa Volume 78 ; 78 >
     au < crawling ; exists ; 2009 ; Africa Volume 79 ; 79 >
     au < released ; crawling ; 2010 ; Africa Volume 80 ; 80 >
+    au < doesNotExist ; doesNotExist ; 2011 ; Africa Volume 81 ; 81 >
 
   }
 
@@ -41,6 +43,7 @@
     >
 
     param[journal_id] = abib
+    comment[2011] = from 2011 published by Cambridge University Press
 
     au < crawling ; exists ; 2004 ; Africa Bibliography Volume 2004 ; 2004 >
     au < crawling ; exists ; 2005 ; Africa Bibliography Volume 2005 ; 2005 >
@@ -48,6 +51,7 @@
     au < crawling ; exists ; 2008 ; Africa Bibliography Volume 2007 (2008) ; 2007 >
     au < crawling ; exists ; 2009 ; Africa Bibliography Volume 2008 (2009) ; 2008 >
     au < released ; crawling ; 2010 ; Africa Bibliography Volume 2009 (2010) ; 2009 >
+    au < doesNotExist ; doesNotExist ; 2011 ; Africa Bibliography Volume 2010 (2011) ; 2010 >
 
   }
 
@@ -67,6 +71,7 @@
     au < crawling ; exists ; 2008 ; African Journal of International and Comparative Law Volume 16 ; 16 >
     au < crawling ; exists ; 2009 ; African Journal of International and Comparative Law Volume 17 ; 17 >
     au < released ; crawling ; 2010 ; African Journal of International and Comparative Law Volume 18 ; 18 >
+    au < crawling ; exists ; 2011 ; African Journal of International and Comparative Law Volume 19 ; 19 >
 
   }
 
@@ -85,8 +90,8 @@
     au < crawling ; exists ; 2005 ; Architectural Heritage Volume 16 ; 16 >
     au < crawling ; exists ; 2006 ; Architectural Heritage Volume 17 ; 17 >
     au < crawling ; exists ; 2007 ; Architectural Heritage Volume 18 ; 18 >
-    au < crawling ; exists ; 2008 ; Architectural Heritage Volume 19 ; 19 >
-    au < crawling ; exists ; 2009 ; Architectural Heritage Volume 20 ; 20 >
+    au < crawling ; exists ; 2008 ; Architectural Heritage Volume XIX ; XIX >
+    au < crawling ; exists ; 2009 ; Architectural Heritage Volume XX ; XX >
 
   }
 
@@ -140,6 +145,8 @@
 
     au < released ; crawling ; 2008-2009 ; Britain and the World Volume 1 ; 1 >
     au < released ; crawling ; 2009-2010 ; Britain and the World Volume 2 ; 2 >
+    au < crawling ; exists ; 2010 ; Britain and the World Volume 3 ; 3 >
+    au < crawling ; exists ; 2011 ; Britain and the World Volume 4 ; 4 >
 
   }
 
@@ -160,6 +167,7 @@
     au < crawling ; exists ; 2008 ; Comparative Critical Studies Volume 5 ; 5 >
     au < crawling ; exists ; 2009 ; Comparative Critical Studies Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Comparative Critical Studies Volume 7 ; 7 >
+    au < crawling ; exists ; 2011 ; Comparative Critical Studies Volume 8 ; 8 >
 
   }
 
@@ -255,6 +263,7 @@
     au < crawling ; exists ; 2008 ; Edinburgh Law Review Volume 12 ; 12 >
     au < crawling ; exists ; 2009 ; Edinburgh Law Review Volume 13 ; 13 >
     au < released ; crawling ; 2010 ; Edinburgh Law Review Volume 14 ; 14 >
+    au < crawling ; exists ; 2011 ; Edinburgh Law Review Volume 15 ; 15 >
 
   }
 
@@ -275,6 +284,7 @@
     au < crawling ; exists ; 2008 ; Episteme Volume 5 ; 5 >
     au < crawling ; exists ; 2009 ; Episteme Volume 6 ; 6 >
     au < released ; crawling ; 2010 ; Episteme Volume 7 ; 7 >
+    au < crawling ; exists ; 2011 ; Episteme Volume 8 ; 8 >
 
   }
 
@@ -372,6 +382,7 @@
     au < crawling ; exists ; 2008 ; Journal of Beckett Studies Volume 17 ; 17 >
     au < crawling ; exists ; 2009 ; Journal of Beckett Studies Volume 18 ; 18 >
     au < released ; crawling ; 2010 ; Journal of Beckett Studies Volume 19 ; 19 >
+    au < crawling ; exists ; 2011 ; Journal of Beckett Studies Volume 20 ; 20 >
 
   }
 
@@ -411,6 +422,7 @@
     au < crawling ; exists ; 2008 ; Journal of International Political Theory Volume 4 ; 4 >
     au < crawling ; exists ; 2009 ; Journal of International Political Theory Volume 5 ; 5 >
     au < released ; crawling ; 2010 ; Journal of International Political Theory Volume 6 ; 6 >
+    au < crawling ; exists ; 2011 ; Journal of International Political Theory Volume 7 ; 7 >
 
   }
 
@@ -473,6 +485,7 @@
     au < crawling ; exists ; 2008 ; Journal of Scottish Philosophy Volume 6 ; 6 >
     au < crawling ; exists ; 2009 ; Journal of Scottish Philosophy Volume 7 ; 7 >
     au < released ; crawling ; 2010 ; Journal of Scottish Philosophy Volume 8 ; 8 >
+    au < crawling ; exists ; 2011 ; Journal of Scottish Philosophy Volume 9 ; 9 >
 
   }
 
@@ -506,6 +519,21 @@
     au < crawling ; exists ; 2010 ; Modernist Cultures Volume 3 ; 3 >
     au < crawling ; exists ; 2010 ; Modernist Cultures Volume 4 ; 4 >
     au < released ; crawling ; 2010 ; Modernist Cultures Volume 5 ; 5 >
+
+
+  }
+
+  {
+
+    title <
+      name = The New Soundtrack ;
+      issn = 2042-8855 ;
+      eissn = 2042-8863
+    >
+
+    param[journal_id] = sound
+
+    au < crawling ; exists ; 2011 ; The New Soundtrack Volume 1 ; 1 >
 
 
   }
@@ -562,6 +590,7 @@
     au < crawling ; exists ; 2008 ; Paragraph Volume 31 ; 31 >
     au < crawling ; exists ; 2009 ; Paragraph Volume 32 ; 32 >
     au < released ; crawling ; 2010 ; Paragraph Volume 33 ; 33 >
+    au < crawling ; exists ; 2011 ; Paragraph Volume 34 ; 34 >
 
   }
 
@@ -587,6 +616,7 @@
     au < crawling ; exists ; 2008 ; Psychoanalysis and History Volume 10 ; 10 >
     au < crawling ; exists ; 2009 ; Psychoanalysis and History Volume 11 ; 11 >
     au < released ; crawling ; 2010 ; Psychoanalysis and History Volume 12 ; 12 >
+    au < crawling ; exists ; 2011 ; Psychoanalysis and History Volume 13 ; 13 >
 
   }
 
@@ -623,6 +653,30 @@
 
     param[journal_id] = saj
 
+    au < crawling ; exists ; 1969 ; Scottish Archaeological Journal Volume 1 ; 1 >
+    au < crawling ; exists ; 1971 ; Scottish Archaeological Journal Volume 2 ; 2 >
+    au < crawling ; exists ; 1974 ; Scottish Archaeological Journal Volume 3 ; 3 >
+    au < crawling ; exists ; 1976 ; Scottish Archaeological Journal Volume 4 ; 4 >
+    au < crawling ; exists ; 1978 ; Scottish Archaeological Journal Volume 5 ; 5 >
+    au < crawling ; exists ; 1979 ; Scottish Archaeological Journal Volume 6 ; 6 >
+    au < crawling ; exists ; 1980 ; Scottish Archaeological Journal Volume 7 ; 7 >
+    au < crawling ; exists ; 1981 ; Scottish Archaeological Journal Volume 8 ; 8 >
+    au < crawling ; exists ; 1982 ; Scottish Archaeological Journal Volume 9 ; 9 >
+    au < crawling ; exists ; 1983 ; Scottish Archaeological Journal Volume 10 ; 10 >
+    au < crawling ; exists ; 1984 ; Scottish Archaeological Journal Volume 11 ; 11 >
+    au < crawling ; exists ; 1985 ; Scottish Archaeological Journal Volume 12 ; 12 >
+    au < crawling ; exists ; 1986 ; Scottish Archaeological Journal Volume 13 ; 13 >
+    au < crawling ; exists ; 1987 ; Scottish Archaeological Journal Volume 14 ; 14 >
+    au < crawling ; exists ; 1988 ; Scottish Archaeological Journal Volume 15 ; 15 >
+    au < crawling ; exists ; 1989 ; Scottish Archaeological Journal Volume 16 ; 16 >
+    au < crawling ; exists ; 1991 ; Scottish Archaeological Journal Volume 17 ; 17 >
+    au < crawling ; exists ; 1993 ; Scottish Archaeological Journal Volume 18 ; 18 >
+    au < crawling ; exists ; 1994 ; Scottish Archaeological Journal Volume 19 ; 19 >
+    au < crawling ; exists ; 1996 ; Scottish Archaeological Journal Volume 20 ; 20 >
+    au < crawling ; exists ; 1998 ; Scottish Archaeological Journal Volume 21 ; 21 >
+    au < crawling ; exists ; 2000 ; Scottish Archaeological Journal Volume 22 ; 22 >
+    au < crawling ; exists ; 2001 ; Scottish Archaeological Journal Volume 23 ; 23 >
+    au < crawling ; exists ; 2002 ; Scottish Archaeological Journal Volume 24 ; 24 >
     au < crawling ; exists ; 2003 ; Scottish Archaeological Journal Volume 25 ; 25 >
     au < crawling ; exists ; 2004 ; Scottish Archaeological Journal Volume 26 ; 26 >
     au < crawling ; exists ; 2005 ; Scottish Archaeological Journal Volume 27 ; 27 >
@@ -685,19 +739,6 @@ comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010
   {
 
     title <
-      name = The New Soundtrack ;
-      issn = 2042-8855 ;
-      eissn = 2042-8863
-    >
-
-    param[journal_id] = sound
-
-
-  }
-
-  {
-
-    title <
       name = Translation and Literature ;
       issn = 0968-1361 ;
       eissn = 1750-0214
@@ -714,6 +755,7 @@ comment[shr89] = 500 error http://www.euppublishing.com/doi/abs/10.3366/shr.2010
     au < crawling ; exists ; 2008 ; Translation and Literature Volume 17 ; 17 >
     au < crawling ; exists ; 2009 ; Translation and Literature Volume 18 ; 18 >
     au < released ; crawling ; 2010 ; Translation and Literature Volume 19 ; 19 >
+    au < crawling ; exists ; 2011 ; Translation and Literature Volume 20 ; 20 >
 
   }
 
