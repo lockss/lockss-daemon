@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.25 2011-02-11 00:05:52 thib_gc Exp $
+ * $Id: HighWirePressH20HtmlFilterFactory.java,v 1.26 2011-03-10 23:55:39 greya Exp $
  */
 
 /*
@@ -98,7 +98,6 @@ public class HighWirePressH20HtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^/external-ref"),   
         //For SAGE (at least).  Name of the institution. E.g. </a> INDIANA UNIV </div>
         HtmlNodeFilters.tagWithAttribute("div", "id", "header-Uni"),
-
 
         // Filter for <li class="subscr-ref">....</li>
         HtmlNodeFilters.tagWithAttribute("li", "class", "subscr-ref"),

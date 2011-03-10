@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlFilterFactory.java,v 1.8 2010-10-05 17:34:15 pgust Exp $
+ * $Id: HighWireHtmlFilterFactory.java,v 1.9 2011-03-10 23:55:39 greya Exp $
  */
 
 /*
@@ -90,6 +90,9 @@ public class HighWireHtmlFilterFactory implements FilterFactory {
         HtmlNodeFilters.tagWithAttributeRegex("a", "href", "^http://ads.adhostingsolutions.com/"),
         // alt for less/greater than confuses WhiteSpace filter
         HtmlNodeFilters.tagWithAttributeRegex("img", "alt", "[<>]"),
+        //CMAJ (c)year tag
+        HtmlNodeFilters.tagWithAttribute("div", "class", "slugline-copyright"),
+        
     };
 
 
