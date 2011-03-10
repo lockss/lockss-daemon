@@ -22,6 +22,36 @@
   }
       
   {
+  
+   title <
+     name = Auburn University Discover Auburn Lecture Series
+   >
+     
+    plugin = edu.auburn.adpn.discoverauburn.DiscoverAuburnPlugin
+    param[base_url] = http://fortissimo.lib.auburn.edu:82/da/
+    implicit < status ; name ; param[year] >
+
+   au < released ; Auburn University Discover Auburn Lecture Series 2007 ; 2007 >
+   au < released ; Auburn University Discover Auburn Lecture Series 2008 ; 2008 >
+   au < released ; Auburn University Discover Auburn Lecture Series 2009 ; 2009 >
+   
+  }
+  
+  {
+
+    title <
+      name = Auburn University Eugene B. Sledge Papers 
+    >
+
+    plugin = edu.auburn.adpn.sledgepapers.SledgePapersPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/numphotos/    
+    implicit < status ; name >
+  
+    au < released ; Auburn University Eugene B. Sledge Papers >
+ 
+  }
+  
+  {
 
     title <
       name = Auburn University Historical Maps 
@@ -51,97 +81,51 @@
   
   {
 
-    plugin = edu.auburn.adpn.VetMedSlidesPlugin
-    param[base_url] = http://digdata4.lib.auburn.edu/VETMED/    
-    implicit < status ; name ; param[volume_name] >
-  
-    {
-
-      title <
-        name = Auburn University VetMed Slides 
-      >
-
-      au < released ; Auburn University VetMed Slides Volumes 1-9 ; 1-9 >
-      au < exists ; Auburn University VetMed Slides Volumes 10-19 ; 10-19 >
-      au < released ; Auburn University VetMed Slides Volumes 20-29 ; 20-29 >
-      au < released ; Auburn University VetMed Slides Volumes 30-39 ; 30-39 >
-      au < released ; Auburn University VetMed Slides Volumes 40-49 ; 40-49 >
-      au < released ; Auburn University VetMed Slides Volumes 50-59 ; 50-59 >
-      au < released ; Auburn University VetMed Slides Volumes 60-69 ; 60-69 >
-      au < released ; Auburn University VetMed Slides Volumes 70-79 ; 70-79 >
-      au < released ; Auburn University VetMed Slides Volumes 80-89 ; 80-89 >
-      au < released ; Auburn University VetMed Slides Volumes 90-99 ; 90-99 >
-      au < released ; Auburn University VetMed Slides Volumes 100-109 ; 100-109 >
-      au < released ; Auburn University VetMed Slides Volumes 110-119 ; 110-119 >
-  
-    }
-  
-  }
-  
-  {
+    title <
+      name = Auburn University Sesquicentennial Lecture Series 
+    >
 
     plugin = edu.auburn.adpn.sesquicentennial.SesquicentennialLectureSeriesPlugin
     param[base_url] = http://fortissimo.lib.auburn.edu:82/sesq/
     implicit < status ; name ; param[volume_name] >
   
-    {
-
-      title <
-        name = Auburn University Sesquicentennial Lecture Series 
-      >
-
-      au < released ; Auburn University Sesquicentennial Lecture Series: 1. Ralph Brown Draughon, Jr. ; 01draughon >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 2. J. Wayne Flynt ; 02flynt >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 3. Leah Rawls Atkins ; 03atkins >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 4. Joe Yeager and Gene Stevenson ; 04yeager-stevenson >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 5. Dwayne Cox ; 05cox >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 6. Anthony Donaldson ; 06donaldson >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 7. David Alsobrook ; 07alsobrook >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 8. Martin T. Olliff and Harold A. Franklin ; 08oliff-franklin >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 9. David Housel ; 09housel >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 10. Jack Simms ; 10simms >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 11. J. Wayne Flynt ; 11flynt >
-      au < released ; Auburn University Sesquicentennial Lecture Series: 12. Nell Ruth Campbell Richardson ; 12richardson >
-  
-    }
+    au < released ; Auburn University Sesquicentennial Lecture Series: 1. Ralph Brown Draughon, Jr. ; 01draughon >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 2. J. Wayne Flynt ; 02flynt >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 3. Leah Rawls Atkins ; 03atkins >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 4. Joe Yeager and Gene Stevenson ; 04yeager-stevenson >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 5. Dwayne Cox ; 05cox >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 6. Anthony Donaldson ; 06donaldson >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 7. David Alsobrook ; 07alsobrook >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 8. Martin T. Olliff and Harold A. Franklin ; 08oliff-franklin >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 9. David Housel ; 09housel >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 10. Jack Simms ; 10simms >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 11. J. Wayne Flynt ; 11flynt >
+    au < released ; Auburn University Sesquicentennial Lecture Series: 12. Nell Ruth Campbell Richardson ; 12richardson >
   
   }
   
   {
 
-    plugin = edu.auburn.adpn.sledgepapers.SledgePapersPlugin
-    param[base_url] = http://digdata1.lib.auburn.edu/numphotos/    
-    implicit < status ; name >
-  
-    {
+    title <
+      name = Auburn University VetMed Slides 
+    >
 
-      title <
-        name = Auburn University Eugene B. Sledge Papers 
-      >
-
-      au < released ; Auburn University Eugene B. Sledge Papers >
- 
-    }
+    plugin = edu.auburn.adpn.VetMedSlidesPlugin
+    param[base_url] = http://digdata4.lib.auburn.edu/VETMED/    
+    implicit < status ; name ; param[volume_name] >
   
-  }
-  
-  {
-  
-    plugin = edu.auburn.adpn.discoverauburn.DiscoverAuburnPlugin
-    param[base_url] = http://fortissimo.lib.auburn.edu:82/da/
-    implicit < status ; name ; param[year] >
-
-   {
-   
-     title <
-       name = Auburn University Discover Auburn Lecture Series
-     >
-     
-     au < released ; Auburn University Discover Auburn Lecture Series 2007 ; 2007 >
-     au < released ; Auburn University Discover Auburn Lecture Series 2008 ; 2008 >
-     au < released ; Auburn University Discover Auburn Lecture Series 2009 ; 2009 >
-   
-   }
+    au < released ; Auburn University VetMed Slides Volumes 1-9 ; 1-9 >
+    au < exists ; Auburn University VetMed Slides Volumes 10-19 ; 10-19 >
+    au < released ; Auburn University VetMed Slides Volumes 20-29 ; 20-29 >
+    au < released ; Auburn University VetMed Slides Volumes 30-39 ; 30-39 >
+    au < released ; Auburn University VetMed Slides Volumes 40-49 ; 40-49 >
+    au < released ; Auburn University VetMed Slides Volumes 50-59 ; 50-59 >
+    au < released ; Auburn University VetMed Slides Volumes 60-69 ; 60-69 >
+    au < released ; Auburn University VetMed Slides Volumes 70-79 ; 70-79 >
+    au < released ; Auburn University VetMed Slides Volumes 80-89 ; 80-89 >
+    au < released ; Auburn University VetMed Slides Volumes 90-99 ; 90-99 >
+    au < released ; Auburn University VetMed Slides Volumes 100-109 ; 100-109 >
+    au < released ; Auburn University VetMed Slides Volumes 110-119 ; 110-119 >
   
   }
   
