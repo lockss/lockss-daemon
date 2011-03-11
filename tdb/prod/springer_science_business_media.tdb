@@ -1023,11 +1023,27 @@
       name = AIDS and Behavior ;
       issn = 1090-7165 ;
       eissn = 1573-3254 ;
-      issnl = 1090-7165 ;
-      placeholder = True
+      issnl = 1090-7165
     >
 
     param[journal_issn] = 1090-7165
+    attr[where] = content6b
+
+    au < testing ; 1997 ; AIDS and Behavior Volume 1 ; 1 >
+    au < testing ; 1998 ; AIDS and Behavior Volume 2 ; 2 >
+    au < testing ; 1999 ; AIDS and Behavior Volume 3 ; 3 >
+    au < testing ; 2000 ; AIDS and Behavior Volume 4 ; 4 >
+    au < testing ; 2001 ; AIDS and Behavior Volume 5 ; 5 >
+    au < testing ; 2002 ; AIDS and Behavior Volume 6 ; 6 >
+    au < testing ; 2003 ; AIDS and Behavior Volume 7 ; 7 >
+    au < testing ; 2004 ; AIDS and Behavior Volume 8 ; 8 >
+    au < testing ; 2005 ; AIDS and Behavior Volume 9 ; 9 >
+    au < testing ; 2006 ; AIDS and Behavior Volume 10 ; 10 >
+    au < testing ; 2007 ; AIDS and Behavior Volume 11 ; 11 >
+    au < testing ; 2008 ; AIDS and Behavior Volume 12 ; 12 >
+    au < testing ; 2009 ; AIDS and Behavior Volume 13 ; 13 >
+    au < testing ; 2010 ; AIDS and Behavior Volume 14 ; 14 >
+    au < testing ; 2011 ; AIDS and Behavior Volume 15 ; 15 >
 
   }
 
@@ -1408,29 +1424,29 @@
 
     comment[continued_from] = 0937-0633
     param[journal_issn] = 1618-2642
-    attr[where] = sul-lockss30a
+    attr[where] = content4a
 
-    au < testing ; 2002 ; Analytical and Bioanalytical Chemistry Volume 372 ; 372 >
-    au < testing ; 2002 ; Analytical and Bioanalytical Chemistry Volume 373 ; 373 >
+    au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 372 ; 372 >
+    au < ready ; 2002 ; Analytical and Bioanalytical Chemistry Volume 373 ; 373 >
     au < testing ; 2002 ; Analytical and Bioanalytical Chemistry Volume 374 ; 374 >
     au < testing ; 2003 ; Analytical and Bioanalytical Chemistry Volume 375 ; 375 >
-    au < testing ; 2003 ; Analytical and Bioanalytical Chemistry Volume 376 ; 376 >
+    au < ready ; 2003 ; Analytical and Bioanalytical Chemistry Volume 376 ; 376 >
     au < testing ; 2003 ; Analytical and Bioanalytical Chemistry Volume 377 ; 377 >
     au < testing ; 2004 ; Analytical and Bioanalytical Chemistry Volume 378 ; 378 >
     au < testing ; 2004 ; Analytical and Bioanalytical Chemistry Volume 379 ; 379 >
     au < testing ; 2004 ; Analytical and Bioanalytical Chemistry Volume 380 ; 380 >
     au < testing ; 2005 ; Analytical and Bioanalytical Chemistry Volume 381 ; 381 >
-    au < testing ; 2005 ; Analytical and Bioanalytical Chemistry Volume 382 ; 382 >
+    au < ready ; 2005 ; Analytical and Bioanalytical Chemistry Volume 382 ; 382 >
     au < testing ; 2005 ; Analytical and Bioanalytical Chemistry Volume 383 ; 383 >
-    au < testing ; 2006 ; Analytical and Bioanalytical Chemistry Volume 384 ; 384 >
+    au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 384 ; 384 >
     au < testing ; 2006 ; Analytical and Bioanalytical Chemistry Volume 385 ; 385 >
-    au < testing ; 2006 ; Analytical and Bioanalytical Chemistry Volume 386 ; 386 >
+    au < ready ; 2006 ; Analytical and Bioanalytical Chemistry Volume 386 ; 386 >
     au < testing ; 2007 ; Analytical and Bioanalytical Chemistry Volume 387 ; 387 >
-    au < testing ; 2007 ; Analytical and Bioanalytical Chemistry Volume 388 ; 388 >
+    au < ready ; 2007 ; Analytical and Bioanalytical Chemistry Volume 388 ; 388 >
     au < testing ; 2007 ; Analytical and Bioanalytical Chemistry Volume 389 ; 389 >
     au < testing ; 2008 ; Analytical and Bioanalytical Chemistry Volume 390 ; 390 >
-    au < testing ; 2008 ; Analytical and Bioanalytical Chemistry Volume 391 ; 391 >
-    au < testing ; 2008 ; Analytical and Bioanalytical Chemistry Volume 392 ; 392 >
+    au < ready ; 2008 ; Analytical and Bioanalytical Chemistry Volume 391 ; 391 >
+    au < ready ; 2008 ; Analytical and Bioanalytical Chemistry Volume 392 ; 392 >
     au < testing ; 2009 ; Analytical and Bioanalytical Chemistry Volume 393 ; 393 >
     au < testing ; 2009 ; Analytical and Bioanalytical Chemistry Volume 394 ; 394 >
     au < testing ; 2009 ; Analytical and Bioanalytical Chemistry Volume 395 ; 395 >
@@ -1464,83 +1480,82 @@
 
     param[journal_issn] = 0340-2061
     comment[continued_by] = 1863-2653
-    attr[where] = content4b
 
-    au < testing ; 1891-1892 ; Anatomy and Embryology Volume 1 ; 1 >
-    au < testing ; 1892-1893 ; Anatomy and Embryology Volume 2 ; 2 >
-    au < testing ; 1893-1894 ; Anatomy and Embryology Volume 3 ; 3 >
-    au < testing ; 1894 ; Anatomy and Embryology Volume 4 ; 4 >
-    au < testing ; 1894-1895 ; Anatomy and Embryology Volume 5 ; 5 >
-    au < testing ; 1895-1896 ; Anatomy and Embryology Volume 6 ; 6 >
-    au < testing ; 1896-1897 ; Anatomy and Embryology Volume 7 ; 7 >
-    au < testing ; 1897 ; Anatomy and Embryology Volume 8 ; 8 >
-    au < testing ; 1897 ; Anatomy and Embryology Volume 9 ; 9 >
-    au < testing ; 1898 ; Anatomy and Embryology Volume 10 ; 10 >
-    au < testing ; 1898-1899 ; Anatomy and Embryology Volume 11 ; 11 >
-    au < testing ; 1899 ; Anatomy and Embryology Volume 12 ; 12 >
-    au < testing ; 1899-1900 ; Anatomy and Embryology Volume 13 ; 13 >
-    au < testing ; 1900 ; Anatomy and Embryology Volume 14 ; 14 >
-    au < testing ; 1900 ; Anatomy and Embryology Volume 15 ; 15 >
-    au < testing ; 1901 ; Anatomy and Embryology Volume 16 ; 16 >
-    au < testing ; 1901 ; Anatomy and Embryology Volume 17 ; 17 >
-    au < testing ; 1901-1902 ; Anatomy and Embryology Volume 18 ; 18 >
-    au < testing ; 1902 ; Anatomy and Embryology Volume 19 ; 19 >
-    au < testing ; 1902 ; Anatomy and Embryology Volume 20 ; 20 >
-    au < testing ; 1903 ; Anatomy and Embryology Volume 21 ; 21 >
-    au < testing ; 1903 ; Anatomy and Embryology Volume 22 ; 22 >
-    au < testing ; 1903-1904 ; Anatomy and Embryology Volume 23 ; 23 >
-    au < testing ; 1904 ; Anatomy and Embryology Volume 24 ; 24 >
-    au < testing ; 1904 ; Anatomy and Embryology Volume 25 ; 25 >
-    au < testing ; 1904 ; Anatomy and Embryology Volume 26 ; 26 >
-    au < testing ; 1904-1905 ; Anatomy and Embryology Volume 27 ; 27 >
-    au < testing ; 1905 ; Anatomy and Embryology Volume 28 ; 28 >
-    au < testing ; 1905 ; Anatomy and Embryology Volume 29 ; 29 >
-    au < testing ; 1905-1906 ; Anatomy and Embryology Volume 30 ; 30 >
-    au < testing ; 1906 ; Anatomy and Embryology Volume 31 ; 31 >
-    au < testing ; 1906-1907 ; Anatomy and Embryology Volume 32 ; 32 >
-    au < testing ; 1907 ; Anatomy and Embryology Volume 33 ; 33 >
-    au < testing ; 1907 ; Anatomy and Embryology Volume 34 ; 34 >
-    au < testing ; 1907-1908 ; Anatomy and Embryology Volume 35 ; 35 >
-    au < testing ; 1908 ; Anatomy and Embryology Volume 36 ; 36 >
-    au < testing ; 1908 ; Anatomy and Embryology Volume 37 ; 37 >
-    au < testing ; 1909 ; Anatomy and Embryology Volume 38 ; 38 >
-    au < testing ; 1909 ; Anatomy and Embryology Volume 39 ; 39 >
-    au < testing ; 1909-1910 ; Anatomy and Embryology Volume 40 ; 40 >
-    au < testing ; 1910 ; Anatomy and Embryology Volume 41 ; 41 >
-    au < testing ; 1910-1911 ; Anatomy and Embryology Volume 42 ; 42 >
-    au < testing ; 1911 ; Anatomy and Embryology Volume 43 ; 43 >
-    au < testing ; 1911 ; Anatomy and Embryology Volume 44 ; 44 >
-    au < testing ; 1911-1912 ; Anatomy and Embryology Volume 45 ; 45 >
-    au < testing ; 1912 ; Anatomy and Embryology Volume 46 ; 46 >
-    au < testing ; 1912-1913 ; Anatomy and Embryology Volume 47 ; 47 >
-    au < testing ; 1913 ; Anatomy and Embryology Volume 48 ; 48 >
-    au < testing ; 1913 ; Anatomy and Embryology Volume 49 ; 49 >
-    au < testing ; 1914 ; Anatomy and Embryology Volume 50 ; 50 >
-    au < testing ; 1914 ; Anatomy and Embryology Volume 51 ; 51 >
-    au < testing ; 1915 ; Anatomy and Embryology Volume 52 ; 52 >
-    au < testing ; 1915-1916 ; Anatomy and Embryology Volume 53 ; 53 >
-    au < testing ; 1916-1917 ; Anatomy and Embryology Volume 54 ; 54 >
-    au < testing ; 1917-1918 ; Anatomy and Embryology Volume 55 ; 55 >
-    au < testing ; 1918-1919 ; Anatomy and Embryology Volume 56 ; 56 >
-    au < testing ; 1919 ; Anatomy and Embryology Volume 57 ; 57 >
-    au < testing ; 1920 ; Anatomy and Embryology Volume 58 ; 58 >
-    au < testing ; 1920-1921 ; Anatomy and Embryology Volume 59 ; 59 >
-    au < testing ; 1921 ; Anatomy and Embryology Volume 60 ; 60 >
-    au < testing ; 1921 ; Anatomy and Embryology Volume 61 ; 61 >
-    au < testing ; 1921 ; Anatomy and Embryology Volume 62 ; 62 >
-    au < testing ; 1922 ; Anatomy and Embryology Volume 63 ; 63 >
-    au < testing ; 1922 ; Anatomy and Embryology Volume 64 ; 64 >
-    au < testing ; 1922 ; Anatomy and Embryology Volume 65 ; 65 >
-    au < testing ; 1922 ; Anatomy and Embryology Volume 66 ; 66 >
-    au < testing ; 1923 ; Anatomy and Embryology Volume 67 ; 67 >
-    au < testing ; 1923 ; Anatomy and Embryology Volume 68 ; 68 >
-    au < testing ; 1923 ; Anatomy and Embryology Volume 69 ; 69 >
-    au < testing ; 1923-1924 ; Anatomy and Embryology Volume 70 ; 70 >
-    au < testing ; 1924 ; Anatomy and Embryology Volume 71 ; 71 >
-    au < testing ; 1924 ; Anatomy and Embryology Volume 72 ; 72 >
-    au < testing ; 1924 ; Anatomy and Embryology Volume 73 ; 73 >
-    au < testing ; 1924 ; Anatomy and Embryology Volume 74 ; 74 >
-    au < testing ; 1924-1925 ; Anatomy and Embryology Volume 75 ; 75 >
+    au < ready ; 1891-1892 ; Anatomy and Embryology Volume 1 ; 1 >
+    au < ready ; 1892-1893 ; Anatomy and Embryology Volume 2 ; 2 >
+    au < ready ; 1893-1894 ; Anatomy and Embryology Volume 3 ; 3 >
+    au < ready ; 1894 ; Anatomy and Embryology Volume 4 ; 4 >
+    au < ready ; 1894-1895 ; Anatomy and Embryology Volume 5 ; 5 >
+    au < ready ; 1895-1896 ; Anatomy and Embryology Volume 6 ; 6 >
+    au < ready ; 1896-1897 ; Anatomy and Embryology Volume 7 ; 7 >
+    au < ready ; 1897 ; Anatomy and Embryology Volume 8 ; 8 >
+    au < ready ; 1897 ; Anatomy and Embryology Volume 9 ; 9 >
+    au < ready ; 1898 ; Anatomy and Embryology Volume 10 ; 10 >
+    au < ready ; 1898-1899 ; Anatomy and Embryology Volume 11 ; 11 >
+    au < ready ; 1899 ; Anatomy and Embryology Volume 12 ; 12 >
+    au < ready ; 1899-1900 ; Anatomy and Embryology Volume 13 ; 13 >
+    au < ready ; 1900 ; Anatomy and Embryology Volume 14 ; 14 >
+    au < ready ; 1900 ; Anatomy and Embryology Volume 15 ; 15 >
+    au < ready ; 1901 ; Anatomy and Embryology Volume 16 ; 16 >
+    au < ready ; 1901 ; Anatomy and Embryology Volume 17 ; 17 >
+    au < ready ; 1901-1902 ; Anatomy and Embryology Volume 18 ; 18 >
+    au < ready ; 1902 ; Anatomy and Embryology Volume 19 ; 19 >
+    au < ready ; 1902 ; Anatomy and Embryology Volume 20 ; 20 >
+    au < ready ; 1903 ; Anatomy and Embryology Volume 21 ; 21 >
+    au < ready ; 1903 ; Anatomy and Embryology Volume 22 ; 22 >
+    au < ready ; 1903-1904 ; Anatomy and Embryology Volume 23 ; 23 >
+    au < ready ; 1904 ; Anatomy and Embryology Volume 24 ; 24 >
+    au < ready ; 1904 ; Anatomy and Embryology Volume 25 ; 25 >
+    au < ready ; 1904 ; Anatomy and Embryology Volume 26 ; 26 >
+    au < ready ; 1904-1905 ; Anatomy and Embryology Volume 27 ; 27 >
+    au < ready ; 1905 ; Anatomy and Embryology Volume 28 ; 28 >
+    au < ready ; 1905 ; Anatomy and Embryology Volume 29 ; 29 >
+    au < ready ; 1905-1906 ; Anatomy and Embryology Volume 30 ; 30 >
+    au < ready ; 1906 ; Anatomy and Embryology Volume 31 ; 31 >
+    au < ready ; 1906-1907 ; Anatomy and Embryology Volume 32 ; 32 >
+    au < ready ; 1907 ; Anatomy and Embryology Volume 33 ; 33 >
+    au < ready ; 1907 ; Anatomy and Embryology Volume 34 ; 34 >
+    au < ready ; 1907-1908 ; Anatomy and Embryology Volume 35 ; 35 >
+    au < ready ; 1908 ; Anatomy and Embryology Volume 36 ; 36 >
+    au < ready ; 1908 ; Anatomy and Embryology Volume 37 ; 37 >
+    au < ready ; 1909 ; Anatomy and Embryology Volume 38 ; 38 >
+    au < ready ; 1909 ; Anatomy and Embryology Volume 39 ; 39 >
+    au < ready ; 1909-1910 ; Anatomy and Embryology Volume 40 ; 40 >
+    au < ready ; 1910 ; Anatomy and Embryology Volume 41 ; 41 >
+    au < ready ; 1910-1911 ; Anatomy and Embryology Volume 42 ; 42 >
+    au < ready ; 1911 ; Anatomy and Embryology Volume 43 ; 43 >
+    au < ready ; 1911 ; Anatomy and Embryology Volume 44 ; 44 >
+    au < ready ; 1911-1912 ; Anatomy and Embryology Volume 45 ; 45 >
+    au < ready ; 1912 ; Anatomy and Embryology Volume 46 ; 46 >
+    au < ready ; 1912-1913 ; Anatomy and Embryology Volume 47 ; 47 >
+    au < ready ; 1913 ; Anatomy and Embryology Volume 48 ; 48 >
+    au < ready ; 1913 ; Anatomy and Embryology Volume 49 ; 49 >
+    au < ready ; 1914 ; Anatomy and Embryology Volume 50 ; 50 >
+    au < ready ; 1914 ; Anatomy and Embryology Volume 51 ; 51 >
+    au < ready ; 1915 ; Anatomy and Embryology Volume 52 ; 52 >
+    au < ready ; 1915-1916 ; Anatomy and Embryology Volume 53 ; 53 >
+    au < ready ; 1916-1917 ; Anatomy and Embryology Volume 54 ; 54 >
+    au < ready ; 1917-1918 ; Anatomy and Embryology Volume 55 ; 55 >
+    au < ready ; 1918-1919 ; Anatomy and Embryology Volume 56 ; 56 >
+    au < ready ; 1919 ; Anatomy and Embryology Volume 57 ; 57 >
+    au < ready ; 1920 ; Anatomy and Embryology Volume 58 ; 58 >
+    au < ready ; 1920-1921 ; Anatomy and Embryology Volume 59 ; 59 >
+    au < ready ; 1921 ; Anatomy and Embryology Volume 60 ; 60 >
+    au < ready ; 1921 ; Anatomy and Embryology Volume 61 ; 61 >
+    au < ready ; 1921 ; Anatomy and Embryology Volume 62 ; 62 >
+    au < ready ; 1922 ; Anatomy and Embryology Volume 63 ; 63 >
+    au < ready ; 1922 ; Anatomy and Embryology Volume 64 ; 64 >
+    au < ready ; 1922 ; Anatomy and Embryology Volume 65 ; 65 >
+    au < ready ; 1922 ; Anatomy and Embryology Volume 66 ; 66 >
+    au < ready ; 1923 ; Anatomy and Embryology Volume 67 ; 67 >
+    au < ready ; 1923 ; Anatomy and Embryology Volume 68 ; 68 >
+    au < ready ; 1923 ; Anatomy and Embryology Volume 69 ; 69 >
+    au < ready ; 1923-1924 ; Anatomy and Embryology Volume 70 ; 70 >
+    au < ready ; 1924 ; Anatomy and Embryology Volume 71 ; 71 >
+    au < ready ; 1924 ; Anatomy and Embryology Volume 72 ; 72 >
+    au < ready ; 1924 ; Anatomy and Embryology Volume 73 ; 73 >
+    au < ready ; 1924 ; Anatomy and Embryology Volume 74 ; 74 >
+    au < ready ; 1924-1925 ; Anatomy and Embryology Volume 75 ; 75 >
     au < ready ; 1925 ; Anatomy and Embryology Volume 76 ; 76 >
     au < ready ; 1925 ; Anatomy and Embryology Volume 77 ; 77 >
     au < ready ; 1926 ; Anatomy and Embryology Volume 78 ; 78 >
@@ -2968,48 +2983,47 @@
     >
 
     param[journal_issn] = 0004-0002
-    attr[where] = content5a
 
-    au < testing ; 1971 ; Archives of Sexual Behavior Volume 1 ; 1 >
-    au < testing ; 1972-1973 ; Archives of Sexual Behavior Volume 2 ; 2 >
-    au < testing ; 1974 ; Archives of Sexual Behavior Volume 3 ; 3 >
-    au < testing ; 1975 ; Archives of Sexual Behavior Volume 4 ; 4 >
-    au < testing ; 1976 ; Archives of Sexual Behavior Volume 5 ; 5 >
-    au < testing ; 1977 ; Archives of Sexual Behavior Volume 6 ; 6 >
-    au < testing ; 1978 ; Archives of Sexual Behavior Volume 7 ; 7 >
-    au < testing ; 1979 ; Archives of Sexual Behavior Volume 8 ; 8 >
-    au < testing ; 1980 ; Archives of Sexual Behavior Volume 9 ; 9 >
-    au < testing ; 1981 ; Archives of Sexual Behavior Volume 10 ; 10 >
-    au < testing ; 1982 ; Archives of Sexual Behavior Volume 11 ; 11 >
-    au < testing ; 1983 ; Archives of Sexual Behavior Volume 12 ; 12 >
-    au < testing ; 1984 ; Archives of Sexual Behavior Volume 13 ; 13 >
-    au < testing ; 1985 ; Archives of Sexual Behavior Volume 14 ; 14 >
-    au < testing ; 1986 ; Archives of Sexual Behavior Volume 15 ; 15 >
-    au < testing ; 1987 ; Archives of Sexual Behavior Volume 16 ; 16 >
-    au < testing ; 1988 ; Archives of Sexual Behavior Volume 17 ; 17 >
-    au < testing ; 1989 ; Archives of Sexual Behavior Volume 18 ; 18 >
-    au < testing ; 1990 ; Archives of Sexual Behavior Volume 19 ; 19 >
-    au < testing ; 1991 ; Archives of Sexual Behavior Volume 20 ; 20 >
-    au < testing ; 1992 ; Archives of Sexual Behavior Volume 21 ; 21 >
-    au < testing ; 1993 ; Archives of Sexual Behavior Volume 22 ; 22 >
-    au < testing ; 1994 ; Archives of Sexual Behavior Volume 23 ; 23 >
-    au < testing ; 1995 ; Archives of Sexual Behavior Volume 24 ; 24 >
-    au < testing ; 1996 ; Archives of Sexual Behavior Volume 25 ; 25 >
-    au < testing ; 1997 ; Archives of Sexual Behavior Volume 26 ; 26 >
-    au < testing ; 1998 ; Archives of Sexual Behavior Volume 27 ; 27 >
-    au < testing ; 1999 ; Archives of Sexual Behavior Volume 28 ; 28 >
-    au < testing ; 2000 ; Archives of Sexual Behavior Volume 29 ; 29 >
-    au < testing ; 2001 ; Archives of Sexual Behavior Volume 30 ; 30 >
-    au < testing ; 2002 ; Archives of Sexual Behavior Volume 31 ; 31 >
-    au < testing ; 2003 ; Archives of Sexual Behavior Volume 32 ; 32 >
-    au < testing ; 2004 ; Archives of Sexual Behavior Volume 33 ; 33 >
-    au < testing ; 2005 ; Archives of Sexual Behavior Volume 34 ; 34 >
-    au < testing ; 2006 ; Archives of Sexual Behavior Volume 35 ; 35 >
-    au < testing ; 2007 ; Archives of Sexual Behavior Volume 36 ; 36 >
-    au < testing ; 2008 ; Archives of Sexual Behavior Volume 37 ; 37 >
-    au < testing ; 2009 ; Archives of Sexual Behavior Volume 38 ; 38 >
-    au < testing ; 2010 ; Archives of Sexual Behavior Volume 39 ; 39 >
-    au < testing ; 2011 ; Archives of Sexual Behavior Volume 40 ; 40 >
+    au < ready ; 1971 ; Archives of Sexual Behavior Volume 1 ; 1 >
+    au < ready ; 1972-1973 ; Archives of Sexual Behavior Volume 2 ; 2 >
+    au < ready ; 1974 ; Archives of Sexual Behavior Volume 3 ; 3 >
+    au < ready ; 1975 ; Archives of Sexual Behavior Volume 4 ; 4 >
+    au < ready ; 1976 ; Archives of Sexual Behavior Volume 5 ; 5 >
+    au < ready ; 1977 ; Archives of Sexual Behavior Volume 6 ; 6 >
+    au < ready ; 1978 ; Archives of Sexual Behavior Volume 7 ; 7 >
+    au < ready ; 1979 ; Archives of Sexual Behavior Volume 8 ; 8 >
+    au < ready ; 1980 ; Archives of Sexual Behavior Volume 9 ; 9 >
+    au < ready ; 1981 ; Archives of Sexual Behavior Volume 10 ; 10 >
+    au < ready ; 1982 ; Archives of Sexual Behavior Volume 11 ; 11 >
+    au < ready ; 1983 ; Archives of Sexual Behavior Volume 12 ; 12 >
+    au < ready ; 1984 ; Archives of Sexual Behavior Volume 13 ; 13 >
+    au < ready ; 1985 ; Archives of Sexual Behavior Volume 14 ; 14 >
+    au < ready ; 1986 ; Archives of Sexual Behavior Volume 15 ; 15 >
+    au < ready ; 1987 ; Archives of Sexual Behavior Volume 16 ; 16 >
+    au < ready ; 1988 ; Archives of Sexual Behavior Volume 17 ; 17 >
+    au < ready ; 1989 ; Archives of Sexual Behavior Volume 18 ; 18 >
+    au < ready ; 1990 ; Archives of Sexual Behavior Volume 19 ; 19 >
+    au < ready ; 1991 ; Archives of Sexual Behavior Volume 20 ; 20 >
+    au < ready ; 1992 ; Archives of Sexual Behavior Volume 21 ; 21 >
+    au < ready ; 1993 ; Archives of Sexual Behavior Volume 22 ; 22 >
+    au < ready ; 1994 ; Archives of Sexual Behavior Volume 23 ; 23 >
+    au < ready ; 1995 ; Archives of Sexual Behavior Volume 24 ; 24 >
+    au < ready ; 1996 ; Archives of Sexual Behavior Volume 25 ; 25 >
+    au < ready ; 1997 ; Archives of Sexual Behavior Volume 26 ; 26 >
+    au < ready ; 1998 ; Archives of Sexual Behavior Volume 27 ; 27 >
+    au < ready ; 1999 ; Archives of Sexual Behavior Volume 28 ; 28 >
+    au < ready ; 2000 ; Archives of Sexual Behavior Volume 29 ; 29 >
+    au < ready ; 2001 ; Archives of Sexual Behavior Volume 30 ; 30 >
+    au < ready ; 2002 ; Archives of Sexual Behavior Volume 31 ; 31 >
+    au < ready ; 2003 ; Archives of Sexual Behavior Volume 32 ; 32 >
+    au < ready ; 2004 ; Archives of Sexual Behavior Volume 33 ; 33 >
+    au < ready ; 2005 ; Archives of Sexual Behavior Volume 34 ; 34 >
+    au < ready ; 2006 ; Archives of Sexual Behavior Volume 35 ; 35 >
+    au < ready ; 2007 ; Archives of Sexual Behavior Volume 36 ; 36 >
+    au < ready ; 2008 ; Archives of Sexual Behavior Volume 37 ; 37 >
+    au < ready ; 2009 ; Archives of Sexual Behavior Volume 38 ; 38 >
+    au < ready ; 2010 ; Archives of Sexual Behavior Volume 39 ; 39 >
+    au < ready ; 2011 ; Archives of Sexual Behavior Volume 40 ; 40 >
 
   }
 
@@ -3047,11 +3061,97 @@
       name = Archives of Virology ;
       issn = 0304-8608 ;
       eissn = 1432-8798 ;
-      issnl = 0304-8608 ;
-      placeholder = True
+      issnl = 0304-8608
     >
 
     param[journal_issn] = 0304-8608
+    attr[where] = content4b
+
+    au < testing ; 1930 ; Archives of Toxicology Volume 1 ; 1 >
+    au < testing ; 1931 ; Archives of Toxicology Volume 2 ; 2 >
+    au < testing ; 1932 ; Archives of Toxicology Volume 3 ; 3 >
+    au < testing ; 1933 ; Archives of Toxicology Volume 4 ; 4 >
+    au < testing ; 1934 ; Archives of Toxicology Volume 5 ; 5 >
+    au < testing ; 1935 ; Archives of Toxicology Volume 6 ; 6 >
+    au < testing ; 1936 ; Archives of Toxicology Volume 7 ; 7 >
+    au < testing ; 1937 ; Archives of Toxicology Volume 8 ; 8 >
+    au < testing ; 1938 ; Archives of Toxicology Volume 9 ; 9 >
+    au < testing ; 1939 ; Archives of Toxicology Volume 10 ; 10 >
+    au < testing ; 1940 ; Archives of Toxicology Volume 11 ; 11 >
+    au < testing ; 1943 ; Archives of Toxicology Volume 12 ; 12 >
+    au < testing ; 1944 ; Archives of Toxicology Volume 13 ; 13 >
+    au < testing ; 1952-1954 ; Archives of Toxicology Volume 14 ; 14 >
+    au < testing ; 1954-1955 ; Archives of Toxicology Volume 15 ; 15 >
+    au < testing ; 1956-1957 ; Archives of Toxicology Volume 16 ; 16 >
+    au < testing ; 1958-1959 ; Archives of Toxicology Volume 17 ; 17 >
+    au < testing ; 1959-1960 ; Archives of Toxicology Volume 18 ; 18 >
+    au < testing ; 1961-1962 ; Archives of Toxicology Volume 19 ; 19 >
+    au < testing ; 1963-1965 ; Archives of Toxicology Volume 20 ; 20 >
+    au < testing ; 1965-1966 ; Archives of Toxicology Volume 21 ; 21 >
+    au < testing ; 1966-1967 ; Archives of Toxicology Volume 22 ; 22 >
+    au < testing ; 1967-1968 ; Archives of Toxicology Volume 23 ; 23 >
+    au < testing ; 1968-1969 ; Archives of Toxicology Volume 24 ; 24 >
+    au < testing ; 1969 ; Archives of Toxicology Volume 25 ; 25 >
+    au < testing ; 1970 ; Archives of Toxicology Volume 26 ; 26 >
+    au < testing ; 1970-1971 ; Archives of Toxicology Volume 27 ; 27 >
+    au < testing ; 1972 ; Archives of Toxicology Volume 28 ; 28 >
+    au < testing ; 1972 ; Archives of Toxicology Volume 29 ; 29 >
+    au < testing ; 1972-1973 ; Archives of Toxicology Volume 30 ; 30 >
+    au < testing ; 1973-1974 ; Archives of Toxicology Volume 31 ; 31 >
+    au < testing ; 1974 ; Archives of Toxicology Volume 32 ; 32 >
+    au < testing ; 1974-1975 ; Archives of Toxicology Volume 33 ; 33 >
+    au < testing ; 1975 ; Archives of Toxicology Volume 34 ; 34 >
+    au < testing ; 1976 ; Archives of Toxicology Volume 35 ; 35 >
+    au < testing ; 1976 ; Archives of Toxicology Volume 36 ; 36 >
+    au < testing ; 1976-1977 ; Archives of Toxicology Volume 37 ; 37 >
+    au < testing ; 1977 ; Archives of Toxicology Volume 38 ; 38 >
+    au < testing ; 1977-1978 ; Archives of Toxicology Volume 39 ; 39 >
+    au < testing ; 1978 ; Archives of Toxicology Volume 40 ; 40 >
+    au < testing ; 1978-1979 ; Archives of Toxicology Volume 41 ; 41 >
+    au < testing ; 1978-1979 ; Archives of Toxicology Volume 42 ; 42 >
+    au < testing ; 1979-1980 ; Archives of Toxicology Volume 43 ; 43 >
+    au < testing ; 1980 ; Archives of Toxicology Volume 44 ; 44 >
+    au < testing ; 1980 ; Archives of Toxicology Volume 45 ; 45 >
+    au < testing ; 1980 ; Archives of Toxicology Volume 46 ; 46 >
+    au < testing ; 1981 ; Archives of Toxicology Volume 47 ; 47 >
+    au < testing ; 1981 ; Archives of Toxicology Volume 48 ; 48 >
+    au < testing ; 1981-1982 ; Archives of Toxicology Volume 49 ; 49 >
+    au < testing ; 1982 ; Archives of Toxicology Volume 50 ; 50 >
+    au < testing ; 1982 ; Archives of Toxicology Volume 51 ; 51 >
+    au < testing ; 1983 ; Archives of Toxicology Volume 52 ; 52 >
+    au < testing ; 1983 ; Archives of Toxicology Volume 53 ; 53 >
+    au < testing ; 1983 ; Archives of Toxicology Volume 54 ; 54 >
+    au < testing ; 1984 ; Archives of Toxicology Volume 55 ; 55 >
+    au < testing ; 1984-1985 ; Archives of Toxicology Volume 56 ; 56 >
+    au < testing ; 1985 ; Archives of Toxicology Volume 57 ; 57 >
+    au < testing ; 1985-1986 ; Archives of Toxicology Volume 58 ; 58 >
+    au < testing ; 1986-1987 ; Archives of Toxicology Volume 59 ; 59 >
+    au < testing ; 1987 ; Archives of Toxicology Volume 60 ; 60 >
+    au < testing ; 1987-1988 ; Archives of Toxicology Volume 61 ; 61 >
+    au < testing ; 1988 ; Archives of Toxicology Volume 62 ; 62 >
+    au < testing ; 1989 ; Archives of Toxicology Volume 63 ; 63 >
+    au < testing ; 1990 ; Archives of Toxicology Volume 64 ; 64 >
+    au < testing ; 1991 ; Archives of Toxicology Volume 65 ; 65 >
+    au < testing ; 1992 ; Archives of Toxicology Volume 66 ; 66 >
+    au < testing ; 1993 ; Archives of Toxicology Volume 67 ; 67 >
+    au < testing ; 1994 ; Archives of Toxicology Volume 68 ; 68 >
+    au < testing ; 1994-1995 ; Archives of Toxicology Volume 69 ; 69 >
+    au < testing ; 1995-1996 ; Archives of Toxicology Volume 70 ; 70 >
+    au < testing ; 1996-1997 ; Archives of Toxicology Volume 71 ; 71 >
+    au < testing ; 1997 ; Archives of Toxicology Volume 72 ; 72 >
+    au < testing ; 1999 ; Archives of Toxicology Volume 73 ; 73 >
+    au < testing ; 2000 ; Archives of Toxicology Volume 74 ; 74 >
+    au < testing ; 2001 ; Archives of Toxicology Volume 75 ; 75 >
+    au < testing ; 2002 ; Archives of Toxicology Volume 76 ; 76 >
+    au < testing ; 2003 ; Archives of Toxicology Volume 77 ; 77 >
+    au < testing ; 2004 ; Archives of Toxicology Volume 78 ; 78 >
+    au < testing ; 2005 ; Archives of Toxicology Volume 79 ; 79 >
+    au < testing ; 2006 ; Archives of Toxicology Volume 80 ; 80 >
+    au < testing ; 2007 ; Archives of Toxicology Volume 81 ; 81 >
+    au < testing ; 2008 ; Archives of Toxicology Volume 82 ; 82 >
+    au < testing ; 2009 ; Archives of Toxicology Volume 83 ; 83 >
+    au < testing ; 2010 ; Archives of Toxicology Volume 84 ; 84 >
+    au < testing ; 2011 ; Archives of Toxicology Volume 85 ; 85 >
 
   }
 
@@ -10627,31 +10727,30 @@
     >
 
     param[journal_issn] = 1040-726X
-    attr[where] = content1b
 
-    au < testing ; 1989 ; Educational Psychology Review Volume 1 ; 1 >
-    au < testing ; 1990 ; Educational Psychology Review Volume 2 ; 2 >
-    au < testing ; 1991 ; Educational Psychology Review Volume 3 ; 3 >
-    au < testing ; 1992 ; Educational Psychology Review Volume 4 ; 4 >
-    au < testing ; 1993 ; Educational Psychology Review Volume 5 ; 5 >
-    au < testing ; 1994 ; Educational Psychology Review Volume 6 ; 6 >
-    au < testing ; 1995 ; Educational Psychology Review Volume 7 ; 7 >
-    au < testing ; 1996 ; Educational Psychology Review Volume 8 ; 8 >
-    au < testing ; 1997 ; Educational Psychology Review Volume 9 ; 9 >
-    au < testing ; 1998 ; Educational Psychology Review Volume 10 ; 10 >
-    au < testing ; 1999 ; Educational Psychology Review Volume 11 ; 11 >
-    au < testing ; 2000 ; Educational Psychology Review Volume 12 ; 12 >
-    au < testing ; 2001 ; Educational Psychology Review Volume 13 ; 13 >
-    au < testing ; 2002 ; Educational Psychology Review Volume 14 ; 14 >
-    au < testing ; 2003 ; Educational Psychology Review Volume 15 ; 15 >
-    au < testing ; 2004 ; Educational Psychology Review Volume 16 ; 16 >
-    au < testing ; 2005 ; Educational Psychology Review Volume 17 ; 17 >
-    au < testing ; 2006 ; Educational Psychology Review Volume 18 ; 18 >
-    au < testing ; 2007 ; Educational Psychology Review Volume 19 ; 19 >
-    au < testing ; 2008 ; Educational Psychology Review Volume 20 ; 20 >
-    au < testing ; 2009 ; Educational Psychology Review Volume 21 ; 21 >
-    au < testing ; 2010 ; Educational Psychology Review Volume 22 ; 22 >
-    au < testing ; 2011 ; Educational Psychology Review Volume 23 ; 23 >
+    au < ready ; 1989 ; Educational Psychology Review Volume 1 ; 1 >
+    au < ready ; 1990 ; Educational Psychology Review Volume 2 ; 2 >
+    au < ready ; 1991 ; Educational Psychology Review Volume 3 ; 3 >
+    au < ready ; 1992 ; Educational Psychology Review Volume 4 ; 4 >
+    au < ready ; 1993 ; Educational Psychology Review Volume 5 ; 5 >
+    au < ready ; 1994 ; Educational Psychology Review Volume 6 ; 6 >
+    au < ready ; 1995 ; Educational Psychology Review Volume 7 ; 7 >
+    au < ready ; 1996 ; Educational Psychology Review Volume 8 ; 8 >
+    au < ready ; 1997 ; Educational Psychology Review Volume 9 ; 9 >
+    au < ready ; 1998 ; Educational Psychology Review Volume 10 ; 10 >
+    au < ready ; 1999 ; Educational Psychology Review Volume 11 ; 11 >
+    au < ready ; 2000 ; Educational Psychology Review Volume 12 ; 12 >
+    au < ready ; 2001 ; Educational Psychology Review Volume 13 ; 13 >
+    au < ready ; 2002 ; Educational Psychology Review Volume 14 ; 14 >
+    au < ready ; 2003 ; Educational Psychology Review Volume 15 ; 15 >
+    au < ready ; 2004 ; Educational Psychology Review Volume 16 ; 16 >
+    au < ready ; 2005 ; Educational Psychology Review Volume 17 ; 17 >
+    au < ready ; 2006 ; Educational Psychology Review Volume 18 ; 18 >
+    au < ready ; 2007 ; Educational Psychology Review Volume 19 ; 19 >
+    au < ready ; 2008 ; Educational Psychology Review Volume 20 ; 20 >
+    au < ready ; 2009 ; Educational Psychology Review Volume 21 ; 21 >
+    au < ready ; 2010 ; Educational Psychology Review Volume 22 ; 22 >
+    au < ready ; 2011 ; Educational Psychology Review Volume 23 ; 23 >
 
   }
 
@@ -13084,7 +13183,7 @@
 
     comment[continued_by] = 1618-2642
     param[journal_issn] = 0937-0633
-    attr[where] = sul-lockss30a
+    attr[where] = content4a
 
     au < manifest ; 1862 ; Zeitschrift für Analytische Chemie Volume 1 ; 1 >
     au < manifest ; 1863 ; Zeitschrift für Analytische Chemie Volume 2 ; 2 >
@@ -13386,77 +13485,77 @@
     au < manifest ; 1979 ; Fresenius Zeitschrift für Analytische Chemie Volume 298 ; 298 >
     au < manifest ; 1979 ; Fresenius Zeitschrift für Analytische Chemie Volume 299 ; 299 >
     au < manifest ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 300 ; 300 >
-    au < manifest ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 301 ; 301 >
-    au < manifest ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 302 ; 302 >
-    au < manifest ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 303 ; 303 >
-    au < manifest ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 304 ; 304 >
-    au < manifest ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 305 ; 305 >
-    au < manifest ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 306 ; 306 >
-    au < manifest ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 307 ; 307 >
-    au < manifest ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 308 ; 308 >
-    au < manifest ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 309 ; 309 >
-    au < manifest ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 310 ; 310 >
-    au < manifest ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 311 ; 311 >
-    au < manifest ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 312 ; 312 >
-    au < manifest ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 313 ; 313 >
-    au < manifest ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 314 ; 314 >
-    au < manifest ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 315 ; 315 >
-    au < manifest ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 316 ; 316 >
-    au < manifest ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 317 ; 317 >
-    au < manifest ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 318 ; 318 >
-    au < manifest ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 319 ; 319 >
-    au < manifest ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 320 ; 320 >
-    au < manifest ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 321 ; 321 >
-    au < manifest ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 322 ; 322 >
-    au < manifest ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 323 ; 323 >
-    au < manifest ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 324 ; 324 >
-    au < manifest ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 325 ; 325 >
-    au < manifest ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 326 ; 326 >
-    au < manifest ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 327 ; 327 >
-    au < manifest ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 328 ; 328 >
-    au < manifest ; 1987-1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 329 ; 329 >
-    au < manifest ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 330 ; 330 >
-    au < manifest ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 331 ; 331 >
-    au < manifest ; 1988-1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 332 ; 332 >
-    au < manifest ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 333 ; 333 >
-    au < manifest ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 334 ; 334 >
-    au < manifest ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 335 ; 335 >
-    au < manifest ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 336 ; 336 >
-    au < manifest ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 337 ; 337 >
-    au < manifest ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 338 ; 338 >
-    au < manifest ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 339 ; 339 >
-    au < manifest ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 340 ; 340 >
-    au < manifest ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 341 ; 341 >
-    au < manifest ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 342 ; 342 >
-    au < manifest ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 343 ; 343 >
-    au < manifest ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 344 ; 344 >
-    au < manifest ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 345 ; 345 >
-    au < manifest ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 346 ; 346 >
-    au < manifest ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 347 ; 347 >
-    au < manifest ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 348 ; 348 >
-    au < manifest ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 349 ; 349 >
-    au < manifest ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 350 ; 350 >
-    au < manifest ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 351 ; 351 >
-    au < manifest ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 352 ; 352 >
-    au < manifest ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 353 ; 353 >
-    au < manifest ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 354 ; 354 >
-    au < manifest ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 355 ; 355 >
-    au < manifest ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 356 ; 356 >
-    au < manifest ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 357 ; 357 >
-    au < manifest ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 358 ; 358 >
-    au < manifest ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 359 ; 359 >
-    au < manifest ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 360 ; 360 >
-    au < manifest ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 361 ; 361 >
-    au < manifest ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 362 ; 362 >
-    au < manifest ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 363 ; 363 >
-    au < manifest ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 364 ; 364 >
-    au < manifest ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 365 ; 365 >
-    au < manifest ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 366 ; 366 >
-    au < manifest ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 367 ; 367 >
-    au < manifest ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 368 ; 368 >
-    au < manifest ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 369 ; 369 >
-    au < manifest ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 370 ; 370 >
-    au < manifest ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 371 ; 371 >
+    au < testing ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 301 ; 301 >
+    au < testing ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 302 ; 302 >
+    au < testing ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 303 ; 303 >
+    au < testing ; 1980 ; Fresenius Zeitschrift für Analytische Chemie Volume 304 ; 304 >
+    au < testing ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 305 ; 305 >
+    au < testing ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 306 ; 306 >
+    au < testing ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 307 ; 307 >
+    au < testing ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 308 ; 308 >
+    au < testing ; 1981 ; Fresenius Zeitschrift für Analytische Chemie Volume 309 ; 309 >
+    au < testing ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 310 ; 310 >
+    au < testing ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 311 ; 311 >
+    au < testing ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 312 ; 312 >
+    au < testing ; 1982 ; Fresenius Zeitschrift für Analytische Chemie Volume 313 ; 313 >
+    au < testing ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 314 ; 314 >
+    au < testing ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 315 ; 315 >
+    au < testing ; 1983 ; Fresenius Zeitschrift für Analytische Chemie Volume 316 ; 316 >
+    au < testing ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 317 ; 317 >
+    au < testing ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 318 ; 318 >
+    au < testing ; 1984 ; Fresenius Zeitschrift für Analytische Chemie Volume 319 ; 319 >
+    au < testing ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 320 ; 320 >
+    au < testing ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 321 ; 321 >
+    au < testing ; 1985 ; Fresenius Zeitschrift für Analytische Chemie Volume 322 ; 322 >
+    au < testing ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 323 ; 323 >
+    au < testing ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 324 ; 324 >
+    au < testing ; 1986 ; Fresenius Zeitschrift für Analytische Chemie Volume 325 ; 325 >
+    au < testing ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 326 ; 326 >
+    au < testing ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 327 ; 327 >
+    au < testing ; 1987 ; Fresenius Zeitschrift für Analytische Chemie Volume 328 ; 328 >
+    au < testing ; 1987-1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 329 ; 329 >
+    au < testing ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 330 ; 330 >
+    au < testing ; 1988 ; Fresenius Zeitschrift für Analytische Chemie Volume 331 ; 331 >
+    au < testing ; 1988-1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 332 ; 332 >
+    au < testing ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 333 ; 333 >
+    au < testing ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 334 ; 334 >
+    au < testing ; 1989 ; Fresenius Zeitschrift für Analytische Chemie Volume 335 ; 335 >
+    au < testing ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 336 ; 336 >
+    au < testing ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 337 ; 337 >
+    au < testing ; 1990 ; Fresenius' Journal of Analytical Chemistry Volume 338 ; 338 >
+    au < testing ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 339 ; 339 >
+    au < testing ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 340 ; 340 >
+    au < testing ; 1991 ; Fresenius' Journal of Analytical Chemistry Volume 341 ; 341 >
+    au < testing ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 342 ; 342 >
+    au < testing ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 343 ; 343 >
+    au < testing ; 1992 ; Fresenius' Journal of Analytical Chemistry Volume 344 ; 344 >
+    au < testing ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 345 ; 345 >
+    au < testing ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 346 ; 346 >
+    au < testing ; 1993 ; Fresenius' Journal of Analytical Chemistry Volume 347 ; 347 >
+    au < testing ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 348 ; 348 >
+    au < testing ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 349 ; 349 >
+    au < testing ; 1994 ; Fresenius' Journal of Analytical Chemistry Volume 350 ; 350 >
+    au < testing ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 351 ; 351 >
+    au < testing ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 352 ; 352 >
+    au < testing ; 1995 ; Fresenius' Journal of Analytical Chemistry Volume 353 ; 353 >
+    au < testing ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 354 ; 354 >
+    au < testing ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 355 ; 355 >
+    au < testing ; 1996 ; Fresenius' Journal of Analytical Chemistry Volume 356 ; 356 >
+    au < testing ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 357 ; 357 >
+    au < testing ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 358 ; 358 >
+    au < testing ; 1997 ; Fresenius' Journal of Analytical Chemistry Volume 359 ; 359 >
+    au < testing ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 360 ; 360 >
+    au < testing ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 361 ; 361 >
+    au < testing ; 1998 ; Fresenius' Journal of Analytical Chemistry Volume 362 ; 362 >
+    au < testing ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 363 ; 363 >
+    au < testing ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 364 ; 364 >
+    au < testing ; 1999 ; Fresenius' Journal of Analytical Chemistry Volume 365 ; 365 >
+    au < testing ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 366 ; 366 >
+    au < testing ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 367 ; 367 >
+    au < testing ; 2000 ; Fresenius' Journal of Analytical Chemistry Volume 368 ; 368 >
+    au < testing ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 369 ; 369 >
+    au < testing ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 370 ; 370 >
+    au < testing ; 2001 ; Fresenius' Journal of Analytical Chemistry Volume 371 ; 371 >
 
   }
 
@@ -19064,11 +19163,53 @@
       name = Journal of Autism and Developmental Disorders ;
       issn = 0162-3257 ;
       eissn = 1573-3432 ;
-      issnl = 0162-3257 ;
-      placeholder = True
+      issnl = 0162-3257
     >
 
     param[journal_issn] = 0162-3257
+    attr[where] = content5a
+
+    au < testing ; 1971 ; Journal of Autism and Developmental Disorders Volume 1 ; 1 >
+    au < testing ; 1972 ; Journal of Autism and Developmental Disorders Volume 2 ; 2 >
+    au < testing ; 1973 ; Journal of Autism and Developmental Disorders Volume 3 ; 3 >
+    au < testing ; 1974 ; Journal of Autism and Developmental Disorders Volume 4 ; 4 >
+    au < testing ; 1975 ; Journal of Autism and Developmental Disorders Volume 5 ; 5 >
+    au < testing ; 1976 ; Journal of Autism and Developmental Disorders Volume 6 ; 6 >
+    au < testing ; 1977 ; Journal of Autism and Developmental Disorders Volume 7 ; 7 >
+    au < testing ; 1978 ; Journal of Autism and Developmental Disorders Volume 8 ; 8 >
+    au < testing ; 1979 ; Journal of Autism and Developmental Disorders Volume 9 ; 9 >
+    au < testing ; 1980 ; Journal of Autism and Developmental Disorders Volume 10 ; 10 >
+    au < testing ; 1981-1982 ; Journal of Autism and Developmental Disorders Volume 11 ; 11 >
+    au < testing ; 1982 ; Journal of Autism and Developmental Disorders Volume 12 ; 12 >
+    au < testing ; 1983 ; Journal of Autism and Developmental Disorders Volume 13 ; 13 >
+    au < testing ; 1984 ; Journal of Autism and Developmental Disorders Volume 14 ; 14 >
+    au < testing ; 1985 ; Journal of Autism and Developmental Disorders Volume 15 ; 15 >
+    au < testing ; 1986 ; Journal of Autism and Developmental Disorders Volume 16 ; 16 >
+    au < testing ; 1987 ; Journal of Autism and Developmental Disorders Volume 17 ; 17 >
+    au < testing ; 1988 ; Journal of Autism and Developmental Disorders Volume 18 ; 18 >
+    au < testing ; 1989 ; Journal of Autism and Developmental Disorders Volume 19 ; 19 >
+    au < testing ; 1990 ; Journal of Autism and Developmental Disorders Volume 20 ; 20 >
+    au < testing ; 1991 ; Journal of Autism and Developmental Disorders Volume 21 ; 21 >
+    au < testing ; 1992 ; Journal of Autism and Developmental Disorders Volume 22 ; 22 >
+    au < testing ; 1993 ; Journal of Autism and Developmental Disorders Volume 23 ; 23 >
+    au < testing ; 1994 ; Journal of Autism and Developmental Disorders Volume 24 ; 24 >
+    au < testing ; 1995 ; Journal of Autism and Developmental Disorders Volume 25 ; 25 >
+    au < testing ; 1996 ; Journal of Autism and Developmental Disorders Volume 26 ; 26 >
+    au < testing ; 1997 ; Journal of Autism and Developmental Disorders Volume 27 ; 27 >
+    au < testing ; 1998 ; Journal of Autism and Developmental Disorders Volume 28 ; 28 >
+    au < testing ; 1999 ; Journal of Autism and Developmental Disorders Volume 29 ; 29 >
+    au < testing ; 2000 ; Journal of Autism and Developmental Disorders Volume 30 ; 30 >
+    au < testing ; 2001 ; Journal of Autism and Developmental Disorders Volume 31 ; 31 >
+    au < testing ; 2002 ; Journal of Autism and Developmental Disorders Volume 32 ; 32 >
+    au < testing ; 2003 ; Journal of Autism and Developmental Disorders Volume 33 ; 33 >
+    au < testing ; 2004 ; Journal of Autism and Developmental Disorders Volume 34 ; 34 >
+    au < testing ; 2005 ; Journal of Autism and Developmental Disorders Volume 35 ; 35 >
+    au < testing ; 2006 ; Journal of Autism and Developmental Disorders Volume 36 ; 36 >
+    au < testing ; 2007 ; Journal of Autism and Developmental Disorders Volume 37 ; 37 >
+    au < testing ; 2008 ; Journal of Autism and Developmental Disorders Volume 38 ; 38 >
+    au < testing ; 2009 ; Journal of Autism and Developmental Disorders Volume 39 ; 39 >
+    au < testing ; 2010 ; Journal of Autism and Developmental Disorders Volume 40 ; 40 >
+    au < testing ; 2011 ; Journal of Autism and Developmental Disorders Volume 41 ; 41 >
 
   }
 
@@ -19119,11 +19260,46 @@
       name = Journal of Behavioral Medicine ;
       issn = 0160-7715 ;
       eissn = 1573-3521 ;
-      issnl = 0160-7715 ;
-      placeholder = True
+      issnl = 0160-7715
     >
 
     param[journal_issn] = 0160-7715
+    attr[where] = content1a
+
+    au < testing ; 1978 ; Journal of Behavioral Medicine Volume 1 ; 1 >
+    au < testing ; 1979 ; Journal of Behavioral Medicine Volume 2 ; 2 >
+    au < testing ; 1980 ; Journal of Behavioral Medicine Volume 3 ; 3 >
+    au < testing ; 1981 ; Journal of Behavioral Medicine Volume 4 ; 4 >
+    au < testing ; 1982 ; Journal of Behavioral Medicine Volume 5 ; 5 >
+    au < testing ; 1983 ; Journal of Behavioral Medicine Volume 6 ; 6 >
+    au < testing ; 1984 ; Journal of Behavioral Medicine Volume 7 ; 7 >
+    au < testing ; 1985 ; Journal of Behavioral Medicine Volume 8 ; 8 >
+    au < testing ; 1986 ; Journal of Behavioral Medicine Volume 9 ; 9 >
+    au < testing ; 1987 ; Journal of Behavioral Medicine Volume 10 ; 10 >
+    au < testing ; 1988 ; Journal of Behavioral Medicine Volume 11 ; 11 >
+    au < testing ; 1989 ; Journal of Behavioral Medicine Volume 12 ; 12 >
+    au < testing ; 1990 ; Journal of Behavioral Medicine Volume 13 ; 13 >
+    au < testing ; 1991 ; Journal of Behavioral Medicine Volume 14 ; 14 >
+    au < testing ; 1992 ; Journal of Behavioral Medicine Volume 15 ; 15 >
+    au < testing ; 1993 ; Journal of Behavioral Medicine Volume 16 ; 16 >
+    au < testing ; 1994 ; Journal of Behavioral Medicine Volume 17 ; 17 >
+    au < testing ; 1995 ; Journal of Behavioral Medicine Volume 18 ; 18 >
+    au < testing ; 1996 ; Journal of Behavioral Medicine Volume 19 ; 19 >
+    au < testing ; 1997 ; Journal of Behavioral Medicine Volume 20 ; 20 >
+    au < testing ; 1998 ; Journal of Behavioral Medicine Volume 21 ; 21 >
+    au < testing ; 1999 ; Journal of Behavioral Medicine Volume 22 ; 22 >
+    au < testing ; 2000 ; Journal of Behavioral Medicine Volume 23 ; 23 >
+    au < testing ; 2001 ; Journal of Behavioral Medicine Volume 24 ; 24 >
+    au < testing ; 2002 ; Journal of Behavioral Medicine Volume 25 ; 25 >
+    au < testing ; 2003 ; Journal of Behavioral Medicine Volume 26 ; 26 >
+    au < testing ; 2004 ; Journal of Behavioral Medicine Volume 27 ; 27 >
+    au < testing ; 2005 ; Journal of Behavioral Medicine Volume 28 ; 28 >
+    au < testing ; 2006 ; Journal of Behavioral Medicine Volume 29 ; 29 >
+    au < testing ; 2007 ; Journal of Behavioral Medicine Volume 30 ; 30 >
+    au < testing ; 2008 ; Journal of Behavioral Medicine Volume 31 ; 31 >
+    au < testing ; 2009 ; Journal of Behavioral Medicine Volume 32 ; 32 >
+    au < testing ; 2010 ; Journal of Behavioral Medicine Volume 33 ; 33 >
+    au < testing ; 2011 ; Journal of Behavioral Medicine Volume 34 ; 34 >
 
   }
 
@@ -19234,24 +19410,23 @@
     >
 
     param[journal_issn] = 0949-8257
-    attr[where] = content1a
 
-    au < testing ; 1996 ; Journal of Biological Inorganic Chemistry Volume 1 ; 1 >
-    au < testing ; 1997 ; Journal of Biological Inorganic Chemistry Volume 2 ; 2 >
-    au < testing ; 1998 ; Journal of Biological Inorganic Chemistry Volume 3 ; 3 >
-    au < testing ; 1999 ; Journal of Biological Inorganic Chemistry Volume 4 ; 4 >
-    au < testing ; 2000 ; Journal of Biological Inorganic Chemistry Volume 5 ; 5 >
-    au < testing ; 2001 ; Journal of Biological Inorganic Chemistry Volume 6 ; 6 >
-    au < testing ; 2002 ; Journal of Biological Inorganic Chemistry Volume 7 ; 7 >
-    au < testing ; 2003 ; Journal of Biological Inorganic Chemistry Volume 8 ; 8 >
-    au < testing ; 2004 ; Journal of Biological Inorganic Chemistry Volume 9 ; 9 >
-    au < testing ; 2005 ; Journal of Biological Inorganic Chemistry Volume 10 ; 10 >
-    au < testing ; 2006 ; Journal of Biological Inorganic Chemistry Volume 11 ; 11 >
-    au < testing ; 2007 ; Journal of Biological Inorganic Chemistry Volume 12 ; 12 >
-    au < testing ; 2008 ; Journal of Biological Inorganic Chemistry Volume 13 ; 13 >
-    au < testing ; 2009 ; Journal of Biological Inorganic Chemistry Volume 14 ; 14 >
-    au < testing ; 2010 ; Journal of Biological Inorganic Chemistry Volume 15 ; 15 >
-    au < testing ; 2011 ; Journal of Biological Inorganic Chemistry Volume 16 ; 16 >
+    au < ready ; 1996 ; Journal of Biological Inorganic Chemistry Volume 1 ; 1 >
+    au < ready ; 1997 ; Journal of Biological Inorganic Chemistry Volume 2 ; 2 >
+    au < ready ; 1998 ; Journal of Biological Inorganic Chemistry Volume 3 ; 3 >
+    au < ready ; 1999 ; Journal of Biological Inorganic Chemistry Volume 4 ; 4 >
+    au < ready ; 2000 ; Journal of Biological Inorganic Chemistry Volume 5 ; 5 >
+    au < ready ; 2001 ; Journal of Biological Inorganic Chemistry Volume 6 ; 6 >
+    au < ready ; 2002 ; Journal of Biological Inorganic Chemistry Volume 7 ; 7 >
+    au < ready ; 2003 ; Journal of Biological Inorganic Chemistry Volume 8 ; 8 >
+    au < ready ; 2004 ; Journal of Biological Inorganic Chemistry Volume 9 ; 9 >
+    au < ready ; 2005 ; Journal of Biological Inorganic Chemistry Volume 10 ; 10 >
+    au < ready ; 2006 ; Journal of Biological Inorganic Chemistry Volume 11 ; 11 >
+    au < ready ; 2007 ; Journal of Biological Inorganic Chemistry Volume 12 ; 12 >
+    au < ready ; 2008 ; Journal of Biological Inorganic Chemistry Volume 13 ; 13 >
+    au < ready ; 2009 ; Journal of Biological Inorganic Chemistry Volume 14 ; 14 >
+    au < ready ; 2010 ; Journal of Biological Inorganic Chemistry Volume 15 ; 15 >
+    au < ready ; 2011 ; Journal of Biological Inorganic Chemistry Volume 16 ; 16 >
 
   }
 
@@ -20379,11 +20554,27 @@
       name = Journal of Economic Growth ;
       issn = 1381-4338 ;
       eissn = 1573-7020 ;
-      issnl = 1381-4338 ;
-      placeholder = True
+      issnl = 1381-4338
     >
 
     param[journal_issn] = 1381-4338
+    attr[where] = content1b
+
+    au < testing ; 1996 ; Journal of Economic Growth Volume 1 ; 1 >
+    au < testing ; 1997 ; Journal of Economic Growth Volume 2 ; 2 >
+    au < testing ; 1998 ; Journal of Economic Growth Volume 3 ; 3 >
+    au < testing ; 1999 ; Journal of Economic Growth Volume 4 ; 4 >
+    au < testing ; 2000 ; Journal of Economic Growth Volume 5 ; 5 >
+    au < testing ; 2001 ; Journal of Economic Growth Volume 6 ; 6 >
+    au < testing ; 2002 ; Journal of Economic Growth Volume 7 ; 7 >
+    au < testing ; 2003 ; Journal of Economic Growth Volume 8 ; 8 >
+    au < testing ; 2004 ; Journal of Economic Growth Volume 9 ; 9 >
+    au < testing ; 2005 ; Journal of Economic Growth Volume 10 ; 10 >
+    au < testing ; 2006 ; Journal of Economic Growth Volume 11 ; 11 >
+    au < testing ; 2007 ; Journal of Economic Growth Volume 12 ; 12 >
+    au < testing ; 2008 ; Journal of Economic Growth Volume 13 ; 13 >
+    au < testing ; 2009 ; Journal of Economic Growth Volume 14 ; 14 >
+    au < testing ; 2010 ; Journal of Economic Growth Volume 15 ; 15 >
 
   }
 
@@ -29589,108 +29780,107 @@
     >
 
     param[journal_issn] = 0031-6768
-    attr[where] = content4a
 
-    au < testing ; 1868 ; Pflügers Archiv European Journal of Physiology Volume 1 ; 1 >
-    au < testing ; 1869 ; Pflügers Archiv European Journal of Physiology Volume 2 ; 2 >
-    au < testing ; 1870 ; Pflügers Archiv European Journal of Physiology Volume 3 ; 3 >
-    au < testing ; 1871 ; Pflügers Archiv European Journal of Physiology Volume 4 ; 4 >
-    au < testing ; 1872 ; Pflügers Archiv European Journal of Physiology Volume 5 ; 5 >
-    au < testing ; 1872 ; Pflügers Archiv European Journal of Physiology Volume 6 ; 6 >
-    au < testing ; 1873 ; Pflügers Archiv European Journal of Physiology Volume 7 ; 7 >
-    au < testing ; 1874 ; Pflügers Archiv European Journal of Physiology Volume 8 ; 8 >
-    au < testing ; 1874 ; Pflügers Archiv European Journal of Physiology Volume 9 ; 9 >
-    au < testing ; 1875 ; Pflügers Archiv European Journal of Physiology Volume 10 ; 10 >
-    au < testing ; 1875 ; Pflügers Archiv European Journal of Physiology Volume 11 ; 11 >
-    au < testing ; 1876 ; Pflügers Archiv European Journal of Physiology Volume 12 ; 12 >
-    au < testing ; 1876 ; Pflügers Archiv European Journal of Physiology Volume 13 ; 13 >
-    au < testing ; 1877 ; Pflügers Archiv European Journal of Physiology Volume 14 ; 14 >
-    au < testing ; 1877 ; Pflügers Archiv European Journal of Physiology Volume 15 ; 15 >
-    au < testing ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 16 ; 16 >
-    au < testing ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 17 ; 17 >
-    au < testing ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 18 ; 18 >
-    au < testing ; 1879 ; Pflügers Archiv European Journal of Physiology Volume 19 ; 19 >
-    au < testing ; 1879 ; Pflügers Archiv European Journal of Physiology Volume 20 ; 20 >
-    au < testing ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 21 ; 21 >
-    au < testing ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 22 ; 22 >
-    au < testing ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 23 ; 23 >
-    au < testing ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 24 ; 24 >
-    au < testing ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 25 ; 25 >
-    au < testing ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 26 ; 26 >
-    au < testing ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 27 ; 27 >
-    au < testing ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 28 ; 28 >
-    au < testing ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 29 ; 29 >
-    au < testing ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 30 ; 30 >
-    au < testing ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 31 ; 31 >
-    au < testing ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 32 ; 32 >
-    au < testing ; 1884 ; Pflügers Archiv European Journal of Physiology Volume 33 ; 33 >
-    au < testing ; 1884 ; Pflügers Archiv European Journal of Physiology Volume 34 ; 34 >
-    au < testing ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 35 ; 35 >
-    au < testing ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 36 ; 36 >
-    au < testing ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 37 ; 37 >
-    au < testing ; 1886 ; Pflügers Archiv European Journal of Physiology Volume 38 ; 38 >
-    au < testing ; 1886 ; Pflügers Archiv European Journal of Physiology Volume 39 ; 39 >
-    au < testing ; 1887 ; Pflügers Archiv European Journal of Physiology Volume 40 ; 40 >
-    au < testing ; 1887 ; Pflügers Archiv European Journal of Physiology Volume 41 ; 41 >
-    au < testing ; 1888 ; Pflügers Archiv European Journal of Physiology Volume 42 ; 42 >
-    au < testing ; 1888 ; Pflügers Archiv European Journal of Physiology Volume 43 ; 43 >
-    au < testing ; 1889 ; Pflügers Archiv European Journal of Physiology Volume 44 ; 44 >
-    au < testing ; 1889 ; Pflügers Archiv European Journal of Physiology Volume 45 ; 45 >
-    au < testing ; 1890 ; Pflügers Archiv European Journal of Physiology Volume 46 ; 46 >
-    au < testing ; 1890 ; Pflügers Archiv European Journal of Physiology Volume 47 ; 47 >
-    au < testing ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 48 ; 48 >
-    au < testing ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 49 ; 49 >
-    au < testing ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 50 ; 50 >
-    au < testing ; 1892 ; Pflügers Archiv European Journal of Physiology Volume 51 ; 51 >
-    au < testing ; 1892 ; Pflügers Archiv European Journal of Physiology Volume 52 ; 52 >
-    au < testing ; 1893 ; Pflügers Archiv European Journal of Physiology Volume 53 ; 53 >
-    au < testing ; 1893 ; Pflügers Archiv European Journal of Physiology Volume 54 ; 54 >
-    au < testing ; 1893-1894 ; Pflügers Archiv European Journal of Physiology Volume 55 ; 55 >
-    au < testing ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 56 ; 56 >
-    au < testing ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 57 ; 57 >
-    au < testing ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 58 ; 58 >
-    au < testing ; 1894-1895 ; Pflügers Archiv European Journal of Physiology Volume 59 ; 59 >
-    au < testing ; 1895 ; Pflügers Archiv European Journal of Physiology Volume 60 ; 60 >
-    au < testing ; 1895 ; Pflügers Archiv European Journal of Physiology Volume 61 ; 61 >
-    au < testing ; 1895-1896 ; Pflügers Archiv European Journal of Physiology Volume 62 ; 62 >
-    au < testing ; 1896 ; Pflügers Archiv European Journal of Physiology Volume 63 ; 63 >
-    au < testing ; 1896 ; Pflügers Archiv European Journal of Physiology Volume 64 ; 64 >
-    au < testing ; 1896-1897 ; Pflügers Archiv European Journal of Physiology Volume 65 ; 65 >
-    au < testing ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 66 ; 66 >
-    au < testing ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 67 ; 67 >
-    au < testing ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 68 ; 68 >
-    au < testing ; 1897-1898 ; Pflügers Archiv European Journal of Physiology Volume 69 ; 69 >
-    au < testing ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 70 ; 70 >
-    au < testing ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 71 ; 71 >
-    au < testing ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 72 ; 72 >
-    au < testing ; 1898-1899 ; Pflügers Archiv European Journal of Physiology Volume 73 ; 73 >
-    au < testing ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 74 ; 74 >
-    au < testing ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 75 ; 75 >
-    au < testing ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 76 ; 76 >
-    au < testing ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 77 ; 77 >
-    au < testing ; 1899-1900 ; Pflügers Archiv European Journal of Physiology Volume 78 ; 78 >
-    au < testing ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 79 ; 79 >
-    au < testing ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 80 ; 80 >
-    au < testing ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 81 ; 81 >
-    au < testing ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 82 ; 82 >
-    au < testing ; 1900-1901 ; Pflügers Archiv European Journal of Physiology Volume 83 ; 83 >
-    au < testing ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 84 ; 84 >
-    au < testing ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 85 ; 85 >
-    au < testing ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 86 ; 86 >
-    au < testing ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 87 ; 87 >
-    au < testing ; 1901-1902 ; Pflügers Archiv European Journal of Physiology Volume 88 ; 88 >
-    au < testing ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 89 ; 89 >
-    au < testing ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 90 ; 90 >
-    au < testing ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 91 ; 91 >
-    au < testing ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 92 ; 92 >
-    au < testing ; 1902-1903 ; Pflügers Archiv European Journal of Physiology Volume 93 ; 93 >
-    au < testing ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 94 ; 94 >
-    au < testing ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 95 ; 95 >
-    au < testing ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 96 ; 96 >
-    au < testing ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 97 ; 97 >
-    au < testing ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 98 ; 98 >
-    au < testing ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 99 ; 99 >
-    au < testing ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 100 ; 100 >
+    au < ready ; 1868 ; Pflügers Archiv European Journal of Physiology Volume 1 ; 1 >
+    au < ready ; 1869 ; Pflügers Archiv European Journal of Physiology Volume 2 ; 2 >
+    au < ready ; 1870 ; Pflügers Archiv European Journal of Physiology Volume 3 ; 3 >
+    au < ready ; 1871 ; Pflügers Archiv European Journal of Physiology Volume 4 ; 4 >
+    au < ready ; 1872 ; Pflügers Archiv European Journal of Physiology Volume 5 ; 5 >
+    au < ready ; 1872 ; Pflügers Archiv European Journal of Physiology Volume 6 ; 6 >
+    au < ready ; 1873 ; Pflügers Archiv European Journal of Physiology Volume 7 ; 7 >
+    au < ready ; 1874 ; Pflügers Archiv European Journal of Physiology Volume 8 ; 8 >
+    au < ready ; 1874 ; Pflügers Archiv European Journal of Physiology Volume 9 ; 9 >
+    au < ready ; 1875 ; Pflügers Archiv European Journal of Physiology Volume 10 ; 10 >
+    au < ready ; 1875 ; Pflügers Archiv European Journal of Physiology Volume 11 ; 11 >
+    au < ready ; 1876 ; Pflügers Archiv European Journal of Physiology Volume 12 ; 12 >
+    au < ready ; 1876 ; Pflügers Archiv European Journal of Physiology Volume 13 ; 13 >
+    au < ready ; 1877 ; Pflügers Archiv European Journal of Physiology Volume 14 ; 14 >
+    au < ready ; 1877 ; Pflügers Archiv European Journal of Physiology Volume 15 ; 15 >
+    au < ready ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 16 ; 16 >
+    au < ready ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 17 ; 17 >
+    au < ready ; 1878 ; Pflügers Archiv European Journal of Physiology Volume 18 ; 18 >
+    au < ready ; 1879 ; Pflügers Archiv European Journal of Physiology Volume 19 ; 19 >
+    au < ready ; 1879 ; Pflügers Archiv European Journal of Physiology Volume 20 ; 20 >
+    au < ready ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 21 ; 21 >
+    au < ready ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 22 ; 22 >
+    au < ready ; 1880 ; Pflügers Archiv European Journal of Physiology Volume 23 ; 23 >
+    au < ready ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 24 ; 24 >
+    au < ready ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 25 ; 25 >
+    au < ready ; 1881 ; Pflügers Archiv European Journal of Physiology Volume 26 ; 26 >
+    au < ready ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 27 ; 27 >
+    au < ready ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 28 ; 28 >
+    au < ready ; 1882 ; Pflügers Archiv European Journal of Physiology Volume 29 ; 29 >
+    au < ready ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 30 ; 30 >
+    au < ready ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 31 ; 31 >
+    au < ready ; 1883 ; Pflügers Archiv European Journal of Physiology Volume 32 ; 32 >
+    au < ready ; 1884 ; Pflügers Archiv European Journal of Physiology Volume 33 ; 33 >
+    au < ready ; 1884 ; Pflügers Archiv European Journal of Physiology Volume 34 ; 34 >
+    au < ready ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 35 ; 35 >
+    au < ready ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 36 ; 36 >
+    au < ready ; 1885 ; Pflügers Archiv European Journal of Physiology Volume 37 ; 37 >
+    au < ready ; 1886 ; Pflügers Archiv European Journal of Physiology Volume 38 ; 38 >
+    au < ready ; 1886 ; Pflügers Archiv European Journal of Physiology Volume 39 ; 39 >
+    au < ready ; 1887 ; Pflügers Archiv European Journal of Physiology Volume 40 ; 40 >
+    au < ready ; 1887 ; Pflügers Archiv European Journal of Physiology Volume 41 ; 41 >
+    au < ready ; 1888 ; Pflügers Archiv European Journal of Physiology Volume 42 ; 42 >
+    au < ready ; 1888 ; Pflügers Archiv European Journal of Physiology Volume 43 ; 43 >
+    au < ready ; 1889 ; Pflügers Archiv European Journal of Physiology Volume 44 ; 44 >
+    au < ready ; 1889 ; Pflügers Archiv European Journal of Physiology Volume 45 ; 45 >
+    au < ready ; 1890 ; Pflügers Archiv European Journal of Physiology Volume 46 ; 46 >
+    au < ready ; 1890 ; Pflügers Archiv European Journal of Physiology Volume 47 ; 47 >
+    au < ready ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 48 ; 48 >
+    au < ready ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 49 ; 49 >
+    au < ready ; 1891 ; Pflügers Archiv European Journal of Physiology Volume 50 ; 50 >
+    au < ready ; 1892 ; Pflügers Archiv European Journal of Physiology Volume 51 ; 51 >
+    au < ready ; 1892 ; Pflügers Archiv European Journal of Physiology Volume 52 ; 52 >
+    au < ready ; 1893 ; Pflügers Archiv European Journal of Physiology Volume 53 ; 53 >
+    au < ready ; 1893 ; Pflügers Archiv European Journal of Physiology Volume 54 ; 54 >
+    au < ready ; 1893-1894 ; Pflügers Archiv European Journal of Physiology Volume 55 ; 55 >
+    au < ready ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 56 ; 56 >
+    au < ready ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 57 ; 57 >
+    au < ready ; 1894 ; Pflügers Archiv European Journal of Physiology Volume 58 ; 58 >
+    au < ready ; 1894-1895 ; Pflügers Archiv European Journal of Physiology Volume 59 ; 59 >
+    au < ready ; 1895 ; Pflügers Archiv European Journal of Physiology Volume 60 ; 60 >
+    au < ready ; 1895 ; Pflügers Archiv European Journal of Physiology Volume 61 ; 61 >
+    au < ready ; 1895-1896 ; Pflügers Archiv European Journal of Physiology Volume 62 ; 62 >
+    au < ready ; 1896 ; Pflügers Archiv European Journal of Physiology Volume 63 ; 63 >
+    au < ready ; 1896 ; Pflügers Archiv European Journal of Physiology Volume 64 ; 64 >
+    au < ready ; 1896-1897 ; Pflügers Archiv European Journal of Physiology Volume 65 ; 65 >
+    au < ready ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 66 ; 66 >
+    au < ready ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 67 ; 67 >
+    au < ready ; 1897 ; Pflügers Archiv European Journal of Physiology Volume 68 ; 68 >
+    au < ready ; 1897-1898 ; Pflügers Archiv European Journal of Physiology Volume 69 ; 69 >
+    au < ready ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 70 ; 70 >
+    au < ready ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 71 ; 71 >
+    au < ready ; 1898 ; Pflügers Archiv European Journal of Physiology Volume 72 ; 72 >
+    au < ready ; 1898-1899 ; Pflügers Archiv European Journal of Physiology Volume 73 ; 73 >
+    au < ready ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 74 ; 74 >
+    au < ready ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 75 ; 75 >
+    au < ready ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 76 ; 76 >
+    au < ready ; 1899 ; Pflügers Archiv European Journal of Physiology Volume 77 ; 77 >
+    au < ready ; 1899-1900 ; Pflügers Archiv European Journal of Physiology Volume 78 ; 78 >
+    au < ready ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 79 ; 79 >
+    au < ready ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 80 ; 80 >
+    au < ready ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 81 ; 81 >
+    au < ready ; 1900 ; Pflügers Archiv European Journal of Physiology Volume 82 ; 82 >
+    au < ready ; 1900-1901 ; Pflügers Archiv European Journal of Physiology Volume 83 ; 83 >
+    au < ready ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 84 ; 84 >
+    au < ready ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 85 ; 85 >
+    au < ready ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 86 ; 86 >
+    au < ready ; 1901 ; Pflügers Archiv European Journal of Physiology Volume 87 ; 87 >
+    au < ready ; 1901-1902 ; Pflügers Archiv European Journal of Physiology Volume 88 ; 88 >
+    au < ready ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 89 ; 89 >
+    au < ready ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 90 ; 90 >
+    au < ready ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 91 ; 91 >
+    au < ready ; 1902 ; Pflügers Archiv European Journal of Physiology Volume 92 ; 92 >
+    au < ready ; 1902-1903 ; Pflügers Archiv European Journal of Physiology Volume 93 ; 93 >
+    au < ready ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 94 ; 94 >
+    au < ready ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 95 ; 95 >
+    au < ready ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 96 ; 96 >
+    au < ready ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 97 ; 97 >
+    au < ready ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 98 ; 98 >
+    au < ready ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 99 ; 99 >
+    au < ready ; 1903 ; Pflügers Archiv European Journal of Physiology Volume 100 ; 100 >
     au < ready ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 101 ; 101 >
     au < ready ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 102 ; 102 >
     au < ready ; 1904 ; Pflügers Archiv European Journal of Physiology Volume 103 ; 103 >
@@ -29843,19 +30033,19 @@
     au < ready ; 1948 ; Pflügers Archiv European Journal of Physiology Volume 250 ; 250 >
     au < ready ; 1949 ; Pflügers Archiv European Journal of Physiology Volume 251 ; 251 >
     au < ready ; 1949-1950 ; Pflügers Archiv European Journal of Physiology Volume 252 ; 252 >
-    au < wanted ; 1950-1951 ; Pflügers Archiv European Journal of Physiology Volume 253 ; 253 >
+    au < ready ; 1950-1951 ; Pflügers Archiv European Journal of Physiology Volume 253 ; 253 >
     au < ready ; 1951-1952 ; Pflügers Archiv European Journal of Physiology Volume 254 ; 254 >
     au < ready ; 1952 ; Pflügers Archiv European Journal of Physiology Volume 255 ; 255 >
     au < ready ; 1952-1953 ; Pflügers Archiv European Journal of Physiology Volume 256 ; 256 >
     au < ready ; 1953 ; Pflügers Archiv European Journal of Physiology Volume 257 ; 257 >
     au < ready ; 1953-1954 ; Pflügers Archiv European Journal of Physiology Volume 258 ; 258 >
-    au < wanted ; 1954 ; Pflügers Archiv European Journal of Physiology Volume 259 ; 259 >
+    au < ready ; 1954 ; Pflügers Archiv European Journal of Physiology Volume 259 ; 259 >
     au < ready ; 1954-1955 ; Pflügers Archiv European Journal of Physiology Volume 260 ; 260 >
-    au < wanted ; 1955 ; Pflügers Archiv European Journal of Physiology Volume 261 ; 261 >
+    au < ready ; 1955 ; Pflügers Archiv European Journal of Physiology Volume 261 ; 261 >
     au < ready ; 1955-1956 ; Pflügers Archiv European Journal of Physiology Volume 262 ; 262 >
     au < ready ; 1956-1957 ; Pflügers Archiv European Journal of Physiology Volume 263 ; 263 >
     au < ready ; 1957 ; Pflügers Archiv European Journal of Physiology Volume 264 ; 264 >
-    au < wanted ; 1957-1958 ; Pflügers Archiv European Journal of Physiology Volume 265 ; 265 >
+    au < ready ; 1957-1958 ; Pflügers Archiv European Journal of Physiology Volume 265 ; 265 >
     au < ready ; 1957-1958 ; Pflügers Archiv European Journal of Physiology Volume 266 ; 266 >
     au < ready ; 1958 ; Pflügers Archiv European Journal of Physiology Volume 267 ; 267 >
     au < ready ; 1958-1959 ; Pflügers Archiv European Journal of Physiology Volume 268 ; 268 >
@@ -29874,7 +30064,7 @@
     au < ready ; 1964 ; Pflügers Archiv European Journal of Physiology Volume 281 ; 281 >
     au < ready ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 282 ; 282 >
     au < ready ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 283 ; 283 >
-    au < wanted ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 284 ; 284 >
+    au < ready ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 284 ; 284 >
     au < ready ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 285 ; 285 >
     au < ready ; 1965 ; Pflügers Archiv European Journal of Physiology Volume 286 ; 286 >
     au < ready ; 1966 ; Pflügers Archiv European Journal of Physiology Volume 287 ; 287 >
@@ -29926,7 +30116,7 @@
     au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 333 ; 333 >
     au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 334 ; 334 >
     au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 335 ; 335 >
-    au < wanted ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 336 ; 336 >
+    au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 336 ; 336 >
     au < ready ; 1972 ; Pflügers Archiv European Journal of Physiology Volume 337 ; 337 >
     au < ready ; 1972-1973 ; Pflügers Archiv European Journal of Physiology Volume 338 ; 338 >
     au < ready ; 1973 ; Pflügers Archiv European Journal of Physiology Volume 339 ; 339 >
@@ -29974,7 +30164,7 @@
     au < ready ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 381 ; 381 >
     au < ready ; 1979 ; Pflügers Archiv European Journal of Physiology Volume 382 ; 382 >
     au < ready ; 1979-1980 ; Pflügers Archiv European Journal of Physiology Volume 383 ; 383 >
-    au < wanted ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 384 ; 384 >
+    au < ready ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 384 ; 384 >
     au < ready ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 385 ; 385 >
     au < ready ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 386 ; 386 >
     au < ready ; 1980 ; Pflügers Archiv European Journal of Physiology Volume 387 ; 387 >
@@ -30965,13 +31155,12 @@
     >
 
     param[journal_issn] = 1557-1955
-    attr[where] = sul-lockss30a
 
-    au < testing ; 2006 ; Plasmonics Volume 1 ; 1 >
-    au < testing ; 2007 ; Plasmonics Volume 2 ; 2 >
-    au < testing ; 2008 ; Plasmonics Volume 3 ; 3 >
-    au < testing ; 2009 ; Plasmonics Volume 4 ; 4 >
-    au < testing ; 2010 ; Plasmonics Volume 5 ; 5 >
+    au < ready ; 2006 ; Plasmonics Volume 1 ; 1 >
+    au < ready ; 2007 ; Plasmonics Volume 2 ; 2 >
+    au < ready ; 2008 ; Plasmonics Volume 3 ; 3 >
+    au < ready ; 2009 ; Plasmonics Volume 4 ; 4 >
+    au < ready ; 2010 ; Plasmonics Volume 5 ; 5 >
 
   }
 
@@ -31349,11 +31538,24 @@ Commet [pv] = now offline
       name = Prevention Science ;
       issn = 1389-4986 ;
       eissn = 1573-6695 ;
-      issnl = 1389-4986 ;
-      placeholder = True
+      issnl = 1389-4986
     >
 
     param[journal_issn] = 1389-4986
+    attr[where] = sul-lockss30a
+
+    au < testing ; 2000 ; Prevention Science Volume 1 ; 1 >
+    au < testing ; 2001 ; Prevention Science Volume 2 ; 2 >
+    au < testing ; 2002 ; Prevention Science Volume 3 ; 3 >
+    au < testing ; 2003 ; Prevention Science Volume 4 ; 4 >
+    au < testing ; 2004 ; Prevention Science Volume 5 ; 5 >
+    au < testing ; 2005 ; Prevention Science Volume 6 ; 6 >
+    au < testing ; 2006 ; Prevention Science Volume 7 ; 7 >
+    au < testing ; 2007 ; Prevention Science Volume 8 ; 8 >
+    au < testing ; 2008 ; Prevention Science Volume 9 ; 9 >
+    au < testing ; 2009 ; Prevention Science Volume 10 ; 10 >
+    au < testing ; 2010 ; Prevention Science Volume 11 ; 11 >
+    au < testing ; 2011 ; Prevention Science Volume 12 ; 12 >
 
   }
 
