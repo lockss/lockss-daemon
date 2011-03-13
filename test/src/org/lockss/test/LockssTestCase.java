@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.101 2011-01-10 09:15:56 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.102 2011-03-13 21:52:19 tlipkis Exp $
  */
 
 /*
@@ -1254,6 +1254,10 @@ public class LockssTestCase extends TestCase {
 		  actual);
   }
 
+  static protected String arrayString(Object[] a) {
+    return StringUtil.separatedString(a, ", ");
+  }
+
   /**
    * Asserts that the two DatagramPackets have equal contents
    * @param expected the expected value
@@ -1286,7 +1290,7 @@ public class LockssTestCase extends TestCase {
    */
   public static void assertSameElements(Object[] expected,
 					Collection actual) {
-    assertTrue("Expected "+expected+" but was "+actual,
+    assertTrue("Expected "+arrayString(expected)+" but was "+actual,
 	       org.apache.commons.collections.
 	       CollectionUtils.isEqualCollection(ListUtil.fromArray(expected),
 						 actual));

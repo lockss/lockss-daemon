@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.147 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.148 2011-03-13 21:52:19 tlipkis Exp $
  */
 
 /*
@@ -148,6 +148,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (config == null) {
       throw new ConfigurationException("Null Configuration");
     }
+    if (logger.isDebug3()) logger.debug3("setConfiguration: " + config);
     checkLegalConfigChange(config);
     auConfig = config;
     loadAuConfigDescrs(config);
