@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.214 2011-03-03 18:56:56 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.215 2011-03-13 21:52:50 tlipkis Exp $
  */
 
 /*
@@ -310,6 +310,7 @@ public class PluginManager
     alertMgr = getDaemon().getAlertManager();
     // Initialize the plugin directory.
     initPluginDir();
+    configureDefaultTitleSets();
     PluginStatus.register(getDaemon(), this);
     
     if (paramDisableURLConnectionCache) {
@@ -498,8 +499,15 @@ public class PluginManager
     }
   }
 
+  private void configureDefaultTitleSets() {
+    TreeSet<TitleSet> list = new TreeSet<TitleSet>();
+    list.add(new TitleSetAllTitles(getDaemon()));
+    list.add(new TitleSetActiveAus(getDaemon()));
+    list.add(new TitleSetInactiveAus(getDaemon()));
+    installTitleSets(list);
+  }
+
   private void configureTitleSets(Configuration config) {
-    Map<String,TitleSet> map = new HashMap<String,TitleSet>();
     TreeSet<TitleSet> list = new TreeSet<TitleSet>();
     Configuration allSets = config.getConfigTree(PARAM_TITLE_SETS);
     for (Iterator iter = allSets.nodeIterator(); iter.hasNext(); ) {
@@ -519,10 +527,15 @@ public class PluginManager
 	log.warning("Error creating TitleSet from: " + setDef, e);
       }
     }
-    for (TitleSet ts : list) {
+    installTitleSets(list);
+  }
+
+  private void installTitleSets(TreeSet<TitleSet> sets) {
+    Map map = new HashMap();
+    for (TitleSet ts : sets) {
       map.put(ts.getName(), ts);
     }
-    titleSets = list;
+    titleSets = sets;
     titleSetMap = map;
   }
 
