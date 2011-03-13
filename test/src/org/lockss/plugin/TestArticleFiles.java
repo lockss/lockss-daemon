@@ -1,5 +1,5 @@
 /*
- * $Id: TestArticleFiles.java,v 1.3 2010-06-23 02:42:56 thib_gc Exp $
+ * $Id: TestArticleFiles.java,v 1.4 2011-03-13 21:52:33 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,26 @@ public class TestArticleFiles extends LockssTestCase {
     af1.setRole("map", map);
     assertEquals("shovel", af1.getRoleString("handle"));
     assertSame(map, af1.getRole("map"));
+  }
+
+  public void testIsEmpty() {
+    ArticleFiles af1 = new ArticleFiles();
+    CachedUrl cu2 = new MockCachedUrl("xml");
+    CachedUrl cu1 = new MockCachedUrl("full");
+
+    assertTrue(af1.isEmpty());
+    af1.setFullTextCu(cu1);
+    assertFalse(af1.isEmpty());
+    af1.setRoleCu("xml", cu2);
+    assertFalse(af1.isEmpty());
+
+    ArticleFiles af2 = new ArticleFiles();
+
+    assertTrue(af2.isEmpty());
+    af2.setRoleCu("xml", cu2);
+    assertFalse(af2.isEmpty());
+    af2.setFullTextCu(cu1);
+    assertFalse(af2.isEmpty());
   }
 
 }

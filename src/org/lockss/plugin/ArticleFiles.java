@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleFiles.java,v 1.4 2010-06-26 00:25:52 thib_gc Exp $
+ * $Id: ArticleFiles.java,v 1.5 2011-03-13 21:52:33 tlipkis Exp $
  */
 
 /*
@@ -172,6 +172,11 @@ public class ArticleFiles {
    */
   public String getRoleUrl(String key) {
     return urlOrNull(getRoleCu(key));
+  }
+
+  /** Return true if no URLs have been stored */
+  public boolean isEmpty() {
+    return fullTextCu == null && roles.isEmpty();
   }
 
   public String toString() {
