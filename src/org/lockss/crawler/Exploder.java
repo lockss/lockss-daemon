@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.15 2009-09-17 02:53:38 tlipkis Exp $
+ * $Id: Exploder.java,v 1.16 2011-03-13 21:54:26 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,9 @@ public abstract class Exploder {
   public static final String PARAM_EXPLODED_AU_YEAR =
     Configuration.PREFIX + "crawler.exploder.explodedAuYear";
   public static final String DEFAULT_EXPLODED_AU_YEAR = "none";
+  public static final String PARAM_EXPLODED_AU_COLLECTION =
+    Configuration.PREFIX + "crawler.exploder.explodedAuCollection";
+  public static final String DEFAULT_EXPLODED_AU_COLLECTION = "none";
   public static final String PARAM_EXPLODER_ENTRIES_PER_PAUSE =
     Configuration.PREFIX + "crawler.exploder.entriesPerPause";
   public static final long DEFAULT_EXPLODER_ENTRIES_PER_PAUSE = 200;
@@ -203,6 +206,11 @@ public abstract class Exploder {
       String year = CurrentConfig.getParam(PARAM_EXPLODED_AU_YEAR,
 					   DEFAULT_EXPLODED_AU_YEAR);
       props.put(ConfigParamDescr.YEAR.getKey(), year);
+    }
+    if (props.get(ConfigParamDescr.COLLECTION.getKey()) == null) {
+      String collection = CurrentConfig.getParam(PARAM_EXPLODED_AU_COLLECTION,
+					   DEFAULT_EXPLODED_AU_COLLECTION);
+      props.put(ConfigParamDescr.COLLECTION.getKey(), collection);
     }
 
     String pluginName = CurrentConfig.getParam(PARAM_EXPLODED_PLUGIN_NAME,

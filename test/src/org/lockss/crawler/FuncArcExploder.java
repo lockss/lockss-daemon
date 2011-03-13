@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.7 2009-09-04 03:52:20 dshr Exp $
+ * $Id: FuncArcExploder.java,v 1.8 2011-03-13 21:54:26 tlipkis Exp $
  */
 
 /*
@@ -122,6 +122,9 @@ public class FuncArcExploder extends LockssTestCase {
     "http://www.example.com/content.arc.gz",
   };
 
+  static final String GOOD_YEAR = "1968";
+
+
   public static void main(String[] args) throws Exception {
     // XXX should be much simpler.
     FuncArcExploder test = new FuncArcExploder();
@@ -136,14 +139,15 @@ public class FuncArcExploder extends LockssTestCase {
     log.info("Running up for depth " + maxDepth);
     test.testBadContentMultipleAU();
     test.testGoodContentMultipleAU();
-    test.testBadContentSingleAU();
-    test.testGoodContentSingleAU();
+    if (false) {
+      test.dontTestBadContentSingleAU();
+      test.dontTestGoodContentSingleAU();
+    }
     test.tearDown();
   }
 
   public void setUp() throws Exception {
     super.setUp();
-    if (false) // XXX
     this.setUp(DEFAULT_MAX_DEPTH);
   }
 
@@ -181,13 +185,15 @@ public class FuncArcExploder extends LockssTestCase {
     String explodedPluginName =
       "org.lockss.crawler.FuncTarExploderMockExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
+    props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, GOOD_YEAR);
     props.setProperty(LockssApp.MANAGER_PREFIX + LockssDaemon.PLUGIN_MANAGER,
 		      MyPluginManager.class.getName());
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    theDaemon.setPluginManager(new MyPluginManager());
-    pluginMgr = theDaemon.getPluginManager();
+    pluginMgr = new MyPluginManager();
+    pluginMgr.initService(theDaemon);
+    theDaemon.setPluginManager(pluginMgr);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
@@ -221,22 +227,29 @@ public class FuncArcExploder extends LockssTestCase {
     runTest(true);
   }
 
-  public void testBadContentSingleAU() throws Exception {
+  public void dontTestBadContentSingleAU() throws Exception {
+    /*
+     * XXX This test disabled because the Exploder now always explodes
+     * XXX into multiple AUs.
+     */
     ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
 				  "http://www.stage.org/");
     multipleStemsPerAu = true;
     runTest(false);
   }
 
-  public void testGoodContentSingleAU() throws Exception {
+  public void dontTestGoodContentSingleAU() throws Exception {
+    /*
+     * XXX This test disabled because the Exploder now always explodes
+     * XXX into multiple AUs.
+     */
     ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
-				  "http://www.stage.org/");
+ 				  "http://www.stage.org/");
     multipleStemsPerAu = true;
     runTest(true);
   }
 
   public void runTest(boolean good) throws Exception {
-    if (true) return;  // XXX
     log.debug3("About to create content");
     createContent();
 
