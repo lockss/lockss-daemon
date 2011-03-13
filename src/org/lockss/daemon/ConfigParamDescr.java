@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.44 2009-08-29 04:38:55 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.45 2011-03-13 21:50:24 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,21 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final String[] TYPE_STRINGS = {
       "String", "Integer", "URL", "Year", "Boolean", "Positive Integer",
       "Range", "Numeric Range", "Set", "User:Passwd String", "Long"};
+
+  static Map<Integer,String> SAMPLE_VALUES = new HashMap<Integer,String>();
+  static {
+    SAMPLE_VALUES.put(TYPE_STRING, "SampleString");
+    SAMPLE_VALUES.put(TYPE_INT, "-42");
+    SAMPLE_VALUES.put(TYPE_URL, "http://example.com/path/file.ext");
+    SAMPLE_VALUES.put(TYPE_YEAR, "2038");
+    SAMPLE_VALUES.put(TYPE_BOOLEAN, "true");
+    SAMPLE_VALUES.put(TYPE_POS_INT, "42");
+    SAMPLE_VALUES.put(TYPE_RANGE, "abc-def");
+    SAMPLE_VALUES.put(TYPE_NUM_RANGE, "52-63");
+    SAMPLE_VALUES.put(TYPE_SET, "winter,spring,summer,fall");
+    SAMPLE_VALUES.put(TYPE_USER_PASSWD, "username:passwd");
+    SAMPLE_VALUES.put(TYPE_LONG, "1099511627776");
+  };
 
   public static final ConfigParamDescr VOLUME_NUMBER =
     new ConfigParamDescr()
@@ -198,6 +213,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setType(TYPE_USER_PASSWD)
     .setSize(30);
 
+  public static final ConfigParamDescr COLLECTION =
+    new ConfigParamDescr()
+    .setKey("collection")
+    .setDisplayName("Collection")
+    .setType(TYPE_STRING)
+    .setSize(20)
+    .setDescription("Name of ArchiveIt collection");
+
   // Internal use
   public static final ConfigParamDescr AU_CLOSED =
     new ConfigParamDescr()
@@ -252,7 +275,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID, JOURNAL_ISSN,
       PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
-      OAI_SPEC, BASE_URL2, USER_CREDENTIALS,
+      OAI_SPEC, BASE_URL2, USER_CREDENTIALS, COLLECTION
   };
 
   private String key;			// param (prop) key
@@ -595,6 +618,16 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     }
 
     return ret_val;
+  }
+
+  /** Return a legal value for the parameter.  Useful for generic plugin
+   * tests */
+  public String getSampleValue() {
+    String res = SAMPLE_VALUES.get(type);
+    if (res == null) {
+      res = "SampleValue";
+    }
+    return res;
   }
 
   public int compareTo(Object o) {

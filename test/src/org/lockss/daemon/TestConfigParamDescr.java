@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.12 2008-11-02 21:11:19 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.13 2011-03-13 21:50:24 tlipkis Exp $
  */
 
 /*
@@ -285,6 +285,33 @@ public class TestConfigParamDescr extends LockssTestCase {
     }
   }
 
-
-
+  public void testSampleValue() {
+    assertEquals("42", ConfigParamDescr.VOLUME_NUMBER.getSampleValue());
+    assertEquals("SampleString", ConfigParamDescr.VOLUME_NAME.getSampleValue());
+    assertEquals("abc-def", ConfigParamDescr.ISSUE_RANGE.getSampleValue());
+    assertEquals("52-63", ConfigParamDescr.NUM_ISSUE_RANGE.getSampleValue());
+    assertEquals("winter,spring,summer,fall",
+		 ConfigParamDescr.ISSUE_SET.getSampleValue());
+    assertEquals("2038", ConfigParamDescr.YEAR.getSampleValue());
+    assertEquals("http://example.com/path/file.ext",
+		 ConfigParamDescr.BASE_URL.getSampleValue());
+    assertEquals("http://example.com/path/file.ext",
+		 ConfigParamDescr.BASE_URL2.getSampleValue());
+    assertEquals("SampleString", ConfigParamDescr.JOURNAL_DIR.getSampleValue());
+    assertEquals("SampleString", ConfigParamDescr.JOURNAL_ABBR.getSampleValue());
+    assertEquals("SampleString", ConfigParamDescr.JOURNAL_ID.getSampleValue());
+    assertEquals("SampleString", ConfigParamDescr.JOURNAL_ISSN.getSampleValue());
+    assertEquals("SampleString",
+		 ConfigParamDescr.PUBLISHER_NAME.getSampleValue());
+    assertEquals("http://example.com/path/file.ext",
+		 ConfigParamDescr.OAI_REQUEST_URL.getSampleValue());
+    assertEquals("SampleString", ConfigParamDescr.OAI_SPEC.getSampleValue());
+    assertEquals("username:passwd",
+		 ConfigParamDescr.USER_CREDENTIALS.getSampleValue());
+    assertEquals("true", ConfigParamDescr.AU_CLOSED.getSampleValue());
+    assertEquals("true", ConfigParamDescr.PUB_DOWN.getSampleValue());
+    assertEquals("true", ConfigParamDescr.PUB_NEVER.getSampleValue());
+    assertEquals("42", ConfigParamDescr.PROTOCOL_VERSION.getSampleValue());
+    assertEquals("SampleString", ConfigParamDescr.CRAWL_PROXY.getSampleValue());
+  }
 }
