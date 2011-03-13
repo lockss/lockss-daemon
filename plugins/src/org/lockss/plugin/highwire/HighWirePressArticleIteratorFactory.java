@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePressArticleIteratorFactory.java,v 1.6 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: HighWirePressArticleIteratorFactory.java,v 1.7 2011-03-13 21:51:29 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,8 @@ public class HighWirePressArticleIteratorFactory
 
   public ArticleMetadataExtractor createArticleMetadataExtractor(MetadataTarget target)
       throws PluginException {
-    return new HighWirePressArticleMetadataExtractor();
+    return new BaseArticleMetadataExtractor(null);
+//     return new HighWirePressArticleMetadataExtractor();
   }
   
   protected static class HighWirePressArticleIterator extends SubTreeArticleIterator {
