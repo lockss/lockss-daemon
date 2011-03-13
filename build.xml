@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.270 2011-03-03 18:56:22 tlipkis Exp $
+ $Id: build.xml,v 1.271 2011-03-13 21:50:11 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -157,6 +157,12 @@ Args:
   <property name="plugins.dir" value="${basedir}/plugins/jars" />
 
   <property name="scripts"           value="${basedir}/scripts"/>
+
+  <!--  All python test files.  (How to factor out dir list?) -->
+  <fileset id="python.tests" dir="${basedir}">
+    <include name="scripts/**/*_test.py"/>
+    <include name="test/frameworks/*/*_test.py"/>
+  </fileset>
 
   <property name="ant"           value="${basedir}/ant"/>
   <property name="ant.src"       value="${ant}/src"/>
@@ -1673,7 +1679,6 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
     <property name="copies" value="1" />
     <basename property="indexname" file="${file}" suffix=".java" />
     <javadoc
-       sourcepath="${src}"
        sourcefiles="${file}"
        destdir="${javadoc}"
        failonerror="true"
@@ -1759,7 +1764,7 @@ JAVA_COMMAND_ARGS="-server `/usr/local/lib/maxheap` -Dsun.net.inetaddr.ttl=3600 
    description="Run a class named by class prop, with args in args prop" >
     <!-- default args empty if not supplied on command line -->
     <property name="args" value="" />
-    <java classname="${class}" fork="true">
+    <java classname="${class}" fork="true" failonerror="true">
        <classpath refid="test.run.classpath" />
        <arg line="${args}" />
        <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
@@ -1952,6 +1957,19 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
+  <target name="test-python"
+   depends="prepare.run.test"
+   description="Run all python unit tests." >
+    <apply executable="python" dir="${basedir}"
+           relative="true"
+           parallel="false"
+	   failonerror="true"
+	   failifexecutionfails="false">
+      <fileset refid="python.tests" />
+    </apply>
+  </target>
+
+  <!-- ==================================================================== -->
   <target name="test-stf"
    depends="prepare.run.test,jar-tools-tests,jar-plugins-tests"
    description="Run an stf test suite" >
@@ -2000,7 +2018,97 @@ Test results in ${test.results}
     </if>
   </target>
 
-  <target name="load-plugins" depends="jar-tests,jar-plugins,-load-build-info"
+  <target name="load-plugins"
+	  depends="jar-tests,jar-plugins,prepare.run.test,-load-build-info"
+   description="Ensure plugins are well-formed by attempting to load them" >
+    <fileset id="plugin.files.filesetid" dir="${plugins.classes}">
+      <include name="**/*Plugin.xml"/>
+    </fileset>
+    <!-- convert the list of files to a string of plugin names -->
+    <pathconvert refid="plugin.files.filesetid"
+      property="plugin.names"
+      pathsep=";"
+      targetos="${detected.os}">
+       <mapper>
+        <packagemapper from="${plugins.classes}/*.xml" to="*"
+           casesensitive="no"/>
+       </mapper>
+    </pathconvert>
+
+    <if>
+     <not> <equals arg1="${plugin.names}" arg2="" /> </not>
+     <then>
+      <echo message="Validating plugin xml files"/>
+      <junit1 fork="${fork}" printsummary="yes" maxmemory="256m"
+	      filtertrace="${filtertrace}" showoutput="${showoutput}">
+        <test fork="${fork}" name="org.lockss.test.PluginTestCase" />
+	<!-- 	    <jvmarg value="-server"/> -->
+	<formatter type="plain" usefile="@{usefile}" />
+	<classpath refid="test.run.classpath" />
+        <sysproperty key="org.lockss.test.TestPluginNames"
+		     value="${plugin.names}"/>
+        <sysproperty key="org.lockss.manager.PluginManager"
+		     value="org.lockss.test.NonVersionCheckingPluginManager"/>
+	<sysproperty key="org.lockss.unitTesting" value="true"/>
+	<sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+	<sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+	<sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      </junit1>
+     </then>
+     <else>
+      <echo message="No plugin xml files found"/>
+     </else>
+    </if>
+  </target>
+
+<!-- Alternate versions, much slower -->
+<!--       <for list="${plugin.names}" delimiter=" " param="plugname"> -->
+<!-- 	<sequential> -->
+<!-- 	  <junit1 fork="${fork}" printsummary="yes" maxmemory="256m" -->
+<!-- 		  haltonfailure="${halt}" failureproperty="failed" -->
+<!-- 		  filtertrace="${filtertrace}" showoutput="${showoutput}"> -->
+<!--             <test fork="${fork}" name="org.lockss.test.PluginTestCase" /> -->
+     <!-- 	    <jvmarg value="-server"/> -->
+<!-- 	    <formatter type="plain" usefile="@{usefile}" /> -->
+<!-- 	    <classpath refid="test.run.classpath" /> -->
+<!--             <sysproperty key="org.lockss.test.TestPluginName" -->
+<!-- 			 value="@{plugname}"/> -->
+<!--             <sysproperty key="org.lockss.manager.PluginManager" -->
+<!-- 			 value="org.lockss.test.NonVersionCheckingPluginManager"/> -->
+<!-- 	    <sysproperty key="org.lockss.unitTesting" value="true"/> -->
+<!-- 	    <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/> -->
+<!-- 	    <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/> -->
+<!-- 	    <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/> -->
+<!-- 	  </junit1> -->
+<!-- 	  <if> -->
+<!--             <isset property="failed" /> -->
+<!-- 	    <then> -->
+<!-- 	      <property name="anyfailed" value="failed" /> -->
+<!-- 	    </then> -->
+<!-- 	  </if> -->
+<!-- 	  <java classname="org.lockss.test.PluginTestCase" -->
+<!-- 		fork="true" failonerror="${halt}" resultproperty="result"> -->
+<!-- 	    <classpath refid="test.run.classpath" /> -->
+<!--             <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/> -->
+<!--             <sysproperty key="org.lockss.test.TestPluginName" -->
+<!-- 			 value="@{plugname}"/> -->
+<!--             <sysproperty key="org.lockss.manager.PluginManager" -->
+<!-- 			 value="org.lockss.test.NonVersionCheckingPluginManager"/> -->
+<!-- 	    <arg line="@{plugname}" /> -->
+<!-- 	  </java> -->
+<!-- 	  <if> -->
+<!-- 	    <not> <equals arg1="${result}" arg2="0" /> </not> -->
+<!-- 	    <then> -->
+<!-- 	      <property name="anyfailed" value="failed" /> -->
+<!-- 	    </then> -->
+<!-- 	  </if> -->
+<!-- 	</sequential> -->
+<!--       </for> -->
+<!--       <fail if="anyfailed" -->
+<!-- 	    message="One or more plugin(s) failed to load or create AU." /> -->
+
+  <target name="load-plugins-old"
+	  depends="jar-tests,jar-plugins,-load-build-info"
    description="Ensure plugins are well-formed by attempting to load them" >
 <!--  Some plugins specify a minimum required daemon release version, so
       this test can't be run in daemon version 0.0.0 -->
