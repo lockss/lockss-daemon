@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.271 2011-03-13 21:50:11 tlipkis Exp $
+ $Id: build.xml,v 1.272 2011-03-13 22:06:49 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -2060,52 +2060,6 @@ Test results in ${test.results}
      </else>
     </if>
   </target>
-
-<!-- Alternate versions, much slower -->
-<!--       <for list="${plugin.names}" delimiter=" " param="plugname"> -->
-<!-- 	<sequential> -->
-<!-- 	  <junit1 fork="${fork}" printsummary="yes" maxmemory="256m" -->
-<!-- 		  haltonfailure="${halt}" failureproperty="failed" -->
-<!-- 		  filtertrace="${filtertrace}" showoutput="${showoutput}"> -->
-<!--             <test fork="${fork}" name="org.lockss.test.PluginTestCase" /> -->
-     <!-- 	    <jvmarg value="-server"/> -->
-<!-- 	    <formatter type="plain" usefile="@{usefile}" /> -->
-<!-- 	    <classpath refid="test.run.classpath" /> -->
-<!--             <sysproperty key="org.lockss.test.TestPluginName" -->
-<!-- 			 value="@{plugname}"/> -->
-<!--             <sysproperty key="org.lockss.manager.PluginManager" -->
-<!-- 			 value="org.lockss.test.NonVersionCheckingPluginManager"/> -->
-<!-- 	    <sysproperty key="org.lockss.unitTesting" value="true"/> -->
-<!-- 	    <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/> -->
-<!-- 	    <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/> -->
-<!-- 	    <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/> -->
-<!-- 	  </junit1> -->
-<!-- 	  <if> -->
-<!--             <isset property="failed" /> -->
-<!-- 	    <then> -->
-<!-- 	      <property name="anyfailed" value="failed" /> -->
-<!-- 	    </then> -->
-<!-- 	  </if> -->
-<!-- 	  <java classname="org.lockss.test.PluginTestCase" -->
-<!-- 		fork="true" failonerror="${halt}" resultproperty="result"> -->
-<!-- 	    <classpath refid="test.run.classpath" /> -->
-<!--             <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/> -->
-<!--             <sysproperty key="org.lockss.test.TestPluginName" -->
-<!-- 			 value="@{plugname}"/> -->
-<!--             <sysproperty key="org.lockss.manager.PluginManager" -->
-<!-- 			 value="org.lockss.test.NonVersionCheckingPluginManager"/> -->
-<!-- 	    <arg line="@{plugname}" /> -->
-<!-- 	  </java> -->
-<!-- 	  <if> -->
-<!-- 	    <not> <equals arg1="${result}" arg2="0" /> </not> -->
-<!-- 	    <then> -->
-<!-- 	      <property name="anyfailed" value="failed" /> -->
-<!-- 	    </then> -->
-<!-- 	  </if> -->
-<!-- 	</sequential> -->
-<!--       </for> -->
-<!--       <fail if="anyfailed" -->
-<!-- 	    message="One or more plugin(s) failed to load or create AU." /> -->
 
   <target name="load-plugins-old"
 	  depends="jar-tests,jar-plugins,-load-build-info"
