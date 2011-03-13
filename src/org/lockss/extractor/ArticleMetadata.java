@@ -1,5 +1,5 @@
 /*
- * $Id: ArticleMetadata.java,v 1.2 2011-01-20 08:37:43 tlipkis Exp $
+ * $Id: ArticleMetadata.java,v 1.3 2011-03-13 21:51:57 tlipkis Exp $
  */
 
 /*
@@ -443,7 +443,7 @@ public class ArticleMetadata {
     for (String key : keySet()) {
       sb.append(" [");
       sb.append(key);
-      sb.append(", ");
+      sb.append(": ");
       List lst = getCollection(key);
       if (lst.isEmpty()) {
 	sb.append("(null)");
