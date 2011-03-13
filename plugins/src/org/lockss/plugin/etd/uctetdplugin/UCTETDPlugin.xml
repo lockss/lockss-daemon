@@ -37,7 +37,7 @@
         <key>oai_request_url</key>
         <displayName>OAI Request URL</displayName>
         <description>Usually of the form http://&lt;journal-name&gt;.com/&lt;OAI-application&gt;</description>
-        <type>1</type>
+        <type>3</type>
         <size>40</size>
         <definitional>true</definitional>
         <defaultOnly>false</defaultOnly>

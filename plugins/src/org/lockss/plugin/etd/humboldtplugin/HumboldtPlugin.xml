@@ -53,7 +53,7 @@
         <Key>oai_request_url</Key>
         <DisplayName>OAI Request URL</DisplayName>
         <Description>Usually of the form http://&lt;ETD-name&gt;.com/</Description>
-        <Type>1</Type>
+        <Type>3</Type>
         <Size>40</Size>
         <Definitional>true</Definitional>
       </ConfigParamDescr>
