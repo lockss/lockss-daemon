@@ -17,31 +17,31 @@
     param[collection_id] = GPO
     implicit < status ; year ; name ; param[year] >
     
-    au < released ; 1907 ; Additional Government Publications 1907 ; 1907 >
-    au < released ; 1936 ; Additional Government Publications 1936 ; 1936 >
-    au < released ; 1970 ; Additional Government Publications 1970 ; 1970 >
-    au < released ; 1986 ; Additional Government Publications 1986 ; 1986 >
-    au < released ; 1987 ; Additional Government Publications 1987 ; 1987 >
-    au < released ; 1989 ; Additional Government Publications 1989 ; 1989 >
-    au < released ; 1990 ; Additional Government Publications 1990 ; 1990 >
-    au < released ; 1992 ; Additional Government Publications 1992 ; 1992 >
-    au < released ; 1994 ; Additional Government Publications 1994 ; 1994 >
-    au < released ; 1995 ; Additional Government Publications 1995 ; 1995 >
-    au < released ; 1996 ; Additional Government Publications 1996 ; 1996 >
-    au < released ; 1997 ; Additional Government Publications 1997 ; 1997 >
-    au < released ; 1998 ; Additional Government Publications 1998 ; 1998 >
-    au < released ; 1999 ; Additional Government Publications 1999 ; 1999 >
-    au < released ; 2000 ; Additional Government Publications 2000 ; 2000 >
-    au < released ; 2001 ; Additional Government Publications 2001 ; 2001 >
-    au < released ; 2002 ; Additional Government Publications 2002 ; 2002 >
-    au < released ; 2003 ; Additional Government Publications 2003 ; 2003 >
-    au < released ; 2004 ; Additional Government Publications 2004 ; 2004 >
-    au < released ; 2005 ; Additional Government Publications 2005 ; 2005 >
-    au < released ; 2006 ; Additional Government Publications 2006 ; 2006 >
-    au < released ; 2007 ; Additional Government Publications 2007 ; 2007 >
-    au < released ; 2008 ; Additional Government Publications 2008 ; 2008 >
-    au < released ; 2009 ; Additional Government Publications 2009 ; 2009 >
-    au < released ; 2010 ; Additional Government Publications 2010 ; 2010 >
+    au < down ; 1907 ; Additional Government Publications 1907 ; 1907 >
+    au < down ; 1936 ; Additional Government Publications 1936 ; 1936 >
+    au < down ; 1970 ; Additional Government Publications 1970 ; 1970 >
+    au < down ; 1986 ; Additional Government Publications 1986 ; 1986 >
+    au < down ; 1987 ; Additional Government Publications 1987 ; 1987 >
+    au < down ; 1989 ; Additional Government Publications 1989 ; 1989 >
+    au < down ; 1990 ; Additional Government Publications 1990 ; 1990 >
+    au < down ; 1992 ; Additional Government Publications 1992 ; 1992 >
+    au < down ; 1994 ; Additional Government Publications 1994 ; 1994 >
+    au < down ; 1995 ; Additional Government Publications 1995 ; 1995 >
+    au < down ; 1996 ; Additional Government Publications 1996 ; 1996 >
+    au < down ; 1997 ; Additional Government Publications 1997 ; 1997 >
+    au < down ; 1998 ; Additional Government Publications 1998 ; 1998 >
+    au < down ; 1999 ; Additional Government Publications 1999 ; 1999 >
+    au < down ; 2000 ; Additional Government Publications 2000 ; 2000 >
+    au < down ; 2001 ; Additional Government Publications 2001 ; 2001 >
+    au < down ; 2002 ; Additional Government Publications 2002 ; 2002 >
+    au < down ; 2003 ; Additional Government Publications 2003 ; 2003 >
+    au < down ; 2004 ; Additional Government Publications 2004 ; 2004 >
+    au < down ; 2005 ; Additional Government Publications 2005 ; 2005 >
+    au < down ; 2006 ; Additional Government Publications 2006 ; 2006 >
+    au < down ; 2007 ; Additional Government Publications 2007 ; 2007 >
+    au < down ; 2008 ; Additional Government Publications 2008 ; 2008 >
+    au < down ; 2009 ; Additional Government Publications 2009 ; 2009 >
+    au < down ; 2010 ; Additional Government Publications 2010 ; 2010 >
 
   }
   
@@ -56,8 +56,8 @@
     param[collection_id] = BUDGET
     implicit < status ; year ; name ; param[year] >
     
-    au < released ; 2009 ; Budget of the United States Government 2009 ; 2009 >
-    au < released ; 2010 ; Budget of the United States Government 2010 ; 2010 >
+    au < down ; 2009 ; Budget of the United States Government 2009 ; 2009 >
+    au < down ; 2010 ; Budget of the United States Government 2010 ; 2010 >
 
   }
   
@@ -74,21 +74,21 @@
       param[collection_id] = CFR
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
-      au < released ; 1997 ; Code of Federal Regulations 1997 ; 1997 >
-      au < released ; 1998 ; Code of Federal Regulations 1998 ; 1998 >
-      au < released ; 1999 ; Code of Federal Regulations 1999 ; 1999 >
-      au < released ; 2000 ; Code of Federal Regulations 2000 ; 2000 >
-      au < released ; 2001 ; Code of Federal Regulations 2001 ; 2001 >
-      au < released ; 2002 ; Code of Federal Regulations 2002 ; 2002 >
-      au < released ; 2003 ; Code of Federal Regulations 2003 ; 2003 >
-      au < released ; 2004 ; Code of Federal Regulations 2004 ; 2004 >
-      au < released ; 2005 ; Code of Federal Regulations 2005 ; 2005 >
-      au < released ; 2006 ; Code of Federal Regulations 2006 ; 2006 >
-      au < released ; 2007 ; Code of Federal Regulations 2007 ; 2007 >
-      au < released ; 2008 ; Code of Federal Regulations 2008 ; 2008 >
-      au < released ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
-      au < released ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
+      au < down ; 1996 ; Code of Federal Regulations 1996 ; 1996 >
+      au < down ; 1997 ; Code of Federal Regulations 1997 ; 1997 >
+      au < down ; 1998 ; Code of Federal Regulations 1998 ; 1998 >
+      au < down ; 1999 ; Code of Federal Regulations 1999 ; 1999 >
+      au < down ; 2000 ; Code of Federal Regulations 2000 ; 2000 >
+      au < down ; 2001 ; Code of Federal Regulations 2001 ; 2001 >
+      au < down ; 2002 ; Code of Federal Regulations 2002 ; 2002 >
+      au < down ; 2003 ; Code of Federal Regulations 2003 ; 2003 >
+      au < down ; 2004 ; Code of Federal Regulations 2004 ; 2004 >
+      au < down ; 2005 ; Code of Federal Regulations 2005 ; 2005 >
+      au < down ; 2006 ; Code of Federal Regulations 2006 ; 2006 >
+      au < down ; 2007 ; Code of Federal Regulations 2007 ; 2007 >
+      au < down ; 2008 ; Code of Federal Regulations 2008 ; 2008 >
+      au < down ; 2009 ; Code of Federal Regulations 2009 ; 2009 >
+      au < down ; 2010 ; Code of Federal Regulations 2010 ; 2010 >
 
     }
       
@@ -99,17 +99,17 @@
       param[collection_id] = CFR
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 2000 ; Code of Federal Regulations (Bulk Data) 2000 ; 2000 >
-      au < released ; 2001 ; Code of Federal Regulations (Bulk Data) 2001 ; 2001 >
-      au < released ; 2002 ; Code of Federal Regulations (Bulk Data) 2002 ; 2002 >
-      au < released ; 2003 ; Code of Federal Regulations (Bulk Data) 2003 ; 2003 >
-      au < released ; 2004 ; Code of Federal Regulations (Bulk Data) 2004 ; 2004 >
-      au < released ; 2005 ; Code of Federal Regulations (Bulk Data) 2005 ; 2005 >
-      au < released ; 2006 ; Code of Federal Regulations (Bulk Data) 2006 ; 2006 >
-      au < released ; 2007 ; Code of Federal Regulations (Bulk Data) 2007 ; 2007 >
-      au < released ; 2008 ; Code of Federal Regulations (Bulk Data) 2008 ; 2008 >
-      au < released ; 2009 ; Code of Federal Regulations (Bulk Data) 2009 ; 2009 >
-      au < released ; 2010 ; Code of Federal Regulations (Bulk Data) 2010 ; 2010 >
+      au < down ; 2000 ; Code of Federal Regulations (Bulk Data) 2000 ; 2000 >
+      au < down ; 2001 ; Code of Federal Regulations (Bulk Data) 2001 ; 2001 >
+      au < down ; 2002 ; Code of Federal Regulations (Bulk Data) 2002 ; 2002 >
+      au < down ; 2003 ; Code of Federal Regulations (Bulk Data) 2003 ; 2003 >
+      au < down ; 2004 ; Code of Federal Regulations (Bulk Data) 2004 ; 2004 >
+      au < down ; 2005 ; Code of Federal Regulations (Bulk Data) 2005 ; 2005 >
+      au < down ; 2006 ; Code of Federal Regulations (Bulk Data) 2006 ; 2006 >
+      au < down ; 2007 ; Code of Federal Regulations (Bulk Data) 2007 ; 2007 >
+      au < down ; 2008 ; Code of Federal Regulations (Bulk Data) 2008 ; 2008 >
+      au < down ; 2009 ; Code of Federal Regulations (Bulk Data) 2009 ; 2009 >
+      au < down ; 2010 ; Code of Federal Regulations (Bulk Data) 2010 ; 2010 >
     
     }
 
@@ -128,24 +128,24 @@
       param[collection_id] = BILLS
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1993 ; Congressional Bills 1993 ; 1993 >
-      au < released ; 1994 ; Congressional Bills 1994 ; 1994 >
-      au < released ; 1995 ; Congressional Bills 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Bills 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Bills 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Bills 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Bills 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Bills 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Bills 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Bills 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Bills 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Bills 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Bills 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Bills 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Bills 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Bills 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Bills 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Bills 2010 ; 2010 >
+      au < down ; 1993 ; Congressional Bills 1993 ; 1993 >
+      au < down ; 1994 ; Congressional Bills 1994 ; 1994 >
+      au < down ; 1995 ; Congressional Bills 1995 ; 1995 >
+      au < down ; 1996 ; Congressional Bills 1996 ; 1996 >
+      au < down ; 1997 ; Congressional Bills 1997 ; 1997 >
+      au < down ; 1998 ; Congressional Bills 1998 ; 1998 >
+      au < down ; 1999 ; Congressional Bills 1999 ; 1999 >
+      au < down ; 2000 ; Congressional Bills 2000 ; 2000 >
+      au < down ; 2001 ; Congressional Bills 2001 ; 2001 >
+      au < down ; 2002 ; Congressional Bills 2002 ; 2002 >
+      au < down ; 2003 ; Congressional Bills 2003 ; 2003 >
+      au < down ; 2004 ; Congressional Bills 2004 ; 2004 >
+      au < down ; 2005 ; Congressional Bills 2005 ; 2005 >
+      au < down ; 2006 ; Congressional Bills 2006 ; 2006 >
+      au < down ; 2007 ; Congressional Bills 2007 ; 2007 >
+      au < down ; 2008 ; Congressional Bills 2008 ; 2008 >
+      au < down ; 2009 ; Congressional Bills 2009 ; 2009 >
+      au < down ; 2010 ; Congressional Bills 2010 ; 2010 >
 
     }
       
@@ -156,13 +156,13 @@
       implicit < status ; name ; param[congress] >
 
       au < wanted ; Congressional Bills, 103rd Congress [Public.Resource.Org] ; 103 >
-      au < released ; Congressional Bills, 104th Congress [Public.Resource.Org] ; 104 >
-      au < released ; Congressional Bills, 105th Congress [Public.Resource.Org] ; 105 >
-      au < released ; Congressional Bills, 106th Congress [Public.Resource.Org] ; 106 >
-      au < released ; Congressional Bills, 107th Congress [Public.Resource.Org] ; 107 >
-      au < released ; Congressional Bills, 108th Congress [Public.Resource.Org] ; 108 >
-      au < released ; Congressional Bills, 109th Congress [Public.Resource.Org] ; 109 >
-      au < released ; Congressional Bills, 110th Congress [Public.Resource.Org] ; 110 >
+      au < down ; Congressional Bills, 104th Congress [Public.Resource.Org] ; 104 >
+      au < down ; Congressional Bills, 105th Congress [Public.Resource.Org] ; 105 >
+      au < down ; Congressional Bills, 106th Congress [Public.Resource.Org] ; 106 >
+      au < down ; Congressional Bills, 107th Congress [Public.Resource.Org] ; 107 >
+      au < down ; Congressional Bills, 108th Congress [Public.Resource.Org] ; 108 >
+      au < down ; Congressional Bills, 109th Congress [Public.Resource.Org] ; 109 >
+      au < down ; Congressional Bills, 110th Congress [Public.Resource.Org] ; 110 >
 
     }
 
@@ -179,17 +179,17 @@
     param[collection_id] = CCAL
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1996 ; Congressional Calendars 1996 ; 1996 >
-    au < released ; 1998 ; Congressional Calendars 1998 ; 1998 >
-    au < released ; 2000 ; Congressional Calendars 2000 ; 2000 >
-    au < released ; 2002 ; Congressional Calendars 2002 ; 2002 >
-    au < released ; 2004 ; Congressional Calendars 2004 ; 2004 >
-    au < released ; 2005 ; Congressional Calendars 2005 ; 2005 >
-    au < released ; 2006 ; Congressional Calendars 2006 ; 2006 >
-    au < released ; 2007 ; Congressional Calendars 2007 ; 2007 >
-    au < released ; 2008 ; Congressional Calendars 2008 ; 2008 >
-    au < released ; 2009 ; Congressional Calendars 2009 ; 2009 >
-    au < released ; 2010 ; Congressional Calendars 2010 ; 2010 >
+    au < down ; 1996 ; Congressional Calendars 1996 ; 1996 >
+    au < down ; 1998 ; Congressional Calendars 1998 ; 1998 >
+    au < down ; 2000 ; Congressional Calendars 2000 ; 2000 >
+    au < down ; 2002 ; Congressional Calendars 2002 ; 2002 >
+    au < down ; 2004 ; Congressional Calendars 2004 ; 2004 >
+    au < down ; 2005 ; Congressional Calendars 2005 ; 2005 >
+    au < down ; 2006 ; Congressional Calendars 2006 ; 2006 >
+    au < down ; 2007 ; Congressional Calendars 2007 ; 2007 >
+    au < down ; 2008 ; Congressional Calendars 2008 ; 2008 >
+    au < down ; 2009 ; Congressional Calendars 2009 ; 2009 >
+    au < down ; 2010 ; Congressional Calendars 2010 ; 2010 >
       
   }
 
@@ -206,23 +206,23 @@
       param[collection_id] = CPRT
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
-      au < released ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
+      au < down ; 1968 ; Congressional Committee Prints 1968 ; 1968 >
+      au < down ; 1995 ; Congressional Committee Prints 1995 ; 1995 >
+      au < down ; 1996 ; Congressional Committee Prints 1996 ; 1996 >
+      au < down ; 1997 ; Congressional Committee Prints 1997 ; 1997 >
+      au < down ; 1998 ; Congressional Committee Prints 1998 ; 1998 >
+      au < down ; 1999 ; Congressional Committee Prints 1999 ; 1999 >
+      au < down ; 2000 ; Congressional Committee Prints 2000 ; 2000 >
+      au < down ; 2001 ; Congressional Committee Prints 2001 ; 2001 >
+      au < down ; 2002 ; Congressional Committee Prints 2002 ; 2002 >
+      au < down ; 2003 ; Congressional Committee Prints 2003 ; 2003 >
+      au < down ; 2004 ; Congressional Committee Prints 2004 ; 2004 >
+      au < down ; 2005 ; Congressional Committee Prints 2005 ; 2005 >
+      au < down ; 2006 ; Congressional Committee Prints 2006 ; 2006 >
+      au < down ; 2007 ; Congressional Committee Prints 2007 ; 2007 >
+      au < down ; 2008 ; Congressional Committee Prints 2008 ; 2008 >
+      au < down ; 2009 ; Congressional Committee Prints 2009 ; 2009 >
+      au < down ; 2010 ; Congressional Committee Prints 2010 ; 2010 >
 
     }
       
@@ -232,12 +232,12 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[congress] >
 
-      au < released ; Congressional Committee Prints, 105th Congress [Public.Resource.Org] ; 105 >
-      au < released ; Congressional Committee Prints, 106th Congress [Public.Resource.Org] ; 106 >
-      au < released ; Congressional Committee Prints, 107th Congress [Public.Resource.Org] ; 107 >
-      au < released ; Congressional Committee Prints, 108th Congress [Public.Resource.Org] ; 108 >
-      au < released ; Congressional Committee Prints, 109th Congress [Public.Resource.Org] ; 109 > 
-      au < released ; Congressional Committee Prints, 110th Congress [Public.Resource.Org] ; 110 >
+      au < down ; Congressional Committee Prints, 105th Congress [Public.Resource.Org] ; 105 >
+      au < down ; Congressional Committee Prints, 106th Congress [Public.Resource.Org] ; 106 >
+      au < down ; Congressional Committee Prints, 107th Congress [Public.Resource.Org] ; 107 >
+      au < down ; Congressional Committee Prints, 108th Congress [Public.Resource.Org] ; 108 >
+      au < down ; Congressional Committee Prints, 109th Congress [Public.Resource.Org] ; 109 > 
+      au < down ; Congressional Committee Prints, 110th Congress [Public.Resource.Org] ; 110 >
     
     }
 
@@ -254,18 +254,18 @@
     param[collection_id] = CDIR
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1997 ; Congressional Directory 1997 ; 1997 >
-    au < released ; 1999 ; Congressional Directory 1999 ; 1999 >
-    au < released ; 2000 ; Congressional Directory 2000 ; 2000 >
-    au < released ; 2001 ; Congressional Directory 2001 ; 2001 >
-    au < released ; 2002 ; Congressional Directory 2002 ; 2002 >
-    au < released ; 2003 ; Congressional Directory 2003 ; 2003 >
-    au < released ; 2004 ; Congressional Directory 2004 ; 2004 >
-    au < released ; 2005 ; Congressional Directory 2005 ; 2005 >
-    au < released ; 2006 ; Congressional Directory 2006 ; 2006 >
-    au < released ; 2007 ; Congressional Directory 2007 ; 2007 >
-    au < released ; 2008 ; Congressional Directory 2008 ; 2008 >
-    au < released ; 2009 ; Congressional Directory 2009 ; 2009 >
+    au < down ; 1997 ; Congressional Directory 1997 ; 1997 >
+    au < down ; 1999 ; Congressional Directory 1999 ; 1999 >
+    au < down ; 2000 ; Congressional Directory 2000 ; 2000 >
+    au < down ; 2001 ; Congressional Directory 2001 ; 2001 >
+    au < down ; 2002 ; Congressional Directory 2002 ; 2002 >
+    au < down ; 2003 ; Congressional Directory 2003 ; 2003 >
+    au < down ; 2004 ; Congressional Directory 2004 ; 2004 >
+    au < down ; 2005 ; Congressional Directory 2005 ; 2005 >
+    au < down ; 2006 ; Congressional Directory 2006 ; 2006 >
+    au < down ; 2007 ; Congressional Directory 2007 ; 2007 >
+    au < down ; 2008 ; Congressional Directory 2008 ; 2008 >
+    au < down ; 2009 ; Congressional Directory 2009 ; 2009 >
       
   }
 
@@ -282,28 +282,28 @@
       param[collection_id] = CDOC
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1862 ; Congressional Documents 1862 ; 1862 >
-      au < released ; 1936 ; Congressional Documents 1936 ; 1936 >
-      au < released ; 1960 ; Congressional Documents 1960 ; 1960 >
-      au < released ; 1992 ; Congressional Documents 1992 ; 1992 >
-      au < released ; 1994 ; Congressional Documents 1994 ; 1994 >
-      au < released ; 1995 ; Congressional Documents 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Documents 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Documents 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Documents 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Documents 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Documents 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Documents 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Documents 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Documents 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Documents 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Documents 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Documents 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Documents 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Documents 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Documents 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Documents 2010 ; 2010 >
-      au < released ; 2011 ; Congressional Documents 2011 ; 2011 >
+      au < down ; 1862 ; Congressional Documents 1862 ; 1862 >
+      au < down ; 1936 ; Congressional Documents 1936 ; 1936 >
+      au < down ; 1960 ; Congressional Documents 1960 ; 1960 >
+      au < down ; 1992 ; Congressional Documents 1992 ; 1992 >
+      au < down ; 1994 ; Congressional Documents 1994 ; 1994 >
+      au < down ; 1995 ; Congressional Documents 1995 ; 1995 >
+      au < down ; 1996 ; Congressional Documents 1996 ; 1996 >
+      au < down ; 1997 ; Congressional Documents 1997 ; 1997 >
+      au < down ; 1998 ; Congressional Documents 1998 ; 1998 >
+      au < down ; 1999 ; Congressional Documents 1999 ; 1999 >
+      au < down ; 2000 ; Congressional Documents 2000 ; 2000 >
+      au < down ; 2001 ; Congressional Documents 2001 ; 2001 >
+      au < down ; 2002 ; Congressional Documents 2002 ; 2002 >
+      au < down ; 2003 ; Congressional Documents 2003 ; 2003 >
+      au < down ; 2004 ; Congressional Documents 2004 ; 2004 >
+      au < down ; 2005 ; Congressional Documents 2005 ; 2005 >
+      au < down ; 2006 ; Congressional Documents 2006 ; 2006 >
+      au < down ; 2007 ; Congressional Documents 2007 ; 2007 >
+      au < down ; 2008 ; Congressional Documents 2008 ; 2008 >
+      au < down ; 2009 ; Congressional Documents 2009 ; 2009 >
+      au < down ; 2010 ; Congressional Documents 2010 ; 2010 >
+      au < down ; 2011 ; Congressional Documents 2011 ; 2011 >
 
     }
       
@@ -313,13 +313,13 @@
       param[base_url] = http://bulk.resource.org/
       implicit < status ; name ; param[congress] >
 
-      au < released ; Congressional Documents, 104th Congress [Public.Resource.Org] ; 104 >
-      au < released ; Congressional Documents, 105th Congress [Public.Resource.Org] ; 105 >
-      au < released ; Congressional Documents, 106th Congress [Public.Resource.Org] ; 106 >
-      au < released ; Congressional Documents, 107th Congress [Public.Resource.Org] ; 107 >
-      au < released ; Congressional Documents, 108th Congress [Public.Resource.Org] ; 108 >
-      au < released ; Congressional Documents, 109th Congress [Public.Resource.Org] ; 109 >
-      au < released ; Congressional Documents, 110th Congress [Public.Resource.Org] ; 110 >
+      au < down ; Congressional Documents, 104th Congress [Public.Resource.Org] ; 104 >
+      au < down ; Congressional Documents, 105th Congress [Public.Resource.Org] ; 105 >
+      au < down ; Congressional Documents, 106th Congress [Public.Resource.Org] ; 106 >
+      au < down ; Congressional Documents, 107th Congress [Public.Resource.Org] ; 107 >
+      au < down ; Congressional Documents, 108th Congress [Public.Resource.Org] ; 108 >
+      au < down ; Congressional Documents, 109th Congress [Public.Resource.Org] ; 109 >
+      au < down ; Congressional Documents, 110th Congress [Public.Resource.Org] ; 110 >
  
     }
  
@@ -338,22 +338,22 @@
       param[collection_id] = CHRG
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1995 ; Congressional Hearings 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Hearings 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Hearings 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Hearings 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Hearings 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Hearings 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Hearings 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Hearings 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Hearings 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Hearings 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Hearings 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Hearings 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Hearings 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Hearings 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Hearings 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Hearings 2010 ; 2010 >
+      au < down ; 1995 ; Congressional Hearings 1995 ; 1995 >
+      au < down ; 1996 ; Congressional Hearings 1996 ; 1996 >
+      au < down ; 1997 ; Congressional Hearings 1997 ; 1997 >
+      au < down ; 1998 ; Congressional Hearings 1998 ; 1998 >
+      au < down ; 1999 ; Congressional Hearings 1999 ; 1999 >
+      au < down ; 2000 ; Congressional Hearings 2000 ; 2000 >
+      au < down ; 2001 ; Congressional Hearings 2001 ; 2001 >
+      au < down ; 2002 ; Congressional Hearings 2002 ; 2002 >
+      au < down ; 2003 ; Congressional Hearings 2003 ; 2003 >
+      au < down ; 2004 ; Congressional Hearings 2004 ; 2004 >
+      au < down ; 2005 ; Congressional Hearings 2005 ; 2005 >
+      au < down ; 2006 ; Congressional Hearings 2006 ; 2006 >
+      au < down ; 2007 ; Congressional Hearings 2007 ; 2007 >
+      au < down ; 2008 ; Congressional Hearings 2008 ; 2008 >
+      au < down ; 2009 ; Congressional Hearings 2009 ; 2009 >
+      au < down ; 2010 ; Congressional Hearings 2010 ; 2010 >
 
     }
       
@@ -374,12 +374,12 @@
       implicit < status ; name ; param[congress] >
 
       au < doNotProcess ; Congressional Hearings, 104th Congress [Public.Resource.Org] ; 104 >
-      au < released ; Congressional Hearings, 105th Congress [Public.Resource.Org] ; 105 >
-      au < released ; Congressional Hearings, 106th Congress [Public.Resource.Org] ; 106 >
+      au < down ; Congressional Hearings, 105th Congress [Public.Resource.Org] ; 105 >
+      au < down ; Congressional Hearings, 106th Congress [Public.Resource.Org] ; 106 >
       au < wanted ; Congressional Hearings, 107th Congress [Public.Resource.Org] ; 107 >
-      au < released ; Congressional Hearings, 108th Congress [Public.Resource.Org] ; 108 >
-      au < released ; Congressional Hearings, 109th Congress [Public.Resource.Org] ; 109 >
-      au < released ; Congressional Hearings, 110th Congress [Public.Resource.Org] ; 110 >
+      au < down ; Congressional Hearings, 108th Congress [Public.Resource.Org] ; 108 >
+      au < down ; Congressional Hearings, 109th Congress [Public.Resource.Org] ; 109 >
+      au < down ; Congressional Hearings, 110th Congress [Public.Resource.Org] ; 110 >
       
     }
 
@@ -398,23 +398,23 @@
       param[collection_id] = CREC
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1994 ; Congressional Record 1994 ; 1994 >
-      au < released ; 1995 ; Congressional Record 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Record 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Record 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Record 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Record 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Record 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Record 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Record 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Record 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Record 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Record 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Record 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Record 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Record 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Record 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Record 2010 ; 2010 >
+      au < down ; 1994 ; Congressional Record 1994 ; 1994 >
+      au < down ; 1995 ; Congressional Record 1995 ; 1995 >
+      au < down ; 1996 ; Congressional Record 1996 ; 1996 >
+      au < down ; 1997 ; Congressional Record 1997 ; 1997 >
+      au < down ; 1998 ; Congressional Record 1998 ; 1998 >
+      au < down ; 1999 ; Congressional Record 1999 ; 1999 >
+      au < down ; 2000 ; Congressional Record 2000 ; 2000 >
+      au < down ; 2001 ; Congressional Record 2001 ; 2001 >
+      au < down ; 2002 ; Congressional Record 2002 ; 2002 >
+      au < down ; 2003 ; Congressional Record 2003 ; 2003 >
+      au < down ; 2004 ; Congressional Record 2004 ; 2004 >
+      au < down ; 2005 ; Congressional Record 2005 ; 2005 >
+      au < down ; 2006 ; Congressional Record 2006 ; 2006 >
+      au < down ; 2007 ; Congressional Record 2007 ; 2007 >
+      au < down ; 2008 ; Congressional Record 2008 ; 2008 >
+      au < down ; 2009 ; Congressional Record 2009 ; 2009 >
+      au < down ; 2010 ; Congressional Record 2010 ; 2010 >
 
     }
       
@@ -439,17 +439,17 @@
       au < down ; Congressional Record 1995 [Public.Resource.Org] [superseded] ; 1995 >
       au < down ; Congressional Record 1996 [Public.Resource.Org] [superseded] ; 1996 >
       au < down ; Congressional Record 1997 [Public.Resource.Org] [superseded] ; 1997 >
-      au < released ; Congressional Record 1998 [Public.Resource.Org] ; 1998 >
-      au < released ; Congressional Record 1999 [Public.Resource.Org] ; 1999 >
-      au < released ; Congressional Record 2000 [Public.Resource.Org] ; 2000 >
-      au < released ; Congressional Record 2001 [Public.Resource.Org] ; 2001 >
-      au < released ; Congressional Record 2002 [Public.Resource.Org] ; 2002 >
-      au < released ; Congressional Record 2003 [Public.Resource.Org] ; 2003 >
-      au < released ; Congressional Record 2004 [Public.Resource.Org] ; 2004 >
-      au < released ; Congressional Record 2005 [Public.Resource.Org] ; 2005 >
-      au < released ; Congressional Record 2006 [Public.Resource.Org] ; 2006 >
-      au < released ; Congressional Record 2007 [Public.Resource.Org] ; 2007 >
-      au < released ; Congressional Record 2008 [Public.Resource.Org] ; 2008 >
+      au < down ; Congressional Record 1998 [Public.Resource.Org] ; 1998 >
+      au < down ; Congressional Record 1999 [Public.Resource.Org] ; 1999 >
+      au < down ; Congressional Record 2000 [Public.Resource.Org] ; 2000 >
+      au < down ; Congressional Record 2001 [Public.Resource.Org] ; 2001 >
+      au < down ; Congressional Record 2002 [Public.Resource.Org] ; 2002 >
+      au < down ; Congressional Record 2003 [Public.Resource.Org] ; 2003 >
+      au < down ; Congressional Record 2004 [Public.Resource.Org] ; 2004 >
+      au < down ; Congressional Record 2005 [Public.Resource.Org] ; 2005 >
+      au < down ; Congressional Record 2006 [Public.Resource.Org] ; 2006 >
+      au < down ; Congressional Record 2007 [Public.Resource.Org] ; 2007 >
+      au < down ; Congressional Record 2008 [Public.Resource.Org] ; 2008 >
 
     }
     
@@ -466,10 +466,10 @@
     param[collection_id] = CRECB
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
-    au < released ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
-    au < released ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
-    au < released ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
+    au < down ; 1999 ; Congressional Record (Bound) 1999 ; 1999 >
+    au < down ; 2000 ; Congressional Record (Bound) 2000 ; 2000 >
+    au < down ; 2001 ; Congressional Record (Bound) 2001 ; 2001 >
+    au < down ; 2002 ; Congressional Record (Bound) 2002 ; 2002 >
 
   }
 
@@ -484,33 +484,33 @@
     param[collection_id] = CRI
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1983 ; Congressional Record Index 1983 ; 1983 >
-    au < released ; 1984 ; Congressional Record Index 1984 ; 1984 >
-    au < released ; 1985 ; Congressional Record Index 1985 ; 1985 >
-    au < released ; 1986 ; Congressional Record Index 1986 ; 1986 >
-    au < released ; 1987 ; Congressional Record Index 1987 ; 1987 >
-    au < released ; 1988 ; Congressional Record Index 1988 ; 1988 >
-    au < released ; 1989 ; Congressional Record Index 1989 ; 1989 >
-    au < released ; 1990 ; Congressional Record Index 1990 ; 1990 >
-    au < released ; 1991 ; Congressional Record Index 1991 ; 1991 >
-    au < released ; 1992 ; Congressional Record Index 1992 ; 1992 >
-    au < released ; 1993 ; Congressional Record Index 1993 ; 1993 >
-    au < released ; 1994 ; Congressional Record Index 1994 ; 1994 >
-    au < released ; 1995 ; Congressional Record Index 1995 ; 1995 >
-    au < released ; 1996 ; Congressional Record Index 1996 ; 1996 >
-    au < released ; 1997 ; Congressional Record Index 1997 ; 1997 >
-    au < released ; 1999 ; Congressional Record Index 1999 ; 1999 >
-    au < released ; 2000 ; Congressional Record Index 2000 ; 2000 >
-    au < released ; 2001 ; Congressional Record Index 2001 ; 2001 >
-    au < released ; 2002 ; Congressional Record Index 2002 ; 2002 >
-    au < released ; 2003 ; Congressional Record Index 2003 ; 2003 >
-    au < released ; 2004 ; Congressional Record Index 2004 ; 2004 >
-    au < released ; 2005 ; Congressional Record Index 2005 ; 2005 >
-    au < released ; 2006 ; Congressional Record Index 2006 ; 2006 >
-    au < released ; 2007 ; Congressional Record Index 2007 ; 2007 >
-    au < released ; 2008 ; Congressional Record Index 2008 ; 2008 >
-    au < released ; 2009 ; Congressional Record Index 2009 ; 2009 >
-    au < released ; 2010 ; Congressional Record Index 2010 ; 2010 >
+    au < down ; 1983 ; Congressional Record Index 1983 ; 1983 >
+    au < down ; 1984 ; Congressional Record Index 1984 ; 1984 >
+    au < down ; 1985 ; Congressional Record Index 1985 ; 1985 >
+    au < down ; 1986 ; Congressional Record Index 1986 ; 1986 >
+    au < down ; 1987 ; Congressional Record Index 1987 ; 1987 >
+    au < down ; 1988 ; Congressional Record Index 1988 ; 1988 >
+    au < down ; 1989 ; Congressional Record Index 1989 ; 1989 >
+    au < down ; 1990 ; Congressional Record Index 1990 ; 1990 >
+    au < down ; 1991 ; Congressional Record Index 1991 ; 1991 >
+    au < down ; 1992 ; Congressional Record Index 1992 ; 1992 >
+    au < down ; 1993 ; Congressional Record Index 1993 ; 1993 >
+    au < down ; 1994 ; Congressional Record Index 1994 ; 1994 >
+    au < down ; 1995 ; Congressional Record Index 1995 ; 1995 >
+    au < down ; 1996 ; Congressional Record Index 1996 ; 1996 >
+    au < down ; 1997 ; Congressional Record Index 1997 ; 1997 >
+    au < down ; 1999 ; Congressional Record Index 1999 ; 1999 >
+    au < down ; 2000 ; Congressional Record Index 2000 ; 2000 >
+    au < down ; 2001 ; Congressional Record Index 2001 ; 2001 >
+    au < down ; 2002 ; Congressional Record Index 2002 ; 2002 >
+    au < down ; 2003 ; Congressional Record Index 2003 ; 2003 >
+    au < down ; 2004 ; Congressional Record Index 2004 ; 2004 >
+    au < down ; 2005 ; Congressional Record Index 2005 ; 2005 >
+    au < down ; 2006 ; Congressional Record Index 2006 ; 2006 >
+    au < down ; 2007 ; Congressional Record Index 2007 ; 2007 >
+    au < down ; 2008 ; Congressional Record Index 2008 ; 2008 >
+    au < down ; 2009 ; Congressional Record Index 2009 ; 2009 >
+    au < down ; 2010 ; Congressional Record Index 2010 ; 2010 >
       
   }
 
@@ -527,23 +527,23 @@
       param[collection_id] = CRPT
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1993 ; Congressional Reports 1993 ; 1993 >
-      au < released ; 1995 ; Congressional Reports 1995 ; 1995 >
-      au < released ; 1996 ; Congressional Reports 1996 ; 1996 >
-      au < released ; 1997 ; Congressional Reports 1997 ; 1997 >
-      au < released ; 1998 ; Congressional Reports 1998 ; 1998 >
-      au < released ; 1999 ; Congressional Reports 1999 ; 1999 >
-      au < released ; 2000 ; Congressional Reports 2000 ; 2000 >
-      au < released ; 2001 ; Congressional Reports 2001 ; 2001 >
-      au < released ; 2002 ; Congressional Reports 2002 ; 2002 >
-      au < released ; 2003 ; Congressional Reports 2003 ; 2003 >
-      au < released ; 2004 ; Congressional Reports 2004 ; 2004 >
-      au < released ; 2005 ; Congressional Reports 2005 ; 2005 >
-      au < released ; 2006 ; Congressional Reports 2006 ; 2006 >
-      au < released ; 2007 ; Congressional Reports 2007 ; 2007 >
-      au < released ; 2008 ; Congressional Reports 2008 ; 2008 >
-      au < released ; 2009 ; Congressional Reports 2009 ; 2009 >
-      au < released ; 2010 ; Congressional Reports 2010 ; 2010 >
+      au < down ; 1993 ; Congressional Reports 1993 ; 1993 >
+      au < down ; 1995 ; Congressional Reports 1995 ; 1995 >
+      au < down ; 1996 ; Congressional Reports 1996 ; 1996 >
+      au < down ; 1997 ; Congressional Reports 1997 ; 1997 >
+      au < down ; 1998 ; Congressional Reports 1998 ; 1998 >
+      au < down ; 1999 ; Congressional Reports 1999 ; 1999 >
+      au < down ; 2000 ; Congressional Reports 2000 ; 2000 >
+      au < down ; 2001 ; Congressional Reports 2001 ; 2001 >
+      au < down ; 2002 ; Congressional Reports 2002 ; 2002 >
+      au < down ; 2003 ; Congressional Reports 2003 ; 2003 >
+      au < down ; 2004 ; Congressional Reports 2004 ; 2004 >
+      au < down ; 2005 ; Congressional Reports 2005 ; 2005 >
+      au < down ; 2006 ; Congressional Reports 2006 ; 2006 >
+      au < down ; 2007 ; Congressional Reports 2007 ; 2007 >
+      au < down ; 2008 ; Congressional Reports 2008 ; 2008 >
+      au < down ; 2009 ; Congressional Reports 2009 ; 2009 >
+      au < down ; 2010 ; Congressional Reports 2010 ; 2010 >
 
     }
       
@@ -553,13 +553,13 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[congress] >
 
-      au < released ; Congressional Reports, 104th Congress [Public.Resource.Org] ; 104 >
-      au < released ; Congressional Reports, 105th Congress [Public.Resource.Org] ; 105 >
-      au < released ; Congressional Reports, 106th Congress [Public.Resource.Org] ; 106 >
-      au < released ; Congressional Reports, 107th Congress [Public.Resource.Org] ; 107 >
-      au < released ; Congressional Reports, 108th Congress [Public.Resource.Org] ; 108 >
-      au < released ; Congressional Reports, 109th Congress [Public.Resource.Org] ; 109 > 
-      au < released ; Congressional Reports, 110th Congress [Public.Resource.Org] ; 110 >
+      au < down ; Congressional Reports, 104th Congress [Public.Resource.Org] ; 104 >
+      au < down ; Congressional Reports, 105th Congress [Public.Resource.Org] ; 105 >
+      au < down ; Congressional Reports, 106th Congress [Public.Resource.Org] ; 106 >
+      au < down ; Congressional Reports, 107th Congress [Public.Resource.Org] ; 107 >
+      au < down ; Congressional Reports, 108th Congress [Public.Resource.Org] ; 108 >
+      au < down ; Congressional Reports, 109th Congress [Public.Resource.Org] ; 109 > 
+      au < down ; Congressional Reports, 110th Congress [Public.Resource.Org] ; 110 >
 
     }
 
@@ -575,13 +575,13 @@
     param[base_url] = http://bulk.resource.org/      
     implicit < status ; name ; param[volume_name] >
 
-    au < released ; Congressional Rules: Cannon's Precedents [Public.Resource.Org] ; cannon >
-    au < released ; Congressional Rules: Deschler's Precedents [Public.Resource.Org] ; deschler >
-    au < released ; Congressional Rules: Hinds' Precedents [Public.Resource.Org] ; hinds >
-    au < released ; Congressional Rules: House Manual [Public.Resource.Org] ; manual >
-    au < released ; Congressional Rules: House Practice Guide [Public.Resource.Org] ; practice >
-    au < released ; Congressional Rules: Riddick's Senate Procedure [Public.Resource.Org] ; riddick >
-    au < released ; Congressional Rules: Senate Manual [Public.Resource.Org] ; sen_manual >
+    au < down ; Congressional Rules: Cannon's Precedents [Public.Resource.Org] ; cannon >
+    au < down ; Congressional Rules: Deschler's Precedents [Public.Resource.Org] ; deschler >
+    au < down ; Congressional Rules: Hinds' Precedents [Public.Resource.Org] ; hinds >
+    au < down ; Congressional Rules: House Manual [Public.Resource.Org] ; manual >
+    au < down ; Congressional Rules: House Practice Guide [Public.Resource.Org] ; practice >
+    au < down ; Congressional Rules: Riddick's Senate Procedure [Public.Resource.Org] ; riddick >
+    au < down ; Congressional Rules: Senate Manual [Public.Resource.Org] ; sen_manual >
   
   }
   
@@ -595,8 +595,8 @@
     param[base_url] = http://bulk.resource.org/      
     implicit < status ; name ; param[year] >
 
-    au < released ; Constitution of the United States, 1992 Edition [Public.Resource.Org] ; 1992 >
-    au < released ; Constitution of the United States, 2002 Edition [Public.Resource.Org] ; 2002 >
+    au < down ; Constitution of the United States, 1992 Edition [Public.Resource.Org] ; 1992 >
+    au < down ; Constitution of the United States, 2002 Edition [Public.Resource.Org] ; 2002 >
 
   }
   
@@ -611,8 +611,8 @@
     param[collection_id] = DCPD
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
-    au < released ; 2010 ; Daily Compilation of Presidential Documents 2010 ; 2010 >
+    au < down ; 2009 ; Daily Compilation of Presidential Documents 2009 ; 2009 >
+    au < down ; 2010 ; Daily Compilation of Presidential Documents 2010 ; 2010 >
       
   }
 
@@ -627,22 +627,22 @@
     param[collection_id] = ECONI
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1995 ; Economic Indicators 1995 ; 1995 >
-    au < released ; 1996 ; Economic Indicators 1996 ; 1996 >
-    au < released ; 1997 ; Economic Indicators 1997 ; 1997 >
-    au < released ; 1998 ; Economic Indicators 1998 ; 1998 >
-    au < released ; 1999 ; Economic Indicators 1999 ; 1999 >
-    au < released ; 2000 ; Economic Indicators 2000 ; 2000 >
-    au < released ; 2001 ; Economic Indicators 2001 ; 2001 >
-    au < released ; 2002 ; Economic Indicators 2002 ; 2002 >
-    au < released ; 2003 ; Economic Indicators 2003 ; 2003 >
-    au < released ; 2004 ; Economic Indicators 2004 ; 2004 >
-    au < released ; 2005 ; Economic Indicators 2005 ; 2005 >
-    au < released ; 2006 ; Economic Indicators 2006 ; 2006 >
-    au < released ; 2007 ; Economic Indicators 2007 ; 2007 >
-    au < released ; 2008 ; Economic Indicators 2008 ; 2008 >
-    au < released ; 2009 ; Economic Indicators 2009 ; 2009 >
-    au < released ; 2010 ; Economic Indicators 2010 ; 2010 >
+    au < down ; 1995 ; Economic Indicators 1995 ; 1995 >
+    au < down ; 1996 ; Economic Indicators 1996 ; 1996 >
+    au < down ; 1997 ; Economic Indicators 1997 ; 1997 >
+    au < down ; 1998 ; Economic Indicators 1998 ; 1998 >
+    au < down ; 1999 ; Economic Indicators 1999 ; 1999 >
+    au < down ; 2000 ; Economic Indicators 2000 ; 2000 >
+    au < down ; 2001 ; Economic Indicators 2001 ; 2001 >
+    au < down ; 2002 ; Economic Indicators 2002 ; 2002 >
+    au < down ; 2003 ; Economic Indicators 2003 ; 2003 >
+    au < down ; 2004 ; Economic Indicators 2004 ; 2004 >
+    au < down ; 2005 ; Economic Indicators 2005 ; 2005 >
+    au < down ; 2006 ; Economic Indicators 2006 ; 2006 >
+    au < down ; 2007 ; Economic Indicators 2007 ; 2007 >
+    au < down ; 2008 ; Economic Indicators 2008 ; 2008 >
+    au < down ; 2009 ; Economic Indicators 2009 ; 2009 >
+    au < down ; 2010 ; Economic Indicators 2010 ; 2010 >
       
   }
 
@@ -657,21 +657,21 @@
     param[collection_id] = ERP
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1996 ; Economic Report of the President 1996 ; 1996 >
-    au < released ; 1997 ; Economic Report of the President 1997 ; 1997 >
-    au < released ; 1998 ; Economic Report of the President 1998 ; 1998 >
-    au < released ; 1999 ; Economic Report of the President 1999 ; 1999 >
-    au < released ; 2000 ; Economic Report of the President 2000 ; 2000 >
-    au < released ; 2001 ; Economic Report of the President 2001 ; 2001 >
-    au < released ; 2002 ; Economic Report of the President 2002 ; 2002 >
-    au < released ; 2003 ; Economic Report of the President 2003 ; 2003 >
-    au < released ; 2004 ; Economic Report of the President 2004 ; 2004 >
-    au < released ; 2005 ; Economic Report of the President 2005 ; 2005 >
-    au < released ; 2006 ; Economic Report of the President 2006 ; 2006 >
-    au < released ; 2007 ; Economic Report of the President 2007 ; 2007 >
-    au < released ; 2008 ; Economic Report of the President 2008 ; 2008 >
-    au < released ; 2009 ; Economic Report of the President 2009 ; 2009 >
-    au < released ; 2010 ; Economic Report of the President 2010 ; 2010 >
+    au < down ; 1996 ; Economic Report of the President 1996 ; 1996 >
+    au < down ; 1997 ; Economic Report of the President 1997 ; 1997 >
+    au < down ; 1998 ; Economic Report of the President 1998 ; 1998 >
+    au < down ; 1999 ; Economic Report of the President 1999 ; 1999 >
+    au < down ; 2000 ; Economic Report of the President 2000 ; 2000 >
+    au < down ; 2001 ; Economic Report of the President 2001 ; 2001 >
+    au < down ; 2002 ; Economic Report of the President 2002 ; 2002 >
+    au < down ; 2003 ; Economic Report of the President 2003 ; 2003 >
+    au < down ; 2004 ; Economic Report of the President 2004 ; 2004 >
+    au < down ; 2005 ; Economic Report of the President 2005 ; 2005 >
+    au < down ; 2006 ; Economic Report of the President 2006 ; 2006 >
+    au < down ; 2007 ; Economic Report of the President 2007 ; 2007 >
+    au < down ; 2008 ; Economic Report of the President 2008 ; 2008 >
+    au < down ; 2009 ; Economic Report of the President 2009 ; 2009 >
+    au < down ; 2010 ; Economic Report of the President 2010 ; 2010 >
       
   }
 
@@ -686,16 +686,16 @@
     param[collection_id] = ERIC
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1995 ; Education Report from ERIC 1995 ; 1995 >
-    au < released ; 1996 ; Education Report from ERIC 1996 ; 1996 >
-    au < released ; 1997 ; Education Report from ERIC 1997 ; 1997 >
-    au < released ; 1998 ; Education Report from ERIC 1998 ; 1998 >
-    au < released ; 1999 ; Education Report from ERIC 1999 ; 1999 >
-    au < released ; 2000 ; Education Report from ERIC 2000 ; 2000 >
-    au < released ; 2001 ; Education Report from ERIC 2001 ; 2001 >
-    au < released ; 2002 ; Education Report from ERIC 2002 ; 2002 >
-    au < released ; 2003 ; Education Report from ERIC 2003 ; 2003 >
-    au < released ; 2004 ; Education Report from ERIC 2004 ; 2004 >
+    au < down ; 1995 ; Education Report from ERIC 1995 ; 1995 >
+    au < down ; 1996 ; Education Report from ERIC 1996 ; 1996 >
+    au < down ; 1997 ; Education Report from ERIC 1997 ; 1997 >
+    au < down ; 1998 ; Education Report from ERIC 1998 ; 1998 >
+    au < down ; 1999 ; Education Report from ERIC 1999 ; 1999 >
+    au < down ; 2000 ; Education Report from ERIC 2000 ; 2000 >
+    au < down ; 2001 ; Education Report from ERIC 2001 ; 2001 >
+    au < down ; 2002 ; Education Report from ERIC 2002 ; 2002 >
+    au < down ; 2003 ; Education Report from ERIC 2003 ; 2003 >
+    au < down ; 2004 ; Education Report from ERIC 2004 ; 2004 >
 
   }
 
@@ -712,23 +712,23 @@
       param[collection_id] = FR
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1994 ; Federal Register 1994 ; 1994 >
-      au < released ; 1995 ; Federal Register 1995 ; 1995 >
-      au < released ; 1996 ; Federal Register 1996 ; 1996 >
-      au < released ; 1997 ; Federal Register 1997 ; 1997 >
-      au < released ; 1998 ; Federal Register 1998 ; 1998 >
-      au < released ; 1999 ; Federal Register 1999 ; 1999 >
-      au < released ; 2000 ; Federal Register 2000 ; 2000 >
-      au < released ; 2001 ; Federal Register 2001 ; 2001 >
-      au < released ; 2002 ; Federal Register 2002 ; 2002 >
-      au < released ; 2003 ; Federal Register 2003 ; 2003 >
-      au < released ; 2004 ; Federal Register 2004 ; 2004 >
-      au < released ; 2005 ; Federal Register 2005 ; 2005 >
-      au < released ; 2006 ; Federal Register 2006 ; 2006 >
-      au < released ; 2007 ; Federal Register 2007 ; 2007 >
-      au < released ; 2008 ; Federal Register 2008 ; 2008 >
-      au < released ; 2009 ; Federal Register 2009 ; 2009 >
-      au < released ; 2010 ; Federal Register 2010 ; 2010 >
+      au < down ; 1994 ; Federal Register 1994 ; 1994 >
+      au < down ; 1995 ; Federal Register 1995 ; 1995 >
+      au < down ; 1996 ; Federal Register 1996 ; 1996 >
+      au < down ; 1997 ; Federal Register 1997 ; 1997 >
+      au < down ; 1998 ; Federal Register 1998 ; 1998 >
+      au < down ; 1999 ; Federal Register 1999 ; 1999 >
+      au < down ; 2000 ; Federal Register 2000 ; 2000 >
+      au < down ; 2001 ; Federal Register 2001 ; 2001 >
+      au < down ; 2002 ; Federal Register 2002 ; 2002 >
+      au < down ; 2003 ; Federal Register 2003 ; 2003 >
+      au < down ; 2004 ; Federal Register 2004 ; 2004 >
+      au < down ; 2005 ; Federal Register 2005 ; 2005 >
+      au < down ; 2006 ; Federal Register 2006 ; 2006 >
+      au < down ; 2007 ; Federal Register 2007 ; 2007 >
+      au < down ; 2008 ; Federal Register 2008 ; 2008 >
+      au < down ; 2009 ; Federal Register 2009 ; 2009 >
+      au < down ; 2010 ; Federal Register 2010 ; 2010 >
 
     }
       
@@ -739,17 +739,17 @@
       param[collection_id] = FR
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 2000 ; Federal Register (Bulk Data) 2000 ; 2000 >
-      au < released ; 2001 ; Federal Register (Bulk Data) 2001 ; 2001 >
-      au < released ; 2002 ; Federal Register (Bulk Data) 2002 ; 2002 >
-      au < released ; 2003 ; Federal Register (Bulk Data) 2003 ; 2003 >
-      au < released ; 2004 ; Federal Register (Bulk Data) 2004 ; 2004 >
-      au < released ; 2005 ; Federal Register (Bulk Data) 2005 ; 2005 >
-      au < released ; 2006 ; Federal Register (Bulk Data) 2006 ; 2006 >
-      au < released ; 2007 ; Federal Register (Bulk Data) 2007 ; 2007 >
-      au < released ; 2008 ; Federal Register (Bulk Data) 2008 ; 2008 >
-      au < released ; 2009 ; Federal Register (Bulk Data) 2009 ; 2009 >
-      au < released ; 2010 ; Federal Register (Bulk Data) 2010 ; 2010 >
+      au < down ; 2000 ; Federal Register (Bulk Data) 2000 ; 2000 >
+      au < down ; 2001 ; Federal Register (Bulk Data) 2001 ; 2001 >
+      au < down ; 2002 ; Federal Register (Bulk Data) 2002 ; 2002 >
+      au < down ; 2003 ; Federal Register (Bulk Data) 2003 ; 2003 >
+      au < down ; 2004 ; Federal Register (Bulk Data) 2004 ; 2004 >
+      au < down ; 2005 ; Federal Register (Bulk Data) 2005 ; 2005 >
+      au < down ; 2006 ; Federal Register (Bulk Data) 2006 ; 2006 >
+      au < down ; 2007 ; Federal Register (Bulk Data) 2007 ; 2007 >
+      au < down ; 2008 ; Federal Register (Bulk Data) 2008 ; 2008 >
+      au < down ; 2009 ; Federal Register (Bulk Data) 2009 ; 2009 >
+      au < down ; 2010 ; Federal Register (Bulk Data) 2010 ; 2010 >
     
     }
 
@@ -759,20 +759,20 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[year] >
 
-      au < released ; Federal Register 1995 [Public.Resource.Org] ; 1995 >
-      au < released ; Federal Register 1996 [Public.Resource.Org] ; 1996 >
-      au < released ; Federal Register 1997 [Public.Resource.Org] ; 1997 >
-      au < released ; Federal Register 1998 [Public.Resource.Org] ; 1998 >
-      au < released ; Federal Register 1999 [Public.Resource.Org] ; 1999 >
-      au < released ; Federal Register 2000 [Public.Resource.Org] ; 2000 >
+      au < down ; Federal Register 1995 [Public.Resource.Org] ; 1995 >
+      au < down ; Federal Register 1996 [Public.Resource.Org] ; 1996 >
+      au < down ; Federal Register 1997 [Public.Resource.Org] ; 1997 >
+      au < down ; Federal Register 1998 [Public.Resource.Org] ; 1998 >
+      au < down ; Federal Register 1999 [Public.Resource.Org] ; 1999 >
+      au < down ; Federal Register 2000 [Public.Resource.Org] ; 2000 >
       au < doesNotExist ; Federal Register 2001 [Public.Resource.Org] ; 2001 >
       au < doesNotExist ; Federal Register 2002 [Public.Resource.Org] ; 2002 >
-      au < released ; Federal Register 2003 [Public.Resource.Org] ; 2003 >
-      au < released ; Federal Register 2004 [Public.Resource.Org] ; 2004 >
-      au < released ; Federal Register 2005 [Public.Resource.Org] ; 2005 >
-      au < released ; Federal Register 2006 [Public.Resource.Org] ; 2006 >
-      au < released ; Federal Register 2007 [Public.Resource.Org] ; 2007 >
-      au < released ; Federal Register 2008 [Public.Resource.Org] ; 2008 >
+      au < down ; Federal Register 2003 [Public.Resource.Org] ; 2003 >
+      au < down ; Federal Register 2004 [Public.Resource.Org] ; 2004 >
+      au < down ; Federal Register 2005 [Public.Resource.Org] ; 2005 >
+      au < down ; Federal Register 2006 [Public.Resource.Org] ; 2006 >
+      au < down ; Federal Register 2007 [Public.Resource.Org] ; 2007 >
+      au < down ; Federal Register 2008 [Public.Resource.Org] ; 2008 >
       
     }
     
@@ -789,22 +789,22 @@
     param[collection_id] = GAOREPORTS
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 >
-    au < released ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 >
-    au < released ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; 1995 >
-    au < released ; 1996 ; Government Accountability Office Reports and Comptroller General Decisions 1996 ; 1996 >
-    au < released ; 1997 ; Government Accountability Office Reports and Comptroller General Decisions 1997 ; 1997 >
-    au < released ; 1998 ; Government Accountability Office Reports and Comptroller General Decisions 1998 ; 1998 >
-    au < released ; 1999 ; Government Accountability Office Reports and Comptroller General Decisions 1999 ; 1999 >
-    au < released ; 2000 ; Government Accountability Office Reports and Comptroller General Decisions 2000 ; 2000 >
-    au < released ; 2001 ; Government Accountability Office Reports and Comptroller General Decisions 2001 ; 2001 >
-    au < released ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; 2002 >
-    au < released ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
-    au < released ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
-    au < released ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
-    au < released ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
-    au < released ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
-    au < released ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
+    au < down ; 1993 ; Government Accountability Office Reports and Comptroller General Decisions 1993 ; 1993 >
+    au < down ; 1994 ; Government Accountability Office Reports and Comptroller General Decisions 1994 ; 1994 >
+    au < down ; 1995 ; Government Accountability Office Reports and Comptroller General Decisions 1995 ; 1995 >
+    au < down ; 1996 ; Government Accountability Office Reports and Comptroller General Decisions 1996 ; 1996 >
+    au < down ; 1997 ; Government Accountability Office Reports and Comptroller General Decisions 1997 ; 1997 >
+    au < down ; 1998 ; Government Accountability Office Reports and Comptroller General Decisions 1998 ; 1998 >
+    au < down ; 1999 ; Government Accountability Office Reports and Comptroller General Decisions 1999 ; 1999 >
+    au < down ; 2000 ; Government Accountability Office Reports and Comptroller General Decisions 2000 ; 2000 >
+    au < down ; 2001 ; Government Accountability Office Reports and Comptroller General Decisions 2001 ; 2001 >
+    au < down ; 2002 ; Government Accountability Office Reports and Comptroller General Decisions 2002 ; 2002 >
+    au < down ; 2003 ; Government Accountability Office Reports and Comptroller General Decisions 2003 ; 2003 >
+    au < down ; 2004 ; Government Accountability Office Reports and Comptroller General Decisions 2004 ; 2004 >
+    au < down ; 2005 ; Government Accountability Office Reports and Comptroller General Decisions 2005 ; 2005 >
+    au < down ; 2006 ; Government Accountability Office Reports and Comptroller General Decisions 2006 ; 2006 >
+    au < down ; 2007 ; Government Accountability Office Reports and Comptroller General Decisions 2007 ; 2007 >
+    au < down ; 2008 ; Government Accountability Office Reports and Comptroller General Decisions 2008 ; 2008 >
 
   }
 
@@ -819,34 +819,34 @@
     param[collection_id] = HOB
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1983 ; History of Bills 1983 ; 1983 >
-    au < released ; 1984 ; History of Bills 1984 ; 1984 >
-    au < released ; 1985 ; History of Bills 1985 ; 1985 >
-    au < released ; 1986 ; History of Bills 1986 ; 1986 >
-    au < released ; 1987 ; History of Bills 1987 ; 1987 >
-    au < released ; 1988 ; History of Bills 1988 ; 1988 >
-    au < released ; 1989 ; History of Bills 1989 ; 1989 >
-    au < released ; 1990 ; History of Bills 1990 ; 1990 >
-    au < released ; 1991 ; History of Bills 1991 ; 1991 >
-    au < released ; 1992 ; History of Bills 1992 ; 1992 >
-    au < released ; 1993 ; History of Bills 1993 ; 1993 >
-    au < released ; 1994 ; History of Bills 1994 ; 1994 >
-    au < released ; 1995 ; History of Bills 1995 ; 1995 >
-    au < released ; 1996 ; History of Bills 1996 ; 1996 >
-    au < released ; 1997 ; History of Bills 1997 ; 1997 >
-    au < released ; 1998 ; History of Bills 1998 ; 1998 >
-    au < released ; 1999 ; History of Bills 1999 ; 1999 >
-    au < released ; 2000 ; History of Bills 2000 ; 2000 >
-    au < released ; 2001 ; History of Bills 2001 ; 2001 >
-    au < released ; 2002 ; History of Bills 2002 ; 2002 >
-    au < released ; 2003 ; History of Bills 2003 ; 2003 >
-    au < released ; 2004 ; History of Bills 2004 ; 2004 >
-    au < released ; 2005 ; History of Bills 2005 ; 2005 >
-    au < released ; 2006 ; History of Bills 2006 ; 2006 >
-    au < released ; 2007 ; History of Bills 2007 ; 2007 >
-    au < released ; 2008 ; History of Bills 2008 ; 2008 >
-    au < released ; 2009 ; History of Bills 2009 ; 2009 >
-    au < released ; 2010 ; History of Bills 2010 ; 2010 >
+    au < down ; 1983 ; History of Bills 1983 ; 1983 >
+    au < down ; 1984 ; History of Bills 1984 ; 1984 >
+    au < down ; 1985 ; History of Bills 1985 ; 1985 >
+    au < down ; 1986 ; History of Bills 1986 ; 1986 >
+    au < down ; 1987 ; History of Bills 1987 ; 1987 >
+    au < down ; 1988 ; History of Bills 1988 ; 1988 >
+    au < down ; 1989 ; History of Bills 1989 ; 1989 >
+    au < down ; 1990 ; History of Bills 1990 ; 1990 >
+    au < down ; 1991 ; History of Bills 1991 ; 1991 >
+    au < down ; 1992 ; History of Bills 1992 ; 1992 >
+    au < down ; 1993 ; History of Bills 1993 ; 1993 >
+    au < down ; 1994 ; History of Bills 1994 ; 1994 >
+    au < down ; 1995 ; History of Bills 1995 ; 1995 >
+    au < down ; 1996 ; History of Bills 1996 ; 1996 >
+    au < down ; 1997 ; History of Bills 1997 ; 1997 >
+    au < down ; 1998 ; History of Bills 1998 ; 1998 >
+    au < down ; 1999 ; History of Bills 1999 ; 1999 >
+    au < down ; 2000 ; History of Bills 2000 ; 2000 >
+    au < down ; 2001 ; History of Bills 2001 ; 2001 >
+    au < down ; 2002 ; History of Bills 2002 ; 2002 >
+    au < down ; 2003 ; History of Bills 2003 ; 2003 >
+    au < down ; 2004 ; History of Bills 2004 ; 2004 >
+    au < down ; 2005 ; History of Bills 2005 ; 2005 >
+    au < down ; 2006 ; History of Bills 2006 ; 2006 >
+    au < down ; 2007 ; History of Bills 2007 ; 2007 >
+    au < down ; 2008 ; History of Bills 2008 ; 2008 >
+    au < down ; 2009 ; History of Bills 2009 ; 2009 >
+    au < down ; 2010 ; History of Bills 2010 ; 2010 >
       
   }
 
@@ -863,14 +863,14 @@
       param[collection_id] = HJOURNAL
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1992 ; House Journal 1992 ; 1992 >
-      au < released ; 1993 ; House Journal 1993 ; 1993 >
-      au < released ; 1994 ; House Journal 1994 ; 1994 >
-      au < released ; 1995 ; House Journal 1995 ; 1995 >
-      au < released ; 1996 ; House Journal 1996 ; 1996 >
-      au < released ; 1997 ; House Journal 1997 ; 1997 >
-      au < released ; 1998 ; House Journal 1998 ; 1998 >
-      au < released ; 1999 ; House Journal 1999 ; 1999 >
+      au < down ; 1992 ; House Journal 1992 ; 1992 >
+      au < down ; 1993 ; House Journal 1993 ; 1993 >
+      au < down ; 1994 ; House Journal 1994 ; 1994 >
+      au < down ; 1995 ; House Journal 1995 ; 1995 >
+      au < down ; 1996 ; House Journal 1996 ; 1996 >
+      au < down ; 1997 ; House Journal 1997 ; 1997 >
+      au < down ; 1998 ; House Journal 1998 ; 1998 >
+      au < down ; 1999 ; House Journal 1999 ; 1999 >
 
     }
 
@@ -880,15 +880,15 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[year] >
 
-      au < released ; House Journal 1991 [Public.Resource.Org] ; 1991 >
-      au < released ; House Journal 1992 [Public.Resource.Org] ; 1992 >
-      au < released ; House Journal 1993 [Public.Resource.Org] ; 1993 >
-      au < released ; House Journal 1994 [Public.Resource.Org] ; 1994 >
-      au < released ; House Journal 1995 [Public.Resource.Org] ; 1995 >
-      au < released ; House Journal 1996 [Public.Resource.Org] ; 1996 >
-      au < released ; House Journal 1997 [Public.Resource.Org] ; 1997 >
-      au < released ; House Journal 1998 [Public.Resource.Org] ; 1998 >
-      au < released ; House Journal 1999 [Public.Resource.Org] ; 1999 >
+      au < down ; House Journal 1991 [Public.Resource.Org] ; 1991 >
+      au < down ; House Journal 1992 [Public.Resource.Org] ; 1992 >
+      au < down ; House Journal 1993 [Public.Resource.Org] ; 1993 >
+      au < down ; House Journal 1994 [Public.Resource.Org] ; 1994 >
+      au < down ; House Journal 1995 [Public.Resource.Org] ; 1995 >
+      au < down ; House Journal 1996 [Public.Resource.Org] ; 1996 >
+      au < down ; House Journal 1997 [Public.Resource.Org] ; 1997 >
+      au < down ; House Journal 1998 [Public.Resource.Org] ; 1998 >
+      au < down ; House Journal 1999 [Public.Resource.Org] ; 1999 >
     
     }    
  
@@ -905,12 +905,12 @@
     param[collection_id] = HMAN
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1995 ; House Rules and Manual 1995 ; 1995 >
-    au < released ; 1999 ; House Rules and Manual 1999 ; 1999 >
-    au < released ; 2001 ; House Rules and Manual 2001 ; 2001 >
-    au < released ; 2005 ; House Rules and Manual 2005 ; 2005 >
-    au < released ; 2007 ; House Rules and Manual 2007 ; 2007 >
-    au < released ; 2009 ; House Rules and Manual 2009 ; 2009 >
+    au < down ; 1995 ; House Rules and Manual 1995 ; 1995 >
+    au < down ; 1999 ; House Rules and Manual 1999 ; 1999 >
+    au < down ; 2001 ; House Rules and Manual 2001 ; 2001 >
+    au < down ; 2005 ; House Rules and Manual 2005 ; 2005 >
+    au < down ; 2007 ; House Rules and Manual 2007 ; 2007 >
+    au < down ; 2009 ; House Rules and Manual 2009 ; 2009 >
       
   }
 
@@ -925,20 +925,20 @@
     param[collection_id] = LSA
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1997 ; List of CFR Sections Affected 1997 ; 1997 >
-    au < released ; 1998 ; List of CFR Sections Affected 1998 ; 1998 >
-    au < released ; 1999 ; List of CFR Sections Affected 1999 ; 1999 >
-    au < released ; 2000 ; List of CFR Sections Affected 2000 ; 2000 >
-    au < released ; 2001 ; List of CFR Sections Affected 2001 ; 2001 >
-    au < released ; 2002 ; List of CFR Sections Affected 2002 ; 2002 >
-    au < released ; 2003 ; List of CFR Sections Affected 2003 ; 2003 >
-    au < released ; 2004 ; List of CFR Sections Affected 2004 ; 2004 >
-    au < released ; 2005 ; List of CFR Sections Affected 2005 ; 2005 >
-    au < released ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
-    au < released ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
-    au < released ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
-    au < released ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
-    au < released ; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
+    au < down ; 1997 ; List of CFR Sections Affected 1997 ; 1997 >
+    au < down ; 1998 ; List of CFR Sections Affected 1998 ; 1998 >
+    au < down ; 1999 ; List of CFR Sections Affected 1999 ; 1999 >
+    au < down ; 2000 ; List of CFR Sections Affected 2000 ; 2000 >
+    au < down ; 2001 ; List of CFR Sections Affected 2001 ; 2001 >
+    au < down ; 2002 ; List of CFR Sections Affected 2002 ; 2002 >
+    au < down ; 2003 ; List of CFR Sections Affected 2003 ; 2003 >
+    au < down ; 2004 ; List of CFR Sections Affected 2004 ; 2004 >
+    au < down ; 2005 ; List of CFR Sections Affected 2005 ; 2005 >
+    au < down ; 2006 ; List of CFR Sections Affected 2006 ; 2006 >
+    au < down ; 2007 ; List of CFR Sections Affected 2007 ; 2007 >
+    au < down ; 2008 ; List of CFR Sections Affected 2008 ; 2008 >
+    au < down ; 2009 ; List of CFR Sections Affected 2009 ; 2009 >
+    au < down ; 2010 ; List of CFR Sections Affected 2010 ; 2010 >
       
   }
 
@@ -953,12 +953,12 @@
     param[collection_id] = PAI
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
-    au < released ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
-    au < released ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
-    au < released ; 2001 ; Privacy Act Issuances 2001 ; 2001 >
-    au < released ; 2003 ; Privacy Act Issuances 2003 ; 2003 >
-    au < released ; 2005 ; Privacy Act Issuances 2005 ; 2005 >
+    au < down ; 1995 ; Privacy Act Issuances 1995 ; 1995 >
+    au < down ; 1997 ; Privacy Act Issuances 1997 ; 1997 >
+    au < down ; 1999 ; Privacy Act Issuances 1999 ; 1999 >
+    au < down ; 2001 ; Privacy Act Issuances 2001 ; 2001 >
+    au < down ; 2003 ; Privacy Act Issuances 2003 ; 2003 >
+    au < down ; 2005 ; Privacy Act Issuances 2005 ; 2005 >
 
   }
 
@@ -975,22 +975,22 @@
       param[collection_id] = PLAW
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1995 ; Public and Private Laws 1995 ; 1995 >
-      au < released ; 1996 ; Public and Private Laws 1996 ; 1996 >
-      au < released ; 1997 ; Public and Private Laws 1997 ; 1997 >
-      au < released ; 1998 ; Public and Private Laws 1998 ; 1998 >
-      au < released ; 1999 ; Public and Private Laws 1999 ; 1999 >
-      au < released ; 2000 ; Public and Private Laws 2000 ; 2000 >
-      au < released ; 2001 ; Public and Private Laws 2001 ; 2001 >
-      au < released ; 2002 ; Public and Private Laws 2002 ; 2002 >
-      au < released ; 2003 ; Public and Private Laws 2003 ; 2003 >
-      au < released ; 2004 ; Public and Private Laws 2004 ; 2004 >
-      au < released ; 2005 ; Public and Private Laws 2005 ; 2005 >
-      au < released ; 2006 ; Public and Private Laws 2006 ; 2006 >
-      au < released ; 2007 ; Public and Private Laws 2007 ; 2007 >
-      au < released ; 2008 ; Public and Private Laws 2008 ; 2008 >
-      au < released ; 2009 ; Public and Private Laws 2009 ; 2009 >
-      au < released ; 2010 ; Public and Private Laws 2010 ; 2010 >
+      au < down ; 1995 ; Public and Private Laws 1995 ; 1995 >
+      au < down ; 1996 ; Public and Private Laws 1996 ; 1996 >
+      au < down ; 1997 ; Public and Private Laws 1997 ; 1997 >
+      au < down ; 1998 ; Public and Private Laws 1998 ; 1998 >
+      au < down ; 1999 ; Public and Private Laws 1999 ; 1999 >
+      au < down ; 2000 ; Public and Private Laws 2000 ; 2000 >
+      au < down ; 2001 ; Public and Private Laws 2001 ; 2001 >
+      au < down ; 2002 ; Public and Private Laws 2002 ; 2002 >
+      au < down ; 2003 ; Public and Private Laws 2003 ; 2003 >
+      au < down ; 2004 ; Public and Private Laws 2004 ; 2004 >
+      au < down ; 2005 ; Public and Private Laws 2005 ; 2005 >
+      au < down ; 2006 ; Public and Private Laws 2006 ; 2006 >
+      au < down ; 2007 ; Public and Private Laws 2007 ; 2007 >
+      au < down ; 2008 ; Public and Private Laws 2008 ; 2008 >
+      au < down ; 2009 ; Public and Private Laws 2009 ; 2009 >
+      au < down ; 2010 ; Public and Private Laws 2010 ; 2010 >
 
     }
       
@@ -1000,12 +1000,12 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[congress] >
 
-      au < released ; Public and Private Laws, 104th Congress [Public.Resource.Org] ; 104 >
-      au < released ; Public and Private Laws, 105th Congress [Public.Resource.Org] ; 105 >
-      au < released ; Public and Private Laws, 106th Congress [Public.Resource.Org] ; 106 >
-      au < released ; Public and Private Laws, 107th Congress [Public.Resource.Org] ; 107 >
-      au < released ; Public and Private Laws, 108th Congress [Public.Resource.Org] ; 108 >
-      au < released ; Public and Private Laws, 109th Congress [Public.Resource.Org] ; 109 >
+      au < down ; Public and Private Laws, 104th Congress [Public.Resource.Org] ; 104 >
+      au < down ; Public and Private Laws, 105th Congress [Public.Resource.Org] ; 105 >
+      au < down ; Public and Private Laws, 106th Congress [Public.Resource.Org] ; 106 >
+      au < down ; Public and Private Laws, 107th Congress [Public.Resource.Org] ; 107 >
+      au < down ; Public and Private Laws, 108th Congress [Public.Resource.Org] ; 108 >
+      au < down ; Public and Private Laws, 109th Congress [Public.Resource.Org] ; 109 >
     
     } 
 
@@ -1024,21 +1024,21 @@
       param[collection_id] = PPP
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
-      au < released ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
-      au < released ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
-      au < released ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
-      au < released ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
-      au < released ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
-      au < released ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 >
-      au < released ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 >
-      au < released ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 >
-      au < released ; 2000 ; Public Papers of the Presidents of the United States 2000 ; 2000 >
-      au < released ; 2001 ; Public Papers of the Presidents of the United States 2001 ; 2001 >
-      au < released ; 2002 ; Public Papers of the Presidents of the United States 2002 ; 2002 >
-      au < released ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
-      au < released ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
-      au < released ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
+      au < down ; 1991 ; Public Papers of the Presidents of the United States 1991 ; 1991 >
+      au < down ; 1992 ; Public Papers of the Presidents of the United States 1992 ; 1992 >
+      au < down ; 1993 ; Public Papers of the Presidents of the United States 1993 ; 1993 >
+      au < down ; 1994 ; Public Papers of the Presidents of the United States 1994 ; 1994 >
+      au < down ; 1995 ; Public Papers of the Presidents of the United States 1995 ; 1995 >
+      au < down ; 1996 ; Public Papers of the Presidents of the United States 1996 ; 1996 >
+      au < down ; 1997 ; Public Papers of the Presidents of the United States 1997 ; 1997 >
+      au < down ; 1998 ; Public Papers of the Presidents of the United States 1998 ; 1998 >
+      au < down ; 1999 ; Public Papers of the Presidents of the United States 1999 ; 1999 >
+      au < down ; 2000 ; Public Papers of the Presidents of the United States 2000 ; 2000 >
+      au < down ; 2001 ; Public Papers of the Presidents of the United States 2001 ; 2001 >
+      au < down ; 2002 ; Public Papers of the Presidents of the United States 2002 ; 2002 >
+      au < down ; 2003 ; Public Papers of the Presidents of the United States 2003 ; 2003 >
+      au < down ; 2004 ; Public Papers of the Presidents of the United States 2004 ; 2004 >
+      au < down ; 2005 ; Public Papers of the Presidents of the United States 2005 ; 2005 >
 
     }
 
@@ -1048,20 +1048,20 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[year] >
 
-      au < released ; Public Papers of the Presidents of the United States 1991 [Public.Resource.Org] ; 1991 >
-      au < released ; Public Papers of the Presidents of the United States 1992 [Public.Resource.Org] ; 1992 >
-      au < released ; Public Papers of the Presidents of the United States 1993 [Public.Resource.Org] ; 1993 >
-      au < released ; Public Papers of the Presidents of the United States 1994 [Public.Resource.Org] ; 1994 >
-      au < released ; Public Papers of the Presidents of the United States 1995 [Public.Resource.Org] ; 1995 >
-      au < released ; Public Papers of the Presidents of the United States 1996 [Public.Resource.Org] ; 1996 >
-      au < released ; Public Papers of the Presidents of the United States 1997 [Public.Resource.Org] ; 1997 >
-      au < released ; Public Papers of the Presidents of the United States 1998 [Public.Resource.Org] ; 1998 >
-      au < released ; Public Papers of the Presidents of the United States 1999 [Public.Resource.Org] ; 1999 >
-      au < released ; Public Papers of the Presidents of the United States 2000 [Public.Resource.Org] ; 2000 >
-      au < released ; Public Papers of the Presidents of the United States 2001 [Public.Resource.Org] ; 2001 >
-      au < released ; Public Papers of the Presidents of the United States 2002 [Public.Resource.Org] ; 2002 >
-      au < released ; Public Papers of the Presidents of the United States 2003 [Public.Resource.Org] ; 2003 >
-      au < released ; Public Papers of the Presidents of the United States 2004 [Public.Resource.Org] ; 2004 >
+      au < down ; Public Papers of the Presidents of the United States 1991 [Public.Resource.Org] ; 1991 >
+      au < down ; Public Papers of the Presidents of the United States 1992 [Public.Resource.Org] ; 1992 >
+      au < down ; Public Papers of the Presidents of the United States 1993 [Public.Resource.Org] ; 1993 >
+      au < down ; Public Papers of the Presidents of the United States 1994 [Public.Resource.Org] ; 1994 >
+      au < down ; Public Papers of the Presidents of the United States 1995 [Public.Resource.Org] ; 1995 >
+      au < down ; Public Papers of the Presidents of the United States 1996 [Public.Resource.Org] ; 1996 >
+      au < down ; Public Papers of the Presidents of the United States 1997 [Public.Resource.Org] ; 1997 >
+      au < down ; Public Papers of the Presidents of the United States 1998 [Public.Resource.Org] ; 1998 >
+      au < down ; Public Papers of the Presidents of the United States 1999 [Public.Resource.Org] ; 1999 >
+      au < down ; Public Papers of the Presidents of the United States 2000 [Public.Resource.Org] ; 2000 >
+      au < down ; Public Papers of the Presidents of the United States 2001 [Public.Resource.Org] ; 2001 >
+      au < down ; Public Papers of the Presidents of the United States 2002 [Public.Resource.Org] ; 2002 >
+      au < down ; Public Papers of the Presidents of the United States 2003 [Public.Resource.Org] ; 2003 >
+      au < down ; Public Papers of the Presidents of the United States 2004 [Public.Resource.Org] ; 2004 >
 
     }
 
@@ -1078,10 +1078,10 @@
     param[collection_id] = SMAN
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1996 ; Senate Manual 1996 ; 1996 >
-    au < released ; 2000 ; Senate Manual 2000 ; 2000 >
-    au < released ; 2002 ; Senate Manual 2002 ; 2002 >
-    au < released ; 2008 ; Senate Manual 2008 ; 2008 >
+    au < down ; 1996 ; Senate Manual 1996 ; 1996 >
+    au < down ; 2000 ; Senate Manual 2000 ; 2000 >
+    au < down ; 2002 ; Senate Manual 2002 ; 2002 >
+    au < down ; 2008 ; Senate Manual 2008 ; 2008 >
 
   }
 
@@ -1096,22 +1096,22 @@
     param[collection_id] = USCODE
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1994 ; United States Code 1994 ; 1994 >
-    au < released ; 1995 ; United States Code 1995 ; 1995 >
-    au < released ; 1996 ; United States Code 1996 ; 1996 >
-    au < released ; 1997 ; United States Code 1997 ; 1997 >
-    au < released ; 1998 ; United States Code 1998 ; 1998 >
-    au < released ; 1999 ; United States Code 1999 ; 1999 >
-    au < released ; 2000 ; United States Code 2000 ; 2000 >
-    au < released ; 2001 ; United States Code 2001 ; 2001 >
-    au < released ; 2002 ; United States Code 2002 ; 2002 >
-    au < released ; 2003 ; United States Code 2003 ; 2003 >
-    au < released ; 2004 ; United States Code 2004 ; 2004 >
-    au < released ; 2005 ; United States Code 2005 ; 2005 >
-    au < released ; 2006 ; United States Code 2006 ; 2006 >
-    au < released ; 2007 ; United States Code 2007 ; 2007 >
-    au < released ; 2008 ; United States Code 2008 ; 2008 >
-    au < released ; 2009 ; United States Code 2009 ; 2009 >
+    au < down ; 1994 ; United States Code 1994 ; 1994 >
+    au < down ; 1995 ; United States Code 1995 ; 1995 >
+    au < down ; 1996 ; United States Code 1996 ; 1996 >
+    au < down ; 1997 ; United States Code 1997 ; 1997 >
+    au < down ; 1998 ; United States Code 1998 ; 1998 >
+    au < down ; 1999 ; United States Code 1999 ; 1999 >
+    au < down ; 2000 ; United States Code 2000 ; 2000 >
+    au < down ; 2001 ; United States Code 2001 ; 2001 >
+    au < down ; 2002 ; United States Code 2002 ; 2002 >
+    au < down ; 2003 ; United States Code 2003 ; 2003 >
+    au < down ; 2004 ; United States Code 2004 ; 2004 >
+    au < down ; 2005 ; United States Code 2005 ; 2005 >
+    au < down ; 2006 ; United States Code 2006 ; 2006 >
+    au < down ; 2007 ; United States Code 2007 ; 2007 >
+    au < down ; 2008 ; United States Code 2008 ; 2008 >
+    au < down ; 2009 ; United States Code 2009 ; 2009 >
       
   }
 
@@ -1128,21 +1128,21 @@
       param[collection_id] = GOVMAN
       implicit < status ; year ; name ; param[year] >
 
-      au < released ; 1995 ; United States Government Manual 1995 ; 1995 >
-      au < released ; 1996 ; United States Government Manual 1996 ; 1996 >
-      au < released ; 1997 ; United States Government Manual 1997 ; 1997 >
-      au < released ; 1998 ; United States Government Manual 1998 ; 1998 >
-      au < released ; 1999 ; United States Government Manual 1999 ; 1999 >
-      au < released ; 2000 ; United States Government Manual 2000 ; 2000 >
-      au < released ; 2001 ; United States Government Manual 2001 ; 2001 >
-      au < released ; 2002 ; United States Government Manual 2002 ; 2002 >
-      au < released ; 2003 ; United States Government Manual 2003 ; 2003 >
-      au < released ; 2004 ; United States Government Manual 2004 ; 2004 >
-      au < released ; 2005 ; United States Government Manual 2005 ; 2005 >
-      au < released ; 2006 ; United States Government Manual 2006 ; 2006 >
-      au < released ; 2007 ; United States Government Manual 2007 ; 2007 >
-      au < released ; 2008 ; United States Government Manual 2008 ; 2008 >
-      au < released ; 2009 ; United States Government Manual 2009 ; 2009 >
+      au < down ; 1995 ; United States Government Manual 1995 ; 1995 >
+      au < down ; 1996 ; United States Government Manual 1996 ; 1996 >
+      au < down ; 1997 ; United States Government Manual 1997 ; 1997 >
+      au < down ; 1998 ; United States Government Manual 1998 ; 1998 >
+      au < down ; 1999 ; United States Government Manual 1999 ; 1999 >
+      au < down ; 2000 ; United States Government Manual 2000 ; 2000 >
+      au < down ; 2001 ; United States Government Manual 2001 ; 2001 >
+      au < down ; 2002 ; United States Government Manual 2002 ; 2002 >
+      au < down ; 2003 ; United States Government Manual 2003 ; 2003 >
+      au < down ; 2004 ; United States Government Manual 2004 ; 2004 >
+      au < down ; 2005 ; United States Government Manual 2005 ; 2005 >
+      au < down ; 2006 ; United States Government Manual 2006 ; 2006 >
+      au < down ; 2007 ; United States Government Manual 2007 ; 2007 >
+      au < down ; 2008 ; United States Government Manual 2008 ; 2008 >
+      au < down ; 2009 ; United States Government Manual 2009 ; 2009 >
 
     }
 
@@ -1152,17 +1152,17 @@
       param[base_url] = http://bulk.resource.org/      
       implicit < status ; name ; param[year] >
 
-      au < released ; United States Government Manual 1997 [Public.Resource.Org] ; 1997 >
-      au < released ; United States Government Manual 1998 [Public.Resource.Org] ; 1998 >
-      au < released ; United States Government Manual 1999 [Public.Resource.Org] ; 1999 >
-      au < released ; United States Government Manual 2000 [Public.Resource.Org] ; 2000 >
-      au < released ; United States Government Manual 2001 [Public.Resource.Org] ; 2001 >
-      au < released ; United States Government Manual 2002 [Public.Resource.Org] ; 2002 >
-      au < released ; United States Government Manual 2003 [Public.Resource.Org] ; 2003 >
-      au < released ; United States Government Manual 2004 [Public.Resource.Org] ; 2004 >
-      au < released ; United States Government Manual 2005 [Public.Resource.Org] ; 2005 >
-      au < released ; United States Government Manual 2006 [Public.Resource.Org] ; 2006 >
-      au < released ; United States Government Manual 2007 [Public.Resource.Org] ; 2007 >
+      au < down ; United States Government Manual 1997 [Public.Resource.Org] ; 1997 >
+      au < down ; United States Government Manual 1998 [Public.Resource.Org] ; 1998 >
+      au < down ; United States Government Manual 1999 [Public.Resource.Org] ; 1999 >
+      au < down ; United States Government Manual 2000 [Public.Resource.Org] ; 2000 >
+      au < down ; United States Government Manual 2001 [Public.Resource.Org] ; 2001 >
+      au < down ; United States Government Manual 2002 [Public.Resource.Org] ; 2002 >
+      au < down ; United States Government Manual 2003 [Public.Resource.Org] ; 2003 >
+      au < down ; United States Government Manual 2004 [Public.Resource.Org] ; 2004 >
+      au < down ; United States Government Manual 2005 [Public.Resource.Org] ; 2005 >
+      au < down ; United States Government Manual 2006 [Public.Resource.Org] ; 2006 >
+      au < down ; United States Government Manual 2007 [Public.Resource.Org] ; 2007 >
       
     }
    
@@ -1179,11 +1179,11 @@
     param[collection_id] = STATUTE
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1951 ; United States Statutes at Large 1951 ; 1951 >
-    au < released ; 2003 ; United States Statutes at Large 2003 ; 2003 >
-    au < released ; 2004 ; United States Statutes at Large 2004 ; 2004 >
-    au < released ; 2005 ; United States Statutes at Large 2005 ; 2005 >
-    au < released ; 2006 ; United States Statutes at Large 2006 ; 2006 >
+    au < down ; 1951 ; United States Statutes at Large 1951 ; 1951 >
+    au < down ; 2003 ; United States Statutes at Large 2003 ; 2003 >
+    au < down ; 2004 ; United States Statutes at Large 2004 ; 2004 >
+    au < down ; 2005 ; United States Statutes at Large 2005 ; 2005 >
+    au < down ; 2006 ; United States Statutes at Large 2006 ; 2006 >
 
   }
 
@@ -1198,23 +1198,23 @@
     param[collection_id] = WCPD
     implicit < status ; year ; name ; param[year] >
 
-    au < released ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
-    au < released ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
-    au < released ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 >
-    au < released ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 >
-    au < released ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 >
-    au < released ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 >
-    au < released ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 >
-    au < released ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; 2000 >
-    au < released ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 >
-    au < released ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 >
-    au < released ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 >
-    au < released ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 >
-    au < released ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 >
-    au < released ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 >
-    au < released ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
-    au < released ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
-    au < released ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
+    au < down ; 1993 ; Weekly Compilation of Presidential Documents 1993 ; 1993 >
+    au < down ; 1994 ; Weekly Compilation of Presidential Documents 1994 ; 1994 >
+    au < down ; 1995 ; Weekly Compilation of Presidential Documents 1995 ; 1995 >
+    au < down ; 1996 ; Weekly Compilation of Presidential Documents 1996 ; 1996 >
+    au < down ; 1997 ; Weekly Compilation of Presidential Documents 1997 ; 1997 >
+    au < down ; 1998 ; Weekly Compilation of Presidential Documents 1998 ; 1998 >
+    au < down ; 1999 ; Weekly Compilation of Presidential Documents 1999 ; 1999 >
+    au < down ; 2000 ; Weekly Compilation of Presidential Documents 2000 ; 2000 >
+    au < down ; 2001 ; Weekly Compilation of Presidential Documents 2001 ; 2001 >
+    au < down ; 2002 ; Weekly Compilation of Presidential Documents 2002 ; 2002 >
+    au < down ; 2003 ; Weekly Compilation of Presidential Documents 2003 ; 2003 >
+    au < down ; 2004 ; Weekly Compilation of Presidential Documents 2004 ; 2004 >
+    au < down ; 2005 ; Weekly Compilation of Presidential Documents 2005 ; 2005 >
+    au < down ; 2006 ; Weekly Compilation of Presidential Documents 2006 ; 2006 >
+    au < down ; 2007 ; Weekly Compilation of Presidential Documents 2007 ; 2007 >
+    au < down ; 2008 ; Weekly Compilation of Presidential Documents 2008 ; 2008 >
+    au < down ; 2009 ; Weekly Compilation of Presidential Documents 2009 ; 2009 >
       
   }
 
