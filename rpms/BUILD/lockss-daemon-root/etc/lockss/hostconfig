@@ -9,9 +9,9 @@ if [ "X${BASH}" = "X" ]
 then
     for A in /bin /usr/bin /usr/gnu/bin /usr/local/bin
     do
-        if [ -x $A/${BASH_NAME} ]
+        if [ -f $A/${BASH_NAME} -a -x $A/${BASH_NAME} ]
         then
-            BASH=$A
+            BASH=$A/$BASH_NAME
             break
         fi
     done
@@ -22,9 +22,9 @@ then
     do
         echo "This script needs the \"${BASH_NAME}\" shell - please enter its path."
         read A
-        if [ -x ${A} ]
+        if [ -f "${A}" -a -x "${A}" ]
         then
-            BASH=${A}
+            BASH="${A}"
             break
         fi
         echo "${A} not executable"
