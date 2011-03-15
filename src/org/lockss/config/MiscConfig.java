@@ -1,5 +1,5 @@
 /*
- * $Id: MiscConfig.java,v 1.7 2011-01-20 08:36:42 tlipkis Exp $
+ * $Id: MiscConfig.java,v 1.8 2011-03-15 20:07:33 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.daemon.MimeTypeMap;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.servlet.ServletUtil;
+import org.lockss.exporter.Exporter;
 
 /** Miscellaneous config actions.  Convenient for auxilliary components
  * that don't currently have the ability to register themselves.
@@ -53,6 +54,7 @@ public class MiscConfig {
 	  ServletUtil.setConfig(config, oldConfig, diffs);
 	  MimeTypeMap.setConfig(config, oldConfig, diffs);
 	  MetadataUtil.setConfig(config, oldConfig, diffs);
+	  Exporter.setConfig(config, oldConfig, diffs);
 	}
       };
   }

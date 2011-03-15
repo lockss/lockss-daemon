@@ -1,5 +1,5 @@
 /*
- * $Id: ArcExporter.java,v 1.3 2010-02-24 03:29:16 tlipkis Exp $
+ * $Id: ArcExporter.java,v 1.4 2011-03-15 20:07:33 tlipkis Exp $
  */
 
 /*
@@ -81,11 +81,11 @@ public class ArcExporter extends Exporter {
 
   protected void writeCu(CachedUrl cu) throws IOException {
     String url = cu.getUrl();
-    InputStream contentIn = cu.getUnfilteredInputStream();
     long contentSize = cu.getContentSize();
     CIProperties props = cu.getProperties();
     long fetchTime =
       Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
+    InputStream contentIn = cu.getUnfilteredInputStream();
     try {
       if (isResponse) {
 	String hdrString = getHttpResponseString(cu);
@@ -93,15 +93,16 @@ public class ArcExporter extends Exporter {
 	InputStream headerIn =
 	  new ReaderInputStream(new StringReader(hdrString));
 	InputStream concat = new SequenceInputStream(headerIn, contentIn);
-	aw.write(xlateFilename(url), cu.getContentType(),
-		 getHostIp(), fetchTime, size, concat);
+	try {
+	  aw.write(xlateFilename(url), cu.getContentType(),
+		   getHostIp(), fetchTime, size, concat);
+	} finally {
+	  IOUtil.safeClose(concat);
+	}
       } else {
 	aw.write(xlateFilename(url), cu.getContentType(),
 		 getHostIp(), fetchTime, cu.getContentSize(), contentIn);
       }
-    } catch (IOException e) {
-      log.error("writeCu("+url+"): ", e);
-      throw e;
     } finally {
       AuUtil.safeRelease(cu);
     }

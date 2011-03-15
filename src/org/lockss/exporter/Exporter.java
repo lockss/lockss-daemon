@@ -1,5 +1,5 @@
 /*
- * $Id: Exporter.java,v 1.7 2010-08-11 03:27:20 tlipkis Exp $
+ * $Id: Exporter.java,v 1.8 2011-03-15 20:07:33 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,14 @@ public abstract class Exporter {
 
   private static Logger log = Logger.getLogger("Exporter");
 
+  static final String PREFIX = Configuration.PREFIX + "exporter.";
+
+  /** Abort export after this many errors */
+  public static final String PARAM_MAX_ERRORS = PREFIX + "maxErrors";
+  public static final int DEFAULT_MAX_ERRORS = 5;
+
+  protected static int maxErrors = DEFAULT_MAX_ERRORS;
+
   protected LockssDaemon daemon;
   protected ArchivalUnit au;
   protected File dir;
@@ -59,7 +67,8 @@ public abstract class Exporter {
   protected int maxVersions = 1;
   protected boolean compress = false;
   protected FilenameTranslation xlate = FilenameTranslation.XLATE_NONE;
-  List errors = new ArrayList();
+  protected List errors = new ArrayList();
+  protected boolean isDiskFull = false;
 
   protected abstract void start() throws IOException;
 
@@ -73,6 +82,16 @@ public abstract class Exporter {
     this.au = au;
   }
   
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PREFIX)) {
+      maxErrors = config.getInt(PARAM_MAX_ERRORS, DEFAULT_MAX_ERRORS);
+    }
+  }
+
   public void setCompress(boolean val) {
     compress = val;
   }
@@ -150,7 +169,11 @@ public abstract class Exporter {
     try {
       finish();
     } catch (IOException e) {
-      recordError("Error closing file", e);
+      if (!isDiskFull) {
+	// If we already knew (and reported) disk full, also reporting it
+	// as a close error is misleading.
+	recordError("Error closing file", e);
+      }
     }      
   }
 
@@ -161,6 +184,11 @@ public abstract class Exporter {
   protected void recordError(String msg, Throwable t) {
     log.error(msg, t);
     errors.add(msg + ": " + t.toString());
+  }
+
+  protected void recordError(String msg) {
+    log.error(msg);
+    errors.add(msg);
   }
 
   protected String getSoftwareVersion() {
@@ -236,7 +264,9 @@ public abstract class Exporter {
   }
 
   private void writeFiles() {
+    PlatformUtil platutil = PlatformUtil.getInstance();
     Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
+    int errs = 0;
     while (iter.hasNext()) {
       CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
       CachedUrl curCu = AuUtil.getCu(node);
@@ -248,8 +278,21 @@ public abstract class Exporter {
 	  try {
 	    log.debug2("Exporting " + cu.getUrl());
 	    writeCu(cu);
+	  } catch (IOException e) {
+	    if (platutil.isDiskFullError(e)) {
+	      recordError("Disk full, can't write export file.");
+	      isDiskFull = true;
+	      return;
+	    }
 	  } catch (Exception e) {
-	    recordError("Unable to write " + cu.getUrl(), e);
+	    // XXX Would like to differentiate between errors opening or
+	    // reading CU, which shouldn't cause abort, and errors writing
+	    // to export file, which should.
+	    recordError("Unable to copy " + cu.getUrl(), e);
+	    if (errs++ >= maxErrors) {
+	      recordError("Aborting after " + errs + " errors");
+	      return;
+	    }
 	  }
 	}
       }
