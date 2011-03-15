@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.3 2011-03-07 21:14:15 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.4 2011-03-15 20:41:33 pgust Exp $
  */
 
 /*
@@ -32,9 +32,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -46,7 +46,6 @@ import java.util.Map;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
@@ -60,6 +59,7 @@ import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
+import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.urlconn.LockssUrlConnection;
@@ -121,7 +121,9 @@ public class OpenUrlResolver {
   private static Logger log = Logger.getLogger("OpenUrlResolver");
 
   private final LockssDaemon daemon;
-  private final LockssUrlConnectionPool connectionPool;
+  private static final LockssUrlConnectionPool connectionPool = 
+    new LockssUrlConnectionPool();
+
 
   /** maximum redirects for looking up DOI url */
   private final int MAX_REDIRECTS = 10;
@@ -129,14 +131,13 @@ public class OpenUrlResolver {
   /**
    * Create a resolver for the specified metadata manager.
    * 
-   * @param metadataMgr the metadata manager
+   * @param metadataMgr the LOCKSS daemon
    */
   public OpenUrlResolver(LockssDaemon daemon) {
     if (daemon == null) {
-      throw new IllegalArgumentException("Metadata Manager not specified");
+      throw new IllegalArgumentException("LOCKSS daemon not specified");
     }
     this.daemon = daemon;
-    connectionPool = new LockssUrlConnectionPool();
   }
   
   /**
@@ -147,10 +148,8 @@ public class OpenUrlResolver {
    * @return the value or <code>null</code> if not present
    */
   private String getRftParam(Map<String,String> params, String key) {
-    String value = null;
-    if (params.containsKey(key)) {
-      value = params.get(key);
-    } else if (params.containsKey("rft." + key)) {
+    String value = params.get(key);
+    if (value == null) {
       value = params.get("rft." + key);
     }
     return value;
@@ -161,7 +160,7 @@ public class OpenUrlResolver {
    * 
    * @param params the parameters
    * @return a normalized date string of the form YYYY{-MM{-DD}}
-   *   or YYYY-nQ for nth quarter, or YYYY-nX for nth season for
+   *   or YYYY-Qn for nth quarter, or YYYY-Sn for nth season for
    *   n between 1 and 4.
    */
   private String getRftDate(Map<String,String> params) {
@@ -186,13 +185,13 @@ public class OpenUrlResolver {
         }
       } else if (ssn != null) {
         // fill in month based on season
-        if (ssn.equalsIgnoreCase("spring") || ssn.equals(1)) {
+        if (ssn.equalsIgnoreCase("spring")) {
           date += "-S1";
-        } else if (ssn.equalsIgnoreCase("summer") || ssn.equals(2)) {
+        } else if (ssn.equalsIgnoreCase("summer")) {
           date += "-S2";
-        } else if (ssn.equalsIgnoreCase("fall") || ssn.equals("3")) {
+        } else if (ssn.equalsIgnoreCase("fall")) {
           date += "-S3";
-        } else if (ssn.equalsIgnoreCase("winter") || ssn.equals("4")) {
+        } else if (ssn.equalsIgnoreCase("winter")) {
           date += "-S4";
         }
         log.warning("Invalid ssn: " + ssn);
@@ -219,13 +218,13 @@ public class OpenUrlResolver {
    * Resolve an OpenURL from a set of parameter keys and values.
    * 
    * @param params the OpenURL parameters
-   * @return a CachedURL or <code>null</code> if not found
+   * @return a url or <code>null</code> if not found
    */
   public String resolveOpenUrl(Map<String,String> params) {
     if (params.containsKey("rft_id")) {
       String rft_id = params.get("rft_id");
       // handle rft_id that is an HTTP or HTTPS URL
-      if (rft_id.startsWith("http:/") || rft_id.startsWith("https:/")) {
+      if (rft_id.startsWith("http://") || rft_id.startsWith("https://")) {
         return rft_id;
       } else if (rft_id.startsWith("info:doi/")) {
         String doi = rft_id.substring("info:doi/".length());
@@ -264,14 +263,16 @@ public class OpenUrlResolver {
         String url = 
           resolveFromIssn(eissn, date, volume, issue, spage, author, atitle);
         if (url != null) {
-          String title = getRftParam(params, "jtitle");
-          if (title == null) {
-            title = getRftParam(params, "title");
+          if (log.isDebug3()) {
+            String title = getRftParam(params, "jtitle");
+            if (title == null) {
+              title = getRftParam(params, "title");
+            }
+            log.debug3("Located url " + url +
+                      " for article \"" + atitle + "\"" +
+                      ", eISSN " + eissn +
+                      ", title \"" + title + "\"");
           }
-          if (log.isDebug3()) log.debug3("Located url " + url +
-                    " for article \"" + atitle + "\"" +
-                    ", ISSN " + issn +
-                    ", title \"" + title + "\"");
           return url;
         }
         log.debug3("Failed to resolve from eISSN: " + eissn);
@@ -281,14 +282,16 @@ public class OpenUrlResolver {
         String url = 
           resolveFromIssn(issn, date, volume, issue, spage, author, atitle);
         if (url != null) {
-          String title = getRftParam(params, "jtitle");
-          if (title == null) {
-            title = getRftParam(params, "title");
+          if (log.isDebug3()) {
+            String title = getRftParam(params, "jtitle");
+            if (title == null) {
+              title = getRftParam(params, "title");
+            }
+            log.debug3("Located url " + url +
+                      " for article \"" + atitle + "\"" +
+                      ", ISSN " + issn +
+                      ", title \"" + title + "\"");
           }
-          if (log.isDebug3()) log.debug3("Located url " + url +
-                    " for article \"" + atitle + "\"" +
-                    ", ISSN " + issn +
-                    ", title \"" + title + "\"");
           return url;
         }
         log.debug3("Failed to resolve from ISSN: " + issn);
@@ -310,67 +313,64 @@ public class OpenUrlResolver {
       isbook = title != null;
     }
     if (title != null) {
-      Configuration config = ConfigManager.getCurrentConfig();
-      if (config != null) {
-        Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
-        if (tdb != null) {
-          Collection<TdbTitle> titles = Collections.emptySet();
-          String pub = getRftParam(params, "pub");
-          // limit search to publisher if specified, 
-          // otherwise search all matching titles
-          if (pub != null) {
-            TdbPublisher tdbPub = tdb.getTdbPublisher(pub);
-            if (tdbPub != null) {
-              titles = tdbPub.getTdbTitlesByName(title);
-            }
-          } else {
-            titles = tdb.getTdbTitlesByName(title);
+      Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+      if (tdb != null) {
+        Collection<TdbTitle> titles = Collections.emptySet();
+        String pub = getRftParam(params, "pub");
+        // limit search to publisher if specified, 
+        // otherwise search all matching titles
+        if (pub != null) {
+          TdbPublisher tdbPub = tdb.getTdbPublisher(pub);
+          if (tdbPub != null) {
+            titles = tdbPub.getTdbTitlesByName(title);
           }
+        } else {
+          titles = tdb.getTdbTitlesByName(title);
+        }
 
-          // search all titles with either ISBN or ISSN first, because they
-          // can be resolved to a specific article in the metadata database
-          Collection <TdbTitle> notitles = new ArrayList<TdbTitle>();
-          for (TdbTitle tdbTitle : titles) {
-            String id = tdbTitle.getId();
-            
-            // PJG: monographic serials can have ISBNs too; not sure
-            // whether OpenURL treats these as journals or books.
-            if (!isjournal && MetadataUtil.isISBN(id, false)) {
-              // try resolving from ISBN
-              String url = resolveFromIsbn(id, edition, spage, author, atitle);
-              if (url != null) {
-                log.debug3("Located url " + url + " for book ISBN " + isbn); 
-              }
-              return url;
-            }  else if (!isbook && MetadataUtil.isISSN(id)) {
-              // try resolving from ISSN
-              String url = 
-                resolveFromIssn(id, date, volume, issue, spage, author, atitle);
-              if (url != null) {
-                if (log.isDebug3()) log.debug3("Located url " + url +
-                          " for article \"" + atitle + "\"" +
-                          ", ISSN " + issn +
-                          ", title \"" + title + "\"" +
-                          ", publisher \""  + 
-                          tdbTitle.getTdbPublisher().getName() + "\"");
-                return url;
-              }
-            } else {
-              notitles.add(tdbTitle);
+        // search all titles with either ISBN or ISSN first, because they
+        // can be resolved to a specific article in the metadata database
+        Collection <TdbTitle> notitles = new ArrayList<TdbTitle>();
+        for (TdbTitle tdbTitle : titles) {
+          String id = tdbTitle.getId();
+          
+          // PJG: monographic serials can have ISBNs too; not sure
+          // whether OpenURL treats these as journals or books.
+          if (!isjournal && MetadataUtil.isISBN(id, false)) {
+            // try resolving from ISBN
+            String url = resolveFromIsbn(id, edition, spage, author, atitle);
+            if (url != null) {
+              log.debug3("Located url " + url + " for book ISBN " + isbn); 
             }
-          }
-
-          // search titles with no isbn or issn identifier 
-          for (TdbTitle tdbTitle : notitles) {
-            String url = resolveFromTdbTitle(tdbTitle, date, volume, issue);
+            return url;
+          }  else if (!isbook && MetadataUtil.isISSN(id)) {
+            // try resolving from ISSN
+            String url = 
+              resolveFromIssn(id, date, volume, issue, spage, author, atitle);
             if (url != null) {
               if (log.isDebug3()) log.debug3("Located url " + url +
-                        ", title \"" + tdbTitle.getName() + "\"" +
+                        " for article \"" + atitle + "\"" +
+                        ", ISSN " + issn +
+                        ", title \"" + title + "\"" +
                         ", publisher \""  + 
                         tdbTitle.getTdbPublisher().getName() + "\"");
               return url;
-            }            
+            }
+          } else {
+            notitles.add(tdbTitle);
           }
+        }
+
+        // search titles with no isbn or issn identifier 
+        for (TdbTitle tdbTitle : notitles) {
+          String url = resolveFromTdbTitle(tdbTitle, date, volume, issue);
+          if (url != null) {
+            if (log.isDebug3()) log.debug3("Located url " + url +
+                      ", title \"" + tdbTitle.getName() + "\"" +
+                      ", publisher \""  + 
+                      tdbTitle.getTdbPublisher().getName() + "\"");
+            return url;
+          }            
         }
       }
       log.debug3("Failed to resolve from title: \"" + title + "\"");
@@ -389,6 +389,7 @@ public class OpenUrlResolver {
       } catch (ParseException ex) {
         log.warning(ex.getMessage());
       }
+      log.debug3("Located url " + url + "for bici " + bici);
       return url;
     }
 
@@ -404,6 +405,7 @@ public class OpenUrlResolver {
       } catch (ParseException ex) {
         log.warning(ex.getMessage());
       }
+      log.debug3("Located url " + url + "for sici " + sici);
       return url;
     }
 
@@ -599,7 +601,7 @@ public class OpenUrlResolver {
    * @return the article url
    */
   public String resolveFromDOI(String doi) {
-    if (!doi.startsWith("10.")) {
+    if (!MetadataUtil.isDOI(doi)) {
       return null;
     }
     String url = null;
@@ -658,9 +660,10 @@ public class OpenUrlResolver {
       String query =           
         "select access_url from " + MTN + "," + DTN 
       + " where " + DTN + ".md_id = " + MTN + ".md_id"
-      + " and doi = '" + doi + "'";
-      Statement stmt = conn.createStatement();
-      ResultSet resultSet = stmt.executeQuery(query);
+      + " and doi = ?";
+      PreparedStatement stmt = conn.prepareStatement(query);
+      stmt.setString(1, doi);
+      ResultSet resultSet = stmt.executeQuery();
       if (resultSet.next()) {
         url = resultSet.getString(1);
       }
@@ -690,18 +693,23 @@ public class OpenUrlResolver {
     String issn, String date, String volume, String issue, 
     String spage, String author, String atitle) {
     String url = null;
-    try {
-      // resolve from metadata manager
-      MetadataManager metadataMgr = daemon.getMetadataManager();
-      url = resolveFromIssn(metadataMgr, issn, date, 
-                            volume, issue, spage, author, atitle);
-    } catch (IllegalArgumentException ex) {
+    // only go to metadata manager if requesting individual article
+    if (   !StringUtil.isNullString(spage)
+        || !StringUtil.isNullString(author)
+        || !StringUtil.isNullString(atitle)) {
+      try {
+        // resolve from metadata manager
+        MetadataManager metadataMgr = daemon.getMetadataManager();
+        url = resolveFromIssn(metadataMgr, issn, date, 
+                              volume, issue, spage, author, atitle);
+      } catch (IllegalArgumentException ex) {
+      }
     }
 
     if (url == null) {
       // resolve from TDB
-      Configuration config = ConfigManager.getCurrentConfig();
-      TdbTitle title = config.getTdb().getTdbTitleById(issn);
+      Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+      TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleById(issn);
       if (title == null) {
         log.debug3("No TdbTitle for issn " + issn);
         return null;
@@ -740,29 +748,78 @@ public class OpenUrlResolver {
 
       String MTN = MetadataManager.METADATA_TABLE_NAME;
       String ITN = MetadataManager.ISSN_TABLE_NAME;
-      String query =           
-        "select access_url from " + MTN + "," + ITN 
-      + " where " + ITN + ".md_id = " + MTN + ".md_id"
-      + " and issn = '" + issn + "'";
+      ArrayList<String> args = new ArrayList<String>();
+      StringBuffer query = new StringBuffer();
+      query.append("select access_url from ");
+      query.append(MTN);
+      query.append(",");
+      query.append(ITN);
+      query.append(" where ");
+      query.append(ITN);
+      query.append(".md_id = ");
+      query.append(MTN);
+      query.append(".md_id and issn = ?");
+      args.add(issn);
       if (date != null) {
         // enables query "2009" to match "2009-05-10" in database
-        query+= " and date like '" + date + "%'";
+        query.append(" and date like ? escape '\\'");
+        args.add(date.replace("%","\\%") + "%");
       }
       if (volume != null) {
-        query+= " and volume='" + volume + "'";
+        query.append(" and volume = ?");
+        args.add(volume);
       }
       if (issue != null) {
-        query+= " and issue='" + issue + "'";
+        query.append(" and issue= ?");
+        args.add(issue);
       }
       if (spage != null) {
-        query+= " and start_page='" + spage + "'";
+        query.append(" and start_page = ?");
+        args.add(spage);
       } else if (author != null) {
-        query+= " and author like '" + author + "%'";
+        query.append(" and (");
+        
+        // match single author
+        // (last, first name separated by ',')
+        query.append(" author = ?");
+        args.add(author);
+
+        // match last name of first author 
+        // (last, first name separated by ',')
+        query.append(" or author like ? escape '\\'");
+        args.add(author.replace("%","\\%")+",%");
+        
+        // match entire first author 
+        // (authors separated by ';', last, first name separated by ',')
+        query.append(" or author like ? escape '\\'");
+        args.add(author.replace("%","\\%")+";%");
+        
+        // match last name of middle or last author 
+        // (authors separated by ';', last, first name separated by ',')
+        query.append(" or author like ? escape '\\'");
+        args.add("%;" + author.replace("%","\\%") + ",%");
+        
+        // match entire middle author 
+        // (authors separated by ';')
+        query.append(" or author like ? escape '\\'");
+        args.add("%;" + author.replace("%","\\%") + ";%");
+        
+        // match entire last author 
+        // (authors separated by ';')
+        query.append(" or author like ? escape '\\'");
+        args.add("%;" + author.replace("%","\\%"));
+        
+        query.append(")");
       } else if (atitle != null) {
-        query+= " and article_title like '" + atitle + "%'";
+        // match the entire article title or a prefix
+        query.append(" and article_title like ? escape '\\'");
+        args.add(atitle.replace("%","\\%") + "%");
       }
-      Statement stmt = conn.createStatement();
-      ResultSet resultSet = stmt.executeQuery(query);
+      PreparedStatement stmt = conn.prepareStatement(query.toString());
+      for (int i = 0; i < args.size(); i++) {
+        stmt.setString(i+1, args.get(i));
+      }
+      ResultSet resultSet = stmt.executeQuery();
       if (resultSet.next()) {
         url = resultSet.getString(1);
       }
@@ -794,12 +851,18 @@ public class OpenUrlResolver {
       tdbau = itr.next();
       
       if (volume != null) {
-        String auVolume = tdbau.getParam("volume");
+        // use the volume attribute as preferred bibliographic value
+        // because the parameter values are sometimes not used correctly
+        // within TDB files (e.g. they're really years)
+        String auVolume = tdbau.getAttr("volume");
         if (auVolume == null) {
           auVolume = tdbau.getParam("volume_name");
         }
         if (auVolume == null) {
           auVolume = tdbau.getParam("volume_str");
+        }
+        if (auVolume == null) {
+          auVolume = tdbau.getParam("volume");
         }
         if ((auVolume != null) && !volume.equals(auVolume)) {
           continue;
@@ -807,9 +870,11 @@ public class OpenUrlResolver {
       }
 
       if (date != null) {
-        String auYear = tdbau.getParam("year");
+        // use the year attribute as preferred bibliographic value
+        // because the parameter values are sometimes not used correctly
+        String auYear = tdbau.getAttr("year");
         if (auYear == null) {
-          auYear = tdbau.getAttr("year");
+          auYear = tdbau.getParam("year");
         }
         if ((auYear != null) && !date.startsWith(auYear)) {
           continue;
@@ -969,17 +1034,23 @@ public class OpenUrlResolver {
   public String resolveFromIsbn(
     String isbn, String edition, String spage, String author, String atitle) {
     String url = null;
-    try {
-      // resolve from metadata manager
-      MetadataManager metadataMgr = daemon.getMetadataManager();
-      url = resolveFromIsbn(metadataMgr, isbn, edition, spage, author, atitle);
-    } catch (IllegalArgumentException ex) {
+    // only go to metadata manager if requesting individual article/chapter
+    if (   !StringUtil.isNullString(spage)
+        || !StringUtil.isNullString(author)
+        || !StringUtil.isNullString(atitle)) {
+      try {
+        // resolve from metadata manager
+        MetadataManager metadataMgr = daemon.getMetadataManager();
+        url = resolveFromIsbn(
+                          metadataMgr, isbn, edition, spage, author, atitle);
+      } catch (IllegalArgumentException ex) {
+      }
     }
 
     if (url == null) {
       // resolve from TDB
-      Configuration config = ConfigManager.getCurrentConfig();
-      TdbTitle title = config.getTdb().getTdbTitleById(isbn);
+      Tdb tdb = ConfigManager.getCurrentConfig().getTdb();
+      TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleById(isbn);
       if (title == null) {
         log.debug3("No TdbTitle for isbn " + isbn);
         return null;
@@ -1040,7 +1111,8 @@ public class OpenUrlResolver {
 
     String url = null;
     if (plugin != null) {
-      log.debug3("geting starting url for plugin: " + plugin.getClass().getName());
+      log.debug3(  "geting starting url for plugin: " 
+                 + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
       if (plugin instanceof DefinablePlugin) {
         url = getStartingUrl((DefinablePlugin)plugin, tdbau);
@@ -1079,32 +1151,69 @@ public class OpenUrlResolver {
 
       String MTN = MetadataManager.METADATA_TABLE_NAME;
       String ITN = MetadataManager.ISBN_TABLE_NAME;
-      String query =           
-        "select access_url from " + MTN + "," + ITN 
-      + " where " + ITN + ".md_id = " + MTN + ".md_id"
-      + " and isbn = '" + isbn + "'";
-
+      ArrayList<String> args = new ArrayList<String>();
+      StringBuffer query = new StringBuffer();
+      query.append("select access_url from ");
+      query.append(MTN);
+      query.append(",");
+      query.append(ITN);
+      query.append(" where ");
+      query.append(ITN);
+      query.append(".md_id = ");
+      query.append(MTN);
+      query.append(".md_id and isbn = ?");
+      args.add(isbn);
       if (edition != null) {
-        query+= " and volume='" + edition + "'";
+        query.append(" and volume = ?");
+        args.add(edition);
       }
       if (spage != null) {
-        query+= " and start_page='" + spage + "'";
+        query.append(" and start_page = ?");
+        args.add(spage);
       } else if (author != null) {
-        query+= " and (";
+        query.append(" and (");
+        
         // match single author
-        query+= " author = '" + author + "'";
-        // match first author
-        query+= " or author like '" + author + ";%'";
-        // match last author
-        query+= " or author like '%;" + author + "'";
-        // match any middle author
-        query+= " or author like '%;" + author + ";%'";
-        query+= ")";
+        // (last, first name separated by ',')
+        query.append(" author = ?");
+        args.add(author);
+
+        // match last name of first author 
+        // (last, first name separated by ',')
+        query.append(" or author like ? escape '\\'");
+        args.add(author.replace("%","\\%")+",%");
+        
+        // match entire first author 
+        // (authors separated by ';', last, first name separated by ',')
+        query.append(" or author like ? escape '\\'");
+        args.add(author.replace("%","\\%")+";%");
+        
+        // match last name of middle or last author 
+        // (authors separated by ';', last, first name separated by ',')
+        query.append(" or author like ? escape '\\'");
+        args.add("%;" + author.replace("%","\\%") + ",%");
+        
+        // match entire middle author 
+        // (authors separated by ';')
+        query.append(" or author like ? escape '\\'");
+        args.add("%;" + author.replace("%","\\%") + ";%");
+        
+        // match entire last author 
+        // (authors separated by ';')
+        query.append(" or author like ? escape '\\'");
+        args.add("%;" + author.replace("%","\\%"));
+        
+        query.append(")");
       } else if (atitle != null) {
-        query+= " and article_title like '" + atitle + "%'";
+        // match the entire article title or a prefix
+        query.append(" and article_title like ? escape '\\'");
+        args.add(atitle.replace("%","\\%") + "%");
       }
-      Statement stmt = conn.createStatement();
-      ResultSet resultSet = stmt.executeQuery(query);
+      PreparedStatement stmt = conn.prepareStatement(query.toString());
+      for (int i = 0; i < args.size(); i++) {
+        stmt.setString(i+1, args.get(i));
+      }
+      ResultSet resultSet = stmt.executeQuery();
       if (resultSet.next()) {
         url = resultSet.getString(1);
       }

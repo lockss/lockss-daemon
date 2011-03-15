@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.4 2011-03-07 21:14:15 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.5 2011-03-15 20:41:33 pgust Exp $
  */
 
 /*
@@ -234,6 +234,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Journal[10.13579/9781585623174.1]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.13579/9781585623174.1]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin2");
+    tdbProps.setProperty("param.1.key", "base_url");
+    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin2.com/journals/Journal[10.13579/9781585623174.1]");
     tdb.addTdbAuFromProperties(tdbProps);
     
     tdbProps = new Properties();
@@ -242,6 +244,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Journal[10.2468/24681357.2010-06.1]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.2468/24681357.2010-06.1]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin1");
+    tdbProps.setProperty("param.1.key", "base_url");
+    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin1.com/journals/Journal[10.2468/24681357.2010-06.1]");
     tdb.addTdbAuFromProperties(tdbProps);
 
     tdbProps = new Properties();
@@ -250,6 +254,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("journalTitle", "Journal[10.1234/12345678.2010-01.1]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.1234/12345678.2010-01.1]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin0");
+    tdbProps.setProperty("param.1.key", "base_url");
+    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin0.com/journals/Journal[10.1234/12345678.2010-01.1]");
     tdb.addTdbAuFromProperties(tdbProps);
 
     config.setTdb(tdb);
@@ -564,6 +570,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
+    // expect base_url
     params.clear();
     params.put("rft.isbn", "978-1-58562-317-4");
     params.put("rft.title", "Title[10.13579/9781585623174.1]");
@@ -594,6 +601,14 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
+
+    // from SimulatedPlugin2
+    // book title only, without publisher
+    // expect base_url
+    params.clear();
+    params.put("rft.btitle", "Journal[10.13579/9781585623174.1]");
+    url = openUrlResolver.resolveOpenUrl(params);
+    assertNotNull(url);
   }
   
   /**
@@ -603,12 +618,11 @@ public class TestOpenUrlResolver extends LockssTestCase {
   public void testResolveFromIssn() {
     String url;
     
-    log.critical("&&& isIssn(1144-875X): " + MetadataUtil.isISSN("1144-875X")); // PJG
     // from SimulatedPlugin1
     Map<String,String> params = new HashMap<String,String>();
 
+    // expect base_url
     params.put("rft.issn", "1144-875X");
-//    params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
@@ -618,6 +632,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
+    // expect base_url
     params.clear();
     params.put("rft.issn", "1144-875X");
     params.put("rft.title", "Title[10.2468/24681357.2010-06.1]");
@@ -660,6 +675,13 @@ public class TestOpenUrlResolver extends LockssTestCase {
     params.clear();
     params.put("rft.jtitle", "Journal[10.01357/12345678.2009-11.12]");
     params.put("rft.spage", "1");
+    url = openUrlResolver.resolveOpenUrl(params);
+    assertNotNull(url);
+
+    // from SimulatedPlugin3
+    // journal title only, without publisher
+    params.clear();
+    params.put("rft.jtitle", "Journal[10.01357/12345678.2009-11.12]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
   }
