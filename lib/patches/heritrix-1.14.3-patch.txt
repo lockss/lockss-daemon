@@ -21,4 +21,27 @@ Index: src/java/org/archive/io/ArchiveRecord.java
 -		incrementPosition(read);
  		return read;
  	}
- 
+Index: src/java/org/archive/io/WriterPoolMember.java
+===================================================================
+--- src/java/org/archive/io/WriterPoolMember.java.~1~	2009-03-02 20:14:32.000000000 -0800
++++ src/java/org/archive/io/WriterPoolMember.java	2011-03-15 00:31:41.000000000 -0700
+@@ -481,7 +481,18 @@
+         if (this.out == null) {
+             return;
+         }
+-        this.out.close();
++	try {
++	  this.out.close();
++	} catch (IOException e) {
++	  // If out.close() throws it may not have closed the underlying
++	  // FileOutputStream (e.g., after a disk full error, closing a
++	  // CompressedStream will also get a disk full error attempting to
++	  // flush buffers).  Be sure not to leave the file open.
++	  try {
++	    this.fos.close();
++	  } catch (IOException ignore) { }
++	  throw e;
++	}
+         this.out = null;
+         this.fos = null;
+         if (this.f != null && this.f.exists()) {

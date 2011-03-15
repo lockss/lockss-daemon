@@ -2,7 +2,7 @@
 <!--
 
 ========================================================================
- $Id: build.xml,v 1.272 2011-03-13 22:06:49 tlipkis Exp $
+ $Id: build.xml,v 1.273 2011-03-15 20:07:03 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 
@@ -256,7 +256,7 @@ Args:
   <!-- Needed by PDFBox: -->
   <property name="bouncycastle.mail.jar" value="${lib}/bcmail-jdk14-132.jar" />
   <!-- Needed by ArcExploder, exporters, jcr repo: -->
-  <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p1.jar" />
+  <property name="heritrix.jar" value="${lib}/heritrix-1.14.3-p2.jar" />
   <property name="heritrix-fastutil.jar" value="${lib}/fastutil-5.0.3-heritrix-subset-1.0.jar" />
 
   <property name="ext.javadoc"
