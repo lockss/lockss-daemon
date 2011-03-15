@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformUtil.java,v 1.7.40.1 2011-02-14 00:19:14 tlipkis Exp $
+ * $Id: TestPlatformUtil.java,v 1.7.40.2 2011-03-15 20:04:06 tlipkis Exp $
  */
 
 /*
@@ -167,6 +167,12 @@ public class TestPlatformUtil extends LockssTestCase {
     assertTrue(df.isFullerThan(makeThresh(100, .30)));
     assertFalse(df.isFullerThan(makeThresh(100, .20)));
     assertFalse(df.isFullerThan(makeThresh(0, 0)));
+  }
+
+  public void testisDiskFullError() throws Exception {
+    assertFalse(info.isDiskFullError(new IOException("jjjjj: No such file or directory")));
+    assertTrue(info.isDiskFullError(new IOException("No space left on device")));
+    assertTrue(info.isDiskFullError(new IOException("disk: No space left on device")));
   }
 
   public void xtestThreadDump() throws Exception {
