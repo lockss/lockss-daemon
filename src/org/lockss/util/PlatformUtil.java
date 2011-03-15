@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformUtil.java,v 1.16 2011-02-14 00:09:56 tlipkis Exp $
+ * $Id: PlatformUtil.java,v 1.17 2011-03-15 20:07:47 tlipkis Exp $
  */
 
 /*
@@ -174,6 +174,14 @@ public class PlatformUtil {
    */
   public boolean isCaseSensitiveFileSystem() {
 	  return true;
+  }
+  
+  /**
+   * Return true if the exception was caused by a full filesystem
+   */
+  public boolean isDiskFullError(IOException e) {
+    return StringUtil.indexOfIgnoreCase(e.getMessage(),
+					"No space left on device") >= 0;
   }
   
   static Runtime rt() {
