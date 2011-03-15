@@ -1,5 +1,5 @@
 /*
- * $Id: WarcExporter.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
+ * $Id: WarcExporter.java,v 1.4.12.1 2011-03-15 20:03:51 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,6 @@ public class WarcExporter extends Exporter {
 
   protected void writeCu(CachedUrl cu) throws IOException {
     String url = cu.getUrl();
-    InputStream contentIn = cu.getUnfilteredInputStream();
     long contentSize = cu.getContentSize();
     CIProperties props = cu.getProperties();
     ANVLRecord headers = new ANVLRecord(5);
@@ -113,8 +112,9 @@ public class WarcExporter extends Exporter {
     long fetchTime =
       Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
     String timestamp = ArchiveUtils.getLog14Date(fetchTime);
-    if (isResponse) {
-      try {
+    InputStream contentIn = cu.getUnfilteredInputStream();
+    try {
+      if (isResponse) {
 	String hdrString = getHttpResponseString(cu);
 	long size = contentSize + hdrString.length();
 	InputStream headerIn =
@@ -127,29 +127,20 @@ public class WarcExporter extends Exporter {
 				 WARCWriter.getRecordID(),
 				 headers, concat, size);
 	} finally {
-	  IOUtil.safeClose(contentIn);
+	  IOUtil.safeClose(concat);
 	}
-      } catch (IOException e) {
-	log.error("writeCu("+url+"): ", e);
-	throw e;
-      }
-    } else {
-      try {
+      } else {
 	String mimeType =
 	  HeaderUtil.getMimeTypeFromContentType(cu.getContentType());
-	try {
-	  ww.writeResourceRecord(xlateFilename(url),
-				 timestamp,
-				 mimeType,
-				 headers, contentIn, contentSize);
-      } finally {
-	  IOUtil.safeClose(contentIn);
-	}
-      } catch (IOException e) {
-	log.error("writeCu("+url+"): ", e);
-	throw e;
+	ww.writeResourceRecord(xlateFilename(url),
+			       timestamp,
+			       mimeType,
+			       headers, contentIn, contentSize);
       }
+    } finally {
+      IOUtil.safeClose(contentIn);
     }
+
   }
   
 

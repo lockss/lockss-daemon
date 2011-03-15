@@ -1,5 +1,5 @@
 /*
- * $Id: ZipExporter.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
+ * $Id: ZipExporter.java,v 1.4.12.1 2011-03-15 20:03:51 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class ZipExporter extends Exporter {
   private static Logger log = Logger.getLogger("ZipExporter");
 
   ZipOutputStream zip = null;
+  FileOutputStream fos = null;
   CountingOutputStream cos = null;
   int serialNo = 1;
   String timestamp = null;
@@ -84,7 +85,6 @@ public class ZipExporter extends Exporter {
 
   protected void writeCu(CachedUrl cu) throws IOException {
     ensureOpenZip();
-    InputStream ins = cu.getUnfilteredInputStream();
     CIProperties props = cu.getProperties();
     ZipEntry ent = new ZipEntry(xlateFilename(cu.getUrl()));
     // Store HTTP response headers into entry comment
@@ -95,10 +95,15 @@ public class ZipExporter extends Exporter {
       ent.setTime(cuLastModified);
     } catch (RuntimeException e) {
     }
-    zip.putNextEntry(ent);
-    StreamUtil.copy(ins, zip);
-    zip.closeEntry();
+    InputStream ins = cu.getUnfilteredInputStream();
+    try {
+      zip.putNextEntry(ent);
+      StreamUtil.copy(ins, zip);
+      zip.closeEntry();
 //     zip.flush();
+    } finally {
+      IOUtil.safeClose(ins);
+    }
   }
   
   private long dateAsLong(String datestr) {
@@ -112,9 +117,15 @@ public class ZipExporter extends Exporter {
   }
 
   private void closeZip() throws IOException {
-    zip.close();
+    try {
+      zip.close();
+    } catch (IOException e) {
+      // ensure close file if zip got error flushing output
+      IOUtil.safeClose(fos);
+    }
     zip = null;
     cos = null;
+    fos = null;
   }
 
   private void ensureOpenZip() throws IOException {
@@ -132,7 +143,8 @@ public class ZipExporter extends Exporter {
       prefix + "-" + timestamp + "-" +
       serialNumberFormatter.format(serialNo++) + ".zip";
     File file = new File(getDir(), name);
-    cos = new CountingOutputStream(new FileOutputStream(file));
+    fos = new FileOutputStream(file);
+    cos = new CountingOutputStream(fos);
     OutputStream os = new BufferedOutputStream(cos);
     zip = new ZipOutputStream(os);
     if (!compress) {
