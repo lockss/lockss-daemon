@@ -27,9 +27,9 @@
       au < exists ; Advances in Psychiatric Treatment Volume 8 ; 8 >
       au < exists ; Advances in Psychiatric Treatment Volume 9 ; 9 >
       au < exists ; Advances in Psychiatric Treatment Volume 10 ; 10 >
-      au < wanted ; Advances in Psychiatric Treatment Volume 11 ; 11 >
-      au < wanted ; Advances in Psychiatric Treatment Volume 12 ; 12 >
-      au < wanted ; Advances in Psychiatric Treatment Volume 13 ; 13 >
+      au < ready ; Advances in Psychiatric Treatment Volume 11 ; 11 >
+      au < ready ; Advances in Psychiatric Treatment Volume 12 ; 12 >
+      au < ready ; Advances in Psychiatric Treatment Volume 13 ; 13 >
       au < wanted ; Advances in Psychiatric Treatment Volume 14 ; 14 >
       au < wanted ; Advances in Psychiatric Treatment Volume 15 ; 15 >
       au < wanted ; Advances in Psychiatric Treatment Volume 16 ; 16 >
@@ -127,13 +127,13 @@
       au < exists ; The British Journal of Psychiatry Volume 183 ; 183 >
       au < exists ; The British Journal of Psychiatry Volume 184 ; 184 >
       au < exists ; The British Journal of Psychiatry Volume 185 ; 185 >
-      au < wanted ; The British Journal of Psychiatry Volume 191 ; 191 >
-      au < wanted ; The British Journal of Psychiatry Volume 192 ; 192 >
-      au < wanted ; The British Journal of Psychiatry Volume 193 ; 193 >
-      au < wanted ; The British Journal of Psychiatry Volume 194 ; 194 >
-      au < wanted ; The British Journal of Psychiatry Volume 195 ; 195 >
-      au < wanted ; The British Journal of Psychiatry Volume 196 ; 196 >
-      au < wanted ; The British Journal of Psychiatry Volume 197 ; 197 >
+      au < ready ; The British Journal of Psychiatry Volume 191 ; 191 >
+      au < ready ; The British Journal of Psychiatry Volume 192 ; 192 >
+      au < ready ; The British Journal of Psychiatry Volume 193 ; 193 >
+      au < ready ; The British Journal of Psychiatry Volume 194 ; 194 >
+      au < ready ; The British Journal of Psychiatry Volume 195 ; 195 >
+      au < ready ; The British Journal of Psychiatry Volume 196 ; 196 >
+      au < ready ; The British Journal of Psychiatry Volume 197 ; 197 >
       au < wanted ; The British Journal of Psychiatry Volume 198 ; 198 >
 
     }
@@ -142,7 +142,7 @@
 
   {
     title <
-      name = Psychiatric Bulletin ;
+      name = The Psychiatrist ;
       issn = 0955-6036 ;
       eissn = 1472-1473 ;
       issnl = 0955-6036
@@ -195,8 +195,8 @@
       au < wanted ; Psychiatric Bulletin Volume 31 ; 31 >
       au < wanted ; Psychiatric Bulletin Volume 32 ; 32 >
       au < wanted ; Psychiatric Bulletin Volume 33 ; 33 >
-      au < wanted ; Psychiatric Bulletin Volume 34 ; 34 >
-      au < wanted ; Psychiatric Bulletin Volume 35 ; 35 >
+      au < wanted ; The Psychiatrist Volume 34 ; 34 >
+      au < wanted ; The Psychiatrist Volume 35 ; 35 >
 
     }
 
