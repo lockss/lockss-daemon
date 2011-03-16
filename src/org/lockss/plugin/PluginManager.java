@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.215 2011-03-13 21:52:50 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.216 2011-03-16 08:34:33 tlipkis Exp $
  */
 
 /*
@@ -500,11 +500,13 @@ public class PluginManager
   }
 
   private void configureDefaultTitleSets() {
-    TreeSet<TitleSet> list = new TreeSet<TitleSet>();
-    list.add(new TitleSetAllTitles(getDaemon()));
-    list.add(new TitleSetActiveAus(getDaemon()));
-    list.add(new TitleSetInactiveAus(getDaemon()));
-    installTitleSets(list);
+    if (titleSets == null || titleSets.isEmpty()) {
+      TreeSet<TitleSet> list = new TreeSet<TitleSet>();
+      list.add(new TitleSetAllTitles(getDaemon()));
+      list.add(new TitleSetActiveAus(getDaemon()));
+      list.add(new TitleSetInactiveAus(getDaemon()));
+      installTitleSets(list);
+    }
   }
 
   private void configureTitleSets(Configuration config) {
@@ -537,6 +539,7 @@ public class PluginManager
     }
     titleSets = sets;
     titleSetMap = map;
+    log.debug2(titleSets.size() + " titlesets");
   }
 
   private TitleSet createTitleSet(Configuration config) {
