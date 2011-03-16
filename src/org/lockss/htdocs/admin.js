@@ -70,12 +70,26 @@ function selectEnable(elem, id1, id2) {
  }
 }
 
+lastAuClicked = null;
+
 function selectAll(form, op) {
+ selectAll(form, op, null, null);
+}
+
+function selectAll(form, op, first, last) {
  initRepoMap(form);
  for (var i=0;i < form.length;i++) {
   var elem = form.elements[i];
   if (elem.className == 'doall') {
-   if (op == 'clear' && (elem.type == 'checkbox' || elem.type == 'radio')) { 
+   if (first != null && elem.tabIndex < first.tabIndex) {
+    continue;
+   }
+   if (last != null && elem.type == 'checkbox' &&
+       elem.tabIndex > last.tabIndex) {
+    break;
+   }
+   if (op == 'clear' && (elem.type == 'checkbox' ||
+			 elem.type == 'radio' && !elem.defaultChecked)) { 
     elem.checked = false;
    } else if (op == 'all' && elem.type == 'checkbox') { 
     if (!elem.checked) {
@@ -92,6 +106,22 @@ function selectAll(form, op) {
    }
   }
  }
+}
+
+function clickAu(clickEvent, checkbox, form) {
+ if (clickEvent.shiftKey && lastAuClicked != null) {
+  if (checkbox.tabIndex < lastAuClicked.tabIndex) {
+   selectAll(form, "all", checkbox, lastAuClicked);
+  } else {
+   selectAll(form, "all", lastAuClicked, checkbox);
+  }
+ }
+ // must do this even if called selectAll; it won't have selected this AU's
+ // repo because the checkbox is already checked when it gets there.
+ if (checkbox.checked) {
+  selectRepo(checkbox, form);
+ }
+ window.lastAuClicked = checkbox;
 }
 
 function selectRepo(checkbox, form) {
