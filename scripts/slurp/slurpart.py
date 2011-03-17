@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# $Id: slurpart.py,v 1.2 2010-10-08 22:07:53 thib_gc Exp $
+# $Id: slurpart.py,v 1.3 2011-03-17 20:57:53 thib_gc Exp $
 
 # Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
 # all rights reserved.
@@ -143,7 +143,9 @@ def __process_results(query_results, options):
     max_year = datetime.today().year
     ret = {}
     for p, y, a in query_results:
-        if p is None: continue
+        if p is None:
+            sys.stderr.write('Warning: some AUs do not have a publisher specified\n')
+            p = '(No publisher specified)'
         if p not in ret:
             ret[p] = dict(zip(range(min_year, max_year + 1), [0] * (max_year - min_year + 1)))
             ret[p][0] = 0
