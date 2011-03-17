@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.99 2011-01-25 18:37:30 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.99.2.1 2011-03-17 14:38:57 easyonthemayo Exp $
  */
 
 /*
@@ -640,7 +640,7 @@ public class StringUtil {
     return sb.toString();
   }
 
-  /** Encode a string to be included in a CSV.  Values containins comma,
+  /** Encode a string to be included in a CSV.  Values containing comma,
    * space or quote are quoted, quotes are doubled */
   public static String csvEncode(String s) {
     if (s.indexOf('"') >= 0) {
