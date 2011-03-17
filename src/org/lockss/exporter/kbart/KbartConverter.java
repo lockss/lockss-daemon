@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.4 2011-03-06 00:05:37 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.5 2011-03-17 14:28:56 easyonthemayo Exp $
  */
 
 /*
@@ -274,14 +274,14 @@ public class KbartConverter {
     // Title URL
     // Set using a substitution parameter e.g. LOCKSS_RESOLVER?issn=1234-5678 (issn or eissn or issn-l)
     //baseKbt.setField(TITLE_URL, findAuInfo(firstAu, DEFAULT_TITLE_URL_ATTR, AuInfoType.PARAM));
-    baseKbt.setField(TITLE_URL, LABEL_PARAM_LOCKSS_RESOLVER+"?issn="+baseKbt.getValidIssnIdentifier()); 
+    baseKbt.setField(TITLE_URL, LABEL_PARAM_LOCKSS_RESOLVER + baseKbt.getResolverUrlParams()); 
 	
     // ---------------------------------------------------------
     // Attempt to create ranges for titles with a coverage gap.
     // Depends on the availability of years in AUs.
     
     // Get a list of year ranges for the AUs, and figure out where the titles need to be split into ranges    
-    List<TitleRange> ranges = getAuYearRanges(aus);
+    List<TitleRange> ranges = getAuCoverageRanges(aus);
 
     // Iterate through the year ranges creating a title for each range with a gap 
     // longer than a year (KBART 5.3.1.9)
@@ -372,7 +372,7 @@ public class KbartConverter {
    * @return a list of parsed Integers from the AUs, in the same order as the supplied list; or null if the parsing was unsuccessful
    */
   private static List<Integer> getAuYears(List<TdbAu> aus) {
-    if (aus.isEmpty()) return null;
+    if (aus==null || aus.isEmpty()) return null;
     List<Integer> years = new ArrayList<Integer>();
     
     // Find the year key (the 2 possible keys, matching year field in either attr or param, 
@@ -385,7 +385,7 @@ public class KbartConverter {
 
     // If no type found for year, see if the volume field appears to contain a year 
     if (type==null) {
-      String[] possKeys = new String[] {DEFAULT_VOLUME_ATTR, DEFAULT_VOLUME_PARAM, DEFAULT_VOLUME_PARAM_NAME};
+      String[] possKeys = {DEFAULT_VOLUME_ATTR, DEFAULT_VOLUME_PARAM, DEFAULT_VOLUME_PARAM_NAME};
       // Find the type, then the key to that type
       type = findAuInfoType(first, possKeys);
       yearKey = findMapKey(first, possKeys, type);
@@ -408,8 +408,84 @@ public class KbartConverter {
     return years;
   }
   
+  
+  /**
+   * Extract volume fields from a list of AUs for a single title. Only 
+   * numerical volumes are returned; string volumes are considered incomparable.
+   * This depends on the data being available in the TDB record and in
+   * the correct format. The volume key should be the same for AUs from
+   * the same title, so we first get the key, instead of repeatedly using 
+   * <code>findVolume()</code>.
+   * <p>
+   * If the given AUs <b>all</b> have numerical values for volume, a list of integers
+   * is returned of the same size and order of the AU list. Otherwise (the values are 
+   * non-numerical, empty, or are not available for all the AUs) a null is returned.
+   * <p>
+   * An assumption made here is that a TDB record will tend to have either
+   * a full set of well-formed volume fields, or a full-set of ill-formed 
+   * or empty volume fields. If a volume cannot be parsed for one of the 
+   * AUs, none are returned. This means that we get one range; the alternative 
+   * is to produce a number of ranges which might include false positives. 
+   * That is, a gap would be produced either side of an AU with no volume.
+   * 
+   * @param aus a list of AUs
+   * @return a list of volumes from the AUs, in the same order as the supplied list; or null if the parsing was unsuccessful
+   */
+  private static List<Integer> getAuVols(List<TdbAu> aus) {
+    if (aus==null || aus.isEmpty()) return null;
+    // Create a list of the appropriate size
+    List<Integer> vols = new ArrayList<Integer>(aus.size());
+    
+    // Find the volume key
+    String[] possKeys = {DEFAULT_VOLUME_ATTR, DEFAULT_VOLUME_PARAM, DEFAULT_VOLUME_PARAM_NAME};
+    // Find the type, then the key to that type
+    TdbAu first = aus.get(0);
+    AuInfoType type = findAuInfoType(first, possKeys);
+    String volKey = findMapKey(first, possKeys, type);
+    // If there appears to be no valid volume key, return null
+    if (volKey==null) return null;
+
+    // Get a volume for each AU
+    try {
+      for (TdbAu au : aus) {
+	vols.add(new Integer( type.findAuInfo(au, volKey) ));
+      }
+    } catch (NumberFormatException e) {
+      return null;  
+    }
+    return vols;  
+  }
+  
+  
+  /**
+   * Attempt to retrieve from the AUs a list of values which can be compared in  
+   * order to decide whether there is a coverage gap between consecutive AUs. The
+   * returned value is one of the following, in order of preference:
+   * <ul>
+   * <li>a full list of volumes</li>
+   * <li>a full list of years</li>
+   * <li>null</li>
+   * </ul>
+   * <p>
+   * We look first at the volume fields; if they have numerical values which can therefore be compared
+   * numerically, a list of volumes is returned. If there is incomplete volume information or it is non-numerical, 
+   * we resort to the years to establish a coverage gap. If these are incomplete then a null is returned.
+   * 
+   * @see #getAuVols()
+   * @see #getAuYears()
+   * @param aus a list of AUs
+   * @return a list of values in the same order, or null
+   */
+  private static List<Integer> getCoverageValues(List<TdbAu> aus) {
+    List<Integer> values = getAuVols(aus);
+    return values == null ? getAuYears(aus) : values;
+  }
+  
+  
   /**
    * A class for convenience in passing back title year ranges after year processing.
+   * A year can be set to zero if it is not available. The onus is on the client to check 
+   * whether the year is valid.
    * 
    */
   private static class TitleRange {
@@ -427,69 +503,92 @@ public class KbartConverter {
   }
 
   /**
-   * Get a list of years for the AUs, and figure out where the titles need to be split into ranges.
-   * If no years could be established, the single full range of the list is returned. 
+   * Establish coverage gaps for the list of AUs, and return a list of title ranges, representing coverage 
+   * periods which can be turned directly into title records. The method firsts gets a list of either volumes or 
+   * years for the AUs, and uses them to figure out where the titles need to be split into ranges. If consecutive 
+   * AUs have a difference of more than 1 between their coverage values, it is considered a coverage gap.
+   * If no volumes or years could be established, the single full range of the list is returned.
    * <p>
-   * If the first and last years are not available, we look at each volume field to see if its
-   * value looks like a publication year, as several publishers use the year as a volume id.
-   * If it meets the criteria we use it in the date field.
+   * The volume information is considered preferentially, as it is more likely to give an indication of 
+   * a true coverage gap; in particular there are cases where a journal is released less frequently than 
+   * annually, so there is no actual coverage gap but the criteria recommended by KBART in 5.3.1.9 will 
+   * result in one. This point of the recommendations is particularly ambiguous and will be referred to 
+   * the KBART organisation. In the meantime this algorithm represents our own interpretation of "coverage gap".   
    * <p>
    * Finally, if the last range in a title spans to the current year, we leave the last year, volume 
    * and issue fields empty as suggested by KBART 5.3.2.8 - 5.3.2.10.
    * 
-   * 
    * @param aus ordered list of AUs
    * @return a similarly-ordered list of TitleRange objects 
    */
-  private static List<TitleRange> getAuYearRanges(List<TdbAu> aus) {
-    List<Integer> years = getAuYears(aus);
-    List<TitleRange> ranges = new ArrayList<TitleRange>();
+  private static List<TitleRange> getAuCoverageRanges(List<TdbAu> aus) {
     // Return immediately if there are no AUs
     int n = aus.size();
-    if (n == 0) return ranges;
-    
-    int firstIssueYear;           // The first year in the current range
-    int currentIssueYear;         // The current year (last year in the current range)
-    int prevIssueYear;            // The year from the previous loop
-    TdbAu firstAu;                // The first AU in the current range
-    TdbAu currentAu;              // The current AU (last AU in the current range)
-    TdbAu prevAu;                 // The AU from the previous loop
+    if (n == 0) return Collections.emptyList();
 
-    // Just add the full range if no years are available
-    if (years==null) {
+    List<TitleRange> ranges = new ArrayList<TitleRange>();
+    
+    // Get an appropriate set of integer values to use in coverage assessment 
+    //List<Integer> values = getCoverageValues(aus);
+
+    List<Integer> values = getAuVols(aus);
+    List<Integer> years = getAuYears(aus);
+    if (values==null) values = years;
+    boolean hasYears = years!=null && years.size()==n;
+    
+    // Just add the full range if neither volumes nor years are available
+    if (values==null) {
       ranges.add(new TitleRange(aus.get(0), aus.get(n-1), 0, 0));
       return ranges;
     }
-      
-    // Iterate through the years, starting a new title record if there is a gap 
-    // longer than a year (KBART 5.3.1.9). The years are in the same order as the aus list.
-    // Set first au and year
-    firstIssueYear = years.get(0);
-    firstAu = aus.get(0);
-    currentIssueYear = firstIssueYear;
+     
+    int firstCoverageVal;       // The first coverage value in the current range
+    int currentCoverageVal;     // The current coverage value (last value in the current range)
+    int prevCoverageVal;        // The coverage from the previous loop
+
+    TdbAu firstAu;              // The first AU in the current range
+    TdbAu currentAu;            // The current AU (last AU in the current range)
+    TdbAu prevAu;               // The AU from the previous loop
+
+    // The index of the first AU of the current range
+    int firstAuIndex;
+    
+    // Set first au and coverage value
+    firstAuIndex = 0;
+    firstCoverageVal = values.get(firstAuIndex);
+    firstAu = aus.get(firstAuIndex);
+    // Set current au and coverage value
+    currentCoverageVal = firstCoverageVal;
     currentAu = firstAu;
     
-    // Iterate through the years, starting a new title record if there is a gap 
-    // longer than a year (KBART 5.3.1.9)
+    // Iterate through the values, starting a new title record if there
+    // is a coverage gap, defined as non-consecutive numerical volumes,
+    // or a gap between years which is greater than 1 
+    // (Interpretation of KBART 5.3.1.9)
     for (int i=0; i<n; i++) {
-      // Reset year vars
+      // Reset au and coverage vars
       prevAu = currentAu;
-      prevIssueYear = currentIssueYear;
-      currentIssueYear = years.get(i);
+      prevCoverageVal = currentCoverageVal;
+      currentCoverageVal = values.get(i);
       currentAu = aus.get(i);
-      
-      // There is a gap
-      if (i>0 && currentIssueYear - prevIssueYear > 1) {
-	// Finish the old title and start a new title 
-	ranges.add(new TitleRange(firstAu, prevAu, firstIssueYear, prevIssueYear));
+	
+      // There is a gap: this is not the first AU, and there is either a volume or year gap 
+      if (i>0 && currentCoverageVal - prevCoverageVal > 1) {
+	// Finish the old title and start a new title
+	int firstYear = hasYears ? years.get(firstAuIndex) : 0;
+	int prevYear = hasYears ? years.get(i-1) : 0;
+	ranges.add(new TitleRange(firstAu, prevAu, firstYear, prevYear));
 	// Set new title properties
+	firstAuIndex = i;
 	firstAu = currentAu;
-	  firstIssueYear = currentIssueYear;
+	firstCoverageVal = currentCoverageVal;
       }
       // On the last title
       if (i==n-1) {
 	// finish current title
-	ranges.add(new TitleRange(firstAu, currentAu, firstIssueYear, currentIssueYear));
+	int firstYear = hasYears ? years.get(firstAuIndex) : 0;
+	int currentYear = hasYears ? years.get(i) : 0;
+	ranges.add(new TitleRange(firstAu, currentAu, firstYear, currentYear));
       }
     }
     return ranges;
@@ -497,49 +596,6 @@ public class KbartConverter {
 
 
   
-  
-  /**
-   * Sort a set of <code>TdbAu</code> objects into ascending alphabetic name order.
-   * By convention of TDB AU naming, this should also be chronological order.
-   * There is no guaranteed way to order chronologically due to the incompleteness of date 
-   * metadata included in AUs at the time of writing; however the naming convention
-   * appears to be universally observed.
-   * <p>
-   * Note that the AU names ought to be identical to the name plus a volume or year identifier.
-   * Takes account of numerical volume identifiers, which should get ordered 
-   * numerically by magnitude. Mixed identifiers are treated as text. Proper pairwise 
-   * comparison of text and number components of a pair of strings can be achieved
-   * through {@link org.lockss.exporter.kbart.TdbAuAlphanumericComparator}. 
-   * <p>
-   * Perhaps this comparator should throw an exception if the conventions appear to be 
-   * contravened, rather than trying to order with arbitrary names. 
-   *  	
-   * @author neil
-   * @deprecated
-   */
-  public static class TdbAuComparator implements Comparator<TdbAu> {
-    public int compare(TdbAu au1, TdbAu au2) {
-      String au1name = au1.getName();
-      String au2name = au2.getName();
-      String title = au1.getTdbTitle().getName();
-      if (au1name.startsWith(title) && au2name.startsWith(title)) {
-	String a1 = au1name.substring(title.length());
-	String a2 = au2name.substring(title.length());
-	// compare suffices after the title name
-	// try and cast to ints first
-	try { 
-	  Integer y1 = new Integer(a1);	    
-	  Integer y2 = new Integer(a2);
-	  return y1.compareTo(y2);
-	} catch (NumberFormatException e) {
-	  return a1.compareTo(a2); 
-	}
-      } else {
-	// do straight alpha comparison
-	return au1name.compareTo(au2name);
-      }
-    }
-  }
 
   
 }

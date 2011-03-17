@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.3 2011-02-16 23:41:48 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.4 2011-03-17 14:28:56 easyonthemayo Exp $
  */
 
 /*
@@ -31,6 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.exporter.kbart;
+
+import static org.lockss.exporter.kbart.KbartTdbAuUtil.findAuInfoType;
 
 import java.util.List;
 import java.util.Map;
@@ -227,6 +229,7 @@ public class KbartTdbAuUtil {
    * 
    * @param au the TdbAu to search for an attribute
    * @param defaultKeyList an array of possible key names, in descending order of importance
+   * @param type an info type that has been established for the keys 
    * @return an existing key name, or null
    */
   protected static String findMapKey(TdbAu au, String[] defaultKeyList, AuInfoType type) {
@@ -237,6 +240,22 @@ public class KbartTdbAuUtil {
     }
     return null;
   }
+  
+  /**
+   * Attempts to find a map key by searching for each of the 
+   * supplied keys in order.
+   * 
+   * @param au the TdbAu to search for an attribute
+   * @param defaultKeyList an array of possible key names, in descending order of importance
+   * @return an existing key name, or null
+   */
+  protected static String findMapKey(TdbAu au, String[] defaultKeyList) {
+    AuInfoType type = findAuInfoType(au, defaultKeyList);
+    return findMapKey(au, defaultKeyList, type);
+  }
+  
+
+
   
   /**
    * Attempts to find a map key by searching for the supplied key in 

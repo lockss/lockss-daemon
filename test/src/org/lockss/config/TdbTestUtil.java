@@ -53,16 +53,17 @@ public class TdbTestUtil {
 
   public static String RANGE_2_START = "2005";
   public static String RANGE_2_END = "2006";
-  public static String RANGE_2_START_VOL = "6";
-  public static String RANGE_2_END_VOL = "7";
+  public static String RANGE_2_START_VOL = "2";
+  public static String RANGE_2_END_VOL = "3";
 
-  // Parameters for a journal which runs up to now and must therefore produce empty "last*" fields
+  // Parameters for a journal which runs up to now and must therefore produce empty "last*" fields.
+  // There is no coverage gap so only a single output title should be produced.
   // Note that the current date is assigned to a static variable; this should be fine unless the tests
   // are somehow run on a system that has been up for a while. Or over new year..
   public static String RANGE_TO_NOW_START = ""+(Calendar.getInstance().get(Calendar.YEAR) - 1);
   public static String RANGE_TO_NOW_END = ""+Calendar.getInstance().get(Calendar.YEAR);
   public static String RANGE_TO_NOW_START_VOL = "1";
-  public static String RANGE_TO_NOW_END_VOL = "171";
+  public static String RANGE_TO_NOW_END_VOL = "2";
 
 
   /**
@@ -103,10 +104,11 @@ public class TdbTestUtil {
    * Create and fill a title with ranged AUs, and add it to the supplied publisher.
    * Contains 1 title with 3 AUs, which should split into 2 title ranges for KBART.
    * 
+   * @param withVols whether to include volume ranges or just years
    * @return a TdbTitle
    * @throws TdbException
    */
-  public static TdbTitle makeRangeTestTitle() throws TdbException {
+  public static TdbTitle makeRangeTestTitle(boolean withVols) throws TdbException {
     // --------------------------------------------
     // Create another title for testing ranges
     TdbTitle rangeTitle = new TdbTitle("rangeTitle", DEFAULT_TITLE_ID_RANGE);
@@ -115,18 +117,18 @@ public class TdbTestUtil {
     // AU range 1 (2000-2000, vol 1-1) 
     TdbAu rangeTitleAu1a = createBasicAu("rangeTitleAu1a", DEFAULT_PLUGIN+"1a", DEFAULT_ISSN_2, DEFAULT_EISSN_2);
     rangeTitleAu1a.setAttr("year", RANGE_1_START);
-    rangeTitleAu1a.setAttr(DEFAULT_VOLUME_KEY, RANGE_1_START_VOL);
+    if (withVols) rangeTitleAu1a.setAttr(DEFAULT_VOLUME_KEY, RANGE_1_START_VOL);
     rangeTitle.addTdbAu(rangeTitleAu1a);
 
-    // AU range 2 (2005-2006, vol 6-7) 
+    // AU range 2 (2005-2006, vol 2-3) - coverage gap for years, but not volumes 
     TdbAu rangeTitleAu2a = createBasicAu("rangeTitleAu2a", DEFAULT_PLUGIN+"2a", DEFAULT_ISSN_2, DEFAULT_EISSN_2);
     rangeTitleAu2a.setAttr("year", RANGE_2_START);
-    rangeTitleAu2a.setAttr(DEFAULT_VOLUME_KEY, RANGE_2_START_VOL);
+    if (withVols) rangeTitleAu2a.setAttr(DEFAULT_VOLUME_KEY, RANGE_2_START_VOL);
     rangeTitle.addTdbAu(rangeTitleAu2a);
 
     TdbAu rangeTitleAu2b = createBasicAu("rangeTitleAu2b", DEFAULT_PLUGIN+"2b", DEFAULT_ISSN_2, DEFAULT_EISSN_2);
     rangeTitleAu2b.setAttr("year", RANGE_2_END);
-    rangeTitleAu2b.setAttr(DEFAULT_VOLUME_KEY, RANGE_2_END_VOL);
+    if (withVols) rangeTitleAu2b.setAttr(DEFAULT_VOLUME_KEY, RANGE_2_END_VOL);
     rangeTitle.addTdbAu(rangeTitleAu2b); 
 
     return rangeTitle; 
@@ -137,7 +139,7 @@ public class TdbTestUtil {
     TdbTitle rangeTitle = new TdbTitle("rangeToNowTitle", DEFAULT_TITLE_ID_RANGE);
     rangeTitle.setTdbPublisher(new TdbPublisher(DEFAULT_PUBLISHER));
 
-    // AU range (last year - this year, vol 1-171) 
+    // AU range (last year - this year, consecutive vols) 
     TdbAu rangeTitleAu3a = createBasicAu("rangeTitleAu3a", DEFAULT_PLUGIN+"3a", DEFAULT_ISSN_3, DEFAULT_EISSN_3);
     rangeTitleAu3a.setAttr("year", RANGE_TO_NOW_START);
     rangeTitleAu3a.setAttr(DEFAULT_VOLUME_KEY, RANGE_TO_NOW_START_VOL);
