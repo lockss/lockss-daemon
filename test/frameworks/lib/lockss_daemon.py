@@ -477,7 +477,7 @@ class Client:
         d = dict()
         for map in self._getStatusTable('AuIds', outputVersion=2,
                                         columns="AuId;AuName")[1]:
-            d[map['AuId']] = map['AuName']
+            d[map['AuId']] = map['AuName']['value']
         return d
     
     def getDictOfCrawlPools(self):
@@ -485,7 +485,7 @@ class Client:
         for map in self._getStatusTable('AuIds', outputVersion=2,
                                         columns="AuId;CrawlPool")[1]:
             print map
-            d[map['AuId']] = map['CrawlPool']['value']
+            d[map['AuId']] = map['CrawlPool']
         return d
 
     def getListOfArticles(self, au):
