@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.4 2011-03-17 14:28:56 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.5 2011-03-18 16:34:10 easyonthemayo Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ public class KbartTdbAuUtil {
    * Returns less than 0 if the first is less than the second, greater than 0 if
    * the first is greater than the second, and 0 if they are the same. If the
    * strings cannot be parsed the default NumberFormatException is propagated to the caller.
+   * Currently this method just calls <code>compareIntStrings()</code>.
    * 
    * @param year1 a string representing a year
    * @param year2 a string representing a year
@@ -84,8 +85,19 @@ public class KbartTdbAuUtil {
   static int compareStringYears(String year1, String year2) throws NumberFormatException {
     // Note that in practise if the strings do represent comparable publication years, 
     // they will be 4 digits long and so comparable as strings with the same results.
-    Integer i1 = new Integer(year1);
-    Integer i2 = new Integer(year2);
+    return compareIntStrings(year1, year2);
+  }
+
+  /**
+   * Compare two strings that represent integers.
+   * @param int1 a string which should parse as an integer
+   * @param int2 a string which should parse as an integer
+   * @return the value 0 if the ints are the same; less than 0 if the first is less than the second; and greater than 0 if the first is greater than the second
+   * @throws NumberFormatException
+   */
+  static int compareIntStrings(String int1, String int2) throws NumberFormatException {
+    Integer i1 = new Integer(int1);
+    Integer i2 = new Integer(int2);
     return i1.compareTo(i2);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.5 2011-03-17 14:28:56 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.6 2011-03-18 16:34:10 easyonthemayo Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ public class KbartConverter {
    * @param aus a list of TdbAu objects
    */
   private static void sortAus(List<TdbAu> aus) {
-    Collections.sort(aus, new TdbAuDateFirstAlphanumericComparator());
+    Collections.sort(aus, new TdbAuVolumeDateAlphanumericComparator());
   }
 
   /**
