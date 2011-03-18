@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTitle.java,v 1.2.2.5 2011-03-17 14:38:57 easyonthemayo Exp $
+ * $Id: KbartTitle.java,v 1.2.2.6 2011-03-18 16:38:03 easyonthemayo Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.util.TreeMap;
 
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
+import org.lockss.util.UrlUtil;
 
 /**
  * An object representing a tuple of information about a KBART title. 
@@ -173,9 +174,12 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
     if (hasFieldValue(Field.ONLINE_IDENTIFIER)) return "?eissn=" + getField(Field.ONLINE_IDENTIFIER);
     if (hasFieldValue(Field.PRINT_IDENTIFIER)) return "?issn=" + getField(Field.PRINT_IDENTIFIER);
     // Resort to title and publisher (assume that they exist)
+    String pubTitle = UrlUtil.encodeUrl(getField(Field.PUBLICATION_TITLE));
+    String pubName = UrlUtil.encodeUrl(getField(Field.PUBLISHER_NAME));
+    // Build the arg url
     StringBuilder sb = new StringBuilder("?");
-    sb = sb.append(OpenUrlSyntax.PUBLICATION_TITLE).append("=").append(getField(Field.PUBLICATION_TITLE));
-    sb = sb.append(OpenUrlSyntax.PUBLISHER_NAME).append("=").append(getField(Field.PUBLISHER_NAME));
+    sb.append(OpenUrlSyntax.PUBLICATION_TITLE).append("=").append(pubTitle);
+    sb.append("&"+OpenUrlSyntax.PUBLISHER_NAME).append("=").append(pubName);
     return sb.toString();
   }  
 
@@ -468,7 +472,8 @@ public class KbartTitle implements Comparable<KbartTitle>, Cloneable {
       this.label = label;
     }
     
-    public String getLabel() { return label; }
+    public String toString() { return label; } 
+    
   }
   
   

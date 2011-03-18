@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlKbartExporter.java,v 1.2.2.5 2011-02-26 22:08:27 easyonthemayo Exp $
+ * $Id: HtmlKbartExporter.java,v 1.2.2.6 2011-03-18 16:38:03 easyonthemayo Exp $
  */
 
 /*
@@ -64,6 +64,11 @@ public class HtmlKbartExporter extends KbartExporter {
   /** A form to be incorporated into the page which provides a link to customisable display options. */
   //private Form customForm;
   
+  /** The index of the issn field. Will have the td.issn style applied to its table cells to stop it wrapping. */
+  private int issnFieldIndex;
+  /** The index of the eissn field. Will have the td.issn style applied to its table cells to stop it wrapping. */
+  private int eissnFieldIndex;
+  
   
   /**
    * Default constructor takes a list of KbartTitles to be exported.
@@ -117,9 +122,15 @@ public class HtmlKbartExporter extends KbartExporter {
     // Add an index column at the start
     printWriter.printf("<td>%s</td>", this.exportCount);
     
-    for (String val : values) {
+    for (int i=0; i<values.size(); i++) {
+      String val = values.get(i);
       if (StringUtil.isNullString(val)) val = "&nbsp;";
-      printWriter.printf("<td>%s</td>", val);
+      // Add appropriate style to issn fields
+      String cssClassParam = "";
+      if (i==issnFieldIndex || i==eissnFieldIndex) {
+	 cssClassParam = " class=\"issn\"";
+      }
+      printWriter.printf("<td%s>%s</td>", cssClassParam, val);
     }
     printWriter.println("</tr>");
   }
@@ -131,6 +142,8 @@ public class HtmlKbartExporter extends KbartExporter {
     this.exportSummary = String.format(this.outputFormat+" Export created on %s by %s | Exported %d KBART titles from %d TDB titles.",
 	new Date(), getHostName(), titles.size(), tdbTitleTotal);
     this.header = makeHeader();
+    this.issnFieldIndex = findFieldIndex(Field.PRINT_IDENTIFIER);
+    this.eissnFieldIndex = findFieldIndex(Field.ONLINE_IDENTIFIER);
     // Write html and head tags, including a metatag declaring the content type UTF-8
     printWriter.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset="+DEFAULT_ENCODING+"\"/>");
     printWriter.printf("<title>%s</title>", this.exportSummary);
@@ -142,6 +155,21 @@ public class HtmlKbartExporter extends KbartExporter {
     printWriter.printf(this.header);
   }
 
+  /**
+   * Find the index of the named field in the current output. If the field
+   * cannot be found, returns -1. 
+   * @param field a field
+   * @return the index ofthe named field, or -1
+   */
+  private int findFieldIndex(Field field) {
+    List<String> labs = getFieldLabels();
+    String name = field.getLabel();
+    for (int i=0; i<labs.size(); i++) {
+      if (labs.get(i).equals(name)) return i;
+    }
+    return -1;
+  }
+  
   private String makeHeader() {
     return String.format("<tr><th>Index</th><th>%s</th></tr>", 
 	StringUtil.separatedString(Field.getLabels(filter.getVisibleFieldOrder()), "</th><th>")
@@ -174,6 +202,7 @@ public class HtmlKbartExporter extends KbartExporter {
     sb.append("th { font-size: x-small; }");
     sb.append("tr.odd { background-color: #cce; }");
     sb.append("tr.even { background-color: #aac; }");
+    sb.append("td.issn { white-space: nowrap; }");
     sb.append("</style>");
     css = sb.toString();
   };
