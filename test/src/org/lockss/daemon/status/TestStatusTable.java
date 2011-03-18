@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.14 2008-10-07 18:13:09 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.15 2011-03-18 09:55:36 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,18 @@ public class TestStatusTable extends LockssTestCase {
     assertNotNull(tbl.getOptions());
   }
 
+  public void testProperties() {
+    StatusTable tbl = new StatusTable("tab");
+    assertNull(tbl.getProperties());
+    tbl.setProperty("k1", "v3");
+    assertEquals("v3", tbl.getProperty("k1"));
+    assertEquals(PropUtil.fromArgs("k1", "v3"), tbl.getProperties());
+    tbl.setProperty("k3", "xxx");
+    assertEquals("xxx", tbl.getProperty("k3"));
+    assertEquals(PropUtil.fromArgs("k1", "v3", "k3", "xxx"),
+		 tbl.getProperties());
+  }    
+
   public void testColDescMap() {
     List cols =
       ListUtil.list (
@@ -104,6 +116,50 @@ public class TestStatusTable extends LockssTestCase {
     expMap.put("col2", cols.get(1));
     expMap.put("col3", cols.get(2));
     assertEquals(expMap, table.getColumnDescriptorMap());
+  }
+
+  public void testFilterColDescs() {
+    List cols =
+      ListUtil.list (
+		     new ColumnDescriptor("col1", "Column 1 Title",
+					  ColumnDescriptor.TYPE_STRING),
+		     new ColumnDescriptor("col2", "Column 2 Title",
+					  ColumnDescriptor.TYPE_INT,
+					  "Column 2 footnote"),
+		     new ColumnDescriptor("col3", "Column 2 Title",
+					  ColumnDescriptor.TYPE_STRING)
+		     );
+    List def = ListUtil.list("col1", "col3");
+    assertEquals(cols, table.filterColDescs(cols, null));
+    assertEquals(ListUtil.list(cols.get(0), cols.get(2)),
+		 table.filterColDescs(cols, def));
+    table.setColumnDescriptors(cols);
+    assertEquals(ListUtil.list(cols.get(0), cols.get(1), cols.get(2)),
+		 table.getColumnDescriptors());
+    table.setColumnDescriptors(cols, def);
+    assertEquals(ListUtil.list(cols.get(0), cols.get(2)),
+		 table.getColumnDescriptors());
+    table.setProperty("columns", "col3;col2");
+    assertEquals(ListUtil.list(cols.get(2), cols.get(1)),
+		 table.filterColDescs(cols, def));
+    table.setColumnDescriptors(cols);
+    assertEquals(ListUtil.list(cols.get(2), cols.get(1)),
+		 table.getColumnDescriptors());
+  }
+
+  public void testIsIncludeColumn() {
+    List cols =
+      ListUtil.list (
+		     new ColumnDescriptor("col1", "Column 1 Title",
+					  ColumnDescriptor.TYPE_STRING),
+		     new ColumnDescriptor("col2", "Column 2 Title",
+					  ColumnDescriptor.TYPE_INT,
+					  "Column 2 footnote")
+		     );
+    table.setColumnDescriptors(cols);
+    assertTrue(table.isIncludeColumn("col1"));
+    assertTrue(table.isIncludeColumn("col2"));
+    assertFalse(table.isIncludeColumn("col3"));
   }
 
   Map testMap(Object key, Object val) {

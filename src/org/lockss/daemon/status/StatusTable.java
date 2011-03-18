@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.54 2010-09-01 07:51:29 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.55 2011-03-18 09:55:36 tlipkis Exp $
  */
 
 /*
@@ -166,6 +166,13 @@ public class StatusTable {
     return props;
   }
 
+  public String getProperty(String key) {
+    if (props == null) {
+      return null;
+    }
+    return props.getProperty(key);
+  }
+
   /**
    * Returns a List of {@link SummaryInfo} objects for this table
    * @return List of {@link SummaryInfo} objects for this table
@@ -208,14 +215,66 @@ public class StatusTable {
   }
 
   /**
-   * Sets a list of {@link ColumnDescriptor}s in their perferred display
+   * Sets a list of {@link ColumnDescriptor}s in their preferred display
    * order for this table
    * @param columnDescriptors List of {@link ColumnDescriptor}s in their
-   * perferred display order for this table
+   * preferred display order for this table
    */
   public void setColumnDescriptors(List columnDescriptors) {
-    this.columnDescriptors = columnDescriptors;
+    setColumnDescriptors(columnDescriptors, null);
+  }
+
+  /**
+   * Sets a list of {@link ColumnDescriptor}s in their preferred display
+   * order for this table
+   * @param columnDescriptors List of {@link ColumnDescriptor}s in their
+   * preferred display order for this table.  Will be filtered by the
+   * table's <code>columns</code> property, if any, or the default list, if
+   * not null.
+   * @param defaultCols Default list of column names if not specified in
+   * table, or null for no default filter.
+   */
+  public void setColumnDescriptors(List columnDescriptors,
+				   List<String>defaultCols) {
+    this.columnDescriptors = filterColDescs(columnDescriptors, defaultCols);
     columnDescriptorMap = null;
+  }
+
+  /**
+   * Filter the list of {@link ColumnDescriptor}s by the list of names
+   * specfied by the <code>columns</code> property of the table, if any,
+   * else the default list, if any.
+   * @param colDescs List of {@link ColumnDescriptor}s in their
+   * preferred display order for this table
+   * @param defaultCols Default list of column names if not specified in
+   * table, or null for no default filter.
+   */
+  public List<ColumnDescriptor> filterColDescs(List<ColumnDescriptor>colDescs,
+					       List<String>defaultCols) {
+    List<String> cols = defaultCols;
+    String colprop = getProperty("columns");
+    if (!StringUtil.isNullString(colprop)) {
+      cols = (List<String>)StringUtil.breakAt(colprop, ";");
+    }
+    if (cols == null) {
+      return colDescs;
+    }
+    Map<String,ColumnDescriptor> map = new HashMap<String,ColumnDescriptor>();
+    for (ColumnDescriptor col : colDescs) {
+      map.put(col.getColumnName(), col);
+    }
+    List<ColumnDescriptor> res = new ArrayList<ColumnDescriptor>();
+    for (String colName : cols) {
+      ColumnDescriptor desc = map.get(colName);
+      if (desc != null) {
+	res.add(desc);
+      }
+    }
+    return res;
+  }
+
+  public boolean isIncludeColumn(String colName) {
+    return getColumnDescriptorMap().containsKey(colName);
   }
 
   /**
