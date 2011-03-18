@@ -457,6 +457,10 @@ class Client:
         """Returns the V3 identity from the platform config table."""
         return self._getStatusTable( 'PlatformStatus' )[ 0 ][ 'V3 Identity' ]
 
+    def getListOfCrawlStatuses( self ):
+        """Return the historical list of crawls and statuses."""
+        return self._getStatusTable( 'crawl_status_table', outputVersion=2 )[ 1 ]
+
     def getCrawlStatus( self, AU = None ):
         """Return the current crawl status of this cache."""
         return self._getStatusTable( 'crawl_status_table', AU.auId if AU else None )[ 1 ]
@@ -468,6 +472,21 @@ class Client:
     def getListOfAuids(self):
         '''Returns the list of AUIDs held by the daemons'''
         return [map['AuId'] for map in self._getStatusTable('AuIds')[1]]
+    
+    def getDictOfVolumes(self):
+        d = dict()
+        for map in self._getStatusTable('AuIds', outputVersion=2,
+                                        columns="AuId;AuName")[1]:
+            d[map['AuId']] = map['AuName']
+        return d
+    
+    def getDictOfCrawlPools(self):
+        d = dict()
+        for map in self._getStatusTable('AuIds', outputVersion=2,
+                                        columns="AuId;CrawlPool")[1]:
+            print map
+            d[map['AuId']] = map['CrawlPool']['value']
+        return d
 
     def getListOfArticles(self, au):
         '''Gets a list of article URLs for the AU'''
@@ -608,6 +627,10 @@ class Client:
         for row in self.getAuV3Pollers():
             if self.isAuIdOrRef( row[ 'auId' ], AU ):
                 return row[ 'status' ] == 'No Quorum'
+
+    def startCrawl( self, AU ):
+        """Start a crawl of an AU."""
+        self.__execute_post( 'DebugPanel', { 'action': 'Start Crawl', 'auid': AU.auId } )
 
     def isContentRepairedFromServer( self, AU, node, publisher_not_proxy ):
         """Determines whether the content node has been repaired from another cache from the publisher / via the proxy."""
@@ -888,7 +911,8 @@ class Client:
     ### Internal methods
     ###
 
-    def _getStatusTable( self, statusTable, key = None, unlimited_rows = False ):
+    def _getStatusTable( self, statusTable, key = None, unlimited_rows = False,
+                         outputVersion = None , columns = None):
         """Given an XML string, parse it as a status table and return
         a list of dictionaries representing the data.  Each item in
         the list is a dictionary of column names to values, stored as
@@ -898,6 +922,10 @@ class Client:
             form_data[ 'key' ] = key
         if unlimited_rows:
             form_data[ 'numrows' ] = 0x7fffffff # JAVA Integer.MAX_VALUE
+        if outputVersion:
+            form_data[ 'outputVersion' ] = outputVersion
+        if columns:
+            form_data[ 'columns' ] = columns
         XML = self.__execute_post( 'DaemonStatus', form_data ).read()
         log.debug3( 'Received XML response:\n' + XML )
         doc = xml.dom.minidom.parseString( XML )
