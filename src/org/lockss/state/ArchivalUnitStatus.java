@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.96 2011-02-23 08:41:47 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.97 2011-03-18 09:56:27 tlipkis Exp $
  */
 
 /*
@@ -414,8 +414,13 @@ public class ArchivalUnitStatus
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
-      new ColumnDescriptor("AuId", "AU Id", ColumnDescriptor.TYPE_STRING)
+      new ColumnDescriptor("AuId", "AU Id", ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("CrawlPool", "Crawl Pool",
+			   ColumnDescriptor.TYPE_STRING)
       );
+
+    private static final List<String> defaultCols =
+      ListUtil.list("AuName", "AuId");
 
     private static final List sortRules =
       ListUtil.list(new
@@ -434,7 +439,7 @@ public class ArchivalUnitStatus
 
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
-      table.setColumnDescriptors(columnDescriptors);
+      table.setColumnDescriptors(columnDescriptors, defaultCols);
       table.setDefaultSortRules(sortRules);
       Stats stats = new Stats();
       table.setRows(getRows(table, stats));
@@ -445,7 +450,8 @@ public class ArchivalUnitStatus
       return false;
     }
 
-    private List getRows(StatusTable table, Stats stats) {
+    private List getRows(StatusTable table,
+			 Stats stats) {
       PluginManager pluginMgr = theDaemon.getPluginManager();
 
       boolean includeInternalAus =
@@ -458,7 +464,7 @@ public class ArchivalUnitStatus
 	  continue;
 	}
 	try {
-	  rowL.add(makeRow(au));
+	  rowL.add(makeRow(table, au));
 	  stats.aus++;
 	} catch (Exception e) {
 	  logger.warning("Unexpected expection building row", e);
@@ -468,10 +474,15 @@ public class ArchivalUnitStatus
       return rowL;
     }
 
-    private Map makeRow(ArchivalUnit au) {
+    private Map makeRow(StatusTable table,
+			ArchivalUnit au) {
       HashMap rowMap = new HashMap();
       rowMap.put("AuId", au.getAuId());
       rowMap.put("AuName", AuStatus.makeAuRef(au.getName(), au.getAuId()));
+      if (table.isIncludeColumn("CrawlPool")) {
+	String rateKey = au.getFetchRateLimiterKey();
+	rowMap.put("CrawlPool", rateKey != null ? rateKey : au.getAuId());
+      }
       return rowMap;
     }
 
