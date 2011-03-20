@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.68 2011-02-14 00:12:27 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.69 2011-03-20 21:52:13 tlipkis Exp $
  */
 
 /*
@@ -79,6 +79,7 @@ public class AuConfig extends LockssServlet {
   static final String FORM_PREFIX = "lfp.";
 
   private static final String ACTION_ADD = "Add";
+  private static final String ACTION_ADD_BY_AUID = "AddByAuid";
   private static final String ACTION_RESTORE = "Restore";
   private static final String ACTION_DO_RESTORE = "DoRestore";
   private static final String ACTION_REACTIVATE = "Reactivate";
@@ -144,6 +145,7 @@ public class AuConfig extends LockssServlet {
 
     if (StringUtil.isNullString(action)) displayAuSummary();
     else if (action.equals(ACTION_ADD)) displayAddAu();
+    else if (action.equals(ACTION_ADD_BY_AUID)) doAddByAuid();
     else if (action.equals("EditNew")) displayEditNew();
     else if (action.equals(ACTION_CREATE)) createAu();
     else if (  action.equals(ACTION_REACTIVATE)
@@ -674,6 +676,60 @@ public class AuConfig extends LockssServlet {
       statusMsg = "No changes made.";
     }
     displayEditAu(au);
+  }
+
+  private void doAddByAuid() throws IOException {
+    Page page = newPage();
+    String auid = getParameter("auid");
+    if (StringUtil.isNullString(auid)) {
+      errMsg = "Auid must be supplied.";
+      displayAddResult();
+      return;
+    }
+    ArchivalUnit au = pluginMgr.getAuFromId(auid);
+    if (au != null) {
+      errMsg = "Au already exists: " + au.getName();
+      displayAddResult();
+      return;
+    }
+    TitleConfig tc = findTitleConfig(auid);
+    if (tc == null) {
+      errMsg = "No matching AU definition found in title db: " + auid;
+      displayAddResult();
+      return;
+    }
+    try {
+      Plugin plugin =
+	pluginMgr.getPlugin(PluginManager.pluginKeyFromId(tc.getPluginName()));
+      au = pluginMgr.createAndSaveAuConfiguration(plugin, tc.getConfig());
+      statusMsg = "Created Archival Unit:<br>" + encodeText(au.getName());
+      displayAddResult();
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.error("Couldn't create AU", e);
+      errMsg = "Error creating AU:<br>" + encodeText(e.getMessage());
+      displayAddResult();
+    } catch (IOException e) {
+      log.error("Couldn't create AU", e);
+      errMsg = "Error creating AU:<br>" + encodeText(e.getMessage());
+      displayAddResult();
+    }
+  }
+      
+  /** Display result of addByAuid */
+  private void displayAddResult() throws IOException {
+    Page page = newPage();
+    addJavaScript(page);
+    layoutErrorBlock(page);
+    endPage(page);
+  }
+
+  TitleConfig findTitleConfig(String auid) {
+    for (TitleConfig tc : pluginMgr.findAllTitleConfigs()) {
+      if (auid.equals(tc.getAuId(pluginMgr))) {
+	return tc;
+      }
+    }
+    return null;
   }
 
   /** Display the Confirm Delete  page */
