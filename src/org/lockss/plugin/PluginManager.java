@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.216 2011-03-16 08:34:33 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.217 2011-03-20 21:51:59 tlipkis Exp $
  */
 
 /*
@@ -1872,7 +1872,7 @@ public class PluginManager
   }
 
   /** Return all known TitleConfigs */
-  public List findAllTitleConfigs() {
+  public List<TitleConfig> findAllTitleConfigs() {
     synchronized (titleMonitor) {
       if (allTitleConfigs == null) {
 	List titles = findAllTitles();
