@@ -491,7 +491,6 @@ class Client:
         d = dict()
         for map in self._getStatusTable('AuIds', outputVersion=2,
                                         columns="AuId;CrawlPool")[1]:
-            print map
             d[map['AuId']] = map['CrawlPool']
         return d
 
