@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.13 2011-03-21 18:32:17 barry409 Exp $'''
+$Id: pylorus.py,v 2.14 2011-03-21 18:45:12 barry409 Exp $'''
 
 
 import ConfigParser
@@ -20,11 +20,14 @@ import urlparse
 
 sys.path.append( os.path.realpath( os.path.join( os.path.dirname( sys.argv[ 0 ] ), '../lib' ) ) )
 import lockss_daemon
+import fix_auth_failure
 
+
+fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.13 $'.split()[ 1 ]
+REVISION = '$Revision: 2.14 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 60
