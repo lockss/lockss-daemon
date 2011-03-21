@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.14 2011-03-21 18:45:12 barry409 Exp $'''
+$Id: pylorus.py,v 2.15 2011-03-21 18:46:18 barry409 Exp $'''
 
 
 import ConfigParser
@@ -27,7 +27,7 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.14 $'.split()[ 1 ]
+REVISION = '$Revision: 2.15 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 60
@@ -640,6 +640,7 @@ try:
 except Exception, exception:
     # Unhandled exception
     logging.critical( exception )
+    logging.info( 'Finished with Exception' )
     raise
 else:
     delete_snapshot = True
