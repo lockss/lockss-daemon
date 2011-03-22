@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.8 2011-03-22 18:41:49 pgust Exp $
+ * $Id: MetadataManager.java,v 1.9 2011-03-22 19:09:16 pgust Exp $
  */
 
 /*
@@ -840,8 +840,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       // get metadata from tdbau
       final String journalTitle = tdbau.getJournalTitle();
-      final String volume = tdbau.getVolume();
-      final String year = tdbau.getYear(); // what about year range?
+      final String volume = tdbau.getStartVolume(); // use start if a range
+      final String year = tdbau.getStartYear(); // use start if a range
       final String issn = tdbau.getPrintIssn();
       final String eissn = tdbau.getEissn();
 //      final String issnl = tdbau.getIssnL();
