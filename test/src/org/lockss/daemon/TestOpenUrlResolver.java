@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.5 2011-03-15 20:41:33 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.6 2011-03-22 13:16:55 pgust Exp $
  */
 
 /*
@@ -240,6 +240,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     
     tdbProps = new Properties();
     tdbProps.setProperty("issn", "1144-875X");
+    tdbProps.setProperty("eissn", "7744-6521");
     tdbProps.setProperty("title", "Title[10.2468/24681357.2010-06.1]");
     tdbProps.setProperty("journalTitle", "Journal[10.2468/24681357.2010-06.1]");
     tdbProps.setProperty("attributes.publisher", "Publisher[10.2468/24681357.2010-06.1]");
@@ -247,7 +248,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     tdbProps.setProperty("param.1.key", "base_url");
     tdbProps.setProperty("param.1.value", "http://www.publisher.plugin1.com/journals/Journal[10.2468/24681357.2010-06.1]");
     tdb.addTdbAuFromProperties(tdbProps);
-
+    
     tdbProps = new Properties();
     tdbProps.setProperty("issn", "0740-2783");
     tdbProps.setProperty("title", "Title[10.1234/12345678.2010-01.1]");
@@ -626,6 +627,12 @@ public class TestOpenUrlResolver extends LockssTestCase {
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
+    // expect base_url
+    params.clear();
+    params.put("rft.issn", "7744-6521");
+    url = openUrlResolver.resolveOpenUrl(params);
+    assertNotNull(url);
+    
     params.clear();
     params.put("rft.issn", "1144-875X");
     params.put("rft.artnum", "1");
