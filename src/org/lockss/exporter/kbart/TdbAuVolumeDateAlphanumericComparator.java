@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuVolumeDateAlphanumericComparator.java,v 1.1 2011-03-18 16:34:10 easyonthemayo Exp $
+ * $Id: TdbAuVolumeDateAlphanumericComparator.java,v 1.2 2011-03-22 18:58:31 easyonthemayo Exp $
  */
 
 /*
@@ -42,19 +42,12 @@ import org.lockss.util.Logger;
  * the naming convention of AUs provides a best-guess alternative method.
  * <p>
  * First an attempt is made to order by any available volume information. If the volumes are 
- * non-numerical, the comparator attempts to order by years. By convention of TDB AU naming, 
- * ascending alphanumerical name order should also be chronological order within a title, so 
- * this is tried last. Note that in general the AU names are identical to the title name plus 
- * a volume or year identifier. However if a title's title/name changes during its run, multiple 
- * titles can appear in the AU records. This is probably wrong as the new title should get a 
- * different ISSN and have a separate title record.
- * <p>
- * Perhaps this comparator should throw an exception if the conventions appear to be 
- * contravened, rather than trying to order with arbitrary names. 
+ * non-numerical, the comparator falls back to the superclass, which attempts to order by years 
+ * (in the case of a range, last years then first years), and then finally alphanumerically.
  *	
  * @author neil
  */
-public class TdbAuVolumeDateAlphanumericComparator extends TdbAuAlphanumericComparator {
+public class TdbAuVolumeDateAlphanumericComparator extends TdbAuDateFirstAlphanumericComparator {
 
   private static Logger log = Logger.getLogger("TdbAuVolumeDateAlphanumericComparator");
 
@@ -65,28 +58,16 @@ public class TdbAuVolumeDateAlphanumericComparator extends TdbAuAlphanumericComp
     String vol2 = KbartTdbAuUtil.findVolume(au2);
     try {
       if (!"".equals(vol1) && !"".equals(vol2)) {
-	return KbartTdbAuUtil.compareIntStrings(vol1, vol2);
-      }
+	int res = KbartTdbAuUtil.compareIntStrings(vol1, vol2);
+	// Return if the volumes show a difference, otherwise fall through to date comparison
+	if (res!=0) return res;
+     }
     } catch (NumberFormatException e) {
       //log.warning("Could not compare volumes numerically ("+vol1+", "+vol2+")");
-      // fall through to an alphanumeric comparison
+      // fall through to date/alphanumeric comparison
     }
 
-    // Second try year comparison
-    String yr1 = KbartTdbAuUtil.getFirstYear(KbartTdbAuUtil.findYear(au1));
-    String yr2 = KbartTdbAuUtil.getFirstYear(KbartTdbAuUtil.findYear(au2));
-    try {
-      if (!"".equals(yr1) && !"".equals(yr2)) {
-	return KbartTdbAuUtil.compareStringYears(yr1, yr2);
-      }
-    } catch (NumberFormatException e) {
-      log.warning("Could not compare years ("+yr1+", "+yr2+")");
-      // fall through to an alphanumeric comparison
-    }
-   
-    // TODO Try alphanumeric volume comparison before resorting to names?
-    
-    // Default alphanumeric comparison on name
+    // Next, try date first comparison from superclass
     return super.compare(au1, au2);
   }
     

@@ -1,5 +1,5 @@
 /*
- * $Id: KbartTdbAuUtil.java,v 1.5 2011-03-18 16:34:10 easyonthemayo Exp $
+ * $Id: KbartTdbAuUtil.java,v 1.6 2011-03-22 18:58:31 easyonthemayo Exp $
  */
 
 /*
@@ -32,9 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.exporter.kbart;
 
-import static org.lockss.exporter.kbart.KbartTdbAuUtil.findAuInfoType;
-
-import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
@@ -336,6 +333,27 @@ public class KbartTdbAuUtil {
     }
     return y==null ? "" : y; 
   }
+
+  /**
+   * Parse a string representation of an integer year as a string.
+   * @param yr a string representing an integer year
+   * @return the year as an int, or 0 if it could not be parsed
+   */
+  static int stringYearAsInt(String yr) {
+    if (!yr.equals("")) try {
+      return Integer.parseInt(yr);
+    } catch (NumberFormatException e) { }
+    return 0;
+  }
+  
+  static int getFirstYearAsInt(String yStr) {
+    return stringYearAsInt(getFirstYear(yStr)); 
+  }
+  
+  static int getLastYearAsInt(String yStr) {
+    return stringYearAsInt(getLastYear(yStr)); 
+  }
+  
   
   
   /**

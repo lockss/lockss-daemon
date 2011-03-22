@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAuDateFirstAlphanumericComparator.java,v 1.2 2011-02-21 18:57:04 easyonthemayo Exp $
+ * $Id: TdbAuDateFirstAlphanumericComparator.java,v 1.3 2011-03-22 18:58:31 easyonthemayo Exp $
  */
 
 /*
@@ -41,7 +41,9 @@ import org.lockss.util.Logger;
  * to the incompleteness of date metadata included in AUs at the time of writing; however 
  * the naming convention of AUs provides a best-guess alternative method.
  * <p>
- * First an attempt is made to order by any available date information. By convention of TDB AU 
+ * First an attempt is made to order by any available date information. If the date is supplied
+ * as a range, the last year of the range is used for comparison. If that yields no difference,
+ * the first years of each range are compared. By convention of TDB AU 
  * naming, ascending alphanumerical order should also be chronological order within a title, so 
  * this is tried second. Note that in general the AU names are identical to the title name plus 
  * a volume or year identifier. However if a title's title/name changes during its run, multiple 
@@ -49,7 +51,11 @@ import org.lockss.util.Logger;
  * different ISSN and have a separate title record.
  * <p>
  * Perhaps this comparator should throw an exception if the conventions appear to be 
- * contravened, rather than trying to order with arbitrary names. 
+ * contravened, rather than trying to order with arbitrary names.
+ * <p>
+ * Note that this comparator should happily sort AUs which have either single years or year ranges 
+ * as their date info. However it will produce undefined results if any of the supposedly consecutive
+ * year ranges exhibit containment of one another. 
  *	
  * @author neil
  */
@@ -60,14 +66,18 @@ public class TdbAuDateFirstAlphanumericComparator extends TdbAuAlphanumericCompa
   @Override
   public int compare(TdbAu au1, TdbAu au2) {
     // First try year comparison
-    String yr1 = KbartTdbAuUtil.getFirstYear(KbartTdbAuUtil.findYear(au1));
-    String yr2 = KbartTdbAuUtil.getFirstYear(KbartTdbAuUtil.findYear(au2));
+    String rng1 = KbartTdbAuUtil.findYear(au1);
+    String rng2 = KbartTdbAuUtil.findYear(au2);
     try {
-      if (!"".equals(yr1) && !"".equals(yr2)) {
-	return KbartTdbAuUtil.compareStringYears(yr1, yr2);
+      if (!"".equals(rng1) && !"".equals(rng2)) {
+	int res = KbartTdbAuUtil.compareStringYears(KbartTdbAuUtil.getLastYear(rng1), KbartTdbAuUtil.getLastYear(rng2));
+	// If the final years show no difference, try the first years
+	if (res==0) {
+	  return KbartTdbAuUtil.compareStringYears(KbartTdbAuUtil.getFirstYear(rng1), KbartTdbAuUtil.getFirstYear(rng2));
+	} else return res;
       }
     } catch (NumberFormatException e) {
-      log.warning("Could not compare years ("+yr1+", "+yr2+")");
+      log.warning("Could not compare years from ranges ("+rng1+", "+rng2+")");
       // fall through to an alphanumeric comparison
     }
     return super.compare(au1, au2);
