@@ -1,5 +1,5 @@
 /*
- * $Id: TdbTitle.java,v 1.8 2010-08-14 22:26:46 tlipkis Exp $
+ * $Id: TdbTitle.java,v 1.9 2011-03-22 12:58:52 pgust Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbTitle.java,v 1.8 2010-08-14 22:26:46 tlipkis Exp $
+ * @version $Id: TdbTitle.java,v 1.9 2011-03-22 12:58:52 pgust Exp $
  */
 public class TdbTitle {
   /**
@@ -202,6 +202,222 @@ public class TdbTitle {
   }
   
   /**
+   * Return print ISSN for this title.
+   * 
+   * @return the print ISSN for this title or <code>null</code> if not specified
+   */
+  public String getPrintIssn() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getPrintIssn();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+  
+  /**
+   * Return eISSN for this title.
+   * 
+   * @return the eISSN for this title or <code>null</code> if not specified
+   */
+  public String getEissn() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getEissn();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+  
+  /**
+   * Return ISSN-L for this title.
+   * 
+   * @return the ISSN-L for this title or <code>null</code> if not specified
+   */
+  public String getIssnL() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getIssnL();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+  
+  /**
+   * Return representative ISSN for this title. 
+   * Uses ISSN-L, then eISSN, and finally print ISSN.
+   * 
+   * @return representative ISSN for this title or <code>null</code> 
+   * if not specified
+   */
+  public String getIssn() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getIssn();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+
+  /**
+   * Return the complete list of unique ISSNs for this title.
+   * 
+   * @return an array of unique ISSNs for this title
+   */
+  public String[] getIssns() {
+    HashSet<String> issns = new HashSet<String>();
+    String issn = getPrintIssn();
+    if (issn != null) issns.add(issn);
+    issn = getEissn();
+    if (issn != null) issns.add(issn);
+    issn = getIssnL();
+    if (issn != null) issns.add(issn);
+    return issns.toArray(new String[issns.size()]);
+  }
+  
+  /**
+   * Return ISBN for this title.
+   * 
+   * @return the ISBN for this title or <code>null</code> if not specified
+   */
+  public String getIsbn() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getIsbn();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+
+  /**
+   * Return the edition for this title.
+   * 
+   * @return the edition for this title or <code>null</code> if not specified
+   */
+  public String getEdition() {
+    String value = null;
+    for (TdbAu tdbau : tdbAus.values()) {
+      value = tdbau.getEdition();
+      if (value != null) {
+        break;
+      }
+    }
+    return value;
+  }
+
+  /**
+   * Get the start year for this title. Holdings may not be continuous
+   * between the start and end year.
+   * @return the start year or <code>null</code> if not specified
+   *   in at least one TdbAu for this title
+   */
+  public String getStartYear() {
+    int sYear = Integer.MAX_VALUE;
+    for (TdbAu tdbau : tdbAus.values()) {
+      try {
+        sYear = Math.min(sYear, Integer.parseInt(tdbau.getStartYear()));
+      } catch (Throwable ex) {
+        return null;
+      }
+    }
+    return (sYear == Integer.MAX_VALUE) ? null : Integer.toString(sYear);
+  }
+
+  /**
+   * Get the end year for this title. Holdings may not be continuous
+   * between the start and end year.
+   * @return the end year or <code>null</code> if not specified
+   *   in at least one TdbAu for this title
+   */
+  public String getEndYear() {
+    int eYear = Integer.MIN_VALUE;
+    for (TdbAu tdbau : tdbAus.values()) {
+      try {
+        eYear = Math.max(eYear, Integer.parseInt(tdbau.getEndYear()));
+      } catch (Throwable ex) {
+        return null;
+      }
+    }
+    return (eYear == Integer.MIN_VALUE) ? null : Integer.toString(eYear);
+  }
+
+  /**
+   * Determine whether year(s) for this TdbTitle include a given year.
+   * @param aYear a year
+   * @return <code>true</code> if at least one TdbAu for this title 
+   *   includes the year
+   */
+  public boolean includesYear(String aYear) {
+    for (TdbAu tdbau : tdbAus.values()) {
+      if (tdbau.includesYear(aYear)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  /**
+   * Get the start volume for this title. Holdings may not be continuous
+   * between the start and end volume.
+   * @return the start volume or <code>null</code> if not specified
+   *   in at least one TdbAu for this title
+   */
+  public String getStartVolume() {
+    int sVolume = Integer.MAX_VALUE;
+    for (TdbAu tdbau : tdbAus.values()) {
+      try {
+        sVolume = Math.min(sVolume, Integer.parseInt(tdbau.getStartVolume()));
+      } catch (Throwable ex) {
+        return null;
+      }
+    }
+    return (sVolume == Integer.MAX_VALUE) ? null : Integer.toString(sVolume);
+  }
+
+  /**
+   * Get the end volume for this title. Holdings may not be continuous
+   * between the start and end volume.
+   * @return the end volume or <code>null</code> if not specified
+   *   in at least one TdbAu for this title
+   */
+  public String getEndVolume() {
+    int eVolume = Integer.MIN_VALUE;
+    for (TdbAu tdbau : tdbAus.values()) {
+      try {
+        eVolume = Math.max(eVolume, Integer.parseInt(tdbau.getEndVolume()));
+      } catch (Throwable ex) {
+        return null;
+      }
+    }
+    return (eVolume == Integer.MIN_VALUE) ? null : Integer.toString(eVolume);
+  }
+
+  /**
+   * Determine whether volumes(s) for this TdbTitle include a given volume.
+   * @param aVolume a volume
+   * @return <code>true</code> if at least one TdbAu for this title 
+   *   includes the year
+   */
+  public boolean includesVolume(String aVolume) {
+    for (TdbAu tdbau : tdbAus.values()) {
+      if (tdbau.includesVolume(aVolume)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  /**
    * Add a title link for a specified link type.  Link types
    * define evolutionary changes of title and publisher that
    * enable queries to examine predecessor or successor titles
@@ -338,7 +554,7 @@ public class TdbTitle {
       // au is already added
       return;
     } else if (existingAu != null) {
-
+      
       // au already added -- restore and report existing au
       tdbAus.put(id, existingAu);
       if (tdbAu.getName().equals(existingAu.getName())) {
@@ -351,8 +567,9 @@ public class TdbTitle {
                        "Cannot add duplicate au entry: \"" + tdbAu.getName() 
                      + "\" with the same id as existing au entry \"" + existingAu.getName()
                      + "\" to title \"" + name + "\"");
-        }
+      } 
     }
+    
     try {
       tdbAu.setTdbTitle(this);
     } catch (TdbException ex) {
@@ -383,6 +600,42 @@ public class TdbTitle {
     ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
     for (TdbAu tdbAu : tdbAus.values()) {
       if (tdbAu.getName().equals(tdbAuName)) {
+        aus.add(tdbAu);
+      }
+    }
+    aus.trimToSize();
+    return aus;
+  }
+  
+  /**
+   * Return the TdbAu for with the specified TdbAu volume.
+   * 
+   * @param tdbAuVolume the volume of the AU to select
+   * @return the TdbAu for the specified name
+   */
+  public Collection<TdbAu> getTdbAusByVolume(String tdbAuVolume)
+  {
+    ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
+    for (TdbAu tdbAu : tdbAus.values()) {
+      if ((tdbAuVolume == null) || tdbAu.includesVolume(tdbAuVolume)) {
+        aus.add(tdbAu);
+      }
+    }
+    aus.trimToSize();
+    return aus;
+  }
+  
+  /**
+   * Return the TdbAu for with the specified TdbAu volume.
+   * 
+   * @param tdbAuYear the year of the AU to select
+   * @return the TdbAu for the specified name
+   */
+  public Collection<TdbAu> getTdbAusByYear(String tdbAuYear)
+  {
+    ArrayList<TdbAu> aus = new ArrayList<TdbAu>();
+    for (TdbAu tdbAu : tdbAus.values()) {
+      if ((tdbAuYear == null) || tdbAu.includesYear(tdbAuYear)) {
         aus.add(tdbAu);
       }
     }

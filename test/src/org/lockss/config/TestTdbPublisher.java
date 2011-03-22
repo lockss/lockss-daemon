@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbPublisher.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
+ * $Id: TestTdbPublisher.java,v 1.6 2011-03-22 12:58:51 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.test.*;
 import org.lockss.config.Tdb.TdbException;
 
@@ -43,14 +42,10 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbPublisher</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbPublisher.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
+ * @version $Id: TestTdbPublisher.java,v 1.6 2011-03-22 12:58:51 pgust Exp $
  */
 
 public class TestTdbPublisher extends LockssTestCase {
-
-  public static Class testedClasses[] = {
-    org.lockss.config.TdbPublisher.class
-  };
 
   public void setUp() throws Exception {
     super.setUp();
@@ -118,12 +113,33 @@ public class TestTdbPublisher extends LockssTestCase {
   }
   
   /**
+   * Test ISBNs and ISBNs
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIssns() throws TdbException {
+    TdbPublisher publisher = new TdbPublisher("Test Publisher");
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    publisher.addTdbTitle(title);
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    title.addTdbAu(au);
+    au.setPropertyByName("issn", "1234-5678");
+    au.setPropertyByName("eissn", "2468-1357");
+    au.setPropertyByName("issnl", "8765-4321");
+    au.setPropertyByName("isbn", "1234567890");
+    assertEquals(title, publisher.getTdbTitleByIssn("1234-5678"));
+    assertEquals(title, publisher.getTdbTitleByIssn("2468-1357"));
+    assertEquals(title, publisher.getTdbTitleByIssn("8765-4321"));
+    assertEquals(title, publisher.getTdbTitleByIsbn("1234567890"));
+  }
+  
+  
+  /**
    * Test addTitle() method.
    * @throws TdbException for invalid Tdb operations
    */
   public void testAddTitle() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
-    Collection titles = publisher.getTdbTitles();
+    Collection<TdbTitle> titles = publisher.getTdbTitles();
     assertEmpty(titles);
     
     // add title
@@ -236,12 +252,12 @@ public class TestTdbPublisher extends LockssTestCase {
     pub3.addTdbTitle(title3);
 
     // no differences becuase pub1 and pub2 are duplicates
-    Set<String> diff12 = new HashSet();
+    Set<String> diff12 = new HashSet<String>();
     pub1.addPluginIdsForDifferences(diff12, pub2);
     assertEquals(0, diff12.size());
     
     // differences are 'pluginA' and 'pluginB'
-    Set<String> diff13 = new HashSet();
+    Set<String> diff13 = new HashSet<String>();
     pub1.addPluginIdsForDifferences(diff13, pub3);
     assertEquals(2, diff13.size());
   }

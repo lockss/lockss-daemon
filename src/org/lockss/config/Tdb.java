@@ -1,5 +1,5 @@
 /*
- * $Id: Tdb.java,v 1.14 2011-01-25 00:17:14 pgust Exp $
+ * $Id: Tdb.java,v 1.15 2011-03-22 12:58:52 pgust Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
  * a specified plugin ID. 
  *
  * @author  Philip Gust
- * @version $Id: Tdb.java,v 1.14 2011-01-25 00:17:14 pgust Exp $
+ * @version $Id: Tdb.java,v 1.15 2011-03-22 12:58:52 pgust Exp $
  */
 public class Tdb {
   /**
@@ -57,7 +57,7 @@ public class Tdb {
    * also handle this exception.
    * 
    * @author  Philip Gust
-   * @version $Id: Tdb.java,v 1.14 2011-01-25 00:17:14 pgust Exp $
+   * @version $Id: Tdb.java,v 1.15 2011-03-22 12:58:52 pgust Exp $
    */
   @SuppressWarnings("serial")
   static public class TdbException extends Exception {
@@ -109,9 +109,6 @@ public class Tdb {
         super(cause);
     }
   }
-  
-  /** A map of ISSN &lt;-&gt; EISSN */
-  Map<String,String> issnMap = new HashMap<String,String>();
   
   /**
    * Register the au with this Tdb for its plugin.
@@ -389,9 +386,6 @@ public class Tdb {
       throw new TdbException("Cannot add otherTdb AUs to sealed Tdb");
     }
     
-    // merge non-duplicate ISSN map entries
-    issnMap.putAll(otherTdb.issnMap);
-
     // merge non-duplicate publishers of otherTdb
     boolean tdbIsNew = tdbPublisherMap.isEmpty();
     for (TdbPublisher otherPublisher : otherTdb.getAllTdbPublishers().values()) {
@@ -790,6 +784,11 @@ public class Tdb {
 
     // use eissn property as title id if not already set
     if (titleId == null) {
+      titleId = props.getProperty("issnl");
+    }
+
+    // use eissn property as title id if not already set
+    if (titleId == null) {
       titleId = props.getProperty("eissn");
     }
 
@@ -863,13 +862,6 @@ public class Tdb {
       logger.warning("Title ID missing for au \"" + au.getName() + "\" -- using " + titleId);
     }
 
-    // update ISSN to EISSN map
-    String issn = props.getProperty("issn");
-    String eissn = props.getProperty("eissn");
-    if ((issn != null) && (eissn != null)) {
-      issnMap.put(issn, eissn);
-      issnMap.put(eissn, issn);
-    }
     
     // create title and add to publisher
     title = new TdbTitle(titleNameFromProps, titleId);
@@ -937,16 +929,10 @@ public class Tdb {
     // from auName and one of several properties 
     String titleName = getTdbTitleName(props);
     if (titleName == null) {
-      String issue = au.getParam("issue");
-      String year = au.getParam("year");
-      // *sigh*
-      String volume = au.getParam("volume");
-      if (volume == null) {
-        volume = au.getParam("volume_str");
-      }
-      if (volume == null) {
-        volume = au.getParam("volume_name");
-      }
+      String year = au.getYear();
+      String volume = au.getVolume();
+      String issue = au.getIssue();
+
       String auName = au.getName();
       String auNameLC = auName.toLowerCase();
       if ((volume != null) && auNameLC.endsWith(" vol " + volume)) {
@@ -1005,26 +991,53 @@ public class Tdb {
       throw new IllegalArgumentException("titleId cannot be null");
     }
 
-    TdbTitle title = null;
     for (TdbPublisher publisher : tdbPublisherMap.values()) {
-      title = publisher.getTdbTitleById(titleId);
+      TdbTitle title = publisher.getTdbTitleById(titleId);
       if (title != null) {
-        break;
+        return title;
       }
     }
+    return null;
+  }
+  
+  /**
+   * Get the title for the specified issn.
+   *  
+   * @param issn the issn
+   * @return the title for the titleId or <code>null</code. if not found
+   */
+  public TdbTitle getTdbTitleByIssn(String issn)
+  {
+    if (issn == null) {
+      throw new IllegalArgumentException("issn cannot be null");
+    }
 
-    if (title == null) {
-      // if the titleId is an ISSN, try the "other" ISSN
-      // note: this is a bit inefficient, and the ISSN to EISSN
-      // mapping should be reworked eventually
-      String otherId = issnMap.get(titleId);
-      if (otherId != null) {
-        for (TdbPublisher publisher : tdbPublisherMap.values()) {
-          title = publisher.getTdbTitleById(otherId);
-          if (title != null) {
-            break;
-          }
-        }
+    for (TdbPublisher publisher : tdbPublisherMap.values()) {
+      TdbTitle title = publisher.getTdbTitleByIssn(issn);
+      if (title != null) {
+        return title;
+      }
+    }
+    return null;
+  }
+  
+  /**
+   * Get the title for the specified isbn.
+   *  
+   * @param isbn the isbn
+   * @return the title for the isbn or <code>null</code. if not found
+   */
+  public TdbTitle getTdbTitleByIsbn(String isbn)
+  {
+    if (isbn == null) {
+      throw new IllegalArgumentException("isbn cannot be null");
+    }
+
+    TdbTitle title = null;
+    for (TdbPublisher publisher : tdbPublisherMap.values()) {
+      title = publisher.getTdbTitleByIsbn(isbn);
+      if (title != null) {
+        break;
       }
     }
     return title;
