@@ -239,13 +239,30 @@ public class TdbTestUtil {
    * given values for name and year. If year is null it is not added.
    * 
    * @param name a name for the AU
-   * @param year a year for the AU
+   * @param year a year for the AU, or null
    * @return an AU
    * @throws TdbException 
    */
   public static TdbAu createBasicAu(String name, String year) throws TdbException {
     TdbAu au = createBasicAu(name, DEFAULT_PLUGIN, DEFAULT_ISSN_1, DEFAULT_EISSN_1);
     if (year != null) au.setAttr("year", year);
+    return au;
+  }
+
+  /**
+   * Create a simple AU with default values for plugin, issn and eissn, plus the 
+   * given values for name, year and volume. If year or volume is null it is not added.
+   * 
+   * @param name a name for the AU
+   * @param year a year for the AU, or null
+   * @param volume a volume for the AU, or null
+   * @return an AU
+   * @throws TdbException 
+   */
+  public static TdbAu createBasicAu(String name, String year, String volume) throws TdbException {
+    TdbAu au = createBasicAu(name, DEFAULT_PLUGIN, DEFAULT_ISSN_1, DEFAULT_EISSN_1);
+    if (year != null) au.setAttr("year", year);
+    if (volume != null) au.setAttr("volume", volume);
     return au;
   }
 

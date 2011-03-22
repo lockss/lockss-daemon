@@ -12,6 +12,7 @@ import junit.framework.TestCase;
 
 public class TestTdbAuDateFirstAlphanumericComparator extends LockssTestCase {
 
+  private final List<TdbAu> ausWithYearRanges = new Vector<TdbAu>();
   private final List<TdbAu> ausWithYears = new Vector<TdbAu>();
   private final List<TdbAu> ausWithYearsReverseOrder = new Vector<TdbAu>();
   private final List<TdbAu> ausWithNames = new Vector<TdbAu>();
@@ -63,6 +64,15 @@ public class TestTdbAuDateFirstAlphanumericComparator extends LockssTestCase {
     ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_6, "2001") );
     ausWithYearsReverseOrder.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_7, "2000") );
 
+    // These should be ordered by year, regardless of name
+    ausWithYearRanges.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_7, "2006-2007") );
+    ausWithYearRanges.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_6, "2006") );
+    ausWithYearRanges.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_5, "2003-2006") );
+    ausWithYearRanges.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_4, "2002-2003") );
+    ausWithYearRanges.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_3, "2001") );
+    ausWithYearRanges.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_2, "2000-2001") );
+    ausWithYearRanges.add( TdbTestUtil.createBasicAu(TITLE_ORDERED_1, "2000") );
+    
   }
 
   protected void tearDown() throws Exception {
@@ -78,12 +88,14 @@ public class TestTdbAuDateFirstAlphanumericComparator extends LockssTestCase {
     // The result should be the same
     Collections.sort(ausWithYears, comp);
     Collections.sort(ausWithNames, comp);
+    Collections.sort(ausWithYearRanges, comp);
 
     // Check the titles one by one 
     for (int i = 0; i < ausWithYears.size(); i++) {
       String name = orderedTitles[i];
       assertEquals(ausWithYears.get(i).getName(), name);
       assertEquals(ausWithNames.get(i).getName(), name);
+      assertEquals(ausWithYearRanges.get(i).getName(), name);
     }
 
     // Sort the other array - the result should yield the names in reverse order

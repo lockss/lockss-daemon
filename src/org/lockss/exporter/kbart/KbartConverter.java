@@ -1,5 +1,5 @@
 /*
- * $Id: KbartConverter.java,v 1.2.2.6 2011-03-18 16:38:03 easyonthemayo Exp $
+ * $Id: KbartConverter.java,v 1.2.2.7 2011-03-22 19:03:09 easyonthemayo Exp $
  */
 
 /*
@@ -305,11 +305,11 @@ public class KbartConverter {
       }
 
       // Issue years (will be zero if years could not be found)
-      if (isPublicationDate(range.firstYear) && isPublicationDate(range.lastYear)) {
-	kbt.setField(DATE_FIRST_ISSUE_ONLINE, Integer.toString(range.firstYear));
-	kbt.setField(DATE_LAST_ISSUE_ONLINE, Integer.toString(range.lastYear));
+      if (isPublicationDate(range.getFirstYear()) && isPublicationDate(range.getLastYear())) {
+	kbt.setField(DATE_FIRST_ISSUE_ONLINE, Integer.toString(range.getFirstYear()));
+	kbt.setField(DATE_LAST_ISSUE_ONLINE, Integer.toString(range.getLastYear()));
 	// If the final year in the range is this year or later, leave empty the last issue/volume/date fields 
-	if (range.lastYear>=thisYear) {
+	if (range.getLastYear() >= thisYear) {
 	  kbt.setField(DATE_LAST_ISSUE_ONLINE, "");
 	  kbt.setField(NUM_LAST_ISSUE_ONLINE, "");
 	  kbt.setField(NUM_LAST_VOL_ONLINE, "");
@@ -359,21 +359,23 @@ public class KbartConverter {
    * looks like a publication year, as several publishers use the year as a 
    * volume id. If so, we parse this field as the year.
    * <p>
-   * If neither year nor volume appears to contain a year, null is returned.
+   * If neither the year nor volume attribute appears to contain a year, null is returned.
    * Otherwise a list is constructed with values for the key in each AU 
-   * being parsed into Integers on the assumption that they contain a year 
-   * in digit format. If any year cannot be parsed, null is returned.
+   * being parsed on the assumption that they contain either (a) a year 
+   * in digit format; or (b) a year range in the format "1900-1990". From these 
+   * data each AU is given a year range, with a start and end year represented by 
+   * integers. If any year cannot be parsed, null is returned.
    * A list is only returned if a year could be parsed for every AU.
    * <p>
    * An assumption made here is that a TDB record will tend to have either
    * a full set of well-formed records, or a full-set of ill-formed records.
    * 
    * @param aus the list of AUs to search for years
-   * @return a list of parsed Integers from the AUs, in the same order as the supplied list; or null if the parsing was unsuccessful
+   * @return a list of year ranges from the AUs, parsed into Integers, in the same order as the supplied list; or null if the parsing was unsuccessful
    */
-  private static List<Integer> getAuYears(List<TdbAu> aus) {
+  private static List<YearRange> getAuYears(List<TdbAu> aus) {
     if (aus==null || aus.isEmpty()) return null;
-    List<Integer> years = new ArrayList<Integer>();
+    List<YearRange> years = new ArrayList<YearRange>();
     
     // Find the year key (the 2 possible keys, matching year field in either attr or param, 
     // are the same at the moment, so we just match one directly).
@@ -400,7 +402,8 @@ public class KbartConverter {
     // Get a year for each AU
     try {
       for (TdbAu au : aus) {
-	years.add(new Integer( type.findAuInfo(au, yearKey) ));
+	//years.add(new Integer( type.findAuInfo(au, yearKey) ));
+	years.add(new YearRange( type.findAuInfo(au, yearKey) ));
       }
     } catch (NumberFormatException e) {
       return null;
@@ -408,6 +411,7 @@ public class KbartConverter {
     return years;
   }
   
+    
   
   /**
    * Extract volume fields from a list of AUs for a single title. Only 
@@ -417,9 +421,10 @@ public class KbartConverter {
    * the same title, so we first get the key, instead of repeatedly using 
    * <code>findVolume()</code>.
    * <p>
-   * If the given AUs <b>all</b> have numerical values for volume, a list of integers
+   * If the given AUs <b>all</b> have numerical values for volume, and those values
+   * are not all the same (e.g. a list of placeholders like zero), a list of integers
    * is returned of the same size and order of the AU list. Otherwise (the values are 
-   * non-numerical, empty, or are not available for all the AUs) a null is returned.
+   * non-numerical, empty, all the same, or are not available for all the AUs) a null is returned.
    * <p>
    * An assumption made here is that a TDB record will tend to have either
    * a full set of well-formed volume fields, or a full-set of ill-formed 
@@ -434,7 +439,8 @@ public class KbartConverter {
   private static List<Integer> getAuVols(List<TdbAu> aus) {
     if (aus==null || aus.isEmpty()) return null;
     // Create a list of the appropriate size
-    List<Integer> vols = new ArrayList<Integer>(aus.size());
+    int n = aus.size();
+    List<Integer> vols = new ArrayList<Integer>(n);
     
     // Find the volume key
     String[] possKeys = {DEFAULT_VOLUME_ATTR, DEFAULT_VOLUME_PARAM, DEFAULT_VOLUME_PARAM_NAME};
@@ -445,42 +451,29 @@ public class KbartConverter {
     // If there appears to be no valid volume key, return null
     if (volKey==null) return null;
 
+    // Keep track of whether volumes differ or appear to be all the same (e.g. 0)
+    boolean volsDiffer = false;
     // Get a volume for each AU
     try {
+     Integer lastVol = null;
       for (TdbAu au : aus) {
-	vols.add(new Integer( type.findAuInfo(au, volKey) ));
+	Integer vol = new Integer( type.findAuInfo(au, volKey) );
+	vols.add(vol);
+	// If there are multiple AUs, the last vol is non-null, and it and the current vol differ,
+	// consider that we've got a variety of values
+	if (!volsDiffer && lastVol!=null && vol!=null && vol.compareTo(lastVol)!=0) {
+	  volsDiffer = true;
+	}
+	lastVol = vol;
       }
     } catch (NumberFormatException e) {
       return null;  
     }
-    return vols;  
+    
+    // Only return the vols if they differ across the list, or if there is a single AU 
+    return (volsDiffer || aus.size() == 1) ? vols : null;
   }
-  
-  
-  /**
-   * Attempt to retrieve from the AUs a list of values which can be compared in  
-   * order to decide whether there is a coverage gap between consecutive AUs. The
-   * returned value is one of the following, in order of preference:
-   * <ul>
-   * <li>a full list of volumes</li>
-   * <li>a full list of years</li>
-   * <li>null</li>
-   * </ul>
-   * <p>
-   * We look first at the volume fields; if they have numerical values which can therefore be compared
-   * numerically, a list of volumes is returned. If there is incomplete volume information or it is non-numerical, 
-   * we resort to the years to establish a coverage gap. If these are incomplete then a null is returned.
-   * 
-   * @see #getAuVols()
-   * @see #getAuYears()
-   * @param aus a list of AUs
-   * @return a list of values in the same order, or null
-   */
-  private static List<Integer> getCoverageValues(List<TdbAu> aus) {
-    List<Integer> values = getAuVols(aus);
-    return values == null ? getAuYears(aus) : values;
-  }
-  
+    
   
   /**
    * A class for convenience in passing back title year ranges after year processing.
@@ -491,14 +484,72 @@ public class KbartConverter {
   private static class TitleRange {
     TdbAu first;
     TdbAu last;
-    int firstYear; 
-    int lastYear;
+    YearRange yearRange;
+    
+    int getFirstYear() { return yearRange.firstYear; }
+    int getLastYear() { return yearRange.lastYear; }
     
     TitleRange(TdbAu first, TdbAu last, int firstYear, int lastYear) {
       this.first = first;
       this.last = last;
+      this.yearRange = new YearRange(firstYear, lastYear);
+    }
+    
+    /**
+     * Constructor extracts the years from the given AUs. 
+     * 
+     * @param first first AU of the range
+     * @param last last AU of the range
+     */
+    TitleRange(TdbAu first, TdbAu last) {
+      this.first = first;
+      this.last = last;
+      this.yearRange = new YearRange(first, last);
+    }
+  }
+
+  /**
+   * Represents a year range without any contextual assumptions - a first year and a last year. 
+   * Can be used to represent the range of a particular AU, of a range of AUs, or anything else 
+   * that has a year range. Invalid years will usually be set to 0.
+   *
+   */
+  private static class YearRange {
+    int firstYear; 
+    int lastYear;
+    
+    /**
+     * Create a year range from a string which contains either a single year or a hyphenated year range.
+     * If the string cannot be parsed according to these criteria, the years are set to zero.
+     * @param yearRange a string containing either a single year or a hyphenated year range
+     */
+    YearRange(String yearRange) {
+      this(
+	  KbartTdbAuUtil.getFirstYearAsInt(yearRange),
+	  KbartTdbAuUtil.getLastYearAsInt(yearRange)
+      );
+    }
+
+    /**
+     * Create a year range with pre-parsed values.
+     * @param firstYear first year of the range
+     * @param lastYear last year of the range
+     */
+    YearRange(int firstYear, int lastYear) {
       this.firstYear = firstYear;
       this.lastYear = lastYear;
+    }
+
+    /**
+     * Create a year range from AUs. If there is a year range in the first AU,
+     * the first year of the range is taken; if the last AU has a range, the last year is taken.
+     * If parsing fails, the year is set to 0. 
+     * @param firstYear first year of the range
+     * @param lastYear last year of the range
+     */
+    YearRange(TdbAu first, TdbAu last) {
+      this.firstYear = KbartTdbAuUtil.getFirstYearAsInt(KbartTdbAuUtil.findYear(first));
+      this.lastYear = KbartTdbAuUtil.getLastYearAsInt(KbartTdbAuUtil.findYear(last));
     }
   }
 
@@ -521,30 +572,39 @@ public class KbartConverter {
    * @param aus ordered list of AUs
    * @return a similarly-ordered list of TitleRange objects 
    */
-  private static List<TitleRange> getAuCoverageRanges(List<TdbAu> aus) {
+  private static List<TitleRange> getAuCoverageRanges(final List<TdbAu> aus) {
     // Return immediately if there are no AUs
-    int n = aus.size();
+    final int n = aus.size();
     if (n == 0) return Collections.emptyList();
 
-    List<TitleRange> ranges = new ArrayList<TitleRange>();
-    
-    // Get an appropriate set of integer values to use in coverage assessment 
-    //List<Integer> values = getCoverageValues(aus);
-
-    List<Integer> values = getAuVols(aus);
-    List<Integer> years = getAuYears(aus);
-    if (values==null) values = years;
+    List<Integer> vols = getAuVols(aus);
+    List<YearRange> years = getAuYears(aus);
+    boolean hasVols = vols!=null && vols.size()==n;
     boolean hasYears = years!=null && years.size()==n;
     
-    // Just add the full range if neither volumes nor years are available
-    if (values==null) {
-      ranges.add(new TitleRange(aus.get(0), aus.get(n-1), 0, 0));
+    // Just return the single full range if neither volumes nor years are available
+    if (!hasVols && !hasYears) {
+      List<TitleRange> ranges = new ArrayList<TitleRange>() {{
+	add(new TitleRange(aus.get(0), aus.get(n-1), 0, 0));
+      }};
       return ranges;
     }
-     
-    int firstCoverageVal;       // The first coverage value in the current range
-    int currentCoverageVal;     // The current coverage value (last value in the current range)
-    int prevCoverageVal;        // The coverage from the previous loop
+
+    return hasVols ? getAuCoverageRangesImpl(aus, vols, years) : getAuCoverageRangesImpl(aus, years, years);
+  }
+  
+  /**
+   * A parameterised version of the <code>getAuCoverageRanges()</code> method to simplify the logic.
+   * @param <T>
+   * @param aus
+   * @param coverageValues
+   * @param years
+   * @return
+   */
+  private static <T> List<TitleRange> getAuCoverageRangesImpl(List<TdbAu> aus, List<T> coverageValues, List<YearRange> years) {
+    T firstCoverageVal;       // The first coverage value in the current range
+    T currentCoverageVal;     // The current coverage value (last value in the current range)
+    T prevCoverageVal;        // The coverage from the previous loop
 
     TdbAu firstAu;              // The first AU in the current range
     TdbAu currentAu;            // The current AU (last AU in the current range)
@@ -552,10 +612,13 @@ public class KbartConverter {
 
     // The index of the first AU of the current range
     int firstAuIndex;
-    
+    int n = aus.size();
+    List<TitleRange> ranges = new ArrayList<TitleRange>();
+    boolean hasYears = years!=null && years.size()==n;
+       
     // Set first au and coverage value
     firstAuIndex = 0;
-    firstCoverageVal = values.get(firstAuIndex);
+    firstCoverageVal = coverageValues.get(firstAuIndex);
     firstAu = aus.get(firstAuIndex);
     // Set current au and coverage value
     currentCoverageVal = firstCoverageVal;
@@ -569,16 +632,16 @@ public class KbartConverter {
       // Reset au and coverage vars
       prevAu = currentAu;
       prevCoverageVal = currentCoverageVal;
-      currentCoverageVal = values.get(i);
+      currentCoverageVal = coverageValues.get(i);
       currentAu = aus.get(i);
 	
       // There is a gap: this is not the first AU, and there is either a volume or year gap 
-      if (i>0 && currentCoverageVal - prevCoverageVal > 1) {
+      if (i>0 && isCoverageGap(prevCoverageVal, currentCoverageVal)) {
 	// Finish the old title and start a new title
-	int firstYear = hasYears ? years.get(firstAuIndex) : 0;
-	int prevYear = hasYears ? years.get(i-1) : 0;
+	int firstYear = hasYears ? years.get(firstAuIndex).firstYear : 0;
+	int prevYear = hasYears ? years.get(i-1).lastYear : 0;
 	ranges.add(new TitleRange(firstAu, prevAu, firstYear, prevYear));
-	// Set new title properties
+		// Set new title properties
 	firstAuIndex = i;
 	firstAu = currentAu;
 	firstCoverageVal = currentCoverageVal;
@@ -586,16 +649,48 @@ public class KbartConverter {
       // On the last title
       if (i==n-1) {
 	// finish current title
-	int firstYear = hasYears ? years.get(firstAuIndex) : 0;
-	int currentYear = hasYears ? years.get(i) : 0;
+	int firstYear = hasYears ? years.get(firstAuIndex).firstYear : 0;
+	int currentYear = hasYears ? years.get(i).lastYear : 0;
 	ranges.add(new TitleRange(firstAu, currentAu, firstYear, currentYear));
       }
     }
     return ranges;
   }
 
+  /**
+   * A generic method for establishing whether there is a coverage gap between the given parameters.
+   * The parameter type should be either Integer, representing volumes; or YearRange, representing 
+   * a year range consisting of two Integers. Unfortunately we then have to do an <code>instanceof</code> 
+   * to choose the correct method.
+   * @param <T> the type of object passed to the method
+   * @param prevCoverageVal
+   * @param currentCoverageVal
+   * @return
+   */
+  private static <T> boolean isCoverageGap(T prevCoverageVal, T currentCoverageVal) {
+    return prevCoverageVal instanceof Integer ? isVolumeCoverageGap((Integer)prevCoverageVal, (Integer)currentCoverageVal)
+	: isYearCoverageGap((YearRange)prevCoverageVal, (YearRange)currentCoverageVal);
+  }
 
+  /**
+   * Compare year ranges to establish a coverage gap.
+   * @param prevRange the previous range
+   * @param currentRange the current range
+   * @return true if the difference between the current range's first year and the previous range's last year is greater than 1
+   */
+  private static boolean isYearCoverageGap(YearRange prevRange, YearRange currentRange) {
+    return currentRange.firstYear - prevRange.lastYear > 1;
+  }
   
+  /**
+   * Compare volume numbers to establish a coverage gap.
+   * @param prevVol previous volume number
+   * @param currentVol current volume number
+   * @return true if the difference between volumes is greater than 1
+   */
+  private static boolean isVolumeCoverageGap(Integer prevVol, Integer currentVol) {
+    return currentVol - prevVol > 1;
+  }
 
   
 }
