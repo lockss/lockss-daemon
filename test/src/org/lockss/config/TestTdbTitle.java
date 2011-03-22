@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbTitle.java,v 1.4 2010-06-14 11:55:37 pgust Exp $
+ * $Id: TestTdbTitle.java,v 1.4.8.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.test.*;
 
@@ -43,14 +42,10 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbTitle</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbTitle.java,v 1.4 2010-06-14 11:55:37 pgust Exp $
+ * @version $Id: TestTdbTitle.java,v 1.4.8.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 public class TestTdbTitle extends LockssTestCase {
-
-  public static Class testedClasses[] = {
-    org.lockss.config.TdbTitle.class
-  };
 
   public void setUp() throws Exception {
     super.setUp();
@@ -147,7 +142,7 @@ public class TestTdbTitle extends LockssTestCase {
    */
   public void testGetPublisher() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
-    Collection titles = publisher.getTdbTitles();
+    Collection<TdbTitle> titles = publisher.getTdbTitles();
     assertEmpty(titles);
     
     // add title
@@ -168,7 +163,7 @@ public class TestTdbTitle extends LockssTestCase {
    */
   public void testAddTdbAu() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
-    Collection titles = publisher.getTdbTitles();
+    Collection<TdbTitle> titles = publisher.getTdbTitles();
     assertEmpty(titles);
     
     // add title
@@ -268,6 +263,115 @@ public class TestTdbTitle extends LockssTestCase {
   }
   
   /**
+   * Test year operations
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testYear() throws TdbException {
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    TdbAu au = new TdbAu("TestAU1", "pluginA");
+    title.addTdbAu(au);
+    assertFalse(title.includesYear("1970"));
+    
+    title = new TdbTitle("Test Title", "0000-0000");
+    au = new TdbAu("TestAU2", "pluginB");
+    au.setParam("year", "1970");
+    title.addTdbAu(au);
+    
+    assertTrue(title.includesYear("1970"));
+    assertFalse(title.includesYear("1969"));
+
+    au = new TdbAu("TestAU3", "pluginC");
+    au.setAttr("year", "1975-1977");
+    title.addTdbAu(au);
+    
+    assertFalse(title.includesYear("1969"));
+    assertTrue(title.includesYear("1970"));
+    assertFalse(title.includesYear("1974"));
+    assertTrue(title.includesYear("1977"));
+    assertFalse(title.includesYear("1979"));
+    
+    assertEquals("1970", title.getStartYear());
+    assertEquals("1977", title.getEndYear());
+
+    au = new TdbAu("TestAU4", "pluginD");
+    au.setAttr("year", "MCMXLIV");
+    title.addTdbAu(au);
+    // can no longer determine start/end because of non-numeric year
+    assertNull(title.getStartYear());
+    assertNull(title.getEndYear());
+    assertTrue(title.includesYear("MCMXLIV"));
+
+    assertEquals(1, title.getTdbAusByYear("1976").size());
+    assertEquals(1, title.getTdbAusByYear("1970").size());
+    assertEquals(0, title.getTdbAusByYear("1966").size());
+    assertEquals(1, title.getTdbAusByYear("MCMXLIV").size());
+  }
+  
+  /**
+   * Test volume operations
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testVolume() throws TdbException {
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    TdbAu au = new TdbAu("TestAU1", "pluginA");
+    title.addTdbAu(au);
+    assertFalse(title.includesYear("1970"));
+    
+    title = new TdbTitle("Test Title", "0000-0000");
+    au = new TdbAu("TestAU2", "pluginB");
+    au.setParam("volume", "1970");
+    title.addTdbAu(au);
+    
+    assertTrue(title.includesVolume("1970"));
+    assertFalse(title.includesVolume("1969"));
+
+    au = new TdbAu("TestAU3", "pluginC");
+    au.setAttr("volume", "1975-1977");
+    title.addTdbAu(au);
+    
+    assertFalse(title.includesVolume("1969"));
+    assertTrue(title.includesVolume("1970"));
+    assertFalse(title.includesVolume("1974"));
+    assertTrue(title.includesVolume("1977"));
+    assertFalse(title.includesVolume("1979"));
+    
+    assertEquals("1970", title.getStartVolume());
+    assertEquals("1977", title.getEndVolume());
+  
+    au = new TdbAu("TestAU4", "pluginD");
+    au.setAttr("volume", "XI");
+    title.addTdbAu(au);
+    // can no longer determine start/end because of non-numeric volume
+    assertNull(title.getStartVolume());
+    assertNull(title.getEndVolume());
+    assertTrue(title.includesVolume("XI"));
+    
+    assertEquals(1, title.getTdbAusByVolume("1976").size());
+    assertEquals(1, title.getTdbAusByVolume("XI").size());
+    assertEquals(0, title.getTdbAusByVolume("1966").size());
+}
+  
+  /**
+   * Test ISBNs and ISBNs
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIssns() throws TdbException {
+    TdbTitle title = new TdbTitle("Test Title", "0000-0000");
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    title.addTdbAu(au);
+    au.setPropertyByName("issn", "1234-5678");
+    au.setPropertyByName("eissn", "2468-1357");
+    au.setPropertyByName("issnl", "8765-4321");
+    au.setPropertyByName("isbn", "1234567890");
+    assertEquals("1234-5678", title.getPrintIssn());
+    assertEquals("2468-1357", title.getEissn());
+    assertEquals("8765-4321", title.getIssnL());
+    assertNotNull(title.getIssn());
+    assertEquals(3, title.getIssns().length);
+    assertEquals("1234567890", title.getIsbn());
+  }
+  
+  /**
    * Test TdbAu.addPluginIdsForDifferences() method.
    * @throws TdbException for invalid Tdb operations
    */
@@ -299,11 +403,11 @@ public class TestTdbTitle extends LockssTestCase {
     au3.setPluginVersion("3");
     title3.addTdbAu(au3);
 
-    Set<String> diff12 = new HashSet();
+    Set<String> diff12 = new HashSet<String>();
     title1.addPluginIdsForDifferences(diff12, title2);
     assertEquals(0, diff12.size());
     
-    Set<String> diff13 = new HashSet();
+    Set<String> diff13 = new HashSet<String>();
     title1.addPluginIdsForDifferences(diff13, title3);
     assertEquals(2, diff13.size());
   }

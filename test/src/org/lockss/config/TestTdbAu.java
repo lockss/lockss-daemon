@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdbAu.java,v 1.4 2010-06-14 11:55:37 pgust Exp $
+ * $Id: TestTdbAu.java,v 1.4.8.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.test.*;
 
@@ -43,14 +42,10 @@ import java.util.*;
  * Test class for <code>org.lockss.config.TdbAu</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdbAu.java,v 1.4 2010-06-14 11:55:37 pgust Exp $
+ * @version $Id: TestTdbAu.java,v 1.4.8.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 public class TestTdbAu extends LockssTestCase {
-
-  public static Class testedClasses[] = {
-    org.lockss.config.TdbAu.class
-  };
 
   public void setUp() throws Exception {
     super.setUp();
@@ -138,12 +133,83 @@ public class TestTdbAu extends LockssTestCase {
   }
   
   /**
+   * Test year operations
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testYear() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertNull(au.getYear());
+    assertNull(au.getStartYear());
+    assertNull(au.getEndYear());
+    
+    au.setParam("year", "1971");
+    assertEquals("1971", au.getYear());
+    assertEquals("1971", au.getStartYear());
+    assertEquals("1971", au.getEndYear());
+    assertTrue(au.includesYear("1971"));
+    assertFalse(au.includesYear("1970"));
+
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("year", "1971-1977");
+    assertEquals("1971-1977", au.getYear());
+    assertEquals("1971", au.getStartYear());
+    assertEquals("1977", au.getEndYear());
+    assertTrue(au.includesYear("1971"));
+    assertFalse(au.includesYear("1970"));
+    assertFalse(au.includesYear("1979"));
+  }
+  
+  /**
+   * Test volumes operations
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testVolumes() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    assertNull(au.getVolume());
+    assertNull(au.getStartVolume());
+    assertNull(au.getEndVolume());
+    
+    au.setParam("volume", "1971");
+    assertEquals("1971", au.getVolume());
+    assertEquals("1971", au.getStartVolume());
+    assertEquals("1971", au.getEndVolume());
+    assertTrue(au.includesVolume("1971"));
+    assertFalse(au.includesVolume("1970"));
+
+    au = new TdbAu("TestAU", "pluginA");
+    au.setAttr("volume", "1971-1977");
+    assertEquals("1971-1977", au.getVolume());
+    assertEquals("1971", au.getStartVolume());
+    assertEquals("1977", au.getEndVolume());
+    assertTrue(au.includesVolume("1971"));
+    assertFalse(au.includesVolume("1970"));
+    assertFalse(au.includesVolume("1979"));
+  }
+  
+  /**
+   * Test ISBNs and ISBNs
+   * @throws TdbException for invalid Tdb operations
+   */
+  public void testIssns() throws TdbException {
+    TdbAu au = new TdbAu("Test AU", "pluginA");
+    au.setPropertyByName("issn", "1234-5678");
+    au.setPropertyByName("eissn", "2468-1357");
+    au.setPropertyByName("issnl", "8765-4321");
+    au.setPropertyByName("isbn", "1234567890");
+    assertEquals("1234-5678", au.getPrintIssn());
+    assertEquals("2468-1357", au.getEissn());
+    assertEquals("8765-4321", au.getIssnL());
+    assertNotNull(au.getIssn());
+    assertEquals("1234567890", au.getIsbn());
+  }
+  
+  /**
    * Test getPublisher() method.
    * @throws TdbException for invalid Tdb operations
    */
   public void testGetPublisher() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
-    Collection titles = publisher.getTdbTitles();
+    Collection<TdbTitle> titles = publisher.getTdbTitles();
     assertEmpty(titles);
     
     // add title
@@ -165,7 +231,7 @@ public class TestTdbAu extends LockssTestCase {
    */
   public void testConvenienceMethods() throws TdbException {
     TdbPublisher publisher = new TdbPublisher("Test Publisher");
-    Collection titles = publisher.getTdbTitles();
+    Collection<TdbTitle> titles = publisher.getTdbTitles();
     assertEmpty(titles);
     
     // add title

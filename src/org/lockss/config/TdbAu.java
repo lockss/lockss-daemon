@@ -1,5 +1,5 @@
 /*
- * $Id: TdbAu.java,v 1.6 2010-08-14 22:26:46 tlipkis Exp $
+ * $Id: TdbAu.java,v 1.6.4.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 /*
@@ -486,6 +486,237 @@ public class TdbAu {
     return (title != null) ? title.getName() : null;
   }
 
+  /**
+   * Convenience method returns issue for this AU. Uses the issue attribute 
+   * as preferred bibliographic value because parameter values are sometimes 
+   * not used correctly
+   * 
+   * @return issue for for this AU or <code>null</code> if not specified
+   */
+  public String getIssue() {
+    String issue = getAttr("issue");
+    if (issue == null) {
+      issue = getParam("issue");
+    }
+    return issue;
+  }
+  
+  /**
+   * Return print ISSN for this AU.
+   * 
+   * @return the print ISSN for this title or <code>null</code> if not specified
+   */
+  public String getPrintIssn() {
+    return (props == null) ? null : props.get("issn");
+  }
+  
+  /**
+   * Return eISSN for this title.
+   * 
+   * @return the eISSN for this title or <code>null</code> if not specified
+   */
+  public String getEissn() {
+    return (props == null) ? null : props.get("eissn");
+  }
+  
+  /**
+   * Return ISSN-L for this title.
+   * 
+   * @return the ISSN-L for this title or <code>null</code> if not specified
+   */
+  public String getIssnL() {
+    return (props == null) ? null : props.get("issnl");
+  }
+  
+  /**
+   * Return ISBN for this title.
+   * 
+   * @return the ISBN for this title or <code>null</code> if not specified
+   */
+  public String getIsbn() {
+    return getPropertyByName("isbn");
+  }
+
+  /**
+   * Return representative ISSN for this title. 
+   * Uses ISSN-L, then eISSN, and finally print ISSN.
+   * 
+   * @return representative for this title or <code>null</code> if not specified
+   */
+  public String getIssn() {
+    String issn = getIssnL();
+    if (issn == null) {
+      issn = getEissn();
+      if (issn == null) {
+        issn = getPrintIssn();
+      }
+    }
+    return issn;
+  }
+  
+  /**
+   * Get the range start.
+   * @param  range a start/stop range separated by a dash
+   * @return the range start <code>null</code> if not specified
+   */
+  public String getRangeStart(String range) {
+    if (range == null) {
+      return null;
+    }
+    int i = range.indexOf('-');
+    return (i > 0) ? range.substring(0,i) : range;
+  }
+
+  /**
+   * Get the range end.
+   * @param range a start/stop range separated by a dash
+   * @return the range end or <code>null</code> if not specified
+   */
+  static private String getRangeEnd(String range) {
+    if (range == null) {
+      return null;
+    }
+    int i = range.indexOf('-');
+    return (i > 0) ? range.substring(i+1) : range;
+  }
+
+  /**
+   * Determine whether a range include a given value.
+   * @param range a start/stop range separated by a dash.
+   * @param value
+   * @return <code>true</code> if this range includes the value
+   */
+  static private boolean rangeIncludes(String range, String value) {
+    if ((range == null) || (value == null)) {
+      return false;
+    }
+    int i = range.indexOf('-');
+    String startRange = (i > 0) ? range.substring(0,i) : range;
+    String endRange = (i > 0) ? range.substring(i+1) : range;
+    try {
+      // see if value is within range
+      int srange = Integer.parseInt(startRange);
+      int erange = Integer.parseInt(endRange);
+      for (int v = srange; v <= erange; v++) {
+        if (value.equals(Integer.toString(v))) {
+          return true;
+        }
+      }
+    } catch (NumberFormatException ex) {
+      // can't compare numerically, so compare range ends only
+      if (value.startsWith(startRange) || value.startsWith(endRange)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Get the start year for this AU.
+   * @return the start year or <code>null</code> if not specified
+   */
+  public String getStartYear() {
+    return getRangeStart(getYear());
+  }
+
+  /**
+   * Get the end year for this AU.
+   * @return the end year or <code>null</code> if not specified
+   */
+  public String getEndYear() {
+    return getRangeEnd(getYear());
+  }
+
+  /**
+   * Determine whether year(s) for this AU include a given date.
+   * @param aYear a year
+   * @return <code>true</code> if this AU includes the date
+   */
+  public boolean includesYear(String aYear) {
+    return rangeIncludes(getYear(), aYear);
+  }
+
+  /**
+   * Get year for this AU. Uses the year attribute as preferred bibliographic 
+   * value because the parameter values are sometimes not used correctly.
+   * <p>
+   * Note: The year field may be a range (e.g. 2003-2004) rather than a
+   * single year.
+   * 
+   * @return the year for this AU or <code>null</code> if not specified
+   */
+  public String getYear() {
+    String auYear = getAttr("year");
+    if (auYear == null) {
+      auYear = getParam("year");
+    }
+    return auYear;
+  }
+  
+  /**
+   * Get the start volume for this AU.
+   * @return the start volume or <code>null</code> if not specified
+   */
+  public String getStartVolume() {
+    return getRangeStart(getVolume());
+  }
+
+  /**
+   * Get the end volume for this AU.
+   * @return the end volume or <code>null</code> if not specified
+   */
+  public String getEndVolume() {
+    return getRangeEnd(getVolume());
+  }
+
+  /**
+   * Determine whether volume(s) for this AU include a given volume.
+   * @param aVolume a volume
+   * @return <code>true</code> if this AU includes the volume
+   */
+  public boolean includesVolume(String aVolume) {
+    return rangeIncludes(getVolume(), aVolume);
+  }
+
+  /**
+   * Return the volume from a TdbAu. Uses the volume attribute as preferred 
+   * bibliographic value because the parameter values are sometimes not used 
+   * correctly within TDB files (e.g. they're really years)
+   * <p>
+   * Note: The volume field may be a range (e.g. 85-87) rather than a
+   * single volume.
+   * 
+   * @param tdbau the TdbAu
+   * @return the volume name or <code>null</code> if not specified.
+   */
+  public String getVolume() {
+    String auVolume = getAttr("volume");
+    if (auVolume == null) {
+      auVolume = getParam("volume_name");
+    }
+    if (auVolume == null) {
+      auVolume = getParam("volume_str");
+    }
+    if (auVolume == null) {
+      auVolume = getParam("volume");
+    }
+    return auVolume;
+  }
+
+  /**
+   * Return the edition from a TdbAu.
+   * 
+   * @param tdbau the TdbAu
+   * @return the edition name or <code>null</code> if not specified
+   */
+  public String getEdition() {
+    String auEdition = getAttr("edition");
+    if (auEdition == null) {
+      auEdition = getParam("edition");
+    }
+    return auEdition;
+  }
+  
   /** 
    * Convenience method generates Properties that will result in this 
    * TdbAu when loaded by Tdb. 

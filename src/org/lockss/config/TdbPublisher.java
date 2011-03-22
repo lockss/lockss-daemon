@@ -1,5 +1,5 @@
 /*
- * $Id: TdbPublisher.java,v 1.9 2011-01-07 19:50:00 pgust Exp $
+ * $Id: TdbPublisher.java,v 1.9.2.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * This class represents a title database publisher.
  *
  * @author  Philip Gust
- * @version $Id: TdbPublisher.java,v 1.9 2011-01-07 19:50:00 pgust Exp $
+ * @version $Id: TdbPublisher.java,v 1.9.2.1 2011-03-22 12:58:56 pgust Exp $
  */
 public class TdbPublisher {
   /**
@@ -135,6 +135,43 @@ public class TdbPublisher {
     }
     matchTitles.trimToSize();
     return matchTitles;
+  }
+  
+  /**
+   * Returns a TdbTitle with the specified ISSN as its ISSN-L,
+   * eISSN, or print ISSN.
+   * 
+   * @param issn the ISSN
+   * @return the TdbTitle or <code>null</code> if not found
+   */
+  public TdbTitle getTdbTitleByIssn(String issn) {
+    for (TdbTitle title : titlesById.values()) {
+      if (issn.equals(title.getIssnL())) {
+        return title;
+      }
+      if (issn.equals(title.getEissn())) {
+        return title;
+      }
+      if (issn.equals(title.getPrintIssn())) {
+        return title;
+      }
+    }
+    return null;
+  }
+  
+  /**
+   * Returns a TdbTitle with the specified ISBN
+   * 
+   * @param isbn the ISBN
+   * @return the TdbTitle or <code>null</code> if not found
+   */
+  public TdbTitle getTdbTitleByIsbn(String isbn) {
+    for (TdbTitle title : titlesById.values()) {
+      if (isbn.equals(title.getIsbn())) {
+        return title;
+      }
+    }
+    return null;
   }
   
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTdb.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
+ * $Id: TestTdb.java,v 1.5.8.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import org.lockss.util.*;
-import org.lockss.config.*;
 import org.lockss.config.Tdb.TdbException;
 import org.lockss.test.*;
 
@@ -43,14 +42,10 @@ import java.util.*;
  * Test class for <code>org.lockss.config.Tdb</code>
  *
  * @author  Philip Gust
- * @version $Id: TestTdb.java,v 1.5 2010-06-14 11:55:37 pgust Exp $
+ * @version $Id: TestTdb.java,v 1.5.8.1 2011-03-22 12:58:56 pgust Exp $
  */
 
 public class TestTdb extends LockssTestCase {
-
-  public static Class testedClasses[] = {
-    org.lockss.config.Tdb.class
-  };
 
   public void setUp() throws Exception {
     super.setUp();
@@ -266,9 +261,11 @@ public class TestTdb extends LockssTestCase {
 
     p1.put("pluginVersion", "4");
     p1.put("issn", "0003-0031");
+    p1.put("eissn", "0033-0331");
+    p1.put("issnl", "0333-3331");
    
     p1.put("journal.link.1.type", TdbTitle.LinkType.continuedBy.toString());
-    p1.put("journal.link.1.journalId", "0003-0031");  // link to self
+    p1.put("journal.link.1.journalId", "0333-3331");  // link to self
     p1.put("param.1.key", "volume");
     p1.put("param.1.value", "3");
     p1.put("param.2.key", "year");
@@ -288,6 +285,9 @@ public class TestTdb extends LockssTestCase {
     TdbTitle title1 = titles1.iterator().next();
     assertEquals("Air & Space", title1.getName());
 
+    // title ID is issnl
+    assertEquals(title1, tdb.getTdbTitleById("0333-3331"));
+
     // validate linked titles 
     Collection<TdbTitle> titles = tdb.getLinkedTdbTitlesForType(TdbTitle.LinkType.continuedBy, title1);
     assertNotNull(titles);
@@ -302,11 +302,15 @@ public class TestTdb extends LockssTestCase {
     assertNotNull(au1);
     assertEquals("Air & Space Volume 3", au1.getName());
     assertEquals("1999", au1.getParam("year"));
+    assertEquals("1999", au1.getYear());
     assertEquals("Air & Space", au1.getJournalTitle());
     assertEquals("0003-0031", au1.getPropertyByName("issn"));
+    assertEquals("0003-0031", au1.getPrintIssn());
+    assertEquals("0033-0331", au1.getEissn());
+    assertEquals("0333-3331", au1.getIssnL());
+    assertNotNull(au1.getIssn());
     assertEquals("4", au1.getPluginVersion());
     
-    assertEquals(title1, tdb.getTdbTitleById("0003-0031"));
 
     try {
       // try to add from the properties again
