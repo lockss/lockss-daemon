@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.6 2011-03-15 21:27:41 pgust Exp $
+ * $Id: MetadataManager.java,v 1.7 2011-03-22 13:09:04 pgust Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
@@ -832,31 +833,12 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       final String journalTitle = tc.getJournalTitle();
       TdbAu tdbau = tc.getTdbAu();
 
-      // use the volume attribute as preferred bibliographic value
-      // because the parameter values are sometimes not used correctly
-      // within TDB files (e.g. they're really years)
-      String auVolume = tdbau.getAttr("volume");
-      if (auVolume == null) {
-        auVolume = tdbau.getParam("volume_name");
-      }
-      if (auVolume == null) {
-        auVolume = tdbau.getParam("volume_str");
-      }
-      if (auVolume == null) {
-        auVolume = tdbau.getParam("volume");
-      }
-      final String volume = auVolume;
-
-      // use the year attribute as preferred bibliographic value
-      // because the parameter values are sometimes not used correctly
-      String auYear = tdbau.getAttr("year");
-      if (auYear == null) {
-        auYear = tdbau.getParam("year");
-      }
-      final String year = auYear; // what about year range?
-
-      final String issn = tdbau.getParam("issn");
-      final String eissn = tdbau.getParam("eissn");
+      // get metadata from tdbau
+      final String volume = tdbau.getVolume();
+      final String year = tdbau.getYear(); // what about year range?
+      final String issn = tdbau.getPrintIssn();
+      final String eissn = tdbau.getEissn();
+//      final String issnl = tdbau.getIssnL();
       final String isbn = tdbau.getParam("isbn");
 
       ae = new ArticleMetadataExtractor() {
@@ -1036,7 +1018,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
                 md.put(MetadataField.FIELD_ACCESS_URL, af.getFullTextUrl());
               }
               try {
-                addMetadata(conn, au, md);
+                addMetadata(md);
                 extracted[0]++;
               } catch (SQLException ex) {
                 // TODO: should extraction be canceled at this point?
@@ -1062,6 +1044,197 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         }
       }
       return extracted[0];
+    }
+
+    /**
+     * Add metadata for this archival unit.
+     * 
+     * @param conn the connection
+     * @param md the metadata
+     * @throws SQLException if failed to add rows for metadata
+     */
+    private void addMetadata(ArticleMetadata md) throws SQLException {
+      String auid = au.getAuId();
+      String pluginId = PluginManager.pluginIdFromAuId(auid);
+      String auKey = PluginManager.auKeyFromAuId(auid);
+
+      String doi = md.get(MetadataField.FIELD_DOI);
+      String isbn = md.get(MetadataField.FIELD_ISBN);
+      String issn = md.get(MetadataField.FIELD_ISSN);
+      String eissn = md.get(MetadataField.FIELD_EISSN);
+      String volume = md.get(MetadataField.FIELD_VOLUME);
+      String issue = md.get(MetadataField.FIELD_ISSUE);
+      String startPage = md.get(MetadataField.FIELD_START_PAGE);
+      PublicationDate pubDate = getDateField(md);
+      String articleTitle = getArticleTitleField(md);
+      String author = getAuthorField(md);
+      String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
+
+      HashSet<String>isbns = new HashSet<String>();
+      if (isbn != null) isbns.add(isbn);
+      
+      HashSet<String>issns = new HashSet<String>();
+      if (issn != null) issns.add(issn);
+      if (eissn != null) issns.add(eissn);
+      
+      // validate data against TDB information
+      TitleConfig tc = au.getTitleConfig();
+      if (tc != null) {
+        TdbAu tdbau = tc.getTdbAu();
+        if (tdbau != null) {
+          // validate publication date against tdb year 
+          if (pubDate != null) {
+            String pubyr = Integer.toString(pubDate.getYear());
+            if (!tdbau.includesYear(pubyr)) {
+              log.info("tdb  " + tdbau.getName()
+                       + "-- should include metadata year: " + pubyr);
+            }
+          }
+          
+          // validate isbn against tdb isbn
+          String tdbIsbn = tdbau.getIsbn();
+          if (tdbIsbn != null) {
+            if (!tdbIsbn.equals(isbn)) {
+              isbns.add(tdbIsbn);
+              if (isbn == null) {
+                log.warning(  "using tdb isbn " + tdbIsbn 
+                             + " -- metadata isbn missing");
+              } else {
+                log.warning(  "also using tdb isbn " + tdbIsbn 
+                         + " -- different than metadata isbn: " + isbn);
+              }
+            } else if (isbn != null) {
+              log.warning(  "tdb isbn missing for " 
+                          + tdbau.getTdbTitle().getName()
+                          + " -- should be: " + isbn);
+            }
+          }
+          
+          // validate issn against tdb issn
+          String tdbIssn = tdbau.getIssn();
+          if (tdbIssn != null) {
+            if (!tdbIssn.equals(issn)) {
+              // add both ISSNs so it can be found either way
+              issns.add(tdbIssn);
+              if (issn == null) {
+                log.warning(  "using tdb print issn " + tdbIssn 
+                            + " -- metadata print issn is missing");
+              } else {
+                log.warning(  "also using tdb print issn " + tdbIssn 
+                           + " -- different than metadata print issn: " + issn);
+              }
+            }
+          } else if (issn != null) {
+            log.warning(  "tdb issn missing for " + tdbau.getName()
+                        + " -- should be: " + issn);
+          }
+  
+          // validate eissn against tdb eissn
+          String tdbEissn = tdbau.getEissn();
+          if (tdbEissn != null) {
+            if (!tdbEissn.equals(eissn)) {
+              // add both ISSNs so it can be found either way
+              issns.add(tdbEissn);
+              if (eissn == null) {
+                log.warning(  "using tdb eissn " + tdbEissn 
+                            + " -- metadata eissn is missing");
+              } else {
+                log.warning(  "also using tdb eissn " + tdbEissn 
+                            + " -- different than metadata eissn: " + eissn);
+              }
+            }
+          } else if (eissn != null) {
+            log.warning(  "tdb eissn missing for " + tdbau.getName()
+                        + " -- should be: " + eissn);
+          }
+            
+          // ensure issns and eissns aren't swapped between mdb and tdb
+          if ((tdbIssn != null) && tdbIssn.equals(eissn)) {
+            log.warning(  "tdb issn " + tdbIssn 
+                        + " is the same as metadata eissn: " + eissn);
+          }
+          if ((tdbEissn != null) && tdbEissn.equals(issn)) {
+            log.warning(  "tdb eissn " + tdbEissn 
+                        + " is the same as metadata issn: " + issn);
+          }
+        }
+      }
+
+      // insert common data into metadata table
+      PreparedStatement insertMetadata = conn
+          .prepareStatement("insert into " + METADATA_TABLE_NAME + " "
+                                + "values (default,?,?,?,?,?,?,?,?,?)",
+                            Statement.RETURN_GENERATED_KEYS);
+      // TODO PJG: Keywords???
+      // skip auto-increment key field
+      insertMetadata.setString(1, pubDate.toString());
+      insertMetadata.setString(2, volume);
+      insertMetadata.setString(3, issue);
+      insertMetadata.setString(4, startPage);
+      insertMetadata.setString(5, articleTitle);
+      insertMetadata.setString(6, author);
+      insertMetadata.setString(7, pluginId);
+      insertMetadata.setString(8, auKey);
+      insertMetadata.setString(9, accessUrl);
+      insertMetadata.executeUpdate();
+      ResultSet resultSet = insertMetadata.getGeneratedKeys();
+      if (!resultSet.next()) {
+        log.error("Unable to create metadata entry for auid: " + auid);
+        return;
+      }
+      int mdid = resultSet.getInt(1);
+      if (log.isDebug3()) {
+        log.debug("added [accessURL:" + accessUrl + ", md_id: " + mdid
+            + ", date: " + pubDate + ", vol: " + volume + ", issue: " + issue
+            + ", page: " + startPage + ", pluginId:" + pluginId + "]");
+      }
+      
+      // insert row for DOI
+      if (doi != null) {
+        if (doi.toLowerCase().startsWith("doi:")) {
+          doi = doi.substring(4);
+        }
+        /*
+         * "doi VARCHAR(256) PRIMARY KEY NOT NULL," 
+         * + "md_id INTEGER NOT NULL,"
+         * + "plugin_id VARCHAR(96) NOT NULL" + // partition by
+         */
+        PreparedStatement insertDOI = conn.prepareStatement(
+          "insert into " + DOI_TABLE_NAME + " " + "values (?,?)");
+        insertDOI.setString(1, doi);
+        insertDOI.setInt(2, mdid);
+        insertDOI.execute();
+        log.debug3(  "added [doi:" + doi + ", md_id: " + mdid + ", pluginId:"
+                   + pluginId + "]");
+      }
+
+      // insert row for ISBN
+      if (!isbns.isEmpty()) {
+        PreparedStatement insertISBN = conn.prepareStatement(
+          "insert into " + ISBN_TABLE_NAME + " " + "values (?,?)");
+        insertISBN.setInt(2, mdid);
+        for (String anIsbn : isbns) {
+          anIsbn = anIsbn.replaceAll("-", "");
+          insertISBN.setString(1, anIsbn);
+          insertISBN.execute();
+          log.debug3("added [isbn:" + anIsbn + ", md_id: " + mdid 
+                     + ", pluginId:" + pluginId + "]");
+        }
+      }
+
+      // insert rows for ISSN
+      if (!issns.isEmpty()) {
+        PreparedStatement insertISSN = conn.prepareStatement(  
+          "insert into " + ISSN_TABLE_NAME + " " + "values (?,?)");
+        insertISSN.setInt(2, mdid);
+        for (String anIssn : issns) {
+          anIssn = anIssn.replaceAll("-", "");
+          insertISSN.setString(1, anIssn);
+          insertISSN.execute();
+          log.debug3(  "added [issn:" + anIssn + ", md_id: " + mdid 
+                     + ", pluginId:" + pluginId + "]");
+        }
+      }
     }
 
     /**
@@ -1205,117 +1378,20 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * of locale information.
    * 
    * @param md the ArticleMetadata
-   * @return the date field or <code>null</code> if non specified or one cannot
-   *         be parsed from the metadata information
+   * @return the publication date or <code>null</code> if none specified 
+   *    or one cannot be parsed from the metadata information
    */
-  private static String getDateField(ArticleMetadata md) {
+  private PublicationDate getDateField(ArticleMetadata md) {
+    PublicationDate pubDate = null;
     String dateStr = md.get(MetadataField.FIELD_DATE);
     if (dateStr != null) {
       Locale locale = md.getLocale();
       if (locale == null) {
         locale = Locale.getDefault();
       }
-      dateStr = new PublicationDate(dateStr, locale).toString();
+      pubDate = new PublicationDate(dateStr, locale);
     }
-    return dateStr;
-  }
-
-  /**
-   * Add metadata for this archival unit.
-   * 
-   * @param conn the connection
-   * @param md the metadata
-   * @throws SQLException if failed to add rows for metadata
-   */
-  private static void addMetadata(Connection conn, ArchivalUnit au,
-                                  ArticleMetadata md) throws SQLException {
-    String auid = au.getAuId();
-    String pluginId = PluginManager.pluginIdFromAuId(auid);
-    String auKey = PluginManager.auKeyFromAuId(auid);
-
-    String doi = md.get(MetadataField.FIELD_DOI);
-    String isbn = md.get(MetadataField.FIELD_ISBN);
-    String issn = md.get(MetadataField.FIELD_ISSN);
-    String volume = md.get(MetadataField.FIELD_VOLUME);
-    String issue = md.get(MetadataField.FIELD_ISSUE);
-    String startPage = md.get(MetadataField.FIELD_START_PAGE);
-
-    // normalize date according to ISO 8601 required for metadata
-    String dateStr = getDateField(md);
-    String articleTitle = getArticleTitleField(md);
-    String author = getAuthorField(md);
-
-    String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
-
-    // insert common data into metadata table
-    PreparedStatement insertMetadata = conn
-        .prepareStatement("insert into " + METADATA_TABLE_NAME + " "
-                              + "values (default,?,?,?,?,?,?,?,?,?)",
-                          Statement.RETURN_GENERATED_KEYS);
-    // TODO PJG: Keywords???
-    // skip auto-increment key field
-    insertMetadata.setString(1, dateStr);
-    insertMetadata.setString(2, volume);
-    insertMetadata.setString(3, issue);
-    insertMetadata.setString(4, startPage);
-    insertMetadata.setString(5, articleTitle);
-    insertMetadata.setString(6, author);
-    insertMetadata.setString(7, pluginId);
-    insertMetadata.setString(8, auKey);
-    insertMetadata.setString(9, accessUrl);
-    insertMetadata.executeUpdate();
-    ResultSet resultSet = insertMetadata.getGeneratedKeys();
-    if (!resultSet.next()) {
-      log.error("Unable to create metadata entry for auid: " + auid);
-      return;
-    }
-    int mdid = resultSet.getInt(1);
-    if (log.isDebug3()) {
-      log.debug("added [accessURL:" + accessUrl + ", md_id: " + mdid
-          + ", date: " + dateStr + ", vol: " + volume + ", issue: " + issue
-          + ", page: " + startPage + ", pluginId:" + pluginId + "]");
-    }
-    // insert row for DOI
-    if (doi != null) {
-      if (doi.toLowerCase().startsWith("doi:")) {
-        doi = doi.substring(4);
-      }
-      /*
-       * "doi VARCHAR(256) PRIMARY KEY NOT NULL," + "md_id INTEGER NOT NULL," +
-       * "plugin_id VARCHAR(96) NOT NULL" + // partition by
-       */
-      PreparedStatement insertDOI = conn.prepareStatement("insert into "
-          + DOI_TABLE_NAME + " " + "values (?,?)");
-      insertDOI.setString(1, doi);
-      insertDOI.setInt(2, mdid);
-      insertDOI.execute();
-      log.debug3("added [doi:" + doi + ", md_id: " + mdid + ", pluginId:"
-          + pluginId + "]");
-    }
-
-    // insert row for ISBN
-    if (isbn != null) {
-      isbn = isbn.replaceAll("-", "");
-      PreparedStatement insertISBN = conn.prepareStatement("insert into "
-          + ISBN_TABLE_NAME + " " + "values (?,?)");
-      insertISBN.setString(1, isbn);
-      insertISBN.setInt(2, mdid);
-      insertISBN.execute();
-      log.debug3("added [isbn:" + isbn + ", md_id: " + mdid + ", pluginId:"
-          + pluginId + "]");
-    }
-
-    // insert row for ISSN
-    if (issn != null) {
-      issn = issn.replaceAll("-", "");
-      PreparedStatement insertISSN = conn.prepareStatement("insert into "
-          + ISSN_TABLE_NAME + " " + "values (?,?)");
-      insertISSN.setString(1, issn);
-      insertISSN.setInt(2, mdid);
-      insertISSN.execute();
-      log.debug3("added [issn:" + issn + ", md_id: " + mdid + ", pluginId:"
-          + pluginId + "]");
-    }
+    return pubDate;
   }
 
   /**
