@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.9 2011-03-22 19:09:16 pgust Exp $
+ * $Id: MetadataManager.java,v 1.10 2011-03-23 18:32:15 pgust Exp $
  */
 
 /*
@@ -306,10 +306,30 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         org.apache.derby.drda.NetworkServerControl networkServerControl = 
           new org.apache.derby.drda.NetworkServerControl(inetAddr, jdbcPort);
         networkServerControl.start(null);
+        
+        // wait for network server control to be ready
+        boolean ready = false; 
+        for (int i = 0; i < 10; i++) { // at most 20 seconds;
+          try {
+            networkServerControl.ping();
+            ready = true;
+            break;
+          } catch (Throwable ex) {
+            try {
+              Thread.sleep(2000);       // about 2 second
+            } catch (InterruptedException ex2) {
+            }
+          }
+        }
+        if (!ready) {
+          log.error("Wait for Derby NetworkServiceControl timed out");
+          dataSource = null;
+        }
       } catch (ClassCastException ex) {
         // dataSource is not a Derby ClientDataSource
-      } catch (Exception ex) {
+      } catch (Throwable ex) {
         log.error("Cannot enable remote access to Derby database");
+        
       }
     }
   }
@@ -739,10 +759,13 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   @Override
   public void setConfig(Configuration config, Configuration prevConfig,
                         Differences changedKeys) {
-    boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED,
-                                         DEFAULT_INDEXING_ENABLED);
     useMetadataExtractor = config.getBoolean(PARAM_USE_METADATA_EXTRACTOR,
-                                             DEFAULT_USE_METADATA_EXTRACTOR);
+                                             useMetadataExtractor);
+    maxReindexingTasks = config.getInt(PARAM_MAX_REINDEXING_TASKS, 
+                                       maxReindexingTasks);
+    maxReindexingTasks = Math.max(0, maxReindexingTasks);
+    boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED,
+                                         enabled);
     setEnabled(doEnable);
 
   }
@@ -879,14 +902,22 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   class ReindexingTask extends StepTask {
 
-    ArchivalUnit au;
+    /** The archival unit for this task */
+    private final ArchivalUnit au;
 
-    ArticleMetadataExtractor ae;
+    /** The article metadata extractor for this task */
+    private final ArticleMetadataExtractor ae;
 
-    Iterator<ArticleFiles> articleIterator = null;
+    /** The article iterator for this task */
+    private Iterator<ArticleFiles> articleIterator = null;
 
-    Connection conn;
+    /** List of log messages already emitted for this task's au */
+    private final HashSet<Integer> auLogTable = new HashSet<Integer>();
+        
+    /** The database connection for this task */
+    private Connection conn;
 
+    /** The default number of steps for this task */
     static final int default_steps = 10;
 
     /**
@@ -907,11 +938,9 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
       // set task callback after construction to ensure instance is initialized
       callback = new TaskCallback() {
-
+        // ThreadMXBean times
         long startCpuTime = 0;
-
         long startUserTime = 0;
-
         long startClockTime = 0;
 
         public void taskEvent(SchedulableTask task, Schedule.EventType type) {
@@ -1053,6 +1082,18 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
 
     /**
+     * Issue warning this reindexing task.
+     * 
+     * @param s the warning messsage
+     */
+    private void taskWarning(String s) {
+      int hashcode = s.hashCode();
+      if (auLogTable.add(hashcode)) {
+        log.warning(s);
+      }
+    }
+    
+    /**
      * Add metadata for this archival unit.
      * 
      * @param conn the connection
@@ -1072,6 +1113,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       String issue = md.get(MetadataField.FIELD_ISSUE);
       String startPage = md.get(MetadataField.FIELD_START_PAGE);
       PublicationDate pubDate = getDateField(md);
+      String pubYear = 
+        (pubDate == null) ? null : Integer.toString(pubDate.getYear());
       String articleTitle = getArticleTitleField(md);
       String author = getAuthorField(md);
       String accessUrl = md.get(MetadataField.FIELD_ACCESS_URL);
@@ -1088,12 +1131,27 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       if (tc != null) {
         TdbAu tdbau = tc.getTdbAu();
         if (tdbau != null) {
+          String tdbauName = tdbau.getName();
+
           // validate publication date against tdb year 
-          if (pubDate != null) {
-            String pubyr = Integer.toString(pubDate.getYear());
-            if (!tdbau.includesYear(pubyr)) {
-              log.info("tdb  " + tdbau.getName()
-                       + "-- should include metadata year: " + pubyr);
+          if (pubYear != null) {
+            if (!tdbau.includesYear(pubYear)) {
+              String tdbauYear = tdbau.getYear();
+              if (tdbauYear != null) {
+                taskWarning(  "tdb year " + tdbauYear 
+                            + " for " + tdbauName
+                            + " -- does not match metadata year " + pubYear);
+              } else {
+                taskWarning(  "tdb year missing for " + tdbauName
+                            + " -- should include year " + pubYear);
+              }
+            }
+          } else {
+            pubYear = tdbau.getStartYear();
+            if (pubYear != null) {
+              taskWarning( "using tdb start year " + pubYear
+                          + " for " + tdbauName
+                          + " -- metadata year is missing");
             }
           }
           
@@ -1103,77 +1161,95 @@ public class MetadataManager extends BaseLockssDaemonManager implements
             if (!tdbIsbn.equals(isbn)) {
               isbns.add(tdbIsbn);
               if (isbn == null) {
-                log.warning(  "using tdb isbn " + tdbIsbn 
-                             + " -- metadata isbn missing");
+                taskWarning(  "using tdb isbn " + tdbIsbn  
+                            + " for " + tdbauName
+                            + " -- metadata isbn missing");
               } else {
-                log.warning(  "also using tdb isbn " + tdbIsbn 
-                         + " -- different than metadata isbn: " + isbn);
+                taskWarning(  "also using tdb isbn " + tdbIsbn   
+                            + " for " + tdbauName
+                            + " -- different than metadata isbn: " + isbn);
               }
             } else if (isbn != null) {
-              log.warning(  "tdb isbn missing for " 
+              taskWarning(  "tdb isbn missing for " 
                           + tdbau.getTdbTitle().getName()
                           + " -- should be: " + isbn);
             }
           }
           
+          String tdbIssn = tdbau.getPrintIssn();
+          String tdbEissn = tdbau.getEissn();
+
           // validate issn against tdb issn
-          String tdbIssn = tdbau.getIssn();
           if (tdbIssn != null) {
-            if (!tdbIssn.equals(issn)) {
+            if (tdbIssn.equals(eissn) && (issn == null)) {
+              taskWarning(  "tdb print issn " + tdbIssn
+                          + " for " + tdbauName
+                          + " -- reported by metadata as eissn");
+            } else if (!tdbIssn.equals(issn)) {
               // add both ISSNs so it can be found either way
               issns.add(tdbIssn);
               if (issn == null) {
-                log.warning(  "using tdb print issn " + tdbIssn 
+                taskWarning(  "using tdb print issn " + tdbIssn   
+                            + " for " + tdbauName
                             + " -- metadata print issn is missing");
               } else {
-                log.warning(  "also using tdb print issn " + tdbIssn 
-                           + " -- different than metadata print issn: " + issn);
+                taskWarning(  "also using tdb print issn " + tdbIssn   
+                            + " for " + tdbauName
+                            + " -- different than metadata print issn: " 
+                            + issn);
               }
             }
           } else if (issn != null) {
-            log.warning(  "tdb issn missing for " + tdbau.getName()
-                        + " -- should be: " + issn);
+            if (issn.equals(tdbEissn)) {
+              taskWarning( "tdb eissn " + tdbEissn
+                          + " for " + tdbauName
+                          + " -- reported by metadata as print issn");
+            } else {
+              taskWarning(  "tdb issn missing for " + tdbauName
+                          + " -- should be: " + issn);
+            }
           }
   
           // validate eissn against tdb eissn
-          String tdbEissn = tdbau.getEissn();
           if (tdbEissn != null) {
-            if (!tdbEissn.equals(eissn)) {
+            if (tdbEissn.equals(issn) && (eissn == null)) {
+              taskWarning(  "tdb eissn " + tdbEissn
+                          + " for " + tdbauName
+                          + " -- reported by metadata as print issn");
+            } else if (!tdbEissn.equals(eissn)) {
               // add both ISSNs so it can be found either way
               issns.add(tdbEissn);
               if (eissn == null) {
-                log.warning(  "using tdb eissn " + tdbEissn 
+                taskWarning(  "using tdb eissn " + tdbEissn   
+                            + " for " + tdbauName
                             + " -- metadata eissn is missing");
-              } else {
-                log.warning(  "also using tdb eissn " + tdbEissn 
-                            + " -- different than metadata eissn: " + eissn);
               }
+            } else {
+                taskWarning(  "also using tdb eissn " + tdbEissn   
+                            + " for " + tdbauName
+                            + " -- different than metadata eissn: " + eissn);
             }
           } else if (eissn != null) {
-            log.warning(  "tdb eissn missing for " + tdbau.getName()
-                        + " -- should be: " + eissn);
-          }
-            
-          // ensure issns and eissns aren't swapped between mdb and tdb
-          if ((tdbIssn != null) && tdbIssn.equals(eissn)) {
-            log.warning(  "tdb issn " + tdbIssn 
-                        + " is the same as metadata eissn: " + eissn);
-          }
-          if ((tdbEissn != null) && tdbEissn.equals(issn)) {
-            log.warning(  "tdb eissn " + tdbEissn 
-                        + " is the same as metadata issn: " + issn);
+            if (eissn.equals(tdbIssn)) {
+              taskWarning( "tdb print issn " + tdbIssn
+                          + " for " + tdbauName
+                          + " -- reported by metadata as print eissn");
+            } else {
+              taskWarning(  "tdb eissn missing for " + tdbauName
+                          + " -- should be: " + eissn);
+            }
           }
         }
       }
 
       // insert common data into metadata table
-      PreparedStatement insertMetadata = conn
-          .prepareStatement("insert into " + METADATA_TABLE_NAME + " "
-                                + "values (default,?,?,?,?,?,?,?,?,?)",
-                            Statement.RETURN_GENERATED_KEYS);
+      PreparedStatement insertMetadata = 
+        conn.prepareStatement("insert into " + METADATA_TABLE_NAME + " "
+                              + "values (default,?,?,?,?,?,?,?,?,?)",
+                              Statement.RETURN_GENERATED_KEYS);
       // TODO PJG: Keywords???
-      // skip auto-increment key field
-      insertMetadata.setString(1, pubDate.toString());
+      // skip auto-increment key field #0
+      insertMetadata.setString(1, pubDate == null ? null : pubDate.toString());
       insertMetadata.setString(2, volume);
       insertMetadata.setString(3, issue);
       insertMetadata.setString(4, startPage);
