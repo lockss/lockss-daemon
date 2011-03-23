@@ -1729,11 +1729,26 @@
       name = Animal Cognition ;
       issn = 1435-9448 ;
       eissn = 1435-9456 ;
-      issnl = 1435-9448 ;
-      placeholder = True
+      issnl = 1435-9448
     >
 
     param[journal_issn] = 1435-9448
+    attr[where] = content1a
+
+    au < testing ; 1998 ; Animal Cognition Volume 1 ; 1 >
+    au < testing ; 1999 ; Animal Cognition Volume 2 ; 2 >
+    au < testing ; 2000 ; Animal Cognition Volume 3 ; 3 >
+    au < testing ; 2001 ; Animal Cognition Volume 4 ; 4 >
+    au < testing ; 2002 ; Animal Cognition Volume 5 ; 5 >
+    au < testing ; 2003 ; Animal Cognition Volume 6 ; 6 >
+    au < testing ; 2004 ; Animal Cognition Volume 7 ; 7 >
+    au < testing ; 2005 ; Animal Cognition Volume 8 ; 8 >
+    au < testing ; 2006 ; Animal Cognition Volume 9 ; 9 >
+    au < testing ; 2007 ; Animal Cognition Volume 10 ; 10 >
+    au < testing ; 2008 ; Animal Cognition Volume 11 ; 11 >
+    au < testing ; 2009 ; Animal Cognition Volume 12 ; 12 >
+    au < testing ; 2010 ; Animal Cognition Volume 13 ; 13 >
+    au < testing ; 2011 ; Animal Cognition Volume 14 ; 14 >
 
   }
 
@@ -4333,11 +4348,25 @@
       name = Biomedical Microdevices ;
       issn = 1387-2176 ;
       eissn = 1572-8781 ;
-      issnl = 1387-2176 ;
-      placeholder = True
+      issnl = 1387-2176
     >
 
     param[journal_issn] = 1387-2176
+    attr[where] = content1b
+
+    au < testing ; 1998 ; Biomedical Microdevices Volume 1 ; 1 >
+    au < testing ; 1999 ; Biomedical Microdevices Volume 2 ; 2 >
+    au < testing ; 2001 ; Biomedical Microdevices Volume 3 ; 3 >
+    au < testing ; 2002 ; Biomedical Microdevices Volume 4 ; 4 >
+    au < testing ; 2003 ; Biomedical Microdevices Volume 5 ; 5 >
+    au < testing ; 2004 ; Biomedical Microdevices Volume 6 ; 6 >
+    au < testing ; 2005 ; Biomedical Microdevices Volume 7 ; 7 >
+    au < testing ; 2006 ; Biomedical Microdevices Volume 8 ; 8 >
+    au < testing ; 2007 ; Biomedical Microdevices Volume 9 ; 9 >
+    au < testing ; 2008 ; Biomedical Microdevices Volume 10 ; 10 >
+    au < testing ; 2009 ; Biomedical Microdevices Volume 11 ; 11 >
+    au < testing ; 2010 ; Biomedical Microdevices Volume 12 ; 12 >
+    au < testing ; 2011 ; Biomedical Microdevices Volume 13 ; 13 >
 
   }
 
@@ -8585,7 +8614,7 @@
     >
 
     param[journal_issn] = 0010-7999
-    attr[where] = content6a
+    attr[where] = content4a
 
     au < ready ; 1947-1949 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 1 ; 1 >
     au < testing ; 1949-1951 ; Heidelberger Beiträge zur Mineralogie und Petrographie Volume 2 ; 2 >
@@ -12470,7 +12499,7 @@
     >
 
     param[journal_issn] = 1386-4157
-    attr[where] = content2a
+    attr[where] = content6a
 
     au < testing ; 1998 ; Experimental Economics Volume 1 ; 1 >
     au < testing ; 1999 ; Experimental Economics Volume 2 ; 2 >
@@ -13184,7 +13213,7 @@
 
     comment[continued_by] = 1618-2642
     param[journal_issn] = 0937-0633
-    attr[where] = content4a
+    attr[where] = content2a
 
     au < manifest ; 1862 ; Zeitschrift für Analytische Chemie Volume 1 ; 1 >
     au < manifest ; 1863 ; Zeitschrift für Analytische Chemie Volume 2 ; 2 >
@@ -17320,11 +17349,18 @@
       name = International Journal of Computer-Supported Collaborative Learning ;
       issn = 1556-1607 ;
       eissn = 1556-1615 ;
-      issnl = 1556-1607 ;
-      placeholder = True
+      issnl = 1556-1607
     >
 
     param[journal_issn] = 1556-1607
+    attr[where] = sul-lockss30b
+
+    au < testing ; 2006 ; International Journal of Computer-Supported Collaborative Learning Volume 1 ; 1 >
+    au < testing ; 2007 ; International Journal of Computer-Supported Collaborative Learning Volume 2 ; 2 >
+    au < testing ; 2008 ; International Journal of Computer-Supported Collaborative Learning Volume 3 ; 3 >
+    au < testing ; 2009 ; International Journal of Computer-Supported Collaborative Learning Volume 4 ; 4 >
+    au < testing ; 2010 ; International Journal of Computer-Supported Collaborative Learning Volume 5 ; 5 >
+    au < testing ; 2011 ; International Journal of Computer-Supported Collaborative Learning Volume 6 ; 6 >
 
   }
 
@@ -18739,11 +18775,51 @@
       name = Journal of Abnormal Child Psychology ;
       issn = 0091-0627 ;
       eissn = 1573-2835 ;
-      issnl = 0091-0627 ;
-      placeholder = True
+      issnl = 0091-0627
     >
 
     param[journal_issn] = 0091-0627
+    attr[where] = sul-lockss30a
+
+    au < testing ; 1973 ; Journal of Abnormal Child Psychology Volume 1 ; 1 >
+    au < testing ; 1974 ; Journal of Abnormal Child Psychology Volume 2 ; 2 >
+    au < testing ; 1975 ; Journal of Abnormal Child Psychology Volume 3 ; 3 >
+    au < testing ; 1976 ; Journal of Abnormal Child Psychology Volume 4 ; 4 >
+    au < testing ; 1977 ; Journal of Abnormal Child Psychology Volume 5 ; 5 >
+    au < testing ; 1978 ; Journal of Abnormal Child Psychology Volume 6 ; 6 >
+    au < testing ; 1979 ; Journal of Abnormal Child Psychology Volume 7 ; 7 >
+    au < testing ; 1980 ; Journal of Abnormal Child Psychology Volume 8 ; 8 >
+    au < testing ; 1981 ; Journal of Abnormal Child Psychology Volume 9 ; 9 >
+    au < testing ; 1982 ; Journal of Abnormal Child Psychology Volume 10 ; 10 >
+    au < testing ; 1983 ; Journal of Abnormal Child Psychology Volume 11 ; 11 >
+    au < testing ; 1984 ; Journal of Abnormal Child Psychology Volume 12 ; 12 >
+    au < testing ; 1985 ; Journal of Abnormal Child Psychology Volume 13 ; 13 >
+    au < testing ; 1986 ; Journal of Abnormal Child Psychology Volume 14 ; 14 >
+    au < testing ; 1987 ; Journal of Abnormal Child Psychology Volume 15 ; 15 >
+    au < testing ; 1988 ; Journal of Abnormal Child Psychology Volume 16 ; 16 >
+    au < testing ; 1989 ; Journal of Abnormal Child Psychology Volume 17 ; 17 >
+    au < testing ; 1990 ; Journal of Abnormal Child Psychology Volume 18 ; 18 >
+    au < testing ; 1991 ; Journal of Abnormal Child Psychology Volume 19 ; 19 >
+    au < testing ; 1992 ; Journal of Abnormal Child Psychology Volume 20 ; 20 >
+    au < testing ; 1993 ; Journal of Abnormal Child Psychology Volume 21 ; 21 >
+    au < testing ; 1994 ; Journal of Abnormal Child Psychology Volume 22 ; 22 >
+    au < testing ; 1995 ; Journal of Abnormal Child Psychology Volume 23 ; 23 >
+    au < testing ; 1996 ; Journal of Abnormal Child Psychology Volume 24 ; 24 >
+    au < testing ; 1997 ; Journal of Abnormal Child Psychology Volume 25 ; 25 >
+    au < testing ; 1998 ; Journal of Abnormal Child Psychology Volume 26 ; 26 >
+    au < testing ; 1999 ; Journal of Abnormal Child Psychology Volume 27 ; 27 >
+    au < testing ; 2000 ; Journal of Abnormal Child Psychology Volume 28 ; 28 >
+    au < testing ; 2001 ; Journal of Abnormal Child Psychology Volume 29 ; 29 >
+    au < testing ; 2002 ; Journal of Abnormal Child Psychology Volume 30 ; 30 >
+    au < testing ; 2003 ; Journal of Abnormal Child Psychology Volume 31 ; 31 >
+    au < testing ; 2004 ; Journal of Abnormal Child Psychology Volume 32 ; 32 >
+    au < testing ; 2005 ; Journal of Abnormal Child Psychology Volume 33 ; 33 >
+    au < testing ; 2006 ; Journal of Abnormal Child Psychology Volume 34 ; 34 >
+    au < testing ; 2007 ; Journal of Abnormal Child Psychology Volume 35 ; 35 >
+    au < testing ; 2008 ; Journal of Abnormal Child Psychology Volume 36 ; 36 >
+    au < testing ; 2009 ; Journal of Abnormal Child Psychology Volume 37 ; 37 >
+    au < testing ; 2010 ; Journal of Abnormal Child Psychology Volume 38 ; 38 >
+    au < testing ; 2011 ; Journal of Abnormal Child Psychology Volume 39 ; 39 >
 
   }
 
@@ -22796,11 +22872,18 @@
       name = Journal of Neuroimmune Pharmacology ;
       issn = 1557-1890 ;
       eissn = 1557-1904 ;
-      issnl = 1557-1890 ;
-      placeholder = True
+      issnl = 1557-1890
     >
 
     param[journal_issn] = 1557-1890
+    attr[where] = content5a
+
+    au < testing ; 2006 ; Journal of Neuroimmune Pharmacology Volume 1 ; 1 >
+    au < testing ; 2007 ; Journal of Neuroimmune Pharmacology Volume 2 ; 2 >
+    au < testing ; 2008 ; Journal of Neuroimmune Pharmacology Volume 3 ; 3 >
+    au < testing ; 2009 ; Journal of Neuroimmune Pharmacology Volume 4 ; 4 >
+    au < testing ; 2010 ; Journal of Neuroimmune Pharmacology Volume 5 ; 5 >
+    au < testing ; 2011 ; Journal of Neuroimmune Pharmacology Volume 6 ; 6 >
 
   }
 
@@ -24968,14 +25051,41 @@
       name = Landscape Ecology ;
       issn = 0921-2973 ;
       eissn = 1572-9761 ;
-      issnl = 0921-2973 ;
-      placeholder = True
+      issnl = 0921-2973
     >
 
     param[journal_issn] = 0921-2973
+    attr[where] = content6b
+
+    au < testing ; 1987-1988 ; Landscape Ecology Volume 1 ; 1 >
+    au < testing ; 1988-1989 ; Landscape Ecology Volume 2 ; 2 >
+    au < testing ; 1989 ; Landscape Ecology Volume 3 ; 3 >
+    au < testing ; 1990 ; Landscape Ecology Volume 4 ; 4 >
+    au < testing ; 1990-1991 ; Landscape Ecology Volume 5 ; 5 >
+    au < testing ; 1991-1992 ; Landscape Ecology Volume 6 ; 6 >
+    au < testing ; 1992 ; Landscape Ecology Volume 7 ; 7 >
+    au < testing ; 1993 ; Landscape Ecology Volume 8 ; 8 >
+    au < testing ; 1994 ; Landscape Ecology Volume 9 ; 9 >
+    au < testing ; 1995 ; Landscape Ecology Volume 10 ; 10 >
+    au < testing ; 1996 ; Landscape Ecology Volume 11 ; 11 >
+    au < testing ; 1997 ; Landscape Ecology Volume 12 ; 12 >
+    au < testing ; 1998 ; Landscape Ecology Volume 13 ; 13 >
+    au < testing ; 1999 ; Landscape Ecology Volume 14 ; 14 >
+    au < testing ; 2000 ; Landscape Ecology Volume 15 ; 15 >
+    au < testing ; 2001 ; Landscape Ecology Volume 16 ; 16 >
+    au < testing ; 2002 ; Landscape Ecology Volume 17 ; 17 >
+    au < testing ; 2003 ; Landscape Ecology Volume 18 ; 18 >
+    au < testing ; 2004 ; Landscape Ecology Volume 19 ; 19 >
+    au < testing ; 2005 ; Landscape Ecology Volume 20 ; 20 >
+    au < testing ; 2006 ; Landscape Ecology Volume 21 ; 21 >
+    au < testing ; 2007 ; Landscape Ecology Volume 22 ; 22 >
+    au < testing ; 2008 ; Landscape Ecology Volume 23 ; 23 >
+    au < testing ; 2009 ; Landscape Ecology Volume 24 ; 24 >
+    au < testing ; 2010 ; Landscape Ecology Volume 25 ; 25 >
+    au < testing ; 2011 ; Landscape Ecology Volume 26 ; 26 >
 
   }
-
+  
   {
 
     title <
@@ -36242,11 +36352,37 @@ Commet [pv] = now offline
       name = Surgical Endoscopy ;
       issn = 0930-2794 ;
       eissn = 1432-2218 ;
-      issnl = 0930-2794 ;
-      placeholder = True
+      issnl = 0930-2794
     >
 
     param[journal_issn] = 0930-2794
+    attr[where] = content5b
+
+    au < testing ; 1986-1987 ; Surgical Endoscopy Volume 1 ; 1 >
+    au < testing ; 1988 ; Surgical Endoscopy Volume 2 ; 2 >
+    au < testing ; 1989 ; Surgical Endoscopy Volume 3 ; 3 >
+    au < testing ; 1990 ; Surgical Endoscopy Volume 4 ; 4 >
+    au < testing ; 1991 ; Surgical Endoscopy Volume 5 ; 5 >
+    au < testing ; 1992 ; Surgical Endoscopy Volume 6 ; 6 >
+    au < testing ; 1993 ; Surgical Endoscopy Volume 7 ; 7 >
+    au < testing ; 1994 ; Surgical Endoscopy Volume 8 ; 8 >
+    au < testing ; 1995 ; Surgical Endoscopy Volume 9 ; 9 >
+    au < testing ; 1996 ; Surgical Endoscopy Volume 10 ; 10 >
+    au < testing ; 1997 ; Surgical Endoscopy Volume 11 ; 11 >
+    au < testing ; 1998 ; Surgical Endoscopy Volume 12 ; 12 >
+    au < testing ; 1999 ; Surgical Endoscopy Volume 13 ; 13 >
+    au < testing ; 2000 ; Surgical Endoscopy Volume 14 ; 14 >
+    au < testing ; 2001 ; Surgical Endoscopy Volume 15 ; 15 >
+    au < testing ; 2002 ; Surgical Endoscopy Volume 16 ; 16 >
+    au < testing ; 2003 ; Surgical Endoscopy Volume 17 ; 17 >
+    au < testing ; 2004 ; Surgical Endoscopy Volume 18 ; 18 >
+    au < testing ; 2005 ; Surgical Endoscopy Volume 19 ; 19 >
+    au < testing ; 2006 ; Surgical Endoscopy Volume 20 ; 20 >
+    au < testing ; 2007 ; Surgical Endoscopy Volume 21 ; 21 >
+    au < testing ; 2008 ; Surgical Endoscopy Volume 22 ; 22 >
+    au < testing ; 2009 ; Surgical Endoscopy Volume 23 ; 23 >
+    au < testing ; 2010 ; Surgical Endoscopy Volume 24 ; 24 >
+    au < testing ; 2011 ; Surgical Endoscopy Volume 25 ; 25 >
 
   }
 
