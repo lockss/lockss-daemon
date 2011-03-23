@@ -26,18 +26,18 @@
       param[base_url] = http://acb.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Annals of Clinical Biochemistry Volume 37 ; 37 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 38 ; 38 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 39 ; 39 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 40 ; 40 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 41 ; 41 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 42 ; 42 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 43 ; 43 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 44 ; 44 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 45 ; 45 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 46 ; 46 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 47 ; 47 >
-      au < wanted ; Annals of Clinical Biochemistry Volume 48 ; 48 >
+      au < ready ; Annals of Clinical Biochemistry Volume 37 ; 37 >
+      au < ready ; Annals of Clinical Biochemistry Volume 38 ; 38 >
+      au < ready ; Annals of Clinical Biochemistry Volume 39 ; 39 >
+      au < ready ; Annals of Clinical Biochemistry Volume 40 ; 40 >
+      au < ready ; Annals of Clinical Biochemistry Volume 41 ; 41 >
+      au < ready ; Annals of Clinical Biochemistry Volume 42 ; 42 >
+      au < ready ; Annals of Clinical Biochemistry Volume 43 ; 43 >
+      au < ready ; Annals of Clinical Biochemistry Volume 44 ; 44 >
+      au < ready ; Annals of Clinical Biochemistry Volume 45 ; 45 >
+      au < ready ; Annals of Clinical Biochemistry Volume 46 ; 46 >
+      au < ready ; Annals of Clinical Biochemistry Volume 47 ; 47 >
+      au < ready ; Annals of Clinical Biochemistry Volume 48 ; 48 >
 
     }
 
@@ -219,19 +219,19 @@
       au < wanted ; International Journal of STD & AIDS Volume 7 ; 7 >
       au < wanted ; International Journal of STD & AIDS Volume 8 ; 8 >
       au < wanted ; International Journal of STD & AIDS Volume 9 ; 9 >
-      au < wanted ; International Journal of STD & AIDS Volume 10 ; 10 >
-      au < wanted ; International Journal of STD & AIDS Volume 11 ; 11 >
-      au < wanted ; International Journal of STD & AIDS Volume 12 ; 12 >
-      au < wanted ; International Journal of STD & AIDS Volume 13 ; 13 >
-      au < wanted ; International Journal of STD & AIDS Volume 14 ; 14 >
-      au < wanted ; International Journal of STD & AIDS Volume 15 ; 15 >
-      au < wanted ; International Journal of STD & AIDS Volume 16 ; 16 >
-      au < wanted ; International Journal of STD & AIDS Volume 17 ; 17 >
-      au < wanted ; International Journal of STD & AIDS Volume 18 ; 18 >
-      au < wanted ; International Journal of STD & AIDS Volume 19 ; 19 >
-      au < wanted ; International Journal of STD & AIDS Volume 20 ; 20 >
-      au < wanted ; International Journal of STD & AIDS Volume 21 ; 21 >
-      au < wanted ; International Journal of STD & AIDS Volume 22 ; 22 >
+      au < ready ; International Journal of STD & AIDS Volume 10 ; 10 >
+      au < ready ; International Journal of STD & AIDS Volume 11 ; 11 >
+      au < ready ; International Journal of STD & AIDS Volume 12 ; 12 >
+      au < ready ; International Journal of STD & AIDS Volume 13 ; 13 >
+      au < ready ; International Journal of STD & AIDS Volume 14 ; 14 >
+      au < ready ; International Journal of STD & AIDS Volume 15 ; 15 >
+      au < ready ; International Journal of STD & AIDS Volume 16 ; 16 >
+      au < ready ; International Journal of STD & AIDS Volume 17 ; 17 >
+      au < ready ; International Journal of STD & AIDS Volume 18 ; 18 >
+      au < ready ; International Journal of STD & AIDS Volume 19 ; 19 >
+      au < ready ; International Journal of STD & AIDS Volume 20 ; 20 >
+      au < ready ; International Journal of STD & AIDS Volume 21 ; 21 >
+      au < ready ; International Journal of STD & AIDS Volume 22 ; 22 >
 
     }
 
@@ -307,17 +307,17 @@
       param[base_url] = http://jms.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Journal of Medical Screening Volume 5 ; 5 >
-      au < wanted ; Journal of Medical Screening Volume 6 ; 6 >
-      au < wanted ; Journal of Medical Screening Volume 7 ; 7 >
-      au < wanted ; Journal of Medical Screening Volume 8 ; 8 >
-      au < wanted ; Journal of Medical Screening Volume 9 ; 9 >
-      au < wanted ; Journal of Medical Screening Volume 10 ; 10 >
-      au < wanted ; Journal of Medical Screening Volume 11 ; 11 >
-      au < wanted ; Journal of Medical Screening Volume 12 ; 12 >
-      au < wanted ; Journal of Medical Screening Volume 13 ; 13 >
-      au < wanted ; Journal of Medical Screening Volume 14 ; 14 >
-      au < wanted ; Journal of Medical Screening Volume 15 ; 15 >
+      au < ready ; Journal of Medical Screening Volume 5 ; 5 >
+      au < ready ; Journal of Medical Screening Volume 6 ; 6 >
+      au < ready ; Journal of Medical Screening Volume 7 ; 7 >
+      au < ready ; Journal of Medical Screening Volume 8 ; 8 >
+      au < ready ; Journal of Medical Screening Volume 9 ; 9 >
+      au < ready ; Journal of Medical Screening Volume 10 ; 10 >
+      au < ready ; Journal of Medical Screening Volume 11 ; 11 >
+      au < ready ; Journal of Medical Screening Volume 12 ; 12 >
+      au < ready ; Journal of Medical Screening Volume 13 ; 13 >
+      au < ready ; Journal of Medical Screening Volume 14 ; 14 >
+      au < ready ; Journal of Medical Screening Volume 15 ; 15 >
       au < wanted ; Journal of Medical Screening Volume 16 ; 16 >
       au < wanted ; Journal of Medical Screening Volume 17 ; 17 >
       au < wanted ; Journal of Medical Screening Volume 18 ; 18 >
