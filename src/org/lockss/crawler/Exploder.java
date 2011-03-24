@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.16 2011-03-13 21:54:26 tlipkis Exp $
+ * $Id: Exploder.java,v 1.17 2011-03-24 21:52:06 dshr Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public abstract class Exploder {
   protected PluginManager pluginMgr = null;
   protected Set touchedAus = new HashSet();
   protected long sleepAfter = 0;
-  protected boolean multipleStemsPerAu = false;
+  protected boolean multipleStemsPerAu = false;	/* XXX Probably no longer works */
   protected ExplodedArchivalUnit singleAU = null;
   protected String explodedAUBaseUrl = null;
 
@@ -150,6 +150,13 @@ public abstract class Exploder {
       cu.release();
     }
     if (au == null) {
+      /*
+       * There's no existing AU for this URL, we have to make a new one.
+       * All newly created AUs need to be ExplodedArchivalUnit, because
+       * there's currently no way to specify the plugin to use to create
+       * the AU. Exploding into AUs that were previously created by
+       * crawling is OK (e.g. for LuKII).
+       */
       if (multipleStemsPerAu) {
 	logger.debug3("New single AU for base url " + baseUrl);
 	if (singleAU == null) {
@@ -165,16 +172,16 @@ public abstract class Exploder {
 	// There's no AU for this baseUrl,  so create one
 	au = createAu(ae);
       }
-    }
-    if (au == null) {
-      IOException ex = new IOException("No new AU for " + ae.getBaseUrl());
-      logger.error(ex.toString() + new Throwable());
-      throw ex;
-    }
-    if (!(au instanceof ExplodedArchivalUnit)) {
-      IOException ex = new IOException(au.toString() + " wrong type");
-      logger.error("New AU not ExplodedArchivalUnit " + au.toString(), ex);
-      throw ex;
+      if (au == null) {
+        IOException ex = new IOException("No new AU for " + ae.getBaseUrl());
+        logger.error(ex.toString() + new Throwable());
+        throw ex;
+      }
+      if (!(au instanceof ExplodedArchivalUnit)) {
+        IOException ex = new IOException(au.toString() + " wrong type");
+        logger.error("New AU not ExplodedArchivalUnit " + au.toString(), ex);
+        throw ex;
+      }
     }
     touchedAus.add(au);
     String newUrl = baseUrl + restOfUrl;

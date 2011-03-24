@@ -1,5 +1,5 @@
 /*
- * $Id: TarExploder.java,v 1.12 2009-08-20 23:11:09 dshr Exp $
+ * $Id: TarExploder.java,v 1.13 2011-03-24 21:52:06 dshr Exp $
  */
 
 /*
@@ -196,9 +196,9 @@ public class TarExploder extends Exploder {
 	// Make it look like a new crawl finished on each AU to which
 	// URLs were added.
 	for (Iterator it = touchedAus.iterator(); it.hasNext(); ) {
-	  ExplodedArchivalUnit eau = (ExplodedArchivalUnit)it.next();
-	  logger.debug3(archiveUrl + " touching " + eau.toString());
-	  crawler.getDaemon().getNodeManager(eau).newContentCrawlFinished();
+	  ArchivalUnit au = (ArchivalUnit)it.next();
+	  logger.debug3(archiveUrl + " touching " + au.toString());
+	  crawler.getDaemon().getNodeManager(au).newContentCrawlFinished();
 	}
       }
     } else {
