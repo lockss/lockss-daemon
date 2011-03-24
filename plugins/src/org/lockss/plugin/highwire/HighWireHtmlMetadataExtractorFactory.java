@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.7 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.7.2.1 2011-03-24 23:50:42 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.*;
-import java.util.*;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
@@ -71,17 +70,9 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
-      tagMap.put("citation_authors",
-		 new MetadataField(MetadataField.FIELD_AUTHOR) {
-		   // XXX Change to handle lists properly
-		   @Override
-		   public String validate(ArticleMetadata am, String value) {
-		     if (value.contains(";")) {
-		       value = value.replaceAll(",", "");
-		       value = value.replaceAll(";", ",");
-		     }
-		     return value;
-		   }});;
+      tagMap.put("bepress_citation_authors",
+                 new MetadataField(MetadataField.FIELD_AUTHOR,
+                                   MetadataField.splitAt(";")));
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
     }
