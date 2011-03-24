@@ -1,5 +1,5 @@
 /*
- * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.9 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: BePressHtmlMetadataExtractorFactory.java,v 1.9.2.1 2011-03-24 23:53:25 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@
 package org.lockss.plugin.bepress;
 
 import java.io.*;
-import java.util.*;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
@@ -71,16 +70,8 @@ public class BePressHtmlMetadataExtractorFactory
       tagMap.put("bepress_citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("bepress_citation_firstpage", MetadataField.FIELD_START_PAGE);
       tagMap.put("bepress_citation_authors",
-		 new MetadataField(MetadataField.FIELD_AUTHOR) {
-		   // XXX Change to handle lists properly
-		   @Override
-		   public String validate(ArticleMetadata am, String value) {
-		     if (value.contains(";")) {
-		       value = value.replaceAll(",", "");
-		       value = value.replaceAll(";", ",");
-		     }
-		     return value;
-		   }});;
+                 new MetadataField(MetadataField.FIELD_AUTHOR,
+                                   MetadataField.splitAt(";")));
       tagMap.put("bepress_citation_title", MetadataField.FIELD_ARTICLE_TITLE);
       tagMap.put("bepress_citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
     }
