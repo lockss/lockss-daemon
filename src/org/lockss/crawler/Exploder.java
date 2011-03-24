@@ -1,5 +1,5 @@
 /*
- * $Id: Exploder.java,v 1.15 2009-09-17 02:53:38 tlipkis Exp $
+ * $Id: Exploder.java,v 1.15.20.1 2011-03-24 22:55:52 dshr Exp $
  */
 
 /*
@@ -65,6 +65,9 @@ public abstract class Exploder {
   public static final String PARAM_EXPLODED_AU_YEAR =
     Configuration.PREFIX + "crawler.exploder.explodedAuYear";
   public static final String DEFAULT_EXPLODED_AU_YEAR = "none";
+  public static final String PARAM_EXPLODED_AU_COLLECTION =
+    Configuration.PREFIX + "crawler.exploder.explodedAuCollection";
+  public static final String DEFAULT_EXPLODED_AU_COLLECTION = "none";
   public static final String PARAM_EXPLODER_ENTRIES_PER_PAUSE =
     Configuration.PREFIX + "crawler.exploder.entriesPerPause";
   public static final long DEFAULT_EXPLODER_ENTRIES_PER_PAUSE = 200;
@@ -88,7 +91,7 @@ public abstract class Exploder {
   protected PluginManager pluginMgr = null;
   protected Set touchedAus = new HashSet();
   protected long sleepAfter = 0;
-  protected boolean multipleStemsPerAu = false;
+  protected boolean multipleStemsPerAu = false;	/* XXX Probably no longer works */
   protected ExplodedArchivalUnit singleAU = null;
   protected String explodedAUBaseUrl = null;
 
@@ -147,6 +150,13 @@ public abstract class Exploder {
       cu.release();
     }
     if (au == null) {
+      /*
+       * There's no existing AU for this URL, we have to make a new one.
+       * All newly created AUs need to be ExplodedArchivalUnit, because
+       * there's currently no way to specify the plugin to use to create
+       * the AU. Exploding into AUs that were previously created by
+       * crawling is OK (e.g. for LuKII).
+       */
       if (multipleStemsPerAu) {
 	logger.debug3("New single AU for base url " + baseUrl);
 	if (singleAU == null) {
@@ -162,16 +172,16 @@ public abstract class Exploder {
 	// There's no AU for this baseUrl,  so create one
 	au = createAu(ae);
       }
-    }
-    if (au == null) {
-      IOException ex = new IOException("No new AU for " + ae.getBaseUrl());
-      logger.error(ex.toString() + new Throwable());
-      throw ex;
-    }
-    if (!(au instanceof ExplodedArchivalUnit)) {
-      IOException ex = new IOException(au.toString() + " wrong type");
-      logger.error("New AU not ExplodedArchivalUnit " + au.toString(), ex);
-      throw ex;
+      if (au == null) {
+        IOException ex = new IOException("No new AU for " + ae.getBaseUrl());
+        logger.error(ex.toString() + new Throwable());
+        throw ex;
+      }
+      if (!(au instanceof ExplodedArchivalUnit)) {
+        IOException ex = new IOException(au.toString() + " wrong type");
+        logger.error("New AU not ExplodedArchivalUnit " + au.toString(), ex);
+        throw ex;
+      }
     }
     touchedAus.add(au);
     String newUrl = baseUrl + restOfUrl;
@@ -203,6 +213,11 @@ public abstract class Exploder {
       String year = CurrentConfig.getParam(PARAM_EXPLODED_AU_YEAR,
 					   DEFAULT_EXPLODED_AU_YEAR);
       props.put(ConfigParamDescr.YEAR.getKey(), year);
+    }
+    if (props.get(ConfigParamDescr.COLLECTION.getKey()) == null) {
+      String collection = CurrentConfig.getParam(PARAM_EXPLODED_AU_COLLECTION,
+					   DEFAULT_EXPLODED_AU_COLLECTION);
+      props.put(ConfigParamDescr.COLLECTION.getKey(), collection);
     }
 
     String pluginName = CurrentConfig.getParam(PARAM_EXPLODED_PLUGIN_NAME,

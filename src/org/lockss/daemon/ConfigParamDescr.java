@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.44 2009-08-29 04:38:55 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.44.20.1 2011-03-24 22:55:52 dshr Exp $
  */
 
 /*
@@ -198,6 +198,14 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setType(TYPE_USER_PASSWD)
     .setSize(30);
 
+  public static final ConfigParamDescr COLLECTION =
+    new ConfigParamDescr()
+    .setKey("collection")
+    .setDisplayName("Collection")
+    .setType(TYPE_STRING)
+    .setSize(20)
+    .setDescription("Name of ArchiveIt collection");
+
   // Internal use
   public static final ConfigParamDescr AU_CLOSED =
     new ConfigParamDescr()
@@ -252,7 +260,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, VOLUME_NAME, YEAR, JOURNAL_ID, JOURNAL_ISSN,
       PUBLISHER_NAME, ISSUE_RANGE, NUM_ISSUE_RANGE, ISSUE_SET, OAI_REQUEST_URL,
-      OAI_SPEC, BASE_URL2, USER_CREDENTIALS,
+      OAI_SPEC, BASE_URL2, USER_CREDENTIALS, COLLECTION
   };
 
   private String key;			// param (prop) key

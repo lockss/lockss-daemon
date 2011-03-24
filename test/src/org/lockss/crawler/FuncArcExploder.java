@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder.java,v 1.7 2009-09-04 03:52:20 dshr Exp $
+ * $Id: FuncArcExploder.java,v 1.7.20.1 2011-03-24 22:55:52 dshr Exp $
  */
 
 /*
@@ -122,6 +122,9 @@ public class FuncArcExploder extends LockssTestCase {
     "http://www.example.com/content.arc.gz",
   };
 
+  static final String GOOD_YEAR = "1968";
+
+
   public static void main(String[] args) throws Exception {
     // XXX should be much simpler.
     FuncArcExploder test = new FuncArcExploder();
@@ -136,14 +139,15 @@ public class FuncArcExploder extends LockssTestCase {
     log.info("Running up for depth " + maxDepth);
     test.testBadContentMultipleAU();
     test.testGoodContentMultipleAU();
-    test.testBadContentSingleAU();
-    test.testGoodContentSingleAU();
+    if (false) {
+      test.dontTestBadContentSingleAU();
+      test.dontTestGoodContentSingleAU();
+    }
     test.tearDown();
   }
 
   public void setUp() throws Exception {
     super.setUp();
-    if (false) // XXX
     this.setUp(DEFAULT_MAX_DEPTH);
   }
 
@@ -178,16 +182,21 @@ public class FuncArcExploder extends LockssTestCase {
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    // XXX why FuncTarExploderMockExplodedPlugin here?
+    // XXX there is a test/src/org/lockss/crawler/FuncArcExploderMockExplodedPlugin.xml
+    // XXX but it references non-existent parts of the ArchiveIt plugin
     String explodedPluginName =
       "org.lockss.crawler.FuncTarExploderMockExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
+    props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, GOOD_YEAR);
     props.setProperty(LockssApp.MANAGER_PREFIX + LockssDaemon.PLUGIN_MANAGER,
 		      MyPluginManager.class.getName());
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
-    theDaemon.setPluginManager(new MyPluginManager());
-    pluginMgr = theDaemon.getPluginManager();
+    pluginMgr = new MyPluginManager();
+    pluginMgr.initService(theDaemon);
+    theDaemon.setPluginManager(pluginMgr);
 
     // pluginMgr.setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
@@ -221,22 +230,29 @@ public class FuncArcExploder extends LockssTestCase {
     runTest(true);
   }
 
-  public void testBadContentSingleAU() throws Exception {
+  public void dontTestBadContentSingleAU() throws Exception {
+    /*
+     * XXX This test disabled because the Exploder now always explodes
+     * XXX into multiple AUs.
+     */
     ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
 				  "http://www.stage.org/");
     multipleStemsPerAu = true;
     runTest(false);
   }
 
-  public void testGoodContentSingleAU() throws Exception {
+  public void dontTestGoodContentSingleAU() throws Exception {
+    /*
+     * XXX This test disabled because the Exploder now always explodes
+     * XXX into multiple AUs.
+     */
     ConfigurationUtil.addFromArgs(Exploder.PARAM_EXPLODED_AU_BASE_URL,
-				  "http://www.stage.org/");
+ 				  "http://www.stage.org/");
     multipleStemsPerAu = true;
     runTest(true);
   }
 
   public void runTest(boolean good) throws Exception {
-    if (true) return;  // XXX
     log.debug3("About to create content");
     createContent();
 

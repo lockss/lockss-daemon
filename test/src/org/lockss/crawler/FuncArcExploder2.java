@@ -1,5 +1,5 @@
 /*
- * $Id: FuncArcExploder2.java,v 1.3 2009-09-04 03:52:20 dshr Exp $
+ * $Id: FuncArcExploder2.java,v 1.3.20.1 2011-03-24 22:55:53 dshr Exp $
  */
 
 /*
@@ -76,6 +76,8 @@ public class FuncArcExploder2 extends LockssTestCase {
   private static final int DEFAULT_FILESIZE = 3000;
   private static int fileSize = DEFAULT_FILESIZE;
   private static int maxDepth=DEFAULT_MAX_DEPTH;
+  static final String GOOD_YEAR = "1968";
+  static final String COLLECTION = "SomeStuff";
 
   static String[] url = {
     "http://www.abitare.org/robots.txt",
@@ -100,6 +102,7 @@ public class FuncArcExploder2 extends LockssTestCase {
     log.info("Setting up for depth " + maxDepth);
     test.setUp(maxDepth);
     log.info("Running up for depth " + maxDepth);
+    test.testRunSelf2();
     test.testRunSelf1();
     test.tearDown();
   }
@@ -144,6 +147,7 @@ public class FuncArcExploder2 extends LockssTestCase {
     String explodedPluginName =
       "org.lockss.plugin.archiveit.ArchiveItExplodedPlugin";
     props.setProperty(Exploder.PARAM_EXPLODED_PLUGIN_NAME, explodedPluginName);
+    props.setProperty(Exploder.PARAM_EXPLODED_AU_YEAR, GOOD_YEAR);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -170,12 +174,16 @@ public class FuncArcExploder2 extends LockssTestCase {
   }
 
   public void testRunSelf1() throws Exception {
-    if (false) // XXX
+    Properties props = new Properties();
+    props.setProperty(Exploder.PARAM_EXPLODED_AU_COLLECTION, COLLECTION);
+    ConfigurationUtil.addFromProps(props);
     runTest(false);
   }
 
   public void testRunSelf2() throws Exception {
-    if (false) // XXX
+    Properties props = new Properties();
+    props.setProperty(Exploder.PARAM_EXPLODED_AU_COLLECTION, COLLECTION);
+    ConfigurationUtil.addFromProps(props);
     runTest(true);
   }
 
