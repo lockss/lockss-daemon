@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.3.2.7 2011-03-23 18:32:19 pgust Exp $
+ * $Id: MetadataManager.java,v 1.3.2.8 2011-03-24 21:11:21 pgust Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.lang.management.ThreadMXBean;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.sql.BatchUpdateException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -96,6 +97,56 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   private static Logger log = Logger.getLogger("MetadataMgr");
 
+  /** prefix for config properties */
+  static public final String PREFIX = "org.lockss.daemon.metadataManager.";
+
+  /**
+   * Determines whether MedataExtractor specified by plugin 
+   * should be used if it is available. If <code>false</code>, a 
+   * MetaDataExtractor is created that returns data from the TDB rather
+   * than from the content metadata. This is faster than extracting
+   * metadata form content, but less complete. Use only when minimal
+   * article info is required. This parameter can only be set at startup.
+   */
+  static public final String PARAM_USE_METADATA_EXTRACTOR = 
+    PREFIX + "use_metadata_extractor";
+
+  /**
+   * Default value of MetadataManager use_metadata_extractor configuration
+   * parameter; <code>true</code> to use specified MetadataExtractor.
+   */
+  static public final boolean DEFAULT_USE_METADATA_EXTRACTOR = true;
+
+  /**
+   * Determines whether indexing should be enabled. If indexing is not
+   * enabled, AUs are queued for indexing, but the AUs are not reindexed
+   * until the process is re-enabled. This parameter can be changed at
+   * runtime.
+   */
+  static public final String PARAM_INDEXING_ENABLED = 
+    PREFIX + "indexing_enabled";
+
+  /**
+   * Default value of MetadataManager indexing enabled configuration
+   * parameter; <code>false</code> to disable, <code>true</code> to enable.
+   */
+  static public final boolean DEFAULT_INDEXING_ENABLED = false;
+
+  /** 
+   * The maximum number of concurrent reindexing tasks. This
+   * property can be changed at runtime 
+   */
+  static public final String PARAM_MAX_REINDEXING_TASKS = 
+    PREFIX + "maxReindexingTasks";
+
+  /** Default maximum concurrent reindexing tasks */
+  static public final int DEFAULT_MAX_REINDEXING_TASKS = 1;
+
+
+  /** Property tree root for datasource properties */
+  static public final String DATASOURCE_ROOT = PREFIX + "datasource";
+  
+
   /**
    * Map of running reindexing tasks
    */
@@ -121,7 +172,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   /**
    * Maximum number of reindexing tasks
    */
-  int maxReindexingTasks = 1;
+  int maxReindexingTasks = DEFAULT_MAX_REINDEXING_TASKS;
 
   /**
    * The database data source
@@ -158,47 +209,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    */
   static final String PENDINGAUS_TABLE_NAME = "PendingAus";
 
-  static public final String PREFIX = "org.lockss.daemon.metadataManager.";
-
-  /**
-   * Property name of MetadataManager use_metadata_extractor configuration
-   * parameter
-   */
-  static public final String PARAM_USE_METADATA_EXTRACTOR = PREFIX
-      + "use_metadata_extractor";
-
-  /**
-   * Default value of MetadataManager use_metadata_extractor configuration
-   * parameter
-   */
-  static public final boolean DEFAULT_USE_METADATA_EXTRACTOR = true;
-
-  /**
-   * Property name of MetadataManager indexing enabled configuration parameter
-   */
-  static public final String PARAM_INDEXING_ENABLED = PREFIX
-      + "indexing_enabled";
-
-  /**
-   * Default value of MetadataManager indexing enabled configuration parameter
-   */
-  static public final boolean DEFAULT_INDEXING_ENABLED = false;
-
-  /** Property tree root for datasource properties */
-  static public final String PARAM_DATASOURCE_ROOT = PREFIX + "datasource";
-
-  /** Property name of maximum concurrent reindexing tasks */
-  static public final String PARAM_MAX_REINDEXING_TASKS = 
-	  PREFIX + "maxReindexingTasks";
-
-  /** Default maximum concurrent reindexing tasks */
-  static public final int DEFAULT_MAX_REINDEXING_TASKS = 1;
-
   /** Length of database author field -- enough for maybe first three authors */
   static private final int MAX_AUTHOR_FIELD = 512;
 
-  /** Length of database title field */
-  static private final int MAX_TITLE_FIELD = 512;
+  /** Length of database article title field */
+  static private final int MAX_ATITLE_FIELD = 512;
 
   /** Length of access URL field */
   static private final int MAX_ACCESS_URL_FIELD = 4096;
@@ -208,31 +223,206 @@ public class MetadataManager extends BaseLockssDaemonManager implements
 
   /** Length of plugin ID field */
   static private final int MAX_PLUGIN_ID_FIELD = 96;
+  
+  /** length of start page field */
+  static final int MAX_STARTPAGE_FIELD = 16;
+  
+  /** length of date field */
+  static final int MAX_DATE_FIELD = 16;
+  
+  /** length of volume field */
+  static final int MAX_VOLUME_FIELD = 16;
+  
+  /** length of issue field */
+  static final int MAX_ISSUE_FIELD = 16;
+  
+  /** length of ISSN field */
+  static final int MAX_ISSN_FIELD = 8;
+  
+  /** length of ISBN field */
+  static final int MAX_ISBN_FIELD = 13;
+  
+  /** length of DOI field */
+  static final int MAX_DOI_FIELD = 256;
+  
 
   /**
-   * Get the root directory for creating the database files.
-   * 
-   * @return the root directory
+   * Start MetadataManager service
    */
-  protected String getDbRootDirectory() {
-    String rootDir = System.getProperty("user.dir");
-    Configuration config = ConfigManager.getCurrentConfig();
-    @SuppressWarnings("unchecked")
-    List<String> dSpaceList = 
-    	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
-    if (dSpaceList != null && !dSpaceList.isEmpty()) {
-      rootDir = dSpaceList.get(0);
+  @Override
+  public void startService() {
+    log.debug("Starting MetadataManager");
+
+     if (!initializeService(ConfigManager.getCurrentConfig())) {
+       log.error("Error initializing manager");
+       return;
+     }
+
+    Connection conn;
+    try {
+      conn = newConnection();
+    } catch (SQLException ex) {
+      log.error("Cannot connect to database -- service not started");
+      return;
     }
-    return rootDir;
+
+    // create schema and initialize tables if schema does not exist
+    dbIsNew = !tableExists(conn, PENDINGAUS_TABLE_NAME);
+    if (dbIsNew) {
+      try {
+        executeBatch(conn, createSchema);
+      } catch (BatchUpdateException ex) {
+        // handle batch update exception
+        int[] counts = ex.getUpdateCounts();
+        for (int i = 0; i < counts.length; i++) {
+          log.error(  "Error in schemea statement " + i 
+                            + "(" + counts[i] + "): "
+                    + createSchema[i]);
+        }
+        log.error("Cannot initialize schema -- service not started", ex);
+        safeClose(conn);
+        return;
+      } catch (SQLException ex) {
+        log.error("Cannot initialize schema -- service not started", ex);
+        safeClose(conn);
+        return;
+      }
+    }
+
+    if (!safeCommit(conn)) {
+      safeClose(conn);
+      return;
+    }
+    safeClose(conn);
+
+    // get the plugin manager
+    pluginMgr = getDaemon().getPluginManager();
+    pluginMgr.registerAuEventHandler(new AuEventHandler.Base() {
+
+      public void auContentChanged(ArchivalUnit au, ChangeInfo info) {
+        if (info.isComplete()) {
+          Connection conn = null;
+          try {
+            log.debug2("Adding changed au to reindex: " + au.getName());
+            // add pending AU
+            conn = newConnection();
+            if (conn == null) {
+              log.error(  "Cannot connect to database"
+                        + " -- cannot add changed aus to pending aus");
+              return;
+            }
+
+            addToPendingAus(conn, Collections.singleton(au));
+            conn.commit();
+
+            synchronized (reindexingTasks) {
+              ReindexingTask task = reindexingTasks.get(au);
+              if (task != null) {
+                // task cancellation will remove task and schedule next one
+                log.debug2(  "Canceling pending reindexing task for au "
+                           + au.getName());
+                task.cancel();
+              } else {
+                log.debug2("Scheduling reindexing tasks");
+                startReindexing(conn);
+              }
+            }
+          } catch (SQLException ex) {
+            log.error("Cannot add au to pending AUs: " + au.getName(), ex);
+          } finally {
+            safeClose(conn);
+          }
+        }
+      }
+    });
+
+    // start metadata extraction
+    MetadataStarter starter = new MetadataStarter();
+    new Thread(starter).start();
   }
 
   /**
-   * Initialize the manager from the current configuration.
+   * Handle new configuration.
+   * 
+   * @param config the new configuration
+   * @param prevConfig the previous configuration
+   * @changedKeys the configuration keys that changed
    */
-  protected void initializeManager(Configuration config) {
+  @Override
+  public void setConfig(Configuration config, Configuration prevConfig,
+                        Differences changedKeys) {
+    useMetadataExtractor = config.getBoolean(PARAM_USE_METADATA_EXTRACTOR,
+                                             useMetadataExtractor);
+    maxReindexingTasks = config.getInt(PARAM_MAX_REINDEXING_TASKS, 
+                                       maxReindexingTasks);
+    maxReindexingTasks = Math.max(0, maxReindexingTasks);
+    boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED,
+                                         enabled);
+    setEnabled(doEnable);
+
+  }
+
+  /**
+   * Restart the Metadata Managaer service by terminating any running 
+   * reindexing tasks and then resetting its database before calling 
+   * {@link #startServie()}.
+   * <p>
+   * This method is only used for testing.
+   */
+  void restartService() {
+    if (!initializeService(ConfigManager.getCurrentConfig())) {
+      log.error("Error initializing manager -- service not started");
+      return;
+    }
+
+    stopReindexing();
+
+    Connection conn;
+    try {
+      conn = newConnection();
+    } catch (SQLException ex) {
+      log.error("Cannot get database connection -- service not started");
+      return;
+    }
+
+    // reset database tables
+    try {
+      // drop schema tables already exist
+      if (tableExists(conn, PENDINGAUS_TABLE_NAME)) {
+        executeBatch(conn, dropSchema);
+      }
+      conn.commit();
+      conn.close();
+    } catch (BatchUpdateException ex) {
+      // handle batch update exception
+      int[] counts = ex.getUpdateCounts();
+      for (int i = 0; i < counts.length; i++) {
+        log.error(  "Error in statement " + i + "(" + counts[i] + "): "
+                  + createSchema[i]);
+      }
+      log.error("Cannot drop existing schema -- service not started", ex);
+      safeClose(conn);
+      return;
+    } catch (SQLException ex) {
+      log.error("Cannot drop existing schema -- service not started", ex);
+      safeClose(conn);
+      return;
+    }
+
+    // start the service
+    startService();
+  }
+
+  /**
+   * Initialize the service from the current configuration.
+   * 
+   * @param config the configuration
+   * @return <code>true</code> if initialized
+   */
+  protected boolean initializeService(Configuration config) {
     // already initialized if datasource exists
     if (dataSource != null) {
-      return;
+      return true;  // already initialized
     }
 
     // determine maximum number of concurrent reindexing tasks
@@ -244,7 +434,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     // get datasource class and properties
     Configuration datasourceConfig = ConfigManager.newConfiguration();
     datasourceConfig.copyFrom(
-      ConfigManager.getCurrentConfig().getConfigTree(PARAM_DATASOURCE_ROOT));
+      ConfigManager.getCurrentConfig().getConfigTree(DATASOURCE_ROOT));
     String dataSourceClassName = datasourceConfig.get("className");
     if (dataSourceClassName != null) {
       // class name not really part of data source definition.
@@ -256,8 +446,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       dataSourceClassName = "org.apache.derby.jdbc.EmbeddedDataSource";
       datasourceConfig.put("databaseName", databaseName);
       datasourceConfig.put("description", "Embeddded JavaDB data source");
-      datasourceConfig.put("user", "APP");
-      datasourceConfig.put("password", "APP");
+      datasourceConfig.put("user", "LOCKSS");
+//      datasourceConfig.put("password", "LOCKSS");
       datasourceConfig.put("createDatabase", "create");
     }
     Class<?> cls;
@@ -266,7 +456,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     } catch (Throwable ex) {
       log.error("Cannot locate datasource class \"" + dataSourceClassName
           + "\"", ex);
-      return;
+      return false;
     }
 
     // create datasource
@@ -274,11 +464,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       dataSource = (DataSource) cls.newInstance();
     } catch (ClassCastException ex) {
       log.error("Class not a DataSource \"" + dataSourceClassName + "\"");
-      return;
+      return false;
     } catch (Throwable ex) {
       log.error("Cannot create instance of datasource class \""
           + dataSourceClassName + "\"", ex);
-      return;
+      return false;
     }
     boolean errors = false;
     // initialize datasource properties
@@ -297,41 +487,67 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       log.error(  "Cannot initialize instance of datasource class \""
                 + dataSourceClassName + "\"");
       dataSource = null;
-    } else {
+      return false;
+    }
+    
+    boolean ready = true;
+    if (dataSource instanceof ClientDataSource) {
+      // start Derby NetworkServerControl for client connection
+      ClientDataSource cds = (ClientDataSource) dataSource;
+      String serverName = cds.getServerName();
+      int serverPort = cds.getPortNumber();
       try {
-        // if dataSource is a Derby ClientDataSource, enable remote access
-        ClientDataSource cds = (ClientDataSource) dataSource;
-        InetAddress inetAddr = InetAddress.getByName(cds.getServerName());
-        int jdbcPort = cds.getPortNumber();
-        org.apache.derby.drda.NetworkServerControl networkServerControl = 
-          new org.apache.derby.drda.NetworkServerControl(inetAddr, jdbcPort);
-        networkServerControl.start(null);
-        
-        // wait for network server control to be ready
-        boolean ready = false; 
-        for (int i = 0; i < 10; i++) { // at most 20 seconds;
-          try {
-            networkServerControl.ping();
-            ready = true;
-            break;
-          } catch (Throwable ex) {
-            try {
-              Thread.sleep(2000);       // about 2 second
-            } catch (InterruptedException ex2) {
-            }
-          }
-        }
+        ready = startNetworkServerControl(serverName, serverPort);
         if (!ready) {
-          log.error("Wait for Derby NetworkServiceControl timed out");
+          log.error("Cannot enable remote access to Derby database");
           dataSource = null;
         }
-      } catch (ClassCastException ex) {
-        // dataSource is not a Derby ClientDataSource
-      } catch (Throwable ex) {
-        log.error("Cannot enable remote access to Derby database");
-        
+      } catch (UnknownHostException ex) {
+        log.error("Unknown host for remote Derby database: " + serverName);
+        dataSource = null;
+        ready = false;
       }
     }
+
+    return ready;
+  }
+  
+  /**
+   * Start the Derby NetworkServerConrol and wait for it to be ready.
+   * 
+   * @param serverName the server name
+   * @param serverPort the server port
+   * @throws UnknownHostException if serverName not valid
+   */
+  private boolean startNetworkServerControl(String serverName, int serverPort) 
+    throws UnknownHostException {
+    // if dataSource is a Derby ClientDataSource, enable remote access
+    InetAddress inetAddr = InetAddress.getByName(serverName);
+
+    org.apache.derby.drda.NetworkServerControl networkServerControl; 
+    try {
+        networkServerControl = 
+          new org.apache.derby.drda.NetworkServerControl(inetAddr, serverPort);
+      networkServerControl.start(null);
+    } catch (Exception ex) {
+      return false; // unspecified error occurred
+    }
+    
+    // wait for network server control to be ready
+    for (int i = 0; i < 40; i++) { // at most 20 seconds;
+      try {
+        networkServerControl.ping();
+        return true;
+      } catch (Exception ex) {
+        // control not ready; wait and try again
+        try {
+          Thread.sleep(500);       // about 1/2 second
+        } catch (InterruptedException ex2) {
+          break;
+        }
+      }
+    }
+    return false;
   }
 
   /**
@@ -376,6 +592,23 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
+   * Get the root directory for creating the database files.
+   * 
+   * @return the root directory
+   */
+  protected String getDbRootDirectory() {
+    Configuration config = ConfigManager.getCurrentConfig();
+    String rootDir = config.get(ConfigManager.PARAM_TMPDIR);
+    @SuppressWarnings("unchecked")
+    List<String> dSpaceList = 
+    	config.getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
+    if (dSpaceList != null && !dSpaceList.isEmpty()) {
+      rootDir = dSpaceList.get(0);
+    }
+    return rootDir;
+  }
+
+  /**
    * Determines whether a table exists.
    * 
    * @param conn the connection
@@ -386,6 +619,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     if (conn != null) {
       try {
         Statement st = conn.createStatement();
+        st.setMaxRows(1);
 
         String sql = "select * from " + tableName;
         st.executeQuery(sql);
@@ -405,10 +639,11 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * @param conn the connection
    * @param tableName the table name
    */
-  public static void logSchema(Connection conn, String tableName) {
+  private static void logSchema(Connection conn, String tableName) {
     if (conn != null) {
       try {
         Statement st = conn.createStatement();
+        st.setMaxRows(1);
 
         String sql = "select * from " + tableName;
         ResultSet rs = st.executeQuery(sql);
@@ -419,10 +654,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
         log.info("Table Name : " + metaData.getTableName(2));
         log.info("Field  \tsize\tDataType");
 
-        for (int i = 0; i < rowCount; i++) {
-          log.info(metaData.getColumnName(i + 1) + "  \t");
-          log.info(metaData.getColumnDisplaySize(i + 1) + "\t");
-          log.info(metaData.getColumnTypeName(i + 1));
+        for (int i = 1; i <= rowCount; i++) {
+          StringBuilder sb = new StringBuilder();
+          sb.append(metaData.getColumnName(i));
+          sb.append("  \t");
+          sb.append(metaData.getColumnDisplaySize(i));
+          sb.append(" \t");
+          sb.append(metaData.getColumnTypeName(i + 1));
+          log.info(sb.toString());
         }
         st.close();
         return;
@@ -439,28 +678,31 @@ public class MetadataManager extends BaseLockssDaemonManager implements
       "create table " + PENDINGAUS_TABLE_NAME + " ("
           + "plugin_id VARCHAR(64) NOT NULL," + "au_key VARCHAR("
           + MAX_AU_KEY_FIELD + ") NOT NULL" + ")",
-
       "create table " + METADATA_TABLE_NAME + " ("
           + "md_id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,"
-          + "date VARCHAR(16)," + "volume VARCHAR(16)," + "issue VARCHAR(32),"
-          + "start_page VARCHAR(16)," + "article_title VARCHAR("
-          + MAX_TITLE_FIELD + ")," + "author VARCHAR(" + MAX_AUTHOR_FIELD
-          + "),"
-          + // semicolon-separated list
-          "plugin_id VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
+          + "date VARCHAR(" + MAX_DATE_FIELD + "),"
+          + "volume VARCHAR(" + MAX_VOLUME_FIELD + ")," 
+          + "issue VARCHAR(" + MAX_ISSUE_FIELD + "),"
+          + "start_page VARCHAR(" + MAX_STARTPAGE_FIELD + "),"
+          + "article_title VARCHAR(" + MAX_ATITLE_FIELD + ")," 
+          + "author VARCHAR(" + MAX_AUTHOR_FIELD + ")," // semicolon sep. list
+          + "plugin_id VARCHAR(" + MAX_PLUGIN_ID_FIELD + ") NOT NULL,"
           + // partition by
           "au_key VARCHAR(" + MAX_AU_KEY_FIELD + ") NOT NULL,"
           + "access_url VARCHAR(" + MAX_ACCESS_URL_FIELD + ") NOT NULL" + ")",
 
-      "create table " + DOI_TABLE_NAME + " (" + "doi VARCHAR(256) NOT NULL,"
+      "create table " + DOI_TABLE_NAME + " (" 
+          + "doi VARCHAR(" + MAX_DOI_FIELD + ") NOT NULL,"
           + "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME
           + "(md_id) on delete cascade" + ")",
 
-      "create table " + ISBN_TABLE_NAME + " (" + "isbn VARCHAR(13) NOT NULL,"
+      "create table " + ISBN_TABLE_NAME + " (" 
+          + "isbn VARCHAR(" + MAX_ISBN_FIELD + ") NOT NULL,"
           + "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME
           + "(md_id) on delete cascade" + ")",
 
-      "create table " + ISSN_TABLE_NAME + " (" + "issn VARCHAR(8) NOT NULL,"
+      "create table " + ISSN_TABLE_NAME + " (" 
+          + "issn VARCHAR(" + MAX_ISSN_FIELD + ") NOT NULL,"
           + "md_id BIGINT NOT NULL REFERENCES " + METADATA_TABLE_NAME
           + "(md_id) on delete cascade" + ")", };
 
@@ -513,54 +755,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     Connection conn = dataSource.getConnection();
     conn.setAutoCommit(false);
     return conn;
-  }
-
-  /**
-   * Restart the Metadata Managaer service by terminating any running 
-   * reindexing tasks and then resetting its database before calling 
-   * {@link #startServie()}.
-   * <p>
-   * This method is only used for testing.
-   */
-  void restartService() {
-    initializeManager(ConfigManager.getCurrentConfig());
-
-    stopReindexing();
-
-    Connection conn;
-    try {
-      conn = newConnection();
-    } catch (SQLException ex) {
-      log.error("Cannot get database connecction -- service not started");
-      return;
-    }
-
-    // reset database tables
-    try {
-      // drop schema tables already exist
-      if (tableExists(conn, PENDINGAUS_TABLE_NAME)) {
-        executeBatch(conn, dropSchema);
-      }
-      conn.commit();
-      conn.close();
-    } catch (BatchUpdateException ex) {
-      // handle batch update exception
-      int[] counts = ex.getUpdateCounts();
-      for (int i = 0; i < counts.length; i++) {
-        log.error(  "Error in statement " + i + "(" + counts[i] + "): "
-                  + createSchema[i]);
-      }
-      log.error("Cannot drop existing schema -- service not started", ex);
-      safeClose(conn);
-      return;
-    } catch (SQLException ex) {
-      log.error("Cannot drop existing schema -- service not started", ex);
-      safeClose(conn);
-      return;
-    }
-
-    // start the service
-    startService();
   }
 
   /**
@@ -643,98 +837,6 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   /**
-   * Start MetadataManager service
-   */
-  public void startService() {
-    log.debug("Starting MetadataManager");
-
-    initializeManager(ConfigManager.getCurrentConfig());
-
-    Connection conn;
-    try {
-      conn = newConnection();
-    } catch (SQLException ex) {
-      log.error("Cannot connect to database -- service not started");
-      return;
-    }
-
-    // create schema and initialize tables if schema does not exist
-    dbIsNew = !tableExists(conn, PENDINGAUS_TABLE_NAME);
-    if (dbIsNew) {
-      try {
-        executeBatch(conn, createSchema);
-      } catch (BatchUpdateException ex) {
-        // handle batch update exception
-        int[] counts = ex.getUpdateCounts();
-        for (int i = 0; i < counts.length; i++) {
-          log.error(  "Error in schemea statement " + i 
-        		    + "(" + counts[i] + "): "
-                    + createSchema[i]);
-        }
-        log.error("Cannot initialize schema -- service not started", ex);
-        safeClose(conn);
-        return;
-      } catch (SQLException ex) {
-        log.error("Cannot initialize schema -- service not started", ex);
-        safeClose(conn);
-        return;
-      }
-    }
-
-    if (!safeCommit(conn)) {
-      safeClose(conn);
-      return;
-    }
-    safeClose(conn);
-
-    // get the plugin manager
-    pluginMgr = getDaemon().getPluginManager();
-
-    pluginMgr.registerAuEventHandler(new AuEventHandler.Base() {
-
-      public void auContentChanged(ArchivalUnit au, ChangeInfo info) {
-        if (info.isComplete()) {
-          Connection conn = null;
-          try {
-            log.debug2("Adding changed au to reindex: " + au.getName());
-            // add pending AU
-            conn = newConnection();
-            if (conn == null) {
-              log.error(  "Cannot connect to database"
-                        + " -- cannot add changed aus to pending aus");
-              return;
-            }
-
-            addToPendingAus(conn, Collections.singleton(au));
-            conn.commit();
-
-            synchronized (reindexingTasks) {
-              ReindexingTask task = reindexingTasks.get(au);
-              if (task != null) {
-                // task cancellation will remove task and schedule next one
-                log.debug2(  "Canceling pending reindexing task for au "
-                           + au.getName());
-                task.cancel();
-              } else {
-                log.debug2("Scheduling reindexing tasks");
-                startReindexing(conn);
-              }
-            }
-          } catch (SQLException ex) {
-            log.error("Cannot add au to pending AUs: " + au.getName(), ex);
-          } finally {
-            safeClose(conn);
-          }
-        }
-      }
-    });
-
-    // start metadata extraction
-    MetadataStarter starter = new MetadataStarter(dbIsNew);
-    new Thread(starter).start();
-  }
-
-  /**
    * Set enabled state of this manager.
    * 
    * @param enable new enabled state of manager
@@ -756,27 +858,14 @@ public class MetadataManager extends BaseLockssDaemonManager implements
     }
   }
 
-  @Override
-  public void setConfig(Configuration config, Configuration prevConfig,
-                        Differences changedKeys) {
-    useMetadataExtractor = config.getBoolean(PARAM_USE_METADATA_EXTRACTOR,
-                                             useMetadataExtractor);
-    maxReindexingTasks = config.getInt(PARAM_MAX_REINDEXING_TASKS, 
-                                       maxReindexingTasks);
-    maxReindexingTasks = Math.max(0, maxReindexingTasks);
-    boolean doEnable = config.getBoolean(PARAM_INDEXING_ENABLED,
-                                         enabled);
-    setEnabled(doEnable);
-
-  }
-
-  class MetadataStarter extends LockssRunnable {
-
-    boolean initPendingAus;
-
-    public MetadataStarter(boolean initPendingAus) {
+  /**
+   * This class handles deferred initialization until AUs are available.
+   * @author phil
+   *
+   */
+  private class MetadataStarter extends LockssRunnable {
+    public MetadataStarter() {
       super("MetadataStarter");
-      this.initPendingAus = initPendingAus;
     }
 
     // start metadata extraction process
@@ -823,9 +912,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   }
 
   static long totalCpuTime = 0;
-
   static long totalUserTime = 0;
-
   static long totalClockTime = 0;
 
   static ThreadMXBean tmxb = ManagementFactory.getThreadMXBean();
@@ -1447,8 +1534,8 @@ public class MetadataManager extends BaseLockssDaemonManager implements
   private static String getArticleTitleField(ArticleMetadata md) {
     // elide title field
     String articleTitle = md.get(MetadataField.FIELD_ARTICLE_TITLE);
-    if ((articleTitle != null) && (articleTitle.length() > MAX_TITLE_FIELD)) {
-      articleTitle = articleTitle.substring(0, MAX_TITLE_FIELD);
+    if ((articleTitle != null) && (articleTitle.length() > MAX_ATITLE_FIELD)) {
+      articleTitle = articleTitle.substring(0, MAX_ATITLE_FIELD);
     }
     return articleTitle;
   }
