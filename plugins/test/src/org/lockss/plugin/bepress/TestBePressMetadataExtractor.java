@@ -1,5 +1,5 @@
 /*
- * $Id: TestBePressMetadataExtractor.java,v 1.16.2.1 2011-03-25 13:33:39 pgust Exp $
+ * $Id: TestBePressMetadataExtractor.java,v 1.16.2.2 2011-03-25 13:45:43 pgust Exp $
  */
 
 /*
