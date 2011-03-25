@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireMetadataExtractor.java,v 1.14 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestHighWireMetadataExtractor.java,v 1.15 2011-03-25 13:45:40 pgust Exp $
  */
 
 /*
@@ -172,6 +172,9 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
   String goodISSN = "1234-5679";
   String goodDate = "4/1/2000";
   String goodAuthor = "Regnard, Claud; Leslie, Paula; Crawford, Hannah; Matthews, Dorothy; Gibson, Lynn";
+  String[] goodAuthors = new String[] {
+      "Regnard, Claud", "Leslie, Paula", "Crawford, Hannah", 
+      "Matthews, Dorothy", "Gibson, Lynn" };
   String goodArticleTitle = "Spurious Results";
   String goodJournalTitle = "Drug Metabolism and Disposition";
   String goodAbsUrl = "http://www.example.com/cgi/content/abstract/13/4/123";
@@ -236,9 +239,8 @@ public class TestHighWireMetadataExtractor extends LockssTestCase {
     assertEquals(goodIssue, md.get(MetadataField.FIELD_ISSUE));
     assertEquals(goodStartPage, md.get(MetadataField.FIELD_START_PAGE));
     assertEquals(goodISSN, md.get(MetadataField.FIELD_ISSN));
-    goodAuthor = goodAuthor.replaceAll(", ", " ");
-    goodAuthor = goodAuthor.replaceAll(";", ",");
-    assertEquals(goodAuthor, md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     
