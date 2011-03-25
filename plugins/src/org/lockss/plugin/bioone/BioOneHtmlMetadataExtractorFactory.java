@@ -1,5 +1,5 @@
 /*
- * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.9 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: BioOneHtmlMetadataExtractorFactory.java,v 1.10 2011-03-25 16:34:33 pgust Exp $
  */
 
 /*
@@ -102,7 +102,8 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
         
         // Match ", " or " and " or ", and " in an author list - any number of spaces at start or end
         private static Pattern authorSplitPattern = RegexpUtil.uncheckedCompile("(\\s*,?\\s+and\\s*|\\s*,\\s+)", Perl5Compiler.READ_ONLY_MASK);
-        private static Substitution authorCommaSubstitution = new StringSubstitution(", ");
+        private final static String AUTHOR_SEPARATOR = "\t";
+        private static Substitution authorSeparatorSubstitution = new StringSubstitution(AUTHOR_SEPARATOR);
     
         // Match the URL and link text of a link to the issue TOC: 
         // <p><a href="http://www.bioone.org/perlserv/?request=get-toc&#38;issn=0002-8444&#38;volume=91&#38;issue=1">Volume 91, Issue 1 (January 2001)</a></p>
@@ -225,10 +226,12 @@ public class BioOneHtmlMetadataExtractorFactory implements FileMetadataExtractor
                         // Also strip out any sup tags along with their content
                         myLine = HtmlUtil.stripHtmlTagsWithTheirContent(myLine, "sup");
                         myLine = HtmlUtil.stripHtmlTags(myLine);
-						// Make comma-separated list of authors by replacing authorSplitPattern with authorCommaSubstitution
-						Perl5Matcher matcher = RegexpUtil.getMatcher();
-	                    myLine = Util.substitute(matcher, authorSplitPattern, authorCommaSubstitution, myLine, Util.SUBSTITUTE_ALL);
-	                    metadata.put(MetadataField.FIELD_AUTHOR, myLine);
+			// Make semicolon-separated list of authors by replacing authorSplitPattern with authorSeparatorSubstitution
+			Perl5Matcher matcher = RegexpUtil.getMatcher();
+	                myLine = Util.substitute(matcher, authorSplitPattern, authorSeparatorSubstitution, myLine, Util.SUBSTITUTE_ALL);
+	                for (String author : myLine.split(AUTHOR_SEPARATOR)) {    
+	                    metadata.put(MetadataField.FIELD_AUTHOR, author);
+	                }
 					}
 
 				}

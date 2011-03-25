@@ -1,5 +1,5 @@
 /*
- * $Id: TestBioOneMetadataExtractor.java,v 1.9 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: TestBioOneMetadataExtractor.java,v 1.10 2011-03-25 16:34:32 pgust Exp $
  */
 
 /*
@@ -175,10 +175,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
   String goodOnlineISSN = "0002-8444";
   // There is no Print ISSN available
   String goodDate = "January 2001";
-  String goodAuthor1 = "David B. Lellinger";
-  String goodAuthor2 = "Jefferson Prado";
-  String goodAuthors = StringUtils.join(new String[]{goodAuthor1, goodAuthor2}, ", "); // in other cases, unescapeHtml() also
-  //String goodAuthor3 = "Andrej Cernansk&#253;"
+  String[] goodAuthors = new String[] {"David B. Lellinger", "Jefferson Prado"};
   String goodATitle1 = "The Group of ";
   String goodATitle2 = "Adiantum gracile";
   String goodATitle3 = " in Brazil and Environs";
@@ -204,7 +201,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     "               <p style=\"margin-top: 0px\">Article: pp. "+goodStartPage+"&#8211;"+goodEndPage+" | <a href=\"http://www.bioone.org/perlserv/?request=get-abstract&#38;doi="+urlEncodedDOI+"\">Abstract</a> &#124; <a href=\"http://www.bioone.org/perlserv/?request=res-loc&#38;uri=urn%3Aap%3Apdf%3Adoi%3A"+urlEncodedDOI+"\">PDF (498K)</a></p>\n" +
     "               \n" +
     "         <h1>"+goodATitle1+"<a href=\"http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=all&#38;search_value=Adiantum+gracile&#38;search_kingdom=every&#38;search_span=exactly_for&#38;categories=All&#38;source=html&#38;search_credRating=All\" TARGET=\"itis_window\"><em>"+goodATitle2+"</em></a>"+goodATitle3+"</h1>\n" +
-    "         <p class=\"authors\">"+goodAuthor1+"<sup><a href=\"#AFF1\" class=\"aff-auth\">A</a></sup> and "+goodAuthor2+"<sup><a href=\"#AFF2\" class=\"aff-auth\">B</a></sup> </p>\n" +
+    "         <p class=\"authors\">"+goodAuthors[0]+"<sup><a href=\"#AFF1\" class=\"aff-auth\">A</a></sup> and "+goodAuthors[1]+"<sup><a href=\"#AFF2\" class=\"aff-auth\">B</a></sup> </p>\n" +
     "         <p class=\"affiliation\"><span class=\"aff aff-label\" id=\"AFF1\">A.</span> Department of Botany, National Museum of Natural History, Smithsonian Institution, Washington, DC 20560-0166, <span class=\"aff aff-label\" id=\"AFF2\">B.</span> Se&#231;&#227;o de Briologia e Pteridologia, Instituto de Bot&#226;nica, Caixa Postal 4005, 01061-970 S&#227;o Paulo, SP, Brasil       </p>\n" +
     "    \n" +
     "    <div class=\"abstract\"><p class=\"abstract\">An abstract</p></div><p class=\"info\">DOI: "+goodDOI+"</p>\n" +
@@ -229,7 +226,10 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     //assertEquals(goodEndPage, md.getEndPage());
     assertTrue(MetadataUtil.isISSN(md.get(MetadataField.FIELD_ISSN)));
     assertEquals(goodOnlineISSN, md.get(MetadataField.FIELD_ISSN));
-    assertEquals(goodAuthors, md.get(MetadataField.FIELD_AUTHOR));
+System.err.println(md.get(MetadataField.FIELD_AUTHOR));
+System.err.println(md.getList(MetadataField.FIELD_AUTHOR));
+    assertEquals(goodAuthors[0], md.get(MetadataField.FIELD_AUTHOR));
+    assertEquals(Arrays.asList(goodAuthors), md.getList(MetadataField.FIELD_AUTHOR));
     assertEquals(goodArticleTitle, md.get(MetadataField.FIELD_ARTICLE_TITLE));
     assertEquals(goodJournalTitle, md.get(MetadataField.FIELD_JOURNAL_TITLE));
     assertEquals(goodDate, md.get(MetadataField.FIELD_DATE));
@@ -253,7 +253,7 @@ public class TestBioOneMetadataExtractor extends LockssTestCase {
     // Wrong title header type
     "         <h2>"+goodArticleTitle+"</h2>\n" +
     // Unexpected author layout
-    "         <p class=\"authors\">"+goodAuthor1+" &amp; "+goodAuthor2+" </p>\n" +
+    "         <p class=\"authors\">"+goodAuthors[0]+" &amp; "+goodAuthors[1]+" </p>\n" +
     // Bad DOI with spaces
     "    <div class=\"abstract\"><p class=\"abstract\">An abstract</p></div><p class=\"info\">DOI: "+goodDOI+" doiend</p>\n" +
     "    \n" +
