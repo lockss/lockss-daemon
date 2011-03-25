@@ -216,9 +216,9 @@
       param[base_url] = http://ijsa.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; International Journal of STD & AIDS Volume 7 ; 7 >
-      au < wanted ; International Journal of STD & AIDS Volume 8 ; 8 >
-      au < wanted ; International Journal of STD & AIDS Volume 9 ; 9 >
+      au < ready ; International Journal of STD & AIDS Volume 7 ; 7 >
+      au < ready ; International Journal of STD & AIDS Volume 8 ; 8 >
+      au < ready ; International Journal of STD & AIDS Volume 9 ; 9 >
       au < ready ; International Journal of STD & AIDS Volume 10 ; 10 >
       au < ready ; International Journal of STD & AIDS Volume 11 ; 11 >
       au < ready ; International Journal of STD & AIDS Volume 12 ; 12 >
@@ -402,26 +402,26 @@
       au < wanted ; JRSM Volume 82 ; 82 >
       au < wanted ; JRSM Volume 83 ; 83 >
       au < wanted ; JRSM Volume 84 ; 84 >
-      au < wanted ; JRSM Volume 85 ; 85 >
-      au < wanted ; JRSM Volume 86 ; 86 >
-      au < wanted ; JRSM Volume 87 ; 87 >
-      au < wanted ; JRSM Volume 88 ; 88 >
-      au < wanted ; JRSM Volume 89 ; 89 >
-      au < wanted ; JRSM Volume 90 ; 90 >
-      au < wanted ; JRSM Volume 91 ; 91 >
-      au < wanted ; JRSM Volume 92 ; 92 >
-      au < wanted ; JRSM Volume 93 ; 93 >
-      au < wanted ; JRSM Volume 94 ; 94 >
-      au < wanted ; JRSM Volume 95 ; 95 >
-      au < wanted ; JRSM Volume 96 ; 96 >
-      au < wanted ; JRSM Volume 97 ; 97 >
-      au < wanted ; JRSM Volume 98 ; 98 >
-      au < wanted ; JRSM Volume 99 ; 99 >
-      au < wanted ; JRSM Volume 100 ; 100 >
-      au < wanted ; JRSM Volume 101 ; 101 >
-      au < wanted ; JRSM Volume 102 ; 102 >
-      au < wanted ; JRSM Volume 103 ; 103 >
-      au < wanted ; JRSM Volume 104 ; 104 >
+      au < ready ; JRSM Volume 85 ; 85 >
+      au < ready ; JRSM Volume 86 ; 86 >
+      au < ready ; JRSM Volume 87 ; 87 >
+      au < ready ; JRSM Volume 88 ; 88 >
+      au < ready ; JRSM Volume 89 ; 89 >
+      au < ready ; JRSM Volume 90 ; 90 >
+      au < ready ; JRSM Volume 91 ; 91 >
+      au < ready ; JRSM Volume 92 ; 92 >
+      au < ready ; JRSM Volume 93 ; 93 >
+      au < ready ; JRSM Volume 94 ; 94 >
+      au < ready ; JRSM Volume 95 ; 95 >
+      au < ready ; JRSM Volume 96 ; 96 >
+      au < ready ; JRSM Volume 97 ; 97 >
+      au < ready ; JRSM Volume 98 ; 98 >
+      au < ready ; JRSM Volume 99 ; 99 >
+      au < ready ; JRSM Volume 100 ; 100 >
+      au < ready ; JRSM Volume 101 ; 101 >
+      au < ready ; JRSM Volume 102 ; 102 >
+      au < ready ; JRSM Volume 103 ; 103 >
+      au < ready ; JRSM Volume 104 ; 104 >
 
     }
 
@@ -441,34 +441,34 @@
       param[base_url] = http://la.rsmjournals.com/
       implicit < status ; name ; param[volume_name] >
 
-      au < wanted ; Laboratory Animals Volume 1 ; 1 >
-      au < wanted ; Laboratory Animals Volume 2 ; 2 >
-      au < wanted ; Laboratory Animals Volume 3 ; 3 >
-      au < wanted ; Laboratory Animals Volume 4 ; 4 >
-      au < wanted ; Laboratory Animals Volume 5 ; 5 >
-      au < wanted ; Laboratory Animals Volume 6 ; 6 >
-      au < wanted ; Laboratory Animals Volume 7 ; 7 >
-      au < wanted ; Laboratory Animals Volume 8 ; 8 >
-      au < wanted ; Laboratory Animals Volume 9 ; 9 >
-      au < wanted ; Laboratory Animals Volume 10 ; 10 >
-      au < wanted ; Laboratory Animals Volume 11 ; 11 >
-      au < wanted ; Laboratory Animals Volume 12 ; 12 >
-      au < wanted ; Laboratory Animals Volume 13 ; 13 >
-      au < wanted ; Laboratory Animals Volume 14 ; 14 >
-      au < wanted ; Laboratory Animals Volume 15 ; 15 >
-      au < wanted ; Laboratory Animals Volume 16 ; 16 >
-      au < wanted ; Laboratory Animals Volume 17 ; 17 >
-      au < wanted ; Laboratory Animals Volume 18 ; 18 >
-      au < wanted ; Laboratory Animals Volume 19 ; 19 >
-      au < wanted ; Laboratory Animals Volume 20 ; 20 >
-      au < wanted ; Laboratory Animals Volume 21 ; 21 >
-      au < wanted ; Laboratory Animals Volume 22 ; 22 >
-      au < wanted ; Laboratory Animals Volume 23 ; 23 >
-      au < wanted ; Laboratory Animals Volume 24 ; 24 >
-      au < wanted ; Laboratory Animals Volume 25 ; 25 >
-      au < wanted ; Laboratory Animals Volume 26 ; 26 >
-      au < wanted ; Laboratory Animals Volume 27 ; 27 >
-      au < wanted ; Laboratory Animals Volume 28 ; 28 >
+      au < ready ; Laboratory Animals Volume 1 ; 1 >
+      au < ready ; Laboratory Animals Volume 2 ; 2 >
+      au < ready ; Laboratory Animals Volume 3 ; 3 >
+      au < ready ; Laboratory Animals Volume 4 ; 4 >
+      au < ready ; Laboratory Animals Volume 5 ; 5 >
+      au < ready ; Laboratory Animals Volume 6 ; 6 >
+      au < ready ; Laboratory Animals Volume 7 ; 7 >
+      au < ready ; Laboratory Animals Volume 8 ; 8 >
+      au < ready ; Laboratory Animals Volume 9 ; 9 >
+      au < ready ; Laboratory Animals Volume 10 ; 10 >
+      au < ready ; Laboratory Animals Volume 11 ; 11 >
+      au < ready ; Laboratory Animals Volume 12 ; 12 >
+      au < ready ; Laboratory Animals Volume 13 ; 13 >
+      au < ready ; Laboratory Animals Volume 14 ; 14 >
+      au < ready ; Laboratory Animals Volume 15 ; 15 >
+      au < ready ; Laboratory Animals Volume 16 ; 16 >
+      au < ready ; Laboratory Animals Volume 17 ; 17 >
+      au < ready ; Laboratory Animals Volume 18 ; 18 >
+      au < ready ; Laboratory Animals Volume 19 ; 19 >
+      au < ready ; Laboratory Animals Volume 20 ; 20 >
+      au < ready ; Laboratory Animals Volume 21 ; 21 >
+      au < ready ; Laboratory Animals Volume 22 ; 22 >
+      au < ready ; Laboratory Animals Volume 23 ; 23 >
+      au < ready ; Laboratory Animals Volume 24 ; 24 >
+      au < ready ; Laboratory Animals Volume 25 ; 25 >
+      au < ready ; Laboratory Animals Volume 26 ; 26 >
+      au < ready ; Laboratory Animals Volume 27 ; 27 >
+      au < ready ; Laboratory Animals Volume 28 ; 28 >
       au < ready ; Laboratory Animals Volume 29 ; 29 >
       au < ready ; Laboratory Animals Volume 30 ; 30 >
       au < ready ; Laboratory Animals Volume 31 ; 31 >
