@@ -3,7 +3,89 @@
   publisher <
     name = Auburn University
   >
-    
+
+  {
+
+    title <
+      name = Auburn University Alabama Community Plans Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/
+    implicit < status ; name ; param[directory] >
+  
+    au < released ; Auburn University Alabama Community Plans Digital Collection ; AlabamaCommunityPlans >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Alabama Postcards Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/
+    implicit < status ; name ; param[directory] >
+  
+    au < released ; Auburn University Alabama Postcards Digital Collection ; Alabama_Postcards >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Architecture Student Watercolors Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/ArchitectureWatercolors/
+    implicit < status ; name ; param[directory] >
+  
+    au < released ; Auburn University Architecture Student Watercolors Digital Collection: Photographs ; watercolors_photos >
+    au < released ; Auburn University Architecture Student Watercolors Digital Collection: Scans ; watercolors_scans >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Board of Trustees Minutes
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata4.lib.auburn.edu/BOTMinutes/
+    implicit < status ; name ; param[directory] >
+  
+    au < released ; Auburn University Board of Trustees Minutes: 1850s ; 1850s >
+    au < released ; Auburn University Board of Trustees Minutes: 1860s ; 1860s >
+    au < released ; Auburn University Board of Trustees Minutes: 1870s ; 1870s >
+    au < released ; Auburn University Board of Trustees Minutes: 1880s ; 1880s >
+    au < released ; Auburn University Board of Trustees Minutes: 1890s ; 1890s >
+    au < released ; Auburn University Board of Trustees Minutes: 1900s ; 1900s >
+    au < released ; Auburn University Board of Trustees Minutes: 1910s ; 1910s >
+    au < released ; Auburn University Board of Trustees Minutes: 1920s ; 1920s >
+    au < released ; Auburn University Board of Trustees Minutes: 1930s ; 1930s >
+    au < released ; Auburn University Board of Trustees Minutes: 1940s ; 1940s >
+    au < released ; Auburn University Board of Trustees Minutes: 1950s ; 1950s >
+    au < released ; Auburn University Board of Trustees Minutes: 1960s ; 1960s >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Civil War Documents Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/CivilWar_Documents/
+    implicit < status ; name ; param[directory] >
+  
+    au < released ; Auburn University Civil War Documents Digital Collection: Diaries ; Diaries >
+
+  }
+  
   {
 
     title <
@@ -23,18 +105,46 @@
       
   {
   
-   title <
-     name = Auburn University Discover Auburn Lecture Series
-   >
+    title <
+      name = Auburn University Discover Auburn Lecture Series
+    >
      
     plugin = edu.auburn.adpn.discoverauburn.DiscoverAuburnPlugin
     param[base_url] = http://fortissimo.lib.auburn.edu:82/da/
     implicit < status ; name ; param[year] >
 
-   au < released ; Auburn University Discover Auburn Lecture Series 2007 ; 2007 >
-   au < released ; Auburn University Discover Auburn Lecture Series 2008 ; 2008 >
-   au < released ; Auburn University Discover Auburn Lecture Series 2009 ; 2009 >
+    au < released ; Auburn University Discover Auburn Lecture Series 2007 ; 2007 >
+    au < released ; Auburn University Discover Auburn Lecture Series 2008 ; 2008 >
+    au < released ; Auburn University Discover Auburn Lecture Series 2009 ; 2009 >
    
+  }
+  
+  {
+
+    title <
+      name = Auburn University Eddie V. Rickenbacker Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/
+    implicit < status ; name ; param[directory] >
+  
+    au < manifest ; Auburn University Eddie V. Rickenbacker Digital Collection ; RickenbackerCollection >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Everett Leavins Photographs Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/
+    implicit < status ; name ; param[directory] >
+  
+    au < manifest ; Auburn University Everett Leavins Photographs Digital Collection ; LeavinsPhotographs >
+
   }
   
   {
@@ -82,6 +192,50 @@
   {
 
     title <
+      name = Auburn University Historic Catalogs Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/HistoricCatalogs/
+    implicit < status ; name ; param[directory] >
+  
+    au < manifest ; Auburn University Historic Catalogs Digital Collection: 19th. Century ; 19thCentury >
+    au < manifest ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCentury >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Philip Henry Gosse Watercolors Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata4.lib.auburn.edu/
+    implicit < status ; name ; param[directory] >
+  
+    au < manifest ; Auburn University Philip Henry Gosse Watercolors Digital Collection ; Gosse_Images >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Piano Bench Sheet Music Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/PianoBenchCollection/
+    implicit < status ; name ; param[directory] >
+  
+    au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
+    au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
+
+  }
+  
+  {
+
+    title <
       name = Auburn University Sesquicentennial Lecture Series 
     >
 
@@ -102,6 +256,35 @@
     au < released ; Auburn University Sesquicentennial Lecture Series: 11. J. Wayne Flynt ; 11flynt >
     au < released ; Auburn University Sesquicentennial Lecture Series: 12. Nell Ruth Campbell Richardson ; 12richardson >
   
+  }
+  
+  {
+
+    title <
+      name = Auburn University Theatre Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/TheatreCollection/
+    implicit < status ; name ; param[directory] >
+  
+    au < manifest ; Auburn University Theatre Digital Collection: A. Lynn Lockrow Collection ; A_Lynn_Lockrow_Collection >
+    au < manifest ; Auburn University Theatre Digital Collection: Theatre Department Collection ; Theatre_Dept_Collection >
+
+  }
+  
+  {
+
+    title <
+      name = Auburn University Urban Studio Posters Digital Collection
+    >
+
+    plugin = edu.auburn.adpn.directory.AuburnDirectoryPlugin
+    param[base_url] = http://digdata1.lib.auburn.edu/
+    implicit < status ; name ; param[directory] >
+  
+    au < manifest ; Auburn University Urban Studio Posters Digital Collection ; UrbanStudioPosters >
+
   }
   
   {
