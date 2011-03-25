@@ -1,5 +1,5 @@
 /*
- * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.5 2011-01-22 08:22:30 tlipkis Exp $
+ * $Id: NatureHtmlMetadataExtractorFactory.java,v 1.6 2011-03-25 17:58:39 pgust Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.nature;
 
 import java.io.*;
-import java.util.*;
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.map.MultiValueMap;
 
@@ -59,6 +58,16 @@ public class NatureHtmlMetadataExtractorFactory
     private static MultiMap tagMap = new MultiValueMap();
     static {
       tagMap.put("dc.creator", MetadataField.DC_FIELD_CONTRIBUTOR);
+      // <meta name="citation_authors" content="G Poelmans, J K Buitelaar, D L Pauls, B Franke" />
+      tagMap.put("citation_authors", 
+                 new MetadataField(MetadataField.FIELD_AUTHOR,
+                                   MetadataField.splitAt(",")));
+      // <meta name="citation_date" content="2009-12-29" />
+      tagMap.put("citation_date", MetadataField.FIELD_DATE);
+      // <meta name="citation_title" content="Altered arachidonic acid cascade enzymes in postmortem brain from bipolar disorder patients" />
+      tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
+      // <meta name="citation_journal_title" content="Molecular Psychiatry" />
+      tagMap.put("citation_journal_title", MetadataField.FIELD_JOURNAL_TITLE);
       // <meta name="citation_volume" content="19" />
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       // <meta name="citation_issue" content="2" />
