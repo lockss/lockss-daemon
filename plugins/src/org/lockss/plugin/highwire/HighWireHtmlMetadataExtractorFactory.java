@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.7.2.1 2011-03-24 23:50:42 pgust Exp $
+ * $Id: HighWireHtmlMetadataExtractorFactory.java,v 1.7.2.2 2011-03-25 13:31:33 pgust Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class HighWireHtmlMetadataExtractorFactory implements FileMetadataExtract
       tagMap.put("citation_volume", MetadataField.FIELD_VOLUME);
       tagMap.put("citation_issue", MetadataField.FIELD_ISSUE);
       tagMap.put("citation_firstpage", MetadataField.FIELD_START_PAGE);
-      tagMap.put("bepress_citation_authors",
+      tagMap.put("citation_authors",
                  new MetadataField(MetadataField.FIELD_AUTHOR,
                                    MetadataField.splitAt(";")));
       tagMap.put("citation_title", MetadataField.FIELD_ARTICLE_TITLE);
