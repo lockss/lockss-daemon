@@ -1,10 +1,10 @@
 /*
- * $Id: CongressionalHearingsUrlNormalizer.java,v 1.2 2009-03-31 23:40:53 thib_gc Exp $
+ * $Id: GPOFDSysSitemapsUrlNormalizer.java,v 1.1 2011-03-28 23:19:23 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2009 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,24 +30,36 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin.usdocspln.gov.gpo.hearings;
+package org.lockss.plugin.usdocspln.gov.gpo.fdsys;
 
-import org.apache.commons.lang.StringUtils;
-import org.lockss.daemon.PluginException;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
-public class CongressionalHearingsUrlNormalizer implements UrlNormalizer {
+public class GPOFDSysSitemapsUrlNormalizer implements UrlNormalizer {
 
-  protected static final String BAD_SUFFIX = ".wais.txt";
+  @Override
+  public String normalizeUrl(String url, ArchivalUnit au) throws PluginException {
+    final String prefixPath = "fdsys/search/pagedetails.action?";
+    final String packageIdVar = "packageId=";
+    final String destination1 = "fdsys/pkg/";
+    final String destination2 = "/content-detail.html";
 
-  protected static final String GOOD_SUFFIX = ".txt";
-  
-  public String normalizeUrl(String url, ArchivalUnit au)
-      throws PluginException {
-    if (url.endsWith(BAD_SUFFIX)) {
-      url = StringUtils.chomp(BAD_SUFFIX) + GOOD_SUFFIX;
+    String baseUrl = au.getConfiguration().get(ConfigParamDescr.BASE_URL.getKey());
+    String prefix = baseUrl + prefixPath;
+
+    if (!url.startsWith(prefix)) {
+      return url; // No transformation
     }
-    return url;
+
+    int ix = url.indexOf(packageIdVar, prefix.length());
+    if (ix < 0) {
+      return url; // No transformation
+    }
+
+    ix = ix + packageIdVar.length();
+    int jx = url.indexOf('&', ix);
+    String packageIdVal = (jx < 0 ? url.substring(ix) : url.substring(ix, jx));
+    return baseUrl + destination1 + packageIdVal + destination2;
   }
 
 }
