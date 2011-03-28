@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataManager.java,v 1.12 2011-03-28 19:23:03 pgust Exp $
+ * $Id: MetadataManager.java,v 1.13 2011-03-28 22:29:39 pgust Exp $
  */
 
 /*
@@ -1515,7 +1515,7 @@ public class MetadataManager extends BaseLockssDaemonManager implements
    * 
    * @return the AU of the scheduled task
    */
-  private List<ArchivalUnit> getAusToReindex(Connection conn, int maxAus) {
+  List<ArchivalUnit> getAusToReindex(Connection conn, int maxAus) {
     ArrayList<ArchivalUnit> aus = new ArrayList<ArchivalUnit>();
     if (pluginMgr != null) {
       try {
