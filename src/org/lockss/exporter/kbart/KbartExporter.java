@@ -1,5 +1,5 @@
 /*
- * $Id: KbartExporter.java,v 1.2.2.5 2011-02-26 22:08:27 easyonthemayo Exp $
+ * $Id: KbartExporter.java,v 1.2.2.6 2011-03-28 19:41:58 pgust Exp $
  */
 
 /*
@@ -79,13 +79,13 @@ public abstract class KbartExporter {
   private static Logger log = Logger.getLogger("KbartExporter");
 
   // Footnotes for the interface options
-  private static final String CSV_NOTE = "Please note that the CSV format adheres to the KBART recommendations "+
-  "and should be used for updating your knowledge bases. Values are quoted where necessary, and quotes within "+
+  private static final String CSV_NOTE = "The CSV format adheres to the KBART recommendations "+
+  "for use in updating knowledge bases. Values are quoted where necessary, and quotes within "+
   "values are escaped.";
-  private static final String TSV_NOTE = "Please note that the TSV format adheres to the KBART recommendations "+
-  "and should be used for updating your knowledge bases.";
-  private static final String HTML_NOTE =  "The HTML version is for manual inspection of our holdings and is less "+
-  "strict than KBART. For example the HTML version is capable of reordering fields and omitting empty columns.";
+  private static final String TSV_NOTE = "The TSV format adheres to the KBART recommendations "+
+  "for use in updating your knowledge bases.";
+  private static final String HTML_NOTE =  "The HTML version is for on-screen inspection of available holdings, and is less "+
+  "strict than KBART. For example columns in the HTML version can be reordered and omitted.";
 
   /** Explanation of why some KBART records become duplicates with custom field orderings, and thus get omitted. */
   protected static final String duplicatesExplanation = "The chosen combination of fields does not result in a unique tuple for every record.";
