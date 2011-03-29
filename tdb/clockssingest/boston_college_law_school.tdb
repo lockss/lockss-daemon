@@ -1,0 +1,75 @@
+{
+
+  publisher <
+    name = Boston College Law School
+  >
+  
+  plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+  implicit < status ; status2 ; year ; name ; param[volume] >
+  
+  {
+
+    title <
+      name = < Boston College Law Review ;
+      issn = 0161-6587
+    >
+
+    param[base_url] = http://lawdigitalcommons.bc.edu/
+    param[journal_abbr] = bclr
+
+    au < manifest ; exists ; 1959-1960 ; Boston College Law Review Volume 1 ; 1 >
+    au < manifest ; exists ; 1960-1961 ; Boston College Law Review Volume 2 ; 2 >
+    au < manifest ; exists ; 1961-1962 ; Boston College Law Review Volume 3 ; 3 >
+    au < manifest ; exists ; 1962-1963 ; Boston College Law Review Volume 4 ; 4 >
+    au < manifest ; exists ; 1963-1964 ; Boston College Law Review Volume 5 ; 5 >
+    au < manifest ; exists ; 1964-1965 ; Boston College Law Review Volume 6 ; 6 >
+    au < manifest ; exists ; 1965-1966 ; Boston College Law Review Volume 7 ; 7 >
+    au < manifest ; exists ; 1966-1967 ; Boston College Law Review Volume 8 ; 8 >
+    au < manifest ; exists ; 1967-1968 ; Boston College Law Review Volume 9 ; 9 >
+    au < manifest ; exists ; 1968-1969 ; Boston College Law Review Volume 10 ; 10 >
+    au < manifest ; exists ; 1969-1970 ; Boston College Law Review Volume 11 ; 11 >
+    au < manifest ; exists ; 1970-1971 ; Boston College Law Review Volume 12 ; 12 >
+    au < manifest ; exists ; 1971-1972 ; Boston College Law Review Volume 13 ; 13 >
+    au < manifest ; exists ; 1972-1973 ; Boston College Law Review Volume 14 ; 14 >
+    au < manifest ; exists ; 1973-1974 ; Boston College Law Review Volume 15 ; 15 >
+    au < manifest ; exists ; 1974-1975 ; Boston College Law Review Volume 16 ; 16 >
+    au < manifest ; exists ; 1975-1976 ; Boston College Law Review Volume 17 ; 17 >
+    au < manifest ; exists ; 1976-1977 ; Boston College Law Review Volume 18 ; 18 >
+    au < manifest ; exists ; 1977-1978 ; Boston College Law Review Volume 19 ; 19 >
+    au < manifest ; exists ; 1978-1979 ; Boston College Law Review Volume 20 ; 20 >
+    au < manifest ; exists ; 1979-1980 ; Boston College Law Review Volume 21 ; 21 >
+    au < manifest ; exists ; 1980-1981 ; Boston College Law Review Volume 22 ; 22 >
+    au < manifest ; exists ; 1981-1982 ; Boston College Law Review Volume 23 ; 23 >
+    au < manifest ; exists ; 1982-1983 ; Boston College Law Review Volume 24 ; 24 >
+    au < manifest ; exists ; 1983-1984 ; Boston College Law Review Volume 25 ; 25 >
+    au < manifest ; exists ; 1984-1985 ; Boston College Law Review Volume 26 ; 26 >
+    au < manifest ; exists ; 1985-1986 ; Boston College Law Review Volume 27 ; 27 >
+    au < manifest ; exists ; 1986-1987 ; Boston College Law Review Volume 28 ; 28 >
+    au < manifest ; exists ; 1987-1988 ; Boston College Law Review Volume 29 ; 29 >
+    au < manifest ; exists ; 1988-1989 ; Boston College Law Review Volume 30 ; 30 >
+    au < manifest ; exists ; 1989-1990 ; Boston College Law Review Volume 31 ; 31 >
+    au < manifest ; exists ; 1990-1991 ; Boston College Law Review Volume 32 ; 32 >
+    au < manifest ; exists ; 1991-1992 ; Boston College Law Review Volume 33 ; 33 >
+    au < manifest ; exists ; 1992-1993 ; Boston College Law Review Volume 34 ; 34 >
+    au < manifest ; exists ; 1993-1994 ; Boston College Law Review Volume 35 ; 35 >
+    au < manifest ; exists ; 1994-1995 ; Boston College Law Review Volume 36 ; 36 >
+    au < manifest ; exists ; 1995-1996 ; Boston College Law Review Volume 37 ; 37 >
+    au < manifest ; exists ; 1996-1997 ; Boston College Law Review Volume 38 ; 38 >
+    au < manifest ; exists ; 1997-1998 ; Boston College Law Review Volume 39 ; 39 >
+    au < manifest ; exists ; 1998-1999 ; Boston College Law Review Volume 40 ; 40 >
+    au < manifest ; exists ; 1999-2000 ; Boston College Law Review Volume 41 ; 41 >
+    au < manifest ; exists ; 2000-2001 ; Boston College Law Review Volume 42 ; 42 >
+    au < manifest ; exists ; 2001-2002 ; Boston College Law Review Volume 43 ; 43 >
+    au < manifest ; exists ; 2002-2003 ; Boston College Law Review Volume 44 ; 44 >
+    au < manifest ; exists ; 2003-2004 ; Boston College Law Review Volume 45 ; 45 >
+    au < manifest ; exists ; 2004-2005 ; Boston College Law Review Volume 46 ; 46 >
+    au < manifest ; exists ; 2005-2006 ; Boston College Law Review Volume 47 ; 47 >
+    au < manifest ; exists ; 2007 ; Boston College Law Review Volume 48 ; 48 >
+    au < manifest ; exists ; 2008 ; Boston College Law Review Volume 49 ; 49 >
+    au < manifest ; exists ; 2009 ; Boston College Law Review Volume 50 ; 50 >
+    au < manifest ; exists ; 2010 ; Boston College Law Review Volume 51 ; 51 >
+    au < manifest ; exists ; 2011 ; Boston College Law Review Volume 52 ; 52 >
+
+  }
+
+}
