@@ -1,5 +1,5 @@
 /*
- * $Id: MetadataUtil.java,v 1.9 2011-02-24 00:24:28 pgust Exp $
+ * $Id: MetadataUtil.java,v 1.10 2011-03-29 22:17:27 pgust Exp $
  */
 
 /*
@@ -32,14 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import org.apache.commons.lang.StringEscapeUtils;
-
 import java.io.*;
-import java.net.URLDecoder;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.LocaleUtils;
 
 import org.lockss.config.*;
@@ -67,12 +63,31 @@ public class MetadataUtil {
 
   /**
    * Check that ISSN is valid. Method checks that ISSN number is correctly
-   * balanced (4 digits on either side of a hyphen) and that the check
-   * digit (rightmost digit) is valid.
+   * balanced (4 digits on either side of a hyphen). Check digit is not
+   * verified.
+   * 
    * @param issn the issn string
+   * @param strict if true, also verify checksum, otherwise just check form
    * @return true if issn is valid, false otherwise
    */
   public static boolean isISSN(String issn) {
+	  return isISSN(issn, false);
+  }
+  
+  /**
+   * Check that ISSN is valid. Method checks that ISSN number is correctly
+   * balanced (4 digits on either side of a hyphen) and that the check
+   * digit (rightmost digit) is valid.
+   * <p>
+   * <strong>Note:</strong> Due to errors at a publishing house that go 
+   * undetected, journals have been issued with invalid ISSNs. (e.g. 1234-5678).
+   * If the strict flag is true, verify checksum, otherwise just verify form.
+   * 
+   * @param issn the issn string
+   * @param strict if true, also verify checksum, otherwise just check form
+   * @return true if issn is valid, false otherwise
+   */
+  public static boolean isISSN(String issn, boolean strict) {
 
     if (issn == null) {
       return false;
@@ -83,7 +98,12 @@ public class MetadataUtil {
       log.debug("ISSN is not valid: "+issn);
       return false;
     }
-
+    
+    // matches form of an ISSN if not doing strict checking
+    if (!strict) {
+      return true;
+    }
+    
     String issnArr[] = issn.split("-");
     String issnStr = issnArr[0] + "" + issnArr[1];
 
@@ -132,6 +152,16 @@ public class MetadataUtil {
     return true;
   }
   
+  /**
+   * Check that the ISBN is a valid. The method validates both ISBN-10 and ISBN-13,
+   * with or without punctuation. Checksum is not verified.
+   * @param isbn the ISBN string
+   * @return true if ISBN is valid, false otherwise
+   */
+  public static boolean isISBN(String isbn) {
+	  return isISBN(isbn, false);
+  }
+
   /**
    * Check that the ISBN is a valid. The method validates both ISBN-10 and ISBN-13,
    * with or without punctuation. Uses techniques described in ISBN Wikipedia article.
