@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataUtil.java,v 1.4.2.2 2011-02-24 00:24:31 pgust Exp $
+ * $Id: TestMetadataUtil.java,v 1.4.2.3 2011-03-29 22:17:30 pgust Exp $
  */
 
 /*
@@ -216,17 +216,9 @@ public class TestMetadataUtil extends LockssTestCase {
           "1543-8122",
           "1541-8120",
           "1508-1409",
-          "2740-2783",
-          "1938-42463",
-          "140-42001",
-          "15236-430",
-          "1402-200",
-          "1938/4246",
-          "1402",
-          "1402-",
-          "-4246",
+          "2740-2783"
   };
-
+  
   private String malformedISSNS [] = {
       "140-42001",
       "15236-430",
@@ -234,7 +226,7 @@ public class TestMetadataUtil extends LockssTestCase {
       "1938/4246",
       "1402",
       "1402-",
-      "-4246",
+      "-4246"
   };
   
   private String validDOIS [] = {
@@ -302,8 +294,14 @@ public class TestMetadataUtil extends LockssTestCase {
       assertFalse(MetadataUtil.isISSN(malformedISSNS[j]));
     }
 
+    // invalid with checksum calculations
     for(int j=0; j<invalidISSNS.length;j++){
-      assertFalse(MetadataUtil.isISSN(invalidISSNS[j]));
+      assertFalse(MetadataUtil.isISSN(invalidISSNS[j], true));
+    }
+
+    // valid ignoring checksum calculations
+    for(int j=0; j<invalidISSNS.length;j++){
+      assertTrue(MetadataUtil.isISSN(invalidISSNS[j], false));
     }
   }
 
@@ -316,11 +314,4 @@ public class TestMetadataUtil extends LockssTestCase {
       assertFalse(MetadataUtil.isDOI(invalidDOIS[j]));
     }
   }
-
-  public void testFoo() {
-    for (Locale l : Locale.getAvailableLocales()) {
-      log.info("l: " + l);
-    }
-  }
-
 }
