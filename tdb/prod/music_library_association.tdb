@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = Music Library Association
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+
     title <
       name = Notes ;
       issn = 0027-4380 ;
@@ -15,7 +17,7 @@
       issnl = 0027-4380
     >
 
-comment[n59] = http://muse.jhu.edu/journals/notes/v059/www.bèrben.it/	java.net.MalformedURLException
+comment[n59] = http://muse.jhu.edu/journals/notes/v059/www.bÔøΩrben.it/	java.net.MalformedURLException
 
     param[journal_dir] = notes
 

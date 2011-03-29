@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = New Chaucer Society
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+
     title <
       name = Studies in the Age of Chaucer ;
       issn = 1949-0755 ;

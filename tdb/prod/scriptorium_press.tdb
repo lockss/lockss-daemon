@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = Scriptorium Press
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+
     title <
       name = Arthuriana ;
       issn = 1078-6279 ;

@@ -5,8 +5,8 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
   
