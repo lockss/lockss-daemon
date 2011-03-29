@@ -1,5 +1,5 @@
 /*
- * $Id: TestOpenUrlResolver.java,v 1.2.2.4 2011-03-22 13:16:58 pgust Exp $
+ * $Id: TestOpenUrlResolver.java,v 1.2.2.5 2011-03-29 17:43:47 pgust Exp $
  */
 
 /*
@@ -221,21 +221,21 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // create Tdb for testing purposes
     Properties tdbProps = new Properties();
     tdbProps = new Properties();
-    tdbProps.setProperty("title", "Title[10.01357/12345678.2009-11.12]");
-    tdbProps.setProperty("journalTitle", "Journal[10.01357/12345678.2009-11.12]");
-    tdbProps.setProperty("attributes.publisher", "Publisher[10.01357/12345678.2009-11.12]");
+    tdbProps.setProperty("title", "Title[10.0135/12345678.2009-11.12]");
+    tdbProps.setProperty("journalTitle", "Journal[10.0135/12345678.2009-11.12]");
+    tdbProps.setProperty("attributes.publisher", "Publisher[10.0135/12345678.2009-11.12]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin3");
     tdbProps.setProperty("param.1.key", "base_url");
-    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin3.com/journals/Journal[10.01357/12345678.2009-11.12]");
+    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin3.com/journals/Journal[10.0135/12345678.2009-11.12]");
     tdb.addTdbAuFromProperties(tdbProps);
 
     tdbProps.setProperty("isbn", "978-1-58562-317-4");
-    tdbProps.setProperty("title", "Title[10.13579/9781585623174.1]");
-    tdbProps.setProperty("journalTitle", "Journal[10.13579/9781585623174.1]");
-    tdbProps.setProperty("attributes.publisher", "Publisher[10.13579/9781585623174.1]");
+    tdbProps.setProperty("title", "Title[10.1357/9781585623174.1]");
+    tdbProps.setProperty("journalTitle", "Journal[10.1357/9781585623174.1]");
+    tdbProps.setProperty("attributes.publisher", "Publisher[10.1357/9781585623174.1]");
     tdbProps.setProperty("plugin", "org.lockss.daemon.TestOpenUrlResolver$MySimulatedPlugin2");
     tdbProps.setProperty("param.1.key", "base_url");
-    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin2.com/journals/Journal[10.13579/9781585623174.1]");
+    tdbProps.setProperty("param.1.value", "http://www.publisher.plugin2.com/journals/Journal[10.1357/9781585623174.1]");
     tdb.addTdbAuFromProperties(tdbProps);
     
     tdbProps = new Properties();
@@ -310,7 +310,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     
     Connection con = ds.getConnection();
     
-    long maxWaitTime = expectedAuCount * 10000; // 10 sec. per au
+    long maxWaitTime = expectedAuCount * 20000; // 20 sec. per au
     int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
     assertEquals(expectedAuCount, ausCount);
     
@@ -456,7 +456,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
           throws IOException, PluginException {
           org.lockss.extractor.ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
-          String doi = "10.13579/9781585623174." + articleNumber; 
+          String doi = "10.1357/9781585623174." + articleNumber; 
           md.put(MetadataField.FIELD_DOI,doi);
           md.put(MetadataField.FIELD_ISBN,"978-1-58562-317-4");
           md.put(MetadataField.FIELD_DATE,"1993");
@@ -480,7 +480,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
           throws IOException, PluginException {
           org.lockss.extractor.ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
-          String doi = "10.01357/12345678.2009-11.12." + articleNumber; 
+          String doi = "10.0135/12345678.2009-11.12." + articleNumber; 
           md.put(MetadataField.FIELD_DOI,doi);
           md.put(MetadataField.FIELD_ISSN,"976-1-58562-317-7");
           md.put(MetadataField.FIELD_DATE,"1999");
@@ -567,14 +567,14 @@ public class TestOpenUrlResolver extends LockssTestCase {
 
     params.clear();
     params.put("rft.isbn", "978-1-58562-317-4");
-    params.put("rft.au", "Author2[10.13579/9781585623174.1]");
+    params.put("rft.au", "Author2[10.1357/9781585623174.1]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
 
     // expect base_url
     params.clear();
     params.put("rft.isbn", "978-1-58562-317-4");
-    params.put("rft.title", "Title[10.13579/9781585623174.1]");
+    params.put("rft.title", "Title[10.1357/9781585623174.1]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
   }
@@ -588,8 +588,8 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // from SimulatedPlugin2
     // book title with publisher
     Map<String,String> params = new HashMap<String,String>();
-    params.put("rft.pub", "Publisher[10.13579/9781585623174.1]");
-    params.put("rft.btitle", "Journal[10.13579/9781585623174.1]");
+    params.put("rft.pub", "Publisher[10.1357/9781585623174.1]");
+    params.put("rft.btitle", "Journal[10.1357/9781585623174.1]");
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
@@ -598,7 +598,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // from SimulatedPlugin2
     // book title only, without publisher
     params.clear();
-    params.put("rft.btitle", "Journal[10.13579/9781585623174.1]");
+    params.put("rft.btitle", "Journal[10.1357/9781585623174.1]");
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
@@ -607,7 +607,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // book title only, without publisher
     // expect base_url
     params.clear();
-    params.put("rft.btitle", "Journal[10.13579/9781585623174.1]");
+    params.put("rft.btitle", "Journal[10.1357/9781585623174.1]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
   }
@@ -680,7 +680,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // from SimulatedPlugin3
     // journal title only, without publisher
     params.clear();
-    params.put("rft.jtitle", "Journal[10.01357/12345678.2009-11.12]");
+    params.put("rft.jtitle", "Journal[10.0135/12345678.2009-11.12]");
     params.put("rft.spage", "1");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
@@ -688,7 +688,7 @@ public class TestOpenUrlResolver extends LockssTestCase {
     // from SimulatedPlugin3
     // journal title only, without publisher
     params.clear();
-    params.put("rft.jtitle", "Journal[10.01357/12345678.2009-11.12]");
+    params.put("rft.jtitle", "Journal[10.0135/12345678.2009-11.12]");
     url = openUrlResolver.resolveOpenUrl(params);
     assertNotNull(url);
   }
