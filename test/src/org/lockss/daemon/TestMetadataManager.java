@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.2 2011-01-25 17:55:25 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.3 2011-03-29 17:43:44 pgust Exp $
  */
 
 /*
@@ -256,7 +256,7 @@ public class TestMetadataManager extends LockssTestCase {
     
     Connection con = ds.getConnection();
     
-    long maxWaitTime = expectedAuCount * 10000; // 10 sec. per au
+    long maxWaitTime = expectedAuCount * 20000; // 20 sec. per au
     int ausCount = waitForReindexing(expectedAuCount, maxWaitTime);
     assertEquals(expectedAuCount, ausCount);
     
@@ -443,7 +443,7 @@ public class TestMetadataManager extends LockssTestCase {
           throws IOException, PluginException {
           ArticleMetadata md = new ArticleMetadata();
           articleNumber++;
-          String doi = "10.13579/9781585623174." + articleNumber; 
+          String doi = "10.1357/9781585623174." + articleNumber; 
           md.put(MetadataField.FIELD_DOI,doi);
           md.put(MetadataField.FIELD_ISBN,"978-1-58562-317-4");
           md.put(MetadataField.FIELD_DATE,"1993");
