@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Liverpool University Press
   >
@@ -8,65 +9,7 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
-    title <
-      name = Journal of Literary & Cultural Disability Studies ;
-      issn = 1757-6458 ;
-      eissn = 1757-6466 ;
-      issnl = 1757-6458
-    >
-
-    param[journal_dir] = journal_of_literary_and_cultural_disability_studies
-
-    au < ready ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
-
-  }
-
-  {
-    title <
-      name = Music, Sound, and the Moving Image ;
-      issn = 1753-0768 ;
-      eissn = 1753-0776 ;
-      issnl = 1753-0768
-    >
-
-    param[journal_dir] = music_sound_and_the_moving_image
-
-    au < ready ; Music, Sound, and the Moving Image Volume 1 ; 1 >
-    au < ready ; Music, Sound, and the Moving Image Volume 2 ; 2 >
-    au < ready ; Music, Sound, and the Moving Image Volume 3 ; 3 >
-
-  }
-
-  {
-    title <
-      name = Romani Studies ;
-      issn = 1528-0748 ;
-      eissn = 1757-2274 ;
-      issnl = 1528-0748
-    >
-
-    param[journal_dir] = romani_studies
-
-    au < ready ; Romani Studies Volume 19 ; 19 >
-
-  }
-
-  {
-    title <
-      name = Science Fiction Film and Television ;
-      issn = 1754-3770 ;
-      eissn = 1754-3789 ;
-      issnl = 1754-3770
-    >
-
-    param[journal_dir] = science_fiction_film_and_television
-
-    au < ready ; Science Fiction Film and Television Volume 1 ; 1 >
-    au < ready ; Science Fiction Film and Television Volume 2 ; 2 >
-
-  }
-
-  {
+  
     title <
       name = The Bulletin of Hispanic Studies ;
       issn = 1475-3839 ;
@@ -76,12 +19,13 @@
 
     param[journal_dir] = bulletin_of_hispanic_studies
 
-    au < ready ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
-    au < ready ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
+    au < released ; The Bulletin of Hispanic Studies Volume 86 ; 86 >
+    au < released ; The Bulletin of Hispanic Studies Volume 87 ; 87 >
 
   }
 
   {
+  
     title <
       name = The Byron Journal ;
       issn = 0301-7257 ;
@@ -91,7 +35,70 @@
 
     param[journal_dir] = byron_journal
 
-    au < ready ; The Byron Journal Volume 37 ; 37 >
+    au < released ; The Byron Journal Volume 37 ; 37 >
+
+  }
+
+  {
+  
+    title <
+      name = Journal of Literary & Cultural Disability Studies ;
+      issn = 1757-6458 ;
+      eissn = 1757-6466 ;
+      issnl = 1757-6458
+    >
+
+    param[journal_dir] = journal_of_literary_and_cultural_disability_studies
+
+    au < released ; Journal of Literary & Cultural Disability Studies Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
+      name = Music, Sound, and the Moving Image ;
+      issn = 1753-0768 ;
+      eissn = 1753-0776 ;
+      issnl = 1753-0768
+    >
+
+    param[journal_dir] = music_sound_and_the_moving_image
+
+    au < released ; Music, Sound, and the Moving Image Volume 1 ; 1 >
+    au < released ; Music, Sound, and the Moving Image Volume 2 ; 2 >
+    au < released ; Music, Sound, and the Moving Image Volume 3 ; 3 >
+
+  }
+
+  {
+  
+    title <
+      name = Romani Studies ;
+      issn = 1528-0748 ;
+      eissn = 1757-2274 ;
+      issnl = 1528-0748
+    >
+
+    param[journal_dir] = romani_studies
+
+    au < released ; Romani Studies Volume 19 ; 19 >
+
+  }
+
+  {
+  
+    title <
+      name = Science Fiction Film and Television ;
+      issn = 1754-3770 ;
+      eissn = 1754-3789 ;
+      issnl = 1754-3770
+    >
+
+    param[journal_dir] = science_fiction_film_and_television
+
+    au < released ; Science Fiction Film and Television Volume 1 ; 1 >
+    au < released ; Science Fiction Film and Television Volume 2 ; 2 >
 
   }
 

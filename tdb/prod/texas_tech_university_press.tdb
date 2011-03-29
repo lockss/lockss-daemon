@@ -5,8 +5,8 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
   
@@ -19,8 +19,8 @@
 
     param[journal_dir] = conradiana
 
-    au < ready ; Conradiana Volume 39 ; 39 >
-    au < ready ; Conradiana Volume 40 ; 40 >
+    au < released ; Conradiana Volume 39 ; 39 >
+    au < released ; Conradiana Volume 40 ; 40 >
 
   }
 
@@ -35,9 +35,9 @@
 
     param[journal_dir] = helios
 
-    au < ready ; Helios Volume 34 ; 34 >
-    au < ready ; Helios Volume 35 ; 35 >
-    au < ready ; Helios Volume 36 ; 36 >
+    au < released ; Helios Volume 34 ; 34 >
+    au < released ; Helios Volume 35 ; 35 >
+    au < released ; Helios Volume 36 ; 36 >
 
   }
 
@@ -52,8 +52,8 @@
 
     param[journal_dir] = william_carlos_williams_review
 
-    au < ready ; William Carlos Williams Review Volume 26 ; 26 >
-    au < ready ; William Carlos Williams Review Volume 27 ; 27 >
+    au < released ; William Carlos Williams Review Volume 26 ; 26 >
+    au < released ; William Carlos Williams Review Volume 27 ; 27 >
 
   }
 

@@ -21,16 +21,16 @@ comment[n59] = http://muse.jhu.edu/journals/notes/v059/www.b�rben.it/	java.net
 
     param[journal_dir] = notes
 
-    au < ready ; Notes Volume 57 ; 57 >
-    au < ready ; Notes Volume 58 ; 58 >
+    au < released ; Notes Volume 57 ; 57 >
+    au < released ; Notes Volume 58 ; 58 >
     au < notReady ; Notes Volume 59 ; 59 >
-    au < ready ; Notes Volume 60 ; 60 >
-    au < ready ; Notes Volume 61 ; 61 >
-    au < ready ; Notes Volume 62 ; 62 >
-    au < ready ; Notes Volume 63 ; 63 >
-    au < ready ; Notes Volume 64 ; 64 >
-    au < ready ; Notes Volume 65 ; 65 >
-    au < ready ; Notes Volume 66 ; 66 >
+    au < released ; Notes Volume 60 ; 60 >
+    au < released ; Notes Volume 61 ; 61 >
+    au < released ; Notes Volume 62 ; 62 >
+    au < released ; Notes Volume 63 ; 63 >
+    au < released ; Notes Volume 64 ; 64 >
+    au < released ; Notes Volume 65 ; 65 >
+    au < released ; Notes Volume 66 ; 66 >
 
   }
 

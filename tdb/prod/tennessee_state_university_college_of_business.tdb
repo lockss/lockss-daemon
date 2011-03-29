@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = Tennessee State University College of Business
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+  
     title <
       name = The Journal of Developing Areas ;
       issn = 0022-037X ;
@@ -21,9 +23,9 @@
     au < released ; The Journal of Developing Areas Volume 38 ; 38 >
     au < released ; The Journal of Developing Areas Volume 39 ; 39 >
     au < released ; The Journal of Developing Areas Volume 40 ; 40 >
-    au < ready ; The Journal of Developing Areas Volume 41 ; 41 >
-    au < ready ; The Journal of Developing Areas Volume 42 ; 42 >
-    au < ready ; The Journal of Developing Areas Volume 43 ; 43 >
+    au < released ; The Journal of Developing Areas Volume 41 ; 41 >
+    au < released ; The Journal of Developing Areas Volume 42 ; 42 >
+    au < released ; The Journal of Developing Areas Volume 43 ; 43 >
 
   }
 

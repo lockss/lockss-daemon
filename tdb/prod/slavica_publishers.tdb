@@ -1,4 +1,5 @@
 {
+
   publisher <
     name = Slavica Publishers
   >
@@ -8,6 +9,7 @@
   param[base_url] = http://muse.jhu.edu/
 
   {
+  
     title <
       name = Journal of Slavic Linguistics ;
       issn = 1543-0391 ;
@@ -17,12 +19,13 @@
 
     param[journal_dir] = journal_of_slavic_linguistics
 
-    au < ready ; Journal of Slavic Linguistics Volume 16 ; 16 >
-    au < ready ; Journal of Slavic Linguistics Volume 17 ; 17 >
+    au < released ; Journal of Slavic Linguistics Volume 16 ; 16 >
+    au < released ; Journal of Slavic Linguistics Volume 17 ; 17 >
 
   }
 
   {
+  
     title <
       name = Kritika: Explorations in Russian and Eurasian History ;
       issn = 1531-023X ;
@@ -32,21 +35,22 @@
 
     param[journal_dir] = kritika
 
-    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 1 ; 1 >
-    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 2 ; 2 >
+    au < released ; Kritika: Explorations in Russian and Eurasian History Volume 1 ; 1 >
+    au < released ; Kritika: Explorations in Russian and Eurasian History Volume 2 ; 2 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 3 ; 3 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 4 ; 4 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 5 ; 5 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 6 ; 6 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 7 ; 7 >
     au < released ; Kritika: Explorations in Russian and Eurasian History Volume 8 ; 8 >
-    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 9 ; 9 >
-    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 10 ; 10 >
-    au < ready ; Kritika: Explorations in Russian and Eurasian History Volume 11 ; 11 >
+    au < released ; Kritika: Explorations in Russian and Eurasian History Volume 9 ; 9 >
+    au < released ; Kritika: Explorations in Russian and Eurasian History Volume 10 ; 10 >
+    au < released ; Kritika: Explorations in Russian and Eurasian History Volume 11 ; 11 >
 
   }
 
   {
+  
     title <
       name = Serbian Studies: Journal of the North American Society for Serbian Studies ;
       issn = 1941-9511 ;

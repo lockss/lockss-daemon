@@ -1,13 +1,15 @@
 {
+
   publisher <
     name = Organization for Social Science Research in Eastern and Southern Africa
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
+  
     title <
       name = Eastern Africa Social Science Research Review ;
       issn = 1027-1775 ;
@@ -23,9 +25,9 @@
     au < released ; Eastern Africa Social Science Research Review Volume 21 ; 21 >
     au < released ; Eastern Africa Social Science Research Review Volume 22 ; 22 >
     au < released ; Eastern Africa Social Science Research Review Volume 23 ; 23 >
-    au < ready ; Eastern Africa Social Science Research Review Volume 24 ; 24 >
-    au < ready ; Eastern Africa Social Science Research Review Volume 25 ; 25 >
-    au < ready ; Eastern Africa Social Science Research Review Volume 26 ; 26 >
+    au < released ; Eastern Africa Social Science Research Review Volume 24 ; 24 >
+    au < released ; Eastern Africa Social Science Research Review Volume 25 ; 25 >
+    au < released ; Eastern Africa Social Science Research Review Volume 26 ; 26 >
 
   }
 

@@ -5,8 +5,8 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
   
@@ -19,11 +19,11 @@
 
     param[journal_dir] = monumenta_nipponica
 
-    au < ready ; Monumenta Nipponica Volume 60 ; 60 >
-    au < ready ; Monumenta Nipponica Volume 61 ; 61 >
-    au < ready ; Monumenta Nipponica Volume 62 ; 62 >
-    au < ready ; Monumenta Nipponica Volume 63 ; 63 >
-    au < ready ; Monumenta Nipponica Volume 64 ; 64 >
+    au < released ; Monumenta Nipponica Volume 60 ; 60 >
+    au < released ; Monumenta Nipponica Volume 61 ; 61 >
+    au < released ; Monumenta Nipponica Volume 62 ; 62 >
+    au < released ; Monumenta Nipponica Volume 63 ; 63 >
+    au < released ; Monumenta Nipponica Volume 64 ; 64 >
 
   }
 

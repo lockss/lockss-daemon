@@ -5,8 +5,8 @@
   >
 
   plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
-  implicit < status ; name ; param[volume] >
   param[base_url] = http://muse.jhu.edu/
+  implicit < status ; name ; param[volume] >
 
   {
   
@@ -19,7 +19,7 @@
 
     param[journal_dir] = melus
 
-    au < ready ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 >
+    au < released ; MELUS: Multi-Ethnic Literature of the U.S. Volume 34 ; 34 >
 
   }
 

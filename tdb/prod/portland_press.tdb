@@ -557,35 +557,35 @@ comment[boc_allnotredy_aus] = 500 errors, unless otherwise noted
     param[base_url] = http://www.bioscirep.org/
     param[journal_id] = bsr
 
-    au < ready ; Bioscience Reports Volume 1 ; 001 >
-    au < ready ; Bioscience Reports Volume 2 ; 002 >
-    au < ready ; Bioscience Reports Volume 3 ; 003 >
-    au < ready ; Bioscience Reports Volume 4 ; 004 >
-    au < ready ; Bioscience Reports Volume 5 ; 005 >
-    au < ready ; Bioscience Reports Volume 6 ; 006 >
-    au < ready ; Bioscience Reports Volume 7 ; 007 >
-    au < ready ; Bioscience Reports Volume 8 ; 008 >
-    au < ready  ; Bioscience Reports Volume 9 ; 009 >
-    au < ready ; Bioscience Reports Volume 10 ; 010 >
-    au < ready ; Bioscience Reports Volume 11 ; 011 >
-    au < ready ; Bioscience Reports Volume 12 ; 012 >
-    au < ready ; Bioscience Reports Volume 13 ; 013 >
-    au < ready ; Bioscience Reports Volume 14 ; 014 >
-    au < ready ; Bioscience Reports Volume 15 ; 015 >
-    au < ready ; Bioscience Reports Volume 16 ; 016 >
-    au < ready ; Bioscience Reports Volume 17 ; 017 >
-    au < ready ; Bioscience Reports Volume 18 ; 018 >
-    au < ready ; Bioscience Reports Volume 19 ; 019 >
-    au < ready ; Bioscience Reports Volume 20 ; 020 >
-    au < ready ; Bioscience Reports Volume 21 ; 021 >
-    au < ready ; Bioscience Reports Volume 22 ; 022 >
-    au < ready ; Bioscience Reports Volume 23 ; 023 >
+    au < released ; Bioscience Reports Volume 1 ; 001 >
+    au < released ; Bioscience Reports Volume 2 ; 002 >
+    au < released ; Bioscience Reports Volume 3 ; 003 >
+    au < released ; Bioscience Reports Volume 4 ; 004 >
+    au < released ; Bioscience Reports Volume 5 ; 005 >
+    au < released ; Bioscience Reports Volume 6 ; 006 >
+    au < released ; Bioscience Reports Volume 7 ; 007 >
+    au < released ; Bioscience Reports Volume 8 ; 008 >
+    au < released ; Bioscience Reports Volume 9 ; 009 >
+    au < released ; Bioscience Reports Volume 10 ; 010 >
+    au < released ; Bioscience Reports Volume 11 ; 011 >
+    au < released ; Bioscience Reports Volume 12 ; 012 >
+    au < released ; Bioscience Reports Volume 13 ; 013 >
+    au < released ; Bioscience Reports Volume 14 ; 014 >
+    au < released ; Bioscience Reports Volume 15 ; 015 >
+    au < released ; Bioscience Reports Volume 16 ; 016 >
+    au < released ; Bioscience Reports Volume 17 ; 017 >
+    au < released ; Bioscience Reports Volume 18 ; 018 >
+    au < released ; Bioscience Reports Volume 19 ; 019 >
+    au < released ; Bioscience Reports Volume 20 ; 020 >
+    au < released ; Bioscience Reports Volume 21 ; 021 >
+    au < released ; Bioscience Reports Volume 22 ; 022 >
+    au < released ; Bioscience Reports Volume 23 ; 023 >
     au < wanted ; Bioscience Reports Volume 24 ; 024 >
-    au < ready ; Bioscience Reports Volume 25 ; 025 >
-    au < ready ; Bioscience Reports Volume 26 ; 026 >
-    au < ready ; Bioscience Reports Volume 27 ; 027 >
-    au < ready ; Bioscience Reports Volume 28 ; 028 >
-    au < ready ; Bioscience Reports Volume 29 ; 029 >
+    au < released ; Bioscience Reports Volume 25 ; 025 >
+    au < released ; Bioscience Reports Volume 26 ; 026 >
+    au < released ; Bioscience Reports Volume 27 ; 027 >
+    au < released ; Bioscience Reports Volume 28 ; 028 >
+    au < released ; Bioscience Reports Volume 29 ; 029 >
 
   }
 
