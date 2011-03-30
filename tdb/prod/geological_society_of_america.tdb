@@ -68,6 +68,22 @@
   {
 
     title <
+      name = Geosphere ;
+      eissn = 1553-040X
+    >
+
+    param[base_url] = http://geosphere.gsapubs.org/
+
+    au < wanted ; 2008 ; Geosphere Volume 4 ; 4 >
+    au < wanted ; 2009 ; Geosphere Volume 5 ; 5 >
+    au < wanted ; 2010 ; Geosphere Volume 6 ; 6 >
+    au < wanted ; 2011 ; Geosphere Volume 7 ; 7 >
+
+  }
+
+  {
+
+    title <
       name = Lithosphere ;
       issn = 1941-8264 ;
       eissn = 1947-4253 ;
