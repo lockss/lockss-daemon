@@ -1,10 +1,10 @@
 /*
- * $Id: TestMetadataManager.java,v 1.2.2.1 2011-03-29 17:43:47 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.2.2.2 2011-03-30 23:16:59 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2010 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2011 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -46,13 +46,7 @@ import org.lockss.extractor.ArticleMetadata;
 import org.lockss.extractor.ArticleMetadataExtractor;
 import org.lockss.extractor.MetadataField;
 import org.lockss.extractor.MetadataTarget;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.ArticleFiles;
-import org.lockss.plugin.ArticleIteratorFactory;
-import org.lockss.plugin.AuEventHandler;
-import org.lockss.plugin.CachedUrl;
-import org.lockss.plugin.PluginManager;
-import org.lockss.plugin.SubTreeArticleIterator;
+import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -70,90 +64,29 @@ public class TestMetadataManager extends LockssTestCase {
   private SimulatedArchivalUnit sau0, sau1, sau2;
   private MockLockssDaemon theDaemon;
   private MetadataManager metadataManager;
-  private static final int DEFAULT_MAX_DEPTH = 1000;
-  private static final int DEFAULT_FILESIZE = 3000;
-  private static int fileSize = DEFAULT_FILESIZE;
-
-  public void setUp() throws Exception {
-    super.setUp();
-    this.setUp(DEFAULT_MAX_DEPTH);
-  }
+  String tempDirPath;
 
   /** set of AUs reindexed by the MetadataManager */
   Set<String> ausReindexed = new HashSet<String>();
   
-  public void setUp(int max) throws Exception {
+  public void setUp() throws Exception {
+    super.setUp();
+    tempDirPath = getTempDir().getAbsolutePath();
 
-    final String tempDirPath = getTempDir().getAbsolutePath();
-    String auId0 = "org|lockss|daemon|TestMetadataManager$MySimulatedPlugin0.root~" +
-      PropKeyEncoder.encode(tempDirPath);
-    String auId1 = "org|lockss|daemon|TestMetadataManager$MySimulatedPlugin1.root~" +
-      PropKeyEncoder.encode(tempDirPath);
-    String auId2 = "org|lockss|daemon|TestMetadataManager$MySimulatedPlugin2.root~" +
-      PropKeyEncoder.encode(tempDirPath);
-    
     Properties props = new Properties();
     props.setProperty(MetadataManager.PARAM_INDEXING_ENABLED, "true");
-    
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-
-    props.setProperty("org.lockss.au." + auId0 + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId0 + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId0 + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "3");
-    props.setProperty("org.lockss.au." + auId0 + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "7");
-    props.setProperty("org.lockss.au." + auId0 + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES, "" +
-                      (SimulatedContentGenerator.FILE_TYPE_PDF +
-                       SimulatedContentGenerator.FILE_TYPE_HTML));
-    props.setProperty("org.lockss.au." + auId0 + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
-
-    props.setProperty("org.lockss.au." + auId1 + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId1 + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId1 + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "3");
-    props.setProperty("org.lockss.au." + auId1 + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "7");
-    props.setProperty("org.lockss.au." + auId1 + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES, "" +
-                      (SimulatedContentGenerator.FILE_TYPE_PDF +
-                       SimulatedContentGenerator.FILE_TYPE_HTML));
-    props.setProperty("org.lockss.au." + auId1 + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
-
-
-    props.setProperty("org.lockss.au." + auId2 + "." +
-                      SimulatedPlugin.AU_PARAM_ROOT, tempDirPath);
-    // the simulated Content's depth will be (AU_PARAM_DEPTH + 1)
-    props.setProperty("org.lockss.au." + auId2 + "." +
-                      SimulatedPlugin.AU_PARAM_DEPTH, "3");
-    props.setProperty("org.lockss.au." + auId2 + "." +
-                      SimulatedPlugin.AU_PARAM_BRANCH, "3");
-    props.setProperty("org.lockss.au." + auId2 + "." +
-                      SimulatedPlugin.AU_PARAM_NUM_FILES, "7");
-    props.setProperty("org.lockss.au." + auId2 + "." +
-                      SimulatedPlugin.AU_PARAM_FILE_TYPES, "" +
-                      (SimulatedContentGenerator.FILE_TYPE_PDF +
-                       SimulatedContentGenerator.FILE_TYPE_HTML));
-    props.setProperty("org.lockss.au." + auId2 + "." +
-                      SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
     theDaemon.getPluginManager().setLoadablePluginsReady(true);
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
+    theDaemon.getCrawlManager();
 
     // set derby database log 
-    System.setProperty("derby.stream.error.file", new File(tempDirPath,"derby.log").getAbsolutePath());
+    System.setProperty("derby.stream.error.file",
+		       new File(tempDirPath,"derby.log").getAbsolutePath());
     
     metadataManager = new MetadataManager() {
       /**
@@ -192,22 +125,15 @@ public class TestMetadataManager extends LockssTestCase {
     theDaemon.getCrawlManager();
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    sau0 =
-        (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(0);
-    theDaemon.getLockssRepository(sau0).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau0);
-
-    sau1 =
-      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(1);
-    theDaemon.getLockssRepository(sau1).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau1);
-
-    sau2 =
-      (SimulatedArchivalUnit)theDaemon.getPluginManager().getAllAus().get(2);
-    theDaemon.getLockssRepository(sau2).startService();
-    theDaemon.setNodeManager(new MockNodeManager(), sau2);
-
-    crawlContent();
+    sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
+					      simAuConfig(tempDirPath + "/0"));
+    sau1 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
+					      simAuConfig(tempDirPath + "/1"));
+    sau2 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin2.class,
+					      simAuConfig(tempDirPath + "/2"));
+    PluginTestUtil.crawlSimAu(sau0);
+    PluginTestUtil.crawlSimAu(sau1);
+    PluginTestUtil.crawlSimAu(sau2);
 
   }
 
@@ -217,6 +143,18 @@ public class TestMetadataManager extends LockssTestCase {
     sau2.deleteContentTree();
     theDaemon.stopDaemon();
     super.tearDown();
+  }
+
+  Configuration simAuConfig(String rootPath) {
+    Configuration conf = ConfigManager.newConfiguration();
+    conf.put("root", rootPath);
+    conf.put("depth", "2");
+    conf.put("branch", "1");
+    conf.put("numFiles", "3");
+    conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
+				SimulatedContentGenerator.FILE_TYPE_HTML));
+    conf.put("binFileSize", "7");
+    return conf;
   }
 
   /**
@@ -334,38 +272,9 @@ public class TestMetadataManager extends LockssTestCase {
     con.close();
   }
   
-  private void crawlContent() {
-    log.debug("Crawling tree...");
-    CrawlSpec spec0 = new SpiderCrawlSpec(sau0.getNewContentCrawlUrls(), null);
-    NewContentCrawler crawler0 =
-      new NewContentCrawler(sau0, spec0, new MockAuState());
-    //crawler0.setCrawlManager(crawlMgr);
-    crawler0.doCrawl();
-
-    CrawlSpec spec1 = new SpiderCrawlSpec(sau1.getNewContentCrawlUrls(), null);
-    NewContentCrawler crawler1 =
-      new NewContentCrawler(sau1, spec1, new MockAuState());
-    //crawler1.setCrawlManager(crawlMgr);
-    crawler1.doCrawl();
-
-    CrawlSpec spec2 = new SpiderCrawlSpec(sau2.getNewContentCrawlUrls(), null);
-    NewContentCrawler crawler2 =
-      new NewContentCrawler(sau2, spec2, new MockAuState());
-    //crawler2.setCrawlManager(crawlMgr);
-    crawler2.doCrawl();
-
-  }
-
   public static class MySimulatedPlugin extends SimulatedPlugin {
     ArticleMetadataExtractor simulatedArticleMetadataExtractor = null;
     
-    public ArchivalUnit createAu0(Configuration auConfig)
-        throws ArchivalUnit.ConfigurationException {
-      ArchivalUnit au = new SimulatedArchivalUnit(this);
-      au.setConfiguration(auConfig);
-      return au;
-    }
-
     /**
      * Returns the article iterator factory for the mime type, if any
      * @param contentType the content type
@@ -483,21 +392,10 @@ public class TestMetadataManager extends LockssTestCase {
        spec.setPattern(pat);
       }
       
-      ret = new MySubTreeArticleIterator(au, spec);
+      ret = new SubTreeArticleIterator(au, spec);
       log.debug("***creating article iterator for au " + au.getName() + " hasNext: " + ret.hasNext());
       return ret;
     }
   }
 
-  public static class MySubTreeArticleIterator extends SubTreeArticleIterator {
-    MySubTreeArticleIterator(ArchivalUnit au, Spec spec) {
-      super(au, spec);
-    }
-
-    @Override
-    protected boolean isArticleCu(CachedUrl cu) {
-      boolean result = super.isArticleCu(cu);
-      return result;
-    }
-  }
 }
