@@ -12,7 +12,7 @@ elif [ -f ${HOME}/etc/lockss/functions ]
 then
     . ${HOME}/etc/lockss/functions
 else
-    echo "Can't find LOCKSS functions" >>${LOG_FILE}
+    echo "Can't find LOCKSS functions"
     exit 1
 fi
 
@@ -21,9 +21,12 @@ if [ "X$1" = Xwait ]; then
 fi
 if [ "X${2}" != X ]; then
     FLAG_FILE=${2}
+else
+    echo "FLAG_FILE not set"
+    exit 1
 fi
 if [ "X${USER}" = X ]; then
-    echo "USER not set" >>${LOG_FILE}
+    echo "USER not set"
     exit 1
 fi
 set_lockss_user ${USER}
@@ -90,7 +93,10 @@ else
     if [ "${DPID}X" != X ]
     then
         PS2=`echo ${PS} | sed "s/${DPID}//"`
+    else
+        PS2=`echo ${PS}`
     fi
+    echo "DPID ${DPID} PS2 ${PS2} PS ${PS}" >>${LOG_FILE}
     for PID in ${PS2}
     do
         # ${PID} is a daemon but it isn't in the PID file
@@ -102,7 +108,7 @@ else
         if echo ${PS} | grep ${DPID} >/dev/null 2>&1
         then
             # ${DPID} is a daemon, so don't start another
-            echo "Touching ${FLAG_FILE} and exiting" >>${LOG_FILE}
+            echo "${DPID}: Touching ${FLAG_FILE} and exiting" >>${LOG_FILE}
             if [ "${FLAG_FILE}X" != X ]
             then
                 touch ${FLAG_FILE} # signal startdaemon to die
@@ -112,6 +118,12 @@ else
             exit
         fi
     fi
+fi
+# We have decided to start a daemon, so startdaemon should not exit
+if [ "X${FLAG_FILE}" != X ]
+then
+    echo "rm -f ${FLAG_FILE} because we are starting a daemon" >>${LOG_FILE}
+    rm -f ${FLAG_FILE}
 fi
 DAEMON_COUNT=0
 for A in ${LOCKSS_USER}
