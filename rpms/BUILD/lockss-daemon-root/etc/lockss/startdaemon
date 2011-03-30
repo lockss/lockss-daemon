@@ -114,6 +114,7 @@ while [ -f ${KEEP_GOING} ]; do
     EXIT_CODE=$?
     echo "stopped with status ${EXIT_CODE} at `date`." >>${LOG_FILE}
     if [ -e ${FLAG_FILE} ]; then
+        echo "${FLAG_FILE} exists - removing and exiting." >>${LOG_FILE}
 	rm -f ${FLAG_FILE}
         exit 1
     fi
