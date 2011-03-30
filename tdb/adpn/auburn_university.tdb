@@ -129,7 +129,7 @@
     param[base_url] = http://digdata1.lib.auburn.edu/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Eddie V. Rickenbacker Digital Collection ; RickenbackerCollection >
+    au < released ; Auburn University Eddie V. Rickenbacker Digital Collection ; RickenbackerCollection >
 
   }
   
@@ -143,7 +143,7 @@
     param[base_url] = http://digdata1.lib.auburn.edu/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Everett Leavins Photographs Digital Collection ; LeavinsPhotographs >
+    au < released ; Auburn University Everett Leavins Photographs Digital Collection ; LeavinsPhotographs >
 
   }
   
@@ -199,8 +199,8 @@
     param[base_url] = http://digdata1.lib.auburn.edu/HistoricCatalogs/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Historic Catalogs Digital Collection: 19th. Century ; 19thCentury >
-    au < manifest ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCentury >
+    au < released ; Auburn University Historic Catalogs Digital Collection: 19th. Century ; 19thCentury >
+    au < released ; Auburn University Historic Catalogs Digital Collection: 20th. Century ; 20thCentury >
 
   }
   
@@ -214,7 +214,7 @@
     param[base_url] = http://digdata4.lib.auburn.edu/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Philip Henry Gosse Watercolors Digital Collection ; Gosse_Images >
+    au < released ; Auburn University Philip Henry Gosse Watercolors Digital Collection ; Gosse_Images >
 
   }
   
@@ -228,8 +228,8 @@
     param[base_url] = http://digdata1.lib.auburn.edu/PianoBenchCollection/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
-    au < manifest ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
+    au < released ; Auburn University Piano Bench Sheet Music Digital Collection: 2006 Scans ; PianoBench_2006 >
+    au < released ; Auburn University Piano Bench Sheet Music Digital Collection: 2010 Scans ; PianoBench_2010 >
 
   }
   
@@ -268,8 +268,8 @@
     param[base_url] = http://digdata1.lib.auburn.edu/TheatreCollection/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Theatre Digital Collection: A. Lynn Lockrow Collection ; A_Lynn_Lockrow_Collection >
-    au < manifest ; Auburn University Theatre Digital Collection: Theatre Department Collection ; Theatre_Dept_Collection >
+    au < released ; Auburn University Theatre Digital Collection: A. Lynn Lockrow Collection ; A_Lynn_Lockrow_Collection >
+    au < released ; Auburn University Theatre Digital Collection: Theatre Department Collection ; Theatre_Dept_Collection >
 
   }
   
@@ -283,7 +283,7 @@
     param[base_url] = http://digdata1.lib.auburn.edu/
     implicit < status ; name ; param[directory] >
   
-    au < manifest ; Auburn University Urban Studio Posters Digital Collection ; UrbanStudioPosters >
+    au < released ; Auburn University Urban Studio Posters Digital Collection ; UrbanStudioPosters >
 
   }
   
