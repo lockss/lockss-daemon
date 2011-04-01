@@ -14,13 +14,13 @@
     rights = openaccess
     plugin = us.ak.state.library.plugin.AlaskaStateDocsPlugin
     param[base_url] = http://library.state.ak.us/asp/
-    implicit < status ; name ; param[year] >
+    implicit < status ; year ; name ; param[year] >
 
-    au < released ; Alaska State Documents 2006 ; 2006 >
-    au < released ; Alaska State Documents 2007 ; 2007 >
-    au < released ; Alaska State Documents 2008 ; 2008 >
-    au < ready ; Alaska State Documents 2009 ; 2009 >
-    au < ready ; Alaska State Documents 2010 ; 2010 >
+    au < released ; 2006 ; Alaska State Documents 2006 ; 2006 >
+    au < released ; 2007 ; Alaska State Documents 2007 ; 2007 >
+    au < released ; 2008 ; Alaska State Documents 2008 ; 2008 >
+    au < ready ; 2009 ; Alaska State Documents 2009 ; 2009 >
+    au < ready ; 2010 ; Alaska State Documents 2010 ; 2010 >
 
   }
   
