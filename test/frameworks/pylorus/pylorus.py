@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''Pylorus content validation and ingestion gateway
 Michael R Bax, 2008-2009
-$Id: pylorus.py,v 2.15 2011-03-21 18:46:18 barry409 Exp $'''
+$Id: pylorus.py,v 2.16 2011-04-01 17:24:15 barry409 Exp $'''
 
 
 import ConfigParser
@@ -27,7 +27,7 @@ fix_auth_failure.fix_auth_failure()
 
 # Constants
 PROGRAM = os.path.splitext( os.path.basename( sys.argv[ 0 ] ) )[ 0 ].title()
-REVISION = '$Revision: 2.15 $'.split()[ 1 ]
+REVISION = '$Revision: 2.16 $'.split()[ 1 ]
 MAGIC_NUMBER = 'PLRS' + ''.join( number.rjust( 2, '0' ) for number in REVISION.split( '.' ) )
 DEFAULT_UI_PORT = 8081
 SERVER_READY_TIMEOUT = 60
@@ -159,7 +159,7 @@ class Content:
         '''Add this AU to the server'''
         logging.info( self.status_message( 'Adding %s to %s' ) )
         try:
-            self.client.addByAuid( self.AU )
+            self.client.createAu( self.AU )
         except lockss_daemon.LockssError, exception:
             logging.error( exception )
             logging.warn( self.status_message( 'Failed to add %s to %s' ) )
