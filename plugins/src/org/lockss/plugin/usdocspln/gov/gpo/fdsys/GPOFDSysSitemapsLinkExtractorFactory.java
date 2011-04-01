@@ -1,5 +1,5 @@
 /*
- * $Id: GPOFDSysSitemapsLinkExtractorFactory.java,v 1.2 2011-03-28 23:19:23 thib_gc Exp $
+ * $Id: GPOFDSysSitemapsLinkExtractorFactory.java,v 1.3 2011-04-01 23:33:24 thib_gc Exp $
  */
 
 /*
@@ -37,14 +37,12 @@ import java.net.*;
 
 import javax.xml.parsers.*;
 
-import org.htmlparser.tags.BaseHrefTag;
 import org.lockss.daemon.PluginException;
 import org.lockss.extractor.*;
-import org.lockss.extractor.LinkExtractor.Callback;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.usdocspln.gov.gpo.fdsys.GPOFDSysSitemapsLinkExtractorFactory.GPOFDSysSitemapsLinkExtractor.SitemapsHandler.NoNeedToContinueException;
 import org.lockss.util.*;
 import org.xml.sax.*;
-import org.xml.sax.helpers.DefaultHandler;
 
 public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactory {
 
@@ -57,7 +55,18 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
   
   protected static class GPOFDSysSitemapsLinkExtractor implements LinkExtractor {
     
-    protected class SitemapsHandler extends DefaultHandler {
+    /**
+     * <p>Not thread-safe.</p>
+     */
+    protected static class SitemapsHandler extends org.xml.sax.helpers.DefaultHandler {
+      
+      protected static class NoNeedToContinueException extends SAXException {
+        
+        public NoNeedToContinueException() {
+          super();
+        }
+        
+      }
       
       protected Callback callback;
       
@@ -65,11 +74,14 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
       
       protected StringBuilder locBuilder;
       
+      protected boolean hasStarted;
+      
       public SitemapsHandler(URL baseUrl,
                              Callback cb) {
         this.baseUrl = baseUrl;
         this.callback = cb;
         this.locBuilder = null;
+        this.hasStarted = false;
       }
       
       @Override
@@ -90,8 +102,21 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
                                Attributes attributes)
           throws SAXException {
         super.startElement(uri, localName, qName, attributes);
-        if ("loc".equalsIgnoreCase(qName)) {
-          locBuilder = new StringBuilder();
+        if (hasStarted) {
+          // Not the top-level element and is a sitemap: look for <loc>
+          if (!"loc".equalsIgnoreCase(qName)) {
+            locBuilder = new StringBuilder();
+          }
+        }
+        else {
+          // Top-level element: bail if not a sitemap
+          if ("urlset".equalsIgnoreCase(qName)) {
+            hasStarted = true;
+          }
+          else {
+            hasStarted = false;
+            throw new NoNeedToContinueException();
+          }
         }
       }
       
@@ -117,6 +142,12 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
         }
       }
       
+      @Override
+      public void endDocument() throws SAXException {
+        super.endDocument();
+        hasStarted = false;
+      }
+      
     }
     
     @Override
@@ -126,17 +157,31 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
                             String srcUrl,
                             Callback cb)
         throws IOException, PluginException {
+      // Create SAX parser
       SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
       saxParserFactory.setValidating(false);
       InputSource inputSource = new InputSource(in);
       inputSource.setEncoding(encoding);
       inputSource.setPublicId(srcUrl);
+      SAXParser saxParser = null;
       try {
-        SAXParser saxParser = saxParserFactory.newSAXParser();
-        saxParser.parse(inputSource, new SitemapsHandler(new URL(srcUrl), cb));
+        saxParser = saxParserFactory.newSAXParser();
       }
       catch (ParserConfigurationException pce) {
         throw new IOException("Error setting up SAX parser", pce);
+      }
+      catch (SAXException se) {
+        throw new IOException("Error while parsing", se);
+      }
+      
+      // Parse document; may bail early with custom NoNeedToContinueException
+      try {
+        saxParser.parse(inputSource, new SitemapsHandler(new URL(srcUrl), cb));
+      }
+      catch (NoNeedToContinueException nntce) {
+        if (logger.isDebug2()) {
+          logger.debug2("No need to parse " + srcUrl);
+        }
       }
       catch (SAXException se) {
         throw new IOException("Error while parsing", se);
@@ -145,18 +190,4 @@ public class GPOFDSysSitemapsLinkExtractorFactory implements LinkExtractorFactor
 
   }
 
-  public static void main(String[] args) throws Exception {
-    GPOFDSysSitemapsLinkExtractor ext = new GPOFDSysSitemapsLinkExtractor();
-    ext.extractUrls(null,
-                    new FileInputStream("/tmp/foo.xml"),
-                    "UTF-8",
-                    "http://www.gpo.gov/smap/fdsys/sitemap_2010/2010_PLAW_sitemap.xml",
-                    new Callback() {
-      @Override
-      public void foundLink(String url) {
-        System.out.println(url);
-      }
-    });
-  }
-  
 }
