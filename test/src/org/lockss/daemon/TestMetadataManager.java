@@ -1,5 +1,5 @@
 /*
- * $Id: TestMetadataManager.java,v 1.2.2.3 2011-04-04 05:38:43 pgust Exp $
+ * $Id: TestMetadataManager.java,v 1.2.2.4 2011-04-04 21:21:59 pgust Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestMetadataManager extends LockssTestCase {
 
     // set derby database log 
     System.setProperty("derby.stream.error.file",
-		       new File(tempDirPath,"derby.log").getAbsolutePath());
+                       new File(tempDirPath,"derby.log").getAbsolutePath());
 
     theDaemon = getMockLockssDaemon();
     theDaemon.getAlertManager();
@@ -92,13 +92,13 @@ public class TestMetadataManager extends LockssTestCase {
     ConfigurationUtil.installConfig(config);
 
     sau0 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin0.class,
-					      simAuConfig(tempDirPath + "/0"));
+                                              simAuConfig(tempDirPath + "/0"));
     sau1 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin1.class,
-					      simAuConfig(tempDirPath + "/1"));
+                                              simAuConfig(tempDirPath + "/1"));
     sau2 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin2.class,
-					      simAuConfig(tempDirPath + "/2"));
+                                              simAuConfig(tempDirPath + "/2"));
     sau3 = PluginTestUtil.createAndStartSimAu(MySimulatedPlugin3.class,
-		      			  simAuConfig(tempDirPath + "/3"));
+                                          simAuConfig(tempDirPath + "/3"));
     PluginTestUtil.crawlSimAu(sau0);
     PluginTestUtil.crawlSimAu(sau1);
     PluginTestUtil.crawlSimAu(sau2);
@@ -159,7 +159,7 @@ public class TestMetadataManager extends LockssTestCase {
     conf.put("branch", "1");
     conf.put("numFiles", "3");
     conf.put("fileTypes", "" + (SimulatedContentGenerator.FILE_TYPE_PDF +
-				SimulatedContentGenerator.FILE_TYPE_HTML));
+                                SimulatedContentGenerator.FILE_TYPE_HTML));
     conf.put("binFileSize", "7");
     return conf;
   }
@@ -212,7 +212,7 @@ public class TestMetadataManager extends LockssTestCase {
     ResultSet resultSet = stmt.executeQuery(query);
     int count = 0;
     while (resultSet.next()) {
-    	count++;
+        count++;
     }
     final int metadataRowCount = 84;
     assertEquals(metadataRowCount, count);
@@ -242,7 +242,7 @@ public class TestMetadataManager extends LockssTestCase {
     resultSet = stmt.executeQuery(query);
     results = new HashSet<String>();
     while (resultSet.next()) {
-    	results.add(resultSet.getString(1));
+        results.add(resultSet.getString(1));
     }
     assertEquals(metadataRowCount, results.size());
 
@@ -254,7 +254,7 @@ public class TestMetadataManager extends LockssTestCase {
     resultSet = stmt.executeQuery(query);
     results = new HashSet<String>();
     while (resultSet.next()) {
-    	results.add(resultSet.getString(1));
+        results.add(resultSet.getString(1));
     }
     assertEquals(3, results.size());
     results.remove("77446521");
@@ -270,7 +270,7 @@ public class TestMetadataManager extends LockssTestCase {
     resultSet = stmt.executeQuery(query);
     results = new HashSet<String>();
     while (resultSet.next()) {
-    	results.add(resultSet.getString(1));
+        results.add(resultSet.getString(1));
       log.critical(resultSet.getString(1));
     }
     assertEquals(2, results.size());
@@ -305,7 +305,7 @@ public class TestMetadataManager extends LockssTestCase {
     final int count = results.size();
     assertEquals(21, count);
 
-	// reset set of reindexed aus
+        // reset set of reindexed aus
     ausReindexed.clear();
 
     // simulate an au change
@@ -349,9 +349,8 @@ public class TestMetadataManager extends LockssTestCase {
      * @return the ArticleIterator
      */
     @Override
-    public Iterator<ArticleFiles> createArticleIterator(ArchivalUnit au, 
-    													MetadataTarget target)
-        throws PluginException {
+    public Iterator<ArticleFiles> createArticleIterator(
+        ArchivalUnit au, MetadataTarget target) throws PluginException {
       Iterator<ArticleFiles> ret;
       SubTreeArticleIterator.Spec spec = 
         new SubTreeArticleIterator.Spec().setTarget(target);
@@ -362,7 +361,7 @@ public class TestMetadataManager extends LockssTestCase {
       
       ret = new SubTreeArticleIterator(au, spec);
       log.debug(  "creating article iterator for au " + au.getName() 
-    		    + " hasNext: " + ret.hasNext());
+                    + " hasNext: " + ret.hasNext());
       return ret;
     }
   }
@@ -403,20 +402,20 @@ public class TestMetadataManager extends LockssTestCase {
             md.put(MetadataField.FIELD_DATE,"2010-Q1");
             md.put(MetadataField.FIELD_START_PAGE,"" + articleNumber);
           } else {
-	            md.put(MetadataField.FIELD_ISSUE,"2nd Quarter");
+                    md.put(MetadataField.FIELD_ISSUE,"2nd Quarter");
             md.put(MetadataField.FIELD_DATE,"2010-Q2");
             md.put(MetadataField.FIELD_START_PAGE,"" + (articleNumber-9));
           }
           String doiPrefix = "10.1234/12345678";
           String doi = doiPrefix + "."
-			+ md.get(MetadataField.FIELD_DATE) + "."
-			+ md.get(MetadataField.FIELD_START_PAGE); 
+                        + md.get(MetadataField.FIELD_DATE) + "."
+                        + md.get(MetadataField.FIELD_START_PAGE); 
           md.put(MetadataField.FIELD_DOI, doi);
           md.put(MetadataField.FIELD_JOURNAL_TITLE,"Journal[" + doiPrefix + "]");
           md.put(MetadataField.FIELD_ARTICLE_TITLE,"Title[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR,"Author[" + doi + "]");
           md.put(MetadataField.FIELD_ACCESS_URL, 
-        	 "http://www.title0.org/plugin0/XI/"
+                 "http://www.title0.org/plugin0/XI/"
              +  md.get(MetadataField.FIELD_DATE) 
              +"/p" + md.get(MetadataField.FIELD_START_PAGE));
           emitter.emitMetadata(af, md);
@@ -429,7 +428,7 @@ public class TestMetadataManager extends LockssTestCase {
       return map;
     }
   }
-	  
+          
   public static class MySimulatedPlugin1 extends MySimulatedPlugin {
     public MySimulatedPlugin1() {
       simulatedArticleMetadataExtractor = new ArticleMetadataExtractor() {
@@ -452,16 +451,16 @@ public class TestMetadataManager extends LockssTestCase {
           }
           String doiPrefix = "10.2468/28681357";
           String doi = doiPrefix + "."
-      			+ md.get(MetadataField.FIELD_DATE) + "."
-      			+ md.get(MetadataField.FIELD_START_PAGE); 
+                        + md.get(MetadataField.FIELD_DATE) + "."
+                        + md.get(MetadataField.FIELD_START_PAGE); 
           md.put(MetadataField.FIELD_DOI, doi);
           md.put(MetadataField.FIELD_JOURNAL_TITLE, "Journal[" + doiPrefix + "]");
           md.put(MetadataField.FIELD_ARTICLE_TITLE, "Title[" + doi + "]");
           md.put(MetadataField.FIELD_AUTHOR, "Author1[" + doi + "]");
           md.put(MetadataField.FIELD_ACCESS_URL, 
               "http://www.title1.org/plugin1/v_42/"
-         	+  md.get(MetadataField.FIELD_DATE) 
-          	+"/p" + md.get(MetadataField.FIELD_START_PAGE));
+                +  md.get(MetadataField.FIELD_DATE) 
+                +"/p" + md.get(MetadataField.FIELD_START_PAGE));
           emitter.emitMetadata(af, md);
         }
       };
@@ -533,5 +532,5 @@ public class TestMetadataManager extends LockssTestCase {
       return map;
     }
   }
-	  
+          
 }
