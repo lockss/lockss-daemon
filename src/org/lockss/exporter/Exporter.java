@@ -1,5 +1,5 @@
 /*
- * $Id: Exporter.java,v 1.8 2011-03-15 20:07:33 tlipkis Exp $
+ * $Id: Exporter.java,v 1.9 2011-04-04 07:15:03 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,7 @@ public abstract class Exporter {
   protected long maxSize = -1;
   protected int maxVersions = 1;
   protected boolean compress = false;
+  protected boolean excludeDirNodes = false;
   protected FilenameTranslation xlate = FilenameTranslation.XLATE_NONE;
   protected List errors = new ArrayList();
   protected boolean isDiskFull = false;
@@ -98,6 +99,14 @@ public abstract class Exporter {
 
   public boolean getCompress() {
     return compress;
+  }
+
+  public void setExcludeDirNodes(boolean val) {
+    excludeDirNodes = val;
+  }
+
+  public boolean getExcludeDirNodes() {
+    return excludeDirNodes;
   }
 
   public void setFilenameTranslation(FilenameTranslation val) {
@@ -263,36 +272,65 @@ public abstract class Exporter {
     }
   }
 
+  // return the next CU with content
+  private CachedUrl getNextCu(Iterator iter) {
+    while (iter.hasNext()) {
+      CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
+      CachedUrl cu = AuUtil.getCu(node);
+      if (cu != null && cu.hasContent()) {
+	return cu;
+      }
+    }
+    return null;
+  }
+
+  /** Return true if, interpreting URLs as filenames, dirCu is a directory
+   * containing fileCu.  Used to exclude directory content from output
+   * files, so they can be unpacked by standard utilities (e.g., unzip).
+   * Shouldn't be called with equal URLs, but return false in that case, as
+   * we wouldn't want to exclude the URL */
+  boolean isDirOf(CachedUrl dirCu, CachedUrl fileCu) {
+    String dir = dirCu.getUrl();
+    String file = fileCu.getUrl();
+    if (!dir.endsWith("/")) {
+      dir = dir + "/";
+    }
+    return file.startsWith(dir) && !file.equals(dir);
+  }
+
   private void writeFiles() {
     PlatformUtil platutil = PlatformUtil.getInstance();
     Iterator iter = au.getAuCachedUrlSet().contentHashIterator();
     int errs = 0;
-    while (iter.hasNext()) {
-      CachedUrlSetNode node = (CachedUrlSetNode)iter.next();
-      CachedUrl curCu = AuUtil.getCu(node);
-      if (curCu != null && curCu.hasContent()) {
-	CachedUrl[] cuVersions =
-	  curCu.getCuVersions(maxVersions > 0
-			      ? maxVersions : Integer.MAX_VALUE);
-	for (CachedUrl cu : cuVersions) {
-	  try {
-	    log.debug2("Exporting " + cu.getUrl());
-	    writeCu(cu);
-	  } catch (IOException e) {
-	    if (platutil.isDiskFullError(e)) {
-	      recordError("Disk full, can't write export file.");
-	      isDiskFull = true;
-	      return;
-	    }
-	  } catch (Exception e) {
-	    // XXX Would like to differentiate between errors opening or
-	    // reading CU, which shouldn't cause abort, and errors writing
-	    // to export file, which should.
-	    recordError("Unable to copy " + cu.getUrl(), e);
-	    if (errs++ >= maxErrors) {
-	      recordError("Aborting after " + errs + " errors");
-	      return;
-	    }
+    CachedUrl curCu = null;
+    CachedUrl nextCu = getNextCu(iter);
+    while (nextCu != null) {
+      curCu = nextCu;
+      nextCu = getNextCu(iter);
+      if (excludeDirNodes && nextCu != null && isDirOf(curCu, nextCu)) {
+	continue;
+      }
+      CachedUrl[] cuVersions =
+	curCu.getCuVersions(maxVersions > 0
+			    ? maxVersions : Integer.MAX_VALUE);
+      for (CachedUrl cu : cuVersions) {
+	try {
+	  log.debug2("Exporting " + cu.getUrl());
+	  writeCu(cu);
+	} catch (IOException e) {
+	  if (platutil.isDiskFullError(e)) {
+	    recordError("Disk full, can't write export file.");
+	    isDiskFull = true;
+	    return;
+	  }
+	} catch (Exception e) {
+	  // XXX Would like to differentiate between errors opening or
+	  // reading CU, which shouldn't cause abort, and errors writing
+	  // to export file, which should.
+	  recordError("Unable to copy " + cu.getUrl(), e);
+	  if (errs++ >= maxErrors) {
+	    recordError("Aborting after " + errs + " errors");
+	    return;
 	  }
 	}
       }

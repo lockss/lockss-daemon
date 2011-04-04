@@ -1,5 +1,5 @@
 /*
- * $Id: FuncZipExporter.java,v 1.4 2010-02-24 03:29:16 tlipkis Exp $
+ * $Id: FuncZipExporter.java,v 1.5 2011-04-04 07:15:03 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.exporter;
 import java.io.*;
 import java.util.*;
 import java.util.zip.*;
+import org.apache.commons.collections.CollectionUtils;
 
 import org.lockss.daemon.*;
 import org.lockss.config.*;
@@ -54,17 +55,53 @@ public class FuncZipExporter extends BaseFuncExporter {
     assertEquals("http_//foo_bar_a_b_c_d_e", exp.xlateFilename(t1));
   }
 
+  public void testIsDirOf() throws Exception {
+    String base = (String)CollectionUtil.getAnElement(sau.getUrlStems());
+    String dir, dirno;
+    if (!base.endsWith("/")) {
+      base += "/";
+    }
+    dir = base + "dirname/";
+    dirno = base + "dirname";
+      
+    CachedUrl cudir = sau.makeCachedUrl(dir);
+    CachedUrl cudirno = sau.makeCachedUrl(dirno);
+    CachedUrl cufile1 = sau.makeCachedUrl(dir + "file");
+    CachedUrl cufile2 = sau.makeCachedUrl(dir + "dir2/file.bar");
+    CachedUrl cufile3 = sau.makeCachedUrl(base + "nondirname/file.bar");
+
+    ZipExporter exp = new ZipExporter(daemon, sau);
+    assertTrue(exp.isDirOf(cudir, cufile1));
+    assertTrue(exp.isDirOf(cudir, cufile2));
+    assertFalse(exp.isDirOf(cudir, cufile3));
+    assertFalse(exp.isDirOf(cufile1, cudir));
+
+    assertTrue(exp.isDirOf(cudirno, cufile1));
+    assertTrue(exp.isDirOf(cudirno, cufile2));
+    assertFalse(exp.isDirOf(cudirno, cufile3));
+    assertFalse(exp.isDirOf(cufile1, cudirno));
+
+    assertFalse(exp.isDirOf(cudir, cudir));
+    assertFalse(exp.isDirOf(cufile1, cufile1));
+
+  }
+
   // Combining in one testcase is a little faster because the sim content
   // tree doesn't have to be recreated and recrawled for each different
   // export test.
   public void testSeveralVariants() throws Exception {
-    testExport(true, -1, FilenameTranslation.XLATE_NONE);
-    testExport(false, 2000, FilenameTranslation.XLATE_NONE);
-    testExport(true, -1, FilenameTranslation.XLATE_WINDOWS);
+    assertEquals(auUrls,
+		 testExport(true, -1, FilenameTranslation.XLATE_NONE, false));
+    testExport(false, 2000, FilenameTranslation.XLATE_NONE, false);
+    testExport(true, -1, FilenameTranslation.XLATE_WINDOWS, false);
+
+    assertEquals(CollectionUtils.subtract(auUrls, auDirs),
+		 testExport(true, -1, FilenameTranslation.XLATE_WINDOWS, true));
   }
 
-  public void testExport(boolean isCompress, long maxSize,
-			 FilenameTranslation xlate)
+  public List<String> testExport(boolean isCompress, long maxSize,
+				 FilenameTranslation xlate,
+				 boolean excludeDirContent)
       throws Exception {
     exportDir = getTempDir();
     exportFiles = null;
@@ -73,6 +110,7 @@ public class FuncZipExporter extends BaseFuncExporter {
     exp.setPrefix("zippre");
     exp.setCompress(isCompress);
     exp.setFilenameTranslation(xlate);
+    exp.setExcludeDirNodes(excludeDirContent);
     if (maxSize > 0) {
       exp.setMaxSize(maxSize);
     }
@@ -80,6 +118,7 @@ public class FuncZipExporter extends BaseFuncExporter {
 
     int numZipRecords = 0;
     File expFile;
+    List<String> urls = new ArrayList<String>();
     while ((expFile = nextExportFile()) != null) {
       ZipFile zip = new ZipFile(expFile);
 
@@ -111,6 +150,7 @@ public class FuncZipExporter extends BaseFuncExporter {
 	  cu = sau.makeCachedUrl(url);
 // 	  log.debug("Comp " + hdr.getMimetype() + ": " + url);
 	  assertTrue("No content in AU: " + url, cu.hasContent());
+	  urls.add(cu.getUrl());
 	  InputStream ins = cu.getUnfilteredInputStream();
 	  assertTrue(StreamUtil.compare(zip.getInputStream(rec), ins));
 	  assertEquals(cu.getContentSize(), rec.getSize());
@@ -123,13 +163,18 @@ public class FuncZipExporter extends BaseFuncExporter {
       }
 
     }
-    assertEquals(numAuFiles, numZipRecords);
+    if (excludeDirContent) {
+      assertEquals(auUrls.size() - auDirs.size(), numZipRecords);
+    } else {
+      assertEquals(auUrls.size(), numZipRecords);
+    }
     if (maxSize <= 0) {
       assertEquals(1, exportFiles.length);
     } else {
       assertTrue("Expected more than one export file",
 		 exportFiles.length > 1);
     }
+    return urls;
   }
 }
 
