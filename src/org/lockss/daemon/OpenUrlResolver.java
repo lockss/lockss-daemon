@@ -1,5 +1,5 @@
 /*
- * $Id: OpenUrlResolver.java,v 1.5 2011-03-22 13:16:55 pgust Exp $
+ * $Id: OpenUrlResolver.java,v 1.6 2011-04-04 05:41:47 pgust Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.daemon;
 
+import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,20 +47,20 @@ import java.util.Map;
 
 import org.lockss.app.LockssDaemon;
 import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
 import org.lockss.config.Tdb;
 import org.lockss.config.TdbAu;
 import org.lockss.config.TdbPublisher;
 import org.lockss.config.TdbTitle;
 import org.lockss.daemon.ConfigParamDescr.InvalidFormatException;
+import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.Plugin;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.PrintfConverter;
 import org.lockss.plugin.PrintfConverter.UrlListConverter;
-import org.lockss.plugin.definable.DefinablePlugin;
 import org.lockss.util.ExternalizableMap;
 import org.lockss.util.Logger;
 import org.lockss.util.MetadataUtil;
-import org.lockss.util.StringUtil;
 import org.lockss.util.TypedEntryMap;
 import org.lockss.util.UrlUtil;
 import org.lockss.util.urlconn.LockssUrlConnection;
@@ -108,9 +109,10 @@ import org.lockss.util.urlconn.LockssUrlConnectionPool;
  * <li>BICI</li>
  * </ul>
  * <p>
- * Note: the TDB of the current configuration is used to resolve journal
- * or book title to an ISSN or ISBN.  If there are multiple entries for the
- * journal or book title, one of them is selected. OpenURL 1.0 allows
+ * Note: the TDB of the current configuration is used to resolve journal or
+ * if the entry is not in the metadata database, or if the query gives a
+ * journal or book title but no ISSN or ISBN.  If there are multiple entries 
+ * for the journal or book title, one of them is selected. OpenURL 1.0 allows
  * specifying a book publisher, so if both publisher and title are specified,
  * there is a good chance that the match will be unique.
  * 
@@ -233,7 +235,6 @@ public class OpenUrlResolver {
         return url;
       }
     }
-    
     String spage = getRftStartPage(params);
     String author = getRftParam(params, "au");
     String atitle = getRftParam(params, "atitle");
@@ -644,8 +645,8 @@ public class OpenUrlResolver {
     try {
       conn = metadataMgr.newConnection();
 
-      String MTN = MetadataManager.METADATA_TABLE_NAME;
-      String DTN = MetadataManager.DOI_TABLE_NAME;
+      String MTN = MetadataManager.METADATA_TABLE;
+      String DTN = MetadataManager.DOI_TABLE;
       String query =           
         "select access_url from " + MTN + "," + DTN 
       + " where " + DTN + ".md_id = " + MTN + ".md_id"
@@ -687,27 +688,23 @@ public class OpenUrlResolver {
     TdbTitle title = (tdb == null) ? null : tdb.getTdbTitleByIssn(issn);
     
     // only go to metadata manager if requesting individual article
-    if (   !StringUtil.isNullString(spage)
-        || !StringUtil.isNullString(author)
-        || !StringUtil.isNullString(atitle)) {
-      try {
-        // resolve article from metadata manager
-        String[] issns = (title == null) ? 
+        try {
+          // resolve article from metadata manager
+          String[] issns = (title == null) ? 
             new String[] { issn } : title.getIssns();
-        MetadataManager metadataMgr = daemon.getMetadataManager();
-        url = resolveFromIssn(metadataMgr, issns, date, 
-                              volume, issue, spage, author, atitle);
-      } catch (IllegalArgumentException ex) {
-      }
-    }
+          MetadataManager metadataMgr = daemon.getMetadataManager();
+          url = resolveFromIssn(metadataMgr, issns, date, 
+                                volume, issue, spage, author, atitle);
+        } catch (IllegalArgumentException ex) {
+        }
 
     if (url == null) {
       // resolve title, volume, AU, or issue TOC from TDB
       if (title == null) {
-        log.critical("No TdbTitle for issn " + issn);
-        return null;
+        log.debug3("No TdbTitle for issn " + issn);
+      } else {
+        url = resolveJournalFromTdbTitle(title, date, volume, issue);
       }
-      return resolveJournalFromTdbTitle(title, date, volume, issue);
     }
     return url;
   }
@@ -730,107 +727,205 @@ public class OpenUrlResolver {
       MetadataManager metadataMgr,
       String[] issns, String date, String volume, String issue, 
       String spage, String author, String atitle) {
-
+          
     Connection conn = null;
+    String url = null;
     try {
       conn = metadataMgr.newConnection();
-
-      String MTN = MetadataManager.METADATA_TABLE_NAME;
-      String ITN = MetadataManager.ISSN_TABLE_NAME;
-      ArrayList<String> args = new ArrayList<String>();
-      StringBuilder query = new StringBuilder();
-      query.append("select access_url from ");
-      query.append(MTN);
-      query.append(",");
-      query.append(ITN);
-      query.append(" where ");
-      query.append(ITN);
-      query.append(".md_id = ");
-      query.append(MTN);
-      query.append(".md_id and issn in (");
-      String querystr = "?";
-      for (String issn : issns) {
-        query.append(querystr);
-        args.add(issn.replaceAll("-", "")); // strip punctuation
-        querystr = ", ?";
+      url = resolveFromIssn(
+                      conn, issns, date, volume, issue, spage, author, atitle);
+      if (url == null) {
+        if ((spage != null) || (author != null) || (atitle != null)) {
+          url = resolveFromIssn(
+                          conn, issns, date, volume, issue, null, null, null);
+        }
       }
-      query.append(" )");
-
-      if (date != null) {
-        // enables query "2009" to match "2009-05-10" in database
-        query.append(" and date like ? escape '\\'");
-        args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
+      if (url == null) { 
+        if ((date != null) || (volume != null) || (issue != null)) {
+          url = resolveFromIssn(
+                          conn, issns, null, null, null, null, null, null);
+        }
       }
-      if (volume != null) {
-        query.append(" and volume = ?");
-        args.add(volume);
-      }
-      if (issue != null) {
-        query.append(" and issue= ?");
-        args.add(issue);
-      }
-      if (spage != null) {
-        query.append(" and start_page = ?");
-        args.add(spage);
-      } else if (author != null) {
-        query.append(" and (");
-        
-        // match single author
-        // (last, first name separated by ',')
-        query.append(" author = ?");
-        args.add(author);
-
-        // escape escape character and then wildcard characters
-        String authorEsc = author.replace("\\", "\\\\").replace("%","\\%");
-        
-        // match last name of first author
-        // (last, first name separated by ',')
-        query.append(" or author like ? escape '\\'");
-        args.add(authorEsc+",%");
-        
-        // match entire first author 
-        // (authors separated by ';', last, first name separated by ',')
-        query.append(" or author like ? escape '\\'");
-        args.add(authorEsc+";%");
-        
-        // match last name of middle or last author 
-        // (authors separated by ';', last, first name separated by ',')
-        query.append(" or author like ? escape '\\'");
-        args.add("%;" + authorEsc + ",%");
-        
-        // match entire middle author 
-        // (authors separated by ';')
-        query.append(" or author like ? escape '\\'");
-        args.add("%;" + authorEsc + ";%");
-        
-        // match entire last author 
-        // (authors separated by ';')
-        query.append(" or author like ? escape '\\'");
-        args.add("%;" + authorEsc);
-        
-        query.append(")");
-      } else if (atitle != null) {
-        // match the entire article title or a prefix
-        query.append(" and article_title like ? escape '\\'");
-        args.add(atitle.replace("\\","\\\\").replace("%","\\%") + "%");
-      }
-      PreparedStatement stmt = conn.prepareStatement(query.toString());
-      for (int i = 0; i < args.size(); i++) {
-        stmt.setString(i+1, args.get(i));
-      }
-      ResultSet resultSet = stmt.executeQuery();
-      if (resultSet.next()) {
-        String url = resultSet.getString(1);
-        return url;
-      }
-      stmt.close();
     } catch (SQLException ex) {
       log.error("Getting ISSNs:" + Arrays.toString(issns), ex);
-      
+        
     } finally {
       MetadataManager.safeClose(conn);
     }
-    return null;
+    return url;
+  }
+
+  /**
+   * Return article URL from an ISSN, date, volume, issue, spage, and author. 
+   * The first author will only be used when the starting page is not given.
+   * 
+   * @param conn the database connection
+   * @param issns a list of alternate ISSNs for the title
+   * @param date the publication date
+   * @param volume the volume
+   * @param issue the issue
+   * @param spage the starting page
+   * @param author the first author's full name
+   * @param atitle the article title 
+   * @return the article URL
+   */
+  private String resolveFromIssn(
+      Connection conn,
+      String[] issns, String date, String volume, String issue, 
+      String spage, String author, String atitle) 
+      throws SQLException {
+    
+        boolean useTitleTOC = false;
+        boolean useAuTOC = false;
+
+    StringBuilder query = new StringBuilder();
+    ArrayList<String> args = new ArrayList<String>();
+    buildAuxiliaryTableQuery(
+      MetadataManager.ISSN_TABLE, MetadataManager.ISSN_FIELD, 
+      issns, query, args);
+    
+    // true if properties specify an article
+    boolean hasArticleSpec = 
+        (spage != null) || (author != null) || (atitle != null);
+
+    // true if properties specified a journal item
+    boolean hasJournalSpec =
+        (date != null) || (volume != null) || (issue != null);
+    
+        if (hasJournalSpec) {
+          // can specify an issue by a combination of date, volume and issue;
+          // how these combine varies, so do the most liberal match possible
+          // and filter based on multiple results
+          query.append(" and ");
+          if (date != null) {
+            // enables query "2009" to match "2009-05-10" in database
+            query.append(MetadataManager.DATE_FIELD);
+            query.append(" like ? escape '\\'");
+            args.add(date.replace("\\","\\\\").replace("%","\\%") + "%");
+          }
+          
+          if ((volume != null) || (issue != null)) {
+            if (date != null) {
+                query.append(" and ");
+            }
+            query.append("( ");
+
+            if (volume != null) {
+              query.append(MetadataManager.VOLUME_FIELD);
+                  query.append(" = ?");
+                  args.add(volume);
+            }
+                if (issue != null) {
+                  if (volume != null) {
+                        query.append(" and ");
+                  }
+                  query.append(MetadataManager.ISSUE_FIELD);
+                  query.append(" = ?");
+                  args.add(issue);
+                }
+            
+                query.append(" )");
+          }
+          
+        } else {
+          useTitleTOC = !hasArticleSpec;
+        }
+                    
+    // handle start page, author, and article title as
+    // equivalent ways to specify an article within an issue
+    if (hasArticleSpec) {
+          // accept any of the three
+          query.append(" and ( ");
+        
+          if (spage != null) {
+            query.append(MetadataManager.START_PAGE_FIELD);
+            query.append(" = ?");
+            args.add(spage);
+          }
+          if (atitle != null) {
+            if (spage != null) {
+              query.append(" or ");
+            }
+        query.append(MetadataManager.ARTICLE_TITLE_FIELD);
+        query.append(" like ? escape '\\'");
+            args.add(atitle.replace("%","\\%") + "%");
+          }
+          if ( author != null) {
+            if ((spage != null) || (atitle != null)) {
+                  query.append(" or ");
+            }
+
+            // add the author query to the query
+            addAuthorQuery(author, query, args);
+          }
+      query.append(" )");
+    } else {
+          useAuTOC = true;
+    }
+    String url = resolveFromQuery(
+                       conn, query.toString(), args, useAuTOC, useTitleTOC);
+    return url;
+  }
+  
+  /**
+   * Return the article URL by executing the query with the arguments.
+   * If useTitleTOC is true, returns the TOC for the title. Otherwise, 
+   * if useAuTOC is true, returns the URL of the AU TOC.
+   * <p>
+   * Note: will need to be revised if we ever have distinct volume and
+   * issue TOCs.
+   * 
+   * @param conn the database connection
+   * @param query the query
+   * @param args
+   * @param useAuTOC
+   * @param useTitleTOC
+   * @return
+   * @throws SQLException
+   */
+  private String resolveFromQuery(
+                  Connection conn, String query, List<String>args, 
+                  boolean useAuTOC, boolean useTitleTOC) throws SQLException {
+        log.debug3("query: " + query);
+    PreparedStatement stmt = conn.prepareStatement(query.toString());
+    for (int i = 0; i < args.size(); i++) {
+      stmt.setString(i+1, args.get(i));
+      log.debug3("query arg:  " + args.get(i));      
+    }
+    stmt.setMaxRows(2);  // only need to to determine if unique
+    log.debug3("useAuTOC: " + useAuTOC + " useTitleTOC: " + useTitleTOC);
+    ResultSet resultSet = stmt.executeQuery();
+    String url = null;
+    if (resultSet.next()) {
+      if (useAuTOC || useTitleTOC) {
+        // return the start URL for the AU as a TOC
+        // if a specific article is not specified.
+        String pluginId = resultSet.getString(2);
+        String auKey = resultSet.getString(3);
+        if ((pluginId != null) && (auKey != null)) {
+          PluginManager pluginMgr = daemon.getPluginManager();
+          String auId = PluginManager.generateAuId(pluginId, auKey);
+          ArchivalUnit au = pluginMgr.getAuFromId(auId);
+          if (au != null) {
+                if (!useTitleTOC) {
+                  url = getStartUrl(au);
+                }
+                if (url == null) {
+                  url = au.getConfiguration().get("base_url");
+                }
+          }
+        }
+      } else {
+        url = resultSet.getString(1);
+        if (resultSet.next()) {
+                log.debug3("entry not unique: " + url + " " + resultSet.getString(1));
+          url = null;
+        }
+      }
+    }
+    stmt.close();
+    log.debug3("url " + url);
+    return url;
   }
 
   /**
@@ -918,10 +1013,8 @@ public class OpenUrlResolver {
       log.debug3(  "geting starting url for plugin: " 
                  + plugin.getClass().getName());
       // get starting URL from a DefinablePlugin
-      if (plugin instanceof DefinablePlugin) {
-        url = getStartUrl((DefinablePlugin)plugin, tdbau);
-        log.debug3("Found starting url from definable plugin: " + url);
-      }
+      url = getStartUrl(plugin, tdbau);
+      log.debug3("Found starting url from definable plugin: " + url);
     } else {
       log.debug3("No plugin found for key: " + pluginKey); 
     }
@@ -936,29 +1029,7 @@ public class OpenUrlResolver {
    * @param tdbau the TdbAu
    * @return the starting URL
    */
-  private static String getStartUrl(DefinablePlugin plugin, TdbAu tdbau) {
-    String url = null;
-
-    // get printf pattern for "au_start_url" property
-    DefinablePlugin dplugin = (DefinablePlugin)plugin;
-    ExternalizableMap map = dplugin.getDefinitionMap();
-    Object obj = map.getMapElement("au_start_url");
-    String printfString = null;
-    if (obj instanceof String) {
-      // get single pattern for start url
-      printfString = (String)obj;
-    } else if (obj instanceof Collection) {
-      // get the first pattern for start url
-      @SuppressWarnings("rawtypes")
-      Collection c = (Collection)obj;
-      if (!c.isEmpty()) {
-        Object o = c.iterator().next();
-        if (o instanceof String) {
-          printfString = (String)o;
-        }
-      }
-    }
-    
+  private static String getStartUrl(Plugin plugin, TdbAu tdbau) {
     TypedEntryMap paramMap = new TypedEntryMap();
     for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
       String key = descr.getKey();
@@ -978,10 +1049,82 @@ public class OpenUrlResolver {
         }
       }
     }
-    
+    String url = getStartUrl(plugin, paramMap);
+    return url;
+  }
+  
+  /**
+   * Gets the starting URL for an AU indicated by the DefinablePlugin 
+   * and parameter definitions specified by the TdbAu.
+   * 
+   * @param plugin the DefinablePlugin
+   * @param tdbau the TdbAu
+   * @return the starting URL
+   */
+  private static String getStartUrl(ArchivalUnit au) {
+    TypedEntryMap paramMap = new TypedEntryMap();
+
+    Configuration config = au.getConfiguration();
+    Plugin plugin = au.getPlugin();
+    for (ConfigParamDescr descr : plugin.getAuConfigDescrs()) {
+      String key = descr.getKey();
+      if (config.containsKey(key)) {
+        try {
+          Object val = descr.getValueOfType(config.get(key));
+          paramMap.setMapElement(key, val);
+        } catch (Exception ex) {
+          log.error("Error configuring: " + key + " "  + ex.getMessage());
+        }
+      }
+    }
+    String url = getStartUrl(plugin, paramMap);
+    return url;
+  }
+
+  /**
+   * Get Evaluate
+   * @param plugin
+   * @param paramMap
+   * @return
+   */
+  private static String 
+    getStartUrl(Plugin plugin, TypedEntryMap paramMap) {
+        ExternalizableMap map;
+
+         // get printf pattern for "au_start_url" property
+        try {
+                Method method = plugin.getClass().getMethod("getDefinitionMap", (new Class[0]));
+                Object obj = method.invoke(plugin);
+                if (!(obj instanceof ExternalizableMap)) {
+                        return null;
+                }
+                map = (ExternalizableMap)obj;
+        } catch (Exception ex) {
+                log.error("getDefinitionMap", ex);
+                return null;
+        }
+        
+    Object obj = map.getMapElement("au_start_url");
+    String printfString = null;
+    if (obj instanceof String) {
+      // get single pattern for start url
+      printfString = (String)obj;
+    } else if (obj instanceof Collection) {
+      // get the first pattern for start url
+      @SuppressWarnings("rawtypes")
+      Collection c = (Collection)obj;
+      if (!c.isEmpty()) {
+        Object o = c.iterator().next();
+        if (o instanceof String) {
+          printfString = (String)o;
+        }
+      }
+    }
+
+    String url = null;
     try {
       UrlListConverter converter = 
-        new  PrintfConverter.UrlListConverter(plugin, paramMap); 
+          new  PrintfConverter.UrlListConverter(plugin, paramMap); 
       List<String> urls = converter.getUrlList(printfString);
       if (urls.size() > 0) {
         url = urls.get(0);
@@ -990,10 +1133,11 @@ public class OpenUrlResolver {
     } catch (Throwable ex) {
       log.warning("invalid  conversion", ex);
     }
-    
+      
     return url;
   }
   
+    
   /**
    * Return the book URL from TdbTitle and edition.
    * 
@@ -1050,16 +1194,11 @@ public class OpenUrlResolver {
     String isbn, String edition, String spage, String author, String atitle) {
     String url = null;
     // only go to metadata manager if requesting individual article/chapter
-    if (   !StringUtil.isNullString(spage)
-        || !StringUtil.isNullString(author)
-        || !StringUtil.isNullString(atitle)) {
-      try {
-        // resolve from metadata manager
-        MetadataManager metadataMgr = daemon.getMetadataManager();
-        url = resolveFromIsbn(
-                          metadataMgr, isbn, edition, spage, author, atitle);
-      } catch (IllegalArgumentException ex) {
-      }
+    try {
+      // resolve from metadata manager
+      MetadataManager metadataMgr = daemon.getMetadataManager();
+      url = resolveFromIsbn(metadataMgr, isbn, edition, spage, author, atitle);
+    } catch (IllegalArgumentException ex) {
     }
 
     if (url == null) {
@@ -1076,10 +1215,16 @@ public class OpenUrlResolver {
   }
 
   /**
-   * Return the article URL from an ISBN, edition, spage, and author using the
-   * metadata database. The first author is only used when the starting page 
-   * is not given. "Volume" is used to hold edition information in the metadata 
-   * manager schema for books.  First author can be used in place of start page.
+   * Return the article URL from an ISBN, edition, start page, author, and
+   * article title using the metadata database.
+   * <p>
+   * The algorithm matches the ISBN and optionally the edition, and either 
+   * the start page, author, or article title. The reason for matching on any
+   * of the three is that typos in author and article title are always 
+   * possible so we want to be more forgiving in matching an article.
+   * <p>
+   * If none of the three are specified, the URL for the book table of contents 
+   * is returned.
    * 
    * @param metadataMgr the metadata manager
    * @param isbn the isbn
@@ -1087,97 +1232,197 @@ public class OpenUrlResolver {
    * @param spage the start page
    * @param author the first author
    * @param atitle the chapter title
-   * @return the article URL
+   * @return the url
    */
   private String resolveFromIsbn(
         MetadataManager metadataMgr, String isbn, 
         String edition, String spage, String author, String atitle) {
-    // strip punctuation
-    isbn = isbn.replaceAll("[- ]", "");
-    
-    String url = null;
+        String url = null;
     Connection conn = null;
-    try {
+        try {
       conn = metadataMgr.newConnection();
-
-      String MTN = MetadataManager.METADATA_TABLE_NAME;
-      String ITN = MetadataManager.ISBN_TABLE_NAME;
-      ArrayList<String> args = new ArrayList<String>();
-      StringBuilder query = new StringBuilder();
-      query.append("select access_url from ");
-      query.append(MTN);
-      query.append(",");
-      query.append(ITN);
-      query.append(" where ");
-      query.append(ITN);
-      query.append(".md_id = ");
-      query.append(MTN);
-      query.append(".md_id and isbn = ?");
-      args.add(isbn);
-      if (edition != null) {
-        query.append(" and volume = ?");
-        args.add(edition);
-      }
-      if (spage != null) {
-        query.append(" and start_page = ?");
-        args.add(spage);
-      } else if (author != null) {
-        query.append(" and (");
-        
-        // match single author
-        // (last, first name separated by ',')
-        query.append(" author = ?");
-        args.add(author);
-
-        // escape escape character and then wildcard characters
-        String authorEsc = author.replace("\\", "\\\\").replace("%","\\%");
-        
-        // match last name of first author
-        // (last, first name separated by ',')
-        query.append(" or author like ? escape '\\'");
-        args.add(authorEsc+",%");
-        
-        // match entire first author 
-        // (authors separated by ';', last, first name separated by ',')
-        query.append(" or author like ? escape '\\'");
-        args.add(authorEsc+";%");
-        
-        // match last name of middle or last author 
-        // (authors separated by ';', last, first name separated by ',')
-        query.append(" or author like ? escape '\\'");
-        args.add("%;" + authorEsc + ",%");
-        
-        // match entire middle author 
-        // (authors separated by ';')
-        query.append(" or author like ? escape '\\'");
-        args.add("%;" + authorEsc + ";%");
-        
-        // match entire last author 
-        // (authors separated by ';')
-        query.append(" or author like ? escape '\\'");
-        args.add("%;" + authorEsc);
-        
-        query.append(")");
-      } else if (atitle != null) {
-        // match the entire article title or a prefix
-        query.append(" and article_title like ? escape '\\'");
-        args.add(atitle.replace("%","\\%") + "%");
-      }
-      PreparedStatement stmt = conn.prepareStatement(query.toString());
-      for (int i = 0; i < args.size(); i++) {
-        stmt.setString(i+1, args.get(i));
-      }
-      ResultSet resultSet = stmt.executeQuery();
-      if (resultSet.next()) {
-        url = resultSet.getString(1);
-      }
-      stmt.close();
+          url = resolveFromIsbn(conn, isbn, edition, spage, author, atitle);
+          if (url == null) {
+                url = resolveFromIsbn(conn, isbn, edition, null, null, null);
+                if ((url == null) && (edition != null)) {
+                  url = resolveFromIsbn(conn, isbn, null, null, null, null);
+                }
+          }
     } catch (SQLException ex) {
-      log.error("Getting ISBN:" + isbn, ex);
-      
+        log.error("Getting ISBN:" + isbn, ex);
+        
     } finally {
       MetadataManager.safeClose(conn);
     }
     return url;
+  }
+  
+  /**
+   * Return the article URL from an ISBN, edition, start page, author, and
+   * article title using the metadata database.
+   * <p>
+   * The algorithm matches the ISBN and optionally the edition, and either 
+   * the start page, author, or article title. The reason for matching on any
+   * of the three is that typos in author and article title are always 
+   * possible so we want to be more forgiving in matching an article.
+   * <p>
+   * If none of the three are specified, the URL for the book table of contents 
+   * is returned.
+   * 
+   * @param metadataMgr the metadata manager
+   * @param isbn the isbn
+   * @param edition the edition
+   * @param spage the start page
+   * @param author the first author
+   * @param atitle the chapter title
+   * @return the url
+   * @throws SQLException if an error occurred querying database
+   */
+  private String resolveFromIsbn(
+        Connection conn, String isbn, 
+        String edition, String spage, String author, String atitle) 
+        throws SQLException {
+    // strip punctuation
+    isbn = isbn.replaceAll("[- ]", "");
+    
+    boolean useAuTOC = false;
+
+    StringBuilder query = new StringBuilder();
+    ArrayList<String> args = new ArrayList<String>();
+    buildAuxiliaryTableQuery(
+      MetadataManager.ISBN_TABLE, MetadataManager.ISBN_FIELD,
+      new String[] {isbn}, query, args);
+  
+    if (edition != null) {
+      query.append(" and ");
+      query.append(MetadataManager.VOLUME_FIELD);
+      query.append(" = ?");  // volume stores edition for books
+      args.add(edition);
+    }
+
+    // handle start page, author, and article title as
+    // equivalent ways to specify an article within an issue
+    if ((spage != null) || (author != null) || (atitle != null)) {
+          // accept any of the three
+          query.append(" and ( ");
+        
+          if (spage != null) {
+            query.append(MetadataManager.START_PAGE_FIELD);
+            query.append(" = ?");
+            args.add(spage);
+          }
+          if (atitle != null) {
+            if (spage != null) {
+              query.append(" or ");
+            }
+        query.append(MetadataManager.ARTICLE_TITLE_FIELD);
+        query.append(" like ? escape '\\'");
+            args.add(atitle.replace("%","\\%") + "%");
+          }
+          if ( author != null) {
+            if ((spage != null) || (atitle != null)) {
+                  query.append(" or ");
+            }
+            // add the author query to the query
+            addAuthorQuery(author, query, args);
+          }
+  
+      query.append(" )");
+
+    } else {
+          useAuTOC = true;
+    }
+    
+    String url = resolveFromQuery(
+                       conn, query.toString(), args, useAuTOC, false);
+    return url;
+  }
+
+  /**
+   * Build a query for the field in the specified auxiliary table 
+   * (e.g. MetadataManager.ISSN_TABLE, MetadataManager.ISBN_TABLE
+   * or MetadataManager.DOI_TABLE) that shares a foreign key with
+   * the Metadata table.
+   * @param tableId the table ID
+   * @param fieldId the field ID in the specified table 
+   * @param fieldValues the list of acceptable field values
+   * @param query the query string builder
+   * @param args the query args
+   */
+  private void buildAuxiliaryTableQuery(
+                  String tableId, String fieldId, String[] fieldValues, 
+                  StringBuilder query, List<String>args) {
+    String MTN = MetadataManager.METADATA_TABLE;
+        query.append("select distinct ");
+        query.append(MetadataManager.ACCESS_URL_FIELD);
+        query.append(",");
+        query.append(MetadataManager.PLUGIN_ID_FIELD);
+        query.append(",");
+        query.append(MetadataManager.AU_KEY_FIELD);
+        query.append(" from ");
+        query.append(MTN);
+        query.append(",");
+        query.append(tableId);
+        query.append(" where ");
+        query.append(tableId);
+        query.append(".");
+        query.append(MetadataManager.MD_ID_FIELD);
+        query.append(" = ");
+        query.append(MTN);
+        query.append(".");
+        query.append(MetadataManager.MD_ID_FIELD);
+        query.append(" and ");
+        query.append(fieldId);
+        query.append(" in (");
+        String querystr = "?";
+        for (String issn : fieldValues) {
+          query.append(querystr);
+          args.add(issn.replaceAll("-", "")); // strip punctuation
+          querystr = ",?";
+        }
+        query.append(")");
+  }
+  
+  /**
+   * Add author query to the query buffer and argument list.  
+   * @param author the author
+   * @param query the query buffer
+   * @param args the argument list
+   */
+  private void addAuthorQuery(
+        String author, StringBuilder query, List<String>args) {
+        // match single author
+        // (last, first name separated by ',')
+        query.append(MetadataManager.AUTHOR_FIELD);
+        query.append(" = ?");
+        args.add(author);
+
+        // escape escape character and then wildcard characters
+        String authorEsc = author.replace("\\", "\\\\").replace("%","\\%");
+                
+        for (int i = 0; i < 5; i++) {
+          query.append(" or ");
+          query.append(MetadataManager.AUTHOR_FIELD);
+          query.append(" like ? escape '\\'");
+        }
+        // match last name of first author 
+        // (last, first name separated by ',')
+        args.add(authorEsc+",%");
+                
+        // match entire first author 
+        // (authors separated by ';', last, first name separated by ',')
+        args.add(authorEsc+";%");
+                
+        // match last name of middle or last author 
+        // (authors separated by ';', last, first name separated by ',')
+        args.add("%;" + authorEsc + ",%");
+                
+        // match entire middle author 
+        // (authors separated by ';')
+        args.add("%;" + authorEsc + ";%");
+                
+        // match entire last author 
+        // (authors separated by ';')
+        args.add("%;" + authorEsc);
   }
 }
