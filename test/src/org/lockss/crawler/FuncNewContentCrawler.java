@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.23 2010-06-22 09:01:03 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.24 2011-04-04 07:15:36 tlipkis Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
     String th = "text/html";
     String tp = "text/plain";
-    String[] ct = {null, th, tp, tp, null, th, tp, th, tp, tp};
+    String[] ct = {null, null, tp, tp, null, th, tp, th, tp, tp};
     Bag ctb = new HashBag(ListUtil.fromArray(ct));
     assertEquals(ctb, new HashBag(sau.getPauseContentTypes()));
   }
