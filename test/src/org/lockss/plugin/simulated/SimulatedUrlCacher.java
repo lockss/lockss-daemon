@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.25 2010-06-17 18:49:23 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.25.8.1 2011-04-04 06:32:08 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,6 @@ import org.lockss.test.StringInputStream;
 
 public class SimulatedUrlCacher extends BaseUrlCacher {
   private String fileRoot;
-  private String contentName = null;
   private File contentFile = null;
   private CIProperties props = null;
   private SimulatedContentGenerator scgen = null;
@@ -61,15 +60,16 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     this.fileRoot = contentRoot;
   }
 
-  private void makeContentName() {
-    if (contentName==null) {
+  private File getContentFile() {
+    if (contentFile == null) {
       StringBuffer buffer = new StringBuffer(fileRoot);
       if (!fileRoot.endsWith(File.separator)) {
         buffer.append(File.separator);
       }
       buffer.append(mapUrlToContentFileName());
-      contentName = buffer.toString();
+      contentFile = new File(buffer.toString());
     }
+    return contentFile;
   }
 
   // overrides base behavior to get local file
@@ -81,14 +81,14 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     if (contentFile!=null) {
       return getDefaultStream(contentFile, lastModified);
     }
-    makeContentName();
-    contentFile = new File(contentName);
+    contentFile = getContentFile();
     if (contentFile.isDirectory()) {
       if (scgen == null) {
+	logger.info("dirfile: " + contentFile);
 	scgen = SimulatedContentGenerator.getInstance(fileRoot);
       }
-      File dirContentFile = new File(
-          scgen.getDirectoryContentFile(contentName));
+      File dirContentFile =
+	new File(scgen.getDirectoryContentFile(contentFile.getPath()));
       if (dirContentFile.exists()) {
         return getDefaultStream(dirContentFile, lastModified);
       } else {
@@ -106,6 +106,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
       try {
 	long lastCached = GMT_DATE_FORMAT.parse(lastModified).getTime();
 	if ((file.lastModified() <= lastCached) && !toBeDamaged()) {
+	  logger.debug3("Last-Modified: " + lastModified + " <= " + GMT_DATE_FORMAT.format(file.lastModified()));
 	  return null;
 	}
       } catch (ParseException e) {}
@@ -139,8 +140,9 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     // set fetch time as now, since it should be the same system
     props.setProperty(CachedUrl.PROPERTY_FETCH_TIME, ""+TimeBase.nowMs());
     // set last-modified to the file's write date
+    Date date = new Date(getContentFile().lastModified());
     props.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
-		      Long.toString(new File(fileName).lastModified()));
+		      GMT_DATE_FORMAT.format(date));
     return props;
   }
 
